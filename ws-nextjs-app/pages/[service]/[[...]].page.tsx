@@ -17,6 +17,7 @@ import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import { IncomingHttpHeaders } from 'node:http';
+import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -103,7 +104,7 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
-      return <ArticlePage {...props} />;
+      return withOptimizelyProvider(ArticlePage)({ ...props });
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
