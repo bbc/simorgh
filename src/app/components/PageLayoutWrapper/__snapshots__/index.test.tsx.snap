@@ -2105,7 +2105,7 @@ exports[`PageLayoutWrapper should render fonts for turkce 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for ukchina 1`] = `
 {
-  "font-family": "Helvetica, Arial, STHeiti, "Microsoft YaHei", SimSun",
+  "font-family": "Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2161,7 +2161,7 @@ exports[`PageLayoutWrapper should render fonts for yoruba 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for zhongwen 1`] = `
 {
-  "font-family": "Helvetica, Arial, STHeiti, "Microsoft YaHei", SimSun",
+  "font-family": "Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体",
   "font-style": "normal",
   "font-weight": "400",
 }

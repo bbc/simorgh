@@ -2287,13 +2287,122 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <script
                 src="https://www.riddle.com/embed/build-embedjs/embedV2.js"
-              />
+              >
+                
+              </script>
               <iframe
                 allow="autoplay"
                 referrerpolicy="strict-origin"
                 src="https://www.riddle.com/embed/a/SAVstNdh?lazyImages=true&staticHeight=false"
               >
-                &lt;section data-block="SingleChoice"&gt;&lt;h2&gt;How silly is Abby?&lt;/h2&gt;&lt;p&gt;&lt;p&gt;Babby&lt;/p&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Extremely silly&lt;/li&gt;&lt;li&gt;Not silly at all&lt;/li&gt;&lt;li&gt;Not very silly&lt;/li&gt;&lt;li&gt;Very silly&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;What is Abby&#039;s silliness level?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;High&lt;/li&gt;&lt;li&gt;Low&lt;/li&gt;&lt;li&gt;Medium&lt;/li&gt;&lt;li&gt;None&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;How often is Abby silly?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Never&lt;/li&gt;&lt;li&gt;Rarely&lt;/li&gt;&lt;li&gt;Always&lt;/li&gt;&lt;li&gt;Sometimes&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;What is Abby&#039;s silliness like?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Outrageous&lt;/li&gt;&lt;li&gt;Non-existent&lt;/li&gt;&lt;li&gt;Mild&lt;/li&gt;&lt;li&gt;Moderate&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section data-block="SingleChoice"&gt;&lt;h3&gt;How would you describe Abby&#039;s silliness?&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Crazy&lt;/li&gt;&lt;li&gt;Calm&lt;/li&gt;&lt;li&gt;Boring&lt;/li&gt;&lt;li&gt;Sensible&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;
+                <section
+                  data-block="SingleChoice"
+                >
+                  <h2>
+                    How silly is Abby?
+                  </h2>
+                  <p>
+                    &lt;p&gt;Babby&lt;/p&gt;
+                  </p>
+                  <ul>
+                    <li>
+                      Extremely silly
+                    </li>
+                    <li>
+                      Not silly at all
+                    </li>
+                    <li>
+                      Not very silly
+                    </li>
+                    <li>
+                      Very silly
+                    </li>
+                  </ul>
+                </section>
+                <section
+                  data-block="SingleChoice"
+                >
+                  <h3>
+                    What is Abby's silliness level?
+                  </h3>
+                  <ul>
+                    <li>
+                      High
+                    </li>
+                    <li>
+                      Low
+                    </li>
+                    <li>
+                      Medium
+                    </li>
+                    <li>
+                      None
+                    </li>
+                  </ul>
+                </section>
+                <section
+                  data-block="SingleChoice"
+                >
+                  <h3>
+                    How often is Abby silly?
+                  </h3>
+                  <ul>
+                    <li>
+                      Never
+                    </li>
+                    <li>
+                      Rarely
+                    </li>
+                    <li>
+                      Always
+                    </li>
+                    <li>
+                      Sometimes
+                    </li>
+                  </ul>
+                </section>
+                <section
+                  data-block="SingleChoice"
+                >
+                  <h3>
+                    What is Abby's silliness like?
+                  </h3>
+                  <ul>
+                    <li>
+                      Outrageous
+                    </li>
+                    <li>
+                      Non-existent
+                    </li>
+                    <li>
+                      Mild
+                    </li>
+                    <li>
+                      Moderate
+                    </li>
+                  </ul>
+                </section>
+                <section
+                  data-block="SingleChoice"
+                >
+                  <h3>
+                    How would you describe Abby's silliness?
+                  </h3>
+                  <ul>
+                    <li>
+                      Crazy
+                    </li>
+                    <li>
+                      Calm
+                    </li>
+                    <li>
+                      Boring
+                    </li>
+                    <li>
+                      Sensible
+                    </li>
+                  </ul>
+                </section>
               </iframe>
             </div>
           </div>

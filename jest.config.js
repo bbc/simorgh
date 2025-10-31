@@ -8,7 +8,7 @@ const unitTests = {
     'jest-expect-message',
   ],
   moduleNameMapper: jestDirAlias,
-  testEnvironment: 'jsdom',
+  testEnvironment: '@happy-dom/jest-environment',
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',

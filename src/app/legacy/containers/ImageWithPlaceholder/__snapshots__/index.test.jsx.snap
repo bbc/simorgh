@@ -29,6 +29,18 @@ exports[`ImageWithPlaceholder should not provide non-js fallback 1`] = `
   }
 }
 
+.emotion-2 {
+  display: block;
+  width: 100%;
+  visibility: visible;
+}
+
+.emotion-5 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -38,9 +50,25 @@ exports[`ImageWithPlaceholder should not provide non-js fallback 1`] = `
     <div
       class="lazyload-wrapper "
     >
-      <div
-        class="lazyload-placeholder"
-      />
+      <picture
+        class="emotion-2 emotion-3"
+      >
+        <source
+          srcset="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
+          type="image/webp"
+        />
+        <source
+          srcset="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+          type="image/jpeg"
+        />
+        <img
+          alt="Pauline Clayton"
+          class="emotion-4 emotion-5 emotion-6"
+          height="360"
+          src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+          width="640"
+        />
+      </picture>
     </div>
   </div>
 </div>
