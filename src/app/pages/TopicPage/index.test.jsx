@@ -363,6 +363,28 @@ describe('Topic Page', () => {
       expect(twitterDescriptionMeta?.content).toEqual(seoDescription);
     });
 
+    it('should include pagination details in metadata title on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${seoTitle}, Page 2 of 6 - BBC News Pidgin`,
+      );
+    });
+
     it('should fall back to title and description when seo metadata is missing', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
