@@ -1,23 +1,30 @@
 {
   "data": {
-    "title": "Live TV Page with schedule",
-    "description": "Test for live tv page with multiple media collections & radio schedule",
+    "title": "Live TV Page with schedule - Dari",
+    "description": "BBC Arabic TV brings you news, breaking news, analysis, discussions, and documentaries, 24 hours a day. You can receive the channel via satellite dish. Send your comments and suggestions via this link. Follow the latest news and developments around the world through BBC News Arabic on WhatsApp.",
     "curations": [
       {
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Dari page, Live Afghan TV stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER",
         "mediaCollection": [
           {
             "type": "liveMedia",
             "model": {
               "urn": "urn:bbc:pips:sid:bbc_afghan_tv",
-              "title": "Tvdar25 Afghan Edu Girls 36",
+              "title": "02/12/2024 GMT",
               "type": "episode",
               "synopses": {
-                "short": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
-                "medium": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
-                "long": "برنامه خبرنگاران هر شنبه مجموعه‌ای از بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی در لندن و شهرهای دیگر جهان را ارائه می‌دهد."
+                "short": "I'm adding some summary text here as a test. In theory it would say something like - Watch BBC News Afghan TV here, with programmes in Dari, Pashto and Farsi. We hope you enjoy it!",
+                "medium": "یک برنامه موضوعی و آموزشی برای جوانان، از جمله دخترانی که از رفتن به مکتب محروم شده ‌اند.",
+                "long": "برنامه آموزشی جدید زیر عنوان درس از سرویس جهانی بی بی سی برای افغانستان، حاوی اخبار و داستان های الهام بخش برای جوانان و به ویژه دخترانی که از رفتن به مکتب محروم شده اند."
               },
               "mediaType": "audio_video",
-              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p0k8v8q1.png",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/ace/standard/$recipe/cpsdevpb/d318/test/c6f1c270-b571-11f0-8c86-5d50166f9cdc.png",
               "masterbrand": {
                 "id": "bbc_dari_tv",
                 "name": "BBC Dari TV",
@@ -26,14 +33,11 @@
                 "imageUrlTemplate": null
               },
               "version": {
-                "vpid": "w4hr3ltd",
+                "vpid": "w4hr3ltm",
                 "duration": "PT30M",
                 "availabilityType": "simulcast",
                 "versionTypes": [
-                  {
-                    "type": "Original",
-                    "name": "Original version"
-                  }
+                  { "type": "Original", "name": "Original version" }
                 ],
                 "schedule": null,
                 "serviceId": "bbc_afghan_tv",
@@ -45,359 +49,86 @@
               "leadMedia": true
             }
           }
-        ],
-        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
-        "curationType": "tipo-curation",
-        "position": 0,
-        "title": "Afghan TV Stream",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE",
-        "intent": "MEDIA_PLAYER"
+        ]
       },
       {
-        "curationId": "urn:bbc:tipo:list:65faa8a9-78d7-46ea-a159-9bc06c6146f5",
-        "curationType": "tipo-curation",
-        "position": 1,
-        "visualProminence": "NORMAL",
-        "title": "Curation with a mix of PIDs and Optimo articles with portrait video embeds",
-        "visualStyle": "INSITU",
-        "portraitVideo": {
-          "blocks": [
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg",
-                    "altText": "Pelo menos 53 presos escaparam da prisão de Katacane, na Indonésia"
-                  },
-                  {
-                    "source": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                    "altText": "test"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:optimo:asset:cdrqd0m5nlmo",
-                  "title": "Optimo article with portrait video embed (1)",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                  "version": {
-                    "id": "p01wjx6g",
-                    "duration": "PT13S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["uk", "nonuk"]
-                  },
-                  "isEmbeddingAllowed": false
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
-                    "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx5j.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx5j.jpg",
-                    "altText": "A Nova Rota da Seda, ou Cinturão e Rota, é considerada a maior estratégia"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx4r",
-                  "title": "China: o que é a Nova Rota da Seda, crucial na estratégia geopolítica de Pequim (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx5j.jpg",
-                  "version": {
-                    "id": "p01wjx4t",
-                    "duration": "PT1M10S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
-                    "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3n.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3n.jpg",
-                    "altText": "O indiano Lalit Patidar, de 18 anos, foi reconhecido pelo Guinness World Records"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx29",
-                  "title": "O indiano reconhecido como 'pessoa mais peluda do mundo' (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx3n.jpg",
-                  "version": {
-                    "id": "p01wjx2c",
-                    "duration": "PT30S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
-                    "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx3l.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx3l.jpg",
-                    "altText": "Após 37 dias de internação, o papa Francisco recebeu alta do hospital"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx35",
-                  "title": "Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx3l.jpg",
-                  "version": {
-                    "id": "p01wjx37",
-                    "duration": "PT13S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
-                    "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8v.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8v.jpg",
-                    "altText": "A Europa está em uma espécie de \"corrida armamentista\" diante da crise da aliança"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx5y",
-                  "title": "Europa se armando para guerra? Continente eleva gastos militares de olho em EUA e Rússia (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx8v.jpg",
-                  "version": {
-                    "id": "p01wjx60",
-                    "duration": "PT30S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx7z.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx7z.jpg",
-                    "altText": "Hoje nove países possuem armas nucleares"
-                  },
-                  {
-                    "source": "https://ichef.bbci.co.uk/ace/standard/1024/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                    "urlTemplate": "https://ichef.bbci.co.uk/ace/standard/{width}/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                    "altText": "Test"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:optimo:asset:cgp62emnrk5o",
-                  "title": "Article with portrait video embed (2)",
-                  "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/3106/test/8568bc10-0e0e-11f0-a9e9-f552fbd9336f.jpg",
-                  "version": {
-                    "id": "p01wjx71",
-                    "duration": "PT20S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["uk", "nonuk"]
-                  },
-                  "isEmbeddingAllowed": false
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
-                    "altText": "A sensação de não saber por onde começar, a falta de uma rotina"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8g.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8g.jpg",
-                    "altText": "A sensação de não saber por onde começar, a falta de uma rotina"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx7v",
-                  "title": "4 erros de quem estuda para concursos públicos (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx8g.jpg",
-                  "version": {
-                    "id": "p01wjx7x",
-                    "duration": "PT1M10S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
-                    "altText": "text"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx51.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx51.jpg",
-                    "altText": "text"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx3q",
-                  "title": "O estudante que pode ser um dos maiores estupradores do Reino Unido (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx51.jpg",
-                  "version": {
-                    "id": "p01wjx3s",
-                    "duration": "PT20S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            },
-            {
-              "type": "portraitClipMedia",
-              "model": {
-                "type": "video",
-                "images": [
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
-                    "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet"
-                  },
-                  {
-                    "source": "https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx48.jpg",
-                    "urlTemplate": "https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx48.jpg",
-                    "altText": "De tempos em tempos, algum mecanismo do corpo humano é 'redescoberto' pela internet"
-                  }
-                ],
-                "video": {
-                  "id": "urn:bbc:pips:pid:p01wjx3g",
-                  "title": "A onda de evitar picos de glicose para emagrecer — e por que ela faz sentido (9x16)",
-                  "holdingImageURL": "https://ichef.test.bbci.co.uk/images/ic/512xn/p01wjx48.jpg",
-                  "version": {
-                    "id": "p01wjx3j",
-                    "duration": "PT13S",
-                    "kind": "programme",
-                    "guidance": null,
-                    "territories": ["nonuk", "uk"]
-                  },
-                  "isEmbeddingAllowed": true
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "radioSchedule": [
+        "summaries": [
           {
-            "id": "p0lv337m",
-            "state": "next",
-            "startTime": "2025-09-08T14:00:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7ryj",
-            "brandTitle": "مجله شامگاهی",
-            "summary": "برنامه خبری و تحلیلی شامگاهی \n",
-            "duration": "PT30M"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic YT channel",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/bbcarabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/005f/test/53fb1640-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "The YouTube logo",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fbbcarabic",
+            "visualProminence": "NORMAL"
           },
           {
-            "id": "p0lv11y1",
-            "state": "onDemand",
-            "startTime": "2025-09-08T08:30:00.000Z",
-            "link": "/dari/bbc_dari_radio/w173046n14h6fy1",
-            "brandTitle": "Second Eye",
-            "summary": "تازه ترین اخبار از افغانستان، منطقه و جهان ",
-            "duration": "PT14M30S"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic IG page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcarabic/?hl=en",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/d8c4/test/cdbd2180-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcarabic%2F%3Fhl%3Den",
+            "visualProminence": "NORMAL"
           },
           {
-            "id": "p0ltynxx",
-            "state": "onDemand",
-            "startTime": "2025-09-07T17:00:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7mfl",
-            "brandTitle": "غږیز کتاب",
-            "summary": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
-            "duration": "PT30M"
-          },
-          {
-            "id": "p0ltyj9w",
-            "state": "onDemand",
-            "startTime": "2025-09-07T16:30:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7qtg",
-            "brandTitle": "Just One Thing/Art",
-            "summary": "یوازې یو شی=  داسې څه اورئ چې ستاسو فزیکي او رواني روغتیا ته ګټه رسوي",
-            "duration": "PT30M"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic FB page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/BBCnewsArabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/c2d3/test/ab1d4ce0-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "The Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2FBBCnewsArabic",
+            "visualProminence": "NORMAL"
           }
         ],
-        "curationId": "urn:bbc:programmes:available-episodes:bbc_dari_radio",
-        "curationType": "available-episodes",
-        "position": 2,
-        "title": "Afghan TV Schedule",
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d4ab257a-89f2-4271-86f8-d918f991d3b4",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Social links for WS Live TV page",
         "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
+        "visualStyle": "LINKS"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Send our programme makers your thoughts",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/arabic/send/u50853203",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Farabic%2Fsend%2Fu50853203",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ecc71e86-815d-4ed2-b455-fba620c64a98",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Useful links for WS Live TV page",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cje2rl6z78xxt",
-        "contentType": "live-tv",
-        "pageIdentifier": "dari.live_tv.page",
-        "pageTitle": "Live TV Page with Schedule"
+        "contentType": "player-live",
+        "pageIdentifier": "dari.bbc_afghan_tv.livetv.page",
+        "pageTitle": "Live TV Page with schedule - Dari"
       }
     }
   },
