@@ -1,4 +1,4 @@
-import { services } from '../services/loadableConfig';
+import SERVICES from '../services';
 
 export default {
   _environment: 'live',
@@ -17,7 +17,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: true,
-    value: `(${services.join('|')})`,
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
