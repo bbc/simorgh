@@ -351,7 +351,7 @@ describe('useViewTracker', () => {
             idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
             lng: 'en-US',
             p: 'news::pidgin.news.story.51745682.page',
-            r: '0x0x24x24',
+            r: '1024x768x24x24',
             re: '1024x768',
             s: '598343',
             s2: '70',

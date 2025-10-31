@@ -52,7 +52,7 @@ describe('beacon', () => {
         idclient: '123-456-789',
         s: '598285',
         p: 'pageIdentifier',
-        r: '0x0x24x24',
+        r: '1024x768x24x24',
         re: '1024x768',
         hl: '00-00-00',
         lng: 'en-US',
