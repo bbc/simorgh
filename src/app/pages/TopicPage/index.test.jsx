@@ -329,8 +329,8 @@ describe('Topic Page', () => {
 
   describe('SEO', () => {
     it('should prioritise seoTitle and seoDescription for metadata when available', () => {
-      const seoTitle = 'Custom SEO Title';
-      const seoDescription = 'Custom SEO Description';
+      const seoTitle = 'Topic page SEO Title';
+      const seoDescription = 'Topic page SEO Description';
 
       render(
         <TopicPage
@@ -345,9 +345,7 @@ describe('Topic Page', () => {
 
       const helmetContent = Helmet.peek();
 
-      expect(helmetContent.title).toEqual(
-        `${seoTitle} - BBC News Pidgin`,
-      );
+      expect(helmetContent.title).toEqual(`${seoTitle} - BBC News Pidgin`);
 
       const descriptionMeta = helmetContent.metaTags.find(
         ({ name }) => name === 'description',
@@ -377,9 +375,7 @@ describe('Topic Page', () => {
       const descriptionMeta = helmetContent.metaTags.find(
         ({ name }) => name === 'description',
       );
-      expect(descriptionMeta?.content).toEqual(
-        pidginMultipleItems.description,
-      );
+      expect(descriptionMeta?.content).toEqual(pidginMultipleItems.description);
     });
 
     it('should correctly render linked data', () => {
