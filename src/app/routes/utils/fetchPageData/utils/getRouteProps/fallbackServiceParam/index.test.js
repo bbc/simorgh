@@ -8,7 +8,6 @@ jest.mock('#lib/config/services/loadableConfig', () => ({
     vixen: 'data',
     comet: 'data',
   },
-  services: ['dasher', 'dancer', 'prancer', 'vixen', 'comet'],
 }));
 
 describe('fallbackServiceParam', () => {
