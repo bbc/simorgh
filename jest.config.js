@@ -9,6 +9,10 @@ const unitTests = {
   ],
   moduleNameMapper: jestDirAlias,
   testEnvironment: '@happy-dom/jest-environment',
+  testEnvironmentOptions: {
+    disableJavaScriptFileLoading: true,
+    handleDisabledFileLoadingAsSuccess: true,
+  },
   snapshotSerializers: ['@emotion/jest/serializer'],
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
