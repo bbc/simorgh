@@ -28,8 +28,9 @@ const languageToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
   }
 };
 
-const pageTitle = 'News in your language - BBC World Service';
-const pageDescription = 'A list of BBC World Service language services';
+const pageTitle = 'BBC World Service – BBC News in 43 Languages Worldwide';
+const pageDescription =
+  'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.';
 const lang = 'en';
 
 const atiAnalytics = {
@@ -56,6 +57,10 @@ export default function LanguagesPageLayout() {
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
+        image="/bbc/images/metadata/poster-1200x630.png"
+        imageAltText="BBC World Service Image"
+        imageWidth={1200}
+        imageHeight={630}
       />
       <Head>
         <style>{morphCSS1}</style>
