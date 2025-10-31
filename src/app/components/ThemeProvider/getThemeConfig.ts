@@ -132,7 +132,6 @@ export default ({
   typography,
   brandSVG,
   palette,
-  usePWATypography,
   isLite,
   isDarkUi,
 }: {
@@ -286,7 +285,6 @@ export default ({
     isLite,
     isDarkUi,
     fontFaces,
-    usePWATypography,
   };
 
   return themeConfig;

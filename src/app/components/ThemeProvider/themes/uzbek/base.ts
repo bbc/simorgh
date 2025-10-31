@@ -15,5 +15,4 @@ export default {
     fontFaces: [],
   },
   brandSVG,
-  usePWATypography: true,
 };

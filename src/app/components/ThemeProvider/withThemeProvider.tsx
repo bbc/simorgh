@@ -20,7 +20,7 @@ const useMergeTheme = (
 
   return useMemo(() => {
     if (isPWA && pwaTheme) {
-      mergeThemeWithPWATypography({ baseTheme, pwaTheme });
+      return mergeThemeWithPWATypography({ baseTheme, pwaTheme });
     }
     return baseTheme;
   }, [isPWA, baseTheme, pwaTheme]);

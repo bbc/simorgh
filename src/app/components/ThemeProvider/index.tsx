@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import React, { PropsWithChildren } from 'react';
 import nodeLogger from '#lib/logger.node';
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
@@ -9,7 +10,6 @@ import {
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
 import {
   ServicesVariantsProps,
-  Variants,
   ServicesWithVariants,
   ServicesWithNoVariants,
 } from '../../models/types/global';
@@ -24,22 +24,22 @@ const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) =>
     Object.keys(theme).includes('render'),
   ),
-) as unknown as ThemeWithNoVariant;
+) as ThemeWithNoVariant;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
     ([_service, theme]) => !Object.keys(theme).includes('render'),
   ),
-) as unknown as ThemeWithVariant;
+) as ThemeWithVariant;
 
 export const ThemeProvider = ({
   children,
   service,
-  ...rest
+  variant,
 }: PropsWithChildren<ServicesVariantsProps>) => {
   let LoadableContextProvider: LoadableTheme | FallbackThemeComponent;
 
-  const variant: Variants = rest.variant || defaultServiceVariants[service];
+  variant = variant || defaultServiceVariants[service];
 
   let serviceVariants: LoadableTheme | undefined;
   let serviceNoVariants: LoadableTheme | undefined;

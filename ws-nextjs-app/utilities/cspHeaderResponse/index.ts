@@ -5,7 +5,7 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles';
 import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
-import { services } from '#app/lib/config/services/loadableConfig';
+import SERVICES from '#app/lib/config/services';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -63,7 +63,7 @@ const isRelaxedCspEnabled = (
 
 const isValidService = (str: string) => {
   const [service] = str.split('/').filter(Boolean);
-  return service && services.includes(service as Services);
+  return service && SERVICES.includes(service as Services);
 };
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
