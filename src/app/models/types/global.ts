@@ -1,5 +1,3 @@
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { LoadableComponent } from '@loadable/component';
 import * as PAGE_TYPES from '../../routes/utils/pageTypes';
 
 export type Environments = 'local' | 'test' | 'live';
@@ -25,6 +23,12 @@ export type ToggleDefinition = {
 export type Toggles =
   | Record<string, ToggleDefinition>
   | { _environment: string };
+
+export type ComponentExperimentProps = {
+  sendOptimizelyEvents?: boolean;
+  experimentName?: string;
+  experimentVariant?: string;
+};
 
 export type ServerSideExperiment = {
   experimentName: string;
@@ -131,9 +135,3 @@ export type ServicesVariantsProps = {
   service: Services;
   variant?: Variants;
 };
-
-export type LoadableService = LoadableComponent<{
-  Context: typeof ServiceContext;
-  dataKey?: null;
-  children: unknown;
-}>;

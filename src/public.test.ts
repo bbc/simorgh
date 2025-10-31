@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { services } from '#app/lib/config/services/loadableConfig';
+import SERVICES from '#app/lib/config/services';
 import path, { resolve } from 'path';
 import { promisify } from 'util';
 import { Services } from '#app/models/types/global';
@@ -37,7 +37,7 @@ const iconNames = [
 ];
 
 describe('public directory', () => {
-  describe.each(services.filter(service => !['ws'].includes(service)))(
+  describe.each(SERVICES.filter(service => !['ws'].includes(service)))(
     'public/%s',
     service => {
       it(`should exist`, async () => {

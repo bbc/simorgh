@@ -2,7 +2,7 @@
 import { render, act } from '@testing-library/react';
 import { jsx, css, Theme } from '@emotion/react';
 
-import { services } from '#app/lib/config/services/loadableConfig';
+import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import { Services } from '#app/models/types/global';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
@@ -223,7 +223,7 @@ describe('ThemeProvider', () => {
     `);
   });
 
-  describe.each(services)(`brandSVG for %s`, service => {
+  describe.each(SERVICES)(`brandSVG for %s`, service => {
     it(`should match chameleonLogos/${service}.tsx`, async () => {
       await act(async () => {
         render(

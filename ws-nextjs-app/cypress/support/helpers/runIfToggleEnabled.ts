@@ -20,7 +20,7 @@ export default ({
     cy.getToggles(service);
 
     cy.fixture(`toggles/${service}.json`).then(toggles => {
-      const { enabled } = toggles[toggleName];
+      const { enabled } = toggles[toggleName] || { enabled: false };
       if (!enabled) {
         testContext.skip();
       }
