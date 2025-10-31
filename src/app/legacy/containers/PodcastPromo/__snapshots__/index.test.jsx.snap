@@ -45,8 +45,8 @@ exports[`Inline Should render correctly 1`] = `
 
 .emotion-7 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #FFFFFF;
@@ -282,8 +282,8 @@ exports[`Inline Should render correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   display: block;
   margin-top: 0.75rem;
   color: #141414;
@@ -364,8 +364,8 @@ exports[`Inline Should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   max-width: 30rem;
   color: #6E6E73;
   margin-top: 0.5rem;
@@ -415,8 +415,8 @@ exports[`Inline Should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #6E6E73;
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -683,8 +683,8 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   display: inline;
   color: #222222;
 }
@@ -857,8 +857,8 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: #222222;
@@ -908,8 +908,8 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   max-width: 30rem;
   color: #6E6E73;
   margin-top: 0.5rem;
@@ -934,8 +934,8 @@ exports[`SecondaryColumn Should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #6E6E73;
 }
 
