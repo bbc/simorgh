@@ -30,6 +30,11 @@ const styles = {
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
     }),
+  synopses: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      display: 'block',
+    }),
 };
 
 export default styles;
