@@ -57,6 +57,6 @@
   },
   "dependencies": {
     "next": "15.5.2",
-    "sharp": "0.34.3"
+    "sharp": "0.34.4"
   }
 }
