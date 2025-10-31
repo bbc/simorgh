@@ -385,6 +385,38 @@ describe('Topic Page', () => {
       );
     });
 
+    it('should keep social metadata titles unpaginated on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      const ogTitleMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:title',
+      );
+      const twitterTitleMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:title',
+      );
+
+      expect(ogTitleMeta?.content).toEqual(
+        `${seoTitle} - BBC News Pidgin`,
+      );
+      expect(twitterTitleMeta?.content).toEqual(
+        `${seoTitle} - BBC News Pidgin`,
+      );
+    });
+
     it('should fall back to title and description when seo metadata is missing', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 

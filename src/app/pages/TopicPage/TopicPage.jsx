@@ -59,7 +59,7 @@ const TopicPage = ({ pageData }) => {
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
             title={metadataTitle}
-            socialHeadline={metadataTitle}
+            socialHeadline={metadataBaseTitle}
             lang={lang}
             description={metadataDescription}
             openGraphType="website"
@@ -67,7 +67,7 @@ const TopicPage = ({ pageData }) => {
           />
           <LinkedData
             type="CollectionPage"
-            seoTitle={metadataTitle}
+            seoTitle={metadataBaseTitle}
             headline={title}
             entities={[itemList]}
           />
