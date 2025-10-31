@@ -4353,16 +4353,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@paulirish/trace_engine@npm:0.0.61":
-  version: 0.0.61
-  resolution: "@paulirish/trace_engine@npm:0.0.61"
-  dependencies:
-    legacy-javascript: "npm:latest"
-    third-party-web: "npm:latest"
-  checksum: 10/e2b358aeedca2b3d773a8ecd835963aebb33109a73232ab1b47be911bbc39920801e264ecf5f5bd3b9997ef08c3540a7788c6b3c45b4130e312256b74834d609
-  languageName: node
-  linkType: hard
-
 "@parcel/watcher-android-arm64@npm:2.5.1":
   version: 2.5.1
   resolution: "@parcel/watcher-android-arm64@npm:2.5.1"
@@ -4504,6 +4494,16 @@ __metadata:
     "@parcel/watcher-win32-x64":
       optional: true
   checksum: 10/2cc1405166fb3016b34508661902ab08b6dec59513708165c633c84a4696fff64f9b99ea116e747c121215e09619f1decab6f0350d1cb26c9210b98eb28a6a56
+  languageName: node
+  linkType: hard
+
+"@paulirish/trace_engine@npm:0.0.61":
+  version: 0.0.61
+  resolution: "@paulirish/trace_engine@npm:0.0.61"
+  dependencies:
+    legacy-javascript: "npm:latest"
+    third-party-web: "npm:latest"
+  checksum: 10/e2b358aeedca2b3d773a8ecd835963aebb33109a73232ab1b47be911bbc39920801e264ecf5f5bd3b9997ef08c3540a7788c6b3c45b4130e312256b74834d609
   languageName: node
   linkType: hard
 
@@ -17332,7 +17332,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.1":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2, source-map-js@npm:^1.2.1":
   version: 1.2.1
   resolution: "source-map-js@npm:1.2.1"
   checksum: 10/ff9d8c8bf096d534a5b7707e0382ef827b4dd360a577d3f34d2b9f48e12c9d230b5747974ee7c607f0df65113732711bb701fe9ece3c7edbd43cb2294d707df3
