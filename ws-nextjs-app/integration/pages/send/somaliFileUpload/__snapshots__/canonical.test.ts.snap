@@ -69,7 +69,14 @@ exports[`Canonical Send Footer I can click on the BBC branding and it would take
 
 exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
-exports[`Canonical Send Header I can see the branding 1`] = `"BBC News, Somali"`;
+exports[`Canonical Send Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Somali",
+  "svg": <path
+    d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.002V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.266 36.647v-72.699h22.004V265.75h-23.193zM804.187 159.452h73.145v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.101 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.069-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.77 40.586 3259.894 3259.894 0 0018.882-77.456h22.3a3251.95 3251.95 0 0018.732 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.532a1845.28 1845.28 0 01-13.232 53.67 2041.61 2041.61 0 01-14.57 52.628h-24.233zM1077.471 267.98c-5.849 0-11.621-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.747 9.663 6.74 0 11.869-1.138 15.388-3.419 3.517-2.28 5.277-5.45 5.277-9.515 0-3.07-.868-5.475-2.601-7.21-1.735-1.733-4.04-3.122-6.914-4.163-2.875-1.04-6.095-2.007-9.663-2.899-5.849-1.387-11.001-2.974-15.461-4.757-4.46-1.784-8.228-3.889-11.3-6.319-3.072-2.427-5.402-5.352-6.987-8.771-1.586-3.42-2.378-7.508-2.378-12.265 0-6.74 1.71-12.537 5.129-17.395 3.42-4.855 8.25-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.651 1.933 5.45 1.289 10.356 3.024 14.719 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.577-2.23-6.046 0-10.73 1.04-14.049 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.378 6.616 1.585 1.635 3.84 2.973 6.765 4.014 2.922 1.04 6.367 2.058 10.332 3.047 5.055 1.29 9.761 2.702 14.124 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.735 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.421 3.94-23.639 3.94z"
+  />,
+}
+`;
 
 exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 {
@@ -80,29 +87,57 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 
 exports[`Canonical Send Header Navigation link should match text and url 2`] = `
 {
-  "text": "Ganacsi",
-  "url": "/somali/topics/c2dwqd32v4yt",
+  "text": "Siyaasad",
+  "url": "/somali/topics/cwr9jry737xt",
 }
 `;
 
 exports[`Canonical Send Header Navigation link should match text and url 3`] = `
 {
-  "text": "Cayaaraha",
-  "url": "/somali/topics/cpzd4zj1pn2t",
+  "text": "Soomaali",
+  "url": "/somali/topics/cpzd4zk7qrjt",
 }
 `;
 
 exports[`Canonical Send Header Navigation link should match text and url 4`] = `
+{
+  "text": "Raadiye",
+  "url": "/somali/topics/cn6rqlrkm0pt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 5`] = `
 {
   "text": "Muuqaal",
   "url": "/somali/topics/c7pl4k5r9xxt",
 }
 `;
 
-exports[`Canonical Send Header Navigation link should match text and url 5`] = `
+exports[`Canonical Send Header Navigation link should match text and url 6`] = `
 {
-  "text": "Barnaamijyada Idaacadda",
-  "url": "/somali/topics/cn6rqlrkm0pt",
+  "text": "Haween",
+  "url": "/somali/topics/cxnykn5732gt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 7`] = `
+{
+  "text": "Ciyaaro",
+  "url": "/somali/topics/cpzd4zj1pn2t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 8`] = `
+{
+  "text": "Saynis iyo Caafimaad",
+  "url": "/somali/topics/c2dr4lek2r9t",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 9`] = `
+{
+  "text": "Fan iyo Dhaqan",
+  "url": "/somali/topics/cwy5g18443dt",
 }
 `;
 
