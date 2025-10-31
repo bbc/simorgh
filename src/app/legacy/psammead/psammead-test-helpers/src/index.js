@@ -1,5 +1,4 @@
 import { render } from '@testing-library/react';
-import deepClone from 'ramda/src/clone';
 
 export const shouldMatchSnapshot = (title, component) => {
   it(title, () => {
@@ -12,32 +11,6 @@ export const isNull = (title, component) => {
   it(title, () => {
     const { container } = render(component);
     expect(container.firstChild).toBeNull();
-  });
-};
-
-export const setWindowValue = (key, value) => {
-  const windowValue = window[key];
-  delete window[key];
-
-  let newValue = value;
-
-  if (value && typeof value === 'object') {
-    newValue = {
-      ...deepClone(windowValue),
-      ...value,
-    };
-  }
-
-  Object.defineProperty(window, key, {
-    value: newValue,
-    writable: true,
-  });
-};
-
-export const resetWindowValue = (key, value) => {
-  Object.defineProperty(window, key, {
-    value,
-    writable: true,
   });
 };
 
