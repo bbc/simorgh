@@ -45,12 +45,7 @@ const getSynopses = (
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-  const {
-    curations,
-    description,
-    title,
-    // metadata: { atiAnalytics = undefined } = {},
-  } = pageData;
+  const { curations, description, title } = pageData;
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
