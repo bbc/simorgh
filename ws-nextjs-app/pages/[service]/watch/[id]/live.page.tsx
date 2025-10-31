@@ -61,6 +61,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     isNextJs: true,
     status: data.status,
     pageType: LIVE_TV_PAGE as PageTypes,
+    id,
     service,
     toggles,
     pageData: data?.pageData
