@@ -8,6 +8,7 @@ import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
 import useIsPWA from '#app/hooks/useIsPWA';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -230,7 +231,12 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div id="main-wrapper" css={styles.wrapper}>
+      <div
+        id="main-wrapper"
+        css={[
+          pageType === LIVE_TV_PAGE ? styles.liveTvPageWrapper : styles.wrapper,
+        ]}
+      >
         <HeaderContainer
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
