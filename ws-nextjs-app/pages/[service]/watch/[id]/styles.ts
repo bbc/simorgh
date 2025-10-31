@@ -29,15 +29,23 @@ const styles = {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
-  description: ({ spacings }: Theme) =>
+  title: ({ palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
+      color: palette.GHOST,
     }),
-  synopses: ({ spacings }: Theme) =>
+  description: ({ palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
+      color: palette.GHOST,
+    }),
+  synopses: ({ palette, spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      display: 'block',
+      color: palette.GHOST,
     }),
 };
 
