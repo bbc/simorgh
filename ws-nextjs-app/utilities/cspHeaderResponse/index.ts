@@ -4,7 +4,7 @@ import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRoute
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles';
-import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
+import { Services } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
 
 const setReportTo = (header: Headers) => {
@@ -37,13 +37,6 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const getToggleDefinitions = (
-  toggles: Toggles = {},
-): Record<string, ToggleDefinition> => {
-  const { _environment, ...toggleDefinitions } = toggles;
-  return toggleDefinitions;
-};
-
 const isRelaxedCspEnabled = (
   countryList: string | number | undefined,
   country: string,
@@ -71,16 +64,14 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const isLive = isLiveEnv();
   const urlPath = request.nextUrl.pathname;
   let toggles = null;
-  let toggleDefinitions = null;
 
   if (isValidService(urlPath)) {
     const service = fallbackServiceParam(request.nextUrl.pathname);
     toggles = await getToggles(service);
-    toggleDefinitions = getToggleDefinitions(toggles);
   }
 
   const { enabled: hasAdsScripts, value: countryList = '' } =
-    toggleDefinitions?.adsNonce || {};
+    toggles?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
