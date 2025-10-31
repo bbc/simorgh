@@ -47,6 +47,12 @@ const styles = {
       display: 'block',
       color: palette.GHOST,
     }),
+  curationStyles: ({ palette }: Theme) =>
+    css({
+      '& h2, & a': {
+        color: palette.GHOST,
+      },
+    }),
 };
 
 export default styles;

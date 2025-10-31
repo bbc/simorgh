@@ -80,7 +80,9 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             </Heading>
             <Text css={styles.description}>{description}</Text>
             <Text css={styles.synopses}>{synopses}</Text>
-            {filteredCurations.map(curation => renderCuration({ curation }))}
+            <div css={styles.curationStyles}>
+              {filteredCurations.map(curation => renderCuration({ curation }))}
+            </div>
           </div>
         </div>
       </main>
