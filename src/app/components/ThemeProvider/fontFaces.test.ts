@@ -1,4 +1,4 @@
-import { services } from '#app/lib/config/services/loadableConfig';
+import SERVICES from '#app/lib/config/services';
 import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
@@ -55,7 +55,7 @@ const notoEthiopicServices: Services[] = ['amharic', 'tigrinya'];
 
 const padaukServices: Services[] = ['burmese'];
 
-const servicesWithNoFonts: Services[] = services.filter(
+const servicesWithNoFonts: Services[] = SERVICES.filter(
   service =>
     ![
       ...reithServices,

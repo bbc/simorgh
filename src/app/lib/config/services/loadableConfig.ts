@@ -64,6 +64,4 @@ const loadableConfig: Record<Services, LoadableService> = {
   zhongwen: loadable(() => import('./zhongwen')),
 };
 
-export const services = Object.keys(loadableConfig) as Services[];
-
 export default loadableConfig;
