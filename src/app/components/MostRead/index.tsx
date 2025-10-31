@@ -32,7 +32,6 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  sendOptimizelyEvents?: boolean;
   eventTrackingData?: EventTrackingData;
 }
 

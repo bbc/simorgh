@@ -2,6 +2,26 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertPodcastLinksComponentClick,
+  assertPodcastLinksComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
+import {
+  assertRecentAudioEpisodesComponentClick,
+  assertRecentAudioEpisodesComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 
 const pageType = 'onDemandAudio';
 
@@ -441,7 +461,138 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsPodcastComponentTests = [
+  assertPageView,
+  assertPodcastLinksComponentView,
+  assertPodcastLinksComponentClick,
+  assertRecentAudioEpisodesComponentView,
+  assertRecentAudioEpisodesComponentClick,
+];
+
+const atiAnalyticsTestSuites = [
+  {
+    path: '/afrique/bbc_afrique_radio/programmes/p030s6dq',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_radio.programmes.p030s6dq.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRecentAudioEpisodesComponentView,
+      assertRecentAudioEpisodesComponentClick,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+  {
+    path: '/arabic/bbc_arabic_radio/w3ct01yb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'arabic',
+    pageIdentifier: 'arabic.bbc_arabic_radio.w3ct01yb.page',
+    siteId: 5,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.programmes.p07yh8hb.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/gahuza/podcasts/p07yh8hb/p094vs2n',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.bbc_gahuza_radio.podcasts.p094vs2n.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/portuguese/podcasts/p07r3r3t',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/portuguese/podcasts/p07r3r3t/p0ldy4p8',
+    runforEnv: ['test', 'live'],
+    service: 'portuguese',
+    pageIdentifier: 'portuguese.bbc_brasil.podcasts.p0ldy4p8.page',
+    siteId: 33,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+  {
+    path: '/ukrainian/podcasts/p09jsy3h',
+    runforEnv: ['test', 'live'],
+    service: 'ukrainian',
+    pageIdentifier:
+      'ukrainian.bbc_ukrainian_audio.podcasts.programmes.p09jsy3h.page',
+    siteId: 94,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    useReverb: true,
+    tests: [...atiAnalyticsPodcastComponentTests],
+  },
+];
+
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+    assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
+  ];
+
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
+
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    useReverb: false,
+    siteId: testSuite.siteId,
+    tests: [...liteSiteTests],
+  };
+});
+
 runTestsForPage({
   pageType,
   testSuites,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsLiteTestSuites,
+  beforeAll: [setUserIDCookie],
 });

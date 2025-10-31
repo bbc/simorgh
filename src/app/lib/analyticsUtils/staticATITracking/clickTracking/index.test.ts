@@ -1,20 +1,20 @@
-import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { fireEvent } from '#app/components/react-testing-library-with-providers';
 import clickTracking from '.';
 
 const createAnchor = ({
   href = '/gahuza',
   isLite = true,
-  atiUrl = 'https://logws1363.ati-host.net/?',
+  reverbUrl = 'https://logws1363.xiti.net/?',
 }: {
   href?: string;
   isLite?: boolean;
-  atiUrl?: string;
+  reverbUrl?: string;
 } = {}) => {
   const anchorElement = document.createElement('a');
   anchorElement.href = href;
   if (isLite) {
-    anchorElement.setAttribute(STATIC_ATI_CLICK_TRACKING, atiUrl);
+    anchorElement.setAttribute(STATIC_REVERB_CLICK_TRACKING, reverbUrl);
   }
   document.body.appendChild(anchorElement);
   return anchorElement;
@@ -40,13 +40,13 @@ describe('Click tracking script', () => {
   it('STATIC_ATI_CLICK_TRACKING variable is correct', () => {
     const clickTrackerString = clickTracking.toString();
 
-    const pattern = /STATIC_ATI_CLICK_TRACKING = '([^']+)'/;
+    const pattern = /STATIC_REVERB_CLICK_TRACKING = '([^']+)'/;
 
     const matches = clickTrackerString.match(pattern) || [];
     const [, staticAtiClickTracking] = matches;
 
     // STATIC_ATI_CLICK_TRACKING in ./index.ts must match the value of STATIC_ATI_CLICK_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(staticAtiClickTracking).toBe(STATIC_ATI_CLICK_TRACKING);
+    expect(staticAtiClickTracking).toBe(STATIC_REVERB_CLICK_TRACKING);
   });
 
   it('Redirects all clicks', () => {
@@ -67,12 +67,15 @@ describe('Click tracking script', () => {
 
     expect(
       window.processClientDeviceAndSendStaticBeacon as jest.Mock,
-    ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+    ).toHaveBeenCalledWith({
+      forwardingUrl: 'http://localhost/gahuza',
+      reverbUrl: 'https://logws1363.xiti.net/?',
+    });
   });
 
   it('Should NOT call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = createAnchor({
-      atiUrl: 'https://logws1363.ati-host.net/?uniqueLink=1',
+      reverbUrl: 'https://logws1363.xiti.net/?uniqueLink=1',
     });
 
     dispatchClick(anchorElement);
