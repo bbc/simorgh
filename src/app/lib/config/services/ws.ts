@@ -402,26 +402,6 @@ export const service: DefaultServiceConfig = {
         ],
       },
       {
-        id: 'asia-central',
-        title: 'Asia Central',
-        links: [
-          {
-            id: 'kyrgyz',
-            href: 'https://www.bbc.com/kyrgyz',
-            label: 'Кыргыз тилиндеги жаңылыктар',
-            lang: 'ky',
-            latinTransliteration: 'Kyrgyz tilindegi zhaniliktar',
-          },
-          {
-            id: 'uzbek',
-            href: 'https://www.bbc.com/uzbek/cyr',
-            label: 'Ўзбек тилидаги янгиликлар',
-            lang: 'uz-latn',
-            latinTransliteration: "O'zbek tilidagi yangiliklar",
-          },
-        ],
-      },
-      {
         id: 'asia-pacific',
         title: 'Asia Pacific',
         links: [
@@ -434,7 +414,7 @@ export const service: DefaultServiceConfig = {
           },
           {
             id: 'zhongwen',
-            href: 'https://www.bbc.com/zhongwen/trad',
+            href: 'https://www.bbc.com/zhongwen/simp',
             label: '中文新闻',
             lang: 'zh-hant',
           },
@@ -480,6 +460,12 @@ export const service: DefaultServiceConfig = {
             label: 'বাংলা খবর',
             lang: 'bn',
             latinTransliteration: 'Bangla khabar',
+          },
+          {
+            id: 'dari',
+            href: 'https://www.bbc.com/dari',
+            label: 'خبرها به زبان دری',
+            lang: 'fa-af',
           },
           {
             id: 'gujarati',
@@ -562,6 +548,19 @@ export const service: DefaultServiceConfig = {
             lang: 'az',
           },
           {
+            id: 'cymrufyw',
+            href: 'https://www.bbc.co.uk/cymrufyw',
+            label: 'Newyddion',
+            lang: 'cy',
+          },
+          {
+            id: 'kyrgyz',
+            href: 'https://www.bbc.com/kyrgyz',
+            label: 'Кыргыз тилиндеги жаңылыктар',
+            lang: 'ky',
+            latinTransliteration: 'Kyrgyz tilindegi zhaniliktar',
+          },
+          {
             id: 'news',
             href: 'https://www.bbc.co.uk/news',
             label: 'News in English',
@@ -587,7 +586,7 @@ export const service: DefaultServiceConfig = {
           },
           {
             id: 'serbian',
-            href: 'https://www.bbc.com/serbian/lat',
+            href: 'https://www.bbc.com/serbian',
             label: 'BBC News na srpskom',
             lang: 'sr-latn',
           },
@@ -604,10 +603,11 @@ export const service: DefaultServiceConfig = {
             lang: 'uk',
           },
           {
-            id: 'cymrufyw',
-            href: 'https://www.bbc.co.uk/cymrufyw',
-            label: 'Newyddion',
-            lang: 'cy',
+            id: 'uzbek',
+            href: 'https://www.bbc.com/uzbek',
+            label: 'Ўзбек тилидаги янгиликлар',
+            lang: 'uz-latn',
+            latinTransliteration: "O'zbek tilidagi yangiliklar",
           },
         ],
       },
