@@ -43,7 +43,6 @@ const getSynopses = (
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-
   const { curations, description, title } = pageData;
 
   const mediaCollectionCuration = curations?.find(
@@ -60,8 +59,8 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
 
   return (
     <>
-      {/* <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} /> */}
+      {/* <ATIAnalytics atiData={atiAnalytics} /> */}
+      {/* <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
         title={title}
         lang={lang}
@@ -75,10 +74,10 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
             {mediaCollectionCuration &&
               renderCuration({ curation: mediaCollectionCuration })}
             <Heading id="content" level={1}>
-              Live TV Page with schedule
+              {title}
             </Heading>
             <Text css={styles.description}>{description}</Text>
-            <Text>{synopses}</Text>
+            <Text css={styles.synopses}>{synopses}</Text>
             {filteredCurations.map(curation => renderCuration({ curation }))}
           </div>
         </div>
