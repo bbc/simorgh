@@ -177,8 +177,7 @@ const isValidFiles: (data: FieldData) => FieldData = (data: FieldData) => {
   };
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const validateFunctions: Record<string, (data: FieldData) => FieldData> = {
+const validateFunctions: Record<string, (_data: FieldData) => FieldData> = {
   text: isValidText,
   email: isValidEmail,
   checkbox: isValidCheck,

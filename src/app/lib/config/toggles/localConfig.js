@@ -6,7 +6,7 @@ export default {
     enabled: true,
   },
   adsNonce: {
-    enabled: true,
+    enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
   comscoreAnalytics: {

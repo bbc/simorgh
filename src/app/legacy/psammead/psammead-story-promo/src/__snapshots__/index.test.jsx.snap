@@ -75,8 +75,8 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -130,8 +130,8 @@ exports[`StoryPromo - Leading Story should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -331,8 +331,8 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -386,8 +386,8 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -482,8 +482,8 @@ exports[`StoryPromo - Leading Story should render with Media Indicator correctly
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -721,8 +721,8 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -776,8 +776,8 @@ exports[`StoryPromo - Top Story should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -925,8 +925,8 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -1015,8 +1015,8 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -1070,8 +1070,8 @@ exports[`StoryPromo - Top Story should render with Media Indicator correctly 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1291,8 +1291,8 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -1346,8 +1346,8 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1406,8 +1406,8 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1446,8 +1446,8 @@ exports[`StoryPromo - Top Story should render with multiple Index Alsos correctl
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -1726,8 +1726,8 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -1781,8 +1781,8 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1835,8 +1835,8 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1875,8 +1875,8 @@ exports[`StoryPromo - Top Story should render with one Index Also correctly 1`] 
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -2134,8 +2134,8 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -2235,8 +2235,8 @@ exports[`StoryPromo should render Live promo correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2455,8 +2455,8 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -2556,8 +2556,8 @@ exports[`StoryPromo should render a RTL Live promo correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2762,8 +2762,8 @@ exports[`StoryPromo should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -2817,8 +2817,8 @@ exports[`StoryPromo should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2969,8 +2969,8 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   color: #222222;
   background-color: #FFFFFF;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -3056,8 +3056,8 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -3111,8 +3111,8 @@ exports[`StoryPromo with Media Indicator should render a RTL promo with media in
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3305,8 +3305,8 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -3392,8 +3392,8 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -3447,8 +3447,8 @@ exports[`StoryPromo with Media Indicator should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;

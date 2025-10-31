@@ -139,7 +139,11 @@ export default defineConfig({
   },
   defaultCommandTimeout: 10000,
   pageLoadTimeout: 60000,
-  responseTimeout: 60000,
+  reporter: '../node_modules/cypress-multi-reporters/index.js',
+  reporterOptions: {
+    configFile: 'cypress/reporter-config.json',
+  },
+  responseTimeout: 70000,
   requestTimeout: 60000,
   video: false,
   screenshotOnRunFailure: false,

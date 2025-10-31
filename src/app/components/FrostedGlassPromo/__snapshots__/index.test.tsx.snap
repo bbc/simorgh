@@ -130,6 +130,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
         class="emotion-3"
         loading="lazy"
         src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+        style="aspect-ratio: auto;"
         width="976"
       />
     </div>
@@ -273,8 +274,8 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -327,6 +328,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp"
         srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
+        style="aspect-ratio: 976 / 549;"
         width="976"
       />
     </div>
@@ -475,8 +477,8 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -529,6 +531,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
         srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
+        style="aspect-ratio: 624 / 351;"
         width="624"
       />
     </div>
@@ -677,8 +680,8 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -731,6 +734,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp"
         srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp 400w"
+        style="aspect-ratio: 800 / 450;"
         width="800"
       />
     </div>
@@ -879,8 +883,8 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -932,6 +936,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
         srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp 400w"
+        style="aspect-ratio: auto;"
         width="400"
       />
     </div>

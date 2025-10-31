@@ -1,7 +1,7 @@
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';
-import { testsThatAlwaysRunForAllPages } from '../testsForAllPages';
+import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const testDetails = {
