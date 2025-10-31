@@ -63,15 +63,17 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
   const isLive = isLiveEnv();
   const urlPath = request.nextUrl.pathname;
-  let toggles = null;
+  let hasAdsScripts = false;
+  let countryList = '';
 
   if (isValidService(urlPath)) {
     const service = fallbackServiceParam(request.nextUrl.pathname);
-    toggles = await getToggles(service);
+    const toggles = await getToggles(service);
+
+    ({ enabled: hasAdsScripts, value: countryList = '' } =
+      toggles?.adsNonce || { enabled: false, value: '' });
   }
 
-  const { enabled: hasAdsScripts, value: countryList = '' } =
-    toggles?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
