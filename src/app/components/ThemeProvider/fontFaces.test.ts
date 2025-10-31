@@ -1,98 +1,65 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 import SERVICES from '#app/lib/config/services';
 import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import serviceConfigs from '#src/server/utilities/serviceConfigs';
-import FontFaces, * as fontFaces from './fontFaces';
-import themes from './__mocks__/themes';
+import getFontFaces, * as fontFaces from './fontFaces';
+import { themes, pwaThemes } from './__mocks__/themes';
 
 const themeSpy = jest.spyOn(emotionReact, 'useTheme');
 
-const loadFontFaces = ({ service, variant }: ServicesVariantsProps) => {
+interface LoadFontFaces extends ServicesVariantsProps {
+  isPWA?: boolean;
+}
+
+const preload = ({ service, variant, isPWA = false }: LoadFontFaces) => {
   let theme: emotionReact.Theme;
 
-  if (variant) {
+  if (isPWA) {
+    if (variant) {
+      theme = pwaThemes[service][variant];
+    } else {
+      theme = pwaThemes[service];
+    }
+  } else if (variant) {
     theme = themes[service][variant];
   } else {
     theme = themes[service];
   }
 
   themeSpy.mockImplementationOnce(() => theme);
+};
 
-  // @ts-expect-error Property 'name' does not exist on type 'FontFace | undefined'.ts(2339)
-  return FontFaces().map(({ name }) => name);
+const getFontNames = ({ service, variant, isPWA = false }: LoadFontFaces) => {
+  preload({ service, variant, isPWA });
+  return getFontFaces().map(({ name }) => name);
+};
+
+const getFonts = ({ service, variant, isPWA = false }: LoadFontFaces) => {
+  preload({ service, variant, isPWA });
+  return getFontFaces();
 };
 
 const reithFontsDir = 'REITH_FONTS_DIR';
 
-const reithServices: Services[] = [
-  'cymrufyw',
-  'naidheachdan',
-  'news',
-  'newsround',
-  'mundo',
-  'polska',
-  'portuguese',
-  'russian',
-  'sport',
-  'turkce',
-  'ws',
-];
+const servicesWithPWA = Object.keys(pwaThemes) as Services[];
 
-const reithQalamServices: Services[] = ['arabic', 'pashto', 'persian', 'urdu'];
+const servicesWithNoFonts = Object.entries(themes)
+  .map(([service, theme]) => {
+    const variant = defaultServiceVariants[service];
+    const baseTheme = variant ? theme[variant] : theme;
 
-const notoSinhalaServices: Services[] = ['sinhala'];
+    if (baseTheme.fontFaces.length === 0) {
+      return service;
+    }
+  })
+  .filter(Boolean) as Services[];
 
-const notoBengaliServices: Services[] = ['bengali'];
-
-const notoTamilServices: Services[] = ['tamil'];
-
-const notoTeluguServices: Services[] = ['telugu'];
-
-const notoGujaratiServices: Services[] = ['gujarati'];
-
-const notoEthiopicServices: Services[] = ['amharic', 'tigrinya'];
-
-const padaukServices: Services[] = ['burmese'];
-
-const servicesWithNoFonts: Services[] = SERVICES.filter(
-  service =>
-    ![
-      ...reithServices,
-      ...reithQalamServices,
-      ...notoBengaliServices,
-      ...notoEthiopicServices,
-      ...notoGujaratiServices,
-      ...notoSinhalaServices,
-      ...notoTamilServices,
-      ...notoTeluguServices,
-      ...padaukServices,
-    ].includes(service as Services),
-) as unknown as Services[];
-
-const servicesWithPWA = Object.keys(
-  Object.fromEntries(
-    Object.entries(themes).filter(
-      ([, { usePWATypography }]) => usePWATypography,
-    ),
-  ),
-) as unknown as Services[];
-
-const fontsWithoutFontStyle = [
-  'REITH_SANS_BOLD',
-  'REITH_SANS_REGULAR',
-  'REITH_SERIF_LIGHT',
-  'REITH_SERIF_MEDIUM',
-];
-
-const fontsWithVersion = [
-  'REITH_QALAM_BOLD',
-  'REITH_QALAM_REGULAR',
-  'REITH_SANS_BOLD',
-  'REITH_SANS_REGULAR',
-  'REITH_SERIF_LIGHT',
-  'REITH_SERIF_MEDIUM',
-];
+const servicesWithFonts = SERVICES.filter(
+  service => !servicesWithNoFonts.includes(service),
+);
 
 describe('Font Faces', () => {
   it('exports font faces', () => {
@@ -132,168 +99,247 @@ describe('Font Faces', () => {
     Object.entries(fontFaces).filter(
       ([fontID]) => ![reithFontsDir, 'default'].includes(fontID),
     ),
-  )('%s font has expected values', (fontId, fontDefinition) => {
+  )('%s font has expected properties', (fontId, fontDefinition) => {
     expect(fontDefinition).toHaveProperty('@font-face');
 
     const font = fontDefinition['@font-face'];
 
     // Mandatory properties for all fonts
-    expect(font).toHaveProperty('downloadSrc');
     expect(font).toHaveProperty('fontDisplay');
     expect(font).toHaveProperty('fontFamily');
     expect(font).toHaveProperty('fontWeight');
     expect(font).toHaveProperty('name');
     expect(font).toHaveProperty('src');
 
-    if (fontsWithVersion.includes(fontId)) {
-      expect(font).toHaveProperty('version');
-    }
-
-    if (!fontsWithoutFontStyle.includes(fontId)) {
+    if (
+      ![
+        'REITH_SANS_BOLD',
+        'REITH_SANS_REGULAR',
+        'REITH_SERIF_LIGHT',
+        'REITH_SERIF_MEDIUM',
+      ].includes(fontId)
+    ) {
       expect(font).toHaveProperty('fontStyle');
     }
   });
 
+  const getVariantsForService = (service: Services) => {
+    const defaultVariant = defaultServiceVariants[service];
+
+    if (defaultVariant) {
+      const otherVariant =
+        serviceConfigs[service][defaultVariant]?.scriptLink?.variant;
+
+      return [defaultVariant, otherVariant].filter(Boolean);
+    }
+
+    return [];
+  };
+
+  const runFontPropertyAssertions = (fonts: fontFaces.FontInfo[]) => {
+    expect(fonts.length).toBeGreaterThan(0);
+
+    fonts.forEach((font: { name: string | string[] }) => {
+      expect(font).toHaveProperty('name');
+      expect(font).toHaveProperty('src');
+      expect(font).toHaveProperty('fontFamily');
+      expect(font).toHaveProperty('fontWeight');
+      expect(font).toHaveProperty('fontDisplay');
+      expect(font).toHaveProperty('downloadSrc');
+
+      if (font.name.includes('Reith')) {
+        expect(font).toHaveProperty('version');
+      }
+    });
+  };
+
   describe('Get Font Faces', () => {
-    it.each(reithServices)('returns Reith fonts for %s', service => {
-      const loadedFonts = loadFontFaces({ service });
-
-      expect(loadedFonts).toStrictEqual(
-        expect.arrayContaining([
-          'BBCReithSans_W_Bd',
-          'BBCReithSans_W_Rg',
-          'BBCReithSerif_W_Md',
-          'BBCReithSerif_WNumbers_Lt',
-        ]),
-      );
-    });
-
-    it.each(reithQalamServices)('returns Reith Qalam fonts for %s', service => {
-      const loadedFonts = loadFontFaces({ service });
-
-      expect(loadedFonts).toStrictEqual(
-        expect.arrayContaining(['qalamNormal', 'qalamBold']),
-      );
-    });
-
-    it.each(notoSinhalaServices)(
-      'returns Noto Sinhala fonts for %s',
+    describe.each(servicesWithFonts)(
+      'Service with font has expected properties for',
       service => {
-        const loadedFonts = loadFontFaces({ service });
+        const variants = getVariantsForService(service);
 
-        expect(loadedFonts).toStrictEqual(
-          expect.arrayContaining([
-            'Noto_Serif_Sinhala',
-            'Noto_Serif_Sinhala_B',
-          ]),
-        );
+        if (variants.length > 0) {
+          it.each(variants)(`${service} with variant %s`, variant => {
+            runFontPropertyAssertions(getFonts({ service, variant }));
+          });
+        } else {
+          it(`${service}`, () => {
+            runFontPropertyAssertions(getFonts({ service }));
+          });
+        }
       },
     );
 
-    it.each(notoBengaliServices)(
-      'returns Noto Bengali fonts for %s',
-      service => {
-        const loadedFonts = loadFontFaces({ service });
+    it.each([
+      'archive',
+      'cymrufyw',
+      'magyarul',
+      'mundo',
+      'naidheachdan',
+      'news',
+      'newsround',
+      'mundo',
+      'polska',
+      'portuguese',
+      'romania',
+      'russian',
+      'scotland',
+      'sport',
+      'turkce',
+      'ws',
+    ] as Services[])('returns Reith fonts for %s', service => {
+      const loadedFonts = getFontNames({ service });
 
-        expect(loadedFonts).toStrictEqual(
-          expect.arrayContaining([
-            'Noto_Serif_Bengali_B',
-            'Noto_Serif_Bengali',
-          ]),
-        );
+      expect(loadedFonts).toStrictEqual([
+        'BBCReithSans_W_Bd',
+        'BBCReithSans_W_Rg',
+        'BBCReithSerif_WNumbers_Lt',
+        'BBCReithSerif_W_Md',
+      ]);
+    });
+
+    it.each(['arabic', 'pashto', 'persian', 'urdu'] as Services[])(
+      'returns Reith Qalam fonts for %s',
+      service => {
+        const loadedFonts = getFontNames({ service });
+
+        expect(loadedFonts).toStrictEqual([
+          'BBCReithQalam_W_Bd',
+          'BBCReithQalam_W_Rg',
+        ]);
       },
     );
 
-    it.each(notoTamilServices)('returns Noto Tamil fonts for %s', service => {
-      const loadedFonts = loadFontFaces({ service });
+    it('returns Noto Sinhala fonts for sinhala', () => {
+      const loadedFonts = getFontNames({ service: 'sinhala' });
 
-      expect(loadedFonts).toStrictEqual(
-        expect.arrayContaining(['Noto_Sans_Tamil', 'Noto_Sans_Tamil_B']),
-      );
+      expect(loadedFonts).toStrictEqual([
+        'Noto_Serif_Sinhala',
+        'Noto_Serif_Sinhala_Bold',
+      ]);
     });
 
-    it.each(notoTeluguServices)('returns Noto Telugu fonts for %s', service => {
-      const loadedFonts = loadFontFaces({ service });
+    it('returns Noto Bengali fonts for bengali', () => {
+      const loadedFonts = getFontNames({ service: 'bengali' });
 
-      expect(loadedFonts).toStrictEqual(
-        expect.arrayContaining(['Noto_Sans_Telugu', 'Noto_Sans_Telugu_B']),
-      );
+      expect(loadedFonts).toStrictEqual([
+        'Noto_Serif_Bengali',
+        'Noto_Serif_Bengali_Bold',
+      ]);
     });
 
-    it.each(notoGujaratiServices)(
-      'returns Noto Gujarati fonts for %s',
-      service => {
-        const loadedFonts = loadFontFaces({ service });
+    it('returns Noto Tamil fonts for tamil', () => {
+      const loadedFonts = getFontNames({ service: 'tamil' });
 
-        expect(loadedFonts).toStrictEqual(
-          expect.arrayContaining([
-            'Noto_Sans_Gujarati',
-            'Noto_Sans_Gujarati_B',
-          ]),
-        );
-      },
-    );
+      expect(loadedFonts).toStrictEqual([
+        'Noto_Sans_Tamil',
+        'Noto_Sans_Tamil_Bold',
+      ]);
+    });
 
-    it.each(notoEthiopicServices)(
+    it('returns Noto Telugu fonts for telugu', () => {
+      const loadedFonts = getFontNames({ service: 'telugu' });
+
+      expect(loadedFonts).toStrictEqual([
+        'Noto_Sans_Telugu',
+        'Noto_Sans_Telugu_Bold',
+      ]);
+    });
+
+    it('returns Noto Gujarati fonts for gujarati', () => {
+      const loadedFonts = getFontNames({ service: 'gujarati' });
+
+      expect(loadedFonts).toStrictEqual([
+        'Noto_Sans_Gujarati',
+        'Noto_Sans_Gujarati_Bold',
+      ]);
+    });
+
+    it.each(['amharic', 'tigrinya'] as Services[])(
       'returns Noto Ethiopic fonts for %s',
       service => {
-        const loadedFonts = loadFontFaces({ service });
+        const loadedFonts = getFontNames({ service });
 
-        expect(loadedFonts).toStrictEqual(
-          expect.arrayContaining([
-            'Noto_Sans_Ethiopic',
-            'Noto_Sans_Ethiopic_B',
-          ]),
-        );
+        expect(loadedFonts).toStrictEqual([
+          'Noto_Sans_Ethiopic',
+          'Noto_Sans_Ethiopic_Bold',
+        ]);
       },
     );
 
-    it.each(padaukServices)('returns Padauk fonts for %s', service => {
-      const loadedFonts = loadFontFaces({ service });
+    it('returns Padauk fonts for burmese', () => {
+      const loadedFonts = getFontNames({ service: 'burmese' });
 
-      expect(loadedFonts).toStrictEqual(
-        expect.arrayContaining(['Padauk', 'Padauk_B']),
-      );
+      expect(loadedFonts).toStrictEqual(['Padauk', 'Padauk_Bold']);
     });
 
-    describe.each(servicesWithNoFonts)('returns no fonts for', service => {
-      const defaultVariant = defaultServiceVariants[service];
+    const assertReithFonts = (fonts: string[]) => {
+      expect(fonts).toStrictEqual([
+        'BBCReithSans_W_Bd',
+        'BBCReithSans_W_Rg',
+        'BBCReithSerif_WNumbers_Lt',
+        'BBCReithSerif_W_Md',
+      ]);
+    };
 
-      if (defaultVariant) {
-        // Get other variant & run tests
-        const otherVariant =
-          serviceConfigs[service][defaultVariant]?.scriptLink?.variant;
+    describe.each([true, false])('when isPWA is %s', isPWA => {
+      if (isPWA) {
+        describe('and service has PWA configured returns Reith fonts for', () => {
+          describe.each(servicesWithPWA)('', service => {
+            const variants = getVariantsForService(service);
 
-        it.each([defaultVariant, otherVariant].filter(Boolean))(
-          `${service} with variant %s`,
-          variant => {
-            const loadedFonts = loadFontFaces({ service, variant });
-
-            expect(loadedFonts).toStrictEqual(expect.arrayContaining([]));
-          },
-        );
+            if (variants.length > 0) {
+              it.each(variants)(`${service} with variant %s`, variant => {
+                assertReithFonts(getFontNames({ service, variant, isPWA }));
+              });
+            } else {
+              it(`${service}`, () => {
+                assertReithFonts(getFontNames({ service, isPWA }));
+              });
+            }
+          });
+        });
       } else {
-        it(`${service}`, () => {
-          const loadedFonts = loadFontFaces({ service });
+        describe('and service has PWA configured returns no fonts for', () => {
+          describe.each(servicesWithPWA)('', service => {
+            const variants = getVariantsForService(service);
 
-          expect(loadedFonts).toStrictEqual(expect.arrayContaining([]));
+            if (variants.length > 0) {
+              it.each(variants)(`${service} with variant %s`, variant => {
+                expect(getFontNames({ service, variant, isPWA })).toStrictEqual(
+                  [],
+                );
+              });
+            } else {
+              it(`${service}`, () => {
+                expect(getFontNames({ service, isPWA })).toStrictEqual([]);
+              });
+            }
+          });
         });
       }
     });
 
-    describe('when service has PWA configured returns Reith fonts for', () => {
-      it.each(servicesWithPWA)('%s', service => {
-        const loadedFonts = loadFontFaces({ service });
+    describe.each(
+      servicesWithNoFonts.filter(
+        service => !servicesWithPWA.includes(service),
+      ) as Services[],
+    )(
+      'returns no fonts for service without fonts and does not have PWA configured for',
+      service => {
+        const variants = getVariantsForService(service);
 
-        expect(loadedFonts).toStrictEqual(
-          expect.arrayContaining([
-            'BBCReithSans_W_Bd',
-            'BBCReithSans_W_Rg',
-            'BBCReithSerif_W_Md',
-            'BBCReithSerif_WNumbers_Lt',
-          ]),
-        );
-      });
-    });
+        if (variants.length > 0) {
+          it.each(variants)(`${service} with variant %s`, variant => {
+            expect(getFontNames({ service, variant })).toStrictEqual([]);
+          });
+        } else {
+          it(`${service}`, () => {
+            expect(getFontNames({ service })).toStrictEqual([]);
+          });
+        }
+      },
+    );
   });
 });
