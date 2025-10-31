@@ -9,6 +9,10 @@ export default {
       justifyContent: 'space-between',
       backgroundColor: palette.GHOST,
     }),
+  liveTvPageWrapper: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_10,
+    }),
   content: css({
     flexGrow: 1,
     position: 'relative',
