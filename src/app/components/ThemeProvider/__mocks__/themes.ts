@@ -64,6 +64,7 @@ import { theme as yoruba } from '../themes/yoruba';
 import { theme as zhongwenSimp } from '../themes/zhongwen/simp';
 import { theme as zhongwenTrad } from '../themes/zhongwen/trad';
 import { theme as ws } from '../themes/ws';
+import { theme as klingon } from '../themes/klingon';
 
 import getThemeConfig from '../getThemeConfig';
 
@@ -126,6 +127,7 @@ const themesNoVariants: ServiceThemeWithNoVariant = {
   vietnamese,
   ws,
   yoruba,
+  klingon,
 };
 
 const themesWithVariants: ServiceThemeWithVariant = {

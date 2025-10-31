@@ -64,6 +64,7 @@ import yoruba from '../themes/yoruba';
 import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
+import klingon from '../themes/klingon';
 
 type ThemeComponent = React.FC<{ children: React.ReactNode }>;
 
@@ -126,6 +127,7 @@ const themeProvidersNoVariants: ThemeProviders = {
   vietnamese,
   ws,
   yoruba,
+  klingon,
 };
 
 const themeProvidersVariants: ThemeProvidersWithVariants = {

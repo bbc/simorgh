@@ -59,6 +59,7 @@ import { service as vietnamese } from '../../../app/lib/config/services/vietname
 import { service as ws } from '../../../app/lib/config/services/ws';
 import { service as yoruba } from '../../../app/lib/config/services/yoruba';
 import { service as zhongwen } from '../../../app/lib/config/services/zhongwen';
+import { service as klingon } from '../../../app/lib/config/services/klingon';
 
 import {
   ServicesWithNoVariants,
@@ -126,6 +127,7 @@ const servicesNoVariants: ServiceConfigsNoVariants = {
   vietnamese,
   ws,
   yoruba,
+  klingon,
 };
 
 const servicesWithVariants: ServiceConfigsWithVariants = {

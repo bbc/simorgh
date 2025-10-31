@@ -185,6 +185,9 @@ export const themes: Record<
         ),
     ),
   },
+  klingon: loadable(
+    () => import(/* webpackChunkName: "themes-klingon" */ './klingon'),
+  ),
 };
 
 export default themes;

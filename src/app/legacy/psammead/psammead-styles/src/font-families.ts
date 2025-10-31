@@ -406,6 +406,7 @@ const vietnamese = helmetFontStyles;
 const ws = latinReithFontStyles;
 const yoruba = helmetFontStyles;
 const zhongwen = chineseFontStyles;
+const klingon = latinReithFontStyles;
 
 const fonts: Record<Services, object> = {
   afaanoromoo,
@@ -461,6 +462,7 @@ const fonts: Record<Services, object> = {
   zhongwen,
   ukrainian,
   uzbek,
+  klingon,
 };
 
 export default { ...fonts };

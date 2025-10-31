@@ -54,6 +54,7 @@ const services: Record<Services, ''> = {
   zhongwen: '',
   ukrainian: '',
   uzbek: '',
+  klingon: '',
 };
 
 export default Object.keys(services) as Services[];

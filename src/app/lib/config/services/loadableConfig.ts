@@ -62,6 +62,7 @@ const loadableConfig: Record<Services, LoadableService> = {
   ws: loadable(() => import('./ws')),
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
+  klingon: loadable(() => import('./klingon')),
 };
 
 export default loadableConfig;
