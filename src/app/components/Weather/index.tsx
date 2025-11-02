@@ -5,7 +5,7 @@ import { jsx } from '@emotion/react';
 
 import Text from '../Text';
 import DayForecast from './DayForecast';
-import GeolocationButton from './GeolocationButton';
+import GeolocationButton from './GeoLocationButton';
 import styles from './index.styles';
 import { WeatherComponentProps, WeatherForecast } from './types';
 import {

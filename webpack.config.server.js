@@ -51,9 +51,6 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         patterns: [
           {
             from: 'public/**/*',
-            globOptions: {
-              ignore: ['**/images/**'],
-            },
           },
         ],
       }),

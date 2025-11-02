@@ -4,14 +4,13 @@ import { jsx } from '@emotion/react';
 import Text from '../../Text';
 import HourlyReport from '../HourlyReport';
 import styles from '../index.styles';
-import { weatherIconMap } from '../icons';
 import { DayForecast as DayForecastType } from '../types';
 
 interface DayForecastProps {
   forecast: DayForecastType;
   expanded?: boolean;
   datetimeLocale?: string;
-  onToggle?: () => void;
+  onToggle: () => void;
 }
 
 const DayForecast: FC<DayForecastProps> = ({
@@ -34,8 +33,12 @@ const DayForecast: FC<DayForecastProps> = ({
   };
 
   // Icon from summary
-  const iconEntry = summary ? weatherIconMap[summary.weatherType] : undefined;
-  const iconSrc = iconEntry ? iconEntry.light?.src : undefined;
+  const iconEntry = summary ? summary.weatherType : undefined;
+  const iconSrc = iconEntry ? `http://localhost:7080/images/weather/${iconEntry}-light.svg` : undefined;
+
+//   // Icon from summary
+//   const windIconEntry = summary ? weatherIconMap[summary.weatherType] : undefined;
+//   const windIconSrc = windIconEntry ? windIconEntry.light?.src : undefined;
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {

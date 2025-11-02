@@ -4,15 +4,14 @@ import { jsx } from '@emotion/react';
 import Text from '../../Text';
 import styles from '../index.styles';
 import { WeatherReport } from '../types';
-import { weatherIconMap } from '../icons';
 
 interface HourlyReportProps {
   report: WeatherReport;
 }
 
 const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
-  const iconEntry = weatherIconMap[report.weatherType];
-  const iconSrc = iconEntry ? iconEntry.dark?.src : undefined;
+  const iconEntry = report ? report.weatherType : undefined;
+  const iconSrc = iconEntry ? `http://localhost:7080/images/weather/${iconEntry}.svg` : undefined;
   const formatTime = (timeslot: string): string => {
     const hour = parseInt(timeslot, 10);
     return `${hour.toString().padStart(2, '0')}:00`;

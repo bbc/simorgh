@@ -31,6 +31,9 @@ export interface DayForecast {
     lastUpdated: string;
     reports: WeatherReport[];
   };
+  location?: {
+    name: string;
+  };
   summary: {
     issueDate: string;
     lastUpdated: string;

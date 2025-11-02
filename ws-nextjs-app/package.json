@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simorgh - Next.JS",
   "scripts": {
-    "setupDevEnv": "cp ../envConfig/local.env .env && sed 's/:7080/:7081/g' .env > .env.tmp && mv .env.tmp .env && mkdir -p public && cp -r ../public/. public",
+    "setupDevEnv": "bash ../scripts/setupDevEnv.sh",
     "moveStaticAssets": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static && cp -r public/. build/standalone/ws-nextjs-app/public",
     "build:local": "yarn setupDevEnv && NODE_ENV=production && next build && yarn moveStaticAssets",
     "build:preview": "cp ../envConfig/preview1.env .env && NODE_ENV=production && next build",

@@ -52,7 +52,7 @@ const styles = {
         backgroundColor: palette.GREY_3,
       },
       '&:focus': {
-        outline: `2px solid ${palette.BRAND_PRIMARY}`,
+        outline: `2px solid ${palette.POSTBOX}`,
         outlineOffset: '2px',
       },
     }),
