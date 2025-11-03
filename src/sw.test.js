@@ -16,20 +16,8 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
-
 describe('Service Worker', () => {
   let fetchEventHandler;
-
-  beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
-  });
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -163,10 +151,6 @@ describe('Service Worker', () => {
       // set up global cache
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
-      };
-      global.self.location = {
-        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-        hostname: 'www.bbc.com',
       };
     });
 
