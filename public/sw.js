@@ -30,6 +30,8 @@ const CACHEABLE_FILES = [
   /\/moment-lib+.*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
+  // Weather Icons
+  /\/images\/weather\/.*?\.svg$/,
 ];
 
 const WEBP_IMAGE =
