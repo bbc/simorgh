@@ -144,17 +144,44 @@ const styles = {
       color: palette.GREY_8,
       fontSize: '0.95rem',
       textAlign: 'center',
+      position: 'relative',
+      display: 'inline-block',
+      width: '40px',
+      height: '40px',
+      marginRight: '20px',
+      'span': {
+        position: 'absolute',
+        bottom: 0,
+        color: '#3789c6',
+        fontSize: '0.8rem !important'
+      },
+      'img': {
+        position: 'absolute',
+        top: 0,
+      },
+    }),
+
+  windInfoContainer: ({  }: Theme) =>
+    css({
+      position: 'relative',
     }),
 
   windInfo: ({ fontVariants, palette, mq }: Theme) =>
     css({
       ...fontVariants.sansRegular,
       color: palette.GREY_8,
-      fontSize: '0.95rem',
+      fontSize: '0.7rem !important',
       textAlign: 'end',
       [mq.GROUP_1_MAX_WIDTH]: {
         display: 'none',
       },
+      position: 'absolute',
+      top: '11px',
+      left: 0,
+      display: 'inline-block',
+      width: '40px',
+      height: '40px',
+      textAlign: 'center',
     }),
 
   expandIcon: ({ palette }: Theme) =>
