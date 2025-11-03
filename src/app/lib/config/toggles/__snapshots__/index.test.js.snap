@@ -152,6 +152,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "scriptLink": {
     "enabled": true,
   },
+  "topBarOJs": {
+    "enabled": true,
+  },
   "variantCookie": {
     "enabled": true,
   },
