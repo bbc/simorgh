@@ -66,6 +66,9 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  topBarOJs: {
+    enabled: true,
+  },
   variantCookie: {
     enabled: true,
   },
