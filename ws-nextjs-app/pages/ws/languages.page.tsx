@@ -18,6 +18,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
   );
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
+
+  const defaultMetadata = {
+    title: 'BBC World Service – BBC News in 43 Languages Worldwide',
+    description:
+      'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
+    image:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
+    imageAltText: 'BBC World Service Image',
+    imageWidth: 1200,
+    imageHeight: 630,
+  };
+
   const baseProps = {
     error: null,
     isAmp: false,
@@ -27,21 +39,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
     timeOnServer: Date.now(),
     pageType: STATIC_PAGE as PageTypes,
     service: 'ws' as Services,
+    pathname: context?.resolvedUrl,
     pageData: {
-      title: 'BBC World Service – BBC News in 43 Languages Worldwide',
-      description:
-        'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
-      image:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
-      imageAltText: 'BBC World Service Image',
-      imageWidth: 1200,
-      imageHeight: 630,
+      ...defaultMetadata,
       metadata: {
         type: STATIC_PAGE,
         atiAnalytics: {},
       },
     },
-    pathname: context?.resolvedUrl,
   };
 
   if (isLive()) {
@@ -61,20 +66,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
     return {
       props: {
         ...baseProps,
-        error: data?.error,
-        status: data?.status,
+        error: data.error,
+        status: data.status,
         pageType: HOME_PAGE,
         service: 'ws',
         toggles,
         pageData: {
-          title: 'BBC World Service – BBC News in 43 Languages Worldwide',
-          description:
-            'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
-          image:
-            'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
-          imageAltText: 'BBC World Service Image',
-          imageWidth: 1200,
-          imageHeight: 630,
+          ...defaultMetadata,
           metadata: {
             type: HOME_PAGE,
             atiAnalytics: {},
@@ -90,26 +88,22 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: HOME_PAGE,
       service: 'ws',
       pathname: '/ws/languages',
-      status: data?.status,
+      status: data.status,
+      toggles,
       pageData: {
-        ...data?.pageData,
-        title:
-          data?.pageData?.title ||
-          'BBC World Service – BBC News in 43 Languages Worldwide',
-        description:
-          data?.pageData?.description ||
-          'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
-        image:
-          data?.pageData?.image ||
-          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
-        imageAltText: data?.pageData?.imageAltText || 'BBC World Service Image',
-        imageWidth: data?.pageData?.imageWidth || 1200,
-        imageHeight: data?.pageData?.imageHeight || 630,
+        ...data.pageData,
+        title: data.pageData?.title || defaultMetadata.title,
+        description: data.pageData?.description || defaultMetadata.description,
+        image: data.pageData?.image || defaultMetadata.image,
+        imageAltText:
+          data.pageData?.imageAltText || defaultMetadata.imageAltText,
+        imageWidth: data.pageData?.imageWidth || defaultMetadata.imageWidth,
+        imageHeight: data.pageData?.imageHeight || defaultMetadata.imageHeight,
         metadata: {
-          ...data?.pageData?.metadata,
+          ...data.pageData?.metadata,
           type: HOME_PAGE,
           atiAnalytics: {
-            ...data?.pageData?.metadata?.atiAnalytics,
+            ...data.pageData?.metadata?.atiAnalytics,
             pageIdentifier: 'ws.languages.page',
           },
         },
