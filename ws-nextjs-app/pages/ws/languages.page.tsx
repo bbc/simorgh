@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pageType: HOME_PAGE,
       service: 'ws',
       pathname: '/ws/languages',
-      status: data.status,
+      status: data?.status,
       toggles,
       pageData: {
         ...data?.pageData,
