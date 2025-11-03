@@ -101,9 +101,9 @@ const DayForecast: FC<DayForecastProps> = ({
         <div css={styles.dayContent} id={`day-content-${summary?.localDate}`}>
           <div css={styles.daySummary}>{/* ...other summary fields... */}</div>
           <div css={styles.hourlyReports}>
-            {reports.map((report, index) => (
+            {reports.map((report) => (
               <HourlyReport
-                key={`${report.localDate}-${report.timeslot}-${index}`}
+                key={`${report.localDate}-${report.timeslot}`}
                 report={report}
               />
             ))}

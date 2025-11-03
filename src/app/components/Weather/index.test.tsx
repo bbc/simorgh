@@ -82,7 +82,7 @@ describe('Weather Component', () => {
   });
 
   it('should render loading state initially', () => {
-    mockFetch.mockImplementation(() => new Promise(() => {}));
+    mockFetch.mockImplementation(() => new Promise(() => 'empty return. Silly typescript'));
 
     render(<Weather />);
 

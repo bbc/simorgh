@@ -161,7 +161,7 @@ const styles = {
       },
     }),
 
-  windInfoContainer: ({}: Theme) =>
+  windInfoContainer: () =>
     css({
       position: 'relative',
     }),
