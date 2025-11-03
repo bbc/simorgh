@@ -26,7 +26,7 @@ const MarginWrapper = styled.div`
   }
 
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
+    margin-top: ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -35,6 +35,10 @@ const StyledMostReadGrid = styled(Grid)`
     margin-top: ${GEL_SPACING_TRPL};
 
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+      margin-top: ${GEL_SPACING_QUAD};
+    }
+
+    @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
       margin-top: ${GEL_SPACING_QUAD};
     }
   }
