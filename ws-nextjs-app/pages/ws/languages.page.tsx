@@ -66,8 +66,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     return {
       props: {
         ...baseProps,
-        error: data.error,
-        status: data.status,
+        error: data?.error,
+        status: data?.status,
         pageType: HOME_PAGE,
         service: 'ws',
         toggles,
@@ -91,19 +91,19 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: data.status,
       toggles,
       pageData: {
-        ...data.pageData,
-        title: data.pageData?.title || defaultMetadata.title,
-        description: data.pageData?.description || defaultMetadata.description,
-        image: data.pageData?.image || defaultMetadata.image,
+        ...data?.pageData,
+        title: data?.pageData?.title || defaultMetadata.title,
+        description: data?.pageData?.description || defaultMetadata.description,
+        image: data?.pageData?.image || defaultMetadata.image,
         imageAltText:
-          data.pageData?.imageAltText || defaultMetadata.imageAltText,
-        imageWidth: data.pageData?.imageWidth || defaultMetadata.imageWidth,
-        imageHeight: data.pageData?.imageHeight || defaultMetadata.imageHeight,
+          data?.pageData?.imageAltText || defaultMetadata.imageAltText,
+        imageWidth: data?.pageData?.imageWidth || defaultMetadata.imageWidth,
+        imageHeight: data?.pageData?.imageHeight || defaultMetadata.imageHeight,
         metadata: {
-          ...data.pageData?.metadata,
+          ...data?.pageData?.metadata,
           type: HOME_PAGE,
           atiAnalytics: {
-            ...data.pageData?.metadata?.atiAnalytics,
+            ...data?.pageData?.metadata?.atiAnalytics,
             pageIdentifier: 'ws.languages.page',
           },
         },
