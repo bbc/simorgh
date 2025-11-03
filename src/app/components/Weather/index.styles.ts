@@ -171,7 +171,6 @@ const styles = {
       ...fontVariants.sansRegular,
       color: palette.GREY_8,
       fontSize: '0.7rem !important',
-      textAlign: 'end',
       [mq.GROUP_1_MAX_WIDTH]: {
         display: 'none',
       },

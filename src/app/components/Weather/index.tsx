@@ -123,7 +123,7 @@ const Weather: FC<WeatherComponentProps> = ({
       </Text>
       <Text as="h3" css={{ marginBottom: '1rem', fontWeight: 600 }}>
         {locationName ||
-          weatherData?.forecasts?.location?.name ||
+          weatherData?.forecasts?.[0]?.location?.name ||
           'Unknown location'}
       </Text>
       {loading && <Text css={styles.loading}>Loading weather forecast...</Text>}

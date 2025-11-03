@@ -63,6 +63,10 @@ export interface DayForecast {
 }
 
 export interface WeatherForecast {
+  location: {
+    name: string;
+    [key: string]: any;
+  };
   forecasts: DayForecast[];
 }
 
