@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -41,9 +41,7 @@ module.exports = {
   assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   transpilePackages: ['simorgh'],
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
