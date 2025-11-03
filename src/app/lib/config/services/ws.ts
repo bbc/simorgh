@@ -17,7 +17,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News',
     serviceLocalizedName: 'World Service',
     product: 'BBC News',
-    defaultImage: 'https://www.bbc.com/bbc/images/metadata/poster-1200x630.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
     defaultImageAltText: 'BBC World Service Image',
     dir: 'ltr',
     externalLinkText: ', external',

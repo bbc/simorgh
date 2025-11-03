@@ -28,6 +28,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: STATIC_PAGE as PageTypes,
     service: 'ws' as Services,
     pageData: {
+      title: 'BBC World Service – BBC News in 43 Languages Worldwide',
+      description:
+        'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
+      image:
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
+      imageAltText: 'BBC World Service Image',
+      imageWidth: 1200,
+      imageHeight: 630,
       metadata: {
         type: STATIC_PAGE,
         atiAnalytics: {},
@@ -59,6 +67,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
         service: 'ws',
         toggles,
         pageData: {
+          title: 'BBC World Service – BBC News in 43 Languages Worldwide',
+          description:
+            'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
+          image:
+            'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
+          imageAltText: 'BBC World Service Image',
+          imageWidth: 1200,
+          imageHeight: 630,
           metadata: {
             type: HOME_PAGE,
             atiAnalytics: {},
@@ -77,6 +93,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: data?.status,
       pageData: {
         ...data?.pageData,
+        title:
+          data?.pageData?.title ||
+          'BBC World Service – BBC News in 43 Languages Worldwide',
+        description:
+          data?.pageData?.description ||
+          'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
+        image:
+          data?.pageData?.image ||
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
+        imageAltText: data?.pageData?.imageAltText || 'BBC World Service Image',
+        imageWidth: data?.pageData?.imageWidth || 1200,
+        imageHeight: data?.pageData?.imageHeight || 630,
         metadata: {
           ...data?.pageData?.metadata,
           type: HOME_PAGE,
