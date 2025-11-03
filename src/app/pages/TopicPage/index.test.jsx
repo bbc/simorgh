@@ -409,9 +409,7 @@ describe('Topic Page', () => {
         ({ name }) => name === 'twitter:title',
       );
 
-      expect(ogTitleMeta?.content).toEqual(
-        `${seoTitle} - BBC News Pidgin`,
-      );
+      expect(ogTitleMeta?.content).toEqual(`${seoTitle} - BBC News Pidgin`);
       expect(twitterTitleMeta?.content).toEqual(
         `${seoTitle} - BBC News Pidgin`,
       );
