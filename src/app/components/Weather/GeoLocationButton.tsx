@@ -85,11 +85,11 @@ const GeolocationButton: FC<Props> = ({
         aria-busy={loading}
       >
         <img
-            src={`http://localhost:7080/images/weather/crosshairs.svg`}
-            alt={'use location'}
-            width={40}
-            height={40}
-          />
+          src="http://localhost:7080/images/weather/crosshairs.svg"
+          alt="use location"
+          width={40}
+          height={40}
+        />
       </button>
       {error && <div css={{ color: 'red', marginTop: '0.5rem' }}>{error}</div>}
     </div>

@@ -11,7 +11,10 @@ interface HourlyReportProps {
 
 const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
   const iconEntry = report ? report.weatherType : undefined;
-  const iconSrc = typeof iconEntry !== 'undefined' ? `http://localhost:7080/images/weather/${iconEntry}.svg` : undefined;
+  const iconSrc =
+    typeof iconEntry !== 'undefined'
+      ? `http://localhost:7080/images/weather/${iconEntry}.svg`
+      : undefined;
   const formatTime = (timeslot: string): string => {
     const hour = parseInt(timeslot, 10);
     return `${hour.toString().padStart(2, '0')}:00`;
@@ -48,14 +51,12 @@ const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
 
       <Text css={styles.precipitation}>
         <img
-            src={`http://localhost:7080/images/weather/rain-chance.svg`}
-            alt={'Chance of rain'}
-            width={20}
-            height={20}
-          />
-        <span>
-            {report.precipitationProbabilityInPercent}%
-        </span>
+          src="http://localhost:7080/images/weather/rain-chance.svg"
+          alt="Chance of rain"
+          width={20}
+          height={20}
+        />
+        <span>{report.precipitationProbabilityInPercent}%</span>
       </Text>
 
       <span css={styles.windInfoContainer}>
@@ -68,9 +69,7 @@ const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
             height={40}
           />
         </div>
-          <Text css={styles.windInfo}>
-            {report.windSpeedKph}
-          </Text>
+        <Text css={styles.windInfo}>{report.windSpeedKph}</Text>
       </span>
     </div>
   );

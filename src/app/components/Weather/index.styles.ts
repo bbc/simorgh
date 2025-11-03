@@ -149,19 +149,19 @@ const styles = {
       width: '40px',
       height: '40px',
       marginRight: '20px',
-      'span': {
+      span: {
         position: 'absolute',
         bottom: 0,
         color: '#3789c6',
-        fontSize: '0.8rem !important'
+        fontSize: '0.8rem !important',
       },
-      'img': {
+      img: {
         position: 'absolute',
         top: 0,
       },
     }),
 
-  windInfoContainer: ({  }: Theme) =>
+  windInfoContainer: ({}: Theme) =>
     css({
       position: 'relative',
     }),

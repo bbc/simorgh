@@ -142,8 +142,7 @@ server
 // Set Up Local Server
 if (process.env.SIMORGH_APP_ENV === 'local') {
   local(server);
-  server
-  .get('/images/weather/:name', (req, res, next) => {
+  server.get('/images/weather/:name', (req, res, next) => {
     res.set(
       `Cache-Control`,
       `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
@@ -153,18 +152,17 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
       dotfiles: 'deny',
       headers: {
         'x-timestamp': Date.now(),
-        'x-sent': true
-      }
-    }
+        'x-sent': true,
+      },
+    };
 
-    const fileName = req.params.name
-    res.sendFile(fileName, options, (err) => {
-      if (err) {
-        next(err)
-      } else {
-        console.log('Sent:', fileName)
+    const fileName = req.params.name;
+    res.sendFile(fileName, options, error => {
+      if (error) {
+        logger.error(MANIFEST_SENDFILE_ERROR, { error });
+        next(error);
       }
-    })
+    });
   });
 }
 

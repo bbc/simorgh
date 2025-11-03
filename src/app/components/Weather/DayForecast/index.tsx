@@ -34,11 +34,13 @@ const DayForecast: FC<DayForecastProps> = ({
 
   // Icon from summary
   const iconEntry = summary ? summary.weatherType : undefined;
-  const iconSrc = iconEntry ? `http://localhost:7080/images/weather/${iconEntry}-light.svg` : undefined;
+  const iconSrc = iconEntry
+    ? `http://localhost:7080/images/weather/${iconEntry}-light.svg`
+    : undefined;
 
-//   // Icon from summary
-//   const windIconEntry = summary ? weatherIconMap[summary.weatherType] : undefined;
-//   const windIconSrc = windIconEntry ? windIconEntry.light?.src : undefined;
+  //   // Icon from summary
+  //   const windIconEntry = summary ? weatherIconMap[summary.weatherType] : undefined;
+  //   const windIconSrc = windIconEntry ? windIconEntry.light?.src : undefined;
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {

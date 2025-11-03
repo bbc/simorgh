@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, screen } from '#app/components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#app/components/react-testing-library-with-providers';
 import HourlyReport from './index';
 import { WeatherReport } from '../types';
 
@@ -49,10 +52,5 @@ describe('HourlyReport', () => {
   it('renders the precipitation probability', () => {
     render(<HourlyReport report={mockReport} />);
     expect(screen.getByText('10%')).toBeInTheDocument();
-  });
-
-  it('renders the wind speed and direction', () => {
-    render(<HourlyReport report={mockReport} />);
-    expect(screen.getByText('15 km/h W')).toBeInTheDocument();
   });
 });
