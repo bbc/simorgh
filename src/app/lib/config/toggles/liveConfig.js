@@ -31,7 +31,7 @@ export default {
     enabled: false,
   },
   midArticleOnwardJourney: {
-    enabled: true,
+    enabled: false,
   },
   mostRead: {
     enabled: false,
@@ -64,6 +64,9 @@ export default {
     value: 4,
   },
   scriptLink: {
+    enabled: true,
+  },
+  topBarOJs: {
     enabled: true,
   },
   variantCookie: {
