@@ -15,6 +15,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "comscoreAnalytics": {
     "enabled": true,
   },
+  "continueReadingButton": {
+    "enabled": true,
+  },
   "electionBanner": {
     "enabled": false,
   },
@@ -97,6 +100,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "comscoreAnalytics": {
     "enabled": true,
   },
+  "continueReadingButton": {
+    "enabled": true,
+  },
   "electionBanner": {
     "enabled": true,
   },
@@ -177,6 +183,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "comscoreAnalytics": {
+    "enabled": true,
+  },
+  "continueReadingButton": {
     "enabled": true,
   },
   "electionBanner": {
