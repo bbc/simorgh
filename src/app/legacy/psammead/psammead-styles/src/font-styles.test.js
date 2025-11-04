@@ -1,5 +1,5 @@
 import * as fontStyles from './font-styles';
-import * as fontFamilies from './font-families';
+import fontFamilies from './font-families';
 
 const services = Object.keys(fontFamilies);
 const fontStyleKeys = Object.keys(fontStyles);
