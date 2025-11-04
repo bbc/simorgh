@@ -102,7 +102,9 @@ describe('Weather Component', () => {
 
     render(<Weather />);
 
-    expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
+    });
   });
 
   it('should render error state when fetch fails', async () => {
@@ -142,8 +144,10 @@ describe('Weather Component', () => {
       expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
     });
 
-    // Expand the day
-    fireEvent.click(screen.getByText('Monday, 15 July'));
+    // Expand the day summary, use flexible matcher again
+    fireEvent.click(
+      screen.getByText((content) => content.includes('Monday') && content.includes('15 July'))
+    );
 
     // Check summary information
     expect(screen.getByText('18°C / 13°C')).toBeInTheDocument();
