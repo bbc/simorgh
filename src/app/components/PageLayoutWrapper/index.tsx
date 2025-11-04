@@ -231,12 +231,7 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div
-        id="main-wrapper"
-        css={[
-          pageType === LIVE_TV_PAGE ? styles.liveTvPageWrapper : styles.wrapper,
-        ]}
-      >
+      <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],

@@ -1,17 +1,13 @@
 import { css, Theme } from '@emotion/react';
 
 export default {
-  wrapper: ({ palette }: Theme) =>
+  wrapper: ({ isDarkUi, palette }: Theme) =>
     css({
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      backgroundColor: palette.GHOST,
-    }),
-  liveTvPageWrapper: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_10,
+      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GHOST,
     }),
   content: css({
     flexGrow: 1,
