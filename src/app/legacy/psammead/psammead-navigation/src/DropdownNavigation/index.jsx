@@ -1,4 +1,4 @@
-import React, { cloneElement, useState, useEffect, useRef } from 'react';
+import React, { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -49,19 +49,12 @@ const StyledDropdown = styled.div`
 
 export const CanonicalDropdown = ({ isOpen, children }) => {
   const heightRef = useRef(null);
-  const [dropdownHeight, setDropdownHeight] = useState(0);
-
-  useEffect(() => {
-    if (heightRef.current) {
-      setDropdownHeight(heightRef.current.scrollHeight);
-    }
-  }, []);
 
   return (
     <StyledDropdown
       data-e2e="dropdown-nav"
       ref={heightRef}
-      height={dropdownHeight}
+      height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
     >
       {children}
