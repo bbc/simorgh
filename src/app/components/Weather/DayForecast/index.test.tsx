@@ -2,7 +2,6 @@ import React from 'react';
 import {
   render,
   screen,
-  fireEvent,
 } from '#app/components/react-testing-library-with-providers';
 import DayForecast from './index';
 import { DayForecast as DayForecastType } from '../types';
