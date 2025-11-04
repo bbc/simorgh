@@ -1,6 +1,10 @@
 import { Theme, css } from '@emotion/react';
 
 const styles = {
+  pageWrapper: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_10,
+    }),
   main: ({ spacings, mq }: Theme) =>
     css({
       margin: `0 ${spacings.FULL}rem`,
@@ -12,28 +16,42 @@ const styles = {
     maxWidth: '63rem',
     margin: '0 auto',
   }),
-  margins: ({ spacings, mq }: Theme) =>
+  padding: ({ spacings, mq }: Theme) =>
     css({
-      margin: `${spacings.TRIPLE}rem 0`,
+      padding: `${spacings.TRIPLE}rem 0`,
       [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
+        padding: `${spacings.QUADRUPLE}rem 0`,
       },
       [mq.GROUP_3_ONLY]: {
-        margin: `${spacings.SEXTUPLE}rem 0`,
+        padding: `${spacings.SEXTUPLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUINTUPLE}rem 0`,
+        padding: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
-  description: ({ spacings }: Theme) =>
+  title: ({ palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
+      color: palette.GHOST,
     }),
-  synopses: ({ spacings }: Theme) =>
+  description: ({ palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
+      color: palette.GHOST,
+    }),
+  synopses: ({ palette, spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      display: 'block',
+      color: palette.GHOST,
+    }),
+  curationStyles: ({ palette }: Theme) =>
+    css({
+      '& h2, & a': {
+        color: palette.GHOST,
+      },
     }),
 };
 

@@ -4,13 +4,19 @@ import useIsPWA from '#app/hooks/useIsPWA';
 import { ServiceTheme } from '#app/models/types/theming';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
-import { MEDIA_ARTICLE_PAGE, TV_PAGE } from '../../routes/utils/pageTypes';
+import {
+  LIVE_TV_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  TV_PAGE,
+} from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
 import mergeThemeWithPWATypography from './themes/mergeThemeWithPWATypography';
 
 const isDarkUiPage = (pageType: PageTypes) =>
-  pageType === MEDIA_ARTICLE_PAGE || pageType === TV_PAGE;
+  ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
+    pageType,
+  );
 
 const useMergeTheme = (
   baseTheme: ServiceTheme,
