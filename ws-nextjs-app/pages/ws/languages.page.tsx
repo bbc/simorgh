@@ -83,8 +83,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
         description: data?.pageData?.description,
         image: data?.pageData?.image,
         imageAltText: data?.pageData?.imageAltText,
-        imageWidth: data?.pageData?.imageWidth || 1200,
-        imageHeight: data?.pageData?.imageHeight || 630,
+        imageWidth: 1200,
+        imageHeight: 630,
         metadata: {
           ...data?.pageData?.metadata,
           type: HOME_PAGE,
