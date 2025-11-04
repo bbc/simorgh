@@ -44,7 +44,7 @@ const TopStoriesSection = ({
   const contentType = content?.[0]?.contentType ?? '';
   const assetUri = content?.[0]?.locators?.assetUri ?? '';
   const uri = content?.[0]?.uri ?? '';
-  let ariaLabelledBy = generatePromoId({
+  const ariaLabelledBy = generatePromoId({
     sectionType: 'top-stories',
     assetUri,
     uri,
@@ -79,7 +79,7 @@ const TopStoriesSection = ({
       ) : (
         <PromoList css={styles.promoList}>
           {content.map((item, index) => {
-            ariaLabelledBy = generatePromoId({
+            const promoItemAriaLabelledBy = generatePromoId({
               sectionType: 'top-stories',
               assetUri: item?.locators?.assetUri ?? '',
               canonicalUrl: item?.locators?.canonicalUrl ?? '',
@@ -89,10 +89,10 @@ const TopStoriesSection = ({
             });
 
             return (
-              <PromoItem css={styles.promoItem} key={ariaLabelledBy}>
+              <PromoItem css={styles.promoItem} key={promoItemAriaLabelledBy}>
                 <TopStoriesItem
                   item={item}
-                  ariaLabelledBy={ariaLabelledBy}
+                  ariaLabelledBy={promoItemAriaLabelledBy}
                   ref={viewTracker}
                   eventTrackingData={eventTrackingData}
                 />

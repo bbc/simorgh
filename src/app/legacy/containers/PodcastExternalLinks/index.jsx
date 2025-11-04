@@ -131,10 +131,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   );
   const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
-  const lastLink = links[links.length - 1];
+  let lastLink = links[links.length - 1];
 
   if (lastLink.linkType === 'download') {
-    lastLink.linkText = downloadLinkTranslation;
+    lastLink = {
+      ...lastLink,
+      linkText: downloadLinkTranslation,
+    };
   }
 
   return (

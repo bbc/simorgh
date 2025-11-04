@@ -227,19 +227,19 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-labelledby="externalLinkId-Загрузить-эпизод"
+          aria-labelledby="externalLinkId-Download"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
-            id="externalLinkId-Загрузить-эпизод"
+            id="externalLinkId-Download"
             role="text"
           >
             <span
-              lang="ru"
+              lang="en-GB"
             >
-              Загрузить эпизод
+              Download
             </span>
             <span
               class="emotion-10"

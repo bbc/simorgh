@@ -22,10 +22,9 @@ const props = {
 };
 
 const Component = () => <h1>Hola Optimizely</h1>;
+const OptimizelyComponent = withOptimizelyProvider(Component);
 
 const TestComponent = () => {
-  const OptimizelyComponent = withOptimizelyProvider(Component);
-
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
