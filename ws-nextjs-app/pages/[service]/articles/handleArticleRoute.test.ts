@@ -56,7 +56,7 @@ describe('handleArticleRoute', () => {
         isLite: false,
         isNextJs: true,
         status: 500,
-        isUK: null,
+        isUK: false,
         service: 'pidgin',
         showAdsBasedOnLocation: false,
         showCookieBannerBasedOnCountry: true,
