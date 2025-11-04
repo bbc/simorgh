@@ -47,9 +47,6 @@ module.exports = {
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   compiler: {
     emotion: true,
   },
