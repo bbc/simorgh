@@ -1,139 +1,126 @@
 import React from 'react';
-import {
-  render,
-  screen,
-  waitFor,
-  fireEvent,
-} from '../react-testing-library-with-providers';
-import Weather from '.';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import Weather from './index'; // adjust import path if needed
+import * as locationStorage from './useLocationStorage';
 
-// Mock fetch
-const mockFetch = jest.fn();
-global.fetch = mockFetch;
+// Mocks for child components
+jest.mock('./DayForecast', () => ({ forecast, expanded, onToggle, datetimeLocale }: any) => (
+  <div data-testid="DayForecast" data-expanded={expanded} onClick={onToggle}>
+    {forecast?.summary?.report?.localDate || 'No date'}
+  </div>
+));
+jest.mock('./GeoLocationButton', () => ({ onLocationFound, disabled }: any) => (
+  <button data-testid="geo-btn" disabled={disabled} onClick={() => onLocationFound('1', 'London', 51.5, -0.12)}>
+    GeoButton
+  </button>
+));
+jest.mock('../Text', () => ({ as, children, ...props }: any) => (
+  <div data-testid="text" {...props}>{children}</div>
+));
 
-const mockWeatherData = {
-  forecasts: [
-    {
-      detailed: {
-        issueDate: '2025-07-14T22:46:00+01:00',
-        lastUpdated: '2025-07-15T11:03:03.456+01:00',
-        reports: [
-          {
-            enhancedWeatherDescription: 'Gusty winds and light rain showers',
-            extendedWeatherType: 10,
-            feelsLikeTemperatureC: 19,
-            feelsLikeTemperatureF: 67,
-            gustSpeedKph: 66,
-            gustSpeedMph: 41,
-            humidity: 70,
-            localDate: '2025-07-15',
-            precipitationProbabilityInPercent: 89,
-            precipitationProbabilityText: 'High chance of precipitation',
-            pressure: 1014,
-            temperatureC: 18,
-            temperatureF: 65,
-            timeslot: '12',
-            timeslotLength: 1,
-            visibility: 'Moderate',
-            weatherType: 10,
-            weatherTypeText: 'Light Rain Showers',
-            windDescription: 'Gusty winds from the west south west',
-            windDirection: 'WSW',
-            windDirectionAbbreviation: 'WSW',
-            windDirectionFull: 'West South Westerly',
-            windSpeedKph: 34,
-            windSpeedMph: 21,
-          },
-        ],
-      },
-      summary: {
-        issueDate: '2025-07-14T22:46:00+01:00',
-        lastUpdated: '2025-07-15T11:03:03.456+01:00',
-        report: {
-          enhancedWeatherDescription: 'Gusty winds and rain',
-          gustSpeedKph: 67,
-          gustSpeedMph: 42,
-          localDate: '2025-07-15',
-          maxTempC: 18,
-          maxTempF: 65,
-          minTempC: 13,
-          minTempF: 55,
-          precipitationProbabilityInPercent: 89,
-          precipitationProbabilityText: 'High chance of precipitation',
-          sunrise: '05:13',
-          sunset: '21:24',
-          weatherType: 12,
-          weatherTypeText: 'Light Rain',
-          windDescription: 'Gusty winds from the south west',
-          windDirection: 'SW',
-          windDirectionAbbreviation: 'SW',
-          windDirectionFull: 'South Westerly',
-          windSpeedKph: 35,
-          windSpeedMph: 22,
-        },
-      },
-    },
-  ],
+// Helper: mock fetch
+const mockFetch = (data: any, ok = true) => {
+  global.fetch = jest.fn().mockResolvedValue({
+    ok,
+    json: async () => data,
+  }) as any;
 };
 
-describe('Weather Component', () => {
+describe('Weather component', () => {
   beforeEach(() => {
-    mockFetch.mockClear();
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
   });
 
-  it('should render loading state initially', () => {
-    mockFetch.mockImplementation(
-      () =>
-        new Promise<void>(resolve => {
-          resolve();
-        }),
-    );
+  it('shows loading initially', () => {
+    mockFetch({ forecasts: [] });
+    render(<Weather />);
+    expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
+  });
+
+  it('renders error state on fetch failure', async () => {
+    global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as any;
+    render(<Weather />);
+    await screen.findByText(/Error:/i);
+    expect(screen.getByText(/Failed to fetch weather data: 500/)).toBeInTheDocument();
+  });
+
+  it('shows fallback for missing data structure', async () => {
+    mockFetch({});
+    render(<Weather />);
+    await screen.findByText(/Error:/i);
+    expect(screen.getByText(/Invalid weather data format/)).toBeInTheDocument();
+  });
+
+  it('renders weather forecasts and location header', async () => {
+    const weatherResponse = {
+      forecasts: [
+        { summary: { report: { localDate: '2025-11-04' } }, location: { name: 'Paris' } },
+        { summary: { report: { localDate: '2025-11-05' } } }
+      ],
+      location: { name: 'Paris' }
+    };
+    mockFetch(weatherResponse);
 
     render(<Weather />);
-
-    expect(screen.getByText('Loading weather forecast...')).toBeInTheDocument();
+    await screen.findByText('Paris');
+    expect(screen.getAllByTestId('DayForecast').length).toBe(2);
+    expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent('2025-11-04');
   });
 
-  it('should render error state when fetch fails', async () => {
-    mockFetch.mockRejectedValueOnce(new Error('Network error'));
+  it('uses location from localStorage if present on mount', async () => {
+    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue({
+      latitude: 51.5,
+      longitude: -0.1,
+      locationId: 'xyz123',
+      locationName: 'StoredCity'
+    });
+    const weatherResponse = {
+      forecasts: [{ summary: { report: { localDate: '2025-11-01' } } }],
+      location: { name: 'StoredCity' }
+    };
+    mockFetch(weatherResponse);
 
     render(<Weather />);
-
-    await waitFor(() => {
-      expect(screen.getByText(/Error:/)).toBeInTheDocument();
-    });
+    await screen.findByText('StoredCity');
   });
 
-  it('should use custom locationId when provided', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockWeatherData,
-    });
-
-    render(<Weather locationId="123456" />);
-
-    await waitFor(() => {
-      expect(mockFetch).toHaveBeenCalledWith(
-        'https://weather-broker-cdn.api.bbci.co.uk/en/forecast/aggregated/123456',
-      );
-    });
-  });
-
-  it('should display day summary information', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockWeatherData,
-    });
+  it('updates location and saves to storage on GeoLocationButton click', async () => {
+    const saveSpy = jest.spyOn(locationStorage, 'saveLocationToStorage').mockImplementation(() => {});
+    const weatherResponse = {
+      forecasts: [{ summary: { report: { localDate: '2025-11-02' } } }],
+      location: { name: 'London' }
+    };
+    mockFetch(weatherResponse);
 
     render(<Weather />);
+    fireEvent.click(screen.getByTestId('geo-btn'));
 
-    await waitFor(() => {
-      expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
-    });
+    await screen.findByText(/London/);
+    expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
+      latitude: 51.5, longitude: -0.12, locationId: '1', locationName: 'London'
+    }));
+  });
 
-    // Expand the day summary, use flexible matcher again
-    fireEvent.click(
-      screen.getByText((content) => content.includes('Monday') && content.includes('15 July'))
-    );
+  it('expands and collapses a day forecast on click', async () => {
+    const weatherResponse = {
+      forecasts: [
+        { summary: { report: { localDate: '2025-11-04' } } }
+      ]
+    };
+    mockFetch(weatherResponse);
+
+    render(<Weather />);
+    await screen.findByText('2025-11-04');
+    const dayRow = screen.getByTestId('DayForecast');
+    expect(dayRow.getAttribute('data-expanded')).toBe('false');
+    fireEvent.click(dayRow);
+    expect(dayRow.getAttribute('data-expanded')).toBe('true');
+  });
+
+  it('renders "Unknown location" if no name found', async () => {
+    mockFetch({ forecasts: [{}] });
+    render(<Weather />);
+    await screen.findByText(/Unknown location/);
   });
 });
