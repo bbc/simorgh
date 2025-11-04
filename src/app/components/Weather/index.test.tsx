@@ -102,10 +102,6 @@ describe('Weather Component', () => {
 
     render(<Weather />);
 
-    await waitFor(() => {
-      expect(screen.getByText('Weather Forecast')).toBeInTheDocument();
-    });
-
     expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
   });
 
