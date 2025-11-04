@@ -19,17 +19,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
-  const defaultMetadata = {
-    title: 'BBC World Service – BBC News in 43 Languages Worldwide',
-    description:
-      'Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.',
-    image:
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1200x630.png',
-    imageAltText: 'BBC World Service Image',
-    imageWidth: 1200,
-    imageHeight: 630,
-  };
-
   const baseProps = {
     error: null,
     isAmp: false,
@@ -41,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     service: 'ws' as Services,
     pathname: context?.resolvedUrl,
     pageData: {
-      ...defaultMetadata,
       metadata: {
         type: STATIC_PAGE,
         atiAnalytics: {},
@@ -72,7 +60,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         service: 'ws',
         toggles,
         pageData: {
-          ...defaultMetadata,
           metadata: {
             type: HOME_PAGE,
             atiAnalytics: {},
@@ -92,13 +79,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
       toggles,
       pageData: {
         ...data?.pageData,
-        title: data?.pageData?.title || defaultMetadata.title,
-        description: data?.pageData?.description || defaultMetadata.description,
-        image: data?.pageData?.image || defaultMetadata.image,
-        imageAltText:
-          data?.pageData?.imageAltText || defaultMetadata.imageAltText,
-        imageWidth: data?.pageData?.imageWidth || defaultMetadata.imageWidth,
-        imageHeight: data?.pageData?.imageHeight || defaultMetadata.imageHeight,
+        title: data?.pageData?.title,
+        description: data?.pageData?.description,
+        image: data?.pageData?.image,
+        imageAltText: data?.pageData?.imageAltText,
+        imageWidth: data?.pageData?.imageWidth || 1200,
+        imageHeight: data?.pageData?.imageHeight || 630,
         metadata: {
           ...data?.pageData?.metadata,
           type: HOME_PAGE,
