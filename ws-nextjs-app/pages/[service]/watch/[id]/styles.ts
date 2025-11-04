@@ -1,9 +1,9 @@
 import { Theme, css } from '@emotion/react';
 
 const styles = {
-  pageWrapper: ({ palette, isDarkUi }: Theme) =>
+  pageWrapper: ({ palette }: Theme) =>
     css({
-      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
+      backgroundColor: palette.GREY_10,
     }),
   main: ({ spacings, mq }: Theme) =>
     css({
