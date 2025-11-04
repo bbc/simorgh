@@ -18,4 +18,4 @@ export default {
     fontFaces: [],
   },
   brandSVG,
-} as ServiceTheme;
+};
