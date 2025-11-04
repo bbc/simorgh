@@ -22,9 +22,7 @@ describe('PageLayoutWrapper', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each(
-    SERVICES.filter(service => !['newsround'].includes(service)) as Services[],
-  )('should render fonts for %s', async (service: Services) => {
+  it.each(SERVICES)('should render fonts for %s', async (service: Services) => {
     await act(() =>
       render(
         <PageLayoutWrapper
