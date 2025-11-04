@@ -51,6 +51,8 @@ const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
 const basePageData = {
   title: 'Test Title',
   description: 'Test Description',
+  seoTitle: 'Test SEO Title',
+  seoDescription: 'Test SEO Description',
   metadata: { atiAnalytics: {}, type: 'home' },
   curations: [
     {
