@@ -1,34 +1,77 @@
+/* eslint-disable no-param-reassign */
 import { PropsWithChildren } from 'react';
+import type { LoadableComponent } from '@loadable/component';
+import nodeLogger from '#lib/logger.node';
+import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
-import { Services, Variants } from '../../models/types/global';
+import {
+  ServicesVariantsProps,
+  Variants,
+  ServicesWithVariants,
+  ServicesWithNoVariants,
+} from '../../models/types/global';
 import themes from './themes/loadableConfig';
 import fallBackTheme from './themes/news';
 
-interface Props {
-  service: Services;
-  variant?: Variants | null;
-}
+const logger = nodeLogger(__filename);
+
+type ThemeComponentLoadable = LoadableComponent<{ children: React.ReactNode }>;
+type FallbackThemeComponent = React.FC<{ children: React.ReactNode }>;
+
+type NonVariantThemesType = {
+  [_service in ServicesWithNoVariants['service']]: ThemeComponentLoadable;
+};
+
+type VariantThemesType = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in Variants]?: ThemeComponentLoadable;
+  };
+};
+
+const nonVariantThemes = Object.fromEntries(
+  Object.entries(themes).filter(([_service, theme]) =>
+    Object.keys(theme).includes('render'),
+  ),
+) as NonVariantThemesType;
+
+const variantThemes = Object.fromEntries(
+  Object.entries(themes).filter(
+    ([_service, theme]) => !Object.keys(theme).includes('render'),
+  ),
+) as VariantThemesType;
 
 export const ThemeProvider = ({
   children,
   service,
   variant,
-}: PropsWithChildren<Props>) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let LoadableContextProvider: any = fallBackTheme;
+}: PropsWithChildren<ServicesVariantsProps>) => {
+  let LoadableContextProvider:
+    | ThemeComponentLoadable
+    | FallbackThemeComponent
+    | null = null;
 
-  const serviceVariant: Variants = variant || defaultServiceVariants[service];
+  variant = variant || defaultServiceVariants[service];
 
-  if (serviceVariant === 'default' || !serviceVariant) {
-    LoadableContextProvider = themes[service];
+  let themeWithVariant;
+  let themeNoVariant;
+
+  if (service in variantThemes) {
+    themeWithVariant =
+      variantThemes[service as ServicesWithVariants['service']][variant];
   } else {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore - TODO: come back to this
-    LoadableContextProvider = themes[service][serviceVariant];
+    themeNoVariant =
+      nonVariantThemes[service as ServicesWithNoVariants['service']];
   }
 
-  if (!LoadableContextProvider) {
-    return null;
+  if (themeNoVariant || themeWithVariant) {
+    LoadableContextProvider =
+      themeNoVariant || themeWithVariant || fallBackTheme;
+  } else {
+    logger.error(
+      THEME_PROVIDER_ERROR,
+      `Unable to find a theme provider for ${service} with variant ${variant}, therefore using fallback theme provider (news)`,
+    );
+    LoadableContextProvider = fallBackTheme;
   }
 
   return <LoadableContextProvider>{children}</LoadableContextProvider>;

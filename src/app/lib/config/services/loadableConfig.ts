@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Services } from '#app/models/types/global';
 import loadable from 'next/dynamic';
 import { ComponentType } from 'react';

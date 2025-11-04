@@ -2,8 +2,6 @@ import { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
@@ -23,58 +21,86 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 import LinkedData from '../../components/LinkedData';
 
 const MarginWrapper = styled.div`
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     margin-top: ${GEL_SPACING_TRPL};
   }
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin-top: ${GEL_SPACING_QUAD};
-  }
-
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
+    margin-top: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const StyledMostReadGrid = styled(Grid)`
+  && {
+    margin-top: ${GEL_SPACING_TRPL};
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
+      margin-top: ${GEL_SPACING_QUAD};
+    }
+
+    @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
+      margin-top: ${GEL_SPACING_QUAD};
+    }
   }
 `;
 
 const MostReadWrapper = ({ children, header }) => (
-  <>
-    <IndexHeading id="content">{header}</IndexHeading>
-    <MarginWrapper>
-      <GelPageGrid
+  <MarginWrapper>
+    <GelPageGrid
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+      enableGelGutters
+    >
+      <Grid
+        item
+        startOffset={{
+          group0: 1,
+          group1: 1,
+          group2: 1,
+          group3: 1,
+          group4: 1,
+          group5: 3,
+        }}
         columns={{
           group0: 6,
           group1: 6,
           group2: 6,
           group3: 6,
-          group4: 8,
-          group5: 20,
+          group4: 6,
+          group5: 11,
         }}
-        enableGelGutters
       >
-        <Grid
-          item
-          startOffset={{
-            group0: 1,
-            group1: 1,
-            group2: 1,
-            group3: 1,
-            group4: 1,
-            group5: 3,
-          }}
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 6,
-            group5: 11,
-          }}
-        >
-          {children}
-        </Grid>
-      </GelPageGrid>
-    </MarginWrapper>
-  </>
+        <IndexHeading id="content">{header}</IndexHeading>
+      </Grid>
+      <StyledMostReadGrid
+        item
+        startOffset={{
+          group0: 1,
+          group1: 1,
+          group2: 1,
+          group3: 1,
+          group4: 1,
+          group5: 3,
+        }}
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 6,
+          group5: 11,
+        }}
+      >
+        {children}
+      </StyledMostReadGrid>
+    </GelPageGrid>
+  </MarginWrapper>
 );
 
 const MostReadPage = ({ pageData }) => {

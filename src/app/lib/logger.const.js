@@ -85,6 +85,9 @@ const logCodes = {
 
   // Logging
   ATI_LOGGING_ERROR: 'ati_logging_error',
+
+  // ThemeProvider error
+  THEME_PROVIDER_ERROR: 'theme_provider_error',
 };
 
 module.exports = logCodes;

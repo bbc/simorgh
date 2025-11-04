@@ -41,6 +41,6 @@
       "#storybook/*": [".storybook/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+  "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
+  "exclude": ["node_modules", "build"]
 }

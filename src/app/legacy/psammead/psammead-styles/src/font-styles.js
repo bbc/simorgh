@@ -1,4 +1,4 @@
-import * as fonts from './font-families';
+import fonts from './font-families';
 
 export const getSansRegular = service => {
   if (!fonts[service]) {
