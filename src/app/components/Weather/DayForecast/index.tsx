@@ -14,6 +14,8 @@ interface DayForecastProps {
   onToggle: () => void;
 }
 
+const STATIC_ROOT = getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
+
 const DayForecast: FC<DayForecastProps> = ({
   forecast,
   expanded,
@@ -36,7 +38,7 @@ const DayForecast: FC<DayForecastProps> = ({
   // Icon from summary
   const iconEntry = summary ? summary.weatherType : undefined;
   const iconSrc = iconEntry
-    ? `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}/images/weather/${iconEntry}-light.svg`
+    ? `${STATIC_ROOT}/images/weather/${iconEntry}-light.svg`
     : undefined;
 
   //   // Icon from summary
@@ -84,6 +86,7 @@ const DayForecast: FC<DayForecastProps> = ({
               </span>
             </span>
           )}
+
           <Text as="span" css={styles.headerTemp}>
             {typeof summary?.maxTempC === 'number'
               ? `${summary.maxTempC}°C`
@@ -92,6 +95,17 @@ const DayForecast: FC<DayForecastProps> = ({
           <Text as="span" css={styles.headerDate}>
             {formatDate(summary?.localDate || '')}
           </Text>
+          {summary?.precipitationProbabilityInPercent && (
+            <Text css={styles.precipitationDay}>
+              <img
+                src={`${STATIC_ROOT}/images/weather/rain-chance.svg`}
+                alt="Chance of rain"
+                width={15}
+                height={15}
+              />
+              <span>{summary?.precipitationProbabilityInPercent}%</span>
+            </Text>
+          )}
         </div>
         <div css={styles.expandIcon} className={expanded ? 'expanded' : ''}>
           ▼

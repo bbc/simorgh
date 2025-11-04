@@ -163,6 +163,30 @@ const styles = {
       },
     }),
 
+  precipitationDay: ({ fontVariants, palette }: Theme) =>
+    css({
+      ...fontVariants.sansRegular,
+      color: palette.GREY_8,
+      fontSize: '0.95rem',
+      textAlign: 'center',
+      position: 'relative',
+      display: 'inline-block',
+      width: '55px',
+      height: '20px',
+      marginLeft: '20px',
+      span: {
+        position: 'relative',
+        bottom: 0,
+        color: '#3789c6',
+        fontSize: '0.8rem !important',
+      },
+      img: {
+        position: 'relative',
+        top: 0,
+        marginRight: '5px',
+      },
+    }),
+
   windInfoContainer: () =>
     css({
       position: 'relative',
@@ -177,7 +201,7 @@ const styles = {
         display: 'none',
       },
       position: 'absolute',
-      top: '11px',
+      top: '10px',
       left: 0,
       display: 'inline-block',
       width: '40px',
@@ -217,7 +241,7 @@ const styles = {
     gap: spacings.FULL,
   }),
   headerDate: ({ fontVariants }: Theme) => ({
-    ...fontVariants.sansBold,
+    ...fontVariants.sans,
     fontSize: '1rem',
   }),
   headerTemp: ({ fontVariants, palette }: Theme) => ({
