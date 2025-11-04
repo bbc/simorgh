@@ -16,17 +16,17 @@ const styles = {
     maxWidth: '63rem',
     margin: '0 auto',
   }),
-  margins: ({ spacings, mq }: Theme) =>
+  padding: ({ spacings, mq }: Theme) =>
     css({
-      margin: `${spacings.TRIPLE}rem 0`,
+      padding: `${spacings.TRIPLE}rem 0`,
       [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
-        margin: `${spacings.QUADRUPLE}rem 0`,
+        padding: `${spacings.QUADRUPLE}rem 0`,
       },
       [mq.GROUP_3_ONLY]: {
-        margin: `${spacings.SEXTUPLE}rem 0`,
+        padding: `${spacings.SEXTUPLE}rem 0`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `${spacings.QUINTUPLE}rem 0`,
+        padding: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
   title: ({ palette, spacings }: Theme) =>
