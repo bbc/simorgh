@@ -445,61 +445,6 @@ exports[`Psammead Styles - Font Families should match kyrgyz 1`] = `
 }
 `;
 
-exports[`Psammead Styles - Font Families should match learningenglish 1`] = `
-{
-  "sansBold": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  ",
-  "sansBoldItalic": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 700;
-  ",
-  "sansLight": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  ",
-  "sansRegular": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  ",
-  "sansRegularItalic": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 400;
-  ",
-  "serifBold": "
-    font-family: ReithSerif, Helvetica, Arial, sans-serif;
-    font-style: normal;
-   font-weight: 700;
-  ",
-  "serifLight": "
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  ",
-  "serifMedium": "
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 500;
-  ",
-  "serifMediumItalic": "
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 500;
-  ",
-  "serifRegular": "
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  ",
-}
-`;
-
 exports[`Psammead Styles - Font Families should match magyarul 1`] = `
 {
   "sansBold": "
@@ -805,36 +750,6 @@ exports[`Psammead Styles - Font Families should match newsround 1`] = `
 }
 `;
 
-exports[`Psammead Styles - Font Families should match optimobase 1`] = `
-{
-  "sansBold": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  ",
-  "sansBoldItalic": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 700;
-  ",
-  "sansLight": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  ",
-  "sansRegular": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  ",
-  "sansRegularItalic": "
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 400;
-  ",
-}
-`;
-
 exports[`Psammead Styles - Font Families should match pashto 1`] = `
 {
   "sansBold": "
@@ -1010,6 +925,61 @@ exports[`Psammead Styles - Font Families should match punjabi 1`] = `
   "sansRegular": "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match romania 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
    font-weight: 400;
   ",
 }
@@ -1490,7 +1460,7 @@ exports[`Psammead Styles - Font Families should match vietnamese 1`] = `
 }
 `;
 
-exports[`Psammead Styles - Font Families should match weather 1`] = `
+exports[`Psammead Styles - Font Families should match ws 1`] = `
 {
   "sansBold": "
    font-family: ReithSans, Helvetica, Arial, sans-serif;

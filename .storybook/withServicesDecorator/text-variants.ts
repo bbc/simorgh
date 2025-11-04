@@ -231,15 +231,6 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'Europe/London',
     articlePath: '/newsround/articles/cn7k01xp8kxo',
   },
-  optimobase: {
-    text: 'Could a computer ever create better art than a human?',
-    longText:
-      'The critic, author, poet and TV host was known for his witty commentary on international television.',
-    script: 'latin',
-    locale: 'en',
-    timezone: 'Europe/London',
-    articlePath: '/optimobase/articles/cn7k01xp8kxo',
-  },
   pashto: {
     text: 'د ملګرو ملتونو د ماشومانو ادارې یونیسف افغان کرېکټ لوبغاړی راشد خانه.',
     longText:
