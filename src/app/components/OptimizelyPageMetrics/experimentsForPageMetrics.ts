@@ -16,6 +16,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     activeExperiments: [
       'newswb_ws_read_more_b',
       'newswb_ws_article_read_time_2',
+      'newswb_ws_tod_article',
     ],
   },
   {
