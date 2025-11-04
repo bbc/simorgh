@@ -84,7 +84,7 @@ describe('Weather Component', () => {
   it('should render loading state initially', () => {
     mockFetch.mockImplementation(
       () =>
-        new Promise(resolve => {
+        new Promise<void>(resolve => {
           resolve();
         }),
     );
