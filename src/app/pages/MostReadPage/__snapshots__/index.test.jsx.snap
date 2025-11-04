@@ -37,75 +37,24 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-2 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #6E6E73;
-  margin: 0;
-  padding-bottom: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
+@media (min-width: 37.5rem) and (max-width: 79.9375rem) {
   .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-2 {
-    padding: 1.5rem 0 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    padding: 1.5rem 0 0;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-2 {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-4 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-4 {
-    margin-top: 2rem;
-  }
-}
-
 @media (min-width: 80rem) {
-  .emotion-4 {
-    margin-top: 2rem;
+  .emotion-2 {
+    margin-top: 1.5rem;
   }
 }
 
-.emotion-7 {
+.emotion-5 {
   width: 100%;
 }
 
 @supports (display: grid) {
-  .emotion-7 {
+  .emotion-5 {
     display: grid;
     position: initial;
     width: initial;
@@ -113,7 +62,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -121,7 +70,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -129,7 +78,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -137,7 +86,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -145,7 +94,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -153,7 +102,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-7 {
+    .emotion-5 {
       grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
@@ -162,64 +111,64 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-7 {
+  .emotion-5 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-7 {
+  .emotion-5 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-9 {
+  .emotion-7 {
     margin-left: 18.181818181818183%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-9 {
+  .emotion-7 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -227,7 +176,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -235,7 +184,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -243,7 +192,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -251,7 +200,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -259,7 +208,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-9 {
+    .emotion-7 {
       grid-template-columns: repeat(11, 1fr);
       grid-column-end: span 11;
       grid-column-start: 3;
@@ -267,7 +216,139 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-11 {
+.emotion-9 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #6E6E73;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-12 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-12 {
+    margin-left: 18.181818181818183%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-12 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(11, 1fr);
+      grid-column-end: span 11;
+      grid-column-start: 3;
+    }
+  }
+}
+
+.emotion-12.emotion-12 {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 37.5rem) and (max-width: 79.9375rem) {
+  .emotion-12.emotion-12 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-12.emotion-12 {
+    margin-top: 2rem;
+  }
+}
+
+.emotion-14 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -276,7 +357,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-11 {
+  .emotion-14 {
     display: grid;
     position: initial;
     width: initial;
@@ -284,7 +365,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -292,7 +373,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -300,7 +381,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -308,7 +389,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -316,7 +397,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -324,7 +405,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-11 {
+    .emotion-14 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -332,62 +413,62 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-16 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-13 {
+  .emotion-16 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-13 {
+    .emotion-16 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-15 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -400,30 +481,30 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-16 {
+  .emotion-19 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-16 {
+  .emotion-19 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-19 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-19 {
     min-width: 2rem;
   }
 }
 
-.emotion-17 {
+.emotion-20 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -436,32 +517,32 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-20 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-20 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-18 {
+.emotion-21 {
   padding-top: 0.375rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-18 {
+  .emotion-21 {
     padding-right: 0;
   }
 }
 
-.emotion-19 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -475,26 +556,26 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-19:hover,
-.emotion-19:focus {
+.emotion-22:hover,
+.emotion-22:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-19:before {
+.emotion-22:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -507,31 +588,31 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-19 {
+  .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-19 {
+    .emotion-22 {
       font-size: 1.125rem;
       line-height: 1.375rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-19 {
+    .emotion-22 {
       font-size: 1.25rem;
       line-height: 1.5rem;
     }
   }
 }
 
-.emotion-20 {
+.emotion-23 {
   padding-top: 0.5rem;
 }
 
-.emotion-21 {
+.emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -542,14 +623,14 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-24 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-24 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -569,63 +650,68 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
     <div
       class="emotion-0 emotion-1"
     >
-      <h1
-        class="emotion-2 emotion-3"
-        dir="ltr"
-        id="content"
-        tabindex="-1"
-      >
-        Di one wey dem dey read well well
-      </h1>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-2 emotion-3"
       >
         <div
-          class="emotion-6 emotion-7 emotion-8"
+          class="emotion-4 emotion-5 emotion-6"
           dir="ltr"
         >
           <div
-            class="emotion-9 emotion-8"
+            class="emotion-7 emotion-6"
+            dir="ltr"
+          >
+            <h1
+              class="emotion-9 emotion-10"
+              dir="ltr"
+              id="content"
+              tabindex="-1"
+            >
+              Di one wey dem dey read well well
+            </h1>
+          </div>
+          <div
+            class="emotion-11 emotion-12 emotion-6"
             dir="ltr"
           >
             <ol
-              class="emotion-11 emotion-8"
+              class="emotion-14 emotion-6"
               dir="ltr"
               role="list"
             >
               <li
-                class="emotion-13 emotion-8"
+                class="emotion-16 emotion-6"
                 dir="ltr"
                 role="listitem"
               >
                 <div
-                  class="emotion-15"
+                  class="emotion-18"
                 >
                   <div
-                    class="emotion-16"
+                    class="emotion-19"
                     dir="ltr"
                   >
                     <span
-                      class="emotion-17"
+                      class="emotion-20"
                     >
                       1
                     </span>
                   </div>
                   <div
-                    class="emotion-18"
+                    class="emotion-21"
                     dir="ltr"
                   >
                     <a
-                      class="emotion-19"
+                      class="emotion-22"
                       href="https://www.bbc.com/pidgin/articles/cz5kkgv41v0o"
                     >
                       Teams wey qualify for Afcon 2023 and how things stand for each group
                     </a>
                     <div
-                      class="emotion-20"
+                      class="emotion-23"
                     >
                       <time
-                        class="emotion-21 emotion-22"
+                        class="emotion-24 emotion-25"
                         datetime="2023-06-19"
                       >
                         De one we dem update for: 19th June 2023
@@ -635,38 +721,38 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-8"
+                class="emotion-16 emotion-6"
                 dir="ltr"
                 role="listitem"
               >
                 <div
-                  class="emotion-15"
+                  class="emotion-18"
                 >
                   <div
-                    class="emotion-16"
+                    class="emotion-19"
                     dir="ltr"
                   >
                     <span
-                      class="emotion-17"
+                      class="emotion-20"
                     >
                       2
                     </span>
                   </div>
                   <div
-                    class="emotion-18"
+                    class="emotion-21"
                     dir="ltr"
                   >
                     <a
-                      class="emotion-19"
+                      class="emotion-22"
                       href="https://www.bbc.com/pidgin/articles/czd44wvly0qo"
                     >
                       'We dey hear gospel songs den screaming' - Woman tok of Uganda school attack 
                     </a>
                     <div
-                      class="emotion-20"
+                      class="emotion-23"
                     >
                       <time
-                        class="emotion-21 emotion-22"
+                        class="emotion-24 emotion-25"
                         datetime="2023-06-19"
                       >
                         De one we dem update for: 19th June 2023
@@ -676,38 +762,38 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-8"
+                class="emotion-16 emotion-6"
                 dir="ltr"
                 role="listitem"
               >
                 <div
-                  class="emotion-15"
+                  class="emotion-18"
                 >
                   <div
-                    class="emotion-16"
+                    class="emotion-19"
                     dir="ltr"
                   >
                     <span
-                      class="emotion-17"
+                      class="emotion-20"
                     >
                       3
                     </span>
                   </div>
                   <div
-                    class="emotion-18"
+                    class="emotion-21"
                     dir="ltr"
                   >
                     <a
-                      class="emotion-19"
+                      class="emotion-22"
                       href="https://www.bbc.com/pidgin/articles/cgr6g81j2g8o"
                     >
                       Super Eagles qualify for Nations Cup afta beating Sierra Leone for Monrovia
                     </a>
                     <div
-                      class="emotion-20"
+                      class="emotion-23"
                     >
                       <time
-                        class="emotion-21 emotion-22"
+                        class="emotion-24 emotion-25"
                         datetime="2023-06-18"
                       >
                         De one we dem update for: 18th June 2023
@@ -717,38 +803,38 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-8"
+                class="emotion-16 emotion-6"
                 dir="ltr"
                 role="listitem"
               >
                 <div
-                  class="emotion-15"
+                  class="emotion-18"
                 >
                   <div
-                    class="emotion-16"
+                    class="emotion-19"
                     dir="ltr"
                   >
                     <span
-                      class="emotion-17"
+                      class="emotion-20"
                     >
                       4
                     </span>
                   </div>
                   <div
-                    class="emotion-18"
+                    class="emotion-21"
                     dir="ltr"
                   >
                     <a
-                      class="emotion-19"
+                      class="emotion-22"
                       href="https://www.bbc.com/pidgin/articles/cx047w4gxqzo"
                     >
                       Forbes top ten list of highest paid athletes for 2023 and wetin dem earn
                     </a>
                     <div
-                      class="emotion-20"
+                      class="emotion-23"
                     >
                       <time
-                        class="emotion-21 emotion-22"
+                        class="emotion-24 emotion-25"
                         datetime="2023-05-03"
                       >
                         De one we dem update for: 3rd May 2023
@@ -758,38 +844,38 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                 </div>
               </li>
               <li
-                class="emotion-13 emotion-8"
+                class="emotion-16 emotion-6"
                 dir="ltr"
                 role="listitem"
               >
                 <div
-                  class="emotion-15"
+                  class="emotion-18"
                 >
                   <div
-                    class="emotion-16"
+                    class="emotion-19"
                     dir="ltr"
                   >
                     <span
-                      class="emotion-17"
+                      class="emotion-20"
                     >
                       5
                     </span>
                   </div>
                   <div
-                    class="emotion-18"
+                    class="emotion-21"
                     dir="ltr"
                   >
                     <a
-                      class="emotion-19"
+                      class="emotion-22"
                       href="/pidgin/65817572"
                     >
                       Tins to sabi about 2023 Sierra Leone general election
                     </a>
                     <div
-                      class="emotion-20"
+                      class="emotion-23"
                     >
                       <time
-                        class="emotion-21 emotion-22"
+                        class="emotion-24 emotion-25"
                         datetime="2023-06-18"
                       >
                         De one we dem update for: 18th June 2023

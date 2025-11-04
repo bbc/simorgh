@@ -477,7 +477,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'افغانستان',
-        url: '/persian/afghanistan',
+        url: '/persian/topics/cvjp23v3083t',
       },
       {
         title: 'جهان',
