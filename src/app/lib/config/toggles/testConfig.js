@@ -1,4 +1,4 @@
-import { services } from '../services/loadableConfig';
+import services from '../services/serviceList';
 
 export default {
   _environment: 'test',
