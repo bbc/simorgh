@@ -33,6 +33,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
+    seoTitle: string;
+    seoDescription: string;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
@@ -45,7 +47,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
-    homePageTitle,
     lang,
     brandName,
     service,
@@ -54,9 +55,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const {
     title,
     description,
+    seoTitle,
+    seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
   let { curations } = pageData;
+
+  const metadataBaseTitle = seoTitle || title;
+  const metadataBaseDescription = seoDescription || description;
 
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
@@ -82,16 +88,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={homePageTitle}
+        title={metadataBaseTitle}
         lang={lang}
-        description={description}
+        description={metadataBaseDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={title}
-        headline={title}
+        seoTitle={metadataBaseTitle}
+        headline={metadataBaseTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
