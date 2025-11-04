@@ -219,12 +219,10 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        // we are currently not tracking views on this component for the home page time of day experiment in optimizely
-        // so I have only added the optimizely events in the case that it is the article time of day experiment
         const viewTracker = useViewTracker({
           ...eventTrackingData,
           viewThreshold: 0.2,
-          ...(timeOfDayExperimentName === 'newswb_ws_tod_article' &&
+          ...(timeOfDayExperimentName &&
             timeOfDayVariant && {
               sendOptimizelyEvents: true,
               experimentName: timeOfDayExperimentName,
