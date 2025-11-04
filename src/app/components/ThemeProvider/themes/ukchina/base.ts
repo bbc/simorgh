@@ -1,4 +1,3 @@
-import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
