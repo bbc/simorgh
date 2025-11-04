@@ -1,8 +1,15 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { ThemeProvider } from '@emotion/react';
 import Weather from './index'; // adjust import path as needed
 import * as locationStorage from './useLocationStorage';
+
+// Mock styles so no theme is needed
+jest.mock('./index.styles', () => {
+  const handler = () => '';
+  return new Proxy({}, {
+    get: () => handler,
+  });
+});
 
 // Mocks for child components
 jest.mock('./DayForecast', () => ({ forecast, expanded, onToggle, datetimeLocale }: any) => (
@@ -19,38 +26,6 @@ jest.mock('../Text', () => ({ as, children, ...props }: any) => (
   <div data-testid="text" {...props}>{children}</div>
 ));
 
-// Minimal Theme mock for Emotion ThemeProvider (add or adjust keys as needed)
-const testTheme = {
-  palette: {
-    WHITE: '#fff',
-    GREY_1: '#f8f8f8',
-    GREY_2: '#eee',
-    GREY_3: '#ddd',
-    GREY_8: '#888',
-    GREY_10: '#222',
-    POSTBOX: '#d6001c',
-  },
-  spacings: {
-    HALF: 0.5,
-    FULL: 1,
-    DOUBLE: 2,
-    TRIPLE: 3,
-    QUADRUPLE: 4,
-  },
-  fontSizes: {
-    greatPrimer: { fontSize: '2rem' },
-    pica: { fontSize: '1.1rem' },
-  },
-  fontVariants: {
-    sansBold: { fontWeight: 700 },
-    sansRegular: { fontWeight: 400 },
-  },
-  mq: {
-    GROUP_1_MAX_WIDTH: '@media (max-width: 599px)',
-    GROUP_2_MIN_WIDTH: '@media (min-width: 600px)',
-  },
-};
-
 // Helper: mock fetch
 const mockFetch = (data: any, ok = true) => {
   global.fetch = jest.fn().mockResolvedValue({
@@ -65,25 +40,22 @@ describe('Weather component', () => {
     jest.clearAllMocks();
   });
 
-  const renderWithTheme = (ui: React.ReactNode) =>
-    render(<ThemeProvider theme={testTheme}>{ui}</ThemeProvider>);
-
   it('shows loading initially', () => {
     mockFetch({ forecasts: [] });
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
   });
 
   it('renders error state on fetch failure', async () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as any;
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText(/Error:/i);
     expect(screen.getByText(/Failed to fetch weather data: 500/)).toBeInTheDocument();
   });
 
   it('shows fallback for missing data structure', async () => {
     mockFetch({});
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText(/Error:/i);
     expect(screen.getByText(/Invalid weather data format/)).toBeInTheDocument();
   });
@@ -98,7 +70,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText('Paris');
     expect(screen.getAllByTestId('DayForecast').length).toBe(2);
     expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent('2025-11-04');
@@ -117,7 +89,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText('StoredCity');
   });
 
@@ -129,7 +101,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     fireEvent.click(screen.getByTestId('geo-btn'));
 
     await screen.findByText(/London/);
@@ -146,18 +118,17 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText('2025-11-04');
     const dayRow = screen.getByTestId('DayForecast');
     expect(dayRow.getAttribute('data-expanded')).toBe('false');
     fireEvent.click(dayRow);
-    // Simulate the component updating the prop
-    // In reality, DayForecast should use the callback to update expanded state. Here, we trust the mechanism.
+    // By mocking, we cannot assert UI expansion without real state update, but the call succeeds.
   });
 
   it('renders "Unknown location" if no name found', async () => {
     mockFetch({ forecasts: [{}] });
-    renderWithTheme(<Weather />);
+    render(<Weather />);
     await screen.findByText(/Unknown location/);
   });
 });
