@@ -152,14 +152,6 @@ exports[`should render SansBold correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SansBold correctly for learningenglish 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SansBold correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -216,14 +208,6 @@ exports[`should render SansBold correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SansBold correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SansBold correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -268,6 +252,14 @@ exports[`should render SansBold correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 700;
+  "
+`;
+
+exports[`should render SansBold correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
    font-weight: 700;
   "
 `;
@@ -408,7 +400,7 @@ exports[`should render SansBold correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SansBold correctly for weather 1`] = `
+exports[`should render SansBold correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-style: normal;
@@ -584,14 +576,6 @@ exports[`should render SansBoldItalic correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SansBoldItalic correctly for learningenglish 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SansBoldItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -648,14 +632,6 @@ exports[`should render SansBoldItalic correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SansBoldItalic correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SansBoldItalic correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -700,6 +676,14 @@ exports[`should render SansBoldItalic correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 700;
+  "
+`;
+
+exports[`should render SansBoldItalic correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
    font-weight: 700;
   "
 `;
@@ -840,7 +824,7 @@ exports[`should render SansBoldItalic correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SansBoldItalic correctly for weather 1`] = `
+exports[`should render SansBoldItalic correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-style: italic;
@@ -1016,14 +1000,6 @@ exports[`should render SansLight correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SansLight correctly for learningenglish 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  "
-`;
-
 exports[`should render SansLight correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -1080,14 +1056,6 @@ exports[`should render SansLight correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SansLight correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  "
-`;
-
 exports[`should render SansLight correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -1133,6 +1101,14 @@ exports[`should render SansLight correctly for punjabi 1`] = `
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
    font-weight: 400;
+  "
+`;
+
+exports[`should render SansLight correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
   "
 `;
 
@@ -1272,7 +1248,7 @@ exports[`should render SansLight correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SansLight correctly for weather 1`] = `
+exports[`should render SansLight correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-style: normal;
@@ -1448,14 +1424,6 @@ exports[`should render SansRegular correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SansRegular correctly for learningenglish 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SansRegular correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -1512,14 +1480,6 @@ exports[`should render SansRegular correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SansRegular correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SansRegular correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -1564,6 +1524,14 @@ exports[`should render SansRegular correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 400;
+  "
+`;
+
+exports[`should render SansRegular correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
    font-weight: 400;
   "
 `;
@@ -1704,7 +1672,7 @@ exports[`should render SansRegular correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SansRegular correctly for weather 1`] = `
+exports[`should render SansRegular correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-style: normal;
@@ -1880,14 +1848,6 @@ exports[`should render SansRegularItalic correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SansRegularItalic correctly for learningenglish 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SansRegularItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
@@ -1944,14 +1904,6 @@ exports[`should render SansRegularItalic correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SansRegularItalic correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SansRegularItalic correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -1996,6 +1948,14 @@ exports[`should render SansRegularItalic correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 400;
+  "
+`;
+
+exports[`should render SansRegularItalic correctly for romania 1`] = `
+"
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
    font-weight: 400;
   "
 `;
@@ -2136,7 +2096,7 @@ exports[`should render SansRegularItalic correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SansRegularItalic correctly for weather 1`] = `
+exports[`should render SansRegularItalic correctly for ws 1`] = `
 "
    font-family: ReithSans, Helvetica, Arial, sans-serif;
    font-style: italic;
@@ -2312,14 +2272,6 @@ exports[`should render SerifBold correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SerifBold correctly for learningenglish 1`] = `
-"
-    font-family: ReithSerif, Helvetica, Arial, sans-serif;
-    font-style: normal;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SerifBold correctly for magyarul 1`] = `
 "
     font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -2376,14 +2328,6 @@ exports[`should render SerifBold correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SerifBold correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SerifBold correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -2427,6 +2371,14 @@ exports[`should render SerifBold correctly for portuguese 1`] = `
 exports[`should render SerifBold correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  "
+`;
+
+exports[`should render SerifBold correctly for romania 1`] = `
+"
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
     font-style: normal;
    font-weight: 700;
   "
@@ -2568,7 +2520,7 @@ exports[`should render SerifBold correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SerifBold correctly for weather 1`] = `
+exports[`should render SerifBold correctly for ws 1`] = `
 "
     font-family: ReithSerif, Helvetica, Arial, sans-serif;
     font-style: normal;
@@ -2744,14 +2696,6 @@ exports[`should render SerifLight correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SerifLight correctly for learningenglish 1`] = `
-"
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 300;
-  "
-`;
-
 exports[`should render SerifLight correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -2808,14 +2752,6 @@ exports[`should render SerifLight correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SerifLight correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SerifLight correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -2861,6 +2797,14 @@ exports[`should render SerifLight correctly for punjabi 1`] = `
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
    font-weight: 400;
+  "
+`;
+
+exports[`should render SerifLight correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
   "
 `;
 
@@ -3000,7 +2944,7 @@ exports[`should render SerifLight correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SerifLight correctly for weather 1`] = `
+exports[`should render SerifLight correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-style: normal;
@@ -3176,14 +3120,6 @@ exports[`should render SerifMedium correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SerifMedium correctly for learningenglish 1`] = `
-"
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 500;
-  "
-`;
-
 exports[`should render SerifMedium correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -3240,14 +3176,6 @@ exports[`should render SerifMedium correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SerifMedium correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SerifMedium correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -3293,6 +3221,14 @@ exports[`should render SerifMedium correctly for punjabi 1`] = `
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
    font-weight: 700;
+  "
+`;
+
+exports[`should render SerifMedium correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
   "
 `;
 
@@ -3432,7 +3368,7 @@ exports[`should render SerifMedium correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SerifMedium correctly for weather 1`] = `
+exports[`should render SerifMedium correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-style: normal;
@@ -3608,14 +3544,6 @@ exports[`should render SerifMediumItalic correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SerifMediumItalic correctly for learningenglish 1`] = `
-"
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 500;
-  "
-`;
-
 exports[`should render SerifMediumItalic correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -3672,14 +3600,6 @@ exports[`should render SerifMediumItalic correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SerifMediumItalic correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: italic;
-   font-weight: 700;
-  "
-`;
-
 exports[`should render SerifMediumItalic correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -3725,6 +3645,14 @@ exports[`should render SerifMediumItalic correctly for punjabi 1`] = `
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
    font-weight: 700;
+  "
+`;
+
+exports[`should render SerifMediumItalic correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
   "
 `;
 
@@ -3864,7 +3792,7 @@ exports[`should render SerifMediumItalic correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SerifMediumItalic correctly for weather 1`] = `
+exports[`should render SerifMediumItalic correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-style: italic;
@@ -4040,14 +3968,6 @@ exports[`should render SerifRegular correctly for kyrgyz 1`] = `
   "
 `;
 
-exports[`should render SerifRegular correctly for learningenglish 1`] = `
-"
-   font-family: ReithSerif, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SerifRegular correctly for magyarul 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
@@ -4104,14 +4024,6 @@ exports[`should render SerifRegular correctly for newsround 1`] = `
   "
 `;
 
-exports[`should render SerifRegular correctly for optimobase 1`] = `
-"
-   font-family: ReithSans, Helvetica, Arial, sans-serif;
-   font-style: normal;
-   font-weight: 400;
-  "
-`;
-
 exports[`should render SerifRegular correctly for pashto 1`] = `
 "
     font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
@@ -4156,6 +4068,14 @@ exports[`should render SerifRegular correctly for punjabi 1`] = `
 "
     font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
     font-style: normal;
+   font-weight: 400;
+  "
+`;
+
+exports[`should render SerifRegular correctly for romania 1`] = `
+"
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
    font-weight: 400;
   "
 `;
@@ -4296,7 +4216,7 @@ exports[`should render SerifRegular correctly for vietnamese 1`] = `
   "
 `;
 
-exports[`should render SerifRegular correctly for weather 1`] = `
+exports[`should render SerifRegular correctly for ws 1`] = `
 "
    font-family: ReithSerif, Helvetica, Arial, sans-serif;
    font-style: normal;
