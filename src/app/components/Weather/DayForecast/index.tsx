@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from '@emotion/react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Text from '../../Text';
 import HourlyReport from '../HourlyReport';
 import styles from '../index.styles';
 import { DayForecast as DayForecastType } from '../types';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 interface DayForecastProps {
   forecast: DayForecastType;
@@ -116,7 +116,7 @@ const DayForecast: FC<DayForecastProps> = ({
         <div css={styles.dayContent} id={`day-content-${summary?.localDate}`}>
           <div css={styles.daySummary}>{/* ...other summary fields... */}</div>
           <div css={styles.hourlyReports}>
-            {reports.map((report) => (
+            {reports.map(report => (
               <HourlyReport
                 key={`${report.localDate}-${report.timeslot}`}
                 report={report}

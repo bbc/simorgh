@@ -241,7 +241,7 @@ const styles = {
     gap: spacings.FULL,
   }),
   headerDate: ({ fontVariants }: Theme) => ({
-    ...fontVariants.sans,
+    ...fontVariants.sansRegular,
     fontSize: '1rem',
   }),
   headerTemp: ({ fontVariants, palette }: Theme) => ({

@@ -96,12 +96,22 @@ const mockDayForecast: DayForecastType = {
 
 describe('DayForecast', () => {
   it('renders the day header', () => {
-    render(<DayForecast forecast={mockDayForecast} onToggle={() => 'nothing to return. Silly typescript'} />);
+    render(
+      <DayForecast
+        forecast={mockDayForecast}
+        onToggle={() => 'nothing to return. Silly typescript'}
+      />,
+    );
     expect(screen.getByRole('button')).toHaveTextContent('Tuesday, 15 July');
   });
 
   it('expands and collapses to show hourly reports', () => {
-    render(<DayForecast forecast={mockDayForecast} onToggle={() => 'nothing to return. Silly typescript'} />);
+    render(
+      <DayForecast
+        forecast={mockDayForecast}
+        onToggle={() => 'nothing to return. Silly typescript'}
+      />,
+    );
     // Initially collapsed
     expect(screen.queryByText('12:00')).not.toBeInTheDocument();
     expect(screen.queryByText('13:00')).not.toBeInTheDocument();
@@ -120,7 +130,12 @@ describe('DayForecast', () => {
   });
 
   it('shows summary information when expanded', () => {
-    render(<DayForecast forecast={mockDayForecast} onToggle={() => 'nothing to return. Silly typescript'} />);
+    render(
+      <DayForecast
+        forecast={mockDayForecast}
+        onToggle={() => 'nothing to return. Silly typescript'}
+      />,
+    );
     fireEvent.click(screen.getByRole('button'));
     expect(screen.getByText('22°C / 16°C')).toBeInTheDocument();
     expect(screen.getByText('Sunny intervals')).toBeInTheDocument();
@@ -130,7 +145,12 @@ describe('DayForecast', () => {
   });
 
   it('expands/collapses with keyboard interaction', () => {
-    render(<DayForecast forecast={mockDayForecast} onToggle={() => 'nothing to return. Silly typescript'} />);
+    render(
+      <DayForecast
+        forecast={mockDayForecast}
+        onToggle={() => 'nothing to return. Silly typescript'}
+      />,
+    );
     const header = screen.getByRole('button');
     fireEvent.keyDown(header, { key: 'Enter' });
     expect(screen.getByText('12:00')).toBeInTheDocument();

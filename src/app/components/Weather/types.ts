@@ -25,6 +25,8 @@ export interface WeatherReport {
   windSpeedMph: number;
 }
 
+type StringOrNumber = string | number;
+
 export interface DayForecast {
   detailed: {
     issueDate: string;
@@ -65,7 +67,7 @@ export interface DayForecast {
 export interface WeatherForecast {
   location: {
     name: string;
-    [key: string]: any;
+    [key: string]: StringOrNumber;
   };
   forecasts: DayForecast[];
 }

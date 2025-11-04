@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { jsx } from '@emotion/react';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Text from '../../Text';
 import styles from '../index.styles';
 import { WeatherReport } from '../types';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 interface HourlyReportProps {
   report: WeatherReport;

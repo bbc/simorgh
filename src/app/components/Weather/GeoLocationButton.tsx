@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { FC, useState } from 'react';
 import { jsx } from '@emotion/react';
-import { saveLocationToStorage } from './useLocationStorage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { saveLocationToStorage } from './useLocationStorage';
 
 interface Props {
   onLocationFound: (
