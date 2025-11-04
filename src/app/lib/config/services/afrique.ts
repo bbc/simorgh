@@ -320,6 +320,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'météo',
+      defaultLocation: '2314302',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/afrique/institutionelles-49283281',

@@ -380,6 +380,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'Fim do %title%',
       },
     },
+    weather: {
+      title: 'Clima',
+      defaultLocation: '3469058',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/portuguese/institutional-50054434',

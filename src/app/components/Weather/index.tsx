@@ -119,16 +119,13 @@ const Weather: FC<WeatherComponentProps> = ({
         disabled={loading}
       />
       <Text as="h2" css={styles.header}>
-        Weather Forecast
-      </Text>
-      <Text as="h3" css={{ marginBottom: '1rem', fontWeight: 600 }}>
         {locationName ||
           weatherData?.forecasts?.[0]?.location?.name ||
           'Unknown location'}
       </Text>
       {loading && <Text css={styles.loading}>Loading weather forecast...</Text>}
       {error && <Text css={styles.error}>Error: {error}</Text>}
-      {!loading && !error && weatherData?.forecasts?.length && (
+      {false && !loading && !error && weatherData?.forecasts?.length && (
         <button
           type="button"
           onClick={handleExpandAll}

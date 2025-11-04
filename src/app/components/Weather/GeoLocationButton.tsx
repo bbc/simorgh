@@ -2,6 +2,7 @@
 import { FC, useState } from 'react';
 import { jsx } from '@emotion/react';
 import { saveLocationToStorage } from './useLocationStorage';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 interface Props {
   onLocationFound: (
@@ -79,13 +80,13 @@ const GeolocationButton: FC<Props> = ({
           color: '#fff',
           fontWeight: 600,
           cursor: 'pointer',
-          marginBottom: '1rem',
+          float: 'right',
           opacity: disabled ? 0.5 : 1,
         }}
         aria-busy={loading}
       >
         <img
-          src="http://localhost:7080/images/weather/crosshairs.svg"
+          src={`${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}/images/weather/crosshairs.svg`}
           alt="use location"
           width={40}
           height={40}

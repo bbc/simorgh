@@ -308,6 +308,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'කාලගුණය',
+      defaultLocation: '1248991',
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

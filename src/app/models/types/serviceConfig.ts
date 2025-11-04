@@ -124,6 +124,10 @@ export type ServiceConfig = {
     iframeSrc: string;
     iframeDevSrc: string;
   };
+  weather?: {
+    title?: string;
+    defaultLocation?: string;
+  };
 };
 
 export type PodcastPromo = {

@@ -20,6 +20,7 @@ const styles = {
       ...fontSizes.greatPrimer,
       ...fontVariants.sansBold,
       marginBottom: spacings.DOUBLE,
+      marginLeft: `${spacings.DOUBLE}rem`,
     }),
 
   dayContainer: ({ palette, spacings }: Theme) =>
@@ -29,6 +30,7 @@ const styles = {
       borderRadius: '6px',
       backgroundColor: palette.GREY_1,
       overflow: 'hidden',
+      clear: 'both',
       '&:last-child': {
         marginBottom: 0,
       },

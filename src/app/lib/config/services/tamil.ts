@@ -370,6 +370,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'வானிலை',
+      defaultLocation: '1264527',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/tamil/institutional-50288575',

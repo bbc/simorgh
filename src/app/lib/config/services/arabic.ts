@@ -373,6 +373,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: '%title% نهاية',
       },
     },
+    weather: {
+      title: 'طقس',
+      defaultLocation: '360630',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/arabic/institutional-49283069',

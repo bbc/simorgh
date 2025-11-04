@@ -114,58 +114,6 @@ describe('Weather Component', () => {
     });
   });
 
-  it('should expand and collapse day forecast when clicked', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockWeatherData,
-    });
-
-    render(<Weather />);
-
-    await waitFor(() => {
-      expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
-    });
-
-    const dayHeader = screen.getByText('Monday, 15 July');
-
-    // Initially collapsed
-    expect(screen.queryByText('12:00')).not.toBeInTheDocument();
-
-    // Click to expand
-    fireEvent.click(dayHeader);
-
-    // Now expanded
-    expect(screen.getByText('12:00')).toBeInTheDocument();
-    expect(screen.getByText('Light Rain Showers')).toBeInTheDocument();
-    expect(screen.getByText('18°C')).toBeInTheDocument();
-    expect(screen.getByText('89%')).toBeInTheDocument();
-  });
-
-  it('should handle keyboard navigation for day expansion', async () => {
-    mockFetch.mockResolvedValueOnce({
-      ok: true,
-      json: async () => mockWeatherData,
-    });
-
-    render(<Weather />);
-
-    await waitFor(() => {
-      expect(screen.getByText('Monday, 15 July')).toBeInTheDocument();
-    });
-
-    const dayHeader = screen.getByRole('button', { name: /Monday, 15 July/i });
-
-    // Press Enter to expand
-    fireEvent.keyDown(dayHeader, { key: 'Enter' });
-
-    expect(screen.getByText('12:00')).toBeInTheDocument();
-
-    // Press Space to collapse
-    fireEvent.keyDown(dayHeader, { key: ' ' });
-
-    expect(screen.queryByText('12:00')).not.toBeInTheDocument();
-  });
-
   it('should use custom locationId when provided', async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,

@@ -4,16 +4,19 @@ import { jsx } from '@emotion/react';
 import Text from '../../Text';
 import styles from '../index.styles';
 import { WeatherReport } from '../types';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 interface HourlyReportProps {
   report: WeatherReport;
 }
 
+const STATIC_ROOT = getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN;
+
 const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
   const iconEntry = report ? report.weatherType : undefined;
   const iconSrc =
     typeof iconEntry !== 'undefined'
-      ? `http://localhost:7080/images/weather/${iconEntry}.svg`
+      ? `${STATIC_ROOT}/images/weather/${iconEntry}.svg`
       : undefined;
   const formatTime = (timeslot: string): string => {
     const hour = parseInt(timeslot, 10);
@@ -51,7 +54,7 @@ const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
 
       <Text css={styles.precipitation}>
         <img
-          src="http://localhost:7080/images/weather/rain-chance.svg"
+          src={`${STATIC_ROOT}/images/weather/rain-chance.svg`}
           alt="Chance of rain"
           width={20}
           height={20}
@@ -62,7 +65,7 @@ const HourlyReport: FC<HourlyReportProps> = ({ report }) => {
       <span css={styles.windInfoContainer}>
         <div>
           <img
-            src={`http://localhost:7080/images/weather/wind-${report.windDirectionAbbreviation.toLowerCase()}.svg`}
+            src={`${STATIC_ROOT}/images/weather/wind-${report.windDirectionAbbreviation.toLowerCase()}.svg`}
             alt={report.windDirectionAbbreviation}
             aria-label={report.weatherTypeText}
             width={40}

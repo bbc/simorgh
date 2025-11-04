@@ -331,6 +331,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'Hava',
+      defaultLocation: '587084',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/azeri/institutional-49283479',

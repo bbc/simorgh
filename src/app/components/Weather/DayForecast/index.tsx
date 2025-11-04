@@ -5,6 +5,7 @@ import Text from '../../Text';
 import HourlyReport from '../HourlyReport';
 import styles from '../index.styles';
 import { DayForecast as DayForecastType } from '../types';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 interface DayForecastProps {
   forecast: DayForecastType;
@@ -35,7 +36,7 @@ const DayForecast: FC<DayForecastProps> = ({
   // Icon from summary
   const iconEntry = summary ? summary.weatherType : undefined;
   const iconSrc = iconEntry
-    ? `http://localhost:7080/images/weather/${iconEntry}-light.svg`
+    ? `${getEnvConfig().SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}/images/weather/${iconEntry}-light.svg`
     : undefined;
 
   //   // Icon from summary
