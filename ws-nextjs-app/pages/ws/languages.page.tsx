@@ -79,10 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       toggles,
       pageData: {
         ...data?.pageData,
-        title: data?.pageData?.title,
-        description: data?.pageData?.description,
-        image: data?.pageData?.image,
-        imageAltText: data?.pageData?.imageAltText,
         metadata: {
           ...data?.pageData?.metadata,
           type: HOME_PAGE,
