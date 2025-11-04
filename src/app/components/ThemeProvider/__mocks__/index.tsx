@@ -77,7 +77,7 @@ type ThemeProvidersWithVariants = {
   };
 };
 
-const themeProviders: ThemeProviders = {
+const themeProvidersNoVariants: ThemeProviders = {
   afaanoromoo,
   afrique,
   amharic,
@@ -167,7 +167,8 @@ const ThemeProvider = ({ children, service, ...rest }: Props) => {
 
     ThemeService = serviceVariants[variant] as ThemeComponent;
   } else {
-    ThemeService = themeProviders[service as ServicesWithNoVariants['service']];
+    ThemeService =
+      themeProvidersNoVariants[service as ServicesWithNoVariants['service']];
   }
 
   return <ThemeService>{children}</ThemeService>;
