@@ -57,7 +57,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
-      isUK: null,
+      isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: false,
     });
@@ -69,7 +69,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: null,
-      isUK: null,
+      isUK: false,
       showAdsBasedOnLocation: true,
       showCookieBannerBasedOnCountry: true,
     });
@@ -81,7 +81,7 @@ describe('extractHeader', () => {
     });
     expect(actual).toStrictEqual({
       bbcOrigin: 'https://www.bbc.co.uk/news',
-      isUK: null,
+      isUK: false,
       showAdsBasedOnLocation: false,
       showCookieBannerBasedOnCountry: true,
     });

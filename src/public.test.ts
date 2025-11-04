@@ -36,6 +36,14 @@ const iconNames = [
   'icon-512x512.png',
 ];
 
+const maskableIconNames = [
+  'maskable-icon-192x192.png',
+  'maskable-icon-384x384.png',
+  'maskable-icon-512x512.png',
+];
+
+const servicesWithMaskableIcons = ['magyarul'];
+
 describe('public directory', () => {
   describe.each(SERVICES.filter(service => !['ws'].includes(service)))(
     'public/%s',
@@ -64,11 +72,17 @@ describe('public directory', () => {
 
             const iconSrc = icons.map(({ src }) => src);
 
-            expect(iconSrc).toHaveLength(9);
+            const expectedIconNames = servicesWithMaskableIcons.includes(
+              service,
+            )
+              ? [...iconNames, ...maskableIconNames]
+              : iconNames;
+
+            expect(iconSrc).toHaveLength(expectedIconNames.length);
 
             const version = ['magyarul'].includes(service) ? 2 : 1;
 
-            const expectedIconSrc = iconNames.map(
+            const expectedIconSrc = expectedIconNames.map(
               iconName =>
                 `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/${iconName}?v=${version}`,
             );
