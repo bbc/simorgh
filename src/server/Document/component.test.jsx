@@ -36,7 +36,7 @@ describe('Document Component', () => {
 
   // Load environment variables into process.env to ensure CanonicalRenderer
   // uses values set in the local.env file in lieu of mocked values
-  dotenv.config({ path: './envConfig/local.env' });
+  dotenv.config({ quiet: true, path: './envConfig/local.env' });
 
   beforeEach(() => {
     process.env.SIMORGH_APP_ENV = 'local';

@@ -10,7 +10,7 @@ import {
 // dotenv should be called on entry to the application to ensure all `process.env.*` variables are correctly set from '.env'
 const dotenv = require('dotenv');
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;
 }

@@ -20,7 +20,7 @@ import { getExperimentVaryHeaders } from './utilities/experimentHeader';
 import createAdNonce from '../app/utilities/createAdNonce';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
-dotenv.config({ path: './envConfig/local.env' });
+dotenv.config({ quiet: true, path: './envConfig/local.env' });
 
 const path = require('path');
 const express = require('express');

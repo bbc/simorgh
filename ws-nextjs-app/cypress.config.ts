@@ -2,7 +2,7 @@
 import { defineConfig } from 'cypress';
 import fs from 'fs';
 import path from 'path';
-import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src'
+import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
 import { DefinePlugin } from 'webpack';
 import dotenv from 'dotenv';
@@ -23,10 +23,11 @@ export default defineConfig({
       const env = config.env[appEnv];
 
       const { parsed } = dotenv.config({
+        quiet: true,
         path: `./envConfig/${config.env.APP_ENV}.env`,
       });
 
-      const appConfig = parsed as Record<string, string>
+      const appConfig = parsed as Record<string, string>;
       const envVars = Object.keys(appConfig).reduce((vars, key) => {
         vars[key] = JSON.stringify(appConfig[key]);
         return vars;
@@ -89,7 +90,7 @@ export default defineConfig({
       };
 
       on('file:preprocessor', webpackPreprocessor(options));
-      
+
       // Add options for the cypress terminal report (cy.logs) here
       const logPrinterOptions = {
         defaultTrimLength: 2000,
