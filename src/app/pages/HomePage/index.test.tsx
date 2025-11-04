@@ -191,7 +191,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
-      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+      'BBC News Kyrgyz - BBC News Кыргыз Кызматы',
     );
   });
 
