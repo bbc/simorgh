@@ -13,9 +13,9 @@ import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
 
 const isDarkUiPage = (pageType: PageTypes) =>
-  pageType === MEDIA_ARTICLE_PAGE ||
-  pageType === TV_PAGE ||
-  pageType === LIVE_TV_PAGE;
+  ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
+    pageType,
+  );
 
 type ServiceTheme = {
   palette: BrandPalette;
