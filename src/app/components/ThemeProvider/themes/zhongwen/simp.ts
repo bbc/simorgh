@@ -1,4 +1,7 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import withThemeProvider from '../../withThemeProvider';
-import baseZhongwenTheme from './base';
+import zhongwenTheme from './base';
 
-export default withThemeProvider(baseZhongwenTheme);
+export const theme: ServiceTheme = zhongwenTheme;
+
+export default withThemeProvider(zhongwenTheme);
