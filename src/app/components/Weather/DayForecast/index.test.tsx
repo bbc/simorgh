@@ -101,6 +101,8 @@ describe('DayForecast', () => {
         onToggle={() => 'nothing to return. Silly typescript'}
       />,
     );
-    expect(screen.getByRole('button')).toHaveTextContent('Sunny intervals22°CTuesday 15 July10%▼');
+    expect(screen.getByRole('button')).toHaveTextContent(
+      'Sunny intervals22°CTuesday 15 July10%▼',
+    );
   });
 });

@@ -11,27 +11,71 @@ jest.mock('./index.styles', () => {
   });
 });
 
+// Types for mock props
+type MockForecast = {
+  summary?: { report?: { localDate?: string } };
+  location?: { name?: string };
+};
+type DayForecastProps = {
+  forecast?: MockForecast;
+  expanded?: boolean;
+  onToggle: () => void;
+};
+type GeoLocationButtonProps = {
+  onLocationFound: (id: string, name: string, lat: number, lon: number) => void;
+  disabled?: boolean;
+};
+type TextProps = {
+  as?: string;
+  children: React.ReactNode;
+  [key: string]: unknown;
+};
+
 // Mocks for child components
-jest.mock('./DayForecast', () => ({ forecast, expanded, onToggle }: any) => (
-  <div data-testid="DayForecast" data-expanded={expanded} onClick={onToggle}>
-    {forecast?.summary?.report?.localDate || 'No date'}
-  </div>
-));
-jest.mock('./GeoLocationButton', () => ({ onLocationFound, disabled }: any) => (
-  <button data-testid="geo-btn" disabled={disabled} onClick={() => onLocationFound('1', 'London', 51.5, -0.12)}>
-    GeoButton
-  </button>
-));
-jest.mock('../Text', () => ({ as, children, ...props }: any) => (
-  <div data-testid="text" {...props}>{children}</div>
-));
+jest.mock('./DayForecast', () => ({
+  __esModule: true,
+  default: ({ forecast, expanded = false, onToggle }: DayForecastProps) => (
+    <div
+      data-testid="DayForecast"
+      data-expanded={expanded}
+      role="button"
+      tabIndex={0}
+      onClick={onToggle}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onToggle(); }}
+      aria-pressed={expanded}
+    >
+      {forecast?.summary?.report?.localDate || 'No date'}
+    </div>
+  ),
+}));
+
+jest.mock('./GeoLocationButton', () => ({
+  __esModule: true,
+  default: ({ onLocationFound, disabled }: GeoLocationButtonProps) => (
+    <button
+      data-testid="geo-btn"
+      type="button"
+      disabled={disabled}
+      onClick={() => onLocationFound('1', 'London', 51.5, -0.12)}
+    >
+      GeoButton
+    </button>
+  ),
+}));
+
+jest.mock('../Text', () => ({
+  __esModule: true,
+  default: ({ as: _as, children, ...props }: TextProps) => (
+    <div data-testid="text" {...props}>{children}</div>
+  ),
+}));
 
 // Helper: mock fetch
-const mockFetch = (data: any, ok = true) => {
+const mockFetch = (data: unknown, ok = true) => {
   global.fetch = jest.fn().mockResolvedValue({
     ok,
     json: async () => data,
-  }) as any;
+  }) as jest.Mock;
 };
 
 describe('Weather component', () => {
@@ -40,8 +84,16 @@ describe('Weather component', () => {
     jest.clearAllMocks();
   });
 
+  it('shows loading initially', async () => {
+    mockFetch({ forecasts: [] });
+    await act(async () => {
+      render(<Weather />);
+    });
+    expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
+  });
+
   it('renders error state on fetch failure', async () => {
-    global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as any;
+    global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as jest.Mock;
     await act(async () => {
       render(<Weather />);
     });
@@ -73,7 +125,6 @@ describe('Weather component', () => {
 
     // Header should be "Paris"
     expect(await screen.findByText(/Paris/i)).toBeInTheDocument();
-    // Two day rows
     expect(screen.getAllByTestId('DayForecast').length).toBe(2);
     expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent('2025-11-04');
   });
@@ -96,6 +147,26 @@ describe('Weather component', () => {
     expect(await screen.findByText(/StoredCity/i)).toBeInTheDocument();
   });
 
+  it('updates location and saves to storage on GeoLocationButton click', async () => {
+    const saveSpy = jest.spyOn(locationStorage, 'saveLocationToStorage').mockImplementation(jest.fn());
+    const weatherResponse = {
+      forecasts: [{ summary: { report: { localDate: '2025-11-02' } } }],
+      location: { name: 'London' }
+    };
+    mockFetch(weatherResponse);
+
+    await act(async () => {
+      render(<Weather />);
+      const geoBtn = await screen.findByTestId('geo-btn');
+      fireEvent.click(geoBtn);
+    });
+
+    expect(await screen.findByText(/London/i)).toBeInTheDocument();
+    expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
+      latitude: 51.5, longitude: -0.12, locationId: '1', locationName: 'London'
+    }));
+  });
+
   it('expands and collapses a day forecast on click', async () => {
     const weatherResponse = {
       forecasts: [
@@ -111,11 +182,11 @@ describe('Weather component', () => {
     const dayRow = screen.getByTestId('DayForecast');
     expect(dayRow.getAttribute('data-expanded')).toBe('false');
     fireEvent.click(dayRow);
-    // Cannot assert expanded UI with stateless mock but click triggers handler
+    // Accessibility: you could also test pressing Enter here if desired.
   });
 
   it('renders "Unknown location" if no name found', async () => {
-    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(null);
+    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(undefined);
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);

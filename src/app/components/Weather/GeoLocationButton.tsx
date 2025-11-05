@@ -66,11 +66,20 @@ const GeolocationButton: FC<Props> = ({
     );
   };
 
+  // Handle keyboard activation for Enter and Space (for accessibility)
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (!loading && !disabled && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      handleGetLocation();
+    }
+  };
+
   return (
     <div>
       <button
         type="button"
         onClick={handleGetLocation}
+        onKeyDown={handleKeyDown}
         disabled={loading || disabled}
         css={{
           padding: '0.5rem 1rem',
