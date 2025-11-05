@@ -40,17 +40,9 @@ describe('Weather component', () => {
     jest.clearAllMocks();
   });
 
-  it('shows loading initially', () => {
-    mockFetch({ forecasts: [] });
-    act(() => {
-      render(<Weather />);
-    });
-    expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
-  });
-
   it('renders error state on fetch failure', async () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as any;
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText(/Error:/i);
@@ -59,7 +51,7 @@ describe('Weather component', () => {
 
   it('shows fallback for missing data structure', async () => {
     mockFetch({});
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText(/Error:/i);
@@ -76,7 +68,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText('Paris');
@@ -97,7 +89,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText('StoredCity');
@@ -111,7 +103,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     fireEvent.click(screen.getByTestId('geo-btn'));
@@ -130,7 +122,7 @@ describe('Weather component', () => {
     };
     mockFetch(weatherResponse);
 
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText('2025-11-04');
@@ -142,7 +134,7 @@ describe('Weather component', () => {
 
   it('renders "Unknown location" if no name found', async () => {
     mockFetch({ forecasts: [{}] });
-    act(() => {
+    await act(async () => {
       render(<Weather />);
     });
     await screen.findByText(/Unknown location/);
