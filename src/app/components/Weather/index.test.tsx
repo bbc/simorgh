@@ -40,12 +40,20 @@ describe('Weather component', () => {
     jest.clearAllMocks();
   });
 
+  it('shows loading initially', async () => {
+    mockFetch({ forecasts: [] });
+    await act(async () => {
+      render(<Weather />);
+    });
+    expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
+  });
+
   it('renders error state on fetch failure', async () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as any;
     await act(async () => {
       render(<Weather />);
+      await screen.findByText(/Error:/i);
     });
-    await screen.findByText(/Error:/i);
     expect(screen.getByText(/Failed to fetch weather data: 500/)).toBeInTheDocument();
   });
 
@@ -53,8 +61,8 @@ describe('Weather component', () => {
     mockFetch({});
     await act(async () => {
       render(<Weather />);
+      await screen.findByText(/Error:/i);
     });
-    await screen.findByText(/Error:/i);
     expect(screen.getByText(/Invalid weather data format/)).toBeInTheDocument();
   });
 
@@ -70,8 +78,8 @@ describe('Weather component', () => {
 
     await act(async () => {
       render(<Weather />);
+      await screen.findByText('Paris');
     });
-    await screen.findByText('Paris');
     expect(screen.getAllByTestId('DayForecast').length).toBe(2);
     expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent('2025-11-04');
   });
@@ -91,8 +99,8 @@ describe('Weather component', () => {
 
     await act(async () => {
       render(<Weather />);
+      await screen.findByText('StoredCity');
     });
-    await screen.findByText('StoredCity');
   });
 
   it('updates location and saves to storage on GeoLocationButton click', async () => {
@@ -105,10 +113,9 @@ describe('Weather component', () => {
 
     await act(async () => {
       render(<Weather />);
+      fireEvent.click(screen.getByTestId('geo-btn'));
+      await screen.findByText(/London/);
     });
-    fireEvent.click(screen.getByTestId('geo-btn'));
-
-    await screen.findByText(/London/);
     expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
       latitude: 51.5, longitude: -0.12, locationId: '1', locationName: 'London'
     }));
@@ -124,8 +131,8 @@ describe('Weather component', () => {
 
     await act(async () => {
       render(<Weather />);
+      await screen.findByText('2025-11-04');
     });
-    await screen.findByText('2025-11-04');
     const dayRow = screen.getByTestId('DayForecast');
     expect(dayRow.getAttribute('data-expanded')).toBe('false');
     fireEvent.click(dayRow);
@@ -136,7 +143,7 @@ describe('Weather component', () => {
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);
+      await screen.findByText(/Unknown location/);
     });
-    await screen.findByText(/Unknown location/);
   });
 });
