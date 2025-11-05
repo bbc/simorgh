@@ -26,7 +26,6 @@ describe('handleArticleRoute', () => {
 
   it('returns correct page type if consumableAsSFV is true', async () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
-    // @ts-expect-error - pageType only exists in one return, error code not exclusively 500 so ERROR_PAGE value not guaranteed
     expect(result.props.pageType).toEqual('mediaArticle');
   });
 
