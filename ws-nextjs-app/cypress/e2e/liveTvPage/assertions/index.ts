@@ -14,8 +14,6 @@ export const assertLiveTvPage = ({ service }: LiveTvPageParams) => {
     cy.getPageDataFromWindow().then(pageData => {
       const expectedHeading = (pageData as LiveTvPageParams['pageData'])?.title;
       cy.get('h1').should('have.text', expectedHeading);
-
-    }
-    
+    });
   });
 };
