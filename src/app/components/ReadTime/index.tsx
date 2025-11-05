@@ -17,11 +17,9 @@ type ReadTimeProps = {
 };
 
 const DEFAULT_TRANSLATIONS = {
-  readTimePrefix: 'Estimated Read Time',
-  quick: 'Quick Read',
   long: 'Long Read',
-  minute: 'minute',
-  minutes: 'minutes',
+  minute: 'min',
+  read: 'read',
 };
 
 const ProcessReadTime = ({
@@ -32,39 +30,34 @@ const ProcessReadTime = ({
   readTimeVariant: string;
 }) => {
   const { translations } = use(ServiceContext);
-  const readTimePrefix =
-    translations.readTime?.readTimePrefix ??
-    DEFAULT_TRANSLATIONS.readTimePrefix;
-  const quickCopy = translations.readTime?.quick ?? DEFAULT_TRANSLATIONS.quick;
-  const longCopy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
+
   const singleMinuteSuffix =
     translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
-  const minutesSuffix =
-    translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
+  const readCopy = DEFAULT_TRANSLATIONS.read;
+
+  let copy = `${readTimeValue} ${singleMinuteSuffix} ${readCopy}`;
+
+  const isLongRead = readTimeValue >= 6;
+  if (readTimeVariant === 'long_read_written' && isLongRead) {
+    copy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
+  }
 
   const readTimeInMilliseconds = readTimeValue * 60000;
-  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
-  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
-  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
-
-  const readTimeCopyType = readTimeVariant.includes('minutes')
-    ? 'minutes'
-    : 'quickLong';
-
-  const copy = readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy;
 
   return {
     readTimeInMilliseconds,
-    minutesLabel,
+    minutesLabel: DEFAULT_TRANSLATIONS.minute,
     copy,
   };
 };
 
+// EXPERIMENT: Article Read Time 2
 export const ReadTimeArticleExperiment = ({
   readTimeValue,
   readTimeVariant,
   className,
 }: ReadTimeProps) => {
+  if (readTimeVariant === 'control') return null;
   if (!readTimeValue) return null;
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
@@ -74,16 +67,10 @@ export const ReadTimeArticleExperiment = ({
     readTimeVariant,
   });
 
-  // EXPERIMENT: Article Read Time
-  const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
-  const fontVariant = readTimeVariant.includes('bold')
-    ? 'sansBold'
-    : 'sansRegular';
-
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
     sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_article_read_time',
+    experimentName: 'newswb_ws_article_read_time_2',
     experimentVariant: readTimeVariant,
     itemTracker: {
       label: `Read time: ${readTimeValue} ${minutesLabel}`,
@@ -95,11 +82,6 @@ export const ReadTimeArticleExperiment = ({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  const isControlVariant = readTimeVariant === 'control';
-
-  if (isControlVariant)
-    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
-
   return (
     <div
       className={className}
@@ -107,9 +89,7 @@ export const ReadTimeArticleExperiment = ({
       {...viewRef}
       data-testid="read-time"
     >
-      <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
-        {copy}
-      </Text>
+      <Text css={styles.readTimeText}>{copy}</Text>
     </div>
   );
 };
