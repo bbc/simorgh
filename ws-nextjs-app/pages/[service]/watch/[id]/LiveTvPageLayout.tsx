@@ -3,7 +3,6 @@ import { jsx } from '@emotion/react';
 import React, { use } from 'react';
 import { Curation as CurationType } from '#app/models/types/curationData';
 import Curation from '#app/components/Curation';
-import { data as liveTvFixture } from '#data/dari/watch/bbc_afghan_tv/live.json';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
@@ -46,13 +45,6 @@ const getSynopses = (
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-
-  if (!pageData.title) {
-    // @ts-expect-error liveTvFixture used for development purposes only
-    // eslint-disable-next-line no-param-reassign
-    pageData = liveTvFixture;
-  }
-
   const { curations, description, title } = pageData;
 
   const mediaCollectionCuration = curations?.find(
@@ -68,9 +60,9 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   );
 
   return (
-    <>
-      {/* <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} /> */}
+    <div css={styles.pageWrapper}>
+      {/* <ATIAnalytics atiData={atiAnalytics} /> */}
+      {/* <ChartbeatAnalytics title={pageTitle} /> */}
       <MetadataContainer
         title={title}
         lang={lang}
@@ -80,18 +72,20 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
-          <div css={styles.margins}>
+          <div css={styles.padding}>
             {mediaCollectionCuration &&
               renderCuration({ curation: mediaCollectionCuration })}
-            <Heading id="content" level={1}>
-              Live TV Page with schedule
+            <Heading id="content" level={1} css={styles.title}>
+              {title}
             </Heading>
             <Text css={styles.description}>{description}</Text>
-            <Text>{synopses}</Text>
-            {filteredCurations.map(curation => renderCuration({ curation }))}
+            <Text css={styles.synopses}>{synopses}</Text>
+            <div css={styles.curationStyles}>
+              {filteredCurations.map(curation => renderCuration({ curation }))}
+            </div>
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }

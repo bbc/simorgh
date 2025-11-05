@@ -11,10 +11,6 @@ import {
 } from '#models/types/global';
 import handleError from '../handleError';
 import {
-  TOPIC_PAGE_CONFIG,
-  TopicPagePaths,
-} from '../../topic/getInitialData/page-config';
-import {
   ARTICLE_PAGE,
   AV_EMBEDS,
   CPS_ASSET,
@@ -52,7 +48,7 @@ interface GetIdProps {
   env: Environments;
 }
 
-const getId = ({ pageType, service, variant, env }: GetIdProps) => {
+const getId = ({ pageType, service, variant }: GetIdProps) => {
   let getIdFunction;
 
   switch (pageType) {
@@ -102,9 +98,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        return (
-          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
-        );
+        return getTipoId(path);
       };
       break;
     case UGC_PAGE:
