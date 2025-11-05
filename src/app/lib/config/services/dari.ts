@@ -39,8 +39,7 @@ export const service: DefaultServiceConfig = {
     altCalendar: jalaali,
     twitterCreator: '@bbcafghanistan',
     twitterSite: '@bbcafghanistan',
-    noBylinesPolicy:
-      'https://www.bbc.com/dari/articles/c8jpnremrrvo',
+    noBylinesPolicy: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     publishingPrinciples: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     isTrustProjectParticipant: true,
     script: arabic,
@@ -72,8 +71,7 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
         informationPage:
           'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
-        informationPageLink:
-          'https://www.bbc.com/dari/articles/cp3dzx3z929o',
+        informationPageLink: 'https://www.bbc.com/dari/articles/cp3dzx3z929o',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
         articleDataSavingLinkText:
           'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
