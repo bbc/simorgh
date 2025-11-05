@@ -655,7 +655,7 @@ export const service: UzbekConfig = {
           text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+          href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/lat',
           text: 'ББC ҳақида',
         },
         {
