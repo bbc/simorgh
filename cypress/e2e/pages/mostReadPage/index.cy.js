@@ -3,6 +3,9 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const pageType = 'mostReadPage';
 const tests = [
@@ -63,7 +66,44 @@ const liteTestSuites = testSuites.map(testSuite => {
   };
 });
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/gahuza/popular/read',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.popular.read.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'list-datadriven',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+];
+
+const atiAnalyticsAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    useReverb: true,
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
+
 runTestsForPage({
   pageType,
   testSuites: [...testSuites, ...ampTestSuites, ...liteTestSuites],
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsAmpTestSuites,
+  beforeAll: [setUserIDCookie],
 });
