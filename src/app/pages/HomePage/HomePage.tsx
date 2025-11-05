@@ -61,9 +61,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations } = pageData;
 
-  const metadataBaseTitle = seoTitle || title;
-  const metadataBaseDescription =
-    seoDescription?.length > 0 ? seoDescription : description;
+  const metadataTitle = seoTitle || title;
+  const metadataDescription = seoDescription || description;
 
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
@@ -89,16 +88,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={metadataBaseTitle}
+        title={metadataTitle}
         lang={lang}
-        description={metadataBaseDescription}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={metadataBaseTitle}
-        headline={metadataBaseTitle}
+        seoTitle={metadataTitle}
+        headline={metadataTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
