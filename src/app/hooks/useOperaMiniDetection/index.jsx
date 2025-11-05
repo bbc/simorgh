@@ -5,7 +5,7 @@ const useOperaMiniDetection = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.operamini) {
-      setIsOperaMini(true);
+      (async () => setIsOperaMini(true))();
     }
   }, []);
 

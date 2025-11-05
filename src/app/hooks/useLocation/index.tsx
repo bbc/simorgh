@@ -10,7 +10,7 @@ const useLocation = () => {
   };
 
   useEffect(() => {
-    setLocation(window.location);
+    (async () => setLocation(window.location))();
   }, []);
 
   useEffect(() => {

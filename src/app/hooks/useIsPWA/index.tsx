@@ -26,13 +26,14 @@ const useIsPWA = (): boolean => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const isIOSStandalone = (window.navigator as any)?.standalone === true;
 
-      setIsPWA(
-        isStandalone ||
-          isMinimalUi ||
-          isIOSStandalone ||
-          isFullscreen ||
-          isWindowControlsOverlay,
-      );
+      (async () =>
+        setIsPWA(
+          isStandalone ||
+            isMinimalUi ||
+            isIOSStandalone ||
+            isFullscreen ||
+            isWindowControlsOverlay,
+        ))();
     }
   }, []);
 

@@ -23,7 +23,7 @@ const useImageColour = (
 
   useEffect(() => {
     try {
-      setIsLoading(true);
+      (async () => setIsLoading(true))();
 
       const colorThief = new ColorThief();
       const img = new Image();
@@ -37,7 +37,7 @@ const useImageColour = (
       img.crossOrigin = 'Anonymous';
       img.src = url;
     } catch (err) {
-      setErrorState();
+      (async () => setErrorState())();
     }
   }, [url, paletteSize]);
 

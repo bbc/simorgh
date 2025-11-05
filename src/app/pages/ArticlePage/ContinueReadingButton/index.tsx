@@ -40,6 +40,7 @@ const ContinueReadingButton = ({
   useEffect(() => {
     if (showAllContent && firstHiddenElement) {
       // Apply the custom focus style dynamically
+      // eslint-disable-next-line react-hooks/immutability
       firstHiddenElement.tabIndex = 0;
       firstHiddenElement.focus();
     }

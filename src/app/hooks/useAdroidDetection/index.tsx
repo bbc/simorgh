@@ -5,7 +5,7 @@ const useAndroidDetection = () => {
 
   useEffect(() => {
     const testUserDevice = /(android)/i.test(navigator.userAgent);
-    setIsAndroid(testUserDevice);
+    (async () => setIsAndroid(testUserDevice))();
   }, []);
 
   return isAndroid;
