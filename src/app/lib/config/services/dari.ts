@@ -40,8 +40,8 @@ export const service: DefaultServiceConfig = {
     twitterCreator: '@bbcafghanistan',
     twitterSite: '@bbcafghanistan',
     noBylinesPolicy:
-      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
+      'https://www.bbc.com/dari/articles/c8jpnremrrvo',
+    publishingPrinciples: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/dari/manifest.json',
@@ -73,7 +73,7 @@ export const service: DefaultServiceConfig = {
         informationPage:
           'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
         informationPageLink:
-          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+          'https://www.bbc.com/dari/articles/cp3dzx3z929o',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
         articleDataSavingLinkText:
           'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
