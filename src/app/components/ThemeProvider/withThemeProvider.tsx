@@ -1,6 +1,7 @@
 import React, { use, useMemo } from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
+import { ServiceTheme } from '#app/models/types/theming';
 import focusIndicator from './focusIndicator';
 import { RequestContext } from '../../contexts/RequestContext';
 import {
@@ -8,20 +9,14 @@ import {
   MEDIA_ARTICLE_PAGE,
   TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import { BrandPalette, Typography, BrandSVG } from '../../models/types/theming';
 import { PageTypes } from '../../models/types/global';
 import getThemeConfig from './getThemeConfig';
+import mergeThemeWithPWATypography from './themes/mergeThemeWithPWATypography';
 
 const isDarkUiPage = (pageType: PageTypes) =>
   ([MEDIA_ARTICLE_PAGE, TV_PAGE, LIVE_TV_PAGE] as PageTypes[]).includes(
     pageType,
   );
-
-type ServiceTheme = {
-  palette: BrandPalette;
-  typography: Typography;
-  brandSVG: BrandSVG;
-};
 
 const useMergeTheme = (
   baseTheme: ServiceTheme,
@@ -31,13 +26,7 @@ const useMergeTheme = (
 
   return useMemo(() => {
     if (isPWA && pwaTheme) {
-      return {
-        ...baseTheme,
-        typography: {
-          ...baseTheme.typography,
-          ...pwaTheme.typography,
-        },
-      };
+      return mergeThemeWithPWATypography({ baseTheme, pwaTheme });
     }
     return baseTheme;
   }, [isPWA, baseTheme, pwaTheme]);

@@ -52,6 +52,9 @@ const styles = {
       '& h2, & a': {
         color: palette.GHOST,
       },
+      '& a:visited': {
+        color: palette.GREY_5,
+      },
     }),
 };
 

@@ -41,6 +41,6 @@
       "react": ["./node_modules/@types/react"]
     }
   },
-  "include": ["src/**/*", "src/custom.d.ts"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+  "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
+  "exclude": ["node_modules", "build"]
 }
