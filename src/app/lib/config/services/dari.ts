@@ -16,11 +16,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsProducerName: 'DARI',
     useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
-    brandName: 'BBC News فارسی',
-    serviceLocalizedName: 'فارسی',
+    brandName: 'BBC News دری',
+    serviceLocalizedName: 'دری',
     defaultImage:
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
-    defaultImageAltText: 'BBC News فارسی',
+    defaultImageAltText: 'BBC News دری',
     dir: 'rtl',
     externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
@@ -37,9 +37,8 @@ export const service: DefaultServiceConfig = {
     languageName: 'Dari',
     twitterCreator: '@bbcafghanistan',
     twitterSite: '@bbcafghanistan',
-    noBylinesPolicy:
-      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
+    noBylinesPolicy: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
+    publishingPrinciples: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/dari/manifest.json',
@@ -70,8 +69,7 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
         informationPage:
           'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
-        informationPageLink:
-          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        informationPageLink: 'https://www.bbc.com/dari/articles/cp3dzx3z929o',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
         articleDataSavingLinkText:
           'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
@@ -106,7 +104,7 @@ export const service: DefaultServiceConfig = {
             'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -120,7 +118,7 @@ export const service: DefaultServiceConfig = {
             'بعدا دوباره امتحان کنید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -424,6 +422,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/dari',
+      },
+      {
+        title: 'افغانستان',
+        url: '/dari/topics/c78n1x1x3jet',
       },
     ],
   },
