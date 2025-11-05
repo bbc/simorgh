@@ -52,7 +52,7 @@ exports[`Toggles Config when application environment is live should contain corr
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
@@ -134,7 +134,7 @@ exports[`Toggles Config when application environment is local should contain cor
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
@@ -216,7 +216,7 @@ exports[`Toggles Config when application environment is test should contain corr
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
