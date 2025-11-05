@@ -467,7 +467,7 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.com/dari',
             label: 'BBC News دری',
             lang: 'fa-AF',
-            latinTransliteration: 'BBC News Dari'
+            latinTransliteration: 'BBC News Dari',
           },
           {
             id: 'gujarati',
