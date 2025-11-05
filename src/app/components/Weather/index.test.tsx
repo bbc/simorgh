@@ -6,9 +6,12 @@ import * as locationStorage from './useLocationStorage';
 // Mock styles so no theme is needed
 jest.mock('./index.styles', () => {
   const handler = () => '';
-  return new Proxy({}, {
-    get: () => handler,
-  });
+  return new Proxy(
+    {},
+    {
+      get: () => handler,
+    },
+  );
 });
 
 // Types for mock props
@@ -41,7 +44,9 @@ jest.mock('./DayForecast', () => ({
       role="button"
       tabIndex={0}
       onClick={onToggle}
-      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onToggle(); }}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') onToggle();
+      }}
       aria-pressed={expanded}
     >
       {forecast?.summary?.report?.localDate || 'No date'}
@@ -57,6 +62,8 @@ jest.mock('./GeoLocationButton', () => ({
       type="button"
       disabled={disabled}
       onClick={() => onLocationFound('1', 'London', 51.5, -0.12)}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onToggle(); }}
+      aria-pressed={expanded}
     >
       GeoButton
     </button>
@@ -66,7 +73,9 @@ jest.mock('./GeoLocationButton', () => ({
 jest.mock('../Text', () => ({
   __esModule: true,
   default: ({ as: _as, children, ...props }: TextProps) => (
-    <div data-testid="text" {...props}>{children}</div>
+    <div data-testid="text" {...props}>
+      {children}
+    </div>
   ),
 }));
 
@@ -93,12 +102,16 @@ describe('Weather component', () => {
   });
 
   it('renders error state on fetch failure', async () => {
-    global.fetch = jest.fn().mockResolvedValue({ ok: false, status: 500 }) as jest.Mock;
+    global.fetch = jest
+      .fn()
+      .mockResolvedValue({ ok: false, status: 500 }) as jest.Mock;
     await act(async () => {
       render(<Weather />);
     });
     expect(await screen.findByText(/Error:/i)).toBeInTheDocument();
-    expect(screen.getByText(/Failed to fetch weather data: 500/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Failed to fetch weather data: 500/),
+    ).toBeInTheDocument();
   });
 
   it('shows fallback for missing data structure', async () => {
@@ -114,9 +127,9 @@ describe('Weather component', () => {
     const weatherResponse = {
       forecasts: [
         { summary: { report: { localDate: '2025-11-04' } } },
-        { summary: { report: { localDate: '2025-11-05' } } }
+        { summary: { report: { localDate: '2025-11-05' } } },
       ],
-      location: { name: 'Paris' }
+      location: { name: 'Paris' },
     };
     mockFetch(weatherResponse);
     await act(async () => {
@@ -126,7 +139,9 @@ describe('Weather component', () => {
     // Header should be "Paris"
     expect(await screen.findByText(/Paris/i)).toBeInTheDocument();
     expect(screen.getAllByTestId('DayForecast').length).toBe(2);
-    expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent('2025-11-04');
+    expect(screen.getAllByTestId('DayForecast')[0]).toHaveTextContent(
+      '2025-11-04',
+    );
   });
 
   it('uses location from localStorage if present on mount', async () => {
@@ -134,11 +149,11 @@ describe('Weather component', () => {
       latitude: 51.5,
       longitude: -0.1,
       locationId: 'xyz123',
-      locationName: 'StoredCity'
+      locationName: 'StoredCity',
     });
     const weatherResponse = {
       forecasts: [{ summary: { report: { localDate: '2025-11-01' } } }],
-      location: { name: 'StoredCity' }
+      location: { name: 'StoredCity' },
     };
     mockFetch(weatherResponse);
     await act(async () => {
@@ -148,10 +163,12 @@ describe('Weather component', () => {
   });
 
   it('updates location and saves to storage on GeoLocationButton click', async () => {
-    const saveSpy = jest.spyOn(locationStorage, 'saveLocationToStorage').mockImplementation(jest.fn());
+    const saveSpy = jest
+      .spyOn(locationStorage, 'saveLocationToStorage')
+      .mockImplementation(jest.fn());
     const weatherResponse = {
       forecasts: [{ summary: { report: { localDate: '2025-11-02' } } }],
-      location: { name: 'London' }
+      location: { name: 'London' },
     };
     mockFetch(weatherResponse);
 
@@ -162,16 +179,19 @@ describe('Weather component', () => {
     });
 
     expect(await screen.findByText(/London/i)).toBeInTheDocument();
-    expect(saveSpy).toHaveBeenCalledWith(expect.objectContaining({
-      latitude: 51.5, longitude: -0.12, locationId: '1', locationName: 'London'
-    }));
+    expect(saveSpy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        latitude: 51.5,
+        longitude: -0.12,
+        locationId: '1',
+        locationName: 'London',
+      }),
+    );
   });
 
   it('expands and collapses a day forecast on click', async () => {
     const weatherResponse = {
-      forecasts: [
-        { summary: { report: { localDate: '2025-11-04' } } }
-      ]
+      forecasts: [{ summary: { report: { localDate: '2025-11-04' } } }],
     };
     mockFetch(weatherResponse);
 
@@ -186,7 +206,9 @@ describe('Weather component', () => {
   });
 
   it('renders "Unknown location" if no name found', async () => {
-    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(undefined);
+    jest
+      .spyOn(locationStorage, 'getLocationFromStorage')
+      .mockReturnValue(undefined);
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);
