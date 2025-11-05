@@ -8,6 +8,7 @@ import {
   articleDataNews,
   articleDataNewsWithEmbeds,
   articleDataPersian,
+  articleDataPersianWithFourParagraphs,
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
@@ -1115,6 +1116,38 @@ describe('Article Page', () => {
 
       // Check for the simple curation grid component
       expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
+    });
+  });
+
+  describe('Continue Reading Toggle', () => {
+    it.each([
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is false',
+        toggleEnabled: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should render Continue Reading Button when toggle is true',
+        toggleEnabled: true,
+        shouldBeDisplayed: true,
+      },
+    ])('$testScenario', ({ toggleEnabled, shouldBeDisplayed }) => {
+      render(<ArticlePage pageData={articleDataPersianWithFourParagraphs} />, {
+        service: 'persian',
+        toggles: { continueReadingButton: { enabled: toggleEnabled } },
+      });
+
+      const continueReadingButton = screen.queryByTestId(
+        'continue-reading-button',
+      );
+
+      if (shouldBeDisplayed) {
+        expect(continueReadingButton).toBeInTheDocument();
+      } else {
+        expect(continueReadingButton).not.toBeInTheDocument();
+      }
     });
   });
 });
