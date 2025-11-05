@@ -38,7 +38,7 @@ type TextProps = {
 jest.mock('./DayForecast', () => ({
   __esModule: true,
   default: ({ forecast, expanded = false, onToggle }: DayForecastProps) => (
-    <div
+    <button
       data-testid="DayForecast"
       data-expanded={expanded}
       role="button"
@@ -50,7 +50,7 @@ jest.mock('./DayForecast', () => ({
       aria-pressed={expanded}
     >
       {forecast?.summary?.report?.localDate || 'No date'}
-    </div>
+    </button>
   ),
 }));
 
@@ -60,10 +60,9 @@ jest.mock('./GeoLocationButton', () => ({
     <button
       data-testid="geo-btn"
       type="button"
+      role="button"
       disabled={disabled}
       onClick={() => onLocationFound('1', 'London', 51.5, -0.12)}
-      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') onToggle(); }}
-      aria-pressed={expanded}
     >
       GeoButton
     </button>
@@ -208,7 +207,7 @@ describe('Weather component', () => {
   it('renders "Unknown location" if no name found', async () => {
     jest
       .spyOn(locationStorage, 'getLocationFromStorage')
-      .mockReturnValue(undefined);
+      .mockReturnValue(null);
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);
