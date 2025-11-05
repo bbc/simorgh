@@ -1125,47 +1125,81 @@ describe('Article Page', () => {
         testScenario:
           'should not render Continue Reading Button when toggle is false',
         toggleEnabled: false,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is true but no block is present',
+        toggleEnabled: true,
+        hasContinueReadingBlock: false,
+        isLite: false,
         shouldBeDisplayed: false,
       },
       {
         testScenario:
           'should render Continue Reading Button when toggle is true',
         toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: false,
         shouldBeDisplayed: true,
       },
-    ])('$testScenario', ({ toggleEnabled, shouldBeDisplayed }) => {
-      const pageDataWithContinueReadingBlock = mergeDeepLeft(
-        {
+      {
+        testScenario:
+          'should not render Continue Reading Button on Lite pages when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: true,
+        shouldBeDisplayed: false,
+      },
+    ])(
+      '$testScenario',
+      ({
+        toggleEnabled,
+        shouldBeDisplayed,
+        hasContinueReadingBlock,
+        isLite = false,
+      }) => {
+        const continueReadingBlock = {
+          id: 'continue-reading-block',
+          type: 'continueReading',
+          model: {},
+        };
+        const baseBlocks =
+          articleDataPersianWithFourParagraphs.content.model.blocks;
+
+        const blocks = hasContinueReadingBlock
+          ? [...baseBlocks, continueReadingBlock]
+          : [...baseBlocks];
+
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
           content: {
+            ...articleDataPersianWithFourParagraphs.content,
             model: {
-              blocks: [
-                ...articleDataPersianWithFourParagraphs.content.model.blocks,
-                {
-                  id: 'continue-reading-block',
-                  type: 'continueReading',
-                  model: {},
-                },
-              ],
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks,
             },
           },
-        },
-        articleDataPersianWithFourParagraphs,
-      ) as Article;
+        };
 
-      render(<ArticlePage pageData={pageDataWithContinueReadingBlock} />, {
-        service: 'persian',
-        toggles: { continueReadingButton: { enabled: toggleEnabled } },
-      });
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          isLite,
+          toggles: { continueReadingButton: { enabled: toggleEnabled } },
+        });
 
-      const continueReadingButton = screen.queryByTestId(
-        'continue-reading-button',
-      );
+        const continueReadingButton = screen.queryByTestId(
+          'continue-reading-button',
+        );
 
-      if (shouldBeDisplayed) {
-        expect(continueReadingButton).toBeInTheDocument();
-      } else {
-        expect(continueReadingButton).not.toBeInTheDocument();
-      }
-    });
+        if (shouldBeDisplayed) {
+          expect(continueReadingButton).toBeInTheDocument();
+        } else {
+          expect(continueReadingButton).not.toBeInTheDocument();
+        }
+      },
+    );
   });
 });
