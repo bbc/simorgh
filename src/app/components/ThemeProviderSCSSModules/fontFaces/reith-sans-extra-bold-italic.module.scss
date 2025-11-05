@@ -1,10 +1,10 @@
+@use './fontBaseUrl.module.scss' as fontUrl;
+
 @font-face {
   font-family: 'ReithSans';
   src:
-    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBdIt.woff2')
-      format('woff2'),
-    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSans_W_ExBdIt.woff')
-      format('woff');
+    url('#{fontUrl.$reith-fonts-dir}BBCReithSans_W_ExBdIt.woff2') format('woff2'),
+    url('#{fontUrl.$reith-fonts-dir}BBCReithSans_W_ExBdIt.woff') format('woff');
   font-weight: 800;
   font-style: italic;
   font-display: optional;

@@ -1,9 +1,10 @@
+@use './fontBaseUrl.module.scss' as fontUrl;
+
 @font-face {
   font-family: 'ReithSerif';
   src:
-    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Rg.woff2')
-      format('woff2'),
-    url('https://static.files.bbci.co.uk/fonts/reith/r2.512/BBCReithSerif_W_Rg.woff')
-      format('woff');
+    url('#{fontUrl.$reith-fonts-dir}BBCReithSerif_W_Rg.woff2') format('woff2'),
+    url('#{fontUrl.$reith-fonts-dir}BBCReithSerif_W_Rg.woff') format('woff');
+  font-weight: 400;
   font-display: optional;
 }
