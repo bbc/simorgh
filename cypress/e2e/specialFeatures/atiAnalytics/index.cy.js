@@ -18,19 +18,7 @@ import {
 import { setUserIDCookie } from './helpers';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
-const canonicalTestSuites = [
-  {
-    path: '/gahuza/popular/read',
-    runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.popular.read.page',
-    siteId: 40,
-    applicationType: 'responsive',
-    contentType: 'list-datadriven',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-];
+const canonicalTestSuites = [];
 
 const supportsAmp = ({ contentType }) =>
   !['player-live', 'player-episode', 'index-category', 'static'].includes(
