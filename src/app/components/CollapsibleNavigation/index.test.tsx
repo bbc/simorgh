@@ -252,4 +252,31 @@ describe('LanguageNavigation', () => {
     expect(link1).toHaveAttribute('lang', 'en');
     expect(link1).not.toHaveAttribute('aria-label');
   });
+
+  test('does not translate when disableTranslation provided', () => {
+    const sectionsNotTranslate = [
+      {
+        id: 'section1',
+        title: 'Section 1',
+        links: [
+          {
+            id: 'link1',
+            label: 'Link 1',
+            href: '#link1',
+            lang: 'en',
+            disableTranslation: true,
+          },
+        ],
+      },
+    ];
+
+    render(<CollapsibleNavigation navigationSections={sectionsNotTranslate} />);
+
+    const sectionTitle = screen.getByText('Section 1');
+    fireEvent.click(sectionTitle);
+
+    const link1 = screen.getByRole('link', { name: 'Link 1' });
+
+    expect(link1).toHaveAttribute('translate', 'no');
+  });
 });
