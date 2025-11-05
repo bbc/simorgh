@@ -10,7 +10,13 @@ import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeat
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
 } from '../../specialFeatures/atiAnalytics/assertions/navigation';
+import {
+  assertMostReadComponentClick,
+  assertMostReadComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/mostRead';
 
 const pageType = 'mostReadPage';
 const tests = [
@@ -81,7 +87,15 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'list-datadriven',
     useReverb: true,
-    tests: [assertPageView],
+    tests: [
+      assertPageView,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertDropdownNavigationComponentClick,
+      assertDropdownNavigationComponentView,
+      assertScrollableNavigationComponentView,
+      assertScrollableNavigationComponentClick,
+    ],
   },
 ];
 
