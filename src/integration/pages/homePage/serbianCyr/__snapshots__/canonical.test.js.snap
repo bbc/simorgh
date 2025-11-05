@@ -491,13 +491,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"sr-cyrl"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News на српском"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"Главна страница - BBC News на српском"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"Почетна страница - BBC News на српском"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/serbian/cyr"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"Главна страница - BBC News на српском"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"Почетна страница - BBC News на српском"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -513,7 +513,7 @@ exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bb
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"Главна страница - BBC News на српском"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"Почетна страница - BBC News на српском"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
