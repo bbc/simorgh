@@ -115,7 +115,7 @@ describe('Weather component', () => {
   });
 
   it('renders "Unknown location" if no name found', async () => {
-    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(undefined);
+    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(null);
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);
