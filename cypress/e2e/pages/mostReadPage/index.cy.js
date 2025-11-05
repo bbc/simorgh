@@ -89,12 +89,12 @@ const atiAnalyticsTestSuites = [
     useReverb: true,
     tests: [
       assertPageView,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
       assertDropdownNavigationComponentClick,
       assertDropdownNavigationComponentView,
       assertScrollableNavigationComponentView,
       assertScrollableNavigationComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
     ],
   },
 ];
