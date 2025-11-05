@@ -85,6 +85,9 @@ export default async (context: GetServerSidePropsContext) => {
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+        toggles,
         ...extractHeaders(reqHeaders),
       },
     };
