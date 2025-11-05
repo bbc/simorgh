@@ -13,7 +13,7 @@ export default {
     enabled: true,
   },
   continueReadingButton: {
-    enabled: true,
+    enabled: false,
   },
   electionBanner: {
     enabled: false,
