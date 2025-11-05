@@ -42,6 +42,7 @@ jest.mock('./DayForecast', () => ({
       data-testid="DayForecast"
       data-expanded={expanded}
       role="button"
+      type="button"
       tabIndex={0}
       onClick={onToggle}
       onKeyDown={e => {
@@ -205,9 +206,7 @@ describe('Weather component', () => {
   });
 
   it('renders "Unknown location" if no name found', async () => {
-    jest
-      .spyOn(locationStorage, 'getLocationFromStorage')
-      .mockReturnValue(null);
+    jest.spyOn(locationStorage, 'getLocationFromStorage').mockReturnValue(null);
     mockFetch({ forecasts: [{}] });
     await act(async () => {
       render(<Weather />);
