@@ -1134,7 +1134,25 @@ describe('Article Page', () => {
         shouldBeDisplayed: true,
       },
     ])('$testScenario', ({ toggleEnabled, shouldBeDisplayed }) => {
-      render(<ArticlePage pageData={articleDataPersianWithFourParagraphs} />, {
+      const pageDataWithContinueReadingBlock = mergeDeepLeft(
+        {
+          content: {
+            model: {
+              blocks: [
+                ...articleDataPersianWithFourParagraphs.content.model.blocks,
+                {
+                  id: 'continue-reading-block',
+                  type: 'continueReading',
+                  model: {},
+                },
+              ],
+            },
+          },
+        },
+        articleDataPersianWithFourParagraphs,
+      ) as Article;
+
+      render(<ArticlePage pageData={pageDataWithContinueReadingBlock} />, {
         service: 'persian',
         toggles: { continueReadingButton: { enabled: toggleEnabled } },
       });
