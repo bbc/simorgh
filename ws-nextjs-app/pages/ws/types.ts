@@ -13,8 +13,8 @@ export interface LanguagesPageProps {
     id?: string;
     title: string;
     description: string;
-    seoTitle: string;
-    seoDescription: string;
+    seoTitle: string | undefined;
+    seoDescription: string | undefined;
     curations: Curation[];
     metadata: {
       type: PageTypes;

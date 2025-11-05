@@ -33,8 +33,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
-    seoTitle: string;
-    seoDescription: string;
+    seoTitle: string | undefined;
+    seoDescription: string | undefined;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
@@ -61,7 +61,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations } = pageData;
 
-  const metadataBaseTitle = seoTitle?.length > 0 ? seoTitle : title;
+  const metadataBaseTitle = seoTitle || title;
   const metadataBaseDescription =
     seoDescription?.length > 0 ? seoDescription : description;
 
