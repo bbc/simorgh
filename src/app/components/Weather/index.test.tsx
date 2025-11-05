@@ -12,7 +12,7 @@ jest.mock('./index.styles', () => {
 });
 
 // Mocks for child components
-jest.mock('./DayForecast', () => ({ forecast, expanded, onToggle, datetimeLocale }: any) => (
+jest.mock('./DayForecast', () => ({ forecast, expanded, onToggle }: any) => (
   <div data-testid="DayForecast" data-expanded={expanded} onClick={onToggle}>
     {forecast?.summary?.report?.localDate || 'No date'}
   </div>
