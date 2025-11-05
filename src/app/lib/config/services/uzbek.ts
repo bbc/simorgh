@@ -309,7 +309,11 @@ const defaultCyrillicConfig = {
         text: 'Фойдаланиш шартлари',
       },
       {
-        href: 'https://www.bbc.com/uzbek/institutional-36824300',
+        href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+        text: 'ББC ҳақида',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/privacy/',
         text: 'Шахсий ҳаёт махфийлиги сиёсати',
       },
       {
@@ -645,34 +649,38 @@ export const service: UzbekConfig = {
         href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
-      links: [
-        {
-          href: 'https://www.bbc.com/uzbek/institutional-36824297',
-          text: 'Фойдаланиш шартлари',
-        },
-        {
-          href: 'https://www.bbc.com/uzbek/institutional-36824300',
-          text: 'Шахсий ҳаёт махфийлиги сиёсати',
-        },
-        {
-          href: 'https://www.bbc.com/usingthebbc/cookies/',
-          text: 'Куки(Cookies)',
-        },
-        {
-          href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
-          text: "'Bi-bi-si bilan bog’laning'",
-        },
-        {
-          href: 'https://www.bbc.com/ws/languages',
-          text: 'BBC News бошқа тилларда',
-        },
-        {
-          id: 'COOKIE_SETTINGS',
-          href: '#',
-          text: 'Do not share or sell my info',
-          lang: 'en-GB',
-        },
-      ],
+    links: [
+      {
+        href: 'https://www.bbc.com/uzbek/institutional-36824297',
+        text: 'Фойдаланиш шартлари',
+      },
+      {
+        href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+        text: 'ББC ҳақида',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/privacy/',
+        text: 'Шахсий ҳаёт махфийлиги сиёсати',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/cookies/',
+        text: 'Куки(Cookies)',
+      },
+      {
+        href: 'https://www.bbc.co.uk/uzbek/send/u50853929',
+        text: "'Bi-bi-si bilan bog’laning'",
+      },
+      {
+        href: 'https://www.bbc.com/ws/languages',
+        text: 'BBC News бошқа тилларда',
+      },
+      {
+        id: 'COOKIE_SETTINGS',
+        href: '#',
+        text: 'Do not share or sell my info',
+        lang: 'en-GB',
+      },
+    ],
       copyrightText: 'BBC. Bi-bi-si tashqi saytlar mazmuni uchun mas’ul emas.',
     },
     navigation: [
