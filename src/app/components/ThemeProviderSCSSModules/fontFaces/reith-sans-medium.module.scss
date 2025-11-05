@@ -1,10 +1,10 @@
-@use './fontBaseUrl.module.scss' as fontUrl;
+@use './fontBaseUrls.module.scss' as fontUrl;
 
 @font-face {
   font-family: 'ReithSans';
   src:
-    url('#{fontUrl.$reith-fonts-dir}BBCReithSans_W_Md.woff2') format('woff2'),
-    url('#{fontUrl.$reith-fonts-dir}BBCReithSans_W_Md.woff') format('woff');
+  url('#{fontUrls.$reith-fonts-dir}BBCReithSans_W_Md.woff2') format('woff2'),
+  url('#{fontUrls.$reith-fonts-dir}BBCReithSans_W_Md.woff') format('woff');
   font-weight: 500;
   font-display: optional;
 }

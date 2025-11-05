@@ -1,15 +1,15 @@
-@use './fontBaseUrl.module.scss' as fontUrl;
+@use './fontBaseUrls.module.scss' as fontUrls;
 
 @font-face {
   font-family: 'Noto Sans Ethiopic';
   font-weight: 700;
   font-style: normal;
   src:
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.woff')
+    url('#{fontUrls.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.woff')
       format('woff'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.eot')
+    url('#{fontUrls.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.eot')
       format('eot'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.ttf')
+    url('#{fontUrls.$font-base-url}/fonts/NotoSansEthiopic/v1.901/bold.ttf')
       format('ttf');
   font-display: swap;
 }

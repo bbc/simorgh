@@ -1,12 +1,12 @@
-@use './fontBaseUrl.module.scss' as fontUrl;
+@use './fontBaseUrls.module.scss' as fontUrls;
 
 @font-face {
   font-family: 'Noto Sans Gujarati';
   font-weight: 700;
   font-style: normal;
   src:
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.woff') format('woff'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.eot') format('eot'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.ttf') format('ttf');
+  url('#{fontUrls.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.woff') format('woff'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.eot') format('eot'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSansGujarati/v1.00/bold.ttf') format('ttf');
   font-display: swap;
 }

@@ -1,13 +1,13 @@
-@use './fontBaseUrl.module.scss' as fontUrl;
+@use './fontBaseUrls.module.scss' as fontUrls;
 
 @font-face {
   font-family: 'Noto Serif Sinhala';
   font-weight: 400;
   font-style: normal;
   src:
-    url('#{fontUrl.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.woff') format('woff'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.eot') format('eot'),
-    url('#{fontUrl.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.ttf') format('ttf');
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.woff2') format('woff2'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.woff') format('woff'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.eot') format('eot'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifSinhala/v1.00/normal.ttf') format('ttf');
   font-display: swap;
 }
