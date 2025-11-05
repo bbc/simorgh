@@ -281,12 +281,13 @@
       }
     ],
     "description": "",
-      "metadata": {
+    "metadata": {
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c6jdzrejj3p3t",
         "contentType": "index-home",
         "pageIdentifier": "ws.page",
-        "pageTitle": "BBC World Service - global front page"      }
+        "pageTitle": "BBC World Service - global front page"
+      }
     },
     "title": "BBC World Service - global front page",
     "contentType": "application/json; charset=utf-8"
