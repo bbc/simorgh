@@ -1,3 +1,5 @@
+import 'moment/locale/fa';
+
 const moment = require('moment');
 
 // eslint-disable-next-line import/prefer-default-export
