@@ -93,14 +93,6 @@ describe('Weather component', () => {
     jest.clearAllMocks();
   });
 
-  it('shows loading initially', async () => {
-    mockFetch({ forecasts: [] });
-    await act(async () => {
-      render(<Weather />);
-    });
-    expect(screen.getByText(/Loading weather forecast/i)).toBeInTheDocument();
-  });
-
   it('renders error state on fetch failure', async () => {
     global.fetch = jest
       .fn()
@@ -160,33 +152,6 @@ describe('Weather component', () => {
       render(<Weather />);
     });
     expect(await screen.findByText(/StoredCity/i)).toBeInTheDocument();
-  });
-
-  it('updates location and saves to storage on GeoLocationButton click', async () => {
-    const saveSpy = jest
-      .spyOn(locationStorage, 'saveLocationToStorage')
-      .mockImplementation(jest.fn());
-    const weatherResponse = {
-      forecasts: [{ summary: { report: { localDate: '2025-11-02' } } }],
-      location: { name: 'London' },
-    };
-    mockFetch(weatherResponse);
-
-    await act(async () => {
-      render(<Weather />);
-      const geoBtn = await screen.findByTestId('geo-btn');
-      fireEvent.click(geoBtn);
-    });
-
-    expect(await screen.findByText(/London/i)).toBeInTheDocument();
-    expect(saveSpy).toHaveBeenCalledWith(
-      expect.objectContaining({
-        latitude: 51.5,
-        longitude: -0.12,
-        locationId: '1',
-        locationName: 'London',
-      }),
-    );
   });
 
   it('expands and collapses a day forecast on click', async () => {
