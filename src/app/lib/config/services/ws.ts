@@ -12,7 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news',
     atiAnalyticsProducerId: '30',
-    atiAnalyticsProducerName: 'NEWS',
+    atiAnalyticsProducerName: 'BBC_WORLD_NEWS',
     useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC News',
