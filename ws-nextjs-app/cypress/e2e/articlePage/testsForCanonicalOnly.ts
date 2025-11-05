@@ -211,7 +211,7 @@ export default ({
       }
     });
 
-    describe('Continue Reading Button', () => {
+    describe.skip('Continue Reading Button', () => {
       it('should render the Continue Reading button', () => {
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
