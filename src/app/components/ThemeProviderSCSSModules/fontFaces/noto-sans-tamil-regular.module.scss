@@ -1,15 +1,13 @@
+@use './fontBaseUrl.module.scss' as fontUrl;
+
 @font-face {
   font-family: 'Noto Sans Tamil';
   font-weight: 400;
   font-style: normal;
   src:
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff2')
-      format('woff2'),
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.woff')
-      format('woff'),
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.eot')
-      format('eot'),
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/normal.ttf')
-      format('ttf');
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansTamil/v1.00/normal.woff2') format('woff2'),
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansTamil/v1.00/normal.woff') format('woff'),
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansTamil/v1.00/normal.eot') format('eot'),
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansTamil/v1.00/normal.ttf') format('ttf');
   font-display: swap;
 }

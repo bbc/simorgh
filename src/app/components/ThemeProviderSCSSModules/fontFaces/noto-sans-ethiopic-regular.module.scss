@@ -1,13 +1,12 @@
+@use './fontBaseUrl.module.scss' as fontUrl;
+
 @font-face {
   font-family: 'Noto Sans Ethiopic';
   font-weight: 400;
   font-style: normal;
   src:
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.woff')
-      format('woff'),
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.eot')
-      format('eot'),
-    url('https://ws-downloads.files.bbci.co.uk/fonts/NotoSansEthiopic/v1.901/normal.ttf')
-      format('ttf');
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/normal.woff') format('woff'),
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/normal.eot') format('eot'),
+    url('#{fontUrl.$font-base-url}/fonts/NotoSansEthiopic/v1.901/normal.ttf') format('ttf');
   font-display: swap;
 }
