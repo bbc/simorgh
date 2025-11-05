@@ -280,16 +280,15 @@
         "visualStyle": "LINKS"
       }
     ],
-    "description": "Broadcasting trusted BBC News and programmes in 43 languages worldwide - on radio, TV, apps, and digital platforms.",
-    "metadata": {
+    "description": "",
+      "metadata": {
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:c6jdzrejj3p3t",
         "contentType": "index-home",
         "pageIdentifier": "ws.page",
-        "pageTitle": "BBC World Service – BBC News in 43 Languages Worldwide"
-      }
+        "pageTitle": "BBC World Service - global front page"      }
     },
-    "title": "BBC World Service – BBC News in 43 Languages Worldwide",
+    "title": "BBC World Service - global front page",
     "contentType": "application/json; charset=utf-8"
   }
 }
