@@ -9,9 +9,13 @@ type LiveTvPageParams = {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export const assertLiveTvPage = ({ service, pageData }: LiveTvPageParams) => {
+export const assertLiveTvPage = ({ service }: LiveTvPageParams) => {
   it(`should render the Live TV Page with the correct h1 for ${service}`, () => {
-    const expectedHeading = pageData?.title || '';
-    cy.get('h1').should('have.text', expectedHeading);
+    cy.getPageDataFromWindow().then(pageData => {
+      const expectedHeading = (pageData as LiveTvPageParams['pageData'])?.title;
+      cy.get('h1').should('have.text', expectedHeading);
+
+    }
+    
   });
 };
