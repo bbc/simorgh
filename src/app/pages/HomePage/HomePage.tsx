@@ -61,8 +61,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations } = pageData;
 
-  const metadataBaseTitle = seoTitle || title;
-  const metadataBaseDescription = seoDescription || description;
+  const metadataBaseTitle = seoTitle?.length > 0 ? seoTitle : title;
+  const metadataBaseDescription =
+    seoDescription?.length > 0 ? seoDescription : description;
 
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
