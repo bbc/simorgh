@@ -45,7 +45,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
-    homePageTitle,
     lang,
     brandName,
     service,
@@ -82,7 +81,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={homePageTitle}
+        title={title}
         lang={lang}
         description={description}
         openGraphType="website"
