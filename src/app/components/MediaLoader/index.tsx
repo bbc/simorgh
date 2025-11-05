@@ -219,7 +219,7 @@ const MediaLoader = ({
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
-  const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: adsEnabled } = useToggle('preroll');
 
   const {
     id,

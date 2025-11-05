@@ -8,7 +8,6 @@ export default {
   MEDIA_PLAYER: 'mediaPlayer',
   MOST_READ: 'mostRead',
   PRELOAD_LEAD_IMAGE: 'preloadLeadImage',
-  PREROLL_ADS: 'prerollAds',
   RADIO_SCHEDULE: 'radioSchedule',
   SCRIPT_SWITCH_LINK: 'scriptLink',
   SOCIAL_EMBED: 'socialEmbed',
