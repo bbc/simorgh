@@ -7,23 +7,49 @@ import * as THREE from 'three';
 
 /* eslint-disable react/no-unknown-property */
 
-const randomInRange = (min, max) => min + Math.random() * (max - min);
-const randomPosition = () => [
-  (Math.random() - 0.5) * 2,
-  Math.random() * 2,
-  (Math.random() - 0.5) * 2,
-];
-const randomColor = () =>
-  new THREE.Color(
-    `hsl(${randomInRange(30, 60)}, 100%, ${randomInRange(60, 80)}%)`,
-  );
+// === PARTICLE SYSTEM CONFIGURATION ===
 
-const createEmber = () => ({
+// Default values
+const DEFAULT_SPAWN_WIDTH = 6;
+const DEFAULT_SPAWN_LENGTH = 6;
+const DEFAULT_MAX_HEIGHT = 8;
+const DEFAULT_PARTICLE_COLOR = '#FF0000';
+const DEFAULT_PARTICLE_COUNT = 50;
+
+// Particle physics
+const PARTICLE_SPEED_MIN = 0.0003;
+const PARTICLE_SPEED_MAX = 0.008;
+const PARTICLE_SIZE_MIN = 0.04;
+const PARTICLE_SIZE_MAX = 0.1;
+
+// Fade effects
+const FADE_IN_HEIGHT_RATIO = 0.2; // Fade in at 20% of max height
+const FADE_OUT_HEIGHT_RATIO = 0.6; // Fade out at 60% of max height
+const BASE_OPACITY = 0.8;
+
+// Fallback texture
+const FALLBACK_TEXTURE_PATH = '/public3d/point-target.png';
+
+const randomInRange = (min, max) => min + Math.random() * (max - min);
+const randomPosition = (
+  width = DEFAULT_SPAWN_WIDTH,
+  length = DEFAULT_SPAWN_LENGTH,
+) => {
+  const x = (Math.random() - 0.5) * length; // X-axis: side to side (using length)
+  const z = (Math.random() - 0.5) * width; // Z-axis: forward/back (using width)
+  return [x, 0, z];
+};
+
+const createEmber = (
+  width = DEFAULT_SPAWN_WIDTH,
+  length = DEFAULT_SPAWN_LENGTH,
+  color = DEFAULT_PARTICLE_COLOR,
+) => ({
   id: crypto.randomUUID(),
-  position: randomPosition(),
-  speed: randomInRange(0.0003, 0.008),
-  size: randomInRange(0.04, 0.1),
-  color: randomColor(),
+  position: randomPosition(width, length),
+  speed: randomInRange(PARTICLE_SPEED_MIN, PARTICLE_SPEED_MAX),
+  size: randomInRange(PARTICLE_SIZE_MIN, PARTICLE_SIZE_MAX),
+  color: new THREE.Color(color),
 });
 
 const useFallbackTextureWithAspect = (mainPath, fallbackPath) => {
@@ -65,7 +91,15 @@ const useFallbackTextureWithAspect = (mainPath, fallbackPath) => {
   return { texture, aspect };
 };
 
-const BillboardEmber = ({ position, size, color, texture, aspect, camera }) => {
+const BillboardEmber = ({
+  position,
+  size,
+  color,
+  texture,
+  aspect,
+  camera,
+  maxHeight,
+}) => {
   const meshRef = useRef();
 
   useFrame(() => {
@@ -74,6 +108,23 @@ const BillboardEmber = ({ position, size, color, texture, aspect, camera }) => {
     }
   });
 
+  // Calculate fade-in and fade-out based on height (Y position)
+  const fadeInEndHeight = maxHeight * FADE_IN_HEIGHT_RATIO;
+  const fadeOutStartHeight = maxHeight * FADE_OUT_HEIGHT_RATIO;
+  const currentHeight = position[1];
+  let opacity = BASE_OPACITY;
+
+  if (currentHeight < fadeInEndHeight) {
+    // Fade in from 0 to fadeInEndHeight
+    const fadeInProgress = currentHeight / fadeInEndHeight;
+    opacity = BASE_OPACITY * fadeInProgress;
+  } else if (currentHeight > fadeOutStartHeight) {
+    // Fade out from fadeOutStartHeight to maxHeight
+    const fadeOutProgress =
+      (currentHeight - fadeOutStartHeight) / (maxHeight - fadeOutStartHeight);
+    opacity = BASE_OPACITY * (1 - fadeOutProgress);
+  }
+
   return (
     <mesh ref={meshRef} position={position} scale={[size * aspect, size, 1]}>
       <planeGeometry args={[1, 1]} />
@@ -81,9 +132,9 @@ const BillboardEmber = ({ position, size, color, texture, aspect, camera }) => {
         map={texture}
         color={color}
         transparent
-        opacity={0.8}
+        opacity={Math.max(0, opacity)}
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={THREE.NormalBlending}
       />
     </mesh>
   );
@@ -93,17 +144,24 @@ const BillboardParticleSystem = ({
   texturePath,
   particleSize,
   particleCount,
+  maxHeight = DEFAULT_MAX_HEIGHT,
+  spawnWidth = DEFAULT_SPAWN_WIDTH,
+  spawnLength = DEFAULT_SPAWN_LENGTH,
+  particleColor = DEFAULT_PARTICLE_COLOR,
 }) => {
-  const emberCount = particleCount || 50;
+  const emberCount = particleCount || DEFAULT_PARTICLE_COUNT;
 
   const embers = useMemo(
-    () => Array.from({ length: emberCount }, createEmber),
-    [emberCount],
+    () =>
+      Array.from({ length: emberCount }, () =>
+        createEmber(spawnWidth, spawnLength, particleColor),
+      ),
+    [emberCount, spawnWidth, spawnLength, particleColor],
   );
   const { camera } = useThree();
   const { texture, aspect } = useFallbackTextureWithAspect(
     texturePath,
-    '/public3d/point-target.png',
+    FALLBACK_TEXTURE_PATH,
   );
 
   const [emberStates, setEmberStates] = useState(embers);
@@ -112,10 +170,11 @@ const BillboardParticleSystem = ({
     setEmberStates(currentEmbers =>
       currentEmbers.map(ember => {
         const nextY = ember.position[1] + ember.speed;
-        if (nextY > 2.5) {
+        if (nextY > maxHeight) {
           return {
             ...ember,
-            position: [(Math.random() - 0.5) * 2, 0, (Math.random() - 0.5) * 2],
+            position: randomPosition(spawnWidth, spawnLength),
+            color: new THREE.Color(particleColor),
           };
         }
         return {
@@ -139,6 +198,7 @@ const BillboardParticleSystem = ({
           texture={texture}
           aspect={aspect}
           camera={camera}
+          maxHeight={maxHeight}
         />
       ))}
     </group>

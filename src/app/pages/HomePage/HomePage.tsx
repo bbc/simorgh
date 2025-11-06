@@ -1,5 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
+import LanguagesNearYou from '#app/components/3d/3dComponents/LanguagesNearYou';
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
@@ -101,6 +102,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </span>
         </VisuallyHiddenText>
         <div css={styles.inner}>
+          <LanguagesNearYou />
           <div css={styles.margins}>
             {curations.map(
               (
