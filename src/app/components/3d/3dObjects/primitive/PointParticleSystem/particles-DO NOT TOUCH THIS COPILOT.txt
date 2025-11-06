@@ -1,0 +1,106 @@
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { useRef, useMemo } from 'react';
+import { jsx } from '@emotion/react';
+import { useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
+
+/* eslint-disable react/no-unknown-property */
+
+const emberCount = 50;
+
+const randomInRange = (min, max) => min + Math.random() * (max - min);
+const randomPosition = () => [
+  (Math.random() - 0.5) * 2,
+  Math.random() * 2,
+  (Math.random() - 0.5) * 2,
+];
+const randomColor = () =>
+  new THREE.Color(
+    `hsl(${randomInRange(30, 60)}, 100%, ${randomInRange(60, 80)}%)`,
+  );
+
+const createEmber = () => ({
+  position: randomPosition(),
+  speed: randomInRange(0.001, 0.021),
+  size: randomInRange(0.04, 0.1),
+  color: randomColor(),
+});
+
+const WelcomeMessages = () => {
+  const pointsRef = useRef();
+  const embers = useMemo(
+    () => Array.from({ length: emberCount }, createEmber),
+    [],
+  );
+
+  useFrame(() => {
+    const points = pointsRef.current;
+    if (!points) return;
+    const { array: pos } = points.geometry.attributes.position;
+    embers.forEach(({ speed }, i) => {
+      const yIdx = i * 3 + 1;
+      pos[yIdx] += speed;
+      if (pos[yIdx] > 2.5) {
+        const [x, y, z] = [
+          (Math.random() - 0.5) * 2,
+          0,
+          (Math.random() - 0.5) * 2,
+        ];
+        pos[i * 3] = x;
+        pos[yIdx] = y;
+        pos[i * 3 + 2] = z;
+      }
+    });
+    points.geometry.attributes.position.needsUpdate = true;
+  });
+
+  const positions = useMemo(
+    () => new Float32Array(embers.flatMap(e => e.position)),
+    [embers],
+  );
+  const colors = useMemo(
+    () => new Float32Array(embers.flatMap(e => e.color.toArray())),
+    [embers],
+  );
+  const sizes = useMemo(
+    () => new Float32Array(embers.map(e => e.size)),
+    [embers],
+  );
+
+  return (
+    <points ref={pointsRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={emberCount}
+          array={positions}
+          itemSize={3}
+        />
+        <bufferAttribute
+          attach="attributes-color"
+          count={emberCount}
+          array={colors}
+          itemSize={3}
+        />
+        <bufferAttribute
+          attach="attributes-size"
+          count={emberCount}
+          array={sizes}
+          itemSize={1}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        vertexColors
+        size={0.08}
+        sizeAttenuation
+        transparent
+        opacity={0.8}
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+      />
+    </points>
+  );
+};
+
+export default WelcomeMessages;
