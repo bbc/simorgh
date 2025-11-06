@@ -25,6 +25,7 @@ type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
   blockPosition?: number;
+  timeOfDayVariant?: string;
   onClick?: () => void;
 };
 
@@ -33,6 +34,7 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
+  timeOfDayVariant,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -86,8 +88,20 @@ export default ({
     imageWidthLarge: 256,
   });
 
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
@@ -115,6 +129,7 @@ export default ({
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />

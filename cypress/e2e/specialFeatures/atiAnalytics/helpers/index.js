@@ -34,6 +34,7 @@ const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
 const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
+const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -58,82 +59,39 @@ export const COMPONENTS = {
   SOCIAL_EMBED,
   TOP_STORIES,
   PORTRAIT_VIDEO_CAROUSEL,
+  PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views & Clicks - Click Per View Model
-  Object.values(COMPONENTS).forEach(component => {
-    const viewClickEventRegex = new RegExp(
-      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
-      'g',
-    );
-
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          ati: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          atc: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-click`);
-  });
-
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    const viewabilityViewRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+    cy.intercept('GET', `${atiUrl}/**`, request => {
+      const { query } = request;
+      const viewabilityModelString = query.events;
+      if (viewabilityModelString) {
+        const isViewEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"view"}`,
+        );
+        const isClickEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"select"}`,
+        );
 
-    const viewabilityClickRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+        const containsExpectedComponent = viewabilityModelString.includes(
+          `"name":"${component}`,
+        );
 
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityViewRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityClickRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-click`);
+        if (isViewEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-view`;
+          request.reply({ statusCode: 200 });
+        }
+        if (isClickEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-click`;
+          request.reply({ statusCode: 200 });
+        }
+      }
+    });
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
@@ -164,7 +122,9 @@ export const interceptATIAnalyticsBeacons = () => {
 };
 
 export const setUserIDCookie = () => {
-  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  cy.session('user-session', () => {
+    cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  });
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {

@@ -20,7 +20,7 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -35,7 +35,7 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "midArticleOnwardJourney": {
-    "enabled": true,
+    "enabled": false,
   },
   "mostRead": {
     "enabled": false,
@@ -68,6 +68,9 @@ exports[`Toggles Config when application environment is live should contain corr
     "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {
@@ -86,8 +89,7 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": true,
   },
   "adsNonce": {
-    "enabled": true,
-    "value": "es,mx",
+    "enabled": false,
   },
   "articleLiteSiteLink": {
     "enabled": true,
@@ -100,7 +102,7 @@ exports[`Toggles Config when application environment is local should contain cor
   },
   "enableFetchingToggles": {
     "enabled": false,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -148,6 +150,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {
@@ -166,8 +171,7 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": false,
   },
   "adsNonce": {
-    "enabled": true,
-    "value": "es,mx",
+    "enabled": false,
   },
   "articleLiteSiteLink": {
     "enabled": true,
@@ -180,7 +184,7 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -228,6 +232,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {

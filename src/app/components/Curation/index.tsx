@@ -69,7 +69,8 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  readTimeVariant,
+  timeOfDayExperimentName,
+  timeOfDayVariant,
   mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
@@ -129,6 +130,8 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );
@@ -176,6 +179,7 @@ export default ({
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
+            timeOfDayVariant={timeOfDayVariant ?? undefined}
           />
         );
       }
@@ -218,6 +222,12 @@ export default ({
         const viewTracker = useViewTracker({
           ...eventTrackingData,
           viewThreshold: 0.2,
+          ...(timeOfDayExperimentName &&
+            timeOfDayVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayVariant,
+            }),
         });
 
         const curationSubheadingClickTracker =
@@ -245,7 +255,8 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                readTimeVariant={readTimeVariant}
+                timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+                timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
           </section>
@@ -256,7 +267,8 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              readTimeVariant={readTimeVariant}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );

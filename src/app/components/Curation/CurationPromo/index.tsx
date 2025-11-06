@@ -9,7 +9,6 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
-import { ReadTime } from '#app/components/ReadTime';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
@@ -30,9 +29,9 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
-  readTime,
   eventTrackingData,
-  readTimeVariant,
+  timeOfDayExperimentName,
+  timeOfDayVariant,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -57,9 +56,11 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_homepage_read_time',
-    experimentVariant: readTimeVariant,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: timeOfDayExperimentName,
+      experimentVariant: timeOfDayVariant,
+    }),
   });
 
   return (
@@ -103,12 +104,6 @@ const CurationPromo = ({
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
-      {/* EXPERIMENT: Read Time */}
-      <ReadTime
-        readTimeValue={readTime}
-        promoId={id}
-        readTimeVariant={readTimeVariant}
-      />
     </Promo>
   );
 };

@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinWithDiacriticsScript from '../fontScripts/latinWithDiacritics';
 import {
@@ -10,7 +11,7 @@ import withThemeProvider from '../withThemeProvider';
 import reithVariants from '../fontVariants/reith';
 import brandSVG from '../chameleonLogos/mundo';
 
-const mundoTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -31,4 +32,4 @@ const mundoTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(mundoTheme);
+export default withThemeProvider(theme);

@@ -390,6 +390,10 @@ const preview: Preview = {
             title: 'kyrgyz',
           },
           {
+            value: { service: 'magyarul', variant: 'default' },
+            title: 'magyarul',
+          },
+          {
             value: { service: 'marathi', variant: 'default' },
             title: 'marathi',
           },
@@ -703,7 +707,13 @@ const preview: Preview = {
           service={context.globals.service.service}
           variant={context.globals.service.variant}
         >
-          <RequestContextProvider isLite={context.globals.isLite}>
+          <RequestContextProvider
+            isLite={context.globals.isLite}
+            // @ts-expect-error error TS2322: Type '"unknown"' is not assignable to type 'PageTypes'.
+            pageType={'unknown'}
+            pathname={''}
+            service={context.globals.service.service}
+          >
             <EventTrackingContextProvider
               // @ts-expect-error - mock data for Storybook
               pageData={pageDataFixture}

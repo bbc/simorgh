@@ -23,8 +23,30 @@ const unitTests = {
   ],
   testMatch: [
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
+    '**/?(*.)+(test).{js,jsx,ts,tsx}',
+    '!**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
+    '!**/puppeteer/**/*',
+  ],
+};
+
+const clientUnitTests = {
+  preset: 'ts-jest',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
+  moduleNameMapper: jestDirAlias,
+  testEnvironment: '@happy-dom/jest-environment',
+  snapshotSerializers: ['@emotion/jest/serializer'],
+  transform: {
+    '^.+\\.[tj]sx?$': 'babel-jest',
+  },
+  displayName: 'Unit Tests (Client)',
+  testMatch: [
+    '**/?(*.)+(client.test).{js,jsx,ts,tsx}',
+    '!**/src/integration/**/*',
     '!**/puppeteer/**/*',
   ],
 };
@@ -39,7 +61,15 @@ const ampIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*lite\\.test\\.js$',
+    '.*canonical\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const canonicalIntegrationTests = {
@@ -52,7 +82,15 @@ const canonicalIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*lite\\.test\\.js$',
+    '.*amp\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const liteIntegrationTests = {
@@ -65,13 +103,20 @@ const liteIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
+  testPathIgnorePatterns: [
+    '.*canonical\\.test\\.js$',
+    '.*amp\\.test\\.js$',
+    '<rootDir>/src/integration/pages/articles/',
+    '<rootDir>/src/integration/pages/mediaArticlePage/',
+    '<rootDir>/src/integration/pages/mediaAssetPage/',
+    '<rootDir>/src/integration/pages/photoGalleryPage/',
+    '<rootDir>/src/integration/pages/storyPage/',
+  ],
 };
 
 const puppeteerTests = {
   preset: 'ts-jest',
   setupFiles: ['./puppeteer/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
@@ -83,6 +128,7 @@ const puppeteerTests = {
 module.exports = {
   projects: [
     unitTests,
+    clientUnitTests,
     ampIntegrationTests,
     canonicalIntegrationTests,
     liteIntegrationTests,

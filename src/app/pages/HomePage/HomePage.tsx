@@ -25,6 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -47,21 +48,33 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
-    curations,
     metadata: { atiAnalytics },
   } = pageData;
+  let { curations } = pageData;
 
-  // EXPERIMENT: Homepage Read Time
-  const readTimeExperimentName = 'newswb_ws_homepage_read_time';
-  const readTimeVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
+  // EXPERIMENT: Homepage Time of Day Adaptive Curations
+  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
+  const timeOfDayVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
+  if (
+    timeOfDayVariant === 'homepage_time_of_day_a' ||
+    timeOfDayVariant === 'homepage_time_of_day_b'
+  ) {
+    curations = reorderCurations({
+      curations,
+      service,
+    });
+  }
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -103,8 +116,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   position,
                   visualStyle,
                   ...curationProps
-                },
-                index,
+                }: Curation,
+                index: number,
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
@@ -131,7 +144,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      readTimeVariant={readTimeVariant}
+                      timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
@@ -142,7 +155,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {readTimeVariant && <OptimizelyPageMetrics trackPageView />}
+      {timeOfDayVariant && (
+        <OptimizelyPageMetrics trackPageView trackPageDepth />
+      )}
     </>
   );
 };

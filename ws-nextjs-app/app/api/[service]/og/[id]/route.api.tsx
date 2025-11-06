@@ -10,21 +10,39 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
-import { INTERNAL_SERVER_ERROR, NOT_FOUND } from '#app/lib/statusCodes.const';
+import {
+  INTERNAL_SERVER_ERROR,
+  NOT_FOUND,
+  OK,
+} from '#app/lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import sendCustomMetric from '#src/server/utilities/customMetrics';
+import { NON_200_RESPONSE } from '#src/server/utilities/customMetrics/metrics.const';
+import nodeLogger from '#lib/logger.node';
+import {
+  ROUTING_INFORMATION,
+  SERVER_SIDE_REQUEST_FAILED,
+} from '#app/lib/logger.const';
+import sharp from 'sharp';
 import Badge from '../Badge';
 import {
   extractArticleData,
   extractLiveData,
+  pageTypeToLog,
   responseNotFound,
   responseServerError,
 } from '../utils';
 import BackgroundImage from '../BackgroundImage';
 import {
+  ArabicLiveSVG,
   ArabicMostReadSVG,
   ArabicTopStoriesSVG,
-  RTLLiveSVG,
-} from '../RTLBadges';
+  HindiLiveSVG,
+  HindiMostReadSVG,
+  HindiTopStoriesSVG,
+} from '../NonLatinBadges';
+
+const logger = nodeLogger(__filename);
 
 const REITH_SANS_MEDIUM_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Md.woff`;
 const REITH_SANS_BOLD_FONT_URL = `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff`;
@@ -36,42 +54,64 @@ const getPageType = (id: string) => {
   return null;
 };
 
-const RTL_SERVICES: Services[] = [
-  'arabic',
-  'dari',
-  'pashto',
-  'persian',
-  'urdu',
-] as const;
+const NON_LATIN_SERVICES: Services[] = ['arabic', 'hindi'] as const;
+
+type SVGBadgesMap = {
+  [S in (typeof NON_LATIN_SERVICES)[number]]: Record<
+    'Live' | 'MostRead' | 'TopStories',
+    () => React.ReactNode
+  >;
+};
+
+const SVG_BADGES = {
+  arabic: {
+    Live: ArabicLiveSVG,
+    MostRead: ArabicMostReadSVG,
+    TopStories: ArabicTopStoriesSVG,
+  },
+  hindi: {
+    Live: HindiLiveSVG,
+    MostRead: HindiMostReadSVG,
+    TopStories: HindiTopStoriesSVG,
+  },
+} as SVGBadgesMap;
+
+const compressArrayBuffer = async (
+  arrayBuffer: ArrayBuffer,
+): Promise<ArrayBuffer> => {
+  const buffer = Buffer.from(arrayBuffer);
+  const compressedBuffer = await sharp(buffer).jpeg({ quality: 65 }).toBuffer();
+  return new Uint8Array(compressedBuffer).buffer;
+};
 
 export async function GET(
   req: Request,
   { params }: { params: { id: string; service: Services } },
 ) {
-  try {
-    const { searchParams } = new URL(
-      req.url ?? '',
-      `https://${req.headers.get('host')}`,
-    );
+  const { searchParams, pathname } = new URL(
+    req.url ?? '',
+    `https://${req.headers.get('host')}`,
+  );
 
+  try {
     // https://nextjs.org/docs/messages/sync-dynamic-apis
     const { id, service } = await params;
 
-    if (!id || !service) return responseNotFound();
+    if (!id || !service) return responseNotFound({ pathname });
 
     const rendererEnv =
       searchParams.get('renderer_env') || process.env.SIMORGH_APP_ENV;
 
     const pageType = getPageType(id);
 
-    if (!pageType) return responseNotFound();
+    if (!pageType) return responseNotFound({ pathname });
 
     const [{ data }, sansMediumBuffer, sansBoldBuffer] = await Promise.all([
       // Fetch asset
       getPageData({
         id,
         service,
-        resolvedUrl: req.url,
+        resolvedUrl: pathname,
         rendererEnv,
         pageType,
       }),
@@ -80,8 +120,9 @@ export async function GET(
       fetch(REITH_SANS_BOLD_FONT_URL).then(res => res.arrayBuffer()),
     ]);
 
-    if (data.status === NOT_FOUND) return responseNotFound();
-    if (data.status === INTERNAL_SERVER_ERROR) return responseServerError();
+    if (data.status === NOT_FOUND) return responseNotFound({ pathname });
+    if (data.status === INTERNAL_SERVER_ERROR)
+      return responseServerError({ pathname });
 
     const dataExtractor = {
       live: extractLiveData,
@@ -119,56 +160,62 @@ export async function GET(
         2. Top Stories
         3. Most read
     */
-    switch (true) {
-      case isLive:
-        badge = (
-          <Badge
-            icon={
-              <svg viewBox="0 0 32 32" width="24" height="24">
-                <path
-                  d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
-                  style={{ fill: LIVE_LIGHT }}
-                />
-                <circle cx="16" cy="16" r="8.5" style={{ fill: LIVE_LIGHT }} />
-              </svg>
-            }
-            text={liveText}
-            textColour={LIVE_LIGHT}
-            uppercase
-            bold
-          />
-        );
-        break;
-      case isInTopStories:
-        badge = <Badge text={topStoriesText} />;
-        break;
-      case isInMostRead:
-        badge = <Badge text={mostReadText} />;
-        break;
-      default:
-        badge = undefined;
-    }
+    // If service is non-latin (currently Arabic and Hindi), use SVG badges as its more difficult to load fonts for these
+    // RTL scripts are also not supported by the ImageResponse function
+    if (NON_LATIN_SERVICES.includes(service)) {
+      const BadgeSVGs = SVG_BADGES[service];
 
-    // Library does not support RTL text, so we use pre-baked SVGs for the MostRead and TopStories badges
-    if (service === 'arabic') {
       switch (true) {
         case isLive:
-          badge = <RTLLiveSVG />;
+          badge = <BadgeSVGs.Live />;
           break;
         case isInTopStories:
-          badge = <ArabicTopStoriesSVG />;
+          badge = <BadgeSVGs.TopStories />;
           break;
         case isInMostRead:
-          badge = <ArabicMostReadSVG />;
+          badge = <BadgeSVGs.MostRead />;
+          break;
+        default:
+          badge = null;
+      }
+    } else {
+      switch (true) {
+        case isLive:
+          badge = (
+            <Badge
+              icon={
+                <svg viewBox="0 0 32 32" width="24" height="24">
+                  <path
+                    d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"
+                    style={{ fill: LIVE_LIGHT }}
+                  />
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="8.5"
+                    style={{ fill: LIVE_LIGHT }}
+                  />
+                </svg>
+              }
+              text={liveText}
+              textColour={LIVE_LIGHT}
+              uppercase
+              bold
+            />
+          );
+          break;
+        case isInTopStories:
+          badge = <Badge text={topStoriesText} />;
+          break;
+        case isInMostRead:
+          badge = <Badge text={mostReadText} />;
           break;
         default:
           badge = undefined;
       }
-    } else if (RTL_SERVICES.includes(service)) {
-      badge = null; // No badge for RTL services other than Arabic for initial experiment
     }
 
-    return new ImageResponse(
+    const imageResponse = new ImageResponse(
       (
         <div
           style={{
@@ -201,9 +248,43 @@ export async function GET(
         fonts,
       },
     );
+
+    const buffer = await imageResponse.arrayBuffer();
+
+    const compressedImage = await compressArrayBuffer(buffer);
+
+    logger.debug(ROUTING_INFORMATION, {
+      url: pathname,
+      status: OK,
+      pageType: pageTypeToLog,
+    });
+
+    return new Response(compressedImage, {
+      headers: {
+        'Content-Type': 'image/jpeg',
+        'Content-Length': compressedImage.byteLength.toString(),
+        'Cache-Control':
+          'public, stale-if-error=3600, stale-while-revalidate=3600, max-age=600',
+      },
+    });
   } catch (error: unknown) {
     const { message } = error as FetchError;
 
-    return new Response(message, { status: 500 });
+    sendCustomMetric({
+      metricName: NON_200_RESPONSE,
+      statusCode: INTERNAL_SERVER_ERROR,
+      // @ts-expect-error - Not a real pageType yet
+      pageType: pageTypeToLog,
+      requestUrl: pathname,
+    });
+
+    logger.error(SERVER_SIDE_REQUEST_FAILED, {
+      status: INTERNAL_SERVER_ERROR,
+      message: { message, url: pathname },
+      url: pathname,
+      pageType: pageTypeToLog,
+    });
+
+    return new Response(message, { status: INTERNAL_SERVER_ERROR });
   }
 }
