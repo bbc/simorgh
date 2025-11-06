@@ -2,6 +2,7 @@ import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.js
 import { GetServerSidePropsContext } from 'next';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
+import defaultToggles from '#app/lib/config/toggles';
 import handleArticleRoute from './handleArticleRoute';
 
 describe('handleArticleRoute', () => {
@@ -23,10 +24,10 @@ describe('handleArticleRoute', () => {
       json: pidginMediaArticleFixtureData,
     });
   });
+  const toggles = defaultToggles.local;
 
   it('returns correct page type if consumableAsSFV is true', async () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
-    // @ts-expect-error - pageType only exists in one return, error code not exclusively 500 so ERROR_PAGE value not guaranteed
     expect(result.props.pageType).toEqual('mediaArticle');
   });
 
@@ -38,7 +39,7 @@ describe('handleArticleRoute', () => {
     expect(result.props.status).toEqual(200);
   });
 
-  it('returns error props if shouldRender fails', async () => {
+  it('returns error props if shouldRender fails - 500', async () => {
     jest.spyOn(shouldRender, 'default').mockReturnValue({
       hasRequestSucceeded: false,
       status: 500,
@@ -56,11 +57,45 @@ describe('handleArticleRoute', () => {
         isLite: false,
         isNextJs: true,
         status: 500,
-        isUK: null,
+        isUK: false,
+        pageType: 'article',
+        pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
         showAdsBasedOnLocation: false,
         showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
+        toggles,
+        variant: null,
+      },
+    });
+  });
+
+  it('returns error props if shouldRender fails - 404', async () => {
+    jest.spyOn(shouldRender, 'default').mockReturnValue({
+      hasRequestSucceeded: false,
+      status: 404,
+    });
+
+    jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+
+    expect(result).toEqual({
+      props: {
+        bbcOrigin: null,
+        isAmp: false,
+        isApp: false,
+        isLite: false,
+        isNextJs: true,
+        status: 404,
+        isUK: false,
+        pageType: 'article',
+        pathname: '/pidgin/articles/cvpde7nqj92o',
+        service: 'pidgin',
+        showAdsBasedOnLocation: false,
+        showCookieBannerBasedOnCountry: true,
+        timeOnServer: 1234567890000,
+        toggles,
         variant: null,
       },
     });
