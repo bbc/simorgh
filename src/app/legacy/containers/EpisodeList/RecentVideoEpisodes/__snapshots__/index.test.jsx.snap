@@ -88,10 +88,9 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
-  background-color: #141414;
-  color: #F6F6F6;
+  font-weight: 700;
+  background-color: #121212;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -253,8 +252,8 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #FFFFFF;
   padding: 0 0 0 0.25rem;
 }
@@ -334,7 +333,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 }
 
 .emotion-31:visited [class*='--visited'] {
-  color: #D5D0CD;
+  color: #6E6E73;
 }
 
 .emotion-33 {
@@ -352,9 +351,9 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  font-weight: 400;
+  color: #222222;
   display: inline-block;
   width: 100%;
   font-weight: 700;
@@ -378,9 +377,9 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #FFFFFF;
+  font-weight: 400;
+  color: #222222;
   display: inline-block;
   width: 100%;
   margin: 0.25rem 0;
@@ -407,17 +406,17 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 .emotion-97 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  color: #E6E8EA;
+  color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #AEAEB5;
+  font-weight: 400;
+  color: #6E6E73;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

@@ -73,10 +73,6 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
-      // EXPERIMENT: Homepage Read Time
-      timstampPrefix: {
-        publishedAgo: 'Publicado hace',
-      },
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
@@ -348,26 +344,26 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
-          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+          'Si te has suscrito a nuestro newsletter, por favor, revisa tu correo. Si nos has enviado información, toma nota de este número para futura referencia.',
         privacyInfoHtml:
-          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+          'Y recuerda que tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
-          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+          'Si tienes alguna duda o cambias de opinión, escríbenos a {{emailLink}} incluyendo el número de referencia.',
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
-        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingHeading: 'Enviando…',
         uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
-        successHeading: 'Mensaje enviado',
-        successDescription: 'Gracias por contactarnos.',
+        successHeading: 'Enviado',
+        successDescription: 'Muchas gracias.',
         privacyPolicyLinkHref:
           'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',

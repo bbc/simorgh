@@ -57,6 +57,7 @@ describe('Related Topics', () => {
         <WithContexts>
           <RelatedTopics />
         </WithContexts>,
+        { service: 'mundo' },
       );
       expect(container.firstChild).toBeNull();
     });

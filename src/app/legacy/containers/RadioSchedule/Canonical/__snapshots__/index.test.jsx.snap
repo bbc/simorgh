@@ -122,8 +122,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F2F2F2;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -460,8 +460,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   font-size: 0.75rem;
   line-height: 1.125rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -492,8 +492,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   color: #545658;
   display: block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -534,8 +534,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-37 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #6E6E73;
@@ -569,8 +569,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-40 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #B80000;
@@ -598,8 +598,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5rem;
 }
@@ -620,8 +620,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-46 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -646,8 +646,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-48 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
@@ -706,8 +706,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-75 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #222222;
@@ -775,8 +775,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5rem;
 }
@@ -797,8 +797,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 
 .emotion-86 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
@@ -846,8 +846,8 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;

@@ -33,8 +33,8 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -73,8 +73,8 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -246,8 +246,8 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -286,8 +286,8 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;

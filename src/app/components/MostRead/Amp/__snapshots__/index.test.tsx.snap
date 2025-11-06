@@ -5,8 +5,8 @@ exports[`AmpMostRead should render as expected 1`] = `
   color: #3F3F42;
   margin: 0;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -118,8 +118,8 @@ exports[`AmpMostRead should render as expected 1`] = `
 
 .emotion-5 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 300;
   font-style: normal;
+  font-weight: 300;
   position: relative;
   color: #B80000;
   margin: 0;
@@ -158,8 +158,8 @@ exports[`AmpMostRead should render as expected 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   position: static;
   color: #222222;
   -webkit-text-decoration: none;

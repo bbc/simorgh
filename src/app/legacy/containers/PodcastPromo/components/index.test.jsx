@@ -29,6 +29,7 @@ describe('Podcast Promo', () => {
     it('should match snapshot', () => {
       const { container } = render(
         <PodcastPromo.Card>Content</PodcastPromo.Card>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -39,6 +40,7 @@ describe('Podcast Promo', () => {
     it('should match snapshot', () => {
       const { container } = render(
         <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -73,6 +75,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.ImageWrapper>
           Content
         </PodcastPromo.Card.ImageWrapper>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -85,6 +88,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.Link href="https://www.bbc.com">
           Content
         </PodcastPromo.Card.Link>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });

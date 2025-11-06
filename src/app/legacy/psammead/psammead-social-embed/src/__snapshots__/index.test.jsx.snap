@@ -11,8 +11,8 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -65,8 +65,8 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   border: 0.0625rem solid #AEAEB5;
@@ -101,8 +101,8 @@ exports[`AmpSocialEmbed should render a notice when the provider is unsupported 
 
 .emotion-4 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -200,8 +200,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -278,8 +278,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -301,8 +301,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   margin: 0;
   margin: 1rem 0;
 }
@@ -344,8 +344,8 @@ exports[`AmpSocialEmbed should render correctly for Facebook 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -494,8 +494,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -572,8 +572,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -595,8 +595,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   margin: 0;
   margin: 1rem 0;
 }
@@ -638,8 +638,8 @@ exports[`AmpSocialEmbed should render correctly for Instagram 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -789,8 +789,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -867,8 +867,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -890,8 +890,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   margin: 0;
   margin: 1rem 0;
 }
@@ -933,8 +933,8 @@ exports[`AmpSocialEmbed should render correctly for Twitter 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -1083,8 +1083,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -1166,8 +1166,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1189,8 +1189,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   margin: 0;
   margin: 1rem 0;
 }
@@ -1232,8 +1232,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #FFFFFF;
   border: 0.0625rem solid #8A8C8E;
   border-radius: 0;
@@ -1286,8 +1286,8 @@ exports[`AmpSocialEmbed should render correctly for YouTube 1`] = `
 
 .emotion-10 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   display: block;
@@ -1427,8 +1427,8 @@ exports[`CanonicalSocialEmbed Instagram should render correctly for Instagram 1`
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -1711,8 +1711,8 @@ exports[`CanonicalSocialEmbed Twitter should render correctly for Twitter 1`] = 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -1848,8 +1848,8 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -1930,8 +1930,8 @@ exports[`CanonicalSocialEmbed YouTube should render correctly for YouTube 1`] = 
 
 .emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   display: block;
@@ -2030,8 +2030,8 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -2084,8 +2084,8 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   border: 0.0625rem solid #AEAEB5;
@@ -2120,8 +2120,8 @@ exports[`CanonicalSocialEmbed should render a notice when the provider is unsupp
 
 .emotion-4 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2221,8 +2221,8 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
 
 .emotion-2 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   background-color: #FFFFFF;
@@ -2275,8 +2275,8 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
 
 .emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   border: 0.0625rem solid #AEAEB5;
@@ -2311,8 +2311,8 @@ exports[`CanonicalSocialEmbed should render a notice when there is no oEmbed res
 
 .emotion-4 a {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;

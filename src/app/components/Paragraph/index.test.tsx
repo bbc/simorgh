@@ -20,8 +20,8 @@ describe('Paragraph', () => {
       fontSize: '0.9375rem',
       lineHeight: '1.25rem',
       fontFamily: 'ReithSans,Helvetica,Arial,sans-serif',
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
       margin: 0,
     });
   });
@@ -37,8 +37,8 @@ describe('Paragraph', () => {
       lineHeight: '1.5rem',
       fontFamily:
         '"BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif',
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
       margin: 0,
     });
   });

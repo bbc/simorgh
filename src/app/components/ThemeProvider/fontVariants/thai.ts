@@ -4,13 +4,13 @@ const thai = {
   sans: {
     regular: {
       fontFamily: TAHOMA,
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
     },
     bold: {
       fontFamily: TAHOMA,
-      fontWeight: 700,
       fontStyle: 'normal',
+      fontWeight: 700,
     },
   },
 };

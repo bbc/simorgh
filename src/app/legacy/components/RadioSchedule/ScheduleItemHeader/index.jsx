@@ -128,7 +128,9 @@ const ScheduleItemHeader = ({
       )}
       {brandTitle}
       <VisuallyHiddenText>{`, ${formattedStartTime}, `}</VisuallyHiddenText>
-      <TitleWrapper {...programStateConfig[state]}>{episodeTitle}</TitleWrapper>
+      <TitleWrapper suppressHydrationWarning {...programStateConfig[state]}>
+        {episodeTitle}
+      </TitleWrapper>
       <VisuallyHiddenText>{`, ${formattedDuration} `}</VisuallyHiddenText>
     </span>
   );

@@ -4,13 +4,13 @@ const tamil = {
   sans: {
     regular: {
       fontFamily: NOTO_SANS_TAMIL,
-      fontWeight: 400,
       fontStyle: 'normal',
+      fontWeight: 400,
     },
     bold: {
       fontFamily: NOTO_SANS_TAMIL,
-      fontWeight: 700,
       fontStyle: 'normal',
+      fontWeight: 700,
     },
   },
 };

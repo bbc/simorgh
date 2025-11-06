@@ -39,8 +39,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
 
 .emotion-4 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -131,8 +131,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
   color: #006666;
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -154,8 +154,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -176,8 +176,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
 
 .emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -202,8 +202,8 @@ exports[`ProgramCard should render correctly for live 1`] = `
 
 .emotion-18 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
@@ -403,8 +403,8 @@ exports[`ProgramCard should render correctly for next 1`] = `
 
 .emotion-4 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -438,8 +438,8 @@ exports[`ProgramCard should render correctly for next 1`] = `
 
 .emotion-7 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #B80000;
@@ -467,8 +467,8 @@ exports[`ProgramCard should render correctly for next 1`] = `
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -489,8 +489,8 @@ exports[`ProgramCard should render correctly for next 1`] = `
 
 .emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -515,8 +515,8 @@ exports[`ProgramCard should render correctly for next 1`] = `
 
 .emotion-15 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
@@ -686,8 +686,8 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
 
 .emotion-4 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -766,8 +766,8 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -788,8 +788,8 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
 
 .emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -814,8 +814,8 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
 
 .emotion-15 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;
@@ -984,8 +984,8 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
 
 .emotion-4 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.5rem;
   color: #222222;
@@ -1064,8 +1064,8 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
   display: inline-block;
   width: 100%;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.5rem;
 }
@@ -1086,8 +1086,8 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
 
 .emotion-13 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #6E6E73;
@@ -1112,8 +1112,8 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
 
 .emotion-15 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
@@ -1296,8 +1296,8 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 
 .emotion-4 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #222222;
@@ -1388,8 +1388,8 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   color: #006666;
   display: inline-block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
@@ -1411,8 +1411,8 @@ exports[`ProgramCard should render correctly without summary 1`] = `
   display: inline-block;
   width: 100%;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -1433,8 +1433,8 @@ exports[`ProgramCard should render correctly without summary 1`] = `
 
 .emotion-16 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   padding: 0.5rem;

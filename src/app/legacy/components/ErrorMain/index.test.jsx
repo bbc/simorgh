@@ -20,7 +20,7 @@ describe('ErrorMain', () => {
     expect(container).toMatchSnapshot();
   });
 
-  const arabicServices = ['persian', 'arabic', 'pashto', 'urdu'];
+  const arabicServices = ['persian', 'arabic', 'pashto', 'urdu', 'dari'];
   arabicServices.forEach(service => {
     it(`should correctly render for an error page for ${service}`, () => {
       const { container } = render(<ErrorMain {...messaging} dir="rtl" />, {
