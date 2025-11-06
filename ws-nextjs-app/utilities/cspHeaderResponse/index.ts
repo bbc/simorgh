@@ -3,7 +3,7 @@ import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import getToggles from '#app/lib/utilities/getToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { Services } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
 
