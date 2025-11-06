@@ -282,8 +282,8 @@ exports[`SubHeading component should render correctly with arabic script typogra
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -293,14 +293,14 @@ exports[`SubHeading component should render correctly with arabic script typogra
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 2.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 2rem;
-    line-height: 2.25rem;
+    line-height: 2.625rem;
   }
 }
 
