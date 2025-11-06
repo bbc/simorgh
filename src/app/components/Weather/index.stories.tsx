@@ -1,10 +1,7 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-
+import type { Meta, StoryObj } from '@storybook/react';
 import Weather from './index';
 
-// Provide mock props if needed for rendering, e.g. locationId and datetimeLocale
-export default {
+const meta: Meta<typeof Weather> = {
   title: 'Weather/Weather',
   component: Weather,
   argTypes: {
@@ -23,25 +20,30 @@ export default {
       defaultValue: 'en-GB',
     },
   },
-} as ComponentMeta<typeof Weather>;
-
-const Template: ComponentStory<typeof Weather> = (args) => <Weather {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  locationId: '2653822',
-  datetimeLocale: 'en-GB',
-  className: '',
 };
 
-export const LondonWeather = Template.bind({});
-LondonWeather.args = {
-  locationId: '2643743', // London
-  datetimeLocale: 'en-GB',
+export default meta;
+
+type Story = StoryObj<typeof Weather>;
+
+export const Default: Story = {
+  args: {
+    locationId: '2653822',
+    datetimeLocale: 'en-GB',
+    className: '',
+  },
 };
 
-export const ParisWeather = Template.bind({});
-ParisWeather.args = {
-  locationId: '2988507', // Paris
-  datetimeLocale: 'fr-FR',
+export const LondonWeather: Story = {
+  args: {
+    locationId: '2643743', // London
+    datetimeLocale: 'en-GB',
+  },
+};
+
+export const ParisWeather: Story = {
+  args: {
+    locationId: '2988507', // Paris
+    datetimeLocale: 'fr-FR',
+  },
 };
