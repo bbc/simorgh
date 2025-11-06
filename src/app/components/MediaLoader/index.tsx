@@ -155,28 +155,33 @@ const MediaContainer = ({
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
-            mediaPlayer.loadPlugin(
-              {
-                swf: 'name:dfpAds.swf',
-                html: 'name:dfpAds.js',
-              },
-              {
-                name: 'AdsPluginParameters',
-                data: {
-                  adTag,
-                  debug: true,
+
+            if (adTag) {
+              mediaPlayer.loadPlugin(
+                {
+                  swf: 'name:dfpAds.swf',
+                  html: 'name:dfpAds.js',
                 },
-              },
-            );
+                {
+                  name: 'AdsPluginParameters',
+                  data: {
+                    adTag,
+                  },
+                },
+              );
+            }
 
             mediaPlayer.bind('playlistLoaded', async () => {
               const updatedAdTag = await window.dotcom.ads.getAdTag();
-              mediaPlayer.dispatchEvent(
-                'bbc.smp.plugins.ads.event.updateAdTag',
-                {
-                  adTag: updatedAdTag,
-                },
-              );
+
+              if (updatedAdTag) {
+                mediaPlayer.dispatchEvent(
+                  'bbc.smp.plugins.ads.event.updateAdTag',
+                  {
+                    adTag: updatedAdTag,
+                  },
+                );
+              }
             });
           }
 
@@ -219,7 +224,7 @@ const MediaLoader = ({
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
-  const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: adsEnabled } = useToggle('preroll');
 
   const {
     id,
