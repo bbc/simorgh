@@ -47,6 +47,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     translations,
     product,
     serviceLocalizedName,
+    homePageTitle,
     lang,
     brandName,
     service,
@@ -61,7 +62,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations } = pageData;
 
-  const metadataTitle = seoTitle || title;
+  const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
 
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
