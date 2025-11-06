@@ -14,7 +14,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsProducerId: '64',
     atiAnalyticsProducerName: 'NEWS',
     chartbeatDomain: 'bbc.co.uk',
-    brandName: 'BBC News',
+    brandName: 'BBC World Service',
     serviceLocalizedName: 'World Service',
     product: 'BBC News',
     defaultImage:
