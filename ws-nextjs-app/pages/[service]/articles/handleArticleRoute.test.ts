@@ -88,7 +88,7 @@ describe('handleArticleRoute', () => {
         isLite: false,
         isNextJs: true,
         status: 404,
-        isUK: null,
+        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
