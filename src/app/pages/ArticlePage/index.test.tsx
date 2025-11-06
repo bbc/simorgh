@@ -65,6 +65,12 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(),
 }));
 
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  onClient: jest.fn(() => true),
+}));
+
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
   id: 'c0000000000o',
