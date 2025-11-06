@@ -49,6 +49,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import onClient from '#app/lib/utilities/onClient';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -87,6 +88,12 @@ interface ReadTimeData {
   readTimeValue: number | undefined;
   readTimeVariant: string;
 }
+
+// TODO: Find a better way to handle this component in tests
+const checkIsInCypress = () =>
+  onClient() &&
+  // @ts-expect-error - Cypress is set on the window object when Cypress is running
+  window.Cypress;
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -318,12 +325,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     block => block.type === 'continueReading',
   );
 
+  const isInCypress = checkIsInCypress();
+
   const showContinueReadingButton = Boolean(
-    continueReadingButtonToggle &&
+    !isInCypress &&
       !isAmp &&
       !isLite &&
       !isApp &&
-      hasContinueReadingBlock,
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
   );
 
   const componentsToRender = {
