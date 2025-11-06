@@ -73,7 +73,9 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -199,6 +201,17 @@ const getVideoComponent =
     );
   };
 
+const getContinueReadingButton =
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
+  () => {
+    return (
+      <ContinueReadingButton
+        showAllContent={showAllContent}
+        setShowAllContent={setShowAllContent}
+      />
+    );
+  };
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
@@ -212,17 +225,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
-
-  // Continue Reading Button Experiment
-  const readMoreExperimentName = 'newswb_ws_read_more_b';
-  const readMoreExperimentVariant = useOptimizelyVariation({
-    experimentName: readMoreExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
 
   // EXPERIMENT: Article Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
@@ -247,7 +256,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   // EXPERIMENT: Article Read Time
   const readTimeValue = pageData?.metadata?.stats?.readTime;
@@ -288,11 +296,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
     // Better way to handle this?
-    ...(readMoreExperimentVariant &&
-      readMoreExperimentVariant !== 'off' && {
-        experimentName: readMoreExperimentName,
-        experimentVariant: readMoreExperimentVariant,
-      }),
     ...(readTimeExperimentVariant &&
       readTimeExperimentVariant !== 'off' && {
         experimentName: readTimeExperimentName,
@@ -310,6 +313,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     readTimeValue,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
+
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const showContinueReadingButton = Boolean(
+    continueReadingButtonToggle &&
+      !isAmp &&
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -339,6 +354,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+      }),
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -367,14 +388,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      readMoreExperimentVariant &&
-      ['read-more-b'].includes(readMoreExperimentVariant),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -424,25 +437,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
-            role="main"
-          >
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-              />
-            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
