@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { flipXSelf, timeStamp } from 'happy-dom/lib/PropertySymbol';
 
 const styles = {
   main: ({ spacings, mq }: Theme) =>
@@ -31,6 +32,52 @@ const styles = {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
+
+  timelineItem: {
+    position: 'relative',
+
+    marginBottom: '2rem',
+
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      top: `24x`, // start from center of pulse
+      left: '12px', // center of pulse
+      width: '2px',
+      height: 'calc(100% + 0.5rem)', // extend below the current item
+      backgroundColor: '#006666',
+      zIndex: 0,
+    },
+  },
+
+  timelineItemLast: {
+    position: 'relative',
+
+    marginBottom: '2rem',
+    '::after': {
+      display: 'none', // no line after last item
+    },
+  },
+
+  livesummary: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    position: 'relative',
+    zIndex: 1,
+    margin: 0,
+  },
+
+  timeline: {
+    paddingTop: '1rem',
+  },
+
+  livesummarydetails: {
+    paddingTop: '2rem',
+  },
+  timeStamp: {
+    paddingRight: '1rem',
+  },
 };
 
 export default styles;

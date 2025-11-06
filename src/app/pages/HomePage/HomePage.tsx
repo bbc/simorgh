@@ -7,6 +7,15 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import LiveSummary from '#app/components/LiveSummary';
+import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
+import { PostHeadingBlock } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import { pathOr } from 'ramda';
+import { OptimoBlock } from '#app/models/types/optimo';
+import P from '#app/legacy/components/Promo/body';
+import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import Heading from '#app/components/Heading';
+import LivePulse from '#app/components/LivePulse';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -29,6 +38,14 @@ import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
+    livepage?: {
+      data: {
+        title: string;
+        description: string;
+        liveTextStream: any;
+        metadata: any;
+      };
+    };
     id?: string;
     title: string;
     curations: Curation[];
@@ -52,20 +69,27 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
+    livepage,
     title,
     description,
     metadata: { atiAnalytics },
   } = pageData;
   let { curations } = pageData;
-
+  console.log('HELLLOOO', livepage);
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
   const timeOfDayVariant = useOptimizelyVariation({
     experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+  const t = livepage?.data.title;
+  const posts = livepage?.data.liveTextStream.content.data.results;
 
-  // if service is Hindi or Tamil and optimizely variant is set to 'variantA' then reorder curations
+  const str = livepage?.data.metadata.atiAnalytics.pageIdentifier;
+  const parts = str.split('.');
+  const id = parts[1];
+  const livepageurl = `/hausa/live/${id}`;
+  const recentPosts = posts.slice(0, 4);
   if (timeOfDayVariant === 'homepage_time_of_day_a') {
     curations = reorderCurations({
       curations,
@@ -74,6 +98,20 @@ const HomePage = ({ pageData }: HomePageProps) => {
   }
 
   const itemList = getItemList({ curations, name: brandName });
+  const {
+    timezone,
+    datetimeLocale,
+    serviceDatetimeLocale,
+    altCalendar,
+    script,
+    translations: {
+      liveExperiencePage: {
+        breaking = 'Breaking',
+        postDateTimeFormat,
+        postDateFormat,
+      },
+    },
+  } = use(ServiceContext);
 
   return (
     <>
@@ -100,6 +138,53 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
+        <div css={styles.timeline}>
+          <a href={livepageurl}>
+            <Heading level={3}>{t}</Heading>
+          </a>
+          <div css={styles.livesummarydetails}>
+            {recentPosts.map((post, index) => {
+              const headerBlocks = pathOr<PostHeadingBlock[]>(
+                [],
+                ['header', 'model', 'blocks'],
+                post,
+              );
+
+              const timestamp = post?.dates?.curated ?? '';
+              const firstHeadingText =
+                headerBlocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model
+                  ?.text;
+              const locale = serviceDatetimeLocale || datetimeLocale;
+
+              return (
+                <div
+                  key={post.id}
+                  css={
+                    index !== 3 ? styles.timelineItem : styles.timelineItemLast
+                  }
+                >
+                  <p css={styles.livesummary}>
+                    <LivePulse width="24" height="24" />
+                    <TimeStampContainer
+                      css={styles.timeStamp}
+                      timestamp={timestamp}
+                      dateTimeFormat={postDateTimeFormat || 'DD MMMM YYYY'}
+                      format={postDateFormat || 'D MMMM YYYY'}
+                      locale={locale}
+                      timezone={timezone}
+                      service={service}
+                      script={script}
+                      altCalendar={altCalendar}
+                      padding={false}
+                      isRelative={isTenHoursAgo(new Date(timestamp).getTime())}
+                    />
+                    {firstHeadingText}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         <div css={styles.inner}>
           <div css={styles.margins}>
             {curations.map(
