@@ -57,7 +57,6 @@ export const ReadTimeArticleExperiment = ({
   readTimeVariant,
   className,
 }: ReadTimeProps) => {
-  if (readTimeVariant === 'control') return null;
   if (!readTimeValue) return null;
   const showReadTime = readTimeVariant && readTimeVariant !== 'off';
   if (!showReadTime) return null;
@@ -81,6 +80,8 @@ export const ReadTimeArticleExperiment = ({
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
+  if (readTimeVariant === 'control')
+    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
 
   return (
     <div
@@ -89,7 +90,9 @@ export const ReadTimeArticleExperiment = ({
       {...viewRef}
       data-testid="read-time"
     >
-      <Text css={styles.readTimeText}>{copy}</Text>
+      <Text css={styles.readTimeText} size="brevier">
+        {copy}
+      </Text>
     </div>
   );
 };

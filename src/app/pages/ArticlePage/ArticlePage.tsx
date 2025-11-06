@@ -80,7 +80,7 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 interface ReadTimeData {
   readTimeValue: number | undefined;
   readTimeVariant: string;
@@ -95,7 +95,7 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 const Placeholder = ({ className }: { className?: string }) => {
   const { service } = use(ServiceContext);
   const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
@@ -104,7 +104,7 @@ const Placeholder = ({ className }: { className?: string }) => {
   ) : null;
 };
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 const getTimestampComponent =
   (
     hasByline: boolean,
@@ -114,7 +114,7 @@ const getTimestampComponent =
     readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time
+    // EXPERIMENT: Article Read Time 2
     const { readTimeValue, readTimeVariant } = readTimeData;
     const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
     const showReadTimeBelowTimestamp =
@@ -147,7 +147,7 @@ const getTimestampComponent =
           popOut={false}
           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
-        {/* EXPERIMENT: Article Read Time */}
+        {/* EXPERIMENT: Article Read Time 2 */}
         {showReadTimeBelowTimestamp ? (
           <ReadTime
             readTimeValue={readTimeValue}
@@ -224,8 +224,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // EXPERIMENT: Article Read Time
-  const readTimeExperimentName = 'newswb_ws_article_read_time';
+  // EXPERIMENT: Article Read Time 2
+  const readTimeExperimentName = 'newswb_ws_article_read_time_2';
   const readTimeExperimentVariant = useOptimizelyVariation({
     experimentName: readTimeExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
@@ -249,7 +249,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  // EXPERIMENT: Article Read Time
+  // EXPERIMENT: Article Read Time 2
   const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
@@ -293,6 +293,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         experimentName: readMoreExperimentName,
         experimentVariant: readMoreExperimentVariant,
       }),
+    // EXPERIMENT: Article Read Time 2
     ...(readTimeExperimentVariant &&
       readTimeExperimentVariant !== 'off' && {
         experimentName: readTimeExperimentName,
@@ -305,7 +306,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       }),
   };
 
-  // EXPERIMENT: Article Read Time
+  // EXPERIMENT: Article Read Time 2
   const readTimeData = {
     readTimeValue,
     readTimeVariant: readTimeExperimentVariant || 'off',
@@ -319,7 +320,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time
+    // EXPERIMENT: Article Read Time 2
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,

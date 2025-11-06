@@ -16,9 +16,9 @@ export default {
         margin: `0 0 ${spacings.DOUBLE}rem`,
       },
     }),
-  readTimePlaceholderControl: () =>
+  readTimePlaceholderControl: ({ spacings }: Theme) =>
     css({
-      margin: `0 0 ${pixelsToRem(34.5)}rem`,
+      margin: `0 0 ${spacings.DOUBLE}rem`,
     }),
   readTimeHomepagePlaceholderControl: ({ mq }: Theme) =>
     css({
