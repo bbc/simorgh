@@ -56,6 +56,7 @@ export default async (context: GetServerSidePropsContext) => {
     rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
+    isAmp,
   });
 
   const { pageData, status } = data;
@@ -85,6 +86,9 @@ export default async (context: GetServerSidePropsContext) => {
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+        toggles,
         ...extractHeaders(reqHeaders),
       },
     };

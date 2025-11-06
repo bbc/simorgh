@@ -693,6 +693,39 @@ export const articleDataPersian = articleDataBuilder(
   },
 ) as unknown as Article;
 
+export const articleDataPersianWithFourParagraphs = articleDataBuilder(
+  'c4vlle3q337o-4p',
+  'Persian',
+  'fa',
+  'http://www.bbc.co.uk/ontologies/passport/home/Persian',
+  [
+    'سرصفحه مقاله',
+    'پاراگراف اول.',
+    'پاراگراف دوم.',
+    'پاراگراف سوم.',
+    'پاراگراف چهارم.',
+  ],
+  'سرصفحه مقاله',
+  'سرصفحه مقاله برای ارتقاء',
+  'خلاصه مقاله',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'fa',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
+) as unknown as Article;
+
 export const articleDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
   'Pidgin',
