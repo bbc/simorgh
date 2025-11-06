@@ -1,9 +1,7 @@
-export const pages = [
-  'ArticlePage',
+export default [
   'ErrorPage',
   'HomePage',
   'LiveRadioPage',
-  'MediaArticlePage',
   'MostReadPage',
   'OnDemandAudioPage',
   'OnDemandTvPage',
