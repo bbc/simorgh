@@ -56,6 +56,7 @@ export default async (context: GetServerSidePropsContext) => {
     rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
+    isAmp,
   });
 
   const { pageData, status } = data;
@@ -85,6 +86,9 @@ export default async (context: GetServerSidePropsContext) => {
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+        toggles,
         ...extractHeaders(reqHeaders),
       },
     };
@@ -96,7 +100,14 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { article, secondaryData } = data?.pageData || {};
 
-  const { topStories, features, latestMedia, mostRead } = secondaryData;
+  const {
+    topStories = null,
+    features = null,
+    latestMedia = null,
+    mostRead = null,
+    billboardCuration = null,
+    mediaCuration = null,
+  } = secondaryData;
 
   const transformedArticleData = transformPageData(toggles)(article);
 
@@ -124,9 +135,11 @@ export default async (context: GetServerSidePropsContext) => {
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
-          topStories: topStories || null,
-          features: features || null,
-          latestMedia: latestMedia || null,
+          topStories,
+          features,
+          latestMedia,
+          mediaCuration,
+          billboardCuration,
         },
         mostRead,
       },

@@ -5,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/azeri';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const azeriTheme = {
+export const theme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -21,7 +21,6 @@ const azeriTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(
-  azeriTheme,
-  getPWATypographyTheme(latinWithDiacriticsScript),
-);
+export const pwaTheme = getPWATypographyTheme(latinWithDiacriticsScript);
+
+export default withThemeProvider(theme, pwaTheme);
