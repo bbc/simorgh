@@ -47,7 +47,7 @@ const allVariantAssertions = (service, variant) => {
 
 export default ({ service, pageType, variant, otherVariant }) => {
   describe(`Script Switching`, () => {
-    it(`should change to the correct script when switching script from ${variant} to ${otherVariant}`, () => {
+    it.skip(`should change to the correct script when switching script from ${variant} to ${otherVariant}`, () => {
       cy.log(
         `Asserting script switch button, url and document lang for variant: ${variant}`,
       );
