@@ -211,6 +211,39 @@ export default ({
       }
     });
 
+    describe.skip('Continue Reading Button', () => {
+      it('should render the Continue Reading button', () => {
+        cy.getPageDataFromWindow().then(pageData => {
+          const hasContinueReadingButton = getBlockData(
+            'continueReading',
+            pageData,
+          );
+
+          if (hasContinueReadingButton) {
+            cy.get('#continue-reading-button').should('be.visible');
+          }
+        });
+      });
+
+      it('should reveal hidden content when the Continue Reading button is clicked', () => {
+        cy.getPageDataFromWindow().then(pageData => {
+          const hasContinueReadingButton = getBlockData(
+            'continueReading',
+            pageData,
+          );
+
+          if (hasContinueReadingButton) {
+            cy.get('#continue-reading-button').click();
+
+            cy.get('#continue-reading-button')
+              .next()
+              .should('have.attr', 'data-first-hidden-element', 'true')
+              .should('not.have.css', 'display', 'none');
+          }
+        });
+      });
+    });
+
     // /**
     //  * Most Read Component
     //  */

@@ -1,7 +1,6 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/fa-af';
 import '#psammead/moment-timezone-include/tz/Asia/Kabul';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -36,7 +35,6 @@ export const service: DefaultServiceConfig = {
     service: 'dari',
     serviceName: 'Dari',
     languageName: 'Dari',
-    altCalendar: jalaali,
     twitterCreator: '@bbcafghanistan',
     twitterSite: '@bbcafghanistan',
     noBylinesPolicy: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
