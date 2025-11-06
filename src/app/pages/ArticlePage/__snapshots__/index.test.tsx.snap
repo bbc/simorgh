@@ -35,6 +35,20 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 .emotion-3 [data-first-hidden-element="true"]:focus-visible {
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
@@ -1155,6 +1169,20 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
 }
 
 .emotion-3 [data-first-hidden-element="true"]:focus-visible {
@@ -2312,6 +2340,7 @@ exports[`Article Page should render a news article correctly 1`] = `
                 sizes="(min-width: 1008px) 760px, 100vw"
                 src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp"
                 srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 800w"
+                style="aspect-ratio: 951 / 535;"
                 width="951"
               />
             </div>
@@ -2807,6 +2836,20 @@ exports[`Article Page should render a news article with headline in the middle c
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 .emotion-3 [data-first-hidden-element="true"]:focus-visible {
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
@@ -3193,6 +3236,20 @@ exports[`Article Page should render a news article without headline correctly 1`
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
 .emotion-3 [data-first-hidden-element="true"]:focus-visible {
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
@@ -3419,6 +3476,20 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
 }
 
 .emotion-3 [data-first-hidden-element="true"]:focus-visible {

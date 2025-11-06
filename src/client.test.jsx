@@ -1,12 +1,10 @@
 import React from 'react';
 import * as reactDom from 'react-dom/client';
-import {
-  resetWindowValue,
-  setWindowValue,
-} from '#psammead/psammead-test-helpers/src';
 import '#testHelpers/loggerMock';
 
 jest.mock('react-dom/client');
+
+const reactDomClientHydrateRootSpy = jest.spyOn(reactDom, 'hydrateRoot');
 
 jest.mock('react-router-dom');
 
@@ -29,47 +27,41 @@ jest.mock('./app/routes/utils/fetchPageData/utils/getRouteProps');
 const mockRootElement = <div />;
 document.getElementById = jest.fn().mockReturnValue(mockRootElement);
 
-const windowLocation = window.location;
 const pathname = '/foobar/articles/c0000000001o';
 const unknownPathName = '/search?foo=bar';
 
 describe('Client', () => {
-  beforeAll(() => {
-    setWindowValue('SIMORGH_DATA', { pageData: 'some data', path: pathname });
-  });
-
   beforeEach(() => {
+    Object.defineProperty(window, 'SIMORGH_DATA', {
+      writable: true,
+      value: {
+        pageData: 'some data',
+        path: pathname,
+      },
+    });
     jest.clearAllMocks();
   });
 
-  afterAll(() => {
-    resetWindowValue('SIMORGH_DATA', null);
-    resetWindowValue('location', windowLocation);
+  afterEach(() => {
+    delete window.SIMORGH_DATA;
   });
 
   it('should hydrate client once routes are ready', async () => {
-    setWindowValue('location', { pathname });
+    jest
+      .spyOn(window.location, 'pathname', 'get')
+      .mockImplementation(() => pathname);
 
-    await new Promise(resolve => {
-      jest.isolateModules(async () => {
-        await import('./client');
+    await import('./client');
 
-        expect(reactDom.hydrateRoot).toHaveBeenCalled();
-        resolve();
-      });
-    });
+    expect(reactDomClientHydrateRootSpy).toHaveBeenCalled();
   });
 
   it('should not hydrate client if no routes match', async () => {
-    setWindowValue('location', { pathname: unknownPathName });
+    jest
+      .spyOn(window.location, 'pathname', 'get')
+      .mockImplementation(() => unknownPathName);
 
-    await new Promise(resolve => {
-      jest.isolateModules(async () => {
-        await import('./client');
-
-        expect(reactDom.hydrateRoot).not.toHaveBeenCalled();
-        resolve();
-      });
-    });
+    await import('./client');
+    expect(reactDomClientHydrateRootSpy).not.toHaveBeenCalled();
   });
 });

@@ -49,6 +49,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import onClient from '#app/lib/utilities/onClient';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -73,7 +74,9 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
@@ -85,6 +88,12 @@ interface ReadTimeData {
   readTimeValue: number | undefined;
   readTimeVariant: string;
 }
+
+// TODO: This is temporary. We will properly handle the continue reading button in a follow-up PR.
+const checkIsInCypress = () =>
+  onClient() &&
+  // @ts-expect-error - Cypress is set on the window object when Cypress is running
+  window.Cypress;
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -199,6 +208,17 @@ const getVideoComponent =
     );
   };
 
+const getContinueReadingButton =
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
+  () => {
+    return (
+      <ContinueReadingButton
+        showAllContent={showAllContent}
+        setShowAllContent={setShowAllContent}
+      />
+    );
+  };
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
@@ -212,24 +232,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
-
   // EXPERIMENT: Article Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
   const readTimeExperimentVariant = useOptimizelyVariation({
     experimentName: readTimeExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  // EXPERIMENT: Time of Day Experiment
+  const timeOfDayExperimentName = 'newswb_ws_tod_article';
+  const timeOfDayExperimentVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -242,7 +263,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
   // EXPERIMENT: Article Read Time
   const readTimeValue = pageData?.metadata?.stats?.readTime;
@@ -282,10 +302,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && {
-      experimentName,
-      experimentVariant,
-    }),
+    // Better way to handle this?
+    ...(readTimeExperimentVariant &&
+      readTimeExperimentVariant !== 'off' && {
+        experimentName: readTimeExperimentName,
+        experimentVariant: readTimeExperimentVariant,
+      }),
+    ...(timeOfDayExperimentVariant &&
+      timeOfDayExperimentVariant !== 'off' && {
+        experimentName: timeOfDayExperimentName,
+        experimentVariant: timeOfDayExperimentVariant,
+      }),
   };
 
   // EXPERIMENT: Article Read Time
@@ -293,6 +320,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     readTimeValue,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
+
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const isInCypress = checkIsInCypress();
+
+  const showContinueReadingButton = Boolean(
+    !isInCypress &&
+      !isAmp &&
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -322,6 +364,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+      }),
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -350,14 +398,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant &&
-      ['read-more-b'].includes(experimentVariant),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -407,25 +447,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
-            role="main"
-          >
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-              />
-            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
@@ -445,11 +471,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           <RelatedContentSection
             content={blocks}
-            sendOptimizelyEvents={false}
+            // EXPERIMENT: Time of Day Experiment
+            {...(timeOfDayExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
           />
         </div>
         {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
+          <SecondaryColumn
+            pageData={pageData}
+            // EXPERIMENT: Time of Day Experiment
+            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentName={timeOfDayExperimentName}
+          />
         )}
       </div>
       {!isApp && !isPGL && (
@@ -460,7 +498,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          // EXPERIMENT: Time of Day Experiment
+          eventTrackingData={{
+            componentName: 'most-read',
+            ...(timeOfDayExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayExperimentVariant,
+            }),
+          }}
         />
       )}
     </div>

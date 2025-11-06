@@ -344,7 +344,7 @@ const liteTestSuites = canonicalTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: false,
+      useReverb: true,
       tests: [...liteSiteTests],
     };
   });
