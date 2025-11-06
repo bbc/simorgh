@@ -225,17 +225,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
-
-  // Continue Reading Button Experiment
-  const readMoreExperimentName = 'newswb_ws_read_more_b';
-  const readMoreExperimentVariant = useOptimizelyVariation({
-    experimentName: readMoreExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
 
   // EXPERIMENT: Article Read Time
   const readTimeExperimentName = 'newswb_ws_article_read_time';
@@ -300,11 +296,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
     // Better way to handle this?
-    ...(readMoreExperimentVariant &&
-      readMoreExperimentVariant !== 'off' && {
-        experimentName: readMoreExperimentName,
-        experimentVariant: readMoreExperimentVariant,
-      }),
     ...(readTimeExperimentVariant &&
       readTimeExperimentVariant !== 'off' && {
         experimentName: readTimeExperimentName,
@@ -328,7 +319,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const showContinueReadingButton = Boolean(
-    !isAmp && !isLite && !isApp && hasContinueReadingBlock,
+    continueReadingButtonToggle &&
+      !isAmp &&
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock,
   );
 
   const componentsToRender = {
