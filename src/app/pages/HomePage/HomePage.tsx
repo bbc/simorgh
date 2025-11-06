@@ -33,8 +33,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
-    seoTitle: string | undefined;
-    seoDescription: string | undefined;
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
