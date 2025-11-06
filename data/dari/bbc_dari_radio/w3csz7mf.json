@@ -4,7 +4,7 @@
     "metadata": {
       "type": "On Demand Radio",
       "atiAnalytics": {
-        "pageIdentifier": "persian.bbc_dari_radio.w3csz7mf.page",
+        "pageIdentifier": "dari.bbc_dari_radio.w3csz7mf.page",
         "contentType": "player-episode",
         "pageTitle": "چشم انداز بامدادی 1 - BBC News فارسی",
         "contentId": "urn:bbc:pips:w3csz7mf"
@@ -34,7 +34,7 @@
         "id": "p0jzfdqf",
         "state": "next",
         "startTime": "2024-11-26T14:30:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct7bw2",
+        "link": "/dari/bbc_dari_radio/w3ct7bw2",
         "brandTitle": "صدای شما",
         "summary": "برنامه پرسش شنوندگان",
         "duration": "PT29M30S"
@@ -43,7 +43,7 @@
         "id": "p0jzfdqc",
         "state": "live",
         "startTime": "2024-11-26T14:00:00.000Z",
-        "link": "/persian/bbc_dari_radio/liveradio",
+        "link": "/dari/bbc_dari_radio/liveradio",
         "brandTitle": "مجله شامگاهی",
         "summary": "برنامه خبری و تحلیلی شامگاهی \n",
         "duration": "PT30M"
@@ -52,7 +52,7 @@
         "id": "p0jz96z3",
         "state": "onDemand",
         "startTime": "2024-11-26T02:30:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct79xq",
+        "link": "/dari/bbc_dari_radio/w3ct79xq",
         "brandTitle": "چشم انداز بامدادی 1",
         "summary": "برنامه خبری صبح بی بی سی  ۱\n",
         "duration": "PT29M30S"
@@ -61,7 +61,7 @@
         "id": "p0jz8zkh",
         "state": "onDemand",
         "startTime": "2024-11-26T01:30:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct79nt",
+        "link": "/dari/bbc_dari_radio/w3ct79nt",
         "brandTitle": "چشم انداز بامدادی 1",
         "summary": "برنامه خبری صبح بی بی سی  ۱\n",
         "duration": "PT29M30S"
