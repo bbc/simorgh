@@ -103,6 +103,7 @@ const canonicalTestSuites = [
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
+    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -113,6 +114,7 @@ const canonicalTestSuites = [
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'static',
+    useReverb: true,
     tests: [assertPageView],
   },
   {
