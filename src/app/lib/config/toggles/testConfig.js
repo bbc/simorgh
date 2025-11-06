@@ -49,7 +49,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {

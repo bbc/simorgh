@@ -168,7 +168,6 @@ export type Player = {
       name: string;
       data: {
         adTag: string;
-        debug: boolean;
       };
     },
   ) => void;
