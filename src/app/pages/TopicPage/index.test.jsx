@@ -7,7 +7,6 @@ import {
 } from '#app/models/types/curationData';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { data as persianAfghanistan } from '#data/persian/topics/crezq2dg9zwt.json';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -441,28 +440,6 @@ describe('Topic Page', () => {
       };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();
-    });
-  });
-
-  describe('Radio Schedule', () => {
-    it('should render if there is a curation with radio schedule data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('radio-schedule')).toBeInTheDocument();
-    });
-  });
-
-  describe('Embed', () => {
-    it('should render if there is a curation with embed data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('embed')).toBeInTheDocument();
     });
   });
 });

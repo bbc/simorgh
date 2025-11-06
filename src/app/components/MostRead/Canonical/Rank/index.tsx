@@ -17,6 +17,7 @@ export const serviceNumerals = (service: Services) => {
   const servicesNonWesternNumerals = {
     bengali: Bengali,
     burmese: Burmese,
+    dari: EasternArabic,
     nepali: Nepali,
     pashto: EasternArabic,
     persian: EasternArabic,

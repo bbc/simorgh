@@ -31,12 +31,12 @@ describe('MediaLoader', () => {
   });
 
   describe('BUMP Loader', () => {
-    it('Loads Ads, requireJS and Bump4 when Ads are enabled', async () => {
+    it('Loads Ads, requireJS and Bump4 when Preroll Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
           showAdsBasedOnLocation: true,
-          toggles: { ads: { enabled: true } },
+          toggles: { preroll: { enabled: true } },
         });
       });
 

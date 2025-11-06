@@ -21,7 +21,7 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    expect(getByTestId('read-more-button')).toBeInTheDocument();
+    expect(getByTestId('continue-reading-button')).toBeInTheDocument();
   });
 
   it('does not render the button when showAllContent is true', () => {
@@ -32,51 +32,12 @@ describe('ContinueReadingButton', () => {
       />,
     );
 
-    expect(queryByTestId('read-more-button')).not.toBeInTheDocument();
-  });
-
-  it('applies the correct styles for variation read-more-b', () => {
-    const { getByTestId } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-      />,
-    );
-
-    const button = getByTestId('read-more-button');
-    expect(button).toHaveStyle('background-color: #F6F6F6');
-  });
-
-  it('renders the SVG icon when variation is read-more-b', () => {
-    const { container } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-      />,
-    );
-
-    const svg = container.querySelector('svg');
-    expect(svg).toBeInTheDocument();
-  });
-
-  it('applies border-bottom for variation read-more-b', () => {
-    const { getByTestId } = render(
-      <ContinueReadingButton
-        showAllContent={false}
-        setShowAllContent={mockSetShowAllContent}
-      />,
-    );
-
-    const button = getByTestId('read-more-button');
-    expect(button).toHaveStyle('border-bottom: 0.0625rem solid #B0B2B4');
+    expect(queryByTestId('continue-reading-button')).not.toBeInTheDocument();
   });
 
   describe('Event Tracking', () => {
     const eventTrackingData = {
-      componentName: 'read-more-button',
-      experimentName: 'newswb_ws_read_more_b',
-      experimentVariant: 'read-more-b',
-      sendOptimizelyEvents: true,
+      componentName: 'continue-reading-button',
     };
 
     describe('View tracking', () => {
@@ -124,7 +85,7 @@ describe('ContinueReadingButton', () => {
           />,
         );
 
-        const button = getByTestId('read-more-button') as HTMLElement;
+        const button = getByTestId('continue-reading-button') as HTMLElement;
         fireEvent.click(button);
 
         // Verify that the mockSetShowAllContent function is called

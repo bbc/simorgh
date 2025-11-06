@@ -12,6 +12,9 @@ export default {
   comscoreAnalytics: {
     enabled: true,
   },
+  continueReadingButton: {
+    enabled: false,
+  },
   electionBanner: {
     enabled: false,
   },
@@ -46,7 +49,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {
