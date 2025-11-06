@@ -89,7 +89,7 @@ interface ReadTimeData {
   readTimeVariant: string;
 }
 
-// TODO: Find a better way to handle this component in tests
+// TODO: This is temporary. We will properly handle the continue reading button in a follow-up PR.
 const checkIsInCypress = () =>
   onClient() &&
   // @ts-expect-error - Cypress is set on the window object when Cypress is running
