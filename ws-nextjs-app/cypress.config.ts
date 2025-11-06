@@ -148,4 +148,5 @@ export default defineConfig({
   requestTimeout: 60000,
   video: false,
   screenshotOnRunFailure: false,
+  chromeWebSecurity: false,
 });
