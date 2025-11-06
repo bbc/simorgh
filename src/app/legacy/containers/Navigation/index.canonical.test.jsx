@@ -17,8 +17,6 @@ const navigationProps = {
   scrollableListItems,
   dropdownListItems,
   menuAnnouncedText: 'menu',
-  script: latin,
-  service: 'pidgin',
   dir: 'ltr',
 };
 
