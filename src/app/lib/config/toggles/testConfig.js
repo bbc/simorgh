@@ -12,6 +12,9 @@ export default {
   comscoreAnalytics: {
     enabled: true,
   },
+  continueReadingButton: {
+    enabled: false,
+  },
   electionBanner: {
     enabled: true,
   },
