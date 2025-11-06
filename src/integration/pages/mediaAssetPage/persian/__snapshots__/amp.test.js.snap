@@ -216,7 +216,7 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 6
 exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
 {
   "text": "افغانستان",
-  "url": "/persian/afghanistan",
+  "url": "/persian/topics/cvjp23v3083t",
 }
 `;
 

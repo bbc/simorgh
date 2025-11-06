@@ -15,12 +15,15 @@ exports[`Toggles Config when application environment is live should contain corr
   "comscoreAnalytics": {
     "enabled": true,
   },
+  "continueReadingButton": {
+    "enabled": false,
+  },
   "electionBanner": {
     "enabled": false,
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -52,7 +55,7 @@ exports[`Toggles Config when application environment is live should contain corr
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
@@ -97,12 +100,15 @@ exports[`Toggles Config when application environment is local should contain cor
   "comscoreAnalytics": {
     "enabled": true,
   },
+  "continueReadingButton": {
+    "enabled": true,
+  },
   "electionBanner": {
     "enabled": true,
   },
   "enableFetchingToggles": {
     "enabled": false,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -134,7 +140,7 @@ exports[`Toggles Config when application environment is local should contain cor
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
@@ -179,12 +185,15 @@ exports[`Toggles Config when application environment is test should contain corr
   "comscoreAnalytics": {
     "enabled": true,
   },
+  "continueReadingButton": {
+    "enabled": false,
+  },
   "electionBanner": {
     "enabled": true,
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -216,7 +225,7 @@ exports[`Toggles Config when application environment is test should contain corr
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
   "recentAudioEpisodes": {
