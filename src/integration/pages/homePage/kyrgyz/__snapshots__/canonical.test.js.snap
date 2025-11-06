@@ -287,7 +287,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "BBC News Kyrgyz",
+      "headline": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -302,7 +302,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/kyrgyz",
         "@type": "WebPage",
-        "name": "BBC News Kyrgyz",
+        "name": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -744,13 +744,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"ky-KG"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -769,7 +769,7 @@ exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bb
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
