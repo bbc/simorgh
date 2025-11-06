@@ -16,7 +16,7 @@ import PromoTimestamp from '#components/Promo/timestamp';
 import ArticleTimestamp from '#containers/ArticleTimestamp';
 import MostReadTimestamp from '#src/app/components/MostRead/Canonical/LastUpdated';
 
-import notes from '../README.md';
+import readme from '../README.md';
 import WithTimeMachine from '#src/testHelpers/withTimeMachine';
 
 const ws = services.ws.default;
@@ -192,7 +192,7 @@ timeFunctions.push(
       );
     },
     {
-      subheading: `First and last published at different times within the last 10 hours, last updated 5 hours ago`,
+      subheading: `Article Timestamp: First and last published at different times within the last 10 hours, last updated 5 hours ago`,
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
@@ -243,12 +243,15 @@ timeFunctions.push(
     },
     { heading: '' },
     {
-      subheading: `Promo Timestamp`,
+      subheading: `Promo Timestamp: Fixed Date`,
     },
     ({ service, variant }) => {
+      const date = new Date(fixedTimestamp);
+      date.setDate(date.getDate() + 3);
+
       return (
         <WithService service={service} variant={variant}>
-          <PromoTimestamp>{new Date(fixedTimestamp)}</PromoTimestamp>
+          <PromoTimestamp>{date}</PromoTimestamp>
         </WithService>
       );
     },
@@ -335,58 +338,9 @@ timeFunctions.push({ heading: '' });
 timeFunctions.push({
   heading: 'Other',
 });
-timeFunctions.push({ subheading: 'Days of the Week' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(day, 'days').format('dddd')
-  );
-});
-
-timeFunctions.push({ subheading: ' Days of the Week (Abbreviated)' });
-
-Array.from({ length: 7 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(day, 'days').format('ddd')
-  );
-});
-
-timeFunctions.push({ subheading: 'Months' });
-
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(month, 'months').format('MMMM')
-  );
-});
-timeFunctions.push({ subheading: 'Months (Abbreviated)' });
-
-Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
-  timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(month, 'months').format('MMM')
-  );
-});
-
-const currentYear = new Date().getFullYear();
-const years = Array.from({ length: 11 }, (_, i) => currentYear - 5 + i);
 
 timeFunctions.push({
-  subheading: `Years (±5 from ${currentYear})`,
-});
-
-years.forEach((year) => {
-  timeFunctions.push(({ locale, altCalendar }) => {
-    const formattedYear = moment(`${year}0101`).locale(locale).format('YYYY');
-
-    const lastYear = moment(`${year}0101`).locale(locale);
-    const thisYear = moment(`${year}0601`).locale(locale);
-    return altCalendar
-      ? `${formattedYear} - ${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
-      : thisYear.format('YYYY');
-  });
-});
-
-timeFunctions.push({
-  subheading: 'Numerals',
+  subheading: 'Date',
 });
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
@@ -395,13 +349,31 @@ Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
   );
 });
 
-timeFunctions.push({
-  subheading: 'Ordinal Numerals',
-});
-Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
+timeFunctions.push({ subheading: 'Month' });
+
+Array.from({ length: 12 }, (_, index) => index).forEach((month) => {
   timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(day, 'days').format('Do')
+    moment('20240101').locale(locale).add(month, 'months').format('MMMM')
   );
+});
+
+const currentYear = new Date().getFullYear();
+const years = Array.from({ length: 11 }, (_, i) => currentYear - 5 + i);
+
+timeFunctions.push({
+  subheading: `Year (±5 from ${currentYear})`,
+});
+
+years.forEach((year) => {
+  timeFunctions.push(({ locale, altCalendar }) => {
+    const thisYear = moment(`${year}0101`).locale(locale);
+    const formattedYear = thisYear.format('YYYY');
+    const lastYear = moment(`${year}0101`).subtract(1, 'years').locale(locale);
+
+    return altCalendar
+      ? `Gregorian: ${formattedYear} \nAlternative: ${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
+      : formattedYear;
+  });
 });
 
 const Table = styled.table`
@@ -424,7 +396,7 @@ const Paragraph = styled.p`
 const issueHref = (localeName) =>
   `https://github.com/bbc/simorgh/issues/new?labels=bug&title=Moment+translation+correction+for+${localeName}`;
 
-const Component = ({ service, variant, dir, locale }) => {
+const Component = ({ service, variant, dir, locale, altCalendar }) => {
   moment.now = originalNow;
 
   return (
@@ -457,6 +429,7 @@ const Component = ({ service, variant, dir, locale }) => {
                       service,
                       variant,
                       locale,
+                      altCalendar,
                     })}
                   </td>
                 </tr>
@@ -497,7 +470,7 @@ export default {
     chromatic: {
       disable: true,
     },
-    docs: { notes },
+    docs: { readme },
   },
 };
 
@@ -510,6 +483,8 @@ export const Example = (_, { service, variant }) => {
     articleTimestampPrefix,
     articleTimestampSuffix,
   } = use(ServiceContext);
+
+  console.log({ service, altCalendar });
 
   return (
     <Component
