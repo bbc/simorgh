@@ -24,7 +24,7 @@ const matchFixtures = (service: Services) => ({
     serviceId: {
       afrique: 'bbc_afrique_tv',
       pashto: 'bbc_pashto_tv',
-    }[service],
+    }[service as keyof typeof matchFixtures],
   },
 });
 
@@ -33,7 +33,10 @@ const Component = ({ service, isLite }: StoryProps) => {
     <BrowserRouter>
       <OnDemandTvPage
         match={matchFixtures(service)}
-        pageData={onDemandTvFixtures[service] || afrique}
+        pageData={
+          onDemandTvFixtures[service as keyof typeof onDemandTvFixtures] ||
+          afrique
+        }
         status={200}
         service={service}
         loading={false}

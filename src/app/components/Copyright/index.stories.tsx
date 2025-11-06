@@ -7,13 +7,17 @@ import { ServiceConfig } from '../../models/types/serviceConfig';
 
 const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   const imageCaptionText =
-    services[service][variant].imageCopyrightOffscreenText;
+    services[service][variant as keyof (typeof services)[typeof service]]
+      ?.imageCopyrightOffscreenText;
 
   const serviceContextStub = useMemo(
     () => ({
       imageCaptionOffscreenText: imageCaptionText,
-      lang: services[service][variant].lang,
-      dir: services[service][variant].dir,
+      lang: services[service][
+        variant as keyof (typeof services)[typeof service]
+      ]?.lang,
+      dir: services[service][variant as keyof (typeof services)[typeof service]]
+        ?.dir,
     }),
     [imageCaptionText, service, variant],
   );

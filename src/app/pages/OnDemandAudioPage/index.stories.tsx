@@ -61,7 +61,7 @@ const matchFixtures = (service: Services) => ({
     serviceId: {
       gahuza: 'bbc_gahuza_radio',
       korea: 'bbc_korean_radio',
-    }[service],
+    }[service as keyof typeof matchFixtures],
   },
 });
 
@@ -70,7 +70,9 @@ const Component = ({ service, isLite }: StoryProps) => {
     <BrowserRouter>
       <OnDemandAudioPage
         match={matchFixtures(service)}
-        pageData={onDemandAudioFixtures[service] || gahuza}
+        pageData={
+          onDemandAudioFixtures[service as keyof typeof onDemandAudioFixtures]
+        }
         status={200}
         service={service}
         loading={false}

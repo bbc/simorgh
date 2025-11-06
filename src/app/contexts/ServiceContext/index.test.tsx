@@ -44,7 +44,8 @@ describe('ServiceContextProvider', () => {
         });
 
         expect(container.firstChild?.textContent).toEqual(
-          services[service][variant].brandName,
+          services[service][variant as keyof (typeof services)[typeof service]]
+            ?.brandName,
         );
       });
     };

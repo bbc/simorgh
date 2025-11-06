@@ -12,7 +12,11 @@ const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <Subheading>
-          {services[service][variant].translations.relatedContent}
+          {
+            services[service]?.[
+              variant as keyof (typeof services)[typeof service]
+            ]?.translations.relatedContent
+          }
         </Subheading>
       </ServiceContextProvider>
     </ThemeProvider>
@@ -24,7 +28,11 @@ const WithLink = (_: StoryArgs, { service, variant }: StoryProps) => {
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
         <Subheading link="https://bbc.com">
-          {services[service][variant].translations.relatedContent}
+          {
+            services[service]?.[
+              variant as keyof (typeof services)[typeof service]
+            ]?.translations.relatedContent
+          }
         </Subheading>
       </ServiceContextProvider>
     </ThemeProvider>

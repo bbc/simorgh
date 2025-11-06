@@ -29,7 +29,7 @@ interface Props {
 }
 
 const renderPage = async ({ pageData, service }: Props) => {
-  let result;
+  let result: ReturnType<typeof render> = {} as ReturnType<typeof render>;
   await act(async () => {
     result = render(<OnDemandTvPage service={service} pageData={pageData} />, {
       bbcOrigin: 'https://www.test.bbc.com',

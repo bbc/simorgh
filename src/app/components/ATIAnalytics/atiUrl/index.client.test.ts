@@ -8,7 +8,11 @@ import {
 } from '.';
 import splitUrl from './splitUrl';
 
-const mockAndSet = ({ name, source }, response) => {
+const mockAndSet = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  { name, source }: { name: string; source: Record<string, any> },
+  response: string | string[] | object[] | null,
+) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
   source[name].mockImplementation(() => response);
 };

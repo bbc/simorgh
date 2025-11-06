@@ -14,7 +14,9 @@ import { RequestContext } from '../../contexts/RequestContext';
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
 
-const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getText = ({ model }: { model: any }) =>
+  model.blocks[0].model.blocks[0].model.text;
 
 const getCopyright = (copyrightHolder: string) => {
   if (copyrightHolder === 'BBC') {

@@ -70,7 +70,7 @@ describe('public directory', () => {
 
             const { icons } = manifest;
 
-            const iconSrc = icons.map(({ src }) => src);
+            const iconSrc = icons.map(({ src }: { src: string }) => src);
 
             const expectedIconNames = servicesWithMaskableIcons.includes(
               service,

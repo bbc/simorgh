@@ -50,7 +50,7 @@ const renderPage = async ({
   variant,
   lang = 'ko',
 }: PageProps) => {
-  let result;
+  let result: ReturnType<typeof render> = {} as ReturnType<typeof render>;
   await act(async () => {
     result = render(
       <OnDemandAudioPage service={service} pageData={pageData} />,

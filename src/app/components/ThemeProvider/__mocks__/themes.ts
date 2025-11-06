@@ -191,7 +191,8 @@ const defaultThemeProps = { isLite: false, isDarkUi: false };
 export const themes = [
   ...Object.entries(themesNoVariants),
   ...Object.entries(themesWithVariants),
-].reduce((themeConfig, [service, serviceTheme]) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+].reduce((themeConfig: Record<string, any>, [service, serviceTheme]) => {
   themeConfig[service] = {};
 
   if (Object.keys(themesNoVariants).includes(service)) {
@@ -249,63 +250,48 @@ const pwaThemesWithVariants: ServiceThemeWithVariantWithPWATypography = {
   },
 };
 
-type PWAThemeWithNoVariant = {
-  [_service in ServicesWithNoVariantsWithPWATypography['service']]: Theme;
-};
-
-type PWAThemeWithVariant = {
-  [_service in ServicesWithVariantsWithPWATypography['service']]: {
-    [_variant in Variants]?: Theme;
-  };
-};
-
 export const pwaThemes = [
   ...Object.entries(pwaThemesNoVariants),
   ...Object.entries(pwaThemesWithVariants),
-].reduce(
-  (pwaThemeConfig, [service, pwaTheme]) => {
-    pwaThemeConfig[service] = {};
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+].reduce((pwaThemeConfig: Record<string, any>, [service, pwaTheme]) => {
+  pwaThemeConfig[service] = {};
 
-    if (Object.keys(pwaThemesNoVariants).includes(service)) {
-      const [, baseTheme] = Object.entries(themesNoVariants).find(
-        ([serviceWithNoVariant]) => service === serviceWithNoVariant,
-      ) || ['', { ...ws }];
+  if (Object.keys(pwaThemesNoVariants).includes(service)) {
+    const [, baseTheme] = Object.entries(themesNoVariants).find(
+      ([serviceWithNoVariant]) => service === serviceWithNoVariant,
+    ) || ['', { ...ws }];
+
+    const themeWithPWA = mergeThemeWithPWATypography({
+      baseTheme,
+      pwaTheme: pwaTheme as ServiceTheme,
+    });
+
+    pwaThemeConfig[service] = getThemeConfig({
+      ...defaultThemeProps,
+      ...themeWithPWA,
+    });
+  } else {
+    Object.entries(pwaTheme).forEach(([variant, variantPWATheme]) => {
+      const [, baseThemeWithVariant] = Object.entries(themesWithVariants).find(
+        ([serviceWithVariant]) => service === serviceWithVariant,
+      ) || ['', { default: { ...ws } }];
+
+      const baseTheme = baseThemeWithVariant[
+        variant as Variants
+      ] as ServiceTheme;
 
       const themeWithPWA = mergeThemeWithPWATypography({
         baseTheme,
-        pwaTheme: pwaTheme as ServiceTheme,
+        pwaTheme: variantPWATheme,
       });
 
-      pwaThemeConfig[service] = getThemeConfig({
+      pwaThemeConfig[service][variant] = getThemeConfig({
         ...defaultThemeProps,
         ...themeWithPWA,
       });
-    } else {
-      Object.entries(pwaTheme).forEach(([variant, variantPWATheme]) => {
-        const [, baseThemeWithVariant] = Object.entries(
-          themesWithVariants,
-        ).find(([serviceWithVariant]) => service === serviceWithVariant) || [
-          '',
-          { default: { ...ws } },
-        ];
+    });
+  }
 
-        const baseTheme = baseThemeWithVariant[
-          variant as Variants
-        ] as ServiceTheme;
-
-        const themeWithPWA = mergeThemeWithPWATypography({
-          baseTheme,
-          pwaTheme: variantPWATheme,
-        });
-
-        pwaThemeConfig[service][variant] = getThemeConfig({
-          ...defaultThemeProps,
-          ...themeWithPWA,
-        });
-      });
-    }
-
-    return pwaThemeConfig;
-  },
-  {} as PWAThemeWithVariant | PWAThemeWithNoVariant,
-) as PWAThemeWithVariant | PWAThemeWithNoVariant;
+  return pwaThemeConfig;
+}, {});

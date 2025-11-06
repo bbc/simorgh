@@ -23,7 +23,7 @@ export const serviceNumerals = (service: Services) => {
     nepali: Nepali,
     pashto: EasternArabic,
     persian: EasternArabic,
-  };
+  } as Partial<Record<Services, string[]>>;
   return servicesNonWesternNumerals[service] || WesternArabic;
 };
 
@@ -68,7 +68,7 @@ const MostReadRank = ({
   dir,
 }: MostReadRankProps) => {
   const numerals = serviceNumerals(service);
-  const rank = isAmp ? listIndex : numerals[listIndex];
+  const rank = isAmp ? listIndex : numerals[Number(listIndex)];
   const columnCss = getColumnCss({
     columnLayout,
     numberOfItems,
