@@ -7,8 +7,8 @@ exports[`Timestamp should render Timestamp correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -47,8 +47,8 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -87,8 +87,8 @@ exports[`Timestamp should render Timestamp without padding 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -122,8 +122,8 @@ exports[`Timestamp should render dark mode Timestamp correctly on page types tha
   color: #E6E8EA;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
