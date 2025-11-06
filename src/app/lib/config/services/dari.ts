@@ -294,7 +294,7 @@ export const service: DefaultServiceConfig = {
         // Optional
         optional: 'اختیاری',
 
-        // Fi le upload
+        // File upload
         fileUploadLiveRegionText: undefined,
         fileUploadLiveRegionUpdateText: undefined,
         fileUploadListHeading: 'مواردی که آپلود می کنید:',
@@ -305,7 +305,7 @@ export const service: DefaultServiceConfig = {
         submitButton: 'ارسال',
 
         // Validation
-        validationRequired: 'موردی تکمیل  نشده است.',
+        validationRequired: 'موردی تکمیل نشده است.',
         validationInvalidEmail:
           'به نظر صحیح نیست. یک آدرس ایمیل درست وارد کنید.',
         validationInvalidTelephone: undefined,
@@ -323,7 +323,7 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'ا گر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
+          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
         retentionPeriodDays:
           'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
@@ -335,14 +335,14 @@ export const service: DefaultServiceConfig = {
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: 'سیاست حفظ حر یم خصوصی',
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
-        uploadingHeading: 'در حال آ پلود فایل ها...',
+        uploadingHeading: 'در حال آپلود فایل ها...',
         uploadingDescription: 'لطفا صبر کنید تا کامل شود.',
 
         // Success Screen
-        successHeading: 'پیغام فرستاد ه شد',
+        successHeading: 'پیغام فرستاده شد',
         successDescription: 'از تماس شما سپاسگزاریم.',
         privacyPolicyLinkHref: undefined,
         privacyPolicyLinkText: undefined,
@@ -352,7 +352,7 @@ export const service: DefaultServiceConfig = {
         errorDescription: 'دوباره آنها را آپلود کنید.',
 
         // Closed Screen
-        closedHeading: 'امکان ارسال دی گر وجود ندارد.',
+        closedHeading: 'امکان ارسال دیگر وجود ندارد.',
         closedDescription: 'امکان ارسال در {{date}} تمام شد.',
       },
     },
