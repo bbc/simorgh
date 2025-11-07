@@ -18,6 +18,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   );
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
+
   const baseProps = {
     error: null,
     isAmp: false,
@@ -27,13 +28,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
     timeOnServer: Date.now(),
     pageType: STATIC_PAGE as PageTypes,
     service: 'ws' as Services,
+    pathname: context?.resolvedUrl,
     pageData: {
       metadata: {
         type: STATIC_PAGE,
         atiAnalytics: {},
       },
     },
-    pathname: context?.resolvedUrl,
   };
 
   if (isLive()) {
@@ -75,6 +76,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service: 'ws',
       pathname: '/ws/languages',
       status: data?.status,
+      toggles,
       pageData: {
         ...data?.pageData,
         metadata: {
