@@ -51,6 +51,8 @@ const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
 const basePageData = {
   title: 'Test Title',
   description: 'Test Description',
+  seoTitle: 'Test SEO Title',
+  seoDescription: 'Test SEO Description',
   metadata: { atiAnalytics: {}, type: 'home' },
   curations: [
     {
@@ -191,7 +193,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
-      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+      'BBC News Kyrgyz - BBC News Кыргыз Кызматы',
     );
   });
 
