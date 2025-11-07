@@ -81,12 +81,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/bbc_dari_radio/liveradio',
-    service: 'persian',
-    runforEnv: ['local', 'live'],
-    tests,
-  },
-  {
     path: '/somali/bbc_somali_radio/liveradio',
     service: 'somali',
     runforEnv: ['local', 'test', 'live'],
