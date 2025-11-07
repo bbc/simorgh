@@ -1,17 +1,13 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import { jsx } from '@emotion/react';
-import loadable from '@loadable/component';
 import { RequestContext } from '#contexts/RequestContext';
 import config3d from '#app/components/3d/config3d.json';
 import { use, useState } from 'react';
 import Text from '#app/components/Text';
 import CoreIcons from '#app/legacy/psammead/psammead-assets/src/svgs/coreIcons';
+import Scene3D from './scene3d';
 import styles from './index.styles';
-
-const Scene3D = loadable(() => import('./scene3d'), {
-  ssr: false,
-});
 
 const LanguagesNearYou = () => {
   const { service } = use(RequestContext);
@@ -43,6 +39,7 @@ const LanguagesNearYou = () => {
           </Text>
         </div>
       </div>
+      <p>^ work in progress</p>
     </div>
   );
 };
