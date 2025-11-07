@@ -43,8 +43,6 @@ const CollapsibleNavigation = ({
     e: React.MouseEvent<HTMLAnchorElement>,
     section: CollapsibleNavigationSection,
   ) => {
-    // TODO: test and verify that correct data is tracked when user clicks multiple sections one after another
-
     if (section.href) {
       navLinkClickTrackerHandler?.(e);
       return;
@@ -69,8 +67,7 @@ const CollapsibleNavigation = ({
     }
   };
 
-  const handleClose = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleClose = () => {
     setOpenSection(null);
 
     if (activeNavItemRef.current) {

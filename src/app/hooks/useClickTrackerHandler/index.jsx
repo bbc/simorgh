@@ -36,21 +36,25 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   } = extractATITrackingProps({ eventTrackingData, eventType: CLICK_EVENT });
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
-  const [clicked, setClicked] = useState(false);
+  const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
   const { service, useReverb } = use(ServiceContext);
-
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
     async event => {
+      const nextPageUrl = event?.currentTarget?.href;
+      const trackingIdentifier = nextPageUrl || componentName;
+      const wasClicked = clickedIdentifier === trackingIdentifier;
+
       const shouldRegisterClick = [
         trackingIsEnabled,
-        !clicked,
+        !wasClicked,
         isValidClick(event),
       ].every(Boolean);
+
       if (shouldRegisterClick) {
-        setClicked(true);
+        setClickedIdentifier(trackingIdentifier);
 
         const shouldSendEvent = [
           campaignID,
@@ -63,8 +67,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           statsDestination,
         ].every(Boolean);
         if (shouldSendEvent) {
-          const nextPageUrl = event?.currentTarget?.href;
-
           event.stopPropagation();
           event.preventDefault();
 
@@ -119,28 +121,28 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       }
     },
     [
-      trackingIsEnabled,
-      clicked,
-      campaignID,
       componentName,
+      clickedIdentifier,
+      trackingIsEnabled,
+      campaignID,
       pageIdentifier,
       platform,
-      preventNavigation,
       producerId,
       producerName,
       service,
       statsDestination,
-      url,
-      advertiserID,
-      format,
-      sendOptimizelyEvents,
       optimizely,
-      experimentName,
       experimentVariant,
+      sendOptimizelyEvents,
+      format,
+      advertiserID,
+      url,
       detailedPlacement,
       useReverb,
-      itemTracker,
       groupTracker,
+      itemTracker,
+      experimentName,
+      preventNavigation,
     ],
   );
 };
