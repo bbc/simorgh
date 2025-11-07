@@ -380,7 +380,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "BBC News हिंदी",
+      "headline": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -395,7 +395,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/hindi",
         "@type": "WebPage",
-        "name": "BBC News हिंदी",
+        "name": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
