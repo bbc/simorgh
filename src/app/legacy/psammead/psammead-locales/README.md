@@ -38,7 +38,8 @@ The following locales have overrides to meet BBC World Service requirements wher
 - `/moment/th` - locale override for Thai
 - `/moment/uk` - locale override for Ukrainian
 - `/moment/ur` - locale override for Urdu
-- `/moment/uz` - locale override for Uzbek
+- `/moment/uz` - locale override for Uzbek (Cyrillic)
+- `/moment/uz-latn` - locale override for Uzbek (Latin)
 - `/moment/yo` - locale override for Yoruba
 - `/moment/zh-tw` - locale override for Zhongwen (Simplified & Traditional)
 
@@ -90,8 +91,6 @@ const result = translateNumerals(someInput); // returns someInput with numbers t
 ### Adding a new locale
 
 Adding a new locale is necessary when the locale is not already supported by Moment.js i.e. there is no matching locale in the [Moment.js library](https://github.com/moment/moment/tree/develop/src/locale)
-
-Steps:
 
 - Copy [src/app/legacy/psammead/psammead-locales/moment/templates/new-locale](./moment/templates/new-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`pcm` for Pidgin](./moment/pcm)
 - Use `moment.defineLocale('new-locale', { ... })` to define the [required locale fields](#required-locale-fields)
