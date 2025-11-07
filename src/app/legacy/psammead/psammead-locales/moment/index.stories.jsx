@@ -484,8 +484,6 @@ export const Example = (_, { service, variant }) => {
     articleTimestampSuffix,
   } = use(ServiceContext);
 
-  console.log({ service, altCalendar });
-
   return (
     <Component
       service={service}
