@@ -104,7 +104,7 @@ Overwriting a locale is necessary when the default Moment.js locale does not mee
 - Copy [src/app/legacy/psammead/psammead-locales/moment/templates/update-locale](./moment/templates/update-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`zh-tw` for Zhongwen](./moment/zh-tw)
 - Use `moment.updateLocale('update-locale', { ... })` to override any/all of the [required locale fields](#required-locale-fields)
 - Update `index.test.ts` as required - replacing `update-locale` with the desired locale & fixing test assertions
-- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires a new locale
+- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires an updated locale
 
 ### Extending an existing locale
 
@@ -113,7 +113,7 @@ Extending a locale is necessary Use creating a regional variant that mostly reus
 - Copy [src/app/legacy/psammead/psammead-locales/moment/templates/extend-locale](./moment/templates/extend-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`fa-af` for Dari](./moment/fa-af)
 - Use `moment.defineLocale('extend-locale', { parentLocale: 'base-locale', ... })` to override any/all of the [required locale fields](#required-locale-fields)
 - Update `index.test.ts` as required - replacing `extend-locale` with the desired locale & fixing test assertions
-- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires a new locale
+- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires an extended locale
 
 ### Required Locale Fields
 
