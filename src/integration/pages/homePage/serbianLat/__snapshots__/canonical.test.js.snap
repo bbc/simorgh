@@ -337,7 +337,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "Početna stranica",
+      "headline": "Glavna stranica",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -352,7 +352,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/serbian/lat",
         "@type": "WebPage",
-        "name": "Početna stranica",
+        "name": "Glavna stranica",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",

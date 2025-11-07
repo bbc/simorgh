@@ -1,148 +1,150 @@
 {
-"data":{
-  "title": "Home - BBC News Magyarul",
-  "metadata": {
-    "atiAnalytics": {
-      "contentId": "urn:bbc:tipo:topic:c7ddnz1yllj0t",
-      "contentType": "index-home",
-      "pageIdentifier": "magyarul.page",
-      "pageTitle": "Home - BBC News Magyarul"
+  "data": {
+    "title": "Home - BBC News Magyarul",
+    "seoTitle": "Home - BBC News Magyarul",
+    "seoDescription": "Add description",
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7ddnz1yllj0t",
+        "contentType": "index-home",
+        "pageIdentifier": "magyarul.page",
+        "pageTitle": "Home - BBC News Magyarul"
+      },
+      "type": "home"
     },
-    "type": "home"
-  },
-  "curations": [
-    {
-      "summaries": [
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 01",
-          "firstPublished": "2025-10-01T13:46:51.798Z",
-          "lastPublished": "2025-10-01T13:47:05.447Z",
-          "link": "https://www.bbc.com/magyarul/articles/c99x3xnzyelo",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
-          "imageAlt": "Nasa's perserverance rover",
-          "id": "c99x3xnzyelo",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 02",
-          "firstPublished": "2025-10-01T13:59:13.259Z",
-          "lastPublished": "2025-10-01T13:59:13.259Z",
-          "link": "https://www.bbc.com/magyarul/articles/crlrerjvvy5o",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
-          "imageAlt": "Nasa's perserverance rover",
-          "id": "crlrerjvvy5o",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 03",
-          "firstPublished": "2025-10-01T13:59:43.114Z",
-          "lastPublished": "2025-10-01T13:59:43.114Z",
-          "link": "https://www.bbc.com/magyarul/articles/cw0vgvmk2peo",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
-          "imageAlt": "Nasa's perserverance rover",
-          "id": "cw0vgvmk2peo",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 04",
-          "firstPublished": "2025-10-01T13:59:50.152Z",
-          "lastPublished": "2025-10-01T13:59:50.152Z",
-          "link": "https://www.bbc.com/magyarul/articles/cy69e9jp3q5o",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
-          "imageAlt": "Nasa's perserverance rover",
-          "id": "cy69e9jp3q5o",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 05",
-          "firstPublished": "2025-10-01T14:00:22.464Z",
-          "lastPublished": "2025-10-01T14:00:22.464Z",
-          "link": "https://www.bbc.com/magyarul/articles/cye2m2jny3qo",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
-          "imageAlt": "Nasa's perserverance rover",
-          "id": "cye2m2jny3qo",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        }
-      ],
-      "activePage": 1,
-      "pageCount": 1,
-      "curationId": "urn:bbc:tipo:list:18c736d5-90ff-438f-ae0e-0223d9b38511",
-      "curationType": "tipo-curation",
-      "position": 0,
-      "visualProminence": "HIGH",
-      "title": "Top Stories",
-      "visualStyle": "COLLECTION"
-    },
-    {
-      "summaries": [
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
-          "firstPublished": "2025-10-01T14:18:26.715Z",
-          "lastPublished": "2025-10-01T14:18:26.715Z",
-          "link": "https://www.bbc.com/magyarul/articles/crj3r38eex2o",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
-          "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
-          "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
-          "id": "crj3r38eex2o",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
-          "firstPublished": "2025-10-01T14:16:30.605Z",
-          "lastPublished": "2025-10-01T14:16:30.605Z",
-          "link": "https://www.bbc.com/magyarul/articles/cvveme9lm7ro",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
-          "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
-          "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
-          "id": "cvveme9lm7ro",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        },
-        {
-          "type": "article",
-          "isLive": false,
-          "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
-          "firstPublished": "2025-10-01T14:13:56.687Z",
-          "lastPublished": "2025-10-01T14:13:56.687Z",
-          "link": "https://www.bbc.com/magyarul/articles/cm3e6emexnno",
-          "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
-          "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
-          "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
-          "id": "cm3e6emexnno",
-          "readTime": 1,
-          "visualProminence": "NORMAL"
-        }
-      ],
-      "activePage": 1,
-      "pageCount": 1,
-      "curationId": "urn:bbc:tipo:list:bf6d1818-1c00-4689-a609-b713e89121ce",
-      "curationType": "tipo-curation",
-      "position": 1,
-      "visualProminence": "HIGH",
-      "title": "Editor's choice",
-      "visualStyle": "COLLECTION"
-    }
-  ],
-  "description": "Add description"
-}
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 01",
+            "firstPublished": "2025-10-01T13:46:51.798Z",
+            "lastPublished": "2025-10-01T13:47:05.447Z",
+            "link": "https://www.bbc.com/magyarul/articles/c99x3xnzyelo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
+            "imageAlt": "Nasa's perserverance rover",
+            "id": "c99x3xnzyelo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 02",
+            "firstPublished": "2025-10-01T13:59:13.259Z",
+            "lastPublished": "2025-10-01T13:59:13.259Z",
+            "link": "https://www.bbc.com/magyarul/articles/crlrerjvvy5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
+            "imageAlt": "Nasa's perserverance rover",
+            "id": "crlrerjvvy5o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 03",
+            "firstPublished": "2025-10-01T13:59:43.114Z",
+            "lastPublished": "2025-10-01T13:59:43.114Z",
+            "link": "https://www.bbc.com/magyarul/articles/cw0vgvmk2peo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
+            "imageAlt": "Nasa's perserverance rover",
+            "id": "cw0vgvmk2peo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 04",
+            "firstPublished": "2025-10-01T13:59:50.152Z",
+            "lastPublished": "2025-10-01T13:59:50.152Z",
+            "link": "https://www.bbc.com/magyarul/articles/cy69e9jp3q5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
+            "imageAlt": "Nasa's perserverance rover",
+            "id": "cy69e9jp3q5o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Ez az eddigi legerősebb jele annak, hogy a Marson valaha létezhetett élet 05",
+            "firstPublished": "2025-10-01T14:00:22.464Z",
+            "lastPublished": "2025-10-01T14:00:22.464Z",
+            "link": "https://www.bbc.com/magyarul/articles/cye2m2jny3qo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/9513/test/8f2048a0-9ecc-11f0-8743-fdd152a2466d.jpg.webp",
+            "imageAlt": "Nasa's perserverance rover",
+            "id": "cye2m2jny3qo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:18c736d5-90ff-438f-ae0e-0223d9b38511",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "HIGH",
+        "title": "Top Stories",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
+            "firstPublished": "2025-10-01T14:18:26.715Z",
+            "lastPublished": "2025-10-01T14:18:26.715Z",
+            "link": "https://www.bbc.com/magyarul/articles/crj3r38eex2o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
+            "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
+            "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
+            "id": "crj3r38eex2o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
+            "firstPublished": "2025-10-01T14:16:30.605Z",
+            "lastPublished": "2025-10-01T14:16:30.605Z",
+            "link": "https://www.bbc.com/magyarul/articles/cvveme9lm7ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
+            "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
+            "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
+            "id": "cvveme9lm7ro",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvényszék az ítélettel kapcsolatban",
+            "firstPublished": "2025-10-01T14:13:56.687Z",
+            "lastPublished": "2025-10-01T14:13:56.687Z",
+            "link": "https://www.bbc.com/magyarul/articles/cm3e6emexnno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/b5a6/test/b34587f0-9ed0-11f0-8cce-335627560f63.jpg.webp",
+            "description": "Közleményt adott ki a Fővárosi Törvényszék azzal az ítélettel kapcsolatban, amely hétfőn született a Tisza Párt és az Index hírportál közötti sajtóperben.",
+            "imageAlt": "Magyar kontra Index: közleményt adott ki a Fővárosi Törvénys",
+            "id": "cm3e6emexnno",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:bf6d1818-1c00-4689-a609-b713e89121ce",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "visualProminence": "HIGH",
+        "title": "Editor's choice",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "description": "Add description"
+  }
 }
