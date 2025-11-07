@@ -247,7 +247,7 @@ timeFunctions.push(
     },
     ({ service, variant }) => {
       const date = new Date(fixedTimestamp);
-      date.setDate(date.getDate() + 3);
+      date.setFullYear(date.getFullYear() - 1);
 
       return (
         <WithService service={service} variant={variant}>
@@ -380,7 +380,7 @@ years.forEach((year) => {
     const lastYear = moment(`${year}0101`).subtract(1, 'years').locale(locale);
 
     return altCalendar
-      ? `Gregorian: ${formattedYear} \nAlternative: ${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]}`
+      ? `${formattedYear} (${altCalendar.formatDate(lastYear).split(' ')[2]} - ${altCalendar.formatDate(thisYear).split(' ')[2]})`
       : formattedYear;
   });
 });
