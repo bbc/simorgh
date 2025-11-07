@@ -340,13 +340,22 @@ timeFunctions.push({
 });
 
 timeFunctions.push({
-  subheading: 'Date',
+  subheading: 'Date (including Ordinal)',
 });
 
 Array.from({ length: 31 }, (_, index) => index).forEach((day) => {
-  timeFunctions.push(({ locale }) =>
-    moment('20240101').locale(locale).add(day, 'days').format('D')
-  );
+  timeFunctions.push(({ locale }) => {
+    const numeral = moment('20240101')
+      .locale(locale)
+      .add(day, 'days')
+      .format('D');
+    const ordinal = moment('20240101')
+      .locale(locale)
+      .add(day, 'days')
+      .format('Do');
+
+    return `${numeral} ${ordinal !== numeral ? '(' + ordinal + ')' : ''}`;
+  });
 });
 
 timeFunctions.push({ subheading: 'Month' });
