@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-moment.defineLocale('new-locale', {
+moment.defineLocale('pcm', {
   months: [
     'January', // January
     'February', // February
@@ -16,18 +16,22 @@ moment.defineLocale('new-locale', {
     'December', // December
   ],
   longDateFormat: {
-    LT: 'HH:mm',
-    LTS: 'HH:mm:ss',
-    L: 'DD/MM/YYYY',
-    LL: 'D MMMM YYYY',
-    LLL: 'D MMMM YYYY HH:mm',
-    LLLL: 'dddd, D MMMM YYYY HH:mm',
+    LT: '',
+    LTS: '',
+    L: '',
+    LL: 'Do MMMM YYYY',
+    LLL: 'Do MMMM YYYY HH:mm',
+    LLLL: '',
   },
   relativeTime: {
-    past: '%s ago',
-    m: '1 minute', // alternatives: 'one minute', 'a minute'
+    past: '%s wey don pass',
+    m: 'one minute',
     mm: '%d minutes',
-    h: '1 hour', // alternatives: 'one hour', 'an hour'
+    h: 'one hour',
     hh: '%d hours',
+  },
+  week: {
+    dow: 1, // Monday is the first day of the week.
+    doy: 4, // The week that contains Jan 4th is the first week of the year.
   },
 });

@@ -89,30 +89,72 @@ const result = translateNumerals(someInput); // returns someInput with numbers t
 
 ### Adding a new locale
 
-This is required when adding a new service which is not already supported by Moment i.e. where there is no matching locale in [MomentJS library](https://github.com/moment/moment/tree/develop/src/locale)
+Adding a new locale is necessary when the locale is not already supported by Moment.js i.e. there is no matching locale in the [Moment.js library](https://github.com/moment/moment/tree/develop/src/locale)
 
 Steps:
 
-- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/new-locale.js](./moment/templates/new-locale.js), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename to match the desired locale e.g. [`pcm.js` for Pidgin](./moment/pcm.js)
-- Use `moment.defineLocale('locale', { ... })` to define:
-  - `months`: array of 12 months in chronological order from January -> December
-  - `longDateFormat`
-    - `LL`: date, full month name + year
-    - `LLL`: date, full month name, year + time (hours & minutes)
-  - `relativeTime`
-    - `past`: x ago
-    - `m`: 1 minute
-    - `mm`: x minutes
-    - `h`: 1 hour
-    - `hh`: x hours
-- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/test.js](./moment/templates/test.js), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename to match the desired locale e.g. [`pcm.test.js` for Pidgin](./moment/pcm.test.js)
+- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/new-locale](./moment/templates/new-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`pcm` for Pidgin](./moment/pcm)
+- Use `moment.defineLocale('new-locale', { ... })` to define the [required locale fields](#required-locale-fields)
+- Update `index.test.ts` as required - replacing `new-locale` with the desired locale & fixing test assertions
+- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires a new locale
 
-### Overwriting an existing locale
+### Updating / overwriting an existing locale
+
+Overwriting a locale is necessary when the default Moment.js locale does not meet editorial or UX requirements e.g. when formatting needs to be more culturally accurate or simplified for a specific audience.
+
+- Copy [src/app/legacy/psammead/psammead-locales/moment/templates/update-locale](./moment/templates/override-locale), paste into the [src/app/legacy/psammead/psammead-locales/moment](./moment/) folder and rename folder to match the desired locale e.g. [`zh-tw` for Zhongwen](./moment/zh-tw)
+- Use `moment.updateLocale('update-locale', { ... })` to override any/all of the [required locale fields](#required-locale-fields)
+- Update `index.test.ts` as required - replacing `update-locale` with the desired locale & fixing test assertions
+- [Import the new locale file into the service config](#import-locale-into-service-configuration) for the new service or the service which requires a new locale
 
 ### Extending an existing locale
 
-The use case is when
+Extending a locale is necessary
 
-## Locales with Jalaali Calendars
+### Required Locale Fields
 
-Explain how Pashto + Persian use the Jalaali calendar
+- `months`: array of 12 months in chronological order from January -> December
+- `longDateFormat`
+  - `LL`: date, full month name + year
+  - `LLL`: date, full month name, year + time (hours & minutes)
+- `relativeTime`
+  - `past`: x ago
+  - `m`: 1 minute
+  - `mm`: x minutes
+  - `h`: 1 hour
+  - `hh`: x hours
+
+### Import Locale into Service Configuration
+
+In `src/app/lib/config/services/<service>.ts`
+
+```jsx
+import '#psammead/psammead-locales/moment/locale-name';
+
+export default {
+  ...
+  datetimeLocale: 'locale-name',
+  ...
+}
+```
+
+## Locales with Alternative Calendars
+
+Pashto & Persian use the Jalaali calendar to display dates according to both the Gregorian & Jalaali date formats.
+
+The following configuration is required:
+
+- [Add or update a locale according to the instructions](#instructions-for-adding-and-updating-locales)
+- In the `src/app/lib/config/<service>.ts` file, import the Jalaali calendar
+
+```jsx
+import jalaali from '#psammead/psammead-calendars/src';
+
+export default {
+  ...
+  altCalendar: jalaali,
+  ...
+};
+```
+
+- Add or import the Jalaali months for the locale and add to [`jalaaliMonths`](https://github.com/bbc/simorgh/blob/ad1fc108fd4ae237d61460a86aede2ac573e5a7c/src/app/legacy/psammead/psammead-calendars/src/calendars/jalaali.js#L8-L25)

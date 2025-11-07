@@ -1,10 +1,14 @@
-const moment = require('moment');
-require('moment/locale/zh-tw');
+import moment from 'moment';
+import 'moment/locale/zh-tw';
 
 moment.updateLocale('zh-tw', {
   longDateFormat: {
+    LTS: '',
+    LT: '',
+    L: '',
     LL: 'YYYY年M月D日',
     LLL: 'YYYY年M月D日Ah時mm分',
+    LLLL: '',
   },
   relativeTime: {
     // these keys have been overridden with our translations
