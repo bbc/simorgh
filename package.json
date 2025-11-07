@@ -98,7 +98,9 @@
     "@jest/types": "30.0.5",
     "form-data": "4.0.4",
     "on-headers": "1.1.0",
-    "react-is": "19"
+    "react-is": "19",
+    "scheduler": "0.27.0",
+    "zustand": "5.0.8"
   },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.1.1.tgz",
