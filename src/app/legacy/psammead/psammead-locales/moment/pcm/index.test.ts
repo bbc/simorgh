@@ -16,8 +16,8 @@ describe(`${locale}`, () => {
       format                    | expected
       ${'D MMMM YYYY'}          | ${'14 February 2025'}
       ${'D MMMM YYYY, HH:mm z'} | ${'14 February 2025, 15:25 GMT'}
-      ${'LL'}                   | ${'14 February 2025'}
-      ${'LLL'}                  | ${'14 February 2025 15:25'}
+      ${'LL'}                   | ${'14th February 2025'}
+      ${'LLL'}                  | ${'14th February 2025 15:25'}
     `('$format: $expected', ({ format, expected }) => {
       assert.equal(formatted.format(format), expected);
     });
