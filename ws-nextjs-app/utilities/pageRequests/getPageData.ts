@@ -18,6 +18,7 @@ type Props = {
   rendererEnv?: string;
   resolvedUrl: string;
   pageType: PageTypes;
+  isAmp?: boolean;
 };
 
 const getPageData = async ({
@@ -28,6 +29,7 @@ const getPageData = async ({
   rendererEnv,
   resolvedUrl,
   pageType,
+  isAmp,
 }: Props) => {
   const path = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const url = new URL(path, 'https://www.bbc.com');
@@ -46,6 +48,7 @@ const getPageData = async ({
       variant,
       page,
       getAgent,
+      isAmp,
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);

@@ -12,7 +12,7 @@ import {
   getServiceConfigBundleData,
   getServiceThemeBundleData,
 } from './getBundleData.js';
-import { MIN_SIZE, MAX_SIZE } from './bundleSizeConfig.js';
+import { MIN_SIZE, MAX_SIZE, VARIANCE } from './bundleSizeConfig.js';
 
 export default () => {
   const bundleType = process.env.bundleType || 'modern';
@@ -236,7 +236,18 @@ export default () => {
     );
   }
 
-  if (largestPagePlusServiceBundleSize > MAX_SIZE) {
+  // Ensures that the bundle size is not too large
+  if (MAX_SIZE - largestPagePlusServiceBundleSize > VARIANCE) {
+    errors.push(
+      [
+        chalk.red(
+          `MAX_SIZE in ./scripts/bundleSize/bundleSizeConfig.js is too large - ${MAX_SIZE}. Please set MAX_SIZE to ${largestPagePlusServiceBundleSize}`,
+        ),
+      ].join(' '),
+    );
+  }
+
+  if (largestPagePlusServiceBundleSize > MAX_SIZE + VARIANCE) {
     const service =
       serviceConfigBundleData[serviceConfigBundleData.length - 1].serviceName;
     const pageType = pageBundleData[pageBundleData.length - 1].pageName;
