@@ -12,7 +12,7 @@
         "id": "p0k09903",
         "state": "next",
         "startTime": "2024-11-30T01:30:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct79kf",
+        "link": "/dari/bbc_dari_radio/w3ct79kf",
         "brandTitle": "چشم انداز بامدادی 1",
         "summary": "برنامه خبری صبح بی بی سی  ۱\n",
         "duration": "PT29M30S"
@@ -21,7 +21,7 @@
         "id": "p0k01bzz",
         "state": "onDemand",
         "startTime": "2024-11-29T16:00:00.000Z",
-        "link": "/persian/bbc_dari_radio/w172zyy8fyhhp56",
+        "link": "/dari/bbc_dari_radio/w172zyy8fyhhp56",
         "brandTitle": "خبر و نظر",
         "summary": "برنامه نظر و تحلیل شنوندگان\n",
         "duration": "PT29M30S"
@@ -30,7 +30,7 @@
         "id": "p0k01bzv",
         "state": "onDemand",
         "startTime": "2024-11-29T14:00:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct79zz",
+        "link": "/dari/bbc_dari_radio/w3ct79zz",
         "brandTitle": "مجله شامگاهی",
         "summary": "برنامه خبری و تحلیلی شامگاهی \n",
         "duration": "PT30M"
@@ -39,7 +39,7 @@
         "id": "p0k01bz6",
         "state": "onDemand",
         "startTime": "2024-11-29T02:30:00.000Z",
-        "link": "/persian/bbc_dari_radio/w3ct79r2",
+        "link": "/dari/bbc_dari_radio/w3ct79r2",
         "brandTitle": "چشم انداز بامدادی 2",
         "summary": "برنامه خبری صبح بی بی سی  ۱",
         "duration": "PT29M30S"
@@ -50,7 +50,7 @@
       "atiAnalytics": {
         "contentId": "urn:bbc:ares:ws_media:live:bbc_dari_radio",
         "contentType": "player-live",
-        "pageIdentifier": "persian.bbc_dari_radio.liveradio.page",
+        "pageIdentifier": "dari.bbc_dari_radio.liveradio.page",
         "pageTitle": "بی بی سی افغانستان (برنامه های دری) - BBC News فارسی"
       }
     },

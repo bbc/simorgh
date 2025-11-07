@@ -292,18 +292,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
-    service: 'persian',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
-    path: '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
-    service: 'persian',
-    runforEnv: ['live'],
-    tests,
-  },
-  {
     path: '/persian/podcasts/p02pc9wf', // Podcast Brand
     service: 'persian',
     runforEnv: ['local', 'test', 'live'],
