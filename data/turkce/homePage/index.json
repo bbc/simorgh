@@ -2,7 +2,9 @@
   "data": {
     "title": "Haberler - BBC News Türkçe",
     "description": "Türkiye ve dünya gündemindeki son gelişmeler, son dakika haberleri, video, analiz, teknoloji haberleri, sağlık haberleri, spor haberleri, ekonomi haberleri, fotoğraf albümleri, canlı yayınlar BBC Türkçe sayfalarında.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "Haberler - BBC News Türkçe",
+  "seoDescription": "Türkiye ve dünya gündemindeki son gelişmeler, son dakika haberleri, video, analiz, teknoloji haberleri, sağlık haberleri, spor haberleri, ekonomi haberleri, fotoğraf albümleri, canlı yayınlar BBC Türkçe sayfalarında.",
     "curations": [
       {
         "summaries": [
