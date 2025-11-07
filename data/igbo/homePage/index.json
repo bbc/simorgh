@@ -2,7 +2,9 @@
   "data": {
     "title": "BBC News Ìgbò",
     "description": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "BBC News Ìgbò",
+  "seoDescription": "BBC News Igbo na-agbasa akụkọ sị Naịjirịa, Afịrịka na mba ụwa niile... Ihe na-eme ugbua gbasara akụkọ, egwuregwu, ihe nkiri na ihe na-ewu ewu... BBC Nkeji.",
     "curations": [
       {
         "summaries": [
