@@ -3109,18 +3109,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.0.8":
-  version: 20.0.8
-  resolution: "@happy-dom/jest-environment@npm:20.0.8"
+"@happy-dom/jest-environment@npm:20.0.10":
+  version: 20.0.10
+  resolution: "@happy-dom/jest-environment@npm:20.0.10"
   dependencies:
-    happy-dom: "npm:^20.0.8"
+    happy-dom: "npm:^20.0.10"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/ece994a5d92c894f6004e6ed1607b4beec99b721a2350a9398a220d128f1eff72c5677f18347b9fa9158d7a7b2d1f6e0aa1f813cf81360a08edefedc5ec8c3c4
+  checksum: 10/e1a747fa83244f2e06c98a06347b5dd786af6743fc65c32b00095363ca089d48ac7506202bc57f1b8840f47cdb99ea7e8ae11638cc1fcd29ef1eac96d9f27a69
   languageName: node
   linkType: hard
 
@@ -11194,18 +11194,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.0.8":
-  version: 20.0.8
-  resolution: "happy-dom@npm:20.0.8"
-  dependencies:
-    "@types/node": "npm:^20.0.0"
-    "@types/whatwg-mimetype": "npm:^3.0.2"
-    whatwg-mimetype: "npm:^3.0.0"
-  checksum: 10/d16e9c2a04155ac666b892e382aba4bf48783937f6e877e8d7ede90b8e2148d76c5a6965757f928d35a2ebe51698fa3debd0ec110339c8eb395dc81d67dc5406
-  languageName: node
-  linkType: hard
-
-"happy-dom@npm:^20.0.8":
+"happy-dom@npm:20.0.10, happy-dom@npm:^20.0.10":
   version: 20.0.10
   resolution: "happy-dom@npm:20.0.10"
   dependencies:
@@ -16852,7 +16841,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.25.11"
     "@esbuild/win32-arm64": "npm:0.25.11"
     "@esbuild/win32-x64": "npm:0.25.11"
-    "@happy-dom/jest-environment": "npm:20.0.8"
+    "@happy-dom/jest-environment": "npm:20.0.10"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
@@ -16920,7 +16909,7 @@ __metadata:
     express: "npm:4.21.2"
     express-static-gzip: "npm:3.0.0"
     glob: "npm:11.0.3"
-    happy-dom: "npm:20.0.8"
+    happy-dom: "npm:20.0.10"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
