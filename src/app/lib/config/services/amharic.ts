@@ -363,6 +363,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'የአየር ሁኔታ',
+      defaultLocation: '344979',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/amharic/institutional-49283133',

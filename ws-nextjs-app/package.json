@@ -4,6 +4,7 @@
   "description": "Simorgh - Next.JS",
   "scripts": {
     "setupDevEnv": "cp ../envConfig/local.env .env && sed 's/:7080/:7081/g' .env > .env.tmp && mv .env.tmp .env && mkdir -p public && cp -r ../public/. public",
+    "setupDevEnvSecure": "cp ../envConfig/local.env .env && sed 's#http:\/\/localhost:7080#https:\/\/www.local.bbc.co.uk:7081#g' .env > .env.tmp && mv .env.tmp .env && mkdir -p public && cp -r ../public/. public",
     "moveStaticAssets": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static && cp -r public/. build/standalone/ws-nextjs-app/public",
     "build:local": "yarn setupDevEnv && NODE_ENV=production && next build --webpack && yarn moveStaticAssets",
     "build:preview": "cp ../envConfig/preview1.env .env && NODE_ENV=production && next build --webpack",
@@ -13,7 +14,7 @@
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build --webpack",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081 --webpack",
-    "dev-https": "yarn setupDevEnv && next dev -p 7081 --webpack --experimental-https",
+    "dev-https": "yarn setupDevEnvSecure && next dev -p 7081 --webpack --experimental-https",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",
     "stop": "lsof -t -i:7081 | xargs kill",
     "test": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Unit Tests'",

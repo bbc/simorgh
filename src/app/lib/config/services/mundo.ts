@@ -393,6 +393,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'Final de %title%',
       },
     },
+    weather: {
+      title: 'Clima',
+      defaultLocation: '3530597',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/mundo/institucional-51359666',

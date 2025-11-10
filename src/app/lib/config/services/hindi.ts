@@ -387,6 +387,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'समाप्त',
       },
     },
+    weather: {
+      title: 'मौसम',
+      defaultLocation: '1261481',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/hindi/institutional-50223932',

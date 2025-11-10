@@ -384,6 +384,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'موسم',
+      defaultLocation: '1176615',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/urdu/institutional-49282935',

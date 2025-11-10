@@ -2,6 +2,7 @@
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
+import path from 'node:path';
 import ramdaPath from 'ramda/src/path';
 import omit from 'ramda/src/omit';
 // not part of react-helmet
@@ -141,6 +142,28 @@ server
 // Set Up Local Server
 if (process.env.SIMORGH_APP_ENV === 'local') {
   local(server);
+  server.get('/images/weather/:name', (req, res, next) => {
+    res.set(
+      `Cache-Control`,
+      `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
+    );
+    const options = {
+      root: path.join(__dirname, 'public/images/weather/'),
+      dotfiles: 'deny',
+      headers: {
+        'x-timestamp': Date.now(),
+        'x-sent': true,
+      },
+    };
+
+    const fileName = req.params.name;
+    res.sendFile(fileName, options, error => {
+      if (error) {
+        logger.error(MANIFEST_SENDFILE_ERROR, { error });
+        next(error);
+      }
+    });
+  });
 }
 
 const injectDefaultCacheHeader = (req, res, next) => {

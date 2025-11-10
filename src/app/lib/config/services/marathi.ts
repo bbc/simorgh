@@ -301,6 +301,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'हवामान',
+      defaultLocation: '1259229',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/marathi/institutional-50418391',

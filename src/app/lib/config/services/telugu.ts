@@ -292,6 +292,10 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'End of %title%',
       },
     },
+    weather: {
+      title: 'వాతావరణం',
+      defaultLocation: '1269843',
+    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/telugu/institutional-50420343',
