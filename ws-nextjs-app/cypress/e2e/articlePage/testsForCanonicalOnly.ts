@@ -211,8 +211,14 @@ export default ({
       }
     });
 
-    describe.skip('Continue Reading Button', () => {
-      it('should render the Continue Reading button', () => {
+    describe('Continue Reading Button', () => {
+      it('should render the Continue Reading button', function test() {
+        runIfToggleEnabled({
+          service,
+          toggleName: 'continueReadingButton',
+          testContext: this,
+        });
+
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -220,12 +226,20 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
+            cy.viewport(320, 480);
+
             cy.get('#continue-reading-button').should('be.visible');
           }
         });
       });
 
-      it('should reveal hidden content when the Continue Reading button is clicked', () => {
+      it('should reveal hidden content when the Continue Reading button is clicked', function test() {
+        runIfToggleEnabled({
+          service,
+          toggleName: 'continueReadingButton',
+          testContext: this,
+        });
+
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -233,12 +247,20 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
+            cy.viewport(320, 480);
+
             cy.get('#continue-reading-button').click();
 
-            cy.get('#continue-reading-button')
-              .next()
-              .should('have.attr', 'data-first-hidden-element', 'true')
-              .should('not.have.css', 'display', 'none');
+            cy.get('main')
+              .find('*')
+              .each($el => {
+                cy.wrap($el).should($elWrapped => {
+                  const display = window
+                    .getComputedStyle($elWrapped[0])
+                    .getPropertyValue('display');
+                  expect(display).to.not.equal('none');
+                });
+              });
           }
         });
       });
