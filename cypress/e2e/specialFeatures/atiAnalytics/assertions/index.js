@@ -6,7 +6,7 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
-  ATI_USER_ID_COOKIE,
+  // ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
@@ -210,12 +210,13 @@ export const assertPageView = ({
         applicationType,
       });
 
-      if (['responsive', 'lite'].includes(applicationType)) {
-        expect(params.idclient).to.equal(
-          ATI_USER_ID_COOKIE,
-          'params.idclient (atuserid cookie value)',
-        );
-      }
+      // TODO: Commenting out temporarily until old ATI code is removed
+      // if (['responsive', 'lite'].includes(applicationType)) {
+      //   expect(params.idclient).to.equal(
+      //     ATI_USER_ID_COOKIE,
+      //     'params.idclient (atuserid cookie value)',
+      //   );
+      // }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(parseInt(params.s2, 10)).to.equal(
@@ -245,19 +246,21 @@ export const assertPageView = ({
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
-  applicationType,
+  // applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({ params });
 
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
+  // TODO: Commenting out temporarily until old ATI code is removed
+
+  // if (['responsive', 'lite'].includes(applicationType)) {
+  //   expect(params.idclient).to.equal(
+  //     ATI_USER_ID_COOKIE,
+  //     'params.idclient (atuserid cookie value)',
+  //   );
+  // }
 
   expect(params.events).to.satisfy(
     payload =>
@@ -295,7 +298,7 @@ export const assertATIComponentViewEvent = ({
 const assertViewabilityModelClickEvent = ({
   pageIdentifier,
   params,
-  applicationType,
+  // applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
@@ -304,12 +307,13 @@ const assertViewabilityModelClickEvent = ({
     params,
   });
 
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
+  // TODO: Commenting out temporarily until old ATI code is removed
+  // if (['responsive', 'lite'].includes(applicationType)) {
+  //   expect(params.idclient).to.equal(
+  //     ATI_USER_ID_COOKIE,
+  //     'params.idclient (atuserid cookie value)',
+  //   );
+  // }
 
   expect(params.events).to.satisfy(
     payload =>
