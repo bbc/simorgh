@@ -124,7 +124,7 @@ const MediaContainer = ({
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], async (Bump: BumpType) => {
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
           const initPlayer = async () => {
             const mediaPlayer = Bump.player(
