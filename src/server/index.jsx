@@ -270,10 +270,6 @@ server.get(
           data.country &&
           Object.keys(countrySpecificTopics).includes(data.country);
 
-        const topicIdsToFetch = hasCountryMatch
-          ? [countrySpecificTopics[data.country], defaultTopicId]
-          : [defaultTopicId];
-        console.log('topicIdsToFetch:', topicIdsToFetch);
         let countrySpecificData;
         let defaultTopicData;
         if (hasCountryMatch) {
@@ -306,19 +302,12 @@ server.get(
             getAgent,
           });
         }
-        console.log('defaultTopicData:', defaultTopicData);
         const countryArticles =
           countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
         const defaultArticles =
           defaultTopicData?.json?.data?.curations?.[0]?.summaries || [];
-        console.log('articles', countryArticles, defaultArticles);
-
-        console.log('hasCountryMatch:', hasCountryMatch);
-        console.log('defaultTopicData:', defaultTopicData);
-        console.log('countrySpecificData:', countrySpecificData);
 
         if (hasCountryMatch && defaultTopicData) {
-          console.log('in if 1)');
           data.pageData.secondaryColumn.PersonalisedContent = [
             {
               title: countrySpecificData.json.data.title,
@@ -338,7 +327,6 @@ server.get(
             },
           ];
         } else if (defaultTopicData) {
-          console.log('in if 2)');
           data.pageData.secondaryColumn.PersonalisedContent = [
             {
               title: defaultTopicData.json.data.title,
@@ -351,10 +339,6 @@ server.get(
           ];
         }
       }
-      console.log(
-        'sliced data',
-        data.pageData?.secondaryColumn?.PersonalisedContent,
-      );
       const nonce = createAdNonce({
         toggles,
         country: data.country,
