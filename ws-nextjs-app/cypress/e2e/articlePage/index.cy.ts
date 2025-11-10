@@ -33,7 +33,7 @@ const smokeCanonicalTestSuites = [
   },
   {
     path: '/hindi/articles/c0kprrej277o',
-    runforEnv: ['local', 'live'],
+    runforEnv: ['live'],
     service: 'hindi',
     tests: [...canonicalTests],
   },
