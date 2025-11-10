@@ -8,6 +8,7 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
+import { handleContinueReadingButton } from './helpers';
 
 const canonicalTests = [
   testsForAllPages,
@@ -28,6 +29,12 @@ const smokeCanonicalTestSuites = [
     path: '/gahuza/articles/c5y51yxeg53o',
     runforEnv: ['local', 'live'],
     service: 'gahuza',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/hindi/articles/c0kprrej277o',
+    runforEnv: ['live'],
+    service: 'hindi',
     tests: [...canonicalTests],
   },
   {
@@ -261,6 +268,7 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: ARTICLE_PAGE,
+  beforeEachFns: [handleContinueReadingButton],
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   deleteServiceWorker: true,
 });

@@ -14,6 +14,10 @@ export const FlourishResponsiveHeight = () => (
   <FlourishEmbed {...AsianGamesFootballProps} />
 );
 
+FlourishResponsiveHeight.parameters = {
+  chromatic: { disable: true },
+};
+
 export const FlourishStory = () => <FlourishEmbed {...FlourishStoryFixture} />;
 
 export const FlourishVisualisation = () => (

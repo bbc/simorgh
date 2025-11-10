@@ -47,7 +47,6 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
-import onClient from '#app/lib/utilities/onClient';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -86,12 +85,6 @@ interface ReadTimeData {
   readTimeValue: number | undefined;
   readTimeVariant: string;
 }
-
-// TODO: This is temporary. We will properly handle the continue reading button in a follow-up PR.
-const checkIsInCypress = () =>
-  onClient() &&
-  // @ts-expect-error - Cypress is set on the window object when Cypress is running
-  window.Cypress;
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -220,7 +213,6 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
-
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -323,11 +315,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     block => block.type === 'continueReading',
   );
 
-  const isInCypress = checkIsInCypress();
-
   const showContinueReadingButton = Boolean(
-    !isInCypress &&
-      !isAmp &&
+    !isAmp &&
       !isLite &&
       !isApp &&
       hasContinueReadingBlock &&

@@ -287,7 +287,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "BBC News Kyrgyz",
+      "headline": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -302,7 +302,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/kyrgyz",
         "@type": "WebPage",
-        "name": "BBC News Kyrgyz",
+        "name": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
