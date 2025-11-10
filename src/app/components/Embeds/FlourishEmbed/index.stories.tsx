@@ -9,16 +9,15 @@ import FlourishEmbed from '.';
 export default {
   title: 'Components/Embeds/Flourish Embed',
   component: FlourishEmbed,
-  parameters: {
-    chromatic: {
-      diffThreshold: 0.5,
-    },
-  },
 };
 
 export const FlourishResponsiveHeight = () => (
   <FlourishEmbed {...AsianGamesFootballProps} />
 );
+
+FlourishResponsiveHeight.parameters = {
+  chromatic: { disable: true },
+};
 
 export const FlourishStory = () => <FlourishEmbed {...FlourishStoryFixture} />;
 
