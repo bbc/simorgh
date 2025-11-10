@@ -228,8 +228,6 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
-            cy.viewport(320, 480);
-
             cy.get('#continue-reading-button').should('be.visible');
           }
         });
@@ -251,8 +249,6 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
-            cy.viewport(320, 480);
-
             cy.get('#continue-reading-button').click();
 
             cy.get('main')
