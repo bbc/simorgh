@@ -58,9 +58,21 @@ export const getVideoEmbedUrl = (
 };
 
 export const handleContinueReadingButton = () => {
+  const CONTINUE_READING_BUTTON_ID = '#continue-reading-button';
+
   cy.get('body').then($body => {
-    if ($body.find('#continue-reading-button').length > 0) {
-      cy.get('#continue-reading-button').click();
+    if ($body.find(CONTINUE_READING_BUTTON_ID).length > 0) {
+      cy.get(CONTINUE_READING_BUTTON_ID)
+        .should('be.visible')
+        .then($button => {
+          const buttonDisplay = window
+            .getComputedStyle($button[0])
+            .getPropertyValue('display');
+
+          if (buttonDisplay !== 'none') {
+            cy.get(CONTINUE_READING_BUTTON_ID).click();
+          }
+        });
     }
   });
 };
