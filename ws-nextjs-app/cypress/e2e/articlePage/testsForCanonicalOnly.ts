@@ -219,6 +219,8 @@ export default ({
           testContext: this,
         });
 
+        cy.reload();
+
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -239,6 +241,8 @@ export default ({
           toggleName: 'continueReadingButton',
           testContext: this,
         });
+
+        cy.reload();
 
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(

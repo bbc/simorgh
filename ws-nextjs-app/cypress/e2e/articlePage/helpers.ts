@@ -56,3 +56,18 @@ export const getVideoEmbedUrl = (
 
   return isAmp ? `${embedUrl}/amp` : embedUrl;
 };
+
+export const handleContinueReadingButton = () => {
+  cy.getPageDataFromWindow().then(pageData => {
+    const hasContinueReadingButton = getBlockData('continueReading', pageData);
+
+    cy.get('body').then($body => {
+      if (
+        $body.find('#continue-reading-button').length > 0 &&
+        hasContinueReadingButton
+      ) {
+        cy.get('#continue-reading-button').click();
+      }
+    });
+  });
+};
