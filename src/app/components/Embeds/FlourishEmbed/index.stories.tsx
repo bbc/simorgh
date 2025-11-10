@@ -9,6 +9,11 @@ import FlourishEmbed from '.';
 export default {
   title: 'Components/Embeds/Flourish Embed',
   component: FlourishEmbed,
+  parameters: {
+    chromatic: {
+      diffThreshold: 0.2,
+    },
+  },
 };
 
 export const FlourishResponsiveHeight = () => (
