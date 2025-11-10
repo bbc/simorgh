@@ -210,7 +210,7 @@ export const assertPageView = ({
         applicationType,
       });
 
-      // TODO: Commenting out temporarily until old ATI code is removed
+      // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
       // if (['responsive', 'lite'].includes(applicationType)) {
       //   expect(params.idclient).to.equal(
       //     ATI_USER_ID_COOKIE,
@@ -253,8 +253,7 @@ const assertViewabilityModelViewEvent = ({
 
   assertReverbViewabilityComponentEventParamsExist({ params });
 
-  // TODO: Commenting out temporarily until old ATI code is removed
-
+  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
   // if (['responsive', 'lite'].includes(applicationType)) {
   //   expect(params.idclient).to.equal(
   //     ATI_USER_ID_COOKIE,
@@ -307,7 +306,7 @@ const assertViewabilityModelClickEvent = ({
     params,
   });
 
-  // TODO: Commenting out temporarily until old ATI code is removed
+  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
   // if (['responsive', 'lite'].includes(applicationType)) {
   //   expect(params.idclient).to.equal(
   //     ATI_USER_ID_COOKIE,
