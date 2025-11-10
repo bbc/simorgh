@@ -29,12 +29,7 @@ import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
 const iconSizes: IconSizes = {
-  'apple-touch-icon': [
-    '152x152',
-    '180x180',
-    '384x384',
-    '512x512',
-  ],
+  'apple-touch-icon': ['152x152', '180x180', '384x384', '512x512'],
   icon: ['72x72', '96x96', '192x192'],
 };
 
