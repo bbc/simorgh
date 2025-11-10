@@ -30,13 +30,8 @@ const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
 const iconSizes: IconSizes = {
   'apple-touch-icon': [
-    '72x72',
-    '96x96',
-    '128x128',
-    '144x144',
     '152x152',
     '180x180',
-    '192x192',
     '384x384',
     '512x512',
   ],
@@ -208,7 +203,6 @@ const MetadataContainer = ({
   });
   return (
     <Helmet htmlAttributes={htmlAttributes}>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
       <meta name="theme-color" content={BRAND_BACKGROUND} />
