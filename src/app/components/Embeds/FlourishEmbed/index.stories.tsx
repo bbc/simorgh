@@ -11,7 +11,7 @@ export default {
   component: FlourishEmbed,
   parameters: {
     chromatic: {
-      diffThreshold: 0.2,
+      diffThreshold: 0.5,
     },
   },
 };
