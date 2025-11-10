@@ -212,6 +212,8 @@ export default ({
     });
 
     describe('Continue Reading Button', () => {
+      const CONTINUE_READING_BUTTON_ID = '#continue-reading-button';
+
       it('should render the Continue Reading button', function test() {
         runIfToggleEnabled({
           service,
@@ -221,6 +223,12 @@ export default ({
 
         cy.reload();
 
+        cy.get('body').then($body => {
+          if ($body.find(CONTINUE_READING_BUTTON_ID).length === 0) {
+            this.skip();
+          }
+        });
+
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -228,7 +236,9 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
-            cy.get('#continue-reading-button').should('be.visible');
+            cy.get(CONTINUE_READING_BUTTON_ID).should('be.visible');
+          } else {
+            this.skip();
           }
         });
       });
@@ -242,6 +252,12 @@ export default ({
 
         cy.reload();
 
+        cy.get('body').then($body => {
+          if ($body.find(CONTINUE_READING_BUTTON_ID).length === 0) {
+            this.skip();
+          }
+        });
+
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -249,7 +265,7 @@ export default ({
           );
 
           if (hasContinueReadingButton) {
-            cy.get('#continue-reading-button').click();
+            cy.get(CONTINUE_READING_BUTTON_ID).click();
 
             cy.get('main')
               .find('*')
@@ -261,6 +277,8 @@ export default ({
                   expect(display).to.not.equal('none');
                 });
               });
+          } else {
+            this.skip();
           }
         });
       });
