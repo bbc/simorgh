@@ -223,12 +223,6 @@ export default ({
 
         cy.reload();
 
-        cy.get('body').then($body => {
-          if ($body.find(CONTINUE_READING_BUTTON_ID).length === 0) {
-            this.skip();
-          }
-        });
-
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
             'continueReading',
@@ -251,12 +245,6 @@ export default ({
         });
 
         cy.reload();
-
-        cy.get('body').then($body => {
-          if ($body.find(CONTINUE_READING_BUTTON_ID).length === 0) {
-            this.skip();
-          }
-        });
 
         cy.getPageDataFromWindow().then(pageData => {
           const hasContinueReadingButton = getBlockData(
