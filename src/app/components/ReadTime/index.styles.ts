@@ -8,12 +8,12 @@ export default {
     }),
   readTimeContainer: ({ mq, spacings }: Theme) =>
     css({
-      margin: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      margin: `${spacings.FULL}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+        margin: `${spacings.FULL}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0 0 ${spacings.DOUBLE}rem`,
+        margin: `${spacings.FULL}rem 0 ${spacings.DOUBLE}rem`,
       },
     }),
   readTimePlaceholderControl: ({ spacings }: Theme) =>
