@@ -1,5 +1,5 @@
 import { Services } from '#app/models/types/global';
-import SERVICES from '#lib/config/services/serviceList';
+import SERVICES from '#lib/config/services';
 
 const RESTRICTED_ON_SOFT_LAUNCH = ['/ws/languages'];
 

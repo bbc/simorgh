@@ -1,5 +1,5 @@
 import { matchPath } from 'react-router-dom';
-import services from '#lib/config/services/serviceList';
+import SERVICES from '#app/lib/config/services';
 import {
   articleDataPath,
   articlePath,
@@ -448,7 +448,7 @@ describe('homepages on environments', () => {
   describe(`homePage regex on the local environment`, () => {
     process.env.SIMORGH_APP_ENV = 'local';
 
-    const homePageRegex = getHomePageRegex(services);
+    const homePageRegex = getHomePageRegex(SERVICES);
 
     shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
   });

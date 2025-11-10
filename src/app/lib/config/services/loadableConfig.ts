@@ -1,10 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import loadable, { LoadableComponent } from '@loadable/component';
 import { Services } from '#app/models/types/global';
-import loadable from 'next/dynamic';
-import { ComponentType } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const loadableConfig: Record<Services, ComponentType<any>> = {
+type LoadableService = LoadableComponent<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
+
+const loadableConfig: Record<Services, LoadableService> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),

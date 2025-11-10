@@ -1,4 +1,4 @@
-import services from '#lib/config/services/serviceList';
+import SERVICES from '#app/lib/config/services';
 import {
   getArticleRegex,
   getHomePageRegex,
@@ -19,45 +19,45 @@ import {
   getAfricaEyeTVPageRegex,
 } from './utils';
 
-export const articlePath = getArticleRegex(services);
+export const articlePath = getArticleRegex(SERVICES);
 export const articleDataPath = `${articlePath}.json`;
 
-export const homePageSwPath = getSwRegex(services);
-export const homePageManifestPath = getManifestRegex(services);
-export const homePagePath = getHomePageRegex(services);
+export const homePageSwPath = getSwRegex(SERVICES);
+export const homePageManifestPath = getManifestRegex(SERVICES);
+export const homePagePath = getHomePageRegex(SERVICES);
 export const homePageDataPath = `${homePagePath}.json`;
 
-export const cpsAssetPagePath = getCpsAssetRegex(services);
+export const cpsAssetPagePath = getCpsAssetRegex(SERVICES);
 export const cpsAssetPageDataPath = `${cpsAssetPagePath}.json`;
 
-export const liveRadioPath = getLiveRadioRegex(services);
+export const liveRadioPath = getLiveRadioRegex(SERVICES);
 export const liveRadioDataPath = `${liveRadioPath}.json`;
 
-export const onDemandRadioPath = getOnDemandRadioRegex(services);
+export const onDemandRadioPath = getOnDemandRadioRegex(SERVICES);
 export const onDemandRadioDataPath = `${onDemandRadioPath}.json`;
 
-export const podcastEpisodePath = getPodcastEpisodeRegex(services);
+export const podcastEpisodePath = getPodcastEpisodeRegex(SERVICES);
 export const podcastEpisodeDataPath = `${podcastEpisodePath}.json`;
 
-export const podcastBrandPath = getPodcastBrandRegex(services);
+export const podcastBrandPath = getPodcastBrandRegex(SERVICES);
 export const podcastBrandDataPath = `${podcastBrandPath}.json`;
 
-export const onDemandTvPath = getOnDemandTvRegex(services);
+export const onDemandTvPath = getOnDemandTvRegex(SERVICES);
 export const onDemandTvDataPath = `${onDemandTvPath}.json`;
 
-export const topicPath = getTopicPageRegex(services);
+export const topicPath = getTopicPageRegex(SERVICES);
 export const topicDataPath = `${topicPath}.json`;
 
-export const errorPagePath = getErrorPageRegex(services);
+export const errorPagePath = getErrorPageRegex(SERVICES);
 
-export const legacyAssetPagePath = getLegacyAssetRegex(services);
+export const legacyAssetPagePath = getLegacyAssetRegex(SERVICES);
 export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
 
-export const mostReadPagePath = getMostReadPageRegex(services);
-export const mostReadDataRegexPath = getMostReadDataRegex(services);
+export const mostReadPagePath = getMostReadPageRegex(SERVICES);
+export const mostReadDataRegexPath = getMostReadDataRegex(SERVICES);
 
 export const secondaryColumnDataRegexPath =
-  getSecondaryColumnDataRegex(services);
+  getSecondaryColumnDataRegex(SERVICES);
 
 export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
 export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;

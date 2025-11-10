@@ -1,4 +1,4 @@
-import SERVICES from '#lib/config/services/serviceList';
+import SERVICES from '#lib/config/services';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];

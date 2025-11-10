@@ -1,4 +1,4 @@
-import services from '#lib/config/services/serviceList';
+import SERVICES from '#app/lib/config/services';
 import { Services } from '#app/models/types/global';
 import { act, render } from '../react-testing-library-with-providers';
 import PageLayoutWrapper from '.';
@@ -20,9 +20,7 @@ describe('PageLayoutWrapper', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each(
-    services.filter(service => !['newsround'].includes(service)) as Services[],
-  )('should render fonts for %s', async (service: Services) => {
+  it.each(SERVICES)('should render fonts for %s', async (service: Services) => {
     await act(() =>
       render(
         <PageLayoutWrapper

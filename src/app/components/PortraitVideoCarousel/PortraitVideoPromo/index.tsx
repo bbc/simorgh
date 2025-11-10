@@ -57,7 +57,7 @@ export default ({
     duration: durationTranslation,
   } = media;
 
-  let momentDuration = null;
+  let momentDuration: moment.Duration | null = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
