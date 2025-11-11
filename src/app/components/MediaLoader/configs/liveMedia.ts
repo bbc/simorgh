@@ -1,10 +1,12 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,
   basePlayerConfig,
+  pageType,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
   let warning = null;
@@ -33,7 +35,7 @@ export default ({
   return {
     playerConfig: {
       ...basePlayerConfig,
-      autoplay: false,
+      autoplay: pageType === LIVE_TV_PAGE, // Enable autoplay only on live TV pages
       statsObject: {
         ...basePlayerConfig.statsObject,
         episodePID: liveMediaBlock.id,
