@@ -110,7 +110,7 @@ export const service: DefaultServiceConfig = {
           ],
           callToActionFirst: 'Alternativ, te rugăm să revii la ',
           callToActionLinkText: 'BBC News România.',
-          callToActionLast: 'pagina principală.',
+          callToActionLast: ' pagina principală. ',
           callToActionLinkUrl: 'https://www.bbc.com/romanian',
         },
         500: {
