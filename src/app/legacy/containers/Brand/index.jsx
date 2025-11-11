@@ -18,7 +18,7 @@ const StyledBrand = styled(Brand)`
 `;
 
 export const getBrandPath = (service, variant) => {
-  if (service === 'ws') return '/ws/languages';
+  if (service === 'ws') return '/news';
   if (variant && servicesWithVariants[service]?.includes(variant)) {
     return `/${service}/${variant}`;
   }
