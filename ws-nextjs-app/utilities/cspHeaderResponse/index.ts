@@ -55,8 +55,8 @@ const isRelaxedCspEnabled = (
 };
 
 const isValidService = (str: string) => {
-  const [service] = str.split('/').filter(Boolean);
-  return service && SERVICES.includes(service as Services);
+  const [service] = str.split('/').filter(Boolean) as [Services?];
+  return service && SERVICES.includes(service);
 };
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
