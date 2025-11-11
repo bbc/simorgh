@@ -2,6 +2,11 @@ import { ReverbClient } from '#models/types/eventTracking';
 import { BumpType, Player } from '#app/components/MediaLoader/types';
 
 declare global {
+  interface Navigator {
+    connection: {
+      effectiveType: string;
+    };
+  }
   interface Window {
     bbcpage:
       | {

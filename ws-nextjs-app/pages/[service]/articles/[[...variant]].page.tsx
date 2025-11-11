@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import withLiteRedirect from '#nextjs/utilities/liteRedirect/liteRedirect';
 import { ArticlePageProps } from './types';
 import handleArticleRoute from './handleArticleRoute';
 
@@ -16,7 +17,10 @@ type PageProps = {
   pageType?: PageTypes;
 } & ArticlePageProps;
 
-const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
+const withFuncs = (component: React.ComponentType<PageProps>) =>
+  withOptimizelyProvider(withLiteRedirect(component));
+
+const PageTypeToRender = withFuncs(function PageTypeToRender({
   pageType,
   ...rest
 }: PageProps) {
