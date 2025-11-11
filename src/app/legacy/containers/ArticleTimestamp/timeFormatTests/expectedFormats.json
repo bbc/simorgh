@@ -310,13 +310,13 @@
     }
   },
   "romania": {
-    "default": { 
-      "one minute ago": "acum 1 minut",
-      "five minutes ago": "acum 5 minute",
-      "one hour ago": "acum 1 oră",
-      "five hours ago": "acum 5 ore",
-      "exact date": "10 Octombrie 2018",
-      "exact date and time with timezone": "12 Iulie 2019, 13:55 BST"
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
   "russian": {
