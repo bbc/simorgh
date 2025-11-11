@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
+import { jsx, SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import {
@@ -23,8 +23,7 @@ export const getParentColumns = (columnLayout: ColumnLayout) => {
 };
 
 const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const itemCss: any[] = [];
+  const itemCss: Array<(_theme: Theme) => SerializedStyles> = [];
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
