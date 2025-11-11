@@ -31,6 +31,12 @@ const smokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/hindi/articles/c0kprrej277o',
+    runforEnv: ['live'],
+    service: 'hindi',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/mundo/articles/ce42wzqr2mko',
     runforEnv: ['local', 'test'],
     service: 'mundo',
@@ -261,6 +267,7 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: ARTICLE_PAGE,
+  beforeEachFns: [],
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   deleteServiceWorker: true,
 });
