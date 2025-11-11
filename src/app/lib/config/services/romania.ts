@@ -398,7 +398,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nu este responsabil de conținutul altor site-uri.',
     },
-    timezone: 'Europe/Bucharest',
+    timezone: 'Europe/London',
     navigation: [
       {
         title: 'Home',
