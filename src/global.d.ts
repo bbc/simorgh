@@ -3,8 +3,10 @@ import { BumpType, Player } from '#app/components/MediaLoader/types';
 
 declare global {
   interface Navigator {
-    connection: {
-      effectiveType: string;
+    connection?: {
+      effectiveType?: string;
+      addEventListener?: (type: string, listener: () => void) => void;
+      removeEventListener?: (type: string, listener: () => void) => void;
     };
   }
   interface Window {
