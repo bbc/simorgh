@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { forwardRef, PropsWithChildren } from 'react';
 import { SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';
