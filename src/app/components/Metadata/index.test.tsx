@@ -381,32 +381,12 @@ describe('Metadata', () => {
         sizes: null,
       },
       {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
-        sizes: '72x72',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
-        sizes: '96x96',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
-        sizes: '128x128',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
-        sizes: '144x144',
-      },
-      {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
         sizes: '152x152',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
         sizes: '180x180',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
-        sizes: '192x192',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
@@ -475,18 +455,6 @@ describe('Metadata', () => {
       expect(favicon?.getAttribute('href')).toEqual('/favicon.ico');
       expect(favicon?.getAttribute('rel')).toEqual('shortcut icon');
       expect(favicon?.getAttribute('type')).toEqual('image/x-icon');
-    });
-  });
-
-  it('should render the IE X-UA-Compatible meta tag', async () => {
-    render(<CanonicalNewsInternationalOrigin />);
-
-    await waitFor(() => {
-      const actual = document
-        .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
-        ?.getAttribute('content');
-
-      expect(actual).toEqual('IE=edge');
     });
   });
 
