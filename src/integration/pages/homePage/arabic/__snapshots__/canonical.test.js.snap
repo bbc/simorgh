@@ -309,7 +309,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "BBC News عربي",
+      "headline": "الرئيسية",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -324,7 +324,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/arabic",
         "@type": "WebPage",
-        "name": "BBC News عربي",
+        "name": "الرئيسية",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
