@@ -29,7 +29,7 @@ describe('ReadTime', () => {
     {
       variant: 'Long Read Written',
       variantKey: 'long_read_written',
-      expectedCopy: 'Long Read',
+      expectedCopy: 'Long read',
       readTimeValue: 6,
     },
   ])(
