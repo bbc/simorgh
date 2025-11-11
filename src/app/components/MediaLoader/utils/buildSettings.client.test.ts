@@ -4,6 +4,7 @@ import {
   AUDIO_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
@@ -24,6 +25,8 @@ import {
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
   legacyMediaBlock,
+  livePageVideoClipMediaBlock,
+  liveTvPageMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -1465,6 +1468,26 @@ describe('buildSettings', () => {
         },
         showAds: false,
       });
+    });
+
+    it('Should not autoplay media if pageType is not a Live TV page.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: [livePageVideoClipMediaBlock as MediaBlock],
+        pageType: LIVE_PAGE,
+      });
+
+      expect(result?.playerConfig.autoplay).toBe(false);
+    });
+
+    it('Should autoplay media if pageType is a Live TV page.', () => {
+      const result = buildSettings({
+        ...arabicMediaBaseSettings,
+        blocks: [liveTvPageMediaBlock] as MediaBlock[],
+        pageType: LIVE_TV_PAGE,
+      });
+
+      expect(result?.playerConfig.autoplay).toBe(true);
     });
   });
 });
