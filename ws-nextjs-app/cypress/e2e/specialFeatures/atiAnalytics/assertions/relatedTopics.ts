@@ -5,6 +5,7 @@ import {
   assertATIComponentViewEvent,
 } from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
+import handleContinueReadingButton from '../../../../support/helpers/handleContinueReadingButton';
 
 const { RELATED_TOPICS } = COMPONENTS;
 
@@ -19,6 +20,8 @@ export const assertRelatedTopicsComponentView = ({
   it('should send a view event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-testid="related-topics"]').scrollIntoView({
@@ -50,6 +53,8 @@ export const assertRelatedTopicsComponentClick = ({
   it('should send a click event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     cy.get('[data-testid="related-topics"]').scrollIntoView({
       duration: 1000,

@@ -5,6 +5,7 @@ import {
   assertATIComponentViewEvent,
 } from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
+import handleContinueReadingButton from '../../../../support/helpers/handleContinueReadingButton';
 
 const { SCROLLABLE_PROMO } = COMPONENTS;
 
@@ -19,6 +20,8 @@ export const assertScrollablePromoComponentView = ({
   it('should send a view event for the Scrollable Promo component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
@@ -50,6 +53,8 @@ export const assertScrollablePromoComponentClick = ({
   it('should send a click event for the Scrollable Promo component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
       duration: 1000,

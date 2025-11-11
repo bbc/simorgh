@@ -5,6 +5,7 @@ import {
   assertATIComponentViewEvent,
 } from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
+import handleContinueReadingButton from '../../../../support/helpers/handleContinueReadingButton';
 
 const { PODCAST_PROMO } = COMPONENTS;
 
@@ -19,6 +20,8 @@ export const assertPodcastPromoComponentView = ({
   it('should send a view event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
     cy.get('[data-e2e="podcast-promo"]').scrollIntoView({
@@ -50,6 +53,8 @@ export const assertPodcastPromoComponentClick = ({
   it('should send a click event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+
+    handleContinueReadingButton();
 
     cy.get('[data-e2e="podcast-promo"]').scrollIntoView({
       duration: 1000,
