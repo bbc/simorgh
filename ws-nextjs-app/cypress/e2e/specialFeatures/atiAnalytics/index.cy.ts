@@ -61,7 +61,6 @@ import {
   assertDropdownNavigationComponentView,
 } from './assertions/navigation';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { handleContinueReadingButton } from '../../articlePage/helpers';
 
 const canonicalTestSuites = [
   {
@@ -358,6 +357,6 @@ runTestsForPage({
     ...ampTestSuites,
     ...liteTestSuites,
   ] as unknown as TestDataType[],
-  beforeEachFns: [setUserIDCookie, handleContinueReadingButton],
+  beforeEachFns: [setUserIDCookie],
   pageType: 'all' as PageTypes,
 });
