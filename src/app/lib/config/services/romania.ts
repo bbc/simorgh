@@ -6,7 +6,7 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'ro',
+    lang: 'en-GB',
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizat',
     articleTimestampSuffix: '',
@@ -27,8 +27,8 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Legendă audio',
     defaultCaptionOffscreenText: 'Legendă, ',
     imageCopyrightOffscreenText: 'Sursă imagine, ',
-    locale: 'ro_RO',
-    datetimeLocale: 'ro',
+    locale: 'en_GB',
+    datetimeLocale: 'en-gb',
     service: 'romania',
     serviceName: 'Romanian',
     serviceLocalizedName: 'România',
