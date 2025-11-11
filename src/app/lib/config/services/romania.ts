@@ -6,7 +6,7 @@ import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'en-GB',
+    lang: 'ro',
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizat',
     articleTimestampSuffix: '',
@@ -27,8 +27,8 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Legendă audio',
     defaultCaptionOffscreenText: 'Legendă, ',
     imageCopyrightOffscreenText: 'Sursă imagine, ',
-    locale: 'en_GB',
-    datetimeLocale: 'en-gb',
+    locale: 'ro_RO',
+    datetimeLocale: 'ro',
     service: 'romania',
     serviceName: 'Romanian',
     serviceLocalizedName: 'România',
@@ -398,7 +398,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nu este responsabil de conținutul altor site-uri.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Bucharest',
     navigation: [
       {
         title: 'Home',
