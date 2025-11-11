@@ -1,3 +1,4 @@
+import { SerializedStyles, Theme } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
@@ -9,8 +10,7 @@ type ChevronProps = {
 };
 
 const getChevronCss = (size = 'pica') => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const chevronCss: any[] = [];
+  const chevronCss: Array<(_theme: Theme) => SerializedStyles> = [];
 
   if (size === 'brevier') {
     chevronCss.push(styles.brevierSize);

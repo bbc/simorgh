@@ -70,8 +70,6 @@ export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
       dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
   }
 
-  if (!normalisedDirection) return null;
-
   return (
     <svg
       viewBox="0 0 32 32"
