@@ -17,7 +17,7 @@ type ReadTimeProps = {
 };
 
 const DEFAULT_TRANSLATIONS = {
-  long: 'Long Read',
+  long: 'Long read',
   minute: 'min',
   read: 'read',
 };
