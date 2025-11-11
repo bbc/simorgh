@@ -81,9 +81,9 @@ export const service: DefaultServiceConfig = {
         articleDataSavingLinkText: 'Versiune site cu minim trafic de date',
       },
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Player media',
+        audioPlayer: 'Player audio',
+        videoPlayer: 'Player video',
       },
       liveExperiencePage: {
         liveLabel: 'Live',
