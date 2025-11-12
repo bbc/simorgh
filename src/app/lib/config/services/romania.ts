@@ -1,5 +1,5 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import 'moment/locale/ro';
+import '../../../legacy/psammead/psammead-locales/moment/ro';
 import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
