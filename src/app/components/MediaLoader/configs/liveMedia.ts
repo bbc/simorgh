@@ -32,9 +32,12 @@ export default ({
 
   const rawDuration = moment.duration(duration).asSeconds();
 
-  const isInternalReferrer = document.referrer.includes(
-    window.location.hostname,
-  );
+  const isBrowser =
+    typeof window !== 'undefined' && typeof document !== 'undefined';
+
+  const isInternalReferrer = isBrowser
+    ? document.referrer.includes(window.location.hostname)
+    : false;
 
   // Enable autoplay only on live TV pages when the user is coming to the page from an internal link
   const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
