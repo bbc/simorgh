@@ -34,7 +34,6 @@ import {
   MediaBlock,
   PlaceholderConfig,
 } from '../types';
-import { set } from 'ramda';
 
 jest.mock('#app/lib/utilities/isLive', () =>
   jest.fn().mockImplementation(() => true),
