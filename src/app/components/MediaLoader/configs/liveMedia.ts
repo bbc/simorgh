@@ -32,10 +32,20 @@ export default ({
 
   const rawDuration = moment.duration(duration).asSeconds();
 
+  const isInternalReferrer = document.referrer.includes(
+    window.location.hostname,
+  );
+
+  // Enable autoplay only on live TV pages when the user is coming to the page from an internal link
+  const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
+
+  console.log('Referrer:', document.referrer);
+  console.log('Hostname:', window.location.hostname);
+
   return {
     playerConfig: {
       ...basePlayerConfig,
-      autoplay: pageType === LIVE_TV_PAGE, // Enable autoplay only on live TV pages
+      autoplay: shouldAutoplay,
       statsObject: {
         ...basePlayerConfig.statsObject,
         episodePID: liveMediaBlock.id,
