@@ -6,6 +6,12 @@ import keyPoints from './keyPoints';
 import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 
 const testDetails = {
   pageType: 'live',
@@ -44,7 +50,30 @@ const atiAnalyticsTestSuites = {
       applicationType: 'responsive',
       contentType: 'live-coverage',
       useReverb: true,
-      tests: [assertPageView],
+      tests: [
+        assertPageView,
+        assertScrollableNavigationComponentView,
+        assertScrollableNavigationComponentClick,
+        assertDropdownNavigationComponentView,
+        assertDropdownNavigationComponentClick,
+      ],
+    },
+    {
+      path: '/urdu/live/cx2qdkezzzvt',
+      runforEnv: ['live'],
+      service: 'urdu',
+      pageIdentifier: 'live_coverage.cx2qdkezzzvt.page',
+      siteId: 95,
+      applicationType: 'responsive',
+      contentType: 'live-coverage',
+      useReverb: true,
+      tests: [
+        assertPageView,
+        assertScrollableNavigationComponentView,
+        assertScrollableNavigationComponentClick,
+        assertDropdownNavigationComponentView,
+        assertDropdownNavigationComponentClick,
+      ],
     },
   ],
 };
