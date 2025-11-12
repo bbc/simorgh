@@ -1,28 +1,8 @@
-import moment from 'moment';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import 'moment/locale/ro';
 import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
-
-moment.updateLocale('ro', {
-  relativeTime: {
-    future: 'peste %s',
-    past: 'acum %s',
-    s: 'câteva secunde',
-    ss: '%d secunde',
-    m: 'un minut',
-    mm: '%d minute',
-    h: 'o oră',
-    hh: '%d ore',
-    d: 'o zi',
-    dd: '%d zile',
-    M: 'o lună',
-    MM: '%d luni',
-    y: 'un an',
-    yy: '%d ani',
-  },
-});
 
 export const service: DefaultServiceConfig = {
   default: {
