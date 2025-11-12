@@ -34,6 +34,7 @@ import {
   MediaBlock,
   PlaceholderConfig,
 } from '../types';
+import { set } from 'ramda';
 
 jest.mock('#app/lib/utilities/isLive', () =>
   jest.fn().mockImplementation(() => true),
@@ -1470,24 +1471,107 @@ describe('buildSettings', () => {
       });
     });
 
-    it('Should not autoplay media if pageType is not a Live TV page.', () => {
-      const result = buildSettings({
-        ...baseSettings,
-        blocks: [livePageVideoClipMediaBlock as MediaBlock],
-        pageType: LIVE_PAGE,
+    describe('autoplay behaviour', () => {
+      const originalReferrer = document.referrer;
+
+      beforeEach(() => {
+        Object.defineProperty(window, 'referrer', {
+          value: '',
+          configurable: true,
+        });
       });
 
-      expect(result?.playerConfig.autoplay).toBe(false);
-    });
-
-    it('Should autoplay media if pageType is a Live TV page.', () => {
-      const result = buildSettings({
-        ...arabicMediaBaseSettings,
-        blocks: [liveTvPageMediaBlock] as MediaBlock[],
-        pageType: LIVE_TV_PAGE,
+      Object.defineProperty(window.location, 'hostname', {
+        value: { hostname: 'www.bbc.com' },
+        configurable: true,
       });
 
-      expect(result?.playerConfig.autoplay).toBe(true);
+      afterEach(() => {
+        Object.defineProperty(document, 'referrer', {
+          value: originalReferrer,
+          configurable: true,
+        });
+      });
+
+      it('Should autoplay media if referrer is internal and pageType is LIVE_TV_PAGE.', () => {
+        Object.defineProperty(window.location, 'hostname', {
+          get: () => 'www.bbc.com',
+          configurable: true,
+        });
+
+        Object.defineProperty(document, 'referrer', {
+          get: () => 'https://www.bbc.com',
+          configurable: true,
+        });
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(true);
+      });
+
+      it('Should not autoplay media if referrer is external and pageType is LIVE_TV_PAGE.', () => {
+        Object.defineProperty(window.location, 'hostname', {
+          get: () => 'www.bbc.com',
+          configurable: true,
+        });
+
+        Object.defineProperty(document, 'referrer', {
+          get: () => 'https://www.google.com',
+          configurable: true,
+        });
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is empty and pageType is LIVE_TV_PAGE.', () => {
+        Object.defineProperty(window.location, 'hostname', {
+          get: () => 'www.bbc.com',
+          configurable: true,
+        });
+
+        Object.defineProperty(document, 'referrer', {
+          get: () => '',
+          configurable: true,
+        });
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is internal and pageType is not LIVE_TV_PAGE.', () => {
+        Object.defineProperty(window.location, 'hostname', {
+          get: () => 'www.bbc.com',
+          configurable: true,
+        });
+
+        Object.defineProperty(document, 'referrer', {
+          get: () => 'https://www.bbc.com',
+          configurable: true,
+        });
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
     });
   });
 });
