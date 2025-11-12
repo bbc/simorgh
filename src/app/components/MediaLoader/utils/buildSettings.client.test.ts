@@ -1471,37 +1471,21 @@ describe('buildSettings', () => {
     });
 
     describe('autoplay behaviour', () => {
-      const originalReferrer = document.referrer;
-
       beforeEach(() => {
-        Object.defineProperty(window, 'referrer', {
-          value: '',
-          configurable: true,
-        });
-      });
-
-      Object.defineProperty(window.location, 'hostname', {
-        value: { hostname: 'www.bbc.com' },
-        configurable: true,
+        jest
+          .spyOn(window.location, 'hostname', 'get')
+          .mockReturnValue('www.bbc.com');
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
       });
 
       afterEach(() => {
-        Object.defineProperty(document, 'referrer', {
-          value: originalReferrer,
-          configurable: true,
-        });
+        jest.restoreAllMocks(); // Automatically restores all mocks
       });
 
       it('Should autoplay media if referrer is internal and pageType is LIVE_TV_PAGE.', () => {
-        Object.defineProperty(window.location, 'hostname', {
-          get: () => 'www.bbc.com',
-          configurable: true,
-        });
-
-        Object.defineProperty(document, 'referrer', {
-          get: () => 'https://www.bbc.com',
-          configurable: true,
-        });
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
 
         const result = buildSettings({
           ...baseSettings,
@@ -1513,15 +1497,9 @@ describe('buildSettings', () => {
       });
 
       it('Should not autoplay media if referrer is external and pageType is LIVE_TV_PAGE.', () => {
-        Object.defineProperty(window.location, 'hostname', {
-          get: () => 'www.bbc.com',
-          configurable: true,
-        });
-
-        Object.defineProperty(document, 'referrer', {
-          get: () => 'https://www.google.com',
-          configurable: true,
-        });
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.google.com');
 
         const result = buildSettings({
           ...baseSettings,
@@ -1533,15 +1511,7 @@ describe('buildSettings', () => {
       });
 
       it('Should not autoplay media if referrer is empty and pageType is LIVE_TV_PAGE.', () => {
-        Object.defineProperty(window.location, 'hostname', {
-          get: () => 'www.bbc.com',
-          configurable: true,
-        });
-
-        Object.defineProperty(document, 'referrer', {
-          get: () => '',
-          configurable: true,
-        });
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
 
         const result = buildSettings({
           ...baseSettings,
@@ -1553,15 +1523,9 @@ describe('buildSettings', () => {
       });
 
       it('Should not autoplay media if referrer is internal and pageType is not LIVE_TV_PAGE.', () => {
-        Object.defineProperty(window.location, 'hostname', {
-          get: () => 'www.bbc.com',
-          configurable: true,
-        });
-
-        Object.defineProperty(document, 'referrer', {
-          get: () => 'https://www.bbc.com',
-          configurable: true,
-        });
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
 
         const result = buildSettings({
           ...baseSettings,
