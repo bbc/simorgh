@@ -23,7 +23,7 @@ export const redirectScript = (
 };
 
 export default () => {
-  const { pathname, isLite } = use(RequestContext);
+  const { pathname, isLite, isAmp } = use(RequestContext);
   const toLitePath = `${pathname}.lite`;
   const innerHTML = `(
     window.addEventListener('load', () => {
@@ -32,13 +32,15 @@ export default () => {
   )`;
 
   return (
-    <Helmet
-      script={[
-        {
-          type: 'text/javascript',
-          innerHTML,
-        },
-      ]}
-    />
+    !isAmp && (
+      <Helmet
+        script={[
+          {
+            type: 'text/javascript',
+            innerHTML,
+          },
+        ]}
+      />
+    )
   );
 };

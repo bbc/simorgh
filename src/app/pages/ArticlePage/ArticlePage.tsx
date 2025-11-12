@@ -391,7 +391,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      <LiteRedirect />
+      {/* <LiteRedirect /> */}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
