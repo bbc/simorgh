@@ -39,9 +39,6 @@ export default ({
   // Enable autoplay only on live TV pages when the user is coming to the page from an internal link
   const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
 
-  console.log('Referrer:', document.referrer);
-  console.log('Hostname:', window.location.hostname);
-
   return {
     playerConfig: {
       ...basePlayerConfig,
