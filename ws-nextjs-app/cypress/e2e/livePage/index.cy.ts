@@ -1,8 +1,11 @@
+import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';
 import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 
 const testDetails = {
   pageType: 'live',
@@ -29,6 +32,30 @@ const testDetails = {
   ],
 };
 
+const atiAnalyticsTestSuites = {
+  pageType: 'live',
+  testSuites: [
+    {
+      path: '/pidgin/live/c7p765ynk9qt',
+      runforEnv: ['local', 'test'],
+      service: 'pidgin',
+      pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+      siteId: 70,
+      applicationType: 'responsive',
+      contentType: 'live-coverage',
+      useReverb: true,
+      tests: [assertPageView],
+    },
+  ],
+};
+
 describe('Live Page Spec', () => {
   runTestsForPage(testDetails);
+});
+
+runTestsForPage({
+  pageType: LIVE_PAGE,
+  testSuites: atiAnalyticsTestSuites.testSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });
