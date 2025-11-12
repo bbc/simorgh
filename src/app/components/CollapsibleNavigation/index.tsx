@@ -3,6 +3,8 @@
 import { jsx } from '@emotion/react';
 import React, { useState, useRef, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import { Close } from '../icons';
 import { CollapsibleNavigationSection } from './types';
@@ -21,15 +23,34 @@ const CollapsibleNavigation = ({
   const isHydrated = useHydrationDetection();
   const activeNavItemRef = useRef<HTMLAnchorElement | null>(null);
 
+  const navSectionEventTrackingData: EventTrackingMetadata = {
+    componentName: 'collapsible-navigation-section',
+  };
+
+  const navLinkEventTrackingData: EventTrackingMetadata = {
+    componentName: 'collapsible-navigation-link',
+  };
+
+  const { onClick: navSectionClickTrackerHandler } = useClickTrackerHandler(
+    navSectionEventTrackingData,
+  );
+
+  const { onClick: navLinkClickTrackerHandler } = useClickTrackerHandler(
+    navLinkEventTrackingData,
+  );
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     section: CollapsibleNavigationSection,
   ) => {
     if (section.href) {
+      navLinkClickTrackerHandler?.(e);
       return;
     }
 
     e.preventDefault();
+    navSectionClickTrackerHandler?.(e);
+
     const isActive = openSection === section.id;
 
     if (isActive) {
@@ -46,8 +67,7 @@ const CollapsibleNavigation = ({
     }
   };
 
-  const handleClose = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleClose = () => {
     setOpenSection(null);
 
     if (activeNavItemRef.current) {
@@ -131,9 +151,13 @@ const CollapsibleNavigation = ({
                           <a
                             href={link.href}
                             css={styles.subNavLink}
+                            onClick={e => navLinkClickTrackerHandler?.(e)}
                             {...(link?.lang && { lang: link.lang })}
                             {...(link?.latinTransliteration && {
                               'aria-label': link?.latinTransliteration,
+                            })}
+                            {...(link?.disableTranslation && {
+                              translate: 'no',
                             })}
                           >
                             <span id={linkLabelId}>{link.label}</span>

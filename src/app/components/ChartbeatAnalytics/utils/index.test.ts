@@ -29,14 +29,6 @@ jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),
 );
 
-const mockWindowObj = {
-  location: {
-    pathname: '/',
-  },
-} as Window & typeof globalThis;
-
-jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
-
 describe('Chartbeat utilities', () => {
   afterEach(() => {
     jest.clearAllMocks();

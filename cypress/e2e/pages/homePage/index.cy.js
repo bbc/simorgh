@@ -252,7 +252,7 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
+    useReverb: true,
     siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
     tests: [...liteSiteTests],
   };
