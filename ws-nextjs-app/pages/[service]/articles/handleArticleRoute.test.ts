@@ -6,12 +6,13 @@ import defaultToggles from '#app/lib/config/toggles';
 import handleArticleRoute from './handleArticleRoute';
 
 describe('handleArticleRoute', () => {
+  const mockSetHeader = jest.fn();
   const mockGetServerSidePropsContext = {
     req: {
       headers: {},
     } as unknown as GetServerSidePropsContext['req'],
     res: {
-      setHeader: jest.fn(),
+      setHeader: mockSetHeader,
       removeHeader: jest.fn(),
     } as unknown as GetServerSidePropsContext['res'],
     resolvedUrl: '/pidgin/articles/cvpde7nqj92o',
@@ -37,6 +38,28 @@ describe('handleArticleRoute', () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
 
     expect(result.props.status).toEqual(200);
+  });
+
+  it('returns correct cache-control header if article is older than six hours', async () => {
+    jest.spyOn(Date, 'now').mockImplementation(() => 2673964957894);
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+
+    expect(mockSetHeader).toHaveBeenCalledWith(
+      'Cache-Control',
+      expect.stringContaining('max-age=90'),
+    );
+  });
+
+  it('returns correct cache-control header if article is not older than six hours', async () => {
+    jest.spyOn(Date, 'now').mockImplementation(() => 1673964987894);
+
+    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+
+    expect(mockSetHeader).toHaveBeenCalledWith(
+      'Cache-Control',
+      expect.stringContaining('max-age=45'),
+    );
   });
 
   it('returns error props if shouldRender fails - 500', async () => {
