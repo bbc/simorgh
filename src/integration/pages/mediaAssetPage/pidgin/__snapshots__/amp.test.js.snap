@@ -1,104 +1,78 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AMP Media Asset Page A11y I can see the skip to content link 1`] = `"Waka go wetin de inside"`;
 
-exports[`AMP Media Asset Page AMP Consent config 1`] = `
-{
-  "consents": {
-    "user-consent": {
-      "promptIfUnknownForGeoGroup": "eea",
-      "promptUI": "consent-prompt",
-    },
-  },
-  "policy": {
-    "default": {
-      "timeout": {
-        "fallbackAction": "reject",
-        "seconds": 0,
-      },
-      "waitFor": {
-        "user-consent": [],
-      },
-    },
-  },
-}
-`;
-
-exports[`AMP Media Asset Page AMP Geo config 1`] = `
-{
-  "AmpBind": true,
-  "ISOCountryGroups": {
-    "eea": [
-      "at",
-      "ax",
-      "be",
-      "bg",
-      "bl",
-      "cy",
-      "cz",
-      "de",
-      "dk",
-      "ea",
-      "ee",
-      "es",
-      "fi",
-      "fr",
-      "gb",
-      "gf",
-      "gg",
-      "gi",
-      "gp",
-      "gr",
-      "hr",
-      "hu",
-      "ic",
-      "ie",
-      "im",
-      "is",
-      "it",
-      "je",
-      "li",
-      "lt",
-      "lu",
-      "lv",
-      "mf",
-      "mq",
-      "mt",
-      "nc",
-      "nl",
-      "no",
-      "pf",
-      "pl",
-      "pm",
-      "pt",
-      "re",
-      "ro",
-      "se",
-      "si",
-      "sj",
-      "sk",
-      "tf",
-      "va",
-      "wf",
-      "yt",
-    ],
-    "gbOrUnknown": [
-      "gb",
-      "gg",
-      "im",
-      "je",
-      "uk",
-      "unknown",
-    ],
-  },
-}
-`;
+exports[`AMP Media Asset Page AMP Geo config 1`] = `"{"AmpBind":true,"ISOCountryGroups":{"eea":["at","ax","be","bg","bl","cy","cz","de","dk","ea","ee","es","fi","fr","gb","gf","gg","gi","gp","gr","hr","hu","ic","ie","im","is","it","je","li","lt","lu","lv","mf","mq","mt","nc","nl","no","pf","pl","pm","pt","re","ro","se","si","sj","sk","tf","va","wf","yt"],"gbOrUnknown":["gb","gg","im","je","uk","unknown"]}}"`;
 
 exports[`AMP Media Asset Page Analytics ATI 1`] = `
 {
   "requests": {
-    "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=70&p=pidgin.media_asset.23248703.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Acurie%3Aasset%3A5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&x2=[amp]&x3=[news-pidgin]&x4=[pcm]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-media-asset]&x8=[simorgh]&x9=[DO%2520NOT%2520EDIT%2520THIS%2520IS%2520AN%2520AUTOMATED%2520TEST%2520dolor%2520sit%2520amet%2C%2520consectetur%2520Lorem%2520'ipsum'%2520dolor%2520sit%2520amet%2C%2520consectetur%2520Lorem%2520ipsum%2520dolor%2520sit%3Cem%3Eamet%3C%2Fem%3E%2C%2520consectetur%2520-%2520BBC%2520News%2520Pidgin]&x11=[2019-09-13T15%3A31%3A44.000Z]&x12=[2020-06-10T14%3A24%3A07.000Z]&x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&x17=[Opinion]&ref=\${documentReferrer}",
+    "base": "https://logws1363.ati-host.net/hit.xiti?",
+    "pageview": [
+      {
+        "s": "598343",
+      },
+      {
+        "s2": "70",
+      },
+      {
+        "p": "pidgin.media_asset.23248703.page",
+      },
+      {
+        "r": "\${screenWidth}x\${screenHeight}x\${screenColorDepth}",
+      },
+      {
+        "re": "\${availableScreenWidth}x\${availableScreenHeight}",
+      },
+      {
+        "hl": "\${timestamp}",
+      },
+      {
+        "lng": "\${browserLanguage}",
+      },
+      {
+        "x1": "[urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]",
+      },
+      {
+        "x2": "[amp]",
+      },
+      {
+        "x3": "[news-pidgin]",
+      },
+      {
+        "x4": "[pcm]",
+      },
+      {
+        "x5": "[\${sourceUrl}]",
+      },
+      {
+        "x6": "[\${documentReferrer}]",
+      },
+      {
+        "x7": "[article-media-asset]",
+      },
+      {
+        "x8": "[simorgh]",
+      },
+      {
+        "x9": "[DO%20NOT%20EDIT%20THIS%20IS%20AN%20AUTOMATED%20TEST%20dolor%20sit%20amet,%20consectetur%20Lorem%20'ipsum'%20dolor%20sit%20amet,%20consectetur%20Lorem%20ipsum%20dolor%20sit<em>amet</em>,%20consectetur%20-%20BBC%20News%20Pidgin]",
+      },
+      {
+        "x11": "[2019-09-13T15:31:44.000Z]",
+      },
+      {
+        "x12": "[2020-06-10T14:24:07.000Z]",
+      },
+      {
+        "x16": "[Inspire me~Give me perspective~Keep me on trend]",
+      },
+      {
+        "x17": "[Opinion]",
+      },
+      {
+        "ref": "\${documentReferrer}",
+      },
+    ],
   },
   "transport": {
     "beacon": false,
@@ -123,17 +97,6 @@ exports[`AMP Media Asset Page Analytics chartbeat 1`] = `
     "title": "DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
-  },
-}
-`;
-
-exports[`AMP Media Asset Page Analytics comscore 1`] = `
-{
-  "extraUrlParams": {
-    "comscorekw": "amp",
-  },
-  "vars": {
-    "c2": "17986528",
   },
 }
 `;
@@ -197,14 +160,7 @@ exports[`AMP Media Asset Page Footer Anchors should match text and url 8`] = `
 exports[`AMP Media Asset Page Footer Anchors should match text and url 9`] = `
 {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.com/editorialguidelines/guidance/feeds-and-links",
-}
-`;
-
-exports[`AMP Media Asset Page Footer Cookie Settings Button should match text and on handler 1`] = `
-{
-  "on": "tap:consent.prompt, cookie.show, AMP.setState({ isManagingSettings: true })",
-  "text": "Do not share or sell my info",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
 }
 `;
 
@@ -212,7 +168,14 @@ exports[`AMP Media Asset Page Footer I can click on the BBC branding and it woul
 
 exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
-exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`AMP Media Asset Page Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Pidgin",
+  "svg": <path
+    d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+  />,
+}
+`;
 
 exports[`AMP Media Asset Page Header Navigation link should match text and url 1`] = `
 {
@@ -270,11 +233,11 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 8
 }
 `;
 
-exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"<Media Asset Page>"`;
+exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
-exports[`AMP Media Asset Page I can see a bulleted list item with link: <Media Asset Page> 1`] = `"/afrique/23248423"`;
+exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;
 
-exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`AMP Media Asset Page Main heading should match text 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`AMP Media Asset Page SEO Apple Touch Icon should match attributes 1`] = `
 {
@@ -352,7 +315,7 @@ exports[`AMP Media Asset Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`AMP Media Asset Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur"`;
+exports[`AMP Media Asset Page SEO Heading level 1 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur"`;
 
 exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"pcm"`;
 
@@ -439,7 +402,7 @@ exports[`AMP Media Asset Page SEO OG type 1`] = `"article"`;
 
 exports[`AMP Media Asset Page SEO OG url 1`] = `"http://localhost:7080/pidgin/23248703"`;
 
-exports[`AMP Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sit<em>amet</em>, consectetur - BBC News Pidgin"`;
+exports[`AMP Media Asset Page SEO Page title 1`] = `"DO NOT EDIT THIS IS AN AUTOMATED TEST dolor sit amet, consectetur Lorem 'ipsum' dolor sit amet, consectetur Lorem ipsum dolor sitamet, consectetur - BBC News Pidgin"`;
 
 exports[`AMP Media Asset Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 

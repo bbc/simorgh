@@ -48,6 +48,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -205,16 +206,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       hasMostRead: false,
       numberOfItems: 10,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

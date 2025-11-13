@@ -11,7 +11,7 @@ describe('onEnvironment check', () => {
 
   it('should not call wrapper function if no environments', () => {
     onEnvironment([], {})(wrappedFunction);
-    expect(wrappedFunction).not.toBeCalled();
+    expect(wrappedFunction).not.toHaveBeenCalled();
   });
 
   it('should not call wrapper function if environment does not match', () => {
@@ -19,7 +19,7 @@ describe('onEnvironment check', () => {
 
     onEnvironment(['local', 'test'], {})(wrappedFunction);
 
-    expect(wrappedFunction).not.toBeCalled();
+    expect(wrappedFunction).not.toHaveBeenCalled();
   });
 
   it('should not call wrapper function on live environment', () => {
@@ -27,7 +27,7 @@ describe('onEnvironment check', () => {
 
     onEnvironment(['test'], {})(wrappedFunction);
 
-    expect(wrappedFunction).not.toBeCalled();
+    expect(wrappedFunction).not.toHaveBeenCalled();
   });
 
   it('should call wrapper function if environment matches', () => {
@@ -35,7 +35,7 @@ describe('onEnvironment check', () => {
 
     onEnvironment(['test', 'live'], {})(wrappedFunction);
 
-    expect(wrappedFunction).toBeCalled();
+    expect(wrappedFunction).toHaveBeenCalled();
   });
 
   it('should call wrapper function on test environment', () => {
@@ -43,6 +43,6 @@ describe('onEnvironment check', () => {
 
     onEnvironment(['test'], {})(wrappedFunction);
 
-    expect(wrappedFunction).toBeCalled();
+    expect(wrappedFunction).toHaveBeenCalled();
   });
 });

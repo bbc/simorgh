@@ -18,6 +18,8 @@ type Props = {
   legacyScripts: React.ReactElement;
   links: React.ReactElement;
   modernScripts: React.ReactElement;
+  service?: string;
+  nonce?: string;
 };
 
 const Document = ({
@@ -30,6 +32,8 @@ const Document = ({
   legacyScripts,
   links,
   modernScripts,
+  service,
+  nonce,
 }: Props) => {
   const title = helmet.title.toComponent();
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -59,10 +63,12 @@ const Document = ({
     case isAmp:
       return (
         <AmpRenderer
+          bodyContent={
+            <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+          }
           helmetMetaTags={helmetMetaTags}
           helmetLinkTags={helmetLinkTags}
           helmetScriptTags={helmetScriptTags}
-          html={html}
           htmlAttrs={htmlAttrs}
           ids={ids}
           styles={css}
@@ -85,6 +91,8 @@ const Document = ({
           modernScripts={modernScripts}
           styles={css}
           title={title}
+          service={service}
+          nonce={nonce}
         />
       );
   }

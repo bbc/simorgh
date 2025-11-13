@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '../../../hooks/useViewTracker';
 import { MostReadLink, MostReadItemWrapper } from './Item';
 import MostReadList from './List';
@@ -14,16 +15,14 @@ interface MostReadProps {
   columnLayout?: ColumnLayout;
   size: Size;
   data: MostReadData;
-  eventTrackingData?: {
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingData;
 }
 
 const MostRead = ({
   columnLayout = 'multiColumn',
   size,
   data,
-  eventTrackingData,
+  ...props
 }: MostReadProps) => {
   const {
     service,
@@ -33,12 +32,27 @@ const MostRead = ({
     serviceDatetimeLocale,
     timezone,
     mostRead: { lastUpdated, numberOfItems = 5 },
-  } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
-
-  const locale = serviceDatetimeLocale || datetimeLocale;
+  } = use(ServiceContext);
 
   const items = data.items?.slice(0, numberOfItems) || [];
+
+  const {
+    eventTrackingData = {
+      componentName: 'most-read',
+    },
+  } = props;
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    groupTracker: {
+      ...eventTrackingData.groupTracker,
+      itemCount: items.length,
+    },
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
+
+  const locale = serviceDatetimeLocale || datetimeLocale;
 
   const direction = dir as Direction;
   const fontScript = script as TypographyScript;
@@ -57,7 +71,7 @@ const MostRead = ({
               dir={direction}
               key={id}
               columnLayout={columnLayout}
-              ref={viewRef}
+              ref={viewTracker}
             >
               <MostReadRank
                 service={service}
@@ -73,7 +87,9 @@ const MostRead = ({
                 title={title}
                 href={href}
                 size={size}
-                eventTrackingData={eventTrackingData}
+                id={id}
+                position={i + 1}
+                eventTrackingData={eventTrackingDataExtended}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
                   <LastUpdated

@@ -1,5 +1,6 @@
 import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { render, screen } from '../../react-testing-library-with-providers';
 
 import CurationPromo from '.';
@@ -12,6 +13,9 @@ interface FixtureProps {
   duration?: number;
   link?: string;
   isLive?: boolean;
+  position?: number;
+  resourceId?: string;
+  eventTrackingData?: EventTrackingData;
 }
 
 const Fixture = ({
@@ -20,6 +24,9 @@ const Fixture = ({
   duration,
   link = 'https://www.bbc.com/mundo/noticias-america-latina-60742314',
   isLive,
+  position = 1,
+  resourceId = 'e2263a1c-8d5a-4a73-a00c-881acfa34381',
+  eventTrackingData,
 }: FixtureProps) => (
   <CurationPromo
     lazy={lazy}
@@ -33,6 +40,9 @@ const Fixture = ({
     type={type}
     duration={duration}
     isLive={isLive}
+    position={position}
+    id={resourceId}
+    eventTrackingData={eventTrackingData}
   />
 );
 
@@ -62,7 +72,7 @@ describe('Curation Promo', () => {
         .getByAltText('Campesino indígena peruano.')
         .getAttribute('loading');
 
-      expect(loadingAttribute).toBeNull();
+      expect(loadingAttribute).toBe('eager');
     });
 
     it('should lazy load when lazy is truthy', () => {

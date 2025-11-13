@@ -1,35 +1,66 @@
 /** @jsx jsx */
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useMemo } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import Text from '../Text';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { FontVariant, GelFontSize } from '../../models/types/theming';
+import Chevron from './Chevron';
+import ButtonLikeWrapper from './ButtonLikeWrapper';
+import Text from './Text';
 import styles from './index.styles';
-import { CallToActionLinkProps } from './types';
+import CallToActionLinkContext from './CallToActionLinkContext';
+
+type CallToActionLinkProps = {
+  url: string;
+  className?: string;
+  eventTrackingData?: EventTrackingData;
+  alignWithMargin?: boolean;
+  download?: boolean;
+  fontVariant?: FontVariant;
+  size?: GelFontSize;
+};
 
 const CallToActionLink = ({
-  href,
-  className,
+  url,
   children,
   eventTrackingData,
+  alignWithMargin,
   download = false,
+  className,
+  fontVariant = 'sansBold',
+  size = 'pica',
+  ...htmlAttributes
 }: PropsWithChildren<CallToActionLinkProps>) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
+  const callToActionLinkContextValue = useMemo(
+    () => ({
+      fontVariant,
+      size,
+    }),
+    [fontVariant, size],
+  );
+
+  if (!url) return null;
+
   return (
     <a
-      href={href}
+      href={url}
+      {...(eventTrackingData && clickTrackerHandler)}
       className={className}
-      css={styles.linkBackground}
-      onClick={clickTrackerHandler}
       download={download}
+      {...htmlAttributes}
+      css={[styles.link, alignWithMargin && styles.alignWithMargin]}
     >
-      <div css={styles.linkTextWrapper}>
-        <Text size="pica" fontVariant="sansBold" css={styles.linkText}>
-          {children}
-        </Text>
-      </div>
+      <CallToActionLinkContext.Provider value={callToActionLinkContextValue}>
+        {children}
+      </CallToActionLinkContext.Provider>
     </a>
   );
 };
+
+CallToActionLink.Chevron = Chevron;
+CallToActionLink.ButtonLikeWrapper = ButtonLikeWrapper;
+CallToActionLink.Text = Text;
 
 export default CallToActionLink;

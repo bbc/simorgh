@@ -8,13 +8,17 @@ import {
   articleDataNews,
   articleDataNewsWithEmbeds,
   articleDataPersian,
+  articleDataPersianWithFourParagraphs,
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
   promoSample,
-  sampleRecommendations,
   articlePglDataPidgin,
   articleStyDataPidgin,
+  articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
@@ -31,7 +35,7 @@ import { Services } from '#app/models/types/global';
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
-import * as useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import {
   render,
   screen,
@@ -41,7 +45,7 @@ import {
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ArticlePage from './ArticlePage';
 import ThemeProvider from '../../components/ThemeProvider';
-import ATIAnalytics from '../../components/ATIAnalytics';
+import * as ATIAnalytics from '../../components/ATIAnalytics';
 
 jest.mock('../../components/ThemeProvider');
 
@@ -49,17 +53,23 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
 });
-jest.mock('../../components/ATIAnalytics');
 
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
+const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
+atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
+
+jest.mock('#app/components/OptimizelyPageMetrics');
 
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
 }));
 
-const useDecisionSpy = jest.spyOn(useOptimizelyVariation, 'default');
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  onClient: jest.fn(() => true),
+}));
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -78,6 +88,7 @@ type Props = {
   isApp?: boolean;
   promo?: boolean | null;
   isAmp?: boolean;
+  isLite?: boolean;
   id?: string | null;
 };
 
@@ -90,6 +101,7 @@ const Context = ({
   isApp = false,
   promo = null,
   isAmp = false,
+  isLite = false,
   id,
 }: PropsWithChildren<Props> = {}) => {
   const appInput = {
@@ -98,6 +110,7 @@ const Context = ({
     showAdsBasedOnLocation,
     isApp,
     isAmp,
+    isLite,
     id,
   };
 
@@ -111,9 +124,6 @@ const Context = ({
             },
             ads: {
               enabled: adsToggledOn,
-            },
-            cpsRecommendations: {
-              enabled: true,
             },
             podcastPromo: { enabled: promo != null },
           }}
@@ -135,49 +145,39 @@ beforeEach(() => {
 
 afterEach(() => {
   delete process.env.SIMORGH_ICHEF_BASE_URL;
-
-  (ATIAnalytics as jest.Mock).mockImplementation(
-    jest.requireActual('../../components/ATIAnalytics').default,
-  );
-});
-
-afterAll(() => {
-  (ATIAnalytics as jest.Mock).mockReset();
 });
 
 describe('Article Page', () => {
   it.each([
     {
       testScenario:
-        'should show the CTA on non Lite Site pages, when the toggle is enabled',
+        'should show the lite site link on non Lite pages, when the toggle is enabled',
       isLite: false,
       toggleEnabled: true,
       shouldBeDisplayed: true,
     },
     {
       testScenario:
-        'should not show the CTA on non Lite Site pages, when the toggle is false',
+        'should not show the lite site link on non Lite pages, when the toggle is false',
       isLite: false,
       toggleEnabled: false,
       shouldBeDisplayed: false,
     },
     {
       testScenario:
-        'should not show the CTA on Lite Site pages, regardless of the toggle',
+        'should not show the lite site link on Lite pages, regardless of the toggle',
       isLite: true,
       toggleEnabled: true,
       shouldBeDisplayed: false,
     },
   ])('$testScenario', ({ isLite, toggleEnabled, shouldBeDisplayed }) => {
-    useDecisionSpy.mockReturnValueOnce('off' as unknown as true);
-
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite,
-      toggles: { liteSiteCTA: { enabled: toggleEnabled } },
+      toggles: { articleLiteSiteLink: { enabled: toggleEnabled } },
     });
 
-    const liteCTA = screen.queryByRole('link', { name: /Nyandiko gusa/i });
+    const liteCTA = screen.queryByRole('link', { name: /Inyandiko gusa/ });
 
     if (shouldBeDisplayed) {
       expect(liteCTA).toBeInTheDocument();
@@ -186,10 +186,9 @@ describe('Article Page', () => {
     }
   });
 
-  it('should apply click and view tracking data on lite site cta link', () => {
+  it('should apply click and view tracking data on lite site link', () => {
     const eventTrackingData = {
-      componentName: 'canonical-lite-cta',
-      optimizely: null,
+      componentName: 'article-lite-site-link',
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
@@ -197,7 +196,7 @@ describe('Article Page', () => {
     render(<ArticlePage pageData={articleDataPersian} />, {
       service: 'gahuza',
       isLite: false,
-      toggles: { liteSiteCTA: { enabled: true } },
+      toggles: { articleLiteSiteLink: { enabled: true } },
     });
 
     expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
@@ -700,22 +699,6 @@ describe('Article Page', () => {
     });
   });
 
-  it('should render WSOJ recommendations when passed', async () => {
-    suppressPropWarnings(['optimizely', 'ForwardRef', 'null']);
-    const pageDataWithSecondaryColumn = {
-      ...articleDataNews,
-      recommendations: sampleRecommendations,
-    };
-    const { getByText } = render(
-      <Context service="turkce">
-        <ArticlePage pageData={pageDataWithSecondaryColumn} />
-      </Context>,
-      { service: 'turkce' },
-    );
-
-    expect(getByText('SAMPLE RECOMMENDATION 1 - HEADLINE')).toBeInTheDocument();
-  });
-
   it('should render PodcastPromos when passed', async () => {
     suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
     suppressPropWarnings(['pageData.promo.id', 'SecondaryColumn', 'undefined']);
@@ -862,15 +845,13 @@ describe('Article Page', () => {
     });
 
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articlePglDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -897,24 +878,25 @@ describe('Article Page', () => {
       );
 
       const helmetContent = Helmet.peek();
-      const schemaType = JSON.parse(helmetContent.scriptTags[1].innerHTML)[
-        '@graph'
-      ][0]['@type'];
+
+      const linkedData = helmetContent.scriptTags.find(
+        ({ type }) => type === 'application/ld+json',
+      ) || { innerHTML: '' };
+
+      const schemaType = JSON.parse(linkedData.innerHTML)['@graph'][0]['@type'];
 
       expect(schemaType).toEqual('Article');
     });
   });
   describe('when rendering an STY page', () => {
     it('should add brandname to page title in atiAnalytics', async () => {
-      (ATIAnalytics as jest.Mock).mockImplementation(() => <div />);
-
       render(
         <Context service="pidgin">
           <ArticlePage pageData={articleStyDataPidgin} />
         </Context>,
       );
 
-      expect(ATIAnalytics).toHaveBeenLastCalledWith(
+      expect(atiAnalyticsSpy).toHaveBeenLastCalledWith(
         {
           atiData: {
             categoryName: null,
@@ -932,5 +914,298 @@ describe('Article Page', () => {
         undefined,
       );
     });
+  });
+
+  describe('when rendering an article page with a portrait video', () => {
+    it.each`
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
+        expect(title?.textContent).toEqual(expected);
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
+
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
+
+    // EXPERIMENT: Article Read Time
+    it.skip('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    // EXPERIMENT: Article Read Time
+    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidgin,
+        metadata: {
+          ...articleDataPidgin.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Adaptive curations in secondary column', () => {
+    it("should render adaptive curations when variant is 'article_time_of_day_a'", async () => {
+      // negative tests possible when override removed
+      (useOptimizelyVariation as jest.Mock).mockReturnValue(
+        'article_time_of_day_a',
+      );
+      const dummyBillboardCurationData = {
+        summaries: [
+          {
+            type: 'link',
+            isLive: false,
+            title: 'बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें',
+            firstPublished: '',
+            lastPublished: '',
+            link: 'https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c5f6/live/11c27630-24a7-11ef-a13a-0b8c563da930.png.webp',
+            description:
+              'देखिए सोमवार से शुक्रवार हर रात 10 बजे से BBC News Hindi  के होम पेज पर.',
+            imageAlt: 'बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें',
+          },
+        ],
+        curationId: 'urn:bbc:tipo:list:2323cbdf-5d76-425c-94e0-fe743831ce17',
+        curationType: 'tipo-curation',
+        visualProminence: 'MAXIMUM',
+        position: 7,
+      };
+
+      const dummyMediaCurationData = {
+        summaries: [
+          {
+            type: 'video',
+            duration: 'PT4M4S',
+            isLive: false,
+            title:
+              'पाकिस्तान और अफ़ग़ानिस्तान के संघर्ष ने कैसे बढ़ाई पाकिस्तान के लिए मुश्किलें? - वुसअत की डायरी',
+            firstPublished: '2025-10-19T12:31:54.528Z',
+            lastPublished: '2025-10-19T12:31:54.528Z',
+            link: 'https://www.bbc.com/hindi/articles/c1e3lxjedj7o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9efb/live/b1e95390-acd7-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'पाकिस्तान ने अफ़ग़ानिस्तान से संघर्ष में भारत का नाम भी लिया, जिस पर भारत के विदेश मंत्रालय ने भी सख्ती से जवाब दिया. ऐसे में भारत-अफ़ग़ानिस्तान को लेकर पाकिस्तान कैसे परेशान है. \nइसी पर देखिए पाकिस्तान के वरिष्ठ पत्रकार वुसतुल्लाह ख़ान की यह ख़ास टिप्पणी.',
+            imageAlt:
+              'पाकिस्तान और अफ़ग़ानिस्तान के संघर्ष में भारत का नाम कैसे आया?',
+            id: 'c1e3lxjedj7o',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT17M15S',
+            isLive: false,
+            title:
+              'सर सैयद अहमद ख़ान ने कैसे की थी अलीगढ़ मुस्लिम यूनिवर्सिटी की स्थापना? - विवेचना',
+            firstPublished: '2025-10-19T12:29:49.472Z',
+            lastPublished: '2025-10-19T12:29:49.472Z',
+            link: 'https://www.bbc.com/hindi/articles/c39708z88myo',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/70ae/live/0631f9d0-acd7-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'अलीगढ़ मुस्लिम यूनिवर्सिटी की स्थापना कब और कैसे हुई और इस दौरान सर सैयद अहमद ख़ान का विरोध क्यों किया गया? ',
+            imageAlt: 'सर सैयद अहमद ख़ान',
+            id: 'c39708z88myo',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT3M16S',
+            isLive: false,
+            title:
+              'लड्डू से लेकर कलाकंद तक, कौन-सी मिठाई कितने दिन तक खाने लायक रहती है?',
+            firstPublished: '2025-10-19T08:28:55.699Z',
+            lastPublished: '2025-10-19T08:28:55.699Z',
+            link: 'https://www.bbc.com/hindi/articles/c0kpvl588x5o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ca54/live/d1063da0-acc4-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'एक दिन में कितनी मिठाई खाना सही है? और फ्रिज में रखी कौन-सी मिठाई कब तक ख़राब हो जाती है? फ़िट ज़िंदगी के आज के एपिसोड में यही जानिए.\n',
+            imageAlt: 'दिवाली के वक्त मिठाइयों को लेकर बरतें सावधानी',
+            id: 'c0kpvl588x5o',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT3M58S',
+            isLive: false,
+            title:
+              'टिकट न मिलने से लेकर भीड़ तक, दिवाली के लिए घर जाने वालों की परेशानियां- ग्राउंड रिपोर्ट',
+            firstPublished: '2025-10-18T14:22:27.963Z',
+            lastPublished: '2025-10-18T14:22:27.963Z',
+            link: 'https://www.bbc.com/hindi/articles/c62e7w36nq3o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/afdf/live/31199a80-ac2e-11f0-ba75-093eca1ac29b.jpg.webp',
+            description:
+              'दिल्ली में रहकर नौकरी कर रहे लोग दिवाली और छठ पूजा के मौके़ पर अपने घर जा रहे हैं. \nलेकिन दिल्ली से घर तक का सफ़र हर किसी के लिए एक सा नहीं है. कई लोग ऐसे हैं, जिन्हें ट्रेन या बस की टिकट ही नहीं मिली. ',
+            imageAlt:
+              'दिवाली पर लोगों के लिए अपने घर तक जाना कितना मुश्किल? ग्राउंड रिपोर्ट',
+            id: 'c62e7w36nq3o',
+            readTime: 1,
+          },
+        ],
+        activePage: 1,
+        pageCount: 40,
+        link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
+        curationId:
+          'urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd',
+        curationType: 'vivo-stream',
+        position: 6,
+        visualProminence: 'NORMAL',
+        title: 'मल्टीमीडिया',
+        visualStyle: 'FEED',
+      };
+      const pageDataWithSecondaryColumn = {
+        ...articleDataHindi,
+        secondaryColumn: {
+          billboardCuration: dummyBillboardCurationData,
+          mediaCuration: dummyMediaCurationData,
+          topStories: [],
+          features: [],
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+      // Check the adaptive curations section is present
+      expect(queryByTestId('adaptive-curations-section')).toBeInTheDocument();
+
+      // Check for the billboard component
+      expect(queryByTestId('billboard-1')).toBeInTheDocument();
+
+      // Check for the simple curation grid component
+      expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
+    });
+  });
+
+  describe('Continue Reading Toggle', () => {
+    it.each([
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is false',
+        toggleEnabled: false,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is true but no block is present',
+        toggleEnabled: true,
+        hasContinueReadingBlock: false,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should render Continue Reading Button when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: true,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button on Lite pages when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: true,
+        shouldBeDisplayed: false,
+      },
+    ])(
+      '$testScenario',
+      ({
+        toggleEnabled,
+        shouldBeDisplayed,
+        hasContinueReadingBlock,
+        isLite = false,
+      }) => {
+        const continueReadingBlock = {
+          id: 'continue-reading-block',
+          type: 'continueReading',
+          model: {},
+        };
+        const baseBlocks =
+          articleDataPersianWithFourParagraphs.content.model.blocks;
+
+        const blocks = hasContinueReadingBlock
+          ? [...baseBlocks, continueReadingBlock]
+          : [...baseBlocks];
+
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks,
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          isLite,
+          toggles: { continueReadingButton: { enabled: toggleEnabled } },
+        });
+
+        const continueReadingButton = screen.queryByTestId(
+          'continue-reading-button',
+        );
+
+        if (shouldBeDisplayed) {
+          expect(continueReadingButton).toBeInTheDocument();
+        } else {
+          expect(continueReadingButton).not.toBeInTheDocument();
+        }
+      },
+    );
   });
 });

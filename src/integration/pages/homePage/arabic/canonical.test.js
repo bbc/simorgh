@@ -4,10 +4,11 @@
  * @displayAds true
  */
 
+import arabicData from '#data/arabic/homePage/index.json';
 import runCanonicalTests from '../canonicalTests';
-import { data as pageData } from '../../../../../data/arabic/homePage/index.json';
 
 describe('Canonical', () => {
+  const { data: pageData } = arabicData;
   describe(pageType, () => {
     runCanonicalTests({ service, pageData, displayAds: true });
   });

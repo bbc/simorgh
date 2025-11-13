@@ -168,7 +168,7 @@ describe('AMP Ads', () => {
     it('should render an `advertisement` label', () => {
       const { container } = render(adWithContext('leaderboard'));
       const links = container.querySelectorAll('a');
-      const advertisementLabel = links && links[0];
+      const advertisementLabel = links?.[0];
       expect(advertisementLabel.textContent).toEqual('Publicités');
       expect(advertisementLabel).toHaveAttribute('tabIndex', '-1');
     });

@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import StyledTitle from './index.styles';
 import PromoContext from '../PromoContext';
 
 const Title = ({ children, className = '', as = '' }) => {
-  const { service } = useContext(PromoContext);
+  const { service } = use(PromoContext);
   return (
     <StyledTitle
       as={as}

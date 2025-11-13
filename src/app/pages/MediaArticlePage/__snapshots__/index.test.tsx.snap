@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MediaArticlePage should render a news article correctly 1`] = `
 .emotion-0 {
@@ -459,8 +459,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -605,8 +605,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -632,8 +632,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   padding: 0.5rem 0;
   margin: calc(1.5rem - 0.5rem) 0;
@@ -670,8 +670,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -776,7 +776,9 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -801,7 +803,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
             class="emotion-5"
           >
             <figure
-              class="emotion-6"
+              class="media-container emotion-6"
               data-e2e="media-loader__container"
             >
               <div
@@ -867,8 +869,10 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                   <img
                     alt=""
                     class="emotion-17"
+                    loading="eager"
                     src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp"
                     srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w"
+                    style="aspect-ratio: auto;"
                   />
                 </div>
               </div>
@@ -952,6 +956,7 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
                 sizes="(min-width: 1008px) 760px, 100vw"
                 src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp"
                 srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/1328/live/28cc1e70-2012-11ee-bb42-b9839596b375.jpg.webp 800w"
+                style="aspect-ratio: 819 / 461;"
                 width="819"
               />
               <p

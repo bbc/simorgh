@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
 import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
@@ -24,8 +24,7 @@ const Wrapper = styled.time`
 `;
 
 const OnDemandFooterTimestamp = ({ releaseDateTimeStamp }) => {
-  const { script, service, timezone, datetimeLocale } =
-    useContext(ServiceContext);
+  const { script, service, timezone, datetimeLocale } = use(ServiceContext);
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',

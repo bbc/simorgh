@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
 import compression from 'compression';
@@ -19,6 +20,7 @@ import {
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import isLocal from '#app/lib/utilities/isLocal';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
@@ -30,11 +32,15 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 import getAgent from './utilities/getAgent';
-import { getMvtExperiments, getMvtVaryHeaders } from './utilities/mvtHeader';
+import {
+  getServerExperiments,
+  getExperimentVaryHeaders,
+} from './utilities/experimentHeader';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import serviceConfigs from './utilities/serviceConfigs';
+import createAdNonce from '../app/utilities/createAdNonce';
 
 const morgan = require('morgan');
 
@@ -68,13 +74,6 @@ const server = express();
 /*
  * Default headers, compression, logging, status route
  */
-
-const skipMiddleware = (_req, _res, next) => {
-  next();
-};
-
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
 
 server
   .disable('x-powered-by')
@@ -195,7 +194,6 @@ const injectReferrerPolicyHeader = (req, res, next) => {
 server.get(
   '/*',
   [
-    injectCspHeaderProdBuild,
     injectDefaultCacheHeader,
     injectReferrerPolicyHeader,
     injectResourceHintsHeader,
@@ -203,7 +201,7 @@ server.get(
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
     let derivedPageType = 'Unknown';
-    let mvtExperiments = [];
+    let serverSideExperiments = [];
 
     try {
       const {
@@ -251,14 +249,35 @@ server.get(
       data.showCookieBannerBasedOnCountry = showCookieBannerBasedOnCountry;
       data.isUK = isUK;
       data.isLite = isLite;
+      data.country = (headers['x-country'] || headers['x-bbc-edge-country'])
+        ?.toString()
+        .toLowerCase();
+
+      const nonce = createAdNonce({
+        toggles,
+        country: data.country,
+        showAdsBasedOnLocation: data.showAdsBasedOnLocation,
+        isLite,
+        isAmp,
+      });
+
+      injectCspHeader({ isAmp, nonce, res });
+
+      data.nonce = nonce;
+      data.cspHeader = res.get('Content-Security-Policy');
 
       let { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
         derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
 
-        mvtExperiments = getMvtExperiments(headers, service, derivedPageType);
-        data.mvtExperiments = mvtExperiments;
+        serverSideExperiments = getServerExperiments({
+          headers,
+          service,
+          pageType: derivedPageType,
+        });
+
+        data.serverSideExperiments = serverSideExperiments;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -282,8 +301,11 @@ server.get(
           service,
           url,
           variant,
+          nonce,
         });
-      } catch ({ message }) {
+      } catch (error) {
+        const { message } = error;
+
         status = 500;
         sendCustomMetric({
           metricName: NON_200_RESPONSE,
@@ -291,6 +313,10 @@ server.get(
           pageType: derivedPageType,
           requestUrl: url,
         });
+
+        if (isLocal()) {
+          console.error(error);
+        }
 
         logger.error(SERVER_SIDE_REQUEST_FAILED, {
           status,
@@ -310,6 +336,7 @@ server.get(
           service,
           url,
           variant,
+          nonce,
         });
       }
 
@@ -340,8 +367,9 @@ server.get(
         );
 
         const allVaryHeaders = ['X-Country'];
-        const mvtVaryHeaders = !isAmp && getMvtVaryHeaders(mvtExperiments);
-        if (mvtVaryHeaders) allVaryHeaders.push(mvtVaryHeaders);
+        const experimentVaryHeaders =
+          !isAmp && getExperimentVaryHeaders(serverSideExperiments);
+        if (experimentVaryHeaders) allVaryHeaders.push(experimentVaryHeaders);
 
         res.set('vary', allVaryHeaders);
 

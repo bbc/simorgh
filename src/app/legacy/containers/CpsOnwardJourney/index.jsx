@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
@@ -128,9 +128,9 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink = null,
   eventTrackingData = null,
-  sendOptimizelyEvents = false,
+  experimentProps = null,
 }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service, dir } = use(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',
@@ -171,7 +171,7 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
-              sendOptimizelyEvents={sendOptimizelyEvents}
+              experimentProps={experimentProps}
             />
           </SingleContentWrapper>
         ) : (
@@ -180,7 +180,7 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
-            sendOptimizelyEvents={sendOptimizelyEvents}
+            experimentProps={experimentProps}
           />
         )}
       </OptionallyRenderedSkipWrapper>

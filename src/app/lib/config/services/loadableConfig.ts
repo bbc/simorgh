@@ -1,6 +1,8 @@
-import loadable from '@loadable/component';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Services } from '#app/models/types/global';
+import loadable, { LoadableComponent } from '@loadable/component';
 
-const loadableConfig = {
+const loadableConfig: Record<Services, LoadableComponent<any>> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
@@ -10,6 +12,7 @@ const loadableConfig = {
   bengali: loadable(() => import('./bengali')),
   burmese: loadable(() => import('./burmese')),
   cymrufyw: loadable(() => import('./cymrufyw')),
+  dari: loadable(() => import('./dari')),
   gahuza: loadable(() => import('./gahuza')),
   gujarati: loadable(() => import('./gujarati')),
   hausa: loadable(() => import('./hausa')),
@@ -19,6 +22,7 @@ const loadableConfig = {
   japanese: loadable(() => import('./japanese')),
   korean: loadable(() => import('./korean')),
   kyrgyz: loadable(() => import('./kyrgyz')),
+  magyarul: loadable(() => import('./magyarul')),
   marathi: loadable(() => import('./marathi')),
   mundo: loadable(() => import('./mundo')),
   naidheachdan: loadable(() => import('./naidheachdan')),
@@ -28,8 +32,10 @@ const loadableConfig = {
   pashto: loadable(() => import('./pashto')),
   persian: loadable(() => import('./persian')),
   pidgin: loadable(() => import('./pidgin')),
+  polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
+  romania: loadable(() => import('./romania')),
   russian: loadable(() => import('./russian')),
   scotland: loadable(() => import('./scotland')),
   serbian: loadable(() => import('./serbian')),
@@ -51,5 +57,7 @@ const loadableConfig = {
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
 };
+
+export const services = Object.keys(loadableConfig) as Services[];
 
 export default loadableConfig;

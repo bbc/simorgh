@@ -9,8 +9,6 @@ export interface Translations {
   ads: {
     advertisementLabel: string;
   };
-  recommendationTitle?: string;
-  splitRecommendationTitle?: string;
   seeAll?: string;
   home: string;
   currentPage: string;
@@ -18,16 +16,9 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  moreOnThis?: string;
   navMenuText: string;
-  liteSite?: {
-    onboardingMessage: string;
-    toMainSite: string;
-    informationPage: string;
-    informationPageLink: string;
-    dataSaving: string;
-    articleDataSavingLinkText: string;
-    experiment?: Record<string, string>;
-  };
+  liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
     mediaPlayer: string;
     audioPlayer: string;
@@ -55,6 +46,14 @@ export interface Translations {
     404: TranslationsError;
     500: TranslationsError;
   };
+  continueReading?: string;
+  readTime?: Partial<{
+    readTimePrefix: string;
+    quick: string;
+    long: string;
+    minute: string;
+    minutes: string;
+  }>;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -161,6 +160,7 @@ export interface Translations {
     bbc_yoruba_radio?: OnDemandRadioTvTranslations;
     listen: string;
     watch: string;
+    play?: string;
     watchMoments?: string;
     listenLive?: string;
     listenNext?: string;
@@ -173,7 +173,10 @@ export interface Translations {
     podcastExternalLinks?: string;
     download?: string;
     closeVideo?: string;
+    endOfContentClose?: string;
+    modalLabel?: string;
   };
+
   socialEmbed: {
     caption?: {
       textPrefixVisuallyHidden: string;
@@ -206,6 +209,10 @@ export interface Translations {
   latestMediaTitle?: string;
   infoBannerLabel?: string;
   ugc?: Partial<UgcTranslations>;
+  carousel?: {
+    previous?: string;
+    next?: string;
+  };
 }
 
 export interface TranslationsError {
@@ -288,3 +295,12 @@ export type UgcTranslations = {
   closedHeading: string;
   closedDescription: string;
 };
+
+export interface LiteSiteTranslations {
+  onboardingMessage: string;
+  toMainSite: string;
+  informationPage: string;
+  informationPageLink?: string;
+  dataSaving: string;
+  articleDataSavingLinkText?: string;
+}

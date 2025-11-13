@@ -115,12 +115,13 @@ export default {
       maxWidth: '100%',
       marginTop: `${spacings.DOUBLE}rem`,
     }),
-  mediaDescription: () =>
+  mediaDescription: ({ spacings }: Theme) =>
     css({
       display: 'block',
       width: '100%',
       marginTop: 0,
       span: { margin: 0 },
+      minHeight: `${spacings.QUINTUPLE}rem`,
     }),
   openMediaDescription: ({ palette }: Theme) =>
     css({

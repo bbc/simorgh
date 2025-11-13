@@ -1,25 +1,29 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import React, { ReactElement } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
   AMP_JS,
-  AMP_CONSENT_JS,
   AMP_ANALYTICS_JS,
 } from '#psammead/psammead-assets/src/amp-boilerplate';
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
+interface Props extends BaseRendererProps {
+  bodyContent?: ReactElement;
+  data?: Record<string, unknown>;
+}
+
 export default function AmpRenderer({
+  bodyContent,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
   htmlAttrs,
-  html,
   ids,
   styles,
   title,
-}: BaseRendererProps) {
+}: Props) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -38,12 +42,9 @@ export default function AmpRenderer({
         </noscript>
         {AMP_JS}
         {AMP_GEO_SCRIPT}
-        {AMP_CONSENT_JS}
         {AMP_ANALYTICS_JS}
       </head>
-      <body className="amp-geo-pending">
-        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
-      </body>
+      <body className="amp-geo-pending">{bodyContent}</body>
     </html>
   );
 }

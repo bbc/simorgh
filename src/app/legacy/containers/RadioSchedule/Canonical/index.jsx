@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
@@ -90,13 +90,14 @@ const CanonicalRadioSchedule = ({
   radioSchedule,
   lang = null,
   className = '',
+  eventTrackingData,
 }) => {
   const {
     service,
     script,
     dir,
     radioSchedule: radioScheduleConfig = {},
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
     radioScheduleConfig;
@@ -128,7 +129,11 @@ const CanonicalRadioSchedule = ({
         {header}
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper data-e2e="radio-schedule">
-        <RadioSchedule schedule={radioSchedule} durationLabel={durationLabel} />
+        <RadioSchedule
+          schedule={radioSchedule}
+          durationLabel={durationLabel}
+          eventTrackingData={eventTrackingData}
+        />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
             href={frequenciesPageUrl}

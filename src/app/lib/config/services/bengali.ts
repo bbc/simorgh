@@ -47,6 +47,24 @@ export const service: DefaultServiceConfig = {
       'খবর, সর্বশেষ খবর, ব্রেকিং নিউজ | News, latest news, breaking news',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
+      brandTitle: 'আপনার হোয়াটসঅ্যাপে বিবিসি বাংলা।',
+      brandDescription:
+        'বিবিসি বাংলার সর্বশেষ খবর ও বিশ্লেষণ এখন সরাসরি আপনার ফোনে।',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lqx69m.png',
+        alt: 'বিবিসি বাংলার হোয়াটসঅ্যাপ চ্যানেল',
+      },
+      linkLabel: {
+        text: 'ফলো করুন, নোটিফিকেশন অন রাখুন',
+        href: 'https://www.whatsapp.com/channel/0029Vb68i5LKQuJMXWvqcx0X',
+      },
+      skipLink: {
+        text: 'স্কিপ করুন %title% পড়ুন',
+        endTextVisuallyHidden: 'বিবিসি বাংলার সাথে থাকার জন্য ধন্যবাদ %title%',
+      },
+    },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       pagination: {
@@ -58,13 +76,23 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'বিজ্ঞাপন',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'সবগুলো খবর দেখুন',
       home: 'মূলপাতা',
       currentPage: 'বর্তমান পেজ',
       skipLinkText: 'সরাসরি কনটেন্টে যান',
       relatedContent: 'এই খবর নিয়ে আরো তথ্য',
       relatedTopics: 'সম্পর্কিত বিষয়',
+      moreOnThis: '',
+      liteSite: {
+        onboardingMessage:
+          'আপনি এই ওয়েবসাইটের একটি টেক্সট(লিখিত) সংস্করণ দেখছেন, যা কম ডেটা ব্যবহার করছে। ছবি ও ভিডিওসহ মূল সংস্করণ দেখতে এখানে ক্লিক করুন',
+        toMainSite: 'আমাকে মূল ওয়েবসাইটে/সংস্করণে নিয়ে যান',
+        informationPage: 'এই ডেটা-সাশ্রয়ী সংস্করণ সম্পর্কে আরও জানুন',
+        informationPageLink:
+          'https://www.bbc.com/bengali/articles/c4g0e7v63ywo',
+        dataSaving: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুনs',
+        articleDataSavingLinkText: 'কম ডেটা ব্যবহার করতে শুধু টেক্সট পড়ুন',
+      },
       navMenuText: 'সেকশন',
       mediaAssetPage: {
         mediaPlayer: 'মিডিয়া প্লেয়ার',
@@ -231,6 +259,7 @@ export const service: DefaultServiceConfig = {
         duration: 'স্থিতিকাল',
         recentEpisodes: 'পুরনো অনুষ্ঠান',
         closeVideo: 'বন্ধ করুন',
+        endOfContentClose: 'এই কনটেন্টের শেষ। বন্ধ করুন',
       },
       socialEmbed: {
         caption: {
@@ -267,7 +296,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'সর্বশেষ',
     },
     mostRead: {
-      header: 'সর্বাধিক পঠিত',
+      header: 'পাঠকপ্রিয় খবর',
       lastUpdated: 'সর্বশেষ আপডেট হয়েছে:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -278,7 +307,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'স্থিতিকাল %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'সর্বাধিক পঠিত',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -290,7 +319,7 @@ export const service: DefaultServiceConfig = {
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।',
       },
       links: [

@@ -15,7 +15,6 @@ export default ({
     case 'homePage':
     case 'mostRead':
     case 'secondaryColumn':
-    case 'recommendations':
       dataPath = `${variant || 'index'}.json`;
       break;
     case 'cpsAssets':

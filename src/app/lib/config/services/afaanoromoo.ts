@@ -77,7 +77,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
       relatedTopics: 'Mata dureewwan walitti dhiyaatan',
+      moreOnThis: '',
       navMenuText: 'Kutaawwan',
+      liteSite: {
+        onboardingMessage:
+          'Kan argaa jirtan oduu barreeffamaan qofa marsaritii keenya daataa xiqqaan hojjetudha. Fuula isa guutuu suuraaleefi viidiyoowwan qabate banadhaa.',
+        toMainSite: 'Gara fuula marsariitii guutuutti na geessi',
+        informationPage:
+          'Filannoo daataa qusatu fayyadamu kanarratti hubannoo dabalataaf',
+        informationPageLink:
+          'https://www.bbc.com/afaanoromoo/articles/cx2qk33rg1po',
+        dataSaving: 'Daataa qusachuuf barreeffama qofa dubbisi',
+        articleDataSavingLinkText: 'Daataa qusachuuf barreeffama qofa dubbisi',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -249,6 +261,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Turtii',
         recentEpisodes: 'Sagantaawwan darban',
         closeVideo: 'Bahi',
+        endOfContentClose: 'Xumura qabiyyee kanaa. Bahi',
       },
       socialEmbed: {
         caption: {
@@ -284,7 +297,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Haaraa',
     },
     mostRead: {
-      header: "Baay'ee kan dubbifame",
+      header: `Baay'ee kan jaalatame`,
       lastUpdated: 'Yeroo dhuma kan haaromfame:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -295,7 +308,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Turtii %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: "Baay'ee kan dubbifame",
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -303,7 +320,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
@@ -357,6 +374,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Viidiyoo',
         url: '/afaanoromoo/topics/ck0dg7dpjwwt',
+        hideOnLiteSite: true,
       },
       {
         title: 'Siyaasa',

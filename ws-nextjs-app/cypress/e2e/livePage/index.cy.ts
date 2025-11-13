@@ -1,6 +1,7 @@
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
-import { testsThatAlwaysRunForAllPages } from '../testsForAllPages';
+import keyPoints from './keyPoints';
+import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const testDetails = {
@@ -11,7 +12,19 @@ const testDetails = {
       id: 'c7p765ynk9qt',
       runforEnv: ['test', 'local'],
       service: 'pidgin',
-      tests: [testsThatAlwaysRunForAllPages, pageVisit, mediaPlayerTests],
+      tests: [
+        testsThatAlwaysRunForAllPages,
+        pageVisit,
+        mediaPlayerTests,
+        keyPoints,
+      ],
+    },
+    {
+      path: '/urdu/live/cx2qdkezzzvt',
+      id: 'cx2qdkezzzvt',
+      runforEnv: ['live'],
+      service: 'urdu',
+      tests: [testsThatAlwaysRunForAllPages, pageVisit, keyPoints],
     },
   ],
 };

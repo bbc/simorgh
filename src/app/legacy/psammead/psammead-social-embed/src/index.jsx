@@ -1,4 +1,4 @@
-import React, { useContext, useId } from 'react';
+import React, { use, useId } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   EmbedConsentBannerCanonical,
@@ -52,7 +52,7 @@ export const CanonicalSocialEmbed = ({
   fallback,
   onRender = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
@@ -122,7 +122,7 @@ export const AmpSocialEmbed = ({
   fallback,
   source = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   if (!id) {

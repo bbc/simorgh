@@ -1,18 +1,9 @@
-import path from 'ramda/src/path';
-import config from '../../config/services';
-import envConfig from '../../config/envs';
-
 export default ({ service }) => {
   describe(`Canonical Ads`, () => {
     it('should be displayed based on whether ads toggle is enabled/disabled', () => {
-      let serviceName = service;
-      if (Object.keys(config).includes(service)) {
-        serviceName = config[service].name;
-      }
-
-      cy.getToggles(serviceName).then(() => {
-        cy.fixture(`toggles/${serviceName}.json`).then(toggles => {
-          const adsEnabled = path(['ads', 'enabled'], toggles);
+      cy.getToggles(service).then(() => {
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
+          const adsEnabled = toggles.ads?.enabled;
 
           if (adsEnabled) {
             cy.url().then(currentURL => {
@@ -23,15 +14,8 @@ export default ({ service }) => {
               });
             });
 
-            const dataPath = `${envConfig.baseUrl}${Cypress.env(
-              'currentPath',
-            )}.json`;
-
-            cy.request(dataPath).then(({ body: jsonData }) => {
-              const adCampaignKeyword = path(
-                ['metadata', 'adCampaignKeyword'],
-                jsonData,
-              );
+            cy.getPageDataFromWindow().then(({ pageData }) => {
+              const { adCampaignKeyword } = pageData.metadata;
 
               // Bootstrap script should exist on Canonical
               cy.get('head script[src*="dotcom-bootstrap.js"]').should('exist');

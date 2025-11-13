@@ -1,0 +1,399 @@
+{
+  "data": {
+    "title": "Strona główna - BBC News Polska",
+    "description": "Najświeższe informacje dotyczące wydarzeń w Europie i na świecie, środowiska, zdrowia, kultury oraz biznesu. Pełna oferta multimedialna w języku polskim obejmująca wiadomości i analizy, zdjęcia, materiały wideo oraz treści interaktywne przygotowane przez BBC News.",
+  "pageType": "home",
+  "seoTitle": "Strona główna - BBC News Polska",
+  "seoDescription": "Najświeższe informacje dotyczące wydarzeń w Europie i na świecie, środowiska, zdrowia, kultury oraz biznesu. Pełna oferta multimedialna w języku polskim obejmująca wiadomości i analizy, zdjęcia, materiały wideo oraz treści interaktywne przygotowane przez BBC News.",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (01)",
+            "firstPublished": "2025-05-14T10:39:57.361Z",
+            "lastPublished": "2025-05-14T10:39:57.361Z",
+            "link": "https://www.bbc.com/polska/articles/c2568r7j01do",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c2568r7j01do",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (02)",
+            "firstPublished": "2025-05-14T10:41:03.429Z",
+            "lastPublished": "2025-05-14T10:41:03.429Z",
+            "link": "https://www.bbc.com/polska/articles/c63rwl0drdyo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c63rwl0drdyo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (03)",
+            "firstPublished": "2025-05-14T10:41:44.871Z",
+            "lastPublished": "2025-05-14T10:41:44.871Z",
+            "link": "https://www.bbc.com/polska/articles/cdkl2qrn770o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "cdkl2qrn770o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (04)",
+            "firstPublished": "2025-05-14T10:42:48.036Z",
+            "lastPublished": "2025-05-14T10:42:48.036Z",
+            "link": "https://www.bbc.com/polska/articles/ce1pnv32m8jo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "ce1pnv32m8jo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 2",
+            "firstPublished": "2025-04-14T11:28:42.682Z",
+            "lastPublished": "2025-04-14T11:28:42.682Z",
+            "link": "https://www.bbc.com/polska/articles/c637ep25zk9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c637ep25zk9o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 3",
+            "firstPublished": "2025-04-14T11:29:33.603Z",
+            "lastPublished": "2025-04-14T11:29:33.603Z",
+            "link": "https://www.bbc.com/polska/articles/cgdvy85v5v9o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "cgdvy85v5v9o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 4",
+            "firstPublished": "2025-04-14T11:32:49.073Z",
+            "lastPublished": "2025-04-14T11:32:49.073Z",
+            "link": "https://www.bbc.com/polska/articles/c2w3qzgwgmzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c2w3qzgwgmzo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 5",
+            "firstPublished": "2025-04-14T11:33:20.388Z",
+            "lastPublished": "2025-04-14T11:33:20.388Z",
+            "link": "https://www.bbc.com/polska/articles/c145dx58j97o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c145dx58j97o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 6",
+            "firstPublished": "2025-04-14T11:34:00.562Z",
+            "lastPublished": "2025-04-14T11:34:00.562Z",
+            "link": "https://www.bbc.com/polska/articles/c760ej0drkxo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c760ej0drkxo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:6bb8809b-e65f-447e-9808-6b4320d2b6cf",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Top stories",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Dlaczego ufamy BBC",
+            "firstPublished": "2025-05-02T15:09:18.515Z",
+            "lastPublished": "2025-05-02T15:09:18.515Z",
+            "link": "https://www.bbc.com/polska/articles/cx31jx7xx8do",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/9f19/test/aa6d7eb0-2768-11f0-a1f5-892b5fb4d5f4.png.webp",
+            "description": "Article summary",
+            "imageAlt": "A bbc news polska promo image",
+            "id": "cx31jx7xx8do",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a7ad6bcf-3a1d-4e50-b347-e5a6e7e2c349",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "Obiektywnie. Wnikliwie. Po polsku.",
+        "visualProminence": "NORMAL",
+        "additionalText": {
+          "plainText": "Zrozumienie wymaga spojrzenia na całość. Analiza rzucająca światło na fakty. Dziennikarstwo, któremu możesz zaufać."
+        },
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 11",
+            "firstPublished": "2025-04-14T11:40:08.894Z",
+            "lastPublished": "2025-04-14T11:40:08.894Z",
+            "link": "https://www.bbc.com/polska/articles/c63d4nrq482o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c63d4nrq482o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Input your article's headline here",
+            "firstPublished": "2025-05-14T12:56:29.385Z",
+            "lastPublished": "2025-05-14T12:56:29.385Z",
+            "link": "https://www.bbc.com/polska/articles/ce2q457qwp5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/f07b/test/423e4ae0-30c3-11f0-9ae9-afd6be589415.jpg.webp",
+            "imageAlt": "Image",
+            "id": "ce2q457qwp5o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 13",
+            "firstPublished": "2025-04-14T11:41:04.232Z",
+            "lastPublished": "2025-04-14T11:41:04.232Z",
+            "link": "https://www.bbc.com/polska/articles/cw0ld9r3025o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "cw0ld9r3025o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 12",
+            "firstPublished": "2025-04-14T11:40:36.433Z",
+            "lastPublished": "2025-04-14T11:40:36.433Z",
+            "link": "https://www.bbc.com/polska/articles/c3y78ql0g56o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c3y78ql0g56o",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją - 10",
+            "firstPublished": "2025-04-14T11:39:36.631Z",
+            "lastPublished": "2025-04-14T11:39:36.631Z",
+            "link": "https://www.bbc.com/polska/articles/cjxp5kl5mvdo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "cjxp5kl5mvdo",
+            "readTime": 1,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:06a1bf7a-a9ed-472f-b779-f2971f586d64",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "Features and analysis",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Pope's funeral brings memories of my Polish grandfather",
+            "firstPublished": "2025-05-02T13:24:50.511Z",
+            "lastPublished": "2025-05-02T13:24:50.511Z",
+            "link": "https://www.bbc.com/polska/articles/c63rw61l7peo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "c63rw61l7peo",
+            "readTime": 2,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:2252d91a-dbb1-46f4-a57e-c7d5318a310f",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Kasia Maduro",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (004)",
+            "firstPublished": "2025-05-14T10:57:01.670Z",
+            "lastPublished": "2025-05-14T10:57:01.670Z",
+            "link": "https://www.bbc.com/polska/articles/c3ylpv0g9rzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c3ylpv0g9rzo",
+            "readTime": 1
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (003)",
+            "firstPublished": "2025-05-14T10:56:20.548Z",
+            "lastPublished": "2025-05-14T10:56:20.548Z",
+            "link": "https://www.bbc.com/polska/articles/czkq3zd0nr3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "czkq3zd0nr3o",
+            "readTime": 1
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (002)",
+            "firstPublished": "2025-05-14T10:55:48.043Z",
+            "lastPublished": "2025-05-14T10:55:48.043Z",
+            "link": "https://www.bbc.com/polska/articles/cn1g3vzdr0mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "cn1g3vzdr0mo",
+            "readTime": 1
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Zełenski wzywa Trumpa do odwiedzenia Ukrainy przed zawarciem umowy z Rosją (001)",
+            "firstPublished": "2025-05-14T10:55:00.372Z",
+            "lastPublished": "2025-05-14T10:55:00.372Z",
+            "link": "https://www.bbc.com/polska/articles/c3ylpv07np3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/cc0c/test/1cb48df0-1923-11f0-bcf9-151a6cfcfd52.png.webp",
+            "imageAlt": "Alternative description",
+            "id": "c3ylpv07np3o",
+            "readTime": 1
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:28726b1f-caa5-41b7-a57f-a5fd50237abc",
+        "curationType": "vivo-stream",
+        "position": 4,
+        "title": "Polska",
+        "visualProminence": "LOW",
+        "visualStyle": "FEED"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Polski artykuł testowy",
+            "firstPublished": "2025-03-26T10:40:12.938Z",
+            "lastPublished": "2025-03-26T10:40:12.938Z",
+            "link": "https://www.bbc.com/polska/articles/c639526lxlro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/a567/test/96cb3ac0-0a2e-11f0-8e5b-11eec158954c.jpg.webp",
+            "imageAlt": "Rzeszow",
+            "id": "c639526lxlro",
+            "readTime": 1
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:vivo:curation:ab73cbe8-0aa6-4932-88e6-2a7413a1e976",
+        "curationType": "vivo-stream",
+        "position": 5,
+        "title": "Wojna w Ukrainie",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Polska survey",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=M3FYDo5W1kSAHSJmvFLlz9mfKXHLFnxIlQ0VU46Zu1ZUQjJIN0lTM081NzlOWUlQNUpQTUNWQzlBMS4u&Token=f22be96820b6450d934f2763982045c7",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/dd74/test/64e03c90-2766-11f0-a1f5-892b5fb4d5f4.png.webp",
+            "imageAlt": "A question mark icon",
+            "id": "https%3A%2F%2Fforms.office.com%2FPages%2FDesignPageV2.aspx%3Fsubpage%3Ddesign%26FormId%3DM3FYDo5W1kSAHSJmvFLlz9mfKXHLFnxIlQ0VU46Zu1ZUQjJIN0lTM081NzlOWUlQNUpQTUNWQzlBMS4u%26Token%3Df22be96820b6450d934f2763982045c7",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:95f3c550-3e8c-4154-babc-52daf8f3594c",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "BBC News Polska user survey",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "link": "https://www.test.bbc.com/polska/topics/cly1xdxypzet",
+        "curationId": "urn:bbc:vivo:curation:2565312f-c9e2-4bc9-bfc1-168bbe2d50e1",
+        "curationType": "vivo-stream",
+        "position": 7,
+        "title": "Vivo curation",
+        "visualProminence": "NORMAL",
+        "visualStyle": "FEED"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cyk5qnl3jd3xt",
+        "contentType": "index-home",
+        "pageIdentifier": "polska.page",
+        "pageTitle": "Strona główna - BBC News Polska"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

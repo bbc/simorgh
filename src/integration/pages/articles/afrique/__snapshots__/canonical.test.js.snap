@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Canonical Articles Gist list item should match text 1`] = `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`;
 
@@ -18,7 +18,9 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+      <strong>
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </strong>
     </noscript>
   </div>
   <button
@@ -66,12 +68,13 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
       style="aspect-ratio:auto"
@@ -92,7 +95,9 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     <noscript
       class="bbc-n2zqlz"
     >
-      &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+      <strong>
+        Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+      </strong>
     </noscript>
   </div>
   <button
@@ -140,12 +145,13 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="bbc-lgx6cw"
+    class="bbc-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
       class="bbc-ipdj63"
+      loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
       style="aspect-ratio:auto"
@@ -156,7 +162,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="bbc-1hu5uc3"
+  class="media-container bbc-1hu5uc3"
   data-e2e="media-loader__container"
 >
   <div
@@ -170,7 +176,9 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       <noscript
         class="bbc-n2zqlz"
       >
-        &lt;strong&gt;Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.&lt;/strong&gt;
+        <strong>
+          Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.
+        </strong>
       </noscript>
     </div>
     <button
@@ -218,12 +226,13 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="bbc-lgx6cw"
+      class="bbc-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
         class="bbc-ipdj63"
+        loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
         style="aspect-ratio:auto"
@@ -231,7 +240,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="bbc-12vqlmi"
+    class="bbc-88md10"
     dir="ltr"
   >
     <span

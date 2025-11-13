@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -83,24 +83,25 @@ const PromoList = ({
   blocks,
   experimentVariant,
   viewTracker,
-  onClick,
-  ...a11yAttributes
+  clickTracker,
+  a11yAttributes,
 }) => {
-  const { dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks =
-    experimentVariant === 'top_bar_most_read'
+    experimentVariant === 'top-bar-most-read'
       ? blocks.slice(0, 5)
       : blocks.slice(0, 3);
 
   const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
+
   return (
     <ScrollPromo
       dir={dir}
       role="list"
       isOperaMini={isOperaMini}
-      ref={viewTracker}
+      {...viewTracker}
       {...a11yAttributes}
     >
       {listBlocks.map((block, index) => {
@@ -114,7 +115,7 @@ const PromoList = ({
             <Promo
               block={block}
               experimentVariant={experimentVariant}
-              onClick={onClick}
+              clickTracker={clickTracker}
             />
           </List>
         );

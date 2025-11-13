@@ -115,12 +115,12 @@ export const mainTranslations = {
   ads: {
     advertisementLabel: 'Реклама',
   },
-  recommendationTitle: 'По теме',
-  splitRecommendationTitle: 'Другие статьи',
   seeAll: 'Посмотреть все',
+  continueReading: 'Читать дальше',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
+  moreOnThis: '',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -209,6 +209,7 @@ export const mainTranslations = {
     podcastExternalLinks: 'Этот подкаст доступен на',
     download: 'Загрузить эпизод',
     closeVideo: 'Выйти',
+    endOfContentClose: 'Конец этого контента. Выйти',
   },
   socialEmbed: {
     caption: {
@@ -356,10 +357,17 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     mostRead: {
-      header: 'Самое популярное',
+      header: 'Популярное',
       lastUpdated: 'Последнее обновление:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Самое популярное',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     podcastPromo: {
       title: 'WhatsApp',
@@ -390,16 +398,13 @@ export const service: DefaultServiceConfig = {
     radioSchedule: {
       hasRadioSchedule: false,
     },
-    recommendations: {
-      hasStoryRecommendations: false,
-    },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/russian/institutional-50098149',
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [

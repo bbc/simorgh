@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
@@ -10,10 +10,11 @@ const RadioSchedule = ({
   lang = null,
   className = '',
   toggleName,
+  eventTrackingData,
 }) => {
   const { enabled } = useToggle(toggleName);
-  const { isAmp } = useContext(RequestContext);
-  const { radioSchedule } = useContext(ServiceContext);
+  const { isAmp } = use(RequestContext);
+  const { radioSchedule } = use(ServiceContext);
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
   const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
@@ -22,7 +23,12 @@ const RadioSchedule = ({
   }
 
   return (
-    <Canonical className={className} radioSchedule={initialData} lang={lang} />
+    <Canonical
+      className={className}
+      radioSchedule={initialData}
+      lang={lang}
+      eventTrackingData={eventTrackingData}
+    />
   );
 };
 

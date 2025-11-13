@@ -47,16 +47,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ቢቢሲ አማርኛ በዋትስአፕ',
-      brandTitle: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
-      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በቀጥታ በዋትስአፕ ለማግኘት',
+      title: 'ቢቢሲ አማርኛ YouTube',
+      brandTitle: 'የቢቢሲ አማርኛ ዩቲዩብ ቻናል',
+      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በምሥል እና በድምጽ ለማግኘት',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe//p0krq6vq.png',
-        alt: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lp7mqk.png',
+        alt: 'BBC News Amharic የቢቢሲ አማርኛ ዩቲዩብ ቻናላችንን ይቀላቀሉ!',
       },
       linkLabel: {
-        text: 'ይህን በመጫን የቻናላችን አባል ይሁኑ!',
-        href: 'https://bit.ly/4gsoTyI',
+        text: 'ይህንን በመጫን ሰብስክራይብ ያድርጉ',
+        href: 'https://www.youtube.com/@BBCNewsAmharic',
       },
     },
     translations: {
@@ -75,7 +75,18 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      moreOnThis: '',
       navMenuText: 'ክፍሎች',
+      liteSite: {
+        onboardingMessage:
+          'ይህ ዝቅተኛ ዳታን በመጠቀም ጽሑፍ ብቻ የሚቀርብበት የቢቢሲ አማርኛ ድረ ገጽ ነው',
+        toMainSite: 'ወደ ሙሉው የቢቢሲ አማርኛ ድረ ገጽ ለመመለስ',
+        informationPage: 'ዳታን ለመቆጠብ ስለሚያስችለው የቢቢሲ አማርኛ ድረ ገጽ ለማወቅ ይህንን ያንብቡ',
+        informationPageLink:
+          'https://www.bbc.com/amharic/articles/c93lkdyenpno',
+        dataSaving: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+        articleDataSavingLinkText: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -237,6 +248,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ርዝመት',
         recentEpisodes: 'ያለፉ ዝግጅቶች’',
         closeVideo: 'ይውጡ',
+        endOfContentClose: 'ይውጡ ወደ መጨረሻ',
       },
       socialEmbed: {
         caption: {
@@ -334,7 +346,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'ብዙ የተነበቡ',
+      header: 'በስፋት የተነበቡ',
       lastUpdated: 'በመጨረሻ ማሻሻያ የተደረገበት',
       numberOfItems: 10,
       hasMostRead: true,
@@ -345,7 +357,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'ርዝመት %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'ብዙ የተነበቡ',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -353,7 +369,7 @@ export const service: DefaultServiceConfig = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
@@ -430,6 +446,7 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ቪዲዮ',
         url: '/amharic/topics/c917ezk2pmvt',
+        hideOnLiteSite: true,
       },
       {
         title: 'በጣም የተወደዱ',

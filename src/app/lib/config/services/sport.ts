@@ -13,6 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'sport',
     atiAnalyticsProducerId: '85',
     atiAnalyticsProducerName: 'SPORT',
+    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Sport',
     product: 'BBC Sport',
@@ -48,6 +49,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -208,16 +210,13 @@ export const service: DefaultServiceConfig = {
       socialEmbed: {},
     },
     mostRead: {
-      header: 'Most read',
+      header: 'Popular Reads',
       lastUpdated: 'Last updated:',
       numberOfItems: 10,
       hasMostRead: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
-    },
-    recommendations: {
-      hasStoryRecommendations: false,
     },
     footer: {
       externalLink: {

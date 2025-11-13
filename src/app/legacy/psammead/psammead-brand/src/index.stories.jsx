@@ -7,7 +7,7 @@ import {
   withKnobs,
   boolean,
 } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-webpack5';
 import * as svgs from '#psammead/psammead-assets/src/svgs';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import {

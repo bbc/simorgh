@@ -10,11 +10,13 @@ cypress/screenshots
 cypress/downloads
 cypress/results
 cypress/fixtures/toggles
+ws-nextjs-app/cypress/fixtures/toggles
+ws-nextjs-app/cypress/downloads
+ws-nextjs-app/cypress/results
 pack
 storybook_dist
 simorgh.report.html
 simorgh.report.json
-cypress/integration/123PlaygroundForTests/*
 src/app/lib/config/services/*.test.js
 .env
 yarn-error.log

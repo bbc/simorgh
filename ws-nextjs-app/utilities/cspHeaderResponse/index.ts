@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
-import isAmpPath from '#app/routes/utils/isAmpPath';
+import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
+import { services } from '#app/lib/config/services/loadableConfig';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -34,17 +37,60 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
-  const isAmp = isAmpPath(request.url);
-  const service = fallbackServiceParam(request.url);
-  const isLive = isLiveEnv();
+const getToggleDefinitions = (
+  toggles: Toggles = {},
+): Record<string, ToggleDefinition> => {
+  const { _environment, ...toggleDefinitions } = toggles;
+  return toggleDefinitions;
+};
 
+const isRelaxedCspEnabled = (
+  countryList: string | number | undefined,
+  country: string,
+): boolean => {
+  if (!countryList || countryList.toString().trim() === '') {
+    return true;
+  }
+
+  const omittedCountriesList = countryList
+    .toString()
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  return !omittedCountriesList.includes(country.toLowerCase());
+};
+
+const isValidService = (str: string) => {
+  const [service] = str.split('/').filter(Boolean);
+  return service && services.includes(service as Services);
+};
+
+const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
+  const { isAmp } = getPathExtension(request.url);
+  const isLive = isLiveEnv();
+  const urlPath = request.nextUrl.pathname;
+  let toggles = null;
+  let toggleDefinitions = null;
+
+  if (isValidService(urlPath)) {
+    const service = fallbackServiceParam(request.nextUrl.pathname);
+    toggles = await getToggles(service);
+    toggleDefinitions = getToggleDefinitions(toggles);
+  }
+
+  const { enabled: hasAdsScripts, value: countryList = '' } =
+    toggleDefinitions?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
+  const country =
+    requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
+  const shouldServeRelaxedCsp =
+    hasAdsScripts && isRelaxedCspEnabled(countryList, country || '');
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    service,
+    shouldServeRelaxedCsp,
   });
 
   const BUMP4SpecificConditions = {

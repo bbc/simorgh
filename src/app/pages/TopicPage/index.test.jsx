@@ -8,7 +8,6 @@ import {
 } from '#app/models/types/curationData';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzTopicWithMessageBanners } from '#data/kyrgyz/topics/cvpv9djp9qqt.json';
-import { data as persianAfghanistan } from '#data/persian/topics/crezq2dg9zwt.json';
 import { TOPIC_PAGE } from '../../routes/utils/pageTypes';
 import { render } from '../../components/react-testing-library-with-providers';
 import TopicPage from './TopicPage';
@@ -122,12 +121,21 @@ describe('Topic Page', () => {
     expect(container.getElementsByTagName('h3').length).toEqual(0);
   });
 
-  it('should render curation subheading as h2 when curation title exists', () => {
+  it('should render the first curation subheading as h2 when curation title exists', () => {
     const { container } = render(
       <TopicPage pageData={mundoMultipleCurations} />,
       getOptionParams({ service: 'mundo', lang: 'es' }),
     );
-    expect(container.querySelector('h2').textContent).toEqual('Analysis');
+    const subheading = Array.from(container.querySelectorAll('h2')).find(
+      h2 => h2.textContent === 'Analysis',
+    );
+    expect(subheading).toBeInTheDocument();
+
+    const classList = Array.from(subheading?.classList || []);
+    const isVisuallyHidden = classList.some(className =>
+      className.includes('visuallyHiddenText'),
+    );
+    expect(isVisuallyHidden).toBe(false); // Ensure it's not visually hidden
   });
 
   it('should render promo headings as h3 when curation subheading exists', () => {
@@ -145,7 +153,6 @@ describe('Topic Page', () => {
       <TopicPage pageData={pidginMultipleItems} service="pidgin" />,
       getOptionParams(),
     );
-
     expect(container.getElementsByTagName('h3').length).toEqual(0);
     expect(container.getElementsByTagName('h2').length).toEqual(4);
   });
@@ -320,36 +327,120 @@ describe('Topic Page', () => {
   });
 
   describe('SEO', () => {
+    it('should prioritise seoTitle and seoDescription for metadata when available', () => {
+      const seoTitle = 'Topic page SEO Title';
+      const seoDescription = 'Topic page SEO Description';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            seoDescription,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(`${seoTitle} - BBC News Pidgin`);
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(seoDescription);
+
+      const ogDescriptionMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:description',
+      );
+      expect(ogDescriptionMeta?.content).toEqual(seoDescription);
+
+      const twitterDescriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:description',
+      );
+      expect(twitterDescriptionMeta?.content).toEqual(seoDescription);
+    });
+
+    it('should include pagination details in metadata title on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${seoTitle}, Page 2 of 6 - BBC News Pidgin`,
+      );
+    });
+
+    it('should keep social metadata titles unpaginated on subsequent pages', () => {
+      const seoTitle = 'Topic page SEO Title';
+
+      render(
+        <TopicPage
+          pageData={{
+            ...pidginMultipleItems,
+            seoTitle,
+            activePage: 2,
+            pageCount: 6,
+          }}
+        />,
+        getOptionParams(),
+      );
+
+      const helmetContent = Helmet.peek();
+
+      const ogTitleMeta = helmetContent.metaTags.find(
+        ({ property }) => property === 'og:title',
+      );
+      const twitterTitleMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'twitter:title',
+      );
+
+      expect(ogTitleMeta?.content).toEqual(`${seoTitle} - BBC News Pidgin`);
+      expect(twitterTitleMeta?.content).toEqual(
+        `${seoTitle} - BBC News Pidgin`,
+      );
+    });
+
+    it('should fall back to title and description when seo metadata is missing', () => {
+      render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
+
+      const helmetContent = Helmet.peek();
+
+      expect(helmetContent.title).toEqual(
+        `${pidginMultipleItems.title} - BBC News Pidgin`,
+      );
+
+      const descriptionMeta = helmetContent.metaTags.find(
+        ({ name }) => name === 'description',
+      );
+      expect(descriptionMeta?.content).toEqual(pidginMultipleItems.description);
+    });
+
     it('should correctly render linked data', () => {
       render(<TopicPage pageData={pidginMultipleItems} />, getOptionParams());
 
       const getLinkedDataOutput = () => {
-        return JSON.parse(Helmet.peek().scriptTags[1].innerHTML);
+        return JSON.parse(
+          Helmet.peek().scriptTags.find(
+            ({ type }) => type === 'application/ld+json',
+          ).innerHTML,
+        );
       };
 
       expect(getLinkedDataOutput()).toMatchSnapshot();
-    });
-  });
-
-  describe('Radio Schedule', () => {
-    it('should render if there is a curation with radio schedule data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('radio-schedule')).toBeInTheDocument();
-    });
-  });
-
-  describe('Embed', () => {
-    it('should render if there is a curation with embed data', () => {
-      const { getByTestId } = render(
-        <TopicPage pageData={persianAfghanistan} />,
-        getOptionParams({ service: 'persian' }),
-      );
-
-      expect(getByTestId('embed')).toBeInTheDocument();
     });
   });
 });

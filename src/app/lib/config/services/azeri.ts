@@ -46,6 +46,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp reklamı',
+      brandTitle: 'WhatsApp kanalımızı izləyin',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
+        alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',
+      },
+      linkLabel: {
+        text: 'Buradan izləyin',
+        href: 'https://www.whatsapp.com/channel/0029Vb6Ewy00lwgwO4iuS32p',
+      },
+      skipLink: {
+        text: '%title%-ı bağlayın  və oxumağa davam edin',
+        endTextVisuallyHidden: '%title%-ın sonu',
+      },
+    },
     translations: {
       pagination: {
         page: 'səhifə',
@@ -62,6 +80,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      moreOnThis: '',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -230,6 +249,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
         closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {
@@ -267,17 +287,36 @@ export const service: DefaultServiceConfig = {
         optional: 'vacib deyil',
 
         // File upload
+        fileUploadLiveRegionText: `Göndərdikləriniz bunlardır: `,
+        fileUploadListHeading: `Göndərdikləriniz bunlardır:`,
         fileUploadButton: 'Faylı seçin',
 
         // Submit button
         submitButton: 'Göndərin',
 
+        // Messaging
+        referenceNumber: 'İstinad nömrəniz',
+        retentionPeriodDays: `Bizə göndərdiyiniz məlumatları {{days}} günədək saxlayacağıq. Ondan istifadə etmədiyimiz halda bizə göndərdiyiniz bu və digər məlumatları siləcəyik.`,
+        privacyInfoHtml: `Sizin məlumatlarınızı qoruyuruq – ətraflı {{privacyInfoLink}} oxuyun.`,
+        emailToHtml: `Fikrinizi dəyişsəniz və ya məlumatlarınızdan istifadə etməyimizi istəmirsinizsə, {{emailLink}} emailinə yazın. İstinad nömrənizi də qeyd edin.`,
+        removalGuidelineText: `Lakin proqramlarımız və ya saytımız üçün məlumat göndərmisinizsə və biz ondan istifadə etmişiksə, onu silmək mümkün olmayacaq.`,
+
         // Form Screen
         dataPolicyHeading: 'Bizim informasiya siyasə timiz',
+
+        // Uploading Screen
+        uploadingHeading: 'Yüklənir',
+        uploadingDescription: 'Zəhmət olmasa, yüklənmə bitənədək gözləyin.',
+
+        // Success Screen
+        successHeading: 'Mesaj göndərildi!',
+        successDescription: 'Əlaqə saxladığınız üçün təşəkkür edirik.',
+        privacyPolicyLinkHref: 'https://www.bbc.com/usingthebbc/privacy',
+        privacyPolicyLinkText: 'Məxfilik siyasətimizi',
       },
     },
     mostRead: {
-      header: 'Ən çox oxunan',
+      header: 'Geniş oxunanlar',
       lastUpdated: 'Ən son yeniləmə:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -286,7 +325,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ən çox oxunan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -294,7 +337,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -350,8 +393,12 @@ export const service: DefaultServiceConfig = {
         url: '/azeri/topics/cde15l4vn02t',
       },
       {
-        title: 'COP29',
-        url: '/azeri/topics/cv2dz9j8ywyt',
+        title: 'Sağlamlıq',
+        url: '/azeri/topics/c6vzyk7592nt',
+      },
+      {
+        title: 'Sizin hekayələriniz',
+        url: '/azeri/topics/cd9y5yjez4lt',
       },
     ],
   },

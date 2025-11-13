@@ -27,9 +27,6 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
-  recommendations: {
-    hasStoryRecommendations: false,
-  },
   showAdPlaceholder: false,
   showRelatedTopics: true,
   timezone: 'GMT',
@@ -68,7 +65,7 @@ export const service: SerbianConfig = {
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Pročitajte naša pravila o linkovanju drugih sajtova.',
       },
       links: [
@@ -106,10 +103,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. BBC nije odgovoran za sadržaj drugih sajtova.',
     },
     mostRead: {
-      header: 'Najčitanije',
+      header: 'Najpopularnije',
       lastUpdated: 'Poslednji put ažurirano ',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Najčitanije',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -161,6 +165,7 @@ export const service: SerbianConfig = {
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
       relatedTopics: 'Povezane teme',
+      moreOnThis: '',
       navMenuText: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
@@ -330,6 +335,7 @@ export const service: SerbianConfig = {
         nextRadioShow: 'Sledeća radio emisija',
         duration: 'Trajanje',
         closeVideo: 'Izađi',
+        endOfContentClose: 'Kraj ovog sadržaja. Izađi',
       },
       socialEmbed: {
         caption: {
@@ -466,7 +472,7 @@ export const service: SerbianConfig = {
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Прочитајте наша правила о линковању других сајтова.',
       },
       links: [
@@ -504,10 +510,17 @@ export const service: SerbianConfig = {
       copyrightText: 'BBC. ББЦ није одговоран за садржај других сајтова.',
     },
     mostRead: {
-      header: 'Најчитаније',
+      header: 'Најпопуларније',
       lastUpdated: 'Последњи пут ажурирано:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Најчитаније',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     navigation: [
       {
@@ -729,6 +742,7 @@ export const service: SerbianConfig = {
         duration: 'Трајање',
         recentEpisodes: 'Претходне епизоде',
         closeVideo: 'Изађи',
+        endOfContentClose: 'Крај садржаја. Излаз',
       },
       socialEmbed: {
         caption: {

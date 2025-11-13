@@ -27,9 +27,6 @@ const baseServiceConfig = {
   radioSchedule: {
     hasRadioSchedule: false,
   },
-  recommendations: {
-    hasStoryRecommendations: false,
-  },
   showAdPlaceholder: true,
   showRelatedTopics: true,
   timezone: 'GMT',
@@ -76,6 +73,7 @@ const defaultCyrillicConfig = {
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    moreOnThis: '',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
@@ -247,6 +245,7 @@ const defaultCyrillicConfig = {
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
       closeVideo: 'Чиқиш',
+      endOfContentClose: 'Бу контентнинг охири. Чиқиш',
     },
     socialEmbed: {
       caption: {
@@ -283,10 +282,17 @@ const defaultCyrillicConfig = {
     latestMediaTitle: 'Сўнгги',
   },
   mostRead: {
-    header: 'Энг кўп ўқилган',
+    header: 'Оммабоп мақолалар',
     lastUpdated: 'Сўнгги янгиланиш:',
     numberOfItems: 5,
     hasMostRead: true,
+  },
+  recommendations: {
+    header: 'Энг кўп ўқилган',
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
   },
   footer: {
     trustProjectLink: {
@@ -294,7 +300,7 @@ const defaultCyrillicConfig = {
       text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
     },
     links: [
@@ -303,7 +309,11 @@ const defaultCyrillicConfig = {
         text: 'Фойдаланиш шартлари',
       },
       {
-        href: 'https://www.bbc.com/uzbek/institutional-36824300',
+        href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+        text: 'ББC ҳақида',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/privacy/',
         text: 'Шахсий ҳаёт махфийлиги сиёсати',
       },
       {
@@ -618,10 +628,17 @@ export const service: UzbekConfig = {
       latestMediaTitle: 'So‘nggi',
     },
     mostRead: {
-      header: 'Eng ko‘p o‘qilgan',
+      header: 'Ommabop maqolalar',
       lastUpdated: 'So‘nggi yangilanish:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    recommendations: {
+      header: 'Eng ko‘p o‘qilgan',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -629,7 +646,7 @@ export const service: UzbekConfig = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
@@ -638,7 +655,11 @@ export const service: UzbekConfig = {
           text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36824300',
+          href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/lat',
+          text: 'ББC ҳақида',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {

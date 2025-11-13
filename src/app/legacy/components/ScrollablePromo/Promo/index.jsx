@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 import { getPica } from '#psammead/gel-foundations/src/typography';
@@ -101,8 +101,8 @@ const TimeStamp = styled(PromoTimestamp)`
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
 `;
 
-const Promo = ({ block, experimentVariant, onClick }) => {
-  const { script, service, serviceDatetimeLocale } = useContext(ServiceContext);
+const Promo = ({ block, experimentVariant, clickTracker }) => {
+  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
   let title;
   let href;
   let textBlock;
@@ -111,7 +111,8 @@ const Promo = ({ block, experimentVariant, onClick }) => {
   let isLive;
 
   switch (experimentVariant) {
-    case 'top_bar_top_stories': {
+    case 'top-bar-top-stories':
+    case 'read-more-a-and-top-stories': {
       const overtypedHeadline = block?.headlines?.overtyped ?? '';
       const mainHeadline = block?.headlines?.headline ?? '';
       const headlineBlockText =
@@ -141,7 +142,7 @@ const Promo = ({ block, experimentVariant, onClick }) => {
       isLive = block.isLive;
       break;
     }
-    case 'top_bar_most_read':
+    case 'top-bar-most-read':
       title = block.title;
       href = block.href;
       break;
@@ -178,7 +179,7 @@ const Promo = ({ block, experimentVariant, onClick }) => {
         href={href}
         service={service}
         script={script}
-        onClick={onClick}
+        {...clickTracker}
         experimentVariant={experimentVariant}
       >
         {isLive && <LiveLabel />}

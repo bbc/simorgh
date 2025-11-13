@@ -19,3 +19,4 @@ The following is a collection of coding standards agreed on by the team. Some of
 - [React Components](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/React-Components.mdx)
 - [Styles](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Styles.mdx)
 - [Testing](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Testing.mdx)
+- [Lite Page JS](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/Lite-Page-JS.mdx)

@@ -1,18 +1,21 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import AmpComscoreAnalytics from './Amp';
 import CanonicalComscoreAnalytics from './Canonical';
 
 const ComscoreAnalytics = () => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp, showCookieBannerBasedOnCountry, nonce } = use(RequestContext);
   const { enabled } = useToggle('comscoreAnalytics');
 
-  if (!enabled) {
+  if (!enabled || (isAmp && showCookieBannerBasedOnCountry)) {
     return null;
   }
-
-  return isAmp ? <AmpComscoreAnalytics /> : <CanonicalComscoreAnalytics />;
+  return isAmp ? (
+    <AmpComscoreAnalytics />
+  ) : (
+    <CanonicalComscoreAnalytics nonce={nonce} />
+  );
 };
 
 export default ComscoreAnalytics;

@@ -1,5 +1,6 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import runIfToggleEnabled from '../../../../support/helpers/runIfToggleEnabled';
 
 const { MOST_READ } = COMPONENTS;
 
@@ -8,8 +9,17 @@ export const assertMostReadComponentView = ({
   contentType,
   useReverb,
   path,
+  service,
+  applicationType,
+  siteId,
 }) => {
-  it('should send a view event for the Most Read component', () => {
+  it(`should send a view event for the Most Read component`, function test() {
+    runIfToggleEnabled({
+      service,
+      toggleName: 'mostRead',
+      testContext: this,
+    });
+
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
@@ -20,6 +30,8 @@ export const assertMostReadComponentView = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };
@@ -29,8 +41,17 @@ export const assertMostReadComponentClick = ({
   contentType,
   useReverb,
   path,
+  service,
+  applicationType,
+  siteId,
 }) => {
-  it('should send a click event for the Most Read component', () => {
+  it('should send a click event for the Most Read component', function test() {
+    runIfToggleEnabled({
+      service,
+      toggleName: 'mostRead',
+      testContext: this,
+    });
+
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
@@ -44,6 +65,8 @@ export const assertMostReadComponentClick = ({
       pageIdentifier,
       contentType,
       useReverb,
+      applicationType,
+      siteId,
     });
   });
 };

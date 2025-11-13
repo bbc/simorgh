@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import { useContext } from 'react';
+import { use } from 'react';
 import { jsx, useTheme, Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -65,17 +65,23 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
+import { isPortraitVideo } from '../utils/portraitVideo';
+
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
+    const isPortrait = isPortraitVideo(blocks);
+    const className = isPortrait ? 'portrait-media-loader' : '';
+
     return (
       <div
         css={({ spacings }: Theme) => [
           `padding-top: ${spacings.TRIPLE}rem`,
           isCpsMap && styles.cafMediaPlayer,
+          isPortrait && styles.portraitVideoPlayer,
         ]}
       >
-        <MediaLoader blocks={blocks as MediaBlock[]} />
+        <MediaLoader blocks={blocks as MediaBlock[]} className={className} />
       </div>
     );
   };
@@ -138,7 +144,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
 
   const {
@@ -161,7 +167,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!bylineLinkedData;
+  const hasByline = bylineLinkedData.length > 0;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)

@@ -2,7 +2,7 @@ import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import serviceConfigs from '../../../../src/server/utilities/serviceConfigs';
 
-export default ({ service, pageType, variant, currentPath }) => {
+export default ({ service, pageType, variant = 'default', path }) => {
   let topicId;
   let topicTitle;
   let firstItemHeadline;
@@ -13,7 +13,7 @@ export default ({ service, pageType, variant, currentPath }) => {
 
   describe(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
-      topicId = Cypress.env('currentPath').match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+      topicId = path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
       // Gets the topic page data for all the tests
       cy.getPageDataFromWindow().then(({ pageData }) => {
@@ -33,7 +33,24 @@ export default ({ service, pageType, variant, currentPath }) => {
       beforeEach(() => {
         // make sure we always start from the path being tested to make the tests deterministic and not reliant on order
         // as otherwise some tests can change the path and affect subsequent tests (i.e. when you change page script)
-        cy.visit(currentPath);
+        if (getAppEnv() !== 'live') {
+          cy.origin('https://www.bbc.com', () => {
+            // eslint-disable-next-line consistent-return
+            cy.on('uncaught:exception', ({ message }) => {
+              if (
+                [
+                  `Cannot read properties of undefined (reading 'count')`,
+                  'ResizeObserver loop completed with undelivered notifications',
+                ].some(error => message.includes(error))
+              ) {
+                return false;
+              }
+            });
+          });
+          cy.visit(path);
+        } else {
+          cy.visit(path);
+        }
       });
       it('should render a H1, which contains/displays topic title', () => {
         cy.get('h1').should('contain', topicTitle);
@@ -162,9 +179,8 @@ export default ({ service, pageType, variant, currentPath }) => {
             const expectedStatus = isErrorPage ? 404 : 200;
             // const failOnStatusCode = !isErrorPage;
             cy.url().then(url => {
-              const path = url;
               cy.testResponseCodeAndType({
-                path,
+                path: url,
                 responseCode: expectedStatus,
                 type: expectedContentType,
               });

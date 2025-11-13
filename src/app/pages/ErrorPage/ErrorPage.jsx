@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';
@@ -15,7 +15,6 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 
   return (
     <Helmet htmlAttributes={{ lang, dir }}>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
       <meta name="theme-color" content={themeColor} />
@@ -35,7 +34,7 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 
 const ErrorPage = ({ errorCode }) => {
   const { brandName, dir, lang, script, service, translations } =
-    useContext(ServiceContext);
+    use(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   const {

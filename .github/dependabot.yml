@@ -4,22 +4,23 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
+      day: 'wednesday'
+      time: '16:00'
+    cooldown:
+      default-days: 7
     ignore:
-      - dependency-name: '@loadable/*'
-        update-types: ['version-update:semver-major']
-      - dependency-name: 'webpack'
-        update-types: ['version-update:semver-major']
+      # https://bbc.atlassian.net/browse/WS-106 - Replace `winston` logger because we currently have a workaround patch to fix a memory leak
       - dependency-name: 'winston'
       # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2185: Latest version of eslint has breaking changes
       - dependency-name: eslint
         update-types: ['version-update:semver-major']
       - dependency-name: '@typescript-eslint/eslint-plugin'
         update-types: ['version-update:semver-major']
-      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-1478 react-router & react-router-dom
+      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2164: Migrate all page types to Next.js + Lambda to remove Express + EC2 infrastructure
+      - dependency-name: 'react-router-config'
       - dependency-name: 'react-router-dom'
-      - dependency-name: 'react-router'
-      # https://jira.dev.bbc.co.uk/browse/NEWSWORLDSERVICE-2099: Delete path-to-regexp dependency
-      - dependency-name: 'path-to-regexp'
+      - dependency-name: 'express'
+        update-types: ['version-update:semver-major']
     labels:
       - 'dependencies'
     groups:
@@ -27,6 +28,11 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      happy-dom:
+        patterns:
+          - 'happy-dom'
+          - 'happy-dom*'
+          - '@happy-dom/*'
       bbc:
         patterns:
           - '@bbc/*'

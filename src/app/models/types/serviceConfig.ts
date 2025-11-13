@@ -1,3 +1,4 @@
+import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -96,6 +97,7 @@ export type ServiceConfig = {
   recommendations?: Recommendations;
   footer: Footer;
   fonts?: ((baseUrlOverride: string) => string)[];
+  collapsibleNavigation?: CollapsibleNavigationSection[];
   navigation?: {
     title: string;
     url: string;
@@ -112,6 +114,16 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  electionBanner?: {
+    heights?: {
+      desktop: number;
+      tablet: number;
+      mobile: number;
+    };
+    electionThingIds: string[];
+    iframeSrc: string;
+    iframeDevSrc: string;
+  };
 };
 
 export type PodcastPromo = {
@@ -148,7 +160,7 @@ export interface RadioSchedule {
 }
 
 export interface Recommendations {
-  hasStoryRecommendations: boolean;
+  header?: string;
   skipLink?: {
     text: string;
     endTextVisuallyHidden: string;
@@ -166,6 +178,7 @@ export interface Footer {
   trustProjectLink?: FooterLink;
   externalLink?: FooterLink;
   links?: FooterLink[];
+  extraLinks?: FooterLink[];
   copyrightText?: string;
   collectiveNewsroomText?: string;
 }

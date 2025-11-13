@@ -70,10 +70,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {
         onboardingMessage: `Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.`,
@@ -82,18 +84,7 @@ export const service: DefaultServiceConfig = {
           'Ibindi vyerekeye ingene urwo rubuga rugutwara uburyo (ama mega) buke',
         informationPageLink: 'https://www.bbc.com/gahuza/articles/cn7y7pvem0vo',
         dataSaving: 'Ahagusaba uburyo (ama mega) buke',
-        articleDataSavingLinkText: 'Nyandiko gusa',
-        experiment: {
-          control_text_only: 'Nyandiko gusa',
-          variation_a_explore_data_friendly_version:
-            'Koresha uburyo butwara amahera make',
-          variation_b_data_saving_version: 'Uburyo buziganya amahera',
-          variation_c_read_data_saving_version:
-            'Soma mu buryo biziganya amahera',
-          variation_d_lite_site: 'Site yoroheje',
-          variation_e_2g_optimised_version: '2G Ukoresheje uburyo busanzwe',
-          variation_f_low_data_version: 'Uburyo butwara amahera make',
-        },
+        articleDataSavingLinkText: 'Inyandiko gusa',
       },
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',
@@ -270,6 +261,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
         download: 'Pakurura ikiganiro',
         closeVideo: 'Sohoka',
+        endOfContentClose: 'Iyi nkuru irangiye. Sohoka',
       },
       socialEmbed: {
         caption: {
@@ -305,7 +297,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Ibiheruka',
     },
     mostRead: {
-      header: 'Ibisomwa cane',
+      header: 'Izisomwa na benshi',
       lastUpdated: 'Ibiheruka kuvugururwa:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -316,7 +308,11 @@ export const service: DefaultServiceConfig = {
       durationLabel: 'Umwanya bimara %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: 'Ibisomwa cane',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -324,7 +320,7 @@ export const service: DefaultServiceConfig = {
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [

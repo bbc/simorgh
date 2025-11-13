@@ -516,7 +516,7 @@
         "curationId": "urn:bbc:tipo:list:04e600ed-76ff-4c71-be9f-86fac52bf8c0",
         "curationType": "tipo-curation",
         "position": 5,
-        "title": "Test links low visual prominence",
+        "title": "Related sites",
         "visualProminence": "LOW",
         "visualStyle": "LINKS"
       },
@@ -528,7 +528,7 @@
             "firstPublished": "",
             "link": "https://www.twitter.com/",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/efae/test/79e17d10-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
+            "description": "BBC News",
             "imageAlt": "Twitter",
             "id": "https%3A%2F%2Fwww.twitter.com"
           },
@@ -538,7 +538,7 @@
             "firstPublished": "",
             "link": "https://www.facebook.com/",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3da9/test/86350190-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
+            "description": "BBC News",
             "imageAlt": "Facebook",
             "id": "https%3A%2F%2Fwww.facebook.com"
           },
@@ -548,7 +548,7 @@
             "firstPublished": "",
             "link": "https://www.instagram.com/",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8aee/test/922de2f0-a244-11ed-9015-6935ab4fa6ca.png",
-            "description": "",
+            "description": "BBC News",
             "imageAlt": "Instagram",
             "id": "https%3A%2F%2Fwww.instagram.com"
           },
@@ -558,9 +558,49 @@
             "firstPublished": "",
             "link": "https://www.youtube.com/",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ca26/test/a1a3dd20-a244-11ed-9015-6935ab4fa6ca.png",
+            "description": "BBC News",
+            "imageAlt": "YouTube",
+            "id": "https%3A%2F%2Fwww.youtube.com"
+          },
+          {
+            "type": "link",
+            "title": "Facebook BBC News Mundo",
+            "firstPublished": "",
+            "link": "https://www.facebook.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/3da9/test/86350190-a244-11ed-9015-6935ab4fa6ca.png",
+            "description": "BBC News",
+            "imageAlt": "Facebook",
+            "id": "https%3A%2F%2Fwww.facebook.com"
+          },
+          {
+            "type": "link",
+            "title": "Twitter 2",
+            "firstPublished": "",
+            "link": "https://www.twitter.com/",
+            "imageUrl": "",
+            "description": "",
+            "imageAlt": "Twitter",
+            "id": "https%3A%2F%2Fwww.twitter.com"
+          },
+          {
+            "type": "link",
+            "title": "YouTube 2",
+            "firstPublished": "",
+            "link": "https://www.youtube.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/ca26/test/a1a3dd20-a244-11ed-9015-6935ab4fa6ca.png",
             "description": "",
             "imageAlt": "YouTube",
             "id": "https%3A%2F%2Fwww.youtube.com"
+          },
+          {
+            "type": "link",
+            "title": "Instagram 2",
+            "firstPublished": "",
+            "link": "https://www.instagram.com/",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/standard/{width}/cpsdevpb/8aee/test/922de2f0-a244-11ed-9015-6935ab4fa6ca.png",
+            "description": "BBC News",
+            "imageAlt": "Instagram",
+            "id": "https%3A%2F%2Fwww.instagram.com"
           }
         ],
         "activePage": 1,

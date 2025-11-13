@@ -10,11 +10,6 @@ import {
   PageTypes,
 } from '#models/types/global';
 import handleError from '../handleError';
-import HOME_PAGE_CONFIG from '../../homePage/getInitialData/page-config';
-import {
-  TOPIC_PAGE_CONFIG,
-  TopicPagePaths,
-} from '../../topic/getInitialData/page-config';
 import {
   ARTICLE_PAGE,
   AV_EMBEDS,
@@ -27,30 +22,33 @@ import {
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
+  LIVE_TV_PAGE,
 } from '../pageTypes';
-import parseAvRoute from '../parseAvRoute';
+import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
-const removeAmp = (path: string) => path.split('.')[0];
-const getArticleId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
+export const removeRendererExtension = (path: string) => path.split('.')[0];
+export const getArticleId = (path: string) =>
+  path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
 const getTVAudioId = (path: string) => removeLeadingSlash(path);
-const getTipoId = (path: string) => path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
+export const getTipoId = (path: string) =>
+  path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
-const isOptimoIdCheck = (path: string) =>
+export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
-const isCpsIdCheck = (path: string) =>
+export const isCpsIdCheck = (path: string) =>
   /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
 const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
 interface GetIdProps {
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   env: Environments;
 }
 
-const getId = ({ pageType, service, variant, env }: GetIdProps) => {
+const getId = ({ pageType, service, variant }: GetIdProps) => {
   let getIdFunction;
 
   switch (pageType) {
@@ -70,13 +68,11 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case HOME_PAGE:
       getIdFunction = () => {
-        // ensure service is always defined before indexing
-        if (!service) return null;
-        return env !== 'local' ? HOME_PAGE_CONFIG?.[service]?.[env] : service;
+        return service;
       };
       break;
     case MOST_READ_PAGE:
-      getIdFunction = () => pageType;
+      getIdFunction = () => service;
       break;
     case LIVE_RADIO_PAGE:
       getIdFunction = (path: string) => {
@@ -102,9 +98,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        return (
-          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
-        );
+        return getTipoId(path);
       };
       break;
     case UGC_PAGE:
@@ -112,7 +106,7 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       break;
     case AV_EMBEDS:
       getIdFunction = (path: string) => {
-        const parsedRoute = parseAvRoute(path);
+        const parsedRoute = parseRoute(path);
 
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
@@ -129,18 +123,25 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
     case TV_PAGE:
       getIdFunction = (path: string) => getTVAudioId(path);
       break;
+    case LIVE_TV_PAGE:
+      getIdFunction = (path: string) => {
+        // example path: /dari/watch/bbc_afghan_tv/live
+        const [tv] = path.split('/').slice(-2);
+        return tv;
+      };
+      break;
     default:
       getIdFunction = () => null;
       break;
   }
-  return pipe(getUrlPath, removeAmp, getIdFunction);
+  return pipe(getUrlPath, removeRendererExtension, getIdFunction);
 };
 
 export interface UrlConstructParams {
   pathname: string;
   pageType: PageTypes;
   service?: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   page?: string;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;
@@ -201,14 +202,29 @@ const constructPageFetchUrl = ({
   );
 
   if (isLocal) {
+    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
+    const port = process.env.PORT ? `:${process.env.PORT}` : '';
+
     switch (pageType) {
       case ARTICLE_PAGE: {
-        const isOptimoId = isOptimoIdCheck(`/articles/${id}`);
+        const { assetId, platform } = parseRoute(pathname);
+
+        if (platform === 'articles') {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/articles/${assetId}${variant ? `/${variant}` : ''}`,
+          );
+          break;
+        }
+
+        if (platform === 'cps') {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/cpsAssets/${variant ? `${variant}/` : ''}${assetId}`,
+          );
+          break;
+        }
 
         fetchUrl = Url(
-          isOptimoId
-            ? `/${service}/articles/${id}${variant ? `/${variant}` : ''}`
-            : `/${id}`,
+          `${host}${port}/api/local/${service}/legacyAssets/${variant ? `${variant}/` : ''}${assetId}`,
         );
 
         break;
@@ -219,8 +235,13 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(`/${id}`);
         break;
       case HOME_PAGE: {
-        const variantPath = variant ? `/${variant}` : '';
-        fetchUrl = Url(`/${service}${variantPath}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+          );
+        } else {
+          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
+        }
         break;
       }
       case MOST_READ_PAGE:
@@ -232,26 +253,20 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_PAGE: {
+        const [liveID] = pathname.split('.');
         const variantPath = variant ? `/${variant}` : '';
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
         // pathname is the ID of the Live page without /service/live/, and supports both Tipo & CPS IDs
         fetchUrl = Url(
-          `${host}${port}/api/local/${service}/live/${pathname}${variantPath}`,
+          `${host}${port}/api/local/${service}/live/${liveID}${variantPath}`,
         );
         break;
       }
       case UGC_PAGE: {
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
         fetchUrl = Url(`${host}${port}/api/local/${service}/send/${id}`);
         break;
       }
       case AV_EMBEDS: {
-        const parsedRoute = parseAvRoute(pathname);
-
-        const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-        const port = process.env.PORT ? `:${process.env.PORT}` : '';
+        const parsedRoute = parseRoute(pathname);
 
         if (parsedRoute.isWsRoute) {
           // handle /ws/av-embeds route
@@ -265,6 +280,10 @@ const constructPageFetchUrl = ({
       case LIVE_RADIO_PAGE:
         fetchUrl = Url(`${pathname}`);
         break;
+      case LIVE_TV_PAGE: {
+        fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);
+        break;
+      }
       default:
         return fetchUrl;
     }

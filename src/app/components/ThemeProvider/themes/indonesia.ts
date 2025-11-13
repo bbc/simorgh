@@ -1,10 +1,12 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/indonesian';
+import getPWATypographyTheme from './getPWATypographyTheme';
 
-const indonesiaTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -20,4 +22,6 @@ const indonesiaTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(indonesiaTheme);
+export const pwaTheme = getPWATypographyTheme();
+
+export default withThemeProvider(theme, pwaTheme);

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -14,7 +14,7 @@ import { ServiceContext } from '../../../../contexts/ServiceContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
-const TIMEOUT_INTERVAL = 5000;
+const TIMEOUT_INTERVAL = 1000;
 
 if (isLive() || isInCypress) {
   setLogger(null);
@@ -26,15 +26,38 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
+const isMobile = () => {
+  if (onClient()) {
+    const matchMedia = window.matchMedia(
+      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    );
+
+    if (matchMedia.matches) return true;
+
+    return false;
+  }
+
+  return null;
+};
+
+const getReferrer = () => {
+  if (onClient()) {
+    // TODO: Will be implemented in https://bbc.atlassian.net/browse/WS-947
+  }
+
+  return null;
+};
+
 const withOptimizelyProvider = Component => {
   return props => {
-    const { service } = useContext(ServiceContext);
+    const { service } = use(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
     const disableOptimizely = isStoryBook || isInCypress;
 
     if (disableOptimizely) return <Component {...props} />;
 
-    let mobile;
+    const mobile = isMobile();
+    const referrer = getReferrer();
 
     const getUserId = () => {
       if (disableOptimizely || !onClient() || isOperaProxy()) {
@@ -42,17 +65,6 @@ const withOptimizelyProvider = Component => {
       }
       return Cookie.get('ckns_mvt') ?? null;
     };
-
-    if (onClient()) {
-      const matchMedia = window.matchMedia(
-        `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-      );
-      if (matchMedia.matches) {
-        mobile = true;
-      } else {
-        mobile = false;
-      }
-    }
 
     return (
       <OptimizelyProvider
@@ -64,6 +76,7 @@ const withOptimizelyProvider = Component => {
           attributes: {
             service,
             mobile,
+            referrer,
           },
         }}
       >

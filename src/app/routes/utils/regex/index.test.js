@@ -1,4 +1,5 @@
 import { matchPath } from 'react-router-dom';
+import { services } from '#app/lib/config/services/loadableConfig';
 import {
   articleDataPath,
   articlePath,
@@ -16,12 +17,10 @@ import {
   onDemandTvPath,
   podcastBrandPath,
   podcastEpisodePath,
-  recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   topicPath,
 } from './index';
 
-import serviceConfig from '../../../lib/config/services/loadableConfig';
 import { getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -260,24 +259,6 @@ describe('secondaryColumnDataRegexPath', () => {
   shouldNotMatchInvalidRoutes(invalidRoutes, secondaryColumnDataRegexPath);
 });
 
-describe('recommendationsDataRegex', () => {
-  const validRoutes = [
-    '/mundo/23263889/recommendations.json',
-    '/zhongwen/uk-23283128/recommendations/simp.json',
-  ];
-  shouldMatchValidRoutes(validRoutes, recommendationsDataRegex);
-
-  const invalidRoutes = [
-    '/foobar/23124/recommendations.json',
-    '/foobar/recommendations.json',
-    '/foobar/recommendations',
-    '/foobar/recommendations.js',
-    '/zhongwen/trad/recommendations.json',
-    '/zhongwen/12322/trad/recommendations.json',
-  ];
-  shouldNotMatchInvalidRoutes(invalidRoutes, recommendationsDataRegex);
-});
-
 describe('onDemandTvPath', () => {
   const validRoutes = [
     '/indonesia/bbc_indonesian_tv/tv/w34rfd4k',
@@ -412,8 +393,6 @@ describe('legacyAssetPageDataPath', () => {
 });
 
 describe('homepages on environments', () => {
-  const services = Object.keys(serviceConfig);
-
   const serviceToRoute = service => `/${service}`;
 
   const migratedServices = [

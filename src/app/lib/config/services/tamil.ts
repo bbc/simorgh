@@ -56,13 +56,14 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'விளம்பரம்',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'அனைத்தும் பார்க்க',
       home: 'முகப்பு',
+      continueReading: 'தொடர்ந்து படியுங்கள்',
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
+      moreOnThis: '',
       navMenuText: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
@@ -245,7 +246,10 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
         duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
+        podcastExternalLinks: 'இந்த பாட்காஸ்ட் இங்கே கிடைக்கும்',
+        download: 'எபிசோடை பதிவிறக்கம் செய்ய',
         closeVideo: 'மூடுக',
+        endOfContentClose: 'இந்த உள்ளடக்கத்தின் முடிவு. மூடுக',
       },
       socialEmbed: {
         caption: {
@@ -351,7 +355,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'அதிகம் படிக்கப்பட்டது',
+      header: 'மனதை தொட்டவை',
       lastUpdated: 'கடைசியாக புதுப்பிக்கப்பட்டது:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -360,7 +364,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'அதிகம் படிக்கப்பட்டது',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -372,7 +376,7 @@ export const service: DefaultServiceConfig = {
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'வெளியார் இணைப்புகள் தொடர்பான எங்கள் அணுகுமுறையைப் பற்றி படிக்கவும்.',
       },
       links: [

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Document Component should render AMP version correctly 1`] = `
 <html
@@ -18,11 +18,6 @@ exports[`Document Component should render AMP version correctly 1`] = `
       async=""
       custom-element="amp-geo"
       src="https://cdn.ampproject.org/v0/amp-geo-0.1.js"
-    />
-    <script
-      async=""
-      custom-element="amp-consent"
-      src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"
     />
     <script
       async=""
@@ -83,22 +78,6 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <script
-      async=""
-      src="https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js"
-    />
-    <link
-      href="modern.main.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.vendor.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.igbo.js"
-      rel="modulepreload"
-    />
     <meta
       content="noindex"
       name="robots"
@@ -113,6 +92,18 @@ exports[`Document Component should render APP version correctly 1`] = `
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
+    <link
+      href="modern.main.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulepreload"
+    />
     <script>
       
             window.__reverb = {};
@@ -123,6 +114,10 @@ exports[`Document Component should render APP version correctly 1`] = `
             window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
+            const reverbScript = document.createElement('script');
+            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.2.js');
+            document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
@@ -130,7 +125,40 @@ exports[`Document Component should render APP version correctly 1`] = `
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
     <script>
-      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+    </script>
+    <script
+      type="text/javascript"
+    >
+      
+    window.addEventListener('load', function () {
+      var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
+
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
+        isComponentTrackingEnabled = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      }      
+
+      if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
+  })();
+        }
+
+        (function clickTracking() {
+    return 'Click tracking placeholder';
+  })();
+      }
+    });
+  
     </script>
   </head>
   <body>
@@ -204,20 +232,38 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <style>
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
-    <script>
+    <script
+      type="text/javascript"
+    >
       
-  window.addEventListener('load', function (){
-    (function liteATIClickTracking() {
-    return 'Tracking script placeholder';
-  })();
-    (function liteATIClickTracking() {
-    return 'Click script placeholder';
-  })();
-    (function liteATIClickTracking() {
-    return 'View script placeholder';
-  })();
-  });
+    window.addEventListener('load', function () {
+      var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = false;
+      var isComponentViewTrackingEnabled = true;
 
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
+        isComponentTrackingEnabled = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      }      
+
+      if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
+  })();
+        }
+
+        (function clickTracking() {
+    return 'Click tracking placeholder';
+  })();
+      }
+    });
+  
     </script>
   </head>
   <body>
@@ -241,9 +287,15 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <script
-      async=""
-      src="https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js"
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
     />
     <link
       href="modern.main.js"
@@ -257,16 +309,6 @@ exports[`Document Component should render correctly 1`] = `
       href="modern.igbo.js"
       rel="modulepreload"
     />
-    <title
-      data-react-helmet="true"
-    >
-      Test title
-    </title>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
-    />
     <script>
       
             window.__reverb = {};
@@ -277,6 +319,10 @@ exports[`Document Component should render correctly 1`] = `
             window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
               window.__reverb.__rejectReverbLoaded();
             }, 5000);
+            const reverbScript = document.createElement('script');
+            reverbScript.setAttribute('src','http://localhost:7080/static/js/reverb/reverb-3.10.2.js');
+            document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
@@ -284,7 +330,40 @@ exports[`Document Component should render correctly 1`] = `
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
     <script>
-      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+      window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+    </script>
+    <script
+      type="text/javascript"
+    >
+      
+    window.addEventListener('load', function () {
+      var isComponentTrackingEnabled = true;
+      var isStaticClickTrackingOnOperaMiniOnlyEnabled = true;
+      var isComponentViewTrackingEnabled = false;
+
+      if (isStaticClickTrackingOnOperaMiniOnlyEnabled) {
+        isComponentTrackingEnabled = function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}();
+      }      
+
+      if (isComponentTrackingEnabled) {
+        (function addProcessClientDeviceAndSendStaticBeaconToWindow() {
+    return 'Add process client device and send static beacon to window placeholder';
+  })();
+
+        if (isComponentViewTrackingEnabled) {
+          (function viewTracking() {
+    return 'View tracking placeholder';
+  })();
+        }
+
+        (function clickTracking() {
+    return 'Click tracking placeholder';
+  })();
+      }
+    });
+  
     </script>
   </head>
   <body>

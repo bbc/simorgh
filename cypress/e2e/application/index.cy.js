@@ -1,49 +1,40 @@
-import config from '../../support/config/services';
+import loadableConfig from '#app/lib/config/services/loadableConfig';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
-import serviceHasPageType from '../../support/helpers/serviceHasPageType';
-import ampOnlyServices from '../../support/helpers/ampOnlyServices';
-import envConfig from '../../support/config/envs';
-import getPaths from '../../support/helpers/getPaths';
-import { getTopicPagePath } from '../pages/topicPage/helpers';
+
+const PUBLIC_SERVICES = [
+  'archive',
+  'cymrufyw',
+  'naidheachdan',
+  'news',
+  'newsround',
+  'scotland',
+  'sport',
+  'ws',
+];
+
+const NOT_LIVE_SERVICES = ['magyarul', 'romania', 'dari'];
+
+const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
 
 describe('Application', () => {
-  Object.keys(config)
-    .filter(service =>
-      Object.keys(config[service].pageTypes).some(pageType =>
-        serviceHasPageType(service, pageType),
-      ),
-    )
+  Object.keys(loadableConfig)
+    .filter(service => !servicesToIgnore.includes(service))
     .forEach(service => {
-      if (!ampOnlyServices.includes(service)) {
-        it(`should return a 200 status code for ${service}'s service worker`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/sw.js`,
-            responseCode: 200,
-            type: 'application/javascript',
-          });
+      it(`should return a 200 status code for ${service}'s service worker`, () => {
+        cy.testResponseCodeAndType({
+          path: `/${service}/sw.js`,
+          responseCode: 200,
+          type: 'application/javascript',
         });
+      });
 
-        it(`should return a 200 status code for ${service} manifest file`, () => {
-          cy.testResponseCodeAndType({
-            path: `/${config[service].name}/manifest.json`,
-            responseCode: 200,
-            type: 'application/json',
-          });
+      it(`should return a 200 status code for ${service} manifest file`, () => {
+        cy.testResponseCodeAndType({
+          path: `/${service}/manifest.json`,
+          responseCode: 200,
+          type: 'application/json',
         });
-
-        it(`should awaken fresh data for pages for later tests`, () => {
-          // Add more here if you want to awaken fresh data for other page types
-          if (serviceHasPageType(service, 'topicPage')) {
-            const paths = getPaths(service, 'topicPage');
-            paths.forEach(currentPath => {
-              const topicPagePath = getTopicPagePath(currentPath);
-              const fullPath = `${envConfig.baseUrl}${topicPagePath}`;
-              cy.log(fullPath);
-              cy.visit(fullPath);
-            });
-          }
-        });
-      }
+      });
     });
 });
 

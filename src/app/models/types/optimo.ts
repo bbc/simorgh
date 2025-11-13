@@ -5,6 +5,7 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
+import { Curation } from './curationData';
 
 export type OptimoBlock = {
   type: string;
@@ -100,6 +101,10 @@ export type ArticleMetadata = {
   };
   topics: MetadataTopics;
   type: PageTypes;
+  stats?: {
+    readTime?: number;
+    wordCount?: number;
+  };
 };
 
 export type ArticleContent = {
@@ -126,6 +131,8 @@ export type ArticlePromo = {
 };
 
 export type SecondaryColumn = {
+  billboardCuration?: Curation;
+  mediaCuration?: Curation;
   topStories: TopStoryItem[];
   features: object[];
   latestMedia?: LatestMedia[];

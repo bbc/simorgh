@@ -63,6 +63,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
       relatedTopics: '関連トピックス',
+      moreOnThis: '',
       navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'メディアプレイヤー',
@@ -219,6 +220,7 @@ export const service: DefaultServiceConfig = {
         duration: '所要時間',
         recentEpisodes: 'さらに',
         closeVideo: '閉じる',
+        endOfContentClose: 'このコンテンツの終わり。閉じる',
       },
       socialEmbed: {
         caption: {
@@ -251,9 +253,10 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
+      latestMediaTitle: '最新動画',
     },
     mostRead: {
-      header: '読まれた記事ランキング',
+      header: '注目の記事',
       lastUpdated: '最終更新:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -262,7 +265,11 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: false,
+      header: '読まれた記事ランキング',
+      skipLink: {
+        text: 'Skip %title% and continue reading',
+        endTextVisuallyHidden: 'End of %title%',
+      },
     },
     footer: {
       trustProjectLink: {

@@ -1,8 +1,32 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
@@ -207,25 +231,19 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-7 {
-    margin: 2.5rem 0px 0px;
-  }
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-7 {
-    margin-top: 1rem;
+    margin: 0px 0px 0px;
   }
 }
 
 @media (max-width: 37.4375rem) {
   .emotion-7 {
-    margin: 1rem -1rem 0px;
+    margin: 0px -1rem 0px;
   }
 }
 
 @media (max-width: 24.9375rem) {
   .emotion-7 {
-    margin: 0.5rem -0.5rem 0px;
+    margin: 0px -0.5rem 0px;
   }
 }
 
@@ -477,8 +495,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -539,8 +557,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -682,8 +700,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -714,8 +732,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }
@@ -741,7 +759,9 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"
@@ -759,7 +779,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
            د بي بي سي خبرونه , ۲۱ نومبر ۲۰۲۴
         </h1>
         <figure
-          class="emotion-7"
+          class="media-container emotion-7"
           data-e2e="media-loader__container"
         >
           <div
@@ -825,8 +845,10 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
               <img
                 alt=""
                 class="emotion-18"
+                loading="eager"
                 src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
                 srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
+                style="aspect-ratio: auto;"
               />
             </div>
           </div>
@@ -879,6 +901,30 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 exports[`OnDemand TV Page  should show the expired content message if episode is expired 1`] = `
 .emotion-0 {
   background-color: #141414;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
 }
 
 .emotion-2 {
@@ -1111,8 +1157,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1159,8 +1205,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -1221,8 +1267,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1364,8 +1410,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -1396,8 +1442,8 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }
@@ -1423,7 +1469,9 @@ exports[`OnDemand TV Page  should show the expired content message if episode is
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"
@@ -1505,6 +1553,30 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   background-color: #141414;
 }
 
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-top: 2.5rem;
+  }
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding-top: 0.5rem;
+  }
+}
+
 .emotion-2 {
   width: 100%;
   padding-bottom: 2rem;
@@ -1735,8 +1807,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   top: 0;
   left: 0;
   border: 0.0625rem solid transparent;
-  color: #FFFFFF;
-  background-color: rgba(34, 34, 34, 0.75);
+  color: #F6F6F6;
+  background-color: #3A3C3E;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1783,8 +1855,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #F6F6F6;
   display: block;
   margin: 0;
@@ -1845,8 +1917,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1988,8 +2060,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #F6F6F6;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -2020,8 +2092,8 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #AEAEB5;
   display: inline-block;
 }
@@ -2047,7 +2119,9 @@ exports[`OnDemand TV Page  should show the future content message if episode is 
     <div>
       chartbeat
     </div>
-    <noscript />
+    <noscript
+      id="analytics-noscript"
+    />
     <main
       class="emotion-1 emotion-2 emotion-3"
       dir="rtl"

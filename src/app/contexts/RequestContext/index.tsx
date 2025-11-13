@@ -5,7 +5,7 @@ import {
   PageTypes,
   Services,
   Variants,
-  MvtExperiment,
+  ServerSideExperiment,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getOriginContext from './getOriginContext';
@@ -26,7 +26,7 @@ export type RequestContextProps = {
   isLite: boolean;
   isNextJs: boolean;
   isUK: boolean;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   origin: string;
   pageType: PageTypes;
   derivedPageType: string | null;
@@ -39,6 +39,9 @@ export type RequestContextProps = {
   statusCode: number | null;
   timeOnServer: number | null;
   variant: Variants | null;
+  country?: string | null;
+  nonce?: string | null;
+  cspHeader: string | null;
 };
 
 export const RequestContext = React.createContext<RequestContextProps>(
@@ -60,9 +63,12 @@ type RequestProviderProps = {
   showCookieBannerBasedOnCountry?: boolean;
   statusCode?: number | null;
   timeOnServer?: number | null;
-  mvtExperiments?: MvtExperiment[] | null;
+  serverSideExperiments?: ServerSideExperiment[] | null;
   variant?: Variants | null;
   isUK?: boolean | null;
+  country?: string | null;
+  nonce?: string | null;
+  cspHeader?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -74,19 +80,23 @@ export const RequestContextProvider = ({
   isApp = false,
   isLite = false,
   isNextJs = false,
-  mvtExperiments = null,
+  serverSideExperiments = null,
   pageType,
   pathname,
   service,
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
+  country,
+  nonce = null,
+  cspHeader = null,
   statusCode = null,
   timeOnServer = null,
   variant = null,
   isUK = null,
 }: PropsWithChildren<RequestProviderProps>) => {
-  const { origin } = getOriginContext(bbcOrigin);
+  let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
+  if (isNextJs && env === 'local') origin = 'http://localhost:7081';
   const formattedIsUK = isUK ?? false;
 
   const getPlatform = (): Platforms => {
@@ -131,7 +141,10 @@ export const RequestContextProvider = ({
       service,
       pathname,
       ...getMetaUrls(origin, pathname),
-      mvtExperiments,
+      serverSideExperiments,
+      country,
+      nonce,
+      cspHeader,
     }),
     [
       derivedPageType,
@@ -142,7 +155,7 @@ export const RequestContextProvider = ({
       isApp,
       isLite,
       isNextJs,
-      mvtExperiments,
+      serverSideExperiments,
       origin,
       pageType,
       pathname,
@@ -154,6 +167,9 @@ export const RequestContextProvider = ({
       statusCode,
       timeOnServer,
       variant,
+      country,
+      cspHeader,
+      nonce,
     ],
   );
 

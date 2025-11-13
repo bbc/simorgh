@@ -8,6 +8,7 @@ const defaultServiceVariants: { [index: string]: Variants } = {
   serbian: 'lat',
   ukchina: 'simp',
   uzbek: 'cyr',
+  ukrainian: 'default',
   zhongwen: 'trad',
 };
 

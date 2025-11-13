@@ -1,5 +1,19 @@
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
+
+const commonMarginSpacing = ({ mq, spacings }: Theme) =>
+  css({
+    marginInline: `${spacings.FULL}rem`,
+    [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MAX_WIDTH]: {
+        marginInline: `${spacings.DOUBLE}rem`,
+      },
+    },
+    [mq.GROUP_4_MIN_WIDTH]: {
+      marginInline: 0,
+    },
+  });
 
 export default {
   pageWrapper: ({ palette }: Theme) =>
@@ -41,9 +55,39 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
-  mainContent: ({ spacings }: Theme) =>
+  mainContent: ({ palette, spacings, mq }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
+
+      // Hide content after Continue Reading button
+      '[id="continue-reading-button"] ~ *': {
+        display: 'none',
+
+        [`.${NO_JS_CLASSNAME} &`]: {
+          display: 'block',
+        },
+
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'block',
+        },
+      },
+
+      // Focus styles for first hidden element when Continue Reading is clicked
+      '[data-first-hidden-element="true"]': {
+        ':focus-visible': {
+          outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+          boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+          outlineOffset: `${pixelsToRem(3)}rem`,
+        },
+      },
+    }),
+  hideRelatedTopics: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
     }),
   adContainer: ({ spacings }: Theme) =>
     css({
@@ -98,5 +142,42 @@ export default {
         marginBottom: `${spacings.FULL}rem`,
         padding: `${spacings.DOUBLE}rem`,
       },
+    }),
+  portraitVideoTitle: ({
+    mq,
+    fontSizes,
+    fontVariants,
+    spacings,
+    palette,
+  }: Theme) => [
+    css({
+      display: 'block',
+      ...fontSizes.doublePica,
+      ...fontVariants.sansBold,
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      color: palette.BLACK,
+      [mq.GROUP_2_ONLY]: {
+        paddingBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+
+      marginInline: `${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_3_MAX_WIDTH]: {
+          marginInline: `${spacings.DOUBLE}rem`,
+        },
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        marginInline: 0,
+      },
+    }),
+    commonMarginSpacing,
+  ],
+  // EXPERIMENT: Article Read Time
+  readTimePlaceholderBelowTimestamp: () =>
+    css({
+      marginBottom: `${pixelsToRem(18.5)}rem`,
     }),
 };

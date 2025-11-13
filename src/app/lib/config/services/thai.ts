@@ -55,14 +55,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'โฆษณา',
       },
-      recommendationTitle: 'เรื่องแนะนำ',
-      splitRecommendationTitle: 'เรื่่องแนะนำอื่น ๆ',
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
       relatedTopics: 'ข่าวที่เกี่ยวข้อง',
+      moreOnThis: '',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
@@ -223,6 +222,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'รายการวิทยุถัดไป',
         duration: 'ความยาว',
         closeVideo: 'ออก',
+        endOfContentClose: 'เนื้อหานี้สิ้นสุดแล้ว ออก',
       },
       socialEmbed: {
         caption: {
@@ -257,7 +257,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
     mostRead: {
-      header: 'ได้รับความนิยมสูงสุด',
+      header: 'บทความยอดนิยม',
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
@@ -266,7 +266,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'ได้รับความนิยมสูงสุด',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -308,7 +308,7 @@ export const service: DefaultServiceConfig = {
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี ได้',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก',
       },
       links: [

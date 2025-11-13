@@ -30,7 +30,7 @@ export default async () => {
       );
 
       const localManifestFile = await getManifestFile(
-        `http://localhost:7080/${url}?renderer_env=live`,
+        `http://localhost:7080/${url}`,
       );
 
       const result = liveManifestFile === localManifestFile ? '✅' : '❌';

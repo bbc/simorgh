@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StoryPromo Container should render audio correctly for amp 1`] = `
 .emotion-0 {
@@ -99,8 +99,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -186,8 +186,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -253,8 +253,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -294,8 +294,8 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -532,8 +532,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -619,8 +619,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -686,8 +686,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -727,8 +727,8 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -769,6 +769,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -933,8 +934,8 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -1000,8 +1001,8 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1041,8 +1042,8 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1146,8 +1147,8 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -1410,8 +1411,8 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -1500,8 +1501,8 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -1567,8 +1568,8 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1601,8 +1602,8 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1833,8 +1834,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -1916,8 +1917,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -1983,8 +1984,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2024,8 +2025,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2251,8 +2252,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -2334,8 +2335,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -2401,8 +2402,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2442,8 +2443,8 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2484,6 +2485,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -2637,8 +2639,8 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -2704,8 +2706,8 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2745,8 +2747,8 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2850,8 +2852,8 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -3099,8 +3101,8 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -3185,8 +3187,8 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -3252,8 +3254,8 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3286,8 +3288,8 @@ exports[`StoryPromo Container should render audio with no duration promoType top
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3544,8 +3546,8 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -3600,8 +3602,8 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3641,8 +3643,8 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3870,8 +3872,8 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -3926,8 +3928,8 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3967,8 +3969,8 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4009,6 +4011,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="aspect-ratio: 976 / 549;"
             width="976"
           />
         </div>
@@ -4127,8 +4130,8 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -4183,8 +4186,8 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4224,8 +4227,8 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4537,8 +4540,8 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -4593,8 +4596,8 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4627,8 +4630,8 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4863,8 +4866,8 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -4919,8 +4922,8 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4953,8 +4956,8 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5195,8 +5198,8 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -5251,8 +5254,8 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5285,8 +5288,8 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5327,6 +5330,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -5508,8 +5512,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -5564,8 +5568,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5605,8 +5609,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -5818,8 +5822,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -5874,8 +5878,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5915,8 +5919,8 @@ exports[`StoryPromo Container should render item without an image correctly for 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -6065,8 +6069,8 @@ exports[`StoryPromo Container should render item without an image promoType lead
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -6121,8 +6125,8 @@ exports[`StoryPromo Container should render item without an image promoType lead
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -6162,8 +6166,8 @@ exports[`StoryPromo Container should render item without an image promoType lead
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -6467,8 +6471,8 @@ exports[`StoryPromo Container should render item without an image promoType top 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -6523,8 +6527,8 @@ exports[`StoryPromo Container should render item without an image promoType top 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -6557,8 +6561,8 @@ exports[`StoryPromo Container should render item without an image promoType top 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -6782,8 +6786,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -6884,8 +6888,8 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -7172,8 +7176,8 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -7274,8 +7278,8 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -7333,6 +7337,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -7493,8 +7498,8 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -7611,8 +7616,8 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -7983,8 +7988,8 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -8101,8 +8106,8 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -8375,8 +8380,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -8431,8 +8436,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -8465,8 +8470,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -8515,8 +8520,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -8555,8 +8560,8 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -8623,6 +8628,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -8902,8 +8908,8 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -8958,8 +8964,8 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9182,8 +9188,8 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -9238,8 +9244,8 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9399,8 +9405,8 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -9455,8 +9461,8 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9771,8 +9777,8 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -9827,8 +9833,8 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -10042,8 +10048,8 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -10098,8 +10104,8 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -10139,8 +10145,8 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -10368,8 +10374,8 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -10424,8 +10430,8 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -10465,8 +10471,8 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -10507,6 +10513,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -10625,8 +10632,8 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -10681,8 +10688,8 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -10722,8 +10729,8 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -11035,8 +11042,8 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -11091,8 +11098,8 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -11125,8 +11132,8 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -11348,8 +11355,8 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -11404,8 +11411,8 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -11445,8 +11452,8 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -11674,8 +11681,8 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -11730,8 +11737,8 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -11771,8 +11778,8 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -11813,6 +11820,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+            style="aspect-ratio: 976 / 549;"
             width="976"
           />
         </div>
@@ -11931,8 +11939,8 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -11987,8 +11995,8 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -12028,8 +12036,8 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -12341,8 +12349,8 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -12397,8 +12405,8 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -12431,8 +12439,8 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -12654,8 +12662,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -12710,8 +12718,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -12751,8 +12759,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -12980,8 +12988,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -13036,8 +13044,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -13077,8 +13085,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -13119,6 +13127,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -13237,8 +13246,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -13293,8 +13302,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -13334,8 +13343,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -13647,8 +13656,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -13703,8 +13712,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -13737,8 +13746,8 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -13923,8 +13932,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -14010,8 +14019,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -14077,8 +14086,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -14118,8 +14127,8 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -14363,8 +14372,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -14450,8 +14459,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -14517,8 +14526,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -14558,8 +14567,8 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -14600,6 +14609,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
             src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
             srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+            style="aspect-ratio: 2048 / 1152;"
             width="2048"
           />
         </div>
@@ -14771,8 +14781,8 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.375rem;
 }
@@ -14838,8 +14848,8 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -14879,8 +14889,8 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -14984,8 +14994,8 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -15255,8 +15265,8 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: block;
@@ -15345,8 +15355,8 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
 }
@@ -15412,8 +15422,8 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -15446,8 +15456,8 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

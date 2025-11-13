@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#contexts/RequestContext';
 import AmpAd from './Amp';
@@ -7,7 +7,8 @@ import { AdProps } from './types';
 import AdBootstrapJs from './Canonical/AdBootstrapJs';
 
 const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
-  const { isAmp, isLite, showAdsBasedOnLocation } = useContext(RequestContext);
+  const { isAmp, isLite, showAdsBasedOnLocation, nonce } = use(RequestContext);
+
   const { enabled: adsEnabled } = useToggle('ads');
 
   if (isLite) return null;
@@ -19,8 +20,8 @@ const AdContainer = ({ slotType, className, adcampaign }: AdProps) => {
     return (
       <>
         {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
-        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} />}
-        <Ad slotType={slotType} className={className} />
+        {!isAmp && <AdBootstrapJs adcampaign={adcampaign} nonce={nonce} />}
+        <Ad nonce={nonce} slotType={slotType} className={className} />
       </>
     );
   }

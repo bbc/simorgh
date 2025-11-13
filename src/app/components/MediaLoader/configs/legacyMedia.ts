@@ -27,9 +27,10 @@ export default ({
     translations,
   });
 
-  const mp4Items = playlist
-    ?.filter(item => item.format === 'mp4')
-    ?.map(item => ({ href: item.url, kind: 'programme' }));
+  const items = playlist?.map(item => ({
+    href: item.url,
+    kind: 'programme',
+  }));
 
   return {
     mediaType: format || 'video',
@@ -38,7 +39,7 @@ export default ({
       playlistObject: {
         title: mediaOverrides?.pageTitleOverride || '',
         holdingImageURL: image?.href,
-        items: mp4Items,
+        items,
       },
       ui: basePlayerConfig.ui,
       statsObject: basePlayerConfig.statsObject,

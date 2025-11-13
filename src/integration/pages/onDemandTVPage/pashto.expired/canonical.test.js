@@ -1,6 +1,6 @@
 /**
  * @service pashto
- * @pathname /pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf
+ * @pathname /pashto/bbc_pashto_tv/tv/w172xtq7x8660m1
  */
 
 import runExpiredEpisodeTests from '../expiredEpisodeTests';

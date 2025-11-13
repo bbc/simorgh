@@ -57,13 +57,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Quảng cáo',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: 'Xem tất cả',
       home: 'Tin chính',
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
       relatedTopics: 'Chủ đề liên quan',
+      moreOnThis: '',
       navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -230,6 +230,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Thời lượng',
         recentEpisodes: 'Xem thêm',
         closeVideo: 'Thoát',
+        endOfContentClose: 'Kết thúc nội dung. Thoát',
       },
       socialEmbed: {
         caption: {
@@ -265,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Mới nhất',
     },
     mostRead: {
-      header: 'Đọc nhiều nhất',
+      header: 'Phổ biến',
       lastUpdated: 'Cập nhật gần nhất:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -274,7 +275,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Đọc nhiều nhất',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -286,7 +287,7 @@ export const service: DefaultServiceConfig = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [

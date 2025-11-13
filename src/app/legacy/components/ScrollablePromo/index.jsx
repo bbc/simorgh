@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -27,7 +27,6 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GREY_2 } from '#app/components/ThemeProvider/palette';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -153,29 +152,33 @@ const ScrollablePromo = ({
   blockGroupIndex = null,
   experimentVariant = null,
 }) => {
-  const { script, service, dir, translations, mostRead } =
-    useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { script, service, dir, translations, mostRead } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
     format: 'CHD=edoj',
-    // We want to check for experimentVariant here as ScrollablePromo is used in within the Article body as well.
-    // We only want to track Optimizely events for the Top Bar use case.
-    ...(optimizely && experimentVariant && { optimizely }),
+    ...(experimentVariant && {
+      componentName: 'top-bar-oj',
+      sendOptimizelyEvents: true,
+      viewThreshold: 0,
+    }),
   };
 
-  const viewRef = useViewTracker(eventTrackingData);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
   }
 
   let title;
-  if (experimentVariant === 'top_bar_top_stories') {
+  if (
+    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
+      experimentVariant,
+    )
+  ) {
     title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'top_bar_most_read') {
+  } else if (experimentVariant === 'top-bar-most-read') {
     title = mostRead.header || 'Most Read';
   } else {
     title =
@@ -224,9 +227,9 @@ const ScrollablePromo = ({
           <PromoList
             blocks={blocks}
             experimentVariant={experimentVariant}
-            viewTracker={viewRef}
-            onClick={handleClickTracking}
-            {...a11yAttributes}
+            viewTracker={viewTracker}
+            clickTracker={clickTracker}
+            a11yAttributes={a11yAttributes}
           />
         </GridItemMediumNoMargin>
       </ScrollablePromoContainer>
@@ -245,14 +248,14 @@ const ScrollablePromo = ({
         </LabelComponent>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
+        <PromoWrapper dir={dir} {...viewTracker}>
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          viewTracker={viewRef}
-          onClick={handleClickTracking}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
         />
       )}
     </GridItemMediumNoMargin>

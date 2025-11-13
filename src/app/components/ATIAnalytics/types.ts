@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { PageTypes, Platforms, Services } from '../../models/types/global';
 import { RequestContextProps } from '../../contexts/RequestContext';
 import { ServiceConfig } from '../../models/types/serviceConfig';
@@ -31,6 +32,7 @@ export interface ATIData {
   timePublished?: string | null;
   timeUpdated?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 
@@ -98,15 +100,56 @@ export interface ReverbDetailsProviders {
   atiData: ATIData;
 }
 
+export type ReverbPageVars = {
+  name?: string | null;
+  additionalProperties?: {
+    app_name?: string | null;
+    content_language?: string | null;
+    type?: string | null;
+  };
+  destination?: string | null;
+  producer?: string | null;
+  contentId?: string | null;
+  contentType?: string | null;
+};
+
+export type ReverbUserVars = {
+  isSignedIn: boolean;
+};
+
+export type ReverbEventDetails = {
+  anchorElement?: HTMLElement;
+  experience?: {
+    engine_type: Array<string>;
+    engine_id: Array<string>;
+  };
+  event?: {
+    category: string;
+    action: 'select' | 'view';
+    grouping?: string;
+  };
+  eventName: 'pageView' | 'sectionView' | 'sectionClick';
+  eventPublisher?: string;
+  group?: string | object;
+  isClick?: boolean;
+  item?: string | object;
+  originalEvent?: Event;
+};
+
+export type ReverbBeaconConfig = {
+  params: { page: ReverbPageVars; user: ReverbUserVars };
+  eventDetails: ReverbEventDetails;
+};
+
 export interface ATIAnalyticsProps {
   baseUrl?: string;
   pageviewParams: string;
-  reverbParams?: object | null;
+  reverbParams?: ReverbBeaconConfig | null;
 }
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
@@ -119,8 +162,33 @@ export interface ATIEventTrackingProps {
   url?: string;
   detailedPlacement?: string;
   useReverb?: boolean;
-  experimentVariant?: string;
+  experimentName?: string;
+  experimentVariant?: string | null;
   ampExperimentName?: string;
+  preventNavigation?: string;
+  itemTracker?: ItemTracker;
+  groupTracker?: GroupTracker;
+  viewThreshold?: number;
+  eventGroupingName?: string;
+}
+
+export interface ItemTracker {
+  type?: string;
+  text?: string;
+  position?: number;
+  duration?: number;
+  resourceId?: string;
+  label?: string;
+  mediaType?: string;
+}
+
+export interface GroupTracker {
+  name?: string;
+  type?: string;
+  position?: string | number;
+  resourceId?: string;
+  itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {
@@ -143,6 +211,7 @@ export interface ATIPageTrackingProps {
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 

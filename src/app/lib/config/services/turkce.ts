@@ -47,6 +47,13 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Okuma süresi',
+        quick: 'Kısa haber',
+        long: 'Uzun haber',
+        minute: 'dk',
+        minutes: 'dk',
+      },
       pagination: {
         previousPage: 'Önceki',
         nextPage: 'Sonraki',
@@ -55,14 +62,14 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Reklam',
       },
-      recommendationTitle: 'Önerilen haberler',
-      splitRecommendationTitle: 'Daha fazla önerilen hikaye',
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
+      continueReading: 'Okumaya devam edin',
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      moreOnThis: '',
       navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -231,6 +238,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {
@@ -266,7 +274,7 @@ export const service: DefaultServiceConfig = {
       featuresAnalysisTitle: 'Seçtiklerimiz',
     },
     mostRead: {
-      header: 'En çok okunanlar',
+      header: 'Popüler haberler',
       lastUpdated: 'Son güncelleme:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -275,7 +283,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'En çok okunanlar',
       skipLink: {
         text: 'Haberin başlığını atlayın ve okumaya devam edin',
         endTextVisuallyHidden: 'Haberin sonu',
@@ -287,7 +295,7 @@ export const service: DefaultServiceConfig = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [
@@ -332,7 +340,7 @@ export const service: DefaultServiceConfig = {
         url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
-        title: 'Orta Doğu',
+        title: 'Ortadoğu',
         url: '/turkce/topics/cg726y2qxg1t',
       },
       {

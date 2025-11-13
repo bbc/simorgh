@@ -1,6 +1,7 @@
 import {
   Article,
   OptimoBylineContributorBlock,
+  OptimoBlock,
 } from '#app/models/types/optimo';
 import {
   blockContainingText,
@@ -8,6 +9,9 @@ import {
   singleTextBlock,
   textBlock,
 } from '#models/blocks';
+
+const plainOptimoBlock = (blocks: (object | string)[]) =>
+  blocks as OptimoBlock[];
 
 const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, ...additional] = blockValues;
@@ -20,7 +24,7 @@ const blocksWithHeadlineAndText = (blockValues: (object | string)[]) => {
   ];
 };
 
-const blocksWithHeadlineTexAndByline = (blockValues: (object | string)[]) => {
+const blocksWithHeadlineTextAndByline = (blockValues: (object | string)[]) => {
   const [headlineText, paragraphText, twitterHandle] = blockValues;
 
   return [
@@ -689,6 +693,39 @@ export const articleDataPersian = articleDataBuilder(
   },
 ) as unknown as Article;
 
+export const articleDataPersianWithFourParagraphs = articleDataBuilder(
+  'c4vlle3q337o-4p',
+  'Persian',
+  'fa',
+  'http://www.bbc.co.uk/ontologies/passport/home/Persian',
+  [
+    'سرصفحه مقاله',
+    'پاراگراف اول.',
+    'پاراگراف دوم.',
+    'پاراگراف سوم.',
+    'پاراگراف چهارم.',
+  ],
+  'سرصفحه مقاله',
+  'سرصفحه مقاله برای ارتقاء',
+  'خلاصه مقاله',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'fa',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
+) as unknown as Article;
+
 export const articleDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
   'Pidgin',
@@ -739,7 +776,7 @@ export const articleDataPidginWithByline = articleDataBuilder(
   'Article summary in Pidgin',
   emptyThings,
   undefined,
-  blocksWithHeadlineTexAndByline,
+  blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
@@ -769,6 +806,32 @@ export const articlePglDataPidgin = articleDataBuilder(
   'PGL',
 ) as unknown as Article;
 
+export const articleDataHindi = articleDataBuilder(
+  'c0469479x9xo',
+  'Hindi',
+  'hi',
+  'http://www.bbc.co.uk/ontologies/passport/home/Hindi',
+  ['आर्टिकल हेडलाइन हिंदी में', 'हिंदी में एक पैराग्राफ.'],
+  'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+  'आर्टिकल हेडलाइन प्रोमो के लिए हिंदी में',
+  'आर्टिकल सारांश हिंदी में',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001h',
+    language: 'hi',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
+) as unknown as Article;
+
 export const articleStyDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
   'Pidgin',
@@ -795,6 +858,727 @@ export const articleStyDataPidgin = articleDataBuilder(
   },
   'STY',
 ) as unknown as Article;
+
+export const articleDataPidginWithPV = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Pidgin',
+    'A paragraph in Pidgin.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  true,
+) as unknown as Article;
+
+export const articleDataPortugueseWithPVNotUnderHeadline = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Portuguese',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  [
+    'Article Headline in Portuguese',
+    'A paragraph in Portuguese.',
+    {
+      id: '9eea8935',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p0l0sm0w',
+        blocks: [
+          {
+            id: '326c14fc',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: 'b6ceabfb',
+                  blockId: 'urn:bbc:ares::clip:p0l0sm0w',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p0l0sm0w',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'A trágica história da dupla que unia mágica e tigres em Las Vegas',
+                    synopses: {
+                      short: 'some synopsis',
+                      long: 'some synopsis',
+                      medium: 'some synopsis',
+                    },
+                    imageUrl: 'ichef.bbci.co.uk/images/ic/$recipe/p0l0zkm2.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p0l0sm10',
+                        types: ['Portrait'],
+                        duration: 88,
+                        durationISO8601: 'PT1M28S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743098855000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: ['default'],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+  'Article Headline for SEO in Portuguese',
+  'Article Headline for Promo in Portuguese',
+  'Article summary in Portuguese',
+  emptyThings,
+  true,
+) as unknown as Article;
+
+export const articleDataPortugueseWithPVUnderHeadline = articleDataBuilder(
+  'cn1n9zqrkkxo',
+  'Portuguese',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/portuguese',
+
+  [
+    {
+      id: '4bcc42a0',
+      type: 'headline',
+      model: {
+        blocks: [
+          {
+            id: '6be771a2',
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  id: 'dc16d5c8',
+                  type: 'paragraph',
+                  model: {
+                    text: 'this is an article with 2 PV\'s that have "Watch Moments" translations',
+                    blocks: [
+                      {
+                        id: 'd86d5a87',
+                        type: 'fragment',
+                        model: {
+                          text: 'this is an article with 2 PV\'s that have "Watch Moments" translations',
+                          attributes: [],
+                        },
+                        position: [1, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [1, 1, 1],
+                },
+              ],
+            },
+            position: [1, 1],
+          },
+        ],
+      },
+      position: [1],
+    },
+    {
+      id: '97683b9c',
+      type: 'video',
+      model: {
+        locator: 'urn:bbc:pips:pid:p01wjx1y',
+        blocks: [
+          {
+            id: '234b7583',
+            type: 'caption',
+            model: {
+              blocks: [
+                {
+                  id: 'f7ab9725',
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        id: 'ef83dd72',
+                        type: 'paragraph',
+                        model: {
+                          text: 'PV video 1',
+                          blocks: [
+                            {
+                              id: 'c4c548a0',
+                              type: 'fragment',
+                              model: {
+                                text: 'PV video 1',
+                                attributes: [],
+                              },
+                              position: [2, 1, 1, 1, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 1, 1, 1],
+                      },
+                    ],
+                  },
+                  position: [2, 1, 1],
+                },
+              ],
+            },
+            position: [2, 1],
+          },
+          {
+            id: '7f377448',
+            type: 'aresMedia',
+            model: {
+              blocks: [
+                {
+                  id: '00d617cc',
+                  blockId: 'urn:bbc:ares::clip:p01wjx1y',
+                  type: 'aresMediaMetadata',
+                  model: {
+                    id: 'p01wjx1y',
+                    subType: 'clip',
+                    format: 'video',
+                    title:
+                      'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                    synopses: {
+                      short:
+                        'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                    },
+                    imageUrl:
+                      'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg',
+                    embedding: true,
+                    advertising: true,
+                    versions: [
+                      {
+                        versionId: 'p01wjx20',
+                        types: ['Portrait'],
+                        duration: 46,
+                        durationISO8601: 'PT46S',
+                        warnings: {},
+                        availableTerritories: {
+                          uk: true,
+                          nonUk: true,
+                        },
+                        availableFrom: 1743087045000,
+                      },
+                    ],
+                    syndication: {
+                      destinations: [],
+                    },
+                    smpKind: 'programme',
+                    webcastVersions: [],
+                  },
+                  position: [2, 2, 1],
+                },
+                {
+                  id: '31d288c4',
+                  type: 'image',
+                  model: {
+                    blocks: [
+                      {
+                        id: '7ea80a05',
+                        type: 'rawImage',
+                        model: {
+                          width: 546,
+                          height: 972,
+                          locator:
+                            'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx8z.jpg',
+                          originCode: 'mpv',
+                        },
+                        position: [2, 2, 2, 1],
+                      },
+                      {
+                        id: '09edd493',
+                        type: 'altText',
+                        model: {
+                          blocks: [
+                            {
+                              id: 'd6a458af',
+                              type: 'text',
+                              model: {
+                                blocks: [
+                                  {
+                                    id: '744dcce9',
+                                    type: 'paragraph',
+                                    model: {
+                                      text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                      blocks: [
+                                        {
+                                          id: '61a07efa',
+                                          type: 'fragment',
+                                          model: {
+                                            text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                            attributes: [],
+                                          },
+                                          position: [2, 2, 2, 2, 1, 1, 1],
+                                        },
+                                      ],
+                                    },
+                                    position: [2, 2, 2, 2, 1, 1],
+                                  },
+                                ],
+                              },
+                              position: [2, 2, 2, 2, 1],
+                            },
+                          ],
+                        },
+                        position: [2, 2, 2, 2],
+                      },
+                    ],
+                  },
+                  position: [2, 2, 2],
+                },
+              ],
+            },
+            position: [2, 2],
+          },
+        ],
+      },
+      position: [2],
+    },
+  ],
+
+  'Article Headline for SEO in Portuguese',
+  'Article Headline for Promo in Portuguese',
+  'Article summary in Portuguese',
+  emptyThings,
+  true,
+  plainOptimoBlock,
+) as unknown as Article;
+
+export const articleDataRussianWithPVButNoWatchMomentsTranslation =
+  articleDataBuilder(
+    'cg6pjr88ggpo',
+    'russian',
+    'pcm',
+    'http://www.bbc.co.uk/ontologies/passport/home/russian',
+
+    [
+      {
+        id: '9dd77669',
+        type: 'headline',
+        model: {
+          blocks: [
+            {
+              id: 'b841ef4f',
+              type: 'text',
+              model: {
+                blocks: [
+                  {
+                    id: 'b89c22c7',
+                    type: 'paragraph',
+                    model: {
+                      text: 'heading',
+                      blocks: [
+                        {
+                          id: 'ac8353c5',
+                          type: 'fragment',
+                          model: {
+                            text: 'heading',
+                            attributes: [],
+                          },
+                          position: [1, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [1, 1, 1],
+                  },
+                ],
+              },
+              position: [1, 1],
+            },
+          ],
+        },
+        position: [1],
+      },
+      {
+        id: '64d5b551',
+        type: 'video',
+        model: {
+          locator: 'urn:bbc:pips:pid:p01wjx1y',
+          blocks: [
+            {
+              id: 'da2f639d',
+              type: 'caption',
+              model: {
+                blocks: [
+                  {
+                    id: '1fe03afd',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '977e7715',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                            blocks: [
+                              {
+                                id: 'b7c4d4b2',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                                  attributes: [],
+                                },
+                                position: [2, 1, 1, 1, 1],
+                              },
+                            ],
+                          },
+                          position: [2, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [2, 1, 1],
+                  },
+                ],
+              },
+              position: [2, 1],
+            },
+            {
+              id: '271fff58',
+              type: 'aresMedia',
+              model: {
+                blocks: [
+                  {
+                    id: 'c02a8d05',
+                    blockId: 'urn:bbc:ares::clip:p01wjx1y',
+                    type: 'aresMediaMetadata',
+                    model: {
+                      id: 'p01wjx1y',
+                      subType: 'clip',
+                      format: 'video',
+                      title:
+                        'Por que é tão difícil para Ucrânia e Rússia selarem paz (9x16)',
+                      synopses: {
+                        short:
+                          'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                      },
+                      imageUrl:
+                        'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx8z.jpg',
+                      embedding: true,
+                      advertising: true,
+                      versions: [
+                        {
+                          versionId: 'p01wjx20',
+                          types: ['Portrait'],
+                          duration: 46,
+                          durationISO8601: 'PT46S',
+                          warnings: {},
+                          availableTerritories: {
+                            uk: true,
+                            nonUk: true,
+                          },
+                          availableFrom: 1743087045000,
+                        },
+                      ],
+                      syndication: {
+                        destinations: [],
+                      },
+                      smpKind: 'programme',
+                      webcastVersions: [],
+                    },
+                    position: [2, 2, 1],
+                  },
+                  {
+                    id: 'ffd3ee60',
+                    type: 'image',
+                    model: {
+                      blocks: [
+                        {
+                          id: '688befa3',
+                          type: 'rawImage',
+                          model: {
+                            width: 546,
+                            height: 972,
+                            locator:
+                              'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx8z.jpg',
+                            originCode: 'mpv',
+                          },
+                          position: [2, 2, 2, 1],
+                        },
+                        {
+                          id: 'b4cd48f9',
+                          type: 'altText',
+                          model: {
+                            blocks: [
+                              {
+                                id: '7a51a18d',
+                                type: 'text',
+                                model: {
+                                  blocks: [
+                                    {
+                                      id: 'c81167c0',
+                                      type: 'paragraph',
+                                      model: {
+                                        text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                        blocks: [
+                                          {
+                                            id: '9836d402',
+                                            type: 'fragment',
+                                            model: {
+                                              text: 'Volodymyr Zelensky afirmou que representantes do seu país e dos EUA',
+                                              attributes: [],
+                                            },
+                                            position: [2, 2, 2, 2, 1, 1, 1],
+                                          },
+                                        ],
+                                      },
+                                      position: [2, 2, 2, 2, 1, 1],
+                                    },
+                                  ],
+                                },
+                                position: [2, 2, 2, 2, 1],
+                              },
+                            ],
+                          },
+                          position: [2, 2, 2, 2],
+                        },
+                      ],
+                    },
+                    position: [2, 2, 2],
+                  },
+                ],
+              },
+              position: [2, 2],
+            },
+          ],
+        },
+        position: [2],
+      },
+      {
+        id: '28c86981',
+        type: 'video',
+        model: {
+          locator: 'urn:bbc:pips:pid:p01wjx35',
+          blocks: [
+            {
+              id: '41b9772d',
+              type: 'caption',
+              model: {
+                blocks: [
+                  {
+                    id: '74f60bbc',
+                    type: 'text',
+                    model: {
+                      blocks: [
+                        {
+                          id: '35e7a7b2',
+                          type: 'paragraph',
+                          model: {
+                            text: 'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                            blocks: [
+                              {
+                                id: '62371020',
+                                type: 'fragment',
+                                model: {
+                                  text: 'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                                  attributes: [],
+                                },
+                                position: [4, 1, 1, 1, 1],
+                              },
+                            ],
+                          },
+                          position: [4, 1, 1, 1],
+                        },
+                      ],
+                    },
+                    position: [4, 1, 1],
+                  },
+                ],
+              },
+              position: [4, 1],
+            },
+            {
+              id: '0477ec35',
+              type: 'aresMedia',
+              model: {
+                blocks: [
+                  {
+                    id: '0a514dce',
+                    blockId: 'urn:bbc:ares::clip:p01wjx35',
+                    type: 'aresMediaMetadata',
+                    model: {
+                      id: 'p01wjx35',
+                      subType: 'clip',
+                      format: 'video',
+                      title:
+                        'Papa Francisco reencontra fiéis ao deixar hospital em Roma (9x16)',
+                      synopses: {
+                        short:
+                          'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                      },
+                      imageUrl:
+                        'ichef.test.bbci.co.uk/images/ic/$recipe/p01wjx3l.jpg',
+                      embedding: true,
+                      advertising: true,
+                      versions: [
+                        {
+                          versionId: 'p01wjx37',
+                          types: ['Portrait'],
+                          duration: 13,
+                          durationISO8601: 'PT13S',
+                          warnings: {},
+                          availableTerritories: {
+                            uk: true,
+                            nonUk: true,
+                          },
+                          availableFrom: 1743087351000,
+                        },
+                      ],
+                      syndication: {
+                        destinations: [],
+                      },
+                      smpKind: 'programme',
+                      webcastVersions: [],
+                    },
+                    position: [4, 2, 1],
+                  },
+                  {
+                    id: 'eb48491b',
+                    type: 'image',
+                    model: {
+                      blocks: [
+                        {
+                          id: '0cece715',
+                          type: 'rawImage',
+                          model: {
+                            width: 546,
+                            height: 972,
+                            locator:
+                              'ichef.test.bbci.co.uk/images/ic/$widthxn/p01wjx3l.jpg',
+                            originCode: 'mpv',
+                          },
+                          position: [4, 2, 2, 1],
+                        },
+                        {
+                          id: 'c44569dd',
+                          type: 'altText',
+                          model: {
+                            blocks: [
+                              {
+                                id: '507238e7',
+                                type: 'text',
+                                model: {
+                                  blocks: [
+                                    {
+                                      id: 'a6dfd93d',
+                                      type: 'paragraph',
+                                      model: {
+                                        text: 'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                                        blocks: [
+                                          {
+                                            id: '96a95770',
+                                            type: 'fragment',
+                                            model: {
+                                              text: 'Após 37 dias de internação, o papa Francisco recebeu alta do hospital',
+                                              attributes: [],
+                                            },
+                                            position: [4, 2, 2, 2, 1, 1, 1],
+                                          },
+                                        ],
+                                      },
+                                      position: [4, 2, 2, 2, 1, 1],
+                                    },
+                                  ],
+                                },
+                                position: [4, 2, 2, 2, 1],
+                              },
+                            ],
+                          },
+                          position: [4, 2, 2, 2],
+                        },
+                      ],
+                    },
+                    position: [4, 2, 2],
+                  },
+                ],
+              },
+              position: [4, 2],
+            },
+          ],
+        },
+        position: [4],
+      },
+    ],
+
+    'Article Headline for SEO in Russian',
+    'Article Headline for Promo in Russian',
+    'Article summary in Russian',
+    emptyThings,
+    true,
+    plainOptimoBlock,
+  ) as unknown as Article;
 
 export const bylineWithNoAuthor = [
   {
@@ -1569,6 +2353,804 @@ export const bylineWithPngPhoto = [
 ] as OptimoBylineContributorBlock[];
 
 export const bylineWithAllData = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
+export const bylineWithMultipleContributors = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
   {
     type: 'contributor',
     model: {

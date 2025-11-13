@@ -35,6 +35,9 @@ const styles = {
   imageResponsiveRatio: css({
     height: '100%',
   }),
+  portraitOrientation: css({
+    position: 'absolute',
+  }),
 };
 
 export default styles;

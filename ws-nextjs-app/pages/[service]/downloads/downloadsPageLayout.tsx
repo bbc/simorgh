@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
@@ -25,7 +25,7 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
         title = 'File Download',
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const capitalisedService = service[0].toUpperCase() + service.slice(1);
   const description = `${capitalisedService} Downloads`;
@@ -48,8 +48,8 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
             <p>{instructions}</p>
             <Heading level={1}>{title}</Heading>
             <ol css={styles.orderedList}>
-              {pageData.downloadData?.map((item, index) => (
-                <li css={styles.listItem} key={index}>
+              {pageData.downloadData?.map(item => (
+                <li css={styles.listItem} key={item.fileCreated}>
                   <TimeStampContainer
                     timestamp={item.fileCreated}
                     dateTimeFormat="DD MMMM YYYY"
@@ -64,12 +64,12 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                   />
                   <CallToActionLink
                     css={styles.cta}
-                    href={item.files[0].fileLink}
+                    url={item.files[0].fileLink}
                     download
                     eventTrackingData={{
                       componentName: 'koreanDownloads',
                       campaignID: 'korean_downloads',
-                      advertiserID: index,
+                      advertiserID: service,
                     }}
                   >
                     <svg
@@ -81,13 +81,13 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     >
                       <path d="M28.2 12.2L19 21.4V0h-6v21.4l-9.2-9.2L0 16l14 14H2v-6H0v8h16l16-16m-2 14h-8l-2 2h12v-8h-2" />
                     </svg>
-                    <span>
+                    <CallToActionLink.Text shouldUnderlineOnHoverFocus>
                       {item.files[0].fileName}
                       <span>
                         {' '}
                         {(item.files[0].fileSize / 1000000).toFixed(1)}Mb
                       </span>
-                    </span>
+                    </CallToActionLink.Text>
                   </CallToActionLink>
                 </li>
               ))}

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { render } from '@testing-library/react';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';
@@ -10,7 +10,7 @@ import * as getMetaUrls from './getMetaUrls';
 const { RequestContextProvider, RequestContext } = require('./index');
 
 const Component = () => {
-  useContext(RequestContext);
+  use(RequestContext);
   return null;
 };
 
@@ -18,7 +18,7 @@ jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
     ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
+    use: jest.fn().mockImplementation(original.use),
   };
 });
 
@@ -53,7 +53,7 @@ const input = {
   pathname: '/current-path',
   variant: 'simp',
   showAdsBasedOnLocation: true,
-  mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+  serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
   isUK: true,
 };
 
@@ -83,7 +83,9 @@ const expectedOutput = {
   showCookieBannerBasedOnCountry: true,
   service: 'service',
   pathname: '/current-path',
-  mvtExperiments: input.mvtExperiments,
+  serverSideExperiments: input.serverSideExperiments,
+  nonce: null,
+  cspHeader: null,
 };
 
 describe('RequestContext', () => {
@@ -110,7 +112,7 @@ describe('RequestContext', () => {
 
     expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
 
-    expect(React.useContext).toHaveReturnedWith(expectedOutput);
+    expect(React.use).toHaveReturnedWith(expectedOutput);
   });
 
   it('should return expected values for app requests', () => {
@@ -126,7 +128,7 @@ describe('RequestContext', () => {
       </RequestContextProvider>,
     );
 
-    expect(React.useContext).toHaveReturnedWith({
+    expect(React.use).toHaveReturnedWith({
       ...expectedOutput,
       isAmp: false,
       isApp: true,
@@ -142,7 +144,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.useContext).toHaveReturnedWith({
+      expect(React.use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: true,
         platform: 'amp',
@@ -156,7 +158,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.useContext).toHaveReturnedWith({
+      expect(React.use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         platform: 'canonical',
@@ -170,7 +172,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.useContext).toHaveReturnedWith({
+      expect(React.use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: true,
@@ -185,7 +187,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.useContext).toHaveReturnedWith({
+      expect(React.use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: false,
@@ -224,7 +226,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.useContext).toHaveReturnedWith({
+      expect(React.use).toHaveReturnedWith({
         ...expectedOutput,
         isUK: false,
       });

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
@@ -6,13 +6,12 @@ import * as isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import setCookie from '#app/lib/utilities/setCookie';
 import { UserContext, UserContextProvider } from '.';
 import { getCookiePolicy, personalisationEnabled } from './cookies';
-import * as chartbeat from './Chartbeat';
 
 jest.mock('react', () => {
   const original = jest.requireActual('react');
   return {
     ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
+    use: jest.fn().mockImplementation(original.use),
   };
 });
 
@@ -21,14 +20,8 @@ jest.mock('./cookies', () => ({
   personalisationEnabled: jest.fn(),
 }));
 
-jest.mock('./Chartbeat');
-
-const mockChartbeat = (chartbeat.default as jest.Mock).mockReturnValue(
-  'chartbeat',
-);
-
 const DummyComponent = () => {
-  useContext(UserContext);
+  use(UserContext);
   return null;
 };
 
@@ -49,26 +42,19 @@ describe('UserContext', () => {
     jest.clearAllMocks();
   });
 
-  it('should provide cookie values, state function and render chartbeat', () => {
+  it('should provide cookie values and state function', () => {
     render(<DummyComponentWithContext />);
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.useContext).toHaveBeenCalledTimes(1);
-    expect(React.useContext).toHaveReturnedWith({
+    expect(React.use).toHaveBeenCalledTimes(1);
+    expect(React.use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
-      sendCanonicalChartbeatBeacon: expect.any(Function),
     });
-    expect(mockChartbeat).toHaveBeenCalledTimes(1);
-    expect(mockChartbeat).toHaveBeenCalledWith(
-      {
-        config: null,
-      },
-      undefined,
-    );
   });
+
   describe('ckns_mvt cookie', () => {
     const cookieSetterSpy = jest.spyOn(Cookie, 'set');
     const cookieGetterSpy = jest.spyOn(Cookie, 'get');
@@ -81,7 +67,7 @@ describe('UserContext', () => {
     });
 
     it('should call cookie logic when not opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
 
       render(<DummyComponentWithContext />);
@@ -90,7 +76,7 @@ describe('UserContext', () => {
     });
 
     it('should not call cookie logic when on opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => true);
 
       render(<DummyComponentWithContext />);
@@ -108,7 +94,7 @@ describe('UserContext', () => {
     });
 
     it('should not set cookie when ckns_mvt cookie already exists', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       setCookie({ name: 'ckns_mvt', value: 'foo' });
       cookieSetterSpy.mockClear();
@@ -122,7 +108,7 @@ describe('UserContext', () => {
     it('should set cookie when no ckns_mvt cookie exists', () => {
       const uuidRegex =
         /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       // @ts-expect-error This should be able to be mocked as a string or undefined
       cookieGetterSpy.mockImplementationOnce(() => undefined);

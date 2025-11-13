@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -83,7 +83,7 @@ const DurationWrapper = styled.time`
 `;
 
 const ProgramCard = ({ program, id, ...props }) => {
-  const { service, script, locale, dir } = useContext(ServiceContext);
+  const { service, script, locale, dir } = use(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
     <CardWrapper>

@@ -46,7 +46,7 @@ export const createSrcsets = ({
   }
 
   // eslint-disable-next-line prefer-const
-  let [primarySrcset, fallbackSrcset] = [true, false].map(isWebP =>
+  let [primarySrcset, fallbackSrcset] = [true, false].map(() =>
     requiredResolutions
       .map(
         resolution =>
@@ -54,7 +54,6 @@ export const createSrcsets = ({
             originCode,
             locator,
             resolution,
-            isWebP,
           })} ${resolution}w`,
       )
       .join(', '),
@@ -68,7 +67,7 @@ export const createSrcsets = ({
     fallbackMimeType: getMimeType(fallbackSrcset),
   };
 };
-export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
+export const getPlaceholderSrcSet = ({ originCode, locator }) => {
   if (!originCode || !locator) return '';
   return DEFAULT_RESOLUTIONS.map(
     resolution =>
@@ -76,7 +75,6 @@ export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
         originCode,
         locator,
         resolution,
-        isWebP,
       })} ${resolution}w`,
   ).join(', ');
 };

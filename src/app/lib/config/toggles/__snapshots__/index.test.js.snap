@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 {
@@ -6,38 +6,74 @@ exports[`Toggles Config when application environment is live should contain corr
   "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": {
+  "adsNonce": {
+    "enabled": false,
+  },
+  "articleLiteSiteLink": {
     "enabled": true,
   },
-  "cpsRecommendations": {
+  "comscoreAnalytics": {
+    "enabled": true,
+  },
+  "continueReadingButton": {
+    "enabled": false,
+  },
+  "electionBanner": {
     "enabled": false,
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
+    "enabled": true,
+  },
+  "homePageRadioSchedule": {
     "enabled": false,
   },
   "include": {
     "enabled": true,
   },
+  "liveRadioSchedule": {
+    "enabled": false,
+  },
+  "midArticleOnwardJourney": {
+    "enabled": false,
+  },
   "mostRead": {
-    "enabled": true,
+    "enabled": false,
   },
   "nielsenAnalytics": {
     "enabled": true,
   },
+  "onDemandRadioSchedule": {
+    "enabled": false,
+  },
+  "podcastPromo": {
+    "enabled": false,
+  },
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
-  "radioSchedule": {
+  "recentAudioEpisodes": {
     "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {
@@ -53,23 +89,26 @@ exports[`Toggles Config when application environment is local should contain cor
 {
   "_environment": "local",
   "ads": {
+    "enabled": true,
+  },
+  "adsNonce": {
     "enabled": false,
   },
-  "chartbeatAnalytics": {
+  "articleLiteSiteLink": {
     "enabled": true,
   },
   "comscoreAnalytics": {
     "enabled": true,
   },
-  "cpsRecommendations": {
+  "continueReadingButton": {
     "enabled": true,
   },
   "electionBanner": {
     "enabled": true,
   },
   "enableFetchingToggles": {
-    "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "enabled": false,
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
@@ -83,6 +122,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "liveRadioSchedule": {
     "enabled": true,
   },
+  "midArticleOnwardJourney": {
+    "enabled": true,
+  },
   "mostRead": {
     "enabled": true,
   },
@@ -92,13 +134,31 @@ exports[`Toggles Config when application environment is local should contain cor
   "onDemandRadioSchedule": {
     "enabled": true,
   },
+  "podcastPromo": {
+    "enabled": true,
+  },
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
+  "recentAudioEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
+  },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {
@@ -116,20 +176,38 @@ exports[`Toggles Config when application environment is test should contain corr
   "ads": {
     "enabled": false,
   },
-  "chartbeatAnalytics": {
+  "adsNonce": {
+    "enabled": false,
+  },
+  "articleLiteSiteLink": {
     "enabled": true,
   },
-  "cpsRecommendations": {
+  "comscoreAnalytics": {
+    "enabled": true,
+  },
+  "continueReadingButton": {
+    "enabled": false,
+  },
+  "electionBanner": {
     "enabled": true,
   },
   "enableFetchingToggles": {
     "enabled": true,
-    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+    "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|newsround|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|sport|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|ws|yoruba|zhongwen)",
   },
   "eventTracking": {
     "enabled": true,
   },
+  "homePageRadioSchedule": {
+    "enabled": true,
+  },
   "include": {
+    "enabled": true,
+  },
+  "liveRadioSchedule": {
+    "enabled": true,
+  },
+  "midArticleOnwardJourney": {
     "enabled": true,
   },
   "mostRead": {
@@ -138,16 +216,34 @@ exports[`Toggles Config when application environment is test should contain corr
   "nielsenAnalytics": {
     "enabled": true,
   },
+  "onDemandRadioSchedule": {
+    "enabled": true,
+  },
+  "podcastPromo": {
+    "enabled": true,
+  },
   "preloadLeadImage": {
     "enabled": true,
   },
-  "prerollAds": {
+  "preroll": {
     "enabled": true,
   },
-  "radioSchedule": {
+  "recentAudioEpisodes": {
     "enabled": true,
+    "value": 4,
+  },
+  "recentPodcastEpisodes": {
+    "enabled": true,
+    "value": 8,
+  },
+  "recentVideoEpisodes": {
+    "enabled": true,
+    "value": 4,
   },
   "scriptLink": {
+    "enabled": true,
+  },
+  "topBarOJs": {
     "enabled": true,
   },
   "variantCookie": {

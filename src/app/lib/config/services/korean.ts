@@ -55,13 +55,13 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: '광고',
       },
-      recommendationTitle: 'Recommended articles',
       seeAll: '모든 기사 보기',
       home: '홈',
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
@@ -229,6 +229,7 @@ export const service: DefaultServiceConfig = {
         duration: '방송 길이',
         recentEpisodes: '이전',
         closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
@@ -265,7 +266,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: '최신 뉴스',
     },
     mostRead: {
-      header: 'TOP 뉴스',
+      header: '많이 본 뉴스',
       lastUpdated: '마지막 업데이트일',
       numberOfItems: 10,
       hasMostRead: true,
@@ -276,7 +277,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '방송 길이 %duration%',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'TOP 뉴스',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -288,7 +289,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
@@ -332,6 +333,26 @@ export const service: DefaultServiceConfig = {
         url: '/korean',
       },
       {
+        title: '국내',
+        url: '/korean/topics/cxnyk3v82rgt',
+      },
+      {
+        title: '북한',
+        url: '/korean/topics/cg726kygwz9t',
+      },
+      {
+        title: '세계',
+        url: '/korean/topics/ce71k82r6gzt',
+      },
+      {
+        title: '건강·과학',
+        url: '/korean/topics/cly27z42zk7t',
+      },
+      {
+        title: '문화',
+        url: '/korean/topics/c8y946p5qknt',
+      },
+      {
         title: '비디오',
         url: '/korean/topics/cnwng7v0e54t',
       },
@@ -342,10 +363,6 @@ export const service: DefaultServiceConfig = {
       {
         title: '다운로드',
         url: '/korean/downloads',
-      },
-      {
-        title: 'TOP 뉴스',
-        url: '/korean/popular/read',
       },
     ],
     timezone: 'Asia/Seoul',

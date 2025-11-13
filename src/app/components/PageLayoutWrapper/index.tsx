@@ -1,14 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 
-import React, { PropsWithChildren, useContext } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
-
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -17,7 +15,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
+import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
@@ -52,17 +50,14 @@ const PageLayoutWrapper = ({
   pageData,
   status,
 }: PropsWithChildren<Props>) => {
-  const { service } = useContext(ServiceContext);
-  const { isLite, isAmp } = useContext(RequestContext);
+  const { service } = use(ServiceContext);
+  const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
   let wordCount: wordCountType = 0;
-  let propsForOJExperiment = {};
-  const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
-  );
+
   if (pageType === 'article') {
     wordCount = pageData?.content?.model?.blocks
       ?.filter(block => block.type === 'text')
@@ -76,23 +71,10 @@ const PageLayoutWrapper = ({
         if (!innerBlocks) return reducer;
         return reducer + innerBlocks.split(' ').length;
       }, 0);
-
-    const topStories = pageData.secondaryColumn?.topStories;
-    const mostReadItems = pageData.mostRead?.items;
-
-    let dataForOJExperiment;
-    if (experimentVariant === 'top_bar_top_stories') {
-      dataForOJExperiment = topStories;
-    } else if (experimentVariant === 'top_bar_most_read' && mostReadItems) {
-      dataForOJExperiment = mostReadItems;
-    }
-
-    propsForOJExperiment = {
-      blocks: dataForOJExperiment || [],
-      experimentVariant,
-    };
   }
-  const serviceFonts = fontFacesLazy(service);
+
+  const serviceFonts = fontFaces();
+
   const fontJs =
     isLite ||
     isAmp ||
@@ -124,9 +106,8 @@ const PageLayoutWrapper = ({
 					head.appendChild(fontStylePlaceholder);
                 };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                	const fontLocation = font.src ? font.src : 'https://static.files.bbci.co.uk/fonts/reith/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                     window.addEventListener("load", (e) => {
-                    getFont(fontLocation).then((fontContents) => {
+                    getFont(font.downloadSrc).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
                     	localStorage.setItem(storageKey, JSON.stringify(forStorage));
                     	if (shouldAttachStyle) {
@@ -222,20 +203,36 @@ const PageLayoutWrapper = ({
 
   return (
     <>
-      <Helmet
-        script={[
-          {
-            type: 'text/javascript',
-            innerHTML: fontJs,
-          },
-        ]}
-      />
+      {fontJs && (
+        <Helmet
+          script={[
+            {
+              type: 'text/javascript',
+              innerHTML: `(function() { ${fontJs} })();`,
+              ...(nonce && { nonce }),
+            },
+          ]}
+        />
+      )}
+
+      {nonce && cspHeader && (
+        <Helmet>
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content={appendAdDomainsToCSPHeader(cspHeader)}
+          />
+        </Helmet>
+      )}
       <ServiceWorker />
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
-        <HeaderContainer propsForOJExperiment={propsForOJExperiment} />
+        <HeaderContainer
+          propsForTopBarOJComponent={{
+            blocks: pageData?.secondaryColumn?.topStories || [],
+          }}
+        />
         <div css={styles.content}>{children}</div>
         <FooterContainer />
       </div>

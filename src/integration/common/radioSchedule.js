@@ -1,21 +1,15 @@
-const servicesWithRadioSchedule = ['indonesia'];
-const servicesWithoutRadioSchedule = ['gahuza'];
-
-export default ({ isAmp = false } = {}) => {
+export default (hasRadioSchedule = true) => {
   describe('Radio Schedule', () => {
-    const scheduleWrapperEl = document.querySelector(
-      '[data-e2e="radio-schedule"]',
-    );
+    it('should be in the document if enabled for service, otherwise should not be in the document', async () => {
+      const scheduleWrapperEl = document.querySelector(
+        '[data-e2e="radio-schedule"]',
+      );
 
-    if (!isAmp && servicesWithRadioSchedule.includes(service)) {
-      it('should be in the document', () => {
+      if (hasRadioSchedule) {
         expect(scheduleWrapperEl).toBeInTheDocument();
-      });
-    }
-    if (isAmp || servicesWithoutRadioSchedule.includes(service)) {
-      it('should not be in the document', () => {
+      } else {
         expect(scheduleWrapperEl).not.toBeInTheDocument();
-      });
-    }
+      }
+    });
   });
 };

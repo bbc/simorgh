@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -13,9 +13,9 @@ const Content = ({
 }) => {
   const {
     translations: { media: mediaTranslations },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
-  const { ariaLabelledBy, mediaType } = useContext(PromoContext);
+  const { ariaLabelledBy, mediaType } = use(PromoContext);
 
   if (isLive) {
     return <span>{headline}</span>;

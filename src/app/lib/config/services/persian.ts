@@ -76,15 +76,26 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'آگهی',
       },
-      recommendationTitle: 'مطالب پیشنهادی',
-      splitRecommendationTitle: 'مطالب پیشنهادی دیگر',
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      moreOnThis: '',
       navMenuText: 'صفحه ها',
+      liteSite: {
+        onboardingMessage: `شما در حال مشاهده نسخه متنی وب‌سایت بی‌بی‌سی هستید که از داده کمتری استفاده می‌کند. نسخه اصلی وب‌سایت را که شامل تمام تصاویر و ویدیوهاست، مشاهده کنید.`,
+        toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
+        informationPage:
+          'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
+        informationPageLink:
+          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
+        articleDataSavingLinkText:
+          'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
+      },
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',
         audioPlayer: 'پخش صدا',
@@ -251,11 +262,6 @@ export const service: DefaultServiceConfig = {
           subtitle:
             'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
         },
-        bbc_dari_radio: {
-          title: 'بی بی سی افغانستان (برنامه های دری)',
-          subtitle:
-            'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
-        },
         bbc_persian_tv: {
           title: '۶٠ دقیقه',
           subtitle:
@@ -273,6 +279,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
         download: 'دانلود برنامه',
         closeVideo: 'خروج',
+        endOfContentClose: 'پایان این محتوا. خروج',
       },
       socialEmbed: {
         caption: {
@@ -344,7 +351,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+        retentionPeriodDays:
+          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
@@ -354,7 +362,7 @@ export const service: DefaultServiceConfig = {
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',
@@ -376,7 +384,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'پربیننده‌ترین‌ها',
+      header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
       numberOfItems: 10,
       hasMostRead: true,
@@ -387,7 +395,7 @@ export const service: DefaultServiceConfig = {
       durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'پربیننده‌ترین‌ها',
       skipLink: {
         text: 'Skip %title% and continue reading',
         endTextVisuallyHidden: 'End of %title%',
@@ -399,7 +407,7 @@ export const service: DefaultServiceConfig = {
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
-        href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
@@ -443,8 +451,8 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'بحران خاورمیانه',
-        url: '/persian/topics/cj31ldvmg1et',
+        title: 'جنگ اسرائیل-ایران',
+        url: '/persian/topics/cwy6874zgpqt',
       },
       {
         title: 'پخش زنده',
@@ -464,7 +472,7 @@ export const service: DefaultServiceConfig = {
       },
       {
         title: 'افغانستان',
-        url: '/persian/afghanistan',
+        url: '/persian/topics/cvjp23v3083t',
       },
       {
         title: 'جهان',

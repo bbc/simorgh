@@ -1,23 +1,40 @@
+import { services } from '../services/loadableConfig';
+
 export default {
   _environment: 'test',
   ads: {
     enabled: false,
   },
-  chartbeatAnalytics: {
+  adsNonce: {
+    enabled: false,
+  },
+  articleLiteSiteLink: { enabled: true },
+  comscoreAnalytics: {
     enabled: true,
   },
-  cpsRecommendations: {
+  continueReadingButton: {
+    enabled: false,
+  },
+  electionBanner: {
     enabled: true,
   },
   enableFetchingToggles: {
     enabled: true,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)',
+    value: `(${services.join('|')})`,
   },
   eventTracking: {
     enabled: true,
   },
+  homePageRadioSchedule: {
+    enabled: true,
+  },
   include: {
+    enabled: true,
+  },
+  liveRadioSchedule: {
+    enabled: true,
+  },
+  midArticleOnwardJourney: {
     enabled: true,
   },
   mostRead: {
@@ -26,16 +43,34 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  onDemandRadioSchedule: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
-  radioSchedule: {
+  podcastPromo: {
     enabled: true,
+  },
+  recentAudioEpisodes: {
+    enabled: true,
+    value: 4,
+  },
+  recentPodcastEpisodes: {
+    enabled: true,
+    value: 8,
+  },
+  recentVideoEpisodes: {
+    enabled: true,
+    value: 4,
   },
   scriptLink: {
+    enabled: true,
+  },
+  topBarOJs: {
     enabled: true,
   },
   variantCookie: {

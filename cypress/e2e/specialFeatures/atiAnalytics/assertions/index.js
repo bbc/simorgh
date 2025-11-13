@@ -1,9 +1,30 @@
+import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
+import {
+  VIEW_EVENT,
+  VIEWABILITY_CLICK_EVENT,
+} from '#app/lib/analyticsUtils/analytics.const';
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
+  // ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
+  getExpectedAtiDestination,
 } from '../helpers';
+import environment from '../../../../support/helpers/getAppEnv';
+
+const usesReverbViewabilityModel = applicationType =>
+  applicationType !== 'lite';
+
+const getAppName = service => {
+  if (service === 'ws') {
+    return '[news]';
+  }
+
+  return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
+    ? `[${service}]`
+    : `[news-${service}]`;
+};
 
 const assertATIPageViewEventParamsExist = ({
   params,
@@ -11,6 +32,7 @@ const assertATIPageViewEventParamsExist = ({
   applicationType,
 }) => {
   expect(params).to.have.property('s'); // destination
+  expect(params).to.have.property('s2'); // Level 2 Site / Producer ID
   expect(params).to.have.property('p'); // page identifier
   expect(params).to.have.property('x2'); // application type
   expect(params).to.have.property('x3'); // application name
@@ -27,7 +49,11 @@ const assertATIPageViewEventParamsExist = ({
     expect(params).to.have.property('x5'); // url
   }
 
-  if (contentType !== 'list-datadriven') {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
+  if (!['list-datadriven', 'static'].includes(contentType)) {
     expect(params).to.have.property('x1'); // content ID
   }
 
@@ -39,28 +65,121 @@ const assertATIPageViewEventParamsExist = ({
   }
 };
 
-const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
-  expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('ati'); // view event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
+const assertLocationSpecificPianoDestinationExists = ({ service }) => {
+  cy.get(
+    'head script[src*="https://cdn.ampproject.org/v0/amp-geo-0.1.js"]',
+  ).should('exist');
 
-  if (!useReverb) {
-    expect(params).to.have.property('p'); // page identifier
-  }
+  cy.get('amp-geo script[type="application/json"]').should(script => {
+    const ampGeoContent = JSON.parse(script.text());
+
+    expect(ampGeoContent).to.eql({
+      AmpBind: true,
+      ISOCountryGroups: {
+        eea,
+        gbOrUnknown,
+      },
+    });
+  });
+
+  cy.get(
+    '[data-e2e="ati-amp-analytics"] script[type="application/json"]',
+  ).should(script => {
+    const ampAnalyticsContent = script.text();
+
+    expect(ampAnalyticsContent).to.contain(
+      `s=${getExpectedAtiDestination({ service, applicationEnv: environment() })}`,
+    );
+  });
 };
 
-const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
+const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
   expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('atc'); // click event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
+  expect(params).to.have.property('events'); // event details
+  expect(params).to.have.property('context');
 
-  if (useReverb) {
-    expect(params).to.have.property('patc'); // page identifier
-  } else {
-    expect(params).to.have.property('p'); // page identifier
-  }
+  const eventContext = JSON.parse(params.context);
+
+  expect(eventContext[0].data.page).to.have.property('$');
+  expect(eventContext[0].data.site).to.have.property('level2_id');
+};
+
+const fieldIsValidString = field =>
+  typeof field === 'string' && field.trim().length > 0;
+
+const validateViewabilityEventDetails = ({ payload, actionType }) => {
+  const arr = JSON.parse(payload);
+
+  return arr.some(event => {
+    if (event.name !== `viewability.${actionType}`) return false;
+
+    const group = event.data?.group ?? {};
+    const ev = event.data?.event ?? {};
+    const item = event.data?.item ?? {};
+
+    // strict checks
+    if (ev.category !== 'viewability' || ev.action !== actionType) return false;
+
+    // required fields in Group
+    const groupNameOk = fieldIsValidString(group.name);
+
+    const groupTypeOk = fieldIsValidString(group.type);
+
+    // optional fields in Group
+    const groupLinkOk = !group.link || fieldIsValidString(group.link);
+
+    const groupItemCountOk =
+      !group.item_count || Number.isInteger(group.item_count);
+
+    const groupResourceOk =
+      !group.resource_id || fieldIsValidString(group.resource_id);
+
+    const groupPositionOk = !group.position || Number.isInteger(group.position);
+
+    // required fields in Item
+    const itemNameOk = fieldIsValidString(item.name);
+
+    // optional fields in Item
+    const itemLinkOk = !item.link || fieldIsValidString(item.link);
+
+    const itemAdvertiserIdOk =
+      !item.advertiser_id || fieldIsValidString(item.advertiser_id);
+
+    const itemTypeOk = !item.type || fieldIsValidString(item.type);
+
+    const itemTextOk = !item.text || fieldIsValidString(item.text);
+
+    const itemPositionOk = !item.position || Number.isInteger(item.position);
+
+    const itemDurationOk = !item.duration || Number.isInteger(item.duration);
+
+    const itemMediaTypeOk =
+      !item.media_type || fieldIsValidString(item.media_type);
+
+    const itemLabelOk = !item.label || fieldIsValidString(item.label);
+
+    const itemResourceIdOk =
+      !item.resource_id || fieldIsValidString(item.resource_id);
+
+    return (
+      groupNameOk &&
+      groupTypeOk &&
+      groupLinkOk &&
+      groupItemCountOk &&
+      groupResourceOk &&
+      groupPositionOk &&
+      itemNameOk &&
+      itemLinkOk &&
+      itemAdvertiserIdOk &&
+      itemTypeOk &&
+      itemTextOk &&
+      itemPositionOk &&
+      itemDurationOk &&
+      itemMediaTypeOk &&
+      itemLabelOk &&
+      itemResourceIdOk
+    );
+  });
 };
 
 export const assertPageView = ({
@@ -70,12 +189,17 @@ export const assertPageView = ({
   contentType,
   service,
   path,
+  siteId,
 }) => {
-  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, application type = ${applicationType} and content type = ${contentType}`, () => {
+  it(`should send a page view event with service = ${service}, page identifier = ${pageIdentifier}, site ID = ${siteId}, application type = ${applicationType} and content type = ${contentType}`, () => {
     interceptATIAnalyticsBeacons();
-    cy.visit(path);
+    cy.visit(path, { retryOnStatusCodeFailure: true });
 
-    const atiPageViewAlias = useReverb ? ATI_PAGE_VIEW_REVERB : ATI_PAGE_VIEW;
+    const useViewabilty = usesReverbViewabilityModel(applicationType);
+    const atiPageViewAlias =
+      useReverb && useViewabilty && applicationType !== 'amp'
+        ? ATI_PAGE_VIEW_REVERB
+        : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
@@ -86,13 +210,25 @@ export const assertPageView = ({
         applicationType,
       });
 
+      // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
+      // if (['responsive', 'lite'].includes(applicationType)) {
+      //   expect(params.idclient).to.equal(
+      //     ATI_USER_ID_COOKIE,
+      //     'params.idclient (atuserid cookie value)',
+      //   );
+      // }
+
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
+      expect(parseInt(params.s2, 10)).to.equal(
+        siteId,
+        'params.s2 (Level 2 site / Producer ID)',
+      );
       expect(params.x2).to.equal(
         `[${applicationType}]`,
         'params.x2 (application type)',
       );
       expect(params.x3).to.equal(
-        `[news-${service}]`,
+        getAppName(service),
         'params.x3 (application name)',
       );
       expect(params.x7).to.equal(
@@ -100,81 +236,115 @@ export const assertPageView = ({
         'params.x7 (content type)',
       );
     });
+
+    if (applicationType === 'amp') {
+      assertLocationSpecificPianoDestinationExists({ service });
+    }
   });
 };
 
-const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
-  new RegExp(
-    `PUB-\\[?${contentType}.*?\\]?-\\[?${component}.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?${pageIdentifier}\\]?-\\[?.*?\\]?-\\[?.*?\\]?-\\[?.*?\\]?`,
-    'g',
+const assertViewabilityModelViewEvent = ({
+  pageIdentifier,
+  params,
+  // applicationType,
+  siteId,
+}) => {
+  const eventContext = JSON.parse(params.context);
+
+  assertReverbViewabilityComponentEventParamsExist({ params });
+
+  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
+  // if (['responsive', 'lite'].includes(applicationType)) {
+  //   expect(params.idclient).to.equal(
+  //     ATI_USER_ID_COOKIE,
+  //     'params.idclient (atuserid cookie value)',
+  //   );
+  // }
+
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
+    'params.events (publisher impression)',
   );
+
+  expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+};
 
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   contentType,
-  useReverb,
-}) =>
-  cy
-    .wait(`@${component}-ati-view`)
+  siteId,
+}) => {
+  const requestAlias = `@${component}-viewability-view`;
+
+  cy.wait(requestAlias)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      assertATIComponentViewEventParamsExist({ params, useReverb });
-
-      if (!useReverb) {
-        expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-      }
-
-      expect(params.ati).to.match(
-        getViewClickDetailsRegex({
-          contentType,
-          component,
-          pageIdentifier,
-        }),
-        'params.ati (publisher impression)',
-      );
+      assertViewabilityModelViewEvent({
+        component,
+        pageIdentifier,
+        contentType,
+        params,
+        siteId,
+      });
     });
+};
+
+const assertViewabilityModelClickEvent = ({
+  pageIdentifier,
+  params,
+  // applicationType,
+  siteId,
+}) => {
+  const eventContext = JSON.parse(params.context);
+
+  assertReverbViewabilityComponentEventParamsExist({
+    params,
+  });
+
+  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
+  // if (['responsive', 'lite'].includes(applicationType)) {
+  //   expect(params.idclient).to.equal(
+  //     ATI_USER_ID_COOKIE,
+  //     'params.idclient (atuserid cookie value)',
+  //   );
+  // }
+
+  expect(params.events).to.satisfy(
+    payload =>
+      validateViewabilityEventDetails({
+        payload,
+        actionType: VIEWABILITY_CLICK_EVENT,
+      }),
+    'params.events (publisher click)',
+  );
+
+  expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+};
 
 export const assertATIComponentClickEvent = ({
   component,
   contentType,
   pageIdentifier,
-  applicationType,
-  useReverb,
-}) =>
-  cy
-    .wait(`@${component}-ati-click`)
+  siteId,
+}) => {
+  const requestAlias = `@${component}-viewability-click`;
+
+  cy.wait(requestAlias)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
-
-      assertATIComponentClickEventParamsExist({
+      assertViewabilityModelClickEvent({
+        component,
+        contentType,
+        pageIdentifier,
         params,
-        useReverb,
-        applicationType,
+        siteId,
       });
-
-      if (applicationType === 'lite') {
-        expect(params.app_type).to.equal(applicationType, 'params.app_type');
-      }
-
-      if (useReverb) {
-        expect(params.patc).to.equal(
-          pageIdentifier,
-          'params.patc (page identifier)',
-        );
-      } else {
-        expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-      }
-
-      expect(params.atc).to.match(
-        getViewClickDetailsRegex({
-          contentType,
-          pageIdentifier,
-          component,
-        }),
-        'params.atc (publisher click)',
-      );
     });
+};

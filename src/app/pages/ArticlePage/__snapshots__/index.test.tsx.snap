@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Article Page should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-0 {
@@ -33,6 +33,26 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
+.emotion-3 [data-first-hidden-element="true"]:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -139,8 +159,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -276,8 +296,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -413,8 +433,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -804,8 +824,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   color: #545658;
   display: block;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -826,7 +846,9 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -892,7 +914,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
                 dir="ltr"
                 id="Most-Read"
               >
-                Di one wey oda users dey read well well
+                Di one wey dem dey read well well
               </span>
             </span>
           </span>
@@ -1149,6 +1171,26 @@ exports[`Article Page should render a news article correctly 1`] = `
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
+.emotion-3 [data-first-hidden-element="true"]:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
+}
+
 @media (max-width: 14.9375rem) {
   .emotion-4 {
     padding: 0 0.5rem;
@@ -1253,8 +1295,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -1390,8 +1432,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -1586,8 +1628,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
@@ -1977,8 +2019,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2219,7 +2261,9 @@ exports[`Article Page should render a news article correctly 1`] = `
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -2296,6 +2340,7 @@ exports[`Article Page should render a news article correctly 1`] = `
                 sizes="(min-width: 1008px) 760px, 100vw"
                 src="https://ichef.test.bbci.co.uk/ace/ws/640/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp"
                 srcset="https://ichef.test.bbci.co.uk/ace/ws/240/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 240w, https://ichef.test.bbci.co.uk/ace/ws/320/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 320w, https://ichef.test.bbci.co.uk/ace/ws/480/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 480w, https://ichef.test.bbci.co.uk/ace/ws/624/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 624w, https://ichef.test.bbci.co.uk/ace/ws/800/cpsprodpb/157c/live/d5c6e520-16dd-11ef-9b12-1ba8f95c4917.jpg.webp 800w"
+                style="aspect-ratio: 951 / 535;"
                 width="951"
               />
             </div>
@@ -2329,7 +2374,7 @@ exports[`Article Page should render a news article correctly 1`] = `
                 dir="ltr"
                 id="Most-Read"
               >
-                Most read
+                Popular Reads
               </span>
             </span>
           </span>
@@ -2791,6 +2836,26 @@ exports[`Article Page should render a news article with headline in the middle c
   padding-bottom: 1.5rem;
 }
 
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
+.emotion-3 [data-first-hidden-element="true"]:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
+}
+
 .emotion-4 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -2906,8 +2971,8 @@ exports[`Article Page should render a news article with headline in the middle c
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3037,8 +3102,8 @@ exports[`Article Page should render a news article with headline in the middle c
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   color: #141414;
   display: block;
   margin: 0;
@@ -3074,7 +3139,9 @@ exports[`Article Page should render a news article with headline in the middle c
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3167,6 +3234,26 @@ exports[`Article Page should render a news article without headline correctly 1`
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
+.emotion-3 [data-first-hidden-element="true"]:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 .emotion-4 {
@@ -3284,8 +3371,8 @@ exports[`Article Page should render a news article without headline correctly 1`
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3315,7 +3402,9 @@ exports[`Article Page should render a news article without headline correctly 1`
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -3387,6 +3476,26 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+.emotion-3 [id="continue-reading-button"]~* {
+  display: none;
+}
+
+.no-js .emotion-3 [id="continue-reading-button"]~* {
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 [id="continue-reading-button"]~* {
+    display: block;
+  }
+}
+
+.emotion-3 [data-first-hidden-element="true"]:focus-visible {
+  outline: 0.1875rem solid #000000;
+  box-shadow: 0 0 0 0.1875rem #FFFFFF;
+  outline-offset: 0.1875rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -3493,8 +3602,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -3630,8 +3739,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -3767,8 +3876,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;
@@ -4158,8 +4267,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   color: #545658;
   display: block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4400,7 +4509,9 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   <div
     class="emotion-0"
   >
-    <noscript />
+    <div>
+      ATI Analytics
+    </div>
     <div>
       chartbeat
     </div>
@@ -4466,7 +4577,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
                 dir="rtl"
                 id="Most-Read"
               >
-                پربیننده‌ترین‌ها
+                مطالب پرخواننده
               </span>
             </span>
           </span>

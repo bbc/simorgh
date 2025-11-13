@@ -25,11 +25,11 @@ const Component = ({ blocks }: PropsWithChildren<ComponentProps>) => (
 export default {
   title: 'Components/Embeds/Uploader',
   Component,
+  globals: {
+    backgrounds: { value: 'Optimo' },
+  },
   parameters: {
     metadata,
-    backgrounds: {
-      default: 'Optimo',
-    },
   },
 };
 

@@ -1,7 +1,7 @@
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import React from 'react';
 import LiveHeaderMedia from '.';
-import { MediaCollection } from '../MediaLoader/types';
+import { MediaCollection, Player } from '../MediaLoader/types';
 import {
   screen,
   render,
@@ -59,11 +59,10 @@ describe('liveMediaStream', () => {
   it('Plays the media loader when the watch button is clicked.', () => {
     window.mediaPlayers = {
       p0gh4n67: {
-        player: { paused: jest.fn().mockReturnValueOnce(true) },
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
 
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
@@ -81,7 +80,7 @@ describe('liveMediaStream', () => {
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
     );
@@ -106,73 +105,6 @@ describe('liveMediaStream', () => {
     );
 
     expect(container).toBeEmptyDOMElement();
-  });
-
-  it.each([
-    {
-      title: 'Displays a title with a comma when there is no punctuation.',
-      inputTitle: 'Title with no punctuation',
-      expectedResult:
-        'Title with no punctuation, CBBC, Contains some upsetting scenes.Watch',
-    },
-    {
-      title: 'Displays a title as is when there is punctuation.',
-      inputTitle: 'Title with punctuation!',
-      expectedResult:
-        'Title with punctuation! CBBC, Contains some upsetting scenes.Watch',
-    },
-  ])('Open state - $title', ({ inputTitle, expectedResult }) => {
-    const mediaBlock = fixtureData[0];
-    mediaBlock.model.synopses.short = inputTitle;
-
-    const { container } = render(
-      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
-    );
-
-    const mediaLoader = container.querySelector(
-      'button[data-testid="watch-now-close-button"]',
-    );
-
-    expect(mediaLoader?.textContent).toEqual(expectedResult);
-  });
-
-  it.each([
-    {
-      title: 'Displays a title with a comma when there is no punctuation.',
-      inputTitle: 'Title with no punctuation',
-      expectedResult:
-        'Close video, Title with no punctuation, CBBC, Contains some upsetting scenes.',
-    },
-    {
-      title: 'Displays a title as is when there is punctuation.',
-      inputTitle: 'Title with punctuation!',
-      expectedResult:
-        'Close video, Title with punctuation! CBBC, Contains some upsetting scenes.',
-    },
-  ])('Close state - $title', ({ inputTitle, expectedResult }) => {
-    const mediaBlock = fixtureData[0];
-    mediaBlock.model.synopses.short = inputTitle;
-
-    window.mediaPlayers = {
-      p0gh4n67: {
-        player: { paused: jest.fn().mockReturnValueOnce(true) },
-        play: jest.fn(),
-        pause: jest.fn(),
-      },
-    };
-
-    const { container } = render(
-      <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
-    );
-
-    const mediaLoader = container.querySelector(
-      'button[data-testid="watch-now-close-button"]',
-    );
-
-    const playCloseButton = screen.getByTestId('watch-now-close-button');
-    fireEvent.click(playCloseButton);
-
-    expect(mediaLoader?.textContent).toEqual(expectedResult);
   });
 
   it.each([
@@ -217,11 +149,10 @@ describe('liveMediaStream', () => {
 
     window.mediaPlayers = {
       p0gh4n67: {
-        player: { paused: jest.fn().mockReturnValueOnce(true) },
         play: jest.fn(),
         pause: jest.fn(),
       },
-    };
+    } as unknown as Record<string, Player>;
 
     render(
       <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
@@ -261,6 +192,94 @@ describe('liveMediaStream', () => {
 
         expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
       });
+    });
+  });
+
+  describe('Text content states', () => {
+    it.each([
+      {
+        title:
+          'Displays correct text content in open state with no punctuation',
+        inputTitle: 'Title with no punctuation',
+        expectedResult:
+          'Title with no punctuation, Contains some upsetting scenes.Watch',
+      },
+      {
+        title: 'Displays correct text content in open state with punctuation',
+        inputTitle: 'Title with punctuation!',
+        expectedResult:
+          'Title with punctuation! Contains some upsetting scenes.Watch',
+      },
+    ])('Open state - $title', ({ inputTitle, expectedResult }) => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.synopses.short = inputTitle;
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const mediaLoader = container.querySelector(
+        'button[data-testid="watch-now-close-button"]',
+      );
+
+      expect(mediaLoader?.textContent).toEqual(expectedResult);
+    });
+
+    it.each([
+      {
+        title:
+          'Displays correct text content in close state with no punctuation',
+        inputTitle: 'Title with no punctuation',
+        expectedResult:
+          'Close video, Title with no punctuation, Contains some upsetting scenes.',
+      },
+      {
+        title: 'Displays correct text content in close state with punctuation',
+        inputTitle: 'Title with punctuation!',
+        expectedResult:
+          'Close video, Title with punctuation! Contains some upsetting scenes.',
+      },
+    ])('Close state - $title', ({ inputTitle, expectedResult }) => {
+      const mediaBlock = fixtureData[0];
+      mediaBlock.model.synopses.short = inputTitle;
+      mediaBlock.model.version.warnings = {
+        warning_text: 'Contains some upsetting scenes.',
+        warning: [
+          {
+            warning_code: 'D1',
+            short_description: 'some upsetting scenes',
+          },
+        ],
+      };
+
+      window.mediaPlayers = {
+        p0gh4n67: {
+          play: jest.fn(),
+          pause: jest.fn(),
+        },
+      } as unknown as Record<string, Player>;
+
+      const { container } = render(
+        <LiveHeaderMedia mediaCollection={fixtureData as MediaCollection[]} />,
+      );
+
+      const mediaLoader = container.querySelector(
+        'button[data-testid="watch-now-close-button"]',
+      );
+
+      const playCloseButton = screen.getByTestId('watch-now-close-button');
+      fireEvent.click(playCloseButton);
+
+      expect(mediaLoader?.textContent).toEqual(expectedResult);
     });
   });
 });

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -25,7 +25,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
 `;
 
 const Promo = () => {
-  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
+  const { podcastPromo, script, service, dir } = use(ServiceContext);
 
   const {
     podcastPromoTitle,
@@ -50,10 +50,7 @@ const Promo = () => {
   }
 
   return (
-    <ResponsivePodcastPromoWrapper
-      ref={viewTrackerRef}
-      data-e2e="podcast-promo"
-    >
+    <ResponsivePodcastPromoWrapper {...viewTrackerRef} data-e2e="podcast-promo">
       <PromoComponent
         script={script}
         service={service}
@@ -79,7 +76,7 @@ const Promo = () => {
           </PromoComponent.Card.ImageWrapper>
           <PromoComponent.Card.Content>
             <PromoComponent.Card.Title>
-              <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
+              <PromoComponent.Card.Link href={url} {...clickTrackerRef}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                   {podcastBrandTitle}
                 </span>

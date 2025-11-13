@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
@@ -14,7 +14,7 @@ const StyledParagraphComponent = styled(ParagraphComponent)`
 `;
 
 const OnDemandParagraphContainer = ({ idAttr = null, text, testid = '' }) => {
-  const { script, service } = useContext(ServiceContext);
+  const { script, service } = use(ServiceContext);
 
   if (!text) return null;
 

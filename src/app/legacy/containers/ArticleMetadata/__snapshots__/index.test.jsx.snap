@@ -1,7 +1,675 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`should match snapshot for News & International 1`] = `<div />`;
+exports[`should match snapshot for News & International 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {
+    "dir": "ltr",
+    "lang": "en-gb",
+  },
+  "linkTags": [
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "rel": "canonical",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "hrefLang": "x-default",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "hrefLang": "en",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.co.uk/news/articles/c0g992jmmkko",
+      "hrefLang": "en-gb",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko.amp",
+      "rel": "amphtml",
+    },
+    {
+      "href": "http://localhost:7080/news/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
+      "rel": "apple-touch-icon",
+      "sizes": "152x152",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
+      "rel": "apple-touch-icon",
+      "sizes": "384x384",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
+      "rel": "apple-touch-icon",
+      "sizes": "512x512",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
+      "rel": "icon",
+      "sizes": "72x72",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
+      "rel": "icon",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
+      "rel": "icon",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
+      "rel": "apple-touch-startup-image",
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon",
+      "type": "image/x-icon",
+    },
+  ],
+  "metaTags": [
+    {
+      "charset": "utf-8",
+    },
+    {
+      "content": "noodp, noydir, max-image-preview:large",
+      "name": "robots",
+    },
+    {
+      "content": "#B80000",
+      "name": "theme-color",
+    },
+    {
+      "content": "width=device-width, initial-scale=1, minimum-scale=1",
+      "name": "viewport",
+    },
+    {
+      "content": "BBC News",
+      "name": "apple-mobile-web-app-title",
+    },
+    {
+      "content": "BBC News",
+      "name": "application-name",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "name": "description",
+    },
+    {
+      "content": "1609039196070050",
+      "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
+      "content": "yes",
+      "name": "mobile-web-app-capable",
+    },
+    {
+      "content": "#B80000",
+      "name": "msapplication-TileColor",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
+      "name": "msapplication-TileImage",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "property": "og:description",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "property": "og:image",
+    },
+    {
+      "content": "BBC News",
+      "property": "og:image:alt",
+    },
+    {
+      "content": "en_GB",
+      "property": "og:locale",
+    },
+    {
+      "content": "BBC News",
+      "property": "og:site_name",
+    },
+    {
+      "content": "Article Headline for SEO - BBC News",
+      "property": "og:title",
+    },
+    {
+      "content": "article",
+      "property": "og:type",
+    },
+    {
+      "content": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "property": "og:url",
+    },
+    {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    {
+      "content": "@BBCNews",
+      "name": "twitter:creator",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "name": "twitter:description",
+    },
+    {
+      "content": "BBC News",
+      "name": "twitter:image:alt",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "name": "twitter:image:src",
+    },
+    {
+      "content": "@BBCNews",
+      "name": "twitter:site",
+    },
+    {
+      "content": "Article Headline for SEO - BBC News",
+      "name": "twitter:title",
+    },
+    {
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/news/articles/c0g992jmmkko",
+      "http-equiv": "onion-location",
+    },
+    {
+      "content": "Royal Wedding 2018",
+      "name": "article:tag",
+    },
+    {
+      "content": "Duchess of Sussex",
+      "name": "article:tag",
+    },
+    {
+      "content": "Queen Victoria",
+      "name": "article:tag",
+    },
+    {
+      "content": "https://www.facebook.com/bbcnews",
+      "name": "article:author",
+    },
+    {
+      "content": "2018-01-01T13:00:00.000Z",
+      "name": "article:modified_time",
+    },
+    {
+      "content": "2018-01-01T12:01:00.000Z",
+      "name": "article:published_time",
+    },
+  ],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [],
+  "styleTags": [],
+  "title": "Article Headline for SEO - BBC News",
+  "titleAttributes": {},
+}
+`;
 
-exports[`should match snapshot for News article with provided author twitter handle 1`] = `<div />`;
+exports[`should match snapshot for News article with provided author twitter handle 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {
+    "dir": "ltr",
+    "lang": "en-gb",
+  },
+  "linkTags": [
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "rel": "canonical",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "hrefLang": "x-default",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "hrefLang": "en",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.co.uk/news/articles/c0g992jmmkko",
+      "hrefLang": "en-gb",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko.amp",
+      "rel": "amphtml",
+    },
+    {
+      "href": "http://localhost:7080/news/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
+      "rel": "apple-touch-icon",
+      "sizes": "152x152",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
+      "rel": "apple-touch-icon",
+      "sizes": "384x384",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
+      "rel": "apple-touch-icon",
+      "sizes": "512x512",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
+      "rel": "icon",
+      "sizes": "72x72",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
+      "rel": "icon",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
+      "rel": "icon",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
+      "rel": "apple-touch-startup-image",
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon",
+      "type": "image/x-icon",
+    },
+  ],
+  "metaTags": [
+    {
+      "charset": "utf-8",
+    },
+    {
+      "content": "noodp, noydir, max-image-preview:large",
+      "name": "robots",
+    },
+    {
+      "content": "#B80000",
+      "name": "theme-color",
+    },
+    {
+      "content": "width=device-width, initial-scale=1, minimum-scale=1",
+      "name": "viewport",
+    },
+    {
+      "content": "BBC News",
+      "name": "apple-mobile-web-app-title",
+    },
+    {
+      "content": "BBC News",
+      "name": "application-name",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "name": "description",
+    },
+    {
+      "content": "1609039196070050",
+      "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
+      "content": "yes",
+      "name": "mobile-web-app-capable",
+    },
+    {
+      "content": "#B80000",
+      "name": "msapplication-TileColor",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
+      "name": "msapplication-TileImage",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "property": "og:description",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "property": "og:image",
+    },
+    {
+      "content": "BBC News",
+      "property": "og:image:alt",
+    },
+    {
+      "content": "en_GB",
+      "property": "og:locale",
+    },
+    {
+      "content": "BBC News",
+      "property": "og:site_name",
+    },
+    {
+      "content": "Article Headline for SEO - BBC News",
+      "property": "og:title",
+    },
+    {
+      "content": "article",
+      "property": "og:type",
+    },
+    {
+      "content": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "property": "og:url",
+    },
+    {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    {
+      "content": "@mary_harper",
+      "name": "twitter:creator",
+    },
+    {
+      "content": "Article Headline for SEO",
+      "name": "twitter:description",
+    },
+    {
+      "content": "BBC News",
+      "name": "twitter:image:alt",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "name": "twitter:image:src",
+    },
+    {
+      "content": "@BBCNews",
+      "name": "twitter:site",
+    },
+    {
+      "content": "Article Headline for SEO - BBC News",
+      "name": "twitter:title",
+    },
+    {
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/news/articles/c0g992jmmkko",
+      "http-equiv": "onion-location",
+    },
+    {
+      "content": "Royal Wedding 2018",
+      "name": "article:tag",
+    },
+    {
+      "content": "Duchess of Sussex",
+      "name": "article:tag",
+    },
+    {
+      "content": "Queen Victoria",
+      "name": "article:tag",
+    },
+    {
+      "content": "https://www.facebook.com/bbcnews",
+      "name": "article:author",
+    },
+    {
+      "content": "2018-01-01T13:00:00.000Z",
+      "name": "article:modified_time",
+    },
+    {
+      "content": "2018-01-01T12:01:00.000Z",
+      "name": "article:published_time",
+    },
+  ],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [],
+  "styleTags": [],
+  "title": "Article Headline for SEO - BBC News",
+  "titleAttributes": {},
+}
+`;
 
-exports[`should match snapshot for Persian News & UK origin 1`] = `<div />`;
+exports[`should match snapshot for Persian News & UK origin 1`] = `
+{
+  "baseTag": [],
+  "bodyAttributes": {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": {
+    "dir": "rtl",
+    "lang": "fa",
+  },
+  "linkTags": [
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "rel": "canonical",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "hrefLang": "fa",
+      "rel": "alternate",
+    },
+    {
+      "href": "https://www.test.bbc.com/news/articles/c0g992jmmkko.amp",
+      "rel": "amphtml",
+    },
+    {
+      "href": "http://localhost:7080/persian/images/icons/icon-192x192.png",
+      "rel": "apple-touch-icon",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
+      "rel": "apple-touch-icon",
+      "sizes": "152x152",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
+      "rel": "apple-touch-icon",
+      "sizes": "180x180",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
+      "rel": "apple-touch-icon",
+      "sizes": "384x384",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
+      "rel": "apple-touch-icon",
+      "sizes": "512x512",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
+      "rel": "icon",
+      "sizes": "72x72",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
+      "rel": "icon",
+      "sizes": "96x96",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
+      "rel": "icon",
+      "sizes": "192x192",
+      "type": "image/png",
+    },
+    {
+      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
+      "rel": "apple-touch-startup-image",
+    },
+    {
+      "href": "/favicon.ico",
+      "rel": "shortcut icon",
+      "type": "image/x-icon",
+    },
+  ],
+  "metaTags": [
+    {
+      "charset": "utf-8",
+    },
+    {
+      "content": "noodp, noydir, max-image-preview:large",
+      "name": "robots",
+    },
+    {
+      "content": "#B80000",
+      "name": "theme-color",
+    },
+    {
+      "content": "width=device-width, initial-scale=1, minimum-scale=1",
+      "name": "viewport",
+    },
+    {
+      "content": "BBC News فارسی",
+      "name": "apple-mobile-web-app-title",
+    },
+    {
+      "content": "BBC News فارسی",
+      "name": "application-name",
+    },
+    {
+      "content": "سرصفحه مقاله",
+      "name": "description",
+    },
+    {
+      "content": "1609039196070050",
+      "property": "fb:app_id",
+    },
+    {
+      "content": "mydfaj4vz8t5psneihy4nm6ff52fac",
+      "name": "facebook-domain-verification",
+    },
+    {
+      "content": "yes",
+      "name": "mobile-web-app-capable",
+    },
+    {
+      "content": "#B80000",
+      "name": "msapplication-TileColor",
+    },
+    {
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
+      "name": "msapplication-TileImage",
+    },
+    {
+      "content": "سرصفحه مقاله",
+      "property": "og:description",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "property": "og:image",
+    },
+    {
+      "content": "BBC News فارسی",
+      "property": "og:image:alt",
+    },
+    {
+      "content": "fa",
+      "property": "og:locale",
+    },
+    {
+      "content": "BBC News فارسی",
+      "property": "og:site_name",
+    },
+    {
+      "content": "سرصفحه مقاله - BBC News فارسی",
+      "property": "og:title",
+    },
+    {
+      "content": "article",
+      "property": "og:type",
+    },
+    {
+      "content": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
+      "property": "og:url",
+    },
+    {
+      "content": "summary_large_image",
+      "name": "twitter:card",
+    },
+    {
+      "content": "@bbcpersian",
+      "name": "twitter:creator",
+    },
+    {
+      "content": "سرصفحه مقاله",
+      "name": "twitter:description",
+    },
+    {
+      "content": "BBC News فارسی",
+      "name": "twitter:image:alt",
+    },
+    {
+      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "name": "twitter:image:src",
+    },
+    {
+      "content": "@bbcpersian",
+      "name": "twitter:site",
+    },
+    {
+      "content": "سرصفحه مقاله - BBC News فارسی",
+      "name": "twitter:title",
+    },
+    {
+      "content": "https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/news/articles/c0g992jmmkko",
+      "http-equiv": "onion-location",
+    },
+    {
+      "content": "https://www.facebook.com/bbcnews",
+      "name": "article:author",
+    },
+    {
+      "content": "2018-01-01T13:00:00.000Z",
+      "name": "article:modified_time",
+    },
+    {
+      "content": "2018-01-01T12:01:00.000Z",
+      "name": "article:published_time",
+    },
+  ],
+  "noscriptTags": [],
+  "onChangeClientState": [Function],
+  "scriptTags": [],
+  "styleTags": [],
+  "title": "سرصفحه مقاله - BBC News فارسی",
+  "titleAttributes": {},
+}
+`;

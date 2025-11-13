@@ -1,7 +1,7 @@
 export default () => {
   describe('Sections', () => {
-    const sections = document.querySelectorAll(
-      'section:not([data-e2e="advertisement"])',
+    const sections = Array.from(
+      document.querySelectorAll('section:not([data-e2e="advertisement"])'),
     );
 
     if (sections) {

@@ -16,7 +16,8 @@ import routes from '../app/routes';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import { getMvtVaryHeaders } from './utilities/mvtHeader';
+import { getExperimentVaryHeaders } from './utilities/experimentHeader';
+import createAdNonce from '../app/utilities/createAdNonce';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -66,18 +67,22 @@ jest.mock('@loadable/server', () => {
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
+jest.mock('#app/utilities/createAdNonce');
 
 getToggles.mockImplementation(() => defaultToggles.local);
+createAdNonce.mockReturnValue(null);
 
 const mockRouteProps = ({
   id,
   service,
   isAmp,
   isApp,
+  isLite,
   dataResponse,
   responseType,
   variant,
   pageType,
+  nonce,
 }) => {
   const getInitialData =
     responseType === 'reject'
@@ -90,8 +95,10 @@ const mockRouteProps = ({
   getRouteProps.mockReturnValue({
     isAmp,
     isApp,
+    isLite,
     service,
     variant,
+    nonce,
     route: { getInitialData, pageType },
     match: {
       params: { id, service, variant: mockVariantParam },
@@ -100,7 +107,7 @@ const mockRouteProps = ({
 };
 
 jest.mock('./utilities/customMetrics');
-jest.mock('./utilities/mvtHeader');
+jest.mock('./utilities/experimentHeader');
 
 const renderDocumentSpy = jest.spyOn(renderDocument, 'default');
 
@@ -110,7 +117,15 @@ const makeRequest = async (requestPath, headers = {}) =>
 const QUERY_STRING = '?param=test&query=1';
 
 const testRenderedData =
-  ({ url, service, isAmp, isApp, successDataResponse, variant }) =>
+  ({
+    url,
+    service,
+    isAmp,
+    isApp,
+    successDataResponse,
+    variant,
+    nonce = null,
+  }) =>
   async () => {
     const { text, status } = await makeRequest(url);
 
@@ -131,6 +146,8 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        nonce={nonce}
+        service={service}
         links="__mock_link_elements__"
       />,
     );
@@ -143,6 +160,7 @@ const testRenderedData =
       service,
       routes,
       url,
+      nonce,
     };
 
     if (variant) {
@@ -165,7 +183,7 @@ const assertNon200ResponseCustomMetrics = ({
 }) => {
   it('should send custom metrics for non 200 response status code', async () => {
     await makeRequest(requestUrl);
-    expect(sendCustomMetrics).toBeCalledWith({
+    expect(sendCustomMetrics).toHaveBeenCalledWith({
       metricName: NON_200_RESPONSE,
       pageType,
       requestUrl,
@@ -1050,40 +1068,6 @@ describe('Server', () => {
     });
   });
 
-  describe('Recommendations json', () => {
-    // This is being skipped due to variants not needing recommendations
-    it.skip('should serve a file for valid service paths with variants', async () => {
-      const { body } = await makeRequest(
-        '/zhongwen/uk-23283128/recommendations/trad.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should serve a file for valid service paths without variants', async () => {
-      const { body } = await makeRequest(
-        '/mundo/23263889/recommendations.json',
-      );
-      expect(body).toEqual(
-        expect.arrayContaining([
-          expect.objectContaining({
-            headlines: expect.any(Object),
-          }),
-        ]),
-      );
-    });
-    it('should respond with a 500 for non-existing services', async () => {
-      const { statusCode } = await makeRequest(
-        '/some-service/recommendations.json',
-      );
-      expect(statusCode).toEqual(500);
-    });
-  });
-
   describe('Data', () => {
     describe('for articles', () => {
       it('should respond with JSON', async () => {
@@ -1374,14 +1358,14 @@ describe('Server', () => {
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testOnDemandTvEpisodePages({
     platform: 'canonical',
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
-    mediaId: 'w172xcldhhrhmcf',
+    mediaId: 'w172xtq7x8660m1',
   });
 
   testAssetPages({
@@ -1482,6 +1466,8 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            nonce={null}
+            service={service}
             links="__mock_link_elements__"
           />,
         );
@@ -1571,7 +1557,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/c0000000001o');
 
@@ -1584,7 +1570,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     mockRouteProps({
       dataResponse: successDataResponse,
     });
-    getMvtVaryHeaders.mockReturnValue('');
+    getExperimentVaryHeaders.mockReturnValue('');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1596,7 +1582,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     const { header } = await makeRequest('/mundo/articles/c0000000001o');
 
@@ -1625,7 +1611,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-bbc-edge-isuk': 'no',
@@ -1643,7 +1629,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {
       'x-country': 'gb',
@@ -1661,7 +1647,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
       dataResponse: successDataResponse,
       isAmp: true,
     });
-    getMvtVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
+    getExperimentVaryHeaders.mockReturnValue('mvt-simorgh_dark_mode');
 
     await makeRequest('/mundo/articles/c0000000001o', {});
 
@@ -1866,5 +1852,79 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
       SERVER_SIDE_REQUEST_FAILED,
       SENSITIVE_HEADER,
     );
+  });
+});
+
+describe('Nonce functionality', () => {
+  const service = 'mundo';
+  const successDataResponse = {
+    isAmp: false,
+    data: { some: 'data' },
+    service: 'someService',
+    status: 200,
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('when createAdNonce returns a nonce', () => {
+    const mockNonce = 'test-nonce-123';
+
+    beforeEach(() => {
+      createAdNonce.mockReturnValue(mockNonce);
+      mockRouteProps({
+        service,
+        isAmp: false,
+        isApp: false,
+        dataResponse: successDataResponse,
+      });
+    });
+
+    it('should pass nonce to renderDocument', async () => {
+      await makeRequest(`/${service}`);
+
+      expect(renderDocumentSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          nonce: mockNonce,
+        }),
+      );
+    });
+
+    it('should include nonce in Content-Security-Policy script-src directive', async () => {
+      const { header } = await makeRequest(`/${service}`);
+
+      const cspHeader = header['content-security-policy'];
+      expect(cspHeader).toBeDefined();
+      expect(cspHeader).toContain(`script-src`);
+      expect(cspHeader).toContain(`'nonce-${mockNonce}'`);
+    });
+  });
+
+  describe('when createAdNonce returns null', () => {
+    beforeEach(() => {
+      createAdNonce.mockReturnValue(null);
+      mockRouteProps({
+        service,
+        isAmp: false,
+        isApp: false,
+        dataResponse: successDataResponse,
+      });
+    });
+
+    it('should not set x-nonce header', async () => {
+      const { header } = await makeRequest(`/${service}`);
+      expect(header['x-nonce']).toBeUndefined();
+    });
+
+    it('should pass null nonce to renderDocument', async () => {
+      await makeRequest(`/${service}`);
+
+      expect(renderDocumentSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          nonce: null,
+        }),
+      );
+    });
   });
 });

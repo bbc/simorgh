@@ -3,12 +3,12 @@
  * @pathname /gahuza/articles/c5y51yxeg53o
  */
 
-import canonicalLiteSiteCTA from '../canonicalLiteSiteCTA';
+import liteSiteLink from '../liteSiteLink';
 import runCanonicalTests from '../canonicalTests';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    canonicalLiteSiteCTA();
+    liteSiteLink(service);
     runCanonicalTests(service);
   });
 });

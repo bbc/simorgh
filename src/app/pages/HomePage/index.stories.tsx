@@ -97,6 +97,13 @@ export const Test = {
   tags: ['!dev'],
 };
 
+export const TestWSLanguages = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="ws" variant={variant} />
+  ),
+  tags: ['!dev'],
+};
+
 export const TestLite = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="gahuza" variant={variant} isLite />

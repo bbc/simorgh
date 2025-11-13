@@ -1,8 +1,6 @@
 import React, { createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import Cookies from 'js-cookie';
 import {
   render,
@@ -13,41 +11,13 @@ import { service as pidginServiceConfig } from '../../../lib/config/services/pid
 import ConsentBanner from './index';
 
 const defaultToggleState = {
-  chartbeatAnalytics: {
-    enabled: false,
-  },
   privacyPolicy: {
     enabled: true,
     value: 'july2019',
   },
 };
-const mockToggleDispatch = jest.fn();
 
-const AmpBannerWithContext = ({ service, serviceConfig, variant }) => {
-  const toggleContextValue = useMemo(
-    () => ({
-      toggleState: defaultToggleState,
-      toggleDispatch: mockToggleDispatch,
-    }),
-    [],
-  );
-  return (
-    <RequestContextProvider
-      isAmp
-      pageType={HOME_PAGE}
-      pathname="/"
-      service={service}
-    >
-      <ToggleContext.Provider value={toggleContextValue}>
-        <UserContextProvider>
-          <ServiceContext.Provider value={serviceConfig[variant]}>
-            <ConsentBanner />
-          </ServiceContext.Provider>
-        </UserContextProvider>
-      </ToggleContext.Provider>
-    </RequestContextProvider>
-  );
-};
+const mockToggleDispatch = jest.fn();
 
 const CanonicalBannerWithContext = React.forwardRef(
   ({ serviceConfig, variant, toggleStateOverride }, ref) => {
@@ -134,43 +104,5 @@ describe('canonical', () => {
     fireEvent.click(getByText(pidginCookieAccept));
 
     expect(document.activeElement).toBe(getByText('BBC Brand'));
-  });
-});
-
-describe('amp', () => {
-  it('should render a focussable manage cookies heading on AMP', () => {
-    const { container } = render(
-      <AmpBannerWithContext
-        service="pidgin"
-        serviceConfig={pidginServiceConfig}
-        variant="default"
-      />,
-    );
-
-    const manageCookiesHeading = container.querySelector(
-      '#manageCookiesHeading',
-    );
-    manageCookiesHeading.focus();
-
-    expect(document.activeElement).toBe(manageCookiesHeading);
-  });
-
-  it('should render a focussable cookie banner heading on AMP', () => {
-    const { getByText } = render(
-      <AmpBannerWithContext
-        service="pidgin"
-        serviceConfig={pidginServiceConfig}
-        variant="default"
-      />,
-    );
-
-    const pidginCookieAcceptAmp =
-      pidginServiceConfig.default.translations.consentBanner.cookie.amp.initial
-        .title;
-
-    const pidginCookieHeading = getByText(pidginCookieAcceptAmp);
-    pidginCookieHeading.focus();
-
-    expect(document.activeElement).toBe(pidginCookieHeading);
   });
 });

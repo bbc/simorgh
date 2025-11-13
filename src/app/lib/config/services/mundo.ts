@@ -47,7 +47,39 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      iframeSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
+      iframeDevSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+    },
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Únete a nuestro WhatsApp',
+      brandDescription:
+        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
+        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+      },
+      linkLabel: {
+        text: 'Suscríbete aquí',
+        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+      },
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
+      readTime: {
+        readTimePrefix: 'Tiempo de lectura',
+        quick: 'Lectura rápida',
+        long: 'Lectura extensa',
+        minute: 'min',
+        minutes: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -57,14 +89,14 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Publicidad',
       },
-      recommendationTitle: 'Recomendamos',
-      splitRecommendationTitle: 'Más recomendaciones',
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      moreOnThis: '',
       navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
@@ -237,6 +269,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duración',
         recentEpisodes: 'Más',
         closeVideo: 'Salir',
+        endOfContentClose: 'Fin de este contenido. Salir',
       },
       socialEmbed: {
         caption: {
@@ -311,26 +344,26 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
-          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+          'Si te has suscrito a nuestro newsletter, por favor, revisa tu correo. Si nos has enviado información, toma nota de este número para futura referencia.',
         privacyInfoHtml:
-          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+          'Y recuerda que tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
-          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+          'Si tienes alguna duda o cambias de opinión, escríbenos a {{emailLink}} incluyendo el número de referencia.',
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
-        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingHeading: 'Enviando…',
         uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
-        successHeading: 'Mensaje enviado',
-        successDescription: 'Gracias por contactarnos.',
+        successHeading: 'Enviado',
+        successDescription: 'Muchas gracias.',
         privacyPolicyLinkHref:
           'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',
@@ -345,7 +378,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     mostRead: {
-      header: 'Más leídas',
+      header: 'Lecturas más populares',
       lastUpdated: 'Última actualización:',
       numberOfItems: 10,
       hasMostRead: true,
@@ -354,7 +387,7 @@ export const service: DefaultServiceConfig = {
       hasRadioSchedule: false,
     },
     recommendations: {
-      hasStoryRecommendations: true,
+      header: 'Más leídas',
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Final de %title%',
@@ -366,7 +399,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Lee sobre nuestra postura acerca de enlaces externos.',
       },
       links: [
@@ -419,8 +452,8 @@ export const service: DefaultServiceConfig = {
         url: '/mundo/topics/c2lej05epw5t',
       },
       {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
+        title: 'EE.UU.',
+        url: '/mundo/topics/cdr5613yzwqt',
       },
       {
         title: 'Economía',
@@ -441,6 +474,14 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tecnología',
         url: '/mundo/topics/cyx5krnw38vt',
+      },
+      {
+        title: 'Hay Festival',
+        url: '/mundo/topics/cr50y7p7qyqt',
+      },
+      {
+        title: 'Centroamérica cuenta',
+        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

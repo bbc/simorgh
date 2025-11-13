@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { use } from 'react';
 import { cleanup, render, act } from '@testing-library/react';
 import { ServiceContext, ServiceContextProvider } from '.';
 import services from '../../../server/utilities/serviceConfigs';
@@ -20,7 +20,7 @@ describe('ServiceContextProvider', () => {
     const testForServiceAndVariant = (service: Services, variant: Variants) => {
       it(`should have a brand name for ${service} and variant ${variant}`, async () => {
         const Component = () => {
-          const { brandName } = useContext(ServiceContext);
+          const { brandName } = use(ServiceContext);
 
           return <span>{brandName}</span>;
         };
@@ -57,7 +57,7 @@ describe('ServiceContextProvider', () => {
 
     it(`should return null for foobar service`, async () => {
       const Component = () => {
-        const { brandName } = useContext(ServiceContext);
+        const { brandName } = use(ServiceContext);
 
         return <span>{brandName}</span>;
       };
@@ -120,7 +120,7 @@ describe('ServiceContextProvider', () => {
       }) => {
         it(description, async () => {
           const Component = () => {
-            const { translations } = useContext(ServiceContext);
+            const { translations } = use(ServiceContext);
 
             return (
               <span>

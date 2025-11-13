@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /** @jsxFrag */
 import { jsx } from '@emotion/react';
-import React, { memo, useContext, useState } from 'react';
+import React, { memo, use, useState } from 'react';
 import Text from '#app/components/Text';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import MediaLoader from '#app/components/MediaLoader';
@@ -12,6 +12,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { regexPunctuationSymbols } from '#app/lib/utilities/idSanitiser';
+import { service as newsConfig } from '#lib/config/services/news';
 import styles from './index.styles';
 import WARNING_LEVELS from '../MediaLoader/configs/warningLevels';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -31,8 +32,7 @@ type LiveHeaderMediaProps = {
 
 const DEFAULT_WATCH__NOW = 'Watch Live';
 const DEFAULT_CLOSE_VIDEO = 'Close video';
-const DEFAULT_NO_JS_MESSAGE =
-  'This video cannot play in your browser. Please enable JavaScript or try a different browser.';
+const DEFAULT_NO_JS_MESSAGE = newsConfig.default.translations.media.noJs;
 
 const MemoizedMediaPlayer = memo(MediaLoader);
 
@@ -40,15 +40,17 @@ const LiveHeaderMedia = ({
   mediaCollection,
   clickCallback = () => null,
 }: LiveHeaderMediaProps) => {
-  const { translations } = useContext(ServiceContext);
-  const { isLite } = useContext(RequestContext);
+  const { translations } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
   const [showMedia, setShowMedia] = useState(false);
 
   const eventTrackingData: EventTrackingMetadata = {
     componentName: 'live-header-media',
   };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const viewRef = useViewTracker(eventTrackingData);
+
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingData);
 
   let warningLevel = WARNING_LEVELS.NO_WARNING;
 
@@ -68,11 +70,14 @@ const LiveHeaderMedia = ({
 
   const {
     model: {
-      masterbrand: { networkName },
       synopses: { short },
       version: { vpid, warnings },
     },
   } = mediaItem;
+
+  const titleHasPunctuation = regexPunctuationSymbols.test(
+    short.trim().slice(-1),
+  );
 
   if (warnings) {
     const { warning } = warnings;
@@ -90,8 +95,6 @@ const LiveHeaderMedia = ({
     warningLevel = WARNING_LEVELS[highestWarning.warning_code];
   }
 
-  const titleHasPunctuation = short.slice(-1).match(regexPunctuationSymbols);
-
   const clickToggleMedia = () => {
     const mediaPlayer = window.mediaPlayers?.[vpid];
     if (showMedia) {
@@ -108,7 +111,7 @@ const LiveHeaderMedia = ({
   };
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    clickTrackerHandler(e);
+    if (clickTrackerHandler) clickTrackerHandler(e);
     clickToggleMedia();
   };
 
@@ -126,11 +129,6 @@ const LiveHeaderMedia = ({
       {showMedia && <VisuallyHiddenText>{closeVideo}, </VisuallyHiddenText>}
       <Text size="pica" fontVariant="sansBold" as="span">
         {short}
-        {!titleHasPunctuation && ','}
-      </Text>
-      <Text size="pica" fontVariant="sansRegular" as="span">
-        {' '}
-        {networkName}
       </Text>
     </Text>
   );
@@ -141,7 +139,7 @@ const LiveHeaderMedia = ({
         <p>{description}</p>
         <strong>{noJs}</strong>
       </noscript>
-      <div css={styles.componentContainer} ref={viewRef}>
+      <div css={styles.componentContainer} {...viewTracker}>
         <button
           type="button"
           onClick={e => handleClick(e)}
@@ -162,7 +160,9 @@ const LiveHeaderMedia = ({
                 css={styles.guidanceMessage}
                 data-testid="warning-message"
               >
-                <VisuallyHiddenText>, </VisuallyHiddenText>
+                <VisuallyHiddenText>
+                  {titleHasPunctuation ? ' ' : ', '}
+                </VisuallyHiddenText>
                 {warnings.warning_text}
               </Text>
             )}

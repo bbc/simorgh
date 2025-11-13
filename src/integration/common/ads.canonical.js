@@ -1,6 +1,6 @@
 export default () => {
   describe('Ads', () => {
-    const ads = document.querySelectorAll('[id^=dotcom]');
+    const ads = Array.from(document.querySelectorAll('[id^=dotcom]'));
 
     ads.forEach(ad => {
       it('should be displayed', () => {
@@ -19,8 +19,8 @@ export default () => {
     });
 
     it('dotcom config should be loaded', () => {
-      const scripts = document.querySelectorAll(
-        "script[type='text/javascript']",
+      const scripts = Array.from(
+        document.querySelectorAll("script[type='text/javascript']"),
       );
 
       let adConfig;

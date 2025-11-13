@@ -15,19 +15,26 @@ export type SocialEmbedProviders =
 
 export type PageTypes = (typeof PAGE_TYPES)[keyof typeof PAGE_TYPES];
 
+export type ToggleDefinition = {
+  enabled: boolean;
+  value?: string | number;
+};
+
 export type Toggles =
-  | {
-      [key: string]: {
-        enabled: boolean;
-        value?: string | number;
-      };
-    }
+  | Record<string, ToggleDefinition>
   | { _environment: string };
 
-export type MvtExperiment = {
+export type ComponentExperimentProps = {
+  sendOptimizelyEvents?: boolean;
+  experimentName?: string;
+  experimentVariant?: string;
+};
+
+export type ServerSideExperiment = {
   experimentName: string;
   variation: string;
-  type: 'experiment' | 'feature';
+  enabled: boolean;
+  type?: 'experiment' | 'feature';
 };
 
 export type SerbianService = {
@@ -73,6 +80,7 @@ export type ServicesWithNoVariants = {
     | 'bengali'
     | 'burmese'
     | 'cymrufyw'
+    | 'dari'
     | 'gahuza'
     | 'gujarati'
     | 'hausa'
@@ -82,6 +90,7 @@ export type ServicesWithNoVariants = {
     | 'japanese'
     | 'korean'
     | 'kyrgyz'
+    | 'magyarul'
     | 'marathi'
     | 'mundo'
     | 'naidheachdan'
@@ -91,8 +100,10 @@ export type ServicesWithNoVariants = {
     | 'pashto'
     | 'persian'
     | 'pidgin'
+    | 'polska'
     | 'portuguese'
     | 'punjabi'
+    | 'romania'
     | 'russian'
     | 'scotland'
     | 'sport'
@@ -118,3 +129,8 @@ export type Services =
 export type Variants =
   | ServicesWithNoVariants['variant']
   | ServicesWithVariants['variant'];
+
+export type ServicesVariantsProps = {
+  service: Services;
+  variant?: Variants;
+};

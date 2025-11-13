@@ -14,7 +14,7 @@ interface FetchDataFromBffParams {
   pathname: string;
   pageType: PageTypes;
   service: Services;
-  variant?: Variants;
+  variant?: Variants | null;
   isAmp?: boolean;
   disableRadioSchedule?: boolean;
   page?: string;
