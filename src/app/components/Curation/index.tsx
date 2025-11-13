@@ -72,7 +72,6 @@ export default ({
   timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
-  disablePortraitVideoCarousel = false,
 }: Curation) => {
   const componentName = getComponentName({
     visualStyle,
@@ -174,9 +173,6 @@ export default ({
     case EMBED:
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
-      if (disablePortraitVideoCarousel) {
-        return null;
-      }
       if (portraitVideo?.blocks && portraitVideo?.blocks?.length > 0) {
         return (
           <PortraitVideoCarousel

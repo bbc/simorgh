@@ -6,7 +6,6 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
@@ -65,7 +64,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
-  const isOperaMini = useOperaMiniDetection();
 
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
@@ -154,7 +152,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       timeOfDayVariant={timeOfDayVariant}
-                      disablePortraitVideoCarousel={isOperaMini}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}

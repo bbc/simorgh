@@ -93,5 +93,4 @@ export interface Curation extends BaseCuration {
   renderVisuallyHiddenH2Title?: boolean;
   timeOfDayVariant?: string | null;
   timeOfDayExperimentName?: string | null;
-  disablePortraitVideoCarousel?: boolean;
 }
