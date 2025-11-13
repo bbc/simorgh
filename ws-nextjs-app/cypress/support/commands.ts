@@ -5,6 +5,7 @@ import defaultToggles from '#app/lib/config/toggles';
 import testResponseCodeAndRetry from './helpers/testResponseCodeAndRetry';
 import getAppEnv from './helpers/getAppEnv';
 import envConfig, { EnvironmentConfigType } from './config/envs';
+import handleContinueReadingButton from './helpers/handleContinueReadingButton';
 
 interface TestResponseCodeAndRetry {
   url: string;
@@ -131,3 +132,10 @@ Cypress.Commands.add('testResponseCodeAndRetry', testResponseCodeAndRetry);
 Cypress.Commands.add('getToggles', getToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
+
+Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
+  return originalFn(url, options).then(() => {
+    // Handle Continue Reading button if it appears when cy.visit() is called
+    handleContinueReadingButton();
+  });
+});

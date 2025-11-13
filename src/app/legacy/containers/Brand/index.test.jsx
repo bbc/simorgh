@@ -14,9 +14,9 @@ const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
 describe('getBrandPath', () => {
-  it('should return /ws/languages for ws service', () => {
-    expect(getBrandPath('ws')).toBe('/ws/languages');
-    expect(getBrandPath('ws', 'cyr')).toBe('/ws/languages');
+  it('should return /news for ws service', () => {
+    expect(getBrandPath('ws')).toBe('/news');
+    expect(getBrandPath('ws', 'cyr')).toBe('/news');
   });
 
   it('should return /[service]/[variant] when valid', () => {

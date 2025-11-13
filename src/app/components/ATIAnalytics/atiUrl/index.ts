@@ -54,7 +54,6 @@ export const buildATIPageTrackPath = ({
   nationsProducer,
   ampExperimentName,
   experimentVariant,
-  readTimeMilliseconds,
 }: ATIPageTrackingProps) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -222,12 +221,6 @@ export const buildATIPageTrackPath = ({
       key: 'xto',
       description: 'marketing campaign',
       value: getATIMarketingString(href, campaignType),
-      wrap: false,
-    },
-    {
-      key: 'item_duration',
-      description: 'read time of article in milliseconds',
-      value: readTimeMilliseconds,
       wrap: false,
     },
     ...(experimentVariant
@@ -460,7 +453,6 @@ export const buildReverbAnalyticsModel = ({
   timeUpdated,
   experimentName,
   experimentVariant,
-  readTimeMilliseconds,
 }: ATIPageTrackingProps): ReverbBeaconConfig => {
   const href = getHref(platform);
   const referrer = getReferrer(platform);
@@ -499,7 +491,6 @@ export const buildReverbAnalyticsModel = ({
           x16: aggregatedCampaigns,
           x17: categoryName,
           x18: isLocServeCookieSet(),
-          item_duration: readTimeMilliseconds,
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
