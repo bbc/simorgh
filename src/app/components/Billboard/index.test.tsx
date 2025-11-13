@@ -111,49 +111,45 @@ describe('Billboard', () => {
   it('disables the vignette when no promo items are present', () => {
     const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
-    try {
-      render(
-        <Billboard
-          heading={title}
-          description={description}
-          link={link}
-          image={imageUrl}
-          altText={imageAlt}
-          summaries={[kyrgyzBillboard.summaries[0]]}
-        />,
-      );
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+        summaries={[kyrgyzBillboard.summaries[0]]}
+      />,
+    );
 
-      expect(maskedImageSpy).toHaveBeenCalled();
-      expect(maskedImageSpy.mock.calls[0][0]).toEqual(
-        expect.objectContaining({ showVignette: false, fillHeight: true }),
-      );
-    } finally {
-      maskedImageSpy.mockRestore();
-    }
+    expect(maskedImageSpy).toHaveBeenCalled();
+    expect(maskedImageSpy.mock.calls[0][0]).toEqual(
+      expect.objectContaining({ showVignette: false, fillHeight: true }),
+    );
+
+    maskedImageSpy.mockRestore();
   });
 
   it('enables the vignette when promo items are present', () => {
     const maskedImageSpy = jest.spyOn(MaskedImage, 'default');
 
-    try {
-      render(
-        <Billboard
-          heading={title}
-          description={description}
-          link={link}
-          image={imageUrl}
-          altText={imageAlt}
-          summaries={pidginLiveBillboard.summaries}
-        />,
-      );
+    render(
+      <Billboard
+        heading={title}
+        description={description}
+        link={link}
+        image={imageUrl}
+        altText={imageAlt}
+        summaries={pidginLiveBillboard.summaries}
+      />,
+    );
 
-      expect(maskedImageSpy).toHaveBeenCalled();
-      expect(maskedImageSpy.mock.calls[0][0]).toEqual(
-        expect.objectContaining({ showVignette: true, fillHeight: false }),
-      );
-    } finally {
-      maskedImageSpy.mockRestore();
-    }
+    expect(maskedImageSpy).toHaveBeenCalled();
+    expect(maskedImageSpy.mock.calls[0][0]).toEqual(
+      expect.objectContaining({ showVignette: true, fillHeight: false }),
+    );
+
+    maskedImageSpy.mockRestore();
   });
 
   it('should render BillboardCurationGrid with CurationPromos when summaries are provided', () => {
