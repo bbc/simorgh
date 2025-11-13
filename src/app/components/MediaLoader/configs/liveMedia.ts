@@ -1,6 +1,7 @@
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
+import onClient from '#app/lib/utilities/onClient';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
@@ -32,10 +33,7 @@ export default ({
 
   const rawDuration = moment.duration(duration).asSeconds();
 
-  const isBrowser =
-    typeof window !== 'undefined' && typeof document !== 'undefined';
-
-  const isInternalReferrer = isBrowser
+  const isInternalReferrer = onClient()
     ? document.referrer.includes(window.location.hostname)
     : false;
 
