@@ -1,4 +1,5 @@
-import moment from './ro';
+import './ro';
+import moment from 'moment';
 
 describe('moment locale – ro', () => {
   it('should use the Romanian locale', () => {
