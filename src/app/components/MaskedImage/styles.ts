@@ -128,6 +128,10 @@ export default {
         insetInlineEnd: 0,
       },
     }),
+  fullHeight: () =>
+    css({
+      aspectRatio: 'auto',
+    }),
   linearGradientLtr: ({ mq }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {

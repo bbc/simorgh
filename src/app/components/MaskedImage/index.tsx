@@ -17,6 +17,7 @@ type Props = {
   showPlaceholder?: boolean;
   showVignette?: boolean;
   isLivePageHeaderImage?: boolean;
+  fillHeight?: boolean;
 };
 
 const getGradientStyles = ({
@@ -41,6 +42,7 @@ const MaskedImage = ({
   showPlaceholder = true,
   showVignette = false,
   isLivePageHeaderImage = false,
+  fillHeight = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -65,9 +67,21 @@ const MaskedImage = ({
   });
 
   const gradientStyles = getGradientStyles({ isRtl, showVignette });
+  const imageDimensions = fillHeight
+    ? {}
+    : {
+        width: 800,
+        height: 533,
+      };
 
   return (
-    <div css={[styles.maskedImageWrapper, gradientStyles]}>
+    <div
+      css={[
+        styles.maskedImageWrapper,
+        gradientStyles,
+        fillHeight && styles.fullHeight,
+      ]}
+    >
       <Image
         alt={altText}
         src={isLivePageHeaderImage ? srcWebp : imageUrl}
@@ -76,8 +90,7 @@ const MaskedImage = ({
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
         sizes="(min-width: 1008px) 660px, 100vw"
-        width={800}
-        height={533}
+        {...imageDimensions}
         fetchPriority="high"
         preload
         placeholder={showPlaceholder}
