@@ -17,7 +17,6 @@ self.addEventListener('install', event => {
   });
 });
 
-<<<<<<< HEAD
 self.addEventListener('periodicsync', event => {
   if (event.tag === 'get-latest-news') {
     showNotification();
@@ -62,25 +61,6 @@ async function showNotification() {
     console.error('Failed to display notification:', error);
   }
 }
-=======
-const CACHEABLE_FILES = [
-  // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
-  // Smart Tag
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
-  // Fonts
-  /\.woff2$/,
-  // Frosted Promo (test and live environments only)
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-  // Moment
-  /\/moment-lib+.*?\.js$/,
-  // PWA Icons
-  /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
-];
-
-const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
->>>>>>> 92c71206a9c5f49d139961877a74b16227b4f5a2
 
 const CACHEABLE_FILES = [
   // Reverb
