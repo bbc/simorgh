@@ -112,6 +112,6 @@ describe('withOptimizelyProvider HOC', () => {
 
     expect(
       optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
-    ).toBeUndefined();
+    ).toBeNull();
   });
 });

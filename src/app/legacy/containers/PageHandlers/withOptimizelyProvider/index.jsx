@@ -37,7 +37,7 @@ const isMobile = () => {
     return false;
   }
 
-  return undefined;
+  return null;
 };
 
 const getReferrer = () => {
@@ -45,7 +45,7 @@ const getReferrer = () => {
     // TODO: Will be implemented in https://bbc.atlassian.net/browse/WS-947
   }
 
-  return undefined;
+  return null;
 };
 
 const withOptimizelyProvider = Component => {
