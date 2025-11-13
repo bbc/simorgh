@@ -19,5 +19,3 @@ moment.updateLocale('ro', {
     yy: '%d ani',
   },
 });
-
-export default moment;
