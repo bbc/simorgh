@@ -107,7 +107,7 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   // TODO: Will be extended in https://bbc.atlassian.net/browse/WS-947
-  it('should set referrer to undefined', () => {
+  it('should set referrer to null', () => {
     render(<TestComponent />);
 
     expect(
