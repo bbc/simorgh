@@ -48,8 +48,11 @@ jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
 jest.mock('@optimizely/react-sdk');
 
 describe('withOptimizelyProvider HOC', () => {
+  const originalMatchMedia = window.matchMedia;
+
   afterEach(() => {
     jest.clearAllMocks();
+    window.matchMedia = originalMatchMedia;
   });
 
   it('should enrich the component with the Optimizely API', () => {
