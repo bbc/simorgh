@@ -50,7 +50,7 @@ const canonicalSmokeTestSuites = [
   {
     path: '/mundo/23263889',
     service: 'mundo',
-    runforEnv: ['local'],
+    runforEnv: ['test', 'local'],
     tests: canonicalTests,
   },
   {
