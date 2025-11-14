@@ -1,5 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
+import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
 
@@ -90,6 +91,9 @@ export default ({
           });
 
           beforeEach(() => {
+            // This is a special case to reveal the article before any other test runs
+            handleContinueReadingButton();
+
             beforeEachFns.forEach(runBeforeEach => runBeforeEach());
 
             cy.intercept(
