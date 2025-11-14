@@ -1,23 +1,30 @@
 {
   "data": {
-    "title": "Live TV Page with schedule",
-    "description": "Test for live tv page with multiple media collections & radio schedule",
+    "title": "Live TV Page with schedule - Dari",
+    "description": "BBC Arabic TV brings you news, breaking news, analysis, discussions, and documentaries, 24 hours a day. You can receive the channel via satellite dish. Send your comments and suggestions via this link. Follow the latest news and developments around the world through BBC News Arabic on WhatsApp.",
     "curations": [
       {
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Dari page, Live Afghan TV stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER",
         "mediaCollection": [
           {
             "type": "liveMedia",
             "model": {
               "urn": "urn:bbc:pips:sid:bbc_afghan_tv",
-              "title": "Tvdar25 Afghan Edu Girls 36",
+              "title": "02/12/2024 GMT",
               "type": "episode",
               "synopses": {
-                "short": "",
-                "medium": "",
-                "long": ""
+                "short": "I'm adding some summary text here as a test. In theory it would say something like - Watch BBC News Afghan TV here, with programmes in Dari, Pashto and Farsi. We hope you enjoy it!",
+                "medium": "یک برنامه موضوعی و آموزشی برای جوانان، از جمله دخترانی که از رفتن به مکتب محروم شده ‌اند.",
+                "long": "برنامه آموزشی جدید زیر عنوان درس از سرویس جهانی بی بی سی برای افغانستان، حاوی اخبار و داستان های الهام بخش برای جوانان و به ویژه دخترانی که از رفتن به مکتب محروم شده اند."
               },
               "mediaType": "audio_video",
-              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p0k8v8q1.png",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/ace/standard/$recipe/cpsdevpb/d318/test/c6f1c270-b571-11f0-8c86-5d50166f9cdc.png",
               "masterbrand": {
                 "id": "bbc_dari_tv",
                 "name": "BBC Dari TV",
@@ -26,14 +33,11 @@
                 "imageUrlTemplate": null
               },
               "version": {
-                "vpid": "w4hr3ltd",
+                "vpid": "w4hr3ltm",
                 "duration": "PT30M",
                 "availabilityType": "simulcast",
                 "versionTypes": [
-                  {
-                    "type": "Original",
-                    "name": "Original version"
-                  }
+                  { "type": "Original", "name": "Original version" }
                 ],
                 "schedule": null,
                 "serviceId": "bbc_afghan_tv",
@@ -45,68 +49,86 @@
               "leadMedia": true
             }
           }
-        ],
-        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
-        "curationType": "tipo-curation",
-        "position": 0,
-        "title": "Afghan TV Stream",
-        "visualProminence": "NORMAL",
-        "visualStyle": "NONE",
-        "intent": "MEDIA_PLAYER"
+        ]
       },
       {
-        "radioScheduleData": [
+        "summaries": [
           {
-            "id": "p0lv337m",
-            "state": "next",
-            "startTime": "2025-09-08T14:00:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7ryj",
-            "brandTitle": "مجله شامگاهی",
-            "summary": "برنامه خبری و تحلیلی شامگاهی \n",
-            "duration": "PT30M"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic YT channel",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/bbcarabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/005f/test/53fb1640-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "The YouTube logo",
+            "id": "https%3A%2F%2Fwww.youtube.com%2Fbbcarabic",
+            "visualProminence": "NORMAL"
           },
           {
-            "id": "p0lv11y1",
-            "state": "onDemand",
-            "startTime": "2025-09-08T08:30:00.000Z",
-            "link": "/dari/bbc_dari_radio/w173046n14h6fy1",
-            "brandTitle": "Second Eye",
-            "summary": "تازه ترین اخبار از افغانستان، منطقه و جهان ",
-            "duration": "PT14M30S"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic IG page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.instagram.com/bbcarabic/?hl=en",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/d8c4/test/cdbd2180-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "Instagram logo",
+            "id": "https%3A%2F%2Fwww.instagram.com%2Fbbcarabic%2F%3Fhl%3Den",
+            "visualProminence": "NORMAL"
           },
           {
-            "id": "p0ltynxx",
-            "state": "onDemand",
-            "startTime": "2025-09-07T17:00:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7mfl",
-            "brandTitle": "غږیز کتاب",
-            "summary": "خوشحال خان خټک د خپل شعر په نړۍ کې ـ  د خوشحال خټک د شعرونو غږيز کتاب پر بي بي سي راډیو د داود جنبش او زمزمې نيازۍ په غږ کې.",
-            "duration": "PT30M"
-          },
-          {
-            "id": "p0ltyj9w",
-            "state": "onDemand",
-            "startTime": "2025-09-07T16:30:00.000Z",
-            "link": "/dari/bbc_dari_radio/w3ct7qtg",
-            "brandTitle": "Just One Thing/Art",
-            "summary": "یوازې یو شی=  داسې څه اورئ چې ستاسو فزیکي او رواني روغتیا ته ګټه رسوي",
-            "duration": "PT30M"
+            "type": "link",
+            "isLive": false,
+            "title": "BBC Arabic FB page",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.facebook.com/BBCnewsArabic",
+            "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/c2d3/test/ab1d4ce0-b4e5-11f0-8c86-5d50166f9cdc.png.webp",
+            "imageAlt": "The Facebook logo",
+            "id": "https%3A%2F%2Fwww.facebook.com%2FBBCnewsArabic",
+            "visualProminence": "NORMAL"
           }
         ],
-        "curationId": "urn:bbc:programmes:available-episodes:bbc_dari_radio",
-        "curationType": "available-episodes",
-        "position": 1,
-        "title": "Afghan TV Schedule",
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:d4ab257a-89f2-4271-86f8-d918f991d3b4",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "Social links for WS Live TV page",
         "visualProminence": "NORMAL",
-        "visualStyle": "NONE"
+        "visualStyle": "LINKS"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Send our programme makers your thoughts",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/arabic/send/u50853203",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Farabic%2Fsend%2Fu50853203",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ecc71e86-815d-4ed2-b455-fba620c64a98",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "Useful links for WS Live TV page",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {
       "atiAnalytics": {
         "contentId": "urn:bbc:tipo:topic:cje2rl6z78xxt",
-        "contentType": "live-tv",
-        "pageIdentifier": "dari.live_tv.page",
-        "pageTitle": "Live TV Page with Schedule"
+        "contentType": "player-live",
+        "pageIdentifier": "dari.bbc_afghan_tv.livetv.page",
+        "pageTitle": "Live TV Page with schedule - Dari"
       }
     }
   },

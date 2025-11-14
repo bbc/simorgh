@@ -39,11 +39,6 @@ export default async (context: GetServerSidePropsContext) => {
   const { service, renderer_env: rendererEnv } =
     context.query as PageDataParams;
 
-  context.res.setHeader(
-    'Cache-Control',
-    'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
-  );
-
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
@@ -56,6 +51,7 @@ export default async (context: GetServerSidePropsContext) => {
     rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: ARTICLE_PAGE,
+    isAmp,
   });
 
   const { pageData, status } = data;
@@ -85,6 +81,9 @@ export default async (context: GetServerSidePropsContext) => {
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+        toggles,
         ...extractHeaders(reqHeaders),
       },
     };
@@ -96,7 +95,22 @@ export default async (context: GetServerSidePropsContext) => {
 
   const { article, secondaryData } = data?.pageData || {};
 
-  const { topStories, features, latestMedia, mostRead } = secondaryData;
+  const isArticleOlderThanSixHours = Date.now() - article.metadata.lastPublished > 21600000;
+  const maxAge = isArticleOlderThanSixHours ? 90 : 45;
+
+  context.res.setHeader(
+    'Cache-Control',
+    `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
+  );
+
+  const {
+    topStories = null,
+    features = null,
+    latestMedia = null,
+    mostRead = null,
+    billboardCuration = null,
+    mediaCuration = null,
+  } = secondaryData;
 
   const transformedArticleData = transformPageData(toggles)(article);
 
@@ -124,9 +138,11 @@ export default async (context: GetServerSidePropsContext) => {
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
-          topStories: topStories || null,
-          features: features || null,
-          latestMedia: latestMedia || null,
+          topStories,
+          features,
+          latestMedia,
+          mediaCuration,
+          billboardCuration,
         },
         mostRead,
       },

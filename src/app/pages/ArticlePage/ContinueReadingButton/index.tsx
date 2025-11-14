@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { use, useEffect, MouseEvent } from 'react';
+import { use, useEffect, MouseEvent, SetStateAction, Dispatch } from 'react';
 import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
@@ -7,81 +7,81 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import styles from './index.styles';
 
-export type Props = {
+export type ContinueReadingButtonProps = {
   showAllContent: boolean;
-  setShowAllContent: () => void;
-  variation:
-    | 'read-more-a'
-    | 'read-more-b'
-    | 'read-more-a-and-top-stories'
-    | null;
-  liteCTAShows?: boolean;
+  setShowAllContent: Dispatch<SetStateAction<boolean>>;
+};
+
+const eventTrackingData: EventTrackingData = {
+  componentName: 'continue-reading-button',
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
-  variation,
-  liteCTAShows,
-}: Props) => {
-  const eventTrackingData: EventTrackingData = {
-    componentName: 'read-more-button',
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_read_more_b',
-    experimentVariant: 'read-more-b',
-  };
-
-  const viewRef = useViewTracker(eventTrackingData);
-  const { onClick: clickTrackerHandler } =
-    useClickTrackerHandler(eventTrackingData);
-
-  const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
-    clickTrackerHandler?.(event);
-    setShowAllContent();
-  };
-
-  useEffect(() => {
-    if (showAllContent) {
-      const main = document.querySelector('main');
-      // Get the 7th or 8th child element of the main element depending on if the liveCTA link is present
-      const nthElement =
-        main?.querySelectorAll<HTMLElement>(':scope > *')[liteCTAShows ? 8 : 7];
-
-      if (nthElement) {
-        // Apply the custom focus style dynamically
-        nthElement.tabIndex = 0;
-        nthElement.focus();
-      }
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showAllContent]);
-
-  // Hide button when all content is shown
-  if (showAllContent || !variation) return null;
+}: ContinueReadingButtonProps) => {
+  const isOperaMini = useOperaMiniDetection();
 
   const {
     translations: { continueReading = 'Continue reading' },
   } = use(ServiceContext);
 
-  // Display variations of button based on variation
-  const buttonStyle =
-    variation === 'read-more-a' || variation === 'read-more-a-and-top-stories'
-      ? styles.continueReadingButtonA
-      : styles.continueReadingButtonB;
+  const viewRef = useViewTracker(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
+
+  useEffect(() => {
+    if (showAllContent) {
+      const firstHiddenElementSibling = document.querySelector(
+        '[data-first-hidden-element="true"]',
+      ) as HTMLElement | null;
+
+      if (firstHiddenElementSibling) {
+        firstHiddenElementSibling.tabIndex = 0;
+        firstHiddenElementSibling.focus();
+      }
+    }
+  }, [showAllContent]);
+
+  const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
+    clickTrackerHandler?.(event);
+
+    const maybeKeyboardEvent = event.detail === 0;
+
+    if (maybeKeyboardEvent) {
+      const button = document.getElementById('continue-reading-button');
+
+      const firstHiddenElementSibling = button?.nextElementSibling;
+
+      firstHiddenElementSibling?.setAttribute(
+        'data-first-hidden-element',
+        'true',
+      );
+    }
+
+    setShowAllContent(true);
+  };
+
+  // Hide button for Opera Mini users
+  if (isOperaMini) return null;
+
+  // Hide button when all content is shown
+  if (showAllContent) return null;
 
   return (
     <button
-      css={[buttonStyle, styles.hideButtonOnDesktop]}
+      id="continue-reading-button"
+      css={styles.continueReadingButton}
       type="button"
       onClick={handleEvent}
-      data-testid="read-more-button"
+      data-testid="continue-reading-button"
       {...viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
-      {variation === 'read-more-b' && <TriangleDown />}
+      <TriangleDown />
     </button>
   );
 };

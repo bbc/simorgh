@@ -24,6 +24,12 @@ export type Toggles =
   | Record<string, ToggleDefinition>
   | { _environment: string };
 
+export type ComponentExperimentProps = {
+  sendOptimizelyEvents?: boolean;
+  experimentName?: string;
+  experimentVariant?: string;
+};
+
 export type ServerSideExperiment = {
   experimentName: string;
   variation: string;
@@ -123,3 +129,8 @@ export type Services =
 export type Variants =
   | ServicesWithNoVariants['variant']
   | ServicesWithVariants['variant'];
+
+export type ServicesVariantsProps = {
+  service: Services;
+  variant?: Variants;
+};

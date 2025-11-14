@@ -285,23 +285,23 @@ const directives = {
   },
 };
 
-export const generateChildSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp) return ["blob: https: 'self'"];
+export const generateChildSrc = ({ isAmp, shouldServeRelaxedCsp = false }) => {
+  if (shouldServeRelaxedCsp) return ["blob: https: 'self'"];
 
   return isAmp ? ['blob:'] : ["'self'"];
 };
 
 export const generateConnectSrc = ({
   isLive,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ["'self' https: ws:"];
+  if (shouldServeRelaxedCsp) return ["'self' https: ws:"];
 
   return isLive ? ["'self' https:"] : ["'self' https: ws:"];
 };
 
-export const generateDefaultSrc = ({ shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp) {
+export const generateDefaultSrc = ({ shouldServeRelaxedCsp = false }) => {
+  if (shouldServeRelaxedCsp) {
     return [...bbcDomains, 'https:'].sort();
   }
   return [...advertisingDirectives.defaultSrc, "'self'"].sort();
@@ -310,9 +310,9 @@ export const generateDefaultSrc = ({ shouldServeLimitedCsp = false }) => {
 export const generateFontSrc = ({
   isAmp,
   isLive,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ["https:  data: blob: 'self'"];
+  if (shouldServeRelaxedCsp) return ["https:  data: blob: 'self'"];
   if (!isLive && isAmp) return directives.fontSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.fontSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.fontSrc.ampLive.sort();
@@ -322,9 +322,9 @@ export const generateFontSrc = ({
 export const generateFrameSrc = ({
   isAmp,
   isLive,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ['https: data:'];
+  if (shouldServeRelaxedCsp) return ['https: data:'];
   if (!isLive && isAmp) return directives.frameSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.frameSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.frameSrc.ampLive.sort();
@@ -334,17 +334,17 @@ export const generateFrameSrc = ({
 export const generateImgSrc = ({
   isAmp,
   isLive,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ['https: data: blob:'];
+  if (shouldServeRelaxedCsp) return ['https: data: blob:'];
   if (!isLive && isAmp) return directives.imgSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.imgSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.imgSrc.ampLive.sort();
   return directives.imgSrc.canonicalLive.sort();
 };
 
-export const generateMediaSrc = ({ shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp) return ["'self' blob: data: https:"];
+export const generateMediaSrc = ({ shouldServeRelaxedCsp = false }) => {
+  if (shouldServeRelaxedCsp) return ["'self' blob: data: https:"];
   return ["'self' blob: https:"];
 };
 
@@ -352,11 +352,13 @@ export const generateScriptSrc = ({
   isAmp,
   isLive,
   nonce,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp)
+  if (shouldServeRelaxedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
-  const insertedNonce = nonce ? [`'nonce-${nonce}'`, "'unsafe-eval'"] : [];
+  const insertedNonce = nonce
+    ? [`'nonce-${nonce}'`, 'blob:', 'data:', "'unsafe-eval'"]
+    : [];
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
     return [
@@ -369,17 +371,17 @@ export const generateScriptSrc = ({
 export const generateStyleSrc = ({
   isAmp,
   isLive,
-  shouldServeLimitedCsp = false,
+  shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeLimitedCsp) return ["https: 'unsafe-inline'"];
+  if (shouldServeRelaxedCsp) return ["https: 'unsafe-inline'"];
   if (!isLive && isAmp) return directives.styleSrc.ampNonLive.sort();
   if (!isLive && !isAmp) return directives.styleSrc.canonicalNonLive.sort();
   if (isLive && isAmp) return directives.styleSrc.ampLive.sort();
   return directives.styleSrc.canonicalLive.sort();
 };
 
-export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
-  if (shouldServeLimitedCsp)
+export const generateWorkerSrc = ({ isAmp, shouldServeRelaxedCsp = false }) => {
+  if (shouldServeRelaxedCsp)
     return ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'];
   return isAmp
     ? ['blob:', '*.bbc.co.uk', '*.bbc.com']
@@ -391,26 +393,29 @@ export const generateWorkerSrc = ({ isAmp, shouldServeLimitedCsp = false }) => {
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
  */
-export const cspDirectives = ({ isAmp, isLive, service, nonce = null }) => {
-  const shouldServeLimitedCsp = service === 'japanese';
-
+export const cspDirectives = ({
+  isAmp,
+  isLive,
+  nonce = null,
+  shouldServeRelaxedCsp = false,
+}) => {
   return {
     directives: {
-      'default-src': generateDefaultSrc(shouldServeLimitedCsp),
-      'child-src': generateChildSrc({ isAmp, shouldServeLimitedCsp }),
-      'connect-src': generateConnectSrc({ isLive, shouldServeLimitedCsp }),
-      'font-src': generateFontSrc({ isAmp, isLive, shouldServeLimitedCsp }),
-      'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeLimitedCsp }),
-      'img-src': generateImgSrc({ isAmp, isLive, shouldServeLimitedCsp }),
+      'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
+      'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
+      'connect-src': generateConnectSrc({ isLive, shouldServeRelaxedCsp }),
+      'font-src': generateFontSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+      'frame-src': generateFrameSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+      'img-src': generateImgSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
       'script-src': generateScriptSrc({
         isAmp,
         isLive,
         nonce,
-        shouldServeLimitedCsp,
+        shouldServeRelaxedCsp,
       }),
-      'style-src': generateStyleSrc({ isAmp, isLive, shouldServeLimitedCsp }),
-      'media-src': generateMediaSrc({ shouldServeLimitedCsp }),
-      'worker-src': generateWorkerSrc({ isAmp, shouldServeLimitedCsp }),
+      'style-src': generateStyleSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
+      'media-src': generateMediaSrc({ shouldServeRelaxedCsp }),
+      'worker-src': generateWorkerSrc({ isAmp, shouldServeRelaxedCsp }),
       'report-to': 'worldsvc',
       'upgrade-insecure-requests': [],
     },

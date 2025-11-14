@@ -38,6 +38,7 @@ interface Props extends AppProps {
     pathname: string;
     service: Services;
     showAdsBasedOnLocation: boolean;
+    showCookieBannerBasedOnCountry?: boolean;
     status: number;
     timeOnServer?: number;
     toggles: Toggles;
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: Props) {
     pathname,
     service,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry = true,
     status,
     timeOnServer,
     toggles,
@@ -100,6 +102,7 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           serverSideExperiments={serverSideExperiments}
           country={country}
           isNextJs={isNextJs}

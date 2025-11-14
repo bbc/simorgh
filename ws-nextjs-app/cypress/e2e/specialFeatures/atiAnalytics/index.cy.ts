@@ -100,9 +100,10 @@ const canonicalTestSuites = [
     runforEnv: ['local', 'test'],
     service: 'ws',
     pageIdentifier: 'ws.languages.page',
-    siteId: 64,
+    siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
+    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -110,9 +111,10 @@ const canonicalTestSuites = [
     runforEnv: ['live'],
     service: 'ws',
     pageIdentifier: 'ws.languages.page',
-    siteId: 64,
+    siteId: 30,
     applicationType: 'responsive',
     contentType: 'static',
+    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -344,7 +346,7 @@ const liteTestSuites = canonicalTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: false,
+      useReverb: true,
       tests: [...liteSiteTests],
     };
   });

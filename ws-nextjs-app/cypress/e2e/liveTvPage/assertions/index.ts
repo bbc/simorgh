@@ -3,11 +3,17 @@ import { PageTypes, Services } from '#app/models/types/global';
 type LiveTvPageParams = {
   service: Services;
   pageType: PageTypes;
+  pageData: {
+    title: string;
+  };
 };
 
-export const assertLiveTvPage = ({ service, pageType }: LiveTvPageParams) => {
-  it(`should render the Live TV Page with a h1 containing Hello World for ${service}`, () => {
-    const expectedHeading = `HELLO WORLD pageType: ${pageType} service: ${service}`;
-    cy.get('h1').should('have.text', expectedHeading);
+// eslint-disable-next-line import/prefer-default-export
+export const assertLiveTvPage = ({ service }: LiveTvPageParams) => {
+  it(`should render the Live TV Page with the correct h1 for ${service}`, () => {
+    cy.getPageDataFromWindow().then(pageData => {
+      const expectedHeading = (pageData as LiveTvPageParams['pageData'])?.title;
+      cy.get('h1').should('have.text', expectedHeading);
+    });
   });
 };

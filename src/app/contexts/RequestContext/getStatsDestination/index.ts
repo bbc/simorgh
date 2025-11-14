@@ -37,9 +37,6 @@ const getStatsDestination = ({ isUK = true, env = 'test', service }: Props) => {
     case 'sport':
       destination = isUK !== false ? 'SPORT_PS' : 'SPORT_GNL';
       break;
-    case 'ws':
-      destination = 'DEFAULT';
-      break;
     default:
       destination = 'WS_NEWS_LANGUAGES';
   }
