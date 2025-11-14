@@ -123,7 +123,7 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{
             __html: `
                   if (${isOperaProxy.toString()}()) {
-                    document.documentElement.classList.add(${OPERA_MINI_CLASSNAME});
+                    document.documentElement.classList.add("${OPERA_MINI_CLASSNAME}");
                   }
                 `,
           }}

@@ -205,7 +205,7 @@ export default class AppDocument extends Document<DocProps> {
                 dangerouslySetInnerHTML={{
                   __html: `
                   if (${isOperaProxy.toString()}()) {
-                    document.documentElement.classList.add(${OPERA_MINI_CLASSNAME});
+                    document.documentElement.classList.add("${OPERA_MINI_CLASSNAME}");
                   }
                 `,
                 }}
