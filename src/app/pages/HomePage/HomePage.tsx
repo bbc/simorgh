@@ -26,7 +26,6 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
 import reorderCurations from './utils/reorderCurations';
-import PWAUpsellBanner from '../../components/PWAUpsellBanner';
 
 export interface HomePageProps {
   pageData: {
@@ -41,12 +40,6 @@ export interface HomePageProps {
       type: string;
     };
   };
-}
-
-interface BeforeInstallPromptEvent extends Event {
-  readonly platforms: string[];
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
@@ -92,52 +85,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
-  // PWA Upsell Banner handling
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
-  const handleClose = (event?: React.MouseEvent) => {
-    event?.preventDefault();
-    setIsBannerVisible(false);
-  };
-
-  const [deferredPrompt, setDeferredPrompt] =
-    useState<BeforeInstallPromptEvent | null>(null);
-
-  useEffect(() => {
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      console.log('beforeinstallprompt event captured');
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-
-    return () => {
-      window.removeEventListener(
-        'beforeinstallprompt',
-        handleBeforeInstallPrompt,
-      );
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log('deferredPrompt updated:', deferredPrompt);
-  }, [deferredPrompt]);
-
-  const handleInstallPWA = async () => {
-    console.log('Install PWA button clicked');
-    if (!deferredPrompt) {
-      console.log('Install prompt not available');
-      return;
-    }
-
-    await deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`User response: ${outcome}`);
-
-    setDeferredPrompt(null);
-    setIsBannerVisible(false);
-  };
-
   return (
     <>
       <ChartbeatAnalytics title={title} />
@@ -156,26 +103,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
       />
       <Ad slotType="leaderboard" />
       <main role="main" css={styles.main}>
-        {serviceLocalizedName === 'Mundo' && isBannerVisible && (
-          <PWAUpsellBanner
-            serviceBackground="mundo"
-            title="Accede a BBC Noticias con un solo toque"
-            description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
-            handleClose={() => {
-              handleClose();
-            }}
-            buttonPrimary={{
-              shortText: 'Agregar',
-              longText: 'Agregar a la pantalla de inicio',
-              onClick: handleInstallPWA,
-            }}
-            buttonSecondary={{
-              text: 'No ahora',
-              onClick: handleClose,
-            }}
-            handleInstallPWA={handleInstallPWA}
-          />
-        )}
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
           {/* eslint-disable-next-line jsx-a11y/aria-role */}
