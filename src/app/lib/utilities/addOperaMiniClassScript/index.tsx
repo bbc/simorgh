@@ -1,5 +1,7 @@
 import React from 'react';
-import isOperaProxy, { OPERA_MINI_CLASSNAME } from '.';
+import isOperaProxy from '../isOperaProxy';
+
+export const OPERA_MINI_CLASSNAME = 'is-opera-mini';
 
 export default (
   <script

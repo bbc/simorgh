@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/isOperaProxy';
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {

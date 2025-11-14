@@ -37,7 +37,7 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
-import addOperaMiniClassScript from '#app/lib/utilities/isOperaProxy/addOperaMiniClassScript';
+import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
