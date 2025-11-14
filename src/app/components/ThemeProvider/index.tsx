@@ -1,12 +1,15 @@
 /* eslint-disable no-param-reassign */
 import React, { PropsWithChildren } from 'react';
-import type { LoadableComponent } from '@loadable/component';
 import nodeLogger from '#lib/logger.node';
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
+import {
+  LoadableTheme,
+  ThemeWithNoVariant,
+  ThemeWithVariant,
+} from '#app/models/types/theming';
 import defaultServiceVariants from '../../lib/config/services/defaultServiceVariants';
 import {
   ServicesVariantsProps,
-  Variants,
   ServicesWithVariants,
   ServicesWithNoVariants,
 } from '../../models/types/global';
@@ -15,57 +18,43 @@ import fallBackTheme from './themes/news';
 
 const logger = nodeLogger(__filename);
 
-type ThemeComponentLoadable = LoadableComponent<{ children: React.ReactNode }>;
 type FallbackThemeComponent = React.FC<{ children: React.ReactNode }>;
-
-type NonVariantThemesType = {
-  [_service in ServicesWithNoVariants['service']]: ThemeComponentLoadable;
-};
-
-type VariantThemesType = {
-  [_service in ServicesWithVariants['service']]: {
-    [_variant in Variants]?: ThemeComponentLoadable;
-  };
-};
 
 const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) =>
     Object.keys(theme).includes('render'),
   ),
-) as NonVariantThemesType;
+) as ThemeWithNoVariant;
 
 const variantThemes = Object.fromEntries(
   Object.entries(themes).filter(
     ([_service, theme]) => !Object.keys(theme).includes('render'),
   ),
-) as VariantThemesType;
+) as ThemeWithVariant;
 
 export const ThemeProvider = ({
   children,
   service,
   variant,
 }: PropsWithChildren<ServicesVariantsProps>) => {
-  let LoadableContextProvider:
-    | ThemeComponentLoadable
-    | FallbackThemeComponent
-    | null = null;
+  let LoadableContextProvider: LoadableTheme | FallbackThemeComponent;
 
   variant = variant || defaultServiceVariants[service];
 
-  let themeWithVariant;
-  let themeNoVariant;
+  let serviceVariants: LoadableTheme | undefined;
+  let serviceNoVariants: LoadableTheme | undefined;
 
   if (service in variantThemes) {
-    themeWithVariant =
+    serviceVariants =
       variantThemes[service as ServicesWithVariants['service']][variant];
   } else {
-    themeNoVariant =
+    serviceNoVariants =
       nonVariantThemes[service as ServicesWithNoVariants['service']];
   }
 
-  if (themeNoVariant || themeWithVariant) {
+  if (serviceNoVariants || serviceVariants) {
     LoadableContextProvider =
-      themeNoVariant || themeWithVariant || fallBackTheme;
+      serviceNoVariants || serviceVariants || fallBackTheme;
   } else {
     logger.error(
       THEME_PROVIDER_ERROR,
