@@ -35,7 +35,7 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   };
 });
 
-const supportsLite = ({ path }) => !path.startsWith('/persian/afghanistan');
+const supportsLite = () => true;
 
 const liteTestSuites = canonicalTestSuites
   .filter(supportsLite)

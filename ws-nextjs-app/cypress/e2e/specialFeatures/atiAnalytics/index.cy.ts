@@ -314,8 +314,7 @@ const ampTestSuites = canonicalTestSuites
     },
   ]);
 
-const supportsLite = ({ path }: { path: string }) =>
-  !path.startsWith('/persian/afghanistan');
+const supportsLite = () => true;
 
 const liteTestSuites = canonicalTestSuites
   .filter(({ path }) => path !== '/ws/languages')
