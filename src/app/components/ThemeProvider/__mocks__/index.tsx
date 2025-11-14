@@ -1,6 +1,11 @@
 import React from 'react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import { StoryProps } from '../../../models/types/storybook';
+import {
+  Variants,
+  ServicesWithVariants,
+  ServicesWithNoVariants,
+  Services,
+} from '#app/models/types/global';
 
 import afaanoromoo from '../themes/afaanoromoo';
 import afrique from '../themes/afrique';
@@ -11,6 +16,7 @@ import azeri from '../themes/azeri';
 import bengali from '../themes/bengali';
 import burmese from '../themes/burmese';
 import cymrufyw from '../themes/cymrufyw';
+import dari from '../themes/dari';
 import gahuza from '../themes/gahuza';
 import gujarati from '../themes/gujarati';
 import hausa from '../themes/hausa';
@@ -20,6 +26,7 @@ import indonesia from '../themes/indonesia';
 import japanese from '../themes/japanese';
 import korean from '../themes/korean';
 import kyrgyz from '../themes/kyrgyz';
+import magyarul from '../themes/magyarul';
 import marathi from '../themes/marathi';
 import mundo from '../themes/mundo';
 import naidheachdan from '../themes/naidheachdan';
@@ -32,6 +39,7 @@ import pidgin from '../themes/pidgin';
 import polska from '../themes/polska';
 import portuguese from '../themes/portuguese';
 import punjabi from '../themes/punjabi';
+import romania from '../themes/romania';
 import russian from '../themes/russian';
 import scotland from '../themes/scotland';
 import serbianCyr from '../themes/serbian/cyr';
@@ -57,11 +65,19 @@ import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
 
-type ThemeProvider = {
-  [index: string]: React.FC<Props> | { [index: string]: React.FC<Props> };
+type ThemeComponent = React.FC<{ children: React.ReactNode }>;
+
+type ThemeProviders = {
+  [_service in ServicesWithNoVariants['service']]: ThemeComponent;
 };
 
-const themeProviders: ThemeProvider = {
+type ThemeProvidersWithVariants = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in Variants]?: ThemeComponent;
+  };
+};
+
+const themeProvidersNoVariants: ThemeProviders = {
   afaanoromoo,
   afrique,
   amharic,
@@ -71,6 +87,7 @@ const themeProviders: ThemeProvider = {
   bengali,
   burmese,
   cymrufyw,
+  dari,
   gahuza,
   gujarati,
   hausa,
@@ -80,6 +97,7 @@ const themeProviders: ThemeProvider = {
   japanese,
   korean,
   kyrgyz,
+  magyarul,
   marathi,
   mundo,
   naidheachdan,
@@ -92,12 +110,9 @@ const themeProviders: ThemeProvider = {
   polska,
   portuguese,
   punjabi,
+  romania,
   russian,
   scotland,
-  serbian: {
-    cyr: serbianCyr,
-    lat: serbianLat,
-  },
   sinhala,
   somali,
   sport,
@@ -107,44 +122,56 @@ const themeProviders: ThemeProvider = {
   thai,
   tigrinya,
   turkce,
+  urdu,
+  vietnamese,
+  ws,
+  yoruba,
+};
+
+const themeProvidersVariants: ThemeProvidersWithVariants = {
+  serbian: {
+    cyr: serbianCyr,
+    lat: serbianLat,
+  },
   ukchina: {
     simp: ukchinaSimp,
     trad: ukchinaTrad,
   },
-  ukrainian,
-  urdu,
+  ukrainian: {
+    default: ukrainian,
+  },
   uzbek: {
     cyr: uzbekCyr,
     lat: uzbekLat,
   },
-  vietnamese,
-  yoruba,
   zhongwen: {
     simp: zhongwenSimp,
     trad: zhongwenTrad,
   },
-  ws,
 };
 
-interface Props extends StoryProps {
+interface Props {
+  service: Services;
+  variant?: Variants;
   children: React.ReactNode;
 }
 
 const ThemeProvider = ({ children, service, ...rest }: Props) => {
-  let variant = rest.variant || defaultServiceVariants[service];
+  const variant = rest.variant || defaultServiceVariants[service];
 
-  // replaces 'default' with the primary variant if no variant is supplied
-  if (defaultServiceVariants[service] && variant === 'default') {
-    variant = defaultServiceVariants[service];
+  let ThemeService: ThemeComponent;
+
+  if (variant && service in themeProvidersVariants) {
+    const serviceVariants =
+      themeProvidersVariants[service as ServicesWithVariants['service']];
+
+    ThemeService = serviceVariants[variant] as ThemeComponent;
+  } else {
+    ThemeService =
+      themeProvidersNoVariants[service as ServicesWithNoVariants['service']];
   }
-  const ThemeProviderSynchronous =
-    variant === 'default' || !variant
-      ? themeProviders[service]
-      : // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore - TODO: come back to this
-        themeProviders[service][variant];
 
-  return <ThemeProviderSynchronous>{children}</ThemeProviderSynchronous>;
+  return <ThemeService>{children}</ThemeService>;
 };
 
 export default ThemeProvider;

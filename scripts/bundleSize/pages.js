@@ -1,9 +1,9 @@
-export const pages = [
-  'ArticlePage',
+export default [
   'ErrorPage',
   'HomePage',
-  'MostReadPage',
   'LiveRadioPage',
+  'MostReadPage',
   'OnDemandAudioPage',
   'OnDemandTvPage',
+  'TopicPage',
 ];

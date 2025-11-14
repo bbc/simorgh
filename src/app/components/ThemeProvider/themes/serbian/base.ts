@@ -2,7 +2,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import helmetFontVariants from '../../fontVariants/helmet';
 import brandSVG from '../../chameleonLogos/serbian';
 
-const baseSerbianTheme = {
+export default {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -16,5 +16,3 @@ const baseSerbianTheme = {
   },
   brandSVG,
 };
-
-export default baseSerbianTheme;

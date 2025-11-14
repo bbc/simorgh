@@ -2,7 +2,9 @@
   "data": {
     "title": "बातम्या - BBC News मराठी",
     "description": "महाराष्ट्र, देश आणि जगभरातल्या ताज्या बातम्या, लेख आणि व्हीडिओ. Get the latest BBC News stories from India and the world in Marathi.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "बातम्या - BBC News मराठी",
+  "seoDescription": "महाराष्ट्र, देश आणि जगभरातल्या ताज्या बातम्या, लेख आणि व्हीडिओ. Get the latest BBC News stories from India and the world in Marathi.",
     "curations": [
       {
         "summaries": [

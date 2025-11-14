@@ -137,7 +137,7 @@ describe('Hierarchical Grid Curation', () => {
       },
     );
     const timestampText = container.querySelectorAll('time')?.[2].innerHTML;
-    expect(timestampText).toBe('Publicado hace 34 minutos');
+    expect(timestampText).toBe('34 minutos');
   });
 
   it('should use role text when using nested spans', async () => {

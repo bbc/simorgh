@@ -1,247 +1,380 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
-import '#psammead/moment-timezone-include/tz/Europe/London';
+import '#psammead/psammead-locales/moment/ro';
+import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'en-GB',
+    lang: 'ro',
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: 'Updated',
+    articleTimestampPrefix: 'Actualizat',
     articleTimestampSuffix: '',
-    atiAnalyticsAppName: 'news',
+    atiAnalyticsAppName: 'news-romanian',
     atiAnalyticsProducerId: '136',
     atiAnalyticsProducerName: 'ROMANIAN',
     useReverb: true,
-    chartbeatDomain: 'bbc.co.uk',
-    brandName: 'BBC News',
+    chartbeatDomain: 'romania.bbc.co.uk',
+    brandName: 'BBC News România',
     product: 'BBC News',
     defaultImage:
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
-    defaultImageAltText: 'BBC News',
+    defaultImageAltText: 'BBC News România',
     dir: 'ltr',
-    externalLinkText: ', external',
-    imageCaptionOffscreenText: 'Image caption, ',
-    videoCaptionOffscreenText: 'Video caption, ',
-    audioCaptionOffscreenText: 'Audio caption',
-    defaultCaptionOffscreenText: 'Caption, ',
-    imageCopyrightOffscreenText: 'Image source, ',
-    locale: 'en_GB',
-    datetimeLocale: 'en-gb',
-    service: 'news',
-    serviceName: 'News',
-    languageName: 'English',
-    twitterCreator: '@BBCNews',
-    twitterSite: '@BBCNews',
+    externalLinkText: ', extern',
+    imageCaptionOffscreenText: 'Legendă imagine, ',
+    videoCaptionOffscreenText: 'Legendă video, ',
+    audioCaptionOffscreenText: 'Legendă audio',
+    defaultCaptionOffscreenText: 'Legendă, ',
+    imageCopyrightOffscreenText: 'Sursă imagine, ',
+    locale: 'ro_RO',
+    datetimeLocale: 'ro',
+    service: 'romania',
+    serviceName: 'Romanian',
+    serviceLocalizedName: 'România',
+    languageName: 'Rom',
+    twitterCreator: '@BBCNewsRomania',
+    twitterSite: '@BBCNewsRomania',
     noBylinesPolicy: 'https://www.bbc.com/news/help-41670342#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latin,
     manifestPath: '/romania/manifest.json',
-    homePageTitle: 'Home',
+    swPath: '/sw.js',
+    homePageTitle: 'Ultimele știri',
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
-      ads: {
-        advertisementLabel: 'Advertisement',
+      pagination: {
+        page: 'Pagina',
+        previousPage: 'Înapoi',
+        nextPage: 'Înainte',
+        pageXOfY: 'Pagina {x} din {y}',
       },
-      home: 'Home',
-      currentPage: 'Current page',
-      skipLinkText: 'Skip to content',
-      relatedContent: 'Related content',
-      relatedTopics: 'Related topics',
+      ads: {
+        advertisementLabel: 'Publicitate',
+      },
+      byline: {
+        articleInformation: 'Informații despre articol',
+        author: 'Autor',
+        listItemImage: 'Fotografia autorului',
+        published: 'Data publicării',
+        reportingFrom: 'Relatează din',
+        role: 'Rol',
+      },
+      seeAll: 'Vezi integral',
+      home: 'Știri',
+      currentPage: 'Pagina curentă',
+      skipLinkText: 'Acces direct la conținut',
+      relatedContent: 'Articole similare',
+      relatedTopics: 'Subiecte similare',
       moreOnThis: '',
-      navMenuText: 'Sections',
+      navMenuText: 'Secțiuni',
+      liteSite: {
+        onboardingMessage:
+          'Vizualizați o versiune text a acestui site, care utilizează mai puține date. Reveniți la versiunea principală a site-ului, care include toate imaginile și clipurile video.',
+        toMainSite: 'Înapoi la site-ul principal',
+        informationPage:
+          'Află mai multe despre această versiune care economisește date',
+        informationPageLink: '#',
+        dataSaving: 'Versiune site cu minim trafic de date',
+        articleDataSavingLinkText: 'Versiune site cu minim trafic de date',
+      },
       mediaAssetPage: {
-        mediaPlayer: 'Media player',
-        audioPlayer: 'Audio player',
-        videoPlayer: 'Video player',
+        mediaPlayer: 'Player media',
+        audioPlayer: 'Player audio',
+        videoPlayer: 'Player video',
       },
       liveExperiencePage: {
         liveLabel: 'Live',
-        liveCoverage: 'Live Coverage',
-        breaking: 'Breaking',
-        postedAt: 'Posted at',
-        summary: 'Summary',
-        shareButtonText: 'Share',
+        liveCoverage: 'Live',
+        breaking: 'Ultima oră',
+        postedAt: 'Postat la',
+        summary: 'Sumar',
+        shareButtonText: 'Trimite',
       },
       downloads: {
-        instructions: 'You can download and view today’s news.',
-        title: 'File Download',
+        instructions: 'Puteți descărca și vizualiza știrile de astăzi.',
+        title: 'Descărcare fișier',
       },
-      gist: 'At a glance',
+      gist: 'Puncte principale',
       error: {
         404: {
           statusCode: '404',
-          title: 'Page cannot be found',
+          title: 'Pagina nu a fost găsită.',
           message:
-            "Sorry, we're unable to bring you the page you're looking for. Please try:",
+            'Ne pare rău, nu îți putem oferi pagina pe care o cauți. Te rugăm să încerci următoarele soluții:',
           solutions: [
-            'Double checking the url',
-            'Hitting the refresh button in your browser',
-            'Searching for this page using the BBC search bar',
+            'Verifică adresa paginii de internet',
+            'Re-încărcă pagina de internet',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC News homepage.',
-          callToActionLast: '',
-          callToActionLinkUrl: 'https://www.bbc.com/news',
+          callToActionFirst: 'Alternativ, te rugăm să revii la ',
+          callToActionLinkText: 'BBC News România.',
+          callToActionLast: ' pagina principală. ',
+          callToActionLinkUrl: 'https://www.bbc.com/romania',
         },
         500: {
           statusCode: '500',
-          title: 'Internal server error',
+          title: 'Eroare internă de server',
           message:
-            "Sorry, we're currently unable to bring you the page you're looking for. Please try:",
+            'Ne pare rău, nu îți putem oferi pagina pe care o cauți. Te rugăm să încerci următoarele soluții:',
           solutions: [
-            'Hitting the refresh button in your browser',
-            'Coming back again later',
+            'Verifică adresa paginii de internet',
+            'Re-încărcă pagina de internet',
           ],
           callToActionFirst: 'Alternatively, please visit the ',
-          callToActionLinkText: 'BBC News homepage.',
-          callToActionLast: '',
-          callToActionLinkUrl: 'https://www.bbc.com/news',
+          callToActionLinkText: 'BBC News România.',
+          callToActionLast: ' pagina principală. ',
+          callToActionLinkUrl: 'https://www.bbc.com/romania',
         },
+        home: 'Pagina principală',
+        currentPage: 'Pagina curentă',
+        skipLinkText: 'Acces direct la conținut',
       },
       consentBanner: {
         privacy: {
-          title: "We've updated our Privacy and Cookies Policy",
+          title: 'Am actualizat Politica de confidențialitate și cookie-uri',
           description: {
             uk: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Am adus câteva modificări importante Politicii de confidențialitate și cookie-uri și dorim să știi ce înseamnă acestea pentru datele tale.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
             international: {
               first:
-                "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.",
+                'Am adus câteva modificări importante Politicii de confidențialitate și cookie-uri și dorim să știi ce înseamnă acestea pentru datele tale.',
               linkText: null,
               last: null,
               linkUrl: null,
             },
           },
           accept: 'OK',
-          reject: "Find out what's changed",
+          reject: 'Află ce s-a schimbat',
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
-            accept: 'Accept data collection and continue',
-            reject: 'Reject data collection and continue',
+            accept: 'Acceptă colectarea datelor și continuă',
+            reject: 'Respinge colectarea datelor și continuă',
             initial: {
-              title: 'Let us know you agree to data collection on AMP',
+              title:
+                'Anunță=-ne dacă ești de acord cu colectarea datelor pe platforma AMP',
               description: {
-                first: 'We and our partners use technologies, such as ',
+                first: 'Noi și partenerii noștri folosim tehnologii precum ',
                 linkText: 'cookies',
-                last: ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                last: ', și colectăm date privind navigarea pe internet a utilizatorilor pentru a oferi cea mai bună experiență online și pentru a personaliza conținutul și publicitatea afișate. Te rugăm să ne anunți dacă ești de acord.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
-              manage: 'Manage my settings',
+              manage: 'Gestionează setările',
             },
             manage: {
-              title: 'Manage consent settings on AMP pages',
+              title: 'Gestionează setările de consimțământ pe paginile AMP',
               description: {
                 para1:
-                  'These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.',
+                  'Aceste setări se aplică numai paginilor AMP. Este posibil să ți se solicite să setezi din nou aceste preferințe atunci când vizitezi pagini BBC non-AMP.',
                 para2:
-                  'The lightweight mobile page you have visited has been built using Google AMP technology.',
-                heading2: 'Strictly necessary data collection',
+                  'Pagina mobilă pe care ai vizitat-o a fost construită folosind tehnologia Google AMP.',
+                heading2: 'Colectarea datelor strict necesare',
                 para3:
-                  'To make our web pages work, we store some limited information on your device without your consent.',
+                  'Pentru ca paginile noastre web să funcționeze, stocăm anumite informații limitate pe dispozitivul tău fără a cere consimțământul.',
                 para4: {
-                  text: 'Read more about the essential information we store on your device to make our web pages work.',
+                  text: 'Citește mai multe despre informațiile esențiale pe care le stocăm pe dispozitivul tău pentru ca paginile noastre web să funcționeze.',
                   url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
-                  'We use local storage to store your consent preferences on your device.',
-                heading3: 'Optional data collection',
+                  'Folosim spațiul de stocare local pentru a stoca preferințele de consimțământ pe dispozitivul tău',
+                heading3: 'Colectarea datelor opționale',
                 para6:
-                  'When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.',
+                  'Când îți dai consimțământul pentru colectarea datelor pe paginile de tip AMP, ne permiți să afișăm reclame personalizate relevante atunci când te afli în afara Marii Britanii.',
                 para7: {
-                  text: 'Read more about how we personalise ads in the BBC and our advertising partners.',
+                  text: 'Află detalii despre cum personalizăm publicitatea, la BBC și pe site-urile partenere.',
                   url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
-                  'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
+                  'Poți alege să nu primești reclame personalizate făcând clic pe „Respingeți colectarea datelor și continuați”, mai jos. Reține că vei vedea în continuare reclame, dar acestea nu vor fi personalizate pentru tine.',
                 para9:
-                  'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
+                  'Poți modifica aceste setări oricând, făcând clic pe „Opțiuni anunțuri / Nu vindeți datele mele” în subsolul paginii.',
               },
             },
           },
           canonical: {
-            title: 'Let us know you agree to cookies',
+            title: 'Anunță-ne dacă ești de acord cu politica privind cookies',
             description: {
               uk: {
-                first: 'We use ',
+                first: 'Folosim',
                 linkText: 'cookies',
-                last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                last: ' pentru a îți oferi cea mai bună experiență online. Spune-ne dacă ești de acord cu colectarea tuturor cookie-urilor.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'We use ',
+                first: 'Folosim ',
                 linkText: 'cookies',
-                last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                last: ' pentru a îți oferi cea mai bună experiență online. Spune-ne dacă ești de acord cu colectarea tuturor cookie-urilor.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
             },
-            accept: 'Yes, I agree',
-            reject: 'No, take me to settings',
+            accept: 'Da, sunt de acord',
+            reject: 'Nu, merg la setări',
             rejectUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           },
         },
       },
       media: {
-        noJs: 'To play this content, please enable JavaScript, or try a different browser',
-        contentExpired: 'This content is no longer available',
+        noJs: 'Pentru a reda acest conținut, te rugăm să activezi JavaScript sau să încerci alt browser.',
+        contentExpired: 'Acest conținut nu mai este disponibil',
         audio: 'Audio',
-        photogallery: 'Image gallery',
+        photogallery: 'Galerie foto',
         video: 'Video',
-        listen: 'Listen',
-        watch: 'Watch',
+        listen: 'Ascultă',
+        watch: 'Urmărește',
         liveLabel: 'LIVE',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'URMEAZĂ',
+        previousRadioShow: 'Emisiunea radio anterioară',
+        nextRadioShow: 'Următoarea emisiune radio',
+        duration: 'Durată',
+        contentNotYetAvailable: 'Acest conținut nu este încă disponibil',
+        watchMoments: 'Vizionează',
+        listenLive: 'Ascultă Live',
+        listenNext: 'Ascultă următorul episod',
+        recentEpisodes: 'Episoade recente',
+        podcastExternalLinks: 'Acest podcast este disponibil și pe plaforma ',
+        download: 'Descarcă',
+        closeVideo: 'Închide',
       },
-      socialEmbed: {},
-      featuresAnalysisTitle: 'More to explore',
+      socialEmbed: {
+        caption: {
+          textPrefixVisuallyHidden: 'Legendă video, ',
+          text: 'Atenție: Conținutul provenit de la terți poate conține reclame',
+          articleText:
+            'BBC nu este responsabil pentru conținutul altor site-uri.',
+          articleAdditionalText:
+            'Conținutul provenind de la %provider_name% poate conține reclame.',
+        },
+        fallback: {
+          text: 'Acest conținut nu este disponibil',
+          linkText: 'Vezi acest conținut pe %provider_name%',
+          linkTextSuffixVisuallyHidden: ', extern',
+          warningText:
+            'BBC nu este responsabil pentru conținutul altor site-uri.',
+        },
+        skipLink: {
+          text: 'Sari peste conținutul furnizat de %provider_name%',
+          endTextVisuallyHidden:
+            'Sfârșitul conținutului furnizat de %provider_name%',
+        },
+        consentBanner: {
+          heading: 'Permite conținutul furnizat de [social_media_site] ?',
+          body: "Acest articol conține conținut furnizat de [social_media_site]. Îți solicităm permisiunea înainte de a încărca acest element, deoarece este posibil să utilizeze cookie-uri și alte tipuri de tehnologii. Îți recomandăm să citești [link] politica privind cookie-urile [/link] și [link] politica de confidențialitate [/link] a [social_media_site] înainte de a accepta. Pentru a vizualiza acest conținut, alege 'Acceptă și continuă'.",
+          button: 'Acceptă și continuă',
+        },
+      },
+      include: {
+        errorMessage:
+          'Ne pare rău, nu putem afișa această parte a articolului pe această pagină mobilă de tip lite.',
+        linkText:
+          'Vizualizează versiunea completă a paginii pentru a vedea tot conținutul.',
+      },
+      topStoriesTitle: 'Știrile zilei',
+      latestMediaTitle: 'Ultimele clipuri',
+      featuresAnalysisTitle: 'Citește mai multe',
+      ugc: {
+        noJsHeading: 'Ne pare rău, această pagină nu poate fi încărcată.',
+        noJsDescription:
+          'Pentru a reda acest conținut, te rugăm să activezi JavaScript sau să încerci alt browser.',
+        optional: 'opțional',
+        fileUploadLiveRegionText: 'Actualizare, iată ce trimiți: ',
+        fileUploadLiveRegionUpdateText: 'Actualizare, eliminată',
+        fileUploadButton: 'Alege un fișier',
+        fileUploadListHeading: 'Iată ce trimiți: ',
+        fileUploadRemoveButton: 'Elimină',
+        submitButton: 'Trimite',
+        errorSummary: 'Există o problemă, te rog să verifici:',
+        validationRequired: 'Lipsește ceva.',
+        validationInvalidEmail:
+          'Nu pare corect. Introdu o adresă corectă de e-mail.',
+        validationInvalidTelephone:
+          'Nu pare corect. Introdu un număr corect de telefon.',
+        validationFilesNotEnough:
+          'Nu sunt suficiente fișiere. Te rog să adaugi cel puțin {{minFiles}}',
+        validationFilesTooMany:
+          'Sunt prea multe fișiere. Poți adăuga {{maxFiles}}.',
+        validationFilesInvalidType:
+          'Din păcate nu putem folosi acest tip de fișier. Te rugăm să adaugi {{fileTypes}}.',
+        validationFilesTooSmall:
+          'Acest fișier este corupt. Încearcă să alegi altul.',
+        validationFilesSizeExceeded:
+          'Ne pare rău, aceste fișiere sunt prea mari. Poți încărca doar până la 1,2 GB odată.',
+        validationWordLimit: 'Maximum {{wordLimit}} cuvinte',
+        referenceNumber: 'Număr de referință',
+        submissionInfoSignedOutMessage: 'Notează aceste detalii ca referință.',
+        retentionPeriodDays:
+          'Vom păstra informațiile trimise de tine timp de până la {{days}} zile – iar dacă nu le folosim, le vom șterge împreună cu orice alte informații pe care ni le-ai trimis.',
+        privacyInfoHtml:
+          'Nici o grijă, îți protejăm informațiile — citește {{privacyInfoLink}} pentru mai multe detalii.',
+        emailToHtml:
+          'Dacă te razgândești și nu dorești să le folosim, trimite-ne un e-mail la adresa {{emailLink}}. Nu uita numărul de referință.',
+        removalGuidelineText:
+          'Dacă ne-ai trimis o contribuție pentru un program radio/TV sau pentru site-ul online, nu vom putea elimina acel element odată ce îl folosim.',
+        dataPolicyHeading: 'Politica noastră de protecție a datelor',
+        uploadingHeading: 'În curs de încărcare',
+        uploadingDescription:
+          'Te rugăm să aștepți până la încheierea procesului.',
+        successHeading: 'Mesajul a fost expediat.',
+        successDescription: 'Mulțumesc că ne-ai contactat.',
+        privacyPolicyLinkHref: 'https://www.bbc.com/privacy/',
+        privacyPolicyLinkText: 'Politica de confidențialitate',
+        errorHeading: 'Ne pare rău, mesajul tău nu a putut fi trimis.',
+        errorDescription: 'Te rugăm să încerci din nou mai târziu.',
+        closedHeading: 'Această campanie s-a încheiat.',
+        closedDescription: 'Campania s-a încheiat la data {{date}}.',
+      },
     },
     mostRead: {
-      header: 'Popular Reads',
-      lastUpdated: 'Last updated:',
+      header: 'Cele mai populare',
+      lastUpdated: 'Ultima actualizare:',
       numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
+      frequenciesPageUrl: '',
+      frequenciesPageLabel: 'Frecvențele și emisiunile noastre de știri',
+      header: 'Emisiuni radio',
+      durationLabel: 'Durată %duration%',
+    },
+    recommendations: {
+      skipLink: {
+        text: 'Sari %title% și continuă să citești',
+        endTextVisuallyHidden: 'Sfârșitul %title%',
+      },
     },
     footer: {
       trustProjectLink: {
         href: 'https://www.bbc.com/news/help-41670342',
-        text: 'Why you can trust the BBC',
+        text: 'De ce poți avea încredere în BBC',
       },
       externalLink: {
         href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-        text: 'Read about our approach to external linking.',
+        text: 'Aflați mai multe despre politica noastră privind utilizarea link-urilor externe',
       },
       links: [
         {
           href: 'https://www.bbc.com/terms',
-          text: 'Terms of Use',
+          text: 'Termeni de utilizare',
         },
         {
           href: 'https://www.bbc.co.uk/aboutthebbc/',
-          text: 'About the BBC',
+          text: 'Despre BBC',
         },
         {
           href: 'https://www.bbc.com/privacy/',
-          text: 'Privacy Policy',
+          text: 'Politica de confidențialitate',
         },
         {
           href: 'https://www.bbc.com/usingthebbc/cookies/',
@@ -249,23 +382,23 @@ export const service: DefaultServiceConfig = {
         },
         {
           href: 'https://www.bbc.com/accessibility/',
-          text: 'Accessibility Help',
+          text: 'Contactează BBC',
         },
         {
           href: 'https://www.bbc.com/contact/',
-          text: 'Contact the BBC',
+          text: 'BBC News în alte limbi',
         },
         {
           id: 'COOKIE_SETTINGS',
           href: '#',
-          text: 'Do not share or sell my info',
+          text: 'Nu distribui și nu vinde informațiile mele',
           lang: 'en-GB',
         },
       ],
       copyrightText:
-        'BBC. The BBC is not responsible for the content of external sites.',
+        'BBC. BBC nu este responsabil de conținutul altor site-uri.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Bucharest',
     navigation: [
       {
         title: 'Home',

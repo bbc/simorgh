@@ -64,7 +64,14 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 
 exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
-exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
+exports[`AMP Articles Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC Scotland",
+  "svg": <path
+    d="M48.82 15.91v.01-.01zM58.76 0v24h25.5V0zm20.42 19.3l-.15.07a14 14 0 01-6.56 1.5A10 10 0 0165 17.93a8.45 8.45 0 01-2.37-5.68 8.68 8.68 0 012.84-6.54 10.56 10.56 0 017.19-2.57 16.52 16.52 0 016.2 1.4l.17.06v3.22l-.4-.22a12 12 0 00-6-1.71c-4 0-6.84 2.53-6.83 6.14s2.74 6.1 6.94 6.1a11.9 11.9 0 006.08-1.85l.41-.25zM29.38 24h25.5V0h-25.5zm6.69-20.65h5.45a6.3 6.3 0 014.36 1.42 4.2 4.2 0 011.39 3.15 3.75 3.75 0 01-.71 2.34 4.26 4.26 0 01-1.49 1.2 4.62 4.62 0 013.77 4.46 4.26 4.26 0 01-1.47 3.2 7.19 7.19 0 01-4.9 1.53h-6.4z"
+  />,
+}
+`;
 
 exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
@@ -87,67 +94,32 @@ exports[`AMP Articles Main heading should match text 1`] = `"This is the headlin
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/scotland/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/scotland/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
 {
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/icons/icon-512x512.png",

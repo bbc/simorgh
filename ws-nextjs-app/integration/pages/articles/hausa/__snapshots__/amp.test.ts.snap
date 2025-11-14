@@ -71,7 +71,14 @@ exports[`AMP Articles Footer I can click on the BBC branding and it would take m
 
 exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
-exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, Hausa"`;
+exports[`AMP Articles Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Hausa",
+  "svg": <path
+    d="M759.927 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.193a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.266 36.647v-72.699h22.004V265.75h-23.193zM804.186 159.452h73.145v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.441-35.977 2391.54 2391.54 0 01-9.217 35.977 2452.296 2452.296 0 01-9.812 35.978H919.51a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.069-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.77 40.586 3259.894 3259.894 0 0018.882-77.456h22.3a3251.95 3251.95 0 0018.732 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.531a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.849 0-11.621-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.747 9.663 6.74 0 11.869-1.138 15.388-3.419 3.517-2.28 5.277-5.45 5.277-9.515 0-3.07-.868-5.475-2.601-7.21-1.735-1.733-4.04-3.122-6.914-4.163-2.875-1.04-6.095-2.007-9.663-2.899-5.849-1.387-11.001-2.974-15.462-4.757-4.46-1.784-8.227-3.889-11.298-6.319-3.073-2.427-5.403-5.352-6.988-8.771-1.586-3.42-2.378-7.508-2.378-12.265 0-6.74 1.71-12.537 5.129-17.395 3.42-4.855 8.25-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.651 1.933 5.45 1.289 10.356 3.024 14.719 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.577-2.23-6.046 0-10.73 1.04-14.049 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.378 6.616 1.585 1.635 3.84 2.973 6.765 4.014 2.922 1.04 6.367 2.058 10.332 3.047 5.055 1.29 9.761 2.702 14.124 4.238 4.36 1.537 8.2 3.493 11.521 5.872 3.32 2.379 5.896 5.403 7.731 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.735 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.542 2.626-14.421 3.94-23.639 3.94z"
+  />,
+}
+`;
 
 exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 {
@@ -143,67 +150,32 @@ exports[`AMP Articles Main heading should match text 1`] = `"Wannan shine taken 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hausa/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
-{
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
 {
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
+exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-512x512.png",

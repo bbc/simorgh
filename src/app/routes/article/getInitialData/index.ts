@@ -48,7 +48,14 @@ export default async ({
       data: { article, secondaryData },
     } = json;
 
-    const { topStories, features, latestMedia, mostRead } = secondaryData;
+    const {
+      topStories,
+      features,
+      latestMedia,
+      mostRead,
+      mediaCuration,
+      billboardCuration,
+    } = secondaryData;
 
     const transformedArticleData = transformPageData(toggles)(article);
 
@@ -60,6 +67,8 @@ export default async ({
           topStories,
           features,
           latestMedia,
+          billboardCuration,
+          mediaCuration,
         },
         mostRead,
       },

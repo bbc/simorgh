@@ -261,7 +261,7 @@ server.get(
         isAmp,
       });
 
-      injectCspHeader({ isAmp, service, nonce, res });
+      injectCspHeader({ isAmp, nonce, res });
 
       data.nonce = nonce;
       data.cspHeader = res.get('Content-Security-Policy');
