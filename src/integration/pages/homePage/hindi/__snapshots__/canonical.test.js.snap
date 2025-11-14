@@ -287,7 +287,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="पहलगाम"
-  class="bbc-139onq"
+  class="bbc-1evs8zl"
   loading="lazy"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8b52/live/6c11f130-2c01-11f0-8da1-ad2bbee6cda5.jpg.webp"
   style="aspect-ratio:16 / 9"
@@ -823,7 +823,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://whatsapp.c
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-139onq"
+  class="bbc-1evs8zl"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.bbci.co.uk/ace/ws/224/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp"
