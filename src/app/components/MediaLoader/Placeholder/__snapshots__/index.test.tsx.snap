@@ -116,7 +116,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -476,7 +476,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -816,7 +816,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1127,7 +1127,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1454,7 +1454,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1784,7 +1784,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

@@ -194,7 +194,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-4vlf9b"
+    class="focusIndicatorRemove bbc-1dft934"
     type="button"
   >
     <span
@@ -275,7 +275,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-4vlf9b"
+    class="focusIndicatorRemove bbc-1dft934"
     type="button"
   >
     <span
@@ -360,7 +360,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-4vlf9b"
+      class="focusIndicatorRemove bbc-1dft934"
       type="button"
     >
       <span

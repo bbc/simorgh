@@ -91,7 +91,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1dft934"
     type="button"
   >
     <span
@@ -178,7 +178,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-4vlf9b"
+    class="focusIndicatorRemove css-1dft934"
     type="button"
   >
     <span
@@ -269,7 +269,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-4vlf9b"
+      class="focusIndicatorRemove css-1dft934"
       type="button"
     >
       <span
