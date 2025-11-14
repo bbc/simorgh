@@ -160,7 +160,7 @@ const canonicalTestSuites = [
       assertLatestMediaComponentClick,
     ],
   },
-  // TODO: Resolve error which is preventing e2e tests to run
+  // TODO: Resolve error which is preventing e2e tests to run - https://bbc.atlassian.net/browse/WS-1745
   // {
   //   path: '/hindi/articles/c9w59wnx27ro',
   //   runforEnv: ['local', 'live'],
