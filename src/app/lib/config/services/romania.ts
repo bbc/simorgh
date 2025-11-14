@@ -356,7 +356,7 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/news/help-41670342',
+        href: 'https://www.bbc.com/romania/articles/cn97vddlxe2o',
         text: 'De ce poți avea încredere în BBC',
       },
       externalLink: {
@@ -365,15 +365,15 @@ export const service: DefaultServiceConfig = {
       },
       links: [
         {
-          href: 'https://www.bbc.com/terms',
+          href: 'https://www.bbc.com/romania/articles/ckgznn006r0o',
           text: 'Termeni de utilizare',
         },
         {
-          href: 'https://www.bbc.co.uk/aboutthebbc/',
+          href: 'https://www.bbc.com/romania/articles/c993yged1xno',
           text: 'Despre BBC',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/romania/articles/c0jdnq25g30o',
           text: 'Politica de confidențialitate',
         },
         {
@@ -385,7 +385,7 @@ export const service: DefaultServiceConfig = {
           text: 'Contactează BBC',
         },
         {
-          href: 'https://www.bbc.com/contact/',
+          href: 'https://www.bbc.com/ws/languages',
           text: 'BBC News în alte limbi',
         },
         {
