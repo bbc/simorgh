@@ -1,10 +1,12 @@
 import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
   assertWSLanguagesPage,
   assertWSLanguagesPageURN,
   assertWSLanguagesPageLocal,
 } from './assertions';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import runTestsForPage, { TestDataType } from '../../support/helpers/runTestsForPage';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 
 const testSuites = [
   {
@@ -27,7 +29,28 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/ws/languages',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    siteId: 30,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    useReverb: true,
+    tests: [assertPageView],
+  },
+] as unknown as TestDataType[];
+
 runTestsForPage({
   testSuites,
   pageType: STATIC_PAGE,
+});
+
+runTestsForPage({
+  pageType: STATIC_PAGE,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });
