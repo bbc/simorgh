@@ -58,7 +58,6 @@ const onDemandAudioFixtures = {
 const matchFixtures = (service: Services) => ({
   params: {
     mediaId: 'liveradio',
-    // @ts-expect-error partial data for testing
     serviceId: {
       gahuza: 'bbc_gahuza_radio',
       korea: 'bbc_korean_radio',
@@ -71,7 +70,6 @@ const Component = ({ service, isLite }: StoryProps) => {
     <BrowserRouter>
       <OnDemandAudioPage
         match={matchFixtures(service)}
-        // @ts-expect-error partial data for storybook
         pageData={onDemandAudioFixtures[service] || gahuza}
         status={200}
         service={service}

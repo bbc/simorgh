@@ -14,7 +14,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
 
-// @ts-expect-error - TODO: fix types for blocks
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCopyright = (copyrightHolder: string) => {
