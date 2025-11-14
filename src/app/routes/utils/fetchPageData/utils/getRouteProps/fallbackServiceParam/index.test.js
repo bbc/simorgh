@@ -1,23 +1,12 @@
 import fallbackServiceParam from '.';
 
-jest.mock('#lib/config/services/loadableConfig', () => ({
-  default: {
-    dasher: 'data',
-    dancer: 'data',
-    prancer: 'data',
-    vixen: 'data',
-    comet: 'data',
-  },
-  services: ['dasher', 'dancer', 'prancer', 'vixen', 'comet'],
-}));
-
 describe('fallbackServiceParam', () => {
   [
     {
       description:
         'should return service name if matches known service in first path part',
-      path: '/prancer/foobar',
-      expectedService: 'prancer',
+      path: '/pidgin/foobar',
+      expectedService: 'pidgin',
     },
     {
       description:
@@ -28,7 +17,7 @@ describe('fallbackServiceParam', () => {
     {
       description:
         'should not match known services with path parts other than the first',
-      path: '/foobar/prancer',
+      path: '/foobar/pidgin',
       expectedService: 'news',
     },
   ].forEach(({ description, path, expectedService }) => {
