@@ -2,6 +2,11 @@
 import { render, act } from '@testing-library/react';
 import { jsx, css, Theme } from '@emotion/react';
 
+import SERVICES from '#app/lib/config/services';
+import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
+import { Services } from '#app/models/types/global';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
 
 describe('ThemeProvider', () => {
@@ -216,5 +221,34 @@ describe('ThemeProvider', () => {
         </div>
       </body>
     `);
+  });
+
+  describe.each(SERVICES)(`brandSVG for %s`, service => {
+    it(`should match chameleonLogos/${service}.tsx`, async () => {
+      await act(async () => {
+        render(
+          <ThemeProvider
+            service={service as Services}
+            variant={defaultServiceVariants[service] || 'default'}
+          >
+            <ServiceContextProvider service={service as Services}>
+              <Brand />
+            </ServiceContextProvider>
+          </ThemeProvider>,
+        );
+      });
+
+      const themeBrandSVG = document.body.querySelector('svg')?.innerHTML;
+
+      const { default: svg } = await import(`./chameleonLogos/${service}`);
+
+      const { getByTestId } = render(
+        <svg data-testid={service}>{svg.group}</svg>,
+      );
+
+      const chameleonSVG = getByTestId(service).innerHTML;
+
+      expect(themeBrandSVG).toEqual(chameleonSVG);
+    });
   });
 });
