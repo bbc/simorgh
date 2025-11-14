@@ -13,6 +13,7 @@ export interface BannerProps {
   buttonSecondary: BannerButton;
   isDismissible?: boolean;
   handleClose: () => void;
+  handleInstallPWA?: () => void;
 }
 
 export declare function PWAUpsellBanner(props: BannerProps): JSX.Element;

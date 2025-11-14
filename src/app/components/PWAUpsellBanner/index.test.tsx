@@ -4,7 +4,7 @@ import {
   screen,
   fireEvent,
 } from '../react-testing-library-with-providers';
-import { PWAUpsellBanner } from './banner';
+import PWAUpsellBanner from '.';
 
 describe('PWAUpsellBanner', () => {
   const defaultProps = {
@@ -20,6 +20,7 @@ describe('PWAUpsellBanner', () => {
       onClick: jest.fn(),
     },
     serviceBackground: 'defaultBackground',
+    handleInstallPWA: jest.fn(),
     handleClose: jest.fn(),
   };
 

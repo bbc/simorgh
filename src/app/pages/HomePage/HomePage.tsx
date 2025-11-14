@@ -113,9 +113,10 @@ const HomePage = ({ pageData }: HomePageProps) => {
     console.log('deferredPrompt updated:', deferredPrompt);
   }, [deferredPrompt]);
 
-  const handleAddShortcut = async () => {
+  const handleInstallPWA = async () => {
+    console.log('Install PWA button clicked');
     if (!deferredPrompt) {
-      console.log('Install prompt not available yet');
+      console.log('Install prompt not available');
       return;
     }
 
@@ -156,12 +157,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
             buttonPrimary={{
               shortText: 'Agregar',
               longText: 'Agregar a la pantalla de inicio',
-              onClick: handleAddShortcut,
+              onClick: handleInstallPWA,
             }}
             buttonSecondary={{
               text: 'No ahora',
               onClick: handleClose,
             }}
+            handleInstallPWA={handleInstallPWA}
           />
         )}
         <ATIAnalytics atiData={atiAnalytics} />

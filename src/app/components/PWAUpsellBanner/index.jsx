@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styles from './banner.styles';
+import React from 'react';
+import styles from './index.styles';
 import { Close } from '../icons';
 
-export const PWAUpsellBanner = ({
+export default ({
   title,
   description,
   isDismissible = true,
@@ -10,7 +10,7 @@ export const PWAUpsellBanner = ({
   buttonSecondary,
   serviceBackground,
   handleClose,
-  handleAddShortcut,
+  handleInstallPWA,
 }) => {
   return (
     <div css={[styles.ColoredContainer, styles[serviceBackground]]}>
@@ -29,7 +29,7 @@ export const PWAUpsellBanner = ({
             <button
               type="button"
               css={styles.StyledButtonPrimary}
-              onClick={handleAddShortcut}
+              onClick={handleInstallPWA}
             >
               <span className="short-text">{buttonPrimary.shortText}</span>
               <span className="long-text">{buttonPrimary.longText}</span>
@@ -62,5 +62,3 @@ export const PWAUpsellBanner = ({
     </div>
   );
 };
-
-export default PWAUpsellBanner;

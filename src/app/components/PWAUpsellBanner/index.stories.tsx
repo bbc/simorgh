@@ -1,5 +1,5 @@
 import React from 'react';
-import { PWAUpsellBanner } from './banner';
+import PWAUpsellBanner from '.';
 
 export default {
   title: 'Components/PWAUpsellBanner',
@@ -21,5 +21,6 @@ export const Mundo = () => (
     }}
     isDismissible
     handleClose={() => console.log('Banner closed')}
+    handleInstallPWA={() => console.log('Install PWA clicked')}
   />
 );
