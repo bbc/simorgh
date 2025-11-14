@@ -26,6 +26,28 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
+const isMobile = () => {
+  if (onClient()) {
+    const matchMedia = window.matchMedia(
+      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    );
+
+    if (matchMedia.matches) return true;
+
+    return false;
+  }
+
+  return null;
+};
+
+const getReferrer = () => {
+  if (onClient()) {
+    // TODO: Will be implemented in https://bbc.atlassian.net/browse/WS-947
+  }
+
+  return null;
+};
+
 const withOptimizelyProvider = Component => {
   return props => {
     const { service } = use(ServiceContext);
@@ -34,7 +56,8 @@ const withOptimizelyProvider = Component => {
 
     if (disableOptimizely) return <Component {...props} />;
 
-    let mobile;
+    const mobile = isMobile();
+    const referrer = getReferrer();
 
     const getUserId = () => {
       if (disableOptimizely || !onClient() || isOperaProxy()) {
@@ -42,17 +65,6 @@ const withOptimizelyProvider = Component => {
       }
       return Cookie.get('ckns_mvt') ?? null;
     };
-
-    if (onClient()) {
-      const matchMedia = window.matchMedia(
-        `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-      );
-      if (matchMedia.matches) {
-        mobile = true;
-      } else {
-        mobile = false;
-      }
-    }
 
     return (
       <OptimizelyProvider
@@ -64,6 +76,7 @@ const withOptimizelyProvider = Component => {
           attributes: {
             service,
             mobile,
+            referrer,
           },
         }}
       >

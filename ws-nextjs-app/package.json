@@ -45,7 +45,7 @@
     "jest": "30.2.0",
     "jest-environment-jsdom": "30.2.0",
     "mocha-junit-reporter": "2.2.1",
-    "next-test-api-route-handler": "5.0.2",
+    "next-test-api-route-handler": "5.0.3",
     "npm-run-all2": "8.0.4",
     "ts-node": "^10.9.2"
   },

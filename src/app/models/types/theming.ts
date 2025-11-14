@@ -12,7 +12,6 @@ export interface BrandPalette {
   BRAND_LOGO: string;
   BRAND_FOREGROUND: string;
   BRAND_HIGHLIGHT: string;
-  BRAND_BORDER: string;
 }
 
 interface Palette extends BrandPalette {

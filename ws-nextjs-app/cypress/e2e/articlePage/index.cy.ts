@@ -8,7 +8,6 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
-import { handleContinueReadingButton } from './helpers';
 
 const canonicalTests = [
   testsForAllPages,
@@ -268,7 +267,7 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: ARTICLE_PAGE,
-  beforeEachFns: [handleContinueReadingButton],
+  beforeEachFns: [],
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   deleteServiceWorker: true,
 });

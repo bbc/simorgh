@@ -8,21 +8,35 @@ describe('ReadTime', () => {
   });
   it.each([
     {
-      variant: 'variant',
-      variantKey: 'below_headline_minutes_bold',
-      expectedCopy: 'Estimated Read Time: 4 minutes',
+      variant: 'Long Read Numerical',
+      variantKey: 'long_read_numerical',
+      expectedCopy: '4 min read',
+      readTimeValue: 4,
     },
     {
-      variant: 'variant',
-      variantKey: 'below_timestamp_quick_long_bold',
-      expectedCopy: 'Quick Read',
+      variant: 'Long Read Numerical',
+      variantKey: 'long_read_numerical',
+      expectedCopy: '6 min read',
+      readTimeValue: 6,
+    },
+    {
+      variant: 'Long Read Written',
+      variantKey: 'long_read_written',
+      expectedCopy: '4 min read',
+      readTimeValue: 4,
+    },
+    {
+      variant: 'Long Read Written',
+      variantKey: 'long_read_written',
+      expectedCopy: 'Long read',
+      readTimeValue: 6,
     },
   ])(
     'should render $expectedCopy when readTime is supplied with a $variant variant',
-    ({ variantKey, expectedCopy }) => {
+    ({ variantKey, expectedCopy, readTimeValue }) => {
       const { getByText } = render(
         <ReadTime
-          readTimeValue={4}
+          readTimeValue={readTimeValue}
           promoId="12345"
           readTimeVariant={variantKey}
         />,
@@ -44,14 +58,14 @@ describe('ReadTime', () => {
         <ReadTime
           readTimeValue={4}
           promoId="12345"
-          readTimeVariant="minutes"
+          readTimeVariant="long_read_numerical"
         />,
       );
 
       const expected = {
         componentName: 'read-time',
         experimentName: 'newswb_ws_homepage_read_time',
-        experimentVariant: 'minutes',
+        experimentVariant: 'long_read_numerical',
         sendOptimizelyEvents: true,
         itemTracker: {
           duration: 240000,
@@ -68,10 +82,10 @@ describe('ReadTime', () => {
       const { getByText } = render(
         <ReadTimeArticleExperiment
           readTimeValue={4}
-          readTimeVariant="minutes"
+          readTimeVariant="long_read_numerical"
         />,
       );
-      expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
+      expect(getByText('4 min read')).toBeInTheDocument();
     });
     describe('view tracking', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
@@ -80,17 +94,17 @@ describe('ReadTime', () => {
         render(
           <ReadTimeArticleExperiment
             readTimeValue={4}
-            readTimeVariant="minutes"
+            readTimeVariant="long_read_numerical"
           />,
         );
 
         const expected = {
           componentName: 'read-time-on-article',
-          experimentName: 'newswb_ws_article_read_time',
-          experimentVariant: 'minutes',
+          experimentName: 'newswb_ws_article_read_time_2',
+          experimentVariant: 'long_read_numerical',
           itemTracker: {
             duration: 240000,
-            label: 'Read time: 4 minutes',
+            label: 'Read time: 4 min',
             type: 'read-time',
           },
           sendOptimizelyEvents: true,

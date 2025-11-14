@@ -42,7 +42,7 @@ const maskableIconNames = [
   'maskable-icon-512x512.png',
 ];
 
-const servicesWithMaskableIcons = ['magyarul'];
+const servicesWithMaskableIcons = ['magyarul', 'romania'];
 
 describe('public directory', () => {
   describe.each(SERVICES.filter(service => !['ws'].includes(service)))(
