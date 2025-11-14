@@ -5,6 +5,7 @@
   bundle splitting to stop working.
 */
 
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as afaanoromoo } from '../../../app/lib/config/services/afaanoromoo';
 import { service as afrique } from '../../../app/lib/config/services/afrique';
 import { service as amharic } from '../../../app/lib/config/services/amharic';
@@ -30,6 +31,7 @@ import { service as mundo } from '../../../app/lib/config/services/mundo';
 import { service as naidheachdan } from '../../../app/lib/config/services/naidheachdan';
 import { service as nepali } from '../../../app/lib/config/services/nepali';
 import { service as news } from '../../../app/lib/config/services/news';
+import { service as newsround } from '../../../app/lib/config/services/newsround';
 import { service as pashto } from '../../../app/lib/config/services/pashto';
 import { service as persian } from '../../../app/lib/config/services/persian';
 import { service as pidgin } from '../../../app/lib/config/services/pidgin';
@@ -58,16 +60,24 @@ import { service as ws } from '../../../app/lib/config/services/ws';
 import { service as yoruba } from '../../../app/lib/config/services/yoruba';
 import { service as zhongwen } from '../../../app/lib/config/services/zhongwen';
 
-import { Services, Variants } from '../../../app/models/types/global';
-import { ServiceConfig } from '../../../app/models/types/serviceConfig';
+import {
+  ServicesWithNoVariants,
+  ServicesWithVariants,
+} from '../../../app/models/types/global';
 
-type AllServices = {
-  [_service in Services]: {
-    [_variant in Variants]: ServiceConfig;
+type ServiceConfigsNoVariants = {
+  [_service in ServicesWithNoVariants['service']]: {
+    [_variant in ServicesWithNoVariants['variant']]?: ServiceConfig;
   };
 };
 
-export default {
+type ServiceConfigsWithVariants = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in ServicesWithVariants['variant']]?: ServiceConfig;
+  };
+};
+
+const servicesNoVariants: ServiceConfigsNoVariants = {
   afaanoromoo,
   afrique,
   amharic,
@@ -93,6 +103,7 @@ export default {
   naidheachdan,
   nepali,
   news,
+  newsround,
   pashto,
   persian,
   pidgin,
@@ -103,7 +114,6 @@ export default {
   russian,
   sport,
   scotland,
-  serbian,
   sinhala,
   somali,
   swahili,
@@ -112,12 +122,21 @@ export default {
   thai,
   tigrinya,
   turkce,
-  ukchina,
-  ukrainian,
   urdu,
-  uzbek,
   vietnamese,
   ws,
   yoruba,
+};
+
+const servicesWithVariants: ServiceConfigsWithVariants = {
+  serbian,
+  ukchina,
+  ukrainian,
+  uzbek,
   zhongwen,
-} as AllServices;
+};
+
+export default {
+  ...servicesNoVariants,
+  ...servicesWithVariants,
+};
