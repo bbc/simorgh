@@ -1,6 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { Fragment, PropsWithChildren, useState, use } from 'react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  use,
+  useEffect,
+} from 'react';
 import { Global, jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -59,6 +65,18 @@ const Image = ({
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(false);
+  const imgRef = React.useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img?.complete) {
+      // The image was already loaded before onLoad could fire
+      setIsPortrait(img.naturalHeight > img.naturalWidth);
+      setIsLoaded(true);
+    }
+  }, []);
+
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
@@ -165,7 +183,12 @@ const Image = ({
               </>
             )}
             <img
-              onLoad={() => setIsLoaded(true)}
+              ref={imgRef}
+              onLoad={e => {
+                const img = e.currentTarget;
+                setIsPortrait(img.naturalHeight > img.naturalWidth);
+                setIsLoaded(true);
+              }}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
@@ -174,7 +197,7 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                styles.image,
+                isPortrait ? styles.portraitImage : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
