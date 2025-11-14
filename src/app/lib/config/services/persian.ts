@@ -1,7 +1,7 @@
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
+import jalaali from '#psammead/psammead-calendars/src';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -261,11 +261,6 @@ export const service: DefaultServiceConfig = {
           title: 'رادیو فارسی بی‌بی‌سی',
           subtitle:
             'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
-        },
-        bbc_dari_radio: {
-          title: 'بی بی سی افغانستان (برنامه های دری)',
-          subtitle:
-            'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
         },
         bbc_persian_tv: {
           title: '۶٠ دقیقه',

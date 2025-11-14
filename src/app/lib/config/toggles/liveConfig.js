@@ -1,4 +1,4 @@
-import { services } from '../services/loadableConfig';
+import SERVICES from '../services';
 
 export default {
   _environment: 'live',
@@ -12,12 +12,15 @@ export default {
   comscoreAnalytics: {
     enabled: true,
   },
+  continueReadingButton: {
+    enabled: false,
+  },
   electionBanner: {
     enabled: false,
   },
   enableFetchingToggles: {
     enabled: true,
-    value: `(${services.join('|')})`,
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
@@ -46,7 +49,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {

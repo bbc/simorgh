@@ -9,6 +9,7 @@ import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage
 import { data as wsHomePageData } from '#data/ws/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
@@ -23,6 +24,11 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   default: jest.fn(),
   ExperimentType: { CLIENT_SIDE: 'client_side' },
+}));
+
+jest.mock('../../hooks/useOperaMiniDetection', () => ({
+  __esModule: true,
+  default: jest.fn(),
 }));
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
@@ -47,10 +53,13 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 });
 
 const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
+const mockUseOperaMiniDetection = useOperaMiniDetection as jest.Mock;
 
 const basePageData = {
   title: 'Test Title',
   description: 'Test Description',
+  seoTitle: 'Test SEO Title',
+  seoDescription: 'Test SEO Description',
   metadata: { atiAnalytics: {}, type: 'home' },
   curations: [
     {
@@ -94,6 +103,11 @@ const pidginHomePageData = {
 
 describe('Home Page', () => {
   suppressPropWarnings(['children', 'string', 'MediaIcon']);
+
+  beforeEach(() => {
+    mockUseOperaMiniDetection.mockReset();
+    mockUseOperaMiniDetection.mockReturnValue(false);
+  });
 
   it('should render a section for each curation with summaries', () => {
     const { container } = render(<HomePage pageData={afriqueHomePageData} />, {
@@ -191,7 +205,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
-      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+      'BBC News Kyrgyz - BBC News Кыргыз Кызматы',
     );
   });
 
@@ -661,6 +675,19 @@ describe('Home Page', () => {
         );
         expect(matchingCall).toBeTruthy();
       });
+    });
+
+    it('Portrait Video Carousel - does not render on Opera Mini', () => {
+      mockUseOperaMiniDetection.mockReturnValue(true);
+
+      // @ts-expect-error - sample homepage data
+      render(<HomePage pageData={portugueseHomePageDataFixture} />, {
+        service: 'portuguese',
+      });
+
+      expect(
+        screen.queryByTestId('portrait-video-carousel'),
+      ).not.toBeInTheDocument();
     });
 
     it('Social Links - calls useViewTracker with correct viewability event tracking data for Social Links', () => {

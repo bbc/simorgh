@@ -7,9 +7,7 @@
  * We are allowing a variance of -5 on `MIN_SIZE` and +5 on `MAX_SIZE` to avoid the need for frequent changes, as bundle sizes can fluctuate
  */
 
-const MIN = 920;
-const MAX = 1390;
+export const VARIANCE = 5;
 
-const VARIANCE = 5;
-export const MIN_SIZE = MIN - VARIANCE;
-export const MAX_SIZE = MAX + VARIANCE;
+export const MIN_SIZE = 916;
+export const MAX_SIZE = 1257;

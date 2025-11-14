@@ -211,6 +211,67 @@ export default ({
       }
     });
 
+    describe('Continue Reading Button', () => {
+      const CONTINUE_READING_BUTTON_ID = '#continue-reading-button';
+
+      it('should render the Continue Reading button', function test() {
+        runIfToggleEnabled({
+          service,
+          toggleName: 'continueReadingButton',
+          testContext: this,
+        });
+
+        cy.reload();
+
+        cy.getPageDataFromWindow().then(pageData => {
+          const hasContinueReadingButton = getBlockData(
+            'continueReading',
+            pageData,
+          );
+
+          if (hasContinueReadingButton) {
+            cy.get(CONTINUE_READING_BUTTON_ID).should('be.visible');
+          } else {
+            this.skip();
+          }
+        });
+      });
+
+      it('should reveal hidden content when the Continue Reading button is clicked', function test() {
+        runIfToggleEnabled({
+          service,
+          toggleName: 'continueReadingButton',
+          testContext: this,
+        });
+
+        cy.reload();
+
+        cy.getPageDataFromWindow().then(pageData => {
+          const hasContinueReadingButton = getBlockData(
+            'continueReading',
+            pageData,
+          );
+
+          if (hasContinueReadingButton) {
+            cy.get(CONTINUE_READING_BUTTON_ID).click();
+
+            cy.get('main')
+              .find('*')
+              .each($el => {
+                cy.wrap($el).should($elWrapped => {
+                  const display = window
+                    .getComputedStyle($elWrapped[0])
+                    .getPropertyValue('display');
+                  expect(display).to.not.equal('none');
+                });
+              });
+          } else {
+            this.skip();
+          }
+        });
+      });
+    });
+
     // /**
     //  * Most Read Component
     //  */

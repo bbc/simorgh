@@ -4,6 +4,7 @@ import {
   AUDIO_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
@@ -24,6 +25,8 @@ import {
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
   legacyMediaBlock,
+  livePageVideoClipMediaBlock,
+  liveTvPageMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -1464,6 +1467,73 @@ describe('buildSettings', () => {
           },
         },
         showAds: false,
+      });
+    });
+
+    describe('autoplay behaviour', () => {
+      beforeEach(() => {
+        jest
+          .spyOn(window.location, 'hostname', 'get')
+          .mockReturnValue('www.bbc.com');
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
+      });
+
+      afterEach(() => {
+        jest.restoreAllMocks(); // Automatically restores all mocks
+      });
+
+      it('Should autoplay media if referrer is internal and pageType is LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(true);
+      });
+
+      it('Should not autoplay media if referrer is external and pageType is LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.google.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is empty and pageType is LIVE_TV_PAGE.', () => {
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is internal and pageType is not LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
       });
     });
   });
