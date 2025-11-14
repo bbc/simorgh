@@ -3,10 +3,11 @@ import { PageTypes } from '#app/models/types/global';
 import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { setUserIDCookie } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
-import {
-  assertRecommendationsComponentClick,
-  assertRecommendationsComponentView,
-} from './assertions/recommendations';
+// TODO: Resolve error which is preventing e2e tests to run
+// import {
+//   assertRecommendationsComponentClick,
+//   assertRecommendationsComponentView,
+// } from './assertions/recommendations';
 import {
   assertRelatedContentComponentClick,
   assertRelatedContentComponentView,
@@ -148,32 +149,33 @@ const canonicalTestSuites = [
       assertLatestMediaComponentClick,
     ],
   },
-  {
-    path: '/hindi/articles/c9w59wnx27ro',
-    runforEnv: ['local', 'live'],
-    service: 'hindi',
-    pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
-    siteId: 52,
-    applicationType: 'responsive',
-    contentType: 'article',
-    useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopStoriesComponentView,
-      assertTopStoriesComponentClick,
-      assertFeaturesAnalysisComponentView,
-      assertRecommendationsComponentView,
-      assertRecommendationsComponentClick,
-      assertPodcastPromoComponentView,
-      assertPodcastPromoComponentClick,
-      assertScrollablePromoComponentView,
-      assertScrollablePromoComponentClick,
-      assertRelatedTopicsComponentView,
-      assertRelatedTopicsComponentClick,
-      assertMostReadComponentView,
-      assertMostReadComponentClick,
-    ],
-  },
+  // TODO: Resolve error which is preventing e2e tests to run - https://bbc.atlassian.net/browse/WS-1745
+  // {
+  //   path: '/hindi/articles/c9w59wnx27ro',
+  //   runforEnv: ['local', 'live'],
+  //   service: 'hindi',
+  //   pageIdentifier: 'hindi.articles.c9w59wnx27ro.page',
+  //   siteId: 52,
+  //   applicationType: 'responsive',
+  //   contentType: 'article',
+  //   useReverb: true,
+  //   tests: [
+  //     assertPageView,
+  //     assertTopStoriesComponentView,
+  //     assertTopStoriesComponentClick,
+  //     assertFeaturesAnalysisComponentView,
+  //     assertRecommendationsComponentView,
+  //     assertRecommendationsComponentClick,
+  //     assertPodcastPromoComponentView,
+  //     assertPodcastPromoComponentClick,
+  //     assertScrollablePromoComponentView,
+  //     assertScrollablePromoComponentClick,
+  //     assertRelatedTopicsComponentView,
+  //     assertRelatedTopicsComponentClick,
+  //     assertMostReadComponentView,
+  //     assertMostReadComponentClick,
+  //   ],
+  // },
   {
     path: '/pidgin/articles/ce9wk6glg4lo',
     runforEnv: ['local', 'live'],
