@@ -8,6 +8,8 @@ export interface LiveTVPageProps {
     title: string;
     description: string;
     curations: Curation[];
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
       type: PageTypes;
       atiAnalytics: ATIData;
