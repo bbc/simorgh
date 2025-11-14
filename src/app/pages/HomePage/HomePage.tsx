@@ -1,12 +1,13 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { use, useState, useEffect } from 'react';
+import React, { use, useState } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PWAUpsellBanner from '#app/components/PWAUpsellBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -65,6 +66,27 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
 
+  // PWA Upsell Banner state (only for Mundo)
+  const [showBanner, setShowBanner] = useState(service === 'mundo');
+
+  const handleInstallPWA = () => {
+    // eslint-disable-next-line no-console
+    console.log('Install PWA clicked');
+    // Native install prompt logic would go here
+  };
+
+  const handleCloseBanner = () => {
+    // eslint-disable-next-line no-console
+    console.log('Banner closed');
+    setShowBanner(false);
+  };
+
+  const handleSecondaryAction = () => {
+    // eslint-disable-next-line no-console
+    console.log('Secondary button clicked');
+    setShowBanner(false);
+  };
+
   // EXPERIMENT: Homepage Time of Day Adaptive Curations
   const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
   const timeOfDayVariant = useOptimizelyVariation({
@@ -102,6 +124,25 @@ const HomePage = ({ pageData }: HomePageProps) => {
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
+      {showBanner && service === 'mundo' && (
+        <PWAUpsellBanner
+          serviceBackground="mundo"
+          title="Accede a BBC Noticias con un solo toque"
+          description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
+          isDismissible
+          buttonPrimary={{
+            shortText: 'Agregar',
+            longText: 'Agregar a la pantalla de inicio',
+            onClick: handleInstallPWA,
+          }}
+          buttonSecondary={{
+            text: 'Ahora no',
+            onClick: handleSecondaryAction,
+          }}
+          handleClose={handleCloseBanner}
+          handleInstallPWA={handleInstallPWA}
+        />
+      )}
       <main role="main" css={styles.main}>
         <ATIAnalytics atiData={atiAnalytics} />
         <VisuallyHiddenText id="content" tabIndex={-1} as="h1">
