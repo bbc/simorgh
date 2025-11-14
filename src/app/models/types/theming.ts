@@ -1,5 +1,12 @@
+import { LoadableComponent } from '@loadable/component';
 import type { JSX } from 'react';
-import { SerbianService, UkrainianService, UzbekService } from './global';
+import {
+  SerbianService,
+  ServicesWithNoVariants,
+  ServicesWithVariants,
+  UkrainianService,
+  UzbekService,
+} from './global';
 
 export interface BrandPalette {
   BRAND_BACKGROUND: string;
@@ -533,3 +540,15 @@ declare module '@emotion/react' {
     fontFaces: Typography['fontFaces'];
   }
 }
+
+export type LoadableTheme = LoadableComponent<{ children: React.ReactNode }>;
+
+export type ThemeWithNoVariant = {
+  [_service in ServicesWithNoVariants['service']]: LoadableTheme;
+};
+
+export type ThemeWithVariant = {
+  [_service in ServicesWithVariants['service']]: {
+    [_variant in ServicesWithVariants['variant']]?: LoadableTheme;
+  };
+};

@@ -10,7 +10,7 @@ export default ({
   pageType,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
-  let warning = null;
+  let warning: string | null = null;
 
   const {
     imageUrlTemplate: holdingImageURL,

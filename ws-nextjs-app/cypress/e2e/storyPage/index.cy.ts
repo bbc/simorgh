@@ -47,7 +47,7 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  // TODO: Re-enable once the external media/analytics issue is resolved
+  // TODO: Re-enable once the external media/analytics issue is resolved - https://bbc.atlassian.net/browse/WS-1745
   // {
   //   path: '/mundo/23263889',
   //   service: 'mundo',
