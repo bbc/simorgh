@@ -13383,9 +13383,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lighthouse@npm:13.0.0":
-  version: 13.0.0
-  resolution: "lighthouse@npm:13.0.0"
+"lighthouse@npm:13.0.1":
+  version: 13.0.1
+  resolution: "lighthouse@npm:13.0.1"
   dependencies:
     "@paulirish/trace_engine": "npm:0.0.61"
     "@sentry/node": "npm:^9.28.1"
@@ -13416,7 +13416,7 @@ __metadata:
     chrome-debug: core/scripts/manual-chrome-launcher.js
     lighthouse: cli/index.js
     smokehouse: cli/test/smokehouse/frontends/smokehouse-bin.js
-  checksum: 10/d78741b9c1b532f3a0830bf8284c29dc64224e16cdeb44a5a13f15364cb63da853d2bcb93af7fc436c3d6c049d9fd2243e0d8d7e5eca9d1fb7bf91ccff8308d2
+  checksum: 10/8bdcd629b3412b0f0dae66eab5fc0dcc77eed44c3d2306c8e5b57ae6c098a7b880799ddf0efc51c040df2a5b1ede3eca694276079f4e9fff7ee5a8f5f1b5e511
   languageName: node
   linkType: hard
 
@@ -16923,7 +16923,7 @@ __metadata:
     jest-silent-reporter: "npm:0.6.0"
     js-cookie: "npm:3.0.5"
     jsdom: "npm:27.0.0"
-    lighthouse: "npm:13.0.0"
+    lighthouse: "npm:13.0.1"
     lru-cache: "npm:11.1.0"
     minimist: "npm:1.2.8"
     mkdirp: "npm:3.0.1"
