@@ -42,6 +42,23 @@ const atiAnalyticsTestSuites = {
   pageType: 'live',
   testSuites: [
     {
+      path: '/arabic/live/cvp5r6m6mgpt',
+      runforEnv: ['local', 'test'],
+      service: 'arabic',
+      pageIdentifier: 'live_coverage.cvp5r6m6mgpt.page',
+      siteId: 5,
+      applicationType: 'responsive',
+      contentType: 'live-coverage',
+      useReverb: true,
+      tests: [
+        assertPageView,
+        assertScrollableNavigationComponentView,
+        assertScrollableNavigationComponentClick,
+        assertDropdownNavigationComponentView,
+        assertDropdownNavigationComponentClick,
+      ],
+    },
+    {
       path: '/pidgin/live/c7p765ynk9qt',
       runforEnv: ['local', 'test'],
       service: 'pidgin',
