@@ -47,9 +47,7 @@ module.exports = {
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
-  compiler: {
-    emotion: true,
-  },
+  compiler: { emotion: true },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
