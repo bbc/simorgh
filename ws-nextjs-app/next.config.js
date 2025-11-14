@@ -57,9 +57,6 @@ module.exports = {
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
   webpack: (config, { webpack, isServer }) => {
-    // TODO: Come back to this
-    config.ignoreWarnings = [{ module: /@emotion/ }];
-
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
