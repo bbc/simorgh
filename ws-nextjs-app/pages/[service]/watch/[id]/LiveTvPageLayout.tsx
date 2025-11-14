@@ -8,9 +8,9 @@ import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import ATIAnalytics from '#app/components/ATIAnalytics';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
-// import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 
 const renderCuration = ({ curation }: { curation: CurationType }) => {
   const {
@@ -67,7 +67,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
-      {/* <ChartbeatAnalytics title={pageTitle} /> */}
+      <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={title}
         lang={lang}
