@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  ColoredContainer: ({ mq }: Theme) =>
+  ColoredContainer: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       margin: '0 auto',
@@ -11,7 +11,7 @@ const styles = {
       justifyContent: 'center',
       background:
         'linear-gradient(to bottom left, #bb1919 0%, #000 50%, #bb1919 100%)',
-      padding: `${pixelsToRem(16)}rem`,
+      padding: `${spacings.DOUBLE}rem`,
       minHeight: `${pixelsToRem(170)}rem`,
       maxHeight: `${pixelsToRem(370)}rem`,
       height: 'auto',
@@ -34,38 +34,40 @@ const styles = {
       padding: 0,
     }),
 
-  StyledContent: () =>
+  StyledContent: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       width: '100%',
-      gap: `${pixelsToRem(8)}rem`,
+      gap: `${spacings.FULL}rem`,
     }),
 
-  TextWrapper: () => {
+  TextWrapper: ({ spacings }: Theme) => {
     css({
       display: 'flex',
       flexDirection: 'column',
-      marginRight: `${pixelsToRem(44)}rem`,
+      marginRight: `${spacings.SEXTUPLE}rem`,
     });
   },
 
-  StyledTitle: ({ palette, fontVariants }: Theme) =>
+  StyledTitle: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,
       height: 'auto',
       margin: 0,
+      marginRight: `${spacings.QUADRUPLE}rem`,
       fontFamily: fontVariants.sansBold.fontFamily,
       fontWeight: fontVariants.sansBold.fontWeight,
       fontSize: `${pixelsToRem(28)}rem`,
       lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
-  StyledDescription: ({ mq }: Theme) =>
+  StyledDescription: ({ spacings, mq }: Theme) =>
     css({
       color: '#F6F6F6',
       marginBottom: 0,
+      marginRight: `${spacings.TRIPLE}rem`,
       height: 'auto',
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
       display: 'none',
@@ -74,7 +76,7 @@ const styles = {
       },
     }),
 
-  CTAWrapper: ({ mq }: Theme) =>
+  CTAWrapper: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -82,22 +84,22 @@ const styles = {
       gap: `${pixelsToRem(12)}rem`,
       lineHeight: 1,
       marginBottom: 0,
-      marginTop: `${pixelsToRem(16)}rem`,
+      marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MAX_WIDTH]: {
         flexDirection: 'row',
         width: `${pixelsToRem(172)}rem`,
-        height: `${pixelsToRem(8)}rem`,
+        height: `${spacings.FULL}rem`,
       },
     }),
 
-  StyledButtonPrimary: ({ mq }: Theme) =>
+  StyledButtonPrimary: ({ mq, spacings }: Theme) =>
     css({
       color: '#000000',
       backgroundColor: '#FFFFFF',
       border: 'none',
       width: 'auto',
       height: `${pixelsToRem(28)}rem`,
-      padding: `${pixelsToRem(4)}rem`,
+      padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
@@ -133,7 +135,7 @@ const styles = {
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
     }),
 
-  StyledbuttonSecondary: ({ mq }: Theme) =>
+  StyledbuttonSecondary: ({ mq, spacings }: Theme) =>
     css({
       color: '#FFFFFF',
       backgroundColor: 'transparent',
@@ -142,7 +144,7 @@ const styles = {
       textDecorationColor: '#B0B2B4',
       fontWeight: 'bold',
       height: `${pixelsToRem(28)}rem`,
-      padding: `${pixelsToRem(4)}rem`,
+      padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
       fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
