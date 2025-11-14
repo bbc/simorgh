@@ -1,8 +1,12 @@
 import React from 'react';
+import buildLogo from '.';
 
 const height = 24.59;
 const width = 162.6154;
-const ukchina = {
+
+export default buildLogo({
+  height,
+  width,
   group: (
     <g
       fillRule="evenodd"
@@ -17,11 +21,8 @@ const ukchina = {
       <path d="M92.89 0v22.59" strokeWidth="2" style={{ stroke: '#fff' }} />
     </g>
   ),
-  ratio: width / height,
   viewbox: {
     height,
     width,
   },
-};
-
-export default ukchina;
+});

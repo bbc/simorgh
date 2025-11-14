@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
+import { jsx, SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import {
@@ -23,7 +23,7 @@ export const getParentColumns = (columnLayout: ColumnLayout) => {
 };
 
 const getItemCss = ({ dir, size }: { dir: Direction; size: Size }) => {
-  const itemCss = [];
+  const itemCss: Array<(_theme: Theme) => SerializedStyles> = [];
 
   if (size === 'small') {
     itemCss.push(styles.smallPaddingTop);
@@ -65,7 +65,8 @@ export const MostReadLink = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
   return (
-    <div css={getItemCss({ dir, size })} dir={dir}>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
       <a
         css={[styles.link, size === 'default' && styles.defaultLink]}
         href={href}
