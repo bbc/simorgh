@@ -49,8 +49,13 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curations,
     description,
     title,
+    seoTitle,
+    seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
+
+  const metadataTitle = seoTitle || title;
+  const metadataDescription = seoDescription || description;
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
@@ -69,9 +74,9 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       <ATIAnalytics atiData={atiAnalytics} />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={title}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
