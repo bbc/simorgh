@@ -2,6 +2,8 @@ import { css, Theme } from '@emotion/react';
 
 import BASE64_PLACEHOLDER_IMAGE from './base64Placeholder';
 
+const BLUR_RADIUS = 15;
+
 const styles = {
   wrapper: css({
     position: 'relative',
@@ -30,8 +32,10 @@ const styles = {
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
   portraitImage: css({
+    position: 'relative',
     width: '100%',
     objectFit: 'contain',
+    zIndex: 1,
   }),
   imageFixedAspectRatio: css({
     height: 'auto',
@@ -41,6 +45,17 @@ const styles = {
   }),
   portraitOrientation: css({
     position: 'absolute',
+  }),
+
+  gradientBackground: css({
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 0,
+    pointerEvents: 'none',
+    filter: `blur(${BLUR_RADIUS}px)`,
   }),
 };
 

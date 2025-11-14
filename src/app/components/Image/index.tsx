@@ -1,14 +1,9 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  use,
-  useEffect,
-} from 'react';
-import { Global, jsx } from '@emotion/react';
+import React, { PropsWithChildren, useState, use, useEffect } from 'react';
+import { Global, jsx, useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
+import useImageColour from '#app/hooks/useImageColour';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
@@ -77,6 +72,17 @@ const Image = ({
     }
   }, []);
 
+  const {
+    palette: { GREY_8 },
+  } = useTheme();
+
+  const { isLoading, colour } = useImageColour(src, {
+    fallbackColour: GREY_8,
+    minimumContrast: 0,
+    contrastColour: '#ffffff',
+    paletteSize: 10,
+  });
+
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
@@ -91,7 +97,7 @@ const Image = ({
   );
 
   const hasFallback = srcSet && fallbackSrcSet && pageType === HOME_PAGE;
-  const ImageWrapper = hasFallback ? 'picture' : Fragment;
+  const ImageWrapper = hasFallback ? 'picture' : 'div';
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
@@ -171,7 +177,7 @@ const Image = ({
             />
           </>
         ) : (
-          <ImageWrapper>
+          <ImageWrapper style={{ position: 'relative' }}>
             {hasFallback && pageType === HOME_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />
@@ -201,6 +207,12 @@ const Image = ({
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
+                { background: `rgb(${colour?.rgb?.join(',')})` },
+                !isLoading && {
+                  [`@supports (filter: blur(15px))`]: {
+                    background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                  },
+                },
               ]}
               fetchPriority={fetchPriority}
               style={{
@@ -209,6 +221,22 @@ const Image = ({
                   : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
+            {isPortrait && (
+              <div
+                css={[
+                  styles.gradientBackground,
+                  {
+                    background: colour
+                      ? `linear-gradient(
+            200deg,
+            rgba(${colour.rgb.join(',')}, 0.6) 0%,
+            #180109 54%, #180109 90%
+          )`
+                      : `linear-gradient(200deg, ${GREY_8} 0%,  #180109 54%, #180109 90%)`,
+                  },
+                ]}
+              />
+            )}
           </ImageWrapper>
         )}
         {children}
