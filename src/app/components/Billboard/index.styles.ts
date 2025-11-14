@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/isOperaProxy';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
@@ -27,6 +28,9 @@ export default {
       position: 'relative',
       [mq.FORCED_COLOURS]: {
         border: `solid ${pixelsToRem(3)}rem transparent`,
+      },
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        display: 'none',
       },
     }),
   backgroundContainer: () =>
