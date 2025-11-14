@@ -1,8 +1,12 @@
 import React from 'react';
+import build from '.';
 
 const height = 24.34;
 const width = 206.487;
-const archive = {
+
+export default build({
+  height,
+  width,
   group: (
     <g
       fillRule="evenodd"
@@ -19,11 +23,8 @@ const archive = {
       <path d="M13.891 9.736c.52-.384.771-.924.776-1.735-.002-.558-.159-1.035-.552-1.39C13.721 6.252 13.053 6 11.974 6H10v4.333h1.354c1.173.001 2.015-.213 2.537-.597m1.903 4.27c-.601-.41-1.558-.673-2.904-.673H10V18h3.023c1.504 0 2.41-.337 2.936-.781.524-.444.704-1.012.708-1.577-.007-.68-.276-1.222-.873-1.636" />
     </g>
   ),
-  ratio: width / height,
   viewbox: {
     height,
     width,
   },
-};
-
-export default archive;
+});
