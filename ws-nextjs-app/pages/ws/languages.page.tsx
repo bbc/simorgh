@@ -1,11 +1,9 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import { Services, PageTypes } from '#app/models/types/global';
 import getPageData from '../../utilities/pageRequests/getPageData';
-import { LanguagesPageProps } from './types';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
 
