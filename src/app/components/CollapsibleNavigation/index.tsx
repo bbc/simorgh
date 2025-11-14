@@ -23,6 +23,7 @@ const CollapsibleNavigation = ({
 
   const navSectionEventTrackingData: EventTrackingMetadata = {
     componentName: 'collapsible-navigation-section',
+    preventNavigation: true,
   };
 
   const navLinkEventTrackingData: EventTrackingMetadata = {
@@ -46,6 +47,10 @@ const CollapsibleNavigation = ({
       return;
     }
 
+    /**
+     * Prevents the browser from scrolling when a hash is present in the URL.
+     * The hash is used for the no-JS fallback and for improved section click tracking
+     */
     e.preventDefault();
     navSectionClickTrackerHandler?.(e);
 
@@ -65,7 +70,8 @@ const CollapsibleNavigation = ({
     }
   };
 
-  const handleClose = () => {
+  const handleClose = (e: React.MouseEvent) => {
+    e.preventDefault();
     setOpenSection(null);
 
     if (activeNavItemRef.current) {
