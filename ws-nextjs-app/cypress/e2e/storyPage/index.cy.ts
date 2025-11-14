@@ -47,12 +47,13 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  {
-    path: '/mundo/23263889',
-    service: 'mundo',
-    runforEnv: ['local'],
-    tests: canonicalTests,
-  },
+  // TODO: Re-enable once the external media/analytics issue is resolved
+  // {
+  //   path: '/mundo/23263889',
+  //   service: 'mundo',
+  //   runforEnv: ['local', 'test'],
+  //   tests: canonicalTests,
+  // },
   {
     path: '/mundo/noticias-internacional-51266689',
     service: 'mundo',
