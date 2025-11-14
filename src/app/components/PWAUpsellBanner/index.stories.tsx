@@ -6,13 +6,14 @@ export default {
   component: PWAUpsellBanner,
 };
 
-export const Mundo = () => (
+export const Example = () => (
   <PWAUpsellBanner
     serviceBackground="mundo"
     title="Accede a BBC Noticias con un solo toque"
     description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
     buttonPrimary={{
-      text: 'Agregar con un toque',
+      shortText: 'Agregar',
+      longText: 'Agregar a la pantalla de inicio',
       onClick: () => console.log('Primary clicked'),
     }}
     buttonSecondary={{
