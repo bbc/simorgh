@@ -37,7 +37,6 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
-import addInlineScript from '#app/lib/utilities/addInlineScript';
 import isOperaProxy, {
   OPERA_MINI_CLASSNAME,
 } from '#app/lib/utilities/isOperaProxy';
