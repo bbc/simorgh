@@ -7,7 +7,7 @@ import {
 } from '../fontFaces';
 import bengaliFontVariants from '../fontVariants/bengali';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/bangla';
+import brandSVG from '../chameleonLogos/bengali';
 
 export const theme: ServiceTheme = {
   palette: {
