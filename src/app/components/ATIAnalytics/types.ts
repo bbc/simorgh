@@ -165,7 +165,7 @@ export interface ATIEventTrackingProps {
   experimentName?: string;
   experimentVariant?: string | null;
   ampExperimentName?: string;
-  preventNavigation?: string;
+  preventNavigation?: boolean;
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
