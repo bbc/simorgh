@@ -64,6 +64,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   width: 100%;
   object-fit: cover;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -125,14 +126,18 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       class="emotion-2"
       style="padding-bottom: 0px; overflow: hidden;"
     >
-      <img
-        alt="Orange 2"
-        class="emotion-3"
-        loading="lazy"
-        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
-        style="aspect-ratio: auto;"
-        width="976"
-      />
+      <div
+        style="position: relative;"
+      >
+        <img
+          alt="Orange 2"
+          class="emotion-3"
+          loading="lazy"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+          style="aspect-ratio: auto;"
+          width="976"
+        />
+      </div>
     </div>
     <div
       class="lazyload-wrapper emotion-4"
@@ -222,6 +227,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -320,17 +326,21 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <img
-        alt="naranja 2"
-        class="emotion-3"
-        height="549"
-        loading="lazy"
-        sizes="(min-width: 1008px) 400px"
-        src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp"
-        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
-        style="aspect-ratio: 976 / 549;"
-        width="976"
-      />
+      <div
+        style="position: relative;"
+      >
+        <img
+          alt="naranja 2"
+          class="emotion-3"
+          height="549"
+          loading="lazy"
+          sizes="(min-width: 1008px) 400px"
+          src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp"
+          srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
+          style="aspect-ratio: 976 / 549;"
+          width="976"
+        />
+      </div>
     </div>
     <div
       class="lazyload-wrapper emotion-4"
@@ -425,6 +435,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -523,17 +534,21 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <img
-        alt="E dey good for your"
-        class="emotion-3"
-        height="351"
-        loading="lazy"
-        sizes="(min-width: 1008px) 400px"
-        src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
-        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
-        style="aspect-ratio: 624 / 351;"
-        width="624"
-      />
+      <div
+        style="position: relative;"
+      >
+        <img
+          alt="E dey good for your"
+          class="emotion-3"
+          height="351"
+          loading="lazy"
+          sizes="(min-width: 1008px) 400px"
+          src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
+          srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
+          style="aspect-ratio: 624 / 351;"
+          width="624"
+        />
+      </div>
     </div>
     <div
       class="lazyload-wrapper emotion-4"
@@ -628,6 +643,7 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -726,17 +742,21 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <img
-        alt="test"
-        class="emotion-3"
-        height="450"
-        loading="lazy"
-        sizes="(min-width: 1008px) 400px"
-        src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp"
-        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp 400w"
-        style="aspect-ratio: 800 / 450;"
-        width="800"
-      />
+      <div
+        style="position: relative;"
+      >
+        <img
+          alt="test"
+          class="emotion-3"
+          height="450"
+          loading="lazy"
+          sizes="(min-width: 1008px) 400px"
+          src="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp"
+          srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsdevpb/2105/test/a7436f40-a2dd-11ed-9015-6935ab4fa6ca.jpg.webp 400w"
+          style="aspect-ratio: 800 / 450;"
+          width="800"
+        />
+      </div>
     </div>
     <div
       class="lazyload-wrapper emotion-4"
@@ -831,6 +851,7 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   width: 100%;
   object-fit: cover;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -929,16 +950,20 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
       class="emotion-2"
       style="padding-bottom: 0px; overflow: hidden;"
     >
-      <img
-        alt=""
-        class="emotion-3"
-        loading="lazy"
-        sizes="(min-width: 1008px) 400px"
-        src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
-        srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp 400w"
-        style="aspect-ratio: auto;"
-        width="400"
-      />
+      <div
+        style="position: relative;"
+      >
+        <img
+          alt=""
+          class="emotion-3"
+          loading="lazy"
+          sizes="(min-width: 1008px) 400px"
+          src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
+          srcset="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp 400w"
+          style="aspect-ratio: auto;"
+          width="400"
+        />
+      </div>
     </div>
     <div
       class="lazyload-wrapper emotion-4"

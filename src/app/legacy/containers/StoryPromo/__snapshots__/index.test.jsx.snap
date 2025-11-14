@@ -507,6 +507,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -761,17 +762,21 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -2227,6 +2232,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -2477,17 +2483,21 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -3810,6 +3820,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -4003,17 +4014,21 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="A lone Koala perches in a eucalyptus tree"
-            class="emotion-7"
-            height="549"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-            style="aspect-ratio: 976 / 549;"
-            width="976"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="A lone Koala perches in a eucalyptus tree"
+              class="emotion-7"
+              height="549"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+              style="aspect-ratio: 976 / 549;"
+              width="976"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -5142,6 +5157,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 .emotion-9 {
@@ -5322,17 +5338,21 @@ exports[`StoryPromo Container should render full width promos correctly for cano
           class="emotion-7"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-8"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-8"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-9 emotion-10"
@@ -7114,6 +7134,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -7329,17 +7350,21 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -8324,6 +8349,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 .emotion-8 {
@@ -8620,17 +8646,21 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1100px) 496px, (min-width: 600px) 45.83vw, 94.29vw"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -10312,6 +10342,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -10505,17 +10536,21 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -11619,6 +11654,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -11812,17 +11848,21 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="A lone Koala perches in a eucalyptus tree"
-            class="emotion-7"
-            height="549"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
-            style="aspect-ratio: 976 / 549;"
-            width="976"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="A lone Koala perches in a eucalyptus tree"
+              class="emotion-7"
+              height="549"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg.webp 660w"
+              style="aspect-ratio: 976 / 549;"
+              width="976"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -12926,6 +12966,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -13119,17 +13160,21 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"
@@ -14347,6 +14392,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   width: 100%;
   object-fit: cover;
   height: auto;
+  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -14601,17 +14647,21 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           class="emotion-6"
           style="padding-bottom: 56.25%; overflow: hidden;"
         >
-          <img
-            alt="Image Alt text"
-            class="emotion-7"
-            height="1152"
-            loading="lazy"
-            sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
-            src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
-            srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
-            style="aspect-ratio: 2048 / 1152;"
-            width="2048"
-          />
+          <div
+            style="position: relative;"
+          >
+            <img
+              alt="Image Alt text"
+              class="emotion-7"
+              height="1152"
+              loading="lazy"
+              sizes="(min-width: 1020px) 232px, calc(31.86vw - 7px)"
+              src="https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp"
+              srcset="https://ichef.bbci.co.uk/ace/ws/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/ace/ws/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/ace/ws/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/ace/ws/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/ace/ws/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/ace/ws/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+              style="aspect-ratio: 2048 / 1152;"
+              width="2048"
+            />
+          </div>
         </div>
         <div
           class="emotion-8 emotion-9"

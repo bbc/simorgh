@@ -63,14 +63,14 @@ const Image = ({
   const [isPortrait, setIsPortrait] = useState(false);
   const imgRef = React.useRef<HTMLImageElement | null>(null);
 
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img?.complete) {
-      // The image was already loaded before onLoad could fire
-      setIsPortrait(img.naturalHeight > img.naturalWidth);
-      setIsLoaded(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const img = imgRef.current;
+  //   if (img?.complete) {
+  //     // The image was already loaded before onLoad could fire
+  //     setIsPortrait(img.naturalHeight > img.naturalWidth);
+  //     setIsLoaded(true);
+  //   }
+  // }, []);
 
   const {
     palette: { GREY_8 },
@@ -221,7 +221,7 @@ const Image = ({
                   : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
-            {isPortrait && (
+            {isPortrait && !showPlaceholder && (
               <div
                 css={[
                   styles.gradientBackground,
