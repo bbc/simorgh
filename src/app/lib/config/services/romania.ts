@@ -1,12 +1,12 @@
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
-import '#psammead/psammead-locales/moment/en-gb';
-import '#psammead/moment-timezone-include/tz/Europe/London';
+import '#psammead/psammead-locales/moment/ro';
+import '#psammead/moment-timezone-include/tz/Europe/Bucharest';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'en-GB',
+    lang: 'ro',
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Actualizat',
     articleTimestampSuffix: '',
@@ -27,8 +27,8 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'Legendă audio',
     defaultCaptionOffscreenText: 'Legendă, ',
     imageCopyrightOffscreenText: 'Sursă imagine, ',
-    locale: 'en_GB',
-    datetimeLocale: 'en-gb',
+    locale: 'ro_RO',
+    datetimeLocale: 'ro',
     service: 'romania',
     serviceName: 'Romanian',
     serviceLocalizedName: 'România',
@@ -111,7 +111,7 @@ export const service: DefaultServiceConfig = {
           callToActionFirst: 'Alternativ, te rugăm să revii la ',
           callToActionLinkText: 'BBC News România.',
           callToActionLast: ' pagina principală. ',
-          callToActionLinkUrl: 'https://www.bbc.com/romanian',
+          callToActionLinkUrl: 'https://www.bbc.com/romania',
         },
         500: {
           statusCode: '500',
@@ -125,7 +125,7 @@ export const service: DefaultServiceConfig = {
           callToActionFirst: 'Alternatively, please visit the ',
           callToActionLinkText: 'BBC News România.',
           callToActionLast: ' pagina principală. ',
-          callToActionLinkUrl: 'https://www.bbc.com/romanian',
+          callToActionLinkUrl: 'https://www.bbc.com/romania',
         },
         home: 'Pagina principală',
         currentPage: 'Pagina curentă',
@@ -398,7 +398,7 @@ export const service: DefaultServiceConfig = {
       copyrightText:
         'BBC. BBC nu este responsabil de conținutul altor site-uri.',
     },
-    timezone: 'Europe/London',
+    timezone: 'Europe/Bucharest',
     navigation: [
       {
         title: 'Home',
