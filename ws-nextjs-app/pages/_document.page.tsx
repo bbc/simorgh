@@ -37,6 +37,10 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
+import addInlineScript from '#app/lib/utilities/addInlineScript';
+import isOperaProxy, {
+  OPERA_MINI_CLASSNAME,
+} from '#app/lib/utilities/isOperaProxy';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -194,6 +198,17 @@ export default class AppDocument extends Document<DocProps> {
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
                   __html: `document.documentElement.classList.remove("no-js");`,
+                }}
+              />
+              <script
+                id="opera-mini-class-check"
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  if (${isOperaProxy.toString()}()) {
+                    document.documentElement.classList.add(${OPERA_MINI_CLASSNAME});
+                  }
+                `,
                 }}
               />
               <Script strategy="beforeInteractive">

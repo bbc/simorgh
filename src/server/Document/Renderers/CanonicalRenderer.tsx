@@ -4,6 +4,9 @@ import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
+import isOperaProxy, {
+  OPERA_MINI_CLASSNAME,
+} from '#app/lib/utilities/isOperaProxy';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
 import ComponentTracking from './ComponentTracking';
@@ -112,6 +115,17 @@ export default function CanonicalRenderer({
           dangerouslySetInnerHTML={{
             // Read env variables from the server and expose them to the client
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
+          }}
+        />
+        <script
+          id="opera-mini-class-check"
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+                  if (${isOperaProxy.toString()}()) {
+                    document.documentElement.classList.add(${OPERA_MINI_CLASSNAME});
+                  }
+                `,
           }}
         />
         <ComponentTracking

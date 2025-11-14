@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/isOperaProxy';
 import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
@@ -11,6 +12,9 @@ const styles = {
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         margin: `${spacings.DOUBLE}rem 0`,
+      },
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        display: 'none',
       },
     }),
   heading: ({ palette, mq, spacings }: Theme) =>
