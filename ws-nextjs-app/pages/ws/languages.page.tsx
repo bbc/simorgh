@@ -84,6 +84,5 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default function LanguagesPage({ ...props }: LanguagesPageProps) {
-  return <HomePage pageData={props.pageData} />;
-}
+export default HomePage;
+
