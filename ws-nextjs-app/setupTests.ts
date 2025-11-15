@@ -25,6 +25,5 @@ global.console = {
 
 global.setImmediate =
   global.setImmediate ||
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ((fn: (...args: any[]) => void, ...args: any) =>
+  ((fn: (...args: object[]) => void, ...args: object[]) =>
     global.setTimeout(fn, 0, ...args));
