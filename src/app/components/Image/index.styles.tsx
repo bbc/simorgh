@@ -35,7 +35,6 @@ const styles = {
     position: 'relative',
     width: '100%',
     objectFit: 'contain',
-    zIndex: 1,
   }),
   imageFixedAspectRatio: css({
     height: 'auto',
@@ -53,7 +52,6 @@ const styles = {
     left: 0,
     right: 0,
     bottom: 0,
-    zIndex: 0,
     pointerEvents: 'none',
     filter: `blur(${BLUR_RADIUS}px)`,
   }),

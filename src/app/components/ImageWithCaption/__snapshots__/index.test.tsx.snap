@@ -37,7 +37,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-3 {
@@ -189,7 +188,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-3 {
@@ -316,7 +314,6 @@ exports[`Image with data should render an image with other originCode - this wou
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-3 {

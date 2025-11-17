@@ -362,7 +362,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -489,7 +489,6 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 .emotion-20 {

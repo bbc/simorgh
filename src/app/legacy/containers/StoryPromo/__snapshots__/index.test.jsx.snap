@@ -507,7 +507,6 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -2232,7 +2231,6 @@ exports[`StoryPromo Container should render audio with no duration correctly for
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -3820,7 +3818,6 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -5157,7 +5154,6 @@ exports[`StoryPromo Container should render full width promos correctly for cano
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-9 {
@@ -7134,7 +7130,6 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -8349,7 +8344,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-8 {
@@ -10342,7 +10336,6 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -11654,7 +11647,6 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -12966,7 +12958,6 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {
@@ -14392,7 +14383,6 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (min-width: 25rem) {

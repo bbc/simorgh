@@ -64,7 +64,6 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -227,7 +226,6 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -435,7 +433,6 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -643,7 +640,6 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 .emotion-4 {
@@ -851,7 +847,6 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 .emotion-4 {

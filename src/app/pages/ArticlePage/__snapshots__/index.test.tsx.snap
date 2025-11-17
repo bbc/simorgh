@@ -1516,7 +1516,6 @@ exports[`Article Page should render a news article correctly 1`] = `
   width: 100%;
   object-fit: cover;
   height: auto;
-  background: rgb(32,34,36);
 }
 
 @media (max-width: 24.9375rem) {

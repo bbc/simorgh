@@ -34,7 +34,7 @@ const styles = {
       position: 'absolute',
       bottom: '0',
       left: '0',
-      zIndex: '2',
+      zIndex: '1',
       [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
       },

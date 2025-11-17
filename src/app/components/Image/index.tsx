@@ -28,6 +28,7 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
+  isCurationPromo?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -57,6 +58,7 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
+  isCurationPromo,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -66,7 +68,6 @@ const Image = ({
   useEffect(() => {
     const img = imgRef.current;
     if (img?.complete) {
-      // The image was already loaded before onLoad could fire
       setIsPortrait(img.naturalHeight > img.naturalWidth);
       setIsLoaded(true);
     }
@@ -188,6 +189,18 @@ const Image = ({
                 />
               </>
             )}
+            {isPortrait && isCurationPromo && (
+              <div
+                css={[
+                  styles.gradientBackground,
+                  {
+                    background: colour
+                      ? `linear-gradient(200deg,rgba(${colour.rgb.join(',')}, 0.6) 0%, #180109 54%, #180109 90%)`
+                      : `linear-gradient(200deg, ${GREY_8} 0%,  #180109 54%, #180109 90%)`,
+                  },
+                ]}
+              />
+            )}
             <img
               ref={imgRef}
               onLoad={e => {
@@ -207,11 +220,14 @@ const Image = ({
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
-                { background: `rgb(${colour?.rgb?.join(',')})` },
-                !isLoading && {
-                  [`@supports (filter: blur(15px))`]: {
-                    background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                isCurationPromo &&
+                  !isLoading && {
+                    [`@supports (filter: blur(15px))`]: {
+                      background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                    },
                   },
+                isCurationPromo && {
+                  background: `rgb(${colour?.rgb?.join(',')})`,
                 },
               ]}
               fetchPriority={fetchPriority}
@@ -221,22 +237,6 @@ const Image = ({
                   : 'auto',
               }} // aspectRatio used in combination with the objectFit:cover will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
             />
-            {isPortrait && !showPlaceholder && (
-              <div
-                css={[
-                  styles.gradientBackground,
-                  {
-                    background: colour
-                      ? `linear-gradient(
-            200deg,
-            rgba(${colour.rgb.join(',')}, 0.6) 0%,
-            #180109 54%, #180109 90%
-          )`
-                      : `linear-gradient(200deg, ${GREY_8} 0%,  #180109 54%, #180109 90%)`,
-                  },
-                ]}
-              />
-            )}
           </ImageWrapper>
         )}
         {children}

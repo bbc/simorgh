@@ -116,7 +116,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -254,7 +254,6 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
@@ -476,7 +475,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -614,7 +613,6 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
@@ -816,7 +814,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -938,7 +936,6 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
@@ -1127,7 +1124,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1265,7 +1262,6 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
@@ -1454,7 +1450,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1576,7 +1572,6 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
@@ -1784,7 +1779,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1922,7 +1917,6 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   width: 100%;
   object-fit: cover;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 <div>
