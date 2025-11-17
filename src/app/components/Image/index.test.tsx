@@ -31,17 +31,7 @@ const Fixture = ({ ...props }) => (
     {...props}
   />
 );
-beforeEach(() => {
-  jest
-    .spyOn(HTMLImageElement.prototype, 'complete', 'get')
-    .mockReturnValue(false);
-  jest
-    .spyOn(HTMLImageElement.prototype, 'naturalWidth', 'get')
-    .mockReturnValue(0);
-  jest
-    .spyOn(HTMLImageElement.prototype, 'naturalHeight', 'get')
-    .mockReturnValue(0);
-});
+
 describe('Image - Canonical', () => {
   it('should preload when preload is true', async () => {
     render(<Fixture preload />);
@@ -134,8 +124,7 @@ describe('Image - Canonical', () => {
   it('should render a placeholder image by default', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
   });
@@ -143,8 +132,7 @@ describe('Image - Canonical', () => {
   it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture darkPlaceholder />);
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
       backgroundColor: SHADOW,
     });
@@ -153,8 +141,7 @@ describe('Image - Canonical', () => {
   it('should not render a placeholder image when placeholder is false', () => {
     render(<Fixture placeholder={false} />);
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).not.toHaveStyle({
+    expect(imageEl.parentNode).not.toHaveStyle({
       backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
     });
   });
@@ -162,8 +149,7 @@ describe('Image - Canonical', () => {
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture />);
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '56.2%',
     });
   });
@@ -172,8 +158,7 @@ describe('Image - Canonical', () => {
     render(<Fixture width={undefined} height={undefined} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '0',
     });
   });
@@ -184,8 +169,7 @@ describe('Image - Canonical', () => {
     );
 
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });
   });
@@ -194,8 +178,7 @@ describe('Image - Canonical', () => {
     render(<Fixture aspectRatio={[4, 3]} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-    const wrapper = imageEl.parentElement?.parentElement;
-    expect(wrapper).toHaveStyle({
+    expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });
   });
@@ -213,16 +196,12 @@ describe('Image - Canonical', () => {
      <div
        style="padding-bottom: 56.25%; overflow: hidden;"
      >
-       <div
-         style="position: relative;"
-       >
-         <img
-           alt="Test image alt text"
-           loading="eager"
-           src="/test-image-500.jpg"
-           style="aspect-ratio: 16 / 9;"
-         />
-       </div>
+       <img
+         alt="Test image alt text"
+         loading="eager"
+         src="/test-image-500.jpg"
+         style="aspect-ratio: 16 / 9;"
+       />
      </div>
     `);
   });
@@ -241,17 +220,13 @@ describe('Image - Canonical', () => {
      <div
        style="padding-bottom: 56.25%; overflow: hidden;"
      >
-       <div
-         style="position: relative;"
-       >
-         <img
-           alt="Test image alt text"
-           loading="eager"
-           src="/test-image-500.jpg.webp"
-           srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
-           style="aspect-ratio: 16 / 9;"
-         />
-       </div>
+       <img
+         alt="Test image alt text"
+         loading="eager"
+         src="/test-image-500.jpg.webp"
+         srcset="/test-image-200.jpg.webp 200w, /test-image-500.jpg.webp 500w"
+         style="aspect-ratio: 16 / 9;"
+       />
      </div>
     `);
   });

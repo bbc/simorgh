@@ -1,6 +1,12 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, { PropsWithChildren, useState, use, useEffect } from 'react';
+import React, {
+  Fragment,
+  PropsWithChildren,
+  useState,
+  use,
+  useEffect,
+} from 'react';
 import { Global, jsx, useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import useImageColour from '#app/hooks/useImageColour';
@@ -98,7 +104,7 @@ const Image = ({
   );
 
   const hasFallback = srcSet && fallbackSrcSet && pageType === HOME_PAGE;
-  const ImageWrapper = hasFallback ? 'picture' : 'div';
+  const ImageWrapper = hasFallback ? 'picture' : Fragment;
   const ampImgLayout = hasDimensions ? 'responsive' : 'fill';
   const getImgSrcSet = () => {
     if (!hasFallback) return srcSet;
@@ -178,7 +184,7 @@ const Image = ({
             />
           </>
         ) : (
-          <ImageWrapper style={{ position: 'relative' }}>
+          <ImageWrapper>
             {hasFallback && pageType === HOME_PAGE && (
               <>
                 <source srcSet={srcSet} type={mediaType} sizes={sizes} />

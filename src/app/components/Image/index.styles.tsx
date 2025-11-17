@@ -53,7 +53,7 @@ const styles = {
     right: 0,
     bottom: 0,
     pointerEvents: 'none',
-    filter: `blur(${BLUR_RADIUS}px)`,
+    filter: `blur(15px)`,
   }),
 };
 
