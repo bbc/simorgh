@@ -1,5 +1,13 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import {
+  BLACK,
+  GREY_2,
+  GREY_4,
+  POSTBOX,
+  WHITE,
+} from '../ThemeProvider/palette';
+import { REITH_SANS } from '../ThemeProvider/fontFamilies';
 
 const styles = {
   ColoredContainer: ({ mq, spacings }: Theme) =>
@@ -9,8 +17,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background:
-        'linear-gradient(to bottom left, #bb1919 0%, #000 50%, #bb1919 100%)',
+      background: `linear-gradient(to bottom left, ${POSTBOX} 0%, ${BLACK} 50%, ${POSTBOX} 100%)`,
       padding: `${spacings.DOUBLE}rem`,
       minHeight: `${pixelsToRem(170)}rem`,
       maxHeight: `${pixelsToRem(370)}rem`,
@@ -63,11 +70,11 @@ const styles = {
 
   StyledDescription: ({ spacings, mq }: Theme) =>
     css({
-      color: '#F6F6F6',
+      color: GREY_2,
       marginBottom: 0,
       marginRight: `${spacings.TRIPLE}rem`,
       height: 'auto',
-      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      fontFamily: REITH_SANS,
       display: 'none',
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'block',
@@ -92,15 +99,15 @@ const styles = {
 
   StyledButtonPrimary: ({ mq, spacings }: Theme) =>
     css({
-      color: '#000000',
-      backgroundColor: '#FFFFFF',
+      color: BLACK,
+      backgroundColor: WHITE,
       border: 'none',
       width: 'auto',
       height: `${pixelsToRem(28)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      fontFamily: REITH_SANS,
       fontSize: `${pixelsToRem(15)}rem`,
       lineHeight: `${pixelsToRem(20)}rem`,
       fontWeight: 'bold',
@@ -123,29 +130,29 @@ const styles = {
 
   StyledText: () =>
     css({
-      color: '#F6F6F6',
+      color: GREY_2,
       fontSize: `${pixelsToRem(15)}rem`,
       height: `${pixelsToRem(28)}rem`,
       lineHeight: `${pixelsToRem(28)}rem`,
       fontWeight: 700,
       margin: 0,
       alignText: 'center',
-      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      fontFamily: REITH_SANS,
     }),
 
   StyledbuttonSecondary: ({ mq, spacings }: Theme) =>
     css({
-      color: '#FFFFFF',
+      color: WHITE,
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
-      textDecorationColor: '#B0B2B4',
+      textDecorationColor: GREY_4,
       fontWeight: 'bold',
       height: `${pixelsToRem(28)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: 'ReithSans, Helvetica, Arial, sans-serif',
+      fontFamily: REITH_SANS,
       [mq.GROUP_1_MAX_WIDTH]: {
         padding: 0,
       },
