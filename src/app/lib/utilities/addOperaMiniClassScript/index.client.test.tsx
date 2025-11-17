@@ -2,7 +2,13 @@
 /* eslint-disable no-eval */
 import addOperaMiniClassScript from '.';
 
+const classListAddSpy = jest.spyOn(document.documentElement.classList, 'add');
+
 describe('addOperaMiniClassScript', () => {
+  beforeEach(() => {
+    classListAddSpy.mockClear();
+  });
+
   class OperaMiniMock {
     // eslint-disable-next-line class-methods-use-this
     get [Symbol.toStringTag]() {
@@ -19,16 +25,9 @@ describe('addOperaMiniClassScript', () => {
     });
 
     it('should add is-opera-mini class to documentElement', () => {
-      const classListAddSpy = jest.spyOn(
-        document.documentElement.classList,
-        'add',
-      );
-
       eval(addOperaMiniClassScript.props.dangerouslySetInnerHTML.__html);
 
       expect(classListAddSpy).toHaveBeenCalledWith('is-opera-mini');
-
-      classListAddSpy.mockRestore();
     });
   });
 
@@ -41,16 +40,9 @@ describe('addOperaMiniClassScript', () => {
     });
 
     it('should not add is-opera-mini class to documentElement', () => {
-      const classListAddSpy = jest.spyOn(
-        document.documentElement.classList,
-        'add',
-      );
-
       eval(addOperaMiniClassScript.props.dangerouslySetInnerHTML.__html);
 
       expect(classListAddSpy).not.toHaveBeenCalledWith('is-opera-mini');
-
-      classListAddSpy.mockRestore();
     });
   });
 });
