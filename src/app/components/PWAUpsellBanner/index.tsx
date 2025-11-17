@@ -4,6 +4,9 @@ import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import { Close } from '../icons';
 import { ButtonBase } from './index.types';
+import Text from '../Text';
+import Paragraph from '../Paragraph';
+import Heading from '../Heading';
 
 interface PWAUpsellBannerProps {
   title: string;
@@ -29,16 +32,17 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
       <div css={styles.wrap}>
         <div css={styles.styledContent}>
           <div css={styles.textWrapper}>
-            <h1 css={styles.styledTitle} id="banner-title">
+            <Heading level={2} css={styles.styledTitle} id="banner-title">
               {title}
-            </h1>
-            <p css={styles.styledDescription} id="banner-description">
+            </Heading>
+            <Paragraph css={styles.styledDescription} id="banner-description">
               {description}
-            </p>
+            </Paragraph>
           </div>
 
           <div css={styles.ctaWrapper}>
-            <button
+            <Text
+              as="button"
               type="button"
               css={styles.styledButtonPrimary}
               onClick={handleInstallPWA}
@@ -46,23 +50,25 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
             >
               <span className="short-text">{buttonPrimary.shortText}</span>
               <span className="long-text">{buttonPrimary.longText}</span>
-            </button>
+            </Text>
 
             <span css={styles.styledText}>or</span>
 
-            <button
+            <Text
+              as="button"
               type="button"
               css={styles.styledButtonSecondary}
               onClick={buttonSecondary?.onClick}
               aria-label={buttonSecondary.text}
             >
               {buttonSecondary.text}
-            </button>
+            </Text>
           </div>
 
           {isDismissible && (
             <div>
-              <button
+              <Text
+                as="button"
                 type="button"
                 aria-label="close"
                 css={styles.subNavCloseButton}
