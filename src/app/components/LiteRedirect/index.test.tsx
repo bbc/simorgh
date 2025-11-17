@@ -47,26 +47,4 @@ describe('LiteRedirect', () => {
       expect(hasRedirected).toBe(expectedRedirect);
     },
   );
-
-  it.each(['.amp', '.lite'])('should not redirect for %s', type => {
-    const mockWindow = {
-      navigator: {
-        connection: {
-          effectiveType: '5g',
-        },
-      },
-      location: {
-        replace: jest.fn(),
-        href: `https://www.somepath.com${type}`,
-      },
-    } as unknown as Window;
-
-    redirectScript(mockWindow);
-    const replaceCallStack = (mockWindow.location.replace as jest.Mock).mock
-      .calls[0]?.[0];
-
-    const hasRedirected = Boolean(replaceCallStack);
-
-    expect(hasRedirected).toBe(false);
-  });
 });

@@ -1,15 +1,10 @@
 import React from 'react';
 
 export const redirectScript = (window: Window) => {
-  const { pathname, href } = window.location;
-  const isLite = /\.lite$/.test(href);
-  const isAmp = /\.amp$/.test(href);
+  const { pathname } = window.location;
 
   const allowList = ['/pidgin/articles/czrzwn80zjmo'];
-
   if (
-    !isLite &&
-    !isAmp &&
     window?.navigator?.connection?.effectiveType &&
     allowList.includes(pathname)
   ) {
@@ -28,6 +23,8 @@ export const redirectScript = (window: Window) => {
   }
 };
 
+// THIS HOOK IS ONLY TO BE USED WITH CANONICAL REDNERERS
+// DO NOT USE IT WITH LITE AND AMP RENDERERS
 export default () => {
   return (
     <script>
