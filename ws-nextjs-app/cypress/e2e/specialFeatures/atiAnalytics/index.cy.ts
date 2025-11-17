@@ -314,12 +314,8 @@ const ampTestSuites = canonicalTestSuites
     },
   ]);
 
-const supportsLite = ({ path }: { path: string }) =>
-  !path.startsWith('/persian/afghanistan');
-
 const liteTestSuites = canonicalTestSuites
   .filter(({ path }) => path !== '/ws/languages')
-  .filter(supportsLite)
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
