@@ -5,7 +5,6 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import styles from './index.styles';
 
 export type ContinueReadingButtonProps = {
@@ -21,8 +20,6 @@ const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
 }: ContinueReadingButtonProps) => {
-  const isOperaMini = useOperaMiniDetection();
-
   const {
     translations: { continueReading = 'Continue reading' },
   } = use(ServiceContext);
@@ -62,9 +59,6 @@ const ContinueReadingButton = ({
 
     setShowAllContent(true);
   };
-
-  // Hide button for Opera Mini users
-  if (isOperaMini) return null;
 
   // Hide button when all content is shown
   if (showAllContent) return null;
