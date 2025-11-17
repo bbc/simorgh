@@ -486,9 +486,8 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 .emotion-18 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 

@@ -222,7 +222,9 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                isPortrait ? styles.portraitImage : styles.image,
+                isPortrait && isCurationPromo
+                  ? styles.portraitImage
+                  : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,

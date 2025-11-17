@@ -251,9 +251,8 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -607,9 +606,8 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 .emotion-11 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -927,9 +925,8 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 .emotion-9 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -1250,9 +1247,8 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 .emotion-10 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -1557,9 +1553,8 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 .emotion-9 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -1899,9 +1894,8 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 .emotion-11 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 

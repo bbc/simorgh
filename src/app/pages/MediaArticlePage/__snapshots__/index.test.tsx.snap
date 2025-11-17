@@ -296,9 +296,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-17 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: 100%;
 }
 
@@ -731,9 +730,8 @@ exports[`MediaArticlePage should render a news article correctly 1`] = `
 }
 
 .emotion-39 {
-  position: relative;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   height: auto;
 }
 
