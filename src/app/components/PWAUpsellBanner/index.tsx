@@ -42,9 +42,7 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
               type="button"
               css={styles.styledButtonPrimary}
               onClick={handleInstallPWA}
-              aria-label={
-                buttonPrimary.shortText || buttonPrimary.longText || 'Install'
-              }
+              aria-label={buttonPrimary.shortText || buttonPrimary.longText}
             >
               <span className="short-text">{buttonPrimary.shortText}</span>
               <span className="long-text">{buttonPrimary.longText}</span>
@@ -56,7 +54,7 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
               type="button"
               css={styles.styledButtonSecondary}
               onClick={buttonSecondary?.onClick}
-              aria-label={buttonSecondary.text || 'Not now'}
+              aria-label={buttonSecondary.text}
             >
               {buttonSecondary.text}
             </button>
