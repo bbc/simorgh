@@ -30,6 +30,7 @@ export default ({
               type="button"
               css={styles.StyledButtonPrimary}
               onClick={handleInstallPWA}
+              aria-label={buttonPrimary.shortText || buttonPrimary.longText}
             >
               <span className="short-text">{buttonPrimary.shortText}</span>
               <span className="long-text">{buttonPrimary.longText}</span>
@@ -41,6 +42,7 @@ export default ({
               type="button"
               css={styles.StyledbuttonSecondary}
               onClick={buttonSecondary?.onClick}
+              aria-label={buttonSecondary.text}
             >
               {buttonSecondary.text}
             </button>

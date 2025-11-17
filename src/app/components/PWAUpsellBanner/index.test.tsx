@@ -12,7 +12,8 @@ describe('PWAUpsellBanner', () => {
     description: 'Get the best experience by installing our app.',
     isDismissible: true,
     buttonPrimary: {
-      text: 'Install',
+      shortText: 'Install',
+      longText: 'Install the PWA App',
       onClick: jest.fn(),
     },
     buttonSecondary: {
@@ -23,6 +24,46 @@ describe('PWAUpsellBanner', () => {
     handleInstallPWA: jest.fn(),
     handleClose: jest.fn(),
   };
+
+  it('sets correct aria-label for primary button (shortText)', () => {
+    render(<PWAUpsellBanner {...defaultProps} />);
+    const primaryButton = screen.getByRole('button', { name: /install/i });
+    expect(primaryButton).toHaveAttribute('aria-label', 'Install');
+  });
+
+  it('sets correct aria-label for primary button (longText)', () => {
+    const props = {
+      ...defaultProps,
+      buttonPrimary: {
+        ...defaultProps.buttonPrimary,
+        shortText: '',
+        longText: 'Install the PWA App',
+      },
+    };
+    render(<PWAUpsellBanner {...props} />);
+    const primaryButton = screen.getByRole('button', {
+      name: /install the pwa app/i,
+    });
+    expect(primaryButton).toHaveAttribute('aria-label', 'Install the PWA App');
+  });
+
+  it('sets correct aria-label for secondary button', () => {
+    render(<PWAUpsellBanner {...defaultProps} />);
+    const secondaryButton = screen.getByRole('button', { name: /not now/i });
+    expect(secondaryButton).toHaveAttribute('aria-label', 'Not now');
+  });
+
+  it('calls the primary button click handler when short text is present', () => {
+    render(<PWAUpsellBanner {...defaultProps} />);
+    fireEvent.click(screen.getByText('Install'));
+    expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
+  });
+
+  it('calls the primary button click handler when long text is present', () => {
+    render(<PWAUpsellBanner {...defaultProps} />);
+    fireEvent.click(screen.getByText('Install the PWA App'));
+    expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
+  });
 
   it('renders the banner with title and description', () => {
     render(<PWAUpsellBanner {...defaultProps} />);
@@ -43,8 +84,8 @@ describe('PWAUpsellBanner', () => {
   it('calls the primary button click handler when clicked', () => {
     render(<PWAUpsellBanner {...defaultProps} />);
 
-    fireEvent.click(screen.getByRole('button', { name: /install/i }));
-    expect(defaultProps.buttonPrimary.onClick).toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: /Install/i }));
+    expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
   });
 
   it('calls the secondary button click handler when clicked', () => {
