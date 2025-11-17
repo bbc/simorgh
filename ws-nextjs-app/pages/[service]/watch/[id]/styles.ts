@@ -41,12 +41,6 @@ const styles = {
       display: 'block',
       color: palette.GHOST,
     }),
-  synopses: ({ palette, spacings }: Theme) =>
-    css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
-      display: 'block',
-      color: palette.GHOST,
-    }),
   curationStyles: ({ palette }: Theme) =>
     css({
       '& h2, & a': {
