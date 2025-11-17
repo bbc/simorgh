@@ -1951,6 +1951,14 @@ exports[`PageLayoutWrapper should render fonts for news 1`] = `
 }
 `;
 
+exports[`PageLayoutWrapper should render fonts for newsround 1`] = `
+{
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
+  "font-style": "normal",
+  "font-weight": "400",
+}
+`;
+
 exports[`PageLayoutWrapper should render fonts for pashto 1`] = `
 {
   "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
