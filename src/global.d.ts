@@ -1,10 +1,11 @@
 import { ReverbClient } from '#models/types/eventTracking';
 import { BumpType, Player } from '#app/components/MediaLoader/types';
+import { EffectiveNetworkType } from '#app/models/types/global';
 
 declare global {
   interface Navigator {
     connection?: {
-      effectiveType?: string;
+      effectiveType?: EffectiveNetworkType;
       addEventListener?: (type: string, listener: () => void) => void;
       removeEventListener?: (type: string, listener: () => void) => void;
     };
