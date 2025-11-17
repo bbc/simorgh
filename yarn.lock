@@ -2568,7 +2568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css-prettifier@npm:^1.1.4":
+"@emotion/css-prettifier@npm:^1.2.0":
   version: 1.2.0
   resolution: "@emotion/css-prettifier@npm:1.2.0"
   dependencies:
@@ -2594,24 +2594,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/jest@npm:11.13.0, @emotion/jest@npm:^11.11.0":
-  version: 11.13.0
-  resolution: "@emotion/jest@npm:11.13.0"
+"@emotion/jest@npm:11.14.2, @emotion/jest@npm:^11.14.2":
+  version: 11.14.2
+  resolution: "@emotion/jest@npm:11.14.2"
   dependencies:
     "@babel/runtime": "npm:^7.18.3"
-    "@emotion/css-prettifier": "npm:^1.1.4"
+    "@emotion/css-prettifier": "npm:^1.2.0"
     chalk: "npm:^4.1.0"
     specificity: "npm:^0.4.1"
     stylis: "npm:4.2.0"
   peerDependencies:
-    "@types/jest": ^26.0.14 || ^27.0.0 || ^28.0.0 || ^29.0.0
+    "@types/jest": ^26.0.14 || ^27.0.0 || ^28.0.0 || ^29.0.0 || ^30.0.0
     enzyme-to-json: ^3.2.1
   peerDependenciesMeta:
     "@types/jest":
       optional: true
     enzyme-to-json:
       optional: true
-  checksum: 10/a1b50f8be147b25126fac36c3ebe1c4a2210b55ceeb6c1db99d975a1d51bd235b16ffb0d2c6e52506223f75688477452b059d35fd358e90de381abd5b07fe662
+  checksum: 10/4dd4cc8c3d46f05c5486cfa875ee51e7bc2c08efbe2801bb76574f905d73b12ad77bffcc853fcbd63e67fd25282ad34512aa4b65f7081a00aba51cfe75086aa0
   languageName: node
   linkType: hard
 
@@ -13383,9 +13383,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lighthouse@npm:13.0.0":
-  version: 13.0.0
-  resolution: "lighthouse@npm:13.0.0"
+"lighthouse@npm:13.0.1":
+  version: 13.0.1
+  resolution: "lighthouse@npm:13.0.1"
   dependencies:
     "@paulirish/trace_engine": "npm:0.0.61"
     "@sentry/node": "npm:^9.28.1"
@@ -13416,7 +13416,7 @@ __metadata:
     chrome-debug: core/scripts/manual-chrome-launcher.js
     lighthouse: cli/index.js
     smokehouse: cli/test/smokehouse/frontends/smokehouse-bin.js
-  checksum: 10/d78741b9c1b532f3a0830bf8284c29dc64224e16cdeb44a5a13f15364cb63da853d2bcb93af7fc436c3d6c049d9fd2243e0d8d7e5eca9d1fb7bf91ccff8308d2
+  checksum: 10/8bdcd629b3412b0f0dae66eab5fc0dcc77eed44c3d2306c8e5b57ae6c098a7b880799ddf0efc51c040df2a5b1ede3eca694276079f4e9fff7ee5a8f5f1b5e511
   languageName: node
   linkType: hard
 
@@ -15623,10 +15623,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ramda@npm:0.31.3":
-  version: 0.31.3
-  resolution: "ramda@npm:0.31.3"
-  checksum: 10/53b32bc60098cffda3ee84f633ea3e2e41946d98364196b14355d4a8b8a830101ac28e27fba83d496ad6b5637fab98bbc9aa85acdc7610cc0b74b5d0fe21a0df
+"ramda@npm:0.32.0":
+  version: 0.32.0
+  resolution: "ramda@npm:0.32.0"
+  checksum: 10/ee03949247ce0cdbb86642c7087adb015552a91e29e21ffe63f1d3e492328144dc3028f7f804f53c028ce753e46e50d0f4ba09c24b394efb98c1e412a5dd046c
   languageName: node
   linkType: hard
 
@@ -16782,7 +16782,7 @@ __metadata:
     "@babel/preset-react": "npm:7.28.5"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
-    "@emotion/jest": "npm:^11.11.0"
+    "@emotion/jest": "npm:^11.14.2"
     "@jest/environment": "npm:30.2.0"
     "@jest/types": "npm:30.2.0"
     "@next/swc-darwin-arm64": "npm:16.0.1"
@@ -16831,7 +16831,7 @@ __metadata:
     "@emotion/babel-plugin": "npm:11.13.5"
     "@emotion/babel-preset-css-prop": "npm:11.12.0"
     "@emotion/cache": "npm:11.14.0"
-    "@emotion/jest": "npm:11.13.0"
+    "@emotion/jest": "npm:11.14.2"
     "@emotion/react": "npm:11.14.0"
     "@emotion/server": "npm:11.11.0"
     "@emotion/styled": "npm:11.14.1"
@@ -16923,7 +16923,7 @@ __metadata:
     jest-silent-reporter: "npm:0.6.0"
     js-cookie: "npm:3.0.5"
     jsdom: "npm:27.0.0"
-    lighthouse: "npm:13.0.0"
+    lighthouse: "npm:13.0.1"
     lru-cache: "npm:11.1.0"
     minimist: "npm:1.2.8"
     mkdirp: "npm:3.0.1"
@@ -16935,7 +16935,7 @@ __metadata:
     polyfill-crypto.getrandomvalues: "npm:1.0.0"
     prettier: "npm:3.6.2"
     puppeteer: "npm:24.22.3"
-    ramda: "npm:0.31.3"
+    ramda: "npm:0.32.0"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
     react-helmet: "npm:6.1.0"

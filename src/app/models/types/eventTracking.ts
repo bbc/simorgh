@@ -15,6 +15,7 @@ export type EventTrackingMetadata = {
   advertiserID?: string;
   sendOptimizelyEvents?: boolean;
   alwaysInView?: boolean;
+  preventNavigation?: boolean;
 };
 
 export type EventTrackingBlock = {
