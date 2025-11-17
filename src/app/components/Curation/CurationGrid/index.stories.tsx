@@ -1,6 +1,7 @@
 import React from 'react';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import highImpactPromoFixture from '#data/ws/homePage/index.json';
+import curationWithPVs from '#data/persian/topics/c6z7mnr559gt.json';
 import { Summary } from '#app/models/types/curationData';
 
 import CurationGrid from '.';
@@ -22,14 +23,19 @@ export default {
 };
 
 export const Example = () => {
-  return (
-    <Component summaries={fixture.data?.curations[0].summaries} />
-  );
+  return <Component summaries={fixture.data?.curations[0].summaries} />;
 };
 
+export const CurationGridWithPortraitVideos = () => {
+  return <Component summaries={curationWithPVs.data?.curations[0].summaries} />;
+};
 
 export const HighImpactPromo = () => {
   return (
-    <Component summaries={highImpactPromoFixture.data.curations[0].summaries as Summary[]} />
+    <Component
+      summaries={
+        highImpactPromoFixture.data.curations[0].summaries as Summary[]
+      }
+    />
   );
 };
