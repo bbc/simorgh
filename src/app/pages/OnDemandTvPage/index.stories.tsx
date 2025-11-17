@@ -21,7 +21,6 @@ const onDemandTvFixtures: {
 
 const matchFixtures = (service: Services) => ({
   params: {
-    // @ts-expect-error partial data for testing
     serviceId: {
       afrique: 'bbc_afrique_tv',
       pashto: 'bbc_pashto_tv',
@@ -34,7 +33,6 @@ const Component = ({ service, isLite }: StoryProps) => {
     <BrowserRouter>
       <OnDemandTvPage
         match={matchFixtures(service)}
-        // @ts-expect-error partial data for testing purposes
         pageData={onDemandTvFixtures[service] || afrique}
         status={200}
         service={service}
