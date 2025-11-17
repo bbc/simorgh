@@ -4,7 +4,6 @@ import { jsx } from '@emotion/react';
 import React, { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
-import useOperaMiniDetection from '#app/hooks/useOperaMiniDetection';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
@@ -36,7 +35,6 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, nonce } = use(RequestContext);
-  const isOperaMini = useOperaMiniDetection();
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
@@ -48,7 +46,7 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-  if (isLite || isOperaMini) return null;
+  if (isLite) return null;
 
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
