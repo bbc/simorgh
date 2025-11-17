@@ -1,4 +1,4 @@
-import { services } from '../services/loadableConfig';
+import SERVICES from '../services';
 
 export default {
   _environment: 'local',
@@ -20,7 +20,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
-    value: `(${services.join('|')})`,
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,

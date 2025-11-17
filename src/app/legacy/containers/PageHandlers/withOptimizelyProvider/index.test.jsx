@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import withOptimizelyProvider from '.';
@@ -20,6 +21,11 @@ const props = {
     },
   },
 };
+
+const optimizelyProviderSpy = jest.spyOn(
+  optimizelyReactSdk,
+  'OptimizelyProvider',
+);
 
 const Component = () => <h1>Hola Optimizely</h1>;
 
@@ -42,8 +48,11 @@ jest.mock('./isCypress', () => jest.fn().mockImplementation(() => false));
 jest.mock('@optimizely/react-sdk');
 
 describe('withOptimizelyProvider HOC', () => {
+  const originalMatchMedia = window.matchMedia;
+
   afterEach(() => {
     jest.clearAllMocks();
+    window.matchMedia = originalMatchMedia;
   });
 
   it('should enrich the component with the Optimizely API', () => {
@@ -74,5 +83,38 @@ describe('withOptimizelyProvider HOC', () => {
 
     expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
     expect(cookieGetterSpy).toHaveReturnedWith('random-uuid');
+  });
+
+  it('should set mobile to true when the viewport width is less than or equal to GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    window.matchMedia = jest.fn().mockImplementation(query => ({
+      matches: query === `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    }));
+
+    render(<TestComponent />);
+
+    expect(optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile).toBe(
+      true,
+    );
+  });
+
+  it('should set mobile to false when the viewport width is greater than GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    window.matchMedia = jest.fn().mockImplementation(query => ({
+      matches: query !== `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    }));
+
+    render(<TestComponent />);
+
+    expect(optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile).toBe(
+      false,
+    );
+  });
+
+  // TODO: Will be extended in https://bbc.atlassian.net/browse/WS-947
+  it('should set referrer to null', () => {
+    render(<TestComponent />);
+
+    expect(
+      optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+    ).toBeNull();
   });
 });
