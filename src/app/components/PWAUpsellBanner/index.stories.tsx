@@ -5,12 +5,12 @@ export const Component = () => (
   <PWAUpsellBanner
     title="Accede a BBC Noticias con un solo toque"
     description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
-    buttonPrimary={{
+    primaryButton={{
       shortText: 'Agregar',
       longText: 'Agregar a la pantalla de inicio',
       onClick: () => console.log('Primary clicked'),
     }}
-    buttonSecondary={{
+    secondaryButton={{
       text: 'No ahora',
       onClick: () => console.log('Secondary clicked'),
     }}

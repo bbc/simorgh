@@ -10,7 +10,7 @@ import {
 import { REITH_SANS } from '../ThemeProvider/fontFamilies';
 
 const styles = {
-  coloredContainer: ({ mq, spacings }: Theme) =>
+  banner: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       margin: '0 auto',
@@ -35,13 +35,13 @@ const styles = {
       },
     }),
 
-  wrap: () =>
+  innerContainer: () =>
     css({
       width: '100%',
       padding: 0,
     }),
 
-  styledContent: ({ spacings }: Theme) =>
+  content: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -50,13 +50,13 @@ const styles = {
       gap: `${spacings.FULL}rem`,
     }),
 
-  textWrapper: ({ spacings }: Theme) =>
+  textContainer: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       marginRight: `${spacings.SEXTUPLE}rem`,
     }),
-  styledTitle: ({ spacings, palette, fontVariants }: Theme) =>
+  title: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,
       height: 'auto',
@@ -68,7 +68,7 @@ const styles = {
       lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
-  styledDescription: ({ spacings, mq }: Theme) =>
+  description: ({ spacings, mq }: Theme) =>
     css({
       color: GREY_2,
       marginBottom: 0,
@@ -82,7 +82,7 @@ const styles = {
       },
     }),
 
-  ctaWrapper: ({ mq, spacings }: Theme) =>
+  actionsContainer: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -99,7 +99,7 @@ const styles = {
       },
     }),
 
-  styledButtonPrimary: ({ mq, spacings }: Theme) =>
+  primaryButton: ({ mq, spacings }: Theme) =>
     css({
       color: BLACK,
       backgroundColor: WHITE,
@@ -130,7 +130,7 @@ const styles = {
       },
     }),
 
-  styledText: () =>
+  dividerText: () =>
     css({
       color: GREY_2,
       fontSize: `${pixelsToRem(15)}rem`,
@@ -142,7 +142,7 @@ const styles = {
       fontFamily: REITH_SANS,
     }),
 
-  styledButtonSecondary: ({ mq, spacings }: Theme) =>
+  secondaryButton: ({ mq, spacings }: Theme) =>
     css({
       color: WHITE,
       backgroundColor: 'transparent',
@@ -160,7 +160,7 @@ const styles = {
       },
     }),
 
-  subNavCloseButton: ({ palette }: Theme) =>
+  closeButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       top: `${pixelsToRem(-16)}rem`,
@@ -184,7 +184,7 @@ const styles = {
       },
     }),
 
-  subNavCloseButtonIcon: ({ palette }: Theme) =>
+  closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       top: `${pixelsToRem(-2)}rem`,

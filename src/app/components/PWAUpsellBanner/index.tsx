@@ -12,8 +12,8 @@ interface PWAUpsellBannerProps {
   title: string;
   description: string;
   isDismissible?: boolean;
-  buttonPrimary: ButtonBase & { shortText: string; longText: string };
-  buttonSecondary: ButtonBase & { text: string };
+  primaryButton: ButtonBase & { shortText: string; longText: string };
+  secondaryButton: ButtonBase & { text: string };
   handleClose: () => void;
   handleInstallPWA: () => void;
 }
@@ -22,46 +22,46 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
   title,
   description,
   isDismissible = true,
-  buttonPrimary,
-  buttonSecondary,
+  primaryButton,
+  secondaryButton,
   handleClose,
   handleInstallPWA,
 }) => {
   return (
-    <div css={styles.coloredContainer}>
-      <div css={styles.wrap}>
-        <div css={styles.styledContent}>
-          <div css={styles.textWrapper}>
-            <Heading level={2} css={styles.styledTitle} id="banner-title">
+    <div css={styles.banner}>
+      <div css={styles.innerContainer}>
+        <div css={styles.content}>
+          <div css={styles.textContainer}>
+            <Heading level={2} css={styles.title} id="banner-title">
               {title}
             </Heading>
-            <Paragraph css={styles.styledDescription} id="banner-description">
+            <Paragraph css={styles.description} id="banner-description">
               {description}
             </Paragraph>
           </div>
 
-          <div css={styles.ctaWrapper}>
+          <div css={styles.actionsContainer}>
             <Text
               as="button"
               type="button"
-              css={styles.styledButtonPrimary}
+              css={styles.primaryButton}
               onClick={handleInstallPWA}
-              aria-label={buttonPrimary.shortText || buttonPrimary.longText}
+              aria-label={primaryButton.shortText || primaryButton.longText}
             >
-              <span className="short-text">{buttonPrimary.shortText}</span>
-              <span className="long-text">{buttonPrimary.longText}</span>
+              <span className="short-text">{primaryButton.shortText}</span>
+              <span className="long-text">{primaryButton.longText}</span>
             </Text>
 
-            <span css={styles.styledText}>or</span>
+            <span css={styles.dividerText}>or</span>
 
             <Text
               as="button"
               type="button"
-              css={styles.styledButtonSecondary}
-              onClick={buttonSecondary?.onClick}
-              aria-label={buttonSecondary.text}
+              css={styles.secondaryButton}
+              onClick={secondaryButton?.onClick}
+              aria-label={secondaryButton.text}
             >
-              {buttonSecondary.text}
+              {secondaryButton.text}
             </Text>
           </div>
 
@@ -71,10 +71,10 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
                 as="button"
                 type="button"
                 aria-label="close"
-                css={styles.subNavCloseButton}
+                css={styles.closeButton}
                 onClick={handleClose}
               />
-              <Close css={styles.subNavCloseButtonIcon} />
+              <Close css={styles.closeButtonIcon} />
             </div>
           )}
         </div>

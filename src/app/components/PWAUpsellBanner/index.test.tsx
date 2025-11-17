@@ -11,12 +11,12 @@ describe('PWAUpsellBanner', () => {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
     isDismissible: true,
-    buttonPrimary: {
+    primaryButton: {
       shortText: 'Install',
       longText: 'Install the PWA App',
       onClick: jest.fn(),
     },
-    buttonSecondary: {
+    secondaryButton: {
       text: 'Not now',
       onClick: jest.fn(),
     },
@@ -34,8 +34,8 @@ describe('PWAUpsellBanner', () => {
   it('sets correct aria-label for primary button (longText)', () => {
     const props = {
       ...defaultProps,
-      buttonPrimary: {
-        ...defaultProps.buttonPrimary,
+      primaryButton: {
+        ...defaultProps.primaryButton,
         shortText: '',
         longText: 'Install the PWA App',
       },
@@ -92,7 +92,7 @@ describe('PWAUpsellBanner', () => {
     render(<PWAUpsellBanner {...defaultProps} />);
 
     fireEvent.click(screen.getByText('Not now'));
-    expect(defaultProps.buttonSecondary.onClick).toHaveBeenCalled();
+    expect(defaultProps.secondaryButton.onClick).toHaveBeenCalled();
   });
 
   it('renders the dismiss button when isDismissible is true', () => {

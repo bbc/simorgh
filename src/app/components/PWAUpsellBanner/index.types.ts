@@ -16,8 +16,8 @@ export interface SecondaryButton extends ButtonBase {
 export interface BannerProps {
   title: string;
   description: string;
-  buttonPrimary: PrimaryButton;
-  buttonSecondary: SecondaryButton;
+  primaryButton: PrimaryButton;
+  secondaryButton: SecondaryButton;
   isDismissible?: boolean;
   handleClose: () => void;
   handleInstallPWA?: () => void;
