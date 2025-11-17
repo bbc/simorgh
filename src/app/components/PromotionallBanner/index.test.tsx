@@ -4,9 +4,9 @@ import {
   screen,
   fireEvent,
 } from '../react-testing-library-with-providers';
-import PWAUpsellBanner from '.';
+import PromotionalBanner from '.';
 
-describe('PWAUpsellBanner', () => {
+describe('PromotionalBanner', () => {
   const defaultProps = {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
@@ -26,7 +26,7 @@ describe('PWAUpsellBanner', () => {
   };
 
   it('sets correct aria-label for primary button (shortText)', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
     const primaryButton = screen.getByRole('button', { name: /install/i });
     expect(primaryButton).toHaveAttribute('aria-label', 'Install');
   });
@@ -40,7 +40,7 @@ describe('PWAUpsellBanner', () => {
         longText: 'Install the PWA App',
       },
     };
-    render(<PWAUpsellBanner {...props} />);
+    render(<PromotionalBanner {...props} />);
     const primaryButton = screen.getByRole('button', {
       name: /install the pwa app/i,
     });
@@ -48,25 +48,25 @@ describe('PWAUpsellBanner', () => {
   });
 
   it('sets correct aria-label for secondary button', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
     const secondaryButton = screen.getByRole('button', { name: /not now/i });
     expect(secondaryButton).toHaveAttribute('aria-label', 'Not now');
   });
 
   it('calls the primary button click handler when short text is present', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install'));
     expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
   });
 
   it('calls the primary button click handler when long text is present', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install the PWA App'));
     expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
   });
 
   it('renders the banner with title and description', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
 
     expect(screen.getByText('Install our app')).toBeInTheDocument();
     expect(
@@ -75,34 +75,34 @@ describe('PWAUpsellBanner', () => {
   });
 
   it('renders primary and secondary buttons', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
 
     expect(screen.getByText('Install')).toBeInTheDocument();
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
   it('calls the primary button click handler when clicked', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
 
     fireEvent.click(screen.getByRole('button', { name: /Install/i }));
     expect(defaultProps.handleInstallPWA).toHaveBeenCalled();
   });
 
   it('calls the secondary button click handler when clicked', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
 
     fireEvent.click(screen.getByText('Not now'));
     expect(defaultProps.secondaryButton.onClick).toHaveBeenCalled();
   });
 
   it('renders the dismiss button when isDismissible is true', () => {
-    render(<PWAUpsellBanner {...defaultProps} />);
+    render(<PromotionalBanner {...defaultProps} />);
 
     expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument();
   });
 
   it('does not render the dismiss button when isDismissible is false', () => {
-    render(<PWAUpsellBanner {...defaultProps} isDismissible={false} />);
+    render(<PromotionalBanner {...defaultProps} isDismissible={false} />);
 
     expect(
       screen.queryByRole('button', { name: /close/i }),

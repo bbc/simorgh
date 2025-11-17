@@ -1,8 +1,8 @@
 import React from 'react';
-import PWAUpsellBanner from '.';
+import PromotionalBanner from '.';
 
 export const Component = () => (
-  <PWAUpsellBanner
+  <PromotionalBanner
     title="Accede a BBC Noticias con un solo toque"
     description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
     primaryButton={{
@@ -21,6 +21,6 @@ export const Component = () => (
 );
 
 export default {
-  title: 'Components/PWAUpsellBanner',
+  title: 'Components/PromotionalBanner',
   Component,
 };

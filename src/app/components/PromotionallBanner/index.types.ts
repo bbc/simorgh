@@ -23,4 +23,4 @@ export interface BannerProps {
   handleInstallPWA?: () => void;
 }
 
-export declare function PWAUpsellBanner(props: BannerProps): JSX.Element;
+export declare function PromotionalBanner(props: BannerProps): JSX.Element;

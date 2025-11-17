@@ -8,7 +8,7 @@ import Text from '../Text';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
 
-interface PWAUpsellBannerProps {
+interface PromotionalBannerProps {
   title: string;
   description: string;
   isDismissible?: boolean;
@@ -18,7 +18,7 @@ interface PWAUpsellBannerProps {
   handleInstallPWA: () => void;
 }
 
-const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
+const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
   title,
   description,
   isDismissible = true,
@@ -83,4 +83,4 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
   );
 };
 
-export default PWAUpsellBanner;
+export default PromotionalBanner;
