@@ -10,7 +10,7 @@ import {
 import { REITH_SANS } from '../ThemeProvider/fontFamilies';
 
 const styles = {
-  ColoredContainer: ({ mq, spacings }: Theme) =>
+  coloredContainer: ({ mq, spacings }: Theme) =>
     css({
       position: 'relative',
       margin: '0 auto',
@@ -35,13 +35,13 @@ const styles = {
       },
     }),
 
-  Wrap: () =>
+  wrap: () =>
     css({
       width: '100%',
       padding: 0,
     }),
 
-  StyledContent: ({ spacings }: Theme) =>
+  styledContent: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
@@ -50,13 +50,13 @@ const styles = {
       gap: `${spacings.FULL}rem`,
     }),
 
-  TextWrapper: ({ spacings }: Theme) =>
+  textWrapper: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       marginRight: `${spacings.SEXTUPLE}rem`,
     }),
-  StyledTitle: ({ spacings, palette, fontVariants }: Theme) =>
+  styledTitle: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,
       height: 'auto',
@@ -68,7 +68,7 @@ const styles = {
       lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
-  StyledDescription: ({ spacings, mq }: Theme) =>
+  styledDescription: ({ spacings, mq }: Theme) =>
     css({
       color: GREY_2,
       marginBottom: 0,
@@ -81,7 +81,7 @@ const styles = {
       },
     }),
 
-  CTAWrapper: ({ mq, spacings }: Theme) =>
+  ctaWrapper: ({ mq, spacings }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -97,7 +97,7 @@ const styles = {
       },
     }),
 
-  StyledButtonPrimary: ({ mq, spacings }: Theme) =>
+  styledButtonPrimary: ({ mq, spacings }: Theme) =>
     css({
       color: BLACK,
       backgroundColor: WHITE,
@@ -128,7 +128,7 @@ const styles = {
       },
     }),
 
-  StyledText: () =>
+  styledText: () =>
     css({
       color: GREY_2,
       fontSize: `${pixelsToRem(15)}rem`,
@@ -140,7 +140,7 @@ const styles = {
       fontFamily: REITH_SANS,
     }),
 
-  StyledbuttonSecondary: ({ mq, spacings }: Theme) =>
+  styledButtonSecondary: ({ mq, spacings }: Theme) =>
     css({
       color: WHITE,
       backgroundColor: 'transparent',

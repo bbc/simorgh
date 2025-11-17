@@ -25,22 +25,22 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
   handleInstallPWA,
 }) => {
   return (
-    <div css={styles.ColoredContainer}>
-      <div css={styles.Wrap}>
-        <div css={styles.StyledContent}>
-          <div css={styles.TextWrapper}>
-            <h1 css={styles.StyledTitle} id="banner-title">
+    <div css={styles.coloredContainer}>
+      <div css={styles.wrap}>
+        <div css={styles.styledContent}>
+          <div css={styles.textWrapper}>
+            <h1 css={styles.styledTitle} id="banner-title">
               {title}
             </h1>
-            <p css={styles.StyledDescription} id="banner-description">
+            <p css={styles.styledDescription} id="banner-description">
               {description}
             </p>
           </div>
 
-          <div css={styles.CTAWrapper}>
+          <div css={styles.ctaWrapper}>
             <button
               type="button"
-              css={styles.StyledButtonPrimary}
+              css={styles.styledButtonPrimary}
               onClick={handleInstallPWA}
               aria-label={
                 buttonPrimary.shortText || buttonPrimary.longText || 'Install'
@@ -50,11 +50,11 @@ const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
               <span className="long-text">{buttonPrimary.longText}</span>
             </button>
 
-            <span css={styles.StyledText}>or</span>
+            <span css={styles.styledText}>or</span>
 
             <button
               type="button"
-              css={styles.StyledbuttonSecondary}
+              css={styles.styledButtonSecondary}
               onClick={buttonSecondary?.onClick}
               aria-label={buttonSecondary.text || 'Not now'}
             >
