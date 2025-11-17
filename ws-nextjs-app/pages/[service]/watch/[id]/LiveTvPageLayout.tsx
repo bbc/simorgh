@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use, Fragment } from 'react';
 import { Curation as CurationType } from '#app/models/types/curationData';
 import Curation from '#app/components/Curation';
 import Heading from '#app/components/Heading';
@@ -20,7 +20,7 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
     ...curationProps
   } = curation;
   return (
-    <React.Fragment key={`${curationId}-${position}`}>
+    <Fragment key={`${curationId}-${position}`}>
       <Curation
         summaries={summaries || []}
         title={curationTitle}
@@ -30,7 +30,7 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
         curationId={curationId}
         {...curationProps}
       />
-    </React.Fragment>
+    </Fragment>
   );
 };
 
