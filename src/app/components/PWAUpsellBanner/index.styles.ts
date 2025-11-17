@@ -72,6 +72,7 @@ const styles = {
     css({
       color: GREY_2,
       marginBottom: 0,
+      marginTop: `${spacings.FULL}rem`,
       marginRight: `${spacings.TRIPLE}rem`,
       height: 'auto',
       fontFamily: REITH_SANS,
@@ -91,6 +92,7 @@ const styles = {
       marginBottom: 0,
       marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MAX_WIDTH]: {
+        marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
         width: `${pixelsToRem(172)}rem`,
         height: `${spacings.FULL}rem`,
@@ -103,7 +105,7 @@ const styles = {
       backgroundColor: WHITE,
       border: 'none',
       width: 'auto',
-      height: `${pixelsToRem(28)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
@@ -148,7 +150,7 @@ const styles = {
       textDecoration: 'underline',
       textDecorationColor: GREY_4,
       fontWeight: 'bold',
-      height: `${pixelsToRem(28)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
