@@ -34,6 +34,38 @@ exports[`Document Component should render AMP version correctly 1`] = `
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
     />
+    <script
+      data-react-helmet="true"
+      type="text/javascript"
+    >
+      (
+    window.addEventListener('load', () =&gt; {
+      (function redirectScript(window) {
+  var _window$navigator;
+  var _window$location = window.location,
+    pathname = _window$location.pathname,
+    href = _window$location.href;
+  var isLite = /\\.lite$/.test(href);
+  var isAmp = /\\.amp$/.test(href);
+  var allowList = ['/pidgin/articles/czrzwn80zjmo'];
+  if (!isLite && !isAmp && window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
+    var toLitePath = "".concat(pathname, ".lite");
+    var ect = window.navigator.connection.effectiveType;
+    var normalisedEct = ect.toLocaleLowerCase();
+    switch (normalisedEct) {
+      case 'slow-2g':
+      case '2g':
+      case '3g':
+        window.location.replace(toLitePath);
+        break;
+      default:
+        break;
+    }
+  }
+})(window)
+    })
+  )
+    </script>
     <style
       amp-custom=""
       data-emotion-css="7prgni-StyledLink"
@@ -264,6 +296,38 @@ exports[`Document Component should render LITE version correctly 1`] = `
       }
     });
   
+    </script>
+    <script
+      data-react-helmet="true"
+      type="text/javascript"
+    >
+      (
+    window.addEventListener('load', () =&gt; {
+      (function redirectScript(window) {
+  var _window$navigator;
+  var _window$location = window.location,
+    pathname = _window$location.pathname,
+    href = _window$location.href;
+  var isLite = /\\.lite$/.test(href);
+  var isAmp = /\\.amp$/.test(href);
+  var allowList = ['/pidgin/articles/czrzwn80zjmo'];
+  if (!isLite && !isAmp && window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
+    var toLitePath = "".concat(pathname, ".lite");
+    var ect = window.navigator.connection.effectiveType;
+    var normalisedEct = ect.toLocaleLowerCase();
+    switch (normalisedEct) {
+      case 'slow-2g':
+      case '2g':
+      case '3g':
+        window.location.replace(toLitePath);
+        break;
+      default:
+        break;
+    }
+  }
+})(window)
+    })
+  )
     </script>
   </head>
   <body>
