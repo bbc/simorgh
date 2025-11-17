@@ -1,14 +1,6 @@
 import { redirectScript } from '.';
 
 describe('LiteRedirect', () => {
-  beforeEach(() => {
-    // I've tried mocking the replace function like this, but it still won't work.
-    // Object.defineProperty(window, 'location', {
-    //   configurable: true,
-    //   writable: true,
-    //   value: { replace: jest.fn() },
-    // });
-  });
   it.each([
     {
       effectiveType: 'randomValue',
@@ -33,19 +25,6 @@ describe('LiteRedirect', () => {
   ])(
     `When the client is on $effectiveType then expect redirect should be $expectRedirect`,
     ({ effectiveType, expectedRedirect }) => {
-      const isLite = false;
-      const testLitePath = '/testLitePath';
-
-      // Strangely enough, this works for mocking the navigator.
-      // Object.defineProperty(window, 'navigator', {
-      //   writable: true,
-      //   value: {
-      //     connection: {
-      //       effectiveType,
-      //     },
-      //   },
-      // });
-
       const mockWindow = {
         navigator: {
           connection: {
@@ -54,10 +33,12 @@ describe('LiteRedirect', () => {
         },
         location: {
           replace: jest.fn(),
+          href: 'https://www.somepath.com/',
+          pathname: '/pidgin/articles/czrzwn80zjmo',
         },
       } as unknown as Window;
 
-      redirectScript(mockWindow, isLite, testLitePath);
+      redirectScript(mockWindow);
       const replaceCallStack = (mockWindow.location.replace as jest.Mock).mock
         .calls[0]?.[0];
 
@@ -66,4 +47,26 @@ describe('LiteRedirect', () => {
       expect(hasRedirected).toBe(expectedRedirect);
     },
   );
+
+  it.each(['.amp', '.lite'])('should not redirect for %s', type => {
+    const mockWindow = {
+      navigator: {
+        connection: {
+          effectiveType: '5g',
+        },
+      },
+      location: {
+        replace: jest.fn(),
+        href: `https://www.somepath.com${type}`,
+      },
+    } as unknown as Window;
+
+    redirectScript(mockWindow);
+    const replaceCallStack = (mockWindow.location.replace as jest.Mock).mock
+      .calls[0]?.[0];
+
+    const hasRedirected = Boolean(replaceCallStack);
+
+    expect(hasRedirected).toBe(false);
+  });
 });
