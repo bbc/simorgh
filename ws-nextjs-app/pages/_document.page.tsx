@@ -37,7 +37,8 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
-import LiteRedirect from '#app/components/LiteRedirect';
+import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
+import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -190,7 +191,7 @@ export default class AppDocument extends Document<DocProps> {
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
-              <LiteRedirect />
+              <CanonicalToLiteRedirect />
               <ReverbTemplate />
               <script
                 type="text/javascript"
@@ -198,6 +199,7 @@ export default class AppDocument extends Document<DocProps> {
                   __html: `document.documentElement.classList.remove("no-js");`,
                 }}
               />
+              {addOperaMiniClassScript}
               <Script strategy="beforeInteractive">
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>
