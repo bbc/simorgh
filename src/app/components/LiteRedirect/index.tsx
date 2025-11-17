@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 export const redirectScript = (window: Window) => {
   const { pathname, href } = window.location;
@@ -30,20 +29,13 @@ export const redirectScript = (window: Window) => {
 };
 
 export default () => {
-  const innerHTML = `(
-    window.addEventListener('load', () => {
-      (${redirectScript.toString()})(window)
-    })
-  )`;
-
   return (
-    <Helmet
-      script={[
-        {
-          type: 'text/javascript',
-          innerHTML,
-        },
-      ]}
-    />
+    <script>
+      {`
+        window.addEventListener('load', () => {
+          (${redirectScript.toString()})(window)
+        })
+      `}
+    </script>
   );
 };
