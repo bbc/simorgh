@@ -243,7 +243,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="Promena kod svake žene"
-  class="bbc-4ejld5"
+  class="bbc-1kcx083"
   fetchpriority="high"
   loading="eager"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3d07/test/7ea19630-8d4a-11ef-8e34-ef6bbfe11731.jpg.webp"
@@ -492,7 +492,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.whatsa
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-4ejld5"
+  class="bbc-1kcx083"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp"

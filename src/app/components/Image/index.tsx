@@ -62,7 +62,7 @@ const Image = ({
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isPortrait, setIsPortrait] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(true);
   const imgRef = React.useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {

@@ -143,7 +143,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     >
       <img
         alt=""
-        class="css-9508jy"
+        class="css-1d2my7e"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -230,7 +230,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     >
       <img
         alt=""
-        class="css-9508jy"
+        class="css-1d2my7e"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -321,7 +321,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       >
         <img
           alt=""
-          class="css-9508jy"
+          class="css-1d2my7e"
           loading="eager"
           src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
           srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"

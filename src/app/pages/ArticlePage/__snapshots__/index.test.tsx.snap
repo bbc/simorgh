@@ -1513,8 +1513,9 @@ exports[`Article Page should render a news article correctly 1`] = `
 }
 
 .emotion-15 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 

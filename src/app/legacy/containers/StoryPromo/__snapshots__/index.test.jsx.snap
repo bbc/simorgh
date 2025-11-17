@@ -504,8 +504,9 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -2228,8 +2229,9 @@ exports[`StoryPromo Container should render audio with no duration correctly for
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -3815,8 +3817,9 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -5151,8 +5154,9 @@ exports[`StoryPromo Container should render full width promos correctly for cano
 }
 
 .emotion-8 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -7127,8 +7131,9 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -8341,8 +8346,9 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -10333,8 +10339,9 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -11644,8 +11651,9 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -12955,8 +12963,9 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 
@@ -14380,8 +14389,9 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
 }
 
 .emotion-7 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: auto;
 }
 

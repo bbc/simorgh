@@ -193,7 +193,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
-  class="bbc-4ejld5"
+  class="bbc-1kcx083"
   fetchpriority="high"
   loading="eager"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
@@ -748,7 +748,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.co
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-4ejld5"
+  class="bbc-1kcx083"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp"
