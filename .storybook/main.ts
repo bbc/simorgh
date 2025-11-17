@@ -100,22 +100,6 @@ const storybookConfig: StorybookConfig = {
     config.resolve!.alias = {
       ...config.resolve!.alias,
       ...alias.webpackDirAlias,
-      // '#app': resolvePath('src/app'),
-      // '#src': resolvePath('src'),
-      // '#nextjs': resolvePath('ws-nextjs-app/'),
-      // '#contexts': resolvePath('src/app/contexts'),
-      // '#components': resolvePath('src/app/legacy/components'),
-      // '#containers': resolvePath('src/app/legacy/containers'),
-      // '#data': resolvePath('data/'),
-      // '#hooks': resolvePath('src/app/hooks'),
-      // '#psammead': resolvePath('src/app/legacy/psammead'),
-      // '#lib': resolvePath('src/app/lib/'),
-      // '#models': resolvePath('src/app/models/'),
-      // '#pages': resolvePath('src/app/pages/'),
-      // '#testHelpers': resolvePath('src/testHelpers/'),
-      // '#server': resolvePath('src/server/'),
-      // '#storybook': resolvePath('.storybook/'),
-      // '#cypress': resolvePath('cypress/'),
     };
     return config;
   },
