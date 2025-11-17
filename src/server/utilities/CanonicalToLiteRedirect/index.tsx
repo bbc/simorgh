@@ -23,7 +23,7 @@ export const redirectScript = (window: Window) => {
   }
 };
 
-// THIS HOOK IS ONLY TO BE USED WITH CANONICAL REDNERERS
+// THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL REDNERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
 export default () => {
   return (
