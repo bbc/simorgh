@@ -1,16 +1,23 @@
 import type { JSX } from 'react';
 
-export interface BannerButton {
-  text: string;
+export interface ButtonBase {
   onClick: () => void;
 }
 
+export interface PrimaryButton extends ButtonBase {
+  shortText: string;
+  longText?: string;
+}
+
+export interface SecondaryButton extends ButtonBase {
+  text: string;
+}
+
 export interface BannerProps {
-  serviceBackground: 'mundo' | 'default';
   title: string;
   description: string;
-  buttonPrimary: BannerButton;
-  buttonSecondary: BannerButton;
+  buttonPrimary: PrimaryButton;
+  buttonSecondary: SecondaryButton;
   isDismissible?: boolean;
   handleClose: () => void;
   handleInstallPWA?: () => void;

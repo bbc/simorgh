@@ -1,19 +1,31 @@
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import { Close } from '../icons';
+import { ButtonBase } from './index.types';
 
-export default ({
+interface PWAUpsellBannerProps {
+  title: string;
+  description: string;
+  isDismissible?: boolean;
+  buttonPrimary: ButtonBase & { shortText: string; longText: string };
+  buttonSecondary: ButtonBase & { text: string };
+  handleClose: () => void;
+  handleInstallPWA: () => void;
+}
+
+const PWAUpsellBanner: React.FC<PWAUpsellBannerProps> = ({
   title,
   description,
   isDismissible = true,
   buttonPrimary,
   buttonSecondary,
-  serviceBackground,
   handleClose,
   handleInstallPWA,
 }) => {
   return (
-    <div css={[styles.ColoredContainer, styles[serviceBackground]]}>
+    <div css={styles.ColoredContainer}>
       <div css={styles.Wrap}>
         <div css={styles.StyledContent}>
           <div css={styles.TextWrapper}>
@@ -30,7 +42,9 @@ export default ({
               type="button"
               css={styles.StyledButtonPrimary}
               onClick={handleInstallPWA}
-              aria-label={buttonPrimary.shortText || buttonPrimary.longText}
+              aria-label={
+                buttonPrimary.shortText || buttonPrimary.longText || 'Install'
+              }
             >
               <span className="short-text">{buttonPrimary.shortText}</span>
               <span className="long-text">{buttonPrimary.longText}</span>
@@ -42,14 +56,14 @@ export default ({
               type="button"
               css={styles.StyledbuttonSecondary}
               onClick={buttonSecondary?.onClick}
-              aria-label={buttonSecondary.text}
+              aria-label={buttonSecondary.text || 'Not now'}
             >
               {buttonSecondary.text}
             </button>
           </div>
 
           {isDismissible && (
-            <div css={styles.CloseButtonWrapper}>
+            <div>
               <button
                 type="button"
                 aria-label="close"
@@ -64,3 +78,5 @@ export default ({
     </div>
   );
 };
+
+export default PWAUpsellBanner;

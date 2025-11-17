@@ -43,14 +43,12 @@ const styles = {
       gap: `${spacings.FULL}rem`,
     }),
 
-  TextWrapper: ({ spacings }: Theme) => {
+  TextWrapper: ({ spacings }: Theme) =>
     css({
       display: 'flex',
       flexDirection: 'column',
       marginRight: `${spacings.SEXTUPLE}rem`,
-    });
-  },
-
+    }),
   StyledTitle: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,

@@ -1,14 +1,8 @@
 import React from 'react';
 import PWAUpsellBanner from '.';
 
-export default {
-  title: 'Components/PWAUpsellBanner',
-  component: PWAUpsellBanner,
-};
-
-export const Example = () => (
+export const Component = () => (
   <PWAUpsellBanner
-    serviceBackground="mundo"
     title="Accede a BBC Noticias con un solo toque"
     description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
     buttonPrimary={{
@@ -25,3 +19,8 @@ export const Example = () => (
     handleInstallPWA={() => console.log('Install PWA clicked')}
   />
 );
+
+export default {
+  title: 'Components/PWAUpsellBanner',
+  Component,
+};
