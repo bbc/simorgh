@@ -1,26 +1,41 @@
 import React from 'react';
-import PromotionalBanner from '.';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import PromotionalBannerComponent from '.';
+import services from '#server/utilities/serviceConfigs';
+import { StoryProps } from '../../models/types/storybook';
 
-export const Component = () => (
-  <PromotionalBanner
-    title="Accede a BBC Noticias con un solo toque"
-    description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
-    primaryButton={{
-      shortText: 'Agregar',
-      longText: 'Agregar a la pantalla de inicio',
-      onClick: () => console.log('Primary clicked'),
-    }}
-    secondaryButton={{
-      text: 'No ahora',
-      onClick: () => console.log('Secondary clicked'),
-    }}
-    isDismissible
-    handleClose={() => console.log('Banner closed')}
-    handleInstallPWA={() => console.log('Install PWA clicked')}
-  />
-);
+const ComponentWithContext = ({
+  service = 'mundo',
+  variant = 'default',
+}: StoryProps) => {
+  const bannerConfig = services[service]?.[variant]?.promotionalBanner;
+  const { title, description, primaryButton, secondaryButton } = bannerConfig;
+  return (
+    <ServiceContextProvider service={service} variant={variant}>
+      <PromotionalBannerComponent
+        title={title}
+        description={description}
+        primaryButton={{
+          shortText: primaryButton?.shortText,
+          longText: primaryButton?.longText,
+          onClick: () => console.log('Primary clicked'),
+        }}
+        orText={bannerConfig.orText}
+        secondaryButton={{
+          text: secondaryButton?.text,
+          onClick: () => console.log('Secondary clicked'),
+        }}
+        isDismissible
+        handleClose={() => console.log('Banner closed')}
+        handleInstallPWA={() => console.log('Install PWA clicked')}
+      />
+    </ServiceContextProvider>
+  );
+};
 
 export default {
   title: 'Components/PromotionalBanner',
-  Component,
+  component: ComponentWithContext,
 };
+
+export const PromotionalBanner = ComponentWithContext;

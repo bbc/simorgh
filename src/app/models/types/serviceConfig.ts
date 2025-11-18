@@ -113,6 +113,7 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  promotionalBanner?: PromotionalBanner;
   electionBanner?: {
     heights?: {
       desktop: number;
@@ -122,6 +123,19 @@ export type ServiceConfig = {
     electionThingIds: string[];
     iframeSrc: string;
     iframeDevSrc: string;
+  };
+};
+
+export type PromotionalBanner = {
+  title: string;
+  description: string;
+  orText: string;
+  primaryButton: {
+    shortText: string;
+    longText: string;
+  };
+  secondaryButton: {
+    text: string;
   };
 };
 

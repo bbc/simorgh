@@ -11,9 +11,10 @@ import Heading from '../Heading';
 interface PromotionalBannerProps {
   title: string;
   description: string;
+  orText: string;
   isDismissible?: boolean;
   primaryButton: ButtonBase & { shortText: string; longText: string };
-  secondaryButton: ButtonBase & { text: string };
+  secondaryButton: ButtonBase & { text?: string };
   handleClose: () => void;
   handleInstallPWA: () => void;
 }
@@ -22,6 +23,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
   title,
   description,
   isDismissible = true,
+  orText,
   primaryButton,
   secondaryButton,
   handleClose,
@@ -52,7 +54,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
               <span className="long-text">{primaryButton.longText}</span>
             </Text>
 
-            <span css={styles.dividerText}>or</span>
+            <span css={styles.dividerText}>{orText}</span>
 
             <Text
               as="button"

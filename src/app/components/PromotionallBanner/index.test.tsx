@@ -11,6 +11,7 @@ describe('PromotionalBanner', () => {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
     isDismissible: true,
+    orText: 'or',
     primaryButton: {
       shortText: 'Install',
       longText: 'Install the PWA App',
@@ -24,6 +25,18 @@ describe('PromotionalBanner', () => {
     handleInstallPWA: jest.fn(),
     handleClose: jest.fn(),
   };
+
+  it('renders default props', () => {
+    render(<PromotionalBanner {...defaultProps} />);
+    expect(screen.getByText('Install our app')).toBeInTheDocument();
+    expect(
+      screen.getByText('Get the best experience by installing our app.'),
+    ).toBeInTheDocument();
+    expect(screen.getByText('or')).toBeInTheDocument();
+    expect(screen.getByText('Install')).toBeInTheDocument();
+    expect(screen.getByText('Install the PWA App')).toBeInTheDocument();
+    expect(screen.getByText('Not now')).toBeInTheDocument();
+  });
 
   it('sets correct aria-label for primary button (shortText)', () => {
     render(<PromotionalBanner {...defaultProps} />);
