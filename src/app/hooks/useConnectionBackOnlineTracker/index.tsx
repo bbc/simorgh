@@ -16,20 +16,13 @@ const useConnectionBackOnlineTracker = () => {
     eventName: BACK_ONLINE_EVENT_NAME,
   });
 
-  const prevIsOnlineRef = useRef<boolean | null>(null);
+  const prevIsOnlineRef = useRef(true);
   const lastBackOnlineEventTimeRef = useRef(0);
 
   const handleStatusChange = useCallback(
     ({ isOnline: currentIsOnline, networkType: type }: NetworkStatus) => {
-      // Initial render
-      if (prevIsOnlineRef.current === null) {
-        prevIsOnlineRef.current = Boolean(currentIsOnline);
-        return;
-      }
-
       const wasOnline = prevIsOnlineRef.current;
 
-      // No state change
       if (wasOnline === currentIsOnline) {
         return;
       }
@@ -38,7 +31,7 @@ const useConnectionBackOnlineTracker = () => {
       const timeSinceLastBackOnline = now - lastBackOnlineEventTimeRef.current;
       const isPageVisible =
         typeof document !== 'undefined' &&
-        document?.visibilityState === 'visible';
+        document.visibilityState === 'visible';
 
       // Only track when transitioning from offline -> online and page is visible
       if (
