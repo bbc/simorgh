@@ -54,7 +54,7 @@ module.exports = {
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
-  webpack: config => {
+  webpack: (config, { webpack, isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -64,22 +64,22 @@ module.exports = {
       new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
     );
 
-    // /*
-    //   Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
-    // */
-    // if (!isServer) {
-    //   config.plugins.push(
-    //     new webpack.NormalModuleReplacementPlugin(
-    //       /(.*)logger.node(\.*)/,
-    //       resource => {
-    //         resource.request = resource.request.replace(
-    //           /logger.node/,
-    //           'logger.web',
-    //         );
-    //       },
-    //     ),
-    //   );
-    // }
+    /*
+      Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
+    */
+    if (!isServer) {
+      config.plugins.push(
+        new webpack.NormalModuleReplacementPlugin(
+          /(.*)logger.node(\.*)/,
+          resource => {
+            resource.request = resource.request.replace(
+              /logger.node/,
+              'logger.web',
+            );
+          },
+        ),
+      );
+    }
 
     return config;
   },
