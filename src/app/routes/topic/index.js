@@ -4,7 +4,7 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {
-  path: [topicPath, '/persian/afghanistan'],
+  path: [topicPath],
   exact: true,
   component: TopicPage,
   getInitialData,
