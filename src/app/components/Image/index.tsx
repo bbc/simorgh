@@ -80,18 +80,18 @@ const Image = ({
   }, []);
 
   const {
-    palette: { GREY_8 },
+    palette: { GREY_8, WHITE },
     isDarkUi,
   } = useTheme();
 
   const { isLoading, colour } = useImageColour(src, {
     fallbackColour: GREY_8,
     minimumContrast: 0,
-    contrastColour: '#ffffff',
+    contrastColour: WHITE,
     paletteSize: 10,
   });
 
-  const gradientColour = isDarkUi ? '#FFFFFF' : '#180109';
+  const gradientColour = isDarkUi ? WHITE : '#180109';
 
   if (isLite) return null;
 
