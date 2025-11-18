@@ -71,12 +71,9 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
-    <div
-      class="css-1iue5en"
-    />
     <img
       alt=""
-      class="css-ywii3x"
+      class="css-r8zry9"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
@@ -151,12 +148,9 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     class="css-1jf2q50"
     style="padding-bottom:0;overflow:hidden"
   >
-    <div
-      class="css-1iue5en"
-    />
     <img
       alt=""
-      class="css-ywii3x"
+      class="css-r8zry9"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
@@ -235,12 +229,9 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       class="css-1jf2q50"
       style="padding-bottom:0;overflow:hidden"
     >
-      <div
-        class="css-1iue5en"
-      />
       <img
         alt=""
-        class="css-ywii3x"
+        class="css-r8zry9"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01t1jn0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01t1jn0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01t1jn0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01t1jn0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01t1jn0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01t1jn0.jpg.webp 800w"
