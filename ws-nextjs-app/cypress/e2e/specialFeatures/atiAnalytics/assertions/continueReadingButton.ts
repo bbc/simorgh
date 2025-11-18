@@ -9,51 +9,63 @@ import { AtiAssertionFnProps } from './type';
 const { CONTINUE_READING_BUTTON } = COMPONENTS;
 
 export const assertContinueReadingButtonComponentView = ({
+  applicationType,
   pageIdentifier,
   contentType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Continue Reading Button component', () => {
-    interceptATIAnalyticsBeacons();
+  const itOrSkip = applicationType !== 'responsive' ? it.skip : it;
 
-    // Reload the page to show the continue reading button again
-    cy.reload();
+  itOrSkip(
+    'should send a view event for the Continue Reading Button component',
+    () => {
+      interceptATIAnalyticsBeacons();
 
-    cy.get('[data-testid="continue-reading-button"]').scrollIntoView({
-      duration: 1000,
-    });
+      // Reload the page to show the continue reading button again
+      cy.reload();
 
-    assertATIComponentViewEvent({
-      component: CONTINUE_READING_BUTTON,
-      pageIdentifier,
-      contentType,
-      siteId,
-    });
-  });
+      cy.get('[data-testid="continue-reading-button"]').scrollIntoView({
+        duration: 1000,
+      });
+
+      assertATIComponentViewEvent({
+        component: CONTINUE_READING_BUTTON,
+        pageIdentifier,
+        contentType,
+        siteId,
+      });
+    },
+  );
 };
 
 export const assertContinueReadingButtonComponentClick = ({
+  applicationType,
   pageIdentifier,
   contentType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Continue Reading Button component', () => {
-    interceptATIAnalyticsBeacons();
+  const itOrSkip = applicationType !== 'responsive' ? it.skip : it;
 
-    // Reload the page to show the continue reading button again
-    cy.reload();
+  itOrSkip(
+    'should send a click event for the Continue Reading Button component',
+    () => {
+      interceptATIAnalyticsBeacons();
 
-    cy.get('[data-testid="continue-reading-button"]').scrollIntoView({
-      duration: 1000,
-    });
+      // Reload the page to show the continue reading button again
+      cy.reload();
 
-    cy.get('[data-testid="continue-reading-button"]').click({ force: true });
+      cy.get('[data-testid="continue-reading-button"]').scrollIntoView({
+        duration: 1000,
+      });
 
-    assertATIComponentClickEvent({
-      component: CONTINUE_READING_BUTTON,
-      pageIdentifier,
-      contentType,
-      siteId,
-    });
-  });
+      cy.get('[data-testid="continue-reading-button"]').click({ force: true });
+
+      assertATIComponentClickEvent({
+        component: CONTINUE_READING_BUTTON,
+        pageIdentifier,
+        contentType,
+        siteId,
+      });
+    },
+  );
 };
