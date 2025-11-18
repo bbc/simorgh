@@ -61,40 +61,26 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  object-fit: contain;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 .emotion-5 {
-  height: 100%;
-}
-
-.emotion-6 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -107,20 +93,20 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #E6E8EA;
 }
 
@@ -139,12 +125,9 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       class="emotion-2"
       style="padding-bottom: 0px; overflow: hidden;"
     >
-      <div
-        class="emotion-3"
-      />
       <img
         alt="Orange 2"
-        class="emotion-4"
+        class="emotion-3"
         loading="lazy"
         src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
         style="aspect-ratio: auto;"
@@ -152,17 +135,17 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-5"
+      class="lazyload-wrapper emotion-4"
     >
       <div
-        class="emotion-6"
+        class="emotion-5"
         data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-7"
+          class="emotion-6"
         >
           <a
-            class="emotion-8"
+            class="emotion-7"
             href="/mundo/internacional-23038380"
           >
             Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
@@ -236,40 +219,26 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+  width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  object-fit: contain;
-  height: auto;
-  background: rgb(32,34,36);
-}
-
-.emotion-5 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -282,24 +251,24 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #E6E8EA;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -316,21 +285,21 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
   }
@@ -351,12 +320,9 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <div
-        class="emotion-3"
-      />
       <img
         alt="naranja 2"
-        class="emotion-4"
+        class="emotion-3"
         height="549"
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
@@ -367,24 +333,24 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-5"
+      class="lazyload-wrapper emotion-4"
     >
       <div
-        class="emotion-6"
+        class="emotion-5"
         data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-7"
+          class="emotion-6"
         >
           <a
-            class="emotion-8"
+            class="emotion-7"
             href="/mundo/internacional-23038380"
           >
             El colorido encanto del arte callejero chilango 17
           </a>
         </h3>
         <time
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
           datetime="2016-05-05"
         >
           5 mayo 2016
@@ -456,40 +422,26 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+  width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  object-fit: contain;
-  height: auto;
-  background: rgb(32,34,36);
-}
-
-.emotion-5 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -502,24 +454,24 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #E6E8EA;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -536,21 +488,21 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
   }
@@ -571,12 +523,9 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <div
-        class="emotion-3"
-      />
       <img
         alt="E dey good for your"
-        class="emotion-4"
+        class="emotion-3"
         height="351"
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
@@ -587,24 +536,24 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-5"
+      class="lazyload-wrapper emotion-4"
     >
       <div
-        class="emotion-6"
+        class="emotion-5"
         data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-7"
+          class="emotion-6"
         >
           <a
-            class="emotion-8"
+            class="emotion-7"
             href="/pidgin/sport-51434980"
           >
             Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
           </a>
         </h3>
         <time
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
           datetime="2020-02-17"
         >
           17 febrero 2020
@@ -676,40 +625,26 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+  width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  object-fit: contain;
-  height: auto;
-  background: rgb(32,34,36);
-}
-
-.emotion-5 {
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -722,24 +657,24 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #E6E8EA;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -756,21 +691,21 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
   }
@@ -791,12 +726,9 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
       class="emotion-2"
       style="padding-bottom: 56.25%; overflow: hidden;"
     >
-      <div
-        class="emotion-3"
-      />
       <img
         alt="test"
-        class="emotion-4"
+        class="emotion-3"
         height="450"
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
@@ -807,24 +739,24 @@ exports[`Frosted Glass Promo when given props for a Optimo promo 1`] = `
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-5"
+      class="lazyload-wrapper emotion-4"
     >
       <div
-        class="emotion-6"
+        class="emotion-5"
         data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-7"
+          class="emotion-6"
         >
           <a
-            class="emotion-8"
+            class="emotion-7"
             href="/kyrgyz/articles/cemg3359nwro"
           >
             “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”
           </a>
         </h3>
         <time
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
           datetime="2023-02-02"
         >
           2 febrero 2023
@@ -896,40 +828,26 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
 }
 
 .emotion-3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  -webkit-filter: blur(15px);
-  filter: blur(15px);
-  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .emotion-4 {
-  position: relative;
-  width: 100%;
-  object-fit: contain;
   height: 100%;
-  background: rgb(32,34,36);
 }
 
 .emotion-5 {
-  height: 100%;
-}
-
-.emotion-6 {
   min-height: 100px;
   padding-bottom: 1rem;
   background-color: #202224;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -942,24 +860,24 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
   color: #FFFFFF;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 @media (min-width: 25rem) {
-  .emotion-8 {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.875rem 1rem 0 1rem;
   }
 }
 
-.emotion-8:visited {
+.emotion-7:visited {
   color: #E6E8EA;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #545658;
@@ -976,21 +894,21 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-9 {
+  .emotion-8 {
     font-size: 0.875rem;
     padding: 0.75rem 1rem 0 1rem;
   }
@@ -1011,12 +929,9 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
       class="emotion-2"
       style="padding-bottom: 0px; overflow: hidden;"
     >
-      <div
-        class="emotion-3"
-      />
       <img
         alt=""
-        class="emotion-4"
+        class="emotion-3"
         loading="lazy"
         sizes="(min-width: 1008px) 400px"
         src="https://ichef.bbci.co.uk/ace/ws/400/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
@@ -1026,24 +941,24 @@ exports[`Frosted Glass Promo when given props for an a Optimo promo with no imag
       />
     </div>
     <div
-      class="lazyload-wrapper emotion-5"
+      class="lazyload-wrapper emotion-4"
     >
       <div
-        class="emotion-6"
+        class="emotion-5"
         data-testid="frosted-glass-lazyload-placeholder"
       >
         <h3
-          class="emotion-7"
+          class="emotion-6"
         >
           <a
-            class="emotion-8"
+            class="emotion-7"
             href="/kyrgyz/articles/cemg3359nwro"
           >
             “Баланы сабады деп аялымды камап салышарын өзүм да билген эмесмин”
           </a>
         </h3>
         <time
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
           datetime="2023-02-02"
         >
           2 febrero 2023

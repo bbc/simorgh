@@ -34,6 +34,7 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
+  isPromo?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -63,6 +64,7 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
+  isPromo,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -79,6 +81,7 @@ const Image = ({
 
   const {
     palette: { GREY_8 },
+    isDarkUi,
   } = useTheme();
 
   const { isLoading, colour } = useImageColour(src, {
@@ -87,6 +90,8 @@ const Image = ({
     contrastColour: '#ffffff',
     paletteSize: 10,
   });
+
+  const gradientColour = isDarkUi ? '#FFFFFF' : '#180109';
 
   if (isLite) return null;
 
@@ -193,14 +198,14 @@ const Image = ({
                 />
               </>
             )}
-            {isPortrait && (
+            {isPromo && isPortrait && (
               <div
                 css={[
                   styles.gradientBackground,
                   {
                     background: colour
-                      ? `linear-gradient(200deg,rgba(${colour.rgb.join(',')}, 0.6) 0%, #180109 54%, #180109 90%)`
-                      : `linear-gradient(200deg, ${GREY_8} 0%,  #180109 54%, #180109 90%)`,
+                      ? `linear-gradient(200deg,rgba(${colour.rgb.join(',')}, 0.6) 0%, ${gradientColour} 54%, ${gradientColour} 90%)`
+                      : `linear-gradient(200deg, ${GREY_8} 0%,  ${gradientColour} 54%, ${gradientColour}90%)`,
                   },
                 ]}
               />
@@ -220,16 +225,17 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                isPortrait ? styles.portraitImage : styles.image,
+                isPortrait && isPromo ? styles.portraitImage : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
-
-                { background: `rgb(${colour?.rgb?.join(',')})` },
-                !isLoading && {
-                  [`@supports (filter: blur(15px))`]: {
-                    background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
-                  },
+                isPromo && {
+                  background: `rgb(${colour?.rgb?.join(',')})`,
+                  ...(!isLoading && {
+                    [`@supports (filter: blur(15px))`]: {
+                      background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                    },
+                  }),
                 },
               ]}
               fetchPriority={fetchPriority}

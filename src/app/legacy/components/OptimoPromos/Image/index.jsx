@@ -21,6 +21,7 @@ const Image = ({
       width={width}
       height={height}
       lazyLoad
+      isPromo
     />
   );
 };
