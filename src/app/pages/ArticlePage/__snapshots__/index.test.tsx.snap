@@ -39,7 +39,8 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   display: none;
 }
 
-.no-js .emotion-3 [id="continue-reading-button"]~* {
+.no-js .emotion-3 [id="continue-reading-button"]~*,
+.is-opera-mini .emotion-3 [id="continue-reading-button"]~* {
   display: block;
 }
 
@@ -1175,7 +1176,8 @@ exports[`Article Page should render a news article correctly 1`] = `
   display: none;
 }
 
-.no-js .emotion-3 [id="continue-reading-button"]~* {
+.no-js .emotion-3 [id="continue-reading-button"]~*,
+.is-opera-mini .emotion-3 [id="continue-reading-button"]~* {
   display: block;
 }
 
@@ -2840,7 +2842,8 @@ exports[`Article Page should render a news article with headline in the middle c
   display: none;
 }
 
-.no-js .emotion-3 [id="continue-reading-button"]~* {
+.no-js .emotion-3 [id="continue-reading-button"]~*,
+.is-opera-mini .emotion-3 [id="continue-reading-button"]~* {
   display: block;
 }
 
@@ -3240,7 +3243,8 @@ exports[`Article Page should render a news article without headline correctly 1`
   display: none;
 }
 
-.no-js .emotion-3 [id="continue-reading-button"]~* {
+.no-js .emotion-3 [id="continue-reading-button"]~*,
+.is-opera-mini .emotion-3 [id="continue-reading-button"]~* {
   display: block;
 }
 
@@ -3482,7 +3486,8 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   display: none;
 }
 
-.no-js .emotion-3 [id="continue-reading-button"]~* {
+.no-js .emotion-3 [id="continue-reading-button"]~*,
+.is-opera-mini .emotion-3 [id="continue-reading-button"]~* {
   display: block;
 }
 
