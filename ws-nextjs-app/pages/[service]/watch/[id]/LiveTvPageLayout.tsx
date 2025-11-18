@@ -36,13 +36,6 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
   );
 };
 
-const getSynopses = (
-  synopses: { short: string; medium: string; long: string } | undefined,
-) => {
-  if (!synopses) return '';
-  return synopses.short || synopses.medium || synopses.long;
-};
-
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
   const {
@@ -65,10 +58,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
     curation => curation !== mediaCollectionCuration,
   );
 
-  const synopses = getSynopses(
-    pageData?.curations?.[0].mediaCollection?.[0].model.synopses,
-  );
-
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -89,7 +78,6 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
               {title}
             </Heading>
             <Text css={styles.description}>{description}</Text>
-            <Text css={styles.synopses}>{synopses}</Text>
             <div css={styles.curationStyles}>
               {filteredCurations.map(curation => renderCuration({ curation }))}
             </div>
