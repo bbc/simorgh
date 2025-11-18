@@ -44,7 +44,24 @@ export default defineConfig({
         webpackOptions: {
           resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx'],
-            alias: { ...webpackDirAlias },
+            alias: webpackDirAlias,
+          },
+          module: {
+            rules: [
+              {
+                test: /\.[jt]sx?$/,
+                exclude: /node_modules/,
+                loader: 'swc-loader',
+                options: {
+                  jsc: {
+                    parser: {
+                      syntax: 'typescript',
+                      tsx: true,
+                    },
+                  },
+                },
+              },
+            ],
           },
           plugins: [
             MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
