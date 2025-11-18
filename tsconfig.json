@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
     "paths": {
       "#app/*": ["src/app/*"],
       "#src/*": ["src/*"],
@@ -41,6 +42,6 @@
       "react": ["./node_modules/@types/react"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+  "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
+  "exclude": ["node_modules", "build"]
 }

@@ -1,6 +1,12 @@
+import { Services, ServicesWithVariants } from '#app/models/types/global';
+import { LoadableTheme } from '#app/models/types/theming';
 import loadable from '@loadable/component';
 
-export const themes = {
+export const themes: Record<
+  Services,
+  | LoadableTheme
+  | Partial<Record<ServicesWithVariants['variant'], LoadableTheme>>
+> = {
   afaanoromoo: loadable(
     () => import(/* webpackChunkName: "themes-afaanoromoo" */ './afaanoromoo'),
   ),

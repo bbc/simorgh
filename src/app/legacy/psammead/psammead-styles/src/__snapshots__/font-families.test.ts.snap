@@ -1,0 +1,1556 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Psammead Styles - Font Families should match afaanoromoo 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match afrique 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match amharic 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match arabic 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match archive 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match azeri 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match bengali 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Serif Bengali", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Serif Bengali", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match burmese 1`] = `
+{
+  "sansBold": "
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match cymrufyw 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match dari 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match gahuza 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match gujarati 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match hausa 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match hindi 1`] = `
+{
+  "sansBold": "
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match igbo 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match indonesia 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match japanese 1`] = `
+{
+  "sansBold": "
+    font-family: "Hiragino Kaku Gothic Pro", "ﾋﾗギﾉ角ゴPro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Hiragino Kaku Gothic Pro", "ﾋﾗギﾉ角ゴPro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match korean 1`] = `
+{
+  "sansBold": "
+    font-family: "Apple SD Gothic Neo", AppleGothic, "Malgun Gothic", Dotum, "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Apple SD Gothic Neo", AppleGothic, "Malgun Gothic", Dotum, "Noto Sans CJK KR", sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match kyrgyz 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match magyarul 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match marathi 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match mundo 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match naidheachdan 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match nepali 1`] = `
+{
+  "sansBold": "
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match news 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match newsround 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match pashto 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match persian 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match pidgin 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match polska 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match portuguese 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match punjabi 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match romania 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match russian 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match scotland 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match serbian 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match sinhala 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Serif Sinhala", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Serif Sinhala", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match somali 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match sport 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match swahili 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match tamil 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Tamil", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Tamil", Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match telugu 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match thai 1`] = `
+{
+  "sansBold": "
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match tigrinya 1`] = `
+{
+  "sansBold": "
+    font-family: "Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match turkce 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match ukchina 1`] = `
+{
+  "sansBold": "
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match ukrainian 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match urdu 1`] = `
+{
+  "sansBold": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: "BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match uzbek 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match vietnamese 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match ws 1`] = `
+{
+  "sansBold": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 700;
+  ",
+  "sansLight": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "sansRegular": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+   font-family: ReithSans, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 400;
+  ",
+  "serifBold": "
+    font-family: ReithSerif, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "serifLight": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 300;
+  ",
+  "serifMedium": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  ",
+  "serifMediumItalic": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: italic;
+   font-weight: 500;
+  ",
+  "serifRegular": "
+   font-family: ReithSerif, Helvetica, Arial, sans-serif;
+   font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match yoruba 1`] = `
+{
+  "sansBold": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansBoldItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: normal;
+   font-weight: 400;
+  ",
+  "sansRegularItalic": "
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+    font-style: italic;
+   font-weight: 400;
+  ",
+}
+`;
+
+exports[`Psammead Styles - Font Families should match zhongwen 1`] = `
+{
+  "sansBold": "
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体;
+    font-style: normal;
+   font-weight: 700;
+  ",
+  "sansRegular": "
+    font-family: Helvetica, Arial, STHeiti, 华文黑体, "Microsoft YaHei", 微软雅黑, SimSun, 宋体;
+    font-style: normal;
+   font-weight: 400;
+  ",
+}
+`;

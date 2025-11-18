@@ -153,7 +153,7 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters?: { updatedAdTag: string },
+    parameters?: { adTag: string | null },
   ): void;
   load: () => void;
   play: () => void;
@@ -168,7 +168,6 @@ export type Player = {
       name: string;
       data: {
         adTag: string;
-        debug: boolean;
       };
     },
   ) => void;
@@ -322,6 +321,8 @@ export type MediaCollection = {
   model: {
     synopses: {
       short: string;
+      medium: string;
+      long: string;
     };
     masterbrand: {
       networkName: string;
