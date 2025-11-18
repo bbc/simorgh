@@ -486,12 +486,26 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 .emotion-18 {
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
 }
 
-.emotion-20 {
+.emotion-19 {
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  background: rgb(32,34,36);
+}
+
+.emotion-21 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -504,38 +518,38 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-21 {
     font-size: 1.75rem;
     line-height: 2.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     font-size: 2.5rem;
     line-height: 3.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     padding: 2.5rem 0;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-20 {
+  .emotion-21 {
     padding: 0.5rem 0;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-21 {
     padding: 1rem 0;
   }
 }
 
-.emotion-22 {
+.emotion-23 {
   display: block;
   line-height: 1;
   width: 100%;
@@ -544,14 +558,14 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-23 {
     padding-bottom: 1rem;
     word-break: break-word;
     line-height: 1.09;
   }
 }
 
-.emotion-25 {
+.emotion-26 {
   display: inline-block;
   margin: 0;
   font-size: 1.25rem;
@@ -562,89 +576,89 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (max-width: 22.5rem) and (min-width: 15rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-26 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 0.5rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     padding: 0 1rem;
     margin-right: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-27 {
+  .emotion-28 {
     margin-right: 20%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-27 {
+  .emotion-28 {
     margin-right: 40%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-27 {
+  .emotion-28 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -653,7 +667,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
@@ -662,7 +676,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -671,7 +685,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
@@ -680,7 +694,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
@@ -688,7 +702,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-27 {
+    .emotion-28 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
@@ -696,7 +710,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   }
 }
 
-.emotion-29 {
+.emotion-30 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -709,26 +723,26 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-29 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-29 {
+  .emotion-30 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-29 {
+  .emotion-30 {
     padding-bottom: 0.5rem;
   }
 }
 
-.emotion-31 {
+.emotion-32 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -739,14 +753,14 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-31 {
+  .emotion-32 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-32 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -842,9 +856,12 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
               class="emotion-17"
               style="padding-bottom: 0px; overflow: hidden;"
             >
+              <div
+                class="emotion-18"
+              />
               <img
                 alt=""
-                class="emotion-18"
+                class="emotion-19"
                 loading="eager"
                 src="https://ichef.bbci.co.uk/images/ic/$recipe/p0k5s1yz.png"
                 srcset="https://ichef.bbci.co.uk/images/ic/240xn/p0k5s1yz.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p0k5s1yz.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p0k5s1yz.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p0k5s1yz.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p0k5s1yz.png.webp 800w"
@@ -855,10 +872,10 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
         </figure>
         <strong
           aria-hidden="true"
-          class="emotion-19 emotion-20 emotion-21"
+          class="emotion-20 emotion-21 emotion-22"
         >
           <span
-            class="emotion-22 emotion-23"
+            class="emotion-23 emotion-24"
             data-testid="brand-title"
           >
              د بي بي سي خبرونه 
@@ -869,7 +886,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
             , 
           </span>
           <span
-            class="emotion-25 emotion-26"
+            class="emotion-26 emotion-27"
             data-testid="sub-heading"
           >
              د بي بي سي خبرونه 
@@ -877,17 +894,17 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
         </strong>
       </div>
       <div
-        class="emotion-27 emotion-3"
+        class="emotion-28 emotion-3"
         dir="rtl"
       >
         <p
-          class="emotion-29 emotion-30"
+          class="emotion-30 emotion-31"
         >
           نړۍ دا وخت، د نړۍ او سیمې وروستۍ پرمختیاوې یادوي
 
         </p>
         <time
-          class="emotion-31 emotion-32"
+          class="emotion-32 emotion-33"
           datetime="۲۰۲۴-۱۱-۲۱"
         >
           ۲۱ نومبر ۲۰۲۴

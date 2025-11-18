@@ -71,7 +71,6 @@ const CurationPromo = ({
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
-          isCurationPromo
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (

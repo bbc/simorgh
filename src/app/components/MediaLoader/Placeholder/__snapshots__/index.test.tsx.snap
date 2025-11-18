@@ -251,9 +251,23 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 }
 
 .emotion-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-11 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -317,9 +331,12 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
       class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-10"
+      />
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-11"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -606,9 +623,23 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 }
 
 .emotion-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-12 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -678,9 +709,12 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
       class="emotion-10"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-11"
+      />
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-12"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -925,9 +959,23 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 }
 
 .emotion-9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-10 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -984,9 +1032,12 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
       class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-9"
+      />
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1247,9 +1298,23 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 }
 
 .emotion-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-11 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -1306,9 +1371,12 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
       class="emotion-9"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-10"
+      />
       <img
         alt=""
-        class="emotion-10"
+        class="emotion-11"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1553,9 +1621,23 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 }
 
 .emotion-9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-10 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -1605,9 +1687,12 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
       class="emotion-8"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-9"
+      />
       <img
         alt=""
-        class="emotion-9"
+        class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"
@@ -1894,9 +1979,23 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 }
 
 .emotion-11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  background: linear-gradient(200deg,rgba(32,34,36, 0.6) 0%, #180109 54%, #180109 90%);
+}
+
+.emotion-12 {
+  position: relative;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
+  background: rgb(32,34,36);
 }
 
 <div>
@@ -1966,9 +2065,12 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
       class="emotion-10"
       style="padding-bottom: 0px; overflow: hidden;"
     >
+      <div
+        class="emotion-11"
+      />
       <img
         alt=""
-        class="emotion-11"
+        class="emotion-12"
         loading="eager"
         src="http://foo.bar/placeholder.png"
         style="aspect-ratio: auto;"

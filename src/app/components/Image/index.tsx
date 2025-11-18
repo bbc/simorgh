@@ -34,7 +34,6 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
-  isCurationPromo?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -64,7 +63,6 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
-  isCurationPromo,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -195,7 +193,7 @@ const Image = ({
                 />
               </>
             )}
-            {isPortrait && isCurationPromo && (
+            {isPortrait && (
               <div
                 css={[
                   styles.gradientBackground,
@@ -222,20 +220,16 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                isPortrait && isCurationPromo
-                  ? styles.portraitImage
-                  : styles.image,
+                isPortrait ? styles.portraitImage : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
-                isCurationPromo &&
-                  !isLoading && {
-                    [`@supports (filter: blur(15px))`]: {
-                      background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
-                    },
+
+                { background: `rgb(${colour?.rgb?.join(',')})` },
+                !isLoading && {
+                  [`@supports (filter: blur(15px))`]: {
+                    background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
                   },
-                isCurationPromo && {
-                  background: `rgb(${colour?.rgb?.join(',')})`,
                 },
               ]}
               fetchPriority={fetchPriority}

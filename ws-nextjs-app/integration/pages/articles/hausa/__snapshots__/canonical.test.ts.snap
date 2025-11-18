@@ -159,7 +159,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
-  class="css-pxk6ea"
+  class="css-1tviw9r"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

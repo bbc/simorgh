@@ -196,6 +196,7 @@ describe('Image - Canonical', () => {
      <div
        style="padding-bottom: 56.25%; overflow: hidden;"
      >
+       <div />
        <img
          alt="Test image alt text"
          loading="eager"
@@ -220,6 +221,7 @@ describe('Image - Canonical', () => {
      <div
        style="padding-bottom: 56.25%; overflow: hidden;"
      >
+       <div />
        <img
          alt="Test image alt text"
          loading="eager"
