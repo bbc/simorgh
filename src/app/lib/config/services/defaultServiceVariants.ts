@@ -1,5 +1,5 @@
 // This is to support local 404 and 500 pages for services with variants.
-// For example, http://localhost:7080/serbian/500 does not include the variant in the path so we must define a default variant.
+// For example, http://localhost:7081/serbian/500 does not include the variant in the path so we must define a default variant.
 
 import { Variants } from '#app/models/types/global';
 
