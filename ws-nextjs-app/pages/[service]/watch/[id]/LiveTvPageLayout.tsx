@@ -70,7 +70,11 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         openGraphType="website"
         hasAmpPage={false}
       />
-      <LinkedData type="WebPage" seoTitle={metadataTitle} />
+      <LinkedData
+        type="TelevisionChannel"
+        seoTitle={metadataTitle}
+        description={seoDescription}
+      />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
           <div css={styles.padding}>
