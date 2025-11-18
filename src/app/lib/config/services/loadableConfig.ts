@@ -1,8 +1,14 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { Services } from '#app/models/types/global';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import loadable, { LoadableComponent } from '@loadable/component';
+import { Services } from '#app/models/types/global';
 
-const loadableConfig: Record<Services, LoadableComponent<any>> = {
+type LoadableService = LoadableComponent<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
+
+const loadableConfig: Record<Services, LoadableService> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
@@ -57,7 +63,5 @@ const loadableConfig: Record<Services, LoadableComponent<any>> = {
   yoruba: loadable(() => import('./yoruba')),
   zhongwen: loadable(() => import('./zhongwen')),
 };
-
-export const services = Object.keys(loadableConfig) as Services[];
 
 export default loadableConfig;
