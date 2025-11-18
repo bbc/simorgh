@@ -9,6 +9,7 @@ import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import LinkedData from '#app/components/LinkedData';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
 
@@ -69,6 +70,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         openGraphType="website"
         hasAmpPage={false}
       />
+      <LinkedData type="WebPage" seoTitle={metadataTitle} />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
           <div css={styles.padding}>
