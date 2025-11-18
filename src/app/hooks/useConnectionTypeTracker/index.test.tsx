@@ -1,4 +1,3 @@
-// Mock useTrackingToggle so tracking is always enabled
 import { renderHook } from '@testing-library/react';
 import useConnectionTypeTracker from '.';
 import useCustomEventTracker from '../useCustomEventTracker';
