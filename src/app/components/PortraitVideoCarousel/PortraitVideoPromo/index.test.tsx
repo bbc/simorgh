@@ -170,10 +170,11 @@ describe('PortraitVideoPromo', () => {
 
     const portraitVideoPromoImage =
       container.querySelectorAll('div picture')[0];
+
     const [webpSource, jpgSource, img] =
       portraitVideoPromoImage.childNodes as unknown as [
         HTMLSourceElement,
-        HTMLImageElement,
+        HTMLSourceElement,
         HTMLImageElement,
       ];
 

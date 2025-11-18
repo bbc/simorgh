@@ -258,8 +258,7 @@ describe('Home Page', () => {
 
     const promoImage = container.querySelectorAll('div.promo-image picture')[0];
 
-    const [webpSource, pngSource, , img] = promoImage.childNodes as unknown as [
-      HTMLSourceElement,
+    const [webpSource, pngSource, img] = promoImage.childNodes as unknown as [
       HTMLSourceElement,
       HTMLSourceElement,
       HTMLImageElement,
