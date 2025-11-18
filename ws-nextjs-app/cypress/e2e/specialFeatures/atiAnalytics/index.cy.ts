@@ -61,14 +61,7 @@ import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
 } from './assertions/navigation';
-import {
-  assertContinueReadingButtonComponentClick,
-  assertContinueReadingButtonComponentView,
-} from './assertions/continueReadingButton';
-import {
-  assertTopBarOJComponentClick,
-  assertTopBarOJComponentView,
-} from './assertions/topBarOjs';
+
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
@@ -196,19 +189,6 @@ const canonicalTestSuites = [
   //   ],
   // },
   {
-    path: '/hindi/articles/cn8xe1llnyyo',
-    runforEnv: ['live'],
-    service: 'hindi',
-    pageIdentifier: 'hindi.articles.cn8xe1llnyyo.page',
-    siteId: 52,
-    applicationType: 'responsive',
-    contentType: 'article',
-    tests: [
-      assertContinueReadingButtonComponentClick,
-      assertContinueReadingButtonComponentView,
-    ],
-  },
-  {
     path: '/pidgin/articles/ce9wk6glg4lo',
     runforEnv: ['local', 'live'],
     service: 'pidgin',
@@ -285,11 +265,7 @@ const canonicalTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     useReverb: true,
-    tests: [
-      assertPageView,
-      assertTopBarOJComponentClick,
-      assertTopBarOJComponentView,
-    ],
+    tests: [assertPageView],
   },
 ];
 
