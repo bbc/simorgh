@@ -105,15 +105,23 @@ const styles = {
       backgroundColor: WHITE,
       border: 'none',
       width: 'auto',
-      height: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(30)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
       fontFamily: REITH_SANS,
       fontSize: `${pixelsToRem(15)}rem`,
       lineHeight: `${pixelsToRem(20)}rem`,
-      fontWeight: 'bold',
+      fontWeight: '700',
       position: 'relative',
+      '&:focus, &:hover': {
+        backgroundColor: WHITE,
+        color: BLACK,
+        textDecoration: 'underline',
+        textDecorationColor: BLACK,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
+        textUnderlineOffset: `${pixelsToRem(5)}rem`,
+      },
 
       '& .short-text': {
         display: 'inline',
@@ -148,9 +156,10 @@ const styles = {
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
+      textUnderlineOffset: `${pixelsToRem(5)}rem`,
       textDecorationColor: GREY_4,
-      fontWeight: 'bold',
-      height: `${pixelsToRem(44)}rem`,
+      fontWeight: '700',
+      height: `${pixelsToRem(30)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
@@ -158,12 +167,19 @@ const styles = {
       [mq.GROUP_1_MAX_WIDTH]: {
         padding: 0,
       },
+      '&:focus, &:hover': {
+        backgroundColor: WHITE,
+        color: BLACK,
+        textDecoration: 'underline',
+        textDecorationColor: BLACK,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
+      },
     }),
 
   closeButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-16)}rem`,
+      top: `${pixelsToRem(-12)}rem`,
       right: `${pixelsToRem(-10)}rem`,
       border: 'none',
       background: 'transparent',
@@ -177,7 +193,7 @@ const styles = {
       color: palette.WHITE,
       '&:hover, &:focus': {
         outline: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
-        outlineOffset: `${pixelsToRem(1)}rem`,
+        outlineOffset: `${pixelsToRem(2)}rem`,
         backgroundColor: palette.POSTBOX,
         fill: palette.WHITE,
         color: palette.WHITE,
@@ -187,7 +203,7 @@ const styles = {
   closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-2)}rem`,
+      top: `${pixelsToRem(1)}rem`,
       right: `${pixelsToRem(3)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
