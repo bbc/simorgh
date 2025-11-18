@@ -211,18 +211,18 @@ Services with variants can't be accessed using the format above, instead the var
 
 World Service front pages are served in the format `/:service` where `service` represents a World Service site:
 
-- [http://localhost:7081/igbo](http://localhost:7081/igbo)
-- [http://localhost:7081/pidgin](http://localhost:7081/pidgin)
+- [http://localhost:7080/igbo](http://localhost:7080/igbo)
+- [http://localhost:7080/pidgin](http://localhost:7080/pidgin)
 
 The World Service front pages follow the article format for AMP too, being available at `/:service.amp`:
 
-- [http://localhost:7081/igbo.amp](http://localhost:7081/igbo.amp)
-- [http://localhost:7081/pidgin.amp](http://localhost:7081/pidgin.amp)
+- [http://localhost:7080/igbo.amp](http://localhost:7080/igbo.amp)
+- [http://localhost:7080/pidgin.amp](http://localhost:7080/pidgin.amp)
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
-- [http://localhost:7081/zhongwen/simp](http://localhost:7081/zhongwen/simp)
-- [http://localhost:7081/zhongwen/simp.amp](http://localhost:7081/zhongwen/simp.amp).
+- [http://localhost:7080/zhongwen/simp](http://localhost:7080/zhongwen/simp)
+- [http://localhost:7080/zhongwen/simp.amp](http://localhost:7080/zhongwen/simp.amp).
 
 ### Topic Pages
 
