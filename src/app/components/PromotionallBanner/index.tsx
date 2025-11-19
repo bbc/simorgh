@@ -16,7 +16,6 @@ interface PromotionalBannerProps {
   primaryButton: ButtonBase & {
     shortText: string;
     longText: string;
-    onClick: () => void;
   };
   secondaryButton: ButtonBase & { text?: string };
   handleClose: () => void;
