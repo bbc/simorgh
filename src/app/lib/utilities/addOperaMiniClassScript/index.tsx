@@ -3,9 +3,10 @@ import isOperaProxy from '../isOperaProxy';
 
 export const OPERA_MINI_CLASSNAME = 'is-opera-mini';
 
-export default (
+export default (nonce?: string | null) => (
   <script
     type="text/javascript"
+    {...(nonce ? { nonce } : {})}
     // eslint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{
       __html: `

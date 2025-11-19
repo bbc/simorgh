@@ -25,7 +25,7 @@ describe('addOperaMiniClassScript', () => {
     });
 
     it('should add is-opera-mini class to documentElement', () => {
-      eval(addOperaMiniClassScript.props.dangerouslySetInnerHTML.__html);
+      eval(addOperaMiniClassScript().props.dangerouslySetInnerHTML.__html);
 
       expect(classListAddSpy).toHaveBeenCalledWith('is-opera-mini');
     });
@@ -40,7 +40,7 @@ describe('addOperaMiniClassScript', () => {
     });
 
     it('should not add is-opera-mini class to documentElement', () => {
-      eval(addOperaMiniClassScript.props.dangerouslySetInnerHTML.__html);
+      eval(addOperaMiniClassScript().props.dangerouslySetInnerHTML.__html);
 
       expect(classListAddSpy).not.toHaveBeenCalledWith('is-opera-mini');
     });
