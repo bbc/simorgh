@@ -17,6 +17,7 @@ import createCache from '@emotion/cache';
 import {
   EnvConfig,
   getProcessEnvAppVariables,
+  getEnvConfig,
 } from '#lib/utilities/getEnvConfig';
 
 import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
@@ -39,6 +40,8 @@ import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import { buildReverbEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -161,6 +164,15 @@ export default class AppDocument extends Document<DocProps> {
     const helmetLinkTags = helmet.link.toComponent();
     const helmetScriptTags = helmet.script.toComponent();
 
+    const reverbParams = buildReverbEventModel({
+      componentName: '~COMPONENT_NAME_PLACEHOLDER~',
+    });
+    const env = getEnvConfig().SIMORGH_APP_ENV;
+    const reverbUrl = reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
+      ...reverbParams,
+      env,
+    });
+
     switch (true) {
       case isAmp && pageType === 'article':
         return (
@@ -191,7 +203,7 @@ export default class AppDocument extends Document<DocProps> {
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
-              <CanonicalToLiteRedirect />
+              <CanonicalToLiteRedirect reverbUrl={reverbUrl} />
               <ReverbTemplate />
               <script
                 type="text/javascript"
