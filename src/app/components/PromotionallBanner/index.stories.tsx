@@ -27,7 +27,7 @@ const ComponentWithContext = ({
         }}
         isDismissible
         handleClose={() => console.log('Banner closed')}
-        handleInstallPWA={() => console.log('Install PWA clicked')}
+        handlePrimaryAction={() => console.log('Primary action invoked')}
       />
     </ServiceContextProvider>
   );

@@ -20,7 +20,7 @@ export interface BannerProps {
   secondaryButton: SecondaryButton;
   isDismissible?: boolean;
   handleClose: () => void;
-  handleInstallPWA?: () => void;
+  handlePrimaryAction?: () => void;
 }
 
 export declare function PromotionalBanner(props: BannerProps): JSX.Element;

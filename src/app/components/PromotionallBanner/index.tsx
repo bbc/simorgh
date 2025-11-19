@@ -16,7 +16,7 @@ interface PromotionalBannerProps {
   primaryButton: ButtonBase & { shortText: string; longText: string };
   secondaryButton: ButtonBase & { text?: string };
   handleClose: () => void;
-  handleInstallPWA: () => void;
+  handlePrimaryAction: () => void;
 }
 
 const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
@@ -27,7 +27,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
   primaryButton,
   secondaryButton,
   handleClose,
-  handleInstallPWA,
+  handlePrimaryAction,
 }) => {
   return (
     <div css={styles.banner}>
@@ -47,7 +47,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
               as="button"
               type="button"
               css={styles.primaryButton}
-              onClick={handleInstallPWA}
+              onClick={handlePrimaryAction}
               aria-label={primaryButton.shortText || primaryButton.longText}
             >
               <span className="short-text">{primaryButton.shortText}</span>
