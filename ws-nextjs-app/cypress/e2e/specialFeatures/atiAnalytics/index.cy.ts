@@ -61,6 +61,7 @@ import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
 } from './assertions/navigation';
+
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
