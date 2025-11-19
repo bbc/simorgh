@@ -45,4 +45,13 @@ describe('addOperaMiniClassScript', () => {
       expect(classListAddSpy).not.toHaveBeenCalledWith('is-opera-mini');
     });
   });
+
+  describe('when nonce is provided', () => {
+    it('should add nonce attribute to script tag', () => {
+      const nonceValue = 'test-nonce';
+      const scriptElement = addOperaMiniClassScript(nonceValue);
+
+      expect(scriptElement.props.nonce).toBe(nonceValue);
+    });
+  });
 });
