@@ -63,6 +63,7 @@ declare global {
       reverbUrl?: string;
       forwardingUrl?: string;
     }) => void;
+    setAtUserIdCookie: () => { val: string | null };
   }
 }
 

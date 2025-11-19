@@ -1,23 +1,6 @@
 /* istanbul ignore next */
-export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = ({
-    atiUrl,
-    reverbUrl,
-    forwardingUrl = '',
-  }) => {
-    const {
-      screen: { width, height, colorDepth, pixelDepth },
-      innerWidth,
-      innerHeight,
-    } = window;
-
-    const now = new Date();
-    const hours = now.getHours();
-    const mins = now.getMinutes();
-    const secs = now.getSeconds();
-    const epochTimestamp = now.getTime().toString();
-
-    // COOKIE SETTINGS
+export const addSetAtUserIdCookie = () => {
+  window.setAtUserIdCookie = () => {
     const cookieName = 'atuserid';
     const days = 397; // = 13 months
     const expires = days * 24 * 60 * 60; // days in seconds
@@ -45,6 +28,31 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     const encodedCookieValue = encodeURIComponent(stringifiedCookieValue);
 
     document.cookie = `${cookieName}=${encodedCookieValue}; path=/; max-age=${expires}; Secure;`;
+
+    return user;
+  };
+};
+
+export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
+  window.processClientDeviceAndSendStaticBeacon = ({
+    atiUrl,
+    reverbUrl,
+    forwardingUrl = '',
+  }) => {
+    const {
+      screen: { width, height, colorDepth, pixelDepth },
+      innerWidth,
+      innerHeight,
+    } = window;
+
+    const now = new Date();
+    const hours = now.getHours();
+    const mins = now.getMinutes();
+    const secs = now.getSeconds();
+    const epochTimestamp = now.getTime().toString();
+
+    // COOKIE SETTINGS
+    const user = window.setAtUserIdCookie();
 
     const screenResolutionColourDepth = [
       width || 0,

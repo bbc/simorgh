@@ -2,10 +2,15 @@
 import React from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
-import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
+import {
+  getProcessEnvAppVariables,
+  getEnvConfig,
+} from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
-import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import { buildReverbEventModel } from '#app/components/ATIAnalytics/atiUrl';
+import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+import CanonicalToLiteRedirect from '../../utilities/CanonicalToLiteRedirect';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
 import ComponentTracking from './ComponentTracking';
@@ -96,10 +101,21 @@ export default function CanonicalRenderer({
   const serialisedData = serialiseForScript(data);
   const appEnvVariables = serialiseForScript(getProcessEnvAppVariables());
 
+  const reverbParams = buildReverbEventModel({
+    componentName: '~COMPONENT_NAME_PLACEHOLDER~',
+  });
+  const env = getEnvConfig().SIMORGH_APP_ENV;
+  const reverbUrl = reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
+    ...reverbParams,
+    env,
+  });
+
+  console.log('HELLO EXPRESS', env, reverbUrl);
+
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
-        <CanonicalToLiteRedirect />
+        <CanonicalToLiteRedirect reverbUrl={reverbUrl} />
         <ReverbTemplate nonce={nonce} />
         {isApp && <meta name="robots" content="noindex" />}
         {title}

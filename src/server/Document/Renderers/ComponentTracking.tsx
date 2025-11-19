@@ -2,7 +2,10 @@ import React from 'react';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import clickTracking from '#app/lib/analyticsUtils/staticATITracking/clickTracking';
 import viewTracking from '#app/lib/analyticsUtils/staticATITracking/viewTracking';
-import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import {
+  addProcessClientDeviceAndSendStaticBeaconToWindow,
+  addSetAtUserIdCookie,
+} from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 
 type Props = {
   enableStaticClickTrackingOnOperaMiniOnly: boolean;
@@ -25,6 +28,7 @@ const trackingScripts = ({
       }      
 
       if (isComponentTrackingEnabled) {
+        (${addSetAtUserIdCookie.toString()})();
         (${addProcessClientDeviceAndSendStaticBeaconToWindow.toString()})();
 
         if (isComponentViewTrackingEnabled) {
