@@ -20,7 +20,6 @@ export interface BannerProps {
   secondaryButton: SecondaryButton;
   isDismissible?: boolean;
   handleClose: () => void;
-  handlePrimaryAction?: () => void;
 }
 
 export declare function PromotionalBanner(props: BannerProps): JSX.Element;

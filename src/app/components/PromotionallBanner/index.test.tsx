@@ -22,7 +22,6 @@ describe('PromotionalBanner', () => {
       onClick: jest.fn(),
     },
     serviceBackground: 'defaultBackground',
-    handlePrimaryAction: jest.fn(),
     handleClose: jest.fn(),
   };
 
@@ -69,13 +68,13 @@ describe('PromotionalBanner', () => {
   it('calls the primary button click handler when short text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install'));
-    expect(defaultProps.handlePrimaryAction).toHaveBeenCalled();
+    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
   });
 
   it('calls the primary button click handler when long text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install the PWA App'));
-    expect(defaultProps.handlePrimaryAction).toHaveBeenCalled();
+    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
   });
 
   it('renders the banner with title and description', () => {
@@ -98,7 +97,7 @@ describe('PromotionalBanner', () => {
     render(<PromotionalBanner {...defaultProps} />);
 
     fireEvent.click(screen.getByRole('button', { name: /Install/i }));
-    expect(defaultProps.handlePrimaryAction).toHaveBeenCalled();
+    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
   });
 
   it('calls the secondary button click handler when clicked', () => {

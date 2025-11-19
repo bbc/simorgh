@@ -27,7 +27,6 @@ const ComponentWithContext = ({
         }}
         isDismissible
         handleClose={() => console.log('Banner closed')}
-        handlePrimaryAction={() => console.log('Primary action invoked')}
       />
     </ServiceContextProvider>
   );

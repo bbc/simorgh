@@ -13,10 +13,13 @@ interface PromotionalBannerProps {
   description: string;
   orText: string;
   isDismissible?: boolean;
-  primaryButton: ButtonBase & { shortText: string; longText: string };
+  primaryButton: ButtonBase & {
+    shortText: string;
+    longText: string;
+    onClick: () => void;
+  };
   secondaryButton: ButtonBase & { text?: string };
   handleClose: () => void;
-  handlePrimaryAction: () => void;
 }
 
 const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
@@ -27,7 +30,6 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
   primaryButton,
   secondaryButton,
   handleClose,
-  handlePrimaryAction,
 }) => {
   return (
     <div css={styles.banner}>
@@ -47,7 +49,7 @@ const PromotionalBanner: React.FC<PromotionalBannerProps> = ({
               as="button"
               type="button"
               css={styles.primaryButton}
-              onClick={handlePrimaryAction}
+              onClick={primaryButton?.onClick}
               aria-label={primaryButton.shortText || primaryButton.longText}
             >
               <span className="short-text">{primaryButton.shortText}</span>
