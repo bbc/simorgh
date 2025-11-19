@@ -10,6 +10,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import LinkedData from '#app/components/LinkedData';
+import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
 
@@ -62,7 +63,12 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={title} />
+      <ChartbeatAnalytics
+        title={title}
+        contentType={
+          pageData?.metadata?.atiAnalytics?.contentType as ContentType
+        }
+      />
       <MetadataContainer
         title={metadataTitle}
         lang={lang}

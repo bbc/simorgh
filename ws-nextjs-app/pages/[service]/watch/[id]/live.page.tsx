@@ -70,7 +70,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
           metadata: {
             ...data.pageData.metadata,
             type: LIVE_TV_PAGE,
-            atiAnalytics: {},
+            atiAnalytics: {
+              contentType: 'player-live',
+            },
           },
         }
       : null,
