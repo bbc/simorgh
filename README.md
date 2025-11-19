@@ -194,18 +194,18 @@ FYI: [Article explaining the BBC's use of ids in URL](https://www.smashingmagazi
 
 These two News articles are available on the Test environment of our CMS, as well as locally, so are often used for testing:
 
-- [http://localhost:7080/news/articles/c6v11qzyv8po](http://localhost:7080/news/articles/c6v11qzyv8po)
-- [http://localhost:7080/persian/articles/c4vlle3q337o](http://localhost:7080/persian/articles/c4vlle3q337o).
+- [http://localhost:7081/news/articles/c6v11qzyv8po](http://localhost:7081/news/articles/c6v11qzyv8po)
+- [http://localhost:7081/persian/articles/c4vlle3q337o](http://localhost:7081/persian/articles/c4vlle3q337o).
 
 We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https://www.ampproject.org](https://www.ampproject.org)
 
-- [http://localhost:7080/news/articles/c6v11qzyv8po.amp](http://localhost:7080/news/articles/c6v11qzyv8po.amp)
-- [http://localhost:7080/persian/articles/c4vlle3q337o.amp](http://localhost:7080/persian/articles/c4vlle3q337o.amp).
+- [http://localhost:7081/news/articles/c6v11qzyv8po.amp](http://localhost:7081/news/articles/c6v11qzyv8po.amp)
+- [http://localhost:7081/persian/articles/c4vlle3q337o.amp](http://localhost:7081/persian/articles/c4vlle3q337o.amp).
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
-- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp)
-- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
+- [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp)
+- [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp).
 
 ### Front pages
 
@@ -270,21 +270,21 @@ To run TEST bundles on localhost:
 - In `envConfig/test.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && yarn build:test && yarn start`
-- Visit a test article: http://localhost:7080/news/articles/c0g992jmmkko
+- Visit a test article: http://localhost:7081/news/articles/c0g992jmmkko
 
 To run LIVE bundles on localhost:
 
 - In `envConfig/live.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && yarn build:live && yarn start`
-- Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
+- Visit a live article: http://localhost:7081/news/articles/c8xxl4l3dzeo
 
 ## Changing request location
 
 Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
 
-- UK version: [http://localhost.bbc.co.uk:7080/news/articles/c0000000001o](http://localhost.bbc.co.uk:7080/news/articles/c0000000001o)
-- International version: [http://localhost.bbc.com:7080/news/articles/c0000000001o](http://localhost.bbc.com:7080/news/articles/c0000000001o)
+- UK version: [http://localhost.bbc.co.uk:7081/news/articles/c0000000001o](http://localhost.bbc.co.uk:7081/news/articles/c0000000001o)
+- International version: [http://localhost.bbc.com:7081/news/articles/c0000000001o](http://localhost.bbc.com:7081/news/articles/c0000000001o)
 
 If these urls do not work, you may need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
 
