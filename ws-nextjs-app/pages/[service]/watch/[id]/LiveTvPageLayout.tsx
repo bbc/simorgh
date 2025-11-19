@@ -10,7 +10,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import LinkedData from '#app/components/LinkedData';
-import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
 
