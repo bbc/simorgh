@@ -1,7 +1,5 @@
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
@@ -9,7 +7,7 @@ import {
   getProjectRoot,
   resolvePathInStorybookCache,
 } from 'storybook/internal/common';
-import { webpackDirAlias } from '../dirAlias';
+import alias from '../dirAlias';
 
 const require = createRequire(import.meta.url);
 
@@ -77,6 +75,7 @@ const storybookConfig: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
+      // @ts-expect-error
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
@@ -100,7 +99,7 @@ const storybookConfig: StorybookConfig = {
 
     config.resolve!.alias = {
       ...config.resolve!.alias,
-      ...webpackDirAlias,
+      ...alias.webpackDirAlias,
     };
     return config;
   },
