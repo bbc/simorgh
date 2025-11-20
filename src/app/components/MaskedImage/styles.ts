@@ -154,6 +154,16 @@ export default {
           90deg, ${extraWideMask})`, // 90deg for RTL
       },
     }),
+  disableExtraWideMask:
+    (isRtl: boolean) =>
+    ({ mq }: Theme) =>
+      css({
+        [mq.GROUP_5_MIN_WIDTH]: {
+          maskImage: `linear-gradient(${
+            isRtl ? '90deg' : '270deg'
+          }, ${group4Mask})`,
+        },
+      }),
   vignette:
     (isRtl: boolean) =>
     ({ mq }: Theme) =>

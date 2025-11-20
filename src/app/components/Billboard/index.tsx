@@ -78,6 +78,7 @@ export default ({
             showPlaceholder={false}
             showVignette={hasPromoItems}
             fillHeight={!hasPromoItems}
+            disableExtraWideMask={!hasPromoItems}
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>

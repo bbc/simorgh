@@ -124,7 +124,11 @@ describe('Billboard', () => {
 
     expect(maskedImageSpy).toHaveBeenCalled();
     expect(maskedImageSpy.mock.calls[0][0]).toEqual(
-      expect.objectContaining({ showVignette: false, fillHeight: true }),
+      expect.objectContaining({
+        showVignette: false,
+        fillHeight: true,
+        disableExtraWideMask: true,
+      }),
     );
 
     maskedImageSpy.mockRestore();
@@ -146,7 +150,11 @@ describe('Billboard', () => {
 
     expect(maskedImageSpy).toHaveBeenCalled();
     expect(maskedImageSpy.mock.calls[0][0]).toEqual(
-      expect.objectContaining({ showVignette: true, fillHeight: false }),
+      expect.objectContaining({
+        showVignette: true,
+        fillHeight: false,
+        disableExtraWideMask: false,
+      }),
     );
 
     maskedImageSpy.mockRestore();

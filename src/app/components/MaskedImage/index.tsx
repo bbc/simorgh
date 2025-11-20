@@ -18,20 +18,27 @@ type Props = {
   showVignette?: boolean;
   isLivePageHeaderImage?: boolean;
   fillHeight?: boolean;
+  disableExtraWideMask?: boolean;
 };
 
 const getGradientStyles = ({
   isRtl,
   showVignette,
+  disableExtraWideMask,
 }: {
   isRtl: boolean;
   showVignette: boolean;
+  disableExtraWideMask: boolean;
 }) => {
-  if (showVignette) return styles.vignette(isRtl);
+  if (showVignette) return [styles.vignette(isRtl)];
 
-  if (isRtl) return styles.linearGradientRtl;
+  const gradients = [isRtl ? styles.linearGradientRtl : styles.linearGradientLtr];
 
-  return styles.linearGradientLtr;
+  if (disableExtraWideMask) {
+    gradients.push(styles.disableExtraWideMask(isRtl));
+  }
+
+  return gradients;
 };
 
 const MaskedImage = ({
@@ -43,6 +50,7 @@ const MaskedImage = ({
   showVignette = false,
   isLivePageHeaderImage = false,
   fillHeight = false,
+  disableExtraWideMask = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -66,7 +74,11 @@ const MaskedImage = ({
     resolution: DEFAULT_IMAGE_RES,
   });
 
-  const gradientStyles = getGradientStyles({ isRtl, showVignette });
+  const gradientStyles = getGradientStyles({
+    isRtl,
+    showVignette,
+    disableExtraWideMask,
+  });
   const imageDimensions = fillHeight
     ? {}
     : {
@@ -78,7 +90,7 @@ const MaskedImage = ({
     <div
       css={[
         styles.maskedImageWrapper,
-        gradientStyles,
+        ...gradientStyles,
         fillHeight && styles.fullHeight,
       ]}
     >
