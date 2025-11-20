@@ -52,7 +52,6 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             {authorImage && isSingleContributor && (
               <li
                 css={[
-                  // BylineCss.listItemInline,
                   BylineCss.ImageWrapper,
                   isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                 ]}
@@ -67,7 +66,6 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            {/* authorName */}
             <li css={areMultipleContributors && BylineCss.listItemInline}>
               {authorTopicUrl ? (
                 <>
@@ -75,7 +73,9 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   <a
                     css={[
                       BylineCss.link,
-                      isSingleContributor && BylineCss.linkSingleContributor,
+                      isSingleContributor
+                        ? BylineCss.linkSingleContributor
+                        : BylineCss.linkMultipleContributor,
                     ]}
                     href={authorTopicUrl}
                     className="focusIndicatorReducedWidth"
@@ -114,8 +114,8 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                       BylineCss.author,
                       isSingleContributor && BylineCss.authorSingleContributor,
                     ]}
-                    size="bodyCopy"
                     fontVariant="sansBold"
+                    size="bodyCopy"
                   >
                     {authorName}
                   </Text>
@@ -132,10 +132,9 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                 <Text
                   css={BylineCss.jobRole}
-                  // fontVariant="sansBold"
-                  fontVariant="sansRegular"
-                  size="bodyCopy"
-                  // size="brevier"
+                  {...(isSingleContributor && authorImage
+                    ? { size: 'brevier' }
+                    : { size: 'bodyCopy' })}
                 >
                   {jobRole}
                 </Text>
@@ -154,31 +153,12 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             </li>
             {location ? (
               <li css={BylineCss.listItemInline}>
-                <span
-                  role="text"
-                  css={isSingleContributor && BylineCss.location}
-                  aria-label={`${reportingFrom} ${location}`}
-                >
-                  {/* to do */}
-                  {/* {isSingleContributor && (
-                    <Text
-                      css={BylineCss.reportingFromText}
-                      size="brevier"
-                      fontVariant="sansRegularItalic"
-                      aria-hidden="true"
-                    >
-                      {`${reportingFrom} `}{' '}
-                    </Text>
-                  )} */}
+                <span role="text" aria-label={`${reportingFrom} ${location}`}>
                   <Text
-                    css={[
-                      BylineCss.locationText,
-                      isSingleContributor &&
-                        BylineCss.locationTextForSingleContributor,
-                    ]}
-                    // size="brevier"
-                    size="bodyCopy"
-                    fontVariant="sansRegular"
+                    css={[BylineCss.locationText]}
+                    {...(isSingleContributor && authorImage
+                      ? { size: 'brevier' }
+                      : { size: 'bodyCopy' })}
                     aria-hidden="true"
                   >
                     {location}
@@ -203,22 +183,13 @@ const Byline = ({
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
   const { translations } = use(ServiceContext);
-  // const isRtl = dir === 'rtl';
 
   const contributorValues = bylineExtractor(blocks);
 
   const isSingleContributor = contributorValues.length === 1;
 
-  console.log('bylineValues PRINT', contributorValues);
-
-  const {
-    byline: {
-      // author = 'Author',
-      articleInformation = 'Article Information',
-      // reportingFrom = 'Reporting from',
-      // role = 'Role',
-    } = {},
-  } = translations ?? {};
+  const { byline: { articleInformation = 'Article Information' } = {} } =
+    translations ?? {};
 
   return (
     contributorValues?.[0] && (

@@ -25,16 +25,15 @@ export default {
       },
     }),
 
-  bylineSection: ({ spacings, mq }: Theme) =>
+  // to do - tidy?
+  bylineSection: ({ mq }: Theme) =>
     css({
-      // marginRight: `${spacings.FULL}rem`,
-      // marginBottom: `${spacings.FULL}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        // marginRight: `${spacings.DOUBLE}rem`,
         marginBottom: 0,
       },
     }),
 
+  // to do - tidy?
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
   author: ({ palette, isDarkUi }: Theme) =>
@@ -68,12 +67,6 @@ export default {
   link: ({ mq, palette }: Theme) =>
     css({
       display: 'inline-block',
-      '.byline-link': {
-        textDecoration: 'underline',
-        textDecorationThickness: `${pixelsToRem(1)}rem`,
-        textUnderlineOffset: `${pixelsToRem(4)}rem`,
-        textDecorationColor: palette.GREY_5,
-      },
       '&:focus, &:hover': {
         '.byline-link': {
           color: palette.POSTBOX,
@@ -93,54 +86,31 @@ export default {
       },
     }),
 
-  linkSingleContributor: ({ palette }: Theme) =>
+  linkMultipleContributor: ({ palette }: Theme) =>
+    css({
+      '.byline-link': {
+        textDecoration: 'underline',
+        textDecorationThickness: `${pixelsToRem(1)}rem`,
+        textUnderlineOffset: `${pixelsToRem(4)}rem`,
+        textDecorationColor: palette.GREY_5,
+      },
+    }),
+
+  linkSingleContributor: () =>
     css({
       paddingInlineEnd: '2.75rem',
       textDecoration: 'none',
       '&:focus, &:hover': {
         '.byline-link': {
           textDecoration: 'underline',
-          color: palette.POSTBOX,
         },
       },
-    }),
-
-  location: () =>
-    css({
-      // margin: '0',
-      // display: 'block',
-      // clear: 'both',
     }),
 
   locationText: ({ palette, isDarkUi }: Theme) =>
     css({
       color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
-      // paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
-
-  locationTextForSingleContributor: () =>
-    css({
-      // display: 'block',
-    }),
-
-  // reportingFromText: ({ palette, isDarkUi }: Theme) =>
-  //   css({
-  //     color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
-  //   }),
-
-  // timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
-  //   css({
-  //     // // EXPERIMENT: Article Read Time
-  //     // '&:nth-child(2)::before': {
-  //     //   content: '""',
-  //     //   borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
-  //     //   width: `${pixelsToRem(40)}rem`,
-  //     //   display: 'block',
-  //     //   margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-  //     //   [mq.GROUP_2_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem` },
-  //     //   [mq.GROUP_4_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem 0` },
-  //     // },
-  //   }),
 
   ImageWrapper: ({ palette }: Theme) =>
     css({
