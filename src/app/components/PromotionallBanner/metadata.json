@@ -1,24 +1,30 @@
 {
+  "alpha": true,
+  "lastUpdated": {
+    "day": 20,
+    "month": "Nov",
+    "year": 2025
+  },
   "uxAccessibilityDoc": {
     "done": false,
     "reference": {
-      "url": "",
-      "label": "Accessibility Section"
+      "url": "https://www.figma.com/design/4eDeftiix6UqOgfgTeo9hp/PWA-Upselling-Message?node-id=104-9&p=f&t=Xdx8Xo8xucGZKwsr-0",
+      "label": "Screen Reader UX"
     }
   },
   "acceptanceCriteria": {
     "done": false,
     "reference": {
       "url": "",
-      "label": "GEL Accessibility Criteria Tests"
+      "label": "Accessibility Acceptance Criteria"
     }
   },
   "swarm": {
     "done": false,
     "reference": {
       "url": "",
-      "label": "A11y swarm notes"
+      "label": "Accessibility Swarm Notes"
     }
   },
-  "creationDate": "2024-02-09"
+  "creationDate": "2025-11-20"
 }
