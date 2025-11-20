@@ -13,7 +13,7 @@ import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 const require = createRequire(import.meta.url);
 
 const storybookConfig: StorybookConfig = {
-  previewHead(config, options) {
+  previewHead(config) {
     const fontLinkTags = Object.values(fontInfo)
       .map(font => {
         return `
