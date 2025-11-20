@@ -66,6 +66,30 @@ const storybookConfig: StorybookConfig = {
           include: [getProjectRoot()],
           exclude: [/node_modules/],
         },
+          {
+            test: /\.module\.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  modules: {
+                    localIdentName: '[name]__[local]___[hash:base64:5]',
+                  },
+                  importLoaders: 1,
+                },
+              },
+              require.resolve('sass-loader'),
+            ],
+          },
+          {
+            test: /(?<!\.module)\.scss$/,
+            use: [
+              require.resolve('style-loader'),
+              require.resolve('css-loader'),
+              require.resolve('sass-loader'),
+            ],
+          },
       ],
     };
 
