@@ -7030,14 +7030,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.12.1":
-  version: 1.12.2
-  resolution: "axios@npm:1.12.2"
+"axios@npm:^1.13.2":
+  version: 1.13.2
+  resolution: "axios@npm:1.13.2"
   dependencies:
     follow-redirects: "npm:^1.15.6"
     form-data: "npm:^4.0.4"
     proxy-from-env: "npm:^1.1.0"
-  checksum: 10/886a79770594eaad76493fecf90344b567bd956240609b5dcd09bd0afe8d3e6f1ad6d3257a93a483b6192b409d4b673d9515a34619e3e3ed1b2c0ec2a83b20ba
+  checksum: 10/ae4e06dcd18289f2fd18179256d550d27f9a53ecb2f9c59f2ccc4efd1d7151839ba8c3e0fb533dac793e4a59a576ca8689a19244dce5c396680837674a47a867
   languageName: node
   linkType: hard
 
@@ -16887,7 +16887,7 @@ __metadata:
     typescript: "npm:5.9.2"
     undici: "npm:7.16.0"
     url-parse: "npm:1.5.10"
-    wait-on: "npm:9.0.0"
+    wait-on: "npm:9.0.3"
     webpack: "npm:5.102.1"
     webpack-bundle-analyzer: "npm:4.10.2"
     webpack-cli: "npm:6.0.1"
@@ -18683,18 +18683,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wait-on@npm:9.0.0":
-  version: 9.0.0
-  resolution: "wait-on@npm:9.0.0"
+"wait-on@npm:9.0.3":
+  version: 9.0.3
+  resolution: "wait-on@npm:9.0.3"
   dependencies:
-    axios: "npm:^1.12.1"
+    axios: "npm:^1.13.2"
     joi: "npm:^18.0.1"
     lodash: "npm:^4.17.21"
     minimist: "npm:^1.2.8"
     rxjs: "npm:^7.8.2"
   bin:
     wait-on: bin/wait-on
-  checksum: 10/bbdaceb2843d140f23c6e25cf6dfdffcbb8c8ab2781a19cadc4b65c53762901dd183ad61621790cf60598e868bbce338d5c523b1019ce18e156afa598fd7c2b2
+  checksum: 10/f5d9e708f9398fed22d3ef312799c33c3064a4c40ee4c03ea6e40a221f9cbcca11509c8db5923c332cee841903b1fc115eb72235cfa12f33bd8898d8d15c39a7
   languageName: node
   linkType: hard
 
