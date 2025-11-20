@@ -1,6 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import { REITH_SANS } from '../ThemeProvider/fontFamilies';
 
 const styles = {
   banner: ({ mq, spacings, palette }: Theme) =>
@@ -61,14 +60,15 @@ const styles = {
       lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
-  description: ({ spacings, mq, palette }: Theme) =>
+  description: ({ spacings, mq, palette, fontVariants }: Theme) =>
     css({
       color: palette.GREY_2,
       marginBottom: 0,
       marginTop: `${spacings.FULL}rem`,
       marginRight: `${spacings.TRIPLE}rem`,
       height: 'auto',
-      fontFamily: REITH_SANS,
+      fontFamily: fontVariants.sansRegular.fontFamily,
+      fontWeight: fontVariants.sansRegular.fontWeight,
       display: 'none',
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'block',
@@ -92,7 +92,7 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ mq, spacings, palette }: Theme) =>
+  primaryButton: ({ mq, spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -102,10 +102,10 @@ const styles = {
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: REITH_SANS,
+      fontFamily: fontVariants.sansBold.fontFamily,
+      fontWeight: fontVariants.sansBold.fontWeight,
       fontSize: `${pixelsToRem(15)}rem`,
       lineHeight: `${pixelsToRem(20)}rem`,
-      fontWeight: '700',
       position: 'relative',
       '&:focus, &:hover': {
         backgroundColor: palette.WHITE,
@@ -131,19 +131,19 @@ const styles = {
       },
     }),
 
-  dividerText: ({ palette }: Theme) =>
+  dividerText: ({ palette, fontVariants }: Theme) =>
     css({
       color: palette.GREY_2,
       fontSize: `${pixelsToRem(15)}rem`,
       height: `${pixelsToRem(28)}rem`,
       lineHeight: `${pixelsToRem(28)}rem`,
-      fontWeight: 700,
+      fontWeight: fontVariants.sansBold.fontWeight,
       margin: 0,
       alignText: 'center',
-      fontFamily: REITH_SANS,
+      fontFamily: fontVariants.sansBold.fontFamily,
     }),
 
-  secondaryButton: ({ mq, spacings, palette }: Theme) =>
+  secondaryButton: ({ mq, spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: 'transparent',
@@ -151,12 +151,12 @@ const styles = {
       textDecoration: 'underline',
       textUnderlineOffset: `${pixelsToRem(5)}rem`,
       textDecorationColor: palette.GREY_4,
-      fontWeight: '700',
+      fontWeight: fontVariants.sansBold.fontWeight,
       height: `${pixelsToRem(30)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: REITH_SANS,
+      fontFamily: fontVariants.sansBold.fontFamily,
       [mq.GROUP_1_MAX_WIDTH]: {
         padding: 0,
       },
