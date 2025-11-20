@@ -13,7 +13,7 @@ describe('PromotionalBanner', () => {
     isDismissible: true,
     orText: 'or',
     primaryButton: {
-      shortText: 'Install',
+      text: 'Install',
       longText: 'Install the PWA App',
       onClick: jest.fn(),
     },
@@ -21,7 +21,6 @@ describe('PromotionalBanner', () => {
       text: 'Not now',
       onClick: jest.fn(),
     },
-    serviceBackground: 'defaultBackground',
     handleClose: jest.fn(),
   };
 
@@ -37,7 +36,7 @@ describe('PromotionalBanner', () => {
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
-  it('sets correct aria-label for primary button (shortText)', () => {
+  it('sets correct aria-label for primary button (text)', () => {
     render(<PromotionalBanner {...defaultProps} />);
     const primaryButton = screen.getByRole('button', { name: /install/i });
     expect(primaryButton).toHaveAttribute('aria-label', 'Install');
@@ -48,7 +47,7 @@ describe('PromotionalBanner', () => {
       ...defaultProps,
       primaryButton: {
         ...defaultProps.primaryButton,
-        shortText: '',
+        text: '',
         longText: 'Install the PWA App',
       },
     };

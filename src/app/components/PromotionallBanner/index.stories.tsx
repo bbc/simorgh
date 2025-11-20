@@ -16,7 +16,7 @@ const ComponentWithContext = ({
         title={title}
         description={description}
         primaryButton={{
-          shortText: primaryButton?.shortText,
+          text: primaryButton?.text,
           longText: primaryButton?.longText,
           onClick: () => console.log('Primary clicked'),
         }}

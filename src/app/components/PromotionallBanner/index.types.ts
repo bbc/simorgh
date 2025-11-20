@@ -1,21 +1,15 @@
-export interface ButtonBase {
-  onClick: () => void;
-}
-
-export interface PrimaryButton extends ButtonBase {
-  shortText: string;
-  longText?: string;
-}
-
-export interface SecondaryButton extends ButtonBase {
+interface PromotionalBannerButton {
   text: string;
+  longText?: string;
+  onClick?: () => void;
 }
 
-export interface BannerProps {
+export interface PromotionalBannerProps {
   title: string;
   description: string;
-  primaryButton: PrimaryButton;
-  secondaryButton: SecondaryButton;
+  orText: string;
+  primaryButton: PromotionalBannerButton;
+  secondaryButton: PromotionalBannerButton;
   isDismissible?: boolean;
-  handleClose: () => void;
+  handleClose?: () => void;
 }

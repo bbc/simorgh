@@ -1,4 +1,5 @@
 import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import { PromotionalBannerProps } from '#app/components/PromotionallBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -113,7 +114,7 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
-  promotionalBanner?: PromotionalBanner;
+  promotionalBanner?: PromotionalBannerProps;
   electionBanner?: {
     heights?: {
       desktop: number;
@@ -123,19 +124,6 @@ export type ServiceConfig = {
     electionThingIds: string[];
     iframeSrc: string;
     iframeDevSrc: string;
-  };
-};
-
-export type PromotionalBanner = {
-  title: string;
-  description: string;
-  orText: string;
-  primaryButton: {
-    shortText: string;
-    longText: string;
-  };
-  secondaryButton: {
-    text: string;
   };
 };
 
