@@ -39,13 +39,6 @@ export default {
   jobRole: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
-  twitterText: ({ palette }: Theme) =>
-    css({
-      color: palette.POSTBOX,
-      display: 'inline-block',
-      verticalAlign: 'middle',
-    }),
-
   authorChevron: ({ palette, isDarkUi, spacings, mq }: Theme) =>
     css({
       verticalAlign: 'middle',
@@ -54,17 +47,6 @@ export default {
       fill: 'currentcolor',
       width: `${spacings.FULL + spacings.HALF}rem`,
       height: `${spacings.FULL + spacings.HALF}rem`,
-      [mq.FORCED_COLOURS]: { fill: 'linkText' },
-    }),
-
-  twitterChevron: ({ palette, spacings, mq }: Theme) =>
-    css({
-      verticalAlign: 'middle',
-      margin: `0 ${spacings.HALF}rem`,
-      color: palette.POSTBOX,
-      fill: 'currentcolor',
-      width: `${spacings.FULL}rem`,
-      height: `${spacings.FULL}rem`,
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
@@ -163,9 +145,8 @@ export default {
       height: `${pixelsToRem(80)}rem`,
     }),
 
-  twitterLink: () =>
+  listItemInline: () =>
     css({
-      paddingBottom: `${pixelsToRem(22)}rem`,
-      paddingTop: `${pixelsToRem(4)}rem`,
+      display: `inline`,
     }),
 };

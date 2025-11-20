@@ -12,181 +12,174 @@ import Text from '../Text';
 import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
-const Byline = ({
-  blocks,
-  children = null,
-}: PropsWithChildren<OptimoBylineBlock['model']>) => {
+const Contributor = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
-
-  const bylineValues = bylineExtractor(blocks);
 
   const {
     byline: {
       author = 'Author',
-      articleInformation = 'Article Information',
       reportingFrom = 'Reporting from',
       role = 'Role',
     } = {},
   } = translations ?? {};
 
-  const contributors =
-    bylineValues.length === 0
-      ? null
-      : bylineValues?.map(values => {
-          if (!values) return null;
+  // is this enough?
+  if (!contributorValues) return null;
 
-          const {
-            authorName,
-            jobRole,
-            twitterText,
-            twitterLink,
-            authorImage,
-            location,
-            authorTopicUrl,
-          } = values;
+  const { authorName, jobRole, authorImage, location, authorTopicUrl } =
+    contributorValues;
 
-          return (
-            <ul
-              css={[BylineCss.bylineList, BylineCss.bylineSection]}
-              role="list"
-              key={authorName}
-            >
-              {authorImage && (
-                <li
-                  css={[
-                    BylineCss.ImageWrapper,
-                    isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-                  ]}
-                  role="presentation"
-                >
-                  <Image
-                    css={BylineCss.imageSrc}
-                    src={authorImage}
-                    alt={authorName}
-                    placeholder={false}
-                    aspectRatio={[1, 1]}
-                  />
-                </li>
-              )}
-              <li>
-                {authorTopicUrl ? (
-                  <>
-                    <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
-                    <a
-                      css={[BylineCss.link]}
-                      href={authorTopicUrl}
-                      className="focusIndicatorReducedWidth"
-                    >
-                      <Text
-                        className="byline-link"
-                        size="bodyCopy"
-                        fontVariant="sansBold"
-                        css={BylineCss.author}
-                      >
-                        {authorName}
-                      </Text>
-                      {isRtl ? (
-                        <LeftChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      ) : (
-                        <RightChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      )}
-                    </a>
-                  </>
-                ) : (
-                  <span role="text">
-                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                    <Text
-                      css={[BylineCss.author]}
-                      size="bodyCopy"
-                      fontVariant="sansBold"
-                    >
-                      {authorName}
-                    </Text>
-                  </span>
-                )}
-              </li>
-              <li>
-                <span role="text">
-                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                  <Text
-                    css={BylineCss.jobRole}
-                    fontVariant="sansBold"
-                    size="brevier"
-                  >
-                    {jobRole}
-                  </Text>
-                </span>
-              </li>
-              {twitterLink ? (
-                <li>
-                  <a
-                    css={[BylineCss.link, BylineCss.twitterLink]}
-                    className="focusIndicatorReducedWidth"
-                    href={twitterLink}
-                    aria-labelledby="byline-twitter-link"
-                  >
-                    <span role="text" id="byline-twitter-link">
-                      <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
-                      <Text
-                        className="byline__link-text"
-                        css={BylineCss.twitterText}
-                        size="brevier"
-                        fontVariant="sansBold"
-                      >{`@${twitterText}`}</Text>
-                      {isRtl ? (
-                        <LeftChevron css={BylineCss.twitterChevron} />
-                      ) : (
-                        <RightChevron css={BylineCss.twitterChevron} />
-                      )}
-                    </span>
-                  </a>
-                </li>
-              ) : null}
-              {location ? (
-                <li>
-                  <span
-                    role="text"
-                    css={BylineCss.location}
-                    aria-label={`${reportingFrom} ${location}`}
-                  >
-                    <Text
-                      css={BylineCss.reportingFromText}
-                      size="brevier"
-                      fontVariant="sansRegularItalic"
-                      aria-hidden="true"
-                    >
-                      {`${reportingFrom} `}{' '}
-                    </Text>
-                    <Text
-                      css={BylineCss.locationText}
-                      size="brevier"
-                      fontVariant="sansRegular"
-                      aria-hidden="true"
-                    >
-                      {location}
-                    </Text>
-                  </span>
-                </li>
-              ) : null}
-            </ul>
-          );
-        });
+  // temp
+  const areMultipleContributors = !isSingleContributor;
 
   return (
-    contributors?.[0] && (
+    <ul
+      css={[BylineCss.bylineList, BylineCss.bylineSection]}
+      role="list"
+      key={authorName}
+    >
+      {authorImage && (
+        <li
+          css={[
+            // BylineCss.listItemInline,
+            BylineCss.ImageWrapper,
+            isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+          ]}
+          role="presentation"
+        >
+          <Image
+            css={BylineCss.imageSrc}
+            src={authorImage}
+            alt={authorName}
+            placeholder={false}
+            aspectRatio={[1, 1]}
+          />
+        </li>
+      )}
+      {/* authorName */}
+      <li>
+        {authorTopicUrl ? (
+          <>
+            <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
+            <a
+              css={[BylineCss.link]}
+              href={authorTopicUrl}
+              className="focusIndicatorReducedWidth"
+            >
+              <Text
+                className="byline-link"
+                // size="bodyCopy"
+                // fontVariant="sansBold"
+                css={BylineCss.author}
+              >
+                {authorName}
+              </Text>
+              {isRtl ? (
+                <LeftChevron
+                  className="byline-link"
+                  css={BylineCss.authorChevron}
+                />
+              ) : (
+                <RightChevron
+                  className="byline-link"
+                  css={BylineCss.authorChevron}
+                />
+              )}
+            </a>
+          </>
+        ) : (
+          <span role="text">
+            <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+            <Text
+              css={[BylineCss.author]}
+              // size="bodyCopy"
+              // fontVariant="sansBold"
+            >
+              {authorName}
+            </Text>
+          </span>
+        )}
+      </li>
+      <li>
+        <span role="text">
+          <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+          <Text
+            css={BylineCss.jobRole}
+            // fontVariant="sansBold"
+            // size="brevier"
+          >
+            {jobRole}
+          </Text>
+        </span>
+      </li>
+      {location ? (
+        <li>
+          <span
+            role="text"
+            css={BylineCss.location}
+            aria-label={`${reportingFrom} ${location}`}
+          >
+            <Text
+              css={BylineCss.reportingFromText}
+              // size="brevier"
+              // fontVariant="sansRegularItalic"
+              aria-hidden="true"
+            >
+              {`${reportingFrom} `}{' '}
+            </Text>
+            <Text
+              css={BylineCss.locationText}
+              // size="brevier"
+              // fontVariant="sansRegular"
+              aria-hidden="true"
+            >
+              {location}
+            </Text>
+          </span>
+        </li>
+      ) : null}
+    </ul>
+  );
+};
+
+const Byline = ({
+  blocks,
+  children = null,
+}: PropsWithChildren<OptimoBylineBlock['model']>) => {
+  const { translations } = use(ServiceContext);
+  // const isRtl = dir === 'rtl';
+
+  const contributorValues = bylineExtractor(blocks);
+
+  const isSingleContributor = contributorValues.length === 1;
+
+  console.log('bylineValues PRINT', contributorValues);
+
+  const {
+    byline: {
+      // author = 'Author',
+      articleInformation = 'Article Information',
+      // reportingFrom = 'Reporting from',
+      // role = 'Role',
+    } = {},
+  } = translations ?? {};
+
+  return (
+    contributorValues?.[0] && (
       <section role="region" aria-labelledby="article-byline">
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
         <ul css={BylineCss.bylineList}>
-          <li css={BylineCss.bylineContainer}>{contributors}</li>
+          {contributorValues.map((contributor, index) => (
+            <li css={isSingleContributor && BylineCss.bylineContainer}>
+              <Contributor
+                contributorValues={contributor}
+                isSingleContributor={isSingleContributor}
+              />
+            </li>
+          ))}
           {/* EXPERIMENT: Article Read Time */}
           {children &&
             React.Children.map(children, (child, index) => (
