@@ -18,7 +18,7 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News România',
     product: 'BBC News',
     defaultImage:
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News România',
     dir: 'ltr',
     externalLinkText: ', extern',

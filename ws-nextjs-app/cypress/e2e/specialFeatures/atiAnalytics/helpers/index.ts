@@ -36,6 +36,8 @@ const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
 const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
 const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
+const TOP_BAR_OJ = 'top-bar-oj';
+const CONTINUE_READING_BUTTON = 'continue-reading-button';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -61,6 +63,8 @@ export const COMPONENTS = {
   TOP_STORIES,
   PORTRAIT_VIDEO_CAROUSEL,
   PORTRAIT_VIDEO_MODAL,
+  TOP_BAR_OJ,
+  CONTINUE_READING_BUTTON,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
