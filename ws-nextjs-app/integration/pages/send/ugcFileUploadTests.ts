@@ -1,7 +1,7 @@
 export default () => {
   describe('UGC file upload', () => {
     const inputFileField = document.querySelector(`input[type=file]`);
-    const inputFileFieldId = inputFileField.id;
+    const inputFileFieldId = inputFileField?.id;
 
     it('should render a file input field', () => {
       expect(inputFileField).toBeInTheDocument();
