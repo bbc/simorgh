@@ -23,6 +23,7 @@ const CurationPromo = ({
   lastPublished,
   imageUrl,
   imageAlt,
+  isPortraitImage,
   lazy,
   link,
   type,
@@ -71,6 +72,7 @@ const CurationPromo = ({
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
+          isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (

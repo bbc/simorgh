@@ -1,12 +1,6 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  use,
-  useEffect,
-} from 'react';
+import React, { Fragment, PropsWithChildren, useState, use } from 'react';
 import { Global, jsx, useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import useImageColour from '#app/hooks/useImageColour';
@@ -35,6 +29,7 @@ export type ImageProps = {
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
   isPromo?: boolean;
+  isPortraitImage?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -65,19 +60,11 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
   isPromo,
+  isPortraitImage,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isPortrait, setIsPortrait] = useState(false);
   const imgRef = React.useRef<HTMLImageElement | null>(null);
-
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img?.complete) {
-      setIsPortrait(img.naturalHeight > img.naturalWidth);
-      setIsLoaded(true);
-    }
-  }, []);
 
   const {
     palette: { GREY_8, WHITE },
@@ -198,7 +185,7 @@ const Image = ({
                 />
               </>
             )}
-            {isPromo && isPortrait && (
+            {isPromo && isPortraitImage && (
               <div
                 css={[
                   styles.gradientBackground,
@@ -212,11 +199,7 @@ const Image = ({
             )}
             <img
               ref={imgRef}
-              onLoad={e => {
-                const img = e.currentTarget;
-                setIsPortrait(img.naturalHeight > img.naturalWidth);
-                setIsLoaded(true);
-              }}
+              onLoad={() => setIsLoaded(true)}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
@@ -225,7 +208,9 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                isPortrait && isPromo ? styles.portraitImage : styles.image,
+                isPortraitImage && isPromo
+                  ? styles.portraitImage
+                  : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,

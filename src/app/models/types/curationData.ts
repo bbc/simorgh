@@ -12,6 +12,7 @@ interface BaseSummary {
   imageUrl: string;
   link: string;
   imageAlt: string;
+  isPortraitImage?: boolean;
   description?: string;
   title: string;
   id?: string;
