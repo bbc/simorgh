@@ -64,6 +64,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: "Gụọ ya n'ime",
+        long: 'Akụkọ ya toro ogologo',
+        minute: 'nkeji',
+      },
       pagination: {
         previousPage: 'Ikpeazụ',
         nextPage: 'Osote',
