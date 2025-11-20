@@ -8,7 +8,7 @@ const Image = ({
   fallbackSrcset = '',
   width,
   height,
-  isPortraitImage,
+  isPortraitImage = false,
 }) => {
   const ASPECT_RATIO = [16, 9];
 
