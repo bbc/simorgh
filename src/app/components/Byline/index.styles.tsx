@@ -93,6 +93,9 @@ export default {
         textDecorationThickness: `${pixelsToRem(1)}rem`,
         textUnderlineOffset: `${pixelsToRem(4)}rem`,
         textDecorationColor: palette.GREY_5,
+        '&:focus, &:hover': {
+          textDecorationColor: palette.POSTBOX,
+        },
       },
     }),
 

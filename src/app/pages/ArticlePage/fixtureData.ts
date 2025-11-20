@@ -1760,12 +1760,12 @@ export const bylineWithNameAndRole = [
                     {
                       type: 'paragraph',
                       model: {
-                        text: 'Test',
+                        text: 'Role Test',
                         blocks: [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Test',
+                              text: 'Role Test',
                               attributes: [],
                             },
                           },
@@ -1830,12 +1830,12 @@ export const bylineWithLink = [
                     {
                       type: 'paragraph',
                       model: {
-                        text: 'Test',
+                        text: 'Role Test',
                         blocks: [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Test',
+                              text: 'Role Test',
                               attributes: [],
                             },
                           },
@@ -1939,12 +1939,12 @@ export const bylineWithLinkAndLocation = [
                     {
                       type: 'paragraph',
                       model: {
-                        text: 'Test',
+                        text: 'Role Test',
                         blocks: [
                           {
                             type: 'fragment',
                             model: {
-                              text: 'Test',
+                              text: 'Role Test',
                               attributes: [],
                             },
                           },
