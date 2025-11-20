@@ -61,6 +61,7 @@ import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
 } from './assertions/navigation';
+
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [
@@ -98,23 +99,12 @@ const canonicalTestSuites = [
   },
   {
     path: '/ws/languages',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local', 'test', 'live'],
     service: 'ws',
     pageIdentifier: 'ws.languages.page',
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
-    tests: [assertPageView],
-  },
-  {
-    path: '/ws/languages',
-    runforEnv: ['live'],
-    service: 'ws',
-    pageIdentifier: 'ws.languages.page',
-    siteId: 30,
-    applicationType: 'responsive',
-    contentType: 'static',
     useReverb: true,
     tests: [assertPageView],
   },
