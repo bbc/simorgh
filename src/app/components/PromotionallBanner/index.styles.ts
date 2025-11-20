@@ -1,23 +1,16 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import {
-  BLACK,
-  GREY_2,
-  GREY_4,
-  POSTBOX,
-  WHITE,
-} from '../ThemeProvider/palette';
 import { REITH_SANS } from '../ThemeProvider/fontFamilies';
 
 const styles = {
-  banner: ({ mq, spacings }: Theme) =>
+  banner: ({ mq, spacings, palette }: Theme) =>
     css({
       position: 'relative',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: `linear-gradient(to bottom left, ${POSTBOX} 0%, ${BLACK} 50%, ${POSTBOX} 100%)`,
+      background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
       padding: `${spacings.DOUBLE}rem`,
       minHeight: `${pixelsToRem(170)}rem`,
       maxHeight: `${pixelsToRem(370)}rem`,
@@ -68,9 +61,9 @@ const styles = {
       lineHeight: `${pixelsToRem(32)}rem`,
     }),
 
-  description: ({ spacings, mq }: Theme) =>
+  description: ({ spacings, mq, palette }: Theme) =>
     css({
-      color: GREY_2,
+      color: palette.GREY_2,
       marginBottom: 0,
       marginTop: `${spacings.FULL}rem`,
       marginRight: `${spacings.TRIPLE}rem`,
@@ -99,10 +92,10 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ mq, spacings }: Theme) =>
+  primaryButton: ({ mq, spacings, palette }: Theme) =>
     css({
-      color: BLACK,
-      backgroundColor: WHITE,
+      color: palette.BLACK,
+      backgroundColor: palette.WHITE,
       border: 'none',
       width: 'auto',
       height: `${pixelsToRem(30)}rem`,
@@ -115,10 +108,10 @@ const styles = {
       fontWeight: '700',
       position: 'relative',
       '&:focus, &:hover': {
-        backgroundColor: WHITE,
-        color: BLACK,
+        backgroundColor: palette.WHITE,
+        color: palette.BLACK,
         textDecoration: 'underline',
-        textDecorationColor: BLACK,
+        textDecorationColor: palette.BLACK,
         textDecorationThickness: `${pixelsToRem(2)}rem`,
         textUnderlineOffset: `${pixelsToRem(5)}rem`,
       },
@@ -138,9 +131,9 @@ const styles = {
       },
     }),
 
-  dividerText: () =>
+  dividerText: ({ palette }: Theme) =>
     css({
-      color: GREY_2,
+      color: palette.GREY_2,
       fontSize: `${pixelsToRem(15)}rem`,
       height: `${pixelsToRem(28)}rem`,
       lineHeight: `${pixelsToRem(28)}rem`,
@@ -150,14 +143,14 @@ const styles = {
       fontFamily: REITH_SANS,
     }),
 
-  secondaryButton: ({ mq, spacings }: Theme) =>
+  secondaryButton: ({ mq, spacings, palette }: Theme) =>
     css({
-      color: WHITE,
+      color: palette.WHITE,
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
       textUnderlineOffset: `${pixelsToRem(5)}rem`,
-      textDecorationColor: GREY_4,
+      textDecorationColor: palette.GREY_4,
       fontWeight: '700',
       height: `${pixelsToRem(30)}rem`,
       padding: `${spacings.HALF}rem`,
@@ -168,10 +161,10 @@ const styles = {
         padding: 0,
       },
       '&:focus, &:hover': {
-        backgroundColor: WHITE,
-        color: BLACK,
+        backgroundColor: palette.WHITE,
+        color: palette.BLACK,
         textDecoration: 'underline',
-        textDecorationColor: BLACK,
+        textDecorationColor: palette.BLACK,
         textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
     }),
