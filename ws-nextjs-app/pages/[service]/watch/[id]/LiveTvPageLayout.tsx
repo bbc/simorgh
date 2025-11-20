@@ -49,7 +49,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   } = pageData;
 
   const metadataTitle = seoTitle || title;
-  const metadataDescription = seoDescription || description;
+  const metadataDescription = seoDescription || description || title;
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
