@@ -9,15 +9,15 @@ export default () => {
     });
 
     it('should render a heading', () => {
-      const headingEl = document.querySelector('h1');
+      const headingEl = document.querySelector('h1')!;
       expect(headingEl).toBeInTheDocument();
-      expect(headingEl?.textContent).toMatchSnapshot();
+      expect(headingEl.textContent).toMatchSnapshot();
     });
 
     it('should render a submit button', () => {
-      const submitButton = document.querySelector(`button[type=submit]`);
+      const submitButton = document.querySelector(`button[type=submit]`)!;
       expect(submitButton).toBeInTheDocument();
-      expect(submitButton?.textContent).toMatchSnapshot();
+      expect(submitButton.textContent).toMatchSnapshot();
     });
 
     describe('input fields', () => {
@@ -27,14 +27,14 @@ export default () => {
       });
 
       it('should accept a value in a text input field', () => {
-        const inputNameField = document.querySelector('input[type=text]');
-        fireEvent.change(inputNameField!, { target: { value: 'Hello' } });
+        const inputNameField = document.querySelector('input[type=text]')!;
+        fireEvent.change(inputNameField, { target: { value: 'Hello' } });
         expect((inputNameField as HTMLInputElement).value).toEqual('Hello');
       });
 
       it('should accept a value in an email input field', () => {
-        const inputEmailField = document.querySelector('input[type=email]');
-        fireEvent.change(inputEmailField!, {
+        const inputEmailField = document.querySelector('input[type=email]')!;
+        fireEvent.change(inputEmailField, {
           target: { value: 'hello@test.com' },
         });
         expect((inputEmailField as HTMLInputElement).value).toEqual(
@@ -43,9 +43,9 @@ export default () => {
       });
 
       it('should accept a value in a textarea field', () => {
-        const textareaField = document.querySelector('textarea');
-        fireEvent.change(textareaField!, { target: { value: 'Hello Test' } });
-        expect(textareaField?.value).toEqual('Hello Test');
+        const textareaField = document.querySelector('textarea')!;
+        fireEvent.change(textareaField, { target: { value: 'Hello Test' } });
+        expect(textareaField.value).toEqual('Hello Test');
       });
 
       it('should render a checkbox that can be checked', () => {
