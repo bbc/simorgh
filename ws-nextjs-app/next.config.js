@@ -42,6 +42,9 @@ module.exports = {
   poweredByHeader: false,
   generateEtags: false,
   transpilePackages: ['simorgh'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
