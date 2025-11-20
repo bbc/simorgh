@@ -8,10 +8,30 @@ import {
   resolvePathInStorybookCache,
 } from 'storybook/internal/common';
 import alias from '../dirAlias';
+import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 
 const require = createRequire(import.meta.url);
 
 const storybookConfig: StorybookConfig = {
+  previewHead(config, options) {
+    const fontLinkTags = Object.values(fontInfo)
+      .map(font => {
+        return `
+        <link
+          rel="preload"
+          href="${font.downloadSrc}"
+          as="font"
+          crossorigin="anonymous"
+        />
+      `;
+      })
+      .join('\n');
+
+    return `
+      ${config}
+      ${fontLinkTags}
+    `;
+  },
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',

@@ -253,7 +253,7 @@ export type FontInfo = FontFace & {
   version?: string;
 };
 
-const fontInfo: Record<FontName, FontInfo> = {
+export const fontInfo: Record<FontName, FontInfo> = {
   BBCReithSans_W_Bd: {
     ...REITH_SANS_BOLD['@font-face'],
     downloadSrc: `${REITH_FONTS_DIR}BBCReithSans_W_Bd.woff2`,
