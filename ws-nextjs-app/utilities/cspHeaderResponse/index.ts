@@ -3,9 +3,9 @@ import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import getToggles from '#app/lib/utilities/getToggles';
-import { Services, ToggleDefinition, Toggles } from '#app/models/types/global';
-import { services } from '#app/lib/config/services/loadableConfig';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { Services } from '#app/models/types/global';
+import SERVICES from '#app/lib/config/services';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -37,13 +37,6 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const getToggleDefinitions = (
-  toggles: Toggles = {},
-): Record<string, ToggleDefinition> => {
-  const { _environment, ...toggleDefinitions } = toggles;
-  return toggleDefinitions;
-};
-
 const isRelaxedCspEnabled = (
   countryList: string | number | undefined,
   country: string,
@@ -62,25 +55,25 @@ const isRelaxedCspEnabled = (
 };
 
 const isValidService = (str: string) => {
-  const [service] = str.split('/').filter(Boolean);
-  return service && services.includes(service as Services);
+  const [service] = str.split('/').filter(Boolean) as [Services?];
+  return service && SERVICES.includes(service);
 };
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
   const isLive = isLiveEnv();
   const urlPath = request.nextUrl.pathname;
-  let toggles = null;
-  let toggleDefinitions = null;
+  let hasAdsScripts = false;
+  let countryList = '';
 
   if (isValidService(urlPath)) {
     const service = fallbackServiceParam(request.nextUrl.pathname);
-    toggles = await getToggles(service);
-    toggleDefinitions = getToggleDefinitions(toggles);
+    const toggles = await getToggles(service);
+
+    ({ enabled: hasAdsScripts, value: countryList = '' } =
+      toggles?.adsNonce || { enabled: false, value: '' });
   }
 
-  const { enabled: hasAdsScripts, value: countryList = '' } =
-    toggleDefinitions?.adsNonce || {};
   const requestHeaders = new Headers(request.headers);
   const country =
     requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');

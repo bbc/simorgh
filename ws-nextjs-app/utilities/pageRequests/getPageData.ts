@@ -1,5 +1,5 @@
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
-import getToggles from '#app/lib/utilities/getToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { FetchError } from '#app/models/types/fetch';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
@@ -18,6 +18,7 @@ type Props = {
   rendererEnv?: string;
   resolvedUrl: string;
   pageType: PageTypes;
+  isAmp?: boolean;
 };
 
 const getPageData = async ({
@@ -28,6 +29,7 @@ const getPageData = async ({
   rendererEnv,
   resolvedUrl,
   pageType,
+  isAmp,
 }: Props) => {
   const path = `${id}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`;
   const url = new URL(path, 'https://www.bbc.com');
@@ -46,6 +48,7 @@ const getPageData = async ({
       variant,
       page,
       getAgent,
+      isAmp,
     }));
   } catch (error: unknown) {
     ({ message, status } = error as FetchError);

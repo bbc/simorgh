@@ -15,7 +15,6 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 
   return (
     <Helmet htmlAttributes={{ lang, dir }}>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noindex,nofollow" />
       <meta name="theme-color" content={themeColor} />
