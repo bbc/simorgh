@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 const styles = {
@@ -29,11 +30,20 @@ const styles = {
         padding: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
-  title: ({ palette, spacings }: Theme) =>
+  playerOutline: ({ mq }: Theme) =>
+    css({
+      [mq.FORCED_COLOURS]: {
+        border: `solid ${pixelsToRem(3)}rem transparent`,
+      },
+    }),
+  title: ({ mq, palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.DOUBLE}rem`,
       display: 'block',
       color: palette.GHOST,
+      [mq.FORCED_COLOURS]: {
+        paddingTop: `${spacings.FULL}rem`,
+      },
     }),
   description: ({ palette, spacings }: Theme) =>
     css({

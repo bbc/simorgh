@@ -62,8 +62,11 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
           <div css={styles.padding}>
-            {mediaCollectionCuration &&
-              renderCuration({ curation: mediaCollectionCuration })}
+            {mediaCollectionCuration && (
+              <div css={styles.playerOutline}>
+                {renderCuration({ curation: mediaCollectionCuration })}
+              </div>
+            )}
             <Heading id="content" level={1} css={styles.title}>
               {title}
             </Heading>
