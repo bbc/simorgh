@@ -4,25 +4,33 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export default {
   bylineContainer: ({ spacings, mq }: Theme) =>
     css({
-      display: 'grid',
       paddingInlineStart: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
+      lineHeight: '1.35rem', // not sure I should do this due to script sizes
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
+    }),
+
+  bylineContainerSingleContributor: ({ mq }: Theme) =>
+    css({
+      display: 'grid',
       [mq.GROUP_1_MIN_WIDTH]: {
         gridTemplateColumns: 'repeat(2, auto)',
       },
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'flex',
         flexWrap: 'wrap',
-        paddingInlineStart: `${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
     }),
 
   bylineSection: ({ spacings, mq }: Theme) =>
     css({
-      marginRight: `${spacings.FULL}rem`,
-      marginBottom: `${spacings.FULL}rem`,
+      // marginRight: `${spacings.FULL}rem`,
+      // marginBottom: `${spacings.FULL}rem`,
       [mq.GROUP_3_MIN_WIDTH]: {
-        marginRight: `${spacings.DOUBLE}rem`,
+        // marginRight: `${spacings.DOUBLE}rem`,
         marginBottom: 0,
       },
     }),
@@ -33,10 +41,17 @@ export default {
     css({
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       display: 'inline-block',
+    }),
+
+  authorSingleContributor: () =>
+    css({
       verticalAlign: 'middle',
     }),
 
   jobRole: ({ palette, isDarkUi }: Theme) =>
+    css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
+
+  comma: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
   authorChevron: ({ palette, isDarkUi, spacings, mq }: Theme) =>
@@ -53,11 +68,14 @@ export default {
   link: ({ mq, palette }: Theme) =>
     css({
       display: 'inline-block',
-      textDecoration: 'none',
-      paddingInlineEnd: '2.75rem',
+      '.byline-link': {
+        textDecoration: 'underline',
+        textDecorationThickness: `${pixelsToRem(1)}rem`,
+        textUnderlineOffset: `${pixelsToRem(4)}rem`,
+        textDecorationColor: palette.GREY_5,
+      },
       '&:focus, &:hover': {
         '.byline-link': {
-          textDecoration: 'underline',
           color: palette.POSTBOX,
         },
       },
@@ -75,38 +93,54 @@ export default {
       },
     }),
 
+  linkSingleContributor: ({ palette }: Theme) =>
+    css({
+      paddingInlineEnd: '2.75rem',
+      textDecoration: 'none',
+      '&:focus, &:hover': {
+        '.byline-link': {
+          textDecoration: 'underline',
+          color: palette.POSTBOX,
+        },
+      },
+    }),
+
   location: () =>
     css({
-      margin: '0',
-      display: 'block',
-      clear: 'both',
+      // margin: '0',
+      // display: 'block',
+      // clear: 'both',
     }),
 
   locationText: ({ palette, isDarkUi }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
-      display: 'block',
-      paddingTop: ` ${pixelsToRem(4)}rem`,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
+      // paddingTop: ` ${pixelsToRem(4)}rem`,
     }),
 
-  reportingFromText: ({ palette, isDarkUi }: Theme) =>
+  locationTextForSingleContributor: () =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+      // display: 'block',
     }),
 
-  timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
-    css({
-      // EXPERIMENT: Article Read Time
-      '&:nth-child(2)::before': {
-        content: '""',
-        borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
-        width: `${pixelsToRem(40)}rem`,
-        display: 'block',
-        margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-        [mq.GROUP_2_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem` },
-        [mq.GROUP_4_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem 0` },
-      },
-    }),
+  // reportingFromText: ({ palette, isDarkUi }: Theme) =>
+  //   css({
+  //     color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
+  //   }),
+
+  // timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
+  //   css({
+  //     // // EXPERIMENT: Article Read Time
+  //     // '&:nth-child(2)::before': {
+  //     //   content: '""',
+  //     //   borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
+  //     //   width: `${pixelsToRem(40)}rem`,
+  //     //   display: 'block',
+  //     //   margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+  //     //   [mq.GROUP_2_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem` },
+  //     //   [mq.GROUP_4_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem 0` },
+  //     // },
+  //   }),
 
   ImageWrapper: ({ palette }: Theme) =>
     css({
