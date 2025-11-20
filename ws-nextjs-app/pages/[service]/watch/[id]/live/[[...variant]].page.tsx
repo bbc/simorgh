@@ -11,7 +11,7 @@ import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 
-const LiveTvLayout = dynamic(() => import('../LiveTvPageLayout'));
+const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
 const logger = nodeLogger(__filename);
 
