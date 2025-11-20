@@ -17,8 +17,6 @@ type Props = {
   showPlaceholder?: boolean;
   showVignette?: boolean;
   isLivePageHeaderImage?: boolean;
-  fillHeight?: boolean;
-  disableExtraWideMask?: boolean;
   singleImageLayout?: boolean;
 };
 
@@ -52,8 +50,6 @@ const MaskedImage = ({
   showPlaceholder = true,
   showVignette = false,
   isLivePageHeaderImage = false,
-  fillHeight = false,
-  disableExtraWideMask = false,
   singleImageLayout = false,
 }: Props) => {
   const { dir } = use(ServiceContext);
@@ -78,8 +74,8 @@ const MaskedImage = ({
     resolution: DEFAULT_IMAGE_RES,
   });
 
-  const shouldFillHeight = fillHeight || singleImageLayout;
-  const shouldDisableExtraWideMask = disableExtraWideMask || singleImageLayout;
+  const shouldFillHeight = singleImageLayout;
+  const shouldDisableExtraWideMask = singleImageLayout;
 
   const gradientStyles = getGradientStyles({
     isRtl,
