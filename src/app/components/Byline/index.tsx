@@ -132,7 +132,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                 <Text
                   css={BylineCss.jobRole}
-                  {...(isSingleContributor && authorImage
+                  {...(isSingleContributor
                     ? { size: 'brevier' }
                     : { size: 'bodyCopy' })}
                 >
@@ -156,7 +156,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 <span role="text" aria-label={`${reportingFrom} ${location}`}>
                   <Text
                     css={[BylineCss.locationText]}
-                    {...(isSingleContributor && authorImage
+                    {...(isSingleContributor
                       ? { size: 'brevier' }
                       : { size: 'bodyCopy' })}
                     aria-hidden="true"
