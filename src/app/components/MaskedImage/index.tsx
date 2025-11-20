@@ -32,7 +32,9 @@ const getGradientStyles = ({
 }) => {
   if (showVignette) return [styles.vignette(isRtl)];
 
-  const gradients = [isRtl ? styles.linearGradientRtl : styles.linearGradientLtr];
+  const gradients = [
+    isRtl ? styles.linearGradientRtl : styles.linearGradientLtr,
+  ];
 
   if (disableExtraWideMask) {
     gradients.push(styles.disableExtraWideMask(isRtl));
