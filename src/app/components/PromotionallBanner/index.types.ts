@@ -1,5 +1,3 @@
-import type { JSX } from 'react';
-
 export interface ButtonBase {
   onClick: () => void;
 }
@@ -21,5 +19,3 @@ export interface BannerProps {
   isDismissible?: boolean;
   handleClose: () => void;
 }
-
-export declare function PromotionalBanner(props: BannerProps): JSX.Element;
