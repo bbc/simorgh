@@ -1,4 +1,7 @@
-import { addProcessClientDeviceAndSendStaticBeaconToWindow } from '.';
+import {
+  addProcessClientDeviceAndSendStaticBeaconToWindow,
+  addSetAtUserIdCookie,
+} from '.';
 
 describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
   const testSystemTime = new Date('2024-11-13T16:30:02.000Z');
@@ -32,6 +35,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
       document.body.removeChild(document.body.firstChild);
     }
 
+    addSetAtUserIdCookie();
     window.sendStaticBeacon = jest.fn();
 
     addProcessClientDeviceAndSendStaticBeaconToWindow();

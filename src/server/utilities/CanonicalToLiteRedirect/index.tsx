@@ -1,5 +1,6 @@
 import React from 'react';
 import { addSetAtUserIdCookie } from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
+import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 
 export const redirectScript = (window: Window, reverbUrl: string) => {
   const { pathname } = window.location;
@@ -29,17 +30,16 @@ export const redirectScript = (window: Window, reverbUrl: string) => {
       .replace('{timestamp}', timestamp)
       .replace('{language}', NO_FIELD)
       .replaceAll('{referrer}', NO_FIELD)
-      .replace('{idclient}', NO_FIELD)
+      .replace('{idclient}', `${user.val}`)
       .replace('{epochTimestamp}', epochTimestamp)
       .replace('{forwardingLink}', NO_FIELD)
       .replaceAll('~COMPONENT_NAME_PLACEHOLDER~', `REDIRECT-${normalisedEct}`);
 
-    console.log('CHECK THIS', user);
     switch (normalisedEct) {
       case 'slow-2g':
       case '2g':
       case '3g':
-        // send tracking
+        window.sendStaticBeacon(processedReverbUrl);
         window.location.replace(toLitePath);
         break;
       default:
@@ -55,6 +55,7 @@ export default ({ reverbUrl }: { reverbUrl: string }) => {
     <script>
       {`
         window.addEventListener('load', () => {
+          ${addSendStaticBeaconToWindow()};
           (${addSetAtUserIdCookie.toString()})();
           (${redirectScript.toString()})(window, '${reverbUrl}')
         })
