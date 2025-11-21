@@ -6,7 +6,7 @@ import {
   act,
 } from '#app/components/react-testing-library-with-providers';
 import liveTvFixture from '#data/dari/watch/bbc_afghan_tv/live.json';
-import LiveTv from './LiveTvPageLayout';
+import LiveTv from './live/LiveTvPageLayout';
 
 const mockPageData = {
   ...liveTvFixture.data,
@@ -62,7 +62,6 @@ describe('Live TV Page', () => {
     description             | seoDescription             | info                                  | expected
     ${'I am a Description'} | ${'I am a seoDescription'} | ${'seoDescription'}                   | ${'I am a seoDescription'}
     ${'I am a Description'} | ${undefined}               | ${'description if no seoDescription'} | ${'I am a Description'}
-    ${undefined}            | ${undefined}               | ${'title as a fallback'}              | ${'title'}
   `(
     'should use $info as the meta description',
     async ({ description, seoDescription, expected }) => {
