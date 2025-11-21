@@ -7,6 +7,7 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
 // import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -60,6 +61,14 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         hasAmpPage={false}
       />
       <main role="main" css={styles.main}>
+        <VisuallyHiddenText
+          id="content"
+          tabIndex={-1}
+          as="h1"
+          aria-live="polite"
+        >
+          {title}
+        </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.padding}>
             {mediaCollectionCuration && (
