@@ -1,5 +1,4 @@
-import { useState, useRef, ElementType } from 'react';
-import * as React from 'react';
+import { useState, useRef, Fragment, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -95,7 +94,7 @@ const CollapsibleNavigation = ({
           const subNavigationId = section.id;
 
           return (
-            <React.Fragment key={section.id}>
+            <Fragment key={section.id}>
               <li css={styles.navItem} role="listitem">
                 <a
                   id={navigationLinkId}
@@ -172,7 +171,7 @@ const CollapsibleNavigation = ({
                   </ul>
                 </li>
               )}
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </ul>

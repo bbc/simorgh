@@ -1,5 +1,4 @@
 import { use } from 'react';
-import * as React from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
