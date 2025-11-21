@@ -1,6 +1,6 @@
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
-  assertWSLanguagesPage,
+  assertWSLanguagesPageURNLive,
   assertWSLanguagesPageURN,
   assertWSLanguagesPageLocal,
 } from './assertions';
@@ -23,11 +23,11 @@ const testSuites = [
     path: '/ws/languages',
     service: 'ws',
     runforEnv: ['live'],
-    tests: [assertWSLanguagesPage],
+    tests: [assertWSLanguagesPageURNLive],
   },
 ];
 
 runTestsForPage({
   testSuites,
-  pageType: STATIC_PAGE,
+  pageType: HOME_PAGE,
 });
