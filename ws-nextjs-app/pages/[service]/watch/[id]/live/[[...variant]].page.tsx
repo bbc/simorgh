@@ -1,3 +1,4 @@
+import deriveVariant from '#nextjs/utilities/deriveVariant';
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
@@ -32,7 +33,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     renderer_env: rendererEnv,
+    variant: variantFromUrl,
   } = context.query as PageDataParams;
+
+  const variant = deriveVariant(variantFromUrl);
 
   const { headers: reqHeaders } = context.req;
 
@@ -40,6 +44,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     rendererEnv,
+    variant,
     resolvedUrl: context.resolvedUrl,
     pageType: LIVE_TV_PAGE,
   });
@@ -89,3 +94,4 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default LiveTvLayout;
+
