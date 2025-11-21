@@ -172,8 +172,8 @@ const styles = {
   closeButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-12)}rem`,
-      right: `${pixelsToRem(-10)}rem`,
+      top: `${pixelsToRem(-20)}rem`,
+      right: `${pixelsToRem(0)}rem`,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -185,7 +185,6 @@ const styles = {
       height: `${pixelsToRem(44)}rem`,
       color: palette.WHITE,
       '&:hover, &:focus': {
-        outline: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
         outlineOffset: `${pixelsToRem(2)}rem`,
         backgroundColor: palette.POSTBOX,
         fill: palette.WHITE,
@@ -196,8 +195,8 @@ const styles = {
   closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(1)}rem`,
-      right: `${pixelsToRem(3)}rem`,
+      top: `${pixelsToRem(-6)}rem`,
+      right: `${pixelsToRem(13)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
       width: `${pixelsToRem(18)}rem`,
