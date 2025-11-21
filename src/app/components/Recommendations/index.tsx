@@ -10,15 +10,12 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
 import { OptimoBlock } from '#app/models/types/optimo';
-import pathOr from 'ramda/src/pathOr';
-import pathEq from 'ramda/src/pathEq';
-import tail from 'ramda/src/tail';
-import slice from 'ramda/src/slice';
-import last from 'ramda/src/last';
-import filter from 'ramda/src/filter';
-import pipe from 'ramda/src/pipe';
 import styles from './index.styles';
 import RecommendationsItem from './RecommendationsItem';
+import {
+  getRelatedContentData,
+  mapOptimoBlockToRecommendation,
+} from './helpers';
 
 const eventTrackingData = {
   componentName: 'midarticle-mostread',
@@ -31,140 +28,6 @@ interface RecommendationsProps {
   featuresContent?: unknown;
   referrerExperimentVariant?: string;
 }
-// Extracts up to 6 related content items from Optimo blocks, skipping custom title if present
-const getRelatedContentData = (blocks: OptimoBlock[]) => {
-  const BLOCKS_TO_IGNORE = ['wsoj', 'mpu', 'continueReading'];
-  const removeCustomBlocks = pipe(
-    filter((block: OptimoBlock) => !BLOCKS_TO_IGNORE.includes(block.type)),
-    last,
-  );
-  const relatedContentBlock = removeCustomBlocks(blocks);
-  // relatedContentBlock is the last block that isn't ignored, should be of type 'relatedContent'
-  if (
-    !relatedContentBlock ||
-    !pathEq('relatedContent', ['type'], relatedContentBlock)
-  ) {
-    return [];
-  }
-
-  const items = pathOr([], ['model', 'blocks'], relatedContentBlock);
-  // If the first item is a custom title, skip it
-  const hasCustomTitle =
-    pathEq('title', [0, 'type'], items) &&
-    pathOr(
-      '',
-      [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-      items,
-    );
-
-  const storyPromoItems = hasCustomTitle ? tail(items) : items;
-
-  // Only return up to 6 items
-  return slice(0, 6, storyPromoItems);
-};
-
-// Extracts the headline text from a related content Optimo link block
-const getHeadlineFromOptimoBlock = (block: any) => {
-  const headlineFirst = pathOr<string>(
-    '',
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    block,
-  );
-  const headlineSecond = pathOr<string>(
-    '',
-    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
-    block,
-  );
-  console.log('headlineFirst: ', headlineFirst);
-  console.log('headlineSecond: ', headlineSecond);
-  return headlineFirst || headlineSecond;
-};
-
-// Extracts the href/link from a related content Optimo link block
-const getHrefFromOptimoBlock = (block: any) => {
-  // Try both possible assetUri locations as in RelatedContentItem
-  const assetUriFirst = pathOr<string>(
-    '',
-    [
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    block,
-  );
-  const assetUriSecond = pathOr<string>(
-    '',
-    [
-      'model',
-      'blocks',
-      1,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    block,
-  );
-  console.log('assetUriFirst: ', assetUriFirst);
-  console.log('assetUriSecond: ', assetUriSecond);
-  return assetUriFirst || assetUriSecond;
-};
-const getAltTextFromOptimoBlock = (block: any) =>
-  pathOr<string>(
-    '',
-    [
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'text',
-    ],
-    block,
-  );
-const getImageFromOptimoBlock = (block: any) => {
-  // Try to find the image and rawImage blocks
-  const imageBlock = block?.model?.blocks?.find((b: any) => b.type === 'image');
-  const rawImageBlock = imageBlock?.model?.blocks?.find(
-    (b: any) => b.type === 'rawImage',
-  );
-  return {
-    locator: rawImageBlock?.model?.locator ?? '',
-    altText: getAltTextFromOptimoBlock(block),
-    width: rawImageBlock?.model?.width ?? 0,
-    height: rawImageBlock?.model?.height ?? 0,
-    copyrightHolder: rawImageBlock?.model?.copyrightHolder ?? '',
-    originCode: rawImageBlock?.model?.originCode ?? '',
-  };
-};
-
-// Maps an Optimo link block to the Recommendation shape expected by RecommendationsItem
-const mapOptimoBlockToRecommendation = (block: any) => ({
-  id: block.id,
-  title: getHeadlineFromOptimoBlock(block),
-  href: getHrefFromOptimoBlock(block),
-  image: getImageFromOptimoBlock(block),
-});
 
 const Recommendations = ({
   data, // control
