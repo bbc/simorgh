@@ -166,9 +166,27 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
+const getWsojComponent = ({
+  data,
+  blocks,
+  topStoriesContent,
+  featuresContent,
+  referrerExperimentVariant,
+}: {
+  data: Recommendation[];
+  blocks: OptimoBlock[];
+  topStoriesContent?: unknown;
+  featuresContent?: unknown;
+  referrerExperimentVariant?: string;
+}) => (
+  <Recommendations
+    data={data} // the original data passed in before the experiment (most read), to be used for control
+    blocks={blocks} // the same data passed into related content, to be used for search segment
+    topStoriesContent={topStoriesContent} // top stories to be used for 'direct' segment
+    featuresContent={featuresContent} // features to be used for social segment
+    referrerExperimentVariant={referrerExperimentVariant}
+  />
+);
 
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -246,6 +264,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Referrer Experiment
+  const referrerExperimentName = 'newswb_ws_oj_by_referrer';
+  let referrerExperimentVariant = useOptimizelyVariation({
+    experimentName: referrerExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  referrerExperimentVariant = 'search';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -266,6 +291,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
   const bylineBlock = blocks.find(
     block => block.type === 'byline',
@@ -351,7 +378,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ScrollablePromo,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({
+        data,
+        blocks,
+        topStoriesContent,
+        featuresContent,
+        referrerExperimentVariant,
+      }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {

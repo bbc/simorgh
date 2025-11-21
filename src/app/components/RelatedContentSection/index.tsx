@@ -43,7 +43,7 @@ type Props = {
 
 const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const { translations, script, service } = use(ServiceContext);
-
+  console.log('in related content component: ', content);
   const {
     palette: { GREY_2 },
   } = useTheme();

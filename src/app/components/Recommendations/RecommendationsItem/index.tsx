@@ -20,7 +20,7 @@ const RecommendationsItem = ({
   const { isLite } = use(RequestContext);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-
+  console.log('recommendation item: ', recommendation);
   if (!recommendation) return null;
 
   const { title, image, href } = recommendation;
