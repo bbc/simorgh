@@ -12,6 +12,11 @@ import BillboardParticleSystem from '../../3dObjects/primitive/BillboardParticle
 import styles from './index.styles';
 /* eslint-disable react/no-unknown-property */
 
+// motion prefrences
+const preferesReducedMotion =
+  typeof window !== 'undefined' &&
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // Particle system constants
 const MAX_HEIGHT = 4.7;
 const SPAWN_WIDTH = 6;
@@ -30,7 +35,7 @@ const SetCameraTarget = ({ position, target, fov }) => {
   return null;
 };
 
-const Scene3D = ({ onServiceHover }) => {
+const Scene3D = () => {
   const navigateToService = serviceName => {
     window.location.assign(`/${serviceName}`);
   };
@@ -59,51 +64,52 @@ const Scene3D = ({ onServiceHover }) => {
             position={[-5, 0, 0.4]}
             rotation={[0, 0, 0]}
             onMeshClick={navigateToService}
-            onServiceHover={onServiceHover}
           />
           {/* particle systems */}
-          <group name="scene particles" position={[2, -1.7, -0.1]}>
-            <BillboardParticleSystem
-              texturePath="/public3d/test-text.png"
-              particleSize={4}
-              particleCount={1.5}
-              maxHeight={MAX_HEIGHT}
-              spawnWidth={SPAWN_WIDTH}
-              spawnLength={SPAWN_LENGTH}
-            />
-            <BillboardParticleSystem
-              texturePath="/public3d/hindi-text.png"
-              particleSize={7}
-              particleCount={6}
-              maxHeight={MAX_HEIGHT}
-              spawnWidth={SPAWN_WIDTH}
-              spawnLength={SPAWN_LENGTH}
-            />
-            <BillboardParticleSystem
-              texturePath="/public3d/urdu-text.png"
-              particleSize={5}
-              particleCount={1.5}
-              maxHeight={MAX_HEIGHT}
-              spawnWidth={SPAWN_WIDTH}
-              spawnLength={SPAWN_LENGTH}
-            />
-            <BillboardParticleSystem
-              texturePath="/public3d/tamil-text.png"
-              particleSize={5}
-              particleCount={1.5}
-              maxHeight={MAX_HEIGHT}
-              spawnWidth={SPAWN_WIDTH}
-              spawnLength={SPAWN_LENGTH}
-            />
-            <BillboardParticleSystem
-              texturePath="/public3d/ashoka-chakra.png"
-              particleSize={6}
-              particleCount={1}
-              maxHeight={MAX_HEIGHT}
-              spawnWidth={SPAWN_WIDTH}
-              spawnLength={SPAWN_LENGTH}
-            />
-          </group>
+          {!preferesReducedMotion && (
+            <group name="scene particles" position={[2, -1.7, -0.1]}>
+              <BillboardParticleSystem
+                texturePath="/public3d/test-text.png"
+                particleSize={4}
+                particleCount={1.5}
+                maxHeight={MAX_HEIGHT}
+                spawnWidth={SPAWN_WIDTH}
+                spawnLength={SPAWN_LENGTH}
+              />
+              <BillboardParticleSystem
+                texturePath="/public3d/hindi-text.png"
+                particleSize={7}
+                particleCount={6}
+                maxHeight={MAX_HEIGHT}
+                spawnWidth={SPAWN_WIDTH}
+                spawnLength={SPAWN_LENGTH}
+              />
+              <BillboardParticleSystem
+                texturePath="/public3d/urdu-text.png"
+                particleSize={5}
+                particleCount={1.5}
+                maxHeight={MAX_HEIGHT}
+                spawnWidth={SPAWN_WIDTH}
+                spawnLength={SPAWN_LENGTH}
+              />
+              <BillboardParticleSystem
+                texturePath="/public3d/tamil-text.png"
+                particleSize={5}
+                particleCount={1.5}
+                maxHeight={MAX_HEIGHT}
+                spawnWidth={SPAWN_WIDTH}
+                spawnLength={SPAWN_LENGTH}
+              />
+              <BillboardParticleSystem
+                texturePath="/public3d/ashoka-chakra.png"
+                particleSize={6}
+                particleCount={1}
+                maxHeight={MAX_HEIGHT}
+                spawnWidth={SPAWN_WIDTH}
+                spawnLength={SPAWN_LENGTH}
+              />
+            </group>
+          )}
         </Suspense>
       </Canvas>
     </div>
