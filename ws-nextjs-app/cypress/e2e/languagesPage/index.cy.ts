@@ -1,7 +1,7 @@
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
-  assertWSLanguagesPage,
+  assertWSLanguagesPageURNLive,
   assertWSLanguagesPageURN,
   assertWSLanguagesPageLocal,
 } from './assertions';
@@ -25,7 +25,7 @@ const testSuites = [
     path: '/ws/languages',
     service: 'ws',
     runforEnv: ['live'],
-    tests: [assertWSLanguagesPage],
+    tests: [assertWSLanguagesPageURNLive],
   },
 ];
 
