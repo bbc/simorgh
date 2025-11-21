@@ -82,7 +82,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      gap: `${pixelsToRem(12)}rem`,
+      gap: `${pixelsToRem(8)}rem`,
       lineHeight: 1,
       marginBottom: 0,
       marginTop: `${spacings.DOUBLE}rem`,
