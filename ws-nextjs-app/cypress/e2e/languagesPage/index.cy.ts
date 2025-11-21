@@ -1,12 +1,14 @@
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   assertWSLanguagesPageURNLive,
   assertWSLanguagesPageURN,
   assertWSLanguagesPageLocal,
 } from './assertions';
-import runTestsForPage, { TestDataType } from '../../support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
-import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 
 const testSuites = [
   {
