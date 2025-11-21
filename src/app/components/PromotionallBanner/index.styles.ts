@@ -16,7 +16,6 @@ const styles = {
       height: 'auto',
 
       width: '100%',
-      maxWidth: `${pixelsToRem(1008)}rem`,
       minWidth: `${pixelsToRem(288)}rem`,
 
       [mq.GROUP_0_MAX_WIDTH]: {
@@ -27,10 +26,13 @@ const styles = {
       },
     }),
 
-  innerContainer: () =>
+  innerContainer: ({ mq }) =>
     css({
       width: '100%',
       padding: 0,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        maxWidth: `${pixelsToRem(900)}rem`,
+      },
     }),
 
   content: ({ spacings }: Theme) =>
