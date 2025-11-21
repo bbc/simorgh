@@ -61,12 +61,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
         hasAmpPage={false}
       />
       <main role="main" css={styles.main}>
-        <VisuallyHiddenText
-          id="content"
-          tabIndex={-1}
-          as="h1"
-          aria-live="polite"
-        >
+        <VisuallyHiddenText tabIndex={-1} as="h1" aria-live="polite">
           {title}
         </VisuallyHiddenText>
         <div css={styles.inner}>
