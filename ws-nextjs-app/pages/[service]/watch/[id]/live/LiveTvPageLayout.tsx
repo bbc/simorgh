@@ -73,7 +73,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       <LinkedData
         type="TelevisionChannel"
         seoTitle={metadataTitle}
-        description={seoDescription}
+        description={metadataDescription}
       />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
