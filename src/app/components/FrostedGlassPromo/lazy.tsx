@@ -6,6 +6,4 @@ export default loadable(
       /* webpackChunkName: "frosted_promo" */
       '.'
     ),
-  // @ts-expect-error - test
-  { fallback: <span data-testid="frosted-promo-loader" /> },
 );
