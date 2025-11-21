@@ -47,8 +47,8 @@ describe('UserContext', () => {
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.use).toHaveBeenCalledTimes(1);
-    expect(React.use).toHaveReturnedWith({
+    expect(use).toHaveBeenCalledTimes(1);
+    expect(use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
