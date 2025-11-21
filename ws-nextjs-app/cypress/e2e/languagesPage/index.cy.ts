@@ -1,4 +1,4 @@
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
   assertWSLanguagesPage,
@@ -45,11 +45,11 @@ const atiAnalyticsTestSuites = [
 
 runTestsForPage({
   testSuites,
-  pageType: STATIC_PAGE,
+  pageType: HOME_PAGE,
 });
 
 runTestsForPage({
-  pageType: STATIC_PAGE,
+  pageType: HOME_PAGE,
   testSuites: atiAnalyticsTestSuites,
   beforeAll: [setUserIDCookie],
   testIsolation: true,
