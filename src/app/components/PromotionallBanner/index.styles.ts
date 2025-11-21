@@ -172,8 +172,8 @@ const styles = {
   closeButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-20)}rem`,
-      right: `${pixelsToRem(0)}rem`,
+      top: `${pixelsToRem(-16)}rem`,
+      right: `${pixelsToRem(-16)}rem`,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -195,8 +195,8 @@ const styles = {
   closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-6)}rem`,
-      right: `${pixelsToRem(13)}rem`,
+      top: `${pixelsToRem(-3)}rem`,
+      right: `${pixelsToRem(-3)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
       width: `${pixelsToRem(18)}rem`,
