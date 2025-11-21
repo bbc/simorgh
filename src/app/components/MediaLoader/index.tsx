@@ -126,6 +126,7 @@ const MediaContainer = ({
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
+          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
           const initPlayer = async () => {
             const mediaPlayer = Bump.player(
               playerElementRef.current,
