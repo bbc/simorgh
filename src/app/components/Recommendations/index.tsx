@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { use } from 'react';
 import { jsx, useTheme } from '@emotion/react';
-
+import { pathOr } from 'ramda';
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
@@ -36,7 +36,7 @@ const Recommendations = ({
   featuresContent, // social
   referrerExperimentVariant, // experiment variant for referrer
 }: RecommendationsProps) => {
-  const { recommendations, mostRead, script, service, dir } =
+  const { recommendations, mostRead, script, service, dir, translations } =
     use(ServiceContext);
 
   // eslint-disable-next-line no-console
@@ -61,7 +61,9 @@ const Recommendations = ({
   const { enabled } = useToggle('midArticleOnwardJourney');
 
   let displayData: Recommendation[] = [];
+  const { skipLink, header } = recommendations || {};
 
+  let title = header ?? 'Most read';
   if (
     !referrerExperimentVariant ||
     referrerExperimentVariant === 'off' ||
@@ -72,11 +74,11 @@ const Recommendations = ({
     displayData = getRelatedContentData(blocks).map(
       mapOptimoBlockToRecommendation,
     );
-    console.log('displayData from related content: ', displayData);
-    // Log the nested blocks for inspection
+    title = pathOr('Related Content', ['relatedContent'], translations);
   } else if (referrerExperimentVariant === 'direct') {
     displayData = Array.isArray(topStoriesContent) ? topStoriesContent : [];
   } else if (referrerExperimentVariant === 'social') {
+    console.log('Using featuresContent for recommendations', featuresContent);
     displayData = Array.isArray(featuresContent) ? featuresContent : [];
   }
 
@@ -89,14 +91,10 @@ const Recommendations = ({
     'aria-labelledby': labelId,
   };
 
-  const { skipLink, header } = recommendations || {};
-
   const { text, endTextVisuallyHidden } = skipLink || {
     text: 'Skip %title% and continue reading',
     endTextVisuallyHidden: 'End of %title%',
   };
-
-  const title = header ?? 'Most read';
 
   const terms = { '%title%': title };
 
