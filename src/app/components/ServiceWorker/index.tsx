@@ -40,10 +40,12 @@ export default () => {
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
 
   useEffect(() => {
+    console.log('Service Worker installing...');
     const shouldInstallServiceWorker =
       swPath && onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
+      console.log('Registering service worker');
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
   }, [swPath, service]);

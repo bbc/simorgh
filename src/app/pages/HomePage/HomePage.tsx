@@ -2,11 +2,14 @@
 /* @jsxFrag React.Fragment */
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
+import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import isLocal from '#app/lib/utilities/isLocal';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -84,6 +87,54 @@ const HomePage = ({ pageData }: HomePageProps) => {
   }
 
   const itemList = getItemList({ curations, name: brandName });
+  const MOST_READ_URL = `${getEnvConfig().SIMORGH_BASE_URL}${getMostReadEndpoint(
+    {
+      service: use(ServiceContext).service,
+      variant: null,
+      isBff: !isLocal(),
+    },
+  )}`;
+  const HOME_PAGE_URL = `${getEnvConfig().SIMORGH_BASE_URL}/${service}`;
+
+  const fetchMostReadItems = async () => {
+    try {
+      const response = await fetch(MOST_READ_URL, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      const { data } = await response.json();
+
+      return (
+        data?.items?.map((item: { href: string; title: string }) => ({
+          href: item.href,
+          title: item.title,
+        })) || []
+      );
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Error fetching most read items:', error);
+      return [];
+    }
+  };
+
+  fetchMostReadItems().then((items: { href: string; title: string }[]) => {
+    const MOST_READ_URLS = items.map(({ href }) => href);
+
+    if (navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        type: 'CACHE_HOME_PAGE_AND_MOST_READ',
+        HOME_PAGE_URL,
+        MOST_READ_URLS,
+      });
+    }
+
+    items.forEach(({ href }) => {
+      return href;
+    });
+  });
 
   return (
     <>
