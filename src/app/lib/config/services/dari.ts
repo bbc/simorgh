@@ -427,6 +427,26 @@ export const service: DefaultServiceConfig = {
         title: 'افغانستان',
         url: '/dari/topics/c78n1x1x3jet',
       },
+      {
+        title: 'منطقه',
+        url: '/dari/topics/cx2den5q88lt',
+      },
+      {
+        title: 'جهان',
+        url: '/dari/topics/c70rj4d7rert',
+      },
+      {
+        title: 'ورزش',
+        url: '/dari/topics/c24r373gngzt',
+      },
+      {
+        title: 'ساینس',
+        url: '/dari/topics/clyl797dek3t',
+      },
+      {
+        title: 'برنامه‌های رادیویی',
+        url: '/dari/topics/cd9zd279j4kt',
+      },
     ],
   },
 };
