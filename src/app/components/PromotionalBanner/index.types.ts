@@ -1,7 +1,7 @@
 interface PromotionalBannerButton {
   text: string;
   longText?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface PromotionalBannerProps {
