@@ -24,16 +24,25 @@ export default async ({
     });
 
     const {
-      data: { title, description, curations, metadata },
+      data: {
+        title,
+        seoTitle,
+        description,
+        seoDescription,
+        curations,
+        metadata,
+      },
     } = json;
 
     return {
       status,
       pageData: {
         title,
+        seoTitle,
         metadata: { ...metadata, type: pageType },
         curations,
         description,
+        seoDescription,
       },
     };
   } catch (error: unknown) {
