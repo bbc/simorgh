@@ -135,7 +135,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
         <PromotionalBanner
           title="Accede a BBC Noticias con un solo toque"
           description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
-          orText="o"
+          orText="or"
           primaryButton={{
             text: 'Agregar',
             longText: 'Agregar a la pantalla de inicio',
