@@ -65,9 +65,7 @@ const styles = {
   description: ({ spacings, mq, palette, fontVariants }: Theme) =>
     css({
       color: palette.GREY_2,
-      marginBottom: 0,
       marginTop: `${spacings.FULL}rem`,
-      marginRight: `${spacings.TRIPLE}rem`,
       height: 'auto',
       fontFamily: fontVariants.sansRegular.fontFamily,
       fontWeight: fontVariants.sansRegular.fontWeight,
@@ -83,8 +81,6 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: `${pixelsToRem(8)}rem`,
-      lineHeight: 1,
-      marginBottom: 0,
       marginTop: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MAX_WIDTH]: {
         marginTop: `${spacings.TRIPLE}rem`,
