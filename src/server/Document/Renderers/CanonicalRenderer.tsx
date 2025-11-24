@@ -103,14 +103,24 @@ export default function CanonicalRenderer({
 
   const reverbParams = buildReverbEventModel({
     componentName: '~COMPONENT_NAME_PLACEHOLDER~',
+    // CHANGE THIS FOR LIVE
+    statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+    groupTracker: {
+      name: 'article',
+    },
+    pageIdentifier: 'pidgin.articles.czrzwn80zjmo.page',
+    producerName: 'PIDGIN',
   });
   const env = getEnvConfig().SIMORGH_APP_ENV;
   const reverbUrl = reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
     ...reverbParams,
+    additionalParams: {
+      atiAnalyticsAppName: 'news-pidgin',
+      pageType: 'article',
+      serviceLanguage: 'pcm',
+    },
     env,
   });
-
-  console.log('HELLO EXPRESS', env, reverbUrl);
 
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>

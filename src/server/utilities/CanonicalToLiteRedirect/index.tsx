@@ -14,7 +14,6 @@ export const redirectScript = (window: Window, reverbUrl: string) => {
     const ect = window.navigator.connection.effectiveType;
     const normalisedEct = ect.toLocaleLowerCase();
 
-    const NO_FIELD = 'undefined';
     const now = new Date();
     const hours = now.getHours();
     const mins = now.getMinutes();
@@ -25,16 +24,19 @@ export const redirectScript = (window: Window, reverbUrl: string) => {
     const user = window.setAtUserIdCookie();
 
     const processedReverbUrl = reverbUrl
-      .replace('{screenResolutionColourDepth}', NO_FIELD)
-      .replace('{browserViewportResolution}', NO_FIELD)
+      .replace('{screenResolutionColourDepth}', '0x0x0x0')
+      .replace('{browserViewportResolution}', '0x0')
       .replace('{timestamp}', timestamp)
-      .replace('{language}', NO_FIELD)
-      .replaceAll('{referrer}', NO_FIELD)
+      .replace('{language}', 'unknown')
+      .replaceAll('{referrer}', '')
       .replace('{idclient}', `${user.val}`)
       .replace('{epochTimestamp}', epochTimestamp)
-      .replace('{forwardingLink}', NO_FIELD)
+      .replace('{forwardingLink}', '')
       .replaceAll('ref=&', '')
-      .replaceAll('~COMPONENT_NAME_PLACEHOLDER~', `REDIRECT-${normalisedEct}`);
+      .replaceAll(
+        '~COMPONENT_NAME_PLACEHOLDER~',
+        `TEST7-REDIRECT-${normalisedEct}`,
+      );
 
     switch (normalisedEct) {
       case 'slow-2g':
