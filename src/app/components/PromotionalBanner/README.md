@@ -15,8 +15,8 @@ import PromotionalBanner from './PromotionallBanner';
 - `title`: string
 - `description`: string
 - `orText`: string
-- `primaryButton`: { text: string, longText?: string, onClick?: () => void }
-- `secondaryButton`: { text: string, longText?: string, onClick?: () => void }
+- `primaryButton`: { text: string, longText?: string, onClick: () => void }
+- `secondaryButton`: { text: string, longText?: string, onClick: () => void }
 - `isDismissible?`: boolean
 - `handleClose`: () => void
 
