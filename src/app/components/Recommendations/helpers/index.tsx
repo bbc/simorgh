@@ -54,7 +54,26 @@ type TopStoryItem = {
   };
 };
 
-// Extracts up to 6 related content items from Optimo blocks, skipping custom title if present
+// --- Shared utilities for extracting image data from defaultPromoImage ---
+
+const getAltTextFromDefaultPromoImage = (defaultPromoImage?: {
+  blocks?: any[];
+}) => {
+  const altTextBlock = defaultPromoImage?.blocks?.find(
+    block => block.type === 'altText',
+  );
+  return (
+    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text || ''
+  );
+};
+
+const getRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
+  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
+  {};
+
+// --- Related Content (Optimo) ---
+
 export const getRelatedContentData = (blocks: OptimoBlock[]) => {
   const BLOCKS_TO_IGNORE = ['wsoj', 'mpu', 'continueReading'];
   const removeCustomBlocks = pipe(
@@ -176,21 +195,7 @@ export const mapOptimoBlockToRecommendation = (block: any): Recommendation => ({
   image: getImageFromOptimoBlock(block),
 });
 
-const getAltTextFromDefaultPromoImage = (defaultPromoImage?: {
-  blocks?: any[];
-}) => {
-  const altTextBlock = defaultPromoImage?.blocks?.find(
-    block => block.type === 'altText',
-  );
-  return (
-    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
-      ?.model?.text || ''
-  );
-};
-
-const getFeaturesRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
-  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
-  {};
+// --- Features ---
 
 export const mapFeaturesToRecommendation = (featuresContent: Features) => {
   const promoHeadlineBlocks = featuresContent.headlines?.promoHeadline;
@@ -204,7 +209,7 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
     promoHeadlineText || featuresContent.headlines?.seoHeadline || '';
 
   const defaultPromoImage = featuresContent.images?.defaultPromoImage;
-  const rawImage = getFeaturesRawImageBlock(defaultPromoImage);
+  const rawImage = getRawImageBlock(defaultPromoImage);
 
   const image = {
     locator: rawImage.locator ?? '',
@@ -223,6 +228,8 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
   };
 };
 
+// --- Top Stories ---
+
 const getTopStoryHeadline = (item: TopStoryItem) => {
   const overtypedHeadline = item?.headlines?.overtyped ?? '';
   const mainHeadline = item?.headlines?.headline ?? '';
@@ -233,32 +240,14 @@ const getTopStoryHeadline = (item: TopStoryItem) => {
   return overtypedHeadline || mainHeadline || promoHeadlineText || name;
 };
 
-const getTopStoriesAltTextFromDefaultPromoImage = (defaultPromoImage?: {
-  blocks?: any[];
-}) => {
-  const altTextBlock = defaultPromoImage?.blocks?.find(
-    block => block.type === 'altText',
-  );
-  return (
-    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
-      ?.model?.text || ''
-  );
-};
-
-const getTopStoriesRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
-  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
-  {};
-
 export const mapTopStoryToRecommendation = (item: TopStoryItem) => {
-  console.log('top story item: ', item);
   const title = getTopStoryHeadline(item);
   const defaultPromoImage = item.images?.defaultPromoImage;
-  const rawImage = getTopStoriesRawImageBlock(defaultPromoImage);
+  const rawImage = getRawImageBlock(defaultPromoImage);
 
   const image = {
     locator: rawImage.locator ?? '',
-    altText:
-      getTopStoriesAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+    altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
     width: rawImage.width ?? 0,
     height: rawImage.height ?? 0,
     copyrightHolder: rawImage.copyrightHolder ?? '',
