@@ -21,6 +21,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 
 import {
   getArticleId,
@@ -49,6 +50,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -270,7 +272,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerExperimentVariant = 'search';
+  referrerExperimentVariant = 'control';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -514,6 +516,38 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           />
         )}
       </div>
+
+      {!isApp && !isPGL && topStoriesContent && (
+        <div css={styles.hideOnDesktop}>
+          <TopStoriesSection
+            content={topStoriesContent}
+            {...(timeOfDayExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
+          />
+        </div>
+      )}
+
+      {!isApp && !isPGL && featuresContent && (
+        <div css={styles.hideOnDesktop}>
+          <FeaturesAnalysis
+            content={featuresContent}
+            parentColumns={{}}
+            sectionLabelBackground={GREY_2}
+            {...(timeOfDayExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
+          />
+        </div>
+      )}
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
