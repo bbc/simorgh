@@ -16,6 +16,7 @@ import {
   getRelatedContentData,
   mapOptimoBlockToRecommendation,
   mapFeaturesToRecommendation,
+  mapTopStoryToRecommendation,
 } from './helpers';
 
 const eventTrackingData = {
@@ -65,6 +66,7 @@ const Recommendations = ({
   const { skipLink, header } = recommendations || {};
 
   let title = header ?? 'Most read';
+  // most read  was there originally, so is there for control and when the user is not in an experiment
   if (
     !referrerExperimentVariant ||
     referrerExperimentVariant === 'off' ||
@@ -77,7 +79,10 @@ const Recommendations = ({
     );
     title = pathOr('Related Content', ['relatedContent'], translations);
   } else if (referrerExperimentVariant === 'direct') {
-    displayData = Array.isArray(topStoriesContent) ? topStoriesContent : [];
+    displayData = Array.isArray(topStoriesContent)
+      ? topStoriesContent.map(mapTopStoryToRecommendation)
+      : [];
+    title = translations?.topStoriesTitle ?? 'Top Stories';
   } else if (referrerExperimentVariant === 'social') {
     displayData = Array.isArray(featuresContent)
       ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)

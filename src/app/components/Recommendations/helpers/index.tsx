@@ -24,6 +24,36 @@ type Features = {
   };
 };
 
+type TopStoryItem = {
+  id: string;
+  headlines?: {
+    overtyped?: string;
+    headline?: string;
+    promoHeadline?: {
+      blocks?: Array<{
+        model?: {
+          blocks?: Array<{
+            model?: {
+              text?: string;
+            };
+          }>;
+        };
+      }>;
+    };
+  };
+  name?: string;
+  locators?: {
+    assetUri?: string;
+    canonicalUrl?: string;
+  };
+  uri?: string;
+  images?: {
+    defaultPromoImage?: {
+      blocks?: any[];
+    };
+  };
+};
+
 // Extracts up to 6 related content items from Optimo blocks, skipping custom title if present
 export const getRelatedContentData = (blocks: OptimoBlock[]) => {
   const BLOCKS_TO_IGNORE = ['wsoj', 'mpu', 'continueReading'];
@@ -158,7 +188,7 @@ const getAltTextFromDefaultPromoImage = (defaultPromoImage?: {
   );
 };
 
-const getRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
+const getFeaturesRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
   defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
   {};
 
@@ -174,7 +204,7 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
     promoHeadlineText || featuresContent.headlines?.seoHeadline || '';
 
   const defaultPromoImage = featuresContent.images?.defaultPromoImage;
-  const rawImage = getRawImageBlock(defaultPromoImage);
+  const rawImage = getFeaturesRawImageBlock(defaultPromoImage);
 
   const image = {
     locator: rawImage.locator ?? '',
@@ -189,6 +219,56 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
     id: featuresContent.id,
     title,
     href: featuresContent.locators?.canonicalUrl ?? '',
+    image,
+  };
+};
+
+const getTopStoryHeadline = (item: TopStoryItem) => {
+  const overtypedHeadline = item?.headlines?.overtyped ?? '';
+  const mainHeadline = item?.headlines?.headline ?? '';
+  const promoHeadlineText =
+    item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
+      ?.text ?? '';
+  const name = item?.name ?? '';
+  return overtypedHeadline || mainHeadline || promoHeadlineText || name;
+};
+
+const getTopStoriesAltTextFromDefaultPromoImage = (defaultPromoImage?: {
+  blocks?: any[];
+}) => {
+  const altTextBlock = defaultPromoImage?.blocks?.find(
+    block => block.type === 'altText',
+  );
+  return (
+    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text || ''
+  );
+};
+
+const getTopStoriesRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
+  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
+  {};
+
+export const mapTopStoryToRecommendation = (item: TopStoryItem) => {
+  console.log('top story item: ', item);
+  const title = getTopStoryHeadline(item);
+  const defaultPromoImage = item.images?.defaultPromoImage;
+  const rawImage = getTopStoriesRawImageBlock(defaultPromoImage);
+
+  const image = {
+    locator: rawImage.locator ?? '',
+    altText:
+      getTopStoriesAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+    width: rawImage.width ?? 0,
+    height: rawImage.height ?? 0,
+    copyrightHolder: rawImage.copyrightHolder ?? '',
+    originCode: rawImage.originCode ?? '',
+  };
+
+  return {
+    id: item.id,
+    title,
+    href: item.locators?.canonicalUrl ?? item.uri ?? '',
     image,
   };
 };
