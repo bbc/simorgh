@@ -38,6 +38,23 @@ const getLegacyBrowserAspectRatio = (x: number, y: number) =>
     .toString()
     .concat('%');
 
+const GetColour = (src: string) => {
+  const {
+    palette: { GREY_8, WHITE },
+    isDarkUi,
+  } = useTheme();
+
+  const { isLoading, colour } = useImageColour(src, {
+    fallbackColour: GREY_8,
+    minimumContrast: 0,
+    contrastColour: WHITE,
+    paletteSize: 10,
+  });
+  const gradientColour = isDarkUi ? WHITE : '#180109';
+
+  return { isLoading, colour, gradientColour, GREY_8 };
+};
+
 const Image = ({
   alt,
   aspectRatio,
@@ -66,20 +83,11 @@ const Image = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const imgRef = React.useRef<HTMLImageElement | null>(null);
 
-  const {
-    palette: { GREY_8, WHITE },
-    isDarkUi,
-  } = useTheme();
+  const colourData = isPortraitImage && isPromo ? GetColour(src) : null;
 
-  const { isLoading, colour } = useImageColour(src, {
-    fallbackColour: GREY_8,
-    minimumContrast: 0,
-    contrastColour: WHITE,
-    paletteSize: 10,
-  });
-
-  const gradientColour = isDarkUi ? WHITE : '#180109';
-
+  const isLoading = colourData?.isLoading;
+  const colour = colourData?.colour;
+  const gradientColour = colourData?.gradientColour;
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
@@ -192,7 +200,7 @@ const Image = ({
                   {
                     background: colour
                       ? `linear-gradient(200deg,rgba(${colour.rgb.join(',')}, 0.6) 0%, ${gradientColour} 54%, ${gradientColour} 90%)`
-                      : `linear-gradient(200deg, ${GREY_8} 0%,  ${gradientColour} 54%, ${gradientColour}90%)`,
+                      : `linear-gradient(200deg, ${colourData?.GREY_8} 0%,  ${gradientColour} 54%, ${gradientColour}90%)`,
                   },
                 ]}
               />
