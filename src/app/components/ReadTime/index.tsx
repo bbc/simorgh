@@ -29,14 +29,18 @@ const ProcessReadTime = ({
   readTimeValue: number;
   readTimeVariant: string;
 }) => {
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
 
   const singleMinuteSuffix =
     translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
   const readCopy =
     translations.readTime?.readTimePrefix ?? DEFAULT_TRANSLATIONS.read;
 
-  let copy = `${readCopy}: ${readTimeValue} ${singleMinuteSuffix}`;
+  const servicesWithMinutesBeforeNumber = ['hausa', 'igbo', 'yoruba'];
+
+  let copy = servicesWithMinutesBeforeNumber.includes(service)
+    ? `${readCopy}: ${singleMinuteSuffix} ${readTimeValue}`
+    : `${readCopy}: ${readTimeValue} ${singleMinuteSuffix}`;
 
   const isLongRead = readTimeValue >= 6;
   if (readTimeVariant === 'long_read_written' && isLongRead) {
