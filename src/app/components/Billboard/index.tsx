@@ -44,6 +44,8 @@ export default ({
 }: BillboardProps) => {
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
+  const hasPromoItems = summaries.length > 1;
+  const isSingleImageLayout = !hasPromoItems;
   // this curation type is used in the home page experiment as well.
   // if they will not be running at the same time (?) we can make it so the experiment name is only for the current experiment
   const eventTrackingDataWithOptimizelyEvents = {
@@ -63,14 +65,20 @@ export default ({
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
         <div css={[styles.backgroundContainer, styles.backgroundRedGradient]} />
-        <div css={styles.contentContainer}>
+        <div
+          css={[
+            styles.contentContainer,
+            !hasPromoItems && styles.contentContainerNoPromos,
+          ]}
+        >
           <MaskedImage
             imageUrl={image.replace('{width}', '240')}
             imageUrlTemplate={image}
             altText={altText}
             imageWidth={660}
             showPlaceholder={false}
-            showVignette
+            showVignette={hasPromoItems}
+            singleImageLayout={isSingleImageLayout}
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -97,7 +105,7 @@ export default ({
               </Text>
             )}
           </div>
-          {summaries.length > 1 && (
+          {hasPromoItems && (
             <div css={styles.curationGridSection}>
               {showMoreOnThisTitle && (
                 <Heading
