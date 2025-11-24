@@ -15,6 +15,29 @@ const commonMarginSpacing = ({ mq, spacings }: Theme) =>
     },
   });
 
+const underArticleGrid = css({
+  boxSizing: 'border-box',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(12, 1fr)',
+  columnGap: '16px',
+  maxWidth: '1008px',
+  width: '100%',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: '16px',
+  paddingRight: '16px',
+  marginTop: 0,
+  marginBottom: 0,
+  paddingTop: 0,
+  paddingBottom: 0,
+  fontSize: '16px',
+  lineHeight: '18.4px',
+  '@media (min-width: 1008px)': {
+    marginLeft: '57px',
+    marginRight: '57px',
+  },
+});
+
 export default {
   pageWrapper: ({ palette }: Theme) =>
     css({
@@ -58,6 +81,24 @@ export default {
         display: 'none',
       },
     }),
+
+  hideBelowDesktop: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
+
+  underArticleSection: ({ spacings }: Theme) =>
+    css({
+      display: 'block',
+      gridColumn: '9 / span 4',
+      marginTop: '2rem',
+    }),
+
+  underArticleGrid,
+
   pglColumn: () =>
     css({
       gridColumn: '1 / span 12',

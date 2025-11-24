@@ -41,19 +41,6 @@ const Recommendations = ({
   const { recommendations, mostRead, script, service, dir, translations } =
     use(ServiceContext);
 
-  // eslint-disable-next-line no-console
-  console.log('Recommendations data:', data);
-  // eslint-disable-next-line no-console
-  console.log('Recommendations blocks:', blocks);
-  // eslint-disable-next-line no-console
-  console.log('Recommendations topStoriesContent:', topStoriesContent);
-  // eslint-disable-next-line no-console
-  console.log('Recommendations featuresContent:', featuresContent);
-  // eslint-disable-next-line no-console
-  console.log(
-    'Recommendations referrerExperimentVariant:',
-    referrerExperimentVariant,
-  );
   const viewTracker = useViewTracker(eventTrackingData);
 
   const {

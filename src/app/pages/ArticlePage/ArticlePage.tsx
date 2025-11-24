@@ -50,6 +50,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import { MostReadData } from '#app/components/MostRead/types';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -189,7 +190,132 @@ const getWsojComponent = ({
     referrerExperimentVariant={referrerExperimentVariant}
   />
 );
+const getUnderArticleComponents = ({
+  referrerVariant,
+  topStoriesData,
+  featuresData,
+  articleBlocks,
+  grey2,
+  todExperimentVariant,
+  todExperimentName,
+  mostReadData,
+  showRelatedTopics,
+  pageStyles,
+}: {
+  referrerVariant: string;
+  topStoriesData: unknown;
+  featuresData: unknown;
+  articleBlocks: OptimoBlock[];
+  grey2: string;
+  todExperimentVariant: string;
+  todExperimentName: string;
+  mostReadData: MostReadData;
+  showRelatedTopics: boolean;
+  pageStyles: Record<string, any>;
+}) => {
+  const relatedContent = (
+    <div key="relatedContent" css={pageStyles.hideOnDesktop}>
+      <RelatedContentSection
+        content={articleBlocks}
+        {...(todExperimentVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: todExperimentName,
+            experimentVariant: todExperimentVariant,
+          },
+        })}
+      />
+    </div>
+  );
 
+  const topStoriesArray = Array.isArray(topStoriesData) ? topStoriesData : [];
+
+  const topStoriesComponent =
+    topStoriesArray.length > 0 ? (
+      <div key="topStories" css={pageStyles.hideOnDesktop}>
+        <TopStoriesSection
+          content={topStoriesArray}
+          {...(todExperimentVariant && {
+            experimentProps: {
+              sendOptimizelyEvents: true,
+              experimentName: todExperimentName,
+              experimentVariant: todExperimentVariant,
+            },
+          })}
+        />
+      </div>
+    ) : null;
+
+  const featuresComponent = featuresData ? (
+    <div key="features" css={pageStyles.hideOnDesktop}>
+      <FeaturesAnalysis
+        content={featuresData}
+        parentColumns={{}}
+        sectionLabelBackground={grey2}
+        {...(todExperimentVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: todExperimentName,
+            experimentVariant: todExperimentVariant,
+          },
+        })}
+      />
+    </div>
+  ) : null;
+  const mostReadComponent = (
+    <div key="mostRead" css={pageStyles.hideOnDesktop}>
+      <MostRead
+        data={mostReadData}
+        columnLayout="multiColumn"
+        size="default"
+        headingBackgroundColour={grey2}
+        mobileDivider={showRelatedTopics}
+        eventTrackingData={{
+          componentName: 'most-read',
+          ...(todExperimentVariant && {
+            sendOptimizelyEvents: true,
+            experimentName: todExperimentName,
+            experimentVariant: todExperimentVariant,
+          }),
+        }}
+      />
+    </div>
+  );
+  if (
+    referrerVariant === 'control' ||
+    referrerVariant === 'off' ||
+    referrerVariant === 'search'
+  ) {
+    return [
+      relatedContent,
+      topStoriesComponent,
+      featuresComponent,
+      mostReadComponent,
+    ].filter(Boolean);
+  }
+  if (referrerVariant === 'social') {
+    return [
+      featuresComponent,
+      relatedContent,
+      topStoriesComponent,
+      mostReadComponent,
+    ].filter(Boolean);
+  }
+  if (referrerVariant === 'direct') {
+    return [
+      topStoriesComponent,
+      relatedContent,
+      featuresComponent,
+      mostReadComponent,
+    ].filter(Boolean);
+  }
+  return [
+    relatedContent,
+    topStoriesComponent,
+    featuresComponent,
+    mostReadComponent,
+  ].filter(Boolean);
+};
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -272,7 +398,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerExperimentVariant = 'control';
+  referrerExperimentVariant = 'direct'; // TEMP override
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -495,17 +621,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            // EXPERIMENT: Time of Day Experiment
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-          />
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
@@ -517,56 +632,53 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         )}
       </div>
 
-      {!isApp && !isPGL && topStoriesContent && (
-        <div css={styles.hideOnDesktop}>
-          <TopStoriesSection
-            content={topStoriesContent}
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-          />
+      <div css={styles.hideBelowDesktop}>
+        <div css={styles.underArticleGrid}>
+          <div css={{ gridColumn: '1 / span 12' }}>
+            <RelatedContentSection
+              content={blocks}
+              {...(timeOfDayExperimentVariant && {
+                experimentProps: {
+                  sendOptimizelyEvents: true,
+                  experimentName: timeOfDayExperimentName,
+                  experimentVariant: timeOfDayExperimentVariant,
+                },
+              })}
+            />
+          </div>
+          <div css={{ gridColumn: '1 / span 12' }}>
+            <MostRead
+              data={mostReadInitialData}
+              columnLayout="multiColumn"
+              size="default"
+              headingBackgroundColour={GREY_2}
+              mobileDivider={showTopics}
+              eventTrackingData={{
+                componentName: 'most-read',
+                ...(timeOfDayExperimentVariant && {
+                  sendOptimizelyEvents: true,
+                  experimentName: timeOfDayExperimentName,
+                  experimentVariant: timeOfDayExperimentVariant,
+                }),
+              }}
+            />
+          </div>
         </div>
-      )}
+      </div>
 
-      {!isApp && !isPGL && featuresContent && (
-        <div css={styles.hideOnDesktop}>
-          <FeaturesAnalysis
-            content={featuresContent}
-            parentColumns={{}}
-            sectionLabelBackground={GREY_2}
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-          />
-        </div>
-      )}
-      {!isApp && !isPGL && (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="multiColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
-          // EXPERIMENT: Time of Day Experiment
-          eventTrackingData={{
-            componentName: 'most-read',
-            ...(timeOfDayExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-          }}
-        />
-      )}
+      {/* Under-article components for mobile/tablet only */}
+      {getUnderArticleComponents({
+        referrerVariant: referrerExperimentVariant,
+        topStoriesData: topStoriesContent,
+        featuresData: featuresContent,
+        articleBlocks: blocks,
+        grey2: GREY_2,
+        todExperimentVariant: timeOfDayExperimentVariant || '',
+        todExperimentName: timeOfDayExperimentName || '',
+        mostReadData: mostReadInitialData,
+        showRelatedTopics: showTopics,
+        pageStyles: styles,
+      }).map(component => component)}
     </div>
   );
 };
