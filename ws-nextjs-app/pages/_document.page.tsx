@@ -166,10 +166,22 @@ export default class AppDocument extends Document<DocProps> {
 
     const reverbParams = buildReverbEventModel({
       componentName: '~COMPONENT_NAME_PLACEHOLDER~',
+      // CHANGE THIS FOR LIVE
+      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+      groupTracker: {
+        name: 'article',
+      },
+      pageIdentifier: 'pidgin.articles.czrzwn80zjmo.page',
+      producerName: 'PIDGIN',
     });
     const env = getEnvConfig().SIMORGH_APP_ENV;
     const reverbUrl = reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
       ...reverbParams,
+      additionalParams: {
+        atiAnalyticsAppName: 'news-pidgin',
+        pageType: 'article',
+        serviceLanguage: 'pcm',
+      },
       env,
     });
 
