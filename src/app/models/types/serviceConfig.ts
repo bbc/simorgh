@@ -1,5 +1,5 @@
 import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
-import { PromotionalBannerProps } from '#app/components/PromotionallBanner/index.types';
+import { PromotionalBannerProps } from '#app/components/PromotionalBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
