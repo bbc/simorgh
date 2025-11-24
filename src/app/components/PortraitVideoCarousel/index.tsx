@@ -6,6 +6,9 @@ import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -36,8 +39,21 @@ const PortraitVideoCarousel = ({
 
   const { isLite, nonce } = use(RequestContext);
 
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  const playDurationVariation =
+    useOptimizelyVariation({
+      experimentName: 'newswb_ws_homepage_portrait_video',
+      experimentType: ExperimentType.CLIENT_SIDE,
+    }) ?? undefined;
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
+    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+    ...(playDurationVariation && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_play_and_duration_size_increase',
+      experimentVariant: playDurationVariation,
+    }),
     groupTracker: {
       ...eventTrackingData?.groupTracker,
       itemCount: blocks.length,
@@ -98,6 +114,8 @@ const PortraitVideoCarousel = ({
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
                 timeOfDayVariant={timeOfDayVariant}
+                // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                playDurationVariation={playDurationVariation}
               />
             ))}
           </ul>
