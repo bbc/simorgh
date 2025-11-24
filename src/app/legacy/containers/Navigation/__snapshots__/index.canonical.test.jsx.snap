@@ -51,8 +51,8 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-6:hover,
@@ -81,8 +81,8 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 

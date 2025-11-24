@@ -165,7 +165,7 @@ const iconBorderPosition = `
 // The sideLength of the button should be
 //  line height + top padding + bottom padding
 const calculateButtonSide = lineHeight =>
-  lineHeight / 16 + NAV_BAR_TOP_BOTTOM_SPACING * 2;
+  parseFloat(lineHeight) + NAV_BAR_TOP_BOTTOM_SPACING * 2;
 
 const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
