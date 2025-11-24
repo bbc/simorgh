@@ -8,6 +8,22 @@ import pipe from 'ramda/src/pipe';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
+type Features = {
+  id: string;
+  locators: {
+    canonicalUrl?: string;
+  };
+  headlines: {
+    promoHeadline?: { blocks: { model: { text: string } }[] };
+    seoHeadline?: string;
+  };
+  images?: {
+    defaultPromoImage?: {
+      blocks?: any[];
+    };
+  };
+};
+
 // Extracts up to 6 related content items from Optimo blocks, skipping custom title if present
 export const getRelatedContentData = (blocks: OptimoBlock[]) => {
   const BLOCKS_TO_IGNORE = ['wsoj', 'mpu', 'continueReading'];
@@ -129,3 +145,50 @@ export const mapOptimoBlockToRecommendation = (block: any): Recommendation => ({
   href: getHrefFromOptimoBlock(block),
   image: getImageFromOptimoBlock(block),
 });
+
+const getAltTextFromDefaultPromoImage = (defaultPromoImage?: {
+  blocks?: any[];
+}) => {
+  const altTextBlock = defaultPromoImage?.blocks?.find(
+    block => block.type === 'altText',
+  );
+  return (
+    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text || ''
+  );
+};
+
+const getRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
+  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
+  {};
+
+export const mapFeaturesToRecommendation = (featuresContent: Features) => {
+  const promoHeadlineBlocks = featuresContent.headlines?.promoHeadline;
+  const promoHeadlineText =
+    Array.isArray(promoHeadlineBlocks) &&
+    promoHeadlineBlocks[0]?.blocks &&
+    Array.isArray(promoHeadlineBlocks[0].blocks)
+      ? promoHeadlineBlocks[0].blocks[0]?.model?.text
+      : '';
+  const title =
+    promoHeadlineText || featuresContent.headlines?.seoHeadline || '';
+
+  const defaultPromoImage = featuresContent.images?.defaultPromoImage;
+  const rawImage = getRawImageBlock(defaultPromoImage);
+
+  const image = {
+    locator: rawImage.locator ?? '',
+    altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+    width: rawImage.width ?? 0,
+    height: rawImage.height ?? 0,
+    copyrightHolder: rawImage.copyrightHolder ?? '',
+    originCode: rawImage.originCode ?? '',
+  };
+
+  return {
+    id: featuresContent.id,
+    title,
+    href: featuresContent.locators?.canonicalUrl ?? '',
+    image,
+  };
+};

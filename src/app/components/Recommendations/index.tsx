@@ -15,6 +15,7 @@ import RecommendationsItem from './RecommendationsItem';
 import {
   getRelatedContentData,
   mapOptimoBlockToRecommendation,
+  mapFeaturesToRecommendation,
 } from './helpers';
 
 const eventTrackingData = {
@@ -78,8 +79,14 @@ const Recommendations = ({
   } else if (referrerExperimentVariant === 'direct') {
     displayData = Array.isArray(topStoriesContent) ? topStoriesContent : [];
   } else if (referrerExperimentVariant === 'social') {
-    console.log('Using featuresContent for recommendations', featuresContent);
-    displayData = Array.isArray(featuresContent) ? featuresContent : [];
+    displayData = Array.isArray(featuresContent)
+      ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
+      : [];
+    title = pathOr(
+      'Features & Analysis',
+      ['featuresAnalysisTitle'],
+      translations,
+    );
   }
 
   if (!enabled || !displayData.length) return null;
