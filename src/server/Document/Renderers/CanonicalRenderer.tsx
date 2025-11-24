@@ -117,7 +117,7 @@ export default function CanonicalRenderer({
             __html: `window.SIMORGH_ENV_VARS=${appEnvVariables}`,
           }}
         />
-        {addOperaMiniClassScript}
+        {addOperaMiniClassScript(nonce)}
         <ComponentTracking
           {...(nonce ? { nonce } : {})}
           trackComponentViews={false}
