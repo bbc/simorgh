@@ -33,6 +33,7 @@ export const redirectScript = (window: Window, reverbUrl: string) => {
       .replace('{idclient}', `${user.val}`)
       .replace('{epochTimestamp}', epochTimestamp)
       .replace('{forwardingLink}', NO_FIELD)
+      .replaceAll('ref=&', '')
       .replaceAll('~COMPONENT_NAME_PLACEHOLDER~', `REDIRECT-${normalisedEct}`);
 
     switch (normalisedEct) {
