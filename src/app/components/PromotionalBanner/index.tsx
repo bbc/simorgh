@@ -42,7 +42,9 @@ const PromotionalBanner = ({
             )}
           </Text>
 
-          <span css={styles.dividerText}>{orText}</span>
+          <Text as="span" size="bodyCopy" css={styles.dividerText}>
+            {orText}
+          </Text>
 
           <Text
             as="button"

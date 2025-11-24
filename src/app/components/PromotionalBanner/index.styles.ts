@@ -135,14 +135,8 @@ const styles = {
 
   dividerText: ({ palette, fontVariants }: Theme) =>
     css({
-      color: palette.GREY_2,
-      fontSize: `${pixelsToRem(15)}rem`,
-      height: `${pixelsToRem(28)}rem`,
-      lineHeight: `${pixelsToRem(28)}rem`,
+      color: palette.WHITE,
       fontWeight: fontVariants.sansBold.fontWeight,
-      margin: 0,
-      alignText: 'center',
-      fontFamily: fontVariants.sansBold.fontFamily,
     }),
 
   secondaryButton: ({ mq, spacings, palette, fontVariants }: Theme) =>
