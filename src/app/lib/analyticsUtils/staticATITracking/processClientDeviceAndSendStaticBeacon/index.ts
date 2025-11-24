@@ -89,7 +89,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replaceAll('{referrer}', params.ref)
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
-        .replace('{forwardingLink}', forwardingUrl);
+        .replace('{forwardingLink}', forwardingUrl)
+        .replaceAll('ref=&', '');
 
       const searchParams = new URLSearchParams(window.location.search);
 

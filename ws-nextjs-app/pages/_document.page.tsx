@@ -211,7 +211,7 @@ export default class AppDocument extends Document<DocProps> {
                   __html: `document.documentElement.classList.remove("no-js");`,
                 }}
               />
-              {addOperaMiniClassScript}
+              {addOperaMiniClassScript()}
               <Script strategy="beforeInteractive">
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>
