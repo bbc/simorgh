@@ -18,7 +18,7 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News România',
     product: 'BBC News',
     defaultImage:
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/romania/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News România',
     dir: 'ltr',
     externalLinkText: ', extern',
@@ -401,48 +401,8 @@ export const service: DefaultServiceConfig = {
     timezone: 'Europe/Bucharest',
     navigation: [
       {
-        title: 'Home',
-        url: '/news',
-      },
-      {
-        title: 'UK',
-        url: '/news/uk',
-      },
-      {
-        title: 'World',
-        url: '/news/world',
-      },
-      {
-        title: 'Business',
-        url: '/news/business',
-      },
-      {
-        title: 'Politics',
-        url: '/news/politics',
-      },
-      {
-        title: 'Tech',
-        url: '/news/technology',
-      },
-      {
-        title: 'Science',
-        url: '/news/science_and_environment',
-      },
-      {
-        title: 'Health',
-        url: '/news/health',
-      },
-      {
-        title: 'Family & Education',
-        url: '/news/education',
-      },
-      {
-        title: 'Entertainment & Arts',
-        url: '/news/entertainment_and_arts',
-      },
-      {
-        title: 'Stories',
-        url: '/news/stories',
+        title: 'Ultimele știri',
+        url: '/romania',
       },
     ],
   },

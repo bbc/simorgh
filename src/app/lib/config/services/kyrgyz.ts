@@ -344,6 +344,10 @@ export const service: DefaultServiceConfig = {
         url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
       },
       {
+        title: 'Шайлоо-2025',
+        url: '/kyrgyz/topics/cpdmzj1382mt',
+      },
+      {
         title: 'Кыргызстан',
         url: '/kyrgyz/topics/cz74kjpyk07t',
       },

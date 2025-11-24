@@ -593,12 +593,7 @@ export const service: DefaultServiceConfig = {
             label: 'BBC News na srpskom',
             lang: 'sr-latn',
           },
-          {
-            id: 'turkce',
-            href: 'https://www.bbc.com/turkce',
-            label: 'BBC News Türkçe',
-            lang: 'tr',
-          },
+
           {
             id: 'ukrainian',
             href: 'https://www.bbc.com/ukrainian',
@@ -648,6 +643,12 @@ export const service: DefaultServiceConfig = {
             label: 'BBC News فارسی',
             lang: 'fa',
             latinTransliteration: 'Khabarha be Farsi',
+          },
+          {
+            id: 'turkce',
+            href: 'https://www.bbc.com/turkce',
+            label: 'BBC News Türkçe',
+            lang: 'tr',
           },
         ],
       },
