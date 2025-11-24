@@ -11,6 +11,7 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import PromotionalBanner from '#app/components/PromotionalBanner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -57,6 +58,27 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
+  const [showBanner, setShowBanner] = useState(
+    service === 'mundo' && pageType === HOME_PAGE,
+  );
+
+  const handleInstallPWA = () => {
+    // eslint-disable-next-line no-console
+    console.log('Install PWA clicked');
+    // Native install prompt logic would go here
+  };
+
+  const handleCloseBanner = () => {
+    // eslint-disable-next-line no-console
+    console.log('Banner closed');
+    setShowBanner(false);
+  };
+
+  const handleSecondaryAction = () => {
+    // eslint-disable-next-line no-console
+    console.log('Secondary button clicked');
+    setShowBanner(false);
+  };
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
@@ -109,6 +131,23 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
       <NavigationContainer
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
+      {showBanner && service === 'mundo' && (
+        <PromotionalBanner
+          title="Accede a BBC Noticias con un solo toque"
+          description="Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo."
+          orText="o"
+          primaryButton={{
+            text: 'Agregar',
+            longText: 'Agregar a la pantalla de inicio',
+            onClick: handleInstallPWA,
+          }}
+          secondaryButton={{
+            text: 'Ahora no',
+            onClick: handleSecondaryAction,
+          }}
+          handleClose={handleCloseBanner}
+        />
+      )}
     </header>
   );
 };
