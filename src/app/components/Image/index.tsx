@@ -60,7 +60,7 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
   isPromo,
-  isPortraitImage,
+  isPortraitImage = false,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -214,14 +214,15 @@ const Image = ({
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
-                isPromo && {
-                  background: `rgb(${colour?.rgb?.join(',')})`,
-                  ...(!isLoading && {
-                    [`@supports (filter: blur(15px))`]: {
-                      background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
-                    },
-                  }),
-                },
+                isPromo &&
+                  isPortraitImage && {
+                    background: `rgb(${colour?.rgb?.join(',')})`,
+                    ...(!isLoading && {
+                      [`@supports (filter: blur(15px))`]: {
+                        background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                      },
+                    }),
+                  },
               ]}
               fetchPriority={fetchPriority}
               style={{
