@@ -11,13 +11,7 @@ const styles = {
       justifyContent: 'center',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
       padding: `${spacings.DOUBLE}rem`,
-      minHeight: `${pixelsToRem(170)}rem`,
-      maxHeight: `${pixelsToRem(370)}rem`,
-      height: 'auto',
-
       width: '100%',
-      minWidth: `${pixelsToRem(288)}rem`,
-
       [mq.GROUP_0_MAX_WIDTH]: {
         minWidth: 'auto',
       },
@@ -53,7 +47,6 @@ const styles = {
   title: ({ spacings, palette, fontVariants }: Theme) =>
     css({
       color: palette.WHITE,
-      height: 'auto',
       margin: 0,
       marginRight: `${spacings.QUADRUPLE}rem`,
       fontFamily: fontVariants.sansBold.fontFamily,
@@ -66,7 +59,6 @@ const styles = {
     css({
       color: palette.GREY_2,
       marginTop: `${spacings.FULL}rem`,
-      height: 'auto',
       fontFamily: fontVariants.sansRegular.fontFamily,
       fontWeight: fontVariants.sansRegular.fontWeight,
       display: 'none',
@@ -95,7 +87,6 @@ const styles = {
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
       border: 'none',
-      width: 'auto',
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
