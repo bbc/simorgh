@@ -33,9 +33,10 @@ const ProcessReadTime = ({
 
   const singleMinuteSuffix =
     translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
-  const readCopy = DEFAULT_TRANSLATIONS.read;
+  const readCopy =
+    translations.readTime?.readTimePrefix ?? DEFAULT_TRANSLATIONS.read;
 
-  let copy = `${readTimeValue} ${singleMinuteSuffix} ${readCopy}`;
+  let copy = `${readCopy}: ${readTimeValue} ${singleMinuteSuffix}`;
 
   const isLongRead = readTimeValue >= 6;
   if (readTimeVariant === 'long_read_written' && isLongRead) {

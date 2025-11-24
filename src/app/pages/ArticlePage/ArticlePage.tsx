@@ -234,10 +234,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
+  const readTimeExperimentVariant = 'long_read_written';
 
   // EXPERIMENT: Time of Day Experiment
   const timeOfDayExperimentName = 'newswb_ws_tod_article';
