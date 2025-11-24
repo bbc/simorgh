@@ -23,7 +23,7 @@ export const redirectScript = (window: Window) => {
   }
 };
 
-// THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL REDERERS
+// THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
 export default () => {
   return (
