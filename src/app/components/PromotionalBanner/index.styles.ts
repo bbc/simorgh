@@ -25,7 +25,7 @@ const styles = {
       width: '100%',
       padding: 0,
       [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: `${pixelsToRem(900)}rem`,
+        maxWidth: `${pixelsToRem(1008)}rem`,
       },
     }),
 
@@ -44,23 +44,23 @@ const styles = {
       flexDirection: 'column',
       marginRight: `${spacings.SEXTUPLE}rem`,
     }),
-  title: ({ spacings, palette, fontVariants }: Theme) =>
+  title: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.WHITE,
       margin: 0,
       marginRight: `${spacings.QUADRUPLE}rem`,
       fontFamily: fontVariants.sansBold.fontFamily,
       fontWeight: fontVariants.sansBold.fontWeight,
-      fontSize: `${pixelsToRem(28)}rem`,
-      lineHeight: `${pixelsToRem(32)}rem`,
+      ...fontSizes.paragon,
     }),
 
-  description: ({ spacings, mq, palette, fontVariants }: Theme) =>
+  description: ({ spacings, mq, palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.GREY_2,
       marginTop: `${spacings.FULL}rem`,
       fontFamily: fontVariants.sansRegular.fontFamily,
       fontWeight: fontVariants.sansRegular.fontWeight,
+      ...fontSizes.longPrimer,
       display: 'none',
       [mq.GROUP_2_MIN_WIDTH]: {
         display: 'block',
@@ -82,7 +82,7 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ mq, spacings, palette, fontVariants }: Theme) =>
+  primaryButton: ({ mq, spacings, palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -93,8 +93,7 @@ const styles = {
       whiteSpace: 'nowrap',
       fontFamily: fontVariants.sansBold.fontFamily,
       fontWeight: fontVariants.sansBold.fontWeight,
-      fontSize: `${pixelsToRem(15)}rem`,
-      lineHeight: `${pixelsToRem(20)}rem`,
+      ...fontSizes.bodyCopy,
       position: 'relative',
       '&:focus, &:hover': {
         backgroundColor: palette.WHITE,
@@ -120,13 +119,20 @@ const styles = {
       },
     }),
 
-  dividerText: ({ palette, fontVariants }: Theme) =>
+  dividerText: ({ palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.WHITE,
-      fontWeight: fontVariants.sansBold.fontWeight,
+      fontWeight: fontVariants.sansRegular.fontWeight,
+      ...fontSizes.bodyCopy,
     }),
 
-  secondaryButton: ({ mq, spacings, palette, fontVariants }: Theme) =>
+  secondaryButton: ({
+    mq,
+    spacings,
+    palette,
+    fontVariants,
+    fontSizes,
+  }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: 'transparent',
@@ -135,6 +141,7 @@ const styles = {
       textUnderlineOffset: `${pixelsToRem(5)}rem`,
       textDecorationColor: palette.GREY_4,
       fontWeight: fontVariants.sansBold.fontWeight,
+      ...fontSizes.bodyCopy,
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
