@@ -345,7 +345,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
+      "headline": "BBC News हिंदी",
       "image": {
         "@type": "ImageObject",
         "height": 576,
@@ -360,7 +360,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/hindi",
         "@type": "WebPage",
-        "name": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
+        "name": "BBC News हिंदी",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -787,13 +787,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"hi-IN"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News हिंदी"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/hindi"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -809,7 +809,7 @@ exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bb
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbchindi"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
