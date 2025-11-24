@@ -49,7 +49,7 @@ export const redirectScript = (window: Window, reverbUrl: string) => {
   }
 };
 
-// THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL REDNERERS
+// THIS COMPONENT IS ONLY TO BE USED WITH CANONICAL RENDERERS
 // DO NOT USE IT WITH LITE AND AMP RENDERERS
 export default ({ reverbUrl }: { reverbUrl: string }) => {
   return (
