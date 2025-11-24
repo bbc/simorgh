@@ -3,6 +3,8 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import PromotionalBannerComponent from '.';
 import services from '#server/utilities/serviceConfigs';
 import { StoryProps } from '../../models/types/storybook';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 const ComponentWithContext = ({
   service = 'mundo',
@@ -35,6 +37,10 @@ const ComponentWithContext = ({
 export default {
   title: 'Components/PromotionalBanner',
   component: ComponentWithContext,
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
 };
 
 export const PromotionalBanner = ComponentWithContext;
