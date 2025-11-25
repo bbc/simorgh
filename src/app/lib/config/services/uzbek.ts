@@ -61,7 +61,7 @@ const defaultCyrillicConfig = {
     readTime: {
       readTimePrefix: 'Ўқилиш вақти',
       long: 'Узун мақола',
-      minute: 'дақ.',
+      minute: 'дақ',
     },
     pagination: {
       previousPage: 'Олдингиси',
@@ -415,7 +415,7 @@ export const service: UzbekConfig = {
       readTime: {
         readTimePrefix: "O'qilish vaqti",
         long: 'Uzun maqola',
-        minute: 'daq.',
+        minute: 'daq',
       },
       pagination: {
         previousPage: 'Oldingisi',
