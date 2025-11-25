@@ -60,17 +60,17 @@ const Recommendations = ({
     referrerExperimentVariant.includes('control')
   ) {
     displayData = data ?? [];
-  } else if (referrerExperimentVariant === 'search') {
+  } else if (referrerExperimentVariant === 'adaptive_search') {
     displayData = getRelatedContentData(blocks).map(
       mapOptimoBlockToRecommendation,
     );
     title = pathOr('Related Content', ['relatedContent'], translations);
-  } else if (referrerExperimentVariant === 'direct') {
+  } else if (referrerExperimentVariant === 'adaptive_direct') {
     displayData = Array.isArray(topStoriesContent)
       ? topStoriesContent.map(mapTopStoryToRecommendation)
       : [];
     title = translations?.topStoriesTitle ?? 'Top Stories';
-  } else if (referrerExperimentVariant === 'social') {
+  } else if (referrerExperimentVariant === 'adaptive_social') {
     displayData = Array.isArray(featuresContent)
       ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
       : [];
