@@ -13,16 +13,6 @@ export default async function middleware(request: NextRequest) {
 
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
-  const LOCAL_DEV_ONLY = isLocalhost && process.env.NODE_ENV !== 'production';
-
-  // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
-  // but will not work on localhost. This middleware rewrites the request to the sw.js file found in the 'public' folder
-  if (LOCAL_DEV_ONLY) {
-    if (request.nextUrl.pathname.endsWith('/sw.js')) {
-      return NextResponse.rewrite(new URL('/sw.js', request.url));
-    }
-  }
-
   if (PRODUCTION_ONLY) {
     response = await cspHeaderResponse({ request });
   }
