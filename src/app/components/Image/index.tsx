@@ -1,8 +1,9 @@
 /** @jsx jsx */
 /* @jsxFrag React.Fragment */
 import React, { Fragment, PropsWithChildren, useState, use } from 'react';
-import { Global, jsx } from '@emotion/react';
+import { Global, jsx, useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
+import useImageColour from '#app/hooks/useImageColour';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
@@ -27,6 +28,8 @@ export type ImageProps = {
   fetchPriority?: 'high';
   hasCaption?: boolean;
   isPortraitOrientation?: boolean;
+  isPromo?: boolean;
+  isPortraitImage?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -34,6 +37,23 @@ const getLegacyBrowserAspectRatio = (x: number, y: number) =>
   roundNumber((y / x) * 100)
     .toString()
     .concat('%');
+
+const GetColour = (src: string) => {
+  const {
+    palette: { GREY_8, WHITE },
+    isDarkUi,
+  } = useTheme();
+
+  const { isLoading, colour } = useImageColour(src, {
+    fallbackColour: GREY_8,
+    minimumContrast: 0,
+    contrastColour: WHITE,
+    paletteSize: 10,
+  });
+  const gradientColour = isDarkUi ? WHITE : '#180109';
+
+  return { isLoading, colour, gradientColour, GREY_8 };
+};
 
 const Image = ({
   alt,
@@ -56,9 +76,18 @@ const Image = ({
   fetchPriority,
   hasCaption,
   isPortraitOrientation,
+  isPromo,
+  isPortraitImage = false,
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = React.useRef<HTMLImageElement | null>(null);
+
+  const colourData = isPortraitImage && isPromo ? GetColour(src) : null;
+
+  const isLoading = colourData?.isLoading;
+  const colour = colourData?.colour;
+  const gradientColour = colourData?.gradientColour;
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
@@ -164,7 +193,20 @@ const Image = ({
                 />
               </>
             )}
+            {isPromo && isPortraitImage && (
+              <div
+                css={[
+                  styles.gradientBackground,
+                  {
+                    background: colour
+                      ? `linear-gradient(200deg,rgba(${colour.rgb.join(',')}, 0.6) 0%, ${gradientColour} 54%, ${gradientColour} 90%)`
+                      : `linear-gradient(200deg, ${colourData?.GREY_8} 0%,  ${gradientColour} 54%, ${gradientColour}90%)`,
+                  },
+                ]}
+              />
+            )}
             <img
+              ref={imgRef}
               onLoad={() => setIsLoaded(true)}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
@@ -174,10 +216,21 @@ const Image = ({
               width={width}
               height={height}
               css={[
-                styles.image,
+                isPortraitImage && isPromo
+                  ? styles.portraitImage
+                  : styles.image,
                 hasFixedAspectRatio
                   ? styles.imageFixedAspectRatio
                   : styles.imageResponsiveRatio,
+                isPromo &&
+                  isPortraitImage && {
+                    background: `rgb(${colour?.rgb?.join(',')})`,
+                    ...(!isLoading && {
+                      [`@supports (filter: blur(15px))`]: {
+                        background: `rgba(${colour?.rgb?.join(',')}, 0.62)`,
+                      },
+                    }),
+                  },
               ]}
               fetchPriority={fetchPriority}
               style={{

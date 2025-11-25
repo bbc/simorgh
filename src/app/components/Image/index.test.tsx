@@ -130,14 +130,6 @@ describe('Image - Canonical', () => {
   });
 
   it('should render a placeholder image when placeholder is true', () => {
-    render(<Fixture />);
-    const imageEl = screen.getByAltText('Test image alt text');
-    expect(imageEl.parentNode).toHaveStyle({
-      backgroundImage: `url(${BASE64_PLACEHOLDER_IMAGE})`,
-    });
-  });
-
-  it('should render a placeholder image when placeholder is true', () => {
     render(<Fixture darkPlaceholder />);
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
@@ -156,7 +148,6 @@ describe('Image - Canonical', () => {
 
   it('should render the container with an aspect ratio based on width and height', () => {
     render(<Fixture />);
-
     const imageEl = screen.getByAltText('Test image alt text');
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '56.2%',
@@ -167,7 +158,6 @@ describe('Image - Canonical', () => {
     render(<Fixture width={undefined} height={undefined} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '0',
     });
@@ -179,7 +169,6 @@ describe('Image - Canonical', () => {
     );
 
     const imageEl = screen.getByAltText('Test image alt text');
-
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });
@@ -189,7 +178,6 @@ describe('Image - Canonical', () => {
     render(<Fixture aspectRatio={[4, 3]} />);
 
     const imageEl = screen.getByAltText('Test image alt text');
-
     expect(imageEl.parentNode).toHaveStyle({
       paddingBottom: '75%',
     });

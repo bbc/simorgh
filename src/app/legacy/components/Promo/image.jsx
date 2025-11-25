@@ -63,6 +63,7 @@ const Image = props => {
     src,
     useLargeImages = false,
     className,
+    isPortraitImage,
     ...rest
   } = props;
   const isProgrammeImage = src.startsWith(
@@ -88,6 +89,8 @@ const Image = props => {
         fallbackMediaType="image/jpeg"
         sizes={sizes}
         aspectRatio={[16, 9]}
+        isPromo
+        isPortraitImage={isPortraitImage}
       />
       {children && (
         <ChildWrapper className={className}>{children}</ChildWrapper>

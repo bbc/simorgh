@@ -138,7 +138,7 @@ export const PidginLiveWithFiveSummaries = () => {
   );
 };
 
-export const PersianBillboard = () => {
+export const PersianBillboardWithPortraitVideo = () => {
   const summary = persianData.data.curations[2].summaries[0];
   return (
     <div dir="rtl">

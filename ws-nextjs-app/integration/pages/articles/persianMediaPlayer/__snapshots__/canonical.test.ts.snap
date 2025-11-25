@@ -217,7 +217,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
 "
-  class="css-4ejld5"
+  class="css-xjjct8"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -299,7 +299,7 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-r8zry9"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -376,7 +376,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-r8zry9"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -457,7 +457,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     >
       <img
         alt=""
-        class="css-1uq6tv3"
+        class="css-r8zry9"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"

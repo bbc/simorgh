@@ -29,6 +29,11 @@ const styles = {
     width: '100%',
     objectFit: 'cover', // objectFit used in combination with inline style aspectRatio will center the image horizontally and vertically if aspectRatio prop is different from image's intrinsic aspect ratio
   }),
+  portraitImage: css({
+    position: 'relative',
+    width: '100%',
+    objectFit: 'contain',
+  }),
   imageFixedAspectRatio: css({
     height: 'auto',
   }),
@@ -37,6 +42,16 @@ const styles = {
   }),
   portraitOrientation: css({
     position: 'absolute',
+  }),
+
+  gradientBackground: css({
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    pointerEvents: 'none',
+    filter: `blur(15px)`,
   }),
 };
 

@@ -26,6 +26,7 @@ const HighImpactPromo = ({
   headingLevel = 3,
   eventTrackingData,
   attribution,
+  isPortraitImage,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
@@ -46,6 +47,7 @@ const HighImpactPromo = ({
             alt={imageAlt}
             lazyLoad={lazy}
             isAmp={isAmp}
+            isPortraitImage={isPortraitImage}
           />
         </div>
       )}
