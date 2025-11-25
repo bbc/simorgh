@@ -37,10 +37,10 @@ const PromotionalBanner = ({
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
-            <Heading level={2} css={styles.title} id="banner-title">
+            <Heading level={2} css={styles.title} size="paragon" id="banner-title">
               {title}
             </Heading>
-            <Paragraph css={styles.description} id="banner-description">
+            <Paragraph css={styles.description} size="longPrimer" id="banner-description">
               {description}
             </Paragraph>
           </div>
@@ -52,6 +52,8 @@ const PromotionalBanner = ({
               css={styles.primaryButton}
               className="focusIndicatorInvert"
               onClick={primaryButton?.onClick}
+              size="bodyCopy"
+              fontVariant="sansBold"
               aria-label={
                 isPrimaryLongText ? primaryButton.longText : primaryButton?.text
               }
@@ -68,6 +70,8 @@ const PromotionalBanner = ({
               type="button"
               css={styles.secondaryButton}
               className="focusIndicatorInvert"
+              size="bodyCopy"
+              fontVariant="sansBold"
               onClick={secondaryButton?.onClick}
               aria-label={secondaryButton.text}
             >
