@@ -41,23 +41,17 @@ const styles = {
       display: 'flex',
       flexDirection: 'column',
     }),
-  title: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
+  title: ({ spacings, palette }: Theme) =>
     css({
       color: palette.WHITE,
       margin: 0,
       marginRight: `${spacings.QUADRUPLE}rem`,
-      fontFamily: fontVariants.sansBold.fontFamily,
-      fontWeight: fontVariants.sansBold.fontWeight,
-      ...fontSizes.paragon,
     }),
 
-  description: ({ spacings, mq, palette, fontVariants, fontSizes }: Theme) =>
+  description: ({ spacings, mq, palette }: Theme) =>
     css({
       color: palette.GREY_2,
       marginTop: `${spacings.FULL}rem`,
-      fontFamily: fontVariants.sansRegular.fontFamily,
-      fontWeight: fontVariants.sansRegular.fontWeight,
-      ...fontSizes.longPrimer,
       [mq.GROUP_0_MAX_WIDTH]: {
         display: 'none',
       },
@@ -76,7 +70,7 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
+  primaryButton: ({ spacings, palette }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -85,48 +79,30 @@ const styles = {
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: fontVariants.sansBold.fontFamily,
-      fontWeight: fontVariants.sansBold.fontWeight,
-      ...fontSizes.bodyCopy,
       position: 'relative',
       '&:focus, &:hover': {
-        backgroundColor: palette.WHITE,
         color: palette.BLACK,
         textDecoration: 'underline',
       },
     }),
 
-  dividerText: ({ palette, fontVariants, fontSizes }: Theme) =>
+  dividerText: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
-      fontWeight: fontVariants.sansRegular.fontWeight,
-      ...fontSizes.bodyCopy,
     }),
 
-  secondaryButton: ({
-    mq,
-    spacings,
-    palette,
-    fontVariants,
-    fontSizes,
-  }: Theme) =>
+  secondaryButton: ({ spacings, palette }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
-      fontWeight: fontVariants.sansBold.fontWeight,
-      ...fontSizes.bodyCopy,
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      fontFamily: fontVariants.sansBold.fontFamily,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        padding: 0,
-      },
       '&:focus, &:hover': {
-        backgroundColor: palette.WHITE,
+        backgroundColor: palette.CONSENT_ACTION,
         color: palette.BLACK,
       },
     }),
