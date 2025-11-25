@@ -68,6 +68,11 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Advertisement',
       },
+      readTime: {
+        readTimePrefix: 'Ìye àkókó tí a fi kà á',
+        long: 'Àkààkàtán',
+        minute: 'Ìṣẹ́jú',
+      },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
       currentPage: 'Ojú ewé to wà yìí',

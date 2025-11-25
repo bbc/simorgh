@@ -54,6 +54,11 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'Reklama',
       },
+      readTime: {
+        readTimePrefix: 'Czas czytania',
+        long: 'Długi format',
+        minute: 'min',
+      },
       byline: {
         articleInformation: 'Informacje o artykule',
         author: 'Autor',
