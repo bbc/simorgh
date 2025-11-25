@@ -29,7 +29,11 @@ const PromotionalBanner = ({
   );
 
   return (
-    <div css={styles.banner}>
+    <aside
+      css={styles.banner}
+      role="complementary"
+      aria-label="Promotional Banner"
+    >
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
@@ -86,7 +90,7 @@ const PromotionalBanner = ({
           )}
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
