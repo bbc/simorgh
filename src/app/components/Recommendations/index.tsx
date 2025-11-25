@@ -38,7 +38,7 @@ const Recommendations = ({
   featuresContent, // social
   referrerExperimentVariant, // experiment variant for referrer
 }: RecommendationsProps) => {
-  const { recommendations, mostRead, script, service, dir, translations } =
+  const { recommendations, script, service, dir, translations } =
     use(ServiceContext);
 
   const viewTracker = useViewTracker(eventTrackingData);
@@ -61,7 +61,7 @@ const Recommendations = ({
   ) {
     displayData = data ?? [];
   } else if (referrerExperimentVariant === 'adaptive_search') {
-    displayData = getRelatedContentData(blocks).map(
+    displayData = getRelatedContentData(blocks ?? []).map(
       mapOptimoBlockToRecommendation,
     );
     title = pathOr('Related Content', ['relatedContent'], translations);
