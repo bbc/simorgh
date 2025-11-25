@@ -2,7 +2,6 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
-  // to do - rename?
   bylineContainer: ({ spacings, mq }: Theme) =>
     css({
       paddingInlineStart: `${spacings.FULL}rem`,
@@ -26,16 +25,7 @@ export default {
       },
     }),
 
-  // to do - tidy?
-  bylineSection: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_3_MIN_WIDTH]: {
-        marginBottom: 0,
-      },
-    }),
-
-  // to do - tidy?
-  bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
+  list: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
   author: ({ palette, isDarkUi }: Theme) =>
     css({
@@ -153,7 +143,7 @@ export default {
       height: `${pixelsToRem(80)}rem`,
     }),
 
-  listItemInline: () =>
+  displayInline: () =>
     css({
       display: `inline`,
     }),

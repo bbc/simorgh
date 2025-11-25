@@ -47,9 +47,8 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
         return (
           <ul
             css={[
-              BylineCss.bylineList,
-              BylineCss.bylineSection,
-              areMultipleContributors && BylineCss.listItemInline,
+              BylineCss.list,
+              areMultipleContributors && BylineCss.displayInline,
             ]}
             role="list"
             key={authorName}
@@ -72,7 +71,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            <li css={areMultipleContributors && BylineCss.listItemInline}>
+            <li css={areMultipleContributors && BylineCss.displayInline}>
               {authorTopicUrl ? (
                 <>
                   <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
@@ -129,7 +128,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
               )}
               {areMultipleContributors && <Comma />}
             </li>
-            <li css={BylineCss.listItemInline}>
+            <li css={BylineCss.displayInline}>
               <span role="text">
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                 <Text
@@ -144,7 +143,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
               {location && <Comma />}
             </li>
             {location ? (
-              <li css={BylineCss.listItemInline}>
+              <li css={BylineCss.displayInline}>
                 <span role="text" aria-label={`${reportingFrom} ${location}`}>
                   <Text
                     css={[BylineCss.locationText]}
@@ -187,7 +186,7 @@ const Byline = ({
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
-        <ul css={BylineCss.bylineList}>
+        <ul css={BylineCss.list}>
           <li
             css={[
               BylineCss.bylineContainer,
