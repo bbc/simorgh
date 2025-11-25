@@ -37,10 +37,19 @@ const PromotionalBanner = ({
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
-            <Heading level={2} css={styles.title} size="paragon" id="banner-title">
+            <Heading
+              level={2}
+              css={styles.title}
+              size="paragon"
+              id="banner-title"
+            >
               {title}
             </Heading>
-            <Paragraph css={styles.description} size="longPrimer" id="banner-description">
+            <Paragraph
+              css={styles.description}
+              size="longPrimer"
+              id="banner-description"
+            >
               {description}
             </Paragraph>
           </div>
