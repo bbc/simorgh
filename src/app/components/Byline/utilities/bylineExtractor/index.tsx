@@ -27,7 +27,6 @@ const pathOrZeroIndexModelBlocks = (
 
 const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
   return blocks
-    .slice(0, 4)
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
 
