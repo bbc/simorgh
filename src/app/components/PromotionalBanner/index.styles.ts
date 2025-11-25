@@ -10,13 +10,12 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      padding: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.TRIPLE}rem`,
       width: '100%',
       [mq.GROUP_0_MAX_WIDTH]: {
-        minWidth: 'auto',
-      },
-      [mq.GROUP_1_MIN_WIDTH]: {
-        minWidth: 'auto',
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingRight: `${spacings.FULL}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
     }),
 
@@ -29,20 +28,18 @@ const styles = {
       },
     }),
 
-  content: ({ spacings }: Theme) =>
+  content: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       width: '100%',
-      gap: `${spacings.FULL}rem`,
     }),
 
-  textContainer: ({ spacings }: Theme) =>
+  textContainer: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
-      marginRight: `${spacings.SEXTUPLE}rem`,
     }),
   title: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
     css({
@@ -61,9 +58,8 @@ const styles = {
       fontFamily: fontVariants.sansRegular.fontFamily,
       fontWeight: fontVariants.sansRegular.fontWeight,
       ...fontSizes.longPrimer,
-      display: 'none',
-      [mq.GROUP_2_MIN_WIDTH]: {
-        display: 'block',
+      [mq.GROUP_0_MAX_WIDTH]: {
+        display: 'none',
       },
     }),
 
@@ -77,8 +73,6 @@ const styles = {
       [mq.GROUP_1_MAX_WIDTH]: {
         marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
-        width: `${pixelsToRem(172)}rem`,
-        height: `${spacings.FULL}rem`,
       },
     }),
 
@@ -128,7 +122,7 @@ const styles = {
       cursor: 'pointer',
       whiteSpace: 'nowrap',
       fontFamily: fontVariants.sansBold.fontFamily,
-      [mq.GROUP_1_MAX_WIDTH]: {
+      [mq.GROUP_1_MIN_WIDTH]: {
         padding: 0,
       },
       '&:focus, &:hover': {
@@ -140,8 +134,8 @@ const styles = {
   closeButton: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-16)}rem`,
-      right: `${pixelsToRem(-16)}rem`,
+      top: `${pixelsToRem(-24)}rem`,
+      right: `${pixelsToRem(-8)}rem`,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -149,8 +143,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      width: `${pixelsToRem(44)}rem`,
-      height: `${pixelsToRem(44)}rem`,
+      width: `${pixelsToRem(38)}rem`,
+      height: `${pixelsToRem(36)}rem`,
       color: palette.WHITE,
       '&:hover, &:focus': {
         outlineOffset: `${pixelsToRem(2)}rem`,
@@ -158,18 +152,24 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
+      [mq.GROUP_1_MIN_WIDTH]: {
+        right: `${pixelsToRem(-24)}rem`,
+      },
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
-  closeButtonIcon: ({ palette }: Theme) =>
+  closeButtonIcon: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-3)}rem`,
-      right: `${pixelsToRem(-3)}rem`,
+      top: `${pixelsToRem(-12)}rem`,
+      right: `${pixelsToRem(4)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
-      width: `${pixelsToRem(18)}rem`,
-      height: `${pixelsToRem(18)}rem`,
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        right: `${pixelsToRem(-12)}rem`,
+      },
       pointerEvents: 'none',
     }),
 };
