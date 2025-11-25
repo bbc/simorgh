@@ -268,6 +268,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        podcastExternalLinks: 'Este podcast también está disponible en:',
+        download: 'Descargar episodio',
         closeVideo: 'Salir',
         endOfContentClose: 'Fin de este contenido. Salir',
       },

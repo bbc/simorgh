@@ -72,7 +72,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
 exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
 {
   "text": "Pravila privatnosti",
-  "url": "https://www.bbc.com/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 

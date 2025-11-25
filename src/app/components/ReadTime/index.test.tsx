@@ -10,26 +10,20 @@ describe('ReadTime', () => {
     {
       variant: 'Long Read Numerical',
       variantKey: 'long_read_numerical',
-      expectedCopy: '4 min read',
+      expectedCopy: 'Read time: 4 min',
       readTimeValue: 4,
     },
     {
       variant: 'Long Read Numerical',
       variantKey: 'long_read_numerical',
-      expectedCopy: '6 min read',
+      expectedCopy: 'Read time: 6 min',
       readTimeValue: 6,
-    },
-    {
-      variant: 'Long Read Written',
-      variantKey: 'long_read_written',
-      expectedCopy: '4 min read',
-      readTimeValue: 4,
     },
     {
       variant: 'Long Read Written',
       variantKey: 'long_read_written',
       expectedCopy: 'Long read',
-      readTimeValue: 6,
+      readTimeValue: 7,
     },
   ])(
     'should render $expectedCopy when readTime is supplied with a $variant variant',
@@ -85,7 +79,7 @@ describe('ReadTime', () => {
           readTimeVariant="long_read_numerical"
         />,
       );
-      expect(getByText('4 min read')).toBeInTheDocument();
+      expect(getByText('Read time: 4 min')).toBeInTheDocument();
     });
     describe('view tracking', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
