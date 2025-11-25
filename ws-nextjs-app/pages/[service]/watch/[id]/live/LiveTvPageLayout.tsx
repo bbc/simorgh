@@ -77,7 +77,7 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
               {description}
             </Text>
             {mediaCollectionCuration && (
-              <div css={styles.playerOutline}>
+              <div role="presentation" css={styles.playerOutline}>
                 {renderCuration({ curation: mediaCollectionCuration })}
               </div>
             )}
