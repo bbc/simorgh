@@ -12,6 +12,14 @@ import Text from '../Text';
 import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
+const Comma = () => {
+  return (
+    <span aria-hidden="true" css={BylineCss.comma}>
+      ,{' '}
+    </span>
+  );
+};
+
 const Contributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -24,10 +32,8 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
     } = {},
   } = translations ?? {};
 
-  // temp
   const areMultipleContributors = !isSingleContributor;
 
-  // to do, build out a function that works out what commas to show etc
   const lastContributorIndex = contributorValues.length - 1;
 
   return (
@@ -121,11 +127,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   </Text>
                 </span>
               )}
-              {areMultipleContributors && (
-                <span aria-hidden="true" css={BylineCss.comma}>
-                  ,{' '}
-                </span>
-              )}
+              {areMultipleContributors && <Comma />}
             </li>
             <li css={BylineCss.listItemInline}>
               <span role="text">
@@ -139,17 +141,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   {jobRole}
                 </Text>
               </span>
-              {areMultipleContributors && (
-                <span aria-hidden="true" css={BylineCss.comma}>
-                  ,{' '}
-                </span>
-              )}
-              {/* // to do - neaten logic */}
-              {isSingleContributor && location && (
-                <span aria-hidden="true" css={BylineCss.comma}>
-                  ,{' '}
-                </span>
-              )}
+              {location && <Comma />}
             </li>
             {location ? (
               <li css={BylineCss.listItemInline}>
@@ -165,9 +157,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   </Text>
                 </span>
                 {areMultipleContributors && index !== lastContributorIndex && (
-                  <span css={BylineCss.comma} aria-hidden="true">
-                    ,{' '}
-                  </span>
+                  <Comma />
                 )}
               </li>
             ) : null}
