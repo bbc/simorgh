@@ -5,6 +5,7 @@ import {
 } from '../../../../components/react-testing-library-with-providers';
 import RecentVideoEpisodes from '.';
 import { afrique } from './fixtures';
+import { TV_PAGE } from '../../../../routes/utils/pageTypes';
 
 const RecentVideoEpisodesWithContext = ({ episodes }) => (
   <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={episodes} />
@@ -17,9 +18,7 @@ describe('Recent Video Episodes', () => {
     act(() => {
       ({ container } = render(
         <RecentVideoEpisodes masterBrand="bbc_afrique_tv" episodes={afrique} />,
-        {
-          service: 'afrique',
-        },
+        { service: 'afrique', pageType: TV_PAGE },
       ));
     });
     expect(container).toMatchSnapshot();
