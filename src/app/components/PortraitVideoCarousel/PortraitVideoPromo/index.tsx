@@ -166,7 +166,7 @@ export default ({
                 <time dateTime={mediaISO8601Duration}>
                   <Text
                     // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-                    size={isLargeVariation ? 'greatPrimer' : 'brevier'}
+                    size={isLargeVariation ? 'pica' : 'brevier'}
                     css={styles.duration}
                   >
                     {durationString}
