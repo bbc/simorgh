@@ -13,7 +13,7 @@ export const assertLiveTvPage = ({ service }: LiveTvPageParams) => {
   it(`should render the Live TV Page with the correct h1 for ${service}`, () => {
     cy.getPageDataFromWindow().then(pageData => {
       const expectedHeading = (pageData as LiveTvPageParams['pageData'])?.title;
-      cy.get('h1').filter(':visible').should('have.text', expectedHeading);
+      cy.get('h1').should('have.text', expectedHeading);
     });
   });
 };
