@@ -82,7 +82,7 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ mq, spacings, palette, fontVariants, fontSizes }: Theme) =>
+  primaryButton: ({ spacings, palette, fontVariants, fontSizes }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -102,20 +102,6 @@ const styles = {
         textDecorationColor: palette.BLACK,
         textDecorationThickness: `${pixelsToRem(2)}rem`,
         textUnderlineOffset: `${pixelsToRem(5)}rem`,
-      },
-
-      '& .short-text': {
-        display: 'inline',
-        [mq.GROUP_2_MIN_WIDTH]: {
-          display: 'none',
-        },
-      },
-
-      '& .long-text': {
-        display: 'none',
-        [mq.GROUP_2_MIN_WIDTH]: {
-          display: 'inline',
-        },
       },
     }),
 
