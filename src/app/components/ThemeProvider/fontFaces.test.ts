@@ -87,6 +87,7 @@ describe('Font Faces', () => {
        "REITH_SERIF_LIGHT",
        "REITH_SERIF_MEDIUM",
        "default",
+       "fontInfo",
      ]
     `);
   });
@@ -97,7 +98,7 @@ describe('Font Faces', () => {
 
   it.each(
     Object.entries(fontFaces).filter(
-      ([fontID]) => ![reithFontsDir, 'default'].includes(fontID),
+      ([fontID]) => ![reithFontsDir, 'default', 'fontInfo'].includes(fontID),
     ),
   )('%s font has expected properties', (fontId, fontDefinition) => {
     expect(fontDefinition).toHaveProperty('@font-face');
