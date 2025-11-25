@@ -7,8 +7,7 @@ export default {
     },
     {
       linkText: 'Apple',
-      linkUrl:
-        'https://podcasts.apple.com/us/podcast/improbable/id1854113412',
+      linkUrl: 'https://podcasts.apple.com/us/podcast/improbable/id1854113412',
       linkType: 'apple',
     },
   ],
