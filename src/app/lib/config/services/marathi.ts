@@ -316,7 +316,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'गोपनीयतेचं धोरण',
         },
         {
