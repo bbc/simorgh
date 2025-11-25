@@ -256,14 +256,15 @@ server.get(
 
       if (service === 'mundo' && !isAmp) {
         const countrySpecificTopics = {
+          ar: 'c7zp57yy6dzt',
+          cl: 'c340qyppkk8t',
           mx: 'c340qyp6yggt',
           co: 'c404v5gz1rkt',
-          cl: 'c340qyppkk8t',
-          ar: 'c7zp57yy6dzt',
-          pe: 'c404v5gdw2zt',
           es: 'c6vzy3wd189t',
           ve: 'cpzd49v9rd1t',
-          ec: 'cg72618r047t',
+          us: 'cdr5613yzwqt',
+          ur: 'cpzd498zwj6t',
+          do: 'cr50y7pykkdt',
         };
         const defaultTopicId = 'c7zp57yyz25t';
         const hasCountryMatch =
