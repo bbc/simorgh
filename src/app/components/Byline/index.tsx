@@ -184,7 +184,11 @@ const Byline = ({
 
   return (
     contributorValues?.[0] && (
-      <section role="region" aria-labelledby="article-byline">
+      <section
+        role="region"
+        aria-labelledby="article-byline"
+        data-testid="byline"
+      >
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>

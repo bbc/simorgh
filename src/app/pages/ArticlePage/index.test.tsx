@@ -12,6 +12,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithSubByline,
   articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
@@ -228,6 +229,7 @@ describe('Article Page', () => {
     });
   });
 
+  // to do - delete?
   it('should use the twitter handle where present in the byline block', async () => {
     render(
       <Context service="pidgin">
@@ -766,6 +768,34 @@ describe('Article Page', () => {
     );
     expect(getByText('Get involved')).toBeInTheDocument();
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
+  });
+
+  it('should render a byline when passed a byline', async () => {
+    const pageDataWithByline = {
+      ...articleDataPidginWithByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
+  it('should render a byline when passed a subByline', async () => {
+    const pageDataWithSubByline = {
+      ...articleDataPidginWithSubByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithSubByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
   });
 
   it('should set "amphtml" link tag for asset', async () => {
