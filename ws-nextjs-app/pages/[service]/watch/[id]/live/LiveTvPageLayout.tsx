@@ -62,17 +62,27 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
       />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
-          <div css={styles.padding}>
+          <div
+            css={[styles.padding, styles.reorderedLayout]}
+            className="media-player"
+          >
+            <Heading
+              id="content"
+              level={1}
+              css={styles.title}
+              className="title"
+            >
+              {title}
+            </Heading>
+            <Text css={styles.description} className="description">
+              {description}
+            </Text>
             {mediaCollectionCuration && (
               <div css={styles.playerOutline}>
                 {renderCuration({ curation: mediaCollectionCuration })}
               </div>
             )}
-            <Heading id="content" level={1} css={styles.title}>
-              {title}
-            </Heading>
-            <Text css={styles.description}>{description}</Text>
-            <div css={styles.curationStyles}>
+            <div css={styles.curationStyles} className="curations">
               {filteredCurations.map(curation => renderCuration({ curation }))}
             </div>
           </div>

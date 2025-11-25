@@ -60,6 +60,23 @@ const styles = {
         color: palette.GREY_5,
       },
     }),
+  reorderedLayout: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      '& > .media-player': {
+        order: 0,
+      },
+      '& > .title': {
+        order: 1,
+      },
+      '& > .description': {
+        order: 2,
+      },
+      '& > .curations': {
+        order: 3,
+      },
+    }),
 };
 
 export default styles;
