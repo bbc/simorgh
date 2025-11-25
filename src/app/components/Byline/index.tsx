@@ -144,13 +144,15 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             </li>
             {location ? (
               <li css={BylineCss.displayInline}>
-                <span role="text" aria-label={`${reportingFrom} ${location}`}>
+                <span role="text">
+                  <VisuallyHiddenText>
+                    {`${reportingFrom}, `}{' '}
+                  </VisuallyHiddenText>
                   <Text
                     css={[BylineCss.locationText]}
                     {...(isSingleContributor
                       ? { size: 'brevier' }
                       : { size: 'bodyCopy' })}
-                    aria-hidden="true"
                   >
                     {location}
                   </Text>
