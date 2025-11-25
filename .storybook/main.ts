@@ -1,7 +1,5 @@
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 
 import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
@@ -9,11 +7,31 @@ import {
   getProjectRoot,
   resolvePathInStorybookCache,
 } from 'storybook/internal/common';
-import { webpackDirAlias } from '../dirAlias';
+import alias from '../dirAlias';
+import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 
 const require = createRequire(import.meta.url);
 
 const storybookConfig: StorybookConfig = {
+  previewHead(config) {
+    const fontLinkTags = Object.values(fontInfo)
+      .map(font => {
+        return `
+        <link
+          rel="preload"
+          href="${font.downloadSrc}"
+          as="font"
+          crossorigin="anonymous"
+        />
+      `;
+      })
+      .join('\n');
+
+    return `
+      ${config}
+      ${fontLinkTags}
+    `;
+  },
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
@@ -77,6 +95,7 @@ const storybookConfig: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
+      // @ts-expect-error
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
@@ -100,7 +119,7 @@ const storybookConfig: StorybookConfig = {
 
     config.resolve!.alias = {
       ...config.resolve!.alias,
-      ...webpackDirAlias,
+      ...alias.webpackDirAlias,
     };
     return config;
   },

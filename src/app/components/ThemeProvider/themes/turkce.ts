@@ -9,7 +9,7 @@ import {
 } from '../fontFaces';
 import reithFontVariants from '../fontVariants/reith';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/turkish';
+import brandSVG from '../chameleonLogos/turkce';
 
 export const theme: ServiceTheme = {
   palette: {

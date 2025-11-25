@@ -1,10 +1,10 @@
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
+import SERVICES from '#app/lib/config/services';
 import { Services, ServicesVariantsProps } from '#app/models/types/global';
 import * as emotionReact from '@emotion/react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import serviceConfigs from '#src/server/utilities/serviceConfigs';
-import { services } from '#app/lib/config/services/loadableConfig';
 import getFontFaces, * as fontFaces from './fontFaces';
 import { themes, pwaThemes } from './__mocks__/themes';
 
@@ -19,17 +19,13 @@ const preload = ({ service, variant, isPWA = false }: LoadFontFaces) => {
 
   if (isPWA) {
     if (variant) {
-      // @ts-expect-error lookup theme by service & variant
       theme = pwaThemes[service][variant];
     } else {
-      // @ts-expect-error lookup theme by service
       theme = pwaThemes[service];
     }
   } else if (variant) {
-    // @ts-expect-error lookup theme by service & variant
     theme = themes[service][variant];
   } else {
-    // @ts-expect-error lookup theme by service
     theme = themes[service];
   }
 
@@ -61,7 +57,7 @@ const servicesWithNoFonts = Object.entries(themes)
   })
   .filter(Boolean) as Services[];
 
-const servicesWithFonts = services.filter(
+const servicesWithFonts = SERVICES.filter(
   service => !servicesWithNoFonts.includes(service),
 );
 
@@ -91,6 +87,7 @@ describe('Font Faces', () => {
        "REITH_SERIF_LIGHT",
        "REITH_SERIF_MEDIUM",
        "default",
+       "fontInfo",
      ]
     `);
   });
@@ -101,12 +98,11 @@ describe('Font Faces', () => {
 
   it.each(
     Object.entries(fontFaces).filter(
-      ([fontID]) => ![reithFontsDir, 'default'].includes(fontID),
+      ([fontID]) => ![reithFontsDir, 'default', 'fontInfo'].includes(fontID),
     ),
   )('%s font has expected properties', (fontId, fontDefinition) => {
     expect(fontDefinition).toHaveProperty('@font-face');
 
-    // @ts-expect-error remaining font definitions (excludes REITH_FONTS_DIR) will contain an @font-face key
     const font = fontDefinition['@font-face'];
 
     // Mandatory properties for all fonts

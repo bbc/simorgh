@@ -101,7 +101,6 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -121,7 +120,6 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { queryByText, getByTestId } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -144,7 +142,6 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -173,7 +170,6 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -193,7 +189,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -212,7 +207,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -232,7 +226,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData: pageDataWithoutVideo,
       service: 'indonesia',
@@ -253,7 +246,6 @@ describe('OnDemand Radio Page ', () => {
       toggles,
     });
 
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       variant: 'simp',
@@ -275,7 +267,6 @@ describe('OnDemand Radio Page ', () => {
       toggles,
     });
 
-    // @ts-expect-error react testing library returns the required query
     const { getByTestId } = await renderPage({
       pageData,
       service: 'gahuza',
@@ -297,7 +288,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'korean',
@@ -321,7 +311,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container, getByText } = await renderPage({
       pageData,
       service: 'swahili',
@@ -350,7 +339,6 @@ describe('OnDemand Radio Page ', () => {
       pageType: AUDIO_PAGE,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container, getByText } = await renderPage({
       pageData,
       service: 'korean',
@@ -375,7 +363,6 @@ describe('OnDemand Radio Page ', () => {
       toggles,
     });
 
-    // @ts-expect-error react testing library returns the required query
     const { getByTestId } = await renderPage({
       pageData,
       service: 'korean',
