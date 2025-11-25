@@ -107,8 +107,8 @@ const styles = {
   playIconLarge: () =>
     css({
       fill: 'currentcolor',
-      width: `${pixelsToRem(18)}rem`,
-      height: `${pixelsToRem(18)}rem`,
+      width: `${pixelsToRem(15)}rem`,
+      height: `${pixelsToRem(15)}rem`,
     }),
   duration: ({ palette, spacings }: Theme) =>
     css({
