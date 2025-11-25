@@ -36,7 +36,12 @@ const ProcessReadTime = ({
   const readCopy =
     translations.readTime?.readTimePrefix ?? DEFAULT_TRANSLATIONS.read;
 
-  const servicesWithMinutesBeforeNumber = ['hausa', 'igbo', 'yoruba'];
+  const servicesWithMinutesBeforeNumber = [
+    'hausa',
+    'igbo',
+    'yoruba',
+    'swahili',
+  ];
   const servicesWithoutColon = ['igbo', 'pidgin'];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
