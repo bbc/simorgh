@@ -37,10 +37,13 @@ const ProcessReadTime = ({
     translations.readTime?.readTimePrefix ?? DEFAULT_TRANSLATIONS.read;
 
   const servicesWithMinutesBeforeNumber = ['hausa', 'igbo', 'yoruba'];
+  const servicesWithoutColon = ['igbo', 'pidgin'];
+
+  const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
   let copy = servicesWithMinutesBeforeNumber.includes(service)
-    ? `${readCopy}: ${singleMinuteSuffix} ${readTimeValue}`
-    : `${readCopy}: ${readTimeValue} ${singleMinuteSuffix}`;
+    ? `${readCopy}${separator}${singleMinuteSuffix} ${readTimeValue}`
+    : `${readCopy}${separator}${readTimeValue} ${singleMinuteSuffix}`;
 
   const isLongRead = readTimeValue >= 6;
   if (readTimeVariant === 'long_read_written' && isLongRead) {
