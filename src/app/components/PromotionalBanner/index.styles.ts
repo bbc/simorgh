@@ -102,7 +102,7 @@ const styles = {
       cursor: 'pointer',
       whiteSpace: 'nowrap',
       '&:focus, &:hover': {
-        backgroundColor: palette.CONSENT_ACTION,
+        backgroundColor: palette.WHITE,
         color: palette.BLACK,
       },
     }),
