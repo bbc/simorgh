@@ -311,7 +311,7 @@ export const service: DefaultServiceConfig = {
           text: 'బీబీసీ గురించి',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ప్రైవసీ పాలసీ',
         },
         {
