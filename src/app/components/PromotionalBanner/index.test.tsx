@@ -7,6 +7,21 @@ import {
 import PromotionalBanner from '.';
 
 describe('PromotionalBanner', () => {
+  beforeAll(() => {
+    window.matchMedia = jest.fn().mockImplementation(query => {
+      return {
+        matches: false, // force SHORT TEXT
+        media: query,
+        onchange: null,
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      };
+    });
+  });
+
   const defaultProps = {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
@@ -32,7 +47,6 @@ describe('PromotionalBanner', () => {
     ).toBeInTheDocument();
     expect(screen.getByText('or')).toBeInTheDocument();
     expect(screen.getByText('Install')).toBeInTheDocument();
-    expect(screen.getByText('Install the PWA App')).toBeInTheDocument();
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
@@ -42,7 +56,24 @@ describe('PromotionalBanner', () => {
     expect(primaryButton).toHaveAttribute('aria-label', 'Install');
   });
 
+  it('sets correct aria-label for secondary button', () => {
+    render(<PromotionalBanner {...defaultProps} />);
+    const secondaryButton = screen.getByRole('button', { name: /not now/i });
+    expect(secondaryButton).toHaveAttribute('aria-label', 'Not now');
+  });
+
+  it('calls the primary button click handler when short text is present', () => {
+    render(<PromotionalBanner {...defaultProps} />);
+    fireEvent.click(screen.getByText('Install'));
+    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
+  });
+
   it('sets correct aria-label for primary button (longText)', () => {
+    window.matchMedia = jest.fn().mockImplementation(() => ({
+      matches: true, // force LONG TEXT
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    }));
     const props = {
       ...defaultProps,
       primaryButton: {
@@ -56,18 +87,6 @@ describe('PromotionalBanner', () => {
       name: /install the pwa app/i,
     });
     expect(primaryButton).toHaveAttribute('aria-label', 'Install the PWA App');
-  });
-
-  it('sets correct aria-label for secondary button', () => {
-    render(<PromotionalBanner {...defaultProps} />);
-    const secondaryButton = screen.getByRole('button', { name: /not now/i });
-    expect(secondaryButton).toHaveAttribute('aria-label', 'Not now');
-  });
-
-  it('calls the primary button click handler when short text is present', () => {
-    render(<PromotionalBanner {...defaultProps} />);
-    fireEvent.click(screen.getByText('Install'));
-    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
   });
 
   it('calls the primary button click handler when long text is present', () => {
@@ -88,7 +107,7 @@ describe('PromotionalBanner', () => {
   it('renders primary and secondary buttons', () => {
     render(<PromotionalBanner {...defaultProps} />);
 
-    expect(screen.getByText('Install')).toBeInTheDocument();
+    expect(screen.getByText('Install the PWA App')).toBeInTheDocument();
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
