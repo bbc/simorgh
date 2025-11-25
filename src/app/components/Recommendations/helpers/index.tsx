@@ -96,7 +96,7 @@ export const getRelatedContentData = (blocks: OptimoBlock[]) => {
       items,
     );
   const storyPromoItems = hasCustomTitle ? tail(items) : items;
-  return slice(0, 6, storyPromoItems);
+  return slice(0, 4, storyPromoItems);
 };
 
 export const getHeadlineFromOptimoBlock = (block: any) => {
