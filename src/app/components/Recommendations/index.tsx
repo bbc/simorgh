@@ -25,7 +25,7 @@ const eventTrackingData = {
 
 interface RecommendationsProps {
   data: Recommendation[];
-  blocks: OptimoBlock[];
+  blocks?: OptimoBlock[];
   topStoriesContent?: unknown;
   featuresContent?: unknown;
   referrerExperimentVariant?: string;
