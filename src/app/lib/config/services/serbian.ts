@@ -78,7 +78,7 @@ export const service: SerbianConfig = {
           text: 'O BBC-ju',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Pravila privatnosti',
         },
         {
@@ -485,7 +485,7 @@ export const service: SerbianConfig = {
           text: 'О ББЦ-ју',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Правила приватности',
         },
         {
