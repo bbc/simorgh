@@ -263,7 +263,7 @@ server.get(
           es: 'c6vzy3wd189t',
           ve: 'cpzd49v9rd1t',
           us: 'cdr5613yzwqt',
-          ur: 'cpzd498zwj6t',
+          uy: 'cpzd498zwj6t',
           do: 'cr50y7pykkdt',
         };
         const defaultTopicId = 'c7zp57yyz25t';
