@@ -29,7 +29,8 @@ module.exports = {
   async rewrites() {
     return [
       // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
-      // but will not work on localhost. This rewrites requests to the sw.js file found in the 'public' folder
+      // but will not work on localhost. This rewrites requests from paths outside of root
+      // to the sw.js file found in the 'public' folder, which is served from the root.
       ...(isLocal
         ? [
             {
