@@ -254,7 +254,7 @@ server.get(
         ?.toString()
         .toLowerCase();
 
-      if (service === 'mundo' && !isAmp) {
+      if (pageType === 'article' && service === 'mundo' && !isAmp) {
         const countrySpecificTopics = {
           ar: 'c7zp57yy6dzt',
           cl: 'c340qyppkk8t',
