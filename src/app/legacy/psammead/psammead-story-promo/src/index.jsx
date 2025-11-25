@@ -95,7 +95,9 @@ const ImageOverlayWrapper = styled.div`
   ${({ promoType }) => mediaIndicatorStyles[promoType]}
 `;
 
-// TODO: verify
+/**
+ * @deprecated
+ */
 const headlineTypography = fontSizes => ({
   top: fontSizes.paragon,
   regular: fontSizes.pica,
