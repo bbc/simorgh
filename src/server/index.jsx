@@ -255,6 +255,10 @@ server.get(
         .toLowerCase();
 
       if (pageType === 'article' && service === 'mundo' && !isAmp) {
+        // Ensure secondaryColumn exists
+        if (!data.pageData.secondaryColumn) {
+          data.pageData.secondaryColumn = {};
+        }
         const countrySpecificTopics = {
           ar: 'c7zp57yy6dzt',
           cl: 'c340qyppkk8t',
