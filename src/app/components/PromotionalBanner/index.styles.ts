@@ -99,7 +99,6 @@ const styles = {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
         textDecoration: 'underline',
-        textUnderlineOffset: `${pixelsToRem(5)}rem`,
       },
     }),
 
