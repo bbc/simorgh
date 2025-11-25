@@ -19,7 +19,7 @@ type ReadTimeProps = {
 const DEFAULT_TRANSLATIONS = {
   long: 'Long read',
   minute: 'min',
-  read: 'read',
+  read: 'Read time',
 };
 
 const ProcessReadTime = ({
