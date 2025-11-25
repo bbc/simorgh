@@ -175,19 +175,23 @@ const getWsojComponent = ({
   topStoriesContent,
   featuresContent,
   referrerExperimentVariant,
+  isDesktopInitial,
 }: {
   data: Recommendation[];
   blocks: OptimoBlock[];
   topStoriesContent?: unknown;
   featuresContent?: unknown;
   referrerExperimentVariant?: string;
+  isDesktopInitial: boolean;
 }) => (
   <Recommendations
-    data={data} // the original data passed in before the experiment (most read), to be used for control
-    blocks={blocks} // the same data passed into related content, to be used for search segment
-    topStoriesContent={topStoriesContent} // top stories to be used for 'direct' segment
-    featuresContent={featuresContent} // features to be used for social segment
-    referrerExperimentVariant={referrerExperimentVariant}
+    data={data}
+    blocks={blocks}
+    topStoriesContent={topStoriesContent}
+    featuresContent={featuresContent}
+    referrerExperimentVariant={
+      isDesktopInitial ? 'off' : referrerExperimentVariant
+    }
   />
 );
 const getUnderArticleComponents = ({
@@ -378,6 +382,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  // Detect desktop on first load
+  const [isDesktopInitial] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth >= 1008;
+    }
+    return false;
+  });
+
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
   const readTimeExperimentVariant = useOptimizelyVariation({
@@ -398,7 +410,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerExperimentVariant = 'direct'; // TEMP override
+  referrerExperimentVariant = 'social'; // TEMP override
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -513,6 +525,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         topStoriesContent,
         featuresContent,
         referrerExperimentVariant,
+        isDesktopInitial, // pass it here
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
