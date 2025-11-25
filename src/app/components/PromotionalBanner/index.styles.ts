@@ -99,8 +99,6 @@ const styles = {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
         textDecoration: 'underline',
-        textDecorationColor: palette.BLACK,
-        textDecorationThickness: `${pixelsToRem(2)}rem`,
         textUnderlineOffset: `${pixelsToRem(5)}rem`,
       },
     }),
@@ -124,8 +122,6 @@ const styles = {
       backgroundColor: 'transparent',
       border: 'none',
       textDecoration: 'underline',
-      textUnderlineOffset: `${pixelsToRem(5)}rem`,
-      textDecorationColor: palette.GREY_4,
       fontWeight: fontVariants.sansBold.fontWeight,
       ...fontSizes.bodyCopy,
       height: `${pixelsToRem(44)}rem`,
@@ -139,13 +135,10 @@ const styles = {
       '&:focus, &:hover': {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
-        textDecoration: 'underline',
-        textDecorationColor: palette.BLACK,
-        textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
     }),
 
-  closeButton: ({ palette }: Theme) =>
+  closeButton: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
       top: `${pixelsToRem(-16)}rem`,
@@ -166,6 +159,7 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
+      [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
   closeButtonIcon: ({ palette }: Theme) =>

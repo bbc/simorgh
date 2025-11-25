@@ -46,6 +46,7 @@ const PromotionalBanner = ({
               as="button"
               type="button"
               css={styles.primaryButton}
+              className="focusIndicatorInvert"
               onClick={primaryButton?.onClick}
               aria-label={
                 isPrimaryLongText ? primaryButton.longText : primaryButton?.text
@@ -62,6 +63,7 @@ const PromotionalBanner = ({
               as="button"
               type="button"
               css={styles.secondaryButton}
+              className="focusIndicatorInvert"
               onClick={secondaryButton?.onClick}
               aria-label={secondaryButton.text}
             >
@@ -76,6 +78,7 @@ const PromotionalBanner = ({
                 type="button"
                 aria-label="close"
                 css={styles.closeButton}
+                className="focusIndicatorInvert"
                 onClick={handleClose}
               />
               <Close css={styles.closeButtonIcon} />
