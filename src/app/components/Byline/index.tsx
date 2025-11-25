@@ -140,7 +140,10 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   {jobRole}
                 </Text>
               </span>
-              {location && <Comma />}
+              {(location && <Comma />) ||
+                (areMultipleContributors && index !== lastContributorIndex && (
+                  <Comma />
+                ))}
             </li>
             {location ? (
               <li css={BylineCss.displayInline}>
