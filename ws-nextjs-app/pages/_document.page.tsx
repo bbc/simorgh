@@ -85,6 +85,8 @@ const handleServerLogging = ({
   }
 };
 
+const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
+
 const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
   ctx.res?.setHeader(
     'req-svc-chain',
@@ -94,7 +96,13 @@ const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
     }),
   );
 
-  if (process.env.NODE_ENV === 'production') {
+  const hostname = ctx.req?.headers.host || '';
+
+  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
+
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+
+  if (PRODUCTION_ONLY) {
     await cspHeaderResponseForNextDocumentContext({ ctx });
   }
 };
