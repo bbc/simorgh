@@ -6,7 +6,8 @@ import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
+import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import withOptimizelyProvider, {
   REFERRER_CATEGORIES,
@@ -41,19 +42,16 @@ const TestComponent = ({ country }: { country?: string }) => {
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
-  );
+  ) as ServiceConfig;
 
-  const memoizedRequestContextValue = useMemo(() => ({ country }), [country]);
+  const memoizedRequestContextValue = useMemo(
+    () => ({ country }),
+    [country],
+  ) as RequestContextProps;
 
   return (
-    <ServiceContext.Provider
-      // @ts-expect-error - passing partial ServiceContext
-      value={memoizedServiceContextValue}
-    >
-      <RequestContext.Provider
-        // @ts-expect-error - passing partial RequestContext
-        value={memoizedRequestContextValue}
-      >
+    <ServiceContext.Provider value={memoizedServiceContextValue}>
+      <RequestContext.Provider value={memoizedRequestContextValue}>
         <OptimizelyComponent {...props} />
       </RequestContext.Provider>
     </ServiceContext.Provider>
