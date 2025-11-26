@@ -4,31 +4,30 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   banner: ({ mq, spacings, palette }: Theme) =>
     css({
-      position: 'relative',
       margin: '0 auto',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      padding: `${spacings.TRIPLE}rem`,
-      paddingRight: `${spacings.SEXTUPLE}rem`,
       width: '100%',
-      [mq.GROUP_1_MAX_WIDTH]: {
-        paddingLeft: `${spacings.FULL}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
     }),
 
   innerContainer: () =>
     css({
       width: '100%',
-      padding: 0,
-
+      position: 'relative',
       maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
-  content: () =>
+  content: ({ mq, spacings }) =>
     css({
+      padding: `${spacings.TRIPLE}rem`,
+      paddingRight: `${spacings.SEXTUPLE}rem`,
+      [mq.GROUP_1_MAX_WIDTH]: {
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
+      },
+
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
