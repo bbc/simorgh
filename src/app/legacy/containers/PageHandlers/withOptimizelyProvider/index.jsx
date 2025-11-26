@@ -41,8 +41,48 @@ const isMobile = () => {
 };
 
 const getReferrer = () => {
+  const DIRECT_DOMAINS = ['bbc.com'];
+
+  const SEARCH_DOMAINS = [
+    'google',
+    'bing',
+    'msn',
+    'yahoo',
+    'duckduckgo',
+    'yandex',
+    'ecosia',
+  ];
+
+  const SOCIAL_DOMAINS = [
+    'facebook',
+    'instagram',
+    't.co',
+    'youtube',
+    'threads',
+    'linkin',
+  ];
+
+  const SOCIAL_AT_PARAM_VALUES = ['social', 'social_flow', 'ws_whatsapp'];
+
   if (onClient()) {
-    // TODO: Will be implemented in https://bbc.atlassian.net/browse/WS-947
+    const referrer = document?.referrer?.toLowerCase();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
+
+    if (SEARCH_DOMAINS.some(domain => referrer.includes(domain)))
+      return 'search';
+
+    if (SOCIAL_DOMAINS.some(domain => referrer.includes(domain)))
+      return 'social';
+
+    if (atParam && SOCIAL_AT_PARAM_VALUES.includes(atParam.toLowerCase()))
+      return 'social';
+
+    if (DIRECT_DOMAINS.some(domain => referrer.includes(domain)))
+      return 'direct';
+
+    if (!referrer) return 'direct';
   }
 
   return null;
