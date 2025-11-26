@@ -66,8 +66,7 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
 
       if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
-      const contributorBlock = blocks?.[0] ?? [];
-      const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
+      const authorTopicUrl = contribBlock?.model?.topicUrl ?? '';
 
       return {
         authorName,
