@@ -40,30 +40,30 @@ const isMobile = () => {
   return null;
 };
 
+export const DIRECT_DOMAINS = ['bbc.com'];
+
+export const SEARCH_DOMAINS = [
+  'google',
+  'bing',
+  'msn',
+  'yahoo',
+  'duckduckgo',
+  'yandex',
+  'ecosia',
+];
+
+export const SOCIAL_DOMAINS = [
+  'facebook',
+  'instagram',
+  't.co',
+  'youtube',
+  'threads',
+  'linkin',
+];
+
+export const SOCIAL_AT_PARAM_VALUES = ['social', 'social_flow', 'ws_whatsapp'];
+
 const getReferrer = () => {
-  const DIRECT_DOMAINS = ['bbc.com'];
-
-  const SEARCH_DOMAINS = [
-    'google',
-    'bing',
-    'msn',
-    'yahoo',
-    'duckduckgo',
-    'yandex',
-    'ecosia',
-  ];
-
-  const SOCIAL_DOMAINS = [
-    'facebook',
-    'instagram',
-    't.co',
-    'youtube',
-    'threads',
-    'linkin',
-  ];
-
-  const SOCIAL_AT_PARAM_VALUES = ['social', 'social_flow', 'ws_whatsapp'];
-
   if (onClient()) {
     const referrer = document?.referrer?.toLowerCase();
 
