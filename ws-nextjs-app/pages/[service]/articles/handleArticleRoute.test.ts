@@ -43,7 +43,7 @@ describe('handleArticleRoute', () => {
   it('returns correct cache-control header if article is older than six hours', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 2673964957894);
 
-    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    await handleArticleRoute(mockGetServerSidePropsContext);
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
@@ -54,7 +54,7 @@ describe('handleArticleRoute', () => {
   it('returns correct cache-control header if article is not older than six hours', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1673964987894);
 
-    const result = await handleArticleRoute(mockGetServerSidePropsContext);
+    await handleArticleRoute(mockGetServerSidePropsContext);
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
