@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { use } from 'react';
 import { jsx } from '@emotion/react';
 import type { PromotionalBannerProps } from './index.types';
 import styles from './index.styles';
@@ -6,6 +7,7 @@ import { Close } from '../icons';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const PromotionalBanner = ({
   title,
@@ -17,6 +19,9 @@ const PromotionalBanner = ({
   handleClose,
   bannerAriaLabel,
 }: PromotionalBannerProps) => {
+  const { dir } = use(ServiceContext);
+  const isRtl = dir === 'rtl';
+
   return (
     <aside
       css={styles.banner}
@@ -83,7 +88,10 @@ const PromotionalBanner = ({
             as="button"
             type="button"
             aria-label="close"
-            css={styles.closeButton}
+            css={[
+              styles.closeButton,
+              isRtl ? styles.closeButtonRtl : styles.closeButtonLtr,
+            ]}
             onClick={handleClose}
           >
             <Close css={styles.closeButtonIcon} />

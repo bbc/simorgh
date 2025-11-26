@@ -19,19 +19,21 @@ const styles = {
       maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
-  content: ({ mq, spacings }) =>
+  content: ({ spacings, mq }) =>
     css({
-      padding: `${spacings.TRIPLE}rem`,
-      paddingRight: `${spacings.SEXTUPLE}rem`,
-      paddingBottom: `${spacings.DOUBLE}rem`,
-      [mq.GROUP_1_MAX_WIDTH]: {
-        paddingLeft: `${spacings.FULL}rem`,
-      },
-
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       width: '100%',
+
+      paddingTop: `${spacings.TRIPLE}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingInlineStart: `${spacings.FULL}rem`,
+      paddingInlineEnd: `${pixelsToRem(52)}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+      },
     }),
 
   textContainer: () =>
@@ -59,7 +61,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      gap: `${pixelsToRem(8)}rem`,
+      gap: `${spacings.FULL}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
       flexWrap: 'wrap',
       [mq.GROUP_1_MAX_WIDTH]: {
@@ -122,7 +124,6 @@ const styles = {
     css({
       position: 'absolute',
       top: 0,
-      right: 0,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -139,6 +140,16 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
+    }),
+
+  closeButtonLtr: () =>
+    css({
+      right: 0,
+    }),
+
+  closeButtonRtl: () =>
+    css({
+      left: 0,
     }),
 
   closeButtonIcon: ({ mq, palette }: Theme) =>
