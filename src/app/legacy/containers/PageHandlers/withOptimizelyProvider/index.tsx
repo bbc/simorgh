@@ -18,17 +18,9 @@ const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
 const disableOptimizely = isStoryBook || isInCypress;
 
-const TIMEOUT_INTERVAL = 1000;
-
 if (isLive() || isInCypress) {
   setLogger(null);
 }
-
-const optimizely = createInstance({
-  sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
-  eventBatchSize: 10,
-  eventFlushInterval: 1000,
-});
 
 const getUserId = () => {
   if (disableOptimizely || !onClient() || isOperaProxy()) return null;
@@ -104,6 +96,12 @@ const isCountryKnown = (country?: string | null) => {
   return COUNTRY_CODES_TO_EXPERIMENT.includes(country.toLowerCase());
 };
 
+const optimizely = createInstance({
+  sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
+  eventBatchSize: 10,
+  eventFlushInterval: 1000,
+});
+
 const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
   return props => {
     if (disableOptimizely) return <Component {...props} />;
@@ -111,23 +109,18 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
     const { service } = use(ServiceContext);
     const { country } = use(RequestContext);
 
-    const id = getUserId();
-    const mobile = isMobile();
-    const referrer = getReferrer();
-    const countryKnown = isCountryKnown(country);
-
     return (
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={TIMEOUT_INTERVAL}
+        timeout={1000}
         user={{
-          id,
+          id: getUserId(),
           attributes: {
             service,
-            mobile,
-            referrer,
-            countryKnown,
+            mobile: isMobile(),
+            referrer: getReferrer(),
+            countryKnown: isCountryKnown(country),
           },
         }}
       >
