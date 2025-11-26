@@ -124,6 +124,7 @@ const styles = {
     css({
       position: 'absolute',
       top: 0,
+      insetInlineEnd: `${pixelsToRem(44)}rem`,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -140,16 +141,6 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
-    }),
-
-  closeButtonLtr: () =>
-    css({
-      right: 0,
-    }),
-
-  closeButtonRtl: () =>
-    css({
-      left: 0,
     }),
 
   closeButtonIcon: ({ mq, palette }: Theme) =>
