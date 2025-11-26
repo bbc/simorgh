@@ -256,6 +256,14 @@ describe('withOptimizelyProvider HOC', () => {
       },
     );
 
+    it('should set countryKnown to false when the country code is not in defined list', () => {
+      render(<TestComponent country="fakecode" />);
+
+      expect(
+        optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+      ).toBe(false);
+    });
+
     it('should set countryKnown to false when the country code is unknown', () => {
       render(<TestComponent />);
 
