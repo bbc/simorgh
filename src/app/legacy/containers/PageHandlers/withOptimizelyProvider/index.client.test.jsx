@@ -216,23 +216,23 @@ describe('withOptimizelyProvider HOC', () => {
         optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
       ).toBe('direct');
     });
-  });
 
-  it('should set referrer to null when no conditions are met', () => {
-    Object.defineProperty(document, 'referrer', {
-      value: 'https://www.unknownsource.com',
-      writable: true,
+    it('should set referrer to null when no conditions are met', () => {
+      Object.defineProperty(document, 'referrer', {
+        value: 'https://www.unknownsource.com',
+        writable: true,
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { search: '' },
+        writable: true,
+      });
+
+      render(<TestComponent />);
+
+      expect(
+        optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+      ).toBeNull();
     });
-
-    Object.defineProperty(window, 'location', {
-      value: { search: '' },
-      writable: true,
-    });
-
-    render(<TestComponent />);
-
-    expect(
-      optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
-    ).toBeNull();
   });
 });
