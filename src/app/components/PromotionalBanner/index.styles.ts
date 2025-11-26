@@ -105,7 +105,7 @@ const styles = {
       },
     }),
 
-  closeButton: ({ mq, palette }: Theme) =>
+  closeButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       top: 0,
@@ -126,10 +126,9 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
-      [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
-  closeButtonIcon: ({ palette }: Theme) =>
+  closeButtonIcon: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
       color: palette.WHITE,
@@ -137,6 +136,11 @@ const styles = {
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
       pointerEvents: 'none',
+      [mq.FORCED_COLOURS]: {
+        forcedColorAdjust: 'none',
+        color: 'ButtonText',
+        fill: 'ButtonText',
+      },
     }),
 };
 
