@@ -12,7 +12,7 @@ const styles = {
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
       padding: `${spacings.TRIPLE}rem`,
       width: '100%',
-      [mq.GROUP_0_MAX_WIDTH]: {
+      [mq.GROUP_1_MAX_WIDTH]: {
         paddingLeft: `${spacings.FULL}rem`,
         paddingRight: `${spacings.FULL}rem`,
         paddingBottom: `${spacings.DOUBLE}rem`,
