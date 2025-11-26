@@ -10,10 +10,14 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/brea
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
+const isStoryBook = process.env.STORYBOOK;
+const disableOptimizely = isStoryBook || isInCypress;
+
 const TIMEOUT_INTERVAL = 1000;
 
 if (isLive() || isInCypress) {
@@ -25,6 +29,12 @@ const optimizely = createInstance({
   eventBatchSize: 10,
   eventFlushInterval: 1000,
 });
+
+const getUserId = () => {
+  if (disableOptimizely || !onClient() || isOperaProxy()) return null;
+
+  return Cookie.get('ckns_mvt') ?? null;
+};
 
 const isMobile = () => {
   if (onClient()) {
@@ -72,22 +82,25 @@ const getReferrer = () => {
   return null;
 };
 
+const isCountryKnown = country => {
+  if (!country) return false;
+
+  const knownCountries = ['es', 'mx'];
+
+  return knownCountries.includes(country.toLowerCase());
+};
+
 const withOptimizelyProvider = Component => {
   return props => {
     const { service } = use(ServiceContext);
-    const isStoryBook = process.env.STORYBOOK;
-    const disableOptimizely = isStoryBook || isInCypress;
+    const { country } = use(RequestContext);
 
     if (disableOptimizely) return <Component {...props} />;
 
+    const id = getUserId();
     const mobile = isMobile();
     const referrer = getReferrer();
-
-    const getUserId = () => {
-      if (disableOptimizely || !onClient() || isOperaProxy()) return null;
-
-      return Cookie.get('ckns_mvt') ?? null;
-    };
+    const countryKnown = isCountryKnown(country);
 
     return (
       <OptimizelyProvider
@@ -95,11 +108,12 @@ const withOptimizelyProvider = Component => {
         isServerSide
         timeout={TIMEOUT_INTERVAL}
         user={{
-          id: getUserId(),
+          id,
           attributes: {
             service,
             mobile,
             referrer,
+            countryKnown,
           },
         }}
       >
