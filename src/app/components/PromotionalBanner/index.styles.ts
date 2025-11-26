@@ -70,7 +70,7 @@ const styles = {
       },
     }),
 
-  primaryButton: ({ spacings, palette }: Theme) =>
+  primaryButton: ({ mq, spacings, palette }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -83,6 +83,20 @@ const styles = {
       '&:focus, &:hover': {
         color: palette.BLACK,
         textDecoration: 'underline',
+      },
+
+      '& .short-text': {
+        display: 'inline',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'none',
+        },
+      },
+
+      '& .long-text': {
+        display: 'none',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'inline',
+        },
       },
     }),
 
