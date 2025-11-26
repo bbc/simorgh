@@ -229,7 +229,6 @@ describe('Article Page', () => {
     });
   });
 
-  // to do - delete?
   it('should use the twitter handle where present in the byline block', async () => {
     render(
       <Context service="pidgin">

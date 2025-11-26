@@ -53,7 +53,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             role="list"
             key={authorName}
           >
-            {/* temporary check for isSingleContributor - this will be cleaned by BFF */}
+            {/* to - remove this check for isSingleContributor since this will be stripped out by BFF */}
             {authorImage && isSingleContributor && (
               <li
                 css={[

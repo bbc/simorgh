@@ -78,7 +78,6 @@ export const rawVideoModel = (
 });
 
 export const bylineBlock = (bylineType, text, id = null) => {
-  // to do in this or follow up PR - remove this twitter stuff
   const fragment = singleFragmentBlock(`@${text}`, id);
   const urlLink = optionalIdBlock(
     blockBase('urlLink', {
@@ -126,7 +125,6 @@ export const bylineBlock = (bylineType, text, id = null) => {
   return byline;
 };
 
-// to do - write test?
 export const timestampBlock = (id = null) =>
   optionalIdBlock(
     blockBase('timestamp', {
