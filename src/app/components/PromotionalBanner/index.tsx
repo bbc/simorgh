@@ -83,10 +83,7 @@ const PromotionalBanner = ({
             as="button"
             type="button"
             aria-label="close"
-            css={[
-              styles.closeButton,
-              // styles.closeButtonLtr,
-            ]}
+            css={styles.closeButton}
             onClick={handleClose}
           >
             <Close css={styles.closeButtonIcon} />
