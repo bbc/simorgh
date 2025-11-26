@@ -38,6 +38,8 @@ import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
+import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
+import { cspHeaderResponseForNextDocumentContext } from '#nextjs/utilities/cspHeaderResponse';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -83,6 +85,20 @@ const handleServerLogging = ({
   }
 };
 
+const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
+  ctx.res?.setHeader(
+    'req-svc-chain',
+    addPlatformToRequestChainHeader({
+      // TODO: Fix type casting
+      headers: ctx.req?.headers as unknown as Headers,
+    }),
+  );
+
+  if (process.env.NODE_ENV === 'production') {
+    await cspHeaderResponseForNextDocumentContext({ ctx });
+  }
+};
+
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
   css: string;
@@ -102,6 +118,8 @@ export default class AppDocument extends Document<DocProps> {
     const pageType = derivePageType(url);
 
     const { isApp, isAmp, isLite } = getPathExtension(url);
+
+    await addServiceChainAndCspHeaders(ctx);
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);

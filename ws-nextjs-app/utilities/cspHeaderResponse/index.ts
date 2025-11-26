@@ -6,6 +6,7 @@ import isLiveEnv from '#lib/utilities/isLive';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { Services } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
+import { DocumentContext } from 'next/document';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -57,6 +58,75 @@ const isRelaxedCspEnabled = (
 const isValidService = (str: string) => {
   const [service] = str.split('/').filter(Boolean) as [Services?];
   return service && SERVICES.includes(service);
+};
+
+export const cspHeaderResponseForNextDocumentContext = async ({
+  ctx,
+}: {
+  ctx: DocumentContext;
+}) => {
+  const { isAmp } = getPathExtension(ctx.req?.url || '');
+  const isLive = isLiveEnv();
+  const urlPath = ctx.req?.url || '';
+  let hasAdsScripts = false;
+  let countryList = '';
+
+  if (isValidService(urlPath)) {
+    const service = fallbackServiceParam(ctx.req?.url || '');
+    const toggles = await getToggles(service);
+
+    ({ enabled: hasAdsScripts, value: countryList = '' } =
+      toggles?.adsNonce || { enabled: false, value: '' });
+  }
+
+  const country =
+    ctx?.req?.headers?.['x-country'] ||
+    ctx?.req?.headers?.['x-bbc-edge-country'];
+
+  const shouldServeRelaxedCsp =
+    hasAdsScripts &&
+    isRelaxedCspEnabled(countryList, (country as string) || '');
+
+  const { directives } = cspDirectives({
+    isAmp,
+    isLive,
+    shouldServeRelaxedCsp,
+  });
+
+  const BUMP4SpecificConditions = {
+    'media-src': ['https:', 'blob:'],
+    'connect-src': ['https:'],
+  };
+
+  const contentSecurityPolicyHeaderValue = directiveToString({
+    ...directives,
+    ...BUMP4SpecificConditions,
+  });
+
+  ctx.res?.setHeader(
+    'Content-Security-Policy',
+    contentSecurityPolicyHeaderValue,
+  );
+
+  ctx.res?.setHeader(
+    'report-to',
+    JSON.stringify({
+      group: 'worldsvc',
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
+
+  ctx.res?.setHeader(
+    'Content-Security-Policy',
+    contentSecurityPolicyHeaderValue,
+  );
 };
 
 const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
