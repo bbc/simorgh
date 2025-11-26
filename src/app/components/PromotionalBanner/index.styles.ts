@@ -19,13 +19,12 @@ const styles = {
       },
     }),
 
-  innerContainer: ({ mq }) =>
+  innerContainer: () =>
     css({
       width: '100%',
       padding: 0,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: `${pixelsToRem(1008)}rem`,
-      },
+
+      maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
   content: () =>
@@ -41,11 +40,10 @@ const styles = {
       display: 'flex',
       flexDirection: 'column',
     }),
-  title: ({ spacings, palette }: Theme) =>
+  title: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
       margin: 0,
-      marginRight: `${spacings.QUADRUPLE}rem`,
     }),
 
   description: ({ spacings, mq, palette }: Theme) =>
@@ -110,8 +108,8 @@ const styles = {
   closeButton: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-24)}rem`,
-      right: `${pixelsToRem(-8)}rem`,
+      top: 0,
+      right: 0,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -119,8 +117,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      width: `${pixelsToRem(38)}rem`,
-      height: `${pixelsToRem(36)}rem`,
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       color: palette.WHITE,
       '&:hover, &:focus': {
         outlineOffset: `${pixelsToRem(2)}rem`,
@@ -128,24 +126,16 @@ const styles = {
         fill: palette.WHITE,
         color: palette.WHITE,
       },
-      [mq.GROUP_1_MIN_WIDTH]: {
-        right: `${pixelsToRem(-24)}rem`,
-      },
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
-  closeButtonIcon: ({ mq, palette }: Theme) =>
+  closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-12)}rem`,
-      right: `${pixelsToRem(4)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        right: `${pixelsToRem(-12)}rem`,
-      },
       pointerEvents: 'none',
     }),
 };

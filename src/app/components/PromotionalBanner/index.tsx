@@ -87,22 +87,20 @@ const PromotionalBanner = ({
               {secondaryButton.text}
             </Text>
           </div>
-
-          {isDismissible && (
-            <div>
-              <Text
-                as="button"
-                type="button"
-                aria-label="close"
-                css={styles.closeButton}
-                className="focusIndicatorInvert"
-                onClick={handleClose}
-              />
-              <Close css={styles.closeButtonIcon} />
-            </div>
-          )}
         </div>
       </div>
+      {isDismissible && (
+        <Text
+          as="button"
+          type="button"
+          aria-label="close"
+          css={styles.closeButton}
+          className="focusIndicatorInvert"
+          onClick={handleClose}
+        >
+          <Close css={styles.closeButtonIcon} />
+        </Text>
+      )}
     </aside>
   );
 };
