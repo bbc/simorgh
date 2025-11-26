@@ -91,7 +91,6 @@ const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({
-      // TODO: Fix type casting
       headers: ctx.req?.headers as unknown as Headers,
     }),
   );
