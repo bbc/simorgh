@@ -50,8 +50,8 @@ export default {
       margin: `0 ${spacings.HALF}rem`,
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       fill: 'currentcolor',
-      width: `${spacings.FULL + spacings.HALF}rem`,
-      height: `${spacings.FULL + spacings.HALF}rem`,
+      width: `${pixelsToRem(10)}rem`,
+      height: `${pixelsToRem(10)}rem`,
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
@@ -97,6 +97,9 @@ export default {
       '&:focus, &:hover': {
         '.byline-link': {
           textDecoration: 'underline',
+          textDecorationColor: 'currentcolor',
+          textDecorationThickness: `${pixelsToRem(2)}rem`,
+          textUnderlineOffset: `${pixelsToRem(4)}rem`,
         },
       },
     }),
