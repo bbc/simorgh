@@ -18,6 +18,7 @@ const PromotionalBanner = ({
   primaryButton,
   secondaryButton,
   handleClose,
+  bannerAriaLabel,
 }: PromotionalBannerProps) => {
   const [isPrimaryLongText, setIsPrimaryLongText] = useState(false);
 
@@ -32,7 +33,7 @@ const PromotionalBanner = ({
     <aside
       css={styles.banner}
       role="complementary"
-      aria-label="Promotional Banner"
+      aria-label={bannerAriaLabel}
     >
       <div css={styles.innerContainer}>
         <div css={styles.content}>
