@@ -47,7 +47,7 @@ const isMobile = () => {
     return false;
   }
 
-  return null;
+  return false;
 };
 
 export const REFERRER_CATEGORIES = {
@@ -70,7 +70,10 @@ const getReferrer = () => {
     if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
       return 'social';
 
-    if (REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam?.toLowerCase()))
+    if (
+      atParam &&
+      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
+    )
       return 'social';
 
     if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))

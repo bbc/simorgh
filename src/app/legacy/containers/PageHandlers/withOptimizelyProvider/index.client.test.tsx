@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
+import { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
@@ -33,7 +35,7 @@ const optimizelyProviderSpy = jest.spyOn(
 
 const Component = () => <h1>Hola Optimizely</h1>;
 
-const TestComponent = ({ country }) => {
+const TestComponent = ({ country }: { country?: string }) => {
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
   const memoizedServiceContextValue = useMemo(
@@ -44,8 +46,14 @@ const TestComponent = ({ country }) => {
   const memoizedRequestContextValue = useMemo(() => ({ country }), [country]);
 
   return (
-    <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <RequestContext.Provider value={memoizedRequestContextValue}>
+    <ServiceContext.Provider
+      // @ts-expect-error - passing partial ServiceContext
+      value={memoizedServiceContextValue}
+    >
+      <RequestContext.Provider
+        // @ts-expect-error - passing partial RequestContext
+        value={memoizedRequestContextValue}
+      >
         <OptimizelyComponent {...props} />
       </RequestContext.Provider>
     </ServiceContext.Provider>
@@ -102,7 +110,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.mobile,
       ).toBe(true);
     });
 
@@ -114,7 +123,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.mobile,
       ).toBe(false);
     });
   });
@@ -143,7 +153,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('search');
       },
     );
@@ -159,7 +170,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -175,7 +187,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('direct');
       },
     );
@@ -191,7 +204,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -207,7 +221,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -221,7 +236,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.referrer,
       ).toBe('direct');
     });
 
@@ -239,7 +255,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.referrer,
       ).toBeNull();
     });
   });
@@ -251,7 +268,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent country={countryCode} />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.countryKnown,
         ).toBe(true);
       },
     );
@@ -260,7 +278,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent country="fakecode" />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.countryKnown,
       ).toBe(false);
     });
 
@@ -268,7 +287,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.countryKnown,
       ).toBe(false);
     });
   });
