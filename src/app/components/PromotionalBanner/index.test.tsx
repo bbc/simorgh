@@ -7,21 +7,6 @@ import {
 import PromotionalBanner from '.';
 
 describe('PromotionalBanner', () => {
-  beforeAll(() => {
-    window.matchMedia = jest.fn().mockImplementation(query => {
-      return {
-        matches: false, // force SHORT TEXT
-        media: query,
-        onchange: null,
-        addEventListener: jest.fn(),
-        removeEventListener: jest.fn(),
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-        dispatchEvent: jest.fn(),
-      };
-    });
-  });
-
   const defaultProps = {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
@@ -36,6 +21,7 @@ describe('PromotionalBanner', () => {
       text: 'Not now',
       onClick: jest.fn(),
     },
+    bannerAriaLabel: 'Promotional Banner',
     handleClose: jest.fn(),
   };
 
@@ -69,11 +55,6 @@ describe('PromotionalBanner', () => {
   });
 
   it('sets correct aria-label for primary button (longText)', () => {
-    window.matchMedia = jest.fn().mockImplementation(() => ({
-      matches: true, // force LONG TEXT
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    }));
     const props = {
       ...defaultProps,
       primaryButton: {
