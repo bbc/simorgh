@@ -63,7 +63,6 @@ const styles = {
       marginTop: `${spacings.DOUBLE}rem`,
       flexWrap: 'wrap',
       [mq.GROUP_1_MAX_WIDTH]: {
-        marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
       },
     }),
