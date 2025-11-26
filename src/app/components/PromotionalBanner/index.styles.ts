@@ -124,7 +124,7 @@ const styles = {
     css({
       position: 'absolute',
       top: 0,
-      insetInlineEnd: `${pixelsToRem(44)}rem`,
+      insetInlineEnd: 0,
       border: 'none',
       background: 'transparent',
       padding: 0,
