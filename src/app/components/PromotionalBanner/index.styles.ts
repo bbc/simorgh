@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  banner: ({ mq, spacings, palette }: Theme) =>
+  banner: ({ palette }: Theme) =>
     css({
       margin: '0 auto',
       display: 'flex',
@@ -19,19 +19,21 @@ const styles = {
       maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
-  content: ({ mq, spacings }) =>
+  content: ({ spacings, mq }) =>
     css({
-      padding: `${spacings.TRIPLE}rem`,
-      paddingRight: `${spacings.SEXTUPLE}rem`,
-      [mq.GROUP_1_MAX_WIDTH]: {
-        paddingLeft: `${spacings.FULL}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
-      },
-
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       width: '100%',
+
+      paddingTop: `${spacings.TRIPLE}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingInlineStart: `${spacings.FULL}rem`,
+      paddingInlineEnd: `${pixelsToRem(52)}rem`,
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        paddingInlineStart: `${spacings.DOUBLE}rem`,
+      },
     }),
 
   textContainer: () =>
@@ -59,15 +61,16 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      gap: `${pixelsToRem(8)}rem`,
+      gap: `${spacings.FULL}rem`,
       marginTop: `${spacings.DOUBLE}rem`,
+      flexWrap: 'wrap',
       [mq.GROUP_1_MAX_WIDTH]: {
         marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
       },
     }),
 
-  primaryButton: ({ spacings, palette }: Theme) =>
+  primaryButton: ({ mq, spacings, palette }: Theme) =>
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
@@ -80,6 +83,20 @@ const styles = {
       '&:focus, &:hover': {
         color: palette.BLACK,
         textDecoration: 'underline',
+      },
+
+      '& .short-text': {
+        display: 'inline',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'none',
+        },
+      },
+
+      '& .long-text': {
+        display: 'none',
+        [mq.GROUP_2_MIN_WIDTH]: {
+          display: 'inline',
+        },
       },
     }),
 

@@ -12,4 +12,5 @@ export interface PromotionalBannerProps {
   secondaryButton: PromotionalBannerButton;
   isDismissible?: boolean;
   handleClose?: () => void;
+  bannerAriaLabel: string;
 }

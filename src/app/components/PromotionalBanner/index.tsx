@@ -1,14 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useState } from 'react';
-import { GROUP_2_MIN_WIDTH_BP } from '../ThemeProvider/mediaQueries';
 import type { PromotionalBannerProps } from './index.types';
 import styles from './index.styles';
 import { Close } from '../icons';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
-import useMediaQuery from '../../hooks/useMediaQuery';
 
 const PromotionalBanner = ({
   title,
@@ -18,21 +15,13 @@ const PromotionalBanner = ({
   primaryButton,
   secondaryButton,
   handleClose,
+  bannerAriaLabel,
 }: PromotionalBannerProps) => {
-  const [isPrimaryLongText, setIsPrimaryLongText] = useState(false);
-
-  useMediaQuery(
-    `(min-width: ${GROUP_2_MIN_WIDTH_BP}rem)`,
-    (event: { matches: boolean | ((prevState: boolean) => boolean) }) => {
-      setIsPrimaryLongText(event.matches);
-    },
-  );
-
   return (
     <aside
       css={styles.banner}
       role="complementary"
-      aria-label="Promotional Banner"
+      aria-label={bannerAriaLabel}
     >
       <div css={styles.innerContainer}>
         <div css={styles.content}>
@@ -63,11 +52,12 @@ const PromotionalBanner = ({
               onClick={primaryButton?.onClick}
               size="bodyCopy"
               fontVariant="sansBold"
-              aria-label={
-                isPrimaryLongText ? primaryButton.longText : primaryButton?.text
-              }
+              aria-label={primaryButton.text || primaryButton.longText}
             >
-              {isPrimaryLongText ? primaryButton.longText : primaryButton?.text}
+              <span className="short-text">{primaryButton.text}</span>
+              {primaryButton.longText && (
+                <span className="long-text">{primaryButton.longText}</span>
+              )}
             </Text>
 
             <Text as="span" size="bodyCopy" css={styles.dividerText}>
