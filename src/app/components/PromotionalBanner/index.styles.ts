@@ -10,54 +10,48 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       background: `linear-gradient(to bottom left, ${palette.POSTBOX} 0%, ${palette.BLACK} 50%, ${palette.POSTBOX} 100%)`,
-      padding: `${spacings.DOUBLE}rem`,
+      padding: `${spacings.TRIPLE}rem`,
+      paddingRight: `${spacings.SEXTUPLE}rem`,
       width: '100%',
-      [mq.GROUP_0_MAX_WIDTH]: {
-        minWidth: 'auto',
-      },
-      [mq.GROUP_1_MIN_WIDTH]: {
-        minWidth: 'auto',
+      [mq.GROUP_1_MAX_WIDTH]: {
+        paddingLeft: `${spacings.FULL}rem`,
+        paddingBottom: `${spacings.DOUBLE}rem`,
       },
     }),
 
-  innerContainer: ({ mq }) =>
+  innerContainer: () =>
     css({
       width: '100%',
       padding: 0,
-      [mq.GROUP_4_MIN_WIDTH]: {
-        maxWidth: `${pixelsToRem(1008)}rem`,
-      },
+
+      maxWidth: `${pixelsToRem(1008)}rem`,
     }),
 
-  content: ({ spacings }: Theme) =>
+  content: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
       position: 'relative',
       width: '100%',
-      gap: `${spacings.FULL}rem`,
     }),
 
-  textContainer: ({ spacings }: Theme) =>
+  textContainer: () =>
     css({
       display: 'flex',
       flexDirection: 'column',
-      marginRight: `${spacings.SEXTUPLE}rem`,
     }),
-  title: ({ spacings, palette }: Theme) =>
+  title: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
       margin: 0,
-      marginRight: `${spacings.QUADRUPLE}rem`,
     }),
 
   description: ({ spacings, mq, palette }: Theme) =>
     css({
       color: palette.GREY_2,
       marginTop: `${spacings.FULL}rem`,
-      display: 'none',
-      [mq.GROUP_2_MIN_WIDTH]: {
-        display: 'block',
+      [mq.GROUP_0_MAX_WIDTH]: {
+        display: 'none',
       },
     }),
 
@@ -71,8 +65,6 @@ const styles = {
       [mq.GROUP_1_MAX_WIDTH]: {
         marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
-        width: `${pixelsToRem(172)}rem`,
-        height: `${spacings.FULL}rem`,
       },
     }),
 
@@ -87,7 +79,6 @@ const styles = {
       whiteSpace: 'nowrap',
       position: 'relative',
       '&:focus, &:hover': {
-        backgroundColor: palette.WHITE,
         color: palette.BLACK,
         textDecoration: 'underline',
       },
@@ -98,7 +89,7 @@ const styles = {
       color: palette.WHITE,
     }),
 
-  secondaryButton: ({ mq, spacings, palette }: Theme) =>
+  secondaryButton: ({ spacings, palette }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: 'transparent',
@@ -108,9 +99,6 @@ const styles = {
       padding: `${spacings.HALF}rem`,
       cursor: 'pointer',
       whiteSpace: 'nowrap',
-      [mq.GROUP_1_MAX_WIDTH]: {
-        padding: 0,
-      },
       '&:focus, &:hover': {
         backgroundColor: palette.WHITE,
         color: palette.BLACK,
@@ -120,8 +108,8 @@ const styles = {
   closeButton: ({ mq, palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-16)}rem`,
-      right: `${pixelsToRem(-16)}rem`,
+      top: 0,
+      right: 0,
       border: 'none',
       background: 'transparent',
       padding: 0,
@@ -144,12 +132,10 @@ const styles = {
   closeButtonIcon: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      top: `${pixelsToRem(-3)}rem`,
-      right: `${pixelsToRem(-3)}rem`,
       color: palette.WHITE,
       fill: 'currentColor',
-      width: `${pixelsToRem(18)}rem`,
-      height: `${pixelsToRem(18)}rem`,
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
       pointerEvents: 'none',
     }),
 };
