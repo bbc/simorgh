@@ -5,12 +5,7 @@ import Cookie from 'js-cookie';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
-import withOptimizelyProvider, {
-  DIRECT_DOMAINS,
-  SEARCH_DOMAINS,
-  SOCIAL_DOMAINS,
-  SOCIAL_AT_PARAM_VALUES,
-} from '.';
+import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -129,7 +124,7 @@ describe('withOptimizelyProvider HOC', () => {
       });
     });
 
-    it.each(SEARCH_DOMAINS)(
+    it.each(REFERRER_CATEGORIES.SEARCH)(
       'should set referrer to "search" when the document.referrer contains %s',
       domain => {
         Object.defineProperty(document, 'referrer', {
@@ -145,7 +140,7 @@ describe('withOptimizelyProvider HOC', () => {
       },
     );
 
-    it.each(SOCIAL_DOMAINS)(
+    it.each(REFERRER_CATEGORIES.SOCIAL)(
       'should set referrer to "social" when the document.referrer contains %s',
       domain => {
         Object.defineProperty(document, 'referrer', {
@@ -161,7 +156,7 @@ describe('withOptimizelyProvider HOC', () => {
       },
     );
 
-    it.each(DIRECT_DOMAINS)(
+    it.each(REFERRER_CATEGORIES.DIRECT)(
       'should set referrer to "direct" when the document.referrer contains %s',
       domain => {
         Object.defineProperty(document, 'referrer', {
@@ -177,7 +172,7 @@ describe('withOptimizelyProvider HOC', () => {
       },
     );
 
-    it.each(SOCIAL_AT_PARAM_VALUES)(
+    it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
       'should set referrer to "social" when the at_campaign URL parameter is %s',
       atParamValue => {
         Object.defineProperty(window, 'location', {
@@ -193,7 +188,7 @@ describe('withOptimizelyProvider HOC', () => {
       },
     );
 
-    it.each(SOCIAL_AT_PARAM_VALUES)(
+    it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
       'should set referrer to "social" when the at_medium URL parameter is %s',
       atParamValue => {
         Object.defineProperty(window, 'location', {

@@ -40,28 +40,12 @@ const isMobile = () => {
   return null;
 };
 
-export const DIRECT_DOMAINS = ['bbc.com'];
-
-export const SEARCH_DOMAINS = [
-  'google',
-  'bing',
-  'msn',
-  'yahoo',
-  'duckduckgo',
-  'yandex',
-  'ecosia',
-];
-
-export const SOCIAL_DOMAINS = [
-  'facebook',
-  'instagram',
-  't.co',
-  'youtube',
-  'threads',
-  'linkin',
-];
-
-export const SOCIAL_AT_PARAM_VALUES = ['social', 'social_flow', 'ws_whatsapp'];
+export const REFERRER_CATEGORIES = {
+  DIRECT: ['bbc.com'],
+  SEARCH: ['google', 'bing', 'msn', 'yahoo', 'duckduckgo', 'yandex', 'ecosia'],
+  SOCIAL: ['facebook', 'instagram', 't.co', 'youtube', 'threads', 'linkin'],
+  AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
+};
 
 const getReferrer = () => {
   if (onClient()) {
@@ -70,16 +54,19 @@ const getReferrer = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
 
-    if (SEARCH_DOMAINS.some(domain => referrer.includes(domain)))
+    if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
       return 'search';
 
-    if (SOCIAL_DOMAINS.some(domain => referrer.includes(domain)))
+    if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
       return 'social';
 
-    if (atParam && SOCIAL_AT_PARAM_VALUES.includes(atParam.toLowerCase()))
+    if (
+      atParam &&
+      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
+    )
       return 'social';
 
-    if (DIRECT_DOMAINS.some(domain => referrer.includes(domain)))
+    if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
       return 'direct';
 
     if (!referrer) return 'direct';
