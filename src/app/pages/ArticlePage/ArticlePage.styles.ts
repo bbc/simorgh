@@ -91,7 +91,7 @@ export default {
       },
     }),
 
-  underArticleSection: ({ spacings }: Theme) =>
+  underArticleSection: () =>
     css({
       display: 'block',
       gridColumn: '9 / span 4',
