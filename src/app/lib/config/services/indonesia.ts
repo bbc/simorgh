@@ -67,6 +67,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Waktu membaca',
+        long: 'Artikel panjang',
+        minute: 'menit',
+      },
       pagination: {
         previousPage: 'Sebelum',
         nextPage: 'Berikut',

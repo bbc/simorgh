@@ -19,7 +19,7 @@ type ReadTimeProps = {
 const DEFAULT_TRANSLATIONS = {
   long: 'Long read',
   minute: 'min',
-  read: 'read',
+  read: 'Read time',
 };
 
 const ProcessReadTime = ({
@@ -29,13 +29,26 @@ const ProcessReadTime = ({
   readTimeValue: number;
   readTimeVariant: string;
 }) => {
-  const { translations } = use(ServiceContext);
+  const { translations, service } = use(ServiceContext);
 
   const singleMinuteSuffix =
     translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
-  const readCopy = DEFAULT_TRANSLATIONS.read;
+  const readCopy =
+    translations.readTime?.readTimePrefix ?? DEFAULT_TRANSLATIONS.read;
 
-  let copy = `${readTimeValue} ${singleMinuteSuffix} ${readCopy}`;
+  const servicesWithMinutesBeforeNumber = [
+    'hausa',
+    'igbo',
+    'yoruba',
+    'swahili',
+  ];
+  const servicesWithoutColon = ['igbo', 'pidgin'];
+
+  const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
+
+  let copy = servicesWithMinutesBeforeNumber.includes(service)
+    ? `${readCopy}${separator}${singleMinuteSuffix} ${readTimeValue}`
+    : `${readCopy}${separator}${readTimeValue} ${singleMinuteSuffix}`;
 
   const isLongRead = readTimeValue >= 6;
   if (readTimeVariant === 'long_read_written' && isLongRead) {
