@@ -150,6 +150,11 @@ export const service: SerbianConfig = {
       variant: 'cyr',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Vreme čitanja',
+        long: 'članak',
+        minute: 'min',
+      },
       pagination: {
         page: 'Stranica',
         previousPage: 'Prethodno',
@@ -557,6 +562,11 @@ export const service: SerbianConfig = {
       variant: 'lat',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Време читања',
+        long: 'Чланак',
+        minute: 'мин',
+      },
       pagination: {
         page: 'Страница',
         previousPage: 'Претходно',
