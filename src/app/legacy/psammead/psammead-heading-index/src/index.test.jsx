@@ -18,6 +18,7 @@ describe('Index Heading', () => {
       <HeadingIndex script={arabic} service="persian" tabIndex={-1}>
         هذا عنوان الصفحة
       </HeadingIndex>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

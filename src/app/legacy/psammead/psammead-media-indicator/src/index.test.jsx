@@ -35,6 +35,7 @@ describe('MediaIndicator', () => {
         dir="rtl"
         isInline
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

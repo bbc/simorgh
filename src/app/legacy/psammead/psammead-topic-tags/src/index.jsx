@@ -6,8 +6,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
@@ -31,8 +29,8 @@ const TopicsList = styled.ul`
 `;
 
 const SingleTopicTagItem = styled.div`
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getBrevier(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
 
   word-break: break-word;
   margin-top: ${GEL_SPACING};

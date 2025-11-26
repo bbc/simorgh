@@ -31,6 +31,7 @@ describe('Paragraph', () => {
       <Paragraph script={arabic} service="persian">
         بعض محتوى النص
       </Paragraph>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

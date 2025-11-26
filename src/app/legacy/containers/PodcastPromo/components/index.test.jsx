@@ -8,6 +8,7 @@ const assertTypeOfElement = (Component, type) => {
     <Component script={latin} service="russian">
       Content
     </Component>,
+    { service: 'russian' },
   );
 
   expect(container.querySelector(type)).toBeInTheDocument();
@@ -22,6 +23,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Title script={latin} service="russian" dir="ltr">
           Content
         </PodcastPromo.Title>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -32,6 +34,7 @@ describe('Podcast Promo', () => {
     it('should match snapshot', () => {
       const { container } = render(
         <PodcastPromo.Card>Content</PodcastPromo.Card>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -42,6 +45,7 @@ describe('Podcast Promo', () => {
     it('should match snapshot', () => {
       const { container } = render(
         <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -54,6 +58,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.Title script={latin} service="russian">
           Content
         </PodcastPromo.Card.Title>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -66,6 +71,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.Description script={latin} service="russian">
           Content
         </PodcastPromo.Card.Description>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -78,6 +84,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.ImageWrapper>
           Content
         </PodcastPromo.Card.ImageWrapper>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -90,6 +97,7 @@ describe('Podcast Promo', () => {
         <PodcastPromo.Card.Link href="https://www.bbc.com">
           Content
         </PodcastPromo.Card.Link>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });
@@ -106,6 +114,7 @@ describe('Podcast Promo', () => {
         >
           Episodes
         </PodcastPromo.Card.EpisodesText>,
+        { service: 'russian' },
       );
       expect(container).toMatchSnapshot();
     });

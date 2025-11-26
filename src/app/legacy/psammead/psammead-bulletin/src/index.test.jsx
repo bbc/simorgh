@@ -86,6 +86,7 @@ describe('Bulletin', () => {
         lang="en-GB"
         ariaId="https://bbc.co.uk"
       />,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

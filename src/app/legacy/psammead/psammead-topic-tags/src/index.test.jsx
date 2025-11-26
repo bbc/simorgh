@@ -36,6 +36,7 @@ describe('TopicTags', () => {
       <TopicTags service="burmese" script={burmeseTypography}>
         <TopicTag name="test1" link="#" />
       </TopicTags>,
+      { service: 'burmese' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -45,6 +46,7 @@ describe('TopicTags', () => {
       <TopicTags service="persian" script={arabicTypography}>
         <TopicTag name="test1" link="#" />
       </TopicTags>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -57,6 +59,7 @@ describe('TopicTags', () => {
         <TopicTag name="test3" link="#" />
         <TopicTag name="test4" link="#" />
       </TopicTags>,
+      { service: 'arabic' },
     );
     expect(container).toMatchSnapshot();
   });

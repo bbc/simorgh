@@ -36,6 +36,7 @@ describe('Timestamp', () => {
         locale="fa"
         service="persian"
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -96,6 +97,7 @@ describe('Timestamp', () => {
             service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -114,6 +116,7 @@ describe('Timestamp', () => {
             service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -132,6 +135,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -149,6 +153,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -166,6 +171,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');

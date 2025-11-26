@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const EpisodesText = styled.p`
   display: inline;
-  ${({ script }) => getPica(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.METAL};
   > svg {
     fill: currentColor;

@@ -52,6 +52,9 @@ export const ListTopStories = () => (
 export const ListTopStoriesRtl = () => (
   <RelatedContentComponent content={topStoriesListRtl} service="arabic" />
 );
+ListTopStoriesRtl.globals = {
+  service: { service: 'arabic' },
+};
 
 export const SingleTopStories = () => (
   <RelatedContentComponent content={topStoriesSingleItem} service="news" />
@@ -60,6 +63,9 @@ export const SingleTopStories = () => (
 export const SingleTopStoriesRtl = () => (
   <RelatedContentComponent content={topStoriesSingleItemRtl} service="arabic" />
 );
+SingleTopStoriesRtl.globals = {
+  service: { service: 'arabic' },
+};
 
 export const ListTopStoriesMixedDataSources = () => (
   <RelatedContentComponent

@@ -32,6 +32,9 @@ describe('ErrorMain', () => {
           script={arabic}
           service={service}
         />,
+        {
+          service,
+        },
       );
       expect(container).toMatchSnapshot();
     });

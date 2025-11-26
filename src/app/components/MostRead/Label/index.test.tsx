@@ -8,6 +8,7 @@ describe('MostReadSectionLabel assertion', () => {
       <ServiceContextProvider service="persian">
         <MostReadSectionLabel />
       </ServiceContextProvider>,
+      { service: 'persian' },
     );
     const label = container.getElementsByTagName('span')[2];
     expect(label).toHaveAttribute('id', 'Most-Read');

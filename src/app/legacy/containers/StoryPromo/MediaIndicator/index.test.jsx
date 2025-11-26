@@ -159,6 +159,7 @@ describe('Story Promo Media Indicator', () => {
         service="persian"
         isInline
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

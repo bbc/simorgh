@@ -81,6 +81,10 @@ export const ArabicText = () => (
   </BackGround>
 );
 
+ArabicText.globals = {
+  service: { service: 'arabic' },
+};
+
 export const WithTimestamp = (_, { service }) => (
   <BackGround>
     <ScrollablePromoComponent data={oneLinkWithTimestamp} service={service} />

@@ -106,10 +106,18 @@ export const SmallOneColumn = (_: StoryArgs, { service, variant }: Props) => (
   />
 );
 
-export const Japanese1Column = (_: StoryArgs, { variant }: Props) => (
-  <Component service="japanese" variant={variant} columnLayout="oneColumn" />
+export const Japanese1Column = (_: StoryArgs, { variant, service }: Props) => (
+  <Component service={service} variant={variant} columnLayout="oneColumn" />
 );
 
-export const Persian1Column = (_: StoryArgs, { variant }: Props) => (
-  <Component service="persian" variant={variant} columnLayout="oneColumn" />
+Japanese1Column.globals = {
+  service: { service: 'japanese', variant: 'default' },
+};
+
+export const Persian1Column = (_: StoryArgs, { variant, service }: Props) => (
+  <Component service={service} variant={variant} columnLayout="oneColumn" />
 );
+
+Persian1Column.globals = {
+  service: { service: 'persian', variant: 'default' },
+};

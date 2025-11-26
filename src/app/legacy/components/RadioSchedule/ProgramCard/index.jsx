@@ -5,15 +5,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
-  getBrevier,
-  getMinion,
-  getPica,
-} from '#psammead/gel-foundations/src/typography';
 import { formatDuration } from '#psammead/psammead-timestamp-container/src/utilities';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
@@ -34,15 +25,15 @@ const TextWrapper = styled.div`
 `;
 
 const StyledH3 = styled.h3`
-  ${({ service }) => service && getSerifMedium(service)}
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   color: ${({ headerTextColor }) => headerTextColor};
   margin: 0; /* Reset */
 `;
 
 const SummaryWrapper = styled.p`
-  ${({ service }) => service && getSansRegular(service)}
-  ${({ script }) => script && getBrevier(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   color: ${props => props.theme.palette.METAL};
   padding-top: ${GEL_SPACING};
   padding-bottom: ${GEL_SPACING_DBL};
@@ -50,8 +41,8 @@ const SummaryWrapper = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  ${({ service }) => service && getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
   padding: ${GEL_SPACING};
   background-color: ${({ backgroundColor }) => backgroundColor};
   outline: 0.0625rem solid transparent;

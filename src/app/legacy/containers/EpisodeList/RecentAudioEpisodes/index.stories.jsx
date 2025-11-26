@@ -73,8 +73,14 @@ export const SingleItem = {
 export const TestMultipleItems = storyArgs =>
   MultipleItems.render(storyArgs, { service: 'indonesia' });
 TestMultipleItems.tags = ['!dev'];
+TestMultipleItems.globals = {
+  service: { service: 'indonesia' },
+};
 
 // This story is for chromatic testing purposes only
 export const TestSingleItem = storyArgs =>
   SingleItem.render(storyArgs, { service: 'indonesia' });
 TestSingleItem.tags = ['!dev'];
+TestSingleItem.globals = {
+  service: { service: 'indonesia' },
+};
