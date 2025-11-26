@@ -42,7 +42,7 @@
     "@next/swc-linux-x64-gnu": "15.5.2",
     "@next/swc-win32-arm64-msvc": "15.5.2",
     "@next/swc-win32-x64-msvc": "15.5.2",
-    "@testing-library/jest-dom": "6.8.0",
+    "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "15.4.0",
