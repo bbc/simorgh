@@ -13,16 +13,10 @@ export default {
       [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
     }),
 
-  bylineContainerSingleContributor: ({ mq }: Theme) =>
+  bylineContainerSingleContributor: () =>
     css({
-      display: 'grid',
-      [mq.GROUP_1_MIN_WIDTH]: {
-        gridTemplateColumns: 'repeat(2, auto)',
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        display: 'flex',
-        flexWrap: 'wrap',
-      },
+      display: 'flex',
+      flexWrap: 'wrap',
     }),
 
   list: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
