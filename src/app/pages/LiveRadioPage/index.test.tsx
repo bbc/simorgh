@@ -52,6 +52,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(container).toMatchSnapshot();
@@ -64,6 +65,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(getByText('BBC Afrique Radio')).toBeInTheDocument();
@@ -76,6 +78,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(getByText('Infos, musique et sports')).toBeInTheDocument();
@@ -121,6 +124,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
     const audioPlayerElement = document.querySelector(
       '[data-e2e="media-player"]',
@@ -136,6 +140,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
     const radioScheduleTitle = getByText('Journaux et Magazines');
     const scheduleWrapper = document.querySelector(
@@ -153,6 +158,7 @@ describe('Radio Page Main', () => {
         service="kyrgyz"
         lang="ky"
       />,
+      { service: 'kyrgyz' },
     );
 
     const scheduleWrapper = container.querySelector(
