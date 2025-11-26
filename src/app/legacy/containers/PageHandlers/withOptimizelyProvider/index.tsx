@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -62,6 +62,7 @@ const getReferrer = () => {
     const referrer = document?.referrer?.toLowerCase();
 
     const urlParams = new URLSearchParams(window.location.search);
+
     const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
 
     if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
@@ -97,13 +98,13 @@ export const COUNTRY_CODES_TO_EXPERIMENT = [
   'do',
 ];
 
-const isCountryKnown = country => {
+const isCountryKnown = (country?: string | null) => {
   if (!country) return false;
 
   return COUNTRY_CODES_TO_EXPERIMENT.includes(country.toLowerCase());
 };
 
-const withOptimizelyProvider = Component => {
+const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
   return props => {
     if (disableOptimizely) return <Component {...props} />;
 
