@@ -82,20 +82,30 @@ const getReferrer = () => {
   return null;
 };
 
+export const COUNTRY_CODES_TO_EXPERIMENT = [
+  'es',
+  'mx',
+  'ar',
+  'co',
+  'us',
+  'cl',
+  've',
+  'uy',
+  'do',
+];
+
 const isCountryKnown = country => {
   if (!country) return false;
 
-  const knownCountries = ['es', 'mx'];
-
-  return knownCountries.includes(country.toLowerCase());
+  return COUNTRY_CODES_TO_EXPERIMENT.includes(country.toLowerCase());
 };
 
 const withOptimizelyProvider = Component => {
   return props => {
+    if (disableOptimizely) return <Component {...props} />;
+
     const { service } = use(ServiceContext);
     const { country } = use(RequestContext);
-
-    if (disableOptimizely) return <Component {...props} />;
 
     const id = getUserId();
     const mobile = isMobile();
