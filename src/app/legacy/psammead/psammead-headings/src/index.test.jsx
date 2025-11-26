@@ -32,6 +32,7 @@ describe('Headline component', () => {
       <Headline script={arabic} service="persian">
         هذا هو العنوان الخاص بي
       </Headline>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
