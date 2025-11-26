@@ -2,27 +2,22 @@ import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
-import {
-  getCanon,
-  getParagon,
-  GEL_FF_REITH_SANS,
-} from '#psammead/gel-foundations/src/typography';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import Grid, { GelPageGrid } from '#components/Grid';
+import { REITH_SANS } from '#app/components/ThemeProvider/fontFamilies';
 
 const StatusCode = styled.span`
-  ${props => (props.script ? getParagon(props.script) : '')}
+  ${({ theme: { fontSizes } }) => fontSizes.paragon};
   color: ${props => props.theme.palette.POSTBOX};
   display: block;
-  font-family: ${GEL_FF_REITH_SANS};
+  font-family: ${REITH_SANS};
   font-weight: 600;
   padding: 2.5rem 0 0.5rem 0;
 `;
 
 const Heading = styled.h1`
-  ${({ script }) => script && getCanon(script)}
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.canon};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   color: ${props => props.theme.palette.SHADOW};
   margin-top: 0;
 `;
