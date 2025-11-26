@@ -60,9 +60,9 @@ const PromotionalBanner = ({
               )}
             </Text>
 
-            <Text as="span" size="bodyCopy" css={styles.dividerText}>
+            <Paragraph size="bodyCopy" css={styles.dividerText}>
               {orText}
-            </Text>
+            </Paragraph>
 
             <Text
               as="button"
