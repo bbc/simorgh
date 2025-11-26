@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  banner: ({ mq, spacings, palette }: Theme) =>
+  banner: ({ palette }: Theme) =>
     css({
       margin: '0 auto',
       display: 'flex',
@@ -23,9 +23,9 @@ const styles = {
     css({
       padding: `${spacings.TRIPLE}rem`,
       paddingRight: `${spacings.SEXTUPLE}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
       [mq.GROUP_1_MAX_WIDTH]: {
         paddingLeft: `${spacings.FULL}rem`,
-        paddingBottom: `${spacings.DOUBLE}rem`,
       },
 
       display: 'flex',
