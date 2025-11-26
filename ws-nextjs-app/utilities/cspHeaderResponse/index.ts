@@ -65,14 +65,15 @@ export const cspHeaderResponseForNextDocumentContext = async ({
 }: {
   ctx: DocumentContext;
 }) => {
-  const { isAmp } = getPathExtension(ctx.req?.url || '');
+  const reqUrl = ctx.req?.url || '';
+  const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
-  const urlPath = ctx.req?.url || '';
+
   let hasAdsScripts = false;
   let countryList = '';
 
-  if (isValidService(urlPath)) {
-    const service = fallbackServiceParam(ctx.req?.url || '');
+  if (isValidService(reqUrl)) {
+    const service = fallbackServiceParam(reqUrl);
     const toggles = await getToggles(service);
 
     ({ enabled: hasAdsScripts, value: countryList = '' } =
