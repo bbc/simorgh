@@ -32,8 +32,6 @@ const optimizelyProviderSpy = jest.spyOn(
   'OptimizelyProvider',
 );
 
-const cookieGetterSpy = jest.spyOn(Cookie, 'get');
-
 const Component = () => <h1>Hola Optimizely</h1>;
 
 const TestComponent = () => {
@@ -59,6 +57,7 @@ describe('withOptimizelyProvider HOC', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
+    Cookie.remove('ckns_mvt');
     window.matchMedia = originalMatchMedia;
   });
 
@@ -74,6 +73,7 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   it('should return undefined when ckns_mvt is fetched with Cookie.get', () => {
+    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
     render(<TestComponent />);
 
     expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
@@ -81,12 +81,13 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   it('should return the correct ckns_mvt cookie value from Cookie.get', () => {
-    cookieGetterSpy.mockReturnValue('random_uuid');
+    const cookieGetterSpy = jest.spyOn(Cookie, 'get');
+    Cookie.set('ckns_mvt', 'random-uuid');
 
     render(<TestComponent />);
 
     expect(cookieGetterSpy).toHaveBeenCalledWith('ckns_mvt');
-    expect(cookieGetterSpy).toHaveReturnedWith('random_uuid');
+    expect(cookieGetterSpy).toHaveReturnedWith('random-uuid');
   });
 
   describe('mobile attribute', () => {

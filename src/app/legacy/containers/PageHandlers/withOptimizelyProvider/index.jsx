@@ -100,9 +100,8 @@ const withOptimizelyProvider = Component => {
     const referrer = getReferrer();
 
     const getUserId = () => {
-      if (disableOptimizely || !onClient() || isOperaProxy()) {
-        return null;
-      }
+      if (disableOptimizely || !onClient() || isOperaProxy()) return null;
+
       return Cookie.get('ckns_mvt') ?? null;
     };
 
