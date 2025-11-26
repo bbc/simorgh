@@ -2,7 +2,6 @@
 import React, { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -12,7 +11,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getGreatPrimer } from '#psammead/gel-foundations/src/typography';
 
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -45,8 +43,8 @@ const Wrapper = styled.aside`
 `;
 
 const ThirdPartyLinksTitle = styled.h2`
-  ${({ script }) => getGreatPrimer(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.SHADOW};
   margin: 0;
   margin-top: 1rem;
