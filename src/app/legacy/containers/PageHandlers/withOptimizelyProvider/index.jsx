@@ -40,9 +40,33 @@ const isMobile = () => {
   return null;
 };
 
+export const REFERRER_CATEGORIES = {
+  DIRECT: ['bbc.com'],
+  SEARCH: ['google', 'bing', 'msn', 'yahoo', 'duckduckgo', 'yandex', 'ecosia'],
+  SOCIAL: ['facebook', 'instagram', 't.co', 'youtube', 'threads', 'linkin'],
+  AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
+};
+
 const getReferrer = () => {
   if (onClient()) {
-    // TODO: Will be implemented in https://bbc.atlassian.net/browse/WS-947
+    const referrer = document?.referrer?.toLowerCase();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
+
+    if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
+      return 'search';
+
+    if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
+      return 'social';
+
+    if (REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam?.toLowerCase()))
+      return 'social';
+
+    if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
+      return 'direct';
+
+    if (!referrer) return 'direct';
   }
 
   return null;
@@ -60,9 +84,8 @@ const withOptimizelyProvider = Component => {
     const referrer = getReferrer();
 
     const getUserId = () => {
-      if (disableOptimizely || !onClient() || isOperaProxy()) {
-        return null;
-      }
+      if (disableOptimizely || !onClient() || isOperaProxy()) return null;
+
       return Cookie.get('ckns_mvt') ?? null;
     };
 
