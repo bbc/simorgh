@@ -3,9 +3,13 @@ import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
+import withOptimizelyProvider, {
+  REFERRER_CATEGORIES,
+  COUNTRY_CODES_TO_EXPERIMENT,
+} from '.';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -29,7 +33,7 @@ const optimizelyProviderSpy = jest.spyOn(
 
 const Component = () => <h1>Hola Optimizely</h1>;
 
-const TestComponent = () => {
+const TestComponent = ({ country }) => {
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
   const memoizedServiceContextValue = useMemo(
@@ -37,9 +41,13 @@ const TestComponent = () => {
     [],
   );
 
+  const memoizedRequestContextValue = useMemo(() => ({ country }), [country]);
+
   return (
     <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <OptimizelyComponent {...props} />
+      <RequestContext.Provider value={memoizedRequestContextValue}>
+        <OptimizelyComponent {...props} />
+      </RequestContext.Provider>
     </ServiceContext.Provider>
   );
 };
@@ -233,6 +241,27 @@ describe('withOptimizelyProvider HOC', () => {
       expect(
         optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
       ).toBeNull();
+    });
+  });
+
+  describe('countryKnown attribute', () => {
+    it.each(COUNTRY_CODES_TO_EXPERIMENT)(
+      'should set countryKnown to true when the country code is %s',
+      countryCode => {
+        render(<TestComponent country={countryCode} />);
+
+        expect(
+          optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+        ).toBe(true);
+      },
+    );
+
+    it('should set countryKnown to false when the country code is unknown', () => {
+      render(<TestComponent />);
+
+      expect(
+        optimizelyProviderSpy.mock.calls[0][0].user.attributes.countryKnown,
+      ).toBe(false);
     });
   });
 });
