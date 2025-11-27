@@ -17,7 +17,6 @@ import {
   assertScrollableNavigationComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/navigation';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
-// import liteTests from '../articlePage/testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
