@@ -42,13 +42,13 @@ module.exports = {
   poweredByHeader: false,
   generateEtags: false,
   transpilePackages: ['simorgh'],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
   },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,

@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { NextResponse, NextRequest } from 'next/server';
 
 import addPlatformToRequestChainHeader from '#server/utilities/addPlatformToRequestChainHeader';
@@ -6,7 +5,7 @@ import cspHeaderResponse from './utilities/cspHeaderResponse';
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
-export function middleware(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') ?? request.nextUrl.hostname;
   let response = NextResponse.next();
 
@@ -25,7 +24,7 @@ export function middleware(request: NextRequest) {
   }
 
   if (PRODUCTION_ONLY) {
-    response = cspHeaderResponse({ request });
+    response = await cspHeaderResponse({ request });
   }
 
   response.headers.set(
@@ -37,3 +36,7 @@ export function middleware(request: NextRequest) {
 
   return response;
 }
+
+export const config = {
+  runtime: 'nodejs',
+};

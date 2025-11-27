@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Read am in',
+        long: 'Tori wey long',
+        minute: 'mins',
+      },
       pagination: {
         previousPage: 'Before',
         nextPage: 'Next',

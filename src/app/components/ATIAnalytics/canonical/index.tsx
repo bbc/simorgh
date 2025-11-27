@@ -11,6 +11,8 @@ import addInlineScript, {
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
+import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -48,6 +50,9 @@ const CanonicalATIAnalytics = ({
 
   usePWAInstallTracker();
 
+  useConnectionTypeTracker();
+  useConnectionBackOnlineTracker();
+
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
 
@@ -67,7 +72,7 @@ const CanonicalATIAnalytics = ({
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: [atiPageViewUrlString, liteSiteReverbURL],
+          parameters: [liteSiteReverbURL],
           nonce,
         })}
       {!isLite &&

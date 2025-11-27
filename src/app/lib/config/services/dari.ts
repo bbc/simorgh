@@ -1,7 +1,6 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import '#psammead/psammead-locales/moment/fa-af';
 import '#psammead/moment-timezone-include/tz/Asia/Kabul';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -17,11 +16,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsProducerName: 'DARI',
     useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
-    brandName: 'BBC News فارسی',
-    serviceLocalizedName: 'فارسی',
+    brandName: 'BBC News دری',
+    serviceLocalizedName: 'دری',
     defaultImage:
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
-    defaultImageAltText: 'BBC News فارسی',
+    defaultImageAltText: 'BBC News دری',
     dir: 'rtl',
     externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
@@ -36,12 +35,10 @@ export const service: DefaultServiceConfig = {
     service: 'dari',
     serviceName: 'Dari',
     languageName: 'Dari',
-    altCalendar: jalaali,
     twitterCreator: '@bbcafghanistan',
     twitterSite: '@bbcafghanistan',
-    noBylinesPolicy:
-      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
+    noBylinesPolicy: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
+    publishingPrinciples: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/dari/manifest.json',
@@ -72,8 +69,7 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
         informationPage:
           'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
-        informationPageLink:
-          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        informationPageLink: 'https://www.bbc.com/dari/articles/cp3dzx3z929o',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
         articleDataSavingLinkText:
           'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
@@ -108,7 +104,7 @@ export const service: DefaultServiceConfig = {
             'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -122,7 +118,7 @@ export const service: DefaultServiceConfig = {
             'بعدا دوباره امتحان کنید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -426,6 +422,30 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/dari',
+      },
+      {
+        title: 'افغانستان',
+        url: '/dari/topics/c78n1x1x3jet',
+      },
+      {
+        title: 'منطقه',
+        url: '/dari/topics/cx2den5q88lt',
+      },
+      {
+        title: 'جهان',
+        url: '/dari/topics/c70rj4d7rert',
+      },
+      {
+        title: 'ورزش',
+        url: '/dari/topics/c24r373gngzt',
+      },
+      {
+        title: 'ساینس',
+        url: '/dari/topics/clyl797dek3t',
+      },
+      {
+        title: 'برنامه‌های رادیویی',
+        url: '/dari/topics/cd9zd279j4kt',
       },
     ],
   },

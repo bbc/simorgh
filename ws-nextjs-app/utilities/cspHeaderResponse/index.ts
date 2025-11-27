@@ -3,6 +3,9 @@ import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { Services } from '#app/models/types/global';
+import SERVICES from '#app/lib/config/services';
 
 const setReportTo = (header: Headers) => {
   header.set(
@@ -34,17 +37,53 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
+const isRelaxedCspEnabled = (
+  countryList: string | number | undefined,
+  country: string,
+): boolean => {
+  if (!countryList || countryList.toString().trim() === '') {
+    return true;
+  }
+
+  const omittedCountriesList = countryList
+    .toString()
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  return !omittedCountriesList.includes(country.toLowerCase());
+};
+
+const isValidService = (str: string) => {
+  const [service] = str.split('/').filter(Boolean) as [Services?];
+  return service && SERVICES.includes(service);
+};
+
+const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
   const { isAmp } = getPathExtension(request.url);
-  const service = fallbackServiceParam(request.url);
   const isLive = isLiveEnv();
+  const urlPath = request.nextUrl.pathname;
+  let hasAdsScripts = false;
+  let countryList = '';
+
+  if (isValidService(urlPath)) {
+    const service = fallbackServiceParam(request.nextUrl.pathname);
+    const toggles = await getToggles(service);
+
+    ({ enabled: hasAdsScripts, value: countryList = '' } =
+      toggles?.adsNonce || { enabled: false, value: '' });
+  }
 
   const requestHeaders = new Headers(request.headers);
+  const country =
+    requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
+  const shouldServeRelaxedCsp =
+    hasAdsScripts && isRelaxedCspEnabled(countryList, country || '');
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    service,
+    shouldServeRelaxedCsp,
   });
 
   const BUMP4SpecificConditions = {

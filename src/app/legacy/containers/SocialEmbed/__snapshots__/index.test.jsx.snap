@@ -121,10 +121,10 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -140,6 +140,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -147,6 +148,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -322,10 +324,10 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -333,6 +335,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-14 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -340,6 +343,7 @@ exports[`SocialEmbedContainer AMP should match snapshot 1`] = `
 @media (min-width: 37.5rem) {
   .emotion-14 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -570,10 +574,10 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -589,6 +593,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -596,6 +601,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -657,10 +663,10 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -668,6 +674,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -675,6 +682,7 @@ exports[`SocialEmbedContainer Canonical should render a Facebook Post block and 
 @media (min-width: 37.5rem) {
   .emotion-12 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -905,10 +913,10 @@ min-height:55.5rem .no-js .emotion-2 {
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -924,6 +932,7 @@ min-height:55.5rem .no-js .emotion-2 {
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -931,6 +940,7 @@ min-height:55.5rem .no-js .emotion-2 {
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -992,10 +1002,10 @@ min-height:55.5rem .no-js .emotion-2 {
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -1003,6 +1013,7 @@ min-height:55.5rem .no-js .emotion-2 {
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -1010,6 +1021,7 @@ min-height:55.5rem .no-js .emotion-2 {
 @media (min-width: 37.5rem) {
   .emotion-12 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1238,10 +1250,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -1257,6 +1269,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -1264,6 +1277,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1439,10 +1453,10 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -1450,6 +1464,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-14 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -1457,6 +1472,7 @@ exports[`SocialEmbedContainer Canonical should render a TikTok block and unmount
 @media (min-width: 37.5rem) {
   .emotion-14 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1687,10 +1703,10 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -1706,6 +1722,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -1713,6 +1730,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1764,10 +1782,10 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -1775,6 +1793,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -1782,6 +1801,7 @@ exports[`SocialEmbedContainer Canonical should render a Twitter block and unmoun
 @media (min-width: 37.5rem) {
   .emotion-12 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -1997,10 +2017,10 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -2016,6 +2036,7 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -2023,6 +2044,7 @@ min-height:7.0625rem .no-js .emotion-2 {
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -2198,10 +2220,10 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 .emotion-14 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -2209,6 +2231,7 @@ min-height:7.0625rem .no-js .emotion-2 {
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-14 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -2216,6 +2239,7 @@ min-height:7.0625rem .no-js .emotion-2 {
 @media (min-width: 37.5rem) {
   .emotion-14 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -2446,10 +2470,10 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 .emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   display: block;
@@ -2465,6 +2489,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-6 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -2472,6 +2497,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 @media (min-width: 37.5rem) {
   .emotion-6 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -2520,10 +2546,10 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 .emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   display: block;
   color: #545658;
   padding: 0.5rem 0;
@@ -2531,6 +2557,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-12 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -2538,6 +2565,7 @@ exports[`SocialEmbedContainer Canonical should render an Instagram block and unm
 @media (min-width: 37.5rem) {
   .emotion-12 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 

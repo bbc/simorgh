@@ -135,75 +135,68 @@ exports[`Canonical Home Page Header Navigation link should match text and url 2`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "बिहार विधानसभा चुनाव",
-  "url": "/hindi/topics/c98yre1dg81t",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
-{
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
   "text": "हेल्थ",
   "url": "/hindi/topics/cr50ykdx5wqt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "करियर",
   "url": "/hindi/topics/c95y3gjndw8t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "फ़ाइनेंस",
   "url": "/hindi/topics/c5qvpx5dq4qt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/topics/cv22x3pmrvmt",
@@ -303,61 +296,26 @@ exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = 
 
 exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-512x512.png",
@@ -822,13 +780,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"hi-IN"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News हिंदी"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/hindi"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -844,7 +802,7 @@ exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bb
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbchindi"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {

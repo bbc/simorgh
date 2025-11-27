@@ -1,4 +1,4 @@
-import loadableConfig from '#app/lib/config/services/loadableConfig';
+import SERVICES from '#app/lib/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 
 const PUBLIC_SERVICES = [
@@ -17,9 +17,8 @@ const NOT_LIVE_SERVICES = ['magyarul', 'romania', 'dari'];
 const servicesToIgnore = [...PUBLIC_SERVICES, ...NOT_LIVE_SERVICES];
 
 describe('Application', () => {
-  Object.keys(loadableConfig)
-    .filter(service => !servicesToIgnore.includes(service))
-    .forEach(service => {
+  SERVICES.filter(service => !servicesToIgnore.includes(service)).forEach(
+    service => {
       it(`should return a 200 status code for ${service}'s service worker`, () => {
         cy.testResponseCodeAndType({
           path: `/${service}/sw.js`,
@@ -35,7 +34,8 @@ describe('Application', () => {
           type: 'application/json',
         });
       });
-    });
+    },
+  );
 });
 
 describe('Application unknown route error pages', () => {

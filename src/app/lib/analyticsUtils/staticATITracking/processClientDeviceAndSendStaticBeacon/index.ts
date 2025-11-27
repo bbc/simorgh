@@ -1,6 +1,10 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbURL) => {
+  window.processClientDeviceAndSendStaticBeacon = ({
+    atiUrl,
+    reverbUrl,
+    forwardingUrl = '',
+  }) => {
     const {
       screen: { width, height, colorDepth, pixelDepth },
       innerWidth,
@@ -11,6 +15,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     const hours = now.getHours();
     const mins = now.getMinutes();
     const secs = now.getSeconds();
+    const epochTimestamp = now.getTime().toString();
 
     // COOKIE SETTINGS
     const cookieName = 'atuserid';
@@ -67,18 +72,34 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    if (reverbURL) {
-      const processedReverbUrl = reverbURL
+    if (reverbUrl) {
+      let processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
         .replaceAll('{referrer}', params.ref)
-        .replace('{idclient}', params.idclient);
+        .replace('{idclient}', params.idclient)
+        .replace('{epochTimestamp}', epochTimestamp)
+        .replace('{forwardingLink}', forwardingUrl)
+        .replaceAll('ref=&', '');
+
+      const searchParams = new URLSearchParams(window.location.search);
+
+      searchParams.forEach((value, key) => {
+        if (key.startsWith('utm_') || key.startsWith('at_')) {
+          processedReverbUrl +=
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
+              'at_',
+              'src_',
+            );
+        }
+      });
 
       window.sendStaticBeacon(processedReverbUrl);
-    } else if (atiURL) {
-      if (isLiteSite && window.location.search.length) {
+    } else if (atiUrl) {
+      const containsMarketingAtUtcParams = window.location.search.length;
+      if (isLiteSite && containsMarketingAtUtcParams) {
         const kvpairs: Record<string, string> = window.location.search
           .substring(1)
           .split('&')
@@ -107,13 +128,13 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       const paramValues = Object.keys(params)
         .map(key => `${key}=${params[key]}`)
         .join('&');
-      window.sendStaticBeacon(`${atiURL}&${paramValues}`);
+      window.sendStaticBeacon(`${atiUrl}&${paramValues}`);
     }
   };
 };
 
-export default (atiURL: string, reverbURL?: string) => {
+export default (reverbUrl: string) => {
   window.addEventListener('load', () => {
-    window.processClientDeviceAndSendStaticBeacon(atiURL, reverbURL);
+    window.processClientDeviceAndSendStaticBeacon({ reverbUrl });
   });
 };

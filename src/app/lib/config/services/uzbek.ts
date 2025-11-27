@@ -58,6 +58,11 @@ const defaultCyrillicConfig = {
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
   translations: {
+    readTime: {
+      readTimePrefix: 'Ўқилиш вақти',
+      long: 'Узун мақола',
+      minute: 'дақ',
+    },
     pagination: {
       previousPage: 'Олдингиси',
       nextPage: 'Кейингиси',
@@ -309,7 +314,11 @@ const defaultCyrillicConfig = {
         text: 'Фойдаланиш шартлари',
       },
       {
-        href: 'https://www.bbc.com/uzbek/institutional-36824300',
+        href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+        text: 'ББC ҳақида',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/privacy/',
         text: 'Шахсий ҳаёт махфийлиги сиёсати',
       },
       {
@@ -403,6 +412,11 @@ export const service: UzbekConfig = {
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
     translations: {
+      readTime: {
+        readTimePrefix: "O'qilish vaqti",
+        long: 'Uzun maqola',
+        minute: 'daq',
+      },
       pagination: {
         previousPage: 'Oldingisi',
         nextPage: 'Keyingisi',
@@ -651,7 +665,11 @@ export const service: UzbekConfig = {
           text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36824300',
+          href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/lat',
+          text: 'ББC ҳақида',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {

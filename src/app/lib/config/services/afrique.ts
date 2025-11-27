@@ -379,12 +379,8 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/bbc_afrique_radio/liveradio',
       },
       {
-        title: 'Election Côte d’Ivoire',
-        url: '/afrique/topics/ckglqk3zzxxt',
-      },
-      {
-        title: 'Election Cameroun',
-        url: '/afrique/topics/c70xvpqg58yt',
+        title: 'CAN 2025',
+        url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
         title: 'Afrique',

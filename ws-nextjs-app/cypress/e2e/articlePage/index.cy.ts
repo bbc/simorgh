@@ -1,6 +1,8 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
@@ -8,6 +10,16 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteArticleTests from './testsForLiteOnly';
+
+import {
+  assertContinueReadingButtonComponentClick,
+  assertContinueReadingButtonComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/continueReadingButton';
+import {
+  assertTopBarOJComponentClick,
+  assertTopBarOJComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 
 const canonicalTests = [
   testsForAllPages,
@@ -28,6 +40,12 @@ const smokeCanonicalTestSuites = [
     path: '/gahuza/articles/c5y51yxeg53o',
     runforEnv: ['local', 'live'],
     service: 'gahuza',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/hindi/articles/c0kprrej277o',
+    runforEnv: ['live'],
+    service: 'hindi',
     tests: [...canonicalTests],
   },
   {
@@ -219,6 +237,33 @@ const nonSmokeCanonicalTestSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/hindi/articles/cn8xe1llnyyo',
+    runforEnv: ['live'],
+    service: 'hindi',
+    pageIdentifier: 'hindi.articles.cn8xe1llnyyo.page',
+    siteId: 52,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [
+      assertContinueReadingButtonComponentClick,
+      assertContinueReadingButtonComponentView,
+    ],
+  },
+  {
+    path: '/polska/articles/c639526lxlro',
+    runforEnv: ['local'],
+    service: 'polska',
+    pageIdentifier: 'polska.articles.c639526lxlro.page',
+    siteId: 135,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [assertTopBarOJComponentClick, assertTopBarOJComponentView],
+  },
+] as unknown as TestDataType[];
+
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? smokeCanonicalTestSuites
   : nonSmokeCanonicalTestSuites;
@@ -261,6 +306,21 @@ const liteTestSuites = canonicalTestSuites
 
 runTestsForPage({
   pageType: ARTICLE_PAGE,
+  beforeEachFns: [],
+  testSuites: [
+    ...atiAnalyticsTestSuites,
+    ...atiAnalyticsTestSuites.map(testSuite => ({
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      applicationType: 'lite',
+    })),
+  ],
+  beforeAll: [setUserIDCookie],
+});
+
+runTestsForPage({
+  pageType: ARTICLE_PAGE,
+  beforeEachFns: [],
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
   deleteServiceWorker: true,
 });

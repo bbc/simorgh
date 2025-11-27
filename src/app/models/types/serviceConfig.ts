@@ -1,4 +1,5 @@
 import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import { PromotionalBannerProps } from '#app/components/PromotionalBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -96,7 +97,6 @@ export type ServiceConfig = {
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
-  fonts?: ((baseUrlOverride: string) => string)[];
   collapsibleNavigation?: CollapsibleNavigationSection[];
   navigation?: {
     title: string;
@@ -114,6 +114,7 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  promotionalBanner?: PromotionalBannerProps;
   electionBanner?: {
     heights?: {
       desktop: number;

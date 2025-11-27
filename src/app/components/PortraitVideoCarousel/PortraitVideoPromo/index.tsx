@@ -26,6 +26,8 @@ type PortraitVideoPromoProps = {
   eventTrackingData: EventTrackingData;
   blockPosition?: number;
   timeOfDayVariant?: string;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation?: string;
   onClick?: () => void;
 };
 
@@ -35,6 +37,8 @@ export default ({
   eventTrackingData,
   onClick,
   timeOfDayVariant,
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -44,6 +48,8 @@ export default ({
   } = use(ServiceContext);
 
   const { images, video } = block.model;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  const isLargeVariation = playDurationVariation === 'large';
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -57,7 +63,7 @@ export default ({
     duration: durationTranslation,
   } = media;
 
-  let momentDuration = null;
+  let momentDuration: moment.Duration | null = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
@@ -88,12 +94,25 @@ export default ({
     imageWidthLarge: 256,
   });
 
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     ...(timeOfDayVariant && {
       sendOptimizelyEvents: true,
       experimentName: 'newswb_ws_tod_homepage',
       experimentVariant: timeOfDayVariant,
+    }),
+    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+    ...(playDurationVariation && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_play_and_duration_size_increase',
+      experimentVariant: playDurationVariation,
     }),
     viewThreshold: 1,
     itemTracker: {
@@ -122,6 +141,7 @@ export default ({
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />
@@ -137,9 +157,18 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+                <Play
+                  css={
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    isLargeVariation ? styles.playIconLarge : styles.playIcon
+                  }
+                />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text size="brevier" css={styles.duration}>
+                  <Text
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    size={isLargeVariation ? 'pica' : 'brevier'}
+                    css={styles.duration}
+                  >
                     {durationString}
                   </Text>
                 </time>

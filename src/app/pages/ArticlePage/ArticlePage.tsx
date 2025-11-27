@@ -74,14 +74,16 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 interface ReadTimeData {
   readTimeValue: number | undefined;
   readTimeVariant: string;
@@ -96,7 +98,7 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 const Placeholder = ({ className }: { className?: string }) => {
   const { service } = use(ServiceContext);
   const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
@@ -105,7 +107,7 @@ const Placeholder = ({ className }: { className?: string }) => {
   ) : null;
 };
 
-// EXPERIMENT: Article Read Time
+// EXPERIMENT: Article Read Time 2
 const getTimestampComponent =
   (
     hasByline: boolean,
@@ -115,7 +117,7 @@ const getTimestampComponent =
     readTimeData: ReadTimeData,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time
+    // EXPERIMENT: Article Read Time 2
     const { readTimeValue, readTimeVariant } = readTimeData;
     const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
     const showReadTimeBelowTimestamp =
@@ -148,7 +150,7 @@ const getTimestampComponent =
           popOut={false}
           showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
         />
-        {/* EXPERIMENT: Article Read Time */}
+        {/* EXPERIMENT: Article Read Time 2 */}
         {showReadTimeBelowTimestamp ? (
           <ReadTime
             readTimeValue={readTimeValue}
@@ -200,10 +202,20 @@ const getVideoComponent =
     );
   };
 
+const getContinueReadingButton =
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
+  () => {
+    return (
+      <ContinueReadingButton
+        showAllContent={showAllContent}
+        setShowAllContent={setShowAllContent}
+      />
+    );
+  };
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
-
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -213,24 +225,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
 
   const {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const experimentName = 'newswb_ws_read_more_b';
-  const experimentVariant = useOptimizelyVariation({
-    experimentName,
+  // EXPERIMENT: Article Read Time 2
+  const readTimeExperimentName = 'newswb_ws_article_read_time_2';
+  const readTimeExperimentVariant = useOptimizelyVariation({
+    experimentName: readTimeExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  const isInServerSideExperiment =
-    experimentVariant && experimentVariant !== 'off';
-
-  // EXPERIMENT: Article Read Time
-  const readTimeExperimentName = 'newswb_ws_article_read_time';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
+  // EXPERIMENT: Time of Day Experiment
+  const timeOfDayExperimentName = 'newswb_ws_tod_article';
+  const timeOfDayExperimentVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -264,9 +277,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
 
-  // EXPERIMENT: Article Read Time
+  // EXPERIMENT: Article Read Time 2
   const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
@@ -304,17 +316,37 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInServerSideExperiment && {
-      experimentName,
-      experimentVariant,
-    }),
+    // EXPERIMENT: Article Read Time 2
+    // Better way to handle this?
+    ...(readTimeExperimentVariant &&
+      readTimeExperimentVariant !== 'off' && {
+        experimentName: readTimeExperimentName,
+        experimentVariant: readTimeExperimentVariant,
+      }),
+    ...(timeOfDayExperimentVariant &&
+      timeOfDayExperimentVariant !== 'off' && {
+        experimentName: timeOfDayExperimentName,
+        experimentVariant: timeOfDayExperimentVariant,
+      }),
   };
 
-  // EXPERIMENT: Article Read Time
+  // EXPERIMENT: Article Read Time 2
   const readTimeData = {
     readTimeValue,
     readTimeVariant: readTimeExperimentVariant || 'off',
   };
+
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -324,7 +356,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time
+    // EXPERIMENT: Article Read Time 2
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
@@ -344,6 +376,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+      }),
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -372,14 +410,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  const showContinueReadingButton = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      experimentVariant &&
-      ['read-more-b'].includes(experimentVariant),
-  );
 
   return (
     <div css={styles.pageWrapper}>
@@ -429,25 +459,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
-            role="main"
-          >
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-              />
-            )}
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
@@ -467,7 +483,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           <RelatedContentSection
             content={blocks}
-            sendOptimizelyEvents={false}
+            // EXPERIMENT: Time of Day Experiment
+            {...(timeOfDayExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: timeOfDayExperimentName,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
           />
           {/* EXPERIMENT: Personalised Content */}
           {showPersonalisedContent && (
@@ -480,7 +503,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
         </div>
         {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
+          <SecondaryColumn
+            pageData={pageData}
+            // EXPERIMENT: Time of Day Experiment
+            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentName={timeOfDayExperimentName}
+          />
         )}
       </div>
       {!isApp && !isPGL && (
@@ -491,7 +519,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          // EXPERIMENT: Time of Day Experiment
+          eventTrackingData={{
+            componentName: 'most-read',
+            ...(timeOfDayExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayExperimentVariant,
+            }),
+          }}
         />
       )}
     </div>
