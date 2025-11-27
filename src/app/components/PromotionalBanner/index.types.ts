@@ -10,7 +10,7 @@ export interface PromotionalBannerProps {
   orText: string;
   primaryButton: PromotionalBannerButton;
   secondaryButton: PromotionalBannerButton;
+  id?: string;
   isDismissible?: boolean;
   handleClose?: () => void;
-  bannerAriaLabel: string;
 }
