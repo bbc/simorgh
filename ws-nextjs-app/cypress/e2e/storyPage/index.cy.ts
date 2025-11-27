@@ -16,6 +16,7 @@ import {
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/navigation';
+import liteArticleTests from '../articlePage/testsForLiteOnly';
 // import liteTests from '../articlePage/testsForLiteOnly';
 
 const canonicalTests = [
@@ -275,13 +276,23 @@ const ampTestSuites = [
   };
 });
 
+const liteTestSuites = canonicalSmokeTestSuites
+  .filter(({ service }) => service !== 'news' && service !== 'hausa')
+  .map(testSuite => {
+    return {
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      tests: [liteArticleTests],
+    };
+  });
+
 runTestsForPage({
   pageType: STORY_PAGE,
   headers: {
     'page-type': 'article',
     'BBC-Adverts': 'true',
   },
-  testSuites: [...canonicalTestSuites, ...ampTestSuites],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });
 
 runTestsForPage({
