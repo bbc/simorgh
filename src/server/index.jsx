@@ -9,7 +9,6 @@ import helmet from 'helmet';
 import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -40,7 +39,7 @@ import {
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
-import serviceConfigs from './utilities/serviceConfigs';
+import services from './utilities/serviceConfigs';
 import createAdNonce from '../app/utilities/createAdNonce';
 
 const morgan = require('morgan');
@@ -126,7 +125,7 @@ server
   .get(homePageManifestPath, async ({ params }, res) => {
     const { service } = params;
     const variant = defaultServiceVariants[service] || 'default';
-    const manifestPath = `${__dirname}/public${serviceConfigs[service][variant].manifestPath}`;
+    const manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
     res.set(
       'Cache-Control',
       'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
@@ -168,9 +167,7 @@ const injectPlatformToRequestChainHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const thisService = req.originalUrl.split('/')[1];
-
-  const assetOrigins = getAssetOrigins(thisService);
+  const assetOrigins = getAssetOrigins();
   res.set(
     'Link',
     assetOrigins
@@ -254,62 +251,6 @@ server.get(
         ?.toString()
         .toLowerCase();
 
-      if (pageType === 'article' && service === 'mundo' && !isAmp) {
-        // Ensure secondaryColumn exists
-        if (!data.pageData.secondaryColumn) {
-          data.pageData.secondaryColumn = {};
-        }
-        const countrySpecificTopics = {
-          ar: 'c7zp57yy6dzt',
-          cl: 'c340qyppkk8t',
-          mx: 'c340qyp6yggt',
-          co: 'c404v5gz1rkt',
-          es: 'c6vzy3wd189t',
-          ve: 'cpzd49v9rd1t',
-          us: 'cdr5613yzwqt',
-          uy: 'cpzd498zwj6t',
-          do: 'cr50y7pykkdt',
-        };
-        const hasCountryMatch =
-          data.country &&
-          Object.keys(countrySpecificTopics).includes(data.country);
-
-        if (hasCountryMatch) {
-          const countrySpecificId = countrySpecificTopics[data.country];
-          try {
-            const countrySpecificData = await fetchDataFromBFF({
-              pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
-              pageType: 'topic',
-              service,
-              variant,
-              isAmp,
-              getAgent,
-            });
-
-            const countryArticles =
-              countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
-
-            if (countrySpecificData?.json?.data) {
-              data.pageData.secondaryColumn.PersonalisedContent = [
-                {
-                  title: countrySpecificData.json.data.title,
-                  description: countrySpecificData.json.data.description,
-                  summaries: Array.isArray(countryArticles)
-                    ? countryArticles.slice(0, 4)
-                    : [],
-                  topicId: countrySpecificTopics[data.country],
-                },
-              ];
-            }
-          } catch (error) {
-            logger.warn('PERSONALISED_CONTENT_TOPIC_FETCH_FAILED', {
-              message: error?.message,
-              country: data.country,
-              topicId: countrySpecificId,
-            });
-          }
-        }
-      }
       const nonce = createAdNonce({
         toggles,
         country: data.country,
@@ -318,7 +259,7 @@ server.get(
         isAmp,
       });
 
-      injectCspHeader({ isAmp, service, nonce, res });
+      injectCspHeader({ isAmp, nonce, res });
 
       data.nonce = nonce;
       data.cspHeader = res.get('Content-Security-Policy');
