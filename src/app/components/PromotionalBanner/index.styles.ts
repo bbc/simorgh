@@ -65,7 +65,6 @@ const styles = {
       marginTop: `${spacings.DOUBLE}rem`,
       flexWrap: 'wrap',
       [mq.GROUP_1_MAX_WIDTH]: {
-        marginTop: `${spacings.TRIPLE}rem`,
         flexDirection: 'row',
       },
     }),
@@ -125,7 +124,7 @@ const styles = {
     css({
       position: 'absolute',
       top: 0,
-      right: 0,
+      insetInlineEnd: 0,
       border: 'none',
       background: 'transparent',
       padding: 0,
