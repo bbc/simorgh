@@ -11,6 +11,8 @@ A Byline component with all relevant article's author information.
 
 ## Example ltr/rtl
 
+blah
+
 ### Without Timestamp
 
 ```javascript
