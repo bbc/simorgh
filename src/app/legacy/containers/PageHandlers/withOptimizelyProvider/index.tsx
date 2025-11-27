@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -10,21 +10,23 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/brea
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
 
 const isInCypress = isCypress();
-const TIMEOUT_INTERVAL = 1000;
+const isStoryBook = process.env.STORYBOOK;
+const disableOptimizely = isStoryBook || isInCypress;
 
 if (isLive() || isInCypress) {
   setLogger(null);
 }
 
-const optimizely = createInstance({
-  sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
-  eventBatchSize: 10,
-  eventFlushInterval: 1000,
-});
+const getUserId = () => {
+  if (disableOptimizely || !onClient() || isOperaProxy()) return null;
+
+  return Cookie.get('ckns_mvt') ?? null;
+};
 
 const isMobile = () => {
   if (onClient()) {
@@ -37,7 +39,7 @@ const isMobile = () => {
     return false;
   }
 
-  return null;
+  return false;
 };
 
 export const REFERRER_CATEGORIES = {
@@ -52,6 +54,7 @@ const getReferrer = () => {
     const referrer = document?.referrer?.toLowerCase();
 
     const urlParams = new URLSearchParams(window.location.search);
+
     const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
 
     if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
@@ -60,7 +63,10 @@ const getReferrer = () => {
     if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
       return 'social';
 
-    if (REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam?.toLowerCase()))
+    if (
+      atParam &&
+      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
+    )
       return 'social';
 
     if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
@@ -72,34 +78,49 @@ const getReferrer = () => {
   return null;
 };
 
-const withOptimizelyProvider = Component => {
-  return props => {
-    const { service } = use(ServiceContext);
-    const isStoryBook = process.env.STORYBOOK;
-    const disableOptimizely = isStoryBook || isInCypress;
+export const COUNTRY_CODES_TO_EXPERIMENT = [
+  'es',
+  'mx',
+  'ar',
+  'co',
+  'us',
+  'cl',
+  've',
+  'uy',
+  'do',
+];
 
+const isCountryKnown = (country?: string | null) => {
+  if (!country) return false;
+
+  return COUNTRY_CODES_TO_EXPERIMENT.includes(country.toLowerCase());
+};
+
+const optimizely = createInstance({
+  sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
+  eventBatchSize: 10,
+  eventFlushInterval: 1000,
+});
+
+const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
+  return props => {
     if (disableOptimizely) return <Component {...props} />;
 
-    const mobile = isMobile();
-    const referrer = getReferrer();
-
-    const getUserId = () => {
-      if (disableOptimizely || !onClient() || isOperaProxy()) return null;
-
-      return Cookie.get('ckns_mvt') ?? null;
-    };
+    const { service } = use(ServiceContext);
+    const { country } = use(RequestContext);
 
     return (
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={TIMEOUT_INTERVAL}
+        timeout={1000}
         user={{
           id: getUserId(),
           attributes: {
             service,
-            mobile,
-            referrer,
+            mobile: isMobile(),
+            referrer: getReferrer(),
+            countryKnown: isCountryKnown(country),
           },
         }}
       >
