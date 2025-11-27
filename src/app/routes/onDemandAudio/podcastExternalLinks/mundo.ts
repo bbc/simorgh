@@ -12,7 +12,8 @@ export default {
     },
     {
       linkText: 'Amazon Music',
-      linkUrl: 'https://music.amazon.co.uk/podcasts/c9c083d3-f22a-4d1c-80f2-6718c97883de/improbable',
+      linkUrl:
+        'https://music.amazon.co.uk/podcasts/c9c083d3-f22a-4d1c-80f2-6718c97883de/improbable',
       linkType: 'amazon',
     },
   ],
