@@ -1,11 +1,18 @@
+/* eslint-disable import/no-unresolved */
 import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
+import { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
-import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
+import withOptimizelyProvider, {
+  REFERRER_CATEGORIES,
+  COUNTRY_CODES_TO_EXPERIMENT,
+} from '.';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -29,17 +36,24 @@ const optimizelyProviderSpy = jest.spyOn(
 
 const Component = () => <h1>Hola Optimizely</h1>;
 
-const TestComponent = () => {
+const TestComponent = ({ country }: { country?: string }) => {
   const OptimizelyComponent = withOptimizelyProvider(Component);
 
   const memoizedServiceContextValue = useMemo(
     () => ({ script: latin, service: 'news' }),
     [],
-  );
+  ) as ServiceConfig;
+
+  const memoizedRequestContextValue = useMemo(
+    () => ({ country }),
+    [country],
+  ) as RequestContextProps;
 
   return (
     <ServiceContext.Provider value={memoizedServiceContextValue}>
-      <OptimizelyComponent {...props} />
+      <RequestContext.Provider value={memoizedRequestContextValue}>
+        <OptimizelyComponent {...props} />
+      </RequestContext.Provider>
     </ServiceContext.Provider>
   );
 };
@@ -94,7 +108,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.mobile,
       ).toBe(true);
     });
 
@@ -106,7 +121,8 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.mobile,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.mobile,
       ).toBe(false);
     });
   });
@@ -135,7 +151,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('search');
       },
     );
@@ -151,7 +168,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -167,7 +185,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('direct');
       },
     );
@@ -183,7 +202,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -199,7 +219,8 @@ describe('withOptimizelyProvider HOC', () => {
         render(<TestComponent />);
 
         expect(
-          optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.referrer,
         ).toBe('social');
       },
     );
@@ -213,26 +234,60 @@ describe('withOptimizelyProvider HOC', () => {
       render(<TestComponent />);
 
       expect(
-        optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.referrer,
       ).toBe('direct');
+    });
+
+    it('should set referrer to null when no conditions are met', () => {
+      Object.defineProperty(document, 'referrer', {
+        value: 'https://www.unknownsource.com',
+        writable: true,
+      });
+
+      Object.defineProperty(window, 'location', {
+        value: { search: '' },
+        writable: true,
+      });
+
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.referrer,
+      ).toBeNull();
     });
   });
 
-  it('should set referrer to null when no conditions are met', () => {
-    Object.defineProperty(document, 'referrer', {
-      value: 'https://www.unknownsource.com',
-      writable: true,
+  describe('countryKnown attribute', () => {
+    it.each(COUNTRY_CODES_TO_EXPERIMENT)(
+      'should set countryKnown to true when the country code is %s',
+      countryCode => {
+        render(<TestComponent country={countryCode} />);
+
+        expect(
+          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
+            ?.attributes?.countryKnown,
+        ).toBe(true);
+      },
+    );
+
+    it('should set countryKnown to false when the country code is not in defined list', () => {
+      render(<TestComponent country="fakecode" />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.countryKnown,
+      ).toBe(false);
     });
 
-    Object.defineProperty(window, 'location', {
-      value: { search: '' },
-      writable: true,
+    it('should set countryKnown to false when the country code is unknown', () => {
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.countryKnown,
+      ).toBe(false);
     });
-
-    render(<TestComponent />);
-
-    expect(
-      optimizelyProviderSpy.mock.calls[0][0].user.attributes.referrer,
-    ).toBeNull();
   });
 });
