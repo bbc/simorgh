@@ -17,6 +17,51 @@ self.addEventListener('install', event => {
   });
 });
 
+self.addEventListener('periodicsync', event => {
+  if (event.tag === 'get-latest-news') {
+    showNotification();
+  }
+});
+
+async function showNotification() {
+  if (Notification.permission !== 'granted') {
+    console.warn('Notification permission is not granted.');
+    return; // Exit early if notifications are not enabled
+  }
+
+  const title = "What's happened this week on BBC Mundo";
+  const options = {
+    body: 'Check out these stories',
+    actions: [
+      {
+        action: 'story-1',
+        type: 'button',
+        title:
+          '"Llené de cicatrices a mis 6 hijos al utilizar cremas para aclarar sus pieles": la epidemia de "decoloración" que llevó a Nigeria a declarar el estado de emergencia',
+      },
+      {
+        action: 'story-2',
+        type: 'button',
+        title:
+          'El gabinete de Defensa de Trump compartió sus planes de atacar Yemen con un periodista en un chat grupal sin darse cuenta',
+      },
+      {
+        action: 'story-3',
+        type: 'button',
+        title:
+          '"Sobreviviendo a lo imposible": la fotógrafa mexicana que muestra los desafíos diarios que enfrentan los cubanos por el colapso económico de su país',
+      },
+    ],
+  };
+
+  try {
+    await self.registration.showNotification(title, options);
+    console.log('Notification displayed successfully.');
+  } catch (error) {
+    console.error('Failed to display notification:', error);
+  }
+}
+
 const CACHEABLE_FILES = [
   // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
