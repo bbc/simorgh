@@ -275,28 +275,13 @@ const ampTestSuites = [
   };
 });
 
-// SKIPPED: We are not able to set page-type headers in cy.click and cy.back
-// const liteTestSuites = canonicalTestSuites
-//   .filter(({ service }) => !['news', 'newsround'].includes(service))
-//   .map(testSuite => {
-//     return {
-//       ...testSuite,
-//       path: `${testSuite.path}.lite`,
-//       tests: [liteTests],
-//     };
-//   });
-
 runTestsForPage({
   pageType: STORY_PAGE,
   headers: {
     'page-type': 'article',
     'BBC-Adverts': 'true',
   },
-  testSuites: [
-    ...canonicalTestSuites,
-    ...ampTestSuites,
-    // ...liteTestSuites
-  ],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites],
 });
 
 runTestsForPage({
