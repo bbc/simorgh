@@ -7,6 +7,7 @@ import Subheading from '#app/components/Curation/Subhead';
 import { Summary } from '#app/models/types/curationData';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from '#app/components/RelatedContentSection/index.styles';
 
 const PersonalisedContent = ({
@@ -69,6 +70,7 @@ const PersonalisedContent = ({
     },
   };
   const viewTracker = useViewTracker(eventTrackingData);
+  const subheadingClickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!personalisedContentData) {
     return null;
@@ -82,7 +84,7 @@ const PersonalisedContent = ({
       css={styles.relatedContentSection} // use the same style as related content for padding unless we want to make it look different
     >
       {title && (
-        <Subheading id={id} link={link}>
+        <Subheading id={id} link={link} {...subheadingClickTracker}>
           {title}
         </Subheading>
       )}

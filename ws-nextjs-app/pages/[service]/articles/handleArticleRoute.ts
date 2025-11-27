@@ -144,6 +144,7 @@ export default async (context: GetServerSidePropsContext) => {
             {
               title: countrySpecificData.json.data.title,
               description: countrySpecificData.json.data.description,
+              link: `/${service}/topics/${countrySpecificId}`,
               summaries: Array.isArray(countryArticles)
                 ? countryArticles.slice(0, 4)
                 : [],
