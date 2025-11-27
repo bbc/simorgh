@@ -15,29 +15,17 @@ const PromotionalBanner = ({
   primaryButton,
   secondaryButton,
   handleClose,
+  id = 'promotional-banner',
 }: PromotionalBannerProps) => {
   return (
-    <aside
-      css={styles.banner}
-      role="complementary"
-      aria-labelledby="banner-title"
-    >
+    <aside css={styles.banner} role="complementary" aria-labelledby={id}>
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
-            <Heading
-              level={2}
-              css={styles.title}
-              size="paragon"
-              id="banner-title"
-            >
+            <Heading level={2} css={styles.title} size="paragon" id={id}>
               {title}
             </Heading>
-            <Paragraph
-              css={styles.description}
-              size="longPrimer"
-              id="banner-description"
-            >
+            <Paragraph css={styles.description} size="longPrimer">
               {description}
             </Paragraph>
           </div>
