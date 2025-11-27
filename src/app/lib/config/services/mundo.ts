@@ -55,17 +55,17 @@ export const service: DefaultServiceConfig = {
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
     },
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Únete a nuestro WhatsApp',
+      title: 'Podcast',
+      brandTitle: 'Improbable',
       brandDescription:
-        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
-        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mk3s9j.png',
+        alt: 'Logo del podcast Improbable sobre una foto boda de una pareja',
       },
       linkLabel: {
-        text: 'Suscríbete aquí',
-        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+        text: 'Episodios',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhs01',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
