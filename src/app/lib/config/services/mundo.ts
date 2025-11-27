@@ -72,6 +72,19 @@ export const service: DefaultServiceConfig = {
         endTextVisuallyHidden: 'Fin de %title%',
       },
     },
+    promotionalBanner: {
+      title: 'Accede a BBC Noticias con un solo toque',
+      description:
+        'Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo.',
+      orText: 'o',
+      primaryButton: {
+        text: 'Agregar',
+        longText: 'Agregar a la pantalla de inicio',
+      },
+      secondaryButton: {
+        text: 'No ahora',
+      },
+    },
     translations: {
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
