@@ -80,12 +80,5 @@ export default ({
     },
     mediaType: 'video',
     showAds: false,
-    // placeholderConfig: {
-    //   ...placeholderConfig,
-    //   placeholderSrcset: placeholderConfig.placeholderSrcset.replaceAll(
-    //     'xn',
-    //     '',
-    //   ),
-    // },
   };
 };
