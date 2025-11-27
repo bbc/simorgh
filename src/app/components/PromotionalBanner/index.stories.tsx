@@ -27,7 +27,6 @@ const ComponentWithContext = ({
           text: secondaryButton?.text,
           onClick: () => console.log('Secondary clicked'),
         }}
-        bannerAriaLabel={bannerConfig.bannerAriaLabel}
         isDismissible
         handleClose={() => console.log('Banner closed')}
       />

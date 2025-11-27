@@ -15,13 +15,12 @@ const PromotionalBanner = ({
   primaryButton,
   secondaryButton,
   handleClose,
-  bannerAriaLabel,
 }: PromotionalBannerProps) => {
   return (
     <aside
       css={styles.banner}
       role="complementary"
-      aria-label={bannerAriaLabel}
+      aria-labelledby="banner-title"
     >
       <div css={styles.innerContainer}>
         <div css={styles.content}>

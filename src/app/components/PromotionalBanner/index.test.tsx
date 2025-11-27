@@ -21,7 +21,6 @@ describe('PromotionalBanner', () => {
       text: 'Not now',
       onClick: jest.fn(),
     },
-    bannerAriaLabel: 'Promotional Banner',
     handleClose: jest.fn(),
   };
 

@@ -19,7 +19,6 @@ import PromotionalBanner from './PromotionallBanner';
 - `secondaryButton`: { text: string, longText?: string, onClick: () => void }
 - `isDismissible?`: boolean
 - `handleClose`: () => void
-- `bannerAriaLabel`: string
 
 ## Service Config
 

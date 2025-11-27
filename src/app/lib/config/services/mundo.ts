@@ -84,7 +84,6 @@ export const service: DefaultServiceConfig = {
       secondaryButton: {
         text: 'No ahora',
       },
-      bannerAriaLabel: 'Banner promocional',
     },
     translations: {
       readTime: {
