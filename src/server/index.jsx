@@ -274,32 +274,40 @@ server.get(
           data.country &&
           Object.keys(countrySpecificTopics).includes(data.country);
 
-        let countrySpecificData;
         if (hasCountryMatch) {
           const countrySpecificId = countrySpecificTopics[data.country];
-          countrySpecificData = await fetchDataFromBFF({
-            pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
-            pageType: 'topic',
-            service,
-            variant,
-            isAmp,
-            getAgent,
-          });
-        }
-        const countryArticles =
-          countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
+          try {
+            const countrySpecificData = await fetchDataFromBFF({
+              pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
+              pageType: 'topic',
+              service,
+              variant,
+              isAmp,
+              getAgent,
+            });
 
-        if (hasCountryMatch && countrySpecificData?.json?.data) {
-          data.pageData.secondaryColumn.PersonalisedContent = [
-            {
-              title: countrySpecificData.json.data.title,
-              description: countrySpecificData.json.data.description,
-              summaries: Array.isArray(countryArticles)
-                ? countryArticles.slice(0, 4)
-                : [],
-              topicId: countrySpecificTopics[data.country],
-            },
-          ];
+            const countryArticles =
+              countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
+
+            if (countrySpecificData?.json?.data) {
+              data.pageData.secondaryColumn.PersonalisedContent = [
+                {
+                  title: countrySpecificData.json.data.title,
+                  description: countrySpecificData.json.data.description,
+                  summaries: Array.isArray(countryArticles)
+                    ? countryArticles.slice(0, 4)
+                    : [],
+                  topicId: countrySpecificTopics[data.country],
+                },
+              ];
+            }
+          } catch (error) {
+            logger.warn('PERSONALISED_CONTENT_TOPIC_FETCH_FAILED', {
+              message: error?.message,
+              country: data.country,
+              topicId: countrySpecificId,
+            });
+          }
         }
       }
       const nonce = createAdNonce({
