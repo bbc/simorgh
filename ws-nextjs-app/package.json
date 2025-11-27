@@ -48,7 +48,8 @@
     "mocha-junit-reporter": "2.2.1",
     "next-test-api-route-handler": "5.0.3",
     "npm-run-all2": "8.0.4",
-    "swc-loader": "0.2.6"
+    "swc-loader": "0.2.6",
+    "ts-node": "10.9.2"
   },
   "dependencies": {
     "next": "15.5.2",
