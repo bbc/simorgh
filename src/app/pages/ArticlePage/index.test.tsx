@@ -996,30 +996,54 @@ describe('Article Page', () => {
       );
       expect(container).toBeEmptyDOMElement();
     });
-    // it('renders section and subheading when personalisedContentData is present', () => {
-    //   const personalisedContent = {
-    //     title: 'Recommended for you',
-    //     articles: [{ headline: 'Article 1' }, { headline: 'Article 2' }],
-    //     id: 'personalised-content',
-    //   };
-    //   const pageData = {
-    //     ...articleDataNews,
-    //     secondaryColumn: {
-    //       topStories: [],
-    //       features: [],
-    //       PersonalisedContent: personalisedContent, // <-- Pass as object
-    //     },
-    //   };
-    //   render(
-    //     <PersonalisedContent
-    //       pageData={pageData}
-    //       personalisedTopicCurationExperimentVariant="variantA"
-    //     />,
-    //   );
-    //   expect(screen.getByRole('region')).toBeInTheDocument();
-    //   expect(screen.getByText('Recommended for you')).toBeInTheDocument();
-    //   expect(screen.getByText('Article 1')).toBeInTheDocument();
-    //   expect(screen.getByText('Article 2')).toBeInTheDocument();
-    // });
+    it('renders section and subheading when personalisedContentData is present', () => {
+      const personalisedContent = [
+        {
+          title: 'Recommended for you',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Article 1',
+              description: 'Description 1',
+              link: '/article-1',
+              imageUrl: 'image-1.jpg',
+              imageAlt: 'Image 1',
+              isLive: false,
+              id: 'article-1',
+            },
+            {
+              type: 'promo',
+              title: 'Article 2',
+              description: 'Description 2',
+              link: '/article-2',
+              imageUrl: 'image-2.jpg',
+              imageAlt: 'Image 2',
+              isLive: false,
+              id: 'article-2',
+            },
+          ],
+          id: 'personalised-content',
+          topicId: 'topic-1',
+        },
+      ];
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+          PersonalisedContent: personalisedContent,
+        },
+      };
+      render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="personalised"
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(screen.getByText('Recommended for you')).toBeInTheDocument();
+      expect(screen.getByText('Article 1')).toBeInTheDocument();
+      expect(screen.getByText('Article 2')).toBeInTheDocument();
+    });
   });
 });
