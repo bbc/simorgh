@@ -10,6 +10,12 @@ import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 // import liteTests from '../articlePage/testsForLiteOnly';
 
 const canonicalTests = [
@@ -199,6 +205,14 @@ const ampOnlyNonSmokeTestSuites = [
   },
 ];
 
+const atiAnalyticsTests = [
+  assertPageView,
+  assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+  assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  assertScrollableNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+];
+
 const atiAnalyticsTestSuites = [
   {
     path: '/hausa/labarai-54292969',
@@ -209,7 +223,7 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     useReverb: true,
-    tests: [assertPageView],
+    tests: [...atiAnalyticsTests],
   },
   {
     path: '/mundo/noticias-54274735',
@@ -220,7 +234,7 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     useReverb: true,
-    tests: [assertPageView],
+    tests: [...atiAnalyticsTests],
   },
   {
     path: '/russian/news-55041160',
@@ -231,7 +245,7 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     useReverb: true,
-    tests: [assertPageView],
+    tests: [...atiAnalyticsTests],
   },
   {
     path: '/thai/international-53381389',
@@ -242,7 +256,7 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'article',
     useReverb: true,
-    tests: [assertPageView],
+    tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
 
