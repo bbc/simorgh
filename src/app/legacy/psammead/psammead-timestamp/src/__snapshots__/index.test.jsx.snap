@@ -42,8 +42,8 @@ exports[`Timestamp should render Timestamp correctly 1`] = `
 
 exports[`Timestamp should render Timestamp with a prefix 1`] = `
 .emotion-0 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -54,15 +54,15 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -82,8 +82,8 @@ exports[`Timestamp should render Timestamp with a prefix 1`] = `
 
 exports[`Timestamp should render Timestamp without padding 1`] = `
 .emotion-0 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -93,15 +93,15 @@ exports[`Timestamp should render Timestamp without padding 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 
@@ -138,46 +138,6 @@ exports[`Timestamp should render dark mode Timestamp correctly on page types tha
   .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
-  }
-}
-
-.emotion-0:last-child {
-  padding-bottom: 1rem;
-}
-
-<div>
-  <time
-    class="emotion-0 emotion-1"
-    datetime="1530947227000"
-  >
-    7 July 2018
-  </time>
-</div>
-`;
-
-exports[`Timestamp should render with the correct typography style applied 1`] = `
-.emotion-0 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  color: #545658;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  padding-bottom: 0.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
   }
 }
 
