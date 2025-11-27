@@ -235,7 +235,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   });
 
   // EXPERIMENT: Personalised Content Rail
-  const personalisedContentExperimentName = 'newswb_ws_personalised_content';
+  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
   let personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
