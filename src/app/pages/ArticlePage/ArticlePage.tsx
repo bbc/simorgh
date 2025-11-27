@@ -252,9 +252,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           !isLite &&
           !isApp &&
           personalisedContentExperimentVariant &&
-          ['personalised', 'default'].includes(
-            personalisedContentExperimentVariant,
-          ),
+          personalisedContentExperimentVariant === 'personalised',
       );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;

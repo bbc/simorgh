@@ -270,36 +270,15 @@ server.get(
           uy: 'cpzd498zwj6t',
           do: 'cr50y7pykkdt',
         };
-        const defaultTopicId = 'c7zp57yyz25t';
         const hasCountryMatch =
           data.country &&
           Object.keys(countrySpecificTopics).includes(data.country);
 
         let countrySpecificData;
-        let defaultTopicData;
         if (hasCountryMatch) {
           const countrySpecificId = countrySpecificTopics[data.country];
-          [countrySpecificData, defaultTopicData] = await Promise.all([
-            fetchDataFromBFF({
-              pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
-              pageType: 'topic',
-              service,
-              variant,
-              isAmp,
-              getAgent,
-            }),
-            fetchDataFromBFF({
-              pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
-              pageType: 'topic',
-              service,
-              variant,
-              isAmp,
-              getAgent,
-            }),
-          ]);
-        } else {
-          defaultTopicData = await fetchDataFromBFF({
-            pathname: `/${service}/topics/${defaultTopicId}?renderer_env=live`,
+          countrySpecificData = await fetchDataFromBFF({
+            pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
             pageType: 'topic',
             service,
             variant,
@@ -309,10 +288,8 @@ server.get(
         }
         const countryArticles =
           countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
-        const defaultArticles =
-          defaultTopicData?.json?.data?.curations?.[0]?.summaries || [];
 
-        if (hasCountryMatch && defaultTopicData) {
+        if (hasCountryMatch && countrySpecificData?.json?.data) {
           data.pageData.secondaryColumn.PersonalisedContent = [
             {
               title: countrySpecificData.json.data.title,
@@ -321,25 +298,6 @@ server.get(
                 ? countryArticles.slice(0, 4)
                 : [],
               topicId: countrySpecificTopics[data.country],
-            },
-            {
-              title: defaultTopicData.json.data.title,
-              description: defaultTopicData.json.data.description,
-              summaries: Array.isArray(defaultArticles)
-                ? defaultArticles.slice(0, 4)
-                : [],
-              topicId: defaultTopicId,
-            },
-          ];
-        } else if (defaultTopicData) {
-          data.pageData.secondaryColumn.PersonalisedContent = [
-            {
-              title: defaultTopicData.json.data.title,
-              description: defaultTopicData.json.data.description,
-              summaries: Array.isArray(defaultArticles)
-                ? defaultArticles.slice(0, 4)
-                : [],
-              topicId: defaultTopicId,
             },
           ];
         }
