@@ -13,6 +13,8 @@ import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaim
 import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import getAgent from '#server/utilities/getAgent';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
@@ -94,9 +96,70 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const { article, secondaryData } = data?.pageData || {};
+  const country =
+    (reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'])
+      ?.toString()
+      .toLowerCase();
 
-  const { topStories, features, latestMedia, mostRead } = secondaryData;
+  const shouldAttemptPersonalisedTopicExperience =
+    service === 'mundo' && !isAmp && Boolean(country);
+
+  const { article, secondaryData } = data?.pageData || {};
+  const { topStories, features, latestMedia, mostRead } = secondaryData || {};
+
+  let personalisedContent;
+
+  if (shouldAttemptPersonalisedTopicExperience) {
+    const countrySpecificTopics: Record<string, string> = {
+      ar: 'c7zp57yy6dzt',
+      cl: 'c340qyppkk8t',
+      mx: 'c340qyp6yggt',
+      co: 'c404v5gz1rkt',
+      es: 'c6vzy3wd189t',
+      ve: 'cpzd49v9rd1t',
+      us: 'cdr5613yzwqt',
+      uy: 'cpzd498zwj6t',
+      do: 'cr50y7pykkdt',
+    };
+
+    const countrySpecificId =
+      country && countrySpecificTopics[country.toString()];
+
+    if (countrySpecificId) {
+      try {
+        const countrySpecificData = await fetchDataFromBFF({
+          pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
+          pageType: 'topic',
+          service,
+          variant: variant || undefined,
+          isAmp,
+          getAgent,
+        });
+
+        const countryArticles =
+          countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
+
+        if (countrySpecificData?.json?.data) {
+          personalisedContent = [
+            {
+              title: countrySpecificData.json.data.title,
+              description: countrySpecificData.json.data.description,
+              summaries: Array.isArray(countryArticles)
+                ? countryArticles.slice(0, 4)
+                : [],
+              topicId: countrySpecificId,
+            },
+          ];
+        }
+      } catch (error) {
+        logger.warn('PERSONALISED_CONTENT_TOPIC_FETCH_FAILED', {
+          message: (error as Error)?.message,
+          country,
+          topicId: countrySpecificId,
+        });
+      }
+    }
+  }
 
   const transformedArticleData = transformPageData(toggles)(article);
 
@@ -127,6 +190,9 @@ export default async (context: GetServerSidePropsContext) => {
           topStories: topStories || null,
           features: features || null,
           latestMedia: latestMedia || null,
+          ...(personalisedContent && {
+            PersonalisedContent: personalisedContent,
+          }),
         },
         mostRead,
       },
