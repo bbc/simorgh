@@ -18,7 +18,6 @@ const mockPersonalisedContent = [
     ],
     id: 'personalised-content',
     link: '/personalised-link',
-    isFirstCuration: true,
     topicId: 'topic-1',
   },
 ];

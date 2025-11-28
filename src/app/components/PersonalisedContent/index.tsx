@@ -25,7 +25,6 @@ const PersonalisedContent = ({
     link?: string;
     renderVisuallyHiddenH2Title?: boolean;
     curationSubheading?: string;
-    isFirstCuration?: boolean;
     topicId?: string;
   };
 
@@ -52,7 +51,6 @@ const PersonalisedContent = ({
     summaries = [],
     id = 'personalised-content',
     link = '',
-    isFirstCuration = false,
     topicId = '',
   } = personalisedContentData || {};
 
@@ -91,7 +89,6 @@ const PersonalisedContent = ({
       <CurationGrid
         summaries={summaries}
         headingLevel={3}
-        isFirstCuration={isFirstCuration}
         eventTrackingData={eventTrackingData}
       />
     </section>
