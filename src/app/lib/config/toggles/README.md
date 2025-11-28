@@ -12,7 +12,38 @@ https://github.com/bbc/simorgh/blob/9fecaba6ef30b3fff627ef9a75f0286d63f0a343/src
 
 If a toggle is not configured in iSite or in the local toggle configs deployed with Simorgh, then the toggle value will default to false.
 
+> [!WARNING]  
+> There are some cases where a toggle **is** configured in iSite (an entry is present in iSite) but may not have values configured. The fetched response overwrites the local config file via destructuring (see [`getToggles()`](https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getToggles/index.js#L83-L85) ). However if no value is configured, the local config file values will be used.
+> E.g. The `adsNonce` toggle is a valid toggle on iSite with valid entries as of 28/11/2025. This toggle affects services listed as entries on iSite, but for services **not** present as entries there, the local config files will be used. This caused issues before as all config files set this value as `true`. See https://github.com/bbc/simorgh/pull/13338 for more details.
+
 Feature toggles can be found in `src/app/lib/config/toggles`
+
+## Viewing the toggles response
+The toggles response can be viewed here (for test, live). The `Origin` header must also be set as `https://www.bbc.com/`.
+
+
+## Fetching toggles locally
+By default, fetching toggles from iSite is not enabled on the local environment - it will just use the default values from the [localConfig file](https://github.com/bbc/simorgh/blob/latest/src/app/lib/config/toggles/localConfig.js). Note that this file is **not** service aware - it will set the same value for all services.
+
+In cases where the toggles response needs to be tested/validated, the following commands can be run.
+
+For **Test iSite**:
+
+```
+FETCH_TOGGLES=true yarn dev
+```
+
+For **Live iSite toggles**:
+```
+yarn build:live:debug && yarn start
+```
+> [!NOTE]  
+> Hot reloading will not work using this command - if you make a code change you need to rebuild & restart the application server.
+> If hot reloading is necessary:
+> - set `SIMORGH_APP_ENV=live` in local.env (ensure these changes are not committed)
+> - run `FETCH_TOGGLES=true yarn dev` to start the application server.
+>
+> This will also use data from the live BFF FABL module.
 
 # Simorgh Application Toggles
 
