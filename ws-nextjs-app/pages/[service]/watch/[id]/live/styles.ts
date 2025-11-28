@@ -32,7 +32,8 @@ const styles = {
     }),
   title: ({ mq, palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingTop: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
       [mq.FORCED_COLOURS]: {
