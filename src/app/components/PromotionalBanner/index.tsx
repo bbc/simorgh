@@ -39,7 +39,6 @@ const PromotionalBanner = ({
               onClick={primaryButton?.onClick}
               size="bodyCopy"
               fontVariant="sansBold"
-              aria-label={primaryButton.text || primaryButton.longText}
             >
               <span className="short-text">{primaryButton.text}</span>
               {primaryButton.longText && (
@@ -59,7 +58,6 @@ const PromotionalBanner = ({
               size="bodyCopy"
               fontVariant="sansBold"
               onClick={secondaryButton?.onClick}
-              aria-label={secondaryButton.text}
             >
               {secondaryButton.text}
             </Text>
