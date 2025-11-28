@@ -6,6 +6,7 @@ import { Close } from '../icons';
 import Text from '../Text';
 import Paragraph from '../Paragraph';
 import Heading from '../Heading';
+import VisuallyHiddenText from '../VisuallyHiddenText';
 
 const PromotionalBanner = ({
   title,
@@ -14,15 +15,22 @@ const PromotionalBanner = ({
   orText,
   primaryButton,
   secondaryButton,
-  handleClose,
+  onClose,
+  onPrimaryClick,
+  onSecondaryClick,
+  bannerLabel,
+  closeLabel,
   id = 'promotional-banner',
 }: PromotionalBannerProps) => {
   return (
     <aside css={styles.banner} role="complementary" aria-labelledby={id}>
+      <VisuallyHiddenText as="strong" id={id}>
+        {bannerLabel}
+      </VisuallyHiddenText>
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
-            <Heading level={2} css={styles.title} size="paragon" id={id}>
+            <Heading level={2} css={styles.title} size="paragon">
               {title}
             </Heading>
             <Paragraph css={styles.description} size="longPrimer">
@@ -36,7 +44,7 @@ const PromotionalBanner = ({
               type="button"
               css={styles.primaryButton}
               className="focusIndicatorInvert"
-              onClick={primaryButton?.onClick}
+              onClick={onPrimaryClick}
               size="bodyCopy"
               fontVariant="sansBold"
             >
@@ -57,20 +65,20 @@ const PromotionalBanner = ({
               className="focusIndicatorInvert"
               size="bodyCopy"
               fontVariant="sansBold"
-              onClick={secondaryButton?.onClick}
+              onClick={onSecondaryClick}
             >
-              {secondaryButton.text}
+              {secondaryButton?.text}
             </Text>
           </div>
         </div>
-        {isDismissible && (
+        {isDismissible && onClose && (
           <Text
             as="button"
             type="button"
-            aria-label="close"
             css={styles.closeButton}
-            onClick={handleClose}
+            onClick={onClose}
           >
+            <VisuallyHiddenText as="strong">{closeLabel}</VisuallyHiddenText>
             <Close css={styles.closeButtonIcon} />
           </Text>
         )}

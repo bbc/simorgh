@@ -5,23 +5,30 @@ import {
   fireEvent,
 } from '../react-testing-library-with-providers';
 import PromotionalBanner from '.';
+import { PromotionalBannerProps } from './index.types';
 
 describe('PromotionalBanner', () => {
-  const defaultProps = {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const defaultProps: PromotionalBannerProps = {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
     isDismissible: true,
     orText: 'or',
+    bannerLabel: 'Promotional Banner',
+    closeLabel: 'Close',
     primaryButton: {
       text: 'Install',
       longText: 'Install the PWA App',
-      onClick: jest.fn(),
     },
     secondaryButton: {
       text: 'Not now',
-      onClick: jest.fn(),
     },
-    handleClose: jest.fn(),
+    onPrimaryClick: jest.fn(),
+    onSecondaryClick: jest.fn(),
+    onClose: jest.fn(),
   };
 
   it('renders default props', () => {
@@ -38,13 +45,13 @@ describe('PromotionalBanner', () => {
   it('calls the primary button click handler when short text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install'));
-    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
+    expect(defaultProps.onPrimaryClick).toHaveBeenCalledTimes(1);
   });
 
   it('calls the primary button click handler when long text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install the PWA App'));
-    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
+    expect(defaultProps.onPrimaryClick).toHaveBeenCalledTimes(1);
   });
 
   it('renders the banner with title and description', () => {
@@ -67,19 +74,24 @@ describe('PromotionalBanner', () => {
     render(<PromotionalBanner {...defaultProps} />);
 
     fireEvent.click(screen.getByRole('button', { name: /Install/i }));
-    expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
+    expect(defaultProps.onPrimaryClick).toHaveBeenCalledTimes(1);
   });
 
   it('calls the secondary button click handler when clicked', () => {
     render(<PromotionalBanner {...defaultProps} />);
 
-    fireEvent.click(screen.getByText('Not now'));
-    expect(defaultProps.secondaryButton.onClick).toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', { name: /not now/i }));
+    expect(defaultProps.onSecondaryClick).toHaveBeenCalledTimes(1);
   });
 
-  it('renders the dismiss button when isDismissible is true', () => {
+  it('calls the close button click handler when clicked', () => {
     render(<PromotionalBanner {...defaultProps} />);
 
+    fireEvent.click(screen.getByRole('button', { name: /close/i }));
+    expect(defaultProps.onClose).toHaveBeenCalledTimes(1);
+  });
+  it('renders the dismiss button when isDismissible is true', () => {
+    render(<PromotionalBanner {...defaultProps} />);
     expect(screen.getByRole('button', { name: /close/i })).toBeInTheDocument();
   });
 
