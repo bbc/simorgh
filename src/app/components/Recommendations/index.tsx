@@ -19,16 +19,13 @@ import {
   mapTopStoryToRecommendation,
 } from './helpers';
 
-const eventTrackingData = {
-  componentName: 'midarticle-mostread',
-};
-
 interface RecommendationsProps {
   data: Recommendation[];
   blocks?: OptimoBlock[];
   topStoriesContent?: unknown;
   featuresContent?: unknown;
-  referrerExperimentVariant?: string;
+  referrerVariant?: string;
+  experimentProps?: Record<string, unknown>;
 }
 
 const Recommendations = ({
@@ -36,12 +33,11 @@ const Recommendations = ({
   blocks, // search
   topStoriesContent, // direct
   featuresContent, // social
-  referrerExperimentVariant, // experiment variant for referrer
+  referrerVariant, // experiment variant for referrer
+  experimentProps,
 }: RecommendationsProps) => {
   const { recommendations, script, service, dir, translations } =
     use(ServiceContext);
-
-  const viewTracker = useViewTracker(eventTrackingData);
 
   const {
     palette: { GREY_2 },
@@ -55,22 +51,22 @@ const Recommendations = ({
   let title = header ?? 'Most read';
   // most read  was there originally, so is there for control and when the user is not in an experiment
   if (
-    !referrerExperimentVariant ||
-    referrerExperimentVariant === 'off' ||
-    referrerExperimentVariant.includes('control')
+    !referrerVariant ||
+    referrerVariant === 'off' ||
+    referrerVariant.includes('control')
   ) {
     displayData = data ?? [];
-  } else if (referrerExperimentVariant === 'adaptive_search') {
+  } else if (referrerVariant === 'adaptive_search') {
     displayData = getRelatedContentData(blocks ?? []).map(
       mapOptimoBlockToRecommendation,
     );
     title = pathOr('Related Content', ['relatedContent'], translations);
-  } else if (referrerExperimentVariant === 'adaptive_direct') {
+  } else if (referrerVariant === 'adaptive_direct') {
     displayData = Array.isArray(topStoriesContent)
       ? topStoriesContent.map(mapTopStoryToRecommendation)
       : [];
     title = translations?.topStoriesTitle ?? 'Top Stories';
-  } else if (referrerExperimentVariant === 'adaptive_social') {
+  } else if (referrerVariant === 'adaptive_social') {
     displayData = Array.isArray(featuresContent)
       ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
       : [];
@@ -80,6 +76,25 @@ const Recommendations = ({
       translations,
     );
   }
+  const componentName = 'midarticle-mostread';
+  console.log('displayData: ', displayData);
+  const groupTracker = {
+    name: title,
+    type: componentName,
+    itemCount: 4,
+  };
+
+  const baseEventTrackingData = {
+    componentName,
+    groupTracker,
+  };
+
+  const eventTrackingData = {
+    ...baseEventTrackingData,
+    ...(experimentProps && experimentProps),
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
 
   if (!enabled || !displayData.length) return null;
 
@@ -135,9 +150,19 @@ const Recommendations = ({
           <RecommendationsItem recommendation={displayData?.[0]} />
         ) : (
           <ul css={styles.recommendationsList} role="list" {...viewTracker}>
-            {displayData?.map(recommendation => (
+            {displayData?.map((recommendation, index) => (
               <li key={recommendation.id} role="listitem">
-                <RecommendationsItem recommendation={recommendation} />
+                <RecommendationsItem
+                  recommendation={recommendation}
+                  eventTrackingData={{
+                    ...eventTrackingData,
+                    itemTracker: {
+                      type: 'midarticle-mostread-promo',
+                      text: recommendation.title,
+                      position: index + 1,
+                    },
+                  }}
+                />
               </li>
             ))}
           </ul>

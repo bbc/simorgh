@@ -8,19 +8,17 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import styles from './index.styles';
 
-const eventTrackingData = {
-  componentName: 'midarticle-mostread',
-};
-
 const RecommendationsItem = ({
   recommendation,
+  eventTrackingData,
 }: {
   recommendation: Recommendation | null;
+  eventTrackingData?: Record<string, unknown>;
 }) => {
   const { isLite } = use(RequestContext);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  console.log('recommendation item: ', recommendation);
+
   if (!recommendation) return null;
 
   const { title, image, href } = recommendation;

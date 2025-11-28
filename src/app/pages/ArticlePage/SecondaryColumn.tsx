@@ -22,12 +22,16 @@ const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) =>
 
 const SecondaryColumn = ({
   pageData,
-  experimentVariant,
+  timeOfDayExperimentVariant,
   timeOfDayExperimentName,
+  referrerVariant,
+  referrerExperimentName,
 }: {
   pageData: Article;
-  experimentVariant?: string | null;
+  timeOfDayExperimentVariant?: string | null;
   timeOfDayExperimentName?: string;
+  referrerVariant?: string | null;
+  referrerExperimentName?: string;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
@@ -47,9 +51,9 @@ const SecondaryColumn = ({
 
   const showAdaptiveSection =
     // Morning
-    experimentVariant === 'article_time_of_day_a' ||
+    timeOfDayExperimentVariant === 'article_time_of_day_a' ||
     // Evening
-    experimentVariant === 'article_time_of_day_b';
+    timeOfDayExperimentVariant === 'article_time_of_day_b';
 
   // ideally we would want to be agnostic about the type of Curation we want to render here and have the decision made in the BFF
   // however, we cannot do this with the billboard curation as we would need to fetch the whole topic it is in, which is the whole home page,
@@ -78,7 +82,7 @@ const SecondaryColumn = ({
             curationLength={mediaCurationData?.summaries?.length}
             link={mediaCurationData?.link}
             timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-            timeOfDayVariant={experimentVariant || undefined}
+            timeOfDayVariant={timeOfDayExperimentVariant || undefined}
           />
           <Curation
             visualStyle={VISUAL_STYLE.BANNER} // this is a billboard
@@ -87,7 +91,7 @@ const SecondaryColumn = ({
             position={1}
             curationId={billboardCurationData?.curationId}
             timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-            timeOfDayVariant={experimentVariant || undefined}
+            timeOfDayVariant={timeOfDayExperimentVariant || undefined}
           />
         </section>
       )}
@@ -99,11 +103,18 @@ const SecondaryColumn = ({
         >
           <TopStoriesSection
             content={topStoriesContent}
-            {...(experimentVariant && {
+            {...(timeOfDayExperimentVariant && {
               experimentProps: {
                 sendOptimizelyEvents: true,
                 experimentName: timeOfDayExperimentName,
-                experimentVariant,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
+            {...(referrerVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: referrerExperimentName,
+                experimentVariant: referrerVariant,
               },
             })}
           />
@@ -115,11 +126,18 @@ const SecondaryColumn = ({
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
-            {...(experimentVariant && {
+            {...(timeOfDayExperimentVariant && {
               experimentProps: {
                 sendOptimizelyEvents: true,
                 experimentName: timeOfDayExperimentName,
-                experimentVariant,
+                experimentVariant: timeOfDayExperimentVariant,
+              },
+            })}
+            {...(referrerVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: referrerExperimentName,
+                experimentVariant: referrerVariant,
               },
             })}
           />

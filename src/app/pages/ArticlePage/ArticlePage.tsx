@@ -174,45 +174,48 @@ const getWsojComponent = ({
   blocks,
   topStoriesContent,
   featuresContent,
-  referrerExperimentVariant,
-  isDesktopInitial,
+  referrerVariant,
+  referrerExperimentName,
 }: {
   data: Recommendation[];
   blocks: OptimoBlock[];
   topStoriesContent?: unknown;
   featuresContent?: unknown;
-  referrerExperimentVariant?: string;
-  isDesktopInitial: boolean;
+  referrerVariant?: string;
+  referrerExperimentName?: string;
 }) => (
   <Recommendations
     data={data}
     blocks={blocks}
     topStoriesContent={topStoriesContent}
     featuresContent={featuresContent}
-    referrerExperimentVariant={
-      isDesktopInitial ? 'off' : referrerExperimentVariant
-    }
+    referrerVariant={referrerVariant}
+    {...(referrerVariant && {
+      experimentProps: {
+        sendOptimizelyEvents: true,
+        experimentName: referrerExperimentName,
+        experimentVariant: referrerVariant,
+      },
+    })}
   />
 );
 const getUnderArticleComponents = ({
   referrerVariant,
+  referrerExperimentName,
   topStoriesData,
   featuresData,
   articleBlocks,
   grey2,
-  todExperimentVariant,
-  todExperimentName,
   mostReadData,
   showRelatedTopics,
   pageStyles,
 }: {
   referrerVariant: string;
+  referrerExperimentName: string;
   topStoriesData: unknown;
   featuresData: unknown;
   articleBlocks: OptimoBlock[];
   grey2: string;
-  todExperimentVariant: string;
-  todExperimentName: string;
   mostReadData: MostReadData;
   showRelatedTopics: boolean;
   pageStyles: Record<string, any>;
@@ -221,11 +224,11 @@ const getUnderArticleComponents = ({
     <div key="relatedContent" css={pageStyles.hideOnDesktop}>
       <RelatedContentSection
         content={articleBlocks}
-        {...(todExperimentVariant && {
+        {...(referrerVariant && {
           experimentProps: {
             sendOptimizelyEvents: true,
-            experimentName: todExperimentName,
-            experimentVariant: todExperimentVariant,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
           },
         })}
       />
@@ -239,11 +242,11 @@ const getUnderArticleComponents = ({
       <div key="topStories" css={pageStyles.hideOnDesktop}>
         <TopStoriesSection
           content={topStoriesArray}
-          {...(todExperimentVariant && {
+          {...(referrerVariant && {
             experimentProps: {
               sendOptimizelyEvents: true,
-              experimentName: todExperimentName,
-              experimentVariant: todExperimentVariant,
+              experimentName: referrerExperimentName,
+              experimentVariant: referrerVariant,
             },
           })}
         />
@@ -256,11 +259,11 @@ const getUnderArticleComponents = ({
         content={featuresData}
         parentColumns={{}}
         sectionLabelBackground={grey2}
-        {...(todExperimentVariant && {
+        {...(referrerVariant && {
           experimentProps: {
             sendOptimizelyEvents: true,
-            experimentName: todExperimentName,
-            experimentVariant: todExperimentVariant,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
           },
         })}
       />
@@ -276,10 +279,10 @@ const getUnderArticleComponents = ({
         mobileDivider={showRelatedTopics}
         eventTrackingData={{
           componentName: 'most-read',
-          ...(todExperimentVariant && {
+          ...(referrerVariant && {
             sendOptimizelyEvents: true,
-            experimentName: todExperimentName,
-            experimentVariant: todExperimentVariant,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
           }),
         }}
       />
@@ -406,11 +409,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
-  let referrerExperimentVariant = useOptimizelyVariation({
+  let referrerVariant = useOptimizelyVariation({
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerExperimentVariant = 'social'; // TEMP override
+  referrerVariant = 'adaptive_social'; // TEMP override
+  referrerVariant = isDesktopInitial ? 'off' : referrerVariant; // switches off experiment if desktop width is detected
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -524,8 +528,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         blocks,
         topStoriesContent,
         featuresContent,
-        referrerExperimentVariant,
-        isDesktopInitial, // pass it here
+        referrerVariant,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -638,8 +641,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         {!isApp && !isPGL && (
           <SecondaryColumn
             pageData={pageData}
+            // EXPERIMENT: Referrer Experiment
+            referrerVariant={referrerVariant}
+            referrerExperimentName={referrerExperimentName}
             // EXPERIMENT: Time of Day Experiment
-            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
             timeOfDayExperimentName={timeOfDayExperimentName}
           />
         )}
@@ -655,6 +661,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   sendOptimizelyEvents: true,
                   experimentName: timeOfDayExperimentName,
                   experimentVariant: timeOfDayExperimentVariant,
+                },
+              })}
+              {...(referrerVariant && {
+                experimentProps: {
+                  sendOptimizelyEvents: true,
+                  experimentName: referrerExperimentName,
+                  experimentVariant: referrerVariant,
                 },
               })}
             />
@@ -673,6 +686,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   experimentName: timeOfDayExperimentName,
                   experimentVariant: timeOfDayExperimentVariant,
                 }),
+                ...(referrerVariant && {
+                  sendOptimizelyEvents: true,
+                  experimentName: referrerExperimentName,
+                  experimentVariant: referrerVariant,
+                }),
               }}
             />
           </div>
@@ -681,13 +699,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
       {/* Under-article components for mobile/tablet only */}
       {getUnderArticleComponents({
-        referrerVariant: referrerExperimentVariant,
+        referrerVariant: referrerVariant || '',
+        referrerExperimentName: referrerExperimentName || '',
         topStoriesData: topStoriesContent,
         featuresData: featuresContent,
         articleBlocks: blocks,
         grey2: GREY_2,
-        todExperimentVariant: timeOfDayExperimentVariant || '',
-        todExperimentName: timeOfDayExperimentName || '',
         mostReadData: mostReadInitialData,
         showRelatedTopics: showTopics,
         pageStyles: styles,
