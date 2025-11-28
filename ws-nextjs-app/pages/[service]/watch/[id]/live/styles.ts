@@ -26,8 +26,7 @@ const styles = {
   playerMargins: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_3_MAX_WIDTH]: {
-        marginLeft: `-${spacings.DOUBLE}rem`,
-        marginRight: `-${spacings.DOUBLE}rem`,
+        marginInline: `-${spacings.DOUBLE}rem`,
       },
     }),
   title: ({ palette, spacings }: Theme) =>
