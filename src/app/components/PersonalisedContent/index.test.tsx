@@ -24,7 +24,7 @@ const mockPersonalisedContent = [
 
 const basePageData = {
   secondaryColumn: {
-    PersonalisedContent: mockPersonalisedContent,
+    personalisedContent: mockPersonalisedContent,
     topStories: [],
     features: [],
   },
