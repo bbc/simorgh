@@ -1,9 +1,12 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import * as shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import defaultToggles from '#app/lib/config/toggles';
+import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
+
+jest.mock('#app/routes/utils/fetchDataFromBFF');
 
 describe('handleArticleRoute', () => {
   const mockSetHeader = jest.fn();
@@ -19,10 +22,14 @@ describe('handleArticleRoute', () => {
     query: { service: 'pidgin' },
   } satisfies GetServerSidePropsContext;
   beforeEach(() => {
+    jest.restoreAllMocks();
     jest.clearAllMocks();
-    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
-      status: 200,
-      json: pidginMediaArticleFixtureData,
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: pidginMediaArticleFixtureData.data,
+        status: 200,
+      },
+      toggles,
     });
   });
   const toggles = defaultToggles.local;
@@ -121,6 +128,99 @@ describe('handleArticleRoute', () => {
         toggles,
         variant: null,
       },
+    });
+  });
+
+  describe('EXPERIMENT - personalised topic rail', () => {
+    const mundoContext = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/mundo/articles/cp8y1k4nj70o',
+      query: { service: 'mundo' },
+      req: {
+        headers: { 'x-country': 'es' },
+      } as unknown as GetServerSidePropsContext['req'],
+    } satisfies GetServerSidePropsContext;
+
+    const articleResponse = {
+      data: {
+        pageData: {
+          article: {
+            metadata: {
+              type: 'article',
+              consumableAsSFV: false,
+              lastPublished: 0,
+            },
+          },
+          secondaryData: {},
+          mostRead: {},
+        },
+        status: 200,
+      },
+      toggles,
+    };
+
+    beforeEach(() => {
+      jest
+        .spyOn(getPageDataModule, 'default')
+        .mockResolvedValue(articleResponse);
+      (fetchDataFromBFF as jest.Mock).mockReset();
+    });
+
+    it('injects personalised content when country matches a topic', async () => {
+      (fetchDataFromBFF as jest.Mock).mockResolvedValue({
+        json: {
+          data: {
+            title: 'Topic title',
+            description: 'Topic description',
+            curations: [
+              {
+                summaries: [
+                  { id: '1' },
+                  { id: '2' },
+                  { id: '3' },
+                  { id: '4' },
+                  { id: '5' },
+                ],
+              },
+            ],
+          },
+        },
+      });
+
+      const result = await handleArticleRoute(mundoContext);
+
+      expect(fetchDataFromBFF).toHaveBeenCalledWith(
+        expect.objectContaining({
+          pathname: '/mundo/topics/c6vzy3wd189t?renderer_env=live',
+          pageType: 'topic',
+        }),
+      );
+
+      expect(
+        // @ts-expect-error pageData is present in successful responses
+        result.props.pageData.secondaryColumn?.PersonalisedContent,
+      ).toEqual([
+        {
+          title: 'Topic title',
+          description: 'Topic description',
+          link: '/mundo/topics/c6vzy3wd189t',
+          summaries: [{ id: '1' }, { id: '2' }, { id: '3' }, { id: '4' }],
+          topicId: 'c6vzy3wd189t',
+        },
+      ]);
+    });
+
+    it('does not inject personalised content when topic fetch fails', async () => {
+      (fetchDataFromBFF as jest.Mock).mockRejectedValue(
+        new Error('topic fetch failed'),
+      );
+
+      const result = await handleArticleRoute(mundoContext);
+
+      expect(
+        // @ts-expect-error pageData is present in successful responses
+        result.props.pageData.secondaryColumn?.PersonalisedContent,
+      ).toBeUndefined();
     });
   });
 });
