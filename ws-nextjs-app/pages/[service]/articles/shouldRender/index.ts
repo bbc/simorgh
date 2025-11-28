@@ -2,10 +2,11 @@ import { getPassportHome, isValidPassportHome } from '#lib/utilities/passport';
 import { OK, NOT_FOUND } from '#lib/statusCodes.const';
 
 // checks for pageData, 200 status and if home service from article data fits the service locale
+
 const shouldRender = (
-  { pageData, status },
-  service,
-  passportHomesOverride = [],
+  { pageData, status }: { pageData: object; status: number },
+  service: string,
+  passportHomesOverride: string[] = [],
 ) => {
   let statusCode = status;
   const hasDataAnd200Status = pageData && status === OK;

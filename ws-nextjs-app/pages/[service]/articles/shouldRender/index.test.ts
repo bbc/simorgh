@@ -73,7 +73,7 @@ describe('passport home override', () => {
   describe('null passportHomeOverride', () => {
     it('should NOT match passport home override', () => {
       const service = 'portuguese';
-      const result = shouldRender(validPortugueseData, service, null);
+      const result = shouldRender(validPortugueseData, service, undefined);
       expect(result).toEqual({
         hasRequestSucceeded: false,
         status: 404,
@@ -85,7 +85,7 @@ describe('passport home override', () => {
     describe('null override', () => {
       it('should NOT match', () => {
         const service = 'portuguese';
-        const result = shouldRender(noPassport, service, null);
+        const result = shouldRender(noPassport, service, undefined);
         expect(result).toEqual({
           hasRequestSucceeded: true,
           status: 200,
