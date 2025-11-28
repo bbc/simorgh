@@ -23,6 +23,7 @@ import {
   AUDIO_PAGE,
   OFFLINE_PAGE,
   LIVE_TV_PAGE,
+  OFFLINE_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';

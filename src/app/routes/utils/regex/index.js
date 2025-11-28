@@ -23,11 +23,11 @@ import {
 export const articlePath = getArticleRegex(SERVICES);
 export const articleDataPath = `${articlePath}.json`;
 
-export const offlinePagePath = getOfflinePageRegex(allServices);
+export const offlinePagePath = getOfflinePageRegex(SERVICES);
 
-export const homePageSwPath = getSwRegex(allServices);
-export const homePageManifestPath = getManifestRegex(allServices);
-export const homePagePath = getHomePageRegex(allServices);
+export const homePageSwPath = getSwRegex(SERVICES);
+export const homePageManifestPath = getManifestRegex(SERVICES);
+export const homePagePath = getHomePageRegex(SERVICES);
 export const homePageDataPath = `${homePagePath}.json`;
 
 export const cpsAssetPagePath = getCpsAssetRegex(SERVICES);
