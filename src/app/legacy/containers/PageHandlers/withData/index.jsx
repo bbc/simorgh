@@ -1,8 +1,8 @@
 import React, { use } from 'react';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
+import shouldRender from '#nextjs/pages/[service]/articles/shouldRender';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import { RequestContext } from '../../../../contexts/RequestContext';
-import shouldRender from './shouldRender';
 
 const WithData = Component => {
   const DataContainer = ({ pageData = null, status, ...props }) => {
