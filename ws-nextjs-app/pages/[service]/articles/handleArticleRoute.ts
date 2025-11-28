@@ -13,8 +13,6 @@ import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaim
 import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
-import getAgent from '#server/utilities/getAgent';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
@@ -141,23 +139,27 @@ export default async (context: GetServerSidePropsContext) => {
 
     if (countrySpecificId) {
       try {
-        const countrySpecificData = await fetchDataFromBFF({
-          pathname: `/${service}/topics/${countrySpecificId}?renderer_env=live`,
+        const {
+          data: topicData,
+        } = await getPageData({
+          id: `/${service}/topics/${countrySpecificId}`,
+          rendererEnv: 'live',
+          resolvedUrl: `/${service}/topics/${countrySpecificId}`,
           pageType: 'topic',
           service,
           variant: variant || undefined,
           isAmp,
-          getAgent,
         });
 
+        const countrySpecificData = topicData?.pageData;
         const countryArticles =
-          countrySpecificData?.json?.data?.curations?.[0]?.summaries || [];
+          countrySpecificData?.curations?.[0]?.summaries || [];
 
-        if (countrySpecificData?.json?.data) {
+        if (countrySpecificData) {
           personalisedContent = [
             {
-              title: countrySpecificData.json.data.title,
-              description: countrySpecificData.json.data.description,
+              title: countrySpecificData.title,
+              description: countrySpecificData.description,
               link: `/${service}/topics/${countrySpecificId}`,
               summaries: Array.isArray(countryArticles)
                 ? countryArticles.slice(0, 4)

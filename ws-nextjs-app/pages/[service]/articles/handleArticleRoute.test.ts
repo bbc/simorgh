@@ -2,11 +2,8 @@ import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.js
 import { GetServerSidePropsContext } from 'next';
 import * as shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import defaultToggles from '#app/lib/config/toggles';
-import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
-
-jest.mock('#app/routes/utils/fetchDataFromBFF');
 
 describe('handleArticleRoute', () => {
   const mockSetHeader = jest.fn();
@@ -163,38 +160,35 @@ describe('handleArticleRoute', () => {
       jest
         .spyOn(getPageDataModule, 'default')
         .mockResolvedValue(articleResponse);
-      (fetchDataFromBFF as jest.Mock).mockReset();
     });
 
     it('injects personalised content when country matches a topic', async () => {
-      (fetchDataFromBFF as jest.Mock).mockResolvedValue({
-        json: {
+      jest
+        .spyOn(getPageDataModule, 'default')
+        .mockResolvedValueOnce(articleResponse)
+        .mockResolvedValueOnce({
           data: {
-            title: 'Topic title',
-            description: 'Topic description',
-            curations: [
-              {
-                summaries: [
-                  { id: '1' },
-                  { id: '2' },
-                  { id: '3' },
-                  { id: '4' },
-                  { id: '5' },
-                ],
-              },
-            ],
+            pageData: {
+              title: 'Topic title',
+              description: 'Topic description',
+              curations: [
+                {
+                  summaries: [
+                    { id: '1' },
+                    { id: '2' },
+                    { id: '3' },
+                    { id: '4' },
+                    { id: '5' },
+                  ],
+                },
+              ],
+            },
+            status: 200,
           },
-        },
-      });
+          toggles,
+        });
 
       const result = await handleArticleRoute(mundoContext);
-
-      expect(fetchDataFromBFF).toHaveBeenCalledWith(
-        expect.objectContaining({
-          pathname: '/mundo/topics/c6vzy3wd189t?renderer_env=live',
-          pageType: 'topic',
-        }),
-      );
 
       expect(
         // @ts-expect-error pageData is present in successful responses
@@ -211,9 +205,10 @@ describe('handleArticleRoute', () => {
     });
 
     it('does not inject personalised content when topic fetch fails', async () => {
-      (fetchDataFromBFF as jest.Mock).mockRejectedValue(
-        new Error('topic fetch failed'),
-      );
+      jest
+        .spyOn(getPageDataModule, 'default')
+        .mockResolvedValueOnce(articleResponse)
+        .mockRejectedValueOnce(new Error('topic fetch failed'));
 
       const result = await handleArticleRoute(mundoContext);
 
