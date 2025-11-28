@@ -28,10 +28,8 @@ const PersonalisedContent = ({
     topicId?: string;
   };
 
-  const personalisedContentArray =
-    pageData.secondaryColumn?.personalisedContent as
-      | PersonalisedContentType[]
-      | undefined;
+  const personalisedContentArray = pageData.secondaryColumn
+    ?.personalisedContent as PersonalisedContentType[] | undefined;
 
   const getPersonalisedContentData = () => {
     if (personalisedTopicCurationExperimentVariant !== 'personalised') {
