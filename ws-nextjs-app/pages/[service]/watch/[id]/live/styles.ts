@@ -42,7 +42,7 @@ const styles = {
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.QUINTUPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),
