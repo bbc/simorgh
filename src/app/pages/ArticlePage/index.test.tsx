@@ -1261,7 +1261,7 @@ describe('Article Page', () => {
         secondaryColumn: {
           topStories: [],
           features: [],
-          personalisedContent: personalisedContent,
+          personalisedContent,
         },
       };
       render(
