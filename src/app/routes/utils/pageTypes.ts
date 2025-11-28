@@ -19,4 +19,3 @@ export const AUDIO_PAGE = 'audio' as const;
 export const TV_PAGE = 'tv' as const;
 export const OFFLINE_PAGE = 'offline' as const;
 export const LIVE_TV_PAGE = 'liveTV' as const;
-export const OFFLINE_PAGE = 'offline' as const;
