@@ -15,9 +15,7 @@ describe('usePWAInstallTracker', () => {
     addEventListenerSpy = jest.spyOn(window, 'addEventListener');
 
     jest.clearAllMocks();
-    mockUseCustomEventTracker.mockReturnValue({
-      trackEvent: mockTrackEvent,
-    });
+    mockUseCustomEventTracker.mockReturnValue(mockTrackEvent);
   });
 
   afterEach(() => {

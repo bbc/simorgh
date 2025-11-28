@@ -3,6 +3,8 @@
     "title": "BBC News Kyrgyz",
     "description": "Hello I am a description! I was added in the \"Description\" field from the Details section in Tipo\nBBC Azeri curation should be Top Stories  - VS = Collection / VP = High",
     "pageType": "home",
+    "seoTitle": "BBC News Kyrgyz",
+    "seoDescription": "Hello I am a description! I was added in the \"Description\" field from the Details section in Tipo\nBBC Azeri curation should be Top Stories  - VS = Collection / VP = High",
     "curations": [
       {
         "summaries": [
@@ -12,7 +14,7 @@
             "title": "Test promo overtype URL",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/sounds/play/live:bbc_sounds_mundo",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsounds%2Fplay%2Flive%3Abbc_sounds_news"
           },
@@ -22,7 +24,7 @@
             "title": "Overtyped headline",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/send/pepe",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.co.uk%2Fsend%2Fu188759689"
           },
@@ -44,7 +46,7 @@
             "title": "Weather video overtyped",
             "firstPublished": "2023-01-06T08:36:03.306Z",
             "lastPublished": "2023-03-28T13:53:21.841Z",
-            "link": "https://www.bbc.com/weather/videos/cxvdd15r56do",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/acdd/test/57453f80-c129-11ee-9cfe-dd6b961b2ea5.jpg.webp",
             "description": "Overtyped summary",
             "imageAlt": "Mountains",
@@ -91,7 +93,7 @@
             "title": "Overtype PID Headline",
             "firstPublished": "",
             "lastPublished": "2022-10-29T19:00:00.000Z",
-            "link": "https://www.bbc.com/sounds/play/m001dmln",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.test.bbci.co.uk/ace/ws/{width}/cpsdevpb/7bd5/test/aba7b010-c1bc-11ee-9cfe-dd6b961b2ea5.png.webp",
             "description": "Actor Florence Pugh talks to John Wilson about her career and formative influences.",
             "imageAlt": "Overtyped promo desc.",
@@ -135,7 +137,7 @@
             "title": "Little Abby Goes Crazy!",
             "firstPublished": "2022-10-28T13:56:14.723Z",
             "lastPublished": "2023-06-20T06:11:44.857Z",
-            "link": "https://www.bbc.com/articles/cem4313m1ldo",
+            "link": "https://www.bbc.com/kyrgyz/articles/cem4313m1ldo",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/d021/test/ce1dd100-0b6f-11ee-add0-c7c64fc8119c.jpg.webp",
             "description": "Stuff goes here",
             "imageAlt": "Cenotaph",
@@ -853,7 +855,7 @@
             "title": "Title of the page",
             "firstPublished": "",
             "lastPublished": "",
-            "link": "https://www.bbc.com/",
+            "link": "https://www.bbc.com/kyrgyz",
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/73e5/test/959c2380-ec2f-11ee-9173-83ca10832ce2.jpg.webp",
             "description": "Summary / description",
             "imageAlt": "The description of the image",
@@ -1069,6 +1071,43 @@
         "title": "Hierarchical Curation with Live Promos",
         "visualProminence": "HIGH",
         "visualStyle": "NONE"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Mitocin da muke watsa shirye-shiryenmu",
+            "firstPublished": "2023-12-08T18:50:55.425Z",
+            "lastPublished": "2023-12-08T18:50:55.425Z",
+            "link": "https://www.bbc.com/hausa/articles/cpvpg2e6130o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fc08/live/f53400e0-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "description": "Sashen Hausa na BBC na watsa shirye-shirye guda huɗu a kowace rana, na tsawon minti talatin-talatin cikin harshen Hausa.",
+            "imageAlt": "...",
+            "id": "cpvpg2e6130o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "Abokan hulɗar BBC Hausa",
+            "firstPublished": "2023-12-08T18:57:22.367Z",
+            "lastPublished": "2023-12-08T18:57:22.367Z",
+            "link": "https://www.bbc.com/hausa/articles/c2l2e8px0l3o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a8e4/live/834c9c30-95fb-11ee-b60d-058748ad2fb8.jpg.webp",
+            "imageAlt": "...",
+            "id": "c2l2e8px0l3o",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:ec7bfe5e-1caa-4465-9a9a-1ff411b5398c",
+        "curationType": "tipo-curation",
+        "position": 18,
+        "title": "Domin ma'abota BBC",
+        "visualProminence": "LOW",
+        "visualStyle": "LINKS"
       }
     ],
     "metadata": {

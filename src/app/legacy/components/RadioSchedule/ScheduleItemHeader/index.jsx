@@ -1,15 +1,11 @@
 import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
+import moment from 'moment';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import detokenise from '#psammead/psammead-detokeniser/src';
 import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
-import {
-  getSansBold,
-  getSansRegular,
-} from '#psammead/psammead-styles/src/font-styles';
-import { getPica } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -21,8 +17,8 @@ const TitleWrapper = styled.span`
   padding: ${GEL_SPACING} 0 0 0;
   display: inline-block;
   width: 100%;
-  ${({ service }) => service && getSansRegular(service)}
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
 `;
 const StyledLink = styled(Link)`
   &:hover ${TitleWrapper} {
@@ -33,8 +29,8 @@ const StyledLink = styled(Link)`
   }
 `;
 const NextLabel = styled.span`
-  ${({ service }) => service && getSansBold(service)}
-  ${({ script }) => script && getPica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   color: ${props => props.theme.palette.POSTBOX};
   display: inline-block;
   ${({ dir }) =>
@@ -50,22 +46,22 @@ const ScheduleItemHeader = ({
   startTime,
   duration,
   id = '1',
+  position,
   ...props
 }) => {
   const {
     linkComponent = 'a',
     linkComponentAttr = 'href',
     durationLabel,
+    eventTrackingData,
   } = props;
+
   const { script, locale, service, timezone, dir, translations } =
     use(ServiceContext);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
   const isLive = state === 'live';
   const isNext = state === 'next';
-  const eventTrackingData = {
-    componentName: `radio-schedule-${state}`,
-  };
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
   const listenLive = pathOr(
     'Listen Live',
     ['media', 'listenLive'],
@@ -104,6 +100,19 @@ const ScheduleItemHeader = ({
 
   const listenLabel = listenLabelTranslations[state];
 
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    itemTracker: {
+      type: `radio-schedule-${state}`,
+      text: episodeTitle,
+      mediaType: 'audio',
+      position: position + 1,
+      duration: moment.duration(duration).asMilliseconds(),
+      resourceId: id,
+    },
+  };
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
+
   const content = (
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -128,6 +137,7 @@ const ScheduleItemHeader = ({
       <TitleWrapper
         service={service}
         script={script}
+        suppressHydrationWarning
         {...programStateConfig[state]}
       >
         {episodeTitle}

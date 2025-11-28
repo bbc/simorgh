@@ -1,3 +1,5 @@
+import SERVICES from '../services';
+
 export default {
   _environment: 'live',
   ads: {
@@ -7,19 +9,18 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
-  chartbeatAnalytics: {
-    enabled: true,
-  },
   comscoreAnalytics: {
     enabled: true,
+  },
+  continueReadingButton: {
+    enabled: false,
   },
   electionBanner: {
     enabled: false,
   },
   enableFetchingToggles: {
     enabled: true,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
@@ -34,7 +35,7 @@ export default {
     enabled: false,
   },
   midArticleOnwardJourney: {
-    enabled: true,
+    enabled: false,
   },
   mostRead: {
     enabled: false,
@@ -48,10 +49,28 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
+  podcastPromo: {
+    enabled: false,
+  },
+  recentAudioEpisodes: {
+    enabled: true,
+    value: 4,
+  },
+  recentPodcastEpisodes: {
+    enabled: true,
+    value: 8,
+  },
+  recentVideoEpisodes: {
+    enabled: true,
+    value: 4,
+  },
   scriptLink: {
+    enabled: true,
+  },
+  topBarOJs: {
     enabled: true,
   },
   variantCookie: {

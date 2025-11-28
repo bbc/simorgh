@@ -41,13 +41,18 @@ const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
 
 const logger = nodeLogger(__filename);
 
-export const BumpLoader = () => (
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   <Helmet>
     <script
       type="text/javascript"
+      {...(nonce ? { nonce } : {})}
       src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
     />
-    <script type="text/javascript">
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {`bbcRequireMap = {
             "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
         }
@@ -150,28 +155,33 @@ const MediaContainer = ({
 
           if (showAds) {
             const adTag = await window.dotcom.ads.getAdTag();
-            mediaPlayer.loadPlugin(
-              {
-                swf: 'name:dfpAds.swf',
-                html: 'name:dfpAds.js',
-              },
-              {
-                name: 'AdsPluginParameters',
-                data: {
-                  adTag,
-                  debug: true,
+
+            if (adTag) {
+              mediaPlayer.loadPlugin(
+                {
+                  swf: 'name:dfpAds.swf',
+                  html: 'name:dfpAds.js',
                 },
-              },
-            );
+                {
+                  name: 'AdsPluginParameters',
+                  data: {
+                    adTag,
+                  },
+                },
+              );
+            }
 
             mediaPlayer.bind('playlistLoaded', async () => {
               const updatedAdTag = await window.dotcom.ads.getAdTag();
-              mediaPlayer.dispatchEvent(
-                'bbc.smp.plugins.ads.event.updateAdTag',
-                {
-                  updatedAdTag,
-                },
-              );
+
+              if (updatedAdTag) {
+                mediaPlayer.dispatchEvent(
+                  'bbc.smp.plugins.ads.event.updateAdTag',
+                  {
+                    adTag: updatedAdTag,
+                  },
+                );
+              }
             });
           }
 
@@ -214,7 +224,7 @@ const MediaLoader = ({
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
-  const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: adsEnabled } = useToggle('preroll');
 
   const {
     id,
@@ -223,6 +233,7 @@ const MediaLoader = ({
     isAmp,
     isLite,
     showAdsBasedOnLocation,
+    nonce,
   } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
@@ -308,7 +319,7 @@ const MediaLoader = ({
         ) : (
           <>
             {showAds && <AdvertTagLoader />}
-            <BumpLoader />
+            <BumpLoader nonce={nonce} />
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}

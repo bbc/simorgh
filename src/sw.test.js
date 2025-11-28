@@ -16,20 +16,8 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
-
 describe('Service Worker', () => {
   let fetchEventHandler;
-
-  beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
-  });
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -164,10 +152,6 @@ describe('Service Worker', () => {
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
       };
-      global.self.location = {
-        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-        hostname: 'www.bbc.com',
-      };
     });
 
     describe('when url is not cacheable', () => {
@@ -214,10 +198,10 @@ describe('Service Worker', () => {
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       // Reverb - preview1, preview2, test & live
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.1.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
       // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
@@ -292,7 +276,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.0',
-      fileContentHash: '495e2b94311fc81db9a20c253ffd2f4f',
+      fileContentHash: '6150d6daf3d64a226a47e17b39dfc084',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

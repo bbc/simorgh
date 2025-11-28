@@ -2,7 +2,7 @@
 import { PropsWithChildren, useMemo } from 'react';
 import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Chevron from './Chevron';
 import ButtonLikeWrapper from './ButtonLikeWrapper';
@@ -13,7 +13,7 @@ import CallToActionLinkContext from './CallToActionLinkContext';
 type CallToActionLinkProps = {
   url: string;
   className?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
   alignWithMargin?: boolean;
   download?: boolean;
   fontVariant?: FontVariant;

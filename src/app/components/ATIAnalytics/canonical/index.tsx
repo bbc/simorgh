@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState, use } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -11,6 +11,8 @@ import addInlineScript, {
 } from '#app/lib/utilities/addInlineScript';
 import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
+import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
+import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -36,17 +38,20 @@ const renderNoScriptTrackingPixel = (
   );
 };
 
-const addScript = ({ script, parameters }: InlineScriptProps) => {
-  return <Helmet>{addInlineScript({ script, parameters })}</Helmet>;
+const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
+  return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
 const CanonicalATIAnalytics = ({
   pageviewParams,
   reverbParams,
 }: ATIAnalyticsProps) => {
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
+
+  useConnectionTypeTracker();
+  useConnectionBackOnlineTracker();
 
   const atiPageViewUrlString =
     getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
@@ -63,15 +68,17 @@ const CanonicalATIAnalytics = ({
 
   return (
     <>
-      {addScript({ script: addSendStaticBeaconToWindow() })}
+      {addScript({ script: addSendStaticBeaconToWindow(), nonce })}
       {isLite &&
         addScript({
           script: sendPageViewBeaconLite,
-          parameters: [atiPageViewUrlString, liteSiteReverbURL],
+          parameters: [liteSiteReverbURL],
+          nonce,
         })}
       {!isLite &&
         addScript({
           script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+          nonce,
         })}
       {renderNoScriptTrackingPixel(reverbParams)}
     </>

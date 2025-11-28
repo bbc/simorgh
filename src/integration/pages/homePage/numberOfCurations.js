@@ -9,9 +9,8 @@ export default pageData => {
           embed ||
           portraitVideo,
       );
-      const numberOfCurations = Array.from(
-        document.querySelectorAll('main h2'),
-      ).length;
+      const h2s = Array.from(document.querySelectorAll('main h2'));
+      const numberOfCurations = h2s.length;
       expect(numberOfCurations).toEqual(curationsWithSummaries.length);
     });
   });

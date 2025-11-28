@@ -1,4 +1,5 @@
 import { matchPath } from 'react-router-dom';
+import SERVICES from '#app/lib/config/services';
 import {
   articleDataPath,
   articlePath,
@@ -20,7 +21,6 @@ import {
   topicPath,
 } from './index';
 
-import serviceConfig from '../../../lib/config/services/loadableConfig';
 import { getHomePageRegex } from './utils/index';
 
 jest.mock('#server/utilities/serviceConfigs', () => ({
@@ -393,8 +393,6 @@ describe('legacyAssetPageDataPath', () => {
 });
 
 describe('homepages on environments', () => {
-  const services = Object.keys(serviceConfig);
-
   const serviceToRoute = service => `/${service}`;
 
   const migratedServices = [
@@ -450,7 +448,7 @@ describe('homepages on environments', () => {
   describe(`homePage regex on the local environment`, () => {
     process.env.SIMORGH_APP_ENV = 'local';
 
-    const homePageRegex = getHomePageRegex(services);
+    const homePageRegex = getHomePageRegex(SERVICES);
 
     shouldMatchValidRoutes(migratedWorldServiceRoutes, homePageRegex);
   });

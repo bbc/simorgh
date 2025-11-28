@@ -307,7 +307,7 @@ export const service: DefaultServiceConfig = {
         text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [
@@ -316,7 +316,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'गोपनीयतेचं धोरण',
         },
         {
@@ -353,16 +353,16 @@ export const service: DefaultServiceConfig = {
         url: '/marathi/topics/c5qvpxvv7y3t',
       },
       {
+        title: 'व्हीडिओ',
+        url: '/marathi/topics/cl29j0epz13t',
+      },
+      {
         title: 'भारत',
         url: '/marathi/topics/cxnyk3y49x6t',
       },
       {
         title: 'आंतरराष्ट्रीय',
         url: '/marathi/topics/c719d2enyn3t',
-      },
-      {
-        title: 'व्हीडिओ',
-        url: '/marathi/topics/cl29j0epz13t',
       },
       {
         title: 'सोपी गोष्ट',

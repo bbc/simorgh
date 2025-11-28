@@ -86,6 +86,16 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     timezone: 'Europe/London',
     articlePath: '/cymrufyw/articles/cn7k01xp8kxo',
   },
+  dari: {
+    text: 'در این جشنواره برای نخستین بار از کارگران افغانستان در شهر تهران تقدیر شد',
+    longText:
+      'دولت ترکیه تمدید اقامت موقت توریستی برای اتباع بعضی از کشورهای خارجی از جمله ایران را به یک سال محدود کرده است. با مصوبه جدید، متقاضیان تمدید اقامت موقت توریستی تنها می توانند حداقل پس از گذشت یک سال از پایان مهلت اقامت یک ساله توریستی خود دوباره برای دریافت این اقامت اقدام کنند.',
+    script: 'arabic',
+    dir: 'rtl',
+    locale: 'fa-af',
+    timezone: 'Asia/Kabul',
+    articlePath: '/dari/articles/cej3lzd5e0go',
+  },
   gahuza: {
     text: "Umukate n'isoda vyatumye amenya ko afise umugera wa SIDA",
     longText:
@@ -220,15 +230,6 @@ const TEXT_VARIANTS: Record<string, TextVariant> = {
     locale: 'en',
     timezone: 'Europe/London',
     articlePath: '/newsround/articles/cn7k01xp8kxo',
-  },
-  optimobase: {
-    text: 'Could a computer ever create better art than a human?',
-    longText:
-      'The critic, author, poet and TV host was known for his witty commentary on international television.',
-    script: 'latin',
-    locale: 'en',
-    timezone: 'Europe/London',
-    articlePath: '/optimobase/articles/cn7k01xp8kxo',
   },
   pashto: {
     text: 'د ملګرو ملتونو د ماشومانو ادارې یونیسف افغان کرېکټ لوبغاړی راشد خانه.',

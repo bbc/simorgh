@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`PodcastExternalLinks Should render external links 1`] = `
 .emotion-0 {
@@ -19,8 +19,8 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   margin-top: 1rem;
@@ -73,8 +73,8 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   padding-right: 1rem;
   color: #222222;
   -webkit-text-decoration: none;

@@ -739,6 +739,7 @@ describe('useViewTracker', () => {
             },
             expectedGroupEvent: {
               name: 'article-sty',
+              type: 'most-read',
             },
           },
           {
@@ -773,6 +774,7 @@ describe('useViewTracker', () => {
               item_count: 15,
               name: 'article-sty',
               resource_id: 'test-group-id',
+              type: 'portrait-video',
             },
           },
         ])(

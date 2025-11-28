@@ -298,7 +298,7 @@ export const service: DefaultServiceConfig = {
         text: 'మీరు బీబీసీని ఎందుకు నమ్ముతారు?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి.',
       },
       links: [
@@ -311,7 +311,7 @@ export const service: DefaultServiceConfig = {
           text: 'బీబీసీ గురించి',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ప్రైవసీ పాలసీ',
         },
         {

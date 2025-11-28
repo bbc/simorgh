@@ -3,6 +3,10 @@
 import React, { use } from 'react';
 import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -21,6 +25,7 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
+import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -28,6 +33,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
@@ -43,30 +50,55 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
+    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
-    curations,
+    seoTitle,
+    seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
+  let { curations } = pageData;
+
+  const metadataTitle = seoTitle || homePageTitle;
+  const metadataDescription = seoDescription || description;
+
+  // EXPERIMENT: Homepage Time of Day Adaptive Curations
+  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
+  const timeOfDayVariant = useOptimizelyVariation({
+    experimentName: timeOfDayExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
+  if (
+    timeOfDayVariant === 'homepage_time_of_day_a' ||
+    timeOfDayVariant === 'homepage_time_of_day_b'
+  ) {
+    curations = reorderCurations({
+      curations,
+      service,
+    });
+  }
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={homePageTitle}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={title}
-        headline={title}
+        seoTitle={metadataTitle}
+        headline={metadataTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
@@ -90,12 +122,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
-                  portraitVideo,
-                },
-                index,
+                  ...curationProps
+                }: Curation,
+                index: number,
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
@@ -117,15 +146,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       position={position}
                       link={link}
                       curationLength={curations?.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
-                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      timeOfDayVariant={timeOfDayVariant}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
                   </React.Fragment>
@@ -135,6 +162,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
+      {timeOfDayVariant && (
+        <OptimizelyPageMetrics trackPageView trackPageDepth />
+      )}
     </>
   );
 };

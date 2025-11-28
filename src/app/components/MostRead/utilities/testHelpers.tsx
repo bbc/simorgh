@@ -83,6 +83,7 @@ export const getItemWrapperArray = ({
   const item = getItem({ service, withTimestamp });
   for (let i = 1; i <= numberOfItems; i += 1) {
     itemWrapperArray.push(
+      // @ts-expect-error test data
       <MostReadItemWrapper dir={dir} key={i} columnLayout={columnLayout}>
         <MostReadRank
           service={service}
@@ -99,6 +100,8 @@ export const getItemWrapperArray = ({
           service={service}
           title={item.title}
           size={size}
+          id=""
+          position={i + 1}
         >
           {item.timestamp}
         </MostReadLink>

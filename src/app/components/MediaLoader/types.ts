@@ -13,12 +13,17 @@ export type SMPEvent = {
   playlist?: {
     items: PlaylistItem[];
   };
+  direction?: string;
+  method?: 'swipe' | 'wheel';
+  ended?: boolean;
 };
 
 export type MediaPlayerEvents =
   | 'playlistLoaded'
   | 'pluginLoaded'
-  | 'fullscreenExit';
+  | 'fullscreenExit'
+  | 'statsNavigation'
+  | 'pause';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
@@ -148,10 +153,11 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters?: { updatedAdTag: string },
+    parameters?: { adTag: string | null },
   ): void;
   load: () => void;
   play: () => void;
+  playlist: () => Playlist;
   pause: () => void;
   previous: () => void;
   next: () => void;
@@ -162,7 +168,6 @@ export type Player = {
       name: string;
       data: {
         adTag: string;
-        debug: boolean;
       };
     },
   ) => void;
@@ -171,6 +176,7 @@ export type Player = {
     playlist: Playlist,
     options?: Partial<PlayerConfig>,
   ) => void;
+  settings: () => PlayerConfig;
 };
 
 export type BumpType = {
@@ -315,6 +321,8 @@ export type MediaCollection = {
   model: {
     synopses: {
       short: string;
+      medium: string;
+      long: string;
     };
     masterbrand: {
       networkName: string;
@@ -327,6 +335,7 @@ export type MediaCollection = {
     };
     imageUrlTemplate: string;
     title: string;
+    overtypedTitle?: string;
   };
 };
 

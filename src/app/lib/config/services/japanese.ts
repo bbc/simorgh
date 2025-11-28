@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
+      latestMediaTitle: '最新動画',
     },
     mostRead: {
       header: '注目の記事',

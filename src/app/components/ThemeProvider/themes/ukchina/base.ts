@@ -1,9 +1,9 @@
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../../palette';
 import noAscOrDescScript from '../../fontScripts/noAscOrDesc';
 import chineseFontVariants from '../../fontVariants/chinese';
-import brandSVG from '../../chameleonLogos/zhongwen';
+import brandSVG from '../../chameleonLogos/ukchina';
 
-const ukChinaTheme = {
+export default {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -18,5 +18,3 @@ const ukChinaTheme = {
   },
   brandSVG,
 };
-
-export default ukChinaTheme;

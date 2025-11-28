@@ -149,7 +149,7 @@ export interface ATIAnalyticsProps {
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
@@ -165,7 +165,7 @@ export interface ATIEventTrackingProps {
   experimentName?: string;
   experimentVariant?: string | null;
   ampExperimentName?: string;
-  preventNavigation?: string;
+  preventNavigation?: boolean;
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
@@ -179,11 +179,16 @@ export interface ItemTracker {
   duration?: number;
   resourceId?: string;
   label?: string;
+  mediaType?: string;
 }
 
 export interface GroupTracker {
-  itemCount?: number;
+  name?: string;
+  type?: string;
+  position?: string | number;
   resourceId?: string;
+  itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {

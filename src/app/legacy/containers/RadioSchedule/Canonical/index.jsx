@@ -14,8 +14,6 @@ import {
   GEL_SPACING_QUAD,
   GEL_MARGIN_ABOVE_400PX,
 } from '#psammead/gel-foundations/src/spacings';
-import { getLongPrimer } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import RadioSchedule from '#components/RadioSchedule';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
@@ -71,8 +69,8 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 `;
 
 const RadioFrequencyLink = styled.a`
-  ${({ script }) => script && getLongPrimer(script)}
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.EBON};
   text-decoration: none;
 
@@ -90,6 +88,7 @@ const CanonicalRadioSchedule = ({
   radioSchedule,
   lang = null,
   className = '',
+  eventTrackingData,
 }) => {
   const {
     service,
@@ -128,7 +127,11 @@ const CanonicalRadioSchedule = ({
         {header}
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper data-e2e="radio-schedule">
-        <RadioSchedule schedule={radioSchedule} durationLabel={durationLabel} />
+        <RadioSchedule
+          schedule={radioSchedule}
+          durationLabel={durationLabel}
+          eventTrackingData={eventTrackingData}
+        />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
             href={frequenciesPageUrl}

@@ -2,19 +2,83 @@
 /* @jsxFrag React.Fragment */
 import { Global, jsx } from '@emotion/react';
 import React, { use, useEffect, useRef } from 'react';
+import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
+  Player,
+  Playlist,
+  PlaylistItem,
   PortraitClipMediaBlock,
   SMPEvent,
 } from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '../../hooks/useViewTracker';
+import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
+type ModalTrackingParameters = {
+  eventTrackingData: EventTrackingData;
+  selectedVideo: PortraitClipMediaBlock;
+  selectedVideoIndex: number;
+};
+
+const getEventTrackingData = ({
+  eventTrackingData,
+  selectedVideo,
+  selectedVideoIndex,
+}: ModalTrackingParameters) => {
+  const {
+    id,
+    title,
+    version: { duration },
+  } = selectedVideo.model.video;
+
+  return {
+    componentName: 'portrait-video-modal',
+    alwaysInView: true,
+    groupTracker: {
+      ...eventTrackingData.groupTracker,
+      type: 'portrait-video-modal',
+    },
+    itemTracker: {
+      type: 'portrait-video',
+      text: title,
+      mediaType: 'video',
+      position: selectedVideoIndex + 1,
+      duration: moment.duration(duration).asMilliseconds(),
+      resourceId: id,
+    },
+  };
+};
+
 const getPlayerInstance = () =>
   window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+
+const getCurrentIndex = ({
+  e,
+  blocks,
+  player,
+}: {
+  e?: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  player?: Player;
+}): number => {
+  const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
+  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  const currentIndex = blocks?.findIndex(
+    item =>
+      item.model.video.id === currentId ||
+      item.model.video.version.id === currentId,
+  );
+
+  return currentIndex;
+};
 
 export const playlistLoadedCallback = (
   e: SMPEvent,
@@ -24,15 +88,7 @@ export const playlistLoadedCallback = (
 
   if (!player) return;
 
-  const { playlist } = e || {};
-  const [currentItem] = playlist?.items || [];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
-
-  const currentIndex = blocks?.findIndex(
-    item =>
-      item.model.video.id === currentId ||
-      item.model.video.version.id === currentId,
-  );
+  const currentIndex = getCurrentIndex({ e, blocks });
 
   const prevVideoButton = document.getElementById('previous-video-button');
   const nextVideoButton = document.getElementById('next-video-button');
@@ -75,6 +131,56 @@ export const playlistLoadedCallback = (
   }
 };
 
+export const statsNavigationCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const { direction, method } = e || {};
+
+  const isSupportedNavigation = method && ['swipe', 'wheel'].includes(method);
+
+  if (isSupportedNavigation) {
+    const currentIndex = getCurrentIndex({ e, blocks });
+
+    const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
+export const playbackEndedCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const player = getPlayerInstance();
+  const { ended } = e;
+  const { autoplay } = player.settings();
+
+  if (ended && autoplay) {
+    const currentIndex = getCurrentIndex({ blocks, player });
+
+    const newIndex = currentIndex + 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
@@ -90,12 +196,15 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  nonce?: string | null;
+  eventTrackingData: EventTrackingData;
 }
 
 const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -107,7 +216,22 @@ const PortraitVideoModal = ({
     },
   } = use(ServiceContext);
 
-  const modalRef = useRef<HTMLDivElement>(null);
+  const viewTracker = useViewTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
+  const swipeTracker = useSwipeTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -140,7 +264,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = modalRef.current;
+    const modal = document.getElementById('portrait-video-modal-container');
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -171,8 +295,9 @@ const PortraitVideoModal = ({
         role="dialog"
         aria-modal="true"
         aria-label={modalLabel}
-        ref={modalRef}
         css={styles.modal}
+        id="portrait-video-modal-container"
+        {...viewTracker}
       >
         <button
           ref={closeButtonRef}
@@ -217,6 +342,15 @@ const PortraitVideoModal = ({
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
+            statsNavigation: e =>
+              statsNavigationCallback(
+                e,
+                blocks,
+                eventTrackingData,
+                swipeTracker,
+              ),
+            pause: e =>
+              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
           }}
         />
         <button

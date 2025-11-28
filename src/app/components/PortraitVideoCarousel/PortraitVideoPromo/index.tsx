@@ -12,7 +12,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { GroupTracker } from '#app/components/ATIAnalytics/types';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
@@ -23,16 +23,22 @@ const DEFAULT_TRANSLATION = {
 
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
+  eventTrackingData: EventTrackingData;
   blockPosition?: number;
-  groupTracker?: GroupTracker;
+  timeOfDayVariant?: string;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation?: string;
   onClick?: () => void;
 };
 
 export default ({
   block,
   blockPosition = 0,
-  groupTracker,
+  eventTrackingData,
   onClick,
+  timeOfDayVariant,
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -42,6 +48,8 @@ export default ({
   } = use(ServiceContext);
 
   const { images, video } = block.model;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  const isLargeVariation = playDurationVariation === 'large';
 
   const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
@@ -55,7 +63,7 @@ export default ({
     duration: durationTranslation,
   } = media;
 
-  let momentDuration = null;
+  let momentDuration: moment.Duration | null = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
@@ -86,23 +94,40 @@ export default ({
     imageWidthLarge: 256,
   });
 
-  const adjustedBlockPosition = blockPosition + 1;
-  const eventTrackingData = {
-    componentName: `portrait-video-promo-${adjustedBlockPosition}`,
-    groupTracker,
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_tod_homepage',
+      experimentVariant: timeOfDayVariant,
+    }),
+    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+    ...(playDurationVariation && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_play_and_duration_size_increase',
+      experimentVariant: playDurationVariation,
+    }),
     viewThreshold: 1,
     itemTracker: {
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
       type: 'portrait-video-promo',
       text: headline,
-      position: adjustedBlockPosition,
+      position: blockPosition + 1,
       resourceId: video?.id,
+      ...(momentDuration && { duration: momentDuration.asMilliseconds() }),
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
+
   const { onClick: clickTrackerHandler } =
-    useClickTrackerHandler(eventTrackingData);
+    useClickTrackerHandler(eventTrackingDataExtended) ?? {};
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     if (clickTrackerHandler) clickTrackerHandler(e);
@@ -116,6 +141,7 @@ export default ({
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />
@@ -131,9 +157,18 @@ export default ({
           <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+                <Play
+                  css={
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    isLargeVariation ? styles.playIconLarge : styles.playIcon
+                  }
+                />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text size="brevier" css={styles.duration}>
+                  <Text
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    size={isLargeVariation ? 'pica' : 'brevier'}
+                    css={styles.duration}
+                  >
                     {durationString}
                   </Text>
                 </time>

@@ -116,6 +116,7 @@ export const mainTranslations = {
     advertisementLabel: 'Реклама',
   },
   seeAll: 'Посмотреть все',
+  continueReading: 'Читать дальше',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
   relatedTopics: 'Темы',
@@ -403,7 +404,7 @@ export const service: DefaultServiceConfig = {
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [

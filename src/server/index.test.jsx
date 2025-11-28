@@ -17,6 +17,7 @@ import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import { getExperimentVaryHeaders } from './utilities/experimentHeader';
+import createAdNonce from '../app/utilities/createAdNonce';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -66,18 +67,22 @@ jest.mock('@loadable/server', () => {
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
+jest.mock('#app/utilities/createAdNonce');
 
 getToggles.mockImplementation(() => defaultToggles.local);
+createAdNonce.mockReturnValue(null);
 
 const mockRouteProps = ({
   id,
   service,
   isAmp,
   isApp,
+  isLite,
   dataResponse,
   responseType,
   variant,
   pageType,
+  nonce,
 }) => {
   const getInitialData =
     responseType === 'reject'
@@ -90,8 +95,10 @@ const mockRouteProps = ({
   getRouteProps.mockReturnValue({
     isAmp,
     isApp,
+    isLite,
     service,
     variant,
+    nonce,
     route: { getInitialData, pageType },
     match: {
       params: { id, service, variant: mockVariantParam },
@@ -110,7 +117,15 @@ const makeRequest = async (requestPath, headers = {}) =>
 const QUERY_STRING = '?param=test&query=1';
 
 const testRenderedData =
-  ({ url, service, isAmp, isApp, successDataResponse, variant }) =>
+  ({
+    url,
+    service,
+    isAmp,
+    isApp,
+    successDataResponse,
+    variant,
+    nonce = null,
+  }) =>
   async () => {
     const { text, status } = await makeRequest(url);
 
@@ -131,6 +146,7 @@ const testRenderedData =
         isApp={isApp}
         legacyScripts="__mock_script_elements__"
         modernScripts="__mock_script_elements__"
+        nonce={nonce}
         service={service}
         links="__mock_link_elements__"
       />,
@@ -144,6 +160,7 @@ const testRenderedData =
       service,
       routes,
       url,
+      nonce,
     };
 
     if (variant) {
@@ -1449,6 +1466,7 @@ describe('Server', () => {
             isAmp={isAmp}
             legacyScripts="__mock_script_elements__"
             modernScripts="__mock_script_elements__"
+            nonce={null}
             service={service}
             links="__mock_link_elements__"
           />,
@@ -1624,7 +1642,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     );
   });
 
-  it(`should set isUK value to null when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
+  it(`should set isUK value to false when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
     mockRouteProps({
       dataResponse: successDataResponse,
       isAmp: true,
@@ -1635,7 +1653,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     expect(renderDocumentSpy).toHaveBeenCalledWith(
       expect.objectContaining({
-        data: expect.objectContaining({ isUK: null }),
+        data: expect.objectContaining({ isUK: false }),
       }),
     );
   });
@@ -1834,5 +1852,79 @@ describe('Exclusion of sensitive HTTP headers from logs', () => {
       SERVER_SIDE_REQUEST_FAILED,
       SENSITIVE_HEADER,
     );
+  });
+});
+
+describe('Nonce functionality', () => {
+  const service = 'mundo';
+  const successDataResponse = {
+    isAmp: false,
+    data: { some: 'data' },
+    service: 'someService',
+    status: 200,
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('when createAdNonce returns a nonce', () => {
+    const mockNonce = 'test-nonce-123';
+
+    beforeEach(() => {
+      createAdNonce.mockReturnValue(mockNonce);
+      mockRouteProps({
+        service,
+        isAmp: false,
+        isApp: false,
+        dataResponse: successDataResponse,
+      });
+    });
+
+    it('should pass nonce to renderDocument', async () => {
+      await makeRequest(`/${service}`);
+
+      expect(renderDocumentSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          nonce: mockNonce,
+        }),
+      );
+    });
+
+    it('should include nonce in Content-Security-Policy script-src directive', async () => {
+      const { header } = await makeRequest(`/${service}`);
+
+      const cspHeader = header['content-security-policy'];
+      expect(cspHeader).toBeDefined();
+      expect(cspHeader).toContain(`script-src`);
+      expect(cspHeader).toContain(`'nonce-${mockNonce}'`);
+    });
+  });
+
+  describe('when createAdNonce returns null', () => {
+    beforeEach(() => {
+      createAdNonce.mockReturnValue(null);
+      mockRouteProps({
+        service,
+        isAmp: false,
+        isApp: false,
+        dataResponse: successDataResponse,
+      });
+    });
+
+    it('should not set x-nonce header', async () => {
+      const { header } = await makeRequest(`/${service}`);
+      expect(header['x-nonce']).toBeUndefined();
+    });
+
+    it('should pass null nonce to renderDocument', async () => {
+      await makeRequest(`/${service}`);
+
+      expect(renderDocumentSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          nonce: null,
+        }),
+      );
+    });
   });
 });

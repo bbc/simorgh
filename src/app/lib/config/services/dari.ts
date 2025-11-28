@@ -1,13 +1,12 @@
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import 'moment/locale/fa';
-import '#psammead/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
+import '#psammead/psammead-locales/moment/fa-af';
+import '#psammead/moment-timezone-include/tz/Asia/Kabul';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
 export const service: DefaultServiceConfig = {
   default: {
-    lang: 'fa',
+    lang: 'prs',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'به روز شده در',
@@ -17,10 +16,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsProducerName: 'DARI',
     useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
-    brandName: 'BBC News فارسی',
-    serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
-    defaultImageAltText: 'BBC News فارسی',
+    brandName: 'BBC News دری',
+    serviceLocalizedName: 'دری',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/dari/images/metadata/poster-1024x576.png',
+    defaultImageAltText: 'BBC News دری',
     dir: 'rtl',
     externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
@@ -28,19 +28,17 @@ export const service: DefaultServiceConfig = {
     audioCaptionOffscreenText: 'توضیح صدا، ',
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
-    locale: 'fa',
+    locale: 'fa-af',
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
-    isoLang: 'fa',
-    datetimeLocale: 'fa',
+    isoLang: 'fa-af',
+    datetimeLocale: 'fa-af',
     service: 'dari',
     serviceName: 'Dari',
     languageName: 'Dari',
-    altCalendar: jalaali,
-    twitterCreator: '@BBCNews',
-    twitterSite: '@BBCNews',
-    noBylinesPolicy:
-      'https://www.bbc.com/persian/institutional-49283091#authorexpertise',
-    publishingPrinciples: 'https://www.bbc.com/persian/institutional-49283091',
+    twitterCreator: '@bbcafghanistan',
+    twitterSite: '@bbcafghanistan',
+    noBylinesPolicy: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
+    publishingPrinciples: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
     isTrustProjectParticipant: true,
     script: arabic,
     manifestPath: '/dari/manifest.json',
@@ -48,24 +46,6 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'صفحه اول',
     showAdPlaceholder: true,
     showRelatedTopics: true,
-    podcastPromo: {
-      title: 'پادکست',
-      brandTitle: 'اسطوره تختی',
-      brandDescription:
-        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم.',
-      image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
-        alt: 'اسطوره تختی',
-      },
-      linkLabel: {
-        text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
-      },
-      skipLink: {
-        text: 'از %title% رد شوید و به خواندن ادامه دهید',
-        endTextVisuallyHidden: 'پایان %title%',
-      },
-    },
     translations: {
       pagination: {
         page: 'صفحه',
@@ -89,8 +69,7 @@ export const service: DefaultServiceConfig = {
         toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
         informationPage:
           'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
-        informationPageLink:
-          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        informationPageLink: 'https://www.bbc.com/dari/articles/cp3dzx3z929o',
         dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
         articleDataSavingLinkText:
           'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
@@ -125,7 +104,7 @@ export const service: DefaultServiceConfig = {
             'در نوار جستجوی بی‌بی‌سی دنبال اطلاعات مورد نظرتان بگردید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -139,7 +118,7 @@ export const service: DefaultServiceConfig = {
             'بعدا دوباره امتحان کنید',
           ],
           callToActionFirst: 'برای یافتن اطلاعات مورد نظر به صفحه اصلی ',
-          callToActionLinkText: 'BBC News فارسی',
+          callToActionLinkText: 'BBC News دری',
           callToActionLast: ' بروید',
           callToActionLinkUrl: 'https://www.bbc.com/dari',
         },
@@ -256,20 +235,10 @@ export const service: DefaultServiceConfig = {
         photogallery: 'عکس',
         video: 'ویدیو',
         recentEpisodes: 'برنامه قبلی',
-        bbc_persian_radio: {
-          title: 'رادیو فارسی بی‌بی‌سی',
-          subtitle:
-            'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
-        },
         bbc_dari_radio: {
-          title: 'بی بی سی افغانستان (برنامه های دری)',
+          title: 'برنامه‌های رادیو بی‌بی‌سی‌دری',
           subtitle:
-            'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
-        },
-        bbc_persian_tv: {
-          title: '۶٠ دقیقه',
-          subtitle:
-            'برنامه خبری-تحلیلی یک ساعته که تصویری روشن و ساده از رویدادهای پیچیده جهان ارائه می‌کند.',
+            'برنامه‌های رادیویی بی‌بی‌سی‌دری تازه‌ترین و دقیق‌ترین خبرهای افغانستان، منطقه و جهان را با تحلیل‌ همه‌جانبه ارائه می‌کند. برنامه‌های خبری، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به وقت افغانستان به دری و پشتو روی امواج اف‌ام، موج متوسط و امواج کوتاه.',
         },
         listen: 'بشنوید',
         watch: 'ببینید',
@@ -355,7 +324,8 @@ export const service: DefaultServiceConfig = {
         // Messaging
         removalGuidelineText:
           'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+        retentionPeriodDays:
+          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
@@ -365,7 +335,7 @@ export const service: DefaultServiceConfig = {
           'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',
@@ -389,7 +359,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -406,24 +376,24 @@ export const service: DefaultServiceConfig = {
     },
     footer: {
       trustProjectLink: {
-        href: 'https://www.bbc.com/persian/institutional-49283091',
+        href: 'https://www.bbc.com/dari/articles/c8jpnremrrvo',
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
-        href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
         {
-          href: 'https://www.bbc.com/persian/institutional-37474133',
+          href: 'https://www.bbc.com/dari/articles/cy85mvgyr23o',
           text: 'شرایط استفاده',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37474136',
-          text: 'درباره بی بی سی',
+          href: 'https://www.bbc.com/dari/articles/cjeyjknpvn5o',
+          text: 'در باره بی‌بی‌سی',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37540067',
+          href: 'https://www.bbc.com/dari/articles/cq5860pd7q3o',
           text: 'سیاست حفظ حریم خصوصی',
         },
         {
@@ -431,8 +401,8 @@ export const service: DefaultServiceConfig = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.co.uk/persian/send/u50853555',
-          text: 'تماس با بی بی سی',
+          href: 'https://www.bbc.com/dari/send/u214757345',
+          text: 'تماس با بی‌بی‌سی',
         },
         {
           href: 'https://www.bbc.com/ws/languages',
@@ -447,11 +417,35 @@ export const service: DefaultServiceConfig = {
       ],
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
-    timezone: 'GMT',
+    timezone: 'Asia/Kabul',
     navigation: [
       {
         title: 'صفحه اول',
         url: '/dari',
+      },
+      {
+        title: 'افغانستان',
+        url: '/dari/topics/c78n1x1x3jet',
+      },
+      {
+        title: 'منطقه',
+        url: '/dari/topics/cx2den5q88lt',
+      },
+      {
+        title: 'جهان',
+        url: '/dari/topics/c70rj4d7rert',
+      },
+      {
+        title: 'ورزش',
+        url: '/dari/topics/c24r373gngzt',
+      },
+      {
+        title: 'ساینس',
+        url: '/dari/topics/clyl797dek3t',
+      },
+      {
+        title: 'برنامه‌های رادیویی',
+        url: '/dari/topics/cd9zd279j4kt',
       },
     ],
   },

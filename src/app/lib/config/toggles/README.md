@@ -20,7 +20,6 @@ Feature toggles can be found in `src/app/lib/config/toggles`
 | ----------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------- |
 | `ads`                   | Display Advertisements on Front Pages                                               |                                                                          |                                                       |
 | `articleLiteSiteLink`   | Display the link to the lite site on Article pages                                  |                                                                          |                                                       |
-| `chartbeatAnalytics`    | Capture Chartbeat Analytics                                                         |                                                                          |                                                       |
 | `comscoreAnalytics`     | Capture Comscore Analytics                                                          |                                                                          |                                                       |
 | `enableFetchingToggles` | Enable fetching toggle values from remote Toggles Config API for specified services |                                                                          |                                                       |
 | `eventTracking`         | Enable event tracking across the app                                                |                                                                          |                                                       |
@@ -34,7 +33,7 @@ Feature toggles can be found in `src/app/lib/config/toggles`
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages                           |                                                                          |                                                       |
 | `scriptLink`            | Display Script Switching link for services with variants                            |                                                                          |                                                       |
 | `variantCookie`         | Set variant cookie for services with variants                                       |                                                                          |                                                       |
-| `adsNonce`         | Uses "enabled" to check service as a boolean and "value" as countries list               | value is a coma separated countries                                      | enabled: true, value: 'es,mx'                   |
+| `adsNonce`              | Uses "enabled" to check service as a boolean and "value" as countries list          | value is a coma separated countries                                      | enabled: true, value: 'es,mx'                         |
 
 ## Default Toggle (Fallback) Values
 

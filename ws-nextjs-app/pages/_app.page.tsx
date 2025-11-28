@@ -2,20 +2,20 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
-import { ToggleContextProvider } from '../../src/app/contexts/ToggleContext';
-import { ServiceContextProvider } from '../../src/app/contexts/ServiceContext';
-import { RequestContextProvider } from '../../src/app/contexts/RequestContext';
-import { EventTrackingContextProvider } from '../../src/app/contexts/EventTrackingContext';
-import { UserContextProvider } from '../../src/app/contexts/UserContext';
-import ErrorPage from '../../src/app/pages/ErrorPage/ErrorPage';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   PageTypes,
   Services,
   Toggles,
   Variants,
   ServerSideExperiment,
-} from '../../src/app/models/types/global';
-import PageWrapper from '../../src/app/components/PageLayoutWrapper';
+} from '#app/models/types/global';
+import ErrorPage from '#app//pages/ErrorPage/ErrorPage';
+import PageWrapper from '#app/components/PageLayoutWrapper';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
+import { UserContextProvider } from '#app/contexts/UserContext';
 
 interface Props extends AppProps {
   pageProps: {
@@ -38,6 +38,7 @@ interface Props extends AppProps {
     pathname: string;
     service: Services;
     showAdsBasedOnLocation: boolean;
+    showCookieBannerBasedOnCountry?: boolean;
     status: number;
     timeOnServer?: number;
     toggles: Toggles;
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: Props) {
     pathname,
     service,
     showAdsBasedOnLocation,
+    showCookieBannerBasedOnCountry = true,
     status,
     timeOnServer,
     toggles,
@@ -100,6 +102,7 @@ export default function App({ Component, pageProps }: Props) {
           variant={variant}
           timeOnServer={timeOnServer}
           showAdsBasedOnLocation={showAdsBasedOnLocation}
+          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
           serverSideExperiments={serverSideExperiments}
           country={country}
           isNextJs={isNextJs}

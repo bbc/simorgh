@@ -1,6 +1,14 @@
-import loadable from '@loadable/component';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import loadable, { LoadableComponent } from '@loadable/component';
+import { Services } from '#app/models/types/global';
 
-const loadableConfig = {
+type LoadableService = LoadableComponent<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
+
+const loadableConfig: Record<Services, LoadableService> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
@@ -20,6 +28,7 @@ const loadableConfig = {
   japanese: loadable(() => import('./japanese')),
   korean: loadable(() => import('./korean')),
   kyrgyz: loadable(() => import('./kyrgyz')),
+  magyarul: loadable(() => import('./magyarul')),
   marathi: loadable(() => import('./marathi')),
   mundo: loadable(() => import('./mundo')),
   naidheachdan: loadable(() => import('./naidheachdan')),
@@ -32,6 +41,7 @@ const loadableConfig = {
   polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
+  romania: loadable(() => import('./romania')),
   russian: loadable(() => import('./russian')),
   scotland: loadable(() => import('./scotland')),
   serbian: loadable(() => import('./serbian')),

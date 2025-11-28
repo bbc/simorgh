@@ -19,11 +19,11 @@ export const serviceNumerals = (service: Services) => {
   const servicesNonWesternNumerals = {
     bengali: Bengali,
     burmese: Burmese,
+    dari: EasternArabic,
     nepali: Nepali,
     pashto: EasternArabic,
     persian: EasternArabic,
   };
-  // @ts-expect-error Only a subset of services have non-western numerals
   return servicesNonWesternNumerals[service] || WesternArabic;
 };
 

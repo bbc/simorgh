@@ -9,6 +9,7 @@ export const assertTopStoriesComponentView = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Top Stories component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,6 +23,7 @@ export const assertTopStoriesComponentView = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -32,6 +34,7 @@ export const assertTopStoriesComponentClick = ({
   useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Top Stories component', () => {
     interceptATIAnalyticsBeacons();
@@ -50,6 +53,7 @@ export const assertTopStoriesComponentClick = ({
       contentType,
       useReverb,
       applicationType,
+      siteId,
     });
   });
 };

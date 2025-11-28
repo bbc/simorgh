@@ -65,7 +65,7 @@ export const service: SerbianConfig = {
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Pročitajte naša pravila o linkovanju drugih sajtova.',
       },
       links: [
@@ -78,7 +78,7 @@ export const service: SerbianConfig = {
           text: 'O BBC-ju',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Pravila privatnosti',
         },
         {
@@ -150,6 +150,11 @@ export const service: SerbianConfig = {
       variant: 'cyr',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Vreme čitanja',
+        long: 'članak',
+        minute: 'min',
+      },
       pagination: {
         page: 'Stranica',
         previousPage: 'Prethodno',
@@ -472,7 +477,7 @@ export const service: SerbianConfig = {
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Прочитајте наша правила о линковању других сајтова.',
       },
       links: [
@@ -485,7 +490,7 @@ export const service: SerbianConfig = {
           text: 'О ББЦ-ју',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Правила приватности',
         },
         {
@@ -557,6 +562,11 @@ export const service: SerbianConfig = {
       variant: 'lat',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Време читања',
+        long: 'Чланак',
+        minute: 'мин',
+      },
       pagination: {
         page: 'Страница',
         previousPage: 'Претходно',

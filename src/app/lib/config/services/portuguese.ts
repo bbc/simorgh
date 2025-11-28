@@ -68,6 +68,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Tempo de leitura',
+        long: 'Leitura longa',
+        minute: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -79,6 +84,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todos',
       home: 'Início',
+      continueReading: 'Continue lendo',
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
@@ -385,7 +391,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [

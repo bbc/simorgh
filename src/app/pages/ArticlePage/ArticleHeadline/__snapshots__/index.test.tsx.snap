@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ArticleHeadline - Lite Site CTA with toggle disabled should not be displayed on canonical 1`] = `
 @media (max-width: 14.9375rem) {
@@ -105,8 +105,8 @@ exports[`ArticleHeadline - Lite Site CTA with toggle disabled should not be disp
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;
@@ -259,8 +259,8 @@ exports[`ArticleHeadline - Lite Site CTA with toggle enabled should be displayed
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   color: #141414;
   display: block;
   margin: 0;

@@ -326,7 +326,7 @@ export const service: DefaultServiceConfig = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
@@ -375,12 +375,12 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
-        title: 'Conflit en RDC',
-        url: '/afrique/topics/cge72ry253jt',
-      },
-      {
         title: 'Ecoutez en direct',
         url: '/afrique/bbc_afrique_radio/liveradio',
+      },
+      {
+        title: 'CAN 2025',
+        url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
         title: 'Afrique',
@@ -397,10 +397,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Science et technologie',
         url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Economie',
-        url: '/afrique/topics/cnq687nr9v1t',
       },
       {
         title: 'Culture',

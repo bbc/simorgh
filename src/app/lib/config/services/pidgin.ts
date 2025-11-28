@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Read am in',
+        long: 'Tori wey long',
+        minute: 'mins',
+      },
       pagination: {
         previousPage: 'Before',
         nextPage: 'Next',
@@ -57,7 +62,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'See everitin',
       home: 'Home',
-      continueReading: 'Continue reading',
+      continueReading: 'Kontinu to dey read',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
@@ -318,7 +323,7 @@ export const service: DefaultServiceConfig = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'De way wey we de take go external link.',
       },
       links: [

@@ -10,6 +10,9 @@ const Component = () => {
       blocks={blocks}
       selectedVideoIndex={0}
       onClose={() => null}
+      eventTrackingData={{
+        componentName: 'portrait-video-modal',
+      }}
     />
   );
 };

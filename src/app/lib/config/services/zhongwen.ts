@@ -49,7 +49,6 @@ const baseServiceConfig = {
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
-  fonts: [],
   timezone: 'GMT',
 };
 
@@ -78,7 +77,7 @@ export const service: ZhongwenConfig = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -395,7 +394,7 @@ export const service: ZhongwenConfig = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
