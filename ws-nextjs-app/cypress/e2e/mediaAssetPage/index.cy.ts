@@ -1,5 +1,8 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
@@ -7,6 +10,13 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 // import liteTests from '../articlePage/testsForLiteOnly';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 
 const canonicalTests = [
   testsForAllPages,
@@ -190,6 +200,61 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
+const atiAnalyticsTests = [
+  assertPageView,
+  assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+  assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  assertScrollableNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+];
+
+const atiAnalyticsTestSuites = [
+  {
+    path: '/hausa/labarai-51622389', // CPS MAP with video clip,
+    runforEnv: ['live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.news.media_asset.51622389.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/persian/media-49522521', // CPS MAP with live stream
+    runforEnv: ['live'],
+    service: 'persian',
+    pageIdentifier: 'persian.embedded_media.media_asset.49522521.page',
+    siteId: 69,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/persian/world-51497110', // CPS MAP with video clip
+    runforEnv: ['live'],
+    service: 'persian',
+    pageIdentifier: 'persian.world.media_asset.51497110.page',
+    siteId: 69,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
+    runforEnv: ['live'],
+    service: 'persian',
+    pageIdentifier: 'persian.tv_and_radio.media_asset.51780528.page',
+    siteId: 69,
+    applicationType: 'responsive',
+    contentType: 'article-media-asset',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+] as unknown as TestDataType[];
+
 // TC2 MAPs  do not support AMP pages
 const tc2CanonicalTestSuites = Cypress.env('SMOKE')
   ? [
@@ -325,4 +390,11 @@ runTestsForPage({
     ...ampTestSuites,
     // ...liteTestSuites,
   ],
+});
+
+runTestsForPage({
+  pageType: MEDIA_ASSET_PAGE,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });
