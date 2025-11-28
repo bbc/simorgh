@@ -24,7 +24,6 @@ import {
   UGC_PAGE,
   OFFLINE_PAGE,
   LIVE_TV_PAGE,
-  OFFLINE_PAGE,
 } from '../pageTypes';
 import parseRoute from '../parseRoute';
 
