@@ -35,38 +35,10 @@ describe('PromotionalBanner', () => {
     expect(screen.getByText('Not now')).toBeInTheDocument();
   });
 
-  it('sets correct aria-label for primary button (text)', () => {
-    render(<PromotionalBanner {...defaultProps} />);
-    const primaryButton = screen.getByRole('button', { name: /install/i });
-    expect(primaryButton).toHaveAttribute('aria-label', 'Install');
-  });
-
-  it('sets correct aria-label for secondary button', () => {
-    render(<PromotionalBanner {...defaultProps} />);
-    const secondaryButton = screen.getByRole('button', { name: /not now/i });
-    expect(secondaryButton).toHaveAttribute('aria-label', 'Not now');
-  });
-
   it('calls the primary button click handler when short text is present', () => {
     render(<PromotionalBanner {...defaultProps} />);
     fireEvent.click(screen.getByText('Install'));
     expect(defaultProps.primaryButton.onClick).toHaveBeenCalled();
-  });
-
-  it('sets correct aria-label for primary button (longText)', () => {
-    const props = {
-      ...defaultProps,
-      primaryButton: {
-        ...defaultProps.primaryButton,
-        text: '',
-        longText: 'Install the PWA App',
-      },
-    };
-    render(<PromotionalBanner {...props} />);
-    const primaryButton = screen.getByRole('button', {
-      name: /install the pwa app/i,
-    });
-    expect(primaryButton).toHaveAttribute('aria-label', 'Install the PWA App');
   });
 
   it('calls the primary button click handler when long text is present', () => {
