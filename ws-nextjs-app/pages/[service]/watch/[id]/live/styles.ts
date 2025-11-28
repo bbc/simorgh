@@ -24,21 +24,19 @@ const styles = {
         padding: `${spacings.TRIPLE}rem 0`,
       },
     }),
-  playerOutline: ({ mq }: Theme) =>
+  playerMargins: ({ mq, spacings }: Theme) =>
     css({
-      [mq.FORCED_COLOURS]: {
-        border: `solid ${pixelsToRem(3)}rem transparent`,
+      [mq.GROUP_3_MAX_WIDTH]: {
+        marginLeft: `-${spacings.DOUBLE}rem`,
+        marginRight: `-${spacings.DOUBLE}rem`,
       },
     }),
-  title: ({ mq, palette, spacings }: Theme) =>
+  title: ({ palette, spacings }: Theme) =>
     css({
       paddingTop: `${spacings.FULL}rem`,
       paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
-      [mq.FORCED_COLOURS]: {
-        paddingTop: `${spacings.FULL}rem`,
-      },
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
