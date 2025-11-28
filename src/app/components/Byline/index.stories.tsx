@@ -11,6 +11,7 @@ import {
 } from '../../pages/ArticlePage/fixtureData';
 import Byline from '.';
 import readme from './README.md';
+import metadata from './metadata.json';
 
 interface ComponentProps {
   fixture: OptimoBylineBlock['model']['blocks'];
@@ -28,6 +29,7 @@ export default {
   Component,
   parameters: {
     docs: { readme },
+    metadata,
   },
 };
 
@@ -50,7 +52,7 @@ export const AuthorRoleTimestampByline = () => (
     />
   </Component>
 );
-export const LinkAndLocationByline = () => (
+export const LocationByline = () => (
   <Component fixture={bylineWithLinkAndLocation}>
     <Timestamp
       firstPublished={1660658887}
@@ -59,7 +61,7 @@ export const LinkAndLocationByline = () => (
     />
   </Component>
 );
-export const LinkLocationNoPhotoByline = () => (
+export const LocationNoPhotoByline = () => (
   <Component fixture={bylineWithNonPngPhoto}>
     <Timestamp
       firstPublished={1660658887}
@@ -68,7 +70,7 @@ export const LinkLocationNoPhotoByline = () => (
     />
   </Component>
 );
-export const LinkLocationPhotoByline = () => (
+export const LocationPhotoByline = () => (
   <Component fixture={bylineWithPngPhoto}>
     <Timestamp
       firstPublished={1660658887}
