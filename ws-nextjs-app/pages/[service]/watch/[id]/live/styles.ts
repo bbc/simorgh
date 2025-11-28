@@ -19,15 +19,9 @@ const styles = {
   }),
   padding: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem 0`,
-      [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
-        padding: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [mq.GROUP_3_ONLY]: {
-        padding: `${spacings.SEXTUPLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.QUINTUPLE}rem 0`,
+      padding: `${spacings.DOUBLE}rem 0`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem 0`,
       },
     }),
   playerOutline: ({ mq }: Theme) =>
