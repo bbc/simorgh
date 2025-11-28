@@ -139,9 +139,7 @@ export default async (context: GetServerSidePropsContext) => {
 
     if (countrySpecificId) {
       try {
-        const {
-          data: topicData,
-        } = await getPageData({
+        const { data: topicData } = await getPageData({
           id: `/${service}/topics/${countrySpecificId}`,
           rendererEnv: 'live',
           resolvedUrl: `/${service}/topics/${countrySpecificId}`,
@@ -168,12 +166,8 @@ export default async (context: GetServerSidePropsContext) => {
             },
           ];
         }
-      } catch (error) {
-        logger.warn('PERSONALISED_CONTENT_TOPIC_FETCH_FAILED', {
-          message: (error as Error)?.message,
-          country,
-          topicId: countrySpecificId,
-        });
+      } catch (_error) {
+        // void
       }
     }
   }
@@ -210,9 +204,7 @@ export default async (context: GetServerSidePropsContext) => {
           latestMedia,
           mediaCuration,
           billboardCuration,
-          ...(personalisedContent && {
-            PersonalisedContent: personalisedContent,
-          }),
+          ...(personalisedContent && { personalisedContent }),
         },
         mostRead,
       },

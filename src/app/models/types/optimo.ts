@@ -136,6 +136,7 @@ export type SecondaryColumn = {
   topStories: TopStoryItem[];
   features: object[];
   PersonalisedContent?: object[];
+  personalisedContent?: object[];
   latestMedia?: LatestMedia[];
 };
 

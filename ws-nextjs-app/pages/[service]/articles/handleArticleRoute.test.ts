@@ -192,7 +192,7 @@ describe('handleArticleRoute', () => {
 
       expect(
         // @ts-expect-error pageData is present in successful responses
-        result.props.pageData.secondaryColumn?.PersonalisedContent,
+        result.props.pageData.secondaryColumn?.personalisedContent,
       ).toEqual([
         {
           title: 'Topic title',
@@ -214,7 +214,7 @@ describe('handleArticleRoute', () => {
 
       expect(
         // @ts-expect-error pageData is present in successful responses
-        result.props.pageData.secondaryColumn?.PersonalisedContent,
+        result.props.pageData.secondaryColumn?.personalisedContent,
       ).toBeUndefined();
     });
   });
