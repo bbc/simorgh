@@ -514,6 +514,28 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
+
+          <div css={styles.hideBelowDesktop}>
+            <div css={{ gridColumn: '1 / span 12' }}>
+              <RelatedContentSection
+                content={blocks}
+                {...(timeOfDayExperimentVariant && {
+                  experimentProps: {
+                    sendOptimizelyEvents: true,
+                    experimentName: timeOfDayExperimentName,
+                    experimentVariant: timeOfDayExperimentVariant,
+                  },
+                })}
+                {...(referrerVariant && {
+                  experimentProps: {
+                    sendOptimizelyEvents: true,
+                    experimentName: referrerExperimentName,
+                    experimentVariant: referrerVariant,
+                  },
+                })}
+              />
+            </div>
+          </div>
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
@@ -528,52 +550,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         )}
       </div>
 
-      <div css={styles.hideBelowDesktop}>
-        <div css={styles.underArticleGrid}>
-          <div css={{ gridColumn: '1 / span 12' }}>
-            <RelatedContentSection
-              content={blocks}
-              {...(timeOfDayExperimentVariant && {
-                experimentProps: {
-                  sendOptimizelyEvents: true,
-                  experimentName: timeOfDayExperimentName,
-                  experimentVariant: timeOfDayExperimentVariant,
-                },
-              })}
-              {...(referrerVariant && {
-                experimentProps: {
-                  sendOptimizelyEvents: true,
-                  experimentName: referrerExperimentName,
-                  experimentVariant: referrerVariant,
-                },
-              })}
-            />
-          </div>
-          <div css={{ gridColumn: '1 / span 12' }}>
-            <MostRead
-              data={mostReadInitialData}
-              columnLayout="multiColumn"
-              size="default"
-              headingBackgroundColour={GREY_2}
-              mobileDivider={showTopics}
-              eventTrackingData={{
-                componentName: 'most-read',
-                ...(timeOfDayExperimentVariant && {
-                  sendOptimizelyEvents: true,
-                  experimentName: timeOfDayExperimentName,
-                  experimentVariant: timeOfDayExperimentVariant,
-                }),
-                ...(referrerVariant && {
-                  sendOptimizelyEvents: true,
-                  experimentName: referrerExperimentName,
-                  experimentVariant: referrerVariant,
-                }),
-              }}
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Under-article components for mobile/tablet only */}
       {getUnderArticleComponents({
         referrerVariant: referrerVariant || '',
@@ -582,10 +558,28 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         featuresData: featuresContent,
         articleBlocks: blocks,
         grey2: GREY_2,
-        mostReadData: mostReadInitialData,
-        showRelatedTopics: showTopics,
         pageStyles: styles,
       }).map(component => component)}
+
+      {!isApp && !isPGL && (
+        <MostRead
+          css={styles.mostReadSection}
+          data={mostReadInitialData}
+          columnLayout="multiColumn"
+          size="default"
+          headingBackgroundColour={GREY_2}
+          mobileDivider={showTopics}
+          // EXPERIMENT: Time of Day Experiment
+          eventTrackingData={{
+            componentName: 'most-read',
+            ...(timeOfDayExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayExperimentVariant,
+            }),
+          }}
+        />
+      )}
     </div>
   );
 };
