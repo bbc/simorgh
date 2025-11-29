@@ -74,15 +74,6 @@ const getUnderArticleComponents = ({
     </div>
   ) : null;
 
-  if (
-    referrerVariant === 'control' ||
-    referrerVariant === 'off' ||
-    referrerVariant === 'adaptive_search'
-  ) {
-    return [relatedContent, topStoriesComponent, featuresComponent].filter(
-      Boolean,
-    );
-  }
   if (referrerVariant === 'adaptive_social') {
     return [featuresComponent, relatedContent, topStoriesComponent].filter(
       Boolean,
@@ -93,6 +84,7 @@ const getUnderArticleComponents = ({
       Boolean,
     );
   }
+  // Default for 'control', 'off', 'adaptive_search', '', or any unknown value
   return [relatedContent, topStoriesComponent, featuresComponent].filter(
     Boolean,
   );
