@@ -78,6 +78,10 @@ const getUnderArticleComponents = ({
     </div>
   ) : null;
 
+  // this could be simplified by only calling this function if the variants are adaptive_social or adaptive_direct
+  // leaving the other cases with the original unordered experience. However, this makes it more flexible
+  // to change the orders for different variants in the future, and is easy to understand.
+
   if (referrerVariant === 'adaptive_social') {
     return [featuresComponent, relatedContent, topStoriesComponent].filter(
       Boolean,
