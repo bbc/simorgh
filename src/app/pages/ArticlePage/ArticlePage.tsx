@@ -84,6 +84,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import getUnderArticleComponents from './helpers';
 
 // EXPERIMENT: Article Read Time 2
 interface ReadTimeData {
@@ -199,132 +200,6 @@ const getWsojComponent = ({
     })}
   />
 );
-const getUnderArticleComponents = ({
-  referrerVariant,
-  referrerExperimentName,
-  topStoriesData,
-  featuresData,
-  articleBlocks,
-  grey2,
-  mostReadData,
-  showRelatedTopics,
-  pageStyles,
-}: {
-  referrerVariant: string;
-  referrerExperimentName: string;
-  topStoriesData: unknown;
-  featuresData: unknown;
-  articleBlocks: OptimoBlock[];
-  grey2: string;
-  mostReadData: MostReadData;
-  showRelatedTopics: boolean;
-  pageStyles: Record<string, any>;
-}) => {
-
-  console.log('Under Article Referrer Variant:', referrerVariant);
-  const relatedContent = (
-    <div key="relatedContent" css={pageStyles.hideOnDesktop}>
-      <RelatedContentSection
-        content={articleBlocks}
-        {...(referrerVariant && {
-          experimentProps: {
-            sendOptimizelyEvents: true,
-            experimentName: referrerExperimentName,
-            experimentVariant: referrerVariant,
-          },
-        })}
-      />
-    </div>
-  );
-
-  const topStoriesArray = Array.isArray(topStoriesData) ? topStoriesData : [];
-
-  const topStoriesComponent =
-    topStoriesArray.length > 0 ? (
-      <div key="topStories" css={pageStyles.hideOnDesktop}>
-        <TopStoriesSection
-          content={topStoriesArray}
-          {...(referrerVariant && {
-            experimentProps: {
-              sendOptimizelyEvents: true,
-              experimentName: referrerExperimentName,
-              experimentVariant: referrerVariant,
-            },
-          })}
-        />
-      </div>
-    ) : null;
-
-  const featuresComponent = featuresData ? (
-    <div key="features" css={pageStyles.hideOnDesktop}>
-      <FeaturesAnalysis
-        content={featuresData}
-        parentColumns={{}}
-        sectionLabelBackground={grey2}
-        {...(referrerVariant && {
-          experimentProps: {
-            sendOptimizelyEvents: true,
-            experimentName: referrerExperimentName,
-            experimentVariant: referrerVariant,
-          },
-        })}
-      />
-    </div>
-  ) : null;
-  const mostReadComponent = (
-    <div key="mostRead" css={pageStyles.hideOnDesktop}>
-      <MostRead
-        data={mostReadData}
-        columnLayout="multiColumn"
-        size="default"
-        headingBackgroundColour={grey2}
-        mobileDivider={showRelatedTopics}
-        eventTrackingData={{
-          componentName: 'most-read',
-          ...(referrerVariant && {
-            sendOptimizelyEvents: true,
-            experimentName: referrerExperimentName,
-            experimentVariant: referrerVariant,
-          }),
-        }}
-      />
-    </div>
-  );
-  if (
-    referrerVariant === 'control' ||
-    referrerVariant === 'off' ||
-    referrerVariant === 'adaptive_search'
-  ) {
-    return [
-      relatedContent,
-      topStoriesComponent,
-      featuresComponent,
-      mostReadComponent,
-    ].filter(Boolean);
-  }
-  if (referrerVariant === 'adaptive_social') {
-    return [
-      featuresComponent,
-      relatedContent,
-      topStoriesComponent,
-      mostReadComponent,
-    ].filter(Boolean);
-  }
-  if (referrerVariant === 'adaptive_direct') {
-    return [
-      topStoriesComponent,
-      relatedContent,
-      featuresComponent,
-      mostReadComponent,
-    ].filter(Boolean);
-  }
-  return [
-    relatedContent,
-    topStoriesComponent,
-    featuresComponent,
-    mostReadComponent,
-  ].filter(Boolean);
-};
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -415,7 +290,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerVariant = 'adaptive_social'; // TEMP override
+  referrerVariant = 'adaptive_direct'; // TEMP override
   referrerVariant = isDesktopInitial ? 'off' : referrerVariant; // switches off experiment if desktop width is detected
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
