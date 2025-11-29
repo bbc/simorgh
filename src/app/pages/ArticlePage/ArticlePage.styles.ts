@@ -60,7 +60,7 @@ export default {
       },
     }),
 
-  hideBelowDesktop: ({ mq }: Theme) =>
+  hideBelowDesktopWidth: ({ mq }: Theme) =>
     css({
       display: 'none',
       [mq.GROUP_4_MIN_WIDTH]: {

@@ -515,7 +515,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
 
-          <div css={styles.hideBelowDesktop}>
+          <div css={styles.hideBelowDesktopWidth}>
             <div css={{ gridColumn: '1 / span 12' }}>
               <RelatedContentSection
                 content={blocks}
