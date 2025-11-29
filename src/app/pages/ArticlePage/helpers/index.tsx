@@ -24,8 +24,12 @@ const getUnderArticleComponents = ({
   grey2,
   pageStyles,
 }: GetUnderArticleComponentsProps) => {
+  const sectionStyles = [
+    pageStyles.hideOnDesktop,
+    pageStyles.underArticleSection,
+  ];
   const relatedContent = (
-    <div key="relatedContent" css={pageStyles.hideOnDesktop}>
+    <div key="relatedContent" css={sectionStyles}>
       <RelatedContentSection
         content={articleBlocks}
         {...(referrerVariant && {
@@ -43,7 +47,7 @@ const getUnderArticleComponents = ({
 
   const topStoriesComponent =
     topStoriesArray.length > 0 ? (
-      <div key="topStories" css={pageStyles.hideOnDesktop}>
+      <div key="topStories" css={sectionStyles}>
         <TopStoriesSection
           content={topStoriesArray}
           {...(referrerVariant && {
@@ -58,7 +62,7 @@ const getUnderArticleComponents = ({
     ) : null;
 
   const featuresComponent = featuresData ? (
-    <div key="features" css={pageStyles.hideOnDesktop}>
+    <div key="features" css={sectionStyles}>
       <FeaturesAnalysis
         content={featuresData}
         parentColumns={{}}

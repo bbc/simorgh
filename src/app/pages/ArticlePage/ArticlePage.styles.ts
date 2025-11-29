@@ -68,11 +68,12 @@ export default {
       },
     }),
 
-  underArticleSection: () =>
+  underArticleSection: ({ spacings }: Theme) =>
     css({
       display: 'block',
       gridColumn: '9 / span 4',
       marginTop: '2rem',
+      marginBottom: `${spacings.TRIPLE}rem`,
     }),
 
   pglColumn: () =>
