@@ -383,6 +383,10 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
+        title: 'Afrique',
+        url: '/afrique/topics/cvqxn2k7kv7t',
+      },
+      {
         title: 'Monde',
         url: '/afrique/topics/cvqxn21vx11t',
       },

@@ -77,25 +77,6 @@ exports[`Bulletin should render audio correctly 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -414,25 +395,6 @@ exports[`Bulletin should render audio correctly with lang prop passed in 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -766,25 +728,6 @@ exports[`Bulletin should render live audio correctly 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -1182,25 +1125,6 @@ exports[`Bulletin should render live video correctly 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
 }
 
 @media (min-width: 37.5rem) {
@@ -1584,25 +1508,6 @@ exports[`Bulletin should render radio bulletin without ariaId 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -1921,25 +1826,6 @@ exports[`Bulletin should render radio bulletin without summary correctly 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
@@ -2226,25 +2112,6 @@ exports[`Bulletin should render video correctly 1`] = `
   color: #222222;
   margin: 0;
   padding: 0.5rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-8 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
 }
 
 @media (min-width: 37.5rem) {

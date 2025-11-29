@@ -48,7 +48,7 @@ exports[`Inline Should render correctly 1`] = `
   font-style: normal;
   font-weight: 700;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   background-color: #FFFFFF;
   border: 0.125rem solid #222222;
   color: #222222;
@@ -65,6 +65,7 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-7 {
+    font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
@@ -72,6 +73,7 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 37.5rem) {
   .emotion-7 {
     font-size: 0.8125rem;
+    line-height: 1rem;
   }
 }
 

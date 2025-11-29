@@ -444,10 +444,6 @@ export const service: DefaultServiceConfig = {
         url: '/hindi/topics/ckdxnkz7607t',
       },
       {
-        title: 'बिहार विधानसभा चुनाव',
-        url: '/hindi/topics/c98yre1dg81t',
-      },
-      {
         title: 'विदेश',
         url: '/hindi/topics/c9wpm0en87xt',
       },
