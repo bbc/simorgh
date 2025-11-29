@@ -220,6 +220,8 @@ const getUnderArticleComponents = ({
   showRelatedTopics: boolean;
   pageStyles: Record<string, any>;
 }) => {
+
+  console.log('Under Article Referrer Variant:', referrerVariant);
   const relatedContent = (
     <div key="relatedContent" css={pageStyles.hideOnDesktop}>
       <RelatedContentSection
@@ -291,7 +293,7 @@ const getUnderArticleComponents = ({
   if (
     referrerVariant === 'control' ||
     referrerVariant === 'off' ||
-    referrerVariant === 'search'
+    referrerVariant === 'adaptive_search'
   ) {
     return [
       relatedContent,
@@ -300,7 +302,7 @@ const getUnderArticleComponents = ({
       mostReadComponent,
     ].filter(Boolean);
   }
-  if (referrerVariant === 'social') {
+  if (referrerVariant === 'adaptive_social') {
     return [
       featuresComponent,
       relatedContent,
@@ -308,7 +310,7 @@ const getUnderArticleComponents = ({
       mostReadComponent,
     ].filter(Boolean);
   }
-  if (referrerVariant === 'direct') {
+  if (referrerVariant === 'adaptive_direct') {
     return [
       topStoriesComponent,
       relatedContent,
