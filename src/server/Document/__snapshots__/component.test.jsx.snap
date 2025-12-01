@@ -108,9 +108,10 @@ exports[`Document Component should render APP version correctly 1`] = `
       
         window.addEventListener('load', () =&gt; {
           (function redirectScript(window) {
-  var _window$navigator;
+  var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
   var allowList = ['/pidgin/articles/czrzwn80zjmo'];
+  var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
   if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
     var toLitePath = "".concat(pathname, ".lite");
     var ect = window.navigator.connection.effectiveType;
@@ -119,7 +120,10 @@ exports[`Document Component should render APP version correctly 1`] = `
       case 'slow-2g':
       case '2g':
       case '3g':
-        window.location.replace(toLitePath);
+        if (isOptedIntoLiteRedirect === 'true') {
+          window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
+          window.location.replace(toLitePath);
+        }
         break;
       default:
         break;
@@ -268,6 +272,32 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <style>
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script>
+      
+        document.addEventListener('click', (event) =&gt; {
+          (function optOutScript(window, event) {
+  var _targetElement;
+  var targetElement;
+  var clickedElement = event.target;
+  var STATIC_REVERB_CLICK_TRACKING = 'data-static-reverb-click';
+  var currentElement = clickedElement;
+  while (currentElement) {
+    if (currentElement.tagName === 'A') {
+      targetElement = currentElement;
+      break;
+    }
+    currentElement = currentElement.parentElement;
+  }
+  if (((_targetElement = targetElement) === null || _targetElement === void 0 ? void 0 : _targetElement.tagName) === 'A') {
+    var reverbUrl = targetElement.getAttribute(STATIC_REVERB_CLICK_TRACKING);
+    if (reverbUrl !== null && reverbUrl !== void 0 && reverbUrl.includes('lite-site-summary')) {
+      window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
+    }
+  }
+})(window,event)
+        })
+      
+    </script>
     <script
       type="text/javascript"
     >
@@ -349,9 +379,10 @@ exports[`Document Component should render correctly 1`] = `
       
         window.addEventListener('load', () =&gt; {
           (function redirectScript(window) {
-  var _window$navigator;
+  var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
   var allowList = ['/pidgin/articles/czrzwn80zjmo'];
+  var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
   if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
     var toLitePath = "".concat(pathname, ".lite");
     var ect = window.navigator.connection.effectiveType;
@@ -360,7 +391,10 @@ exports[`Document Component should render correctly 1`] = `
       case 'slow-2g':
       case '2g':
       case '3g':
-        window.location.replace(toLitePath);
+        if (isOptedIntoLiteRedirect === 'true') {
+          window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
+          window.location.replace(toLitePath);
+        }
         break;
       default:
         break;
