@@ -6,7 +6,9 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
+import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PromotionalBanner from '#app/components/PromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -43,6 +45,8 @@ export interface HomePageProps {
 }
 
 const HomePage = ({ pageData }: HomePageProps) => {
+  const { isPwaPromoBannerVisible, promptInstall, dismissBanner } =
+    usePWAInstallPrompt();
   const {
     translations,
     product,
@@ -51,6 +55,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     lang,
     brandName,
     service,
+    promotionalBanner, // TODO: Boolean check instead
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
@@ -85,8 +90,26 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   const itemList = getItemList({ curations, name: brandName });
 
+  const showServicePWAPromoBanner =
+    isPwaPromoBannerVisible && promotionalBanner; // TODO: refactor
+
   return (
     <>
+      {showServicePWAPromoBanner && (
+        <PromotionalBanner
+          title={promotionalBanner.title}
+          description={promotionalBanner.description}
+          orText={promotionalBanner.orText}
+          primaryButton={{
+            text: promotionalBanner.primaryButton.text,
+            longText: promotionalBanner.primaryButton.longText,
+            onClick: promptInstall,
+          }}
+          secondaryButton={{ text: promotionalBanner.secondaryButton.text }}
+          isDismissible
+          handleClose={dismissBanner}
+        />
+      )}
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
