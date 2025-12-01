@@ -263,7 +263,7 @@ describe('withOptimizelyProvider HOC', () => {
       expect(
         (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
           ?.country,
-      ).toBe('GB');
+      ).toBe('gb');
     });
 
     it('should set country to null when RequestContext does not provide a country', () => {
