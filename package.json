@@ -104,7 +104,7 @@
     "sharp": "0.34.4"
   },
   "dependencies": {
-    "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-1.2.0.tgz",
+    "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.2.0.tgz",
     "@bbc/web-vitals": "2.5.3",
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
