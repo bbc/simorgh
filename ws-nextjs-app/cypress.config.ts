@@ -49,7 +49,7 @@ export default defineConfig({
           module: {
             rules: [
               {
-                test: /\.[jt]sx?$/,
+                test: /\.(ts|tsx|js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'swc-loader',
                 options: {
