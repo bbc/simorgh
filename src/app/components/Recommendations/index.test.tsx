@@ -4,6 +4,7 @@ import Recommendations from '.';
 import recommendationsFixtures, {
   topStoriesContentFixture,
   featuresContentFixture,
+  relatedContentBlocksFixture,
 } from './fixtures';
 
 describe('Recommendations', () => {
@@ -144,5 +145,56 @@ describe('Recommendations', () => {
       expect(image?.getAttribute('src')).toBeTruthy();
       expect(image?.getAttribute('alt')).toBe(altText);
     });
+  });
+  it('should render related content with title, href, image, and alt text when referrerVariant is adaptive_search', () => {
+    render(
+      <Recommendations
+        data={[]}
+        blocks={relatedContentBlocksFixture}
+        referrerVariant="adaptive_search"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    const sectionTitle = document.querySelector(
+      '[id="recommendations-heading"]',
+    );
+    expect(sectionTitle).toBeInTheDocument();
+
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems.length).toBe(2);
+
+    const firstLink = listItems[0].querySelector('a');
+    expect(firstLink).toBeInTheDocument();
+    expect(firstLink?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z490o',
+    );
+    expect(firstLink?.textContent).toContain(
+      'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+    );
+
+    const firstImage = listItems[0].querySelector('img');
+    expect(firstImage).toBeInTheDocument();
+    expect(firstImage?.getAttribute('src')).toBeTruthy();
+    expect(firstImage?.getAttribute('alt')).toBe(
+      "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
+    );
+
+    const secondLink = listItems[1].querySelector('a');
+    expect(secondLink).toBeInTheDocument();
+    expect(secondLink?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z491p',
+    );
+    expect(secondLink?.textContent).toContain('Second related content title');
+
+    const secondImage = listItems[1].querySelector('img');
+    expect(secondImage).toBeInTheDocument();
+    expect(secondImage?.getAttribute('src')).toBeTruthy();
+    expect(secondImage?.getAttribute('alt')).toBe(
+      'Second related content alt text.',
+    );
   });
 });

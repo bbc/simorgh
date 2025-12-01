@@ -353,4 +353,340 @@ export const featuresContentFixture = [
   },
 ];
 
+export const relatedContentBlocksFixture = [
+  {
+    id: 'ddec8c0b',
+    type: 'headline',
+    model: {
+      blocks: [
+        {
+          id: '2e85aec0',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '59852a1a',
+                type: 'paragraph',
+                model: {
+                  text: 'Lo que el hallazgo de una escultura de 12.000 años de antigüedad revela sobre el ego de nuestros ancestros',
+                  blocks: [
+                    {
+                      id: '01e6cbaf',
+                      type: 'fragment',
+                      model: {
+                        text: 'Lo que el hallazgo de una escultura de 12.000 años de antigüedad revela sobre el ego de nuestros ancestros',
+                        attributes: [],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    id: '69ce9993',
+    type: 'image',
+    model: {
+      blocks: [
+        {
+          id: '7b3a255a',
+          type: 'caption',
+          model: {
+            blocks: [
+              {
+                id: '38afe3fe',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '52e2ffd7',
+                      type: 'paragraph',
+                      model: {
+                        text: 'El relieve hallado en el yacimiento arqueológico de Karahantepe muestra afilados rasgos faciales, una nariz pequeña y ojos hundidos. ',
+                        blocks: [
+                          {
+                            id: '87257636',
+                            type: 'fragment',
+                            model: {
+                              text: 'El relieve hallado en el yacimiento arqueológico de Karahantepe muestra afilados rasgos faciales, una nariz pequeña y ojos hundidos. ',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'ae4f1f4c',
+          type: 'altText',
+          model: {
+            blocks: [
+              {
+                id: '561aa37b',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'fb8fd0a3',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Un pilar con forma de T y un rostro tallado en la piedra. ',
+                        blocks: [
+                          {
+                            id: 'de09569d',
+                            type: 'fragment',
+                            model: {
+                              text: 'Un pilar con forma de T y un rostro tallado en la piedra. ',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'ceec0366',
+          type: 'rawImage',
+          model: {
+            width: 957,
+            height: 539,
+            locator: '68f7/live/44316c80-b974-11f0-a949-2fea9e2120e8.png',
+            originCode: 'cpsprodpb',
+            copyrightHolder: 'Ministerio de Cultura y Turismo de Turquía',
+            suitableForSyndication: true,
+          },
+        },
+      ],
+    },
+  },
+  {
+    id: '9a2e430f',
+    type: 'timestamp',
+    model: {
+      firstPublished: 1762426601655,
+      lastPublished: 1762426601655,
+    },
+  },
+  {
+    id: 'db7f02c5',
+    type: 'relatedContent',
+    model: {
+      blocks: [
+        {
+          id: 'd3f9a500',
+          type: 'link',
+          model: {
+            locator: 'urn:bbc:optimo:asset:c629n28z490o',
+            blocks: [
+              {
+                id: '2fee3a9a',
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      id: '70295b4c',
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            id: '1b5772c0',
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  id: 'b081b220',
+                                  type: 'paragraph',
+                                  model: {
+                                    text: "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
+                                    blocks: [
+                                      {
+                                        id: 'e5623606',
+                                        type: 'fragment',
+                                        model: {
+                                          text: "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                    {
+                      id: 'a560788e',
+                      type: 'rawImage',
+                      model: {
+                        width: 1441,
+                        height: 810,
+                        locator:
+                          'ff8d/live/9c945880-b4ea-11f0-b2a1-6f537f66f9aa.jpg',
+                        originCode: 'cpsprodpb',
+                        copyrightHolder:
+                          'Photo by AMIR MAKAR/AFP via Getty Images',
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                id: 'fa05c79c',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '73131948',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+                        blocks: [
+                          {
+                            id: '1200bfda',
+                            type: 'urlLink',
+                            model: {
+                              text: 'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+                              locator:
+                                'https://www.bbc.com/mundo/articles/c629n28z490o',
+                              blocks: [
+                                {
+                                  id: '0d08fb26',
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'd3f9a501',
+          type: 'link',
+          model: {
+            locator: 'urn:bbc:optimo:asset:c629n28z491p',
+            blocks: [
+              {
+                id: '2fee3a9b',
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      id: '70295b4d',
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            id: '1b5772c1',
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  id: 'b081b221',
+                                  type: 'paragraph',
+                                  model: {
+                                    text: 'Second related content alt text.',
+                                    blocks: [
+                                      {
+                                        id: 'e5623607',
+                                        type: 'fragment',
+                                        model: {
+                                          text: 'Second related content alt text.',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                    {
+                      id: 'a560788f',
+                      type: 'rawImage',
+                      model: {
+                        width: 1200,
+                        height: 800,
+                        locator: 'ff8d/live/second-related-content.jpg',
+                        originCode: 'cpsprodpb',
+                        copyrightHolder: 'Photo by SECOND/AFP via Getty Images',
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                id: 'fa05c79d',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '73131949',
+                      type: 'paragraph',
+                      model: {
+                        text: 'Second related content title',
+                        blocks: [
+                          {
+                            id: '1200bfdb',
+                            type: 'urlLink',
+                            model: {
+                              text: 'Second related content title',
+                              locator:
+                                'https://www.bbc.com/mundo/articles/c629n28z491p',
+                              blocks: [
+                                {
+                                  id: '0d08fb27',
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'Second related content title',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: false,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+];
+
 export default recommendationsFixtures;
