@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
+import { OptimoBlock } from '#app/models/types/optimo';
 import Recommendations from '.';
 import recommendationsFixtures, {
   topStoriesContentFixture,
@@ -195,6 +196,53 @@ describe('Recommendations', () => {
     expect(secondImage?.getAttribute('src')).toBeTruthy();
     expect(secondImage?.getAttribute('alt')).toBe(
       'Second related content alt text.',
+    );
+  });
+  it('should render a single related content item without a list when only one item is present', () => {
+    const singleRelatedContentBlocks = [
+      ...relatedContentBlocksFixture.slice(0, 3),
+      relatedContentBlocksFixture[3]
+        ? {
+            ...relatedContentBlocksFixture[3],
+            model: {
+              blocks: relatedContentBlocksFixture[3]?.model?.blocks
+                ? [relatedContentBlocksFixture[3].model.blocks[0]]
+                : [],
+            },
+          }
+        : undefined,
+    ].filter(Boolean) as OptimoBlock[];
+
+    const { getByText } = render(
+      <Recommendations
+        data={[]}
+        blocks={singleRelatedContentBlocks}
+        referrerVariant="adaptive_search"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    // Should not render a list
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems.length).toBe(0);
+
+    // Should render the single promo directly
+    const link = getByText(
+      'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+    ).closest('a');
+    expect(link).toBeInTheDocument();
+    expect(link?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z490o',
+    );
+
+    const image = document.querySelector('img');
+    expect(image).toBeInTheDocument();
+    expect(image?.getAttribute('src')).toBeTruthy();
+    expect(image?.getAttribute('alt')).toBe(
+      "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
     );
   });
 });
