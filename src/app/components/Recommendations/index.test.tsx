@@ -1,7 +1,10 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import Recommendations from '.';
-import recommendationsFixtures, { topStoriesContentFixture } from './fixtures';
+import recommendationsFixtures, {
+  topStoriesContentFixture,
+  featuresContentFixture,
+} from './fixtures';
 
 describe('Recommendations', () => {
   it('should render a single recommendation', () => {
@@ -79,6 +82,53 @@ describe('Recommendations', () => {
       const href = story.locators.canonicalUrl;
 
       // Extract alt text from fixture
+      const altText =
+        story.images?.defaultPromoImage?.blocks?.find(
+          block => block.type === 'altText',
+        )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text || '';
+
+      const link = item.querySelector('a');
+      expect(link).toBeInTheDocument();
+      expect(link?.getAttribute('href')).toBe(href);
+      expect(link?.textContent).toContain(title);
+
+      const image = item.querySelector('img');
+      expect(image).toBeInTheDocument();
+      expect(image?.getAttribute('src')).toBeTruthy();
+      expect(image?.getAttribute('alt')).toBe(altText);
+    });
+  });
+  it('should render features with title, href, image, and alt text when referrerVariant is adaptive_social', () => {
+    const { debug } = render(
+      <Recommendations
+        data={[]}
+        featuresContent={featuresContentFixture}
+        referrerVariant="adaptive_social"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    debug(); // This will print the rendered DOM to the test output
+
+    const sectionTitle = document.querySelector(
+      '[id="recommendations-heading"]',
+    );
+    expect(sectionTitle).toBeInTheDocument();
+    expect(sectionTitle?.textContent).toBe('No te lo pierdas');
+
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+
+    expect(listItems).toHaveLength(featuresContentFixture.length);
+
+    listItems.forEach((item, index) => {
+      const story = featuresContentFixture[index];
+      const title =
+        story.headlines.promoHeadline.blocks[0].model.blocks[0].model.text;
+      const href = story.locators.canonicalUrl;
+
       const altText =
         story.images?.defaultPromoImage?.blocks?.find(
           block => block.type === 'altText',

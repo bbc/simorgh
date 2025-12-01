@@ -14,7 +14,23 @@ type Features = {
     canonicalUrl?: string;
   };
   headlines: {
-    promoHeadline?: { blocks: { model: { text: string } }[] };
+    promoHeadline?: {
+      blocks: Array<{
+        model: {
+          blocks: Array<{
+            model: {
+              text: string;
+              blocks?: Array<{
+                model: {
+                  text: string;
+                  attributes?: unknown[];
+                };
+              }>;
+            };
+          }>;
+        };
+      }>;
+    };
     seoHeadline?: string;
   };
   images?: {
@@ -198,22 +214,19 @@ export const mapOptimoBlockToRecommendation = (block: any): Recommendation => ({
 // --- Features ---
 
 export const mapFeaturesToRecommendation = (featuresContent: Features) => {
-  const promoHeadlineBlocks = featuresContent.headlines?.promoHeadline;
   const promoHeadlineText =
-    Array.isArray(promoHeadlineBlocks) &&
-    promoHeadlineBlocks[0]?.blocks &&
-    Array.isArray(promoHeadlineBlocks[0].blocks)
-      ? promoHeadlineBlocks[0].blocks[0]?.model?.text
-      : '';
-  const title =
-    promoHeadlineText || featuresContent.headlines?.seoHeadline || '';
+    featuresContent.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text ??
+    featuresContent.headlines?.seoHeadline ??
+    '';
 
   const defaultPromoImage = featuresContent.images?.defaultPromoImage;
   const rawImage = getRawImageBlock(defaultPromoImage);
 
   const image = {
     locator: rawImage.locator ?? '',
-    altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+    altText:
+      getAltTextFromDefaultPromoImage(defaultPromoImage) || promoHeadlineText,
     width: rawImage.width ?? 0,
     height: rawImage.height ?? 0,
     copyrightHolder: rawImage.copyrightHolder ?? '',
@@ -222,7 +235,7 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
 
   return {
     id: featuresContent.id,
-    title,
+    title: promoHeadlineText,
     href: featuresContent.locators?.canonicalUrl ?? '',
     image,
   };

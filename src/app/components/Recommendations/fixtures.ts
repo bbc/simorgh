@@ -190,4 +190,167 @@ export const topStoriesContentFixture = [
   },
 ];
 
+export const featuresContentFixture = [
+  {
+    id: 'urn:bbc:ares::article:cy5glkkkgwko',
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/mundo/articles/cy5glkkkgwko',
+    },
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Por qué Honduras sigue siendo el país más pobre de Centroamérica pese a una década de crecimiento',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'Por qué Honduras sigue siendo el país más pobre de Centroamérica pese a una década de crecimiento',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'Mujer cocinando en Honduras. Maria de la Cruz Rodriguez, 80 en El Guanabano.',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'Mujer cocinando en Honduras. Maria de la Cruz Rodriguez, 80 en El Guanabano.',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 792,
+              height: 446,
+              locator: '7506/live/1cdb8560-c984-11f0-9e01-e9414f337bc1.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'AFP via Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: 'urn:bbc:ares::article:cp3dk117nnpo',
+    locators: {
+      canonicalUrl: 'https://www.bbc.com/mundo/articles/cp3dk117nnpo',
+    },
+    headlines: {
+      promoHeadline: {
+        blocks: [
+          {
+            type: 'text',
+            model: {
+              blocks: [
+                {
+                  type: 'paragraph',
+                  model: {
+                    text: 'Por qué si todos viviéramos como Uruguay se frenaría la "estafa piramidal" que estamos haciendo con los recursos del planeta',
+                    blocks: [
+                      {
+                        type: 'fragment',
+                        model: {
+                          text: 'Por qué si todos viviéramos como Uruguay se frenaría la "estafa piramidal" que estamos haciendo con los recursos del planeta',
+                          attributes: [],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    images: {
+      defaultPromoImage: {
+        blocks: [
+          {
+            type: 'altText',
+            model: {
+              blocks: [
+                {
+                  type: 'text',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'paragraph',
+                        model: {
+                          text: 'Persona andando en bicicleta en Maldonado, Uruguay',
+                          blocks: [
+                            {
+                              type: 'fragment',
+                              model: {
+                                text: 'Persona andando en bicicleta en Maldonado, Uruguay',
+                                attributes: [],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+          {
+            type: 'rawImage',
+            model: {
+              width: 2121,
+              height: 1193,
+              locator: 'a191/live/b2dd7770-c93a-11f0-a414-099360380435.jpg',
+              originCode: 'cpsprodpb',
+              copyrightHolder: 'Getty Images',
+              suitableForSyndication: true,
+            },
+          },
+        ],
+      },
+    },
+  },
+];
+
 export default recommendationsFixtures;
