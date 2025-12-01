@@ -1,4 +1,4 @@
-const recommendationsFixtures = [
+export const recommendationsFixtures = [
   {
     id: '123',
     title: 'Recommendation One',

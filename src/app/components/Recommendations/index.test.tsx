@@ -102,7 +102,7 @@ describe('Recommendations', () => {
     });
   });
   it('should render features with title, href, image, and alt text when referrerVariant is adaptive_social', () => {
-    const { debug } = render(
+    render(
       <Recommendations
         data={[]}
         featuresContent={featuresContentFixture}
@@ -113,8 +113,6 @@ describe('Recommendations', () => {
         toggles: { midArticleOnwardJourney: { enabled: true } },
       },
     );
-
-    debug(); // This will print the rendered DOM to the test output
 
     const sectionTitle = document.querySelector(
       '[id="recommendations-heading"]',
@@ -165,6 +163,7 @@ describe('Recommendations', () => {
       '[id="recommendations-heading"]',
     );
     expect(sectionTitle).toBeInTheDocument();
+    expect(sectionTitle?.textContent).toBe('Contenido relacionado');
 
     const listItems = document.querySelectorAll('li[role="listitem"]');
     expect(listItems.length).toBe(2);
