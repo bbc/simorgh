@@ -77,7 +77,6 @@ const Recommendations = ({
     );
   }
   const componentName = 'midarticle-mostread';
-  console.log('displayData: ', displayData);
   const groupTracker = {
     name: title,
     type: componentName,
