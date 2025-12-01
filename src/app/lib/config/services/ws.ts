@@ -39,6 +39,8 @@ export const service: DefaultServiceConfig = {
     publishingPrinciples: 'https://www.bbc.com/news/help-41670342',
     isTrustProjectParticipant: true,
     script: latin,
+    manifestPath: '/ws/manifest.json',
+    swPath: '/sw.js',
     homePageTitle: 'Home',
     showAdPlaceholder: false,
     showRelatedTopics: true,

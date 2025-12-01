@@ -4,6 +4,7 @@ import {
   AV_EMBEDS,
   DOWNLOADS_PAGE,
   LIVE_PAGE,
+  OFFLINE_PAGE,
   UGC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
@@ -20,6 +21,7 @@ export default function derivePageType(
     'http://bbc.com',
   ).pathname;
 
+  if (sanitisedPathname.includes('offline')) return OFFLINE_PAGE;
   if (sanitisedPathname.includes('live')) return LIVE_PAGE;
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;

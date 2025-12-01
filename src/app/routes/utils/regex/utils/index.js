@@ -36,11 +36,6 @@ const getWorldServices = services => {
   return services.filter(service => !publicServices.includes(service));
 };
 
-export const getOfflinePageRegex = services => {
-  const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/offline`;
-};
-
 export const getHomePageRegex = services => {
   const homePageServiceRegex = getServiceRegex(services);
   return `/:service(${homePageServiceRegex}):variant(${variantRegex})?:lite(${liteRegex})?`;

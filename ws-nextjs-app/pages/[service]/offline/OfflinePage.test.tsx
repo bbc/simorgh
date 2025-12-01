@@ -3,7 +3,7 @@ import OfflinePage from './OfflinePage';
 import {
   render,
   screen,
-} from '../../components/react-testing-library-with-providers';
+} from '#app/components/react-testing-library-with-providers';
 
 describe('OfflinePage', () => {
   it('should render correctly', () => {
@@ -20,16 +20,19 @@ describe('OfflinePage', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should use fallback values when translations are missing', () => {
+  it('should display offline message and solutions', () => {
     render(<OfflinePage />, {
       service: 'news',
-      translations: {},
     });
 
-    expect(screen.getByText('You are offline.')).toBeInTheDocument();
+    expect(screen.getByText('You are offline')).toBeInTheDocument();
 
     expect(
-      screen.getByText(/Seems like you don't have an internet connection/),
+      screen.getByText(/It seems you don't have an internet connection/),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText('Check your internet connection'),
     ).toBeInTheDocument();
   });
 });

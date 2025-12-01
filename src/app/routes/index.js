@@ -8,10 +8,8 @@ import onDemandTV from './onDemandTV';
 import topic from './topic';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
-import offline from './offline';
 
 export default [
-  offline,
   homePage,
   liveRadio,
   mostRead,
