@@ -689,4 +689,66 @@ export const relatedContentBlocksFixture = [
   },
 ];
 
+export const mostReadDataFixture = [
+  {
+    id: 'urn:bbc:optimo:asset:c5yjx8yw950o',
+    title:
+      'El conteo de las elecciones presidenciales en Honduras muestra una reñida contienda entre el conservador Asfura, apoyado por Trump, y el centrista Nasralla',
+    href: 'https://www.bbc.com/mundo/articles/c5yjx8yw950o',
+    image: {
+      width: 1024,
+      height: 683,
+      altText:
+        'Tarjetón electoral con las imágenes de Nasry Asfura y Salvador Nasralla.',
+      copyrightHolder: 'Getty Images',
+      originCode: 'cpsprodpb',
+      locator: 'd341/live/fbf192f0-ceb9-11f0-a892-01d657345866.jpg',
+    },
+  },
+  {
+    id: 'urn:bbc:optimo:asset:cx2ewd5yen7o',
+    title:
+      '"Estoy desolado, tenía tantos vecinos y amigos allí": los dramáticos testimonios de los residentes de las torres de apartamentos de Hong Kong donde un enorme incendio dejó decenas de muertos',
+    href: 'https://www.bbc.com/mundo/articles/cx2ewd5yen7o',
+    image: {
+      width: 976,
+      height: 549,
+      altText: 'Harry Cheung',
+      copyrightHolder: 'Reuters',
+      originCode: 'cpsprodpb',
+      locator: '4862/live/2ee88820-cb87-11f0-8c06-f5d460985095.jpg',
+    },
+  },
+  {
+    id: 'urn:bbc:optimo:asset:c709elze6ywo',
+    title:
+      'Mueren más de 500 personas tras las devastadoras inundaciones registradas en Indonesia',
+    href: 'https://www.bbc.com/mundo/articles/c709elze6ywo',
+    image: {
+      width: 1017,
+      height: 572,
+      altText:
+        'Rescatistas cargan a un hombre de una lancha inflable a una ribera enlodada ',
+      copyrightHolder: 'AFP via Getty Images',
+      originCode: 'cpsprodpb',
+      locator: '63c8/live/ec2e8510-ce07-11f0-8c06-f5d460985095.jpg',
+    },
+  },
+  {
+    id: 'urn:bbc:optimo:asset:cpd6l44qgwqo',
+    title:
+      'Qué son las ingeniosas cajas de Ward y cómo transformaron la economía mundial',
+    href: 'https://www.bbc.com/mundo/articles/cpd6l44qgwqo',
+    image: {
+      width: 1024,
+      height: 576,
+      altText:
+        'Una caja triangular de madera y vidrio, en este caso también con varas de metal, en medio de follaje',
+      copyrightHolder: 'Getty Images',
+      originCode: 'cpsprodpb',
+      locator: '7c68/live/3e246ba0-c97b-11f0-9a12-2dc0b71304e7.jpg',
+    },
+  },
+];
+
 export default recommendationsFixtures;

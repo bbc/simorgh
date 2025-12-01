@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
-import { OptimoBlock } from '#app/models/types/optimo';
 import Recommendations from '.';
-import recommendationsFixtures, {
+import {
+  mostReadDataFixture,
+  recommendationsFixtures,
   topStoriesContentFixture,
   featuresContentFixture,
   relatedContentBlocksFixture,
@@ -211,7 +212,7 @@ describe('Recommendations', () => {
             },
           }
         : undefined,
-    ].filter(Boolean) as OptimoBlock[];
+    ].filter(Boolean);
 
     const { getByText } = render(
       <Recommendations
@@ -245,4 +246,76 @@ describe('Recommendations', () => {
       "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
     );
   });
+  it.each([
+    [undefined, 'undefined'],
+    ['off', 'off'],
+    ['control', 'control'],
+    ['something_control', 'something_control'],
+    ['', 'empty string'],
+  ])(
+    'should render most read data when referrerVariant is %s',
+    (referrerVariant, label) => {
+      const { getByText, rerender } = render(
+        <Recommendations
+          data={mostReadDataFixture}
+          referrerVariant={referrerVariant}
+        />,
+        {
+          service: 'mundo',
+          toggles: { midArticleOnwardJourney: { enabled: true } },
+        },
+      );
+
+      mostReadDataFixture.forEach(item => {
+        const link = getByText(item.title).closest('a');
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', item.href);
+
+        // Traverse up to the promo wrapper, then find the image
+        const promoWrapper = link?.closest(
+          '[data-e2e="recommendations-wrapper"]',
+        );
+        const image = promoWrapper?.querySelector('img');
+        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute('alt', item.image.altText);
+        expect(image).toHaveAttribute(
+          'src',
+          expect.stringContaining(item.image.locator),
+        );
+      });
+
+      // For all but the first run, rerender with the next variant
+      if (label !== 'undefined') {
+        rerender(
+          <Recommendations
+            data={mostReadDataFixture}
+            referrerVariant={referrerVariant}
+          />,
+        );
+
+        // Assert section title after rerender
+        const rerenderedSectionTitle = document.querySelector(
+          '[id="recommendations-heading"]',
+        );
+        expect(rerenderedSectionTitle).toBeInTheDocument();
+        expect(rerenderedSectionTitle?.textContent).toBe('Más leídas');
+        mostReadDataFixture.forEach(item => {
+          const link = getByText(item.title).closest('a');
+          expect(link).toBeInTheDocument();
+          expect(link).toHaveAttribute('href', item.href);
+
+          const promoWrapper = link?.closest(
+            '[data-e2e="recommendations-wrapper"]',
+          );
+          const image = promoWrapper?.querySelector('img');
+          expect(image).toBeInTheDocument();
+          expect(image).toHaveAttribute('alt', item.image.altText);
+          expect(image).toHaveAttribute(
+            'src',
+            expect.stringContaining(item.image.locator),
+          );
+        });
+      }
+    },
+  );
 });
