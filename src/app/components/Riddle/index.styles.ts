@@ -104,7 +104,7 @@ export default {
 
   hintPrice: ({ palette }: Theme) =>
     css({
-      width: `${3.25}rem`,
+      width: `${3}rem`,
       padding: `${0.6}rem ${1}rem`,
       background: palette.GREY_3,
       textAlign: 'center',
