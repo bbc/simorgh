@@ -5620,15 +5620,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
-  version: 19.1.8
-  resolution: "@types/react@npm:19.1.8"
-  dependencies:
-    csstype: "npm:^3.0.2"
-  checksum: 10/a3e6fe0f60f22828ef887f30993aa147b71532d7b1219dd00d246277eb7a9ca01ec533096237fa21ca1bccb3653373b4e8e59e5ae59f9c793058384bbc1f4d5c
-  languageName: node
-  linkType: hard
-
 "@types/react@npm:19.2.6":
   version: 19.2.6
   resolution: "@types/react@npm:19.2.6"
