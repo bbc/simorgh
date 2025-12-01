@@ -9,10 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider, {
-  REFERRER_CATEGORIES,
-  COUNTRY_CODES_TO_EXPERIMENT,
-} from '.';
+import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -259,35 +256,23 @@ describe('withOptimizelyProvider HOC', () => {
     });
   });
 
-  describe('countryKnown attribute', () => {
-    it.each(COUNTRY_CODES_TO_EXPERIMENT)(
-      'should set countryKnown to true when the country code is %s',
-      countryCode => {
-        render(<TestComponent country={countryCode} />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.countryKnown,
-        ).toBe(true);
-      },
-    );
-
-    it('should set countryKnown to false when the country code is not in defined list', () => {
-      render(<TestComponent country="fakecode" />);
+  describe('country attribute', () => {
+    it('should set country to the value provided by RequestContext', () => {
+      render(<TestComponent country="gb" />);
 
       expect(
         (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
-          ?.countryKnown,
-      ).toBe(false);
+          ?.country,
+      ).toBe('GB');
     });
 
-    it('should set countryKnown to false when the country code is unknown', () => {
+    it('should set country to null when RequestContext does not provide a country', () => {
       render(<TestComponent />);
 
       expect(
         (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
-          ?.countryKnown,
-      ).toBe(false);
+          ?.country,
+      ).toBeNull();
     });
   });
 });
