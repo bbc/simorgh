@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
+import { OptimoBlock } from '#app/models/types/optimo';
 import Recommendations from '.';
 import {
   mostReadDataFixture,
@@ -211,7 +212,7 @@ describe('Recommendations', () => {
             },
           }
         : undefined,
-    ].filter(Boolean);
+    ].filter(Boolean) as OptimoBlock[];
 
     const { getByText } = render(
       <Recommendations
