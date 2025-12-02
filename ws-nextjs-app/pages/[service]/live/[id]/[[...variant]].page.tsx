@@ -73,7 +73,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     };
   }
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     page,
     service,
@@ -125,7 +125,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
-      toggles,
       variant,
       ...extractHeaders(reqHeaders),
     },

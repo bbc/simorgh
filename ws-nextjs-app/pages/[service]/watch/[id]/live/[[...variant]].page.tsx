@@ -40,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     service,
     rendererEnv,
@@ -68,7 +68,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: LIVE_TV_PAGE as PageTypes,
     id,
     service,
-    toggles,
     pageData: data?.pageData
       ? {
           ...data.pageData,
@@ -94,4 +93,3 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default LiveTvLayout;
-

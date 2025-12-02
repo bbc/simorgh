@@ -33,7 +33,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
   };
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     service: 'ws',
     rendererEnv,
     resolvedUrl: '/ws/languages',
@@ -48,7 +48,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: data?.status,
         pageType: HOME_PAGE,
         service: 'ws',
-        toggles,
         pageData: {
           metadata: {
             type: HOME_PAGE,
@@ -66,7 +65,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service: 'ws',
       pathname: '/ws/languages',
       status: data?.status,
-      toggles,
       pageData: {
         ...data?.pageData,
         metadata: {
@@ -83,4 +81,3 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default HomePage;
-

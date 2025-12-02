@@ -8,7 +8,7 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes, Toggles } from '#app/models/types/global';
+import { PageTypes } from '#app/models/types/global';
 import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
@@ -17,8 +17,8 @@ import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
 
-const transformPageData = (toggles?: Toggles) =>
-  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
 
 const getDerivedArticleType = (metadata: ArticleMetadata) => {
   let pageType: PageTypes = metadata?.type;
@@ -44,7 +44,7 @@ export default async (context: GetServerSidePropsContext) => {
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
@@ -81,7 +81,6 @@ export default async (context: GetServerSidePropsContext) => {
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: resolvedUrlWithoutQuery,
-        toggles,
         ...extractHeaders(reqHeaders),
       },
     };
@@ -111,7 +110,7 @@ export default async (context: GetServerSidePropsContext) => {
     mediaCuration = null,
   } = secondaryData;
 
-  const transformedArticleData = transformPageData(toggles)(article);
+  const transformedArticleData = transformPageData()(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
@@ -151,7 +150,6 @@ export default async (context: GetServerSidePropsContext) => {
       serverSideExperiments,
       service,
       status,
-      toggles,
       variant: variant || null,
       ...extractHeaders(reqHeaders),
     },
