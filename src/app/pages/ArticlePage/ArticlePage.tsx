@@ -249,24 +249,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Personalised Content Rail
   const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
-  let personalisedContentExperimentVariant = useOptimizelyVariation({
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // temp overrides for testing
-  const personalisedContentOverride = true;
-  personalisedContentExperimentVariant = 'personalised';
-
-  const showPersonalisedContent = personalisedContentOverride
-    ? true
-    : Boolean(
-        !isAmp &&
-          !isLite &&
-          !isApp &&
-          personalisedContentExperimentVariant &&
-          personalisedContentExperimentVariant === 'personalised',
-      );
+  const showPersonalisedContent = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      personalisedContentExperimentVariant === 'personalised',
+  );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
