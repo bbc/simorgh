@@ -26,7 +26,6 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
 } from '#app/lib/logger.const';
 import { Services, Variants } from '#models/types/global';
-import extractHeaders from '#server/utilities/extractHeaders';
 import styles from './wrappedStyles';
 
 interface PageDataParams extends ParsedUrlQuery {
@@ -92,7 +91,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
 };
