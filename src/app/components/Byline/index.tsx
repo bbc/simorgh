@@ -53,7 +53,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             role="list"
             key={authorName}
           >
-            {/* to - remove this check for isSingleContributor since this will be stripped out by BFF */}
+            {/* TODO - remove this check for isSingleContributor once this will be stripped out by BFF */}
             {authorImage && isSingleContributor && (
               <li
                 css={[
@@ -74,7 +74,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             <li css={areMultipleContributors && BylineCss.displayInline}>
               {authorTopicUrl ? (
                 <>
-                  <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
+                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                   <a
                     css={[
                       BylineCss.link,
