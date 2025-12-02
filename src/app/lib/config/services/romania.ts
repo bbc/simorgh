@@ -30,7 +30,7 @@ export const service: DefaultServiceConfig = {
     locale: 'ro_RO',
     datetimeLocale: 'ro',
     service: 'romania',
-    serviceName: 'Romanian',
+    serviceName: 'Romania',
     serviceLocalizedName: 'România',
     languageName: 'Rom',
     twitterCreator: '@BBCNewsRomania',
