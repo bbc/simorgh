@@ -6,10 +6,8 @@ import * as shouldRender from './shouldRender';
 import handleArticleRoute from './handleArticleRoute';
 
 jest.mock('#app/routes/utils/fetchPageData');
-jest.mock('#app/legacy/containers/PageHandlers/withData/shouldRender', () => {
-  const originalModule = jest.requireActual(
-    '#app/legacy/containers/PageHandlers/withData/shouldRender',
-  );
+jest.mock('./shouldRender', () => {
+  const originalModule = jest.requireActual('./shouldRender');
   return {
     __esModule: true,
     ...originalModule,
