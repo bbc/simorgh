@@ -47,12 +47,7 @@ const getUnderArticleComponents = ({
 
   const topStoriesComponent =
     topStoriesArray.length > 0 ? (
-      <div
-        key="topStories"
-        data-testid="top-stories"
-        data-experiment-position="secondaryColumn"
-        css={sectionStyles}
-      >
+      <div key="topStories" data-testid="top-stories" css={sectionStyles}>
         <TopStoriesSection
           content={topStoriesArray}
           {...(referrerVariant && {
@@ -67,12 +62,11 @@ const getUnderArticleComponents = ({
     ) : null;
 
   const featuresComponent = featuresData ? (
-    <div key="features" css={sectionStyles}>
+    <div key="features" data-testid="features" css={sectionStyles}>
       <FeaturesAnalysis
         content={featuresData}
         parentColumns={{}}
         sectionLabelBackground={grey2}
-        data-testid="features"
         {...(referrerVariant && {
           experimentProps: {
             sendOptimizelyEvents: true,
