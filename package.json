@@ -117,7 +117,7 @@
     "compression": "1.8.1",
     "core-js": "3.46.0",
     "dotenv": "17.2.3",
-    "express": "4.21.2",
+    "express": "4.22.0",
     "express-static-gzip": "3.0.0",
     "helmet": "8.1.0",
     "intersection-observer": "0.12.2",
