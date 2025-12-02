@@ -12,6 +12,7 @@ import { PageTypes, Toggles } from '#app/models/types/global';
 import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
+import isLive from '#app/lib/utilities/isLive';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
@@ -91,12 +92,9 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const country = (reqHeaders['x-country'] || reqHeaders['x-bbc-edge-country'])
-    ?.toString()
-    .toLowerCase();
-
+  const country = reqHeaders['x-country']?.toString().toLowerCase();
   const shouldAttemptPersonalisedTopicExperience =
-    service === 'mundo' && !isAmp && Boolean(country);
+    !isLive() && service === 'mundo' && !isAmp && Boolean(country);
 
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
