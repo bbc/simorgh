@@ -10,7 +10,6 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '#server/utilities/extractHeaders';
 import isValidPageNumber from '#nextjs/utilities/pageQueryValidator';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 
@@ -41,8 +40,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     post: assetId,
   } = context.query as PageDataParams;
 
-  const { headers: reqHeaders } = context.req;
-
   const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
@@ -61,7 +58,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: 404,
         timeOnServer: Date.now(),
         variant,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
@@ -115,7 +111,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
