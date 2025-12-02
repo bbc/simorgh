@@ -8,10 +8,7 @@ export default {
   adsNonce: {
     enabled: false,
   },
-  articleLiteSiteLink: {
-    enabled: true,
-    value: '!romania',
-  },
+  articleLiteSiteLink: { enabled: true },
   comscoreAnalytics: {
     enabled: true,
   },

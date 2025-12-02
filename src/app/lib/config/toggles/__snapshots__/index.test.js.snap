@@ -11,7 +11,6 @@ exports[`Toggles Config when application environment is live should contain corr
   },
   "articleLiteSiteLink": {
     "enabled": true,
-    "value": "!romania",
   },
   "comscoreAnalytics": {
     "enabled": true,
@@ -182,7 +181,6 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "articleLiteSiteLink": {
     "enabled": true,
-    "value": "!romania",
   },
   "comscoreAnalytics": {
     "enabled": true,
