@@ -3,7 +3,6 @@ import dynamic from 'next/dynamic';
 import PageDataParams from '#models/types/pageDataParams';
 import { UGC_PAGE } from '#app/routes/utils/pageTypes';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '#server/utilities/extractHeaders';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const UGCPageLayout = dynamic(() => import('./UGCPageLayout'));
@@ -13,8 +12,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'Cache-Control',
     'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
   );
-
-  const { headers: reqHeaders } = context.req;
 
   const {
     id,
@@ -55,7 +52,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: status ?? 500,
       variant,
       timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
 };
