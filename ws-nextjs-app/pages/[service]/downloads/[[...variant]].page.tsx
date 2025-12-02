@@ -50,8 +50,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       error: null,
-      isAmp: false,
-      isNextJs: true,
       pageData: {
         downloadData,
         metadata: {
