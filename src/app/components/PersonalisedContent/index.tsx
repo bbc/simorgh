@@ -32,9 +32,6 @@ const PersonalisedContent = ({
     ?.personalisedContent as PersonalisedContentType[] | undefined;
 
   const getPersonalisedContentData = () => {
-    if (personalisedTopicCurationExperimentVariant !== 'personalised') {
-      return undefined;
-    }
     if (
       !Array.isArray(personalisedContentArray) ||
       personalisedContentArray.length === 0
