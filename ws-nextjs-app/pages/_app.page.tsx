@@ -1,5 +1,6 @@
 import React from 'react';
-import type { AppProps } from 'next/app';
+import NextApp, { AppContext, AppProps } from 'next/app';
+import { NextPageContext } from 'next';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -16,6 +17,11 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
+import extractHeaders from '#src/server/utilities/extractHeaders';
+import getToggles from '#app/lib/utilities/getToggles';
+import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
+import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
+import getPathExtension from '#app/utilities/getPathExtension';
 
 interface Props extends AppProps {
   pageProps: {
@@ -128,3 +134,54 @@ export default function App({ Component, pageProps }: Props) {
     </ToggleContextProvider>
   );
 }
+
+const addServiceChainAndCspHeaders = async ({
+  ctx,
+  toggles,
+}: {
+  ctx: NextPageContext;
+  toggles: Toggles;
+}) => {
+  ctx.res?.setHeader(
+    'req-svc-chain',
+    addPlatformToRequestChainHeader({
+      headers: ctx.req?.headers as unknown as Headers,
+    }),
+  );
+
+  const hostname = ctx.req?.headers.host || '';
+  const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
+
+  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
+
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+
+  if (PRODUCTION_ONLY) {
+    await cspHeaderResponse({ ctx, toggles });
+  }
+};
+
+App.getInitialProps = async (appContext: AppContext) => {
+  const appProps = await NextApp.getInitialProps(appContext);
+  const { req, asPath } = appContext.ctx;
+
+  const toggles = await getToggles();
+
+  await addServiceChainAndCspHeaders({ ctx: appContext.ctx, toggles });
+
+  const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
+
+  return {
+    ...appProps,
+    pageProps: {
+      ...appProps.pageProps,
+      // These are props passed down to ALL pages
+      ...extractHeaders(req?.headers || {}),
+      isApp,
+      isAmp,
+      isLite,
+      isNextJs: true,
+      toggles,
+    },
+  };
+};

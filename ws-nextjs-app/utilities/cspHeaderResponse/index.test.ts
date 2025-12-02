@@ -1,10 +1,7 @@
-import { DocumentContext } from 'next/document';
+import { NextPageContext } from 'next';
 import cspHeaderResponse from '.';
 
-const createDocumentContext = (
-  pathname: string,
-  country?: string,
-): DocumentContext => {
+const createDocumentContext = (pathname: string, country?: string) => {
   const url = new URL(`https://www.test.bbc.com${pathname}`);
   const headers = new Headers({ 'x-country': `${country}` });
 
@@ -17,7 +14,7 @@ const createDocumentContext = (
       getHeader: jest.fn(),
       setHeader: jest.fn(),
     },
-  } as unknown as DocumentContext;
+  } as unknown as NextPageContext;
 };
 
 const policies = [
