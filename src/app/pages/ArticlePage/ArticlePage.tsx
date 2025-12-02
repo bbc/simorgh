@@ -49,6 +49,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -435,9 +436,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+      <PortraitVideoCarousel
+        title="yo"
+        // @ts-expect-error temp innit
+        blocks={pageData?.portraitVideoCuration?.portraitVideo.blocks}
+        eventTrackingData={{
+          componentName: 'portrait-video-article',
+        }}
+      />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
+            <PortraitVideoCarousel
+              title="yo"
+              // @ts-expect-error yeah yeah
+              blocks={pageData?.portraitVideoCuration?.portraitVideo.blocks}
+              eventTrackingData={{
+                componentName: 'portrait-video-article',
+              }}
+            />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
