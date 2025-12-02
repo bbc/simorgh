@@ -150,7 +150,6 @@ const styles = {
       fill: 'currentColor',
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
-      pointerEvents: 'none',
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
         color: 'ButtonText',
