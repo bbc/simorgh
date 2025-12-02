@@ -253,12 +253,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+  const personalisedVariants = ['variation_1', 'variation_2'];
+  const isPersonalisedVariant = personalisedVariants.includes(
+    personalisedContentExperimentVariant ?? '',
+  );
 
   const showPersonalisedContent = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      personalisedContentExperimentVariant === 'personalised',
+    !isAmp && !isLite && !isApp && isPersonalisedVariant,
   );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
