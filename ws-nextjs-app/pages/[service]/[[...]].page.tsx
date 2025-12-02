@@ -2,7 +2,6 @@ import React from 'react';
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import logResponseTime from '#server/utilities/logResponseTime';
-import extractHeaders from '#server/utilities/extractHeaders';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -83,7 +82,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
