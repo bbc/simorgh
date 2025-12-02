@@ -100,7 +100,7 @@ describe('analyticsUtils', () => {
     it.each`
       platform     | statsDestination   | expected
       ${null}      | ${'SPORT_PS_TEST'} | ${598311}
-      ${undefined} | ${'PS_HOMEPAGE'}   | ${598273}
+      ${undefined} | ${'HOMEPAGE_PS'}   | ${598273}
     `(
       'should return the correct destination id if platform is nullish',
       ({ platform, statsDestination, expected }) => {

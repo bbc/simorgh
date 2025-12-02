@@ -71,8 +71,8 @@ describe('AMP ATI Analytics', () => {
       ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
       ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'PS_HOMEPAGE'}            | ${'scotland'}          | ${'scotland'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'PS_HOMEPAGE_TEST'}       | ${'scotland'}          | ${'scotland'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'HOMEPAGE_PS'}            | ${'scotland'}          | ${'scotland'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'HOMEPAGE_PS_TEST'}       | ${'scotland'}          | ${'scotland'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'NEWSROUND'}              | ${'newsround'}         | ${'newsround'}    | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
       ${'test'}   | ${'NEWSROUND_TEST'}         | ${'newsround'}         | ${'newsround'}    | ${'https://logws1363.ati-host.net/hit.xiti?'}
       ${'live'}   | ${'SPORT_PS'}               | ${'sport'}             | ${'sport'}        | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
