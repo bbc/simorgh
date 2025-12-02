@@ -36,7 +36,7 @@
     "@emotion/jest": "11.14.2",
     "@jest/environment": "30.2.0",
     "@jest/types": "30.2.0",
-    "@testing-library/jest-dom": "6.8.0",
+    "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
     "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "15.4.0",

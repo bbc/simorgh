@@ -1,16 +1,22 @@
-interface PromotionalBannerButton {
+export interface PromotionalBannerButtonData {
   text: string;
   longText?: string;
-  onClick?: () => void;
 }
 
-export interface PromotionalBannerProps {
+export interface PromotionalBannerConfig {
   title: string;
   description: string;
   orText: string;
-  primaryButton: PromotionalBannerButton;
-  secondaryButton: PromotionalBannerButton;
+  bannerLabel: string;
+  closeLabel?: string;
+  primaryButton: PromotionalBannerButtonData;
+  secondaryButton: PromotionalBannerButtonData;
+}
+
+export interface PromotionalBannerProps extends PromotionalBannerConfig {
   id?: string;
   isDismissible?: boolean;
-  handleClose?: () => void;
+  onPrimaryClick: (event?: React.MouseEvent) => void;
+  onSecondaryClick: (event?: React.MouseEvent) => void;
+  onClose?: (event?: React.MouseEvent) => void;
 }
