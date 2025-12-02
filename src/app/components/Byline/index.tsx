@@ -60,7 +60,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   BylineCss.ImageWrapper,
                   isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                 ]}
-                role="presentation"
+                aria-hidden
               >
                 <Image
                   css={BylineCss.imageSrc}
