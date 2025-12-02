@@ -41,7 +41,6 @@ const PersonalisedContent = ({
     ) {
       return undefined;
     }
-    // Country-specific data is always first
     return personalisedContentArray[0];
   };
 
