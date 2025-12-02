@@ -79,7 +79,7 @@ const styles = {
     css({
       display: 'none',
       padding: 0,
-      paddingInlineEnd: `${spacings.FULL}rem`,
+      paddingInlineEnd: `${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
 };
