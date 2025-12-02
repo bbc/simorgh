@@ -73,7 +73,7 @@ describe('Byline', () => {
   it('should correctly use the buildIChefURL function to create the image url', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = screen.getByRole('img');
+    const imageSrc = screen.getByRole('presentation');
 
     expect(imageSrc).toHaveAttribute(
       'src',
@@ -84,7 +84,7 @@ describe('Byline', () => {
   it('should render one image in the byline', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const image = screen.getAllByRole('img');
+    const image = screen.getAllByRole('presentation');
 
     expect(image.length).toBe(1);
   });
@@ -92,7 +92,7 @@ describe('Byline', () => {
   it('should not render an image if a png photo is not used', () => {
     render(<Byline blocks={bylineWithNonPngPhoto} />);
 
-    const image = screen.queryByRole('img');
+    const image = screen.queryByRole('presentation');
 
     expect(image).toBeNull();
   });
@@ -133,7 +133,7 @@ describe('Byline', () => {
 
     const AuthorLink = screen.getByText('Mayeni Jones');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = screen.getByRole('img');
+    const Image = screen.getByRole('presentation');
 
     expect(AuthorLink).toBeInTheDocument();
     expect(Location).toBeInTheDocument();

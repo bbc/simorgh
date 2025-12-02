@@ -64,7 +64,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 <Image
                   css={BylineCss.imageSrc}
                   src={authorImage}
-                  alt={authorName}
+                  alt=""
                   placeholder={false}
                   aspectRatio={[1, 1]}
                 />
