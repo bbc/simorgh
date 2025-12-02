@@ -1,7 +1,7 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import * as shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import defaultToggles from '#app/lib/config/toggles';
+import * as shouldRender from './shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
 
