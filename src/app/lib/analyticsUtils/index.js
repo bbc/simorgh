@@ -71,8 +71,8 @@ export const getDestination = (platform, statsDestination) => {
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
-export const enforceLegacyDestinationForJapanese = reverbTrackingURL =>
-  reverbTrackingURL.replace('s=646753&', `s=598289&`);
+export const enforceLegacyDestinationForJapanese = (reverbTrackingURL) =>
+  reverbTrackingURL?.replace('s=646753&', `s=598289&`);
 
 export const getAppType = platform => {
   switch (platform) {
