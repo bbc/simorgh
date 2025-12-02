@@ -156,6 +156,7 @@ export default class AppDocument extends Document<DocProps> {
                 isApp,
                 isAmp,
                 isLite,
+                isNextJs: true,
               }}
             />
           </CacheProvider>
