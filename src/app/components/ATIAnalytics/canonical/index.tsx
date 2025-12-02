@@ -19,6 +19,9 @@ import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
+const useLegacyDestinationForNewsLanguagesGnl = (reverbTrackingURL: string) =>
+  reverbTrackingURL.replace('s=646753&', `s=598289&`);
+
 const renderNoScriptTrackingPixel = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
 ) => {
@@ -64,9 +67,12 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
-  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
-  const operaMiniPageViewReverbURL =
-    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams);
+  const liteSiteReverbURL = useLegacyDestinationForNewsLanguagesGnl(
+    reverbUrlHelper.getLitePageViewUrl(reverbParams),
+  );
+  const operaMiniPageViewReverbURL = useLegacyDestinationForNewsLanguagesGnl(
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
+  );
 
   return (
     <>
