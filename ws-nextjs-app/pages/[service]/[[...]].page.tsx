@@ -3,7 +3,6 @@ import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import logResponseTime from '#server/utilities/logResponseTime';
 import extractHeaders from '#server/utilities/extractHeaders';
-import getPathExtension from '#app/utilities/getPathExtension';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
