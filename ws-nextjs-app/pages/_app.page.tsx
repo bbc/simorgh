@@ -1,6 +1,6 @@
 import React from 'react';
-import NextApp, { AppContext, AppProps } from 'next/app';
-import { NextPageContext } from 'next';
+import { AppContext, AppProps } from 'next/app';
+import { NextPageContext } from 'next/types';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -150,6 +150,7 @@ const addServiceChainAndCspHeaders = async ({
   );
 
   const hostname = ctx.req?.headers.host || '';
+
   const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
   const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
@@ -161,21 +162,19 @@ const addServiceChainAndCspHeaders = async ({
   }
 };
 
-App.getInitialProps = async (appContext: AppContext) => {
-  const appProps = await NextApp.getInitialProps(appContext);
-  const { req, asPath } = appContext.ctx;
+App.getInitialProps = async ({ ctx }: AppContext) => {
+  const { req, asPath } = ctx;
 
   const toggles = await getToggles();
 
-  await addServiceChainAndCspHeaders({ ctx: appContext.ctx, toggles });
+  await addServiceChainAndCspHeaders({ ctx, toggles });
 
   const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 
   return {
-    ...appProps,
     pageProps: {
-      ...appProps.pageProps,
-      // These are props passed down to ALL pages
+      // These are props passed down to ALL pages and merged with page
+      // specific props from getInitialProps / getServerSideProps
       ...extractHeaders(req?.headers || {}),
       isApp,
       isAmp,
