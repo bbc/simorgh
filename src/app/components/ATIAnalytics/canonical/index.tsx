@@ -35,7 +35,9 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoScriptTrackingPixelUrl(reverbParams)}
+        src={useLegacyDestinationForNewsLanguagesGnl(
+          getNoScriptTrackingPixelUrl(reverbParams),
+        )}
       />
     </noscript>
   );
