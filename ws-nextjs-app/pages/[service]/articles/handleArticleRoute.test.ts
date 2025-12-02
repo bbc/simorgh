@@ -73,10 +73,6 @@ describe('handleArticleRoute', () => {
     expect(result).toEqual({
       props: {
         bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 500,
         isUK: false,
         pageType: 'article',
@@ -103,10 +99,6 @@ describe('handleArticleRoute', () => {
     expect(result).toEqual({
       props: {
         bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 404,
         isUK: false,
         pageType: 'article',
