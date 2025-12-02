@@ -1,9 +1,7 @@
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
-import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import { Services } from '#app/models/types/global';
+import { Services, Toggles } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
 import { DocumentContext } from 'next/document';
 
@@ -42,7 +40,13 @@ const isValidService = (str: string) => {
   return service && SERVICES.includes(service);
 };
 
-const cspHeaderResponse = async ({ ctx }: { ctx: DocumentContext }) => {
+const cspHeaderResponse = async ({
+  ctx,
+  toggles,
+}: {
+  ctx: DocumentContext;
+  toggles: Toggles;
+}) => {
   const reqUrl = ctx.req?.url || '';
   const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
@@ -51,10 +55,8 @@ const cspHeaderResponse = async ({ ctx }: { ctx: DocumentContext }) => {
   let countryList = '';
 
   if (isValidService(reqUrl)) {
-    const service = fallbackServiceParam(reqUrl);
-    const toggles = await getToggles(service);
-
     ({ enabled: hasAdsScripts, value: countryList = '' } =
+      // @ts-expect-error- Toggles type issue
       toggles?.adsNonce || { enabled: false, value: '' });
   }
 

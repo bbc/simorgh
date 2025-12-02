@@ -35,11 +35,12 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
-import { PageTypes } from '#app/models/types/global';
+import { PageTypes, Toggles } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
 import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -87,7 +88,10 @@ const handleServerLogging = ({
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
-const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
+const addServiceChainAndCspHeaders = async (
+  ctx: DocumentContext,
+  toggles: Toggles,
+) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({
@@ -102,7 +106,7 @@ const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
   if (PRODUCTION_ONLY) {
-    await cspHeaderResponse({ ctx });
+    await cspHeaderResponse({ ctx, toggles });
   }
 };
 
@@ -126,7 +130,9 @@ export default class AppDocument extends Document<DocProps> {
 
     const { isApp, isAmp, isLite } = getPathExtension(url);
 
-    await addServiceChainAndCspHeaders(ctx);
+    const toggles = await getToggles();
+
+    await addServiceChainAndCspHeaders(ctx, toggles);
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
@@ -136,7 +142,7 @@ export default class AppDocument extends Document<DocProps> {
       originalRenderPage({
         enhanceApp: App => props => (
           <CacheProvider value={cache}>
-            <App {...props} />
+            <App {...props} pageProps={{ ...props.pageProps, toggles }} />
           </CacheProvider>
         ),
       });
