@@ -33,7 +33,7 @@ describe('Byline', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('should render Byline correctly when passed Twitter and TopicUrl links', () => {
+  it('should render Byline correctly when passed TopicUrl links', () => {
     render(<Byline blocks={bylineWithLink} />);
 
     const AuthorLink = screen.getByText('Single Byline (all values)');
@@ -67,7 +67,7 @@ describe('Byline', () => {
     const firstContributorItems =
       within(firstContributor).getAllByRole('listitem');
 
-    expect(firstContributorItems.length).toBe(4);
+    expect(firstContributorItems.length).toBe(5);
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {
@@ -84,7 +84,7 @@ describe('Byline', () => {
   it('should render one image in the byline', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const image = screen.getAllByRole('presentation');
+    const image = screen.getAllByRole('img');
 
     expect(image.length).toBe(1);
   });
