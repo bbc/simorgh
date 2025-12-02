@@ -80,6 +80,7 @@ const styles = {
       display: 'none',
       padding: 0,
       paddingInlineEnd: `${spacings.HALF}rem`,
+      marginInlineStart: `-${spacings.HALF}rem`,
       verticalAlign: 'text-top',
     }),
 };
