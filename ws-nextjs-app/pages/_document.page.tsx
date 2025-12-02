@@ -41,6 +41,7 @@ import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript'
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
 import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import extractHeaders from '#server/utilities/extractHeaders';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -145,7 +146,18 @@ export default class AppDocument extends Document<DocProps> {
       originalRenderPage({
         enhanceApp: App => props => (
           <CacheProvider value={cache}>
-            <App {...props} pageProps={{ ...props.pageProps, toggles }} />
+            <App
+              {...props}
+              // These are props passed down to ALL pages
+              pageProps={{
+                ...props.pageProps,
+                ...extractHeaders(ctx.req?.headers || {}),
+                toggles,
+                isApp,
+                isAmp,
+                isLite,
+              }}
+            />
           </CacheProvider>
         ),
       });
