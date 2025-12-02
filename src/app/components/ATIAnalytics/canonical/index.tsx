@@ -19,7 +19,7 @@ import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
 
-const useLegacyDestinationForNewsLanguagesGnl = (reverbTrackingURL: string) =>
+const enforceLegacyDestinationForJapanese = (reverbTrackingURL: string) =>
   reverbTrackingURL.replace('s=646753&', `s=598289&`);
 
 const renderNoScriptTrackingPixel = (
@@ -35,7 +35,7 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={useLegacyDestinationForNewsLanguagesGnl(
+        src={enforceLegacyDestinationForJapanese(
           getNoScriptTrackingPixelUrl(reverbParams),
         )}
       />
@@ -69,10 +69,10 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
-  const liteSiteReverbURL = useLegacyDestinationForNewsLanguagesGnl(
+  const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
     reverbUrlHelper.getLitePageViewUrl(reverbParams),
   );
-  const operaMiniPageViewReverbURL = useLegacyDestinationForNewsLanguagesGnl(
+  const operaMiniPageViewReverbURL = enforceLegacyDestinationForJapanese(
     reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
   );
 
