@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
@@ -77,7 +76,6 @@ export default async (context: GetServerSidePropsContext) => {
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: resolvedUrlWithoutQuery,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
@@ -143,7 +141,6 @@ export default async (context: GetServerSidePropsContext) => {
       service,
       status,
       variant: variant || null,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

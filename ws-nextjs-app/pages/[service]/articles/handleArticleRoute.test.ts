@@ -72,14 +72,10 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
         status: 500,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
         variant: null,
       },
@@ -98,14 +94,10 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
         status: 404,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
         variant: null,
       },
