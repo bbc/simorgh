@@ -10,16 +10,9 @@ const buildPageDataFixture = (blocks = [{ type: 'timestamp' }]) =>
     },
   }) as Article;
 
-const buildTogglesFixture = (enabled = true) => ({
-  disclaimer: {
-    enabled,
-  },
-});
-
 describe('augmentWithDisclaimer', () => {
   it('Should put the disclaimer after the timestamp if positionFromTimestamp is 1', () => {
     const transformedData = transformer({
-      toggles: buildTogglesFixture(),
       positionFromTimestamp: 1,
     })(buildPageDataFixture()) as Article;
 
@@ -29,7 +22,6 @@ describe('augmentWithDisclaimer', () => {
 
   it('Should put the disclaimer before the timestamp if positionFromTimestamp is 0', () => {
     const transformedData = transformer({
-      toggles: buildTogglesFixture(),
       positionFromTimestamp: 0,
     })(buildPageDataFixture()) as Article;
 
@@ -39,19 +31,9 @@ describe('augmentWithDisclaimer', () => {
 
   it('Should put the disclaimer as the first block if the page data has no timestamp', () => {
     const transformedData = transformer({
-      toggles: buildTogglesFixture(),
       positionFromTimestamp: 0,
     })(buildPageDataFixture([])) as Article;
 
     expect(transformedData.content.model.blocks[0].type).toEqual('disclaimer');
-  });
-
-  it('Should not add a disclaimer when toggled off for that service', () => {
-    const transformedData = transformer({
-      toggles: buildTogglesFixture(false),
-      positionFromTimestamp: 0,
-    })(buildPageDataFixture([])) as Article;
-
-    expect(transformedData.content.model.blocks[0]).toBeUndefined();
   });
 });
