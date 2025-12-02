@@ -39,7 +39,7 @@ import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
-import { cspHeaderResponseForNextDocumentContext } from '#nextjs/utilities/cspHeaderResponse';
+import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
 import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
 import derivePageType from '../utilities/derivePageType';
 
@@ -102,7 +102,7 @@ const addServiceChainAndCspHeaders = async (ctx: DocumentContext) => {
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
   if (PRODUCTION_ONLY) {
-    await cspHeaderResponseForNextDocumentContext({ ctx });
+    await cspHeaderResponse({ ctx });
   }
 };
 

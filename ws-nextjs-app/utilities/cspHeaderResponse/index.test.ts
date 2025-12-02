@@ -1,21 +1,28 @@
-/**
- * @jest-environment node
- */
-import { NextRequest } from 'next/server';
 import getToggles from '#app/lib/utilities/getToggles';
+import { DocumentContext } from 'next/document';
 import cspHeaderResponse from '.';
 
 jest.mock('#app/lib/utilities/getToggles');
 
 const mockGetToggles = getToggles as jest.MockedFunction<typeof getToggles>;
 
-const createRequest = (pathname: string, country?: string) => {
+const createDocumentContext = (
+  pathname: string,
+  country?: string,
+): DocumentContext => {
   const url = new URL(`https://www.test.bbc.com${pathname}`);
   const headers = new Headers({ 'x-country': `${country}` });
+
   return {
-    nextUrl: url,
-    headers,
-  } as NextRequest;
+    req: {
+      url: url.pathname,
+      headers: Object.fromEntries(headers.entries()),
+    },
+    res: {
+      getHeader: jest.fn(),
+      setHeader: jest.fn(),
+    },
+  } as unknown as DocumentContext;
 };
 
 const policies = [
@@ -35,25 +42,15 @@ const policies = [
 
 describe('cspHeaderResponse', () => {
   it.each(policies)('should set %s in the request CSP', async policy => {
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt'),
-    });
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    const requestCsp = response.headers.get(
-      'x-middleware-request-content-security-policy',
-    );
+    await cspHeaderResponse({ ctx });
 
-    expect(requestCsp?.includes(policy)).toBe(true);
-  });
+    const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
+      call => call[0] === 'Content-Security-Policy',
+    )?.[1];
 
-  it.each(policies)('should set %s in the response CSP', async policy => {
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt'),
-    });
-
-    const requestCsp = response.headers.get('content-security-policy');
-
-    expect(requestCsp?.includes(policy)).toBe(true);
+    expect((requestCsp as string).includes(policy)).toBe(true);
   });
 });
 
@@ -72,51 +69,63 @@ describe('shouldServeRelaxedCsp', () => {
     mockGetToggles.mockResolvedValue({
       adsNonce: { enabled: true, value: '' },
     });
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt', 'gb'),
-    });
 
-    expect(response.headers.get('content-security-policy')).toEqual(
-      expectedRelaxedCsp,
-    );
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
+
+    await cspHeaderResponse({ ctx });
+
+    const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
+      call => call[0] === 'Content-Security-Policy',
+    )?.[1];
+
+    expect(requestCsp).toEqual(expectedRelaxedCsp);
   });
 
   it('returns true when country is not in omittedCountries', async () => {
     mockGetToggles.mockResolvedValue({
       adsNonce: { enabled: true, value: 'gb' },
     });
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt', 'ax'),
-    });
 
-    expect(response.headers.get('content-security-policy')).toEqual(
-      expectedRelaxedCsp,
-    );
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'ax');
+
+    await cspHeaderResponse({ ctx });
+
+    const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
+      call => call[0] === 'Content-Security-Policy',
+    )?.[1];
+
+    expect(requestCsp).toEqual(expectedRelaxedCsp);
   });
 
   it('returns false when toggle is enabled and given country is in omittedCountries', async () => {
     mockGetToggles.mockResolvedValue({
       adsNonce: { enabled: true, value: 'gb,es' },
     });
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt', 'gb'),
-    });
 
-    expect(response.headers.get('content-security-policy')).toEqual(
-      expectedFullCsp,
-    );
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'gb');
+
+    await cspHeaderResponse({ ctx });
+
+    const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
+      call => call[0] === 'Content-Security-Policy',
+    )?.[1];
+
+    expect(requestCsp).toEqual(expectedFullCsp);
   });
 
   it('returns false when adsNonce.enabled is false', async () => {
     mockGetToggles.mockResolvedValue({
       adsNonce: { enabled: false, value: '' },
     });
-    const response = await cspHeaderResponse({
-      request: createRequest('/pidgin/live/c7p765ynk9qt', 'gb'),
-    });
 
-    expect(response.headers.get('content-security-policy')).toEqual(
-      expectedFullCsp,
-    );
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'gb');
+
+    await cspHeaderResponse({ ctx });
+
+    const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
+      call => call[0] === 'Content-Security-Policy',
+    )?.[1];
+
+    expect(requestCsp).toEqual(expectedFullCsp);
   });
 });
