@@ -7,6 +7,7 @@ import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { Recommendation } from '#app/models/types/onwardJourney';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 type Features = {
   id: string;
@@ -33,36 +34,6 @@ type Features = {
     };
     seoHeadline?: string;
   };
-  images?: {
-    defaultPromoImage?: {
-      blocks?: any[];
-    };
-  };
-};
-
-type TopStoryItem = {
-  id: string;
-  headlines?: {
-    overtyped?: string;
-    headline?: string;
-    promoHeadline?: {
-      blocks?: Array<{
-        model?: {
-          blocks?: Array<{
-            model?: {
-              text?: string;
-            };
-          }>;
-        };
-      }>;
-    };
-  };
-  name?: string;
-  locators?: {
-    assetUri?: string;
-    canonicalUrl?: string;
-  };
-  uri?: string;
   images?: {
     defaultPromoImage?: {
       blocks?: any[];
