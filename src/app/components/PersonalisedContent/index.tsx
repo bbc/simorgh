@@ -20,11 +20,8 @@ const PersonalisedContent = ({
   type PersonalisedContentType = {
     title?: string;
     summaries?: Summary[];
-    curationLength?: number;
     id?: string;
     link?: string;
-    renderVisuallyHiddenH2Title?: boolean;
-    curationSubheading?: string;
     topicId?: string;
   };
 
