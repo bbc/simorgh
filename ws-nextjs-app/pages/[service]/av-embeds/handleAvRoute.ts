@@ -128,7 +128,6 @@ export default async (context: GetServerSidePropsContext) => {
   return {
     props: {
       id: resolvedUrl,
-      isNextJs: true,
       isAvEmbeds: true,
       pageData: avEmbed
         ? {
