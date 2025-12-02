@@ -80,6 +80,7 @@ export default {
         textDecorationColor: palette.GREY_5,
         '&:focus, &:hover': {
           textDecorationColor: palette.POSTBOX,
+          textDecorationThickness: `${pixelsToRem(2)}rem`,
         },
       },
     }),
