@@ -88,10 +88,13 @@ const handleServerLogging = ({
 
 const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
-const addServiceChainAndCspHeaders = async (
-  ctx: DocumentContext,
-  toggles: Toggles,
-) => {
+const addServiceChainAndCspHeaders = async ({
+  ctx,
+  toggles,
+}: {
+  ctx: DocumentContext;
+  toggles: Toggles;
+}) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({
@@ -132,7 +135,7 @@ export default class AppDocument extends Document<DocProps> {
 
     const toggles = await getToggles();
 
-    await addServiceChainAndCspHeaders(ctx, toggles);
+    await addServiceChainAndCspHeaders({ ctx, toggles });
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
