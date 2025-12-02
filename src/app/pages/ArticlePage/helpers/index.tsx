@@ -47,11 +47,14 @@ const getUnderArticleComponents = ({
 
   const topStoriesComponent =
     topStoriesArray.length > 0 ? (
-      <div key="topStories" css={sectionStyles}>
+      <div
+        key="topStories"
+        data-testid="top-stories"
+        data-experiment-position="secondaryColumn"
+        css={sectionStyles}
+      >
         <TopStoriesSection
           content={topStoriesArray}
-          data-testid="top-stories"
-          data-experiment-position="secondaryColumn"
           {...(referrerVariant && {
             experimentProps: {
               sendOptimizelyEvents: true,
