@@ -78,7 +78,7 @@ const PromotionalBanner = ({
             css={styles.closeButton}
             onClick={onClose}
           >
-            <VisuallyHiddenText as="strong">{closeLabel}</VisuallyHiddenText>
+            <VisuallyHiddenText>{closeLabel}</VisuallyHiddenText>
             <Close css={styles.closeButtonIcon} />
           </Text>
         )}

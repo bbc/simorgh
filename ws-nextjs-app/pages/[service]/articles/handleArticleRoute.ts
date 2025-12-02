@@ -10,9 +10,9 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes, Toggles } from '#app/models/types/global';
 import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
-import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
+import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
@@ -63,8 +63,6 @@ export default async (context: GetServerSidePropsContext) => {
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
-    resolvedUrlWithoutQuery,
-    ARTICLE_PAGE,
   );
 
   // If request has fails or should not be rendered, return non-200 status
