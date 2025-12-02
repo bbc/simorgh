@@ -1,12 +1,22 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-// import liteTests from '../articlePage/testsForLiteOnly';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
+import liteArticleTests from '../articlePage/testsForLiteOnly';
 
 const canonicalTests = [
   testsForAllPages,
@@ -195,6 +205,61 @@ const ampOnlyNonSmokeTestSuites = [
   },
 ];
 
+const atiAnalyticsTests = [
+  assertPageView,
+  assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+  assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  assertScrollableNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+];
+
+const atiAnalyticsTestSuites = [
+  {
+    path: '/hausa/labarai-54292969',
+    runforEnv: ['live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.news.story.54292969.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/mundo/noticias-54274735',
+    runforEnv: ['live'],
+    service: 'mundo',
+    pageIdentifier: 'mundo.also_in_the_news.story.54274735.page',
+    siteId: 62,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/russian/news-55041160',
+    runforEnv: ['live'],
+    service: 'russian',
+    pageIdentifier: 'russian.news.story.55041160.page',
+    siteId: 75,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/thai/international-53381389',
+    runforEnv: ['live'],
+    service: 'thai',
+    pageIdentifier: 'thai.international.story.53381389.page',
+    siteId: 90,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+] as unknown as TestDataType[];
+
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
@@ -210,16 +275,15 @@ const ampTestSuites = [
   };
 });
 
-// SKIPPED: We are not able to set page-type headers in cy.click and cy.back
-// const liteTestSuites = canonicalTestSuites
-//   .filter(({ service }) => !['news', 'newsround'].includes(service))
-//   .map(testSuite => {
-//     return {
-//       ...testSuite,
-//       path: `${testSuite.path}.lite`,
-//       tests: [liteTests],
-//     };
-//   });
+const liteTestSuites = canonicalSmokeTestSuites
+  .filter(({ service }) => service !== 'news' && service !== 'hausa')
+  .map(testSuite => {
+    return {
+      ...testSuite,
+      path: `${testSuite.path}.lite`,
+      tests: [liteArticleTests],
+    };
+  });
 
 runTestsForPage({
   pageType: STORY_PAGE,
@@ -227,9 +291,12 @@ runTestsForPage({
     'page-type': 'article',
     'BBC-Adverts': 'true',
   },
-  testSuites: [
-    ...canonicalTestSuites,
-    ...ampTestSuites,
-    // ...liteTestSuites
-  ],
+  testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+});
+
+runTestsForPage({
+  pageType: STORY_PAGE,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });

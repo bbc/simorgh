@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Lokacin karatu',
+        long: 'Dogon labari',
+        minute: 'Minti',
+      },
       pagination: {
         previousPage: 'Koma baya',
         nextPage: 'Na gaba',

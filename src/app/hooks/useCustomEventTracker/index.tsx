@@ -9,16 +9,20 @@ interface CustomEventData {
   eventName: string;
 }
 
+type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
+
 /**
  * A specialized React hook for tracking custom (non-click, non-view) events.
  * Reverb is used to send the beacon. The event will appear in Piano under the "Event - Group" field.
  * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
- * @returns {Object} An object containing the `trackEvent` function, which can be called to trigger the event.
+ * @returns {TrackEventFunction} A function that triggers the custom event. Accepts an optional stringified data parameter.
  */
 
-const useCustomEventTracker = ({ eventName }: CustomEventData) => {
+const useCustomEventTracker = ({
+  eventName,
+}: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
     producerId,
@@ -34,7 +38,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
   const { service, useReverb } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (stringifiedData: string) => {
+    async (stringifiedData = '') => {
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
@@ -83,9 +87,7 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
     ],
   );
 
-  return {
-    trackEvent,
-  };
+  return trackEvent;
 };
 
 export default useCustomEventTracker;
