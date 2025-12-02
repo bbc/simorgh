@@ -4,8 +4,6 @@ import isLive from '#app/lib/utilities/isLive';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
-
-import getPathExtension from '#app/utilities/getPathExtension';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
@@ -45,8 +43,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { headers: reqHeaders } = context.req;
 
-  const { isApp, isLite } = getPathExtension(context.resolvedUrl);
-
   const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
@@ -61,9 +57,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
     return {
       props: {
-        isApp,
-        isLite,
-        isNextJs: true,
         service,
         status: 404,
         timeOnServer: Date.now(),
@@ -105,10 +98,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     props: {
       error: data?.error || null,
       id,
-      isApp,
-      isLite,
-      isAmp: false,
-      isNextJs: true,
       page: page || null,
       pageData: data?.pageData
         ? {
