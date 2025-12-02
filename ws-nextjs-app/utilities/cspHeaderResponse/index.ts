@@ -85,11 +85,6 @@ const cspHeaderResponse = async ({
   });
 
   ctx.res?.setHeader(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
-
-  ctx.res?.setHeader(
     'report-to',
     JSON.stringify({
       group: 'worldsvc',
