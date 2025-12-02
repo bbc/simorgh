@@ -3,6 +3,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
+import { enforceLegacyDestinationForJapanese } from '#app/lib/analyticsUtils';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
@@ -18,9 +19,6 @@ import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
 type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
-
-const enforceLegacyDestinationForJapanese = (reverbTrackingURL: string) =>
-  reverbTrackingURL.replace('s=646753&', `s=598289&`);
 
 const renderNoScriptTrackingPixel = (
   reverbParams: ATIAnalyticsPropsExport['reverbParams'],
