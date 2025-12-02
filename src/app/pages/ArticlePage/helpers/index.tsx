@@ -50,6 +50,8 @@ const getUnderArticleComponents = ({
       <div key="topStories" css={sectionStyles}>
         <TopStoriesSection
           content={topStoriesArray}
+          data-testid="top-stories"
+          data-experiment-position="secondaryColumn"
           {...(referrerVariant && {
             experimentProps: {
               sendOptimizelyEvents: true,
@@ -67,6 +69,7 @@ const getUnderArticleComponents = ({
         content={featuresData}
         parentColumns={{}}
         sectionLabelBackground={grey2}
+        data-testid="features"
         {...(referrerVariant && {
           experimentProps: {
             sendOptimizelyEvents: true,
