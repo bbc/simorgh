@@ -86,30 +86,32 @@ const storybookConfig: StorybookConfig = {
           include: [getProjectRoot()],
           exclude: [/node_modules/],
         },
-          {
-            test: /\.module\.scss$/,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  modules: {
-                    localIdentName: '[name]__[local]___[hash:base64:5]',
-                  },
-                  importLoaders: 1,
+        // SCSS Modules: Only files ending with .module.scss are treated as CSS Modules (locally scoped styles)
+        {
+          test: /\.module\.scss$/,
+          use: [
+            require.resolve('style-loader'),
+            {
+              loader: require.resolve('css-loader'),
+              options: {
+                modules: {
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
                 },
+                importLoaders: 1,
               },
-              require.resolve('sass-loader'),
-            ],
-          },
-          {
-            test: /(?<!\.module)\.scss$/,
-            use: [
-              require.resolve('style-loader'),
-              require.resolve('css-loader'),
-              require.resolve('sass-loader'),
-            ],
-          },
+            },
+            require.resolve('sass-loader'),
+          ],
+        },
+        // Global SCSS: All other .scss files (not ending with .module.scss) are treated as global styles
+        {
+          test: /(?<!\.module)\.scss$/,
+          use: [
+            require.resolve('style-loader'),
+            require.resolve('css-loader'),
+            require.resolve('sass-loader'),
+          ],
+        },
       ],
     };
 

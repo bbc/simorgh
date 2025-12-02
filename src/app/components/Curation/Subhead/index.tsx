@@ -1,6 +1,7 @@
 import React, { Fragment, PropsWithChildren, use } from 'react';
-
 import { LeftChevron, RightChevron } from '../../icons';
+import styles from './index.module.scss';
+console.log('Subhead styles:', styles);
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
@@ -30,7 +31,7 @@ const Subhead = ({
       )
     : Fragment;
   return (
-    <h2 className="h2" id={id}>
+    <h2 className={styles.h2} id={id}>
       <Wrapper>{children}</Wrapper>
     </h2>
   );

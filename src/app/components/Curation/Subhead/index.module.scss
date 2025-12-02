@@ -1,8 +1,10 @@
+@use '../../ThemeProviderSCSSModules/fontSizes.module.scss' as fontSizes;
+
 .h2 {
   font-family: var(--sans-bold-font-family);
   font-style: var(--sans-bold-font-style);
   font-weight: var(--sans-bold-font-weight);
-  @include fontSizes.get-font-size(double-pica, groupA);
+  @include fontSizes.gel-font-size(doublePica, groupA);
   color: var(--grey-10);
 }
 
