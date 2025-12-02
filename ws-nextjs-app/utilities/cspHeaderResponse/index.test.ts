@@ -1,4 +1,4 @@
-import { NextPageContext } from 'next';
+import { NextPageContext } from 'next/types';
 import cspHeaderResponse from '.';
 
 const createDocumentContext = (pathname: string, country?: string) => {

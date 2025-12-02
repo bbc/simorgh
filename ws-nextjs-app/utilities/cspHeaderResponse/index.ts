@@ -1,9 +1,9 @@
+import { NextPageContext } from 'next/types';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
-import { NextPageContext } from 'next';
 
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
