@@ -15,6 +15,7 @@ const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 
 const {
   getDestination,
+  enforceLegacyDestinationForJapanese,
   getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
@@ -124,6 +125,18 @@ describe('analyticsUtils', () => {
     it('should return amp substitution expression for destination with GNL and PS destinations defined', () => {
       expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
         '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+      );
+    });
+  });
+
+  describe('enforceLegacyDestinationForJapanese', () => {
+    it('should return the Reverb tracking URL with the legacy Piano destination for NEWS_LANGUAGES_GNL used by the Japanese service', () => {
+      expect(
+        enforceLegacyDestinationForJapanese(
+          'https://logws1363.ati-host.net/hit.xiti?idclient=9065bbd4-6374-4348-9082-9497ef5a18ad&s=646753&s2=56&p=japanese.articles.cvgr9dk5dlno.page',
+        ),
+      ).toEqual(
+        'https://logws1363.ati-host.net/hit.xiti?idclient=9065bbd4-6374-4348-9082-9497ef5a18ad&s=598289&s2=56&p=japanese.articles.cvgr9dk5dlno.page',
       );
     });
   });
