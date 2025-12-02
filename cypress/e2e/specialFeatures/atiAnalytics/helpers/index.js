@@ -1,4 +1,3 @@
-import japanese from '#app/lib/config/services/japanese';
 import envs from '../../../../support/config/envs';
 
 export const getATIParamsFromURL = atiAnalyticsURL => {
