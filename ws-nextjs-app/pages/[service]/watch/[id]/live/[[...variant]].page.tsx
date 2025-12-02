@@ -9,7 +9,6 @@ import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import logResponseTime from '#src/server/utilities/logResponseTime';
 import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
-import extractHeaders from '#src/server/utilities/extractHeaders';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
@@ -37,8 +36,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   } = context.query as PageDataParams;
 
   const variant = deriveVariant(variantFromUrl);
-
-  const { headers: reqHeaders } = context.req;
 
   const { data } = await getPageData({
     id,
@@ -82,7 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         }
       : null,
     pathname: context?.resolvedUrl,
-    ...extractHeaders(reqHeaders),
   };
   return {
     props: {
