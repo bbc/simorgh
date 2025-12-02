@@ -50,7 +50,7 @@ export default ({
         })
       : holdingImageURL;
 
-  const holdingImageURLForPlaylist = getPlaceholderURL();
+  const holdingImageURLForLiveTV = getPlaceholderURL();
 
   return {
     playerConfig: {
@@ -62,7 +62,7 @@ export default ({
       },
       playlistObject: {
         title,
-        holdingImageURL: holdingImageURLForPlaylist,
+        holdingImageURL: holdingImageURLForLiveTV,
         items: [
           {
             ...(serviceID && { serviceID }),
