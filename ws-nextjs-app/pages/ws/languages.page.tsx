@@ -17,8 +17,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const baseProps = {
     error: null,
-    isAmp: false,
-    isNextJs: true,
     page: null,
     status: 200,
     timeOnServer: Date.now(),
