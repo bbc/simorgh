@@ -1,3 +1,4 @@
+import japanese from '#app/lib/config/services/japanese';
 import envs from '../../../../support/config/envs';
 
 export const getATIParamsFromURL = atiAnalyticsURL => {
@@ -128,13 +129,14 @@ export const setUserIDCookie = () => {
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
-  const publicServiceDestinationNames = {
+  const dedicatedPianoDestinationNamesByService = {
     news: 'NEWS_PS',
     cymrufyw: 'NEWS_LANGUAGES_PS',
     naidheachdan: 'NEWS_LANGUAGES_PS',
     scotland: 'HOMEPAGE_PS',
     newsround: 'NEWSROUND',
     sport: 'SPORT_PS',
+    japanese: 'NEWS_LANGUAGES_GNL',
   };
 
   const expectedAtiDestinationsForAmp = {
@@ -162,10 +164,12 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     SPORT_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
+    NEWS_LANGUAGES_GNL: 598289,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
   };
 
   const destinationName =
-    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
+    dedicatedPianoDestinationNamesByService[service] ?? 'WS_NEWS_LANGUAGES';
 
   return expectedAtiDestinationsForAmp[
     applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`

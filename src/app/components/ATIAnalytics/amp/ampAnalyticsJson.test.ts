@@ -61,22 +61,24 @@ describe('AMP ATI Analytics', () => {
     };
 
     it.each`
-      environment | destination                 | appName                | service           | baseUrl
-      ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'} | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'WS_NEWS_LANGUAGES'}      | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'live'}   | ${'NEWS_PS'}                | ${'news'}              | ${'news'}         | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'NEWS_PS_TEST'}           | ${'news'}              | ${'news'}         | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'NEWS_LANGUAGES_PS'}      | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'} | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'HOMEPAGE_PS'}            | ${'scotland'}          | ${'scotland'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'HOMEPAGE_PS_TEST'}       | ${'scotland'}          | ${'scotland'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'NEWSROUND'}              | ${'newsround'}         | ${'newsround'}    | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'NEWSROUND_TEST'}         | ${'newsround'}         | ${'newsround'}    | ${'https://logws1363.ati-host.net/hit.xiti?'}
-      ${'live'}   | ${'SPORT_PS'}               | ${'sport'}             | ${'sport'}        | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
-      ${'test'}   | ${'SPORT_PS_TEST'}          | ${'sport'}             | ${'sport'}        | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      environment | destination                  | appName                | service           | baseUrl
+      ${'local'}  | ${'WS_NEWS_LANGUAGES_TEST'}  | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'test'}   | ${'WS_NEWS_LANGUAGES_TEST'}  | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'WS_NEWS_LANGUAGES'}       | ${'news-gahuza'}       | ${'gahuza'}       | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'live'}   | ${'NEWS_PS'}                 | ${'news'}              | ${'news'}         | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_PS_TEST'}            | ${'news'}              | ${'news'}         | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_LANGUAGES_PS'}       | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'}  | ${'news-cymrufyw'}     | ${'cymrufyw'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_LANGUAGES_PS'}       | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_LANGUAGES_PS_TEST'}  | ${'news-naidheachdan'} | ${'naidheachdan'} | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'HOMEPAGE_PS'}             | ${'scotland'}          | ${'scotland'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'HOMEPAGE_PS_TEST'}        | ${'scotland'}          | ${'scotland'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWSROUND'}               | ${'newsround'}         | ${'newsround'}    | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWSROUND_TEST'}          | ${'newsround'}         | ${'newsround'}    | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'SPORT_PS'}                | ${'sport'}             | ${'sport'}        | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'SPORT_PS_TEST'}           | ${'sport'}             | ${'sport'}        | ${'https://logws1363.ati-host.net/hit.xiti?'}
+      ${'live'}   | ${'NEWS_LANGUAGES_GNL'}      | ${'news-japanese'}     | ${'japanese'}     | ${'https://a1.api.bbc.co.uk/hit.xiti?'}
+      ${'test'}   | ${'NEWS_LANGUAGES_GNL_TEST'} | ${'news-japanese'}     | ${'japanese'}     | ${'https://logws1363.ati-host.net/hit.xiti?'}
     `(
       'should match this JSON structure for destination - $destination and app name - $appName in environment - $environment',
       ({ environment, destination, appName, service, baseUrl }) => {
