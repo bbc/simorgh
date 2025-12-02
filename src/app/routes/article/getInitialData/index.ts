@@ -18,15 +18,14 @@ type Props = {
   getAgent: GetAgent;
 };
 
-const transformPageData = (toggles?: Toggles) =>
-  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
 
 export default async ({
   service,
   pageType,
   path: pathname,
   variant,
-  toggles,
   isAmp,
   getAgent,
 }: Props) => {
@@ -57,7 +56,7 @@ export default async ({
       billboardCuration,
     } = secondaryData;
 
-    const transformedArticleData = transformPageData(toggles)(article);
+    const transformedArticleData = transformPageData()(article);
 
     const response = {
       status,
