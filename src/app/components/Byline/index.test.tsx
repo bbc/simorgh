@@ -32,18 +32,15 @@ describe('Byline', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  it('should render Byline correctly when passed Twitter and TopicUrl links', () => {
+  it('should render Byline correctly when passed TopicUrl links', () => {
     render(<Byline blocks={bylineWithLink} />);
 
     const AuthorLink = screen.getByText('Single Byline (all values)');
-    const TwitterLink = screen.getByText('@test');
     const Links = screen.getAllByRole('link');
 
     expect(AuthorLink).toBeInTheDocument();
-    expect(TwitterLink).toBeInTheDocument();
-    expect(Links.length).toBe(2);
+    expect(Links.length).toBe(1);
     expect(Links[0]).toHaveAttribute('href', '/news/topics/c8qx38nq177t');
-    expect(Links[1]).toHaveAttribute('href', 'https://twitter.com/test');
   });
 
   it('should render a section with role region', () => {
@@ -75,7 +72,7 @@ describe('Byline', () => {
   it('should correctly use the buildIChefURL function to create the image url', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
-    const imageSrc = screen.getByRole('img');
+    const imageSrc = screen.getByRole('presentation');
 
     expect(imageSrc).toHaveAttribute(
       'src',
@@ -94,7 +91,7 @@ describe('Byline', () => {
   it('should not render an image if a png photo is not used', () => {
     render(<Byline blocks={bylineWithNonPngPhoto} />);
 
-    const image = screen.queryByRole('img');
+    const image = screen.queryByRole('presentation');
 
     expect(image).toBeNull();
   });
@@ -134,14 +131,10 @@ describe('Byline', () => {
     render(<Byline blocks={bylineWithPngPhoto} />);
 
     const AuthorLink = screen.getByText('Mayeni Jones');
-    const TwitterLink = screen.getByText('@MayeniJones');
-    const Links = screen.getAllByRole('link');
     const Location = screen.getByText('Lagos, Nigeria');
-    const Image = screen.getByRole('img');
+    const Image = screen.getByRole('presentation');
 
     expect(AuthorLink).toBeInTheDocument();
-    expect(TwitterLink).toBeInTheDocument();
-    expect(Links.length).toBe(1);
     expect(Location).toBeInTheDocument();
     expect(Image).toBeInTheDocument();
   });
@@ -150,8 +143,7 @@ describe('Byline', () => {
     expectation         | info                | text
     ${'Author'}         | ${'Author'}         | ${'Author,'}
     ${'Role'}           | ${'Role'}           | ${'Role,'}
-    ${'X'}              | ${'X'}              | ${'X,'}
-    ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from'}
+    ${'Reporting from'} | ${'Reporting from'} | ${'Reporting from,'}
   `('should correctly announce $expectation for $info', ({ text }) => {
     render(
       <Byline blocks={bylineWithLinkAndLocation}>
@@ -172,7 +164,7 @@ describe('Byline', () => {
     info               | translation
     ${'author'}        | ${'Barreessaa,'}
     ${'role'}          | ${'Gahee,'}
-    ${'reportingFrom'} | ${'Gabaasni irraati'}
+    ${'reportingFrom'} | ${'Gabaasni irraati,'}
   `('should translate $info announcement correctly', ({ translation }) => {
     render(
       <Byline blocks={bylineWithLinkAndLocation}>

@@ -8,6 +8,7 @@ import {
   bylineBlock,
   singleTextBlock,
   textBlock,
+  timestampBlock,
 } from '#models/blocks';
 
 const plainOptimoBlock = (blocks: (object | string)[]) =>
@@ -30,9 +31,27 @@ const blocksWithHeadlineTextAndByline = (blockValues: (object | string)[]) => {
   return [
     blockContainingText('headline', headlineText, 1),
     // @ts-expect-error - type checking not added for block helpers
-    bylineBlock(twitterHandle, 2),
+    bylineBlock('byline', twitterHandle, 2),
     // @ts-expect-error - type checking not added for block helpers
-    singleTextBlock(paragraphText, 3),
+    timestampBlock(3),
+    // @ts-expect-error - type checking not added for block helpers
+    singleTextBlock(paragraphText, 4),
+  ];
+};
+
+const blocksWithHeadlineTextAndSubByline = (
+  blockValues: (object | string)[],
+) => {
+  const [headlineText, paragraphText, twitterHandle] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
+    bylineBlock('subByline', twitterHandle, 2),
+    // @ts-expect-error - type checking not added for block helpers
+    timestampBlock(3),
+    // @ts-expect-error - type checking not added for block helpers
+    singleTextBlock(paragraphText, 4),
   ];
 };
 
@@ -777,6 +796,20 @@ export const articleDataPidginWithByline = articleDataBuilder(
   emptyThings,
   undefined,
   blocksWithHeadlineTextAndByline,
+) as unknown as Article;
+
+export const articleDataPidginWithSubByline = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.', 'mary_harper'],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  undefined,
+  blocksWithHeadlineTextAndSubByline,
 ) as unknown as Article;
 
 export const articlePglDataPidgin = articleDataBuilder(
