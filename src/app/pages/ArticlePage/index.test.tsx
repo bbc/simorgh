@@ -32,11 +32,11 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import {
   render,
   screen,
@@ -1237,5 +1237,73 @@ describe('Article Page', () => {
         }
       },
     );
+  });
+
+  describe('Personalised topic curation', () => {
+    it('renders nothing if personalisedContentData is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+      const { container } = render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="variantA"
+        />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+    it('renders section and subheading when personalisedContentData is present', () => {
+      const personalisedContent = [
+        {
+          title: 'Recommended for you',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Article 1',
+              description: 'Description 1',
+              link: '/article-1',
+              imageUrl: 'image-1.jpg',
+              imageAlt: 'Image 1',
+              isLive: false,
+              id: 'article-1',
+            },
+            {
+              type: 'promo',
+              title: 'Article 2',
+              description: 'Description 2',
+              link: '/article-2',
+              imageUrl: 'image-2.jpg',
+              imageAlt: 'Image 2',
+              isLive: false,
+              id: 'article-2',
+            },
+          ],
+          id: 'personalised-content',
+          topicId: 'topic-1',
+        },
+      ];
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+          personalisedContent,
+        },
+      };
+      render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="personalised"
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(screen.getByText('Recommended for you')).toBeInTheDocument();
+      expect(screen.getByText('Article 1')).toBeInTheDocument();
+      expect(screen.getByText('Article 2')).toBeInTheDocument();
+    });
   });
 });

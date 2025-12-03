@@ -47,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -279,6 +280,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
   let referrerVariant = useOptimizelyVariation({
@@ -287,6 +289,22 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   });
   referrerVariant = ''; // TEMP override
   referrerVariant = isDesktopInitial ? 'off' : referrerVariant; // switches off experiment if desktop width is detected
+
+  // EXPERIMENT: Personalised Content Rail
+  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedContentExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const personalisedVariants = ['variation_1', 'variation_2'];
+  const isPersonalisedVariant = personalisedVariants.includes(
+    personalisedContentExperimentVariant ?? '',
+  );
+
+  const showPersonalisedContent = Boolean(
+    !isAmp && !isLite && !isApp && isPersonalisedVariant,
+  );
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -511,7 +529,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-
           <div css={styles.hideBelowDesktopWidth}>
             <div css={{ gridColumn: '1 / span 12' }}>
               <RelatedContentSection
@@ -533,6 +550,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             </div>
           </div>
+          {/* EXPERIMENT: Personalised Content */}
+          {showPersonalisedContent && (
+            <PersonalisedContent
+              pageData={pageData}
+              personalisedTopicCurationExperimentVariant={
+                personalisedContentExperimentVariant ?? ''
+              }
+            />
+          )}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
