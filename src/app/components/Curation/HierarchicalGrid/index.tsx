@@ -138,6 +138,11 @@ const HiearchicalGrid = ({
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
                         </VisuallyHiddenText>
+                        <Promo.MediaIcon
+                          className="inline-icon"
+                          type={promo.type}
+                          css={styles.inlineIcon}
+                        />
                         {promo.title}
                         {showDuration && (
                           <VisuallyHiddenText>
