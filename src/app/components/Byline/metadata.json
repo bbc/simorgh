@@ -1,8 +1,8 @@
 {
   "alpha": false,
   "lastUpdated": {
-    "day": 28,
-    "month": "November",
+    "day": 3,
+    "month": "December",
     "year": 2025
   },
   "uxAccessibilityDoc": {
@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Byline-update-to-align-with-PS-designs--CyQiEg627KoqdqjQYYUbOWYSAg-3IDM6WWNjengQxpTLXvLe",
       "label": "Accessibility Swarm Notes"
