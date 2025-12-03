@@ -2,6 +2,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
@@ -40,6 +41,17 @@ export default ({
   // Enable autoplay only on live TV pages when the user is coming to the page from an internal link
   const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
 
+  const getPlaceholderURL = () =>
+    pageType === LIVE_TV_PAGE
+      ? buildIChefURL({
+          originCode: 'pips',
+          locator: liveMediaBlock?.masterbrand?.imageUrlTemplate,
+          resolution: 800,
+        })
+      : holdingImageURL;
+
+  const holdingImageURLForLiveTV = getPlaceholderURL();
+
   return {
     playerConfig: {
       ...basePlayerConfig,
@@ -50,7 +62,7 @@ export default ({
       },
       playlistObject: {
         title,
-        holdingImageURL,
+        holdingImageURL: holdingImageURLForLiveTV,
         items: [
           {
             ...(serviceID && { serviceID }),

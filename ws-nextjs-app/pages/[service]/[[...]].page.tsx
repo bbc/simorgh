@@ -77,6 +77,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
+      pathname: resolvedUrl.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
