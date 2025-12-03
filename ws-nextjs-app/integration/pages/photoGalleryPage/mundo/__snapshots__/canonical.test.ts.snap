@@ -205,7 +205,7 @@ exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pi
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

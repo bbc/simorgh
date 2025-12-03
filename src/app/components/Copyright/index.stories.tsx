@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import services from '#server/utilities/serviceConfigs';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CopyrightContainer from '.';

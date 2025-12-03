@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
@@ -98,7 +98,7 @@ const TopicPage = ({ pageData }) => {
                 });
 
               return (
-                <React.Fragment key={`${curationId}-${position}`}>
+                <Fragment key={`${curationId}-${position}`}>
                   <Curation
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
@@ -113,7 +113,7 @@ const TopicPage = ({ pageData }) => {
                     }
                     {...curationProps}
                   />
-                </React.Fragment>
+                </Fragment>
               );
             },
           )}

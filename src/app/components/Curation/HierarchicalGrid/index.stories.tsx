@@ -1,5 +1,3 @@
-import React from 'react';
-
 import HierarchicalGrid from './index';
 import { pidginPromos, pidginPromosWithMedia } from './fixtures';
 

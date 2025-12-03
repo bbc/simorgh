@@ -1,4 +1,3 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
