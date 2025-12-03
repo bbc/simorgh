@@ -75,7 +75,7 @@ describe('LiteRedirect', () => {
     expect(setItemCallStack).toStrictEqual(['isOptedIntoLiteRedirect', 'true']);
   });
 
-  it('should set the isOptedIntoLiteRedirect cache value to false on when the user clicks on the lite-site-summary link', () => {
+  it('should set the isOptedIntoLiteRedirect cache value to false on when the user clicks on the go-back-to-canonical-link link', () => {
     const mockWindow = {
       localStorage: {
         setItem: jest.fn(),
@@ -85,7 +85,9 @@ describe('LiteRedirect', () => {
     const mockEvent = {
       target: {
         tagName: 'A',
-        getAttribute: jest.fn().mockReturnValueOnce('lite-site-summary'),
+        getAttribute: jest
+          .fn()
+          .mockReturnValueOnce('go-back-to-canonical-link'),
       },
     } as unknown as MouseEvent;
 

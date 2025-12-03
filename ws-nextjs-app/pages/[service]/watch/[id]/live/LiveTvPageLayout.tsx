@@ -7,10 +7,11 @@ import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
 import MetadataContainer from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import ATIAnalytics from '#app/components/ATIAnalytics';
+import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
+import LinkedData from '#app/components/LinkedData';
 import { LiveTVPageProps } from './types';
 import styles from './styles';
-// import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
-// import ATIAnalytics from '#app/components/ATIAnalytics';
 
 const renderCuration = ({ curation }: { curation: CurationType }) => {
   const {
@@ -38,7 +39,17 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
 
 export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
   const { lang } = use(ServiceContext);
-  const { curations, description, title } = pageData;
+  const {
+    curations,
+    description,
+    title,
+    seoTitle,
+    seoDescription,
+    metadata: { atiAnalytics },
+  } = pageData;
+
+  const metadataTitle = seoTitle || title;
+  const metadataDescription = seoDescription || description;
 
   const mediaCollectionCuration = curations?.find(
     curation => curation.mediaCollection,
@@ -50,25 +61,43 @@ export default function LiveTvLayout({ pageData }: LiveTVPageProps) {
 
   return (
     <div css={styles.pageWrapper}>
-      {/* <ATIAnalytics atiData={atiAnalytics} /> */}
-      {/* <ChartbeatAnalytics title={pageTitle} /> */}
+      <ATIAnalytics atiData={atiAnalytics} />
+      <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={title}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
+      <LinkedData
+        type="TelevisionChannel"
+        seoTitle={metadataTitle}
+        description={metadataDescription}
+      />
       <main role="main" css={styles.main}>
         <div css={styles.inner}>
-          <div css={styles.padding}>
-            {mediaCollectionCuration &&
-              renderCuration({ curation: mediaCollectionCuration })}
-            <Heading id="content" level={1} css={styles.title}>
+          <div
+            css={[styles.padding, styles.reorderedLayout]}
+            className="media-player"
+          >
+            <Heading
+              id="content"
+              level={1}
+              css={styles.title}
+              className="title"
+            >
               {title}
             </Heading>
-            <Text css={styles.description}>{description}</Text>
-            <div css={styles.curationStyles}>
+            <Text css={styles.description} className="description">
+              {description}
+            </Text>
+            {mediaCollectionCuration && (
+              <div role="presentation" css={styles.playerMargins}>
+                {renderCuration({ curation: mediaCollectionCuration })}
+              </div>
+            )}
+            <div css={styles.curationStyles} className="curations">
               {filteredCurations.map(curation => renderCuration({ curation }))}
             </div>
           </div>

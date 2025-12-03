@@ -163,7 +163,23 @@ exports[`MediaIndicator should render video by default 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
   display: block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 .emotion-2 {

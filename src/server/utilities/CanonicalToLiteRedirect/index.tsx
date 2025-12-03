@@ -33,7 +33,6 @@ export const redirectScript = (window: Window) => {
 export const optOutScript = (window: Window, event: MouseEvent) => {
   let targetElement;
   const clickedElement = event.target as HTMLElement;
-  const STATIC_REVERB_CLICK_TRACKING = 'data-static-reverb-click';
 
   let currentElement = clickedElement;
   while (currentElement) {
@@ -45,11 +44,9 @@ export const optOutScript = (window: Window, event: MouseEvent) => {
   }
 
   if (targetElement?.tagName === 'A') {
-    const reverbUrl = targetElement.getAttribute(
-      STATIC_REVERB_CLICK_TRACKING,
-    ) as string;
+    const id = targetElement.getAttribute('id') as string;
 
-    if (reverbUrl?.includes('lite-site-summary')) {
+    if (id?.includes('go-back-to-canonical-link')) {
       window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
     }
   }
@@ -73,7 +70,7 @@ export default () => {
   return (
     <script>
       {`
-        window.addEventListener('load', () => {
+        window.addEventListener('DOMContentLoaded', () => {
           (${redirectScript.toString()})(window)
         })
       `}

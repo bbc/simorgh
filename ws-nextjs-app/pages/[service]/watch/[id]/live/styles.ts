@@ -18,26 +18,27 @@ const styles = {
   }),
   padding: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem 0`,
-      [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
-        padding: `${spacings.QUADRUPLE}rem 0`,
+      padding: `${spacings.DOUBLE}rem 0`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem 0`,
       },
-      [mq.GROUP_3_ONLY]: {
-        padding: `${spacings.SEXTUPLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.QUINTUPLE}rem 0`,
+    }),
+  playerMargins: ({ mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_3_MAX_WIDTH]: {
+        marginInline: `-${spacings.DOUBLE}rem`,
       },
     }),
   title: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingTop: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.QUINTUPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),
@@ -48,6 +49,23 @@ const styles = {
       },
       '& a:visited': {
         color: palette.GREY_5,
+      },
+    }),
+  reorderedLayout: () =>
+    css({
+      display: 'flex',
+      flexDirection: 'column',
+      '& > .media-player': {
+        order: 0,
+      },
+      '& > .title': {
+        order: 1,
+      },
+      '& > .description': {
+        order: 2,
+      },
+      '& > .curations': {
+        order: 3,
       },
     }),
 };

@@ -325,7 +325,7 @@ export const service: DefaultServiceConfig = {
           text: 'BBC ਬਾਰੇ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ਨਿੱਜਤਾ ਪਾਲਿਸੀ',
         },
         {

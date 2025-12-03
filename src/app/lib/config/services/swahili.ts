@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Muda wa kusoma',
+        long: 'Taarifa ndefu',
+        minute: 'Dakika',
+      },
       pagination: {
         page: 'Ukurasa',
         previousPage: 'Rejea',
