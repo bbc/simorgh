@@ -1,5 +1,4 @@
-import React from 'react';
-import { AppContext, AppProps } from 'next/app';
+import type { AppContext, AppProps } from 'next/app';
 import { NextPageContext } from 'next/types';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
