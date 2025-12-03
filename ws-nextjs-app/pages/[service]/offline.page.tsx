@@ -1,4 +1,3 @@
-import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
 import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
