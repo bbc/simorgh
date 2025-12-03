@@ -16,43 +16,7 @@ self.addEventListener('install', event => {
       const cache = await caches.open(cacheName);
       if (hasOfflinePageFunctionality) {
         try {
-          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
-            .href;
-          const response = await fetch(offlinePageUrl);
-          if (!response || !response.ok) {
-            throw new Error('Failed to fetch offline page');
-          }
-          await cache.put(offlinePageUrl, response.clone());
-
-          // Parse HTML to extract and cache all script/link resources
-          const html = await response.text();
-          const scriptMatches = html.matchAll(
-            /<script[^>]+src=["']([^"']+)["']/g,
-          );
-          const linkMatches = html.matchAll(/<link[^>]+href=["']([^"']+)["']/g);
-
-          const resourcesToCache = [
-            ...Array.from(scriptMatches, m => m[1]),
-            ...Array.from(linkMatches, m => m[1]),
-          ].filter(
-            r => r.startsWith('/') || r.startsWith(self.location.origin),
-          );
-
-          // Cache all resources in parallel
-          await Promise.allSettled(
-            resourcesToCache.map(async resource => {
-              try {
-                const resourceUrl = new URL(resource, self.location.origin)
-                  .href;
-                const resourceResponse = await fetch(resourceUrl);
-                if (resourceResponse && resourceResponse.ok) {
-                  await cache.put(resourceUrl, resourceResponse);
-                }
-              } catch (err) {
-                // Resource failed to cache, continue
-              }
-            }),
-          );
+          await cache.add(OFFLINE_PAGE);
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error('Failed to cache offline page:', error.message);
