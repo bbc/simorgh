@@ -44,27 +44,26 @@ const getUnderArticleComponents = ({
   );
 
   const topStoriesArray = Array.isArray(topStoriesData) ? topStoriesData : [];
+  const topStoriesComponent = topStoriesArray.length ? (
+    <div key="topStories" data-testid="top-stories" css={sectionStyles}>
+      <TopStoriesSection
+        content={topStoriesArray}
+        {...(referrerVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
+          },
+        })}
+      />
+    </div>
+  ) : null;
 
-  const topStoriesComponent =
-    topStoriesArray.length > 0 ? (
-      <div key="topStories" data-testid="top-stories" css={sectionStyles}>
-        <TopStoriesSection
-          content={topStoriesArray}
-          {...(referrerVariant && {
-            experimentProps: {
-              sendOptimizelyEvents: true,
-              experimentName: referrerExperimentName,
-              experimentVariant: referrerVariant,
-            },
-          })}
-        />
-      </div>
-    ) : null;
-
-  const featuresComponent = featuresData ? (
+  const featuresArray = Array.isArray(featuresData) ? featuresData : [];
+  const featuresComponent = featuresArray.length ? (
     <div key="features" data-testid="features" css={sectionStyles}>
       <FeaturesAnalysis
-        content={featuresData}
+        content={featuresArray}
         parentColumns={{}}
         sectionLabelBackground={grey2}
         {...(referrerVariant && {

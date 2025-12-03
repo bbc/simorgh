@@ -13,7 +13,6 @@ const getArticleTopStoryItem = (item: TopStoryItem) => {
   const overtypedHeadline = item?.headlines?.overtyped ?? '';
   const mainHeadline = item?.headlines?.headline ?? '';
   const headlineBlockText =
-    // @ts-expect-error - nested block structure
     item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
       ?.text ?? '';
 

@@ -287,7 +287,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerVariant = 'adaptive_search'; // TEMP override
+  referrerVariant = ''; // TEMP override
   referrerVariant = isDesktopInitial ? 'off' : referrerVariant; // switches off experiment if desktop width is detected
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;

@@ -217,9 +217,14 @@ export const mapFeaturesToRecommendation = (featuresContent: Features) => {
 const getTopStoryHeadline = (item: TopStoryItem) => {
   const overtypedHeadline = item?.headlines?.overtyped ?? '';
   const mainHeadline = item?.headlines?.headline ?? '';
+  const promoHeadlineBlocks = Array.isArray(
+    item?.headlines?.promoHeadline?.blocks,
+  )
+    ? item.headlines.promoHeadline.blocks
+    : [];
   const promoHeadlineText =
-    item?.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]?.model
-      ?.text ?? '';
+    promoHeadlineBlocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
+
   const name = item?.name ?? '';
   return overtypedHeadline || mainHeadline || promoHeadlineText || name;
 };
