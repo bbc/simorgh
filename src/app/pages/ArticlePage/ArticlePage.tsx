@@ -47,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -243,6 +244,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: timeOfDayExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // EXPERIMENT: Personalised Content Rail
+  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedContentExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const personalisedVariants = ['variation_1', 'variation_2'];
+  const isPersonalisedVariant = personalisedVariants.includes(
+    personalisedContentExperimentVariant ?? '',
+  );
+
+  const showPersonalisedContent = Boolean(
+    !isAmp && !isLite && !isApp && isPersonalisedVariant,
+  );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -470,6 +486,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               },
             })}
           />
+          {/* EXPERIMENT: Personalised Content */}
+          {showPersonalisedContent && (
+            <PersonalisedContent
+              pageData={pageData}
+              personalisedTopicCurationExperimentVariant={
+                personalisedContentExperimentVariant ?? ''
+              }
+            />
+          )}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
