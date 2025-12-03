@@ -1,5 +1,5 @@
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
@@ -382,7 +382,7 @@ const liteTestSuites = Cypress.env('SMOKE')
 runTestsForPage({
   pageType: MEDIA_ASSET_PAGE,
   headers: {
-    'page-type': 'tc2',
+    'page-type': 'article',
   },
   testSuites: [
     ...canonicalTestSuites,
