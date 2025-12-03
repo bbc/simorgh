@@ -1,5 +1,4 @@
-import React from 'react';
-import loadable from '@loadable/component';
+import loadable from 'next/dynamic';
 
 export default loadable(
   () =>
@@ -7,5 +6,4 @@ export default loadable(
       /* webpackChunkName: "frosted_promo" */
       '.'
     ),
-  { fallback: <span data-testid="frosted-promo-loader" /> },
 );

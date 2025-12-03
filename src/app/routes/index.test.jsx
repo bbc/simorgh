@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 

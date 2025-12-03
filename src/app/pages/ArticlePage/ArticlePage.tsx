@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -285,9 +283,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 

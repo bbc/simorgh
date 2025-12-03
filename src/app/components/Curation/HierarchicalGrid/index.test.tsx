@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { pidginPromos as fixture } from './fixtures';
 import mediaFixture from './mediaFixtures';

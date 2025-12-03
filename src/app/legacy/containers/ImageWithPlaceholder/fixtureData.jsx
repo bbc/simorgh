@@ -1,4 +1,3 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContext } from '../../../contexts/ServiceContext';

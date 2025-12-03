@@ -1,4 +1,3 @@
-import React from 'react';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { render } from '../../../components/react-testing-library-with-providers';

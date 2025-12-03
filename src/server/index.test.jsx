@@ -1,4 +1,3 @@
-import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
