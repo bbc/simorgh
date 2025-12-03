@@ -257,6 +257,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const isPersonalisedVariant = personalisedVariants.includes(
     personalisedContentExperimentVariant ?? '',
   );
+  const isPersonalisedVariantTwo =
+    personalisedContentExperimentVariant === 'variation_2';
 
   const showPersonalisedContent = Boolean(
     !isAmp && !isLite && !isApp && isPersonalisedVariant,
@@ -404,6 +406,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+  const personalisedContentBlock = showPersonalisedContent ? (
+    <PersonalisedContent
+      pageData={pageData}
+      personalisedTopicCurationExperimentVariant={
+        personalisedContentExperimentVariant ?? ''
+      }
+    />
+  ) : null;
 
   return (
     <div css={styles.pageWrapper}>
@@ -475,6 +485,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
+          {/* EXPERIMENT: Personalised Content */}
+          {isPersonalisedVariantTwo && personalisedContentBlock}
           <RelatedContentSection
             content={blocks}
             // EXPERIMENT: Time of Day Experiment
@@ -486,15 +498,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               },
             })}
           />
-          {/* EXPERIMENT: Personalised Content */}
-          {showPersonalisedContent && (
-            <PersonalisedContent
-              pageData={pageData}
-              personalisedTopicCurationExperimentVariant={
-                personalisedContentExperimentVariant ?? ''
-              }
-            />
-          )}
+          {!isPersonalisedVariantTwo && personalisedContentBlock}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
