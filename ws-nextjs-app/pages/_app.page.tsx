@@ -18,7 +18,7 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
-import getToggles from '#app/lib/utilities/getToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
 import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
