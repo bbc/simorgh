@@ -27,7 +27,6 @@ const pathOrZeroIndexModelBlocks = (
 
 const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
   return blocks
-    .slice(0, 4)
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
 
@@ -67,8 +66,7 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
 
       if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
-      const contributorBlock = blocks?.[0] ?? [];
-      const authorTopicUrl = contributorBlock?.model?.topicUrl ?? '';
+      const authorTopicUrl = contribBlock?.model?.topicUrl ?? '';
 
       return {
         authorName,
