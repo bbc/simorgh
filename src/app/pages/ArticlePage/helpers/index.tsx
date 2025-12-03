@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { OptimoBlock } from '#app/models/types/optimo';
 import RelatedContentSection from '../../../components/RelatedContentSection';
