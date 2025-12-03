@@ -1,7 +1,7 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import { pathOr } from 'ramda';
+
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';

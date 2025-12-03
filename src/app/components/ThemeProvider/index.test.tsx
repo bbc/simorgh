@@ -1,6 +1,5 @@
-/** @jsx jsx */
 import { render, act } from '@testing-library/react';
-import { jsx, css, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 import SERVICES from '#app/lib/config/services';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';

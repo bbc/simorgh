@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_B_MIN_WIDTH,

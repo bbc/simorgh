@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';

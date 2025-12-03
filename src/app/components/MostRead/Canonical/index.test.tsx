@@ -1,4 +1,3 @@
-import React from 'react';
 import type { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { data as arabicMostReadData } from '../../../../../data/arabic/mostRead/index.json';
 import { data as pidginMostReadData } from '../../../../../data/pidgin/mostRead/index.json';

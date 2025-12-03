@@ -1,4 +1,3 @@
-import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { render, screen } from '../react-testing-library-with-providers';

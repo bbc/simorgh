@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { ConsentBannerText } from '#psammead/psammead-consent-banner/src';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';

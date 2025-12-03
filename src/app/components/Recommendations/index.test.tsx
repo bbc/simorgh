@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { OptimoBlock } from '#app/models/types/optimo';
 import Recommendations from '.';

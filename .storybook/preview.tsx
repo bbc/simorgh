@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
