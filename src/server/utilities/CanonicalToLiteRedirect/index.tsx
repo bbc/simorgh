@@ -29,7 +29,7 @@ export default () => {
   return (
     <script>
       {`
-        window.addEventListener('load', () => {
+        window.addEventListener('DOMContentLoaded', () => {
           (${redirectScript.toString()})(window)
         })
       `}
