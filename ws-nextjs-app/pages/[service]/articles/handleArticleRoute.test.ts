@@ -5,7 +5,7 @@ import * as shouldRender from './shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
 
-jest.mock('#app/routes/utils/fetchPageData');
+jest.mock('../../../utilities/pageRequests/getPageData');
 jest.mock('./shouldRender', () => {
   const originalModule = jest.requireActual('./shouldRender');
   return {
