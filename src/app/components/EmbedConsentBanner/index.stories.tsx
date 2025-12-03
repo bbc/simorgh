@@ -1,3 +1,4 @@
+import React from 'react';
 import metadata from './metadata.json';
 import readme from './README.md';
 

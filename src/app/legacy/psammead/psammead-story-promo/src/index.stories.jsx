@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import Image from '#psammead/psammead-image/src';
@@ -63,11 +64,11 @@ const MediaIndicatorComponent = ({
 
 const HiddenText = ({ type, headline }) => (
   /* eslint-disable-next-line jsx-a11y/aria-role */
-  (<span role="text">
+  <span role="text">
     <VisuallyHiddenText>{`${type}, `}</VisuallyHiddenText>
     <span>{headline}</span>
     <VisuallyHiddenText>, 2,15</VisuallyHiddenText>
-  </span>)
+  </span>
 );
 
 const InfoComponent = ({

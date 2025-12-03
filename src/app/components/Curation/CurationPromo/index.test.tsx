@@ -1,3 +1,4 @@
+import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { render, screen } from '../../react-testing-library-with-providers';

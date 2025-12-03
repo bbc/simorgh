@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs } from '@storybook/addon-knobs';
 import InlineLink from '#psammead/psammead-inline-link/src';

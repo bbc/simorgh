@@ -1,4 +1,4 @@
-import { use, useEffect, useRef } from 'react';
+import React, { use, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { ConsentBanner } from '#psammead/psammead-consent-banner/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';

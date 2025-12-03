@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document';
 import Script from 'next/script';
 
-import { HTMLAttributes, ReactElement } from 'react';
+import React, { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';

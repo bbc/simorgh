@@ -1,3 +1,4 @@
+import React from 'react';
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import Header from '.';

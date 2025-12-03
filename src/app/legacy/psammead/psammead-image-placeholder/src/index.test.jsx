@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import ImagePlaceholder from '.';
 

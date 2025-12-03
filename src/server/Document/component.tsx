@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import type { ReactElement } from 'react';
+import React from 'react';
 import { EmotionCritical } from '@emotion/server/create-instance';
 
 import { HelmetData } from 'react-helmet';
@@ -15,9 +15,9 @@ type Props = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  legacyScripts: ReactElement;
-  links: ReactElement;
-  modernScripts: ReactElement;
+  legacyScripts: React.ReactElement;
+  links: React.ReactElement;
+  modernScripts: React.ReactElement;
   service?: string;
   nonce?: string;
 };

@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import formatDuration from '#lib/utilities/formatDuration';

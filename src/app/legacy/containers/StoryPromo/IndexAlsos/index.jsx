@@ -1,4 +1,4 @@
-import { use, Fragment } from 'react';
+import React, { use, Fragment } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {

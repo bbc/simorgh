@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArticlePage, ErrorPage, MediaArticlePage } from '#pages/index';
 import {
   articlePath,

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import Image from '#psammead/psammead-image/src';

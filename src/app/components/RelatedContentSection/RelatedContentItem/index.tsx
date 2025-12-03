@@ -1,3 +1,6 @@
+/** @jsx jsx */
+
+import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { createSrcsets } from '#lib/utilities/srcSet';

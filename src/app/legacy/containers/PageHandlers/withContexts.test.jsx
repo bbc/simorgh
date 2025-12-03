@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, act } from '@testing-library/react';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';

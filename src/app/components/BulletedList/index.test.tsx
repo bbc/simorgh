@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '../react-testing-library-with-providers';
 import { BulletedList, BulletedListItem } from './index';
 

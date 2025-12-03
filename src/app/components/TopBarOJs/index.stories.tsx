@@ -1,3 +1,4 @@
+import React from 'react';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import {
   topStoriesBlocks,

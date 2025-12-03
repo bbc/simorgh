@@ -1,4 +1,4 @@
-import { useState, use } from 'react';
+import React, { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';

@@ -1,3 +1,4 @@
+import React from 'react';
 import ErrorPage from './ErrorPage';
 import { render } from '../../components/react-testing-library-with-providers';
 

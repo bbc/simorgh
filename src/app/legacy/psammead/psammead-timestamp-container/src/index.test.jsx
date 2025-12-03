@@ -1,3 +1,4 @@
+import React from 'react';
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
 import { render } from '../../../../components/react-testing-library-with-providers';

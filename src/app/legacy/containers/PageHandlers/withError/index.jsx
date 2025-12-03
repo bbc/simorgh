@@ -1,3 +1,4 @@
+import React from 'react';
 import ErrorPage from '#pages/ErrorPage/ErrorPage';
 
 const WithError = Component => {

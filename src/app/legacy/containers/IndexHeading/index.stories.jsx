@@ -1,3 +1,4 @@
+import React from 'react';
 import IndexHeadingContainer from '.';
 
 const Component = () => (

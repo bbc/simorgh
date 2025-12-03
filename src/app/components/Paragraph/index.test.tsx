@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Paragraph from '.';
 import { render, screen } from '../react-testing-library-with-providers';
 

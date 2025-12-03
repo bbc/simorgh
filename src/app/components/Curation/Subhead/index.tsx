@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { Fragment, PropsWithChildren, use } from 'react';
 
 import styles from './index.styles';

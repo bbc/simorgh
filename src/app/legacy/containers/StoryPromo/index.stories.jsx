@@ -1,3 +1,4 @@
+import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';

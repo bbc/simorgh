@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { Summary } from '#app/models/types/curationData';
 import Promo from '#components/Promo';

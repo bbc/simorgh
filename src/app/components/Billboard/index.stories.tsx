@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Summary } from '#app/models/types/curationData';
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';

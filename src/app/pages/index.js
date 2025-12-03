@@ -1,4 +1,4 @@
-import loadable from 'next/dynamic';
+import loadable from '@loadable/component';
 
 export const ArticlePage = loadable(() => import('./ArticlePage'));
 export const MediaArticlePage = loadable(() => import('./MediaArticlePage'));

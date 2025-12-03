@@ -1,4 +1,4 @@
-import { ComponentType, use } from 'react';
+import React, { ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,

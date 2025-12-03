@@ -1,3 +1,4 @@
+import React from 'react';
 import FragmentComponent from '.';
 import { render } from '../react-testing-library-with-providers';
 

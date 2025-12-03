@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import Message from './index';
 

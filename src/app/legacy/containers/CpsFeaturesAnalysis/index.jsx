@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -73,14 +73,13 @@ const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <StoryPromoUlFeatures role="list">
+    <StoryPromoUlFeatures>
       {promoItems.map((item, promoIndex) => {
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
             {...viewTracker}
             border={false}
-            role="listitem"
           >
             <FrostedGlassPromo
               item={item}

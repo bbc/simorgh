@@ -1,3 +1,4 @@
+import React from 'react';
 import HealthFactors from '.';
 import { allCompletedDocs, threeOutstandingActions } from './fixture';
 import metadata from './metadata.json';

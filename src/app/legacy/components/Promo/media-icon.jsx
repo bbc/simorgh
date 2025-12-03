@@ -1,3 +1,4 @@
+import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';

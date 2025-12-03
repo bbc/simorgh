@@ -1,4 +1,7 @@
-import { Fragment, use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { use } from 'react';
+import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -133,7 +136,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <Fragment key={`${curationId}-${position}`}>
+                  <React.Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -152,7 +155,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </Fragment>
+                  </React.Fragment>
                 );
               },
             )}

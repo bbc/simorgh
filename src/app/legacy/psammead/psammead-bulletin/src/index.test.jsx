@@ -1,3 +1,4 @@
+import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import Image from '#psammead/psammead-image/src';
 import { render } from '../../../../components/react-testing-library-with-providers';

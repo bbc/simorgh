@@ -4,8 +4,6 @@ import { Services, Variants } from '#app/models/types/global';
 type Query = string[];
 type Platform = 'cps' | 'articles' | 'tipo';
 
-const MAX_ID_LENGTH = 1000;
-
 // Asset ID regexes
 const TC2_ID_REGEX = /^[a-z0-9-_]{1,}$/;
 const TC2_MONTH_REGEX = /^(0[1-9]|1[0-2])$/;
@@ -95,8 +93,6 @@ const extractPlatform = (query: Query): Platform | null => {
 
   // eslint-disable-next-line no-restricted-syntax
   for (const id of query ?? []) {
-    if (id.length >= MAX_ID_LENGTH) break;
-
     if (CPS_ID_REGEX.test(id)) {
       platform = 'cps';
       break;
@@ -118,8 +114,6 @@ const extractAssetId = (query: Query) => {
   let assetId;
 
   assetId = query?.find((id: string) => {
-    if (id.length >= MAX_ID_LENGTH) return null;
-
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||

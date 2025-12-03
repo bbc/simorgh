@@ -1,4 +1,5 @@
 import { Direction } from '#app/models/types/global';
+import React from 'react';
 
 export const Ellipsis = () => (
   <svg

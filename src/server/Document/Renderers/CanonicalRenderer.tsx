@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import type { ReactElement, ScriptHTMLAttributes } from 'react';
+import React from 'react';
 import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
@@ -12,24 +12,24 @@ import ComponentTracking from './ComponentTracking';
 interface Props extends BaseRendererProps {
   data: Record<string, unknown>;
   isApp: boolean;
-  links: ReactElement;
-  legacyScripts: ReactElement;
-  modernScripts: ReactElement;
+  links: React.ReactElement;
+  legacyScripts: React.ReactElement;
+  modernScripts: React.ReactElement;
   service?: string;
   nonce?: string | null;
 }
 
 const showScripts = (
-  scripts: ReactElement | ReactElement[],
+  scripts: React.ReactElement | React.ReactElement[],
   nonce?: string | null,
 ) => {
   const scriptsArray = Array.isArray(scripts) ? scripts : [scripts];
   let scriptText = "const scriptcontainer = document.createElement('div');";
-  scriptsArray.forEach((script: ReactElement) => {
+  scriptsArray.forEach((script: React.ReactElement) => {
     const scriptKey = (script.key ?? 'script')
       .toString()
       .replace(/[^a-zA-Z0-9]/g, '');
-    type ScriptWithDataChunk = ScriptHTMLAttributes<HTMLScriptElement> & {
+    type ScriptWithDataChunk = React.ScriptHTMLAttributes<HTMLScriptElement> & {
       'data-chunk'?: string;
     };
 

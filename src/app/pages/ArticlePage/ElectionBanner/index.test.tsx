@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { Tag } from '#app/components/Metadata/types';
 import { MetadataTaggings } from '#app/models/types/metadata';

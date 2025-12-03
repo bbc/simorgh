@@ -1,5 +1,7 @@
+/** @jsx jsx */
+
 import { use } from 'react';
-import { useTheme } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';

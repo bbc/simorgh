@@ -1,4 +1,5 @@
-import { SerializedStyles, Theme } from '@emotion/react';
+/** @jsx jsx */
+import { jsx, SerializedStyles, Theme } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';

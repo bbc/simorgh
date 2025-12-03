@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
 import { RequestContextProvider } from '#contexts/RequestContext';

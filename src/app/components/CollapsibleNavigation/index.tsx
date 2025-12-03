@@ -1,4 +1,7 @@
-import { useState, useRef, Fragment, ElementType } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+import React, { useState, useRef, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -94,7 +97,7 @@ const CollapsibleNavigation = ({
           const subNavigationId = section.id;
 
           return (
-            <Fragment key={section.id}>
+            <React.Fragment key={section.id}>
               <li css={styles.navItem} role="listitem">
                 <a
                   id={navigationLinkId}
@@ -171,7 +174,7 @@ const CollapsibleNavigation = ({
                   </ul>
                 </li>
               )}
-            </Fragment>
+            </React.Fragment>
           );
         })}
       </ul>

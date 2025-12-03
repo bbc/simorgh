@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';

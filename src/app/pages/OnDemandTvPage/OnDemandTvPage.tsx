@@ -1,5 +1,6 @@
-import type { Component } from 'react';
-import { use } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import { formatUnixTimestamp } from '#psammead/psammead-timestamp-container/src/utilities';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
@@ -61,7 +62,7 @@ export interface OnDemandTVProps {
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
-  MediaError: Component;
+  MediaError: React.Component;
 }
 
 const OnDemandTvPage = ({
@@ -188,6 +189,7 @@ const OnDemandTvPage = ({
           )}
         </Grid>
       </GelPageGrid>
+
       {hasRecentEpisodes && (
         // @ts-expect-error: Legacy grid expects `children` to be passed as props. However, due to coding best practices, we must nest children between the opening and closing tags
         <GelPageGrid

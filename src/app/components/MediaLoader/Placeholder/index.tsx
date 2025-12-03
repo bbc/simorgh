@@ -1,4 +1,5 @@
-import type { MouseEventHandler } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import Image from '../../Image';
 import styles from './index.styles';
 import PlayButton from './PlayButton';
@@ -6,7 +7,7 @@ import Guidance from './Guidance';
 import { MediaInfo } from '../types';
 
 interface Props {
-  onClick: MouseEventHandler<HTMLDivElement>;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
   src?: string;
   srcSet?: string;
   mediaInfo?: MediaInfo;

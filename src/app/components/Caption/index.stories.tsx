@@ -1,3 +1,4 @@
+import React from 'react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { StoryProps } from '#app/models/types/storybook';

@@ -192,7 +192,7 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist√
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-16wwgxo"
+  class="media-container bbc-ucozvf"
   data-e2e="media-loader__container"
 >
   <div

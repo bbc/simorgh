@@ -1,3 +1,4 @@
+import React from 'react';
 import { LEGACY } from '../../../docs/User-Experience/colours';
 import ColorList from '.';
 import metadata from './metadata.json';

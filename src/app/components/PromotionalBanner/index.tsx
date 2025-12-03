@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import type { PromotionalBannerProps } from './index.types';
 import styles from './index.styles';
 import { Close } from '../icons';

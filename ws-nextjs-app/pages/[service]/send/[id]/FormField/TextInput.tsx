@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { InputProps } from '../types';
 import Label from './FieldLabel';
 import styles from './styles';

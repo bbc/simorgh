@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import styled from '@emotion/styled';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';

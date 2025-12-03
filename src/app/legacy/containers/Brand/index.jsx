@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';

@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
 import { coreIcons } from '#psammead/psammead-assets/src/svgs';

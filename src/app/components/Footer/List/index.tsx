@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { FooterLink } from '#app/models/types/serviceConfig';
 import { ReactElement } from 'react';
 import Link from '../Link';

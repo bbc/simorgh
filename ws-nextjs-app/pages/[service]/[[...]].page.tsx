@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import logResponseTime from '#server/utilities/logResponseTime';

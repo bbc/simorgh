@@ -1,3 +1,4 @@
+import React from 'react';
 import PageWrapper from '../../../../components/PageLayoutWrapper';
 
 const WithPageWrapper = Component => {

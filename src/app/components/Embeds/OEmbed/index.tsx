@@ -1,4 +1,6 @@
 /* eslint-disable camelcase */
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';

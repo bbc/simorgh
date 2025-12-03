@@ -1,3 +1,4 @@
+import React from 'react';
 import { eea, gbOrUnknown } from '#app/lib/utilities/cookieCountries';
 
 const configuration = {

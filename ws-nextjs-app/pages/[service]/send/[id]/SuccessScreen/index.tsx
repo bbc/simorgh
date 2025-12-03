@@ -1,7 +1,9 @@
-import { use, useEffect, useRef } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
+import { use, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';

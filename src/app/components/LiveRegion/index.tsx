@@ -1,3 +1,4 @@
+import React from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { useLiveRegionContext } from './LiveRegionContext';
 

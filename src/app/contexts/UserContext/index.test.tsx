@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
@@ -47,8 +47,8 @@ describe('UserContext', () => {
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(use).toHaveBeenCalledTimes(1);
-    expect(use).toHaveReturnedWith({
+    expect(React.use).toHaveBeenCalledTimes(1);
+    expect(React.use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import fixture from '#data/pidgin/topics/c95y35941vrt.json';
 import Promo from '.';

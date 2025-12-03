@@ -1,5 +1,7 @@
-import type { Component } from 'react';
-import { use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { use } from 'react';
+import { jsx } from '@emotion/react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -58,7 +60,7 @@ export interface OnDemandAudioProps {
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
-  MediaError: Component;
+  MediaError: React.Component;
 }
 
 const OnDemandAudioPage = ({

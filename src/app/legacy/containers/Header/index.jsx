@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -65,10 +65,9 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
     <SkipLink
       service={service}
       script={script}
-      dir={dir || 'ltr'}
+      dir={dir}
       href="#content"
       lang={serviceLang && lang}
-      className="focusIndicatorRemove"
     >
       <div>{skipLinkText}</div>
     </SkipLink>

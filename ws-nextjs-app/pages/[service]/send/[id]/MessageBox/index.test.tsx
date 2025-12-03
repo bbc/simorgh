@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   act,
   render,
@@ -10,21 +11,6 @@ import { InvalidMessageCodes } from '../types';
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
-
-jest.mock('#hooks/useAdroidDetection', () => {
-  return {
-    __esModule: true,
-    default: jest.fn().mockReturnValue(false),
-  };
-});
-
-jest.mock('../FormContext', () => {
-  const originalModule = jest.requireActual('../FormContext');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 const labelMap = {
   txt49018765: 'Nombre',

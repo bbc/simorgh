@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { render } from '@testing-library/react';
 import useWebVitals from '@bbc/web-vitals';
 

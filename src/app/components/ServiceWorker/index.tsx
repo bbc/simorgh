@@ -1,7 +1,10 @@
-import { use, useEffect } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
+import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 

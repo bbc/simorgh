@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { AvEmbedsPageProps } from './types';
 

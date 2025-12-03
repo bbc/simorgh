@@ -1,4 +1,7 @@
-import { PropsWithChildren } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { PropsWithChildren } from 'react';
+import { jsx } from '@emotion/react';
 import { LiveLabelProps } from './types';
 import styles from './index.styles';
 import Text from '../LiveText';

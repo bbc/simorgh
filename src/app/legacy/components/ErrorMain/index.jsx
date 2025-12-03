@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import Paragraph from '#psammead/psammead-paragraph/src';

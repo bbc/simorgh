@@ -1,4 +1,5 @@
-import type { ComponentType, JSX } from 'react';
+import { LoadableComponent } from '@loadable/component';
+import type { JSX } from 'react';
 import {
   SerbianService,
   ServicesWithNoVariants,
@@ -540,7 +541,7 @@ declare module '@emotion/react' {
   }
 }
 
-export type LoadableTheme = ComponentType<{ children: React.ReactNode }>;
+export type LoadableTheme = LoadableComponent<{ children: React.ReactNode }>;
 
 export type ThemeWithNoVariant = {
   [_service in ServicesWithNoVariants['service']]: LoadableTheme;

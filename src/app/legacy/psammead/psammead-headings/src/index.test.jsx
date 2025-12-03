@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
@@ -40,7 +41,7 @@ describe('Headline component', () => {
 describe('SubHeading component', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <SubHeading script={latin} service="news" tabIndex={-1}>
+      <SubHeading script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
     );
@@ -49,7 +50,7 @@ describe('SubHeading component', () => {
 
   it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <SubHeading script={latin} service="news" tabIndex={-1}>
+      <SubHeading script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
       {
@@ -61,7 +62,7 @@ describe('SubHeading component', () => {
 
   it('should render correctly with arabic script typography values', () => {
     const { container } = render(
-      <SubHeading script={arabic} service="news" tabIndex={-1}>
+      <SubHeading script={arabic} service="news">
         هذا عنوان فرعي
       </SubHeading>,
     );
@@ -70,12 +71,7 @@ describe('SubHeading component', () => {
 
   it('should render correctly with an ID', () => {
     const { container } = render(
-      <SubHeading
-        id="This-is-a-SubHeading"
-        script={latin}
-        service="news"
-        tabIndex={-1}
-      >
+      <SubHeading id="This-is-a-SubHeading" script={latin} service="news">
         This is a SubHeading
       </SubHeading>,
     );

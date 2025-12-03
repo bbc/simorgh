@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { MediaIndicatorWrapper, MediaIndicatorAlignment } from './index.styles';
 import PromoContext from '../PromoContext';

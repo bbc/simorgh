@@ -1,3 +1,4 @@
+import React from 'react';
 import userEvent from '@testing-library/user-event';
 import { act, render, screen } from '../react-testing-library-with-providers';
 import LiveRegion from '.';

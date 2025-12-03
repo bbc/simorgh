@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   act,
   render,
@@ -10,14 +11,6 @@ import { ContextProps } from '../FormContext';
 jest.mock('next/router', () => ({
   useRouter: () => ({ query: { id: 'u1234' } }),
 }));
-
-jest.mock('../FormContext', () => {
-  const originalModule = jest.requireActual('../FormContext');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 const ComponentWithContext = ({
   props,

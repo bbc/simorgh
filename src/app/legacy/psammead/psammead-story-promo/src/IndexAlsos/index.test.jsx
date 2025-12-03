@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '../../../../../components/react-testing-library-with-providers';
 import relatedItems from '../../testHelpers/relatedItems';
 import IndexAlsosContainer from '../../testHelpers/IndexAlsosContainer';

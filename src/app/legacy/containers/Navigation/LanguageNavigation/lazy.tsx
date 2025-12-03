@@ -1,4 +1,4 @@
-import loadable from 'next/dynamic';
+import loadable from '@loadable/component';
 
 export default loadable(
   () =>

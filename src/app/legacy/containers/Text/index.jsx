@@ -1,3 +1,4 @@
+import React from 'react';
 import paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';

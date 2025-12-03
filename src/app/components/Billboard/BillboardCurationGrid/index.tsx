@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import moment from 'moment';
 import styles from './index.styles';
 import CurationPromo from '../../Curation/CurationPromo';

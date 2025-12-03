@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import useCombinedClickTrackerHandler from '#containers/StoryPromo/useCombinedClickTrackerHandler';
 import makeRelativeUrlPath from '../../../../lib/utilities/makeRelativeUrlPath';
 import StyledLink from './index.styles';

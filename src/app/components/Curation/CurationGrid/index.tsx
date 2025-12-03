@@ -1,8 +1,10 @@
-import { use } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
+import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isMedia from '#app/lib/utilities/isMedia';
 import styles from './index.styles';

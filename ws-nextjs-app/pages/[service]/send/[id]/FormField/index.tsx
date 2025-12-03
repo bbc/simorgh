@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { ReactElement } from 'react';
 import { HtmlType, InputProps } from '../types';
 import styles from './styles';

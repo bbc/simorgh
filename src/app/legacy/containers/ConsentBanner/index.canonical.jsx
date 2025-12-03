@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 
 import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';

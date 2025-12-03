@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScrollablePromo from '.';

@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BBC_BLOCKS,
   BBC_BLOCKS_DARK_MODE,

@@ -1,10 +1,12 @@
+/** @jsx jsx */
+
 import {
   ElementType,
   ComponentPropsWithoutRef,
   forwardRef,
   ForwardedRef,
 } from 'react';
-import { Theme } from '@emotion/react';
+import { jsx, Theme } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
 

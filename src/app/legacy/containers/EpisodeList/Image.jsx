@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';

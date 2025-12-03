@@ -1,3 +1,4 @@
+import React from 'react';
 import build from '.';
 
 const height = 22.465;

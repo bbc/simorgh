@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FontVariant, GelFontSize } from '#app/models/types/theming';
 import Text from '.';
 import readme from './README.md';

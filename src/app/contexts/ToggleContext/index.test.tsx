@@ -1,4 +1,4 @@
-import { PropsWithChildren, use } from 'react';
+import React, { PropsWithChildren, use } from 'react';
 import { render, act } from '@testing-library/react';
 import { queryByText } from '@testing-library/dom';
 import { Toggles } from '../../models/types/global';

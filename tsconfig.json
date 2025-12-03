@@ -14,8 +14,7 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
+    "jsx": "react",
     "sourceMap": true,
     "declaration": true,
     "noUnusedLocals": true,
@@ -39,7 +38,8 @@
       "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
       "#server/*": ["src/server/*"],
-      "#storybook/*": [".storybook/*"]
+      "#storybook/*": [".storybook/*"],
+      "react": ["./node_modules/@types/react"]
     }
   },
   "include": ["src/**/*", "src/app/legacy/**/*.ts*"],

@@ -1,3 +1,4 @@
+import React from 'react';
 import ShareButton from '.';
 import metadata from './metadata.json';
 

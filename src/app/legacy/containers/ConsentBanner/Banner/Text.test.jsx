@@ -1,3 +1,4 @@
+import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../../../../components/react-testing-library-with-providers';

@@ -1,4 +1,5 @@
-import { useTheme } from '@emotion/react';
+/** @jsx jsx */
+import { jsx, useTheme } from '@emotion/react';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';

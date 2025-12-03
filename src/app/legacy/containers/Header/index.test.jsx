@@ -1,3 +1,4 @@
+import React from 'react';
 import * as PAGE_TYPES from '#app/routes/utils/pageTypes';
 import userEvent from '@testing-library/user-event';
 import Cookies from 'js-cookie';

@@ -1,3 +1,4 @@
+import React from 'react';
 import * as reactDom from 'react-dom/client';
 import '#testHelpers/loggerMock';
 

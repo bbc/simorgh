@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {

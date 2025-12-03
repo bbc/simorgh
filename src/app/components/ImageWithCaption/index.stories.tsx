@@ -1,3 +1,4 @@
+import React from 'react';
 import ImageContainer from '.';
 import { custom, imageData, landscape, portrait, square } from './fixtureData';
 

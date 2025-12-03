@@ -1,4 +1,6 @@
-import { use, Fragment } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
+import React, { use } from 'react';
 import { Curation as CurationType } from '#app/models/types/curationData';
 import Curation from '#app/components/Curation';
 import Heading from '#app/components/Heading';
@@ -21,7 +23,7 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
     ...curationProps
   } = curation;
   return (
-    <Fragment key={`${curationId}-${position}`}>
+    <React.Fragment key={`${curationId}-${position}`}>
       <Curation
         summaries={summaries || []}
         title={curationTitle}
@@ -31,7 +33,7 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
         curationId={curationId}
         {...curationProps}
       />
-    </Fragment>
+    </React.Fragment>
   );
 };
 

@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,

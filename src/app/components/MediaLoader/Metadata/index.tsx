@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';

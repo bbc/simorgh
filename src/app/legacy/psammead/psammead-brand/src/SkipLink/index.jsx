@@ -44,4 +44,6 @@ const SkipLink = styled.a`
   }
 `;
 
+SkipLink.defaultProps = { dir: 'ltr', className: 'focusIndicatorRemove' };
+
 export default SkipLink;

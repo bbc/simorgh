@@ -1,3 +1,4 @@
+import React from 'react';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {

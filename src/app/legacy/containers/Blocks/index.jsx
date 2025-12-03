@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 import path from 'ramda/src/path';
 

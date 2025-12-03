@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';

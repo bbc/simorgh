@@ -1,4 +1,5 @@
-import type { ElementType } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { PropsWithChildren, use } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
@@ -170,7 +171,7 @@ const validate = (props: FormattedPromo) => {
 
 const withData =
   (
-    Component: ElementType,
+    Component: React.ElementType,
     propsToPassThrough: (keyof PromoProps | 'children')[] = [],
   ) =>
   (props: PropsWithChildren<PromoProps>) => {

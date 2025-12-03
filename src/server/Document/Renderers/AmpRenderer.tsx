@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,

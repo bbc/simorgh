@@ -1,3 +1,4 @@
+import React from 'react';
 import SuccessScreen from '.';
 
 const Component = () => (

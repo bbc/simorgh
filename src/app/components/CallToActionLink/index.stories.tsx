@@ -1,3 +1,4 @@
+import React from 'react';
 import CallToActionLink from '.';
 import readme from './README.md';
 

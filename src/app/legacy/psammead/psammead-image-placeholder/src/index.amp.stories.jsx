@@ -1,3 +1,4 @@
+import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import notes from '../README.md';
 import ImagePlaceholderAmp from './index.amp';

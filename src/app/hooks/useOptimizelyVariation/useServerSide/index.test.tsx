@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { renderHook } from '@testing-library/react-hooks/server';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';

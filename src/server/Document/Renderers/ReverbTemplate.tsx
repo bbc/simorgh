@@ -1,3 +1,4 @@
+import React from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 
 const ReverbTemplate = ({ nonce }: { nonce?: string | null }) => {

@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from '.';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import metadata from './metadata.json';

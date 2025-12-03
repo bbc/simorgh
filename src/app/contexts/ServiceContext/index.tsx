@@ -1,5 +1,5 @@
-import { createContext, PropsWithChildren } from 'react';
-import servicesLoadableConfig from '../../lib/config/services/loadableConfig';
+import React, { createContext, PropsWithChildren } from 'react';
+import services from '../../lib/config/services/loadableConfig';
 import { getVariant } from '../../lib/utilities/variantHandler';
 import getLangOverride from '../../lib/utilities/langHandler';
 import { Services, Variants } from '../../models/types/global';
@@ -19,7 +19,7 @@ export const ServiceContextProvider = ({
   variant,
   pageLang,
 }: PropsWithChildren<Props>) => {
-  const LoadableContextProvider = servicesLoadableConfig[service];
+  const LoadableContextProvider = services[service];
 
   if (!LoadableContextProvider) {
     return null;

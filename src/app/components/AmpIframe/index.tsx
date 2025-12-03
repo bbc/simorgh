@@ -1,4 +1,7 @@
-import { PropsWithChildren } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+import React, { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { GridItemMedium } from '#components/Grid';
 import styles from './index.styles';

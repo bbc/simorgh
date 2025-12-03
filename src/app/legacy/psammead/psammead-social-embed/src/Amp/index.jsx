@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { Helmet } from 'react-helmet';
 
 const Instagram = ({ id }) => (

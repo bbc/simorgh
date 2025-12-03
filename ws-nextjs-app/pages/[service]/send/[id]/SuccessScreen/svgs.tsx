@@ -1,3 +1,5 @@
+import React from 'react';
+
 const TickSvg = ({ className }: { className?: string }) => (
   <svg
     className={className}

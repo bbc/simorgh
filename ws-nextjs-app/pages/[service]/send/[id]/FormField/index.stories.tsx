@@ -1,3 +1,4 @@
+import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import mundoFormFixture from '#data/mundo/send/test2qq3x8vt.json';
 import somaliFormFixture from '#data/somali/send/u130092370.json';

@@ -21,7 +21,7 @@ The `#legacy/psammead-story-promo-list/src` package is a set of three components
 Commonly used alongside [`psammead-story-promo`](https://github.com/BBC-News/psammead/tree/latest/packages/components/psammead-story-promo).
 
 ```jsx
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import StoryPromo, { Headline, Summary } from '#psammead/psammead-story-promo/src';
 import { StoryPromoLi, StoryPromoUl } from '#psammead/psammead-story-promo-list/src';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';

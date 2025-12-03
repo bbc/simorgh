@@ -1,3 +1,5 @@
+import React from 'react';
+
 import KeyPoints from '.';
 import { KeyPointsContent } from './types';
 import { singleKeyPoint, multipleKeyPoints } from './fixture';

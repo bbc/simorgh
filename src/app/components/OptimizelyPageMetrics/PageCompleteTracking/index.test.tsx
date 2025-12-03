@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 import { render, act } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { afrique, pashto } from './fixtures';

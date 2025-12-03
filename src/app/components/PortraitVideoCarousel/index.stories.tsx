@@ -1,3 +1,4 @@
+import React from 'react';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import PortraitVideoCarousel from '.';
 import readme from './README.md';

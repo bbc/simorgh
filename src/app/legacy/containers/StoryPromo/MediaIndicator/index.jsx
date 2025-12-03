@@ -1,3 +1,4 @@
+import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';

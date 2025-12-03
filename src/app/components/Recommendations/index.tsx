@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import { use } from 'react';
-import { useTheme } from '@emotion/react';
+import { jsx, useTheme } from '@emotion/react';
 
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';

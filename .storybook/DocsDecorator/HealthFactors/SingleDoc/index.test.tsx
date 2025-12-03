@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen, act } from '@testing-library/react';
 import SingleDoc from '.';
 import ThemeProvider from '../../../../src/app/components/ThemeProvider';

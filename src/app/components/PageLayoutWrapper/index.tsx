@@ -1,4 +1,8 @@
-import { PropsWithChildren, use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+
+import React, { PropsWithChildren, use } from 'react';
+import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { PageTypes } from '#app/models/types/global';

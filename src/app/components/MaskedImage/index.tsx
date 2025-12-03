@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import { use } from 'react';
+import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Image from '#app/components/Image';
 import buildIChefURL from '#app/lib/utilities/ichefURL';

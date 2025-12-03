@@ -1,3 +1,4 @@
+import React from 'react';
 import StoryPromo, {
   Headline,
   Summary,
@@ -10,10 +11,10 @@ const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
 const Info = (
   <>
-    <Headline script={latin} service="news" promoType="regular" promoHasImage>
+    <Headline script={latin} service="news">
       The headline of the promo
     </Headline>
-    <Summary script={latin} service="news" promoType="regular" promoHasImage>
+    <Summary script={latin} service="news">
       The summary of the promo
     </Summary>
     <time>12 March 2019</time>
@@ -23,8 +24,8 @@ const Info = (
 describe('StoryPromo list', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl role="list">
-        <StoryPromoLi border>
+      <StoryPromoUl>
+        <StoryPromoLi>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
       </StoryPromoUl>,
@@ -34,7 +35,7 @@ describe('StoryPromo list', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl role="list">
+      <StoryPromoUl>
         <StoryPromoLi border={false}>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
@@ -47,8 +48,8 @@ describe('StoryPromo list', () => {
 describe('StoryPromo list base', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl role="list">
-        <StoryPromoLiBase border role="listitem">
+      <StoryPromoUl>
+        <StoryPromoLiBase>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,
@@ -58,8 +59,8 @@ describe('StoryPromo list base', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl role="list">
-        <StoryPromoLiBase border={false} role="listitem">
+      <StoryPromoUl>
+        <StoryPromoLiBase border={false}>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,

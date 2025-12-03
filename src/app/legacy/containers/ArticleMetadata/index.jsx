@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Metadata from '../../../components/Metadata';

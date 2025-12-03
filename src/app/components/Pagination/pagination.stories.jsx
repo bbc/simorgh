@@ -1,3 +1,4 @@
+import React from 'react';
 import Pager from '.';
 
 const Component = ({ activePage, pageCount }) => {

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import { OEmbedProps } from '../types';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';

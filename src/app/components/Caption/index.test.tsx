@@ -1,3 +1,4 @@
+import React from 'react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';

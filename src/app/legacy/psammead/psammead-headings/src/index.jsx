@@ -48,3 +48,7 @@ export const SubHeading = styled.h2`
     outline-offset: ${focusIndicatorThickness};
   }
 `;
+
+SubHeading.defaultProps = {
+  tabIndex: '-1',
+};

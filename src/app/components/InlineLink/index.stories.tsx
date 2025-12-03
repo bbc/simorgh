@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import React from 'react';
 
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import InlineLink from '.';
@@ -6,7 +6,7 @@ import Text from '../Text';
 import readme from './README.md';
 
 interface Props extends StoryProps {
-  children: ReactNode;
+  children: React.ReactNode;
   text: string;
 }
 

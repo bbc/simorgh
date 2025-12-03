@@ -1,9 +1,8 @@
-import { ComponentType } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import loadable from 'next/dynamic';
+import loadable, { LoadableComponent } from '@loadable/component';
 import { Services } from '#app/models/types/global';
 
-type LoadableService = ComponentType<{
+type LoadableService = LoadableComponent<{
   Context: typeof ServiceContext;
   dataKey?: null;
   children: unknown;

@@ -1,4 +1,7 @@
-import { use } from 'react';
+/** @jsx jsx */
+
+import React, { use } from 'react';
+import { jsx } from '@emotion/react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';

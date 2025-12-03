@@ -1,16 +1,17 @@
-import type { ElementType, ReactNode } from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
 import styles from './index.styles';
 
-interface VisuallyHiddenTextProps<T extends ElementType> {
+interface VisuallyHiddenTextProps<T extends React.ElementType> {
   id?: string;
   tabIndex?: number;
   as?: T;
   lang?: string;
-  children?: ReactNode;
+  children?: React.ReactNode;
 }
 
-const VisuallyHiddenText = <T extends ElementType>({
+const VisuallyHiddenText = <T extends React.ElementType>({
   children,
   id,
   tabIndex,
@@ -18,7 +19,7 @@ const VisuallyHiddenText = <T extends ElementType>({
   ...htmlAttributes
 }: VisuallyHiddenTextProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof VisuallyHiddenTextProps<T>>) => {
-  const Component: ElementType = as || 'span';
+  const Component: React.ElementType = as || 'span';
   return (
     <Component
       css={styles.visuallyHiddenText}

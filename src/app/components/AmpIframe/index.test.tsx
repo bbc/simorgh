@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, waitFor } from '../react-testing-library-with-providers';
 import AmpIframe from './index';
 

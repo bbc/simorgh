@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import { PropsWithChildren, use } from 'react';
+import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';

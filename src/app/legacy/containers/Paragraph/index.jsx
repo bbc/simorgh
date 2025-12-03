@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import Paragraph from '#psammead/psammead-paragraph/src';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';

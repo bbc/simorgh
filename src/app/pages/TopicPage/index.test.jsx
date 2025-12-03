@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { data as mundoBannerVariations } from '#data/mundo/topics/cw90edn9kw4t.json';

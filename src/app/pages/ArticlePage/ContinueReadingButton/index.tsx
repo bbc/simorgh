@@ -1,4 +1,6 @@
+/** @jsx jsx */
 import { use, useEffect, MouseEvent, SetStateAction, Dispatch } from 'react';
+import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';

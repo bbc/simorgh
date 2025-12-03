@@ -1,4 +1,6 @@
-import { useEffect, useRef, use } from 'react';
+/** @jsx jsx */
+import React, { useEffect, useRef, use } from 'react';
+import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';

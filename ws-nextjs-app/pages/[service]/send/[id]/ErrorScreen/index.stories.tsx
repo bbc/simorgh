@@ -1,3 +1,4 @@
+import React from 'react';
 import ErrorScreen from '.';
 
 const Component = () => <ErrorScreen title="Submit your suggestions" />;

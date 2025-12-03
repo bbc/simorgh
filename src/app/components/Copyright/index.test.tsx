@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import CopyrightContainer from './index';

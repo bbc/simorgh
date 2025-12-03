@@ -1,4 +1,6 @@
-import { use } from 'react';
+/** @jsx jsx */
+import React, { use } from 'react';
+import { jsx } from '@emotion/react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';

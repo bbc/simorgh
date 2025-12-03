@@ -1,5 +1,6 @@
-import { forwardRef, PropsWithChildren } from 'react';
-import { SerializedStyles, Theme } from '@emotion/react';
+/** @jsx jsx */
+import React, { PropsWithChildren } from 'react';
+import { jsx, SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import {
@@ -78,7 +79,7 @@ export const MostReadLink = ({
   );
 };
 
-export const MostReadItemWrapper = forwardRef(
+export const MostReadItemWrapper = React.forwardRef(
   (
     { dir, children, columnLayout }: PropsWithChildren<MostReadItemProps>,
     ref,

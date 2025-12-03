@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';

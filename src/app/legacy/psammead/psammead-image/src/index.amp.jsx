@@ -1,3 +1,4 @@
+import React from 'react';
 import omit from 'ramda/src/omit';
 
 // Prevents component outputting invalid HTML when styled with emotion

@@ -1,3 +1,4 @@
+import React from 'react';
 import IMAGE from '../../../../components/Image';
 
 const Image = ({

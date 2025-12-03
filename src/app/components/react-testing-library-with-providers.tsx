@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, ReactElement } from 'react';
+import React, { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
 import { ServiceContextProvider } from '../contexts/ServiceContext';

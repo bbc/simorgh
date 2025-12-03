@@ -1,4 +1,7 @@
-import { use, useEffect, useRef, useState } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { jsx } from '@emotion/react';
+import React, { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -124,70 +127,65 @@ const MediaContainer = ({
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], (Bump: BumpType) => {
+      window.requirejs(['bump-4'], async (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
-          const initPlayer = async () => {
-            const mediaPlayer = Bump.player(
-              playerElementRef.current,
-              playerConfig,
-            );
+          const mediaPlayer = Bump.player(
+            playerElementRef.current,
+            playerConfig,
+          );
 
-            if (uniqueId != null) {
-              const { mediaPlayers } = window;
-              if (mediaPlayers == null) {
-                window.mediaPlayers = { [uniqueId]: mediaPlayer };
-              } else {
-                mediaPlayers[uniqueId] = mediaPlayer;
-              }
+          if (uniqueId != null) {
+            const { mediaPlayers } = window;
+            if (mediaPlayers == null) {
+              window.mediaPlayers = { [uniqueId]: mediaPlayer };
+            } else {
+              mediaPlayers[uniqueId] = mediaPlayer;
             }
+          }
 
-            // Bind any events passed in to the player
-            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-              Object.keys(eventMapping).forEach(bindingKey => {
-                const key = bindingKey as MediaPlayerEvents;
-                const handler = eventMapping[key];
+          // Bind any events passed in to the player
+          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+            Object.keys(eventMapping).forEach(bindingKey => {
+              const key = bindingKey as MediaPlayerEvents;
+              const handler = eventMapping[key];
 
-                if (handler) mediaPlayer.bind(key, handler);
-              });
-            }
+              if (handler) mediaPlayer.bind(key, handler);
+            });
+          }
 
-            if (showAds) {
-              const adTag = await window.dotcom.ads.getAdTag();
+          if (showAds) {
+            const adTag = await window.dotcom.ads.getAdTag();
 
-              if (adTag) {
-                mediaPlayer.loadPlugin(
-                  {
-                    swf: 'name:dfpAds.swf',
-                    html: 'name:dfpAds.js',
+            if (adTag) {
+              mediaPlayer.loadPlugin(
+                {
+                  swf: 'name:dfpAds.swf',
+                  html: 'name:dfpAds.js',
+                },
+                {
+                  name: 'AdsPluginParameters',
+                  data: {
+                    adTag,
                   },
+                },
+              );
+            }
+
+            mediaPlayer.bind('playlistLoaded', async () => {
+              const updatedAdTag = await window.dotcom.ads.getAdTag();
+
+              if (updatedAdTag) {
+                mediaPlayer.dispatchEvent(
+                  'bbc.smp.plugins.ads.event.updateAdTag',
                   {
-                    name: 'AdsPluginParameters',
-                    data: {
-                      adTag,
-                    },
+                    adTag: updatedAdTag,
                   },
                 );
               }
+            });
+          }
 
-              mediaPlayer.bind('playlistLoaded', async () => {
-                const updatedAdTag = await window.dotcom.ads.getAdTag();
-
-                if (updatedAdTag) {
-                  mediaPlayer.dispatchEvent(
-                    'bbc.smp.plugins.ads.event.updateAdTag',
-                    {
-                      adTag: updatedAdTag,
-                    },
-                  );
-                }
-              });
-            }
-
-            mediaPlayer.load();
-          };
-
-          initPlayer();
+          mediaPlayer.load();
         }
       });
     } catch (error) {

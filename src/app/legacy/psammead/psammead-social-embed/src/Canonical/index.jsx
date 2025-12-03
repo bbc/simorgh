@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { memo, use, useEffect } from 'react';
+import React, { memo, use, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';

@@ -1,4 +1,7 @@
-import { use, useId } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import React, { use, useId } from 'react';
+import { jsx } from '@emotion/react';
 import getOriginCode from '#app/lib/utilities/imageSrcHelpers/originCode';
 import { Summary } from '#app/models/types/curationData';
 import { RequestContext } from '#app/contexts/RequestContext';

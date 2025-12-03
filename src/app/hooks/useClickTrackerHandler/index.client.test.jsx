@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';

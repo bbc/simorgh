@@ -1,4 +1,5 @@
 import mundoLiveFixture from '#data/mundo/live/c7dkx155e626t.json';
+import React from 'react';
 import LiveHeaderMedia from '.';
 import { MediaCollection, Player } from '../MediaLoader/types';
 import {

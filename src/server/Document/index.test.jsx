@@ -1,3 +1,4 @@
+import React from 'react';
 import * as server from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import renderDocument from '.';

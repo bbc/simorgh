@@ -1,4 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
+import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import AmpATIAnalytics from '.';
 import { ReverbBeaconConfig } from '../types';

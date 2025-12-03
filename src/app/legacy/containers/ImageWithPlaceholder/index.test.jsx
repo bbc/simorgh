@@ -1,3 +1,4 @@
+import React from 'react';
 import { GHOST } from '../../../components/ThemeProvider/palette';
 import {
   render,
