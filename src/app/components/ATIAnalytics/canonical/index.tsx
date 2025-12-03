@@ -1,4 +1,4 @@
-import React, { useEffect, useState, use } from 'react';
+import { useEffect, useState, use } from 'react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';

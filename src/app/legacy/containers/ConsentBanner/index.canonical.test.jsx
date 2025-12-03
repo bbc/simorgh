@@ -1,6 +1,4 @@
 /* eslint-disable global-require */
-import React from 'react';
-
 import Cookies from 'js-cookie';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
