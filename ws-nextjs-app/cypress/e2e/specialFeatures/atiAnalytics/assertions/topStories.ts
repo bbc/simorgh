@@ -21,8 +21,15 @@ export const assertTopStoriesComponentView = ({
     cy.visit(path);
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-testid="top-stories"]').scrollIntoView({ duration: 1000 });
-    cy.get('[data-testid="top-stories"]').scrollIntoView({ duration: 1000 });
+    cy.get('[data-testid="top-stories"]')
+      .filter(':visible')
+      .first()
+      .scrollIntoView({ duration: 1000 });
+
+    cy.get('[data-testid="top-stories"]')
+      .filter(':visible')
+      .first()
+      .scrollIntoView({ duration: 1000 });
 
     assertATIComponentViewEvent({
       component: TOP_STORIES,
@@ -47,9 +54,10 @@ export const assertTopStoriesComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-testid="top-stories"]').scrollIntoView({
-      duration: 1000,
-    });
+    cy.get('[data-testid="top-stories"]')
+      .filter(':visible')
+      .first()
+      .scrollIntoView({ duration: 1000 });
 
     // Click on first item
     cy.get('[data-testid="top-stories"]').find('a').first().click();
