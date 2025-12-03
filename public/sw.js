@@ -16,7 +16,37 @@ self.addEventListener('install', event => {
       const cache = await caches.open(cacheName);
       if (hasOfflinePageFunctionality) {
         try {
-          await cache.add(OFFLINE_PAGE);
+          // Fetch and cache the offline page HTML
+          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
+            .href;
+          const response = await fetch(offlinePageUrl);
+          if (response && response.ok) {
+            await cache.put(offlinePageUrl, response.clone());
+
+            // Extract and cache JS/CSS resources so page works offline
+            const html = await response.text();
+            const scriptSrcs = [
+              ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
+            ].map(m => m[1]);
+            const linkHrefs = [
+              ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
+            ].map(m => m[1]);
+
+            const resources = [...scriptSrcs, ...linkHrefs]
+              .filter(
+                url =>
+                  url.startsWith('/') || url.startsWith(self.location.origin),
+              )
+              .map(url => new URL(url, self.location.origin).href);
+
+            // Cache resources in parallel (ignore individual failures)
+            await Promise.allSettled(
+              resources.map(async url => {
+                const res = await fetch(url);
+                if (res && res.ok) await cache.put(url, res);
+              }),
+            );
+          }
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error('Failed to cache offline page:', error.message);
