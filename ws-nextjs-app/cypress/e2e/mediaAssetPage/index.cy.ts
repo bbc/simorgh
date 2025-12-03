@@ -8,7 +8,7 @@ import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-// import liteTests from '../articlePage/testsForLiteOnly';
+import liteTests from '../articlePage/testsForLiteOnly';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
@@ -365,19 +365,19 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
 });
 
 // SKIPPED: We are not able to set page-type headers in cy.click and cy.back
-// const liteTestSuites = Cypress.env('SMOKE')
-//   ? canonicalTestSuites
-//       .filter(
-//         ({ service }) => !['news', 'sport', 'newsround'].includes(service),
-//       )
-//       .map(testSuite => {
-//         return {
-//           ...testSuite,
-//           path: `${testSuite.path}.lite`,
-//           tests: [liteTests],
-//         };
-//       })
-//   : [];
+const liteTestSuites = Cypress.env('SMOKE')
+  ? canonicalTestSuites
+      .filter(
+        ({ service }) => !['news', 'sport', 'newsround'].includes(service),
+      )
+      .map(testSuite => {
+        return {
+          ...testSuite,
+          path: `${testSuite.path}.lite`,
+          tests: [liteTests],
+        };
+      })
+  : [];
 
 runTestsForPage({
   pageType: MEDIA_ASSET_PAGE,
@@ -388,7 +388,7 @@ runTestsForPage({
     ...canonicalTestSuites,
     ...tc2CanonicalTestSuites,
     ...ampTestSuites,
-    // ...liteTestSuites,
+    ...liteTestSuites,
   ],
 });
 

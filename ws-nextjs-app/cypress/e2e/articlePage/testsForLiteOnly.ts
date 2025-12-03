@@ -1,3 +1,4 @@
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { ServiceParametersType } from '../../types';
 
@@ -23,7 +24,10 @@ export default ({ service, pageType, variant }: ServiceParametersType) => {
         });
         cy.go('back');
       });
-      if (hasInformationPageLinkTranslation({ service, variant })) {
+      if (
+        pageType !== MEDIA_ASSET_PAGE &&
+        hasInformationPageLinkTranslation({ service, variant })
+      ) {
         it('Clicking the link to the Information page should navigate to lite site', () => {
           cy.get('[data-e2e="information-page"]').within(() => {
             cy.get('a')
