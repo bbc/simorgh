@@ -12,51 +12,27 @@ describe('bylineExtractor', () => {
     expect(bylineValues).toHaveLength(0);
   });
 
-  it('should return an array with a maximum of 4 objects containing all byline data', () => {
+  it('should return an array with all contributors containing all byline data', () => {
     const bylineValues = bylineExtractor(bylineWithMultipleContributors);
 
-    expect(bylineValues).toHaveLength(4);
+    const sampleContributor = {
+      authorImage:
+        'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
+      authorName: 'Mayeni Jones',
+      authorTopicUrl: '/news/topics/c8qx38nq177t',
+      jobRole: 'Journalist',
+      location: 'Lagos, Nigeria',
+      twitterLink: 'https://twitter.com/MayeniJones',
+      twitterText: 'MayeniJones',
+    };
+
+    expect(bylineValues).toHaveLength(5);
     expect(bylineValues).toEqual([
-      {
-        authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
-        authorName: 'Mayeni Jones',
-        authorTopicUrl: '/news/topics/c8qx38nq177t',
-        jobRole: 'Journalist',
-        location: 'Lagos, Nigeria',
-        twitterLink: 'https://twitter.com/MayeniJones',
-        twitterText: 'MayeniJones',
-      },
-      {
-        authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
-        authorName: 'Mayeni Jones',
-        authorTopicUrl: '/news/topics/c8qx38nq177t',
-        jobRole: 'Journalist',
-        location: 'Lagos, Nigeria',
-        twitterLink: 'https://twitter.com/MayeniJones',
-        twitterText: 'MayeniJones',
-      },
-      {
-        authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
-        authorName: 'Mayeni Jones',
-        authorTopicUrl: '/news/topics/c8qx38nq177t',
-        jobRole: 'Journalist',
-        location: 'Lagos, Nigeria',
-        twitterLink: 'https://twitter.com/MayeniJones',
-        twitterText: 'MayeniJones',
-      },
-      {
-        authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsprodpb/f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png.webp',
-        authorName: 'Mayeni Jones',
-        authorTopicUrl: '/news/topics/c8qx38nq177t',
-        jobRole: 'Journalist',
-        location: 'Lagos, Nigeria',
-        twitterLink: 'https://twitter.com/MayeniJones',
-        twitterText: 'MayeniJones',
-      },
+      sampleContributor,
+      sampleContributor,
+      sampleContributor,
+      sampleContributor,
+      sampleContributor,
     ]);
   });
 
