@@ -123,11 +123,23 @@ const MediaContainer = ({
   eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
+
   const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
       window.requirejs(['bump-4'], async (Bump: BumpType) => {
+        const {
+          statsObject: { episodePID },
+        } = playerConfig;
+        let timestamp;
+        if (episodePID) {
+          timestamp = window?.localStorage?.getItem(episodePID);
+        }
+        if (timestamp) {
+          playerConfig.startTime = parseInt(timestamp, 10);
+        }
+
         if (playerElementRef?.current && playerConfig) {
           const mediaPlayer = Bump.player(
             playerElementRef.current,
@@ -184,8 +196,15 @@ const MediaContainer = ({
               }
             });
           }
-
           mediaPlayer.load();
+          window.addEventListener('beforeunload', () => {
+            if (mediaPlayer.currentTime() > 30 && episodePID) {
+              localStorage.setItem(
+                episodePID,
+                mediaPlayer.currentTime().toString(),
+              );
+            }
+          });
         }
       });
     } catch (error) {
