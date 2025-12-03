@@ -29,7 +29,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
     } = {},
   } = translations ?? {};
 
-  const areMultipleContributors = !isSingleContributor;
+  const hasMultipleContributors = !isSingleContributor;
 
   const lastContributorIndex = contributorValues.length - 1;
 
@@ -45,7 +45,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
           <ul
             css={[
               BylineCss.list,
-              areMultipleContributors && BylineCss.displayInline,
+              hasMultipleContributors && BylineCss.displayInline,
             ]}
             role="list"
             key={authorName}
@@ -67,7 +67,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            <li css={areMultipleContributors && BylineCss.displayInline}>
+            <li css={hasMultipleContributors && BylineCss.displayInline}>
               {authorTopicUrl ? (
                 <>
                   <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
@@ -122,7 +122,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   </Text>
                 </span>
               )}
-              {areMultipleContributors && <Comma />}
+              {hasMultipleContributors && <Comma />}
             </li>
             <li css={BylineCss.displayInline}>
               <span role="text">
@@ -137,7 +137,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 </Text>
               </span>
               {(location && <Comma />) ||
-                (areMultipleContributors && index !== lastContributorIndex && (
+                (hasMultipleContributors && index !== lastContributorIndex && (
                   <Comma />
                 ))}
             </li>
@@ -156,7 +156,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                     {location}
                   </Text>
                 </span>
-                {areMultipleContributors && index !== lastContributorIndex && (
+                {hasMultipleContributors && index !== lastContributorIndex && (
                   <Comma />
                 )}
               </li>
