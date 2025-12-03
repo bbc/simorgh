@@ -101,6 +101,9 @@ export default {
       flexGrow: 1,
       padding: `${0.6}rem ${spacings.FULL}rem`,
       background: palette.GHOST,
+      'details:open &': {
+        display: 'none',
+      },
     }),
   hintPrice: ({ palette }: Theme) =>
     css({
@@ -117,6 +120,7 @@ export default {
       right: 0,
       left: `${5.5}rem`,
       padding: `${0.6}rem ${spacings.FULL}rem`,
+      background: palette.CHALK,
     }),
   detailsArea: ({ spacings, mq, palette }: Theme) =>
     css({

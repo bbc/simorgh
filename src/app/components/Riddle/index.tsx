@@ -6,6 +6,7 @@ import Text from '../Text';
 export type HintData = {
   title: string;
   hintText: string;
+  price: number;
 };
 
 export type GameData = {
@@ -19,6 +20,24 @@ export type GameData = {
 export type CachedGameData = {
   goes: number;
   credits: number;
+};
+
+const Hint = ({ title, hintText, price = 250 }: HintData) => {
+  return (
+    <details css={style.hintContainer}>
+      <summary css={style.hintSummary}>
+        <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
+          C{price}
+        </Text>
+        <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
+          {title.length > 0 ? title : 'Hint'}
+        </Text>
+      </summary>
+      <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
+        {hintText}
+      </Text>
+    </details>
+  );
 };
 
 export default () => {
@@ -46,57 +65,9 @@ export default () => {
           {question}
         </Text>
         <div css={style.hintsArea}>
-          <details css={style.hintContainer}>
-            <summary css={style.hintSummary}>
-              <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
-                C 100
-              </Text>
-              <Text
-                css={style.hintSummaryText}
-                size="pica"
-                fontVariant="sansBold"
-              >
-                {hint1.title.length > 0 ? hint1.title : 'Hint 1'}
-              </Text>
-            </summary>
-            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
-              {hint1.hintText}
-            </Text>
-          </details>
-          <details css={style.hintContainer}>
-            <summary css={style.hintSummary}>
-              <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
-                C 350
-              </Text>
-              <Text
-                css={style.hintSummaryText}
-                size="pica"
-                fontVariant="sansBold"
-              >
-                {hint2.title.length > 0 ? hint2.title.length : 'Hint 2'}
-              </Text>
-            </summary>
-            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
-              {hint2.hintText}
-            </Text>
-          </details>
-          <details css={style.hintContainer}>
-            <summary css={style.hintSummary}>
-              <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
-                C 2500
-              </Text>
-              <Text
-                css={style.hintSummaryText}
-                size="pica"
-                fontVariant="sansBold"
-              >
-                Answer
-              </Text>
-            </summary>
-            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
-              {answer}
-            </Text>
-          </details>
+          <Hint {...hint1} />
+          <Hint {...hint2} />
+          <Hint title="Answer" hintText={answer} price={2500} />
         </div>
         <div css={style.inputContainer}>
           <div css={style.inputUnderline}>
