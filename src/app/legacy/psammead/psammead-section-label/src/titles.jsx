@@ -9,11 +9,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getLongPrimer,
-  getDoublePica,
-} from '#psammead/gel-foundations/src/typography';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GHOST } from '#app/components/ThemeProvider/palette';
 
 const minClickableHeightPx = 44;
@@ -63,8 +58,9 @@ const titleMargins = `
 `;
 
 const Title = styled.span`
-  ${({ script }) => script && getDoublePica(script)};
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+
   background-color: ${({ backgroundColor, theme }) =>
     theme.isDarkUi ? theme.palette.GREY_10 : backgroundColor};
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_2};
@@ -80,8 +76,8 @@ const Title = styled.span`
 `;
 
 const IndexLinkCta = styled.span`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => getSansBold(service)};
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
   ${titleMargins};
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.backgroundColor};

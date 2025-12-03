@@ -49,6 +49,9 @@ export const ListRelatedContent = () => (
 export const ListRelatedContentRtl = () => (
   <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
 );
+ListRelatedContentRtl.globals = {
+  service: { service: 'arabic' },
+};
 
 export const SingleRelatedContent = () => (
   <RelatedContentComponent content={RelatedContentSingleItem} />
@@ -60,3 +63,7 @@ export const SingleRelatedContentRtl = () => (
     service="arabic"
   />
 );
+
+SingleRelatedContentRtl.globals = {
+  service: { service: 'arabic' },
+};
