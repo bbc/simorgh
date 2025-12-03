@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import { jsx } from '@emotion/react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
-import { PromotionalBannerProps } from '#app/components/PromotionalBanner/index.types';
+import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 
 interface PWAPromotionalBannerProps {
-  promotionalBanner: PromotionalBannerProps | undefined;
+  promotionalBanner: PromotionalBannerConfig | undefined;
 }
 
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotionalBanner_dismissals';
@@ -71,14 +71,15 @@ const PWAPromotionalBanner = ({
       primaryButton={{
         text: promotionalBanner.primaryButton.text,
         longText: promotionalBanner.primaryButton.longText,
-        onClick: handlePromptInstall,
       }}
+      onPrimaryClick={handlePromptInstall}
       secondaryButton={{
         text: promotionalBanner.secondaryButton.text,
-        onClick: handleDismissBanner,
       }}
+      onSecondaryClick={handleDismissBanner}
       isDismissible
-      handleClose={handleDismissBanner}
+      onClose={handleDismissBanner}
+      bannerLabel={promotionalBanner.bannerLabel}
     />
   );
 };
