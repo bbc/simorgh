@@ -1,5 +1,5 @@
 import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
-import { PromotionalBannerProps } from '#app/components/PromotionalBanner/index.types';
+import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -114,7 +114,7 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
-  promotionalBanner?: PromotionalBannerProps;
+  promotionalBanner?: PromotionalBannerConfig;
   electionBanner?: {
     heights?: {
       desktop: number;

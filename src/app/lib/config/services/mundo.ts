@@ -84,6 +84,8 @@ export const service: DefaultServiceConfig = {
       secondaryButton: {
         text: 'No ahora',
       },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
     },
     translations: {
       readTime: {
