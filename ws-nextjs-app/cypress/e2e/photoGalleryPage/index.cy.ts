@@ -139,7 +139,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/thai/thailand-49950038',
-    runforEnv: ['local', 'live'],
+    runforEnv: ['live'],
     service: 'thai',
     pageIdentifier: 'thai.thailand.photo_gallery.49950038.page',
     siteId: 90,
@@ -150,7 +150,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/zhongwen/trad/chinese-news-49065935',
-    runforEnv: ['local', 'live'],
+    runforEnv: ['live'],
     service: 'zhongwen',
     pageIdentifier: 'zhongwentrad.chinese_news.photo_gallery.49065935.page',
     siteId: 38,
