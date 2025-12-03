@@ -9,14 +9,6 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_HLF_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getSansRegular,
-  getSansBold,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
-  getDoublePica,
-  getGreatPrimer,
-} from '#psammead/gel-foundations/src/typography';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
 import Blocks from '#containers/Blocks';
 import Text from '#containers/Text';
@@ -40,8 +32,8 @@ const GistWrapper = styled.div`
 `;
 
 const GistIntroduction = styled.strong`
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getDoublePica(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.doublePica};
   display: inline-block;
   padding-bottom: ${GEL_SPACING_TRPL};
   color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_8};
@@ -66,8 +58,8 @@ const GistList = styled(UnorderedList)`
   }
 
   li {
-    ${({ service }) => getSansRegular(service)}
-    ${({ script }) => getGreatPrimer(script)}
+    ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+    ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};
 

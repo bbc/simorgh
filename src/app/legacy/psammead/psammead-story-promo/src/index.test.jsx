@@ -104,6 +104,7 @@ describe('StoryPromo with Media Indicator', () => {
         info={Info({})}
         mediaIndicator={<MediaInfo service="persian" dir="rtl" />}
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

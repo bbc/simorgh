@@ -27,7 +27,7 @@ const Component = ({
 
 export default {
   title: 'Components/Curation/Grid - Hierarchical',
-  Component,
+ component: Component,
   args: {
     promoCount: 12,
     promosToRender: 'default',
@@ -50,9 +50,11 @@ export default {
   },
 };
 
-export const WithMedia = {
-  render: () => <Component promoCount={12} promosToRender="withMedia" />,
-  tags: ['!dev'],
-};
+export const Example = (args) => <Component {...args} />;
 
-export const Example = Component;
+export const WithMedia = {
+  args: {
+    promoCount: 12,
+    promosToRender: 'withMedia',
+  },
+};
