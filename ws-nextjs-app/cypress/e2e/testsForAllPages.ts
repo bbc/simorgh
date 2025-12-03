@@ -45,25 +45,25 @@ export default ({ service, pageType }: ServiceParametersType) => {
                 cy.log('No images on page');
               } else {
                 // on amp there are hidden embed images, so we check only ichef ones
-                cy.get('amp-img[src*="ichef."], img[src*="ichef."]').each(
-                  $img => {
-                    // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
-                    // you leave the Cypress command queue and are using plain JS. Using .wrap converts
-                    // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
+                cy.get(
+                  'amp-img[src*="ichef."], img[src*="ichef."]:visible',
+                ).each($img => {
+                  // when you use a .each loop or other JS function that take a callback function (here with $img that is executed for each image element)
+                  // you leave the Cypress command queue and are using plain JS. Using .wrap converts
+                  // the JQuery element into a Cypress wrapped element so we can execute Cypress commands on it
 
-                    // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
-                    // eslint-disable-next-line cypress/unsafe-to-chain-command
-                    cy.wrap($img)
-                      .scrollIntoView()
-                      .should('be.visible')
-                      .then($visibleImg => {
-                        const src = $visibleImg.attr('src') ?? '';
-                        cy.log(src);
-                        // eslint-disable-next-line no-unused-expressions
-                        expect(src.endsWith('.webp')).to.be.true;
-                      });
-                  },
-                );
+                  // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
+                  // eslint-disable-next-line cypress/unsafe-to-chain-command
+                  cy.wrap($img)
+                    .scrollIntoView()
+                    .should('be.visible')
+                    .then($visibleImg => {
+                      const src = $visibleImg.attr('src') ?? '';
+                      cy.log(src);
+                      // eslint-disable-next-line no-unused-expressions
+                      expect(src.endsWith('.webp')).to.be.true;
+                    });
+                });
               }
             });
           });
