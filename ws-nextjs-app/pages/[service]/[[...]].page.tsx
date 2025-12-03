@@ -100,6 +100,7 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     case AV_EMBEDS:
       return <AvEmbedsPageLayout {...props} />;
     // Article Pages (CPS + Legacy TC2 assets)
+    case ARTICLE_PAGE:
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
