@@ -106,7 +106,7 @@ exports[`Document Component should render APP version correctly 1`] = `
     />
     <script>
       
-        window.addEventListener('load', () =&gt; {
+        window.addEventListener('DOMContentLoaded', () =&gt; {
           (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
@@ -279,7 +279,6 @@ exports[`Document Component should render LITE version correctly 1`] = `
   var _targetElement;
   var targetElement;
   var clickedElement = event.target;
-  var STATIC_REVERB_CLICK_TRACKING = 'data-static-reverb-click';
   var currentElement = clickedElement;
   while (currentElement) {
     if (currentElement.tagName === 'A') {
@@ -289,8 +288,8 @@ exports[`Document Component should render LITE version correctly 1`] = `
     currentElement = currentElement.parentElement;
   }
   if (((_targetElement = targetElement) === null || _targetElement === void 0 ? void 0 : _targetElement.tagName) === 'A') {
-    var reverbUrl = targetElement.getAttribute(STATIC_REVERB_CLICK_TRACKING);
-    if (reverbUrl !== null && reverbUrl !== void 0 && reverbUrl.includes('lite-site-summary')) {
+    var id = targetElement.getAttribute('id');
+    if (id !== null && id !== void 0 && id.includes('go-back-to-canonical-link')) {
       window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
     }
   }
@@ -377,7 +376,7 @@ exports[`Document Component should render correctly 1`] = `
     />
     <script>
       
-        window.addEventListener('load', () =&gt; {
+        window.addEventListener('DOMContentLoaded', () =&gt; {
           (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
