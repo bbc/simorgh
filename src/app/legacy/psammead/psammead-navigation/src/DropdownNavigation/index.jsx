@@ -1,4 +1,4 @@
-import React, { cloneElement, useRef } from 'react';
+import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -77,10 +77,6 @@ export const DropdownUl = styled.ul`
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 `;
 
-DropdownUl.defaultProps = {
-  role: 'list',
-};
-
 const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
@@ -110,10 +106,6 @@ const StyledCurrentLink = styled.span`
   ${({ dir, theme }) => getStyles(dir, theme)}
 `;
 
-StyledCurrentLink.defaultProps = {
-  role: 'text',
-};
-
 export const DropdownLi = ({
   children,
   script,
@@ -140,7 +132,8 @@ export const DropdownLi = ({
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <StyledCurrentLink dir={dir} id={ariaId}>
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <StyledCurrentLink dir={dir} id={ariaId} role="text">
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
           </StyledCurrentLink>

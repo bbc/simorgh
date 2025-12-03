@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
