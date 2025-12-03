@@ -113,28 +113,55 @@ const fetchEventHandler = async event => {
         return response;
       })(),
     );
-  } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
+  } else if (
+    hasOfflinePageFunctionality &&
+    (event.request.mode === 'navigate' ||
+      event.request.destination === 'script' ||
+      event.request.destination === 'style')
+  ) {
     event.respondWith(
       (async () => {
+        const cache = await caches.open(cacheName);
+
+        // Try cache first for scripts/styles
+        if (
+          event.request.destination === 'script' ||
+          event.request.destination === 'style'
+        ) {
+          const cachedResponse = await cache.match(event.request);
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+        }
+
+        // For navigation or if not in cache, try network
         try {
           const preloadResponse = await event.preloadResponse;
           if (preloadResponse) {
             return preloadResponse;
           }
           const networkResponse = await fetch(event.request);
+          // Cache the response for future offline use
+          if (networkResponse && networkResponse.ok) {
+            cache.put(event.request, networkResponse.clone());
+          }
           return networkResponse;
         } catch (error) {
-          const cache = await caches.open(cacheName);
-          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
-            .href;
-          const cachedResponse = await cache.match(offlinePageUrl);
-          if (cachedResponse) {
-            return cachedResponse;
+          // Network failed - serve offline page for navigation
+          if (event.request.mode === 'navigate') {
+            const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
+              .href;
+            const cachedResponse = await cache.match(offlinePageUrl);
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            return new Response('You are offline', {
+              status: 503,
+              headers: { 'Content-Type': 'text/plain' },
+            });
           }
-          return new Response('You are offline', {
-            status: 503,
-            headers: { 'Content-Type': 'text/plain' },
-          });
+          // For scripts/styles, return error response
+          return new Response('Offline', { status: 503 });
         }
       })(),
     );
@@ -142,4 +169,4 @@ const fetchEventHandler = async event => {
   return;
 };
 
-onfetch = fetchEventHandler;
+self.addEventListener('fetch', fetchEventHandler);
