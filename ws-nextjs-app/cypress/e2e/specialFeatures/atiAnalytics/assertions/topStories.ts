@@ -59,8 +59,13 @@ export const assertTopStoriesComponentClick = ({
       .first()
       .scrollIntoView({ duration: 1000 });
 
-    // Click on first item
-    cy.get('[data-testid="top-stories"]').find('a').first().click();
+    // Click on first visible item
+    cy.get('[data-testid="top-stories"]')
+      .filter(':visible')
+      .first()
+      .find('a')
+      .first()
+      .click();
 
     assertATIComponentClickEvent({
       component: TOP_STORIES,
