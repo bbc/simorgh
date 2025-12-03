@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -116,11 +115,6 @@ export const Headline = styled.h3`
     `display: inline-block;`}/* Needed for aligning Media Indicator with Headline */
 `;
 
-Headline.defaultProps = {
-  promoHasImage: true,
-  promoType: 'regular',
-};
-
 const summaryTopStoryStyles = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     display: none;
@@ -157,11 +151,6 @@ export const Summary = styled.p`
 
   ${({ promoType }) => summaryStyles[promoType]}
 `;
-
-Summary.defaultProps = {
-  promoHasImage: true,
-  promoType: 'regular',
-};
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 export const Link = styled.a`

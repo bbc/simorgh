@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { BulletedList, BulletedListItem } from '.';
 import { StoryArgs } from '../../models/types/storybook';
