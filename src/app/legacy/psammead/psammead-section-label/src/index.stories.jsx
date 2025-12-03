@@ -1,4 +1,3 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import {

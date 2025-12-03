@@ -1,4 +1,4 @@
-import React, { act } from 'react';
+import { act } from 'react';
 import Component from '.';
 import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
