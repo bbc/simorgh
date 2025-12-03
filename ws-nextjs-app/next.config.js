@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -50,6 +50,7 @@ module.exports = {
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
+  compiler: { emotion: true },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts

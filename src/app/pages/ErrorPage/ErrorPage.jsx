@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import ErrorMain from '#components/ErrorMain';
 import { useTheme } from '@emotion/react';

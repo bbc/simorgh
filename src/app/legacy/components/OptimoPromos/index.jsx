@@ -1,4 +1,4 @@
-import React, { use, useMemo } from 'react';
+import { use, useMemo } from 'react';
 
 import Timestamp from '#components/Promo/timestamp';
 import LiveLabel from '#app/components/LiveLabel';

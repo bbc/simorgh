@@ -1,5 +1,4 @@
 import path from 'path';
-import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
