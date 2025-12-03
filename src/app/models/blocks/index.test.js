@@ -226,128 +226,140 @@ describe('High order blocks', () => {
 });
 
 describe('Byline block', () => {
+  const contributorJson = {
+    type: 'contributor',
+    model: {
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Test',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          locator: 'urn:bbc:twitter:user:@mary_harper',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: '@mary_harper',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: '@mary_harper',
+                              locator: 'https://twitter.com/mary_harper',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: '@mary_harper',
+                                    attributes: [],
+                                  },
+                                  id: 'testId',
+                                },
+                              ],
+                            },
+                            id: 'testId',
+                          },
+                        ],
+                      },
+                      id: 'testId',
+                    },
+                  ],
+                },
+                id: 'testId',
+              },
+            ],
+          },
+          id: 'testId',
+        },
+      ],
+    },
+    id: 'testId',
+  };
   test('generates a byline block json', () => {
     const testJson = {
       type: 'byline',
       model: {
-        blocks: [
-          {
-            type: 'contributor',
-            model: {
-              blocks: [
-                {
-                  type: 'name',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'text',
-                        model: {
-                          blocks: [
-                            {
-                              type: 'paragraph',
-                              model: {
-                                text: 'Test',
-                                blocks: [
-                                  {
-                                    type: 'fragment',
-                                    model: {
-                                      text: 'Test',
-                                      attributes: [],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-                {
-                  type: 'role',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'text',
-                        model: {
-                          blocks: [
-                            {
-                              type: 'paragraph',
-                              model: {
-                                text: 'Test',
-                                blocks: [
-                                  {
-                                    type: 'fragment',
-                                    model: {
-                                      text: 'Test',
-                                      attributes: [],
-                                    },
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  },
-                },
-                {
-                  type: 'link',
-                  locator: 'urn:bbc:twitter:user:@mary_harper',
-                  model: {
-                    blocks: [
-                      {
-                        type: 'text',
-                        model: {
-                          blocks: [
-                            {
-                              type: 'paragraph',
-                              model: {
-                                text: '@mary_harper',
-                                blocks: [
-                                  {
-                                    type: 'urlLink',
-                                    model: {
-                                      text: '@mary_harper',
-                                      locator:
-                                        'https://twitter.com/mary_harper',
-                                      blocks: [
-                                        {
-                                          type: 'fragment',
-                                          model: {
-                                            text: '@mary_harper',
-                                            attributes: [],
-                                          },
-                                          id: 'testId',
-                                        },
-                                      ],
-                                    },
-                                    id: 'testId',
-                                  },
-                                ],
-                              },
-                              id: 'testId',
-                            },
-                          ],
-                        },
-                        id: 'testId',
-                      },
-                    ],
-                  },
-                  id: 'testId',
-                },
-              ],
-            },
-            id: 'testId',
-          },
-        ],
+        blocks: [contributorJson],
       },
       id: 'testId',
     };
 
-    const block = bylineBlock('mary_harper', 'testId');
+    const block = bylineBlock('byline', 'mary_harper', 'testId');
+
+    expect(block).toEqual(testJson);
+  });
+
+  test('generates a subByline block json', () => {
+    const testJson = {
+      type: 'subByline',
+      model: {
+        blocks: [contributorJson],
+      },
+      id: 'testId',
+    };
+
+    const block = bylineBlock('subByline', 'mary_harper', 'testId');
 
     expect(block).toEqual(testJson);
   });
