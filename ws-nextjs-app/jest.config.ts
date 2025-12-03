@@ -1,10 +1,13 @@
 /* eslint-disable import/no-relative-packages */
 import { pathsToModuleNameMapper } from 'ts-jest';
+import path from 'path';
 import type { Config } from '@jest/types';
 import { compilerOptions } from '../tsconfig.json';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { react, ...compilerOptionsPaths } = compilerOptions.paths;
+
+const babelConfigFile = path.join(__dirname, '.babelrc');
 
 const canonicalIntegrationTests = {
   displayName: 'Integration Tests - Canonical',
@@ -21,7 +24,7 @@ const canonicalIntegrationTests = {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
       {
-        configFile: './.babelrc',
+        configFile: babelConfigFile,
         presets: ['next/babel'],
       },
     ],
@@ -45,7 +48,7 @@ const ampIntegrationTests = {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
       {
-        configFile: './.babelrc',
+        configFile: babelConfigFile,
         presets: ['next/babel'],
       },
     ],
@@ -69,7 +72,7 @@ const liteIntegrationTests = {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
       {
-        configFile: './.babelrc',
+        configFile: babelConfigFile,
         presets: ['next/babel'],
       },
     ],
@@ -91,7 +94,7 @@ const unitTests = {
     '^.+\\.(js|jsx|ts|tsx)$': [
       'babel-jest',
       {
-        configFile: './.babelrc',
+        configFile: babelConfigFile,
         presets: ['next/babel'],
       },
     ],
