@@ -59,7 +59,7 @@ export default () => {
                 {hint1.title.length > 0 ? hint1.title : 'Hint 1'}
               </Text>
             </summary>
-            <Text css={style.hint} size="pica" fontVariant="sansBold">
+            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
               {hint1.hintText}
             </Text>
           </details>
@@ -76,7 +76,7 @@ export default () => {
                 {hint2.title.length > 0 ? hint2.title.length : 'Hint 2'}
               </Text>
             </summary>
-            <Text css={style.hint} size="pica" fontVariant="sansBold">
+            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
               {hint2.hintText}
             </Text>
           </details>
@@ -93,7 +93,7 @@ export default () => {
                 Answer
               </Text>
             </summary>
-            <Text css={style.hint} size="pica" fontVariant="sansBold">
+            <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
               {answer}
             </Text>
           </details>

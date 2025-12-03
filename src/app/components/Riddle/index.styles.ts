@@ -87,6 +87,7 @@ export default {
     }),
   hintContainer: ({ spacings, palette }: Theme) =>
     css({
+      position: 'relative',
       cursor: 'pointer',
       margin: `${spacings.HALF}rem 0`,
     }),
@@ -101,15 +102,22 @@ export default {
       padding: `${0.6}rem ${spacings.FULL}rem`,
       background: palette.GHOST,
     }),
-
   hintPrice: ({ palette }: Theme) =>
     css({
-      width: `${3}rem`,
+      width: `${3.5}rem`,
       padding: `${0.6}rem ${1}rem`,
       background: palette.GREY_3,
       textAlign: 'center',
     }),
-  hint: ({ palette }: Theme) => css({}),
+  // hintAnswerContainer: ({ palette, spacings }: Theme) => css({}),
+  hintAnswerText: ({ palette, spacings }: Theme) =>
+    css({
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      left: `${5.5}rem`,
+      padding: `${0.6}rem ${spacings.FULL}rem`,
+    }),
   detailsArea: ({ spacings, mq, palette }: Theme) =>
     css({
       padding: `${spacings.FULL}rem`,
