@@ -45,7 +45,7 @@ export default ({
     pageType === LIVE_TV_PAGE
       ? buildIChefURL({
           originCode: 'pips',
-          locator: liveMediaBlock.masterbrand.imageUrlTemplate,
+          locator: liveMediaBlock?.masterbrand?.imageUrlTemplate,
           resolution: 800,
         })
       : holdingImageURL;
