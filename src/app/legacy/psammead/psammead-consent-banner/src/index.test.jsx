@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';

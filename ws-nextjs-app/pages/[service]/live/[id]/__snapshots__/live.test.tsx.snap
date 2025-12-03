@@ -345,7 +345,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-14 {
     display: block;
     width: initial;
@@ -815,7 +815,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-36 {
     display: block;
     width: initial;
@@ -903,7 +903,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width:63rem) {
   .emotion-38 {
     padding-right: 2.5rem;
   }
@@ -1045,7 +1045,7 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   }
 }
 
-@supports (display: grid) {
+@supports (display:grid) {
   .emotion-69 {
     display: block;
     width: initial;

@@ -1,8 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
-import React, { use, PropsWithChildren } from 'react';
+import { Children, use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -189,7 +186,8 @@ const Byline = ({
           <li css={BylineCss.bylineContainer}>{contributors}</li>
           {/* EXPERIMENT: Article Read Time */}
           {children &&
-            React.Children.map(children, (child, index) => (
+            Children.map(children, (child, index) => (
+              // eslint-disable-next-line react/no-array-index-key
               <li key={index} css={BylineCss.timestampLineBreak}>
                 {child}
               </li>

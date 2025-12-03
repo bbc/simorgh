@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import {

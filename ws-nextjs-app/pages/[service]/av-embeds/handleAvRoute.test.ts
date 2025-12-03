@@ -8,6 +8,8 @@ jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
 
+jest.mock('#app/routes/utils/fetchPageData');
+
 const mockGetServerSidePropsContext = {
   req: {
     headers: {
