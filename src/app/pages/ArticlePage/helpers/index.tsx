@@ -1,6 +1,5 @@
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { OptimoBlock } from '#app/models/types/optimo';
-import { CSSObject } from '@emotion/react';
 import RelatedContentSection from '../../../components/RelatedContentSection';
 import TopStoriesSection from '../PagePromoSections/TopStoriesSection';
 
@@ -11,7 +10,8 @@ interface GetUnderArticleComponentsProps {
   featuresData: unknown;
   articleBlocks: OptimoBlock[];
   grey2: string;
-  pageStyles: Record<string, CSSObject>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pageStyles: Record<string, any>;
 }
 
 const getUnderArticleComponents = ({
