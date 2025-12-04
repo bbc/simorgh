@@ -7,8 +7,4 @@ const HeadingIndex = styled.h1`
   margin: 0;
 `;
 
-HeadingIndex.defaultProps = {
-  tabIndex: '-1',
-};
-
 export default HeadingIndex;

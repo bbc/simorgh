@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { PropsWithChildren, useMemo } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
