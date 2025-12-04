@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';

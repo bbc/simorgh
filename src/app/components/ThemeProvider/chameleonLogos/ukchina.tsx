@@ -1,4 +1,3 @@
-import React from 'react';
 import buildLogo from '.';
 
 const height = 24.59;

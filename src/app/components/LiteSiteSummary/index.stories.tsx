@@ -1,4 +1,3 @@
-import React from 'react';
 import LiteSiteSummary from '.';
 import metadata from './metadata.json';
 import readme from './README.md';

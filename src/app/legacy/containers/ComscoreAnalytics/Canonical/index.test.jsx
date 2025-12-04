@@ -1,4 +1,3 @@
-import React from 'react';
 import { act, render, waitFor } from '@testing-library/react';
 import { UserContext } from '#contexts/UserContext';
 import CanonicalComscore from '.';

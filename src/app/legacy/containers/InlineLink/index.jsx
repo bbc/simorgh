@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import InlineLink from '#psammead/psammead-inline-link/src';
 import pathOr from 'ramda/src/pathOr';
 import makeRelativeUrlPath from '#lib/utilities/makeRelativeUrlPath';

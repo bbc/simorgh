@@ -1,6 +1,3 @@
-/** @jsx jsx */
-
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import AmpIframe from '#app/components/AmpIframe';

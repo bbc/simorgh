@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -49,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -246,6 +245,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Personalised Content Rail
+  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedContentExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const personalisedVariants = ['variation_1', 'variation_2'];
+  const isPersonalisedVariant = personalisedVariants.includes(
+    personalisedContentExperimentVariant ?? '',
+  );
+
+  const showPersonalisedContent = Boolean(
+    !isAmp && !isLite && !isApp && isPersonalisedVariant,
+  );
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -267,9 +281,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
@@ -470,6 +486,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               },
             })}
           />
+          {/* EXPERIMENT: Personalised Content */}
+          {showPersonalisedContent && (
+            <PersonalisedContent
+              pageData={pageData}
+              personalisedTopicCurationExperimentVariant={
+                personalisedContentExperimentVariant ?? ''
+              }
+            />
+          )}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
