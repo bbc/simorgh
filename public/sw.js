@@ -6,16 +6,9 @@
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
+const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
-
-// Helper to get service from URL
-const getServiceFromUrl = url => {
-  const { pathname } = new URL(url);
-  return pathname.split('/')[1];
-};
-
-// Helper to get offline page URL for a service
-const getOfflinePageUrl = service => `/${service}/offline`;
+const OFFLINE_PAGE = `/${service}/offline`;
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -23,16 +16,9 @@ self.addEventListener('install', event => {
       const cache = await caches.open(cacheName);
       if (hasOfflinePageFunctionality) {
         try {
-          // Get service from any client URL or default to 'ws'
-          const clients = await self.clients.matchAll();
-          const service =
-            clients.length > 0 ? getServiceFromUrl(clients[0].url) : 'ws';
-
           // Fetch and cache the offline page HTML
-          const offlinePageUrl = new URL(
-            getOfflinePageUrl(service),
-            self.location.origin,
-          ).href;
+          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
+            .href;
           const response = await fetch(offlinePageUrl);
           if (response && response.ok) {
             await cache.put(offlinePageUrl, response.clone());
@@ -159,12 +145,8 @@ const fetchEventHandler = async event => {
         } catch (error) {
           // Network failed - serve offline page for navigation
           if (event.request.mode === 'navigate') {
-            // Extract service from the request URL
-            const service = getServiceFromUrl(event.request.url);
-            const offlinePageUrl = new URL(
-              getOfflinePageUrl(service),
-              self.location.origin,
-            ).href;
+            const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
+              .href;
             const cachedResponse = await cache.match(offlinePageUrl);
             if (cachedResponse) {
               return cachedResponse;
