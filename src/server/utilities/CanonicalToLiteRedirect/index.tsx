@@ -18,7 +18,6 @@ export const redirectScript = (window: Window) => {
     switch (normalisedEct) {
       case 'slow-2g':
       case '2g':
-      case '3g':
         if (isOptedIntoLiteRedirect === 'true') {
           window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
           window.location.replace(toLitePath);

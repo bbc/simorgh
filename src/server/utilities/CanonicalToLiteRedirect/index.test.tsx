@@ -16,7 +16,7 @@ describe('LiteRedirect', () => {
     },
     {
       effectiveType: '3g',
-      expectedRedirect: true,
+      expectedRedirect: false,
     },
     {
       effectiveType: '4g',
