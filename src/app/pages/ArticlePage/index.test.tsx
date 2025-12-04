@@ -73,7 +73,8 @@ jest.mock('../../components/RelatedContentSection', () => {
   // eslint-disable-next-line react/display-name
   return (props: unknown) =>
     // eslint-disable-next-line react/jsx-filename-extension
-    (global as Record<string, unknown>).__useRelatedContentStub ? (
+    (global as typeof globalThis & { mockRelatedContentStub?: boolean })
+      .mockRelatedContentStub ? (
       <section data-testid="related-content-section" />
     ) : (
       // @ts-expect-error: props passthrough to actual component
@@ -1344,7 +1345,8 @@ describe('Article Page', () => {
     });
 
     it('renders personalised topic rail after related content for variation_1', () => {
-      (global as Record<string, unknown>).__useRelatedContentStub = true;
+      (global as typeof globalThis & { mockRelatedContentStub?: boolean }).mockRelatedContentStub =
+        true;
 
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
@@ -1401,12 +1403,18 @@ describe('Article Page', () => {
       const order = relatedContentSection?.compareDocumentPosition(
         personalisedSection as Node,
       );
-      expect((order ?? 0) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-      delete (global as Record<string, unknown>).__useRelatedContentStub;
+      // eslint-disable-next-line no-bitwise
+      const isAfter =
+        order !== undefined &&
+        Boolean(order & Node.DOCUMENT_POSITION_FOLLOWING);
+      expect(isAfter).toBeTruthy();
+      delete (global as typeof globalThis & { mockRelatedContentStub?: boolean })
+        .mockRelatedContentStub;
     });
 
     it('renders personalised topic rail before related content for variation_2', () => {
-      (global as Record<string, unknown>).__useRelatedContentStub = true;
+      (global as typeof globalThis & { mockRelatedContentStub?: boolean }).mockRelatedContentStub =
+        true;
 
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
@@ -1462,8 +1470,13 @@ describe('Article Page', () => {
       const order = relatedContentSection?.compareDocumentPosition(
         personalisedSection as Node,
       );
-      expect((order ?? 0) & Node.DOCUMENT_POSITION_PRECEDING).toBeTruthy();
-      delete (global as Record<string, unknown>).__useRelatedContentStub;
+      // eslint-disable-next-line no-bitwise
+      const isBefore =
+        order !== undefined &&
+        Boolean(order & Node.DOCUMENT_POSITION_PRECEDING);
+      expect(isBefore).toBeTruthy();
+      delete (global as typeof globalThis & { mockRelatedContentStub?: boolean })
+        .mockRelatedContentStub;
     });
   });
 });
