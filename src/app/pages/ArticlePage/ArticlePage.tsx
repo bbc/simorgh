@@ -420,6 +420,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         topStoriesContent,
         featuresContent,
         referrerVariant,
+        referrerExperimentName,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
