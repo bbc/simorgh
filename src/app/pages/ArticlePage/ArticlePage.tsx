@@ -236,7 +236,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   useEffect(() => {
     if (typeof window === 'undefined' || !window.matchMedia) {
-      return () => {};
+      return undefined;
     }
 
     const mediaQuery = window.matchMedia(
