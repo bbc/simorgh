@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -6,6 +6,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import useMediaQuery from '#app/hooks/useMediaQuery';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -233,28 +234,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = useTheme();
 
   const [isMobileViewport, setIsMobileViewport] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !window.matchMedia) {
-      return undefined;
-    }
-
-    const mediaQuery = window.matchMedia(
-      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-    );
-
-    const updateIsMobile = (event: MediaQueryListEvent | MediaQueryList) => {
-      setIsMobileViewport(event.matches);
-    };
-
-    updateIsMobile(mediaQuery);
-
-    mediaQuery.addEventListener('change', updateIsMobile);
-
-    return () => {
-      mediaQuery.removeEventListener('change', updateIsMobile);
-    };
-  }, []);
+  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event => {
+    setIsMobileViewport(event.matches);
+  });
 
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
@@ -270,12 +252,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // EXPERIMENT: Personalised Content Rail
   const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
-  const personalisedContentExperimentVariant = useOptimizelyVariation({
+  let personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
+  // TEMP: force variant locally (remove before commit)
+  personalisedContentExperimentVariant = 'variation_1'; // or 'variation_2'
 
   const personalisedVariants = ['variation_1', 'variation_2'];
   const isPersonalisedVariant = personalisedVariants.includes(
