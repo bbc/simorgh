@@ -20,8 +20,8 @@ import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOpti
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
-import handleArticleRoute from './articles/handleArticleRoute';
-import { ArticlePageProps } from './articles/types';
+import handleArticleRoute from './[articles]/handleArticleRoute';
+import { ArticlePageProps } from './[articles]/types';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
