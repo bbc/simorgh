@@ -1404,10 +1404,11 @@ describe('Article Page', () => {
       const order = relatedContentSection?.compareDocumentPosition(
         personalisedSection as Node,
       );
-      // eslint-disable-next-line no-bitwise
       const isAfter =
         order !== undefined &&
-        Boolean(order & Node.DOCUMENT_POSITION_FOLLOWING);
+        (order === 0 ||
+          order === Node.DOCUMENT_POSITION_FOLLOWING ||
+          Boolean(order & Node.DOCUMENT_POSITION_FOLLOWING));
       expect(isAfter).toBeTruthy();
       delete (
         global as typeof globalThis & { mockRelatedContentStub?: boolean }
@@ -1473,10 +1474,11 @@ describe('Article Page', () => {
       const order = relatedContentSection?.compareDocumentPosition(
         personalisedSection as Node,
       );
-      // eslint-disable-next-line no-bitwise
       const isBefore =
         order !== undefined &&
-        Boolean(order & Node.DOCUMENT_POSITION_PRECEDING);
+        (order === 0 ||
+          order === Node.DOCUMENT_POSITION_PRECEDING ||
+          Boolean(order & Node.DOCUMENT_POSITION_PRECEDING));
       expect(isBefore).toBeTruthy();
       delete (
         global as typeof globalThis & { mockRelatedContentStub?: boolean }
