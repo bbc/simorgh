@@ -1,9 +1,19 @@
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+  assertScrollableNavigationComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 
 const tests = [testsForAllPages, testsForAllCanonicalPages];
 
@@ -85,6 +95,72 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
+const atiAnalyticsTests = [
+  assertPageView,
+  assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+  assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  assertScrollableNavigationComponentView,
+  assertScrollableNavigationComponentClick,
+];
+
+const atiAnalyticsTestSuites = [
+  {
+    path: '/afaanoromoo/oduu-41217768',
+    runforEnv: ['live'],
+    service: 'afaanoromoo',
+    pageIdentifier: 'afaanoromoo.news.photo_gallery.41217768.page',
+    siteId: 2,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/persian/magazine-49281981',
+    runforEnv: ['live'],
+    service: 'persian',
+    pageIdentifier: 'persian.magazine.photo_gallery.49281981.page',
+    siteId: 69,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/pidgin/50913502',
+    runforEnv: ['live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.photo_gallery.50913502.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/thai/thailand-49950038',
+    runforEnv: ['live'],
+    service: 'thai',
+    pageIdentifier: 'thai.thailand.photo_gallery.49950038.page',
+    siteId: 90,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+  {
+    path: '/zhongwen/trad/chinese-news-49065935',
+    runforEnv: ['live'],
+    service: 'zhongwen',
+    pageIdentifier: 'zhongwentrad.chinese_news.photo_gallery.49065935.page',
+    siteId: 38,
+    applicationType: 'responsive',
+    contentType: 'article-photo-gallery',
+    useReverb: true,
+    tests: [...atiAnalyticsTests],
+  },
+] as unknown as TestDataType[];
+
 const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
@@ -110,7 +186,14 @@ const liteTestSuites = canonicalTestSuites
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,
   headers: {
-    'page-type': 'tc2',
+    'page-type': 'article',
   },
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
+});
+
+runTestsForPage({
+  pageType: PHOTO_GALLERY_PAGE,
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });
