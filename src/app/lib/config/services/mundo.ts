@@ -60,7 +60,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mk3s9j.jpg',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
         alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
       },
       linkLabel: {
@@ -84,6 +84,8 @@ export const service: DefaultServiceConfig = {
       secondaryButton: {
         text: 'No ahora',
       },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
     },
     translations: {
       readTime: {
