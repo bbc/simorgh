@@ -110,16 +110,14 @@ exports[`Document Component should render APP version correctly 1`] = `
           (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
-  var allowList = ['/pidgin/articles/czrzwn80zjmo'];
   var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
-  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
+  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType) {
     var toLitePath = "".concat(pathname, ".lite");
     var ect = window.navigator.connection.effectiveType;
     var normalisedEct = ect.toLocaleLowerCase();
     switch (normalisedEct) {
       case 'slow-2g':
       case '2g':
-      case '3g':
         if (isOptedIntoLiteRedirect === 'true') {
           window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
           window.location.replace(toLitePath);
@@ -274,27 +272,15 @@ exports[`Document Component should render LITE version correctly 1`] = `
     </style>
     <script>
       
-        document.addEventListener('click', (event) =&gt; {
-          (function optOutScript(window, event) {
-  var _targetElement;
-  var targetElement;
-  var clickedElement = event.target;
-  var currentElement = clickedElement;
-  while (currentElement) {
-    if (currentElement.tagName === 'A') {
-      targetElement = currentElement;
-      break;
-    }
-    currentElement = currentElement.parentElement;
-  }
-  if (((_targetElement = targetElement) === null || _targetElement === void 0 ? void 0 : _targetElement.tagName) === 'A') {
-    var id = targetElement.getAttribute('id');
-    if (id !== null && id !== void 0 && id.includes('go-back-to-canonical-link')) {
-      window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
-    }
-  }
-})(window,event)
-        })
+      window.addEventListener('DOMContentLoaded', () =&gt; {
+        document
+            .getElementById('go-back-to-canonical-link')
+            .addEventListener('click', (event) =&gt; {
+                          (function optOutScript(window) {
+  window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
+})(window)
+                        });
+        });
       
     </script>
     <script
@@ -380,16 +366,14 @@ exports[`Document Component should render correctly 1`] = `
           (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
-  var allowList = ['/pidgin/articles/czrzwn80zjmo'];
   var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
-  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType && allowList.includes(pathname)) {
+  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType) {
     var toLitePath = "".concat(pathname, ".lite");
     var ect = window.navigator.connection.effectiveType;
     var normalisedEct = ect.toLocaleLowerCase();
     switch (normalisedEct) {
       case 'slow-2g':
       case '2g':
-      case '3g':
         if (isOptedIntoLiteRedirect === 'true') {
           window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
           window.location.replace(toLitePath);
