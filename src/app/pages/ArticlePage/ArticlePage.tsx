@@ -1,10 +1,11 @@
-import { use, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -231,6 +232,30 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia(
+      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    );
+
+    const updateIsMobile = (event: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobileViewport(event.matches);
+    };
+
+    updateIsMobile(mediaQuery);
+
+    mediaQuery.addEventListener('change', updateIsMobile);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateIsMobile);
+    };
+  }, []);
+
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
   const readTimeExperimentVariant = useOptimizelyVariation({
@@ -251,6 +276,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+
   const personalisedVariants = ['variation_1', 'variation_2'];
   const isPersonalisedVariant = personalisedVariants.includes(
     personalisedContentExperimentVariant ?? '',
@@ -259,7 +285,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     personalisedContentExperimentVariant === 'variation_2';
 
   const showPersonalisedContent = Boolean(
-    !isAmp && !isLite && !isApp && isPersonalisedVariant,
+    !isAmp && !isLite && !isApp && isMobileViewport && isPersonalisedVariant,
   );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
