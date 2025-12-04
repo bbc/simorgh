@@ -32,6 +32,7 @@ const CurationPromo = ({
   eventTrackingData,
   timeOfDayExperimentName,
   timeOfDayVariant,
+  isPortraitImage,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -71,6 +72,7 @@ const CurationPromo = ({
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
+          isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (
