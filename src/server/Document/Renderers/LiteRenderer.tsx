@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import React, { ReactElement, PropsWithChildren } from 'react';
+import { OptOutOfLiteRedirect } from '#src/server/utilities/CanonicalToLiteRedirect';
 import { BaseRendererProps } from './types';
 import ComponentTracking from './ComponentTracking';
 
@@ -24,6 +25,7 @@ export default function LitePageRenderer({
         {helmetMetaTags}
         {helmetLinkTags}
         <style dangerouslySetInnerHTML={{ __html: styles }} />
+        <OptOutOfLiteRedirect />
         {/* IMPORTANT: ComponentTracking MUST come before helmetScriptTags due to synchronous calls from helmetScriptTags to functions within ComponentTracking */}
         <ComponentTracking
           enableStaticClickTrackingOnOperaMiniOnly={false}

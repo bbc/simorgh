@@ -1,4 +1,4 @@
-import { redirectScript } from '.';
+import { optOutScript, redirectScript } from '.';
 
 describe('LiteRedirect', () => {
   it.each([
@@ -16,7 +16,7 @@ describe('LiteRedirect', () => {
     },
     {
       effectiveType: '3g',
-      expectedRedirect: true,
+      expectedRedirect: false,
     },
     {
       effectiveType: '4g',
@@ -36,6 +36,9 @@ describe('LiteRedirect', () => {
           href: 'https://www.somepath.com/',
           pathname: '/pidgin/articles/czrzwn80zjmo',
         },
+        localStorage: {
+          setItem: jest.fn(),
+        },
       } as unknown as Window;
 
       redirectScript(mockWindow);
@@ -47,4 +50,45 @@ describe('LiteRedirect', () => {
       expect(hasRedirected).toBe(expectedRedirect);
     },
   );
+
+  it('should set the isOptedIntoLiteRedirect cache value to true on inital redirect', () => {
+    const mockWindow = {
+      navigator: {
+        connection: {
+          effectiveType: '2g',
+        },
+      },
+      location: {
+        replace: jest.fn(),
+        href: 'https://www.somepath.com/',
+        pathname: '/pidgin/articles/czrzwn80zjmo',
+      },
+      localStorage: {
+        setItem: jest.fn(),
+      },
+    } as unknown as Window;
+
+    redirectScript(mockWindow);
+    const setItemCallStack = (mockWindow.localStorage.setItem as jest.Mock).mock
+      .calls[0];
+
+    expect(setItemCallStack).toStrictEqual(['isOptedIntoLiteRedirect', 'true']);
+  });
+
+  it('should set the isOptedIntoLiteRedirect cache value to false on when the user clicks on the go-back-to-canonical-link link', () => {
+    const mockWindow = {
+      localStorage: {
+        setItem: jest.fn(),
+      },
+    } as unknown as Window;
+
+    optOutScript(mockWindow);
+    const setItemCallStack = (mockWindow.localStorage.setItem as jest.Mock).mock
+      .calls[0];
+
+    expect(setItemCallStack).toStrictEqual([
+      'isOptedIntoLiteRedirect',
+      'false',
+    ]);
+  });
 });
