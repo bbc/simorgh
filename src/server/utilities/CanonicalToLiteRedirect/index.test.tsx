@@ -82,16 +82,7 @@ describe('LiteRedirect', () => {
       },
     } as unknown as Window;
 
-    const mockEvent = {
-      target: {
-        tagName: 'A',
-        getAttribute: jest
-          .fn()
-          .mockReturnValueOnce('go-back-to-canonical-link'),
-      },
-    } as unknown as MouseEvent;
-
-    optOutScript(mockWindow, mockEvent);
+    optOutScript(mockWindow);
     const setItemCallStack = (mockWindow.localStorage.setItem as jest.Mock).mock
       .calls[0];
 

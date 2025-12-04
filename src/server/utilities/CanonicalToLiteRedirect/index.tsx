@@ -3,14 +3,10 @@ import React from 'react';
 export const redirectScript = (window: Window) => {
   const { pathname } = window.location;
 
-  const allowList = ['/pidgin/articles/czrzwn80zjmo'];
   const isOptedIntoLiteRedirect =
     window.localStorage.isOptedIntoLiteRedirect ?? 'true';
 
-  if (
-    window?.navigator?.connection?.effectiveType &&
-    allowList.includes(pathname)
-  ) {
+  if (window?.navigator?.connection?.effectiveType) {
     const toLitePath = `${pathname}.lite`;
     const ect = window.navigator.connection.effectiveType;
     const normalisedEct = ect.toLocaleLowerCase();
@@ -29,35 +25,21 @@ export const redirectScript = (window: Window) => {
   }
 };
 
-export const optOutScript = (window: Window, event: MouseEvent) => {
-  let targetElement;
-  const clickedElement = event.target as HTMLElement;
-
-  let currentElement = clickedElement;
-  while (currentElement) {
-    if (currentElement.tagName === 'A') {
-      targetElement = currentElement;
-      break;
-    }
-    currentElement = currentElement.parentElement as HTMLElement;
-  }
-
-  if (targetElement?.tagName === 'A') {
-    const id = targetElement.getAttribute('id') as string;
-
-    if (id?.includes('go-back-to-canonical-link')) {
-      window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
-    }
-  }
+export const optOutScript = (window: Window) => {
+  window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
 };
 
 export const OptOutOfLiteRedirect = () => {
   return (
     <script>
       {`
-        document.addEventListener('click', (event) => {
-          (${optOutScript.toString()})(window,event)
-        })
+      window.addEventListener('DOMContentLoaded', () => {
+        document
+            .getElementById('go-back-to-canonical-link')
+            .addEventListener('click', (event) => {
+                          (${optOutScript.toString()})(window)
+                        });
+        });
       `}
     </script>
   );
