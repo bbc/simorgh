@@ -55,9 +55,10 @@ const cspHeaderResponse = async ({
   let countryList = '';
 
   if (isValidService(reqUrl)) {
-    ({ enabled: hasAdsScripts, value: countryList = '' } =
-      // @ts-expect-error- Toggles type issue
-      toggles?.adsNonce || { enabled: false, value: '' });
+    // @ts-expect-error - Toggles type issue
+    const adsNonceToggle = toggles?.adsNonce || { enabled: false, value: '' };
+    hasAdsScripts = adsNonceToggle.enabled;
+    countryList = adsNonceToggle.value;
   }
 
   const country =
