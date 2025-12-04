@@ -141,10 +141,6 @@ const fetchEventHandler = async event => {
             return preloadResponse;
           }
           const networkResponse = await fetch(event.request);
-          // Cache the response for future offline use
-          if (networkResponse && networkResponse.ok) {
-            cache.put(event.request, networkResponse.clone());
-          }
           return networkResponse;
         } catch (error) {
           // Network failed - serve offline page for navigation
