@@ -3,7 +3,7 @@ import extractHeaders from '#server/utilities/extractHeaders';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
-import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
+import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -17,9 +17,6 @@ import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
-
-const isValidArticlePath = (articlePath: string) =>
-  ['articles', 'erthyglau', 'sgeulachdan'].includes(articlePath);
 
 const transformPageData = (toggles?: Toggles) =>
   augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
@@ -40,44 +37,13 @@ export default async (context: GetServerSidePropsContext) => {
     req: { headers: reqHeaders },
   } = context;
 
-  const {
-    articles: articlePath,
-    service,
-    renderer_env: rendererEnv,
-  } = context.query as PageDataParams;
+  const { service, renderer_env: rendererEnv } =
+    context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
-
-  let routingInfoLogger = logger.debug;
-
-  const propsForUnsuccessfulRequests = {
-    isApp,
-    isAmp,
-    isLite,
-    isNextJs: true,
-    service,
-    timeOnServer: Date.now(),
-    variant: variant || null,
-    pageType: ARTICLE_PAGE,
-    pathname: resolvedUrlWithoutQuery,
-    ...extractHeaders(reqHeaders),
-  };
-
-  if (!isValidArticlePath(articlePath as string)) {
-    routingInfoLogger = logger.error;
-
-    context.res.statusCode = NOT_FOUND;
-
-    return {
-      props: {
-        ...propsForUnsuccessfulRequests,
-        status: NOT_FOUND,
-      },
-    };
-  }
 
   const { data, toggles } = await getPageData({
     id: resolvedUrlWithoutQuery,
@@ -93,6 +59,8 @@ export default async (context: GetServerSidePropsContext) => {
 
   context.res.statusCode = status;
 
+  let routingInfoLogger = logger.debug;
+
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
@@ -104,8 +72,18 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        ...propsForUnsuccessfulRequests,
+        isApp,
+        isAmp,
+        isLite,
+        isNextJs: true,
+        service,
         status: renderStatus,
+        timeOnServer: Date.now(),
+        variant: variant || null,
+        pageType: ARTICLE_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+        toggles,
+        ...extractHeaders(reqHeaders),
       },
     };
   }
