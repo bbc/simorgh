@@ -186,7 +186,7 @@ const liteTestSuites = canonicalTestSuites
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,
   headers: {
-    'page-type': 'tc2',
+    'page-type': 'article',
   },
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
 });
