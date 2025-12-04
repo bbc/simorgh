@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { use } from 'react';
-import { css, jsx, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
@@ -140,6 +138,11 @@ const HiearchicalGrid = ({
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
                         </VisuallyHiddenText>
+                        <Promo.MediaIcon
+                          className="inline-icon"
+                          type={promo.type}
+                          css={styles.inlineIcon}
+                        />
                         {promo.title}
                         {showDuration && (
                           <VisuallyHiddenText>

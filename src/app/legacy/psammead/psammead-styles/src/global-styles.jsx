@@ -1,4 +1,3 @@
-import React from 'react';
 import { Global, css } from '@emotion/react';
 
 const boxSizing = `/* Box Sizing https://bit.ly/1A91I0J */

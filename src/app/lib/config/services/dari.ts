@@ -424,6 +424,10 @@ export const service: DefaultServiceConfig = {
         url: '/dari',
       },
       {
+        title: 'پخش زنده رادیو',
+        url: '/dari/bbc_dari_radio/liveradio',
+      },
+      {
         title: 'افغانستان',
         url: '/dari/topics/c78n1x1x3jet',
       },

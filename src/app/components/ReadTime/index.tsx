@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import type { PropsWithChildren } from 'react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
@@ -111,7 +110,7 @@ export const ReadTimeArticleExperiment = ({
 };
 
 // EXPERIMENT - Placeholder for control variants
-const HomepagePlaceholder = (props: React.PropsWithChildren) => (
+const HomepagePlaceholder = (props: PropsWithChildren) => (
   <div
     {...props}
     css={styles.readTimeHomepagePlaceholderControl}
