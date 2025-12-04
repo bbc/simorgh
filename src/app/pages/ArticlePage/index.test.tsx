@@ -1406,9 +1406,7 @@ describe('Article Page', () => {
       );
       const isAfter =
         order !== undefined &&
-        (order === 0 ||
-          order === Node.DOCUMENT_POSITION_FOLLOWING ||
-          Boolean(order & Node.DOCUMENT_POSITION_FOLLOWING));
+        order === Node.DOCUMENT_POSITION_FOLLOWING;
       expect(isAfter).toBeTruthy();
       delete (
         global as typeof globalThis & { mockRelatedContentStub?: boolean }
@@ -1476,9 +1474,7 @@ describe('Article Page', () => {
       );
       const isBefore =
         order !== undefined &&
-        (order === 0 ||
-          order === Node.DOCUMENT_POSITION_PRECEDING ||
-          Boolean(order & Node.DOCUMENT_POSITION_PRECEDING));
+        order === Node.DOCUMENT_POSITION_PRECEDING;
       expect(isBefore).toBeTruthy();
       delete (
         global as typeof globalThis & { mockRelatedContentStub?: boolean }
