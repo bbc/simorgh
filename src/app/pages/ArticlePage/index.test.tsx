@@ -1345,8 +1345,9 @@ describe('Article Page', () => {
     });
 
     it('renders personalised topic rail after related content for variation_1', () => {
-      (global as typeof globalThis & { mockRelatedContentStub?: boolean })
-        .mockRelatedContentStub = true;
+      (
+        global as typeof globalThis & { mockRelatedContentStub?: boolean }
+      ).mockRelatedContentStub = true;
 
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
@@ -1414,8 +1415,9 @@ describe('Article Page', () => {
     });
 
     it('renders personalised topic rail before related content for variation_2', () => {
-      (global as typeof globalThis & { mockRelatedContentStub?: boolean })
-        .mockRelatedContentStub = true;
+      (
+        global as typeof globalThis & { mockRelatedContentStub?: boolean }
+      ).mockRelatedContentStub = true;
 
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
