@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const redirectScript = (window: Window) => {
   const { pathname } = window.location;
 
