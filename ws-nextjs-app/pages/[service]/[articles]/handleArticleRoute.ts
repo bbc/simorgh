@@ -53,6 +53,19 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
+  const propsForUnsuccessfulRequests = {
+    isApp,
+    isAmp,
+    isLite,
+    isNextJs: true,
+    service,
+    timeOnServer: Date.now(),
+    variant: variant || null,
+    pageType: ARTICLE_PAGE,
+    pathname: resolvedUrlWithoutQuery,
+    ...extractHeaders(reqHeaders),
+  };
+
   if (!isValidArticlePath(articlePath as string)) {
     routingInfoLogger = logger.error;
 
@@ -60,17 +73,8 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
-        service,
+        ...propsForUnsuccessfulRequests,
         status: NOT_FOUND,
-        timeOnServer: Date.now(),
-        variant: variant || null,
-        pageType: ARTICLE_PAGE,
-        pathname: resolvedUrlWithoutQuery,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
@@ -100,18 +104,8 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
-        service,
+        ...propsForUnsuccessfulRequests,
         status: renderStatus,
-        timeOnServer: Date.now(),
-        variant: variant || null,
-        pageType: ARTICLE_PAGE,
-        pathname: resolvedUrlWithoutQuery,
-        toggles,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
