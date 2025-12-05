@@ -158,7 +158,7 @@ const fetchEventHandler = async event => {
                   if (offlineResponse && offlineResponse.ok) {
                     await cache.put(offlinePageUrl, offlineResponse.clone());
                     // eslint-disable-next-line no-console
-                    console.log(`[SW] ✅ Cached ${offlinePageUrl}`);
+                    console.log(`[SW] Cached ${offlinePageUrl}`);
 
                     // Also cache JS/CSS resources
                     const html = await offlineResponse.text();
