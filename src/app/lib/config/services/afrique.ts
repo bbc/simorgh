@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
     defaultImage:
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1074x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
