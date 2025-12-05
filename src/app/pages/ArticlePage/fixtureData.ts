@@ -1816,6 +1816,76 @@ export const bylineWithNameAndRole = [
   },
 ] as OptimoBylineContributorBlock[];
 
+export const bylineWithNameAndNoRoleAndLocation = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
 export const bylineWithLink = [
   {
     type: 'contributor',
