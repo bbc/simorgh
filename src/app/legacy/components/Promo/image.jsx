@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
   > div > img {
-    object-fit: contain;
+    object-fit: ${props => (props.isPortraitImage ? 'contain' : 'cover')};
   }
   overflow: hidden;
 `;
@@ -83,6 +83,7 @@ const Image = props => {
     src,
     useLargeImages = false,
     className,
+    isPortraitImage,
     ...rest
   } = props;
   const isProgrammeImage = src.startsWith(
@@ -98,7 +99,7 @@ const Image = props => {
 
   const sizes = createSizes(useLargeImages, isProgrammeImage);
   return (
-    <Wrapper>
+    <Wrapper isPortraitImage={isPortraitImage}>
       <BlurredBackgrounnd
         style={{ backgroundImage: `url(${src.replace('{width}', 240)})` }}
       />
