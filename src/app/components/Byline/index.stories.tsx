@@ -3,6 +3,7 @@ import { OptimoBylineBlock } from '#app/models/types/optimo';
 import Timestamp from '../../legacy/containers/ArticleTimestamp';
 import {
   bylineWithNameAndRole,
+  bylineWithNameAndNoRoleAndLocation,
   bylineWithLink,
   bylineWithLinkAndLocation,
   bylineWithNonPngPhoto,
@@ -35,6 +36,10 @@ export default {
 
 export const AuthorRoleByline = () => (
   <Component fixture={bylineWithNameAndRole} />
+);
+
+export const AuthorNoRoleByline = () => (
+  <Component fixture={bylineWithNameAndNoRoleAndLocation} />
 );
 
 export const MultipleContributorsByline = () => (
