@@ -123,7 +123,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
               )}
               {hasMultipleContributors && <Comma />}
             </li>
-            {role ? (
+            {jobRole ? (
               <li css={BylineCss.displayInline}>
                 <span role="text">
                   <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
