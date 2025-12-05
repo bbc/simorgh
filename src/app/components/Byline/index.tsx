@@ -50,8 +50,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             role="list"
             key={authorName}
           >
-            {/* TODO - remove this check for isSingleContributor once this will be stripped out by BFF */}
-            {authorImage && isSingleContributor && (
+            {authorImage && (
               <li
                 css={[
                   BylineCss.ImageWrapper,
@@ -124,23 +123,24 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
               )}
               {hasMultipleContributors && <Comma />}
             </li>
-            <li css={BylineCss.displayInline}>
-              <span role="text">
-                <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                <Text
-                  css={BylineCss.jobRole}
-                  {...(isSingleContributor
-                    ? { size: 'brevier' }
-                    : { size: 'bodyCopy' })}
-                >
-                  {jobRole}
-                </Text>
-              </span>
-              {(location && <Comma />) ||
-                (hasMultipleContributors && index !== lastContributorIndex && (
-                  <Comma />
-                ))}
-            </li>
+            {role ? (
+              <li css={BylineCss.displayInline}>
+                <span role="text">
+                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                  <Text
+                    css={BylineCss.jobRole}
+                    {...(isSingleContributor
+                      ? { size: 'brevier' }
+                      : { size: 'bodyCopy' })}
+                  >
+                    {jobRole}
+                  </Text>
+                </span>
+                {(location && <Comma />) ||
+                  (hasMultipleContributors &&
+                    index !== lastContributorIndex && <Comma />)}
+              </li>
+            ) : null}
             {location ? (
               <li css={BylineCss.displayInline}>
                 <span role="text">
