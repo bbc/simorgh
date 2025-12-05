@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -15,6 +16,7 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
+import useIsPWA from '#app/hooks/useIsPWA';
 
 interface Props extends AppProps {
   pageProps: {
@@ -73,6 +75,30 @@ export default function App({ Component, pageProps }: Props) {
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+  const isPWA = useIsPWA();
+
+  // Register service worker for offline functionality
+  useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      'serviceWorker' in navigator &&
+      service
+    ) {
+      // Register SW for this service (middleware rewrites to /sw.js in dev)
+      navigator.serviceWorker.register(`/${service}/sw.js`);
+    }
+  }, [service]);
+
+  // Send PWA status to service worker
+  useEffect(() => {
+    if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({
+        type: 'PWA_STATUS',
+        isPWA,
+      });
+    }
+  }, [isPWA]);
 
   const RenderChildrenOrError =
     status === 200 ? (
