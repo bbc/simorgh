@@ -36,7 +36,7 @@ a:focus span {
 svg {
   margin-inline-start: 0.5rem;
   fill: currentColor;
-  width: (14 / 16) * 1rem;
-  height: (14 / 16) * 1rem;
+  width: calc(14 / 16) * 1rem;
+  height: calc(14 / 16) * 1rem;
   position: relative;
 }

@@ -3,6 +3,8 @@
 // Assumes that the following custom properties are set globally, e.g. in :root or a theme provider:
 // --font-size-atlas-group-a, --line-height-atlas-group-a, etc.
 
+@use "sass:map";
+
 $font-sizes: (
   atlas: (
     groupA: (
@@ -217,9 +219,9 @@ $font-sizes: (
 );
 
 @mixin gel-font-size($scale, $group) {
-  $values: map-get(map-get($font-sizes, $scale), $group);
-  font-size: map-get($values, font-size);
-  line-height: map-get($values, line-height);
+  $values: map.get(map.get($font-sizes, $scale), $group);
+  font-size: map.get($values, font-size);
+  line-height: map.get($values, line-height);
 }
 
 // Usage:

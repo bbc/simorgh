@@ -1,6 +1,7 @@
 import React, { Fragment, PropsWithChildren, use } from 'react';
-import { LeftChevron, RightChevron } from '../../icons';
 import styles from './index.module.scss';
+import { LeftChevron, RightChevron } from '../../icons';
+
 console.log('Subhead styles:', styles);
 
 import { ServiceContext } from '../../../contexts/ServiceContext';

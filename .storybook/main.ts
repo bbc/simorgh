@@ -57,6 +57,35 @@ const storybookConfig: StorybookConfig = {
         transcludeMarkdown: true,
       },
     },
+    {
+      name: '@storybook/addon-styling-webpack',
+      options: {
+        rules: [
+          // Replaces any existing Sass rules with given rules
+          {
+            test: /\.module\.scss$/,
+            use: [
+              "style-loader",
+              {
+                loader: "css-loader",
+                options: {
+                  modules: true,
+                  importLoaders: 1,
+                  esModule: false,
+                },
+              },
+              {
+                loader: "sass-loader"
+              },
+            ],
+          },
+        ],
+        stats : {
+          loggingDebug: ['sass-loader', 'css-loader'],
+        }
+      }
+    }
+
   ],
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);
@@ -86,32 +115,30 @@ const storybookConfig: StorybookConfig = {
           include: [getProjectRoot()],
           exclude: [/node_modules/],
         },
-        // SCSS Modules: Only files ending with .module.scss are treated as CSS Modules (locally scoped styles)
-        {
-          test: /\.module\.scss$/,
-          use: [
-            require.resolve('style-loader'),
-            {
-              loader: require.resolve('css-loader'),
-              options: {
-                modules: {
-                  localIdentName: '[name]__[local]___[hash:base64:5]',
-                },
-                importLoaders: 1,
-              },
-            },
-            require.resolve('sass-loader'),
-          ],
-        },
-        // Global SCSS: All other .scss files (not ending with .module.scss) are treated as global styles
-        {
-          test: /(?<!\.module)\.scss$/,
-          use: [
-            require.resolve('style-loader'),
-            require.resolve('css-loader'),
-            require.resolve('sass-loader'),
-          ],
-        },
+        // // SCSS Modules: Only files ending with .module.scss are treated as CSS Modules (locally scoped styles)
+        // {
+        //   test: /\.module\.scss$/,
+        //   use: [
+        //     'style-loader',
+        //     {
+        //       loader: 'css-loader',
+        //       options: {
+        //         modules: true,
+        //         importLoaders: 1,
+        //       },
+        //     },
+        //     'sass-loader',
+        //   ],
+        // },
+        // // Global SCSS: All other .scss files (not ending with .module.scss) are treated as global styles
+        // {
+        //   test: /(?<!\.module)\.scss$/,
+        //   use: [
+        //     require.resolve('style-loader'),
+        //     require.resolve('css-loader'),
+        //     require.resolve('sass-loader'),
+        //   ],
+        // },
       ],
     };
 

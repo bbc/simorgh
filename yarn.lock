@@ -4840,6 +4840,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-styling-webpack@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@storybook/addon-styling-webpack@npm:3.0.0"
+  peerDependencies:
+    storybook: ^10.0.0 || ^10.0.0-0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0
+    webpack: ^5.0.0
+  checksum: 10/31cc7a3cecd9f45c57ac13d8647bcd62e508e1975ccee820972cb2abcc2e1166d9a356d629f1f01c88801617744c112976176e92fdf6f382a16efe506f2e5eb3
+  languageName: node
+  linkType: hard
+
 "@storybook/builder-webpack5@npm:10.0.8":
   version: 10.0.8
   resolution: "@storybook/builder-webpack5@npm:10.0.8"
@@ -16351,9 +16361,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.89.2":
-  version: 1.89.2
-  resolution: "sass@npm:1.89.2"
+"sass@npm:1.94.2":
+  version: 1.94.2
+  resolution: "sass@npm:1.94.2"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -16364,7 +16374,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 10/7e9044f3c88b23580731de321cdf4c53fe6139395e2241fce7ff353c60a7cc8fe36b5eedc9701e092d2975f2c124e886379bb9ceab27b5ed053548f202b992b3
+  checksum: 10/e60c214ea93677740c9ddfad55c77fd433255bbfdd9faba137acf1215bed5ba6ad9d83efea81feb87a89283931d01f0435227e3fff37c65c263e0ee05f885328
   languageName: node
   linkType: hard
 
@@ -16877,6 +16887,7 @@ __metadata:
     "@optimizely/react-sdk": "npm:3.2.4"
     "@storybook/addon-a11y": "npm:10.0.8"
     "@storybook/addon-docs": "npm:10.0.8"
+    "@storybook/addon-styling-webpack": "npm:^3.0.0"
     "@storybook/builder-webpack5": "npm:10.0.8"
     "@storybook/cli": "npm:10.0.8"
     "@storybook/react-webpack5": "npm:10.0.8"
@@ -16970,7 +16981,7 @@ __metadata:
     react-router-config: "npm:5.1.1"
     react-router-dom: "npm:5.3.4"
     retry: "npm:0.13.1"
-    sass: "npm:1.89.2"
+    sass: "npm:1.94.2"
     sass-loader: "npm:16.0.5"
     start-server-nestjs-webpack-plugin: "npm:2.2.5"
     storybook: "npm:10.0.8"
