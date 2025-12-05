@@ -6,7 +6,6 @@ import ErrorMain from '#app/legacy/components/ErrorMain';
 const OfflinePage = () => {
   const { service, dir, script } = use(ServiceContext);
 
-  // Static offline page content - should not depend on network-loaded translations
   const title = 'You are offline';
   const message =
     "It seems you don't have an internet connection at the moment. Please check your connection and reload the page.";

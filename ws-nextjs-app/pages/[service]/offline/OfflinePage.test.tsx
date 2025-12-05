@@ -1,9 +1,8 @@
-import React from 'react';
-import OfflinePage from './OfflinePage';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
+import OfflinePage from './OfflinePage';
 
 describe('OfflinePage', () => {
   it('should render correctly', () => {

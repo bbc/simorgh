@@ -15,7 +15,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
-  // Set cache headers for offline page - cache aggressively since content is static
   context.res.setHeader(
     'Cache-Control',
     'public, max-age=300, stale-while-revalidate=600, stale-if-error=3600',

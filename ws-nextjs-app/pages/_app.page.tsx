@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -73,6 +74,18 @@ export default function App({ Component, pageProps }: Props) {
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+  // Register service worker for offline functionality
+  useEffect(() => {
+    if (
+      typeof window !== 'undefined' &&
+      'serviceWorker' in navigator &&
+      service
+    ) {
+      // Register SW for this service (middleware rewrites to /sw.js in dev)
+      navigator.serviceWorker.register(`/${service}/sw.js`);
+    }
+  }, [service]);
 
   const RenderChildrenOrError =
     status === 200 ? (

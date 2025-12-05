@@ -276,7 +276,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.1',
-      fileContentHash: '7d629e99f16e2ef85984905cf0ca2948',
+      fileContentHash: 'f716a47eabf339786d11e0d2047780c4',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

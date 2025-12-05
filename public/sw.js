@@ -6,55 +6,52 @@
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
-const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
-const OFFLINE_PAGE = `/${service}/offline`;
+
+// Helper to get service from URL
+const getServiceFromUrl = url => {
+  const { pathname } = new URL(url);
+  return pathname.split('/')[1];
+};
+
+// Helper to get offline page URL for a service
+const getOfflinePageUrl = service => `/${service}/offline`;
 
 self.addEventListener('install', event => {
+  // eslint-disable-next-line no-console
+  console.log(`[SW v${version}] Installing...`);
+  // Skip waiting to activate immediately
+  self.skipWaiting();
+
+  // Note: We don't pre-cache offline pages here because we don't know which
+  // service the user will visit. Instead, offline pages are cached on-demand
+  // when the user navigates to a service while online (see fetch handler).
+});
+
+self.addEventListener('activate', event => {
+  // eslint-disable-next-line no-console
+  console.log(`[SW v${version}] Activating...`);
   event.waitUntil(
     (async () => {
-      const cache = await caches.open(cacheName);
-      if (hasOfflinePageFunctionality) {
-        try {
-          // Fetch and cache the offline page HTML
-          const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
-            .href;
-          const response = await fetch(offlinePageUrl);
-          if (response && response.ok) {
-            await cache.put(offlinePageUrl, response.clone());
+      // Clean up old caches from previous SW versions
+      const cacheNames = await caches.keys();
+      const currentCaches = [cacheName];
 
-            // Extract and cache JS/CSS resources so page works offline
-            const html = await response.text();
-            const scriptSrcs = [
-              ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
-            ].map(m => m[1]);
-            const linkHrefs = [
-              ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
-            ].map(m => m[1]);
-
-            const resources = [...scriptSrcs, ...linkHrefs]
-              .filter(
-                url =>
-                  url.startsWith('/') || url.startsWith(self.location.origin),
-              )
-              .map(url => new URL(url, self.location.origin).href);
-
-            // Cache resources in parallel (ignore individual failures)
-            await Promise.allSettled(
-              resources.map(async url => {
-                const res = await fetch(url);
-                if (res && res.ok) await cache.put(url, res);
-              }),
-            );
+      await Promise.all(
+        cacheNames.map(cache => {
+          if (!currentCaches.includes(cache)) {
+            // eslint-disable-next-line no-console
+            console.log(`[SW v${version}] Deleting old cache: ${cache}`);
+            return caches.delete(cache);
           }
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          console.error('Failed to cache offline page:', error.message);
-        }
-      }
+          return null;
+        }),
+      );
+
+      // Take control of all pages immediately
+      await self.clients.claim();
     })(),
   );
-  self.skipWaiting();
 });
 
 const CACHEABLE_FILES = [
@@ -141,12 +138,73 @@ const fetchEventHandler = async event => {
             return preloadResponse;
           }
           const networkResponse = await fetch(event.request);
+
+          // Cache offline page for this service when online (for future offline use)
+          if (event.request.mode === 'navigate' && networkResponse.ok) {
+            const service = getServiceFromUrl(event.request.url);
+            const offlinePageUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
+
+            // Only cache if not already cached
+            const cachedOffline = await cache.match(offlinePageUrl);
+            if (!cachedOffline) {
+              // eslint-disable-next-line no-console
+              console.log(`[SW] Caching offline page for ${service}...`);
+              // Cache asynchronously, don't block navigation
+              fetch(offlinePageUrl)
+                .then(async offlineResponse => {
+                  if (offlineResponse && offlineResponse.ok) {
+                    await cache.put(offlinePageUrl, offlineResponse.clone());
+                    // eslint-disable-next-line no-console
+                    console.log(`[SW] ✅ Cached ${offlinePageUrl}`);
+
+                    // Also cache JS/CSS resources
+                    const html = await offlineResponse.text();
+                    const scriptSrcs = [
+                      ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
+                    ].map(m => m[1]);
+                    const linkHrefs = [
+                      ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
+                    ].map(m => m[1]);
+
+                    const resources = [...scriptSrcs, ...linkHrefs]
+                      .filter(
+                        url =>
+                          url.startsWith('/') ||
+                          url.startsWith(self.location.origin),
+                      )
+                      .map(url => new URL(url, self.location.origin).href);
+
+                    await Promise.allSettled(
+                      resources.map(async url => {
+                        const res = await fetch(url);
+                        if (res && res.ok) await cache.put(url, res);
+                      }),
+                    );
+                  }
+                })
+                .catch(err => {
+                  // eslint-disable-next-line no-console
+                  console.error(
+                    `[SW] Failed to cache offline page for ${service}:`,
+                    err,
+                  );
+                });
+            }
+          }
+
           return networkResponse;
         } catch (error) {
           // Network failed - serve offline page for navigation
           if (event.request.mode === 'navigate') {
-            const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
-              .href;
+            // Extract service from the request URL
+            const service = getServiceFromUrl(event.request.url);
+            const offlinePageUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
             const cachedResponse = await cache.match(offlinePageUrl);
             if (cachedResponse) {
               return cachedResponse;
