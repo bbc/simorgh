@@ -50,7 +50,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             role="list"
             key={authorName}
           >
-            {authorImage && (
+            {authorImage && isSingleContributor && (
               <li
                 css={[
                   BylineCss.ImageWrapper,
