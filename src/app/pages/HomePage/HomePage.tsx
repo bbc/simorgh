@@ -1,4 +1,4 @@
-import { Fragment, use, useState } from 'react';
+import { Fragment, use, useEffect, useState } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -42,6 +42,40 @@ export interface HomePageProps {
 const isBillboard = (curation?: Curation) =>
   curation?.visualStyle === 'BANNER' &&
   curation?.visualProminence === 'MAXIMUM';
+
+const getPinnedStorageKey = (service?: string) =>
+  service ? `homepagePinnedCuration:${service}` : null;
+
+const readPinnedCurationId = ({
+  service,
+  curations,
+  isPinningEnabled,
+}: {
+  service: string;
+  curations: Curation[];
+  isPinningEnabled: boolean;
+}) => {
+  if (!isPinningEnabled || typeof window === 'undefined') {
+    return null;
+  }
+
+  const storageKey = getPinnedStorageKey(service);
+  if (!storageKey) return null;
+
+  const storedId = window.localStorage.getItem(storageKey);
+  if (
+    storedId &&
+    curations.some(({ curationId }) => curationId === storedId)
+  ) {
+    return storedId;
+  }
+
+  if (storedId) {
+    window.localStorage.removeItem(storageKey);
+  }
+
+  return null;
+};
 
 const applyPinnedCurationOrder = ({
   curations,
@@ -127,11 +161,45 @@ const HomePage = ({ pageData }: HomePageProps) => {
   const isPinningEnabled =
     service === 'portuguese' || service === 'arabic';
 
+  useEffect(() => {
+    const initialPinnedId = readPinnedCurationId({
+      service,
+      curations,
+      isPinningEnabled,
+    });
+    if (initialPinnedId) {
+      setPinnedCurationId(initialPinnedId);
+    }
+  }, [service, curations, isPinningEnabled]);
+
+  useEffect(() => {
+    if (!isPinningEnabled || !pinnedCurationId) return;
+    const exists = curations.some(
+      ({ curationId }) => curationId === pinnedCurationId,
+    );
+    if (!exists) {
+      setPinnedCurationId(null);
+      const storageKey = getPinnedStorageKey(service);
+      if (storageKey && typeof window !== 'undefined') {
+        window.localStorage.removeItem(storageKey);
+      }
+    }
+  }, [curations, isPinningEnabled, pinnedCurationId, service]);
+
   const handlePinCuration = (curationId?: string) => {
     if (!isPinningEnabled || !curationId) return;
-    setPinnedCurationId(previous =>
-      previous === curationId ? null : curationId,
-    );
+    setPinnedCurationId(previous => {
+      const nextPinnedId = previous === curationId ? null : curationId;
+      const storageKey = getPinnedStorageKey(service);
+      if (storageKey && typeof window !== 'undefined') {
+        if (nextPinnedId) {
+          window.localStorage.setItem(storageKey, nextPinnedId);
+        } else {
+          window.localStorage.removeItem(storageKey);
+        }
+      }
+      return nextPinnedId;
+    });
   };
 
   const curationsForRender = applyPinnedCurationOrder({
