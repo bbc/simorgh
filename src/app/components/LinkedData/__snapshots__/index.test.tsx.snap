@@ -170,7 +170,7 @@ exports[`LinkedData should correctly render linked data for article pages for se
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC",
@@ -181,7 +181,7 @@ exports[`LinkedData should correctly render linked data for article pages for se
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -199,12 +199,12 @@ exports[`LinkedData should correctly render linked data for article pages for se
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
       "url": "https://www.test.bbc.com/pathname",
     },
   ],
@@ -452,7 +452,7 @@ exports[`LinkedData should correctly render publisherLogo for non-news services 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",
@@ -464,7 +464,7 @@ exports[`LinkedData should correctly render publisherLogo for non-news services 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -482,13 +482,13 @@ exports[`LinkedData should correctly render publisherLogo for non-news services 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
       "url": "https://www.test.bbc.com/pathname",
     },
   ],
