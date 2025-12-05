@@ -1,4 +1,4 @@
-import { Fragment, use } from 'react';
+import { Fragment, use, useState } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
@@ -39,6 +39,48 @@ export interface HomePageProps {
   };
 }
 
+const isBillboard = (curation?: Curation) =>
+  curation?.visualStyle === 'BANNER' &&
+  curation?.visualProminence === 'MAXIMUM';
+
+const applyPinnedCurationOrder = ({
+  curations,
+  pinnedCurationId,
+  isPinningEnabled,
+}: {
+  curations: Curation[];
+  pinnedCurationId?: string | null;
+  isPinningEnabled: boolean;
+}): Curation[] => {
+  if (!isPinningEnabled || !pinnedCurationId) {
+    return curations;
+  }
+
+  const pinnedIndex = curations.findIndex(
+    ({ curationId }) => curationId === pinnedCurationId,
+  );
+
+  if (pinnedIndex === -1) {
+    return curations;
+  }
+
+  const hasBillboardAtTop = isBillboard(curations[0]);
+  const targetIndex = hasBillboardAtTop ? 1 : 0;
+
+  if (pinnedIndex === targetIndex) {
+    return curations;
+  }
+
+  const reorderedCurations = [...curations];
+  const [pinnedCuration] = reorderedCurations.splice(pinnedIndex, 1);
+  reorderedCurations.splice(targetIndex, 0, pinnedCuration);
+
+  return reorderedCurations.map((curation, position) => ({
+    ...curation,
+    position,
+  }));
+};
+
 const HomePage = ({ pageData }: HomePageProps) => {
   const {
     translations,
@@ -57,7 +99,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
     seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
-  let { curations } = pageData;
+  let { curations = [] } = pageData;
+
+  const [pinnedCurationId, setPinnedCurationId] = useState<string | null>(null);
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
@@ -80,7 +124,23 @@ const HomePage = ({ pageData }: HomePageProps) => {
     });
   }
 
-  const itemList = getItemList({ curations, name: brandName });
+  const isPinningEnabled =
+    service === 'portuguese' || service === 'arabic';
+
+  const handlePinCuration = (curationId?: string) => {
+    if (!isPinningEnabled || !curationId) return;
+    setPinnedCurationId(previous =>
+      previous === curationId ? null : curationId,
+    );
+  };
+
+  const curationsForRender = applyPinnedCurationOrder({
+    curations,
+    pinnedCurationId,
+    isPinningEnabled,
+  });
+
+  const itemList = getItemList({ curations: curationsForRender, name: brandName });
 
   return (
     <>
@@ -109,7 +169,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
         </VisuallyHiddenText>
         <div css={styles.inner}>
           <div css={styles.margins}>
-            {curations.map(
+            {curationsForRender.map(
               (
                 {
                   visualProminence,
@@ -125,13 +185,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
-                    curations,
+                    curations: curationsForRender,
                     position,
                     visualStyle,
                     visualProminence,
                   });
                 const indexOfFirstNonBanner =
-                  getIndexOfFirstNonBanner(curations);
+                  getIndexOfFirstNonBanner(curationsForRender);
                 return (
                   <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
@@ -142,13 +202,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       topStoriesTitle={topStoriesTitle}
                       position={position}
                       link={link}
-                      curationLength={curations?.length}
+                      curationLength={curationsForRender?.length}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       timeOfDayVariant={timeOfDayVariant}
+                      pinnable={isPinningEnabled}
+                      isPinned={pinnedCurationId === curationId}
+                      onPinCuration={handlePinCuration}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}

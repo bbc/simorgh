@@ -22,6 +22,7 @@ import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 import MediaLoader from '../MediaLoader';
+import PinButton from './PinButton';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -40,6 +41,12 @@ const {
 
 const { NONE } = VISUAL_STYLE;
 const { NORMAL } = VISUAL_PROMINENCE;
+
+type CurationProps = Curation & {
+  pinnable?: boolean;
+  onPinCuration?: (curationId?: string) => void;
+  isPinned?: boolean;
+};
 
 const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
@@ -70,7 +77,10 @@ export default ({
   timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
-}: Curation) => {
+  pinnable = false,
+  onPinCuration,
+  isPinned = false,
+}: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -172,12 +182,26 @@ export default ({
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
       if (portraitVideo?.blocks && portraitVideo?.blocks?.length > 0) {
+        const showPinButton =
+          pinnable && typeof onPinCuration === 'function' && !!curationId;
+        const pinLabelBase =
+          title?.trim() || curationSubheading || 'curation';
+
         return (
           <PortraitVideoCarousel
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             timeOfDayVariant={timeOfDayVariant ?? undefined}
+            pinButton={
+              showPinButton ? (
+                <PinButton
+                  label={`${isPinned ? 'Unpin' : 'Pin'} ${pinLabelBase}`}
+                  isPinned={isPinned}
+                  onClick={() => onPinCuration?.(curationId)}
+                />
+              ) : undefined
+            }
           />
         );
       }

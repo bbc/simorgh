@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { ReactNode, use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -17,6 +17,7 @@ type PortraitVideoCarouselProps = {
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
   timeOfDayVariant?: string;
+  pinButton?: ReactNode;
 };
 
 const PortraitVideoCarousel = ({
@@ -24,6 +25,7 @@ const PortraitVideoCarousel = ({
   blocks,
   eventTrackingData,
   timeOfDayVariant,
+  pinButton,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -67,14 +69,17 @@ const PortraitVideoCarousel = ({
         css={styles.section}
         {...viewTracker}
       >
-        <Heading
-          level={2}
-          size="doublePica"
-          fontVariant="sansBold"
-          css={styles.heading}
-        >
-          {title}
-        </Heading>
+        <div css={styles.headingRow}>
+          <Heading
+            level={2}
+            size="doublePica"
+            fontVariant="sansBold"
+            css={styles.heading}
+          >
+            {title}
+          </Heading>
+          {pinButton}
+        </div>
         <noscript>
           <PortraitVideoNoJs />
         </noscript>

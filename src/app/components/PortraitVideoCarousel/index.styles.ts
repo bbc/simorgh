@@ -17,6 +17,14 @@ const styles = {
         display: 'none',
       },
     }),
+  headingRow: ({ spacings }: Theme) =>
+    css({
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'space-between',
+      gap: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
+    }),
   heading: ({ palette, mq, spacings }: Theme) =>
     css({
       display: 'inline-block',
