@@ -1,324 +1,194 @@
-/* eslint-disable no-useless-return */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-/* eslint-disable no-restricted-globals */
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
-
 const hasOfflinePageFunctionality = true;
 
-// Helper to get service from URL
-const getServiceFromUrl = url => {
-  const { pathname } = new URL(url);
-  return pathname.split('/')[1];
-};
-
-// Helper to get offline page URL for a service
-const getOfflinePageUrl = service => `/${service}/offline`;
-
-// Track which clients are in PWA mode
+// Track PWA clients
 const pwaClients = new Map();
 
-// Listen for messages from clients about their PWA status
-self.addEventListener('message', event => {
-  if (event.data && event.data.type === 'PWA_STATUS') {
-    pwaClients.set(event.source.id, event.data.isPWA);
+console.log(`[SW v${version}] Service Worker loaded.`);
+
+// --------------------
+// Helper Functions
+// --------------------
+const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
+const getOfflinePageUrl = service => `/${service}/offline`;
+
+const openCache = async () => caches.open(cacheName);
+
+const cacheResource = async (cache, url) => {
+  try {
+    const response = await fetch(url);
+    if (response.ok) await cache.put(url, response.clone());
+    return response;
+  } catch (err) {
+    console.error(`[SW v${version}] Failed to cache ${url}:`, err);
   }
-});
+};
 
-self.addEventListener('install', event => {
-  // eslint-disable-next-line no-console
-  console.log(`[SW v${version}] Installing...`);
+const cacheOfflinePageAndResources = async service => {
+  if (!hasOfflinePageFunctionality) return;
+  const cache = await openCache();
+  const offlinePageUrl = new URL(
+    getOfflinePageUrl(service),
+    self.location.origin,
+  ).href;
 
-  event.waitUntil(
-    (async () => {
-      if (hasOfflinePageFunctionality) {
-        const cache = await caches.open(cacheName);
-        const clients = await self.clients.matchAll({ type: 'window' });
+  if (await cache.match(offlinePageUrl)) return;
 
-        // Get unique services from PWA clients only
-        const pwaServices = [
-          ...new Set(
-            clients
-              .filter(client => pwaClients.get(client.id))
-              .map(client => getServiceFromUrl(client.url))
-              .filter(Boolean),
-          ),
-        ];
+  const resp = await cacheResource(cache, offlinePageUrl);
+  if (!resp || !resp.ok) return;
 
-        if (pwaServices.length > 0) {
-          // eslint-disable-next-line no-console
-          console.log(
-            `[SW v${version}] Caching offline pages for PWA:`,
-            pwaServices,
-          );
-        }
+  console.log(`[SW v${version}] Cached offline page for ${service}`);
 
-        // Cache offline pages for PWA services only
-        await Promise.allSettled(
-          pwaServices.map(async service => {
-            const offlinePageUrl = new URL(
-              getOfflinePageUrl(service),
-              self.location.origin,
-            ).href;
-
-            try {
-              const response = await fetch(offlinePageUrl);
-              if (response && response.ok) {
-                await cache.put(offlinePageUrl, response.clone());
-
-                // Cache resources
-                const html = await response.text();
-                const scriptSrcs = [
-                  ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
-                ].map(m => m[1]);
-                const linkHrefs = [
-                  ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
-                ].map(m => m[1]);
-
-                const resources = [...scriptSrcs, ...linkHrefs]
-                  .filter(
-                    url =>
-                      url.startsWith('/') ||
-                      url.startsWith(self.location.origin),
-                  )
-                  .map(url => new URL(url, self.location.origin).href);
-
-                await Promise.allSettled(
-                  resources.map(async url => {
-                    const res = await fetch(url);
-                    if (res && res.ok) await cache.put(url, res);
-                  }),
-                );
-
-                // eslint-disable-next-line no-console
-                console.log(
-                  `[SW v${version}] ✅ Cached offline page for ${service}`,
-                );
-              }
-            } catch (err) {
-              // eslint-disable-next-line no-console
-              console.error(
-                `[SW v${version}] Failed to cache ${service}:`,
-                err.message,
-              );
-            }
-          }),
-        );
-      }
-
-      self.skipWaiting();
-    })(),
+  const html = await resp.text();
+  const scriptSrcs = [
+    ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
+  ].map(m => m[1]);
+  const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
+    m => m[1],
   );
+  const resources = [...scriptSrcs, ...linkHrefs]
+    .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
+    .map(url => new URL(url, self.location.origin).href);
+
+  await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+};
+
+// Cache patterns
+const CACHEABLE_FILES = [
+  /\.js$/,
+  /\.css$/,
+  /\.woff2$/,
+  /reverb-3\.10\.2\.js$/,
+  /smarttag-.*\.min\.js$/,
+  /modern\.frosted_promo.*\.js$/,
+  /moment-lib.*\.js$/,
+  /\/images\/icons\/icon-.*\.png\??v?=?\d*$/,
+];
+
+const WEBP_IMAGE =
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
+
+const isCacheableRequest = url =>
+  CACHEABLE_FILES.some(pattern => pattern.test(url));
+
+const handleWebPRequest = async request => {
+  if (!WEBP_IMAGE.test(request.url)) return null;
+  const accepts = request.headers.get('accept') || '';
+  if (accepts.includes('webp')) return null;
+  const fallbackUrl = request.url.replace('.webp', '');
+  try {
+    return await fetch(fallbackUrl, { mode: 'no-cors' });
+  } catch {
+    return null;
+  }
+};
+
+// --------------------
+// Service Worker Events
+// --------------------
+self.addEventListener('install', event => {
+  console.log(`[SW v${version}] Installing...`);
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
-  // eslint-disable-next-line no-console
   console.log(`[SW v${version}] Activating...`);
   event.waitUntil(
     (async () => {
-      // Clean up old caches from previous SW versions
-      const cacheNames = await caches.keys();
-      const currentCaches = [cacheName];
-
+      const keys = await caches.keys();
       await Promise.all(
-        cacheNames.map(cache => {
-          if (!currentCaches.includes(cache)) {
-            // eslint-disable-next-line no-console
-            console.log(`[SW v${version}] Deleting old cache: ${cache}`);
-            return caches.delete(cache);
-          }
-          return null;
-        }),
+        keys.map(key => key !== cacheName && caches.delete(key)),
       );
-
-      // Take control of all pages immediately
       await self.clients.claim();
     })(),
   );
 });
 
-const CACHEABLE_FILES = [
-  // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
-  // Smart Tag
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
-  // Fonts
-  /\.woff2$/,
-  // Frosted Promo (test and live environments only)
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-  // Moment
-  /\/moment-lib+.*?\.js$/,
-  // PWA Icons
-  /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
-];
+self.addEventListener('message', async event => {
+  if (event.data?.type === 'PWA_STATUS') {
+    const clientId = event.source.id;
+    const isPWA = event.data.isPWA;
+    pwaClients.set(clientId, isPWA);
 
-const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+    console.log(`[SW v${version}] Client ${clientId} PWA status: ${isPWA}`);
 
-const fetchEventHandler = async event => {
-  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
-  );
-
-  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
-
-  if (isRequestForWebpImage) {
-    const req = event.request.clone();
-
-    // Inspect the accept header for WebP support
-
-    const supportsWebp =
-      req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
-
-    if (!supportsWebp) {
-      const imageUrlWithoutWebp = req.url.replace('.webp', '');
-      event.respondWith(
-        fetch(imageUrlWithoutWebp, {
-          mode: 'no-cors',
-        }),
-      );
+    if (isPWA) {
+      const service = getServiceFromUrl(event.source.url);
+      await cacheOfflinePageAndResources(service);
     }
-  } else if (isRequestForCacheableFile) {
-    event.respondWith(
-      (async () => {
-        const cache = await caches.open(cacheName);
-        let response = await cache.match(event.request);
-        if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
-        }
-        return response;
-      })(),
-    );
-  } else if (
-    hasOfflinePageFunctionality &&
-    (event.request.mode === 'navigate' ||
-      event.request.destination === 'script' ||
-      event.request.destination === 'style')
-  ) {
-    event.respondWith(
-      (async () => {
-        const cache = await caches.open(cacheName);
+  }
+});
 
-        // Try cache first for scripts/styles
-        if (
-          event.request.destination === 'script' ||
-          event.request.destination === 'style'
-        ) {
-          const cachedResponse = await cache.match(event.request);
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-        }
+// --------------------
+// Fetch Handler
+// --------------------
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    (async () => {
+      const cache = await openCache();
+      const request = event.request;
 
-        // For navigation or if not in cache, try network
+      // WebP fallback
+      const webpFallback = await handleWebPRequest(request);
+      if (webpFallback) return webpFallback;
+
+      // Cache-first static assets
+      if (isCacheableRequest(request.url)) {
+        const cached = await cache.match(request);
+        if (cached) return cached;
+        const resp = await fetch(request);
+        cache.put(request, resp.clone());
+        return resp;
+      }
+
+      // Navigation requests
+      if (request.mode === 'navigate') {
         try {
           const preloadResponse = await event.preloadResponse;
           if (preloadResponse) {
             return preloadResponse;
           }
-          const networkResponse = await fetch(event.request);
+          const networkResp = await fetch(request);
 
-          // Cache offline page for this service when online (PWA only)
-          if (event.request.mode === 'navigate' && networkResponse.ok) {
-            const client = await self.clients.get(event.clientId);
-            const isPWA = client && pwaClients.get(client.id);
+          // Ensure clientId exists
+          const client = event.clientId
+            ? await self.clients.get(event.clientId)
+            : null;
 
-            if (isPWA) {
-              const service = getServiceFromUrl(event.request.url);
-              const offlinePageUrl = new URL(
-                getOfflinePageUrl(service),
-                self.location.origin,
-              ).href;
-
-              // Only cache if not already cached
-              const cachedOffline = await cache.match(offlinePageUrl);
-              if (!cachedOffline) {
-                // eslint-disable-next-line no-console
-                console.log(`[SW] Caching offline page for ${service}...`);
-                // Cache asynchronously, don't block navigation
-                fetch(offlinePageUrl)
-                  .then(async offlineResponse => {
-                    if (offlineResponse && offlineResponse.ok) {
-                      await cache.put(offlinePageUrl, offlineResponse.clone());
-                      // eslint-disable-next-line no-console
-                      console.log(`[SW] ✅ Cached ${offlinePageUrl}`);
-
-                      // Also cache JS/CSS resources
-                      const html = await offlineResponse.text();
-                      const scriptSrcs = [
-                        ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
-                      ].map(m => m[1]);
-                      const linkHrefs = [
-                        ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
-                      ].map(m => m[1]);
-
-                      const resources = [...scriptSrcs, ...linkHrefs]
-                        .filter(
-                          url =>
-                            url.startsWith('/') ||
-                            url.startsWith(self.location.origin),
-                        )
-                        .map(url => new URL(url, self.location.origin).href);
-
-                      await Promise.allSettled(
-                        resources.map(async url => {
-                          const res = await fetch(url);
-                          if (res && res.ok) await cache.put(url, res);
-                        }),
-                      );
-                    }
-                  })
-                  .catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.error(
-                      `[SW] Failed to cache offline page for ${service}:`,
-                      err,
-                    );
-                  });
-              }
-            }
+          if (client && pwaClients.get(client.id)) {
+            const service = getServiceFromUrl(request.url);
+            await cacheOfflinePageAndResources(service);
           }
 
-          return networkResponse;
-        } catch (error) {
-          // Network failed - serve offline page for navigation (PWA only)
-          if (event.request.mode === 'navigate') {
-            // Check if client is in PWA mode
-            const client = await self.clients.get(event.clientId);
-            const isPWA = client && pwaClients.get(client.id);
+          return networkResp;
+        } catch (err) {
+          console.warn(
+            `[SW v${version}] Navigation failed, serving offline fallback...`,
+          );
 
-            if (isPWA) {
-              // PWA mode - serve custom offline page
-              const service = getServiceFromUrl(event.request.url);
-              const offlinePageUrl = new URL(
-                getOfflinePageUrl(service),
-                self.location.origin,
-              ).href;
-              const cachedResponse = await cache.match(offlinePageUrl);
-              if (cachedResponse) {
-                return cachedResponse;
-              }
-            }
+          const client = event.clientId
+            ? await self.clients.get(event.clientId)
+            : null;
 
-            // Browser mode or no cached page - let browser handle it
-            return new Response('You are offline', {
-              status: 503,
-              headers: { 'Content-Type': 'text/plain' },
-            });
+          if (client && pwaClients.get(client.id)) {
+            const service = getServiceFromUrl(request.url);
+            const offlinePageUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
+            const cachedOffline = await cache.match(offlinePageUrl);
+            if (cachedOffline) return cachedOffline;
           }
-          // For scripts/styles, return error response
-          return new Response('Offline', { status: 503 });
+
+          return new Response('You are offline', {
+            status: 503,
+            headers: { 'Content-Type': 'text/plain' },
+          });
         }
-      })(),
-    );
-  }
-  return;
-};
+      }
 
-self.addEventListener('fetch', fetchEventHandler);
+      return fetch(request);
+    })(),
+  );
+});

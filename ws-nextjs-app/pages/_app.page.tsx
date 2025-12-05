@@ -92,13 +92,54 @@ export default function App({ Component, pageProps }: Props) {
 
   // Send PWA status to service worker
   useEffect(() => {
-    if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({
-        type: 'PWA_STATUS',
-        isPWA,
-      });
-    }
+    const sendPWAStatus = () => {
+      if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
+        console.log('Sending PWA status to SW', isPWA);
+        navigator.serviceWorker.controller.postMessage({
+          type: 'PWA_STATUS',
+          isPWA,
+        });
+      }
+    };
+
+    // Send initially in case SW already controls page
+    // sendPWAStatus();
+    navigator.serviceWorker.ready.then(sendPWAStatus);
+
+    // Listen for SW taking control
+    navigator.serviceWorker.addEventListener('controllerchange', sendPWAStatus);
+
+    return () => {
+      navigator.serviceWorker.removeEventListener(
+        'controllerchange',
+        sendPWAStatus,
+      );
+    };
   }, [isPWA]);
+
+  // useEffect(() => {
+  //   if (!('serviceWorker' in navigator)) return;
+
+  //   function send() {
+  //     if (!navigator.serviceWorker.controller) return;
+  //     console.log('Sending PWA status to SW:', isPWA);
+  //     navigator.serviceWorker.controller.postMessage({
+  //       type: 'PWA_STATUS',
+  //       isPWA,
+  //     });
+  //   }
+
+  //   // Wait until SW is ready
+  //   navigator.serviceWorker.ready.then(send);
+
+  //   // Also send when controller becomes active
+  //   navigator.serviceWorker.addEventListener('controllerchange', send);
+
+  //   // Retry a moment later (SW init delay)
+  //   const t = setTimeout(send, 500);
+
+  //   return () => clearTimeout(t);
+  // }, [isPWA]);
 
   const RenderChildrenOrError =
     status === 200 ? (
