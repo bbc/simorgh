@@ -38,8 +38,18 @@ const isBannerVisible = () => {
 const PWAPromotionalBanner = ({
   promotionalBanner,
 }: PWAPromotionalBannerProps) => {
-  const { isInstallable, promptInstall } = usePWAInstallPrompt();
   const [isVisible, setIsVisible] = useState(false);
+
+  const handleBannerDismiss = () => {
+    setBannerDismissed();
+    setIsVisible(false);
+  };
+
+  const { isInstallable, promptInstall } = usePWAInstallPrompt({
+    onAccepted: handleBannerDismiss,
+    onDismissed: handleBannerDismiss,
+    onError: () => setIsVisible(false),
+  });
 
   useEffect(() => {
     if (isInstallable) {
@@ -48,16 +58,6 @@ const PWAPromotionalBanner = ({
       setIsVisible(false);
     }
   }, [isInstallable]);
-
-  const handlePromptInstall = () => {
-    promptInstall();
-    setIsVisible(false);
-  };
-
-  const handleDismissBanner = () => {
-    setBannerDismissed();
-    setIsVisible(false);
-  };
 
   if (!(isVisible && promotionalBanner)) return null;
   return (
@@ -69,13 +69,13 @@ const PWAPromotionalBanner = ({
         text: promotionalBanner.primaryButton.text,
         longText: promotionalBanner.primaryButton.longText,
       }}
-      onPrimaryClick={handlePromptInstall}
+      onPrimaryClick={promptInstall}
       secondaryButton={{
         text: promotionalBanner.secondaryButton.text,
       }}
-      onSecondaryClick={handleDismissBanner}
+      onSecondaryClick={handleBannerDismiss}
       isDismissible
-      onClose={handleDismissBanner}
+      onClose={handleBannerDismiss}
       bannerLabel={promotionalBanner.bannerLabel}
     />
   );

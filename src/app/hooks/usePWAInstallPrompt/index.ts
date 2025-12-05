@@ -6,7 +6,17 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
 }
 
-const usePWAInstallPrompt = () => {
+interface UsePWAInstallPromptCallbacks {
+  onAccepted?: () => void;
+  onDismissed?: () => void;
+  onError?: (error: unknown) => void;
+}
+
+const usePWAInstallPrompt = ({
+  onAccepted,
+  onDismissed,
+  onError,
+}: UsePWAInstallPromptCallbacks = {}) => {
   const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
   const isPWA = useIsPWA();
@@ -40,10 +50,21 @@ const usePWAInstallPrompt = () => {
   const promptInstall = () => {
     if (!deferredPrompt.current) return;
     deferredPrompt.current.prompt();
-    deferredPrompt.current.userChoice.finally(() => {
-      deferredPrompt.current = null;
-      setIsInstallable(false);
-    });
+    deferredPrompt.current.userChoice
+      .then(result => {
+        if (result.outcome === 'accepted') {
+          onAccepted?.();
+        } else {
+          onDismissed?.();
+        }
+      })
+      .catch(error => {
+        onError?.(error);
+      })
+      .finally(() => {
+        deferredPrompt.current = null;
+        setIsInstallable(false);
+      });
   };
 
   return {
