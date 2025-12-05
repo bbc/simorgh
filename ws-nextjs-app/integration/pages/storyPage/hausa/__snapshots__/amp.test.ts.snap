@@ -328,7 +328,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
