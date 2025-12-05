@@ -9,6 +9,7 @@ type ExperimentsForPageTypeMetrics = {
   activeExperiments: string[];
 }[];
 
+// TODO: Confirm if needed for PWA Mundo experiment
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: Continue Reading button for articles & EXPERIMENT: Article Read Time 2

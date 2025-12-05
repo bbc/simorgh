@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
-import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
-
-interface PWAPromotionalBannerProps {
-  promotionalBanner: PromotionalBannerConfig | undefined;
-}
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotionalBanner_dismissals';
 const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotionalBanner_last_dismissed';
@@ -35,9 +35,10 @@ const isBannerVisible = () => {
   return true;
 };
 
-const PWAPromotionalBanner = ({
-  promotionalBanner,
-}: PWAPromotionalBannerProps) => {
+const PWAPromotionalBanner = () => {
+  const { promotionalBanner } = use(ServiceContext);
+  const { isLite, isAmp } = use(RequestContext);
+
   const [isVisible, setIsVisible] = useState(false);
 
   const handleBannerDismiss = () => {
@@ -51,6 +52,22 @@ const PWAPromotionalBanner = ({
     onError: () => setIsVisible(false),
   });
 
+  const pwaPromoBannerExperimentName = 'newswb_ws_mundo_pwa_prompt';
+
+  // TODO - only get `on` if using CLIENT_SIDE. Not working with Server_SIDE
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
+
+  console.log({
+    pwaPromoBannerExperimentName,
+    pwaPromoBannerVariant,
+    isExperimentEnabled,
+  });
+
   useEffect(() => {
     if (isInstallable) {
       setIsVisible(isBannerVisible());
@@ -59,7 +76,14 @@ const PWAPromotionalBanner = ({
     }
   }, [isInstallable]);
 
-  if (!(isVisible && promotionalBanner)) return null;
+  if (
+    !isExperimentEnabled ||
+    !(isVisible && promotionalBanner) ||
+    isLite ||
+    isAmp
+  )
+    return null;
+
   return (
     <PromotionalBanner
       title={promotionalBanner.title}
