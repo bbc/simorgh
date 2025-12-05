@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';

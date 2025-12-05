@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act } from '../react-testing-library-with-providers';
 import PWAPromotionalBanner from './index';
 import { PromotionalBannerConfig } from '../PromotionalBanner/index.types';
