@@ -14,22 +14,19 @@ const pinButtonStyles = ({ palette, spacings }: Theme) =>
     alignItems: 'center',
     justifyContent: 'center',
     background: 'transparent',
-    border: `1px solid ${palette.GREY_6}`,
-    borderRadius: `${spacings.FULL}rem`,
-    padding: `${spacings.HALF}rem`,
-    color: palette.GREY_8,
+    border: 'none',
+    padding: 0,
+    color: palette.GREY_10,
     cursor: 'pointer',
     lineHeight: 0,
     transition:
       'color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease',
     ':hover, :focus-visible': {
       color: palette.POSTBOX,
-      borderColor: palette.POSTBOX,
-      backgroundColor: palette.GHOST,
     },
     '.pin-icon': {
-      width: `${spacings.FULL + spacings.HALF}rem`,
-      height: `${spacings.FULL + spacings.HALF}rem`,
+      width: `${spacings.TRIPLE}rem`,
+      height: `${spacings.TRIPLE}rem`,
     },
   });
 
