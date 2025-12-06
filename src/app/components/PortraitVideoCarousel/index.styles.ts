@@ -25,7 +25,7 @@ const styles = {
       gap: `${spacings.FULL}rem`,
       marginBottom: `${spacings.FULL}rem`,
     }),
-  heading: ({ palette, mq, spacings }: Theme) =>
+  heading: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       color: palette.GREY_10,
