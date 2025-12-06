@@ -1,5 +1,5 @@
 import { css, Theme, useTheme } from '@emotion/react';
-import { Pin } from '../icons';
+import { Pin, PinFilled } from '../icons';
 
 type PinButtonProps = {
   label: string;
@@ -51,7 +51,11 @@ const PinButton = ({
       className={className}
       title={label}
     >
-      <Pin className="pin-icon" />
+      {isPinned ? (
+        <PinFilled className="pin-icon" />
+      ) : (
+        <Pin className="pin-icon" />
+      )}
     </button>
   );
 };

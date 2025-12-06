@@ -208,7 +208,7 @@ export const Play = ({ className }: { className?: string }) => (
 export const Pin = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 -960 960 960"
+    viewBox="0 0 32 32"
     width="12"
     height="12"
     fill="currentColor"
@@ -216,7 +216,22 @@ export const Pin = ({ className }: { className?: string }) => (
     focusable="false"
     className={className}
   >
-    <path d="m636-458.67 84 78V-314H513.33v240.67L480-40l-33.33-33.33V-314H240v-66.67l80-78v-314.66h-46.67V-840h409.34v66.67H636v314.66Zm-304 78h292l-54.67-52v-340.66H386.67v340.66l-54.67 52Zm146 0Z" />
+    <path d="M24 4v22.6l-8-4.5-8 4.5V4h16m2-2H6v28l10-5.6L26 30V2h0z" />
+  </svg>
+);
+
+export const PinFilled = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="12"
+    height="12"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    className={className}
+  >
+    <polygon points="6,2 6,30 15.4,24.7 16,24.4 16.6,24.7 26,30 26,2 " />
   </svg>
 );
 
