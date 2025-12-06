@@ -43,23 +43,23 @@ const isBillboard = (curation?: Curation) =>
   curation?.visualStyle === 'BANNER' &&
   curation?.visualProminence === 'MAXIMUM';
 
-const getPinnedStorageKey = (service?: string) =>
-  service ? `homepagePinnedCuration:${service}` : null;
+const getBookmarkedStorageKey = (service?: string) =>
+  service ? `homepageBookmarkedCuration:${service}` : null;
 
-const readPinnedCurationId = ({
+const readBookmarkedCurationId = ({
   service,
   curations,
-  isPinningEnabled,
+  isBookmarkingEnabled,
 }: {
   service: string;
   curations: Curation[];
-  isPinningEnabled: boolean;
+  isBookmarkingEnabled: boolean;
 }) => {
-  if (!isPinningEnabled || typeof window === 'undefined') {
+  if (!isBookmarkingEnabled || typeof window === 'undefined') {
     return null;
   }
 
-  const storageKey = getPinnedStorageKey(service);
+  const storageKey = getBookmarkedStorageKey(service);
   if (!storageKey) return null;
 
   const storedId = window.localStorage.getItem(storageKey);
@@ -77,37 +77,37 @@ const readPinnedCurationId = ({
   return null;
 };
 
-const applyPinnedCurationOrder = ({
+const applyBookmarkedCurationOrder = ({
   curations,
-  pinnedCurationId,
-  isPinningEnabled,
+  bookmarkedCurationId,
+  isBookmarkingEnabled,
 }: {
   curations: Curation[];
-  pinnedCurationId?: string | null;
-  isPinningEnabled: boolean;
+  bookmarkedCurationId?: string | null;
+  isBookmarkingEnabled: boolean;
 }): Curation[] => {
-  if (!isPinningEnabled || !pinnedCurationId) {
+  if (!isBookmarkingEnabled || !bookmarkedCurationId) {
     return curations;
   }
 
-  const pinnedIndex = curations.findIndex(
-    ({ curationId }) => curationId === pinnedCurationId,
+  const bookmarkedIndex = curations.findIndex(
+    ({ curationId }) => curationId === bookmarkedCurationId,
   );
 
-  if (pinnedIndex === -1) {
+  if (bookmarkedIndex === -1) {
     return curations;
   }
 
   const hasBillboardAtTop = isBillboard(curations[0]);
   const targetIndex = hasBillboardAtTop ? 1 : 0;
 
-  if (pinnedIndex === targetIndex) {
+  if (bookmarkedIndex === targetIndex) {
     return curations;
   }
 
   const reorderedCurations = [...curations];
-  const [pinnedCuration] = reorderedCurations.splice(pinnedIndex, 1);
-  reorderedCurations.splice(targetIndex, 0, pinnedCuration);
+  const [bookmarkedCuration] = reorderedCurations.splice(bookmarkedIndex, 1);
+  reorderedCurations.splice(targetIndex, 0, bookmarkedCuration);
 
   return reorderedCurations.map((curation, position) => ({
     ...curation,
@@ -135,7 +135,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   let { curations = [] } = pageData;
 
-  const [pinnedCurationId, setPinnedCurationId] = useState<string | null>(null);
+  const [bookmarkedCurationId, setBookmarkedCurationId] = useState<string | null>(null);
 
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
@@ -158,54 +158,54 @@ const HomePage = ({ pageData }: HomePageProps) => {
     });
   }
 
-  const isPinningEnabled =
+  const isBookmarkingEnabled =
     service === 'portuguese' || service === 'arabic';
 
   useEffect(() => {
-    const initialPinnedId = readPinnedCurationId({
+    const initialBookmarkedId = readBookmarkedCurationId({
       service,
       curations,
-      isPinningEnabled,
+      isBookmarkingEnabled,
     });
-    if (initialPinnedId) {
-      setPinnedCurationId(initialPinnedId);
+    if (initialBookmarkedId) {
+      setBookmarkedCurationId(initialBookmarkedId);
     }
-  }, [service, curations, isPinningEnabled]);
+  }, [service, curations, isBookmarkingEnabled]);
 
   useEffect(() => {
-    if (!isPinningEnabled || !pinnedCurationId) return;
+    if (!isBookmarkingEnabled || !bookmarkedCurationId) return;
     const exists = curations.some(
-      ({ curationId }) => curationId === pinnedCurationId,
+      ({ curationId }) => curationId === bookmarkedCurationId,
     );
     if (!exists) {
-      setPinnedCurationId(null);
-      const storageKey = getPinnedStorageKey(service);
+      setBookmarkedCurationId(null);
+      const storageKey = getBookmarkedStorageKey(service);
       if (storageKey && typeof window !== 'undefined') {
         window.localStorage.removeItem(storageKey);
       }
     }
-  }, [curations, isPinningEnabled, pinnedCurationId, service]);
+  }, [curations, isBookmarkingEnabled, bookmarkedCurationId, service]);
 
-  const handlePinCuration = (curationId?: string) => {
-    if (!isPinningEnabled || !curationId) return;
-    setPinnedCurationId(previous => {
-      const nextPinnedId = previous === curationId ? null : curationId;
-      const storageKey = getPinnedStorageKey(service);
+  const handleBookmarkCuration = (curationId?: string) => {
+    if (!isBookmarkingEnabled || !curationId) return;
+    setBookmarkedCurationId(previous => {
+      const nextBookmarkedId = previous === curationId ? null : curationId;
+      const storageKey = getBookmarkedStorageKey(service);
       if (storageKey && typeof window !== 'undefined') {
-        if (nextPinnedId) {
-          window.localStorage.setItem(storageKey, nextPinnedId);
+        if (nextBookmarkedId) {
+          window.localStorage.setItem(storageKey, nextBookmarkedId);
         } else {
           window.localStorage.removeItem(storageKey);
         }
       }
-      return nextPinnedId;
+      return nextBookmarkedId;
     });
   };
 
-  const curationsForRender = applyPinnedCurationOrder({
+  const curationsForRender = applyBookmarkedCurationOrder({
     curations,
-    pinnedCurationId,
-    isPinningEnabled,
+    bookmarkedCurationId,
+    isBookmarkingEnabled,
   });
 
   const itemList = getItemList({ curations: curationsForRender, name: brandName });
@@ -277,9 +277,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
                       timeOfDayVariant={timeOfDayVariant}
-                      pinnable={isPinningEnabled}
-                      isPinned={pinnedCurationId === curationId}
-                      onPinCuration={handlePinCuration}
+                      bookmarkable={isBookmarkingEnabled}
+                      isBookmarked={bookmarkedCurationId === curationId}
+                      onBookmarkCuration={handleBookmarkCuration}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}

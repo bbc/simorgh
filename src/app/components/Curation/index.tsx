@@ -22,7 +22,7 @@ import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 import MediaLoader from '../MediaLoader';
-import PinButton from './PinButton';
+import BookmarkButton from './BookmarkButton';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -42,11 +42,11 @@ const {
 const { NONE } = VISUAL_STYLE;
 const { NORMAL } = VISUAL_PROMINENCE;
 
-type CurationProps = Curation & {
-  pinnable?: boolean;
-  onPinCuration?: (curationId?: string) => void;
-  isPinned?: boolean;
-};
+interface CurationProps extends Curation {
+  bookmarkable?: boolean;
+  onBookmarkCuration?: (curationId?: string) => void;
+  isBookmarked?: boolean;
+}
 
 const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
@@ -77,9 +77,9 @@ export default ({
   timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
-  pinnable = false,
-  onPinCuration,
-  isPinned = false,
+  bookmarkable = false,
+  onBookmarkCuration,
+  isBookmarked = false,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -182,9 +182,11 @@ export default ({
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
       if (portraitVideo?.blocks && portraitVideo?.blocks?.length > 0) {
-        const showPinButton =
-          pinnable && typeof onPinCuration === 'function' && !!curationId;
-        const pinLabelBase =
+        const showBookmarkButton =
+          bookmarkable &&
+          typeof onBookmarkCuration === 'function' &&
+          !!curationId;
+        const bookmarkLabelBase =
           title?.trim() || curationSubheading || 'curation';
 
         return (
@@ -193,12 +195,12 @@ export default ({
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             timeOfDayVariant={timeOfDayVariant ?? undefined}
-            pinButton={
-              showPinButton ? (
-                <PinButton
-                  label={`${isPinned ? 'Unpin' : 'Pin'} ${pinLabelBase}`}
-                  isPinned={isPinned}
-                  onClick={() => onPinCuration?.(curationId)}
+            bookmarkButton={
+              showBookmarkButton ? (
+                <BookmarkButton
+                  label={`${isBookmarked ? 'Remove bookmark' : 'Bookmark'} ${bookmarkLabelBase}`}
+                  isBookmarked={isBookmarked}
+                  onClick={() => onBookmarkCuration?.(curationId)}
                 />
               ) : undefined
             }

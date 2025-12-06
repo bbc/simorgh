@@ -1,14 +1,14 @@
 import { css, Theme, useTheme } from '@emotion/react';
-import { Pin, PinFilled } from '../icons';
+import { Bookmark, BookmarkFilled } from '../icons';
 
-type PinButtonProps = {
+interface BookmarkButtonProps {
   label: string;
-  isPinned?: boolean;
+  isBookmarked?: boolean;
   onClick?: () => void;
   className?: string;
-};
+}
 
-const pinButtonStyles = ({ palette, spacings }: Theme) =>
+const bookmarkButtonStyles = ({ palette, spacings }: Theme) =>
   css({
     display: 'inline-flex',
     alignItems: 'center',
@@ -24,37 +24,37 @@ const pinButtonStyles = ({ palette, spacings }: Theme) =>
     ':hover, :focus-visible': {
       color: palette.POSTBOX,
     },
-    '.pin-icon': {
+    '.bookmark-icon': {
       width: `${spacings.TRIPLE}rem`,
       height: `${spacings.TRIPLE}rem`,
     },
   });
 
-const PinButton = ({
+const BookmarkButton = ({
   label,
-  isPinned = false,
+  isBookmarked = false,
   onClick,
   className,
-}: PinButtonProps) => {
+}: BookmarkButtonProps) => {
   const theme = useTheme();
 
   return (
     <button
       type="button"
       aria-label={label}
-      aria-pressed={isPinned}
+      aria-pressed={isBookmarked}
       onClick={onClick}
-      css={pinButtonStyles(theme)}
+      css={bookmarkButtonStyles(theme)}
       className={className}
       title={label}
     >
-      {isPinned ? (
-        <PinFilled className="pin-icon" />
+      {isBookmarked ? (
+        <BookmarkFilled className="bookmark-icon" />
       ) : (
-        <Pin className="pin-icon" />
+        <Bookmark className="bookmark-icon" />
       )}
     </button>
   );
 };
 
-export default PinButton;
+export default BookmarkButton;

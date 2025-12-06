@@ -12,20 +12,20 @@ import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 
-type PortraitVideoCarouselProps = {
+interface PortraitVideoCarouselProps {
   title: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
   timeOfDayVariant?: string;
-  pinButton?: ReactNode;
-};
+  bookmarkButton?: ReactNode;
+}
 
 const PortraitVideoCarousel = ({
   title,
   blocks,
   eventTrackingData,
   timeOfDayVariant,
-  pinButton,
+  bookmarkButton,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,7 +78,7 @@ const PortraitVideoCarousel = ({
           >
             {title}
           </Heading>
-          {pinButton}
+          {bookmarkButton}
         </div>
         <noscript>
           <PortraitVideoNoJs />

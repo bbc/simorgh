@@ -43,11 +43,11 @@ export enum ChevronOrientation {
   FORWARD = 'forward',
 }
 
-type ChevronProps = {
+interface ChevronProps {
   className?: string;
   dir: Direction;
   orientation: ChevronOrientation;
-};
+}
 
 export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
   let normalisedDirection = ChevronOrientation.FORWARD;
@@ -205,7 +205,7 @@ export const Play = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Pin = ({ className }: { className?: string }) => (
+export const Bookmark = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
@@ -220,7 +220,7 @@ export const Pin = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const PinFilled = ({ className }: { className?: string }) => (
+export const BookmarkFilled = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
