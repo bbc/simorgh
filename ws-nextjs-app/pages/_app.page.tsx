@@ -95,10 +95,15 @@ export default function App({ Component, pageProps }: Props) {
     const sendPWAStatus = () => {
       if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
         console.log('Sending PWA status to SW', isPWA);
-        navigator.serviceWorker.controller.postMessage({
-          type: 'PWA_STATUS',
-          isPWA,
-        });
+        if (
+          navigator.serviceWorker.controller &&
+          navigator.serviceWorker.controller.state === 'activated'
+        ) {
+          navigator.serviceWorker.controller.postMessage({
+            type: 'PWA_STATUS',
+            isPWA,
+          });
+        }
       }
     };
 

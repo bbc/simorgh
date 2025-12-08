@@ -1,6 +1,6 @@
-import { use, useEffect } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
-import onClient from '#lib/utilities/onClient';
+// import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
