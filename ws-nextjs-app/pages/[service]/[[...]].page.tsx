@@ -52,13 +52,32 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   }
 };
 
-const createNotFoundResponse = (
-  resolvedUrl: string,
-  service: string,
-  variant: string | null,
-  reqHeaders: IncomingHttpHeaders,
-) => {
+export const getServerSideProps: GetServerSideProps = async context => {
+  const {
+    resolvedUrl,
+    req: { headers: reqHeaders },
+  } = context;
+
+  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+
+  const variant = deriveVariant(variantFromUrl);
+
+  // Determine the page type
+  const pageType = getPageTypeFromHeaders(reqHeaders);
+
+  if (resolvedUrl?.includes('av-embeds')) {
+    return handleAvRoute(context);
+  }
+
+  if (pageType === ARTICLE_PAGE) {
+    return handleArticleRoute(context);
+  }
+
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
+
+  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+
+  context.res.statusCode = 404;
 
   return {
     props: {
@@ -74,35 +93,6 @@ const createNotFoundResponse = (
       ...extractHeaders(reqHeaders),
     },
   };
-};
-
-export const getServerSideProps: GetServerSideProps = async context => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
-
-  const { service, variant: variantFromUrl } = context.query as PageDataParams;
-  const variant = deriveVariant(variantFromUrl);
-
-  if (resolvedUrl?.includes('av-embeds')) {
-    return handleAvRoute(context);
-  }
-
-  const pageType = getPageTypeFromHeaders(reqHeaders);
-  if (pageType === ARTICLE_PAGE) {
-    return handleArticleRoute(context);
-  }
-
-  // Default: return 404
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
-  context.res.statusCode = 404;
-  return createNotFoundResponse(
-    resolvedUrl,
-    service as string,
-    variant,
-    reqHeaders,
-  );
 };
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
