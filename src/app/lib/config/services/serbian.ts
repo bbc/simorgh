@@ -15,7 +15,8 @@ const baseServiceConfig = {
   useReverb: true,
   chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
   dir: 'ltr' as Direction,
   service: 'serbian' as Services,
   languageName: 'Serbian',
