@@ -494,7 +494,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -512,13 +512,13 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
     },
     {
@@ -535,7 +535,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical On Demand T V Page SEO OG description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
 
-exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical On Demand T V Page SEO OG image alt 1`] = `"BBC News Hausa"`;
 
@@ -561,7 +561,7 @@ exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"Sashen Hau
 
 exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News Hausa"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbchausa"`;
 
