@@ -305,7 +305,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -323,13 +323,13 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News پښتو",
         "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/pashto/bbc_pashto_radio/w3ct7cnw",
     },
     {

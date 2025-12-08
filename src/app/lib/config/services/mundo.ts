@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -65,7 +66,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhs01',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',

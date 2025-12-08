@@ -252,7 +252,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News ไทย",
@@ -283,7 +283,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News ไทย",
