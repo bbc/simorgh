@@ -13,10 +13,10 @@ const ManifestContainer = () => {
   const pwaPromoBannerExperimentName = 'newswb_ws_mundo_pwa_prompt';
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
+    experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
+  const isExperimentEnabled = Boolean(pwaPromoBannerVariant) || true;
 
   // eslint-disable-next-line no-console
   console.log(`ManifestContainer`, {

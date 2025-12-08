@@ -56,7 +56,7 @@ const PWAPromotionalBanner = () => {
 
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
 
-  console.log({
+  console.log(`PWAPromotionalBanner`, {
     pwaPromoBannerExperimentName,
     pwaPromoBannerVariant,
     isExperimentEnabled,
