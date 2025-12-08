@@ -1,20 +1,8 @@
-import {
-  buildPageATIUrl,
-  buildPageATIParams,
-  buildPageReverbParams,
-} from './buildParams';
+import { buildPageATIParams, buildPageReverbParams } from './buildParams';
 import {
   ATIConfigurationDetailsProviders,
   ReverbDetailsProviders,
 } from '../types';
-
-export const buildATIUrl = ({
-  requestContext,
-  serviceContext,
-  atiData,
-}: ATIConfigurationDetailsProviders) => {
-  return buildPageATIUrl({ atiData, requestContext, serviceContext });
-};
 
 export const buildReverbParams = ({
   requestContext,
