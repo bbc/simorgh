@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const version = 'v0.3.6';
+const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 const hasOfflinePageFunctionality = true;
 
@@ -27,23 +27,15 @@ const cacheResource = async (cache, url) => {
 };
 
 const cacheOfflinePageAndResources = async service => {
-  console.log('Inside cacheOfflinePageAndResources--- 1111 ---', service);
   if (!hasOfflinePageFunctionality) return;
   const cache = await openCache();
   const offlinePageUrl = new URL(
     getOfflinePageUrl(service),
     self.location.origin,
   ).href;
-  console.log(
-    'Inside cacheOfflinePageAndResources--- 2222 ---',
-    offlinePageUrl,
-  );
-
   if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
-  console.log('Inside cacheOfflinePageAndResources--- 333 ---', resp);
-
   if (!resp || !resp.ok) return;
 
   console.log(`[SW v${version}] Cached offline page for ${service}`);
@@ -92,23 +84,8 @@ const handleWebPRequest = async request => {
   }
 };
 
-// --------------------
-// Service Worker Events
-// --------------------
-// self.addEventListener('install', event => {
-//   console.log(`[SW v${version}] Installing...`);
-//   event.waitUntil(
-//     (async () => {
-//       const service = getServiceFromUrl(event.source.url);
-//       await cacheOfflinePageAndResources(service);
-//     })(),
-//   );
-
-//   self.skipWaiting();
-// });
-
+// -------------Install event -------
 self.addEventListener('install', event => {
-  // eslint-disable-next-line no-console
   console.log(`[SW v${version}] Installing...`);
 
   event.waitUntil(
@@ -128,7 +105,6 @@ self.addEventListener('install', event => {
         ];
 
         if (pwaServices.length > 0) {
-          // eslint-disable-next-line no-console
           console.log(
             `[SW v${version}] Caching offline pages for PWA:`,
             pwaServices,
@@ -147,8 +123,8 @@ self.addEventListener('install', event => {
   );
 });
 
+// -------Activate Handler-------------
 self.addEventListener('activate', event => {
-  // eslint-disable-next-line no-console
   console.log(`[SW v${version}] Activating...`);
   event.waitUntil(
     (async () => {
@@ -161,15 +137,12 @@ self.addEventListener('activate', event => {
   );
 });
 
+// -------Message Event-------------
 self.addEventListener('message', async event => {
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const isPWA = event.data.isPWA;
     pwaClients.set(clientId, isPWA);
-
-    console.log(
-      `Inside messagemessagemessage [SW v${version}] Client ${clientId} PWA status: ${isPWA}`,
-    );
 
     if (isPWA) {
       const service = getServiceFromUrl(event.source.url);
@@ -178,9 +151,7 @@ self.addEventListener('message', async event => {
   }
 });
 
-// --------------------
-// Fetch Handler
-// --------------------
+// -------Fetch Handler-------------
 const fetchEventHandler = async event => {
   const request = event.request;
   const url = request.url;
@@ -197,9 +168,7 @@ const fetchEventHandler = async event => {
 
   const cache = await openCache();
 
-  // --------------------------
-  // 1. Cache-first static assets
-  // --------------------------
+  // ---------------Cache-first static assets-----------
   if (isCacheableRequest(url)) {
     const cached = await cache.match(request);
     if (cached) return cached;
@@ -216,9 +185,7 @@ const fetchEventHandler = async event => {
     }
   }
 
-  // --------------------------
-  // 2. Navigation requests
-  // --------------------------
+  // ---------------Navigation requests-----------
   if (request.mode === 'navigate') {
     console.log(`[SW FETCH] Navigation: ${url}`);
 
@@ -270,9 +237,7 @@ const fetchEventHandler = async event => {
     }
   }
 
-  // --------------------------
-  // 3. Fall-through: Always network
-  // --------------------------
+  // -----------Fall-through: Always network---------------
   try {
     return await fetch(request);
   } catch (err) {

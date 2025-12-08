@@ -168,9 +168,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
         />
-        <a href="http://localhost:7081/mundo/articles/cgkemkrz18po?renderer_env=live">
-          click me
-        </a>
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (

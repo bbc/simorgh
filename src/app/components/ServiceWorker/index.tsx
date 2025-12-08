@@ -1,6 +1,6 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-// import onClient from '#lib/utilities/onClient';
+import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -36,14 +36,14 @@ export default () => {
   const { isAmp, canonicalLink } = use(RequestContext);
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
 
-  // useEffect(() => {
-  //   const shouldInstallServiceWorker =
-  //     swPath && onClient() && 'serviceWorker' in navigator;
+  useEffect(() => {
+    const shouldInstallServiceWorker =
+      swPath && onClient() && 'serviceWorker' in navigator;
 
-  //   if (shouldInstallServiceWorker) {
-  //     navigator.serviceWorker.register(`/${service}${swPath}`);
-  //   }
-  // }, [swPath, service]);
+    if (shouldInstallServiceWorker) {
+      navigator.serviceWorker.register(`/${service}${swPath}`);
+    }
+  }, [swPath, service]);
 
   return isAmp && swPath ? (
     <>
