@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { useState, use } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -39,21 +39,14 @@ const PWAPromotionalBanner = () => {
   const { promotionalBanner } = use(ServiceContext);
   const { isLite, isAmp } = use(RequestContext);
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   const handleBannerDismiss = () => {
     setBannerDismissed();
     setIsVisible(false);
   };
 
-  const { isInstallable, promptInstall } = usePWAInstallPrompt({
-    onAccepted: handleBannerDismiss,
-    onDismissed: handleBannerDismiss,
-    onError: () => setIsVisible(false),
-  });
-
   const pwaPromoBannerExperimentName = 'newswb_ws_mundo_pwa_prompt';
-
   // TODO - only get `on` if using CLIENT_SIDE. Not working with Server_SIDE
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: pwaPromoBannerExperimentName,
@@ -68,22 +61,15 @@ const PWAPromotionalBanner = () => {
     isExperimentEnabled,
   });
 
-  useEffect(() => {
-    if (isInstallable) {
-      setIsVisible(isBannerVisible());
-    } else {
-      setIsVisible(false);
-    }
-  }, [isInstallable]);
+  const { promptInstall, isInstallable } = usePWAInstallPrompt({
+    onAccepted: handleBannerDismiss,
+    onDismissed: handleBannerDismiss,
+    onError: () => setIsVisible(false),
+  });
 
-  if (
-    !isExperimentEnabled ||
-    !(isVisible && promotionalBanner) ||
-    isLite ||
-    isAmp
-  )
+  if (!isVisible || !isInstallable || !promotionalBanner || isLite || isAmp) {
     return null;
-
+  }
   return (
     <PromotionalBanner
       title={promotionalBanner.title}
