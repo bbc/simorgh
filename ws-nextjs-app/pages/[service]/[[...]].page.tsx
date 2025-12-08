@@ -85,6 +85,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp,
       isLite,
       isNextJs: true,
+      pathname: resolvedUrl.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
@@ -99,7 +100,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // AV Embeds
     case AV_EMBEDS:
       return <AvEmbedsPageLayout {...props} />;
-    // Article Pages (CPS + Legacy TC2 assets)
+    // Article Pages (Cymrufyw and Naidheachdan - erthyglau & sgeulachdan AMP + CPS + Legacy TC2 assets)
+    case ARTICLE_PAGE:
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:

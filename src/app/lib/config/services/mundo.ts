@@ -66,7 +66,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhs01',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
