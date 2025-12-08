@@ -1,4 +1,10 @@
+/* eslint-disable no-useless-return */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-console */
+
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 const hasOfflinePageFunctionality = true;

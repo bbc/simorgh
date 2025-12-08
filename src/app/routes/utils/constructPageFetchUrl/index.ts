@@ -22,7 +22,6 @@ import {
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
-  OFFLINE_PAGE,
   LIVE_TV_PAGE,
 } from '../pageTypes';
 import parseRoute from '../parseRoute';
@@ -63,9 +62,6 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
 
         return removeLeadingSlash(path);
       };
-      break;
-    case OFFLINE_PAGE:
-      getIdFunction = () => 'offline';
       break;
     case CPS_ASSET:
       getIdFunction = (path: string) => getCpsId(path);
