@@ -5,8 +5,6 @@ import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import useMediaQuery from '#app/hooks/useMediaQuery';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -233,11 +231,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  const [isMobileViewport, setIsMobileViewport] = useState(false);
-  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event => {
-    setIsMobileViewport(event.matches);
-  });
-
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
   const readTimeExperimentVariant = useOptimizelyVariation({
@@ -253,23 +246,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   });
 
   const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
-  let personalisedContentExperimentVariant = useOptimizelyVariation({
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // TEMP: force variant locally (remove before commit)
-  personalisedContentExperimentVariant = 'variation_1'; // or 'variation_2'
-
-  const personalisedVariants = ['variation_1', 'variation_2'];
-  const isPersonalisedVariant = personalisedVariants.includes(
-    personalisedContentExperimentVariant ?? '',
-  );
-  const isPersonalisedVariantTwo =
-    personalisedContentExperimentVariant === 'variation_2';
-
   const showPersonalisedContent = Boolean(
-    !isAmp && !isLite && !isApp && isMobileViewport && isPersonalisedVariant,
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      personalisedContentExperimentVariant &&
+      personalisedContentExperimentVariant !== 'off',
   );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
@@ -496,7 +483,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           {/* EXPERIMENT: Personalised Content */}
-          {isPersonalisedVariantTwo && personalisedContentBlock}
+          {personalisedContentExperimentVariant === 'variation_2' &&
+            personalisedContentBlock}
           <RelatedContentSection
             content={blocks}
             // EXPERIMENT: Time of Day Experiment
@@ -508,7 +496,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               },
             })}
           />
-          {!isPersonalisedVariantTwo && personalisedContentBlock}
+          {/* EXPERIMENT: Personalised Content */}
+          {personalisedContentExperimentVariant === 'variation_1' &&
+            personalisedContentBlock}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
