@@ -423,7 +423,6 @@ export const service: DefaultServiceConfig = {
             id: 'indonesia',
             href: 'https://www.bbc.com/indonesia',
             label: 'BBC News Indonesia',
-            lang: 'id',
           },
           {
             id: 'japanese',
@@ -571,7 +570,6 @@ export const service: DefaultServiceConfig = {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
             label: 'BBC News Polska',
-            lang: 'pl',
           },
           {
             id: 'russian',
@@ -609,13 +607,11 @@ export const service: DefaultServiceConfig = {
             id: 'portuguese',
             href: 'https://www.bbc.com/portuguese',
             label: 'BBC News Brasil',
-            lang: 'pt',
           },
           {
             id: 'mundo',
             href: 'https://www.bbc.com/mundo',
             label: 'BBC News Mundo',
-            lang: 'es',
           },
         ],
       },
