@@ -39,7 +39,8 @@ const useIsPWA = (): boolean => {
       try {
         localStorage.setItem('bbc_is_pwa', JSON.stringify(pwaStatus));
       } catch (err) {
-        // Ignore localStorage errors
+        // eslint-disable-next-line no-console
+        console.warn('Failed to set PWA status:', err);
       }
     }
   }, []);

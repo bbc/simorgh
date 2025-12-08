@@ -25,7 +25,7 @@ const useOfflinePageTracker = () => {
 
       if (!isPWA) {
         // eslint-disable-next-line no-console
-        console.log('[Offline Tracking] Skipped - not PWA mode');
+        console.warn('[Offline Tracking] Skipped - not PWA mode');
         return;
       }
 
@@ -49,7 +49,7 @@ const useOfflinePageTracker = () => {
     } catch (err) {
       // localStorage might be unavailable in private browsing
       // eslint-disable-next-line no-console
-      console.error('[Offline Tracking] Failed to set offline flag:', err);
+      console.warn('[Offline Tracking] Failed to set offline flag:', err);
     }
   }, []);
 };
