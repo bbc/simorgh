@@ -10,7 +10,7 @@ exports[`Home Page should correctly render linked data for home pages 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -28,13 +28,13 @@ exports[`Home Page should correctly render linked data for home pages 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
       "url": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
     },
     {

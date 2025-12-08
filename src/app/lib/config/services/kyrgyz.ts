@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
     externalLinkText: ', баракчалар',

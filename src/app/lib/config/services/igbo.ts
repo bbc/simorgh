@@ -25,7 +25,8 @@ export const service: DefaultServiceConfig = {
     service: 'igbo',
     serviceName: 'Igbo',
     languageName: 'Igbo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
     externalLinkText: ', na mpụta',
