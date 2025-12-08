@@ -47,10 +47,11 @@ const PWAPromotionalBanner = () => {
   };
 
   const pwaPromoBannerExperimentName = 'newswb_ws_mundo_pwa_prompt';
+
   // TODO - only get `on` if using CLIENT_SIDE. Not working with Server_SIDE
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
+    experimentType: ExperimentType.SERVER_SIDE,
   });
 
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
