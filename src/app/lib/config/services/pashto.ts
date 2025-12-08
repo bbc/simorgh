@@ -19,7 +19,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News پښتو',
     dir: 'rtl',
     externalLinkText: '، بهرنی',

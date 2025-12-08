@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
     serviceLocalizedName: 'Gahuza',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Gahuza',
     dir: `ltr`,
     externalLinkText: ', bivuye ahandi',
