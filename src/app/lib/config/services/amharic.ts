@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/amharic/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News አማርኛ',
     dir: `ltr`,
     externalLinkText: ', ውጫዊ',

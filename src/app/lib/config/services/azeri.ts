@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/azeri/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Azərbaycanca',
     dir: `ltr`,
     externalLinkText: ', BBC-dən kənar',

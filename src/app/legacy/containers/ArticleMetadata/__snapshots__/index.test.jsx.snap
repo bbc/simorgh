@@ -593,7 +593,7 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -637,7 +637,7 @@ exports[`should match snapshot for Persian News & UK origin 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
