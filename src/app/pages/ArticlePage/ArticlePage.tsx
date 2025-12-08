@@ -245,12 +245,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Location based Topics Experiment
   const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
   const personalisedContentExperimentVariant = useOptimizelyVariation({
     experimentName: personalisedContentExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Location based Topics Experiment
   const showPersonalisedContent = Boolean(
     !isAmp &&
       !isLite &&
@@ -403,6 +405,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+
+  // EXPERIMENT: Location based Topics Experiment
   const personalisedContentBlock = showPersonalisedContent ? (
     <PersonalisedContent
       pageData={pageData}
@@ -482,7 +486,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
-          {/* EXPERIMENT: Personalised Content */}
+          {/* EXPERIMENT: Location based Topics Experiment */}
           {personalisedContentExperimentVariant === 'variation_2' &&
             personalisedContentBlock}
           <RelatedContentSection
@@ -495,16 +499,31 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 experimentVariant: timeOfDayExperimentVariant,
               },
             })}
+            // EXPERIMENT: Location based Topics Experiment
+            {...(personalisedContentExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: personalisedContentExperimentName,
+                experimentVariant: personalisedContentExperimentVariant,
+              },
+            })}
           />
-          {/* EXPERIMENT: Personalised Content */}
+          {/* EXPERIMENT: Location based Topics Experiment */}
           {personalisedContentExperimentVariant === 'variation_1' &&
             personalisedContentBlock}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
             pageData={pageData}
+            // EXPERIMENT: Location based Topics Experiment
+            personalisedContentExperimentVariant={
+              personalisedContentExperimentVariant
+            }
+            personalisedContentExperimentName={
+              personalisedContentExperimentName
+            }
             // EXPERIMENT: Time of Day Experiment
-            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
             timeOfDayExperimentName={timeOfDayExperimentName}
           />
         )}
