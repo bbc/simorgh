@@ -21,6 +21,7 @@ import {
   articleStyDataPidgin,
   articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
+import { RelatedContentList } from '#app/components/RelatedContentSection/fixture';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -149,6 +150,10 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it.each([
     {
       testScenario:
@@ -1239,6 +1244,8 @@ describe('Article Page', () => {
   });
 
   describe('Personalised topic curation', () => {
+    const relatedContentBlock = RelatedContentList[0];
+
     it('renders nothing if personalisedContentData is undefined', () => {
       const pageData = {
         ...articleDataNews,
@@ -1285,13 +1292,14 @@ describe('Article Page', () => {
           topicId: 'topic-1',
         },
       ];
-      const pageData = {
-        ...articleDataNews,
-        secondaryColumn: {
-          topStories: [],
-          features: [],
-          personalisedContent,
-        },
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
       };
       render(
         <PersonalisedContent
@@ -1300,9 +1308,133 @@ describe('Article Page', () => {
         />,
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
-      expect(screen.getByText('Recommended for you')).toBeInTheDocument();
+      expect(
+        screen.getByText('Más información sobre Recommended for you'),
+      ).toBeInTheDocument();
       expect(screen.getByText('Article 1')).toBeInTheDocument();
       expect(screen.getByText('Article 2')).toBeInTheDocument();
+    });
+
+    it('renders personalised topic rail after related content for variation_1', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_1';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isAfter =
+        order !== undefined && order === Node.DOCUMENT_POSITION_FOLLOWING;
+      expect(isAfter).toBeTruthy();
+    });
+
+    it('renders personalised topic rail before related content for variation_2', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_2';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isBefore =
+        order !== undefined && order === Node.DOCUMENT_POSITION_PRECEDING;
+      expect(isBefore).toBeTruthy();
     });
   });
 });

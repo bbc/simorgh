@@ -13,6 +13,10 @@ import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import {
+  getOfflineTrackingData,
+  clearOfflinePageFlag,
+} from '#app/hooks/useOfflinePageTracker';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -61,7 +65,23 @@ const CanonicalATIAnalytics = ({
   const [atiPageViewUrl] = useState(atiPageViewUrlString);
 
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
+    if (!isOperaProxy()) {
+      // Check if user was previously shown offline page
+      const offlineData = getOfflineTrackingData();
+
+      // Append offline tracking data to URL if available
+      let trackingUrl = atiPageViewUrl;
+      if (offlineData) {
+        trackingUrl = `${atiPageViewUrl}&offline=true&offline_network_type=${offlineData.networkType}`;
+      }
+
+      sendBeacon(trackingUrl, reverbBeaconConfig);
+
+      // Clear offline flag after tracking
+      if (offlineData) {
+        clearOfflinePageFlag();
+      }
+    }
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
   const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);

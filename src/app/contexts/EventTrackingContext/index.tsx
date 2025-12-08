@@ -22,6 +22,7 @@ import {
   TV_PAGE,
   AUDIO_PAGE,
   LIVE_TV_PAGE,
+  OFFLINE_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';
@@ -56,6 +57,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
     [LIVE_TV_PAGE]: 'live-tv',
+    [OFFLINE_PAGE]: 'offline-page',
   }[pageType];
 
   if (!campaignID) {

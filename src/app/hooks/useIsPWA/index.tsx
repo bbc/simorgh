@@ -26,13 +26,21 @@ const useIsPWA = (): boolean => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const isIOSStandalone = (window.navigator as any)?.standalone === true;
 
-      setIsPWA(
+      const pwaStatus =
         isStandalone ||
-          isMinimalUi ||
-          isIOSStandalone ||
-          isFullscreen ||
-          isWindowControlsOverlay,
-      );
+        isMinimalUi ||
+        isIOSStandalone ||
+        isFullscreen ||
+        isWindowControlsOverlay;
+
+      setIsPWA(pwaStatus);
+
+      // Store PWA status for offline page tracking
+      try {
+        localStorage.setItem('bbc_is_pwa', JSON.stringify(pwaStatus));
+      } catch (err) {
+        // Ignore localStorage errors
+      }
     }
   }, []);
 

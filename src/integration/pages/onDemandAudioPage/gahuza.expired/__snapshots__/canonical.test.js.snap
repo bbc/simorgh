@@ -277,7 +277,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -295,13 +295,13 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Gahuza",
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
     },
   ],
