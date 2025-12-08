@@ -536,13 +536,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          // EXPERIMENT: Time of Day Experiment
           eventTrackingData={{
             componentName: 'most-read',
+            // EXPERIMENT: Time of Day Experiment
             ...(timeOfDayExperimentVariant && {
               sendOptimizelyEvents: true,
               experimentName: timeOfDayExperimentName,
               experimentVariant: timeOfDayExperimentVariant,
+            }),
+            // EXPERIMENT: Location based Topics Experiment
+            ...(personalisedContentExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: personalisedContentExperimentName,
+              experimentVariant: personalisedContentExperimentVariant,
             }),
           }}
         />
