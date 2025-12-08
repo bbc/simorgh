@@ -47,7 +47,9 @@ const PWAPromotionalBanner = () => {
     onError: () => setIsVisible(false),
   });
 
-  if (!(isVisible && isInstallable && promotionalBanner)) return null;
+  if (!isVisible || !isInstallable || !promotionalBanner) {
+    return null;
+  }
   return (
     <PromotionalBanner
       title={promotionalBanner.title}
