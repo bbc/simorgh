@@ -1,4 +1,4 @@
-import { useEffect, useState, use } from 'react';
+import { useState, use } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 
@@ -34,28 +34,20 @@ const isBannerVisible = () => {
 
 const PWAPromotionalBanner = () => {
   const { promotionalBanner } = use(ServiceContext);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   const handleBannerDismiss = () => {
     setBannerDismissed();
     setIsVisible(false);
   };
 
-  const { isInstallable, promptInstall } = usePWAInstallPrompt({
+  const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: handleBannerDismiss,
     onDismissed: handleBannerDismiss,
     onError: () => setIsVisible(false),
   });
 
-  useEffect(() => {
-    if (isInstallable) {
-      setIsVisible(isBannerVisible());
-    } else {
-      setIsVisible(false);
-    }
-  }, [isInstallable]);
-
-  if (!(isVisible && promotionalBanner)) return null;
+  if (!(isVisible && isInstallable && promotionalBanner)) return null;
   return (
     <PromotionalBanner
       title={promotionalBanner.title}
