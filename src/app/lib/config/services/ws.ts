@@ -349,7 +349,6 @@ export const service: DefaultServiceConfig = {
             id: 'afrique',
             href: 'https://www.bbc.com/afrique',
             label: 'BBC News Afrique',
-            lang: 'fr',
           },
           {
             id: 'hausa',
@@ -367,7 +366,6 @@ export const service: DefaultServiceConfig = {
             id: 'gahuza',
             href: 'https://www.bbc.com/gahuza',
             label: 'BBC News Gahuza',
-            lang: 'rw',
             disableTranslation: true,
           },
           {
@@ -468,8 +466,6 @@ export const service: DefaultServiceConfig = {
             id: 'dari',
             href: 'https://www.bbc.com/dari',
             label: 'BBC News Dari',
-            lang: 'fa-AF',
-            latinTransliteration: 'BBC News Dari',
             disableTranslation: true,
           },
           {
