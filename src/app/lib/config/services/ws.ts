@@ -350,8 +350,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'afrique',
             href: 'https://www.bbc.com/afrique',
-            label: "L'actualité en Français",
-            lang: 'fr',
+            label: 'BBC News Afrique',
           },
           {
             id: 'hausa',
@@ -368,8 +367,8 @@ export const service: DefaultServiceConfig = {
           {
             id: 'gahuza',
             href: 'https://www.bbc.com/gahuza',
-            label: 'Amakuru mu Kinyarwanda/ Kirundi',
-            lang: 'rw',
+            label: 'BBC News Gahuza',
+            disableTranslation: true,
           },
           {
             id: 'pidgin',
@@ -425,8 +424,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'indonesia',
             href: 'https://www.bbc.com/indonesia',
-            label: 'Berita Indonesia',
-            lang: 'id',
+            label: 'BBC News Indonesia',
           },
           {
             id: 'japanese',
@@ -468,9 +466,8 @@ export const service: DefaultServiceConfig = {
           {
             id: 'dari',
             href: 'https://www.bbc.com/dari',
-            label: 'BBC News دری',
-            lang: 'fa-AF',
-            latinTransliteration: 'BBC News Dari',
+            label: 'BBC News Dari',
+            disableTranslation: true,
           },
           {
             id: 'gujarati',
@@ -509,7 +506,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'punjabi',
             href: 'https://www.bbc.com/punjabi',
-            label: 'ਪੰਜਾਬੀ ਖ਼ਬਰਾਂ',
+            label: 'BBC News ਪੰਜਾਬੀ',
             lang: 'pa',
             latinTransliteration: 'Punjabi khabaran',
           },
@@ -572,16 +569,9 @@ export const service: DefaultServiceConfig = {
             lang: 'en',
           },
           {
-            id: 'naidheachdan',
-            href: 'https://www.bbc.co.uk/naidheachdan',
-            label: 'Naidheachdan',
-            lang: 'gd',
-          },
-          {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
-            label: 'BBC News po polsku',
-            lang: 'pl',
+            label: 'BBC News Polska',
           },
           {
             id: 'russian',
@@ -618,14 +608,12 @@ export const service: DefaultServiceConfig = {
           {
             id: 'portuguese',
             href: 'https://www.bbc.com/portuguese',
-            label: 'Notícias em Português',
-            lang: 'pt',
+            label: 'BBC News Brasil',
           },
           {
             id: 'mundo',
             href: 'https://www.bbc.com/mundo',
-            label: 'Noticias para hispanoparlantes',
-            lang: 'es',
+            label: 'BBC News Mundo',
           },
         ],
       },

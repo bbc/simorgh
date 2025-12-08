@@ -33,6 +33,22 @@ global.performance.getEntriesByName = jest.fn(() => []);
 // mock pages/index.js to return a non async page component
 jest.mock('../pages');
 
+beforeAll(() => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches: true,
+      media: query,
+      onchange: null,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      addListener: jest.fn(), // legacy fallback some code may call
+      removeListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+});
+
 const agent = { ca: 'ca', key: 'key' };
 const getAgent = jest.fn(() => agent);
 

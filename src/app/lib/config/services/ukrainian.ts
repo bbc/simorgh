@@ -22,7 +22,8 @@ const baseServiceConfig = {
   brandName: 'BBC News Україна',
   product: 'BBC News',
   serviceLocalizedName: 'Україна',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News Україна',
   dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
