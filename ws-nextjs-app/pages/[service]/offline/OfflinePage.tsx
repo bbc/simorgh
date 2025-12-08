@@ -1,10 +1,10 @@
-import { use } from 'react';
+import { useContext } from 'react';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
 
 const OfflinePage = () => {
-  const { service, dir, script } = use(ServiceContext);
+  const { service, dir, script } = useContext(ServiceContext);
 
   const title = 'You are offline';
   const message =
