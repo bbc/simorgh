@@ -19,14 +19,16 @@ const ManifestContainer = () => {
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
 
   // eslint-disable-next-line no-console
-  console.log(`ManifestContainer`, {
-    pwaPromoBannerVariant,
-    isExperimentEnabled,
-  });
 
   const manifestPath = isExperimentEnabled
     ? '/mundo/manifest-experiment.json'
     : originalManifestPath;
+
+  console.log(`ManifestContainer`, {
+    pwaPromoBannerVariant,
+    isExperimentEnabled,
+    manifestPath,
+  });
 
   if (!manifestPath) {
     return null;

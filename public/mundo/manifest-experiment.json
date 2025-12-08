@@ -1,6 +1,6 @@
 {
-  "name": "BBC News Mundo",
-  "short_name": "BBC Mundo",
+  "name": "BBC News Mundo EXPERIMENT",
+  "short_name": "BBC Mundo EXPERIMENT",
   "scope": "/mundo",
   "background_color": "#b80000",
   "display": "standalone",
