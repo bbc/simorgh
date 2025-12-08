@@ -24,6 +24,7 @@ const ManifestContainer = () => {
     ? '/mundo/manifest-experiment.json'
     : originalManifestPath;
 
+  // eslint-disable-next-line no-console
   console.log(`ManifestContainer`, {
     pwaPromoBannerVariant,
     isExperimentEnabled,

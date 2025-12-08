@@ -56,6 +56,7 @@ const PWAPromotionalBanner = () => {
 
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
 
+  // eslint-disable-next-line no-console
   console.log(`PWAPromotionalBanner`, {
     pwaPromoBannerExperimentName,
     pwaPromoBannerVariant,

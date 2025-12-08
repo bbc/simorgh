@@ -130,11 +130,10 @@ server
     const isExperimentManifest = path.includes('manifest-experiment.json');
 
     let manifestPath;
+    // TODO: Use header instead?
     if (isExperimentManifest) {
-      // For experiment manifest, construct the path directly
       manifestPath = `${__dirname}/public/${service}/manifest-experiment.json`;
     } else {
-      // For standard manifest, use the service configuration (preserves variant logic)
       manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
     }
 
