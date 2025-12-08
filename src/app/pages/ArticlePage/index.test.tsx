@@ -1339,7 +1339,9 @@ describe('Article Page', () => {
         />,
       );
       expect(screen.getByRole('region')).toBeInTheDocument();
-      expect(screen.getByText('Recommended for you')).toBeInTheDocument();
+      expect(
+        screen.getByText('Más información sobre Recommended for you'),
+      ).toBeInTheDocument();
       expect(screen.getByText('Article 1')).toBeInTheDocument();
       expect(screen.getByText('Article 2')).toBeInTheDocument();
     });

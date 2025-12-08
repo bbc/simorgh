@@ -252,15 +252,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // EXPERIMENT: Location based Topics Experiment
-  const showPersonalisedContent = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      personalisedContentExperimentVariant &&
-      personalisedContentExperimentVariant !== 'off',
-  );
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -405,6 +396,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+
+  // EXPERIMENT: Location based Topics Experiment
+  const showPersonalisedContent = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      personalisedContentExperimentVariant &&
+      personalisedContentExperimentVariant !== 'off',
+  );
 
   // EXPERIMENT: Location based Topics Experiment
   const personalisedContentBlock = showPersonalisedContent ? (
