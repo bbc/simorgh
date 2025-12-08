@@ -16,7 +16,7 @@ const ManifestContainer = () => {
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  const isExperimentEnabled = Boolean(pwaPromoBannerVariant) || true;
+  const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
 
   // eslint-disable-next-line no-console
   console.log(`ManifestContainer`, {
