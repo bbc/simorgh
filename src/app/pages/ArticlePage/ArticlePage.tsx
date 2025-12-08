@@ -178,7 +178,7 @@ const getWsojComponent = ({
   blocks: OptimoBlock[];
   topStoriesContent?: unknown;
   featuresContent?: unknown;
-  referrerVariant?: string;
+  referrerVariant?: string | null;
   referrerExperimentName?: string;
 }) => (
   <Recommendations
@@ -186,8 +186,8 @@ const getWsojComponent = ({
     blocks={blocks}
     topStoriesContent={topStoriesContent}
     featuresContent={featuresContent}
-    referrerVariant={referrerVariant}
     {...(referrerVariant && {
+      referrerVariant,
       experimentProps: {
         sendOptimizelyEvents: true,
         experimentName: referrerExperimentName,
@@ -258,14 +258,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2, WHITE },
   } = useTheme();
 
-  // Detect desktop on first load
-  const [isDesktopInitial] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth >= 1008;
-    }
-    return false;
-  });
-
   // EXPERIMENT: Article Read Time 2
   const readTimeExperimentName = 'newswb_ws_article_read_time_2';
   const readTimeExperimentVariant = useOptimizelyVariation({
@@ -282,12 +274,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
-  let referrerVariant = useOptimizelyVariation({
+  const referrerVariant = useOptimizelyVariation({
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerVariant = ''; // TEMP override
-  referrerVariant = isDesktopInitial ? 'off' : referrerVariant; // switches off experiment if desktop width is detected
 
   // EXPERIMENT: Personalised Content Rail
   const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
