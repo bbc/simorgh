@@ -37,6 +37,15 @@ type PageProps = {
 } & AvEmbedsPageProps &
   ArticlePageProps;
 
+const EXCLUDED_ROUTES = [
+  'articles',
+  'send',
+  'live',
+  'topics',
+  'downloads',
+  'av-embeds',
+];
+
 const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   // TODO: 'pagetype' header is for testing purposes only
   const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
@@ -52,32 +61,45 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   }
 };
 
-export const getServerSideProps: GetServerSideProps = async context => {
-  const {
-    resolvedUrl,
-    req: { headers: reqHeaders },
-  } = context;
+const CPS_ASSET_REGEX = /^[a-z0-9-_+]*[0-9]{8,}$/i;
+const LEGACY_ASSET_REGEX = /^[a-z0-9-_/]+$/i;
 
-  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+const isCpsAsset = (path: string): boolean =>
+  CPS_ASSET_REGEX.test(path) && !path.includes('/');
 
-  const variant = deriveVariant(variantFromUrl);
+const isLegacyAsset = (path: string): boolean =>
+  LEGACY_ASSET_REGEX.test(path) && path.includes('/');
 
-  // Determine the page type
-  const pageType = getPageTypeFromHeaders(reqHeaders);
+const isValidAsset = (path: string): boolean =>
+  path ? isCpsAsset(path) || isLegacyAsset(path) : false;
 
-  if (resolvedUrl?.includes('av-embeds')) {
-    return handleAvRoute(context);
-  }
+const getAssetPathFromUrl = (
+  resolvedUrl: string,
+  service: string,
+): string | null => {
+  const urlWithoutQuery = resolvedUrl.split('?')?.[0];
+  const servicePrefix = `/${service}`;
 
-  if (pageType === ARTICLE_PAGE) {
-    return handleArticleRoute(context);
-  }
+  if (!urlWithoutQuery.startsWith(servicePrefix)) return null;
 
+  const cleanPath = urlWithoutQuery
+    .slice(servicePrefix.length)
+    .replace(/^\//, '')
+    .replace(/\.(amp|app|lite)$/, '');
+
+  const firstSegment = cleanPath.split('/')[0];
+  if (EXCLUDED_ROUTES.includes(firstSegment)) return null;
+
+  return cleanPath || null;
+};
+
+const createNotFoundResponse = (
+  resolvedUrl: string,
+  service: string,
+  variant: string | null,
+  reqHeaders: IncomingHttpHeaders,
+) => {
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
-
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
-
-  context.res.statusCode = 404;
 
   return {
     props: {
@@ -93,6 +115,54 @@ export const getServerSideProps: GetServerSideProps = async context => {
       ...extractHeaders(reqHeaders),
     },
   };
+};
+
+export const getServerSideProps: GetServerSideProps = async context => {
+  const {
+    resolvedUrl,
+    req: { headers: reqHeaders },
+  } = context;
+
+  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const variant = deriveVariant(variantFromUrl);
+
+  // Handle AV embeds route
+  if (resolvedUrl?.includes('av-embeds')) {
+    return handleAvRoute(context);
+  }
+
+  // Handle explicit article page type from headers
+  const pageType = getPageTypeFromHeaders(reqHeaders);
+  if (pageType === ARTICLE_PAGE) {
+    return handleArticleRoute(context);
+  }
+
+  // Check if this is a CPS or legacy asset URL
+  const assetPath = getAssetPathFromUrl(resolvedUrl, service as string);
+  if (assetPath && isValidAsset(assetPath)) {
+    try {
+      return await handleArticleRoute(context);
+    } catch (error) {
+      logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+      context.res.statusCode = 404;
+      return createNotFoundResponse(
+        resolvedUrl,
+        service as string,
+        variant,
+        reqHeaders,
+      );
+    }
+  }
+
+  // Default: return 404
+  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+  context.res.statusCode = 404;
+  return createNotFoundResponse(
+    resolvedUrl,
+    service as string,
+    variant,
+    reqHeaders,
+  );
 };
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
