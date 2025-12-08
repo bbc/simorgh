@@ -67,42 +67,11 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   default: jest.fn(),
 }));
 
-jest.mock('../../components/RelatedContentSection', () => {
-  const actual = jest.requireActual('../../components/RelatedContentSection');
-  const Actual = actual.default;
-  // eslint-disable-next-line react/display-name
-  return (props: unknown) =>
-    // eslint-disable-next-line react/jsx-filename-extension
-    (global as typeof globalThis & { mockRelatedContentStub?: boolean })
-      .mockRelatedContentStub ? (
-      <section data-testid="related-content-section" />
-    ) : (
-      // @ts-expect-error: props passthrough to actual component
-      <Actual {...props} />
-    );
-});
-
 jest.mock('#app/lib/utilities/onClient', () => ({
   __esModule: true,
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
-
-beforeAll(() => {
-  Object.defineProperty(window, 'matchMedia', {
-    writable: true,
-    value: jest.fn().mockImplementation(query => ({
-      matches: true,
-      media: query,
-      onchange: null,
-      addEventListener: jest.fn(),
-      removeEventListener: jest.fn(),
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-      dispatchEvent: jest.fn(),
-    })),
-  });
-});
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -1347,10 +1316,6 @@ describe('Article Page', () => {
     });
 
     it('renders personalised topic rail after related content for variation_1', () => {
-      (
-        global as typeof globalThis & { mockRelatedContentStub?: boolean }
-      ).mockRelatedContentStub = true;
-
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
           if (experimentName === 'newswb_ws_location_based_topics') {
@@ -1394,8 +1359,8 @@ describe('Article Page', () => {
         </Context>,
       );
 
-      const relatedContentSection = screen.getByTestId(
-        'related-content-section',
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
       );
       const personalisedSection = container.querySelector(
         '[aria-labelledby="personalised-content"]',
@@ -1409,16 +1374,9 @@ describe('Article Page', () => {
       const isAfter =
         order !== undefined && order === Node.DOCUMENT_POSITION_FOLLOWING;
       expect(isAfter).toBeTruthy();
-      delete (
-        global as typeof globalThis & { mockRelatedContentStub?: boolean }
-      ).mockRelatedContentStub;
     });
 
     it('renders personalised topic rail before related content for variation_2', () => {
-      (
-        global as typeof globalThis & { mockRelatedContentStub?: boolean }
-      ).mockRelatedContentStub = true;
-
       (useOptimizelyVariation as jest.Mock).mockImplementation(
         ({ experimentName }) => {
           if (experimentName === 'newswb_ws_location_based_topics') {
@@ -1446,13 +1404,14 @@ describe('Article Page', () => {
         },
       ];
 
-      const pageData = {
-        ...articleDataNews,
-        secondaryColumn: {
-          topStories: [],
-          features: [],
-          personalisedContent,
-        },
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
       };
 
       const { container } = render(
@@ -1461,8 +1420,8 @@ describe('Article Page', () => {
         </Context>,
       );
 
-      const relatedContentSection = screen.getByTestId(
-        'related-content-section',
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
       );
       const personalisedSection = container.querySelector(
         '[aria-labelledby="personalised-content"]',
@@ -1476,9 +1435,6 @@ describe('Article Page', () => {
       const isBefore =
         order !== undefined && order === Node.DOCUMENT_POSITION_PRECEDING;
       expect(isBefore).toBeTruthy();
-      delete (
-        global as typeof globalThis & { mockRelatedContentStub?: boolean }
-      ).mockRelatedContentStub;
     });
   });
 });
