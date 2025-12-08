@@ -68,6 +68,7 @@
     }
   ],
   "splash_pages": null,
+  "prefer_related_applications": true,
   "start_url": "/mundo?at_medium=PWA&at_campaign=PWA",
   "shortcuts": [
     {
