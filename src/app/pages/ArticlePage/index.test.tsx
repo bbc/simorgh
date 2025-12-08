@@ -21,7 +21,6 @@ import {
   articleStyDataPidgin,
   articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
-import { RelatedContentList } from '#app/components/RelatedContentSection/fixture';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -37,7 +36,6 @@ import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
-import PersonalisedContent from '../../components/PersonalisedContent';
 import {
   render,
   screen,
