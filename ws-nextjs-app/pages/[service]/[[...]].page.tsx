@@ -85,12 +85,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
   const variant = deriveVariant(variantFromUrl);
 
-  // Handle AV embeds route
   if (resolvedUrl?.includes('av-embeds')) {
     return handleAvRoute(context);
   }
 
-  // Handle explicit article page type from headers
   const pageType = getPageTypeFromHeaders(reqHeaders);
   if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
