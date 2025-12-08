@@ -50,32 +50,24 @@ describe('useOfflinePageTracker', () => {
     });
 
     it('should handle localStorage errors gracefully', () => {
-      const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
+      const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
 
       // Mock getItem to return PWA status, then make setItem fail
-      const originalSetItem = Storage.prototype.setItem;
-      const originalGetItem = Storage.prototype.getItem;
-
-      Storage.prototype.getItem = jest.fn(key => {
+      jest.spyOn(Storage.prototype, 'getItem').mockImplementation(key => {
         if (key === 'bbc_is_pwa') return 'true';
         return null;
       });
 
-      Storage.prototype.setItem = jest.fn(() => {
+      jest.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
         throw new Error('localStorage unavailable');
       });
 
       renderHook(() => useOfflinePageTracker());
 
-      expect(consoleErrorSpy).toHaveBeenCalledWith(
+      expect(consoleWarnSpy).toHaveBeenCalledWith(
         '[Offline Tracking] Failed to set offline flag:',
         expect.any(Error),
       );
-
-      // Restore
-      Storage.prototype.getItem = originalGetItem;
-      Storage.prototype.setItem = originalSetItem;
-      consoleErrorSpy.mockRestore();
     });
   });
 
