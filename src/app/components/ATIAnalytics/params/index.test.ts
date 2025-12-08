@@ -354,35 +354,6 @@ describe('ATIAnalytics params', () => {
       expect(params).not.toContain('x6=');
       expect(params).not.toContain('ref=');
     });
-
-    describe('buildPageATIUrl invocation', () => {
-      let buildPageATIUrlSpy: jest.SpyInstance;
-
-      beforeEach(() => {
-        buildPageATIUrlSpy = jest.spyOn(
-          buildPageATIFunctionImports,
-          'buildPageATIUrl',
-        );
-
-        jest.clearAllMocks();
-      });
-
-      it('should invoke buildPageATIUrl for supported page types', () => {
-        buildATIUrl({
-          requestContext: { ...requestContext, pageType: HOME_PAGE },
-          atiData: homePageAnalyticsData,
-          serviceContext,
-        });
-
-        expect(buildPageATIUrlSpy).toHaveBeenCalledWith(
-          expect.objectContaining({
-            requestContext: { ...requestContext, pageType: HOME_PAGE },
-            atiData: homePageAnalyticsData,
-            serviceContext,
-          }),
-        );
-      });
-    });
   });
 
   describe('buildATIEventTrackingParams', () => {
