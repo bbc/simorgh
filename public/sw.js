@@ -7,7 +7,7 @@ const version = 'v0.3.0';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
-const hasOfflinePageFunctionality = false;
+const hasOfflinePageFunctionality = !!service;
 const OFFLINE_PAGE = `/${service}/offline`;
 
 self.addEventListener('install', event => {
