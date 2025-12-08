@@ -15,6 +15,19 @@ import { getServerExperiments } from '#server/utilities/experimentHeader';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
+// EXPERIMENT: Location based Topics Experiment
+const COUNTRY_SPECIFIC_TOPIC_IDS: Record<string, string> = {
+  ar: 'c7zp57yy6dzt',
+  cl: 'c340qyppkk8t',
+  mx: 'c340qyp6yggt',
+  co: 'c404v5gz1rkt',
+  es: 'c6vzy3wd189t',
+  ve: 'cpzd49v9rd1t',
+  us: 'cdr5613yzwqt',
+  uy: 'cpzd498zwj6t',
+  do: 'cr50y7pykkdt',
+};
+
 const logger = nodeLogger(__filename);
 
 const transformPageData = (toggles?: Toggles) =>
@@ -91,9 +104,16 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const country = reqHeaders['x-country']?.toString().toLowerCase();
-  const shouldAttemptPersonalisedTopicExperience =
-    service === 'mundo' && !isAmp && Boolean(country);
+  // EXPERIMENT: Location based Topics Experiment
+  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
+
+  // EXPERIMENT: Location based Topics Experiment
+  const countrySpecificId = country && COUNTRY_SPECIFIC_TOPIC_IDS[country];
+
+  // EXPERIMENT: Location based Topics Experiment
+  const shouldAttemptPersonalisedTopicExperience = Boolean(
+    !isAmp && service === 'mundo' && countrySpecificId,
+  );
 
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
@@ -114,56 +134,41 @@ export default async (context: GetServerSidePropsContext) => {
     mediaCuration = null,
   } = secondaryData || {};
 
+  // EXPERIMENT: Location based Topics Experiment
   let personalisedContent;
 
+  // EXPERIMENT: Location based Topics Experiment
   if (shouldAttemptPersonalisedTopicExperience) {
-    const countrySpecificTopics: Record<string, string> = {
-      ar: 'c7zp57yy6dzt',
-      cl: 'c340qyppkk8t',
-      mx: 'c340qyp6yggt',
-      co: 'c404v5gz1rkt',
-      es: 'c6vzy3wd189t',
-      ve: 'cpzd49v9rd1t',
-      us: 'cdr5613yzwqt',
-      uy: 'cpzd498zwj6t',
-      do: 'cr50y7pykkdt',
-    };
+    try {
+      const { data: topicData } = await getPageData({
+        id: `/${service}/topics/${countrySpecificId}`,
+        rendererEnv: 'live',
+        resolvedUrl: `/${service}/topics/${countrySpecificId}`,
+        pageType: 'topic',
+        service,
+        variant: variant || undefined,
+        isAmp,
+      });
 
-    const countrySpecificId =
-      country && countrySpecificTopics[country.toString()];
+      const countrySpecificData = topicData?.pageData;
+      const countryArticles =
+        countrySpecificData?.curations?.[0]?.summaries || [];
 
-    if (countrySpecificId) {
-      try {
-        const { data: topicData } = await getPageData({
-          id: `/${service}/topics/${countrySpecificId}`,
-          rendererEnv: 'live',
-          resolvedUrl: `/${service}/topics/${countrySpecificId}`,
-          pageType: 'topic',
-          service,
-          variant: variant || undefined,
-          isAmp,
-        });
-
-        const countrySpecificData = topicData?.pageData;
-        const countryArticles =
-          countrySpecificData?.curations?.[0]?.summaries || [];
-
-        if (countrySpecificData) {
-          personalisedContent = [
-            {
-              title: countrySpecificData.title,
-              description: countrySpecificData.description,
-              link: `/${service}/topics/${countrySpecificId}`,
-              summaries: Array.isArray(countryArticles)
-                ? countryArticles.slice(0, 4)
-                : [],
-              topicId: countrySpecificId,
-            },
-          ];
-        }
-      } catch (_error) {
-        // void
+      if (countrySpecificData) {
+        personalisedContent = [
+          {
+            title: countrySpecificData.title,
+            description: countrySpecificData.description,
+            link: `/${service}/topics/${countrySpecificId}`,
+            summaries: Array.isArray(countryArticles)
+              ? countryArticles.slice(0, 4)
+              : [],
+            topicId: countrySpecificId,
+          },
+        ];
       }
+    } catch (_error) {
+      // void
     }
   }
 
@@ -185,7 +190,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      country: reqHeaders?.['x-country'] || null,
+      country,
       id: resolvedUrlWithoutQuery,
       isAmp,
       isApp,
@@ -199,6 +204,7 @@ export default async (context: GetServerSidePropsContext) => {
           latestMedia,
           mediaCuration,
           billboardCuration,
+          // EXPERIMENT: Location based Topics Experiment
           ...(personalisedContent && { personalisedContent }),
         },
         mostRead,
