@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'Naidheachdan',
     defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_11063/naidheachdan_1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/naidheachdan/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Naidheachdan',
     dir: `ltr`,
     externalLinkText: ', taobh a-muigh',

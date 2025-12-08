@@ -124,7 +124,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
     serviceLocalizedName: 'Русская служба',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/russian/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
     externalLinkText: ', внешняя',
