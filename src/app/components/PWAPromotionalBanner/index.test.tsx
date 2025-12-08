@@ -1,6 +1,7 @@
 import { render, act } from '../react-testing-library-with-providers';
 import PWAPromotionalBanner from './index';
 import { PromotionalBannerConfig } from '../PromotionalBanner/index.types';
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const baseBanner: PromotionalBannerConfig = {
   title: 'Install our app',
@@ -11,9 +12,14 @@ const baseBanner: PromotionalBannerConfig = {
   secondaryButton: { text: 'Not now' },
 };
 
-const setup = (props = {}) => {
+const setup = () => {
   return render(
-    <PWAPromotionalBanner promotionalBanner={baseBanner} {...props} />,
+    <ServiceContext.Provider
+      // @ts-expect-error: minimal context for test
+      value={{ promotionalBanner: baseBanner }}
+    >
+      <PWAPromotionalBanner />
+    </ServiceContext.Provider>,
   );
 };
 

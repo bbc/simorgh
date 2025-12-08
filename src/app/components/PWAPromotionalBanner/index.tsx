@@ -1,11 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, use } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
-import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 
-interface PWAPromotionalBannerProps {
-  promotionalBanner: PromotionalBannerConfig | undefined;
-}
+import { ServiceContext } from '../../contexts/ServiceContext';
 
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotionalBanner_dismissals';
 const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotionalBanner_last_dismissed';
@@ -35,9 +32,8 @@ const isBannerVisible = () => {
   return true;
 };
 
-const PWAPromotionalBanner = ({
-  promotionalBanner,
-}: PWAPromotionalBannerProps) => {
+const PWAPromotionalBanner = () => {
+  const { promotionalBanner } = use(ServiceContext);
   const [isVisible, setIsVisible] = useState(false);
 
   const handleBannerDismiss = () => {

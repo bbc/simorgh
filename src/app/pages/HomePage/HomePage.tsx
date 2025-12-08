@@ -49,7 +49,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     lang,
     brandName,
     service,
-    promotionalBanner, // TODO: Boolean check instead
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
@@ -86,7 +85,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      <PWAPromotionalBanner promotionalBanner={promotionalBanner} />
+      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
