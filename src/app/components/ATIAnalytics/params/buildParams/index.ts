@@ -1,5 +1,5 @@
 import { LIBRARY_VERSION } from '../../../../lib/analyticsUtils';
-import { buildATIPageTrackPath, buildReverbAnalyticsModel } from '../../atiUrl';
+import { buildReverbAnalyticsModel } from '../../atiUrl';
 import { ATIDataWithContexts } from '../../types';
 
 export const buildPageATIParams = ({
@@ -60,15 +60,6 @@ export const buildPageATIParams = ({
     ...(experimentVariant && { experimentVariant }),
   };
 };
-
-export const buildPageATIUrl = ({
-  atiData,
-  requestContext,
-  serviceContext,
-}: ATIDataWithContexts) =>
-  buildATIPageTrackPath(
-    buildPageATIParams({ atiData, requestContext, serviceContext }),
-  );
 
 export const buildPageReverbParams = ({
   atiData,
