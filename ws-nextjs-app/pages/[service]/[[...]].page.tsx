@@ -37,15 +37,6 @@ type PageProps = {
 } & AvEmbedsPageProps &
   ArticlePageProps;
 
-const EXCLUDED_ROUTES = [
-  'articles',
-  'send',
-  'live',
-  'topics',
-  'downloads',
-  'av-embeds',
-];
-
 const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   // TODO: 'pagetype' header is for testing purposes only
   const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
@@ -59,38 +50,6 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
     default:
       return null;
   }
-};
-
-const CPS_ASSET_REGEX = /^[a-z0-9-_+]*[0-9]{8,}$/i;
-const LEGACY_ASSET_REGEX = /^[a-z0-9-_/]+$/i;
-
-const isCpsAsset = (path: string): boolean =>
-  CPS_ASSET_REGEX.test(path) && !path.includes('/');
-
-const isLegacyAsset = (path: string): boolean =>
-  LEGACY_ASSET_REGEX.test(path) && path.includes('/');
-
-const isValidAsset = (path: string): boolean =>
-  path ? isCpsAsset(path) || isLegacyAsset(path) : false;
-
-const getAssetPathFromUrl = (
-  resolvedUrl: string,
-  service: string,
-): string | null => {
-  const urlWithoutQuery = resolvedUrl.split('?')?.[0];
-  const servicePrefix = `/${service}`;
-
-  if (!urlWithoutQuery.startsWith(servicePrefix)) return null;
-
-  const cleanPath = urlWithoutQuery
-    .slice(servicePrefix.length)
-    .replace(/^\//, '')
-    .replace(/\.(amp|app|lite)$/, '');
-
-  const firstSegment = cleanPath.split('/')[0];
-  if (EXCLUDED_ROUTES.includes(firstSegment)) return null;
-
-  return cleanPath || null;
 };
 
 const createNotFoundResponse = (
@@ -135,23 +94,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const pageType = getPageTypeFromHeaders(reqHeaders);
   if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
-  }
-
-  // Check if this is a CPS or legacy asset URL
-  const assetPath = getAssetPathFromUrl(resolvedUrl, service as string);
-  if (assetPath && isValidAsset(assetPath)) {
-    try {
-      return await handleArticleRoute(context);
-    } catch (error) {
-      logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
-      context.res.statusCode = 404;
-      return createNotFoundResponse(
-        resolvedUrl,
-        service as string,
-        variant,
-        reqHeaders,
-      );
-    }
   }
 
   // Default: return 404
