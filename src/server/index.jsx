@@ -122,21 +122,10 @@ server
       }
     });
   })
-  .get(homePageManifestPath, async ({ params, path }, res) => {
+  .get(homePageManifestPath, async ({ params }, res) => {
     const { service } = params;
     const variant = defaultServiceVariants[service] || 'default';
-
-    // Check if this is an experiment manifest request
-    const isExperimentManifest = path.includes('manifest-experiment.json');
-
-    let manifestPath;
-    // TODO: Use header instead?
-    if (isExperimentManifest) {
-      manifestPath = `${__dirname}/public/${service}/manifest-experiment.json`;
-    } else {
-      manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
-    }
-
+    const manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
     res.set(
       'Cache-Control',
       'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',

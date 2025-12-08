@@ -369,6 +369,21 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Foi encerrado em {{date}}.',
       },
     },
+    promotionalBanner: {
+      title: 'Acesse a BBC News Brasil com um toque',
+      description:
+        'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
+      orText: 'ou',
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Sair',
+      primaryButton: {
+        longText: 'Inclua um atalho na sua tela',
+        text: 'Adicionar',
+      },
+      secondaryButton: {
+        text: 'Pular por enquanto',
+      },
+    },
     mostRead: {
       header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',

@@ -48,7 +48,7 @@ export const getSwRegex = services => {
 
 export const getManifestRegex = services => {
   const serviceRegex = getServiceRegex(getWorldServices(services));
-  return `/:service(${serviceRegex})/manifest(-experiment)?.json`;
+  return `/:service(${serviceRegex})/manifest.json`;
 };
 
 export const getCpsAssetRegex = services => {
