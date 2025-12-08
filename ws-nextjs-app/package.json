@@ -27,18 +27,12 @@
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
   },
   "devDependencies": {
-    "@babel/core": "7.28.5",
-    "@babel/plugin-proposal-export-default-from": "7.27.1",
-    "@babel/plugin-transform-class-static-block": "7.28.3",
-    "@babel/preset-react": "7.28.5",
     "@cypress/webpack-preprocessor": "7.0.1",
-    "@emotion/babel-plugin": "11.13.5",
-    "@emotion/jest": "11.14.2",
     "@jest/environment": "30.2.0",
     "@jest/types": "30.2.0",
+    "@swc/core": "1.15.2",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
-    "babel-plugin-transform-rename-import": "2.3.0",
     "cypress": "15.4.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
@@ -48,10 +42,11 @@
     "mocha-junit-reporter": "2.2.1",
     "next-test-api-route-handler": "5.0.3",
     "npm-run-all2": "8.0.4",
+    "swc-loader": "0.2.6",
     "ts-node": "10.9.2"
   },
   "dependencies": {
-    "next": "15.5.2",
+    "next": "15.5.7",
     "sharp": "0.34.4"
   }
 }

@@ -171,7 +171,7 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"D
 
 exports[`Canonical On Demand Audio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-ucozvf"
+  class="media-container bbc-16wwgxo"
   data-e2e="media-loader__container"
 >
   <div
@@ -277,7 +277,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -295,13 +295,13 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Indonesia",
         "publishingPrinciples": "https://www.bbc.com/indonesia/institutional-49283175",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/indonesia/bbc_indonesian_radio/w172ywztppc5xsy",
     },
     {

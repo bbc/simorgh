@@ -163,7 +163,7 @@ exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-ucozvf"
+  class="media-container bbc-16wwgxo"
   data-e2e="media-loader__container"
 >
   <div
@@ -241,7 +241,7 @@ exports[`Canonical Kyrgyz Live Radio Page SEO Linked data should match text 1`] 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -262,7 +262,7 @@ exports[`Canonical Kyrgyz Live Radio Page SEO Linked data should match text 1`] 
 
 exports[`Canonical Kyrgyz Live Radio Page SEO OG description 1`] = `"Эл аралык жана жергиликтүү жаңылыктар, аналитика, кызыктуу материалдар кыргыз тилинде"`;
 
-exports[`Canonical Kyrgyz Live Radio Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+exports[`Canonical Kyrgyz Live Radio Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Kyrgyz Live Radio Page SEO OG image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 
@@ -288,7 +288,7 @@ exports[`Canonical Kyrgyz Live Radio Page SEO Twitter description 1`] = `"Эл �
 
 exports[`Canonical Kyrgyz Live Radio Page SEO Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 
-exports[`Canonical Kyrgyz Live Radio Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+exports[`Canonical Kyrgyz Live Radio Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Kyrgyz Live Radio Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 

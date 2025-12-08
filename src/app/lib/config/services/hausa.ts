@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
     externalLinkText: ', waje',

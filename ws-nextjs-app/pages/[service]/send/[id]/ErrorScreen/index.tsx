@@ -1,4 +1,4 @@
-import React, { useEffect, use, useRef } from 'react';
+import { useEffect, use, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import GenericMessage from '../GenericMessage';
 import fallbackTranslations from '../fallbackTranslations';

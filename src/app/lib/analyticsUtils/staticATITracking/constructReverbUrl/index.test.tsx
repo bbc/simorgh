@@ -1,4 +1,4 @@
-import React from 'react';
+import type { PropsWithChildren } from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
@@ -13,7 +13,7 @@ const eventTrackingData = {
   staticUrl: '/gahuza/articles/c8xpj9vnd5wo',
 };
 
-const wrapper = ({ children }: { children: React.ReactNode }) => (
+const wrapper = ({ children }: PropsWithChildren) => (
   <ServiceContextProvider service={'gahuza' as Services}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"

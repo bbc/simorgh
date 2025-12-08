@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';

@@ -183,7 +183,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Bayanan sa
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <noscript
-  class="css-lllaou"
+  class="css-n2zqlz"
 >
   <strong>
     Na'urarku na da matsalar sauraren sauti
@@ -310,7 +310,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",

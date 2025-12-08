@@ -1,4 +1,3 @@
-import React from 'react';
 import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteSummary from '.';

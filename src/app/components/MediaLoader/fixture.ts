@@ -662,7 +662,7 @@ export const liveTvPageMediaBlock = {
       name: 'BBC Arabic TV',
       networkName: 'BBC Arabic TV',
       type: 'tv',
-      imageUrlTemplate: null,
+      imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p0m9xygc.png',
     },
     version: {
       vpid: 'n4pdm42036',

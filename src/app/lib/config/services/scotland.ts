@@ -18,7 +18,7 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
