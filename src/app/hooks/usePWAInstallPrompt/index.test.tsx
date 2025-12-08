@@ -57,6 +57,6 @@ describe('usePWAInstallPrompt', () => {
       await event.userChoice;
     });
 
-    expect(event.prompt).toHaveBeenCalled();
+    expect(event.prompt).toHaveBeenCalledTimes(1);
   });
 });
