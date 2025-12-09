@@ -1,6 +1,5 @@
 import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
-import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -36,7 +35,6 @@ const isBannerVisible = () => {
 };
 
 const PWAPromotionalBanner = () => {
-  usePWAInstallTracker();
   const { promotionalBanner } = use(ServiceContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
   const viewTracker = useViewTracker({
@@ -54,7 +52,7 @@ const PWAPromotionalBanner = () => {
   });
 
   const trackPwaPromptShown = useCustomEventTracker({
-    eventName: 'pwa_prompt_shown',
+    eventName: 'pwa-prompt-shown',
   });
   const trackPwaPromptAccepted = useCustomEventTracker({
     eventName: 'pwa-prompt-accepted',
