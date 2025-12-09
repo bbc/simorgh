@@ -5,9 +5,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-console */
 
-const version = 'v0.3.3';
+const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
-const hasOfflinePageFunctionality = true;
 
 // Track PWA clients
 const pwaClients = new Map();
@@ -33,7 +32,6 @@ const cacheResource = async (cache, url) => {
 };
 
 const cacheOfflinePageAndResources = async service => {
-  if (!hasOfflinePageFunctionality) return;
   const cache = await openCache();
   const offlinePageUrl = new URL(
     getOfflinePageUrl(service),
@@ -96,34 +94,32 @@ self.addEventListener('install', event => {
 
   event.waitUntil(
     (async () => {
-      if (hasOfflinePageFunctionality) {
-        const cache = await caches.open(cacheName);
-        const clients = await self.clients.matchAll({ type: 'window' });
+      const cache = await caches.open(cacheName);
+      const clients = await self.clients.matchAll({ type: 'window' });
 
-        // Get unique services from PWA clients only
-        const pwaServices = [
-          ...new Set(
-            clients
-              .filter(client => pwaClients.get(client.id))
-              .map(client => getServiceFromUrl(client.url))
-              .filter(Boolean),
-          ),
-        ];
+      // Get unique services from PWA clients only
+      const pwaServices = [
+        ...new Set(
+          clients
+            .filter(client => pwaClients.get(client.id))
+            .map(client => getServiceFromUrl(client.url))
+            .filter(Boolean),
+        ),
+      ];
 
-        if (pwaServices.length > 0) {
-          console.log(
-            `[SW v${version}] Caching offline pages for PWA:`,
-            pwaServices,
-          );
-        }
-
-        // Cache offline pages for PWA services only
-        await Promise.allSettled(
-          pwaServices.map(async service => {
-            return cacheOfflinePageAndResources(service);
-          }),
+      if (pwaServices.length > 0) {
+        console.log(
+          `[SW v${version}] Caching offline pages for PWA:`,
+          pwaServices,
         );
       }
+
+      // Cache offline pages for PWA services only
+      await Promise.allSettled(
+        pwaServices.map(async service => {
+          return cacheOfflinePageAndResources(service);
+        }),
+      );
       self.skipWaiting();
     })(),
   );
