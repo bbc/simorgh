@@ -5,11 +5,12 @@ type BlurredBackgroundProps = {
 };
 
 const BlurredBackground = ({ src }: BlurredBackgroundProps) => {
+  const lowResImageSrc = src?.replace('{width}', '1');
   return (
     <span
       css={[
         styles.blurredBackground,
-        src && { backgroundImage: `url(${src})` },
+        src && { backgroundImage: `url(${lowResImageSrc})` },
       ]}
     />
   );

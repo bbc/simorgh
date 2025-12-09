@@ -87,13 +87,12 @@ const Image = props => {
 
   const sizes = createSizes(useLargeImages, isProgrammeImage);
 
-  const srcWith240w = src.replace('{width}', 240);
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={srcWith240w} />}
+      {isPortraitImage && <BlurredBackground src={src} />}
       <IMAGE
         {...rest}
-        src={srcWith240w}
+        src={src.replace('{width}', 240)}
         srcSet={primarySrcSet}
         mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
