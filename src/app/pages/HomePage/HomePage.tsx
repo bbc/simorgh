@@ -4,7 +4,6 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -85,7 +84,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
