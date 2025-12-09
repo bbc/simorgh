@@ -162,9 +162,13 @@ const addServiceChainAndCspHeaders = async ({
 };
 
 App.getInitialProps = async ({ ctx }: AppContext) => {
-  const { req, asPath } = ctx;
+  const {
+    req,
+    asPath,
+    query: { service },
+  } = ctx;
 
-  const toggles = await getToggles();
+  const toggles = await getToggles(service);
 
   await addServiceChainAndCspHeaders({ ctx, toggles });
 
