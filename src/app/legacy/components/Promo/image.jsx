@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   ${({ isPortraitImage }) =>
     isPortraitImage &&
     `
-      > div > img {
+      > * img {
         object-fit: contain;
       }
     `}

@@ -114,6 +114,7 @@ const HiearchicalGrid = ({
                   lazyLoad={lazyLoadImages}
                   fetchPriority={fetchpriority}
                   isAmp={isAmp}
+                  isPortraitImage={promo.isPortraitImage}
                 >
                   {isMedia && (
                     <Promo.MediaIcon type={promo.type}>
