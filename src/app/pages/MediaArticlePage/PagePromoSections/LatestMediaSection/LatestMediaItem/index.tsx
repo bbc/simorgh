@@ -25,7 +25,7 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
           css={styles.promoStyle}
         >
           <div css={styles.imageWrapper}>
-            {item.isPortraitImage && <BlurredBackground src={src} />}
+            {item.isPortraitImage && <BlurredBackground src={item.imageUrl} />}
             <Promo.Image
               src={src}
               altText={item.imageAlt ?? 'Media image placeholder'}
