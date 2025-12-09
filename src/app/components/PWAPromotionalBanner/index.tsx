@@ -46,8 +46,8 @@ const PWAPromotionalBanner = () => {
     setIsVisible(false);
   };
 
+  // EXPERIMENT: PWA Promotional Banner
   const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
-
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
@@ -55,6 +55,7 @@ const PWAPromotionalBanner = () => {
 
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
 
+  // TODO: TEMP for testing
   // eslint-disable-next-line no-console
   console.log(`PWAPromotionalBanner`, {
     pwaPromoBannerExperimentName,
@@ -68,9 +69,17 @@ const PWAPromotionalBanner = () => {
     onError: () => setIsVisible(false),
   });
 
-  if (!isVisible || !isInstallable || !promotionalBanner || isLite || isAmp) {
+  if (
+    isLite ||
+    isAmp ||
+    !isExperimentEnabled ||
+    !isVisible ||
+    !isInstallable ||
+    !promotionalBanner
+  ) {
     return null;
   }
+
   return (
     <PromotionalBanner
       title={promotionalBanner.title}

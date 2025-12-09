@@ -7,11 +7,20 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-const enabledExperimentList = [
+
+import { PageTypes, Services } from '#app/models/types/global';
+
+type ServerSideExperimentConfig = {
+  name: string;
+  services: Services[];
+  pageTypes: PageTypes[];
+};
+
+const enabledExperimentList: ServerSideExperimentConfig[] = [
   {
     name: 'newswb_ws_pwa_promo_prompt',
-    services: ['mundo'],
-    // TBC: Is article is needed?
+    services: ['portuguese'],
+    // TBC if article is needed
     pageTypes: ['home', 'article'],
   },
   {
