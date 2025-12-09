@@ -80,7 +80,7 @@ const PWAPromotionalBanner = () => {
 
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: () => {
-      handleBannerDismiss();
+      setIsVisible(false);
       trackPwaPromptAccepted();
     },
     onDismissed: () => {
