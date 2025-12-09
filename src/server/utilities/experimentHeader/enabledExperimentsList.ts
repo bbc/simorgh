@@ -1,3 +1,5 @@
+import { PageTypes, Services } from '#app/models/types/global';
+
 /* 
 This is a maintained list of serverside experiments that we are running.
 Add enabled experiments objects inside this array in this format:
@@ -7,8 +9,6 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-
-import { PageTypes, Services } from '#app/models/types/global';
 
 type ServerSideExperimentConfig = {
   name: string;
