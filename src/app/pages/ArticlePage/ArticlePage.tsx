@@ -47,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -416,8 +417,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     />
   ) : null;
 
+  // EXPERIMENT: PWA Promotional Banner
+  const hasSecondaryColumnTopStories =
+    pageData?.secondaryColumn?.topStories.length && false;
+
   return (
     <div css={styles.pageWrapper}>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {!hasSecondaryColumnTopStories ? <PWAPromotionalBanner /> : null}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}

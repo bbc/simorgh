@@ -46,7 +46,6 @@ const PWAPromotionalBanner = () => {
     setIsVisible(false);
   };
 
-  // TODO: Potentially remove?
   // EXPERIMENT: PWA Promotional Banner
   const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
   const pwaPromoBannerVariant = useOptimizelyVariation({
@@ -63,19 +62,10 @@ const PWAPromotionalBanner = () => {
     onError: () => setIsVisible(false),
   });
 
-  // TODO: TEMP for testing
-  // eslint-disable-next-line no-console
-  console.log(`PWAPromotionalBanner`, {
-    pwaPromoBannerExperimentName,
-    pwaPromoBannerVariant,
-    isPwaPromoExperimentEnabled,
-    isAndroid,
-  });
-
   if (
     isLite ||
     isAmp ||
-    // !isAndroid ||
+    !isAndroid ||
     !isPwaPromoExperimentEnabled ||
     !isVisible ||
     !isInstallable ||

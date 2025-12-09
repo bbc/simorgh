@@ -11,10 +11,6 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
-import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -80,26 +76,6 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   let shouldRenderScriptSwitch = false;
 
-  // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
-  // TBC: check if propsForTopBarOJComponent is empty?
-  const isPwaPromoExperimentEnabled =
-    pwaPromoBannerVariant === 'on' &&
-    [ARTICLE_PAGE, HOME_PAGE].includes(pageType);
-
-  // TODO: temp used for testing
-  // eslint-disable-next-line no-console
-  console.log(`HeaderContainer`, {
-    isPwaPromoExperimentEnabled,
-    pwaPromoBannerVariant,
-    pageType,
-  });
-
   if (scriptLink) {
     switch (true) {
       case pageType === LIVE_PAGE:
@@ -134,7 +110,6 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
       <NavigationContainer
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
-      {isPwaPromoExperimentEnabled ? <PWAPromotionalBanner /> : null}
     </header>
   );
 };

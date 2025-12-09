@@ -92,6 +92,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
