@@ -85,8 +85,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
-      {/* TODO: Used for testing - remove before merging */}
-      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
