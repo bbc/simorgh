@@ -73,7 +73,7 @@ const PersonalisedContent = ({
     >
       {title && (
         <Subheading id={id} link={link} {...subheadingClickTracker}>
-          {title}
+          {`Más información sobre ${title}`}
         </Subheading>
       )}
       <CurationGrid

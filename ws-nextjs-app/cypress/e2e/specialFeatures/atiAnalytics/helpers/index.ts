@@ -140,7 +140,7 @@ export const getExpectedAtiDestination = ({
     news: 'NEWS_PS',
     cymrufyw: 'NEWS_LANGUAGES_PS',
     naidheachdan: 'NEWS_LANGUAGES_PS',
-    scotland: 'PS_HOMEPAGE',
+    scotland: 'HOMEPAGE_PS',
     newsround: 'NEWSROUND',
     sport: 'SPORT_PS',
   } as Record<Services, string>;
@@ -160,8 +160,8 @@ export const getExpectedAtiDestination = ({
     NEWS_LANGUAGES_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-    PS_HOMEPAGE: '598273',
-    PS_HOMEPAGE_TEST: '598274',
+    HOMEPAGE_PS: '598273',
+    HOMEPAGE_PS_TEST: '598274',
     NEWSROUND: '598293',
     NEWSROUND_TEST: '598294',
     SPORT_PS:
