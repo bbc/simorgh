@@ -6,6 +6,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
+import useAndroidDetection from '#app/hooks/useAdroidDetection';
 
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotionalBanner_dismissals';
 const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotionalBanner_last_dismissed';
@@ -38,7 +39,6 @@ const isBannerVisible = () => {
 const PWAPromotionalBanner = () => {
   const { promotionalBanner } = use(ServiceContext);
   const { isLite, isAmp } = use(RequestContext);
-
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   const handleBannerDismiss = () => {
@@ -54,14 +54,7 @@ const PWAPromotionalBanner = () => {
   });
 
   const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
-
-  // TODO: TEMP for testing
-  // eslint-disable-next-line no-console
-  console.log(`PWAPromotionalBanner`, {
-    pwaPromoBannerExperimentName,
-    pwaPromoBannerVariant,
-    isExperimentEnabled,
-  });
+  const isAndroid = useAndroidDetection();
 
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: handleBannerDismiss,
@@ -69,9 +62,19 @@ const PWAPromotionalBanner = () => {
     onError: () => setIsVisible(false),
   });
 
+  // TODO: TEMP for testing
+  // eslint-disable-next-line no-console
+  console.log(`PWAPromotionalBanner`, {
+    pwaPromoBannerExperimentName,
+    pwaPromoBannerVariant,
+    isExperimentEnabled,
+    isAndroid,
+  });
+
   if (
     isLite ||
     isAmp ||
+    !isAndroid ||
     !isExperimentEnabled ||
     !isVisible ||
     !isInstallable ||
