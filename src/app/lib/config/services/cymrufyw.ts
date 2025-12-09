@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'Cymru Fyw',
     defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_11063/cymru_fyw_1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/cymrufyw/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Cymru Fyw',
     dir: `ltr`,
     externalLinkText: ', dolen allanol',

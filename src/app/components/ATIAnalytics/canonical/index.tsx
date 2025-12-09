@@ -3,6 +3,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
+import { enforceLegacyDestinationForJapanese } from '#app/lib/analyticsUtils';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
@@ -32,7 +33,9 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={getNoScriptTrackingPixelUrl(reverbParams)}
+        src={enforceLegacyDestinationForJapanese(
+          getNoScriptTrackingPixelUrl(reverbParams),
+        )}
       />
     </noscript>
   );
@@ -64,7 +67,12 @@ const CanonicalATIAnalytics = ({
     if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
   }, [atiPageViewUrl, reverbBeaconConfig]);
 
-  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+  const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
+    reverbUrlHelper.getLitePageViewUrl(reverbParams),
+  );
+  const operaMiniPageViewReverbURL = enforceLegacyDestinationForJapanese(
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
+  );
 
   return (
     <>
@@ -77,7 +85,7 @@ const CanonicalATIAnalytics = ({
         })}
       {!isLite &&
         addScript({
-          script: sendPageViewBeaconOperaMini(atiPageViewUrlString),
+          script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
           nonce,
         })}
       {renderNoScriptTrackingPixel(reverbParams)}

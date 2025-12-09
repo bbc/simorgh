@@ -25,8 +25,8 @@ export const getDestination = (platform, statsDestination) => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
-    PS_HOMEPAGE: 598273,
-    PS_HOMEPAGE_TEST: 598274,
+    HOMEPAGE_PS: 598273,
+    HOMEPAGE_PS_TEST: 598274,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
     NEWSROUND: 598293,
@@ -70,6 +70,9 @@ export const getDestination = (platform, statsDestination) => {
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
+
+export const enforceLegacyDestinationForJapanese = reverbTrackingURL =>
+  reverbTrackingURL?.replace('s=646753&', `s=598289&`);
 
 export const getAppType = platform => {
   switch (platform) {
