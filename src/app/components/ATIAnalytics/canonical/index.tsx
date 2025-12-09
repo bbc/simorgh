@@ -17,11 +17,7 @@ import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
-
-const renderNoScriptTrackingPixel = (
-  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
-) => {
+const renderNoScriptTrackingPixel = (reverbParams: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
       <img
