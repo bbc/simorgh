@@ -7,12 +7,6 @@ const styles = {
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 ${spacings.DOUBLE}rem`,
       },
-      // '.promo-image': {
-      //   img: {
-      //     background: 'black',
-      //     objectFit: 'contain',
-      //   },
-      // },
     }),
   inner: css({
     maxWidth: '63rem',

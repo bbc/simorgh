@@ -1,5 +1,6 @@
 import { forwardRef } from 'react';
 
+import BlurredBackground from '#app/components/Image/BlurredBackground';
 import Promo from '../../../../../legacy/components/OptimoPromos';
 import { LatestMediaItemProp } from '../types';
 import LatestMediaIndicator from '../LatestMediaIndicator';
@@ -24,11 +25,13 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
           css={styles.promoStyle}
         >
           <div css={styles.imageWrapper}>
+            {item.isPortraitImage && <BlurredBackground src={src} />}
             <Promo.Image
               src={src}
               altText={item.imageAlt ?? 'Media image placeholder'}
               width={240}
               height={135}
+              isPortraitImage={item.isPortraitImage}
             />
             <LatestMediaIndicator duration={item.duration} />
           </div>
