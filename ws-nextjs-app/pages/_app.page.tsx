@@ -23,7 +23,6 @@ import cspHeaderResponse, {
   CspHeaderResponseProps,
 } from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
-import PageDataParams from '#app/models/types/pageDataParams';
 
 interface Props extends AppProps {
   pageProps: {
@@ -166,13 +165,13 @@ const addServiceChainAndCspHeaders = async ({
 // The props returned are passed down to ALL pages and merged with page
 // specific props from getInitialProps / getServerSideProps
 App.getInitialProps = async ({ ctx }: AppContext) => {
-  const {
-    req,
-    asPath,
-    query: { service },
-  } = ctx as NextPageContext & { query: PageDataParams };
+  const { req, asPath } = ctx as NextPageContext;
 
   const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
+
+  const routeSegments = asPath?.split('/')?.filter(Boolean);
+
+  const [service] = (routeSegments || []) as [Services];
 
   const toggles = await getToggles(service);
 
