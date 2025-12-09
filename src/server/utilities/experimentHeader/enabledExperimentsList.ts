@@ -20,7 +20,6 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
   {
     name: 'newswb_ws_pwa_promo_prompt',
     services: ['portuguese'],
-    // TBC if article is needed
     pageTypes: ['home', 'article'],
   },
   {

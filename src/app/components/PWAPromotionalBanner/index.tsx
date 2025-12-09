@@ -46,6 +46,7 @@ const PWAPromotionalBanner = () => {
     setIsVisible(false);
   };
 
+  // TODO: Potentially remove?
   // EXPERIMENT: PWA Promotional Banner
   const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
   const pwaPromoBannerVariant = useOptimizelyVariation({
@@ -53,7 +54,7 @@ const PWAPromotionalBanner = () => {
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  const isExperimentEnabled = Boolean(pwaPromoBannerVariant);
+  const isPwaPromoExperimentEnabled = pwaPromoBannerVariant === 'on';
   const isAndroid = useAndroidDetection();
 
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
@@ -67,15 +68,15 @@ const PWAPromotionalBanner = () => {
   console.log(`PWAPromotionalBanner`, {
     pwaPromoBannerExperimentName,
     pwaPromoBannerVariant,
-    isExperimentEnabled,
+    isPwaPromoExperimentEnabled,
     isAndroid,
   });
 
   if (
     isLite ||
     isAmp ||
-    !isAndroid ||
-    !isExperimentEnabled ||
+    // !isAndroid ||
+    !isPwaPromoExperimentEnabled ||
     !isVisible ||
     !isInstallable ||
     !promotionalBanner
