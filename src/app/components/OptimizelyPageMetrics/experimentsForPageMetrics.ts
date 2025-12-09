@@ -9,7 +9,6 @@ type ExperimentsForPageTypeMetrics = {
   activeExperiments: string[];
 }[];
 
-// TODO: Confirm if needed for PWA Mundo experiment
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: Continue Reading button for articles & EXPERIMENT: Article Read Time 2
@@ -23,7 +22,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: Homepage Time of Day Adaptive Curations
     pageType: HOME_PAGE,
-    activeExperiments: ['newswb_ws_tod_homepage'],
+    activeExperiments: ['newswb_ws_tod_homepage', 'newswb_ws_pwa_promo_prompt'],
   },
 ];
 

@@ -7,12 +7,11 @@ Add enabled experiments objects inside this array in this format:
   pageTypes: [],
 }
 */
-// TODO - add
 const enabledExperimentList = [
   {
-    name: 'newswb_ws_mundo_pwa_prompt',
+    name: 'newswb_ws_pwa_promo_prompt',
     services: ['mundo'],
-    // TBC - if article is needed?
+    // TBC: Is article is needed?
     pageTypes: ['home', 'article'],
   },
   {
