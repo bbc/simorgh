@@ -162,6 +162,9 @@ const addServiceChainAndCspHeaders = async ({
   }
 };
 
+// This runs on the server before rendering the page.
+// The props returned are passed down to ALL pages and merged with page
+// specific props from getInitialProps / getServerSideProps
 App.getInitialProps = async ({ ctx }: AppContext) => {
   const {
     req,
@@ -169,16 +172,14 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
     query: { service },
   } = ctx as NextPageContext & { query: PageDataParams };
 
+  const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
+
   const toggles = await getToggles(service);
 
   await addServiceChainAndCspHeaders({ ctx, service, toggles });
 
-  const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
-
   return {
     pageProps: {
-      // These are props passed down to ALL pages and merged with page
-      // specific props from getInitialProps / getServerSideProps
       ...extractHeaders(req?.headers || {}),
       isApp,
       isAmp,
