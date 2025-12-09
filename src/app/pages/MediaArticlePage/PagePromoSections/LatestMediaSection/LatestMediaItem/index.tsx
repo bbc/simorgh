@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { forwardRef } from 'react';
-import { jsx } from '@emotion/react';
 
 import BlurredBackground from '#app/components/Image/BlurredBackground';
 import Promo from '../../../../../legacy/components/OptimoPromos';

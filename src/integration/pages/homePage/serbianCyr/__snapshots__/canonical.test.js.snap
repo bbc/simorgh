@@ -243,7 +243,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="Promena kod svake žene"
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   fetchpriority="high"
   loading="eager"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3d07/test/7ea19630-8d4a-11ef-8e34-ef6bbfe11731.jpg.webp"
@@ -306,7 +306,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -324,13 +324,13 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News на српском",
         "publishingPrinciples": "https://www.bbc.com/serbian/cyr/institutional-50173730",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/serbian/cyr",
     },
     {
@@ -448,7 +448,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Home Page SEO OG description 1`] = `"Српска почетна страница"`;
 
-exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO OG image alt 1`] = `"ББЦ News на српском"`;
 
@@ -474,7 +474,7 @@ exports[`Canonical Home Page SEO Twitter description 1`] = `"Српска поч
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"ББЦ News на српском"`;
 
-exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 
@@ -492,7 +492,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.whatsa
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp"

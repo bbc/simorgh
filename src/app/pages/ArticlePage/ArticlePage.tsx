@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -49,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -246,6 +245,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: Location based Topics Experiment
+  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
+  const personalisedContentExperimentVariant = useOptimizelyVariation({
+    experimentName: personalisedContentExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -267,9 +273,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
@@ -389,6 +397,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  // EXPERIMENT: Location based Topics Experiment
+  const showPersonalisedContent = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      personalisedContentExperimentVariant &&
+      personalisedContentExperimentVariant !== 'off',
+  );
+
+  // EXPERIMENT: Location based Topics Experiment
+  const personalisedContentBlock = showPersonalisedContent ? (
+    <PersonalisedContent
+      pageData={pageData}
+      personalisedTopicCurationExperimentVariant={
+        personalisedContentExperimentVariant ?? ''
+      }
+    />
+  ) : null;
+
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -459,6 +486,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               tagBackgroundColour={WHITE}
             />
           )}
+          {/* EXPERIMENT: Location based Topics Experiment */}
+          {personalisedContentExperimentVariant === 'variation_2' &&
+            personalisedContentBlock}
           <RelatedContentSection
             content={blocks}
             // EXPERIMENT: Time of Day Experiment
@@ -469,13 +499,31 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 experimentVariant: timeOfDayExperimentVariant,
               },
             })}
+            // EXPERIMENT: Location based Topics Experiment
+            {...(personalisedContentExperimentVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: personalisedContentExperimentName,
+                experimentVariant: personalisedContentExperimentVariant,
+              },
+            })}
           />
+          {/* EXPERIMENT: Location based Topics Experiment */}
+          {personalisedContentExperimentVariant === 'variation_1' &&
+            personalisedContentBlock}
         </div>
         {!isApp && !isPGL && (
           <SecondaryColumn
             pageData={pageData}
+            // EXPERIMENT: Location based Topics Experiment
+            personalisedContentExperimentVariant={
+              personalisedContentExperimentVariant
+            }
+            personalisedContentExperimentName={
+              personalisedContentExperimentName
+            }
             // EXPERIMENT: Time of Day Experiment
-            experimentVariant={timeOfDayExperimentVariant}
+            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
             timeOfDayExperimentName={timeOfDayExperimentName}
           />
         )}
@@ -488,13 +536,19 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          // EXPERIMENT: Time of Day Experiment
           eventTrackingData={{
             componentName: 'most-read',
+            // EXPERIMENT: Time of Day Experiment
             ...(timeOfDayExperimentVariant && {
               sendOptimizelyEvents: true,
               experimentName: timeOfDayExperimentName,
               experimentVariant: timeOfDayExperimentVariant,
+            }),
+            // EXPERIMENT: Location based Topics Experiment
+            ...(personalisedContentExperimentVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: personalisedContentExperimentName,
+              experimentVariant: personalisedContentExperimentVariant,
             }),
           }}
         />

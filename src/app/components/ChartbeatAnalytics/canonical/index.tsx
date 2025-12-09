@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { CanonicalChartbeatProps } from '../types';
 import { chartbeatSource as defaultChartbeatSource } from '../utils';

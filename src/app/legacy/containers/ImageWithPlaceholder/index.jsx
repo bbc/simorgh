@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';

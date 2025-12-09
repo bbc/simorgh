@@ -10,9 +10,10 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes, Toggles } from '#app/models/types/global';
 import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
-import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
+import isLive from '#app/lib/utilities/isLive';
+import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
@@ -63,8 +64,6 @@ export default async (context: GetServerSidePropsContext) => {
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
-    resolvedUrlWithoutQuery,
-    ARTICLE_PAGE,
   );
 
   // If request has fails or should not be rendered, return non-200 status
@@ -93,8 +92,11 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const { article, secondaryData } = data?.pageData || {};
+  const country = reqHeaders['x-country']?.toString().toLowerCase();
+  const shouldAttemptPersonalisedTopicExperience =
+    !isLive() && service === 'mundo' && !isAmp && Boolean(country);
 
+  const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
     Date.now() - article.metadata.lastPublished > 21600000;
   const maxAge = isArticleOlderThanSixHours ? 90 : 45;
@@ -111,7 +113,60 @@ export default async (context: GetServerSidePropsContext) => {
     mostRead = null,
     billboardCuration = null,
     mediaCuration = null,
-  } = secondaryData;
+  } = secondaryData || {};
+
+  let personalisedContent;
+
+  if (shouldAttemptPersonalisedTopicExperience) {
+    const countrySpecificTopics: Record<string, string> = {
+      ar: 'c7zp57yy6dzt',
+      cl: 'c340qyppkk8t',
+      mx: 'c340qyp6yggt',
+      co: 'c404v5gz1rkt',
+      es: 'c6vzy3wd189t',
+      ve: 'cpzd49v9rd1t',
+      us: 'cdr5613yzwqt',
+      uy: 'cpzd498zwj6t',
+      do: 'cr50y7pykkdt',
+    };
+
+    const countrySpecificId =
+      country && countrySpecificTopics[country.toString()];
+
+    if (countrySpecificId) {
+      try {
+        const { data: topicData } = await getPageData({
+          id: `/${service}/topics/${countrySpecificId}`,
+          rendererEnv: 'live',
+          resolvedUrl: `/${service}/topics/${countrySpecificId}`,
+          pageType: 'topic',
+          service,
+          variant: variant || undefined,
+          isAmp,
+        });
+
+        const countrySpecificData = topicData?.pageData;
+        const countryArticles =
+          countrySpecificData?.curations?.[0]?.summaries || [];
+
+        if (countrySpecificData) {
+          personalisedContent = [
+            {
+              title: countrySpecificData.title,
+              description: countrySpecificData.description,
+              link: `/${service}/topics/${countrySpecificId}`,
+              summaries: Array.isArray(countryArticles)
+                ? countryArticles.slice(0, 4)
+                : [],
+              topicId: countrySpecificId,
+            },
+          ];
+        }
+      } catch (_error) {
+        // void
+      }
+    }
+  }
 
   const transformedArticleData = transformPageData(toggles)(article);
 
@@ -145,6 +200,7 @@ export default async (context: GetServerSidePropsContext) => {
           latestMedia,
           mediaCuration,
           billboardCuration,
+          ...(personalisedContent && { personalisedContent }),
         },
         mostRead,
       },

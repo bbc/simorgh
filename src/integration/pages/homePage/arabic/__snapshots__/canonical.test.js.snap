@@ -215,7 +215,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="الرياضه"
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   fetchpriority="high"
   loading="eager"
   src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
@@ -278,7 +278,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -296,13 +296,13 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News عربي",
         "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/arabic",
     },
     {
@@ -354,7 +354,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Home Page SEO OG description 1`] = `"BBC News عربي: الأخبار والمعلومات باللغة العربية."`;
 
-exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News عربي"`;
 
@@ -380,7 +380,7 @@ exports[`Canonical Home Page SEO Twitter description 1`] = `"BBC News عربي: 
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
 
-exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png"`;
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@BBCArabic"`;
 

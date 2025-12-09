@@ -1,13 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  use,
-  useCallback,
-} from 'react';
-import { Global, jsx } from '@emotion/react';
+import { Fragment, PropsWithChildren, useCallback, useState, use } from 'react';
+import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
@@ -102,7 +94,6 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-
   return (
     <>
       {preload && (

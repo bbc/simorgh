@@ -159,7 +159,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -228,7 +228,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
@@ -241,7 +241,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -259,13 +259,13 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
     },
   ],
@@ -313,7 +313,7 @@ exports[`Canonical Articles SEO Twitter description 1`] = `"Wannan shine taken S
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News Hausa"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbchausa"`;
 

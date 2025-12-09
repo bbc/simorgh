@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -60,12 +61,12 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mk3s9j.jpg',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
         alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
       },
       linkLabel: {
         text: 'Episodios',
-        href: 'https://www.bbc.com/mundo/podcasts/p0mhhs01',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
@@ -84,6 +85,8 @@ export const service: DefaultServiceConfig = {
       secondaryButton: {
         text: 'No ahora',
       },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
     },
     translations: {
       readTime: {

@@ -1,4 +1,5 @@
-import React, { use, useMemo } from 'react';
+import type { ReactNode, FC } from 'react';
+import { use, useMemo } from 'react';
 import { Global, ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import useIsPWA from '#app/hooks/useIsPWA';
 import { ServiceTheme } from '#app/models/types/theming';
@@ -33,14 +34,14 @@ const useMergeTheme = (
 };
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const withThemeProvider = (
   baseTheme: ServiceTheme,
   pwaTheme?: Partial<ServiceTheme>,
 ) => {
-  const ThemeProvider: React.FC<Props> = ({ children }) => {
+  const ThemeProvider: FC<Props> = ({ children }) => {
     const { isAmp, isLite, pageType } = use(RequestContext);
 
     const brandTheme = useMergeTheme(baseTheme, pwaTheme);

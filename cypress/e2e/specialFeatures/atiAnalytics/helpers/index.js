@@ -128,13 +128,14 @@ export const setUserIDCookie = () => {
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
-  const publicServiceDestinationNames = {
+  const dedicatedPianoDestinationNamesByService = {
     news: 'NEWS_PS',
     cymrufyw: 'NEWS_LANGUAGES_PS',
     naidheachdan: 'NEWS_LANGUAGES_PS',
-    scotland: 'PS_HOMEPAGE',
+    scotland: 'HOMEPAGE_PS',
     newsround: 'NEWSROUND',
     sport: 'SPORT_PS',
+    japanese: 'NEWS_LANGUAGES_GNL',
   };
 
   const expectedAtiDestinationsForAmp = {
@@ -152,8 +153,8 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     NEWS_LANGUAGES_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-    PS_HOMEPAGE: '598273',
-    PS_HOMEPAGE_TEST: '598274',
+    HOMEPAGE_PS: '598273',
+    HOMEPAGE_PS_TEST: '598274',
     NEWSROUND: '598293',
     NEWSROUND_TEST: '598294',
     SPORT_PS:
@@ -162,10 +163,12 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     SPORT_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
+    NEWS_LANGUAGES_GNL: 598289,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
   };
 
   const destinationName =
-    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
+    dedicatedPianoDestinationNamesByService[service] ?? 'WS_NEWS_LANGUAGES';
 
   return expectedAtiDestinationsForAmp[
     applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`

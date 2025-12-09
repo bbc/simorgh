@@ -86,14 +86,14 @@ const styles = {
 
       '& .short-text': {
         display: 'inline',
-        [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_1_MIN_WIDTH]: {
           display: 'none',
         },
       },
 
       '& .long-text': {
         display: 'none',
-        [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_1_MIN_WIDTH]: {
           display: 'inline',
         },
       },
@@ -150,7 +150,6 @@ const styles = {
       fill: 'currentColor',
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
-      pointerEvents: 'none',
       [mq.FORCED_COLOURS]: {
         forcedColorAdjust: 'none',
         color: 'ButtonText',
