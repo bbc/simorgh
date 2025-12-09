@@ -28,6 +28,7 @@ const cacheResource = async (cache, url) => {
     return response;
   } catch (err) {
     console.error(`[SW v${version}] Failed to cache ${url}:`, err);
+    return null;
   }
 };
 
@@ -141,13 +142,13 @@ self.addEventListener('activate', event => {
 
 // -------Message Event-------------
 self.addEventListener('message', async event => {
-  if (event.data?.type === 'PWA_STATUS') {
-    const clientId = event.source.id;
-    const isPWA = event.data.isPWA;
-    pwaClients.set(clientId, isPWA);
+  if (event.data && event.data.type === 'CLIENT_PWA_STATUS') {
+    const isPWA = event.data.isPWA === true;
+    const { source } = event;
+    pwaClients.set(source.id, isPWA);
 
     if (isPWA) {
-      const service = getServiceFromUrl(event.source.url);
+      const service = getServiceFromUrl(source.url);
       await cacheOfflinePageAndResources(service);
     }
   }
@@ -155,8 +156,8 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  const request = event.request;
-  const url = request.url;
+  const { request } = event;
+  const { url } = request;
 
   console.log(`[SW FETCH] ${url}`);
 
@@ -165,89 +166,105 @@ const fetchEventHandler = async event => {
 
   if (isWebpRequest) {
     const fallbackResp = await handleWebPRequest(request);
-    if (fallbackResp) return fallbackResp;
+    if (fallbackResp) {
+      event.respondWith(fallbackResp);
+    }
+    // If null, webp is supported - don't intercept, let browser handle it
+    return;
   }
 
   const cache = await openCache();
 
   // ---------------Cache-first static assets-----------
   if (isCacheableRequest(url)) {
-    const cached = await cache.match(request);
-    if (cached) return cached;
+    event.respondWith(
+      (async () => {
+        const cached = await cache.match(request);
+        if (cached) return cached;
 
-    try {
-      const networkResp = await fetch(request);
-      if (networkResp && networkResp.ok) {
-        cache.put(request, networkResp.clone());
-      }
-      return networkResp;
-    } catch (err) {
-      console.error('[SW] Cacheable request failed:', url, err);
-      return new Response('Offline', { status: 503 });
-    }
+        try {
+          const networkResp = await fetch(request);
+          if (networkResp && networkResp.ok) {
+            cache.put(request, networkResp.clone());
+          }
+          return networkResp;
+        } catch (err) {
+          console.error('[SW] Cacheable request failed:', url, err);
+          return new Response('Offline', { status: 503 });
+        }
+      })(),
+    );
+    return;
   }
 
   // ---------------Navigation requests-----------
   if (request.mode === 'navigate') {
     console.log(`[SW FETCH] Navigation: ${url}`);
 
-    try {
-      // Use preload if available
-      const preloadResp = await event.preloadResponse;
-      if (preloadResp) return preloadResp;
+    event.respondWith(
+      (async () => {
+        try {
+          // Use preload if available
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
 
-      const networkResp = await fetch(request);
+          const networkResp = await fetch(request);
 
-      // Cache offline page if in PWA mode
-      if (networkResp && networkResp.ok && event.clientId) {
-        const client = await self.clients.get(event.clientId);
-        const isPWA = client && pwaClients.get(client.id);
+          // Cache offline page if in PWA mode
+          if (networkResp && networkResp.ok && event.clientId) {
+            const client = await self.clients.get(event.clientId);
+            const isPWA = client && pwaClients.get(client.id);
 
-        if (isPWA) {
-          const service = getServiceFromUrl(url);
-          cacheOfflinePageAndResources(service).catch(err =>
-            console.error('[SW] Cache offline fail:', err),
-          );
+            if (isPWA) {
+              const service = getServiceFromUrl(url);
+              cacheOfflinePageAndResources(service).catch(err =>
+                console.error('[SW] Cache offline fail:', err),
+              );
+            }
+          }
+
+          return networkResp;
+        } catch (err) {
+          console.error('[SW] Navigation failed:', url, err);
+
+          // Attempt to serve offline page if PWA
+          if (event.clientId) {
+            const client = await self.clients.get(event.clientId);
+            const isPWA = client && pwaClients.get(client.id);
+
+            if (isPWA) {
+              const service = getServiceFromUrl(url);
+              const offlineUrl = new URL(
+                getOfflinePageUrl(service),
+                self.location.origin,
+              ).href;
+
+              const cachedOffline = await cache.match(offlineUrl);
+              if (cachedOffline) return cachedOffline;
+            }
+          }
+
+          return new Response('You are offline', {
+            status: 503,
+            headers: { 'Content-Type': 'text/plain' },
+          });
         }
-      }
-
-      return networkResp;
-    } catch (err) {
-      console.error('[SW] Navigation failed:', url, err);
-
-      // Attempt to serve offline page if PWA
-      if (event.clientId) {
-        const client = await self.clients.get(event.clientId);
-        const isPWA = client && pwaClients.get(client.id);
-
-        if (isPWA) {
-          const service = getServiceFromUrl(url);
-          const offlineUrl = new URL(
-            getOfflinePageUrl(service),
-            self.location.origin,
-          ).href;
-
-          const cachedOffline = await cache.match(offlineUrl);
-          if (cachedOffline) return cachedOffline;
-        }
-      }
-
-      return new Response('You are offline', {
-        status: 503,
-        headers: { 'Content-Type': 'text/plain' },
-      });
-    }
+      })(),
+    );
+    return;
   }
 
   // -----------Fall-through: Always network---------------
-  try {
-    return await fetch(request);
-  } catch (err) {
-    console.error('[SW] Fetch failed:', url, err);
-    return new Response('Offline', { status: 503 });
-  }
+  event.respondWith(
+    (async () => {
+      try {
+        return await fetch(request);
+      } catch (err) {
+        console.error('[SW] Fetch failed:', url, err);
+        return new Response('Offline', { status: 503 });
+      }
+    })(),
+  );
 };
 
-self.addEventListener('fetch', event => {
-  event.respondWith(fetchEventHandler(event));
-});
+self.addEventListener('fetch', fetchEventHandler);
