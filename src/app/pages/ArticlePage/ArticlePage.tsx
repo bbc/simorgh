@@ -419,7 +419,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: PWA Promotional Banner
   const hasSecondaryColumnTopStories =
-    pageData?.secondaryColumn?.topStories.length;
+    pageData?.secondaryColumn?.topStories?.length;
 
   return (
     <div css={styles.pageWrapper}>
