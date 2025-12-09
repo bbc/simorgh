@@ -10,12 +10,14 @@ interface UsePWAInstallPromptCallbacks {
   onAccepted?: () => void;
   onDismissed?: () => void;
   onError?: (error: unknown) => void;
+  onPromptShown?: () => void;
 }
 
 const usePWAInstallPrompt = ({
   onAccepted,
   onDismissed,
   onError,
+  onPromptShown,
 }: UsePWAInstallPromptCallbacks = {}) => {
   const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
@@ -47,24 +49,29 @@ const usePWAInstallPrompt = ({
     };
   }, [isPWA]);
 
-  const promptInstall = () => {
+  const promptInstall = async () => {
     if (!deferredPrompt.current) return;
-    deferredPrompt.current.prompt();
-    deferredPrompt.current.userChoice
-      .then(result => {
-        if (result.outcome === 'accepted') {
-          onAccepted?.();
-        } else {
-          onDismissed?.();
-        }
-      })
-      .catch(error => {
-        onError?.(error);
-      })
-      .finally(() => {
-        deferredPrompt.current = null;
-        setIsInstallable(false);
-      });
+    try {
+      await deferredPrompt.current.prompt();
+      onPromptShown?.();
+      deferredPrompt.current.userChoice
+        .then(result => {
+          if (result.outcome === 'accepted') {
+            onAccepted?.();
+          } else {
+            onDismissed?.();
+          }
+        })
+        .catch(error => {
+          onError?.(error);
+        })
+        .finally(() => {
+          deferredPrompt.current = null;
+          setIsInstallable(false);
+        });
+    } catch (error) {
+      onError?.(error);
+    }
   };
 
   return {
