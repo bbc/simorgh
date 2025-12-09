@@ -1,21 +1,15 @@
 import { forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { LUNAR } from '#app/components/ThemeProvider/palette';
-import {
-  GEL_SPACING_HLF,
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
+import { POSTBOX, WHITE } from '#app/components/ThemeProvider/palette';
+import { GEL_SPACING, GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
 const CONTAINER_STYLES = `
   display: flex;
   flex-wrap: wrap;
-  margin-top: -${GEL_SPACING};
-  margin-bottom: 0;
-  margin-left: -${GEL_SPACING_HLF};
-  margin-right: -${GEL_SPACING_HLF};
+  gap: ${GEL_SPACING};
+  margin: 0;
   padding: 0;
 `;
 
@@ -29,13 +23,11 @@ const TopicsList = styled.ul`
 `;
 
 const SingleTopicTagItem = styled.div`
-  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
-  ${({ theme: { fontSizes } }) => fontSizes.brevier};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
 
   word-break: break-word;
-  margin-top: ${GEL_SPACING};
-  margin-left: ${GEL_SPACING_HLF};
-  margin-right: ${GEL_SPACING_HLF};
+  min-width: 0;
   a {
     display: inline-flex;
     min-height: ${MIN_TAG_HEIGHT};
@@ -43,17 +35,17 @@ const SingleTopicTagItem = styled.div`
     align-items: center;
     background-color: ${({ backgroundColour, theme }) =>
       theme.isDarkUi ? theme.palette.GREY_7 : backgroundColour};
+    border: 1px solid
+      ${({ theme }) =>
+        theme.isDarkUi ? theme.palette.GREY_6 : theme.palette.GREY_3};
     text-decoration: none;
     color: ${({ theme }) =>
       theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.EBON};
 
     &:hover,
     &:focus {
+      color: ${({ theme }) => theme.palette.POSTBOX || POSTBOX};
       text-decoration: underline;
-    }
-    &:visited {
-      color: ${({ theme }) =>
-        theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.METAL};
     }
   }
 `;
@@ -70,7 +62,7 @@ export const TopicTags = ({
   children = [],
   script,
   service,
-  tagBackgroundColour = LUNAR,
+  tagBackgroundColour = WHITE,
 }) => {
   const hasMultipleChildren = children.length > 1;
 

@@ -3,7 +3,10 @@ import { TopicTag, TopicTags } from '#psammead/psammead-topic-tags/src';
 import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
-import { GEL_SPACING_QUIN } from '#psammead/gel-foundations/src/spacings';
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING_QUIN,
+} from '#psammead/gel-foundations/src/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -18,7 +21,8 @@ const eventTrackingData = {
 };
 
 const StyledTopicsWrapper = styled.aside`
-  padding-bottom: ${GEL_SPACING_QUIN};
+  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};
+  background-color: ${({ backgroundColour }) => backgroundColour || 'transparent'};
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -65,6 +69,7 @@ const RelatedTopics = ({
         data-testid="related-topics"
         aria-labelledby="related-topics"
         role="complementary"
+        backgroundColour={backgroundColour}
         {...(className ? { className } : undefined)}
       >
         <StyledSectionLabel
