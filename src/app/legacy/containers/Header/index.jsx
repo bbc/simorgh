@@ -86,10 +86,14 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
   });
+
+  // TBC: check if propsForTopBarOJComponent is empty?
   const isPwaPromoExperimentEnabled =
     pwaPromoBannerVariant === 'on' &&
     [ARTICLE_PAGE, HOME_PAGE].includes(pageType);
 
+  // TODO: temp used for testing
+  // eslint-disable-next-line no-console
   console.log(`HeaderContainer`, {
     isPwaPromoExperimentEnabled,
     pwaPromoBannerVariant,
