@@ -1,5 +1,6 @@
 import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
+import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -35,31 +36,31 @@ const isBannerVisible = () => {
 };
 
 const PWAPromotionalBanner = () => {
+  usePWAInstallTracker();
   const { promotionalBanner } = use(ServiceContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
-
-  const { ref: viewRef } = useViewTracker({
-    componentName: 'pwa_promotional_banner',
+  const viewTracker = useViewTracker({
+    componentName: 'pwa-promotional-banner',
   });
 
   const { onClick: onPrimaryClickTrack } = useClickTracker({
-    componentName: 'pwa_promotional_banner_primary',
+    componentName: 'pwa-promotional-banner-primary',
   });
   const { onClick: onSecondaryClickTrack } = useClickTracker({
-    componentName: 'pwa_promotional_banner_secondary',
+    componentName: 'pwa-promotional-banner-secondary',
   });
   const { onClick: onCloseClickTrack } = useClickTracker({
-    componentName: 'pwa_promotional_banner_close',
+    componentName: 'pwa-promotional-banner-close',
   });
 
   const trackPwaPromptShown = useCustomEventTracker({
     eventName: 'pwa_prompt_shown',
   });
   const trackPwaPromptAccepted = useCustomEventTracker({
-    eventName: 'pwa_prompt_accepted',
+    eventName: 'pwa-prompt-accepted',
   });
   const trackPwaPromptDismissed = useCustomEventTracker({
-    eventName: 'pwa_prompt_dismissed',
+    eventName: 'pwa-prompt-dismissed',
   });
 
   const handleBannerDismiss = useCallback(
@@ -89,12 +90,7 @@ const PWAPromotionalBanner = () => {
       trackPwaPromptDismissed();
     },
     onError: () => setIsVisible(false),
-  });
-
-  useState(() => {
-    if (isVisible && isInstallable && promotionalBanner) {
-      trackPwaPromptShown();
-    }
+    onPromptShown: trackPwaPromptShown,
   });
 
   const handlePrimaryClick = useCallback(
@@ -110,7 +106,7 @@ const PWAPromotionalBanner = () => {
   }
 
   return (
-    <div ref={viewRef}>
+    <div {...viewTracker}>
       <PromotionalBanner
         title={promotionalBanner.title}
         description={promotionalBanner.description}
