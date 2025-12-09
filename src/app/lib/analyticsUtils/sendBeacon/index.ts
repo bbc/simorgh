@@ -132,24 +132,17 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   );
 };
 
-const sendBeacon = async (
-  url: string,
-  reverbBeaconConfig?: ReverbBeaconConfig | null,
-) => {
+const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
   if (onClient()) {
     try {
-      if (reverbBeaconConfig) {
-        const {
-          params: { page, user },
-          eventDetails,
-        } = reverbBeaconConfig;
+      const {
+        params: { page, user },
+        eventDetails,
+      } = reverbBeaconConfig;
 
-        await setReverbPageValues({ pageVars: page, userVars: user });
+      await setReverbPageValues({ pageVars: page, userVars: user });
 
-        await callReverb(eventDetails);
-      } else {
-        await fetch(url, { credentials: 'include' }).then(res => res.text());
-      }
+      await callReverb(eventDetails);
     } catch (error) {
       logger.error(ATI_LOGGING_ERROR, {
         error,
