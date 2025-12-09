@@ -40,7 +40,7 @@ const styles = {
         width: '100%',
       },
       overflow: 'hidden',
-      ' > div > img': {
+      '> * img': {
         objectFit: 'contain',
       },
     }),
