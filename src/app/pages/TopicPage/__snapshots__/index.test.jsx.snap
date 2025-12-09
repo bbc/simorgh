@@ -10,7 +10,7 @@ exports[`Topic Page SEO should correctly render linked data 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -28,13 +28,13 @@ exports[`Topic Page SEO should correctly render linked data 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",
         "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
       "url": "https://www.test.bbc.com/news/articles/c0g992jmmkko",
     },
     {

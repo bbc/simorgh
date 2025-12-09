@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/burmese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News မြန်မာ',
     dir: `ltr`,
     externalLinkText: ', ပြင်ပစာမျက်နှာ',

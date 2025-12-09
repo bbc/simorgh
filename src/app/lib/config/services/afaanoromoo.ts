@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
     defaultImage:
-      'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afaanoromoo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afaan Oromoo',
     dir: `ltr`,
     externalLinkText: ' alaan',

@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Indonesia',
     dir: `ltr`,
     externalLinkText: ', eksternal',
