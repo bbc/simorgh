@@ -17,7 +17,7 @@ import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-const renderNoScriptTrackingPixel = (reverbParams: ATIAnalyticsProps) => {
+const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
       <img
@@ -29,7 +29,7 @@ const renderNoScriptTrackingPixel = (reverbParams: ATIAnalyticsProps) => {
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
         src={enforceLegacyDestinationForJapanese(
-          getNoScriptTrackingPixelUrl(reverbParams),
+          getNoScriptTrackingPixelUrl({ reverbParams }),
         )}
       />
     </noscript>
@@ -75,7 +75,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
           script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
           nonce,
         })}
-      {renderNoScriptTrackingPixel(reverbParams)}
+      {renderNoScriptTrackingPixel({ reverbParams })}
     </>
   );
 };
