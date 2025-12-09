@@ -11,15 +11,12 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = use(RequestContext);
   const serviceContext = use(ServiceContext);
   const { isAmp } = requestContext;
-  const { useReverb } = serviceContext;
 
-  const reverbParams = useReverb
-    ? buildReverbParams({
-        requestContext,
-        serviceContext,
-        atiData,
-      })
-    : null;
+  const reverbParams = buildReverbParams({
+    requestContext,
+    serviceContext,
+    atiData,
+  });
 
   return isAmp ? (
     <>
