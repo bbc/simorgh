@@ -5,31 +5,20 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import IMAGE from '../../../components/Image';
+import IMAGE from '#app/components/Image';
+import BlurredBackground from '#app/components/Image/BlurredBackground';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
-  > div > img {
-    object-fit: ${props => (props.isPortraitImage ? 'contain' : 'cover')};
-  }
   overflow: hidden;
-`;
-
-const BlurredBackgrounnd = styled.span`
-  display: block;
-  position: absolute;
-  /* When the image is blurred by the filter, it leaves a transparent gradient
-     around the edge that's double the length of the blur. We are hiding the
-     edge using positioning to compensate. */
-  top: -30px;
-  right: -30px;
-  bottom: -30px;
-  left: -30px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: blur(15px);
+  ${({ isPortraitImage }) =>
+    isPortraitImage &&
+    `
+      > div > img {
+        object-fit: contain;
+      }
+    `}
 `;
 
 const ChildWrapper = styled.div`
@@ -98,20 +87,21 @@ const Image = props => {
   );
 
   const sizes = createSizes(useLargeImages, isProgrammeImage);
+
+  const srcWith240w = src.replace('{width}', 240);
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      <BlurredBackgrounnd
-        style={{ backgroundImage: `url(${src.replace('{width}', 240)})` }}
-      />
+      {isPortraitImage && <BlurredBackground src={srcWith240w} />}
       <IMAGE
         {...rest}
-        src={src.replace('{width}', 240)}
+        src={srcWith240w}
         srcSet={primarySrcSet}
         mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
         fallbackMediaType="image/jpeg"
         sizes={sizes}
         aspectRatio={[16, 9]}
+        {...(isPortraitImage && { placeholder: false })}
       />
       {children && (
         <ChildWrapper className={className}>{children}</ChildWrapper>

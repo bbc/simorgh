@@ -8,6 +8,7 @@ const Image = ({
   fallbackSrcset = '',
   width,
   height,
+  isPortraitImage = false,
 }) => {
   const ASPECT_RATIO = [16, 9];
 
@@ -21,6 +22,7 @@ const Image = ({
       width={width}
       height={height}
       lazyLoad
+      {...(isPortraitImage && { placeholder: false })}
     />
   );
 };

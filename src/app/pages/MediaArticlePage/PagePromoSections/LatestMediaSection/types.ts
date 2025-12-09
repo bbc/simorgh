@@ -12,6 +12,7 @@ export type LatestMedia = {
   title: string;
   type: Media;
   imageAlt?: string;
+  isPortraitImage?: boolean;
 };
 
 export type LatestMediaItemProp = {
