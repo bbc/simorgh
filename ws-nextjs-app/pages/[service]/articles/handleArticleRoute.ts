@@ -13,7 +13,7 @@ import { PageTypes, Toggles } from '#app/models/types/global';
 import isLive from '#app/lib/utilities/isLive';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
-import augmentWithDisclaimer from '#nextjs/utilities/augmentWithDisclaimer/augmentWithDisclaimer';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 

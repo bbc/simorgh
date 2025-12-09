@@ -70,3 +70,4 @@ describe('augmentWithDisclaimer', () => {
     expect(blockTypes).not.toContain('disclaimer');
   });
 });
+

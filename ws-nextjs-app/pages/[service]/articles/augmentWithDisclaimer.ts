@@ -48,3 +48,4 @@ export default ({
     isDisclaimerToggledOn(toggles) && !isSfv(pageData)
       ? insertDisclaimer(pageData, positionFromTimestamp)
       : pageData;
+
