@@ -1,11 +1,13 @@
-import { useState, use } from 'react';
+import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
-
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
-const PWA_BANNER_DISMISS_KEY = 'pwa_promotionalBanner_dismissals';
-const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotionalBanner_last_dismissed';
+const PWA_BANNER_DISMISS_KEY = 'pwa_promotional_banner_dismissals';
+const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotional_banner_last_dismissed';
 const PWA_BANNER_MAX_DISMISSALS = 3;
 const PWA_BANNER_DISMISS_INTERVAL_MS = 10 * 24 * 60 * 60 * 1000; // 10 days
 
@@ -36,38 +38,97 @@ const PWAPromotionalBanner = () => {
   const { promotionalBanner } = use(ServiceContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
-  const handleBannerDismiss = () => {
-    setBannerDismissed();
-    setIsVisible(false);
-  };
+  const { ref: viewRef } = useViewTracker({
+    componentName: 'pwa_promotional_banner',
+  });
+
+  const { onClick: onPrimaryClickTrack } = useClickTracker({
+    componentName: 'pwa_promotional_banner_primary',
+  });
+  const { onClick: onSecondaryClickTrack } = useClickTracker({
+    componentName: 'pwa_promotional_banner_secondary',
+  });
+  const { onClick: onCloseClickTrack } = useClickTracker({
+    componentName: 'pwa_promotional_banner_close',
+  });
+
+  const trackPwaPromptShown = useCustomEventTracker({
+    eventName: 'pwa_prompt_shown',
+  });
+  const trackPwaPromptAccepted = useCustomEventTracker({
+    eventName: 'pwa_prompt_accepted',
+  });
+  const trackPwaPromptDismissed = useCustomEventTracker({
+    eventName: 'pwa_prompt_dismissed',
+  });
+
+  const handleBannerDismiss = useCallback(
+    (event?: React.MouseEvent) => {
+      setBannerDismissed();
+      setIsVisible(false);
+      onCloseClickTrack?.(event);
+    },
+    [onCloseClickTrack],
+  );
+
+  const handleSecondaryClick = useCallback(
+    (event?: React.MouseEvent) => {
+      onSecondaryClickTrack?.(event);
+      handleBannerDismiss(event);
+    },
+    [onSecondaryClickTrack, handleBannerDismiss],
+  );
 
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
-    onAccepted: handleBannerDismiss,
-    onDismissed: handleBannerDismiss,
+    onAccepted: () => {
+      handleBannerDismiss();
+      trackPwaPromptAccepted();
+    },
+    onDismissed: () => {
+      handleBannerDismiss();
+      trackPwaPromptDismissed();
+    },
     onError: () => setIsVisible(false),
   });
+
+  useState(() => {
+    if (isVisible && isInstallable && promotionalBanner) {
+      trackPwaPromptShown();
+    }
+  });
+
+  const handlePrimaryClick = useCallback(
+    (event?: React.MouseEvent) => {
+      onPrimaryClickTrack?.(event);
+      promptInstall();
+    },
+    [onPrimaryClickTrack, promptInstall],
+  );
 
   if (!isVisible || !isInstallable || !promotionalBanner) {
     return null;
   }
+
   return (
-    <PromotionalBanner
-      title={promotionalBanner.title}
-      description={promotionalBanner.description}
-      orText={promotionalBanner.orText}
-      primaryButton={{
-        text: promotionalBanner.primaryButton.text,
-        longText: promotionalBanner.primaryButton.longText,
-      }}
-      onPrimaryClick={promptInstall}
-      secondaryButton={{
-        text: promotionalBanner.secondaryButton.text,
-      }}
-      onSecondaryClick={handleBannerDismiss}
-      isDismissible
-      onClose={handleBannerDismiss}
-      bannerLabel={promotionalBanner.bannerLabel}
-    />
+    <div ref={viewRef}>
+      <PromotionalBanner
+        title={promotionalBanner.title}
+        description={promotionalBanner.description}
+        orText={promotionalBanner.orText}
+        primaryButton={{
+          text: promotionalBanner.primaryButton.text,
+          longText: promotionalBanner.primaryButton.longText,
+        }}
+        onPrimaryClick={handlePrimaryClick}
+        secondaryButton={{
+          text: promotionalBanner.secondaryButton.text,
+        }}
+        onSecondaryClick={handleSecondaryClick}
+        isDismissible
+        onClose={handleBannerDismiss}
+        bannerLabel={promotionalBanner.bannerLabel}
+      />
+    </div>
   );
 };
 export default PWAPromotionalBanner;
