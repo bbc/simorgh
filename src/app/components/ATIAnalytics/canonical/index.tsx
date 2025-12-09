@@ -45,10 +45,7 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({
-  pageviewParams = '',
-  reverbParams,
-}: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
@@ -56,16 +53,11 @@ const CanonicalATIAnalytics = ({
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
 
-  const atiPageViewUrlString =
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
-
   const [reverbBeaconConfig] = useState(reverbParams);
 
-  const [atiPageViewUrl] = useState(atiPageViewUrlString);
-
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
-  }, [atiPageViewUrl, reverbBeaconConfig]);
+    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
+  }, [reverbBeaconConfig]);
 
   const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
     reverbUrlHelper.getLitePageViewUrl(reverbParams),
