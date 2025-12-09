@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
     externalLinkText: ', 외부 사이트',

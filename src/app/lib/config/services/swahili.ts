@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/swahili/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Swahili',
     dir: `ltr`,
     externalLinkText: ', ya nje',

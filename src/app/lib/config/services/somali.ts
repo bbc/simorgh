@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/somali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
     externalLinkText: ', kale',

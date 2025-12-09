@@ -147,7 +147,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC",
@@ -159,7 +159,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -177,12 +177,12 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/scotland/articles/czwj5l0n210o",
     },
   ],
@@ -204,7 +204,7 @@ exports[`AMP Articles SEO Linked data should match text 2`] = `
 
 exports[`AMP Articles SEO OG description 1`] = `"This is the SEO headline of this test article"`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"`;
+exports[`AMP Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Articles SEO OG image alt 1`] = `"BBC Scotland"`;
 
@@ -230,7 +230,7 @@ exports[`AMP Articles SEO Twitter description 1`] = `"This is the SEO headline o
 
 exports[`AMP Articles SEO Twitter image alt 1`] = `"BBC Scotland"`;
 
-exports[`AMP Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png"`;
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@BBCScotland"`;
 

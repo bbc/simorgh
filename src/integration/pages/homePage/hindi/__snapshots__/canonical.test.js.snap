@@ -342,7 +342,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -360,13 +360,13 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News हिंदी",
         "publishingPrinciples": "https://www.bbc.com/hindi/institutional-50223932",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/hindi",
     },
     {
@@ -772,7 +772,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Home Page SEO OG description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
 
-exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News हिंदी"`;
 
@@ -798,7 +798,7 @@ exports[`Canonical Home Page SEO Twitter description 1`] = `"हिंदी म
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News हिंदी"`;
 
-exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbchindi"`;
 

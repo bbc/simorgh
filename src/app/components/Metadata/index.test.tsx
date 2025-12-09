@@ -1264,7 +1264,7 @@ describe('Metadata', () => {
           const ogImageTag = getOgImageTag();
 
           expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
           );
         });
 
@@ -1284,7 +1284,7 @@ describe('Metadata', () => {
           const ogImageTag = getOgImageTag();
 
           expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
           );
         });
       });
@@ -1306,7 +1306,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
       );
     });
 
@@ -1326,7 +1326,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
       );
     });
   });

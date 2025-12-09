@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tigrinya/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
     externalLinkText: ', ደጋዊ',
