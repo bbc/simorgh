@@ -86,14 +86,14 @@ const styles = {
 
       '& .short-text': {
         display: 'inline',
-        [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_1_MIN_WIDTH]: {
           display: 'none',
         },
       },
 
       '& .long-text': {
         display: 'none',
-        [mq.GROUP_2_MIN_WIDTH]: {
+        [mq.GROUP_1_MIN_WIDTH]: {
           display: 'inline',
         },
       },
