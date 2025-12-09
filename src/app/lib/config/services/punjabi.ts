@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
     serviceLocalizedName: 'ਪੰਜਾਬੀ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/punjabi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ਪੰਜਾਬੀ',
     dir: `ltr`,
     externalLinkText: ', ਬਾਹਰੀ',

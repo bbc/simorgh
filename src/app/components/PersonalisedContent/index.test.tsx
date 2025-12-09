@@ -53,7 +53,9 @@ describe('PersonalisedContent', () => {
       'aria-labelledby',
       'personalised-content',
     );
-    expect(screen.getByText('Personalised Title')).toBeInTheDocument();
+    expect(
+      screen.getByText('Más información sobre Personalised Title'),
+    ).toBeInTheDocument();
     expect(screen.getByText('Promo Title')).toBeInTheDocument();
   });
 
@@ -66,7 +68,7 @@ describe('PersonalisedContent', () => {
       />,
     );
     const subheadingLink = screen.getByRole('link', {
-      name: 'Personalised Title',
+      name: 'Más información sobre Personalised Title',
     });
     expect(subheadingLink).toHaveAttribute('href', '/personalised-link');
   });
