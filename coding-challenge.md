@@ -10,7 +10,7 @@ Your challenge is to extend this implementation to store five articles for offli
 
 A selection of articles to use can be found here: https://github.com/bbc/simorgh/tree/latest/data/pidgin/articles 
 
-These will render if you visit http://localhost:7080/pidgin/{articleId} e.g. http://localhost:7080/pidgin/articles/c1j5mz19jdko 
+These will render if you visit http://localhost:7080/pidgin/articles/{articleId} e.g. http://localhost:7080/pidgin/articles/c1j5mz19jdko 
 
 ## Executing the offline page
 This can be reliably demonstrated in the Google Chrome browser (other browsers do not make it as easy to test offline behaviour like this), please follow these instructions:
