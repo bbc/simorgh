@@ -61,19 +61,15 @@ const PWAPromotionalBanner = () => {
     eventName: 'pwa-prompt-dismissed',
   });
 
-  const handleBannerDismiss = useCallback(
-    (event?: React.MouseEvent) => {
-      setBannerDismissed();
-      setIsVisible(false);
-      onCloseClickTrack?.(event);
-    },
-    [onCloseClickTrack],
-  );
+  const handleBannerDismiss = useCallback(() => {
+    setBannerDismissed();
+    setIsVisible(false);
+  }, []);
 
   const handleSecondaryClick = useCallback(
     (event?: React.MouseEvent) => {
       onSecondaryClickTrack?.(event);
-      handleBannerDismiss(event);
+      handleBannerDismiss();
     },
     [onSecondaryClickTrack, handleBannerDismiss],
   );
@@ -119,7 +115,10 @@ const PWAPromotionalBanner = () => {
         }}
         onSecondaryClick={handleSecondaryClick}
         isDismissible
-        onClose={handleBannerDismiss}
+        onClose={(e?: React.MouseEvent) => {
+          onCloseClickTrack?.(e);
+          handleBannerDismiss();
+        }}
         bannerLabel={promotionalBanner.bannerLabel}
       />
     </div>
