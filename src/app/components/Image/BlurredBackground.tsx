@@ -5,7 +5,7 @@ type BlurredBackgroundProps = {
 };
 
 const BlurredBackground = ({ src }: BlurredBackgroundProps) => {
-  const lowResImageSrc = src?.replace('{width}', '1');
+  const lowResImageSrc = src?.replace('{width}', '10');
   return (
     <span
       css={[
