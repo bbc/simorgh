@@ -35,18 +35,17 @@ const isRelaxedCspEnabled = (
   return !omittedCountriesList.includes(country.toLowerCase());
 };
 
-const isValidService = (str: string) => {
-  const [service] = str.split('/').filter(Boolean) as [Services?];
-  return service && SERVICES.includes(service);
+export type CspHeaderResponseProps = {
+  ctx: NextPageContext;
+  service: Services;
+  toggles: Toggles;
 };
 
 const cspHeaderResponse = async ({
   ctx,
+  service,
   toggles,
-}: {
-  ctx: NextPageContext;
-  toggles: Toggles;
-}) => {
+}: CspHeaderResponseProps) => {
   const reqUrl = ctx.req?.url || '';
   const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
@@ -54,7 +53,7 @@ const cspHeaderResponse = async ({
   let hasAdsScripts = false;
   let countryList = '';
 
-  if (isValidService(reqUrl)) {
+  if (SERVICES.includes(service)) {
     // @ts-expect-error - Toggles type issue
     const adsNonceToggle = toggles?.adsNonce || { enabled: false, value: '' };
     hasAdsScripts = adsNonceToggle.enabled;

@@ -19,8 +19,11 @@ import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
-import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
+import cspHeaderResponse, {
+  CspHeaderResponseProps,
+} from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
+import PageDataParams from '#app/models/types/pageDataParams';
 
 interface Props extends AppProps {
   pageProps: {
@@ -136,11 +139,9 @@ export default function App({ Component, pageProps }: Props) {
 
 const addServiceChainAndCspHeaders = async ({
   ctx,
+  service,
   toggles,
-}: {
-  ctx: NextPageContext;
-  toggles: Toggles;
-}) => {
+}: CspHeaderResponseProps) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({
@@ -157,7 +158,7 @@ const addServiceChainAndCspHeaders = async ({
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
   if (PRODUCTION_ONLY) {
-    await cspHeaderResponse({ ctx, toggles });
+    await cspHeaderResponse({ ctx, service, toggles });
   }
 };
 
@@ -166,11 +167,11 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
     req,
     asPath,
     query: { service },
-  } = ctx;
+  } = ctx as NextPageContext & { query: PageDataParams };
 
   const toggles = await getToggles(service);
 
-  await addServiceChainAndCspHeaders({ ctx, toggles });
+  await addServiceChainAndCspHeaders({ ctx, service, toggles });
 
   const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 

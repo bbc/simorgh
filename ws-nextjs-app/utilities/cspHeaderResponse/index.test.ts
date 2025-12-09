@@ -36,7 +36,7 @@ describe('cspHeaderResponse', () => {
   it.each(policies)('should set %s in the request CSP', async policy => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    await cspHeaderResponse({ ctx, toggles: {} });
+    await cspHeaderResponse({ ctx, service: 'pidgin', toggles: {} });
 
     const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
       call => call[0] === 'Content-Security-Policy',
@@ -62,6 +62,7 @@ describe('shouldServeRelaxedCsp', () => {
 
     await cspHeaderResponse({
       ctx,
+      service: 'pidgin',
       toggles: {
         adsNonce: { enabled: true, value: '' },
       },
@@ -79,6 +80,7 @@ describe('shouldServeRelaxedCsp', () => {
 
     await cspHeaderResponse({
       ctx,
+      service: 'pidgin',
       toggles: {
         adsNonce: { enabled: true, value: 'gb' },
       },
@@ -96,6 +98,7 @@ describe('shouldServeRelaxedCsp', () => {
 
     await cspHeaderResponse({
       ctx,
+      service: 'pidgin',
       toggles: {
         adsNonce: { enabled: true, value: 'gb,es' },
       },
@@ -113,6 +116,7 @@ describe('shouldServeRelaxedCsp', () => {
 
     await cspHeaderResponse({
       ctx,
+      service: 'pidgin',
       toggles: { adsNonce: { enabled: false, value: '' } },
     });
 
