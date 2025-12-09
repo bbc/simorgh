@@ -1,5 +1,6 @@
 import SERVICES from '#app/lib/config/services';
 import {
+  getArticleRegex,
   getHomePageRegex,
   getSwRegex,
   getManifestRegex,
@@ -17,6 +18,9 @@ import {
   getSecondaryColumnDataRegex,
   getAfricaEyeTVPageRegex,
 } from './utils';
+
+export const articlePath = getArticleRegex(SERVICES);
+export const articleDataPath = `${articlePath}.json`;
 
 export const homePageSwPath = getSwRegex(SERVICES);
 export const homePageManifestPath = getManifestRegex(SERVICES);
