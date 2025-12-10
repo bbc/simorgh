@@ -32,9 +32,9 @@ const styles = {
       alignItems: 'center',
       gap: `${spacings.FULL}rem`,
     }),
-  link: ({ palette, fontVariants, fontSizes }: Theme) =>
+  link: ({ palette, fontVariants, fontSizes, isDarkUi }: Theme) =>
     css({
-      color: palette.GREY_10,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       textDecoration: 'none',
       ...fontSizes.pica,
       ...fontVariants.sansBold,
@@ -42,7 +42,7 @@ const styles = {
       paddingBottom: `${pixelsToRem(12)}rem`,
       width: '100%',
       '&:visited': {
-        color: palette.GREY_6,
+        color: isDarkUi ? palette.GREY_4 : palette.GREY_6,
       },
       '&:hover, &:focus': {
         textDecoration: 'underline',
