@@ -1,3 +1,4 @@
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
@@ -7,7 +8,6 @@ import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants, PageTypes } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 beforeEach(() => {
   jest.resetModules();
