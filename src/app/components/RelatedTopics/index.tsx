@@ -21,7 +21,8 @@ const eventTrackingData = {
 
 const StyledTopicsWrapper = styled.aside<{ backgroundColour?: string }>`
   padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};
-  background-color: ${({ backgroundColour }) => backgroundColour || 'transparent'};
+  background-color: ${({ backgroundColour }) =>
+    backgroundColour || 'transparent'};
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
