@@ -2,7 +2,7 @@
 
 exports[`Related Topics Expected use should render correctly with a single tag 1`] = `
 .emotion-0 {
-  padding: 1rem 0 2.5rem;
+  padding: 0 0 2.5rem;
   background-color: transparent;
 }
 
@@ -248,7 +248,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 
 exports[`Related Topics Expected use should render correctly with multiple tags 1`] = `
 .emotion-0 {
-  padding: 1rem 0 2.5rem;
+  padding: 0 0 2.5rem;
   background-color: transparent;
 }
 

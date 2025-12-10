@@ -5,7 +5,7 @@ const styles = {
     (backgroundColour?: string) =>
     ({ spacings }: Theme) =>
       css({
-        padding: `${spacings.DOUBLE}rem 0 ${spacings.QUINTUPLE}rem`,
+        padding: `0 0 ${spacings.QUINTUPLE}rem`,
         backgroundColor: backgroundColour || 'transparent',
       }),
   sectionLabel: ({ mq }: Theme) =>
