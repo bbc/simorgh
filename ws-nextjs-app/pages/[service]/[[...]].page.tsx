@@ -34,11 +34,6 @@ const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
 
-type PageProps = {
-  pageType?: PageTypes;
-} & AvEmbedsPageProps &
-  ArticlePageProps;
-
 const getPageType = ({
   resolvedUrl,
   reqHeaders,
@@ -46,7 +41,9 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
-  const pageTypeHeader = reqHeaders['page-type']?.toString()?.toLowerCase();
+  const pageTypeHeader = reqHeaders['page-type']
+    ?.toString()
+    ?.toLowerCase() as PageTypes;
 
   const { SIMORGH_APP_ENV } = getEnvConfig();
 
@@ -62,6 +59,11 @@ const getPageType = ({
   }
 };
 
+const ROUTE_HANDLERS = {
+  [AV_EMBEDS]: handleAvRoute,
+  [ARTICLE_PAGE]: handleArticleRoute,
+};
+
 export const getServerSideProps: GetServerSideProps = async context => {
   const {
     resolvedUrl,
@@ -74,13 +76,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  switch (pageType) {
-    case AV_EMBEDS:
-      return handleAvRoute(context);
-    case ARTICLE_PAGE:
-      return handleArticleRoute(context);
-    default:
-      break;
+  // If a route handler exists for the derived page type, render that page
+  if (pageType) {
+    return ROUTE_HANDLERS[pageType](context);
   }
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
@@ -104,6 +102,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
   };
 };
+
+type PageProps = {
+  pageType?: PageTypes;
+} & AvEmbedsPageProps &
+  ArticlePageProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
