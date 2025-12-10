@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app';
-import { useEffect } from 'react';
+import useIsPWA from '#app/hooks/useIsPWA';
+import { useServiceWorkerRegistration } from '#app/hooks/useServiceWorkerRegistration';
+import { useSendPWAStatus } from '#app/hooks/useSendPWAStatus';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -16,7 +18,6 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
-import useIsPWA from '#app/hooks/useIsPWA';
 
 interface Props extends AppProps {
   pageProps: {
@@ -79,48 +80,10 @@ export default function App({ Component, pageProps }: Props) {
   const isPWA = useIsPWA();
 
   // Register service worker for offline functionality
-  useEffect(() => {
-    if (
-      typeof window !== 'undefined' &&
-      'serviceWorker' in navigator &&
-      service
-    ) {
-      // Register SW for this service (middleware rewrites to /sw.js in dev)
-      navigator.serviceWorker.register(`/${service}/sw.js`);
-    }
-  }, [service]);
+  useServiceWorkerRegistration(service);
 
   // Send PWA status to service worker
-  useEffect(() => {
-    const sendPWAStatus = () => {
-      if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
-        // eslint-disable-next-line no-console
-        console.log('Sending PWA status to SW', isPWA);
-        if (
-          navigator.serviceWorker.controller &&
-          navigator.serviceWorker.controller.state === 'activated'
-        ) {
-          navigator.serviceWorker.controller.postMessage({
-            type: 'PWA_STATUS',
-            isPWA,
-          });
-        }
-      }
-    };
-
-    // Send initially in case SW already controls page
-    navigator.serviceWorker.ready.then(sendPWAStatus);
-
-    // Listen for SW taking control
-    navigator.serviceWorker.addEventListener('controllerchange', sendPWAStatus);
-
-    return () => {
-      navigator.serviceWorker.removeEventListener(
-        'controllerchange',
-        sendPWAStatus,
-      );
-    };
-  }, [isPWA]);
+  useSendPWAStatus(isPWA);
 
   const RenderChildrenOrError =
     status === 200 ? (
