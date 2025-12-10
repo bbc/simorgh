@@ -7,8 +7,9 @@ const containerStyles = ({ spacings }: Theme) =>
   css({
     display: 'flex',
     flexWrap: 'wrap',
-    gap: `${spacings.HALF}rem`,
-    margin: 0,
+    marginTop: `-${spacings.FULL}rem`,
+    marginLeft: `-${spacings.HALF}rem`,
+    marginRight: `-${spacings.HALF}rem`,
     padding: 0,
     listStyleType: 'none',
   });
@@ -24,6 +25,9 @@ const styles = {
         ...fontSizes.bodyCopy,
         wordBreak: 'break-word',
         minWidth: 0,
+        marginTop: `${spacings.FULL}rem`,
+        marginLeft: `${spacings.HALF}rem`,
+        marginRight: `${spacings.HALF}rem`,
         a: {
           display: 'inline-flex',
           minHeight: MIN_TAG_HEIGHT,

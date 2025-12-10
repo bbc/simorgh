@@ -10,8 +10,9 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -24,6 +25,9 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   line-height: 1.625rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -96,8 +100,9 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -110,6 +115,9 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   line-height: 1.25rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -182,8 +190,9 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -196,6 +205,9 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   line-height: 1.5rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -268,8 +280,9 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -282,6 +295,9 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   line-height: 1.5rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -388,8 +404,9 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -402,6 +419,9 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   line-height: 1.25rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

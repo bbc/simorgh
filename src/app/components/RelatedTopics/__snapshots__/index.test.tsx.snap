@@ -138,8 +138,9 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -152,6 +153,9 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   line-height: 1.25rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -384,8 +388,9 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.25rem;
-  margin: 0;
+  margin-top: -0.5rem;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
   padding: 0;
   list-style-type: none;
 }
@@ -398,6 +403,9 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   line-height: 1.25rem;
   word-break: break-word;
   min-width: 0;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
