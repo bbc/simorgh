@@ -43,28 +43,50 @@ const PWAPromotionalBanner = () => {
   const { promotionalBanner } = use(ServiceContext);
   const { isLite, isAmp } = use(RequestContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
+
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
+  const isPwaPromoExperimentEnabled = pwaPromoBannerVariant === 'on';
+  const isAndroid = useAndroidDetection();
+
+  const optimizelyExperimentData = {
+    experimentName: pwaPromoBannerExperimentName,
+    experimentVariant: pwaPromoBannerVariant || 'off',
+  };
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
+    ...optimizelyExperimentData,
   });
 
   const { onClick: onPrimaryClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-primary',
+    ...optimizelyExperimentData,
   });
   const { onClick: onSecondaryClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-secondary',
+    ...optimizelyExperimentData,
   });
   const { onClick: onCloseClickTrack } = useClickTracker({
     componentName: 'pwa-promotional-banner-close',
+    ...optimizelyExperimentData,
   });
 
   const trackPwaPromptShown = useCustomEventTracker({
     eventName: 'pwa-prompt-shown',
+    ...optimizelyExperimentData,
   });
   const trackPwaPromptAccepted = useCustomEventTracker({
     eventName: 'pwa-prompt-accepted',
+    ...optimizelyExperimentData,
   });
   const trackPwaPromptDismissed = useCustomEventTracker({
     eventName: 'pwa-prompt-dismissed',
+    ...optimizelyExperimentData,
   });
 
   const handleBannerDismiss = useCallback(() => {
@@ -79,17 +101,6 @@ const PWAPromotionalBanner = () => {
     },
     [onSecondaryClickTrack, handleBannerDismiss],
   );
-
-  // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
-  const isPwaPromoExperimentEnabled = pwaPromoBannerVariant === 'on';
-  const isAndroid = useAndroidDetection();
-
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: () => {
       setIsVisible(false);
