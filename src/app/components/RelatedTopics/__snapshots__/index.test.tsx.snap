@@ -180,7 +180,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -426,7 +426,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;

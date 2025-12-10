@@ -30,7 +30,7 @@ const styles = {
           padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem`,
           alignItems: 'center',
           backgroundColor: isDarkUi ? palette.GREY_7 : backgroundColour,
-          border: `1px solid ${isDarkUi ? palette.GREY_6 : palette.GREY_3}`,
+          border: 'none',
           textDecoration: 'none',
           color: isDarkUi ? palette.GREY_2 : palette.EBON,
           '&:hover, &:focus': {

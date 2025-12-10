@@ -52,7 +52,7 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -138,7 +138,7 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -224,7 +224,7 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -310,7 +310,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
@@ -430,7 +430,7 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #E6E8EA;
+  border: none;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222222;
