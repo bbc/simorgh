@@ -79,7 +79,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const pageType = getPageType({ resolvedUrl, reqHeaders });
 
   // If a route handler exists for the derived page type, render that page
-  if (pageType) {
+  if (ROUTE_HANDLERS?.[pageType]) {
     return ROUTE_HANDLERS[pageType](context);
   }
 
