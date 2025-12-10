@@ -81,55 +81,20 @@ export default {
         },
       },
     }),
-  hintsArea: ({ palette, spacings }: Theme) =>
+  hintsArea: ({ spacings }: Theme) =>
     css({
       margin: `${spacings.TRIPLE}rem 0 ${2.5}rem`,
-    }),
-  hintContainer: ({ spacings, palette }: Theme) =>
-    css({
-      position: 'relative',
-      cursor: 'pointer',
-      margin: `${spacings.HALF}rem 0`,
-    }),
-  hintSummary: ({ palette }: Theme) =>
-    css({
-      listStyle: 'none',
-      display: 'flex',
-    }),
-  hintSummaryText: ({ palette, spacings }: Theme) =>
-    css({
-      flexGrow: 1,
-      padding: `${0.6}rem ${spacings.FULL}rem`,
-      background: palette.GHOST,
-      'details:open &': {
-        display: 'none',
-      },
-    }),
-  hintPrice: ({ palette }: Theme) =>
-    css({
-      width: `${3.5}rem`,
-      padding: `${0.6}rem ${1}rem`,
-      background: palette.GREY_3,
-      textAlign: 'center',
-    }),
-  // hintAnswerContainer: ({ palette, spacings }: Theme) => css({}),
-  hintAnswerText: ({ palette, spacings }: Theme) =>
-    css({
-      position: 'absolute',
-      top: 0,
-      right: 0,
-      left: `${5.5}rem`,
-      padding: `${0.6}rem ${spacings.FULL}rem`,
-      background: palette.CHALK,
     }),
   detailsArea: ({ spacings, mq, palette }: Theme) =>
     css({
       padding: `${spacings.FULL}rem`,
       minWidth: `${pixelsToRem(200)}rem`,
       backgroundColor: `${palette.GREY_2}`,
+      display: 'grid',
+      gridTemplateColumns: '1fr',
       [mq.GROUP_2_MAX_WIDTH]: {
         minWidth: '100%',
+        gridTemplateColumns: '1fr 1fr 1fr',
       },
     }),
-  detail: ({ palette }: Theme) => css({}),
 };
