@@ -10,7 +10,6 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes, Toggles } from '#app/models/types/global';
 
-import isLive from '#app/lib/utilities/isLive';
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
