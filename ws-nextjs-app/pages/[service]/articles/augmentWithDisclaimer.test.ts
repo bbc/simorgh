@@ -54,4 +54,20 @@ describe('augmentWithDisclaimer', () => {
 
     expect(transformedData.content.model.blocks[0]).toBeUndefined();
   });
+
+  it('Should not add a disclaimer when the article is a SFV', () => {
+    const sfvArticle = {
+      ...buildPageDataFixture([{ type: 'timestamp' }]),
+      metadata: { consumableAsSFV: true },
+    } as Article;
+
+    const transformedData = transformer({
+      toggles: buildTogglesFixture(true),
+      positionFromTimestamp: 0,
+    })(sfvArticle) as Article;
+
+    const blockTypes = transformedData.content.model.blocks.map(b => b.type);
+    expect(blockTypes).not.toContain('disclaimer');
+  });
 });
+

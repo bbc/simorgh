@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/telugu/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News తెలుగు',
     dir: `ltr`,
     externalLinkText: ', ఇతర',

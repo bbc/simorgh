@@ -358,7 +358,7 @@ exports[`AMP Most Read Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -376,13 +376,13 @@ exports[`AMP Most Read Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Tiếng Việt",
         "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/vietnamese/popular/read",
     },
   ],
@@ -391,7 +391,7 @@ exports[`AMP Most Read Page SEO Linked data should match text 1`] = `
 
 exports[`AMP Most Read Page SEO OG description 1`] = `"Phổ biến - BBC News Tiếng Việt"`;
 
-exports[`AMP Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+exports[`AMP Most Read Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Most Read Page SEO OG image alt 1`] = `"BBC News Tiếng Việt"`;
 
@@ -417,7 +417,7 @@ exports[`AMP Most Read Page SEO Twitter description 1`] = `"Phổ biến - BBC N
 
 exports[`AMP Most Read Page SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
 
-exports[`AMP Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+exports[`AMP Most Read Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Most Read Page SEO Twitter site 1`] = `"@bbcvietnamese"`;
 

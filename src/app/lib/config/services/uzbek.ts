@@ -15,7 +15,8 @@ const baseServiceConfig = {
   useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/uzbek/images/metadata/poster-1024x576.png',
   dir: `ltr` as Direction,
   service: 'uzbek' as Services,
   languageName: 'Uzbek',
