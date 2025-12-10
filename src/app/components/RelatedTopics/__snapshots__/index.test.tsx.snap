@@ -141,6 +141,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-12 {
@@ -386,6 +387,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-12 {

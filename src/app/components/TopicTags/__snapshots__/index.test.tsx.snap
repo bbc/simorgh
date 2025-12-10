@@ -13,6 +13,7 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-1 {
@@ -98,6 +99,7 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-1 {
@@ -183,6 +185,7 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-1 {
@@ -268,6 +271,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-1 {
@@ -387,6 +391,7 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   gap: 0.25rem;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .emotion-1 {

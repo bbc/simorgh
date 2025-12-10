@@ -3,22 +3,19 @@ import { POSTBOX, WHITE } from '#app/components/ThemeProvider/palette';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
-const containerBase = ({ spacings }: Theme) =>
+const containerStyles = ({ spacings }: Theme) =>
   css({
     display: 'flex',
     flexWrap: 'wrap',
     gap: `${spacings.HALF}rem`,
     margin: 0,
     padding: 0,
+    listStyleType: 'none',
   });
 
 const styles = {
-  singleContainer: containerBase,
-  topicsList: ({ spacings }: Theme) =>
-    css({
-      ...containerBase({ spacings } as Theme),
-      listStyleType: 'none',
-    }),
+  singleContainer: containerStyles,
+  topicsList: containerStyles,
   topicTagItem:
     (backgroundColour = WHITE) =>
     ({ fontVariants, fontSizes, palette, isDarkUi, spacings }: Theme) =>
