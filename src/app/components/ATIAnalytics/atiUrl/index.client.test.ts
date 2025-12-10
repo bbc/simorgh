@@ -1,11 +1,6 @@
 import { Platforms } from '#app/models/types/global';
 import * as genericLabelHelpers from '../../../lib/analyticsUtils';
-import {
-  buildATIEventTrackUrl,
-  buildReverbAnalyticsModel,
-  buildReverbEventModel,
-} from '.';
-import splitUrl from './splitUrl';
+import { buildReverbAnalyticsModel, buildReverbEventModel } from '.';
 
 const mockAndSet = ({ name, source }, response) => {
   source[name] = jest.fn(); // eslint-disable-line no-param-reassign
@@ -30,48 +25,6 @@ const analyticsUtilFunctions = [
 describe('atiUrl', () => {
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  describe('buildATIEventTrackUrl', () => {
-    beforeEach(() => {
-      analyticsUtilFunctions.forEach(func => {
-        mockAndSet(func, func.name);
-      });
-    });
-
-    it('should return the correct url', () => {
-      process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
-
-      const atiEventTrackUrl = buildATIEventTrackUrl({
-        pageIdentifier: 'pageIdentifier',
-        service: 'news',
-        platform: 'canonical',
-        statsDestination: 'statsDestination',
-        componentName: 'component',
-        type: 'type',
-        campaignID: 'campaignID',
-        format: 'format',
-        url: 'url',
-        detailedPlacement: 'detailedPlacement',
-        experimentName: 'dummy_experiment',
-        experimentVariant: 'variant_1',
-      });
-
-      expect(splitUrl(atiEventTrackUrl)).toEqual([
-        'http://foobar.com',
-        's=getDestination',
-        'p=pageIdentifier',
-        'atc=PUB-[campaignID]-[component]-[variant_1]-[format]-[pageIdentifier]-[detailedPlacement]-[]-[url]',
-        'idclient=getAtUserId',
-        'hl=getCurrentTime',
-        're=getBrowserViewPort',
-        'r=getScreenInfo',
-        'lng=getDeviceLanguage',
-        'mv_test=dummy_experiment',
-        'mv_creation=variant_1',
-        'type=AT',
-      ]);
-    });
   });
 
   describe('Reverb', () => {
