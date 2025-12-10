@@ -10,12 +10,12 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Padauk,Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -26,26 +26,26 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1.125rem;
     line-height: 2rem;
   }
 }
 
-.emotion-2 a {
+.emotion-1 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,8 +57,8 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
   color: #222222;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.emotion-1 a:hover,
+.emotion-1 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -66,10 +66,10 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -91,12 +91,12 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -107,26 +107,26 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-2 a {
+.emotion-1 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -138,8 +138,8 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
   color: #222222;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.emotion-1 a:hover,
+.emotion-1 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -147,10 +147,10 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -172,12 +172,12 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -188,26 +188,26 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-.emotion-2 a {
+.emotion-1 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -219,8 +219,8 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
   color: #222222;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.emotion-1 a:hover,
+.emotion-1 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -228,10 +228,10 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -253,13 +253,12 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -270,26 +269,26 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.625rem;
   }
 }
 
-.emotion-2 a {
+.emotion-1 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -301,8 +300,8 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
   color: #222222;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.emotion-1 a:hover,
+.emotion-1 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -310,11 +309,11 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 
 <div>
   <ul
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     role="list"
   >
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -323,7 +322,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -332,7 +331,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -341,7 +340,7 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -363,13 +362,12 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -380,26 +378,26 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-1 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-2 a {
+.emotion-1 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -411,8 +409,8 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
   color: #222222;
 }
 
-.emotion-2 a:hover,
-.emotion-2 a:focus {
+.emotion-1 a:hover,
+.emotion-1 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -420,11 +418,11 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
 
 <div>
   <ul
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     role="list"
   >
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -433,7 +431,7 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -442,7 +440,7 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"
@@ -451,7 +449,7 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
       </a>
     </li>
     <li
-      class="emotion-2 emotion-3"
+      class="emotion-1"
     >
       <a
         href="#"

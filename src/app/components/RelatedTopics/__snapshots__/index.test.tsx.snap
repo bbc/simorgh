@@ -6,7 +6,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   background-color: transparent;
 }
 
-.emotion-3 {
+.emotion-1 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -15,36 +15,38 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-3 {
-    margin-bottom: 1rem;
+@media (min-width: 37.5rem) {
+  @media (max-width: 62.9375rem) {
+    .emotion-1 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
-.emotion-5 {
+.emotion-3 {
   margin: 0;
   padding: 0;
   scroll-margin-top: 1rem;
 }
 
-.emotion-5:focus-visible {
+.emotion-3:focus-visible {
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
   outline-offset: 0.1875rem;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,7 +56,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   flex-direction: column;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,7 +76,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -82,7 +84,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   }
 }
 
-.emotion-11 {
+.emotion-9 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -102,32 +104,32 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-9 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     padding-right: 1rem;
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,12 +138,12 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -152,26 +154,26 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-15 a {
+.emotion-12 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -183,8 +185,8 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   color: #222222;
 }
 
-.emotion-15 a:hover,
-.emotion-15 a:focus {
+.emotion-12 a:hover,
+.emotion-12 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -193,26 +195,26 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 <div>
   <aside
     aria-labelledby="related-topics"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="related-topics"
     role="complementary"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4"
+      class="emotion-1 emotion-2"
     >
       <h2
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
         id="section-label-heading-related-topics"
         tabindex="-1"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-5 emotion-6"
         >
           <span
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8"
           >
             <span
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
               dir="ltr"
               id="related-topics"
             >
@@ -223,10 +225,10 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
       </h2>
     </div>
     <div
-      class="emotion-13 emotion-14"
+      class="emotion-11"
     >
       <div
-        class="emotion-15 emotion-16"
+        class="emotion-12"
       >
         <a
           href="https://www.bbc.com/mundo/topics/123"
@@ -245,7 +247,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   background-color: transparent;
 }
 
-.emotion-3 {
+.emotion-1 {
   position: relative;
   z-index: 0;
   color: #141414;
@@ -254,36 +256,38 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-3 {
-    margin-bottom: 1rem;
+@media (min-width: 37.5rem) {
+  @media (max-width: 62.9375rem) {
+    .emotion-1 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
-.emotion-5 {
+.emotion-3 {
   margin: 0;
   padding: 0;
   scroll-margin-top: 1rem;
 }
 
-.emotion-5:focus-visible {
+.emotion-3:focus-visible {
   outline: 0.1875rem solid #000000;
   box-shadow: 0 0 0 0.1875rem #FFFFFF;
   outline-offset: 0.1875rem;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -293,7 +297,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   flex-direction: column;
 }
 
-.emotion-9 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -313,7 +317,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-7 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -321,7 +325,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   }
 }
 
-.emotion-11 {
+.emotion-9 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -341,32 +345,32 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-9 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-9 {
     padding-right: 1rem;
   }
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -375,13 +379,12 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
-  list-style-type: none;
 }
 
-.emotion-15 {
+.emotion-12 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -392,26 +395,26 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-12 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-15 a {
+.emotion-12 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   min-height: 2.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -423,8 +426,8 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   color: #222222;
 }
 
-.emotion-15 a:hover,
-.emotion-15 a:focus {
+.emotion-12 a:hover,
+.emotion-12 a:focus {
   color: #B80000;
   -webkit-text-decoration: underline;
   text-decoration: underline;
@@ -433,26 +436,26 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
 <div>
   <aside
     aria-labelledby="related-topics"
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="related-topics"
     role="complementary"
   >
     <div
-      class="emotion-2 emotion-3 emotion-4"
+      class="emotion-1 emotion-2"
     >
       <h2
-        class="emotion-5 emotion-6"
+        class="emotion-3 emotion-4"
         id="section-label-heading-related-topics"
         tabindex="-1"
       >
         <span
-          class="emotion-7 emotion-8"
+          class="emotion-5 emotion-6"
         >
           <span
-            class="emotion-9 emotion-10"
+            class="emotion-7 emotion-8"
           >
             <span
-              class="emotion-11 emotion-12"
+              class="emotion-9 emotion-10"
               dir="ltr"
               id="related-topics"
             >
@@ -463,11 +466,11 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
       </h2>
     </div>
     <ul
-      class="emotion-13 emotion-14"
+      class="emotion-11"
       role="list"
     >
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-12"
       >
         <a
           href="https://www.bbc.com/mundo/topics/1"
@@ -476,7 +479,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         </a>
       </li>
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-12"
       >
         <a
           href="https://www.bbc.com/mundo/topics/2"
@@ -485,7 +488,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
         </a>
       </li>
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-12"
       >
         <a
           href="https://www.bbc.com/mundo/topics/3"

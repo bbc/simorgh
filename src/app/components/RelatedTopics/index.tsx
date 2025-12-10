@@ -1,37 +1,15 @@
 import { useContext } from 'react';
-import styled from '@emotion/styled';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
-import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_QUIN,
-} from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 import TopicTags, { TopicTag } from '#app/components/TopicTags';
+import styles from './index.styles';
 
 const eventTrackingData = {
   componentName: 'topics',
 };
-
-const StyledTopicsWrapper = styled.aside<{ backgroundColour?: string }>`
-  padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_QUIN};
-  background-color: ${({ backgroundColour }) =>
-    backgroundColour || 'transparent'};
-`;
-
-const StyledSectionLabel = styled(SectionLabel)`
-  margin-top: 0;
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin-bottom: 1rem;
-  }
-`;
 
 type Topic = {
   topicName: string;
@@ -80,14 +58,14 @@ const RelatedTopics = ({
   }
 
   return (
-    <StyledTopicsWrapper
+    <aside
       data-testid="related-topics"
       aria-labelledby="related-topics"
       role="complementary"
-      backgroundColour={backgroundColour}
-      {...(className ? { className } : undefined)}
+      className={className}
+      css={styles.wrapper(backgroundColour)}
     >
-      <StyledSectionLabel
+      <SectionLabel
         bar={bar}
         script={script}
         service={service}
@@ -95,9 +73,10 @@ const RelatedTopics = ({
         labelId="related-topics"
         mobileDivider={mobileDivider}
         {...(backgroundColour && { backgroundColor: backgroundColour })}
+        css={styles.sectionLabel}
       >
         {heading}
-      </StyledSectionLabel>
+      </SectionLabel>
       <TopicTags
         service={service}
         script={script}
@@ -123,7 +102,7 @@ const RelatedTopics = ({
               />
             ))}
       </TopicTags>
-    </StyledTopicsWrapper>
+    </aside>
   );
 };
 
