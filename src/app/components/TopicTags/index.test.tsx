@@ -2,10 +2,11 @@ import { render } from '../react-testing-library-with-providers';
 import latin from '../ThemeProvider/fontScripts/latin';
 import burmeseTypography from '../ThemeProvider/fontScripts/burmese';
 import arabicTypography from '../ThemeProvider/fontScripts/arabic';
+import { Services } from '#app/models/types/global';
 import { TopicTags, TopicTag } from '.';
 
 describe('TopicTags', () => {
-  const newsProps = {
+  const newsProps: { service: Services; script: object } = {
     service: 'news',
     script: latin,
   };
@@ -33,7 +34,7 @@ describe('TopicTags', () => {
 
   it('should correctly render a single topic tag for burmese', () => {
     const { container } = render(
-      <TopicTags service="burmese" script={burmeseTypography}>
+      <TopicTags service={'burmese' as Services} script={burmeseTypography}>
         <TopicTag name="test1" link="#" />
       </TopicTags>,
       { service: 'burmese' },
@@ -43,7 +44,7 @@ describe('TopicTags', () => {
 
   it('should correctly render a single topic tag for persian', () => {
     const { container } = render(
-      <TopicTags service="persian" script={arabicTypography}>
+      <TopicTags service={'persian' as Services} script={arabicTypography}>
         <TopicTag name="test1" link="#" />
       </TopicTags>,
       { service: 'persian' },
@@ -53,7 +54,7 @@ describe('TopicTags', () => {
 
   it('should correctly render multiple topic tags for arabic', () => {
     const { container } = render(
-      <TopicTags service="arabic" script={arabicTypography}>
+      <TopicTags service={'arabic' as Services} script={arabicTypography}>
         <TopicTag name="test1" link="#" />
         <TopicTag name="test2" link="#" />
         <TopicTag name="test3" link="#" />
