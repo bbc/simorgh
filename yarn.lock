@@ -2266,12 +2266,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData":
-  version: 0.0.0-use.local
-  resolution: "@bbc/simorgh-getInitialDataArticle@workspace:src/app/routes/article/getInitialData"
-  languageName: unknown
-  linkType: soft
-
 "@bbc/web-vitals@npm:2.5.3":
   version: 2.5.3
   resolution: "@bbc/web-vitals@npm:2.5.3"

@@ -9,9 +9,10 @@ import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
 import { PageTypes, Toggles } from '#app/models/types/global';
-import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
+
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
