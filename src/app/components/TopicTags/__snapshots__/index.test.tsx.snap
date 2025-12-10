@@ -67,9 +67,13 @@ exports[`TopicTags should correctly render a single topic tag for burmese 1`] = 
 <div>
   <div
     class="emotion-0"
+    data-script-present="true"
+    data-service="burmese"
   >
     <div
       class="emotion-1"
+      data-script-present="true"
+      data-service="burmese"
     >
       <a
         href="#"
@@ -148,9 +152,13 @@ exports[`TopicTags should correctly render a single topic tag for news 1`] = `
 <div>
   <div
     class="emotion-0"
+    data-script-present="true"
+    data-service="news"
   >
     <div
       class="emotion-1"
+      data-script-present="true"
+      data-service="news"
     >
       <a
         href="#"
@@ -229,9 +237,13 @@ exports[`TopicTags should correctly render a single topic tag for persian 1`] = 
 <div>
   <div
     class="emotion-0"
+    data-script-present="true"
+    data-service="persian"
   >
     <div
       class="emotion-1"
+      data-script-present="true"
+      data-service="persian"
     >
       <a
         href="#"
@@ -310,10 +322,14 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
 <div>
   <ul
     class="emotion-0"
+    data-script-present="true"
+    data-service="arabic"
     role="list"
   >
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="arabic"
     >
       <a
         href="#"
@@ -323,6 +339,8 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="arabic"
     >
       <a
         href="#"
@@ -332,6 +350,8 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="arabic"
     >
       <a
         href="#"
@@ -341,6 +361,8 @@ exports[`TopicTags should correctly render multiple topic tags for arabic 1`] = 
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="arabic"
     >
       <a
         href="#"
@@ -419,10 +441,14 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
 <div>
   <ul
     class="emotion-0"
+    data-script-present="true"
+    data-service="news"
     role="list"
   >
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="news"
     >
       <a
         href="#"
@@ -432,6 +458,8 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="news"
     >
       <a
         href="#"
@@ -441,6 +469,8 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="news"
     >
       <a
         href="#"
@@ -450,6 +480,8 @@ exports[`TopicTags should correctly render multiple topic tags for news 1`] = `
     </li>
     <li
       class="emotion-1"
+      data-script-present="true"
+      data-service="news"
     >
       <a
         href="#"
