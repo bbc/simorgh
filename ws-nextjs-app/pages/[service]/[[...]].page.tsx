@@ -49,8 +49,9 @@ const getPageType = ({
   const { SIMORGH_APP_ENV } = getEnvConfig();
 
   switch (SIMORGH_APP_ENV) {
+    // In local development, use the 'page-type' header if it exists,
+    // otherwise derive the page-type from the URL
     case 'local': {
-      // Use the 'page-type' header if it exists, otherwise derive the page type from the URL
       if (pageTypeHeader) return pageTypeHeader;
 
       return derivePageType(resolvedUrl);
