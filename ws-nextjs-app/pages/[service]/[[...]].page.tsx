@@ -1,5 +1,7 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
+import { IncomingHttpHeaders } from 'node:http';
+
 import logResponseTime from '#server/utilities/logResponseTime';
 import extractHeaders from '#server/utilities/extractHeaders';
 import getPathExtension from '#app/utilities/getPathExtension';
@@ -14,7 +16,6 @@ import {
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
