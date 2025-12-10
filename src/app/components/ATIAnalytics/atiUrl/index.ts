@@ -5,23 +5,12 @@ import {
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
-  getDestination,
   getAppType,
-  getScreenInfo,
-  getBrowserViewPort,
-  getCurrentTime,
-  getDeviceLanguage,
   getHref,
   getReferrer,
-  getAtUserId,
   isLocServeCookieSet,
   onOnionTld,
   sanitise,
-  getAtiUrl,
-  getEventInfo,
-  getCampaignType,
-  getATIMarketingString,
-  getRSSMarketingString,
 } from '../../../lib/analyticsUtils';
 import {
   ATIEventTrackingProps,
