@@ -22,26 +22,6 @@ const enabledExperimentList: ServerSideExperimentConfig[] = [
     services: ['portuguese'],
     pageTypes: ['home', 'article'],
   },
-  {
-    name: 'newswb_ws_topbarojs_read_more',
-    services: [
-      'afrique',
-      'arabic',
-      'gujarati',
-      'hausa',
-      'hindi',
-      'igbo',
-      'marathi',
-      'pidgin',
-      'punjabi',
-      'somali',
-      'swahili',
-      'tamil',
-      'telugu',
-      'urdu',
-    ],
-    pageTypes: ['article'],
-  },
 ];
 
 export default enabledExperimentList;
