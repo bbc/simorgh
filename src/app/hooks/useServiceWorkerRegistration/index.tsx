@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useServiceWorkerRegistration(service?: string) {
+const useServiceWorkerRegistration = (service?: string) => {
   useEffect(() => {
     if (
       typeof window !== 'undefined' &&
@@ -13,4 +13,6 @@ export function useServiceWorkerRegistration(service?: string) {
       });
     }
   }, [service]);
-}
+};
+
+export default useServiceWorkerRegistration;

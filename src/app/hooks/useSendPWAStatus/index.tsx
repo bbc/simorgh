@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useSendPWAStatus(isPWA: boolean) {
+const useSendPWAStatus = (isPWA: boolean) => {
   useEffect(() => {
     const sendPWAStatus = () => {
       if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
@@ -32,4 +32,6 @@ export function useSendPWAStatus(isPWA: boolean) {
       );
     };
   }, [isPWA]);
-}
+};
+
+export default useSendPWAStatus;

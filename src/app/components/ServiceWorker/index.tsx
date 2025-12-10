@@ -1,11 +1,12 @@
 import { use } from 'react';
 import useIsPWA from '#app/hooks/useIsPWA';
-import { useServiceWorkerRegistration } from '#app/hooks/useServiceWorkerRegistration';
-import { useSendPWAStatus } from '#app/hooks/useSendPWAStatus';
+import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
+import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
+
 interface AmpServiceWorkerProps {
   canonicalLink?: string;
   swSrc?: string;

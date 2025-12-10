@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import useIsPWA from '#app/hooks/useIsPWA';
-import { useServiceWorkerRegistration } from '#app/hooks/useServiceWorkerRegistration';
-import { useSendPWAStatus } from '#app/hooks/useSendPWAStatus';
+import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
+import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
