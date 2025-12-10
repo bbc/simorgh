@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
-
-exports[`OfflinePage should render correctly 1`] = `<div />`;
-
-exports[`OfflinePage should render correctly for mundo service 1`] = `<div />`;

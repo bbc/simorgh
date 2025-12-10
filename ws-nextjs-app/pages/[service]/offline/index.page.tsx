@@ -7,7 +7,7 @@ import extractHeaders from '#server/utilities/extractHeaders';
 import logResponseTime from '#server/utilities/logResponseTime';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 
-const OfflinePage = dynamic(() => import('./offline/OfflinePage'));
+const OfflinePage = dynamic(() => import('./OfflinePage'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
