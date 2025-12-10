@@ -7,7 +7,7 @@ import LatestMediaIndicator from '../LatestMediaIndicator';
 import styles from './index.styles';
 
 const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
-  ({ item, ariaLabelledBy, eventTrackingData }, viewTracker) => {
+  ({ item, ariaLabelledBy, eventTrackingData, isLite }, viewTracker) => {
     if (!item || Object.keys(item).length === 0) return null;
 
     const timestamp = item.firstPublished;
@@ -25,7 +25,9 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
           css={styles.promoStyle}
         >
           <div css={styles.imageWrapper}>
-            {item.isPortraitImage && <BlurredBackground src={item.imageUrl} />}
+            {item.isPortraitImage && !isLite && (
+              <BlurredBackground src={item.imageUrl} />
+            )}
             <Promo.Image
               src={src}
               altText={item.imageAlt ?? 'Media image placeholder'}
