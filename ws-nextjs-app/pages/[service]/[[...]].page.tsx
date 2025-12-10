@@ -17,6 +17,8 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import derivePageType from '#nextjs/utilities/derivePageType';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -37,18 +39,26 @@ type PageProps = {
 } & AvEmbedsPageProps &
   ArticlePageProps;
 
-const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
-  // TODO: 'pagetype' header is for testing purposes only
-  const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
+const getPageType = ({
+  resolvedUrl,
+  reqHeaders,
+}: {
+  resolvedUrl: string;
+  reqHeaders: IncomingHttpHeaders;
+}) => {
+  const pageTypeHeader = reqHeaders['page-type']?.toString()?.toLowerCase();
 
-  switch (pageTypeHeader) {
-    case AV_EMBEDS?.toLowerCase():
-      return AV_EMBEDS;
-    case ARTICLE_PAGE:
-    case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
-      return ARTICLE_PAGE;
+  const { SIMORGH_APP_ENV } = getEnvConfig();
+
+  switch (SIMORGH_APP_ENV) {
+    case 'local': {
+      // Use the 'page-type' header if it exists, otherwise derive the page type from the URL
+      if (pageTypeHeader) return pageTypeHeader;
+
+      return derivePageType(resolvedUrl);
+    }
     default:
-      return null;
+      return pageTypeHeader;
   }
 };
 
@@ -62,15 +72,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  // Determine the page type
-  const pageType = getPageTypeFromHeaders(reqHeaders);
+  const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  if (resolvedUrl?.includes('av-embeds')) {
-    return handleAvRoute(context);
-  }
-
-  if (pageType === ARTICLE_PAGE) {
-    return handleArticleRoute(context);
+  switch (pageType) {
+    case AV_EMBEDS:
+      return handleAvRoute(context);
+    case ARTICLE_PAGE:
+      return handleArticleRoute(context);
+    default:
+      break;
   }
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
