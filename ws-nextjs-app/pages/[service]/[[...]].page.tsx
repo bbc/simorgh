@@ -42,9 +42,7 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
-  const pageTypeHeader = reqHeaders['page-type']
-    ?.toString()
-    ?.toLowerCase() as PageTypes;
+  const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
 
   const { SIMORGH_APP_ENV } = getEnvConfig();
 
@@ -95,7 +93,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp,
       isLite,
       isNextJs: true,
-      pathname: resolvedUrl.split('?')?.[0],
+      pathname: resolvedUrl?.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
