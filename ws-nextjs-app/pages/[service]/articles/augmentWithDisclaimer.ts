@@ -4,7 +4,6 @@ import assocPath from 'ramda/src/assocPath';
 import insert from 'ramda/src/insert';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
 import { Toggles } from '#app/models/types/global';
-import { isSfv } from './paramChecks';
 
 const getBlocks = pathOr([], ['content', 'model', 'blocks']);
 const setBlocks = assocPath(['content', 'model', 'blocks']);
@@ -13,6 +12,9 @@ const disclaimerBlock = {
   type: 'disclaimer',
   model: {},
 };
+
+export const isSfv = (article: Article) =>
+  article?.metadata?.consumableAsSFV ?? false;
 
 const getDisclaimerInsertionPoint = (
   pageData: Article,
@@ -46,3 +48,4 @@ export default ({
     isDisclaimerToggledOn(toggles) && !isSfv(pageData)
       ? insertDisclaimer(pageData, positionFromTimestamp)
       : pageData;
+
