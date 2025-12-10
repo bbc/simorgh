@@ -23,23 +23,6 @@ export const sendEventBeacon = async ({
   groupTracker,
   eventGroupingName,
 }: ATIEventTrackingProps) => {
-  const atiClickTrackingUrl = buildATIEventTrackUrl({
-    campaignID,
-    componentName,
-    format,
-    pageIdentifier,
-    platform,
-    producerId,
-    service,
-    statsDestination,
-    type,
-    advertiserID,
-    url,
-    detailedPlacement,
-    experimentName,
-    experimentVariant,
-  });
-
   const reverbParams = useReverb
     ? buildReverbEventModel({
         pageIdentifier,
