@@ -36,4 +36,26 @@ describe('augmentWithDisclaimer', () => {
 
     expect(transformedData.content.model.blocks[0].type).toEqual('disclaimer');
   });
+
+  it('Should not add a disclaimer when toggled off for that service', () => {
+    const transformedData = transformer({
+      positionFromTimestamp: 0,
+    })(buildPageDataFixture([])) as Article;
+
+    expect(transformedData.content.model.blocks[0]).toBeUndefined();
+  });
+
+  it('Should not add a disclaimer when the article is a SFV', () => {
+    const sfvArticle = {
+      ...buildPageDataFixture([{ type: 'timestamp' }]),
+      metadata: { consumableAsSFV: true },
+    } as Article;
+
+    const transformedData = transformer({
+      positionFromTimestamp: 0,
+    })(sfvArticle) as Article;
+
+    const blockTypes = transformedData.content.model.blocks.map(b => b.type);
+    expect(blockTypes).not.toContain('disclaimer');
+  });
 });
