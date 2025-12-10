@@ -10,6 +10,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 // AV Embeds
@@ -22,6 +23,7 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
+import handleHomepageRoute from './homepages/handleHomepageRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -47,6 +49,8 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
     case ARTICLE_PAGE:
     case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
       return ARTICLE_PAGE;
+    case HOME_PAGE:
+      return HOME_PAGE;
     default:
       return null;
   }
@@ -71,6 +75,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
+  }
+  if (pageType === HOME_PAGE) {
+    return handleHomepageRoute(context);
   }
 
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
