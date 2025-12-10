@@ -38,6 +38,4 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default function OfflinePageRoute() {
-  return <OfflinePage />;
-}
+export default OfflinePage;
