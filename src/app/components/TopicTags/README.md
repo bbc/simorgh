@@ -4,16 +4,16 @@ Topic tags used on World Service article onward journeys.
 
 ## Description
 
-The `TopicTags` component is a styled `<ul>` or `<div>`, depending on the number of `TopicTag` components it contains. If there is only a single `TopicTag` component with the `TopicTags` component, then the `TopicTags` component is a styled `<div>`, otherwise it's a styled `<ul>`.
+The `TopicTags` component renders a `<ul>` when there are multiple `TopicTag` children, and a `<div>` when there is only a single tag.
 
 ## Props
 
-| Argument            | Type   | Required | Default                  | Example                                                                                                                                                                                                                                                                                                                    |
-| ------------------- | ------ | -------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| script              | object | Yes      | N/A                      | `latin`                                                                                                                                                                                                                                                                                                                    |
-| service             | string | Yes      | N/A                      | `'news'`                                                                                                                                                                                                                                                                                                                   |
-| dir                 | string | No       | `'ltr'`                  | One of `'ltr'` or `'rtl'`                                                                                                                                                                                                                                                                                                  |
-| tagBackgroundColour | string | No       | The GEL variable `WHITE` | Any valid CSS `color`                                                                                                                                                                                                                                                                                                      |
+| Argument            | Type   | Required | Default                  | Example                   |
+| ------------------- | ------ | -------- | ------------------------ | ------------------------- |
+| script              | object | Yes      | N/A                      | `latin`                   |
+| service             | string | Yes      | N/A                      | `'news'`                  |
+| dir                 | string | No       | `'ltr'`                  | One of `'ltr'` or `'rtl'` |
+| tagBackgroundColour | string | No       | The GEL variable `WHITE` | Any valid CSS `color`     |
 
 ## Usage
 

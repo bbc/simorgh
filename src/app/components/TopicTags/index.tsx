@@ -7,17 +7,17 @@ import React, {
 import { Services } from '#app/models/types/global';
 import styles from './index.styles';
 
-type TopicTagProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   name: string;
   link: string;
-};
+}
 
-type TopicTagsProps = {
+interface TopicTagsProps {
   children?: ReactElement<TopicTagProps> | ReactElement<TopicTagProps>[];
   script: object;
   service: Services;
   tagBackgroundColour?: string;
-};
+}
 
 export const TopicTag = forwardRef<HTMLAnchorElement, TopicTagProps>(
   ({ name, link, ...anchorProps }, ref) => (

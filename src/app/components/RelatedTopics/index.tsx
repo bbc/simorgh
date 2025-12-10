@@ -11,19 +11,19 @@ const eventTrackingData = {
   componentName: 'topics',
 };
 
-type Topic = {
+interface Topic {
   topicName: string;
   topicId: string;
-};
+}
 
-type RelatedTopicsProps = {
+interface RelatedTopicsProps {
   topics?: Topic[];
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
   backgroundColour?: string;
   tagBackgroundColour?: string;
-};
+}
 
 const RelatedTopics = ({
   topics = [],

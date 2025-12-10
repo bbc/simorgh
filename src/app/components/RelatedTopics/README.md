@@ -2,6 +2,24 @@
 
 Renders the Related Topics section for article onward journeys.
 
+## Props (TypeScript)
+
+```ts
+interface Topic {
+  topicName: string;
+  topicId: string;
+}
+
+interface RelatedTopicsProps {
+  topics?: Topic[];
+  mobileDivider?: boolean;
+  bar?: boolean;
+  className?: string;
+  backgroundColour?: string;
+  tagBackgroundColour?: string;
+}
+```
+
 ## Usage
 
 ```jsx
