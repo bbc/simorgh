@@ -6,7 +6,10 @@ import React, {
 } from 'react';
 import styled from '@emotion/styled';
 import { POSTBOX, WHITE } from '#app/components/ThemeProvider/palette';
-import { GEL_SPACING, GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '#psammead/gel-foundations/src/spacings';
 import { Services } from '#app/models/types/global';
 
 type TopicTagProps = AnchorHTMLAttributes<HTMLAnchorElement> & {

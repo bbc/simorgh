@@ -1,8 +1,8 @@
+import { Services } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
 import latin from '../ThemeProvider/fontScripts/latin';
 import burmeseTypography from '../ThemeProvider/fontScripts/burmese';
 import arabicTypography from '../ThemeProvider/fontScripts/arabic';
-import { Services } from '#app/models/types/global';
 import { TopicTags, TopicTag } from '.';
 
 describe('TopicTags', () => {

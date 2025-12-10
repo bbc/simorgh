@@ -5,9 +5,9 @@ import RelatedTopics from '#app/components/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { Services, Variants, PageTypes } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { Services, Variants, PageTypes } from '#app/models/types/global';
 
 beforeEach(() => {
   jest.resetModules();
