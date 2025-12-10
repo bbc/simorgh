@@ -19,8 +19,6 @@ console.log(`[SW v${version}] Service Worker loaded.`);
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
 const getOfflinePageUrl = service => `/${service}/offline`;
 
-const openCache = async () => caches.open(cacheName);
-
 const cacheResource = async (cache, url) => {
   try {
     const response = await fetch(url);
@@ -32,7 +30,7 @@ const cacheResource = async (cache, url) => {
 };
 
 const cacheOfflinePageAndResources = async service => {
-  const cache = await openCache();
+  const cache = await caches.open(cacheName);
   const offlinePageUrl = new URL(
     getOfflinePageUrl(service),
     self.location.origin,
@@ -60,33 +58,22 @@ const cacheOfflinePageAndResources = async service => {
 
 // Cache patterns
 const CACHEABLE_FILES = [
-  /\.js$/,
-  /\.css$/,
+  // Reverb
+  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  // Smart Tag
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+  // Fonts
   /\.woff2$/,
-  /reverb-3\.10\.2\.js$/,
-  /smarttag-.*\.min\.js$/,
-  /modern\.frosted_promo.*\.js$/,
-  /moment-lib.*\.js$/,
-  /\/images\/icons\/icon-.*\.png\??v?=?\d*$/,
+  // Frosted Promo (test and live environments only)
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
+  // Moment
+  /\/moment-lib+.*?\.js$/,
+  // PWA Icons
+  /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
 
 const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
-
-const isCacheableRequest = url =>
-  CACHEABLE_FILES.some(pattern => pattern.test(url));
-
-const handleWebPRequest = async request => {
-  if (!WEBP_IMAGE.test(request.url)) return null;
-  const accepts = request.headers.get('accept') || '';
-  if (accepts.includes('webp')) return null;
-  const fallbackUrl = request.url.replace('.webp', '');
-  try {
-    return await fetch(fallbackUrl, { mode: 'no-cors' });
-  } catch {
-    return null;
-  }
-};
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // -------------Install event -------
 self.addEventListener('install', event => {
@@ -155,108 +142,102 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  const request = event.request;
-  const url = request.url;
+  console.log(`[SW FETCH] Request: ${event.request.url}`);
+  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
+    new RegExp(cacheableFile).test(event.request.url),
+  );
 
-  console.log(`[SW FETCH] ${url}`);
+  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
 
-  // Clone accept header for WebP check
-  const isWebpRequest = WEBP_IMAGE.test(url);
+  if (isRequestForWebpImage) {
+    const req = event.request.clone();
 
-  if (isWebpRequest) {
-    const fallbackResp = await handleWebPRequest(request);
-    if (fallbackResp) return fallbackResp;
-  }
+    // Inspect the accept header for WebP support
 
-  const cache = await openCache();
+    const supportsWebp =
+      req.headers.has('accept') && req.headers.get('accept').includes('webp');
 
-  // ---------------Cache-first static assets-----------
-  if (isCacheableRequest(url)) {
-    const cached = await cache.match(request);
-    if (cached) return cached;
+    // if supports webp is false in request header then don't use it
+    // if accept header doesn't indicate support for webp remove .webp extension
 
-    try {
-      const networkResp = await fetch(request);
-      if (networkResp && networkResp.ok) {
-        cache.put(request, networkResp.clone());
-      }
-      return networkResp;
-    } catch (err) {
-      console.error('[SW] Cacheable request failed:', url, err);
-      return new Response(
-        'You are offline. Please check your network and reload the page',
-        { status: 503 },
+    if (!supportsWebp) {
+      const imageUrlWithoutWebp = req.url.replace('.webp', '');
+      event.respondWith(
+        fetch(imageUrlWithoutWebp, {
+          mode: 'no-cors',
+        }),
       );
     }
-  }
-
-  // ---------------Navigation requests-----------
-  if (request.mode === 'navigate') {
+  } else if (isRequestForCacheableFile) {
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        let response = await cache.match(event.request);
+        if (!response) {
+          response = await fetch(event.request.url);
+          cache.put(event.request, response.clone());
+        }
+        return response;
+      })(),
+    );
+  } else if (event.request.mode === 'navigate') {
+    const request = event.request;
+    const url = request.url;
     console.log(`[SW FETCH] Navigation: ${url}`);
 
-    try {
-      // Use preload if available
-      const preloadResp = await event.preloadResponse;
-      if (preloadResp) return preloadResp;
+    event.respondWith(async () => {
+      try {
+        // Use preload if available
+        const preloadResp = await event.preloadResponse;
+        if (preloadResp) return preloadResp;
 
-      const networkResp = await fetch(request);
+        const networkResp = await fetch(event.request);
 
-      // Cache offline page if in PWA mode
-      if (networkResp && networkResp.ok && event.clientId) {
-        const client = await self.clients.get(event.clientId);
-        const isPWA = client && pwaClients.get(client.id);
+        // Cache offline page if in PWA mode
+        if (networkResp && networkResp.ok && event.clientId) {
+          const client = await self.clients.get(event.clientId);
+          const isPWA = client && pwaClients.get(client.id);
 
-        if (isPWA) {
-          const service = getServiceFromUrl(url);
-          cacheOfflinePageAndResources(service).catch(err =>
-            console.error('[SW] Cache offline fail:', err),
-          );
+          if (isPWA) {
+            const service = getServiceFromUrl(url);
+            cacheOfflinePageAndResources(service).catch(err =>
+              console.error('[SW] Cache offline fail:', err),
+            );
+          }
         }
-      }
 
-      return networkResp;
-    } catch (err) {
-      console.error('[SW] Navigation failed:', url, err);
+        return networkResp;
+      } catch (err) {
+        console.error('[SW] Navigation failed:', url, err);
 
-      // Attempt to serve offline page if PWA
-      if (event.clientId) {
-        const client = await self.clients.get(event.clientId);
-        const isPWA = client && pwaClients.get(client.id);
+        // Attempt to serve offline page if PWA
+        if (event.clientId) {
+          const client = await self.clients.get(event.clientId);
+          const isPWA = client && pwaClients.get(client.id);
 
-        if (isPWA) {
-          const service = getServiceFromUrl(url);
-          const offlineUrl = new URL(
-            getOfflinePageUrl(service),
-            self.location.origin,
-          ).href;
+          if (isPWA) {
+            const service = getServiceFromUrl(url);
+            const offlineUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
 
-          const cachedOffline = await cache.match(offlineUrl);
-          if (cachedOffline) return cachedOffline;
+            const cachedOffline = await cache.match(offlineUrl);
+            if (cachedOffline) return cachedOffline;
+          }
         }
+
+        return new Response(
+          'You are offline. Please check your network and reload the page',
+          {
+            status: 503,
+            headers: { 'Content-Type': 'text/plain' },
+          },
+        );
       }
-
-      return new Response(
-        'You are offline. Please check your network and reload the page',
-        {
-          status: 503,
-          headers: { 'Content-Type': 'text/plain' },
-        },
-      );
-    }
+    });
   }
-
-  // -----------Fall-through: Always network---------------
-  try {
-    return await fetch(request);
-  } catch (err) {
-    console.error('[SW] Fetch failed:', url, err);
-    return new Response(
-      'You are offline. Please check your network and reload the page',
-      { status: 503 },
-    );
-  }
+  return;
 };
 
-self.addEventListener('fetch', event => {
-  event.respondWith(fetchEventHandler(event));
-});
+onfetch = fetchEventHandler;
