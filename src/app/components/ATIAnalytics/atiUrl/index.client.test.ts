@@ -8,16 +8,9 @@ const mockAndSet = ({ name, source }, response) => {
 };
 
 const analyticsUtilFunctions = [
-  { name: 'getDestination', source: genericLabelHelpers },
   { name: 'getAppType', source: genericLabelHelpers },
-  { name: 'getScreenInfo', source: genericLabelHelpers },
-  { name: 'getBrowserViewPort', source: genericLabelHelpers },
-  { name: 'getCurrentTime', source: genericLabelHelpers },
-  { name: 'getDeviceLanguage', source: genericLabelHelpers },
   { name: 'getHref', source: genericLabelHelpers },
   { name: 'getReferrer', source: genericLabelHelpers },
-  { name: 'getAtUserId', source: genericLabelHelpers },
-  { name: 'getATIMarketingString,', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
