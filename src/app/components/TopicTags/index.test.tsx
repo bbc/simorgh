@@ -1,8 +1,8 @@
-import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import burmeseTypography from '../../../../components/ThemeProvider/fontScripts/burmese';
-import arabicTypography from '../../../../components/ThemeProvider/fontScripts/arabic';
-import { TopicTags, TopicTag } from './index';
+import { render } from '../react-testing-library-with-providers';
+import latin from '../ThemeProvider/fontScripts/latin';
+import burmeseTypography from '../ThemeProvider/fontScripts/burmese';
+import arabicTypography from '../ThemeProvider/fontScripts/arabic';
+import { TopicTags, TopicTag } from '.';
 
 describe('TopicTags', () => {
   const newsProps = {
@@ -75,13 +75,13 @@ describe('TopicTags', () => {
       </TopicTags>,
     );
 
-    expect(container.querySelector('div')).toBeNull();
+    expect(container.querySelector('div div')).toBeNull();
     expect(container.querySelector('p')).toBeNull();
   });
 
   it('should not render any topic tags if there are none', () => {
     const { container } = render(<TopicTags {...newsProps} />);
 
-    expect(container.querySelector('a > span')).toBeNull();
+    expect(container.firstChild).toBeNull();
   });
 });

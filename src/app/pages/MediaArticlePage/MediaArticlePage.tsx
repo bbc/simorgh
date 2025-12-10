@@ -38,7 +38,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../legacy/containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';

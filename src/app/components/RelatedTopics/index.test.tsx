@@ -1,12 +1,13 @@
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { render } from '../../../components/react-testing-library-with-providers';
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import { render } from '../react-testing-library-with-providers';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { Services, Variants, PageTypes } from '#app/models/types/global';
 
 beforeEach(() => {
   jest.resetModules();
@@ -18,6 +19,12 @@ const WithContexts = ({
   service = 'mundo',
   isAmp = false,
   pageType = STORY_PAGE,
+}: {
+  children: React.ReactNode;
+  variant?: Variants | null;
+  service?: Services;
+  isAmp?: boolean;
+  pageType?: PageTypes;
 }) => {
   return (
     <RequestContextProvider
@@ -81,7 +88,6 @@ describe('Related Topics', () => {
               { topicName: 'topic3', topicId: '3' },
             ]}
           />
-          ,
         </WithContexts>,
         { service: 'mundo' },
       );
