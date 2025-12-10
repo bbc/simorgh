@@ -39,7 +39,7 @@ const HiearchicalGrid = ({
   eventTrackingData,
   timeOfDayVariant,
 }: CurationGridProps) => {
-  const { isAmp } = use(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
@@ -114,6 +114,7 @@ const HiearchicalGrid = ({
                   lazyLoad={lazyLoadImages}
                   fetchPriority={fetchpriority}
                   isAmp={isAmp}
+                  isLite={isLite}
                   isPortraitImage={promo.isPortraitImage}
                 >
                   {isMedia && (

@@ -72,6 +72,7 @@ const Image = props => {
     useLargeImages = false,
     className,
     isPortraitImage,
+    isLite,
     ...rest
   } = props;
   const isProgrammeImage = src.startsWith(
@@ -88,8 +89,8 @@ const Image = props => {
   const sizes = createSizes(useLargeImages, isProgrammeImage);
 
   return (
-    <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={src} />}
+    <Wrapper isPortraitImage={isPortraitImage} isLite={isLite}>
+      {isPortraitImage && !isLite && <BlurredBackground src={src} />}
       <IMAGE
         {...rest}
         src={src.replace('{width}', 240)}

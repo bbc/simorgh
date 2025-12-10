@@ -9,7 +9,13 @@ import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
 
-const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
+const LatestMediaSection = ({
+  content,
+  isLite,
+}: {
+  content: LatestMedia[] | null;
+  isLite: boolean;
+}) => {
   const { service, dir, translations, script } = use(ServiceContext);
 
   const eventTrackingData = {
@@ -89,6 +95,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
                   ariaLabelledBy={ariaLabelledBy}
                   ref={viewTracker}
                   eventTrackingData={eventTrackingData}
+                  isLite={isLite}
                 />
               </PromoItem>
             );
