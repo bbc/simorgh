@@ -55,6 +55,7 @@ const getPageType = ({
 
       return derivePageType(resolvedUrl);
     }
+    // In all other environments, always derive the page-type from the 'page-type' header
     default:
       return pageTypeHeader;
   }
