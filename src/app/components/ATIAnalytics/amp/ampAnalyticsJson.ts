@@ -40,17 +40,9 @@ const applyGeoVariantDestinationForSupportedServices = ({
   };
 };
 
-const ampAnalyticsJson = ({
-  baseUrl,
-  pageviewParams,
-  reverbParams,
-}: ATIAnalyticsProps) => {
-  const ampAnalyticsRequestConfiguration = reverbParams
-    ? reverbUrlHelper.getAmpAnalyticsPageViewUrl(reverbParams)
-    : {
-        base: baseUrl,
-        pageview: '${base}' + pageviewParams,
-      };
+const ampAnalyticsJson = ({ reverbParams }: ATIAnalyticsProps) => {
+  const ampAnalyticsRequestConfiguration =
+    reverbUrlHelper.getAmpAnalyticsPageViewUrl(reverbParams);
 
   const appName =
     reverbParams?.params.page.additionalProperties?.app_name ?? '';
