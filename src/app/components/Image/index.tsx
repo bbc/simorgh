@@ -164,9 +164,7 @@ const Image = ({
               </>
             )}
             <img
-              onLoad={() => {
-                setIsLoaded(true);
-              }}
+              onLoad={() => setIsLoaded(true)}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}
