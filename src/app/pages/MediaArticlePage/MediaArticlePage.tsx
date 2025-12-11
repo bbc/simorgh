@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { useTheme, Theme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
@@ -144,10 +144,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     brandName,
   } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);

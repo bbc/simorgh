@@ -229,7 +229,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
 
   // EXPERIMENT: Article Read Time 2
