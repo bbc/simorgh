@@ -1,11 +1,15 @@
 import dynamic from 'next/dynamic';
 import { GetServerSideProps } from 'next';
-import { STATIC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
-import { Services, PageTypes } from '#app/models/types/global';
+import { INTERNAL_SERVER_ERROR, OK } from '#app/lib/statusCodes.const';
+import nodeLogger from '#lib/logger.node';
+import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPageData from '../../utilities/pageRequests/getPageData';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
+
+const logger = nodeLogger(__filename);
 
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
@@ -15,24 +19,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
-  const baseProps = {
-    error: null,
-    isAmp: false,
-    isNextJs: true,
-    page: null,
-    status: 200,
-    timeOnServer: Date.now(),
-    pageType: STATIC_PAGE as PageTypes,
-    service: 'ws' as Services,
-    pathname: context?.resolvedUrl,
-    pageData: {
-      metadata: {
-        type: STATIC_PAGE,
-        atiAnalytics: {},
-      },
-    },
-  };
-
   const { data, toggles } = await getPageData({
     service: 'ws',
     rendererEnv,
@@ -40,33 +26,28 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: HOME_PAGE,
   });
 
-  if (data?.error) {
-    return {
-      props: {
-        ...baseProps,
-        error: data?.error,
-        status: data?.status,
-        pageType: HOME_PAGE,
-        service: 'ws',
-        toggles,
-        pageData: {
-          metadata: {
-            type: HOME_PAGE,
-            atiAnalytics: {},
-          },
-        },
-      },
-    };
+  let routingInfoLogger = logger.debug;
+  if (data.status !== OK) {
+    routingInfoLogger = logger.error;
   }
 
-  return {
+  routingInfoLogger(ROUTING_INFORMATION, {
+    url: context.resolvedUrl,
+    status: data.status,
+    pageType: HOME_PAGE,
+  });
+
+  const returnData = {
     props: {
-      ...baseProps,
       pageType: HOME_PAGE,
       service: 'ws',
       pathname: '/ws/languages',
-      status: data?.status,
+      status: data?.status ?? INTERNAL_SERVER_ERROR,
+      isAmp: false,
+      isNextJs: true,
+      error: data?.error || null,
       toggles,
+      timeOnServer: Date.now(),
       pageData: {
         ...data?.pageData,
         metadata: {
@@ -80,7 +61,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
       },
     },
   };
+
+  return returnData;
 };
 
 export default HomePage;
-
