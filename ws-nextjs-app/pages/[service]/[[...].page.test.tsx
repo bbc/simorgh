@@ -20,11 +20,9 @@ jest.mock('./articles/handleArticleRoute', () => ({
 }));
 
 const commonContext = {
-  req: {
-    headers: {},
-  },
+  req: { headers: {} },
   query: { service: 'pidgin' },
-  res: { statusCode: 200 },
+  res: {},
 } as unknown as GetServerSidePropsContext;
 
 describe('catch-all route', () => {
