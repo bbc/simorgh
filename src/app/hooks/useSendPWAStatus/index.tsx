@@ -2,34 +2,34 @@ import { useEffect } from 'react';
 
 const useSendPWAStatus = (isPWA: boolean) => {
   useEffect(() => {
-    const sendPWAStatus = () => {
-      if (typeof window !== 'undefined' && navigator.serviceWorker.controller) {
-        // eslint-disable-next-line no-console
-        console.log('Sending PWA status to SW', isPWA);
+    // Service workers not available - exit .
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+      return;
+    }
 
-        if (
-          navigator.serviceWorker.controller &&
-          navigator.serviceWorker.controller.state === 'activated'
-        ) {
-          navigator.serviceWorker.controller.postMessage({
-            type: 'PWA_STATUS',
-            isPWA,
-          });
-        }
+    const sendPWAStatus = () => {
+      const sw = navigator.serviceWorker;
+
+      if (sw.controller && sw.controller.state === 'activated') {
+        sw.controller.postMessage({
+          type: 'PWA_STATUS',
+          isPWA,
+        });
       }
     };
 
-    // If SW is already active
-    navigator.serviceWorker.ready.then(sendPWAStatus);
+    const sw = navigator.serviceWorker;
+
+    // if SW ready
+    if (sw.ready && typeof sw.ready.then === 'function') {
+      sw.ready.then(sendPWAStatus);
+    }
 
     // Listen for SW taking control
-    navigator.serviceWorker.addEventListener('controllerchange', sendPWAStatus);
+    sw.addEventListener('controllerchange', sendPWAStatus);
 
     return () => {
-      navigator.serviceWorker.removeEventListener(
-        'controllerchange',
-        sendPWAStatus,
-      );
+      sw.removeEventListener('controllerchange', sendPWAStatus);
     };
   }, [isPWA]);
 };

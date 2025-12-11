@@ -181,62 +181,65 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (event.request.mode === 'navigate') {
-    const request = event.request;
-    const url = request.url;
+    const url = event.request.url;
     console.log(`[SW FETCH] Navigation: ${url}`);
 
-    event.respondWith(async () => {
-      try {
-        // Use preload if available
-        const preloadResp = await event.preloadResponse;
-        if (preloadResp) return preloadResp;
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
 
-        const networkResp = await fetch(event.request);
+        try {
+          // Use preload if available
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
 
-        // Cache offline page if in PWA mode
-        if (networkResp && networkResp.ok && event.clientId) {
-          const client = await self.clients.get(event.clientId);
-          const isPWA = client && pwaClients.get(client.id);
+          const networkResp = await fetch(event.request);
 
-          if (isPWA) {
-            const service = getServiceFromUrl(url);
-            cacheOfflinePageAndResources(service).catch(err =>
-              console.error('[SW] Cache offline fail:', err),
-            );
+          // Cache offline page if in PWA mode
+          if (networkResp && networkResp.ok && event.clientId) {
+            const client = await self.clients.get(event.clientId);
+            const isPWA = client && pwaClients.get(client.id);
+            if (isPWA) {
+              const service = getServiceFromUrl(url);
+              cacheOfflinePageAndResources(service).catch(err =>
+                console.error('[SW] Cache offline fail:', err),
+              );
+            }
           }
-        }
 
-        return networkResp;
-      } catch (err) {
-        console.error('[SW] Navigation failed:', url, err);
+          return networkResp;
+        } catch (err) {
+          console.log('[SW] Navigation failed:', url, err);
 
-        // Attempt to serve offline page if PWA
-        if (event.clientId) {
-          const client = await self.clients.get(event.clientId);
-          const isPWA = client && pwaClients.get(client.id);
+          // Try serving offline page
+          if (event.clientId) {
+            const client = await self.clients.get(event.clientId);
+            const isPWA = client && pwaClients.get(client.id);
 
-          if (isPWA) {
-            const service = getServiceFromUrl(url);
-            const offlineUrl = new URL(
-              getOfflinePageUrl(service),
-              self.location.origin,
-            ).href;
+            if (isPWA) {
+              const service = getServiceFromUrl(url);
+              const offlineUrl = new URL(
+                getOfflinePageUrl(service),
+                self.location.origin,
+              ).href;
 
-            const cachedOffline = await cache.match(offlineUrl);
-            if (cachedOffline) return cachedOffline;
+              const cachedOffline = await cache.match(offlineUrl);
+              if (cachedOffline) return cachedOffline;
+            }
           }
-        }
 
-        return new Response(
-          'You are offline. Please check your network and reload the page',
-          {
-            status: 503,
-            headers: { 'Content-Type': 'text/plain' },
-          },
-        );
-      }
-    });
+          return new Response(
+            'You are offline. Please check your network and reload the page',
+            {
+              status: 503,
+              headers: { 'Content-Type': 'text/plain' },
+            },
+          );
+        }
+      })(),
+    );
   }
+
   return;
 };
 
