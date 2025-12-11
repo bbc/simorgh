@@ -2,9 +2,13 @@ import { use } from 'react';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
+import useOfflinePageTracker from '#app/hooks/useOfflinePageTracker';
 
 const OfflinePage = () => {
   const { service, dir, script } = use(ServiceContext);
+
+  // Set offline tracking flag for analytics when user returns online
+  useOfflinePageTracker();
 
   const title = 'You are offline';
   const message =

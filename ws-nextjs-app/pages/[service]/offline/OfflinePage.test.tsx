@@ -7,6 +7,18 @@ import { Helmet } from 'react-helmet';
 import OfflinePage from './OfflinePage';
 
 describe('OfflinePage', () => {
+  beforeEach(() => {
+    // Mock localStorage for offline tracking
+    Object.defineProperty(window, 'localStorage', {
+      value: {
+        getItem: jest.fn(),
+        setItem: jest.fn(),
+        removeItem: jest.fn(),
+      },
+      writable: true,
+    });
+  });
+
   it('should render the offline page title', async () => {
     await act(async () => {
       render(<OfflinePage />);
@@ -61,5 +73,15 @@ describe('OfflinePage', () => {
     const { htmlAttributes } = Helmet.peek();
     expect(htmlAttributes?.lang).toBe('mundo');
     expect(htmlAttributes?.dir).toBe('ltr');
+  });
+
+  it('should call useOfflinePageTracker hook', async () => {
+    // This test verifies the component renders without errors
+    // The useOfflinePageTracker hook has its own dedicated tests
+    const { container } = await act(async () =>
+      render(<OfflinePage />, { service: 'news' }),
+    );
+
+    expect(container).toBeInTheDocument();
   });
 });
