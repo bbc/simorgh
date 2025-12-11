@@ -41,6 +41,7 @@ const styles = {
   blurredBackground: css({
     display: 'block',
     position: 'absolute',
+    backgroundColor: 'black',
     /* When the image is blurred by the filter, it leaves a transparent gradient
      around the edge that's double the length of the blur. We are hiding the
      edge using positioning to compensate. */
