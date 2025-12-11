@@ -155,6 +155,7 @@ const PWAPromotionalBanner = () => {
           handleBannerDismiss();
         }}
         bannerLabel={promotionalBanner.bannerLabel}
+        closeLabel={promotionalBanner.closeLabel}
       />
     </div>
   );
