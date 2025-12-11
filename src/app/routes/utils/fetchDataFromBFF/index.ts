@@ -7,6 +7,9 @@ import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import { FetchError, GetAgent } from '#models/types/fetch';
 import nodeLogger from '#lib/logger.node';
 import certsRequired from '#app/routes/utils/certsRequired';
+import type { LRUCache } from 'lru-cache';
+
+type BffCache = LRUCache<string, Record<string, unknown>>;
 
 const logger = nodeLogger(__filename);
 
@@ -19,6 +22,7 @@ interface FetchDataFromBffParams {
   disableRadioSchedule?: boolean;
   page?: string;
   getAgent?: GetAgent;
+  cache?: BffCache;
 }
 
 export default async ({
@@ -30,6 +34,7 @@ export default async ({
   disableRadioSchedule,
   page,
   getAgent,
+  cache,
 }: FetchDataFromBffParams) => {
   const environment = getEnvironment(pathname);
 
@@ -58,6 +63,7 @@ export default async ({
       ...(agent && { agent }),
       ...(optHeaders && { optHeaders }),
       ...(timeout && { timeout }),
+      ...(cache && { cache }),
     };
 
     // @ts-expect-error - Ignore fetchPageData argument types

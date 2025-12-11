@@ -28,6 +28,9 @@ export const getProcessEnvAppVariables = () => ({
     process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
   SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE:
     process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
+  SIMORGH_BFF_CACHE_ITEMS: process.env.SIMORGH_BFF_CACHE_ITEMS,
+  SIMORGH_BFF_CACHE_MAX_AGE_SECONDS:
+    process.env.SIMORGH_BFF_CACHE_MAX_AGE_SECONDS,
 });
 
 export function getEnvConfig(): EnvConfig {
