@@ -280,10 +280,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           {showTopics && (
-            <RelatedTopics
-              css={styles.relatedTopics}
-              topics={topics}
-            />
+            <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}
           <RelatedContentSection content={blocks} />
         </div>

@@ -20,7 +20,12 @@ interface TopicTagsProps {
   tagBackgroundColour?: string;
 }
 
-export const TopicTag = ({ name, link, ref, ...anchorProps }: TopicTagProps) => (
+export const TopicTag = ({
+  name,
+  link,
+  ref,
+  ...anchorProps
+}: TopicTagProps) => (
   <a href={link} ref={ref} {...anchorProps}>
     {name}
   </a>
