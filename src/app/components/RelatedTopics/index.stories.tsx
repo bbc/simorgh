@@ -34,8 +34,6 @@ const Component = (_: StoryArgs, { service }: Props) => (
           <EventTrackingContextProvider>
             <RelatedTopics
               topics={topics.slice(0, 5)}
-              backgroundColour="#F6F6F6"
-              tagBackgroundColour="#FFFFFF"
             />
           </EventTrackingContextProvider>
         </RequestContextProvider>
@@ -66,8 +64,6 @@ export const Single = (_: StoryArgs, props: Props) => (
           <EventTrackingContextProvider>
             <RelatedTopics
               topics={[topics[0]]}
-              backgroundColour="#F6F6F6"
-              tagBackgroundColour="#FFFFFF"
             />
           </EventTrackingContextProvider>
         </RequestContextProvider>

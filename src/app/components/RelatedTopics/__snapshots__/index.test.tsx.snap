@@ -3,7 +3,7 @@
 exports[`Related Topics Expected use should render correctly with a single tag 1`] = `
 .emotion-0 {
   padding: 0 0 2.5rem;
-  background-color: transparent;
+  background-color: #F6F6F6;
 }
 
 .emotion-1 {
@@ -90,7 +90,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -253,7 +253,7 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
 exports[`Related Topics Expected use should render correctly with multiple tags 1`] = `
 .emotion-0 {
   padding: 0 0 2.5rem;
-  background-color: transparent;
+  background-color: #F6F6F6;
 }
 
 .emotion-1 {
@@ -340,7 +340,7 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  background-color: #FDFDFD;
+  background-color: #F6F6F6;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;

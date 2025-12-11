@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
+import { GREY_2, WHITE } from '#app/components/ThemeProvider/palette';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -21,8 +22,6 @@ interface RelatedTopicsProps {
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
-  backgroundColour?: string;
-  tagBackgroundColour?: string;
 }
 
 const RelatedTopics = ({
@@ -30,8 +29,6 @@ const RelatedTopics = ({
   mobileDivider = true,
   bar = true,
   className = '',
-  backgroundColour = '',
-  tagBackgroundColour = '',
 }: RelatedTopicsProps) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
@@ -73,7 +70,7 @@ const RelatedTopics = ({
       aria-labelledby="related-topics"
       role="complementary"
       className={className}
-      css={styles.wrapper(backgroundColour)}
+      css={styles.wrapper(GREY_2)}
     >
       <SectionLabel
         bar={bar}
@@ -82,7 +79,7 @@ const RelatedTopics = ({
         dir={dir}
         labelId="related-topics"
         mobileDivider={mobileDivider}
-        {...(backgroundColour && { backgroundColor: backgroundColour })}
+        backgroundColor={GREY_2}
         css={styles.sectionLabel}
       >
         {heading}
@@ -90,7 +87,7 @@ const RelatedTopics = ({
       <TopicTags
         service={service}
         script={script}
-        {...(tagBackgroundColour && { tagBackgroundColour })}
+        tagBackgroundColour={WHITE}
       >
         {topicTagItems}
       </TopicTags>
