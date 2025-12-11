@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: HOME_PAGE,
   });
 
-  const returnData = {
+  return {
     props: {
       pageType: HOME_PAGE,
       service: 'ws',
@@ -61,8 +61,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       },
     },
   };
-
-  return returnData;
 };
 
 export default HomePage;
