@@ -2,7 +2,7 @@ import React, {
   AnchorHTMLAttributes,
   Children,
   ReactElement,
-  forwardRef,
+  Ref,
 } from 'react';
 import { Services } from '#app/models/types/global';
 import styles from './index.styles';
@@ -10,6 +10,7 @@ import styles from './index.styles';
 interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   name: string;
   link: string;
+  ref?: Ref<HTMLAnchorElement>;
 }
 
 interface TopicTagsProps {
@@ -19,12 +20,10 @@ interface TopicTagsProps {
   tagBackgroundColour?: string;
 }
 
-export const TopicTag = forwardRef<HTMLAnchorElement, TopicTagProps>(
-  ({ name, link, ...anchorProps }, ref) => (
-    <a href={link} ref={ref} {...anchorProps}>
-      {name}
-    </a>
-  ),
+export const TopicTag = ({ name, link, ref, ...anchorProps }: TopicTagProps) => (
+  <a href={link} ref={ref} {...anchorProps}>
+    {name}
+  </a>
 );
 
 export const TopicTags = ({
