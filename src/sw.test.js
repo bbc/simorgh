@@ -19,6 +19,18 @@ fs.writeFileSync(
 describe('Service Worker', () => {
   let fetchEventHandler;
 
+  beforeAll(() => {
+    Object.defineProperty(navigator, 'serviceWorker', {
+      value: {
+        ready: Promise.resolve({}),
+        addEventListener: jest.fn(),
+        controller: null,
+        register: jest.fn().mockResolvedValue({}),
+      },
+      configurable: true,
+    });
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
     fetchMock.resetMocks();
