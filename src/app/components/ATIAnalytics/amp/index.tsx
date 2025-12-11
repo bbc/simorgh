@@ -1,4 +1,3 @@
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import getAmpAnalyticsJson from './ampAnalyticsJson';
 import { ATIAnalyticsProps, AMPAnalyticsData } from '../types';
 
@@ -10,16 +9,11 @@ const JsonInlinedScript = (data: AMPAnalyticsData) => (
   />
 );
 
-const AmpATIAnalytics = ({
-  pageviewParams,
-  reverbParams,
-}: ATIAnalyticsProps) => {
+const AmpATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <amp-analytics data-e2e="ati-amp-analytics">
       {JsonInlinedScript(
         getAmpAnalyticsJson({
-          baseUrl: getEnvConfig().SIMORGH_ATI_BASE_URL,
-          pageviewParams,
           reverbParams,
         }),
       )}
