@@ -57,6 +57,16 @@ const RelatedTopics = ({
     return null;
   }
 
+  const topicTagItems = topics.map(({ topicName, topicId }) => (
+    <TopicTag
+      name={topicName}
+      link={getTopicPageUrl(topicId)}
+      {...clickTrackerHandler}
+      {...viewTracker}
+      key={topicId}
+    />
+  ));
+
   return (
     <aside
       data-testid="related-topics"
@@ -82,25 +92,7 @@ const RelatedTopics = ({
         script={script}
         {...(tagBackgroundColour && { tagBackgroundColour })}
       >
-        {topics.length === 1
-          ? topics.map(topic => (
-              <TopicTag
-                name={topic.topicName}
-                link={getTopicPageUrl(topic.topicId)}
-                {...clickTrackerHandler}
-                {...viewTracker}
-                key={topic.topicId}
-              />
-            ))
-          : topics.map(({ topicName, topicId }) => (
-              <TopicTag
-                name={topicName}
-                link={getTopicPageUrl(topicId)}
-                {...clickTrackerHandler}
-                {...viewTracker}
-                key={topicId}
-              />
-            ))}
+        {topicTagItems}
       </TopicTags>
     </aside>
   );
