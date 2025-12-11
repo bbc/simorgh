@@ -51,8 +51,8 @@ describe('catch-all route', () => {
           headers: {
             'page-type': 'avEmbeds',
           },
-        },
-      } as unknown as GetServerSidePropsContext;
+        } as unknown as GetServerSidePropsContext['req'],
+      };
 
       await getServerSideProps(context);
 
@@ -65,7 +65,7 @@ describe('catch-all route', () => {
       const context = {
         ...commonContext,
         resolvedUrl: '/pidgin/articles/c0000000000o',
-      } as unknown as GetServerSidePropsContext;
+      };
 
       await getServerSideProps(context);
 
@@ -79,8 +79,8 @@ describe('catch-all route', () => {
           headers: {
             'page-type': 'article',
           },
-        },
-      } as unknown as GetServerSidePropsContext;
+        } as unknown as GetServerSidePropsContext['req'],
+      };
 
       await getServerSideProps(context);
 
@@ -92,7 +92,7 @@ describe('catch-all route', () => {
     const context = {
       ...commonContext,
       resolvedUrl: '/pidgin/some-unsupported-page-type',
-    } as unknown as GetServerSidePropsContext;
+    };
 
     // @ts-expect-error - props is not typed on the return value of getServerSideProps
     const { props } = await getServerSideProps(context);
