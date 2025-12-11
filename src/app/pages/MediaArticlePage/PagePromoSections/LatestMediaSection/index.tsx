@@ -14,7 +14,7 @@ const LatestMediaSection = ({
   isLite,
 }: {
   content: LatestMedia[] | null;
-  isLite: boolean;
+  isLite?: boolean;
 }) => {
   const { service, dir, translations, script } = use(ServiceContext);
 
@@ -71,6 +71,8 @@ const LatestMediaSection = ({
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            isLite={isLite}
+            isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
       ) : (

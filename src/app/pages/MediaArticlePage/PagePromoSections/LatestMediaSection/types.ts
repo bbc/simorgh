@@ -20,7 +20,8 @@ export type LatestMediaItemProp = {
   ariaLabelledBy: string;
   ref: () => Promise<void>;
   eventTrackingData: EventTrackingBlock;
-  isLite: boolean;
+  isPortraitImage?: boolean;
+  isLite?: boolean;
 };
 
 export type ImageProp = {
