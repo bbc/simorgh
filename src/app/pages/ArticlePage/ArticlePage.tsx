@@ -487,17 +487,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
-          <RelatedTopics
-            css={[
-              styles.relatedTopics,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.hideRelatedTopics]
-                : []),
-            ]}
-            topics={topics}
-            mobileDivider={false}
-          />
-        )}
+            <RelatedTopics
+              css={[
+                styles.relatedTopics,
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideRelatedTopics]
+                  : []),
+              ]}
+              topics={topics}
+              mobileDivider={false}
+            />
+          )}
           {/* EXPERIMENT: Location based Topics Experiment */}
           {personalisedContentExperimentVariant === 'variation_2' &&
             personalisedContentBlock}
