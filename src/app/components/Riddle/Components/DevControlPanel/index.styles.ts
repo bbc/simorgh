@@ -33,6 +33,7 @@ export default {
         width: '100%',
         background: `${palette.BLACK}`,
         color: `${palette.WHITE}`,
+        cursor: 'pointer',
       },
     }),
 };

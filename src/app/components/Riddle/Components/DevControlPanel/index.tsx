@@ -17,7 +17,7 @@ const Option = ({ title, children }: PropsWithChildren<{ title: string }>) => {
 };
 
 export default () => {
-  const { addCoins } = use(LocalStorageContext);
+  const { addCoins, addGoes } = use(LocalStorageContext);
   const { forceTimeInc24: forceTimeInc, forceTimeDec24: forceTimeDec } =
     use(RiddleContext);
 
@@ -38,6 +38,14 @@ export default () => {
         <Option title="Credits">
           <button type="button" onClick={() => addCoins(700)}>
             +700
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              addGoes();
+            }}
+          >
+            ADD ATTEMPTS
           </button>
         </Option>
       </div>

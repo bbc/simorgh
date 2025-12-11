@@ -10,6 +10,7 @@ export type LocalStorage = {
   coins: number;
   paidFor: boolean[];
   addCoins: (amount: number) => void;
+  addGoes: () => void;
   reduceCoins: (amount: number) => void;
   reduceGoes: () => void;
   updatePaidFor: React.Dispatch<React.SetStateAction<boolean[]>>;
@@ -61,6 +62,13 @@ export default ({ children }: PropsWithChildren) => {
       return newAmount;
     });
   };
+  const addGoes = () => {
+    updateGoes(() => {
+      const newAmount = 5;
+      setLocalData({ goes: newAmount });
+      return newAmount;
+    });
+  };
   const reduceCoins = (amount: number) => {
     updateCoins(prevAmount => {
       const newAmount = prevAmount - amount;
@@ -84,6 +92,7 @@ export default ({ children }: PropsWithChildren) => {
       coins,
       goes,
       addCoins,
+      addGoes,
       reduceCoins,
       reduceGoes,
       paidFor,
