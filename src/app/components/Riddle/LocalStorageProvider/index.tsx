@@ -8,12 +8,13 @@ import React, {
 export type LocalStorage = {
   goes: number;
   coins: number;
-  paidFor: boolean[];
+  paidHints: boolean[];
   addCoins: (amount: number) => void;
   addGoes: () => void;
   reduceCoins: (amount: number) => void;
   reduceGoes: () => void;
-  updatePaidFor: React.Dispatch<React.SetStateAction<boolean[]>>;
+  buyHint: (amount: number) => void;
+  resetHints: () => void;
 };
 
 export const LocalStorageContext = createContext<LocalStorage>(
@@ -29,31 +30,50 @@ const getLocalData = () => {
     return {
       goes: parsedData.goes ?? 5,
       coins: parsedData.coins ?? 0,
+      paidHints: parsedData.paidHints ?? [false, false, false],
     };
   }
 
   return {
     goes: 5,
     coins: 0,
+    paidHints: [false, false, false],
   };
 };
 
-const setLocalData = ({ goes, coins }: { goes?: number; coins?: number }) => {
-  const { goes: localGoes, coins: localCoins } = getLocalData();
+const setLocalData = ({
+  goes,
+  coins,
+  paidHints,
+}: {
+  goes?: number;
+  coins?: number;
+  paidHints?: boolean[];
+}) => {
+  const {
+    goes: localGoes,
+    coins: localCoins,
+    paidHints: localPaidHints,
+  } = getLocalData();
   const updatedData = {
     goes: goes ?? localGoes,
     coins: coins ?? localCoins,
+    paidHints: paidHints ?? localPaidHints,
   };
   const toStore = JSON.stringify(updatedData);
   window.localStorage.setItem(DATA_KEY, toStore);
 };
 
 export default ({ children }: PropsWithChildren) => {
-  const { goes: initialGoes, coins: initialCoins } = getLocalData();
+  const {
+    goes: initialGoes,
+    coins: initialCoins,
+    paidHints: initialPaidHints,
+  } = getLocalData();
 
   const [coins, updateCoins] = useState(initialCoins);
   const [goes, updateGoes] = useState(initialGoes);
-  const [paidFor, updatePaidFor] = useState([false, false, false]);
+  const [paidHints, updatePaidHints] = useState(initialPaidHints);
 
   const addCoins = (amount: number) => {
     updateCoins(prevAmount => {
@@ -83,6 +103,17 @@ export default ({ children }: PropsWithChildren) => {
       return newGoes;
     });
   };
+  const buyHint = (index: number) => {
+    updatePaidHints(prevBoughtHints => {
+      const updatedBoughtHints = [...prevBoughtHints];
+      updatedBoughtHints[index] = true;
+      setLocalData({ paidHints: updatedBoughtHints });
+      return updatedBoughtHints;
+    });
+  };
+  const resetHints = () => {
+    updatePaidHints([false, false, false]);
+  };
 
   // TO DO: Reset goes during transition period.
   // TO DO: Reset paid for.
@@ -95,10 +126,11 @@ export default ({ children }: PropsWithChildren) => {
       addGoes,
       reduceCoins,
       reduceGoes,
-      paidFor,
-      updatePaidFor,
+      paidHints,
+      buyHint,
+      resetHints,
     }),
-    [coins, goes, paidFor],
+    [coins, goes, paidHints],
   );
 
   return (

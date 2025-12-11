@@ -3,9 +3,13 @@ import { css, Theme } from '@emotion/react';
 export default {
   title: ({ spacings }: Theme) =>
     css({
-      display: 'inline-block',
+      display: 'block',
       marginTop: `${spacings.DOUBLE}rem`,
-      padding: `${spacings.HALF}rem`,
+    }),
+  date: () =>
+    css({
+      fontFamily: '"Lucida Console", "Courier New", monospace',
+      display: 'block',
     }),
   container: () =>
     css({
