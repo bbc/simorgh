@@ -287,8 +287,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
             <RelatedTopics
               css={styles.relatedTopics}
               topics={topics}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
           <RelatedContentSection content={blocks} />

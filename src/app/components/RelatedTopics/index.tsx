@@ -22,8 +22,6 @@ interface RelatedTopicsProps {
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
-  backgroundColour?: string;
-  tagBackgroundColour?: string;
 }
 
 const RelatedTopics = ({
@@ -31,8 +29,6 @@ const RelatedTopics = ({
   mobileDivider = true,
   bar = true,
   className = '',
-  backgroundColour = GREY_2,
-  tagBackgroundColour = WHITE,
 }: RelatedTopicsProps) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
@@ -74,7 +70,7 @@ const RelatedTopics = ({
       aria-labelledby="related-topics"
       role="complementary"
       className={className}
-      css={styles.wrapper(backgroundColour)}
+      css={styles.wrapper(GREY_2)}
     >
       <SectionLabel
         bar={bar}
@@ -83,7 +79,7 @@ const RelatedTopics = ({
         dir={dir}
         labelId="related-topics"
         mobileDivider={mobileDivider}
-        backgroundColor={backgroundColour}
+        backgroundColor={GREY_2}
         css={styles.sectionLabel}
       >
         {heading}
@@ -91,7 +87,7 @@ const RelatedTopics = ({
       <TopicTags
         service={service}
         script={script}
-        tagBackgroundColour={tagBackgroundColour}
+        tagBackgroundColour={WHITE}
       >
         {topicTagItems}
       </TopicTags>

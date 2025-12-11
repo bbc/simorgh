@@ -15,8 +15,6 @@ interface RelatedTopicsProps {
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
-  backgroundColour?: string;
-  tagBackgroundColour?: string;
 }
 ```
 
