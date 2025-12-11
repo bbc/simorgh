@@ -35,17 +35,21 @@ const styles = {
   link: ({ palette, fontVariants, fontSizes, isDarkUi }: Theme) =>
     css({
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
-      textDecoration: 'none',
+      textDecoration: 'underline',
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       paddingTop: `${pixelsToRem(12)}rem`,
       paddingBottom: `${pixelsToRem(12)}rem`,
       width: '100%',
+
       '&:visited': {
         color: isDarkUi ? palette.GREY_4 : palette.GREY_6,
+        textDecoration: 'underline',
       },
+
       '&:hover, &:focus': {
         textDecoration: 'underline',
+        textDecorationThickness: `${pixelsToRem(3)}rem`,
       },
     }),
 };
