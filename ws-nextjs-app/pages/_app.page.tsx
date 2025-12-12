@@ -18,14 +18,13 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
 import addCspHeader from '#nextjs/utilities/addCspHeader';
 import getPathExtension from '#app/utilities/getPathExtension';
 import derivePageType from '#nextjs/utilities/derivePageType';
-import {
-  getExperimentVaryHeaders,
-  getServerExperiments,
-} from '#src/server/utilities/experimentHeader';
+import { getServerExperiments } from '#src/server/utilities/experimentHeader';
+import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
+import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
+import addVaryHeaders from '#nextjs/utilities/addVaryHeader';
 
 interface Props extends AppProps {
   pageProps: {
@@ -138,39 +137,6 @@ export default function App({ Component, pageProps }: Props) {
     </ToggleContextProvider>
   );
 }
-
-const addServiceChainHeader = ({ ctx }: { ctx: NextPageContext }) => {
-  ctx.res?.setHeader(
-    'req-svc-chain',
-    addPlatformToRequestChainHeader({
-      headers: ctx.req?.headers as unknown as Headers,
-    }),
-  );
-};
-
-const addOnionLocationHeader = ({ ctx }: { ctx: NextPageContext }) => {
-  const { asPath } = ctx;
-
-  ctx.res?.setHeader(
-    'onion-location',
-    `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${asPath}`,
-  );
-};
-
-const addVaryHeaders = ({
-  ctx,
-  serverSideExperiments,
-}: {
-  ctx: NextPageContext;
-  serverSideExperiments: ServerSideExperiment[] | null;
-}) => {
-  const allVaryHeaders = ['X-Country'];
-  const experimentVaryHeaders =
-    serverSideExperiments && getExperimentVaryHeaders(serverSideExperiments);
-  if (experimentVaryHeaders) allVaryHeaders.push(experimentVaryHeaders);
-
-  ctx.res?.setHeader('Vary', allVaryHeaders);
-};
 
 // This runs on the server before rendering the page.
 // The props returned are passed down to ALL pages and merged with page
