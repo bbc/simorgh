@@ -136,7 +136,7 @@ export default function App({ Component, pageProps }: Props) {
   );
 }
 
-const addServiceChainAndCspHeaders = async ({
+const addServiceChainAndCspHeaders = ({
   ctx,
   service,
   toggles,
@@ -157,7 +157,7 @@ const addServiceChainAndCspHeaders = async ({
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
   if (PRODUCTION_ONLY) {
-    await cspHeaderResponse({ ctx, service, toggles });
+    cspHeaderResponse({ ctx, service, toggles });
   }
 };
 
@@ -175,7 +175,7 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
 
   const toggles = await getToggles(service);
 
-  await addServiceChainAndCspHeaders({ ctx, service, toggles });
+  addServiceChainAndCspHeaders({ ctx, service, toggles });
 
   return {
     pageProps: {

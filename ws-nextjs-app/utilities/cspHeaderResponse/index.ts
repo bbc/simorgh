@@ -41,7 +41,7 @@ export type CspHeaderResponseProps = {
   toggles: Toggles;
 };
 
-const cspHeaderResponse = async ({
+const cspHeaderResponse = ({
   ctx,
   service,
   toggles,
