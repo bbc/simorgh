@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
-import { GREY_2, WHITE } from '#app/components/ThemeProvider/palette';
+import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -70,7 +70,7 @@ const RelatedTopics = ({
       aria-labelledby="related-topics"
       role="complementary"
       className={className}
-      css={styles.wrapper(GREY_2)}
+      css={styles.wrapper}
     >
       <SectionLabel
         bar={bar}
@@ -84,7 +84,7 @@ const RelatedTopics = ({
       >
         {heading}
       </SectionLabel>
-      <TopicTags tagBackgroundColour={WHITE}>{topicTagItems}</TopicTags>
+      <TopicTags>{topicTagItems}</TopicTags>
     </aside>
   );
 };
