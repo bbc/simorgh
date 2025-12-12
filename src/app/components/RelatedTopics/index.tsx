@@ -84,9 +84,7 @@ const RelatedTopics = ({
       >
         {heading}
       </SectionLabel>
-      <TopicTags tagBackgroundColour={WHITE}>
-        {topicTagItems}
-      </TopicTags>
+      <TopicTags tagBackgroundColour={WHITE}>{topicTagItems}</TopicTags>
     </aside>
   );
 };

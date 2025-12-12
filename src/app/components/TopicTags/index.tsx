@@ -44,10 +44,7 @@ export const TopicTags = ({
   const hasMultipleChildren = topicTagChildren.length > 1;
 
   return hasMultipleChildren ? (
-    <ul
-      role="list"
-      css={styles.topicsList}
-    >
+    <ul role="list" css={styles.topicsList}>
       {topicTagChildren.map((child, index) => (
         <li
           // eslint-disable-next-line react/no-array-index-key
