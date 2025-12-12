@@ -112,10 +112,7 @@ const getTimestampComponent =
           hasReadTime={shouldDisplayReadTime}
         />
         {shouldDisplayReadTime && (
-          <ReadTimeArticle
-            readTimeValue={readTimeValue}
-            readTimeTranslations={readTimeTranslations}
-          />
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
       </Byline>
     ) : (
@@ -126,10 +123,7 @@ const getTimestampComponent =
           hasReadTime={shouldDisplayReadTime}
         />
         {shouldDisplayReadTime && (
-          <ReadTimeArticle
-            readTimeValue={readTimeValue}
-            readTimeTranslations={readTimeTranslations}
-          />
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
       </>
     );
