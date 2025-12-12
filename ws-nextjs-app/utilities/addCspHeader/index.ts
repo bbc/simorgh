@@ -5,6 +5,8 @@ import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
 
+const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
+
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
   let cspValue = '';
@@ -43,8 +45,6 @@ type AddCspHeaderProps = {
 
 const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
   const hostname = ctx.req?.headers.host || '';
-
-  const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
 
   const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
 

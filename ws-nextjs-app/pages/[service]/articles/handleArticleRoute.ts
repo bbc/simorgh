@@ -10,7 +10,6 @@ import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
-import { getServerExperiments } from '#server/utilities/experimentHeader';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -176,12 +175,6 @@ export default async (context: GetServerSidePropsContext) => {
 
   const derivedPageType = getDerivedArticleType(article.metadata);
 
-  const serverSideExperiments = getServerExperiments({
-    headers: reqHeaders,
-    service,
-    pageType: derivedPageType,
-  });
-
   return {
     props: {
       country,
@@ -201,7 +194,6 @@ export default async (context: GetServerSidePropsContext) => {
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
-      serverSideExperiments,
       service,
       status,
       variant: variant || null,
