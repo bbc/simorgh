@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 const useSendPWAStatus = (isPWA: boolean) => {
   useEffect(() => {
     // Service workers not available - exit .
+    // eslint-disable-next-line consistent-return
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
       return;
     }
