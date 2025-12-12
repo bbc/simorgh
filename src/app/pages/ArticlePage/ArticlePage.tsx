@@ -223,9 +223,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
 
-  // EXPERIMENT: Article Read Time 2
-  const readTimeValue = pageData?.metadata?.stats?.readTime;
-
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -249,6 +246,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
+
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
@@ -291,7 +290,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time 2
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
