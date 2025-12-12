@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import useIsPWA from '../useIsPWA';
+import useNetworkStatusTracker from '../useNetworkStatusTracker';
 
 const OFFLINE_VISIT_FLAG = 'bbc_offline_visit';
 
@@ -10,16 +11,16 @@ const OFFLINE_VISIT_FLAG = 'bbc_offline_visit';
  */
 const useOfflinePageTracker = () => {
   const isPWA = useIsPWA();
-
+  const { isOnline } = useNetworkStatusTracker();
   useEffect(() => {
-    if (typeof window === 'undefined' || !isPWA) return;
+    if (typeof window === 'undefined' || !isPWA || !isOnline) return;
 
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
     } catch (error) {
       // Silently fail if localStorage is unavailable
     }
-  }, [isPWA]);
+  }, [isOnline, isPWA]);
 };
 
 export default useOfflinePageTracker;
