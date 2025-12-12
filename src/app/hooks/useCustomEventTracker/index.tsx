@@ -7,6 +7,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface CustomEventData {
   eventName: string;
+  experimentName?: string;
+  experimentVariant?: string;
 }
 
 type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
@@ -22,6 +24,8 @@ type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
 
 const useCustomEventTracker = ({
   eventName,
+  experimentName,
+  experimentVariant,
 }: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
@@ -66,6 +70,8 @@ const useCustomEventTracker = ({
             service,
             statsDestination,
             useReverb,
+            experimentName,
+            experimentVariant,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
@@ -84,6 +90,8 @@ const useCustomEventTracker = ({
       service,
       statsDestination,
       useReverb,
+      experimentName,
+      experimentVariant,
     ],
   );
 
