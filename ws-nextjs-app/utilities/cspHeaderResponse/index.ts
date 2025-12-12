@@ -35,7 +35,7 @@ const isRelaxedCspEnabled = (
   return !omittedCountriesList.includes(country.toLowerCase());
 };
 
-export type CspHeaderResponseProps = {
+type CspHeaderResponseProps = {
   ctx: NextPageContext;
   service: Services;
   toggles: Toggles;
@@ -46,6 +46,16 @@ const cspHeaderResponse = ({
   service,
   toggles,
 }: CspHeaderResponseProps) => {
+  const hostname = ctx.req?.headers.host || '';
+
+  const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
+
+  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
+
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+
+  if (!PRODUCTION_ONLY) return;
+
   const reqUrl = ctx.req?.url || '';
   const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();

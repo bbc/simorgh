@@ -19,9 +19,7 @@ import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
-import cspHeaderResponse, {
-  CspHeaderResponseProps,
-} from '#nextjs/utilities/cspHeaderResponse';
+import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
 import derivePageType from '#nextjs/utilities/derivePageType';
 import {
@@ -150,20 +148,6 @@ const addServiceChainHeader = ({ ctx }: { ctx: NextPageContext }) => {
   );
 };
 
-const addCspHeaders = ({ ctx, service, toggles }: CspHeaderResponseProps) => {
-  const hostname = ctx.req?.headers.host || '';
-
-  const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
-
-  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
-
-  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
-
-  if (PRODUCTION_ONLY) {
-    cspHeaderResponse({ ctx, service, toggles });
-  }
-};
-
 const addOnionLocationHeader = ({ ctx }: { ctx: NextPageContext }) => {
   const { asPath } = ctx;
 
@@ -173,10 +157,13 @@ const addOnionLocationHeader = ({ ctx }: { ctx: NextPageContext }) => {
   );
 };
 
-const addVaryHeaders = (
-  ctx: NextPageContext,
-  serverSideExperiments: ServerSideExperiment[] | null,
-) => {
+const addVaryHeaders = ({
+  ctx,
+  serverSideExperiments,
+}: {
+  ctx: NextPageContext;
+  serverSideExperiments: ServerSideExperiment[] | null;
+}) => {
   const allVaryHeaders = ['X-Country'];
   const experimentVaryHeaders =
     serverSideExperiments && getExperimentVaryHeaders(serverSideExperiments);
@@ -208,9 +195,9 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
   });
 
   addServiceChainHeader({ ctx });
-  addCspHeaders({ ctx, service, toggles });
+  cspHeaderResponse({ ctx, service, toggles });
   addOnionLocationHeader({ ctx });
-  addVaryHeaders(ctx, serverSideExperiments);
+  addVaryHeaders({ ctx, serverSideExperiments });
 
   return {
     pageProps: {
