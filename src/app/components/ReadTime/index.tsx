@@ -27,6 +27,7 @@ const formatReadTime = ({
   service: Services;
 }) => {
   if (!singleMinuteSuffix || !readTimePrefix) return null;
+
   const servicesWithMinutesBeforeNumber: Services[] = [
     'hausa',
     'igbo',
@@ -62,13 +63,12 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
 
   const viewRef = useViewTracker(eventTrackingData);
 
-  const readTimeText =
-    formatReadTime({
-      readTimeValue,
-      singleMinuteSuffix,
-      readTimePrefix,
-      service,
-    }) || {};
+  const readTimeText = formatReadTime({
+    readTimeValue,
+    singleMinuteSuffix,
+    readTimePrefix,
+    service,
+  });
 
   if (!readTimeInMilliseconds || !readTimeText) return null;
 
