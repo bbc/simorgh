@@ -1,5 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import { POSTBOX, WHITE } from '#app/components/ThemeProvider/palette';
+import { WHITE } from '#app/components/ThemeProvider/palette';
 
 const MIN_TAG_HEIGHT = '2.75rem'; // 44px
 
@@ -38,7 +38,7 @@ const styles = {
           textDecoration: 'none',
           color: isDarkUi ? palette.GREY_2 : palette.EBON,
           '&:hover, &:focus': {
-            color: palette.POSTBOX || POSTBOX,
+            color: palette.POSTBOX,
             textDecoration: 'underline',
           },
         },
