@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useSendPWAStatus = (isPWA: boolean) => {
   useEffect(() => {
     // Service workers not available - exit .
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+    if (typeof window === 'undefined' || !navigator.serviceWorker) {
       return;
     }
 
