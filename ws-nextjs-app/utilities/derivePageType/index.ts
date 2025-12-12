@@ -12,9 +12,7 @@ import {
   removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
 
-export default function derivePageType(
-  pathname: string,
-): PageTypes | 'Unknown' {
+export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
     'http://bbc.com',

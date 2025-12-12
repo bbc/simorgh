@@ -48,7 +48,7 @@ const handleServerLogging = ({
   pageType,
 }: {
   ctx: DocumentContext;
-  pageType: PageTypes | 'Unknown';
+  pageType: PageTypes;
 }) => {
   const url = ctx.asPath || '';
   const headers = removeSensitiveHeaders(ctx.req?.headers);
