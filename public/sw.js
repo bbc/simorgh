@@ -71,6 +71,13 @@ const CACHEABLE_FILES = [
   /\/moment-lib+.*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
+  // Next.js static assets (JS chunks, CSS, fonts)
+  /\/_next\/static\/.+\.js$/,
+  /\/_next\/static\/.+\.css$/,
+  // Local static assets
+  /\/static\/.+\.(js|css|woff2|png|jpg|svg)$/,
+  // Public fonts
+  /\/fonts\/.+\.woff2$/,
 ];
 
 const WEBP_IMAGE =
@@ -175,8 +182,14 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         let response = await cache.match(event.request);
         if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
+          try {
+            response = await fetch(event.request.url);
+            cache.put(event.request, response.clone());
+          } catch (error) {
+            console.warn('error', error);
+            // File not in cache and network unavailable
+            return new Response('', { status: 408, statusText: 'Offline' });
+          }
         }
         return response;
       })(),
@@ -244,4 +257,4 @@ const fetchEventHandler = async event => {
   return;
 };
 
-onfetch = fetchEventHandler;
+self.addEventListener('fetch', fetchEventHandler);

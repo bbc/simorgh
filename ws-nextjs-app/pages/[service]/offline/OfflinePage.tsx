@@ -2,9 +2,17 @@ import { use } from 'react';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
+import useOfflinePageTracker from '#app/hooks/useOfflinePageTracker';
+import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 
 const OfflinePage = () => {
   const { service, dir, script } = use(ServiceContext);
+
+  // Track offline page visit (sets flag in localStorage, PWA only)
+  useOfflinePageTracker();
+
+  // Track network back online (general)
+  useConnectionBackOnlineTracker();
 
   const title = 'You are offline';
   const message =
