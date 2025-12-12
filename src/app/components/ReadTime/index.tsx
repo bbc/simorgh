@@ -1,5 +1,6 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Services } from '#app/models/types/global';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
@@ -14,40 +15,40 @@ type ReadTimeProps = {
   promoPosition?: number;
 };
 
-const ProcessReadTime = ({ readTimeValue }: { readTimeValue: number }) => {
-  const { translations, service } = use(ServiceContext);
-
-  const singleMinuteSuffix = translations.readTime?.minute;
-  const readCopy = translations.readTime?.readTimePrefix;
-  const longReadCopy = translations.readTime?.long;
-
-  if (!singleMinuteSuffix || !readCopy || !longReadCopy) return null;
-
-  const servicesWithMinutesBeforeNumber = [
+const formatReadTime = ({
+  readTimeValue,
+  singleMinuteSuffix,
+  readTimePrefix,
+  service,
+}: {
+  readTimeValue: number;
+  singleMinuteSuffix?: string;
+  readTimePrefix?: string;
+  service: Services;
+}) => {
+  if (!singleMinuteSuffix || !readTimePrefix) return null;
+  const servicesWithMinutesBeforeNumber: Services[] = [
     'hausa',
     'igbo',
     'yoruba',
     'swahili',
   ];
-  const servicesWithoutColon = ['igbo', 'pidgin'];
+  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
-  let copy = servicesWithMinutesBeforeNumber.includes(service)
-    ? `${readCopy}${separator}${singleMinuteSuffix} ${readTimeValue}`
-    : `${readCopy}${separator}${readTimeValue} ${singleMinuteSuffix}`;
-
-  const isLongRead = readTimeValue >= 6;
-  if (isLongRead) {
-    copy = longReadCopy;
-  }
-
-  return {
-    copy,
-  };
+  return servicesWithMinutesBeforeNumber.includes(service)
+    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${readTimeValue}`
+    : `${readTimePrefix}${separator}${readTimeValue} ${singleMinuteSuffix}`;
 };
 
 const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
+  const { translations, service } = use(ServiceContext);
+  const { readTime } = translations;
+
+  const singleMinuteSuffix = readTime?.minute;
+  const readTimePrefix = readTime?.readTimePrefix;
+
   const readTimeInMilliseconds = readTimeValue * 60000;
 
   const eventTrackingData: EventTrackingData = {
@@ -61,12 +62,15 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
 
   const viewRef = useViewTracker(eventTrackingData);
 
-  const { copy } =
-    ProcessReadTime({
+  const readTimeText =
+    formatReadTime({
       readTimeValue,
+      singleMinuteSuffix,
+      readTimePrefix,
+      service,
     }) || {};
 
-  if (!readTimeInMilliseconds || !copy) return null;
+  if (!readTimeInMilliseconds || !readTimeText) return null;
 
   return (
     <div
@@ -76,7 +80,7 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
       data-testid="read-time"
     >
       <Text css={styles.readTimeText} size="brevier">
-        {copy}
+        {readTimeText}
       </Text>
     </div>
   );
