@@ -33,6 +33,12 @@ const policies = [
 ];
 
 describe('cspHeaderResponse', () => {
+  const processEnv = process.env;
+
+  beforeEach(() => {
+    process.env = { ...processEnv, NODE_ENV: 'production' };
+  });
+
   it.each(policies)('should set %s in the request CSP', policy => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
@@ -44,9 +50,31 @@ describe('cspHeaderResponse', () => {
 
     expect((requestCsp as string).includes(policy)).toBe(true);
   });
+
+  it('should not set CSP headers in non-production environments', () => {
+    const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
+
+    process.env = { ...processEnv, NODE_ENV: 'development' };
+
+    cspHeaderResponse({ ctx, service: 'pidgin', toggles: {} });
+
+    const setHeaderCalls = (ctx.res?.setHeader as jest.Mock).mock.calls;
+
+    const cspHeaderCall = setHeaderCalls.find(
+      call => call[0] === 'Content-Security-Policy',
+    );
+
+    expect(cspHeaderCall).toBeUndefined();
+  });
 });
 
 describe('shouldServeRelaxedCsp', () => {
+  const processEnv = process.env;
+
+  beforeEach(() => {
+    process.env = { ...processEnv, NODE_ENV: 'production' };
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
