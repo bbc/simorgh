@@ -24,7 +24,10 @@ import cspHeaderResponse, {
 } from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
 import derivePageType from '#nextjs/utilities/derivePageType';
-import { getServerExperiments } from '#src/server/utilities/experimentHeader';
+import {
+  getExperimentVaryHeaders,
+  getServerExperiments,
+} from '#src/server/utilities/experimentHeader';
 
 interface Props extends AppProps {
   pageProps: {
@@ -138,18 +141,16 @@ export default function App({ Component, pageProps }: Props) {
   );
 }
 
-const addServiceChainAndCspHeaders = ({
-  ctx,
-  service,
-  toggles,
-}: CspHeaderResponseProps) => {
+const addServiceChainHeader = ({ ctx }: { ctx: NextPageContext }) => {
   ctx.res?.setHeader(
     'req-svc-chain',
     addPlatformToRequestChainHeader({
       headers: ctx.req?.headers as unknown as Headers,
     }),
   );
+};
 
+const addCspHeaders = ({ ctx, service, toggles }: CspHeaderResponseProps) => {
   const hostname = ctx.req?.headers.host || '';
 
   const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
@@ -161,6 +162,27 @@ const addServiceChainAndCspHeaders = ({
   if (PRODUCTION_ONLY) {
     cspHeaderResponse({ ctx, service, toggles });
   }
+};
+
+const addOnionLocationHeader = ({ ctx }: { ctx: NextPageContext }) => {
+  const { asPath } = ctx;
+
+  ctx.res?.setHeader(
+    'onion-location',
+    `https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion${asPath}`,
+  );
+};
+
+const addVaryHeaders = (
+  ctx: NextPageContext,
+  serverSideExperiments: ServerSideExperiment[] | null,
+) => {
+  const allVaryHeaders = ['X-Country'];
+  const experimentVaryHeaders =
+    serverSideExperiments && getExperimentVaryHeaders(serverSideExperiments);
+  if (experimentVaryHeaders) allVaryHeaders.push(experimentVaryHeaders);
+
+  ctx.res?.setHeader('Vary', allVaryHeaders);
 };
 
 // This runs on the server before rendering the page.
@@ -177,8 +199,6 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
 
   const toggles = await getToggles(service);
 
-  addServiceChainAndCspHeaders({ ctx, service, toggles });
-
   const pageType = derivePageType(asPath || '');
 
   const serverSideExperiments = getServerExperiments({
@@ -186,6 +206,11 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
     service,
     pageType,
   });
+
+  addServiceChainHeader({ ctx });
+  addCspHeaders({ ctx, service, toggles });
+  addOnionLocationHeader({ ctx });
+  addVaryHeaders(ctx, serverSideExperiments);
 
   return {
     pageProps: {
