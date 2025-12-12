@@ -1,6 +1,5 @@
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
 import { StoryArgs } from '#app/models/types/storybook';
 import readme from './README.md';
@@ -9,16 +8,15 @@ import { TopicTags, TopicTag } from '.';
 interface Props {
   service: Services;
   text: string;
-  script?: object;
 }
 
-const DefaultStory = (_: StoryArgs, { service, text, script }: Props) => {
+const DefaultStory = (_: StoryArgs, { service, text }: Props) => {
   const shortText = service === 'news' ? text : text.trim().split(' ')[0];
 
   return (
     <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
-        <TopicTags service={service} script={script || latin}>
+        <TopicTags>
           <TopicTag name={shortText} link="#" />
         </TopicTags>
       </ServiceContextProvider>
@@ -26,7 +24,7 @@ const DefaultStory = (_: StoryArgs, { service, text, script }: Props) => {
   );
 };
 
-const MultipleStory = (_: StoryArgs, { service, text, script }: Props) => {
+const MultipleStory = (_: StoryArgs, { service, text }: Props) => {
   const textArray =
     service === 'ukchina'
       ? [text.trim().split(' ')[0], text.trim().split(' ')[0]]
@@ -35,7 +33,7 @@ const MultipleStory = (_: StoryArgs, { service, text, script }: Props) => {
   return (
     <ThemeProvider service={service}>
       <ServiceContextProvider service={service}>
-        <TopicTags service={service} script={script || latin}>
+        <TopicTags>
           {textArray.map((word, index) => (
             <TopicTag key={index} name={word} link="#" />
           ))}
@@ -54,7 +52,6 @@ export default {
   args: {
     service: 'ukchina',
     text: 'Tag 1 Tag 2 Tag 3 Tag 4',
-    script: latin,
   },
 };
 

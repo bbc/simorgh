@@ -84,7 +84,7 @@ const RelatedTopics = ({
       >
         {heading}
       </SectionLabel>
-      <TopicTags service={service} script={script} tagBackgroundColour={WHITE}>
+      <TopicTags tagBackgroundColour={WHITE}>
         {topicTagItems}
       </TopicTags>
     </aside>

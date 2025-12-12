@@ -4,7 +4,6 @@ import React, {
   ReactElement,
   Ref,
 } from 'react';
-import { Services } from '#app/models/types/global';
 import styles from './index.styles';
 
 interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -15,8 +14,6 @@ interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 interface TopicTagsProps {
   children?: ReactElement<TopicTagProps> | ReactElement<TopicTagProps>[];
-  script: object;
-  service: Services;
   tagBackgroundColour?: string;
 }
 
@@ -33,8 +30,6 @@ export const TopicTag = ({
 
 export const TopicTags = ({
   children,
-  script,
-  service,
   tagBackgroundColour,
 }: TopicTagsProps) => {
   const topicTagChildren = Children.toArray(children).filter(
@@ -51,8 +46,6 @@ export const TopicTags = ({
   return hasMultipleChildren ? (
     <ul
       role="list"
-      data-service={service}
-      data-script-present={Boolean(script)}
       css={styles.topicsList}
     >
       {topicTagChildren.map((child, index) => (
@@ -60,24 +53,14 @@ export const TopicTags = ({
           // eslint-disable-next-line react/no-array-index-key
           key={index}
           css={styles.topicTagItem(tagBackgroundColour)}
-          data-service={service}
-          data-script-present={Boolean(script)}
         >
           {child}
         </li>
       ))}
     </ul>
   ) : (
-    <div
-      data-service={service}
-      data-script-present={Boolean(script)}
-      css={styles.singleContainer}
-    >
-      <div
-        css={styles.topicTagItem(tagBackgroundColour)}
-        data-service={service}
-        data-script-present={Boolean(script)}
-      >
+    <div css={styles.singleContainer}>
+      <div css={styles.topicTagItem(tagBackgroundColour)}>
         {topicTagChildren[0]}
       </div>
     </div>

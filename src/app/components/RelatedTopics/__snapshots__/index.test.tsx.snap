@@ -231,13 +231,9 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
     </div>
     <div
       class="emotion-11"
-      data-script-present="true"
-      data-service="mundo"
     >
       <div
         class="emotion-12"
-        data-script-present="true"
-        data-service="mundo"
       >
         <a
           href="https://www.bbc.com/mundo/topics/123"
@@ -481,14 +477,10 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
     </div>
     <ul
       class="emotion-11"
-      data-script-present="true"
-      data-service="mundo"
       role="list"
     >
       <li
         class="emotion-12"
-        data-script-present="true"
-        data-service="mundo"
       >
         <a
           href="https://www.bbc.com/mundo/topics/1"
@@ -498,8 +490,6 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
       </li>
       <li
         class="emotion-12"
-        data-script-present="true"
-        data-service="mundo"
       >
         <a
           href="https://www.bbc.com/mundo/topics/2"
@@ -509,8 +499,6 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
       </li>
       <li
         class="emotion-12"
-        data-script-present="true"
-        data-service="mundo"
       >
         <a
           href="https://www.bbc.com/mundo/topics/3"
