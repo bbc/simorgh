@@ -18,7 +18,6 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
-import PWAOfflineTracker from '#app/components/PWAOfflineTracker';
 
 interface Props extends AppProps {
   pageProps: {
@@ -120,7 +119,6 @@ export default function App({ Component, pageProps }: Props) {
           isUK={isUK ?? false}
         >
           <EventTrackingContextProvider atiData={atiAnalytics}>
-            <PWAOfflineTracker />
             {isAvEmbeds ? (
               <ThemeProvider service={service} variant={variant}>
                 {RenderChildrenOrError}
