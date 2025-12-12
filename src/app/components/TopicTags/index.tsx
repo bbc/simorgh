@@ -2,6 +2,7 @@ import React, {
   AnchorHTMLAttributes,
   Children,
   ReactElement,
+  PropsWithChildren,
   Ref,
 } from 'react';
 import styles from './index.styles';
@@ -12,10 +13,10 @@ interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-interface TopicTagsProps {
-  children?: ReactElement<TopicTagProps> | ReactElement<TopicTagProps>[];
-  tagBackgroundColour?: string;
-}
+interface TopicTagsProps
+  extends PropsWithChildren<{
+    tagBackgroundColour?: string;
+  }> {}
 
 export const TopicTag = ({
   name,

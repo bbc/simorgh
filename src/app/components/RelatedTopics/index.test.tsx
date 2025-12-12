@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -13,19 +14,21 @@ beforeEach(() => {
   jest.resetModules();
 });
 
+interface WithContextsProps
+  extends PropsWithChildren<{
+    variant?: Variants | null;
+    service?: Services;
+    isAmp?: boolean;
+    pageType?: PageTypes;
+  }> {}
+
 const WithContexts = ({
   children,
   variant,
   service = 'mundo',
   isAmp = false,
   pageType = STORY_PAGE,
-}: {
-  children: React.ReactNode;
-  variant?: Variants | null;
-  service?: Services;
-  isAmp?: boolean;
-  pageType?: PageTypes;
-}) => {
+}: WithContextsProps) => {
   return (
     <RequestContextProvider
       service={service}
