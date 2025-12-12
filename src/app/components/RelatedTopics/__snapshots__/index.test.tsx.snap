@@ -26,11 +26,9 @@ exports[`Related Topics Expected use should render correctly with a single tag 1
   }
 }
 
-@media (min-width: 37.5rem) {
-  @media (max-width: 62.9375rem) {
-    .emotion-1 {
-      margin-bottom: 1rem;
-    }
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    margin-bottom: 1rem;
   }
 }
 
@@ -272,11 +270,9 @@ exports[`Related Topics Expected use should render correctly with multiple tags 
   }
 }
 
-@media (min-width: 37.5rem) {
-  @media (max-width: 62.9375rem) {
-    .emotion-1 {
-      margin-bottom: 1rem;
-    }
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-1 {
+    margin-bottom: 1rem;
   }
 }
 
