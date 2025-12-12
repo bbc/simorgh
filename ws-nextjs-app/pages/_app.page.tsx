@@ -23,6 +23,8 @@ import cspHeaderResponse, {
   CspHeaderResponseProps,
 } from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
+import derivePageType from '#nextjs/utilities/derivePageType';
+import { getServerExperiments } from '#src/server/utilities/experimentHeader';
 
 interface Props extends AppProps {
   pageProps: {
@@ -177,6 +179,14 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
 
   addServiceChainAndCspHeaders({ ctx, service, toggles });
 
+  const pageType = derivePageType(asPath || '');
+
+  const serverSideExperiments = getServerExperiments({
+    headers: ctx.req?.headers || {},
+    service,
+    pageType,
+  });
+
   return {
     pageProps: {
       ...extractHeaders(req?.headers || {}),
@@ -185,6 +195,7 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
       isLite,
       isNextJs: true,
       toggles,
+      serverSideExperiments,
     },
   };
 };
