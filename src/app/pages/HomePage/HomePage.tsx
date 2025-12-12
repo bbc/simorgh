@@ -76,6 +76,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
   });
+  const shouldRenderPWAPromotionalBanner = pwaPromoBannerVariant === 'on';
 
   // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
   if (
@@ -93,7 +94,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
   return (
     <>
       {/* EXPERIMENT: PWA Promotional Banner */}
-      <PWAPromotionalBanner />
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
