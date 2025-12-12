@@ -35,17 +35,13 @@ const isRelaxedCspEnabled = (
   return !omittedCountriesList.includes(country.toLowerCase());
 };
 
-type CspHeaderResponseProps = {
+type AddCspHeaderProps = {
   ctx: NextPageContext;
   service: Services;
   toggles: Toggles;
 };
 
-const cspHeaderResponse = ({
-  ctx,
-  service,
-  toggles,
-}: CspHeaderResponseProps) => {
+const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
   const hostname = ctx.req?.headers.host || '';
 
   const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
@@ -115,4 +111,4 @@ const cspHeaderResponse = ({
   );
 };
 
-export default cspHeaderResponse;
+export default addCspHeader;

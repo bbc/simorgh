@@ -1,5 +1,5 @@
 import { NextPageContext } from 'next/types';
-import cspHeaderResponse from '.';
+import addCspHeader from '.';
 
 const createDocumentContext = (pathname: string, country?: string) => {
   const url = new URL(`https://www.test.bbc.com${pathname}`);
@@ -32,7 +32,7 @@ const policies = [
   'upgrade-insecure-requests',
 ];
 
-describe('cspHeaderResponse', () => {
+describe('addCspHeader', () => {
   const processEnv = process.env;
 
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe('cspHeaderResponse', () => {
   it.each(policies)('should set %s in the request CSP', policy => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    cspHeaderResponse({ ctx, service: 'pidgin', toggles: {} });
+    addCspHeader({ ctx, service: 'pidgin', toggles: {} });
 
     const requestCsp = (ctx.res?.setHeader as jest.Mock).mock.calls.find(
       call => call[0] === 'Content-Security-Policy',
@@ -56,7 +56,7 @@ describe('cspHeaderResponse', () => {
 
     process.env = { ...processEnv, NODE_ENV: 'development' };
 
-    cspHeaderResponse({ ctx, service: 'pidgin', toggles: {} });
+    addCspHeader({ ctx, service: 'pidgin', toggles: {} });
 
     const setHeaderCalls = (ctx.res?.setHeader as jest.Mock).mock.calls;
 
@@ -88,7 +88,7 @@ describe('shouldServeRelaxedCsp', () => {
   it('returns "relaxed" Csp when toggle is enabled but does not have values set', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt');
 
-    cspHeaderResponse({
+    addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: {
@@ -106,7 +106,7 @@ describe('shouldServeRelaxedCsp', () => {
   it('returns "relaxed" Csp when country is not in omittedCountries', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'ax');
 
-    cspHeaderResponse({
+    addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: {
@@ -124,7 +124,7 @@ describe('shouldServeRelaxedCsp', () => {
   it('returns "full" CSP when toggle is enabled and given country is in omittedCountries', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'gb');
 
-    cspHeaderResponse({
+    addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: {
@@ -142,7 +142,7 @@ describe('shouldServeRelaxedCsp', () => {
   it('returns "full" CSP when adsNonce.enabled is false', () => {
     const ctx = createDocumentContext('/pidgin/live/c7p765ynk9qt', 'gb');
 
-    cspHeaderResponse({
+    addCspHeader({
       ctx,
       service: 'pidgin',
       toggles: { adsNonce: { enabled: false, value: '' } },

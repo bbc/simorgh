@@ -19,7 +19,7 @@ import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
-import cspHeaderResponse from '#nextjs/utilities/cspHeaderResponse';
+import addCspHeader from '#nextjs/utilities/addCspHeader';
 import getPathExtension from '#app/utilities/getPathExtension';
 import derivePageType from '#nextjs/utilities/derivePageType';
 import {
@@ -195,7 +195,7 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
   });
 
   addServiceChainHeader({ ctx });
-  cspHeaderResponse({ ctx, service, toggles });
+  addCspHeader({ ctx, service, toggles });
   addOnionLocationHeader({ ctx });
   addVaryHeaders({ ctx, serverSideExperiments });
 
