@@ -32,14 +32,16 @@ describe('LanguageNavigation', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
     sections.forEach(section => {
-      expect(screen.getByText(section.title)).toBeInTheDocument();
+      expect(
+        screen.getByRole('button', { name: section.title }),
+      ).toBeInTheDocument();
     });
   });
 
   test('clicking a section toggles dropdown', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
 
     fireEvent.click(sectionTitle);
 
@@ -51,23 +53,23 @@ describe('LanguageNavigation', () => {
   test('clicking the same section again closes the dropdown', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
 
     fireEvent.click(sectionTitle);
 
-    expect(screen.getByText('Link 1')).toBeInTheDocument();
-    expect(screen.getByText('Link 2')).toBeInTheDocument();
+    expect(screen.getByText('Link 1')).toBeVisible();
+    expect(screen.getByText('Link 2')).toBeVisible();
 
     fireEvent.click(sectionTitle);
 
-    expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
-    expect(screen.queryByText('Link 2')).not.toBeInTheDocument();
+    expect(screen.getByText('Link 1')).not.toBeVisible();
+    expect(screen.getByText('Link 2')).not.toBeVisible();
   });
 
   test('clicking close button closes the dropdown', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
 
     fireEvent.click(sectionTitle);
 
@@ -79,15 +81,15 @@ describe('LanguageNavigation', () => {
     });
     fireEvent.click(closeButton);
 
-    expect(closeButton).not.toBeInTheDocument();
-    expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
-    expect(screen.queryByText('Link 2')).not.toBeInTheDocument();
+    expect(closeButton).not.toBeVisible();
+    expect(screen.queryByText('Link 1')).not.toBeVisible();
+    expect(screen.queryByText('Link 2')).not.toBeVisible();
   });
 
   test('renders links correctly when section is active', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
-    const sectionTitle = screen.getByText('Section 2');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 2' });
 
     fireEvent.click(sectionTitle);
 
@@ -105,13 +107,13 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionLink);
 
-    expect(screen.queryByText('Link 1')).not.toBeInTheDocument();
+    expect(screen.queryByText('Link 1')).not.toBeVisible();
   });
 
   test('applies lang attribute to links when provided', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', { name: 'Link 1' });
@@ -151,7 +153,7 @@ describe('LanguageNavigation', () => {
       />,
     );
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', {
@@ -184,7 +186,7 @@ describe('LanguageNavigation', () => {
       <CollapsibleNavigation navigationSections={sectionsWithBothAttributes} />,
     );
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', {
@@ -213,7 +215,7 @@ describe('LanguageNavigation', () => {
 
     render(<CollapsibleNavigation navigationSections={sectionsWithoutLang} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', { name: 'Link 1' });
@@ -244,7 +246,7 @@ describe('LanguageNavigation', () => {
       />,
     );
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', { name: 'Link 1' });
@@ -272,7 +274,7 @@ describe('LanguageNavigation', () => {
 
     render(<CollapsibleNavigation navigationSections={sectionsNotTranslate} />);
 
-    const sectionTitle = screen.getByText('Section 1');
+    const sectionTitle = screen.getByRole('button', { name: 'Section 1' });
     fireEvent.click(sectionTitle);
 
     const link1 = screen.getByRole('link', { name: 'Link 1' });
