@@ -11,10 +11,8 @@ const styles = {
   sectionLabel: ({ mq }: Theme) =>
     css({
       marginTop: 0,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        [mq.GROUP_3_MAX_WIDTH]: {
-          marginBottom: '1rem',
-        },
+      [mq.GROUP_3_ONLY]: {
+        marginBottom: '1rem',
       },
     }),
 };
