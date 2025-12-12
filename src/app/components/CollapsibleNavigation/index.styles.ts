@@ -222,6 +222,9 @@ const styles = {
         backgroundColor: palette.WHITE,
       },
     }),
+  collapsed: css({
+    display: 'none',
+  }),
 };
 
 export default styles;
