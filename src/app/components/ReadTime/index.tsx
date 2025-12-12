@@ -1,6 +1,7 @@
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
+import { Translations } from '#app/models/types/translations';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
@@ -8,6 +9,7 @@ import styles from './index.styles';
 
 type ReadTimeProps = {
   readTimeValue: number;
+  readTimeTranslations: Translations['readTime'];
   className?: string;
   readTimeVariant?: string | null;
   promoId?: string;
@@ -43,12 +45,15 @@ const formatReadTime = ({
     : `${readTimePrefix}${separator}${readTimeValue} ${singleMinuteSuffix}`;
 };
 
-const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
-  const { translations, service } = use(ServiceContext);
-  const { readTime } = translations;
+const ReadTimeArticle = ({
+  readTimeValue,
+  readTimeTranslations,
+  className,
+}: ReadTimeProps) => {
+  const { service } = use(ServiceContext);
 
-  const singleMinuteSuffix = readTime?.minute;
-  const readTimePrefix = readTime?.readTimePrefix;
+  const singleMinuteSuffix = readTimeTranslations?.minute;
+  const readTimePrefix = readTimeTranslations?.readTimePrefix;
 
   const readTimeInMilliseconds = readTimeValue * 60000;
 

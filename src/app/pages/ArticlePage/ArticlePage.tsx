@@ -82,11 +82,6 @@ import {
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
 
-// EXPERIMENT: Article Read Time 2
-interface ReadTimeData {
-  readTimeValue: number | undefined;
-}
-
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -102,10 +97,11 @@ const getTimestampComponent =
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
-    readTimeData: ReadTimeData,
+    readTimeValue: number | undefined,
+    readTimeTranslations: Translations['readTime'],
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    const { readTimeValue } = readTimeData;
+    const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
     return hasByline ? (
       <Byline blocks={bylineContribBlocks}>
@@ -113,14 +109,28 @@ const getTimestampComponent =
           firstPublished={new Date(firstPublished).getTime()}
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
-          hasReadTime // update this
+          hasReadTime={shouldDisplayReadTime}
         />
-        {readTimeValue && <ReadTimeArticle readTimeValue={readTimeValue} />}
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle
+            readTimeValue={readTimeValue}
+            readTimeTranslations={readTimeTranslations}
+          />
+        )}
       </Byline>
     ) : (
       <>
-        <Timestamp {...props} popOut={false} hasReadTime />
-        {readTimeValue && <ReadTimeArticle readTimeValue={readTimeValue} />}
+        <Timestamp
+          {...props}
+          popOut={false}
+          hasReadTime={shouldDisplayReadTime}
+        />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle
+            readTimeValue={readTimeValue}
+            readTimeTranslations={readTimeTranslations}
+          />
+        )}
       </>
     );
   };
@@ -267,11 +277,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       }),
   };
 
-  // EXPERIMENT: Article Read Time 2
-  const readTimeData = {
-    readTimeValue,
-  };
-
   const hasContinueReadingBlock = blocks.some(
     block => block.type === 'continueReading',
   );
@@ -298,7 +303,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       bylineContribBlocks,
       firstPublished,
       lastPublished,
-      readTimeData,
+      readTimeValue,
+      translations.readTime,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
