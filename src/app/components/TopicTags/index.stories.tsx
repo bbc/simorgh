@@ -1,5 +1,3 @@
-import ThemeProvider from '#app/components/ThemeProvider';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
 import { StoryArgs } from '#app/models/types/storybook';
 import readme from './README.md';
@@ -14,13 +12,9 @@ const DefaultStory = (_: StoryArgs, { service, text }: Props) => {
   const shortText = service === 'news' ? text : text.trim().split(' ')[0];
 
   return (
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service}>
-        <TopicTags>
-          <TopicTag name={shortText} link="#" />
-        </TopicTags>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <TopicTags>
+      <TopicTag name={shortText} link="#" />
+    </TopicTags>
   );
 };
 
@@ -31,15 +25,11 @@ const MultipleStory = (_: StoryArgs, { service, text }: Props) => {
       : text.trim().split(' ');
 
   return (
-    <ThemeProvider service={service}>
-      <ServiceContextProvider service={service}>
-        <TopicTags>
-          {textArray.map((word, index) => (
-            <TopicTag key={index} name={word} link="#" />
-          ))}
-        </TopicTags>
-      </ServiceContextProvider>
-    </ThemeProvider>
+    <TopicTags>
+      {textArray.map((word, index) => (
+        <TopicTag key={index} name={word} link="#" />
+      ))}
+    </TopicTags>
   );
 };
 
