@@ -26,6 +26,7 @@ const cacheResource = async (cache, url) => {
     return response;
   } catch (err) {
     console.error(`[SW v${version}] Failed to cache ${url}:`, err);
+    return null;
   }
 };
 

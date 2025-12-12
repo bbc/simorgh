@@ -13,7 +13,7 @@ const useServiceWorkerRegistration = (service?: string) => {
 
     const sw = navigator.serviceWorker;
 
-    // If register is not a function, skip gracefully
+    // If register is not a function, skip
     if (typeof sw.register !== 'function') {
       // eslint-disable-next-line no-console
       console.warn('ServiceWorker API exists but register() is not available.');
