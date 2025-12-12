@@ -14,13 +14,12 @@ beforeEach(() => {
   jest.resetModules();
 });
 
-interface WithContextsProps
-  extends PropsWithChildren<{
-    variant?: Variants | null;
-    service?: Services;
-    isAmp?: boolean;
-    pageType?: PageTypes;
-  }> {}
+interface WithContextsProps extends PropsWithChildren {
+  variant?: Variants | null;
+  service?: Services;
+  isAmp?: boolean;
+  pageType?: PageTypes;
+}
 
 const WithContexts = ({
   children,

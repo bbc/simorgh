@@ -13,10 +13,9 @@ interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-interface TopicTagsProps
-  extends PropsWithChildren<{
-    tagBackgroundColour?: string;
-  }> {}
+interface TopicTagsProps extends PropsWithChildren {
+  tagBackgroundColour?: string;
+}
 
 export const TopicTag = ({
   name,
