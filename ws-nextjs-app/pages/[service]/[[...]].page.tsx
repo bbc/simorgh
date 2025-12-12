@@ -18,6 +18,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -33,11 +34,13 @@ const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
+const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
 
 type PageProps = {
   pageType?: PageTypes;
 } & AvEmbedsPageProps &
-  ArticlePageProps;
+  ArticlePageProps &
+  HomePageProps;
 
 const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   // TODO: 'pagetype' header is for testing purposes only
@@ -116,6 +119,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
+    case HOME_PAGE:
+      return <HomePage {...props} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;
