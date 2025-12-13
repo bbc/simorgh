@@ -1,5 +1,4 @@
 import App, { AppContext, AppProps } from 'next/app';
-import { NextPageContext } from 'next/types';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -62,7 +61,7 @@ export default class CustomApp extends App<Props> {
   // The props returned are passed down to ALL pages and merged with page
   // specific props from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
-    const { req, asPath } = ctx as NextPageContext;
+    const { req, asPath } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 
