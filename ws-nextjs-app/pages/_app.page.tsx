@@ -1,4 +1,4 @@
-import type { AppContext, AppProps } from 'next/app';
+import App, { AppContext, AppProps } from 'next/app';
 import { NextPageContext } from 'next/types';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
@@ -57,123 +57,127 @@ interface Props extends AppProps {
   };
 }
 
-export default function App({ Component, pageProps }: Props) {
-  const {
-    bbcOrigin,
-    id,
-    isAmp,
-    isApp = false,
-    isLite = false,
-    isNextJs = true,
-    isAvEmbeds = false,
-    serverSideExperiments = null,
-    pageData,
-    pageLang = '',
-    pageType,
-    pathname,
-    service,
-    showAdsBasedOnLocation,
-    showCookieBannerBasedOnCountry = true,
-    status,
-    timeOnServer,
-    toggles,
-    variant,
-    isUK,
-    country,
-  } = pageProps;
+export default class CustomApp extends App<Props> {
+  // This runs on the server before rendering the page.
+  // The props returned are passed down to ALL pages and merged with page
+  // specific props from their getInitialProps / getServerSideProps functions
+  static async getInitialProps({ ctx }: AppContext) {
+    const { req, asPath } = ctx as NextPageContext;
 
-  const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+    const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 
-  const RenderChildrenOrError =
-    status === 200 ? (
-      <Component {...pageProps} />
-    ) : (
-      <ErrorPage errorCode={status || 500} />
-    );
+    const routeSegments = asPath?.split('/')?.filter(Boolean);
 
-  return (
-    <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider
-        service={service}
-        variant={variant}
-        pageLang={pageLang}
-      >
-        <RequestContextProvider
-          bbcOrigin={bbcOrigin}
-          id={id}
-          isAmp={isAmp}
-          isApp={isApp}
-          isLite={isLite}
-          pageType={pageType}
-          service={service}
-          statusCode={status}
-          pathname={pathname}
-          variant={variant}
-          timeOnServer={timeOnServer}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-          serverSideExperiments={serverSideExperiments}
-          country={country}
-          isNextJs={isNextJs}
-          isUK={isUK ?? false}
-        >
-          <EventTrackingContextProvider atiData={atiAnalytics}>
-            {isAvEmbeds ? (
-              <ThemeProvider service={service} variant={variant}>
-                {RenderChildrenOrError}
-              </ThemeProvider>
-            ) : (
-              <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  <PageWrapper pageData={pageData} status={status}>
-                    {RenderChildrenOrError}
-                  </PageWrapper>
-                </ThemeProvider>
-              </UserContextProvider>
-            )}
-          </EventTrackingContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
-}
+    const [service] = (routeSegments || []) as [Services];
 
-// This runs on the server before rendering the page.
-// The props returned are passed down to ALL pages and merged with page
-// specific props from getInitialProps / getServerSideProps
-App.getInitialProps = async ({ ctx }: AppContext) => {
-  const { req, asPath } = ctx as NextPageContext;
+    const toggles = await getToggles(service);
 
-  const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
+    const pageType = derivePageType(asPath || '');
 
-  const routeSegments = asPath?.split('/')?.filter(Boolean);
+    const serverSideExperiments = getServerExperiments({
+      headers: ctx.req?.headers || {},
+      service,
+      pageType,
+    });
 
-  const [service] = (routeSegments || []) as [Services];
+    addServiceChainHeader({ ctx });
+    addCspHeader({ ctx, service, toggles });
+    addOnionLocationHeader({ ctx });
+    addVaryHeaders({ ctx, serverSideExperiments });
 
-  const toggles = await getToggles(service);
+    return {
+      pageProps: {
+        ...extractHeaders(req?.headers || {}),
+        isApp,
+        isAmp,
+        isLite,
+        isNextJs: true,
+        toggles,
+        serverSideExperiments,
+      },
+    };
+  }
 
-  const pageType = derivePageType(asPath || '');
+  render() {
+    const { Component, pageProps } = this.props;
 
-  const serverSideExperiments = getServerExperiments({
-    headers: ctx.req?.headers || {},
-    service,
-    pageType,
-  });
-
-  addServiceChainHeader({ ctx });
-  addCspHeader({ ctx, service, toggles });
-  addOnionLocationHeader({ ctx });
-  addVaryHeaders({ ctx, serverSideExperiments });
-
-  return {
-    pageProps: {
-      ...extractHeaders(req?.headers || {}),
-      isApp,
+    const {
+      bbcOrigin,
+      id,
       isAmp,
-      isLite,
-      isNextJs: true,
+      isApp = false,
+      isLite = false,
+      isNextJs = true,
+      isAvEmbeds = false,
+      serverSideExperiments = null,
+      pageData,
+      pageLang = '',
+      pageType,
+      pathname,
+      service,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry = true,
+      status,
+      timeOnServer,
       toggles,
-      serverSideExperiments,
-    },
-  };
-};
+      variant,
+      isUK,
+      country,
+    } = pageProps;
+
+    const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+    const RenderChildrenOrError =
+      status === 200 ? (
+        <Component {...pageProps} />
+      ) : (
+        <ErrorPage errorCode={status || 500} />
+      );
+
+    return (
+      <ToggleContextProvider toggles={toggles}>
+        <ServiceContextProvider
+          service={service}
+          variant={variant}
+          pageLang={pageLang}
+        >
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            id={id}
+            isAmp={isAmp}
+            isApp={isApp}
+            isLite={isLite}
+            pageType={pageType}
+            service={service}
+            statusCode={status}
+            pathname={pathname}
+            variant={variant}
+            timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+            serverSideExperiments={serverSideExperiments}
+            country={country}
+            isNextJs={isNextJs}
+            isUK={isUK ?? false}
+          >
+            <EventTrackingContextProvider atiData={atiAnalytics}>
+              {isAvEmbeds ? (
+                <ThemeProvider service={service} variant={variant}>
+                  {RenderChildrenOrError}
+                </ThemeProvider>
+              ) : (
+                <UserContextProvider>
+                  <ThemeProvider service={service} variant={variant}>
+                    <PageWrapper pageData={pageData} status={status}>
+                      {RenderChildrenOrError}
+                    </PageWrapper>
+                  </ThemeProvider>
+                </UserContextProvider>
+              )}
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    );
+  }
+}
