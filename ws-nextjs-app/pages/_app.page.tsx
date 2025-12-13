@@ -16,11 +16,11 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import addCspHeader from '#nextjs/utilities/addCspHeader';
-import getPathExtension from '#app/utilities/getPathExtension';
-import derivePageType from '#nextjs/utilities/derivePageType';
 import { getServerExperiments } from '#src/server/utilities/experimentHeader';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
+import getPathExtension from '#app/utilities/getPathExtension';
+import addCspHeader from '#nextjs/utilities/addCspHeader';
+import derivePageType from '#nextjs/utilities/derivePageType';
 import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeaders from '#nextjs/utilities/addVaryHeader';
@@ -61,7 +61,7 @@ export default class CustomApp extends App<Props> {
   // The props returned are passed down to ALL pages and merged with page
   // specific props from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
-    const { req, asPath } = ctx;
+    const { asPath } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 
@@ -86,7 +86,7 @@ export default class CustomApp extends App<Props> {
 
     return {
       pageProps: {
-        ...extractHeaders(req?.headers || {}),
+        ...extractHeaders(ctx.req?.headers || {}),
         isApp,
         isAmp,
         isLite,
