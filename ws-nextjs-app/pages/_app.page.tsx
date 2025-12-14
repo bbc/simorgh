@@ -70,7 +70,9 @@ export default class CustomApp extends App<Props> {
 
     const toggles = await getToggles(service);
 
-    const pageType = derivePageType(asPath || '');
+    const pageType =
+      (ctx.req?.headers['page-type'] as PageTypes) ||
+      derivePageType(asPath || '');
 
     const serverSideExperiments = getServerExperiments({
       headers: ctx.req?.headers || {},
