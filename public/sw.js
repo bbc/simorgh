@@ -236,7 +236,7 @@ const fetchEventHandler = async event => {
       }
 
       return new Response(
-        'You are offline. Please check your network and reload the page',
+        'You are offline. PPlease check your network and reload the page',
         {
           status: 503,
           headers: { 'Content-Type': 'text/plain' },
