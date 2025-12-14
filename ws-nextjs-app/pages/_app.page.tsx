@@ -57,8 +57,8 @@ interface Props extends AppProps {
 }
 
 export default class CustomApp extends App<Props> {
-  // The props returned are passed down to ALL pages and merged with page
-  // specific props from their getInitialProps / getServerSideProps functions
+  // The 'pageProps' returned are passed down to ALL pages and merged with page
+  // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
     const { asPath } = ctx;
 
