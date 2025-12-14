@@ -57,7 +57,6 @@ interface Props extends AppProps {
 }
 
 export default class CustomApp extends App<Props> {
-  // This runs on the server before rendering the page.
   // The props returned are passed down to ALL pages and merged with page
   // specific props from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
