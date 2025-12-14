@@ -90,8 +90,8 @@ export default class CustomApp extends App<Props> {
         isAmp,
         isLite,
         isNextJs: true,
-        toggles,
         serverSideExperiments,
+        toggles,
       },
     };
   }
