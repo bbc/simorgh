@@ -3,12 +3,14 @@ import React, {
   Dispatch,
   PropsWithChildren,
   SetStateAction,
+  use,
   useEffect,
   useMemo,
   useState,
 } from 'react';
 import { GameData } from '../Components/Card';
 import data from '../data';
+import { LocalStorageContext } from '../LocalStorageProvider';
 
 const defaultGameData = {
   expire: '2024-12-31T23:59:59+00:00',
@@ -27,19 +29,21 @@ const defaultGameData = {
 } as GameData;
 
 export enum GameState {
-  PLAY,
-  CLOSED,
-  FAILED,
-  WINNER,
+  PLAY = 'PLAY',
+  CLOSED = 'CLOSED',
+  FAILED = 'FAILED',
+  WINNER = 'WINNER',
 }
 
 export type RiddleGameState = {
+  gameIndex: number;
   gameState: GameState;
   gameData: GameData;
   updateGameState: Dispatch<SetStateAction<GameState>>;
   devTime: Date;
   forceTimeInc24: () => void;
   forceTimeDec24: () => void;
+  submitAttempt: (str: string) => void;
 };
 
 export const RiddleContext = createContext<RiddleGameState>(
@@ -59,6 +63,7 @@ const findCurrGameIndex = (forcedDate?: Date) => {
 };
 
 export default ({ children }: PropsWithChildren) => {
+  const { resetHints, goes, reduceGoes, addGoes } = use(LocalStorageContext);
   const [devTime, updateDevTime] = useState(new Date());
   const initialIndex = findCurrGameIndex();
   const [gameIndex, updateIndex] = useState(initialIndex);
@@ -82,12 +87,18 @@ export default ({ children }: PropsWithChildren) => {
         updatedTime.getTime() > expiryTime.getTime()
       ) {
         const nextGameIndex = findCurrGameIndex(updatedTime);
+        const updatedGameState =
+          nextGameIndex > -1 ? GameState.PLAY : GameState.CLOSED;
+
+        resetHints();
         updateIndex(nextGameIndex);
+        updateGameState(updatedGameState);
+        addGoes();
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [devTime, gameData.expire, gameState]);
+  }, [addGoes, devTime, gameData.expire, gameState, resetHints]);
 
   const value = useMemo(() => {
     const forceTimeInc24 = () => {
@@ -100,9 +111,29 @@ export default ({ children }: PropsWithChildren) => {
       const updatedDateStamp = devTime.setDate(devTime.getDate() - 1);
       const updatedDate = new Date(updatedDateStamp);
       const nextGameIndex = findCurrGameIndex(updatedDate);
+      const updatedGameState =
+        nextGameIndex > -1 ? GameState.PLAY : GameState.CLOSED;
 
-      updateIndex(nextGameIndex);
       updateDevTime(updatedDate);
+      resetHints();
+      updateIndex(nextGameIndex);
+      updateGameState(updatedGameState);
+      addGoes();
+    };
+
+    const submitAttempt = (submitString: string) => {
+      if (goes > 0) {
+        const sanitised = submitString
+          .toLowerCase() // Convert to lowercase
+          .replace(/[^a-z0-9]/g, '');
+
+        const { answer } = gameData;
+        const myRegex = new RegExp(answer, 'gi');
+        if (myRegex.exec(sanitised) !== null) {
+          updateGameState(GameState.WINNER);
+        }
+        reduceGoes();
+      }
     };
 
     return {
@@ -112,8 +143,19 @@ export default ({ children }: PropsWithChildren) => {
       forceTimeDec24,
       gameData,
       devTime,
+      gameIndex,
+      submitAttempt,
     };
-  }, [devTime, gameData, gameState]);
+  }, [
+    addGoes,
+    devTime,
+    gameData,
+    gameIndex,
+    gameState,
+    goes,
+    reduceGoes,
+    resetHints,
+  ]);
 
   return (
     <RiddleContext.Provider value={value}>{children}</RiddleContext.Provider>

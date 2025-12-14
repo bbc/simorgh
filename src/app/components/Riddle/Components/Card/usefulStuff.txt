@@ -1,0 +1,28 @@
+
+  // const [initialTime, expiryTime] = useMemo(() => {
+  //   const currDate = devTime;
+  //   const expiryDate = new Date(expire);
+  //   return [currDate, expiryDate];
+  // }, [devTime, expire]);
+
+  // const [initialHourDelta, initialMinuteDelta, initialSecondDelta] =
+  //   getTimeDiff(expiryTime, initialTime);
+
+  // const [hour, setHour] = useState(initialHourDelta);
+  // const [minute, setMinute] = useState(initialMinuteDelta);
+  // const [second, setSecond] = useState(initialSecondDelta);
+
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     const currTime = devTime;
+  //     const [hoursToGo, minutesToGo, secondsToGo] = getTimeDiff(
+  //       expiryTime,
+  //       currTime,
+  //     );
+  //     setHour(hoursToGo);
+  //     setMinute(minutesToGo);
+  //     setSecond(secondsToGo);
+  //   }, 500);
+
+  //   return () => clearInterval(timer);
+  // }, [initialTime, expiryTime, devTime]);

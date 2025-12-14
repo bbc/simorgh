@@ -4,16 +4,15 @@ export default [
     question:
       "I'm surrounded by water, but I never drink. I can swim for miles, but I never breathe. I have only one eye, but I never blink. What am I?",
     hint1: {
-      title: 'Begins with an...',
-      hintText: 'Begins with an s',
+      title: 'Begins with',
+      hintText: 's',
     },
     hint2: {
       title: '',
-      hintText: 'Begins with an s',
+      hintText: 'It has a propeller',
     },
     answer: 'submarine',
   },
-
   {
     expire: '2025-12-15T23:59:59+00:00',
     question: 'What has to be broken before you can use it?',

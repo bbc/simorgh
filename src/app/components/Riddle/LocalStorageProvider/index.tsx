@@ -13,7 +13,7 @@ export type LocalStorage = {
   addGoes: () => void;
   reduceCoins: (amount: number) => void;
   reduceGoes: () => void;
-  buyHint: (amount: number) => void;
+  buyHint: (amount: number, price: number) => void;
   resetHints: () => void;
 };
 
@@ -96,30 +96,41 @@ export default ({ children }: PropsWithChildren) => {
       return newAmount;
     });
   };
-  const reduceGoes = () => {
-    updateGoes(prevGoes => {
-      const newGoes = prevGoes - 1;
-      setLocalData({ goes: newGoes });
-      return newGoes;
-    });
-  };
-  const buyHint = (index: number) => {
-    updatePaidHints(prevBoughtHints => {
-      const updatedBoughtHints = [...prevBoughtHints];
-      updatedBoughtHints[index] = true;
+
+  const resetHints = () => {
+    updatePaidHints(() => {
+      const updatedBoughtHints = [false, false, false];
       setLocalData({ paidHints: updatedBoughtHints });
       return updatedBoughtHints;
     });
   };
-  const resetHints = () => {
-    updatePaidHints([false, false, false]);
-  };
 
   // TO DO: Reset goes during transition period.
   // TO DO: Reset paid for.
+  const value = useMemo(() => {
+    const buyHint = (index: number, price: number) => {
+      if (price <= coins) {
+        reduceCoins(price);
+        updatePaidHints(prevBoughtHints => {
+          const updatedBoughtHints = [...prevBoughtHints];
+          updatedBoughtHints[index] = true;
+          setLocalData({ paidHints: updatedBoughtHints });
+          return updatedBoughtHints;
+        });
+      }
+    };
 
-  const value = useMemo(
-    () => ({
+    const reduceGoes = () => {
+      if (goes > 0) {
+        updateGoes(prevGoes => {
+          const newGoes = prevGoes - 1;
+          setLocalData({ goes: newGoes });
+          return newGoes;
+        });
+      }
+    };
+
+    return {
       coins,
       goes,
       addCoins,
@@ -129,9 +140,8 @@ export default ({ children }: PropsWithChildren) => {
       paidHints,
       buyHint,
       resetHints,
-    }),
-    [coins, goes, paidHints],
-  );
+    };
+  }, [coins, goes, paidHints]);
 
   return (
     <LocalStorageContext.Provider value={value}>

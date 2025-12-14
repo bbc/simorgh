@@ -1,11 +1,13 @@
+/** @jsxFrag React.Fragment */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { useMemo, useState, useEffect, use } from 'react';
+import React, { use, useRef } from 'react';
+import Heading from '#app/components/Heading';
 import Text from '../../../Text';
 import style from './index.styles';
-import Hint, { HintData } from '../Hint';
+import Hint, { HintData } from '../HintButton';
 import Detail from '../Detail';
-import { RiddleContext } from '../../RiddleProvider';
+import { GameState, RiddleContext } from '../../RiddleProvider';
 import { LocalStorageContext } from '../../LocalStorageProvider';
 
 export type GameData = {
@@ -28,37 +30,15 @@ const getTimeDiff = (a: Date, b: Date) => {
 };
 
 export default () => {
-  const { gameData, devTime } = use(RiddleContext);
+  const { gameData, devTime, gameIndex, submitAttempt, gameState } =
+    use(RiddleContext);
   const { goes, coins } = use(LocalStorageContext);
+  const inputRef = useRef<HTMLInputElement>(null);
   const { question, hint1, hint2, answer, expire } = gameData;
 
-  const [initialTime, expiryTime] = useMemo(() => {
-    const currDate = devTime;
-    const expiryDate = new Date(expire);
-    return [currDate, expiryDate];
-  }, [devTime, expire]);
-
-  const [initialHourDelta, initialMinuteDelta, initialSecondDelta] =
-    getTimeDiff(expiryTime, initialTime);
-
-  const [hour, setHour] = useState(initialHourDelta);
-  const [minute, setMinute] = useState(initialMinuteDelta);
-  const [second, setSecond] = useState(initialSecondDelta);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const currTime = devTime;
-      const [hoursToGo, minutesToGo, secondsToGo] = getTimeDiff(
-        expiryTime,
-        currTime,
-      );
-      setHour(hoursToGo);
-      setMinute(minutesToGo);
-      setSecond(secondsToGo);
-    }, 500);
-
-    return () => clearInterval(timer);
-  }, [initialTime, expiryTime, devTime]);
+  const expiryDate = new Date(expire);
+  const currTime = devTime;
+  const [hour, minute, second] = getTimeDiff(expiryDate, currTime);
 
   let timeString = `-`;
   if (hour > -1) {
@@ -69,32 +49,76 @@ export default () => {
   const coinsString = `🪙 ${coins}`;
 
   return (
-    <div css={style.container}>
+    <div css={style.container} key={gameIndex}>
       <div css={style.playArea}>
+        <Heading
+          level={2}
+          size="brevier"
+          fontVariant="sansBold"
+          css={style.heading}
+        >
+          Riddle of the day
+        </Heading>
         <Text css={style.question} size="greatPrimer" fontVariant="sansBold">
           {question}
         </Text>
-        <div css={style.hintsArea}>
-          <Hint {...hint1} />
-          <Hint {...hint2} />
-          <Hint
-            title="Answer"
-            hintText={answer}
-            price={2500}
-            boughtPrefix="Answer"
-          />
-        </div>
-        <div css={style.inputContainer}>
-          <div css={style.inputUnderline}>
-            <input type="text" placeholder="Answer here..." css={style.input} />
-            <div css={style.underline} />
-          </div>
-          <button type="submit" css={style.submitButton}>
-            <Text size="longPrimer" fontVariant="sansBold">
-              Submit
+
+        {gameState === GameState.PLAY && (
+          <>
+            <div css={style.hintsArea}>
+              <Hint {...hint1} index={0} />
+              <Hint {...hint2} index={1} />
+              <Hint
+                title="Answer"
+                hintText={answer}
+                price={2500}
+                paidSymbol="Answer"
+                index={2}
+              />
+            </div>
+            <form css={style.inputContainer}>
+              <div css={style.inputUnderline}>
+                <input
+                  type="text"
+                  placeholder="Answer here..."
+                  css={style.input}
+                  ref={inputRef}
+                />
+                <div css={style.underline} />
+              </div>
+              <button
+                type="submit"
+                css={style.submitButton}
+                onClick={event => {
+                  event.preventDefault();
+                  const userInput = inputRef.current?.value;
+                  if (userInput) {
+                    submitAttempt(userInput);
+                  }
+                }}
+              >
+                <Text size="longPrimer" fontVariant="sansBold">
+                  Submit
+                </Text>
+              </button>
+            </form>
+          </>
+        )}
+        {gameState === GameState.WINNER && (
+          <>
+            <Heading level={3} css={style.answerHeading}>
+              {answer}
+            </Heading>
+            <Text as="p" fontVariant="serif" css={style.didYouKnow}>
+              Did you know? Unlike diesel-electric submarines, which need to
+              surface or snorkel to recharge batteries, nuclear submarines use a
+              nuclear reactor to generate power, allowing them to produce their
+              own oxygen and fresh water. The main limiting factor for how long
+              they can stay underwater is food supply for the crew, not fuel or
+              air.
             </Text>
-          </button>
-        </div>
+          </>
+        )}
       </div>
       <div css={style.detailsArea}>
         <Detail label="Expires in" content={timeString} as="time" />

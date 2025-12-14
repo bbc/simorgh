@@ -7,15 +7,12 @@ export default {
       position: 'relative',
       cursor: 'pointer',
       margin: `${spacings.HALF}rem 0`,
-      '&[disabled]': {
-        pointerEvents: 'none',
-        userSelect: 'none',
-      },
     }),
-  hintSummary: ({ palette }: Theme) =>
+  hintButton: ({ palette }: Theme) =>
     css({
-      listStyle: 'none',
+      all: 'unset',
       display: 'flex',
+      width: '100%',
       '&:focus-visible': {
         outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
         boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
@@ -27,7 +24,7 @@ export default {
   hintSummaryText: ({ palette, spacings }: Theme) =>
     css({
       flexGrow: 1,
-      padding: `0 ${spacings.FULL}rem`,
+      padding: `${0.6}rem ${spacings.FULL}rem`,
       background: palette.GHOST,
       'details:open &': {
         display: 'none',
@@ -48,10 +45,6 @@ export default {
       width: `${2.5}rem`,
       background: 'cyan',
       textAlign: 'center',
-      display: 'none',
-      'details:open &': {
-        display: 'block',
-      },
     }),
   notEnough: () =>
     css({

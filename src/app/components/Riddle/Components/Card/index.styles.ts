@@ -18,12 +18,27 @@ export default {
     css({
       color: palette.GHOST,
       background: palette.POSTBOX,
-      flex: 1,
       padding: `${spacings.FULL}rem`,
+      minHeight: '23.2rem',
     }),
   question: ({ palette }: Theme) =>
     css({
       background: palette.GHOST,
+    }),
+  heading: ({ palette, spacings }: Theme) =>
+    css({
+      color: palette.WHITE,
+      textAlign: 'end',
+      marginBottom: `${spacings.FULL}rem`,
+    }),
+  answerHeading: ({ palette, spacings }: Theme) =>
+    css({
+      marginTop: `${spacings.TRIPLE}rem`,
+      color: palette.WHITE,
+    }),
+  didYouKnow: ({ palette }: Theme) =>
+    css({
+      color: palette.WHITE,
     }),
   inputContainer: ({ spacings }: Theme) =>
     css({

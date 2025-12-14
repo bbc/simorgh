@@ -20,40 +20,33 @@ export default ({
   index,
 }: HintData & { index: number }) => {
   const { paidHints, buyHint, coins } = use(LocalStorageContext);
-  const [isInvoked, setIsInvoked] = useState(false);
   const priceText = `🪙 ${price}`;
   const paidStatus = paidHints[index];
 
   const isAffordable = price <= coins;
   return (
-    <details
-      css={style.hintContainer}
-      {...((paidStatus || !isAffordable) && {
-        disabled: true,
-        'aria-hidden': 'true',
-      })}
-      {...(paidStatus && !isInvoked && { open: true })}
-    >
-      <summary
-        css={style.hintSummary}
-        onClick={event => {
+    <div css={style.hintContainer}>
+      <button
+        type="button"
+        css={style.hintButton}
+        onClick={() => {
           buyHint(index, price);
-          setIsInvoked(true);
-          event.currentTarget.blur();
         }}
-        {...((paidStatus || !isAffordable) && { tabIndex: -1 })}
+        {...((paidStatus || !isAffordable) && { disabled: true })}
       >
+        {paidStatus && (
+          <div css={style.paidIcon}>
+            <Text size="minion" fontVariant="sansBold">
+              Paid
+            </Text>
+          </div>
+        )}
         <Text css={style.hintPrice} size="pica" fontVariant="serifLight">
           {paidStatus ? paidSymbol : priceText}
         </Text>
         <Text css={style.hintSummaryText} size="pica" fontVariant="sansBold">
           {title.length > 0 ? title : 'Hint'}
         </Text>
-        <div css={style.paidIcon}>
-          <Text size="minion" fontVariant="sansBold">
-            Paid
-          </Text>
-        </div>
         {!paidStatus && !isAffordable && (
           <div css={style.notEnough}>
             <Text size="minion" fontVariant="sansBold">
@@ -61,10 +54,12 @@ export default ({
             </Text>
           </div>
         )}
-      </summary>
-      <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
-        {hintText}
-      </Text>
-    </details>
+        {paidStatus && (
+          <Text css={style.hintAnswerText} size="pica" fontVariant="sansBold">
+            {hintText}
+          </Text>
+        )}
+      </button>
+    </div>
   );
 };
