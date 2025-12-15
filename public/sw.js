@@ -135,6 +135,8 @@ self.addEventListener('message', async event => {
     pwaClients.set(clientId, isPWA);
 
     if (isPWA) {
+      const cache = await caches.open(cacheName);
+      await cache.put('pwa_installed', new Response('true'));
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
     }
@@ -201,6 +203,7 @@ const fetchEventHandler = async event => {
           }
           // Cache offline page if in PWA mode
           if (networkResp && networkResp.ok && event.clientId) {
+            console.log('[SW] Caching offline page if PWA if network is ok');
             const client = await self.clients.get(event.clientId);
             const isPWA = client && pwaClients.get(client.id);
             if (isPWA) {
@@ -213,30 +216,29 @@ const fetchEventHandler = async event => {
 
           return networkResp;
         } catch (err) {
-          console.log('[SW] Navigation failed:', url, err, event.clientId);
+          console.log('[SW] Navigation failed:', url, err);
 
-          // Try serving offline page
-          if (event.clientId) {
-            console.log(
-              '[SW] Attempting to serve offline page from cache on failure.',
-            );
-            const client = await self.clients.get(event.clientId);
-            const isPWA = client && pwaClients.get(client.id);
+          const cache = await caches.open(cacheName);
+          const pwaMarker = await cache.match('pwa_installed');
+          console.log('[SW] PWA Marker:', pwaMarker);
 
-            if (isPWA) {
-              const service = getServiceFromUrl(url);
-              const offlineUrl = new URL(
-                getOfflinePageUrl(service),
-                self.location.origin,
-              ).href;
+          // Only show offline page for installed PWA
+          if (pwaMarker) {
+            const service = getServiceFromUrl(url);
+            const offlineUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
 
-              const cachedOffline = await cache.match(offlineUrl);
-              if (cachedOffline) return cachedOffline;
+            const cachedOffline = await cache.match(offlineUrl);
+            if (cachedOffline) {
+              return cachedOffline;
             }
           }
 
+          // Canonical site offline fallback
           return new Response(
-            'You are offline . Please check your network and reload the page',
+            'You are offline. Please check your network and reload the page',
             {
               status: 503,
               headers: { 'Content-Type': 'text/plain' },
