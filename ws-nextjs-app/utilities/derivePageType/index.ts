@@ -14,10 +14,29 @@ import {
 } from '#app/routes/utils/constructPageFetchUrl';
 import SERVICES from '#app/lib/config/services';
 
+const SERVICES_WITH_VARIANTS = {
+  serbian: ['lat', 'cyr'],
+  ukchina: ['simp', 'trad'],
+  uzbek: ['lat', 'cyr'],
+  zhongwen: ['simp', 'trad'],
+  ukrainian: ['lat', 'cyr'],
+};
+
 const isHomePagePath = (pathname: string) =>
-  SERVICES.some(
-    service => pathname === `/${service}` || pathname === `/${service}/`,
-  );
+  SERVICES.some(service => {
+    if (pathname === `/${service}` || pathname === `/${service}/`) {
+      return true;
+    }
+    const variants = SERVICES_WITH_VARIANTS[service];
+    if (variants) {
+      return variants.some(
+        variant =>
+          pathname === `/${service}/${variant}` ||
+          pathname === `/${service}/${variant}/`,
+      );
+    }
+    return false;
+  });
 
 export default function derivePageType(
   pathname: string,
