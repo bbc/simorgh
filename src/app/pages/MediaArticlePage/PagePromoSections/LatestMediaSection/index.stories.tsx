@@ -38,7 +38,7 @@ const Component = ({
   >
     <ToggleContextProvider>
       <ThemeProvider service={service}>
-        <LatestMediaSection content={content} isLite={isLite} />
+        <LatestMediaSection content={content} />
       </ThemeProvider>
     </ToggleContextProvider>
   </RequestContextProvider>
