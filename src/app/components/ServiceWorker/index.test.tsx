@@ -11,6 +11,10 @@ const contextStub = {
 
 const mockServiceWorker = {
   register: jest.fn(),
+  ready: Promise.resolve(),
+  controller: null,
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
 };
 
 jest.mock('#app/lib/utilities/onClient', () =>

@@ -127,7 +127,7 @@ const CACHEABLE_FILES = [
 ];
 
 const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
 
 const fetchEventHandler = async event => {
   // Skip HMR/webpack requests to avoid breaking Next.js Fast Refresh
@@ -158,7 +158,11 @@ const fetchEventHandler = async event => {
         }),
       );
     }
-  } else if (isRequestForCacheableFile) {
+
+    return;
+  }
+
+  if (isRequestForCacheableFile) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
@@ -205,8 +209,6 @@ const fetchEventHandler = async event => {
       );
     }
   }
-  // For all other requests, let the browser handle it normally
-  return;
 };
 
 self.addEventListener('fetch', fetchEventHandler);
