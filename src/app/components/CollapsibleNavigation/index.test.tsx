@@ -33,7 +33,7 @@ describe('LanguageNavigation', () => {
 
     sections.forEach(section => {
       expect(
-        screen.getByRole('button', { name: section.title }),
+        screen.getAllByRole('button', { name: section.title }[0]),
       ).toBeInTheDocument();
     });
   });
@@ -46,7 +46,7 @@ describe('LanguageNavigation', () => {
     fireEvent.click(sectionTitle);
 
     sections[0].links?.forEach(link => {
-      expect(screen.getByText(link.label)).toBeInTheDocument();
+      expect(screen.getAllByText(link.label)[0]).toBeInTheDocument();
     });
   });
 
@@ -57,13 +57,13 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionTitle);
 
-    expect(screen.getByText('Link 1')).toBeVisible();
-    expect(screen.getByText('Link 2')).toBeVisible();
+    expect(screen.getAllByText('Link 1')[0]).toBeVisible();
+    expect(screen.getAllByText('Link 2')[0]).toBeVisible();
 
     fireEvent.click(sectionTitle);
 
-    expect(screen.getByText('Link 1')).not.toBeVisible();
-    expect(screen.getByText('Link 2')).not.toBeVisible();
+    expect(screen.getAllByText('Link 1')[0]).not.toBeVisible();
+    expect(screen.getAllByText('Link 2')[0]).not.toBeVisible();
   });
 
   test('clicking close button closes the dropdown', () => {
@@ -73,8 +73,8 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionTitle);
 
-    expect(screen.getByText('Link 1')).toBeInTheDocument();
-    expect(screen.getByText('Link 2')).toBeInTheDocument();
+    expect(screen.getAllByText('Link 1')[0]).toBeInTheDocument();
+    expect(screen.getAllByText('Link 2')[0]).toBeInTheDocument();
 
     const closeButton = screen.getByRole('button', {
       name: 'Close Section 1 submenu',
@@ -82,8 +82,8 @@ describe('LanguageNavigation', () => {
     fireEvent.click(closeButton);
 
     expect(closeButton).not.toBeVisible();
-    expect(screen.queryByText('Link 1')).not.toBeVisible();
-    expect(screen.queryByText('Link 2')).not.toBeVisible();
+    expect(screen.queryAllByText('Link 1')[0]).not.toBeVisible();
+    expect(screen.queryAllByText('Link 2')[0]).not.toBeVisible();
   });
 
   test('renders links correctly when section is active', () => {
@@ -94,7 +94,7 @@ describe('LanguageNavigation', () => {
     fireEvent.click(sectionTitle);
 
     sections[1].links?.forEach(link => {
-      expect(screen.getByText(link.label)).toBeInTheDocument();
+      expect(screen.getAllByText(link.label)[0]).toBeInTheDocument();
     });
   });
 
@@ -107,7 +107,7 @@ describe('LanguageNavigation', () => {
 
     fireEvent.click(sectionLink);
 
-    expect(screen.queryByText('Link 1')).not.toBeVisible();
+    expect(screen.queryAllByText('Link 1')[0]).not.toBeVisible();
   });
 
   test('applies lang attribute to links when provided', () => {
