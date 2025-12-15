@@ -39,12 +39,16 @@ const defaultRenderProps = {
 
 describe('ATI Analytics Container', () => {
   beforeEach(() => {
+    process.env.SIMORGH_APP_ENV = 'test';
+
     jest
       .spyOn(window.location, 'href', 'get')
       .mockImplementation(() => 'http://localhost/');
   });
 
   afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+
     jest.clearAllMocks();
   });
 
@@ -68,33 +72,43 @@ describe('ATI Analytics Container', () => {
         isUK: true,
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598286',
-        s2: '64',
-        p: 'news.articles.c0000000001o.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:optimo:c0000000001o]',
-        x2: '[responsive]',
-        x3: '[news]',
-        x4: '[en-gb]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[Article%20Headline%20for%20SEO]',
-        x11: '[2018-01-01T12:01:00.000Z]',
-        x12: '[2018-01-01T14:00:00.000Z]',
-        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
-        x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId: 'urn:bbc:optimo:c0000000001o',
+            contentType: 'article',
+            destination: 'NEWS_PS_TEST',
+            name: 'news.articles.c0000000001o.page',
+            producer: 'NEWS',
+            additionalProperties: {
+              app_name: 'news',
+              app_type: 'responsive',
+              content_language: 'en-gb',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO',
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: 'Royal+Wedding+2018~Duchess+of+Sussex',
+              x14: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+              x16: '',
+              x17: 'Royal+Wedding+2018~Duchess+of+Sussex',
+              x18: false,
+            },
+          },
+          user: {
+            isSignedIn: false,
+          },
+        },
+        eventDetails: {
+          eventName: 'pageView',
+        },
       });
     });
 
@@ -177,33 +191,39 @@ describe('ATI Analytics Container', () => {
         },
       );
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598286',
-        s2: '64',
-        p: 'news.articles.c0000000001o.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:optimo:c0000000001o]',
-        x2: '[responsive]',
-        x3: '[news]',
-        x4: '[en-gb]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article-sfv]',
-        x8: '[simorgh]',
-        x9: '[Article%20Headline%20for%20SEO]',
-        x11: '[2018-01-01T12:01:00.000Z]',
-        x12: '[2018-01-01T14:00:00.000Z]',
-        x13: '[Royal+Wedding+2018~Duchess+of+Sussex]',
-        x14: '[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]',
-        x17: '[Royal+Wedding+2018~Duchess+of+Sussex]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId: 'urn:bbc:optimo:c0000000001o',
+            contentType: 'article-sfv',
+            destination: 'NEWS_PS_TEST',
+            name: 'news.articles.c0000000001o.page',
+            producer: 'NEWS',
+            additionalProperties: {
+              app_name: 'news',
+              app_type: 'responsive',
+              content_language: 'en-gb',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'Article%20Headline%20for%20SEO',
+              x10: null,
+              x11: '2018-01-01T12:01:00.000Z',
+              x12: '2018-01-01T14:00:00.000Z',
+              x13: 'Royal+Wedding+2018~Duchess+of+Sussex',
+              x14: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
+              x16: '',
+              x17: 'Royal+Wedding+2018~Duchess+of+Sussex',
+              x18: false,
+            },
+          },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
       });
     });
 
@@ -346,33 +366,39 @@ describe('ATI Analytics Container', () => {
         service: 'azeri',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '6',
-        p: 'azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560]',
-        x2: '[responsive]',
-        x3: '[news-azeri]',
-        x4: '[az]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article-photo-gallery]',
-        x8: '[simorgh]',
-        x9: '[Azərbaycan%20Xalq%20Cümhuriyyəti%20-%20Fotolarda%20-%20BBC%20News%20Azərbaycanca]',
-        x11: '[2018-05-27T08:34:15.000Z]',
-        x12: '[2018-05-27T08:34:15.000Z]',
-        x13: '[History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order]',
-        x14: '[03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa]',
-        x17: '[News]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId:
+              'urn:bbc:cps:curie:asset:38229308-a0fb-654a-a274-19bec0414560',
+            contentType: 'article-photo-gallery',
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: 'azerbaijan::azeri.azerbaijan.photo_gallery.44208474.page',
+            producer: 'AZERI',
+            additionalProperties: {
+              app_name: 'news-azeri',
+              app_type: 'responsive',
+              content_language: 'az',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'Azərbaycan%20Xalq%20Cümhuriyyəti%20-%20Fotolarda%20-%20BBC%20News%20Azərbaycanca',
+              x11: '2018-05-27T08:34:15.000Z',
+              x12: '2018-05-27T08:34:15.000Z',
+              x13: 'History~Azerbaijan~Society~Culture~Politics~Human+rights~Azerbaijan+Democratic+Republic+100th+anniversary~Caucasus~Law+and+order',
+              x14: '03eb3674-6190-4cd7-8104-1a00991d67a3~0f8e45e2-6499-44b1-be1f-1a3dd81e8af7~5307a8d9-f620-40f5-92d4-f99c919a6ffa~6a73afa3-ea6b-45c1-80bb-49060b99f864~75612fa6-147c-4a43-97fa-fcf70d9cced3~8b04c2e8-5409-4e7d-9877-3ccaf04727af~9e6f8e15-894a-45cb-9db9-d8881e8e6ae2~a86bc15e-ccd0-4ea9-9903-df3d4575a176~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa',
+              x16: '',
+              x17: 'News',
+              x18: false,
+            },
+          },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
       });
     });
 
@@ -454,34 +480,39 @@ describe('ATI Analytics Container', () => {
         service: 'mundo',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '62',
-        p: 'mundo.story.23263889.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f]',
-        x2: '[responsive]',
-        x3: '[news-mundo]',
-        x4: '[es]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',
-        x11: '[2020-02-03T15:58:27.000Z]',
-        x12: '[2020-05-06T11:02:07.000Z]',
-        x13: '[Life~Fake+news]',
-        x14: '[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
-        x16: '[Amuse me]',
-        x17: '[News]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId:
+              'urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f',
+            contentType: 'article',
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: 'mundo.story.23263889.page',
+            producer: 'MUNDO',
+            additionalProperties: {
+              app_name: 'news-mundo',
+              app_type: 'responsive',
+              content_language: 'es',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo',
+              x11: '2020-02-03T15:58:27.000Z',
+              x12: '2020-05-06T11:02:07.000Z',
+              x13: 'Life~Fake+news',
+              x14: '0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa',
+              x16: 'Amuse me',
+              x17: 'News',
+              x18: false,
+            },
+          },
+          user: { isSignedIn: false },
+        },
+        eventDetails: { eventName: 'pageView' },
       });
     });
 
@@ -613,34 +644,43 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '94',
-        p: 'news::ukrainian.news.story.53561143.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:9e539daf-1d79-4630-900c-7db33c4bf1ac]',
-        x2: '[responsive]',
-        x3: '[news-ukrainian]',
-        x4: '[uk]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[Виробництво%20героїну%20зросло%20завдяки%20сонячним%20батареям.%20Погляд%20з%20Британії%20-%20BBC%20News%20Україна]',
-        x11: '[2020-07-28T13:25:13.000Z]',
-        x12: '[2020-07-28T13:25:13.000Z]',
-        x13: '[Afghanistan~Drug+use~Drugs+trade~Ukraine]',
-        x14: '[1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
-        x16: '[WS - Educate me]',
-        x17: '[News]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId:
+              'urn:bbc:cps:curie:asset:9e539daf-1d79-4630-900c-7db33c4bf1ac',
+            contentType: 'article',
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: 'news::ukrainian.news.story.53561143.page',
+            producer: 'UKRAINIAN',
+            additionalProperties: {
+              app_name: 'news-ukrainian',
+              app_type: 'responsive',
+              content_language: 'uk',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'Виробництво%20героїну%20зросло%20завдяки%20сонячним%20батареям.%20Погляд%20з%20Британії%20-%20BBC%20News%20Україна',
+              x11: '2020-07-28T13:25:13.000Z',
+              x12: '2020-07-28T13:25:13.000Z',
+              x13: 'Afghanistan~Drug+use~Drugs+trade~Ukraine',
+              x14: '1a5696c5-07d0-4a08-8b54-41ad5cd534b6~37cd3473-7b24-44b0-84c1-bf3c4801df5e~4b4cca1c-d458-4310-819e-dd48572b12c4~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c',
+              x16: 'WS - Educate me',
+              x17: 'News',
+              x18: false,
+            },
+          },
+          user: {
+            isSignedIn: false,
+          },
+        },
+        eventDetails: {
+          eventName: 'pageView',
+        },
       });
     });
 
@@ -719,34 +759,43 @@ describe('ATI Analytics Container', () => {
         service: 'ukrainian',
       });
 
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
+      const { reverbParams } = mockCanonical.mock.calls[0][0];
 
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '94',
-        p: 'russian_features::ukrainian.russian_features.story.53477115.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:307108d3-9bcc-4829-990c-4b42c1290258]',
-        x2: '[responsive]',
-        x3: '[news-ukrainian]',
-        x4: '[ru]',
-        x5: '[http%3A%2F%2Flocalhost%2F]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[Карта%20новых%20районов%20Украины:%20кто%20и%20кого%20поглотил%20-%20BBC%20News%20Україна]',
-        x11: '[2020-07-21T13:00:09.000Z]',
-        x12: '[2020-07-21T13:00:09.000Z]',
-        x13: '[Society~Politics~Ukraine]',
-        x14: '[5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c]',
-        x16: '[WS - Update me]',
-        x17: '[News]',
+      expect(reverbParams).toEqual({
+        params: {
+          env: 'test',
+          page: {
+            contentId:
+              'urn:bbc:cps:curie:asset:307108d3-9bcc-4829-990c-4b42c1290258',
+            contentType: 'article',
+            destination: 'WS_NEWS_LANGUAGES_TEST',
+            name: 'russian_features::ukrainian.russian_features.story.53477115.page',
+            producer: 'UKRAINIAN',
+            additionalProperties: {
+              app_name: 'news-ukrainian',
+              app_type: 'responsive',
+              content_language: 'ru',
+              product_platform: null,
+              referrer_url: null,
+              x5: 'http%3A%2F%2Flocalhost%2F',
+              x8: 'simorgh',
+              x9: 'Карта%20новых%20районов%20Украины:%20кто%20и%20кого%20поглотил%20-%20BBC%20News%20Україна',
+              x11: '2020-07-21T13:00:09.000Z',
+              x12: '2020-07-21T13:00:09.000Z',
+              x13: 'Society~Politics~Ukraine',
+              x14: '5307a8d9-f620-40f5-92d4-f99c919a6ffa~75612fa6-147c-4a43-97fa-fcf70d9cced3~ee8750ed-a7fb-453f-bfca-2aa8b3fb064c',
+              x16: 'WS - Update me',
+              x17: 'News',
+              x18: false,
+            },
+          },
+          user: {
+            isSignedIn: false,
+          },
+        },
+        eventDetails: {
+          eventName: 'pageView',
+        },
       });
     });
 
@@ -799,127 +848,6 @@ describe('ATI Analytics Container', () => {
           x17: 'News',
           x18: false,
         },
-      });
-    });
-  });
-
-  describe('XTO Marketing string', () => {
-    it('should include the xto marketing string for a valid campaign type', () => {
-      jest
-        .spyOn(window.location, 'href', 'get')
-        .mockImplementation(
-          () =>
-            'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
-        );
-
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      canonical.default = mockCanonical;
-
-      const {
-        metadata: { atiAnalytics },
-      } = styAssetData;
-
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
-        ...defaultRenderProps,
-        atiData,
-        isAmp: false,
-        pageData: styAssetData,
-        pageType: STORY_PAGE,
-        service: 'mundo',
-      });
-
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '62',
-        p: 'mundo.story.23263889.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f]',
-        x2: '[responsive]',
-        x3: '[news-mundo]',
-        x4: '[es]',
-        x5: '[https%3A%2F%2Flocalhost%3Fat_medium%3Demail%26at_emailtype%3Dacquisition%26at_creation%3Dmy_creation]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',
-        x11: '[2020-02-03T15:58:27.000Z]',
-        x12: '[2020-05-06T11:02:07.000Z]',
-        x13: '[Life~Fake+news]',
-        x14: '[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
-        x16: '[Amuse me]',
-        x17: '[News]',
-        xto: 'EREC--[my_creation]---@',
-      });
-    });
-    it('should not include the xto marketing string when a campaign type is not specified', () => {
-      jest
-        .spyOn(window.location, 'href', 'get')
-        .mockImplementation(() => 'http://localhost?foo=bar');
-
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      canonical.default = mockCanonical;
-
-      const {
-        metadata: { atiAnalytics },
-      } = styAssetData;
-
-      const atiData = {
-        ...atiAnalytics,
-        pageTitle: `${atiAnalytics.pageTitle} - BBC News Mundo`,
-      };
-
-      render(<ATIAnalytics atiData={atiData} />, {
-        ...defaultRenderProps,
-        atiData,
-        isAmp: false,
-        pageData: styAssetData,
-        pageType: STORY_PAGE,
-        service: 'mundo',
-      });
-
-      const { pageviewParams } = mockCanonical.mock.calls[0][0];
-
-      const parsedATIParams = Object.fromEntries(
-        new URLSearchParams(pageviewParams),
-      );
-
-      expect(parsedATIParams).toEqual({
-        s: '598343',
-        s2: '62',
-        p: 'mundo.story.23263889.page',
-        r: '1024x768x24x24',
-        re: '1024x768',
-        hl: '00-00-00',
-        lng: 'en-US',
-        x1: '[urn:bbc:cps:curie:asset:f776ad93-e486-b14a-b5ea-55955dd0644f]',
-        x2: '[responsive]',
-        x3: '[news-mundo]',
-        x4: '[es]',
-        x5: '[http%3A%2F%2Flocalhost%3Ffoo%3Dbar]',
-        x7: '[article]',
-        x8: '[simorgh]',
-        x9: '[WS%20STY%20TEST%20-%20Full%20Headline%20-%20BBC%20News%20Mundo]',
-        x11: '[2020-02-03T15:58:27.000Z]',
-        x12: '[2020-05-06T11:02:07.000Z]',
-        x13: '[Life~Fake+news]',
-        x14: '[0239ab33-1cfc-4f5d-babb-a8159711af3e~e7539dc8-5cfb-413a-b4fe-0ad77bc665aa]',
-        x16: '[Amuse me]',
-        x17: '[News]',
       });
     });
   });
