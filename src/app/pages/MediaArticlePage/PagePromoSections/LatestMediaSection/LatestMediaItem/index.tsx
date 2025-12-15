@@ -24,7 +24,12 @@ const LatestMediaItem = forwardRef<HTMLDivElement, LatestMediaItemProp>(
           className="removeBackground"
           css={styles.promoStyle}
         >
-          <div css={styles.imageWrapper}>
+          <div
+            css={[
+              styles.imageWrapper,
+              item.isPortraitImage && styles.portraitImage(),
+            ]}
+          >
             {item.isPortraitImage && <BlurredBackground src={src} />}
             <Promo.Image
               src={src}

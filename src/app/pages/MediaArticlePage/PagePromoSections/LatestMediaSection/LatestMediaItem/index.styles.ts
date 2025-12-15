@@ -39,6 +39,9 @@ const styles = {
       [mq.GROUP_3_ONLY]: {
         width: '100%',
       },
+    }),
+  portraitImage: () =>
+    css({
       overflow: 'hidden',
       '> * img': {
         objectFit: 'contain',
