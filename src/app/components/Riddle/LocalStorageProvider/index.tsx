@@ -1,6 +1,6 @@
+import onClient from '#app/lib/utilities/onClient';
 import React, {
   createContext,
-  Dispatch,
   PropsWithChildren,
   useMemo,
   useState,
@@ -27,15 +27,17 @@ export const LocalStorageContext = createContext<LocalStorage>(
 const DATA_KEY = 'ws_bbc_riddle';
 
 const getLocalData = () => {
-  const localStorageData = window.localStorage[DATA_KEY];
-  if (localStorageData) {
-    const parsedData = JSON.parse(localStorageData);
-    return {
-      goes: parsedData.goes ?? 5,
-      coins: parsedData.coins ?? 0,
-      paidHints: parsedData.paidHints ?? [false, false, false],
-      isWinner: parsedData.isWinner ?? false,
-    };
+  if (onClient()) {
+    const localStorageData = window.localStorage[DATA_KEY];
+    if (localStorageData) {
+      const parsedData = JSON.parse(localStorageData);
+      return {
+        goes: parsedData.goes ?? 5,
+        coins: parsedData.coins ?? 0,
+        paidHints: parsedData.paidHints ?? [false, false, false],
+        isWinner: parsedData.isWinner ?? false,
+      };
+    }
   }
 
   return {
@@ -57,20 +59,22 @@ const setLocalData = ({
   paidHints?: boolean[];
   isWinner?: boolean;
 }) => {
-  const {
-    goes: localGoes,
-    coins: localCoins,
-    paidHints: localPaidHints,
-    isWinner: localIsWinner,
-  } = getLocalData();
-  const updatedData = {
-    goes: goes ?? localGoes,
-    coins: coins ?? localCoins,
-    paidHints: paidHints ?? localPaidHints,
-    isWinner: isWinner ?? localIsWinner,
-  };
-  const toStore = JSON.stringify(updatedData);
-  window.localStorage.setItem(DATA_KEY, toStore);
+  if (onClient()) {
+    const {
+      goes: localGoes,
+      coins: localCoins,
+      paidHints: localPaidHints,
+      isWinner: localIsWinner,
+    } = getLocalData();
+    const updatedData = {
+      goes: goes ?? localGoes,
+      coins: coins ?? localCoins,
+      paidHints: paidHints ?? localPaidHints,
+      isWinner: isWinner ?? localIsWinner,
+    };
+    const toStore = JSON.stringify(updatedData);
+    window.localStorage.setItem(DATA_KEY, toStore);
+  }
 };
 
 export default ({ children }: PropsWithChildren) => {

@@ -31,6 +31,16 @@ const styles = {
         margin: `${spacings.QUINTUPLE}rem 0`,
       },
     }),
+  riddleMaxWidth: () =>
+    css({
+      flexGrow: 1,
+      maxWidth: '800px',
+    }),
+  riddleContainer: () =>
+    css({
+      display: 'flex',
+      justifyContent: 'center',
+    }),
 };
 
 export default styles;
