@@ -63,7 +63,7 @@ describe('Related Topics', () => {
     it('should render correctly with no tags', () => {
       const { container } = render(
         <WithContexts>
-          <RelatedTopics />
+          <RelatedTopics topics={[]} />
         </WithContexts>,
         { service: 'mundo' },
       );

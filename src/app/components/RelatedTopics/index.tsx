@@ -6,19 +6,15 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 import TopicTags, { TopicTag } from '#app/components/TopicTags';
+import { TopicTag as TopicTagType } from '#app/models/types/metadata';
 import styles from './index.styles';
 
 const eventTrackingData = {
   componentName: 'topics',
 };
 
-interface Topic {
-  topicName: string;
-  topicId: string;
-}
-
 interface RelatedTopicsProps {
-  topics?: Topic[];
+  topics: Pick<TopicTagType, 'topicName' | 'topicId'>[];
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
@@ -35,6 +31,11 @@ const RelatedTopics = ({
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewTracker = useViewTracker(eventTrackingData);
 
+  const shouldDisplayTopics =
+    topics.length > 0 && !(service === 'zhongwen' && variant === 'simp');
+
+  if (!shouldDisplayTopics) return null;
+
   const heading = translations?.relatedTopics ?? 'Related Topics';
   const topicsPath = translations?.topicsPath ?? 'topics';
 
@@ -46,13 +47,6 @@ const RelatedTopics = ({
       ? `${hostname}/${service}/${topicsPath}/${id}/${variant}`
       : `${hostname}/${service}/${topicsPath}/${id}`;
   };
-
-  const shouldDisplayTopics =
-    topics.length > 0 && !(service === 'zhongwen' && variant === 'simp');
-
-  if (!shouldDisplayTopics) {
-    return null;
-  }
 
   const topicTagItems = topics.map(({ topicName, topicId }) => (
     <TopicTag
