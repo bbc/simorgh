@@ -5,8 +5,8 @@ import * as getPageDataModule from '../../../utilities/pageRequests/getPageData'
 import handleArticleRoute from './handleArticleRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('./shouldRender', () => {
-  const originalModule = jest.requireActual('./shouldRender');
+jest.mock('../../../utilities/shouldRender', () => {
+  const originalModule = jest.requireActual('../../../utilities/shouldRender');
   return {
     __esModule: true,
     ...originalModule,
