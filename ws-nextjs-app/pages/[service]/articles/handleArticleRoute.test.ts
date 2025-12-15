@@ -1,6 +1,5 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import defaultToggles from '#app/lib/config/toggles';
 import * as shouldRender from './shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
@@ -35,10 +34,8 @@ describe('handleArticleRoute', () => {
         pageData: pidginMediaArticleFixtureData.data,
         status: 200,
       },
-      toggles,
     });
   });
-  const toggles = defaultToggles.local;
 
   it('returns correct page type if consumableAsSFV is true', async () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
@@ -87,20 +84,11 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 500,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
-        toggles,
         variant: null,
       },
     });
@@ -118,20 +106,11 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 404,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
-        toggles,
         variant: null,
       },
     });
@@ -162,7 +141,6 @@ describe('handleArticleRoute', () => {
         },
         status: 200,
       },
-      toggles,
     };
 
     beforeEach(() => {
@@ -194,7 +172,6 @@ describe('handleArticleRoute', () => {
             },
             status: 200,
           },
-          toggles,
         });
 
       const result = await handleArticleRoute(mundoContext);

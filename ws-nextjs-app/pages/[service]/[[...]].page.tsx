@@ -1,8 +1,6 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import logResponseTime from '#server/utilities/logResponseTime';
-import extractHeaders from '#server/utilities/extractHeaders';
-import getPathExtension from '#app/utilities/getPathExtension';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -83,24 +81,17 @@ export const getServerSideProps: GetServerSideProps = async context => {
     return handleHomepageRoute(context);
   }
 
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
-
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
   context.res.statusCode = 404;
 
   return {
     props: {
-      isApp,
-      isAmp,
-      isLite,
-      isNextJs: true,
       pathname: resolvedUrl.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
