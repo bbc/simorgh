@@ -80,19 +80,19 @@ const Image = props => {
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
   const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
-
   const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
     '.webp',
     '',
   );
-
   const sizes = createSizes(useLargeImages, isProgrammeImage);
+  const srcWith240Width = src.replace('{width}', 240);
+
   return (
     <Wrapper isPortraitImage={isPortraitImage}>
-      {isPortraitImage && <BlurredBackground src={src} />}
+      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
       <IMAGE
         {...rest}
-        src={src.replace('{width}', 240)}
+        src={srcWith240Width}
         srcSet={primarySrcSet}
         mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
