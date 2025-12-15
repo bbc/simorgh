@@ -8,6 +8,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 // AV Embeds
@@ -15,11 +16,13 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
+import handleHomepageRoute from './homepage/handleHomepageRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -29,11 +32,13 @@ const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
+const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
 
 type PageProps = {
   pageType?: PageTypes;
 } & AvEmbedsPageProps &
-  ArticlePageProps;
+  ArticlePageProps &
+  HomePageProps;
 
 const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
   // TODO: 'pagetype' header is for testing purposes only
@@ -45,6 +50,8 @@ const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
     case ARTICLE_PAGE:
     case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
       return ARTICLE_PAGE;
+    case HOME_PAGE:
+      return HOME_PAGE;
     default:
       return null;
   }
@@ -69,6 +76,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (pageType === ARTICLE_PAGE) {
     return handleArticleRoute(context);
+  }
+  if (pageType === HOME_PAGE) {
+    return handleHomepageRoute(context);
   }
 
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
@@ -100,6 +110,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
+    case HOME_PAGE:
+      return <HomePage {...props} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;
