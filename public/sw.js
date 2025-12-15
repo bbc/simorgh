@@ -129,6 +129,8 @@ self.addEventListener('activate', event => {
 
 // -------Message Event-------------
 self.addEventListener('message', async event => {
+  console.log(`[SW v${version}] Message received:`, event.data);
+
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const isPWA = event.data.isPWA;
@@ -139,6 +141,9 @@ self.addEventListener('message', async event => {
       await cache.put('pwa_installed', new Response('true'));
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
+    } else {
+      const cache = await caches.open(cacheName);
+      await cache.delete('pwa_installed');
     }
   }
 });
@@ -198,9 +203,6 @@ const fetchEventHandler = async event => {
 
           const networkResp = await fetch(event.request);
 
-          if (!networkResp.ok) {
-            throw new Error('Bad network response');
-          }
           // Cache offline page if in PWA mode
           if (networkResp && networkResp.ok && event.clientId) {
             console.log('[SW] Caching offline page if PWA if network is ok');
