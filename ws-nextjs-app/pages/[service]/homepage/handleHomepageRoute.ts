@@ -25,7 +25,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
   const { data } = await getPageData({
@@ -54,10 +54,6 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
