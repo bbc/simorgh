@@ -3,8 +3,8 @@
  * @pathname /portuguese
  */
 
-import numberOfCurationsTest from '#src/integration/pages/homePage/numberOfCurations';
 import portugueseData from '#data/portuguese/homePage/index.json';
+import numberOfCurationsTest from '../numberOfCurations';
 
 describe('Canonical', () => {
   const { data: pageData } = portugueseData;
@@ -32,7 +32,7 @@ describe('Canonical', () => {
 
     portraitVideoCurations.forEach((curation, index) => {
       const videoList = videoCarousels[index];
-      const numberOfItems = curation.portraitVideo.blocks.length;
+      const numberOfItems = curation.portraitVideo?.blocks.length;
 
       expect(videoList).toBeInTheDocument();
       expect(videoList.tagName).toBe('UL');
@@ -92,7 +92,7 @@ describe('Canonical', () => {
       promoButtons.forEach(button => {
         const duration = button.querySelector('time > span');
         expect(duration).toBeInTheDocument();
-        expect(duration.textContent).toMatch(/\d{2}:\d{2}/);
+        expect(duration?.textContent).toMatch(/\d{2}:\d{2}/);
       });
     });
   });
