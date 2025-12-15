@@ -5,7 +5,6 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import extractHeaders from '#server/utilities/extractHeaders';
 import logResponseTime from '#server/utilities/logResponseTime';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 
 const OfflinePage = dynamic(() => import('./OfflinePage'));
 
@@ -20,16 +19,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
     'public, max-age=300, stale-while-revalidate=600, stale-if-error=3600',
   );
 
-  const toggles = await getToggles(service);
-
   return {
     props: {
       service,
       variant,
-      toggles,
       pageType: OFFLINE_PAGE,
-      isNextJs: true,
-      isAmp: false,
       status: 200,
       timeOnServer: Date.now(),
       pathname: `/${service}/offline`,

@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     service: 'ws',
     rendererEnv,
     resolvedUrl: '/ws/languages',
@@ -46,7 +46,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       isAmp: false,
       isNextJs: true,
       error: data?.error || null,
-      toggles,
       timeOnServer: Date.now(),
       pageData: {
         ...data?.pageData,
