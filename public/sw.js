@@ -196,7 +196,6 @@ const fetchEventHandler = async event => {
             const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
               .href;
             const cachedResponse = await cache.match(offlinePageUrl);
-
             return (
               cachedResponse ||
               new Response('You are offline', {
