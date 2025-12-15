@@ -1,57 +1,11 @@
-import { PropsWithChildren } from 'react';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#app/components/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { Services, Variants, PageTypes } from '#app/models/types/global';
 import { render, screen } from '../react-testing-library-with-providers';
 
 beforeEach(() => {
   jest.resetModules();
 });
-
-interface WithContextsProps extends PropsWithChildren {
-  variant?: Variants | null;
-  service?: Services;
-  isAmp?: boolean;
-  pageType?: PageTypes;
-}
-
-const WithContexts = ({
-  children,
-  variant,
-  service = 'mundo',
-  isAmp = false,
-  pageType = STORY_PAGE,
-}: WithContextsProps) => {
-  return (
-    <RequestContextProvider
-      service={service}
-      variant={variant}
-      pageType={pageType}
-      isAmp={isAmp}
-      pathname="/"
-    >
-      <ServiceContextProvider service={service}>
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: {
-              enabled: true,
-            },
-          }}
-        >
-          <EventTrackingContextProvider>
-            {children}
-          </EventTrackingContextProvider>
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  );
-};
 
 const topic = {
   topicName: 'foo',
@@ -61,20 +15,15 @@ const topic = {
 describe('Related Topics', () => {
   describe('Expected use', () => {
     it('should render correctly with no tags', () => {
-      const { container } = render(
-        <WithContexts>
-          <RelatedTopics topics={[]} />
-        </WithContexts>,
-        { service: 'mundo' },
-      );
+      const { container } = render(<RelatedTopics topics={[]} />, {
+        service: 'mundo',
+      });
       expect(container.firstChild).toBeNull();
     });
 
     it('should render correctly with a single tag', () => {
       render(
-        <WithContexts>
-          <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
-        </WithContexts>,
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />,
         { service: 'mundo' },
       );
 
@@ -87,15 +36,13 @@ describe('Related Topics', () => {
 
     it('should render correctly with multiple tags', () => {
       render(
-        <WithContexts>
-          <RelatedTopics
-            topics={[
-              { topicName: 'topic1', topicId: '1' },
-              { topicName: 'topic2', topicId: '2' },
-              { topicName: 'topic3', topicId: '3' },
-            ]}
-          />
-        </WithContexts>,
+        <RelatedTopics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />,
         { service: 'mundo' },
       );
 
@@ -107,12 +54,9 @@ describe('Related Topics', () => {
     });
 
     it('should construct the correct topics href given a topic id without a variant', () => {
-      const { getByText } = render(
-        <WithContexts service="pidgin">
-          <RelatedTopics topics={[topic]} />
-        </WithContexts>,
-        { service: 'pidgin' },
-      );
+      const { getByText } = render(<RelatedTopics topics={[topic]} />, {
+        service: 'pidgin',
+      });
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
@@ -121,12 +65,9 @@ describe('Related Topics', () => {
     });
 
     it('should construct the correct topics href given a topic id when service=cymrufyw', () => {
-      const { getByText } = render(
-        <WithContexts service="cymrufyw">
-          <RelatedTopics topics={[topic]} />
-        </WithContexts>,
-        { service: 'cymrufyw' },
-      );
+      const { getByText } = render(<RelatedTopics topics={[topic]} />, {
+        service: 'cymrufyw',
+      });
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
@@ -135,15 +76,10 @@ describe('Related Topics', () => {
     });
 
     it('should construct the correct topics href given a topic id', () => {
-      const { getByText } = render(
-        <WithContexts service="uzbek" variant="cyr">
-          <RelatedTopics topics={[topic]} />
-        </WithContexts>,
-        {
-          service: 'uzbek',
-          variant: 'cyr',
-        },
-      );
+      const { getByText } = render(<RelatedTopics topics={[topic]} />, {
+        service: 'uzbek',
+        variant: 'cyr',
+      });
 
       expect(getByText(topic.topicName)).toHaveAttribute(
         'href',
@@ -153,29 +89,19 @@ describe('Related Topics', () => {
 
     describe('transliteration', () => {
       it('should not render when service is zhongwen and variant is simp', () => {
-        const { container } = render(
-          <WithContexts service="zhongwen" variant="simp">
-            <RelatedTopics topics={[topic]} />
-          </WithContexts>,
-          {
-            service: 'zhongwen',
-            variant: 'simp',
-          },
-        );
+        const { container } = render(<RelatedTopics topics={[topic]} />, {
+          service: 'zhongwen',
+          variant: 'simp',
+        });
 
         expect(container.firstChild).toBeNull();
       });
 
       it('should render when service is zhongwen and variant is trad', () => {
-        const { container } = render(
-          <WithContexts service="zhongwen" variant="trad">
-            <RelatedTopics topics={[topic]} />
-          </WithContexts>,
-          {
-            service: 'zhongwen',
-            variant: 'trad',
-          },
-        );
+        const { container } = render(<RelatedTopics topics={[topic]} />, {
+          service: 'zhongwen',
+          variant: 'trad',
+        });
 
         expect(container.firstChild).not.toBeNull();
       });
@@ -185,9 +111,7 @@ describe('Related Topics', () => {
   describe('A11y', () => {
     it('should not render an unordered list when there is only one topic', () => {
       const { container } = render(
-        <WithContexts>
-          <RelatedTopics topics={[{ topicName: 'topic1', topicId: '1' }]} />
-        </WithContexts>,
+        <RelatedTopics topics={[{ topicName: 'topic1', topicId: '1' }]} />,
         { service: 'mundo' },
       );
       expect(container.querySelector('ul')).toBeNull();
@@ -195,14 +119,12 @@ describe('Related Topics', () => {
 
     it('should render an unordered list when there is more than one topic', () => {
       const { container } = render(
-        <WithContexts>
-          <RelatedTopics
-            topics={[
-              { topicName: 'topic1', topicId: '1' },
-              { topicName: 'topic2', topicId: '2' },
-            ]}
-          />
-        </WithContexts>,
+        <RelatedTopics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+          ]}
+        />,
         { service: 'mundo' },
       );
       expect(container.querySelector('ul')).not.toBeNull();
@@ -217,9 +139,7 @@ describe('Related Topics', () => {
     it('should call the click tracker with the correct params', () => {
       const clickTrackerSpy = jest.spyOn(clickTracker, 'default');
       render(
-        <WithContexts>
-          <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
-        </WithContexts>,
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />,
         { service: 'mundo' },
       );
 
@@ -229,9 +149,7 @@ describe('Related Topics', () => {
     it('should call the view tracker with the correct params', () => {
       const viewTrackerSpy = jest.spyOn(viewTracker, 'default');
       render(
-        <WithContexts>
-          <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
-        </WithContexts>,
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />,
         { service: 'mundo' },
       );
 
