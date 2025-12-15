@@ -106,7 +106,7 @@ self.addEventListener('activate', event => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3\.10\.2\.js$/,
   // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts
@@ -117,7 +117,7 @@ const CACHEABLE_FILES = [
   /\/moment-lib+.*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
-  // Next.js static assets (JS chunks, CSS, fonts)
+  // Next.js static assets (JS chunks, CSS)
   /\/_next\/static\/.+\.js$/,
   /\/_next\/static\/.+\.css$/,
   // Local static assets
@@ -127,7 +127,22 @@ const CACHEABLE_FILES = [
 ];
 
 const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
+
+const isCacheableRequest = url =>
+  CACHEABLE_FILES.some(pattern => pattern.test(url));
+
+const handleWebPRequest = async request => {
+  if (!WEBP_IMAGE.test(request.url)) return null;
+  const accepts = request.headers.get('accept') || '';
+  if (accepts.includes('webp')) return null;
+  const fallbackUrl = request.url.replace('.webp', '');
+  try {
+    return await fetch(fallbackUrl, { mode: 'no-cors' });
+  } catch {
+    return null;
+  }
+};
 
 const fetchEventHandler = async event => {
   // Skip HMR/webpack requests to avoid breaking Next.js Fast Refresh
@@ -147,13 +162,8 @@ const fetchEventHandler = async event => {
   if (isRequestForWebpImage) {
     const req = event.request.clone();
 
-    // Inspect the accept header for WebP support
-
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
 
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
@@ -173,7 +183,6 @@ const fetchEventHandler = async event => {
             response = await fetch(event.request.url);
             cache.put(event.request, response.clone());
           } catch (error) {
-            console.warn('error', error);
             // File not in cache and network unavailable
             return new Response('', { status: 408, statusText: 'Offline' });
           }
