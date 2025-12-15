@@ -35,7 +35,7 @@ class CustomTestEnvironment extends TestEnvironment {
     const { pathname, service, displayAds = 'false' } = context.docblockPragmas;
 
     const pageType = getPageTypeFromTestPath(context.testPath);
-
+    console.log('pageType:', pageType);
     const platformForPath = ['amp', 'lite'].includes(platform)
       ? `.${platform}`
       : '';
