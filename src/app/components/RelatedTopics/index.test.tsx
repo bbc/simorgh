@@ -14,11 +14,13 @@ const topic = {
 
 describe('Related Topics', () => {
   describe('Expected use', () => {
-    it('should render correctly with no tags', () => {
-      const { container } = render(<RelatedTopics topics={[]} />, {
+    it('should not render when there are no topics', () => {
+      render(<RelatedTopics topics={[]} />, {
         service: 'mundo',
       });
-      expect(container.firstChild).toBeNull();
+
+      const relatedTopics = screen.queryByTestId('related-topics');
+      expect(relatedTopics).not.toBeInTheDocument();
     });
 
     it('should render correctly with a single tag', () => {
