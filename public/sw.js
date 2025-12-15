@@ -196,6 +196,9 @@ const fetchEventHandler = async event => {
 
           const networkResp = await fetch(event.request);
 
+          if (!networkResp.ok) {
+            throw new Error('Bad network response');
+          }
           // Cache offline page if in PWA mode
           if (networkResp && networkResp.ok && event.clientId) {
             const client = await self.clients.get(event.clientId);
@@ -210,10 +213,13 @@ const fetchEventHandler = async event => {
 
           return networkResp;
         } catch (err) {
-          console.log('[SW] Navigation failed:', url, err);
+          console.log('[SW] Navigation failed:', url, err, event.clientId);
 
           // Try serving offline page
           if (event.clientId) {
+            console.log(
+              '[SW] Attempting to serve offline page from cache on failure.',
+            );
             const client = await self.clients.get(event.clientId);
             const isPWA = client && pwaClients.get(client.id);
 
@@ -230,7 +236,7 @@ const fetchEventHandler = async event => {
           }
 
           return new Response(
-            'You are offline. Please check your network and reload the page',
+            'You are offline . Please check your network and reload the page',
             {
               status: 503,
               headers: { 'Content-Type': 'text/plain' },
