@@ -22,7 +22,7 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
-import handleHomepageRoute from './homepages/handleHomepageRoute';
+import handleHomepageRoute from './homepage/handleHomepageRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
