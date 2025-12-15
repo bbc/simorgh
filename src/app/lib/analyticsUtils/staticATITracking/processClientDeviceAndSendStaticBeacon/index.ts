@@ -87,12 +87,15 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       const searchParams = new URLSearchParams(window.location.search);
 
       searchParams.forEach((value, key) => {
-        if (key.startsWith('utm_') || key.startsWith('at_')) {
+        if (
+          key.startsWith('utm_') ||
+          key.startsWith('at_') ||
+          key.startsWith('xtor')
+        ) {
           processedReverbUrl +=
-            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
-              'at_',
-              'src_',
-            );
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+              .replace('at_', 'src_')
+              .replace('xtor', 'xto');
         }
       });
 
