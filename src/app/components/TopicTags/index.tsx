@@ -13,10 +13,6 @@ interface TopicTagProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   ref?: Ref<HTMLAnchorElement>;
 }
 
-interface TopicTagsProps extends PropsWithChildren {
-  tagBackgroundColour?: string;
-}
-
 export const TopicTag = ({
   name,
   link,
@@ -28,18 +24,13 @@ export const TopicTag = ({
   </a>
 );
 
-export const TopicTags = ({
-  children,
-  tagBackgroundColour,
-}: TopicTagsProps) => {
+export const TopicTags = ({ children }: PropsWithChildren) => {
   const topicTagChildren = Children.toArray(children).filter(
     (child): child is ReactElement<TopicTagProps> =>
       React.isValidElement(child) && child.type === TopicTag,
   );
 
-  if (topicTagChildren.length === 0) {
-    return null;
-  }
+  if (topicTagChildren.length === 0) return null;
 
   const hasMultipleChildren = topicTagChildren.length > 1;
 
@@ -49,7 +40,7 @@ export const TopicTags = ({
         <li
           // eslint-disable-next-line react/no-array-index-key
           key={index}
-          css={styles.topicTagItem(tagBackgroundColour)}
+          css={styles.topicTagItem}
         >
           {child}
         </li>
@@ -57,9 +48,7 @@ export const TopicTags = ({
     </ul>
   ) : (
     <div css={styles.singleContainer}>
-      <div css={styles.topicTagItem(tagBackgroundColour)}>
-        {topicTagChildren[0]}
-      </div>
+      <div css={styles.topicTagItem}>{topicTagChildren[0]}</div>
     </div>
   );
 };

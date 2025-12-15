@@ -6,12 +6,6 @@ Topic tags used on World Service article onward journeys.
 
 The `TopicTags` component renders a `<ul>` when there are multiple `TopicTag` children, and a `<div>` when there is only a single tag.
 
-## Props
-
-| Argument            | Type   | Required | Default                  | Example               |
-| ------------------- | ------ | -------- | ------------------------ | --------------------- |
-| tagBackgroundColour | string | No       | The GEL variable `WHITE` | Any valid CSS `color` |
-
 ## Usage
 
 ```jsx
