@@ -8,7 +8,7 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { Services, Variants, PageTypes } from '#app/models/types/global';
-import { render } from '../react-testing-library-with-providers';
+import { render, screen } from '../react-testing-library-with-providers';
 
 beforeEach(() => {
   jest.resetModules();
@@ -71,17 +71,22 @@ describe('Related Topics', () => {
     });
 
     it('should render correctly with a single tag', () => {
-      const { container } = render(
+      render(
         <WithContexts>
           <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
         </WithContexts>,
         { service: 'mundo' },
       );
-      expect(container).toMatchSnapshot();
+
+      const multipleContainer = screen.queryByTestId('topic-tags-multiple');
+      expect(multipleContainer).not.toBeInTheDocument();
+
+      const singleContainer = screen.queryByTestId('topic-tags-single');
+      expect(singleContainer).toBeInTheDocument();
     });
 
     it('should render correctly with multiple tags', () => {
-      const { container } = render(
+      render(
         <WithContexts>
           <RelatedTopics
             topics={[
@@ -93,7 +98,12 @@ describe('Related Topics', () => {
         </WithContexts>,
         { service: 'mundo' },
       );
-      expect(container).toMatchSnapshot();
+
+      const multipleContainer = screen.queryByTestId('topic-tags-multiple');
+      expect(multipleContainer).toBeInTheDocument();
+
+      const singleContainer = screen.queryByTestId('topic-tags-single');
+      expect(singleContainer).not.toBeInTheDocument();
     });
 
     it('should construct the correct topics href given a topic id without a variant', () => {
