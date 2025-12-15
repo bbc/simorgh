@@ -4,6 +4,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -69,6 +70,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+  const shouldRenderPWAPromotionalBanner = pwaPromoBannerVariant === 'on';
+
   // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
   if (
     timeOfDayVariant === 'homepage_time_of_day_a' ||
@@ -84,6 +93,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -159,7 +170,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {timeOfDayVariant && (
+      {(timeOfDayVariant || pwaPromoBannerVariant) && (
         <OptimizelyPageMetrics trackPageView trackPageDepth />
       )}
     </>

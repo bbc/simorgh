@@ -26,16 +26,11 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
-  default: jest.fn(),
+  default: jest.fn(() => ({ onClick: jest.fn() })),
 }));
 
 // Mock useViewTracker hook globally
 jest.mock('../../hooks/useViewTracker', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
-jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
   default: jest.fn(),
 }));

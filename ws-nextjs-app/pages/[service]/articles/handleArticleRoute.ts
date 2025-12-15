@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
@@ -8,18 +7,31 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes, Toggles } from '#app/models/types/global';
-import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
+import { PageTypes } from '#app/models/types/global';
+
 import { ArticleMetadata } from '#app/models/types/optimo';
 import { getServerExperiments } from '#server/utilities/experimentHeader';
-import isLive from '#app/lib/utilities/isLive';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from './shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
+// EXPERIMENT: Location based Topics Experiment
+const COUNTRY_SPECIFIC_TOPIC_IDS: Record<string, string> = {
+  ar: 'c7zp57yy6dzt',
+  cl: 'c340qyppkk8t',
+  mx: 'c340qyp6yggt',
+  co: 'c404v5gz1rkt',
+  es: 'c6vzy3wd189t',
+  ve: 'cpzd49v9rd1t',
+  us: 'cdr5613yzwqt',
+  uy: 'cpzd498zwj6t',
+  do: 'cr50y7pykkdt',
+};
+
 const logger = nodeLogger(__filename);
 
-const transformPageData = (toggles?: Toggles) =>
-  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
 
 const getDerivedArticleType = (metadata: ArticleMetadata) => {
   let pageType: PageTypes = metadata?.type;
@@ -42,10 +54,10 @@ export default async (context: GetServerSidePropsContext) => {
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
@@ -72,18 +84,12 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: resolvedUrlWithoutQuery,
-        toggles,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
@@ -92,9 +98,16 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const country = reqHeaders['x-country']?.toString().toLowerCase();
-  const shouldAttemptPersonalisedTopicExperience =
-    !isLive() && service === 'mundo' && !isAmp && Boolean(country);
+  // EXPERIMENT: Location based Topics Experiment
+  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
+
+  // EXPERIMENT: Location based Topics Experiment
+  const countrySpecificId = country && COUNTRY_SPECIFIC_TOPIC_IDS[country];
+
+  // EXPERIMENT: Location based Topics Experiment
+  const shouldAttemptPersonalisedTopicExperience = Boolean(
+    !isAmp && service === 'mundo' && countrySpecificId,
+  );
 
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
@@ -115,60 +128,45 @@ export default async (context: GetServerSidePropsContext) => {
     mediaCuration = null,
   } = secondaryData || {};
 
+  // EXPERIMENT: Location based Topics Experiment
   let personalisedContent;
 
+  // EXPERIMENT: Location based Topics Experiment
   if (shouldAttemptPersonalisedTopicExperience) {
-    const countrySpecificTopics: Record<string, string> = {
-      ar: 'c7zp57yy6dzt',
-      cl: 'c340qyppkk8t',
-      mx: 'c340qyp6yggt',
-      co: 'c404v5gz1rkt',
-      es: 'c6vzy3wd189t',
-      ve: 'cpzd49v9rd1t',
-      us: 'cdr5613yzwqt',
-      uy: 'cpzd498zwj6t',
-      do: 'cr50y7pykkdt',
-    };
+    try {
+      const { data: topicData } = await getPageData({
+        id: `/${service}/topics/${countrySpecificId}`,
+        rendererEnv: 'live',
+        resolvedUrl: `/${service}/topics/${countrySpecificId}`,
+        pageType: 'topic',
+        service,
+        variant: variant || undefined,
+        isAmp,
+      });
 
-    const countrySpecificId =
-      country && countrySpecificTopics[country.toString()];
+      const countrySpecificData = topicData?.pageData;
+      const countryArticles =
+        countrySpecificData?.curations?.[0]?.summaries || [];
 
-    if (countrySpecificId) {
-      try {
-        const { data: topicData } = await getPageData({
-          id: `/${service}/topics/${countrySpecificId}`,
-          rendererEnv: 'live',
-          resolvedUrl: `/${service}/topics/${countrySpecificId}`,
-          pageType: 'topic',
-          service,
-          variant: variant || undefined,
-          isAmp,
-        });
-
-        const countrySpecificData = topicData?.pageData;
-        const countryArticles =
-          countrySpecificData?.curations?.[0]?.summaries || [];
-
-        if (countrySpecificData) {
-          personalisedContent = [
-            {
-              title: countrySpecificData.title,
-              description: countrySpecificData.description,
-              link: `/${service}/topics/${countrySpecificId}`,
-              summaries: Array.isArray(countryArticles)
-                ? countryArticles.slice(0, 4)
-                : [],
-              topicId: countrySpecificId,
-            },
-          ];
-        }
-      } catch (_error) {
-        // void
+      if (countrySpecificData) {
+        personalisedContent = [
+          {
+            title: countrySpecificData.title,
+            description: countrySpecificData.description,
+            link: `/${service}/topics/${countrySpecificId}`,
+            summaries: Array.isArray(countryArticles)
+              ? countryArticles.slice(0, 4)
+              : [],
+            topicId: countrySpecificId,
+          },
+        ];
       }
+    } catch (_error) {
+      // void
     }
   }
 
-  const transformedArticleData = transformPageData(toggles)(article);
+  const transformedArticleData = transformPageData()(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
@@ -186,12 +184,8 @@ export default async (context: GetServerSidePropsContext) => {
 
   return {
     props: {
-      country: reqHeaders?.['x-country'] || null,
+      country,
       id: resolvedUrlWithoutQuery,
-      isAmp,
-      isApp,
-      isLite,
-      isNextJs: true,
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
@@ -200,6 +194,7 @@ export default async (context: GetServerSidePropsContext) => {
           latestMedia,
           mediaCuration,
           billboardCuration,
+          // EXPERIMENT: Location based Topics Experiment
           ...(personalisedContent && { personalisedContent }),
         },
         mostRead,
@@ -209,9 +204,7 @@ export default async (context: GetServerSidePropsContext) => {
       serverSideExperiments,
       service,
       status,
-      toggles,
       variant: variant || null,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
