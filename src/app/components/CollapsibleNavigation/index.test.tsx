@@ -32,9 +32,10 @@ describe('LanguageNavigation', () => {
     render(<CollapsibleNavigation navigationSections={sections} />);
 
     sections.forEach(section => {
-      expect(
-        screen.getAllByRole('button', { name: section.title }[0]),
-      ).toBeInTheDocument();
+      const element = section.href
+        ? screen.getByRole('link', { name: section.title })
+        : screen.getByRole('button', { name: section.title });
+      expect(element).toBeInTheDocument();
     });
   });
 
