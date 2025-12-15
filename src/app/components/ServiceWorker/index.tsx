@@ -1,7 +1,8 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import useIsPWA from '#app/hooks/useIsPWA';
-import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
+// import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
 import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
+import onClient from '#lib/utilities/onClient';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -40,7 +41,16 @@ export default () => {
   const isPWA = useIsPWA();
 
   // Register service worker for offline functionality
-  useServiceWorkerRegistration(service);
+  // useServiceWorkerRegistration(service);
+
+  useEffect(() => {
+    const shouldInstallServiceWorker =
+      swPath && onClient() && 'serviceWorker' in navigator;
+
+    if (shouldInstallServiceWorker) {
+      navigator.serviceWorker.register(`/${service}${swPath}`);
+    }
+  }, [swPath, service]);
 
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);

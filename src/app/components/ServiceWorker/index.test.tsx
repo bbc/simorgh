@@ -52,6 +52,12 @@ describe('Service Worker', () => {
     });
 
     describe('is not registered', () => {
+      beforeEach(() => {
+        jest.clearAllMocks();
+        // @ts-expect-error test override
+        delete global.navigator.serviceWorker;
+      });
+
       it.each`
         swPath                | serviceWorker        | isOnClient
         ${undefined}          | ${undefined}         | ${true}
@@ -63,19 +69,29 @@ describe('Service Worker', () => {
         'when swPath is $swPath, serviceWorker is $serviceWorker and isOnClient is $isOnClient',
         ({ swPath, serviceWorker, isOnClient }) => {
           if (serviceWorker) {
-            // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
+            // @ts-expect-error test override
             global.navigator.serviceWorker = serviceWorker;
           }
 
-          (onClient as jest.Mock).mockImplementationOnce(() => isOnClient);
+          (onClient as jest.Mock).mockReturnValue(isOnClient);
+
+          const contextValue = {
+            ...contextStub,
+            swPath: swPath ?? null,
+          };
 
           render(
             // @ts-expect-error only require a subset of properties on service context for testing purposes
-            <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+            <ServiceContext.Provider value={contextValue}>
               <ServiceWorkerContainer />
             </ServiceContext.Provider>,
           );
-          expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+
+          if (navigator.serviceWorker) {
+            expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+          } else {
+            expect(navigator.serviceWorker).toBeUndefined();
+          }
         },
       );
     });
