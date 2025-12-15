@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
@@ -11,6 +12,7 @@ import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
 
+const PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME = 'newswb_ws_pwa_promo_prompt';
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotional_banner_dismissals';
 const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotional_banner_last_dismissed';
 const PWA_BANNER_MAX_DISMISSALS = 3;
@@ -39,25 +41,63 @@ const isBannerVisible = () => {
   return true;
 };
 
-const PWAPromotionalBanner = () => {
-  const { promotionalBanner } = use(ServiceContext);
-  const { isLite, isAmp } = use(RequestContext);
-  const [isVisible, setIsVisible] = useState(() => isBannerVisible());
+// TODO: Export Treatment components
+// TODO: Export constants (event names, experiment names, variant names)
 
-  // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+// Control variant component
+const PWAPromotionalBannerControl = () => {
   const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: pwaPromoBannerExperimentName,
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  const isPwaPromoExperimentEnabled = pwaPromoBannerVariant === 'on';
+  const { isInstallable } = usePWAInstallPrompt({
+    preventNative: false, // Allow native browser behavior
+    onAccepted: () => {
+      console.log(`📌 PWAPromotionalBannerControl - onAccepted`);
+    },
+    onDismissed: () => {
+      console.log(`📌 PWAPromotionalBannerControl - onDismissed`);
+    },
+    onPromptShown: () => {
+      console.log(`📌 PWAPromotionalBannerControl - onPromptShown`);
+    },
+  });
+
+  console.log(`📌 PWAPromotionalBannerControl`, { isInstallable });
+
+  const viewTracker = useViewTracker({
+    componentName: 'pwa-promotional-banner',
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
+    experimentVariant: pwaPromoBannerVariant,
+  });
+
+  if (isInstallable) {
+    console.log(`PWA is installable - fire view event`);
+    return <div {...viewTracker} />;
+  }
+
+  return null;
+};
+
+// Treatment variant component (existing logic)
+const PWAPromotionalBannerTreatment = () => {
+  const { promotionalBanner } = use(ServiceContext);
+  const { isLite, isAmp } = use(RequestContext);
+  const [isVisible, setIsVisible] = useState(() => isBannerVisible());
   const isAndroid = useAndroidDetection();
 
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
   const optimizelyExperimentData = {
-    experimentName: pwaPromoBannerExperimentName,
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
     experimentVariant: pwaPromoBannerVariant || 'off',
   };
+
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
     ...optimizelyExperimentData,
@@ -101,6 +141,7 @@ const PWAPromotionalBanner = () => {
     },
     [onSecondaryClickTrack, handleBannerDismiss],
   );
+
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: () => {
       setIsVisible(false);
@@ -126,7 +167,6 @@ const PWAPromotionalBanner = () => {
     isLite ||
     isAmp ||
     !isAndroid ||
-    !isPwaPromoExperimentEnabled ||
     !isVisible ||
     !isInstallable ||
     !promotionalBanner
@@ -160,4 +200,26 @@ const PWAPromotionalBanner = () => {
     </div>
   );
 };
+
+// HOC that handles experiment variant logic
+const PWAPromotionalBanner = () => {
+  const pwaPromoBannerExperimentName = PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME;
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
+  console.log(`📌 PWAPromotionalBanner`, { pwaPromoBannerVariant });
+
+  if (pwaPromoBannerVariant === 'control') {
+    return <PWAPromotionalBannerControl />;
+  }
+
+  if (pwaPromoBannerVariant === 'on') {
+    return <PWAPromotionalBannerTreatment />;
+  }
+
+  return null;
+};
+
 export default PWAPromotionalBanner;
