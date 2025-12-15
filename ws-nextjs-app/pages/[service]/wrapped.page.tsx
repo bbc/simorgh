@@ -79,8 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
   return {
     props: {
       error: null,
-      isAmp: false,
-      isNextJs: true,
       page: null,
       pageData: {
         metadata: {
@@ -92,7 +90,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: 200,
       timeOnServer: Date.now(), // TODO: check if needed?
-      ...extractHeaders(reqHeaders),
     },
   };
 };
