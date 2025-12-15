@@ -93,10 +93,6 @@ export default async (context: GetServerSidePropsContext) => {
   return {
     props: {
       id: resolvedUrlWithoutQuery,
-      isAmp,
-      isApp,
-      isLite,
-      isNextJs: true,
       pageData: {
         title: pageData.title ?? null,
         seoTitle: pageData.seoTitle ?? null,
@@ -111,7 +107,6 @@ export default async (context: GetServerSidePropsContext) => {
       service,
       status,
       variant: variant || null,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
