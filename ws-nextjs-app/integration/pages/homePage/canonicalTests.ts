@@ -1,4 +1,4 @@
-import numberOfCurations from '#src/integration/pages/homePage/numberOfCurations';
+import numberOfCurations from './numberOfCurations';
 import {
   runCoreCanonicalTests,
   runMostReadTests,
