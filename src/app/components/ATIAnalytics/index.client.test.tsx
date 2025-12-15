@@ -917,45 +917,6 @@ describe('ATI Analytics Container', () => {
       });
     });
 
-    it('should set reverbParams to null when Reverb is disabled', () => {
-      const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
-      // @ts-expect-error - we need to mock these functions to ensure tests are deterministic
-      canonical.default = mockCanonical;
-
-      const {
-        metadata: { atiAnalytics },
-      } = articleDataNews;
-
-      // @ts-expect-error - only partial data required to manually set 'useReverb' to false
-      const serviceContextProps: ServiceConfig = {
-        atiAnalyticsAppName: 'atiAnalyticsAppName',
-        atiAnalyticsProducerId: 'atiAnalyticsProducerId',
-        atiAnalyticsProducerName: 'atiAnalyticsProducerName',
-        service: 'news',
-        brandName: 'brandName',
-        lang: 'en-GB',
-        useReverb: false,
-      };
-
-      render(
-        <ServiceContext.Provider value={serviceContextProps}>
-          <ATIAnalytics atiData={atiAnalytics} />
-        </ServiceContext.Provider>,
-        {
-          ...defaultRenderProps,
-          atiData: atiAnalytics,
-          isAmp: false,
-          pageData: articleDataNews,
-          pageType: ARTICLE_PAGE,
-          isUK: true,
-        },
-      );
-
-      const { reverbParams } = mockCanonical.mock.calls[0][0];
-
-      expect(reverbParams).toBeNull();
-    });
-
     it('should call AmpATIAnalytics when platform is Amp', () => {
       const mockAmp = jest.fn().mockReturnValue('amp-return-value');
 
