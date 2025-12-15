@@ -6,6 +6,10 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import MediaLoader from '#app/components/MediaLoader';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import MetadataContainer from '../../components/Metadata';
@@ -24,6 +28,13 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
     mediaBlock,
   } = pageData;
   const { script, service } = use(ServiceContext);
+
+  const variation = useOptimizelyVariation({
+    experimentName: 'general_event_bleed_test_2',
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  console.log(variation);
 
   const hasRadioScheduleData = Boolean(radioScheduleData);
   return (
@@ -106,6 +117,7 @@ const LiveRadioPage = ({ pageData }: { pageData: LiveRadioPageData }) => {
           eventTrackingData={{ componentName: 'radio-schedule' }}
         />
       )}
+      <OptimizelyPageMetrics trackPageDepth trackPageView />
     </>
   );
 };
