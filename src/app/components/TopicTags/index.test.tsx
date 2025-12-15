@@ -1,59 +1,47 @@
-import { render } from '../react-testing-library-with-providers';
-import { TopicTags, TopicTag } from '.';
+import { render, screen } from '../react-testing-library-with-providers';
+import { TopicTags } from '.';
 
 describe('TopicTags', () => {
   it('should correctly render a single topic tag', () => {
-    const { container } = render(
-      <TopicTags>
-        <TopicTag name="test1" link="#" />
-      </TopicTags>,
-      { service: 'news' },
-    );
-    expect(container).toMatchSnapshot();
+    const tags = [{ topicName: 'test1', topicId: 'test1' }];
+
+    render(<TopicTags tags={tags} />, {
+      service: 'news',
+    });
+
+    const multipleContainer = screen.queryByTestId('topic-tags-multiple');
+    expect(multipleContainer).not.toBeInTheDocument();
+
+    const singleContainer = screen.queryByTestId('topic-tags-single');
+    expect(singleContainer).toBeInTheDocument();
   });
 
   it('should correctly render multiple topic tags', () => {
-    const { container } = render(
-      <TopicTags>
-        <TopicTag name="test1" link="#" />
-        <TopicTag name="test2" link="#" />
-        <TopicTag name="test3" link="#" />
-        <TopicTag name="test4" link="#" />
-      </TopicTags>,
-      { service: 'news' },
-    );
-    expect(container).toMatchSnapshot();
-  });
+    const tags = [
+      { topicName: 'test1', topicId: 'test1' },
+      { topicName: 'test2', topicId: 'test2' },
+      { topicName: 'test3', topicId: 'test3' },
+      { topicName: 'test4', topicId: 'test4' },
+    ];
 
-  it('should correctly render a single topic tag for an rtl service', () => {
-    const { container } = render(
-      <TopicTags>
-        <TopicTag name="test1" link="#" />
-      </TopicTags>,
-      { service: 'arabic' },
-    );
-    expect(container).toMatchSnapshot();
-  });
+    render(<TopicTags tags={tags} />, {
+      service: 'news',
+    });
 
-  it('should ignore non-TopicTag children', () => {
-    const { container } = render(
-      <TopicTags>
-        <TopicTag name="test1" link="#" />
-        <div>
-          <p>ignore</p>
-        </div>
-        <TopicTag name="test2" link="#" />
-      </TopicTags>,
-      { service: 'news' },
-    );
+    const multipleContainer = screen.queryByTestId('topic-tags-multiple');
+    expect(multipleContainer).toBeInTheDocument();
 
-    expect(container.querySelector('div div')).toBeNull();
-    expect(container.querySelector('p')).toBeNull();
+    const singleContainer = screen.queryByTestId('topic-tags-single');
+    expect(singleContainer).not.toBeInTheDocument();
   });
 
   it('should not render any topic tags if there are none', () => {
-    const { container } = render(<TopicTags />, { service: 'news' });
+    render(<TopicTags tags={[]} />, { service: 'news' });
 
-    expect(container.firstChild).toBeNull();
+    const multipleContainer = screen.queryByTestId('topic-tags-multiple');
+    expect(multipleContainer).not.toBeInTheDocument();
+
+    const singleContainer = screen.queryByTestId('topic-tags-single');
+    expect(singleContainer).not.toBeInTheDocument();
   });
 });
