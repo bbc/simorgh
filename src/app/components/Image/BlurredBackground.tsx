@@ -1,3 +1,5 @@
+import { RequestContext } from '#app/contexts/RequestContext';
+import { use } from 'react';
 import styles from './index.styles';
 
 type BlurredBackgroundProps = {
@@ -5,14 +7,13 @@ type BlurredBackgroundProps = {
 };
 
 const BlurredBackground = ({ src }: BlurredBackgroundProps) => {
-  const lowResImageSrc = src?.replace('{width}', '10');
+  const { isLite } = use(RequestContext);
+  if (isLite) return null;
+
   return (
     <span
       aria-hidden="true"
-      css={[
-        styles.blurredBackground,
-        src && { backgroundImage: `url(${lowResImageSrc})` },
-      ]}
+      css={[styles.blurredBackground, { backgroundImage: src }]}
     />
   );
 };
