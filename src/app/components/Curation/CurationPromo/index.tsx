@@ -71,7 +71,7 @@ const CurationPromo = ({
           lazyLoad={lazy}
           isAmp={isAmp}
           isPortraitImage={isPortraitImage}
-          {...(isLite && { css: styles.image, isLite: true })}
+          {...(isLite && { css: styles.image })}
         >
           {isMedia && (
             <Promo.MediaIcon css={styles.icon} type={type}>
