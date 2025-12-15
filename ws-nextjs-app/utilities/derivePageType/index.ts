@@ -5,12 +5,19 @@ import {
   DOWNLOADS_PAGE,
   LIVE_PAGE,
   UGC_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
   isCpsIdCheck,
   removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
+import SERVICES from '#app/lib/config/services';
+
+const isHomePagePath = (pathname: string) =>
+  SERVICES.some(
+    service => pathname === `/${service}` || pathname === `/${service}/`,
+  );
 
 export default function derivePageType(
   pathname: string,
@@ -20,6 +27,7 @@ export default function derivePageType(
     'http://bbc.com',
   ).pathname;
 
+  if (isHomePagePath(sanitisedPathname)) return HOME_PAGE;
   if (sanitisedPathname.includes('live')) return LIVE_PAGE;
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
