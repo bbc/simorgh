@@ -6,18 +6,18 @@ Topic tags used on World Service article onward journeys.
 
 The `TopicTags` component renders a `<ul>` when there are multiple `TopicTag` children, and a `<div>` when there is only a single tag.
 
+## Props
+
+| Argument | Type  | Required | Example                                          |
+| -------- | ----- | -------- | ------------------------------------------------ |
+| tags     | array | Yes      | [{ topicName: 'Hello', topicId: 'c123456789t' }] |
+
 ## Usage
 
 ```jsx
 import { TopicTags, TopicTag } from '#app/components/TopicTags';
 
-const Wrapper = () => (
-  <TopicTags>
-    <TopicTag name="Retailing" link="/url/to/topic" />
-    <TopicTag name="Business" link="/url/to/topic" />
-    <TopicTag name="Viruses" link="/url/to/topic" />
-  </TopicTags>
-);
+const Wrapper = () => <TopicTags tags={tags} />;
 ```
 
 ### When to use this component
