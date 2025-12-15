@@ -1,28 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextPageContext } from 'next/types';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
-import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
-import { Services } from '#app/models/types/global';
+import { Services, Toggles } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
-
-const setReportTo = (header: Headers) => {
-  header.set(
-    'report-to',
-    JSON.stringify({
-      group: 'worldsvc',
-      max_age: 2592000,
-      endpoints: [
-        {
-          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
-          priority: 1,
-        },
-      ],
-      include_subdomains: true,
-    }),
-  );
-};
 
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
@@ -54,31 +35,38 @@ const isRelaxedCspEnabled = (
   return !omittedCountriesList.includes(country.toLowerCase());
 };
 
-const isValidService = (str: string) => {
-  const [service] = str.split('/').filter(Boolean) as [Services?];
-  return service && SERVICES.includes(service);
+export type CspHeaderResponseProps = {
+  ctx: NextPageContext;
+  service: Services;
+  toggles: Toggles;
 };
 
-const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
-  const { isAmp } = getPathExtension(request.url);
+const cspHeaderResponse = ({
+  ctx,
+  service,
+  toggles,
+}: CspHeaderResponseProps) => {
+  const reqUrl = ctx.req?.url || '';
+  const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
-  const urlPath = request.nextUrl.pathname;
+
   let hasAdsScripts = false;
   let countryList = '';
 
-  if (isValidService(urlPath)) {
-    const service = fallbackServiceParam(request.nextUrl.pathname);
-    const toggles = await getToggles(service);
-
-    ({ enabled: hasAdsScripts, value: countryList = '' } =
-      toggles?.adsNonce || { enabled: false, value: '' });
+  if (SERVICES.includes(service)) {
+    // @ts-expect-error - Toggles type issue
+    const adsNonceToggle = toggles?.adsNonce || { enabled: false, value: '' };
+    hasAdsScripts = adsNonceToggle.enabled;
+    countryList = adsNonceToggle.value;
   }
 
-  const requestHeaders = new Headers(request.headers);
   const country =
-    requestHeaders.get('x-country') || requestHeaders.get('x-bbc-edge-country');
+    ctx?.req?.headers?.['x-country'] ||
+    ctx?.req?.headers?.['x-bbc-edge-country'];
+
   const shouldServeRelaxedCsp =
-    hasAdsScripts && isRelaxedCspEnabled(countryList, country || '');
+    hasAdsScripts &&
+    isRelaxedCspEnabled(countryList, (country as string) || '');
 
   const { directives } = cspDirectives({
     isAmp,
@@ -96,26 +84,25 @@ const cspHeaderResponse = async ({ request }: { request: NextRequest }) => {
     ...BUMP4SpecificConditions,
   });
 
-  requestHeaders.set(
+  ctx.res?.setHeader(
+    'report-to',
+    JSON.stringify({
+      group: 'worldsvc',
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
+
+  ctx.res?.setHeader(
     'Content-Security-Policy',
     contentSecurityPolicyHeaderValue,
   );
-  setReportTo(requestHeaders);
-
-  const responseInit = {
-    request: {
-      headers: requestHeaders,
-    },
-  };
-
-  const cspAlteredResponse = NextResponse.next(responseInit);
-  cspAlteredResponse.headers.set(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
-  setReportTo(cspAlteredResponse.headers);
-
-  return cspAlteredResponse;
 };
 
 export default cspHeaderResponse;
