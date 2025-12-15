@@ -56,6 +56,9 @@ export default async (context: GetServerSidePropsContext) => {
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
+        variant: variant || null,
+        pageType: HOME_PAGE,
+        pathname: resolvedUrlWithoutQuery,
       },
     };
   }
