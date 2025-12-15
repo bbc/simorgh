@@ -1,7 +1,7 @@
 import { Services } from '#app/models/types/global';
 import { StoryArgs } from '#app/models/types/storybook';
 import readme from './README.md';
-import { TopicTags, TopicTag } from '.';
+import { TopicTags } from '.';
 
 interface Props {
   service: Services;
@@ -11,11 +11,7 @@ interface Props {
 const DefaultStory = (_: StoryArgs, { service, text }: Props) => {
   const shortText = service === 'news' ? text : text.trim().split(' ')[0];
 
-  return (
-    <TopicTags>
-      <TopicTag name={shortText} link="#" />
-    </TopicTags>
-  );
+  return <TopicTags tags={[{ topicName: shortText, topicId: '123' }]} />;
 };
 
 const MultipleStory = (_: StoryArgs, { service, text }: Props) => {
@@ -24,13 +20,12 @@ const MultipleStory = (_: StoryArgs, { service, text }: Props) => {
       ? [text.trim().split(' ')[0], text.trim().split(' ')[0]]
       : text.trim().split(' ');
 
-  return (
-    <TopicTags>
-      {textArray.map((word, index) => (
-        <TopicTag key={index} name={word} link="#" />
-      ))}
-    </TopicTags>
-  );
+  const tags = textArray.map((word, index) => ({
+    topicName: word,
+    topicId: `${123 + index}`,
+  }));
+
+  return <TopicTags tags={tags} />;
 };
 
 export default {
