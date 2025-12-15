@@ -37,24 +37,22 @@ export const TopicTags = ({
     <ul
       role="list"
       css={styles.topicsList}
-      {...viewTracker}
       data-testid="topic-tags-multiple"
+      {...viewTracker}
     >
-      {tags.map(tag => {
-        return (
-          <li key={tag.topicId} css={styles.topicTagItem}>
-            <a href={getTopicPageUrl(tag.topicId)} {...clickTrackerHandler}>
-              {tag.topicName}
-            </a>
-          </li>
-        );
-      })}
+      {tags.map(tag => (
+        <li key={tag.topicId} css={styles.topicTagItem}>
+          <a href={getTopicPageUrl(tag.topicId)} {...clickTrackerHandler}>
+            {tag.topicName}
+          </a>
+        </li>
+      ))}
     </ul>
   ) : (
     <div
       css={styles.singleContainer}
-      {...viewTracker}
       data-testid="topic-tags-single"
+      {...viewTracker}
     >
       <div css={styles.topicTagItem}>
         <a href={getTopicPageUrl(tags[0].topicId)} {...clickTrackerHandler}>
