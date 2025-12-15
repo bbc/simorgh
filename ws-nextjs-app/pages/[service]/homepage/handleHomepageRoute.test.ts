@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import defaultToggles from '#app/lib/config/toggles';
 import pidginHomepageFixtureData from '#data/pidgin/homePage/index.json';
 import * as shouldRender from '../articles/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
@@ -16,8 +15,6 @@ jest.mock('../articles/shouldRender', () => {
 
 describe('handleHomepageRoute', () => {
   const mockSetHeader = jest.fn();
-  const toggles = defaultToggles.local;
-
   const mockGetServerSidePropsContext = {
     req: {
       headers: {},
@@ -38,7 +35,6 @@ describe('handleHomepageRoute', () => {
         pageData: pidginHomepageFixtureData.data,
         status: 200,
       },
-      toggles,
     });
   });
 
@@ -92,7 +88,6 @@ describe('handleHomepageRoute', () => {
   it('throws if pageData is missing', async () => {
     jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
       data: { pageData: null, status: 200 },
-      toggles,
     });
 
     await expect(
