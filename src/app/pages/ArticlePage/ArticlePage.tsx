@@ -49,6 +49,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import ReadMeter from '#app/components/Riddle/Components/ReadMeter';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -248,7 +249,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
-
+  const wordCount = pageData?.metadata?.stats?.wordCount;
   const {
     metadata: { atiAnalytics },
     mostRead: mostReadInitialData,
@@ -443,6 +444,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               componentsToRender={componentsToRender}
             />
             <OptimizelyPageMetrics trackPageComplete />
+            <ReadMeter wordCount={wordCount} />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth />
           {showTopics && (
