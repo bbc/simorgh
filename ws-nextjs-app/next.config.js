@@ -9,8 +9,7 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
-const isLocal =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
+const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -29,6 +28,17 @@ module.exports = {
   },
   async rewrites() {
     return [
+      // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
+      // but will not work on localhost. This rewrites requests from paths outside of root
+      // to the sw.js file found in the 'public' folder, which is served from the root.
+      ...(isLocal
+        ? [
+            {
+              source: '/:path/sw.js',
+              destination: '/sw.js',
+            },
+          ]
+        : []),
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
