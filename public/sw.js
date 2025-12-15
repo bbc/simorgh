@@ -127,22 +127,7 @@ const CACHEABLE_FILES = [
 ];
 
 const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
-
-const isCacheableRequest = url =>
-  CACHEABLE_FILES.some(pattern => pattern.test(url));
-
-const handleWebPRequest = async request => {
-  if (!WEBP_IMAGE.test(request.url)) return null;
-  const accepts = request.headers.get('accept') || '';
-  if (accepts.includes('webp')) return null;
-  const fallbackUrl = request.url.replace('.webp', '');
-  try {
-    return await fetch(fallbackUrl, { mode: 'no-cors' });
-  } catch {
-    return null;
-  }
-};
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 const fetchEventHandler = async event => {
   // Skip HMR/webpack requests to avoid breaking Next.js Fast Refresh
