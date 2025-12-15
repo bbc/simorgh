@@ -1,10 +1,12 @@
 import { useState, use, useEffect, useRef } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
+import { RequestContext } from '#app/contexts/RequestContext';
 
 const PageCompleteTracking = () => {
   const ref = useRef(null);
   const observer = useRef(null);
   const { optimizely } = use(OptimizelyContext);
+  const { pageType } = use(RequestContext);
   const [pageCompleteSent, setPageCompleteSent] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -34,11 +36,11 @@ const PageCompleteTracking = () => {
   useEffect(() => {
     if (sendPageCompleteEvent) {
       optimizely?.onReady().then(() => {
-        optimizely.track('article_completes');
+        optimizely.track(`${pageType}_completes`);
         setPageCompleteSent(true);
       });
     }
-  }, [sendPageCompleteEvent, optimizely]);
+  }, [sendPageCompleteEvent, optimizely, pageType]);
 
   return <div ref={ref} aria-hidden="true" />;
 };
