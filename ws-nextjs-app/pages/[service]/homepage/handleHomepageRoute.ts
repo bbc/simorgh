@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
@@ -57,10 +56,6 @@ export default async (context: GetServerSidePropsContext) => {
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
-        variant: variant || null,
-        pageType: HOME_PAGE,
-        pathname: resolvedUrlWithoutQuery,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
