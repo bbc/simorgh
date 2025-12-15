@@ -4,11 +4,11 @@ import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import TopicTags from '#app/components/TopicTags';
-import { TopicTag as TopicTagType } from '#app/models/types/metadata';
+import { TopicTag } from '#app/models/types/metadata';
 import styles from './index.styles';
 
 interface RelatedTopicsProps {
-  topics: Pick<TopicTagType, 'topicName' | 'topicId'>[];
+  topics: Pick<TopicTag, 'topicName' | 'topicId'>[];
   mobileDivider?: boolean;
   bar?: boolean;
   className?: string;
