@@ -43,9 +43,7 @@ const RelatedTopics = ({
     const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
     const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
 
-    return variant
-      ? `${hostname}/${service}/${topicsPath}/${id}/${variant}`
-      : `${hostname}/${service}/${topicsPath}/${id}`;
+    return `${hostname}/${service}/${topicsPath}/${id}${variant ? `/${variant}` : ''}`;
   };
 
   const topicTagItems = topics.map(({ topicName, topicId }) => (
