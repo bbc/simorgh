@@ -28,7 +28,7 @@ export default async (context: GetServerSidePropsContext) => {
   const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
@@ -64,7 +64,6 @@ export default async (context: GetServerSidePropsContext) => {
         variant: variant || null,
         pageType: HOME_PAGE,
         pathname: resolvedUrlWithoutQuery,
-        toggles,
         ...extractHeaders(reqHeaders),
       },
     };
@@ -111,7 +110,6 @@ export default async (context: GetServerSidePropsContext) => {
       serverSideExperiments,
       service,
       status,
-      toggles,
       variant: variant || null,
       ...extractHeaders(reqHeaders),
     },
