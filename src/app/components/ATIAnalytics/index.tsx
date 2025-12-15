@@ -5,7 +5,7 @@ import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import AmpGeo from '../../legacy/components/AmpGeo';
 import { ATIProps } from './types';
-import { buildReverbParams } from './params';
+import buildReverbParams from './params';
 
 const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   const requestContext = use(RequestContext);
