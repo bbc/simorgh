@@ -16,6 +16,7 @@ export type GameData = {
   hint1: HintData;
   hint2: HintData;
   answer: string;
+  funFact: string;
 };
 
 const getTimeDiff = (a: Date, b: Date) => {
@@ -29,12 +30,23 @@ const getTimeDiff = (a: Date, b: Date) => {
   return [hoursToGo, minutesToGo, secondsToGo];
 };
 
+const capitalise = (str: string) => {
+  if (!str) return '';
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
+
 export default () => {
-  const { gameData, devTime, gameIndex, submitAttempt, gameState } =
-    use(RiddleContext);
+  const {
+    gameData,
+    devTime,
+    gameIndex,
+    submitAttempt,
+    gameState,
+    revealAnswer,
+  } = use(RiddleContext);
   const { goes, coins } = use(LocalStorageContext);
   const inputRef = useRef<HTMLInputElement>(null);
-  const { question, hint1, hint2, answer, expire } = gameData;
+  const { question, hint1, hint2, answer, expire, funFact } = gameData;
 
   const expiryDate = new Date(expire);
   const currTime = devTime;
@@ -62,9 +74,8 @@ export default () => {
         <Text css={style.question} size="greatPrimer" fontVariant="sansBold">
           {question}
         </Text>
-
         {gameState === GameState.PLAY && (
-          <>
+          <div css={style.fixedHeight}>
             <div css={style.hintsArea}>
               <Hint {...hint1} index={0} />
               <Hint {...hint2} index={1} />
@@ -74,6 +85,9 @@ export default () => {
                 price={2500}
                 paidSymbol="Answer"
                 index={2}
+                onClickFn={() => {
+                  revealAnswer(2500);
+                }}
               />
             </div>
             <form css={style.inputContainer}>
@@ -102,22 +116,34 @@ export default () => {
                 </Text>
               </button>
             </form>
-          </>
+          </div>
         )}
         {gameState === GameState.WINNER && (
-          <>
+          <div css={style.fixedHeight}>
             <Heading level={3} css={style.answerHeading}>
-              {answer}
+              {capitalise(answer)}
             </Heading>
-            <Text as="p" fontVariant="serif" css={style.didYouKnow}>
-              Did you know? Unlike diesel-electric submarines, which need to
-              surface or snorkel to recharge batteries, nuclear submarines use a
-              nuclear reactor to generate power, allowing them to produce their
-              own oxygen and fresh water. The main limiting factor for how long
-              they can stay underwater is food supply for the crew, not fuel or
-              air.
+            <Text as="p" css={style.didYouKnow}>
+              {funFact}
             </Text>
-          </>
+          </div>
+        )}
+        {gameState === GameState.FAILED && (
+          <div css={style.fixedHeight}>
+            <Heading level={3} css={style.answerHeading}>
+              {`You've run out of attempts!`}
+            </Heading>
+            <Hint
+              title="Answer"
+              hintText={answer}
+              price={2500}
+              paidSymbol="Answer"
+              index={2}
+              onClickFn={() => {
+                revealAnswer(2500);
+              }}
+            />
+          </div>
         )}
       </div>
       <div css={style.detailsArea}>

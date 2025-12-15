@@ -17,11 +17,13 @@ const Option = ({ title, children }: PropsWithChildren<{ title: string }>) => {
 };
 
 export default () => {
-  const { addCoins, addGoes } = use(LocalStorageContext);
+  const { addCoins } = use(LocalStorageContext);
   const {
     devTime,
     forceTimeInc24: forceTimeInc,
     forceTimeDec24: forceTimeDec,
+    gameState,
+    devOptionResetGoes,
   } = use(RiddleContext);
 
   return (
@@ -30,7 +32,10 @@ export default () => {
         Developer Tools
       </Text>
       <Text css={style.date} fontVariant="sansBold">
-        Sys Date: {devTime.toDateString()}
+        Sim Date: {devTime.toDateString()}
+      </Text>
+      <Text css={style.date} fontVariant="sansBold">
+        Game State: {gameState}
       </Text>
       <div css={style.container}>
         <Option title="Time Controls">
@@ -48,7 +53,7 @@ export default () => {
           <button
             type="button"
             onClick={() => {
-              addGoes();
+              devOptionResetGoes();
             }}
           >
             ADD ATTEMPTS

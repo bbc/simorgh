@@ -16,10 +16,14 @@ export default {
     }),
   playArea: ({ spacings, palette }: Theme) =>
     css({
+      flex: 1,
       color: palette.GHOST,
       background: palette.POSTBOX,
       padding: `${spacings.FULL}rem`,
-      minHeight: '23.2rem',
+    }),
+  fixedHeight: () =>
+    css({
+      minHeight: '13.5rem',
     }),
   question: ({ palette }: Theme) =>
     css({
@@ -33,7 +37,7 @@ export default {
     }),
   answerHeading: ({ palette, spacings }: Theme) =>
     css({
-      marginTop: `${spacings.TRIPLE}rem`,
+      margin: `${spacings.TRIPLE}rem 0`,
       color: palette.WHITE,
     }),
   didYouKnow: ({ palette }: Theme) =>

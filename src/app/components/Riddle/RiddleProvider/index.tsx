@@ -26,6 +26,7 @@ const defaultGameData = {
     price: 0,
   },
   answer: 'Game Closed',
+  funFact: 'Game Closed',
 } as GameData;
 
 export enum GameState {
@@ -44,6 +45,8 @@ export type RiddleGameState = {
   forceTimeInc24: () => void;
   forceTimeDec24: () => void;
   submitAttempt: (str: string) => void;
+  revealAnswer: (price: number) => void;
+  devOptionResetGoes: () => void;
 };
 
 export const RiddleContext = createContext<RiddleGameState>(
@@ -63,12 +66,25 @@ const findCurrGameIndex = (forcedDate?: Date) => {
 };
 
 export default ({ children }: PropsWithChildren) => {
-  const { resetHints, goes, reduceGoes, addGoes } = use(LocalStorageContext);
+  const {
+    resetHints,
+    goes,
+    reduceGoes,
+    addGoes,
+    isWinner,
+    updateWinnerState,
+    coins,
+  } = use(LocalStorageContext);
   const [devTime, updateDevTime] = useState(new Date());
   const initialIndex = findCurrGameIndex();
   const [gameIndex, updateIndex] = useState(initialIndex);
   const gameData = gameIndex > -1 ? data[gameIndex] : defaultGameData;
-  const initialGameState = gameIndex > -1 ? GameState.PLAY : GameState.CLOSED;
+  let initialGameState = gameIndex > -1 ? GameState.PLAY : GameState.CLOSED;
+  if (goes <= 0 && isWinner === false) {
+    initialGameState = GameState.FAILED;
+  } else if (isWinner === true) {
+    initialGameState = GameState.WINNER;
+  }
   const [gameState, updateGameState] = useState(initialGameState);
 
   useEffect(() => {
@@ -93,12 +109,20 @@ export default ({ children }: PropsWithChildren) => {
         resetHints();
         updateIndex(nextGameIndex);
         updateGameState(updatedGameState);
+        updateWinnerState(false);
         addGoes();
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [addGoes, devTime, gameData.expire, gameState, resetHints]);
+  }, [
+    addGoes,
+    devTime,
+    gameData.expire,
+    gameState,
+    resetHints,
+    updateWinnerState,
+  ]);
 
   const value = useMemo(() => {
     const forceTimeInc24 = () => {
@@ -118,6 +142,7 @@ export default ({ children }: PropsWithChildren) => {
       resetHints();
       updateIndex(nextGameIndex);
       updateGameState(updatedGameState);
+      updateWinnerState(false);
       addGoes();
     };
 
@@ -131,8 +156,26 @@ export default ({ children }: PropsWithChildren) => {
         const myRegex = new RegExp(answer, 'gi');
         if (myRegex.exec(sanitised) !== null) {
           updateGameState(GameState.WINNER);
+          updateWinnerState(true);
+        } else if (myRegex.exec(sanitised) === null && goes === 1) {
+          updateGameState(GameState.FAILED);
+          updateWinnerState(false);
         }
         reduceGoes();
+      }
+    };
+
+    const revealAnswer = (price: number) => {
+      if (price <= coins) {
+        updateGameState(GameState.WINNER);
+        updateWinnerState(true);
+      }
+    };
+
+    const devOptionResetGoes = () => {
+      addGoes();
+      if (gameState !== GameState.CLOSED) {
+        updateGameState(GameState.PLAY);
       }
     };
 
@@ -145,9 +188,12 @@ export default ({ children }: PropsWithChildren) => {
       devTime,
       gameIndex,
       submitAttempt,
+      revealAnswer,
+      devOptionResetGoes,
     };
   }, [
     addGoes,
+    coins,
     devTime,
     gameData,
     gameIndex,
@@ -155,6 +201,7 @@ export default ({ children }: PropsWithChildren) => {
     goes,
     reduceGoes,
     resetHints,
+    updateWinnerState,
   ]);
 
   return (

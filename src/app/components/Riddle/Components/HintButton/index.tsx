@@ -18,7 +18,8 @@ export default ({
   paidSymbol = 'Hint',
   price = 250,
   index,
-}: HintData & { index: number }) => {
+  onClickFn,
+}: HintData & { index: number; onClickFn?: () => void }) => {
   const { paidHints, buyHint, coins } = use(LocalStorageContext);
   const priceText = `🪙 ${price}`;
   const paidStatus = paidHints[index];
@@ -30,6 +31,9 @@ export default ({
         type="button"
         css={style.hintButton}
         onClick={() => {
+          if (onClickFn) {
+            onClickFn();
+          }
           buyHint(index, price);
         }}
         {...((paidStatus || !isAffordable) && { disabled: true })}

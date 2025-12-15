@@ -1,5 +1,6 @@
 import React, {
   createContext,
+  Dispatch,
   PropsWithChildren,
   useMemo,
   useState,
@@ -15,6 +16,8 @@ export type LocalStorage = {
   reduceGoes: () => void;
   buyHint: (amount: number, price: number) => void;
   resetHints: () => void;
+  isWinner: boolean;
+  updateWinnerState: (bool: boolean) => void;
 };
 
 export const LocalStorageContext = createContext<LocalStorage>(
@@ -31,6 +34,7 @@ const getLocalData = () => {
       goes: parsedData.goes ?? 5,
       coins: parsedData.coins ?? 0,
       paidHints: parsedData.paidHints ?? [false, false, false],
+      isWinner: parsedData.isWinner ?? false,
     };
   }
 
@@ -38,6 +42,7 @@ const getLocalData = () => {
     goes: 5,
     coins: 0,
     paidHints: [false, false, false],
+    isWinner: false,
   };
 };
 
@@ -45,20 +50,24 @@ const setLocalData = ({
   goes,
   coins,
   paidHints,
+  isWinner,
 }: {
   goes?: number;
   coins?: number;
   paidHints?: boolean[];
+  isWinner?: boolean;
 }) => {
   const {
     goes: localGoes,
     coins: localCoins,
     paidHints: localPaidHints,
+    isWinner: localIsWinner,
   } = getLocalData();
   const updatedData = {
     goes: goes ?? localGoes,
     coins: coins ?? localCoins,
     paidHints: paidHints ?? localPaidHints,
+    isWinner: isWinner ?? localIsWinner,
   };
   const toStore = JSON.stringify(updatedData);
   window.localStorage.setItem(DATA_KEY, toStore);
@@ -69,11 +78,13 @@ export default ({ children }: PropsWithChildren) => {
     goes: initialGoes,
     coins: initialCoins,
     paidHints: initialPaidHints,
+    isWinner: initialIsWinner,
   } = getLocalData();
 
   const [coins, updateCoins] = useState(initialCoins);
   const [goes, updateGoes] = useState(initialGoes);
   const [paidHints, updatePaidHints] = useState(initialPaidHints);
+  const [isWinner, updateIsWinner] = useState(initialIsWinner);
 
   const addCoins = (amount: number) => {
     updateCoins(prevAmount => {
@@ -105,8 +116,6 @@ export default ({ children }: PropsWithChildren) => {
     });
   };
 
-  // TO DO: Reset goes during transition period.
-  // TO DO: Reset paid for.
   const value = useMemo(() => {
     const buyHint = (index: number, price: number) => {
       if (price <= coins) {
@@ -130,6 +139,13 @@ export default ({ children }: PropsWithChildren) => {
       }
     };
 
+    const updateWinnerState = (bool: boolean) => {
+      updateIsWinner(() => {
+        setLocalData({ isWinner: bool });
+        return bool;
+      });
+    };
+
     return {
       coins,
       goes,
@@ -140,8 +156,10 @@ export default ({ children }: PropsWithChildren) => {
       paidHints,
       buyHint,
       resetHints,
+      isWinner,
+      updateWinnerState,
     };
-  }, [coins, goes, paidHints]);
+  }, [coins, goes, isWinner, paidHints]);
 
   return (
     <LocalStorageContext.Provider value={value}>
