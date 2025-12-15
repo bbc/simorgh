@@ -3,7 +3,7 @@ import { use } from 'react';
 import styles from './index.styles';
 
 type BlurredBackgroundProps = {
-  src?: string;
+  src: string;
 };
 
 const BlurredBackground = ({ src }: BlurredBackgroundProps) => {
@@ -13,7 +13,7 @@ const BlurredBackground = ({ src }: BlurredBackgroundProps) => {
   return (
     <span
       aria-hidden="true"
-      css={[styles.blurredBackground, { backgroundImage: src }]}
+      css={[styles.blurredBackground, { backgroundImage: `url(${src})` }]}
     />
   );
 };
