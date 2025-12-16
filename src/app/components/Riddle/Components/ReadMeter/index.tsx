@@ -8,7 +8,7 @@ import LocalStorageProvider, {
   LocalStorageContext,
 } from '../../LocalStorageProvider';
 
-const ReadMeter = ({ wordCount }: { wordCount: number }) => {
+const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
   const { coins, addCoins } = use(LocalStorageContext);
   const [message, setMessage] = useState<null | string>(null);
 
@@ -58,7 +58,7 @@ const ReadMeter = ({ wordCount }: { wordCount: number }) => {
   );
 };
 
-export default ({ wordCount }: { wordCount: number }) => {
+export default ({ wordCount }: { wordCount?: number }) => {
   const ReadMeterWithProvider = (
     <LocalStorageProvider>
       <ReadMeter wordCount={wordCount} />
