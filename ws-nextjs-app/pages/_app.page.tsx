@@ -1,4 +1,4 @@
-import App, { AppContext, AppProps } from 'next/app';
+import App, { AppContext } from 'next/app';
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -25,7 +25,7 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeaders from '#nextjs/utilities/addVaryHeader';
 
-interface Props extends AppProps {
+interface Props {
   pageProps: {
     bbcOrigin?: string;
     id?: string;
