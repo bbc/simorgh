@@ -4,11 +4,20 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import IMAGE from '../../../components/Image';
+import IMAGE from '#app/components/Image';
+import BlurredBackground from '#app/components/Image/BlurredBackground';
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
+  overflow: hidden;
+  ${({ isPortraitImage }) =>
+    isPortraitImage &&
+    `
+      > * img {
+        object-fit: contain;
+      }
+    `}
 `;
 
 const ChildWrapper = styled.div`
@@ -62,6 +71,8 @@ const Image = props => {
     src,
     useLargeImages = false,
     className,
+    isPortraitImage,
+    isLite,
     ...rest
   } = props;
   const isProgrammeImage = src.startsWith(
@@ -69,24 +80,26 @@ const Image = props => {
   );
   const suffix = src.endsWith('.webp') ? '' : '.webp';
   const primarySrcSet = createSrcSet(src, isProgrammeImage, suffix);
-
   const fallbackSrcSet = createSrcSet(src, isProgrammeImage).replaceAll(
     '.webp',
     '',
   );
-
   const sizes = createSizes(useLargeImages, isProgrammeImage);
+  const srcWith240Width = src.replace('{width}', 240);
+
   return (
-    <Wrapper>
+    <Wrapper isPortraitImage={isPortraitImage}>
+      {isPortraitImage && <BlurredBackground src={srcWith240Width} />}
       <IMAGE
         {...rest}
-        src={src.replace('{width}', 240)}
+        src={srcWith240Width}
         srcSet={primarySrcSet}
         mediaType="image/webp"
         fallbackSrcSet={fallbackSrcSet}
         fallbackMediaType="image/jpeg"
         sizes={sizes}
         aspectRatio={[16, 9]}
+        {...(isPortraitImage && { placeholder: false })}
       />
       {children && (
         <ChildWrapper className={className}>{children}</ChildWrapper>

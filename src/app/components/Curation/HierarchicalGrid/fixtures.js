@@ -283,4 +283,20 @@ export const pidginPromosWithMedia = [
     imageAlt: 'NYSC corps members',
     id: 'cgm1ekn44p1o',
   },
+  {
+    type: 'video',
+    duration: 'PT5M21S',
+    isLive: false,
+    title:
+      "'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi",
+    firstPublished: '2025-12-09T13:55:32.118Z',
+    lastPublished: '2025-12-09T13:55:32.118Z',
+    link: 'https://www.bbc.com/pidgin/articles/ce3zyp0z93do',
+    imageUrl:
+      'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a5fb/live/a7edb960-d506-11f0-8c06-f5d460985095.jpg.webp',
+    imageAlt: 'Sheik Ahmad Gumi',
+    isPortraitImage: true,
+    id: 'ce3zyp0z93do',
+    readTime: 1,
+  },
 ];
