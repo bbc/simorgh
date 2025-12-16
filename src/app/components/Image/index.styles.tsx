@@ -53,6 +53,12 @@ const styles = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     filter: 'blur(15px)',
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      background: 'rgba(0,0,0,.3)',
+    },
   }),
 };
 
