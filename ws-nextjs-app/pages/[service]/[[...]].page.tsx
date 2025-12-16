@@ -41,6 +41,9 @@ const getPageType = ({
   resolvedUrl: string;
   reqHeaders: IncomingHttpHeaders;
 }) => {
+  // TODO: Exception for av-embeds that should be removed once final av-embeds route has page-type header
+  if (resolvedUrl?.includes('av-embeds')) return AV_EMBEDS;
+
   const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
 
   const { SIMORGH_APP_ENV } = getEnvConfig();
