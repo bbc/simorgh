@@ -1,5 +1,7 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
+import { IncomingHttpHeaders } from 'node:http';
+
 import logResponseTime from '#server/utilities/logResponseTime';
 import {
   AV_EMBEDS,
@@ -11,12 +13,14 @@ import {
   HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
-// AV Embeds
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import derivePageType from '#nextjs/utilities/derivePageType';
+
+// AV Embeds
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -34,27 +38,35 @@ const MediaArticlePage = dynamic(
 );
 const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
 
-type PageProps = {
-  pageType?: PageTypes;
-} & AvEmbedsPageProps &
-  ArticlePageProps &
-  HomePageProps;
+const getPageType = ({
+  resolvedUrl,
+  reqHeaders,
+}: {
+  resolvedUrl: string;
+  reqHeaders: IncomingHttpHeaders;
+}) => {
+  const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
 
-const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
-  // TODO: 'pagetype' header is for testing purposes only
-  const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
+  const { SIMORGH_APP_ENV } = getEnvConfig();
 
-  switch (pageTypeHeader) {
-    case AV_EMBEDS?.toLowerCase():
-      return AV_EMBEDS;
-    case ARTICLE_PAGE:
-    case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
-      return ARTICLE_PAGE;
-    case HOME_PAGE:
-      return HOME_PAGE;
+  switch (SIMORGH_APP_ENV) {
+    // In local development, use the 'page-type' header if it exists,
+    // otherwise derive the page-type from the URL
+    case 'local': {
+      if (pageTypeHeader) return pageTypeHeader;
+
+      return derivePageType(resolvedUrl);
+    }
+    // In all other environments, always derive the page-type from the 'page-type' header
     default:
-      return null;
+      return pageTypeHeader;
   }
+};
+
+const ROUTE_HANDLERS = {
+  [AV_EMBEDS]: handleAvRoute,
+  [ARTICLE_PAGE]: handleArticleRoute,
+  [HOME_PAGE]: handleHomepageRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -67,18 +79,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  // Determine the page type
-  const pageType = getPageTypeFromHeaders(reqHeaders);
+  const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  if (resolvedUrl?.includes('av-embeds')) {
-    return handleAvRoute(context);
-  }
-
-  if (pageType === ARTICLE_PAGE) {
-    return handleArticleRoute(context);
-  }
-  if (pageType === HOME_PAGE) {
-    return handleHomepageRoute(context);
+  // If a route handler exists for the derived page type, render that page
+  if (ROUTE_HANDLERS?.[pageType]) {
+    return ROUTE_HANDLERS[pageType](context);
   }
 
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
@@ -87,7 +92,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      pathname: resolvedUrl.split('?')?.[0],
+      pathname: resolvedUrl?.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
@@ -95,6 +100,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
     },
   };
 };
+
+type PageProps = {
+  pageType?: PageTypes;
+} & AvEmbedsPageProps &
+  ArticlePageProps &
+  HomePageProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
