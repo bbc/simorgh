@@ -1,6 +1,5 @@
 import { use, useEffect } from 'react';
 import useIsPWA from '#app/hooks/useIsPWA';
-// import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
 import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
 import onClient from '#lib/utilities/onClient';
 import { Helmet } from 'react-helmet';
