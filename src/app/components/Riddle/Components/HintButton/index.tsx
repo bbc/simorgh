@@ -16,7 +16,7 @@ export default ({
   title,
   hintText,
   paidSymbol = 'Hint',
-  price = 250,
+  price = 500,
   index,
   onClickFn,
 }: HintData & { index: number; onClickFn?: () => void }) => {
