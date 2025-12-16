@@ -1,7 +1,13 @@
 /** @jsxFrag React.Fragment */
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import React, { use, useRef } from 'react';
+import React, {
+  use,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import Heading from '#app/components/Heading';
 import Text from '../../../Text';
 import style from './index.styles';
@@ -47,7 +53,9 @@ export default () => {
   const { goes, coins } = use(LocalStorageContext);
   const inputRef = useRef<HTMLInputElement>(null);
   const { question, hint1, hint2, answer, expire, funFact } = gameData;
-
+  const failedMessageRef = useRef<HTMLHeadingElement>(null);
+  const winnerMessageRef = useRef<HTMLHeadingElement>(null);
+  const [isInvoked, setIsInvoked] = useState(false);
   const expiryDate = new Date(expire);
   const currTime = devTime;
   const [hour, minute, second] = getTimeDiff(expiryDate, currTime);
@@ -59,6 +67,18 @@ export default () => {
 
   const goesString = `${goes}/5`;
   const coinsString = `🪙 ${coins}`;
+
+  useLayoutEffect(() => {
+    if (isInvoked) {
+      if (gameState === GameState.WINNER) {
+        winnerMessageRef.current?.focus();
+      }
+      if (gameState === GameState.FAILED) {
+        failedMessageRef.current?.focus();
+      }
+      setIsInvoked(false);
+    }
+  }, [isInvoked, gameState]);
 
   return (
     <div css={style.container} key={gameIndex}>
@@ -87,6 +107,7 @@ export default () => {
                 index={2}
                 onClickFn={() => {
                   revealAnswer(2500);
+                  setIsInvoked(true);
                 }}
               />
             </div>
@@ -107,7 +128,10 @@ export default () => {
                   event.preventDefault();
                   const userInput = inputRef.current?.value;
                   if (userInput) {
-                    submitAttempt(userInput);
+                    const isCorrect = submitAttempt(userInput);
+                    if (isCorrect !== GameState.PLAY) {
+                      setIsInvoked(true);
+                    }
                   }
                 }}
               >
@@ -120,7 +144,12 @@ export default () => {
         )}
         {gameState === GameState.WINNER && (
           <div css={style.fixedHeight}>
-            <Heading level={3} css={style.answerHeading}>
+            <Heading
+              level={3}
+              css={style.answerHeading}
+              ref={winnerMessageRef}
+              tabIndex={-1}
+            >
               {capitalise(answer)}
             </Heading>
             <Text as="p" css={style.didYouKnow}>
@@ -130,7 +159,12 @@ export default () => {
         )}
         {gameState === GameState.FAILED && (
           <div css={style.fixedHeight}>
-            <Heading level={3} css={style.answerHeading}>
+            <Heading
+              level={3}
+              css={style.answerHeading}
+              ref={failedMessageRef}
+              tabIndex={-1}
+            >
               {`You've run out of attempts!`}
             </Heading>
             <Hint
@@ -141,6 +175,7 @@ export default () => {
               index={2}
               onClickFn={() => {
                 revealAnswer(2500);
+                setIsInvoked(true);
               }}
             />
           </div>

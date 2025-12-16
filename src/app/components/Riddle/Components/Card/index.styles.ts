@@ -14,6 +14,10 @@ export default {
         flexDirection: 'column-reverse',
       },
     }),
+  hidden: () =>
+    css({
+      display: 'none',
+    }),
   playArea: ({ spacings, palette }: Theme) =>
     css({
       flex: 1,

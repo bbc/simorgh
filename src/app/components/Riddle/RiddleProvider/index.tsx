@@ -44,7 +44,7 @@ export type RiddleGameState = {
   devTime: Date;
   forceTimeInc24: () => void;
   forceTimeDec24: () => void;
-  submitAttempt: (str: string) => void;
+  submitAttempt: (str: string) => GameState;
   revealAnswer: (price: number) => void;
   devOptionResetGoes: () => void;
 };
@@ -147,6 +147,7 @@ export default ({ children }: PropsWithChildren) => {
     };
 
     const submitAttempt = (submitString: string) => {
+      let updatedGameState = GameState.PLAY;
       if (goes > 0) {
         const sanitised = submitString
           .toLowerCase() // Convert to lowercase
@@ -157,12 +158,16 @@ export default ({ children }: PropsWithChildren) => {
         if (myRegex.exec(sanitised) !== null) {
           updateGameState(GameState.WINNER);
           updateWinnerState(true);
+          updatedGameState = GameState.WINNER;
         } else if (myRegex.exec(sanitised) === null && goes === 1) {
           updateGameState(GameState.FAILED);
           updateWinnerState(false);
+          updatedGameState = GameState.FAILED;
         }
         reduceGoes();
       }
+
+      return updatedGameState;
     };
 
     const revealAnswer = (price: number) => {

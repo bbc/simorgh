@@ -30,7 +30,7 @@ const sizes: Sizes = {
   h4: 'greatPrimer',
 };
 
-const Heading: FC<Props> = forwardRef(
+const Heading = forwardRef(
   (
     {
       children,
