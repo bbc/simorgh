@@ -2,13 +2,13 @@ import { useEffect, useRef } from 'react';
 import useIsPWA from '../useIsPWA';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
-import { OFFLINE_VISIT_FLAG } from '../useOfflinePageTracker';
+import { OFFLINE_VISIT_FLAG } from '../useOfflinePageFlag';
 
 const OFFLINE_PAGE_VIEW_EVENT_NAME = 'pwa-offline-page-view';
 
 /**
  * Tracks when a user who visited the offline page comes back online (PWA only).
- * Works in conjunction with useOfflinePageTracker which sets the flag.
+ * Works in conjunction with useOfflinePageFlag which sets the flag.
  */
 const usePWAOfflineTracking = () => {
   const isPWA = useIsPWA();
@@ -20,20 +20,6 @@ const usePWAOfflineTracking = () => {
 
   const prevIsOnlineRef = useRef(true);
   const lastEventTimeRef = useRef(0);
-
-  // Notify service worker about PWA mode
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.ready.then(registration => {
-        if (registration.active) {
-          registration.active.postMessage({
-            type: 'PWA_MODE',
-            isPWA,
-          });
-        }
-      });
-    }
-  }, [isPWA]);
 
   useEffect(() => {
     if (!isPWA) return;

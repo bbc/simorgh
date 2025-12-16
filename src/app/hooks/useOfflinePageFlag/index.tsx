@@ -6,14 +6,14 @@ const OFFLINE_VISIT_FLAG = 'offline_page_visit';
 
 /**
  * Sets a flag in localStorage when user visits the offline page in PWA mode.
- * This flag is checked by useConnectionBackOnlineTracker to send tracking when back online.
+ * This flag is checked by usePWAOfflineTracking to send tracking when back online.
  * Only tracks when app is running as PWA.
  */
-const useOfflinePageTracker = () => {
+const useOfflinePageFlag = () => {
   const isPWA = useIsPWA();
   const { isOnline } = useNetworkStatusTracker();
   useEffect(() => {
-    if (typeof window === 'undefined' || !isPWA || !isOnline) return;
+    if (typeof window === 'undefined' || !isPWA || isOnline) return;
 
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
@@ -23,5 +23,5 @@ const useOfflinePageTracker = () => {
   }, [isOnline, isPWA]);
 };
 
-export default useOfflinePageTracker;
+export default useOfflinePageFlag;
 export { OFFLINE_VISIT_FLAG };
