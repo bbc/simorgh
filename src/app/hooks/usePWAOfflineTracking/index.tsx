@@ -4,8 +4,7 @@ import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
 import { OFFLINE_VISIT_FLAG } from '../useOfflinePageTracker';
 
-const OFFLINE_PAGE_VIEW_EVENT_NAME = 'offline-page-view';
-const DEBOUNCE_DELAY = 10000;
+const OFFLINE_PAGE_VIEW_EVENT_NAME = 'pwa-offline-page-view';
 
 /**
  * Tracks when a user who visited the offline page comes back online (PWA only).
@@ -41,23 +40,16 @@ const usePWAOfflineTracking = () => {
 
     const wasOnline = prevIsOnlineRef.current;
     const now = Date.now();
-    const timeSinceLastEvent = now - lastEventTimeRef.current;
 
     // Transitioned from offline to online
-    if (!wasOnline && isOnline && timeSinceLastEvent >= DEBOUNCE_DELAY) {
+    if (!wasOnline && isOnline) {
       // Check if user visited offline page while offline
       try {
         const offlineVisitFlag = localStorage.getItem(OFFLINE_VISIT_FLAG);
         if (offlineVisitFlag === 'true') {
-          // eslint-disable-next-line no-console
-          console.warn(
-            '🎯 PWA Offline Tra cking: User visited offline page, sending beacon...',
-          );
           lastEventTimeRef.current = now;
           trackOfflinePageViewEvent(networkType);
           localStorage.removeItem(OFFLINE_VISIT_FLAG);
-          // eslint-disable-next-line no-console
-          console.warn('✅ PWA Offline Tracking: Beacon  sent, flag cleared');
         }
       } catch (error) {
         // eslint-disable-next-line no-console
