@@ -216,6 +216,13 @@ exports[`Canonical Media Article Page Latest Media should match text and url 4`]
 }
 `;
 
+exports[`Canonical Media Article Page Latest Media should match text and url 5`] = `
+{
+  "text": "Video, 'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi, Duration 5,21",
+  "url": "/pidgin/articles/ce3zyp0z93do",
+}
+`;
+
 exports[`Canonical Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
 
 exports[`Canonical Media Article Page Related Content should match text and url 1`] = `

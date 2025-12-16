@@ -32,6 +32,7 @@ export interface Summary extends BaseSummary {
   visualProminence?: VisualProminence | string;
   timeOfDayExperimentName?: string | null;
   timeOfDayVariant?: string | null;
+  isPortraitImage?: boolean;
 }
 
 export const VISUAL_STYLE = {
