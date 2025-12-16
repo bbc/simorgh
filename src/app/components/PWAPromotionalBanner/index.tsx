@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-// TODO: Used for testing - to be removed removed before merging
 import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
@@ -60,7 +58,9 @@ const PWAPromotionalBannerControl = () => {
     alwaysInView: true,
   });
 
-  console.log(`PWAPromotionalBannerControl`, { isInstallable });
+  if (!isInstallable) {
+    return null;
+  }
 
   return <VisuallyHiddenText {...viewTracker} />;
 };
@@ -146,8 +146,6 @@ const PWAPromotionalBannerTreatment = () => {
     [onPrimaryClickTrack, promptInstall],
   );
 
-  console.log(`PWAPromotionalBannerTreatment`, { isInstallable, isVisible });
-
   if (!isVisible || !isInstallable || !promotionalBanner) {
     return null;
   }
@@ -189,8 +187,6 @@ const PWAPromotionalBanner = () => {
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
   });
-
-  console.log(`📌 PWAPromotionalBanner`, { pwaPromoBannerVariant, isPWA });
 
   if (isLite || isAmp || isPWA || !isAndroid) {
     return null;
