@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import useIsPWA from '../useIsPWA';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
@@ -18,35 +18,22 @@ const usePWAOfflineTracking = () => {
     eventName: OFFLINE_PAGE_VIEW_EVENT_NAME,
   });
 
-  const prevIsOnlineRef = useRef(true);
-  const lastEventTimeRef = useRef(0);
-
   useEffect(() => {
-    if (!isPWA) return;
+    if (typeof window === 'undefined' || !isPWA || !isOnline) return;
 
-    const wasOnline = prevIsOnlineRef.current;
-    const now = Date.now();
+    try {
+      const offlineVisitFlag = localStorage.getItem(OFFLINE_VISIT_FLAG);
 
-    // Transitioned from offline to online
-    if (!wasOnline && isOnline) {
-      // Check if user visited offline page while offline
-      try {
-        const offlineVisitFlag = localStorage.getItem(OFFLINE_VISIT_FLAG);
-        if (offlineVisitFlag === 'true') {
-          lastEventTimeRef.current = now;
-          trackOfflinePageViewEvent(networkType);
-          localStorage.removeItem(OFFLINE_VISIT_FLAG);
-        }
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        console.warn(
-          'PWA Offline Tracking:  Error checking offline visit flag',
-          error,
-        );
+      if (offlineVisitFlag !== 'true') {
+        return;
       }
-    }
 
-    prevIsOnlineRef.current = isOnline;
+      trackOfflinePageViewEvent(networkType);
+      localStorage.removeItem(OFFLINE_VISIT_FLAG);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('usePWAOfflineTracking', error);
+    }
   }, [isPWA, isOnline, networkType, trackOfflinePageViewEvent]);
 };
 

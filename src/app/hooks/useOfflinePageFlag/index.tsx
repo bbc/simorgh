@@ -18,7 +18,8 @@ const useOfflinePageFlag = () => {
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
     } catch (error) {
-      // Silently fail if localStorage is unavailable
+      // eslint-disable-next-line no-console
+      console.warn('useOfflinePageFlag', error);
     }
   }, [isOnline, isPWA]);
 };
