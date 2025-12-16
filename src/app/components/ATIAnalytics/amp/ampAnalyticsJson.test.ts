@@ -109,8 +109,6 @@ describe('AMP ATI Analytics', () => {
         ];
 
         const ampAnalyticsJsonConfiguration = ampAnalyticsJson({
-          baseUrl: 'https://exampleBaseAtiUrl.com?',
-          pageviewParams: 'param1=value1&param2=value2',
           reverbParams,
         });
         const {
