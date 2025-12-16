@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react';
-import { use, useState } from 'react';
+import { use } from 'react';
 import Text from '../../../Text';
 import style from './index.styles';
 import { LocalStorageContext } from '../../LocalStorageProvider';
