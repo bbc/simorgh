@@ -32,11 +32,19 @@ const styles = {
     }),
   imageWrapper: ({ mq }: Theme) =>
     css({
+      position: 'relative',
       width: '33%',
       display: 'inline-block',
       verticalAlign: 'top',
       [mq.GROUP_3_ONLY]: {
         width: '100%',
+      },
+    }),
+  portraitImage: () =>
+    css({
+      overflow: 'hidden',
+      '> * img': {
+        objectFit: 'contain',
       },
     }),
   promoLink: ({ palette }: Theme) =>
