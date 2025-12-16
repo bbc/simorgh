@@ -32,7 +32,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -47,6 +47,7 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -228,7 +229,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
 
   // EXPERIMENT: Article Read Time 2
@@ -416,8 +417,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     />
   ) : null;
 
+  // EXPERIMENT: PWA Promotional Banner
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+  const shouldRenderPWAPromotionalBanner =
+    !pageData?.secondaryColumn?.topStories?.length &&
+    pwaPromoBannerVariant === 'on';
+
   return (
     <div css={styles.pageWrapper}>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -482,8 +496,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
           {/* EXPERIMENT: Location based Topics Experiment */}
