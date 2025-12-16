@@ -1,10 +1,9 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  wrapper: ({ spacings, palette }: Theme) =>
+  wrapper: ({ spacings }: Theme) =>
     css({
       padding: `0 0 ${spacings.QUINTUPLE}rem`,
-      backgroundColor: palette.GREY_2,
     }),
   sectionLabel: ({ mq }: Theme) =>
     css({
