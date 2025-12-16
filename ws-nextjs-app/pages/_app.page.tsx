@@ -60,9 +60,9 @@ export default class CustomApp extends App<Props> {
   // The 'pageProps' returned are passed down to ALL pages and merged with page
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
-    const { asPath } = ctx;
+    const { asPath = '' } = ctx;
 
-    const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
+    const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
     const routeSegments = asPath?.split('/')?.filter(Boolean);
 
@@ -71,8 +71,7 @@ export default class CustomApp extends App<Props> {
     const toggles = await getToggles(service);
 
     const pageType =
-      (ctx.req?.headers['page-type'] as PageTypes) ||
-      derivePageType(asPath || '');
+      (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
 
     const serverSideExperiments = getServerExperiments({
       headers: ctx.req?.headers || {},
