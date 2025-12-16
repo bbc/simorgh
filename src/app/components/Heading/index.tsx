@@ -1,6 +1,6 @@
 /** @jsx jsx */
 
-import React, { FC, HTMLAttributes, ForwardedRef, forwardRef } from 'react';
+import React, { HTMLAttributes, ForwardedRef, forwardRef } from 'react';
 import { jsx } from '@emotion/react';
 
 import { GelFontSize, FontVariant } from '../../models/types/theming';
