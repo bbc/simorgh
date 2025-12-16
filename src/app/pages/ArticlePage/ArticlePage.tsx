@@ -32,7 +32,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -229,7 +229,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
 
   // EXPERIMENT: Article Read Time 2
@@ -489,8 +489,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
           {/* EXPERIMENT: Location based Topics Experiment */}
