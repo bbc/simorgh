@@ -1,10 +1,10 @@
+import { DocumentContext } from 'next/document';
 import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
 } from '#app/lib/logger.const';
 import { INTERNAL_SERVER_ERROR, OK } from '#app/lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
-import { DocumentContext } from 'next/document';
 
 import { PageTypes } from '#app/models/types/global';
 import sendCustomMetric from '#src/server/utilities/customMetrics';
