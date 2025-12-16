@@ -1,6 +1,5 @@
 /* eslint-disable import/prefer-default-export */
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
-import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -26,7 +25,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
   }
 
   describe('Header Tests', () => {
-    const serviceName = config[service]?.name || service;
+    const serviceName = service;
     // limit number of tests to 2 services for navigation toggling
     const testMobileNav =
       serviceName === 'ukchina' || serviceName === 'persian';
