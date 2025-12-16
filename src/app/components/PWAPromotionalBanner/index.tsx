@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+// TODO: Used for testing - to be removed removed before merging
 import { useState, use, useCallback } from 'react';
 import usePWAInstallPrompt from '#app/hooks/usePWAInstallPrompt';
 import PromotionalBanner from '#app/components/PromotionalBanner';
@@ -11,6 +12,8 @@ import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useIsPWA from '#app/hooks/useIsPWA';
 
 const PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME = 'newswb_ws_pwa_promo_prompt';
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotional_banner_dismissals';
@@ -41,51 +44,31 @@ const isBannerVisible = () => {
   return true;
 };
 
-// TODO: Export Treatment components
-// TODO: Export constants (event names, experiment names, variant names)
-
-// Control variant component
+// Control group - fire the control group pixel
 const PWAPromotionalBannerControl = () => {
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  const { isInstallable } = usePWAInstallPrompt({
-    preventNative: false, // Allow native browser behavior
-    onAccepted: () => {
-      console.log(`📌 PWAPromotionalBannerControl - onAccepted`);
-    },
-    onDismissed: () => {
-      console.log(`📌 PWAPromotionalBannerControl - onDismissed`);
-    },
-    onPromptShown: () => {
-      console.log(`📌 PWAPromotionalBannerControl - onPromptShown`);
-    },
-  });
-
-  console.log(`📌 PWAPromotionalBannerControl`, { isInstallable });
+  const { isInstallable } = usePWAInstallPrompt({ preventNative: false });
 
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
     experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
     experimentVariant: pwaPromoBannerVariant,
+    alwaysInView: true,
   });
 
-  if (isInstallable) {
-    console.log(`PWA is installable - fire view event`);
-    return <div {...viewTracker} />;
-  }
+  console.log(`PWAPromotionalBannerControl`, { isInstallable });
 
-  return null;
+  return <VisuallyHiddenText {...viewTracker} />;
 };
 
-// Treatment variant component (existing logic)
+// Treatment group - actual PWA banner
 const PWAPromotionalBannerTreatment = () => {
   const { promotionalBanner } = use(ServiceContext);
-  const { isLite, isAmp } = use(RequestContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
-  const isAndroid = useAndroidDetection();
 
   // EXPERIMENT: PWA Promotional Banner
   const pwaPromoBannerVariant = useOptimizelyVariation({
@@ -163,14 +146,9 @@ const PWAPromotionalBannerTreatment = () => {
     [onPrimaryClickTrack, promptInstall],
   );
 
-  if (
-    isLite ||
-    isAmp ||
-    !isAndroid ||
-    !isVisible ||
-    !isInstallable ||
-    !promotionalBanner
-  ) {
+  console.log(`PWAPromotionalBannerTreatment`, { isInstallable, isVisible });
+
+  if (!isVisible || !isInstallable || !promotionalBanner) {
     return null;
   }
 
@@ -201,15 +179,22 @@ const PWAPromotionalBannerTreatment = () => {
   );
 };
 
-// HOC that handles experiment variant logic
 const PWAPromotionalBanner = () => {
+  const { isLite, isAmp } = use(RequestContext);
+  const isPWA = useIsPWA();
+  const isAndroid = useAndroidDetection();
+
   const pwaPromoBannerExperimentName = PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME;
   const pwaPromoBannerVariant = useOptimizelyVariation({
     experimentName: pwaPromoBannerExperimentName,
     experimentType: ExperimentType.SERVER_SIDE,
   });
 
-  console.log(`📌 PWAPromotionalBanner`, { pwaPromoBannerVariant });
+  console.log(`📌 PWAPromotionalBanner`, { pwaPromoBannerVariant, isPWA });
+
+  if (isLite || isAmp || isPWA || !isAndroid) {
+    return null;
+  }
 
   if (pwaPromoBannerVariant === 'control') {
     return <PWAPromotionalBannerControl />;
