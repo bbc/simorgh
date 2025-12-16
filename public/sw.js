@@ -133,7 +133,7 @@ self.addEventListener('message', async event => {
 
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
-    const isPWA = event.data.isPWA;
+    const { isPWA } = event.data;
     pwaClients.set(clientId, isPWA);
 
     if (isPWA) {
@@ -189,13 +189,11 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (event.request.mode === 'navigate') {
-    const url = event.request.url;
+    const { url } = event.request;
     console.log(`[SW FETCH] Navigation: ${url}`);
 
     event.respondWith(
       (async () => {
-        const cache = await caches.open(cacheName);
-
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;

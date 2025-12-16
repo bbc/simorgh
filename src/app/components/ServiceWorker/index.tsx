@@ -41,8 +41,6 @@ export default () => {
   const isPWA = useIsPWA();
 
   // Register service worker for offline functionality
-  // useServiceWorkerRegistration(service);
-
   useEffect(() => {
     const shouldInstallServiceWorker =
       swPath && onClient() && 'serviceWorker' in navigator;
