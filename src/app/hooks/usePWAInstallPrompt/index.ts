@@ -11,7 +11,7 @@ interface UsePWAInstallPromptCallbacks {
   onDismissed?: () => void;
   onError?: (error: unknown) => void;
   onPromptShown?: () => void;
-  preventNative?: boolean;
+  deferPrompt?: boolean;
 }
 
 const usePWAInstallPrompt = ({
@@ -19,7 +19,7 @@ const usePWAInstallPrompt = ({
   onDismissed,
   onError,
   onPromptShown,
-  preventNative = true,
+  deferPrompt = true,
 }: UsePWAInstallPromptCallbacks = {}) => {
   const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
@@ -32,11 +32,10 @@ const usePWAInstallPrompt = ({
       return undefined;
     }
     const handleBeforeInstallPrompt = (event: Event) => {
-      // Only prevent default if action to be deferred
-      if (preventNative && typeof event.preventDefault === 'function') {
-        event.preventDefault();
+      if (deferPrompt) {
+        event?.preventDefault();
+        deferredPrompt.current = event as BeforeInstallPromptEvent;
       }
-      deferredPrompt.current = event as BeforeInstallPromptEvent;
       setIsInstallable(true);
     };
     window.addEventListener(
@@ -52,7 +51,7 @@ const usePWAInstallPrompt = ({
         handleBeforeInstallPrompt as EventListener,
       );
     };
-  }, [isPWA, preventNative]);
+  }, [deferPrompt, isPWA]);
 
   const promptInstall = async () => {
     if (!deferredPrompt.current) return;

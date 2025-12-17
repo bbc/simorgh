@@ -42,19 +42,19 @@ const isBannerVisible = () => {
   return true;
 };
 
+type ExperimentControlProps = {
+  experimentVariant: string;
+};
+
 // Control group - fire the control group pixel
-const PWAPromotionalBannerControl = () => {
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
-  const { isInstallable } = usePWAInstallPrompt({ preventNative: false });
-
+const PWAPromotionalBannerControl = ({
+  experimentVariant,
+}: ExperimentControlProps) => {
+  const { isInstallable } = usePWAInstallPrompt({ deferPrompt: false });
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
     experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
-    experimentVariant: pwaPromoBannerVariant,
+    experimentVariant,
     alwaysInView: true,
   });
 
@@ -66,19 +66,16 @@ const PWAPromotionalBannerControl = () => {
 };
 
 // Treatment group - actual PWA banner
-const PWAPromotionalBannerTreatment = () => {
+const PWAPromotionalBannerTreatment = ({
+  experimentVariant,
+}: ExperimentControlProps) => {
   const { promotionalBanner } = use(ServiceContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
   const optimizelyExperimentData = {
     experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
-    experimentVariant: pwaPromoBannerVariant || 'off',
+    experimentVariant,
   };
 
   const viewTracker = useViewTracker({
@@ -193,11 +190,17 @@ const PWAPromotionalBanner = () => {
   }
 
   if (pwaPromoBannerVariant === 'control') {
-    return <PWAPromotionalBannerControl />;
+    return (
+      <PWAPromotionalBannerControl experimentVariant={pwaPromoBannerVariant} />
+    );
   }
 
   if (pwaPromoBannerVariant === 'on') {
-    return <PWAPromotionalBannerTreatment />;
+    return (
+      <PWAPromotionalBannerTreatment
+        experimentVariant={pwaPromoBannerVariant}
+      />
+    );
   }
 
   return null;
