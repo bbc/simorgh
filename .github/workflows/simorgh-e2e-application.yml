@@ -1,0 +1,80 @@
+name: Cypress E2E - Application
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+permissions:
+  contents: read
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        node-version: [22.x]
+        shard: [1, 2, 3, 4]
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CYPRESS_SKIP_EU: true
+      CYPRESS_SMOKE: true
+      CYPRESS_APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+
+      - name: Add bbc.com domain
+        run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
+
+      - name: Install Cypress dependency
+        run: |
+          chmod +x ./scripts/installCypress.sh
+          ./scripts/installCypress.sh
+
+      - name: Install Cypress binary
+        run: yarn cypress:install
+
+      - name: Compute spec shard
+        id: specs
+        run: |
+          set -euxo pipefail
+          find cypress/e2e -type f -name '*.cy.*' | sort > specs.txt
+          TOTAL=${{ strategy.job-total }}
+          INDEX=${{ matrix.shard }}
+          ZERO=$((INDEX - 1))
+          COUNT=$(wc -l < specs.txt)
+
+          if [ "$COUNT" -eq 0 ]; then
+                echo "SPECS=" >> "$GITHUB_OUTPUT"
+                echo "HAS_SPECS=false" >> "$GITHUB_OUTPUT"
+                exit 0
+                fi
+
+          LPS=$(( (COUNT + TOTAL - 1) / TOTAL ))
+          split -d -l "$LPS" specs.txt chunk_
+          FILE=$(printf "chunk_%02d" "$ZERO")
+          echo "SPECS<<EOF" >> "$GITHUB_OUTPUT"
+          cat "$FILE" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          echo "HAS_SPECS=true" >> "$GITHUB_OUTPUT"
+
+      - name: Run Simorgh E2Es (Application)
+        if: steps.specs.outputs.HAS_SPECS == 'true'
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          build: yarn build
+          start: yarn start
+          spec: |
+            ${{ steps.specs.outputs.SPECS }}
