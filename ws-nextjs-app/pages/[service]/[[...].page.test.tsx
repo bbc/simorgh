@@ -3,6 +3,7 @@ import { GetServerSidePropsContext } from 'next/types';
 import { getServerSideProps } from './[[...]].page';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import handleArticleRoute from './articles/handleArticleRoute';
+import handleHomepageRoute from './homepage/handleHomepageRoute';
 
 jest.mock('#server/utilities/logResponseTime', () => ({
   __esModule: true,
@@ -15,6 +16,11 @@ jest.mock('./av-embeds/handleAvRoute', () => ({
 }));
 
 jest.mock('./articles/handleArticleRoute', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
+jest.mock('./homepage/handleHomepageRoute', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue({}),
 }));
@@ -83,6 +89,32 @@ describe('catch-all route', () => {
       await getServerSideProps(context);
 
       expect(handleArticleRoute).toHaveBeenCalled();
+    });
+  });
+
+  describe('Homepage page type', () => {
+    it('should call the Homepage route handler if homepage is requested using URL', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/pidgin',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleHomepageRoute).toHaveBeenCalled();
+    });
+
+    it('should call the Homepage route handler if homepage is requested using page-type header', async () => {
+      const context = {
+        ...commonContext,
+        req: {
+          headers: { 'page-type': 'home' },
+        } as unknown as GetServerSidePropsContext['req'],
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleHomepageRoute).toHaveBeenCalled();
     });
   });
 
