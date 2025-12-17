@@ -11,11 +11,10 @@ type ExperimentsForPageTypeMetrics = {
 
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
-    // EXPERIMENT: Continue Reading button for articles & EXPERIMENT: Article Read Time 2
+    // EXPERIMENT: Continue Reading button for articles
     pageType: ARTICLE_PAGE,
     activeExperiments: [
       'newswb_ws_read_more_b',
-      'newswb_ws_article_read_time_2',
       'newswb_ws_tod_article',
       'newswb_ws_pwa_promo_prompt',
     ],
