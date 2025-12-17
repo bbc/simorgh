@@ -18,7 +18,6 @@ import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
-import { GREY_2 } from '#app/components/ThemeProvider/palette';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -31,18 +30,6 @@ const PromoWrapper = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
-  }
-`;
-
-const ScrollablePromoContainer = styled.div`
-  background: ${GREY_2};
-  padding: ${GEL_SPACING};
-  display: flex;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
   }
 `;
 
