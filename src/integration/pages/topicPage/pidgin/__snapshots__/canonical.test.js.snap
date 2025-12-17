@@ -404,9 +404,15 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
           "position": 24,
           "url": "https://www.bbc.com/pidgin/tori-56991816",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://www.bbc.com/pidgin/articles/ce3zyp0z93do",
+        },
       ],
       "name": "BBC News Pidgin",
-      "numberOfItems": 24,
+      "numberOfItems": 25,
     },
   ],
 }
