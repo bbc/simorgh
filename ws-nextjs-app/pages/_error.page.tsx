@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { NextPageContext } from 'next';
+import { NextPageContext } from 'next/types';
 import NextError from 'next/error';
 import { NOT_FOUND } from '#app/lib/statusCodes.const';
 
