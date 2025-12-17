@@ -24,7 +24,7 @@ import {
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../components/ScrollablePromo';
+import ArticleLinksBlock from '../../components/ArticleLinksBlock';
 
 import headings from '../../legacy/containers/Headings';
 import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
@@ -121,7 +121,9 @@ const getBylineComponent =
       </Byline>
     ) : null;
 
-const Links = (props: ComponentToRenderProps) => <ScrollablePromo {...props} />;
+const Links = (props: ComponentToRenderProps) => (
+  <ArticleLinksBlock {...props} />
+);
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
