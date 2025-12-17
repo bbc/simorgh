@@ -11,7 +11,7 @@ import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
-import shouldRender from './shouldRender';
+import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 // EXPERIMENT: Location based Topics Experiment

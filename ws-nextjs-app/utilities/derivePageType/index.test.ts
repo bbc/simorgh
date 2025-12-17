@@ -4,6 +4,7 @@ import {
   AV_EMBEDS,
   DOWNLOADS_PAGE,
   ARTICLE_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -12,6 +13,18 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/live/xxxxxxxxx?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
+  });
+
+  it('should return HOME_PAGE for a base service homepage', () => {
+    const pathname = '/pidgin';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(HOME_PAGE);
+  });
+
+  it('should return HOME_PAGE for a service variant homepage', () => {
+    const pathname = '/serbian/lat';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(HOME_PAGE);
   });
 
   it("should return LIVE_PAGE if pathname includes 'live'", () => {
