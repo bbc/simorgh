@@ -8,12 +8,20 @@ const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
+const offlineArticleIds = [
+  'c14dmxzqd86o',
+  'c1j5mz19jdko',
+  'c1x0rq3r97ko',
+  'c39rjygpmv1o',
+  'c578zj113e9o',
+];
 const OFFLINE_PAGE = `/${service}/offline`;
 
 self.addEventListener('install', event => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(cacheName);
+
       if (hasOfflinePageFunctionality) {
         const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin).href;
         try {
@@ -27,6 +35,31 @@ self.addEventListener('install', event => {
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error(`Failed to cache offline page: ${error.message}`);
+        }
+
+        try {
+          await Promise.all(
+            offlineArticleIds.map(async id => {
+              const articleUrl = new URL(
+                `/${service}/articles/${id}`,
+                self.location.origin,
+              ).href;
+
+              const response = await fetch(articleUrl);
+
+              if (!response || !response.ok) {
+                throw new Error(
+                  `Failed to fetch offline article ${id}: ${response.status} ${response.statusText}`,
+                );
+              }
+              await cache.put(articleUrl, response);
+            }),
+          );
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.error(
+            `Failed to cache one or more offline articles : ${error.message}`,
+          );
         }
       }
     })(),
