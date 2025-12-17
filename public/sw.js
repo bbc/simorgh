@@ -179,22 +179,42 @@ const fetchEventHandler = async event => {
     );
   } else if (event.request.mode === 'navigate') {
     const clientId = event.clientId || event.resultingClientId;
-    const isInPWAMode = clientId && pwaClients.has(clientId);
+
+    // detect PWA using both pwaClients set and displayMode
+    let isInPWAMode = false;
+    const client = await self.clients.get(clientId);
+
+    if (clientId) {
+      const clientInfo = await self.clients.get(clientId);
+      isInPWAMode =
+        pwaClients.has(clientId) || clientInfo?.displayMode === 'standalone';
+    }
+
     console.log(
       '[SW] Fetch event for navigation. isInPWAMode:',
       isInPWAMode,
       clientId,
+      client?.displayMode,
     );
-    // Only intercept navigation for PWA clients to avoid loop in browser mode when offline
+
     if (isInPWAMode) {
       event.respondWith(
         (async () => {
           try {
             const preloadResponse = await event.preloadResponse;
             if (preloadResponse) return preloadResponse;
-            return await fetch(event.request);
+
+            const networkResp = await fetch(event.request);
+
+            // Dynamically cache offline page for PWA clients
+            if (networkResp.ok && clientId) {
+              pwaClients.add(clientId);
+              const serviceName = getServiceFromUrl(event.request.url);
+              cacheOfflinePageAndResources(serviceName).catch(() => null);
+            }
+
+            return networkResp;
           } catch (error) {
-            console.log('[SW] Navigation failed:', event.request.url, error);
             const cache = await caches.open(cacheName);
             const serviceName = getServiceFromUrl(event.request.url);
             const offlinePageUrl = getOfflinePageUrl(serviceName);
@@ -204,10 +224,7 @@ const fetchEventHandler = async event => {
               cachedResponse ||
               new Response(
                 'You are offline. Please check your network and reload the page',
-                {
-                  status: 503,
-                  headers: { 'Content-Type': 'text/plain' },
-                },
+                { status: 503, headers: { 'Content-Type': 'text/plain' } },
               )
             );
           }
@@ -219,4 +236,4 @@ const fetchEventHandler = async event => {
   return;
 };
 
-self.addEventListener('fetch', fetchEventHandler);
+onfetch = fetchEventHandler;
