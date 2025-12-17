@@ -155,6 +155,13 @@ exports[`Canonical Send Header Navigation link should match text and url 11`] = 
 }
 `;
 
+exports[`Canonical Send Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
+}
+`;
+
 exports[`Canonical Send UGC form should render a heading 1`] = `"Disculpa, página no encontrada"`;
 
 exports[`Canonical Send UGC form should render a submit button 1`] = `"Enviar"`;
