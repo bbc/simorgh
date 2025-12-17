@@ -147,7 +147,7 @@ const ArticleLinksBlock = ({
   blockGroupIndex = null,
   experimentVariant = null,
 }) => {
-  const { script, service, dir, translations, mostRead } = use(ServiceContext);
+  const { script, service, dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -166,23 +166,12 @@ const ArticleLinksBlock = ({
     return null;
   }
 
-  let title;
-  if (
-    ['top-bar-top-stories', 'read-more-a-and-top-stories'].includes(
-      experimentVariant,
-    )
-  ) {
-    title = translations.topStoriesTitle || 'Top Stories';
-  } else if (experimentVariant === 'top-bar-most-read') {
-    title = mostRead.header || 'Most Read';
-  } else {
-    title =
-      blocks[0].type === 'title' &&
-      path(
-        ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-        blocks,
-      );
-  }
+  const title =
+    blocks[0].type === 'title' &&
+    path(
+      ['0', 'model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+      blocks,
+    );
 
   const blocksWithoutTitle = blocks[0].type === 'title' ? tail(blocks) : blocks;
 
@@ -191,10 +180,8 @@ const ArticleLinksBlock = ({
   const ariaLabel = title && idSanitiser(title);
 
   const a11yAttributes = {
-    ...(!experimentVariant && {
-      as: 'section',
-      role: 'region',
-    }),
+    as: 'section',
+    role: 'region',
     ...(ariaLabel
       ? { 'aria-labelledby': ariaLabel }
       : {

@@ -92,33 +92,20 @@ export const WithTimestamp = (_, { service }) => (
 );
 
 export const OJTopBarTopStories = (_, { service }) => (
-  <ScrollablePromoComponent
-    data={topStoriesBlocks}
-    service={service}
-    experimentVariant="top-bar-top-stories"
-  />
+  <ScrollablePromoComponent data={topStoriesBlocks} service={service} />
 );
 
 export const OJTopBarTopStoriesWithLiveLabel = (_, { service }) => (
   <ScrollablePromoComponent
     data={topStoriesBlocksWithLiveItem}
     service={service}
-    experimentVariant="top-bar-top-stories"
   />
 );
 
 export const OJTopBarMostRead = (_, { service }) => (
-  <ScrollablePromoComponent
-    data={mostReadBlocks}
-    service={service}
-    experimentVariant="top-bar-most-read"
-  />
+  <ScrollablePromoComponent data={mostReadBlocks} service={service} />
 );
 
 export const OJTopBarMostReadRTL = () => (
-  <ScrollablePromoComponent
-    data={mostReadBlocksRTL}
-    service="arabic"
-    experimentVariant="top-bar-most-read"
-  />
+  <ScrollablePromoComponent data={mostReadBlocksRTL} service="arabic" />
 );
