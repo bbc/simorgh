@@ -3,13 +3,9 @@ import { PromoSingleBlock, oneLinkWithTimestamp } from '../helpers/fixtureData';
 import Promo from '.';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
-const ArticleLinksBlock = ({ block, experimentVariant }) => (
+const ArticleLinksBlock = ({ block }) => (
   <ServiceContextProvider service="pidgin">
-    <Promo
-      block={block}
-      onClick={() => {}}
-      experimentVariant={experimentVariant}
-    />
+    <Promo block={block} onClick={() => {}} />
   </ServiceContextProvider>
 );
 
