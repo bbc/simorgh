@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ScrollablePromo from '.';
+import ArticleLinksBlock from '.';
 import {
   threeLinks,
   oneLinkOnly,
@@ -21,54 +21,54 @@ const BackGround = styled.div`
   padding: 2rem;
 `;
 
-const ScrollablePromoComponent = ({
+const ArticleLinksBlockComponent = ({
   data,
   service,
   experimentVariant = null,
 }) => (
   <ServiceContextProvider service={service}>
-    <ScrollablePromo blocks={data} experimentVariant={experimentVariant} />
+    <ArticleLinksBlock blocks={data} experimentVariant={experimentVariant} />
   </ServiceContextProvider>
 );
 
 export default {
-  title: 'Components/Scrollable Promo',
-  ScrollablePromoComponent,
+  title: 'Components/Article Links Block',
+  ArticleLinksBlockComponent,
 };
 
 export const ThreeLinks = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={threeLinks} service={service} />
+    <ArticleLinksBlockComponent data={threeLinks} service={service} />
   </BackGround>
 );
 
 export const OnlyOneLink = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={oneLinkOnly} service={service} />
+    <ArticleLinksBlockComponent data={oneLinkOnly} service={service} />
   </BackGround>
 );
 
 export const OneLinkWithNoTitle = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={oneLinkWithNoTitle} service={service} />
+    <ArticleLinksBlockComponent data={oneLinkWithNoTitle} service={service} />
   </BackGround>
 );
 
 export const MoreThanThreeLinks = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={moreThanThreeLinks} service={service} />
+    <ArticleLinksBlockComponent data={moreThanThreeLinks} service={service} />
   </BackGround>
 );
 
 export const NoImagesInData = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={twoLinksWithNoImages} service={service} />
+    <ArticleLinksBlockComponent data={twoLinksWithNoImages} service={service} />
   </BackGround>
 );
 
 export const TruncatedTextInSingleLink = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent
+    <ArticleLinksBlockComponent
       data={truncatedTextInSingleLink}
       service={service}
     />
@@ -77,7 +77,7 @@ export const TruncatedTextInSingleLink = (_, { service }) => (
 
 export const ArabicText = () => (
   <BackGround>
-    <ScrollablePromoComponent data={arabicText} service="arabic" />
+    <ArticleLinksBlockComponent data={arabicText} service="arabic" />
   </BackGround>
 );
 
@@ -87,25 +87,25 @@ ArabicText.globals = {
 
 export const WithTimestamp = (_, { service }) => (
   <BackGround>
-    <ScrollablePromoComponent data={oneLinkWithTimestamp} service={service} />
+    <ArticleLinksBlockComponent data={oneLinkWithTimestamp} service={service} />
   </BackGround>
 );
 
 export const OJTopBarTopStories = (_, { service }) => (
-  <ScrollablePromoComponent data={topStoriesBlocks} service={service} />
+  <ArticleLinksBlockComponent data={topStoriesBlocks} service={service} />
 );
 
 export const OJTopBarTopStoriesWithLiveLabel = (_, { service }) => (
-  <ScrollablePromoComponent
+  <ArticleLinksBlockComponent
     data={topStoriesBlocksWithLiveItem}
     service={service}
   />
 );
 
 export const OJTopBarMostRead = (_, { service }) => (
-  <ScrollablePromoComponent data={mostReadBlocks} service={service} />
+  <ArticleLinksBlockComponent data={mostReadBlocks} service={service} />
 );
 
 export const OJTopBarMostReadRTL = () => (
-  <ScrollablePromoComponent data={mostReadBlocksRTL} service="arabic" />
+  <ArticleLinksBlockComponent data={mostReadBlocksRTL} service="arabic" />
 );
