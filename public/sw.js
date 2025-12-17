@@ -192,6 +192,7 @@ const fetchEventHandler = async event => {
     const { url } = event.request;
     const client = await self.clients.get(event.clientId);
     const isPWA = client && pwaClients.get(client.id);
+    const cache = await caches.open(cacheName);
     console.log(`[SW FETCH] Navigation: ${url} , isPWA: ${isPWA}`);
 
     if (!isPWA && cache.has('pwa_installed')) {
@@ -224,7 +225,6 @@ const fetchEventHandler = async event => {
         } catch (err) {
           console.log('[SW] Navigation failed:', url, err);
 
-          const cache = await caches.open(cacheName);
           const pwaMarker = await cache.match('pwa_installed');
           console.log('[SW] PWA Marker:', pwaMarker);
 
