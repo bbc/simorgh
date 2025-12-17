@@ -86,7 +86,6 @@ const CollapsibleNavigation = ({
       <ul role="list" css={styles.navList} data-testid="collapsible-nav">
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
-          const shouldShowSubNav = isHydrated ? isActive : true;
           const isLink = section.href;
 
           const navigationLinkId = `nav-${section.id}`;
@@ -113,10 +112,14 @@ const CollapsibleNavigation = ({
                 </a>
               </li>
 
-              {section.links && shouldShowSubNav && (
+              {section.links && (
                 <li
                   id={subNavigationId}
-                  css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
+                  css={[
+                    styles.subNav,
+                    !isHydrated && styles.subNavNoJs,
+                    !isActive && styles.collapsed,
+                  ]}
                   role="region"
                   aria-labelledby={subNavigationTitleId}
                   tabIndex={-1}
