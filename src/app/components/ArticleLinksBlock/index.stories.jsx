@@ -90,22 +90,3 @@ export const WithTimestamp = (_, { service }) => (
     <ArticleLinksBlockComponent data={oneLinkWithTimestamp} service={service} />
   </BackGround>
 );
-
-export const OJTopBarTopStories = (_, { service }) => (
-  <ArticleLinksBlockComponent data={topStoriesBlocks} service={service} />
-);
-
-export const OJTopBarTopStoriesWithLiveLabel = (_, { service }) => (
-  <ArticleLinksBlockComponent
-    data={topStoriesBlocksWithLiveItem}
-    service={service}
-  />
-);
-
-export const OJTopBarMostRead = (_, { service }) => (
-  <ArticleLinksBlockComponent data={mostReadBlocks} service={service} />
-);
-
-export const OJTopBarMostReadRTL = () => (
-  <ArticleLinksBlockComponent data={mostReadBlocksRTL} service="arabic" />
-);
