@@ -3,7 +3,7 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   topStoriesBlocks,
   mostReadBlocks,
-} from '../../components/ScrollablePromo/helpers/fixtureData';
+} from '../../../components/ScrollablePromo/helpers/fixtureData';
 import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
 import Navigation from '.';
 

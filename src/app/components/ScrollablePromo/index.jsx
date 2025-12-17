@@ -22,7 +22,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { GREY_2 } from '#app/components/ThemeProvider/palette';
-import { ServiceContext } from '../../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
 

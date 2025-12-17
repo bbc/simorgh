@@ -1,6 +1,6 @@
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
-import { render } from '../../../components/react-testing-library-with-providers';
+import { render } from '../react-testing-library-with-providers';
 import {
   threeLinks,
   oneLinkOnly,
@@ -11,7 +11,7 @@ import {
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
 import { edOjA, edOjB } from './fixtures';
-import { MEDIA_ARTICLE_PAGE } from '../../../routes/utils/pageTypes';
+import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 
 describe('ScrollablePromo', () => {
   describe('Mid Page ScrollablePromo', () => {

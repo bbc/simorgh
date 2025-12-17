@@ -44,7 +44,7 @@ import {
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ScrollablePromo from '#app/components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';

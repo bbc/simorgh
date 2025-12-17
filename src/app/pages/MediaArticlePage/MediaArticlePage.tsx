@@ -24,7 +24,7 @@ import {
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+import ScrollablePromo from '../../components/ScrollablePromo';
 
 import headings from '../../legacy/containers/Headings';
 import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';

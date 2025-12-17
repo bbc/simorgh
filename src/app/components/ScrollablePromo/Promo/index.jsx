@@ -17,8 +17,8 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
-import LiveLabel from '../../../../components/LiveLabel';
-import { ServiceContext } from '../../../../contexts/ServiceContext';
+import LiveLabel from '../../LiveLabel';
+import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const StyledLink = styled(Link)`
   ${({ theme: { fontSizes } }) => fontSizes.pica};
