@@ -207,22 +207,20 @@ Services with variants can't be accessed using the format above, instead the var
 - [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp)
 - [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp).
 
-### Front pages
+### Home pages
 
-World Service front pages are served in the format `/:service` where `service` represents a World Service site:
+World Service home pages are served in the format `/:service` where `service` represents a World Service site:
 
 - [http://localhost:7080/igbo](http://localhost:7080/igbo)
 - [http://localhost:7080/pidgin](http://localhost:7080/pidgin)
-
-The World Service front pages follow the article format for AMP too, being available at `/:service.amp`:
-
-- [http://localhost:7080/igbo.amp](http://localhost:7080/igbo.amp)
-- [http://localhost:7080/pidgin.amp](http://localhost:7080/pidgin.amp)
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
 - [http://localhost:7080/zhongwen/simp](http://localhost:7080/zhongwen/simp)
 - [http://localhost:7080/zhongwen/simp.amp](http://localhost:7080/zhongwen/simp.amp).
+
+World Service home pages do not support AMP.
+
 
 ### Topic Pages
 
