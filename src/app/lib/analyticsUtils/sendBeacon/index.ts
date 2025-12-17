@@ -144,6 +144,11 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
 
       await callReverb(eventDetails);
     } catch (error) {
+      console.log('###################');
+      console.log('^^^^^^^^^^^^^^^^^^^^^^');
+      // console.log(error);
+      console.log('###################');
+
       logger.error(ATI_LOGGING_ERROR, {
         error,
       });
