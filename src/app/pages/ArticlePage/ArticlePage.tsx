@@ -50,6 +50,8 @@ import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ReadMeter from '#app/components/Riddle/Components/ReadMeter';
+import Riddle from '#app/components/Riddle';
+import LocalStorageProvider from '#app/components/Riddle/LocalStorageProvider';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -391,117 +393,120 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   return (
-    <div css={styles.pageWrapper}>
-      <ATIAnalytics atiData={atiData} />
-      <ChartbeatAnalytics
-        sectionName={pageData?.relatedContent?.section?.name}
-        title={headline}
-        authors={authors}
-      />
-      <ComscoreAnalytics />
-      <NielsenAnalytics />
-      <ArticleMetadata
-        articleId={getArticleId(pageData)}
-        title={headline}
-        author={articleAuthor}
-        twitterHandle={articleAuthorTwitterHandle}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
-        lang={getLang(pageData)}
-        description={description}
-        imageLocator={promoImage}
-        imageAltText={promoImageAltText}
-        hasAmpPage={!isTC2Asset}
-      />
-      <LinkedData
-        showAuthor
-        bylineLinkedData={bylineLinkedData}
-        type={
-          !isPGL
-            ? categoryName(isTrustProjectParticipant, taggings, formats)
-            : 'Article'
-        }
-        seoTitle={headline}
-        headline={headline}
-        description={description}
-        datePublished={firstPublished}
-        dateModified={lastPublished}
-        aboutTags={aboutTags}
-        imageLocator={promoImage}
-      />
-      {allowAdvertising && (
-        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
-      )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
-      <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
-            <Blocks
-              blocks={articleBlocks}
-              componentsToRender={componentsToRender}
+    <LocalStorageProvider>
+      <div css={styles.pageWrapper}>
+        <ATIAnalytics atiData={atiData} />
+        <ChartbeatAnalytics
+          sectionName={pageData?.relatedContent?.section?.name}
+          title={headline}
+          authors={authors}
+        />
+        <ComscoreAnalytics />
+        <NielsenAnalytics />
+        <ArticleMetadata
+          articleId={getArticleId(pageData)}
+          title={headline}
+          author={articleAuthor}
+          twitterHandle={articleAuthorTwitterHandle}
+          firstPublished={firstPublished}
+          lastPublished={lastPublished}
+          section={getArticleSection(pageData)}
+          aboutTags={aboutTags}
+          mentionsTags={getMentions(pageData)}
+          lang={getLang(pageData)}
+          description={description}
+          imageLocator={promoImage}
+          imageAltText={promoImageAltText}
+          hasAmpPage={!isTC2Asset}
+        />
+        <LinkedData
+          showAuthor
+          bylineLinkedData={bylineLinkedData}
+          type={
+            !isPGL
+              ? categoryName(isTrustProjectParticipant, taggings, formats)
+              : 'Article'
+          }
+          seoTitle={headline}
+          headline={headline}
+          description={description}
+          datePublished={firstPublished}
+          dateModified={lastPublished}
+          aboutTags={aboutTags}
+          imageLocator={promoImage}
+        />
+        {allowAdvertising && (
+          <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+        )}
+        <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+        <div css={styles.grid}>
+          <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+            <Riddle />
+            <main css={styles.mainContent} role="main">
+              <Blocks
+                blocks={articleBlocks}
+                componentsToRender={componentsToRender}
+              />
+              <OptimizelyPageMetrics trackPageComplete />
+              <ReadMeter wordCount={wordCount} />
+            </main>
+            <OptimizelyPageMetrics trackPageView trackPageDepth />
+            {showTopics && (
+              <RelatedTopics
+                css={[
+                  styles.relatedTopics,
+                  ...(showContinueReadingButton
+                    ? [!showAllContent && styles.hideRelatedTopics]
+                    : []),
+                ]}
+                topics={topics}
+                mobileDivider={false}
+                backgroundColour={GREY_2}
+                tagBackgroundColour={WHITE}
+              />
+            )}
+            <RelatedContentSection
+              content={blocks}
+              // EXPERIMENT: Time of Day Experiment
+              {...(timeOfDayExperimentVariant && {
+                experimentProps: {
+                  sendOptimizelyEvents: true,
+                  experimentName: timeOfDayExperimentName,
+                  experimentVariant: timeOfDayExperimentVariant,
+                },
+              })}
             />
-            <OptimizelyPageMetrics trackPageComplete />
-            <ReadMeter wordCount={wordCount} />
-          </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
-          {showTopics && (
-            <RelatedTopics
-              css={[
-                styles.relatedTopics,
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideRelatedTopics]
-                  : []),
-              ]}
-              topics={topics}
-              mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+          </div>
+          {!isApp && !isPGL && (
+            <SecondaryColumn
+              pageData={pageData}
+              // EXPERIMENT: Time of Day Experiment
+              experimentVariant={timeOfDayExperimentVariant}
+              timeOfDayExperimentName={timeOfDayExperimentName}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
+        </div>
+        {!isApp && !isPGL && (
+          <MostRead
+            css={styles.mostReadSection}
+            data={mostReadInitialData}
+            columnLayout="multiColumn"
+            size="default"
+            headingBackgroundColour={GREY_2}
+            mobileDivider={showTopics}
             // EXPERIMENT: Time of Day Experiment
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
+            eventTrackingData={{
+              componentName: 'most-read',
+              ...(timeOfDayExperimentVariant && {
                 sendOptimizelyEvents: true,
                 experimentName: timeOfDayExperimentName,
                 experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-          />
-        </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // EXPERIMENT: Time of Day Experiment
-            experimentVariant={timeOfDayExperimentVariant}
-            timeOfDayExperimentName={timeOfDayExperimentName}
+              }),
+            }}
           />
         )}
       </div>
-      {!isApp && !isPGL && (
-        <MostRead
-          css={styles.mostReadSection}
-          data={mostReadInitialData}
-          columnLayout="multiColumn"
-          size="default"
-          headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
-          // EXPERIMENT: Time of Day Experiment
-          eventTrackingData={{
-            componentName: 'most-read',
-            ...(timeOfDayExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-          }}
-        />
-      )}
-    </div>
+    </LocalStorageProvider>
   );
 };
 

@@ -4,9 +4,7 @@ import { jsx } from '@emotion/react';
 import onClient from '#app/lib/utilities/onClient';
 import Text from '../../../Text';
 import style from './index.styles';
-import LocalStorageProvider, {
-  LocalStorageContext,
-} from '../../LocalStorageProvider';
+import { LocalStorageContext } from '../../LocalStorageProvider';
 
 const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
   const { coins, addCoins } = use(LocalStorageContext);
@@ -59,11 +57,7 @@ const ReadMeter = ({ wordCount = 0 }: { wordCount?: number }) => {
 };
 
 export default ({ wordCount }: { wordCount?: number }) => {
-  const ReadMeterWithProvider = (
-    <LocalStorageProvider>
-      <ReadMeter wordCount={wordCount} />
-    </LocalStorageProvider>
-  );
+  const ReadMeterWithProvider = <ReadMeter wordCount={wordCount} />;
 
   return onClient() ? ReadMeterWithProvider : null;
 };
