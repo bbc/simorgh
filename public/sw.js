@@ -138,7 +138,21 @@ const fetchEventHandler = async event => {
           console.error(
             `Network request failed: ${error.message}, serving offline page`,
           );
+
           const cache = await caches.open(cacheName);
+
+          const isOfflineArticleRequest = offlineArticleIds.some(id =>
+            event.request.url.includes(`/${service}/articles/${id}`),
+          );
+
+          if (isOfflineArticleRequest) {
+            const articleUrl = new URL(event.request.url).href;
+            const cachedArticleResponse = await cache.match(articleUrl);
+            if (cachedArticleResponse) {
+              return cachedArticleResponse;
+            }
+          }
+
           const offlinePageUrl = new URL(OFFLINE_PAGE, self.location.origin)
             .href;
           const cachedResponse = await cache.match(offlinePageUrl);
