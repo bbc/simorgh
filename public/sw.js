@@ -190,14 +190,7 @@ const fetchEventHandler = async event => {
     );
   } else if (event.request.mode === 'navigate') {
     const { url } = event.request;
-    const client = await self.clients.get(event.clientId);
-    const isPWA = client && pwaClients.get(client.id);
-    const cache = await caches.open(cacheName);
-    console.log(`[SW FETCH] Navigation: ${url} , isPWA: ${isPWA}`);
-
-    if (!isPWA && cache.has('pwa_installed')) {
-      await cache.delete('pwa_installed');
-    }
+    console.log(`[SW FETCH] Navigation: ${url}`);
 
     event.respondWith(
       (async () => {
@@ -211,8 +204,8 @@ const fetchEventHandler = async event => {
           // Cache offline page if in PWA mode
           if (networkResp && networkResp.ok && event.clientId) {
             console.log('[SW] Caching offline page if PWA if network is ok');
-            // const client = await self.clients.get(event.clientId);
-            // const isPWA = client && pwaClients.get(client.id);
+            const client = await self.clients.get(event.clientId);
+            const isPWA = client && pwaClients.get(client.id);
             if (isPWA) {
               const service = getServiceFromUrl(url);
               cacheOfflinePageAndResources(service).catch(err =>
@@ -225,6 +218,7 @@ const fetchEventHandler = async event => {
         } catch (err) {
           console.log('[SW] Navigation failed:', url, err);
 
+          const cache = await caches.open(cacheName);
           const pwaMarker = await cache.match('pwa_installed');
           console.log('[SW] PWA Marker:', pwaMarker);
 
