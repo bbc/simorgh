@@ -9,6 +9,7 @@ import {
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
   bylineWithMultipleContributors,
+  bylineWithMultipleContributorsNoRole,
 } from '../../pages/ArticlePage/fixtureData';
 import Byline from '.';
 import readme from './README.md';
@@ -44,6 +45,10 @@ export const AuthorNoRoleByline = () => (
 
 export const MultipleContributorsByline = () => (
   <Component fixture={bylineWithMultipleContributors} />
+);
+
+export const MultipleContributorsBylineFinalContributorNoRole = () => (
+  <Component fixture={bylineWithMultipleContributorsNoRole} />
 );
 
 export const LinkByline = () => <Component fixture={bylineWithLink} />;
