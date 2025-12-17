@@ -46,7 +46,9 @@ type AddCspHeaderProps = {
 const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
   const hostname = ctx.req?.headers.host || '';
 
-  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
+  const isLocalhost = LOCALHOST_DOMAINS.some(domain =>
+    hostname.includes(domain),
+  );
 
   const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
 
