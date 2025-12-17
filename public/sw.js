@@ -16,48 +16,58 @@ console.log(`[SW v${version}] Service Worker loaded.`);
 // --------------------
 // Helper Functions
 // --------------------
-const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
-const getOfflinePageUrl = service => `/${service}/offline`;
+const getServiceFromUrl = url => {
+  try {
+    return new URL(url).pathname.split('/')[1];
+  } catch {
+    return null;
+  }
+};
+
+const getOfflinePagePath = service => `/${service}/offline`;
+
+const getOfflinePageUrl = service =>
+  new URL(getOfflinePagePath(service), self.location.origin).href;
 
 const cacheResource = async (cache, url) => {
   try {
     const response = await fetch(url);
     if (response.ok) await cache.put(url, response.clone());
     return response;
-  } catch (err) {
-    console.error(`[SW v${version}] Failed to cache ${url}:`, err);
+  } catch {
     return null;
   }
 };
 
 const cacheOfflinePageAndResources = async service => {
+  if (!service) return;
+
   const cache = await caches.open(cacheName);
-  const offlinePageUrl = new URL(
-    getOfflinePageUrl(service),
-    self.location.origin,
-  ).href;
-  if (await cache.match(offlinePageUrl)) return;
+  const offlineUrl = getOfflinePageUrl(service);
 
-  const resp = await cacheResource(cache, offlinePageUrl);
-  if (!resp || !resp.ok) return;
+  if (await cache.match(offlineUrl)) return;
 
-  console.log(`[SW v${version}] Cached offline page for ${service}`);
+  const resp = await cacheResource(cache, offlineUrl);
+  if (!resp?.ok) return;
 
   const html = await resp.text();
-  const scriptSrcs = [
+
+  const resources = [
     ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
-  ].map(m => m[1]);
-  const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
-    m => m[1],
-  );
-  const resources = [...scriptSrcs, ...linkHrefs]
+    ...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g),
+  ]
+    .map(m => m[1])
     .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
     .map(url => new URL(url, self.location.origin).href);
 
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+
+  console.log(`[SW v${version}] Cached offline page for ${service}`);
 };
 
-// Cache patterns
+// --------------------
+// Cacheable file patterns
+// --------------------
 const CACHEABLE_FILES = [
   // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
@@ -65,7 +75,7 @@ const CACHEABLE_FILES = [
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts
   /\.woff2$/,
-  // Frosted Promo (test and live environments only)
+  // Frosted Promo
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
   // Moment
   /\/moment-lib+.*?\.js$/,
@@ -74,46 +84,16 @@ const CACHEABLE_FILES = [
 ];
 
 const WEBP_IMAGE =
-  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
+  /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+\.webp$/;
 
-// -------------Install event -------
-self.addEventListener('install', event => {
+// --------------------
+// Install / Activate
+// --------------------
+self.addEventListener('install', () => {
   console.log(`[SW v${version}] Installing...`);
-
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(cacheName);
-      const clients = await self.clients.matchAll({ type: 'window' });
-
-      // Get unique services from PWA clients only
-      const pwaServices = [
-        ...new Set(
-          clients
-            .filter(client => pwaClients.get(client.id))
-            .map(client => getServiceFromUrl(client.url))
-            .filter(Boolean),
-        ),
-      ];
-
-      if (pwaServices.length > 0) {
-        console.log(
-          `[SW v${version}] Caching offline pages for PWA:`,
-          pwaServices,
-        );
-      }
-
-      // Cache offline pages for PWA services only
-      await Promise.allSettled(
-        pwaServices.map(async service => {
-          return cacheOfflinePageAndResources(service);
-        }),
-      );
-      self.skipWaiting();
-    })(),
-  );
+  self.skipWaiting();
 });
 
-// -------Activate Handler-------------
 self.addEventListener('activate', event => {
   console.log(`[SW v${version}] Activating...`);
   event.waitUntil(
@@ -127,129 +107,102 @@ self.addEventListener('activate', event => {
   );
 });
 
-// -------Message Event-------------
-self.addEventListener('message', async event => {
-  console.log(`[SW v${version}] Message received:`, event.data);
+// --------------------
+// Message Handler
+// --------------------
+self.addEventListener('message', event => {
+  if (event.data?.type !== 'PWA_STATUS') return;
 
-  if (event.data?.type === 'PWA_STATUS') {
-    const clientId = event.source.id;
-    const { isPWA } = event.data;
-    pwaClients.set(clientId, isPWA);
+  const clientId = event.source?.id;
+  if (!clientId) return;
 
-    if (isPWA) {
-      const cache = await caches.open(cacheName);
-      await cache.put('pwa_installed', new Response('true'));
-      const service = getServiceFromUrl(event.source.url);
-      await cacheOfflinePageAndResources(service);
-    } else {
-      const cache = await caches.open(cacheName);
-      await cache.delete('pwa_installed');
-    }
+  if (event.data.isPWA) {
+    pwaClients.set(clientId, true);
+
+    const service = getServiceFromUrl(event.source.url);
+    event.waitUntil(cacheOfflinePageAndResources(service));
+  } else {
+    pwaClients.delete(clientId);
   }
 });
 
-// -------Fetch Handler-------------
-const fetchEventHandler = async event => {
-  console.log(`[SW FETCH] Request: ${event.request.url}`);
-  const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
+// --------------------
+// Fetch Handler
+// --------------------
+self.addEventListener('fetch', event => {
+  const { request } = event;
+
+  // -------- WebP handling --------
+  if (WEBP_IMAGE.test(request.url)) {
+    const acceptsWebp = request.headers.get('accept')?.includes('webp');
+
+    if (!acceptsWebp) {
+      const fallbackUrl = request.url.replace('.webp', '');
+      event.respondWith(fetch(fallbackUrl, { mode: 'no-cors' }));
+      return;
+    }
+  }
+
+  // -------- Cacheable static files --------
+  const isCacheable = CACHEABLE_FILES.some(pattern =>
+    new RegExp(pattern).test(request.url),
   );
 
-  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
-
-  if (isRequestForWebpImage) {
-    const req = event.request.clone();
-
-    // Inspect the accept header for WebP support
-
-    const supportsWebp =
-      req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
-
-    if (!supportsWebp) {
-      const imageUrlWithoutWebp = req.url.replace('.webp', '');
-      event.respondWith(
-        fetch(imageUrlWithoutWebp, {
-          mode: 'no-cors',
-        }),
-      );
-    }
-  } else if (isRequestForCacheableFile) {
+  if (isCacheable) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
-        let response = await cache.match(event.request);
-        if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
+        const cached = await cache.match(request);
+        if (cached) return cached;
+
+        const response = await fetch(request);
+        if (response.ok) {
+          cache.put(request, response.clone());
         }
         return response;
       })(),
     );
-  } else if (event.request.mode === 'navigate') {
-    const { url } = event.request;
-    console.log(`[SW FETCH] Navigation: ${url}`);
+    return;
+  }
 
+  // -------- Navigation (PWA vs Website) --------
+  if (request.mode === 'navigate') {
     event.respondWith(
       (async () => {
+        let isPWA = false;
+
+        if (event.clientId) {
+          const client = await self.clients.get(event.clientId);
+          isPWA =
+            pwaClients.has(event.clientId) ||
+            client?.displayMode === 'standalone';
+        }
+
+        // Website → browser handles offline
+        if (!isPWA) {
+          return fetch(request);
+        }
+
+        // PWA navigation
         try {
-          // Use preload if available
-          const preloadResp = await event.preloadResponse;
-          if (preloadResp) return preloadResp;
+          const preload = await event.preloadResponse;
+          if (preload) return preload;
 
-          const networkResp = await fetch(event.request);
-
-          // Cache offline page if in PWA mode
-          if (networkResp && networkResp.ok && event.clientId) {
-            console.log('[SW] Caching offline page if PWA if network is ok');
-            const client = await self.clients.get(event.clientId);
-            const isPWA = client && pwaClients.get(client.id);
-            if (isPWA) {
-              const service = getServiceFromUrl(url);
-              cacheOfflinePageAndResources(service).catch(err =>
-                console.error('[SW] Cache offline fail:', err),
-              );
-            }
-          }
-
-          return networkResp;
-        } catch (err) {
-          console.log('[SW] Navigation failed:', url, err);
-
+          return await fetch(request);
+        } catch {
           const cache = await caches.open(cacheName);
-          const pwaMarker = await cache.match('pwa_installed');
-          console.log('[SW] PWA Marker:', pwaMarker);
+          const service = getServiceFromUrl(request.url);
+          const offlineUrl = getOfflinePageUrl(service);
 
-          // Only show offline page for installed PWA
-          if (pwaMarker) {
-            const service = getServiceFromUrl(url);
-            const offlineUrl = new URL(
-              getOfflinePageUrl(service),
-              self.location.origin,
-            ).href;
-
-            const cachedOffline = await cache.match(offlineUrl);
-            if (cachedOffline) {
-              return cachedOffline;
-            }
-          }
-
-          // Canonical site offline fallback
-          return new Response(
-            'You are offline. Please check your network and reload the page',
-            {
+          return (
+            (await cache.match(offlineUrl)) ||
+            new Response('You are offline. Please reconnect.', {
               status: 503,
               headers: { 'Content-Type': 'text/plain' },
-            },
+            })
           );
         }
       })(),
     );
   }
-
-  return;
-};
-
-onfetch = fetchEventHandler;
+});
