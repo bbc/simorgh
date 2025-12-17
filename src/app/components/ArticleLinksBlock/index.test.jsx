@@ -6,35 +6,33 @@ import {
   oneLinkOnly,
   oneLinkWithNoTitle,
   moreThanThreeLinks,
-  topStoriesBlocks,
-  mostReadBlocks,
 } from './helpers/fixtureData';
-import ScrollablePromo from '.';
+import ArticleLinksBlock from '.';
 import { edOjA, edOjB } from './fixtures';
 import { MEDIA_ARTICLE_PAGE } from '../../routes/utils/pageTypes';
 
-describe('ScrollablePromo', () => {
-  describe('Mid Page ScrollablePromo', () => {
+describe('Article Links Block', () => {
+  describe('Mid Page Article Links Block', () => {
     it('should return null if no data is passed', () => {
-      const { container } = render(<ScrollablePromo blocks={[]} />);
+      const { container } = render(<ArticleLinksBlock blocks={[]} />);
       expect(container).toBeEmptyDOMElement();
     });
 
     it('should render max 3 promo items', () => {
       const { getAllByRole } = render(
-        <ScrollablePromo blocks={moreThanThreeLinks} />,
+        <ArticleLinksBlock blocks={moreThanThreeLinks} />,
       );
       expect(getAllByRole('listitem').length).toEqual(3);
     });
 
     it('should render single promo item', () => {
-      const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+      const { container } = render(<ArticleLinksBlock blocks={oneLinkOnly} />);
       expect(container.childElementCount).toEqual(1);
     });
 
     it('should render single promo item with a title', () => {
       const { container, getByTestId } = render(
-        <ScrollablePromo blocks={oneLinkOnly} />,
+        <ArticleLinksBlock blocks={oneLinkOnly} />,
       );
       expect(container.childElementCount).toEqual(1);
       expect(getByTestId('eoj-recommendations-heading')).toBeInTheDocument();
@@ -42,7 +40,7 @@ describe('ScrollablePromo', () => {
 
     it('should render single promo item without a title', () => {
       const { container, queryByTestId } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+        <ArticleLinksBlock blocks={oneLinkWithNoTitle} />,
       );
       expect(container.childElementCount).toEqual(1);
       expect(
@@ -51,7 +49,9 @@ describe('ScrollablePromo', () => {
     });
 
     it('should not render a list when there is only one promo', () => {
-      const { queryByRole } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+      const { queryByRole } = render(
+        <ArticleLinksBlock blocks={oneLinkOnly} />,
+      );
 
       expect(queryByRole('list')).not.toBeInTheDocument();
       expect(queryByRole('listitem')).not.toBeInTheDocument();
@@ -59,7 +59,7 @@ describe('ScrollablePromo', () => {
 
     it('should render unordered list if more than 1 item', () => {
       const { queryByRole, getAllByRole } = render(
-        <ScrollablePromo blocks={threeLinks} />,
+        <ArticleLinksBlock blocks={threeLinks} />,
       );
       expect(queryByRole('list')).toBeInTheDocument();
       expect(getAllByRole('listitem').length).toEqual(3);
@@ -74,7 +74,7 @@ describe('ScrollablePromo', () => {
         const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
         render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+          <ArticleLinksBlock blocks={edOjA.model.blocks} blockGroupIndex={1} />,
         );
 
         expect(viewTrackerSpy).toHaveBeenCalledWith({
@@ -86,10 +86,10 @@ describe('ScrollablePromo', () => {
       it('should call the view tracking hook with the correct params with multiple editorial onward journeys', () => {
         const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
         render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+          <ArticleLinksBlock blocks={edOjA.model.blocks} blockGroupIndex={1} />,
         );
         render(
-          <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
+          <ArticleLinksBlock blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
         expect(viewTrackerSpy).toHaveBeenCalledTimes(4);
@@ -106,7 +106,7 @@ describe('ScrollablePromo', () => {
       it('should call the click tracking hook with one editorial onward journey', () => {
         const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
         render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+          <ArticleLinksBlock blocks={edOjA.model.blocks} blockGroupIndex={1} />,
         );
 
         expect(clickTrackerSpy).toHaveBeenCalledWith({
@@ -118,10 +118,10 @@ describe('ScrollablePromo', () => {
       it('should call the click tracking hook with multiple editorial onward journeys', () => {
         const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
         render(
-          <ScrollablePromo blocks={edOjA.model.blocks} blockGroupIndex={1} />,
+          <ArticleLinksBlock blocks={edOjA.model.blocks} blockGroupIndex={1} />,
         );
         render(
-          <ScrollablePromo blocks={edOjB.model.blocks} blockGroupIndex={2} />,
+          <ArticleLinksBlock blocks={edOjB.model.blocks} blockGroupIndex={2} />,
         );
 
         expect(clickTrackerSpy).toHaveBeenCalledTimes(4);
@@ -137,25 +137,25 @@ describe('ScrollablePromo', () => {
     });
 
     it('it should match a11y snapshot for single card', () => {
-      const { container } = render(<ScrollablePromo blocks={oneLinkOnly} />);
+      const { container } = render(<ArticleLinksBlock blocks={oneLinkOnly} />);
       expect(container).toMatchSnapshot();
     });
 
     it('it should match a11y snapshot for list', () => {
-      const { container } = render(<ScrollablePromo blocks={threeLinks} />);
+      const { container } = render(<ArticleLinksBlock blocks={threeLinks} />);
       expect(container).toMatchSnapshot();
     });
 
     it('it should match a11y snapshot for list with no title', () => {
       const { container } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+        <ArticleLinksBlock blocks={oneLinkWithNoTitle} />,
       );
       expect(container).toMatchSnapshot();
     });
 
     it('it should match snapshot when in dark ui mode', () => {
       const { container } = render(
-        <ScrollablePromo blocks={oneLinkWithNoTitle} />,
+        <ArticleLinksBlock blocks={oneLinkWithNoTitle} />,
         {
           pageType: MEDIA_ARTICLE_PAGE,
         },
