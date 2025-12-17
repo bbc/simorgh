@@ -33,6 +33,10 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
 
   const lastContributorIndex = contributorValues.length - 1;
 
+  const isLastContributorNameOnly = (index, jobRole, location) => {
+    return index === lastContributorIndex && !jobRole && !location;
+  };
+
   return (
     <>
       {contributorValues.map((contributor, index) => {
@@ -121,7 +125,10 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   </Text>
                 </span>
               )}
-              {hasMultipleContributors && <Comma />}
+              {hasMultipleContributors &&
+                !isLastContributorNameOnly(index, jobRole, location) && (
+                  <Comma />
+                )}
             </li>
             {jobRole ? (
               <li css={BylineCss.displayInline}>
@@ -203,7 +210,6 @@ const Byline = ({
               isSingleContributor={isSingleContributor}
             />
           </li>
-          {/* EXPERIMENT: Article Read Time */}
           {children &&
             Children.map(children, (child, index) => (
               // eslint-disable-next-line react/no-array-index-key
