@@ -5,6 +5,7 @@ import {
   DOWNLOADS_PAGE,
   ARTICLE_PAGE,
   HOME_PAGE,
+  UNKNOWN_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -66,6 +67,6 @@ describe('derivePageType', () => {
   it('should return Unknown if pathname does not include live or send', () => {
     const pathname = '/pidgin/xxxxxxxxx';
     const result = derivePageType(pathname);
-    expect(result).toEqual('Unknown');
+    expect(result).toEqual(UNKNOWN_PAGE);
   });
 });
