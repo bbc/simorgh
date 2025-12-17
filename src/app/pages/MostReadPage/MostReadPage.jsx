@@ -13,6 +13,10 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#components/Grid';
 import IndexHeading from '#containers/IndexHeading';
 import IndexPageContainer from '#components/PageLayout/IndexPageContainer';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import MostRead from '../../components/MostRead/Canonical';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
@@ -110,6 +114,13 @@ const MostReadPage = ({ pageData }) => {
     mostRead: { header },
   } = use(ServiceContext);
 
+  const variation = useOptimizelyVariation({
+    experimentName: 'general_event_bleed_test_1',
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
+  console.log(variation);
+
   const {
     metadata: { atiAnalytics },
   } = pageData;
@@ -135,6 +146,7 @@ const MostReadPage = ({ pageData }) => {
           </MostReadWrapper>
         </IndexPageContainer>
       </main>
+      <OptimizelyPageMetrics trackPageDepth trackPageView />
     </>
   );
 };
