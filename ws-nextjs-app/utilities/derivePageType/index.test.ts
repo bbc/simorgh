@@ -58,7 +58,7 @@ describe('derivePageType', () => {
   });
 
   it('should return ARTICLE_PAGE if pathname matches CPS ID pattern', () => {
-    const pathname = '/pidgin/instituional-1234567';
+    const pathname = '/pidgin/institutional-1234567';
     const result = derivePageType(pathname);
     expect(result).toEqual(ARTICLE_PAGE);
   });
