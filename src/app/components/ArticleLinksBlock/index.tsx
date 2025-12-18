@@ -113,7 +113,7 @@ function ArticleLinksBlock({
 
   return (
     <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
-      {title && (
+      {typeof title === 'string' && title.length > 0 && (
         <LabelComponent
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
@@ -133,6 +133,7 @@ function ArticleLinksBlock({
           blocks={blocksWithoutTitle}
           viewTracker={viewTracker}
           clickTracker={clickTracker}
+          a11yAttributes={a11yAttributes}
         />
       )}
     </GridItemMediumNoMargin>
