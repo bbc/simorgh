@@ -10,10 +10,6 @@ import {
   twoLinksWithNoImages,
   truncatedTextInSingleLink,
   arabicText,
-  topStoriesBlocks,
-  topStoriesBlocksWithLiveItem,
-  mostReadBlocks,
-  mostReadBlocksRTL,
 } from './helpers/fixtureData';
 
 const BackGround = styled.div`
