@@ -8,11 +8,8 @@
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
-// Track PWA clients
+// Track PWA clients per clientId
 const pwaClients = new Map();
-
-// Track pending navigation fetches until we know PWA status
-const pendingNavigations = new Map();
 
 console.log(`[SW v${version}] Service Worker loaded.`);
 
@@ -65,17 +62,11 @@ const cacheOfflinePageAndResources = async service => {
 
 // Cache patterns
 const CACHEABLE_FILES = [
-  // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
-  // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
-  // Fonts
   /\.woff2$/,
-  // Frosted Promo (test and live environments only)
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-  // Moment
   /\/moment-lib+.*?\.js$/,
-  // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
 
@@ -109,126 +100,96 @@ self.addEventListener('message', async event => {
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const { isPWA } = event.data;
+
     if (isPWA) {
       pwaClients.set(clientId, true);
-
-      // Cache offline page/resources for this client
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
     } else {
       pwaClients.delete(clientId);
-    }
-
-    // Process any pending navigations for this client
-    if (pendingNavigations.has(clientId)) {
-      const pendingList = pendingNavigations.get(clientId);
-      pendingNavigations.delete(clientId);
-
-      pendingList.forEach(respondFn => {
-        respondFn(); // respondFn internally uses clientId to check PWA status now
-      });
     }
   }
 });
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  console.log(`[SW FETCH] Request: ${event.request.url}`);
+  const { request } = event;
+  console.log(`[SW FETCH] Request: ${request.url}`);
+
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
+    new RegExp(cacheableFile).test(request.url),
   );
 
-  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+  const isRequestForWebpImage = WEBP_IMAGE.test(request.url);
 
   if (isRequestForWebpImage) {
-    const req = event.request.clone();
-
-    // Inspect the accept header for WebP support
-
+    const req = request.clone();
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
 
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
-
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
-      event.respondWith(
-        fetch(imageUrlWithoutWebp, {
-          mode: 'no-cors',
-        }),
-      );
+      event.respondWith(fetch(imageUrlWithoutWebp, { mode: 'no-cors' }));
     }
   } else if (isRequestForCacheableFile) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
-        let response = await cache.match(event.request);
+        let response = await cache.match(request);
         if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
+          response = await fetch(request.url);
+          cache.put(request, response.clone());
         }
         return response;
       })(),
     );
-  } else if (event.request.mode === 'navigate') {
+  } else if (request.mode === 'navigate') {
     const { clientId } = event;
 
-    const respondWithNavigation = async () => {
-      const isPWA = clientId && pwaClients.get(clientId);
-
-      try {
-        // Use preload if available
-        const preloadResp = await event.preloadResponse;
-        if (preloadResp) return preloadResp;
-
-        const networkResp = await fetch(event.request);
-
-        // Cache offline page if in PWA mode
-        if (networkResp && networkResp.ok && isPWA) {
-          const service = getServiceFromUrl(event.request.url);
-          cacheOfflinePageAndResources(service).catch(err =>
-            console.error('[SW] Cache offline fail:', err),
-          );
+    event.respondWith(
+      (async () => {
+        // Wait briefly if PWA status is not known yet
+        let isPWA = clientId && pwaClients.get(clientId);
+        if (clientId && isPWA === undefined) {
+          await new Promise(resolve => {
+            setTimeout(resolve, 50);
+          });
+          isPWA = pwaClients.get(clientId);
         }
 
-        return networkResp;
-      } catch (err) {
-        console.log('[SW] Navigation failed:', event.request.url, err);
+        try {
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
 
-        if (isPWA) {
-          const service = getServiceFromUrl(event.request.url);
-          const cache = await caches.open(cacheName);
-          const offlineUrl = new URL(
-            getOfflinePageUrl(service),
-            self.location.origin,
-          ).href;
+          const networkResp = await fetch(request);
 
-          const cachedOffline = await cache.match(offlineUrl);
-          if (cachedOffline) {
-            return cachedOffline;
+          if (networkResp.ok && isPWA) {
+            const service = getServiceFromUrl(request.url);
+            cacheOfflinePageAndResources(service).catch(console.error);
           }
+
+          return networkResp;
+        } catch (err) {
+          console.log('[SW] Navigation failed:', request.url, err);
+
+          if (isPWA) {
+            const service = getServiceFromUrl(request.url);
+            const cache = await caches.open(cacheName);
+            const offlineUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
+
+            const cachedOffline = await cache.match(offlineUrl);
+            if (cachedOffline) return cachedOffline;
+          }
+
+          // fallback to browser default behavior
+          return Response.error();
         }
-
-        // Fallback to browser default
-        throw err;
-      }
-    };
-
-    // If PWA status is unknown yet, queue this navigation
-    if (!clientId || pwaClients.has(clientId)) {
-      event.respondWith(respondWithNavigation());
-    } else {
-      if (!pendingNavigations.has(clientId)) {
-        pendingNavigations.set(clientId, []);
-      }
-      pendingNavigations
-        .get(clientId)
-        .push(() => event.respondWith(respondWithNavigation()));
-    }
+      })(),
+    );
   }
-
-  return;
 };
 
 onfetch = fetchEventHandler;
