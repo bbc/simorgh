@@ -88,7 +88,6 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
-
   return (
     <>
       {preload && (
