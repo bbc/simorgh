@@ -58,7 +58,7 @@ function ArticleLinksBlock({
   blocks,
   blockGroupIndex = null,
 }: ArticleLinksBlockProps) {
-  const { script, service, dir, translations } = use(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -117,8 +117,6 @@ function ArticleLinksBlock({
         <LabelComponent
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
-          script={script}
-          service={service}
           dir={dir}
         >
           {title}
