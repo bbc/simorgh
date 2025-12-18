@@ -1,4 +1,6 @@
-import { Fragment, PropsWithChildren, useState, use } from 'react';
+/** @jsx jsx */
+/* @jsxFrag React.Fragment */
+import { Fragment, PropsWithChildren, useState, use, useCallback } from 'react';
 import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
@@ -57,6 +59,12 @@ const Image = ({
 }: PropsWithChildren<ImageProps>) => {
   const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+  const handleImgRef = useCallback((img: HTMLImageElement | null) => {
+    if (!img) return;
+    if (img.complete) {
+      setIsLoaded(true);
+    }
+  }, []);
   if (isLite) return null;
 
   const showPlaceholder = placeholder && !isLoaded;
@@ -88,6 +96,7 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+
   return (
     <>
       {preload && (
@@ -163,7 +172,10 @@ const Image = ({
               </>
             )}
             <img
-              onLoad={() => setIsLoaded(true)}
+              onLoad={() => {
+                setIsLoaded(true);
+              }}
+              ref={handleImgRef}
               src={src}
               {...(srcSet && { srcSet: imgSrcSet })}
               {...(imgSizes && { sizes: imgSizes })}

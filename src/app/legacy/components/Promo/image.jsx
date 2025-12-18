@@ -9,6 +9,26 @@ import IMAGE from '../../../components/Image';
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
   position: relative;
+  > div > img {
+    object-fit: contain;
+  }
+  overflow: hidden;
+`;
+
+const BlurredBackgrounnd = styled.span`
+  display: block;
+  position: absolute;
+  /* When the image is blurred by the filter, it leaves a transparent gradient
+     around the edge that's double the length of the blur. We are hiding the
+     edge using positioning to compensate. */
+  top: -30px;
+  right: -30px;
+  bottom: -30px;
+  left: -30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(15px);
 `;
 
 const ChildWrapper = styled.div`
@@ -78,6 +98,9 @@ const Image = props => {
   const sizes = createSizes(useLargeImages, isProgrammeImage);
   return (
     <Wrapper>
+      <BlurredBackgrounnd
+        style={{ backgroundImage: `url(${src.replace('{width}', 240)})` }}
+      />
       <IMAGE
         {...rest}
         src={src.replace('{width}', 240)}
