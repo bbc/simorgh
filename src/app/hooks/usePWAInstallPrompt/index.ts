@@ -28,7 +28,8 @@ const usePWAInstallPrompt = ({
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
     if (isPWA) {
-      setIsInstallable(false);
+      (async () => setIsInstallable(false))();
+
       return undefined;
     }
     const handleBeforeInstallPrompt = (event: Event) => {
