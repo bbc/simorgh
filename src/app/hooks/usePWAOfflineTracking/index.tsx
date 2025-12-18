@@ -56,6 +56,7 @@ const usePWAOfflineTracking = () => {
 
       trackOfflinePageViewEvent(networkType);
       hasFiredRef.current = true;
+      localStorage.removeItem(OFFLINE_VISIT_FLAG);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error('usePWAOfflineTracking', error);
