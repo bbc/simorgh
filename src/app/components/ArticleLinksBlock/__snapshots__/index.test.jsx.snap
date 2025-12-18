@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot for list 1`] = `
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -365,7 +365,7 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
 </div>
 `;
 
-exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot for list with no title 1`] = `
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list with no title 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -596,7 +596,7 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
 </div>
 `;
 
-exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot for single card 1`] = `
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for single card 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -878,7 +878,7 @@ exports[`ScrollablePromo Mid Page ScrollablePromo it should match a11y snapshot 
 </div>
 `;
 
-exports[`ScrollablePromo Mid Page ScrollablePromo it should match snapshot when in dark ui mode 1`] = `
+exports[`Article Links Block Mid Page Article Links Block it should match snapshot when in dark ui mode 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
