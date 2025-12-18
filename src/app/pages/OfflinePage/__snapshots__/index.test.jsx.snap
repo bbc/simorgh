@@ -1,618 +1,544 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`OfflinePage should render correctly 1`] = `
+.emotion-0 {
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    margin: 0 1rem;
+  }
+}
+
 .emotion-1 {
-  width: 100%;
-  padding-bottom: 4rem;
+  max-width: 63rem;
+  margin: 1.5rem auto;
 }
 
-@supports (display: grid) {
-  .emotion-1 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-3 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-5 {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding: 2.5rem 0 0.5rem 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
-    font-size: 1.375rem;
-    line-height: 1.625rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    font-size: 1.75rem;
-    line-height: 2rem;
-  }
-}
-
-.emotion-7 {
+.emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  color: #3F3F42;
-  margin-top: 0;
+  font-weight: 700;
+  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-.emotion-9 {
+.emotion-3 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
-  padding-top: 0.2rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-13 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
+.emotion-4 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6 {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  list-style-type: none;
+  -webkit-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.emotion-7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emotion-8 {
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
 }
 
-.emotion-13:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
-.emotion-13:focus,
-.emotion-13:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-8:visited {
+  color: #545658;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <div>
   <main
-    class="emotion-0 emotion-1 emotion-2"
-    dir="ltr"
+    class="emotion-0"
     role="main"
   >
     <div
-      class="emotion-3 emotion-2"
-      dir="ltr"
+      class="emotion-1"
     >
-      <span
-        class="emotion-5 emotion-6"
-        data-e2e="status-code"
-      />
       <h1
-        class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        class="emotion-2"
       >
         You are offline.
       </h1>
       <p
-        class="emotion-9 emotion-10"
+        class="emotion-3"
       >
-        Seems like you don't have an internet connection at the moment. Please check your connection and reload the page.
+        Seems like you don’t have an internet connection at the moment. Some articles are available to read offline.
       </p>
-      <ul />
-      <p
-        class="emotion-9 emotion-10"
+      <section
+        aria-labelledby="useful-links-1"
+        class="emotion-4"
+        data-testid="useful-links-1"
+        role="region"
       >
-        <a
-          class="focusIndicatorReducedWidth emotion-13 emotion-14"
-          href=""
-        />
-      </p>
+        <h2
+          class="emotion-5"
+          id="useful-links-1"
+        >
+          Available to read offline
+        </h2>
+        <ul
+          class="emotion-6"
+          role="list"
+        >
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/news/articles/c14dmxzqd86o"
+            >
+              Article 1
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/news/articles/c1j5mz19jdko"
+            >
+              Article 2
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/news/articles/c1x0rq3r97ko"
+            >
+              Article 3
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/news/articles/c39rjygpmv1o"
+            >
+              Article 4
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/news/articles/c578zj113e9o"
+            >
+              Article 5
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
   </main>
 </div>
 `;
 
 exports[`OfflinePage should render correctly for mundo service 1`] = `
+.emotion-0 {
+  margin: 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    margin: 0 1rem;
+  }
+}
+
 .emotion-1 {
-  width: 100%;
-  padding-bottom: 4rem;
+  max-width: 63rem;
+  margin: 1.5rem auto;
 }
 
-@supports (display: grid) {
-  .emotion-1 {
-    display: grid;
-    position: initial;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 0.5rem;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(8, 1fr);
-      grid-column-end: span 8;
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-1 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
-      grid-column-gap: 1rem;
-    }
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-1 {
-    margin: 0 auto;
-    max-width: 63rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-1 {
-    margin: 0 auto;
-    max-width: 80rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-3 {
-    padding: 0 0.5rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-3 {
-    padding: 0 1rem;
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-3 {
-    margin-left: 16.666666666666668%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-3 {
-    margin-left: 33.333333333333336%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-3 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 0.5rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      padding: 0 1rem;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-3 {
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-end: span 12;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-5 {
-  font-size: 1.25rem;
-  line-height: 1.625rem;
-  color: #B80000;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 600;
-  padding: 2.5rem 0 0.5rem 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
-    font-size: 1.375rem;
-    line-height: 1.875rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    font-size: 1.75rem;
-    line-height: 2.375rem;
-  }
-}
-
-.emotion-7 {
+.emotion-2 {
+  color: #141414;
   font-size: 1.75rem;
   line-height: 2.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
-  color: #3F3F42;
-  margin-top: 0;
+  font-weight: 700;
+  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-2 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
-.emotion-9 {
+.emotion-3 {
+  color: #141414;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
-  color: #141414;
-  padding-bottom: 1.5rem;
+  font-weight: 400;
   margin: 0;
-  padding-top: 0.2rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-13 {
-  color: #222222;
-  border-bottom: 1px solid #B80000;
+.emotion-4 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.emotion-5 {
+  color: #141414;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 2rem;
+    line-height: 2.625rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.emotion-6 {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  list-style-type: none;
+  -webkit-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.emotion-7 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emotion-8 {
+  color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
 }
 
-.emotion-13:visited {
-  color: #6E6E73;
-  border-bottom: 1px solid #6E6E73;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
-.emotion-13:focus,
-.emotion-13:hover {
-  border-bottom: 2px solid #B80000;
-  color: #B80000;
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-8:visited {
+  color: #545658;
+}
+
+.emotion-8:hover,
+.emotion-8:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <div>
   <main
-    class="emotion-0 emotion-1 emotion-2"
-    dir="ltr"
+    class="emotion-0"
     role="main"
   >
     <div
-      class="emotion-3 emotion-2"
-      dir="ltr"
+      class="emotion-1"
     >
-      <span
-        class="emotion-5 emotion-6"
-        data-e2e="status-code"
-      />
       <h1
-        class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        class="emotion-2"
       >
         You are offline.
       </h1>
       <p
-        class="emotion-9 emotion-10"
+        class="emotion-3"
       >
-        Seems like you don't have an internet connection at the moment. Please check your connection and reload the page.
+        Seems like you don’t have an internet connection at the moment. Some articles are available to read offline.
       </p>
-      <ul />
-      <p
-        class="emotion-9 emotion-10"
+      <section
+        aria-labelledby="useful-links-1"
+        class="emotion-4"
+        data-testid="useful-links-1"
+        role="region"
       >
-        <a
-          class="focusIndicatorReducedWidth emotion-13 emotion-14"
-          href=""
-        />
-      </p>
+        <h2
+          class="emotion-5"
+          id="useful-links-1"
+        >
+          Available to read offline
+        </h2>
+        <ul
+          class="emotion-6"
+          role="list"
+        >
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/mundo/articles/c14dmxzqd86o"
+            >
+              Article 1
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/mundo/articles/c1j5mz19jdko"
+            >
+              Article 2
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/mundo/articles/c1x0rq3r97ko"
+            >
+              Article 3
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/mundo/articles/c39rjygpmv1o"
+            >
+              Article 4
+            </a>
+          </li>
+          <li
+            class="emotion-7"
+          >
+            <a
+              class="emotion-8"
+              href="/mundo/articles/c578zj113e9o"
+            >
+              Article 5
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
   </main>
 </div>
