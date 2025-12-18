@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import React, { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use } from 'react';
 
 import styles from './index.styles';
 
@@ -34,7 +32,7 @@ const Subhead = ({
           {dir === 'ltr' ? <RightChevron /> : <LeftChevron />}
         </a>
       ) : (
-        <React.Fragment>{children}</React.Fragment>
+        children
       )}
     </h2>
   );

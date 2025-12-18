@@ -1,4 +1,3 @@
-import React from 'react';
 import WithTimeMachine from '../../../../testHelpers/withTimeMachine';
 import ArticleTimestamp from '.';
 import { timestampGenerator } from './testHelpers';

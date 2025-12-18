@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -160,6 +159,7 @@ describe('Story Promo Media Indicator', () => {
         service="persian"
         isInline
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScrollablePromo from '.';
@@ -81,6 +80,10 @@ export const ArabicText = () => (
     <ScrollablePromoComponent data={arabicText} service="arabic" />
   </BackGround>
 );
+
+ArabicText.globals = {
+  service: { service: 'arabic' },
+};
 
 export const WithTimestamp = (_, { service }) => (
   <BackGround>

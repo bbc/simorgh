@@ -264,6 +264,13 @@ exports[`AMP Media Article Page Latest Media should match text and url 4`] = `
 }
 `;
 
+exports[`AMP Media Article Page Latest Media should match text and url 5`] = `
+{
+  "text": "Video, 'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi, Duration 5,21",
+  "url": "/pidgin/articles/ce3zyp0z93do",
+}
+`;
+
 exports[`AMP Media Article Page Main heading should match text 1`] = `"'We dey good to go for dis election' - INEC Boss"`;
 
 exports[`AMP Media Article Page Related Content should match text and url 1`] = `
@@ -370,7 +377,7 @@ exports[`AMP Media Article Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",
@@ -400,7 +407,7 @@ exports[`AMP Media Article Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",

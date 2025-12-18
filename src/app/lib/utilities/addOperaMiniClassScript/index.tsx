@@ -1,10 +1,10 @@
-import React from 'react';
 import isOperaProxy from '../isOperaProxy';
 
 export const OPERA_MINI_CLASSNAME = 'is-opera-mini';
 
-export default (
+export default (nonce?: string | null) => (
   <script
+    {...(nonce ? { nonce } : {})}
     type="text/javascript"
     // eslint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{

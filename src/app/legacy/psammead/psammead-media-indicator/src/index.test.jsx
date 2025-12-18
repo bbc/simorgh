@@ -1,4 +1,3 @@
-import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
@@ -36,6 +35,7 @@ describe('MediaIndicator', () => {
         dir="rtl"
         isInline
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

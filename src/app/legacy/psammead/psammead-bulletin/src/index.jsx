@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -8,15 +7,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import {
-  getSansRegular,
-  getSerifMedium,
-} from '#psammead/psammead-styles/src/font-styles';
-import {
-  getPica,
-  getGreatPrimer,
-  getLongPrimer,
-} from '#psammead/gel-foundations/src/typography';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import LiveLabel from '#app/components/LiveLabel';
 import { Link } from '#psammead/psammead-story-promo/src';
@@ -44,15 +34,14 @@ const TVBulletinWrapper = styled.div`
   }
 `;
 
-const headingStyles = ({ service, theme }) => `
+const headingStyles = ({ theme }) => `
   color: ${theme.palette.EBON};
   margin: 0; /* Reset */
   padding: ${GEL_SPACING};
-  ${service && getSerifMedium(service)}
-`;
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};`;
 
-const radioHeading = ({ script, dir }) => `
-  ${script && getPica(script)}
+const radioHeading = ({ dir }) => `
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING};
@@ -60,8 +49,8 @@ const radioHeading = ({ script, dir }) => `
   }
 `;
 
-const tvHeading = ({ script }) => `
-  ${script && getGreatPrimer(script)}
+const tvHeading = () => `
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: 0 0 ${GEL_SPACING} 0;
   }
@@ -108,9 +97,9 @@ const BulletinSummary = styled.p`
   color: ${props => props.theme.palette.SHADOW};
   margin: 0; /* Reset */
   padding: 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
-  ${({ script }) => script && getLongPrimer(script)}
-  ${({ service }) => service && getSansRegular(service)} 
-  ${({ bulletinType }) => bulletinSummaryStyles[bulletinType]}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ bulletinType }) => bulletinSummaryStyles[bulletinType]};
 `;
 
 const IconWrapper = styled.span`
@@ -159,14 +148,10 @@ const PlayCTA = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)};
-  ${({ bulletinType }) => playCtaStyles[bulletinType]}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ bulletinType }) => playCtaStyles[bulletinType]};
 `;
-
-PlayCTA.defaultProps = {
-  'aria-hidden': true,
-};
 
 const Bulletin = ({
   script,
@@ -244,6 +229,7 @@ const Bulletin = ({
           script={script}
           bulletinType={bulletinType}
           dir={dir}
+          aria-hidden="true"
         >
           <IconWrapper dir={dir}>{mediaIcons[mediaType]}</IconWrapper>
           {ctaText}
@@ -253,4 +239,5 @@ const Bulletin = ({
   );
 };
 
+/** @deprecated */
 export default Bulletin;

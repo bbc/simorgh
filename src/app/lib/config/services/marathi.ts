@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/marathi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
     externalLinkText: ', बाहेर',
@@ -316,7 +317,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'गोपनीयतेचं धोरण',
         },
         {

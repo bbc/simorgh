@@ -192,7 +192,7 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist√
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-ucozvf"
+  class="media-container bbc-16wwgxo"
   data-e2e="media-loader__container"
 >
   <div
@@ -291,7 +291,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -309,13 +309,13 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Brasil",
         "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/portuguese/podcasts/p07r3r3t/p083x9gr",
     },
     {

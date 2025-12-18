@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-filename-extension  */
-import React from 'react';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';

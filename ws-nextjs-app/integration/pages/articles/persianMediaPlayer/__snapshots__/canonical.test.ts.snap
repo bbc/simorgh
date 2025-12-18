@@ -217,7 +217,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
 "
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -238,11 +238,11 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-iuvxcs"
+    class="css-1gynr2b"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -254,17 +254,17 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -294,12 +294,12 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -315,11 +315,11 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-iuvxcs"
+    class="css-1gynr2b"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -331,17 +331,17 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -371,12 +371,12 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -388,7 +388,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1f5b20i"
+  class="media-container css-1okmog4"
   data-e2e="media-loader__container"
 >
   <div
@@ -396,11 +396,11 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-iuvxcs"
+      class="css-1gynr2b"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="css-lllaou"
+        class="css-n2zqlz"
       >
         <strong>
           برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -412,17 +412,17 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-m04vo2"
+        class="css-2ozlq5"
       >
         Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
       </span>
       <div
         aria-hidden="true"
-        class="css-d0ra4q"
+        class="css-7qcky8"
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1s2dgdk5"
+          class="css-vja2s5 e1kk1qa21"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -452,12 +452,12 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-1jf2q50"
+      class="css-10dp2sw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-1uq6tv3"
+        class="css-ey0vwc"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -466,14 +466,14 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-l3xzla"
+    class="css-1vlmip3"
     dir="rtl"
   >
     <span
       role="text"
     >
       <span
-        class="css-m04vo2"
+        class="css-2ozlq5"
       >
         توضیح ویدئو، 
       </span>
@@ -613,7 +613,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",
@@ -644,7 +644,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",

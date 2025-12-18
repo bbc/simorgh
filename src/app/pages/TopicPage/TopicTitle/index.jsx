@@ -1,13 +1,11 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
-import { getSansBold } from '#psammead/psammead-styles/src/font-styles';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '#psammead/gel-foundations/src/breakpoints';
-import { getCanon } from '#psammead/gel-foundations/src/typography';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const H1 = styled.h1`
-  ${({ service }) => getSansBold(service)}
-  ${({ script }) => getCanon(script)}
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
+  ${({ theme: { fontSizes } }) => fontSizes.canon};
   color: ${props => props.theme.palette.GREY_10};
   margin: 0;
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {

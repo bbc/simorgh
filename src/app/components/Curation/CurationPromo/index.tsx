@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -32,6 +30,7 @@ const CurationPromo = ({
   eventTrackingData,
   timeOfDayExperimentName,
   timeOfDayVariant,
+  isPortraitImage,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -71,6 +70,7 @@ const CurationPromo = ({
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
+          isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (

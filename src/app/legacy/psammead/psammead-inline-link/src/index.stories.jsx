@@ -1,42 +1,31 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
-import {
-  getBodyCopy,
-  getLongPrimer,
-} from '#psammead/gel-foundations/src/typography';
-import {
-  getSansRegular,
-  getSansBold,
-  getSansRegularItalic,
-  getSansBoldItalic,
-} from '#psammead/psammead-styles/src/font-styles';
 import notes from '../README.md';
 import InlineLink from './index';
 import { POSTBOX } from '../../../../components/ThemeProvider/palette';
 
 const RegularParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
 `;
 const BoldParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansBold(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBold};
 `;
 const ItalicParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansRegularItalic(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
 `;
 const BoldItalicParagraph = styled.p`
-  ${({ script }) => getBodyCopy(script)};
-  ${({ service }) => getSansBoldItalic(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.bodyCopy};
+  ${({ theme: { fontVariants } }) => fontVariants.sansBoldItalic};
 `;
 
 const Caption = styled.figcaption`
-  ${({ script }) => getLongPrimer(script)};
-  ${({ service }) => getSansRegularItalic(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegularItalic};
 `;
 
 const textDecorationStyle = {

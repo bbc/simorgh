@@ -1,4 +1,3 @@
-import React from 'react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -43,6 +42,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext radioSchedule={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container).toMatchSnapshot();
@@ -59,6 +59,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext radioSchedule={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container.querySelectorAll('li').length).toEqual(4);
@@ -82,6 +83,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext initialData={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container).toBeEmptyDOMElement();
@@ -99,6 +101,7 @@ describe('RadioSchedule', () => {
       await act(async () => {
         container = render(
           <RadioScheduleWithContext initialData={initialData} />,
+          { service: 'arabic' },
         ).container;
       });
       expect(container).toBeEmptyDOMElement();

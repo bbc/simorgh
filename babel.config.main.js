@@ -1,10 +1,15 @@
 const plugins = [
   'babel-plugin-react-compiler',
+  '@emotion/babel-plugin',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
   '@loadable/babel-plugin',
+  [
+    'transform-rename-import',
+    { original: 'next/dynamic', replacement: '@loadable/component' },
+  ],
 ];
 
 if (process.env.NODE_ENV === 'test') {
@@ -58,9 +63,11 @@ module.exports = api => {
         corejs: '3',
       },
     ],
-    '@babel/preset-react', // transform JSX to JS
+    [
+      '@babel/preset-react',
+      { runtime: 'automatic', importSource: '@emotion/react' },
+    ],
     '@babel/preset-typescript',
-    '@emotion/babel-preset-css-prop',
   ];
 
   return {

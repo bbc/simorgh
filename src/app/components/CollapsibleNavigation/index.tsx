@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useState, useRef, ElementType } from 'react';
+import { useState, useRef, Fragment, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -89,7 +86,6 @@ const CollapsibleNavigation = ({
       <ul role="list" css={styles.navList} data-testid="collapsible-nav">
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
-          const shouldShowSubNav = isHydrated ? isActive : true;
           const isLink = section.href;
 
           const navigationLinkId = `nav-${section.id}`;
@@ -97,7 +93,7 @@ const CollapsibleNavigation = ({
           const subNavigationId = section.id;
 
           return (
-            <React.Fragment key={section.id}>
+            <Fragment key={section.id}>
               <li css={styles.navItem} role="listitem">
                 <a
                   id={navigationLinkId}
@@ -116,10 +112,14 @@ const CollapsibleNavigation = ({
                 </a>
               </li>
 
-              {section.links && shouldShowSubNav && (
+              {section.links && (
                 <li
                   id={subNavigationId}
-                  css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
+                  css={[
+                    styles.subNav,
+                    !isHydrated && styles.subNavNoJs,
+                    !isActive && styles.collapsed,
+                  ]}
                   role="region"
                   aria-labelledby={subNavigationTitleId}
                   tabIndex={-1}
@@ -174,7 +174,7 @@ const CollapsibleNavigation = ({
                   </ul>
                 </li>
               )}
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </ul>

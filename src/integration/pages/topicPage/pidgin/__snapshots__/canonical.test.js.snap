@@ -230,7 +230,7 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -248,13 +248,13 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",
         "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/pidgin/topics/c95y35941vrt",
     },
     {
@@ -404,9 +404,15 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
           "position": 24,
           "url": "https://www.bbc.com/pidgin/tori-56991816",
         },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://www.bbc.com/pidgin/articles/ce3zyp0z93do",
+        },
       ],
       "name": "BBC News Pidgin",
-      "numberOfItems": 24,
+      "numberOfItems": 25,
     },
   ],
 }
@@ -414,7 +420,7 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Topic Page SEO OG description 1`] = `"Description of Donald Trump topic page"`;
 
-exports[`Canonical Topic Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
+exports[`Canonical Topic Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Topic Page SEO OG image alt 1`] = `"BBC News Pidgin"`;
 
@@ -440,7 +446,7 @@ exports[`Canonical Topic Page SEO Twitter description 1`] = `"Description of Don
 
 exports[`Canonical Topic Page SEO Twitter image alt 1`] = `"BBC News Pidgin"`;
 
-exports[`Canonical Topic Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"`;
+exports[`Canonical Topic Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Topic Page SEO Twitter site 1`] = `"@BBCNews"`;
 

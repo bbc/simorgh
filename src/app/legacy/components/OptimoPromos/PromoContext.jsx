@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 
-const PromoContext = React.createContext({});
+const PromoContext = createContext({});
 export default PromoContext;

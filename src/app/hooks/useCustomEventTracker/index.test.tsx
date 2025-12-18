@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from 'react';
+import { createContext, ReactNode } from 'react';
 import {
   renderHook,
   act,
@@ -99,7 +99,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
@@ -127,7 +127,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent(stringifiedData);
+      await result.current(stringifiedData);
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledWith(
@@ -150,7 +150,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -165,7 +165,7 @@ describe('useCustomEventTracker', () => {
     );
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -179,7 +179,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();

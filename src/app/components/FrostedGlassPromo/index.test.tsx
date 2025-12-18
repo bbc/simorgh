@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';

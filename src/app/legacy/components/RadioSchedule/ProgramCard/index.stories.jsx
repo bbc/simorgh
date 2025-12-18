@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderProgramCard as Component } from '../testHelpers/helper';
 
 export default {

@@ -30,7 +30,7 @@ export const service: DefaultServiceConfig = {
     locale: 'ro_RO',
     datetimeLocale: 'ro',
     service: 'romania',
-    serviceName: 'Romanian',
+    serviceName: 'Romania',
     serviceLocalizedName: 'România',
     languageName: 'Rom',
     twitterCreator: '@BBCNewsRomania',
@@ -401,48 +401,8 @@ export const service: DefaultServiceConfig = {
     timezone: 'Europe/Bucharest',
     navigation: [
       {
-        title: 'Home',
-        url: '/news',
-      },
-      {
-        title: 'UK',
-        url: '/news/uk',
-      },
-      {
-        title: 'World',
-        url: '/news/world',
-      },
-      {
-        title: 'Business',
-        url: '/news/business',
-      },
-      {
-        title: 'Politics',
-        url: '/news/politics',
-      },
-      {
-        title: 'Tech',
-        url: '/news/technology',
-      },
-      {
-        title: 'Science',
-        url: '/news/science_and_environment',
-      },
-      {
-        title: 'Health',
-        url: '/news/health',
-      },
-      {
-        title: 'Family & Education',
-        url: '/news/education',
-      },
-      {
-        title: 'Entertainment & Arts',
-        url: '/news/entertainment_and_arts',
-      },
-      {
-        title: 'Stories',
-        url: '/news/stories',
+        title: 'Ultimele știri',
+        url: '/romania',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -12,6 +12,7 @@ import {
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithSubByline,
   articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
@@ -20,6 +21,7 @@ import {
   articleStyDataPidgin,
   articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
+import { RelatedContentList } from '#app/components/RelatedContentSection/fixture';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -31,11 +33,11 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import {
   render,
   screen,
@@ -148,6 +150,10 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it.each([
     {
       testScenario:
@@ -768,6 +774,34 @@ describe('Article Page', () => {
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
   });
 
+  it('should render a byline when passed a byline', async () => {
+    const pageDataWithByline = {
+      ...articleDataPidginWithByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
+  it('should render a byline when passed a subByline', async () => {
+    const pageDataWithSubByline = {
+      ...articleDataPidginWithSubByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithSubByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
   it('should set "amphtml" link tag for asset', async () => {
     render(
       <Context service="pidgin">
@@ -948,12 +982,11 @@ describe('Article Page', () => {
       expect(title).not.toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should render read time component when readTime is supplied in metadata', () => {
+    it('should render read time component when readTime is supplied in metadata', () => {
       const dataWithReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {
             readTime: 5,
             wordCount: 500,
@@ -969,12 +1002,11 @@ describe('Article Page', () => {
       expect(queryByTestId('read-time')).toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+    it('should not render read time component when readTime is not supplied in metadata', () => {
       const dataMissingReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {},
         },
       };
@@ -1207,5 +1239,200 @@ describe('Article Page', () => {
         }
       },
     );
+  });
+
+  describe('Personalised topic curation', () => {
+    const relatedContentBlock = RelatedContentList[0];
+
+    it('renders nothing if personalisedContentData is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+      const { container } = render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="variantA"
+        />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+    it('renders section and subheading when personalisedContentData is present', () => {
+      const personalisedContent = [
+        {
+          title: 'Recommended for you',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Article 1',
+              description: 'Description 1',
+              link: '/article-1',
+              imageUrl: 'image-1.jpg',
+              imageAlt: 'Image 1',
+              isLive: false,
+              id: 'article-1',
+            },
+            {
+              type: 'promo',
+              title: 'Article 2',
+              description: 'Description 2',
+              link: '/article-2',
+              imageUrl: 'image-2.jpg',
+              imageAlt: 'Image 2',
+              isLive: false,
+              id: 'article-2',
+            },
+          ],
+          id: 'personalised-content',
+          topicId: 'topic-1',
+        },
+      ];
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+      render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="personalised"
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(
+        screen.getByText('Más información sobre Recommended for you'),
+      ).toBeInTheDocument();
+      expect(screen.getByText('Article 1')).toBeInTheDocument();
+      expect(screen.getByText('Article 2')).toBeInTheDocument();
+    });
+
+    it('renders personalised topic rail after related content for variation_1', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_1';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isAfter =
+        order !== undefined && order === Node.DOCUMENT_POSITION_FOLLOWING;
+      expect(isAfter).toBeTruthy();
+    });
+
+    it('renders personalised topic rail before related content for variation_2', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_2';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isBefore =
+        order !== undefined && order === Node.DOCUMENT_POSITION_PRECEDING;
+      expect(isBefore).toBeTruthy();
+    });
   });
 });

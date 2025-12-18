@@ -255,6 +255,13 @@ exports[`AMP Story Page Header Navigation link should match text and url 11`] = 
 }
 `;
 
+exports[`AMP Story Page Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
+}
+`;
+
 exports[`AMP Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
@@ -354,7 +361,7 @@ exports[`AMP Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",

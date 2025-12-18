@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document';
 import Script from 'next/script';
 
-import React, { HTMLAttributes, ReactElement } from 'react';
+import { HTMLAttributes, ReactElement } from 'react';
 import { Helmet, HelmetData } from 'react-helmet';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
@@ -197,7 +197,7 @@ export default class AppDocument extends Document<DocProps> {
                   __html: `document.documentElement.classList.remove("no-js");`,
                 }}
               />
-              {addOperaMiniClassScript}
+              {addOperaMiniClassScript()}
               <Script strategy="beforeInteractive">
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>

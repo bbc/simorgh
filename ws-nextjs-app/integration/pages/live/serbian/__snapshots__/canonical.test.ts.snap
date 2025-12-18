@@ -33,7 +33,7 @@ exports[`Canonical Live Footer Anchors should match text and url 4`] = `
 exports[`Canonical Live Footer Anchors should match text and url 5`] = `
 {
   "text": "Pravila privatnosti",
-  "url": "https://www.bbc.com/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 
@@ -185,7 +185,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
@@ -197,7 +197,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -215,13 +215,13 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
         "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
     {
@@ -236,7 +236,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
 
 exports[`Canonical Live SEO OG description 1`] = `"Live test page"`;
 
-exports[`Canonical Live SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO OG image alt 1`] = `"BBC News na srpskom"`;
 
@@ -262,7 +262,7 @@ exports[`Canonical Live SEO Twitter description 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
 
-exports[`Canonical Live SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 

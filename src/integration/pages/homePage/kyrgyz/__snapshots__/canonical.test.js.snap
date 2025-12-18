@@ -133,19 +133,26 @@ exports[`Canonical Home Page Header Navigation link should match text and url 2`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
+  "text": "Шайлоо-2025",
+  "url": "/kyrgyz/topics/cpdmzj1382mt",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
   "text": "Кыргызстан",
   "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Дүйнө",
   "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
@@ -193,7 +200,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   fetchpriority="high"
   loading="eager"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp"
@@ -252,11 +259,11 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
+      "headline": "BBC News Kyrgyz",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -267,20 +274,20 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/kyrgyz",
         "@type": "WebPage",
-        "name": "Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео",
+        "name": "BBC News Kyrgyz",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/kyrgyz",
     },
     {
@@ -701,7 +708,7 @@ exports[`Canonical Home Page SEO OG description 1`] = `
 BBC Azeri curation should be Top Stories  - VS = Collection / VP = High"
 `;
 
-exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 
@@ -709,13 +716,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"ky-KG"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News Кыргыз Кызматы"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -730,11 +737,11 @@ BBC Azeri curation should be Top Stories  - VS = Collection / VP = High"
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News Кыргыз КызMATы"`;
 
-exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png"`;
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbckyrgyz"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News Kyrgyz - BBC News Кыргыз Кызматы"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
@@ -748,7 +755,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.bbc.co
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0af7/test/5a5151c0-a3aa-11ed-9015-6935ab4fa6ca.png.webp"

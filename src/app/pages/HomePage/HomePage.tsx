@@ -1,12 +1,10 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -72,6 +70,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
   // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
   if (
     timeOfDayVariant === 'homepage_time_of_day_a' ||
@@ -87,6 +92,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
 
   return (
     <>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}
@@ -136,7 +143,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <React.Fragment key={`${curationId}-${position}`}>
+                  <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -155,14 +162,14 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
+                  </Fragment>
                 );
               },
             )}
           </div>
         </div>
       </main>
-      {timeOfDayVariant && (
+      {(timeOfDayVariant || pwaPromoBannerVariant) && (
         <OptimizelyPageMetrics trackPageView trackPageDepth />
       )}
     </>

@@ -197,6 +197,13 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 }
 `;
 
+exports[`Canonical Most Read Page Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
+}
+`;
+
 exports[`Canonical Most Read Page I can see the headline 1`] = `"Lecturas más populares"`;
 
 exports[`Canonical Most Read Page I can see the list items 1`] = `"1"Sabes que tienen cosas muy diferentes y te angustia no saber por qué": la odisea de una madre hasta descubrir que sus hijos tienen altas capacidadesÚltima actualización: 19 junio 2023"`;
@@ -345,7 +352,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -363,13 +370,13 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/mundo/popular/read",
     },
   ],
@@ -378,7 +385,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Most Read Page SEO OG description 1`] = `"Lecturas más populares - BBC News Mundo"`;
 
-exports[`Canonical Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+exports[`Canonical Most Read Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Most Read Page SEO OG image alt 1`] = `"BBC News Mundo"`;
 
@@ -404,7 +411,7 @@ exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Lecturas más 
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Mundo"`;
 
-exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png"`;
+exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

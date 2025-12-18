@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
@@ -381,6 +382,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'CAN 2025',
         url: '/afrique/topics/cnlvpm4xqn9t',
+      },
+      {
+        title: 'Afrique',
+        url: '/afrique/topics/cvqxn2k7kv7t',
       },
       {
         title: 'Monde',

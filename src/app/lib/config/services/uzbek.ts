@@ -15,7 +15,8 @@ const baseServiceConfig = {
   useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/uzbek/images/metadata/poster-1024x576.png',
   dir: `ltr` as Direction,
   service: 'uzbek' as Services,
   languageName: 'Uzbek',
@@ -58,6 +59,11 @@ const defaultCyrillicConfig = {
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
   translations: {
+    readTime: {
+      readTimePrefix: 'Ўқилиш вақти',
+      long: 'Узун мақола',
+      minute: 'дақ',
+    },
     pagination: {
       previousPage: 'Олдингиси',
       nextPage: 'Кейингиси',
@@ -407,6 +413,11 @@ export const service: UzbekConfig = {
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
     translations: {
+      readTime: {
+        readTimePrefix: "O'qilish vaqti",
+        long: 'Uzun maqola',
+        minute: 'daq',
+      },
       pagination: {
         previousPage: 'Oldingisi',
         nextPage: 'Keyingisi',

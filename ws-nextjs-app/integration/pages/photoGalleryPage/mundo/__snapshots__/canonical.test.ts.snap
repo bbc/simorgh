@@ -200,12 +200,19 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 }
 `;
 
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
+}
+`;
+
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
 
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -274,7 +281,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",
@@ -305,7 +312,7 @@ exports[`Canonical Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",

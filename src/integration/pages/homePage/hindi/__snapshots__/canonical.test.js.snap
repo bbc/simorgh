@@ -135,75 +135,68 @@ exports[`Canonical Home Page Header Navigation link should match text and url 2`
 
 exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "बिहार विधानसभा चुनाव",
-  "url": "/hindi/topics/c98yre1dg81t",
-}
-`;
-
-exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
-{
   "text": "विदेश",
   "url": "/hindi/topics/c9wpm0en87xt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
 {
   "text": "हेल्थ",
   "url": "/hindi/topics/cr50ykdx5wqt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
 {
   "text": "मनोरंजन",
   "url": "/hindi/topics/c06gq3n0pp7t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
 {
   "text": "करियर",
   "url": "/hindi/topics/c95y3gjndw8t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
 {
   "text": "फ़ाइनेंस",
   "url": "/hindi/topics/c5qvpx5dq4qt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 8`] = `
 {
   "text": "खेल",
   "url": "/hindi/topics/cwr9j8g1kj9t",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 9`] = `
 {
   "text": "विज्ञान-टेक्नॉलॉजी",
   "url": "/hindi/topics/c2lej0594knt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 10`] = `
 {
   "text": "सोशल",
   "url": "/hindi/topics/c2e4q0z9qznt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 11`] = `
 {
   "text": "वीडियो",
   "url": "/hindi/topics/cw9kv0kpxydt",
 }
 `;
 
-exports[`Canonical Home Page Header Navigation link should match text and url 13`] = `
+exports[`Canonical Home Page Header Navigation link should match text and url 12`] = `
 {
   "text": "पॉडकास्ट",
   "url": "/hindi/topics/cv22x3pmrvmt",
@@ -287,7 +280,7 @@ exports[`Canonical Home Page Page content First item in the first curation is th
 exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
 <img
   alt="पहलगाम"
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   loading="lazy"
   src="https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8b52/live/6c11f130-2c01-11f0-8da1-ad2bbee6cda5.jpg.webp"
   style="aspect-ratio:16 / 9"
@@ -345,11 +338,11 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
   "@graph": [
     {
       "@type": "CollectionPage",
-      "headline": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
+      "headline": "BBC News हिंदी",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -360,20 +353,20 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
       "mainEntityOfPage": {
         "@id": "http://localhost:7080/hindi",
         "@type": "WebPage",
-        "name": "ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news",
+        "name": "BBC News हिंदी",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News हिंदी",
         "publishingPrinciples": "https://www.bbc.com/hindi/institutional-50223932",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/hindi",
     },
     {
@@ -779,7 +772,7 @@ exports[`Canonical Home Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Home Page SEO OG description 1`] = `"हिंदी में ताज़ा समाचार, ब्रेकिंग न्यूज़, वीडियो, ऑडियो और फ़ीचर. बीबीसी हिंदी डॉटकॉम पर भारत, पाकिस्तान और चीन सहित दुनिया भर की ताज़ा ख़बरें. BBC HINDI for up-to-the-minute news, breaking news, video, audio and feature stories."`;
 
-exports[`Canonical Home Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News हिंदी"`;
 
@@ -787,13 +780,13 @@ exports[`Canonical Home Page SEO OG locale 1`] = `"hi-IN"`;
 
 exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News हिंदी"`;
 
-exports[`Canonical Home Page SEO OG title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO OG title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
 
 exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7080/hindi"`;
 
-exports[`Canonical Home Page SEO Page title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Page title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -805,11 +798,11 @@ exports[`Canonical Home Page SEO Twitter description 1`] = `"हिंदी म
 
 exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News हिंदी"`;
 
-exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png"`;
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbchindi"`;
 
-exports[`Canonical Home Page SEO Twitter title 1`] = `"ब्रेकिंग न्यूज़ समाचार, ताजा खबर | News, latest news, breaking news - BBC News हिंदी"`;
+exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News हिंदी - BBC News हिंदी"`;
 
 exports[`Canonical Home Page Timestamp should match text and date 1`] = `
 {
@@ -823,7 +816,7 @@ exports[`Canonical Home Page messageBanner has a link 1`] = `"https://whatsapp.c
 exports[`Canonical Home Page messageBanner has an image 1`] = `
 <img
   alt=""
-  class="bbc-139onq"
+  class="bbc-4ejld5"
   loading="eager"
   sizes="(max-width: 37.4375rem) 184px, 224px"
   src="https://ichef.bbci.co.uk/ace/ws/224/cpsprodpb/3bc3/live/e712bd90-225e-11ef-80aa-699d54c46324.png.webp"
