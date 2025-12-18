@@ -69,7 +69,7 @@ const reverbPageViews = async ({
 }: {
   reverbInstance: ReverbClient;
 }) => {
-  reverbInstance.viewEvent();
+  return reverbInstance.viewEvent();
 };
 
 type ReverbComponentTrackingProps = {
@@ -115,7 +115,7 @@ const callReverb = async (eventDetails: ReverbEventDetails) => {
   const { eventName } = eventDetails;
 
   // eslint-disable-next-line no-underscore-dangle
-  window.__reverb.__reverbLoadedPromise.then(
+  return window.__reverb.__reverbLoadedPromise.then(
     async reverb => {
       if (!reverb.isReady()) await reverb.initialise();
 
@@ -144,11 +144,6 @@ const sendBeacon = async (reverbBeaconConfig: ReverbBeaconConfig) => {
 
       await callReverb(eventDetails);
     } catch (error) {
-      console.log('###################');
-      console.log('^^^^^^^^^^^^^^^^^^^^^^');
-      // console.log(error);
-      console.log('###################');
-
       logger.error(ATI_LOGGING_ERROR, {
         error,
       });
