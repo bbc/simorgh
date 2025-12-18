@@ -982,12 +982,11 @@ describe('Article Page', () => {
       expect(title).not.toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should render read time component when readTime is supplied in metadata', () => {
+    it('should render read time component when readTime is supplied in metadata', () => {
       const dataWithReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {
             readTime: 5,
             wordCount: 500,
@@ -1003,12 +1002,11 @@ describe('Article Page', () => {
       expect(queryByTestId('read-time')).toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+    it('should not render read time component when readTime is not supplied in metadata', () => {
       const dataMissingReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {},
         },
       };
