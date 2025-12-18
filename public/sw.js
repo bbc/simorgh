@@ -188,7 +188,7 @@ const fetchEventHandler = async event => {
         console.log(`[SW FETCH] Navigation: ${url} , isPWA: ${isPWA}`);
 
         const pwaMarkerExists = await cache.match('pwa_installed');
-        if (!isPWA && pwaMarkerExists) {
+        if (!isPWA && pwaMarkerExists && isPWA !== undefined) {
           await cache.delete('pwa_installed');
         }
 
@@ -233,8 +233,8 @@ const fetchEventHandler = async event => {
               return cachedOffline;
             }
           }
-
-          throw err;
+          // fallback to browser default behavior
+          return Response.error();
         }
       })(),
     );
