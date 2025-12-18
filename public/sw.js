@@ -8,7 +8,7 @@
 const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
-// Track PWA clients per clientId
+// Track PWA clients
 const pwaClients = new Map();
 
 console.log(`[SW v${version}] Service Worker loaded.`);
@@ -62,11 +62,17 @@ const cacheOfflinePageAndResources = async service => {
 
 // Cache patterns
 const CACHEABLE_FILES = [
+  // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
+  // Fonts
   /\.woff2$/,
+  // Frosted Promo (test and live environments only)
   /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
+  // Moment
   /\/moment-lib+.*?\.js$/,
+  // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
 
@@ -74,7 +80,7 @@ const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // -------------Install event -------
-self.addEventListener('install', () => {
+self.addEventListener('install', event => {
   console.log(`[SW v${version}] Installing...`);
   self.skipWaiting();
 });
@@ -100,99 +106,19 @@ self.addEventListener('message', async event => {
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const { isPWA } = event.data;
+    pwaClients.set(clientId, isPWA);
 
     if (isPWA) {
-      pwaClients.set(clientId, true);
+      const cache = await caches.open(cacheName);
+      await cache.put('pwa_installed', new Response('true'));
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
     } else {
-      pwaClients.delete(clientId);
+      const cache = await caches.open(cacheName);
+      await cache.delete('pwa_installed');
     }
   }
 });
-
-// -------Fetch Handler-------------
-// const fetchEventHandler = async event => {
-//   const { request } = event;
-//   console.log(`[SW FETCH] Request: ${request.url}`);
-
-//   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-//     new RegExp(cacheableFile).test(request.url),
-//   );
-
-//   const isRequestForWebpImage = WEBP_IMAGE.test(request.url);
-
-//   if (isRequestForWebpImage) {
-//     const req = request.clone();
-//     const supportsWebp =
-//       req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
-//     if (!supportsWebp) {
-//       const imageUrlWithoutWebp = req.url.replace('.webp', '');
-//       event.respondWith(fetch(imageUrlWithoutWebp, { mode: 'no-cors' }));
-//     }
-//   } else if (isRequestForCacheableFile) {
-//     event.respondWith(
-//       (async () => {
-//         const cache = await caches.open(cacheName);
-//         let response = await cache.match(request);
-//         if (!response) {
-//           response = await fetch(request.url);
-//           cache.put(request, response.clone());
-//         }
-//         return response;
-//       })(),
-//     );
-//   } else if (request.mode === 'navigate') {
-//     const { clientId } = event;
-
-//     event.respondWith(
-//       (async () => {
-//         // Wait briefly if PWA status is not known yet
-//         let isPWA = clientId && pwaClients.get(clientId);
-//         if (clientId && isPWA === undefined) {
-//           await new Promise(resolve => {
-//             setTimeout(resolve, 50);
-//           });
-//           isPWA = pwaClients.get(clientId);
-//         }
-
-//         try {
-//           const preloadResp = await event.preloadResponse;
-//           if (preloadResp) return preloadResp;
-
-//           const networkResp = await fetch(request);
-
-//           if (networkResp.ok && isPWA) {
-//             const service = getServiceFromUrl(request.url);
-//             cacheOfflinePageAndResources(service).catch(console.error);
-//           }
-
-//           return networkResp;
-//         } catch (err) {
-//           console.log('[SW] Navigation failed:', request.url, err);
-
-//           if (isPWA) {
-//             const service = getServiceFromUrl(request.url);
-//             const cache = await caches.open(cacheName);
-//             const offlineUrl = new URL(
-//               getOfflinePageUrl(service),
-//               self.location.origin,
-//             ).href;
-
-//             const cachedOffline = await cache.match(offlineUrl);
-//             if (cachedOffline) return cachedOffline;
-//           }
-
-//           // fallback to browser default behavior
-//           return Response.error();
-//         }
-//       })(),
-//     );
-//   }
-// };
-
-// onfetch = fetchEventHandler;
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
@@ -308,14 +234,7 @@ const fetchEventHandler = async event => {
             }
           }
 
-          // Canonical site offline fallback
-          return new Response(
-            'You are offline. Please check your network and reload the page',
-            {
-              status: 503,
-              headers: { 'Content-Type': 'text/plain' },
-            },
-          );
+          throw err;
         }
       })(),
     );
