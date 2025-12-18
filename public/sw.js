@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.3.0';
+const version = 'v0.3.1';
 const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
