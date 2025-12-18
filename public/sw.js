@@ -44,13 +44,16 @@ const cacheOfflinePageAndResources = async service => {
   console.log(`[SW v${version}] Cached offline page for ${service}`);
 
   const html = await resp.text();
-  const scriptSrcs = [
-    ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
-  ].map(m => m[1]);
-  const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
-    m => m[1],
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const scriptSrcs = Array.from(doc.querySelectorAll('script[src]')).map(el =>
+    el.getAttribute('src'),
   );
+  const linkHrefs = Array.from(doc.querySelectorAll('link[href]')).map(el =>
+    el.getAttribute('href'),
+  );
+
   const resources = [...scriptSrcs, ...linkHrefs]
+    .filter(Boolean)
     .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
     .map(url => new URL(url, self.location.origin).href);
 
@@ -77,40 +80,9 @@ const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // -------------Install event -------
-self.addEventListener('install', event => {
+self.addEventListener('install', () => {
   console.log(`[SW v${version}] Installing...`);
-
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(cacheName);
-      const clients = await self.clients.matchAll({ type: 'window' });
-
-      // Get unique services from PWA clients only
-      const pwaServices = [
-        ...new Set(
-          clients
-            .filter(client => pwaClients.get(client.id))
-            .map(client => getServiceFromUrl(client.url))
-            .filter(Boolean),
-        ),
-      ];
-
-      if (pwaServices.length > 0) {
-        console.log(
-          `[SW v${version}] Caching offline pages for PWA:`,
-          pwaServices,
-        );
-      }
-
-      // Cache offline pages for PWA services only
-      await Promise.allSettled(
-        pwaServices.map(async service => {
-          return cacheOfflinePageAndResources(service);
-        }),
-      );
-      self.skipWaiting();
-    })(),
-  );
+  self.skipWaiting();
 });
 
 // -------Activate Handler-------------
@@ -236,14 +208,8 @@ const fetchEventHandler = async event => {
             }
           }
 
-          // Canonical site offline fallback
-          return new Response(
-            'You are offline. Please check your network and reload the page',
-            {
-              status: 503,
-              headers: { 'Content-Type': 'text/plain' },
-            },
-          );
+          // Fallback to default browser behavior
+          throw err;
         }
       })(),
     );
