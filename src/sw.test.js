@@ -26,6 +26,7 @@ describe('Service Worker', () => {
         addEventListener: jest.fn(),
         controller: null,
         register: jest.fn().mockResolvedValue({}),
+        location: { origin: 'https://bbc.com' },
       },
       configurable: true,
     });
@@ -282,6 +283,149 @@ describe('Service Worker', () => {
           );
         },
       );
+    });
+  });
+
+  describe('PWA offline page caching (message event)', () => {
+    let messageHandler;
+    let cachePut;
+
+    beforeEach(async () => {
+      jest.resetModules();
+      cachePut = jest.fn();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+      };
+
+      global.caches = {
+        open: jest.fn(() =>
+          Promise.resolve({
+            match: jest.fn().mockResolvedValue(null),
+            put: cachePut,
+            delete: jest.fn(),
+          }),
+        ),
+      };
+
+      await import('./service-worker-test');
+
+      // extract the message handler registered by sw.js
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
+
+    it('caches offline page and marker when PWA is installed', async () => {
+      fetchMock.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(cachePut).toHaveBeenCalledWith(
+        'pwa_installed',
+        expect.any(Response),
+      );
+
+      expect(fetchMock).toHaveBeenCalledWith('https://bbc.com/mundo/offline');
+    });
+
+    it('does not cache offline page when PWA is not installed', async () => {
+      await import('./service-worker-test');
+
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: false },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      });
+
+      expect(cachePut).not.toHaveBeenCalledWith(
+        expect.stringContaining('/offline'),
+        expect.any(Response),
+      );
+    });
+  });
+
+  describe('offline navigation fallback', () => {
+    beforeEach(() => {
+      // Mock clients
+      self.clients = {
+        get: jest.fn(clientId =>
+          Promise.resolve(clientId ? { id: clientId } : null),
+        ),
+      };
+
+      // Mock PWA clients map
+      global.pwaClients = new Map([['client-1', true]]);
+
+      // Mock caches
+      const offlineResponse = new Response('offline page');
+      const mockCache = {
+        match: jest.fn(key => {
+          if (key === 'pwa_installed')
+            return Promise.resolve(new Response('true'));
+          return Promise.resolve(offlineResponse);
+        }),
+        put: jest.fn(),
+        delete: jest.fn(),
+      };
+
+      global.caches = {
+        open: jest.fn(() => Promise.resolve(mockCache)),
+      };
+    });
+
+    it('returns cached offline page when navigation fails and PWA is installed', async () => {
+      const offlineResponse = new Response('offline page');
+
+      global.caches = {
+        open: jest.fn(() =>
+          Promise.resolve({
+            match: jest.fn(key => {
+              if (key === 'pwa_installed') {
+                return Promise.resolve(new Response('true'));
+              }
+              return Promise.resolve(offlineResponse);
+            }),
+          }),
+        ),
+      };
+
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+
+      const request = new Request('https://bbc.com/mundo');
+
+      Object.defineProperty(request, 'mode', {
+        value: 'navigate',
+      });
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        respondWith: jest.fn(),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+
+      const response = await event.respondWith.mock.calls[0][0];
+      expect(await response.text()).toBe('offline page');
     });
   });
 
