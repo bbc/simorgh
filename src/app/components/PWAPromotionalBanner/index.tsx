@@ -10,7 +10,10 @@ import useAndroidDetection from '#app/hooks/useAdroidDetection';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import useIsPWA from '#app/hooks/useIsPWA';
 
+const PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME = 'newswb_ws_pwa_promo_prompt';
 const PWA_BANNER_DISMISS_KEY = 'pwa_promotional_banner_dismissals';
 const PWA_BANNER_LAST_DISMISS_KEY = 'pwa_promotional_banner_last_dismissed';
 const PWA_BANNER_MAX_DISMISSALS = 3;
@@ -39,25 +42,42 @@ const isBannerVisible = () => {
   return true;
 };
 
-const PWAPromotionalBanner = () => {
+type ExperimentControlProps = {
+  experimentVariant: string;
+};
+
+// Control group - fire the control group pixel
+const PWAPromotionalBannerControl = ({
+  experimentVariant,
+}: ExperimentControlProps) => {
+  const { isInstallable } = usePWAInstallPrompt({ deferPrompt: false });
+  const viewTracker = useViewTracker({
+    componentName: 'pwa-promotional-banner',
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
+    experimentVariant,
+    alwaysInView: true,
+  });
+
+  if (!isInstallable) {
+    return null;
+  }
+
+  return <VisuallyHiddenText {...viewTracker} />;
+};
+
+// Treatment group - actual PWA banner
+const PWAPromotionalBannerTreatment = ({
+  experimentVariant,
+}: ExperimentControlProps) => {
   const { promotionalBanner } = use(ServiceContext);
-  const { isLite, isAmp } = use(RequestContext);
   const [isVisible, setIsVisible] = useState(() => isBannerVisible());
 
   // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
-  const isPwaPromoExperimentEnabled = pwaPromoBannerVariant === 'on';
-  const isAndroid = useAndroidDetection();
-
   const optimizelyExperimentData = {
-    experimentName: pwaPromoBannerExperimentName,
-    experimentVariant: pwaPromoBannerVariant || 'off',
+    experimentName: PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME,
+    experimentVariant,
   };
+
   const viewTracker = useViewTracker({
     componentName: 'pwa-promotional-banner',
     ...optimizelyExperimentData,
@@ -101,6 +121,7 @@ const PWAPromotionalBanner = () => {
     },
     [onSecondaryClickTrack, handleBannerDismiss],
   );
+
   const { promptInstall, isInstallable } = usePWAInstallPrompt({
     onAccepted: () => {
       setIsVisible(false);
@@ -122,15 +143,7 @@ const PWAPromotionalBanner = () => {
     [onPrimaryClickTrack, promptInstall],
   );
 
-  if (
-    isLite ||
-    isAmp ||
-    !isAndroid ||
-    !isPwaPromoExperimentEnabled ||
-    !isVisible ||
-    !isInstallable ||
-    !promotionalBanner
-  ) {
+  if (!isVisible || !isInstallable || !promotionalBanner) {
     return null;
   }
 
@@ -160,4 +173,37 @@ const PWAPromotionalBanner = () => {
     </div>
   );
 };
+
+const PWAPromotionalBanner = () => {
+  const { isLite, isAmp } = use(RequestContext);
+  const isPWA = useIsPWA();
+  const isAndroid = useAndroidDetection();
+
+  const pwaPromoBannerExperimentName = PWA_PROMOTIONAL_BANNER_EXPERIMENT_NAME;
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
+
+  if (isLite || isAmp || isPWA || !isAndroid) {
+    return null;
+  }
+
+  if (pwaPromoBannerVariant === 'control') {
+    return (
+      <PWAPromotionalBannerControl experimentVariant={pwaPromoBannerVariant} />
+    );
+  }
+
+  if (pwaPromoBannerVariant === 'on') {
+    return (
+      <PWAPromotionalBannerTreatment
+        experimentVariant={pwaPromoBannerVariant}
+      />
+    );
+  }
+
+  return null;
+};
+
 export default PWAPromotionalBanner;
