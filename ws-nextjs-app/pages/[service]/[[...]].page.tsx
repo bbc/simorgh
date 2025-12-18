@@ -10,6 +10,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  HOME_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -24,6 +25,7 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
+import handleHomepageRoute from './homepages/handleHomepageRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
