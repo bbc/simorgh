@@ -51,7 +51,6 @@ module.exports = {
   assetPrefix: isLocal ? undefined : assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
-  reactCompiler: true,
   transpilePackages: ['simorgh'],
   eslint: {
     ignoreDuringBuilds: true,
@@ -62,6 +61,9 @@ module.exports = {
     NEXTJS: 'true',
   },
   compiler: { emotion: true },
+  experimental: {
+    reactCompiler: true,
+  },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
