@@ -16,6 +16,7 @@ import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
 
@@ -25,7 +26,7 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
-import handleHomepageRoute from './homepages/handleHomepageRoute';
+import handleHomepageRoute from './homepage/handleHomepageRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -35,6 +36,7 @@ const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
+const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
 
 const getPageType = ({
   resolvedUrl,
@@ -67,6 +69,7 @@ const getPageType = ({
 const ROUTE_HANDLERS = {
   [AV_EMBEDS]: handleAvRoute,
   [ARTICLE_PAGE]: handleArticleRoute,
+  [HOME_PAGE]: handleHomepageRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -104,7 +107,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
 type PageProps = {
   pageType?: PageTypes;
 } & AvEmbedsPageProps &
-  ArticlePageProps;
+  ArticlePageProps &
+  HomePageProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
@@ -120,6 +124,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
+    case HOME_PAGE:
+      return <HomePage {...props} />;
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;
