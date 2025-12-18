@@ -8,6 +8,7 @@ const cacheName = 'simorghCache_v1';
 
 const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
+// Changes here will need replicated on the offline page component
 const offlineArticleIds = [
   'c14dmxzqd86o',
   'c1j5mz19jdko',

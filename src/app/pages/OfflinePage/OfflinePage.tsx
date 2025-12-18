@@ -10,6 +10,7 @@ import UsefulLinks from '#app/components/UsefulLinks';
 import Paragraph from '#app/components/Paragraph';
 import styles from './OfflinePage.styles';
 
+// Changes here will need replicated in the service worker
 const offlineArticleIds = [
   'c14dmxzqd86o',
   'c1j5mz19jdko',
