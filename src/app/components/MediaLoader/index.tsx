@@ -313,24 +313,14 @@ const MediaLoader = ({
       <figure
         data-e2e="media-loader__container"
         className={`media-container${className ? ` ${className}` : ''}`}
-        css={
-          hasTranscript
-            ? [
-                styles.figure(embedded),
-                !isAudio && [
-                  isPortrait && styles.portraitFigure(embedded),
-                  isLandscape && styles.landscapeFigure,
-                ],
-                hasTranscript && styles.withTranscriptVideo,
-              ]
-            : [
-                styles.figure(embedded),
-                !isAudio && [
-                  isPortrait && styles.portraitFigure(embedded),
-                  isLandscape && styles.landscapeFigure,
-                ],
-              ]
-        }
+        css={[
+          styles.figure(embedded),
+          !isAudio && [
+            isPortrait && styles.portraitFigure(embedded),
+            isLandscape && styles.landscapeFigure,
+          ],
+          hasTranscript && styles.withTranscriptVideo,
+        ]}
       >
         {isAmp ? (
           <AmpMediaLoader
