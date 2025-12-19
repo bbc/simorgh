@@ -8,7 +8,7 @@ export default {
     }),
   scene3dContainer: () =>
     css({
-      width: '100%',
+      width: '700px',
       height: '700px',
       minHeight: '300px',
       maxHeight: '600px',
