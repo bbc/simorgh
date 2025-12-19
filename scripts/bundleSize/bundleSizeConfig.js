@@ -9,5 +9,5 @@
 
 export const VARIANCE = 5;
 
-export const MIN_SIZE = 940;
-export const MAX_SIZE = 1328;
+export const MIN_SIZE = 938;
+export const MAX_SIZE = 1319;
