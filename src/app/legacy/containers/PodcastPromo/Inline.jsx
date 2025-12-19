@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -15,13 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  getPica,
-  getBrevier,
-  getLongPrimer,
-  getGreatPrimer,
-} from '#psammead/gel-foundations/src/typography';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
@@ -92,7 +85,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
-  ${({ script }) => getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   margin: ${GEL_SPACING_HLF_TRPL} 0;
   overflow-wrap: break-word;
   color: ${props => props.theme.palette.GREY_10};
@@ -102,7 +95,7 @@ const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
-  ${({ script }) => getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
 
   color: ${props => props.theme.palette.GREY_10};
 
@@ -127,14 +120,14 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ script }) => getLongPrimer(script)}
+    ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ script }) => getGreatPrimer(script)}
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
   color: ${props => props.theme.palette.GREY_10};
@@ -148,7 +141,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ script }) => getPica(script)}
+    ${({ theme: { fontSizes } }) => fontSizes.pica};
   }
 `;
 

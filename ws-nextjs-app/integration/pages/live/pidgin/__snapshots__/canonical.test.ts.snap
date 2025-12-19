@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Canonical Live Header I can see the branding 1`] = `"BBC News, Pidgin"`;
+exports[`Canonical Live Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, Pidgin",
+  "svg": <path
+    d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.003V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.267 36.647v-72.699h22.003V265.75h-23.193zM804.186 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.075v19.03h-75.97V159.451zM982.1 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.068-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.771 40.586 3259.894 3259.894 0 0018.881-77.456h22.3a3251.95 3251.95 0 0018.733 75.821 1999.976 1999.976 0 008.623-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.47 267.98c-5.848 0-11.62-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.748 9.663 6.739 0 11.868-1.138 15.387-3.419 3.517-2.28 5.278-5.45 5.278-9.515 0-3.07-.869-5.475-2.602-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.095-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.299-6.319-3.073-2.427-5.403-5.352-6.987-8.771-1.587-3.42-2.38-7.508-2.38-12.265 0-6.74 1.71-12.537 5.13-17.395 3.42-4.855 8.251-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.652 1.933 5.45 1.289 10.355 3.024 14.718 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.576-2.23-6.047 0-10.73 1.04-14.05 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.379 6.616 1.584 1.635 3.84 2.973 6.764 4.014 2.922 1.04 6.367 2.058 10.333 3.047 5.054 1.29 9.76 2.702 14.123 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.734 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.42 3.94-23.638 3.94z"
+  />,
+}
+`;
 
 exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
@@ -66,7 +73,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-czokpf"
+    class="css-1wlr2bf"
     data-e2e="media-player__guidance"
   >
     <strong
@@ -76,7 +83,7 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Dem no support media player for your device
@@ -88,17 +95,17 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -128,12 +135,12 @@ exports[`Canonical Live Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -149,7 +156,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-czokpf"
+    class="css-1wlr2bf"
     data-e2e="media-player__guidance"
   >
     <strong
@@ -159,7 +166,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
       Contains strong language and some upsetting scenes.
     </strong>
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Dem no support media player for your device
@@ -171,17 +178,17 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -211,12 +218,12 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -228,7 +235,7 @@ exports[`Canonical Live Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Live Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-16o8i0m"
+  class="media-container css-hnd6ee"
   data-e2e="media-loader__container"
 >
   <div
@@ -236,7 +243,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-czokpf"
+      class="css-1wlr2bf"
       data-e2e="media-player__guidance"
     >
       <strong
@@ -246,7 +253,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
         Contains strong language and some upsetting scenes.
       </strong>
       <noscript
-        class="css-lllaou"
+        class="css-n2zqlz"
       >
         <strong>
           Dem no support media player for your device
@@ -258,17 +265,17 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-m04vo2"
+        class="css-2ozlq5"
       >
         Contains strong language and some upsetting scenes. Play video, "Lionel Messi Skills", Duration 0,34
       </span>
       <div
         aria-hidden="true"
-        class="css-d0ra4q"
+        class="css-7qcky8"
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1s2dgdk5"
+          class="css-vja2s5 e1kk1qa21"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -298,12 +305,12 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-1jf2q50"
+      class="css-10dp2sw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-1uq6tv3"
+        class="css-ey0vwc"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01vzbd6.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01vzbd6.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01vzbd6.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01vzbd6.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01vzbd6.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01vzbd6.jpg.webp 800w"
@@ -319,7 +326,7 @@ exports[`Canonical Live Media Loader renders a valid container 1`] = `
       role="text"
     >
       <span
-        class="css-m04vo2"
+        class="css-2ozlq5"
       >
         Wetin we call dis Video, 
       </span>

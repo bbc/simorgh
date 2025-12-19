@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
     externalLinkText: ', баракчалар',
@@ -46,6 +47,20 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp',
+      brandTitle: 'Би-Би-Синин WhatsApp каналы',
+      brandDescription:
+        'Күндүн башкы жаңылыктарын Би-Би-Синин WhatsApp каналынан окуңуз',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mmpvc4.jpg',
+        alt: 'Би-Би-Си Кыргыз кызматынын WhatsApp каналына кошулунуз',
+      },
+      linkLabel: {
+        text: 'Катталыңыз',
+        href: 'https://www.whatsapp.com/channel/0029VbBgIP4D8SE3ZSu7YG0e',
+      },
+    },
     translations: {
       pagination: {
         page: 'бет',
@@ -342,6 +357,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Видео жаңылыктар',
         url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
+      },
+      {
+        title: 'Шайлоо-2025',
+        url: '/kyrgyz/topics/cpdmzj1382mt',
       },
       {
         title: 'Кыргызстан',

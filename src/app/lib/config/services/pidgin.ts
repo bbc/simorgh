@@ -25,7 +25,8 @@ export const service: DefaultServiceConfig = {
     service: 'pidgin',
     serviceName: 'Pidgin',
     languageName: 'Nigerian Pidgin',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
     externalLinkText: ', outside',
@@ -47,6 +48,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Read am in',
+        long: 'Tori wey long',
+        minute: 'mins',
+      },
       pagination: {
         previousPage: 'Before',
         nextPage: 'Next',

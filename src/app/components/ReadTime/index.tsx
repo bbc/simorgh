@@ -1,104 +1,72 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { Services } from '#app/models/types/global';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 type ReadTimeProps = {
-  readTimeValue?: number;
+  readTimeValue: number;
   className?: string;
-  readTimeVariant?: string | null;
-  promoId?: string;
-  promoType?: string;
-  promoPosition?: number;
 };
 
-const DEFAULT_TRANSLATIONS = {
-  readTimePrefix: 'Estimated Read Time',
-  quick: 'Quick Read',
-  long: 'Long Read',
-  minute: 'minute',
-  minutes: 'minutes',
-};
-
-const ProcessReadTime = ({
+const formatReadTime = ({
   readTimeValue,
-  readTimeVariant,
+  singleMinuteSuffix,
+  readTimePrefix,
+  service,
 }: {
   readTimeValue: number;
-  readTimeVariant: string;
+  singleMinuteSuffix?: string;
+  readTimePrefix?: string;
+  service: Services;
 }) => {
-  const { translations } = use(ServiceContext);
-  const readTimePrefix =
-    translations.readTime?.readTimePrefix ??
-    DEFAULT_TRANSLATIONS.readTimePrefix;
-  const quickCopy = translations.readTime?.quick ?? DEFAULT_TRANSLATIONS.quick;
-  const longCopy = translations.readTime?.long ?? DEFAULT_TRANSLATIONS.long;
-  const singleMinuteSuffix =
-    translations.readTime?.minute ?? DEFAULT_TRANSLATIONS.minute;
-  const minutesSuffix =
-    translations.readTime?.minutes ?? DEFAULT_TRANSLATIONS.minutes;
+  if (!singleMinuteSuffix || !readTimePrefix) return null;
 
-  const readTimeInMilliseconds = readTimeValue * 60000;
-  const minutesLabel = readTimeValue === 1 ? singleMinuteSuffix : minutesSuffix;
-  const quickLongCopy = readTimeValue < 5 ? quickCopy : longCopy;
-  const minutesCopy = `${readTimePrefix}: ${readTimeValue} ${minutesLabel}`;
+  const servicesWithMinutesBeforeNumber: Services[] = [
+    'hausa',
+    'igbo',
+    'yoruba',
+    'swahili',
+  ];
+  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
 
-  const readTimeCopyType = readTimeVariant.includes('minutes')
-    ? 'minutes'
-    : 'quickLong';
+  const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
-  const copy = readTimeCopyType === 'minutes' ? minutesCopy : quickLongCopy;
-
-  return {
-    readTimeInMilliseconds,
-    minutesLabel,
-    copy,
-  };
+  return servicesWithMinutesBeforeNumber.includes(service)
+    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${readTimeValue}`
+    : `${readTimePrefix}${separator}${readTimeValue} ${singleMinuteSuffix}`;
 };
 
-export const ReadTimeArticleExperiment = ({
-  readTimeValue,
-  readTimeVariant,
-  className,
-}: ReadTimeProps) => {
-  if (!readTimeValue) return null;
-  const showReadTime = readTimeVariant && readTimeVariant !== 'off';
-  if (!showReadTime) return null;
+const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
+  const { translations, service } = use(ServiceContext);
 
-  const { readTimeInMilliseconds, minutesLabel, copy } = ProcessReadTime({
-    readTimeValue,
-    readTimeVariant,
-  });
+  const { readTime } = translations;
+  const singleMinuteSuffix = readTime?.minute;
+  const readTimePrefix = readTime?.readTimePrefix;
 
-  // EXPERIMENT: Article Read Time
-  const fontSize = readTimeVariant.includes('bold') ? 'pica' : 'brevier';
-  const fontVariant = readTimeVariant.includes('bold')
-    ? 'sansBold'
-    : 'sansRegular';
+  const readTimeInMilliseconds = readTimeValue * 60000;
 
   const eventTrackingData: EventTrackingData = {
     componentName: 'read-time-on-article',
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_article_read_time',
-    experimentVariant: readTimeVariant,
     itemTracker: {
-      label: `Read time: ${readTimeValue} ${minutesLabel}`,
+      label: `Read time: ${readTimeValue} min`,
       duration: readTimeInMilliseconds,
       type: `read-time`,
     },
   };
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const viewRef = useViewTracker(eventTrackingData);
 
-  const isControlVariant = readTimeVariant === 'control';
+  const readTimeText = formatReadTime({
+    readTimeValue,
+    singleMinuteSuffix,
+    readTimePrefix,
+    service,
+  });
 
-  if (isControlVariant)
-    return <div {...viewRef} css={styles.readTimePlaceholderControl} />;
+  if (!readTimeInMilliseconds || !readTimeText) return null;
 
   return (
     <div
@@ -107,81 +75,11 @@ export const ReadTimeArticleExperiment = ({
       {...viewRef}
       data-testid="read-time"
     >
-      <Text size={fontSize} fontVariant={fontVariant} css={styles.readTimeText}>
-        {copy}
-      </Text>
-    </div>
-  );
-};
-
-// EXPERIMENT - Placeholder for control variants
-const HomepagePlaceholder = (props: React.PropsWithChildren) => (
-  <div
-    {...props}
-    css={styles.readTimeHomepagePlaceholderControl}
-    className="placeholder"
-  />
-);
-
-export const ReadTime = ({
-  readTimeValue,
-  readTimeVariant,
-  promoId,
-  promoType,
-  promoPosition,
-  className,
-}: ReadTimeProps) => {
-  const { service } = use(ServiceContext);
-
-  const validRender = [
-    readTimeValue,
-    readTimeVariant,
-    readTimeVariant !== 'off',
-  ].every(Boolean);
-
-  // EXPERIMENT: Homepage Read Time
-  const experimentEnabledServices = ['turkce', 'mundo'];
-
-  if (readTimeVariant === null && experimentEnabledServices.includes(service))
-    return <HomepagePlaceholder />;
-
-  if (!validRender) return null;
-
-  const { readTimeInMilliseconds, copy } = ProcessReadTime({
-    readTimeValue: readTimeValue as number,
-    readTimeVariant: readTimeVariant as string,
-  });
-
-  const optimizelyTrackingData: EventTrackingData = {
-    componentName: 'read-time',
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_homepage_read_time',
-    experimentVariant: readTimeVariant,
-  };
-
-  const eventTrackingData: EventTrackingData = {
-    ...optimizelyTrackingData,
-    itemTracker: {
-      type: promoType,
-      position: promoPosition,
-      label: `Read time: ${readTimeValue} ${readTimeValue === 1 ? 'minute' : 'minutes'}`,
-      duration: readTimeInMilliseconds,
-      resourceId: promoId,
-    },
-  };
-
-  const isControlVariant = readTimeVariant === 'control';
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const viewRef = useViewTracker(eventTrackingData);
-
-  if (isControlVariant) return <HomepagePlaceholder {...viewRef} />;
-
-  return (
-    <div className={className} data-testid="read-time" {...viewRef}>
       <Text css={styles.readTimeText} size="brevier">
-        {copy}
+        {readTimeText}
       </Text>
     </div>
   );
 };
+
+export default ReadTimeArticle;

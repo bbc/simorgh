@@ -1,4 +1,3 @@
-import React from 'react';
 import request from 'supertest';
 import * as reactDomServer from 'react-dom/server';
 import dotenv from 'dotenv';
@@ -1642,7 +1641,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
     );
   });
 
-  it(`should set isUK value to null when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
+  it(`should set isUK value to false when 'x-country' and 'x-bbc-edge-isuk' is not available`, async () => {
     mockRouteProps({
       dataResponse: successDataResponse,
       isAmp: true,
@@ -1653,7 +1652,7 @@ describe('Server HTTP Headers - Page Endpoints', () => {
 
     expect(renderDocumentSpy).toHaveBeenCalledWith(
       expect.objectContaining({
-        data: expect.objectContaining({ isUK: null }),
+        data: expect.objectContaining({ isUK: false }),
       }),
     );
   });

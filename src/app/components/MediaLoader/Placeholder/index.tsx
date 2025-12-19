@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React from 'react';
+import type { MouseEventHandler } from 'react';
 import Image from '../../Image';
 import { MediaInfo } from '../types';
 import Guidance from './Guidance';
@@ -12,7 +9,7 @@ import SustainabilityMessage from './WithSustainabilityMessage/Message';
 import SustainabilityMessageNoJs from './WithSustainabilityMessage/MessageNoJs';
 
 interface Props {
-  onClick: React.MouseEventHandler<HTMLDivElement>;
+  onClick: MouseEventHandler<HTMLDivElement>;
   src?: string;
   srcSet?: string;
   mediaInfo?: MediaInfo;

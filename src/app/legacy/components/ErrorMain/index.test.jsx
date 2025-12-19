@@ -1,4 +1,3 @@
-import React from 'react';
 import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import { render } from '../../../components/react-testing-library-with-providers';
@@ -33,6 +32,9 @@ describe('ErrorMain', () => {
           script={arabic}
           service={service}
         />,
+        {
+          service,
+        },
       );
       expect(container).toMatchSnapshot();
     });

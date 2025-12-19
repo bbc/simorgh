@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
     serviceLocalizedName: 'සිංහල',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sinhala/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News සිංහල',
     dir: `ltr`,
     externalLinkText: ', බාහිර',

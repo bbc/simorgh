@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import arabic from '../../../../components/ThemeProvider/fontScripts/arabic';
@@ -32,6 +31,7 @@ describe('Paragraph', () => {
       <Paragraph script={arabic} service="persian">
         بعض محتوى النص
       </Paragraph>,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

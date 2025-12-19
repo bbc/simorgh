@@ -12,6 +12,7 @@ import {
   LIVE_RADIO_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_TV_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   chartbeatUID,
@@ -28,14 +29,6 @@ import { PageTypes, Services } from '../../../models/types/global';
 jest.mock('#lib/utilities/onClient', () =>
   jest.fn().mockImplementation(() => true),
 );
-
-const mockWindowObj = {
-  location: {
-    pathname: '/',
-  },
-} as Window & typeof globalThis;
-
-jest.spyOn(window, 'window', 'get').mockImplementation(() => mockWindowObj);
 
 describe('Chartbeat utilities', () => {
   afterEach(() => {
@@ -120,6 +113,11 @@ describe('Chartbeat utilities', () => {
         pageType: LIVE_PAGE,
         expectedDefaultType: 'Live',
         expectedShortType: 'LIV',
+      },
+      {
+        pageType: LIVE_TV_PAGE,
+        expectedDefaultType: 'Live TV',
+        expectedShortType: 'Live TV',
       },
       {
         pageType: null,
@@ -249,6 +247,12 @@ describe('Chartbeat utilities', () => {
         description: 'should return expected section for live page',
         expected: 'Mundo, Mundo - LIV',
       },
+      {
+        service: 'dari',
+        pageType: LIVE_TV_PAGE,
+        description: 'should return expected section for live tv page',
+        expected: 'Dari, Dari - Live TV',
+      },
     ];
 
     sectionFixtures.forEach(
@@ -290,6 +294,7 @@ describe('Chartbeat utilities', () => {
       ${LIVE_PAGE}      | ${'Live Page Title'}      | ${'BBC News Pidgin'} | ${'Live Page Title - BBC News Pidgin'}
       ${AUDIO_PAGE}     | ${'Audio Page Title'}     | ${'BBC News Pidgin'} | ${'Audio Page Title - BBC News Pidgin'}
       ${TV_PAGE}        | ${'TV Page Title'}        | ${'BBC News Pidgin'} | ${'TV Page Title - BBC News Pidgin'}
+      ${LIVE_TV_PAGE}   | ${'Live TV Page Title'}   | ${'BBC News Pidgin'} | ${'Live TV Page Title - BBC News Pidgin'}
     `(
       'should return correct title when pageType is $pageType and brandName is $brandName',
       ({ pageType, title, brandName, expected }) => {

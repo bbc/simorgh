@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import { ReactElement } from 'react';
 import {
   AMP_SCRIPT,
   AMP_NO_SCRIPT,
@@ -9,16 +9,21 @@ import {
 import { AMP_GEO_SCRIPT } from '#components/AmpGeo';
 import { BaseRendererProps } from './types';
 
+interface Props extends BaseRendererProps {
+  bodyContent?: ReactElement;
+  data?: Record<string, unknown>;
+}
+
 export default function AmpRenderer({
+  bodyContent,
   helmetMetaTags,
   helmetLinkTags,
   helmetScriptTags,
   htmlAttrs,
-  html,
   ids,
   styles,
   title,
-}: BaseRendererProps) {
+}: Props) {
   return (
     <html lang="en-GB" {...htmlAttrs}>
       <head>
@@ -39,9 +44,7 @@ export default function AmpRenderer({
         {AMP_GEO_SCRIPT}
         {AMP_ANALYTICS_JS}
       </head>
-      <body className="amp-geo-pending">
-        <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
-      </body>
+      <body className="amp-geo-pending">{bodyContent}</body>
     </html>
   );
 }

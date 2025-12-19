@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import { createContext, useMemo } from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '#psammead/gel-foundations/src/spacings';
 
@@ -11,7 +11,7 @@ import CardTitle from './card-title';
 import CardDescription from './card-description';
 import CardEpisodesText from './card-episodes-text';
 
-const PodcastContext = React.createContext({});
+const PodcastContext = createContext({});
 const withPodcastContext = Component => props => (
   <PodcastContext.Consumer>
     {context => <Component {...context} {...props} />}

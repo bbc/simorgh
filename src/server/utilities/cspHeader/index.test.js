@@ -11,6 +11,7 @@ import {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
+  cspDirectives,
 } from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -215,6 +216,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -379,6 +382,7 @@ describe('cspHeader', () => {
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',
+        'http://localhost:7080',
         'https://*.twitter.com',
         'https://www.instagram.com',
         'https://*.twimg.com',
@@ -411,6 +415,8 @@ describe('cspHeader', () => {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
+        'blob:',
+        'data:',
         `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
@@ -486,7 +492,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
+          expect(generateMediaSrc({})).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {
@@ -540,4 +546,36 @@ describe('cspHeader', () => {
       });
     },
   );
+});
+
+describe('cspHeader with relaxedCsp', () => {
+  it('should serve relaxed CSP when shouldServeRelaxedCsp is true', () => {
+    expect(
+      cspDirectives({ isAmp: true, isLive: true, shouldServeRelaxedCsp: true }),
+    ).toEqual({
+      directives: {
+        'child-src': ["blob: https: 'self'"],
+        'connect-src': ["'self' https: ws:"],
+        'default-src': [
+          "'self'",
+          '*.bbc.co.uk',
+          '*.bbc.com',
+          '*.bbci.co.uk',
+          '*.bbci.com',
+          'https://*.googlesyndication.com',
+        ],
+        'font-src': ["https:  data: blob: 'self'"],
+        'frame-src': ['https: data:'],
+        'img-src': ['https: data: blob:'],
+        'media-src': ["'self' blob: data: https:"],
+        'report-to': 'worldsvc',
+        'script-src': [
+          "https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'",
+        ],
+        'style-src': ["https: 'unsafe-inline'"],
+        'upgrade-insecure-requests': [],
+        'worker-src': ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
+      },
+    });
+  });
 });

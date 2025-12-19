@@ -1,9 +1,9 @@
-import services from '#lib/config/services/loadableConfig';
+import SERVICES from '#lib/config/services';
 
 export default url => {
   const [service] = url.split('/').filter(Boolean);
 
-  if (service && Object.keys(services).includes(service)) {
+  if (service && SERVICES.includes(service)) {
     return service;
   }
 

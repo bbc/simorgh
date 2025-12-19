@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
@@ -18,7 +18,7 @@ const StyledBrand = styled(Brand)`
 `;
 
 export const getBrandPath = (service, variant) => {
-  if (service === 'ws') return '/ws/languages';
+  if (service === 'ws') return '/news';
   if (variant && servicesWithVariants[service]?.includes(variant)) {
     return `/${service}/${variant}`;
   }

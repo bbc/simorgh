@@ -1,7 +1,6 @@
 import Cookie from 'js-cookie';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import Url from 'url-parse';
 import onClient from '#lib/utilities/onClient';
 import getUUID from '#lib/utilities/getUUID';
 import isOperaProxy from '#lib/utilities/isOperaProxy';
@@ -26,8 +25,8 @@ export const getDestination = (platform, statsDestination) => {
     NEWS_GNL_TEST: 598288,
     WS_NEWS_LANGUAGES: 598342,
     WS_NEWS_LANGUAGES_TEST: 598343,
-    PS_HOMEPAGE: 598273,
-    PS_HOMEPAGE_TEST: 598274,
+    HOMEPAGE_PS: 598273,
+    HOMEPAGE_PS_TEST: 598274,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
     NEWSROUND: 598293,
@@ -71,6 +70,9 @@ export const getDestination = (platform, statsDestination) => {
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
+
+export const enforceLegacyDestinationForJapanese = reverbTrackingURL =>
+  reverbTrackingURL?.replace('s=646753&', `s=598289&`);
 
 export const getAppType = platform => {
   switch (platform) {
@@ -298,30 +300,52 @@ export const getThingAttributes = (attribute, articleData) => {
   return null;
 };
 
+/* This transforms urls with a hash param to query params
+   ie. from bbc.com/mundo#some_param_1=24&some_param_2=48 to bbc.com/mundo?some_param_1=24&some_param_2=48
+*/
+const parameteriseHash = hash => {
+  const { searchParams } = new URL(
+    hash.replace('#', '?'),
+    'https://www.bbc.com',
+  );
+
+  return Object.fromEntries(searchParams);
+};
+
+const getQueryParamsFromURL = href => {
+  const { searchParams, hash } = new URL(href, 'https://www.bbc.com');
+  const query = Object.fromEntries(searchParams);
+
+  const hashParams = hash ? parameteriseHash(hash) : {};
+
+  return { ...query, ...hashParams };
+};
+
 export const getCampaignType = () => {
   if (!onClient()) return null;
 
   // Gets the query string parameters from the current url parsing them as an object
-  const { query, hash } = new Url(window.location.href, true);
+  const queryWithParams = getQueryParamsFromURL(window.location.href);
 
   // Check for the presence of the `?at_medium` QS
   const isMediumCampaign = Object.prototype.hasOwnProperty.call(
-    query,
+    queryWithParams,
     MEDIUM_CAMPAIGN_IDENTIFIER,
   );
 
   // Checks for the presence of the `?xtor` WS or anchor e.g. `#xtor`
-  const isXtorCampaign =
-    Object.prototype.hasOwnProperty.call(query, XTOR_CAMPAIGN_IDENTIFIER) ||
-    hash.includes(XTOR_CAMPAIGN_IDENTIFIER);
+  const isXtorCampaign = Object.prototype.hasOwnProperty.call(
+    queryWithParams,
+    XTOR_CAMPAIGN_IDENTIFIER,
+  );
 
   if (isMediumCampaign) {
     const isSupportedMediumCampaignType = SUPPORTED_MEDIUM_CAMPAIGN_TYPES.some(
-      type => query[MEDIUM_CAMPAIGN_IDENTIFIER].includes(type),
+      type => queryWithParams[MEDIUM_CAMPAIGN_IDENTIFIER].includes(type),
     );
 
     return isSupportedMediumCampaignType
-      ? query[MEDIUM_CAMPAIGN_IDENTIFIER]
+      ? queryWithParams[MEDIUM_CAMPAIGN_IDENTIFIER]
       : null;
   }
 
@@ -330,15 +354,8 @@ export const getCampaignType = () => {
   return null;
 };
 
-/* This transforms urls with a hash param to query params
-   ie. from bbc.com/mundo#some_param_1=24&some_param_2=48 to bbc.com/mundo?some_param_1=24&some_param_2=48
-*/
-const parameteriseHash = hash => new Url(hash.replace('#', '?'), true).query;
-
 const getMarketingUrlParam = (href, field) => {
-  const { query, hash } = new Url(href, true);
-
-  const queryWithParams = hash ? parameteriseHash(hash) : query;
+  const queryWithParams = getQueryParamsFromURL(href);
 
   return Object.prototype.hasOwnProperty.call(queryWithParams, field)
     ? queryWithParams[field]
@@ -355,9 +372,7 @@ const buildMarketingString = marketingValues =>
  * more information at https://developers.atinternet-solutions.com/as2-tagging-en/javascript-en/campaigns-javascript-en/marketing-campaigns-v2/?kw=at_custom#full-custom-campaigns_13
  */
 const buildRSSMarketingString = href => {
-  const { query, hash } = new Url(href, true);
-
-  const queryWithParams = hash ? parameteriseHash(hash) : query;
+  const queryWithParams = getQueryParamsFromURL(href);
 
   return Object.keys(queryWithParams).reduce((accum, currVal) => {
     if (currVal.includes('at_')) {
@@ -600,11 +615,7 @@ export const getCustomMarketingString = href =>
 export const getXtorMarketingString = href => {
   const field = 'xtor';
 
-  const { query, hash } = new Url(href, true);
-
-  const hashObject = hash ? parameteriseHash(hash) : '';
-
-  const queryWithParams = { ...query, ...hashObject };
+  const queryWithParams = getQueryParamsFromURL(href);
 
   return queryWithParams[field] || null;
 };

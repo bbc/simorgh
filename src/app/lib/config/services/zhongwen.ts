@@ -18,7 +18,8 @@ const baseServiceConfig = {
   brandName: 'BBC News 中文',
   product: 'BBC News',
   serviceLocalizedName: '中文',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/zhongwen/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News 中文',
   dir: 'ltr' as Direction,
   service: 'zhongwen' as Services,
@@ -49,7 +50,6 @@ const baseServiceConfig = {
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
-  fonts: [],
   timezone: 'GMT',
 };
 

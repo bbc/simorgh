@@ -1,10 +1,8 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import extractWorldServiceFromUrl from '#app/lib/utilities/extractWorldServiceFromUrl';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import moment from 'moment';
-import { use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isMedia from '#app/lib/utilities/isMedia';
 import styles from './index.styles';
@@ -20,6 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  timeOfDayExperimentName,
   timeOfDayVariant,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
@@ -67,6 +66,7 @@ const CurationGrid = ({
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
+          timeOfDayExperimentName={timeOfDayExperimentName || undefined}
           timeOfDayVariant={timeOfDayVariant}
         />
       );

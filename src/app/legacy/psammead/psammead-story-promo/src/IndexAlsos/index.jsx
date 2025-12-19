@@ -1,12 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { getBrevier } from '#psammead/gel-foundations/src/typography';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 const StyledIndexAlsos = styled.div`
@@ -28,8 +25,8 @@ const StyledIndexAlsosUl = styled.ul`
 
 // `display: inline-block` has been used to resolve Focus Indicator bug in Firefox high contrast mode.
 const StyledIndexAlsosLink = styled.a`
-  ${({ script }) => script && getBrevier(script)};
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   color: ${props => props.theme.palette.EBON};
   text-decoration: none;
   display: inline-block;

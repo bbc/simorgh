@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
+import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -21,23 +21,14 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  OFFLINE_PAGE,
   LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes, Platforms } from '../../models/types/global';
+import { PageTypes } from '../../models/types/global';
+import { EventTrackingContextProps } from '../../models/types/eventTracking';
 import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
 import { ATIData } from '../../components/ATIAnalytics/types';
-
-type EventTrackingContextProps =
-  | {
-      campaignID: string;
-      pageIdentifier: string;
-      platform: Platforms;
-      producerId: string;
-      statsDestination: string;
-      producerName: string;
-    }
-  | Record<string, never>;
 
 export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,
@@ -47,6 +38,7 @@ type CampaignPageTypes = Exclude<PageTypes, 'error'>;
 
 const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
+    [OFFLINE_PAGE]: 'offline',
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [MOST_READ_PAGE]: 'list-datadriven-read',

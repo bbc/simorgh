@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
@@ -269,17 +268,7 @@ describe('Navigation Container', () => {
   });
 
   describe('Language Navigation', () => {
-    const originalEnv = process.env.SIMORGH_APP_ENV;
-
-    beforeEach(() => {
-      process.env.SIMORGH_APP_ENV = 'test';
-    });
-
-    afterEach(() => {
-      process.env.SIMORGH_APP_ENV = originalEnv;
-    });
-
-    it('should render LanguageNavigation for WS service in non-live environment', async () => {
+    it('should render LanguageNavigation for WS service in all environment', async () => {
       const { getByTestId } = await act(async () =>
         render(<Navigation />, {
           bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -293,27 +282,6 @@ describe('Navigation Container', () => {
       );
 
       expect(getByTestId('collapsible-nav')).toBeInTheDocument();
-    });
-
-    it('should render standard navigation for WS service in live environment', async () => {
-      process.env.SIMORGH_APP_ENV = 'live';
-
-      const { container, queryByText } = await act(async () =>
-        render(<Navigation />, {
-          bbcOrigin: 'https://www.test.bbc.co.uk',
-          id: 'c0000000000o',
-          isAmp: false,
-          pageType: HOME_PAGE,
-          service: 'ws',
-          statusCode: 200,
-          pathname: '/ws/languages',
-        }),
-      );
-
-      expect(
-        container.querySelector('div[data-e2e="scrollable-nav"]'),
-      ).toBeInTheDocument();
-      expect(queryByText('collapsible-nav')).not.toBeInTheDocument();
     });
   });
 });

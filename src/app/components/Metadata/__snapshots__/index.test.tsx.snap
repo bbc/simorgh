@@ -36,26 +36,6 @@ exports[`Metadata Snapshot should match for AMP News & UK origin 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -64,11 +44,6 @@ exports[`Metadata Snapshot should match for AMP News & UK origin 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
@@ -109,10 +84,6 @@ exports[`Metadata Snapshot should match for AMP News & UK origin 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -281,26 +252,6 @@ exports[`Metadata Snapshot should match for Canonical News & international origi
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -309,11 +260,6 @@ exports[`Metadata Snapshot should match for Canonical News & international origi
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
@@ -354,10 +300,6 @@ exports[`Metadata Snapshot should match for Canonical News & international origi
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -517,26 +459,6 @@ exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -545,11 +467,6 @@ exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
@@ -590,10 +507,6 @@ exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -646,7 +559,7 @@ exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -690,7 +603,7 @@ exports[`Metadata Snapshot should match for Persian News & UK origin 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -747,26 +660,6 @@ exports[`Metadata Snapshot should match for Persian News & byline twitter handle
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -775,11 +668,6 @@ exports[`Metadata Snapshot should match for Persian News & byline twitter handle
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
@@ -820,10 +708,6 @@ exports[`Metadata Snapshot should match for Persian News & byline twitter handle
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -876,7 +760,7 @@ exports[`Metadata Snapshot should match for Persian News & byline twitter handle
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -920,7 +804,7 @@ exports[`Metadata Snapshot should match for Persian News & byline twitter handle
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -986,26 +870,6 @@ exports[`Metadata Snapshot should match for Persian News & international origin 
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -1014,11 +878,6 @@ exports[`Metadata Snapshot should match for Persian News & international origin 
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
@@ -1059,10 +918,6 @@ exports[`Metadata Snapshot should match for Persian News & international origin 
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -1115,7 +970,7 @@ exports[`Metadata Snapshot should match for Persian News & international origin 
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -1159,7 +1014,7 @@ exports[`Metadata Snapshot should match for Persian News & international origin 
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -1222,26 +1077,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on A
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -1250,11 +1085,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on A
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
@@ -1295,10 +1125,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on A
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -1351,7 +1177,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on A
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -1395,7 +1221,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on A
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -1445,26 +1271,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on c
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -1473,11 +1279,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on c
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
@@ -1518,10 +1319,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on c
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -1574,7 +1371,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on c
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -1618,7 +1415,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Russian lang on c
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -1669,26 +1466,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -1697,11 +1474,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
@@ -1742,10 +1514,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -1798,7 +1566,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -1842,7 +1610,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -1892,26 +1660,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -1920,11 +1668,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
@@ -1965,10 +1708,6 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -2021,7 +1760,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -2065,7 +1804,7 @@ exports[`Metadata Snapshot should match for Ukrainian STY with Ukrainian lang on
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -2119,26 +1858,6 @@ exports[`Metadata Snapshot should match for WS Homepages 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -2147,11 +1866,6 @@ exports[`Metadata Snapshot should match for WS Homepages 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-384x384.png",
@@ -2192,10 +1906,6 @@ exports[`Metadata Snapshot should match for WS Homepages 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -2248,7 +1958,7 @@ exports[`Metadata Snapshot should match for WS Homepages 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -2292,7 +2002,7 @@ exports[`Metadata Snapshot should match for WS Homepages 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -2342,26 +2052,6 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -2370,11 +2060,6 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/icons/icon-384x384.png",
@@ -2415,10 +2100,6 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -2471,7 +2152,7 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -2515,7 +2196,7 @@ exports[`Metadata Snapshot should match for WS Media liveradio 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/korean.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -2565,26 +2246,6 @@ exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -2593,11 +2254,6 @@ exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
@@ -2638,10 +2294,6 @@ exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -2694,7 +2346,7 @@ exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -2738,7 +2390,7 @@ exports[`Metadata Snapshot should match for WS On Demand Audio 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {
@@ -2788,26 +2440,6 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
       "rel": "apple-touch-icon",
     },
     {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-72x72.png",
-      "rel": "apple-touch-icon",
-      "sizes": "72x72",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-96x96.png",
-      "rel": "apple-touch-icon",
-      "sizes": "96x96",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-128x128.png",
-      "rel": "apple-touch-icon",
-      "sizes": "128x128",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-144x144.png",
-      "rel": "apple-touch-icon",
-      "sizes": "144x144",
-    },
-    {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-152x152.png",
       "rel": "apple-touch-icon",
       "sizes": "152x152",
@@ -2816,11 +2448,6 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-180x180.png",
       "rel": "apple-touch-icon",
       "sizes": "180x180",
-    },
-    {
-      "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-192x192.png",
-      "rel": "apple-touch-icon",
-      "sizes": "192x192",
     },
     {
       "href": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/icons/icon-384x384.png",
@@ -2861,10 +2488,6 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
     },
   ],
   "metaTags": [
-    {
-      "content": "IE=edge",
-      "http-equiv": "X-UA-Compatible",
-    },
     {
       "charset": "utf-8",
     },
@@ -2921,7 +2544,7 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
       "property": "og:description",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
       "property": "og:image",
     },
     {
@@ -2965,7 +2588,7 @@ exports[`Metadata Snapshot should match for WS TV 1`] = `
       "name": "twitter:image:alt",
     },
     {
-      "content": "https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png",
+      "content": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png",
       "name": "twitter:image:src",
     },
     {

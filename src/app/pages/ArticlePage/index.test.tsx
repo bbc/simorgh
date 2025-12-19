@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -8,16 +8,20 @@ import {
   articleDataNews,
   articleDataNewsWithEmbeds,
   articleDataPersian,
+  articleDataPersianWithFourParagraphs,
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
+  articleDataPidginWithSubByline,
   articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
+  articleDataHindi,
 } from '#pages/ArticlePage/fixtureData';
+import { RelatedContentList } from '#app/components/RelatedContentSection/fixture';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
@@ -29,10 +33,11 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-
 import { Article } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
+import PersonalisedContent from '../../components/PersonalisedContent';
 import {
   render,
   screen,
@@ -60,6 +65,12 @@ jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
+}));
+
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  onClient: jest.fn(() => true),
 }));
 
 const input = {
@@ -139,6 +150,10 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it.each([
     {
       testScenario:
@@ -759,6 +774,34 @@ describe('Article Page', () => {
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
   });
 
+  it('should render a byline when passed a byline', async () => {
+    const pageDataWithByline = {
+      ...articleDataPidginWithByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
+  it('should render a byline when passed a subByline', async () => {
+    const pageDataWithSubByline = {
+      ...articleDataPidginWithSubByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithSubByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
   it('should set "amphtml" link tag for asset', async () => {
     render(
       <Context service="pidgin">
@@ -939,12 +982,11 @@ describe('Article Page', () => {
       expect(title).not.toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should render read time component when readTime is supplied in metadata', () => {
+    it('should render read time component when readTime is supplied in metadata', () => {
       const dataWithReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {
             readTime: 5,
             wordCount: 500,
@@ -960,12 +1002,11 @@ describe('Article Page', () => {
       expect(queryByTestId('read-time')).toBeInTheDocument();
     });
 
-    // EXPERIMENT: Article Read Time
-    it.skip('should not render read time component when readTime is not supplied in metadata', () => {
+    it('should not render read time component when readTime is not supplied in metadata', () => {
       const dataMissingReadTime = {
-        ...articleDataPidgin,
+        ...articleDataPidginWithByline,
         metadata: {
-          ...articleDataPidgin.metadata,
+          ...articleDataPidginWithByline.metadata,
           stats: {},
         },
       };
@@ -976,6 +1017,422 @@ describe('Article Page', () => {
       );
 
       expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Adaptive curations in secondary column', () => {
+    it("should render adaptive curations when variant is 'article_time_of_day_a'", async () => {
+      // negative tests possible when override removed
+      (useOptimizelyVariation as jest.Mock).mockReturnValue(
+        'article_time_of_day_a',
+      );
+      const dummyBillboardCurationData = {
+        summaries: [
+          {
+            type: 'link',
+            isLive: false,
+            title: 'बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें',
+            firstPublished: '',
+            lastPublished: '',
+            link: 'https://www.bbc.com/hindi/bbc_hindi_tv/tv_programmes/w13xttlw',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c5f6/live/11c27630-24a7-11ef-a13a-0b8c563da930.png.webp',
+            description:
+              'देखिए सोमवार से शुक्रवार हर रात 10 बजे से BBC News Hindi  के होम पेज पर.',
+            imageAlt: 'बीबीसी दुनिया देखने के लिए यहाँ क्लिक करें',
+          },
+        ],
+        curationId: 'urn:bbc:tipo:list:2323cbdf-5d76-425c-94e0-fe743831ce17',
+        curationType: 'tipo-curation',
+        visualProminence: 'MAXIMUM',
+        position: 7,
+      };
+
+      const dummyMediaCurationData = {
+        summaries: [
+          {
+            type: 'video',
+            duration: 'PT4M4S',
+            isLive: false,
+            title:
+              'पाकिस्तान और अफ़ग़ानिस्तान के संघर्ष ने कैसे बढ़ाई पाकिस्तान के लिए मुश्किलें? - वुसअत की डायरी',
+            firstPublished: '2025-10-19T12:31:54.528Z',
+            lastPublished: '2025-10-19T12:31:54.528Z',
+            link: 'https://www.bbc.com/hindi/articles/c1e3lxjedj7o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9efb/live/b1e95390-acd7-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'पाकिस्तान ने अफ़ग़ानिस्तान से संघर्ष में भारत का नाम भी लिया, जिस पर भारत के विदेश मंत्रालय ने भी सख्ती से जवाब दिया. ऐसे में भारत-अफ़ग़ानिस्तान को लेकर पाकिस्तान कैसे परेशान है. \nइसी पर देखिए पाकिस्तान के वरिष्ठ पत्रकार वुसतुल्लाह ख़ान की यह ख़ास टिप्पणी.',
+            imageAlt:
+              'पाकिस्तान और अफ़ग़ानिस्तान के संघर्ष में भारत का नाम कैसे आया?',
+            id: 'c1e3lxjedj7o',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT17M15S',
+            isLive: false,
+            title:
+              'सर सैयद अहमद ख़ान ने कैसे की थी अलीगढ़ मुस्लिम यूनिवर्सिटी की स्थापना? - विवेचना',
+            firstPublished: '2025-10-19T12:29:49.472Z',
+            lastPublished: '2025-10-19T12:29:49.472Z',
+            link: 'https://www.bbc.com/hindi/articles/c39708z88myo',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/70ae/live/0631f9d0-acd7-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'अलीगढ़ मुस्लिम यूनिवर्सिटी की स्थापना कब और कैसे हुई और इस दौरान सर सैयद अहमद ख़ान का विरोध क्यों किया गया? ',
+            imageAlt: 'सर सैयद अहमद ख़ान',
+            id: 'c39708z88myo',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT3M16S',
+            isLive: false,
+            title:
+              'लड्डू से लेकर कलाकंद तक, कौन-सी मिठाई कितने दिन तक खाने लायक रहती है?',
+            firstPublished: '2025-10-19T08:28:55.699Z',
+            lastPublished: '2025-10-19T08:28:55.699Z',
+            link: 'https://www.bbc.com/hindi/articles/c0kpvl588x5o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ca54/live/d1063da0-acc4-11f0-b2a1-6f537f66f9aa.jpg.webp',
+            description:
+              'एक दिन में कितनी मिठाई खाना सही है? और फ्रिज में रखी कौन-सी मिठाई कब तक ख़राब हो जाती है? फ़िट ज़िंदगी के आज के एपिसोड में यही जानिए.\n',
+            imageAlt: 'दिवाली के वक्त मिठाइयों को लेकर बरतें सावधानी',
+            id: 'c0kpvl588x5o',
+            readTime: 1,
+          },
+          {
+            type: 'video',
+            duration: 'PT3M58S',
+            isLive: false,
+            title:
+              'टिकट न मिलने से लेकर भीड़ तक, दिवाली के लिए घर जाने वालों की परेशानियां- ग्राउंड रिपोर्ट',
+            firstPublished: '2025-10-18T14:22:27.963Z',
+            lastPublished: '2025-10-18T14:22:27.963Z',
+            link: 'https://www.bbc.com/hindi/articles/c62e7w36nq3o',
+            imageUrl:
+              'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/afdf/live/31199a80-ac2e-11f0-ba75-093eca1ac29b.jpg.webp',
+            description:
+              'दिल्ली में रहकर नौकरी कर रहे लोग दिवाली और छठ पूजा के मौके़ पर अपने घर जा रहे हैं. \nलेकिन दिल्ली से घर तक का सफ़र हर किसी के लिए एक सा नहीं है. कई लोग ऐसे हैं, जिन्हें ट्रेन या बस की टिकट ही नहीं मिली. ',
+            imageAlt:
+              'दिवाली पर लोगों के लिए अपने घर तक जाना कितना मुश्किल? ग्राउंड रिपोर्ट',
+            id: 'c62e7w36nq3o',
+            readTime: 1,
+          },
+        ],
+        activePage: 1,
+        pageCount: 40,
+        link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
+        curationId:
+          'urn:bbc:vivo:curation:23b426a2-6119-4c26-9c6b-b19d468186fd',
+        curationType: 'vivo-stream',
+        position: 6,
+        visualProminence: 'NORMAL',
+        title: 'मल्टीमीडिया',
+        visualStyle: 'FEED',
+      };
+      const pageDataWithSecondaryColumn = {
+        ...articleDataHindi,
+        secondaryColumn: {
+          billboardCuration: dummyBillboardCurationData,
+          mediaCuration: dummyMediaCurationData,
+          topStories: [],
+          features: [],
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithSecondaryColumn} />
+        </Context>,
+      );
+      // Check the adaptive curations section is present
+      expect(queryByTestId('adaptive-curations-section')).toBeInTheDocument();
+
+      // Check for the billboard component
+      expect(queryByTestId('billboard-1')).toBeInTheDocument();
+
+      // Check for the simple curation grid component
+      expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
+    });
+  });
+
+  describe('Continue Reading Toggle', () => {
+    it.each([
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is false',
+        toggleEnabled: false,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is true but no block is present',
+        toggleEnabled: true,
+        hasContinueReadingBlock: false,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should render Continue Reading Button when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: true,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button on Lite pages when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: true,
+        shouldBeDisplayed: false,
+      },
+    ])(
+      '$testScenario',
+      ({
+        toggleEnabled,
+        shouldBeDisplayed,
+        hasContinueReadingBlock,
+        isLite = false,
+      }) => {
+        const continueReadingBlock = {
+          id: 'continue-reading-block',
+          type: 'continueReading',
+          model: {},
+        };
+        const baseBlocks =
+          articleDataPersianWithFourParagraphs.content.model.blocks;
+
+        const blocks = hasContinueReadingBlock
+          ? [...baseBlocks, continueReadingBlock]
+          : [...baseBlocks];
+
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks,
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          isLite,
+          toggles: { continueReadingButton: { enabled: toggleEnabled } },
+        });
+
+        const continueReadingButton = screen.queryByTestId(
+          'continue-reading-button',
+        );
+
+        if (shouldBeDisplayed) {
+          expect(continueReadingButton).toBeInTheDocument();
+        } else {
+          expect(continueReadingButton).not.toBeInTheDocument();
+        }
+      },
+    );
+  });
+
+  describe('Personalised topic curation', () => {
+    const relatedContentBlock = RelatedContentList[0];
+
+    it('renders nothing if personalisedContentData is undefined', () => {
+      const pageData = {
+        ...articleDataNews,
+        secondaryColumn: {
+          topStories: [],
+          features: [],
+        },
+      };
+      const { container } = render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="variantA"
+        />,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+    it('renders section and subheading when personalisedContentData is present', () => {
+      const personalisedContent = [
+        {
+          title: 'Recommended for you',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Article 1',
+              description: 'Description 1',
+              link: '/article-1',
+              imageUrl: 'image-1.jpg',
+              imageAlt: 'Image 1',
+              isLive: false,
+              id: 'article-1',
+            },
+            {
+              type: 'promo',
+              title: 'Article 2',
+              description: 'Description 2',
+              link: '/article-2',
+              imageUrl: 'image-2.jpg',
+              imageAlt: 'Image 2',
+              isLive: false,
+              id: 'article-2',
+            },
+          ],
+          id: 'personalised-content',
+          topicId: 'topic-1',
+        },
+      ];
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+      render(
+        <PersonalisedContent
+          pageData={pageData}
+          personalisedTopicCurationExperimentVariant="personalised"
+        />,
+      );
+      expect(screen.getByRole('region')).toBeInTheDocument();
+      expect(
+        screen.getByText('Más información sobre Recommended for you'),
+      ).toBeInTheDocument();
+      expect(screen.getByText('Article 1')).toBeInTheDocument();
+      expect(screen.getByText('Article 2')).toBeInTheDocument();
+    });
+
+    it('renders personalised topic rail after related content for variation_1', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_1';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isAfter =
+        order !== undefined && order === Node.DOCUMENT_POSITION_FOLLOWING;
+      expect(isAfter).toBeTruthy();
+    });
+
+    it('renders personalised topic rail before related content for variation_2', () => {
+      (useOptimizelyVariation as jest.Mock).mockImplementation(
+        ({ experimentName }) => {
+          if (experimentName === 'newswb_ws_location_based_topics') {
+            return 'variation_2';
+          }
+          return undefined;
+        },
+      );
+
+      const personalisedContent = [
+        {
+          title: 'Personalised Title',
+          summaries: [
+            {
+              type: 'promo',
+              title: 'Promo Title',
+              description: 'Promo Description',
+              link: '/promo-link',
+              imageUrl: 'promo-image.jpg',
+              imageAlt: 'Promo Image',
+              isLive: false,
+            },
+          ],
+          id: 'personalised-content',
+        },
+      ];
+
+      const pageData = JSON.parse(JSON.stringify(articleDataNews)) as Article;
+      pageData.content.model.blocks = [
+        relatedContentBlock,
+      ] as Article['content']['model']['blocks'];
+      pageData.secondaryColumn = {
+        topStories: [],
+        features: [],
+        personalisedContent,
+      };
+
+      const { container } = render(
+        <Context service="news">
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[aria-labelledby="related-content-heading"]',
+      );
+      const personalisedSection = container.querySelector(
+        '[aria-labelledby="personalised-content"]',
+      );
+
+      expect(relatedContentSection).not.toBeNull();
+      expect(personalisedSection).not.toBeNull();
+      const order = relatedContentSection?.compareDocumentPosition(
+        personalisedSection as Node,
+      );
+      const isBefore =
+        order !== undefined && order === Node.DOCUMENT_POSITION_PRECEDING;
+      expect(isBefore).toBeTruthy();
     });
   });
 });

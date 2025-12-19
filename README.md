@@ -4,7 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service, Public Service News and BBC Sport.
+BBC World Service News websites are rendered using Simorgh, a ReactJS based application. Simorgh also renders AMP news article pages for World Service and Public Service News.
 
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.mdx)). It is regularly maintained and well documented, and we welcome open source contributors.
 
@@ -31,9 +31,9 @@ NB there is further documentation colocated with relevant code. The above list i
 
 #### The initial page load - Server Side Render (SSR)
 
-A request to a BBC article (https://www.bbc.co.uk/news/articles/clldg965yzjo) is passed on to the Simorgh application from a proprietary routing and caching service (called Mozart).
+A request to a BBC home page (for example https://www.bbc.com/mundo) is passed on to the Simorgh application from a proprietary routing and caching service (called Mozart).
 
-The request matches a route in our express server using a regex match (`articleRegexPath`). If the URL matches the pre-defined regex pattern for an article or a front page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the react container in which to render i.e. `ArticleContainer`, this is typically called `getInitialData`
+The request matches a route in our express server using a regex match (`homePagePath`). If the URL matches the pre-defined regex pattern for a home page we fetch some params from the route using the `getRouteProps` function. This returns the service, isAmp, route and match properties. Route is a react-router route that defines a method to fetch the initial JSON used to render the page and the React container in which to render i.e. `HomePage`, this is typically called `getInitialData`
 
 Once data is returned we pull the status code and pass all of this data as props to our main document using `renderDocument`.
 
@@ -194,35 +194,33 @@ FYI: [Article explaining the BBC's use of ids in URL](https://www.smashingmagazi
 
 These two News articles are available on the Test environment of our CMS, as well as locally, so are often used for testing:
 
-- [http://localhost:7080/news/articles/c6v11qzyv8po](http://localhost:7080/news/articles/c6v11qzyv8po)
-- [http://localhost:7080/persian/articles/c4vlle3q337o](http://localhost:7080/persian/articles/c4vlle3q337o).
+- [http://localhost:7081/news/articles/c6v11qzyv8po](http://localhost:7081/news/articles/c6v11qzyv8po)
+- [http://localhost:7081/persian/articles/c4vlle3q337o](http://localhost:7081/persian/articles/c4vlle3q337o).
 
 We are also serving AMP HTML pages at the route `/news/articles/:id.amp` [https://www.ampproject.org](https://www.ampproject.org)
 
-- [http://localhost:7080/news/articles/c6v11qzyv8po.amp](http://localhost:7080/news/articles/c6v11qzyv8po.amp)
-- [http://localhost:7080/persian/articles/c4vlle3q337o.amp](http://localhost:7080/persian/articles/c4vlle3q337o.amp).
+- [http://localhost:7081/news/articles/c6v11qzyv8po.amp](http://localhost:7081/news/articles/c6v11qzyv8po.amp)
+- [http://localhost:7081/persian/articles/c4vlle3q337o.amp](http://localhost:7081/persian/articles/c4vlle3q337o.amp).
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
-- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp)
-- [http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7080/zhongwen/articles/c3xd4x9prgyo/simp.amp).
+- [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp)
+- [http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp](http://localhost:7081/zhongwen/articles/c3xd4x9prgyo/simp.amp).
 
-### Front pages
+### Home pages
 
-World Service front pages are served in the format `/:service` where `service` represents a World Service site:
+World Service home pages are served in the format `/:service` where `service` represents a World Service site:
 
 - [http://localhost:7080/igbo](http://localhost:7080/igbo)
 - [http://localhost:7080/pidgin](http://localhost:7080/pidgin)
-
-The World Service front pages follow the article format for AMP too, being available at `/:service.amp`:
-
-- [http://localhost:7080/igbo.amp](http://localhost:7080/igbo.amp)
-- [http://localhost:7080/pidgin.amp](http://localhost:7080/pidgin.amp)
 
 Services with variants can't be accessed using the format above, instead the variant must be provided in the URL.
 
 - [http://localhost:7080/zhongwen/simp](http://localhost:7080/zhongwen/simp)
 - [http://localhost:7080/zhongwen/simp.amp](http://localhost:7080/zhongwen/simp.amp).
+
+World Service home pages do not support AMP.
+
 
 ### Topic Pages
 
@@ -270,21 +268,21 @@ To run TEST bundles on localhost:
 - In `envConfig/test.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && yarn build:test && yarn start`
-- Visit a test article: http://localhost:7080/news/articles/c0g992jmmkko
+- Visit a test article: http://localhost:7081/news/articles/c0g992jmmkko
 
 To run LIVE bundles on localhost:
 
 - In `envConfig/live.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
 - Then run `rm -rf build && yarn build:live && yarn start`
-- Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
+- Visit a live article: http://localhost:7081/news/articles/c8xxl4l3dzeo
 
 ## Changing request location
 
 Some features perform differently dependant on whether a user is located within the UK or internationally. You can explicitly request a specific version by accessing Simorgh via a specific localhost BBC domain:
 
-- UK version: [http://localhost.bbc.co.uk:7080/news/articles/c0000000001o](http://localhost.bbc.co.uk:7080/news/articles/c0000000001o)
-- International version: [http://localhost.bbc.com:7080/news/articles/c0000000001o](http://localhost.bbc.com:7080/news/articles/c0000000001o)
+- UK version: [http://localhost.bbc.co.uk:7081/news/articles/c0000000001o](http://localhost.bbc.co.uk:7081/news/articles/c0000000001o)
+- International version: [http://localhost.bbc.com:7081/news/articles/c0000000001o](http://localhost.bbc.com:7081/news/articles/c0000000001o)
 
 If these urls do not work, you may need to add a hosts file entry (`/etc/hosts` or `C:\Windows\System32\drivers\etc\hosts`):
 

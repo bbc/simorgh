@@ -1,4 +1,4 @@
-import React, { cloneElement, useRef } from 'react';
+import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -11,8 +11,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -79,10 +77,6 @@ export const DropdownUl = styled.ul`
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 `;
 
-DropdownUl.defaultProps = {
-  role: 'list',
-};
-
 const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
@@ -94,8 +88,8 @@ const StyledDropdownLi = styled.li`
 `;
 
 const StyledDropdownLink = styled.a`
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
@@ -111,10 +105,6 @@ const StyledDropdownLink = styled.a`
 const StyledCurrentLink = styled.span`
   ${({ dir, theme }) => getStyles(dir, theme)}
 `;
-
-StyledCurrentLink.defaultProps = {
-  role: 'text',
-};
 
 export const DropdownLi = ({
   children,
@@ -142,7 +132,8 @@ export const DropdownLi = ({
       >
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <StyledCurrentLink dir={dir} id={ariaId}>
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <StyledCurrentLink dir={dir} id={ariaId} role="text">
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
           </StyledCurrentLink>
@@ -167,7 +158,7 @@ const iconBorderPosition = `
 // The sideLength of the button should be
 //  line height + top padding + bottom padding
 const calculateButtonSide = lineHeight =>
-  lineHeight / 16 + NAV_BAR_TOP_BOTTOM_SPACING * 2;
+  parseFloat(lineHeight) + NAV_BAR_TOP_BOTTOM_SPACING * 2;
 
 const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
@@ -183,8 +174,8 @@ const MenuButton = styled(Button)`
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
-  ${({ script }) =>
-    script && getButtonDimensions(script.pica.groupA.lineHeight)}
+  ${({ theme: { fontSizes } }) =>
+    getButtonDimensions(fontSizes.pica.lineHeight)}
 
   &:hover,
   &:focus {
@@ -202,8 +193,8 @@ const MenuButton = styled(Button)`
     visibility: hidden;
   }
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    ${({ script }) =>
-      script && getButtonDimensions(script.pica.groupB.lineHeight)}
+    ${({ theme: { fontSizes, fontMq } }) =>
+      getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
   }
 
   & svg {

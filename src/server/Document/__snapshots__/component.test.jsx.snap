@@ -78,18 +78,6 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <link
-      href="modern.main.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.vendor.js"
-      rel="modulepreload"
-    />
-    <link
-      href="modern.igbo.js"
-      rel="modulepreload"
-    />
     <meta
       content="noindex"
       name="robots"
@@ -103,6 +91,18 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       href="https://www.bbc.com/news/articles/c6v11qzyv8po"
       rel="canonical"
+    />
+    <link
+      href="modern.main.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulepreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulepreload"
     />
     <script>
       
@@ -126,6 +126,17 @@ exports[`Document Component should render APP version correctly 1`] = `
     </style>
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+    </script>
+    <script
+      type="text/javascript"
+    >
+      
+        if (function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}()) {
+          document.documentElement.classList.add("is-opera-mini");
+        }
+      
     </script>
     <script
       type="text/javascript"
@@ -287,6 +298,16 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
+    <title
+      data-react-helmet="true"
+    >
+      Test title
+    </title>
+    <link
+      data-react-helmet="true"
+      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
+      rel="canonical"
+    />
     <link
       href="modern.main.js"
       rel="modulepreload"
@@ -298,16 +319,6 @@ exports[`Document Component should render correctly 1`] = `
     <link
       href="modern.igbo.js"
       rel="modulepreload"
-    />
-    <title
-      data-react-helmet="true"
-    >
-      Test title
-    </title>
-    <link
-      data-react-helmet="true"
-      href="https://www.bbc.com/news/articles/c6v11qzyv8po"
-      rel="canonical"
     />
     <script>
       
@@ -331,6 +342,17 @@ exports[`Document Component should render correctly 1`] = `
     </style>
     <script>
       window.SIMORGH_ENV_VARS={"SIMORGH_APP_ENV":"local","SIMORGH_ATI_BASE_URL":"https://logws1363.ati-host.net?","SIMORGH_BASE_URL":"http://localhost:7080","SIMORGH_CONFIG_CACHE_ITEMS":"400","SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS":"300","SIMORGH_CONFIG_TIMEOUT_SECONDS":"5","SIMORGH_CONFIG_URL":"https://config.test.api.bbci.co.uk/","SIMORGH_CSP_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_ICHEF_BASE_URL":"https://ichef.bbci.co.uk","SIMORGH_INCLUDES_BASE_URL":"https://www.test.bbc.com/ws/includes","SIMORGH_INCLUDES_BASE_AMP_URL":"https://news.test.files.bbci.co.uk","SIMORGH_MOST_READ_CDN_URL":"http://localhost:7080","SIMORGH_OPTIMIZELY_SDK_KEY":"LptPKDnHyAFu9V12s5xCz","SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN":"http://localhost:7080","SIMORGH_PUBLIC_STATIC_ASSETS_PATH":"/","SIMORGH_REVERB_SOURCE":"http://localhost:7080/static/js/reverb/reverb-3.10.2.js","SIMORGH_WEBVITALS_REPORTING_ENDPOINT":"https://ws.bbc-reporting-api.app/report-endpoint","SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE":"100"}
+    </script>
+    <script
+      type="text/javascript"
+    >
+      
+        if (function isOperaProxy() {
+  return Object.prototype.toString.call(window.operamini) === '[object OperaMini]';
+}()) {
+          document.documentElement.classList.add("is-opera-mini");
+        }
+      
     </script>
     <script
       type="text/javascript"

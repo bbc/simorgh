@@ -1,5 +1,4 @@
 import { fireEvent } from '@testing-library/react';
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
@@ -8,6 +7,7 @@ import { data as pidginHomePageDataFixture } from '#data/pidgin/homePage/index.j
 import { data as portugueseHomePageDataFixture } from '#data/portuguese/homePage/index.json';
 import { data as wsHomePageData } from '#data/ws/homePage/index.json';
 import { service as pidginServiceConfig } from '#app/lib/config/services/pidgin';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import useViewTracker from '../../hooks/useViewTracker';
 import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import {
@@ -16,10 +16,17 @@ import {
 } from '../../components/react-testing-library-with-providers';
 import HomePage from './HomePage';
 import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helpers/src';
+import * as reorderCurations from './utils/reorderCurations';
+
+jest.mock('#app/hooks/useOptimizelyVariation', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  ExperimentType: { CLIENT_SIDE: 'client_side' },
+}));
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
-  default: jest.fn(),
+  default: jest.fn(() => ({ onClick: jest.fn() })),
 }));
 
 // Mock useViewTracker hook globally
@@ -28,15 +35,34 @@ jest.mock('../../hooks/useViewTracker', () => ({
   default: jest.fn(),
 }));
 
-jest.mock('../../hooks/useClickTrackerHandler', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>Chartbeat Analytics</div>;
   return ChartbeatAnalytics;
 });
+
+const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
+
+const basePageData = {
+  title: 'Test Title',
+  description: 'Test Description',
+  seoTitle: 'Test SEO Title',
+  seoDescription: 'Test SEO Description',
+  metadata: { atiAnalytics: {}, type: 'home' },
+  curations: [
+    {
+      curationId: 'id1',
+      position: 0,
+      visualStyle: 'BANNER',
+      visualProminence: 'MAXIMUM',
+    },
+    {
+      curationId: 'id2',
+      position: 1,
+      visualStyle: 'FEED',
+      visualProminence: 'LOW',
+    },
+  ],
+};
 
 const homePageData = {
   ...kyrgyzHomePageData,
@@ -161,7 +187,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
-      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+      'BBC News Kyrgyz - BBC News Кыргыз Кызматы',
     );
   });
 
@@ -1083,5 +1109,41 @@ describe('Home Page', () => {
         expect(socialLinksCalls).toContainEqual(expectedTrackingData);
       });
     });
+  });
+
+  describe('HomePage - Optimizely time of day adaptive curations experiment', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it.each(['homepage_time_of_day_a', 'homepage_time_of_day_b'])(
+      'calls reorderCurations with correct arguments when variation is %s',
+      variant => {
+        const spy = jest.spyOn(reorderCurations, 'default');
+        mockUseOptimizelyVariation.mockReturnValue(variant);
+        render(<HomePage pageData={basePageData} />, { service: 'hindi' });
+
+        expect(spy).toHaveBeenCalledTimes(1);
+
+        const [callArgs] = spy.mock.calls;
+        const { service, curations } = callArgs[0];
+        expect(service).toBe('hindi');
+        expect(Array.isArray(curations)).toBe(true);
+        expect(curations).toEqual(basePageData.curations);
+
+        spy.mockRestore();
+      },
+    );
+
+    it.each(['control', null, undefined])(
+      'does not call reorderCurations when variation is %s',
+      variant => {
+        const spy = jest.spyOn(reorderCurations, 'default');
+        mockUseOptimizelyVariation.mockReturnValue(variant);
+        render(<HomePage pageData={basePageData} />, { service: 'hindi' });
+        expect(spy).not.toHaveBeenCalled();
+        spy.mockRestore();
+      },
+    );
   });
 });

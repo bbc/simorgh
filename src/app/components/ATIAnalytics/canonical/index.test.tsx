@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import {
   render,
@@ -9,6 +8,7 @@ import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITr
 import processClientDeviceAndSendStaticBeacon from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import * as beacon from '../../../lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
+import { ReverbBeaconConfig } from '../types';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {
@@ -16,6 +16,7 @@ describe('Canonical ATI Analytics', () => {
   });
 
   const atiBaseUrl = 'https://foobar.com?';
+  const reverbBaseUrl = 'https://logws1363.ati-host.net/hit.xiti?';
   const mockPageviewParams = 'key=value&key2=value2&x8=[simorgh]';
 
   const mockSendBeacon = jest.fn().mockReturnValue('beacon-return-value');
@@ -64,10 +65,32 @@ describe('Canonical ATI Analytics', () => {
   it('should contain a beacon onLoad script via processClientDeviceAndSendStaticBeacon on lite', () => {
     jest.spyOn(isOperaProxy, 'default').mockImplementation(() => false);
 
+    const sampleReverbConfig = {
+      params: {
+        env: undefined,
+        page: {
+          contentId: 'urn:bbc:tipo:topic:cm7682qz7v1t',
+          contentType: 'index-home',
+          destination: 'WS_NEWS_LANGUAGES_TEST',
+          name: 'kyrgyz.page',
+          producer: 'KYRGYZ',
+          additionalProperties: [Object],
+        },
+        user: { isSignedIn: false },
+      },
+      eventDetails: { eventName: 'pageView' },
+    };
+
     act(() => {
-      render(<CanonicalATIAnalytics pageviewParams={mockPageviewParams} />, {
-        isLite: true,
-      });
+      render(
+        <CanonicalATIAnalytics
+          pageviewParams={mockPageviewParams}
+          reverbParams={sampleReverbConfig as ReverbBeaconConfig}
+        />,
+        {
+          isLite: true,
+        },
+      );
     });
 
     const helmet = Helmet.peek();
@@ -76,9 +99,7 @@ describe('Canonical ATI Analytics', () => {
     expect(sendPageViewBeaconLite).toContain(
       processClientDeviceAndSendStaticBeacon.toString(),
     );
-    expect(sendPageViewBeaconLite).toContain(
-      `${atiBaseUrl}${mockPageviewParams}`,
-    );
+    expect(sendPageViewBeaconLite).toContain(reverbBaseUrl);
   });
 
   it('should not send beacon when browser is Opera Mini', () => {

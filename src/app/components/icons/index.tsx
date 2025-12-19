@@ -1,5 +1,4 @@
 import { Direction } from '#app/models/types/global';
-import React from 'react';
 
 export const Ellipsis = () => (
   <svg
@@ -51,7 +50,7 @@ type ChevronProps = {
 };
 
 export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
-  let normalisedDirection = null;
+  let normalisedDirection = ChevronOrientation.FORWARD;
   const paths = {
     [ChevronOrientation.BACKWARD]: (
       <path d="M10.4 14.3L26.5 31h-6.4L5.5 16 20.1 1h6.4L10.4 17.7v-3.4z" />
@@ -70,8 +69,6 @@ export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
     normalisedDirection =
       dir === 'ltr' ? ChevronOrientation.FORWARD : ChevronOrientation.BACKWARD;
   }
-
-  if (!normalisedDirection) return null;
 
   return (
     <svg
