@@ -265,6 +265,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Top Tori',
+      mostReadBadgeText: 'Di one wey dem dey read well well',
       featuresAnalysisTitle: 'Informate me',
       latestMediaTitle: 'New things',
     },

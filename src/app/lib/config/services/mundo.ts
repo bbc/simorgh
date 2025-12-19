@@ -322,6 +322,7 @@ export const service: DefaultServiceConfig = {
           'Ver la versión completa de la página para visualizar todo el contenido.',
       },
       topStoriesTitle: 'Principales noticias',
+      mostReadBadgeText: 'Lecturas más populares',
       featuresAnalysisTitle: 'No te lo pierdas',
       latestMediaTitle: 'Más videos',
       ugc: {

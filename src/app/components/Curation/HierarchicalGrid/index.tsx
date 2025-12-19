@@ -4,6 +4,7 @@ import { css, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
@@ -37,6 +38,7 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
+  mostReadItemId,
   timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
@@ -45,6 +47,10 @@ const HiearchicalGrid = ({
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
+  const mostReadBadgeTranslation = (
+    translations.mostReadBadgeText || 'Most Read'
+  ).toUpperCase();
+
   if (!summaries || summaries.length < 3) return null;
 
   const promoItems = summaries.slice(0, 12);
@@ -97,6 +103,10 @@ const HiearchicalGrid = ({
             experimentName: 'newswb_ws_tod_homepage',
             experimentVariant: timeOfDayVariant,
           });
+
+          const getPromoItemid = extractId(promo.id) ?? null;
+          const isMostReadStory =
+            mostReadItemId && getPromoItemid === mostReadItemId;
 
           return (
             <li
@@ -154,6 +164,17 @@ const HiearchicalGrid = ({
                     </Promo.A>
                   ) : (
                     <Promo.A href={promo.link} {...clickTrackerHandler}>
+                      {isMostReadStory ? (
+                        <div
+                          css={
+                            isFirstPromo
+                              ? styles.mostReadBadgeLarge
+                              : styles.mostReadBadgeSmall
+                          }
+                        >
+                          {mostReadBadgeTranslation}
+                        </div>
+                      ) : null}
                       {isLive ? (
                         <LiveLabel
                           {...(isFirstPromo

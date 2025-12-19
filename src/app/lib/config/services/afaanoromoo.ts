@@ -293,6 +293,7 @@ export const service: DefaultServiceConfig = {
         linkText: 'Guutuu qabiyyee ilaaluuf fuula cufa ilaali',
       },
       topStoriesTitle: 'Isin hin darbiin',
+      mostReadBadgeText: `Baay'ee kan jaalatame`,
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
       latestMediaTitle: 'Haaraa',
     },

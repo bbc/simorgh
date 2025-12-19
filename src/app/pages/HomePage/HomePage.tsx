@@ -40,6 +40,8 @@ export interface HomePageProps {
   };
 }
 
+export const extractId = (id?: string | null) => (id ?? '').split(':').pop();
+
 const HomePage = ({ pageData }: HomePageProps) => {
   const {
     translations,
@@ -50,7 +52,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     brandName,
     service,
   } = use(ServiceContext);
-  const { topStoriesTitle, home } = translations;
+  const { topStoriesTitle, mostReadBadgeText, home } = translations;
   const {
     title,
     description,
@@ -89,6 +91,13 @@ const HomePage = ({ pageData }: HomePageProps) => {
   }
 
   const itemList = getItemList({ curations, name: brandName });
+
+  const findMostReadCuration = curations.find(
+    curation => !!curation.mostRead?.items?.length,
+  );
+
+  const mostReadItemId =
+    extractId(findMostReadCuration?.mostRead?.items?.[0].id ?? null) ?? null;
 
   return (
     <>
@@ -158,6 +167,8 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      mostReadItemId={mostReadItemId}
+                      mostReadBadgeText={mostReadBadgeText}
                       timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
                     />

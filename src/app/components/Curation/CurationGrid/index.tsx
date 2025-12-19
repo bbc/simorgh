@@ -18,6 +18,7 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
+  mostReadItemId,
   timeOfDayExperimentName,
   timeOfDayVariant,
 }: CurationGridProps) => {
@@ -66,6 +67,7 @@ const CurationGrid = ({
         <CurationPromo
           {...commonProps}
           headingLevel={headingLevel}
+          mostReadItemId={mostReadItemId}
           timeOfDayExperimentName={timeOfDayExperimentName || undefined}
           timeOfDayVariant={timeOfDayVariant}
         />

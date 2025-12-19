@@ -67,6 +67,7 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
+  mostReadItemId,
   timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
@@ -253,6 +254,7 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
+                mostReadItemId={mostReadItemId}
                 timeOfDayExperimentName={timeOfDayExperimentName || undefined}
                 timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
@@ -265,6 +267,7 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
+              mostReadItemId={mostReadItemId}
               timeOfDayExperimentName={timeOfDayExperimentName || undefined}
               timeOfDayVariant={timeOfDayVariant ?? undefined}
             />

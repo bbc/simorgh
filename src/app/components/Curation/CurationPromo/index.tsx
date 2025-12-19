@@ -7,12 +7,11 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
+import { extractId } from '#app/pages/HomePage/HomePage';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { RequestContext } from '../../../contexts/RequestContext';
-
 import LiveLabel from '../../LiveLabel';
-
 import styles from './index.styles';
 
 const CurationPromo = ({
@@ -28,6 +27,8 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
   eventTrackingData,
+  mostReadItemId,
+  position,
   timeOfDayExperimentName,
   timeOfDayVariant,
   isPortraitImage,
@@ -40,6 +41,7 @@ const CurationPromo = ({
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
   const durationTranslation = path(['media', 'duration'], translations);
   const duration = moment.duration(mediaDuration, 'seconds');
+  const mostReadBadgeTranslation = translations.mostReadBadgeText || 'Hello';
 
   const separator = ',';
 
@@ -61,6 +63,9 @@ const CurationPromo = ({
       experimentVariant: timeOfDayVariant,
     }),
   });
+
+  const getPromoItemId = extractId(id) ?? null;
+  const isMostReadStory = mostReadItemId && getPromoItemId === mostReadItemId;
 
   return (
     <Promo css={styles.promo} className="">
@@ -95,6 +100,9 @@ const CurationPromo = ({
           </Promo.A>
         ) : (
           <Promo.A href={link} {...clickTrackerHandler}>
+            {isMostReadStory ? (
+              <div css={styles.mostReadBadge}>{mostReadBadgeTranslation}</div>
+            ) : null}
             {isLive ? <LiveLabel>{title}</LiveLabel> : title}
           </Promo.A>
         )}
