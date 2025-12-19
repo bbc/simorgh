@@ -47,6 +47,7 @@ import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
+import LanguagesNearYou from '#app/components/3d/3dComponents/LanguagesNearYou';
 import Recommendations from '#app/components/Recommendations';
 import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
 import ElectionBanner from './ElectionBanner';
@@ -433,6 +434,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             ]}
             role="main"
           >
+            <LanguagesNearYou />
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
