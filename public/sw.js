@@ -106,16 +106,18 @@ self.addEventListener('message', async event => {
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const { isPWA } = event.data;
-    pwaClients.set(clientId, isPWA);
+    // pwaClients.set(clientId, isPWA);
 
     if (isPWA) {
-      const cache = await caches.open(cacheName);
-      await cache.put('pwa_installed', new Response('true'));
+      // const cache = await caches.open(cacheName);
+      // await cache.put('pwa_installed', new Response('true'));
+      pwaClients.set(clientId, isPWA);
+
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
     } else {
-      const cache = await caches.open(cacheName);
-      await cache.delete('pwa_installed');
+      // const cache = await caches.open(cacheName);
+      // await cache.delete('pwa_installed');
     }
   }
 });
@@ -185,13 +187,18 @@ const fetchEventHandler = async event => {
         const client = await self.clients.get(event.clientId);
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
-        console.log(`[SW FETCH] Navigation: ${url} , isPWA: ${isPWA}`);
 
-        const pwaMarkerExists = await cache.match('pwa_installed');
-        if (!isPWA && pwaMarkerExists && isPWA !== undefined) {
-          await cache.delete('pwa_installed');
-        }
-
+        // const pwaMarkerExists = await cache.match('pwa_installed');
+        // if (!isPWA && pwaMarkerExists && isPWA !== undefined) {
+        //   await cache.delete('pwa_installed');
+        // }
+        console.log('[SW FETCH] Navigation', {
+          url: event.request.url,
+          clientId: event.clientId,
+          isPWA,
+          client,
+          event,
+        });
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
@@ -216,11 +223,11 @@ const fetchEventHandler = async event => {
         } catch (err) {
           console.log('[SW] Navigation failed:', url, err);
 
-          const pwaMarker = await cache.match('pwa_installed');
-          console.log('[SW] PWA Marker:', pwaMarker);
+          // const pwaMarker = await cache.match('pwa_installed');
+          // console.log('[SW] PWA Marker:', pwaMarker);
 
           // Only show offline page for installed PWA
-          if (pwaMarker || isPWA) {
+          if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
               getOfflinePageUrl(service),
