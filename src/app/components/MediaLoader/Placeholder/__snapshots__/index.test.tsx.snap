@@ -650,7 +650,7 @@ exports[`Media Player: Placeholder should render a video placeholder with Sustai
         <div>
           <p
             class="emotion-3"
-            id="«r0»"
+            id="_r_0_"
           >
             Help reduce your power and data usage by not playing video content.
           </p>
@@ -659,7 +659,7 @@ exports[`Media Player: Placeholder should render a video placeholder with Sustai
           class="emotion-4"
         >
           <button
-            aria-describedby="«r0»"
+            aria-describedby="_r_0_"
             class="focusIndicatorInvert emotion-5"
             type="button"
           >
@@ -748,6 +748,7 @@ exports[`Media Player: Placeholder should render a video placeholder with Sustai
         class="emotion-16"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>

@@ -172,7 +172,7 @@ exports[`Message should render a 'Help reduce your power consumption' message 1`
       <div>
         <p
           class="emotion-2"
-          id="«r0»"
+          id="_r_0_"
         >
           Ayude a reducir su uso de energía y datos al no reproducir contenido de video.
         </p>
@@ -181,7 +181,7 @@ exports[`Message should render a 'Help reduce your power consumption' message 1`
         class="emotion-3"
       >
         <button
-          aria-describedby="«r0»"
+          aria-describedby="_r_0_"
           class="focusIndicatorInvert emotion-4"
           type="button"
         >
