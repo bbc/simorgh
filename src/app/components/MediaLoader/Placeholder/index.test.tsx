@@ -3,7 +3,6 @@ import {
   getByText,
   render,
 } from '#app/components/react-testing-library-with-providers';
-import React from 'react';
 import Placeholder from '.';
 
 describe('Media Player: Placeholder', () => {

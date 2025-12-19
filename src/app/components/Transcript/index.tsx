@@ -1,7 +1,5 @@
-/** @jsx jsx */
 /* eslint-disable jsx-a11y/aria-role */
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import Text from '../Text';
 import VisuallyHiddenText from '../VisuallyHiddenText';

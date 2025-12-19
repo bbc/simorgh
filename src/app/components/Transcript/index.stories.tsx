@@ -1,4 +1,3 @@
-import React from 'react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { PageTypes } from '#app/models/types/global';
 import Transcript from '.';

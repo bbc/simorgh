@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import { ReactElement } from 'react';
