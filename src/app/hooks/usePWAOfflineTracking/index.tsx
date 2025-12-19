@@ -15,7 +15,6 @@ const usePWAOfflineTracking = () => {
   const isPWA = useIsPWA();
   const { isOnline, networkType } = useNetworkStatusTracker();
   const prevIsOnlineRef = useRef(isOnline);
-  const hasFiredRef = useRef(false);
 
   const trackOfflinePageViewEvent = useCustomEventTracker({
     eventName: OFFLINE_PAGE_VIEW_EVENT_NAME,
@@ -27,35 +26,19 @@ const usePWAOfflineTracking = () => {
       return;
     }
 
-    const wasOffline = prevIsOnlineRef.current === false;
-    const isNowOnline = isOnline === true;
-    const transitionedToOnline = wasOffline && isNowOnline;
-
     if (!isOnline) {
-      hasFiredRef.current = false;
       prevIsOnlineRef.current = isOnline;
       return;
-    }
-
-    if (!transitionedToOnline) {
-      prevIsOnlineRef.current = isOnline;
     }
 
     try {
       const offlineVisitFlag = localStorage.getItem(OFFLINE_VISIT_FLAG);
 
       if (offlineVisitFlag !== 'true') {
-        prevIsOnlineRef.current = isOnline;
-        return;
-      }
-
-      if (hasFiredRef.current && !transitionedToOnline) {
-        prevIsOnlineRef.current = isOnline;
         return;
       }
 
       trackOfflinePageViewEvent(networkType);
-      hasFiredRef.current = true;
       localStorage.removeItem(OFFLINE_VISIT_FLAG);
     } catch (error) {
       // eslint-disable-next-line no-console
