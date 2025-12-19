@@ -122,8 +122,6 @@ export interface Translations {
     };
   };
   media: {
-    sustainabilitySignpost?: string;
-    loadVideo?: string;
     noJs?: string;
     contentExpired?: string;
     contentNotYetAvailable?: string;
