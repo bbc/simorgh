@@ -6,12 +6,21 @@ import { useState } from 'react';
 
 import { useGLTF } from '@react-three/drei';
 
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
+const {
+  SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+} = getEnvConfig();
+
 // BBC palette
 const GREY_4 = '#B0B2B4';
 const POSTBOX = '#B80000';
 
 export function India({ onMeshClick, onServiceHover, ...props }) {
-  const { nodes } = useGLTF('/public3d/India/India.glb');
+  const { nodes } = useGLTF(
+    `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}public3d/India/India.glb`,
+  );
 
   // state for hover effects
   const [hindiHovered, setHindiHovered] = useState(false);

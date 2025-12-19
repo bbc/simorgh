@@ -42,8 +42,6 @@ export default function ThreeDDemoPage() {
       style={{
         paddingTop: '16px',
         display: 'flex',
-
-
         justifyContent: 'center',
         gap: '24px',
         marginBottom: '16px',
