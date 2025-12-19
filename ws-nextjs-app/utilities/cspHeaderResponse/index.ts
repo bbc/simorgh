@@ -1,25 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextPageContext } from 'next/types';
 import { cspDirectives } from '#server/utilities/cspHeader/directives';
-import fallbackServiceParam from '#app/routes/utils/fetchPageData/utils/getRouteProps/fallbackServiceParam';
 import getPathExtension from '#app/utilities/getPathExtension';
 import isLiveEnv from '#lib/utilities/isLive';
-
-const setReportTo = (header: Headers) => {
-  header.set(
-    'report-to',
-    JSON.stringify({
-      group: 'worldsvc',
-      max_age: 2592000,
-      endpoints: [
-        {
-          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
-          priority: 1,
-        },
-      ],
-      include_subdomains: true,
-    }),
-  );
-};
+import { Services, Toggles } from '#app/models/types/global';
+import SERVICES from '#app/lib/config/services';
 
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
@@ -34,17 +18,60 @@ const directiveToString = (directives: Record<string, string | string[]>) => {
   return cspValue;
 };
 
-const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
-  const { isAmp } = getPathExtension(request.url);
-  const service = fallbackServiceParam(request.url);
+const isRelaxedCspEnabled = (
+  countryList: string | number | undefined,
+  country: string,
+): boolean => {
+  if (!countryList || countryList.toString().trim() === '') {
+    return true;
+  }
+
+  const omittedCountriesList = countryList
+    .toString()
+    .split(',')
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  return !omittedCountriesList.includes(country.toLowerCase());
+};
+
+export type CspHeaderResponseProps = {
+  ctx: NextPageContext;
+  service: Services;
+  toggles: Toggles;
+};
+
+const cspHeaderResponse = ({
+  ctx,
+  service,
+  toggles,
+}: CspHeaderResponseProps) => {
+  const reqUrl = ctx.req?.url || '';
+  const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
 
-  const requestHeaders = new Headers(request.headers);
+  let hasAdsScripts = false;
+  let countryList = '';
+
+  if (SERVICES.includes(service)) {
+    // @ts-expect-error - Toggles type issue
+    const adsNonceToggle = toggles?.adsNonce || { enabled: false, value: '' };
+    hasAdsScripts = adsNonceToggle.enabled;
+    countryList = adsNonceToggle.value;
+  }
+
+  const country =
+    ctx?.req?.headers?.['x-country'] ||
+    ctx?.req?.headers?.['x-bbc-edge-country'];
+
+  const shouldServeRelaxedCsp =
+    hasAdsScripts &&
+    isRelaxedCspEnabled(countryList, (country as string) || '');
 
   const { directives } = cspDirectives({
     isAmp,
     isLive,
-    service,
+    shouldServeRelaxedCsp,
   });
 
   const BUMP4SpecificConditions = {
@@ -57,26 +84,25 @@ const cspHeaderResponse = ({ request }: { request: NextRequest }) => {
     ...BUMP4SpecificConditions,
   });
 
-  requestHeaders.set(
+  ctx.res?.setHeader(
+    'report-to',
+    JSON.stringify({
+      group: 'worldsvc',
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
+
+  ctx.res?.setHeader(
     'Content-Security-Policy',
     contentSecurityPolicyHeaderValue,
   );
-  setReportTo(requestHeaders);
-
-  const responseInit = {
-    request: {
-      headers: requestHeaders,
-    },
-  };
-
-  const cspAlteredResponse = NextResponse.next(responseInit);
-  cspAlteredResponse.headers.set(
-    'Content-Security-Policy',
-    contentSecurityPolicyHeaderValue,
-  );
-  setReportTo(cspAlteredResponse.headers);
-
-  return cspAlteredResponse;
 };
 
 export default cspHeaderResponse;

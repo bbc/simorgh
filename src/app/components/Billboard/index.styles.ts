@@ -66,6 +66,12 @@ export default {
         width: '100%',
       },
     }),
+  contentContainerNoPromos: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        paddingBottom: 0,
+      },
+    }),
   heading: ({ mq, palette, spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.FULL}rem`,

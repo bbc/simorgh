@@ -103,6 +103,13 @@ const styles = {
       width: `${pixelsToRem(12)}rem`,
       height: `${pixelsToRem(12)}rem`,
     }),
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playIconLarge: () =>
+    css({
+      fill: 'currentcolor',
+      width: `${pixelsToRem(15)}rem`,
+      height: `${pixelsToRem(15)}rem`,
+    }),
   duration: ({ palette, spacings }: Theme) =>
     css({
       color: palette.WHITE,

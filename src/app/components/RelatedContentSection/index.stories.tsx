@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Services } from '../../models/types/global';
@@ -49,6 +48,9 @@ export const ListRelatedContent = () => (
 export const ListRelatedContentRtl = () => (
   <RelatedContentComponent content={RelatedContentListRtl} service="arabic" />
 );
+ListRelatedContentRtl.globals = {
+  service: { service: 'arabic' },
+};
 
 export const SingleRelatedContent = () => (
   <RelatedContentComponent content={RelatedContentSingleItem} />
@@ -60,3 +62,7 @@ export const SingleRelatedContentRtl = () => (
     service="arabic"
   />
 );
+
+SingleRelatedContentRtl.globals = {
+  service: { service: 'arabic' },
+};

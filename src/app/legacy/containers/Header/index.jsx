@@ -1,4 +1,4 @@
-import React, { use, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -8,6 +8,7 @@ import {
   HOME_PAGE,
   TOPIC_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -64,9 +65,10 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
     <SkipLink
       service={service}
       script={script}
-      dir={dir}
+      dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
+      className="focusIndicatorRemove"
     >
       <div>{skipLinkText}</div>
     </SkipLink>
@@ -76,6 +78,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (scriptLink) {
     switch (true) {
+      case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;

@@ -2,9 +2,9 @@ import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
+import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
@@ -22,7 +22,8 @@ const baseServiceConfig = {
   brandName: 'BBC News Україна',
   product: 'BBC News',
   serviceLocalizedName: 'Україна',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News Україна',
   dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
@@ -382,7 +383,7 @@ export const service: UkrainianConfig = {
     languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
-      ...russianMainTranslations,
+      ...russianUkrainianSharedTranslations,
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
     },

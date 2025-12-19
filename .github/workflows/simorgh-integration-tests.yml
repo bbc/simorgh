@@ -37,7 +37,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Integration Tests
+      - name: Integration Tests - Express
         run: yarn test:integration:ci
 
       - name: Integration Tests - Next

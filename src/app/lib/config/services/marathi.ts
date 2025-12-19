@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/marathi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
     externalLinkText: ', बाहेर',
@@ -316,7 +317,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'गोपनीयतेचं धोरण',
         },
         {
@@ -353,16 +354,16 @@ export const service: DefaultServiceConfig = {
         url: '/marathi/topics/c5qvpxvv7y3t',
       },
       {
+        title: 'व्हीडिओ',
+        url: '/marathi/topics/cl29j0epz13t',
+      },
+      {
         title: 'भारत',
         url: '/marathi/topics/cxnyk3y49x6t',
       },
       {
         title: 'आंतरराष्ट्रीय',
         url: '/marathi/topics/c719d2enyn3t',
-      },
-      {
-        title: 'व्हीडिओ',
-        url: '/marathi/topics/cl29j0epz13t',
       },
       {
         title: 'सोपी गोष्ट',

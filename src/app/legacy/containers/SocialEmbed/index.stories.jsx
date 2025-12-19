@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@emotion/react';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { GREY_2 } from '../../../components/ThemeProvider/palette';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { afrique, pashto } from './fixtures';
@@ -62,8 +61,14 @@ export const SingleItem = {
 export const TestMultipleItems = storyArgs =>
   MultipleItems.render(storyArgs, { service: 'afrique' });
 TestMultipleItems.tags = ['!dev'];
+TestMultipleItems.globals = {
+  service: { service: 'afrique' },
+};
 
 // This story is for chromatic testing purposes only
 export const TestSingleItem = storyArgs =>
   SingleItem.render(storyArgs, { service: 'afrique' });
 TestSingleItem.tags = ['!dev'];
+TestSingleItem.globals = {
+  service: { service: 'afrique' },
+};

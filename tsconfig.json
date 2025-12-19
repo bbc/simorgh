@@ -10,17 +10,19 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "isolatedModules": true,
     "resolveJsonModule": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
     "sourceMap": true,
     "declaration": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "incremental": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
     "paths": {
       "#app/*": ["src/app/*"],
       "#src/*": ["src/*"],
@@ -37,10 +39,9 @@
       "#testHelpers/*": ["src/testHelpers/*"],
       "#pages/*": ["src/app/pages/*"],
       "#server/*": ["src/server/*"],
-      "#storybook/*": [".storybook/*"],
-      "react": ["./node_modules/@types/react"]
+      "#storybook/*": [".storybook/*"]
     }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "src/app/legacy/**/*"]
+  "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
+  "exclude": ["node_modules", "build"]
 }

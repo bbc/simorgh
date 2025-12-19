@@ -1,5 +1,4 @@
-import React from 'react';
-import { STATIC_ATI_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_REVERB_CLICK_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import { render } from '../react-testing-library-with-providers';
 import LiteSiteSummary from '.';
 
@@ -40,7 +39,7 @@ describe('LiteSiteSummary', () => {
     const { container } = render(<LiteSiteSummary />, { isLite: true });
 
     const [ctaLink] = container.querySelectorAll('a');
-    const atiUrl = ctaLink.getAttribute(STATIC_ATI_CLICK_TRACKING);
+    const atiUrl = ctaLink.getAttribute(STATIC_REVERB_CLICK_TRACKING);
 
     expect(atiUrl).toContain('lite-site-summary');
   });

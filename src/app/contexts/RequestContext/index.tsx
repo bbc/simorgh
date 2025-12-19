@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useMemo } from 'react';
+import { createContext, PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
@@ -40,9 +40,11 @@ export type RequestContextProps = {
   timeOnServer: number | null;
   variant: Variants | null;
   country?: string | null;
+  nonce?: string | null;
+  cspHeader: string | null;
 };
 
-export const RequestContext = React.createContext<RequestContextProps>(
+export const RequestContext = createContext<RequestContextProps>(
   {} as RequestContextProps,
 );
 
@@ -65,6 +67,8 @@ type RequestProviderProps = {
   variant?: Variants | null;
   isUK?: boolean | null;
   country?: string | null;
+  nonce?: string | null;
+  cspHeader?: string | null;
 };
 
 export const RequestContextProvider = ({
@@ -83,6 +87,8 @@ export const RequestContextProvider = ({
   showAdsBasedOnLocation = false,
   showCookieBannerBasedOnCountry = true,
   country,
+  nonce = null,
+  cspHeader = null,
   statusCode = null,
   timeOnServer = null,
   variant = null,
@@ -137,6 +143,8 @@ export const RequestContextProvider = ({
       ...getMetaUrls(origin, pathname),
       serverSideExperiments,
       country,
+      nonce,
+      cspHeader,
     }),
     [
       derivedPageType,
@@ -160,6 +168,8 @@ export const RequestContextProvider = ({
       timeOnServer,
       variant,
       country,
+      cspHeader,
+      nonce,
     ],
   );
 

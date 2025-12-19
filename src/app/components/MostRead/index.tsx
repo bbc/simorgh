@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
@@ -32,7 +32,6 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  sendOptimizelyEvents?: boolean;
   eventTrackingData?: EventTrackingData;
 }
 

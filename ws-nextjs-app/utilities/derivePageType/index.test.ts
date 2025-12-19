@@ -1,4 +1,4 @@
-import { LIVE_PAGE, UGC_PAGE } from '#app/routes/utils/pageTypes';
+import { LIVE_PAGE, UGC_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
 describe('derivePageType', () => {
@@ -24,5 +24,16 @@ describe('derivePageType', () => {
     const pathname = '/burmese/live/xxxxxxxxx?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
+  });
+  it('should return HOME_PAGE for a base service homepage', () => {
+    const pathname = '/pidgin';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(HOME_PAGE);
+  });
+
+  it('should return HOME_PAGE for a service variant homepage', () => {
+    const pathname = '/serbian/lat';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(HOME_PAGE);
   });
 });

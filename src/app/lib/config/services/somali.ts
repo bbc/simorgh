@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Somali',
     product: 'BBC News',
     serviceLocalizedName: 'Somali',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/somali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
     externalLinkText: ', kale',
@@ -277,7 +278,7 @@ export const service: DefaultServiceConfig = {
       latestMediaTitle: 'Arrimhii u danbeeyey',
     },
     mostRead: {
-      header: 'Popular Reads',
+      header: 'Ugu Aqris Badan',
       lastUpdated: 'Markii ugu dambeysay ee la cusbooneysiiyay:',
       numberOfItems: 5,
       hasMostRead: true,
@@ -345,20 +346,36 @@ export const service: DefaultServiceConfig = {
         url: '/somali',
       },
       {
-        title: 'Ganacsi',
-        url: '/somali/topics/c2dwqd32v4yt',
+        title: 'Siyaasad',
+        url: '/somali/topics/cwr9jry737xt',
       },
       {
-        title: 'Cayaaraha',
-        url: '/somali/topics/cpzd4zj1pn2t',
+        title: 'Soomaali',
+        url: '/somali/topics/cpzd4zk7qrjt',
+      },
+      {
+        title: 'Raadiye',
+        url: '/somali/topics/cn6rqlrkm0pt',
       },
       {
         title: 'Muuqaal',
         url: '/somali/topics/c7pl4k5r9xxt',
       },
       {
-        title: 'Barnaamijyada Idaacadda',
-        url: '/somali/topics/cn6rqlrkm0pt',
+        title: 'Haween',
+        url: '/somali/topics/cxnykn5732gt',
+      },
+      {
+        title: 'Ciyaaro',
+        url: '/somali/topics/cpzd4zj1pn2t',
+      },
+      {
+        title: 'Saynis iyo Caafimaad',
+        url: '/somali/topics/c2dr4lek2r9t',
+      },
+      {
+        title: 'Fan iyo Dhaqan',
+        url: '/somali/topics/cwy5g18443dt',
       },
     ],
   },

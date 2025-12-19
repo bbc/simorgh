@@ -19,7 +19,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News پښتو',
     dir: 'rtl',
     externalLinkText: '، بهرنی',
@@ -360,6 +361,10 @@ export const service: DefaultServiceConfig = {
         url: '/pashto',
       },
       {
+        title: 'ژوندۍ: ټلویزیوني خپرونې',
+        url: '/pashto/watch/bbc_afghan_tv/live',
+      },
+      {
         title: 'افغانستان',
         url: '/pashto/topics/cr50y57xj52t',
       },
@@ -378,10 +383,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'لوبې',
         url: '/pashto/topics/cr50y59q860t',
-      },
-      {
-        title: 'اقتصاد او سوداګري',
-        url: '/pashto/topics/cy087kqvl1yt',
       },
       {
         title: 'ساینس او ټکنالوژي',

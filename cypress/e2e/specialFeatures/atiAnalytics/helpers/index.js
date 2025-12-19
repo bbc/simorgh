@@ -65,77 +65,33 @@ export const COMPONENTS = {
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views & Clicks - Click Per View Model
-  Object.values(COMPONENTS).forEach(component => {
-    const viewClickEventRegex = new RegExp(
-      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
-      'g',
-    );
-
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          ati: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          atc: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-click`);
-  });
-
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    const viewabilityViewRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+    cy.intercept('GET', `${atiUrl}/**`, request => {
+      const { query } = request;
+      const viewabilityModelString = query.events;
+      if (viewabilityModelString) {
+        const isViewEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"view"}`,
+        );
+        const isClickEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"select"}`,
+        );
 
-    const viewabilityClickRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+        const containsExpectedComponent = viewabilityModelString.includes(
+          `"name":"${component}`,
+        );
 
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityViewRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityClickRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-click`);
+        if (isViewEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-view`;
+          request.reply({ statusCode: 200 });
+        }
+        if (isClickEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-click`;
+          request.reply({ statusCode: 200 });
+        }
+      }
+    });
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
@@ -166,17 +122,20 @@ export const interceptATIAnalyticsBeacons = () => {
 };
 
 export const setUserIDCookie = () => {
-  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  cy.session('user-session', () => {
+    cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
+  });
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
-  const publicServiceDestinationNames = {
+  const dedicatedPianoDestinationNamesByService = {
     news: 'NEWS_PS',
     cymrufyw: 'NEWS_LANGUAGES_PS',
     naidheachdan: 'NEWS_LANGUAGES_PS',
-    scotland: 'PS_HOMEPAGE',
+    scotland: 'HOMEPAGE_PS',
     newsround: 'NEWSROUND',
     sport: 'SPORT_PS',
+    japanese: 'NEWS_LANGUAGES_GNL',
   };
 
   const expectedAtiDestinationsForAmp = {
@@ -194,8 +153,8 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     NEWS_LANGUAGES_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-    PS_HOMEPAGE: '598273',
-    PS_HOMEPAGE_TEST: '598274',
+    HOMEPAGE_PS: '598273',
+    HOMEPAGE_PS_TEST: '598274',
     NEWSROUND: '598293',
     NEWSROUND_TEST: '598294',
     SPORT_PS:
@@ -204,10 +163,12 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     SPORT_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
+    NEWS_LANGUAGES_GNL: 598289,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
   };
 
   const destinationName =
-    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
+    dedicatedPianoDestinationNamesByService[service] ?? 'WS_NEWS_LANGUAGES';
 
   return expectedAtiDestinationsForAmp[
     applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`

@@ -1,5 +1,57 @@
+/* eslint-disable no-underscore-dangle */
 import colours from 'colors';
 import '@testing-library/jest-dom';
+
+/**
+ * Suppress JSDOM errors relating to navigation not implemented
+ * https://github.com/jsdom/jsdom/issues/2112 -> code snippet from https://github.com/jsdom/jsdom/issues/2112#issuecomment-673540137
+ *  */
+if (window?._virtualConsole) {
+  const listeners = window._virtualConsole.listeners('jsdomError');
+  const originalListener = listeners && listeners[0];
+
+  window._virtualConsole.removeAllListeners('jsdomError');
+
+  // Add a new listener to swallow JSDOM errors
+  window._virtualConsole.addListener('jsdomError', error => {
+    if (
+      error.message !== 'Not implemented: navigation (except hash changes)' &&
+      originalListener
+    ) {
+      originalListener(error);
+    }
+  });
+}
+
+global.originalWindowLocation = window.location;
+
+beforeAll(() => {
+  window.location = Object.defineProperties(
+    {},
+    {
+      ...Object.getOwnPropertyDescriptors(global.originalWindowLocation),
+      assign: {
+        configurable: true,
+        value: jest.fn(),
+      },
+      host: {
+        configurable: true,
+      },
+      hostname: {
+        configurable: true,
+      },
+      href: {
+        configurable: true,
+      },
+      origin: {
+        configurable: true,
+      },
+      pathname: {
+        configurable: true,
+      },
+    },
+  );
+});
 
 // Errors
 const FAILED_PROP = 'Failed prop';

@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import moment from 'moment';
 import path from 'ramda/src/path';
@@ -9,7 +7,6 @@ import Promo from '#components/Promo';
 import { Summary } from '#app/models/types/curationData';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import isMediaType from '#app/lib/utilities/isMedia';
-import { ReadTime } from '#app/components/ReadTime';
 import { extractId } from '#app/pages/HomePage/HomePage';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -29,11 +26,12 @@ const CurationPromo = ({
   duration: mediaDuration,
   headingLevel = 2,
   isLive,
-  readTime,
   eventTrackingData,
-  readTimeVariant,
   mostReadItemId,
   position,
+  timeOfDayExperimentName,
+  timeOfDayVariant,
+  isPortraitImage,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -59,9 +57,11 @@ const CurationPromo = ({
 
   const clickTrackerHandler = useClickTrackerHandler({
     ...eventTrackingData,
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_homepage_read_time',
-    experimentVariant: readTimeVariant,
+    ...(timeOfDayVariant && {
+      sendOptimizelyEvents: true,
+      experimentName: timeOfDayExperimentName,
+      experimentVariant: timeOfDayVariant,
+    }),
   });
 
   const getPromoItemId = extractId(id) ?? null;
@@ -75,6 +75,7 @@ const CurationPromo = ({
           alt={imageAlt}
           lazyLoad={lazy}
           isAmp={isAmp}
+          isPortraitImage={isPortraitImage}
           {...(isLite && { css: styles.image })}
         >
           {isMedia && (
@@ -107,18 +108,10 @@ const CurationPromo = ({
         )}
       </Promo.Heading>
       {!isLive ? (
-        <Promo.Timestamp className="promo-timestamp" showPrefix>
+        <Promo.Timestamp className="promo-timestamp">
           {lastPublished}
         </Promo.Timestamp>
       ) : null}
-      {/* EXPERIMENT: Read Time */}
-      <ReadTime
-        readTimeValue={readTime}
-        promoId={id}
-        promoType={type}
-        promoPosition={position}
-        readTimeVariant={readTimeVariant}
-      />
     </Promo>
   );
 };

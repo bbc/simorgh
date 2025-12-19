@@ -5,7 +5,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/pidgin';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const pidginTheme = {
+export const theme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -21,4 +21,6 @@ const pidginTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(pidginTheme, getPWATypographyTheme());
+export const pwaTheme = getPWATypographyTheme();
+
+export default withThemeProvider(theme, pwaTheme);

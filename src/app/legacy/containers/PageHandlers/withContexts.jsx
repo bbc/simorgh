@@ -1,6 +1,3 @@
-import React from 'react';
-
-// context providers
 import { ThemeProvider } from '../../../components/ThemeProvider';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
@@ -30,6 +27,8 @@ const WithContexts = Component => {
       isNextJs = false,
       isUK = false,
       country = null,
+      nonce = null,
+      cspHeader = null,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -60,6 +59,8 @@ const WithContexts = Component => {
             isNextJs={isNextJs}
             isUK={isUK}
             country={country}
+            nonce={nonce}
+            cspHeader={cspHeader}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}

@@ -80,8 +80,8 @@ exports[`MostReadSectionLabel assertion should render most-read section label wi
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   background-color: #F6F6F6;
   margin: 1rem 0;
   padding-left: 0.5rem;

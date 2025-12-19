@@ -1,12 +1,23 @@
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
-import * as getToggles from '#app/lib/utilities/getToggles';
 import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
 import getPageData from './getPageData';
 
 const agent = { cert: 'cert', ca: 'ca', key: 'key' };
+
 jest.mock('#server/utilities/getAgent', () =>
   jest.fn(() => Promise.resolve(agent)),
 );
+jest.mock('#app/routes/utils/fetchPageData');
+jest.mock('#app/lib/utilities/getToggles');
+jest.mock('#app/routes/utils/fetchDataFromBFF', () => {
+  const originalModule = jest.requireActual(
+    '#app/routes/utils/fetchDataFromBFF',
+  );
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
 
 describe('getPageData', () => {
   beforeEach(() => {
@@ -17,18 +28,12 @@ describe('getPageData', () => {
     it('Returns page data and status 200 for a valid page', async () => {
       const fetchDataResponse = { title: 'UGC Form Title!' };
 
-      const toggleResponse = {
-        toggles: { testToggle: { enabled: true } },
-      };
-
       jest.spyOn(fetchPageData, 'default').mockResolvedValue({
         status: 200,
         json: { data: fetchDataResponse },
       });
 
-      jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
-
-      const { data: actualData, toggles: actualToggles } = await getPageData({
+      const { data: actualData } = await getPageData({
         id: 'u50853489',
         service: 'mundo',
         variant: undefined,
@@ -41,22 +46,15 @@ describe('getPageData', () => {
         pageData: fetchDataResponse,
         status: 200,
       });
-      expect(actualToggles).toStrictEqual(toggleResponse);
     });
 
     it('Cleans malicious query parameters', async () => {
       const fetchDataResponse = { title: 'UGC Form Title!' };
 
-      const toggleResponse = {
-        toggles: { testToggle: { enabled: true } },
-      };
-
       jest.spyOn(fetchPageData, 'default').mockResolvedValue({
         status: 200,
         json: { data: fetchDataResponse },
       });
-
-      jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
 
       const fetchDataFromBFFSpy = jest.spyOn(fetchDataFromBFF, 'default');
 
@@ -76,18 +74,13 @@ describe('getPageData', () => {
 
     it('Returns page data and status 404 for an invalid page', async () => {
       const errorMessage = 'Something went wrong!';
-      const toggleResponse = {
-        toggles: { testToggle: { enabled: true } },
-      };
 
       jest.spyOn(fetchPageData, 'default').mockRejectedValue({
         message: errorMessage,
         status: 404,
       });
 
-      jest.spyOn(getToggles, 'default').mockResolvedValue(toggleResponse);
-
-      const { data: actualData, toggles: actualToggles } = await getPageData({
+      const { data: actualData } = await getPageData({
         id: 'u50853489',
         service: 'mundo',
         variant: undefined,
@@ -100,8 +93,6 @@ describe('getPageData', () => {
         error: errorMessage,
         status: 404,
       });
-
-      expect(actualToggles).toStrictEqual(toggleResponse);
     });
   });
 });

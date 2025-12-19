@@ -105,8 +105,8 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   background-color: transparent;
   border: 0;
   float: right;
-  height: 3rem;
-  width: 3rem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-0:hover,
@@ -135,8 +135,8 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-0 {
-    height: 3rem;
-    width: 3rem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -300,8 +300,8 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   background-color: transparent;
   border: 0;
   float: right;
-  height: 3rem;
-  width: 3rem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-0:hover,
@@ -330,8 +330,8 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-0 {
-    height: 3rem;
-    width: 3rem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -522,8 +522,8 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   background-color: transparent;
   border: 0;
   float: right;
-  height: 3rem;
-  width: 3rem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-0:hover,
@@ -552,8 +552,8 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-0 {
-    height: 3rem;
-    width: 3rem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -685,8 +685,8 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -946,8 +946,8 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;

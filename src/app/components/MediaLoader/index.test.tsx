@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   act,
   render,
@@ -31,12 +31,12 @@ describe('MediaLoader', () => {
   });
 
   describe('BUMP Loader', () => {
-    it('Loads Ads, requireJS and Bump4 when Ads are enabled', async () => {
+    it('Loads Ads, requireJS and Bump4 when Preroll Ads are enabled', async () => {
       await act(async () => {
         render(<MediaPlayer blocks={aresMediaBlocks as MediaBlock[]} />, {
           id: 'testId',
           showAdsBasedOnLocation: true,
-          toggles: { ads: { enabled: true } },
+          toggles: { preroll: { enabled: true } },
         });
       });
 
@@ -301,7 +301,7 @@ describe('MediaLoader', () => {
 
       expect(ampPlayer).toBeInTheDocument();
       expect(ampIframeUrl).toEqual(
-        'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msp/en-GB/amp',
+        'https://web-cdn.test.api.bbci.co.uk/ws/av-embeds/articles/cn8jgj8rjppo/p01k6msm/en-GB/amp',
       );
     });
   });

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -12,6 +9,10 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import {
+  getImageFromPost,
+  getHeadlineFromPost,
+} from '../../../../utilities/getFromPost';
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
@@ -58,7 +59,11 @@ export type ComponentProps = {
   };
 };
 
-const LivePage = ({ pageData }: ComponentProps) => {
+interface LivePageProps extends ComponentProps {
+  assetId?: string | null;
+}
+
+const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const {
@@ -94,15 +99,12 @@ const LivePage = ({ pageData }: ComponentProps) => {
   };
 
   const showPaginatedTitle = pageCount && activePage && activePage >= 2;
-
   const pageSeoTitle = seoTitle || title;
-
   const pageTitle = showPaginatedTitle
     ? `${pageSeoTitle}, ${pageXOfY
         .replace('{x}', activePage.toString())
         .replace('{y}', pageCount.toString())}`
     : pageSeoTitle;
-
   const pageDescription = seoDescription || description || pageSeoTitle;
 
   const liveBlogPostingSchema = getLiveBlogPostingSchema({
@@ -114,36 +116,47 @@ const LivePage = ({ pageData }: ComponentProps) => {
     endDateTime,
   });
 
+  const postWithMatchingAssetId =
+    assetId && liveTextStream?.content?.data?.results
+      ? liveTextStream.content.data.results.find(post => post.urn === assetId)
+      : null;
+
+  const imageFromPost = postWithMatchingAssetId
+    ? getImageFromPost(postWithMatchingAssetId)
+    : null;
+
+  const metaImage = imageFromPost || promoImage;
+
+  const headlineFromPost = postWithMatchingAssetId
+    ? getHeadlineFromPost(postWithMatchingAssetId)
+    : null;
+
+  const metaTitle = headlineFromPost || pageTitle;
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
-      <ChartbeatAnalytics title={pageTitle} />
+      <ChartbeatAnalytics title={metaTitle ?? pageTitle} />
       <MetadataContainer
-        title={pageTitle}
+        title={metaTitle}
         lang={lang}
-        image={promoImage?.url}
-        imageAltText={promoImage?.altText}
-        imageWidth={promoImage?.width}
-        imageHeight={promoImage?.height}
+        image={metaImage?.url}
+        imageAltText={metaImage?.altText}
+        imageWidth={metaImage?.width}
+        imageHeight={metaImage?.height}
         description={pageDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedDataContainer
         type="NewsArticle"
-        seoTitle={pageTitle}
-        headline={pageTitle}
+        seoTitle={metaTitle ?? pageTitle}
+        headline={metaTitle ?? pageTitle}
         showAuthor
-        promoImage={promoImage?.url}
-        {...(datePublished && {
-          datePublished,
-        })}
-        {...(dateModified && {
-          dateModified,
-        })}
-        {...(liveBlogPostingSchema && {
-          entities: [liveBlogPostingSchema],
-        })}
+        promoImage={metaImage?.url}
+        {...(datePublished && { datePublished })}
+        {...(dateModified && { dateModified })}
+        {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
         <Header

@@ -1,6 +1,15 @@
-import loadable from '@loadable/component';
+import { ComponentType } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import loadable from 'next/dynamic';
+import { Services } from '#app/models/types/global';
 
-const loadableConfig = {
+type LoadableService = ComponentType<{
+  Context: typeof ServiceContext;
+  dataKey?: null;
+  children: unknown;
+}>;
+
+const loadableConfig: Record<Services, LoadableService> = {
   afaanoromoo: loadable(() => import('./afaanoromoo')),
   afrique: loadable(() => import('./afrique')),
   amharic: loadable(() => import('./amharic')),
@@ -33,6 +42,7 @@ const loadableConfig = {
   polska: loadable(() => import('./polska')),
   portuguese: loadable(() => import('./portuguese')),
   punjabi: loadable(() => import('./punjabi')),
+  romania: loadable(() => import('./romania')),
   russian: loadable(() => import('./russian')),
   scotland: loadable(() => import('./scotland')),
   serbian: loadable(() => import('./serbian')),

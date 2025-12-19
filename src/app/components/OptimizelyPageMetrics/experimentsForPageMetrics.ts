@@ -13,12 +13,16 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: Continue Reading button for articles
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_read_more_b'],
+    activeExperiments: [
+      'newswb_ws_read_more_b',
+      'newswb_ws_tod_article',
+      'newswb_ws_pwa_promo_prompt',
+    ],
   },
   {
-    // EXPERIMENT: Read Time for homepages
+    // EXPERIMENT: Homepage Time of Day Adaptive Curations & EXPERIMENT: PWA Promotional Banner
     pageType: HOME_PAGE,
-    activeExperiments: ['newswb_ws_homepage_read_time'],
+    activeExperiments: ['newswb_ws_tod_homepage', 'newswb_ws_pwa_promo_prompt'],
   },
 ];
 

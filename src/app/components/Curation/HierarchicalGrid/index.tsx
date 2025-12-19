@@ -1,12 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { use } from 'react';
-import { css, jsx, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
-import { ReadTime } from '#app/components/ReadTime';
 import { extractId } from '#app/pages/HomePage/HomePage';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
@@ -36,18 +33,16 @@ const getStyles = (promoCount: number, i: number, mq: Theme['mq']) => {
     },
   });
 };
-
 const HiearchicalGrid = ({
   summaries,
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  readTimeVariant,
   mostReadItemId,
+  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
-
   const audioTranslation = path(['media', 'audio'], translations);
   const videoTranslation = path(['media', 'video'], translations);
   const photoGalleryTranslation = path(['media', 'photogallery'], translations);
@@ -60,11 +55,7 @@ const HiearchicalGrid = ({
 
   const promoItems = summaries.slice(0, 12);
 
-  const buildPromoEventTrackingData = (
-    promo: Summary,
-    i: number,
-    { readTime }: { readTime?: number } = {},
-  ) => {
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
     const itemTracker = {
       type: 'hierarchical-curation-grid-promo',
       text: promo.title,
@@ -73,13 +64,6 @@ const HiearchicalGrid = ({
       ...(promo.type && { mediaType: promo.type }),
       ...(promo.duration && {
         duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-      }),
-      ...(readTime && {
-        label:
-          readTime === 1
-            ? `Read time: ${readTime} minute`
-            : `Read time: ${readTime} minutes`,
-        duration: readTime * 60000,
       }),
     };
     return {
@@ -98,7 +82,6 @@ const HiearchicalGrid = ({
           const separator = ',';
           const formattedDuration = formatDuration({ duration, separator });
           const durationString = `, ${durationTranslation} ${formattedDuration}`;
-
           const useLargeImages = i === 0 && promoItems.length >= 3;
           const isFirstPromo = i === 0;
           const lazyLoadImages = !(isFirstPromo && isFirstCuration);
@@ -111,17 +94,14 @@ const HiearchicalGrid = ({
             (promo.type === 'audio' && `${audioTranslation}, `) ||
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
-          const { isLive, readTime } = promo;
-          const promoPosition = i + 1;
+          const { isLive } = promo;
 
-          const promoEventTrackingData = buildPromoEventTrackingData(promo, i, {
-            readTime,
-          });
+          const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler({
             ...promoEventTrackingData,
             sendOptimizelyEvents: true,
-            experimentName: 'newswb_ws_homepage_read_time',
-            experimentVariant: readTimeVariant,
+            experimentName: 'newswb_ws_tod_homepage',
+            experimentVariant: timeOfDayVariant,
           });
 
           const getPromoItemid = extractId(promo.id) ?? null;
@@ -144,6 +124,7 @@ const HiearchicalGrid = ({
                   lazyLoad={lazyLoadImages}
                   fetchPriority={fetchpriority}
                   isAmp={isAmp}
+                  isPortraitImage={promo.isPortraitImage}
                 >
                   {isMedia && (
                     <Promo.MediaIcon type={promo.type}>
@@ -168,6 +149,11 @@ const HiearchicalGrid = ({
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
                         </VisuallyHiddenText>
+                        <Promo.MediaIcon
+                          className="inline-icon"
+                          type={promo.type}
+                          css={styles.inlineIcon}
+                        />
                         {promo.title}
                         {showDuration && (
                           <VisuallyHiddenText>
@@ -209,20 +195,9 @@ const HiearchicalGrid = ({
                   {promo.description}
                 </Promo.Body>
                 {!isLive ? (
-                  <div className="timestamp-read-time-container">
-                    <Promo.Timestamp className="promo-timestamp" showPrefix>
-                      {promo.lastPublished}
-                    </Promo.Timestamp>
-                    {/* EXPERIMENT: Read Time */}
-                    <ReadTime
-                      readTimeValue={readTime}
-                      className="hierachical-read-time"
-                      promoId={promo.id}
-                      promoType={promo.type}
-                      promoPosition={promoPosition}
-                      readTimeVariant={readTimeVariant}
-                    />
-                  </div>
+                  <Promo.Timestamp className="promo-timestamp">
+                    {promo.lastPublished}
+                  </Promo.Timestamp>
                 ) : null}
               </Promo>
             </li>
@@ -232,5 +207,4 @@ const HiearchicalGrid = ({
     </div>
   );
 };
-
 export default HiearchicalGrid;

@@ -1,8 +1,7 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useState, useRef, ElementType } from 'react';
+import { useState, useRef, Fragment, ElementType } from 'react';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 import { Close } from '../icons';
 import { CollapsibleNavigationSection } from './types';
@@ -21,15 +20,39 @@ const CollapsibleNavigation = ({
   const isHydrated = useHydrationDetection();
   const activeNavItemRef = useRef<HTMLAnchorElement | null>(null);
 
+  const navSectionEventTrackingData: EventTrackingMetadata = {
+    componentName: 'collapsible-navigation-section',
+    preventNavigation: true,
+  };
+
+  const navLinkEventTrackingData: EventTrackingMetadata = {
+    componentName: 'collapsible-navigation-link',
+  };
+
+  const { onClick: navSectionClickTrackerHandler } = useClickTrackerHandler(
+    navSectionEventTrackingData,
+  );
+
+  const { onClick: navLinkClickTrackerHandler } = useClickTrackerHandler(
+    navLinkEventTrackingData,
+  );
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     section: CollapsibleNavigationSection,
   ) => {
     if (section.href) {
+      navLinkClickTrackerHandler?.(e);
       return;
     }
 
+    /**
+     * Prevents the browser from scrolling when a hash is present in the URL.
+     * The hash is used for the no-JS fallback and for improved section click tracking
+     */
     e.preventDefault();
+    navSectionClickTrackerHandler?.(e);
+
     const isActive = openSection === section.id;
 
     if (isActive) {
@@ -63,7 +86,6 @@ const CollapsibleNavigation = ({
       <ul role="list" css={styles.navList} data-testid="collapsible-nav">
         {navigationSections.map(section => {
           const isActive = Boolean(openSection === section.id);
-          const shouldShowSubNav = isHydrated ? isActive : true;
           const isLink = section.href;
 
           const navigationLinkId = `nav-${section.id}`;
@@ -71,7 +93,7 @@ const CollapsibleNavigation = ({
           const subNavigationId = section.id;
 
           return (
-            <React.Fragment key={section.id}>
+            <Fragment key={section.id}>
               <li css={styles.navItem} role="listitem">
                 <a
                   id={navigationLinkId}
@@ -90,10 +112,14 @@ const CollapsibleNavigation = ({
                 </a>
               </li>
 
-              {section.links && shouldShowSubNav && (
+              {section.links && (
                 <li
                   id={subNavigationId}
-                  css={[styles.subNav, !isHydrated && styles.subNavNoJs]}
+                  css={[
+                    styles.subNav,
+                    !isHydrated && styles.subNavNoJs,
+                    !isActive && styles.collapsed,
+                  ]}
                   role="region"
                   aria-labelledby={subNavigationTitleId}
                   tabIndex={-1}
@@ -131,9 +157,13 @@ const CollapsibleNavigation = ({
                           <a
                             href={link.href}
                             css={styles.subNavLink}
+                            onClick={e => navLinkClickTrackerHandler?.(e)}
                             {...(link?.lang && { lang: link.lang })}
                             {...(link?.latinTransliteration && {
                               'aria-label': link?.latinTransliteration,
+                            })}
+                            {...(link?.disableTranslation && {
+                              translate: 'no',
                             })}
                           >
                             <span id={linkLabelId}>{link.label}</span>
@@ -144,7 +174,7 @@ const CollapsibleNavigation = ({
                   </ul>
                 </li>
               )}
-            </React.Fragment>
+            </Fragment>
           );
         })}
       </ul>

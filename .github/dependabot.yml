@@ -28,6 +28,11 @@ updates:
         patterns:
           - '@babel/*'
           - 'babel-*'
+      happy-dom:
+        patterns:
+          - 'happy-dom'
+          - 'happy-dom*'
+          - '@happy-dom/*'
       bbc:
         patterns:
           - '@bbc/*'

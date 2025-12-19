@@ -5,15 +5,15 @@ import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
-  STATIC_ATI_VIEW_TRACKING,
+  STATIC_REVERB_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
-import dispatchTrackingRequests from './dispatchTrackingRequests';
+import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 import getIntersectionObserver from './getIntersectionObserver';
 
 const VIEWED_DURATION_MS = 1000;
@@ -168,13 +168,15 @@ export default (eventTrackingData?: EventTrackingData): any => {
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 
-  const staticATIUrl = constructStaticATIUrl({
+  const reverbStaticUrl = constructReverbUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
+    ? {
+        [STATIC_REVERB_VIEW_TRACKING]: reverbStaticUrl,
+      }
     : {
         ref: viewTracker,
       };

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import styles from './styles';
 
 export const UploadSvg = () => (

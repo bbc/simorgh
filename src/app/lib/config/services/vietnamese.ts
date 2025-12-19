@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
-      'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Tiếng Việt',
     dir: `ltr`,
     externalLinkText: ', bên ngoài',
@@ -49,6 +49,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'Thời gian đọc',
+        long: 'Bài dài',
+        minute: 'phút',
+      },
       pagination: {
         previousPage: 'Quay Lại',
         nextPage: 'Xem Tiếp',
