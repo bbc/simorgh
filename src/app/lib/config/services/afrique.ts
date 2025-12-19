@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
@@ -375,12 +376,12 @@ export const service: DefaultServiceConfig = {
         url: '/afrique',
       },
       {
-        title: 'Conflit en RDC',
-        url: '/afrique/topics/cge72ry253jt',
-      },
-      {
         title: 'Ecoutez en direct',
         url: '/afrique/bbc_afrique_radio/liveradio',
+      },
+      {
+        title: 'CAN 2025',
+        url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
         title: 'Afrique',
@@ -397,10 +398,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Science et technologie',
         url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Economie',
-        url: '/afrique/topics/cnq687nr9v1t',
       },
       {
         title: 'Culture',

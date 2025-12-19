@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
     externalLinkText: ', बाहरी',

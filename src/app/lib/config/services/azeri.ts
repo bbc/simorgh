@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/azeri/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Azərbaycanca',
     dir: `ltr`,
     externalLinkText: ', BBC-dən kənar',
@@ -393,8 +394,12 @@ export const service: DefaultServiceConfig = {
         url: '/azeri/topics/cde15l4vn02t',
       },
       {
-        title: 'COP29',
-        url: '/azeri/topics/cv2dz9j8ywyt',
+        title: 'Sağlamlıq',
+        url: '/azeri/topics/c6vzyk7592nt',
+      },
+      {
+        title: 'Sizin hekayələriniz',
+        url: '/azeri/topics/cd9y5yjez4lt',
       },
     ],
   },

@@ -8,6 +8,7 @@ import {
   bylineBlock,
   singleTextBlock,
   textBlock,
+  timestampBlock,
 } from '#models/blocks';
 
 const plainOptimoBlock = (blocks: (object | string)[]) =>
@@ -30,9 +31,27 @@ const blocksWithHeadlineTextAndByline = (blockValues: (object | string)[]) => {
   return [
     blockContainingText('headline', headlineText, 1),
     // @ts-expect-error - type checking not added for block helpers
-    bylineBlock(twitterHandle, 2),
+    bylineBlock('byline', twitterHandle, 2),
     // @ts-expect-error - type checking not added for block helpers
-    singleTextBlock(paragraphText, 3),
+    timestampBlock(3),
+    // @ts-expect-error - type checking not added for block helpers
+    singleTextBlock(paragraphText, 4),
+  ];
+};
+
+const blocksWithHeadlineTextAndSubByline = (
+  blockValues: (object | string)[],
+) => {
+  const [headlineText, paragraphText, twitterHandle] = blockValues;
+
+  return [
+    blockContainingText('headline', headlineText, 1),
+    // @ts-expect-error - type checking not added for block helpers
+    bylineBlock('subByline', twitterHandle, 2),
+    // @ts-expect-error - type checking not added for block helpers
+    timestampBlock(3),
+    // @ts-expect-error - type checking not added for block helpers
+    singleTextBlock(paragraphText, 4),
   ];
 };
 
@@ -693,6 +712,39 @@ export const articleDataPersian = articleDataBuilder(
   },
 ) as unknown as Article;
 
+export const articleDataPersianWithFourParagraphs = articleDataBuilder(
+  'c4vlle3q337o-4p',
+  'Persian',
+  'fa',
+  'http://www.bbc.co.uk/ontologies/passport/home/Persian',
+  [
+    'سرصفحه مقاله',
+    'پاراگراف اول.',
+    'پاراگراف دوم.',
+    'پاراگراف سوم.',
+    'پاراگراف چهارم.',
+  ],
+  'سرصفحه مقاله',
+  'سرصفحه مقاله برای ارتقاء',
+  'خلاصه مقاله',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001o',
+    contentType: 'article',
+    language: 'fa',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'سرصفحه مقاله',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
+) as unknown as Article;
+
 export const articleDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
   'Pidgin',
@@ -746,6 +798,20 @@ export const articleDataPidginWithByline = articleDataBuilder(
   blocksWithHeadlineTextAndByline,
 ) as unknown as Article;
 
+export const articleDataPidginWithSubByline = articleDataBuilder(
+  'cwl08rd38l6o',
+  'Pidgin',
+  'pcm',
+  'http://www.bbc.co.uk/ontologies/passport/home/Pidgin',
+  ['Article Headline in Pidgin', 'A paragraph in Pidgin.', 'mary_harper'],
+  'Article Headline for SEO in Pidgin',
+  'Article Headline for Promo in Pidgin',
+  'Article summary in Pidgin',
+  emptyThings,
+  undefined,
+  blocksWithHeadlineTextAndSubByline,
+) as unknown as Article;
+
 export const articlePglDataPidgin = articleDataBuilder(
   'cwl08rd38l6o',
   'Pidgin',
@@ -771,6 +837,32 @@ export const articlePglDataPidgin = articleDataBuilder(
     pageTitle: 'Article Headline for SEO in Pidgin',
   },
   'PGL',
+) as unknown as Article;
+
+export const articleDataHindi = articleDataBuilder(
+  'c0469479x9xo',
+  'Hindi',
+  'hi',
+  'http://www.bbc.co.uk/ontologies/passport/home/Hindi',
+  ['आर्टिकल हेडलाइन हिंदी में', 'हिंदी में एक पैराग्राफ.'],
+  'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+  'आर्टिकल हेडलाइन प्रोमो के लिए हिंदी में',
+  'आर्टिकल सारांश हिंदी में',
+  emptyThings,
+  false,
+  blocksWithHeadlineAndText,
+  {
+    categoryName: null,
+    contentId: 'urn:bbc:optimo:c0000000001h',
+    language: 'hi',
+    ldpThingIds: null,
+    ldpThingLabels: null,
+    nationsProducer: null,
+    pageIdentifier: null,
+    pageTitle: 'आर्टिकल हेडलाइन SEO के लिए हिंदी में',
+    timePublished: '2018-01-01T12:01:00.000Z',
+    timeUpdated: '2018-01-01T14:00:00.000Z',
+  },
 ) as unknown as Article;
 
 export const articleStyDataPidgin = articleDataBuilder(
@@ -1707,6 +1799,76 @@ export const bylineWithNameAndRole = [
                             type: 'fragment',
                             model: {
                               text: 'Test',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
+export const bylineWithNameAndNoRoleAndLocation = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Single Byline (all values)',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Single Byline (all values)',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'London',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'London',
                               attributes: [],
                             },
                           },
@@ -3240,6 +3402,181 @@ export const bylineWithMultipleContributors = [
                         locator:
                           'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
                         originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
+export const bylineWithMultipleContributorsNoRole = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
                       },
                     },
                   ],

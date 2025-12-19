@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import {
   ARTICLE_PAGE,
@@ -381,32 +380,12 @@ describe('Metadata', () => {
         sizes: null,
       },
       {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
-        sizes: '72x72',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
-        sizes: '96x96',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
-        sizes: '128x128',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
-        sizes: '144x144',
-      },
-      {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
         sizes: '152x152',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
         sizes: '180x180',
-      },
-      {
-        href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
-        sizes: '192x192',
       },
       {
         href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
@@ -475,18 +454,6 @@ describe('Metadata', () => {
       expect(favicon?.getAttribute('href')).toEqual('/favicon.ico');
       expect(favicon?.getAttribute('rel')).toEqual('shortcut icon');
       expect(favicon?.getAttribute('type')).toEqual('image/x-icon');
-    });
-  });
-
-  it('should render the IE X-UA-Compatible meta tag', async () => {
-    render(<CanonicalNewsInternationalOrigin />);
-
-    await waitFor(() => {
-      const actual = document
-        .querySelector('head > meta[http-equiv="X-UA-Compatible"]')
-        ?.getAttribute('content');
-
-      expect(actual).toEqual('IE=edge');
     });
   });
 
@@ -854,13 +821,16 @@ describe('Metadata', () => {
     const expected = [
       {
         property: 'og:image',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
-      { property: 'og:image:alt', content: serviceConfig.defaultImageAltText },
-      { name: 'twitter:image:alt', content: serviceConfig.defaultImageAltText },
+      { property: 'og:image:alt', content: serviceConfig?.defaultImageAltText },
+      {
+        name: 'twitter:image:alt',
+        content: serviceConfig?.defaultImageAltText,
+      },
       {
         name: 'twitter:image:src',
-        content: serviceConfig.defaultImage,
+        content: serviceConfig?.defaultImage,
       },
     ];
 
@@ -1253,13 +1223,10 @@ describe('Metadata', () => {
           env        | pageType              | pathName                      | expectedUrl
           ${'local'} | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
           ${'test'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
-          ${'live'}  | ${ARTICLE_PAGE}       | ${`/${service}/c0000000001o`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001o`}
           ${'local'} | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`http://localhost:7081/${service}/og/c0000000001o`}
           ${'test'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001o`}
-          ${'live'}  | ${MEDIA_ARTICLE_PAGE} | ${`/${service}/c0000000001o`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001o`}
           ${'local'} | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`http://localhost:7081/${service}/og/c0000000001t`}
           ${'test'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.test.api.bbci.co.uk/${service}/og/c0000000001t`}
-          ${'live'}  | ${LIVE_PAGE}          | ${`/${service}/c0000000001t`} | ${`https://web-cdn.api.bbci.co.uk/${service}/og/c0000000001t`}
         `(
           `should return the Opengraph image API url for $pageType page on $env Env`,
           ({ env, pageType, pathName, expectedUrl }) => {
@@ -1281,6 +1248,26 @@ describe('Metadata', () => {
           },
         );
 
+        it(`should return the default image if on Live Env`, () => {
+          process.env.SIMORGH_APP_ENV = 'live';
+
+          render(
+            // @ts-expect-error - testing with subset of data
+            <MetadataWithContext
+              service={service as Services}
+              bbcOrigin={dotCoDotUKOrigin}
+              pageType={ARTICLE_PAGE}
+              pathname={`/${service}/c0000000001o`}
+            />,
+          );
+
+          const ogImageTag = getOgImageTag();
+
+          expect(ogImageTag?.content).toEqual(
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
+          );
+        });
+
         it(`should return the default image if the id cannot be determined from the pathname`, () => {
           process.env.SIMORGH_APP_ENV = 'test';
 
@@ -1297,7 +1284,7 @@ describe('Metadata', () => {
           const ogImageTag = getOgImageTag();
 
           expect(ogImageTag?.content).toEqual(
-            `https://news.files.bbci.co.uk/ws/img/logos/og/${service}.png`,
+            `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/metadata/poster-1024x576.png`,
           );
         });
       });
@@ -1319,7 +1306,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png',
       );
     });
 
@@ -1339,7 +1326,7 @@ describe('Metadata', () => {
       const ogImageTag = getOgImageTag();
 
       expect(ogImageTag?.content).toEqual(
-        'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
       );
     });
   });

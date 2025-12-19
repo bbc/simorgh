@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
 import { use } from 'react';
+import { useTheme } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { Environments, PageTypes, Services } from '#app/models/types/global';
@@ -8,6 +7,7 @@ import {
   getArticleId,
   getTipoId,
 } from '#app/routes/utils/constructPageFetchUrl';
+import isLive from '#app/lib/utilities/isLive';
 import {
   ARTICLE_PAGE,
   LIVE_PAGE,
@@ -28,17 +28,7 @@ import defaultTranslations from '../LiteSiteSummary/defaultTranslations';
 const ENGLISH_SERVICES = ['news', 'sport', 'ws'];
 const FACEBOOK_APP_ID = '1609039196070050';
 const iconSizes: IconSizes = {
-  'apple-touch-icon': [
-    '72x72',
-    '96x96',
-    '128x128',
-    '144x144',
-    '152x152',
-    '180x180',
-    '192x192',
-    '384x384',
-    '512x512',
-  ],
+  'apple-touch-icon': ['152x152', '180x180', '384x384', '512x512'],
   icon: ['72x72', '96x96', '192x192'],
 };
 
@@ -79,6 +69,9 @@ const getSocialShareImage = ({
   pathname: string;
   service: Services;
 }) => {
+  // Remove to release to Production
+  if (isLive()) return metaImage;
+
   if (!OG_EXPERIMENT_SERVICES.includes(service)) return metaImage;
   if (!OG_EXPERIMENT_PAGETYPES.includes(pageType)) return metaImage;
 
@@ -202,10 +195,8 @@ const MetadataContainer = ({
     service,
     metaImage,
   });
-
   return (
     <Helmet htmlAttributes={htmlAttributes}>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta charSet="utf-8" />
       <meta name="robots" content="noodp, noydir, max-image-preview:large" />
       <meta name="theme-color" content={BRAND_BACKGROUND} />

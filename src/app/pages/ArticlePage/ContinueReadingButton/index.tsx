@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import React, { use, useEffect } from 'react';
-import { jsx } from '@emotion/react';
+import { use, useEffect, MouseEvent, SetStateAction, Dispatch } from 'react';
 import Text from '#app/components/Text';
 import { TriangleDown } from '#app/components/icons';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -9,110 +7,73 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
-export type Props = {
+export type ContinueReadingButtonProps = {
   showAllContent: boolean;
-  setShowAllContent: () => void;
-  variation:
-    | 'read-more-a'
-    | 'read-more-b'
-    | 'read-more-a-and-top-stories'
-    | null;
-  liteCTAShows?: boolean;
+  setShowAllContent: Dispatch<SetStateAction<boolean>>;
+};
+
+const eventTrackingData: EventTrackingData = {
+  componentName: 'continue-reading-button',
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
-  variation,
-  liteCTAShows,
-}: Props) => {
-  const eventTrackingData: EventTrackingData = {
-    componentName: 'read-more-button',
-    sendOptimizelyEvents: true,
-    experimentName: 'newswb_ws_read_more_b',
-    experimentVariant: 'read-more-b',
-  };
+}: ContinueReadingButtonProps) => {
+  const {
+    translations: { continueReading = 'Continue reading' },
+  } = use(ServiceContext);
 
   const viewRef = useViewTracker(eventTrackingData);
   const { onClick: clickTrackerHandler } =
     useClickTrackerHandler(eventTrackingData);
 
-  const handleEvent = (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.KeyboardEvent<HTMLButtonElement>
-      | React.TouchEvent<HTMLButtonElement>,
-  ) => {
-    if (event.type === 'keydown') {
-      const keyboardEvent = event as React.KeyboardEvent<HTMLButtonElement>;
-      if (keyboardEvent.key !== 'Enter' && keyboardEvent.key !== ' ') {
-        return; // Ignore keys other than Enter and Space otherwise tabbing to the next element will actually click the button
-      }
-    }
-
-    event.preventDefault();
-    clickTrackerHandler?.(event);
-    setShowAllContent();
-  };
-
   useEffect(() => {
     if (showAllContent) {
-      const main = document.querySelector('main');
-      // Get the 7th or 8th child element of the main element depending on if the liveCTA link is present
-      const nthElement =
-        main?.querySelectorAll<HTMLElement>(':scope > *')[liteCTAShows ? 8 : 7];
+      const firstHiddenElementSibling = document.querySelector(
+        '[data-first-hidden-element="true"]',
+      ) as HTMLElement | null;
 
-      if (nthElement) {
-        // Apply the custom focus style dynamically
-        nthElement.tabIndex = 0;
-        nthElement.focus();
-        nthElement.classList.add('continueReadingFocusedElement');
-
-        const handleBlur = () => {
-          // Remove the custom focus style
-          nthElement.removeAttribute('tabindex');
-          nthElement.classList.remove('continueReadingFocusedElement');
-        };
-
-        nthElement.addEventListener('blur', handleBlur);
-
-        // Return the cleanup function
-        return () => {
-          nthElement.removeEventListener('blur', handleBlur);
-        };
+      if (firstHiddenElementSibling) {
+        firstHiddenElementSibling.tabIndex = 0;
+        firstHiddenElementSibling.focus();
       }
     }
-
-    // Explicitly return undefined if nthElement does not exist
-    return undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showAllContent]);
 
+  const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
+    clickTrackerHandler?.(event);
+
+    const maybeKeyboardEvent = event.detail === 0;
+
+    if (maybeKeyboardEvent) {
+      const button = document.getElementById('continue-reading-button');
+
+      const firstHiddenElementSibling = button?.nextElementSibling;
+
+      firstHiddenElementSibling?.setAttribute(
+        'data-first-hidden-element',
+        'true',
+      );
+    }
+
+    setShowAllContent(true);
+  };
+
   // Hide button when all content is shown
-  if (showAllContent || !variation) return null;
-
-  const {
-    translations: { continueReading = 'Continue reading' },
-  } = use(ServiceContext);
-
-  // Display variations of button based on variation
-  const buttonStyle =
-    variation === 'read-more-a' || variation === 'read-more-a-and-top-stories'
-      ? styles.continueReadingButtonA
-      : styles.continueReadingButtonB;
+  if (showAllContent) return null;
 
   return (
     <button
-      css={[buttonStyle, styles.hideButtonOnDesktop]}
+      id="continue-reading-button"
+      css={styles.continueReadingButton}
       type="button"
-      onMouseDown={handleEvent}
-      onKeyDown={handleEvent}
-      onTouchStart={handleEvent}
-      data-testid="read-more-button"
+      onClick={handleEvent}
+      data-testid="continue-reading-button"
       {...viewRef}
     >
       <Text fontVariant="sansBold">{continueReading}</Text>
-      {variation === 'read-more-b' && <TriangleDown />}
+      <TriangleDown />
     </button>
   );
 };

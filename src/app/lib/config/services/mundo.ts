@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -55,28 +56,39 @@ export const service: DefaultServiceConfig = {
         'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
     },
     podcastPromo: {
-      title: 'WhatsApp',
-      brandTitle: 'Únete a nuestro WhatsApp',
+      title: 'Podcast',
+      brandTitle: 'Improbable',
       brandDescription:
-        'Recibe el mejor contenido de BBC News Mundo en tu celular',
+        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lrtll8.png',
-        alt: 'Redes sociales - Únete a nuestro WhatsApp',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
+        alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
       },
       linkLabel: {
-        text: 'Suscríbete aquí',
-        href: 'https://whatsapp.com/channel/0029VaUm1Ss3WHTbgIXrjw3D',
+        text: 'Episodios',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
       },
       skipLink: {
         text: 'Saltar %title% y continuar leyendo',
         endTextVisuallyHidden: 'Fin de %title%',
       },
     },
-    translations: {
-      // EXPERIMENT: Homepage Read Time
-      timstampPrefix: {
-        publishedAgo: 'Publicado hace',
+    promotionalBanner: {
+      title: 'Accede a BBC Noticias con un solo toque',
+      description:
+        'Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo.',
+      orText: 'o',
+      primaryButton: {
+        text: 'Agregar',
+        longText: 'Agregar a la pantalla de inicio',
       },
+      secondaryButton: {
+        text: 'No ahora',
+      },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
+    },
+    translations: {
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
@@ -95,6 +107,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
@@ -271,6 +284,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        podcastExternalLinks: 'Este podcast también está disponible en:',
+        download: 'Descargar episodio',
         closeVideo: 'Salir',
         endOfContentClose: 'Fin de este contenido. Salir',
       },
@@ -348,26 +363,26 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
-          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+          'Si te has suscrito a nuestro newsletter, por favor, revisa tu correo. Si nos has enviado información, toma nota de este número para futura referencia.',
         privacyInfoHtml:
-          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+          'Y recuerda que tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
-          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+          'Si tienes alguna duda o cambias de opinión, escríbenos a {{emailLink}} incluyendo el número de referencia.',
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
-        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingHeading: 'Enviando…',
         uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
-        successHeading: 'Mensaje enviado',
-        successDescription: 'Gracias por contactarnos.',
+        successHeading: 'Enviado',
+        successDescription: 'Muchas gracias.',
         privacyPolicyLinkHref:
           'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',
@@ -486,6 +501,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Centroamérica cuenta',
         url: '/mundo/topics/c404v5z1k8wt',
+      },
+      {
+        title: 'Podcasts',
+        url: '/mundo/topics/ce3wlelkgggt',
       },
     ],
   },

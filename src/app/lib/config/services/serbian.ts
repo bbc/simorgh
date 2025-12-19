@@ -15,7 +15,8 @@ const baseServiceConfig = {
   useReverb: true,
   chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
   dir: 'ltr' as Direction,
   service: 'serbian' as Services,
   languageName: 'Serbian',
@@ -78,7 +79,7 @@ export const service: SerbianConfig = {
           text: 'O BBC-ju',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Pravila privatnosti',
         },
         {
@@ -150,6 +151,11 @@ export const service: SerbianConfig = {
       variant: 'cyr',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Vreme čitanja',
+        long: 'članak',
+        minute: 'min',
+      },
       pagination: {
         page: 'Stranica',
         previousPage: 'Prethodno',
@@ -485,7 +491,7 @@ export const service: SerbianConfig = {
           text: 'О ББЦ-ју',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Правила приватности',
         },
         {
@@ -557,6 +563,11 @@ export const service: SerbianConfig = {
       variant: 'lat',
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'Време читања',
+        long: 'Чланак',
+        minute: 'мин',
+      },
       pagination: {
         page: 'Страница',
         previousPage: 'Претходно',

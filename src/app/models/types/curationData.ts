@@ -31,7 +31,9 @@ export interface Summary extends BaseSummary {
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
   mostReadItemId?: string | null;
-  readTimeVariant?: string | null;
+  timeOfDayExperimentName?: string | null;
+  timeOfDayVariant?: string | null;
+  isPortraitImage?: boolean;
 }
 
 export const VISUAL_STYLE = {
@@ -93,5 +95,6 @@ export interface Curation extends BaseCuration {
   renderVisuallyHiddenH2Title?: boolean;
   mostReadItemId?: string | null;
   mostReadBadgeText?: string;
-  readTimeVariant?: string | null;
+  timeOfDayVariant?: string | null;
+  timeOfDayExperimentName?: string | null;
 }

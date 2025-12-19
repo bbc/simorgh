@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -7,7 +7,6 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
-import isLive from '#app/lib/utilities/isLive';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -87,8 +86,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
-  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
+  const renderLanguageNavigation = collapsibleNavigation?.length;
 
   if (renderLanguageNavigation) {
     return <LanguageNavigation />;
@@ -120,7 +118,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   );
 
   const dropdownListItems = (
-    <DropdownUl>
+    <DropdownUl role="list">
       {renderListItems(
         DropdownLi,
         navigation,

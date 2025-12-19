@@ -1,4 +1,3 @@
-import React from 'react';
 import { VISUAL_PROMINENCE, Summary } from '#app/models/types/curationData';
 import {
   render,

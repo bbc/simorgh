@@ -1,10 +1,8 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
-import { Toggles } from '#app/models/types/global';
 import { render } from '../react-testing-library-with-providers';
 import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
@@ -422,21 +420,23 @@ describe('Ad Container', () => {
   });
 
   describe('Ad script nonce', () => {
-    const adsToggle = {
-      ads: {
-        enabled: true,
-      },
-    };
-
+    const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
     const mockToggleDispatch = jest.fn();
 
-    const renderAdContainer = (toggleState: Toggles, country: string) => {
-      const toggleContextMock = {
-        toggleState,
-        toggleDispatch: mockToggleDispatch,
-      };
+    const toggleContextMock = {
+      toggleState: { ads: { enabled: true } },
+      toggleDispatch: mockToggleDispatch,
+    };
 
-      return render(
+    const getAdScripts = () => {
+      const helmetContent = Helmet.peek().scriptTags;
+      return helmetContent.filter(
+        script => script.type === 'module' || script.noModule === true,
+      );
+    };
+
+    it('should add a nonce to the script when it is defined', () => {
+      render(
         <ServiceContext.Provider
           // @ts-expect-error require partial data for testing purposes
           value={{ showAdPlaceholder: true, ...context }}
@@ -451,7 +451,8 @@ describe('Ad Container', () => {
             statusCode={200}
             pathname="/mundo"
             showAdsBasedOnLocation
-            country={country}
+            country="ES"
+            nonce={nonce}
           >
             <ToggleContext.Provider value={toggleContextMock}>
               <BrowserRouter>
@@ -461,91 +462,10 @@ describe('Ad Container', () => {
           </RequestContextProvider>
         </ServiceContext.Provider>,
       );
-    };
+      const adScripts = getAdScripts();
 
-    const getAdScripts = () => {
-      const helmetContent = Helmet.peek().scriptTags;
-      return helmetContent.filter(
-        script => script.type === 'module' || script.noModule === true,
-      );
-    };
-
-    describe('when adsNonce toggle is enabled with country restrictions', () => {
-      it('should add nonce when user is from an allowed country', () => {
-        const toggleState = {
-          ...adsToggle,
-          adsNonce: {
-            enabled: true,
-            value: 'ES, US',
-          },
-        };
-
-        renderAdContainer(toggleState, 'ES');
-
-        const adScripts = getAdScripts();
-
-        adScripts.forEach(script => {
-          expect(script.nonce).toBeTruthy();
-        });
-      });
-
-      it('should not add nonce when user is outside allowed countries', () => {
-        const toggleState = {
-          ...adsToggle,
-          adsNonce: {
-            enabled: true,
-            value: 'ES, US',
-          },
-        };
-
-        renderAdContainer(toggleState, 'FR');
-
-        const adScripts = getAdScripts();
-
-        adScripts.forEach(script => {
-          expect(script.src).toBeTruthy();
-          expect(script).not.toHaveProperty('nonce');
-        });
-      });
-    });
-
-    describe('when adsNonce toggle is enabled for all countries', () => {
-      it('should add nonce for all countries', () => {
-        const toggleState = {
-          ...adsToggle,
-          adsNonce: {
-            enabled: true,
-            value: '',
-          },
-        };
-
-        renderAdContainer(toggleState, 'ES');
-
-        const adScripts = getAdScripts();
-
-        adScripts.forEach(script => {
-          expect(script.nonce).toBeTruthy();
-        });
-      });
-    });
-
-    describe('when adsNonce toggle is disabled', () => {
-      it('should not add nonce', () => {
-        const toggleState = {
-          ...adsToggle,
-          adsNonce: {
-            enabled: false,
-          },
-        };
-
-        renderAdContainer(toggleState, 'ES');
-
-        const adScripts = getAdScripts();
-
-        adScripts.forEach(script => {
-          expect(script.src).toBeTruthy();
-          expect(script).not.toHaveProperty('nonce');
-        });
+      adScripts.forEach(script => {
+        expect(script.nonce).toBeTruthy();
       });
     });
   });

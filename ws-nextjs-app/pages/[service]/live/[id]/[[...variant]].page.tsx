@@ -1,21 +1,17 @@
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
-
+import isLive from '#app/lib/utilities/isLive';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
 import logResponseTime from '#server/utilities/logResponseTime';
-
-import getPathExtension from '#app/utilities/getPathExtension';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-
-import extractHeaders from '../../../../../src/server/utilities/extractHeaders';
-import isValidPageNumber from '../../../../utilities/pageQueryValidator';
-import getPageData from '../../../../utilities/pageRequests/getPageData';
+import isValidPageNumber from '#nextjs/utilities/pageQueryValidator';
+import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 
 const LivePageLayout = dynamic(() => import('./LivePageLayout'));
 
@@ -41,11 +37,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant: variantFromUrl,
     renderer_env: rendererEnv,
     page = '1',
+    post: assetId,
   } = context.query as PageDataParams;
-
-  const { headers: reqHeaders } = context.req;
-
-  const { isApp, isLite } = getPathExtension(context.resolvedUrl);
 
   const variant = deriveVariant(variantFromUrl);
 
@@ -61,19 +54,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
     return {
       props: {
-        isApp,
-        isLite,
-        isNextJs: true,
         service,
         status: 404,
         timeOnServer: Date.now(),
         variant,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     page,
     service,
@@ -96,14 +85,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   context.res.statusCode = data.status;
 
+  // in order to only have the live post og metadata code on test only, (https://bbc.atlassian.net/browse/WS-1001)
+  // we can send assetId into LivePage only if the env is not live
+  // this means that on live, assetId will always be null and the full page metadata will be used instead of the individual post metadata
+  const assetIdForTestEnv = isLive() ? null : assetId;
+
   return {
     props: {
       error: data?.error || null,
       id,
-      isApp,
-      isLite,
-      isAmp: false,
-      isNextJs: true,
       page: page || null,
       pageData: data?.pageData
         ? {
@@ -114,14 +104,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
             },
           }
         : null,
+      assetId: assetIdForTestEnv || null,
       pageType: LIVE_PAGE,
       pathname: context.resolvedUrl,
       service,
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
-      toggles,
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

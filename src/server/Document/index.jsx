@@ -1,5 +1,4 @@
 import path from 'path';
-import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
@@ -22,6 +21,7 @@ const renderDocument = async ({
   routes,
   service,
   url,
+  nonce,
 }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
@@ -71,6 +71,7 @@ const renderDocument = async ({
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            nonce={nonce}
           />
         </CacheProvider>
       </ChunkExtractorManager>,
@@ -89,11 +90,12 @@ const renderDocument = async ({
   const headHelmet = Helmet.renderStatic();
 
   const modernScripts = modernExtractor.getScriptElements(
-    getScriptAttributes('modern'),
+    getScriptAttributes('modern', nonce),
   );
 
   const legacyScripts =
-    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
+    !isDev &&
+    legacyExtractor.getScriptElements(getScriptAttributes('legacy', nonce));
 
   const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
 
@@ -109,6 +111,7 @@ const renderDocument = async ({
       isApp={isApp}
       isLite={isLite}
       service={service}
+      nonce={nonce}
     />,
   );
 

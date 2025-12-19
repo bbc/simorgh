@@ -1,4 +1,3 @@
-import React from 'react';
 import InlineLink from './index';
 import { fireEvent, render } from '../react-testing-library-with-providers';
 

@@ -19,7 +19,7 @@ export const service: DefaultServiceConfig = {
     product: 'BBC News',
     serviceLocalizedName: 'ニュース',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/japanese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBCニュース',
     dir: `ltr`,
     externalLinkText: ' は外部ページです',
@@ -253,6 +253,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'トップ記事',
       featuresAnalysisTitle: '読み物・解説',
+      latestMediaTitle: '最新動画',
     },
     mostRead: {
       header: '注目の記事',

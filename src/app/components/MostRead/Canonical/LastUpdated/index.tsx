@@ -1,4 +1,3 @@
-import React from 'react';
 import Timestamp from '../../../../legacy/psammead/psammead-timestamp-container/src';
 import { Services } from '../../../../models/types/global';
 import { TypographyScript } from '../../../../models/types/theming';

@@ -641,6 +641,52 @@ export const aresMediaLiveStreamBlocks = [
   aresMediaCaptionBlock,
 ];
 
+export const liveTvPageMediaBlock = {
+  type: 'liveMedia',
+  model: {
+    urn: 'urn:bbc:pips:sid:bbc_arabic_tv',
+    title: '04/11/2025 19:05 GMT',
+    type: 'episode',
+    synopses: {
+      short:
+        'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+      medium:
+        'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+      long: 'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+    },
+    mediaType: 'audio_video',
+    imageUrlTemplate:
+      'https://ichef.bbci.co.uk/ace/standard/$recipe/cpsdevpb/9f44/test/1703f820-b025-11f0-8c86-5d50166f9cdc.png',
+    masterbrand: {
+      id: 'bbc_arabic_tv',
+      name: 'BBC Arabic TV',
+      networkName: 'BBC Arabic TV',
+      type: 'tv',
+      imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p0m9xygc.png',
+    },
+    version: {
+      vpid: 'n4pdm42036',
+      duration: 'PT55M',
+      availabilityType: 'simulcast',
+      versionTypes: [
+        {
+          type: 'Original',
+          name: 'Original version',
+        },
+      ],
+      schedule: {
+        start: null,
+      },
+      serviceId: 'bbc_arabic_tv',
+      authToken: null,
+      status: 'LIVE',
+      warnings: null,
+    },
+    overTypedTitle: 'BBC Arabic TV',
+    leadMedia: true,
+  },
+};
+
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const videoClipMediaBlocks = [
   livePageVideoClipMediaBlock,

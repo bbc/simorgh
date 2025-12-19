@@ -1,37 +1,5 @@
 import { css, Theme } from '@emotion/react';
-import {
-  FORCED_COLOURS,
-  GROUP_1_MAX_WIDTH,
-} from '#app/components/ThemeProvider/mediaQueries';
-import pixelsToRem from '#app/utilities/pixelsToRem';
-import { GREY_6 } from '#app/components/ThemeProvider/palette';
-
-const readTimeExperimentBigPromoStyles = {
-  '& .timestamp-read-time-container': {
-    display: 'flex',
-    alignItems: 'center',
-    'flex-wrap': 'wrap',
-    '> .hierachical-read-time': {
-      lineHeight: 0,
-    },
-    // EXPERIMENT - Placeholder for control variants
-    '> .placeholder': {
-      height: 0,
-    },
-    '> .hierachical-read-time::before': {
-      content: '""',
-      display: 'inline-block',
-      verticalAlign: 'middle',
-      height: `${pixelsToRem(2)}rem`,
-      width: `${pixelsToRem(2)}rem`,
-      backgroundColor: GREY_6,
-      margin: `0 ${pixelsToRem(6)}rem`,
-      [FORCED_COLOURS]: {
-        backgroundColor: 'currentcolor',
-      },
-    },
-  },
-};
+import { GROUP_1_MAX_WIDTH } from '#app/components/ThemeProvider/mediaQueries';
 
 const styles = {
   body: ({ spacings, palette, fontSizes }: Theme) =>
@@ -132,18 +100,24 @@ const styles = {
       ...fontVariants.sansBold,
       padding: pixelsToRem(4),
       marginInlineEnd: pixelsToRem(4),
+
+  inlineIcon: ({ spacings }: Theme) =>
+    css({
+      display: 'none',
+      padding: 0,
+      paddingInlineEnd: `${spacings.HALF}rem`,
+      marginInlineStart: `-${spacings.HALF}rem`,
+      verticalAlign: 'text-top',
     }),
 };
 
 const DesktopBigPromo = css({
-  ...readTimeExperimentBigPromoStyles,
   gridColumn: 'span 2',
   gridRow: 'span 4',
   marginTop: '0.5rem',
 });
 
 const BigPromo = css({
-  ...readTimeExperimentBigPromoStyles,
   gridRow: 'span 3',
   gridColumn: 'span 2',
   marginTop: '0.5rem',
@@ -187,6 +161,9 @@ const CompactPromo = css({
   },
   '.promo-paragraph': {
     display: 'none',
+  },
+  '.inline-icon': {
+    display: 'inline',
   },
   '::before': {
     top: 0,

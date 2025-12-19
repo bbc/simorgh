@@ -1,9 +1,7 @@
-import path from 'ramda/src/path';
-
 import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 
 export default async policy => {
-  const origin = path(['location', 'origin'], window);
+  const { origin } = window.location;
 
   if (origin) {
     const cookieOvenEndpoints = getCookieOvenEndpoints({

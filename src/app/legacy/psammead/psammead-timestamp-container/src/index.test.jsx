@@ -1,4 +1,3 @@
-import React from 'react';
 import { isNull } from '#psammead/psammead-test-helpers/src';
 import moment from 'moment';
 import { render } from '../../../../components/react-testing-library-with-providers';
@@ -37,6 +36,7 @@ describe('Timestamp', () => {
         locale="fa"
         service="persian"
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });
@@ -97,6 +97,7 @@ describe('Timestamp', () => {
             service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -115,6 +116,7 @@ describe('Timestamp', () => {
             service="persian"
             altCalendar={mockCalendar}
           />,
+          { service: 'persian' },
         );
 
         const time = container.querySelector('time');
@@ -133,6 +135,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -150,6 +153,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');
@@ -167,6 +171,7 @@ describe('Timestamp', () => {
           locale="ha"
           service="hausa"
         />,
+        { service: 'hausa' },
       );
 
       const time = container.querySelector('time');

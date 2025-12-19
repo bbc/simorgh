@@ -3,10 +3,11 @@
  * @pathname /serbian/lat
  */
 
+import serbianData from '#data/serbian/homePage/lat.json';
 import runCanonicalTests from '../canonicalTests';
-import { data as pageData } from '../../../../../data/serbian/homePage/lat.json';
 
 describe('Canonical', () => {
+  const { data: pageData } = serbianData;
   describe(pageType, () => {
     runCanonicalTests({ service, pageData });
   });

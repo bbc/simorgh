@@ -4,6 +4,7 @@ type CollapsibleNavigationSubLink = {
   href: string;
   lang?: string;
   latinTransliteration?: string;
+  disableTranslation?: boolean;
 };
 
 export type CollapsibleNavigationSection = {

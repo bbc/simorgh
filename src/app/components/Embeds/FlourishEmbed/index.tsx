@@ -1,11 +1,8 @@
-/** @jsx jsx */
-import React from 'react';
-import { jsx } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { OEmbedData } from '../types';
 
-const FlourishEmbed = (props: OEmbedData) => {
+const FlourishEmbed = (props: OEmbedData, nonce?: string | null) => {
   const { width, height, iFrameSrc, iFrameTitle, iFrameId, sizeAdjustScript } =
     props;
 
@@ -14,9 +11,9 @@ const FlourishEmbed = (props: OEmbedData) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <script>{sizeAdjustScript}</script>
+        <script {...(nonce ? { nonce } : {})}>{sizeAdjustScript}</script>
       </Helmet>
       <iframe
         css={styles.iframe}
@@ -28,7 +25,7 @@ const FlourishEmbed = (props: OEmbedData) => {
         width={width}
         title={iFrameTitle}
       />
-    </React.Fragment>
+    </>
   );
 };
 

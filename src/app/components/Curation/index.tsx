@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import {
   Curation,
   VISUAL_STYLE,
@@ -69,8 +67,9 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  readTimeVariant,
   mostReadItemId,
+  timeOfDayExperimentName,
+  timeOfDayVariant,
   mediaCollection,
 }: Curation) => {
   const componentName = getComponentName({
@@ -130,6 +129,8 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );
@@ -177,6 +178,7 @@ export default ({
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
+            timeOfDayVariant={timeOfDayVariant ?? undefined}
           />
         );
       }
@@ -219,6 +221,12 @@ export default ({
         const viewTracker = useViewTracker({
           ...eventTrackingData,
           viewThreshold: 0.2,
+          ...(timeOfDayExperimentName &&
+            timeOfDayVariant && {
+              sendOptimizelyEvents: true,
+              experimentName: timeOfDayExperimentName,
+              experimentVariant: timeOfDayVariant,
+            }),
         });
 
         const curationSubheadingClickTracker =
@@ -247,7 +255,8 @@ export default ({
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
                 mostReadItemId={mostReadItemId}
-                readTimeVariant={readTimeVariant}
+                timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+                timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
           </section>
@@ -259,7 +268,8 @@ export default ({
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
               mostReadItemId={mostReadItemId}
-              readTimeVariant={readTimeVariant}
+              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
+              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );

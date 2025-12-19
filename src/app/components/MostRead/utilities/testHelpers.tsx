@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
@@ -83,6 +83,7 @@ export const getItemWrapperArray = ({
   const item = getItem({ service, withTimestamp });
   for (let i = 1; i <= numberOfItems; i += 1) {
     itemWrapperArray.push(
+      // @ts-expect-error test data
       <MostReadItemWrapper dir={dir} key={i} columnLayout={columnLayout}>
         <MostReadRank
           service={service}

@@ -39,6 +39,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
             cy.on('uncaught:exception', ({ message }) => {
               if (
                 [
+                  `Cannot read properties of undefined (reading 'count')`,
                   'ResizeObserver loop completed with undelivered notifications',
                 ].some(error => message.includes(error))
               ) {

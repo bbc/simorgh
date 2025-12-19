@@ -20,7 +20,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
     externalLinkText: ', จากภายนอก',

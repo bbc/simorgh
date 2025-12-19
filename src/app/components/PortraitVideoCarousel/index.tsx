@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { use, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -19,12 +16,14 @@ type PortraitVideoCarouselProps = {
   title: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
+  timeOfDayVariant?: string;
 };
 
 const PortraitVideoCarousel = ({
   title,
   blocks,
   eventTrackingData,
+  timeOfDayVariant,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +31,7 @@ const PortraitVideoCarousel = ({
     null,
   );
 
-  const { isLite } = use(RequestContext);
+  const { isLite, nonce } = use(RequestContext);
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
@@ -60,7 +59,7 @@ const PortraitVideoCarousel = ({
 
   return (
     <>
-      <BumpLoader />
+      <BumpLoader nonce={nonce} />
       <section
         aria-label={title}
         role="region"
@@ -95,6 +94,7 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(index)}
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
+                timeOfDayVariant={timeOfDayVariant}
               />
             ))}
           </ul>
@@ -106,6 +106,7 @@ const PortraitVideoCarousel = ({
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
+              nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
             />,
             document.body,

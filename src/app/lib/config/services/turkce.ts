@@ -18,7 +18,8 @@ export const service: DefaultServiceConfig = {
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/turkce/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
     externalLinkText: ', dış',
@@ -64,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
+      continueReading: 'Okumaya devam edin',
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',

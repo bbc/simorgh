@@ -1,9 +1,17 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
+import testsForAllPages from '../testsForAllPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 
 const pageType = 'liveRadio';
 
-const tests = [e2eTests];
+const tests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
@@ -30,11 +38,16 @@ const testSuites = [
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
-
   {
     path: '/burmese/bbc_burmese_radio/liveradio',
     service: 'burmese',
     runforEnv: ['local', 'test', 'live'],
+    tests,
+  },
+  {
+    path: '/dari/bbc_dari_radio/liveradio',
+    service: 'dari',
+    runforEnv: ['test'],
     tests,
   },
   {
@@ -68,12 +81,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/bbc_dari_radio/liveradio',
-    service: 'persian',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/somali/bbc_somali_radio/liveradio',
     service: 'somali',
     runforEnv: ['local', 'test', 'live'],
@@ -99,7 +106,32 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/hausa/bbc_hausa_radio/liveradio',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'player-live',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+];
+
 runTestsForPage({
   pageType,
   testSuites,
+});
+
+runTestsForPage({
+  pageType: 'liveRadio',
+  testSuites: atiAnalyticsTestSuites,
+  beforeAll: [setUserIDCookie],
+  testIsolation: true,
 });

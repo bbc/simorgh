@@ -1,4 +1,3 @@
-import React from 'react';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
@@ -104,6 +103,7 @@ describe('StoryPromo with Media Indicator', () => {
         info={Info({})}
         mediaIndicator={<MediaInfo service="persian" dir="rtl" />}
       />,
+      { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
   });

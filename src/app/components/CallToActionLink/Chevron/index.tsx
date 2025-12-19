@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { SerializedStyles, Theme } from '@emotion/react';
 import { use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { LeftChevron, RightChevron } from '../../icons';
@@ -11,7 +10,7 @@ type ChevronProps = {
 };
 
 const getChevronCss = (size = 'pica') => {
-  const chevronCss = [];
+  const chevronCss: Array<(_theme: Theme) => SerializedStyles> = [];
 
   if (size === 'brevier') {
     chevronCss.push(styles.brevierSize);

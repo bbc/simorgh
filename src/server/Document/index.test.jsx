@@ -1,4 +1,3 @@
-import React from 'react';
 import * as server from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
 import renderDocument from '.';
@@ -77,6 +76,7 @@ describe('Render Document', () => {
         isLite: false,
         legacyScripts: '__mock_script_elements__',
         modernScripts: '__mock_script_elements__',
+        nonce: undefined,
         service: 'news',
         links: '__mock_link_elements__',
       });
@@ -92,6 +92,7 @@ describe('Render Document', () => {
         isApp: false,
         isLite: false,
         location: '/',
+        nonce: undefined,
         routes: ['someRoute'],
         service: 'news',
       });
