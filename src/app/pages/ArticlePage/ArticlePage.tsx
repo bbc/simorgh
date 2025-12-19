@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useState, useRef } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -48,6 +48,7 @@ import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import ReadingProgressBar from './ReadingProgressBar';
 import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -198,6 +199,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     palette: { GREY_2 },
   } = useTheme();
+
+  const mainRef = useRef<HTMLElement>(null);
 
   // EXPERIMENT: Time of Day Experiment
   const timeOfDayExperimentName = 'newswb_ws_tod_article';
@@ -418,7 +421,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+          <ReadingProgressBar targetRef={mainRef} />
+          <main ref={mainRef} css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
