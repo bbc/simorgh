@@ -421,7 +421,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <ReadingProgressBar targetRef={mainRef} />
+          <ReadingProgressBar
+            targetRef={mainRef}
+            showAllContent={showAllContent}
+          />
           <main ref={mainRef} css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}

@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState, RefObject } from 'react';
-import { css, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 
 type ReadingProgressBarProps = {
   targetRef: RefObject<HTMLElement | null>;
+  showAllContent: boolean;
 };
 
 const barWrapperStyles = {
@@ -24,7 +25,10 @@ const progressBarStyles = (palette, width: number) => ({
   transition: 'width 0.06s ease-in',
 });
 
-const ReadingProgressBar = ({ targetRef }: ReadingProgressBarProps) => {
+const ReadingProgressBar = ({
+  targetRef,
+  showAllContent,
+}: ReadingProgressBarProps) => {
   const [progress, setProgress] = useState(0);
   const { palette } = useTheme();
   const ticking = useRef(false);
@@ -32,12 +36,18 @@ const ReadingProgressBar = ({ targetRef }: ReadingProgressBarProps) => {
   useEffect(() => {
     const handleScroll = () => {
       if (!targetRef.current) return;
+
       const rect = targetRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const articleHeight = rect.height;
-
-      // Calculate how much of the article has been scrolled
       const totalScrollable = articleHeight - windowHeight;
+
+      if (!showAllContent) {
+        setProgress(0);
+        ticking.current = false;
+        return;
+      }
+
       const scrolled = Math.min(
         Math.max(-rect.top, 0),
         totalScrollable > 0 ? totalScrollable : 1,
@@ -67,7 +77,7 @@ const ReadingProgressBar = ({ targetRef }: ReadingProgressBarProps) => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
     };
-  }, [targetRef]);
+  }, [targetRef, showAllContent]);
 
   return (
     <div css={barWrapperStyles} aria-hidden>
