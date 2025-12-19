@@ -158,7 +158,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1kfc8lh"
+  class="media-container css-1gwhjfj"
   data-e2e="media-loader__container"
 >
   <div
