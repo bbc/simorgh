@@ -5,6 +5,7 @@ import { createContext } from 'react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import * as trackingToggle from '#hooks/useTrackingToggle';
 
 import * as useOptimizelyVariation from '../useOptimizelyVariation';
@@ -36,8 +37,6 @@ const urlToObject = url => {
   };
 };
 
-process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
-
 const eventTrackingData = {
   componentName: 'brand',
   format: 'CHD=promo::2',
@@ -61,11 +60,6 @@ const defaultOptimizely = {
   close: jest.fn(),
   user: { attributes: { foo: 'bar' }, id: 'test' },
 };
-
-// // eslint-disable-next-line no-underscore-dangle
-// window.__reverb = {
-//   __reverbLoadedPromise: Promise.resolve(reverbMock),
-// };
 
 const wrapper = ({ children }) => (
   <AllTheProviders
@@ -807,22 +801,38 @@ describe('useClickTrackerHandler', () => {
     it('Returns a valid ati tracking url given the input props', () => {
       const { result } = renderHook(
         () =>
-          constructATIUrl({
+          constructReverbUrl({
             eventTrackingData: {
               ...eventTrackingData,
               campaignID: 'custom-campaign',
             },
             eventType: 'click',
-            isStatic: true,
           }),
         {
           wrapper,
         },
       );
 
-      expect(result.current).toContain(
-        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
-      );
+      const { searchParams } = urlToObject(result.current);
+
+      expect(searchParams).toEqual({
+        idclient: '{idclient}',
+        s: '596068',
+        r: '{screenResolutionColourDepth}',
+        re: '{browserViewportResolution}',
+        hl: '{timestamp}',
+        ts: '{epochTimestamp}',
+        lng: '{language}',
+        x6: '[{referrer}]',
+        app_type: 'lite',
+        ref: '{referrer}',
+        app_name: 'undefined',
+        language: 'undefined',
+        content_type: 'STY',
+        events:
+          '[{"name":"viewability.select","data":{"item":{"name":"brand","link":"{forwardingLink}"},"event":{"category":"viewability","action":"select"},"group":{"name":"custom-campaign","type":"brand"},"user":{"id":null},"app":{"type":"lite"}}}]',
+        context: '[{"data":{"page":{},"site":{"level2_id":""}}}]',
+      });
     });
   });
 });
