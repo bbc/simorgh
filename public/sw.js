@@ -10,6 +10,38 @@ const service = self.location.pathname.split('/')[1];
 const hasOfflinePageFunctionality = true;
 const OFFLINE_PAGE = `/${service}/offline`;
 
+const cacheOfflineArticles = async cache => {
+  // eslint-disable-next-line no-console
+  console.log(`Attempting to cache offline articles for service: ${service}`);
+
+  const articleCachePromises = OFFLINE_ARTICLES.map(articleId => {
+    const articleJsonUrl = new URL(
+      `/${service}/articles/${articleId}.json`,
+      self.location.origin,
+    ).href;
+
+    return fetch(articleJsonUrl)
+      .then(response => {
+        if (!response || !response.ok) {
+          throw new Error(
+            `Failed to fetch article ${articleId}: ${response.status} ${response.statusText}`,
+          );
+        }
+        // eslint-disable-next-line no-console
+        console.log(`Successfully cached article: ${articleId}`);
+        return cache.put(articleJsonUrl, response);
+      })
+      .catch(error => {
+        // eslint-disable-next-line no-console
+        console.error(`Failed to cache article ${articleId}: ${error.message}`);
+      });
+  });
+
+  await Promise.all(articleCachePromises);
+  // eslint-disable-next-line no-console
+  console.log('Article caching complete');
+};
+
 self.addEventListener('install', event => {
   event.waitUntil(
     (async () => {
@@ -24,6 +56,7 @@ self.addEventListener('install', event => {
             );
           }
           await cache.put(offlinePageUrl, response);
+          await cacheOfflineArticles(cache);
         } catch (error) {
           // eslint-disable-next-line no-console
           console.error(`Failed to cache offline page: ${error.message}`);
@@ -52,12 +85,28 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
+const OFFLINE_ARTICLES = [
+  'cwl08rd38l6o',
+  'cwkvd1410e9o',
+  'crd2mn2lyqqo',
+  'c1x0rq3r97ko',
+  'c578zj113e9o',
+];
+
+const isOfflineArticleRequest = url => {
+  const articleJsonPattern = new RegExp(
+    `/${service}/articles/[a-z0-9]+\\.json$`,
+  );
+  return articleJsonPattern.test(new URL(url).pathname);
+};
+
 const fetchEventHandler = async event => {
+  const url = event.request.url;
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
-    new RegExp(cacheableFile).test(event.request.url),
+    new RegExp(cacheableFile).test(url),
   );
 
-  const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+  const isRequestForWebpImage = WEBP_IMAGE.test(url);
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -84,10 +133,41 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         let response = await cache.match(event.request);
         if (!response) {
-          response = await fetch(event.request.url);
+          response = await fetch(url);
           cache.put(event.request, response.clone());
         }
         return response;
+      })(),
+    );
+  } else if (isOfflineArticleRequest(url)) {
+    event.respondWith(
+      (async () => {
+        try {
+          const cache = await caches.open(cacheName);
+          let response = await cache.match(url);
+          if (response) {
+            // eslint-disable-next-line no-console
+            console.log(`Serving article from cache: ${url}`);
+            return response;
+          }
+
+          // eslint-disable-next-line no-console
+          console.log(`Article not in cache, trying network: ${url}`);
+          response = await fetch(event.request);
+          return response;
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.error(
+            `Failed to fetch article JSON: ${error.message}`,
+          );
+          return new Response(
+            JSON.stringify({ error: 'Article not available offline.' }),
+            {
+              status: 503,
+              headers: { 'Content-Type': 'application/json' },
+            },
+          );
+        }
       })(),
     );
   } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {

@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#components/ErrorMain';
+import OfflineArticles from './OfflineArticles';
 
 const OfflinePage = () => {
   const { service, dir, script, translations } = use(ServiceContext);
@@ -30,6 +31,7 @@ const OfflinePage = () => {
         script={script}
         service={service}
       />
+      <OfflineArticles />
     </>
   );
 };
