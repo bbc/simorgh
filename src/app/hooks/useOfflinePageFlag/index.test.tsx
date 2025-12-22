@@ -3,12 +3,8 @@ import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server
 import useOfflinePageFlag, { OFFLINE_VISIT_FLAG } from './index';
 
 jest.mock('../useIsPWA');
-jest.mock('../useNetworkStatusTracker');
 
 const mockUseIsPWA = jest.requireMock('../useIsPWA').default as jest.Mock;
-const mockUseNetworkStatusTracker = jest.requireMock(
-  '../useNetworkStatusTracker',
-).default as jest.Mock;
 
 describe('useOfflinePageFlag', () => {
   beforeEach(() => {
@@ -18,12 +14,8 @@ describe('useOfflinePageFlag', () => {
     jest.clearAllMocks();
   });
 
-  it('should set offline flag when offline in PWA mode', () => {
+  it('should set offline flag when in PWA mode', () => {
     mockUseIsPWA.mockReturnValue(true);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: false,
-      networkType: '4g',
-    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -33,36 +25,8 @@ describe('useOfflinePageFlag', () => {
     );
   });
 
-  it('should not set flag when online in PWA mode', () => {
-    mockUseIsPWA.mockReturnValue(true);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: true,
-      networkType: '4g',
-    });
-
-    renderHook(() => useOfflinePageFlag());
-
-    expect(localStorage.setItem).not.toHaveBeenCalled();
-  });
-
-  it('should not set flag when offline in browser mode', () => {
+  it('should not set flag when in browser mode', () => {
     mockUseIsPWA.mockReturnValue(false);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: false,
-      networkType: '4g',
-    });
-
-    renderHook(() => useOfflinePageFlag());
-
-    expect(localStorage.setItem).not.toHaveBeenCalled();
-  });
-
-  it('should not set flag when online in browser mode', () => {
-    mockUseIsPWA.mockReturnValue(false);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: true,
-      networkType: '4g',
-    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -71,10 +35,6 @@ describe('useOfflinePageFlag', () => {
 
   it('should handle localStorage errors gracefully', () => {
     mockUseIsPWA.mockReturnValue(true);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: false,
-      networkType: '4g',
-    });
     const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
 
     Storage.prototype.setItem = jest.fn().mockImplementation(() => {
@@ -94,12 +54,8 @@ describe('useOfflinePageFlag', () => {
     expect(localStorage.setItem).not.toHaveBeenCalled();
   });
 
-  it('should work with iOS standalone mode', () => {
+  it('should set flag with iOS standalone mode', () => {
     mockUseIsPWA.mockReturnValue(true);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: false,
-      networkType: '4g',
-    });
 
     renderHook(() => useOfflinePageFlag());
 
