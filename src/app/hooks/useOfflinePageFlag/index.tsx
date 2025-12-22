@@ -12,8 +12,10 @@ const OFFLINE_VISIT_FLAG = 'offline_page_visit';
 const useOfflinePageFlag = () => {
   const isPWA = useIsPWA();
   const { isOnline } = useNetworkStatusTracker();
+  console.log('useOfflinePageFlag invoked', { isPWA, isOnline });
+
   useEffect(() => {
-    if (typeof window === 'undefined' || !isPWA || isOnline) return;
+    if (typeof window === 'undefined' || !isPWA) return;
 
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
@@ -21,7 +23,7 @@ const useOfflinePageFlag = () => {
       // eslint-disable-next-line no-console
       console.warn('useOfflinePageFlag', error);
     }
-  }, [isOnline, isPWA]);
+  }, [isPWA]);
 };
 
 export default useOfflinePageFlag;

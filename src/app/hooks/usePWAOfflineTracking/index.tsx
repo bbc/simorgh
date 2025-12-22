@@ -19,6 +19,12 @@ const usePWAOfflineTracking = () => {
     eventName: OFFLINE_PAGE_VIEW_EVENT_NAME,
   });
 
+  console.log('usePWAOfflineTracking invoked', {
+    isPWA,
+    isOnline,
+    networkType,
+  });
+
   useEffect(() => {
     if (typeof window === 'undefined' || !isPWA || !isOnline) {
       return;
