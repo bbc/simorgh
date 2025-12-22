@@ -18,6 +18,8 @@ const OfflinePage = () => {
     'Refresh the page when your connection is restored',
   ];
 
+  console.log('OfflinePage rendered');
+
   return (
     <>
       <Helmet htmlAttributes={{ dir, lang: service }}>
