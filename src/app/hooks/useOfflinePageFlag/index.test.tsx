@@ -2,42 +2,28 @@ import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
 import useOfflinePageFlag, { OFFLINE_VISIT_FLAG } from './index';
 
-describe('useOfflinePageFlag', () => {
-  const originalMatchMedia = window.matchMedia;
-  const originalNavigator = window.navigator;
-  const originalLocalStorage = window.localStorage;
+jest.mock('../useIsPWA');
+jest.mock('../useNetworkStatusTracker');
 
+const mockUseIsPWA = jest.requireMock('../useIsPWA').default as jest.Mock;
+const mockUseNetworkStatusTracker = jest.requireMock(
+  '../useNetworkStatusTracker',
+).default as jest.Mock;
+
+describe('useOfflinePageFlag', () => {
   beforeEach(() => {
     Storage.prototype.setItem = jest.fn();
     Storage.prototype.getItem = jest.fn();
     Storage.prototype.removeItem = jest.fn();
+    jest.clearAllMocks();
   });
-
-  afterEach(() => {
-    window.matchMedia = originalMatchMedia;
-    window.navigator = originalNavigator;
-    window.localStorage = originalLocalStorage;
-    jest.restoreAllMocks();
-  });
-
-  const mockMatchMedia = (queries: Record<string, boolean>) => {
-    window.matchMedia = jest.fn().mockImplementation((query: string) => ({
-      matches: !!queries[query],
-    }));
-  };
-
-  const mockNavigator = (onLine: boolean) => {
-    jest.spyOn(window, 'navigator', 'get').mockImplementation(
-      () =>
-        ({
-          onLine,
-        }) as unknown as Navigator,
-    );
-  };
 
   it('should set offline flag when offline in PWA mode', () => {
-    mockMatchMedia({ '(display-mode: standalone)': true });
-    mockNavigator(false);
+    mockUseIsPWA.mockReturnValue(true);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: false,
+      networkType: '4g',
+    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -48,8 +34,11 @@ describe('useOfflinePageFlag', () => {
   });
 
   it('should not set flag when online in PWA mode', () => {
-    mockMatchMedia({ '(display-mode: standalone)': true });
-    mockNavigator(true);
+    mockUseIsPWA.mockReturnValue(true);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: true,
+      networkType: '4g',
+    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -57,8 +46,11 @@ describe('useOfflinePageFlag', () => {
   });
 
   it('should not set flag when offline in browser mode', () => {
-    mockMatchMedia({ '(display-mode: browser)': true });
-    mockNavigator(false);
+    mockUseIsPWA.mockReturnValue(false);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: false,
+      networkType: '4g',
+    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -66,8 +58,11 @@ describe('useOfflinePageFlag', () => {
   });
 
   it('should not set flag when online in browser mode', () => {
-    mockMatchMedia({ '(display-mode: browser)': true });
-    mockNavigator(true);
+    mockUseIsPWA.mockReturnValue(false);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: true,
+      networkType: '4g',
+    });
 
     renderHook(() => useOfflinePageFlag());
 
@@ -75,8 +70,11 @@ describe('useOfflinePageFlag', () => {
   });
 
   it('should handle localStorage errors gracefully', () => {
-    mockMatchMedia({ '(display-mode: standalone)': true });
-    mockNavigator(false);
+    mockUseIsPWA.mockReturnValue(true);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: false,
+      networkType: '4g',
+    });
     const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
 
     Storage.prototype.setItem = jest.fn().mockImplementation(() => {
@@ -97,13 +95,11 @@ describe('useOfflinePageFlag', () => {
   });
 
   it('should work with iOS standalone mode', () => {
-    mockMatchMedia({});
-    mockNavigator(false);
-    jest
-      .spyOn(window, 'navigator', 'get')
-      .mockImplementation(
-        () => ({ standalone: true, onLine: false }) as unknown as Navigator,
-      );
+    mockUseIsPWA.mockReturnValue(true);
+    mockUseNetworkStatusTracker.mockReturnValue({
+      isOnline: false,
+      networkType: '4g',
+    });
 
     renderHook(() => useOfflinePageFlag());
 
