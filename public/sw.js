@@ -6,7 +6,7 @@
 /* eslint-disable no-console */
 
 const version = 'v0.3.1';
-const cacheName = 'simorghCache_v1';
+const cacheName = 'simorghCache_v2';
 
 // Track PWA clients
 const pwaClients = new Map();
