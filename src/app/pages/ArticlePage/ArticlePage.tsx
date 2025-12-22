@@ -424,6 +424,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           <ReadingProgressBar
             targetRef={mainRef}
             showAllContent={showAllContent}
+            hasContinueReadingButton={showContinueReadingButton}
           />
           <main ref={mainRef} css={styles.mainContent} role="main">
             <Blocks
