@@ -6,7 +6,7 @@
 /* eslint-disable no-console */
 
 const version = 'v0.3.1';
-const cacheName = 'simorghCache_v3';
+const cacheName = 'simorghCache_v1';
 
 // Track PWA clients
 const pwaClients = new Map();
@@ -36,9 +36,7 @@ const cacheOfflinePageAndResources = async service => {
     getOfflinePageUrl(service),
     self.location.origin,
   ).href;
-
-  // Commenting out to force re-cache during testing
-  // if (await cache.match(offlinePageUrl)) return;
+  if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
   if (!resp || !resp.ok) return;
@@ -157,16 +155,20 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (event.request.url.includes('/_next/static/')) {
-    // Cache Next.js static files - cache-first strategy
+    // Network-first for Next.js chunks (dev mode compatibility)
     event.respondWith(
       (async () => {
-        const cache = await caches.open(cacheName);
-        const cached = await cache.match(event.request);
-        if (cached) return cached;
-
-        const networkResp = await fetch(event.request);
-        cache.put(event.request, networkResp.clone());
-        return networkResp;
+        try {
+          const networkResp = await fetch(event.request);
+          const cache = await caches.open(cacheName);
+          cache.put(event.request, networkResp.clone());
+          return networkResp;
+        } catch (err) {
+          const cache = await caches.open(cacheName);
+          const cachedResp = await cache.match(event.request);
+          if (cachedResp) return cachedResp;
+          throw err;
+        }
       })(),
     );
   } else if (event.request.mode === 'navigate') {
