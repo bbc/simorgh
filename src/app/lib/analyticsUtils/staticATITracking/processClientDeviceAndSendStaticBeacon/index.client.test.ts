@@ -164,7 +164,7 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
           s: '598343',
           r: '100x400x24x24',
           re: '4060x1080',
-          hl: '16x30x2',
+          hl: `${testHour}x${testMinute}x${testSecond}`,
           ts: '1731515402000',
           lng: 'en-GB',
           x6: '[https://www.bbc.com]',
