@@ -217,7 +217,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
 "
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -234,15 +234,15 @@ exports[`Canonical Articles Media Loader a11y assistive technology can read the 
 
 exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 <div
-  class="css-145siv3"
+  class="css-1750p8i"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1gynr2b"
+    class="css-86ijwy"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-n2zqlz"
+      class="css-k240ny"
     >
       <strong>
         برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -250,21 +250,21 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1s7djye"
+    class="focusIndicatorRemove css-1gbi9ur"
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-ghlap1"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
     <div
       aria-hidden="true"
-      class="css-7qcky8"
+      class="css-mnftr9"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1kk1qa21"
+        class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -287,19 +287,19 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-digyti"
+      class="css-q9209e"
       datetime="PT16S"
     >
       00:16
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-1e970fu"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-ey0vwc"
+      class="css-4gkgae"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -311,15 +311,15 @@ exports[`Canonical Articles Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 <div
-  class="css-145siv3"
+  class="css-1750p8i"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1gynr2b"
+    class="css-86ijwy"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-n2zqlz"
+      class="css-k240ny"
     >
       <strong>
         برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -327,21 +327,21 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-1s7djye"
+    class="focusIndicatorRemove css-1gbi9ur"
     type="button"
   >
     <span
-      class="css-2ozlq5"
+      class="css-ghlap1"
     >
       Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
     </span>
     <div
       aria-hidden="true"
-      class="css-7qcky8"
+      class="css-mnftr9"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1kk1qa21"
+        class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -364,19 +364,19 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-digyti"
+      class="css-q9209e"
       datetime="PT16S"
     >
       00:16
     </time>
   </button>
   <div
-    class="css-10dp2sw"
+    class="css-1e970fu"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-ey0vwc"
+      class="css-4gkgae"
       loading="eager"
       src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
       srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -388,19 +388,19 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1okmog4"
+  class="media-container css-9bbu2b"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-145siv3"
+    class="css-1750p8i"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-1gynr2b"
+      class="css-86ijwy"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="css-n2zqlz"
+        class="css-k240ny"
       >
         <strong>
           برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.
@@ -408,21 +408,21 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-1s7djye"
+      class="focusIndicatorRemove css-1gbi9ur"
       type="button"
     >
       <span
-        class="css-2ozlq5"
+        class="css-ghlap1"
       >
         Play video, "Â«Ù‚Ø´Ø²Ù‡Ø° Ø´Ø³Ø³Ø«Ù Ù‡Ø± ÙØ«Ø³Ù", مدت 0,16
       </span>
       <div
         aria-hidden="true"
-        class="css-7qcky8"
+        class="css-mnftr9"
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1kk1qa21"
+          class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -445,19 +445,19 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-digyti"
+        class="css-q9209e"
         datetime="PT16S"
       >
         00:16
       </time>
     </button>
     <div
-      class="css-10dp2sw"
+      class="css-1e970fu"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-ey0vwc"
+        class="css-4gkgae"
         loading="eager"
         src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01kf9s0.jpg.webp"
         srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01kf9s0.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kf9s0.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kf9s0.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kf9s0.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kf9s0.jpg.webp 800w"
@@ -466,14 +466,14 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1vlmip3"
+    class="css-229lv9"
     dir="rtl"
   >
     <span
       role="text"
     >
       <span
-        class="css-2ozlq5"
+        class="css-ghlap1"
       >
         توضیح ویدئو، 
       </span>

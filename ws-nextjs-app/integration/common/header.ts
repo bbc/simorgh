@@ -11,10 +11,11 @@ export default service => {
 
       if (!logo || !parentElement) return;
 
-      expect(logo.textContent).toBeTruthy();
+      const brandingTextElement = document.getElementById('BrandLink-topPage');
+      expect(brandingTextElement?.textContent).toBeTruthy();
 
       const svg = logo.querySelector('g path');
-      const brandText = parentElement.textContent ?? '';
+      const brandText = brandingTextElement?.textContent ?? '';
 
       expect({
         svg,

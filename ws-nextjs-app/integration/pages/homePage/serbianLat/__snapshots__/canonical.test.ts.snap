@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"Pređite na sadržaj"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "81",
+  },
+  {
+    "p": "serbianlat.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:c6zr6pp47w7t]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-serbian]",
+  },
+  {
+    "x4": "[sr-latn]",
+  },
+  {
+    "x7": "[index-home]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[Početna%20stranica]",
+  },
+]
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, na srpskom",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "Zašto BBC zaslužuje vaše poverenje",
+  "url": "https://www.bbc.com/serbian/lat/institutional-50173730",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "Pravila korišćenja",
+  "url": "https://www.bbc.com/terms",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "O BBC-ju",
+  "url": "https://www.bbc.co.uk/aboutthebbc/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "Pravila privatnosti",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "Kolačići",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "Kontaktirajte BBC",
+  "url": "https://www.bbc.co.uk/serbian/send/u50853665",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "BBC News na drugim jezicima",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Pročitajte naša pravila o linkovanju drugih sajtova.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+
+exports[`Canonical Home Page Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, na srpskom",
+  "svg": <path
+    d="M759.928 265.75a4646.67 4646.67 0 00-23.49-37.242 2633.129 2633.129 0 00-23.49-36.2v73.442h-22.002V159.452h23.192a2668.556 2668.556 0 0123.713 36.052 2774.159 2774.159 0 0123.266 36.647v-72.699h22.004V265.75h-23.193zM804.187 159.452h73.146v19.03h-50.25v23.044h44.6v19.029h-44.6v26.166h53.074v19.03h-75.97V159.451zM982.101 265.75a3174.441 3174.441 0 01-9.886-35.978 3159.855 3159.855 0 01-9.44-35.977 2391.54 2391.54 0 01-9.218 35.977 2452.296 2452.296 0 01-9.812 35.978h-24.233a2032.839 2032.839 0 01-14.57-52.628c-4.66-17.74-9.069-35.63-13.231-53.67h24.976a2003.215 2003.215 0 007.88 41.33 1444.404 1444.404 0 008.77 40.586 3259.894 3259.894 0 0018.882-77.456h22.3a3251.95 3251.95 0 0018.732 75.821 1999.976 1999.976 0 008.624-39.843 1455.41 1455.41 0 007.73-40.438h24.53a1845.28 1845.28 0 01-13.23 53.67 2041.61 2041.61 0 01-14.57 52.628H982.1zM1077.471 267.98c-5.849 0-11.621-.645-17.32-1.932a66.227 66.227 0 01-16.427-6.096v-20.516c10.604 6.444 21.854 9.663 33.747 9.663 6.74 0 11.869-1.138 15.388-3.419 3.517-2.28 5.277-5.45 5.277-9.515 0-3.07-.868-5.475-2.601-7.21-1.735-1.733-4.04-3.122-6.913-4.163-2.876-1.04-6.096-2.007-9.663-2.899-5.85-1.387-11.002-2.974-15.462-4.757-4.46-1.784-8.228-3.889-11.3-6.319-3.072-2.427-5.402-5.352-6.987-8.771-1.586-3.42-2.378-7.508-2.378-12.265 0-6.74 1.71-12.537 5.129-17.395 3.42-4.855 8.25-8.597 14.495-11.225 6.244-2.624 13.678-3.939 22.3-3.939 5.65 0 11.2.646 16.651 1.933 5.45 1.289 10.356 3.024 14.719 5.203v20.22c-4.363-2.677-9.292-4.758-14.793-6.245-5.5-1.487-11.027-2.23-16.577-2.23-6.046 0-10.73 1.04-14.049 3.122-3.321 2.081-4.98 5.055-4.98 8.92 0 2.776.792 4.98 2.378 6.616 1.585 1.635 3.84 2.973 6.765 4.014 2.922 1.04 6.367 2.058 10.332 3.047 5.055 1.29 9.761 2.702 14.124 4.238 4.36 1.537 8.2 3.493 11.522 5.872 3.32 2.379 5.895 5.403 7.73 9.069 1.834 3.668 2.75 8.177 2.75 13.529 0 7.038-1.735 13.06-5.202 18.063-3.47 5.006-8.475 8.823-15.016 11.447-6.541 2.626-14.421 3.94-23.639 3.94z"
+  />,
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "Otvorena stranica, Početna strana",
+  "url": "/serbian/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Studentske blokade",
+  "url": "/serbian/topics/cly9dd4w09wt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Srbija",
+  "url": "/serbian/topics/cr50vdy9q6wt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Balkan",
+  "url": "/serbian/topics/c06g87137jgt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Svet",
+  "url": "/serbian/topics/c2lej05e1eqt/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Video",
+  "url": "/serbian/topics/c44vyp5g049t/lat",
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Najpopularnije",
+  "url": "/serbian/lat/popular/read",
+}
+`;
+
+exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Home Page Most Read has item with rank 1`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 26",
+  "url": "/serbian/lat/media-23169623",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 2`] = `
+{
+  "text": "test, please ignore",
+  "url": "/serbian/lat/23200492",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 3`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 6",
+  "url": "/serbian/lat/media-23169493",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 4`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 29",
+  "url": "/serbian/lat/media-23169626",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 5`] = `
+{
+  "text": "Otvorene ZOI 2014",
+  "url": "/serbian/lat/23181035",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 6`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 27",
+  "url": "/serbian/lat/media-23169624",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 7`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 8",
+  "url": "/serbian/lat/media-23169495",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 8`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 7",
+  "url": "/serbian/lat/media-23169494",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 9`] = `
+{
+  "text": "Uhapšeno 56 osoba osumnjičenih za zloupotrebe i korupciju 11",
+  "url": "/serbian/lat/media-23169608",
+}
+`;
+
+exports[`Canonical Home Page Most Read has item with rank 10`] = `
+{
+  "text": "Beba panda odmara nakon prvog javnog nastupa",
+  "url": "/serbian/lat/23180965",
+}
+`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"Međunarodni dan menopauze: Promena kroz koju prolazi svaka žena overtyped2"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="Promena kod svake žene"
+  class="css-zfe4bz"
+  fetchpriority="high"
+  loading="eager"
+  src="https://ichef.bbci.co.uk/ace/ws/240/cpsdevpb/3d07/test/7ea19630-8d4a-11ef-8e34-ef6bbfe11731.jpg.webp"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/serbian/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7081/serbian/lat"`;
+
+exports[`Canonical Home Page SEO Dir attribute 1`] = `"ltr"`;
+
+exports[`Canonical Home Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, na srpskom - Glavna stranica"`;
+
+exports[`Canonical Home Page SEO Lang attribute 1`] = `"sr-latn"`;
+
+exports[`Canonical Home Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "Glavna stranica",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "sr-latn",
+        "name": "Serbian",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/lat",
+        "@type": "WebPage",
+        "name": "Glavna stranica",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+      },
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7081/serbian/lat",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/serbian/articles/c45n4pv61vno/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.bbc.com/serbian/articles/c3x8zzpdy8ko/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/serbian/articles/cdkvrw4gplqo/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/serbian/lat/23181025",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/serbian/resources/idt-40c9a7fc-8e5b-4641-93aa-a4e3c66b0f5a",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.bbc.com/news/health-23553049",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.bbc.com/serbian/articles/c63g1zl3envo/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.bbc.com/serbian/articles/c3yn189pzvgo/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.bbc.com/serbian/lat/media-23169612",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.bbc.com/serbian/articles/cx306dyme0jo/lat",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.youtube.com/watch?v=Ld7_XJtdbL4",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.youtube.com/watch?v=ilkRlzO9KAs",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://youtu.be/NtGPCivX8-E",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://youtu.be/KJCwSDh4KnQ",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.youtube.com/",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://bit.ly/3ZeGrsH",
+        },
+      ],
+      "name": "BBC News na srpskom",
+      "numberOfItems": 17,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Home Page SEO OG description 1`] = `"Srpska početna stranica"`;
+
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG locale 1`] = `"sr-latn"`;
+
+exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7081/serbian/lat"`;
+
+exports[`Canonical Home Page SEO Page title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Home Page SEO Twitter creator 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Home Page SEO Twitter description 1`] = `"Srpska početna stranica"`;
+
+exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
+
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO Twitter site 1`] = `"@bbcnasrpskom"`;
+
+exports[`Canonical Home Page SEO Twitter title 1`] = `"Glavna stranica - BBC News na srpskom"`;
+
+exports[`Canonical Home Page Timestamp should match text and date 1`] = `
+{
+  "date": "2024-10-18",
+  "text": "18 oktobar 2024",
+}
+`;
+
+exports[`Canonical Home Page messageBanner has a link 1`] = `"https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b"`;
+
+exports[`Canonical Home Page messageBanner has an image 1`] = `
+<img
+  alt=""
+  class="css-zfe4bz"
+  loading="eager"
+  sizes="(max-width: 37.4375rem) 184px, 224px"
+  src="https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp"
+  srcset="https://ichef.test.bbci.co.uk/ace/ws/184/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp 184w, 
+                          https://ichef.test.bbci.co.uk/ace/ws/368/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp 368w, 
+                          https://ichef.test.bbci.co.uk/ace/ws/224/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp 224w, 
+                          https://ichef.test.bbci.co.uk/ace/ws/448/cpsdevpb/0409/test/6d7272a0-abfc-11ef-b4f6-4568dfb1f4fc.png.webp 448w"
+  style="aspect-ratio:16 / 9"
+/>
+`;
