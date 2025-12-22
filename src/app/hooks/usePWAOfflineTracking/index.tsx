@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import useIsPWA from '../useIsPWA';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
@@ -14,20 +14,13 @@ const OFFLINE_PAGE_VIEW_EVENT_NAME = 'pwa-offline-page-view';
 const usePWAOfflineTracking = () => {
   const isPWA = useIsPWA();
   const { isOnline, networkType } = useNetworkStatusTracker();
-  const prevIsOnlineRef = useRef(isOnline);
 
   const trackOfflinePageViewEvent = useCustomEventTracker({
     eventName: OFFLINE_PAGE_VIEW_EVENT_NAME,
   });
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !isPWA) {
-      prevIsOnlineRef.current = isOnline;
-      return;
-    }
-
-    if (!isOnline) {
-      prevIsOnlineRef.current = isOnline;
+    if (typeof window === 'undefined' || !isPWA || !isOnline) {
       return;
     }
 
@@ -44,8 +37,6 @@ const usePWAOfflineTracking = () => {
       // eslint-disable-next-line no-console
       console.error('usePWAOfflineTracking', error);
     }
-
-    prevIsOnlineRef.current = isOnline;
   }, [isPWA, isOnline, networkType, trackOfflinePageViewEvent]);
 };
 
