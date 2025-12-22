@@ -5,6 +5,13 @@ import { jsx } from '@emotion/react';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+
+const {
+  SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+} = getEnvConfig();
+
 /* eslint-disable react/no-unknown-property */
 
 // === PARTICLE SYSTEM CONFIGURATION ===
@@ -27,8 +34,9 @@ const FADE_IN_HEIGHT_RATIO = 0.2; // Fade in at 20% of max height
 const FADE_OUT_HEIGHT_RATIO = 0.6; // Fade out at 60% of max height
 const BASE_OPACITY = 0.8;
 
-// Fallback texture
-const FALLBACK_TEXTURE_PATH = '/public3d/point-target.png';
+// textures
+const publicDirPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}`;
+const FALLBACK_TEXTURE_PATH = 'public3d/point-target.png';
 
 const randomInRange = (min, max) => min + Math.random() * (max - min);
 const randomPosition = (
@@ -160,8 +168,8 @@ const BillboardParticleSystem = ({
   );
   const { camera } = useThree();
   const { texture, aspect } = useFallbackTextureWithAspect(
-    texturePath,
-    FALLBACK_TEXTURE_PATH,
+    `${publicDirPath}${texturePath}`,
+    `${publicDirPath}${FALLBACK_TEXTURE_PATH}`,
   );
 
   const [emberStates, setEmberStates] = useState(embers);
