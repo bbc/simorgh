@@ -6,6 +6,7 @@ import {
 import { RadioScheduleData } from '#app/models/types/radioSchedule';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { MostReadData } from '../../components/MostRead/types';
+import { TopicTag } from './metadata';
 
 // This maps to the Summary type definition from the BFF
 interface BaseSummary {
@@ -33,6 +34,7 @@ export interface Summary extends BaseSummary {
   timeOfDayExperimentName?: string | null;
   timeOfDayVariant?: string | null;
   isPortraitImage?: boolean;
+  primaryTopic?: TopicTag;
 }
 
 export const VISUAL_STYLE = {

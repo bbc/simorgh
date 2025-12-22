@@ -4,6 +4,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import homePageFixture from '#data/ws/homePage/index.json';
 import { Services } from '#app/models/types/global';
+import getTopicPageUrl from '#app/utilities/getTopicPageUrl';
 import HighImpactPromo, { HighImpactPromoProps } from '.';
 
 const { summaries } = homePageFixture.data.curations[0];
@@ -92,6 +93,53 @@ describe('High Impact Promo', () => {
     };
     render(<Fixture attribution={customAttribution} />, { service: 'mundo' });
 
+    const attributionLink = screen.getByRole('link', {
+      name: 'BBC News Pidgin',
+    });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute('href', '/pidgin');
+  });
+
+  it('should render topic-based attribution if topics are present', () => {
+    const topics = [
+      {
+        topicId: 'c404v061z85t',
+        topicName: 'Africa',
+        subjectList: [],
+        curationList: [],
+        types: [],
+        home: '',
+        topicUrl: '',
+      },
+      {
+        topicId: 'c2dwqd1zr92t',
+        topicName: 'Nigeria',
+        subjectList: [],
+        curationList: [],
+        types: [],
+        home: '',
+        topicUrl: '',
+      },
+    ];
+    const promoWithTopics = { ...promoFixtureData, topics };
+    render(<Fixture promoData={promoWithTopics} />, {
+      service: 'pidgin',
+      pageType: 'home',
+      // @ts-expect-error: translations is not in the official type but is supported by the test utils
+      translations: { topicsPath: 'topics' },
+    });
+
+    const attributionLink = screen.getByRole('link', { name: 'Africa' });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute(
+      'href',
+      getTopicPageUrl('c404v061z85t', 'pidgin'),
+    );
+  });
+
+  it('should fall back to service attribution if topics is empty', () => {
+    const promoWithNoTopics = { ...promoFixtureData, topics: [] };
+    render(<Fixture promoData={promoWithNoTopics} />, { service: 'pidgin' });
     const attributionLink = screen.getByRole('link', {
       name: 'BBC News Pidgin',
     });
