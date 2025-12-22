@@ -2,16 +2,16 @@
 
 exports[`Canonical Articles Embed Images should match snapshot 1`] = `
 <div
-  class="css-1bohpy3"
+  class="css-1oz17mt"
   data-e2e="embed-image"
 >
   <div
-    class="css-1u4txf4"
+    class="css-1avk5os"
     style="padding-bottom:76.72%;overflow:hidden"
   >
     <img
       alt="CPS vs Optimo usage. .  ."
-      class="css-zfe4bz"
+      class="css-1seqhu9"
       height="1252"
       loading="eager"
       src="https://ichef.bbci.co.uk/news/1632/idt2-test/idt2/793f648b-b17f-489a-a473-9e5a71f12684/image/816"

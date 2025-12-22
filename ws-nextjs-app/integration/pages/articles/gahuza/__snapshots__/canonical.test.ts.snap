@@ -193,7 +193,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'i
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
-  class="css-zfe4bz"
+  class="css-1seqhu9"
   height="864"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
