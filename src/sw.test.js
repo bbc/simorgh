@@ -318,7 +318,7 @@ describe('Service Worker', () => {
       )[1];
     });
 
-    it('caches offline page and marker when PWA is installed', async () => {
+    it('caches offline page  when PWA is installed', async () => {
       fetchMock.mockResolvedValueOnce(
         new Response('<html></html>', { status: 200 }),
       );
@@ -334,10 +334,9 @@ describe('Service Worker', () => {
       await messageHandler(event);
 
       expect(cachePut).toHaveBeenCalledWith(
-        'pwa_installed',
+        expect.stringContaining('/offline'),
         expect.any(Response),
       );
-
       expect(fetchMock).toHaveBeenCalledWith('https://bbc.com/mundo/offline');
     });
 
@@ -360,71 +359,78 @@ describe('Service Worker', () => {
   });
 
   describe('offline navigation fallback', () => {
-    beforeEach(() => {
-      // Mock clients
-      self.clients = {
-        get: jest.fn(clientId =>
-          Promise.resolve(clientId ? { id: clientId } : null),
-        ),
+    let messageHandler;
+
+    beforeEach(async () => {
+      jest.resetModules();
+      fetchMock.resetMocks();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+        clients: {
+          get: jest.fn(() =>
+            Promise.resolve({
+              id: 'client-1',
+              url: 'https://bbc.com/mundo',
+            }),
+          ),
+        },
       };
 
-      // Mock PWA clients map
-      global.pwaClients = new Map([['client-1', true]]);
-
-      // Mock caches
+      // Mock cache with offline page
       const offlineResponse = new Response('offline page');
       const mockCache = {
-        match: jest.fn(key => {
-          if (key === 'pwa_installed')
-            return Promise.resolve(new Response('true'));
-          return Promise.resolve(offlineResponse);
-        }),
+        match: jest.fn(url =>
+          url.includes('/mundo/offline')
+            ? Promise.resolve(offlineResponse)
+            : Promise.resolve(null),
+        ),
         put: jest.fn(),
         delete: jest.fn(),
       };
-
       global.caches = {
         open: jest.fn(() => Promise.resolve(mockCache)),
       };
-    });
-
-    it('returns cached offline page when navigation fails and PWA is installed', async () => {
-      const offlineResponse = new Response('offline page');
-
-      global.caches = {
-        open: jest.fn(() =>
-          Promise.resolve({
-            match: jest.fn(key => {
-              if (key === 'pwa_installed') {
-                return Promise.resolve(new Response('true'));
-              }
-              return Promise.resolve(offlineResponse);
-            }),
-          }),
-        ),
-      };
-
-      fetchMock.mockRejectedValueOnce(new Error('Network error'));
 
       ({ fetchEventHandler } = await import('./service-worker-test'));
 
-      const request = new Request('https://bbc.com/mundo');
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
 
-      Object.defineProperty(request, 'mode', {
-        value: 'navigate',
+    it('returns cached offline page when navigation fails and PWA is installed', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
       });
+
+      // Network failure
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
 
       const event = {
         request,
         clientId: 'client-1',
-        respondWith: jest.fn(),
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
       };
 
       await fetchEventHandler(event);
 
       expect(event.respondWith).toHaveBeenCalled();
-
-      const response = await event.respondWith.mock.calls[0][0];
+      const response = await respondWithPromise;
       expect(await response.text()).toBe('offline page');
     });
   });
@@ -432,7 +438,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.1',
-      fileContentHash: '7db7ca49c9a31944261dd2ec9862ddad',
+      fileContentHash: '53ed26916a6ca43ba3d1ff7ac4ab0115',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {
