@@ -44,12 +44,11 @@ const cacheOfflinePageAndResources = async service => {
   console.log(`[SW v${version}] Cached offline page for ${service}`);
 
   const html = await resp.text();
-  const doc = new DOMParser().parseFromString(html, 'text/html');
-  const scriptSrcs = Array.from(doc.querySelectorAll('script[src]')).map(el =>
-    el.getAttribute('src'),
-  );
-  const linkHrefs = Array.from(doc.querySelectorAll('link[href]')).map(el =>
-    el.getAttribute('href'),
+  const scriptSrcs = [
+    ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
+  ].map(m => m[1]);
+  const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
+    m => m[1],
   );
 
   const resources = [...scriptSrcs, ...linkHrefs]
@@ -80,7 +79,7 @@ const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // -------------Install event -------
-self.addEventListener('install', () => {
+self.addEventListener('install', event => {
   console.log(`[SW v${version}] Installing...`);
   self.skipWaiting();
 });
@@ -106,16 +105,11 @@ self.addEventListener('message', async event => {
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const { isPWA } = event.data;
-    pwaClients.set(clientId, isPWA);
 
     if (isPWA) {
-      const cache = await caches.open(cacheName);
-      await cache.put('pwa_installed', new Response('true'));
+      pwaClients.set(clientId, true);
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
-    } else {
-      const cache = await caches.open(cacheName);
-      await cache.delete('pwa_installed');
     }
   }
 });
@@ -160,12 +154,40 @@ const fetchEventHandler = async event => {
         return response;
       })(),
     );
+  } else if (event.request.url.includes('/_next/static/')) {
+    // Network-first for Next.js chunks (dev mode compatibility)
+    event.respondWith(
+      (async () => {
+        try {
+          const networkResp = await fetch(event.request);
+          const cache = await caches.open(cacheName);
+          cache.put(event.request, networkResp.clone());
+          return networkResp;
+        } catch (err) {
+          const cache = await caches.open(cacheName);
+          const cachedResp = await cache.match(event.request);
+          if (cachedResp) return cachedResp;
+          throw err;
+        }
+      })(),
+    );
   } else if (event.request.mode === 'navigate') {
     const { url } = event.request;
-    console.log(`[SW FETCH] Navigation: ${url}`);
 
     event.respondWith(
       (async () => {
+        const client = await self.clients.get(event.clientId);
+        const isPWA = client && pwaClients.get(client.id);
+        const cache = await caches.open(cacheName);
+
+        console.log('[SW FETCH] Navigation', {
+          url: event.request.url,
+          clientId: event.clientId,
+          isPWA,
+          client,
+          event,
+          pwaClients,
+        });
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
@@ -176,8 +198,6 @@ const fetchEventHandler = async event => {
           // Cache offline page if in PWA mode
           if (networkResp && networkResp.ok && event.clientId) {
             console.log('[SW] Caching offline page if PWA if network is ok');
-            const client = await self.clients.get(event.clientId);
-            const isPWA = client && pwaClients.get(client.id);
             if (isPWA) {
               const service = getServiceFromUrl(url);
               cacheOfflinePageAndResources(service).catch(err =>
@@ -190,12 +210,8 @@ const fetchEventHandler = async event => {
         } catch (err) {
           console.log('[SW] Navigation failed:', url, err);
 
-          const cache = await caches.open(cacheName);
-          const pwaMarker = await cache.match('pwa_installed');
-          console.log('[SW] PWA Marker:', pwaMarker);
-
           // Only show offline page for installed PWA
-          if (pwaMarker) {
+          if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
               getOfflinePageUrl(service),
@@ -204,11 +220,11 @@ const fetchEventHandler = async event => {
 
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
+              console.log('[SW] Serving cached offline page');
               return cachedOffline;
             }
           }
-
-          // Fallback to default browser behavior
+          // fallback to browser default behavior
           throw err;
         }
       })(),
