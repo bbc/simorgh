@@ -237,7 +237,7 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
@@ -262,6 +262,9 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 
 runTestsForPage({
   pageType: HOME_PAGE,
+  headers: {
+    'BBC-Adverts': 'true',
+  },
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
 });
 
@@ -274,6 +277,6 @@ runTestsForPage({
 
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites: atiAnalyticsliteTestSuites,
+  testSuites: atiAnalyticsLiteTestSuites,
   beforeAll: [setUserIDCookie],
 });
