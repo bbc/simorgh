@@ -61,8 +61,8 @@ export const service: DefaultServiceConfig = {
         href: 'https://www.whatsapp.com/channel/0029VbBgIP4D8SE3ZSu7YG0e',
       },
       skipLink: {
-      text: 'Жарыяны өткөрүп, макаланы окууну улантыңыз',
-      endTextVisuallyHidden: 'Жарыянын аягы',
+        text: 'Жарыяны өткөрүп, макаланы окууну улантыңыз',
+        endTextVisuallyHidden: 'Жарыянын аягы',
       },
     },
     translations: {
