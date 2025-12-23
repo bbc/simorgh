@@ -82,9 +82,12 @@ function Promo({ block, eventTrackingData }: PromoProps) {
   const { serviceDatetimeLocale } = use(ServiceContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
-  const textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
+  const textBlock = filterForBlockType(
+    (block?.model as { blocks?: Record<string, unknown> })?.blocks || {},
+    'text',
+  );
   const aresLinkBlock = filterForBlockType(
-    block?.model?.blocks || {},
+    (block?.model as { blocks?: Record<string, unknown> })?.blocks || {},
     'aresLink',
   );
   const timestamp =
