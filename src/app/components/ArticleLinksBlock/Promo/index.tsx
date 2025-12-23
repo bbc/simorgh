@@ -87,20 +87,13 @@ function Promo({ block, eventTrackingData }: PromoProps) {
     block?.model?.blocks || {},
     'aresLink',
   );
-  const timestamp = path(
-    ['model', 'blocks', '0', 'model', 'timestamp'],
-    aresLinkBlock,
-  ) as number | undefined;
+  const timestamp =
+    aresLinkBlock?.model?.blocks?.[0]?.model?.timestamp ?? undefined;
+
   const href =
-    (path(
-      ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
-      textBlock,
-    ) as string) || '';
+    textBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.locator ?? '';
   const title =
-    (path(
-      ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
-      textBlock,
-    ) as string) || '';
+    textBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
 
   const isOperaMini = useOperaMiniDetection();
 
