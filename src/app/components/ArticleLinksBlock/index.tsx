@@ -1,7 +1,5 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import {

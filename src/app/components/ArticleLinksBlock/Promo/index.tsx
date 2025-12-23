@@ -1,6 +1,5 @@
 import { use } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
 import { Link } from '#psammead/psammead-story-promo/src';
 import {
   GEL_SPACING,
