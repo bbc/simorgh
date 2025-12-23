@@ -16,11 +16,14 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
+import { OptimoBlock } from '#app/models/types/optimo';
+import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 interface PromoProps {
-  block: Record<string, unknown>;
-  clickTracker?: Record<string, unknown>;
+  block: OptimoBlock;
+  eventTrackingData?: EventTrackingMetadata;
 }
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -75,8 +78,9 @@ const TimeStamp = styled(PromoTimestamp)(({ theme }) => ({
   color: theme.isDarkUi ? theme.palette.GREY_6 : undefined,
 }));
 
-function Promo({ block, clickTracker }: PromoProps) {
-  const { script, service, serviceDatetimeLocale } = use(ServiceContext);
+function Promo({ block, eventTrackingData }: PromoProps) {
+  const { serviceDatetimeLocale } = use(ServiceContext);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
   const aresLinkBlock = filterForBlockType(
@@ -104,12 +108,7 @@ function Promo({ block, clickTracker }: PromoProps) {
 
   return (
     <WrapperPromoBox>
-      <StyledLink
-        href={href}
-        service={service}
-        script={script}
-        {...clickTracker}
-      >
+      <StyledLink href={href} {...clickTrackerHandler}>
         {title}
       </StyledLink>
       {timestamp && (
