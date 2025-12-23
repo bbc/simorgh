@@ -110,7 +110,7 @@ export default ({
     // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
     ...(playDurationVariation && {
       sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_play_and_duration_size_increase',
+      experimentName: 'newswb_ws_play_and_duration_size_increase_2',
       experimentVariant: playDurationVariation,
     }),
     viewThreshold: 1,
