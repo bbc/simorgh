@@ -107,12 +107,12 @@ function ArticleLinksBlock({
       )}
       {isSingleItem ? (
         <PromoWrapper dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
+          <Promo block={blocksWithoutTitle[0]} {...clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          viewTracker={viewTracker}
+          {...viewTracker}
           clickTracker={clickTracker}
           a11yAttributes={a11yAttributes}
         />
