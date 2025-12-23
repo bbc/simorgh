@@ -10,8 +10,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { OptimoBlock } from '#app/models/types/optimo';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from '../Promo';
 
@@ -81,13 +79,7 @@ const OperaStyledList = styled.li`
       margin-${dir === 'ltr' ? `left` : `right`}: 0;}`}
 `;
 
-interface PromoListProps {
-  blocks: OptimoBlock[];
-  id?: string;
-  eventTrackingData?: EventTrackingMetadata;
-}
-
-const PromoList = ({ blocks, eventTrackingData }: PromoListProps) => {
+const PromoList = ({ blocks, viewTracker, clickTracker, a11yAttributes }) => {
   const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
@@ -96,7 +88,13 @@ const PromoList = ({ blocks, eventTrackingData }: PromoListProps) => {
   const List = isOperaMini ? OperaStyledList : StyledList;
 
   return (
-    <ScrollPromo dir={dir} role="list" isOperaMini={isOperaMini}>
+    <ScrollPromo
+      dir={dir}
+      role="list"
+      isOperaMini={isOperaMini}
+      {...viewTracker}
+      {...a11yAttributes}
+    >
       {listBlocks.map((block, index) => {
         return (
           <List
@@ -104,7 +102,7 @@ const PromoList = ({ blocks, eventTrackingData }: PromoListProps) => {
             key={index}
             dir={dir}
           >
-            <Promo block={block} eventTrackingData={eventTrackingData} />
+            <Promo block={block} clickTracker={clickTracker} />
           </List>
         );
       })}

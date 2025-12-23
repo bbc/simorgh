@@ -64,7 +64,7 @@ function ArticleLinksBlock({
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -107,12 +107,14 @@ function ArticleLinksBlock({
       )}
       {isSingleItem ? (
         <PromoWrapper dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} {...clickTrackerHandler} />
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </PromoWrapper>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          eventTrackingData={eventTrackingData}
+          viewTracker={viewTracker}
+          clickTracker={clickTracker}
+          a11yAttributes={a11yAttributes}
         />
       )}
     </GridItemMediumNoMargin>
