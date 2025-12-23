@@ -1,16 +1,6 @@
 import { use } from 'react';
-import styled from '@emotion/styled';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '#psammead/gel-foundations/src/spacings';
-import {
-  GEL_GROUP_0_SCREEN_WIDTH_MIN,
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '#psammead/gel-foundations/src/breakpoints';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -19,38 +9,12 @@ import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
+import styles from './index.styles';
 
 interface ArticleLinksBlockProps {
   blocks: OptimoBlock[];
   blockGroupIndex?: number | null;
 }
-
-const PromoWrapper = styled.div<{ dir: string }>(({ dir }) => ({
-  [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: GEL_SPACING,
-  [`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN})`]: {
-    [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: GEL_SPACING_DBL,
-  },
-  [`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`]: {
-    [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: 0,
-  },
-}));
-
-const LabelComponent = styled.strong<{ dir: string }>(({ theme, dir }) => ({
-  display: 'block',
-  ...theme.fontSizes.doublePica,
-  ...theme.fontVariants.sansRegular,
-  marginBottom: GEL_SPACING_DBL,
-  color: theme.isDarkUi ? theme.palette.GREY_2 : theme.palette.SHADOW,
-  [`@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN})`]: {
-    [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: GEL_SPACING,
-  },
-  [`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN})`]: {
-    [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: GEL_SPACING_DBL,
-  },
-  [`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`]: {
-    [`margin${dir === 'ltr' ? 'Left' : 'Right'}`]: 0,
-  },
-}));
 
 function ArticleLinksBlock({
   blocks,
@@ -97,18 +61,19 @@ function ArticleLinksBlock({
   return (
     <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
       {typeof title === 'string' && title.length > 0 && (
-        <LabelComponent
+        <strong
+          css={styles.labelComponent}
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
           dir={dir}
         >
           {title}
-        </LabelComponent>
+        </strong>
       )}
       {isSingleItem ? (
-        <PromoWrapper dir={dir} {...viewTracker}>
+        <div css={styles.promoContainer} dir={dir} {...viewTracker}>
           <Promo block={blocksWithoutTitle[0]} {...clickTracker} />
-        </PromoWrapper>
+        </div>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
