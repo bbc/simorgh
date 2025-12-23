@@ -74,20 +74,9 @@ function ArticleLinksBlock({
 
   const title =
     blocks[0]?.type === 'title'
-      ? path(
-          [
-            '0',
-            'model',
-            'blocks',
-            '0',
-            'model',
-            'blocks',
-            '0',
-            'model',
-            'text',
-          ],
-          blocks,
-        )
+      ? // @ts-expect-error - deeply nested
+        (blocks[0]?.model?.blocks?.[0].model?.blocks?.[0]?.model?.text ??
+        undefined)
       : undefined;
 
   const blocksWithoutTitle =
@@ -103,11 +92,7 @@ function ArticleLinksBlock({
     ...(ariaLabel
       ? { 'aria-labelledby': ariaLabel }
       : {
-          'aria-label': pathOr(
-            'Related Content',
-            ['relatedContent'],
-            translations,
-          ),
+          'aria-label': translations?.relatedContent ?? 'Related Content',
         }),
   };
 
