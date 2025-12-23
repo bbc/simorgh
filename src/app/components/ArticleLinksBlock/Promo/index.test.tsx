@@ -5,7 +5,7 @@ import { ServiceContextProvider } from '../../../contexts/ServiceContext';
 
 const ArticleLinksBlock = ({ block }) => (
   <ServiceContextProvider service="pidgin">
-    <Promo block={block} onClick={() => {}} />
+    <Promo block={block} />
   </ServiceContextProvider>
 );
 
@@ -32,7 +32,8 @@ describe('Article Links Block', () => {
     const { queryByRole } = render(
       <ArticleLinksBlock block={PromoSingleBlock} />,
     );
-    expect(queryByRole('link').href).toEqual('https://www.bbc.com/mundo');
+    const link = queryByRole('link') as HTMLAnchorElement;
+    expect(link?.href).toEqual('https://www.bbc.com/mundo');
   });
 
   it('should render timestamp if timestamp is available', () => {
