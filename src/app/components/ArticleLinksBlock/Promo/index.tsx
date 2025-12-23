@@ -18,66 +18,64 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-const StyledLink = styled(Link)`
-  ${({ theme: { fontSizes } }) => fontSizes.pica};
-  ${({ theme: { fontVariants } }) => fontVariants.serifBold};
-  width: 100%;
-  text-decoration: none;
+interface PromoProps {
+  block: Record<string, unknown>;
+  clickTracker?: Record<string, unknown>;
+}
 
-  overflow-x: hidden;
-  overflow-y: hidden;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
+const StyledLink = styled(Link)(({ theme }) => ({
+  ...theme.fontSizes.pica,
+  ...theme.fontVariants.serifBold,
+  width: '100%',
+  textDecoration: 'none',
+  overflowX: 'hidden',
+  overflowY: 'hidden',
+  WebkitLineClamp: 4,
+  WebkitBoxOrient: 'vertical',
+  display: '-webkit-box',
+  color: theme.isDarkUi ? theme.palette.GREY_10 : theme.palette.GREY_8,
+  '&:hover, &:focus': {
+    textDecoration: 'underline',
+  },
+  '&:visited': {
+    color: theme.palette.GREY_6,
+  },
+}));
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+const PromoBox = styled.div(({ theme }) => ({
+  position: 'relative',
+  backgroundColor: theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE,
+  padding: GEL_SPACING_DBL,
+  marginBottom: GEL_SPACING_TRPL,
+  height: 'auto',
+  [`@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN})`]: {
+    width: '14.8125rem',
+  },
+  [`@media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN})`]: {
+    width: '11.125rem',
+  },
+  [`@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN})`]: {
+    width: '12.6875rem',
+  },
+}));
 
-  color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_10 : theme.palette.GREY_8};
-  &:visited {
-    color: ${props => props.theme.palette.GREY_6};
-  }
-`;
+const OperaPromoBox = styled.div(({ theme }) => ({
+  position: 'relative',
+  backgroundColor: theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE,
+  padding: GEL_SPACING_DBL,
+  marginBottom: GEL_SPACING_DBL,
+  width: `calc(100% - ${GEL_SPACING})`,
+  [`@media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN})`]: {
+    width: `calc(100% - ${GEL_SPACING_DBL})`,
+  },
+}));
 
-const PromoBox = styled.div`
-  position: relative;
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
-  padding: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING_TRPL};
-  height: auto;
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    width: 14.8125rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 11.125rem;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 12.6875rem;
-  }
-`;
+const TimeStamp = styled(PromoTimestamp)(({ theme }) => ({
+  marginTop: GEL_SPACING,
+  color: theme.isDarkUi ? theme.palette.GREY_6 : undefined,
+}));
 
-const OperaPromoBox = styled.div`
-  position: relative;
-  background-color: ${({ theme }) =>
-    theme.isDarkUi ? theme.palette.GREY_3 : theme.palette.WHITE};
-  padding: ${GEL_SPACING_DBL};
-  margin-bottom: ${GEL_SPACING_DBL};
-  width: calc(100% - ${GEL_SPACING});
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: calc(100% - ${GEL_SPACING_DBL});
-  }
-`;
-
-const TimeStamp = styled(PromoTimestamp)`
-  margin-top: ${GEL_SPACING};
-  color: ${({ theme }) => theme.isDarkUi && theme.palette.GREY_6};
-`;
-
-const Promo = ({ block, clickTracker }) => {
+function Promo({ block, clickTracker }: PromoProps) {
   const { script, service, serviceDatetimeLocale } = use(ServiceContext);
 
   const textBlock = filterForBlockType(block?.model?.blocks || {}, 'text');
@@ -88,17 +86,17 @@ const Promo = ({ block, clickTracker }) => {
   const timestamp = path(
     ['model', 'blocks', '0', 'model', 'timestamp'],
     aresLinkBlock,
-  );
+  ) as number | undefined;
   const href =
-    path(
+    (path(
       ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
       textBlock,
-    ) || '';
+    ) as string) || '';
   const title =
-    path(
+    (path(
       ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
       textBlock,
-    ) || '';
+    ) as string) || '';
 
   const isOperaMini = useOperaMiniDetection();
 
@@ -121,6 +119,6 @@ const Promo = ({ block, clickTracker }) => {
       )}
     </WrapperPromoBox>
   );
-};
+}
 
 export default Promo;

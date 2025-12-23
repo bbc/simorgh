@@ -310,10 +310,11 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     >
       Show all links (no images)
     </strong>
-    <ul
+    <section
+      aria-labelledby="Show-all-links-no-images"
       class="emotion-4 emotion-5"
       dir="ltr"
-      role="list"
+      role="region"
     >
       <li
         class="emotion-6 emotion-7"
@@ -360,7 +361,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
           </a>
         </div>
       </li>
-    </ul>
+    </section>
   </section>
 </div>
 `;
