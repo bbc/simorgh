@@ -11,7 +11,15 @@ export default service => {
 
       if (!logo || !parentElement) return;
 
-      const brandingTextElement = document.getElementById('BrandLink-topPage');
+      const brandingLink =
+        document.getElementById('topPage') ||
+        document.getElementById('brandLink');
+
+      const brandingLabelId = brandingLink?.getAttribute('aria-labelledby');
+      const brandingTextElement = brandingLabelId
+        ? document.getElementById(brandingLabelId)
+        : null;
+
       expect(brandingTextElement?.textContent).toBeTruthy();
 
       const svg = logo.querySelector('g path');
