@@ -104,16 +104,6 @@ afterEach(() => {
   observers.clear();
 });
 
-const urlToObject = (url: string) => {
-  const { origin, pathname, searchParams } = new URL(url);
-
-  return {
-    origin,
-    pathname,
-    searchParams: Object.fromEntries(searchParams),
-  };
-};
-
 const defaultToggles = {
   eventTracking: {
     enabled: true,
