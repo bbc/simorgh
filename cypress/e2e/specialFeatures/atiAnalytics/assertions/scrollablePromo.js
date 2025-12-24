@@ -1,7 +1,7 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
 
-const { SCROLLABLE_PROMO } = COMPONENTS;
+const { ARTICLE_LINKS_BLOCK } = COMPONENTS;
 
 export const assertScrollablePromoComponentView = ({
   pageIdentifier,
@@ -15,12 +15,12 @@ export const assertScrollablePromoComponentView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
       duration: 1000,
     });
 
     assertATIComponentViewEvent({
-      component: SCROLLABLE_PROMO,
+      component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
       contentType,
       useReverb,
@@ -42,15 +42,15 @@ export const assertScrollablePromoComponentClick = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
       duration: 1000,
     });
 
     // Click on first item
-    cy.get('[data-e2e="scrollable-promos"]').find('a').first().click();
+    cy.get('[data-e2e="article-links-block"]').find('a').first().click();
 
     assertATIComponentClickEvent({
-      component: SCROLLABLE_PROMO,
+      component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
       contentType,
       useReverb,

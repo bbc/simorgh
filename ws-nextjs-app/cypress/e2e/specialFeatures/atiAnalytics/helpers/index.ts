@@ -29,7 +29,7 @@ const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
 const RECOMMENDATIONS = 'midarticle-mostread';
-const SCROLLABLE_PROMO = 'edoj';
+const ARTICLE_LINKS_BLOCK = 'edoj';
 const BILLBOARD = 'billboard';
 const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
@@ -57,7 +57,7 @@ export const COMPONENTS = {
   RELATED_CONTENT,
   RELATED_TOPICS,
   SCROLLABLE_NAVIGATION,
-  SCROLLABLE_PROMO,
+  ARTICLE_LINKS_BLOCK,
   SHARE,
   SOCIAL_EMBED,
   TOP_STORIES,
