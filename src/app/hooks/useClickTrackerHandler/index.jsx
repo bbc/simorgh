@@ -14,7 +14,7 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
-const useClickTrackerHandler = (eventTrackingData = {}) => {
+const useClickTrackerHandler = (eventTrackingData = {}, spaLink = false) => {
   const {
     pageIdentifier,
     producerId,
@@ -67,8 +67,10 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
           statsDestination,
         ].every(Boolean);
         if (shouldSendEvent) {
-          event.stopPropagation();
-          event.preventDefault();
+          if (!spaLink) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
 
           if (
             optimizely &&
@@ -114,7 +116,9 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               if (optimizely) {
                 optimizely.close();
               }
-              window.location.assign(nextPageUrl);
+              if (!spaLink) {
+                window.location.assign(nextPageUrl);
+              }
             }
           }
         }
@@ -131,6 +135,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       producerName,
       service,
       statsDestination,
+      spaLink,
       optimizely,
       experimentVariant,
       sendOptimizelyEvents,
@@ -147,11 +152,11 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   );
 };
 
-export default (eventTrackingData = {}) => {
+export default (eventTrackingData = {}, spaLink = false) => {
   const { isAmp } = use(RequestContext);
   const isHydrated = useHydrationDetection();
 
-  const clickTracker = useClickTrackerHandler(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData, spaLink);
 
   const enableStaticTracking = !isHydrated && !isAmp;
   const reverbStaticUrl = constructReverbUrl({
