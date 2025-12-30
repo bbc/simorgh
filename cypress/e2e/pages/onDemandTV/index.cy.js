@@ -211,7 +211,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -222,7 +221,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [assertPageView],
   },
 ];
@@ -252,7 +250,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
