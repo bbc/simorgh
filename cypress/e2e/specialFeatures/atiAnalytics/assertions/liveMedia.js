@@ -6,7 +6,6 @@ const { LIVE_MEDIA } = COMPONENTS;
 export const assertLiveMediaComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,6 @@ export const assertLiveMediaComponentView = ({
       component: LIVE_MEDIA,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,7 +31,6 @@ export const assertLiveMediaComponentView = ({
 export const assertLiveMediaComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -52,7 +49,6 @@ export const assertLiveMediaComponentClick = ({
       component: LIVE_MEDIA,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
