@@ -2,7 +2,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  standardScrollPromo: ({ mq, spacings }: Theme) =>
+  standardScrollPromo: () =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
@@ -17,14 +17,6 @@ export default {
       msOverflowStyle: 'none',
       '&::-webkit-scrollbar': {
         display: 'none',
-      },
-      '& > li + li': {
-        marginInlineStart: `${spacings.FULL}rem`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        '& > li:not(:first-of-type)': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
       },
     }),
   operaScrollPromo: () =>
