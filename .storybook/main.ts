@@ -1,15 +1,16 @@
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import dotenv from 'dotenv';
-import { getClientEnvVars } from '../src/clientEnvVars';
-
-import type { StorybookConfig } from '@storybook/react-webpack5';
 import webpack from 'webpack';
 import {
   getProjectRoot,
   resolvePathInStorybookCache,
 } from 'storybook/internal/common';
+import type { StorybookConfig } from '@storybook/react-webpack5';
+
 import alias from '../dirAlias';
+
+import { getClientEnvVars } from '../src/clientEnvVars';
 import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 
 const require = createRequire(import.meta.url);
