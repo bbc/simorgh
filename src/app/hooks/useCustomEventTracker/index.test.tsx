@@ -60,7 +60,6 @@ beforeEach(() => {
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
       service: 'pidgin',
-      useReverb: true,
     }),
   );
 });
@@ -114,7 +113,6 @@ describe('useCustomEventTracker', () => {
       producerName: 'PIDGIN',
       service: 'pidgin',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      useReverb: true,
     });
   });
 
