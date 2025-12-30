@@ -21,25 +21,16 @@ export default {
         color: palette.GREY_6,
       },
     }),
-  promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
+  promoBox: ({ isDarkUi, palette, spacings }: Theme) =>
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
       paddingInlineEnd: `${pixelsToRem(38)}rem`,
-      marginBottom: `${spacings.FULL}rem`,
+      gap: `${spacings.FULL}rem`,
       height: 'auto',
       display: 'block',
       width: '100%',
-      //   [mq.GROUP_0_MAX_WIDTH]: {
-      //     width: `14.8125rem`,
-      //   },
-      //   [mq.GROUP_3_MIN_WIDTH]: {
-      //     width: `11.125rem`,
-      //   },
-      //   [mq.GROUP_4_MIN_WIDTH]: {
-      //     width: '100%',
-      //   },
     }),
   operaPromoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({

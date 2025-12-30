@@ -20,9 +20,7 @@ const PromoList = ({
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
-  const scrollablePromoStyles = isOperaMini
-    ? styles.operaScrollPromo
-    : styles.standardScrollPromo;
+  const promoStyles = isOperaMini ? styles.operaPromo : styles.standardPromo;
 
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
@@ -34,7 +32,7 @@ const PromoList = ({
     //   // {...viewTracker}
     //   // {...a11yAttributes}
     // >
-    <ul css={scrollablePromoStyles} role="list">
+    <ul css={promoStyles} role="list">
       {listBlocks.map((block, index) => {
         return (
           <li

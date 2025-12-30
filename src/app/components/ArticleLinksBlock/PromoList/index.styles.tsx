@@ -2,24 +2,16 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  standardScrollPromo: () =>
+  standardPromo: ({ spacings }: Theme) =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
       margin: '0',
       display: 'flex',
       flexDirection: 'column',
-      overflowX: 'scroll',
-      scrollBehavior: 'auto',
-      WebkitOverflowScrolling: 'touch',
-      // Hide scrollbar
-      scrollbarWidth: 'none',
-      msOverflowStyle: 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none',
-      },
+      gap: `${spacings.FULL}rem`,
     }),
-  operaScrollPromo: () =>
+  operaPromo: () =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
@@ -30,6 +22,9 @@ export default {
       display: 'flex',
       flexShrink: 0,
       marginInline: `${spacings.FULL}rem`,
+      ':last-of-type': {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
       [mq.FORCED_COLOURS]: {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
