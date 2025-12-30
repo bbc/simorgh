@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
     atiAnalyticsProducerName: 'HINDI',
-    useReverb: true,
     chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',

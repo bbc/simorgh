@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     atiAnalyticsProducerName: 'SOMALI',
-    useReverb: true,
     chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',

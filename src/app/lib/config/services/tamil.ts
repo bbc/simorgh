@@ -13,7 +13,7 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     atiAnalyticsProducerName: 'TAMIL',
-    useReverb: true,
+
     chartbeatDomain: 'tamil.bbc.co.uk',
     brandName: 'BBC News தமிழ்',
     product: 'BBC News',

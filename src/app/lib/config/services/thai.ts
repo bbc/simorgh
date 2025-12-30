@@ -15,7 +15,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     atiAnalyticsProducerName: 'THAI',
-    useReverb: true,
     chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',

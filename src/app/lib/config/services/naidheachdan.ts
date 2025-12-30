@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-naidheachdan',
     atiAnalyticsProducerId: '79',
     atiAnalyticsProducerName: 'SCOTLAND',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Naidheachdan',
     product: 'BBC News',

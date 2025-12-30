@@ -15,7 +15,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     atiAnalyticsProducerName: 'PASHTO',
-    useReverb: true,
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',

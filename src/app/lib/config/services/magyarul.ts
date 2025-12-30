@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-magyarul',
     atiAnalyticsProducerId: '134',
     atiAnalyticsProducerName: 'HUNGARIAN',
-    useReverb: true,
     chartbeatDomain: 'magyarul.bbc.co.uk',
     brandName: 'BBC News Magyarul',
     product: 'BBC News',

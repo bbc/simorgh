@@ -15,7 +15,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     atiAnalyticsProducerName: 'PERSIAN',
-    useReverb: true,
     chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',

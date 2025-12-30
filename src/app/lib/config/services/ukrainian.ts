@@ -17,7 +17,6 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   atiAnalyticsProducerName: 'UKRAINIAN',
-  useReverb: true,
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',

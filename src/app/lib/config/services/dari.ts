@@ -14,7 +14,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-dari',
     atiAnalyticsProducerId: '142',
     atiAnalyticsProducerName: 'DARI',
-    useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News دری',
     serviceLocalizedName: 'دری',

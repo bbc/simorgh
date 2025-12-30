@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'sport',
     atiAnalyticsProducerId: '85',
     atiAnalyticsProducerName: 'SPORT',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Sport',
     product: 'BBC Sport',

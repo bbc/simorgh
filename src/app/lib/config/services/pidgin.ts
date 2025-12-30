@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     atiAnalyticsProducerName: 'PIDGIN',
-    useReverb: true,
     chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
