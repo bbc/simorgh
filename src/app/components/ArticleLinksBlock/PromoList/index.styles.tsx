@@ -29,49 +29,35 @@ export default {
     css({
       display: 'flex',
       flexShrink: 0,
+      marginInline: `${spacings.FULL}rem`,
       [mq.FORCED_COLOURS]: {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
 
-      [mq.GROUP_0_MAX_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.FULL}rem`,
-        },
-        '&:last-of-type': {
-          marginInlineEnd: `${spacings.FULL}rem`,
-        },
-      },
-
       [mq.GROUP_2_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
+        marginInline: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
+        marginInline: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: 0,
-        },
+        marginInline: 0,
       },
     }),
   operaStyledList: ({ mq, spacings }: Theme) =>
     css({
       [mq.GROUP_0_MAX_WIDTH]: {
-        marginInlineStart: `${spacings.FULL}rem`,
+        marginInline: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginInlineStart: `${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.DOUBLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginInlineStart: 0,
+        marginInline: 0,
       },
     }),
 };
