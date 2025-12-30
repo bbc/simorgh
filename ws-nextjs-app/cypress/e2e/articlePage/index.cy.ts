@@ -1,5 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
@@ -20,6 +21,38 @@ import {
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLiteSiteLink';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/topStories';
+import {
+  assertFeaturesAnalysisComponentClick,
+  assertFeaturesAnalysisComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/featuresAnalysis';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRelatedTopicsComponentClick,
+  assertRelatedTopicsComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/relatedTopics';
+import {
+  assertRelatedContentComponentClick,
+  assertRelatedContentComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/relatedContent';
+import {
+  assertMostReadComponentClick,
+  assertMostReadComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/mostRead';
+import {
+  assertLatestMediaComponentClick,
+  assertLatestMediaComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/latestMedia';
 
 const canonicalTests = [
   testsForAllPages,
@@ -239,6 +272,21 @@ const nonSmokeCanonicalTestSuites = [
 
 const atiAnalyticsTestSuites = [
   {
+    path: '/hausa/articles/cw43vy8zdjvo',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.articles.cw43vy8zdjvo.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentView,
+      assertLatestMediaComponentClick,
+    ],
+  },
+  {
     path: '/hindi/articles/cn8xe1llnyyo',
     runforEnv: ['live'],
     service: 'hindi',
@@ -249,6 +297,33 @@ const atiAnalyticsTestSuites = [
     tests: [
       assertContinueReadingButtonComponentClick,
       assertContinueReadingButtonComponentView,
+    ],
+  },
+  {
+    path: '/gahuza/articles/c5y51yxeg53o',
+    runforEnv: ['local'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.articles.c5y51yxeg53o.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'article',
+    useReverb: true,
+    tests: [
+      assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertPodcastPromoComponentView,
+      assertPodcastPromoComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
     ],
   },
   {
