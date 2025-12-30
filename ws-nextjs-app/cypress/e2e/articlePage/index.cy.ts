@@ -259,7 +259,6 @@ const atiAnalyticsTestSuites = [
     siteId: 135,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [assertTopBarOJComponentClick, assertTopBarOJComponentView],
   },
 ] as unknown as TestDataType[];
