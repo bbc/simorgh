@@ -59,7 +59,7 @@ function ArticleLinksBlock({
   };
 
   return (
-    <GridItemMediumNoMargin {...a11yAttributes} data-e2e="scrollable-promos">
+    <GridItemMediumNoMargin {...a11yAttributes} data-e2e="article-links-block">
       {typeof title === 'string' && title.length > 0 && (
         <strong
           css={styles.labelComponent}
