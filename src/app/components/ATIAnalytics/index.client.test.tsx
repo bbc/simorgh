@@ -862,7 +862,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      // @ts-expect-error - only partial data required to manually to test reverbParams
       const serviceContextProps: ServiceConfig = {
         atiAnalyticsAppName: 'atiAnalyticsAppName',
         atiAnalyticsProducerId: 'atiAnalyticsProducerId',
@@ -870,7 +870,6 @@ describe('ATI Analytics Container', () => {
         service: 'pidgin',
         brandName: 'brandName',
         lang: 'pcm',
-        useReverb: true,
       };
 
       render(
@@ -926,7 +925,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      // @ts-expect-error - only partial data required to test AmpATIAnalytics is called
       const serviceContextProps: ServiceConfig = {
         atiAnalyticsAppName: 'atiAnalyticsAppName',
         atiAnalyticsProducerId: 'atiAnalyticsProducerId',
@@ -934,7 +933,6 @@ describe('ATI Analytics Container', () => {
         service: 'pidgin',
         brandName: 'brandName',
         lang: 'pcm',
-        useReverb: true,
       };
 
       render(
@@ -986,7 +984,7 @@ describe('ATI Analytics Container', () => {
         metadata: { atiAnalytics },
       } = articleDataNews;
 
-      // @ts-expect-error - only partial data required to manually set 'useReverb' to true
+      // @ts-expect-error - only partial data required to test AmpGeo component rendering
       const serviceContextProps: ServiceConfig = {
         atiAnalyticsAppName: 'atiAnalyticsAppName',
         atiAnalyticsProducerId: 'atiAnalyticsProducerId',
@@ -994,7 +992,6 @@ describe('ATI Analytics Container', () => {
         service: 'pidgin',
         brandName: 'brandName',
         lang: 'pcm',
-        useReverb: true,
       };
 
       const { container } = render(
