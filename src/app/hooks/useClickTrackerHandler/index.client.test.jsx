@@ -115,7 +115,6 @@ beforeEach(() => {
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
       service: 'pidgin',
-      useReverb: false,
     }),
   );
 });
@@ -138,7 +137,6 @@ describe('useClickTrackerHandler', () => {
           atiAnalyticsProducerId: '70',
           atiAnalyticsProducerName: 'PIDGIN',
           service: 'pidgin',
-          useReverb: true,
         }),
       );
 
