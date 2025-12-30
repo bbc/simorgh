@@ -40,7 +40,6 @@ const atiAnalyticsTestSuites = [
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [assertPageView],
   },
 ] as unknown as TestDataType[];
