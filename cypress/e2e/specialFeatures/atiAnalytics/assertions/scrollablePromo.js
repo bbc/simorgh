@@ -6,7 +6,6 @@ const { SCROLLABLE_PROMO } = COMPONENTS;
 export const assertScrollablePromoComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,6 @@ export const assertScrollablePromoComponentView = ({
       component: SCROLLABLE_PROMO,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,7 +31,6 @@ export const assertScrollablePromoComponentView = ({
 export const assertScrollablePromoComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -53,7 +50,6 @@ export const assertScrollablePromoComponentClick = ({
       component: SCROLLABLE_PROMO,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
