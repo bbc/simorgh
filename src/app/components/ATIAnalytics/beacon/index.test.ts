@@ -36,7 +36,6 @@ describe('beacon', () => {
             advertiserID: 'advertiserID',
             url: 'http://localhost',
             detailedPlacement: 'detailedPlacement',
-            useReverb: true,
           });
           expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
@@ -79,7 +78,6 @@ describe('beacon', () => {
             advertiserID: 'advertiserID',
             url: 'http://localhost',
             detailedPlacement: 'detailedPlacement',
-            useReverb: true,
           });
           expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
 
