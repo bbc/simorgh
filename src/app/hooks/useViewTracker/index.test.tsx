@@ -92,7 +92,6 @@ beforeEach(() => {
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
       service: 'pidgin',
-      useReverb: false,
     }),
   );
 });
@@ -252,20 +251,6 @@ describe('useViewTracker', () => {
     });
 
     describe('View tracking - Reverb', () => {
-      beforeEach(() => {
-        jest.replaceProperty(
-          serviceContextModule,
-          'ServiceContext',
-          // @ts-expect-error override service context for tests
-          createContext({
-            atiAnalyticsProducerId: '70',
-            atiAnalyticsProducerName: 'PIDGIN',
-            service: 'pidgin',
-            useReverb: true,
-          }),
-        );
-      });
-
       it('should return a function that can be assigned to an element to observe for intersections', async () => {
         const { result } = renderHook(() => useViewTracker(trackingData), {
           wrapper,
