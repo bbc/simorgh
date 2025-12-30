@@ -6,7 +6,6 @@ const { RELATED_CONTENT } = COMPONENTS;
 export const assertRelatedContentComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,6 @@ export const assertRelatedContentComponentView = ({
       component: RELATED_CONTENT,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,7 +31,6 @@ export const assertRelatedContentComponentView = ({
 export const assertRelatedContentComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -53,7 +50,6 @@ export const assertRelatedContentComponentClick = ({
       component: RELATED_CONTENT,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
