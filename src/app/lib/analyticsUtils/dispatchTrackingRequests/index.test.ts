@@ -44,7 +44,6 @@ const viewTrackerRequestsParameters = {
     advertiserID: 'advertiser id',
     url: 'http://example.com',
     detailedPlacement: 'detailed placement',
-    useReverb: true,
     groupTracker: {
       name: 'test group',
       type: 'portrait-video-modal',
