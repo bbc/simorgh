@@ -38,7 +38,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
@@ -100,7 +100,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               statsDestination,
               url: url || nextPageUrl,
               detailedPlacement,
-              useReverb,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
               ...(experimentVariant &&
@@ -138,7 +137,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       advertiserID,
       url,
       detailedPlacement,
-      useReverb,
       groupTracker,
       itemTracker,
       experimentName,
