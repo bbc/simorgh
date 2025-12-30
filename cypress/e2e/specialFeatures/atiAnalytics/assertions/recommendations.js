@@ -6,7 +6,6 @@ const { RECOMMENDATIONS } = COMPONENTS;
 export const assertRecommendationsComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,6 @@ export const assertRecommendationsComponentView = ({
       component: RECOMMENDATIONS,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,7 +31,6 @@ export const assertRecommendationsComponentView = ({
 export const assertRecommendationsComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -56,7 +53,6 @@ export const assertRecommendationsComponentClick = ({
       component: RECOMMENDATIONS,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
