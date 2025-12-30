@@ -23,7 +23,8 @@ import addCspHeader from '#nextjs/utilities/addCspHeader';
 import derivePageType from '#nextjs/utilities/derivePageType';
 import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
-import addVaryHeaders from '#nextjs/utilities/addVaryHeader';
+import addVaryHeader from '#nextjs/utilities/addVaryHeader';
+import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 
 interface Props {
   pageProps: {
@@ -82,7 +83,8 @@ export default class CustomApp extends App<Props> {
     addServiceChainHeader({ ctx });
     addCspHeader({ ctx, service, toggles });
     addOnionLocationHeader({ ctx });
-    addVaryHeaders({ ctx, serverSideExperiments });
+    addVaryHeader({ ctx, serverSideExperiments });
+    addLinkHeader({ ctx });
 
     return {
       pageProps: {

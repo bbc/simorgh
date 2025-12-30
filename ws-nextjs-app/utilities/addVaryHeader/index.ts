@@ -2,7 +2,7 @@ import { NextPageContext } from 'next/types';
 import { ServerSideExperiment } from '#app/models/types/global';
 import { getExperimentVaryHeaders } from '#src/server/utilities/experimentHeader';
 
-const addVaryHeaders = ({
+const addVaryHeader = ({
   ctx,
   serverSideExperiments,
 }: {
@@ -17,4 +17,4 @@ const addVaryHeaders = ({
   ctx.res?.setHeader('Vary', allVaryHeaders);
 };
 
-export default addVaryHeaders;
+export default addVaryHeader;
