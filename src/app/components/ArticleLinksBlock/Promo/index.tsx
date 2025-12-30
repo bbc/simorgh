@@ -5,6 +5,7 @@ import PromoTimestamp from '#components/Promo/timestamp';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { Chevron, ChevronOrientation } from '#app/components/icons';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
 
@@ -14,7 +15,7 @@ interface PromoProps {
 }
 
 function Promo({ block, eventTrackingData }: PromoProps) {
-  const { serviceDatetimeLocale } = use(ServiceContext);
+  const { serviceDatetimeLocale, dir } = use(ServiceContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const textBlock = filterForBlockType(
@@ -41,6 +42,11 @@ function Promo({ block, eventTrackingData }: PromoProps) {
     <div css={promoBoxStyles}>
       <a css={styles.link} href={href} {...clickTrackerHandler}>
         {title}
+        <Chevron
+          dir={dir}
+          css={styles.chevron}
+          orientation={ChevronOrientation.FORWARD}
+        />
       </a>
       {timestamp && (
         <PromoTimestamp

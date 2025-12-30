@@ -26,6 +26,7 @@ export default {
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
+      paddingInlineEnd: `${pixelsToRem(38)}rem`,
       marginBottom: `${spacings.FULL}rem`,
       height: 'auto',
       display: 'block',
@@ -55,5 +56,12 @@ export default {
     css({
       marginTop: `${spacings.FULL}rem`,
       color: isDarkUi ? palette.GREY_6 : undefined,
+    }),
+  chevron: () =>
+    css({
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      insetInlineEnd: `${pixelsToRem(12)}rem`,
     }),
 };
