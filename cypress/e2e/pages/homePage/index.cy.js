@@ -114,7 +114,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       assertPageView,
       assertBillboardComponentView,
@@ -129,7 +128,6 @@ const atiAnalyticsTestSuites = [
     siteId: 142,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [...atiAnalyticsNavigationComponentTests],
   },
   {
@@ -140,7 +138,6 @@ const atiAnalyticsTestSuites = [
     siteId: 58,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       ...atiAnalyticsNavigationComponentTests,
       assertMessageBannerComponentView,
@@ -157,7 +154,6 @@ const atiAnalyticsTestSuites = [
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -168,7 +164,6 @@ const atiAnalyticsTestSuites = [
     siteId: 68,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       assertPageView,
       assertRadioScheduleComponentView,
@@ -183,7 +178,6 @@ const atiAnalyticsTestSuites = [
     siteId: 33,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       assertPageView,
       assertPortraitVideoCarouselComponentView,
@@ -198,7 +192,6 @@ const atiAnalyticsTestSuites = [
     siteId: 81,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       assertPageView,
       assertMostReadComponentView,
@@ -213,7 +206,6 @@ const atiAnalyticsTestSuites = [
     siteId: 96,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [
       assertPageView,
       assertMessageBannerComponentView,
@@ -252,7 +244,6 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: true,
     siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
     tests: [...liteSiteTests],
   };
