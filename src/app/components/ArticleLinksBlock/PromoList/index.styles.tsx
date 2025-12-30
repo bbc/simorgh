@@ -8,6 +8,7 @@ export default {
       paddingInlineStart: '0',
       margin: '0',
       display: 'flex',
+      flexDirection: 'column',
       overflowX: 'scroll',
       scrollBehavior: 'auto',
       WebkitOverflowScrolling: 'touch',
