@@ -11,11 +11,7 @@ interface PromoListProps {
   eventTrackingData?: EventTrackingMetadata;
 }
 
-const PromoList = ({
-  blocks,
-  eventTrackingData,
-  // viewTracker,
-}: PromoListProps) => {
+const PromoList = ({ blocks, eventTrackingData }: PromoListProps) => {
   const { dir } = use(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
@@ -25,14 +21,8 @@ const PromoList = ({
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <div
-      css={[promoStyles, listStyles]}
-      dir={dir}
-      role="list"
-      // {...viewTracker}
-      // {...a11yAttributes}
-    >
-      <ul role="list">
+    <div css={[scrollablePromoStyles, listStyles]} dir={dir}>
+      <ul>
         {listBlocks.map((block, index) => {
           return (
             <li
