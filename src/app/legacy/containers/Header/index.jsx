@@ -11,6 +11,7 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import AccountContainer from '#app/components/AccountContainer';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -91,6 +92,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
+  // TODO: might add an account container (sign-in/out) as part of the header
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
@@ -110,6 +112,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
       <NavigationContainer
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
+      <AccountContainer />
     </header>
   );
 };
