@@ -11,7 +11,6 @@ export type TestDataType = {
   tests: TestType[];
   runforEnv: string[];
   service: string;
-  useReverb?: boolean;
   contentType?: string;
   applicationType?: string;
   siteId?: string;
