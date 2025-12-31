@@ -4,12 +4,14 @@ import { css, Theme } from '@emotion/react';
 export default {
   standardPromo: ({ spacings }: Theme) =>
     css({
-      listStyle: 'none',
-      paddingInlineStart: '0',
-      margin: '0',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: `${spacings.FULL}rem`,
+      '& ul': {
+        listStyle: 'none',
+        paddingInlineStart: '0',
+        margin: '0',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: `${spacings.FULL}rem`,
+      },
     }),
   operaPromo: () =>
     css({
