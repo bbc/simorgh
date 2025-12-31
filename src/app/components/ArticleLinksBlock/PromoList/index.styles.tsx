@@ -11,6 +11,9 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         gap: `${spacings.FULL}rem`,
+        // wordWrap: 'break-word',
+        // overflowWrap: 'break-word',
+        width: '100%',
       },
     }),
   operaPromo: () =>
@@ -23,7 +26,7 @@ export default {
     css({
       display: 'flex',
       flexShrink: 0,
-      marginInline: `${spacings.FULL}rem`,
+      marginInline: `${spacings.HALF}rem`,
       ':last-of-type': {
         marginBottom: `${spacings.TRIPLE}rem`,
       },
@@ -32,11 +35,11 @@ export default {
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginInline: `${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        marginInline: `${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {

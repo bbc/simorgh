@@ -10,11 +10,6 @@ export default {
       display: 'flex',
       overflowX: 'auto',
       width: '100vw',
-      '-ms-overflow-style': 'none',
-      scrollbarWidth: 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none',
-      },
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
         margin: '0 -0.2rem',
@@ -52,11 +47,11 @@ export default {
       },
 
       [mq.GROUP_0_MAX_WIDTH]: {
-        marginInlineStart: `${spacings.FULL}rem`,
+        marginInline: `${spacings.FULL}rem`,
         margin: 0,
       },
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginInlineStart: `${spacings.DOUBLE}rem`,
+        marginInline: `${spacings.DOUBLE}rem`,
         padding: `0 ${spacings.DOUBLE}rem`,
         margin: '0 -0.2rem',
       },

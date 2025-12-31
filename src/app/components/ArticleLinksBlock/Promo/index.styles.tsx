@@ -27,7 +27,6 @@ export default {
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
       paddingInlineEnd: `${pixelsToRem(38)}rem`,
-      gap: `${spacings.FULL}rem`,
       height: 'auto',
       display: 'block',
       width: '100%',
