@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ArticleLinksBlock from '.';
 import {
@@ -14,20 +13,24 @@ import {
 import metadata from './metadata.json';
 import readme from './README.md';
 import { OptimoBlock } from '#app/models/types/optimo';
-import { StoryArgs } from '../../models/types/storybook';
-
-const BackGround = styled.div`
-  background-color: #f6f6f6;
-  padding: 2rem;
-`;
+import { StoryArgs, StoryProps } from '../../models/types/storybook';
 
 interface Props {
   blocks: OptimoBlock[];
 }
 
-const Component = ({ blocks }: Props) => {
-  return <ArticleLinksBlock blocks={blocks} />;
-};
+const Component = ({ blocks, service }: Props & StoryProps) => (
+  <ServiceContextProvider service={service}>
+    <div
+      css={{
+        backgroundColor: '#f6f6f6',
+        padding: '2rem',
+      }}
+    >
+      <ArticleLinksBlock blocks={blocks} />
+    </div>
+  </ServiceContextProvider>
+);
 
 export default {
   title: 'Components/Article Links Block',
@@ -38,54 +41,65 @@ export default {
   },
 };
 
-export const ThreeLinks = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={threeLinks} />
-  </BackGround>
+export const ThreeLinks = (_: StoryArgs, { service, variant }: StoryProps) => (
+  <Component blocks={threeLinks} service={service} variant={variant} />
 );
 
-export const OnlyOneLink = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={oneLinkOnly} />
-  </BackGround>
+export const OnlyOneLink = (_: StoryArgs, { service, variant }: StoryProps) => (
+  <Component blocks={oneLinkOnly} service={service} variant={variant} />
 );
 
-export const OneLinkWithNoTitle = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={oneLinkWithNoTitle} />
-  </BackGround>
+export const OneLinkWithNoTitle = (
+  _: StoryArgs,
+  { service, variant }: StoryProps,
+) => (
+  <Component blocks={oneLinkWithNoTitle} service={service} variant={variant} />
 );
 
-export const MoreThanThreeLinks = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={moreThanThreeLinks} />
-  </BackGround>
+export const MoreThanThreeLinks = (
+  _: StoryArgs,
+  { service, variant }: StoryProps,
+) => (
+  <Component blocks={moreThanThreeLinks} service={service} variant={variant} />
 );
 
-export const NoImagesInData = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={twoLinksWithNoImages} />
-  </BackGround>
+export const NoImagesInData = (
+  _: StoryArgs,
+  { service, variant }: StoryProps,
+) => (
+  <Component
+    blocks={twoLinksWithNoImages}
+    service={service}
+    variant={variant}
+  />
 );
 
-export const TruncatedTextInSingleLink = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={truncatedTextInSingleLink} />
-  </BackGround>
+export const TruncatedTextInSingleLink = (
+  _: StoryArgs,
+  { service, variant }: StoryProps,
+) => (
+  <Component
+    blocks={truncatedTextInSingleLink}
+    service={service}
+    variant={variant}
+  />
 );
 
-export const ArabicText = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={arabicText} service="arabic" />
-  </BackGround>
+export const ArabicText = (_: StoryArgs, { variant }: StoryProps) => (
+  <Component blocks={arabicText} service="arabic" variant={variant} />
 );
 
 ArabicText.globals = {
   service: { service: 'arabic' },
 };
 
-export const WithTimestamp = (_: StoryArgs) => (
-  <BackGround>
-    <Component blocks={oneLinkWithTimestamp} />
-  </BackGround>
+export const WithTimestamp = (
+  _: StoryArgs,
+  { service, variant }: StoryProps,
+) => (
+  <Component
+    blocks={oneLinkWithTimestamp}
+    service={service}
+    variant={variant}
+  />
 );

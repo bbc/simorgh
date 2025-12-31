@@ -25,27 +25,27 @@ const PromoList = ({
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    // <ScrollPromo
-    //   dir={dir}
-    //   role="list"
-    //   isOperaMini={isOperaMini}
-    //   // {...viewTracker}
-    //   // {...a11yAttributes}
-    // >
-    <ul css={promoStyles} role="list">
-      {listBlocks.map((block, index) => {
-        return (
-          <li
-            css={listStyles}
-            // eslint-disable-next-line react/no-array-index-key
-            key={index}
-          >
-            <Promo block={block} eventTrackingData={eventTrackingData} />
-          </li>
-        );
-      })}
-    </ul>
-    // </ScrollPromo>
+    <div
+      css={[scrollablePromoStyles, listStyles]}
+      dir={dir}
+      role="list"
+      // {...viewTracker}
+      // {...a11yAttributes}
+    >
+      <ul role="list">
+        {listBlocks.map((block, index) => {
+          return (
+            <li
+              css={listStyles}
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+            >
+              <Promo block={block} eventTrackingData={eventTrackingData} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 
