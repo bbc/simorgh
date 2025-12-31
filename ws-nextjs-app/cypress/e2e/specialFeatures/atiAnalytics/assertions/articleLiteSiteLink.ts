@@ -11,7 +11,6 @@ const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -28,7 +27,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -38,7 +36,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
 export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -58,7 +55,6 @@ export const assertArticleLiteSiteLinkComponentClick = ({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
