@@ -26,7 +26,7 @@ const PromoList = ({
 
   return (
     <div
-      css={[scrollablePromoStyles, listStyles]}
+      css={[promoStyles, listStyles]}
       dir={dir}
       role="list"
       // {...viewTracker}
