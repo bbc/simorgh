@@ -21,7 +21,7 @@ const PromoList = ({ blocks, eventTrackingData }: PromoListProps) => {
   const listStyles = isOperaMini ? styles.operaStyledList : styles.list;
 
   return (
-    <div css={[scrollablePromoStyles, listStyles]} dir={dir}>
+    <div css={[promoStyles, listStyles]} dir={dir}>
       <ul>
         {listBlocks.map((block, index) => {
           return (
