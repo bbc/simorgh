@@ -13,6 +13,9 @@ const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  async generateBuildId() {
+    return 'ws-next-build-version';
+  },
   async headers() {
     return [
       {
