@@ -207,7 +207,8 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
 
       window.processClientDeviceAndSendStaticBeacon({ reverbUrl });
 
-      const sendStaticBeaconCalls = (window.sendStaticBeacon as jest.Mock).mock.calls;
+      const sendStaticBeaconCalls = (window.sendStaticBeacon as jest.Mock).mock
+        .calls;
 
       expect(sendStaticBeaconCalls.length).toBe(0);
     });
