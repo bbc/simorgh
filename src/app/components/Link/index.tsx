@@ -32,6 +32,7 @@ export default ({
     <Component
       {...(className && { className })}
       {...(tabIndex && { tabIndex })}
+      // TODO: Remove this bit ?renderer_env=test, I only put it there for dev purposes
       href={`${href}?renderer_env=test`}
       {...(eventTrackingData && clickTracker)}
       {...props}
