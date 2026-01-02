@@ -23,7 +23,6 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getEventInfo,
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
@@ -337,29 +336,6 @@ describe('analyticsUtils', () => {
       const publishedTime = getPublishedDatetime('invalidDate', data);
 
       expect(publishedTime).toEqual(null);
-    });
-  });
-
-  describe('getEventInfo', () => {
-    const params = {
-      pageIdentifier: 'page-identifier',
-      componentName: 'component-name',
-      campaignID: 'campaign-id',
-      url: 'url',
-      format: 'format',
-      detailedPlacement: 'detailed-placement',
-      advertiserID: 'mundo',
-      experimentVariant: 'a/b-test',
-    };
-
-    it('should return url section', () => {
-      expect(getEventInfo(params)).toEqual(
-        'PUB-[campaign-id]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
-      );
-    });
-
-    it('should allow empty values', () => {
-      expect(getEventInfo()).toContain('PUB-[]-[]-[]-[]-[]-[]-[]-[]');
     });
   });
 

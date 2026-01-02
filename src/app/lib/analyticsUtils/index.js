@@ -203,22 +203,6 @@ export const getContentId = pathOr(null, [
   'contentId',
 ]);
 
-export const getEventInfo = ({
-  pageIdentifier = '',
-  componentName = '',
-  campaignID = '',
-  experimentVariant = '',
-  format = '',
-  detailedPlacement = '',
-  advertiserID = '',
-  url = '',
-} = {}) => {
-  const generalPlacement = pageIdentifier;
-  const creation = componentName;
-
-  return `PUB-[${campaignID}]-[${creation}]-[${experimentVariant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
-};
-
 export const getThingAttributes = (attribute, articleData) => {
   const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
 
