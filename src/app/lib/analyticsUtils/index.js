@@ -101,26 +101,6 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
-export const getScreenInfo = platform => {
-  if (platform === 'amp') {
-    return `\${screenWidth}x\${screenHeight}x\${screenColorDepth}`;
-  }
-
-  if (onClient()) {
-    const { width, height, colorDepth, pixelDepth } = window.screen;
-    const orderArray = [
-      width || 0,
-      height || 0,
-      colorDepth || 0,
-      pixelDepth || 0,
-    ];
-
-    return orderArray.join('x');
-  }
-
-  return null;
-};
-
 export const getBrowserViewPort = platform => {
   if (platform === 'amp') {
     return `\${availableScreenWidth}x\${availableScreenHeight}`;

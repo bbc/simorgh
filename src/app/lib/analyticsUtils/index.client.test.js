@@ -16,7 +16,6 @@ const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 const {
   getDestination,
   enforceLegacyDestinationForJapanese,
-  getScreenInfo,
   getBrowserViewPort,
   getCurrentTime,
   getDeviceLanguage,
@@ -180,32 +179,6 @@ describe('analyticsUtils', () => {
         const appType = getAppType(platform);
         expect(appType).toEqual(expected);
       });
-    });
-  });
-
-  describe('getScreenInfo', () => {
-    returnsNullWhenOffClient(getScreenInfo);
-
-    it('should concat screen values, joined by "x"', () => {
-      jest.replaceProperty(window.screen, 'width', 1);
-      jest.replaceProperty(window.screen, 'height', 2);
-      jest.replaceProperty(window.screen, 'colorDepth', 3);
-      jest.replaceProperty(window.screen, 'pixelDepth', 4);
-
-      const screenInfo = getScreenInfo();
-
-      expect(screenInfo).toEqual('1x2x3x4');
-    });
-
-    it('should use 0 to fill unknown values', () => {
-      jest.replaceProperty(window.screen, 'width', 1);
-      jest.replaceProperty(window.screen, 'height', 2);
-      jest.replaceProperty(window.screen, 'colorDepth', null);
-      jest.replaceProperty(window.screen, 'pixelDepth', null);
-
-      const screenInfo = getScreenInfo();
-
-      expect(screenInfo).toEqual('1x2x0x0');
     });
   });
 
