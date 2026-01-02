@@ -508,30 +508,6 @@ export const getXtorMarketingString = href => {
   return queryWithParams[field] || null;
 };
 
-export const getATIMarketingString = (href, campaignType) => {
-  if (!campaignType) return null;
-
-  const supportedCampaignMappings = {
-    affiliate: () => getAffiliateMarketingString(href),
-    sl: () => getSLMarketingString(href),
-    email: () => getEmailMarketingString(href),
-    display: () => getDisplayMarketingString(href),
-    custom: () => getCustomMarketingString(href),
-    XTOR: () => getXtorMarketingString(href),
-  };
-
-  const isSupportedCampaign = campaignMapping =>
-    campaignType.startsWith(campaignMapping);
-
-  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
-    campaignMapping => isSupportedCampaign(campaignMapping),
-  );
-
-  return supportedCampaignMappings[selectedCampaignType]
-    ? supportedCampaignMappings[selectedCampaignType]()
-    : null;
-};
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>

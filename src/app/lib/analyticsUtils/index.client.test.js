@@ -31,7 +31,6 @@ const {
   getEmailMarketingString,
   getCustomMarketingString,
   getDisplayMarketingString,
-  getATIMarketingString,
   onOnionTld,
   getContentId,
 } = require('./index');
@@ -618,70 +617,21 @@ describe('analyticsUtils', () => {
     });
   });
 
-  describe('getATIMarketingString', () => {
-    describe('for query params', () => {
-      it.each`
-        campaignType          | href                                                                                                                                                                                         | expectedValue
-        ${'affiliate'}        | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                             | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
-        ${'sl'}               | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                  | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
-        ${'email'}            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
-        ${'display'}          | ${'https://www.bbc.com/mundo?at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
-        ${'custom'}           | ${'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
-        ${'XTOR'}             | ${'https://www.bbc.com/mundo?xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                 | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
-        ${'unsupported-type'} | ${'https://www.bbc.com/mundo?at_medium=foo'}                                                                                                                                                 | ${null}
-        ${null}               | ${null}                                                                                                                                                                                      | ${null}
-        ${'XTOR'}             | ${null}                                                                                                                                                                                      | ${null}
-      `(
-        'should return $expectedValue for campaign type of $campaignType when href is $href',
-        ({ href, expectedValue, campaignType }) => {
-          expect(getATIMarketingString(href, campaignType)).toEqual(
-            expectedValue,
-          );
-        },
-      );
-    });
-    describe('for hash params params', () => {
-      it.each`
-        campaignType          | href                                                                                                                                                                                          | expectedValue
-        ${'affiliate'}        | ${'https://www.bbc.com/mundo#at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial'}                              | ${'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]'}
-        ${'sl'}               | ${'https://www.bbc.com/mundo#at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73'}                                   | ${'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]'}
-        ${'email'}            | ${'https://www.bbc.com/mundo/#at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-56-[wsmundo]-20190401-[cta_button]-5633@200'}
-        ${'display'}          | ${'https://www.bbc.com/mundo#at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar'}                 | ${'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]'}
-        ${'custom'}           | ${'https://www.bbc.com/mundo/#at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4'}                                                        | ${'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]'}
-        ${'XTOR'}             | ${'https://www.bbc.com/mundo#xtor=AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}                                                                                  | ${'AD-3030-[ad_version7]-[without_text]-[468]-[www.bbc.com]-[GT]-[top_page]'}
-        ${'unsupported-type'} | ${'https://www.bbc.com/mundo/#at_medium=foo'}                                                                                                                                                 | ${null}
-        ${null}               | ${null}                                                                                                                                                                                       | ${null}
-        ${'XTOR'}             | ${null}                                                                                                                                                                                       | ${null}
-      `(
-        'should return $expectedValue for campaign type of $campaignType when href is $href',
-        ({ href, expectedValue, campaignType }) => {
-          windowLocationHrefSpy.mockImplementation(() => href);
+  describe('onOnionTld', () => {
+    it.each`
+      expectation               | currentUrl                                                                                            | expectedValue
+      ${'true for onion TLD'}   | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'}                  | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian'}               | ${true}
+      ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian/news-60699063'} | ${true}
+      ${'false for .co.uk TLD'} | ${'https://www.bbc.co.uk/news'}                                                                       | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbc.com/news'}                                                                         | ${false}
+      ${'false for .com TLD'}   | ${'https://www.bbcrussian.com/russian/live/news-60661774'}                                            | ${false}
+    `('should return $expectation', ({ currentUrl, expectedValue }) => {
+      const { host } = new URL(currentUrl);
 
-          expect(getATIMarketingString(href, campaignType)).toEqual(
-            expectedValue,
-          );
-        },
-      );
-    });
+      jest.spyOn(window.location, 'host', 'get').mockImplementation(() => host);
 
-    describe('onOnionTld', () => {
-      it.each`
-        expectation               | currentUrl                                                                                            | expectedValue
-        ${'true for onion TLD'}   | ${'https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/news'}                  | ${true}
-        ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian'}               | ${true}
-        ${'true for onion TLD'}   | ${'https://www.bbcweb3hytmzhn5d532owbu6oqadra5z3ar726vq5kgwwn6aucdccrad.onion/russian/news-60699063'} | ${true}
-        ${'false for .co.uk TLD'} | ${'https://www.bbc.co.uk/news'}                                                                       | ${false}
-        ${'false for .com TLD'}   | ${'https://www.bbc.com/news'}                                                                         | ${false}
-        ${'false for .com TLD'}   | ${'https://www.bbcrussian.com/russian/live/news-60661774'}                                            | ${false}
-      `('should return $expectation', ({ currentUrl, expectedValue }) => {
-        const { host } = new URL(currentUrl);
-
-        jest
-          .spyOn(window.location, 'host', 'get')
-          .mockImplementation(() => host);
-
-        expect(onOnionTld()).toEqual(expectedValue);
-      });
+      expect(onOnionTld()).toEqual(expectedValue);
     });
   });
 });
