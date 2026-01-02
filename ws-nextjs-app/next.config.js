@@ -16,7 +16,6 @@ const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  basePath: '/worldservice',
   async generateBuildId() {
     return 'ws-next-fixed-build-version';
   },
