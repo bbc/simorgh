@@ -133,21 +133,6 @@ export const getReferrer = platform => {
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 
-const isValidDateTime = dateTime => !isNaN(dateTime); // eslint-disable-line no-restricted-globals
-
-const getISODate = unixTimestamp => {
-  const date = new Date(unixTimestamp);
-  return date.toISOString();
-};
-
-export const getPublishedDatetime = (attribute, data) => {
-  const publishedDatetime = pathOr(null, ['metadata', attribute], data);
-
-  return publishedDatetime && isValidDateTime(publishedDatetime)
-    ? getISODate(publishedDatetime)
-    : null;
-};
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>

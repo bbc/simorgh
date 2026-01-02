@@ -2,7 +2,6 @@
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json';
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ServiceConfig } from '#models/types/serviceConfig';
 import styAssetData from './fixtures/storyPage.json';
@@ -20,10 +19,6 @@ import {
 import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
-
-(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 const defaultRenderProps = {
   bbcOrigin: 'https://www.test.bbc.co.uk',

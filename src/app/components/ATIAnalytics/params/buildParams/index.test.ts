@@ -1,12 +1,7 @@
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { RequestContextProps } from '../../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../../models/types/serviceConfig';
 import { buildPageATIParams } from '.';
-
-(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 jest
   .spyOn(document, 'referrer', 'get')

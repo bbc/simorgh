@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import * as analyticsUtils from '../../../lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
@@ -11,10 +10,6 @@ import buildReverbParams from '.';
 import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { ATIData } from '../types';
-
-(analyticsUtils.getPublishedDatetime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('1970-01-01T00:00:00.000Z');
 
 jest
   .spyOn(document, 'referrer', 'get')
