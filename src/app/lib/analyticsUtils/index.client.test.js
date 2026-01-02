@@ -24,7 +24,6 @@ const {
   getAtUserId,
   sanitise,
   getThingAttributes,
-  getAffiliateMarketingString,
   onOnionTld,
 } = require('./index');
 
@@ -369,37 +368,6 @@ describe('analyticsUtils', () => {
       const thingAttributes = getThingAttributes('fooBar', {});
 
       expect(thingAttributes).toEqual(null);
-    });
-  });
-
-  describe('getAffiliateMarketingString', () => {
-    describe('should return the "al" prefix', () => {
-      describe('with optional params', () => {
-        it.each`
-          expectation                                                             | href                                                                      | expectedValue
-          ${'the value of the "at_campaign" field'}                               | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73'}         | ${'al-73-----'}
-          ${'the value of the "at_type" field, wrapped in square brackets'}       | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_type=partner'}        | ${'al--[partner]----'}
-          ${'the value of the "at_identifier" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_identifier=whatsapp'} | ${'al---[whatsapp]---'}
-          ${'whe value of the "at_format" field, wrapped in square brackets'}     | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_format=Link'}         | ${'al----[Link]--'}
-          ${'the value of the "at_creation" field, wrapped in square brackets'}   | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_creation=wsmundo'}    | ${'al-----[wsmundo]-'}
-          ${'the value of the "at_variant" field, wrapped in square brackets'}    | ${'https://www.bbc.com/mundo?at_medium=affiliate&at_variant=Editorial'}   | ${'al------[Editorial]'}
-        `(
-          'should return marketing string for $expectation',
-          ({ href, expectedValue }) => {
-            expect(getAffiliateMarketingString(href)).toEqual(expectedValue);
-          },
-        );
-      });
-      describe('with all params', () => {
-        it('should return all fields', () => {
-          const href =
-            'https://www.bbc.com/mundo?at_medium=affiliate&at_campaign=73&at_creation=wsmundo&at_format=Link&at_identifier=whatsapp&at_type=partner&at_variant=Editorial';
-          const expected =
-            'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]';
-
-          expect(getAffiliateMarketingString(href)).toEqual(expected);
-        });
-      });
     });
   });
 
