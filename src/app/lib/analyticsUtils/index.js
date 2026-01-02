@@ -118,19 +118,6 @@ export const getCurrentTime = platform => {
   return null;
 };
 
-export const getDeviceLanguage = platform => {
-  if (platform === 'amp') {
-    // Using browserlanguage since AMP doesn't have access to device language
-    return `\${browserLanguage}`;
-  }
-
-  if (onClient() && navigator.language) {
-    return navigator.language;
-  }
-
-  return null;
-};
-
 export const getHref = platform => {
   if (platform === 'amp') {
     return `\${sourceUrl}`;

@@ -17,7 +17,6 @@ const {
   getDestination,
   enforceLegacyDestinationForJapanese,
   getCurrentTime,
-  getDeviceLanguage,
   getAppType,
   getHref,
   getReferrer,
@@ -201,30 +200,6 @@ describe('analyticsUtils', () => {
       const ATITime = getCurrentTime();
 
       expect(ATITime).toEqual('12x23x45');
-    });
-  });
-
-  describe('getDeviceLanguage', () => {
-    returnsNullWhenOffClient(getDeviceLanguage);
-
-    it('should return navigator language', () => {
-      jest
-        .spyOn(window.navigator, 'language', 'get')
-        .mockImplementation(() => 'abc');
-
-      const deviceLanguage = getDeviceLanguage();
-
-      expect(deviceLanguage).toEqual('abc');
-    });
-
-    it('should return null if language is not set', () => {
-      jest
-        .spyOn(window.navigator, 'language', 'get')
-        .mockImplementation(() => null);
-
-      const deviceLanguage = getDeviceLanguage();
-
-      expect(deviceLanguage).toEqual(null);
     });
   });
 
