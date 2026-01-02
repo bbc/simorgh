@@ -270,6 +270,7 @@ runTestsForPage({
     'BBC-Adverts': 'true',
   },
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
+  testIsolation: true,
 });
 
 runTestsForPage({
