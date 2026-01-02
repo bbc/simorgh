@@ -9,12 +9,14 @@ const VALID_HREF_REGEX = new RegExp(
 
 export default () => {
   it('all links within <main> element should be a valid World Service URL', () => {
-    cy.get('main a[href^="https://www.bbc.com"]').each($tag => {
-      const href = $tag.attr('href');
-      expect(href).to.exist;
-      expect(href).to.not.be.empty;
+    cy.get('main')
+      .find('a[href^="https://www.bbc.com"]')
+      .each($tag => {
+        const href = $tag.attr('href');
 
-      expect(href).to.match(VALID_HREF_REGEX);
-    });
+        expect(href).to.exist;
+        expect(href).to.not.be.empty;
+        expect(href).to.match(VALID_HREF_REGEX);
+      });
   });
 };
