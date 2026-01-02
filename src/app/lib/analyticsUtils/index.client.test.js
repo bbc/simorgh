@@ -26,7 +26,6 @@ const {
   getThingAttributes,
   getAffiliateMarketingString,
   getSLMarketingString,
-  getEmailMarketingString,
   onOnionTld,
 } = require('./index');
 
@@ -433,38 +432,6 @@ describe('analyticsUtils', () => {
             'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]';
 
           expect(getSLMarketingString(href)).toEqual(expected);
-        });
-      });
-    });
-  });
-
-  describe('getEmailMarketingString', () => {
-    describe('should return the "SEC" prefix', () => {
-      describe('with optional params', () => {
-        it.each`
-          expectation                                                                                                                         | href                                                                                                             | expectedValue
-          ${'the value of "at_emailtype" field when its value is "acquisition"'}                                                              | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=acquisition'}                                          | ${'EREC-----@'}
-          ${'the value of "at_emailtype" field when its value is "retention"'}                                                                | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=retention'}                                            | ${'EPR-----@'}
-          ${'the value of "at_emailtype" field when its value is "promotion"'}                                                                | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion'}                                            | ${'ES-----@'}
-          ${'the value of "at_emailtype" field when its value is neither "promotion", "acquisition" or "retention"'}                          | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=foobar'}                                               | ${'-----@'}
-          ${'the value of the "at_campaign" field'}                                                                                           | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56'}                             | ${'ES-56----@'}
-          ${'the value of the "at_creation" field, wrapped in square brackets'}                                                               | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_creation=wsmundo'}                        | ${'ES--[wsmundo]---@'}
-          ${'the value of the at_send_date field'}                                                                                            | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_send_date=20190401'}                      | ${'ES---20190401--@'}
-          ${'the value of the at_link field, wrapped in square brackets'}                                                                     | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_link=cta_button'}                         | ${'ES----[cta_button]-@'}
-          ${'the value of the at_recipient_id field followed by the @ symbol and the value of the at_recipient_list field'}                   | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_id=5633&at_recipient_list=200'} | ${'ES-----5633@200'}
-          ${'the value of the at_recipient_id field followed by the @ symbol when the value of the at_recipient_list field is not available'} | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_id=5633'}                       | ${'ES-----5633@'}
-          ${'the @ symbol followed by the value of the at_recipient_list field when the value of the at_recipient_id field is not available'} | ${'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_recipient_list=200'}                      | ${'ES-----@200'}
-        `('should return $expectation', ({ href, expectedValue }) => {
-          expect(getEmailMarketingString(href)).toEqual(expectedValue);
-        });
-      });
-      describe('with all params', () => {
-        it('should return all fields', () => {
-          const href =
-            'https://www.bbc.com/mundo?at_medium=email&at_emailtype=promotion&at_campaign=56&at_creation=wsmundo&at_send_date=20190401&at_link=cta_button&at_recipient_id=5633&at_recipient_list=200';
-          const expected = 'ES-56-[wsmundo]-20190401-[cta_button]-5633@200';
-
-          expect(getEmailMarketingString(href)).toEqual(expected);
         });
       });
     });
