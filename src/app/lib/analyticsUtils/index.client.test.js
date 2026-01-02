@@ -24,7 +24,6 @@ const {
   getAtUserId,
   sanitise,
   getThingAttributes,
-  getXtorMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -558,18 +557,6 @@ describe('analyticsUtils', () => {
           expect(getCustomMarketingString(href)).toEqual(expected);
         });
       });
-    });
-  });
-
-  describe('getXtorMarketingString', () => {
-    it.each`
-      expectation                                                                           | href                                                          | expectedValue
-      ${'the value of the "xtor" field when it is a hash param from an anchor'}             | ${'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030'}     | ${'AD-3030'}
-      ${'the value of the xtor field when xtor is a query param and there is a hash param'} | ${'https://www.bbc.com/mundo?xtor=AD-3030#at_medium=AD-3040'} | ${'AD-3030'}
-      ${'the value of the xtor field when it is a query param'}                             | ${'https://www.bbc.com/mundo?xtor=AD-3030'}                   | ${'AD-3030'}
-      ${'null when xtor param is not available'}                                            | ${'https://www.bbc.com/mundo#at_medium'}                      | ${null}
-    `('should return $expectation', ({ href, expectedValue }) => {
-      expect(getXtorMarketingString(href)).toEqual(expectedValue);
     });
   });
 

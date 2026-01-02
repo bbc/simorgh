@@ -461,14 +461,6 @@ export const getCustomMarketingString = href =>
     },
   ]);
 
-export const getXtorMarketingString = href => {
-  const field = 'xtor';
-
-  const queryWithParams = getQueryParamsFromURL(href);
-
-  return queryWithParams[field] || null;
-};
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>
