@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import useIsPWA from '../useIsPWA';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
 import { OFFLINE_VISIT_FLAG } from '../useOfflinePageFlag';
@@ -7,26 +6,23 @@ import { OFFLINE_VISIT_FLAG } from '../useOfflinePageFlag';
 const OFFLINE_PAGE_VIEW_EVENT_NAME = 'pwa-offline-page-view';
 
 /**
- * Tracks offline→online transitions in PWA mode after user has visited offline page.
+ * Tracks offline→online transitions after user has visited offline page.
  * Fires when network comes back online while flag is set.
- * Flag is set by useOfflinePageFlag when user visits offline page while offline.
+ *
+ * Flag can only be set in PWA mode (offline page requires service worker).
+ * By not checking isPWA at dispatch time, we track each offline session separately
+ * even if user switches between PWA/browser modes during reconnection.
+ * This prevents data loss and ensures accurate analytics.
  */
 const usePWAOfflineTracking = () => {
-  const isPWA = useIsPWA();
   const { isOnline, networkType } = useNetworkStatusTracker();
 
   const trackOfflinePageViewEvent = useCustomEventTracker({
     eventName: OFFLINE_PAGE_VIEW_EVENT_NAME,
   });
 
-  console.log('usePWAOfflineTracking invoked', {
-    isPWA,
-    isOnline,
-    networkType,
-  });
-
   useEffect(() => {
-    if (typeof window === 'undefined' || !isPWA || !isOnline) {
+    if (typeof window === 'undefined' || !isOnline) {
       return;
     }
 
@@ -43,7 +39,7 @@ const usePWAOfflineTracking = () => {
       // eslint-disable-next-line no-console
       console.error('usePWAOfflineTracking', error);
     }
-  }, [isPWA, isOnline, networkType, trackOfflinePageViewEvent]);
+  }, [isOnline, networkType, trackOfflinePageViewEvent]);
 };
 
 export default usePWAOfflineTracking;

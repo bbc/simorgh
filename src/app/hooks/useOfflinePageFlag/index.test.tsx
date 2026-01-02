@@ -1,10 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
-import useOfflinePageFlag, { OFFLINE_VISIT_FLAG } from './index';
-
-jest.mock('../useIsPWA');
-
-const mockUseIsPWA = jest.requireMock('../useIsPWA').default as jest.Mock;
+import { useOfflinePageFlag, OFFLINE_VISIT_FLAG } from './index';
 
 describe('useOfflinePageFlag', () => {
   beforeEach(() => {
@@ -14,9 +10,7 @@ describe('useOfflinePageFlag', () => {
     jest.clearAllMocks();
   });
 
-  it('should set offline flag when in PWA mode', () => {
-    mockUseIsPWA.mockReturnValue(true);
-
+  it('should set offline flag when rendered', () => {
     renderHook(() => useOfflinePageFlag());
 
     expect(localStorage.setItem).toHaveBeenCalledWith(
@@ -25,16 +19,7 @@ describe('useOfflinePageFlag', () => {
     );
   });
 
-  it('should not set flag when in browser mode', () => {
-    mockUseIsPWA.mockReturnValue(false);
-
-    renderHook(() => useOfflinePageFlag());
-
-    expect(localStorage.setItem).not.toHaveBeenCalled();
-  });
-
   it('should handle localStorage errors gracefully', () => {
-    mockUseIsPWA.mockReturnValue(true);
     const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation();
 
     Storage.prototype.setItem = jest.fn().mockImplementation(() => {
@@ -52,16 +37,5 @@ describe('useOfflinePageFlag', () => {
     renderSSRHook(() => useOfflinePageFlag());
 
     expect(localStorage.setItem).not.toHaveBeenCalled();
-  });
-
-  it('should set flag with iOS standalone mode', () => {
-    mockUseIsPWA.mockReturnValue(true);
-
-    renderHook(() => useOfflinePageFlag());
-
-    expect(localStorage.setItem).toHaveBeenCalledWith(
-      OFFLINE_VISIT_FLAG,
-      'true',
-    );
   });
 });

@@ -1,17 +1,15 @@
 import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
 import usePWAOfflineTracking from './index';
-import useIsPWA from '../useIsPWA';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
+import { EffectiveNetworkType } from '../useNetworkStatusTracker/type';
 
-jest.mock('../useIsPWA');
 jest.mock('../useNetworkStatusTracker');
 jest.mock('../useCustomEventTracker');
 
 describe('usePWAOfflineTracking', () => {
   const mockTrackOfflinePageViewEvent = jest.fn();
-  const mockUseIsPWA = useIsPWA as jest.MockedFunction<typeof useIsPWA>;
   const mockUseNetworkStatusTracker =
     useNetworkStatusTracker as jest.MockedFunction<
       typeof useNetworkStatusTracker
@@ -32,20 +30,7 @@ describe('usePWAOfflineTracking', () => {
     jest.restoreAllMocks();
   });
 
-  it('should not fire event when not in PWA mode', () => {
-    mockUseIsPWA.mockReturnValue(false);
-    mockUseNetworkStatusTracker.mockReturnValue({
-      isOnline: true,
-      networkType: '4g',
-    });
-
-    renderHook(() => usePWAOfflineTracking());
-
-    expect(mockTrackOfflinePageViewEvent).not.toHaveBeenCalled();
-  });
-
   it('should not fire event when offline flag is not set', () => {
-    mockUseIsPWA.mockReturnValue(true);
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: true,
       networkType: '4g',
@@ -57,8 +42,7 @@ describe('usePWAOfflineTracking', () => {
     expect(mockTrackOfflinePageViewEvent).not.toHaveBeenCalled();
   });
 
-  it('should fire event when in PWA mode, online, and flag is set', () => {
-    mockUseIsPWA.mockReturnValue(true);
+  it('should fire event when online and flag is set', () => {
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: true,
       networkType: '4g',
@@ -73,7 +57,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should fire event on offline→online transition', () => {
-    mockUseIsPWA.mockReturnValue(true);
     Storage.prototype.getItem = jest.fn().mockReturnValue('true');
 
     mockUseNetworkStatusTracker.mockReturnValue({
@@ -98,7 +81,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should not fire event again without flag being set', () => {
-    mockUseIsPWA.mockReturnValue(true);
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: true,
       networkType: '4g',
@@ -119,7 +101,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should fire event again after flag is set again on next offline visit', () => {
-    mockUseIsPWA.mockReturnValue(true);
     const mockGetItem = jest
       .fn()
       .mockReturnValueOnce('true')
@@ -163,7 +144,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should remove flag after firing event', () => {
-    mockUseIsPWA.mockReturnValue(true);
     Storage.prototype.getItem = jest.fn().mockReturnValue('true');
 
     mockUseNetworkStatusTracker.mockReturnValue({
@@ -185,7 +165,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should not fire when offline even if flag is set', () => {
-    mockUseIsPWA.mockReturnValue(true);
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: false,
       networkType: 'unknown',
@@ -198,7 +177,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should handle localStorage errors gracefully', () => {
-    mockUseIsPWA.mockReturnValue(true);
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: true,
       networkType: '4g',
@@ -218,7 +196,6 @@ describe('usePWAOfflineTracking', () => {
   });
 
   it('should not track on server side', () => {
-    mockUseIsPWA.mockReturnValue(true);
     mockUseNetworkStatusTracker.mockReturnValue({
       isOnline: true,
       networkType: '4g',
@@ -230,35 +207,23 @@ describe('usePWAOfflineTracking', () => {
     expect(mockTrackOfflinePageViewEvent).not.toHaveBeenCalled();
   });
 
-  it('should pass correct network type to tracking function', () => {
-    mockUseIsPWA.mockReturnValue(true);
-    Storage.prototype.getItem = jest.fn().mockReturnValue('true');
-
-    const networkTypes = [
-      'slow-2g',
-      '2g',
-      '3g',
-      '4g',
-      '5g',
-      'unknown',
-    ] as const;
-
-    networkTypes.forEach(networkType => {
-      jest.clearAllMocks();
+  it.each(['slow-2g', '2g', '3g', '4g', '5g', 'unknown'])(
+    'should pass correct network type to tracking function: %s',
+    networkType => {
+      Storage.prototype.getItem = jest.fn().mockReturnValue('true');
 
       mockUseNetworkStatusTracker.mockReturnValue({
         isOnline: true,
-        networkType,
+        networkType: networkType as EffectiveNetworkType,
       });
 
       renderHook(() => usePWAOfflineTracking());
 
       expect(mockTrackOfflinePageViewEvent).toHaveBeenCalledWith(networkType);
-    });
-  });
+    },
+  );
 
   it('should only fire on actual offline→online transition, not online→offline', () => {
-    mockUseIsPWA.mockReturnValue(true);
     Storage.prototype.getItem = jest.fn().mockReturnValue('true');
 
     mockUseNetworkStatusTracker.mockReturnValue({

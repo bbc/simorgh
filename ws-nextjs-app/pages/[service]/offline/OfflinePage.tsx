@@ -2,7 +2,7 @@ import { use } from 'react';
 import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
-import useOfflinePageFlag from '#app/hooks/useOfflinePageFlag';
+import { useOfflinePageFlag } from '#app/hooks/useOfflinePageFlag';
 
 const OfflinePage = () => {
   const { service, dir, script } = use(ServiceContext);
@@ -12,13 +12,11 @@ const OfflinePage = () => {
 
   const title = 'You are offline';
   const message =
-    "It seems you don't have an internet connection at the moment. Please check your connection and reload the page.";
+    'Looks like you’re not online right now. Please check your network and reconnect. Once you’re back, just refresh the page to continue.';
   const solutions = [
     'Check your internet connection',
     'Refresh the page when your connection is restored',
   ];
-
-  console.log('OfflinePage rendered');
 
   return (
     <>
