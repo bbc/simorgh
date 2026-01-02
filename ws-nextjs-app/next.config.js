@@ -5,7 +5,7 @@ const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
-// Commenting this out for dev purposes
+// TODO: Commenting this out for dev purposes
 // const assetPrefix =
 //   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
 //   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;

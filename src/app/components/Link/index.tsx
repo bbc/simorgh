@@ -1,6 +1,7 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, use } from 'react';
 import Link from 'next/link';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { RequestContext } from '#app/contexts/RequestContext';
 
 type Props = {
   href: string;
@@ -22,11 +23,13 @@ export default ({
   eventTrackingData,
   ...props
 }: PropsWithChildren<Props>) => {
+  const { isLite, isAmp } = use(RequestContext);
   const NextLink = Link;
   const Anchor = 'a' as React.ElementType;
-  const Component = spaLink ? NextLink : Anchor;
+  const isSpaLink = spaLink && !isLite && !isAmp;
+  const Component = isSpaLink ? NextLink : Anchor;
 
-  const clickTracker = useClickTrackerHandler(eventTrackingData, spaLink);
+  const clickTracker = useClickTrackerHandler(eventTrackingData, isSpaLink);
 
   return (
     <Component
