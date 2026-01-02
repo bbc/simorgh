@@ -36,8 +36,6 @@ const Page = ({ pageData, service, lang }: Props) => (
   </BrowserRouter>
 );
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
-
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;

@@ -43,8 +43,6 @@ const renderPage = async ({ pageData, service }: Props) => {
   return result;
 };
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
-
 const fetchMock = fetch as FetchMock;
 
 jest.mock('../../components/ChartbeatAnalytics', () => {

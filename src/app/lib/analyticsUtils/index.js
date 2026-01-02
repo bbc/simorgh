@@ -147,38 +147,6 @@ export const getReferrer = platform => {
   return null;
 };
 
-export const getAtUserId = () => {
-  if (!onClient()) return null;
-
-  // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
-  // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
-  if (isOperaProxy()) return null;
-
-  const cookieName = 'atuserid';
-  let cookie = Cookie.get(cookieName);
-  const expires = 397; // expires in 13 months
-
-  if (cookie) {
-    try {
-      cookie = JSON.parse(cookie);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.log(error);
-      cookie = null;
-    }
-  }
-
-  const val = path(['val'], cookie) || getUUID();
-
-  Cookie.set(cookieName, JSON.stringify({ val }), {
-    expires,
-    path: '/',
-    secure: true,
-  });
-
-  return val;
-};
-
 export const sanitise = initialString =>
   initialString ? initialString.trim().replace(/\s/g, '%20') : null;
 

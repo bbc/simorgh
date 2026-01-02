@@ -21,7 +21,6 @@ import ATIAnalytics from '.';
 import * as amp from './amp';
 import * as canonical from './canonical';
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
   .fn()
   .mockReturnValue('00-00-00');

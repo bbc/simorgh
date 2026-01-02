@@ -13,7 +13,6 @@ fetch.mockResponse(JSON.stringify(pidginMostReadData));
 jest.mock('#lib/analyticsUtils', () => {
   return {
     ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
   };
 });
 

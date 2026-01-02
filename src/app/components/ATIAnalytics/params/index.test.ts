@@ -12,7 +12,6 @@ import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { ATIData } from '../types';
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 (analyticsUtils.getCurrentTime as jest.Mock) = jest
   .fn()
   .mockReturnValue('00-00-00');

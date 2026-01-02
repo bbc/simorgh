@@ -21,7 +21,6 @@ const {
   getHref,
   getReferrer,
   getPublishedDatetime,
-  getAtUserId,
   sanitise,
   onOnionTld,
 } = require('./index');
@@ -291,54 +290,6 @@ describe('analyticsUtils', () => {
       const publishedTime = getPublishedDatetime('invalidDate', data);
 
       expect(publishedTime).toEqual(null);
-    });
-  });
-
-  describe('getAtUserId', () => {
-    let cookieSetterSpy;
-
-    returnsNullWhenOffClient(getAtUserId);
-    beforeEach(() => {
-      jest.clearAllMocks();
-      Cookie.remove('atuserid');
-      cookieSetterSpy = jest.spyOn(Cookie, 'set');
-    });
-
-    it('should return the AT user id', () => {
-      Cookie.set('atuserid', '{ "val": "some-random-uuid" }', { secure: true });
-      cookieSetterSpy.mockClear();
-      const atUserId = getAtUserId();
-
-      expect(atUserId).toEqual('some-random-uuid');
-    });
-
-    it('should store the existing AT user id as a stringified JSON value in cookies again so that we update the cookie expiration date', () => {
-      Cookie.set('atuserid', '{ "val": "some-random-uuid" }', { secure: true });
-      cookieSetterSpy.mockClear();
-      const atUserId = getAtUserId();
-      const [[cookieName, cookieValue, cookieOptions]] =
-        cookieSetterSpy.mock.calls;
-
-      expect(atUserId).toEqual('some-random-uuid');
-      expect(cookieName).toEqual('atuserid');
-      expect(JSON.parse(cookieValue)).toEqual({
-        val: atUserId,
-      });
-      expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
-      expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
-    });
-
-    it('should create a new AT user id if the atuserid cookie does not already exist and then store the id as a stringified JSON value in the cookies', () => {
-      const atUserId = getAtUserId();
-      const [[cookieName, cookieValue, cookieOptions]] =
-        cookieSetterSpy.mock.calls;
-
-      expect(cookieName).toEqual('atuserid');
-      expect(JSON.parse(cookieValue)).toEqual({
-        val: atUserId,
-      });
-      expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
-      expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
     });
   });
 
