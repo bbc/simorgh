@@ -34,7 +34,7 @@ import {
 import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import urlValidationTest from '../../support/helpers/urlValidationTest';
 
-const tests = [canonicalTests, urlValidationTest, testsForAllCanonicalPages];
+const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
 
 const testSuites = [
   {
@@ -229,7 +229,7 @@ const atiAnalyticsTestSuites = [
   },
 ] as unknown as TestDataType[];
 
-let smokeTests = [];
+let smokeTests: typeof testSuites = [];
 
 // TEMP: Disable homepage smoke tests on the test environment due to flakiness
 if (Cypress.env('SMOKE')) {
