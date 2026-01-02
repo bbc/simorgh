@@ -197,12 +197,6 @@ export const getPublishedDatetime = (attribute, data) => {
     : null;
 };
 
-export const getContentId = pathOr(null, [
-  'metadata',
-  'analyticsLabels',
-  'contentId',
-]);
-
 export const getThingAttributes = (attribute, articleData) => {
   const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
 
