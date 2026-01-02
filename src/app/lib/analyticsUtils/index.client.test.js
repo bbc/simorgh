@@ -23,7 +23,6 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getAtiUrl,
   getEventInfo,
   getThingAttributes,
   getXtorMarketingString,
@@ -338,34 +337,6 @@ describe('analyticsUtils', () => {
       const publishedTime = getPublishedDatetime('invalidDate', data);
 
       expect(publishedTime).toEqual(null);
-    });
-  });
-
-  describe('getAtiUrl', () => {
-    it('should return url', () => {
-      const data = [
-        {
-          key: 'a',
-          value: 'a1',
-          wrap: false,
-        },
-        {
-          key: 'b',
-          value: 'b1',
-          wrap: true,
-        },
-        {
-          key: 'c',
-          value: 'c1',
-          wrap: false,
-        },
-      ];
-      expect(getAtiUrl(data)).toEqual('a=a1&b=[b1]&c=c1');
-    });
-
-    it('should return empty string', () => {
-      const data = [];
-      expect(getAtiUrl(data)).toEqual('');
     });
   });
 
