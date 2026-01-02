@@ -16,7 +16,6 @@ const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 const {
   getDestination,
   enforceLegacyDestinationForJapanese,
-  getCurrentTime,
   getAppType,
   getHref,
   getReferrer,
@@ -148,29 +147,6 @@ describe('analyticsUtils', () => {
         const appType = getAppType(platform);
         expect(appType).toEqual(expected);
       });
-    });
-  });
-
-  describe('getCurrentTime', () => {
-    const originalDate = global.Date;
-
-    afterEach(() => {
-      global.Date = originalDate;
-    });
-
-    returnsNullWhenOffClient(getCurrentTime);
-
-    it('should return hours, mins and seconds joined by "x"', () => {
-      const mockDate = {
-        getHours: jest.fn().mockReturnValue('12'),
-        getMinutes: jest.fn().mockReturnValue('23'),
-        getSeconds: jest.fn().mockReturnValue('45'),
-      };
-      global.Date = jest.fn(() => mockDate);
-
-      const ATITime = getCurrentTime();
-
-      expect(ATITime).toEqual('12x23x45');
     });
   });
 

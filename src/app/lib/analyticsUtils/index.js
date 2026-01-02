@@ -101,23 +101,6 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
-export const getCurrentTime = platform => {
-  if (platform === 'amp') {
-    return `\${timestamp}`;
-  }
-
-  if (onClient()) {
-    const now = new Date();
-    const hours = now.getHours();
-    const mins = now.getMinutes();
-    const secs = now.getSeconds();
-
-    return [hours, mins, secs].join('x');
-  }
-
-  return null;
-};
-
 export const getHref = platform => {
   if (platform === 'amp') {
     return `\${sourceUrl}`;

@@ -12,9 +12,6 @@ import { RequestContextProps } from '../../../contexts/RequestContext';
 import { ServiceConfig } from '../../../models/types/serviceConfig';
 import { ATIData } from '../types';
 
-(analyticsUtils.getCurrentTime as jest.Mock) = jest
-  .fn()
-  .mockReturnValue('00-00-00');
 (analyticsUtils.getPublishedDatetime as jest.Mock) = jest
   .fn()
   .mockReturnValue('1970-01-01T00:00:00.000Z');
