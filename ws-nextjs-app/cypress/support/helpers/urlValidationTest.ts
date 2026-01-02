@@ -4,7 +4,7 @@ import SERVICES from '#app/lib/config/services';
 const SERVICES_PATTERN = SERVICES.join('|');
 
 const VALID_HREF_REGEX = new RegExp(
-  `^https://www\\.bbc\\.com/(?:${SERVICES_PATTERN}|programmes|usingthebbc/[a-z0-9]{8,15})(?:/.*)?$`,
+  `^https://www\\.bbc\\.com/(?:${SERVICES_PATTERN}|usingthebbc/[^/]+(?:/.*)?|programmes/[a-z0-9]{8,15})(?:/.*)?$`,
 );
 
 export default () => {
