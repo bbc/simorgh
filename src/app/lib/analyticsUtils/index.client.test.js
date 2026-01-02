@@ -27,7 +27,6 @@ const {
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
-  getCustomMarketingString,
   onOnionTld,
 } = require('./index');
 
@@ -466,35 +465,6 @@ describe('analyticsUtils', () => {
           const expected = 'ES-56-[wsmundo]-20190401-[cta_button]-5633@200';
 
           expect(getEmailMarketingString(href)).toEqual(expected);
-        });
-      });
-    });
-  });
-
-  describe('getCustomMarketingString', () => {
-    describe('should return the "CS" prefix followed by the part of the at_medium field following the word custom', () => {
-      describe('with optional params', () => {
-        it.each`
-          expectation                                                          | href                                                                | expectedValue
-          ${'the value of the "at_campaign" field'}                            | ${'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56'}   | ${'CS123-56----'}
-          ${'the value of the "at_custom1" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=custom123&at_custom1=var_1'} | ${'CS123--[var_1]---'}
-          ${'the value of the "at_custom2" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=custom123&at_custom2=var_2'} | ${'CS123---[var_2]--'}
-          ${'the value of the "at_custom3" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=custom123&at_custom3=var_3'} | ${'CS123----[var_3]-'}
-          ${'the value of the "at_custom4" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=custom123&at_custom4=var_4'} | ${'CS123-----[var_4]'}
-        `(
-          'should return marketing string for $expectation',
-          ({ href, expectedValue }) => {
-            expect(getCustomMarketingString(href)).toEqual(expectedValue);
-          },
-        );
-      });
-      describe('with all params', () => {
-        it('should return all fields', () => {
-          const href =
-            'https://www.bbc.com/mundo?at_medium=custom123&at_campaign=56&at_custom1=var_1&at_custom2=var_2&at_custom3=var_3&at_custom4=var_4';
-          const expected = 'CS123-56-[var_1]-[var_2]-[var_3]-[var_4]';
-
-          expect(getCustomMarketingString(href)).toEqual(expected);
         });
       });
     });

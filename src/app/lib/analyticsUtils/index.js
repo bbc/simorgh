@@ -374,43 +374,6 @@ export const getEmailMarketingString = href =>
     },
   ]);
 
-export const getCustomMarketingString = href =>
-  buildMarketingString([
-    {
-      description: 'custom campaign prefix',
-      value: `CS${getMarketingUrlParam(href, 'at_medium').replace(
-        'custom',
-        '',
-      )}`,
-      wrap: false,
-    },
-    {
-      description: 'at_campaign field',
-      value: getMarketingUrlParam(href, 'at_campaign'),
-      wrap: false,
-    },
-    {
-      description: 'at_custom1 field',
-      value: getMarketingUrlParam(href, 'at_custom1'),
-      wrap: true,
-    },
-    {
-      description: 'at_custom2 field',
-      value: getMarketingUrlParam(href, 'at_custom2'),
-      wrap: true,
-    },
-    {
-      description: 'at_custom_3 field',
-      value: getMarketingUrlParam(href, 'at_custom3'),
-      wrap: true,
-    },
-    {
-      description: 'at_custom_4 field',
-      value: getMarketingUrlParam(href, 'at_custom4'),
-      wrap: true,
-    },
-  ]);
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>
