@@ -288,49 +288,6 @@ export const getAffiliateMarketingString = href =>
     },
   ]);
 
-export const getSLMarketingString = href =>
-  buildMarketingString([
-    {
-      description: 'sponsored links campaign prefix',
-      value: 'SEC',
-      wrap: false,
-    },
-    {
-      description: 'at_campaign field',
-      value: getMarketingUrlParam(href, 'at_campaign'),
-      wrap: false,
-    },
-    {
-      description: 'at_platform field',
-      value: getMarketingUrlParam(href, 'at_platform'),
-      wrap: true,
-    },
-    {
-      description: 'at_creation field',
-      value: getMarketingUrlParam(href, 'at_creation'),
-      wrap: true,
-    },
-    {
-      description: 'at_variant field',
-      value: getMarketingUrlParam(href, 'at_variant'),
-      wrap: true,
-    },
-    {
-      description: 'at_network field',
-      value:
-        {
-          search: 'F=S',
-          content: 'F=C',
-        }[getMarketingUrlParam(href, 'at_network')] || '',
-      wrap: false,
-    },
-    {
-      description: 'at_term field',
-      value: getMarketingUrlParam(href, 'at_term'),
-      wrap: true,
-    },
-  ]);
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>

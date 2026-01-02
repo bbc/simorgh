@@ -25,7 +25,6 @@ const {
   sanitise,
   getThingAttributes,
   getAffiliateMarketingString,
-  getSLMarketingString,
   onOnionTld,
 } = require('./index');
 
@@ -399,39 +398,6 @@ describe('analyticsUtils', () => {
             'al-73-[partner]-[whatsapp]-[Link]-[wsmundo]-[Editorial]';
 
           expect(getAffiliateMarketingString(href)).toEqual(expected);
-        });
-      });
-    });
-  });
-
-  describe('getSLMarketingString', () => {
-    describe('should return the "SEC" prefix', () => {
-      describe('with optional params', () => {
-        it.each`
-          expectation                                                                                       | href                                                               | expectedValue
-          ${'the value of the "at_campaign" field'}                                                         | ${'https://www.bbc.com/mundo?at_medium=sl&at_campaign=73'}         | ${'SEC-73-----'}
-          ${'with the value of the "at_platform" field, wrapped in square brackets'}                        | ${'https://www.bbc.com/mundo?at_medium=sl&at_platform=google'}     | ${'SEC--[google]----'}
-          ${'the value of the "at_creation" field, wrapped in square brackets'}                             | ${'https://www.bbc.com/mundo?at_medium=sl&at_creation=my_adgroup'} | ${'SEC---[my_adgroup]---'}
-          ${'the value of the "at_variant" field, wrapped in square brackets'}                              | ${'https://www.bbc.com/mundo?at_medium=sl&at_variant=Editorial'}   | ${'SEC----[Editorial]--'}
-          ${'the value of the "at_network" field when "at_network" field is "search"'}                      | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=search'}      | ${'SEC-----F=S-'}
-          ${'the value of the "at_network" field when "at_network" field is "content"'}                     | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=content'}     | ${'SEC-----F=C-'}
-          ${'the value of the "at_network" field when "at_network" field is neither "content" or "search"'} | ${'https://www.bbc.com/mundo?at_medium=sl&at_network=foobar'}      | ${'SEC------'}
-          ${'the value of the at_term field, wrapped in square brackets'}                                   | ${'https://www.bbc.com/mundo?at_medium=sl&at_term=article'}        | ${'SEC------[article]'}
-        `(
-          'should return marketing string for $expectation',
-          ({ href, expectedValue }) => {
-            expect(getSLMarketingString(href)).toEqual(expectedValue);
-          },
-        );
-      });
-      describe('with all params', () => {
-        it('should return all fields', () => {
-          const href =
-            'https://www.bbc.com/mundo?at_medium=sl&at_term=article&at_network=search&at_creation=my_adgroup&at_variant=Editorial&at_platform=google&at_campaign=73';
-          const expected =
-            'SEC-73-[google]-[my_adgroup]-[Editorial]-F=S-[article]';
-
-          expect(getSLMarketingString(href)).toEqual(expected);
         });
       });
     });
