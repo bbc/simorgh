@@ -42,13 +42,6 @@ const FIXTURE_PAGEDATA = {
   },
 };
 
-const SRC_RSS_FIXTURE = {
-  key: 'src_medium',
-  description: 'rss campaign prefix',
-  value: 'RSS',
-  wrap: false,
-};
-
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
     beforeEach(() => {
