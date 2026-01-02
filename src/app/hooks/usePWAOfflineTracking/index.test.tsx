@@ -97,7 +97,7 @@ describe('usePWAOfflineTracking', () => {
 
     rerender();
 
-    expect(mockTrackOfflinePageViewEvent).toHaveBeenCalledTimes(0);
+    expect(mockTrackOfflinePageViewEvent).toHaveBeenCalledTimes(1);
   });
 
   it('should fire event again after flag is set again on next offline visit', () => {
