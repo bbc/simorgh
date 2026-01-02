@@ -242,39 +242,6 @@ const getQueryParamsFromURL = href => {
   return { ...query, ...hashParams };
 };
 
-export const getCampaignType = () => {
-  if (!onClient()) return null;
-
-  // Gets the query string parameters from the current url parsing them as an object
-  const queryWithParams = getQueryParamsFromURL(window.location.href);
-
-  // Check for the presence of the `?at_medium` QS
-  const isMediumCampaign = Object.prototype.hasOwnProperty.call(
-    queryWithParams,
-    MEDIUM_CAMPAIGN_IDENTIFIER,
-  );
-
-  // Checks for the presence of the `?xtor` WS or anchor e.g. `#xtor`
-  const isXtorCampaign = Object.prototype.hasOwnProperty.call(
-    queryWithParams,
-    XTOR_CAMPAIGN_IDENTIFIER,
-  );
-
-  if (isMediumCampaign) {
-    const isSupportedMediumCampaignType = SUPPORTED_MEDIUM_CAMPAIGN_TYPES.some(
-      type => queryWithParams[MEDIUM_CAMPAIGN_IDENTIFIER].includes(type),
-    );
-
-    return isSupportedMediumCampaignType
-      ? queryWithParams[MEDIUM_CAMPAIGN_IDENTIFIER]
-      : null;
-  }
-
-  if (isXtorCampaign) return 'XTOR';
-
-  return null;
-};
-
 const getMarketingUrlParam = (href, field) => {
   const queryWithParams = getQueryParamsFromURL(href);
 

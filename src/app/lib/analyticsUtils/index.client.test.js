@@ -25,7 +25,6 @@ const {
   sanitise,
   getThingAttributes,
   getXtorMarketingString,
-  getCampaignType,
   getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
@@ -412,37 +411,6 @@ describe('analyticsUtils', () => {
       const thingAttributes = getThingAttributes('fooBar', {});
 
       expect(thingAttributes).toEqual(null);
-    });
-  });
-
-  describe('getCampaignType', () => {
-    test.each`
-      qsValue                   | expected
-      ${'?at_medium=email'}     | ${'email'}
-      ${'?at_medium=affiliate'} | ${'affiliate'}
-      ${'?at_medium=custom123'} | ${'custom123'}
-      ${'?at_medium=sl'}        | ${'sl'}
-      ${'?at_medium=foo'}       | ${null}
-      ${'?xtor=123'}            | ${'XTOR'}
-      ${'?at_medium=RSS'}       | ${'RSS'}
-    `('should return a campaign type of $expected', ({ qsValue, expected }) => {
-      windowLocationHrefSpy.mockImplementation(
-        () => `https://www.bbc.com/mundo${qsValue}`,
-      );
-
-      const campaignType = getCampaignType();
-
-      expect(campaignType).toEqual(expected);
-    });
-
-    it('should return campaign type of XTOR', () => {
-      windowLocationHrefSpy.mockImplementation(
-        () => 'https://www.bbc.com/mundo#xtor',
-      );
-
-      const campaignType = getCampaignType();
-
-      expect(campaignType).toEqual('XTOR');
     });
   });
 
