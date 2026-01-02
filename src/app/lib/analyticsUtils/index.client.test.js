@@ -23,7 +23,6 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getThingAttributes,
   onOnionTld,
 } = require('./index');
 
@@ -340,34 +339,6 @@ describe('analyticsUtils', () => {
       });
       expect(cookieOptions).toEqual({ expires: 397, path: '/', secure: true });
       expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe('getThingAttributes', () => {
-    const data = {
-      metadata: {
-        tags: {
-          about: [{ thingId: 'foo bar' }, { thingId: 'baz' }],
-        },
-      },
-    };
-
-    it('should return thing names in good data', () => {
-      const thingAttributes = getThingAttributes('thingId', data);
-
-      expect(thingAttributes).toEqual('foo%20bar~baz');
-    });
-
-    it('should return null if type not found', () => {
-      const thingAttributes = getThingAttributes('fooBar', data);
-
-      expect(thingAttributes).toEqual(null);
-    });
-
-    it('should return null if invalid data', () => {
-      const thingAttributes = getThingAttributes('fooBar', {});
-
-      expect(thingAttributes).toEqual(null);
     });
   });
 

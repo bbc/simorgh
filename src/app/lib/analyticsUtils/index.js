@@ -197,24 +197,6 @@ export const getPublishedDatetime = (attribute, data) => {
     : null;
 };
 
-export const getThingAttributes = (attribute, articleData) => {
-  const things = pathOr(null, ['metadata', 'tags', 'about'], articleData);
-
-  if (things) {
-    const attributes = [];
-
-    things.forEach(thing => {
-      if (thing[attribute]) {
-        attributes.push(thing[attribute].trim().replace(/\s/g, '%20'));
-      }
-    });
-
-    return attributes.join('~') || null;
-  }
-
-  return null;
-};
-
 export const LIBRARY_VERSION = 'simorgh';
 
 export const onOnionTld = () =>
