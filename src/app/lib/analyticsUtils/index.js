@@ -374,50 +374,6 @@ export const getEmailMarketingString = href =>
     },
   ]);
 
-export const getDisplayMarketingString = href =>
-  buildMarketingString([
-    {
-      description: 'display campaign prefix',
-      value: 'AD',
-      wrap: false,
-    },
-    {
-      description: 'at_campaign field',
-      value: getMarketingUrlParam(href, 'at_campaign'),
-      wrap: false,
-    },
-    {
-      description: 'at_creation field',
-      value: getMarketingUrlParam(href, 'at_creation'),
-      wrap: true,
-    },
-    {
-      description: 'at_variant field',
-      value: getMarketingUrlParam(href, 'at_variant'),
-      wrap: true,
-    },
-    {
-      description: 'at_format field',
-      value: getMarketingUrlParam(href, 'at_format'),
-      wrap: true,
-    },
-    {
-      description: 'blank value (-)',
-      value: '',
-      wrap: false,
-    },
-    {
-      description: 'at_general_placement field',
-      value: getMarketingUrlParam(href, 'at_general_placement'),
-      wrap: true,
-    },
-    {
-      description: 'at_detail_placement field',
-      value: getMarketingUrlParam(href, 'at_detail_placement'),
-      wrap: true,
-    },
-  ]);
-
 export const getCustomMarketingString = href =>
   buildMarketingString([
     {

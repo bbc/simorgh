@@ -28,7 +28,6 @@ const {
   getSLMarketingString,
   getEmailMarketingString,
   getCustomMarketingString,
-  getDisplayMarketingString,
   onOnionTld,
 } = require('./index');
 
@@ -467,37 +466,6 @@ describe('analyticsUtils', () => {
           const expected = 'ES-56-[wsmundo]-20190401-[cta_button]-5633@200';
 
           expect(getEmailMarketingString(href)).toEqual(expected);
-        });
-      });
-    });
-  });
-
-  describe('getDisplayMarketingString', () => {
-    describe('should return the "AD" prefix', () => {
-      describe('with optional params', () => {
-        it.each`
-          expectation                                                                    | href                                                                           | expectedValue
-          ${'the value of the "at_campaign" field'}                                      | ${'https://www.bbc.com/mundo?at_medium=display&at_campaign=56'}                | ${'AD-56------'}
-          ${'the value of the "at_creation" field, wrapped in square brackets'}          | ${'https://www.bbc.com/mundo?at_medium=display&at_creation=wsmundo'}           | ${'AD--[wsmundo]-----'}
-          ${'the value of the "at_variant" field, wrapped in square brackets'}           | ${'https://www.bbc.com/mundo?at_medium=custom123&at_variant=Editorial'}        | ${'AD---[Editorial]----'}
-          ${'the value of the "at_format" field, wrapped in square brackets'}            | ${'https://www.bbc.com/mundo?at_medium=custom123&at_format=Link'}              | ${'AD----[Link]---'}
-          ${'the value of the "at_general_placement" field, wrapped in square brackets'} | ${'https://www.bbc.com/mundo?at_medium=custom123&at_general_placement=home'}   | ${'AD------[home]-'}
-          ${'the value of the "at_detail_placement" field, wrapped in square brackets'}  | ${'https://www.bbc.com/mundo?at_medium=custom123&at_detail_placement=sidebar'} | ${'AD-------[sidebar]'}
-        `(
-          'should return marketing string for $expectation',
-          ({ href, expectedValue }) => {
-            expect(getDisplayMarketingString(href)).toEqual(expectedValue);
-          },
-        );
-      });
-      describe('with all params', () => {
-        it('should return all fields', () => {
-          const href =
-            'https://www.bbc.com/mundo?at_medium=display&at_campaign=56&at_creation=wsmundo&at_variant=Editorial&at_format=Link&at_general_placement=home&at_detail_placement=sidebar';
-          const expected =
-            'AD-56-[wsmundo]-[Editorial]-[Link]--[home]-[sidebar]';
-
-          expect(getDisplayMarketingString(href)).toEqual(expected);
         });
       });
     });
