@@ -76,25 +76,29 @@ const testSuites = [
   {
     path: '/serbian/lat',
     runforEnv: ['local', 'test', 'live'],
-    service: '/serbian/lat',
+    service: 'serbian',
+    variant: 'lat',
     tests,
   },
   {
     path: '/serbian/cyr',
     runforEnv: ['local', 'test', 'live'],
-    service: '/serbian/cyr',
+    service: 'serbian',
+    variant: 'cyr',
     tests,
   },
   {
     path: '/uzbek/lat',
     runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/lat',
+    service: 'uzbek',
+    variant: 'lat',
     tests,
   },
   {
     path: '/uzbek/cyr',
     runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
     tests,
   },
 ];
@@ -258,7 +262,7 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
     tests: [...liteSiteTests],
   };
-});
+}) as unknown as TestDataType[];
 
 runTestsForPage({
   pageType: HOME_PAGE,
