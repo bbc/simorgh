@@ -32,14 +32,6 @@ const {
   onOnionTld,
 } = require('./index');
 
-const FIXTURE_PAGEDATA = {
-  metadata: {
-    analyticsLabels: {
-      contentId: 'urn:bbc:cps:curie:asset:29375628-9511-42e6-be88-ebaa1158f597',
-    },
-  },
-};
-
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
     beforeEach(() => {
