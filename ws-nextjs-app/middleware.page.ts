@@ -6,7 +6,7 @@ export default (req: NextRequest) => {
   const { pathname } = req.nextUrl;
   const BASE_PATH = 'worldservice';
 
-  // All page update requests made from the client-side will go forward normally since the client will add the base path by default.
+  // Requests that already have the base path will go forward noramlly.
   if (req.nextUrl.href.includes(BASE_PATH)) {
     return NextResponse.next();
   }
