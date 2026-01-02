@@ -25,7 +25,6 @@ const {
   sanitise,
   getThingAttributes,
   getXtorMarketingString,
-  getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -410,42 +409,6 @@ describe('analyticsUtils', () => {
       const thingAttributes = getThingAttributes('fooBar', {});
 
       expect(thingAttributes).toEqual(null);
-    });
-  });
-
-  describe('getRSSMarketingString', () => {
-    describe('"RSS" prefix', () => {
-      it('returns "src_medium" when marketing string is present in url', () => {
-        const href = 'https://www.bbc.com/mundo?at_medium=RSS';
-        expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
-      });
-      it('return empty array when campaign is not RSS', () => {
-        const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-        expect(getRSSMarketingString(href, 'affiliate')).toEqual([]);
-      });
-
-      it('return empty array when campaign is null', () => {
-        const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-        expect(getRSSMarketingString(href, null)).toEqual([]);
-      });
-
-      it('return empty array when campaign is undefined', () => {
-        const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-        expect(getRSSMarketingString(href, undefined)).toEqual([]);
-      });
-
-      describe('with optional params', () => {
-        it.each`
-          expectation                                     | href                                                              | expectedValue
-          ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=RSS&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
-          ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=RSS&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
-        `(
-          'should return marketing string for $expectation',
-          ({ href, expectedValue }) => {
-            expect(getRSSMarketingString(href, 'RSS')).toEqual(expectedValue);
-          },
-        );
-      });
     });
   });
 
