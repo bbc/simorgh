@@ -74,7 +74,7 @@ export default defineConfig({
               },
               {
                 test: /\.(ts|tsx)$/,
-                include: [resolvePath('src'), resolvePath('ws-nextjs-app')],
+                include: [resolvePath('src')],
                 use: [
                   'babel-loader',
                   {
