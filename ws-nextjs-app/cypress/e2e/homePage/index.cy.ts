@@ -267,6 +267,7 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 runTestsForPage({
   pageType: HOME_PAGE,
   headers: {
+    'page-type': 'home',
     'BBC-Adverts': 'true',
   },
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
