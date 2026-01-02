@@ -16,7 +16,6 @@ const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 const {
   getDestination,
   enforceLegacyDestinationForJapanese,
-  getBrowserViewPort,
   getCurrentTime,
   getDeviceLanguage,
   getAppType,
@@ -179,28 +178,6 @@ describe('analyticsUtils', () => {
         const appType = getAppType(platform);
         expect(appType).toEqual(expected);
       });
-    });
-  });
-
-  describe('getBrowserViewPort', () => {
-    returnsNullWhenOffClient(getBrowserViewPort);
-
-    it('should concat values, joined by "x"', () => {
-      jest.spyOn(window, 'innerWidth', 'get').mockImplementation(() => 1234);
-      jest.spyOn(window, 'innerHeight', 'get').mockImplementation(() => 4321);
-
-      const browserViewPort = getBrowserViewPort();
-
-      expect(browserViewPort).toEqual('1234x4321');
-    });
-
-    it('should use 0 to fill unknown values', () => {
-      jest.spyOn(window, 'innerWidth', 'get').mockImplementation(() => null);
-      jest.spyOn(window, 'innerHeight', 'get').mockImplementation(() => 4321);
-
-      const browserViewPort = getBrowserViewPort();
-
-      expect(browserViewPort).toEqual('0x4321');
     });
   });
 

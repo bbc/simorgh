@@ -101,20 +101,6 @@ export const isLocServeCookieSet = platform => {
   return null;
 };
 
-export const getBrowserViewPort = platform => {
-  if (platform === 'amp') {
-    return `\${availableScreenWidth}x\${availableScreenHeight}`;
-  }
-
-  if (onClient()) {
-    const { innerWidth, innerHeight } = window;
-
-    return [innerWidth || 0, innerHeight || 0].join('x');
-  }
-
-  return null;
-};
-
 export const getCurrentTime = platform => {
   if (platform === 'amp') {
     return `\${timestamp}`;
