@@ -1,7 +1,7 @@
 import {
   runCoreCanonicalTests,
   runCanonicalAnalyticsTests,
-} from '#src/integration/common';
+} from '../../common';
 import runCrossPlatformTests from './crossPlatformTests';
 
 export default (service: string) => {
