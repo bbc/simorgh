@@ -47,6 +47,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Somali',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Xayeysiin WhatsApp',
+      brandTitle: 'BBC Somali WhatsApp',
+      brandDescription:
+        'Warbixinada qotada dheer iyo wararka BBC Somali oo toos kuugu imanaaya WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mqc02v.png',
+        alt: 'BBC Somali xayeysiin WhatsApp',
+      },
+      linkLabel: {
+        text: 'Halkaan kaga soo biir',
+        href: 'https://www.whatsapp.com/channel/0029Vb7CBbA0rGiHILXDlJ3u',
+      },
+      skipLink: {
+        text: 'Iska gudbi, siina wada aqrinta',
+        endTextVisuallyHidden: 'Dhamaadka xayeysiinta',
+      },
+    },
     translations: {
       pagination: {
         page: 'Bog',
