@@ -1,38 +1,40 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import canonicalTests from './testsForCanonicalOnly';
-import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
 import {
   assertBillboardComponentView,
   assertBillboardComponentClick,
-} from '../../specialFeatures/atiAnalytics/assertions/billboard';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+} from '../specialFeatures/atiAnalytics/assertions/billboard';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/messageBanner';
+} from '../specialFeatures/atiAnalytics/assertions/messageBanner';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/mostRead';
+} from '../specialFeatures/atiAnalytics/assertions/mostRead';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/navigation';
-import { assertPortraitVideoCarouselComponentView } from '../../specialFeatures/atiAnalytics/assertions/portraitVideoCarousel';
-import { assertPortraitVideoModalComponentView } from '../../specialFeatures/atiAnalytics/assertions/portraitVideoModal';
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
+import { assertPortraitVideoCarouselComponentView } from '../specialFeatures/atiAnalytics/assertions/portraitVideoCarousel';
+import { assertPortraitVideoModalComponentView } from '../specialFeatures/atiAnalytics/assertions/portraitVideoModal';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
+} from '../specialFeatures/atiAnalytics/assertions/radioSchedule';
+import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import urlValidationTest from '../../support/helpers/urlValidationTest';
 
-const tests = [canonicalTests, urlValidationTest, testsForAllCanonicalPages];
+const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
 
 const testSuites = [
   {
@@ -74,25 +76,29 @@ const testSuites = [
   {
     path: '/serbian/lat',
     runforEnv: ['local', 'test', 'live'],
-    service: '/serbian/lat',
+    service: 'serbian',
+    variant: 'lat',
     tests,
   },
   {
     path: '/serbian/cyr',
     runforEnv: ['local', 'test', 'live'],
-    service: '/serbian/cyr',
+    service: 'serbian',
+    variant: 'cyr',
     tests,
   },
   {
     path: '/uzbek/lat',
     runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/lat',
+    service: 'uzbek',
+    variant: 'lat',
     tests,
   },
   {
     path: '/uzbek/cyr',
     runforEnv: ['local', 'test', 'live'],
-    service: '/uzbek/cyr',
+    service: 'uzbek',
+    variant: 'cyr',
     tests,
   },
 ];
@@ -221,9 +227,9 @@ const atiAnalyticsTestSuites = [
       assertMostReadComponentView,
     ],
   },
-];
+] as unknown as TestDataType[];
 
-let smokeTests = [];
+let smokeTests: typeof testSuites = [];
 
 // TEMP: Disable homepage smoke tests on the test environment due to flakiness
 if (Cypress.env('SMOKE')) {
@@ -235,7 +241,7 @@ if (Cypress.env('SMOKE')) {
   });
 }
 
-const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
     assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
     assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
@@ -256,10 +262,14 @@ const atiAnalyticsliteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
     tests: [...liteSiteTests],
   };
-});
+}) as unknown as TestDataType[];
 
 runTestsForPage({
   pageType: HOME_PAGE,
+  headers: {
+    'page-type': 'home',
+    'BBC-Adverts': 'true',
+  },
   testSuites: Cypress.env('SMOKE') ? smokeTests : testSuites,
 });
 
@@ -272,6 +282,6 @@ runTestsForPage({
 
 runTestsForPage({
   pageType: HOME_PAGE,
-  testSuites: atiAnalyticsliteTestSuites,
+  testSuites: atiAnalyticsLiteTestSuites,
   beforeAll: [setUserIDCookie],
 });
