@@ -165,7 +165,7 @@ const fetchEventHandler = async event => {
         const cached = await cache.match(event.request);
         if (cached) return cached;
 
-        const networkResp = await fetch(event.request);
+        const networkResp = await fetch(event.request.url);
         cache.put(event.request, networkResp.clone());
         return networkResp;
       })(),
