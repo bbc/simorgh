@@ -66,7 +66,7 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
     service,
   });
 
-  if (!readTimeInMilliseconds || !readTimeText) return null;
+  if (!readTimeText) return null;
 
   return (
     <div
