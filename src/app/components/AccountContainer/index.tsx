@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import useIdctaConfig from './hooks/useIdctaConfig';
 import MessageBanner from '../MessageBanner';
+import { isSignedIn } from './idcta/isSignedIn';
 
 export default function AccountContainer() {
   // might not be needed?
@@ -11,7 +12,8 @@ export default function AccountContainer() {
   }, []);
 
   const config = useIdctaConfig({
-    ptrt,
+    // TODO: Temp - used for testing
+    ptrt: 'https://www.bbc.com/hindi?test=true',
     userOrigin: 'simorgh',
   });
 
@@ -21,14 +23,24 @@ export default function AccountContainer() {
     return null;
   }
 
-  console.log({ config, ptrt });
+  const isUserSignedIn = isSignedIn();
+
+  console.log({ config, ptrt, isUserSignedIn });
 
   return (
-    <MessageBanner
-      heading="World Service - Account Container"
-      description="IDCTA integration"
-      link={registerUrl}
-      linkText="Sign up"
-    />
+    <div>
+      <MessageBanner
+        heading="Account Container - Register"
+        link={registerUrl}
+        description={`Already signed in: ${isUserSignedIn}`}
+        linkText="Register"
+      />
+      <MessageBanner
+        heading="World Service - Sign In"
+        description={`Already signed in: ${isUserSignedIn}`}
+        link={signInUrl}
+        linkText="Sign in"
+      />
+    </div>
   );
 }

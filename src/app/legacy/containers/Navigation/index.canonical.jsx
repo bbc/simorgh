@@ -43,6 +43,7 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
+  children,
 }) => {
   const { isLite } = use(RequestContext);
   const { enabled } = useToggle('topBarOJs');
@@ -73,6 +74,7 @@ const CanonicalNavigationContainer = ({
       <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
       <Divider />
       {enabled && <TopBarOJs blocks={blocks} />}
+      {children}
     </Navigation>
   );
 };

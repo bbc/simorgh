@@ -188,6 +188,7 @@ const Brand = forwardRef((props, ref) => {
     isLongBrand = false,
     skipLink = null,
     linkId = null,
+    children,
     ...rest
   } = props;
 
@@ -216,6 +217,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {scriptLink && <div>{scriptLink}</div>}
+        {children}
       </SvgWrapper>
     </Banner>
   );

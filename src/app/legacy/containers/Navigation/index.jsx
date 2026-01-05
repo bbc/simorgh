@@ -49,7 +49,7 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForTopBarOJComponent }) => {
+const NavigationContainer = ({ propsForTopBarOJComponent, children }) => {
   const { isAmp, isLite } = use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
@@ -144,7 +144,9 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
       script={script}
       service={service}
       blocks={blocks}
-    />
+    >
+      {children}
+    </Navigation>
   );
 };
 

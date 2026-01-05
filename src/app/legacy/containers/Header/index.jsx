@@ -12,6 +12,7 @@ import {
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import AccountContainer from '#app/components/AccountContainer';
+import HeaderAccount from '#app/components/AccountContainer/HeaderAccount';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -35,6 +36,8 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   };
 
   // linkId={linkId || 'topPage'} is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+
+  // TODO: render Header config if global Config is available
   return (
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
@@ -44,7 +47,9 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+      >
+        <HeaderAccount />
+      </BrandContainer>
     </div>
   );
 };
@@ -111,8 +116,9 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
       {isLite && <LiteSiteSummary />}
       <NavigationContainer
         propsForTopBarOJComponent={propsForTopBarOJComponent}
-      />
-      <AccountContainer />
+      >
+        <AccountContainer />
+      </NavigationContainer>
     </header>
   );
 };
