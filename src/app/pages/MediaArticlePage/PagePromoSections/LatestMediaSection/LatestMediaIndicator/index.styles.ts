@@ -1,14 +1,23 @@
 import { css, Theme } from '@emotion/react';
 
 const styles = {
-  placeholderInfo: ({ mq, fontSizes, fontVariants, palette, isLite }: Theme) =>
+  placeholderInfo: ({
+    mq,
+    fontSizes,
+    fontVariants,
+    palette,
+    isLite,
+    isDarkUi,
+  }: Theme) =>
     css({
+      position: 'relative',
       width: '100%',
       ...fontSizes.minion,
       ...fontVariants.sansRegular,
       display: 'flex',
       minWidth: '5rem',
       padding: '0.5rem 0.125rem',
+      backgroundColor: isDarkUi ? palette.GREY_10 : palette.GREY_2,
 
       ...(!isLite && {
         [mq.GROUP_3_ONLY]: {

@@ -127,7 +127,7 @@ exports[`Canonical Home Page Footer Anchors should match text and url 10`] = `
 
 exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2026 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Home Page Header I can see the branding 1`] = `
 {

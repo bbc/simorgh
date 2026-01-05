@@ -121,7 +121,7 @@ exports[`Canonical Media Article Page Footer Anchors should match text and url 9
 
 exports[`Canonical Media Article Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Media Article Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Media Article Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Media Article Page Header I can see the branding 1`] = `
 {
@@ -213,6 +213,13 @@ exports[`Canonical Media Article Page Latest Media should match text and url 4`]
 {
   "text": "Video, 'We dey good to go for dis election' - INEC Boss, Duration 6,17",
   "url": "/pidgin/articles/cw0x29n2pvqo",
+}
+`;
+
+exports[`Canonical Media Article Page Latest Media should match text and url 5`] = `
+{
+  "text": "Video, 'Evribodi dey negotiate wit outlaws, including America' - Sheikh Gumi, Duration 5,21",
+  "url": "/pidgin/articles/ce3zyp0z93do",
 }
 `;
 
