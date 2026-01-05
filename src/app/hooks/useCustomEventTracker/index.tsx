@@ -57,6 +57,23 @@ const useCustomEventTracker = ({
       ].every(Boolean);
 
       if (shouldSendEvent) {
+        // Adding console logs to help debug event tracking issues - will remove later
+        // eslint-disable-next-line no-console
+        console.log('Tracking custom event:', {
+          eventName,
+          stringifiedData,
+          campaignID,
+          pageIdentifier,
+          platform,
+          producerId,
+          producerName,
+          service,
+          statsDestination,
+          useReverb,
+          experimentName,
+          experimentVariant,
+        });
+
         try {
           await sendEventBeacon({
             type: VIEW_EVENT,

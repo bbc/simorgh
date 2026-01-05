@@ -58,7 +58,11 @@ const cacheOfflinePageAndResources = async service => {
     .filter(Boolean)
     .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
     .map(url => new URL(url, self.location.origin).href);
-
+  // Adding console logs to help debug event tracking issues - will remove later
+  console.log(
+    `[SW v${version}] Caching offline resources for ${service}:`,
+    resources,
+  );
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
 
