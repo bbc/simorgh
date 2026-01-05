@@ -94,6 +94,10 @@ const assertLocationSpecificPianoDestinationExists = ({ service }) => {
 };
 
 const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
+  // if (['responsive', 'lite'].includes(applicationType)) {
+  //   expect(params).to.have.property('idclient');
+  // }
+
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
   expect(params).to.have.property('context');
@@ -250,14 +254,6 @@ const assertViewabilityModelViewEvent = ({
 
   assertReverbViewabilityComponentEventParamsExist({ params });
 
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
-
   expect(params.events).to.satisfy(
     payload =>
       validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
@@ -302,14 +298,6 @@ const assertViewabilityModelClickEvent = ({
   assertReverbViewabilityComponentEventParamsExist({
     params,
   });
-
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
 
   expect(params.events).to.satisfy(
     payload =>
