@@ -3,7 +3,7 @@
  * @pathname /pidgin/articles/c578zj113e9o
  */
 
-import { runAmpIframeTests } from '#src/integration/common';
+import { runAmpIframeTests } from '../../../common';
 
 describe('AMP', () => {
   describe(pageType, () => {

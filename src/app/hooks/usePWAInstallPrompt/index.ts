@@ -10,12 +10,16 @@ interface UsePWAInstallPromptCallbacks {
   onAccepted?: () => void;
   onDismissed?: () => void;
   onError?: (error: unknown) => void;
+  onPromptShown?: () => void;
+  deferPrompt?: boolean;
 }
 
 const usePWAInstallPrompt = ({
   onAccepted,
   onDismissed,
   onError,
+  onPromptShown,
+  deferPrompt = true,
 }: UsePWAInstallPromptCallbacks = {}) => {
   const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
@@ -28,8 +32,10 @@ const usePWAInstallPrompt = ({
       return undefined;
     }
     const handleBeforeInstallPrompt = (event: Event) => {
-      if (typeof event.preventDefault === 'function') event.preventDefault();
-      deferredPrompt.current = event as BeforeInstallPromptEvent;
+      if (deferPrompt) {
+        event?.preventDefault();
+        deferredPrompt.current = event as BeforeInstallPromptEvent;
+      }
       setIsInstallable(true);
     };
     window.addEventListener(
@@ -45,26 +51,31 @@ const usePWAInstallPrompt = ({
         handleBeforeInstallPrompt as EventListener,
       );
     };
-  }, [isPWA]);
+  }, [deferPrompt, isPWA]);
 
-  const promptInstall = () => {
+  const promptInstall = async () => {
     if (!deferredPrompt.current) return;
-    deferredPrompt.current.prompt();
-    deferredPrompt.current.userChoice
-      .then(result => {
-        if (result.outcome === 'accepted') {
-          onAccepted?.();
-        } else {
-          onDismissed?.();
-        }
-      })
-      .catch(error => {
-        onError?.(error);
-      })
-      .finally(() => {
-        deferredPrompt.current = null;
-        setIsInstallable(false);
-      });
+    try {
+      await deferredPrompt.current.prompt();
+      onPromptShown?.();
+      deferredPrompt.current.userChoice
+        .then(result => {
+          if (result.outcome === 'accepted') {
+            onAccepted?.();
+          } else {
+            onDismissed?.();
+          }
+        })
+        .catch(error => {
+          onError?.(error);
+        })
+        .finally(() => {
+          deferredPrompt.current = null;
+          setIsInstallable(false);
+        });
+    } catch (error) {
+      onError?.(error);
+    }
   };
 
   return {

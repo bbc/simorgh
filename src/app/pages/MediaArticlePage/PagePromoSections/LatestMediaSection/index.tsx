@@ -65,6 +65,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
       ) : (

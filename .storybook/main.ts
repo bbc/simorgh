@@ -1,16 +1,20 @@
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
-
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import dotenv from 'dotenv';
 import webpack from 'webpack';
 import {
   getProjectRoot,
   resolvePathInStorybookCache,
 } from 'storybook/internal/common';
+import type { StorybookConfig } from '@storybook/react-webpack5';
+
 import alias from '../dirAlias';
+
+import { getClientEnvVars } from '../src/clientEnvVars';
 import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 
 const require = createRequire(import.meta.url);
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const storybookConfig: StorybookConfig = {
   previewHead(config) {
@@ -58,6 +62,10 @@ const storybookConfig: StorybookConfig = {
       },
     },
   ],
+  env: config => ({
+    ...config,
+    ...getClientEnvVars(DOT_ENV_CONFIG, { stringify: false }),
+  }),
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);
     const typescriptOptions = await options.presets.apply(
