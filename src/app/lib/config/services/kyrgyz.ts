@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'WhatsApp',
+      title: 'WhatsApp Жарыя',
       brandTitle: 'Би-Би-Синин WhatsApp каналы',
       brandDescription:
         'Күндүн башкы жаңылыктарын Би-Би-Синин WhatsApp каналынан окуңуз',
@@ -58,6 +58,10 @@ export const service: DefaultServiceConfig = {
       linkLabel: {
         text: 'Катталыңыз',
         href: 'https://www.whatsapp.com/channel/0029VbBgIP4D8SE3ZSu7YG0e',
+      },
+      skipLink: {
+        text: 'Жарыяны өткөрүп, макаланы окууну улантыңыз',
+        endTextVisuallyHidden: 'Жарыянын аягы',
       },
     },
     translations: {

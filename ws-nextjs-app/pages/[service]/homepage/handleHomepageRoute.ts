@@ -2,7 +2,7 @@ import { GetServerSidePropsContext } from 'next';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
-import { OK } from '#app/lib/statusCodes.const';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
@@ -18,12 +18,24 @@ export default async (context: GetServerSidePropsContext) => {
     req: { headers: reqHeaders },
   } = context;
 
-  const { service, renderer_env: rendererEnv } =
-    context.query as PageDataParams;
+  const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { variant } = parseRoute(resolvedUrl);
+  const { service, variant } = parseRoute(resolvedUrl);
+
+  if (!service) {
+    return {
+      props: {
+        service,
+        status: NOT_FOUND,
+        timeOnServer: Date.now(),
+        variant: variant || null,
+        pageType: HOME_PAGE,
+        pathname: resolvedUrlWithoutQuery,
+      },
+    };
+  }
 
   const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,

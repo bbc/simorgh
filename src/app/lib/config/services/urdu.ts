@@ -260,7 +260,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
-        recentEpisodes: 'سابق پروگرام',
+        recentEpisodes: 'دیگر پروگرامز',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',
