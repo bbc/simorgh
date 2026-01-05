@@ -250,12 +250,12 @@ export const assertPageView = ({
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({ params });
+  assertReverbViewabilityComponentEventParamsExist({ params, applicationType });
 
   expect(params.events).to.satisfy(
     payload =>
@@ -271,6 +271,7 @@ export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   contentType,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-view`;
@@ -285,6 +286,7 @@ export const assertATIComponentViewEvent = ({
         pageIdentifier,
         contentType,
         params,
+        applicationType,
         siteId,
       });
     });
@@ -293,13 +295,14 @@ export const assertATIComponentViewEvent = ({
 const assertViewabilityModelClickEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
+    applicationType,
   });
 
   expect(params.events).to.satisfy(
@@ -319,6 +322,7 @@ export const assertATIComponentClickEvent = ({
   component,
   contentType,
   pageIdentifier,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-click`;
@@ -332,6 +336,7 @@ export const assertATIComponentClickEvent = ({
         contentType,
         pageIdentifier,
         params,
+        applicationType,
         siteId,
       });
     });
