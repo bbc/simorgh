@@ -37,13 +37,12 @@ const PortraitVideoCarousel = ({
   const { isLite, nonce } = use(RequestContext);
 
   // EXPERIMENT: Homepage Portrait Video 2
-  const playDurationExperimentName = 'newswb_ws_homepage_portrait_video_2';
+  const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
   const playDurationVariation =
     useOptimizelyVariation({
       experimentName: playDurationExperimentName,
       experimentType: ExperimentType.CLIENT_SIDE,
     }) ?? undefined;
-  console.log('Experiment Variation:', playDurationVariation);
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
