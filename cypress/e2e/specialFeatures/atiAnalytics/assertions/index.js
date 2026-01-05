@@ -93,10 +93,13 @@ const assertLocationSpecificPianoDestinationExists = ({ service }) => {
   });
 };
 
-const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params).to.have.property('idclient');
-  // }
+const assertReverbViewabilityComponentEventParamsExist = ({
+  params,
+  applicationType,
+}) => {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
 
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
