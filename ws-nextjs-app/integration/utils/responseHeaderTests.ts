@@ -9,14 +9,6 @@ export default () => {
     });
   });
 
-  // describe('CSP header is set correctly', () => {
-  //   it('should contain the correct Content-Security-Policy header', async () => {
-  //     const fetchResponse = await fetch(window.location.href);
-  //     const cspHeader = fetchResponse.headers.get('Content-Security-Policy');
-  //     expect(cspHeader).toContain("default-src 'self'");
-  //   });
-  // });
-
   describe('Onion-Location header is set correctly', () => {
     it('should contain the correct Onion-Location header', async () => {
       const fetchResponse = await fetch(window.location.href);
