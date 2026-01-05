@@ -2,15 +2,32 @@ export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
       const logo = document.getElementById('brandSvgHeader');
-
       expect(logo).toBeInTheDocument();
-      expect(logo.parentNode.textContent).toBeTruthy();
 
-      const svg = logo.querySelector('g path');
+      const logoContainer = logo?.parentNode;
+      expect(logoContainer).toBeTruthy();
+
+      const possibleBrandingLinks = [
+        document.getElementById('topPage'),
+        document.getElementById('brandLink'),
+      ];
+      const brandingLink = possibleBrandingLinks.find(Boolean);
+
+      const brandingTextId = brandingLink?.getAttribute('aria-labelledby');
+      const brandingTextElement = brandingTextId
+        ? document.getElementById(brandingTextId)
+        : null;
+
+      expect(
+        brandingTextElement && brandingTextElement.textContent,
+      ).toBeTruthy();
+      const brandingText = brandingTextElement?.textContent ?? '';
+
+      const svgPath = logo.querySelector('g path');
 
       expect({
-        svg,
-        brandLink: logo.parentNode.textContent,
+        svg: svgPath,
+        brandLink: brandingText,
       }).toMatchSnapshot();
     });
 
