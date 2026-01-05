@@ -10,7 +10,7 @@ import {
 import derivePageType from '.';
 
 describe('derivePageType', () => {
-  it('should strip our query params from the pathname', () => {
+  it('should strip out query params from the pathname', () => {
     const pathname = '/pidgin/live/xxxxxxxxx?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
