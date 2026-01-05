@@ -1,6 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
