@@ -1,14 +1,5 @@
 import Cookie from 'js-cookie';
-import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
 import onClient from '#lib/utilities/onClient';
-import getUUID from '#lib/utilities/getUUID';
-import isOperaProxy from '#lib/utilities/isOperaProxy';
-import {
-  MEDIUM_CAMPAIGN_IDENTIFIER,
-  XTOR_CAMPAIGN_IDENTIFIER,
-  SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
-} from './analytics.const';
 import getAmpDestination from './getAmpDestination';
 
 export const getDestination = (platform, statsDestination) => {
