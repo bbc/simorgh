@@ -43,11 +43,11 @@ export enum ChevronOrientation {
   FORWARD = 'forward',
 }
 
-type ChevronProps = {
+interface ChevronProps {
   className?: string;
   dir: Direction;
   orientation: ChevronOrientation;
-};
+}
 
 export const Chevron = ({ className, dir, orientation }: ChevronProps) => {
   let normalisedDirection = ChevronOrientation.FORWARD;
@@ -202,6 +202,36 @@ export const Play = ({ className }: { className?: string }) => (
     aria-hidden="true"
   >
     <path d="M29 16 5.8 1v30z" />
+  </svg>
+);
+
+export const Bookmark = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="12"
+    height="12"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    className={className}
+  >
+    <path d="M24 4v22.6l-8-4.5-8 4.5V4h16m2-2H6v28l10-5.6L26 30V2h0z" />
+  </svg>
+);
+
+export const BookmarkFilled = ({ className }: { className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="12"
+    height="12"
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    className={className}
+  >
+    <polygon points="6,2 6,30 15.4,24.7 16,24.4 16.6,24.7 26,30 26,2 " />
   </svg>
 );
 

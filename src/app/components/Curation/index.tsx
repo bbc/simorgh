@@ -22,6 +22,7 @@ import UsefulLinks from '../UsefulLinks';
 import SocialLinks from '../SocialLinks';
 import styles from './index.styles';
 import MediaLoader from '../MediaLoader';
+import BookmarkButton from './BookmarkButton';
 
 const {
   SIMPLE_CURATION_GRID,
@@ -40,6 +41,12 @@ const {
 
 const { NONE } = VISUAL_STYLE;
 const { NORMAL } = VISUAL_PROMINENCE;
+
+interface CurationProps extends Curation {
+  bookmarkable?: boolean;
+  onBookmarkCuration?: (curationId?: string) => void;
+  isBookmarked?: boolean;
+}
 
 const getGridComponent = (componentName: string | null) => {
   switch (componentName) {
@@ -70,7 +77,10 @@ export default ({
   timeOfDayExperimentName,
   timeOfDayVariant,
   mediaCollection,
-}: Curation) => {
+  bookmarkable = false,
+  onBookmarkCuration,
+  isBookmarked = false,
+}: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -172,12 +182,28 @@ export default ({
       return embed ? <Embed oembed={embed} /> : null;
     case PORTRAIT_VIDEO_CAROUSEL:
       if (portraitVideo?.blocks && portraitVideo?.blocks?.length > 0) {
+        const showBookmarkButton =
+          bookmarkable &&
+          typeof onBookmarkCuration === 'function' &&
+          !!curationId;
+        const bookmarkLabelBase =
+          title?.trim() || curationSubheading || 'curation';
+
         return (
           <PortraitVideoCarousel
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
             timeOfDayVariant={timeOfDayVariant ?? undefined}
+            bookmarkButton={
+              showBookmarkButton ? (
+                <BookmarkButton
+                  label={`${isBookmarked ? 'Remove bookmark' : 'Bookmark'} ${bookmarkLabelBase}`}
+                  isBookmarked={isBookmarked}
+                  onClick={() => onBookmarkCuration?.(curationId)}
+                />
+              ) : undefined
+            }
           />
         );
       }

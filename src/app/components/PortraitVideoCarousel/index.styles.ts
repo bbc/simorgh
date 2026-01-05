@@ -17,14 +17,19 @@ const styles = {
         display: 'none',
       },
     }),
-  heading: ({ palette, mq, spacings }: Theme) =>
+  headingRow: ({ spacings }: Theme) =>
+    css({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: `${spacings.FULL}rem`,
+      marginBottom: `${spacings.FULL}rem`,
+    }),
+  heading: ({ palette }: Theme) =>
     css({
       display: 'inline-block',
       color: palette.GREY_10,
-      margin: `0`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0 0 0`,
-      },
+      margin: 0,
     }),
   carouselContainer: () =>
     css({
