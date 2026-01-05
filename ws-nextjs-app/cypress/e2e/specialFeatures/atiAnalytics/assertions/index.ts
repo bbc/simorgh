@@ -6,7 +6,7 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
-  // ATI_USER_ID_COOKIE,
+  ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
@@ -14,7 +14,7 @@ import {
 import environment from '../../../../support/helpers/getAppEnv';
 
 const usesReverbViewabilityModel = applicationType =>
-  applicationType !== 'lite';
+  !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
   if (service === 'ws') {
@@ -183,7 +183,6 @@ const validateViewabilityEventDetails = ({ payload, actionType }) => {
 };
 
 export const assertPageView = ({
-  useReverb,
   pageIdentifier,
   applicationType,
   contentType,
@@ -196,10 +195,9 @@ export const assertPageView = ({
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
     const useViewabilty = usesReverbViewabilityModel(applicationType);
-    const atiPageViewAlias =
-      useReverb && useViewabilty && applicationType !== 'amp'
-        ? ATI_PAGE_VIEW_REVERB
-        : ATI_PAGE_VIEW;
+    const atiPageViewAlias = useViewabilty
+      ? ATI_PAGE_VIEW_REVERB
+      : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
@@ -210,13 +208,12 @@ export const assertPageView = ({
         applicationType,
       });
 
-      // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-      // if (['responsive', 'lite'].includes(applicationType)) {
-      //   expect(params.idclient).to.equal(
-      //     ATI_USER_ID_COOKIE,
-      //     'params.idclient (atuserid cookie value)',
-      //   );
-      // }
+      if (['responsive', 'lite'].includes(applicationType)) {
+        expect(params.idclient).to.equal(
+          ATI_USER_ID_COOKIE,
+          'params.idclient (atuserid cookie value)',
+        );
+      }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(parseInt(params.s2, 10)).to.equal(
