@@ -1,7 +1,7 @@
 import { MEDIA_ASSET_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 
-const clickFirstArticleLink = () => {
-  cy.get('a[href*="articles"]').first().click();
+const clickFirstLink = () => {
+  cy.get('a').first().click();
 };
 
 const clickFirstMapLink = () => {
@@ -12,11 +12,11 @@ const clickFirstMapLink = () => {
         .parentsUntil('[data-testid="topic-promos"]')
         .first()
         .within(() => {
-          cy.get('a').first().click();
+          clickFirstLink();
         });
     } else {
       // If a MAP item isn't found on the home page, click the first promo item.
-      clickFirstArticleLink();
+      clickFirstLink();
     }
   });
 };
@@ -41,7 +41,7 @@ export const clickPromoLinkOnHomePage = pageType => {
       .first()
       .within(() => {
         // If it isn't a MAP page being tested, click the first promo item
-        clickFirstArticleLink();
+        clickFirstLink();
       });
   }
 };

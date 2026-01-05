@@ -365,8 +365,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   ) : null;
 
   // EXPERIMENT: PWA Promotional Banner
+  // EXPERIMENT: PWA Promotional Banner
+  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
+  const pwaPromoBannerVariant = useOptimizelyVariation({
+    experimentName: pwaPromoBannerExperimentName,
+    experimentType: ExperimentType.SERVER_SIDE,
+  });
   const shouldRenderPWAPromotionalBanner =
-    !pageData?.secondaryColumn?.topStories?.length;
+    !pageData?.secondaryColumn?.topStories?.length &&
+    pwaPromoBannerVariant === 'on';
 
   return (
     <div css={styles.pageWrapper}>
