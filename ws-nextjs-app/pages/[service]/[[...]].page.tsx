@@ -125,7 +125,7 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
     case HOME_PAGE:
-      return <HomePage {...props} />;
+      return withOptimizelyProvider(HomePage)({ ...props });
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;
