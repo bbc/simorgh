@@ -58,9 +58,7 @@ module.exports = {
     NEXTJS: 'true',
   },
   compiler: { emotion: true },
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
