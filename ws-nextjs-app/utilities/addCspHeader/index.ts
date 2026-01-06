@@ -5,6 +5,8 @@ import isLiveEnv from '#lib/utilities/isLive';
 import { Services, Toggles } from '#app/models/types/global';
 import SERVICES from '#app/lib/config/services';
 
+const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
+
 const directiveToString = (directives: Record<string, string | string[]>) => {
   const map = new Map(Object.entries(directives));
   let cspValue = '';
@@ -35,17 +37,23 @@ const isRelaxedCspEnabled = (
   return !omittedCountriesList.includes(country.toLowerCase());
 };
 
-export type CspHeaderResponseProps = {
+type AddCspHeaderProps = {
   ctx: NextPageContext;
   service: Services;
   toggles: Toggles;
 };
 
-const cspHeaderResponse = ({
-  ctx,
-  service,
-  toggles,
-}: CspHeaderResponseProps) => {
+const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
+  const hostname = ctx.req?.headers.host || '';
+
+  const isLocalhost = LOCALHOST_DOMAINS.some(domain =>
+    hostname.includes(domain),
+  );
+
+  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
+
+  if (!PRODUCTION_ONLY) return;
+
   const reqUrl = ctx.req?.url || '';
   const { isAmp } = getPathExtension(reqUrl);
   const isLive = isLiveEnv();
@@ -105,4 +113,4 @@ const cspHeaderResponse = ({
   );
 };
 
-export default cspHeaderResponse;
+export default addCspHeader;
