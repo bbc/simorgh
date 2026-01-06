@@ -93,7 +93,14 @@ const assertLocationSpecificPianoDestinationExists = ({ service }) => {
   });
 };
 
-const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
+const assertReverbViewabilityComponentEventParamsExist = ({
+  params,
+  applicationType,
+}) => {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
   expect(params).to.have.property('context');
@@ -243,20 +250,12 @@ export const assertPageView = ({
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({ params });
-
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
+  assertReverbViewabilityComponentEventParamsExist({ params, applicationType });
 
   expect(params.events).to.satisfy(
     payload =>
@@ -272,6 +271,7 @@ export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
   contentType,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-view`;
@@ -286,6 +286,7 @@ export const assertATIComponentViewEvent = ({
         pageIdentifier,
         contentType,
         params,
+        applicationType,
         siteId,
       });
     });
@@ -294,22 +295,15 @@ export const assertATIComponentViewEvent = ({
 const assertViewabilityModelClickEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
+    applicationType,
   });
-
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
 
   expect(params.events).to.satisfy(
     payload =>
@@ -328,6 +322,7 @@ export const assertATIComponentClickEvent = ({
   component,
   contentType,
   pageIdentifier,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-click`;
@@ -341,6 +336,7 @@ export const assertATIComponentClickEvent = ({
         contentType,
         pageIdentifier,
         params,
+        applicationType,
         siteId,
       });
     });

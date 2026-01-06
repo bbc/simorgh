@@ -32,6 +32,7 @@ export const assertContinueReadingButtonComponentView = ({
         component: CONTINUE_READING_BUTTON,
         pageIdentifier,
         contentType,
+        applicationType,
         siteId,
       });
     },
@@ -64,6 +65,7 @@ export const assertContinueReadingButtonComponentClick = ({
         component: CONTINUE_READING_BUTTON,
         pageIdentifier,
         contentType,
+        applicationType,
         siteId,
       });
     },
