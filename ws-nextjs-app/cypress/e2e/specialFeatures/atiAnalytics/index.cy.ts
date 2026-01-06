@@ -110,7 +110,6 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: true,
     applicationType: 'amp',
     tests: [assertPageView],
   };
