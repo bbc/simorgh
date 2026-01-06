@@ -9,6 +9,7 @@ import styles from './index.styles';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
+  id?: string;
   url: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
@@ -19,6 +20,7 @@ type CallToActionLinkProps = {
 };
 
 const CallToActionLink = ({
+  id,
   url,
   children,
   eventTrackingData,
@@ -43,6 +45,7 @@ const CallToActionLink = ({
 
   return (
     <a
+      {...(id && { id })}
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
       className={className}
