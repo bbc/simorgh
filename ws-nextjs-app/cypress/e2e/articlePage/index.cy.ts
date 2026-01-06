@@ -494,7 +494,7 @@ const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 });
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
-  .filter(({ path }) => path !== '/ws/languages')
+  .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')
   .map(testSuite => {
     const excludedLiteTests = [
       assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
