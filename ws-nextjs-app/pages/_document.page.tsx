@@ -22,66 +22,15 @@ import {
 import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
 import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
 import litePageTransforms from '#server/Document/Renderers/litePageTransforms';
-import sendCustomMetric from '#server/utilities/customMetrics';
-import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 
-import nodeLogger from '#lib/logger.node';
-import {
-  SERVER_SIDE_RENDER_REQUEST_RECEIVED,
-  SERVER_SIDE_REQUEST_FAILED,
-} from '#lib/logger.const';
-import { OK, INTERNAL_SERVER_ERROR } from '#app/lib/statusCodes.const';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
-import { PageTypes } from '#app/models/types/global';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
-import removeSensitiveHeaders from '../utilities/removeSensitiveHeaders';
+import handleServerLogging from '#nextjs/utilities/handleServerLogging';
 import derivePageType from '../utilities/derivePageType';
-
-const logger = nodeLogger(__filename);
-
-const handleServerLogging = ({
-  ctx,
-  pageType,
-}: {
-  ctx: DocumentContext;
-  pageType: PageTypes | 'Unknown';
-}) => {
-  const url = ctx.asPath || '';
-  const headers = removeSensitiveHeaders(ctx.req?.headers);
-  const { statusCode } = ctx.res || {};
-  const { cause, message, name, stack } = ctx.err || {};
-
-  switch (statusCode) {
-    case OK:
-      logger.debug(SERVER_SIDE_RENDER_REQUEST_RECEIVED, {
-        url,
-        headers,
-        pageType,
-      });
-      break;
-    case INTERNAL_SERVER_ERROR:
-      sendCustomMetric({
-        metricName: NON_200_RESPONSE,
-        statusCode,
-        pageType,
-        requestUrl: url,
-      });
-      logger.error(SERVER_SIDE_REQUEST_FAILED, {
-        status: INTERNAL_SERVER_ERROR,
-        message: { cause, message, name, stack, url },
-        url,
-        headers,
-        pageType,
-      });
-      break;
-    default:
-      break;
-  }
-};
 
 type DocProps = {
   clientSideEnvVariables: EnvConfig;
