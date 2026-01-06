@@ -1,13 +1,6 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
-const useSendPWAStatus = (
-  isPWA: boolean,
-  service?: string,
-  swVersion?: string,
-) => {
-  const router = useRouter();
-
+const useSendPWAStatus = (isPWA: boolean) => {
   useEffect(() => {
     // Service workers not available - exit .
     if (typeof window === 'undefined' || !navigator.serviceWorker) {
@@ -22,19 +15,6 @@ const useSendPWAStatus = (
           type: 'PWA_STATUS',
           isPWA,
         });
-
-        //  Prefetch offline route ONCE
-        Object.keys(localStorage)
-          .filter(k => k.startsWith(`offline-prefetched-`))
-          .forEach(k => localStorage.removeItem(k));
-
-        const key = `offline-prefetched-${service}-${swVersion}`;
-        if (localStorage.getItem(key)) return;
-
-        router.prefetch(`/${service}/offline`);
-        localStorage.setItem(key, 'true');
-
-        console.log('[PWA] Offline route prefetched');
       }
     };
 
@@ -52,7 +32,7 @@ const useSendPWAStatus = (
     return () => {
       sw.removeEventListener('controllerchange', sendPWAStatus);
     };
-  }, [isPWA, service, router, swVersion]);
+  }, [isPWA]);
 };
 
 export default useSendPWAStatus;

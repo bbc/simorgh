@@ -91,7 +91,7 @@ export default function App({ Component, pageProps }: Props) {
   useServiceWorkerRegistration(service);
 
   // Send PWA status to service worker
-  useSendPWAStatus(isPWA, service, 'v1');
+  useSendPWAStatus(isPWA);
 
   const RenderChildrenOrError =
     status === 200 ? (
