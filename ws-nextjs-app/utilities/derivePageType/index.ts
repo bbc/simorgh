@@ -6,6 +6,7 @@ import {
   LIVE_PAGE,
   UGC_PAGE,
   HOME_PAGE,
+  UNKNOWN_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -38,9 +39,7 @@ const isHomePagePath = (pathname: string) =>
     return false;
   });
 
-export default function derivePageType(
-  pathname: string,
-): PageTypes | 'Unknown' {
+export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
     'http://bbc.com',
@@ -54,5 +53,5 @@ export default function derivePageType(
   if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
   if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
 
-  return 'Unknown';
+  return UNKNOWN_PAGE;
 }
