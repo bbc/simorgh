@@ -31,6 +31,7 @@ exports[`Lite Site Articles Lite Site Summary should match snapshot 1`] = `
         data-ignore-lite="true"
         data-static-reverb-click="https://logws1363.ati-host.net/hit.xiti?idclient={idclient}&s=596068&r={screenResolutionColourDepth}&re={browserViewportResolution}&hl={timestamp}&ts={epochTimestamp}&lng={language}&x6=[{referrer}]&app_type=lite&ref={referrer}&app_name=news-gahuza&language=rw&content_type=article&events=%5B%7B%22name%22%3A%22viewability.select%22%2C%22data%22%3A%7B%22item%22%3A%7B%22name%22%3A%22lite-site-summary%22%2C%22link%22%3A%22{forwardingLink}%22%7D%2C%22event%22%3A%7B%22category%22%3A%22viewability%22%2C%22action%22%3A%22select%22%7D%2C%22group%22%3A%7B%22type%22%3A%22lite-site-summary%22%7D%2C%22user%22%3A%7B%22id%22%3Anull%7D%2C%22app%22%3A%7B%22type%22%3A%22lite%22%2C%22name%22%3A%22news-gahuza%22%7D%7D%7D%5D&context=%5B%7B%22data%22%3A%7B%22page%22%3A%7B%7D%2C%22site%22%3A%7B%22level2_id%22%3A%22%22%7D%7D%7D%5D"
         href="http://localhost:7081/gahuza/articles/cey23zx8wx8o"
+        id="go-back-to-canonical-link"
       >
         <span
           class="css-rl8nrg"
