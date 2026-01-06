@@ -22,6 +22,7 @@ const initialState: UseIdctaConfigState = {
   availability: { signin: '', refresh: '' },
 };
 
+// Should be used if config is only needed on the client side
 export default function useIdctaConfig({
   ptrt,
   userOrigin = 'simorgh',

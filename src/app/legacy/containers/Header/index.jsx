@@ -11,8 +11,8 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
-import AccountContainer from '#app/components/AccountContainer';
-import HeaderAccount from '#app/components/AccountContainer/HeaderAccount';
+import AccountContainer from '#app/components/Account/AccountContainer';
+import HeaderAccount from '#app/components/Account/HeaderAccount/index';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';

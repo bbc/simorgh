@@ -23,6 +23,8 @@ import cspHeaderResponse, {
   CspHeaderResponseProps,
 } from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
+import fetchIdctaConfig from '#app/components/Account/idcta/fetchIdctaConfig';
+import { AccountProvider } from '#app/components/Account/AccountContext';
 
 interface Props extends AppProps {
   pageProps: {
@@ -52,6 +54,7 @@ interface Props extends AppProps {
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
+    idctaConfig?: unknown | null;
   };
 }
 
@@ -78,6 +81,7 @@ export default function App({ Component, pageProps }: Props) {
     variant,
     isUK,
     country,
+    idctaConfig = null,
   } = pageProps;
 
   const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -115,21 +119,23 @@ export default function App({ Component, pageProps }: Props) {
           isNextJs={isNextJs}
           isUK={isUK ?? false}
         >
-          <EventTrackingContextProvider atiData={atiAnalytics}>
-            {isAvEmbeds ? (
-              <ThemeProvider service={service} variant={variant}>
-                {RenderChildrenOrError}
-              </ThemeProvider>
-            ) : (
-              <UserContextProvider>
+          <AccountProvider initialConfig={idctaConfig}>
+            <EventTrackingContextProvider atiData={atiAnalytics}>
+              {isAvEmbeds ? (
                 <ThemeProvider service={service} variant={variant}>
-                  <PageWrapper pageData={pageData} status={status}>
-                    {RenderChildrenOrError}
-                  </PageWrapper>
+                  {RenderChildrenOrError}
                 </ThemeProvider>
-              </UserContextProvider>
-            )}
-          </EventTrackingContextProvider>
+              ) : (
+                <UserContextProvider>
+                  <ThemeProvider service={service} variant={variant}>
+                    <PageWrapper pageData={pageData} status={status}>
+                      {RenderChildrenOrError}
+                    </PageWrapper>
+                  </ThemeProvider>
+                </UserContextProvider>
+              )}
+            </EventTrackingContextProvider>
+          </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -170,12 +176,14 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
   const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
 
   const routeSegments = asPath?.split('/')?.filter(Boolean);
-
   const [service] = (routeSegments || []) as [Services];
 
   const toggles = await getToggles(service);
 
   addServiceChainAndCspHeaders({ ctx, service, toggles });
+  // TODO: Only fetch for the Hindi service?
+  const idctaConfigResult = await fetchIdctaConfig();
+  const idctaConfig = idctaConfigResult.ok ? idctaConfigResult.body : null;
 
   return {
     pageProps: {
@@ -185,6 +193,7 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
       isLite,
       isNextJs: true,
       toggles,
+      idctaConfig,
     },
   };
 };
