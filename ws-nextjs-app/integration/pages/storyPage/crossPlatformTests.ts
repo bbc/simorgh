@@ -1,10 +1,10 @@
+import runResponseHeaderTests from '#nextjs/integration/utils/responseHeaderTests';
 import {
   runCommonCrossPlatformTests,
   runTimestampTests,
   runImageTests,
   runMostReadTests,
-} from '#src/integration/common';
-import runResponseHeaderTests from '#nextjs/integration/utils/responseHeaderTests';
+} from '../../common';
 
 export default (service: string) => {
   runResponseHeaderTests();
