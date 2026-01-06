@@ -3,7 +3,6 @@ import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
