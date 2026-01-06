@@ -70,13 +70,6 @@ const HomePage = ({ pageData }: HomePageProps) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // EXPERIMENT: PWA Promotional Banner
-  const pwaPromoBannerExperimentName = 'newswb_ws_pwa_promo_prompt';
-  const pwaPromoBannerVariant = useOptimizelyVariation({
-    experimentName: pwaPromoBannerExperimentName,
-    experimentType: ExperimentType.SERVER_SIDE,
-  });
-
   // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
   if (
     timeOfDayVariant === 'homepage_time_of_day_a' ||
@@ -169,7 +162,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
           </div>
         </div>
       </main>
-      {(timeOfDayVariant || pwaPromoBannerVariant) && (
+      {timeOfDayVariant && (
         <OptimizelyPageMetrics trackPageView trackPageDepth />
       )}
     </>
