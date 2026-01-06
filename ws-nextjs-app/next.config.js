@@ -105,6 +105,14 @@ module.exports = {
           },
         ),
       );
+
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+        sideEffects: true,
+        minimize: true,
+        minimizer: [...config.optimization.minimizer],
+      };
     }
 
     return config;

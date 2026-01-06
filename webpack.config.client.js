@@ -94,6 +94,8 @@ module.exports = ({
     },
     optimization: {
       moduleIds: 'deterministic',
+      usedExports: true,
+      sideEffects: true,
       minimizer: [
         new TerserPlugin({
           terserOptions: {
@@ -102,6 +104,13 @@ module.exports = ({
             ecma: IS_LEGACY_WEB ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
+            compress: {
+              drop_console: IS_PROD && !IS_PROD_PROFILE,
+              passes: 2,
+              pure_funcs: IS_PROD
+                ? ['console.log', 'console.info', 'console.debug']
+                : [],
+            },
           },
         }),
       ],
