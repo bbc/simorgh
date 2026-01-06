@@ -3,7 +3,6 @@ import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
 import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
@@ -28,7 +27,6 @@ const ArticleLinksBlock = ({
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -72,13 +70,12 @@ const ArticleLinksBlock = ({
       )}
       {isSingleItem ? (
         <div css={styles.promoContainer} dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} {...clickTracker} />
+          <Promo block={blocksWithoutTitle[0]} />
         </div>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
           {...viewTracker}
-          clickTracker={clickTracker}
           a11yAttributes={a11yAttributes}
         />
       )}
