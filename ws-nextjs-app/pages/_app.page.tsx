@@ -67,7 +67,7 @@ export default class CustomApp extends App<Props> {
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
     const { service } = parseRoute(asPath) as { service: Services };
-    console.log({ service });
+
     const toggles = await getToggles(service);
 
     const pageType =
