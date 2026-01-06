@@ -5,6 +5,7 @@ import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -27,6 +28,7 @@ const ArticleLinksBlock = ({
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
+  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -70,7 +72,7 @@ const ArticleLinksBlock = ({
       )}
       {isSingleItem ? (
         <div css={styles.promoContainer} dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} />
+          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </div>
       ) : (
         <PromoList

@@ -10,12 +10,11 @@ import styles from './index.styles';
 
 interface PromoProps {
   block: OptimoBlock;
-  eventTrackingData?: EventTrackingMetadata;
+  clickTracker?: ReturnType<typeof useClickTrackerHandler>;
 }
 
-function Promo({ block, eventTrackingData }: PromoProps) {
+const Promo = ({ block }: PromoProps) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   const textBlock = filterForBlockType(
     (block?.model as { blocks?: Record<string, unknown> })?.blocks || {},
@@ -39,7 +38,7 @@ function Promo({ block, eventTrackingData }: PromoProps) {
 
   return (
     <div css={promoBoxStyles}>
-      <a css={styles.link} href={href} {...clickTrackerHandler}>
+      <a css={styles.link} href={href}>
         {title}
       </a>
       {timestamp && (
@@ -52,6 +51,6 @@ function Promo({ block, eventTrackingData }: PromoProps) {
       )}
     </div>
   );
-}
+};
 
 export default Promo;
