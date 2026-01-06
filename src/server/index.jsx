@@ -41,6 +41,7 @@ import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import services from './utilities/serviceConfigs';
 import createAdNonce from '../app/utilities/createAdNonce';
+import { UNKNOWN_PAGE } from '../app/routes/utils/pageTypes';
 
 const morgan = require('morgan');
 
@@ -198,7 +199,7 @@ server.get(
     injectPlatformToRequestChainHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    let derivedPageType = 'Unknown';
+    let derivedPageType = UNKNOWN_PAGE;
     let serverSideExperiments = [];
 
     try {
