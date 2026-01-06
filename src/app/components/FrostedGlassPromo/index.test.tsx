@@ -1,13 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { PropsWithChildren } from 'react';
-
 import { ToggleContextProvider } from '../../contexts/ToggleContext';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
-
 import { STORY_PAGE } from '../../routes/utils/pageTypes';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
-import * as clickTracking from '../../hooks/useClickTrackerHandler';
 import { render } from '../react-testing-library-with-providers';
 import { Services, Variants } from '../../models/types/global';
 
@@ -185,18 +182,8 @@ describe('Frosted Glass Promo', () => {
     expect(container).toBeEmptyDOMElement();
   });
 
-  // Only expecting clicks to be emitted from here - view tracking is handled at
+  // Expects view tracking to be handled at
   // the list level - eg containers/CpsFeatureAnalysis
-  it('should track clicks', () => {
-    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-    render(<Component {...cpsPromoFixture} />);
-
-    expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'features',
-      url: cpsPromoFixture.item.locators.assetUri,
-    });
-  });
-
   it('should render lazyload component for frosted glass section', () => {
     const { getByTestId } = render(
       <Component {...linkPromoFixture} service="pidgin" />,

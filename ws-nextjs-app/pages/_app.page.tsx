@@ -23,6 +23,7 @@ import cspHeaderResponse, {
   CspHeaderResponseProps,
 } from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
+import InPictureVideo from '#app/components/InPictureVideo';
 
 interface Props extends AppProps {
   pageProps: {
@@ -125,6 +126,7 @@ export default function App({ Component, pageProps }: Props) {
                 <ThemeProvider service={service} variant={variant}>
                   <PageWrapper pageData={pageData} status={status}>
                     {RenderChildrenOrError}
+                    <InPictureVideo />
                   </PageWrapper>
                 </ThemeProvider>
               </UserContextProvider>

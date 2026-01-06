@@ -12,6 +12,7 @@
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build",
     "build": "yarn build:local",
+    "build:start:spaPOC": "yarn build:live && yarn next start -p 7081",
     "dev": "yarn setupDevEnv && next dev -p 7081",
     "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https",
     "start": "NODE_ENV=production HOSTNAME=127.0.0.1 PORT=7081 node build/standalone/ws-nextjs-app/server.js",

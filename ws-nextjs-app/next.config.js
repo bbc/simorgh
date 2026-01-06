@@ -5,14 +5,20 @@ const { getClientEnvVars } = require('../src/clientEnvVars');
 
 const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
-const assetPrefix =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+// TODO: Commenting this out for dev purposes
+// const assetPrefix =
+//   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
+//   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+
+const assetPrefix = '';
 
 const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  async generateBuildId() {
+    return 'ws-next-fixed-build-version';
+  },
   async headers() {
     return [
       {

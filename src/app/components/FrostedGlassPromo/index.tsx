@@ -4,18 +4,15 @@ import type { ReactNode } from 'react';
 import { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
-
 import IMAGE from '../Image';
 import makeRelativeUrlPath from '../../lib/utilities/makeRelativeUrlPath';
-import useClickTrackerHandler from '../../hooks/useClickTrackerHandler';
 import { RequestContext } from '../../contexts/RequestContext';
-
 import FrostedGlassPanel from './FrostedGlassPanel';
 import withData from './withData';
-
 import styles from './styles';
 import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { PromoProps } from './types';
+import Link from '../Link';
 
 const PANEL_OFFSET = 250;
 
@@ -54,15 +51,15 @@ const FrostedGlassPromo = ({
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 
-  const clickTracker = useClickTrackerHandler({
+  const eventTrackingInfo = {
     ...(eventTrackingData || {}),
     url: relativeUrl,
-  });
+  };
 
   const promoText = (
     <>
       <h3 css={styles.header}>
-        <a
+        <Link
           css={theme => [
             styles.anchor,
             {
@@ -74,10 +71,10 @@ const FrostedGlassPromo = ({
             },
           ]}
           href={relativeUrl}
-          {...(eventTrackingData && clickTracker)}
+          eventTrackingData={eventTrackingInfo}
         >
           {children}
-        </a>
+        </Link>
       </h3>
       {footer}
     </>
@@ -88,10 +85,10 @@ const FrostedGlassPromo = ({
   /* eslint-disable react/self-closing-comp */
   return (
     <div css={styles.componentWrapper} data-testid={`frosted-promo-${index}`}>
-      <a
+      <Link
         css={styles.clickableArea}
         href={relativeUrl}
-        {...(eventTrackingData && clickTracker)}
+        eventTrackingData={eventTrackingInfo}
         aria-hidden="true"
         tabIndex={-1}
       />

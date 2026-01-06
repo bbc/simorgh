@@ -200,14 +200,17 @@ module.exports = ({
         // Display full duplicates information? (Default: `false`)
         verbose: true,
         exclude({ name, path }) {
-          return (
+          const babelCriteria =
             name === '@babel/runtime' &&
             [
               './~/@emotion/react/~/@babel/runtime',
               './~/@loadable/component/~/@babel/runtime',
               './~/react-router-dom/~/@babel/runtime',
-            ].includes(path)
-          );
+            ].includes(path);
+          // Adding this one as next-js and react-router uses their own isolated version of this package.
+          // Since we're moving to next-js anyhow, it wouldn't be worth the dev effort of trying to resolve and maintain this duplicate dependency.
+          const pathToRegexCriteria = name === 'path-to-regexp';
+          return pathToRegexCriteria || babelCriteria;
         },
       }),
       /*
