@@ -16,10 +16,10 @@ interface ArticleLinksBlockProps {
   blockGroupIndex?: number | null;
 }
 
-function ArticleLinksBlock({
+const ArticleLinksBlock = ({
   blocks,
   blockGroupIndex = null,
-}: ArticleLinksBlockProps) {
+}: ArticleLinksBlockProps) => {
   const { dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
@@ -84,6 +84,6 @@ function ArticleLinksBlock({
       )}
     </GridItemMediumNoMargin>
   );
-}
+};
 
 export default ArticleLinksBlock;
