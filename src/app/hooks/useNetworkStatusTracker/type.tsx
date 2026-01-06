@@ -1,10 +1,4 @@
-export type EffectiveNetworkType =
-  | 'slow-2g'
-  | '2g'
-  | '3g'
-  | '4g'
-  | '5g'
-  | 'unknown';
+import { EffectiveNetworkType } from '#app/models/types/global';
 
 export type NetworkStatus = {
   isOnline: boolean;

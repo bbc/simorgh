@@ -28,6 +28,7 @@ import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import ReverbTemplate from '#src/server/Document/Renderers/ReverbTemplate';
 import ComponentTracking from '#src/server/Document/Renderers/ComponentTracking';
+import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import handleServerLogging from '#nextjs/utilities/handleServerLogging';
 import derivePageType from '../utilities/derivePageType';
@@ -139,6 +140,7 @@ export default class AppDocument extends Document<DocProps> {
         return (
           <Html lang="en-GB" {...htmlAttrs} className={NO_JS_CLASSNAME}>
             <Head>
+              <CanonicalToLiteRedirect />
               <ReverbTemplate />
               <script
                 type="text/javascript"
