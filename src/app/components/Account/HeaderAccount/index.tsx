@@ -32,12 +32,7 @@ const HeaderAccount = () => {
         href={isSignedIn ? accountUrl : signInUrl}
         css={styles.linkWrapper}
       >
-        <Text
-          as="span"
-          css={styles.linkText}
-          size="pica"
-          suppressHydrationWarning
-        >
+        <Text as="span" css={styles.linkText} size="pica">
           {isSignedIn ? 'For you' : 'Sign In'}{' '}
         </Text>
         <AccountIcon />
