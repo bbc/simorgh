@@ -143,7 +143,7 @@ export type ReverbBeaconConfig = {
 
 export interface ATIAnalyticsProps {
   baseUrl?: string;
-  pageviewParams: string;
+  pageviewParams?: string;
   reverbParams?: ReverbBeaconConfig | null;
 }
 

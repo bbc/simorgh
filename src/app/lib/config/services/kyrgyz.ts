@@ -47,6 +47,24 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp Жарыя',
+      brandTitle: 'Би-Би-Синин WhatsApp каналы',
+      brandDescription:
+        'Күндүн башкы жаңылыктарын Би-Би-Синин WhatsApp каналынан окуңуз',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mmpvc4.jpg',
+        alt: 'Би-Би-Си Кыргыз кызматынын WhatsApp каналына кошулунуз',
+      },
+      linkLabel: {
+        text: 'Катталыңыз',
+        href: 'https://www.whatsapp.com/channel/0029VbBgIP4D8SE3ZSu7YG0e',
+      },
+      skipLink: {
+        text: 'Жарыяны өткөрүп, макаланы окууну улантыңыз',
+        endTextVisuallyHidden: 'Жарыянын аягы',
+      },
+    },
     translations: {
       pagination: {
         page: 'бет',
