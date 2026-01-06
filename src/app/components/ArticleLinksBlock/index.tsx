@@ -28,7 +28,6 @@ const ArticleLinksBlock = ({
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTracker = useClickTrackerHandler(eventTrackingData);
 
   if (!blocks || isEmpty(blocks)) {
     return null;
@@ -72,13 +71,12 @@ const ArticleLinksBlock = ({
       )}
       {isSingleItem ? (
         <div css={styles.promoContainer} dir={dir} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} {...clickTracker} />
+          <Promo block={blocksWithoutTitle[0]} />
         </div>
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
           {...viewTracker}
-          clickTracker={clickTracker}
           a11yAttributes={a11yAttributes}
         />
       )}
