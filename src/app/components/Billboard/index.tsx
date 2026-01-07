@@ -39,11 +39,11 @@ export default ({
   const showMoreOnThisTitle = translations.moreOnThis;
   const hasPromoItems = summaries.length > 1;
   const isSingleImageLayout = !hasPromoItems;
-  // this curation type is used in the home page experiment as well.
-  // if they will not be running at the same time (?) we can make it so the experiment name is only for the current experiment
+
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
   };
+
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
   const clickTrackerHandler = useClickTrackerHandler(
     eventTrackingDataWithOptimizelyEvents,
