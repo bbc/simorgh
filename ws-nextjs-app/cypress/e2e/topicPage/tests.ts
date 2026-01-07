@@ -1,6 +1,6 @@
-import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
-import getAppEnv from '../../../support/helpers/getAppEnv';
-import serviceConfigs from '../../../../src/server/utilities/serviceConfigs';
+import serviceConfigs from '#src/server/utilities/serviceConfigs';
+import idSanitiser from '#src/app/lib/utilities/idSanitiser';
+import getAppEnv from '../../support/helpers/getAppEnv';
 
 export default ({ service, pageType, variant = 'default', path }) => {
   let topicId;
