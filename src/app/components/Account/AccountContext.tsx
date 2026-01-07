@@ -1,4 +1,4 @@
-import React, { createContext, use, useMemo } from 'react';
+import React, { createContext, use, useEffect, useMemo, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { isSignedIn } from './idcta/isSignedIn';
 import appendCtaQueryParams from './idcta/appendCtaQueryParams';
@@ -25,23 +25,21 @@ export const AccountProvider = ({
 }) => {
   const { locale } = use(ServiceContext);
 
+  const [ptrt, setPtrt] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    setPtrt(window.location.href);
+  }, []);
+
   const signInAvailability = initialConfig.availability.signin === 'GREEN';
   const unavailableUrl = initialConfig?.unavailable_url;
 
   const signInUrl = signInAvailability
-    ? appendCtaQueryParams(initialConfig?.signin_url, {
-        // TEMP: Used for testing. Use window.location.href in production
-        ptrt: 'https://www.bbc.com/ws/languages',
-        lang: locale,
-      })
+    ? appendCtaQueryParams(initialConfig?.signin_url, { ptrt, lang: locale })
     : unavailableUrl;
 
   const registerUrl = signInAvailability
-    ? appendCtaQueryParams(initialConfig?.register_url, {
-        // TEMP: Used for testing. Use window.location.href in production
-        ptrt: 'https://www.bbc.com/ws/languages',
-        lang: locale,
-      })
+    ? appendCtaQueryParams(initialConfig?.register_url, { ptrt, lang: locale })
     : unavailableUrl;
 
   const accountUrl =

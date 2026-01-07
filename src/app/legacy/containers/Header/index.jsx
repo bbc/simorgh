@@ -37,7 +37,6 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 
   // linkId={linkId || 'topPage'} is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
 
-  // TODO: render Header config if global Config is available
   return (
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
