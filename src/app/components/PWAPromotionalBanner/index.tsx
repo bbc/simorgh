@@ -143,7 +143,14 @@ const PWAPromotionalBannerTreatment = ({
     [onPrimaryClickTrack, promptInstall],
   );
 
-  if (!isVisible || !isInstallable || !promotionalBanner) {
+  if (
+    !isVisible ||
+    !isInstallable ||
+    !promotionalBanner ||
+    // TODO: TEMP - update PromotionalBanner if needed
+    !promotionalBanner?.primaryButton ||
+    !promotionalBanner?.secondaryButton
+  ) {
     return null;
   }
 
@@ -154,12 +161,12 @@ const PWAPromotionalBannerTreatment = ({
         description={promotionalBanner.description}
         orText={promotionalBanner.orText}
         primaryButton={{
-          text: promotionalBanner.primaryButton.text,
-          longText: promotionalBanner.primaryButton.longText,
+          text: promotionalBanner?.primaryButton.text,
+          longText: promotionalBanner?.primaryButton?.longText,
         }}
         onPrimaryClick={handlePrimaryClick}
         secondaryButton={{
-          text: promotionalBanner.secondaryButton.text,
+          text: promotionalBanner?.secondaryButton.text,
         }}
         onSecondaryClick={handleSecondaryClick}
         isDismissible
