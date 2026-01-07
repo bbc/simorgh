@@ -28,8 +28,6 @@ const CurationPromo = ({
   headingLevel = 2,
   isLive,
   eventTrackingData,
-  timeOfDayExperimentName,
-  timeOfDayVariant,
   isPortraitImage,
 }: Summary) => {
   const { isAmp, isLite } = use(RequestContext);
@@ -53,14 +51,7 @@ const CurationPromo = ({
     (type === 'video' && `${videoTranslation}, `) ||
     (type === 'photogallery' && `${photoGalleryTranslation}, `);
 
-  const clickTrackerHandler = useClickTrackerHandler({
-    ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: timeOfDayExperimentName,
-      experimentVariant: timeOfDayVariant,
-    }),
-  });
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
   return (
     <Promo css={styles.promo} className="">
