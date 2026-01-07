@@ -7,19 +7,11 @@ import styles from './ArticlePage.styles';
 const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
-  const billboardCurationData = pageData?.secondaryColumn?.billboardCuration;
-  const mediaCurationData = pageData?.secondaryColumn?.mediaCuration;
   const {
     palette: { GREY_2 },
   } = useTheme();
 
-  if (
-    !topStoriesContent &&
-    !featuresContent &&
-    !billboardCurationData &&
-    !mediaCurationData
-  )
-    return null;
+  if (!topStoriesContent && !featuresContent) return null;
 
   return (
     <div css={styles.secondaryColumn}>
