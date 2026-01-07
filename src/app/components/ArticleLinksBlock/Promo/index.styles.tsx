@@ -1,3 +1,4 @@
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
@@ -20,23 +21,15 @@ export default {
         color: palette.GREY_6,
       },
     }),
-  promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
+  promoBox: ({ isDarkUi, palette, spacings }: Theme) =>
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
-      marginBottom: `${spacings.TRIPLE}rem`,
+      paddingInlineEnd: `${pixelsToRem(38)}rem`,
       height: 'auto',
       display: 'block',
-      [mq.GROUP_0_MAX_WIDTH]: {
-        width: `14.8125rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: `11.125rem`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: `12.6875rem`,
-      },
+      width: '100%',
     }),
   operaPromoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({
@@ -53,5 +46,12 @@ export default {
     css({
       marginTop: `${spacings.FULL}rem`,
       color: isDarkUi ? palette.GREY_6 : undefined,
+    }),
+  chevron: () =>
+    css({
+      position: 'absolute',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      insetInlineEnd: `${pixelsToRem(12)}rem`,
     }),
 };

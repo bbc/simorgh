@@ -3,28 +3,18 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  promo: ({ mq, spacings }: Theme) =>
+  standardPromo: ({ spacings }: Theme) =>
     css({
-      listStyle: 'none',
-      paddingInlineStart: '0',
-      margin: '0',
-      display: 'flex',
-      overflowX: 'scroll',
-      scrollBehavior: 'auto',
-      WebkitOverflowScrolling: 'touch',
-      // Hide scrollbar
-      scrollbarWidth: 'none',
-      msOverflowStyle: 'none',
-      '&::-webkit-scrollbar': {
-        display: 'none',
-      },
-      '& > li + li': {
-        marginInlineStart: `${spacings.FULL}rem`,
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        '& > li:not(:first-of-type)': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
+      '& ul': {
+        listStyle: 'none',
+        paddingInlineStart: '0',
+        margin: '0',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: `${spacings.FULL}rem`,
+        // wordWrap: 'break-word',
+        // overflowWrap: 'break-word',
+        width: '100%',
       },
       [`.${OPERA_MINI_CLASSNAME} &`]: {
         listStyle: 'none',
@@ -36,47 +26,36 @@ export default {
     css({
       display: 'flex',
       flexShrink: 0,
+      marginInline: `${spacings.HALF}rem`,
+      ':last-of-type': {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
       [mq.FORCED_COLOURS]: {
         border: `solid ${pixelsToRem(3)}rem transparent`,
       },
 
-      [mq.GROUP_0_MAX_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.FULL}rem`,
-        },
-        '&:last-of-type': {
-          marginInlineEnd: `${spacings.FULL}rem`,
-        },
-      },
-
       [mq.GROUP_2_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
+        marginInline: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_3_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
-        },
+        marginInline: `${spacings.FULL}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        '&:first-of-type': {
-          marginInlineStart: 0,
-        },
+        marginInline: 0,
       },
       [`.${OPERA_MINI_CLASSNAME} &`]: {
         [mq.GROUP_0_MAX_WIDTH]: {
-          marginInlineStart: `${spacings.FULL}rem`,
+          marginInline: `${spacings.FULL}rem`,
         },
 
         [mq.GROUP_2_MIN_WIDTH]: {
-          marginInlineStart: `${spacings.DOUBLE}rem`,
+          marginInline: `${spacings.DOUBLE}rem`,
         },
 
         [mq.GROUP_4_MIN_WIDTH]: {
-          marginInlineStart: 0,
+          marginInline: 0,
         },
       },
     }),
