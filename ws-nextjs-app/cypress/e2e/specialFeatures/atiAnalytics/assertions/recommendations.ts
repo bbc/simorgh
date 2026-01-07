@@ -10,7 +10,6 @@ const { RECOMMENDATIONS } = COMPONENTS;
 
 export const assertRecommendationsComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -30,7 +29,6 @@ export const assertRecommendationsComponentView = ({
     assertATIComponentViewEvent({
       component: RECOMMENDATIONS,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -39,7 +37,6 @@ export const assertRecommendationsComponentView = ({
 
 export const assertRecommendationsComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -61,7 +58,6 @@ export const assertRecommendationsComponentClick = ({
     assertATIComponentClickEvent({
       component: RECOMMENDATIONS,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

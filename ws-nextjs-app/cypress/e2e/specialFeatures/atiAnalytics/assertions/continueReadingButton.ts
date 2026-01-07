@@ -11,7 +11,6 @@ const { CONTINUE_READING_BUTTON } = COMPONENTS;
 export const assertContinueReadingButtonComponentView = ({
   applicationType,
   pageIdentifier,
-  contentType,
   siteId,
 }: AtiAssertionFnProps) => {
   const itOrSkip = applicationType !== 'responsive' ? it.skip : it;
@@ -31,7 +30,6 @@ export const assertContinueReadingButtonComponentView = ({
       assertATIComponentViewEvent({
         component: CONTINUE_READING_BUTTON,
         pageIdentifier,
-        contentType,
         applicationType,
         siteId,
       });
@@ -42,7 +40,6 @@ export const assertContinueReadingButtonComponentView = ({
 export const assertContinueReadingButtonComponentClick = ({
   applicationType,
   pageIdentifier,
-  contentType,
   siteId,
 }: AtiAssertionFnProps) => {
   const itOrSkip = applicationType !== 'responsive' ? it.skip : it;
@@ -64,7 +61,6 @@ export const assertContinueReadingButtonComponentClick = ({
       assertATIComponentClickEvent({
         component: CONTINUE_READING_BUTTON,
         pageIdentifier,
-        contentType,
         applicationType,
         siteId,
       });

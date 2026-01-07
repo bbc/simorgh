@@ -10,8 +10,6 @@ const { SCROLLABLE_NAVIGATION, DROPDOWN_NAVIGATION } = COMPONENTS;
 
 export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -31,7 +29,6 @@ export const assertScrollableNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
       applicationType,
       siteId,
     });
@@ -40,8 +37,6 @@ export const assertScrollableNavigationComponentView = ({
 
 export const assertScrollableNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -60,7 +55,6 @@ export const assertScrollableNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
       applicationType,
       siteId,
     });
@@ -70,8 +64,6 @@ export const assertScrollableNavigationComponentClick = ({
 // Assertions for nav bar at smaller breakpoints
 export const assertDropdownNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -86,7 +78,6 @@ export const assertDropdownNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
       applicationType,
       siteId,
     });
@@ -95,8 +86,6 @@ export const assertDropdownNavigationComponentView = ({
 
 export const assertDropdownNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -114,7 +103,6 @@ export const assertDropdownNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
       applicationType,
       siteId,
     });

@@ -10,7 +10,6 @@ const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
 export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -26,7 +25,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
     assertATIComponentViewEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -35,7 +33,6 @@ export const assertArticleLiteSiteLinkComponentView = ({
 
 export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -54,7 +51,6 @@ export const assertArticleLiteSiteLinkComponentClick = ({
     assertATIComponentClickEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

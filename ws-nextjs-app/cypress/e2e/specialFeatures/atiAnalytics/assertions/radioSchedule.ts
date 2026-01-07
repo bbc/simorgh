@@ -5,7 +5,6 @@ const { RADIO_SCHEDULE } = COMPONENTS;
 
 export const assertRadioScheduleComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -21,7 +20,6 @@ export const assertRadioScheduleComponentView = ({
     assertATIComponentViewEvent({
       component: RADIO_SCHEDULE,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -30,7 +28,6 @@ export const assertRadioScheduleComponentView = ({
 
 export const assertRadioScheduleComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -49,7 +46,6 @@ export const assertRadioScheduleComponentClick = ({
     assertATIComponentClickEvent({
       component: RADIO_SCHEDULE,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

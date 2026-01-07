@@ -10,7 +10,6 @@ const { LATEST_MEDIA } = COMPONENTS;
 
 export const assertLatestMediaComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -26,7 +25,6 @@ export const assertLatestMediaComponentView = ({
     assertATIComponentViewEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -35,7 +33,6 @@ export const assertLatestMediaComponentView = ({
 
 export const assertLatestMediaComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -54,7 +51,6 @@ export const assertLatestMediaComponentClick = ({
     assertATIComponentClickEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
