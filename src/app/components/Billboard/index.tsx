@@ -22,8 +22,6 @@ interface BillboardProps {
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
-  timeOfDayExperimentName?: string;
-  timeOfDayVariant?: string;
 }
 
 export default ({
@@ -36,8 +34,6 @@ export default ({
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
-  timeOfDayExperimentName,
-  timeOfDayVariant,
 }: BillboardProps) => {
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
@@ -47,11 +43,6 @@ export default ({
   // if they will not be running at the same time (?) we can make it so the experiment name is only for the current experiment
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: timeOfDayExperimentName, // might want to change this to just the article page experiment name and not need to pass it into this component
-      experimentVariant: timeOfDayVariant,
-    }),
   };
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
   const clickTrackerHandler = useClickTrackerHandler(
