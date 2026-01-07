@@ -39,7 +39,7 @@ type Props = {
   experimentProps?: ComponentExperimentProps;
 };
 
-const RelatedContentSection = ({ content, experimentProps }: Props) => {
+const RelatedContentSection = ({ content }: Props) => {
   const { translations, script, service } = use(ServiceContext);
 
   const {
@@ -50,7 +50,6 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      ...(experimentProps && experimentProps),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);
