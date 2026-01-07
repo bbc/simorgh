@@ -191,6 +191,13 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   }
 }
 
+.is-opera-mini .emotion-3 {
+  list-style: none;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
 @media screen and (forced-colors: active) {
   .emotion-3 {
     border: solid 0.1875rem transparent;
@@ -225,6 +232,27 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 
 @media (min-width: 63rem) {
   .emotion-3:first-of-type {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .is-opera-mini .emotion-3 {
+    -webkit-margin-start: 0.5rem;
+    margin-inline-start: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-3 {
+    -webkit-margin-start: 1rem;
+    margin-inline-start: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .is-opera-mini .emotion-3 {
     -webkit-margin-start: 0;
     margin-inline-start: 0;
   }
@@ -274,6 +302,27 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 
 @media (min-width: 63rem) {
   .emotion-4:first-of-type {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .is-opera-mini .emotion-4 {
+    -webkit-margin-start: 0.5rem;
+    margin-inline-start: 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-4 {
+    -webkit-margin-start: 1rem;
+    margin-inline-start: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .is-opera-mini .emotion-4 {
     -webkit-margin-start: 0;
     margin-inline-start: 0;
   }
