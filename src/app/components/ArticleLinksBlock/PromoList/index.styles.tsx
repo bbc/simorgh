@@ -3,7 +3,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  standardPromo: ({ spacings }: Theme) =>
+  promo: ({ spacings }: Theme) =>
     css({
       '& ul': {
         listStyle: 'none',
