@@ -1,12 +1,14 @@
-import React, { createContext, useMemo } from 'react';
+import React, { createContext, use, useMemo } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { isSignedIn } from './idcta/isSignedIn';
+import appendCtaQueryParams from './idcta/appendCtaQueryParams';
 
 export type AccountContextProps = {
   isSignInAvailable: boolean;
   accountUrl: string;
   signInUrl: string;
   registerUrl: string;
-  isSignedIn: boolean | null;
+  isSignedIn: boolean;
 };
 
 export const AccountContext = createContext<AccountContextProps>(
@@ -21,17 +23,25 @@ export const AccountProvider = ({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   initialConfig: any;
 }) => {
+  const { locale } = use(ServiceContext);
+
   const signInAvailability = initialConfig.availability.signin === 'GREEN';
   const unavailableUrl = initialConfig?.unavailable_url;
 
-  console.log({ initialConfig });
-  // TODO: Consider using `ptrt` if not working by default
   const signInUrl = signInAvailability
-    ? initialConfig?.signin_url
+    ? appendCtaQueryParams(initialConfig?.signin_url, {
+        // TEMP: Used for testing. Use window.location.href in production
+        ptrt: 'https://www.bbc.com/ws/languages',
+        lang: locale,
+      })
     : unavailableUrl;
 
   const registerUrl = signInAvailability
-    ? initialConfig?.register_url
+    ? appendCtaQueryParams(initialConfig?.register_url, {
+        // TEMP: Used for testing. Use window.location.href in production
+        ptrt: 'https://www.bbc.com/ws/languages',
+        lang: locale,
+      })
     : unavailableUrl;
 
   const accountUrl =
@@ -39,7 +49,7 @@ export const AccountProvider = ({
       ? initialConfig.foryou_url
       : unavailableUrl;
 
-  const isUserSignedIn = signInAvailability ? isSignedIn() : null;
+  const isUserSignedIn = signInAvailability ? isSignedIn() : false;
 
   const value = useMemo(
     () => ({

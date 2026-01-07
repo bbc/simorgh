@@ -1,5 +1,6 @@
 import { use } from 'react';
 import Text from '#app/components/Text';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import { AccountContext } from '../AccountContext';
 import styles from './index.styles';
 
@@ -17,11 +18,12 @@ const AccountIcon = () => {
 };
 
 const HeaderAccount = () => {
+  const isHydrated = useHydrationDetection();
+
   const { isSignedIn, signInUrl, accountUrl, isSignInAvailable } =
     use(AccountContext);
 
-  // TODO: fix hydration error
-  if (!isSignInAvailable || isSignedIn === null) {
+  if (!isSignInAvailable || !isHydrated) {
     return null;
   }
 

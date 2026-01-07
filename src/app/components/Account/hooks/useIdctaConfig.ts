@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { appendCtaQueryParams } from '../idcta/appendCtaQueryParams';
+import appendCtaQueryParams from '../idcta/appendCtaQueryParams';
 import { getIdctaConfigUrl } from '../idcta/getIdctaBaseUrl';
 
 type UseIdctaConfigArgs = {
@@ -22,11 +22,11 @@ const initialState: UseIdctaConfigState = {
   availability: { signin: '', refresh: '' },
 };
 
-// Should be used if config is only needed on the client side
+// Can be used if configuration needs to be fetched on the client side.
+// Currently not used in this implementation.
 export default function useIdctaConfig({
   ptrt,
   userOrigin = 'simorgh',
-  sequenceId,
 }: UseIdctaConfigArgs = {}) {
   const [state, setState] = useState<UseIdctaConfigState>(initialState);
   const [error, setError] = useState<Error | null>(null);
@@ -38,7 +38,7 @@ export default function useIdctaConfig({
 
     const controller = new AbortController();
 
-    const run = async () => {
+    const getIdctaConfig = async () => {
       try {
         setError(null);
 
@@ -63,14 +63,10 @@ export default function useIdctaConfig({
 
         setState({
           signInUrl: signInHref
-            ? appendCtaQueryParams(signInHref, { ptrt, userOrigin, sequenceId })
+            ? appendCtaQueryParams(signInHref, { ptrt })
             : null,
           registerUrl: registerHref
-            ? appendCtaQueryParams(registerHref, {
-                ptrt,
-                userOrigin,
-                sequenceId,
-              })
+            ? appendCtaQueryParams(registerHref, { ptrt })
             : null,
           isSignInAvailable: signInAvailable,
           availability: body?.availability ?? { signin: '', refresh: '' },
@@ -81,10 +77,10 @@ export default function useIdctaConfig({
       }
     };
 
-    run();
+    getIdctaConfig();
     // eslint-disable-next-line consistent-return
     return () => controller.abort();
-  }, [idctaConfigUrl, ptrt, userOrigin, sequenceId]);
+  }, [idctaConfigUrl, ptrt, userOrigin]);
 
   return { ...state, error };
 }
