@@ -1,8 +1,9 @@
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  standardScrollPromo: ({ mq, spacings }: Theme) =>
+  promo: ({ mq, spacings }: Theme) =>
     css({
       listStyle: 'none',
       paddingInlineStart: '0',
@@ -25,12 +26,11 @@ export default {
           marginInlineStart: `${spacings.DOUBLE}rem`,
         },
       },
-    }),
-  operaScrollPromo: () =>
-    css({
-      listStyle: 'none',
-      paddingInlineStart: '0',
-      margin: '0',
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        listStyle: 'none',
+        paddingInlineStart: '0',
+        margin: '0',
+      },
     }),
   list: ({ mq, spacings }: Theme) =>
     css({
@@ -66,19 +66,18 @@ export default {
           marginInlineStart: 0,
         },
       },
-    }),
-  operaStyledList: ({ mq, spacings }: Theme) =>
-    css({
-      [mq.GROUP_0_MAX_WIDTH]: {
-        marginInlineStart: `${spacings.FULL}rem`,
-      },
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        [mq.GROUP_0_MAX_WIDTH]: {
+          marginInlineStart: `${spacings.FULL}rem`,
+        },
 
-      [mq.GROUP_2_MIN_WIDTH]: {
-        marginInlineStart: `${spacings.DOUBLE}rem`,
-      },
+        [mq.GROUP_2_MIN_WIDTH]: {
+          marginInlineStart: `${spacings.DOUBLE}rem`,
+        },
 
-      [mq.GROUP_4_MIN_WIDTH]: {
-        marginInlineStart: 0,
+        [mq.GROUP_4_MIN_WIDTH]: {
+          marginInlineStart: 0,
+        },
       },
     }),
 };

@@ -79,6 +79,7 @@ const ArticleLinksBlock = ({
           blocks={blocksWithoutTitle}
           {...viewTracker}
           a11yAttributes={a11yAttributes}
+          eventTrackingData={eventTrackingData}
         />
       )}
     </GridItemMediumNoMargin>
