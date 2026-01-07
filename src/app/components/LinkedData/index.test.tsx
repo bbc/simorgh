@@ -105,8 +105,8 @@ describe('LinkedData', () => {
 
   describe('SpeakableSpecification schema', () => {
     const baseProps = {
-      type: 'Article',
-      seoTitle: 'Hindi Article Title',
+      type: 'WebPage',
+      seoTitle: 'Hindi Most Read Title',
       datePublished: '2024-01-01T12:00:00.000Z',
       dateModified: '2024-01-01T13:00:00.000Z',
     };
