@@ -24,7 +24,6 @@ type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
   blockPosition?: number;
-  timeOfDayVariant?: string;
   // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
   playDurationVariation?: string;
   onClick?: () => void;
@@ -35,7 +34,6 @@ export default ({
   blockPosition = 0,
   eventTrackingData,
   onClick,
-  timeOfDayVariant,
   // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
   playDurationVariation,
 }: PortraitVideoPromoProps) => {
@@ -102,11 +100,6 @@ export default ({
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_tod_homepage',
-      experimentVariant: timeOfDayVariant,
-    }),
     // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
     ...(playDurationVariation && {
       sendOptimizelyEvents: true,
