@@ -103,6 +103,44 @@ describe('LinkedData', () => {
     ],
   };
 
+  describe('SpeakableSpecification schema', () => {
+    const baseProps = {
+      type: 'Article',
+      seoTitle: 'Hindi Article Title',
+      datePublished: '2024-01-01T12:00:00.000Z',
+      dateModified: '2024-01-01T13:00:00.000Z',
+    };
+
+    it('includes SpeakableSpecification for Hindi service with title only', () => {
+      render(
+        <Context service="hindi">
+          <LinkedData {...baseProps} />
+        </Context>,
+      );
+      const output = getLinkedDataOutput();
+      const speakable = output['@graph'].find(
+        (item: Record<string, unknown>) => item.speakable,
+      );
+      expect(speakable).toBeTruthy();
+      expect(speakable.speakable).toEqual([
+        { '@type': 'SpeakableSpecification', xpath: ['/html/head/title'] },
+      ]);
+    });
+
+    it('does not include SpeakableSpecification for non-enabled service', () => {
+      render(
+        <Context service="news">
+          <LinkedData {...baseProps} />
+        </Context>,
+      );
+      const output = getLinkedDataOutput();
+      const speakable = output['@graph'].find(
+        (item: Record<string, unknown>) => item.speakable,
+      );
+      expect(speakable).toBeUndefined();
+    });
+  });
+
   it('should correctly render linked data for Ondemand Radio page', () => {
     render(
       <Context>

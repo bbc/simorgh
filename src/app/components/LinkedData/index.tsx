@@ -28,6 +28,37 @@ type AuthorStructure = {
 
 type Author = AuthorStructure | AuthorStructure[];
 
+type SpeakableSpecification = {
+  '@type': 'SpeakableSpecification';
+  xpath: string[];
+};
+
+const SPEAKABLE_ENABLED_SERVICES = ['hindi']; // TODO: to be extended
+const SUPPORTED_SPEAKABLE_TYPES = ['WebPage'];
+
+const getSpeakableXpaths = ({
+  service,
+  seoTitle,
+  type,
+}: {
+  service: string;
+  seoTitle?: string;
+  type: string;
+}) => {
+  if (!SUPPORTED_SPEAKABLE_TYPES.includes(type)) return null;
+  if (!SPEAKABLE_ENABLED_SERVICES.includes(service)) return null;
+
+  const speakableXpaths: SpeakableSpecification[] = [];
+  if (seoTitle) {
+    speakableXpaths.push({
+      '@type': 'SpeakableSpecification',
+      xpath: ['/html/head/title'],
+    });
+  }
+  if (speakableXpaths.length === 0) return null;
+  return speakableXpaths;
+};
+
 const LinkedData = ({
   showAuthor = false,
   type,
@@ -177,6 +208,13 @@ const LinkedData = ({
   if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
     author = bylineAuthors.length === 1 ? bylineAuthors[0] : bylineAuthors;
   }
+
+  const speakableXpaths = getSpeakableXpaths({
+    service,
+    seoTitle,
+    type,
+  });
+
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
@@ -191,10 +229,9 @@ const LinkedData = ({
     coverageEndTime,
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
-    ...(showAuthor && {
-      author,
-    }),
+    ...(showAuthor && { author }),
     ...(hasByline && places.length > 0 && { locationCreated }),
+    ...(speakableXpaths && { speakable: speakableXpaths }),
   };
 
   return (
