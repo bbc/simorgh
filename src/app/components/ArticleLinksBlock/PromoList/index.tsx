@@ -1,6 +1,7 @@
 import { use } from 'react';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { OptimoBlock } from '#app/models/types/optimo';
+import { ViewTracker } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Promo from '../Promo';
 import styles from './index.styles';
@@ -8,6 +9,7 @@ import styles from './index.styles';
 interface PromoListProps {
   blocks: OptimoBlock[];
   eventTrackingData?: EventTrackingMetadata;
+  viewTracker?: ViewTracker;
 }
 
 const PromoList = ({ blocks }: PromoListProps) => {

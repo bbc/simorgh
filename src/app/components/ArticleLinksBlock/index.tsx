@@ -77,8 +77,8 @@ const ArticleLinksBlock = ({
       ) : (
         <PromoList
           blocks={blocksWithoutTitle}
-          {...viewTracker}
-          a11yAttributes={a11yAttributes}
+          viewTracker={viewTracker}
+          {...a11yAttributes}
           eventTrackingData={eventTrackingData}
         />
       )}
