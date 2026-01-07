@@ -138,12 +138,6 @@ const sendBeacon = async (
 ) => {
   if (onClient()) {
     try {
-      // Adding console logs to help debug event tracking issues - will remove later
-      // eslint-disable-next-line no-console
-      console.log('sendBeacon: Sending beacon to URL:', {
-        url,
-        reverbBeaconConfig,
-      });
       if (reverbBeaconConfig) {
         const {
           params: { page, user },

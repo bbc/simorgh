@@ -10,9 +10,6 @@ const OFFLINE_VISIT_FLAG = 'offline_page_visit';
 const useOfflinePageFlag = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    // Adding console logs to help debug event tracking issues - will remove later
-    // eslint-disable-next-line no-console
-    console.log('useOfflinePageFlag: Setting offline page visit flag.');
     try {
       localStorage.setItem(OFFLINE_VISIT_FLAG, 'true');
     } catch (error) {

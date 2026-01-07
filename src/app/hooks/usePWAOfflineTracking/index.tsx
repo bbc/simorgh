@@ -25,23 +25,12 @@ const usePWAOfflineTracking = () => {
     if (typeof window === 'undefined' || !isOnline) {
       return;
     }
-    // Adding console logs to help debug event tracking issues - will remove later
-    // eslint-disable-next-line no-console
-    console.log('usePWAOfflineTracking: Online detected, checking flag.');
-
     try {
       const offlineVisitFlag = localStorage.getItem(OFFLINE_VISIT_FLAG);
 
       if (offlineVisitFlag !== 'true') {
         return;
       }
-      // Adding console logs to help debug event tracking issues - will remove later
-      // eslint-disable-next-line no-console
-      console.log(
-        'usePWAOfflineTracking: Offline visit flag found, tracking event.',
-        { networkType, isOnline },
-      );
-
       trackOfflinePageViewEvent(networkType);
       localStorage.removeItem(OFFLINE_VISIT_FLAG);
     } catch (error) {

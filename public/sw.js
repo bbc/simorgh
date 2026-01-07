@@ -5,9 +5,9 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-console */
 
-const version = 'v0.3.2';
+const version = 'v0.3.1';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v2';
+const cacheName = 'simorghCache_v3';
 
 // Track PWA clients
 const pwaClients = new Map();
@@ -53,20 +53,12 @@ const cacheOfflinePageAndResources = async service => {
   const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
     m => m[1],
   );
-  // Adding console logs to help debug event tracking issues - will remove later
-  console.log(
-    `[SW v${version}] Caching scriptSrcs ,linkHrefs for ${service}:`,
-    scriptSrcs,
-    linkHrefs,
-  );
-  const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
-  // .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
-  // .map(url => new URL(url, self.location.origin).href);
 
-  console.log(
-    `[SW v${version}] Caching final offline resources for ${service}:`,
-    resources,
-  );
+  const resources = [...scriptSrcs, ...linkHrefs]
+    .filter(Boolean)
+    .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
+    .map(url => new URL(url, self.location.origin).href);
+
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
 
