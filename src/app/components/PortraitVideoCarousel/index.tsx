@@ -16,14 +16,12 @@ type PortraitVideoCarouselProps = {
   title: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
-  timeOfDayVariant?: string;
 };
 
 const PortraitVideoCarousel = ({
   title,
   blocks,
   eventTrackingData,
-  timeOfDayVariant,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,7 +92,6 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(index)}
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
-                timeOfDayVariant={timeOfDayVariant}
               />
             ))}
           </ul>
