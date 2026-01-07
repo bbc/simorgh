@@ -14,7 +14,7 @@ interface PromoProps {
 }
 
 const Promo = ({ block, clickTracker }: PromoProps) => {
-  const { serviceDatetimeLocale } = use(ServiceContext);
+  const { serviceDatetimeLocale, dir } = use(ServiceContext);
 
   const textBlock = filterForBlockType(
     (block?.model as { blocks?: Record<string, unknown> })?.blocks || {},
