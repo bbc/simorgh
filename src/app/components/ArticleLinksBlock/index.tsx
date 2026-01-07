@@ -1,7 +1,6 @@
 import { use } from 'react';
 import isEmpty from 'ramda/src/isEmpty';
 import tail from 'ramda/src/tail';
-import { GridItemMediumNoMargin } from '#components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
