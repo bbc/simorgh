@@ -46,7 +46,7 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
-    "next": "15.5.7",
+    "next": "15.5.9",
     "sharp": "0.34.4"
   }
 }

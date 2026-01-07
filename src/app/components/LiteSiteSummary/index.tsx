@@ -40,6 +40,7 @@ const LiteSiteSummary = () => {
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
+            id="go-back-to-canonical-link"
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}

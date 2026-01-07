@@ -106,6 +106,33 @@ exports[`Document Component should render APP version correctly 1`] = `
     />
     <script>
       
+        window.addEventListener('DOMContentLoaded', () =&gt; {
+          (function redirectScript(window) {
+  var _window$localStorage$, _window$navigator;
+  var pathname = window.location.pathname;
+  var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
+  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType) {
+    var toLitePath = "".concat(pathname, ".lite");
+    var ect = window.navigator.connection.effectiveType;
+    var normalisedEct = ect.toLocaleLowerCase();
+    switch (normalisedEct) {
+      case 'slow-2g':
+      case '2g':
+        if (isOptedIntoLiteRedirect === 'true') {
+          window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
+          window.location.replace(toLitePath);
+        }
+        break;
+      default:
+        break;
+    }
+  }
+})(window)
+        })
+      
+    </script>
+    <script>
+      
             window.__reverb = {};
             window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) =&gt; {
               window.__reverb.__resolveReverbLoaded = resolve;
@@ -243,6 +270,19 @@ exports[`Document Component should render LITE version correctly 1`] = `
     <style>
       .css-7prgni-StyledLink{display:inline-block;}
     </style>
+    <script>
+      
+      window.addEventListener('DOMContentLoaded', () =&gt; {
+        document
+            .getElementById('go-back-to-canonical-link')
+            .addEventListener('click', (event) =&gt; {
+                          (function optOutScript(window) {
+  window.localStorage.setItem('isOptedIntoLiteRedirect', 'false');
+})(window)
+                        });
+        });
+      
+    </script>
     <script
       type="text/javascript"
     >
@@ -320,6 +360,33 @@ exports[`Document Component should render correctly 1`] = `
       href="modern.igbo.js"
       rel="modulepreload"
     />
+    <script>
+      
+        window.addEventListener('DOMContentLoaded', () =&gt; {
+          (function redirectScript(window) {
+  var _window$localStorage$, _window$navigator;
+  var pathname = window.location.pathname;
+  var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
+  if (window !== null && window !== void 0 && (_window$navigator = window.navigator) !== null && _window$navigator !== void 0 && (_window$navigator = _window$navigator.connection) !== null && _window$navigator !== void 0 && _window$navigator.effectiveType) {
+    var toLitePath = "".concat(pathname, ".lite");
+    var ect = window.navigator.connection.effectiveType;
+    var normalisedEct = ect.toLocaleLowerCase();
+    switch (normalisedEct) {
+      case 'slow-2g':
+      case '2g':
+        if (isOptedIntoLiteRedirect === 'true') {
+          window.localStorage.setItem('isOptedIntoLiteRedirect', 'true');
+          window.location.replace(toLitePath);
+        }
+        break;
+      default:
+        break;
+    }
+  }
+})(window)
+        })
+      
+    </script>
     <script>
       
             window.__reverb = {};
