@@ -98,8 +98,7 @@
     "@types/react": "19.2.6",
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
-    "react-is": "19",
-    "sharp": "0.34.4"
+    "react-is": "19"
   },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.2.0.tgz",

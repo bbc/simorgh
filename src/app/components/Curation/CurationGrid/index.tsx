@@ -18,8 +18,6 @@ const CurationGrid = ({
   isFirstCuration,
   headingLevel,
   eventTrackingData,
-  timeOfDayExperimentName,
-  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isLite } = use(RequestContext);
 
@@ -62,14 +60,7 @@ const CurationGrid = ({
     };
 
     if (!shouldUseHighImpact) {
-      return (
-        <CurationPromo
-          {...commonProps}
-          headingLevel={headingLevel}
-          timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-          timeOfDayVariant={timeOfDayVariant}
-        />
-      );
+      return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
     }
 
     return service ? (
