@@ -159,9 +159,14 @@ export default (eventTrackingData = {}) => {
     eventType: CLICK_EVENT,
   });
 
+  // HOT FIX FOR COMPONENT TRACKS SHOWING UP AS PAGE TRACKS:
+  const formattedReverbStaticUrl = reverbStaticUrl
+    .replace('&x6=[{referrer}]', '')
+    .replace('&ref={referrer}', '');
+
   return {
     ...(enableStaticTracking && {
-      [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
+      [STATIC_REVERB_CLICK_TRACKING]: formattedReverbStaticUrl,
     }),
     ...(isHydrated && { onClick: clickTracker }),
   };
