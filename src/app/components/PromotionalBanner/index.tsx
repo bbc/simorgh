@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import type { PromotionalBannerProps } from './index.types';
 import styles from './index.styles';
 import { Close } from '../icons';
@@ -18,8 +19,9 @@ const PromotionalBanner = ({
   onSecondaryClick,
   bannerLabel,
   closeLabel,
+  children,
   id = 'promotional-banner',
-}: PromotionalBannerProps) => {
+}: PropsWithChildren<PromotionalBannerProps>) => {
   return (
     <aside css={styles.banner} role="complementary" aria-labelledby={id}>
       <VisuallyHiddenText as="strong" id={id}>
@@ -37,36 +39,41 @@ const PromotionalBanner = ({
           </div>
 
           <div css={styles.actionsContainer}>
-            <Text
-              as="button"
-              type="button"
-              css={styles.primaryButton}
-              className="focusIndicatorInvert"
-              onClick={onPrimaryClick}
-              size="bodyCopy"
-              fontVariant="sansBold"
-            >
-              <span className="short-text">{primaryButton.text}</span>
-              {primaryButton.longText && (
-                <span className="long-text">{primaryButton.longText}</span>
-              )}
-            </Text>
+            {/* POC: Potential solution */}
+            {children || (
+              <>
+                <Text
+                  as="button"
+                  type="button"
+                  css={styles.primaryButton}
+                  className="focusIndicatorInvert"
+                  onClick={onPrimaryClick}
+                  size="bodyCopy"
+                  fontVariant="sansBold"
+                >
+                  <span className="short-text">{primaryButton?.text}</span>
+                  {primaryButton?.longText && (
+                    <span className="long-text">{primaryButton.longText}</span>
+                  )}
+                </Text>
 
-            <Paragraph size="bodyCopy" css={styles.dividerText}>
-              {orText}
-            </Paragraph>
+                <Paragraph size="bodyCopy" css={styles.dividerText}>
+                  {orText}
+                </Paragraph>
 
-            <Text
-              as="button"
-              type="button"
-              css={styles.secondaryButton}
-              className="focusIndicatorInvert"
-              size="bodyCopy"
-              fontVariant="sansBold"
-              onClick={onSecondaryClick}
-            >
-              {secondaryButton?.text}
-            </Text>
+                <Text
+                  as="button"
+                  type="button"
+                  css={styles.secondaryButton}
+                  className="focusIndicatorInvert"
+                  size="bodyCopy"
+                  fontVariant="sansBold"
+                  onClick={onSecondaryClick}
+                >
+                  {secondaryButton?.text}
+                </Text>
+              </>
+            )}
           </div>
         </div>
         {isDismissible && onClose && (
