@@ -12,7 +12,7 @@ interface PromoProps {
   clickTracker?: ReturnType<typeof useClickTrackerHandler>;
 }
 
-const Promo = ({ block }: PromoProps) => {
+const Promo = ({ block, clickTracker }: PromoProps) => {
   const { serviceDatetimeLocale } = use(ServiceContext);
 
   const textBlock = filterForBlockType(
@@ -37,7 +37,7 @@ const Promo = ({ block }: PromoProps) => {
 
   return (
     <div css={promoBoxStyles}>
-      <a css={styles.link} href={href}>
+      <a css={styles.link} href={href} {...clickTracker}>
         {title}
       </a>
       {timestamp && (
