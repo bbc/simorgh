@@ -46,7 +46,6 @@ const canonicalTestSuites = [
     siteId: 35,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    componentTrackingContentType: LIVE_PAGE,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -61,7 +60,6 @@ const canonicalTestSuites = [
     siteId: 62,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    componentTrackingContentType: LIVE_PAGE,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
