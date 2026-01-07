@@ -5,7 +5,6 @@ const { RECENT_AUDIO_EPISODES } = COMPONENTS;
 
 export const assertRecentAudioEpisodesComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -21,7 +20,6 @@ export const assertRecentAudioEpisodesComponentView = ({
     assertATIComponentViewEvent({
       component: RECENT_AUDIO_EPISODES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -30,7 +28,6 @@ export const assertRecentAudioEpisodesComponentView = ({
 
 export const assertRecentAudioEpisodesComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -49,7 +46,6 @@ export const assertRecentAudioEpisodesComponentClick = ({
     assertATIComponentClickEvent({
       component: RECENT_AUDIO_EPISODES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

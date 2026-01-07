@@ -5,7 +5,6 @@ const { LIVE_MEDIA } = COMPONENTS;
 
 export const assertLiveMediaComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -21,7 +20,6 @@ export const assertLiveMediaComponentView = ({
     assertATIComponentViewEvent({
       component: LIVE_MEDIA,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -30,7 +28,6 @@ export const assertLiveMediaComponentView = ({
 
 export const assertLiveMediaComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -48,7 +45,6 @@ export const assertLiveMediaComponentClick = ({
     assertATIComponentClickEvent({
       component: LIVE_MEDIA,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

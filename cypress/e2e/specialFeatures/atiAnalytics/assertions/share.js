@@ -5,7 +5,6 @@ const { SHARE } = COMPONENTS;
 
 export const assertShareComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -21,7 +20,6 @@ export const assertShareComponentView = ({
     assertATIComponentViewEvent({
       component: SHARE,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -30,7 +28,6 @@ export const assertShareComponentView = ({
 
 export const assertShareComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -49,7 +46,6 @@ export const assertShareComponentClick = ({
     assertATIComponentClickEvent({
       component: SHARE,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

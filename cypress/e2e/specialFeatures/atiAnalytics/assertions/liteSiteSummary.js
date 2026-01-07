@@ -6,8 +6,6 @@ const { LITE_SITE_SUMMARY } = COMPONENTS;
 // eslint-disable-next-line import/prefer-default-export
 export const assertLiteSiteSummaryComponentToMainSiteClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -26,7 +24,6 @@ export const assertLiteSiteSummaryComponentToMainSiteClick = ({
     assertATIComponentClickEvent({
       component: LITE_SITE_SUMMARY,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
       applicationType,
       siteId,
     });

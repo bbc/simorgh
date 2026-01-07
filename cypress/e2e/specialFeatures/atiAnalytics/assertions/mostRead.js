@@ -6,7 +6,6 @@ const { MOST_READ } = COMPONENTS;
 
 export const assertMostReadComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   service,
   applicationType,
@@ -27,7 +26,6 @@ export const assertMostReadComponentView = ({
     assertATIComponentViewEvent({
       component: MOST_READ,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -36,7 +34,6 @@ export const assertMostReadComponentView = ({
 
 export const assertMostReadComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   service,
   applicationType,
@@ -60,7 +57,6 @@ export const assertMostReadComponentClick = ({
     assertATIComponentClickEvent({
       component: MOST_READ,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

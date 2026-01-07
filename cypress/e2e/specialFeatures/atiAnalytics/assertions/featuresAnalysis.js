@@ -5,7 +5,6 @@ const { FEATURES } = COMPONENTS;
 
 export const assertFeaturesAnalysisComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -19,7 +18,6 @@ export const assertFeaturesAnalysisComponentView = ({
     assertATIComponentViewEvent({
       component: FEATURES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -28,7 +26,7 @@ export const assertFeaturesAnalysisComponentView = ({
 
 export const assertFeaturesAnalysisComponentClick = ({
   pageIdentifier,
-  contentType,
+  
   path,
   applicationType,
   siteId,
@@ -45,7 +43,6 @@ export const assertFeaturesAnalysisComponentClick = ({
     assertATIComponentClickEvent({
       component: FEATURES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

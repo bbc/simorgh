@@ -5,7 +5,6 @@ const { PODCAST_LINKS } = COMPONENTS;
 
 export const assertPodcastLinksComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -21,7 +20,6 @@ export const assertPodcastLinksComponentView = ({
     assertATIComponentViewEvent({
       component: PODCAST_LINKS,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -30,7 +28,6 @@ export const assertPodcastLinksComponentView = ({
 
 export const assertPodcastLinksComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -49,7 +46,6 @@ export const assertPodcastLinksComponentClick = ({
     assertATIComponentClickEvent({
       component: PODCAST_LINKS,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
