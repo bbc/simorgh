@@ -26,7 +26,6 @@ export const assertFeaturesAnalysisComponentView = ({
 
 export const assertFeaturesAnalysisComponentClick = ({
   pageIdentifier,
-  
   path,
   applicationType,
   siteId,
