@@ -3,7 +3,6 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { OptimoBlock } from '#app/models/types/optimo';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
