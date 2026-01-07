@@ -1,5 +1,4 @@
 import { use } from 'react';
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { EventTrackingMetadata } from '#app/models/types/eventTracking';
 import { OptimoBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../../contexts/ServiceContext';
