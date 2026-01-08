@@ -37,7 +37,6 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -91,12 +90,9 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler({
-            ...promoEventTrackingData,
-            sendOptimizelyEvents: true,
-            experimentName: 'newswb_ws_tod_homepage',
-            experimentVariant: timeOfDayVariant,
-          });
+          const clickTrackerHandler = getClickTrackerHandler(
+            promoEventTrackingData,
+          );
 
           return (
             <li
