@@ -1,3 +1,4 @@
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
@@ -21,7 +22,7 @@ export default {
         color: palette.GREY_6,
       },
     }),
-  promoBox: ({ isDarkUi, palette, spacings }: Theme) =>
+  promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({
       position: 'relative',
       backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
@@ -30,16 +31,15 @@ export default {
       height: 'auto',
       display: 'block',
       width: '100%',
-    }),
-  operaPromoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
-    css({
-      position: 'relative',
-      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
-      padding: `${spacings.DOUBLE}rem`,
-      marginBottom: `${spacings.DOUBLE}rem`,
-      width: `calc(100% - ${spacings.FULL}rem)`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        width: `calc(50% - ${spacings.DOUBLE}rem)`,
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        position: 'relative',
+        backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
+        padding: `${spacings.DOUBLE}rem`,
+        marginBottom: `${spacings.DOUBLE}rem`,
+        width: `calc(100% - ${spacings.FULL}rem)`,
+        [mq.GROUP_2_MIN_WIDTH]: {
+          width: `calc(50% - ${spacings.DOUBLE}rem)`,
+        },
       },
     }),
   timestamp: ({ isDarkUi, palette, spacings }: Theme) =>

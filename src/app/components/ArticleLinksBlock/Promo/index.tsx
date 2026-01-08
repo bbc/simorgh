@@ -32,12 +32,8 @@ const Promo = ({ block, clickTracker }: PromoProps) => {
   const title =
     textBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
 
-  const isOperaMini = useOperaMiniDetection();
-
-  const promoBoxStyles = isOperaMini ? styles.operaPromoBox : styles.promoBox;
-
   return (
-    <div css={promoBoxStyles}>
+    <div css={styles.promoBox}>
       <a css={styles.link} href={href} {...clickTracker}>
         {title}
         <Chevron
