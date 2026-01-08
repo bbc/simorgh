@@ -1,6 +1,5 @@
 import { use } from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import PromoTimestamp from '#components/Promo/timestamp';
 import { OptimoBlock } from '#app/models/types/optimo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
