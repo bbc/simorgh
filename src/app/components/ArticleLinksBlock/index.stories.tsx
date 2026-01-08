@@ -89,10 +89,6 @@ export const ArabicText = (_: StoryArgs, { variant }: StoryProps) => (
   <Component blocks={arabicText} service="arabic" variant={variant} />
 );
 
-ArabicText.globals = {
-  service: { service: 'arabic' },
-};
-
 export const WithTimestamp = (
   _: StoryArgs,
   { service, variant }: StoryProps,
