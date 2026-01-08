@@ -1,8 +1,10 @@
+import App, { AppContext } from 'next/app';
+import type { AppProps } from 'next/app';
+
 import useIsPWA from '#app/hooks/useIsPWA';
 import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
 import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
-import type { AppContext, AppProps } from 'next/app';
-import { NextPageContext } from 'next/types';
+
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -20,14 +22,17 @@ import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
+import { getServerExperiments } from '#src/server/utilities/experimentHeader';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import addPlatformToRequestChainHeader from '#src/server/utilities/addPlatformToRequestChainHeader';
-import cspHeaderResponse, {
-  CspHeaderResponseProps,
-} from '#nextjs/utilities/cspHeaderResponse';
 import getPathExtension from '#app/utilities/getPathExtension';
+import addCspHeader from '#nextjs/utilities/addCspHeader';
+import derivePageType from '#nextjs/utilities/derivePageType';
+import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
+import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
+import addVaryHeader from '#nextjs/utilities/addVaryHeader';
+import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 
-interface Props extends AppProps {
+interface Props {
   pageProps: {
     bbcOrigin?: string;
     id?: string;
@@ -58,144 +63,146 @@ interface Props extends AppProps {
   };
 }
 
-export default function App({ Component, pageProps }: Props) {
-  const {
-    bbcOrigin,
-    id,
-    isAmp,
-    isApp = false,
-    isLite = false,
-    isNextJs = true,
-    isAvEmbeds = false,
-    serverSideExperiments = null,
-    pageData,
-    pageLang = '',
-    pageType,
-    pathname,
-    service,
-    showAdsBasedOnLocation,
-    showCookieBannerBasedOnCountry = true,
-    status,
-    timeOnServer,
-    toggles,
-    variant,
-    isUK,
-    country,
-  } = pageProps;
+export class CustomApp extends App<Props> {
+  // The 'pageProps' returned are passed down to ALL pages and merged with page
+  // specific 'pageProps' from their getInitialProps / getServerSideProps functions
+  static async getInitialProps({ ctx }: AppContext) {
+    const { asPath = '' } = ctx;
 
-  const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+    const { isApp, isAmp, isLite } = getPathExtension(asPath);
+
+    const routeSegments = asPath?.split('/')?.filter(Boolean);
+
+    const [service] = (routeSegments || []) as [Services];
+
+    const toggles = await getToggles(service);
+
+    const pageType =
+      (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
+
+    const serverSideExperiments = getServerExperiments({
+      headers: ctx.req?.headers || {},
+      service,
+      pageType,
+    });
+
+    addServiceChainHeader({ ctx });
+    addCspHeader({ ctx, service, toggles });
+    addOnionLocationHeader({ ctx });
+    addVaryHeader({ ctx, serverSideExperiments });
+    addLinkHeader({ ctx });
+
+    return {
+      pageProps: {
+        ...extractHeaders(ctx.req?.headers || {}),
+        isApp,
+        isAmp,
+        isLite,
+        isNextJs: true,
+        serverSideExperiments,
+        toggles,
+      },
+    };
+  }
+
+  render() {
+    const { Component, pageProps } = this.props;
+
+    const {
+      bbcOrigin,
+      id,
+      isAmp,
+      isApp = false,
+      isLite = false,
+      isNextJs = true,
+      isAvEmbeds = false,
+      serverSideExperiments = null,
+      pageData,
+      pageLang = '',
+      pageType,
+      pathname,
+      service,
+      showAdsBasedOnLocation,
+      showCookieBannerBasedOnCountry = true,
+      status,
+      timeOnServer,
+      toggles,
+      variant,
+      isUK,
+      country,
+    } = pageProps;
+
+    const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
+
+    const RenderChildrenOrError =
+      status === 200 ? (
+        <Component {...pageProps} />
+      ) : (
+        <ErrorPage errorCode={status || 500} />
+      );
+
+    return (
+      <ToggleContextProvider toggles={toggles}>
+        <ServiceContextProvider
+          service={service}
+          variant={variant}
+          pageLang={pageLang}
+        >
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            id={id}
+            isAmp={isAmp}
+            isApp={isApp}
+            isLite={isLite}
+            pageType={pageType}
+            service={service}
+            statusCode={status}
+            pathname={pathname}
+            variant={variant}
+            timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+            serverSideExperiments={serverSideExperiments}
+            country={country}
+            isNextJs={isNextJs}
+            isUK={isUK ?? false}
+          >
+            <EventTrackingContextProvider atiData={atiAnalytics}>
+              {isAvEmbeds ? (
+                <ThemeProvider service={service} variant={variant}>
+                  {RenderChildrenOrError}
+                </ThemeProvider>
+              ) : (
+                <UserContextProvider>
+                  <ThemeProvider service={service} variant={variant}>
+                    <PageWrapper pageData={pageData} status={status}>
+                      {RenderChildrenOrError}
+                    </PageWrapper>
+                  </ThemeProvider>
+                </UserContextProvider>
+              )}
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
+        </ServiceContextProvider>
+      </ToggleContextProvider>
+    );
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  FUNCTION WRAPPER (HOOKS EXECUTION)                                  */
+/* ------------------------------------------------------------------ */
+export default function CustomAppWithHooks({
+  pageProps,
+  ...rest
+}: AppProps<Props>) {
+  // pageProps is of type Props, so service is nested inside pageProps.pageProps
+  const { service, ...restPageProps } = pageProps.pageProps;
 
   const isPWA = useIsPWA();
 
-  // Register service worker for offline functionality
   useServiceWorkerRegistration(service);
-
-  // Send PWA status to service worker
   useSendPWAStatus(isPWA);
 
-  const RenderChildrenOrError =
-    status === 200 ? (
-      <Component {...pageProps} />
-    ) : (
-      <ErrorPage errorCode={status || 500} />
-    );
-
-  return (
-    <ToggleContextProvider toggles={toggles}>
-      <ServiceContextProvider
-        service={service}
-        variant={variant}
-        pageLang={pageLang}
-      >
-        <RequestContextProvider
-          bbcOrigin={bbcOrigin}
-          id={id}
-          isAmp={isAmp}
-          isApp={isApp}
-          isLite={isLite}
-          pageType={pageType}
-          service={service}
-          statusCode={status}
-          pathname={pathname}
-          variant={variant}
-          timeOnServer={timeOnServer}
-          showAdsBasedOnLocation={showAdsBasedOnLocation}
-          showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-          serverSideExperiments={serverSideExperiments}
-          country={country}
-          isNextJs={isNextJs}
-          isUK={isUK ?? false}
-        >
-          <EventTrackingContextProvider atiData={atiAnalytics}>
-            {isAvEmbeds ? (
-              <ThemeProvider service={service} variant={variant}>
-                {RenderChildrenOrError}
-              </ThemeProvider>
-            ) : (
-              <UserContextProvider>
-                <ThemeProvider service={service} variant={variant}>
-                  <PageWrapper pageData={pageData} status={status}>
-                    {RenderChildrenOrError}
-                  </PageWrapper>
-                </ThemeProvider>
-              </UserContextProvider>
-            )}
-          </EventTrackingContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
+  return <CustomApp {...rest} pageProps={{ service, ...restPageProps }} />;
 }
-
-const addServiceChainAndCspHeaders = ({
-  ctx,
-  service,
-  toggles,
-}: CspHeaderResponseProps) => {
-  ctx.res?.setHeader(
-    'req-svc-chain',
-    addPlatformToRequestChainHeader({
-      headers: ctx.req?.headers as unknown as Headers,
-    }),
-  );
-
-  const hostname = ctx.req?.headers.host || '';
-
-  const LOCALHOST_DOMAINS = ['localhost', '127.0.0.1'];
-
-  const isLocalhost = LOCALHOST_DOMAINS.includes(hostname.split(':')?.[0]);
-
-  const PRODUCTION_ONLY = !isLocalhost && process.env.NODE_ENV === 'production';
-
-  if (PRODUCTION_ONLY) {
-    cspHeaderResponse({ ctx, service, toggles });
-  }
-};
-
-// This runs on the server before rendering the page.
-// The props returned are passed down to ALL pages and merged with page
-// specific props from getInitialProps / getServerSideProps
-App.getInitialProps = async ({ ctx }: AppContext) => {
-  const { req, asPath } = ctx as NextPageContext;
-
-  const { isApp, isAmp, isLite } = getPathExtension(asPath || '');
-
-  const routeSegments = asPath?.split('/')?.filter(Boolean);
-
-  const [service] = (routeSegments || []) as [Services];
-
-  const toggles = await getToggles(service);
-
-  addServiceChainAndCspHeaders({ ctx, service, toggles });
-
-  return {
-    pageProps: {
-      ...extractHeaders(req?.headers || {}),
-      isApp,
-      isAmp,
-      isLite,
-      isNextJs: true,
-      toggles,
-    },
-  };
-};
