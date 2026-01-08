@@ -10,7 +10,6 @@ const { TOP_BAR_OJ } = COMPONENTS;
 
 export const assertTopBarOJComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -27,7 +26,6 @@ export const assertTopBarOJComponentView = ({
     assertATIComponentViewEvent({
       component: TOP_BAR_OJ,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -36,7 +34,6 @@ export const assertTopBarOJComponentView = ({
 
 export const assertTopBarOJComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -55,7 +52,6 @@ export const assertTopBarOJComponentClick = ({
     assertATIComponentClickEvent({
       component: TOP_BAR_OJ,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

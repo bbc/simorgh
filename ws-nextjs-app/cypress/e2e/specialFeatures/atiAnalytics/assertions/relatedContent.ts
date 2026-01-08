@@ -10,7 +10,6 @@ const { RELATED_CONTENT } = COMPONENTS;
 
 export const assertRelatedContentComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -30,7 +29,6 @@ export const assertRelatedContentComponentView = ({
     assertATIComponentViewEvent({
       component: RELATED_CONTENT,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -39,7 +37,6 @@ export const assertRelatedContentComponentView = ({
 
 export const assertRelatedContentComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -58,7 +55,6 @@ export const assertRelatedContentComponentClick = ({
     assertATIComponentClickEvent({
       component: RELATED_CONTENT,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });

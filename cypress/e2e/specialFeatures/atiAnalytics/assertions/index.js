@@ -270,7 +270,6 @@ const assertViewabilityModelViewEvent = ({
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
-  contentType,
   applicationType,
   siteId,
 }) => {
@@ -284,7 +283,6 @@ export const assertATIComponentViewEvent = ({
       assertViewabilityModelViewEvent({
         component,
         pageIdentifier,
-        contentType,
         params,
         applicationType,
         siteId,
@@ -320,7 +318,6 @@ const assertViewabilityModelClickEvent = ({
 
 export const assertATIComponentClickEvent = ({
   component,
-  contentType,
   pageIdentifier,
   applicationType,
   siteId,
@@ -333,7 +330,6 @@ export const assertATIComponentClickEvent = ({
       const params = getATIParamsFromURL(url);
       assertViewabilityModelClickEvent({
         component,
-        contentType,
         pageIdentifier,
         params,
         applicationType,
