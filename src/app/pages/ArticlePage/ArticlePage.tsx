@@ -2,6 +2,9 @@ import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -221,7 +224,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     palette: { GREY_2 },
   } = useTheme();
-        
+
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
   const referrerVariant = useOptimizelyVariation({
@@ -444,13 +447,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <div css={{ gridColumn: '1 / span 12' }}>
               <RelatedContentSection
                 content={blocks}
-                {...(timeOfDayExperimentVariant && {
-                  experimentProps: {
-                    sendOptimizelyEvents: true,
-                    experimentName: timeOfDayExperimentName,
-                    experimentVariant: timeOfDayExperimentVariant,
-                  },
-                })}
                 {...(referrerVariant && {
                   experimentProps: {
                     sendOptimizelyEvents: true,
@@ -461,9 +457,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             </div>
           </div>
-        </div>
-
-          <RelatedContentSection content={blocks} />
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
@@ -487,15 +480,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          eventTrackingData={{
-            componentName: 'most-read',
-            // EXPERIMENT: Time of Day Experiment
-            ...(timeOfDayExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-          }}
+          eventTrackingData={{ componentName: 'most-read' }}
         />
       )}
     </div>
