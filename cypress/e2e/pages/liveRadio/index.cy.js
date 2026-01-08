@@ -115,7 +115,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'player-live',
-    useReverb: true,
     tests: [
       assertPageView,
       assertRadioScheduleComponentView,

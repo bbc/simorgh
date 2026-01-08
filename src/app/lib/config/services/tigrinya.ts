@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     atiAnalyticsProducerName: 'TIGRINYA',
-    useReverb: true,
     chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',

@@ -6,7 +6,6 @@ const { SHARE } = COMPONENTS;
 export const assertShareComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,7 +22,6 @@ export const assertShareComponentView = ({
       component: SHARE,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,7 +31,6 @@ export const assertShareComponentView = ({
 export const assertShareComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -53,7 +50,6 @@ export const assertShareComponentClick = ({
       component: SHARE,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });

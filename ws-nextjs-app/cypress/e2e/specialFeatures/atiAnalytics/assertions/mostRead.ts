@@ -13,7 +13,6 @@ const { MOST_READ } = COMPONENTS;
 export const assertMostReadComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   service,
   applicationType,
@@ -37,7 +36,6 @@ export const assertMostReadComponentView = ({
       component: MOST_READ,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -47,7 +45,6 @@ export const assertMostReadComponentView = ({
 export const assertMostReadComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   service,
   applicationType,
@@ -72,7 +69,6 @@ export const assertMostReadComponentClick = ({
       component: MOST_READ,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });

@@ -7,7 +7,6 @@ export const assertMessageBannerComponentView = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -24,7 +23,6 @@ export const assertMessageBannerComponentView = ({
       component: MESSAGE_BANNER,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -35,7 +33,6 @@ export const assertMessageBannerComponentClick = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -55,7 +52,6 @@ export const assertMessageBannerComponentClick = ({
       component: MESSAGE_BANNER,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });

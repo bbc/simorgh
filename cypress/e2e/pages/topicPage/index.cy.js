@@ -87,7 +87,6 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-category',
-    useReverb: true,
     componentTrackingContentType: 'topic-page',
     tests: [assertPageView],
   },
@@ -100,7 +99,6 @@ const atiAnalyticsTestSuites = [
     applicationType: 'responsive',
     contentType: 'index-category',
     componentTrackingContentType: 'topic-page',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -130,7 +128,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
