@@ -58,9 +58,9 @@ import {
   assertSocialEmbedComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/socialEmbed';
 import {
-  assertScrollablePromoComponentClick,
-  assertScrollablePromoComponentView,
-} from '../specialFeatures/atiAnalytics/assertions/scrollablePromo';
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
@@ -381,8 +381,8 @@ const atiAnalyticsTestSuites = [
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
+      assertArticleLinksBlockComponentClick,
+      assertArticleLinksBlockComponentView,
     ],
   },
   {

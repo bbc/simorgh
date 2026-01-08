@@ -8,7 +8,7 @@ import { AtiAssertionFnProps } from './type';
 
 const { ARTICLE_LINKS_BLOCK } = COMPONENTS;
 
-export const assertScrollablePromoComponentView = ({
+export const assertArticleLinksBlockComponentView = ({
   pageIdentifier,
   contentType,
   useReverb,
@@ -39,7 +39,7 @@ export const assertScrollablePromoComponentView = ({
   });
 };
 
-export const assertScrollablePromoComponentClick = ({
+export const assertArticleLinksBlockComponentClick = ({
   pageIdentifier,
   contentType,
   useReverb,
