@@ -201,9 +201,8 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 <div>
-  <div
+  <section
     aria-labelledby="Show-all-links-no-images"
-    as="section"
     data-e2e="article-links-block"
     role="region"
   >
@@ -300,7 +299,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
@@ -393,9 +392,8 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 <div>
-  <div
+  <section
     aria-label="Related content"
-    as="section"
     data-e2e="article-links-block"
     role="region"
   >
@@ -426,7 +424,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
@@ -576,9 +574,8 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 <div>
-  <div
+  <section
     aria-labelledby="Single-link"
-    as="section"
     data-e2e="article-links-block"
     role="region"
   >
@@ -617,7 +614,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
 
@@ -710,9 +707,8 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 <div>
-  <div
+  <section
     aria-label="Related content"
-    as="section"
     data-e2e="article-links-block"
     role="region"
   >
@@ -743,6 +739,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
         </a>
       </div>
     </div>
-  </div>
+  </section>
 </div>
 `;
