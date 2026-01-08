@@ -96,7 +96,6 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
-  // TODO: might add an account container (sign-in/out) as part of the header
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
