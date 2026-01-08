@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { useTheme, Theme } from '@emotion/react';
+import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
@@ -38,7 +38,7 @@ import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import ComscoreAnalytics from '../../legacy/containers/ComscoreAnalytics';
 import SocialEmbedContainer from '../../legacy/containers/SocialEmbed';
 import fauxHeadline from '../../legacy/containers/FauxHeadline';
-import RelatedTopics from '../../legacy/containers/RelatedTopics';
+import RelatedTopics from '../../components/RelatedTopics';
 import NielsenAnalytics from '../../legacy/containers/NielsenAnalytics';
 import ArticleMetadata from '../../legacy/containers/ArticleMetadata';
 import EmbedImages from '../../components/Embeds/EmbedImages';
@@ -144,10 +144,6 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     brandName,
   } = use(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-
-  const {
-    palette: { GREY_2, WHITE },
-  } = useTheme();
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -284,12 +280,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           {showTopics && (
-            <RelatedTopics
-              css={styles.relatedTopics}
-              topics={topics}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
-            />
+            <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}
           <RelatedContentSection content={blocks} />
         </div>

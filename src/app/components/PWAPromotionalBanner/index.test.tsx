@@ -47,9 +47,9 @@ describe('PWAPromotionalBanner', () => {
   });
 
   it('should not show banner if dismissed recently', () => {
-    localStorage.setItem('pwa_promotionalBanner_dismissals', '1');
+    localStorage.setItem('pwa_promotional_banner_dismissals', '1');
     localStorage.setItem(
-      'pwa_promotionalBanner_last_dismissed',
+      'pwa_promotional_banner_last_dismissed',
       `${Date.now()}`,
     );
     act(() => {

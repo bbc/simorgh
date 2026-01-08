@@ -365,6 +365,10 @@ export const service: DefaultServiceConfig = {
         url: '/bengali',
       },
       {
+        title: 'সংসদ নির্বাচন ২০২৬',
+        url: '/bengali/topics/c98e63e8jn7t',
+      },
+      {
         title: 'রাজনীতি',
         url: '/bengali/topics/cqywj91rkg6t',
       },

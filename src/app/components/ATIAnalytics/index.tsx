@@ -34,10 +34,7 @@ const ATIAnalytics = ({ atiData = {} }: ATIProps) => {
   return isAmp ? (
     <>
       <AmpGeo />
-      <AmpATIAnalytics
-        pageviewParams={urlPageViewParams}
-        reverbParams={reverbParams}
-      />
+      <AmpATIAnalytics reverbParams={reverbParams} />
     </>
   ) : (
     <CanonicalATIAnalytics

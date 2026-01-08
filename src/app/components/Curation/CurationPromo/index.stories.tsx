@@ -28,6 +28,11 @@ const WithMediaIndicator = () => {
         type={MEDIA_TYPES.PHOTO_GALLERY}
         duration={123}
       />
+      <Promo
+        {...fixture.data.curations[0].summaries[24]}
+        type={MEDIA_TYPES.VIDEO}
+        duration={123}
+      />
     </Wrapper>
   );
 };

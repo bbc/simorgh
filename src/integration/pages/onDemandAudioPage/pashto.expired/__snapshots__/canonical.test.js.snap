@@ -118,7 +118,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
 
-exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2026 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 {
@@ -138,43 +138,43 @@ exports[`Canonical On Demand Audio Page Header Navigation link should match text
 
 exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "ژوندۍ: ټلویزیوني خپرونې",
+  "url": "/pashto/watch/bbc_afghan_tv/live",
+}
+`;
+
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+{
   "text": "افغانستان",
   "url": "/pashto/topics/cr50y57xj52t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
 {
   "text": "پښتونخوا",
   "url": "/pashto/topics/cz74k7wy49jt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
 {
   "text": "نړۍ",
   "url": "/pashto/topics/cxe2wdp2dv3t",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
 {
   "text": "ښځې",
   "url": "/pashto/topics/cr50y5rq23gt",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
 {
   "text": "لوبې",
   "url": "/pashto/topics/cr50y59q860t",
-}
-`;
-
-exports[`Canonical On Demand Audio Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "اقتصاد او سوداګري",
-  "url": "/pashto/topics/cy087kqvl1yt",
 }
 `;
 

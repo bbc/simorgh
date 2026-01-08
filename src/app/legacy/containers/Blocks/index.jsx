@@ -25,8 +25,9 @@ const Blocks = ({ blocks, componentsToRender }) =>
       : Fragment;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
+
     return (
-      <Wrapper key={id}>
+      <Wrapper key={id ?? index}>
         <Block
           position={position}
           type={type}

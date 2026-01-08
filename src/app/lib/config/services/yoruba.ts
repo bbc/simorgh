@@ -49,7 +49,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Darapọ̀ mọ́ wa nibì',
-        href: 'https://bit.ly/3Xgfl35',
+        href: 'https://www.whatsapp.com/channel/0029Vb18ZTM9Gv7NliClgu0M',
       },
     },
     noBylinesPolicy:

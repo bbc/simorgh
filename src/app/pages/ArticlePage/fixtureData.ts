@@ -3415,6 +3415,181 @@ export const bylineWithMultipleContributors = [
   },
 ] as OptimoBylineContributorBlock[];
 
+export const bylineWithMultipleContributorsNoRole = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Lagos, Nigeria',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Journalist',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Journalist',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'Mayeni Jones',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Mayeni Jones',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
 export const sampleRecommendations = [
   {
     locators: {

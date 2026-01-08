@@ -424,8 +424,8 @@ export const service: DefaultServiceConfig = {
         url: '/dari',
       },
       {
-        title: 'پخش زنده رادیو',
-        url: '/dari/bbc_dari_radio/liveradio',
+        title: 'پخش زنده تلویزیون',
+        url: '/dari/watch/bbc_afghan_tv/live',
       },
       {
         title: 'افغانستان',

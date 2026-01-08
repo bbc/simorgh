@@ -173,9 +173,14 @@ export default (eventTrackingData?: EventTrackingData): any => {
     eventType: VIEW_EVENT,
   });
 
+  // HOT FIX FOR COMPONENT TRACKS SHOWING UP AS PAGE TRACKS:
+  const formattedReverbStaticUrl = reverbStaticUrl
+    .replace('&x6=[{referrer}]', '')
+    .replace('&ref={referrer}', '');
+
   return isLite
     ? {
-        [STATIC_REVERB_VIEW_TRACKING]: reverbStaticUrl,
+        [STATIC_REVERB_VIEW_TRACKING]: formattedReverbStaticUrl,
       }
     : {
         ref: viewTracker,

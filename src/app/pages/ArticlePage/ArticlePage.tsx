@@ -2,9 +2,6 @@ import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -32,7 +29,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -46,7 +43,8 @@ import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ScrollablePromo from '#components/ScrollablePromo';
 import Recommendations from '#app/components/Recommendations';
-import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import ReadTimeArticle from '#app/components/ReadTime';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -81,12 +79,6 @@ import {
 } from '../utils/portraitVideo';
 import getUnderArticleComponents from './helpers';
 
-// EXPERIMENT: Article Read Time 2
-interface ReadTimeData {
-  readTimeValue: number | undefined;
-  readTimeVariant: string;
-}
-
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
     <ImageWithCaption
@@ -96,66 +88,39 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time 2
-const Placeholder = ({ className }: { className?: string }) => {
-  const { service } = use(ServiceContext);
-  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
-  return servicesInExperiment.includes(service) ? (
-    <div className={className} />
-  ) : null;
-};
-
-// EXPERIMENT: Article Read Time 2
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
-    readTimeData: ReadTimeData,
+    readTimeValue: number | undefined,
+    readTimeTranslations: Translations['readTime'],
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time 2
-    const { readTimeValue, readTimeVariant } = readTimeData;
-    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
-    const showReadTimeBelowTimestamp =
-      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
+    const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
     return hasByline ? (
-      <>
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-          />
-          {showReadTimeBelowTimestamp && (
-            <ReadTime
-              readTimeValue={readTimeValue}
-              readTimeVariant={readTimeVariant}
-            />
-          )}
-        </Byline>
-        {!showReadTimeBelowTimestamp && (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+      <Byline blocks={bylineContribBlocks}>
+        <Timestamp
+          firstPublished={new Date(firstPublished).getTime()}
+          lastPublished={new Date(lastPublished).getTime()}
+          popOut={false}
+          hasReadTime={shouldDisplayReadTime}
+        />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
-      </>
+      </Byline>
     ) : (
       <>
         <Timestamp
           {...props}
           popOut={false}
-          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+          hasReadTime={shouldDisplayReadTime}
         />
-        {/* EXPERIMENT: Article Read Time 2 */}
-        {showReadTimeBelowTimestamp ? (
-          <ReadTime
-            readTimeValue={readTimeValue}
-            readTimeVariant={readTimeVariant}
-          />
-        ) : (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
       </>
     );
@@ -254,23 +219,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
-
-  // EXPERIMENT: Article Read Time 2
-  const readTimeExperimentName = 'newswb_ws_article_read_time_2';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // EXPERIMENT: Time of Day Experiment
-  const timeOfDayExperimentName = 'newswb_ws_tod_article';
-  const timeOfDayExperimentVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
+        
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
   const referrerVariant = useOptimizelyVariation({
@@ -287,9 +238,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-
-  // EXPERIMENT: Article Read Time 2
-  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -317,6 +265,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? getAuthorTwitterHandle(blocks)
     : null;
 
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
+
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
 
@@ -330,24 +280,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    // EXPERIMENT: Article Read Time 2
-    // Better way to handle this?
-    ...(readTimeExperimentVariant &&
-      readTimeExperimentVariant !== 'off' && {
-        experimentName: readTimeExperimentName,
-        experimentVariant: readTimeExperimentVariant,
-      }),
-    ...(timeOfDayExperimentVariant &&
-      timeOfDayExperimentVariant !== 'off' && {
-        experimentName: timeOfDayExperimentName,
-        experimentVariant: timeOfDayExperimentVariant,
-      }),
-  };
-
-  // EXPERIMENT: Article Read Time 2
-  const readTimeData = {
-    readTimeValue,
-    readTimeVariant: readTimeExperimentVariant || 'off',
   };
 
   const hasContinueReadingBlock = blocks.some(
@@ -370,13 +302,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time 2
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
       firstPublished,
       lastPublished,
-      readTimeData,
+      readTimeValue,
+      translations.readTime,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -433,8 +365,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  // EXPERIMENT: PWA Promotional Banner
+  const shouldRenderPWAPromotionalBanner =
+    !pageData?.secondaryColumn?.topStories?.length;
+
   return (
     <div css={styles.pageWrapper}>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -499,10 +437,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
+
           <div css={styles.hideBelowDesktopWidth}>
             <div css={{ gridColumn: '1 / span 12' }}>
               <RelatedContentSection
@@ -525,17 +462,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             </div>
           </div>
         </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // EXPERIMENT: Referrer Experiment
-            referrerVariant={referrerVariant}
-            referrerExperimentName={referrerExperimentName}
-            // EXPERIMENT: Time of Day Experiment
-            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
-            timeOfDayExperimentName={timeOfDayExperimentName}
-          />
-        )}
+
+          <RelatedContentSection content={blocks} />
+        </div>
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {/* Under-article components for mobile/tablet only */}

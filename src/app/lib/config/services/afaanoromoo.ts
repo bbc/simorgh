@@ -52,14 +52,14 @@ export const service: DefaultServiceConfig = {
       title: 'WhatsApp',
       brandTitle: 'Chaanaalii WhatsApp BBC Afaan Oromoo',
       brandDescription:
-        'Oduu, xiinxalaafi odeessa adda addaa kallattiin argachuuf',
+        'Oduufi xiinxala kallattiin bilbila keessan irratti argachuuf ammuma',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0kthbd3.png',
-        alt: 'BBC News Afaan Oromo WhatsApp irrati argadhaa',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mnxg49.png',
+        alt: `Oduu ho'aaf WhatsApp BBC Afaan Oromoo hordofaa.`,
       },
       linkLabel: {
         text: 'Asiin seenaa',
-        href: 'https://bit.ly/4hIe50g',
+        href: 'https://www.whatsapp.com/channel/0029VawyHE6CBtx7GK5AV32J',
       },
     },
     translations: {

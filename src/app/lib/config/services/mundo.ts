@@ -501,6 +501,10 @@ export const service: DefaultServiceConfig = {
         title: 'Centroamérica cuenta',
         url: '/mundo/topics/c404v5z1k8wt',
       },
+      {
+        title: 'Podcasts',
+        url: '/mundo/topics/ce3wlelkgggt',
+      },
     ],
   },
 };

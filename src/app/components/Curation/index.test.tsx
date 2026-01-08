@@ -332,7 +332,7 @@ describe('Curation', () => {
           curationLength={1}
         />,
       );
-      expect(document.querySelectorAll('h2').length).toBe(24);
+      expect(document.querySelectorAll('h2').length).toBe(25);
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
 

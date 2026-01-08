@@ -46,7 +46,7 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
 };
 
 const CanonicalATIAnalytics = ({
-  pageviewParams,
+  pageviewParams = '',
   reverbParams,
 }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);

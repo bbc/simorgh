@@ -201,9 +201,4 @@ export default {
     }),
     commonMarginSpacing,
   ],
-  // EXPERIMENT: Article Read Time
-  readTimePlaceholderBelowTimestamp: () =>
-    css({
-      marginBottom: `${pixelsToRem(18.5)}rem`,
-    }),
 };
