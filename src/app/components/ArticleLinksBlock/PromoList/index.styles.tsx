@@ -12,8 +12,6 @@ export default {
         display: 'flex',
         flexDirection: 'column',
         gap: `${spacings.FULL}rem`,
-        // wordWrap: 'break-word',
-        // overflowWrap: 'break-word',
         width: '100%',
       },
       [`.${OPERA_MINI_CLASSNAME} &`]: {

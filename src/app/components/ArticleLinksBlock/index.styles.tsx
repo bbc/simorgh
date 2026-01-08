@@ -9,7 +9,7 @@ export default {
       margin: 0,
       display: 'flex',
       overflowX: 'auto',
-      width: '100vw',
+      width: '100%',
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
         margin: '0 -0.2rem',
@@ -37,7 +37,7 @@ export default {
       display: 'flex',
       alignItems: 'center',
       backgroundColor: palette.GREY_2,
-      width: '100vw',
+      width: '100%',
       height: `${spacings.QUADRUPLE}rem`,
       color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
       padding: `0 ${spacings.FULL}rem`,
