@@ -1,9 +1,9 @@
 import { renderHook } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
+import { EffectiveNetworkType } from '#app/models/types/global';
 import usePWAOfflineTracking from './index';
 import useNetworkStatusTracker from '../useNetworkStatusTracker';
 import useCustomEventTracker from '../useCustomEventTracker';
-import { EffectiveNetworkType } from '../useNetworkStatusTracker/type';
 
 jest.mock('../useNetworkStatusTracker');
 jest.mock('../useCustomEventTracker');
