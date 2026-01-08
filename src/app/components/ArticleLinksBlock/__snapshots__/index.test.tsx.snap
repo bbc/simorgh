@@ -149,6 +149,20 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
+.is-opera-mini .emotion-3 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 0.5rem);
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-3 {
+    width: calc(50% - 1rem);
+  }
+}
+
 .emotion-4 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -209,7 +223,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     <strong
       class="emotion-0"
       data-testid="eoj-recommendations-heading"
-      dir="ltr"
       id="Show-all-links-no-images"
     >
       Show all links (no images)
@@ -338,6 +351,20 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   height: auto;
   display: block;
   width: 100%;
+}
+
+.is-opera-mini .emotion-1 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 0.5rem);
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-1 {
+    width: calc(50% - 1rem);
+  }
 }
 
 .emotion-2 {
@@ -522,6 +549,20 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
+.is-opera-mini .emotion-2 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 0.5rem);
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-2 {
+    width: calc(50% - 1rem);
+  }
+}
+
 .emotion-3 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -582,7 +623,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     <strong
       class="emotion-0"
       data-testid="eoj-recommendations-heading"
-      dir="ltr"
       id="Single-link"
     >
       Single link
@@ -653,6 +693,20 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   height: auto;
   display: block;
   width: 100%;
+}
+
+.is-opera-mini .emotion-1 {
+  position: relative;
+  background-color: #E6E8EA;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: calc(100% - 0.5rem);
+}
+
+@media (min-width: 25rem) {
+  .is-opera-mini .emotion-1 {
+    width: calc(50% - 1rem);
+  }
 }
 
 .emotion-2 {
