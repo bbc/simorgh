@@ -5,8 +5,6 @@ const { PORTRAIT_VIDEO_CAROUSEL } = COMPONENTS;
 
 export const assertPortraitVideoCarouselComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
   path,
   applicationType,
   siteId,
@@ -26,7 +24,6 @@ export const assertPortraitVideoCarouselComponentView = ({
       assertATIComponentViewEvent({
         component: PORTRAIT_VIDEO_CAROUSEL,
         pageIdentifier,
-        contentType: componentTrackingContentType || contentType,
         applicationType,
         siteId,
       });
