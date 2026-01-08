@@ -373,8 +373,8 @@ export const service: DefaultServiceConfig = {
         url: '/burmese',
       },
       {
-        title: 'မြန်မာငလျင်',
-        url: '/burmese/topics/c793wppj0r1t',
+        title: 'ရွေးကောက်ပွဲ',
+        url: '/burmese/topics/c1w0y2j4j70t',
       },
       {
         title: 'မြန်မာ့ရေးရာ',

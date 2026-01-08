@@ -451,8 +451,8 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'جنگ اسرائیل-ایران',
-        url: '/persian/topics/cwy6874zgpqt',
+        title: 'اعتراضات ایران ۱۴۰۴',
+        url: '/persian/topics/c4g30w1p327t',
       },
       {
         title: 'پخش زنده',
