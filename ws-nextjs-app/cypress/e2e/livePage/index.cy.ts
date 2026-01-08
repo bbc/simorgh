@@ -46,7 +46,6 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -63,7 +62,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -80,7 +78,6 @@ const atiAnalyticsTestSuites = [
     siteId: 95,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,

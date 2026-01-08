@@ -5,8 +5,6 @@ const { BILLBOARD } = COMPONENTS;
 
 export const assertBillboardComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -22,8 +20,6 @@ export const assertBillboardComponentView = ({
     assertATIComponentViewEvent({
       component: BILLBOARD,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -32,8 +28,6 @@ export const assertBillboardComponentView = ({
 
 export const assertBillboardComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -52,8 +46,6 @@ export const assertBillboardComponentClick = ({
     assertATIComponentClickEvent({
       component: BILLBOARD,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
