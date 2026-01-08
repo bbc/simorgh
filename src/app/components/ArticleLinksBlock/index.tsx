@@ -63,7 +63,6 @@ const ArticleLinksBlock = ({
           css={styles.labelComponent}
           id={ariaLabel}
           data-testid="eoj-recommendations-heading"
-          dir={dir}
         >
           {title}
         </strong>
