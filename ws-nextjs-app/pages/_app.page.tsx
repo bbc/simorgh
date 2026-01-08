@@ -25,6 +25,7 @@ import extractHeaders from '#src/server/utilities/extractHeaders';
 import { getServerExperiments } from '#src/server/utilities/experimentHeader';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import getPathExtension from '#app/utilities/getPathExtension';
+import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#nextjs/utilities/addCspHeader';
 import derivePageType from '#nextjs/utilities/derivePageType';
 import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
@@ -71,9 +72,7 @@ export class CustomApp extends App<Props> {
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
-    const routeSegments = asPath?.split('/')?.filter(Boolean);
-
-    const [service] = (routeSegments || []) as [Services];
+    const { service } = parseRoute(asPath) as { service: Services };
 
     const toggles = await getToggles(service);
 
