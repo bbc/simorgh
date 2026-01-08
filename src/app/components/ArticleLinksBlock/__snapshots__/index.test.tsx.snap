@@ -1,99 +1,7 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list 1`] = `
-@media (max-width: 14.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-0 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-2 {
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -115,42 +23,42 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-2 {
+  .emotion-0 {
     border: solid 0.1875rem transparent;
     border-bottom: transparent;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-2 {
+  .emotion-0 {
     margin-inline: 0.5rem;
     margin: 0;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-0 {
     margin-inline: 1rem;
     padding: 0 1rem;
     margin: 0 -0.2rem;
   }
 }
 
-.emotion-3 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,7 +69,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   margin-inline: 0.25rem;
 }
 
-.emotion-3 ul {
+.emotion-1 ul {
   list-style: none;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
@@ -177,60 +85,60 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.is-opera-mini .emotion-3 {
+.is-opera-mini .emotion-1 {
   list-style: none;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
   margin: 0;
 }
 
-.emotion-3:last-of-type {
+.emotion-1:last-of-type {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-3 {
+  .emotion-1 {
     border: solid 0.1875rem transparent;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-3 {
+  .emotion-1 {
     margin-inline: 0;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .is-opera-mini .emotion-3 {
+  .is-opera-mini .emotion-1 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-3 {
+  .is-opera-mini .emotion-1 {
     margin-inline: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .is-opera-mini .emotion-3 {
+  .is-opera-mini .emotion-1 {
     margin-inline: 0;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,341 +149,49 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   margin-inline: 0.25rem;
 }
 
-.emotion-4:last-of-type {
+.emotion-2:last-of-type {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-4 {
+  .emotion-2 {
     border: solid 0.1875rem transparent;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-4 {
+  .emotion-2 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-2 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-4 {
+  .emotion-2 {
     margin-inline: 0;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .is-opera-mini .emotion-4 {
+  .is-opera-mini .emotion-2 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-4 {
+  .is-opera-mini .emotion-2 {
     margin-inline: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .is-opera-mini .emotion-4 {
+  .is-opera-mini .emotion-2 {
     margin-inline: 0;
-  }
-}
-
-.emotion-5 {
-  position: relative;
-  background-color: #FFFFFF;
-  padding: 1rem;
-  -webkit-padding-end: 2.375rem;
-  padding-inline-end: 2.375rem;
-  height: auto;
-  display: block;
-  width: 100%;
-}
-
-.emotion-6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  display: webkit-box;
-  width: 100%;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  color: #202224;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-6:hover,
-.emotion-6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-6:visited {
-  color: #545658;
-}
-
-.emotion-7 {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  inset-inline-end: 0.75rem;
-}
-
-<div>
-  <section
-    aria-labelledby="Show-all-links-no-images"
-    class="emotion-0 emotion-1"
-    data-e2e="article-links-block"
-    dir="ltr"
-    role="region"
-  >
-    <strong
-      class="emotion-2"
-      data-testid="eoj-recommendations-heading"
-      dir="ltr"
-      id="Show-all-links-no-images"
-    >
-      Show all links (no images)
-    </strong>
-    <div
-      class="emotion-3"
-      dir="ltr"
-    >
-      <ul>
-        <li
-          class="emotion-4"
-        >
-          <div
-            class="emotion-5"
-          >
-            <a
-              class="emotion-6"
-              href="https://www.bbc.co.uk/pidgin"
-            >
-              Show headline
-              <svg
-                aria-hidden="true"
-                class="emotion-7"
-                focusable="false"
-                height="12"
-                viewBox="0 0 32 32"
-                width="12"
-              >
-                <path
-                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
-                />
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li
-          class="emotion-4"
-        >
-          <div
-            class="emotion-5"
-          >
-            <a
-              class="emotion-6"
-              href="https://www.bbc.com/mundo"
-            >
-              Link with Headline
-              <svg
-                aria-hidden="true"
-                class="emotion-7"
-                focusable="false"
-                height="12"
-                viewBox="0 0 32 32"
-                width="12"
-              >
-                <path
-                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
-                />
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li
-          class="emotion-4"
-        >
-          <div
-            class="emotion-5"
-          >
-            <a
-              class="emotion-6"
-              href="https://www.bbc.com/brasil"
-            >
-              Brasil homepage
-              <svg
-                aria-hidden="true"
-                class="emotion-7"
-                focusable="false"
-                height="12"
-                viewBox="0 0 32 32"
-                width="12"
-              >
-                <path
-                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
-                />
-              </svg>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-</div>
-`;
-
-exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list with no title 1`] = `
-@media (max-width: 14.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-0 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-2 {
-  background: #F6F6F6;
-  padding: 0 0.5rem 1rem;
-  margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-  width: 100vw;
-}
-
-@media (min-width: 25rem) {
-  .emotion-2 {
-    padding: 0 1rem 1rem;
-    margin: 0 -0.2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-2 {
-    padding: 0 1rem 1rem;
-  }
-}
-
-@media screen and (forced-colors: active) {
-  .emotion-2 {
-    border: solid 0.1875rem transparent;
-    border-top: transparent;
   }
 }
 
@@ -642,28 +258,226 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 <div>
-  <section
-    aria-label="Related content"
-    class="emotion-0 emotion-1"
+  <div
+    aria-labelledby="Show-all-links-no-images"
+    as="section"
     data-e2e="article-links-block"
-    dir="ltr"
+    role="region"
+  >
+    <strong
+      class="emotion-0"
+      data-testid="eoj-recommendations-heading"
+      dir="ltr"
+      id="Show-all-links-no-images"
+    >
+      Show all links (no images)
+    </strong>
+    <div
+      class="emotion-1"
+      dir="ltr"
+    >
+      <ul>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              href="https://www.bbc.co.uk/pidgin"
+            >
+              Show headline
+              <svg
+                aria-hidden="true"
+                class="emotion-5"
+                focusable="false"
+                height="12"
+                viewBox="0 0 32 32"
+                width="12"
+              >
+                <path
+                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                />
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              href="https://www.bbc.com/mundo"
+            >
+              Link with Headline
+              <svg
+                aria-hidden="true"
+                class="emotion-5"
+                focusable="false"
+                height="12"
+                viewBox="0 0 32 32"
+                width="12"
+              >
+                <path
+                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                />
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li
+          class="emotion-2"
+        >
+          <div
+            class="emotion-3"
+          >
+            <a
+              class="emotion-4"
+              href="https://www.bbc.com/brasil"
+            >
+              Brasil homepage
+              <svg
+                aria-hidden="true"
+                class="emotion-5"
+                focusable="false"
+                height="12"
+                viewBox="0 0 32 32"
+                width="12"
+              >
+                <path
+                  d="M21.6 14.3L5.5 31h6.4l14.6-15L11.9 1H5.5l16.1 16.7v-3.4z"
+                />
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list with no title 1`] = `
+.emotion-0 {
+  background: #F6F6F6;
+  padding: 0 0.5rem 1rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    padding: 0 1rem 1rem;
+    margin: 0 -0.2rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    padding: 0 1rem 1rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-0 {
+    border: solid 0.1875rem transparent;
+    border-top: transparent;
+  }
+}
+
+.emotion-1 {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  -webkit-padding-end: 2.375rem;
+  padding-inline-end: 2.375rem;
+  height: auto;
+  display: block;
+  width: 100%;
+}
+
+.emotion-2 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  display: webkit-box;
+  width: 100%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: #202224;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-2:hover,
+.emotion-2:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-2:visited {
+  color: #545658;
+}
+
+.emotion-3 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  inset-inline-end: 0.75rem;
+}
+
+<div>
+  <div
+    aria-label="Related content"
+    as="section"
+    data-e2e="article-links-block"
     role="region"
   >
     <div
-      class="emotion-2"
+      class="emotion-0"
       dir="ltr"
     >
       <div
-        class="emotion-3"
+        class="emotion-1"
       >
         <a
-          class="emotion-4"
+          class="emotion-2"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-5"
+            class="emotion-3"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
@@ -676,104 +490,12 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for single card 1`] = `
-@media (max-width: 14.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-0 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-2 {
+.emotion-0 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -795,42 +517,42 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-2 {
+  .emotion-0 {
     border: solid 0.1875rem transparent;
     border-bottom: transparent;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-2 {
+  .emotion-0 {
     margin-inline: 0.5rem;
     margin: 0;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-0 {
     margin-inline: 1rem;
     padding: 0 1rem;
     margin: 0 -0.2rem;
   }
 }
 
-.emotion-3 {
+.emotion-1 {
   background: #F6F6F6;
   padding: 0 0.5rem 1rem;
   margin: 0;
@@ -843,26 +565,26 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .emotion-3 {
+  .emotion-1 {
     padding: 0 1rem 1rem;
     margin: 0 -0.2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-1 {
     padding: 0 1rem 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-3 {
+  .emotion-1 {
     border: solid 0.1875rem transparent;
     border-top: transparent;
   }
 }
 
-.emotion-4 {
+.emotion-2 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -873,7 +595,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-3 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -891,30 +613,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-5 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-5 {
+  .emotion-3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
+.emotion-3:hover,
+.emotion-3:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-5:visited {
+.emotion-3:visited {
   color: #545658;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -925,15 +647,14 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 <div>
-  <section
+  <div
     aria-labelledby="Single-link"
-    class="emotion-0 emotion-1"
+    as="section"
     data-e2e="article-links-block"
-    dir="ltr"
     role="region"
   >
     <strong
-      class="emotion-2"
+      class="emotion-0"
       data-testid="eoj-recommendations-heading"
       dir="ltr"
       id="Single-link"
@@ -941,20 +662,20 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
       Single link
     </strong>
     <div
-      class="emotion-3"
+      class="emotion-1"
       dir="ltr"
     >
       <div
-        class="emotion-4"
+        class="emotion-2"
       >
         <a
-          class="emotion-5"
+          class="emotion-3"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-6"
+            class="emotion-4"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
@@ -967,104 +688,12 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
 
 exports[`Article Links Block Mid Page Article Links Block it should match snapshot when in dark ui mode 1`] = `
-@media (max-width: 14.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-0 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-2 {
+.emotion-0 {
   background: #F6F6F6;
   padding: 0 0.5rem 1rem;
   margin: 0;
@@ -1077,26 +706,26 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-0 {
     padding: 0 1rem 1rem;
     margin: 0 -0.2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-0 {
     padding: 0 1rem 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-2 {
+  .emotion-0 {
     border: solid 0.1875rem transparent;
     border-top: transparent;
   }
 }
 
-.emotion-3 {
+.emotion-1 {
   position: relative;
   background-color: #E6E8EA;
   padding: 1rem;
@@ -1107,7 +736,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   width: 100%;
 }
 
-.emotion-4 {
+.emotion-2 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -1125,30 +754,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-4:hover,
-.emotion-4:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-4:visited {
+.emotion-2:visited {
   color: #545658;
 }
 
-.emotion-5 {
+.emotion-3 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -1159,28 +788,27 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 <div>
-  <section
+  <div
     aria-label="Related content"
-    class="emotion-0 emotion-1"
+    as="section"
     data-e2e="article-links-block"
-    dir="ltr"
     role="region"
   >
     <div
-      class="emotion-2"
+      class="emotion-0"
       dir="ltr"
     >
       <div
-        class="emotion-3"
+        class="emotion-1"
       >
         <a
-          class="emotion-4"
+          class="emotion-2"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-5"
+            class="emotion-3"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
@@ -1193,6 +821,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </div>
 `;
