@@ -3078,18 +3078,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.0.10":
-  version: 20.0.10
-  resolution: "@happy-dom/jest-environment@npm:20.0.10"
+"@happy-dom/jest-environment@npm:20.0.11":
+  version: 20.0.11
+  resolution: "@happy-dom/jest-environment@npm:20.0.11"
   dependencies:
-    happy-dom: "npm:^20.0.10"
+    happy-dom: "npm:^20.0.11"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/e1a747fa83244f2e06c98a06347b5dd786af6743fc65c32b00095363ca089d48ac7506202bc57f1b8840f47cdb99ea7e8ae11638cc1fcd29ef1eac96d9f27a69
+  checksum: 10/cdeedf122a90d5af45bbcd31e213c7180fb371754f28a21460aae1555719f8e78b7ed9f197103f88675236392a0f08161eb0837e7c2242ee3ccb4bba021bdf69
   languageName: node
   linkType: hard
 
@@ -5125,7 +5125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:*, @testing-library/react@npm:16.3.0":
+"@testing-library/react@npm:*":
   version: 16.3.0
   resolution: "@testing-library/react@npm:16.3.0"
   dependencies:
@@ -5142,6 +5142,26 @@ __metadata:
     "@types/react-dom":
       optional: true
   checksum: 10/0ee9e31dd0d2396a924682d0e61a4ecc6bfab8eaff23dbf8a72c3c2ce22c116fa578148baeb4de75b968ef99d22e6e6aa0a00dba40286f71184918bb6bb5b06a
+  languageName: node
+  linkType: hard
+
+"@testing-library/react@npm:16.3.1":
+  version: 16.3.1
+  resolution: "@testing-library/react@npm:16.3.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+  peerDependencies:
+    "@testing-library/dom": ^10.0.0
+    "@types/react": ^18.0.0 || ^19.0.0
+    "@types/react-dom": ^18.0.0 || ^19.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 10/2d1221861c41711f2767c57c5b5158593baf6f7ca4bf15fad9e79bc9aeaadb56c2e327943b8733d2788f1826499fe01daef7289a7a0149b48dd7f51b33b12e58
   languageName: node
   linkType: hard
 
@@ -5671,12 +5691,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.6":
-  version: 19.2.6
-  resolution: "@types/react@npm:19.2.6"
+"@types/react@npm:19.2.7":
+  version: 19.2.7
+  resolution: "@types/react@npm:19.2.7"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/d611fd7d43c9a76f4a884ac2c0da6de582db26cfbcf3b08e8214a93facb37d27d1077118e98fc7c76a2e5dd5351f58834cc4d171ef0d8d75cc95fdf4d345f576
+  checksum: 10/dc0b756eee2c9782d282ae47eaa8d537b2a569eb889a6808c4b172d70fb690b2b1d8fe6239db451aa1c90d2a947cc21c9b537ce177ba9e6121468e403e4079c5
   languageName: node
   linkType: hard
 
@@ -5821,7 +5841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ws@npm:^8.5.10":
+"@types/ws@npm:^8.18.1, @types/ws@npm:^8.5.10":
   version: 8.18.1
   resolution: "@types/ws@npm:8.18.1"
   dependencies:
@@ -11236,14 +11256,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.0.10, happy-dom@npm:^20.0.10":
-  version: 20.0.10
-  resolution: "happy-dom@npm:20.0.10"
+"happy-dom@npm:20.0.11":
+  version: 20.0.11
+  resolution: "happy-dom@npm:20.0.11"
   dependencies:
     "@types/node": "npm:^20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
     whatwg-mimetype: "npm:^3.0.0"
-  checksum: 10/a39e11faa47b58ed722a32471277da90538101190c90569ed1c1525897193b9138f93945cb2b7cecf8ad3b8b87c44b9a36fb7c88a7ce49de4f7ad5b2ec3e4cca
+  checksum: 10/0f2cd2a2c394a79ce3ff15b5c00edd4071a5c5ece14f3ee810b954a1c3ee826a3920be37a349c7dc1b5bd3cd49b550f5e6291aa7e109ee4a27c3f6476f4b5d91
+  languageName: node
+  linkType: hard
+
+"happy-dom@npm:^20.0.11":
+  version: 20.1.0
+  resolution: "happy-dom@npm:20.1.0"
+  dependencies:
+    "@types/node": "npm:^20.0.0"
+    "@types/whatwg-mimetype": "npm:^3.0.2"
+    "@types/ws": "npm:^8.18.1"
+    whatwg-mimetype: "npm:^3.0.0"
+    ws: "npm:^8.18.3"
+  checksum: 10/6f24d9d39b6dd387fe567adc621fba5e5a7fef83d5baa8cbc49cf75ecd09a91e460a242c6ac8d4ea3d2c01b134ec7f552d8c66d13ac109350ad2650450fe61de
   languageName: node
   linkType: hard
 
@@ -15545,14 +15578,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.2.0":
-  version: 19.2.0
-  resolution: "react-dom@npm:19.2.0"
+"react-dom@npm:19.2.3":
+  version: 19.2.3
+  resolution: "react-dom@npm:19.2.3"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.0
-  checksum: 10/3dbba071b9b1e7a19eae55f05c100f6b44f88c0aee72397d719ae338248ca66ed5028e6964c1c14870cc3e1abcecc91b22baba6dc2072f819dea81a9fd72f2fd
+    react: ^19.2.3
+  checksum: 10/5780f6d4c8e8ece09f82c5500ba2d55e01c30b5273f9281734d7d3b65013cd1fa52ec4e4436e5248c0a9e5bc340836044051168bbad8d7eac4d33ee6c2a867a1
   languageName: node
   linkType: hard
 
@@ -15673,10 +15706,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.0":
-  version: 19.2.0
-  resolution: "react@npm:19.2.0"
-  checksum: 10/e13bcdb8e994c3cfa922743cb75ca8deb60531bf02f584d2d8dab940a8132ce8a2e6ef16f8ed7f372b4072e7a7eeff589b2812dabbedfa73e6e46201dac8a9d0
+"react@npm:19.2.3":
+  version: 19.2.3
+  resolution: "react@npm:19.2.3"
+  checksum: 10/d16b7f35c0d35a56f63d9d1693819762e4abc479c57dd6310298920bed3820fcec7e17a99d44983416d8f5049143ea45b8005d3ab8324bae8973224400502b08
   languageName: node
   linkType: hard
 
@@ -16654,7 +16687,7 @@ __metadata:
     "@jest/types": "npm:30.2.0"
     "@swc/core": "npm:1.15.2"
     "@testing-library/jest-dom": "npm:6.9.1"
-    "@testing-library/react": "npm:16.3.0"
+    "@testing-library/react": "npm:16.3.1"
     cypress: "npm:15.4.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
@@ -16702,7 +16735,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.27.0"
     "@esbuild/win32-arm64": "npm:0.27.0"
     "@esbuild/win32-x64": "npm:0.27.0"
-    "@happy-dom/jest-environment": "npm:20.0.10"
+    "@happy-dom/jest-environment": "npm:20.0.11"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
@@ -16717,7 +16750,7 @@ __metadata:
     "@storybook/react-webpack5": "npm:10.1.10"
     "@testing-library/dom": "npm:10.4.1"
     "@testing-library/jest-dom": "npm:6.9.1"
-    "@testing-library/react": "npm:16.3.0"
+    "@testing-library/react": "npm:16.3.1"
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.6.1"
     "@types/jest": "npm:30.0.0"
@@ -16725,7 +16758,7 @@ __metadata:
     "@types/jsdom": "npm:27.0.0"
     "@types/loadable__component": "npm:5.13.10"
     "@types/ramda": "npm:0.31.1"
-    "@types/react": "npm:19.2.6"
+    "@types/react": "npm:19.2.7"
     "@types/react-dom": "npm:19.2.3"
     "@types/react-helmet": "npm:6.1.11"
     "@types/react-lazyload": "npm:^3.2.0"
@@ -16770,7 +16803,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     express: "npm:4.21.2"
     express-static-gzip: "npm:3.0.0"
-    happy-dom: "npm:20.0.10"
+    happy-dom: "npm:20.0.11"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
@@ -16797,8 +16830,8 @@ __metadata:
     prettier: "npm:3.6.2"
     puppeteer: "npm:24.22.3"
     ramda: "npm:0.32.0"
-    react: "npm:19.2.0"
-    react-dom: "npm:19.2.0"
+    react: "npm:19.2.3"
+    react-dom: "npm:19.2.3"
     react-helmet: "npm:6.1.0"
     react-lazyload: "npm:3.2.1"
     react-router-config: "npm:5.1.1"
