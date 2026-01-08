@@ -466,7 +466,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [
       assertPageView,
       assertRecentAudioEpisodesComponentView,
@@ -483,7 +482,6 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -494,7 +492,6 @@ const atiAnalyticsTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [...atiAnalyticsPodcastComponentTests],
   },
   {
@@ -505,7 +502,6 @@ const atiAnalyticsTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [...atiAnalyticsPodcastComponentTests],
   },
   {
@@ -516,7 +512,6 @@ const atiAnalyticsTestSuites = [
     siteId: 33,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [...atiAnalyticsPodcastComponentTests],
   },
   {
@@ -527,7 +522,6 @@ const atiAnalyticsTestSuites = [
     siteId: 33,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [...atiAnalyticsPodcastComponentTests],
   },
   {
@@ -539,7 +533,6 @@ const atiAnalyticsTestSuites = [
     siteId: 94,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [...atiAnalyticsPodcastComponentTests],
   },
 ];
@@ -561,7 +554,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };

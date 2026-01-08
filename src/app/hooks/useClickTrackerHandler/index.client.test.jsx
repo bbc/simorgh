@@ -4,10 +4,9 @@
 import { createContext } from 'react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import userEvent from '@testing-library/user-event';
-import { waitFor } from '@testing-library/dom';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import * as trackingToggle from '#hooks/useTrackingToggle';
-import constructATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 
 import * as useOptimizelyVariation from '../useOptimizelyVariation';
 import {
@@ -16,6 +15,7 @@ import {
   renderHook,
   act,
   fireEvent,
+  waitFor,
 } from '../../components/react-testing-library-with-providers';
 import * as serviceContextModule from '../../contexts/ServiceContext';
 import pidginData from './fixtureData/tori-51745682.json';
@@ -36,8 +36,6 @@ const urlToObject = url => {
     searchParams: Object.fromEntries(searchParams),
   };
 };
-
-process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 const eventTrackingData = {
   componentName: 'brand',
@@ -61,11 +59,6 @@ const defaultOptimizely = {
   track: jest.fn(),
   close: jest.fn(),
   user: { attributes: { foo: 'bar' }, id: 'test' },
-};
-
-// eslint-disable-next-line no-underscore-dangle
-window.__reverb = {
-  __reverbLoadedPromise: Promise.resolve(reverbMock),
 };
 
 const wrapper = ({ children }) => (
@@ -122,7 +115,6 @@ beforeEach(() => {
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
       service: 'pidgin',
-      useReverb: false,
     }),
   );
 });
@@ -136,7 +128,102 @@ describe('useClickTrackerHandler', () => {
     jest.clearAllMocks();
   });
 
-  describe('Click tracking', () => {
+  describe('Click tracking - Reverb', () => {
+    beforeEach(() => {
+      jest.replaceProperty(
+        serviceContextModule,
+        'ServiceContext',
+        createContext({
+          atiAnalyticsProducerId: '70',
+          atiAnalyticsProducerName: 'PIDGIN',
+          service: 'pidgin',
+        }),
+      );
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(reverbMock),
+      };
+    });
+
+    it.each([
+      {
+        title: 'should trigger a beacon for a click event',
+        trackingData: { ...eventTrackingData },
+        expectedItemEvent: {
+          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+          name: 'brand',
+        },
+      },
+      {
+        title: 'should trigger a beacon for an item level click event',
+        trackingData: {
+          ...eventTrackingData,
+          componentName: 'portrait-video',
+          itemTracker: {
+            type: 'portrait-video-promo',
+            text: 'Rollercoaster facts... while riding a rollercoaster',
+            position: 1,
+            duration: 73000,
+            resourceId: 'test-resource-id',
+          },
+        },
+        expectedItemEvent: {
+          duration: 73000,
+          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+          name: 'portrait-video',
+          position: 1,
+          resource_id: 'test-resource-id',
+          text: 'Rollercoaster facts... while riding a rollercoaster',
+          type: 'portrait-video-promo',
+        },
+      },
+    ])('$title', async ({ trackingData, expectedItemEvent }) => {
+      const {
+        metadata: { atiAnalytics },
+      } = pidginData;
+
+      const TestLink = () => {
+        const { onClick: handleClick } = useClickTrackerHandler(trackingData);
+
+        return (
+          <div>
+            <a
+              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
+              onClick={handleClick}
+            >
+              Link
+            </a>
+          </div>
+        );
+      };
+
+      const { getByText } = render(<TestLink />, {
+        atiData: atiAnalytics,
+        pageData: pidginData,
+        pageType: STORY_PAGE,
+        pathname: '/pidgin',
+        service: 'pidgin',
+        toggles: defaultToggles,
+      });
+
+      await act(() => userEvent.click(getByText('Link')));
+
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: { action: 'select', category: 'viewability' },
+          group: { name: 'article-sty', type: trackingData.componentName },
+          item: expectedItemEvent,
+        },
+        undefined,
+        undefined,
+        true,
+      );
+    });
+
     it('should return a function', () => {
       const { result } = renderHook(
         () => useClickTrackerHandler(eventTrackingData),
@@ -155,7 +242,6 @@ describe('useClickTrackerHandler', () => {
         metadata: { atiAnalytics },
       } = pidginData;
 
-      const spyFetch = jest.spyOn(global, 'fetch');
       const { getByTestId } = render(
         <TestComponent hookProps={eventTrackingData} />,
         {
@@ -168,34 +254,36 @@ describe('useClickTrackerHandler', () => {
         },
       );
 
-      expect(spyFetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
 
       await act(() => userEvent.click(getByTestId('test-component')));
 
-      expect(spyFetch).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
 
       await act(() => userEvent.click(getByTestId('test-component')));
 
-      expect(spyFetch).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
 
-      const [[viewEventUrl]] = spyFetch.mock.calls;
-
-      expect(urlToObject(viewEventUrl)).toEqual({
-        origin: 'https://logws1363.ati-host.net',
-        pathname: '/',
-        searchParams: {
-          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
-          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
-          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-          lng: 'en-US',
-          p: 'news::pidgin.news.story.51745682.page',
-          r: '1024x768x24x24',
-          re: '1024x768',
-          s: '598343',
-          s2: '70',
-          type: 'AT',
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'select',
+          },
+          group: {
+            name: 'article-sty',
+            type: 'brand',
+          },
+          item: {
+            name: 'brand',
+          },
         },
-      });
+        undefined,
+        undefined,
+        true,
+      );
     });
 
     it('should not send a tracking request if the toggle is disabled', async () => {
@@ -221,7 +309,7 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByTestId('test-component')));
 
-      expect(global.fetch).toHaveBeenCalledTimes(0);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(0);
     });
 
     it('should send tracking request on click of child element (button)', async () => {
@@ -243,24 +331,28 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByText('Button')));
 
-      const [[viewEventUrl]] = global.fetch.mock.calls;
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
 
-      expect(urlToObject(viewEventUrl)).toEqual({
-        origin: 'https://logws1363.ati-host.net',
-        pathname: '/',
-        searchParams: {
-          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
-          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
-          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-          lng: 'en-US',
-          p: 'news::pidgin.news.story.51745682.page',
-          r: '1024x768x24x24',
-          re: '1024x768',
-          s: '598343',
-          s2: '70',
-          type: 'AT',
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'select',
+          },
+          group: {
+            name: 'article-sty',
+            type: 'brand',
+          },
+          item: {
+            name: 'brand',
+          },
         },
-      });
+        undefined,
+        undefined,
+        true,
+      );
     });
 
     it('should send tracking request with the URL of the next page on click of a link', async () => {
@@ -296,24 +388,27 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByText('Link')));
 
-      const [[viewEventUrl]] = global.fetch.mock.calls;
-
-      expect(urlToObject(viewEventUrl)).toEqual({
-        origin: 'https://logws1363.ati-host.net',
-        pathname: '/',
-        searchParams: {
-          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/pidgin/articles/c93gd1yxng1o]',
-          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
-          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-          lng: 'en-US',
-          p: 'news::pidgin.news.story.51745682.page',
-          r: '1024x768x24x24',
-          re: '1024x768',
-          s: '598343',
-          s2: '70',
-          type: 'AT',
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'select',
+          },
+          group: {
+            name: 'article-sty',
+            type: 'brand',
+          },
+          item: {
+            link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
+            name: 'brand',
+          },
         },
-      });
+        undefined,
+        undefined,
+        true,
+      );
     });
 
     it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
@@ -346,38 +441,48 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByText('Button')));
 
-      expect(global.fetch).toHaveBeenCalledTimes(1);
+      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
 
-      const [[viewEventUrl]] = global.fetch.mock.calls;
-
-      expect(urlToObject(viewEventUrl)).toEqual({
-        origin: 'https://logws1363.ati-host.net',
-        pathname: '/',
-        searchParams: {
-          atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
-          hl: expect.stringMatching(/^.+?x.+?x.+?$/),
-          idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-          lng: 'en-US',
-          p: 'news::pidgin.news.story.51745682.page',
-          r: '1024x768x24x24',
-          re: '1024x768',
-          s: '598343',
-          s2: '70',
-          type: 'AT',
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: {
+            category: 'viewability',
+            action: 'select',
+          },
+          group: {
+            name: 'article-sty',
+            type: 'brand',
+          },
+          item: {
+            name: 'brand',
+          },
         },
-      });
+        undefined,
+        undefined,
+        true,
+      );
     });
 
     it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', async () => {
+      const err = new Error('An error');
+
+      const errorReverbMock = {
+        ...reverbMock,
+        userActionEvent: jest.fn(() => Promise.reject(err)),
+      };
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(errorReverbMock),
+      };
+
       const url = 'https://bbc.com/pidgin';
 
       const {
         metadata: { atiAnalytics },
       } = pidginData;
-
-      global.fetch = jest.fn(() => {
-        throw new Error('Failed to fetch');
-      });
 
       const { getByText } = render(
         <TestComponentSingleLink
@@ -395,8 +500,8 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByText('Link')));
 
-      expect(global.fetch).toHaveBeenCalledTimes(1);
-      expect(global.fetch).toThrow('Failed to fetch');
+      expect(errorReverbMock.userActionEvent).toHaveBeenCalledTimes(1);
+      expect(errorReverbMock.userActionEvent).rejects.toThrow(err);
 
       expect(windowLocationAssignSpy).toHaveBeenCalledTimes(1);
       expect(windowLocationAssignSpy).toHaveBeenCalledWith(url);
@@ -423,7 +528,7 @@ describe('useClickTrackerHandler', () => {
         fireEvent.contextMenu(getByText('Button'));
       });
 
-      expect(global.fetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalledTimes(1);
     });
 
     it('should not navigate to the next page if preventNavigation is true', async () => {
@@ -458,7 +563,6 @@ describe('useClickTrackerHandler', () => {
     });
 
     it('should be able to override the campaignID that is sent to ATI', async () => {
-      const spyFetch = jest.spyOn(global, 'fetch');
       const campaignID = 'custom-campaign';
       const {
         metadata: { atiAnalytics },
@@ -478,10 +582,20 @@ describe('useClickTrackerHandler', () => {
 
       await act(() => userEvent.click(getByTestId('test-component')));
 
-      const [[viewEventUrl]] = spyFetch.mock.calls;
-
-      expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
-        'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
+        'viewability',
+        '',
+        {
+          event: { action: 'select', category: 'viewability' },
+          group: {
+            name: 'custom-campaign',
+            type: 'brand',
+          },
+          item: { name: 'brand' },
+        },
+        undefined,
+        undefined,
+        true,
       );
     });
 
@@ -585,99 +699,6 @@ describe('useClickTrackerHandler', () => {
     });
   });
 
-  describe('Click tracking - Reverb', () => {
-    beforeEach(() => {
-      jest.replaceProperty(
-        serviceContextModule,
-        'ServiceContext',
-        createContext({
-          atiAnalyticsProducerId: '70',
-          atiAnalyticsProducerName: 'PIDGIN',
-          service: 'pidgin',
-          useReverb: true,
-        }),
-      );
-    });
-
-    it.each([
-      {
-        title: 'should trigger a beacon for a click event',
-        trackingData: { ...eventTrackingData },
-        expectedItemEvent: {
-          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
-          name: 'brand',
-        },
-      },
-      {
-        title: 'should trigger a beacon for an item level click event',
-        trackingData: {
-          ...eventTrackingData,
-          componentName: 'portrait-video',
-          itemTracker: {
-            type: 'portrait-video-promo',
-            text: 'Rollercoaster facts... while riding a rollercoaster',
-            position: 1,
-            duration: 73000,
-            resourceId: 'test-resource-id',
-          },
-        },
-        expectedItemEvent: {
-          duration: 73000,
-          link: 'https://www.bbc.com/pidgin/articles/c93gd1yxng1o',
-          name: 'portrait-video',
-          position: 1,
-          resource_id: 'test-resource-id',
-          text: 'Rollercoaster facts... while riding a rollercoaster',
-          type: 'portrait-video-promo',
-        },
-      },
-    ])('$title', async ({ trackingData, expectedItemEvent }) => {
-      const {
-        metadata: { atiAnalytics },
-      } = pidginData;
-
-      const TestLink = () => {
-        const { onClick: handleClick } = useClickTrackerHandler(trackingData);
-
-        return (
-          <div>
-            <a
-              href="https://www.bbc.com/pidgin/articles/c93gd1yxng1o"
-              onClick={handleClick}
-            >
-              Link
-            </a>
-          </div>
-        );
-      };
-
-      const { getByText } = render(<TestLink />, {
-        atiData: atiAnalytics,
-        pageData: pidginData,
-        pageType: STORY_PAGE,
-        pathname: '/pidgin',
-        service: 'pidgin',
-        toggles: defaultToggles,
-      });
-
-      await act(() => userEvent.click(getByText('Link')));
-
-      expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
-      expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
-        'viewability',
-        '',
-        {
-          event: { action: 'select', category: 'viewability' },
-          group: { name: 'article-sty', type: trackingData.componentName },
-          item: expectedItemEvent,
-        },
-        undefined,
-        undefined,
-        true,
-      );
-    });
-  });
-
   describe('Error handling', () => {
     it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
       const {
@@ -699,7 +720,7 @@ describe('useClickTrackerHandler', () => {
       await act(() => userEvent.click(getByText('Button')));
 
       expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
     });
 
     it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
@@ -718,7 +739,7 @@ describe('useClickTrackerHandler', () => {
       await act(() => userEvent.click(getByText('Button')));
 
       expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
     });
 
     it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
@@ -745,7 +766,7 @@ describe('useClickTrackerHandler', () => {
       await act(() => userEvent.click(getByText('Button')));
 
       expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
     });
 
     it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
@@ -770,7 +791,7 @@ describe('useClickTrackerHandler', () => {
       await act(() => userEvent.click(getByText('Button')));
 
       expect(container.error).toBeUndefined();
-      expect(global.fetch).not.toHaveBeenCalled();
+      expect(reverbMock.userActionEvent).not.toHaveBeenCalled();
     });
   });
 
@@ -778,22 +799,38 @@ describe('useClickTrackerHandler', () => {
     it('Returns a valid ati tracking url given the input props', () => {
       const { result } = renderHook(
         () =>
-          constructATIUrl({
+          constructReverbUrl({
             eventTrackingData: {
               ...eventTrackingData,
               campaignID: 'custom-campaign',
             },
             eventType: 'click',
-            isStatic: true,
           }),
         {
           wrapper,
         },
       );
 
-      expect(result.current).toContain(
-        'atc=PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[]-[]-[]-[]&type=AT',
-      );
+      const { searchParams } = urlToObject(result.current);
+
+      expect(searchParams).toEqual({
+        idclient: '{idclient}',
+        s: '596068',
+        r: '{screenResolutionColourDepth}',
+        re: '{browserViewportResolution}',
+        hl: '{timestamp}',
+        ts: '{epochTimestamp}',
+        lng: '{language}',
+        x6: '[{referrer}]',
+        app_type: 'lite',
+        ref: '{referrer}',
+        app_name: 'undefined',
+        language: 'undefined',
+        content_type: 'STY',
+        events:
+          '[{"name":"viewability.select","data":{"item":{"name":"brand","link":"{forwardingLink}"},"event":{"category":"viewability","action":"select"},"group":{"name":"custom-campaign","type":"brand"},"user":{"id":null},"app":{"type":"lite"}}}]',
+        context: '[{"data":{"page":{},"site":{"level2_id":""}}}]',
+      });
     });
   });
 });

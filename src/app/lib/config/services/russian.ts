@@ -119,7 +119,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     atiAnalyticsProducerName: 'RUSSIAN',
-    useReverb: true,
     chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',

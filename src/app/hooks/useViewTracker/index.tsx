@@ -52,7 +52,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -79,7 +79,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             advertiserID,
             url,
             detailedPlacement,
-            useReverb,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
             ...(experimentVariant &&
@@ -134,7 +133,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     experimentName,
     experimentVariant,
     detailedPlacement,
-    useReverb,
     itemTracker,
     groupTracker,
     alwaysInView,

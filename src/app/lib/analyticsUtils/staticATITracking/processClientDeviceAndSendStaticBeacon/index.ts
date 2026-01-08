@@ -1,7 +1,6 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
   window.processClientDeviceAndSendStaticBeacon = ({
-    atiUrl,
     reverbUrl,
     forwardingUrl = '',
   }) => {
@@ -87,48 +86,19 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
       const searchParams = new URLSearchParams(window.location.search);
 
       searchParams.forEach((value, key) => {
-        if (key.startsWith('utm_') || key.startsWith('at_')) {
+        if (
+          key.startsWith('utm_') ||
+          key.startsWith('at_') ||
+          key.startsWith('xtor')
+        ) {
           processedReverbUrl +=
-            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
-              'at_',
-              'src_',
-            );
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+              .replace('at_', 'src_')
+              .replace('xtor', 'xto');
         }
       });
 
       window.sendStaticBeacon(processedReverbUrl);
-    } else if (atiUrl) {
-      const containsMarketingAtUtcParams = window.location.search.length;
-      if (isLiteSite && containsMarketingAtUtcParams) {
-        const kvpairs: Record<string, string> = window.location.search
-          .substring(1)
-          .split('&')
-          .map((param): [string, string] => {
-            const pieces = param.split('=');
-            return [
-              decodeURIComponent(pieces[0]),
-              decodeURIComponent(pieces[1]),
-            ];
-          })
-          .reduce<Record<string, string>>((values, kv) => {
-            // eslint-disable-next-line no-param-reassign, prefer-destructuring
-            values[kv[0]] = kv[1];
-            return values;
-          }, {});
-
-        Object.keys(kvpairs).forEach(keyName => {
-          if (keyName.indexOf('at_') === 0) {
-            params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
-          } else if (keyName.indexOf('utm_') === 0) {
-            params[keyName] = kvpairs[keyName];
-          }
-        });
-      }
-
-      const paramValues = Object.keys(params)
-        .map(key => `${key}=${params[key]}`)
-        .join('&');
-      window.sendStaticBeacon(`${atiUrl}&${paramValues}`);
     }
   };
 };
