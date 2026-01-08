@@ -78,7 +78,6 @@ const ArticleLinksBlock = ({
           blocks={blocksWithoutTitle}
           viewTracker={viewTracker}
           clickTracker={clickTracker}
-          {...a11yAttributes}
           eventTrackingData={eventTrackingData}
         />
       )}
