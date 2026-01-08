@@ -46,8 +46,6 @@ const canonicalTestSuites = [
     siteId: 35,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    componentTrackingContentType: LIVE_PAGE,
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -62,8 +60,6 @@ const canonicalTestSuites = [
     siteId: 62,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    componentTrackingContentType: LIVE_PAGE,
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -79,7 +75,6 @@ const canonicalTestSuites = [
   //   siteId: 52,
   //   applicationType: 'responsive',
   //   contentType: 'article',
-  //   useReverb: true,
   //   tests: [
   //     assertPageView,
   //     assertTopStoriesComponentView,
@@ -113,7 +108,6 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: true,
     applicationType: 'amp',
     tests: [assertPageView],
   };
@@ -149,7 +143,6 @@ const liteTestSuites = canonicalTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: true,
       tests: [...liteSiteTests],
     };
   });

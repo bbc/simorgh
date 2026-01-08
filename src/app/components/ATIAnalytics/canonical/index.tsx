@@ -1,5 +1,4 @@
 import { useEffect, useState, use } from 'react';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
@@ -18,11 +17,7 @@ import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
-
-const renderNoScriptTrackingPixel = (
-  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
-) => {
+const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
       <img
@@ -34,7 +29,7 @@ const renderNoScriptTrackingPixel = (
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
         src={enforceLegacyDestinationForJapanese(
-          getNoScriptTrackingPixelUrl(reverbParams),
+          getNoScriptTrackingPixelUrl({ reverbParams }),
         )}
       />
     </noscript>
@@ -45,10 +40,7 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({
-  pageviewParams = '',
-  reverbParams,
-}: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
@@ -56,16 +48,11 @@ const CanonicalATIAnalytics = ({
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
 
-  const atiPageViewUrlString =
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
-
   const [reverbBeaconConfig] = useState(reverbParams);
 
-  const [atiPageViewUrl] = useState(atiPageViewUrlString);
-
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
-  }, [atiPageViewUrl, reverbBeaconConfig]);
+    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
+  }, [reverbBeaconConfig]);
 
   const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
     reverbUrlHelper.getLitePageViewUrl(reverbParams),
@@ -88,7 +75,7 @@ const CanonicalATIAnalytics = ({
           script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
           nonce,
         })}
-      {renderNoScriptTrackingPixel(reverbParams)}
+      {renderNoScriptTrackingPixel({ reverbParams })}
     </>
   );
 };

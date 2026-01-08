@@ -45,7 +45,6 @@ export type ServiceConfig = {
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
   atiAnalyticsProducerName?: string;
-  useReverb?: boolean;
   chartbeatDomain: string;
   brandName: string;
   product: string;

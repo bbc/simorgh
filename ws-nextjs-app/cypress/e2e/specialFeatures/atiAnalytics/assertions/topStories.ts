@@ -10,8 +10,6 @@ const { TOP_STORIES } = COMPONENTS;
 
 export const assertTopStoriesComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -27,8 +25,6 @@ export const assertTopStoriesComponentView = ({
     assertATIComponentViewEvent({
       component: TOP_STORIES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -37,8 +33,6 @@ export const assertTopStoriesComponentView = ({
 
 export const assertTopStoriesComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -57,8 +51,6 @@ export const assertTopStoriesComponentClick = ({
     assertATIComponentClickEvent({
       component: TOP_STORIES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

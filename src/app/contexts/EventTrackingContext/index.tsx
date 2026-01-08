@@ -26,7 +26,6 @@ import {
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';
-import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
 import { ATIData } from '../../components/ATIAnalytics/types';
 
@@ -81,7 +80,7 @@ export const EventTrackingContextProvider = ({
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = use(RequestContext);
-  const { pageType } = requestContext;
+  const { pageType, platform, statsDestination } = requestContext;
 
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
@@ -91,13 +90,7 @@ export const EventTrackingContextProvider = ({
   const trackingProps = useMemo(() => {
     if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
-
-      const { pageIdentifier, platform, statsDestination } =
-        buildATIEventTrackingParams({
-          requestContext,
-          serviceContext,
-          atiData,
-        });
+      const { pageIdentifier } = atiData;
 
       return {
         campaignID,
@@ -115,8 +108,8 @@ export const EventTrackingContextProvider = ({
     atiData,
     eventTrackingIsEnabled,
     pageType,
-    requestContext,
-    serviceContext,
+    platform,
+    statsDestination,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {

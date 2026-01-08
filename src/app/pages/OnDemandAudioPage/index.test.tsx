@@ -5,7 +5,6 @@ import indonesianOnDemandAudio from '#data/indonesia/bbc_indonesian_radio/w172xy
 import swahiliExpiredOnDemandAudio from '#data/swahili/bbc_swahili_radio/w3ct1y1s.json';
 import koreanOnDemandAudio from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import zhongwenOnDemandAudio from '#data/zhongwen/bbc_cantonese_radio/w172xwswq9t42v6.json';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
@@ -69,8 +68,6 @@ const renderPage = async ({
 
   return result;
 };
-
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;

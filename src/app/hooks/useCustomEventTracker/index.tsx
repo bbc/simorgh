@@ -39,7 +39,7 @@ const useCustomEventTracker = ({
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const trackEvent = useCallback(
     async (stringifiedData = '') => {
@@ -69,7 +69,6 @@ const useCustomEventTracker = ({
             producerName,
             service,
             statsDestination,
-            useReverb,
             experimentName,
             experimentVariant,
           });
@@ -89,7 +88,6 @@ const useCustomEventTracker = ({
       producerName,
       service,
       statsDestination,
-      useReverb,
       experimentName,
       experimentVariant,
     ],
