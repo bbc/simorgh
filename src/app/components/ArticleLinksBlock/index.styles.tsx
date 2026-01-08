@@ -17,11 +17,6 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
       },
-
-      [mq.FORCED_COLOURS]: {
-        border: `solid ${pixelsToRem(3)}rem transparent`,
-        borderTop: 'transparent',
-      },
     }),
   labelComponent: ({
     isDarkUi,

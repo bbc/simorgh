@@ -19,7 +19,7 @@ const PromoList = ({ blocks, viewTracker, clickTracker }: PromoListProps) => {
   const listBlocks = blocks.slice(0, 3);
 
   return (
-    <div css={[styles.promo, styles.list]} dir={dir} {...viewTracker}>
+    <div css={[styles.promo]} dir={dir} {...viewTracker}>
       <ul>
         {listBlocks.map((block, index) => {
           return (
