@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { Services } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import { BylineLinkedData, LinkedDataProps } from './types';
@@ -41,22 +42,19 @@ const getSpeakableXpaths = ({
   seoTitle,
   type,
 }: {
-  service: string;
+  service: Services;
   seoTitle?: string;
   type: string;
 }) => {
   if (!SUPPORTED_SPEAKABLE_TYPES.includes(type)) return null;
   if (!SPEAKABLE_ENABLED_SERVICES.includes(service)) return null;
-
-  const speakableXpaths: SpeakableSpecification[] = [];
-  if (seoTitle) {
-    speakableXpaths.push({
+  if (!seoTitle) return null;
+  return [
+    {
       '@type': 'SpeakableSpecification',
       xpath: ['/html/head/title'],
-    });
-  }
-  if (speakableXpaths.length === 0) return null;
-  return speakableXpaths;
+    },
+  ];
 };
 
 const LinkedData = ({
