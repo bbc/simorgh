@@ -45,7 +45,7 @@ const getSpeakableXpaths = ({
   service: Services;
   seoTitle?: string;
   type: string;
-}) => {
+}): SpeakableSpecification[] | null => {
   if (!SUPPORTED_SPEAKABLE_TYPES.includes(type)) return null;
   if (!SPEAKABLE_ENABLED_SERVICES.includes(service)) return null;
   if (!seoTitle) return null;
