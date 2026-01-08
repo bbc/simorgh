@@ -98,7 +98,7 @@ const Image = ({
             href={src}
             imageSrcSet={srcSet}
             imageSizes={sizes}
-            fetchPriority="high"
+            {...(fetchPriority && { fetchPriority })}
           />
         </Helmet>
       )}

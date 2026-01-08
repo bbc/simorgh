@@ -107,7 +107,7 @@ const PageLayoutWrapper = ({
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
                     	localStorage.setItem(storageKey, JSON.stringify(forStorage));
                     	if (shouldAttachStyle) {
-                    		const styleInnerText = '@font-face{font-family: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: optional;}';
+                    		const styleInnerText = '@font-face{font-family: "' + font.fontFamily + '"; font-weight: ' + font.fontWeight + ';src:url("' + fontContents + '") format("woff2");font-display: swap;}';
                     		createStyleAndAttach(styleInnerText);
                 		}
                     });
@@ -122,7 +122,7 @@ const PageLayoutWrapper = ({
                     }
                     else {
                     	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
-                    	const styleInnerText = '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: optional;}';
+                    	const styleInnerText = '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
                 		createStyleAndAttach(styleInnerText);
                 		if (fontVersion !== font.version) {
                 			retrieveAndStoreFont(font, storageKey, false);
