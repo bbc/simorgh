@@ -4,25 +4,12 @@ import { Article } from '#app/models/types/optimo';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
-const adaptiveCurationsSectionStyles = ({ spacings, mq }: Theme) =>
-  css({
-    marginBottom: `${spacings.TRIPLE}rem`,
-    padding: `${spacings.DOUBLE}rem`,
-    [mq.GROUP_4_MIN_WIDTH]: {
-      display: 'none',
-    },
-  });
-
 const SecondaryColumn = ({
   pageData,
-  timeOfDayExperimentVariant,
-  timeOfDayExperimentName,
   referrerVariant,
   referrerExperimentName,
 }: {
   pageData: Article;
-  timeOfDayExperimentVariant?: string | null;
-  timeOfDayExperimentName?: string;
   referrerVariant?: string | null;
   referrerExperimentName?: string;
 }) => {
@@ -44,13 +31,7 @@ const SecondaryColumn = ({
         >
           <TopStoriesSection
             content={topStoriesContent}
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
+            // EXPERIMENT: Referrer Experiment
             {...(referrerVariant && {
               experimentProps: {
                 sendOptimizelyEvents: true,
@@ -67,6 +48,14 @@ const SecondaryColumn = ({
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            // EXPERIMENT: Referrer Experiment
+            {...(referrerVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: referrerExperimentName,
+                experimentVariant: referrerVariant,
+              },
+            })}
           />
         </div>
       )}
