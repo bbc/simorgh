@@ -16,7 +16,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   -ms-flex-align: center;
   align-items: center;
   background-color: #F6F6F6;
-  width: 100vw;
+  width: 100%;
   height: 2rem;
   color: #3F3F42;
   padding: 0 0.5rem;
@@ -371,7 +371,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -510,7 +510,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   -ms-flex-align: center;
   align-items: center;
   background-color: #F6F6F6;
-  width: 100vw;
+  width: 100%;
   height: 2rem;
   color: #3F3F42;
   padding: 0 0.5rem;
@@ -561,7 +561,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -702,7 +702,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 25rem) {
