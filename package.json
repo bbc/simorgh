@@ -95,7 +95,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
     "glob": "10.5.0",
-    "@types/react": "19.2.6",
+    "@types/react": "19.2.7",
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
     "react-is": "19"
@@ -126,8 +126,8 @@
     "morgan": "1.10.1",
     "polyfill-crypto.getrandomvalues": "1.0.0",
     "ramda": "0.32.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-helmet": "6.1.0",
     "react-lazyload": "3.2.1",
     "react-router-config": "5.1.1",
@@ -178,7 +178,7 @@
     "@types/jsdom": "27.0.0",
     "@types/loadable__component": "5.13.10",
     "@types/ramda": "0.31.1",
-    "@types/react": "19.2.6",
+    "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@types/react-helmet": "6.1.11",
     "@types/react-lazyload": "^3.2.0",
