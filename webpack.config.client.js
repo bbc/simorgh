@@ -94,8 +94,6 @@ module.exports = ({
     },
     optimization: {
       moduleIds: 'deterministic',
-      usedExports: true,
-      sideEffects: true,
       minimizer: [
         new TerserPlugin({
           terserOptions: {
