@@ -48,7 +48,6 @@ const ArticleLinksBlock = ({
   const ariaLabel = title ? idSanitiser(title) : undefined;
 
   const a11yAttributes = {
-    as: 'section',
     role: 'region',
     ...(ariaLabel
       ? { 'aria-labelledby': ariaLabel }
@@ -58,7 +57,7 @@ const ArticleLinksBlock = ({
   };
 
   return (
-    <div {...a11yAttributes} data-e2e="article-links-block">
+    <section {...a11yAttributes} data-e2e="article-links-block">
       {typeof title === 'string' && title.length > 0 && (
         <strong
           css={styles.labelComponent}
@@ -81,7 +80,7 @@ const ArticleLinksBlock = ({
           eventTrackingData={eventTrackingData}
         />
       )}
-    </div>
+    </section>
   );
 };
 
