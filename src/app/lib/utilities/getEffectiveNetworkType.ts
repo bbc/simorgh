@@ -1,4 +1,4 @@
-import { EffectiveNetworkType } from '../../hooks/useNetworkStatusTracker/type';
+import { EffectiveNetworkType } from '#app/models/types/global';
 
 const getEffectiveNetworkType = (): EffectiveNetworkType => {
   if (typeof window === 'undefined' || !navigator) {
