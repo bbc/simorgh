@@ -1,10 +1,4 @@
 import App, { AppContext } from 'next/app';
-import type { AppProps } from 'next/app';
-
-import useIsPWA from '#app/hooks/useIsPWA';
-import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
-import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
-
 import { ATIData } from '#app/components/ATIAnalytics/types';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
@@ -64,7 +58,7 @@ interface Props {
   };
 }
 
-export class CustomApp extends App<Props> {
+export default class CustomApp extends App<Props> {
   // The 'pageProps' returned are passed down to ALL pages and merged with page
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
@@ -186,22 +180,4 @@ export class CustomApp extends App<Props> {
       </ToggleContextProvider>
     );
   }
-}
-
-/* ------------------------------------------------------------------ */
-/*  FUNCTION WRAPPER (HOOKS EXECUTION)                                  */
-/* ------------------------------------------------------------------ */
-export default function CustomAppWithHooks({
-  pageProps,
-  ...rest
-}: AppProps<Props>) {
-  // pageProps is of type Props, so service is nested inside pageProps.pageProps
-  const { service, ...restPageProps } = pageProps.pageProps;
-
-  const isPWA = useIsPWA();
-
-  useServiceWorkerRegistration(service);
-  useSendPWAStatus(isPWA);
-
-  return <CustomApp {...rest} pageProps={{ service, ...restPageProps }} />;
 }
