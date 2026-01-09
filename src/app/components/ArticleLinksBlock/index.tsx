@@ -5,6 +5,7 @@ import useViewTracker from '#hooks/useViewTracker';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import SkipLinkWrapper from '#app/legacy/components/SkipLinkWrapper';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Promo from './Promo';
 import PromoList from './PromoList';
@@ -19,7 +20,7 @@ const ArticleLinksBlock = ({
   blocks,
   blockGroupIndex = null,
 }: ArticleLinksBlockProps) => {
-  const { dir, translations } = use(ServiceContext);
+  const { dir, translations, recommendations, service } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -56,18 +57,38 @@ const ArticleLinksBlock = ({
         }),
   };
 
+  const { skipLink } = recommendations || {};
+
+  const { text, endTextVisuallyHidden } = skipLink || {
+    text: 'Skip content and continue reading',
+    endTextVisuallyHidden: 'End of content',
+  };
+
+  const terms = { '%title%': title || 'content' };
+
+  const endTextId = `end-of-article-links-block`;
+
+  const skipLinkProps = {
+    endTextId,
+    terms,
+    text: text.replace('%title%', terms['%title%']),
+    endTextVisuallyHidden,
+  };
+
   return (
     <section {...a11yAttributes} data-e2e="article-links-block">
-      {typeof title === 'string' && title.length > 0 && (
-        <strong
-          css={styles.labelComponent}
-          id={ariaLabel}
-          data-testid="eoj-recommendations-heading"
-          dir={dir}
-        >
-          {title}
-        </strong>
-      )}
+      <SkipLinkWrapper service={service} {...skipLinkProps}>
+        {typeof title === 'string' && title.length > 0 && (
+          <strong
+            css={styles.labelComponent}
+            id={ariaLabel}
+            data-testid="eoj-recommendations-heading"
+            dir={dir}
+          >
+            {title}
+          </strong>
+        )}
+      </SkipLinkWrapper>
       {isSingleItem ? (
         <div css={styles.promoContainer} dir={dir} {...viewTracker}>
           <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
