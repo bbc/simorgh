@@ -1,13 +1,10 @@
 import { useEffect } from 'react';
+import onClient from '#lib/utilities/onClient';
 
 const useServiceWorkerRegistration = (service?: string) => {
   useEffect(() => {
     // Exit if SW API is not available or service is missing
-    if (
-      typeof window === 'undefined' ||
-      !('serviceWorker' in navigator) ||
-      !service
-    ) {
+    if (!onClient() || !('serviceWorker' in navigator) || !service) {
       return;
     }
 
@@ -19,13 +16,17 @@ const useServiceWorkerRegistration = (service?: string) => {
       console.warn('ServiceWorker API exists but register() is not available.');
       return;
     }
+    const shouldInstallServiceWorker =
+      onClient() && 'serviceWorker' in navigator;
 
-    const result = sw.register(`/${service}/sw.js`);
+    if (shouldInstallServiceWorker) {
+      const result = sw.register(`/${service}/sw.js`);
 
-    Promise.resolve(result).catch(err => {
-      // eslint-disable-next-line no-console
-      console.error('Service worker registration failed:', err);
-    });
+      Promise.resolve(result).catch(err => {
+        // eslint-disable-next-line no-console
+        console.error('Service worker registration failed:', err);
+      });
+    }
   }, [service]);
 };
 

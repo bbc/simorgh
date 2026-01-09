@@ -26,7 +26,8 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
-import PWAServiceWorker from '#app/components/PWAServiceWorker';
+// import PWAServiceWorker from '#app/components/PWAServiceWorker';
+// import ServiceWorker from '#app/components/ServiceWorker';
 
 interface Props {
   pageProps: {
@@ -142,43 +143,44 @@ export default class CustomApp extends App<Props> {
           variant={variant}
           pageLang={pageLang}
         >
-          <PWAServiceWorker service={service}>
-            <RequestContextProvider
-              bbcOrigin={bbcOrigin}
-              id={id}
-              isAmp={isAmp}
-              isApp={isApp}
-              isLite={isLite}
-              pageType={pageType}
-              service={service}
-              statusCode={status}
-              pathname={pathname}
-              variant={variant}
-              timeOnServer={timeOnServer}
-              showAdsBasedOnLocation={showAdsBasedOnLocation}
-              showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-              serverSideExperiments={serverSideExperiments}
-              country={country}
-              isNextJs={isNextJs}
-              isUK={isUK ?? false}
-            >
-              <EventTrackingContextProvider atiData={atiAnalytics}>
-                {isAvEmbeds ? (
+          {/* TEMP Testing will remove later  */}
+          {/* <ServiceWorker /> */}
+          <RequestContextProvider
+            bbcOrigin={bbcOrigin}
+            id={id}
+            isAmp={isAmp}
+            isApp={isApp}
+            isLite={isLite}
+            pageType={pageType}
+            service={service}
+            statusCode={status}
+            pathname={pathname}
+            variant={variant}
+            timeOnServer={timeOnServer}
+            showAdsBasedOnLocation={showAdsBasedOnLocation}
+            showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
+            serverSideExperiments={serverSideExperiments}
+            country={country}
+            isNextJs={isNextJs}
+            isUK={isUK ?? false}
+          >
+            <EventTrackingContextProvider atiData={atiAnalytics}>
+              {isAvEmbeds ? (
+                <ThemeProvider service={service} variant={variant}>
+                  {RenderChildrenOrError}
+                </ThemeProvider>
+              ) : (
+                <UserContextProvider>
                   <ThemeProvider service={service} variant={variant}>
-                    {RenderChildrenOrError}
+                    {/* Service Worker Component is wrapped in PageWrapper Component */}
+                    <PageWrapper pageData={pageData} status={status}>
+                      {RenderChildrenOrError}
+                    </PageWrapper>
                   </ThemeProvider>
-                ) : (
-                  <UserContextProvider>
-                    <ThemeProvider service={service} variant={variant}>
-                      <PageWrapper pageData={pageData} status={status}>
-                        {RenderChildrenOrError}
-                      </PageWrapper>
-                    </ThemeProvider>
-                  </UserContextProvider>
-                )}
-              </EventTrackingContextProvider>
-            </RequestContextProvider>
-          </PWAServiceWorker>
+                </UserContextProvider>
+              )}
+            </EventTrackingContextProvider>
+          </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
     );

@@ -53,16 +53,150 @@ const cacheOfflinePageAndResources = async service => {
   const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
     m => m[1],
   );
+  // Adding console logs to help debug event tracking issues - will remove later
+  console.log(
+    `[SW v${version}] Caching scriptSrcs ,linkHrefs for ${service}:`,
+    scriptSrcs,
+    linkHrefs,
+  );
+  const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
 
-  const resources = [...scriptSrcs, ...linkHrefs]
-    .filter(Boolean)
-    .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
-    .map(url => new URL(url, self.location.origin).href);
+  //* *** */ Removing filtering to allow cross-origin resources or other assets to be cached
+  // .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
+  // .map(url => new URL(url, self.location.origin).href);
 
+  console.log(
+    `[SW v${version}] Caching final offline resources for ${service}:`,
+    resources,
+  );
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+
+  //* *** */ TEMP TESTING will remove later : parsing Next.js build manifest to get exact assets for offline page
+
+  // const html = await resp.text();
+  // const nextDataMatch = html.match(
+  //   /<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/,
+  // );
+
+  // if (!nextDataMatch) return;
+
+  // let nextData;
+  // try {
+  //   nextData = JSON.parse(nextDataMatch[1]);
+  // } catch {
+  //   return;
+  // }
+  // console.log('nextData---------------------', nextData);
+  // const assetPrefix = nextData.assetPrefix || '';
+  // const base = new URL(assetPrefix || '/', self.location.origin).href;
+
+  // // Minimal critical Next.js assets
+  // const resources = [
+  //   `${base}_next/static/chunks/main.js`,
+  //   `${base}_next/static/chunks/webpack.js`,
+  // ];
+
+  // console.log(
+  //   `[SW v${version}] Caching Next.js offline resources for ${service}:`,
+  //   resources,
+  // );
+
+  // await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
 
-// Cache patterns
+// //* *** */ TEMP TESTING will remove later : parsing Next.js build manifest to get exact assets for offline page
+
+// const cacheOfflinePageAndResources = async service => {
+//   const cache = await caches.open(cacheName);
+
+//   const offlinePageUrl = new URL(
+//     getOfflinePageUrl(service),
+//     self.location.origin,
+//   ).href;
+
+//   // 1️⃣ Fetch & cache offline HTML
+//   const resp = await cacheResource(cache, offlinePageUrl);
+//   if (!resp || !resp.ok) return;
+
+//   console.log(`[SW v${version}] Cached offline page for ${service}`);
+
+//   const html = await resp.text();
+
+//   // 2️⃣ Extract __NEXT_DATA__ from HTML
+//   const nextDataMatch = html.match(
+//     /<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/,
+//   );
+
+//   if (!nextDataMatch) {
+//     console.warn('[SW] __NEXT_DATA__ not found');
+//     return;
+//   }
+
+//   let nextData;
+//   try {
+//     nextData = JSON.parse(nextDataMatch[1]);
+//   } catch (e) {
+//     console.error('[SW] Failed to parse __NEXT_DATA__', e);
+//     return;
+//   }
+
+//   const assetPrefix = nextData.assetPrefix || '';
+//   const { buildId } = nextData;
+
+//   // 3️⃣ Load build manifest
+//   const manifestUrl = new URL(
+//     `${assetPrefix}/_next/static/${buildId}/_buildManifest.js`,
+//     self.location.origin,
+//   ).href;
+
+//   let manifestResp;
+//   try {
+//     manifestResp = await fetch(manifestUrl);
+//   } catch (e) {
+//     console.error('[SW] Failed to fetch buildManifest', e);
+//     return;
+//   }
+
+//   if (!manifestResp.ok) return;
+
+//   // 4️⃣ Evaluate manifest safely in SW scope
+//   let manifest = {};
+//   try {
+//     const text = await manifestResp.text();
+//     // eslint-disable-next-line no-underscore-dangle
+//     self.__BUILD_MANIFEST = {};
+//     // eslint-disable-next-line no-eval
+//     eval(text);
+//     // eslint-disable-next-line no-underscore-dangle
+//     manifest = self.__BUILD_MANIFEST;
+//   } catch (e) {
+//     console.error('[SW] Failed to eval buildManifest', e);
+//     return;
+//   }
+
+//   // 5️⃣ Offline page key is LITERAL
+//   const pageKey = '/[service]/offline';
+//   const assets = manifest[pageKey];
+
+//   if (!assets || !assets.length) {
+//     console.warn(`[SW] No assets found for ${pageKey}`);
+//     return;
+//   }
+
+//   // 6️⃣ Build full URLs
+//   const resources = assets.map(
+//     p => new URL(`/_next/${p}`, assetPrefix || self.location.origin).href,
+//   );
+
+//   console.log(
+//     `[SW v${version}] Caching offline JS chunks for ${service}:`,
+//     resources,
+//   );
+
+//   // 7️⃣ Cache JS chunks
+//   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+// };
+
 const CACHEABLE_FILES = [
   // Reverb
   /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,

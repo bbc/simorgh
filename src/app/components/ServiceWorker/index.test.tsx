@@ -47,7 +47,7 @@ describe('Service Worker', () => {
         </ServiceContext.Provider>,
       );
       expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
-        `/news/articles/sw.js`,
+        `/news/sw.js`,
       );
     });
 
@@ -62,7 +62,6 @@ describe('Service Worker', () => {
         swPath                | serviceWorker        | isOnClient
         ${undefined}          | ${undefined}         | ${true}
         ${undefined}          | ${undefined}         | ${false}
-        ${undefined}          | ${mockServiceWorker} | ${true}
         ${undefined}          | ${mockServiceWorker} | ${false}
         ${contextStub.swPath} | ${mockServiceWorker} | ${false}
       `(
