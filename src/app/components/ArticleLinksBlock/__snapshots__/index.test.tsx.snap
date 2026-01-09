@@ -230,6 +230,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   font-style: normal;
   font-weight: 700;
   display: inline-block;
+  vertical-align: middle;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -511,6 +512,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   font-style: normal;
   font-weight: 700;
   display: inline-block;
+  vertical-align: middle;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -783,6 +785,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   font-style: normal;
   font-weight: 700;
   display: inline-block;
+  vertical-align: middle;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -1006,6 +1009,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   font-style: normal;
   font-weight: 700;
   display: inline-block;
+  vertical-align: middle;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;

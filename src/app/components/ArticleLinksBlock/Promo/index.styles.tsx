@@ -8,6 +8,7 @@ export default {
       ...fontSizes.pica,
       ...fontVariants.serifBold,
       display: 'inline-block',
+      verticalAlign: 'middle',
       textDecoration: 'none',
       overflowX: 'hidden',
       overflowY: 'hidden',
