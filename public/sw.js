@@ -70,132 +70,7 @@ const cacheOfflinePageAndResources = async service => {
     resources,
   );
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
-
-  //* *** */ TEMP TESTING will remove later : parsing Next.js build manifest to get exact assets for offline page
-
-  // const html = await resp.text();
-  // const nextDataMatch = html.match(
-  //   /<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/,
-  // );
-
-  // if (!nextDataMatch) return;
-
-  // let nextData;
-  // try {
-  //   nextData = JSON.parse(nextDataMatch[1]);
-  // } catch {
-  //   return;
-  // }
-  // console.log('nextData---------------------', nextData);
-  // const assetPrefix = nextData.assetPrefix || '';
-  // const base = new URL(assetPrefix || '/', self.location.origin).href;
-
-  // // Minimal critical Next.js assets
-  // const resources = [
-  //   `${base}_next/static/chunks/main.js`,
-  //   `${base}_next/static/chunks/webpack.js`,
-  // ];
-
-  // console.log(
-  //   `[SW v${version}] Caching Next.js offline resources for ${service}:`,
-  //   resources,
-  // );
-
-  // await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
-
-// //* *** */ TEMP TESTING will remove later : parsing Next.js build manifest to get exact assets for offline page
-
-// const cacheOfflinePageAndResources = async service => {
-//   const cache = await caches.open(cacheName);
-
-//   const offlinePageUrl = new URL(
-//     getOfflinePageUrl(service),
-//     self.location.origin,
-//   ).href;
-
-//   // 1️⃣ Fetch & cache offline HTML
-//   const resp = await cacheResource(cache, offlinePageUrl);
-//   if (!resp || !resp.ok) return;
-
-//   console.log(`[SW v${version}] Cached offline page for ${service}`);
-
-//   const html = await resp.text();
-
-//   // 2️⃣ Extract __NEXT_DATA__ from HTML
-//   const nextDataMatch = html.match(
-//     /<script[^>]+id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/,
-//   );
-
-//   if (!nextDataMatch) {
-//     console.warn('[SW] __NEXT_DATA__ not found');
-//     return;
-//   }
-
-//   let nextData;
-//   try {
-//     nextData = JSON.parse(nextDataMatch[1]);
-//   } catch (e) {
-//     console.error('[SW] Failed to parse __NEXT_DATA__', e);
-//     return;
-//   }
-
-//   const assetPrefix = nextData.assetPrefix || '';
-//   const { buildId } = nextData;
-
-//   // 3️⃣ Load build manifest
-//   const manifestUrl = new URL(
-//     `${assetPrefix}/_next/static/${buildId}/_buildManifest.js`,
-//     self.location.origin,
-//   ).href;
-
-//   let manifestResp;
-//   try {
-//     manifestResp = await fetch(manifestUrl);
-//   } catch (e) {
-//     console.error('[SW] Failed to fetch buildManifest', e);
-//     return;
-//   }
-
-//   if (!manifestResp.ok) return;
-
-//   // 4️⃣ Evaluate manifest safely in SW scope
-//   let manifest = {};
-//   try {
-//     const text = await manifestResp.text();
-//     // eslint-disable-next-line no-underscore-dangle
-//     self.__BUILD_MANIFEST = {};
-//     // eslint-disable-next-line no-eval
-//     eval(text);
-//     // eslint-disable-next-line no-underscore-dangle
-//     manifest = self.__BUILD_MANIFEST;
-//   } catch (e) {
-//     console.error('[SW] Failed to eval buildManifest', e);
-//     return;
-//   }
-
-//   // 5️⃣ Offline page key is LITERAL
-//   const pageKey = '/[service]/offline';
-//   const assets = manifest[pageKey];
-
-//   if (!assets || !assets.length) {
-//     console.warn(`[SW] No assets found for ${pageKey}`);
-//     return;
-//   }
-
-//   // 6️⃣ Build full URLs
-//   const resources = assets.map(
-//     p => new URL(`/_next/${p}`, assetPrefix || self.location.origin).href,
-//   );
-
-//   console.log(
-//     `[SW v${version}] Caching offline JS chunks for ${service}:`,
-//     resources,
-//   );
-
-//   // 7️⃣ Cache JS chunks
-//   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
-// };
 
 const CACHEABLE_FILES = [
   // Reverb
@@ -292,6 +167,7 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (event.request.url.includes('/_next/static/')) {
+    console.log(`[SW FETCH] Intercept /_next/static/`);
     // Cache Next.js static files - cache-first strategy
     event.respondWith(
       (async () => {
@@ -327,18 +203,6 @@ const fetchEventHandler = async event => {
           if (preloadResp) return preloadResp;
 
           const networkResp = await fetch(event.request);
-
-          // Cache offline page if in PWA mode
-          if (networkResp && networkResp.ok && event.clientId) {
-            console.log('[SW] Caching offline page if PWA if network is ok');
-            if (isPWA) {
-              const service = getServiceFromUrl(url);
-              cacheOfflinePageAndResources(service).catch(err =>
-                console.error('[SW] Cache offline fail:', err),
-              );
-            }
-          }
-
           return networkResp;
         } catch (err) {
           console.log('[SW] Navigation failed:', url, err);
