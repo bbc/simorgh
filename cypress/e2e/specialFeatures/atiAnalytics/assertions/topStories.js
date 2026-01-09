@@ -5,7 +5,6 @@ const { TOP_STORIES } = COMPONENTS;
 
 export const assertTopStoriesComponentView = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -19,7 +18,6 @@ export const assertTopStoriesComponentView = ({
     assertATIComponentViewEvent({
       component: TOP_STORIES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
@@ -28,7 +26,6 @@ export const assertTopStoriesComponentView = ({
 
 export const assertTopStoriesComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
   applicationType,
   siteId,
@@ -47,7 +44,6 @@ export const assertTopStoriesComponentClick = ({
     assertATIComponentClickEvent({
       component: TOP_STORIES,
       pageIdentifier,
-      contentType,
       applicationType,
       siteId,
     });
