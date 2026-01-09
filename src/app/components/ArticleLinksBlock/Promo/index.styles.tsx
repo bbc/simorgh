@@ -7,8 +7,7 @@ export default {
     css({
       ...fontSizes.pica,
       ...fontVariants.serifBold,
-      display: 'webkit-box',
-      width: '100%',
+      display: 'inline-block',
       textDecoration: 'none',
       overflowX: 'hidden',
       overflowY: 'hidden',
