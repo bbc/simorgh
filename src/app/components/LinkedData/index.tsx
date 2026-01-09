@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { Services } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import { BylineLinkedData, LinkedDataProps } from './types';
@@ -27,6 +28,34 @@ type AuthorStructure = {
 };
 
 type Author = AuthorStructure | AuthorStructure[];
+
+type SpeakableSpecification = {
+  '@type': 'SpeakableSpecification';
+  xpath: string[];
+};
+
+const SPEAKABLE_ENABLED_SERVICES = ['hindi']; // TODO: to be extended
+const SUPPORTED_SPEAKABLE_TYPES = ['WebPage'];
+
+const getSpeakableXpaths = ({
+  service,
+  seoTitle,
+  type,
+}: {
+  service: Services;
+  seoTitle?: string;
+  type: string;
+}): SpeakableSpecification[] | null => {
+  if (!SUPPORTED_SPEAKABLE_TYPES.includes(type)) return null;
+  if (!SPEAKABLE_ENABLED_SERVICES.includes(service)) return null;
+  if (!seoTitle) return null;
+  return [
+    {
+      '@type': 'SpeakableSpecification',
+      xpath: ['/html/head/title'],
+    },
+  ];
+};
 
 const LinkedData = ({
   showAuthor = false,
@@ -177,6 +206,13 @@ const LinkedData = ({
   if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
     author = bylineAuthors.length === 1 ? bylineAuthors[0] : bylineAuthors;
   }
+
+  const speakableXpaths = getSpeakableXpaths({
+    service,
+    seoTitle,
+    type,
+  });
+
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
@@ -191,10 +227,9 @@ const LinkedData = ({
     coverageEndTime,
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
-    ...(showAuthor && {
-      author,
-    }),
+    ...(showAuthor && { author }),
     ...(hasByline && places.length > 0 && { locationCreated }),
+    ...(speakableXpaths && { speakable: speakableXpaths }),
   };
 
   return (

@@ -87,7 +87,6 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-category',
-    componentTrackingContentType: 'topic-page',
     tests: [assertPageView],
   },
   {
@@ -98,7 +97,6 @@ const atiAnalyticsTestSuites = [
     siteId: 33,
     applicationType: 'responsive',
     contentType: 'index-category',
-    componentTrackingContentType: 'topic-page',
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
