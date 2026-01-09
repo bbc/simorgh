@@ -1,6 +1,5 @@
 import { use } from 'react';
 import { useTheme } from '@emotion/react';
-import { pathOr } from 'ramda';
 
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -61,7 +60,7 @@ const Recommendations = ({
     displayData = getRelatedContentData(blocks ?? []).map(
       mapOptimoBlockToRecommendation,
     );
-    title = pathOr('Related Content', ['relatedContent'], translations);
+    title = translations?.relatedContent ?? 'Related Content';
   } else if (referrerVariant === 'adaptive_direct') {
     displayData = Array.isArray(topStoriesContent)
       ? topStoriesContent.map(mapTopStoryToRecommendation)
@@ -71,11 +70,7 @@ const Recommendations = ({
     displayData = Array.isArray(featuresContent)
       ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
       : [];
-    title = pathOr(
-      'Features & Analysis',
-      ['featuresAnalysisTitle'],
-      translations,
-    );
+    title = translations?.featuresAnalysisTitle ?? 'Features & Analysis';
   }
   const componentName = 'midarticle-mostread';
   const groupTracker = {
