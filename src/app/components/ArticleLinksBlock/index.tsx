@@ -20,7 +20,7 @@ const ArticleLinksBlock = ({
   blocks,
   blockGroupIndex = null,
 }: ArticleLinksBlockProps) => {
-  const { dir, translations, recommendations, service } = use(ServiceContext);
+  const { translations, recommendations, service } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -89,7 +89,7 @@ const ArticleLinksBlock = ({
         )}
       </SkipLinkWrapper>
       {isSingleItem ? (
-        <div css={styles.promoContainer} dir={dir} {...viewTracker}>
+        <div css={styles.promoContainer} {...viewTracker}>
           <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
         </div>
       ) : (
@@ -97,7 +97,6 @@ const ArticleLinksBlock = ({
           blocks={blocksWithoutTitle}
           viewTracker={viewTracker}
           clickTracker={clickTracker}
-          eventTrackingData={eventTrackingData}
         />
       )}
     </section>
