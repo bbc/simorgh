@@ -87,18 +87,18 @@ const ArticleLinksBlock = ({
             {title}
           </strong>
         )}
+        {isSingleItem ? (
+          <div css={styles.promoContainer} {...viewTracker}>
+            <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
+          </div>
+        ) : (
+          <PromoList
+            blocks={blocksWithoutTitle}
+            viewTracker={viewTracker}
+            clickTracker={clickTracker}
+          />
+        )}
       </SkipLinkWrapper>
-      {isSingleItem ? (
-        <div css={styles.promoContainer} {...viewTracker}>
-          <Promo block={blocksWithoutTitle[0]} clickTracker={clickTracker} />
-        </div>
-      ) : (
-        <PromoList
-          blocks={blocksWithoutTitle}
-          viewTracker={viewTracker}
-          clickTracker={clickTracker}
-        />
-      )}
     </section>
   );
 };
