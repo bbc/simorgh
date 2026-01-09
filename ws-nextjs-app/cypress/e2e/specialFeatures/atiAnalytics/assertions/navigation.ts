@@ -12,7 +12,6 @@ export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -33,7 +32,6 @@ export const assertScrollableNavigationComponentView = ({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -44,7 +42,6 @@ export const assertScrollableNavigationComponentClick = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -64,7 +61,6 @@ export const assertScrollableNavigationComponentClick = ({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -76,7 +72,6 @@ export const assertDropdownNavigationComponentView = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -92,7 +87,6 @@ export const assertDropdownNavigationComponentView = ({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -103,7 +97,6 @@ export const assertDropdownNavigationComponentClick = ({
   pageIdentifier,
   contentType,
   componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -122,7 +115,6 @@ export const assertDropdownNavigationComponentClick = ({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
       contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });

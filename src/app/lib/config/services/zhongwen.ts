@@ -13,7 +13,6 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   atiAnalyticsProducerName: 'CHINESE',
-  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',

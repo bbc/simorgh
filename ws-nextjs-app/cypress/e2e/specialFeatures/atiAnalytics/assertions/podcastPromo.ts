@@ -11,7 +11,6 @@ const { PODCAST_PROMO } = COMPONENTS;
 export const assertPodcastPromoComponentView = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -32,7 +31,6 @@ export const assertPodcastPromoComponentView = ({
       component: PODCAST_PROMO,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -42,7 +40,6 @@ export const assertPodcastPromoComponentView = ({
 export const assertPodcastPromoComponentClick = ({
   pageIdentifier,
   contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -62,7 +59,6 @@ export const assertPodcastPromoComponentClick = ({
       component: PODCAST_PROMO,
       pageIdentifier,
       contentType,
-      useReverb,
       applicationType,
       siteId,
     });

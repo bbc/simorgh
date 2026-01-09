@@ -217,7 +217,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -228,7 +227,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -239,7 +237,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -250,7 +247,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
