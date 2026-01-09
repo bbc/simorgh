@@ -292,7 +292,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
       <strong
         class="emotion-4"
         data-testid="eoj-recommendations-heading"
-        dir="ltr"
         id="Show-all-links-no-images"
       >
         Show all links (no images)
@@ -847,7 +846,6 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
       <strong
         class="emotion-4"
         data-testid="eoj-recommendations-heading"
-        dir="ltr"
         id="Single-link"
       >
         Single link
