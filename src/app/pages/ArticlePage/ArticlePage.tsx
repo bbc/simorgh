@@ -462,7 +462,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
-      {/* Under-article components for mobile/tablet only */}
+      {/* // EXPERIMENT: Referrer Experiment
+      Under-article components for mobile/tablet only */}
       {getUnderArticleComponents({
         referrerVariant: referrerVariant || '',
         referrerExperimentName: referrerExperimentName || '',
