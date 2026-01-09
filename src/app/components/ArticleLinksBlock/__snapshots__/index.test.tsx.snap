@@ -2,6 +2,55 @@
 
 exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -23,42 +72,53 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-0 {
+  .emotion-4 {
     border: solid 0.1875rem transparent;
     border-bottom: transparent;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-0 {
+  .emotion-4 {
     margin-inline: 0.5rem;
     margin: 0;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-0 {
+  .emotion-4 {
     margin-inline: 1rem;
     padding: 0 1rem;
     margin: 0 -0.2rem;
   }
 }
 
-.emotion-1 ul {
+.emotion-5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-7 ul {
   list-style: none;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
@@ -74,14 +134,14 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.is-opera-mini .emotion-1 {
+.is-opera-mini .emotion-7 {
   list-style: none;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,53 +152,53 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   margin-inline: 0.5rem;
 }
 
-.emotion-2:last-of-type {
+.emotion-8:last-of-type {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-2 {
+  .emotion-8 {
     border: solid 0.1875rem transparent;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin-inline: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin-inline: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-2 {
+  .emotion-8 {
     margin-inline: 0;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .is-opera-mini .emotion-2 {
+  .is-opera-mini .emotion-8 {
     margin-inline: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-2 {
+  .is-opera-mini .emotion-8 {
     margin-inline: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .is-opera-mini .emotion-2 {
+  .is-opera-mini .emotion-8 {
     margin-inline: 0;
   }
 }
 
-.emotion-3 {
+.emotion-9 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -149,7 +209,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.is-opera-mini .emotion-3 {
+.is-opera-mini .emotion-9 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -158,19 +218,18 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-3 {
+  .is-opera-mini .emotion-9 {
     width: calc(50% - 1rem);
   }
 }
 
-.emotion-4 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  display: webkit-box;
-  width: 100%;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -181,30 +240,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-4:hover,
-.emotion-4:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-4:visited {
+.emotion-10:visited {
   color: #545658;
 }
 
-.emotion-5 {
+.emotion-11 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -220,33 +279,50 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     data-e2e="article-links-block"
     role="region"
   >
-    <strong
-      class="emotion-0"
-      data-testid="eoj-recommendations-heading"
-      dir="ltr"
-      id="Show-all-links-no-images"
-    >
-      Show all links (no images)
-    </strong>
     <div
-      class="emotion-1"
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <strong
+        class="emotion-4"
+        data-testid="eoj-recommendations-heading"
+        dir="ltr"
+        id="Show-all-links-no-images"
+      >
+        Show all links (no images)
+      </strong>
+      <p
+        class="emotion-5 emotion-6"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+    <div
+      class="emotion-7"
       dir="ltr"
     >
       <ul>
         <li
-          class="emotion-2"
+          class="emotion-8"
         >
           <div
-            class="emotion-3"
+            class="emotion-9"
           >
             <a
-              class="emotion-4"
+              class="emotion-10"
               href="https://www.bbc.co.uk/pidgin"
             >
               Show headline
               <svg
                 aria-hidden="true"
-                class="emotion-5"
+                class="emotion-11"
                 focusable="false"
                 height="12"
                 viewBox="0 0 32 32"
@@ -260,19 +336,19 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
           </div>
         </li>
         <li
-          class="emotion-2"
+          class="emotion-8"
         >
           <div
-            class="emotion-3"
+            class="emotion-9"
           >
             <a
-              class="emotion-4"
+              class="emotion-10"
               href="https://www.bbc.com/mundo"
             >
               Link with Headline
               <svg
                 aria-hidden="true"
-                class="emotion-5"
+                class="emotion-11"
                 focusable="false"
                 height="12"
                 viewBox="0 0 32 32"
@@ -286,19 +362,19 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
           </div>
         </li>
         <li
-          class="emotion-2"
+          class="emotion-8"
         >
           <div
-            class="emotion-3"
+            class="emotion-9"
           >
             <a
-              class="emotion-4"
+              class="emotion-10"
               href="https://www.bbc.com/brasil"
             >
               Brasil homepage
               <svg
                 aria-hidden="true"
-                class="emotion-5"
+                class="emotion-11"
                 focusable="false"
                 height="12"
                 viewBox="0 0 32 32"
@@ -319,6 +395,66 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 
 exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for list with no title 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-6 {
   background: #F6F6F6;
   padding: 0 0.5rem 1rem;
   margin: 0;
@@ -331,19 +467,19 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .emotion-0 {
+  .emotion-6 {
     padding: 0 1rem 1rem;
     margin: 0 -0.2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     padding: 0 1rem 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-7 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -354,7 +490,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.is-opera-mini .emotion-1 {
+.is-opera-mini .emotion-7 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -363,19 +499,18 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-1 {
+  .is-opera-mini .emotion-7 {
     width: calc(50% - 1rem);
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  display: webkit-box;
-  width: 100%;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -386,30 +521,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-8:hover,
+.emotion-8:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-2:visited {
+.emotion-8:visited {
   color: #545658;
 }
 
-.emotion-3 {
+.emotion-9 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -426,20 +561,37 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     role="region"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+    <div
+      class="emotion-6"
       dir="ltr"
     >
       <div
-        class="emotion-1"
+        class="emotion-7"
       >
         <a
-          class="emotion-2"
+          class="emotion-8"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-3"
+            class="emotion-9"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
@@ -458,6 +610,55 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 
 exports[`Article Links Block Mid Page Article Links Block it should match a11y snapshot for single card 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -479,42 +680,53 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
+  .emotion-4 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-4 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-0 {
+  .emotion-4 {
     border: solid 0.1875rem transparent;
     border-bottom: transparent;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-0 {
+  .emotion-4 {
     margin-inline: 0.5rem;
     margin: 0;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-0 {
+  .emotion-4 {
     margin-inline: 1rem;
     padding: 0 1rem;
     margin: 0 -0.2rem;
   }
 }
 
-.emotion-1 {
+.emotion-5 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-7 {
   background: #F6F6F6;
   padding: 0 0.5rem 1rem;
   margin: 0;
@@ -527,19 +739,19 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .emotion-1 {
+  .emotion-7 {
     padding: 0 1rem 1rem;
     margin: 0 -0.2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-1 {
+  .emotion-7 {
     padding: 0 1rem 1rem;
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -550,7 +762,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-.is-opera-mini .emotion-2 {
+.is-opera-mini .emotion-8 {
   position: relative;
   background-color: #FFFFFF;
   padding: 1rem;
@@ -559,19 +771,18 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-2 {
+  .is-opera-mini .emotion-8 {
     width: calc(50% - 1rem);
   }
 }
 
-.emotion-3 {
+.emotion-9 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  display: webkit-box;
-  width: 100%;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -582,30 +793,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-3 {
+  .emotion-9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-3 {
+  .emotion-9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-3:hover,
-.emotion-3:focus {
+.emotion-9:hover,
+.emotion-9:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-3:visited {
+.emotion-9:visited {
   color: #545658;
 }
 
-.emotion-4 {
+.emotion-10 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -621,29 +832,46 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
     data-e2e="article-links-block"
     role="region"
   >
-    <strong
-      class="emotion-0"
-      data-testid="eoj-recommendations-heading"
-      dir="ltr"
-      id="Single-link"
-    >
-      Single link
-    </strong>
     <div
-      class="emotion-1"
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <strong
+        class="emotion-4"
+        data-testid="eoj-recommendations-heading"
+        dir="ltr"
+        id="Single-link"
+      >
+        Single link
+      </strong>
+      <p
+        class="emotion-5 emotion-6"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+    <div
+      class="emotion-7"
       dir="ltr"
     >
       <div
-        class="emotion-2"
+        class="emotion-8"
       >
         <a
-          class="emotion-3"
+          class="emotion-9"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-4"
+            class="emotion-10"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
@@ -662,6 +890,66 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 
 exports[`Article Links Block Mid Page Article Links Block it should match snapshot when in dark ui mode 1`] = `
 .emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-2:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-4 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-6 {
   background: #F6F6F6;
   padding: 0 0.5rem 1rem;
   margin: 0;
@@ -674,19 +962,19 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 @media (min-width: 25rem) {
-  .emotion-0 {
+  .emotion-6 {
     padding: 0 1rem 1rem;
     margin: 0 -0.2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-0 {
+  .emotion-6 {
     padding: 0 1rem 1rem;
   }
 }
 
-.emotion-1 {
+.emotion-7 {
   position: relative;
   background-color: #E6E8EA;
   padding: 1rem;
@@ -697,7 +985,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   width: 100%;
 }
 
-.is-opera-mini .emotion-1 {
+.is-opera-mini .emotion-7 {
   position: relative;
   background-color: #E6E8EA;
   padding: 1rem;
@@ -706,19 +994,18 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 @media (min-width: 25rem) {
-  .is-opera-mini .emotion-1 {
+  .is-opera-mini .emotion-7 {
     width: calc(50% - 1rem);
   }
 }
 
-.emotion-2 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
-  display: webkit-box;
-  width: 100%;
+  display: inline-block;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-x: hidden;
@@ -729,30 +1016,30 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
+.emotion-8:hover,
+.emotion-8:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-2:visited {
+.emotion-8:visited {
   color: #545658;
 }
 
-.emotion-3 {
+.emotion-9 {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -769,20 +1056,37 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
     role="region"
   >
     <div
-      class="emotion-0"
+      class="emotion-0 emotion-1"
+    >
+      <a
+        class="emotion-2 emotion-3"
+        href="#end-of-article-links-block"
+      >
+        Skip content and continue reading
+      </a>
+      <p
+        class="emotion-4 emotion-5"
+        id="end-of-article-links-block"
+        tabindex="-1"
+      >
+        End of content
+      </p>
+    </div>
+    <div
+      class="emotion-6"
       dir="ltr"
     >
       <div
-        class="emotion-1"
+        class="emotion-7"
       >
         <a
-          class="emotion-2"
+          class="emotion-8"
           href="https://www.bbc.com/pidgin"
         >
           Single link
           <svg
             aria-hidden="true"
-            class="emotion-3"
+            class="emotion-9"
             focusable="false"
             height="12"
             viewBox="0 0 32 32"
