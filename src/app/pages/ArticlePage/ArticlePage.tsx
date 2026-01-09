@@ -151,7 +151,7 @@ const getWsojComponent = ({
   <Recommendations
     data={data}
     blocks={blocks}
-    // EXPERIMENT: OJ Referrer
+    // EXPERIMENT: Referrer Experiment
     topStoriesContent={topStoriesContent}
     featuresContent={featuresContent}
     {...(referrerVariant && {
