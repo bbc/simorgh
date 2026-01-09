@@ -57,7 +57,7 @@ const useCustomEventTracker = ({
       ].every(Boolean);
 
       if (shouldSendEvent) {
-        // Adding console logs to help debug event tracking issues - will remove later
+        // TEMP: Adding console logs to help debug event tracking issues - will remove later
         // eslint-disable-next-line no-console
         console.log('Tracking custom event:', {
           eventName,
@@ -69,7 +69,6 @@ const useCustomEventTracker = ({
           producerName,
           service,
           statsDestination,
-          useReverb,
           experimentName,
           experimentVariant,
         });
