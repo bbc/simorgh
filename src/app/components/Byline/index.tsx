@@ -1,8 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
-import React, { use, PropsWithChildren } from 'react';
+import { Children, use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -12,81 +9,95 @@ import Text from '../Text';
 import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
 
-const Byline = ({
-  blocks,
-  children = null,
-}: PropsWithChildren<OptimoBylineBlock['model']>) => {
+const Comma = () => {
+  return (
+    <span aria-hidden="true" css={BylineCss.comma}>
+      ,{' '}
+    </span>
+  );
+};
+
+const Contributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
-
-  const bylineValues = bylineExtractor(blocks);
 
   const {
     byline: {
       author = 'Author',
-      articleInformation = 'Article Information',
       reportingFrom = 'Reporting from',
       role = 'Role',
     } = {},
   } = translations ?? {};
 
-  const contributors =
-    bylineValues.length === 0
-      ? null
-      : bylineValues?.map(values => {
-          if (!values) return null;
+  const hasMultipleContributors = !isSingleContributor;
 
-          const {
-            authorName,
-            jobRole,
-            twitterText,
-            twitterLink,
-            authorImage,
-            location,
-            authorTopicUrl,
-          } = values;
+  const lastContributorIndex = contributorValues.length - 1;
 
-          return (
-            <ul
-              css={[BylineCss.bylineList, BylineCss.bylineSection]}
-              role="list"
-              key={authorName}
-            >
-              {authorImage && (
-                <li
-                  css={[
-                    BylineCss.ImageWrapper,
-                    isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-                  ]}
-                  role="presentation"
-                >
-                  <Image
-                    css={BylineCss.imageSrc}
-                    src={authorImage}
-                    alt={authorName}
-                    placeholder={false}
-                    aspectRatio={[1, 1]}
-                  />
-                </li>
-              )}
-              <li>
-                {authorTopicUrl ? (
-                  <>
-                    <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
-                    <a
-                      css={[BylineCss.link]}
-                      href={authorTopicUrl}
-                      className="focusIndicatorReducedWidth"
+  const isLastContributorNameOnly = (index, jobRole, location) => {
+    return index === lastContributorIndex && !jobRole && !location;
+  };
+
+  return (
+    <>
+      {contributorValues.map((contributor, index) => {
+        if (!contributor) return null;
+
+        const { authorName, jobRole, authorImage, location, authorTopicUrl } =
+          contributor;
+
+        return (
+          <ul
+            css={[
+              BylineCss.list,
+              hasMultipleContributors && BylineCss.displayInline,
+            ]}
+            role="list"
+            key={authorName}
+          >
+            {authorImage && isSingleContributor && (
+              <li
+                css={[
+                  BylineCss.ImageWrapper,
+                  isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
+                ]}
+              >
+                <Image
+                  css={BylineCss.imageSrc}
+                  src={authorImage}
+                  alt=""
+                  placeholder={false}
+                  aspectRatio={[1, 1]}
+                />
+              </li>
+            )}
+            <li css={hasMultipleContributors && BylineCss.displayInline}>
+              {authorTopicUrl ? (
+                <>
+                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                  <a
+                    css={[
+                      BylineCss.link,
+                      isSingleContributor
+                        ? BylineCss.linkSingleContributor
+                        : BylineCss.linkMultipleContributor,
+                    ]}
+                    href={authorTopicUrl}
+                    className="focusIndicatorReducedWidth"
+                  >
+                    <Text
+                      className="byline-link"
+                      size="bodyCopy"
+                      fontVariant="sansBold"
+                      css={[
+                        BylineCss.author,
+                        isSingleContributor &&
+                          BylineCss.authorSingleContributor,
+                      ]}
                     >
-                      <Text
-                        className="byline-link"
-                        size="bodyCopy"
-                        fontVariant="sansBold"
-                        css={BylineCss.author}
-                      >
-                        {authorName}
-                      </Text>
-                      {isRtl ? (
+                      {authorName}
+                    </Text>
+                    {isSingleContributor &&
+                      (isRtl ? (
                         <LeftChevron
                           className="byline-link"
                           css={BylineCss.authorChevron}
@@ -96,103 +107,113 @@ const Byline = ({
                           className="byline-link"
                           css={BylineCss.authorChevron}
                         />
-                      )}
-                    </a>
-                  </>
-                ) : (
-                  <span role="text">
-                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                    <Text
-                      css={[BylineCss.author]}
-                      size="bodyCopy"
-                      fontVariant="sansBold"
-                    >
-                      {authorName}
-                    </Text>
-                  </span>
+                      ))}
+                  </a>
+                </>
+              ) : (
+                <span role="text">
+                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                  <Text
+                    css={[
+                      BylineCss.author,
+                      isSingleContributor && BylineCss.authorSingleContributor,
+                    ]}
+                    fontVariant="sansBold"
+                    size="bodyCopy"
+                  >
+                    {authorName}
+                  </Text>
+                </span>
+              )}
+              {hasMultipleContributors &&
+                !isLastContributorNameOnly(index, jobRole, location) && (
+                  <Comma />
                 )}
-              </li>
-              <li>
+            </li>
+            {jobRole ? (
+              <li css={BylineCss.displayInline}>
                 <span role="text">
                   <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                   <Text
                     css={BylineCss.jobRole}
-                    fontVariant="sansBold"
-                    size="brevier"
+                    {...(isSingleContributor
+                      ? { size: 'brevier' }
+                      : { size: 'bodyCopy' })}
                   >
                     {jobRole}
                   </Text>
                 </span>
+                {(location && <Comma />) ||
+                  (hasMultipleContributors &&
+                    index !== lastContributorIndex && <Comma />)}
               </li>
-              {twitterLink ? (
-                <li>
-                  <a
-                    css={[BylineCss.link, BylineCss.twitterLink]}
-                    className="focusIndicatorReducedWidth"
-                    href={twitterLink}
-                    aria-labelledby="byline-twitter-link"
+            ) : null}
+            {location ? (
+              <li css={BylineCss.displayInline}>
+                <span role="text">
+                  <VisuallyHiddenText>
+                    {`${reportingFrom}, `}{' '}
+                  </VisuallyHiddenText>
+                  <Text
+                    css={[BylineCss.locationText]}
+                    {...(isSingleContributor
+                      ? { size: 'brevier' }
+                      : { size: 'bodyCopy' })}
                   >
-                    <span role="text" id="byline-twitter-link">
-                      <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
-                      <Text
-                        className="byline__link-text"
-                        css={BylineCss.twitterText}
-                        size="brevier"
-                        fontVariant="sansBold"
-                      >{`@${twitterText}`}</Text>
-                      {isRtl ? (
-                        <LeftChevron css={BylineCss.twitterChevron} />
-                      ) : (
-                        <RightChevron css={BylineCss.twitterChevron} />
-                      )}
-                    </span>
-                  </a>
-                </li>
-              ) : null}
-              {location ? (
-                <li>
-                  <span
-                    role="text"
-                    css={BylineCss.location}
-                    aria-label={`${reportingFrom} ${location}`}
-                  >
-                    <Text
-                      css={BylineCss.reportingFromText}
-                      size="brevier"
-                      fontVariant="sansRegularItalic"
-                      aria-hidden="true"
-                    >
-                      {`${reportingFrom} `}{' '}
-                    </Text>
-                    <Text
-                      css={BylineCss.locationText}
-                      size="brevier"
-                      fontVariant="sansRegular"
-                      aria-hidden="true"
-                    >
-                      {location}
-                    </Text>
-                  </span>
-                </li>
-              ) : null}
-            </ul>
-          );
-        });
+                    {location}
+                  </Text>
+                </span>
+                {hasMultipleContributors && index !== lastContributorIndex && (
+                  <Comma />
+                )}
+              </li>
+            ) : null}
+          </ul>
+        );
+      })}
+    </>
+  );
+};
+
+const Byline = ({
+  blocks,
+  children = null,
+}: PropsWithChildren<OptimoBylineBlock['model']>) => {
+  const { translations } = use(ServiceContext);
+
+  const contributorValues = bylineExtractor(blocks);
+
+  const isSingleContributor = contributorValues.length === 1;
+
+  const { byline: { articleInformation = 'Article Information' } = {} } =
+    translations ?? {};
 
   return (
-    contributors?.[0] && (
-      <section role="region" aria-labelledby="article-byline">
+    contributorValues?.[0] && (
+      <section
+        role="region"
+        aria-labelledby="article-byline"
+        data-testid="byline"
+      >
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
-        <ul css={BylineCss.bylineList}>
-          <li css={BylineCss.bylineContainer}>{contributors}</li>
-          {/* EXPERIMENT: Article Read Time */}
+        <ul css={BylineCss.list}>
+          <li
+            css={[
+              BylineCss.bylineContainer,
+              isSingleContributor && BylineCss.bylineContainerSingleContributor,
+            ]}
+          >
+            <Contributors
+              contributorValues={contributorValues}
+              isSingleContributor={isSingleContributor}
+            />
+          </li>
           {children &&
-            React.Children.map(children, (child, index) => (
-              <li key={index} css={BylineCss.timestampLineBreak}>
-                {child}
-              </li>
+            Children.map(children, (child, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <li key={index}>{child}</li>
             ))}
         </ul>
       </section>

@@ -4,47 +4,39 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 export default {
   bylineContainer: ({ spacings, mq }: Theme) =>
     css({
-      display: 'grid',
       paddingInlineStart: `${spacings.FULL}rem`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        gridTemplateColumns: 'repeat(2, auto)',
-      },
+      paddingBottom: `${spacings.TRIPLE}rem`,
+      lineHeight: '1.35rem', // not sure I should do this due to script sizes
       [mq.GROUP_2_MIN_WIDTH]: {
-        display: 'flex',
-        flexWrap: 'wrap',
         paddingInlineStart: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
     }),
 
-  bylineSection: ({ spacings, mq }: Theme) =>
+  bylineContainerSingleContributor: () =>
     css({
-      marginRight: `${spacings.FULL}rem`,
-      marginBottom: `${spacings.FULL}rem`,
-      [mq.GROUP_3_MIN_WIDTH]: {
-        marginRight: `${spacings.DOUBLE}rem`,
-        marginBottom: 0,
-      },
+      display: 'flex',
+      flexWrap: 'wrap',
     }),
 
-  bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
+  list: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 
   author: ({ palette, isDarkUi }: Theme) =>
     css({
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       display: 'inline-block',
+    }),
+
+  authorSingleContributor: () =>
+    css({
       verticalAlign: 'middle',
     }),
 
   jobRole: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
-  twitterText: ({ palette }: Theme) =>
-    css({
-      color: palette.POSTBOX,
-      display: 'inline-block',
-      verticalAlign: 'middle',
-    }),
+  comma: ({ palette, isDarkUi }: Theme) =>
+    css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
   authorChevron: ({ palette, isDarkUi, spacings, mq }: Theme) =>
     css({
@@ -52,30 +44,16 @@ export default {
       margin: `0 ${spacings.HALF}rem`,
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
       fill: 'currentcolor',
-      width: `${spacings.FULL + spacings.HALF}rem`,
-      height: `${spacings.FULL + spacings.HALF}rem`,
-      [mq.FORCED_COLOURS]: { fill: 'linkText' },
-    }),
-
-  twitterChevron: ({ palette, spacings, mq }: Theme) =>
-    css({
-      verticalAlign: 'middle',
-      margin: `0 ${spacings.HALF}rem`,
-      color: palette.POSTBOX,
-      fill: 'currentcolor',
-      width: `${spacings.FULL}rem`,
-      height: `${spacings.FULL}rem`,
+      width: `${pixelsToRem(10)}rem`,
+      height: `${pixelsToRem(10)}rem`,
       [mq.FORCED_COLOURS]: { fill: 'linkText' },
     }),
 
   link: ({ mq, palette }: Theme) =>
     css({
       display: 'inline-block',
-      textDecoration: 'none',
-      paddingInlineEnd: '2.75rem',
       '&:focus, &:hover': {
         '.byline-link': {
-          textDecoration: 'underline',
           color: palette.POSTBOX,
         },
       },
@@ -93,37 +71,37 @@ export default {
       },
     }),
 
-  location: () =>
+  linkMultipleContributor: ({ palette }: Theme) =>
     css({
-      margin: '0',
-      display: 'block',
-      clear: 'both',
+      '.byline-link': {
+        textDecoration: 'underline',
+        textDecorationThickness: `${pixelsToRem(1)}rem`,
+        textUnderlineOffset: `${pixelsToRem(4)}rem`,
+        textDecorationColor: palette.GREY_5,
+        '&:focus, &:hover': {
+          textDecorationColor: palette.POSTBOX,
+          textDecorationThickness: `${pixelsToRem(2)}rem`,
+        },
+      },
+    }),
+
+  linkSingleContributor: () =>
+    css({
+      paddingInlineEnd: '2.75rem',
+      textDecoration: 'none',
+      '&:focus, &:hover': {
+        '.byline-link': {
+          textDecoration: 'underline',
+          textDecorationColor: 'currentcolor',
+          textDecorationThickness: `${pixelsToRem(2)}rem`,
+          textUnderlineOffset: `${pixelsToRem(4)}rem`,
+        },
+      },
     }),
 
   locationText: ({ palette, isDarkUi }: Theme) =>
     css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
-      display: 'block',
-      paddingTop: ` ${pixelsToRem(4)}rem`,
-    }),
-
-  reportingFromText: ({ palette, isDarkUi }: Theme) =>
-    css({
-      color: isDarkUi ? palette.GREY_2 : palette.SHADOW,
-    }),
-
-  timestampLineBreak: ({ palette, spacings, mq }: Theme) =>
-    css({
-      // EXPERIMENT: Article Read Time
-      '&:nth-child(2)::before': {
-        content: '""',
-        borderTop: `${pixelsToRem(2)}rem solid ${palette.GREY_5}`,
-        width: `${pixelsToRem(40)}rem`,
-        display: 'block',
-        margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-        [mq.GROUP_2_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem` },
-        [mq.GROUP_4_MIN_WIDTH]: { margin: `${spacings.DOUBLE}rem 0` },
-      },
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_6,
     }),
 
   ImageWrapper: ({ palette }: Theme) =>
@@ -163,9 +141,8 @@ export default {
       height: `${pixelsToRem(80)}rem`,
     }),
 
-  twitterLink: () =>
+  displayInline: () =>
     css({
-      paddingBottom: `${pixelsToRem(22)}rem`,
-      paddingTop: `${pixelsToRem(4)}rem`,
+      display: `inline`,
     }),
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import fixture from '../../../../data/pidgin/topics/c95y35941vrt.json';
 import mundoFixture from '../../../../data/mundo/topics/c1en6xwmpkvt.json';
@@ -333,7 +332,7 @@ describe('Curation', () => {
           curationLength={1}
         />,
       );
-      expect(document.querySelectorAll('h2').length).toBe(24);
+      expect(document.querySelectorAll('h2').length).toBe(25);
       expect(document.querySelectorAll('h3').length).toBe(0);
     });
 

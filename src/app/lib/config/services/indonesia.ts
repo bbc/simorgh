@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     atiAnalyticsProducerName: 'INDONESIAN',
-    useReverb: true,
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Indonesia',
     dir: `ltr`,
     externalLinkText: ', eksternal',

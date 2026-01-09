@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../react-testing-library-with-providers';
 import latin from '../../../ThemeProvider/fontScripts/latin';
 import LastUpdated from '.';

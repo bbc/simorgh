@@ -1,4 +1,4 @@
-import React, { use, useId } from 'react';
+import { use, useId } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   EmbedConsentBannerCanonical,

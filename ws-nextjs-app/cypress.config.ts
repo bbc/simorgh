@@ -1,15 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { defineConfig } from 'cypress';
-import fs from 'fs';
-import path from 'path';
 import MomentTimezoneInclude from '../src/app/legacy/psammead/moment-timezone-include/src';
 import webpackPreprocessor from '@cypress/webpack-preprocessor';
 import { DefinePlugin } from 'webpack';
 import dotenv from 'dotenv';
-
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = (relativePath: string) =>
-  path.resolve(appDirectory, relativePath);
+import { webpackDirAlias } from '../dirAlias';
 
 export default defineConfig({
   // Consider moving 'retries' to a per-test level once we have more tests
@@ -49,26 +44,20 @@ export default defineConfig({
         webpackOptions: {
           resolve: {
             extensions: ['.ts', '.tsx', '.js', '.jsx'],
-            alias: {
-              '#src': resolvePath('../src'),
-              '#app': resolvePath('../src/app'),
-              '#psammead': resolvePath('../src/app/legacy/psammead'),
-              '#lib': resolvePath('../src/app/lib/'),
-            },
+            alias: webpackDirAlias,
           },
           module: {
             rules: [
               {
                 test: /\.(ts|tsx|js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                  loader: 'babel-loader',
-                  options: {
-                    presets: [
-                      '@babel/preset-env',
-                      '@babel/preset-react',
-                      '@babel/preset-typescript',
-                    ],
+                loader: 'swc-loader',
+                options: {
+                  jsc: {
+                    parser: {
+                      syntax: 'typescript',
+                      tsx: true,
+                    },
                   },
                 },
               },
@@ -77,9 +66,7 @@ export default defineConfig({
           plugins: [
             MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
             new DefinePlugin({
-              process: {
-                env: envVars,
-              },
+              process: { env: envVars },
             }),
           ],
         },

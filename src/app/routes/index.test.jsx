@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderRoutes, matchRoutes } from 'react-router-config';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -9,13 +8,9 @@ import defaultToggles from '#lib/config/toggles';
 
 // mock data
 import gahuzaPodcastPage from '#data/gahuza/bbc_gahuza_radio/p07yh8hb.json';
-import legacyMediaAssetPage from '#data/azeri/legacyAssets/multimedia/2012/09/120919_georgia_prison_video.json';
 import liveRadioPageJson from '#data/afrique/bbc_afrique_radio/liveradio.json';
 import homePageJson from '#data/kyrgyz/homePage/index.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
-import sportArticlePageJson from '#data/sport/judo/articles/cj80n66ddnko.json';
-import mediaAssetPageJson from '#data/yoruba/cpsAssets/media-23256797.json';
 
 import { ERROR_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
@@ -33,6 +28,22 @@ global.performance.getEntriesByName = jest.fn(() => []);
 
 // mock pages/index.js to return a non async page component
 jest.mock('../pages');
+
+beforeAll(() => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches: true,
+      media: query,
+      onchange: null,
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      addListener: jest.fn(), // legacy fallback some code may call
+      removeListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+});
 
 const agent = { ca: 'ca', key: 'key' };
 const getAgent = jest.fn(() => agent);
@@ -262,68 +273,6 @@ describe('Routes', () => {
       expect(subHeading).toHaveTextContent(EXPECTED_TEXT_RENDERED_IN_DOCUMENT);
     });
 
-    it('should route to and render a media asset page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/yoruba/media-23256797';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...mediaAssetPageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'yoruba',
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'yoruba',
-      });
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Ko ko koo, "lọdun 2014 bi ana ni arun buruku yii wọle tọ mi wa" introduction.';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
-    it('should route to and render a legacy media asset page', async () => {
-      process.env.SIMORGH_APP_ENV = 'local';
-      const pathname = '/azeri/multimedia/2012/09/120919_georgia_prison_video';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...legacyMediaAssetPage,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        service: 'azeri',
-        pageType,
-      });
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'azeri',
-      });
-
-      // TODO: use headline text when double headline bug is fixed https://github.com/bbc/simorgh/issues/5688
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'Gürcustanda məhbusların gözətçilər tərəfindən zorlandığını göstərən video görüntülər çərşənbə günü hökümətə qarşı nümayişlərlə nəticələnib.';
-
-      expect(
-        await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).toBeInTheDocument();
-    });
-
     it('should route to and render a 500 error page', async () => {
       const pathname = '/igbo/500';
       const { getInitialData, pageType } = getMatchingRoute(pathname);
@@ -445,80 +394,5 @@ describe('Routes', () => {
         await screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
       ).toBeInTheDocument();
     });
-  });
-
-  describe('Article page', () => {
-    it('should route to and render an article page', async () => {
-      suppressPropWarnings([
-        'pageData.promo.id',
-        'SecondaryColumn',
-        'undefined',
-      ]);
-      suppressPropWarnings(['pageData.promo.id', 'ArticlePage', 'undefined']);
-
-      const pathname = '/persian/articles/c4vlle3q337o';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...articlePageJson,
-        }),
-      );
-
-      process.env.SIMORGH_APP_ENV = 'local';
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      const { pageData } = await getInitialData({
-        path: pathname,
-        getAgent,
-        service: 'persian',
-        pageType,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'persian',
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        'پهپادی که برایتان قهوه می‌آورد';
-
-      expect(
-        screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).resolves.toBeInTheDocument();
-    });
-
-    it.skip('should route to and render a Sport Discipline article page', async () => {
-      const pathname = '/sport/judo/articles/cj80n66ddnko';
-
-      fetch.mockResponse(
-        JSON.stringify({
-          ...sportArticlePageJson,
-        }),
-      );
-
-      const { getInitialData, pageType } = getMatchingRoute(pathname);
-      process.env.SIMORGH_APP_ENV = 'local';
-      const { pageData } = await getInitialData({
-        path: pathname,
-        getAgent,
-        service: 'sport',
-        pageType,
-      });
-
-      await renderRouter({
-        pathname,
-        pageData,
-        pageType,
-        service: 'sport',
-      });
-
-      const EXPECTED_TEXT_RENDERED_IN_DOCUMENT =
-        "Great Britain's Lucy Renshall won gold at the Baku Grand Slam by defeating Mongolia's Gankhaich Bold in the final.";
-
-      expect(
-        screen.findByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT),
-      ).resolves.toBeInTheDocument();
-    }, 15000);
   });
 });

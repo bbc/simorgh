@@ -94,7 +94,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -114,40 +114,47 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 {
+  "text": "Gasar Kofin Afirka",
+  "url": "/hausa/topics/c71939zq32vt",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+{
   "text": "Wasanni",
   "url": "/hausa/topics/cz74kjgv220t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "Nishadi",
   "url": "/hausa/topics/cg726kz37wdt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "Cikakkun Rahotanni",
   "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Bidiyo",
   "url": "/hausa/topics/cn09qmz4jryt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 {
   "text": "Shirye-shirye na Musamman",
   "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
 {
   "text": "Shirye-shiryen rediyo",
   "url": "/hausa/topics/c4nx34q5724t",
@@ -159,7 +166,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -228,7 +235,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
@@ -241,7 +248,7 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -259,13 +266,13 @@ exports[`Canonical Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/hausa/articles/c2nr6xqmnewo",
     },
   ],
@@ -313,7 +320,7 @@ exports[`Canonical Articles SEO Twitter description 1`] = `"Wannan shine taken S
 
 exports[`Canonical Articles SEO Twitter image alt 1`] = `"BBC News Hausa"`;
 
-exports[`Canonical Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Articles SEO Twitter site 1`] = `"@bbchausa"`;
 

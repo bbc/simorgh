@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     atiAnalyticsProducerName: 'YORUBA',
-    useReverb: true,
     chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
     serviceLocalizedName: 'Yorùbá',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/yoruba/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',
     externalLinkText: ', ìta',
@@ -48,7 +48,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Darapọ̀ mọ́ wa nibì',
-        href: 'https://bit.ly/3Xgfl35',
+        href: 'https://www.whatsapp.com/channel/0029Vb18ZTM9Gv7NliClgu0M',
       },
     },
     noBylinesPolicy:

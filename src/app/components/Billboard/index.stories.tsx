@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Summary } from '#app/models/types/curationData';
 import Billboard from '.';
 import { StoryArgs } from '../../models/types/storybook';
@@ -157,3 +155,24 @@ export const PersianBillboard = () => {
     </div>
   );
 };
+
+export const PersianBillboardWithPVPromos = () => {
+  const summary = persianData.data.curations[2].summaries[0];
+  return (
+    <div dir="rtl">
+      <ThemeProvider service="persian" variant="default">
+        <ServiceContextProvider service="persian" variant="default">
+          <Component
+            text={summary.title}
+            longText={summary.description || ''}
+            link={summary.link}
+            image={summary.imageUrl}
+            altText={summary.imageAlt}
+            summaries={persianData.data.curations[3].summaries}
+          />
+        </ServiceContextProvider>
+      </ThemeProvider>
+    </div>
+  );
+};
+

@@ -13,12 +13,13 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     atiAnalyticsProducerName: 'TAMIL',
-    useReverb: true,
+
     chartbeatDomain: 'tamil.bbc.co.uk',
     brandName: 'BBC News தமிழ்',
     product: 'BBC News',
     serviceLocalizedName: 'தமிழ்',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tamil/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
     externalLinkText: ', வெளி',

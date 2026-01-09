@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';

@@ -1,4 +1,4 @@
-import React, { ComponentType, use } from 'react';
+import { ComponentType, use } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -78,24 +78,6 @@ const getReferrer = () => {
   return null;
 };
 
-export const COUNTRY_CODES_TO_EXPERIMENT = [
-  'es',
-  'mx',
-  'ar',
-  'co',
-  'us',
-  'cl',
-  've',
-  'uy',
-  'do',
-];
-
-const isCountryKnown = (country?: string | null) => {
-  if (!country) return false;
-
-  return COUNTRY_CODES_TO_EXPERIMENT.includes(country.toLowerCase());
-};
-
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
   eventBatchSize: 10,
@@ -120,7 +102,7 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
             service,
             mobile: isMobile(),
             referrer: getReferrer(),
-            countryKnown: isCountryKnown(country),
+            country: country ?? null,
           },
         }}
       >

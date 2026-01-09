@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     atiAnalyticsProducerName: 'BURMESE',
-    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/burmese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News မြန်မာ',
     dir: `ltr`,
     externalLinkText: ', ပြင်ပစာမျက်နှာ',
@@ -373,8 +373,8 @@ export const service: DefaultServiceConfig = {
         url: '/burmese',
       },
       {
-        title: 'မြန်မာငလျင်',
-        url: '/burmese/topics/c793wppj0r1t',
+        title: 'ရွေးကောက်ပွဲ',
+        url: '/burmese/topics/c1w0y2j4j70t',
       },
       {
         title: 'မြန်မာ့ရေးရာ',

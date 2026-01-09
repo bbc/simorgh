@@ -1,9 +1,14 @@
 const plugins = [
+  '@emotion/babel-plugin',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
   '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-transform-runtime',
   '@loadable/babel-plugin',
+  [
+    'transform-rename-import',
+    { original: 'next/dynamic', replacement: '@loadable/component' },
+  ],
 ];
 
 // allows dynamic `import()` in Node tests.
@@ -54,9 +59,11 @@ module.exports = api => {
         corejs: '3',
       },
     ],
-    '@babel/preset-react', // transform JSX to JS
+    [
+      '@babel/preset-react',
+      { runtime: 'automatic', importSource: '@emotion/react' },
+    ],
     '@babel/preset-typescript',
-    '@emotion/babel-preset-css-prop',
   ];
 
   return {

@@ -13,13 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     atiAnalyticsProducerName: 'BRASIL',
-    useReverb: true,
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -367,6 +366,21 @@ export const service: DefaultServiceConfig = {
         // Closed Screen
         closedHeading: 'Está encerrado',
         closedDescription: 'Foi encerrado em {{date}}.',
+      },
+    },
+    promotionalBanner: {
+      title: 'Acesse a BBC News Brasil com um toque',
+      description:
+        'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
+      orText: 'ou',
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Sair',
+      primaryButton: {
+        longText: 'Inclua um atalho na sua tela',
+        text: 'Adicionar',
+      },
+      secondaryButton: {
+        text: 'Pular por enquanto',
       },
     },
     mostRead: {

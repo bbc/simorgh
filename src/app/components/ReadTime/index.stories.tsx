@@ -1,10 +1,16 @@
-import React from 'react';
-import { ReadTimeArticleExperiment as ReadTime } from '.';
+import ReadTimeArticle from '.';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import readme from './README.md';
 import metadata from './metadata.json';
 
+// Example for pidgin service and default variant
+const service = 'pidgin';
+const variant = 'default';
+
 const Component = ({ readTime }: { readTime: number }) => (
-  <ReadTime readTimeValue={readTime} />
+  <ServiceContextProvider service={service} variant={variant}>
+    <ReadTimeArticle readTimeValue={readTime} />
+  </ServiceContextProvider>
 );
 
 export default {
@@ -16,9 +22,5 @@ export default {
   },
 };
 
-export const Example = () => (
-  <ReadTime readTimeValue={7} readTimeVariant="foo" />
-);
-export const OneMinuteReadTime = () => (
-  <ReadTime readTimeValue={1} readTimeVariant="foo" />
-);
+export const SevenMinuteReadTime = () => <Component readTime={7} />;
+export const OneMinuteReadTime = () => <Component readTime={1} />;

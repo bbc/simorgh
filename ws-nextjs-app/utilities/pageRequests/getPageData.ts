@@ -1,5 +1,4 @@
 import { BFF_FETCH_ERROR } from '#app/lib/logger.const';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { FetchError } from '#app/models/types/fetch';
 import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
@@ -72,9 +71,7 @@ const getPageData = async ({
     ? { pageData: json.data, status }
     : { error: message, status };
 
-  const toggles = await getToggles(service);
-
-  return { data, toggles };
+  return { data };
 };
 
 export default getPageData;

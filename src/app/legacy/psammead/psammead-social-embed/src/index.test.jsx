@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import React from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import {
   render,

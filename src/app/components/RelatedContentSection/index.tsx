@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -41,7 +39,7 @@ type Props = {
   experimentProps?: ComponentExperimentProps;
 };
 
-const RelatedContentSection = ({ content, experimentProps }: Props) => {
+const RelatedContentSection = ({ content }: Props) => {
   const { translations, script, service } = use(ServiceContext);
 
   const {
@@ -52,7 +50,6 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      ...(experimentProps && experimentProps),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);

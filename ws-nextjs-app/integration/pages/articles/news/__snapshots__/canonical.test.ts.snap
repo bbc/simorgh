@@ -67,7 +67,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -160,7 +160,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Pauline Clayton"
-  class="css-4ejld5"
+  class="css-1seqhu9"
   height="360"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

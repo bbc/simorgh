@@ -15,11 +15,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     atiAnalyticsProducerName: 'PERSIAN',
-    useReverb: true,
     chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -451,8 +451,8 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'جنگ اسرائیل-ایران',
-        url: '/persian/topics/cwy6874zgpqt',
+        title: 'اعتراضات ایران ۱۴۰۴',
+        url: '/persian/topics/c4g30w1p327t',
       },
       {
         title: 'پخش زنده',

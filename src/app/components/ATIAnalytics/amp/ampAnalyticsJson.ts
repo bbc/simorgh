@@ -20,7 +20,13 @@ const applyGeoVariantDestinationForSupportedServices = ({
   ampAnalyticsRequestConfiguration,
 }: GeoVariantEvaluationParamters) => {
   if (
-    !['news', 'news-cymrufyw', 'news-naidheachdan', 'sport'].includes(appName)
+    ![
+      'news',
+      'news-cymrufyw',
+      'news-japanese',
+      'news-naidheachdan',
+      'sport',
+    ].includes(appName)
   ) {
     return ampAnalyticsRequestConfiguration;
   }
@@ -30,21 +36,13 @@ const applyGeoVariantDestinationForSupportedServices = ({
 
   return {
     ...ampAnalyticsRequestConfiguration,
-    pageview: pageview.replace(/s=\d+&/, `s=${ampDestination}&`), // Use destination derived via amp-geo
+    pageview: pageview.replace(/s=(\d+|\$IF\(.*\))&/, `s=${ampDestination}&`), // Use destination derived via amp-geo
   };
 };
 
-const ampAnalyticsJson = ({
-  baseUrl,
-  pageviewParams,
-  reverbParams,
-}: ATIAnalyticsProps) => {
-  const ampAnalyticsRequestConfiguration = reverbParams
-    ? reverbUrlHelper.getAmpAnalyticsPageViewUrl(reverbParams)
-    : {
-        base: baseUrl,
-        pageview: '${base}' + pageviewParams,
-      };
+const ampAnalyticsJson = ({ reverbParams }: ATIAnalyticsProps) => {
+  const ampAnalyticsRequestConfiguration =
+    reverbUrlHelper.getAmpAnalyticsPageViewUrl(reverbParams);
 
   const appName =
     reverbParams?.params.page.additionalProperties?.app_name ?? '';

@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { render } from '@testing-library/react';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import * as getStatsDestination from './getStatsDestination';
@@ -112,7 +112,7 @@ describe('RequestContext', () => {
 
     expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
 
-    expect(React.use).toHaveReturnedWith(expectedOutput);
+    expect(use).toHaveReturnedWith(expectedOutput);
   });
 
   it('should return expected values for app requests', () => {
@@ -128,7 +128,7 @@ describe('RequestContext', () => {
       </RequestContextProvider>,
     );
 
-    expect(React.use).toHaveReturnedWith({
+    expect(use).toHaveReturnedWith({
       ...expectedOutput,
       isAmp: false,
       isApp: true,
@@ -144,7 +144,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: true,
         platform: 'amp',
@@ -158,7 +158,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         platform: 'canonical',
@@ -172,7 +172,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: true,
@@ -187,7 +187,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isAmp: false,
         isApp: false,
@@ -226,7 +226,7 @@ describe('RequestContext', () => {
         </RequestContextProvider>,
       );
 
-      expect(React.use).toHaveReturnedWith({
+      expect(use).toHaveReturnedWith({
         ...expectedOutput,
         isUK: false,
       });

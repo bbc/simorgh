@@ -1,7 +1,5 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
@@ -36,8 +34,6 @@ const Page = ({ pageData, service, lang }: Props) => (
     </ToggleContextProvider>
   </BrowserRouter>
 );
-
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;

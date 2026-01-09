@@ -67,7 +67,7 @@ exports[`Canonical Send Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2026 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `
 {
@@ -152,6 +152,13 @@ exports[`Canonical Send Header Navigation link should match text and url 11`] = 
 {
   "text": "Centroamérica cuenta",
   "url": "/mundo/topics/c404v5z1k8wt",
+}
+`;
+
+exports[`Canonical Send Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
 }
 `;
 

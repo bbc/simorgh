@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { screen, waitFor } from '@testing-library/react';
 import {
   OptimizelyDecision,
