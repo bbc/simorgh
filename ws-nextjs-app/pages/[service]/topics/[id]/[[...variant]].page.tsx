@@ -7,6 +7,7 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import { OK } from '#app/lib/statusCodes.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
+import isTest from '#app/lib/utilities/isTest';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
@@ -25,11 +26,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
     id,
     service,
     variant: variantFromUrl,
-    renderer_env: rendererEnv,
+    renderer_env: rendererEnvFromQuery,
     page,
   } = context.query as PageDataParams;
 
   const variant = deriveVariant(variantFromUrl);
+
+  const rendererEnv =
+    isTest() && !rendererEnvFromQuery ? 'live' : rendererEnvFromQuery;
 
   const { data } = await getPageData({
     id,
