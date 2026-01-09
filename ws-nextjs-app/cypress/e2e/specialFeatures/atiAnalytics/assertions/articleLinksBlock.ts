@@ -10,8 +10,6 @@ const { ARTICLE_LINKS_BLOCK } = COMPONENTS;
 
 export const assertArticleLinksBlockComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -31,8 +29,6 @@ export const assertArticleLinksBlockComponentView = ({
     assertATIComponentViewEvent({
       component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -41,8 +37,6 @@ export const assertArticleLinksBlockComponentView = ({
 
 export const assertArticleLinksBlockComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -61,8 +55,6 @@ export const assertArticleLinksBlockComponentClick = ({
     assertATIComponentClickEvent({
       component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

@@ -5,9 +5,6 @@ const { PORTRAIT_VIDEO_MODAL } = COMPONENTS;
 
 export const assertPortraitVideoModalComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -29,8 +26,6 @@ export const assertPortraitVideoModalComponentView = ({
       assertATIComponentViewEvent({
         component: PORTRAIT_VIDEO_MODAL,
         pageIdentifier,
-        contentType: componentTrackingContentType || contentType,
-        useReverb,
         applicationType,
         siteId,
       });
