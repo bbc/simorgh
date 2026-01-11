@@ -5,9 +5,9 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-console */
 
-const version = 'v0.3.1';
+const version = 'v0.3.2';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v3';
+const cacheName = 'simorghCache_v2';
 
 // Track PWA clients
 const pwaClients = new Map();
