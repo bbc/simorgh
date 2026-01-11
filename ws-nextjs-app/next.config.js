@@ -45,11 +45,14 @@ module.exports = {
       // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
       // but will not work on localhost. This rewrites requests from paths outside of root
       // to the sw.js file found in the 'public' folder, which is served from the root.
-
-      {
-        source: '/:path/sw.js',
-        destination: '/sw.js',
-      },
+      ...(isLocal
+        ? [
+            {
+              source: '/:path/sw.js',
+              destination: '/sw.js',
+            },
+          ]
+        : []),
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
