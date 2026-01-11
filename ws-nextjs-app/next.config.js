@@ -24,6 +24,20 @@ module.exports = {
           },
         ],
       },
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Service-Worker-Allowed',
+            value: '/',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          { key: 'Content-Type', value: 'application/javascript' },
+        ],
+      },
     ];
   },
   async rewrites() {
@@ -31,14 +45,11 @@ module.exports = {
       // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
       // but will not work on localhost. This rewrites requests from paths outside of root
       // to the sw.js file found in the 'public' folder, which is served from the root.
-      ...(isLocal
-        ? [
-            {
-              source: '/:path/sw.js',
-              destination: '/sw.js',
-            },
-          ]
-        : []),
+
+      {
+        source: '/:path/sw.js',
+        destination: '/sw.js',
+      },
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',

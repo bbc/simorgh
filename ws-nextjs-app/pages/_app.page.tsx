@@ -26,8 +26,6 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
-// import PWAServiceWorker from '#app/components/PWAServiceWorker';
-// import ServiceWorker from '#app/components/ServiceWorker';
 
 interface Props {
   pageProps: {
@@ -143,8 +141,6 @@ export default class CustomApp extends App<Props> {
           variant={variant}
           pageLang={pageLang}
         >
-          {/* TEMP Testing will remove later  */}
-          {/* <ServiceWorker /> */}
           <RequestContextProvider
             bbcOrigin={bbcOrigin}
             id={id}
