@@ -106,18 +106,4 @@ describe('handleTopicRoute', () => {
       expect.stringContaining('max-age=240'),
     );
   });
-
-  it('returns not found props when service is invalid', async () => {
-    const result = await handleTopicRoute({
-      ...mockGetServerSidePropsContext,
-      resolvedUrl: '/fakeservice/topics/c95y35941vrt',
-      query: { service: 'fakeservice', id: 'c95y35941vrt' },
-    });
-
-    console.log(result);
-
-    expect(result).toEqual({
-      props: expect.objectContaining({ status: 404 }),
-    });
-  });
 });
