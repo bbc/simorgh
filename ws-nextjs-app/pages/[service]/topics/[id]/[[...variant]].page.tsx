@@ -17,11 +17,6 @@ const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
 const logger = nodeLogger(__filename);
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  context.res.setHeader(
-    'Cache-Control',
-    'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
-  );
-
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
   const {
@@ -47,9 +42,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: TOPIC_PAGE,
   });
 
-  if (!data?.pageData) {
-    throw handleError('TopicPage data is malformed', 500);
-  }
+  const { status } = data;
+
+  context.res.statusCode = status;
 
   let routingInfoLogger = logger.debug;
 
@@ -60,7 +55,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
-    context.res.statusCode = renderStatus;
+
     return {
       props: {
         service,
@@ -72,6 +67,15 @@ export const getServerSideProps: GetServerSideProps = async context => {
       },
     };
   }
+
+  if (!data?.pageData) {
+    throw handleError('TopicPage data is malformed', 500);
+  }
+
+  context.res.setHeader(
+    'Cache-Control',
+    'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
+  );
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: context.resolvedUrl,
