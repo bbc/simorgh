@@ -1,6 +1,4 @@
 import { use } from 'react';
-import isEmpty from 'ramda/src/isEmpty';
-import tail from 'ramda/src/tail';
 import useViewTracker from '#hooks/useViewTracker';
 import idSanitiser from '#lib/utilities/idSanitiser';
 import { OptimoBlock } from '#app/models/types/optimo';
@@ -30,9 +28,7 @@ const ArticleLinksBlock = ({
   const viewTracker = useViewTracker(eventTrackingData);
   const clickTracker = useClickTrackerHandler(eventTrackingData);
 
-  if (!blocks || isEmpty(blocks)) {
-    return null;
-  }
+  if (!blocks || blocks.length === 0) return null;
 
   const title =
     blocks[0]?.type === 'title'
@@ -42,7 +38,7 @@ const ArticleLinksBlock = ({
       : undefined;
 
   const blocksWithoutTitle =
-    blocks[0]?.type === 'title' ? tail(blocks) : blocks;
+    blocks[0]?.type === 'title' ? blocks.slice(1) : blocks;
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
