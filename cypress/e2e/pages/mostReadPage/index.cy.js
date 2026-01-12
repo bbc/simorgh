@@ -3,7 +3,6 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
@@ -86,7 +85,6 @@ const atiAnalyticsTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'list-datadriven',
-    useReverb: true,
     tests: [
       assertPageView,
       assertDropdownNavigationComponentClick,
@@ -103,7 +101,6 @@ const atiAnalyticsAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: true,
     applicationType: 'amp',
     tests: [assertPageView],
   };
@@ -126,7 +123,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: true,
     tests: [...liteSiteTests],
   };
 });
@@ -139,12 +135,10 @@ runTestsForPage({
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType,
   testSuites: [...atiAnalyticsAmpTestSuites, ...atiAnalyticsLiteTestSuites],
-  beforeAll: [setUserIDCookie],
 });

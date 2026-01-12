@@ -10,8 +10,8 @@ const { TOP_BAR_OJ } = COMPONENTS;
 
 export const assertTopBarOJComponentView = ({
   pageIdentifier,
-  contentType,
   path,
+  applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
   it('should send a view event for the Top Bar OJ component', () => {
@@ -26,7 +26,7 @@ export const assertTopBarOJComponentView = ({
     assertATIComponentViewEvent({
       component: TOP_BAR_OJ,
       pageIdentifier,
-      contentType,
+      applicationType,
       siteId,
     });
   });
@@ -34,8 +34,8 @@ export const assertTopBarOJComponentView = ({
 
 export const assertTopBarOJComponentClick = ({
   pageIdentifier,
-  contentType,
   path,
+  applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
   it('should send a click event for the Top Bar OJ component', () => {
@@ -52,7 +52,7 @@ export const assertTopBarOJComponentClick = ({
     assertATIComponentClickEvent({
       component: TOP_BAR_OJ,
       pageIdentifier,
-      contentType,
+      applicationType,
       siteId,
     });
   });
