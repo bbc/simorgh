@@ -19,7 +19,7 @@ console.log(`[SW v${version}] Service Worker loaded.`);
 // Helper Functions
 // --------------------
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
-const getOfflinePageUrl = service => `/${service}/offline/`;
+const getOfflinePageUrl = service => `/${service}/offline`;
 
 const cacheResource = async (cache, url) => {
   try {

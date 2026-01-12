@@ -13,7 +13,6 @@ const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  trailingSlash: true,
   async headers() {
     return [
       {
