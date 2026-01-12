@@ -25,7 +25,7 @@ module.exports = {
         ],
       },
       {
-        source: '/sw.js',
+        source: '/:service/sw.js',
         headers: [
           {
             key: 'Service-Worker-Allowed',
