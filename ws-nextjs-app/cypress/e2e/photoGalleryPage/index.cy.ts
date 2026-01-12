@@ -7,7 +7,6 @@ import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -189,6 +188,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

@@ -10,7 +10,6 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articlePage/testsForLiteOnly';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -391,6 +390,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: MEDIA_ASSET_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
