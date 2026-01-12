@@ -17,7 +17,7 @@ const ArticleTimestamp = ({
   popOut = true,
   minutesTolerance = 0,
   className = '',
-  hasReadTime = false,
+  padding = true,
 }) => {
   const {
     articleTimestampPrefix,
@@ -72,7 +72,7 @@ const ArticleTimestamp = ({
       <Timestamp // First Published Timestamp
         {...timestampProps}
         {...firstPublishedProps}
-        {...(hasReadTime && { padding: false })}
+        padding={padding}
       />
       {displayLastUpdatedTimestamp && (
         // Div has been used for No CSS formatting see #5554
@@ -80,7 +80,7 @@ const ArticleTimestamp = ({
           <Timestamp // Last Published Timestamp
             {...timestampProps}
             {...lastPublishedProps}
-            {...(hasReadTime && { padding: false })}
+            padding={padding}
           />
         </div>
       )}
