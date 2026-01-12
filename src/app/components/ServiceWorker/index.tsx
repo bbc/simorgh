@@ -1,7 +1,8 @@
-import { use } from 'react';
+import { use, useEffect } from 'react';
 import useIsPWA from '#app/hooks/useIsPWA';
 import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
-import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
+// import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
+import onClient from '#lib/utilities/onClient';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
@@ -43,16 +44,18 @@ export default () => {
 
   // TEMP Testing will remove later
 
-  // useEffect(() => {
-  //   const shouldInstallServiceWorker =
-  //     swPath && onClient() && 'serviceWorker' in navigator;
+  useEffect(() => {
+    const shouldInstallServiceWorker =
+      swPath && onClient() && 'serviceWorker' in navigator;
 
-  //   if (shouldInstallServiceWorker) {
-  //     navigator.serviceWorker.register(`/${service}${swPath}`);
-  //   }
-  // }, [swPath, service]);
+    console.log('Service Worker Registration - swPath:', swPath);
 
-  useServiceWorkerRegistration(service);
+    if (shouldInstallServiceWorker) {
+      navigator.serviceWorker.register(`/${service}${swPath}`);
+    }
+  }, [swPath, service]);
+
+  // useServiceWorkerRegistration(service);
 
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
