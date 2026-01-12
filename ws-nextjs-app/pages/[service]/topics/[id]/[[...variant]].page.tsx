@@ -8,6 +8,8 @@ import { OK } from '#app/lib/statusCodes.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
+import shouldRender from '#nextjs/utilities/shouldRender';
+import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
 const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
@@ -45,9 +47,30 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: TOPIC_PAGE,
   });
 
+  if (!data?.pageData) {
+    throw handleError('TopicPage data is malformed', 500);
+  }
+
   let routingInfoLogger = logger.debug;
-  if (data.status !== OK) {
+
+  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
+    { pageData: data.pageData, status: data.status },
+    service,
+  );
+
+  if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
+    context.res.statusCode = renderStatus;
+    return {
+      props: {
+        service,
+        status: renderStatus,
+        timeOnServer: Date.now(),
+        variant,
+        pageType: TOPIC_PAGE,
+        pathname: context.resolvedUrl,
+      },
+    };
   }
 
   routingInfoLogger(ROUTING_INFORMATION, {
@@ -57,21 +80,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
   });
 
   context.res.statusCode = data.status;
-
   return {
     props: {
       error: data?.error || null,
       id,
       page: page || null,
-      pageData: data?.pageData
-        ? {
-            ...data.pageData,
-            metadata: {
-              ...data.pageData.metadata,
-              type: TOPIC_PAGE,
-            },
-          }
-        : null,
+      pageData: {
+        ...data.pageData,
+        metadata: {
+          ...data.pageData.metadata,
+          type: TOPIC_PAGE,
+        },
+      },
       pageType: TOPIC_PAGE,
       pathname: context.resolvedUrl,
       service,

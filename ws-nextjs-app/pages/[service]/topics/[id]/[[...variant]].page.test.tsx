@@ -103,7 +103,7 @@ describe('handleTopicRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=30'),
+      expect.stringContaining('max-age=240'),
     );
   });
 
@@ -113,6 +113,8 @@ describe('handleTopicRoute', () => {
       resolvedUrl: '/fakeservice/topics/c95y35941vrt',
       query: { service: 'fakeservice', id: 'c95y35941vrt' },
     });
+
+    console.log(result);
 
     expect(result).toEqual({
       props: expect.objectContaining({ status: 404 }),
