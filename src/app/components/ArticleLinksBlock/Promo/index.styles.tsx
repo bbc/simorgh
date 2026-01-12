@@ -14,12 +14,25 @@ export default {
       overflowY: 'hidden',
       WebkitLineClamp: 4,
       WebkitBoxOrient: 'vertical',
+      color: isDarkUi ? palette.GREY_10 : palette.GREY_8,
+
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
-      color: isDarkUi ? palette.GREY_10 : palette.GREY_8,
+
       '&:visited': {
         color: palette.GREY_6,
+      },
+
+      '&::before': {
+        bottom: 0,
+        content: '""',
+        left: 0,
+        overflow: 'hidden',
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        zIndex: 1,
       },
     }),
   promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>

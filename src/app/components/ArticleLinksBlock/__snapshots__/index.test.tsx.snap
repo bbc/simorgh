@@ -253,6 +253,17 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   color: #545658;
 }
 
+.emotion-8::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 .emotion-9 {
   position: absolute;
   top: 50%;
@@ -533,6 +544,17 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   color: #545658;
 }
 
+.emotion-6::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 .emotion-7 {
   position: absolute;
   top: 50%;
@@ -805,6 +827,17 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   color: #545658;
 }
 
+.emotion-7::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 .emotion-8 {
   position: absolute;
   top: 50%;
@@ -1025,6 +1058,17 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 
 .emotion-6:visited {
   color: #545658;
+}
+
+.emotion-6::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .emotion-7 {
