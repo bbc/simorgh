@@ -83,7 +83,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     pageType: TOPIC_PAGE,
   });
 
-  context.res.statusCode = data.status;
   return {
     props: {
       error: data?.error || null,
