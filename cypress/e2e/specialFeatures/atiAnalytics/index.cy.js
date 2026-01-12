@@ -15,7 +15,6 @@ import {
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
 
-import { setUserIDCookie } from './helpers';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [];
@@ -62,5 +61,4 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
 });
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  beforeAll: [setUserIDCookie],
 });

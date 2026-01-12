@@ -20,7 +20,6 @@ import {
   assertTopBarOJComponentClick,
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -527,7 +526,6 @@ runTestsForPage({
     ...atiAnalyticsTestSuites.filter(({ service }) => service !== 'news'),
     ...atiLiteTestSuites,
   ] as unknown as TestDataType[],
-  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({
