@@ -2,10 +2,10 @@
 import loggerMock from '#testHelpers/loggerMock';
 import { ATI_LOGGING_ERROR } from '#app/lib/logger.const';
 import { ReverbBeaconConfig } from '#app/components/ATIAnalytics/types';
+import { waitFor } from '#app/components/react-testing-library-with-providers';
 import sendBeacon from './index';
 import * as onClient from '../../utilities/onClient';
 
-let fetchResponse: Promise<Response>;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let isOnClient: any;
 
@@ -26,27 +26,10 @@ jest.spyOn(onClient, 'default').mockImplementation(() => isOnClient);
 describe('sendBeacon', () => {
   beforeEach(() => {
     isOnClient = true;
-    (fetch as jest.Mock).mockImplementation(() => fetchResponse);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  it(`should fetch`, () => {
-    sendBeacon('https://foobar.com');
-
-    expect(fetch).toHaveBeenCalledWith('https://foobar.com', {
-      credentials: 'include',
-    });
-  });
-
-  it(`should not fetch when not on client`, () => {
-    isOnClient = false;
-
-    sendBeacon('https://foobar.com');
-
-    expect(fetch).not.toHaveBeenCalled();
   });
 
   describe('Reverb', () => {
@@ -110,21 +93,14 @@ describe('sendBeacon', () => {
       },
     } as unknown as ReverbBeaconConfig;
 
-    // Simulates reverbBeaconConfig set to null in ATIAnalytics and sendEventBeacon
-    // in the event useReverb resolves to 'false'
-    const reverbConfigWhenReverbIsDisabled = null;
-
     it('should call Reverb viewEvent if Reverb config is passed', async () => {
-      await sendBeacon('https://foobar.com', reverbConfig);
+      await sendBeacon(reverbConfig);
 
       expect(reverbMock.viewEvent).toHaveBeenCalledTimes(1);
     });
 
     it('should call Reverb userActionEvent if Reverb config is passed for a component view event', async () => {
-      await sendBeacon(
-        'https://foobar.com',
-        reverbViewabilityConfigComponentView,
-      );
+      await sendBeacon(reverbViewabilityConfigComponentView);
 
       expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
       expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
@@ -151,10 +127,7 @@ describe('sendBeacon', () => {
     });
 
     it('should call Reverb userActionEvent if Reverb config is passed for a component click event', async () => {
-      await sendBeacon(
-        'https://foobar.com',
-        reverbViewabilityConfigComponentClick,
-      );
+      await sendBeacon(reverbViewabilityConfigComponentClick);
 
       expect(reverbMock.userActionEvent).toHaveBeenCalledTimes(1);
       expect(reverbMock.userActionEvent).toHaveBeenCalledWith(
@@ -180,29 +153,53 @@ describe('sendBeacon', () => {
       );
     });
 
-    it('should not call Reverb viewEvent if Reverb is not enabled for a service', async () => {
-      await sendBeacon('https://foobar.com', reverbConfigWhenReverbIsDisabled);
+    it(`should not call Reverb when not on client`, async () => {
+      isOnClient = false;
+
+      await sendBeacon(reverbConfig);
 
       expect(reverbMock.viewEvent).not.toHaveBeenCalled();
     });
-
-    it('should not call "fetch" if Reverb config is passed', async () => {
-      await sendBeacon('https://foobar.com', reverbConfig);
-
-      expect(fetch).not.toHaveBeenCalled();
-    });
   });
 
-  describe('when the fetch fails', () => {
-    let error: Error;
+  describe('Error Handling', () => {
+    const error: Error = new Error('An error');
 
-    beforeEach(() => {
-      error = new Error('An error');
-      fetchResponse = Promise.reject(error);
+    const reverbConfig = {
+      params: {
+        page: 'page',
+        user: '1234-5678',
+      },
+      eventDetails: {
+        eventName: 'pageView',
+      },
+    } as unknown as ReverbBeaconConfig;
+
+    it(`should send error to the logger when Reverb fails to load`, async () => {
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.reject(error),
+      };
+
+      await sendBeacon(reverbConfig);
+
+      expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
+        error: 'Failed to load reverb. No event sent',
+      });
     });
 
-    it(`should send error to logger`, async () => {
-      await sendBeacon('https://foobar.com');
+    it(`should send error to the logger when viewEvent fails`, async () => {
+      const errorReverbMock = {
+        ...reverbMock,
+        viewEvent: jest.fn(() => Promise.reject(error)),
+      };
+
+      // eslint-disable-next-line no-underscore-dangle
+      window.__reverb = {
+        __reverbLoadedPromise: Promise.resolve(errorReverbMock),
+      };
+
+      await waitFor(() => sendBeacon(reverbConfig));
 
       expect(loggerMock.error).toHaveBeenCalledWith(ATI_LOGGING_ERROR, {
         error,

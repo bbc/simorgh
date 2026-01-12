@@ -2,7 +2,9 @@
 import { render } from '../../react-testing-library-with-providers';
 import AmpATIAnalytics from '.';
 import { ReverbBeaconConfig } from '../types';
-import splitUrl from '../atiUrl/splitUrl';
+
+const splitUrl = (url: string): string[] =>
+  url.replace(/&/g, ',').replace(/\?/g, ',').split(',');
 
 describe('Amp ATI Analytics', () => {
   beforeEach(() => {
@@ -49,10 +51,7 @@ describe('Amp ATI Analytics', () => {
     };
 
     const { container } = render(
-      <AmpATIAnalytics
-        pageviewParams="key1=value1&key2=value2"
-        reverbParams={mockReverbParams}
-      />,
+      <AmpATIAnalytics reverbParams={mockReverbParams} />,
     );
 
     const ampAnalyticsComponents = container.querySelectorAll(

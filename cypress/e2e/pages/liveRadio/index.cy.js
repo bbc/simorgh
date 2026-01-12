@@ -2,7 +2,6 @@ import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertRadioScheduleComponentClick,
@@ -115,7 +114,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'player-live',
-    useReverb: true,
     tests: [
       assertPageView,
       assertRadioScheduleComponentView,
@@ -132,6 +130,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: 'liveRadio',
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
