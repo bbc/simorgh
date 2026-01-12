@@ -11,6 +11,7 @@ const cacheName = 'simorghCache_v2';
 
 // Track PWA clients
 const pwaClients = new Map();
+let isPWADeviceOffline = false;
 
 console.log(`[SW v${version}] Service Worker loaded.`);
 
@@ -39,7 +40,7 @@ const cacheOfflinePageAndResources = async service => {
   ).href;
 
   // Commenting out to force re-cache during testing
-  // if (await cache.match(offlinePageUrl)) return;
+  if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
   if (!resp || !resp.ok) return;
@@ -60,10 +61,6 @@ const cacheOfflinePageAndResources = async service => {
     linkHrefs,
   );
   const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
-
-  //* *** */ Removing filtering to allow cross-origin resources or other assets to be cached
-  // .filter(url => url.startsWith('/') || url.startsWith(self.location.origin))
-  // .map(url => new URL(url, self.location.origin).href);
 
   console.log(
     `[SW v${version}] Caching final offline resources for ${service}:`,
@@ -132,8 +129,8 @@ const fetchEventHandler = async event => {
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
-
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+  const isNavigationMode = event.request.mode === 'navigate';
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -166,21 +163,7 @@ const fetchEventHandler = async event => {
         return response;
       })(),
     );
-  } else if (event.request.url.includes('/_next/static/')) {
-    console.log(`[SW FETCH] Intercept /_next/static/`);
-    // Cache Next.js static files - cache-first strategy
-    event.respondWith(
-      (async () => {
-        const cache = await caches.open(cacheName);
-        const cached = await cache.match(event.request);
-        if (cached) return cached;
-
-        const networkResp = await fetch(event.request.url);
-        cache.put(event.request, networkResp.clone());
-        return networkResp;
-      })(),
-    );
-  } else if (event.request.mode === 'navigate') {
+  } else if (isNavigationMode) {
     const { url } = event.request;
 
     event.respondWith(
@@ -189,13 +172,14 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        console.log('[SW FETCH] Navigation', {
+        console.log('📌 [SW FETCH] Navigation', {
           url: event.request.url,
           clientId: event.clientId,
           isPWA,
           client,
           event,
           pwaClients,
+          isPWADeviceOffline,
         });
         try {
           // Use preload if available
@@ -203,9 +187,10 @@ const fetchEventHandler = async event => {
           if (preloadResp) return preloadResp;
 
           const networkResp = await fetch(event.request);
+          isPWADeviceOffline = false;
           return networkResp;
         } catch (err) {
-          console.log('[SW] Navigation failed:', url, err);
+          console.log('[SW] Navigation failed:', { err, url, isPWA });
 
           // Only show offline page for installed PWA
           if (isPWA) {
@@ -217,6 +202,7 @@ const fetchEventHandler = async event => {
 
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
+              isPWADeviceOffline = true;
               console.log('[SW] Serving cached offline page');
               return cachedOffline;
             }
@@ -224,6 +210,15 @@ const fetchEventHandler = async event => {
           // fallback to browser default behavior
           throw err;
         }
+      })(),
+    );
+  } else if (isPWADeviceOffline) {
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        const cached = await cache.match(event.request);
+        if (cached) return cached;
+        return fetch(event.request);
       })(),
     );
   }
