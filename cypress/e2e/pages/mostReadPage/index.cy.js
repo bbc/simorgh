@@ -3,7 +3,6 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
@@ -136,12 +135,10 @@ runTestsForPage({
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType,
   testSuites: [...atiAnalyticsAmpTestSuites, ...atiAnalyticsLiteTestSuites],
-  beforeAll: [setUserIDCookie],
 });

@@ -1,7 +1,6 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
@@ -263,12 +262,10 @@ runTestsForPage({
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsLiteTestSuites,
-  beforeAll: [setUserIDCookie],
 });
