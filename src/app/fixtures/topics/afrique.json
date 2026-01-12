@@ -1,0 +1,41 @@
+{
+  "headline": "Sujets",
+  "topics": [
+    {
+      "topicName": "Politique",
+      "topicId": "politique",
+      "subjectList": [],
+      "curationList": [],
+      "types": ["news"],
+      "home": "afrique",
+      "topicUrl": "/afrique/topics/politique"
+    },
+    {
+      "topicName": "Économie",
+      "topicId": "economie",
+      "subjectList": [],
+      "curationList": [],
+      "types": ["news"],
+      "home": "afrique",
+      "topicUrl": "/afrique/topics/economie"
+    },
+    {
+      "topicName": "Société",
+      "topicId": "societe",
+      "subjectList": [],
+      "curationList": [],
+      "types": ["news"],
+      "home": "afrique",
+      "topicUrl": "/afrique/topics/societe"
+    },
+    {
+      "topicName": "Sport",
+      "topicId": "sport",
+      "subjectList": [],
+      "curationList": [],
+      "types": ["news"],
+      "home": "afrique",
+      "topicUrl": "/afrique/topics/sport"
+    }
+  ]
+}
