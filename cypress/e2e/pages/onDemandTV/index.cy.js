@@ -1,7 +1,6 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
@@ -211,7 +210,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [assertPageView],
   },
   {
@@ -222,7 +220,6 @@ const atiAnalyticsTestSuites = [
     siteId: 3,
     applicationType: 'responsive',
     contentType: 'player-episode',
-    useReverb: true,
     tests: [assertPageView],
   },
 ];
@@ -252,7 +249,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
@@ -266,12 +262,10 @@ runTestsForPage({
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType,
   testSuites: atiAnalyticsLiteTestSuites,
-  beforeAll: [setUserIDCookie],
 });
