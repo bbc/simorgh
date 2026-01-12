@@ -108,7 +108,6 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(index)}
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
-                timeOfDayVariant={timeOfDayVariant}
                 playDurationVariation={playDurationVariation}
               />
             ))}
