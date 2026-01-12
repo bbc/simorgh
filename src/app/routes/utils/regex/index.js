@@ -48,9 +48,6 @@ export const onDemandTvDataPath = `${onDemandTvPath}.json`;
 export const topicPath = getTopicPageRegex(SERVICES);
 export const topicDataPath = `${topicPath}.json`;
 
-export const topicIndexPath = `/:service/topics`;
-export const topicIndexDataPath = `${topicIndexPath}.json`;
-
 export const errorPagePath = getErrorPageRegex(SERVICES);
 
 export const legacyAssetPagePath = getLegacyAssetRegex(SERVICES);
