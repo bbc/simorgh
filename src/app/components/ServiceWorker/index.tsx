@@ -39,21 +39,7 @@ export default () => {
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
   const isPWA = useIsPWA();
 
-  // Register service worker for offline functionality
-
-  // TEMP Testing will remove later
-
-  // useEffect(() => {
-  //   const shouldInstallServiceWorker =
-  //     swPath && onClient() && 'serviceWorker' in navigator;
-
-  //   if (shouldInstallServiceWorker) {
-  //     navigator.serviceWorker.register(`/${service}${swPath}`);
-  //   }
-  // }, [swPath, service]);
-
   useServiceWorkerRegistration(service);
-
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
 

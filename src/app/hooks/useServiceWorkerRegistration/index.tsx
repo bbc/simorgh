@@ -20,6 +20,11 @@ const useServiceWorkerRegistration = (service?: string) => {
       onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
+      // TODO: scope option to be used once Service-Worker-Allowed header is whitelisted
+      // const result = sw.register(`/${service}/sw.js`, {
+      //   scope: `/${service}`,
+      // });
+
       const result = sw.register(`/${service}/sw.js`);
 
       Promise.resolve(result).catch(err => {

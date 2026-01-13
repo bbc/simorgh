@@ -168,7 +168,6 @@ export default class CustomApp extends App<Props> {
               ) : (
                 <UserContextProvider>
                   <ThemeProvider service={service} variant={variant}>
-                    {/* Service Worker Component is wrapped in PageWrapper Component */}
                     <PageWrapper pageData={pageData} status={status}>
                       {RenderChildrenOrError}
                     </PageWrapper>
