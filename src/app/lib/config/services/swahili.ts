@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     atiAnalyticsProducerName: 'SWAHILI',
-    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
@@ -377,10 +376,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Tanzania',
-        url: '/swahili/topics/c5y9ng5gqert',
       },
       {
         title: 'Michezo',

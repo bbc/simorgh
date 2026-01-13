@@ -5,8 +5,6 @@ const { SOCIAL_EMBED } = COMPONENTS;
 
 export const assertSocialEmbedComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -22,8 +20,6 @@ export const assertSocialEmbedComponentView = ({
     assertATIComponentViewEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -32,8 +28,6 @@ export const assertSocialEmbedComponentView = ({
 
 export const assertSocialEmbedComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -52,8 +46,6 @@ export const assertSocialEmbedComponentClick = ({
     assertATIComponentClickEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
