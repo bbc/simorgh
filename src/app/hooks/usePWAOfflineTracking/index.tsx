@@ -32,10 +32,6 @@ const usePWAOfflineTracking = () => {
         return;
       }
 
-      // TODO: Temp used for testing
-      // eslint-disable-next-line no-console
-      console.log(`📌 usePWAOfflineTracking`, { offlineVisitFlag });
-
       trackOfflinePageViewEvent(networkType);
       localStorage.removeItem(OFFLINE_VISIT_FLAG);
     } catch (error) {
