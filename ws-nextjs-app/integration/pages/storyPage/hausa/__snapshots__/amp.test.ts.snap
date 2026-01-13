@@ -181,40 +181,47 @@ exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "Gasar Kofin Afirka",
+  "url": "/hausa/topics/c71939zq32vt",
+}
+`;
+
+exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
+{
   "text": "Wasanni",
   "url": "/hausa/topics/cz74kjgv220t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Nishadi",
   "url": "/hausa/topics/cg726kz37wdt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Cikakkun Rahotanni",
   "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
 {
   "text": "Bidiyo",
   "url": "/hausa/topics/cn09qmz4jryt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
 {
   "text": "Shirye-shirye na Musamman",
   "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Story Page Header Navigation link should match text and url 8`] = `
 {
   "text": "Shirye-shiryen rediyo",
   "url": "/hausa/topics/c4nx34q5724t",

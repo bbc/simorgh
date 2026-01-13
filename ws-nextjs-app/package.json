@@ -32,7 +32,7 @@
     "@jest/types": "30.2.0",
     "@swc/core": "1.15.2",
     "@testing-library/jest-dom": "6.9.1",
-    "@testing-library/react": "16.3.0",
+    "@testing-library/react": "16.3.1",
     "cypress": "15.4.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",

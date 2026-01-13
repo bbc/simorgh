@@ -7,7 +7,6 @@ import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -46,7 +45,6 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -63,7 +61,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -80,7 +77,6 @@ const atiAnalyticsTestSuites = [
     siteId: 95,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -100,7 +96,6 @@ describe('Live Page Spec', () => {
   runTestsForPage({
     pageType: LIVE_PAGE,
     testSuites: atiAnalyticsTestSuites,
-    beforeAll: [setUserIDCookie],
     testIsolation: true,
   });
 });

@@ -15,7 +15,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     atiAnalyticsProducerName: 'THAI',
-    useReverb: true,
     chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
@@ -277,6 +276,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
+      },
+      {
+        title: 'เลือกตั้ง 2569',
+        url: '/thai/topics/cd9zv7dyg1kt',
       },
       {
         title: 'ประเทศไทย',

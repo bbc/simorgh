@@ -6,6 +6,7 @@ import {
   ARTICLE_PAGE,
   HOME_PAGE,
   UNKNOWN_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -68,5 +69,11 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/xxxxxxxxx';
     const result = derivePageType(pathname);
     expect(result).toEqual(UNKNOWN_PAGE);
+  });
+
+  it("should return TOPIC_PAGE if pathname includes 'topic'", () => {
+    const pathname = '/pidgin/topics/c95y35941vrt';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(TOPIC_PAGE);
   });
 });

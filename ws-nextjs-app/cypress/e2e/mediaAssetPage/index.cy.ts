@@ -10,7 +10,6 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articlePage/testsForLiteOnly';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -217,7 +216,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -228,7 +226,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -239,7 +236,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -250,7 +246,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
@@ -395,6 +390,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: MEDIA_ASSET_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

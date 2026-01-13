@@ -1,5 +1,5 @@
-import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
   assertWSLanguagesPageURNLive,
   assertWSLanguagesPageURN,
@@ -8,7 +8,6 @@ import {
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 
 const testSuites = [
   {
@@ -40,7 +39,6 @@ const atiAnalyticsTestSuites = [
     siteId: 30,
     applicationType: 'responsive',
     contentType: 'index-home',
-    useReverb: true,
     tests: [assertPageView],
   },
 ] as unknown as TestDataType[];
@@ -53,6 +51,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
