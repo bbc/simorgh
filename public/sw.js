@@ -203,9 +203,7 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (isPWADeviceOffline) {
-    console.log(
-      `[SW v${version}] Serving isPWADeviceOffline ${event.request.url}`,
-    );
+    logger(`[SW v${version}] Serving isPWADeviceOffline ${event.request.url}`);
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
