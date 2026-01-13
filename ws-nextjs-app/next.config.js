@@ -29,7 +29,7 @@ module.exports = {
         headers: [
           {
             key: 'Service-Worker-Allowed',
-            value: '/',
+            value: '/:service',
           },
           {
             key: 'Cache-Control',

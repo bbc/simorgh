@@ -3,21 +3,23 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-/* eslint-disable no-console */
 
 const version = 'v0.3.2';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v2';
-
-// Track PWA clients
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
-
-console.log(`[SW v${version}] Service Worker loaded.`);
 
 // --------------------
 // Helper Functions
 // --------------------
+const loggerEnabled = true;
+const logger = (...args) => {
+  if (!loggerEnabled) return;
+  // eslint-disable-next-line no-console
+  console.log(`[SW ${version}]`, ...args);
+};
+
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
 const getOfflinePageUrl = service => `/${service}/offline`;
 
@@ -27,7 +29,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    console.error(`[SW v${version}] Failed to cache ${url}:`, err);
+    logger(`Failed to cache ${url}:`, err);
     return null;
   }
 };
@@ -39,13 +41,12 @@ const cacheOfflinePageAndResources = async service => {
     self.location.origin,
   ).href;
 
-  // Commenting out to force re-cache during testing
   if (await cache.match(offlinePageUrl)) return;
 
   const resp = await cacheResource(cache, offlinePageUrl);
   if (!resp || !resp.ok) return;
 
-  console.log(`[SW v${version}] Cached offline page for ${service}`);
+  logger(`Cached offline page for ${service}`);
 
   const html = await resp.text();
   const scriptSrcs = [
@@ -54,18 +55,10 @@ const cacheOfflinePageAndResources = async service => {
   const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
     m => m[1],
   );
-  // Adding console logs to help debug event tracking issues - will remove later
-  console.log(
-    `[SW v${version}] Caching scriptSrcs ,linkHrefs for ${service}:`,
-    scriptSrcs,
-    linkHrefs,
-  );
+
   const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
 
-  console.log(
-    `[SW v${version}] Caching final offline resources for ${service}:`,
-    resources,
-  );
+  logger(`Caching final offline resources for ${service}:`, resources);
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
 
@@ -88,14 +81,14 @@ const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
 // -------------Install event -------
-self.addEventListener('install', event => {
-  console.log(`[SW v${version}] Installing...`);
+self.addEventListener('install', () => {
+  logger(`Installing...`);
   self.skipWaiting();
 });
 
 // -------Activate Handler-------------
 self.addEventListener('activate', event => {
-  console.log(`[SW v${version}] Activating...`);
+  logger(`Activating...`);
   event.waitUntil(
     (async () => {
       const keys = await caches.keys();
@@ -109,7 +102,7 @@ self.addEventListener('activate', event => {
 
 // -------Message Event-------------
 self.addEventListener('message', async event => {
-  console.log(`[SW v${version}] Message received:`, event.data);
+  logger('Message received:', event.data);
 
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
@@ -125,7 +118,7 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  console.log(`[SW FETCH] Request: ${event.request.url}`);
+  logger(`[SW FETCH] Request: ${event.request.url}`);
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
@@ -136,13 +129,11 @@ const fetchEventHandler = async event => {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support
-
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
 
     // if supports webp is false in request header then don't use it
     // if accept header doesn't indicate support for webp remove .webp extension
-
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
@@ -172,7 +163,8 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        console.log('📌 [SW FETCH] Navigation', {
+        // TODO: Used for testing - to be removed
+        logger('📌 [SW FETCH] Navigation', {
           url: event.request.url,
           clientId: event.clientId,
           isPWA,
@@ -190,8 +182,6 @@ const fetchEventHandler = async event => {
           isPWADeviceOffline = false;
           return networkResp;
         } catch (err) {
-          console.log('[SW] Navigation failed:', { err, url, isPWA });
-
           // Only show offline page for installed PWA
           if (isPWA) {
             const service = getServiceFromUrl(url);
@@ -203,7 +193,7 @@ const fetchEventHandler = async event => {
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
               isPWADeviceOffline = true;
-              console.log('[SW] Serving cached offline page');
+              logger('[SW] Serving cached offline page');
               return cachedOffline;
             }
           }
