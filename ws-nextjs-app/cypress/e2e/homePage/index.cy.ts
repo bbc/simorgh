@@ -156,7 +156,7 @@ const atiAnalyticsTestSuites = [
     runforEnv: ['local', 'test'],
     service: 'magyarul',
     pageIdentifier: 'magyarul.page',
-    siteId: 30,
+    siteId: 134,
     applicationType: 'responsive',
     contentType: 'index-home',
     tests: [assertPageView],
