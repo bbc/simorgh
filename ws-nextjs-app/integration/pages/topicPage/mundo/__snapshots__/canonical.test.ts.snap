@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Topic page with badge image, description and multiple curations with h2 headings Page content First item in the first curation is the correct headline 1`] = `"Edited New 1226 El conflictivo pasado con Venezuela de Rex Tillerson, nuevo secretario de Estado de EEUU"`;
+
+exports[`Topic page with badge image, description and multiple curations with h2 headings Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="ExxonMobil Chairman and CEO Rex Tillerson speaks during the IHS CERAWeek 2015 energy conference in Houston, Texas April 21, 2015"
+  class="css-zfe4bz"
+  fetchpriority="high"
+  loading="eager"
+  sizes="(min-width: 63rem) 800px, (min-width: 37.5rem) 66vw, 100vw"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/167B2/test/_63528029_036820129-1.jpg"
+  srcset="https://ichef.test.bbci.co.uk/ace/standard/85/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 85w, https://ichef.test.bbci.co.uk/ace/standard/120/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 120w, https://ichef.test.bbci.co.uk/ace/standard/170/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 170w, https://ichef.test.bbci.co.uk/ace/standard/232/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 232w, https://ichef.test.bbci.co.uk/ace/standard/325/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 325w, https://ichef.test.bbci.co.uk/ace/standard/450/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 450w, https://ichef.test.bbci.co.uk/ace/standard/660/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 660w, https://ichef.test.bbci.co.uk/ace/standard/800/cpsdevpb/167B2/test/_63528029_036820129-1.jpg.webp 800w"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
+exports[`Topic page with badge image, description and multiple curations with h2 headings should display the topic badge image 1`] = `
+<img
+  alt=""
+  class="css-15rkpge-Image e1vorejc0"
+  data-testid="topic-badge"
+  src="https://ichef.bbci.co.uk/ace/standard/128/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg"
+/>
+`;

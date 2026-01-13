@@ -2,7 +2,7 @@
 
 exports[`AMP Articles Embed HTML should match snapshot 1`] = `
 <div
-  class="css-z6vcvl"
+  class="css-thvkhd"
   data-e2e="embed-error"
 >
   <strong
@@ -11,10 +11,10 @@ exports[`AMP Articles Embed HTML should match snapshot 1`] = `
     Sorry, we can’t display this part of the story on this lightweight mobile page.
   </strong>
   <div
-    class="css-yzszhh"
+    class="css-b4gar0"
   >
     <a
-      class="css-gu9ena"
+      class="css-b9zq3p"
       href="http://localhost:7081/pidgin/articles/c39rjygpmv1o"
     >
       View the full version of the page to see all the content.

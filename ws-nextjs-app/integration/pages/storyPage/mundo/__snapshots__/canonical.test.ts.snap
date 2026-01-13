@@ -225,7 +225,7 @@ exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de fot
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="css-1seqhu9"
+  class="css-zfe4bz"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
