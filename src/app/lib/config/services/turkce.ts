@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     atiAnalyticsProducerName: 'TURKISH',
-    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',

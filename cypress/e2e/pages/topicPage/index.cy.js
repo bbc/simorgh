@@ -5,7 +5,6 @@ import urlValidationTest from '../../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
-import { setUserIDCookie } from '../../specialFeatures/atiAnalytics/helpers';
 import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
@@ -87,8 +86,6 @@ const atiAnalyticsTestSuites = [
     siteId: 59,
     applicationType: 'responsive',
     contentType: 'index-category',
-    useReverb: true,
-    componentTrackingContentType: 'topic-page',
     tests: [assertPageView],
   },
   {
@@ -99,8 +96,6 @@ const atiAnalyticsTestSuites = [
     siteId: 33,
     applicationType: 'responsive',
     contentType: 'index-category',
-    componentTrackingContentType: 'topic-page',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -130,7 +125,6 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.siteId,
     tests: [...liteSiteTests],
   };
@@ -144,12 +138,10 @@ runTestsForPage({
 runTestsForPage({
   pageType: TOPIC_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType: TOPIC_PAGE,
   testSuites: atiAnalyticsLiteTestSuites,
-  beforeAll: [setUserIDCookie],
 });

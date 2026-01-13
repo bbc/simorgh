@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
     atiAnalyticsProducerName: 'KYRGYZ',
-    useReverb: true,
     chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
@@ -361,10 +360,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Видео жаңылыктар',
         url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
-      },
-      {
-        title: 'Шайлоо-2025',
-        url: '/kyrgyz/topics/cpdmzj1382mt',
       },
       {
         title: 'Кыргызстан',

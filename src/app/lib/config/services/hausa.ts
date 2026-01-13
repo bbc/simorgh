@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
-    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
@@ -444,6 +443,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Labaran Duniya',
         url: '/hausa',
+      },
+      {
+        title: 'Gasar Kofin Afirka',
+        url: '/hausa/topics/c71939zq32vt',
       },
       {
         title: 'Wasanni',

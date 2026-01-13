@@ -14,7 +14,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
-    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage:
