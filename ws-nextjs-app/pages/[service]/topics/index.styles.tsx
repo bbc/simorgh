@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
-  usefulLinksWrapper: ({ fontSizes }: Theme) =>
+  usefulLinksWrapper: ({ fontSizes, palette }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(700)}rem`,
       margin: '0 auto',
@@ -17,6 +17,14 @@ const styles = {
 
       '& a': {
         fontSize: `${pixelsToRem(18)}rem`,
+
+        '&:hover': {
+          color: palette.ARCHIVE_BLUE,
+        },
+
+        '&:visited': {
+          color: palette.GREY_6,
+        },
       },
     }),
 };
