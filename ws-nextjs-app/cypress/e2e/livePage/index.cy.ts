@@ -7,7 +7,6 @@ import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -97,7 +96,6 @@ describe('Live Page Spec', () => {
   runTestsForPage({
     pageType: LIVE_PAGE,
     testSuites: atiAnalyticsTestSuites,
-    beforeAll: [setUserIDCookie],
     testIsolation: true,
   });
 });
