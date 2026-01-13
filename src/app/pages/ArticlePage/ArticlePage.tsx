@@ -44,7 +44,7 @@ import {
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
@@ -321,7 +321,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
     wsoj: ({ data }: { data: Recommendation[] }) =>
       getWsojComponent({
