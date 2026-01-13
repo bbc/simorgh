@@ -15,7 +15,6 @@ import {
   assertSocialEmbedComponentView,
 } from './assertions/socialEmbed';
 
-import { setUserIDCookie } from './helpers';
 import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 
 const canonicalTestSuites = [];
@@ -29,7 +28,6 @@ const ampTestSuites = canonicalTestSuites.filter(supportsAmp).map(testSuite => {
   return {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    useReverb: true,
     applicationType: 'amp',
     tests: [assertPageView],
   };
@@ -57,12 +55,10 @@ const liteTestSuites = canonicalTestSuites.map(testSuite => {
     ...testSuite,
     path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
     applicationType: 'lite',
-    useReverb: false,
     siteId: testSuite.service === 'magyarul' ? 134 : testSuite.siteId,
     tests: [...liteSiteTests],
   };
 });
 runTestsForPage({
   testSuites: [...canonicalTestSuites, ...ampTestSuites, ...liteTestSuites],
-  beforeAll: [setUserIDCookie],
 });

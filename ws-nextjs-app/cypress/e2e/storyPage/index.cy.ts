@@ -9,7 +9,6 @@ import testsForAllAMPPages from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -222,7 +221,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -233,7 +231,6 @@ const atiAnalyticsTestSuites = [
     siteId: 62,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -244,7 +241,6 @@ const atiAnalyticsTestSuites = [
     siteId: 75,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -255,7 +251,6 @@ const atiAnalyticsTestSuites = [
     siteId: 90,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
@@ -297,6 +292,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: STORY_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

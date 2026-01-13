@@ -4,6 +4,7 @@ import IfAboveIE9 from '#app/legacy/components/IfAboveIE9Comment';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { getProcessEnvAppVariables } from '#app/lib/utilities/getEnvConfig';
 import serialiseForScript from '#app/lib/utilities/serialiseForScript';
+import CanonicalToLiteRedirect from '#src/server/utilities/CanonicalToLiteRedirect';
 import addOperaMiniClassScript from '#app/lib/utilities/addOperaMiniClassScript';
 import { BaseRendererProps } from './types';
 import ReverbTemplate from './ReverbTemplate';
@@ -98,6 +99,7 @@ export default function CanonicalRenderer({
   return (
     <html lang="en-GB" className={NO_JS_CLASSNAME} {...htmlAttrs}>
       <head>
+        <CanonicalToLiteRedirect />
         <ReverbTemplate nonce={nonce} />
         {isApp && <meta name="robots" content="noindex" />}
         {title}
