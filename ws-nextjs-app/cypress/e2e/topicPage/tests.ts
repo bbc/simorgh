@@ -1,6 +1,6 @@
-import idSanitiser from '../../../../src/app/lib/utilities/idSanitiser';
-import getAppEnv from '../../../support/helpers/getAppEnv';
-import serviceConfigs from '../../../../src/server/utilities/serviceConfigs';
+import serviceConfigs from '#src/server/utilities/serviceConfigs';
+import idSanitiser from '#src/app/lib/utilities/idSanitiser';
+import getAppEnv from '../../support/helpers/getAppEnv';
 
 export default ({ service, pageType, variant = 'default', path }) => {
   let topicId;
@@ -16,7 +16,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
       topicId = path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 
       // Gets the topic page data for all the tests
-      cy.getPageDataFromWindow().then(({ pageData }) => {
+      cy.getPageDataFromWindow().then(pageData => {
         topicTitle = pageData.title;
         pageCount = pageData.pageCount;
         numberOfItems = pageData.curations?.[0]?.summaries.length;
@@ -65,8 +65,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
         const promoCount = Cypress.$(selector).length;
         cy.log(`Number of promos on the page${promoCount}`);
         if (promoCount !== numberOfItems) {
-          cy.window().then(win => {
-            const pageData = win.SIMORGH_DATA;
+          cy.getPageDataFromWindow().then(pageData => {
             cy.log(pageData);
           });
         }
@@ -235,6 +234,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
         } else {
           cy.log('No pagination as there is only one page');
         }
+        cy.visit(path);
       });
 
       it('Above 400px does not show Page x of y', () => {
