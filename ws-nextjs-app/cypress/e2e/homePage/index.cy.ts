@@ -73,6 +73,12 @@ const testSuites = [
     tests,
   },
   {
+    path: '/romania',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
+    tests,
+  },
+  {
     path: '/serbian/lat',
     runforEnv: ['local', 'test', 'live'],
     service: 'serbian',
@@ -188,6 +194,16 @@ const atiAnalyticsTestSuites = [
       assertPortraitVideoCarouselComponentView,
       assertPortraitVideoModalComponentView,
     ],
+  },
+  {
+    path: '/romania',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
+    pageIdentifier: 'romania.page',
+    siteId: 136,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    tests: [assertPageView],
   },
   {
     path: '/serbian/lat',
