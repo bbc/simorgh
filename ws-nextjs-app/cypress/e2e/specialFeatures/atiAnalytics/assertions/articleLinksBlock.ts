@@ -50,7 +50,9 @@ export const assertArticleLinksBlockComponentClick = ({
     });
 
     // Click on first item
-    cy.get('[data-e2e="article-links-block"] a:not([href^="#"])')
+    cy.get(
+      '[data-e2e="article-links-block"] a:not([href^="#end-of-article-links-block"])',
+    )
       .first()
       .click();
 
