@@ -20,9 +20,7 @@ const useServiceWorkerRegistration = (service?: string) => {
       onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
-      const result = sw.register(`/${service}/sw.js`, {
-        scope: `/${service}`,
-      });
+      const result = sw.register(`/${service}/sw.js`);
 
       Promise.resolve(result).catch(err => {
         // eslint-disable-next-line no-console

@@ -20,7 +20,6 @@ import {
   assertTopBarOJComponentClick,
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -58,9 +57,9 @@ import {
   assertSocialEmbedComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/socialEmbed';
 import {
-  assertScrollablePromoComponentClick,
-  assertScrollablePromoComponentView,
-} from '../specialFeatures/atiAnalytics/assertions/scrollablePromo';
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
@@ -377,8 +376,8 @@ const atiAnalyticsTestSuites = [
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
+      assertArticleLinksBlockComponentClick,
+      assertArticleLinksBlockComponentView,
     ],
   },
   {
@@ -527,7 +526,6 @@ runTestsForPage({
     ...atiAnalyticsTestSuites.filter(({ service }) => service !== 'news'),
     ...atiLiteTestSuites,
   ] as unknown as TestDataType[],
-  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({

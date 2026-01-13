@@ -31,7 +31,6 @@ import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/radioSchedule';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import urlValidationTest from '../../support/helpers/urlValidationTest';
 
 const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
@@ -267,12 +266,10 @@ runTestsForPage({
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: atiAnalyticsLiteTestSuites,
-  beforeAll: [setUserIDCookie],
 });
