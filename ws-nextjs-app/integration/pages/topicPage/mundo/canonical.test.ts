@@ -16,7 +16,8 @@ describe('Topic page with badge image, description and multiple curations with h
     const title = document.querySelector('h1#content');
     expect(title).toBeInTheDocument();
 
-    const description = title?.nextElementSibling;
+    const parent = title?.parentElement;
+    const description = parent?.nextElementSibling;
     expect(description).toBeInTheDocument();
     expect(description?.textContent).toMatchSnapshot();
   });

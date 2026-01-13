@@ -23,3 +23,5 @@ exports[`Topic page with badge image, description and multiple curations with h2
   src="https://ichef.bbci.co.uk/ace/standard/128/cpsdevpb/f407/test/75380e10-4f96-11ed-9488-854f10e82c4c.jpg"
 />
 `;
+
+exports[`Topic page with badge image, description and multiple curations with h2 headings should display the topic description under the title 1`] = `"Peace agreement between the Colombian government and FARC"`;
