@@ -109,7 +109,7 @@ const getTimestampComponent =
           firstPublished={new Date(firstPublished).getTime()}
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
-          padding={shouldDisplayReadTime}
+          hasReadTime={shouldDisplayReadTime}
         />
         {shouldDisplayReadTime && (
           <ReadTimeArticle readTimeValue={readTimeValue} />
@@ -117,7 +117,11 @@ const getTimestampComponent =
       </Byline>
     ) : (
       <>
-        <Timestamp {...props} popOut={false} padding={shouldDisplayReadTime} />
+        <Timestamp
+          {...props}
+          popOut={false}
+          hasReadTime={shouldDisplayReadTime}
+        />
         {shouldDisplayReadTime && (
           <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
