@@ -1,5 +1,7 @@
-import Heading from '#app/components/Heading';
+import UsefulLinks from '#app/components/UsefulLinks';
 import useServiceTopics from '#app/hooks/useServiceTopics';
+import { Summary } from '#app/models/types/curationData';
+import styles from './index.styles';
 
 // const REQUIRED_FIELDS = ['id', 'title', 'seoTitle', 'seoDescription']; // TODO: implement after fixture validation
 
@@ -32,25 +34,21 @@ const TopicsPage = ({ service }) => {
   const headline = topicsData.headline || '';
   const topics = Array.isArray(topicsData.topics) ? topicsData.topics : [];
 
+  const summaries = topics.map(topic => ({
+    id: topic.topicId,
+    title: topic.topicName,
+    uri: topic.topicUrl,
+  })) as unknown as Summary[];
+
   return (
     <section>
-      {headline && (
-        <Heading level={1} tabIndex={-1} id="content">
-          {headline}
-        </Heading>
-      )}
-      {topics.map(topic => (
-        <article key={topic.topicId}>
-          <Heading level={3}>
-            <a
-              href={topic.topicUrl}
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              {topic.topicName}
-            </a>
-          </Heading>
-        </article>
-      ))}
+      <div css={styles.usefulLinksWrapper}>
+        <UsefulLinks
+          title={headline || 'Topics'}
+          summaries={summaries}
+          id={`${service}-topics`}
+        />
+      </div>
     </section>
   );
 };
