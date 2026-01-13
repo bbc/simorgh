@@ -4,15 +4,15 @@ exports[`Canonical Av-embeds Media Loader a11y assistive technology can read the
 
 exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 <div
-  class="css-1750p8i"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1nh4bbe"
+    class="css-xey5ks"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-k240ny"
+      class="css-n2zqlz"
     >
       <strong>
         Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -20,21 +20,21 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-13234a2"
+    class="focusIndicatorRemove css-c2c21w"
     type="button"
   >
     <span
-      class="css-ghlap1"
+      class="css-2ozlq5"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
     <div
       aria-hidden="true"
-      class="css-mnftr9"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -57,19 +57,19 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-q9209e"
+      class="css-digyti"
       datetime="PT2M53S"
     >
       02:53
     </time>
   </button>
   <div
-    class="css-1e970fu"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-4gkgae"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
@@ -81,15 +81,15 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 <div
-  class="css-1750p8i"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-1nh4bbe"
+    class="css-xey5ks"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-k240ny"
+      class="css-n2zqlz"
     >
       <strong>
         Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -97,21 +97,21 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove css-13234a2"
+    class="focusIndicatorRemove css-c2c21w"
     type="button"
   >
     <span
-      class="css-ghlap1"
+      class="css-2ozlq5"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
     <div
       aria-hidden="true"
-      class="css-mnftr9"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -134,19 +134,19 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="css-q9209e"
+      class="css-digyti"
       datetime="PT2M53S"
     >
       02:53
     </time>
   </button>
   <div
-    class="css-1e970fu"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-4gkgae"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
@@ -158,19 +158,19 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-aecvdc"
+  class="media-container css-1kfc8lh"
   data-e2e="media-loader__container"
 >
   <div
-    class="css-1750p8i"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-1nh4bbe"
+      class="css-xey5ks"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="css-k240ny"
+        class="css-n2zqlz"
       >
         <strong>
           Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -178,21 +178,21 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove css-13234a2"
+      class="focusIndicatorRemove css-c2c21w"
       type="button"
     >
       <span
-        class="css-ghlap1"
+        class="css-2ozlq5"
       >
         Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
       </span>
       <div
         aria-hidden="true"
-        class="css-mnftr9"
+        class="css-7qcky8"
       >
         <svg
           aria-hidden="true"
-          class="css-pc9n4i-MediaIcon-VideoMediaIcon e1kk1qa21"
+          class="css-vja2s5 e1kk1qa21"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -215,19 +215,19 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </div>
       <time
         aria-hidden="true"
-        class="css-q9209e"
+        class="css-digyti"
         datetime="PT2M53S"
       >
         02:53
       </time>
     </button>
     <div
-      class="css-1e970fu"
+      class="css-10dp2sw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-4gkgae"
+        class="css-ey0vwc"
         loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
