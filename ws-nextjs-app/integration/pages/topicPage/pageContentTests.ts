@@ -3,7 +3,7 @@ export default () => {
     describe('First item in the first curation', () => {
       it('is the correct headline', () => {
         const firstItemHeadline = document.querySelector(
-          '[data-testid="topic-promos"] > li  h3 a',
+          '[data-testid="topic-promos"] > li  h2 a',
         );
         expect(firstItemHeadline).toBeInTheDocument();
 
