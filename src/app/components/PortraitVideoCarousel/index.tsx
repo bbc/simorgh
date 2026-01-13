@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -28,6 +28,13 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+  const [hasShareApi, setHasShareApi] = useState(false);
+
+  useEffect(() => {
+    if ('share' in navigator) {
+      setHasShareApi(true);
+    }
+  }, []);
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -104,6 +111,7 @@ const PortraitVideoCarousel = ({
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
               nonce={nonce}
+              hasShareApi={hasShareApi}
               eventTrackingData={eventTrackingDataExtended}
             />,
             document.body,

@@ -17,6 +17,7 @@ import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
+import ShareButton from '../ShareButton';
 
 type ModalTrackingParameters = {
   eventTrackingData: EventTrackingData;
@@ -195,6 +196,7 @@ export interface PortraitVideoModalProps {
   onClose: () => void;
   selectedVideoIndex: number;
   nonce?: string | null;
+  hasShareApi?: boolean;
   eventTrackingData: EventTrackingData;
 }
 
@@ -202,6 +204,7 @@ const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  hasShareApi,
   eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
@@ -212,7 +215,10 @@ const PortraitVideoModal = ({
         endOfContentClose = 'End of content. Close',
       },
     },
+    service,
   } = use(ServiceContext);
+
+  let shareUrl = '';
 
   const viewTracker = useViewTracker(
     getEventTrackingData({
@@ -286,6 +292,14 @@ const PortraitVideoModal = ({
     };
   }, [onClose]);
 
+  const { id: urn = '', title = '' } =
+    blocks?.[selectedVideoIndex]?.model.video || {};
+
+  if (hasShareApi) {
+    const id = urn.split(':')[4];
+    shareUrl = `https://www.bbc.com/${service}/articles/${id}`;
+  }
+
   return (
     <>
       <Global styles={styles.bodyOverflowHidden} />
@@ -332,6 +346,18 @@ const PortraitVideoModal = ({
           >
             <DownArrowIcon />
           </button>
+
+          {hasShareApi && (
+            <ShareButton
+              eventTrackingData={{
+                componentName: urn,
+              }}
+              contentId={urn}
+              headline={title}
+              shareUrl={shareUrl}
+              modal
+            />
+          )}
         </div>
         <MediaLoader
           css={styles.mediaWrapper}
@@ -351,6 +377,7 @@ const PortraitVideoModal = ({
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
           }}
         />
+
         <button
           ref={endOfContentButtonRef}
           type="button"
