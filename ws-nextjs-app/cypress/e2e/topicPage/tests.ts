@@ -234,6 +234,7 @@ export default ({ service, pageType, variant = 'default', path }) => {
         } else {
           cy.log('No pagination as there is only one page');
         }
+        cy.visit(path);
       });
 
       it('Above 400px does not show Page x of y', () => {
