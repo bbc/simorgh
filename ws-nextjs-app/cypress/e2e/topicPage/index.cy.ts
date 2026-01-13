@@ -2,9 +2,9 @@ import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import crossPlatformTests from './tests';
 import urlValidationTest from '../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
