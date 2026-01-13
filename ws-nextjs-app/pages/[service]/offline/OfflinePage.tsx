@@ -22,6 +22,7 @@ const OfflinePage = () => {
     <>
       <Helmet htmlAttributes={{ dir, lang: service }}>
         <title>{title}</title>
+        <meta name="robots" content="noindex,nofollow" />
       </Helmet>
       <ErrorMain
         statusCode={null}
