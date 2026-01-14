@@ -115,7 +115,7 @@ describe('useServiceWorkerRegistration', () => {
     expect(mockRegister).not.toHaveBeenCalled();
   });
 
-  it('should re-register when service prop changes', () => {
+  it('should register for new service when service prop changes', () => {
     const { rerender } = renderHook(
       ({ service }) => useServiceWorkerRegistration(service),
       {
