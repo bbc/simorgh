@@ -1,6 +1,5 @@
 import Cookie from 'js-cookie';
 import onClient from '#lib/utilities/onClient';
-import getAmpDestination from './getAmpDestination';
 
 export const enforceLegacyDestinationForJapanese = reverbTrackingURL =>
   reverbTrackingURL?.replace('s=646753&', `s=598289&`);
