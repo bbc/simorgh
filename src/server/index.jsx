@@ -168,19 +168,21 @@ const injectPlatformToRequestChainHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const assetOrigins = getAssetOrigins();
-  res.set(
-    'Link',
-    assetOrigins
-      .map(domainName => {
-        const crossOrigin =
-          domainName === 'https://static.files.bbci.co.uk'
-            ? `,<${domainName}>; rel="preconnect"; crossorigin`
-            : '';
-        return `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"${crossOrigin}`;
-      })
-      .join(','),
+  const { dnsPrefetchOrigins, preconnectOrigins } = getAssetOrigins(
+    req.originalUrl,
   );
+
+  const resourceHintsConfig = [
+    ...dnsPrefetchOrigins.map(
+      domainName => `<${domainName}>; rel="dns-prefetch"`,
+    ),
+    ...preconnectOrigins.map(
+      domainName => `<${domainName}>; rel="preconnect"; crossorigin`,
+    ),
+  ];
+
+  res.set('Link', resourceHintsConfig.join(','));
+
   next();
 };
 // Set Referrer-Policy

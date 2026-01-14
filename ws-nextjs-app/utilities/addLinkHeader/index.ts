@@ -11,7 +11,7 @@ const addLinkHeader = ({ ctx }: { ctx: NextPageContext }) => {
       domainName => `<${domainName}>; rel="dns-prefetch"`,
     ),
     ...preconnectOrigins.map(
-      domainName => `<${domainName}>; rel="preconnect; crossorigin"`,
+      domainName => `<${domainName}>; rel="preconnect"; crossorigin`,
     ),
   ];
 
