@@ -1,46 +1,19 @@
 import UsefulLinks from '#app/components/UsefulLinks';
-import useServiceTopics from '#app/hooks/useServiceTopics';
 import { Summary } from '#app/models/types/curationData';
 import { useRouter } from 'next/router';
 import Pagination from '#app/components/Pagination';
 import styles from './index.styles';
+import { TopicsPageProps, Topic } from './types';
 
-// const REQUIRED_FIELDS = ['id', 'title', 'seoTitle', 'seoDescription']; // TODO: implement after fixture validation
-
-// const validateTopics = (topics: TopicTag[]) => {
-//   return topics.map(topic => {
-//     const missingFields = REQUIRED_FIELDS.filter(field => !topic[field]);
-//     if (missingFields.length > 0) {
-//       // eslint-disable-next-line no-console
-//       console.error(
-//         'Invalid topic data:',
-//         topic,
-//         'Missing fields:',
-//         missingFields,
-//       );
-//     }
-//     return topic;
-//   });
-// };
 const PAGE_SIZE = 100;
 
-const TopicsPage = ({ service }) => {
-  const { topicsData, error } = useServiceTopics(service);
-
+const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
   const router = useRouter();
   const activePage = Math.max(1, Number(router.query.page)) || 1;
+  const headline = topicsData?.headline || '';
+  const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
 
-  if (error) {
-    return <div role="alert">No topics data available for this service.</div>;
-  }
-  if (!topicsData) {
-    return <div>Loading topics…</div>;
-  }
-
-  const headline = topicsData.headline || '';
-  const topics = Array.isArray(topicsData.topics) ? topicsData.topics : [];
-
-  const summaries = topics.map(topic => ({
+  const summaries = topics.map((topic: Topic) => ({
     id: topic.topicId,
     title: topic.topicName,
     uri: topic.topicUrl,
@@ -63,7 +36,7 @@ const TopicsPage = ({ service }) => {
     <section>
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
-          title={headline || 'Topics'}
+          title={headline}
           summaries={pagedSummaries}
           id={`${service}-topics`}
         />
@@ -82,5 +55,4 @@ const TopicsPage = ({ service }) => {
     </section>
   );
 };
-
 export default TopicsPage;
