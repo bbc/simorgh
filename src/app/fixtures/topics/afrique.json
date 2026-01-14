@@ -2,20 +2,60 @@
   "headline": "Sujets",
   "topics": [
     {
-      "topicName": "Politique",
-      "topicUrl": "/afrique/topics/politique"
+      "topicName": "Coupe d'Afrique des nations",
+      "title": "Coupe d'Afrique des nations",
+      "seoTitle": "Actualités sur la Coupe d'Afrique des nations",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur la Coupe d'Afrique des nations.",
+      "topicUrl": "/afrique/topics/cnlvpm4xqn9t"
     },
     {
-      "topicName": "Économie",
-      "topicUrl": "/afrique/topics/economie"
+      "topicName": "Afrique",
+      "title": "Afrique",
+      "seoTitle": "Actualités sur l'Afrique",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur l'Afrique.",
+      "topicUrl": "/afrique/topics/cvqxn2k7kv7t"
     },
     {
-      "topicName": "Société",
-      "topicUrl": "/afrique/topics/societe"
+      "topicName": "Monde",
+      "title": "Monde",
+      "seoTitle": "Actualités sur le Monde",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur le Monde.",
+      "topicUrl": "/afrique/topics/cvqxn21vx11t"
     },
     {
-      "topicName": "Sport",
-      "topicUrl": "/afrique/topics/sport"
+      "topicName": "Santé",
+      "title": "Santé",
+      "seoTitle": "Actualités sur la Santé",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur la Santé.",
+      "topicUrl": "/afrique/topics/c06gq9jxz3rt"
+    },
+    {
+      "topicName": "Science et technologie",
+      "title": "Science et technologie",
+      "seoTitle": "Actualités sur la Science et technologie",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur la Science et technologie.",
+      "topicUrl": "/afrique/topics/crezq2zk0q4t"
+    },
+    {
+      "topicName": "Culture",
+      "title": "Culture",
+      "seoTitle": "Actualités sur la Culture",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur la Culture.",
+      "topicUrl": "/afrique/topics/cnq687nrrw8t"
+    },
+    {
+      "topicName": "Vidéo",
+      "title": "Vidéo",
+      "seoTitle": "Actualités sur la Vidéo",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur la Vidéo.",
+      "topicUrl": "/afrique/topics/cz4vn9gyd6rt"
+    },
+    {
+      "topicName": "Nos émissions",
+      "title": "Nos émissions",
+      "seoTitle": "Actualités sur Nos émissions",
+      "seoDescription": "Dernières nouvelles, analyses et reportages sur Nos émissions.",
+      "topicUrl": "/afrique/topics/c88nzggm8gxt"
     }
   ]
 }
