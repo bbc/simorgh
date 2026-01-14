@@ -35,7 +35,7 @@ const PortraitVideoCarousel = ({
   const [overlayReady, setOverlayReady] = useState(false);
   const videoOverlayContainerRef = useRef<HTMLElement | null>(null);
   const setVideoOverlayContainer = (el: HTMLElement) => {
-    if (videoOverlayContainerRef.current) return;
+    // if (videoOverlayContainerRef.current) return;
 
     videoOverlayContainerRef.current = el;
 
@@ -45,6 +45,7 @@ const PortraitVideoCarousel = ({
     mount.style.inset = '0';
     mount.style.zIndex = '200';
     mount.style.pointerEvents = 'none';
+    mount.style.backgroundColor = 'pink';
 
     el.appendChild(mount);
 
