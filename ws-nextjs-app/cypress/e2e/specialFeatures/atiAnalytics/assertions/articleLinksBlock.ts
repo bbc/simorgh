@@ -14,7 +14,7 @@ export const assertArticleLinksBlockComponentView = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Scrollable Promo component', () => {
+  it('should send a view event for the Article Links Block component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
@@ -41,7 +41,7 @@ export const assertArticleLinksBlockComponentClick = ({
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Scrollable Promo component', () => {
+  it('should send a click event for the Article Links Block component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
@@ -50,7 +50,11 @@ export const assertArticleLinksBlockComponentClick = ({
     });
 
     // Click on first item
-    cy.get('[data-e2e="article-links-block"]').find('a').first().click();
+    cy.get(
+      '[data-e2e="article-links-block"] a:not([href^="#end-of-article-links-block"])',
+    )
+      .first()
+      .click();
 
     assertATIComponentClickEvent({
       component: ARTICLE_LINKS_BLOCK,
