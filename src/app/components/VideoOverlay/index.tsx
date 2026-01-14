@@ -126,7 +126,13 @@ const VideoOverlay = ({ blocks, selectedVideoIndex, hasShareApi }) => {
         Apply a CSS reset as this component is rendered inside of an SMP plugin using shadow-dom.
         For webcore components to be displayed correctly, we must apply the CSS reset that is normally available on the page.
       */}
-      {/* <style>{resetCss}</style> */}
+      <style>
+        {`
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+  `}
+      </style>
       {/* <VideoOverlayWrapper>
         <VideoOverlayFooter
           className="video-overlay-footer fadedIn fadedOut"
@@ -134,17 +140,29 @@ const VideoOverlay = ({ blocks, selectedVideoIndex, hasShareApi }) => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents className="video-overlay-footer-contents"> */}
-      {hasShareApi && (
-        <ShareButton
-          eventTrackingData={{
-            componentName: urn,
-          }}
-          contentId={urn}
-          headline={title}
-          shareUrl={shareUrl}
-          modal
-        />
-      )}
+      <div
+        data-region-exclude-subtitles
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 200,
+          pointerEvents: 'none',
+        }}
+      >
+        <div style={{ pointerEvents: 'auto' }}>
+          {hasShareApi && (
+            <ShareButton
+              eventTrackingData={{
+                componentName: urn,
+              }}
+              contentId={urn}
+              headline={title}
+              shareUrl={shareUrl}
+              modal
+            />
+          )}
+        </div>
+      </div>
       {/* </VideoOverlayFooterContents>
         </VideoOverlayFooter>
       </VideoOverlayWrapper> */}
