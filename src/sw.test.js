@@ -358,7 +358,7 @@ describe('Service Worker', () => {
     });
   });
 
-  describe('offline navigation fallback', () => {
+  describe('Offline navigation handling in PWA mode', () => {
     let messageHandler;
 
     beforeEach(async () => {
