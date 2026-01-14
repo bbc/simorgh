@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'və',
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',
