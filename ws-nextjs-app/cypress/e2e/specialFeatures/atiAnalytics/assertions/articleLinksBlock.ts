@@ -6,28 +6,28 @@ import {
 } from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
 
-const { SCROLLABLE_PROMO } = COMPONENTS;
+const { ARTICLE_LINKS_BLOCK } = COMPONENTS;
 
-export const assertScrollablePromoComponentView = ({
+export const assertArticleLinksBlockComponentView = ({
   pageIdentifier,
   path,
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a view event for the Scrollable Promo component', () => {
+  it('should send a view event for the Article Links Block component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
     // This duplicate line of code has been added intentionally to get cypress to scroll to the bottom.
-    cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
       duration: 1000,
     });
-    cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
       duration: 1000,
     });
 
     assertATIComponentViewEvent({
-      component: SCROLLABLE_PROMO,
+      component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
       applicationType,
       siteId,
@@ -35,25 +35,29 @@ export const assertScrollablePromoComponentView = ({
   });
 };
 
-export const assertScrollablePromoComponentClick = ({
+export const assertArticleLinksBlockComponentClick = ({
   pageIdentifier,
   path,
   applicationType,
   siteId,
 }: AtiAssertionFnProps) => {
-  it('should send a click event for the Scrollable Promo component', () => {
+  it('should send a click event for the Article Links Block component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
 
-    cy.get('[data-e2e="scrollable-promos"]').first().scrollIntoView({
+    cy.get('[data-e2e="article-links-block"]').first().scrollIntoView({
       duration: 1000,
     });
 
     // Click on first item
-    cy.get('[data-e2e="scrollable-promos"]').find('a').first().click();
+    cy.get(
+      '[data-e2e="article-links-block"] a:not([href^="#end-of-article-links-block"])',
+    )
+      .first()
+      .click();
 
     assertATIComponentClickEvent({
-      component: SCROLLABLE_PROMO,
+      component: ARTICLE_LINKS_BLOCK,
       pageIdentifier,
       applicationType,
       siteId,
