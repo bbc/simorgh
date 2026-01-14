@@ -1,9 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '#lib/utilities/onClient';
 
-export const enforceLegacyDestinationForJapanese = reverbTrackingURL =>
-  reverbTrackingURL?.replace('s=646753&', `s=598289&`);
-
 export const getAppType = platform => {
   switch (platform) {
     case 'amp':

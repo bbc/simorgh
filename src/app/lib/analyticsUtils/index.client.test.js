@@ -14,7 +14,6 @@ jest.mock('#app/lib/utilities/getUUID', () =>
 const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 
 const {
-  enforceLegacyDestinationForJapanese,
   getAppType,
   getHref,
   getReferrer,
@@ -45,18 +44,6 @@ describe('analyticsUtils', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  describe('enforceLegacyDestinationForJapanese', () => {
-    it('should return the Reverb tracking URL with the legacy Piano destination for NEWS_LANGUAGES_GNL used by the Japanese service', () => {
-      expect(
-        enforceLegacyDestinationForJapanese(
-          'https://logws1363.ati-host.net/hit.xiti?idclient=9065bbd4-6374-4348-9082-9497ef5a18ad&s=646753&s2=56&p=japanese.articles.cvgr9dk5dlno.page',
-        ),
-      ).toEqual(
-        'https://logws1363.ati-host.net/hit.xiti?idclient=9065bbd4-6374-4348-9082-9497ef5a18ad&s=598289&s2=56&p=japanese.articles.cvgr9dk5dlno.page',
-      );
-    });
   });
 
   describe('getAppType', () => {
