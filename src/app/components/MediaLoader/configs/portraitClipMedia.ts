@@ -93,6 +93,7 @@ export default ({
       ...basePlayerConfig,
       autoplay: true,
       supportFakeFullscreen: true,
+      waitOnPluginLoad: true,
       playlistObject: {
         title,
         holdingImageURL,

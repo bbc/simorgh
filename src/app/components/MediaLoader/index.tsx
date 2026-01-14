@@ -314,6 +314,7 @@ const MediaLoader = ({
           ],
         ]}
       >
+        <div>share</div>
         {isAmp ? (
           <AmpMediaLoader
             src={ampIframeUrl}

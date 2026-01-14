@@ -58,6 +58,7 @@ export type LegacyPlayListItem = {
 
 export type PlayerConfig = {
   autoplay?: boolean;
+  waitOnPluginLoad?: boolean;
   preload?: string;
   product?: string;
   enableToucan: boolean;

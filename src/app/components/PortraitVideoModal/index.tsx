@@ -291,7 +291,6 @@ const PortraitVideoModal = ({
     };
   }, [onClose]);
 
-
   return (
     <>
       <Global styles={styles.bodyOverflowHidden} />
@@ -351,25 +350,33 @@ const PortraitVideoModal = ({
             />
           )} */}
         </div>
-        <MediaLoader
-          css={styles.mediaWrapper}
-          blocks={[blocks?.[selectedVideoIndex]]}
-          eventMapping={{
-            playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: onClose,
-            statsNavigation: e =>
-              statsNavigationCallback(
-                e,
-                blocks,
-                eventTrackingData,
-                swipeTracker,
-              ),
-            pause: e =>
-              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
-          }}
-          setVideoOverlayContainer={setVideoOverlayContainer}
-        />
+        {/* <div css={styles.navButtonColumn}>
+          <div>SHARE</div> */}
+          <MediaLoader
+            css={styles.mediaWrapper}
+            blocks={[blocks?.[selectedVideoIndex]]}
+            eventMapping={{
+              playlistLoaded: e => playlistLoadedCallback(e, blocks),
+              pluginLoaded: pluginLoadedCallback,
+              fullscreenExit: onClose,
+              statsNavigation: e =>
+                statsNavigationCallback(
+                  e,
+                  blocks,
+                  eventTrackingData,
+                  swipeTracker,
+                ),
+              pause: e =>
+                playbackEndedCallback(
+                  e,
+                  blocks,
+                  eventTrackingData,
+                  swipeTracker,
+                ),
+            }}
+            setVideoOverlayContainer={setVideoOverlayContainer}
+          />
+        {/* </div> */}
 
         <button
           ref={endOfContentButtonRef}
