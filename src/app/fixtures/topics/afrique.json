@@ -1,0 +1,21 @@
+{
+  "headline": "Sujets",
+  "topics": [
+    {
+      "topicName": "Politique",
+      "topicUrl": "/afrique/topics/politique"
+    },
+    {
+      "topicName": "Économie",
+      "topicUrl": "/afrique/topics/economie"
+    },
+    {
+      "topicName": "Société",
+      "topicUrl": "/afrique/topics/societe"
+    },
+    {
+      "topicName": "Sport",
+      "topicUrl": "/afrique/topics/sport"
+    }
+  ]
+}
