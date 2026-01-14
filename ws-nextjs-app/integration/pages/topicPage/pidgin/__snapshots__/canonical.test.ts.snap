@@ -175,10 +175,24 @@ exports[`Canonical Topic Page Header Navigation link should match text and url 8
 
 exports[`Canonical Topic Page Main heading should match text 1`] = `"Donald Trump"`;
 
+exports[`Canonical Topic Page Page content First item in the first curation is the correct headline 1`] = `"Di 34 criminal charges against former US President Donald Trump and di likely punishment"`;
+
+exports[`Canonical Topic Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="Donald Trump in court wit im lawyers, including Todd Blanche (far left) and Susan Necheles (second from left)"
+  class="css-1seqhu9"
+  loading="eager"
+  sizes="(min-width: 63rem) 232px, (min-width: 37.5rem) 50vw, 33vw"
+  src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg"
+  srcset="https://ichef.bbci.co.uk/ace/standard/85/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 85w, https://ichef.bbci.co.uk/ace/standard/120/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 120w, https://ichef.bbci.co.uk/ace/standard/170/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 170w, https://ichef.bbci.co.uk/ace/standard/232/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 232w, https://ichef.bbci.co.uk/ace/standard/325/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 325w, https://ichef.bbci.co.uk/ace/standard/450/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 450w, https://ichef.bbci.co.uk/ace/standard/660/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 660w, https://ichef.bbci.co.uk/ace/standard/800/cpsprodpb/ab73/live/2ca22200-d379-11ed-ae6f-bf4b4aaa99a6.jpg.webp 800w"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
 exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/pidgin/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
@@ -210,7 +224,7 @@ exports[`Canonical Topic Page SEO Apple Touch Icon should match attributes 5`] =
 }
 `;
 
-exports[`Canonical Topic Page SEO Canonical link 1`] = `"http://localhost:7080/pidgin/topics/c95y35941vrt"`;
+exports[`Canonical Topic Page SEO Canonical link 1`] = `"http://localhost:7081/pidgin/topics/c95y35941vrt"`;
 
 exports[`Canonical Topic Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -239,7 +253,7 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
         "name": "Nigerian Pidgin",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/pidgin/topics/c95y35941vrt",
+        "@id": "http://localhost:7081/pidgin/topics/c95y35941vrt",
         "@type": "WebPage",
         "name": "Donald Trump",
       },
@@ -255,7 +269,7 @@ exports[`Canonical Topic Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/pidgin/institutional-48528766",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/pidgin/topics/c95y35941vrt",
+      "url": "http://localhost:7081/pidgin/topics/c95y35941vrt",
     },
     {
       "@type": "ItemList",
@@ -432,7 +446,7 @@ exports[`Canonical Topic Page SEO OG title 1`] = `"Donald Trump - BBC News Pidgi
 
 exports[`Canonical Topic Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Topic Page SEO OG url 1`] = `"http://localhost:7080/pidgin/topics/c95y35941vrt"`;
+exports[`Canonical Topic Page SEO OG url 1`] = `"http://localhost:7081/pidgin/topics/c95y35941vrt"`;
 
 exports[`Canonical Topic Page SEO Page title 1`] = `"Donald Trump - BBC News Pidgin"`;
 

@@ -1,21 +1,23 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import crossPlatformTests from './tests';
-import { TOPIC_PAGE } from '../../../../src/app/routes/utils/pageTypes';
-import urlValidationTest from '../../../support/helpers/urlValidationTest';
+import urlValidationTest from '../../support/helpers/urlValidationTest';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/navigation';
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 import {
   assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/messageBanner';
+} from '../specialFeatures/atiAnalytics/assertions/messageBanner';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 
 const tests = [
   crossPlatformTests,
@@ -106,7 +108,7 @@ const atiAnalyticsTestSuites = [
       assertMessageBannerComponentClick,
     ],
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
