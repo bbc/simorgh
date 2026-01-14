@@ -11,6 +11,7 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import VideoOverlay from '../VideoOverlay';
 
 type PortraitVideoCarouselProps = {
   title: string;
@@ -28,7 +29,8 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
-  const [hasShareApi, setHasShareApi] = useState(false);
+  const [hasShareApi, setHasShareApi] = useState(true);
+  const [videoOverlayContainer, setVideoOverlayContainer] = useState();
 
   useEffect(() => {
     if ('share' in navigator) {
@@ -61,6 +63,8 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
+
+  console.log('CONTAINER VID ', videoOverlayContainer);
 
   return (
     <>
@@ -111,10 +115,19 @@ const PortraitVideoCarousel = ({
               selectedVideoIndex={selectedVideoIndex}
               onClose={handleCloseModal}
               nonce={nonce}
-              hasShareApi={hasShareApi}
               eventTrackingData={eventTrackingDataExtended}
+              setVideoOverlayContainer={setVideoOverlayContainer}
             />,
             document.body,
+          )}
+        {videoOverlayContainer &&
+          createPortal(
+            <VideoOverlay
+              blocks={blocks}
+              selectedVideoIndex={selectedVideoIndex}
+              hasShareApi={hasShareApi}
+            />,
+            videoOverlayContainer,
           )}
       </section>
     </>

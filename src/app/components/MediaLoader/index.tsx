@@ -1,4 +1,11 @@
-import { use, useEffect, useRef, useState } from 'react';
+import {
+  Dispatch,
+  SetStateAction,
+  use,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -215,6 +222,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
 };
 
 const MediaLoader = ({
@@ -223,6 +231,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  setVideoOverlayContainer,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -242,12 +251,19 @@ const MediaLoader = ({
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
+  const setVideoOverlayContainerRef = useRef<
+    Dispatch<SetStateAction<undefined>> | undefined
+  >(null);
+
+  setVideoOverlayContainerRef.current = setVideoOverlayContainer;
+
   if (isLite) return null;
 
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
+
   const config = buildConfig({
     id: id || '',
     blocks,
@@ -262,6 +278,8 @@ const MediaLoader = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
+    setVideoOverlayContainer,
+    setVideoOverlayContainerRef,
   });
 
   if (!config) return null;

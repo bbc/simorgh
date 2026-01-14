@@ -9,10 +9,13 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
+import { Dispatch, SetStateAction, useEffect, useMemo, useRef } from 'react';
 
 export default ({
   blocks,
   basePlayerConfig,
+  setVideoOverlayContainer,
+  setVideoOverlayContainerRef,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
@@ -46,6 +49,41 @@ export default ({
     }
   }
 
+  // const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
+
+  // useEffect(() => {
+  //   if (setVideoOverlayContainer) {
+  //     setVideoOverlayContainerRef.current =
+  //       setVideoOverlayContainer as Dispatch<
+  //         SetStateAction<HTMLElement | undefined>
+  //       >;
+  //   }
+  // }, [setVideoOverlayContainer]);
+  console.log('RED HERE ', setVideoOverlayContainerRef);
+  const pluginConfig = useMemo(() => {
+    return [
+      {
+        html: `https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js`,
+        playerOnly: true,
+        data: {
+          setPluginContainer: setVideoOverlayContainerRef?.current,
+        },
+      },
+      ...(isMobile
+        ? [
+            {
+              html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
+              playerOnly: true,
+            },
+          ]
+        : []),
+    ];
+  }, [
+    isMobile,
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  ]);
+
   return {
     mediaType: 'video',
     playerConfig: {
@@ -57,16 +95,9 @@ export default ({
         holdingImageURL,
         items,
       },
-      ...(isMobile && {
-        plugins: {
-          toLoad: [
-            {
-              html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/fullscreen.js`,
-              playerOnly: true,
-            },
-          ],
-        },
-      }),
+      plugins: {
+        toLoad: pluginConfig,
+      },
       ui: {
         ...basePlayerConfig.ui,
         swipable: {

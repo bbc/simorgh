@@ -8,6 +8,7 @@ import {
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
+import { Dispatch, Ref, RefObject, SetStateAction } from 'react';
 
 export type SMPEvent = {
   playlist?: {
@@ -78,7 +79,11 @@ export type PlayerConfig = {
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
   plugins?: {
-    toLoad: { html: string; playerOnly?: boolean }[];
+    toLoad: {
+      html: string;
+      playerOnly?: boolean;
+      data?: { setPluginContainer: unknown };
+    }[];
   };
 };
 
@@ -121,6 +126,8 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
+  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
+  setVideoOverlayContainerRef?: RefObject<unknown | undefined>;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -365,4 +372,6 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
+  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
+  setVideoOverlayContainerRef?: RefObject<unknown>;
 };

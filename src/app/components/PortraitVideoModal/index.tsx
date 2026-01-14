@@ -1,5 +1,5 @@
 import { Global } from '@emotion/react';
-import { use, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction, use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -198,6 +198,7 @@ export interface PortraitVideoModalProps {
   nonce?: string | null;
   hasShareApi?: boolean;
   eventTrackingData: EventTrackingData;
+  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
 }
 
 const PortraitVideoModal = ({
@@ -206,6 +207,7 @@ const PortraitVideoModal = ({
   selectedVideoIndex,
   hasShareApi,
   eventTrackingData,
+  setVideoOverlayContainer,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -217,7 +219,7 @@ const PortraitVideoModal = ({
     },
     service,
   } = use(ServiceContext);
-
+  console.log('SET ', setVideoOverlayContainer);
   let shareUrl = '';
 
   const viewTracker = useViewTracker(
@@ -347,7 +349,7 @@ const PortraitVideoModal = ({
             <DownArrowIcon />
           </button>
 
-          {hasShareApi && (
+          {/* {hasShareApi && (
             <ShareButton
               eventTrackingData={{
                 componentName: urn,
@@ -357,7 +359,7 @@ const PortraitVideoModal = ({
               shareUrl={shareUrl}
               modal
             />
-          )}
+          )} */}
         </div>
         <MediaLoader
           css={styles.mediaWrapper}
@@ -376,6 +378,7 @@ const PortraitVideoModal = ({
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
           }}
+          setVideoOverlayContainer={setVideoOverlayContainer}
         />
 
         <button

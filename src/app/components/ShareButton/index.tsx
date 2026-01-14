@@ -40,10 +40,10 @@ const ShareButton = ({
   shareUrl?: string;
   modal?: boolean;
 }) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const focusRef = useRef<HTMLButtonElement>(null);
-  const { onClick: clickTrackerHandler } =
-    useClickTrackerHandler(eventTrackingData);
+  // const viewTracker = useViewTracker(eventTrackingData);
+  // const focusRef = useRef<HTMLButtonElement>(null);
+  // const { onClick: clickTrackerHandler } =
+  //   useClickTrackerHandler(eventTrackingData);
   const {
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
@@ -51,7 +51,7 @@ const ShareButton = ({
   } = use(ServiceContext);
 
   const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
-    if (clickTrackerHandler) clickTrackerHandler(event);
+    // if (clickTrackerHandler) clickTrackerHandler(event);
     let url = '';
     try {
       if (!shareUrl) {
@@ -73,14 +73,15 @@ const ShareButton = ({
       console.log('Error sharing', error);
     }
 
-    setTimeout(() => focusRef.current?.focus(), 0);
+    // setTimeout(() => focusRef.current?.focus(), 0);
   };
 
   return (
-    <div {...viewTracker} data-e2e="share">
+    // {...viewTracker}
+    <div  data-e2e="share">
       <button
         type="button"
-        ref={focusRef}
+        // ref={focusRef}
         onClick={handleShare}
         css={[styles.button, modal && { backgroundColor: 'white' }]}
       >
