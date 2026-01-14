@@ -35,10 +35,6 @@ const PortraitVideoCarousel = ({
   const [overlayReady, setOverlayReady] = useState(false);
   const videoOverlayContainerRef = useRef<HTMLElement | null>(null);
   const setVideoOverlayContainer = (el: HTMLElement) => {
-    if (!videoOverlayContainerRef.current) {
-      videoOverlayContainerRef.current = el;
-      setOverlayReady(true);
-    }
     if (videoOverlayContainerRef.current) return;
 
     videoOverlayContainerRef.current = el;
