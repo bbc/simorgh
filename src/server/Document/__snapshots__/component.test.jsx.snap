@@ -78,10 +78,6 @@ exports[`Document Component should render APP version correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <link
-      href="https://mybbc-analytics.files.bbci.co.uk"
-      rel="preconnect"
-    />
     <meta
       content="noindex"
       name="robots"
@@ -137,18 +133,18 @@ exports[`Document Component should render APP version correctly 1`] = `
     </script>
     <script>
       
-              window.__reverb = {};
-              window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) =&gt; {
-                window.__reverb.__resolveReverbLoaded = resolve;
-                window.__reverb.__rejectReverbLoaded = reject;
-              });
-              window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
-                window.__reverb.__rejectReverbLoaded();
-              }, 5000);
-              const reverbScript = document.createElement('script');
-              reverbScript.setAttribute('src','https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js');
-              document.head.appendChild(reverbScript);
-              
+            window.__reverb = {};
+            window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) =&gt; {
+              window.__reverb.__resolveReverbLoaded = resolve;
+              window.__reverb.__rejectReverbLoaded = reject;
+            });
+            window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
+              window.__reverb.__rejectReverbLoaded();
+            }, 5000);
+            const reverbScript = document.createElement('script');
+            reverbScript.setAttribute('src','https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js');
+            document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
@@ -342,10 +338,6 @@ exports[`Document Component should render correctly 1`] = `
       data-react-helmet="true"
       name="viewport"
     />
-    <link
-      href="https://mybbc-analytics.files.bbci.co.uk"
-      rel="preconnect"
-    />
     <title
       data-react-helmet="true"
     >
@@ -397,18 +389,18 @@ exports[`Document Component should render correctly 1`] = `
     </script>
     <script>
       
-              window.__reverb = {};
-              window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) =&gt; {
-                window.__reverb.__resolveReverbLoaded = resolve;
-                window.__reverb.__rejectReverbLoaded = reject;
-              });
-              window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
-                window.__reverb.__rejectReverbLoaded();
-              }, 5000);
-              const reverbScript = document.createElement('script');
-              reverbScript.setAttribute('src','https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js');
-              document.head.appendChild(reverbScript);
-              
+            window.__reverb = {};
+            window.__reverb.__reverbLoadedPromise = new Promise((resolve, reject) =&gt; {
+              window.__reverb.__resolveReverbLoaded = resolve;
+              window.__reverb.__rejectReverbLoaded = reject;
+            });
+            window.__reverb.__reverbTimeout = setTimeout(() =&gt; {
+              window.__reverb.__rejectReverbLoaded();
+            }, 5000);
+            const reverbScript = document.createElement('script');
+            reverbScript.setAttribute('src','https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js');
+            document.head.appendChild(reverbScript);
+            
     </script>
     <style
       data-emotion-css="7prgni-StyledLink"
