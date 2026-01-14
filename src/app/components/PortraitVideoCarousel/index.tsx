@@ -14,6 +14,8 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import { PluginCacheProvider } from './pluginCacheProvider';
+import VideoOverlay from './videoOverlay';
 
 type PortraitVideoCarouselProps = {
   title: string;
@@ -31,6 +33,7 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+  const [videoOverlayContainer, setVideoOverlayContainer] = useState();
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -122,8 +125,16 @@ const PortraitVideoCarousel = ({
               onClose={handleCloseModal}
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
+              setVideoOverlayContainer={setVideoOverlayContainer}
             />,
             document.body,
+          )}
+        {videoOverlayContainer &&
+          createPortal(
+            <PluginCacheProvider container={videoOverlayContainer}>
+              <VideoOverlay />
+            </PluginCacheProvider>,
+            videoOverlayContainer,
           )}
       </section>
     </>

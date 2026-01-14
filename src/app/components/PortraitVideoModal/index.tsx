@@ -196,6 +196,7 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
+  setVideoOverlayContainer: any;
 }
 
 const PortraitVideoModal = ({
@@ -203,6 +204,7 @@ const PortraitVideoModal = ({
   onClose,
   selectedVideoIndex,
   eventTrackingData,
+  setVideoOverlayContainer
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -336,6 +338,7 @@ const PortraitVideoModal = ({
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
+          setVideoOverlayContainer={setVideoOverlayContainer}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,

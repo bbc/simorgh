@@ -78,7 +78,7 @@ export type PlayerConfig = {
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
   plugins?: {
-    toLoad: { html: string; playerOnly?: boolean }[];
+    toLoad: { html: string; playerOnly?: boolean; data: any }[];
   };
 };
 
@@ -121,6 +121,7 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
+  setVideoOverlayContainer?: any;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -365,4 +366,5 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
+  setVideoOverlayContainer?: any;
 };

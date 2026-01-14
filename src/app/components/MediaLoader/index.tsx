@@ -215,6 +215,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainer?: any;
 };
 
 const MediaLoader = ({
@@ -223,6 +224,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  setVideoOverlayContainer,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -262,6 +264,7 @@ const MediaLoader = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
+    setVideoOverlayContainer,
   });
 
   if (!config) return null;
