@@ -51,7 +51,7 @@ describe('ReadTime', () => {
       expect(getByText('Read mins 2')).toBeInTheDocument();
     });
 
-    it('should format with minutes after number', () => {
+    it(`should format with 'minutes' after number`, () => {
       const { getByText } = ReadTimeWithContext({
         readTimeValue: 7,
         contextStub: generateServiceContextStub('news'),
