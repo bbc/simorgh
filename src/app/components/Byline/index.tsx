@@ -157,7 +157,8 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 </span>
                 {(location && <Comma />) ||
                   (hasMultipleContributors &&
-                    index !== lastContributorIndex && <Comma />)}
+                    index !== lastContributorIndex &&
+                    index !== lastContributorIndex - 1 && <Comma />)}
               </li>
             ) : null}
             {location ? (
