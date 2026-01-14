@@ -118,6 +118,7 @@ const VideoOverlay = ({ blocks, selectedVideoIndex, hasShareApi }) => {
     const id = urn.split(':')[4];
     shareUrl = `https://www.bbc.com/${service}/articles/${id}`;
   }
+  console.log('IN THE OVERLAY ', hasShareApi);
 
   return (
     <>

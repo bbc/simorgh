@@ -197,7 +197,7 @@ export interface PortraitVideoModalProps {
   nonce?: string | null;
   hasShareApi?: boolean;
   eventTrackingData: EventTrackingData;
-  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
+  setVideoOverlayContainer?: (el: HTMLElement) => void;
 }
 
 const PortraitVideoModal = ({

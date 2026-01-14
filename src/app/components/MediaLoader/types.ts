@@ -126,7 +126,7 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
+  setVideoOverlayContainer?: ((el: HTMLElement) => void) | undefined;
   setVideoOverlayContainerRef?: RefObject<unknown | undefined>;
 };
 
@@ -372,6 +372,6 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
-  setVideoOverlayContainer?: Dispatch<SetStateAction<undefined>>;
+  setVideoOverlayContainer?: ((el: HTMLElement) => void) | undefined;
   setVideoOverlayContainerRef?: RefObject<unknown>;
 };

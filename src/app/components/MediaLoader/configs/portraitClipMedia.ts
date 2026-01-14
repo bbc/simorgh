@@ -14,7 +14,7 @@ import { useMemo } from 'react';
 export default ({
   blocks,
   basePlayerConfig,
-  setVideoOverlayContainerRef,
+  setVideoOverlayContainer,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
@@ -58,14 +58,18 @@ export default ({
   //       >;
   //   }
   // }, [setVideoOverlayContainer]);
-  console.log('RED HERE ', setVideoOverlayContainerRef);
+  // console.log('RED HERE ', setVideoOverlayContainerRef);
+  // const setVideoOverlayContainer = (el: HTMLElement) => {
+  //   (setVideoOverlayContainerRef?.current as (el: HTMLElement) => void)?.(el);
+  // };
+
   const pluginConfig = useMemo(() => {
     return [
       {
         html: `https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js`,
         playerOnly: true,
         data: {
-          setPluginContainer: setVideoOverlayContainerRef?.current,
+          setPluginContainer: setVideoOverlayContainer,
         },
       },
       ...(isMobile

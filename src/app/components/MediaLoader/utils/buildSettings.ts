@@ -37,7 +37,6 @@ const buildSettings = ({
   showAdsBasedOnLocation = false,
   embedded,
   setVideoOverlayContainer,
-  setVideoOverlayContainerRef,
 }: BuildConfigProps) => {
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
@@ -77,7 +76,6 @@ const buildSettings = ({
     embedded,
     lang,
     setVideoOverlayContainer,
-    setVideoOverlayContainerRef,
   });
 
   if (!config) return null;
