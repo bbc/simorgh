@@ -133,7 +133,7 @@ describe('useServiceWorkerRegistration', () => {
     expect(mockRegister).toHaveBeenCalledWith('/news/sw.js');
   });
 
-  it('should not re-register when service prop stays the same', () => {
+  it('should not register again when service prop stays the same', () => {
     const { rerender } = renderHook(
       ({ service }) => useServiceWorkerRegistration(service),
       {
