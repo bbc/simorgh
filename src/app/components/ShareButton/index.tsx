@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
-import type { MouseEvent } from 'react';
+// import type { MouseEvent } from 'react';
 
-import { use, useRef } from 'react';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import useViewTracker from '#app/hooks/useViewTracker';
+import { use } from 'react';
+// import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+// import useViewTracker from '#app/hooks/useViewTracker';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
@@ -27,7 +27,7 @@ const ShareSvg = () => (
 
 const ShareButton = ({
   contentId,
-  eventTrackingData,
+  // eventTrackingData,
   headline,
   shareUrl,
   modal,
@@ -50,7 +50,7 @@ const ShareButton = ({
     },
   } = use(ServiceContext);
 
-  const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
+  const handleShare = async () => {
     // if (clickTrackerHandler) clickTrackerHandler(event);
     let url = '';
     try {

@@ -17,7 +17,6 @@ import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
-import ShareButton from '../ShareButton';
 
 type ModalTrackingParameters = {
   eventTrackingData: EventTrackingData;
@@ -205,7 +204,7 @@ const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
-  hasShareApi,
+  // hasShareApi,
   eventTrackingData,
   setVideoOverlayContainer,
 }: PortraitVideoModalProps) => {
@@ -217,11 +216,9 @@ const PortraitVideoModal = ({
         endOfContentClose = 'End of content. Close',
       },
     },
-    service,
+    // service,
   } = use(ServiceContext);
   console.log('SET ', setVideoOverlayContainer);
-  let shareUrl = '';
-
   const viewTracker = useViewTracker(
     getEventTrackingData({
       eventTrackingData,
@@ -294,13 +291,6 @@ const PortraitVideoModal = ({
     };
   }, [onClose]);
 
-  const { id: urn = '', title = '' } =
-    blocks?.[selectedVideoIndex]?.model.video || {};
-
-  if (hasShareApi) {
-    const id = urn.split(':')[4];
-    shareUrl = `https://www.bbc.com/${service}/articles/${id}`;
-  }
 
   return (
     <>

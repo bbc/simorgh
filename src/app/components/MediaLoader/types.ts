@@ -8,7 +8,7 @@ import {
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
-import { Dispatch, Ref, RefObject, SetStateAction } from 'react';
+import { Dispatch, RefObject, SetStateAction } from 'react';
 
 export type SMPEvent = {
   playlist?: {

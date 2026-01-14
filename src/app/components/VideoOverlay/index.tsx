@@ -1,21 +1,21 @@
 import { use } from 'react';
-import styled from '@emotion/styled';
+// import styled from '@emotion/styled';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import ShareButton from '../ShareButton';
 
 // See: https://confluence.dev.bbc.co.uk/display/mp/Writing+HTML5+Plugins
 // Needs to be above the subtitles so the share-tools popover is not obscured by the subtitles.
-const Z_INDEX_ABOVE_SMP_CONTROLS = '200';
+// const Z_INDEX_ABOVE_SMP_CONTROLS = '200';
 
-const VideoOverlayWrapper = styled.div`
-  z-index: ${Z_INDEX_ABOVE_SMP_CONTROLS};
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  container-type: inline-size;
-`;
+// const VideoOverlayWrapper = styled.div`
+//   z-index: ${Z_INDEX_ABOVE_SMP_CONTROLS};
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   container-type: inline-size;
+// `;
 
 // const VideoOverlayHeader = styled.div`
 //   position: absolute;
@@ -24,15 +24,15 @@ const VideoOverlayWrapper = styled.div`
 //   right: 0;
 // `;
 
-const VideoOverlayFooterContents = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: '16px';
-  max-width: '77.5rem';
-  margin: auto;
-  align-items: flex-end;
-`;
+// const VideoOverlayFooterContents = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   gap: '16px';
+//   max-width: '77.5rem';
+//   margin: auto;
+//   align-items: flex-end;
+// `;
 
 // const Description = styled.div`
 //   display: none;
@@ -46,33 +46,33 @@ const VideoOverlayFooterContents = styled.div`
 //   }
 // `;
 
-const VideoOverlayFooter = styled.div`
-  position: absolute;
-  left: '8px';
-  right: '8px';
-  bottom: 0;
-  padding-bottom: '1rem';
-  @supports not (container-type: inline-size) {
-    display: none;
-  }
+// const VideoOverlayFooter = styled.div`
+//   position: absolute;
+//   left: '8px';
+//   right: '8px';
+//   bottom: 0;
+//   padding-bottom: '1rem';
+//   @supports not (container-type: inline-size) {
+//     display: none;
+//   }
 
-  @container (min-width: '20rem}) {
-    padding-bottom: '5rem'
-    left: '8px';
-    right: '8px';
-  }
+//   @container (min-width: '20rem}) {
+//     padding-bottom: '5rem'
+//     left: '8px';
+//     right: '8px';
+//   }
 
-  @container (min-width: '31.25rem) {
-    left: '32px';
-    right: '32px';
-  }
+//   @container (min-width: '31.25rem) {
+//     left: '32px';
+//     right: '32px';
+//   }
 
-  @container (min-width: '53.75rem') {
-    padding-bottom: '8.75rem';
-    left: '8px';
-    right: '8px';
-  }
-`;
+//   @container (min-width: '53.75rem') {
+//     padding-bottom: '8.75rem';
+//     left: '8px';
+//     right: '8px';
+//   }
+// `;
 
 // const ShareToolWrapper = styled.div`
 //   margin-left: auto;

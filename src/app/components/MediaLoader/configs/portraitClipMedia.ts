@@ -9,12 +9,11 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import { Dispatch, SetStateAction, useEffect, useMemo, useRef } from 'react';
+import { useMemo } from 'react';
 
 export default ({
   blocks,
   basePlayerConfig,
-  setVideoOverlayContainer,
   setVideoOverlayContainerRef,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model }: PortraitClipMediaBlock =
