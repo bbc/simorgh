@@ -2,7 +2,6 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable prefer-template */
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
-import { getDestination } from '#app/lib/analyticsUtils';
 import { ATIAnalyticsProps } from '../types';
 
 const ampAnalyticsJson = ({ reverbParams }: ATIAnalyticsProps) => {

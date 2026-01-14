@@ -14,7 +14,6 @@ jest.mock('#app/lib/utilities/getUUID', () =>
 const windowLocationHrefSpy = jest.spyOn(window.location, 'href', 'get');
 
 const {
-  getDestination,
   enforceLegacyDestinationForJapanese,
   getAppType,
   getHref,
@@ -46,53 +45,6 @@ describe('analyticsUtils', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-  });
-
-  describe('getDestination', () => {
-    it.each`
-      platform       | statsDestination
-      ${'amp'}       | ${null}
-      ${'canonical'} | ${null}
-      ${null}        | ${null}
-      ${'amp'}       | ${undefined}
-      ${'canonical'} | ${undefined}
-      ${undefined}   | ${undefined}
-    `(
-      'should return the safe default (NEWS_PS) where statsDestination is nullish',
-      ({ platform, statsDestination }) => {
-        expect(getDestination(platform, statsDestination)).toBe(598285);
-      },
-    );
-
-    it.each`
-      platform     | statsDestination   | expected
-      ${null}      | ${'SPORT_PS_TEST'} | ${598311}
-      ${undefined} | ${'HOMEPAGE_PS'}   | ${598273}
-    `(
-      'should return the correct destination id if platform is nullish',
-      ({ platform, statsDestination, expected }) => {
-        expect(getDestination(platform, statsDestination)).toBe(expected);
-      },
-    );
-
-    it.each`
-      statsDestination   | expected
-      ${'NEWS_PS'}       | ${598285}
-      ${'NEWS_GNL_TEST'} | ${598288}
-      ${'NEWSROUND'}     | ${598293}
-      ${'SPORT_PS_TEST'} | ${598311}
-    `(
-      'should return the correct destination id for $statsDestination on canonical',
-      ({ statsDestination, expected }) => {
-        expect(getDestination('canonical', statsDestination)).toBe(expected);
-      },
-    );
-
-    it('should return amp substitution expression for destination with GNL and PS destinations defined', () => {
-      expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
-      );
-    });
   });
 
   describe('enforceLegacyDestinationForJapanese', () => {
