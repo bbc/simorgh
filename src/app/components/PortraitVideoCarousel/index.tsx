@@ -31,6 +31,7 @@ const PortraitVideoCarousel = ({
   );
   const [hasShareApi, setHasShareApi] = useState(true);
   // const [videoOverlayContainer, setVideoOverlayContainer] = useState();
+  const overlayMountRef = useRef<HTMLDivElement | null>(null);
   const [overlayReady, setOverlayReady] = useState(false);
   const videoOverlayContainerRef = useRef<HTMLElement | null>(null);
   const setVideoOverlayContainer = (el: HTMLElement) => {
@@ -38,6 +39,21 @@ const PortraitVideoCarousel = ({
       videoOverlayContainerRef.current = el;
       setOverlayReady(true);
     }
+    if (videoOverlayContainerRef.current) return;
+
+    videoOverlayContainerRef.current = el;
+
+    const mount = document.createElement('div');
+    mount.setAttribute('data-video-overlay-root', '');
+    mount.style.position = 'absolute';
+    mount.style.inset = '0';
+    mount.style.zIndex = '200';
+    mount.style.pointerEvents = 'none';
+
+    el.appendChild(mount);
+
+    overlayMountRef.current = mount;
+    setOverlayReady(true);
   };
 
   useEffect(() => {
@@ -129,14 +145,14 @@ const PortraitVideoCarousel = ({
             document.body,
           )}
         {overlayReady &&
-          videoOverlayContainerRef.current &&
+          overlayMountRef.current &&
           createPortal(
             <VideoOverlay
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
               hasShareApi={hasShareApi}
             />,
-            videoOverlayContainerRef.current,
+            overlayMountRef.current,
           )}
       </section>
     </>
