@@ -248,8 +248,15 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC_PAGE: {
-        const variantPath = variant ? `/${variant}` : '';
-        fetchUrl = Url(`/${service}/topics/${id}${variantPath}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        } else {
+          fetchUrl = Url(
+            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        }
         break;
       }
       case LIVE_PAGE: {
