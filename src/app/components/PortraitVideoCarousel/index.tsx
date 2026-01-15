@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -33,6 +33,13 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, nonce } = use(RequestContext);
+
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current += 1;
+    console.log('PortraitVideoCarousel rendered times: ', count.current);
+  });
 
   // EXPERIMENT: Homepage Portrait Video 2
   const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
