@@ -33,7 +33,7 @@ const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
   const page = 'Page';
 
   return (
-    <section>
+    <section css={styles.container}>
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
