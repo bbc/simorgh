@@ -279,6 +279,10 @@ export const service: DefaultServiceConfig = {
         url: '/thai',
       },
       {
+        title: 'เลือกตั้ง 2569',
+        url: '/thai/topics/cd9zv7dyg1kt',
+      },
+      {
         title: 'ประเทศไทย',
         url: '/thai/topics/cjgn73g98rqt',
       },
