@@ -10,8 +10,7 @@ type Props = {
   service: Services;
 };
 
-const getStatsDestination = ({ isUK = true, service }: Props) => {
-  // { isUK = true, env = 'test', service }: Props
+const getStatsDestination = ({ isUK = true, env = 'test', service }: Props) => {
   let destination = '';
   switch (service) {
     case 'news':
@@ -41,8 +40,7 @@ const getStatsDestination = ({ isUK = true, service }: Props) => {
     default:
       destination = 'WS_NEWS_LANGUAGES';
   }
-  // return env === 'live' ? destination : `${destination}_TEST`;
-  return destination;
+  return env === 'live' ? destination : `${destination}_TEST`;
 };
 
 export default getStatsDestination;
