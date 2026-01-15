@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, RefObject } from 'react';
-import { useTheme } from '@emotion/react';
+import { useTheme, css } from '@emotion/react';
 
 type ReadingProgressBarProps = {
   targetRef: RefObject<HTMLElement | null>;
@@ -7,7 +7,7 @@ type ReadingProgressBarProps = {
   hasContinueReadingButton?: boolean;
 };
 
-const barWrapperStyles = {
+const barWrapperStyles = css({
   position: 'sticky',
   top: 0,
   left: 0,
@@ -15,16 +15,17 @@ const barWrapperStyles = {
   zIndex: 9999,
   background: 'transparent',
   height: 4,
-};
-
-const progressBarStyles = (palette, width: number) => ({
-  display: 'block',
-  height: 4,
-  width: `${width}%`,
-  background: palette.POSTBOX,
-  borderRadius: 2,
-  transition: 'width 0.06s ease-in',
 });
+
+const progressBarStyles = (palette, width: number) =>
+  css({
+    display: 'block',
+    height: 4,
+    width: `${width}%`,
+    background: palette.POSTBOX,
+    borderRadius: 2,
+    transition: 'width 0.06s ease-in',
+  });
 
 const ReadingProgressBar = ({
   targetRef,
