@@ -196,7 +196,7 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
-  setVideoOverlayContainer: any;
+  setVideoOverlayContainer?: any;
 }
 
 const PortraitVideoModal = ({

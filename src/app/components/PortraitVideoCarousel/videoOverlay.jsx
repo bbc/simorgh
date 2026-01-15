@@ -88,7 +88,8 @@ const VideoOverlay = () => {
           // The video-overlay plugin will use this attribute to instruct SMP not to render subtitles in the space occupied by this div.
           data-region-exclude-subtitles
         >
-          <VideoOverlayFooterContents className="video-overlay-footer-contents">
+          <VideoOverlayFooterContents>
+            hello
             <ShareToolComponent />
           </VideoOverlayFooterContents>
         </VideoOverlayFooter>

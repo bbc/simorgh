@@ -1,4 +1,4 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -244,28 +244,48 @@ const MediaLoader = ({
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
-  if (isLite) return null;
-
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
-  const config = buildConfig({
-    id: id || '',
-    blocks,
-    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
-    statsDestination,
-    producer,
-    isAmp,
-    lang,
-    pageType,
-    service,
-    translations,
-    adsEnabled,
-    showAdsBasedOnLocation,
-    embedded,
-    setVideoOverlayContainer,
-  });
+  const config = useMemo(
+    () =>
+      buildConfig({
+        id: id || '',
+        blocks,
+        counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
+        statsDestination,
+        producer,
+        isAmp,
+        lang,
+        pageType,
+        service,
+        translations,
+        adsEnabled,
+        showAdsBasedOnLocation,
+        embedded,
+        setVideoOverlayContainer,
+      }),
+    [
+      id,
+      blocks,
+      mediaOverrides?.pageIdentifierOverride,
+      pageIdentifier,
+      statsDestination,
+      producer,
+      isAmp,
+      lang,
+      pageType,
+      service,
+      translations,
+      adsEnabled,
+      showAdsBasedOnLocation,
+      embedded,
+      setVideoOverlayContainer,
+    ],
+  );
+
+  if (isLite) return null;
 
   if (!config) return null;
 
