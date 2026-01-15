@@ -10,8 +10,6 @@ export const ATI_PAGE_VIEW = 'ati-page-view';
 
 export const ATI_PAGE_VIEW_REVERB = 'ati-page-view-reverb';
 
-export const ATI_USER_ID_COOKIE = 'atuserid-cookie-value';
-
 const SCROLLABLE_NAVIGATION = 'scrollable-navigation';
 const DROPDOWN_NAVIGATION = 'dropdown-navigation';
 const TOP_STORIES = 'top-stories';
@@ -28,7 +26,7 @@ const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
 const RECOMMENDATIONS = 'midarticle-mostread';
-const SCROLLABLE_PROMO = 'edoj';
+const ARTICLE_LINKS_BLOCK = 'edoj';
 const BILLBOARD = 'billboard';
 const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
@@ -54,7 +52,7 @@ export const COMPONENTS = {
   RELATED_CONTENT,
   RELATED_TOPICS,
   SCROLLABLE_NAVIGATION,
-  SCROLLABLE_PROMO,
+  ARTICLE_LINKS_BLOCK,
   SHARE,
   SOCIAL_EMBED,
   TOP_STORIES,
@@ -119,12 +117,6 @@ export const interceptATIAnalyticsBeacons = () => {
       request.reply({ statusCode: 200 });
     },
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
-};
-
-export const setUserIDCookie = () => {
-  cy.session('user-session', () => {
-    cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
-  });
 };
 
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {

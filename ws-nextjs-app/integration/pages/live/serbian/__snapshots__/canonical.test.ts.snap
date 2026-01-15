@@ -67,7 +67,7 @@ exports[`Canonical Live Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Live Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
 
-exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
 exports[`Canonical Live Header I can see the branding 1`] = `
 {

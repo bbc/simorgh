@@ -7,7 +7,6 @@ import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 import testsForAllAMPPages from '../testsForAllAMPPages';
 import liteArticleTests from '../articlePage/testsForLiteOnly';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -112,7 +111,6 @@ const atiAnalyticsTestSuites = [
     siteId: 2,
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -123,7 +121,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -134,7 +131,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -145,7 +141,6 @@ const atiAnalyticsTestSuites = [
     siteId: 90,
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -156,7 +151,6 @@ const atiAnalyticsTestSuites = [
     siteId: 38,
     applicationType: 'responsive',
     contentType: 'article-photo-gallery',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
@@ -194,6 +188,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: PHOTO_GALLERY_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

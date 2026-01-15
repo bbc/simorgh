@@ -6,6 +6,8 @@ import {
   LIVE_PAGE,
   UGC_PAGE,
   HOME_PAGE,
+  UNKNOWN_PAGE,
+  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -38,9 +40,7 @@ const isHomePagePath = (pathname: string) =>
     return false;
   });
 
-export default function derivePageType(
-  pathname: string,
-): PageTypes | 'Unknown' {
+export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
     'http://bbc.com',
@@ -51,8 +51,9 @@ export default function derivePageType(
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
+  if (sanitisedPathname.includes('topics')) return TOPIC_PAGE;
   if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
   if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
 
-  return 'Unknown';
+  return UNKNOWN_PAGE;
 }

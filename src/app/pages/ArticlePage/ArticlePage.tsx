@@ -2,9 +2,6 @@ import { use, useState, useRef } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -44,12 +41,11 @@ import {
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
-import ReadingProgressBar from './ReadingProgressBar';
-import PersonalisedContent from '../../components/PersonalisedContent';
+import ReadingProgressBar from './ReadingProgressBar'
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -200,22 +196,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
-  const mainRef = useRef<HTMLElement>(null);
-
-  // EXPERIMENT: Time of Day Experiment
-  const timeOfDayExperimentName = 'newswb_ws_tod_article';
-  const timeOfDayExperimentVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // EXPERIMENT: Location based Topics Experiment
-  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
-  const personalisedContentExperimentVariant = useOptimizelyVariation({
-    experimentName: personalisedContentExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -265,12 +245,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    // Better way to handle this?
-    ...(timeOfDayExperimentVariant &&
-      timeOfDayExperimentVariant !== 'off' && {
-        experimentName: timeOfDayExperimentName,
-        experimentVariant: timeOfDayExperimentVariant,
-      }),
   };
 
   const hasContinueReadingBlock = blocks.some(
@@ -308,7 +282,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
     wsoj: getWsojComponent,
     disclaimer: DisclaimerWithPaddingOverride,
@@ -347,25 +321,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  // EXPERIMENT: Location based Topics Experiment
-  const showPersonalisedContent = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      personalisedContentExperimentVariant &&
-      personalisedContentExperimentVariant !== 'off',
-  );
-
-  // EXPERIMENT: Location based Topics Experiment
-  const personalisedContentBlock = showPersonalisedContent ? (
-    <PersonalisedContent
-      pageData={pageData}
-      personalisedTopicCurationExperimentVariant={
-        personalisedContentExperimentVariant ?? ''
-      }
-    />
-  ) : null;
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -446,47 +401,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {/* EXPERIMENT: Location based Topics Experiment */}
-          {personalisedContentExperimentVariant === 'variation_2' &&
-            personalisedContentBlock}
-          <RelatedContentSection
-            content={blocks}
-            // EXPERIMENT: Time of Day Experiment
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-            // EXPERIMENT: Location based Topics Experiment
-            {...(personalisedContentExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: personalisedContentExperimentName,
-                experimentVariant: personalisedContentExperimentVariant,
-              },
-            })}
-          />
-          {/* EXPERIMENT: Location based Topics Experiment */}
-          {personalisedContentExperimentVariant === 'variation_1' &&
-            personalisedContentBlock}
+
+          <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // EXPERIMENT: Location based Topics Experiment
-            personalisedContentExperimentVariant={
-              personalisedContentExperimentVariant
-            }
-            personalisedContentExperimentName={
-              personalisedContentExperimentName
-            }
-            // EXPERIMENT: Time of Day Experiment
-            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
-            timeOfDayExperimentName={timeOfDayExperimentName}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
       {!isApp && !isPGL && (
         <MostRead
@@ -496,21 +414,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          eventTrackingData={{
-            componentName: 'most-read',
-            // EXPERIMENT: Time of Day Experiment
-            ...(timeOfDayExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-            // EXPERIMENT: Location based Topics Experiment
-            ...(personalisedContentExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: personalisedContentExperimentName,
-              experimentVariant: personalisedContentExperimentVariant,
-            }),
-          }}
+          eventTrackingData={{ componentName: 'most-read' }}
         />
       )}
     </div>
