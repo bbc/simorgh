@@ -9,7 +9,6 @@ import {
   ConfigBuilderReturnProps,
   PlaylistItem,
 } from '../types';
-import { useEffect, useRef } from 'react';
 
 export default ({
   blocks,
