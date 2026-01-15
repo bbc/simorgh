@@ -248,42 +248,22 @@ const MediaLoader = ({
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
   const producer = getProducerFromServiceName(service);
-  const config = useMemo(
-    () =>
-      buildConfig({
-        id: id || '',
-        blocks,
-        counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
-        statsDestination,
-        producer,
-        isAmp,
-        lang,
-        pageType,
-        service,
-        translations,
-        adsEnabled,
-        showAdsBasedOnLocation,
-        embedded,
-        setVideoOverlayContainer,
-      }),
-    [
-      id,
-      blocks,
-      mediaOverrides?.pageIdentifierOverride,
-      pageIdentifier,
-      statsDestination,
-      producer,
-      isAmp,
-      lang,
-      pageType,
-      service,
-      translations,
-      adsEnabled,
-      showAdsBasedOnLocation,
-      embedded,
-      setVideoOverlayContainer,
-    ],
-  );
+  const config = buildConfig({
+    id: id || '',
+    blocks,
+    counterName: mediaOverrides?.pageIdentifierOverride || pageIdentifier,
+    statsDestination,
+    producer,
+    isAmp,
+    lang,
+    pageType,
+    service,
+    translations,
+    adsEnabled,
+    showAdsBasedOnLocation,
+    embedded,
+    setVideoOverlayContainer,
+  });
 
   if (isLite) return null;
 

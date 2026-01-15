@@ -69,9 +69,11 @@ const VideoOverlayFooter = styled.div`
   }
 `;
 
-const ShareToolComponent = () => {
-  <div>SHARE</div>;
-};
+const ShareTool = styled.div`
+  margin-left: auto;
+  pointer-events: auto;
+  color: pink;
+`;
 
 const VideoOverlay = () => {
   return (
@@ -89,8 +91,7 @@ const VideoOverlay = () => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents>
-            hello
-            <ShareToolComponent />
+            <ShareTool>SHARE</ShareTool>
           </VideoOverlayFooterContents>
         </VideoOverlayFooter>
       </VideoOverlayWrapper>
