@@ -56,6 +56,18 @@ const useCustomEventTracker = ({
         statsDestination,
       ].every(Boolean);
 
+      console.log(`useCustomEventTracker`, {
+        shouldSendEvent,
+        campaignID,
+        eventName,
+        pageIdentifier,
+        platform,
+        producerId,
+        producerName,
+        service,
+        statsDestination,
+      });
+
       if (shouldSendEvent) {
         try {
           await sendEventBeacon({

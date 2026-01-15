@@ -21,6 +21,7 @@ const injectCspHeader = ({ isAmp, nonce, res }) => {
     isAmp,
     isLive: isLiveEnv(),
     nonce,
+    shouldServeRelaxedCsp: true,
   });
 
   let cspHeader = '';

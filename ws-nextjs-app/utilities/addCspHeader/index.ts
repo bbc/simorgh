@@ -88,7 +88,7 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
   };
 
   const contentSecurityPolicyHeaderValue = directiveToString({
-    ...directives,
+    ...(directives as Record<string, string | string[]>),
     ...BUMP4SpecificConditions,
   });
 

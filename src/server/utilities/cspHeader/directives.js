@@ -399,9 +399,28 @@ export const cspDirectives = ({
   nonce = null,
   shouldServeRelaxedCsp = false,
 }) => {
+  // TODO: Quick solution to bypass CSP for local development
+  if (shouldServeRelaxedCsp) {
+    return {
+      directives: {
+        'default-src': ['*'],
+        'child-src': ['*'],
+        'connect-src': ['*'],
+        'font-src': ['*', 'data:'],
+        'frame-src': ['*'],
+        'img-src': ['*', 'data:', 'blob:'],
+        'script-src': ["* 'unsafe-inline' 'unsafe-eval'"],
+        'style-src': ["* 'unsafe-inline'"],
+        'media-src': ['*'],
+        'worker-src': ['*'],
+        'report-to': 'worldsvc',
+      },
+    };
+  }
+
   return {
     directives: {
-      'default-src': generateDefaultSrc(shouldServeRelaxedCsp),
+      'default-src': generateDefaultSrc({ shouldServeRelaxedCsp }),
       'child-src': generateChildSrc({ isAmp, shouldServeRelaxedCsp }),
       'connect-src': generateConnectSrc({ isLive, shouldServeRelaxedCsp }),
       'font-src': generateFontSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
