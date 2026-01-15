@@ -178,6 +178,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
+  const mainRef = useRef<HTMLElement | null>(null);
   const { isApp, isAmp, isLite } = use(RequestContext);
   const {
     articleAuthor,
