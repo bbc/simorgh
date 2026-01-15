@@ -16,7 +16,7 @@ const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
   const summaries = topics.map((topic: Topic) => ({
     id: topic.topicId,
     title: topic.topicName,
-    uri: topic.topicUrl,
+    link: topic.topicUrl,
   })) as unknown as Summary[];
 
   const totalItems = summaries.length;
