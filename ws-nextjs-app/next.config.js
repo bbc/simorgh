@@ -26,20 +26,20 @@ module.exports = {
       },
       //* *TODO: */ Service worker headers — commented out, as this will be handled as part of future work in this ticket https://bbc.atlassian.net/browse/WS-2004.
 
-      // {
-      //   source: '/:service/sw.js',
-      //   headers: [
-      //     {
-      //       key: 'Service-Worker-Allowed',
-      //       value: '/:service',
-      //     },
-      //     {
-      //       key: 'Cache-Control',
-      //       value: 'public, max-age=0, must-revalidate',
-      //     },
-      //     { key: 'Content-Type', value: 'application/javascript' },
-      //   ],
-      // },
+      {
+        source: '/:service/sw.js',
+        headers: [
+          {
+            key: 'Service-Worker-Allowed',
+            value: '/:service',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+          { key: 'Content-Type', value: 'application/javascript' },
+        ],
+      },
     ];
   },
   async rewrites() {
