@@ -15,6 +15,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+import HideOnScroll from './HideOnScroll';
 
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
@@ -92,25 +93,27 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   if (isApp) return null;
 
   return (
-    <header role="banner" lang={serviceLang}>
-      {isAmp ? (
-        <Header
-          linkId="brandLink"
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+    <HideOnScroll>
+      <header role="banner" lang={serviceLang}>
+        {isAmp ? (
+          <Header
+            linkId="brandLink"
+            skipLink={skipLink}
+            scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          />
+        ) : (
+          <Header
+            brandRef={brandRef}
+            skipLink={skipLink}
+            scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          />
+        )}
+        {isLite && <LiteSiteSummary />}
+        <NavigationContainer
+          propsForTopBarOJComponent={propsForTopBarOJComponent}
         />
-      ) : (
-        <Header
-          brandRef={brandRef}
-          skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
-      )}
-      {isLite && <LiteSiteSummary />}
-      <NavigationContainer
-        propsForTopBarOJComponent={propsForTopBarOJComponent}
-      />
-    </header>
+      </header>
+    </HideOnScroll>
   );
 };
 
