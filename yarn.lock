@@ -4393,9 +4393,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/optimizely-sdk@npm:^5.3.4":
-  version: 5.3.5
-  resolution: "@optimizely/optimizely-sdk@npm:5.3.5"
+"@optimizely/optimizely-sdk@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "@optimizely/optimizely-sdk@npm:5.4.1"
   dependencies:
     decompress-response: "npm:^4.2.1"
     json-schema: "npm:^0.4.0"
@@ -4404,10 +4404,10 @@ __metadata:
     uuid: "npm:^9.0.1"
   peerDependencies:
     "@babel/runtime": ^7.0.0
-    "@react-native-async-storage/async-storage": ^1.2.0
-    "@react-native-community/netinfo": ^11.3.2
+    "@react-native-async-storage/async-storage": ">=1.0.0 <3.0.0"
+    "@react-native-community/netinfo": ">=5.0.0 <12.0.0"
     fast-text-encoding: ^1.0.6
-    react-native-get-random-values: ^1.11.0
+    react-native-get-random-values: ">=1.11.0 <3.0.0"
   peerDependenciesMeta:
     "@react-native-async-storage/async-storage":
       optional: true
@@ -4417,19 +4417,19 @@ __metadata:
       optional: true
     react-native-get-random-values:
       optional: true
-  checksum: 10/b72a8c472410b630d6a86c3ee50b31915858b4832475364102c561a92482f048463117c5c580c93c210e1284838abaa6366370812682a8ef1f6e507a79f7800e
+  checksum: 10/01a210a79cc6abbed3f8f07450c594d3ce075bec28d5cc35a0eb5d4a1cdb04837376811799a71792c2e59a87e0be275107959f7f9202cef3748e61058cc4cfc8
   languageName: node
   linkType: hard
 
-"@optimizely/react-sdk@npm:3.2.4":
-  version: 3.2.4
-  resolution: "@optimizely/react-sdk@npm:3.2.4"
+"@optimizely/react-sdk@npm:3.3.1":
+  version: 3.3.1
+  resolution: "@optimizely/react-sdk@npm:3.3.1"
   dependencies:
-    "@optimizely/optimizely-sdk": "npm:^5.3.4"
+    "@optimizely/optimizely-sdk": "npm:^5.4.1"
     hoist-non-react-statics: "npm:^3.3.2"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: 10/8cdf22cc99f989e826a697023f03ed24d074eb8cb03b31709156a03209971fdbbe02ea08737b25cc5d8593af5a0a65953daf7ad79fdc383de3055672fe9bc6e4
+  checksum: 10/26cff67c569cc4b55d3665a239f4e4fbf5b3ef8aeda0918ff21c506a5c604317f3afc613a8b2426d488e3cf8733d956271169a0f1cfc9a52cb8c34d5230683ed
   languageName: node
   linkType: hard
 
@@ -16700,7 +16700,7 @@ __metadata:
     "@loadable/component": "npm:5.16.7"
     "@loadable/server": "npm:5.16.7"
     "@loadable/webpack-plugin": "npm:5.15.2"
-    "@optimizely/react-sdk": "npm:3.2.4"
+    "@optimizely/react-sdk": "npm:3.3.1"
     "@storybook/addon-a11y": "npm:10.1.11"
     "@storybook/addon-docs": "npm:10.1.11"
     "@storybook/builder-webpack5": "npm:10.1.11"
