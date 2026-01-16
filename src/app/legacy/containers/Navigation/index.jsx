@@ -7,6 +7,7 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import isLiveTVNavItem from '#lib/utilities/navigation/isLiveTVNavItem';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -23,12 +24,18 @@ const renderListItems = (
   clickTracker,
   viewTracker,
   isLite,
+  liveTVChannelIdentifier,
 ) =>
   navigation.reduce((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
     const active = index === activeIndex;
 
     if (hideOnLiteSite && isLite) return listAcc;
+
+    const showLivePulse = isLiveTVNavItem({
+      navItemUrl: url,
+      liveTVChannelIdentifier,
+    });
 
     const listItem = (
       <Li
@@ -41,6 +48,7 @@ const renderListItems = (
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
+        showLivePulse={showLivePulse}
       >
         {title}
       </Li>
@@ -59,6 +67,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
     service,
     dir,
     collapsibleNavigation,
+    liveTVChannelIdentifier,
   } = use(ServiceContext);
 
   const { canonicalLink, origin } = use(RequestContext);
@@ -113,6 +122,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
         scrollableNavClickTrackerHandler,
         scrollableNavViewTracker,
         isLite,
+        liveTVChannelIdentifier,
       )}
     </NavigationUl>
   );
@@ -129,6 +139,8 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
         activeIndex,
         dropdownNavClickTrackerHandler,
         dropdownNavViewTracker,
+        isLite, // this took me ages to work out
+        liveTVChannelIdentifier,
       )}
     </DropdownUl>
   );

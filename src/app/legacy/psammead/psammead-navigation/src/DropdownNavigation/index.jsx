@@ -11,6 +11,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
+import Pulse from '#app/components/LivePulse';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -116,6 +117,7 @@ export const DropdownLi = ({
   url,
   dir = 'ltr',
   viewTracker = null,
+  showLivePulse = null,
 }) => {
   const ariaId = `dropdownNavigation-${children
     .replace(/\s+/g, '-')
@@ -123,6 +125,13 @@ export const DropdownLi = ({
   return (
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     <StyledDropdownLi role="listitem" {...viewTracker}>
+      {showLivePulse && (
+        <Pulse
+          width="18"
+          height="18"
+          style={{ verticalAlign: 'middle', marginInlineEnd: '0.25em' }}
+        />
+      )}
       <StyledDropdownLink
         script={script}
         service={service}

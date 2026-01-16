@@ -97,6 +97,7 @@ export type ServiceConfig = {
   recommendations?: Recommendations;
   footer: Footer;
   collapsibleNavigation?: CollapsibleNavigationSection[];
+  liveTVChannelIdentifier?: string;
   navigation?: {
     title: string;
     url: string;

@@ -418,6 +418,7 @@ export const service: DefaultServiceConfig = {
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
     timezone: 'GMT',
+    liveTVChannelIdentifier: '/arabic/media-49522519',
     navigation: [
       {
         title: 'رئيسية',

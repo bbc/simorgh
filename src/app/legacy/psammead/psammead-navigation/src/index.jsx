@@ -10,6 +10,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import Pulse from '#app/components/LivePulse';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -163,10 +164,18 @@ export const NavigationLi = ({
   service,
   dir = 'ltr',
   viewTracker = null,
+  showLivePulse = false,
   ...props
 }) => {
   return (
     <StyledListItem dir={dir} role="listitem" {...viewTracker}>
+      {showLivePulse && (
+        <Pulse
+          width="18"
+          height="18"
+          style={{ verticalAlign: 'middle', marginInlineEnd: '0.25em' }}
+        />
+      )}
       {active && currentPageText ? (
         <StyledLink
           href={url}
