@@ -1,38 +1,79 @@
-import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
-import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
-import useIsPWA from '#app/hooks/useIsPWA';
+import onClient from '#app/lib/utilities/onClient';
 import isLocal from '#app/lib/utilities/isLocal';
-import ServiceWorkerContainer from './index';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import { render } from '../react-testing-library-with-providers';
-
-jest.mock('#app/hooks/useServiceWorkerRegistration', () => jest.fn());
-jest.mock('#app/hooks/useSendPWAStatus', () => jest.fn());
-jest.mock('#app/hooks/useIsPWA', () => jest.fn());
-jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
+import { ServiceContext } from '../../contexts/ServiceContext';
+import ServiceWorkerContainer from './index';
 
 const contextStub = {
-  swPath: '/news/sw.js',
+  swPath: '/articles/sw.js',
   service: 'news',
 };
 
-describe('ServiceWorkerContainer', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-    (useIsPWA as jest.Mock).mockReturnValue(false);
-    (isLocal as jest.Mock).mockReturnValue(true);
+const mockServiceWorker = {
+  register: jest.fn(),
+};
+
+jest.mock('#app/lib/utilities/onClient', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
+jest.mock('#app/lib/utilities/isLocal', () =>
+  jest.fn().mockImplementation(() => true),
+);
+
+describe('Service Worker', () => {
+  const originalNavigator = global.navigator;
+
+  afterEach(() => {
+    jest.resetAllMocks();
+
+    global.navigator ??= originalNavigator;
   });
 
   describe('Canonical', () => {
-    it('calls service worker registration hook with service', () => {
+    it('is registered when swPath, serviceWorker have values and onClient is true', () => {
+      // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
+      global.navigator.serviceWorker = mockServiceWorker;
+      (onClient as jest.Mock).mockImplementationOnce(() => true);
+
       render(
         // @ts-expect-error only require a subset of properties on service context for testing purposes
-        <ServiceContext.Provider value={contextStub}>
+        <ServiceContext.Provider value={{ ...contextStub }}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
       );
+      expect(navigator.serviceWorker.register).toHaveBeenCalledWith(
+        `/news/articles/sw.js`,
+      );
+    });
 
-      expect(useServiceWorkerRegistration).toHaveBeenCalledWith('news');
+    describe('is not registered', () => {
+      it.each`
+        swPath                | serviceWorker        | isOnClient
+        ${undefined}          | ${undefined}         | ${true}
+        ${undefined}          | ${undefined}         | ${false}
+        ${undefined}          | ${mockServiceWorker} | ${true}
+        ${undefined}          | ${mockServiceWorker} | ${false}
+        ${contextStub.swPath} | ${mockServiceWorker} | ${false}
+      `(
+        'when swPath is $swPath, serviceWorker is $serviceWorker and isOnClient is $isOnClient',
+        ({ swPath, serviceWorker, isOnClient }) => {
+          if (serviceWorker) {
+            // @ts-expect-error need to override the navigator.serviceWorker for testing purposes
+            global.navigator.serviceWorker = serviceWorker;
+          }
+
+          (onClient as jest.Mock).mockImplementationOnce(() => isOnClient);
+
+          render(
+            // @ts-expect-error only require a subset of properties on service context for testing purposes
+            <ServiceContext.Provider value={{ ...contextStub, swPath }}>
+              <ServiceWorkerContainer />
+            </ServiceContext.Provider>,
+          );
+          expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+        },
+      );
     });
   });
 
@@ -77,34 +118,6 @@ describe('ServiceWorkerContainer', () => {
           ).not.toBeInTheDocument();
         },
       );
-    });
-  });
-
-  describe('PWA', () => {
-    it('calls useSendPWAStatus with true when PWA is installed', () => {
-      (useIsPWA as jest.Mock).mockReturnValue(true);
-
-      render(
-        // @ts-expect-error only require a subset of properties on service context for testing purposes
-        <ServiceContext.Provider value={contextStub}>
-          <ServiceWorkerContainer />
-        </ServiceContext.Provider>,
-      );
-
-      expect(useSendPWAStatus).toHaveBeenCalledWith(true);
-    });
-
-    it('calls useSendPWAStatus with false when PWA is not installed', () => {
-      (useIsPWA as jest.Mock).mockReturnValue(false);
-
-      render(
-        // @ts-expect-error only require a subset of properties on service context for testing purposes
-        <ServiceContext.Provider value={contextStub}>
-          <ServiceWorkerContainer />
-        </ServiceContext.Provider>,
-      );
-
-      expect(useSendPWAStatus).toHaveBeenCalledWith(false);
     });
   });
 });
