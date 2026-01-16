@@ -1,6 +1,8 @@
 import UsefulLinks from '#app/components/UsefulLinks';
 import { Summary } from '#app/models/types/curationData';
 import Pagination from '#app/components/Pagination';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { useContext } from 'react';
 import styles from './index.styles';
 import { TopicsPageProps, Topic } from './types';
 
@@ -25,6 +27,8 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
   const end = start + PAGE_SIZE;
   const pagedSummaries = summaries.slice(start, end);
 
+  const { translations } = useContext(ServiceContext);
+
   const {
     pageXOfY,
     previousPage,
@@ -35,6 +39,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
     previousPage: 'Previous page',
     nextPage: 'Next page',
     page: 'Page',
+    ...translations?.pagination,
   };
 
   return (
