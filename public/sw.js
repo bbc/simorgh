@@ -3,19 +3,64 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const version = 'v0.3.0';
-const cacheName = 'simorghCache_v1';
 
-const service = self.location.pathname.split('/')[1];
-const hasOfflinePageFunctionality = false;
-const OFFLINE_PAGE = `/${service}/offline`;
+const version = 'v0.3.2';
+// Update cache name when changing caching logic / changes in offlinepage.tsx
+const cacheName = 'simorghCache_v2';
+const pwaClients = new Map();
+let isPWADeviceOffline = false;
 
-self.addEventListener('install', event => {
-  event.waitUntil(async () => {
-    const cache = await caches.open(cacheName);
-    if (hasOfflinePageFunctionality) await cache.add(OFFLINE_PAGE);
-  });
-});
+// --------------------
+// Helper Functions
+// --------------------
+const loggerEnabled = true;
+const logger = (...args) => {
+  if (!loggerEnabled) return;
+  // eslint-disable-next-line no-console
+  console.log(`[SW ${version}]`, ...args);
+};
+
+const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
+const getOfflinePageUrl = service => `/${service}/offline`;
+
+const cacheResource = async (cache, url) => {
+  try {
+    const response = await fetch(url);
+    if (response.ok) await cache.put(url, response.clone());
+    return response;
+  } catch (err) {
+    logger(`Failed to cache ${url}:`, err);
+    return null;
+  }
+};
+
+const cacheOfflinePageAndResources = async service => {
+  const cache = await caches.open(cacheName);
+  const offlinePageUrl = new URL(
+    getOfflinePageUrl(service),
+    self.location.origin,
+  ).href;
+
+  if (await cache.match(offlinePageUrl)) return;
+
+  const resp = await cacheResource(cache, offlinePageUrl);
+  if (!resp || !resp.ok) return;
+
+  logger(`Cached offline page for ${service}`);
+
+  const html = await resp.text();
+  const scriptSrcs = [
+    ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
+  ].map(m => m[1]);
+  const linkHrefs = [...html.matchAll(/<link[^>]+href=["']([^"']+)["']/g)].map(
+    m => m[1],
+  );
+
+  const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
+
+  logger(`Caching final offline resources for ${service}:`, resources);
+  await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+};
 
 const CACHEABLE_FILES = [
   // Reverb
@@ -35,24 +80,60 @@ const CACHEABLE_FILES = [
 const WEBP_IMAGE =
   /^https:\/\/ichef(\.test)?\.bbci\.co\.uk\/(news|images|ace\/(standard|ws))\/.+.webp$/;
 
+// -------------Install event -------
+self.addEventListener('install', () => {
+  logger(`Installing...`);
+  self.skipWaiting();
+});
+
+// -------Activate Handler-------------
+self.addEventListener('activate', event => {
+  logger(`Activating...`);
+  event.waitUntil(
+    (async () => {
+      const keys = await caches.keys();
+      await Promise.all(
+        keys.map(key => key !== cacheName && caches.delete(key)),
+      );
+      await self.clients.claim();
+    })(),
+  );
+});
+
+// -------Message Event-------------
+self.addEventListener('message', async event => {
+  logger('Message received:', event.data);
+
+  if (event.data?.type === 'PWA_STATUS') {
+    const clientId = event.source.id;
+    const { isPWA } = event.data;
+
+    if (isPWA) {
+      pwaClients.set(clientId, true);
+      const service = getServiceFromUrl(event.source.url);
+      await cacheOfflinePageAndResources(service);
+    }
+  }
+});
+
+// -------Fetch Handler-------------
 const fetchEventHandler = async event => {
+  logger(`[SW FETCH] Request: ${event.request.url}`);
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
-
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
+  const isNavigationMode = event.request.mode === 'navigate';
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
 
     // Inspect the accept header for WebP support
-
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
 
     // if supports webp is false in request header then don't use it
     // if accept header doesn't indicate support for webp remove .webp extension
-
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
@@ -73,22 +154,66 @@ const fetchEventHandler = async event => {
         return response;
       })(),
     );
-  } else if (hasOfflinePageFunctionality && event.request.mode === 'navigate') {
-    event.respondWith(async () => {
-      try {
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
+  } else if (isNavigationMode) {
+    const { url } = event.request;
+
+    event.respondWith(
+      (async () => {
+        const client = await self.clients.get(event.clientId);
+        const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
-        const cachedResponse = await cache.match(OFFLINE_PAGE);
-        return cachedResponse;
-      }
-    });
+
+        // TODO: Used for testing - to be removed
+        logger('📌 [SW FETCH] Navigation', {
+          url: event.request.url,
+          clientId: event.clientId,
+          isPWA,
+          client,
+          event,
+          pwaClients,
+          isPWADeviceOffline,
+        });
+        try {
+          // Use preload if available
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
+
+          const networkResp = await fetch(event.request);
+          isPWADeviceOffline = false;
+          return networkResp;
+        } catch (err) {
+          // Only show offline page for installed PWA
+          if (isPWA) {
+            const service = getServiceFromUrl(url);
+            const offlineUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
+
+            const cachedOffline = await cache.match(offlineUrl);
+            if (cachedOffline) {
+              isPWADeviceOffline = true;
+              logger('[SW] Serving cached offline page');
+              return cachedOffline;
+            }
+          }
+          // fallback to browser default behavior
+          throw err;
+        }
+      })(),
+    );
+  } else if (isPWADeviceOffline) {
+    logger(`[SW v${version}] Serving isPWADeviceOffline ${event.request.url}`);
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(cacheName);
+        const cached = await cache.match(event.request);
+        if (cached) return cached;
+        return fetch(event.request);
+      })(),
+    );
   }
+
   return;
 };
 
