@@ -23,8 +23,8 @@ const renderListItems = (
   activeIndex,
   clickTracker,
   viewTracker,
-  isLite,
   liveTVChannelIdentifier,
+  isLite,
 ) =>
   navigation.reduce((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
@@ -121,8 +121,8 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
         activeIndex,
         scrollableNavClickTrackerHandler,
         scrollableNavViewTracker,
-        isLite,
         liveTVChannelIdentifier,
+        isLite,
       )}
     </NavigationUl>
   );
@@ -139,7 +139,6 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
         activeIndex,
         dropdownNavClickTrackerHandler,
         dropdownNavViewTracker,
-        isLite, // this took me ages to work out
         liveTVChannelIdentifier,
       )}
     </DropdownUl>
