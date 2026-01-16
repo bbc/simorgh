@@ -14,4 +14,5 @@ export type TopicsData = {
 export type TopicsPageProps = {
   service: Services;
   topicsData: TopicsData | null;
+  page?: number | string;
 };

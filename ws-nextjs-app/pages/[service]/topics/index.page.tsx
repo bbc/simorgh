@@ -5,7 +5,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import { TopicsData } from './types';
 
-const TopicsPageComponent = dynamic(() => import('./TopicsPage'));
+const TopicsPageComponent = dynamic(() => import('./TopicsPageIndex'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;

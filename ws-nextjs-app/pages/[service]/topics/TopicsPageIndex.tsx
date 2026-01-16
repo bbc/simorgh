@@ -1,15 +1,13 @@
 import UsefulLinks from '#app/components/UsefulLinks';
 import { Summary } from '#app/models/types/curationData';
-import { useRouter } from 'next/router';
 import Pagination from '#app/components/Pagination';
 import styles from './index.styles';
 import { TopicsPageProps, Topic } from './types';
 
 const PAGE_SIZE = 100;
 
-const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
-  const router = useRouter();
-  const activePage = Math.max(1, Number(router.query.page)) || 1;
+const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
+  const activePage = Math.max(1, Number(page ?? 1));
   const headline = topicsData?.headline || '';
   const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
 
@@ -27,10 +25,17 @@ const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
   const end = start + PAGE_SIZE;
   const pagedSummaries = summaries.slice(start, end);
 
-  const pageXOfY = 'Page {x} of {y}';
-  const previousPage = 'Previous page';
-  const nextPage = 'Next page';
-  const page = 'Page';
+  const {
+    pageXOfY,
+    previousPage,
+    nextPage,
+    page: pageLabel,
+  } = {
+    pageXOfY: 'Page {x} of {y}',
+    previousPage: 'Previous page',
+    nextPage: 'Next page',
+    page: 'Page',
+  };
 
   return (
     <section css={styles.container}>
@@ -48,7 +53,7 @@ const TopicsPage = ({ service, topicsData }: TopicsPageProps) => {
             pageXOfY={pageXOfY}
             previousPage={previousPage}
             nextPage={nextPage}
-            page={page}
+            page={pageLabel}
           />
         )}
       </div>
