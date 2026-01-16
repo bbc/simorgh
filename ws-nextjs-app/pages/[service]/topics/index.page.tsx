@@ -9,6 +9,11 @@ const TopicsPageComponent = dynamic(() => import('./TopicsPageIndex'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const pageFromQuery = Array.isArray(context.query.page)
+    ? context.query.page[0]
+    : context.query.page;
+
+  const page = pageFromQuery ?? null;
   const variant = deriveVariant(variantFromUrl);
   const validTopics = ['afrique'];
 
@@ -21,6 +26,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: 404,
         timeOnServer: Date.now(),
         variant,
+        page,
       },
     };
   }
@@ -38,6 +44,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
         timeOnServer: Date.now(),
         pathname: `/${service}/topics`,
         topicsData,
+        page,
       },
     };
   } catch {
