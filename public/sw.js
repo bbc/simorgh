@@ -217,4 +217,4 @@ const fetchEventHandler = async event => {
   return;
 };
 
-onfetch = fetchEventHandler;
+self.addEventListener('fetch', fetchEventHandler);
