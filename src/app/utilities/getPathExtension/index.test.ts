@@ -123,4 +123,47 @@ describe('getPathExtension', () => {
       });
     });
   });
+
+  describe('isOfflinePath', () => {
+    [
+      {
+        description: 'should return true if path ends in ".offline"',
+        path: '/news/foobar.offline',
+        expectedIsOffline: true,
+      },
+      {
+        description:
+          'should return false if path contains ".offline" but does not end in it',
+        path: '/news/foobar.offlinefoo',
+        expectedIsOffline: false,
+      },
+      {
+        description:
+          'should return false if path only contains ".offline" as part of the trailing text',
+        path: '/news/foobar.fooofflinebar',
+        expectedIsOffline: false,
+      },
+      {
+        description:
+          'should return true when path ends with .offline and has renderer_env override specified',
+        path: '/news/foobar.offline?renderer_env=live',
+        expectedIsOffline: true,
+      },
+      {
+        description:
+          'should return true when path ends with .offline and has any query params specified',
+        path: '/news/foobar.offline?blah=1',
+        expectedIsOffline: true,
+      },
+      {
+        description: 'should return false if path ends in just "offline"',
+        path: '/news/foobar/offline',
+        expectedIsOffline: false,
+      },
+    ].forEach(({ description, path, expectedIsOffline }) => {
+      it(description, () => {
+        expect(getPathExtension(path).isOffline).toEqual(expectedIsOffline);
+      });
+    });
+  });
 });

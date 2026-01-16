@@ -43,6 +43,7 @@ type DocProps = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
+  isOffline: boolean;
   title: ReactElement;
 };
 
@@ -51,7 +52,7 @@ export default class AppDocument extends Document<DocProps> {
     const url = ctx.asPath || '';
     const pageType = derivePageType(url);
 
-    const { isApp, isAmp, isLite } = getPathExtension(url);
+    const { isApp, isAmp, isLite, isOffline } = getPathExtension(url);
 
     const cache = createCache({ key: 'css' });
     const { extractCritical } = createEmotionServer(cache);
@@ -89,6 +90,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      isOffline,
     };
   }
 
@@ -102,6 +104,7 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
+      isOffline,
     } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -153,6 +156,7 @@ export default class AppDocument extends Document<DocProps> {
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>
               {isApp && <meta name="robots" content="noindex" />}
+              {isOffline && <meta name="robots" content="noindex, nofollow" />}
               {title}
               {helmetMetaTags}
               {helmetLinkTags}

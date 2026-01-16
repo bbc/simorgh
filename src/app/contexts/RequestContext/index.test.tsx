@@ -68,6 +68,7 @@ const expectedOutput = {
   isNextJs: false,
   isApp: false,
   isLite: false,
+  isOffline: false,
   platform: 'amp',
   variant: 'simp',
   timeOnServer: null,

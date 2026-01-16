@@ -34,6 +34,7 @@ interface Props {
     isAmp: boolean;
     isApp?: boolean;
     isLite?: boolean;
+    isOffline?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
     serverSideExperiments: ServerSideExperiment[] | null;
@@ -64,7 +65,7 @@ export default class CustomApp extends App<Props> {
   static async getInitialProps({ ctx }: AppContext) {
     const { asPath = '' } = ctx;
 
-    const { isApp, isAmp, isLite } = getPathExtension(asPath);
+    const { isApp, isAmp, isLite, isOffline } = getPathExtension(asPath);
 
     const { service } = parseRoute(asPath) as { service: Services };
 
@@ -91,6 +92,7 @@ export default class CustomApp extends App<Props> {
         isApp,
         isAmp,
         isLite,
+        isOffline,
         isNextJs: true,
         serverSideExperiments,
         toggles,
@@ -107,6 +109,7 @@ export default class CustomApp extends App<Props> {
       isAmp,
       isApp = false,
       isLite = false,
+      isOffline = false,
       isNextJs = true,
       isAvEmbeds = false,
       serverSideExperiments = null,
@@ -147,6 +150,7 @@ export default class CustomApp extends App<Props> {
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            isOffline={isOffline}
             pageType={pageType}
             service={service}
             statusCode={status}

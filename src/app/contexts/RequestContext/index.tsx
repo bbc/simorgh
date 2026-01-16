@@ -24,6 +24,7 @@ export type RequestContextProps = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
+  isOffline: boolean;
   isNextJs: boolean;
   isUK: boolean;
   serverSideExperiments?: ServerSideExperiment[] | null;
@@ -55,6 +56,7 @@ type RequestProviderProps = {
   isAmp?: boolean;
   isApp?: boolean;
   isLite?: boolean;
+  isOffline?: boolean;
   isNextJs?: boolean;
   pageType: PageTypes;
   pathname: string;
@@ -79,6 +81,7 @@ export const RequestContextProvider = ({
   isAmp = false,
   isApp = false,
   isLite = false,
+  isOffline = false,
   isNextJs = false,
   serverSideExperiments = null,
   pageType,
@@ -107,6 +110,8 @@ export const RequestContextProvider = ({
         return 'amp';
       case isLite:
         return 'lite';
+      case isOffline:
+        return 'canonical';
       default:
         return 'canonical';
     }
@@ -130,6 +135,7 @@ export const RequestContextProvider = ({
       isAmp,
       isApp,
       isLite,
+      isOffline,
       isNextJs,
       platform,
       statsDestination,
@@ -154,6 +160,7 @@ export const RequestContextProvider = ({
       isAmp,
       isApp,
       isLite,
+      isOffline,
       isNextJs,
       serverSideExperiments,
       origin,
