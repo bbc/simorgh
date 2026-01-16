@@ -22,7 +22,7 @@ describe('OfflinePage', () => {
 
     expect(
       screen.getByText(
-        'Looks like you’re not online right now. Please check your network and reconnect. Once you’re back, just refresh the page to continue.',
+        "It seems you don't have an internet connection at the moment. Please check your connection and reload the page.",
       ),
     ).toBeInTheDocument();
   });
@@ -48,7 +48,7 @@ describe('OfflinePage', () => {
     expect(screen.getByText('You are offline')).toBeInTheDocument();
     expect(
       screen.getByText(
-        'Looks like you’re not online right now. Please check your network and reconnect. Once you’re back, just refresh the page to continue.',
+        "It seems you don't have an internet connection at the moment. Please check your connection and reload the page.",
       ),
     ).toBeInTheDocument();
   });
