@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'iyo',
       pagination: {
         page: 'Bog',
         previousPage: 'Biggii Hore',

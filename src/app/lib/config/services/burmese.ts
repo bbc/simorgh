@@ -61,6 +61,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'နှင့်',
       pagination: {
         page: 'စာမျက်နှာ',
         previousPage: 'နောက်သို့ပြန်သွားရန်',
