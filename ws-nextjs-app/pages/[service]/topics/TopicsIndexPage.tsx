@@ -43,12 +43,14 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
   };
 
   return (
-    <section css={styles.container}>
+    <main css={styles.container}>
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
           summaries={pagedSummaries}
           id={`${service}-topics`}
+          layout="single"
+          headingLevel={1}
         />
 
         {pageCount > 1 && (
@@ -62,7 +64,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
           />
         )}
       </div>
-    </section>
+    </main>
   );
 };
 export default TopicsPage;
