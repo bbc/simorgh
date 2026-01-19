@@ -16,8 +16,13 @@ const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
-  if (service === 'ws') {
-    return '[news]';
+  const customServiceAppName = {
+    ws: '[news]',
+    romania: '[news-romanian]',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
   }
 
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)

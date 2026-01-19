@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
       pagination: {
         previousPage: 'Subira inyuma',
         nextPage: 'Ibikurikira',

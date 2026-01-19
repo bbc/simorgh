@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
+      and: 'এবং',
       pagination: {
         page: 'পৃষ্ঠা',
         previousPage: 'ফিরে যাব',
