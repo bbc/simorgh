@@ -43,7 +43,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
   };
 
   return (
-    <section css={styles.container}>
+    <main css={styles.container}>
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
@@ -62,7 +62,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
           />
         )}
       </div>
-    </section>
+    </main>
   );
 };
 export default TopicsPage;
