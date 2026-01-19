@@ -35,6 +35,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
     const data = await import('#app/fixtures/topics/afrique.json');
     const topicsData: TopicsData = data.default || data;
 
+    context.res.setHeader(
+      'Cache-Control',
+      'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
+    );
+
     return {
       props: {
         service,
@@ -42,13 +47,21 @@ export const getServerSideProps: GetServerSideProps = async context => {
         pageType: TOPIC_PAGE,
         status: 200,
         timeOnServer: Date.now(),
-        pathname: `/${service}/topics`,
+        pathname: context.resolvedUrl,
         topicsData,
         page,
       },
     };
   } catch {
-    return { notFound: true };
+    context.res.statusCode = 404;
+    return {
+      props: {
+        service,
+        status: 404,
+        timeOnServer: Date.now(),
+        variant,
+      },
+    };
   }
 };
 

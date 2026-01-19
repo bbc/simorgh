@@ -14,7 +14,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
   const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
 
   const summaries = topics.map((topic: Topic) => ({
-    id: topic.topicId,
+    id: topic.id,
     title: topic.topicName,
     link: topic.topicUrl,
   })) as unknown as Summary[];

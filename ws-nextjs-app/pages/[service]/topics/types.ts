@@ -3,7 +3,7 @@ import { Services } from '#app/models/types/global';
 export type Topic = {
   topicName: string;
   topicUrl: string;
-  topicId?: string;
+  id?: string;
 };
 
 export type TopicsData = {
