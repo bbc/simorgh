@@ -6,10 +6,9 @@ const styles = {
     width: '100%',
   }),
 
-  usefulLinksWrapper: ({ palette, mq, spacings }: Theme) =>
+  usefulLinksWrapper: ({ mq, spacings }: Theme) =>
     css({
       width: '100%',
-      margin: '0 auto',
       paddingInline: `${spacings.DOUBLE}rem`,
 
       [mq.GROUP_3_MIN_WIDTH]: {
@@ -25,11 +24,6 @@ const styles = {
         maxWidth: `${pixelsToRem(1008)}rem`,
         paddingInline: `${pixelsToRem(100)}rem`,
         margin: '0 auto',
-      },
-
-      '& a': {
-        fontSize: `${pixelsToRem(18)}rem`,
-        '&:hover': { color: palette.ARCHIVE_BLUE },
       },
     }),
 };
