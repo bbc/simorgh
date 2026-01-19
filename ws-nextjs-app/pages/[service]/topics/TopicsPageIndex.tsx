@@ -49,6 +49,8 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
           title={headline}
           summaries={pagedSummaries}
           id={`${service}-topics`}
+          layout="single"
+          headingLevel={1}
         />
 
         {pageCount > 1 && (

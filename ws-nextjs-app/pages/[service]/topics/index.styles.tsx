@@ -6,7 +6,7 @@ const styles = {
     width: '100%',
   }),
 
-  usefulLinksWrapper: ({ fontSizes, palette, mq, spacings }: Theme) =>
+  usefulLinksWrapper: ({ palette, mq, spacings }: Theme) =>
     css({
       width: '100%',
       margin: '0 auto',
@@ -25,14 +25,6 @@ const styles = {
         maxWidth: `${pixelsToRem(1008)}rem`,
         paddingInline: `${pixelsToRem(100)}rem`,
         margin: '0 auto',
-      },
-
-      '& ul': {
-        gridTemplateColumns: '1fr !important',
-      },
-
-      '& h2': {
-        ...fontSizes.trafalgar,
       },
 
       '& a': {
