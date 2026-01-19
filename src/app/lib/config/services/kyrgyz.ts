@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'жана',
       pagination: {
         page: 'бет',
         previousPage: 'Артка',

@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'እና',
       pagination: {
         previousPage: 'ናይ ሕሉፍ',
         nextPage: 'ዝቕጽል',
