@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',
         long: 'Tori wey long',
