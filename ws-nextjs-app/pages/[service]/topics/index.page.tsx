@@ -3,11 +3,25 @@ import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { TopicsData } from './types';
+import { TopicsData, Topic } from './types';
 
-const TopicsPageComponent = dynamic(() => import('./TopicsPageIndex'));
+const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  // eslint-disable-next-line no-console
+  console.log('getServerSideProps context:', context);
+  function filterValidTopics(topics: Topic[]): Topic[] {
+    return topics.filter((topic, idx) => {
+      const hasAll = topic.topicName && topic.topicUrl && topic.id;
+      if (!hasAll) {
+        // eslint-disable-next-line no-console
+        console.log(
+          `Topic at index ${idx} is missing required attributes: ${['topicName', 'topicUrl', 'id'].filter(attr => !topic[attr]).join(', ')}`,
+        );
+      }
+      return hasAll;
+    });
+  }
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
   const pageFromQuery = Array.isArray(context.query.page)
     ? context.query.page[0]
@@ -15,9 +29,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const page = pageFromQuery ?? null;
   const variant = deriveVariant(variantFromUrl);
-  const validTopics = ['afrique'];
+  const validServices = ['afrique'];
 
-  if (!validTopics.includes(service)) {
+  if (!validServices.includes(service)) {
     context.res.statusCode = 404;
 
     return {
@@ -33,7 +47,14 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   try {
     const data = await import('#app/fixtures/topics/afrique.json');
-    const topicsData: TopicsData = data.default || data;
+    const rawTopicsData = data?.default || data;
+    const filteredTopics = filterValidTopics(rawTopicsData.topics);
+    const topicsData: TopicsData = {
+      ...rawTopicsData,
+      topics: filteredTopics,
+    };
+
+    console.log('Filtered topics:', topicsData);
 
     context.res.setHeader(
       'Cache-Control',
