@@ -52,7 +52,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
           {
             from: 'public/**/*',
             globOptions: {
-              ignore: ['**/images/**'],
+              ignore: ['**/images/**', '**/sw.js'],
             },
           },
         ],

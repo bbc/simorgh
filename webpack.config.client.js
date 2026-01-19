@@ -96,6 +96,7 @@ module.exports = ({
       moduleIds: 'deterministic',
       minimizer: [
         new TerserPlugin({
+          exclude: /sw\.js$/, // we don't want to minify the service worker file
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
