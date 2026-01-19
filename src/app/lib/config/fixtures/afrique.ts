@@ -4,6 +4,7 @@ const topics: TopicsData = {
   headline: 'Sujets',
   topics: [
     {
+      id: 'cqywjv1rwgxt',
       topicName: '100 Femmes',
       topicUrl: '/afrique/topics/cqywjv1rwgxt',
     },
