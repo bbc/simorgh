@@ -96,7 +96,6 @@ module.exports = ({
       moduleIds: 'deterministic',
       minimizer: [
         new TerserPlugin({
-          exclude: /sw\.js$/, // we don't want to minify the service worker file
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
@@ -192,9 +191,13 @@ module.exports = ({
     },
     plugins: [
       // copy static files otherwise untouched by Webpack, e.g. favicon
-      new CopyWebpackPlugin({
-        patterns: [{ from: 'public' }],
-      }),
+      ...(BUNDLE_TYPE === 'modern'
+        ? [
+            new CopyWebpackPlugin({
+              patterns: [{ from: 'public' }],
+            }),
+          ]
+        : []),
       new DuplicatePackageCheckerPlugin({
         // Emit compilation warning or error? (Default: `false`)
         emitError: true,
