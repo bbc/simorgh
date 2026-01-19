@@ -30,7 +30,6 @@ const styles = {
       '& a': {
         fontSize: `${pixelsToRem(18)}rem`,
         '&:hover': { color: palette.ARCHIVE_BLUE },
-        '&:visited': { color: palette.GREY_6 },
       },
     }),
 };
