@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'e',
       readTime: {
         readTimePrefix: 'Tempo de leitura',
         long: 'Leitura longa',

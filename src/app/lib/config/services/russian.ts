@@ -109,6 +109,7 @@ const headerFooterTranslations = {
 export const service: DefaultServiceConfig = {
   default: {
     translations: {
+      and: 'и',
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
     },

@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  and?: string;
   pagination?: {
     page?: string;
     previousPage: string;

@@ -58,6 +58,7 @@ const defaultCyrillicConfig = {
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
   translations: {
+    and: 'ва',
     readTime: {
       readTimePrefix: 'Ўқилиш вақти',
       long: 'Узун мақола',
@@ -412,6 +413,7 @@ export const service: UzbekConfig = {
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
     translations: {
+      and: 'va',
       readTime: {
         readTimePrefix: "O'qilish vaqti",
         long: 'Uzun maqola',

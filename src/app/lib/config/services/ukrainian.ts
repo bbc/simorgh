@@ -63,6 +63,7 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    and: 'i',
     pagination: {
       previousPage: 'Повернутися',
       nextPage: 'Наступна',
