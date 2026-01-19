@@ -3,8 +3,8 @@ import { Summary } from '#app/models/types/curationData';
 import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
+import { TopicsPageProps, Topic } from '#app/lib/config/fixtures/types';
 import styles from './index.styles';
-import { TopicsPageProps, Topic } from './types';
 
 const PAGE_SIZE = 100;
 

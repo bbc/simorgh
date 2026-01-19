@@ -3,25 +3,17 @@ import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { TopicsData, Topic } from './types';
+import afriqueTopics from '#app/lib/config/fixtures/afrique';
+import hausaTopics from '#app/lib/config/fixtures/hausa';
+
+const fixtureMap: Record<string, TopicsData> = {
+  afrique: afriqueTopics,
+  hausa: hausaTopics,
+};
 
 const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  // eslint-disable-next-line no-console
-  console.log('getServerSideProps context:', context);
-  function filterValidTopics(topics: Topic[]): Topic[] {
-    return topics.filter((topic, idx) => {
-      const hasAll = topic.topicName && topic.topicUrl && topic.id;
-      if (!hasAll) {
-        // eslint-disable-next-line no-console
-        console.log(
-          `Topic at index ${idx} is missing required attributes: ${['topicName', 'topicUrl', 'id'].filter(attr => !topic[attr]).join(', ')}`,
-        );
-      }
-      return hasAll;
-    });
-  }
   const { service, variant: variantFromUrl } = context.query as PageDataParams;
   const pageFromQuery = Array.isArray(context.query.page)
     ? context.query.page[0]
@@ -29,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const page = pageFromQuery ?? null;
   const variant = deriveVariant(variantFromUrl);
-  const validServices = ['afrique'];
+  const validServices = ['afrique', 'hausa'];
 
   if (!validServices.includes(service)) {
     context.res.statusCode = 404;
@@ -46,16 +38,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   }
 
   try {
-    const data = await import('#app/fixtures/topics/afrique.json');
-    const rawTopicsData = data?.default || data;
-    const filteredTopics = filterValidTopics(rawTopicsData.topics);
-    const topicsData: TopicsData = {
-      ...rawTopicsData,
-      topics: filteredTopics,
-    };
-
-    console.log('Filtered topics:', topicsData);
-
+    const topicsData = fixtureMap[service];
     context.res.setHeader(
       'Cache-Control',
       'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
