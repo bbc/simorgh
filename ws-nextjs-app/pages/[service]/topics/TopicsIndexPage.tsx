@@ -1,10 +1,10 @@
 import UsefulLinks from '#app/components/UsefulLinks';
-import { Summary } from '#app/models/types/curationData';
 import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
-import { TopicsPageProps, Topic } from '#app/lib/config/fixtures/types';
 import MetadataContainer from '#app/components/Metadata';
+import { TopicsPageProps } from '#app/lib/config/fixtures/types';
+
 import styles from './index.styles';
 
 const PAGE_SIZE = 100;
@@ -14,21 +14,9 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
 
   const activePage = Math.max(1, Number(page ?? 1));
   const headline = topicsData?.headline || '';
-  const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
-
-  const summaries = topics.map((topic: Topic) => ({
-    id: topic.id,
-    title: topic.topicName,
-    link: topic.topicUrl,
-  })) as unknown as Summary[];
-
-  const totalItems = summaries.length;
+  const { summaries, totalItems } = topicsData;
   const pageCount = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
   const safeActivePage = Math.min(activePage, pageCount);
-
-  const start = (safeActivePage - 1) * PAGE_SIZE;
-  const end = start + PAGE_SIZE;
-  const pagedSummaries = summaries.slice(start, end);
 
   const {
     pageXOfY,
@@ -61,7 +49,7 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
-          summaries={pagedSummaries}
+          summaries={summaries}
           id={`${service}-topics`}
           layout="single"
           headingLevel={1}

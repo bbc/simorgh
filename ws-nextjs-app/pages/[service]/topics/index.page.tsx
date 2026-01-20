@@ -3,11 +3,11 @@ import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { TopicsData } from '#app/lib/config/fixtures/types';
+import { TopicsFixtureData, Topic } from '#app/lib/config/fixtures/types';
 import afriqueTopics from '#app/lib/config/fixtures/afrique';
 import hausaTopics from '#app/lib/config/fixtures/hausa';
 
-const fixtureMap: Record<string, TopicsData> = {
+const fixtureMap: Record<string, TopicsFixtureData> = {
   afrique: afriqueTopics,
   hausa: hausaTopics,
 };
@@ -39,11 +39,26 @@ export const getServerSideProps: GetServerSideProps = async context => {
   }
 
   try {
-    const topicsData = fixtureMap[service];
+    const topicsData: TopicsFixtureData = fixtureMap[service];
     context.res.setHeader(
       'Cache-Control',
       'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
     );
+
+    const PAGE_SIZE = 100;
+    const activePage = Math.max(1, Number(page ?? 1));
+    const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
+    const totalItems = topics.length;
+    const pageCount = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
+    const safeActivePage = Math.min(activePage, pageCount);
+    const start = (safeActivePage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    const pagedTopics = topics.slice(start, end);
+    const topicSummaries = pagedTopics.map((topic: Topic) => ({
+      id: topic.id,
+      title: topic.topicName,
+      link: topic.topicUrl,
+    }));
 
     return {
       props: {
@@ -53,7 +68,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: 200,
         timeOnServer: Date.now(),
         pathname: context.resolvedUrl,
-        topicsData,
+        topicsData: {
+          headline: topicsData.headline,
+          summaries: topicSummaries,
+          totalItems,
+        },
         page,
       },
     };

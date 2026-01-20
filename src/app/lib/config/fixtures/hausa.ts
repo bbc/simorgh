@@ -1,6 +1,6 @@
-import { TopicsData } from './types';
+import { TopicsFixtureData } from './types';
 
-const topics: TopicsData = {
+const topics: TopicsFixtureData = {
   headline: 'Batutuwa',
   topics: [
     {
