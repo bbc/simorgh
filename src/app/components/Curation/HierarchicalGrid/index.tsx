@@ -5,6 +5,7 @@ import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import MediaLoader from '../../MediaLoader';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import formatDuration from '../../../lib/utilities/formatDuration';
 import Promo from '../../../legacy/components/Promo';
@@ -88,6 +89,8 @@ const HiearchicalGrid = ({
             (promo.type === 'video' && `${videoTranslation}, `) ||
             (promo.type === 'photogallery' && `${photoGalleryTranslation}, `);
           const { isLive } = promo;
+          const isLiveTVStream =
+            promo?.mediaCollection?.[0].type === 'liveMedia';
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
           const clickTrackerHandler = getClickTrackerHandler(
@@ -102,79 +105,89 @@ const HiearchicalGrid = ({
                 getStyles(promoItems.length, i, mq),
               ]}
             >
-              <Promo className="">
-                <Promo.Image
-                  useLargeImages={useLargeImages}
-                  src={promo.imageUrl || null}
-                  alt={promo.imageAlt}
-                  lazyLoad={lazyLoadImages}
-                  fetchPriority={fetchpriority}
-                  isAmp={isAmp}
-                  isPortraitImage={promo.isPortraitImage}
+              {isLiveTVStream ? (
+                <section
+                  role="region"
+                  aria-labelledby="bbcMediaPlayer0"
+                  data-testid="live-tv-media-collection"
                 >
-                  {isMedia && (
-                    <Promo.MediaIcon type={promo.type}>
-                      {showDuration ? promo.duration : ''}
-                    </Promo.MediaIcon>
-                  )}
-                </Promo.Image>
-                <Promo.Heading
-                  as={`h${headingLevel}`}
-                  css={(theme: Theme) => ({
-                    color: theme.palette.GREY_10,
-                    ...(i === 0 && theme.fontSizes.paragon),
-                  })}
-                >
-                  {isMedia ? (
-                    <Promo.A
-                      href={promo.link}
-                      aria-labelledby={promo.id}
-                      {...clickTrackerHandler}
-                    >
-                      <span id={promo.id} role="text">
-                        <VisuallyHiddenText data-testid="visually-hidden-text">
-                          {typeTranslated}
-                        </VisuallyHiddenText>
-                        <Promo.MediaIcon
-                          className="inline-icon"
-                          type={promo.type}
-                          css={styles.inlineIcon}
-                        />
-                        {promo.title}
-                        {showDuration && (
-                          <VisuallyHiddenText>
-                            {durationString}
+                  <MediaLoader blocks={promo?.mediaCollection} />
+                </section>
+              ) : (
+                <Promo className="">
+                  <Promo.Image
+                    useLargeImages={useLargeImages}
+                    src={promo.imageUrl || null}
+                    alt={promo.imageAlt}
+                    lazyLoad={lazyLoadImages}
+                    fetchPriority={fetchpriority}
+                    isAmp={isAmp}
+                    isPortraitImage={promo.isPortraitImage}
+                  >
+                    {isMedia && (
+                      <Promo.MediaIcon type={promo.type}>
+                        {showDuration ? promo.duration : ''}
+                      </Promo.MediaIcon>
+                    )}
+                  </Promo.Image>
+                  <Promo.Heading
+                    as={`h${headingLevel}`}
+                    css={(theme: Theme) => ({
+                      color: theme.palette.GREY_10,
+                      ...(i === 0 && theme.fontSizes.paragon),
+                    })}
+                  >
+                    {isMedia ? (
+                      <Promo.A
+                        href={promo.link}
+                        aria-labelledby={promo.id}
+                        {...clickTrackerHandler}
+                      >
+                        <span id={promo.id} role="text">
+                          <VisuallyHiddenText data-testid="visually-hidden-text">
+                            {typeTranslated}
                           </VisuallyHiddenText>
-                        )}
-                      </span>
-                    </Promo.A>
-                  ) : (
-                    <Promo.A href={promo.link} {...clickTrackerHandler}>
-                      {isLive ? (
-                        <LiveLabel
-                          {...(isFirstPromo
-                            ? {
-                                className: 'first-promo',
-                              }
-                            : undefined)}
-                        >
+                          <Promo.MediaIcon
+                            className="inline-icon"
+                            type={promo.type}
+                            css={styles.inlineIcon}
+                          />
                           {promo.title}
-                        </LiveLabel>
-                      ) : (
-                        promo.title
-                      )}
-                    </Promo.A>
-                  )}
-                </Promo.Heading>
-                <Promo.Body className="promo-paragraph" css={styles.body}>
-                  {promo.description}
-                </Promo.Body>
-                {!isLive ? (
-                  <Promo.Timestamp className="promo-timestamp">
-                    {promo.lastPublished}
-                  </Promo.Timestamp>
-                ) : null}
-              </Promo>
+                          {showDuration && (
+                            <VisuallyHiddenText>
+                              {durationString}
+                            </VisuallyHiddenText>
+                          )}
+                        </span>
+                      </Promo.A>
+                    ) : (
+                      <Promo.A href={promo.link} {...clickTrackerHandler}>
+                        {isLive ? (
+                          <LiveLabel
+                            {...(isFirstPromo
+                              ? {
+                                  className: 'first-promo',
+                                }
+                              : undefined)}
+                          >
+                            {promo.title}
+                          </LiveLabel>
+                        ) : (
+                          promo.title
+                        )}
+                      </Promo.A>
+                    )}
+                  </Promo.Heading>
+                  <Promo.Body className="promo-paragraph" css={styles.body}>
+                    {promo.description}
+                  </Promo.Body>
+                  {!isLive ? (
+                    <Promo.Timestamp className="promo-timestamp">
+                      {promo.lastPublished}
+                    </Promo.Timestamp>
+                  ) : null}
+                </Promo>
+              )}
             </li>
           );
         })}
