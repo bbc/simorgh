@@ -13,7 +13,6 @@ Testing
 1. _List the steps required to test this PR._
 
 ## Useful Links
-======
  - [Coding Standards](https://github.com/bbc/simorgh/blob/latest/docs/Coding-Standards/README.md)
  - [Repository use guidelines](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/repository-guidelines.md)
 - _Add Links to useful resources related to this PR if applicable._
