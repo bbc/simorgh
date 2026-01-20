@@ -36,7 +36,7 @@ const PortraitVideoCarousel = ({
   const [videoOverlayContainer, setVideoOverlayContainer] =
     useState<HTMLElement | null>(null);
   const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
-  console.log('reloaded');
+  console.log('PV CAROUSEL: reloaded');
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -78,6 +78,10 @@ const PortraitVideoCarousel = ({
   };
   let shareUrlPath;
   if (selectedVideoIndex !== null) {
+    console.log(
+      'blocks',
+      blocks?.[selectedVideoIndex]?.model?.video?.id.split(':'),
+    );
     shareUrlPath = blocks?.[selectedVideoIndex]?.model?.video?.id.split(':')[4];
   }
 

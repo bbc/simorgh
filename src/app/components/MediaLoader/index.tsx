@@ -132,12 +132,12 @@ const MediaContainer = ({
     if (!playerElementRef.current) return;
 
     if (playerKeyRef.current === playerKey) {
-      console.log('RETURN');
+      console.log('Media Loader player ref already existsRETURN');
       return;
     }
 
     playerKeyRef.current = playerKey;
-    console.log('INITIALISE PLAYER');
+    console.log('Media Loader: INITIALISE PLAYER');
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
@@ -233,13 +233,6 @@ const MediaContainer = ({
       <noscript>
         <Message message={noJsMessage} />
       </noscript>
-      {/* {videoOverlayContainer &&
-        createPortal(
-          <PluginCacheProvider container={videoOverlayContainer}>
-            <VideoOverlay clipPID={clip.current} />
-          </PluginCacheProvider>,
-          videoOverlayContainer,
-        )} */}
     </div>
   );
 };

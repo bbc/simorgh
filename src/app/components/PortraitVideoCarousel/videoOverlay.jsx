@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, use } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { resetCss } from './resetCss';
 
 const convertStringToNumber = val => parseInt(val, 10);
@@ -81,14 +82,17 @@ const ShareToolWrapper = styled.div`
   pointer-events: auto;
 `;
 
-const ShareToolComponent = shareUrlPath => {
+const ShareToolComponent = (shareUrlPath, service) => {
   const [shareUrl, setShareUrl] = useState();
 
   useEffect(() => {
-    const baseUrl = 'window.location.host';
-    setShareUrl(`https://${baseUrl}/articles/${shareUrlPath}`);
-    console.log('baseUrl:', baseUrl);
-    console.log('shareUrl:', shareUrl);
+    setShareUrl(`https://${service}/articles/${shareUrlPath}`);
+    console.log(
+      'VIDEO OVERLAY Share tool: service:',
+      service,
+      'shareUrl:',
+      shareUrl,
+    );
   }, [shareUrlPath]);
   return (
     <ShareToolWrapper>
@@ -100,7 +104,9 @@ const ShareToolComponent = shareUrlPath => {
 };
 
 const VideoOverlay = shareUrlPath => {
-  console.log(shareUrlPath);
+  console.log('VIDEO OVERLAY: shareUrlPath:', shareUrlPath);
+  const { service } = use(ServiceContext);
+
   return (
     <>
       {/*
@@ -116,7 +122,7 @@ const VideoOverlay = shareUrlPath => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents className="video-overlay-footer-contents">
-            <ShareToolComponent shareUrlPath={shareUrlPath}>
+            <ShareToolComponent shareUrlPath={shareUrlPath} service={service}>
               SHARE
             </ShareToolComponent>
           </VideoOverlayFooterContents>
