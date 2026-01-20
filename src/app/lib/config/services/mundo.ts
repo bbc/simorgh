@@ -88,6 +88,7 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      and: 'y',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',
