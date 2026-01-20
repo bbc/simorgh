@@ -15,7 +15,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
-import HideOnScroll from './HideOnScroll';
+import StickyishNav from './StickyishNav';
 
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
@@ -93,7 +93,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   if (isApp) return null;
 
   return (
-    <HideOnScroll>
+    <StickyishNav>
       <header role="banner" lang={serviceLang}>
         {isAmp ? (
           <Header
@@ -113,7 +113,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
           propsForTopBarOJComponent={propsForTopBarOJComponent}
         />
       </header>
-    </HideOnScroll>
+    </StickyishNav>
   );
 };
 
