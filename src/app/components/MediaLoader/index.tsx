@@ -12,7 +12,6 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { createPortal } from 'react-dom';
 import {
   BumpType,
   EventMapping,
@@ -31,8 +30,6 @@ import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
 import Message from './Message';
-import VideoOverlay from '../PortraitVideoCarousel/videoOverlay';
-import { PluginCacheProvider } from '../PortraitVideoCarousel/pluginCacheProvider';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,

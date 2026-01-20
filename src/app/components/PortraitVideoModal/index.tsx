@@ -196,7 +196,7 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
-  setVideoOverlayContainerRef: React.RefObject<
+  setVideoOverlayContainerRef?: React.RefObject<
     React.Dispatch<React.SetStateAction<HTMLElement | null>>
   >;
 }
@@ -236,7 +236,6 @@ const PortraitVideoModal = ({
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
-  const modalOverlayRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
