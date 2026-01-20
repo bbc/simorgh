@@ -190,6 +190,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: continueReadingButtonToggle } = useToggle(
     'continueReadingButton',
   );
+  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
 
   const {
     palette: { GREY_2 },
@@ -323,7 +324,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
-    !pageData?.secondaryColumn?.topStories?.length;
+    !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
   return (
     <div css={styles.pageWrapper}>

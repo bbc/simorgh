@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'અને',
       pagination: {
         previousPage: 'આ પહેલાં',
         nextPage: 'આ પછી',

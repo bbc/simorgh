@@ -150,6 +150,7 @@ export const service: SerbianConfig = {
       variant: 'cyr',
     },
     translations: {
+      and: 'i',
       readTime: {
         readTimePrefix: 'Vreme čitanja',
         long: 'članak',
@@ -562,6 +563,7 @@ export const service: SerbianConfig = {
       variant: 'lat',
     },
     translations: {
+      and: 'и',
       readTime: {
         readTimePrefix: 'Време читања',
         long: 'Чланак',

@@ -2,7 +2,6 @@ import { useEffect, useState, use } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import { enforceLegacyDestinationForJapanese } from '#app/lib/analyticsUtils';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
@@ -13,6 +12,7 @@ import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -28,9 +28,7 @@ const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={enforceLegacyDestinationForJapanese(
-          getNoScriptTrackingPixelUrl({ reverbParams }),
-        )}
+        src={getNoScriptTrackingPixelUrl({ reverbParams })}
       />
     </noscript>
   );
@@ -47,6 +45,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
+  usePWAOfflineTracking();
 
   const [reverbBeaconConfig] = useState(reverbParams);
 
@@ -54,12 +53,9 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
     if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
   }, [reverbBeaconConfig]);
 
-  const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
-    reverbUrlHelper.getLitePageViewUrl(reverbParams),
-  );
-  const operaMiniPageViewReverbURL = enforceLegacyDestinationForJapanese(
-    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
-  );
+  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+  const operaMiniPageViewReverbURL =
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams);
 
   return (
     <>
