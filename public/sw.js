@@ -13,7 +13,7 @@ let isPWADeviceOffline = false;
 // --------------------
 // Helper Functions
 // --------------------
-const loggerEnabled = true;
+const loggerEnabled = false;
 const logger = (...args) => {
   if (!loggerEnabled) return;
   // eslint-disable-next-line no-console
