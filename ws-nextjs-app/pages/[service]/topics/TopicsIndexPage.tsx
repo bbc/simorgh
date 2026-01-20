@@ -4,11 +4,14 @@ import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
 import { TopicsPageProps, Topic } from '#app/lib/config/fixtures/types';
+import MetadataContainer from '#app/components/Metadata';
 import styles from './index.styles';
 
 const PAGE_SIZE = 100;
 
 const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
+  const { translations, lang } = useContext(ServiceContext);
+
   const activePage = Math.max(1, Number(page ?? 1));
   const headline = topicsData?.headline || '';
   const topics = Array.isArray(topicsData?.topics) ? topicsData.topics : [];
@@ -27,8 +30,6 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
   const end = start + PAGE_SIZE;
   const pagedSummaries = summaries.slice(start, end);
 
-  const { translations } = useContext(ServiceContext);
-
   const {
     pageXOfY,
     previousPage,
@@ -42,8 +43,21 @@ const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
     ...translations?.pagination,
   };
 
+  const translatedPage = pageXOfY
+    .replace('{x}', String(safeActivePage))
+    .replace('{y}', String(pageCount));
+
+  const seoPaginatedTitle = `${headline}, ${translatedPage}`;
+  const metadataTitle = activePage >= 2 ? seoPaginatedTitle : headline;
+
   return (
     <main css={styles.container}>
+      <MetadataContainer
+        title={metadataTitle}
+        openGraphType="website"
+        hasAmpPage={false}
+        lang={lang}
+      />
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
