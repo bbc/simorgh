@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
+import { TopicsData } from '#app/lib/config/fixtures/types';
 import afriqueTopics from '#app/lib/config/fixtures/afrique';
 import hausaTopics from '#app/lib/config/fixtures/hausa';
 
