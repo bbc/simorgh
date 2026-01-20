@@ -12,6 +12,7 @@ import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
@@ -44,6 +45,7 @@ const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
 
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
+  usePWAOfflineTracking();
 
   const [reverbBeaconConfig] = useState(reverbParams);
 
