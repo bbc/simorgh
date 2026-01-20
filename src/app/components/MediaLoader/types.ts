@@ -78,7 +78,7 @@ export type PlayerConfig = {
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
   plugins?: {
-    toLoad: { html: string; playerOnly?: boolean; data: any }[];
+    toLoad: { html: string; playerOnly?: boolean; data?: any }[];
   };
 };
 
@@ -168,7 +168,7 @@ export type Player = {
     parameters?: {
       name: string;
       data: {
-        adTag: string;
+        adTag?: string;
       };
     },
   ) => void;
@@ -366,5 +366,4 @@ export type BuildConfigProps = {
   adsEnabled?: boolean;
   showAdsBasedOnLocation?: boolean;
   embedded?: boolean;
-  setVideoOverlayContainer?: any;
 };

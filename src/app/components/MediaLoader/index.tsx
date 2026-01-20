@@ -1,4 +1,4 @@
-import { use, useEffect, useMemo, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -12,6 +12,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { createPortal } from 'react-dom';
 import {
   BumpType,
   EventMapping,
@@ -30,6 +31,8 @@ import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
 import Message from './Message';
+import VideoOverlay from '../PortraitVideoCarousel/videoOverlay';
+import { PluginCacheProvider } from '../PortraitVideoCarousel/pluginCacheProvider';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   MEDIA_ARTICLE_PAGE,
@@ -119,6 +122,8 @@ const MediaContainer = ({
   noJsMessage,
   eventMapping,
 }: MediaContainerProps) => {
+  const [videoOverlayContainer, setVideoOverlayContainer] = useState();
+  const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
 
@@ -183,7 +188,18 @@ const MediaContainer = ({
                 }
               });
             }
-
+            if (setVideoOverlayContainerRef.current) {
+              mediaPlayer.loadPlugin(
+                {
+                  html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
+                  playerOnly: true as any, // do not enable this plugin for old J2 version of the SMP player due to different UI },
+                  waitOnPluginLoad: true as any,
+                },
+                {
+                  setPluginContainer: setVideoOverlayContainerRef.current,
+                } as any,
+              );
+            }
             mediaPlayer.load();
           };
 
@@ -205,6 +221,13 @@ const MediaContainer = ({
       <noscript>
         <Message message={noJsMessage} />
       </noscript>
+      {videoOverlayContainer &&
+        createPortal(
+          <PluginCacheProvider container={videoOverlayContainer}>
+            <VideoOverlay />
+          </PluginCacheProvider>,
+          videoOverlayContainer,
+        )}
     </div>
   );
 };
@@ -215,7 +238,6 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
-  setVideoOverlayContainer?: any;
 };
 
 const MediaLoader = ({
@@ -224,7 +246,6 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
-  setVideoOverlayContainer,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -262,7 +283,6 @@ const MediaLoader = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
-    setVideoOverlayContainer,
   });
 
   if (isLite) return null;

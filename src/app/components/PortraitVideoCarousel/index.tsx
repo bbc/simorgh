@@ -1,4 +1,4 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -14,8 +14,6 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
-import { PluginCacheProvider } from './pluginCacheProvider';
-import VideoOverlay from './videoOverlay';
 
 type PortraitVideoCarouselProps = {
   title: string;
@@ -33,20 +31,7 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
-  const [videoOverlayContainer, setVideoOverlayContainer] = useState();
 
-  const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
-  const count = useRef(0);
-
-  useEffect(() => {
-    count.current += 1;
-    console.log(
-      'PortraitVideoCarousel rendered times: ',
-      count.current,
-      videoOverlayContainer,
-    );
-  });
-  console.log('CONTAINER ', videoOverlayContainer);
   const { isLite, nonce } = use(RequestContext);
 
   // EXPERIMENT: Homepage Portrait Video 2
@@ -137,16 +122,8 @@ const PortraitVideoCarousel = ({
               onClose={handleCloseModal}
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
-              setVideoOverlayContainer={setVideoOverlayContainerRef}
             />,
             document.body,
-          )}
-        {videoOverlayContainer &&
-          createPortal(
-            <PluginCacheProvider container={videoOverlayContainer}>
-              <VideoOverlay />
-            </PluginCacheProvider>,
-            videoOverlayContainer,
           )}
       </section>
     </>

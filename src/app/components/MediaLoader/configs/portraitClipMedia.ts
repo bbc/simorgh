@@ -13,7 +13,6 @@ import {
 export default ({
   blocks,
   basePlayerConfig,
-  setVideoOverlayContainer,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model }: PortraitClipMediaBlock =
     filterForBlockType(blocks, 'portraitClipMedia') ?? {};
@@ -46,16 +45,6 @@ export default ({
       isMobile = false;
     }
   }
-
-  // useEffect(() => {
-  //   console.log('in the effect ', setVideoOverlayContainer);
-  //   setVideoOverlayContainerRef.current = setVideoOverlayContainer;
-  // }, [id]);
-  console.log(
-    'setVideoOverlayContainerRef',
-    setVideoOverlayContainer,
-    setVideoOverlayContainer.current,
-  );
   return {
     mediaType: 'video',
     playerConfig: {
@@ -77,17 +66,6 @@ export default ({
           ],
         },
       }),
-      plugins: {
-        toLoad: [
-          {
-            html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
-            playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI
-            data: {
-              setPluginContainer: setVideoOverlayContainer.current,
-            },
-          },
-        ],
-      },
       ui: {
         ...basePlayerConfig.ui,
         swipable: {

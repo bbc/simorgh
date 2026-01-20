@@ -1,5 +1,5 @@
 import { Global } from '@emotion/react';
-import { use, useEffect, useMemo, useRef } from 'react';
+import { use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -196,7 +196,6 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
-  setVideoOverlayContainer?: any;
 }
 
 const PortraitVideoModal = ({
@@ -204,7 +203,6 @@ const PortraitVideoModal = ({
   onClose,
   selectedVideoIndex,
   eventTrackingData,
-  setVideoOverlayContainer,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -288,93 +286,84 @@ const PortraitVideoModal = ({
     };
   }, [onClose]);
 
-  return useMemo(
-    () => (
-      <>
-        <Global styles={styles.bodyOverflowHidden} />
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={modalLabel}
-          css={styles.modal}
-          id="portrait-video-modal-container"
-          {...viewTracker}
+  return (
+    <>
+      <Global styles={styles.bodyOverflowHidden} />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={modalLabel}
+        css={styles.modal}
+        id="portrait-video-modal-container"
+        {...viewTracker}
+      >
+        <button
+          ref={closeButtonRef}
+          type="button"
+          data-testid="close-modal-button"
+          css={styles.closeButton}
+          className="focusIndicatorInvert"
+          onClick={onClose}
         >
+          {navigationIcons.cross}
+          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
+        </button>
+        {/* Navigation Buttons */}
+        <div css={styles.navButtonColumn}>
           <button
-            ref={closeButtonRef}
+            id="previous-video-button"
             type="button"
-            data-testid="close-modal-button"
-            css={styles.closeButton}
+            onClick={() => handlePrevNextVideo('previous')}
+            css={styles.navButton}
+            aria-label="Previous video"
+            data-testid="previous-video-button"
             className="focusIndicatorInvert"
-            onClick={onClose}
           >
-            {navigationIcons.cross}
-            <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
+            <UpArrowIcon />
           </button>
-          {/* Navigation Buttons */}
-          <div css={styles.navButtonColumn}>
-            <button
-              id="previous-video-button"
-              type="button"
-              onClick={() => handlePrevNextVideo('previous')}
-              css={styles.navButton}
-              aria-label="Previous video"
-              data-testid="previous-video-button"
-              className="focusIndicatorInvert"
-            >
-              <UpArrowIcon />
-            </button>
-            <button
-              id="next-video-button"
-              type="button"
-              onClick={() => handlePrevNextVideo('next')}
-              css={styles.navButton}
-              aria-label="Next video"
-              data-testid="next-video-button"
-              className="focusIndicatorInvert"
-            >
-              <DownArrowIcon />
-            </button>
-          </div>
-          <MediaLoader
-            css={styles.mediaWrapper}
-            blocks={[blocks?.[selectedVideoIndex]]}
-            setVideoOverlayContainer={setVideoOverlayContainer}
-            eventMapping={{
-              playlistLoaded: e => playlistLoadedCallback(e, blocks),
-              pluginLoaded: pluginLoadedCallback,
-              fullscreenExit: onClose,
-              statsNavigation: e =>
-                statsNavigationCallback(
-                  e,
-                  blocks,
-                  eventTrackingData,
-                  swipeTracker,
-                ),
-              pause: e =>
-                playbackEndedCallback(
-                  e,
-                  blocks,
-                  eventTrackingData,
-                  swipeTracker,
-                ),
-            }}
-          />
           <button
-            ref={endOfContentButtonRef}
+            id="next-video-button"
             type="button"
-            data-testid="close-modal-visually-hidden"
-            css={styles.visuallyHiddenCloseButton}
-            onClick={onClose}
+            onClick={() => handlePrevNextVideo('next')}
+            css={styles.navButton}
+            aria-label="Next video"
+            data-testid="next-video-button"
             className="focusIndicatorInvert"
-            aria-label="End of content. Close"
           >
-            {endOfContentClose}
+            <DownArrowIcon />
           </button>
         </div>
-      </>
-    ),
-    [],
+        <MediaLoader
+          css={styles.mediaWrapper}
+          blocks={[blocks?.[selectedVideoIndex]]}
+          eventMapping={{
+            playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            pluginLoaded: pluginLoadedCallback,
+            fullscreenExit: onClose,
+            statsNavigation: e =>
+              statsNavigationCallback(
+                e,
+                blocks,
+                eventTrackingData,
+                swipeTracker,
+              ),
+            pause: e =>
+              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+          }}
+        />
+        <button
+          ref={endOfContentButtonRef}
+          type="button"
+          data-testid="close-modal-visually-hidden"
+          css={styles.visuallyHiddenCloseButton}
+          onClick={onClose}
+          className="focusIndicatorInvert"
+          aria-label="End of content. Close"
+        >
+          {endOfContentClose}
+        </button>
+      </div>
+    </>
   );
 };
 
