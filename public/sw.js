@@ -13,12 +13,6 @@ let isPWADeviceOffline = false;
 // --------------------
 // Helper Functions
 // --------------------
-const loggerEnabled = false;
-const logger = (...args) => {
-  if (!loggerEnabled) return;
-  // eslint-disable-next-line no-console
-  console.log(`[SW ${version}]`, ...args);
-};
 
 const getServiceFromUrl = url => new URL(url).pathname.split('/')[1];
 const getOfflinePageUrl = service => `/${service}/offline`;
@@ -29,7 +23,6 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    logger(`Failed to cache ${url}:`, err);
     return null;
   }
 };
@@ -46,8 +39,6 @@ const cacheOfflinePageAndResources = async service => {
   const resp = await cacheResource(cache, offlinePageUrl);
   if (!resp || !resp.ok) return;
 
-  logger(`Cached offline page for ${service}`);
-
   const html = await resp.text();
   const scriptSrcs = [
     ...html.matchAll(/<script[^>]+src=["']([^"']+)["']/g),
@@ -57,8 +48,6 @@ const cacheOfflinePageAndResources = async service => {
   );
 
   const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
-
-  logger(`Caching final offline resources for ${service}:`, resources);
   await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
 };
 
@@ -82,13 +71,11 @@ const WEBP_IMAGE =
 
 // -------------Install event -------
 self.addEventListener('install', () => {
-  logger(`Installing...`);
   self.skipWaiting();
 });
 
 // -------Activate Handler-------------
 self.addEventListener('activate', event => {
-  logger(`Activating...`);
   event.waitUntil(
     (async () => {
       const keys = await caches.keys();
@@ -102,8 +89,6 @@ self.addEventListener('activate', event => {
 
 // -------Message Event-------------
 self.addEventListener('message', async event => {
-  logger('Message received:', event.data);
-
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
     const { isPWA } = event.data;
@@ -118,7 +103,6 @@ self.addEventListener('message', async event => {
 
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
-  logger(`[SW FETCH] Request: ${event.request.url}`);
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
     new RegExp(cacheableFile).test(event.request.url),
   );
@@ -163,16 +147,6 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        // TODO: Used for testing - to be removed
-        logger('📌 [SW FETCH] Navigation', {
-          url: event.request.url,
-          clientId: event.clientId,
-          isPWA,
-          client,
-          event,
-          pwaClients,
-          isPWADeviceOffline,
-        });
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
@@ -193,7 +167,6 @@ const fetchEventHandler = async event => {
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
               isPWADeviceOffline = true;
-              logger('[SW] Serving cached offline page');
               return cachedOffline;
             }
           }
@@ -203,7 +176,6 @@ const fetchEventHandler = async event => {
       })(),
     );
   } else if (isPWADeviceOffline) {
-    logger(`[SW v${version}] Serving isPWADeviceOffline ${event.request.url}`);
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
