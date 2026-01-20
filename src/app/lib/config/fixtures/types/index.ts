@@ -1,4 +1,3 @@
-import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 
 export type Topic = {
@@ -9,11 +8,11 @@ export type Topic = {
 
 export type TopicsFixtureData = {
   headline: string;
-  topics: Topic[];
+  topics?: Topic[];
 };
 
 export type TopicsData = TopicsFixtureData & {
-  summaries: Summary[];
+  summaries: TopicSummary[];
   totalItems: number;
 };
 
@@ -24,4 +23,10 @@ export type TopicsPageProps = {
   activePage: number;
   pageCount: number;
   safeActivePage: number;
+};
+
+export type TopicSummary = {
+  id: string;
+  title: string;
+  link: string;
 };

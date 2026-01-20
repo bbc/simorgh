@@ -3,44 +3,51 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
-import { TopicsData } from '#app/lib/config/fixtures/types';
+import { Services } from '#app/models/types/global';
 import TopicsIndexPage from './TopicsIndexPage';
 
-const validTopicsData: TopicsData = {
-  headline: 'Sujets',
-  topics: [
-    {
-      topicName: 'Topic One',
-      topicUrl: '/service/topics/id-1',
-      id: 'id-1',
-    },
-    {
-      topicName: 'Topic Two',
-      topicUrl: '/service/topics/id-2',
-      id: 'id-2',
-    },
-  ],
+const validTopicsData = {
+  service: 'afrique' as Services,
+  topicsData: {
+    headline: 'Sujets',
+    summaries: [
+      {
+        id: 'id-1',
+        title: 'Topic One',
+        link: '/service/topics/id-1',
+      },
+      {
+        id: 'id-2',
+        title: 'Topic Two',
+        link: '/service/topics/id-2',
+      },
+    ],
+    totalItems: 2,
+  },
+  activePage: 1,
+  pageCount: 1,
+  safeActivePage: 1,
 };
 
 describe('TopicsIndexPage', () => {
   it('renders topics page for valid service and matches snapshot', async () => {
     await act(async () => {
-      render(
-        <TopicsIndexPage service="afrique" topicsData={validTopicsData} />,
-      );
+      render(<TopicsIndexPage {...validTopicsData} />);
     });
-    expect(screen.getByText(validTopicsData.headline)).toBeInTheDocument();
-    validTopicsData.topics.forEach(topic => {
-      expect(screen.getByText(topic.topicName)).toBeInTheDocument();
+    validTopicsData.topicsData.summaries.forEach(summary => {
+      expect(screen.getByText(summary.title)).toBeInTheDocument();
     });
   });
-  it('parses valid topic data and exposes all required fields', () => {
-    render(<TopicsIndexPage service="afrique" topicsData={validTopicsData} />);
-    validTopicsData.topics.forEach(topic => {
-      expect(screen.getByText(topic.topicName)).toBeInTheDocument();
-      expect(
-        screen.getByRole('link', { name: topic.topicName }),
-      ).toHaveAttribute('href', topic.topicUrl);
+  it('parses valid topic data and exposes all required fields', async () => {
+    await act(async () => {
+      render(<TopicsIndexPage {...validTopicsData} />);
+    });
+    validTopicsData.topicsData.summaries.forEach(summary => {
+      expect(screen.getByText(summary.title)).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: summary.title })).toHaveAttribute(
+        'href',
+        summary.link,
+      );
     });
   });
 });
