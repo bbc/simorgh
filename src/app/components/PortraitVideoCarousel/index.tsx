@@ -14,6 +14,8 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import { PluginCacheProvider } from './pluginCacheProvider';
+import VideoOverlay from './videoOverlay';
 
 type PortraitVideoCarouselProps = {
   title: string;
@@ -31,6 +33,10 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+  const [videoOverlayContainer, setVideoOverlayContainer] =
+    useState<HTMLElement | null>(null);
+  const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
+  console.log('reloaded');
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -70,6 +76,10 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
+  let shareUrlPath;
+  if (selectedVideoIndex !== null) {
+    shareUrlPath = blocks?.[selectedVideoIndex]?.model?.video?.id.split(':')[4];
+  }
 
   return (
     <>
@@ -122,8 +132,16 @@ const PortraitVideoCarousel = ({
               onClose={handleCloseModal}
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
+              setVideoOverlayContainerRef={setVideoOverlayContainerRef}
             />,
             document.body,
+          )}
+        {videoOverlayContainer &&
+          createPortal(
+            <PluginCacheProvider container={videoOverlayContainer}>
+              <VideoOverlay shareUrlPath={shareUrlPath || ''} />
+            </PluginCacheProvider>,
+            videoOverlayContainer,
           )}
       </section>
     </>

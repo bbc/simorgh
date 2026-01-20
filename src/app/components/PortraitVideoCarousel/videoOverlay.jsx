@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { useEffect, useState } from 'react';
 import { resetCss } from './resetCss';
 
 const convertStringToNumber = val => parseInt(val, 10);
@@ -75,7 +76,31 @@ const ShareTool = styled.div`
   color: pink;
 `;
 
-const VideoOverlay = () => {
+const ShareToolWrapper = styled.div`
+  margin-left: auto;
+  pointer-events: auto;
+`;
+
+const ShareToolComponent = shareUrlPath => {
+  const [shareUrl, setShareUrl] = useState();
+
+  useEffect(() => {
+    const baseUrl = 'window.location.host';
+    setShareUrl(`https://${baseUrl}/articles/${shareUrlPath}`);
+    console.log('baseUrl:', baseUrl);
+    console.log('shareUrl:', shareUrl);
+  }, [shareUrlPath]);
+  return (
+    <ShareToolWrapper>
+      <ShareTool>
+        <a href={shareUrl}>SHARE</a>
+      </ShareTool>
+    </ShareToolWrapper>
+  );
+};
+
+const VideoOverlay = shareUrlPath => {
+  console.log(shareUrlPath);
   return (
     <>
       {/*
@@ -90,8 +115,10 @@ const VideoOverlay = () => {
           // The video-overlay plugin will use this attribute to instruct SMP not to render subtitles in the space occupied by this div.
           data-region-exclude-subtitles
         >
-          <VideoOverlayFooterContents>
-            <ShareTool>SHARE</ShareTool>
+          <VideoOverlayFooterContents className="video-overlay-footer-contents">
+            <ShareToolComponent shareUrlPath={shareUrlPath}>
+              SHARE
+            </ShareToolComponent>
           </VideoOverlayFooterContents>
         </VideoOverlayFooter>
       </VideoOverlayWrapper>

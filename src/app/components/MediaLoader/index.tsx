@@ -110,6 +110,8 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainerRef?: React.RefObject<any>;
+  playerKey: string;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -121,13 +123,24 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   eventMapping,
+  setVideoOverlayContainerRef,
+  playerKey,
 }: MediaContainerProps) => {
-  const [videoOverlayContainer, setVideoOverlayContainer] = useState();
-  const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
+  const playerRef = useRef<any>(null);
+  const playerKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
+    if (!playerElementRef.current) return;
+
+    if (playerKeyRef.current === playerKey) {
+      console.log('RETURN');
+      return;
+    }
+
+    playerKeyRef.current = playerKey;
+    console.log('INITIALISE PLAYER');
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
@@ -137,6 +150,8 @@ const MediaContainer = ({
               playerElementRef.current,
               playerConfig,
             );
+
+            playerRef.current = mediaPlayer;
 
             if (uniqueId != null) {
               const { mediaPlayers } = window;
@@ -188,7 +203,7 @@ const MediaContainer = ({
                 }
               });
             }
-            if (setVideoOverlayContainerRef.current) {
+            if (setVideoOverlayContainerRef) {
               mediaPlayer.loadPlugin(
                 {
                   html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
@@ -209,7 +224,7 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, eventMapping]);
+  }, [playerKey]);
 
   return (
     <div
@@ -221,13 +236,13 @@ const MediaContainer = ({
       <noscript>
         <Message message={noJsMessage} />
       </noscript>
-      {videoOverlayContainer &&
+      {/* {videoOverlayContainer &&
         createPortal(
           <PluginCacheProvider container={videoOverlayContainer}>
-            <VideoOverlay />
+            <VideoOverlay clipPID={clip.current} />
           </PluginCacheProvider>,
           videoOverlayContainer,
-        )}
+        )} */}
     </div>
   );
 };
@@ -238,6 +253,7 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainerRef?: React.RefObject<any>;
 };
 
 const MediaLoader = ({
@@ -246,6 +262,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  setVideoOverlayContainerRef,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -297,6 +314,15 @@ const MediaLoader = ({
     orientation = 'landscape',
     ampIframeUrl,
   } = config;
+
+  const { clipPID } = playerConfig?.statsObject || {};
+  const { skin } = playerConfig?.ui || {};
+
+  const playerKey = `${clipPID}-${skin}-${showAds}`;
+
+  if (isLite) return null;
+
+  if (!config || !playerConfig) return null;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
   const isPortrait = orientation === 'portrait';
@@ -361,6 +387,8 @@ const MediaLoader = ({
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
                 eventMapping={eventMapping}
+                setVideoOverlayContainerRef={setVideoOverlayContainerRef}
+                playerKey={playerKey}
               />
             )}
           </>

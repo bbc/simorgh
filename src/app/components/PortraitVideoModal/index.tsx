@@ -196,6 +196,9 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
+  setVideoOverlayContainerRef: React.RefObject<
+    React.Dispatch<React.SetStateAction<HTMLElement | null>>
+  >;
 }
 
 const PortraitVideoModal = ({
@@ -203,6 +206,7 @@ const PortraitVideoModal = ({
   onClose,
   selectedVideoIndex,
   eventTrackingData,
+  setVideoOverlayContainerRef,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -232,6 +236,7 @@ const PortraitVideoModal = ({
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
+  const modalOverlayRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -336,6 +341,7 @@ const PortraitVideoModal = ({
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
+          setVideoOverlayContainerRef={setVideoOverlayContainerRef}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
             pluginLoaded: pluginLoadedCallback,
