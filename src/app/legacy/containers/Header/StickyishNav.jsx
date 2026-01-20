@@ -11,7 +11,7 @@ const headerWrapperStyles = isVisible => ({
   willChange: 'transform',
 });
 
-const HideOnScroll = ({ children }) => {
+const StickyishNav = ({ children }) => {
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
 
@@ -38,4 +38,4 @@ const HideOnScroll = ({ children }) => {
   );
 };
 
-export default HideOnScroll;
+export default StickyishNav;
