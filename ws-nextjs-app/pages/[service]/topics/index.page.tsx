@@ -3,14 +3,7 @@ import { GetServerSideProps } from 'next';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { TopicsFixtureData, Topic } from '#app/lib/config/fixtures/types';
-import afriqueTopics from '#app/lib/config/fixtures/afrique';
-import hausaTopics from '#app/lib/config/fixtures/hausa';
-
-const fixtureMap: Record<string, TopicsFixtureData> = {
-  afrique: afriqueTopics,
-  hausa: hausaTopics,
-};
+import { Topic } from '#app/lib/config/fixtures/types';
 
 const TopicsPageComponent = dynamic(() => import('./TopicsIndexPage'));
 
@@ -39,7 +32,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
   }
 
   try {
-    const topicsData: TopicsFixtureData = fixtureMap[service];
+    const { default: topicsData } = await import(
+      `#app/lib/config/fixtures/${service}`
+    );
     context.res.setHeader(
       'Cache-Control',
       'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
