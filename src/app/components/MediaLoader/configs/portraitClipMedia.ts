@@ -45,6 +45,7 @@ export default ({
       isMobile = false;
     }
   }
+
   return {
     mediaType: 'video',
     playerConfig: {
