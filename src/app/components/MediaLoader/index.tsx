@@ -272,6 +272,8 @@ const MediaLoader = ({
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
 
+  if (isLite) return null;
+
   const { model: mediaOverrides } =
     filterForBlockType(blocks, 'mediaOverrides') || {};
 
@@ -291,8 +293,6 @@ const MediaLoader = ({
     showAdsBasedOnLocation,
     embedded,
   });
-
-  if (isLite) return null;
 
   if (!config) return null;
 
