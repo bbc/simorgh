@@ -67,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'dan',
       readTime: {
         readTimePrefix: 'Waktu membaca',
         long: 'Artikel panjang',

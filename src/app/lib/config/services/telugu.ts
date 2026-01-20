@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'మరియు',
       pagination: {
         previousPage: 'మునుపటి',
         nextPage: 'తదుపరి',
