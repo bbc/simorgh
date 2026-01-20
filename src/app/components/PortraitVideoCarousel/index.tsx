@@ -76,13 +76,13 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
-  let shareUrlPath;
+  let urn;
   if (selectedVideoIndex !== null) {
     console.log(
       'blocks',
       blocks?.[selectedVideoIndex]?.model?.video?.id.split(':'),
     );
-    shareUrlPath = blocks?.[selectedVideoIndex]?.model?.video?.id.split(':')[4];
+    urn = blocks?.[selectedVideoIndex]?.model?.video?.id.split(':')[4];
   }
 
   return (
@@ -143,7 +143,7 @@ const PortraitVideoCarousel = ({
         {videoOverlayContainer &&
           createPortal(
             <PluginCacheProvider container={videoOverlayContainer}>
-              <VideoOverlay shareUrlPath={shareUrlPath || ''} />
+              <VideoOverlay urn={urn || ''} />
             </PluginCacheProvider>,
             videoOverlayContainer,
           )}

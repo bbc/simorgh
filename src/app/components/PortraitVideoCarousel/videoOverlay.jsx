@@ -82,18 +82,18 @@ const ShareToolWrapper = styled.div`
   pointer-events: auto;
 `;
 
-const ShareToolComponent = (shareUrlPath, service) => {
+const ShareToolComponent = (urn, service) => {
   const [shareUrl, setShareUrl] = useState();
 
   useEffect(() => {
-    setShareUrl(`https://${service}/articles/${shareUrlPath}`);
+    setShareUrl(`https://${service}/articles/${urn}`);
     console.log(
       'VIDEO OVERLAY Share tool: service:',
       service,
       'shareUrl:',
       shareUrl,
     );
-  }, [shareUrlPath]);
+  }, [urn]);
   return (
     <ShareToolWrapper>
       <ShareTool>
@@ -103,8 +103,8 @@ const ShareToolComponent = (shareUrlPath, service) => {
   );
 };
 
-const VideoOverlay = shareUrlPath => {
-  console.log('VIDEO OVERLAY: shareUrlPath:', shareUrlPath);
+const VideoOverlay = urn => {
+  console.log('VIDEO OVERLAY: urn:', urn);
   const { service } = use(ServiceContext);
 
   return (
@@ -122,7 +122,7 @@ const VideoOverlay = shareUrlPath => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents className="video-overlay-footer-contents">
-            <ShareToolComponent shareUrlPath={shareUrlPath} service={service}>
+            <ShareToolComponent urn={urn} service={service}>
               SHARE
             </ShareToolComponent>
           </VideoOverlayFooterContents>
