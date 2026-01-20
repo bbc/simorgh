@@ -69,6 +69,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
           totalItems,
         },
         page,
+        activePage,
+        pageCount,
+        safeActivePage,
       },
     };
   } catch {

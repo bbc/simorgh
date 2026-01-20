@@ -21,4 +21,7 @@ export type TopicsPageProps = {
   service: Services;
   topicsData: TopicsData;
   page?: number | string;
+  activePage: number;
+  pageCount: number;
+  safeActivePage: number;
 };

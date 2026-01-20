@@ -7,16 +7,15 @@ import { TopicsPageProps } from '#app/lib/config/fixtures/types';
 
 import styles from './index.styles';
 
-const PAGE_SIZE = 100;
-
-const TopicsPage = ({ service, topicsData, page }: TopicsPageProps) => {
+const TopicsPage = ({
+  service,
+  topicsData,
+  activePage,
+  pageCount,
+  safeActivePage,
+}: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
-
-  const activePage = Math.max(1, Number(page ?? 1));
-  const headline = topicsData?.headline || '';
-  const { summaries, totalItems } = topicsData;
-  const pageCount = Math.max(1, Math.ceil(totalItems / PAGE_SIZE));
-  const safeActivePage = Math.min(activePage, pageCount);
+  const { summaries, headline } = topicsData;
 
   const {
     pageXOfY,
