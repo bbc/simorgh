@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
-import { useEffect, useState, use } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { useEffect, useState } from 'react';
 import { resetCss } from './resetCss';
 
 const convertStringToNumber = val => parseInt(val, 10);
@@ -82,20 +81,14 @@ const ShareToolWrapper = styled.div`
   pointer-events: auto;
 `;
 
-const ShareToolComponent = (urn, service) => {
+const ShareToolComponent = ({ shareUrlPath }) => {
   const [shareUrl, setShareUrl] = useState();
 
   useEffect(() => {
-    setShareUrl(`https://${service}/articles/${urn}`);
-    console.log(
-      'VIDEO OVERLAY Share tool: service:',
-      service,
-      'shareUrl:',
-      shareUrl,
-    );
-  }, [urn]);
+    setShareUrl(`https://bbc.com${shareUrlPath}`);
+  }, [shareUrlPath]);
   return (
-    <ShareToolWrapper>
+    <ShareToolWrapper key={shareUrlPath}>
       <ShareTool>
         <a href={shareUrl}>SHARE</a>
       </ShareTool>
@@ -103,9 +96,9 @@ const ShareToolComponent = (urn, service) => {
   );
 };
 
-const VideoOverlay = urn => {
-  console.log('VIDEO OVERLAY: urn:', urn);
-  const { service } = use(ServiceContext);
+const VideoOverlay = ({ blocks, index }) => {
+  const currentItem = blocks?.[index];
+  const { shareUrl } = currentItem?.model?.video || {};
 
   return (
     <>
@@ -122,9 +115,7 @@ const VideoOverlay = urn => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents className="video-overlay-footer-contents">
-            <ShareToolComponent urn={urn} service={service}>
-              SHARE
-            </ShareToolComponent>
+            <ShareToolComponent shareUrlPath={shareUrl} />
           </VideoOverlayFooterContents>
         </VideoOverlayFooter>
       </VideoOverlayWrapper>

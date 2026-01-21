@@ -76,15 +76,7 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
-  let urn;
-  if (selectedVideoIndex !== null) {
-    console.log(
-      'blocks',
-      blocks?.[selectedVideoIndex]?.model?.video?.id.split(':'),
-    );
-    urn = blocks?.[selectedVideoIndex]?.model?.video?.id.split(':')[4];
-  }
-
+  console.log('selectedVideoIndex', selectedVideoIndex);
   return (
     <>
       <BumpLoader nonce={nonce} />
@@ -141,9 +133,10 @@ const PortraitVideoCarousel = ({
             document.body,
           )}
         {videoOverlayContainer &&
+          selectedVideoIndex !== null &&
           createPortal(
             <PluginCacheProvider container={videoOverlayContainer}>
-              <VideoOverlay urn={urn || ''} />
+              <VideoOverlay blocks={blocks} index={selectedVideoIndex} />
             </PluginCacheProvider>,
             videoOverlayContainer,
           )}
