@@ -9,7 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
+import withOptimizelyProvider from '.';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -121,138 +121,6 @@ describe('withOptimizelyProvider HOC', () => {
         (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
           ?.mobile,
       ).toBe(false);
-    });
-  });
-
-  describe('referrer attribute', () => {
-    beforeEach(() => {
-      // Reset document.referrer and window.location.search before each test
-      Object.defineProperty(document, 'referrer', {
-        value: '',
-        writable: true,
-      });
-      Object.defineProperty(window, 'location', {
-        value: { search: '' },
-        writable: true,
-      });
-    });
-
-    it.each(REFERRER_CATEGORIES.SEARCH)(
-      'should set referrer to "search" when the document.referrer contains %s',
-      domain => {
-        Object.defineProperty(document, 'referrer', {
-          value: `https://www.${domain}.com`,
-          writable: true,
-        });
-
-        render(<TestComponent />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.referrer,
-        ).toBe('search');
-      },
-    );
-
-    it.each(REFERRER_CATEGORIES.SOCIAL)(
-      'should set referrer to "social" when the document.referrer contains %s',
-      domain => {
-        Object.defineProperty(document, 'referrer', {
-          value: `https://www.${domain}.com`,
-          writable: true,
-        });
-
-        render(<TestComponent />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.referrer,
-        ).toBe('social');
-      },
-    );
-
-    it.each(REFERRER_CATEGORIES.DIRECT)(
-      'should set referrer to "direct" when the document.referrer contains %s',
-      domain => {
-        Object.defineProperty(document, 'referrer', {
-          value: `https://www.${domain}`,
-          writable: true,
-        });
-
-        render(<TestComponent />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.referrer,
-        ).toBe('direct');
-      },
-    );
-
-    it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
-      'should set referrer to "social" when the at_campaign URL parameter is %s',
-      atParamValue => {
-        Object.defineProperty(window, 'location', {
-          value: { search: `?at_campaign=${atParamValue}` },
-          writable: true,
-        });
-
-        render(<TestComponent />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.referrer,
-        ).toBe('social');
-      },
-    );
-
-    it.each(REFERRER_CATEGORIES.AT_PARAM_VALUES)(
-      'should set referrer to "social" when the at_medium URL parameter is %s',
-      atParamValue => {
-        Object.defineProperty(window, 'location', {
-          value: { search: `?at_medium=${atParamValue}` },
-          writable: true,
-        });
-
-        render(<TestComponent />);
-
-        expect(
-          (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)
-            ?.attributes?.referrer,
-        ).toBe('social');
-      },
-    );
-
-    it('should set referrer to "direct" when the document.referrer is empty', () => {
-      Object.defineProperty(document, 'referrer', {
-        value: '',
-        writable: true,
-      });
-
-      render(<TestComponent />);
-
-      expect(
-        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
-          ?.referrer,
-      ).toBe('direct');
-    });
-
-    it('should set referrer to null when no conditions are met', () => {
-      Object.defineProperty(document, 'referrer', {
-        value: 'https://www.unknownsource.com',
-        writable: true,
-      });
-
-      Object.defineProperty(window, 'location', {
-        value: { search: '' },
-        writable: true,
-      });
-
-      render(<TestComponent />);
-
-      expect(
-        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
-          ?.referrer,
-      ).toBeNull();
     });
   });
 
