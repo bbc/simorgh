@@ -72,6 +72,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
         activePage,
         pageCount,
         safeActivePage,
+        pageData: {
+          metadata: {
+            type: TOPIC_PAGE,
+          },
+        },
       },
     };
   } catch {
