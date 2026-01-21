@@ -6,7 +6,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingProps } from '#app/lib/analyticsUtils/types';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { enforceLegacyDestinationForJapanese } from '../..';
 
 export default ({
   eventTrackingData,
@@ -29,13 +28,12 @@ export default ({
   };
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
-  const staticATITrackingURL = enforceLegacyDestinationForJapanese(
+  const staticATITrackingURL =
     reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
       ...reverbParams,
       additionalParams,
       env,
-    }),
-  );
+    });
 
   return staticATITrackingURL;
 };
