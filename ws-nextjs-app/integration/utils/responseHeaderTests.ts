@@ -32,7 +32,7 @@ export default () => {
       const fetchResponse = await fetch(window.location.href);
       const linkHeader = fetchResponse.headers.get('Link');
       expect(linkHeader).toContain(
-        '<https://ichef.bbci.co.uk>; rel="dns-prefetch"',
+        '<https://ichef.bbci.co.uk>; rel="preconnect"; crossorigin',
       );
     });
   });
