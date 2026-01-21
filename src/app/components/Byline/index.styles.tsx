@@ -38,6 +38,9 @@ export default {
   comma: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
+  and: ({ palette, isDarkUi }: Theme) =>
+    css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
+
   authorChevron: ({ palette, isDarkUi, spacings, mq }: Theme) =>
     css({
       verticalAlign: 'middle',

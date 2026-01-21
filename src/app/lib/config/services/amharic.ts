@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'እና',
       pagination: {
         page: 'ገፁ',
         previousPage: 'ከዚህ በፊት ያለ',
