@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import useViewTracker from '#app/hooks/useViewTracker';
-import { use, useRef, MouseEvent } from 'react';
+import { use, useRef } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './styles';
 
@@ -25,7 +23,7 @@ const ShareSvg = () => (
 
 const ShareButton = ({
   contentId,
-  eventTrackingData,
+  //   eventTrackingData,
   title,
   url,
 }: {
@@ -45,8 +43,8 @@ const ShareButton = ({
       liveExperiencePage: { shareButtonText = 'Share' },
     },
   } = use(ServiceContext);
-
-  const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
+  // (event: MouseEvent<HTMLButtonElement>)
+  const handleShare = async () => {
     // if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       let shareUrl;
@@ -61,6 +59,7 @@ const ShareButton = ({
         shareUrl = `${currentUrlNoHash.origin}${currentUrlNoHash.pathname}?${newParams}#${contentId}`;
         // await navigator.clipboard.writeText(shareUrl);
       }
+      // eslint-disable-next-line no-console
       console.log('sharebutton ', url);
       await navigator.share({
         url: url || shareUrl,

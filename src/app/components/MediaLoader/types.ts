@@ -277,7 +277,7 @@ export type PortraitClipMediaBlock = {
       altText?: string;
     }[];
     video: {
-      shareUrl: string | null;
+      shareUrl?: string | null;
       id: string;
       title: string;
       holdingImageURL?: string;
