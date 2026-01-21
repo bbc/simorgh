@@ -58,12 +58,13 @@ describe('Recommendations', () => {
     const listEl = document.querySelector('ul');
     expect(listEl).not.toBeInTheDocument();
   });
-  it('should render both top stories with title, href, image, and alt text when referrerVariant is adaptive_direct', () => {
+  it('should render top stories with title, href, image, and alt text when referrerVariant is adaptive_direct', () => {
     render(
       <Recommendations
         data={[]}
         topStoriesContent={topStoriesContentFixture}
-        referrerVariant="adaptive_direct"
+        referrerVariant="adaptive_variant"
+        referrer="direct"
       />,
       {
         service: 'mundo',
@@ -106,7 +107,8 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         featuresContent={featuresContentFixture}
-        referrerVariant="adaptive_social"
+        referrerVariant="adaptive_variant"
+        referrer="social"
       />,
       {
         service: 'mundo',
@@ -119,9 +121,7 @@ describe('Recommendations', () => {
     );
     expect(sectionTitle).toBeInTheDocument();
     expect(sectionTitle?.textContent).toBe('No te lo pierdas');
-
     const listItems = document.querySelectorAll('li[role="listitem"]');
-
     expect(listItems).toHaveLength(featuresContentFixture.length);
 
     listItems.forEach((item, index) => {
@@ -151,7 +151,8 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         blocks={relatedContentBlocksFixture}
-        referrerVariant="adaptive_search"
+        referrerVariant="adaptive_variant"
+        referrer="search"
       />,
       {
         service: 'mundo',
@@ -164,7 +165,6 @@ describe('Recommendations', () => {
     );
     expect(sectionTitle).toBeInTheDocument();
     expect(sectionTitle?.textContent).toBe('Contenido relacionado');
-
     const listItems = document.querySelectorAll('li[role="listitem"]');
     expect(listItems.length).toBe(2);
 
@@ -212,12 +212,12 @@ describe('Recommendations', () => {
           }
         : undefined,
     ].filter(Boolean) as OptimoBlock[];
-
     const { getByText } = render(
       <Recommendations
         data={[]}
         blocks={singleRelatedContentBlocks}
-        referrerVariant="adaptive_search"
+        referrerVariant="adaptive_variant"
+        referrer="search"
       />,
       {
         service: 'mundo',
