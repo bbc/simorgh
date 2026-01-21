@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { useEffect, useState } from 'react';
 import { resetCss } from './resetCss';
+import ShareButton from '../ShareButton';
 
 const convertStringToNumber = val => parseInt(val, 10);
 
@@ -70,18 +71,12 @@ const VideoOverlayFooter = styled.div`
   }
 `;
 
-const ShareTool = styled.div`
-  margin-left: auto;
-  pointer-events: auto;
-  color: pink;
-`;
-
 const ShareToolWrapper = styled.div`
   margin-left: auto;
   pointer-events: auto;
 `;
 
-const ShareToolComponent = ({ shareUrlPath }) => {
+const ShareToolComponent = ({ shareUrlPath, title }) => {
   const [shareUrl, setShareUrl] = useState();
 
   useEffect(() => {
@@ -89,15 +84,13 @@ const ShareToolComponent = ({ shareUrlPath }) => {
   }, [shareUrlPath]);
   return (
     <ShareToolWrapper key={shareUrlPath}>
-      <ShareTool>
-        <a href={shareUrl}>SHARE</a>
-      </ShareTool>
+      <ShareButton title={title} url={shareUrl} />
     </ShareToolWrapper>
   );
 };
 
 const VideoOverlay = ({ currentItem }) => {
-  const { shareUrl } = currentItem?.model?.video || {};
+  const { shareUrl, title } = currentItem?.model?.video || {};
 
   return (
     <>
@@ -114,7 +107,7 @@ const VideoOverlay = ({ currentItem }) => {
           data-region-exclude-subtitles
         >
           <VideoOverlayFooterContents className="video-overlay-footer-contents">
-            <ShareToolComponent shareUrlPath={shareUrl} />
+            <ShareToolComponent shareUrlPath={shareUrl} title={title} />
           </VideoOverlayFooterContents>
         </VideoOverlayFooter>
       </VideoOverlayWrapper>
