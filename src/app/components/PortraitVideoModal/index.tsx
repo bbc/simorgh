@@ -105,13 +105,13 @@ export const playlistLoadedCallback = (
 
   const previous = blocks?.[currentIndex - 1]?.model;
   const next = blocks?.[currentIndex + 1]?.model;
-
   if (previous) {
     player.setPreviousPlaylist(
       {
         title: previous?.video?.title ?? '',
         holdingImageURL: previous?.video?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
+        shareUrl: previous?.video?.shareUrl ?? null,
       },
       { statsObject: { clipPID: previous?.video?.id } },
     );
@@ -123,6 +123,7 @@ export const playlistLoadedCallback = (
         title: next?.video?.title ?? '',
         holdingImageURL: next?.video?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
+        shareUrl: next?.video?.shareUrl ?? null,
       },
       { statsObject: { clipPID: next?.video?.id } },
     );
@@ -134,6 +135,7 @@ export const statsNavigationCallback = async (
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
+  onMediaChanged?: (data: { item: PortraitClipMediaBlock }) => void,
 ) => {
   const { direction, method } = e || {};
 
@@ -143,6 +145,7 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+    onMediaChanged?.({ item: blocks[newIndex] });
 
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
@@ -184,9 +187,19 @@ const pluginLoadedCallback = () => {
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+const handlePrevNextVideo = ({
+  direction,
+  blocks,
+  onMediaChanged,
+}: {
+  direction: 'previous' | 'next';
+  blocks: PortraitClipMediaBlock[];
+  onMediaChanged?: (data: { item: PortraitClipMediaBlock }) => void;
+}) => {
   const player = getPlayerInstance();
-
+  const index = getCurrentIndex({ blocks, player });
+  const newIndex = direction === 'next' ? index + 1 : index - 1;
+  onMediaChanged?.({ item: blocks[newIndex] });
   player?.[direction]?.();
 };
 
@@ -199,6 +212,7 @@ export interface PortraitVideoModalProps {
   setVideoOverlayContainerRef?: React.RefObject<
     React.Dispatch<React.SetStateAction<HTMLElement | null>>
   >;
+  onMediaChanged?: (data: { item: PortraitClipMediaBlock }) => void;
 }
 
 const PortraitVideoModal = ({
@@ -207,6 +221,7 @@ const PortraitVideoModal = ({
   selectedVideoIndex,
   eventTrackingData,
   setVideoOverlayContainerRef,
+  onMediaChanged,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -317,7 +332,13 @@ const PortraitVideoModal = ({
           <button
             id="previous-video-button"
             type="button"
-            onClick={() => handlePrevNextVideo('previous')}
+            onClick={() =>
+              handlePrevNextVideo({
+                direction: 'previous',
+                blocks,
+                onMediaChanged,
+              })
+            }
             css={styles.navButton}
             aria-label="Previous video"
             data-testid="previous-video-button"
@@ -328,7 +349,13 @@ const PortraitVideoModal = ({
           <button
             id="next-video-button"
             type="button"
-            onClick={() => handlePrevNextVideo('next')}
+            onClick={() =>
+              handlePrevNextVideo({
+                direction: 'next',
+                blocks,
+                onMediaChanged,
+              })
+            }
             css={styles.navButton}
             aria-label="Next video"
             data-testid="next-video-button"
@@ -351,6 +378,7 @@ const PortraitVideoModal = ({
                 blocks,
                 eventTrackingData,
                 swipeTracker,
+                onMediaChanged,
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),

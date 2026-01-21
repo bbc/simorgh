@@ -34,6 +34,7 @@ export type Playlist = {
   summary?: string;
   holdingImageURL?: string;
   items: PlaylistItem[] | LegacyPlayListItem[];
+  shareUrl?: string | null;
   guidance?: string;
   embedRights?: 'allowed';
   liveRewind?: boolean;
@@ -276,6 +277,7 @@ export type PortraitClipMediaBlock = {
       altText?: string;
     }[];
     video: {
+      shareUrl: string | null;
       id: string;
       title: string;
       holdingImageURL?: string;

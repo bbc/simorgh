@@ -36,7 +36,9 @@ const PortraitVideoCarousel = ({
   const [videoOverlayContainer, setVideoOverlayContainer] =
     useState<HTMLElement | null>(null);
   const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
-  console.log('PV CAROUSEL: reloaded');
+  const [currentItem, setCurrentItem] = useState<
+    PortraitClipMediaBlock | undefined
+  >();
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -65,9 +67,20 @@ const PortraitVideoCarousel = ({
 
   if (isLite) return null;
 
+  const onMediaChanged = ({ item }) => {
+    console.log('item', item);
+    const newIdentifier = item?.model?.video?.id;
+    const index = blocks.findIndex(({ model }) => {
+      return model.video.id === newIdentifier;
+    });
+    const newItem = blocks[index];
+    if (newItem) setCurrentItem(newItem);
+  };
+
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
+      setCurrentItem(blocks[index]);
       setIsModalOpen(true);
     }
   };
@@ -76,7 +89,6 @@ const PortraitVideoCarousel = ({
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
   };
-  console.log('selectedVideoIndex', selectedVideoIndex);
   return (
     <>
       <BumpLoader nonce={nonce} />
@@ -129,6 +141,7 @@ const PortraitVideoCarousel = ({
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
               setVideoOverlayContainerRef={setVideoOverlayContainerRef}
+              onMediaChanged={onMediaChanged}
             />,
             document.body,
           )}
@@ -136,7 +149,7 @@ const PortraitVideoCarousel = ({
           selectedVideoIndex !== null &&
           createPortal(
             <PluginCacheProvider container={videoOverlayContainer}>
-              <VideoOverlay blocks={blocks} index={selectedVideoIndex} />
+              <VideoOverlay currentItem={currentItem} />
             </PluginCacheProvider>,
             videoOverlayContainer,
           )}

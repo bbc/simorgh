@@ -96,8 +96,7 @@ const ShareToolComponent = ({ shareUrlPath }) => {
   );
 };
 
-const VideoOverlay = ({ blocks, index }) => {
-  const currentItem = blocks?.[index];
+const VideoOverlay = ({ currentItem }) => {
   const { shareUrl } = currentItem?.model?.video || {};
 
   return (
