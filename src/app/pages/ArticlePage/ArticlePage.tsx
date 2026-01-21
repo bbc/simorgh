@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useState, useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -19,6 +19,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 import {
   getArticleId,
@@ -210,7 +211,13 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite, referrer } = use(RequestContext);
+  const { isApp, isAmp, isLite } = use(RequestContext);
+  // SSR-safe: always null on server, update on client
+  const [referrer, setReferrer] = useState<string | null>(null);
+
+  useEffect(() => {
+    setReferrer(getReferrer());
+  }, []);
   // Log the referrer value for debugging purposes
   // eslint-disable-next-line no-console
   console.log('Referrer:', referrer);
