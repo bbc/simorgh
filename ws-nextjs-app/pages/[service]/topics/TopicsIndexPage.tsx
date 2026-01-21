@@ -8,13 +8,13 @@ import styles from './index.styles';
 
 const TopicsPage = ({
   service,
-  topicsData,
+  pageData,
   activePage,
   pageCount,
   safeActivePage,
 }: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
-  const { summaries, headline } = topicsData;
+  const { summaries, headline } = pageData || {};
 
   const {
     pageXOfY,
