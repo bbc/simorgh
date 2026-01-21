@@ -348,6 +348,10 @@ export const service: DefaultServiceConfig = {
         url: '/nepali',
       },
       {
+        title: 'नेपाल निर्वाचन २०८२',
+        url: '/nepali/topics/c5ydk8xvx6jt',
+      },
+      {
         title: 'नेपाल',
         url: '/nepali/topics/cyx5k2yzyj6t',
       },
