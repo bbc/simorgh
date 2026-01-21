@@ -191,9 +191,13 @@ module.exports = ({
     },
     plugins: [
       // copy static files otherwise untouched by Webpack, e.g. favicon
-      new CopyWebpackPlugin({
-        patterns: [{ from: 'public' }],
-      }),
+      ...(BUNDLE_TYPE === 'modern'
+        ? [
+            new CopyWebpackPlugin({
+              patterns: [{ from: 'public' }],
+            }),
+          ]
+        : []),
       new DuplicatePackageCheckerPlugin({
         // Emit compilation warning or error? (Default: `false`)
         emitError: true,
