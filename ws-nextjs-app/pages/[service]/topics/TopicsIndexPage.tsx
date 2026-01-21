@@ -4,7 +4,6 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
 import MetadataContainer from '#app/components/Metadata';
 import { TopicsPageProps } from '#app/lib/config/fixtures/types';
-import { Summary } from '#app/models/types/curationData';
 import styles from './index.styles';
 
 const TopicsPage = ({
