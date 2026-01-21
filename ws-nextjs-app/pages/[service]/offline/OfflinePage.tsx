@@ -3,8 +3,15 @@ import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
 import { useOfflinePageFlag } from '#app/hooks/useOfflinePageFlag';
+import { MostReadData } from '#app/components/MostRead/types';
 
-const OfflinePage = () => {
+export type Props = {
+  pageData: {
+    mostReadData: MostReadData;
+  };
+};
+
+const OfflinePage = ({ pageData }: Props) => {
   const { service, dir, script } = use(ServiceContext);
 
   // Track offline page visit (sets flag in localStorage, PWA only)
@@ -17,6 +24,8 @@ const OfflinePage = () => {
     'Check your internet connection',
     'Refresh the page when your connection is restored',
   ];
+
+  console.log({ pageData });
 
   return (
     <>
