@@ -48,7 +48,7 @@ const TopicsPage = ({
       <div css={styles.usefulLinksWrapper}>
         <UsefulLinks
           title={headline}
-          summaries={summaries as Summary[]}
+          summaries={summaries}
           id={`${service}-topics`}
           layout="single"
           headingLevel={1}
