@@ -42,42 +42,6 @@ const isMobile = () => {
   return false;
 };
 
-export const REFERRER_CATEGORIES = {
-  DIRECT: ['bbc.com'],
-  SEARCH: ['google', 'bing', 'msn', 'yahoo', 'duckduckgo', 'yandex', 'ecosia'],
-  SOCIAL: ['facebook', 'instagram', 't.co', 'youtube', 'threads', 'linkin'],
-  AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
-};
-
-const getReferrer = () => {
-  if (onClient()) {
-    const referrer = document?.referrer?.toLowerCase();
-
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
-
-    if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
-      return 'search';
-
-    if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
-      return 'social';
-
-    if (
-      atParam &&
-      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
-    )
-      return 'social';
-
-    if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
-      return 'direct';
-
-    if (!referrer) return 'direct';
-  }
-
-  return null;
-};
-
 const optimizely = createInstance({
   sdkKey: getEnvConfig().SIMORGH_OPTIMIZELY_SDK_KEY,
   eventBatchSize: 10,
@@ -89,8 +53,8 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
     if (disableOptimizely) return <Component {...props} />;
 
     const { service } = use(ServiceContext);
-    const { country } = use(RequestContext);
-
+    const { country, referrer } = use(RequestContext);
+    console.log('Referrer in withOptimizelyProvider:', referrer);
     return (
       <OptimizelyProvider
         optimizely={optimizely}
@@ -101,7 +65,7 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
           attributes: {
             service,
             mobile: isMobile(),
-            referrer: getReferrer(),
+            referrer: referrer ?? null,
             country: country ?? null,
           },
         }}

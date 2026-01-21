@@ -12,6 +12,7 @@ interface GetUnderArticleComponentsProps {
   grey2: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pageStyles: Record<string, any>;
+  referrer?: string | null;
 }
 
 const getUnderArticleComponents = ({
@@ -22,6 +23,7 @@ const getUnderArticleComponents = ({
   articleBlocks,
   grey2,
   pageStyles,
+  referrer,
 }: GetUnderArticleComponentsProps) => {
   const sectionStyles = [
     pageStyles.hideOnDesktop,
@@ -36,6 +38,7 @@ const getUnderArticleComponents = ({
             sendOptimizelyEvents: true,
             experimentName: referrerExperimentName,
             experimentVariant: referrerVariant,
+            referrer,
           },
         })}
       />
@@ -52,6 +55,7 @@ const getUnderArticleComponents = ({
             sendOptimizelyEvents: true,
             experimentName: referrerExperimentName,
             experimentVariant: referrerVariant,
+            referrer,
           },
         })}
       />
@@ -70,6 +74,7 @@ const getUnderArticleComponents = ({
             sendOptimizelyEvents: true,
             experimentName: referrerExperimentName,
             experimentVariant: referrerVariant,
+            referrer,
           },
         })}
       />
@@ -80,17 +85,17 @@ const getUnderArticleComponents = ({
   // leaving the other cases with the original unordered experience. However, this makes it more flexible
   // to change the orders for different variants in the future, and is easy to understand.
 
-  if (referrerVariant === 'adaptive_social') {
+  if (referrerVariant === 'adaptive_variant' && referrer === 'social') {
     return [featuresComponent, relatedContent, topStoriesComponent].filter(
       Boolean,
     );
   }
-  if (referrerVariant === 'adaptive_direct') {
+  if (referrerVariant === 'adaptive_variant' && referrer === 'direct') {
     return [topStoriesComponent, relatedContent, featuresComponent].filter(
       Boolean,
     );
   }
-  // Default for 'control', 'off', 'adaptive_search', '', or any unknown value
+  // Default for when referrerVariant is 'control', 'off', '', or any unknown value and when referrer_variant is 'adaptive_variant' but referrer is 'search''
   return [relatedContent, topStoriesComponent, featuresComponent].filter(
     Boolean,
   );

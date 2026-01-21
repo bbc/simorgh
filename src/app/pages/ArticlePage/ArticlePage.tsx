@@ -140,6 +140,7 @@ const getWsojComponent = ({
   featuresContent,
   referrerVariant,
   referrerExperimentName,
+  referrer,
 }: {
   data: Recommendation[];
   blocks: OptimoBlock[];
@@ -147,13 +148,14 @@ const getWsojComponent = ({
   featuresContent?: unknown;
   referrerVariant?: string | null;
   referrerExperimentName?: string;
+  referrer?: string | null;
 }) => (
   <Recommendations
     data={data}
     blocks={blocks}
-    // EXPERIMENT: Referrer Experiment
     topStoriesContent={topStoriesContent}
     featuresContent={featuresContent}
+    referrer={referrer}
     {...(referrerVariant && {
       referrerVariant,
       experimentProps: {
@@ -208,7 +210,10 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const { isApp, isAmp, isLite, referrer } = use(RequestContext);
+  // Log the referrer value for debugging purposes
+  // eslint-disable-next-line no-console
+  console.log('Referrer:', referrer);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -228,11 +233,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
-  const referrerVariant = useOptimizelyVariation({
+  let referrerVariant = useOptimizelyVariation({
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-
+  referrerVariant = 'adaptive_variant'; // For testing purposes only. Remove this line in production.
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -331,6 +336,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         featuresContent,
         referrerVariant,
         referrerExperimentName,
+        referrer,
       }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
@@ -472,6 +478,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         articleBlocks: blocks,
         grey2: GREY_2,
         pageStyles: styles,
+        referrer,
       }).map(component => component)}
 
       {!isApp && !isPGL && (

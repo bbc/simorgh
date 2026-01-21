@@ -25,6 +25,7 @@ interface RecommendationsProps {
   featuresContent?: unknown;
   referrerVariant?: string;
   experimentProps?: Record<string, unknown>;
+  referrer?: string | null;
 }
 
 const Recommendations = ({
@@ -34,10 +35,11 @@ const Recommendations = ({
   featuresContent, // social
   referrerVariant, // experiment variant for referrer
   experimentProps,
+  referrer,
 }: RecommendationsProps) => {
   const { recommendations, script, service, dir, translations } =
     use(ServiceContext);
-
+  console.log('Referrer in Recommendations component:', referrer);
   const {
     palette: { GREY_2 },
   } = useTheme();
@@ -56,21 +58,30 @@ const Recommendations = ({
     referrerVariant.includes('control')
   ) {
     displayData = data ?? [];
-  } else if (referrerVariant === 'adaptive_search') {
-    displayData = getRelatedContentData(blocks ?? []).map(
-      mapOptimoBlockToRecommendation,
-    );
-    title = translations?.relatedContent ?? 'Related Content';
-  } else if (referrerVariant === 'adaptive_direct') {
-    displayData = Array.isArray(topStoriesContent)
-      ? topStoriesContent.map(mapTopStoryToRecommendation)
-      : [];
-    title = translations?.topStoriesTitle ?? 'Top Stories';
-  } else if (referrerVariant === 'adaptive_social') {
-    displayData = Array.isArray(featuresContent)
-      ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
-      : [];
-    title = translations?.featuresAnalysisTitle ?? 'Features & Analysis';
+  } else if (referrerVariant === 'adaptive_variant') {
+    switch (referrer) {
+      case 'search':
+        displayData = getRelatedContentData(blocks ?? []).map(
+          mapOptimoBlockToRecommendation,
+        );
+        title = translations?.relatedContent ?? 'Related Content';
+        break;
+      case 'direct':
+        displayData = Array.isArray(topStoriesContent)
+          ? topStoriesContent.map(mapTopStoryToRecommendation)
+          : [];
+        title = translations?.topStoriesTitle ?? 'Top Stories';
+        break;
+      case 'social':
+        displayData = Array.isArray(featuresContent)
+          ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
+          : [];
+        title = translations?.featuresAnalysisTitle ?? 'Features & Analysis';
+        break;
+      default:
+        displayData = data ?? [];
+        break;
+    }
   }
   const componentName = 'midarticle-mostread';
   const groupTracker = {

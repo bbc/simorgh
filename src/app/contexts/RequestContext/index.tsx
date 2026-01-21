@@ -1,4 +1,10 @@
-import { createContext, PropsWithChildren, useMemo } from 'react';
+import {
+  createContext,
+  PropsWithChildren,
+  useMemo,
+  useEffect,
+  useState,
+} from 'react';
 import {
   Environments,
   Platforms,
@@ -42,6 +48,7 @@ export type RequestContextProps = {
   country?: string | null;
   nonce?: string | null;
   cspHeader: string | null;
+  referrer?: string | null;
 };
 
 export const RequestContext = createContext<RequestContextProps>(
@@ -71,6 +78,47 @@ type RequestProviderProps = {
   cspHeader?: string | null;
 };
 
+const REFERRER_CATEGORIES = {
+  DIRECT: ['bbc.com'],
+  SEARCH: ['google', 'bing', 'msn', 'yahoo', 'duckduckgo', 'yandex', 'ecosia'],
+  SOCIAL: ['facebook', 'instagram', 't.co', 'youtube', 'threads', 'linkin'],
+  AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
+};
+
+const isClient = () => typeof window !== 'undefined';
+
+const getReferrer = (): 'search' | 'social' | 'direct' | null => {
+  if (!isClient()) return null;
+
+  const referrer = document.referrer?.toLowerCase() ?? '';
+  const urlParams = new URLSearchParams(window.location.search);
+  const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
+
+  if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain))) {
+    return 'search';
+  }
+
+  if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain))) {
+    return 'social';
+  }
+
+  if (
+    atParam &&
+    REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
+  ) {
+    return 'social';
+  }
+
+  if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain))) {
+    return 'direct';
+  }
+
+  if (!referrer) {
+    return 'direct';
+  }
+
+  return null;
+};
 export const RequestContextProvider = ({
   bbcOrigin = null,
   derivedPageType = null,
@@ -113,6 +161,19 @@ export const RequestContextProvider = ({
   };
 
   const platform = getPlatform();
+
+  // when React renders on the server it does not have access to the referrer yet
+  // by setting the initial state to null, you can make sure the server and client both start with the same value
+  // the useEffect will then run on the client to update the referrer value, only after the page loads in the browser
+  // this fixes the error 'Hydration failed because the server rendered text didn't match the client.'
+  const [referrer, setReferrer] = useState<
+    'search' | 'social' | 'direct' | null
+  >(null);
+
+  useEffect(() => {
+    setReferrer(getReferrer());
+  }, []);
+
   const statsDestination = getStatsDestination({
     isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
@@ -145,6 +206,7 @@ export const RequestContextProvider = ({
       country,
       nonce,
       cspHeader,
+      referrer,
     }),
     [
       derivedPageType,
@@ -170,6 +232,7 @@ export const RequestContextProvider = ({
       country,
       cspHeader,
       nonce,
+      referrer,
     ],
   );
 
