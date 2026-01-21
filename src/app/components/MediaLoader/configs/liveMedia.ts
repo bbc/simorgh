@@ -77,6 +77,9 @@ export default ({
         summary: short,
         ...(warning && { warning }),
       },
+      mediator: {
+        host: 'open.live.bbc.co.uk',
+      },
     },
     mediaType: 'video',
     showAds: false,
