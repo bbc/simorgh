@@ -9,10 +9,8 @@ import * as getMetaUrls from './getMetaUrls';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { RequestContextProvider, RequestContext } = require('./index');
 
-let contextValue;
-
 const Component = () => {
-  contextValue = use(RequestContext);
+  use(RequestContext);
   return null;
 };
 
@@ -88,7 +86,6 @@ const expectedOutput = {
   serverSideExperiments: input.serverSideExperiments,
   nonce: null,
   cspHeader: null,
-  referrer: 'direct',
 };
 
 describe('RequestContext', () => {
@@ -115,8 +112,7 @@ describe('RequestContext', () => {
 
     expect(getMetaUrls.default).toHaveBeenCalledWith('origin', '/current-path');
 
-    // Use toMatchObject to allow extra keys (like referrer: "direct" after hydration)
-    expect(contextValue).toMatchObject(expectedOutput);
+    expect(use).toHaveReturnedWith(expectedOutput);
   });
 
   it('should return expected values for app requests', () => {
