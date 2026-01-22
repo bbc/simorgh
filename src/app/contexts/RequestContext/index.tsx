@@ -1,10 +1,4 @@
-import {
-  createContext,
-  PropsWithChildren,
-  useMemo,
-  useEffect,
-  useState,
-} from 'react';
+import { createContext, PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
