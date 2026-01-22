@@ -68,16 +68,6 @@ const PortraitVideoCarousel = ({
 
   if (isLite) return null;
 
-  const onMediaChanged = ({ item }) => {
-    console.log('item', item);
-    const newIdentifier = item?.model?.video?.id;
-    const index = blocks.findIndex(({ model }) => {
-      return model.video.id === newIdentifier;
-    });
-    const newItem = blocks[index];
-    if (newItem) setCurrentItem(newItem);
-  };
-
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
@@ -142,7 +132,7 @@ const PortraitVideoCarousel = ({
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
               setVideoOverlayContainerRef={setVideoOverlayContainerRef}
-              onMediaChanged={onMediaChanged}
+              setCurrentItem={setCurrentItem}
               setControlsDisplayed={setControlsDisplayed}
             />,
             document.body,
