@@ -12,14 +12,18 @@ export type TopicsFixtureData = {
   topics?: Topic[];
 };
 
-export type TopicsData = TopicsFixtureData & {
+export type PageData = {
+  headline: string;
   summaries: Summary[];
   totalItems: number;
+  metadata: {
+    type: string;
+  };
 };
 
 export type TopicsPageProps = {
   service: Services;
-  topicsData: TopicsData;
+  pageData: PageData;
   page?: number | string;
   activePage: number;
   pageCount: number;
