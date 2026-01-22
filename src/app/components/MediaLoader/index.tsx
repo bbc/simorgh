@@ -132,12 +132,10 @@ const MediaContainer = ({
     if (!playerElementRef.current) return;
 
     if (playerKeyRef.current === playerKey) {
-      console.log('Media Loader player ref already existsRETURN');
       return;
     }
 
     playerKeyRef.current = playerKey;
-    console.log('Media Loader: INITIALISE PLAYER');
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {

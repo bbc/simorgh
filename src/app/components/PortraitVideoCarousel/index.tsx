@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -66,8 +66,6 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-  if (isLite) return null;
-
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
@@ -76,10 +74,13 @@ const PortraitVideoCarousel = ({
     }
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
-  };
+  }, []);
+
+  if (isLite) return null;
+
   return (
     <>
       <BumpLoader nonce={nonce} />
