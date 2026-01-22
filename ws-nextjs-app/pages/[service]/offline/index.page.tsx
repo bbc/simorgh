@@ -5,6 +5,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import logResponseTime from '#server/utilities/logResponseTime';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
+import extractHeaders from '#src/server/utilities/extractHeaders';
 
 const OfflinePage = dynamic(() => import('./OfflinePage'));
 
@@ -50,6 +51,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       status: 200,
       variant: variant || null,
+      timeOnServer: Date.now(),
+      pathname: `/${service}/offline`,
+      ...extractHeaders(context.req.headers),
     },
   };
 };
