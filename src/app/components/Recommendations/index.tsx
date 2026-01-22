@@ -93,6 +93,11 @@ const Recommendations = ({
     ...(experimentProps && experimentProps),
   };
 
+  const eventTrackingDataTwo = {
+    ...eventTrackingData,
+    componentName: 'midarticle-mostread-two',
+  };
+
   const viewTracker = useViewTracker(eventTrackingData);
 
   if (!enabled || !displayData.length) return null;
@@ -157,6 +162,14 @@ const Recommendations = ({
                     ...eventTrackingData,
                     itemTracker: {
                       type: 'midarticle-mostread-promo',
+                      text: recommendation.title,
+                      position: index + 1,
+                    },
+                  }}
+                  eventTrackingDataTwo={{
+                    ...eventTrackingDataTwo,
+                    itemTracker: {
+                      type: 'midarticle-mostread-promo-two',
                       text: recommendation.title,
                       position: index + 1,
                     },
