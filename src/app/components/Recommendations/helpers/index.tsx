@@ -231,17 +231,30 @@ const getTopStoryHeadline = (item: TopStoryItem) => {
 
 export const mapTopStoryToRecommendation = (item: TopStoryItem) => {
   const title = getTopStoryHeadline(item);
+
+  // Prefer defaultPromoImage if present, otherwise use indexImage
   const defaultPromoImage = item.images?.defaultPromoImage;
   const rawImage = getRawImageBlock(defaultPromoImage);
 
-  const image = {
-    locator: rawImage.locator ?? '',
-    altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
-    width: rawImage.width ?? 0,
-    height: rawImage.height ?? 0,
-    copyrightHolder: rawImage.copyrightHolder ?? '',
-    originCode: rawImage.originCode ?? '',
-  };
+  const { indexImage } = item as any;
+
+  const image = indexImage
+    ? {
+        locator: indexImage.href ?? '',
+        altText: indexImage.altText ?? title,
+        width: indexImage.width ?? 0,
+        height: indexImage.height ?? 0,
+        copyrightHolder: indexImage.copyrightHolder ?? '',
+        originCode: indexImage.originCode ?? '',
+      }
+    : {
+        locator: rawImage.locator ?? '',
+        altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+        width: rawImage.width ?? 0,
+        height: rawImage.height ?? 0,
+        copyrightHolder: rawImage.copyrightHolder ?? '',
+        originCode: rawImage.originCode ?? '',
+      };
 
   return {
     id: item.id,
