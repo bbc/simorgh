@@ -95,7 +95,7 @@
   "homepage": "https://github.com/bbc/simorgh#readme",
   "resolutions": {
     "glob": "10.5.0",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "js-yaml": "3.14.2",
     "on-headers": "1.1.0",
     "react-is": "19"
@@ -178,7 +178,7 @@
     "@types/jsdom": "27.0.0",
     "@types/loadable__component": "5.13.10",
     "@types/ramda": "0.31.1",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3",
     "@types/react-helmet": "6.1.11",
     "@types/react-lazyload": "^3.2.0",
