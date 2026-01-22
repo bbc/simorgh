@@ -3,26 +3,30 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
+import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
 import TopicsIndexPage from './TopicsIndexPage';
 
 const validTopicsData = {
   service: 'afrique' as Services,
-  topicsData: {
+  pageData: {
     headline: 'Sujets',
     summaries: [
       {
         id: 'id-1',
         title: 'Topic One',
         link: '/service/topics/id-1',
-      },
+      } as Summary,
       {
         id: 'id-2',
         title: 'Topic Two',
         link: '/service/topics/id-2',
-      },
+      } as Summary,
     ],
     totalItems: 2,
+    metadata: {
+      type: 'topicsIndex',
+    },
   },
   activePage: 1,
   pageCount: 1,
@@ -34,7 +38,7 @@ describe('TopicsIndexPage', () => {
     await act(async () => {
       render(<TopicsIndexPage {...validTopicsData} />);
     });
-    validTopicsData.topicsData.summaries.forEach(summary => {
+    validTopicsData.pageData.summaries.forEach(summary => {
       expect(screen.getByText(summary.title)).toBeInTheDocument();
     });
   });
@@ -42,7 +46,7 @@ describe('TopicsIndexPage', () => {
     await act(async () => {
       render(<TopicsIndexPage {...validTopicsData} />);
     });
-    validTopicsData.topicsData.summaries.forEach(summary => {
+    validTopicsData.pageData.summaries.forEach(summary => {
       expect(screen.getByText(summary.title)).toBeInTheDocument();
       expect(screen.getByRole('link', { name: summary.title })).toHaveAttribute(
         'href',
