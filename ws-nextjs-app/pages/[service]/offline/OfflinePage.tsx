@@ -3,18 +3,22 @@ import Helmet from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ErrorMain from '#app/legacy/components/ErrorMain';
 import { useOfflinePageFlag } from '#app/hooks/useOfflinePageFlag';
+import MostRead from '#app/components/MostRead/Canonical';
 import { MostReadData } from '#app/components/MostRead/types';
+import Heading from '#app/components/Heading';
+import Paragraph from '#app/components/Paragraph';
 
-export type Props = {
-  pageData: {
-    mostReadData: MostReadData;
-  };
-};
+interface PageData {
+  mostReadData?: MostReadData | null;
+}
 
-const OfflinePage = ({ pageData }: Props) => {
+interface OfflinePageProps {
+  pageData?: PageData | null;
+}
+
+const OfflinePage = ({ pageData }: OfflinePageProps) => {
   const { service, dir, script } = use(ServiceContext);
 
-  // Track offline page visit (sets flag in localStorage, PWA only)
   useOfflinePageFlag();
 
   const title = 'You are offline';
@@ -25,7 +29,7 @@ const OfflinePage = ({ pageData }: Props) => {
     'Refresh the page when your connection is restored',
   ];
 
-  console.log({ pageData });
+  const mostReadData = pageData?.mostReadData;
 
   return (
     <>
@@ -33,16 +37,36 @@ const OfflinePage = ({ pageData }: Props) => {
         <title>{title}</title>
         <meta name="robots" content="noindex,nofollow" />
       </Helmet>
-      <ErrorMain
-        statusCode={null}
-        title={title}
-        message={message}
-        solutions={solutions}
-        callToActionLinkText=""
-        callToActionLinkUrl=""
-        script={script}
-        service={service}
-      />
+
+      {mostReadData?.items?.length ? (
+        <main style={{ margin: '0 auto', maxWidth: '63rem', padding: '1rem' }}>
+          <Heading level={1} style={{ margin: '1rem 0' }}>
+            {title}
+          </Heading>
+          <Paragraph size="bodyCopy" style={{ margin: '1rem 0' }}>
+            {message}
+          </Paragraph>
+          <Heading level={3} style={{ margin: '1rem 0' }}>
+            Most read articles
+          </Heading>
+          <MostRead
+            data={mostReadData}
+            columnLayout="twoColumn"
+            size="default"
+          />
+        </main>
+      ) : (
+        <ErrorMain
+          statusCode={null}
+          title={title}
+          message={message}
+          solutions={solutions}
+          callToActionLinkText=""
+          callToActionLinkUrl=""
+          script={script}
+          service={service}
+        />
+      )}
     </>
   );
 };

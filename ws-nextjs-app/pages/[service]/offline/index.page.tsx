@@ -32,7 +32,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       resolvedUrl: `/${service}/popular/read`,
       service,
       variant: variant || undefined,
-      rendererEnv,
+      rendererEnv: rendererEnv || 'live',
     });
 
     mostReadData = data?.pageData ?? null;
