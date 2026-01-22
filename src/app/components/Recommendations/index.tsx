@@ -39,7 +39,7 @@ const Recommendations = ({
 }: RecommendationsProps) => {
   const { recommendations, script, service, dir, translations } =
     use(ServiceContext);
-  console.log('Referrer in Recommendations component:', referrer);
+
   const {
     palette: { GREY_2 },
   } = useTheme();

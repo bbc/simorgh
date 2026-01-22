@@ -218,9 +218,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   useEffect(() => {
     setReferrer(getReferrer());
   }, []);
-  // Log the referrer value for debugging purposes
-  // eslint-disable-next-line no-console
-  console.log('Referrer:', referrer);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -241,11 +239,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // EXPERIMENT: Referrer Experiment
   const referrerExperimentName = 'newswb_ws_oj_by_referrer';
-  let referrerVariant = useOptimizelyVariation({
+  const referrerVariant = useOptimizelyVariation({
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  referrerVariant = 'adaptive_variant'; // For testing purposes only. Remove this line in production.
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
