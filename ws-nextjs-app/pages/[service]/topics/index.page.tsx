@@ -63,15 +63,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
         status: 200,
         timeOnServer: Date.now(),
         pathname: context.resolvedUrl,
-        topicsData: {
-          headline: topicsData.headline,
-          summaries: topicSummaries,
-          totalItems,
-        },
         page,
         activePage,
         pageCount,
         safeActivePage,
+        pageData: {
+          headline: topicsData.headline,
+          summaries: topicSummaries,
+          totalItems,
+          metadata: {
+            type: TOPIC_PAGE,
+          },
+        },
       },
     };
   } catch {
