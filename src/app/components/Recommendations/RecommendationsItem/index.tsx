@@ -9,13 +9,16 @@ import styles from './index.styles';
 const RecommendationsItem = ({
   recommendation,
   eventTrackingData,
+  eventTrackingDataTwo,
 }: {
   recommendation: Recommendation | null;
   eventTrackingData?: Record<string, unknown>;
+  eventTrackingDataTwo?: Record<string, unknown>;
 }) => {
   const { isLite } = use(RequestContext);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const clickTrackerHandlerTwo = useClickTrackerHandler(eventTrackingDataTwo);
 
   if (!recommendation) return null;
 
@@ -30,7 +33,12 @@ const RecommendationsItem = ({
       )}
       <div css={styles.textWrapper}>
         <div css={styles.headline}>
-          <a css={styles.link} href={href} {...clickTrackerHandler}>
+          <a
+            css={styles.link}
+            href={href}
+            {...clickTrackerHandler}
+            {...clickTrackerHandlerTwo}
+          >
             {title}
           </a>
         </div>
