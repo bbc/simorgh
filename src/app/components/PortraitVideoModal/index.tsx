@@ -213,6 +213,7 @@ export interface PortraitVideoModalProps {
     React.Dispatch<React.SetStateAction<HTMLElement | null>>
   >;
   onMediaChanged?: (data: { item: PortraitClipMediaBlock }) => void;
+  setControlsDisplayed?: any;
 }
 
 const PortraitVideoModal = ({
@@ -222,6 +223,7 @@ const PortraitVideoModal = ({
   eventTrackingData,
   setVideoOverlayContainerRef,
   onMediaChanged,
+  setControlsDisplayed,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -382,6 +384,8 @@ const PortraitVideoModal = ({
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+            uiControlBarShown: () => setControlsDisplayed(true),
+            uiControlBarHidden: () => setControlsDisplayed(false),
           }}
         />
         <button

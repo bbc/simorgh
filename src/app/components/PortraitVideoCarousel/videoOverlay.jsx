@@ -89,7 +89,7 @@ const ShareToolComponent = ({ shareUrlPath, title }) => {
   );
 };
 
-const VideoOverlay = ({ currentItem }) => {
+const VideoOverlay = ({ currentItem, controlsDisplayed }) => {
   const { shareUrl, title } = currentItem?.model?.video || {};
 
   return (
@@ -102,7 +102,7 @@ const VideoOverlay = ({ currentItem }) => {
       <VideoOverlayWrapper>
         <VideoOverlayFooter
           className="video-overlay-footer fadedIn fadedOut"
-          controlsDisplayed
+          controlsDisplayed={controlsDisplayed}
           // The video-overlay plugin will use this attribute to instruct SMP not to render subtitles in the space occupied by this div.
           data-region-exclude-subtitles
         >

@@ -39,6 +39,7 @@ const PortraitVideoCarousel = ({
   const [currentItem, setCurrentItem] = useState<
     PortraitClipMediaBlock | undefined
   >();
+  const [controlsDisplayed, setControlsDisplayed] = useState(false);
 
   const { isLite, nonce } = use(RequestContext);
 
@@ -142,6 +143,7 @@ const PortraitVideoCarousel = ({
               eventTrackingData={eventTrackingDataExtended}
               setVideoOverlayContainerRef={setVideoOverlayContainerRef}
               onMediaChanged={onMediaChanged}
+              setControlsDisplayed={setControlsDisplayed}
             />,
             document.body,
           )}
@@ -149,7 +151,10 @@ const PortraitVideoCarousel = ({
           selectedVideoIndex !== null &&
           createPortal(
             <PluginCacheProvider container={videoOverlayContainer}>
-              <VideoOverlay currentItem={currentItem} />
+              <VideoOverlay
+                currentItem={currentItem}
+                controlsDisplayed={controlsDisplayed}
+              />
             </PluginCacheProvider>,
             videoOverlayContainer,
           )}
