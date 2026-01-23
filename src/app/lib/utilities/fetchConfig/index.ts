@@ -5,6 +5,7 @@ import { Services } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { getEnvConfig } from '../getEnvConfig';
+import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
 
@@ -34,6 +35,7 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
   const fetchOptions = {
+    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
     ...(agent && { agent }),
   };
 
@@ -47,7 +49,6 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
     return cachedResponse;
   }
 
-  // @ts-expect-error - TODO: fix 'fetchOptions' type
   const response = await fetch(fetchUrl.toString(), fetchOptions);
 
   if (response.ok) {
