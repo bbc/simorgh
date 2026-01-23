@@ -1,5 +1,3 @@
-import React from 'react';
-
 import MessageBanner from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 import readme from './README.md';

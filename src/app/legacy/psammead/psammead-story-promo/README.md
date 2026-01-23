@@ -112,7 +112,7 @@ On the other hand, a `promoType` prop of `leading` can be passed to place the In
 This prop must be passed to the StoryPromo, Headline and Summary components.
 
 ```jsx
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import StoryPromo, {
   Headline,
   Summary,
@@ -163,9 +163,7 @@ const Info = ({ isLive, alsoItems }) => (
     <Headline script={latin} service="news" promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel>
-            The headline of the live promo
-          </LiveLabel>
+          <LiveLabel>The headline of the live promo</LiveLabel>
         ) : (
           'The headline of the promo'
         )}

@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import extractHeaders from '#server/utilities/extractHeaders';
 import { ARTICLE_PAGE, MEDIA_ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import parseRoute from '#app/routes/utils/parseRoute';
 import nodeLogger from '#lib/logger.node';
@@ -8,17 +7,17 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import getPathExtension from '#app/utilities/getPathExtension';
 import PageDataParams from '#app/models/types/pageDataParams';
 import handleError from '#app/routes/utils/handleError';
-import { PageTypes, Toggles } from '#app/models/types/global';
-import augmentWithDisclaimer from '#app/routes/article/utils/augmentWithDisclaimer';
-import shouldRender from '#app/legacy/containers/PageHandlers/withData/shouldRender';
+import { PageTypes } from '#app/models/types/global';
+
 import { ArticleMetadata } from '#app/models/types/optimo';
-import { getServerExperiments } from '#server/utilities/experimentHeader';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
+import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
 
 const logger = nodeLogger(__filename);
 
-const transformPageData = (toggles?: Toggles) =>
-  augmentWithDisclaimer({ toggles, positionFromTimestamp: 0 });
+const transformPageData = () =>
+  augmentWithDisclaimer({ positionFromTimestamp: 0 });
 
 const getDerivedArticleType = (metadata: ArticleMetadata) => {
   let pageType: PageTypes = metadata?.type;
@@ -41,10 +40,10 @@ export default async (context: GetServerSidePropsContext) => {
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrlWithoutQuery);
+  const { isAmp } = getPathExtension(resolvedUrlWithoutQuery);
   const { variant } = parseRoute(resolvedUrl);
 
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
@@ -63,8 +62,6 @@ export default async (context: GetServerSidePropsContext) => {
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
     { pageData, status },
     service,
-    resolvedUrlWithoutQuery,
-    ARTICLE_PAGE,
   );
 
   // If request has fails or should not be rendered, return non-200 status
@@ -73,18 +70,12 @@ export default async (context: GetServerSidePropsContext) => {
 
     return {
       props: {
-        isApp,
-        isAmp,
-        isLite,
-        isNextJs: true,
         service,
         status: renderStatus,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: ARTICLE_PAGE,
         pathname: resolvedUrlWithoutQuery,
-        toggles,
-        ...extractHeaders(reqHeaders),
       },
     };
   }
@@ -93,8 +84,9 @@ export default async (context: GetServerSidePropsContext) => {
     throw handleError('Article data is malformed', 500);
   }
 
-  const { article, secondaryData } = data?.pageData || {};
+  const country = reqHeaders['x-country']?.toString()?.toLowerCase() || null;
 
+  const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
     Date.now() - article.metadata.lastPublished > 21600000;
   const maxAge = isArticleOlderThanSixHours ? 90 : 45;
@@ -111,9 +103,9 @@ export default async (context: GetServerSidePropsContext) => {
     mostRead = null,
     billboardCuration = null,
     mediaCuration = null,
-  } = secondaryData;
+  } = secondaryData || {};
 
-  const transformedArticleData = transformPageData(toggles)(article);
+  const transformedArticleData = transformPageData()(article);
 
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
@@ -123,20 +115,10 @@ export default async (context: GetServerSidePropsContext) => {
 
   const derivedPageType = getDerivedArticleType(article.metadata);
 
-  const serverSideExperiments = getServerExperiments({
-    headers: reqHeaders,
-    service,
-    pageType: derivedPageType,
-  });
-
   return {
     props: {
-      country: reqHeaders?.['x-country'] || null,
+      country,
       id: resolvedUrlWithoutQuery,
-      isAmp,
-      isApp,
-      isLite,
-      isNextJs: true,
       pageData: {
         ...transformedArticleData,
         secondaryColumn: {
@@ -150,12 +132,9 @@ export default async (context: GetServerSidePropsContext) => {
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
-      serverSideExperiments,
       service,
       status,
-      toggles,
       variant: variant || null,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     atiAnalyticsProducerName: 'NEPALI',
-    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/nepali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
     externalLinkText: ', बाह्य',
@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'र',
       pagination: {
         page: 'पेज',
         previousPage: 'पछाडि',
@@ -345,6 +346,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'समाचार',
         url: '/nepali',
+      },
+      {
+        title: 'नेपाल निर्वाचन २०८२',
+        url: '/nepali/topics/c5ydk8xvx6jt',
       },
       {
         title: 'नेपाल',

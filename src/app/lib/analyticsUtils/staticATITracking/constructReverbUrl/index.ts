@@ -28,9 +28,12 @@ export default ({
   };
   const env = getEnvConfig().SIMORGH_APP_ENV;
 
-  return reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
-    ...reverbParams,
-    additionalParams,
-    env,
-  });
+  const staticATITrackingURL =
+    reverbUrlHelper.getLiteComponentViewClickTrackingUrl({
+      ...reverbParams,
+      additionalParams,
+      env,
+    });
+
+  return staticATITrackingURL;
 };

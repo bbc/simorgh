@@ -1,7 +1,4 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsxRuntime classic */
-/** @jsx  jsx  */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#app/contexts/ServiceContext';

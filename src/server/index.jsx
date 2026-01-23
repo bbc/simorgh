@@ -41,6 +41,7 @@ import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
 import services from './utilities/serviceConfigs';
 import createAdNonce from '../app/utilities/createAdNonce';
+import { UNKNOWN_PAGE } from '../app/routes/utils/pageTypes';
 
 const morgan = require('morgan');
 
@@ -167,19 +168,21 @@ const injectPlatformToRequestChainHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const assetOrigins = getAssetOrigins();
-  res.set(
-    'Link',
-    assetOrigins
-      .map(domainName => {
-        const crossOrigin =
-          domainName === 'https://static.files.bbci.co.uk'
-            ? `,<${domainName}>; rel="preconnect"; crossorigin`
-            : '';
-        return `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"${crossOrigin}`;
-      })
-      .join(','),
+  const { dnsPrefetchOrigins, preconnectOrigins } = getAssetOrigins(
+    req.originalUrl,
   );
+
+  const resourceHintsConfig = [
+    ...dnsPrefetchOrigins.map(
+      domainName => `<${domainName}>; rel="dns-prefetch"`,
+    ),
+    ...preconnectOrigins.map(
+      domainName => `<${domainName}>; rel="preconnect"; crossorigin`,
+    ),
+  ];
+
+  res.set('Link', resourceHintsConfig.join(','));
+
   next();
 };
 // Set Referrer-Policy
@@ -198,7 +201,7 @@ server.get(
     injectPlatformToRequestChainHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    let derivedPageType = 'Unknown';
+    let derivedPageType = UNKNOWN_PAGE;
     let serverSideExperiments = [];
 
     try {

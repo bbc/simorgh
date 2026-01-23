@@ -125,7 +125,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 10`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `
 {
@@ -213,12 +213,20 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 }
 `;
 
+exports[`Canonical Story Page Header Navigation link should match text and url 12`] = `
+{
+  "text": "Podcasts",
+  "url": "/mundo/topics/ce3wlelkgggt",
+}
+`;
+
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Pie de foto, Llegó el día de la salida de Reino Unido de la UE."`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="A person holding a union jack umbrella in front of Big Ben"
-  class="css-4ejld5"
+  class="css-1seqhu9"
+  fetchpriority="high"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -383,7 +391,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Mundo",

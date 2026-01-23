@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { use, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -22,14 +19,12 @@ type PortraitVideoCarouselProps = {
   title: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
-  timeOfDayVariant?: string;
 };
 
 const PortraitVideoCarousel = ({
   title,
   blocks,
   eventTrackingData,
-  timeOfDayVariant,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,25 +34,25 @@ const PortraitVideoCarousel = ({
 
   const { isLite, nonce } = use(RequestContext);
 
-  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  // EXPERIMENT: Homepage Portrait Video 2
+  const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
   const playDurationVariation =
     useOptimizelyVariation({
-      experimentName: 'newswb_ws_homepage_portrait_video',
+      experimentName: playDurationExperimentName,
       experimentType: ExperimentType.CLIENT_SIDE,
     }) ?? undefined;
 
   const eventTrackingDataExtended = {
     ...eventTrackingData,
-    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
-    ...(playDurationVariation && {
-      sendOptimizelyEvents: true,
-      experimentName: 'newswb_ws_play_and_duration_size_increase',
-      experimentVariant: playDurationVariation,
-    }),
     groupTracker: {
       ...eventTrackingData?.groupTracker,
       itemCount: blocks.length,
     },
+    ...(playDurationVariation && {
+      sendOptimizelyEvents: true,
+      experimentName: playDurationExperimentName,
+      experimentVariation: playDurationVariation,
+    }),
   };
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
@@ -113,8 +108,6 @@ const PortraitVideoCarousel = ({
                 onClick={() => handlePromoClick(index)}
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
-                timeOfDayVariant={timeOfDayVariant}
-                // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
                 playDurationVariation={playDurationVariation}
               />
             ))}

@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ReactNode, FC } from 'react';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import {
   Variants,
@@ -65,7 +65,7 @@ import zhongwenSimp from '../themes/zhongwen/simp';
 import zhongwenTrad from '../themes/zhongwen/trad';
 import ws from '../themes/ws';
 
-type ThemeComponent = React.FC<{ children: React.ReactNode }>;
+type ThemeComponent = FC<{ children: ReactNode }>;
 
 type ThemeProviders = {
   [_service in ServicesWithNoVariants['service']]: ThemeComponent;
@@ -153,7 +153,7 @@ const themeProvidersVariants: ThemeProvidersWithVariants = {
 interface Props {
   service: Services;
   variant?: Variants;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const ThemeProvider = ({ children, service, ...rest }: Props) => {

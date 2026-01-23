@@ -9,7 +9,6 @@ import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import logResponseTime from '#src/server/utilities/logResponseTime';
 import { OK } from '#app/lib/statusCodes.const';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
-import extractHeaders from '#src/server/utilities/extractHeaders';
 
 const LiveTvLayout = dynamic(() => import('./LiveTvPageLayout'));
 
@@ -38,9 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  const { headers: reqHeaders } = context.req;
-
-  const { data, toggles } = await getPageData({
+  const { data } = await getPageData({
     id,
     service,
     rendererEnv,
@@ -63,12 +60,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
   context.res.statusCode = data.status;
 
   const baseProps = {
-    isNextJs: true,
     status: data.status,
     pageType: LIVE_TV_PAGE as PageTypes,
     id,
     service,
-    toggles,
     pageData: data?.pageData
       ? {
           ...data.pageData,
@@ -84,7 +79,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
         }
       : null,
     pathname: context?.resolvedUrl,
-    ...extractHeaders(reqHeaders),
   };
   return {
     props: {
@@ -94,4 +88,3 @@ export const getServerSideProps: GetServerSideProps = async context => {
 };
 
 export default LiveTvLayout;
-

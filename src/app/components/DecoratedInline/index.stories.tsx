@@ -1,4 +1,3 @@
-import React from 'react';
 import { OptimoBlock } from '#app/models/types/optimo';
 import DecoratedInlineLink from '.';
 import { persianLink, fragmentBlock } from './fixture';

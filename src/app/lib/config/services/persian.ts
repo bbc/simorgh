@@ -15,11 +15,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     atiAnalyticsProducerName: 'PERSIAN',
-    useReverb: true,
     chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -350,16 +350,16 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
+          'اگر محتوایی را برای استفاده در وب‌سایت یا برنامه‌ای ارسال کرده‌اید، در صورتی که ما از آن محتوا استفاده کرده باشیم دیگر امکان حذف آن موجود نیست.',
         retentionPeriodDays:
-          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
+          'اطلاعات ارسالی شما تا ۹۰ روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
         privacyInfoHtml:
           'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
         emailToHtml:
-          'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
+          'اگر نظر خود را تغییر داده‌اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
         dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
@@ -451,8 +451,8 @@ export const service: DefaultServiceConfig = {
         url: '/persian',
       },
       {
-        title: 'جنگ اسرائیل-ایران',
-        url: '/persian/topics/cwy6874zgpqt',
+        title: 'اعتراضات ایران ۱۴۰۴',
+        url: '/persian/topics/c4g30w1p327t',
       },
       {
         title: 'پخش زنده',

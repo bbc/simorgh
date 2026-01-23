@@ -1,4 +1,3 @@
-import React from 'react';
 import Timestamp from '#psammead/psammead-timestamp/src';
 import {
   isValidDateTime,

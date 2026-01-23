@@ -1,7 +1,5 @@
 import { FetchMock } from 'jest-fetch-mock';
-import React from 'react';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
@@ -43,8 +41,6 @@ const renderPage = async ({ pageData, service }: Props) => {
 
   return result;
 };
-
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 const fetchMock = fetch as FetchMock;
 

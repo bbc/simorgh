@@ -3,14 +3,13 @@ const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 const { getClientEnvVars } = require('../src/clientEnvVars');
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
-const isLocal =
-  process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN?.includes('localhost');
+const isLocal = process.env.SIMORGH_APP_ENV === 'local';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -25,10 +24,37 @@ module.exports = {
           },
         ],
       },
+      //* *TODO: */ Service worker headers — commented out, as this will be handled as part of future work in this ticket https://bbc.atlassian.net/browse/WS-2004.
+
+      // {
+      //   source: '/:service/sw.js',
+      //   headers: [
+      //     {
+      //       key: 'Service-Worker-Allowed',
+      //       value: '/:service',
+      //     },
+      //     {
+      //       key: 'Cache-Control',
+      //       value: 'public, max-age=0, must-revalidate',
+      //     },
+      //     { key: 'Content-Type', value: 'application/javascript' },
+      //   ],
+      // },
     ];
   },
   async rewrites() {
     return [
+      // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
+      // but will not work on localhost. This rewrites requests from paths outside of root
+      // to the sw.js file found in the 'public' folder, which is served from the root.
+      ...(isLocal
+        ? [
+            {
+              source: '/:path/sw.js',
+              destination: '/sw.js',
+            },
+          ]
+        : []),
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
@@ -42,14 +68,12 @@ module.exports = {
   poweredByHeader: false,
   generateEtags: false,
   transpilePackages: ['simorgh'],
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   env: {
     ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
+  compiler: { emotion: true },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts

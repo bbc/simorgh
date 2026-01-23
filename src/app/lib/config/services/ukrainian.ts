@@ -2,9 +2,9 @@ import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
+import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
@@ -17,12 +17,12 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   atiAnalyticsProducerName: 'UKRAINIAN',
-  useReverb: true,
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',
   serviceLocalizedName: 'Україна',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News Україна',
   dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
@@ -46,16 +46,16 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'Viber',
-    brandTitle: 'Як дізнатися головне про Україну та світ?',
-    brandDescription: 'Стежте за BBC News Україна у Viber!',
+    title: 'Whatsapp',
+    brandTitle: 'BBC Україна тепер у WhatsApp!',
+    brandDescription: 'Як дізнатися головне про Україну та світ?',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0ld00bz.jpg',
-      alt: 'Підписуйтесь на наш Viber',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kv11pb.png',
+      alt: 'BBC News Україна підписуйтеся на наш WhatsApp',
     },
     linkLabel: {
-      text: 'Підписуйтеся на канал тут!',
-      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW',
+      text: 'Підписуйтеся на наш канал тут.',
+      href: 'https://www.whatsapp.com/channel/0029Vau5deM0QeaqQRTPVs2e',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -63,6 +63,7 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    and: 'i',
     pagination: {
       previousPage: 'Повернутися',
       nextPage: 'Наступна',
@@ -382,7 +383,7 @@ export const service: UkrainianConfig = {
     languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
-      ...russianMainTranslations,
+      ...russianUkrainianSharedTranslations,
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
     },

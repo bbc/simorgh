@@ -46,7 +46,7 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
-        'div div:nth-child(2)': {
+        'div div:last-child': {
           [mq.GROUP_1_MAX_WIDTH]: {
             position: 'relative',
           },

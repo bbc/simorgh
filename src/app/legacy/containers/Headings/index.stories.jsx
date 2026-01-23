@@ -1,4 +1,3 @@
-import React from 'react';
 import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 

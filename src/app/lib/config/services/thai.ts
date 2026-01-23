@@ -15,12 +15,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     atiAnalyticsProducerName: 'THAI',
-    useReverb: true,
     chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
     externalLinkText: ', จากภายนอก',
@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'และ',
       pagination: {
         previousPage: 'ก่อนหน้านี้',
         nextPage: 'ถัดไป',
@@ -276,6 +277,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
+      },
+      {
+        title: 'เลือกตั้ง 2569',
+        url: '/thai/topics/cd9zv7dyg1kt',
       },
       {
         title: 'ประเทศไทย',

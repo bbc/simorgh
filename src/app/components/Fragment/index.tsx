@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx  jsx  */
 import { PropsWithChildren } from 'react';
-import { jsx } from '@emotion/react';
 import styles from './index.style';
 
 const bold = ({ children }: PropsWithChildren) => <b>{children}</b>;

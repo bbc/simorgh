@@ -7,6 +7,8 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface CustomEventData {
   eventName: string;
+  experimentName?: string;
+  experimentVariant?: string;
 }
 
 type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
@@ -22,6 +24,8 @@ type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
 
 const useCustomEventTracker = ({
   eventName,
+  experimentName,
+  experimentVariant,
 }: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
@@ -35,7 +39,7 @@ const useCustomEventTracker = ({
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const trackEvent = useCallback(
     async (stringifiedData = '') => {
@@ -65,7 +69,8 @@ const useCustomEventTracker = ({
             producerName,
             service,
             statsDestination,
-            useReverb,
+            experimentName,
+            experimentVariant,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
@@ -83,7 +88,8 @@ const useCustomEventTracker = ({
       producerName,
       service,
       statsDestination,
-      useReverb,
+      experimentName,
+      experimentVariant,
     ],
   );
 

@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     atiAnalyticsProducerName: 'TIGRINYA',
-    useReverb: true,
     chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tigrinya/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
     externalLinkText: ', ደጋዊ',
@@ -64,6 +64,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'እና',
       pagination: {
         previousPage: 'ናይ ሕሉፍ',
         nextPage: 'ዝቕጽል',

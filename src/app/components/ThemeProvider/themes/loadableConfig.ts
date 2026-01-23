@@ -1,6 +1,6 @@
 import { Services, ServicesWithVariants } from '#app/models/types/global';
 import { LoadableTheme } from '#app/models/types/theming';
-import loadable from '@loadable/component';
+import loadable from 'next/dynamic';
 
 export const themes: Record<
   Services,

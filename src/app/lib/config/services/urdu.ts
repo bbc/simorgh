@@ -14,10 +14,10 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
-    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News اردو',
     dir: 'rtl',
     externalLinkText: '، بیرو',
@@ -66,6 +66,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'اور',
       pagination: {
         previousPage: 'پچھلا صفحہ',
         nextPage: 'اگلا صفحہ',
@@ -260,7 +261,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
-        recentEpisodes: 'سابق پروگرام',
+        recentEpisodes: 'دیگر پروگرامز',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',

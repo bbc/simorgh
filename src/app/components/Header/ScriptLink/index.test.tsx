@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../react-testing-library-with-providers';
 import ScriptLink from '.';
 
@@ -67,6 +66,21 @@ describe(`Script Link`, () => {
         },
       );
     });
+  });
+
+  it('should set the correct alternate variant when URL has query parameters', () => {
+    const { container } = render(<ScriptLink />, {
+      toggles: enabledToggleState,
+      service: 'serbian',
+      variant: 'lat',
+      pathname: '/serbian/articles/c805k05kr73o/lat?foo=bar&baz=qux',
+    });
+
+    const scriptLink = container.querySelector(`a[data-variant]`);
+
+    expect(scriptLink?.getAttribute('href')).toBe(
+      '/serbian/articles/c805k05kr73o/cyr',
+    );
   });
 
   it('should not render when scriptLink toggle is off', () => {

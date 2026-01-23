@@ -1,4 +1,3 @@
-import React from 'react';
 import { shouldMatchSnapshot } from '#psammead/psammead-test-helpers/src';
 import WithError from '.';
 

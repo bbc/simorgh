@@ -142,9 +142,7 @@ export type ReverbBeaconConfig = {
 };
 
 export interface ATIAnalyticsProps {
-  baseUrl?: string;
-  pageviewParams: string;
-  reverbParams?: ReverbBeaconConfig | null;
+  reverbParams: ReverbBeaconConfig;
 }
 
 export interface ATIEventTrackingProps {
@@ -161,7 +159,6 @@ export interface ATIEventTrackingProps {
   advertiserID?: string;
   url?: string;
   detailedPlacement?: string;
-  useReverb?: boolean;
   experimentName?: string;
   experimentVariant?: string | null;
   ampExperimentName?: string;

@@ -1,4 +1,3 @@
-import pixelsToRem from '#app/utilities/pixelsToRem';
 import { Theme, css } from '@emotion/react';
 
 const styles = {
@@ -19,35 +18,27 @@ const styles = {
   }),
   padding: ({ spacings, mq }: Theme) =>
     css({
-      padding: `${spacings.TRIPLE}rem 0`,
-      [(mq.GROUP_1_ONLY, mq.GROUP_2_ONLY)]: {
-        padding: `${spacings.QUADRUPLE}rem 0`,
-      },
-      [mq.GROUP_3_ONLY]: {
-        padding: `${spacings.SEXTUPLE}rem 0`,
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.QUINTUPLE}rem 0`,
+      padding: `${spacings.DOUBLE}rem 0`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        padding: `${spacings.TRIPLE}rem 0`,
       },
     }),
-  playerOutline: ({ mq }: Theme) =>
+  playerMargins: ({ mq, spacings }: Theme) =>
     css({
-      [mq.FORCED_COLOURS]: {
-        border: `solid ${pixelsToRem(3)}rem transparent`,
+      [mq.GROUP_3_MAX_WIDTH]: {
+        marginInline: `-${spacings.DOUBLE}rem`,
       },
     }),
-  title: ({ mq, palette, spacings }: Theme) =>
+  title: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingTop: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
-      [mq.FORCED_COLOURS]: {
-        paddingTop: `${spacings.FULL}rem`,
-      },
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.DOUBLE}rem`,
+      paddingBottom: `${spacings.QUINTUPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),

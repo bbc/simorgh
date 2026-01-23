@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import React, { use } from 'react';
+import { use } from 'react';
 import {
   render,
   screen,

@@ -75,6 +75,14 @@ const styles = {
         },
       }),
     }),
+  inlineIcon: ({ spacings }: Theme) =>
+    css({
+      display: 'none',
+      padding: 0,
+      paddingInlineEnd: `${spacings.HALF}rem`,
+      marginInlineStart: `-${spacings.HALF}rem`,
+      verticalAlign: 'text-top',
+    }),
 };
 
 const DesktopBigPromo = css({
@@ -127,6 +135,9 @@ const CompactPromo = css({
   },
   '.promo-paragraph': {
     display: 'none',
+  },
+  '.inline-icon': {
+    display: 'inline',
   },
   '::before': {
     top: 0,

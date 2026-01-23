@@ -3,7 +3,7 @@
  * @pathname /portuguese/articles/c72mg3j3x7eo
  */
 
-import { runFlourishAmpEmbedTests } from '#src/integration/common';
+import { runFlourishAmpEmbedTests } from '../../../common';
 import runInlineLinkTests from '../inlineLink';
 import runParagraphTests from '../paragraph';
 

@@ -12,10 +12,10 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-uzbek',
   atiAnalyticsProducerId: '96',
   atiAnalyticsProducerName: 'UZBEK',
-  useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/uzbek/images/metadata/poster-1024x576.png',
   dir: `ltr` as Direction,
   service: 'uzbek' as Services,
   languageName: 'Uzbek',
@@ -58,6 +58,7 @@ const defaultCyrillicConfig = {
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
   translations: {
+    and: 'ва',
     readTime: {
       readTimePrefix: 'Ўқилиш вақти',
       long: 'Узун мақола',
@@ -412,6 +413,7 @@ export const service: UzbekConfig = {
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
     translations: {
+      and: 'va',
       readTime: {
         readTimePrefix: "O'qilish vaqti",
         long: 'Uzun maqola',

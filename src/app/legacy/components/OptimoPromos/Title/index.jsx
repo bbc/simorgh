@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import StyledTitle from './index.styles';
 import PromoContext from '../PromoContext';
 
