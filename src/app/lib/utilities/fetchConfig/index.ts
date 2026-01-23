@@ -36,10 +36,9 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
 
   const cachedResponse = cache?.get(fetchUrl.toString());
 
-  if (cachedResponse) {
-    logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
-    return cachedResponse;
-  }
+  logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: !!cachedResponse });
+
+  if (cachedResponse) return cachedResponse;
 
   const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
