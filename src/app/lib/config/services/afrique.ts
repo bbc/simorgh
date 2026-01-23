@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'et',
       pagination: {
         page: 'Page',
         previousPage: 'Page précédente',
@@ -377,10 +378,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Ecoutez en direct',
         url: '/afrique/bbc_afrique_radio/liveradio',
-      },
-      {
-        title: 'CAN 2025',
-        url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
         title: 'Afrique',

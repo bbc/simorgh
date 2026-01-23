@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'และ',
       pagination: {
         previousPage: 'ก่อนหน้านี้',
         nextPage: 'ถัดไป',
@@ -276,6 +277,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
+      },
+      {
+        title: 'เลือกตั้ง 2569',
+        url: '/thai/topics/cd9zv7dyg1kt',
       },
       {
         title: 'ประเทศไทย',

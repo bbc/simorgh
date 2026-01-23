@@ -62,6 +62,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'fi',
       pagination: {
         previousPage: 'Kan duraa',
         nextPage: 'Itti aanee',

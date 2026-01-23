@@ -1,8 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
-import { LIVE_PAGE } from '../../../../../src/app/routes/utils/pageTypes';
 import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
-import { setUserIDCookie } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
 // TODO: Resolve error which is preventing e2e tests to run
 // import {
 //   assertRecommendationsComponentClick,
@@ -153,6 +151,6 @@ runTestsForPage({
     ...ampTestSuites,
     ...liteTestSuites,
   ] as unknown as TestDataType[],
-  beforeEachFns: [setUserIDCookie],
+  beforeEachFns: [],
   pageType: 'all' as PageTypes,
 });

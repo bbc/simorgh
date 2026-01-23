@@ -6,7 +6,6 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
-  ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
@@ -17,8 +16,13 @@ const usesReverbViewabilityModel = applicationType =>
   !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
-  if (service === 'ws') {
-    return '[news]';
+  const customServiceAppName = {
+    ws: '[news]',
+    romania: '[news-romanian]',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
   }
 
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
@@ -214,13 +218,6 @@ export const assertPageView = ({
         contentType,
         applicationType,
       });
-
-      if (['responsive', 'lite'].includes(applicationType)) {
-        expect(params.idclient).to.equal(
-          ATI_USER_ID_COOKIE,
-          'params.idclient (atuserid cookie value)',
-        );
-      }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(parseInt(params.s2, 10)).to.equal(

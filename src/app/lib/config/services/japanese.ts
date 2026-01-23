@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'と',
       pagination: {
         page: 'ページ',
         previousPage: '前に戻る',

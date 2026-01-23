@@ -9,7 +9,6 @@ import testsForAllAMPPages from '../testsForAllAMPPages';
 import canonicalAndAmpArticleTests from './tests';
 import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -293,6 +292,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: STORY_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

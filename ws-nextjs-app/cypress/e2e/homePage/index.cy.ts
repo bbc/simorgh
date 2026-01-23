@@ -31,7 +31,6 @@ import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/radioSchedule';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import urlValidationTest from '../../support/helpers/urlValidationTest';
 
 const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
@@ -71,6 +70,12 @@ const testSuites = [
     path: '/portuguese',
     runforEnv: ['local', 'test', 'live'],
     service: 'portuguese',
+    tests,
+  },
+  {
+    path: '/romania',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
     tests,
   },
   {
@@ -157,7 +162,7 @@ const atiAnalyticsTestSuites = [
     runforEnv: ['local', 'test'],
     service: 'magyarul',
     pageIdentifier: 'magyarul.page',
-    siteId: 30,
+    siteId: 134,
     applicationType: 'responsive',
     contentType: 'index-home',
     tests: [assertPageView],
@@ -189,6 +194,16 @@ const atiAnalyticsTestSuites = [
       assertPortraitVideoCarouselComponentView,
       assertPortraitVideoModalComponentView,
     ],
+  },
+  {
+    path: '/romania',
+    runforEnv: ['local', 'test'],
+    service: 'romania',
+    pageIdentifier: 'romania.page',
+    siteId: 136,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    tests: [assertPageView],
   },
   {
     path: '/serbian/lat',
@@ -267,12 +282,10 @@ runTestsForPage({
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });
 
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites: atiAnalyticsLiteTestSuites,
-  beforeAll: [setUserIDCookie],
 });
