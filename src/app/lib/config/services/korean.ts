@@ -47,7 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
-      and: ', ',
+      and: '',
       pagination: {
         previousPage: '이전',
         nextPage: '다음',
