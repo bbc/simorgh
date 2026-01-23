@@ -17,6 +17,7 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import { getServerExperiments } from '#src/server/utilities/experimentHeader';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#nextjs/utilities/addCspHeader';
@@ -25,6 +26,7 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
 
 interface Props {
   pageProps: {
@@ -67,14 +69,13 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
-    const host = `http://${process.env.HOSTNAME || 'localhost'}`;
-    const port = process.env.PORT ? `:${process.env.PORT}` : '';
+    const [togglesResult, _configResult] = await Promise.allSettled([
+      getToggles(service),
+      fetchConfig({ service, configType: 'navigation' }),
+    ]);
 
-    const configResponse = await fetch(
-      new URL(`${host}${port}/api/${service}/config`).toString(),
-    );
-
-    const { toggles } = await configResponse.json();
+    const toggles =
+      togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);

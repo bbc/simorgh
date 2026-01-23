@@ -2485,6 +2485,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@bbc/simorgh-getAgent@workspace:src/server/utilities/getAgent":
+  version: 0.0.0-use.local
+  resolution: "@bbc/simorgh-getAgent@workspace:src/server/utilities/getAgent"
+  languageName: unknown
+  linkType: soft
+
 "@bbc/web-vitals@npm:2.5.3":
   version: 2.5.3
   resolution: "@bbc/web-vitals@npm:2.5.3"
