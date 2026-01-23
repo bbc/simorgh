@@ -40,13 +40,14 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
-  // const cachedResponse = cache?.get(fetchUrl.toString());
+  const cachedResponse = cache?.get(fetchUrl.toString());
 
-  // if (cachedResponse) {
-  //   logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
-  //   return cachedResponse;
-  // }
+  if (cachedResponse) {
+    logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
+    return cachedResponse;
+  }
 
+  // @ts-expect-error - TODO: fix 'fetchOptions' type
   const response = await fetch(fetchUrl.toString(), fetchOptions);
 
   if (response.ok) {
