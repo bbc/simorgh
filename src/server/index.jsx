@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
