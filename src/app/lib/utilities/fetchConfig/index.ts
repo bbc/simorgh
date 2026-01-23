@@ -2,6 +2,8 @@ import nodeLogger from '#lib/logger.node';
 import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import { LRUCache } from 'lru-cache';
 import { Services } from '#app/models/types/global';
+import getAgent from '#src/server/utilities/getAgent';
+import certsRequired from '#app/routes/utils/certsRequired';
 import { getEnvConfig } from '../getEnvConfig';
 
 const logger = nodeLogger(__filename);
@@ -29,17 +31,23 @@ type FetchConfigParams = {
 const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   const fetchUrl = new URL(process.env.BFF_PATH as string);
 
-  fetchUrl.searchParams.append('service', service);
-  fetchUrl.searchParams.append('config', configType);
+  const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
-  const cachedResponse = cache?.get(fetchUrl.toString());
+  const fetchOptions = {
+    ...(agent && { agent }),
+  };
 
-  if (cachedResponse) {
-    logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
-    return cachedResponse;
-  }
+  fetchUrl.searchParams.set('service', service);
+  fetchUrl.searchParams.set('config', configType);
 
-  const response = await fetch(fetchUrl.toString());
+  // const cachedResponse = cache?.get(fetchUrl.toString());
+
+  // if (cachedResponse) {
+  //   logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
+  //   return cachedResponse;
+  // }
+
+  const response = await fetch(fetchUrl.toString(), fetchOptions);
 
   if (response.ok) {
     const { data } = await response.json();
