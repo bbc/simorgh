@@ -17,7 +17,6 @@ import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext
 import { UserContextProvider } from '#app/contexts/UserContext';
 import extractHeaders from '#src/server/utilities/extractHeaders';
 import { getServerExperiments } from '#src/server/utilities/experimentHeader';
-import getToggles from '#app/lib/utilities/getToggles/withCache';
 import getPathExtension from '#app/utilities/getPathExtension';
 import parseRoute from '#app/routes/utils/parseRoute';
 import addCspHeader from '#nextjs/utilities/addCspHeader';
@@ -75,7 +74,7 @@ export default class CustomApp extends App<Props> {
       new URL(`${host}${port}/api/${service}/config`).toString(),
     );
 
-    const { toggles, _navigation } = await configResponse.json();
+    const { toggles } = await configResponse.json();
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
