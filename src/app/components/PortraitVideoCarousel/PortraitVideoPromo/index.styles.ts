@@ -55,6 +55,14 @@ const styles = {
           navButtonAffordance: true,
         }),
       },
+      // to do, account for different items shown on homepage vs article page
+      // [mq.GROUP_5_MIN_WIDTH]: {
+      //   flexBasis: calculatePromoWidth({
+      //     fitForNItems: 4,
+      //     gapWidth: spacings.DOUBLE,
+      //     navButtonAffordance: true,
+      //   }),
+      // },
     }),
   button: ({ palette }: Theme) =>
     css({

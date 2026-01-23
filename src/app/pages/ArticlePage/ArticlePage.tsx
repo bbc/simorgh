@@ -16,6 +16,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 
 import {
   getArticleId,
@@ -322,6 +323,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  // to do - move?
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems &&
+      pageData?.portraitVideoItems?.portraitVideo.blocks.length > 0,
+  );
+
+  const portraitVideoCarouselTitle = pageData?.portraitVideoItems?.title || ''; // to check, may use fallback
+  const portraitVideoCarouselBlocks =
+    pageData?.portraitVideoItems?.portraitVideo.blocks || [];
+
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
@@ -396,7 +407,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-
+          {showPortraitVideoCarousel && (
+            <PortraitVideoCarousel
+              title={portraitVideoCarouselTitle}
+              blocks={portraitVideoCarouselBlocks}
+              eventTrackingData={{
+                componentName: 'portrait-video-article',
+              }}
+              backgroundColor="rgba(246, 246, 246, 0.75)" // to do - tidy, also arrow button not as high contrast
+              css={styles.portraitVideoCarousel}
+            />
+          )}
           <RelatedContentSection content={blocks} />
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}

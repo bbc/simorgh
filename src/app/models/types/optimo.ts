@@ -3,6 +3,7 @@ import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation } from './curationData';
@@ -150,6 +151,14 @@ export type RelatedContent = {
   };
 };
 
+// portraitvideo?
+export type portraitVideoItems = {
+  title: string;
+  portraitVideo: {
+    blocks: PortraitClipMediaBlock[];
+  };
+};
+
 export type Article = {
   content: ArticleContent;
   metadata: ArticleMetadata;
@@ -158,4 +167,5 @@ export type Article = {
   secondaryColumn?: SecondaryColumn;
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
+  portraitVideoItems?: portraitVideoItems;
 };

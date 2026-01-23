@@ -18,6 +18,8 @@ export const calculatePromoWidth = ({
 const calculateNavContainerWidth = (fitForNItems: number) =>
   `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
 
+// to do - why does this behave differently on article page group_5 to homepage group_5
+// use container query?
 export const calculateVariedNavContainerWidths = ({
   mq,
   display,
@@ -39,6 +41,7 @@ export const calculateVariedNavContainerWidths = ({
   },
   [mq.GROUP_5_MIN_WIDTH]: {
     display,
-    [widthParameter]: calculateNavContainerWidth(5),
+    // [widthParameter]: calculateNavContainerWidth(5),
+    [widthParameter]: calculateNavContainerWidth(4),
   },
 });

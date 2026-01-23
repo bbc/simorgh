@@ -13,9 +13,13 @@ type ScrollDirection = 'left' | 'right';
 
 type PortraitVideoCarouselNavigationProps = {
   scrollPaneRef: RefObject<HTMLUListElement | null>;
+  backgroundColor?: string;
 };
 
-export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
+export default ({
+  scrollPaneRef,
+  backgroundColor,
+}: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
@@ -59,7 +63,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay} aria-hidden="true">
+    <div css={styles.buttonGroupOverlay(backgroundColor)} aria-hidden="true">
       <div css={styles.buttonGroup}>
         <button
           type="button"
