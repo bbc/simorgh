@@ -49,21 +49,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'پادکست',
-      brandTitle: 'اسطوره تختی',
+      title: 'معرفی خبرنامه',
+      brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
       brandDescription:
-        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم.',
+        'گزیده‌ای از مهم‌ترین خبرها، گزارش‌های میدانی و گفت‌وگوهای اختصاصی را هر هفته در ایمیل خود دریافت کنید.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
-        alt: 'اسطوره تختی',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mwpjgy.jpg',
+        alt: 'خبرنامه',
       },
       linkLabel: {
-        text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
+        text: 'اینجا مشترک شوید',
+        href: 'https://www.bbc.com/persian/send/u209231908',
       },
       skipLink: {
-        text: 'از %title% رد شوید و به خواندن ادامه دهید',
-        endTextVisuallyHidden: 'پایان %title%',
+        text: 'از % title % عبور کنید و به ادامه مطلب بروید',
+        endTextVisuallyHidden: 'پایان   % title %',
       },
     },
     translations: {
