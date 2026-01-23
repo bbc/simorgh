@@ -31,14 +31,6 @@ type FetchConfigParams = {
 
 const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   const fetchUrl = new URL(process.env.BFF_PATH as string);
-
-  const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
-
-  const fetchOptions = {
-    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
-    ...(agent && { agent }),
-  };
-
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
@@ -48,6 +40,13 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
     logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: true });
     return cachedResponse;
   }
+
+  const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
+
+  const fetchOptions = {
+    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
+    ...(agent && { agent }),
+  };
 
   const response = await fetch(fetchUrl.toString(), fetchOptions);
 
