@@ -44,8 +44,8 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
   const fetchOptions = {
-    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
     ...(agent && { agent }),
+    signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 
   try {
@@ -59,7 +59,7 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
 
     const error = new Error() as FetchError;
 
-    error.status = 500;
+    error.status = response.status;
     error.message = `Failed to fetch config for service: ${service}`;
 
     throw error;
