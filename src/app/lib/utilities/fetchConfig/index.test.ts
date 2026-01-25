@@ -9,6 +9,7 @@ describe('fetchConfig', () => {
   };
 
   beforeEach(() => {
+    process.env.BFF_PATH = 'https://mock-bff-path';
     jest.resetModules();
   });
 
