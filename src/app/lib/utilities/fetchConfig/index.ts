@@ -4,6 +4,7 @@ import { LRUCache } from 'lru-cache';
 import { Services } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
+import { FetchError } from '#app/models/types/fetch';
 import { getEnvConfig } from '../getEnvConfig';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
@@ -47,20 +48,31 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
     ...(agent && { agent }),
   };
 
-  const response = await fetch(fetchUrl.toString(), fetchOptions);
+  try {
+    const response = await fetch(fetchUrl.toString(), fetchOptions);
 
-  if (response.ok) {
-    const { data } = await response.json();
-    cache?.set(fetchUrl.toString(), data);
-    return data.items;
+    if (response.ok) {
+      const data = await response.json();
+      cache?.set(fetchUrl.toString(), data);
+      return data;
+    }
+
+    const error = new Error() as FetchError;
+
+    error.status = 500;
+    error.message = `Failed to fetch config for service: ${service}`;
+
+    throw error;
+  } catch (error) {
+    const { message } = error as FetchError;
+
+    logger.error(CONFIG_FETCH_ERROR, {
+      error: message,
+      service,
+    });
+
+    throw new Error(message);
   }
-
-  logger.error(CONFIG_FETCH_ERROR, {
-    status: response.status,
-    service,
-  });
-
-  throw new Error(`Failed to fetch config for service: ${service}`);
 };
 
 export default fetchConfig;
