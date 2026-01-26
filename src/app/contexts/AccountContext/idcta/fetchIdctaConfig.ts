@@ -23,8 +23,6 @@ export default async function fetchIdctaConfig(
     ? isAccountEnabled && accountService?.toString().includes(service)
     : isAccountEnabled;
 
-  console.log({ shouldFetchConfig, service, toggles });
-
   if (!shouldFetchConfig) {
     return null;
   }
