@@ -21,11 +21,11 @@ const useServiceWorkerRegistration = (service?: string) => {
 
     if (shouldInstallServiceWorker) {
       // TODO: scope option to be used once Service-Worker-Allowed header is whitelisted
-      // const result = sw.register(`/${service}/sw.js`, {
-      //   scope: `/${service}`,
-      // });
+      const result = sw.register(`/${service}/sw.js`, {
+        scope: `/${service}`,
+      });
 
-      const result = sw.register(`/${service}/sw.js`);
+      // const result = sw.register(`/${service}/sw.js`);
 
       Promise.resolve(result).catch(err => {
         // eslint-disable-next-line no-console
