@@ -122,6 +122,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Map of France showing Paris and Cognac"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

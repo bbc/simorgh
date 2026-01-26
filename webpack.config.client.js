@@ -102,6 +102,9 @@ module.exports = ({
             ecma: IS_LEGACY_WEB ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
+            compress: {
+              passes: 2,
+            },
           },
         }),
       ],
