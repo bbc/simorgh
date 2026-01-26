@@ -15,8 +15,8 @@ const CACHE_MAX_ITEMS = 500; // Avg 10 per service + buffer
 const CACHE_TTL_SECONDS = 300; // 5 minutes
 
 const cache = new LRUCache({
-  max: CACHE_MAX_ITEMS, // Maximum number of items in cache (400 default)
-  ttl: CACHE_TTL_SECONDS * 1000, // Convert seconds to milliseconds (5 minutes default)
+  max: CACHE_MAX_ITEMS,
+  ttl: CACHE_TTL_SECONDS * 1000,
 });
 
 type FetchConfigParams = {
