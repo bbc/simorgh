@@ -32,7 +32,11 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  eventTrackingData?: EventTrackingData;
+  experimentProps?: {
+    sendOptimizelyEvents: boolean;
+    experimentName: string;
+    experimentVariant: string;
+  };
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -104,7 +108,7 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  eventTrackingData,
+  experimentProps,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
   const {
@@ -129,6 +133,10 @@ const MostRead = ({
     variant,
     isBff,
   });
+  const eventTrackingData = {
+    componentName: 'most-read',
+    ...(experimentProps && experimentProps),
+  };
 
   return isAmp ? (
     <AmpMostRead
