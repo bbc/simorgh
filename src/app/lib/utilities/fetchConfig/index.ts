@@ -10,7 +10,7 @@ import isLive from '../isLive';
 
 const logger = nodeLogger(__filename);
 
-const CACHE_MAX_ITEMS = 600;
+const CACHE_MAX_ITEMS = 500; // Avg 10 per service + buffer
 
 const CACHE_TTL_SECONDS = 300; // 5 minutes
 
