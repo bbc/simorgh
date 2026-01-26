@@ -69,6 +69,7 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
+    // configResult will be used in a future implementation
     const [togglesResult, _configResult] = await Promise.allSettled([
       getToggles(service),
       fetchConfig({ service, configType: 'navigation' }),

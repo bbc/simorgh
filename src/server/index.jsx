@@ -230,6 +230,7 @@ server.get(
         pageType: derivedPageType,
       });
 
+      // configResult will be used in a future implementation
       // eslint-disable-next-line no-unused-vars
       const [togglesResult, _configResult] = await Promise.allSettled([
         getToggles(service),
