@@ -5,25 +5,18 @@ import { Services } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
-import { getEnvConfig } from '../getEnvConfig';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 import isLive from '../isLive';
 
 const logger = nodeLogger(__filename);
 
-const cacheMaxItems = parseInt(
-  getEnvConfig().SIMORGH_CONFIG_CACHE_ITEMS ?? '400',
-  10,
-);
+const CACHE_MAX_ITEMS = 600;
 
-const cacheTTL = parseInt(
-  getEnvConfig().SIMORGH_CONFIG_CACHE_MAX_AGE_SECONDS ?? '300',
-  10,
-);
+const CACHE_TTL_SECONDS = 300; // 5 minutes
 
 const cache = new LRUCache({
-  max: cacheMaxItems,
-  ttl: cacheTTL * 1000, // Convert seconds to milliseconds (5 minutes default)
+  max: CACHE_MAX_ITEMS, // Maximum number of items in cache (400 default)
+  ttl: CACHE_TTL_SECONDS * 1000, // Convert seconds to milliseconds (5 minutes default)
 });
 
 type FetchConfigParams = {
