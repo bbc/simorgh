@@ -34,7 +34,7 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
-  const cachedResponse = cache?.get(fetchUrl.toString());
+  const cachedResponse = cache.get(fetchUrl.toString());
 
   logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: !!cachedResponse });
 
@@ -52,7 +52,7 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
 
     if (response.ok) {
       const data = await response.json();
-      cache?.set(fetchUrl.toString(), data);
+      cache.set(fetchUrl.toString(), data);
       return data;
     }
 
