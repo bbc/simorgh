@@ -24,7 +24,10 @@ type FetchConfigParams = {
   configType: 'navigation';
 };
 
-const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
+const fetchConfig = async <T>({
+  service,
+  configType,
+}: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
   const shouldFetchConfig = service === 'indonesia' && !isLive();
 
@@ -38,7 +41,7 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
 
   logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: !!cachedResponse });
 
-  if (cachedResponse) return cachedResponse;
+  if (cachedResponse) return cachedResponse as T;
 
   const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
@@ -51,9 +54,9 @@ const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
     const response = await fetch(fetchUrl.toString(), fetchOptions);
 
     if (response.ok) {
-      const data = await response.json();
-      cache.set(fetchUrl.toString(), data);
-      return data;
+      const res = await response.json();
+      cache.set(fetchUrl.toString(), res);
+      return res as T;
     }
 
     const error = new Error() as FetchError;
