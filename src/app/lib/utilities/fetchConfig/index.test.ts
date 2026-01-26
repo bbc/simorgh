@@ -9,8 +9,10 @@ describe('fetchConfig', () => {
   };
 
   beforeEach(() => {
-    process.env.BFF_PATH = 'https://mock-bff-path';
     jest.resetModules();
+
+    process.env.SIMORGH_APP_ENV = 'local';
+    process.env.BFF_PATH = 'https://mock-bff-path';
   });
 
   it('should return null for unsupported services', async () => {
@@ -25,10 +27,7 @@ describe('fetchConfig', () => {
   });
 
   it('should return null when in live environment', async () => {
-    jest.mock('../isLive', () => ({
-      __esModule: true,
-      default: jest.fn().mockReturnValue(true),
-    }));
+    process.env.SIMORGH_APP_ENV = 'live';
 
     const { default: fetchConfig } = await import('.');
 
