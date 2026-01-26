@@ -26,8 +26,8 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
-import fetchIdctaConfig from '#app/components/Account/idcta/fetchIdctaConfig';
-import { AccountProvider } from '#app/components/Account/AccountContext';
+import { AccountProvider } from '#app/contexts/AccountContext';
+import fetchIdctaConfig from '#app/contexts/AccountContext/idcta/fetchIdctaConfig';
 
 interface Props {
   pageProps: {
@@ -72,10 +72,8 @@ export default class CustomApp extends App<Props> {
     const { service } = parseRoute(asPath) as { service: Services };
 
     const toggles = await getToggles(service);
-
-    // TODO: Only fetch for the Hindi service?
-    const idctaConfigResult = await fetchIdctaConfig();
-    const idctaConfig = idctaConfigResult.ok ? idctaConfigResult.body : null;
+    const idctaConfigResult = await fetchIdctaConfig(toggles, service);
+    const idctaConfig = idctaConfigResult?.ok ? idctaConfigResult.body : null;
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);

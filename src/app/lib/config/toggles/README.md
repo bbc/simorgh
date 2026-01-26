@@ -18,6 +18,7 @@ Feature toggles can be found in `src/app/lib/config/toggles`
 
 | Toggle Name             | Description                                                                         | Toggle Value                                                             | Example                                               |
 | ----------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------- |
+| `account`               | Enable Account functionality and IDCTA config fetching                              |                                                                          |                                                       |
 | `ads`                   | Display Advertisements on Front Pages                                               |                                                                          |                                                       |
 | `articleLiteSiteLink`   | Display the link to the lite site on Article pages                                  |                                                                          |                                                       |
 | `comscoreAnalytics`     | Capture Comscore Analytics                                                          |                                                                          |                                                       |

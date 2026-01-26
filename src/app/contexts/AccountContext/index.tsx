@@ -31,7 +31,7 @@ export const AccountProvider = ({
     setPtrt(window.location.href);
   }, []);
 
-  const signInAvailability = initialConfig.availability.signin === 'GREEN';
+  const signInAvailability = initialConfig?.availability.signin === 'GREEN';
   const unavailableUrl = initialConfig?.unavailable_url;
 
   const signInUrl = signInAvailability
@@ -59,8 +59,6 @@ export const AccountProvider = ({
     }),
     [accountUrl, isUserSignedIn, registerUrl, signInAvailability, signInUrl],
   );
-
-  console.log({ value });
 
   return (
     <AccountContext.Provider value={value}>{children}</AccountContext.Provider>
