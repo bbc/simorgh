@@ -69,14 +69,9 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
-    // TODO: Remove this restriction once we're ready to roll out to all services
-    const shouldFetchConfig = service === 'indonesia';
-
     const [togglesResult, _configResult] = await Promise.allSettled([
       getToggles(service),
-      shouldFetchConfig
-        ? fetchConfig({ service, configType: 'navigation' })
-        : Promise.resolve(null),
+      fetchConfig({ service, configType: 'navigation' }),
     ]);
 
     const toggles =

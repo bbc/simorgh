@@ -7,6 +7,7 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import { getEnvConfig } from '../getEnvConfig';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
+import isLive from '../isLive';
 
 const logger = nodeLogger(__filename);
 
@@ -31,6 +32,11 @@ type FetchConfigParams = {
 };
 
 const fetchConfig = async ({ service, configType }: FetchConfigParams) => {
+  // TODO: Remove this restriction once we're ready to roll out to all services
+  const shouldFetchConfig = service === 'indonesia' && !isLive();
+
+  if (!shouldFetchConfig) return Promise.resolve(null);
+
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
