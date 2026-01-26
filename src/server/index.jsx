@@ -19,6 +19,7 @@ import {
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import isLocal from '#app/lib/utilities/isLocal';
@@ -229,7 +230,14 @@ server.get(
         pageType: derivedPageType,
       });
 
-      const toggles = await getToggles(service);
+      // eslint-disable-next-line no-unused-vars
+      const [togglesResult, _configResult] = await Promise.allSettled([
+        getToggles(service),
+        fetchConfig({ service, configType: 'navigation' }),
+      ]);
+
+      const toggles =
+        togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
       const data = await getInitialData({
         path: url,
