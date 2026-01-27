@@ -232,7 +232,7 @@ server.get(
 
       const [togglesResult, navResult] = await Promise.allSettled([
         getToggles(service),
-        fetchConfig({ service, configType: 'navigation' }),
+        fetchConfig({ service, pagePath: url, configType: 'navigation' }),
       ]);
 
       const toggles =

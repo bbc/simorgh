@@ -75,6 +75,7 @@ export default class CustomApp extends App<Props> {
       getToggles(service),
       fetchConfig<{ data: { items: Navigation[] } }>({
         service,
+        pagePath: asPath,
         configType: 'navigation',
       }),
     ]);

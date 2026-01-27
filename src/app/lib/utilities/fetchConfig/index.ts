@@ -5,6 +5,7 @@ import { Services } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 import isLive from '../isLive';
 
@@ -21,11 +22,13 @@ const cache = new LRUCache({
 
 type FetchConfigParams = {
   service: Services;
+  pagePath: string;
   configType: 'navigation';
 };
 
 const fetchConfig = async <T>({
   service,
+  pagePath,
   configType,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
@@ -37,25 +40,35 @@ const fetchConfig = async <T>({
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
-  const cachedResponse = cache.get(fetchUrl.toString());
+  const bffReqPath = fetchUrl.toString();
 
-  logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: !!cachedResponse });
+  const cachedResponse = cache.get(bffReqPath);
+
+  logger.debug(CONFIG_REQUEST_RECEIVED, {
+    service,
+    path: bffReqPath,
+    cached: !!cachedResponse,
+  });
 
   if (cachedResponse) return cachedResponse as T;
 
-  const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
+  const environment = getEnvironment(pagePath);
+  const isLocal = !environment || environment === 'local';
+
+  const agent = certsRequired(pagePath) ? await getAgent() : null;
 
   const fetchOptions = {
     ...(agent && { agent }),
+    ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
     signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 
   try {
-    const response = await fetch(fetchUrl.toString(), fetchOptions);
+    const response = await fetch(bffReqPath, fetchOptions);
 
     if (response.ok) {
       const res = await response.json();
-      cache.set(fetchUrl.toString(), res);
+      cache.set(bffReqPath, res);
       return res as T;
     }
 
