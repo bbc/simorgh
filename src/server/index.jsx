@@ -234,7 +234,7 @@ server.get(
       // eslint-disable-next-line no-unused-vars
       const [togglesResult, _configResult] = await Promise.allSettled([
         getToggles(service),
-        fetchConfig({ service, configType: 'navigation' }),
+        fetchConfig({ service, pagePath: url, configType: 'navigation' }),
       ]);
 
       const toggles =
