@@ -1,6 +1,13 @@
 import { render } from '#app/components/react-testing-library-with-providers';
+import { OptimoBlock } from '#app/models/types/optimo';
 import Recommendations from '.';
-import recommendationsFixtures from './fixtures';
+import {
+  mostReadDataFixture,
+  recommendationsFixtures,
+  topStoriesContentFixture,
+  featuresContentFixture,
+  relatedContentBlocksFixture,
+} from './fixtures';
 
 describe('Recommendations', () => {
   it('should render a single recommendation', () => {
@@ -51,4 +58,263 @@ describe('Recommendations', () => {
     const listEl = document.querySelector('ul');
     expect(listEl).not.toBeInTheDocument();
   });
+  it('should render top stories with title, href, image, and alt text when referrerVariant is adaptive_direct', () => {
+    render(
+      <Recommendations
+        data={[]}
+        topStoriesContent={topStoriesContentFixture}
+        referrerVariant="adaptive_variant"
+        referrer="direct"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+    const sectionTitle = document.querySelector(
+      '[id="recommendations-heading"]',
+    );
+    expect(sectionTitle).toBeInTheDocument();
+    expect(sectionTitle?.textContent).toBe('Principales noticias');
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems).toHaveLength(topStoriesContentFixture.length);
+
+    listItems.forEach((item, index) => {
+      const story = topStoriesContentFixture[index];
+      const title =
+        story.headlines.promoHeadline.blocks[0].model.blocks[0].model.text;
+      const href = story.locators.canonicalUrl;
+
+      // Extract alt text from fixture
+      const altText =
+        story.images?.defaultPromoImage?.blocks?.find(
+          block => block.type === 'altText',
+        )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text || '';
+
+      const link = item.querySelector('a');
+      expect(link).toBeInTheDocument();
+      expect(link?.getAttribute('href')).toBe(href);
+      expect(link?.textContent).toContain(title);
+
+      const image = item.querySelector('img');
+      expect(image).toBeInTheDocument();
+      expect(image?.getAttribute('src')).toBeTruthy();
+      expect(image?.getAttribute('alt')).toBe(altText);
+    });
+  });
+  it('should render features with title, href, image, and alt text when referrerVariant is adaptive_social', () => {
+    render(
+      <Recommendations
+        data={[]}
+        featuresContent={featuresContentFixture}
+        referrerVariant="adaptive_variant"
+        referrer="social"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    const sectionTitle = document.querySelector(
+      '[id="recommendations-heading"]',
+    );
+    expect(sectionTitle).toBeInTheDocument();
+    expect(sectionTitle?.textContent).toBe('No te lo pierdas');
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems).toHaveLength(featuresContentFixture.length);
+
+    listItems.forEach((item, index) => {
+      const story = featuresContentFixture[index];
+      const title =
+        story.headlines.promoHeadline.blocks[0].model.blocks[0].model.text;
+      const href = story.locators.canonicalUrl;
+
+      const altText =
+        story.images?.defaultPromoImage?.blocks?.find(
+          block => block.type === 'altText',
+        )?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text || '';
+
+      const link = item.querySelector('a');
+      expect(link).toBeInTheDocument();
+      expect(link?.getAttribute('href')).toBe(href);
+      expect(link?.textContent).toContain(title);
+
+      const image = item.querySelector('img');
+      expect(image).toBeInTheDocument();
+      expect(image?.getAttribute('src')).toBeTruthy();
+      expect(image?.getAttribute('alt')).toBe(altText);
+    });
+  });
+  it('should render related content with title, href, image, and alt text when referrerVariant is adaptive_search', () => {
+    render(
+      <Recommendations
+        data={[]}
+        blocks={relatedContentBlocksFixture}
+        referrerVariant="adaptive_variant"
+        referrer="search"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    const sectionTitle = document.querySelector(
+      '[id="recommendations-heading"]',
+    );
+    expect(sectionTitle).toBeInTheDocument();
+    expect(sectionTitle?.textContent).toBe('Contenido relacionado');
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems.length).toBe(2);
+
+    const firstLink = listItems[0].querySelector('a');
+    expect(firstLink).toBeInTheDocument();
+    expect(firstLink?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z490o',
+    );
+    expect(firstLink?.textContent).toContain(
+      'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+    );
+
+    const firstImage = listItems[0].querySelector('img');
+    expect(firstImage).toBeInTheDocument();
+    expect(firstImage?.getAttribute('src')).toBeTruthy();
+    expect(firstImage?.getAttribute('alt')).toBe(
+      "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
+    );
+
+    const secondLink = listItems[1].querySelector('a');
+    expect(secondLink).toBeInTheDocument();
+    expect(secondLink?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z491p',
+    );
+    expect(secondLink?.textContent).toContain('Second related content title');
+
+    const secondImage = listItems[1].querySelector('img');
+    expect(secondImage).toBeInTheDocument();
+    expect(secondImage?.getAttribute('src')).toBeTruthy();
+    expect(secondImage?.getAttribute('alt')).toBe(
+      'Second related content alt text.',
+    );
+  });
+  it('should render a single related content item without a list when only one item is present', () => {
+    const singleRelatedContentBlocks = [
+      ...relatedContentBlocksFixture.slice(0, 3),
+      relatedContentBlocksFixture[3]
+        ? {
+            ...relatedContentBlocksFixture[3],
+            model: {
+              blocks: relatedContentBlocksFixture[3]?.model?.blocks
+                ? [relatedContentBlocksFixture[3].model.blocks[0]]
+                : [],
+            },
+          }
+        : undefined,
+    ].filter(Boolean) as OptimoBlock[];
+    const { getByText } = render(
+      <Recommendations
+        data={[]}
+        blocks={singleRelatedContentBlocks}
+        referrerVariant="adaptive_variant"
+        referrer="search"
+      />,
+      {
+        service: 'mundo',
+        toggles: { midArticleOnwardJourney: { enabled: true } },
+      },
+    );
+
+    // Should not render a list
+    const listItems = document.querySelectorAll('li[role="listitem"]');
+    expect(listItems.length).toBe(0);
+
+    // Should render the single promo directly
+    const link = getByText(
+      'Gran Museo Egipcio, la gigantesca obra que exhibe los secretos de Tutankamón y que se inaugura tras décadas de trabajos',
+    ).closest('a');
+    expect(link).toBeInTheDocument();
+    expect(link?.getAttribute('href')).toBe(
+      'https://www.bbc.com/mundo/articles/c629n28z490o',
+    );
+
+    const image = document.querySelector('img');
+    expect(image).toBeInTheDocument();
+    expect(image?.getAttribute('src')).toBeTruthy();
+    expect(image?.getAttribute('alt')).toBe(
+      "Visitors walk past Tutankhamun's gold-and-turquoise funerary mask on display at the Egyptian Museum in Cairo, on 2 December 2024.",
+    );
+  });
+  it.each([
+    [undefined, 'undefined'],
+    ['off', 'off'],
+    ['control', 'control'],
+    ['something_control', 'something_control'],
+    ['', 'empty string'],
+  ])(
+    'should render most read data when referrerVariant is %s',
+    (referrerVariant, label) => {
+      const { getByText, rerender } = render(
+        <Recommendations
+          data={mostReadDataFixture}
+          referrerVariant={referrerVariant}
+        />,
+        {
+          service: 'mundo',
+          toggles: { midArticleOnwardJourney: { enabled: true } },
+        },
+      );
+
+      mostReadDataFixture.forEach(item => {
+        const link = getByText(item.title).closest('a');
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', item.href);
+
+        // Traverse up to the promo wrapper, then find the image
+        const promoWrapper = link?.closest(
+          '[data-e2e="recommendations-wrapper"]',
+        );
+        const image = promoWrapper?.querySelector('img');
+        expect(image).toBeInTheDocument();
+        expect(image).toHaveAttribute('alt', item.image.altText);
+        expect(image).toHaveAttribute(
+          'src',
+          expect.stringContaining(item.image.locator),
+        );
+      });
+
+      // For all but the first run, rerender with the next variant
+      if (label !== 'undefined') {
+        rerender(
+          <Recommendations
+            data={mostReadDataFixture}
+            referrerVariant={referrerVariant}
+          />,
+        );
+
+        // Assert section title after rerender
+        const rerenderedSectionTitle = document.querySelector(
+          '[id="recommendations-heading"]',
+        );
+        expect(rerenderedSectionTitle).toBeInTheDocument();
+        expect(rerenderedSectionTitle?.textContent).toBe('Más leídas');
+        mostReadDataFixture.forEach(item => {
+          const link = getByText(item.title).closest('a');
+          expect(link).toBeInTheDocument();
+          expect(link).toHaveAttribute('href', item.href);
+
+          const promoWrapper = link?.closest(
+            '[data-e2e="recommendations-wrapper"]',
+          );
+          const image = promoWrapper?.querySelector('img');
+          expect(image).toBeInTheDocument();
+          expect(image).toHaveAttribute('alt', item.image.altText);
+          expect(image).toHaveAttribute(
+            'src',
+            expect.stringContaining(item.image.locator),
+          );
+        });
+      }
+    },
+  );
 });

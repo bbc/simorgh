@@ -1,7 +1,10 @@
-import { use, useState } from 'react';
+import { use, useState, useEffect } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -16,6 +19,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 import {
   getArticleId,
@@ -77,6 +81,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
+import getUnderArticleComponents from './helpers';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -129,10 +134,39 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
-
+const getWsojComponent = ({
+  data,
+  blocks,
+  topStoriesContent,
+  featuresContent,
+  referrerVariant,
+  referrerExperimentName,
+  referrer,
+}: {
+  data: Recommendation[];
+  blocks: OptimoBlock[];
+  topStoriesContent?: unknown;
+  featuresContent?: unknown;
+  referrerVariant?: string | null;
+  referrerExperimentName?: string;
+  referrer?: string | null;
+}) => (
+  <Recommendations
+    data={data}
+    blocks={blocks}
+    topStoriesContent={topStoriesContent}
+    featuresContent={featuresContent}
+    referrer={referrer}
+    {...(referrerVariant && {
+      referrerVariant,
+      experimentProps: {
+        sendOptimizelyEvents: true,
+        experimentName: referrerExperimentName,
+        experimentVariant: referrerVariant,
+      },
+    })}
+  />
+);
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -165,19 +199,29 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
-  () => {
-    return (
-      <ContinueReadingButton
-        showAllContent={showAllContent}
-        setShowAllContent={setShowAllContent}
-      />
-    );
-  };
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
+    />
+  );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
+  // SSR-safe: always null on server, update on client
+  const [referrer, setReferrer] = useState<string | null>(null);
+
+  useEffect(() => {
+    setReferrer(getReferrer());
+  }, []);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -196,6 +240,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
+  // EXPERIMENT: Referrer Experiment
+  const referrerExperimentName = 'newswb_ws_oj_by_referrer';
+  const referrerVariant = useOptimizelyVariation({
+    experimentName: referrerExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -213,6 +264,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
@@ -284,13 +337,29 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({
+        data,
+        blocks,
+        topStoriesContent,
+        featuresContent,
+        referrerVariant,
+        referrerExperimentName,
+        referrer,
+      }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        ...(referrerVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
+          },
+        }),
       }),
     }),
   };
@@ -397,10 +466,37 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
 
-          <RelatedContentSection content={blocks} />
+          <div css={styles.hideBelowDesktopWidth}>
+            <div css={{ gridColumn: '1 / span 12' }}>
+              <RelatedContentSection
+                content={blocks}
+                {...(referrerVariant && {
+                  experimentProps: {
+                    sendOptimizelyEvents: true,
+                    experimentName: referrerExperimentName,
+                    experimentVariant: referrerVariant,
+                  },
+                })}
+              />
+            </div>
+          </div>
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
+      {/* // EXPERIMENT: Referrer Experiment
+      Under-article components for mobile/tablet only */}
+      {getUnderArticleComponents({
+        referrerVariant: referrerVariant || '',
+        referrerExperimentName: referrerExperimentName || '',
+        topStoriesData: topStoriesContent,
+        featuresData: featuresContent,
+        articleBlocks: blocks,
+        grey2: GREY_2,
+        pageStyles: styles,
+        referrer,
+      }).map(component => component)}
+
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
@@ -409,7 +505,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          eventTrackingData={{ componentName: 'most-read' }}
+          {...(referrerVariant && {
+            experimentProps: {
+              sendOptimizelyEvents: true,
+              experimentName: referrerExperimentName,
+              experimentVariant: referrerVariant,
+            },
+          })}
         />
       )}
     </div>
