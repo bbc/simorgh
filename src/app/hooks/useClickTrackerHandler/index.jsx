@@ -20,6 +20,7 @@ const OJ_COMPONENT_NAMES = [
   'top-stories',
   'features',
   'related-content',
+  'most-read',
 ];
 
 // gate the total oj clicks event to a specific experiment during the spike
