@@ -72,8 +72,7 @@ export default class CustomApp extends App<Props> {
     const { service } = parseRoute(asPath) as { service: Services };
 
     const toggles = await getToggles(service);
-    const idctaConfigResult = await fetchIdctaConfig(toggles, service);
-    const idctaConfig = idctaConfigResult?.ok ? idctaConfigResult.body : null;
+    const idctaConfig = await fetchIdctaConfig(toggles, service);
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);

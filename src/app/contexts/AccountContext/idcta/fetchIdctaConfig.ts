@@ -1,53 +1,56 @@
+import { IDCTA_FETCH_ERROR } from '#app/lib/logger.const';
+import nodeLogger from '#app/lib/logger.node';
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import { Toggles, Services } from '#app/models/types/global';
 import { getIdctaConfigUrl } from './getIdctaBaseUrl';
 
-export type IdctaConfigFetchResult = {
-  ok: boolean;
-  status: number;
-  statusText: string;
-  body: unknown | null;
-};
+const logger = nodeLogger(__filename);
+
+// TODO: Add types
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type IdctaConfig = any;
 
 export default async function fetchIdctaConfig(
   toggles: Toggles,
   service: Services,
-): Promise<IdctaConfigFetchResult | null> {
+): Promise<IdctaConfig | null> {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isAccountEnabled, value: accountService = '' } =
     toggleDefinitions.account || {};
 
-  // TODO: Improve
-  const shouldFetchConfig = isLocal()
-    ? isAccountEnabled && accountService?.toString().includes(service)
-    : isAccountEnabled;
+  const shouldFetchConfig =
+    isAccountEnabled &&
+    (isLocal()
+      ? accountService?.toString().split('|').includes(service)
+      : true);
 
   if (!shouldFetchConfig) {
     return null;
   }
+
   const idctaConfigUrl = getIdctaConfigUrl();
 
   try {
-    const response = await fetch(idctaConfigUrl, {
-      cache: 'no-store',
-    });
+    const response = await fetch(idctaConfigUrl);
 
-    const body = await response.json();
+    if (!response.ok) {
+      logger.error(IDCTA_FETCH_ERROR, {
+        url: idctaConfigUrl,
+        service,
+        status: response.status,
+        statusText: response.statusText,
+      });
+      return null;
+    }
 
-    return {
-      ok: response.ok,
-      status: response.status,
-      statusText: response.statusText,
-      body,
-    };
+    return await response.json();
   } catch (error) {
-    return {
-      ok: false,
-      status: 500,
-      statusText:
-        error instanceof Error ? error.message : 'Failed to fetch IDCTA config',
-      body: null,
-    };
+    logger.error(IDCTA_FETCH_ERROR, {
+      url: idctaConfigUrl,
+      service,
+      error,
+    });
+    return null;
   }
 }
