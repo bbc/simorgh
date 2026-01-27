@@ -1,11 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { AccountProvider } from '../AccountContext';
+import { AccountProvider } from '#contexts/AccountContext';
+import { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
 
 const renderWithProviders = (
-  initialConfig: Parameters<typeof AccountProvider>[0]['initialConfig'],
+  initialConfig = {
+    'id-availability': 'GREEN',
+    unavailable_url: 'https://example.com/unavailable',
+    signin_url: 'https://example.com/signin',
+    register_url: 'https://example.com/register',
+    foryou_url: 'https://example.com/foryou',
+    identity: {
+      idSignedInCookieName: 'ckns_id',
+    },
+  } as IdctaConfig,
 ) =>
   render(
     <ServiceContextProvider service="ws">
@@ -19,14 +29,7 @@ const renderWithProviders = (
 
 describe('AccountHeader', () => {
   it('shows Sign in when signed out', async () => {
-    renderWithProviders({
-      availability: { signin: 'GREEN' },
-      unavailable_url: 'https://example.com/unavailable',
-      signin_url: 'https://example.com/signin',
-      register_url: 'https://example.com/register',
-      foryou_flagpole: 'GREEN',
-      foryou_url: 'https://example.com/foryou',
-    });
+    renderWithProviders();
 
     const link = await screen.findByRole('link', { name: 'Sign in' });
     expect(link).toHaveAttribute(
