@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { use, useState, useRef } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
@@ -45,6 +45,7 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import ReadingProgressBar from './ReadingProgressBar'
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -177,6 +178,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
+  const mainRef = useRef<HTMLElement | null>(null);
   const { isApp, isAmp, isLite } = use(RequestContext);
   const {
     articleAuthor,
@@ -376,7 +378,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+          <ReadingProgressBar
+            targetRef={mainRef}
+            showAllContent={showAllContent}
+            hasContinueReadingButton={showContinueReadingButton}
+          />
+          <main ref={mainRef} css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
