@@ -1,13 +1,13 @@
 import { Theme } from '@emotion/react';
 
 const styles = {
-  wrapper: ({ spacings }: Theme) => ({
+  wrapper: {
     marginInlineStart: 'auto',
     width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
-    paddingInlineStart: `${spacings.DOUBLE}rem`,
-  }),
+    paddingInlineStart: '1rem',
+  },
 
   link: ({ palette, fontSizes }: Theme) => ({
     color: palette.WHITE,
