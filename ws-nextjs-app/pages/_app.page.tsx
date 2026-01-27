@@ -26,6 +26,9 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
+import { AccountProvider } from '#app/contexts/AccountContext';
+import fetchIdctaConfig from '#app/lib/idcta/fetchIdctaConfig';
+import { IdctaConfig } from '#app/models/types/account';
 
 interface Props {
   pageProps: {
@@ -55,6 +58,7 @@ interface Props {
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
+    idctaConfig: IdctaConfig | null;
   };
 }
 
@@ -69,6 +73,7 @@ export default class CustomApp extends App<Props> {
     const { service } = parseRoute(asPath) as { service: Services };
 
     const toggles = await getToggles(service);
+    const idctaConfig = await fetchIdctaConfig(toggles, service);
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
@@ -94,6 +99,7 @@ export default class CustomApp extends App<Props> {
         isNextJs: true,
         serverSideExperiments,
         toggles,
+        idctaConfig,
       },
     };
   }
@@ -123,6 +129,7 @@ export default class CustomApp extends App<Props> {
       variant,
       isUK,
       country,
+      idctaConfig = null,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -160,21 +167,23 @@ export default class CustomApp extends App<Props> {
             isNextJs={isNextJs}
             isUK={isUK ?? false}
           >
-            <EventTrackingContextProvider atiData={atiAnalytics}>
-              {isAvEmbeds ? (
-                <ThemeProvider service={service} variant={variant}>
-                  {RenderChildrenOrError}
-                </ThemeProvider>
-              ) : (
-                <UserContextProvider>
+            <AccountProvider initialConfig={idctaConfig}>
+              <EventTrackingContextProvider atiData={atiAnalytics}>
+                {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>
-                    <PageWrapper pageData={pageData} status={status}>
-                      {RenderChildrenOrError}
-                    </PageWrapper>
+                    {RenderChildrenOrError}
                   </ThemeProvider>
-                </UserContextProvider>
-              )}
-            </EventTrackingContextProvider>
+                ) : (
+                  <UserContextProvider>
+                    <ThemeProvider service={service} variant={variant}>
+                      <PageWrapper pageData={pageData} status={status}>
+                        {RenderChildrenOrError}
+                      </PageWrapper>
+                    </ThemeProvider>
+                  </UserContextProvider>
+                )}
+              </EventTrackingContextProvider>
+            </AccountProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>
