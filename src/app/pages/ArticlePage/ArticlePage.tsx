@@ -495,7 +495,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          eventTrackingData={{ componentName: 'most-read' }}
+          {...(referrerVariant && {
+            experimentProps: {
+              sendOptimizelyEvents: true,
+              experimentName: referrerExperimentName,
+              experimentVariant: referrerVariant,
+            },
+          })}
         />
       )}
     </div>
