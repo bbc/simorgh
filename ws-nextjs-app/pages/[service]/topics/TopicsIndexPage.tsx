@@ -16,8 +16,7 @@ const TopicsPage = ({
 }: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
   const { summaries, headline, metadata } = pageData || {};
-  const { atiAnalytics } = metadata;
-
+  const { atiAnalytics } = metadata || {};
   const {
     pageXOfY,
     previousPage,
