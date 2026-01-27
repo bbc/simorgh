@@ -11,6 +11,7 @@
     "build:preview2": "cp ../envConfig/preview2.env .env && NODE_ENV=production && next build --webpack",
     "build:test": "cp ../envConfig/test.env .env && NODE_ENV=production && next build --webpack",
     "build:live": "cp ../envConfig/live.env .env && NODE_ENV=production && next build --webpack",
+    "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' ../envConfig/live.env > .env && next build --webpack",
     "build": "yarn build:local",
     "dev": "yarn setupDevEnv && next dev -p 7081 --webpack",
     "dev-https": "yarn setupDevEnv && next dev -p 7081 --experimental-https --webpack",
