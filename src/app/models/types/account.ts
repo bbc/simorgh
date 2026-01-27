@@ -8,6 +8,7 @@ export type IdctaConfig = {
   register_url: string;
   settings_url: string;
   signout_url: string;
+  foryou_url: string;
   identity: {
     idSignedInCookieName: string;
   };
@@ -20,4 +21,5 @@ export type AccountContextProps = {
   registerUrl?: string;
   settingsUrl?: string;
   signOutUrl?: string;
+  forYouUrl?: string;
 };
