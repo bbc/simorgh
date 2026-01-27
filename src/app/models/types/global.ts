@@ -28,6 +28,7 @@ export type ComponentExperimentProps = {
   sendOptimizelyEvents?: boolean;
   experimentName?: string;
   experimentVariant?: string;
+  referrer?: string | null;
 };
 
 export type ServerSideExperiment = {
