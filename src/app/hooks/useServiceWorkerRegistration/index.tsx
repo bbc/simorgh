@@ -20,12 +20,10 @@ const useServiceWorkerRegistration = (service?: string) => {
       onClient() && 'serviceWorker' in navigator;
 
     if (shouldInstallServiceWorker) {
-      // TODO: scope option to be used once Service-Worker-Allowed header is whitelisted
+      // Scope option to ensure the service worker only controls pages under /{service}
       const result = sw.register(`/${service}/sw.js`, {
         scope: `/${service}`,
       });
-
-      // const result = sw.register(`/${service}/sw.js`);
 
       Promise.resolve(result).catch(err => {
         // eslint-disable-next-line no-console
