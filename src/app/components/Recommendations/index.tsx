@@ -39,7 +39,8 @@ const Recommendations = ({
 }: RecommendationsProps) => {
   const { recommendations, script, service, dir, translations } =
     use(ServiceContext);
-
+  console.log('in recommendations', referrer, referrerVariant);
+  console.log('in recommendations', topStoriesContent);
   const {
     palette: { GREY_2 },
   } = useTheme();
@@ -58,7 +59,7 @@ const Recommendations = ({
     referrerVariant.includes('control')
   ) {
     displayData = data ?? [];
-  } else if (referrerVariant === 'adaptive_variant') {
+  } else if (referrerVariant === 'adaptive_variation') {
     switch (referrer) {
       case 'search':
         displayData = getRelatedContentData(blocks ?? []).map(
@@ -83,6 +84,7 @@ const Recommendations = ({
         break;
     }
   }
+  console.log('in recommendations displayData', displayData);
   const componentName = 'midarticle-mostread';
   const groupTracker = {
     name: title,
