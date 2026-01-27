@@ -20,6 +20,7 @@ describe('fetchConfig', () => {
 
     const data = await fetchConfig({
       service: 'news',
+      pagePath: '/news',
       configType: 'navigation',
     });
 
@@ -33,6 +34,7 @@ describe('fetchConfig', () => {
 
     const data = await fetchConfig({
       service: 'indonesia',
+      pagePath: '/indonesia',
       configType: 'navigation',
     });
 
@@ -49,6 +51,7 @@ describe('fetchConfig', () => {
 
     const data = await fetchConfig({
       service: 'indonesia',
+      pagePath: '/indonesia',
       configType: 'navigation',
     });
 
@@ -64,8 +67,16 @@ describe('fetchConfig', () => {
 
     const { default: fetchConfig } = await import('.');
 
-    await fetchConfig({ service: 'indonesia', configType: 'navigation' });
-    await fetchConfig({ service: 'indonesia', configType: 'navigation' });
+    await fetchConfig({
+      service: 'indonesia',
+      pagePath: '/indonesia',
+      configType: 'navigation',
+    });
+    await fetchConfig({
+      service: 'indonesia',
+      pagePath: '/indonesia',
+      configType: 'navigation',
+    });
 
     // Should call fetch only once with subsequent responses from cache
     expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -73,7 +84,31 @@ describe('fetchConfig', () => {
 
   // TODO: Add 'live' environment test once rolling out to Live environment
   it.each(['test'])(
-    'should include ctx-service-env header when in %s environment',
+    'should include ctx-service-env header when renderer_env=%s',
+    async env => {
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockResponse,
+      });
+
+      const { default: fetchConfig } = await import('.');
+
+      await fetchConfig({
+        service: 'indonesia',
+        pagePath: `/indonesia?renderer_env=${env}`,
+        configType: 'navigation',
+      });
+
+      expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
+        headers: { 'ctx-service-env': env },
+        signal: expect.any(AbortSignal),
+      });
+    },
+  );
+
+  // TODO: Add 'live' environment test once rolling out to Live environment
+  it.each(['test'])(
+    'should include ctx-service-env header when actual environment is %s without renderer_env param',
     async env => {
       process.env.SIMORGH_APP_ENV = env;
 
@@ -86,6 +121,7 @@ describe('fetchConfig', () => {
 
       await fetchConfig({
         service: 'indonesia',
+        pagePath: `/indonesia`,
         configType: 'navigation',
       });
 
@@ -97,8 +133,6 @@ describe('fetchConfig', () => {
   );
 
   it('should not include ctx-service-env header when in local environment', async () => {
-    process.env.SIMORGH_APP_ENV = 'local';
-
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
       json: async () => mockResponse,
@@ -108,6 +142,7 @@ describe('fetchConfig', () => {
 
     await fetchConfig({
       service: 'indonesia',
+      pagePath: '/indonesia',
       configType: 'navigation',
     });
 
@@ -125,7 +160,11 @@ describe('fetchConfig', () => {
     const { default: fetchConfig } = await import('.');
 
     await expect(
-      fetchConfig({ service: 'indonesia', configType: 'navigation' }),
+      fetchConfig({
+        service: 'indonesia',
+        pagePath: '/indonesia',
+        configType: 'navigation',
+      }),
     ).rejects.toThrow('Failed to fetch config for service: indonesia');
   });
 });

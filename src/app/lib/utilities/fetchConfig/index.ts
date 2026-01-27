@@ -22,11 +22,13 @@ const cache = new LRUCache({
 
 type FetchConfigParams = {
   service: Services;
+  pagePath: string;
   configType: 'navigation';
 };
 
 const fetchConfig = async <T>({
   service,
+  pagePath,
   configType,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
@@ -50,7 +52,7 @@ const fetchConfig = async <T>({
 
   if (cachedResponse) return cachedResponse as T;
 
-  const environment = getEnvironment(reqUrl);
+  const environment = getEnvironment(pagePath);
   const isLocal = !environment || environment === 'local';
 
   const agent = certsRequired(reqUrl) ? await getAgent() : null;
