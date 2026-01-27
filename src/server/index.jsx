@@ -230,15 +230,16 @@ server.get(
         pageType: derivedPageType,
       });
 
-      // configResult will be used in a future implementation
-      // eslint-disable-next-line no-unused-vars
-      const [togglesResult, _configResult] = await Promise.allSettled([
+      const [togglesResult, navResult] = await Promise.allSettled([
         getToggles(service),
         fetchConfig({ service, configType: 'navigation' }),
       ]);
 
       const toggles =
         togglesResult.status === 'fulfilled' ? togglesResult.value : {};
+
+      const navItems =
+        navResult.status === 'fulfilled' ? navResult.value?.data?.items : null;
 
       const data = await getInitialData({
         path: url,
@@ -254,6 +255,7 @@ server.get(
       const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
 
       data.toggles = toggles;
+      data.navItems = navItems;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';
