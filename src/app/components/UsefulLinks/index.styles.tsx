@@ -1,5 +1,6 @@
 import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import type { UsefulLinksLayout } from './index';
 
 const styles = {
   container: ({ spacings }: Theme) =>
@@ -13,17 +14,23 @@ const styles = {
       ...fontVariants.sansBold,
       marginBottom: `${pixelsToRem(12)}rem`,
     }),
-  unorderedList: ({ spacings, mq }: Theme) =>
-    css({
-      padding: 0,
-      margin: 0,
-      display: 'grid',
-      listStyleType: 'none',
-      columnGap: `${spacings.TRIPLE}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        gridTemplateColumns: 'repeat(2, 1fr)',
-      },
-    }),
+  unorderedList:
+    (layout: UsefulLinksLayout = 'double') =>
+    ({ spacings, mq }: Theme) =>
+      css({
+        padding: 0,
+        margin: 0,
+        display: 'grid',
+        listStyleType: 'none',
+        columnGap: `${spacings.TRIPLE}rem`,
+        ...(layout === 'double'
+          ? {
+              [mq.GROUP_2_MIN_WIDTH]: {
+                gridTemplateColumns: 'repeat(2, 1fr)',
+              },
+            }
+          : {}),
+      }),
   item: ({ spacings }: Theme) =>
     css({
       position: 'relative',

@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
         long: 'Dogon labari',
@@ -443,10 +444,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Labaran Duniya',
         url: '/hausa',
-      },
-      {
-        title: 'Gasar Kofin Afirka',
-        url: '/hausa/topics/c71939zq32vt',
       },
       {
         title: 'Wasanni',

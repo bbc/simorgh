@@ -162,6 +162,7 @@ export const service: ZhongwenConfig = {
       variant: 'trad',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -479,6 +480,7 @@ export const service: ZhongwenConfig = {
       variant: 'simp',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',

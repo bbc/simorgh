@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
       readTime: {
         readTimePrefix: 'Muda wa kusoma',
         long: 'Taarifa ndefu',

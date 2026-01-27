@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'र',
       pagination: {
         page: 'पेज',
         previousPage: 'पछाडि',
@@ -345,6 +346,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'समाचार',
         url: '/nepali',
+      },
+      {
+        title: 'नेपाल निर्वाचन २०८२',
+        url: '/nepali/topics/c5ydk8xvx6jt',
       },
       {
         title: 'नेपाल',

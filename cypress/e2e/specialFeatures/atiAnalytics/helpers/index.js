@@ -135,13 +135,13 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     WS_NEWS_LANGUAGES_TEST: '598343',
     NEWS_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 644937)',
     NEWS_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
     NEWS_LANGUAGES_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 646753)',
     NEWS_LANGUAGES_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
@@ -151,11 +151,11 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     NEWSROUND_TEST: '598294',
     SPORT_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 644938)',
     SPORT_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
-    NEWS_LANGUAGES_GNL: 598289,
+    NEWS_LANGUAGES_GNL: 646753,
     NEWS_LANGUAGES_GNL_TEST: 598290,
   };
 

@@ -49,21 +49,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'پادکست',
-      brandTitle: 'اسطوره تختی',
+      title: 'معرفی خبرنامه',
+      brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
       brandDescription:
-        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم.',
+        'گزیده‌ای از مهم‌ترین خبرها، گزارش‌های میدانی و گفت‌وگوهای اختصاصی را هر هفته در ایمیل خود دریافت کنید.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
-        alt: 'اسطوره تختی',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mwpjgy.jpg',
+        alt: 'خبرنامه',
       },
       linkLabel: {
-        text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
+        text: 'اینجا مشترک شوید',
+        href: 'https://www.bbc.com/persian/send/u209231908',
       },
       skipLink: {
-        text: 'از %title% رد شوید و به خواندن ادامه دهید',
-        endTextVisuallyHidden: 'پایان %title%',
+        text: 'از % title % عبور کنید و به ادامه مطلب بروید',
+        endTextVisuallyHidden: 'پایان   % title %',
       },
     },
     translations: {
@@ -350,16 +350,16 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
+          'اگر محتوایی را برای استفاده در وب‌سایت یا برنامه‌ای ارسال کرده‌اید، در صورتی که ما از آن محتوا استفاده کرده باشیم دیگر امکان حذف آن موجود نیست.',
         retentionPeriodDays:
-          'اطلاعات ارسالی شما تا {{days}} روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
+          'اطلاعات ارسالی شما تا ۹۰ روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
         privacyInfoHtml:
           'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
         emailToHtml:
-          'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
+          'اگر نظر خود را تغییر داده‌اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
         dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
