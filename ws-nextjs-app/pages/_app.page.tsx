@@ -27,7 +27,8 @@ import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
-import fetchIdctaConfig from '#app/contexts/AccountContext/idcta/fetchIdctaConfig';
+import fetchIdctaConfig from '#app/lib/idcta/fetchIdctaConfig';
+import { IdctaConfig } from '#app/models/types/account';
 
 interface Props {
   pageProps: {
@@ -57,7 +58,7 @@ interface Props {
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
-    idctaConfig?: unknown | null;
+    idctaConfig: IdctaConfig | null;
   };
 }
 

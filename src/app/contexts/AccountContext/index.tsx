@@ -1,27 +1,24 @@
 import React, { createContext, use, useEffect, useMemo, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { isSignedIn } from './idcta/isSignedIn';
-import appendCtaQueryParams from './idcta/appendCtaQueryParams';
-
-export type AccountContextProps = {
-  isSignInAvailable: boolean;
-  accountUrl: string;
-  signInUrl: string;
-  registerUrl: string;
-  isSignedIn: boolean;
-};
+import Cookie from 'js-cookie';
+import onClient from '#app/lib/utilities/onClient';
+import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
+import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
 );
 
+const getSignedInCookie = (cookieName = 'ckns_id') => {
+  return onClient() ? Cookie.get(cookieName) : false;
+};
+
 export const AccountProvider = ({
   children,
-  initialConfig = null,
+  initialConfig,
 }: {
   children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  initialConfig: any;
+  initialConfig: IdctaConfig | null;
 }) => {
   const { locale } = use(ServiceContext);
 
@@ -47,7 +44,13 @@ export const AccountProvider = ({
       ? initialConfig.foryou_url
       : unavailableUrl;
 
-  const isUserSignedIn = signInAvailability ? isSignedIn() : false;
+  // Todo: use  settings_url
+  // Todo: use  privacy_settings_url
+
+  const cookieName = initialConfig?.identity.idSignedInCookieName;
+  const isSignedIn = signInAvailability
+    ? Boolean(getSignedInCookie(cookieName))
+    : false;
 
   const value = useMemo(
     () => ({
@@ -55,10 +58,14 @@ export const AccountProvider = ({
       signInUrl,
       registerUrl,
       accountUrl,
-      isSignedIn: isUserSignedIn,
+      isSignedIn,
     }),
-    [accountUrl, isUserSignedIn, registerUrl, signInAvailability, signInUrl],
+    [accountUrl, isSignedIn, registerUrl, signInAvailability, signInUrl],
   );
+
+  if (!initialConfig) {
+    return children;
+  }
 
   return (
     <AccountContext.Provider value={value}>{children}</AccountContext.Provider>

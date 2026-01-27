@@ -1,4 +1,4 @@
-import isLive from '../../../lib/utilities/isLive';
+import isLive from '#app/lib/utilities/isLive';
 
 export const getIdctaBaseUrl = (): string => {
   return isLive()
@@ -7,4 +7,3 @@ export const getIdctaBaseUrl = (): string => {
 };
 
 export const getIdctaConfigUrl = (): string => `${getIdctaBaseUrl()}/config`;
-export const getIdctaInitUrl = (): string => `${getIdctaBaseUrl()}/init`;

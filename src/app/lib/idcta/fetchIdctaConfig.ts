@@ -2,14 +2,11 @@ import { IDCTA_FETCH_ERROR } from '#app/lib/logger.const';
 import nodeLogger from '#app/lib/logger.node';
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
+import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
 import { getIdctaConfigUrl } from './getIdctaBaseUrl';
 
 const logger = nodeLogger(__filename);
-
-// TODO: Add types
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type IdctaConfig = any;
 
 export default async function fetchIdctaConfig(
   toggles: Toggles,
@@ -36,8 +33,7 @@ export default async function fetchIdctaConfig(
 
     if (!response.ok) {
       logger.error(IDCTA_FETCH_ERROR, {
-        url: idctaConfigUrl,
-        service,
+        url: response.url,
         status: response.status,
         statusText: response.statusText,
       });
@@ -48,7 +44,6 @@ export default async function fetchIdctaConfig(
   } catch (error) {
     logger.error(IDCTA_FETCH_ERROR, {
       url: idctaConfigUrl,
-      service,
       error,
     });
     return null;
