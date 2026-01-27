@@ -5,9 +5,7 @@ import onClient from '#app/lib/utilities/onClient';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 
-export const AccountContext = createContext<AccountContextProps>(
-  {} as AccountContextProps,
-);
+export const AccountContext = createContext<AccountContextProps | null>(null);
 
 const getSignedInCookie = (cookieName = 'ckns_id') => {
   return onClient() ? Cookie.get(cookieName) : false;
@@ -21,46 +19,47 @@ export const AccountProvider = ({
   initialConfig: IdctaConfig | null;
 }) => {
   const { locale } = use(ServiceContext);
-
   const [ptrt, setPtrt] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     setPtrt(window.location.href);
   }, []);
 
-  const signInAvailability = initialConfig?.availability.signin === 'GREEN';
-  const unavailableUrl = initialConfig?.unavailable_url;
+  const idIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';
 
-  const signInUrl = signInAvailability
-    ? appendCtaQueryParams(initialConfig?.signin_url, { ptrt, lang: locale })
-    : unavailableUrl;
+  const buildAccountUrl = (url?: string) => {
+    return idIdctaAvailable && url
+      ? appendCtaQueryParams(url, { ptrt, lang: locale })
+      : initialConfig?.unavailable_url;
+  };
 
-  const registerUrl = signInAvailability
-    ? appendCtaQueryParams(initialConfig?.register_url, { ptrt, lang: locale })
-    : unavailableUrl;
-
-  const accountUrl =
-    initialConfig?.['foryou-flagpole'] === 'GREEN'
-      ? initialConfig.foryou_url
-      : unavailableUrl;
-
-  // Todo: use  settings_url
-  // Todo: use  privacy_settings_url
+  const signInUrl = buildAccountUrl(initialConfig?.signin_url);
+  const registerUrl = buildAccountUrl(initialConfig?.register_url);
+  const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
+  const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
 
   const cookieName = initialConfig?.identity.idSignedInCookieName;
-  const isSignedIn = signInAvailability
+  const isSignedIn = idIdctaAvailable
     ? Boolean(getSignedInCookie(cookieName))
     : false;
 
   const value = useMemo(
     () => ({
-      isSignInAvailable: signInAvailability,
-      signInUrl,
-      registerUrl,
-      accountUrl,
+      idIdctaAvailable,
       isSignedIn,
+      signInUrl,
+      signOutUrl,
+      registerUrl,
+      settingsUrl,
     }),
-    [accountUrl, isSignedIn, registerUrl, signInAvailability, signInUrl],
+    [
+      idIdctaAvailable,
+      isSignedIn,
+      registerUrl,
+      settingsUrl,
+      signInUrl,
+      signOutUrl,
+    ],
   );
 
   if (!initialConfig) {
