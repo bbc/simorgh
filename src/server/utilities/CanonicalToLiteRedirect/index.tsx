@@ -49,9 +49,7 @@ export default () => {
   return (
     <script>
       {`
-        window.addEventListener('DOMContentLoaded', () => {
-          (${redirectScript.toString()})(window)
-        })
+        (${redirectScript.toString()})(window)
       `}
     </script>
   );
