@@ -38,16 +38,22 @@ const fetchConfig = async <T>({
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
-  const cachedResponse = cache.get(fetchUrl.toString());
+  const reqUrl = fetchUrl.toString();
 
-  logger.debug(CONFIG_REQUEST_RECEIVED, { service, cached: !!cachedResponse });
+  const cachedResponse = cache.get(reqUrl);
+
+  logger.debug(CONFIG_REQUEST_RECEIVED, {
+    service,
+    path: reqUrl,
+    cached: !!cachedResponse,
+  });
 
   if (cachedResponse) return cachedResponse as T;
 
-  const environment = getEnvironment(fetchUrl.toString());
+  const environment = getEnvironment(reqUrl);
   const isLocal = !environment || environment === 'local';
 
-  const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
+  const agent = certsRequired(reqUrl) ? await getAgent() : null;
 
   const fetchOptions = {
     ...(agent && { agent }),
@@ -56,11 +62,11 @@ const fetchConfig = async <T>({
   };
 
   try {
-    const response = await fetch(fetchUrl.toString(), fetchOptions);
+    const response = await fetch(reqUrl, fetchOptions);
 
     if (response.ok) {
       const res = await response.json();
-      cache.set(fetchUrl.toString(), res);
+      cache.set(reqUrl, res);
       return res as T;
     }
 
