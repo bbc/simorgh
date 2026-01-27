@@ -2,6 +2,16 @@ import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
   headline: 'Sujets',
+  analytics: {
+    name: 'afrique.topics.page',
+    producer: 'AFRIQUE',
+  },
+  atiAnalytics: {
+    contentId: 'urn:bbc:tipo:topic:afrique-topics-index',
+    contentType: 'index-category',
+    pageIdentifier: 'afrique.topics.index.page',
+    pageTitle: 'Sujets',
+  },
   topics: [
     {
       id: 'cqywjv1rwgxt',

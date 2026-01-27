@@ -2,6 +2,16 @@ import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
   headline: 'Batutuwa',
+  analytics: {
+    name: 'hausa.topics.page',
+    producer: 'HAUSA',
+  },
+  atiAnalytics: {
+    contentId: 'urn:bbc:tipo:topic:hausa-topics-index',
+    contentType: 'index-category',
+    pageIdentifier: 'hausa.topics.index.page',
+    pageTitle: 'Batutuwa',
+  },
   topics: [
     {
       topicName: "'Yan awaren Biafra",

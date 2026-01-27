@@ -8,8 +8,15 @@ export type Topic = {
   id: string;
 };
 
+export type TopicsAnalyticsData = {
+  name: string;
+  producer: string;
+};
+
 export type TopicsFixtureData = {
   headline: string;
+  analytics: TopicsAnalyticsData;
+  atiAnalytics: ATIData;
   topics?: Topic[];
 };
 
