@@ -26,7 +26,7 @@ export type PageData = {
   totalItems: number;
   metadata: {
     type: string;
-    atiAnalytics: ATIData;
+    atiAnalytics?: ATIData;
   };
 };
 
