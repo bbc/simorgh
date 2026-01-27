@@ -14,6 +14,7 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import OEmbed from '#app/components/Embeds/OEmbed';
 import styles from './styles';
 import {
   Post as PostType,
@@ -161,8 +162,8 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
+    oEmbed: OEmbed,
   };
-
   return (
     <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );
