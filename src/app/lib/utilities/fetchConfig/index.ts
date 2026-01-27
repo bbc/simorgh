@@ -40,13 +40,13 @@ const fetchConfig = async <T>({
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
 
-  const reqUrl = fetchUrl.toString();
+  const bffReqPath = fetchUrl.toString();
 
-  const cachedResponse = cache.get(reqUrl);
+  const cachedResponse = cache.get(bffReqPath);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {
     service,
-    path: reqUrl,
+    path: bffReqPath,
     cached: !!cachedResponse,
   });
 
@@ -55,7 +55,7 @@ const fetchConfig = async <T>({
   const environment = getEnvironment(pagePath);
   const isLocal = !environment || environment === 'local';
 
-  const agent = certsRequired(reqUrl) ? await getAgent() : null;
+  const agent = certsRequired(pagePath) ? await getAgent() : null;
 
   const fetchOptions = {
     ...(agent && { agent }),
@@ -64,11 +64,11 @@ const fetchConfig = async <T>({
   };
 
   try {
-    const response = await fetch(reqUrl, fetchOptions);
+    const response = await fetch(bffReqPath, fetchOptions);
 
     if (response.ok) {
       const res = await response.json();
-      cache.set(reqUrl, res);
+      cache.set(bffReqPath, res);
       return res as T;
     }
 
