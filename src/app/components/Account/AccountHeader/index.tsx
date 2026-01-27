@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { AccountContext } from '../AccountContext';
+import { AccountContext } from '#contexts/AccountContext';
 import styles from './index.styles';
 
 const AccountHeader = () => {
-  const { isSignedIn, signInUrl, accountUrl } = useContext(AccountContext);
+  const { isSignedIn, signInUrl, forYouUrl } = useContext(AccountContext);
 
-  const href = isSignedIn ? accountUrl : signInUrl;
+  const href = isSignedIn ? forYouUrl : signInUrl;
   if (!href) return null;
 
   return (

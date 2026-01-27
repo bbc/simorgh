@@ -1,6 +1,6 @@
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { AccountContext } from '../AccountContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import AccountHeader from '.';
 
 const withProviders =
@@ -12,9 +12,9 @@ const withProviders =
             value={{
               isSignedIn,
               signInUrl: 'https://example.com/signin',
-              accountUrl: 'https://example.com/for-you',
+              forYouUrl: 'https://example.com/for-you',
               registerUrl: 'https://example.com/register',
-              isSignInAvailable: true,
+              idIdctaAvailable: true,
             }}
           >
             <AccountHeader />
