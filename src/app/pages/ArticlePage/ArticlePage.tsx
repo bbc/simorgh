@@ -199,15 +199,18 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
-  () => {
-    return (
-      <ContinueReadingButton
-        showAllContent={showAllContent}
-        setShowAllContent={setShowAllContent}
-      />
-    );
-  };
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
+    />
+  );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
@@ -350,6 +353,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        ...(referrerVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
+          },
+        }),
       }),
     }),
   };

@@ -230,6 +230,31 @@ const getTopStoryHeadline = (item: TopStoryItem) => {
 };
 
 export const mapTopStoryToRecommendation = (item: TopStoryItem) => {
+  if (item.isLive) {
+    const title = item.headline ?? '';
+    const href = item.destinationUrl ?? '';
+    const imageData = item.image ?? {};
+    const imagePath =
+      typeof imageData.path === 'string'
+        ? imageData.path.replace(/^\/?cpsprodpb\//, '')
+        : '';
+    const image = {
+      locator: imagePath,
+      altText: imageData.altText ?? title,
+      width: imageData.width ?? 0,
+      height: imageData.height ?? 0,
+      copyrightHolder: imageData.copyrightHolder ?? '',
+      originCode: imageData.originCode ?? '',
+    };
+
+    return {
+      id: item.id,
+      title,
+      href,
+      image,
+    };
+  }
+
   const title = getTopStoryHeadline(item);
 
   // Prefer defaultPromoImage if present, otherwise use indexImage
