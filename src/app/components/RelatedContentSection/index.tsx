@@ -39,7 +39,7 @@ type Props = {
   experimentProps?: ComponentExperimentProps;
 };
 
-const RelatedContentSection = ({ content, experimentProps }: Props) => {
+const RelatedContentSection = ({ content }: Props) => {
   const { translations, script, service } = use(ServiceContext);
   const {
     palette: { GREY_2 },
@@ -49,8 +49,6 @@ const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      // include experiment props so optimizely can track clicks for this component
-      ...(experimentProps && experimentProps),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);
