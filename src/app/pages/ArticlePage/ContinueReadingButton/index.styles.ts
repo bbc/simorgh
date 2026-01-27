@@ -1,9 +1,12 @@
-import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
+import { visuallyHiddenStyle } from '#app/lib/styles.const';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
+  continueReadingToggle: () => css`
+    ${visuallyHiddenStyle}
+  `,
   continueReadingButton: ({ spacings, palette, mq }: Theme) =>
     css({
       cursor: 'pointer',
@@ -41,8 +44,18 @@ export default {
         textDecoration: 'underline',
       },
 
-      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
         display: 'none',
+      },
+
+      '[id="continue-reading-toggle"]:checked + &': {
+        display: 'none',
+      },
+
+      '[id="continue-reading-toggle"]:focus-visible + &': {
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+        outlineOffset: `${pixelsToRem(3)}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {

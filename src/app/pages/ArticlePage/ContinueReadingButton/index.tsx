@@ -48,7 +48,20 @@ const ContinueReadingButton = ({
     }
   }, [showAllContent]);
 
-  const handleEvent = (event: MouseEvent<HTMLButtonElement>) => {
+  useEffect(() => {
+    if (showAllContent) return;
+    const continueReadingToggle = document.getElementById(
+      'continue-reading-toggle',
+    ) as HTMLInputElement | null;
+
+    if (continueReadingToggle?.checked) {
+      setShowAllContent(true);
+    }
+  }, [showAllContent, setShowAllContent]);
+
+  const handleEvent = (
+    event: MouseEvent<HTMLInputElement | HTMLLabelElement>,
+  ) => {
     clickTrackerHandler?.(event);
 
     const maybeKeyboardEvent = event.detail === 0;
@@ -67,21 +80,41 @@ const ContinueReadingButton = ({
     setShowAllContent(true);
   };
 
+  const handleLabelClick = (event: MouseEvent<HTMLLabelElement>) => {
+    // Prevent checkbox toggling when JS is available; CSS-only handles no-JS.
+    event.preventDefault();
+    handleEvent(event);
+  };
+
+  const handleInputClick = (event: MouseEvent<HTMLInputElement>) => {
+    if (event.detail !== 0) return;
+    handleEvent(event);
+  };
+
   // Hide button when all content is shown
   if (showAllContent) return null;
 
   return (
-    <button
-      id="continue-reading-button"
-      css={styles.continueReadingButton}
-      type="button"
-      onClick={handleEvent}
-      data-testid="continue-reading-button"
-      {...viewRef}
-    >
-      <Text fontVariant="sansBold">{continueReading}</Text>
-      <TriangleDown />
-    </button>
+    <>
+      <input
+        id="continue-reading-toggle"
+        type="checkbox"
+        css={styles.continueReadingToggle}
+        onClick={handleInputClick}
+        data-testid="continue-reading-toggle"
+      />
+      <label
+        id="continue-reading-button"
+        css={styles.continueReadingButton}
+        htmlFor="continue-reading-toggle"
+        onClick={handleLabelClick}
+        data-testid="continue-reading-button"
+        {...viewRef}
+      >
+        <Text fontVariant="sansBold">{continueReading}</Text>
+        <TriangleDown />
+      </label>
+    </>
   );
 };
 
