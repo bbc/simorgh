@@ -73,6 +73,18 @@ export const getServerSideProps: GetServerSideProps = async context => {
           totalItems,
           metadata: {
             type: TOPIC_PAGE,
+            analytics: {
+              name: 'hausa.topics.page',
+              producer: 'HAUSA',
+            },
+            atiAnalytics: {
+              name: 'hausa-topics-index',
+              type: 'index-category',
+              contentId: 'urn:bbc:tipo:topic:hausa-topics-index',
+              contentType: 'index-category',
+              pageIdentifier: 'hausa.topics.index.page',
+              pageTitle: 'Batutuwa',
+            },
           },
         },
       },

@@ -469,6 +469,10 @@ export const service: DefaultServiceConfig = {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/topics/c4nx34q5724t',
       },
+      {
+        title: 'Batutuwa',
+        url: '/hausa/topics',
+      },
     ],
   },
 };

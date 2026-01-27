@@ -3,6 +3,7 @@ import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext } from 'react';
 import MetadataContainer from '#app/components/Metadata';
+import ATIAnalytics from '#app/components/ATIAnalytics';
 import { TopicsPageProps } from '#app/lib/config/fixtures/types';
 import styles from './index.styles';
 
@@ -14,7 +15,8 @@ const TopicsPage = ({
   safeActivePage,
 }: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
-  const { summaries, headline } = pageData || {};
+  const { summaries, headline, metadata } = pageData || {};
+  const { atiAnalytics } = metadata;
 
   const {
     pageXOfY,
@@ -38,6 +40,7 @@ const TopicsPage = ({
 
   return (
     <main css={styles.container}>
+      <ATIAnalytics atiData={atiAnalytics} />
       <MetadataContainer
         title={metadataTitle}
         openGraphType="website"
