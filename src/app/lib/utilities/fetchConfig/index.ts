@@ -5,6 +5,7 @@ import { Services } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
+import getEnvironment from '#app/routes/utils/getEnvironment';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 import isLive from '../isLive';
 
@@ -43,10 +44,14 @@ const fetchConfig = async <T>({
 
   if (cachedResponse) return cachedResponse as T;
 
+  const environment = getEnvironment(fetchUrl.toString());
+  const isLocal = !environment || environment === 'local';
+
   const agent = certsRequired(fetchUrl.toString()) ? await getAgent() : null;
 
   const fetchOptions = {
     ...(agent && { agent }),
+    ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
     signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 

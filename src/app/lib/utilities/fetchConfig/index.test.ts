@@ -71,6 +71,51 @@ describe('fetchConfig', () => {
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
+  // TODO: Add 'live' environment test once rolling out to Live environment
+  it.each(['test'])(
+    'should include ctx-service-env header when in %s environment',
+    async env => {
+      process.env.SIMORGH_APP_ENV = env;
+
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockResponse,
+      });
+
+      const { default: fetchConfig } = await import('.');
+
+      await fetchConfig({
+        service: 'indonesia',
+        configType: 'navigation',
+      });
+
+      expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
+        headers: { 'ctx-service-env': env },
+        signal: expect.any(AbortSignal),
+      });
+    },
+  );
+
+  it('should not include ctx-service-env header when in local environment', async () => {
+    process.env.SIMORGH_APP_ENV = 'local';
+
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockResponse,
+    });
+
+    const { default: fetchConfig } = await import('.');
+
+    await fetchConfig({
+      service: 'indonesia',
+      configType: 'navigation',
+    });
+
+    expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
+      signal: expect.any(AbortSignal),
+    });
+  });
+
   it('should log an error if the fetch fails', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: false,
