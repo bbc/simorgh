@@ -12,7 +12,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // EXPERIMENT: OJ Referrer
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_read_more_b', 'newswb_ws_tod_article'],
+    activeExperiments: ['newswb_ws_oj_by_referrer'],
   },
 ];
 
