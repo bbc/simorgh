@@ -36,8 +36,8 @@ type Props = {
     secondaryColumn?: { topStories: TopStoryItem[] };
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
   };
-  navItems: Navigation[] | null;
   status: number;
+  navItems?: Navigation[] | null;
 };
 
 type wordCountType = number | undefined;
@@ -45,8 +45,8 @@ type wordCountType = number | undefined;
 const PageLayoutWrapper = ({
   children,
   pageData,
-  navItems,
   status,
+  navItems,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
