@@ -1,36 +1,32 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import AccountHeader from '.';
+import ThemeProvider from '#app/components/ThemeProvider';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { AccountContext } from '../AccountContext';
+import AccountHeader from '.';
 
-const meta: Meta<typeof AccountHeader> = {
+const withProviders =
+  (isSignedIn: boolean) =>
+    () => (
+      <ThemeProvider service="ws">
+      <ServiceContextProvider service="ws">
+      <AccountContext.Provider
+        value={{
+          isSignedIn,
+          signInUrl: 'https://example.com/signin',
+          accountUrl: 'https://example.com/for-you',
+          registerUrl: 'https://example.com/register',
+          isSignInAvailable: true,
+        }}
+      >
+      <AccountHeader />
+      </AccountContext.Provider>
+      </ServiceContextProvider>
+      </ThemeProvider>
+    );
+
+export default {
   title: 'Account/AccountHeader',
   component: AccountHeader,
 };
 
-export default meta;
-
-type Story = StoryObj<typeof AccountHeader>;
-
-const renderWithContext = (isSignedIn: boolean) => (
-  <AccountContext.Provider
-    value={
-      {
-        isSignedIn,
-        signInUrl: 'https://example.com/signin',
-        accountUrl: 'https://example.com/for-you',
-        registerUrl: 'https://example.com/register',
-        isSignInAvailable: true,
-      } as any
-    }
-  >
-    <AccountHeader />
-  </AccountContext.Provider>
-);
-
-export const SignedOut: Story = {
-  render: () => renderWithContext(false),
-};
-
-export const SignedIn: Story = {
-  render: () => renderWithContext(true),
-};
+export const SignedOut = withProviders(false);
+export const SignedIn = withProviders(true);

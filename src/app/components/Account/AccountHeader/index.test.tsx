@@ -1,14 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import ThemeProvider from '#app/components/ThemeProvider';
 import { AccountProvider } from '../AccountContext';
 import AccountHeader from '.';
 
 const renderWithProviders = (initialConfig: any) =>
   render(
     <ServiceContext.Provider value={{ locale: 'en-gb' } as any}>
-      <AccountProvider initialConfig={initialConfig}>
-        <AccountHeader />
-      </AccountProvider>
+      <ThemeProvider service="ws">
+        <AccountProvider initialConfig={initialConfig}>
+          <AccountHeader />
+        </AccountProvider>
+      </ThemeProvider>
     </ServiceContext.Provider>,
   );
 
