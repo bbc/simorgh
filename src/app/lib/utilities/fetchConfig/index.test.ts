@@ -1,3 +1,14 @@
+import { Agent } from 'undici';
+
+const mockAgent = {
+  connect: { cert: 'cert', ca: 'ca', key: 'key' },
+} as unknown as Agent;
+
+jest.mock('#src/server/utilities/getAgent', () => ({
+  __esModule: true,
+  default: async () => mockAgent,
+}));
+
 describe('fetchConfig', () => {
   const mockResponse = {
     data: {
@@ -102,6 +113,7 @@ describe('fetchConfig', () => {
       expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
         headers: { 'ctx-service-env': env },
         signal: expect.any(AbortSignal),
+        agent: mockAgent,
       });
     },
   );
@@ -128,6 +140,7 @@ describe('fetchConfig', () => {
       expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
         headers: { 'ctx-service-env': env },
         signal: expect.any(AbortSignal),
+        agent: mockAgent,
       });
     },
   );
