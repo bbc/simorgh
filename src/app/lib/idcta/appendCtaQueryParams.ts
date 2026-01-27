@@ -1,12 +1,12 @@
 type Params = {
-  ptrt?: string;
-  lang?: string;
+  pageToReturnTo?: string | null;
+  lang?: string | null;
 };
 
-export default (url: string, { ptrt, lang }: Params = {}): string => {
+export default (url: string, { pageToReturnTo, lang }: Params = {}): string => {
   const ctaUrl = new URL(url);
 
-  if (ptrt) ctaUrl.searchParams.set('ptrt', ptrt);
+  if (pageToReturnTo) ctaUrl.searchParams.set('ptrt', pageToReturnTo);
   if (lang) ctaUrl.searchParams.set('lang', lang);
 
   return ctaUrl.toString();

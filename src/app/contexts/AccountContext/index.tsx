@@ -5,7 +5,9 @@ import onClient from '#app/lib/utilities/onClient';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 
-export const AccountContext = createContext<AccountContextProps | null>(null);
+export const AccountContext = createContext<AccountContextProps>(
+  {} as AccountContextProps,
+);
 
 const getSignedInCookie = (cookieName = 'ckns_id') => {
   return onClient() ? Cookie.get(cookieName) : false;
@@ -19,17 +21,17 @@ export const AccountProvider = ({
   initialConfig: IdctaConfig | null;
 }) => {
   const { locale } = use(ServiceContext);
-  const [ptrt, setPtrt] = useState<string | undefined>(undefined);
+  const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
-    setPtrt(window.location.href);
+    setPageToReturnTo(window.location.href);
   }, []);
 
   const idIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';
 
   const buildAccountUrl = (url?: string) => {
     return idIdctaAvailable && url
-      ? appendCtaQueryParams(url, { ptrt, lang: locale })
+      ? appendCtaQueryParams(url, { pageToReturnTo, lang: locale })
       : initialConfig?.unavailable_url;
   };
 
@@ -37,6 +39,7 @@ export const AccountProvider = ({
   const registerUrl = buildAccountUrl(initialConfig?.register_url);
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
+  const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
   const cookieName = initialConfig?.identity.idSignedInCookieName;
   const isSignedIn = idIdctaAvailable
@@ -51,8 +54,10 @@ export const AccountProvider = ({
       signOutUrl,
       registerUrl,
       settingsUrl,
+      forYouUrl,
     }),
     [
+      forYouUrl,
       idIdctaAvailable,
       isSignedIn,
       registerUrl,
