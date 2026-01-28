@@ -31,6 +31,7 @@ const styles = {
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
+      containerType: 'inline-size', // required for container query
       [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
       },

@@ -53,7 +53,6 @@ const styles = {
       },
       // Uses container query instead of media query
       [GROUP_5_CONTAINER_QUERY]: {
-        border: '1px solid red',
         flexBasis: calculatePromoWidth({
           fitForNItems: 5,
           gapWidth: spacings.DOUBLE,

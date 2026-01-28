@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react';
-import { GROUP_5_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 
 export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;
@@ -19,7 +19,7 @@ export const calculatePromoWidth = ({
 const calculateNavContainerWidth = (fitForNItems: number) =>
   `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
 
-const GROUP_5_MIN_WIDTH_CONTAINER_QUERY = `@container (min-width: ${GROUP_5_MIN_WIDTH_BP}rem)`;
+const GROUP_5_CONTAINER_QUERY = `@container (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`;
 
 export const calculateVariedNavContainerWidths = ({
   mq,
@@ -41,7 +41,7 @@ export const calculateVariedNavContainerWidths = ({
     [widthParameter]: calculateNavContainerWidth(4),
   },
   // Uses container query instead of media query
-  [GROUP_5_MIN_WIDTH_CONTAINER_QUERY]: {
+  [GROUP_5_CONTAINER_QUERY]: {
     display,
     [widthParameter]: calculateNavContainerWidth(5),
   },
