@@ -11,6 +11,7 @@ import {
 import getCaptionBlock from '../utils/getCaptionBlock';
 import buildPlaceholderConfig from '../utils/buildPlaceholderConfig';
 import shouldDisplayAds from '../utils/shouldDisplayAds';
+import getMediaOrientation from '../utils/getMediaOrientation';
 import { getExternalEmbedUrl } from '../utils/urlConstructors';
 import AUDIO_UI_CONFIG from './constants';
 
@@ -55,6 +56,10 @@ export default ({
   const kind = video?.version?.kind || 'programme';
 
   const guidanceMessage = video?.version?.guidance;
+
+  const clipOrientation = [video?.version?.orientation || ''];
+
+  const orientation = getMediaOrientation(clipOrientation);
 
   const showAds = shouldDisplayAds({
     adsEnabled,
@@ -117,7 +122,7 @@ export default ({
       },
     },
     ...(!isAudio && { placeholderConfig }),
-
+    orientation,
     showAds,
   };
 };
