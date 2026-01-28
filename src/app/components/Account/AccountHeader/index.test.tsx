@@ -13,7 +13,7 @@ const renderWithProviders = ({ isSignedIn }: { isSignedIn: boolean }) =>
             isSignedIn,
             signInUrl: 'https://example.com/signin',
             forYouUrl: 'https://example.com/foryou',
-            idIdctaAvailable: true,
+            isIdctaAvailable: true,
           }}
         >
           <AccountHeader />

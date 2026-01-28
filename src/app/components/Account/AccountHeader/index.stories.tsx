@@ -14,7 +14,7 @@ const withProviders =
               signInUrl: 'https://example.com/signin',
               forYouUrl: 'https://example.com/for-you',
               registerUrl: 'https://example.com/register',
-              idIdctaAvailable: true,
+              isIdctaAvailable: true,
             }}
           >
             <AccountHeader />
