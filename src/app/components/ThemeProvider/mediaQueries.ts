@@ -19,7 +19,7 @@ export const GROUP_3_MAX_WIDTH_BP = pixelsToRem(1007);
 export const GROUP_4_MIN_WIDTH_BP = pixelsToRem(1008);
 const GROUP_4_MAX_WIDTH_BP = pixelsToRem(1279);
 
-export const GROUP_5_MIN_WIDTH_BP = pixelsToRem(1280);
+const GROUP_5_MIN_WIDTH_BP = pixelsToRem(1280);
 
 export const GROUP_0_MAX_WIDTH = `@media (max-width: ${GROUP_0_MAX_WIDTH_BP}rem)`;
 

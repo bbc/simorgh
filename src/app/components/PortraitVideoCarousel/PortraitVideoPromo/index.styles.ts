@@ -1,5 +1,4 @@
 import { css, Theme } from '@emotion/react';
-import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
   twoPixelFocusIndicatorThickness,
@@ -7,7 +6,7 @@ import {
 } from '#app/components/ThemeProvider/focusIndicator';
 import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
-const GROUP_5_CONTAINER_QUERY = `@container (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`;
+const MAIN_CONTENT_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
 
 const styles = {
   container: ({ mq, spacings }: Theme) =>
@@ -52,8 +51,8 @@ const styles = {
         }),
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        // Uses container query instead of media query
-        [GROUP_5_CONTAINER_QUERY]: {
+        // If container exceeds width then apply styles
+        [MAIN_CONTENT_CONTAINER_QUERY]: {
           flexBasis: calculatePromoWidth({
             fitForNItems: 5,
             gapWidth: spacings.DOUBLE,
