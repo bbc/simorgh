@@ -3,6 +3,7 @@ import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { AccountProvider } from '#contexts/AccountContext';
 import { IdctaConfig } from '#app/models/types/account';
+import Cookie from 'js-cookie';
 import AccountHeader from '.';
 
 const renderWithProviders = (
@@ -36,5 +37,18 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+  });
+
+  it('shows For you when signed in', async () => {
+    Cookie.set('ckns_id', '1');
+
+    renderWithProviders();
+
+    const link = await screen.findByRole('link', { name: 'For you' });
+    expect(link).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://example.com/foryou'),
+    );
+    Cookie.remove('ckns_id');
   });
 });
