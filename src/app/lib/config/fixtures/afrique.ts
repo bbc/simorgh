@@ -1,7 +1,7 @@
 import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
-  headline: 'Sujets',
+  headline: 'Tous les sujets',
   analytics: {
     name: 'afrique.topics.page',
     producer: 'AFRIQUE',
@@ -10,7 +10,7 @@ const topics: TopicsFixtureData = {
     contentId: 'urn:bbc:tipo:topic:afrique-topics-index',
     contentType: 'index-category',
     pageIdentifier: 'afrique.topics.index.page',
-    pageTitle: 'Sujets',
+    pageTitle: 'Tous les sujets',
   },
   topics: [
     {
