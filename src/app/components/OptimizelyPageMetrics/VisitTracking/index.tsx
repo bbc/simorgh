@@ -25,5 +25,5 @@ const VisitTracking = () => {
   return null;
 };
 // the logic here is based on persistent storage in local storage, and the local time
-// not on any values that would change during the componeent's lifecycle
+// not on any values that would change during the component's lifecycle
 export default VisitTracking;
