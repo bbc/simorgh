@@ -58,7 +58,7 @@ const Recommendations = ({
     referrerVariant.includes('control')
   ) {
     displayData = data ?? [];
-  } else if (referrerVariant === 'adaptive_variant') {
+  } else if (referrerVariant === 'adaptive_variation') {
     switch (referrer) {
       case 'search':
         displayData = getRelatedContentData(blocks ?? []).map(
@@ -83,6 +83,7 @@ const Recommendations = ({
         break;
     }
   }
+
   const componentName = 'midarticle-mostread';
   const groupTracker = {
     name: title,
