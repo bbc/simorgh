@@ -1,4 +1,5 @@
 import { Theme } from '@emotion/react';
+// import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 
 export const PROMO_ITEM_WIDTH_MIN = 147;
@@ -40,9 +41,11 @@ export const calculateVariedNavContainerWidths = ({
     display,
     [widthParameter]: calculateNavContainerWidth(4),
   },
-  // Uses container query instead of media query
-  [GROUP_5_CONTAINER_QUERY]: {
-    display,
-    [widthParameter]: calculateNavContainerWidth(5),
+  [mq.GROUP_5_MIN_WIDTH]: {
+    // Uses container query instead of media query
+    [GROUP_5_CONTAINER_QUERY]: {
+      display,
+      [widthParameter]: calculateNavContainerWidth(5),
+    },
   },
 });

@@ -51,13 +51,15 @@ const styles = {
           navButtonAffordance: true,
         }),
       },
-      // Uses container query instead of media query
-      [GROUP_5_CONTAINER_QUERY]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 5,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+      [mq.GROUP_5_MIN_WIDTH]: {
+        // Uses container query instead of media query
+        [GROUP_5_CONTAINER_QUERY]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 5,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
     }),
   button: ({ palette }: Theme) =>
