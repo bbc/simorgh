@@ -15,7 +15,7 @@ export type IdctaConfig = {
 };
 
 export type AccountContextProps = {
-  idIdctaAvailable: boolean;
+  isIdctaAvailable: boolean;
   isSignedIn: boolean;
   signInUrl?: string;
   registerUrl?: string;

@@ -1,4 +1,11 @@
-import React, { createContext, use, useEffect, useMemo, useState } from 'react';
+import {
+  createContext,
+  PropsWithChildren,
+  use,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
@@ -13,13 +20,14 @@ const getSignedInCookie = (cookieName = 'ckns_id') => {
   return onClient() ? Cookie.get(cookieName) : false;
 };
 
+type AccountProviderProps = {
+  initialConfig: IdctaConfig | null;
+};
+
 export const AccountProvider = ({
   children,
   initialConfig,
-}: {
-  children: React.ReactNode;
-  initialConfig: IdctaConfig | null;
-}) => {
+}: PropsWithChildren<AccountProviderProps>) => {
   const { locale } = use(ServiceContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
@@ -27,10 +35,10 @@ export const AccountProvider = ({
     setPageToReturnTo(window.location.href);
   }, []);
 
-  const idIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';
+  const isIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';
 
   const buildAccountUrl = (url?: string) => {
-    return idIdctaAvailable && url
+    return isIdctaAvailable && url
       ? appendCtaQueryParams(url, { pageToReturnTo, lang: locale })
       : initialConfig?.unavailable_url;
   };
@@ -41,14 +49,14 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const cookieName = initialConfig?.identity.idSignedInCookieName;
-  const isSignedIn = idIdctaAvailable
+  const cookieName = initialConfig?.identity?.idSignedInCookieName;
+  const isSignedIn = isIdctaAvailable
     ? Boolean(getSignedInCookie(cookieName))
     : false;
 
   const value = useMemo(
     () => ({
-      idIdctaAvailable,
+      isIdctaAvailable,
       isSignedIn,
       signInUrl,
       signOutUrl,
@@ -58,7 +66,7 @@ export const AccountProvider = ({
     }),
     [
       forYouUrl,
-      idIdctaAvailable,
+      isIdctaAvailable,
       isSignedIn,
       registerUrl,
       settingsUrl,
