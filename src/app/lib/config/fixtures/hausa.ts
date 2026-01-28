@@ -1,7 +1,7 @@
 import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
-  headline: 'Batutuwa',
+  headline: 'Duk batutuwa',
   analytics: {
     name: 'hausa.topics.page',
     producer: 'HAUSA',
@@ -10,7 +10,7 @@ const topics: TopicsFixtureData = {
     contentId: 'urn:bbc:tipo:topic:hausa-topics-index',
     contentType: 'index-category',
     pageIdentifier: 'hausa.topics.index.page',
-    pageTitle: 'Batutuwa',
+    pageTitle: 'Duk batutuwa',
   },
   topics: [
     {

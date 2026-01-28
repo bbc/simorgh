@@ -181,7 +181,7 @@ exports[`Canonical Story Page Header Navigation link should match text and url 7
 
 exports[`Canonical Story Page Header Navigation link should match text and url 8`] = `
 {
-  "text": "Batutuwa",
+  "text": "Duk batutuwa",
   "url": "/hausa/topics",
 }
 `;

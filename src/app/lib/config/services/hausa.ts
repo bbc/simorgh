@@ -470,7 +470,7 @@ export const service: DefaultServiceConfig = {
         url: '/hausa/topics/c4nx34q5724t',
       },
       {
-        title: 'Batutuwa',
+        title: 'Duk batutuwa',
         url: '/hausa/topics',
       },
     ],
