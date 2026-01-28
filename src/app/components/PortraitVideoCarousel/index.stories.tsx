@@ -28,7 +28,6 @@ export default {
     metadata,
     chromatic: {
       viewports: [
-        899, // Group 3
         1007, // Group 4
         1280, // Group 5
       ],
