@@ -29,6 +29,10 @@ const renderWithProviders = (
   );
 
 describe('AccountHeader', () => {
+  afterEach(() => {
+    Cookie.remove('ckns_id');
+  });
+
   it('shows Sign in when signed out', async () => {
     renderWithProviders();
 
@@ -49,6 +53,5 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/foryou'),
     );
-    Cookie.remove('ckns_id');
   });
 });

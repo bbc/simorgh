@@ -11,6 +11,7 @@ const styles = {
 
   link: ({ palette }: Theme) => ({
     color: palette.WHITE,
+    textDecoration: 'none',
 
     '&:hover, &:focus': {
       textDecoration: 'underline',
