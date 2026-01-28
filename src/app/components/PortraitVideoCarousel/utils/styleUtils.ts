@@ -1,4 +1,5 @@
 import { Theme } from '@emotion/react';
+import { GROUP_5_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 
 export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;
@@ -18,8 +19,8 @@ export const calculatePromoWidth = ({
 const calculateNavContainerWidth = (fitForNItems: number) =>
   `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
 
-// to do - why does this behave differently on article page group_5 to homepage group_5
-// use container query?
+const GROUP_5_MIN_WIDTH_CONTAINER_QUERY = `@container (min-width: ${GROUP_5_MIN_WIDTH_BP}rem)`;
+
 export const calculateVariedNavContainerWidths = ({
   mq,
   display,
@@ -39,9 +40,9 @@ export const calculateVariedNavContainerWidths = ({
     display,
     [widthParameter]: calculateNavContainerWidth(4),
   },
-  [mq.GROUP_5_MIN_WIDTH]: {
+  // Uses container query instead of media query
+  [GROUP_5_MIN_WIDTH_CONTAINER_QUERY]: {
     display,
-    // [widthParameter]: calculateNavContainerWidth(5),
-    [widthParameter]: calculateNavContainerWidth(4),
+    [widthParameter]: calculateNavContainerWidth(5),
   },
 });
