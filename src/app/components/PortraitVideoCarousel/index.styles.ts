@@ -37,6 +37,7 @@ const styles = {
     }),
   carousel: ({ spacings, mq }: Theme) =>
     css({
+      containerType: 'inline-size', // required for container query
       display: 'flex',
       flex: 1,
       overflowX: 'auto',

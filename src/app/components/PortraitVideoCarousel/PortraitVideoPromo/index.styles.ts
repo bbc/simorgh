@@ -6,6 +6,9 @@ import {
 } from '#app/components/ThemeProvider/focusIndicator';
 import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
 
+const GROUP_5_MIN_WIDTH_CONTAINER = pixelsToRem(1008);
+const GROUP_5_MIN_WIDTH_CONTAINER_QUERY = `@container (min-width: ${GROUP_5_MIN_WIDTH_CONTAINER}rem)`;
+
 const styles = {
   container: ({ mq, spacings }: Theme) =>
     css({
@@ -48,21 +51,14 @@ const styles = {
           navButtonAffordance: true,
         }),
       },
-      [mq.GROUP_5_MIN_WIDTH]: {
+      // Uses container query instead of media query
+      [GROUP_5_MIN_WIDTH_CONTAINER_QUERY]: {
         flexBasis: calculatePromoWidth({
           fitForNItems: 5,
           gapWidth: spacings.DOUBLE,
           navButtonAffordance: true,
         }),
       },
-      // to do, account for different items shown on homepage vs article page
-      // [mq.GROUP_5_MIN_WIDTH]: {
-      //   flexBasis: calculatePromoWidth({
-      //     fitForNItems: 4,
-      //     gapWidth: spacings.DOUBLE,
-      //     navButtonAffordance: true,
-      //   }),
-      // },
     }),
   button: ({ palette }: Theme) =>
     css({
