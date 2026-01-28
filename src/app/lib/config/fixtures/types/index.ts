@@ -16,7 +16,7 @@ export type TopicsAnalyticsData = {
 export type TopicsFixtureData = {
   headline: string;
   analytics: TopicsAnalyticsData;
-  atiAnalytics: ATIData;
+  atiAnalytics?: ATIData;
   topics?: Topic[];
 };
 
