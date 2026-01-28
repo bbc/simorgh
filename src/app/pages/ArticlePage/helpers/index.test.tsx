@@ -30,29 +30,29 @@ describe('getUnderArticleComponents', () => {
     const keys = getKeys(components);
     expect(keys).toEqual(['relatedContent', 'topStories', 'features']);
   });
-  it('returns all components in search order when referrer variant is adaptive_variant and referrer is search', () => {
+  it('returns all components in search order when referrer variant is adaptive_variation and referrer is search', () => {
     const components = getUnderArticleComponents({
       ...baseProps,
-      referrerVariant: 'adaptive_variant',
+      referrerVariant: 'adaptive_variation',
       referrer: 'search',
     });
     const keys = getKeys(components);
     expect(keys).toEqual(['relatedContent', 'topStories', 'features']);
   });
-  it('returns all components in social order when referrer variant is adaptive_variant and referrer is social', () => {
+  it('returns all components in social order when referrer variant is adaptive_variation and referrer is social', () => {
     const components = getUnderArticleComponents({
       ...baseProps,
-      referrerVariant: 'adaptive_variant',
+      referrerVariant: 'adaptive_variation',
       referrer: 'social',
     });
     const keys = getKeys(components);
     expect(keys).toEqual(['features', 'relatedContent', 'topStories']);
   });
 
-  it('returns all components in direct order when referrer variant is adaptive_variant and referrer is direct', () => {
+  it('returns all components in direct order when referrer variant is adaptive_variation and referrer is direct', () => {
     const components = getUnderArticleComponents({
       ...baseProps,
-      referrerVariant: 'adaptive_variant',
+      referrerVariant: 'adaptive_variation',
       referrer: 'direct',
     });
     const keys = getKeys(components);
@@ -90,20 +90,20 @@ describe('getUnderArticleComponents', () => {
     const keys = getKeys(components);
     expect(keys).toEqual(['relatedContent', 'topStories', 'features']);
   });
-  it('returns default order when referrerVariant is adaptive_variant and referrer is null', () => {
+  it('returns default order when referrerVariant is adaptive_variation and referrer is null', () => {
     const components = getUnderArticleComponents({
       ...baseProps,
-      referrerVariant: 'adaptive_variant',
+      referrerVariant: 'adaptive_variation',
       referrer: null,
     });
     const keys = getKeys(components);
     expect(keys).toEqual(['relatedContent', 'topStories', 'features']);
   });
 
-  it('returns default order when referrerVariant is adaptive_variant and referrer is undefined', () => {
+  it('returns default order when referrerVariant is adaptive_variation and referrer is undefined', () => {
     const components = getUnderArticleComponents({
       ...baseProps,
-      referrerVariant: 'adaptive_variant',
+      referrerVariant: 'adaptive_variation',
       // referrer is undefined
     });
     const keys = getKeys(components);
