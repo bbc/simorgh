@@ -4,7 +4,7 @@ import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
-import { getIdctaConfigUrl } from './getIdctaBaseUrl';
+import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
 
 const logger = nodeLogger(__filename);
 
