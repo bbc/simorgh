@@ -63,7 +63,7 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         topStoriesContent={topStoriesContentFixture}
-        referrerVariant="adaptive_variant"
+        referrerVariant="adaptive_variation"
         referrer="direct"
       />,
       {
@@ -107,7 +107,7 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         featuresContent={featuresContentFixture}
-        referrerVariant="adaptive_variant"
+        referrerVariant="adaptive_variation"
         referrer="social"
       />,
       {
@@ -151,7 +151,7 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         blocks={relatedContentBlocksFixture}
-        referrerVariant="adaptive_variant"
+        referrerVariant="adaptive_variation"
         referrer="search"
       />,
       {
@@ -216,7 +216,7 @@ describe('Recommendations', () => {
       <Recommendations
         data={[]}
         blocks={singleRelatedContentBlocks}
-        referrerVariant="adaptive_variant"
+        referrerVariant="adaptive_variation"
         referrer="search"
       />,
       {
