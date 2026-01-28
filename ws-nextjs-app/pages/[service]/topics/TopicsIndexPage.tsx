@@ -15,8 +15,8 @@ const TopicsPage = ({
   safeActivePage,
 }: TopicsPageProps) => {
   const { translations, lang } = useContext(ServiceContext);
-  const { summaries, headline, metadata } = pageData || {};
-  const { atiAnalytics } = metadata || {};
+  const { summaries, headline } = pageData || {};
+  const atiAnalytics = pageData?.metadata?.atiAnalytics;
   const {
     pageXOfY,
     previousPage,
