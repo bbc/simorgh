@@ -26,6 +26,7 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
 
 interface Props {
   pageProps: {
@@ -68,7 +69,14 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
-    const toggles = await getToggles(service);
+    // configResult will be used in a future implementation
+    const [togglesResult, _configResult] = await Promise.allSettled([
+      getToggles(service),
+      fetchConfig({ service, pagePath: asPath, configType: 'navigation' }),
+    ]);
+
+    const toggles =
+      togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
