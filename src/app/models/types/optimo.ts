@@ -151,7 +151,6 @@ export type RelatedContent = {
   };
 };
 
-// portraitvideo?
 export type portraitVideoItems = {
   title: string;
   portraitVideo: {

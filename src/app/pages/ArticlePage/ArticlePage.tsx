@@ -248,6 +248,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
+  const portraitVideoItems = pageData?.portraitVideoItems;
+  const portraitVideoBlocks = portraitVideoItems?.portraitVideo?.blocks ?? [];
+  const showPortraitVideoCarousel = Boolean(portraitVideoBlocks.length);
+  const portraitVideoCarouselTitle = portraitVideoItems?.title ?? '';
+
   const hasContinueReadingBlock = blocks.some(
     block => block.type === 'continueReading',
   );
@@ -322,16 +327,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
-  // to do - move?
-  const showPortraitVideoCarousel = Boolean(
-    pageData?.portraitVideoItems &&
-      pageData?.portraitVideoItems?.portraitVideo.blocks.length > 0,
-  );
-
-  const portraitVideoCarouselTitle = pageData?.portraitVideoItems?.title || ''; // to check, may use fallback
-  const portraitVideoCarouselBlocks =
-    pageData?.portraitVideoItems?.portraitVideo.blocks || [];
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -410,11 +405,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               title={portraitVideoCarouselTitle}
-              blocks={portraitVideoCarouselBlocks}
+              blocks={portraitVideoBlocks}
               eventTrackingData={{
                 componentName: 'portrait-video-article',
               }}
-              backgroundColor="rgba(246, 246, 246, 0.75)" // to do - tidy, also arrow button not as high contrast
+              backgroundColor="rgba(246, 246, 246, 0.75)"
               css={styles.portraitVideoCarousel}
             />
           )}

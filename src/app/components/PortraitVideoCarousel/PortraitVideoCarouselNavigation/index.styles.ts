@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../utils/styleUtils';
 
-const defaultBackgroundColor = 'rgba(255, 255, 255, 0.75)'; // white
+const defaultBackgroundColor = 'rgba(255, 255, 255, 0.75)';
 
 const styles = {
   buttonGroupOverlay:
