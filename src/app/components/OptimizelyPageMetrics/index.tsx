@@ -7,18 +7,21 @@ import { RequestContext } from '#contexts/RequestContext';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
+import ViewTracking from './VisitTracking';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
 
 type Props = {
   trackPageView?: boolean;
   trackPageDepth?: boolean;
   trackPageComplete?: boolean;
+  trackVisit?: boolean;
 };
 
 const OptimizelyPageMetrics = ({
   trackPageView = false,
   trackPageDepth = false,
   trackPageComplete = false,
+  trackVisit = false,
 }: Props) => {
   const { optimizely } = useContext(OptimizelyContext);
   const { isAmp, pageType } = useContext(RequestContext);
@@ -55,6 +58,7 @@ const OptimizelyPageMetrics = ({
     trackPageComplete,
     trackPageDepth,
     trackPageView,
+    trackVisit,
     experimentsForPageType,
   ]);
 
@@ -66,6 +70,7 @@ const OptimizelyPageMetrics = ({
       {trackPageComplete && <PageCompleteTracking />}
       {trackPageDepth && <ScrollDepthTracking />}
       {trackPageView && <PageViewTracking />}
+      {trackVisit && <ViewTracking />}
     </>
   );
 };
