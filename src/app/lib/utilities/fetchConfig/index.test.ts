@@ -9,16 +9,16 @@ jest.mock('#src/server/utilities/getAgent', () => ({
   default: async () => mockAgent,
 }));
 
-describe('fetchConfig', () => {
-  const mockResponse = {
-    data: {
-      items: [
-        { title: 'Home', url: '/home' },
-        { title: 'About', url: '/about' },
-      ],
-    },
-  };
+const mockNavResponse = {
+  data: {
+    items: [
+      { title: 'Home', url: '/home' },
+      { title: 'About', url: '/about' },
+    ],
+  },
+};
 
+describe('fetchConfig', () => {
   beforeEach(() => {
     jest.resetModules();
 
@@ -55,7 +55,7 @@ describe('fetchConfig', () => {
   it('should fetch configuration data', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: async () => mockResponse,
+      json: async () => mockNavResponse,
     });
 
     const { default: fetchConfig } = await import('.');
@@ -66,14 +66,14 @@ describe('fetchConfig', () => {
       configType: 'navigation',
     });
 
-    expect(data).toEqual(mockResponse);
+    expect(data).toEqual(mockNavResponse);
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
   it('should return cached data on subsequent calls', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: async () => mockResponse,
+      json: async () => mockNavResponse,
     });
 
     const { default: fetchConfig } = await import('.');
@@ -99,7 +99,7 @@ describe('fetchConfig', () => {
     async env => {
       global.fetch = jest.fn().mockResolvedValue({
         ok: true,
-        json: async () => mockResponse,
+        json: async () => mockNavResponse,
       });
 
       const { default: fetchConfig } = await import('.');
@@ -126,7 +126,7 @@ describe('fetchConfig', () => {
 
       global.fetch = jest.fn().mockResolvedValue({
         ok: true,
-        json: async () => mockResponse,
+        json: async () => mockNavResponse,
       });
 
       const { default: fetchConfig } = await import('.');
@@ -148,7 +148,7 @@ describe('fetchConfig', () => {
   it('should not include ctx-service-env header when in local environment', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
-      json: async () => mockResponse,
+      json: async () => mockNavResponse,
     });
 
     const { default: fetchConfig } = await import('.');

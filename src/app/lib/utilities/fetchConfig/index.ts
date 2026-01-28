@@ -86,7 +86,7 @@ const fetchConfig = async <T>({
       service,
     });
 
-    throw new Error(message);
+    throw error;
   }
 };
 
