@@ -305,6 +305,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const portraitVideoBlocks = portraitVideoItems?.portraitVideo?.blocks ?? [];
   const showPortraitVideoCarousel = Boolean(portraitVideoBlocks.length);
   const portraitVideoCarouselTitle = portraitVideoItems?.title ?? '';
+  const semiOpaqueBackgroundColour = 'rgba(246, 246, 246, 0.75)';
 
   const hasContinueReadingBlock = blocks.some(
     block => block.type === 'continueReading',
@@ -478,7 +479,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               eventTrackingData={{
                 componentName: 'portrait-video-article',
               }}
-              backgroundColor="rgba(246, 246, 246, 0.75)"
+              backgroundColor={semiOpaqueBackgroundColour}
               css={styles.portraitVideoCarousel}
             />
           )}

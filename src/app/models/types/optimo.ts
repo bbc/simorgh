@@ -151,7 +151,7 @@ export type RelatedContent = {
   };
 };
 
-export type portraitVideoItems = {
+export type PortraitVideoItems = {
   title: string;
   portraitVideo: {
     blocks: PortraitClipMediaBlock[];
@@ -166,5 +166,5 @@ export type Article = {
   secondaryColumn?: SecondaryColumn;
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
-  portraitVideoItems?: portraitVideoItems;
+  portraitVideoItems?: PortraitVideoItems;
 };
