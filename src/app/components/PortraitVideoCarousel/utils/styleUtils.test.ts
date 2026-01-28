@@ -1,4 +1,5 @@
 import { Theme } from '@emotion/react';
+import { GROUP_5_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 
 import {
   calculatePromoWidth,
@@ -46,7 +47,14 @@ describe('styleUtils', () => {
       display: 'block',
       widthParameter: 'flexBasis',
     });
+
+    const expectedContainerQuery = `@container (min-width: ${GROUP_5_MIN_WIDTH_BP}rem)`;
+
     expect(navButtonWidths).toStrictEqual({
+      [expectedContainerQuery]: {
+        display: 'block',
+        flexBasis: 'calc(calc((100% / 5.5) - 0rem) * 0.5)',
+      },
       'group 3 min': {
         pointer: {
           display: 'block',
@@ -56,10 +64,6 @@ describe('styleUtils', () => {
       'group 4 min': {
         display: 'block',
         flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
-      },
-      'group 5 min': {
-        display: 'block',
-        flexBasis: 'calc(calc((100% / 5.5) - 0rem) * 0.5)',
       },
     });
   });
