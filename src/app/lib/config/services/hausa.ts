@@ -446,10 +446,6 @@ export const service: DefaultServiceConfig = {
         url: '/hausa',
       },
       {
-        title: 'Gasar Kofin Afirka',
-        url: '/hausa/topics/c71939zq32vt',
-      },
-      {
         title: 'Wasanni',
         url: '/hausa/topics/cz74kjgv220t',
       },
