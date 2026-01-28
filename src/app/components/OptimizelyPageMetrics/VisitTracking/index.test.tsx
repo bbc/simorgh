@@ -1,6 +1,6 @@
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 import { render, waitFor } from '../../react-testing-library-with-providers';
-import VisitEventTracking from './index';
+import VisitTracking from './index';
 
 // create a mock optimizely client with a fake track function to check if it's called
 const mockOptimizely = {
@@ -10,11 +10,11 @@ const mockOptimizely = {
 const renderWithOptimizely = (optimizely?: Partial<ReactSDKClient>) =>
   render(
     <OptimizelyProvider optimizely={optimizely as ReactSDKClient}>
-      <VisitEventTracking />
+      <VisitTracking />
     </OptimizelyProvider>,
   );
 
-describe('Optimizely VisitEventTracking', () => {
+describe('Optimizely VisitTracking', () => {
   // save the original date.now function and a copy of localStorage to restore after each test
   const originalDateNow = Date.now;
   const originalLocalStorage = { ...window.localStorage };

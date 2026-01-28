@@ -3,7 +3,7 @@ import { OptimizelyContext } from '@optimizely/react-sdk';
 
 const VISIT_TIMEOUT_MS = 60 * 60 * 1000; // 1 hour timeout
 
-const VisitEventTracking = () => {
+const VisitTracking = () => {
   // get the useContext hook to get the optimizely client to send tracking events
   const { optimizely } = useContext(OptimizelyContext);
 
@@ -26,4 +26,4 @@ const VisitEventTracking = () => {
 };
 // the logic here is based on persistent storage in local storage, and the local time
 // not on any values that would change during the componeent's lifecycle
-export default VisitEventTracking;
+export default VisitTracking;
