@@ -85,17 +85,17 @@ const getUnderArticleComponents = ({
   // leaving the other cases with the original unordered experience. However, this makes it more flexible
   // to change the orders for different variants in the future, and is easy to understand.
 
-  if (referrerVariant === 'adaptive_variant' && referrer === 'social') {
+  if (referrerVariant === 'adaptive_variation' && referrer === 'social') {
     return [featuresComponent, relatedContent, topStoriesComponent].filter(
       Boolean,
     );
   }
-  if (referrerVariant === 'adaptive_variant' && referrer === 'direct') {
+  if (referrerVariant === 'adaptive_variation' && referrer === 'direct') {
     return [topStoriesComponent, relatedContent, featuresComponent].filter(
       Boolean,
     );
   }
-  // Default for when referrerVariant is 'control', 'off', '', or any unknown value and when referrer_variant is 'adaptive_variant' but referrer is 'search''
+  // Default for when referrerVariant is 'control', 'off', '', or any unknown value and when referrer_variant is 'adaptive_variation' but referrer is 'search''
   return [relatedContent, topStoriesComponent, featuresComponent].filter(
     Boolean,
   );
