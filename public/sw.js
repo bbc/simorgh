@@ -170,8 +170,7 @@ const fetchEventHandler = async event => {
               return cachedOffline;
             }
           }
-          // fallback to browser default behavior
-          throw err;
+          return Response.error();
         }
       })(),
     );
