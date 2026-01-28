@@ -12,13 +12,9 @@ jest.mock('#app/lib/logger.node', () =>
   })),
 );
 
-const mockGetToggleDefinitions = getToggleDefinitions as jest.MockedFunction<
-  typeof getToggleDefinitions
->;
-const mockIsLocal = isLocal as jest.MockedFunction<typeof isLocal>;
-const mockGetIdctaConfigUrl = getIdctaConfigUrl as jest.MockedFunction<
-  typeof getIdctaConfigUrl
->;
+const mockGetToggleDefinitions = getToggleDefinitions as jest.Mock;
+const mockIsLocal = isLocal as jest.Mock;
+const mockGetIdctaConfigUrl = getIdctaConfigUrl as jest.Mock;
 
 global.fetch = jest.fn();
 
