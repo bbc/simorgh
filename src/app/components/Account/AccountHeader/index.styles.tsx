@@ -9,19 +9,11 @@ const styles = {
     paddingInlineStart: '1rem',
   },
 
-  link: ({ palette, fontSizes }: Theme) => ({
+  link: ({ palette }: Theme) => ({
     color: palette.WHITE,
-    textDecoration: 'none',
-    ...fontSizes.pica,
-    lineHeight: 1,
-    display: 'inline-block',
 
     '&:hover, &:focus': {
       textDecoration: 'underline',
-    },
-
-    '&:visited': {
-      color: palette.WHITE,
     },
   }),
 };

@@ -70,6 +70,10 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'At a glance',
+      account: {
+        signIn: 'Sign in',
+        forYou: 'For you',
+      },
       error: {
         404: {
           statusCode: '404',
