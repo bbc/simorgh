@@ -1,0 +1,290 @@
+import pathOr from 'ramda/src/pathOr';
+import pathEq from 'ramda/src/pathEq';
+import tail from 'ramda/src/tail';
+import slice from 'ramda/src/slice';
+import last from 'ramda/src/last';
+import filter from 'ramda/src/filter';
+import pipe from 'ramda/src/pipe';
+import { OptimoBlock } from '#app/models/types/optimo';
+import { Recommendation } from '#app/models/types/onwardJourney';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+
+type Features = {
+  id: string;
+  locators: {
+    canonicalUrl?: string;
+  };
+  headlines: {
+    promoHeadline?: {
+      blocks: Array<{
+        model: {
+          blocks: Array<{
+            model: {
+              text: string;
+              blocks?: Array<{
+                model: {
+                  text: string;
+                  attributes?: unknown[];
+                };
+              }>;
+            };
+          }>;
+        };
+      }>;
+    };
+    seoHeadline?: string;
+  };
+  images?: {
+    defaultPromoImage?: {
+      blocks?: any[];
+    };
+  };
+};
+
+// --- Shared utilities for extracting image data from defaultPromoImage ---
+
+const getAltTextFromDefaultPromoImage = (defaultPromoImage?: {
+  blocks?: any[];
+}) => {
+  const altTextBlock = defaultPromoImage?.blocks?.find(
+    block => block.type === 'altText',
+  );
+  return (
+    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text || ''
+  );
+};
+
+const getRawImageBlock = (defaultPromoImage?: { blocks?: any[] }) =>
+  defaultPromoImage?.blocks?.find(block => block.type === 'rawImage')?.model ??
+  {};
+
+// --- Related Content (Optimo) ---
+
+export const getRelatedContentData = (blocks: OptimoBlock[]) => {
+  const BLOCKS_TO_IGNORE = ['wsoj', 'mpu', 'continueReading'];
+  const removeCustomBlocks = pipe(
+    filter((block: OptimoBlock) => !BLOCKS_TO_IGNORE.includes(block.type)),
+    last,
+  );
+  const relatedContentBlock = removeCustomBlocks(blocks);
+  if (
+    !relatedContentBlock ||
+    !pathEq('relatedContent', ['type'], relatedContentBlock)
+  ) {
+    return [];
+  }
+  const items = pathOr([], ['model', 'blocks'], relatedContentBlock);
+  const hasCustomTitle =
+    pathEq('title', [0, 'type'], items) &&
+    pathOr(
+      '',
+      [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+      items,
+    );
+  const storyPromoItems = hasCustomTitle ? tail(items) : items;
+  return slice(0, 4, storyPromoItems);
+};
+
+export const getHeadlineFromOptimoBlock = (block: any) => {
+  const headlineFirst = pathOr<string>(
+    '',
+    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
+    block,
+  );
+  const headlineSecond = pathOr<string>(
+    '',
+    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model', 'text'],
+    block,
+  );
+  return headlineFirst || headlineSecond;
+};
+
+export const getHrefFromOptimoBlock = (block: any) => {
+  const assetUriFirst = pathOr<string>(
+    '',
+    [
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'locator',
+    ],
+    block,
+  );
+  const assetUriSecond = pathOr<string>(
+    '',
+    [
+      'model',
+      'blocks',
+      1,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'locator',
+    ],
+    block,
+  );
+  return assetUriFirst || assetUriSecond;
+};
+
+export const getAltTextFromOptimoBlock = (block: any) =>
+  pathOr<string>(
+    '',
+    [
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'blocks',
+      0,
+      'model',
+      'text',
+    ],
+    block,
+  );
+
+export const getImageFromOptimoBlock = (block: any) => {
+  const imageBlock = block?.model?.blocks?.find((b: any) => b.type === 'image');
+  const rawImageBlock = imageBlock?.model?.blocks?.find(
+    (b: any) => b.type === 'rawImage',
+  );
+  return {
+    locator: rawImageBlock?.model?.locator ?? '',
+    altText: getAltTextFromOptimoBlock(block),
+    width: rawImageBlock?.model?.width ?? 0,
+    height: rawImageBlock?.model?.height ?? 0,
+    copyrightHolder: rawImageBlock?.model?.copyrightHolder ?? '',
+    originCode: rawImageBlock?.model?.originCode ?? '',
+  };
+};
+
+export const mapOptimoBlockToRecommendation = (block: any): Recommendation => ({
+  id: block.id,
+  title: getHeadlineFromOptimoBlock(block),
+  href: getHrefFromOptimoBlock(block),
+  image: getImageFromOptimoBlock(block),
+});
+
+// --- Features ---
+
+export const mapFeaturesToRecommendation = (featuresContent: Features) => {
+  const promoHeadlineText =
+    featuresContent.headlines?.promoHeadline?.blocks?.[0]?.model?.blocks?.[0]
+      ?.model?.text ??
+    featuresContent.headlines?.seoHeadline ??
+    '';
+
+  const defaultPromoImage = featuresContent.images?.defaultPromoImage;
+  const rawImage = getRawImageBlock(defaultPromoImage);
+
+  const image = {
+    locator: rawImage.locator ?? '',
+    altText:
+      getAltTextFromDefaultPromoImage(defaultPromoImage) || promoHeadlineText,
+    width: rawImage.width ?? 0,
+    height: rawImage.height ?? 0,
+    copyrightHolder: rawImage.copyrightHolder ?? '',
+    originCode: rawImage.originCode ?? '',
+  };
+
+  return {
+    id: featuresContent.id,
+    title: promoHeadlineText,
+    href: featuresContent.locators?.canonicalUrl ?? '',
+    image,
+  };
+};
+
+// --- Top Stories ---
+
+const getTopStoryHeadline = (item: TopStoryItem) => {
+  const overtypedHeadline = item?.headlines?.overtyped ?? '';
+  const mainHeadline = item?.headlines?.headline ?? '';
+  const promoHeadlineBlocks = Array.isArray(
+    item?.headlines?.promoHeadline?.blocks,
+  )
+    ? item.headlines.promoHeadline.blocks
+    : [];
+  const promoHeadlineText =
+    promoHeadlineBlocks?.[0]?.model?.blocks?.[0]?.model?.text ?? '';
+
+  const name = item?.name ?? '';
+  return overtypedHeadline || mainHeadline || promoHeadlineText || name;
+};
+
+export const mapTopStoryToRecommendation = (item: TopStoryItem) => {
+  if (item.isLive) {
+    const title = item.headline ?? '';
+    const href = item.destinationUrl ?? '';
+    const imageData = item.image ?? {};
+    const imagePath =
+      typeof imageData.path === 'string'
+        ? imageData.path.replace(/^\/?cpsprodpb\//, '')
+        : '';
+    const image = {
+      locator: imagePath,
+      altText: imageData.altText ?? title,
+      width: imageData.width ?? 0,
+      height: imageData.height ?? 0,
+      copyrightHolder: imageData.copyrightHolder ?? '',
+      originCode: imageData.originCode ?? '',
+    };
+
+    return {
+      id: item.id,
+      title,
+      href,
+      image,
+    };
+  }
+
+  const title = getTopStoryHeadline(item);
+
+  // Prefer defaultPromoImage if present, otherwise use indexImage
+  const defaultPromoImage = item.images?.defaultPromoImage;
+  const rawImage = getRawImageBlock(defaultPromoImage);
+
+  const { indexImage } = item as any;
+
+  const image = indexImage
+    ? {
+        locator: indexImage.href ?? '',
+        altText: indexImage.altText ?? title,
+        width: indexImage.width ?? 0,
+        height: indexImage.height ?? 0,
+        copyrightHolder: indexImage.copyrightHolder ?? '',
+        originCode: indexImage.originCode ?? '',
+      }
+    : {
+        locator: rawImage.locator ?? '',
+        altText: getAltTextFromDefaultPromoImage(defaultPromoImage) || title,
+        width: rawImage.width ?? 0,
+        height: rawImage.height ?? 0,
+        copyrightHolder: rawImage.copyrightHolder ?? '',
+        originCode: rawImage.originCode ?? '',
+      };
+
+  return {
+    id: item.id,
+    title,
+    href: item.locators?.canonicalUrl ?? item.uri ?? '',
+    image,
+  };
+};

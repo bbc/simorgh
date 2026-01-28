@@ -33,6 +33,11 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
+  experimentProps?: {
+    sendOptimizelyEvents: boolean;
+    experimentName: string;
+    experimentVariant: string;
+  };
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -104,6 +109,7 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
+  experimentProps,
   eventTrackingData,
 }: MostReadProps) => {
   const { isAmp, pageType, variant } = use(RequestContext);
@@ -129,6 +135,14 @@ const MostRead = ({
     variant,
     isBff,
   });
+  // Use the eventTrackingData prop if provided, otherwise construct a minimal default
+  // this is because most read is used on both the article page and the home page
+  // on the home page, we have an object containing more information passed in
+  // on the article page we don't have all of these pieces of data (do we need it?), but we do need the optimizely props
+  const trackingData = eventTrackingData || {
+    componentName: 'most-read',
+    ...(experimentProps && experimentProps),
+  };
 
   return isAmp ? (
     <AmpMostRead
@@ -147,7 +161,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      eventTrackingData={trackingData}
     />
   );
 };
