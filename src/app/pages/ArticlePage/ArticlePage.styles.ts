@@ -179,7 +179,6 @@ export default {
   portraitVideoCarousel: ({ mq }: Theme) =>
     css({
       padding: `0 ${pixelsToRem(8)}rem`,
-
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${pixelsToRem(16)}rem`,
       },
