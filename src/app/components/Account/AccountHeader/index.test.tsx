@@ -1,40 +1,30 @@
 import { render, screen } from '@testing-library/react';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { AccountProvider } from '#contexts/AccountContext';
-import { IdctaConfig } from '#app/models/types/account';
-import Cookie from 'js-cookie';
+import { AccountContext } from '#contexts/AccountContext';
 import AccountHeader from '.';
 
-const renderWithProviders = (
-  initialConfig = {
-    'id-availability': 'GREEN',
-    unavailable_url: 'https://example.com/unavailable',
-    signin_url: 'https://example.com/signin',
-    register_url: 'https://example.com/register',
-    foryou_url: 'https://example.com/foryou',
-    identity: {
-      idSignedInCookieName: 'ckns_id',
-    },
-  } as IdctaConfig,
-) =>
+const renderWithProviders = ({ isSignedIn }: { isSignedIn: boolean }) =>
   render(
     <ServiceContextProvider service="ws">
       <ThemeProvider service="ws">
-        <AccountProvider initialConfig={initialConfig}>
+        <AccountContext.Provider
+          value={{
+            isSignedIn,
+            signInUrl: 'https://example.com/signin',
+            forYouUrl: 'https://example.com/foryou',
+            idIdctaAvailable: true,
+          }}
+        >
           <AccountHeader />
-        </AccountProvider>
+        </AccountContext.Provider>
       </ThemeProvider>
     </ServiceContextProvider>,
   );
 
 describe('AccountHeader', () => {
-  afterEach(() => {
-    Cookie.remove('ckns_id');
-  });
-
   it('shows Sign in when signed out', async () => {
-    renderWithProviders();
+    renderWithProviders({ isSignedIn: false });
 
     const link = await screen.findByRole('link', { name: 'Sign in' });
     expect(link).toHaveAttribute(
@@ -44,9 +34,7 @@ describe('AccountHeader', () => {
   });
 
   it('shows For you when signed in', async () => {
-    Cookie.set('ckns_id', '1');
-
-    renderWithProviders();
+    renderWithProviders({ isSignedIn: true });
 
     const link = await screen.findByRole('link', { name: 'For you' });
     expect(link).toHaveAttribute(
