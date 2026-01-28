@@ -33,6 +33,8 @@ jest.mock('./PageViewTracking', () => () => (
   <div data-testid="page-view-tracking" />
 ));
 
+jest.mock('./VisitTracking', () => () => <div data-testid="visit-tracking" />);
+
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
   default: [],
@@ -83,7 +85,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageMetrics trackPageView trackPageDepth trackPageComplete />
+        <OptimizelyPageMetrics
+          trackPageView
+          trackPageDepth
+          trackPageComplete
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -96,6 +103,7 @@ describe('OptimizelyPageMetrics', () => {
       expect(
         screen.queryByTestId('page-view-tracking'),
       ).not.toBeInTheDocument();
+      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
     });
   });
 
@@ -123,6 +131,7 @@ describe('OptimizelyPageMetrics', () => {
       expect(
         screen.queryByTestId('page-view-tracking'),
       ).not.toBeInTheDocument();
+      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
     });
   });
 
@@ -183,6 +192,25 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
+  it('should render VisitTracking when trackVisit is true', async () => {
+    experimentsForPageMetrics.push(
+      ...[
+        {
+          pageType: ARTICLE_PAGE,
+          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
+        },
+      ],
+    );
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news">
+        <OptimizelyPageMetrics trackVisit />
+      </ContextWrap>,
+    );
+    await waitFor(() => {
+      expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
+    });
+  });
+
   it('should render all tracking components when all flags are true', async () => {
     experimentsForPageMetrics.push(
       ...[
@@ -194,13 +222,19 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
       expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+      expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
     });
   });
 
@@ -271,7 +305,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -292,7 +331,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -322,6 +366,7 @@ describe('OptimizelyPageMetrics', () => {
             trackPageComplete
             trackPageDepth
             trackPageView
+            trackVisit
           />
         </ContextWrap>,
       );
@@ -331,6 +376,7 @@ describe('OptimizelyPageMetrics', () => {
         ).toBeInTheDocument();
         expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
         expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+        expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
       });
     });
 
@@ -353,6 +399,7 @@ describe('OptimizelyPageMetrics', () => {
             trackPageComplete
             trackPageDepth
             trackPageView
+            trackVisit
           />
         </ContextWrap>,
       );
@@ -366,6 +413,7 @@ describe('OptimizelyPageMetrics', () => {
         expect(
           screen.queryByTestId('page-view-tracking'),
         ).not.toBeInTheDocument();
+        expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
       });
     });
   });
