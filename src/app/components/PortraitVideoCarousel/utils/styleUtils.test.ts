@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react';
-import { GROUP_5_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
+import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 
 import {
   calculatePromoWidth,
@@ -48,7 +48,7 @@ describe('styleUtils', () => {
       widthParameter: 'flexBasis',
     });
 
-    const expectedContainerQuery = `@container (min-width: ${GROUP_5_MIN_WIDTH_BP}rem)`;
+    const expectedContainerQuery = `@container (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`;
 
     expect(navButtonWidths).toStrictEqual({
       [expectedContainerQuery]: {
