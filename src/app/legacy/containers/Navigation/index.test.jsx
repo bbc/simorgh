@@ -121,6 +121,62 @@ describe('Navigation Container', () => {
       expect(href).toEqual(navItem.url);
     });
   });
+
+  it('should prefer navItems prop over service config', () => {
+    const navItems = [
+      { title: 'Home', url: '/home' },
+      { title: 'About', url: '/about' },
+    ];
+
+    const { getAllByText, queryAllByText } = render(
+      <Navigation navItems={navItems} />,
+      {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: false,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      },
+    );
+
+    expect(getAllByText('Home').length).toBeGreaterThan(0);
+    expect(getAllByText('About').length).toBeGreaterThan(0);
+    expect(queryAllByText('World')).toHaveLength(0);
+  });
+
+  it('should fall back to service config when navItems is null', () => {
+    const { navigation } = newsConfig.default;
+    const expectedTitle = navigation[0]?.title;
+
+    const { getAllByText } = render(<Navigation navItems={null} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+
+    expect(getAllByText(expectedTitle).length).toBeGreaterThan(0);
+  });
+
+  it('should render nothing when navItems is an empty array', () => {
+    const { container } = render(<Navigation navItems={[]} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+
+    expect(container.firstChild).toBeNull();
+  });
+
   it('should not render listItem in scrollable list when hideOnLiteSite is true and isLite is true', () => {
     const { navigation, ...rest } = newsConfig.default;
     const mockNavigation = [
