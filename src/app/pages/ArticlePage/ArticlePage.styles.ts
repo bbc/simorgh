@@ -204,8 +204,15 @@ export default {
   portraitVideoCarousel: ({ mq }: Theme) =>
     css({
       padding: `0 ${pixelsToRem(8)}rem`,
+      marginTop: 0,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        marginTop: 0,
+      },
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `0 ${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginTop: 0,
       },
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,

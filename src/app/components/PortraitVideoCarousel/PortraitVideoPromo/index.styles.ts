@@ -44,11 +44,14 @@ const styles = {
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 4,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+        // If container exceeds width then apply styles
+        [MAIN_CONTENT_CONTAINER_QUERY]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 4,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
       [mq.GROUP_5_MIN_WIDTH]: {
         // If container exceeds width then apply styles

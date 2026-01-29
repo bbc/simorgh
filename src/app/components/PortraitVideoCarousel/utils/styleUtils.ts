@@ -37,8 +37,11 @@ export const calculateVariedNavContainerWidths = ({
     },
   },
   [mq.GROUP_4_MIN_WIDTH]: {
-    display,
-    [widthParameter]: calculateNavContainerWidth(4),
+    // If container exceeds width then apply styles
+    [MAIN_CONTENT_CONTAINER_QUERY]: {
+      display,
+      [widthParameter]: calculateNavContainerWidth(4),
+    },
   },
   [mq.GROUP_5_MIN_WIDTH]: {
     // If container exceeds width then apply styles

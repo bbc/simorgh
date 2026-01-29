@@ -304,8 +304,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const portraitVideoItems = pageData?.portraitVideoItems;
   const portraitVideoBlocks = portraitVideoItems?.portraitVideo?.blocks ?? [];
   const showPortraitVideoCarousel = Boolean(portraitVideoBlocks.length);
-  const portraitVideoCarouselTitle = portraitVideoItems?.title ?? '';
-  const semiOpaqueBackgroundColour = 'rgba(246, 246, 246, 0.75)';
+
+  const portraitVideoCarouselProps = {
+    title: portraitVideoItems?.title ?? translations.media.watch,
+    blocks: portraitVideoBlocks,
+    eventTrackingData: { componentName: 'portrait-video-article' },
+    backgroundColor: 'rgba(246, 246, 246, 0.75)',
+  };
 
   const hasContinueReadingBlock = blocks.some(
     block => block.type === 'continueReading',
@@ -474,13 +479,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           )}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
-              title={portraitVideoCarouselTitle}
-              blocks={portraitVideoBlocks}
-              eventTrackingData={{
-                componentName: 'portrait-video-article',
-              }}
-              backgroundColor={semiOpaqueBackgroundColour}
-              css={styles.portraitVideoCarousel}
+              {...portraitVideoCarouselProps}
+              css={[styles.portraitVideoCarousel, styles.hideBelowDesktopWidth]}
             />
           )}
           <div css={styles.hideBelowDesktopWidth}>
@@ -500,6 +500,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
+      {showPortraitVideoCarousel && (
+        <PortraitVideoCarousel
+          {...portraitVideoCarouselProps}
+          css={[styles.portraitVideoCarousel, styles.hideOnDesktop]}
+        />
+      )}
 
       {/* // EXPERIMENT: Referrer Experiment
       Under-article components for mobile/tablet only */}
