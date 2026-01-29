@@ -5,7 +5,8 @@ export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;
 export const PROMO_PEEK_RATIO = 0.33;
 
-export const MAIN_CONTENT_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
+// If container exceeds width then apply styles
+export const MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
 
 export const calculatePromoWidth = ({
   fitForNItems,
@@ -37,15 +38,13 @@ export const calculateVariedNavContainerWidths = ({
     },
   },
   [mq.GROUP_4_MIN_WIDTH]: {
-    // If container exceeds width then apply styles
-    [MAIN_CONTENT_CONTAINER_QUERY]: {
+    [MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY]: {
       display,
       [widthParameter]: calculateNavContainerWidth(4),
     },
   },
   [mq.GROUP_5_MIN_WIDTH]: {
-    // If container exceeds width then apply styles
-    [MAIN_CONTENT_CONTAINER_QUERY]: {
+    [MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY]: {
       display,
       [widthParameter]: calculateNavContainerWidth(5),
     },

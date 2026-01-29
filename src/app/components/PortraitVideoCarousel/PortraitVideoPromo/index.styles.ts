@@ -6,7 +6,7 @@ import {
 } from '#app/components/ThemeProvider/focusIndicator';
 import {
   calculatePromoWidth,
-  MAIN_CONTENT_CONTAINER_QUERY,
+  MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY,
   PROMO_ITEM_WIDTH_MIN,
 } from '../utils/styleUtils';
 
@@ -46,8 +46,7 @@ const styles = {
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        // If container exceeds width then apply styles
-        [MAIN_CONTENT_CONTAINER_QUERY]: {
+        [MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY]: {
           flexBasis: calculatePromoWidth({
             fitForNItems: 4,
             gapWidth: spacings.DOUBLE,
@@ -56,8 +55,7 @@ const styles = {
         },
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        // If container exceeds width then apply styles
-        [MAIN_CONTENT_CONTAINER_QUERY]: {
+        [MAIN_CONTENT_MIN_WIDTH_CONTAINER_QUERY]: {
           flexBasis: calculatePromoWidth({
             fitForNItems: 5,
             gapWidth: spacings.DOUBLE,
