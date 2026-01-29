@@ -152,7 +152,7 @@ export type RelatedContent = {
 };
 
 export type PortraitVideoItems = {
-  title: string;
+  title?: string;
   portraitVideo: {
     blocks: PortraitClipMediaBlock[];
   };

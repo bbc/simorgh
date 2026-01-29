@@ -10,6 +10,7 @@ import {
   textBlock,
   timestampBlock,
 } from '#models/blocks';
+import portraitVideoFixture from '#app/components/PortraitVideoCarousel/fixture';
 
 const plainOptimoBlock = (blocks: (object | string)[]) =>
   blocks as OptimoBlock[];
@@ -3931,5 +3932,12 @@ export const promoSample = {
         },
       },
     ],
+  },
+};
+
+export const portraitVideoItems = {
+  title: 'Portrait Video Carousel',
+  portraitVideo: {
+    blocks: [...portraitVideoFixture.blocks],
   },
 };
