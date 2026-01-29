@@ -5,6 +5,8 @@ export const PROMO_ITEM_WIDTH_MIN = 147;
 export const NAVIGATION_BUTTON_RATIO = 0.5;
 export const PROMO_PEEK_RATIO = 0.33;
 
+export const MAIN_CONTENT_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
+
 export const calculatePromoWidth = ({
   fitForNItems,
   gapWidth = 0,
@@ -18,8 +20,6 @@ export const calculatePromoWidth = ({
 
 const calculateNavContainerWidth = (fitForNItems: number) =>
   `calc(${calculatePromoWidth({ fitForNItems, navButtonAffordance: true })} * ${NAVIGATION_BUTTON_RATIO})`;
-
-const MAIN_CONTENT_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
 
 export const calculateVariedNavContainerWidths = ({
   mq,

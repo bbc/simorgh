@@ -301,13 +301,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
   };
 
-  const portraitVideoItems = pageData?.portraitVideoItems;
-  const portraitVideoBlocks = portraitVideoItems?.portraitVideo?.blocks ?? [];
-  const showPortraitVideoCarousel = Boolean(portraitVideoBlocks.length);
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length,
+  );
 
   const portraitVideoCarouselProps = {
-    title: portraitVideoItems?.title ?? translations.media.watch,
-    blocks: portraitVideoBlocks,
+    title: pageData?.portraitVideoItems?.title ?? translations.media.watch,
+    blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
     eventTrackingData: { componentName: 'portrait-video-article' },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };

@@ -4,9 +4,11 @@ import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
-import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
-
-const MAIN_CONTENT_CONTAINER_QUERY = `@container (min-width: ${pixelsToRem(1008)}rem)`;
+import {
+  calculatePromoWidth,
+  MAIN_CONTENT_CONTAINER_QUERY,
+  PROMO_ITEM_WIDTH_MIN,
+} from '../utils/styleUtils';
 
 const styles = {
   container: ({ mq, spacings }: Theme) =>
