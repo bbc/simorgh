@@ -58,8 +58,10 @@ describe('styleUtils', () => {
         },
       },
       'group 4 min': {
-        display: 'block',
-        flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
+        [expectedContainerQuery]: {
+          display: 'block',
+          flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
+        },
       },
       'group 5 min': {
         [expectedContainerQuery]: {
