@@ -60,13 +60,10 @@ const storybookConfig: StorybookConfig = {
     {
       name: '@storybook/addon-styling-webpack',
       options: {
-        rules: [
-          // SCSS Modules: Only files ending with .module.scss are treated as CSS Modules (locally scoped styles)
-          {
+        rules: [          {
             test: /\.module\.scss$/,
             use: [
               'style-loader',
-              // require.resolve('./loaders/logBeforeStyleLoader.js'),
               {
                 loader: 'css-loader',
                 options: {
@@ -79,35 +76,7 @@ const storybookConfig: StorybookConfig = {
                 loader: 'sass-loader',
               },
             ],
-          },
-          // Global SCSS: All other .scss files (not ending with .module.scss) are treated as global styles
-          {
-            test: /.*(?<!\.module)\.scss$/,
-            use: [
-              // Custom loader to log matched files
-              require.resolve('./loaders/logMatchedScssLoader.js'),
-              // {
-              //   loader: 'style-loader',
-              //   options: {
-              //     styleTagTransform: require.resolve('./loaders/logStyleTagTransform.mjs'),
-              //   },
-              // },
-              'style-loader',
-              require.resolve('./loaders/logBeforeStyleLoader.js'),
-              // require.resolve('./loaders/logCssAfterCssLoader.js'),
-              {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  esModule: false,
-                  // scope: 'pure'
-                  modules: {
-                    exportGlobals: true,
-                  }
-                },
-              },
-            ],
-          },
+          }
         ],
       },
     },
