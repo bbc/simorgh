@@ -152,7 +152,9 @@ export default class AppDocument extends Document<DocProps> {
               <Script strategy="beforeInteractive">
                 {`window.SIMORGH_ENV_VARS=${JSON.stringify(clientSideEnvVariables)}`}
               </Script>
-              <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />
+              {pageType === 'live' && (
+                <script src="https://www.riddle.com/embed/build-embedjs/embedV2.js" />
+              )}
               {isApp && <meta name="robots" content="noindex" />}
               {title}
               {helmetMetaTags}
