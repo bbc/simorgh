@@ -29,9 +29,17 @@ jest.mock('./PageCompleteTracking', () => () => (
 jest.mock('./ScrollDepthTracking', () => () => (
   <div data-testid="scroll-depth-tracking" />
 ));
-jest.mock('./PageViewTracking', () => () => (
-  <div data-testid="page-view-tracking" />
-));
+// capture the trackVisit prop so tests can assert pass-through behaviour
+jest.mock(
+  './PageViewTracking',
+  () =>
+    ({ trackVisit }: { trackVisit?: boolean }) => (
+      <div
+        data-testid="page-view-tracking"
+        data-track-visit={trackVisit ? 'true' : 'false'}
+      />
+    ),
+);
 
 jest.mock('./VisitTracking', () => () => <div data-testid="visit-tracking" />);
 
@@ -192,7 +200,7 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  it('should render VisitTracking when trackVisit is true', async () => {
+  it('should render VisitTracking when trackVisit is true without page views', async () => {
     experimentsForPageMetrics.push(
       ...[
         {
@@ -234,7 +242,11 @@ describe('OptimizelyPageMetrics', () => {
       expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-      expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
+      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
+      expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
+        'data-track-visit',
+        'true',
+      );
     });
   });
 
@@ -376,7 +388,13 @@ describe('OptimizelyPageMetrics', () => {
         ).toBeInTheDocument();
         expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
         expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-        expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
+        expect(
+          screen.queryByTestId('visit-tracking'),
+        ).not.toBeInTheDocument();
+        expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
+          'data-track-visit',
+          'true',
+        );
       });
     });
 

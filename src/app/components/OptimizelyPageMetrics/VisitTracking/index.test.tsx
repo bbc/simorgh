@@ -4,8 +4,10 @@ import VisitTracking from './index';
 
 // create a mock optimizely client with a fake track function to check if it's called
 const mockOptimizely = {
+  onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
 } satisfies Partial<ReactSDKClient>;
+
 // helper function to render the component wrapped in the optimizely context , using the mock client
 const renderWithOptimizely = (optimizely?: Partial<ReactSDKClient>) =>
   render(
@@ -81,7 +83,7 @@ describe('Optimizely VisitTracking', () => {
     });
   });
 
-  // if the last visit was less than an hour ago, the component should not track a new visit or update the timestamp
+  // if the last visit was less than an hour ago, the component should not track a new visit
   it('does not track visit if last visit is within timeout', async () => {
     const recentTimestamp = 1000000 - 30 * 60 * 1000; // 30 minutes ago
     getItemMock.mockReturnValueOnce(String(recentTimestamp));
@@ -90,15 +92,11 @@ describe('Optimizely VisitTracking', () => {
 
     await waitFor(() => {
       expect(mockOptimizely.track).not.toHaveBeenCalled();
-      expect(setItemMock).not.toHaveBeenCalledWith(
-        'last_visit_ts',
-        expect.any(String),
-      );
+      expect(setItemMock).toHaveBeenCalledWith('last_visit_ts', '1000000');
     });
   });
 
   // if the optimizely client is missing, the component should not crash and timestamp should still update
-  // this is to ensure the tracking logic remains consistent and without duplicates and extra events.
   // the visit is still recorded locally so the next visit won't trigger another event immediately after the optimizely event becomes available again
   it('does not throw if optimizely is undefined', async () => {
     getItemMock.mockReturnValueOnce(null);
@@ -108,6 +106,7 @@ describe('Optimizely VisitTracking', () => {
       expect(setItemMock).toHaveBeenCalledWith('last_visit_ts', '1000000');
     });
   });
+
   // should not render anything to the DOM
   it('returns null', () => {
     getItemMock.mockReturnValueOnce(null);
