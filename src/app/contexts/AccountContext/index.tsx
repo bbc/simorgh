@@ -75,10 +75,6 @@ export const AccountProvider = ({
     ],
   );
 
-  if (!initialConfig) {
-    return children;
-  }
-
   return (
     <AccountContext.Provider value={value}>{children}</AccountContext.Provider>
   );

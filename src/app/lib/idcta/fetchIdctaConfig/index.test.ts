@@ -26,6 +26,7 @@ describe('fetchIdctaConfig', () => {
     idctaBaseUrl: 'https://idcta.test.api.bbc.com/idcta',
     signInUrl: '/signin',
     registerUrl: '/register',
+    'id-availability': true,
   };
 
   beforeEach(() => {
@@ -109,5 +110,20 @@ describe('fetchIdctaConfig', () => {
     const result = await fetchIdctaConfig(mockToggles, mockService);
 
     expect(result).toEqual(mockIdctaConfig);
+  });
+
+  it('should return null when config is missing id-availability field', async () => {
+    const invalidConfig = {
+      signInUrl: '/signin',
+    };
+
+    (global.fetch as jest.Mock).mockResolvedValue({
+      ok: true,
+      json: jest.fn().mockResolvedValue(invalidConfig),
+    });
+
+    const result = await fetchIdctaConfig(mockToggles, mockService);
+
+    expect(result).toBeNull();
   });
 });
