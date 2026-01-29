@@ -37,7 +37,6 @@ import {
   REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../src/app/components/ThemeProvider/fontFaces';
-import '../src/app/components/ThemeProviderSCSSModules/fontVariants/reith.scss';
 
 const services = Object.entries(serviceConfigs)
   .sort()
