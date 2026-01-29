@@ -45,6 +45,9 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -191,6 +194,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     'continueReadingButton',
   );
   const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
+
+  useOptimizelyVariation({
+    experimentName: 'general_event_bleed_test_1',
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   const {
     palette: { GREY_2 },

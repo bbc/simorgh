@@ -8,6 +8,8 @@ type ExperimentsForPageTypeMetrics = {
   activeExperiments: string[];
 }[];
 
-const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [];
+const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
+  { pageType: 'article', activeExperiments: ['general_event_bleed_test_1'] },
+];
 
 export default experimentsForPageMetrics;

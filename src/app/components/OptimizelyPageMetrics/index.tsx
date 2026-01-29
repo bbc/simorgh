@@ -34,6 +34,7 @@ const OptimizelyPageMetrics = ({
   useEffect(() => {
     if (optimizelyExperimentsEnabled) {
       optimizely?.onReady().then(() => {
+        console.log('Optimizely Page Metrics');
         const decisions = optimizely.decideAll([
           OptimizelyDecideOption.DISABLE_DECISION_EVENT,
         ]);

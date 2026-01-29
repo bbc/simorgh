@@ -20,6 +20,7 @@ export default ({ experimentName, overrideAttributes = {} }: Props) => {
 
   useEffect(() => {
     if (isClientReady && !didTimeout) {
+      console.log('Optimizely useOptimizelyVariation - Client Side');
       setVariation(decision.variationKey);
     }
   }, [isClientReady, decision.variationKey, didTimeout]);
