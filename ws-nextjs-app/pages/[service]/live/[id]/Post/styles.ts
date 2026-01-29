@@ -135,5 +135,8 @@ export default {
   videoPost: ({ spacings }: Theme) =>
     css({
       paddingBottom: `${spacings.FULL}rem`,
+      '.portrait-clip-media': {
+        margin: '20px auto 0',
+      },
     }),
 };
