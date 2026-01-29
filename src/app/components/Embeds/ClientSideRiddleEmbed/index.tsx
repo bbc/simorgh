@@ -5,7 +5,7 @@ import style from './index.styles';
 export default ({ oembed }: OEmbedProps) => {
   const { url, iFrameTitle, riddleId } = oembed;
 
-  if (url == null) {
+  if (!url) {
     return null;
   }
 
