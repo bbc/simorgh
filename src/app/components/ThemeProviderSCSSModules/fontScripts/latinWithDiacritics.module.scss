@@ -1,106 +1,110 @@
+// px to rem conversion utility
+@function px-to-rem($px, $base: 16) {
+  @return ($px / $base) * 1rem;
+}
 :root {
-  --atlas-group-a-font-size: 78;
-  --atlas-group-a-line-height: 84;
-  --atlas-group-b-font-size: 96;
-  --atlas-group-b-line-height: 104;
-  --atlas-group-d-font-size: 140;
-  --atlas-group-d-line-height: 148;
+  --font-size-atlas-group-a: #{px-to-rem(78)};
+  --line-height-atlas-group-a: #{px-to-rem(84)};
+  --font-size-atlas-group-b: #{px-to-rem(96)};
+  --line-height-atlas-group-b: #{px-to-rem(104)};
+  --font-size-atlas-group-d: #{px-to-rem(140)};
+  --line-height-atlas-group-d: #{px-to-rem(148)};
 
-  --elephant-group-a-font-size: 60;
-  --elephant-group-a-line-height: 64;
-  --elephant-group-b-font-size: 78;
-  --elephant-group-b-line-height: 84;
-  --elephant-group-d-font-size: 116;
-  --elephant-group-d-line-height: 124;
+  --font-size-elephant-group-a: #{px-to-rem(60)};
+  --line-height-elephant-group-a: #{px-to-rem(64)};
+  --font-size-elephant-group-b: #{px-to-rem(78)};
+  --line-height-elephant-group-b: #{px-to-rem(84)};
+  --font-size-elephant-group-d: #{px-to-rem(116)};
+  --line-height-elephant-group-d: #{px-to-rem(124)};
 
-  --imperial-group-a-font-size: 50;
-  --imperial-group-a-line-height: 54;
-  --imperial-group-b-font-size: 64;
-  --imperial-group-b-line-height: 78;
-  --imperial-group-d-font-size: 96;
-  --imperial-group-d-line-height: 116;
+  --font-size-imperial-group-a: #{px-to-rem(50)};
+  --line-height-imperial-group-a: #{px-to-rem(54)};
+  --font-size-imperial-group-b: #{px-to-rem(64)};
+  --line-height-imperial-group-b: #{px-to-rem(78)};
+  --font-size-imperial-group-d: #{px-to-rem(96)};
+  --line-height-imperial-group-d: #{px-to-rem(116)};
 
-  --royal-group-a-font-size: 40;
-  --royal-group-a-line-height: 44;
-  --royal-group-b-font-size: 52;
-  --royal-group-b-line-height: 64;
-  --royal-group-d-font-size: 76;
-  --royal-group-d-line-height: 92;
+  --font-size-royal-group-a: #{px-to-rem(40)};
+  --line-height-royal-group-a: #{px-to-rem(44)};
+  --font-size-royal-group-b: #{px-to-rem(52)};
+  --line-height-royal-group-b: #{px-to-rem(64)};
+  --font-size-royal-group-d: #{px-to-rem(76)};
+  --line-height-royal-group-d: #{px-to-rem(92)};
 
-  --foolscap-group-a-font-size: 32;
-  --foolscap-group-a-line-height: 36;
-  --foolscap-group-b-font-size: 40;
-  --foolscap-group-b-line-height: 48;
-  --foolscap-group-d-font-size: 56;
-  --foolscap-group-d-line-height: 68;
+  --font-size-foolscap-group-a: #{px-to-rem(32)};
+  --line-height-foolscap-group-a: #{px-to-rem(36)};
+  --font-size-foolscap-group-b: #{px-to-rem(40)};
+  --line-height-foolscap-group-b: #{px-to-rem(48)};
+  --font-size-foolscap-group-d: #{px-to-rem(56)};
+  --line-height-foolscap-group-d: #{px-to-rem(68)};
 
-  --canon-group-a-font-size: 28;
-  --canon-group-a-line-height: 36;
-  --canon-group-b-font-size: 32;
-  --canon-group-b-line-height: 42;
-  --canon-group-d-font-size: 44;
-  --canon-group-d-line-height: 58;
+  --font-size-canon-group-a: #{px-to-rem(28)};
+  --line-height-canon-group-a: #{px-to-rem(36)};
+  --font-size-canon-group-b: #{px-to-rem(32)};
+  --line-height-canon-group-b: #{px-to-rem(42)};
+  --font-size-canon-group-d: #{px-to-rem(44)};
+  --line-height-canon-group-d: #{px-to-rem(58)};
 
-  --trafalgar-group-a-font-size: 22;
-  --trafalgar-group-a-line-height: 28;
-  --trafalgar-group-b-font-size: 24;
-  --trafalgar-group-b-line-height: 32;
-  --trafalgar-group-d-font-size: 32;
-  --trafalgar-group-d-line-height: 42;
+  --font-size-trafalgar-group-a: #{px-to-rem(22)};
+  --line-height-trafalgar-group-a: #{px-to-rem(28)};
+  --font-size-trafalgar-group-b: #{px-to-rem(24)};
+  --line-height-trafalgar-group-b: #{px-to-rem(32)};
+  --font-size-trafalgar-group-d: #{px-to-rem(32)};
+  --line-height-trafalgar-group-d: #{px-to-rem(42)};
 
-  --paragon-group-a-font-size: 20;
-  --paragon-group-a-line-height: 26;
-  --paragon-group-b-font-size: 22;
-  --paragon-group-b-line-height: 30;
-  --paragon-group-d-font-size: 28;
-  --paragon-group-d-line-height: 38;
+  --font-size-paragon-group-a: #{px-to-rem(20)};
+  --line-height-paragon-group-a: #{px-to-rem(26)};
+  --font-size-paragon-group-b: #{px-to-rem(22)};
+  --line-height-paragon-group-b: #{px-to-rem(30)};
+  --font-size-paragon-group-d: #{px-to-rem(28)};
+  --line-height-paragon-group-d: #{px-to-rem(38)};
 
-  --double-pica-group-a-font-size: 18;
-  --double-pica-group-a-line-height: 24;
-  --double-pica-group-b-font-size: 20;
-  --double-pica-group-b-line-height: 26;
-  --double-pica-group-d-font-size: 24;
-  --double-pica-group-d-line-height: 32;
+  --font-size-double-pica-group-a: #{px-to-rem(18)};
+  --line-height-double-pica-group-a: #{px-to-rem(24)};
+  --font-size-double-pica-group-b: #{px-to-rem(20)};
+  --line-height-double-pica-group-b: #{px-to-rem(26)};
+  --font-size-double-pica-group-d: #{px-to-rem(24)};
+  --line-height-double-pica-group-d: #{px-to-rem(32)};
 
-  --great-primer-group-a-font-size: 18;
-  --great-primer-group-a-line-height: 22;
-  --great-primer-group-b-font-size: 18;
-  --great-primer-group-b-line-height: 22;
-  --great-primer-group-d-font-size: 20;
-  --great-primer-group-d-line-height: 24;
+  --font-size-great-primer-group-a: #{px-to-rem(18)};
+  --line-height-great-primer-group-a: #{px-to-rem(22)};
+  --font-size-great-primer-group-b: #{px-to-rem(18)};
+  --line-height-great-primer-group-b: #{px-to-rem(22)};
+  --font-size-great-primer-group-d: #{px-to-rem(20)};
+  --line-height-great-primer-group-d: #{px-to-rem(24)};
 
-  --body-copy-group-a-font-size: 15;
-  --body-copy-group-a-line-height: 20;
-  --body-copy-group-b-font-size: 16;
-  --body-copy-group-b-line-height: 22;
-  --body-copy-group-d-font-size: 16;
-  --body-copy-group-d-line-height: 22;
+  --font-size-body-copy-group-a: #{px-to-rem(15)};
+  --line-height-body-copy-group-a: #{px-to-rem(20)};
+  --font-size-body-copy-group-b: #{px-to-rem(16)};
+  --line-height-body-copy-group-b: #{px-to-rem(22)};
+  --font-size-body-copy-group-d: #{px-to-rem(16)};
+  --line-height-body-copy-group-d: #{px-to-rem(22)};
 
-  --pica-group-a-font-size: 15;
-  --pica-group-a-line-height: 20;
-  --pica-group-b-font-size: 16;
-  --pica-group-b-line-height: 20;
-  --pica-group-d-font-size: 16;
-  --pica-group-d-line-height: 20;
+  --font-size-pica-group-a: #{px-to-rem(15)};
+  --line-height-pica-group-a: #{px-to-rem(20)};
+  --font-size-pica-group-b: #{px-to-rem(16)};
+  --line-height-pica-group-b: #{px-to-rem(20)};
+  --font-size-pica-group-d: #{px-to-rem(16)};
+  --line-height-pica-group-d: #{px-to-rem(20)};
 
-  --long-primer-group-a-font-size: 15;
-  --long-primer-group-a-line-height: 20;
-  --long-primer-group-b-font-size: 15;
-  --long-primer-group-b-line-height: 20;
-  --long-primer-group-d-font-size: 14;
-  --long-primer-group-d-line-height: 18;
+  --font-size-long-primer-group-a: #{px-to-rem(15)};
+  --line-height-long-primer-group-a: #{px-to-rem(20)};
+  --font-size-long-primer-group-b: #{px-to-rem(15)};
+  --line-height-long-primer-group-b: #{px-to-rem(20)};
+  --font-size-long-primer-group-d: #{px-to-rem(14)};
+  --line-height-long-primer-group-d: #{px-to-rem(18)};
 
-  --brevier-group-a-font-size: 14;
-  --brevier-group-a-line-height: 18;
-  --brevier-group-b-font-size: 14;
-  --brevier-group-b-line-height: 18;
-  --brevier-group-d-font-size: 13;
-  --brevier-group-d-line-height: 16;
+  --font-size-brevier-group-a: #{px-to-rem(14)};
+  --line-height-brevier-group-a: #{px-to-rem(18)};
+  --font-size-brevier-group-b: #{px-to-rem(14)};
+  --line-height-brevier-group-b: #{px-to-rem(18)};
+  --font-size-brevier-group-d: #{px-to-rem(13)};
+  --line-height-brevier-group-d: #{px-to-rem(16)};
 
-  --minion-group-a-font-size: 12;
-  --minion-group-a-line-height: 16;
-  --minion-group-b-font-size: 12;
-  --minion-group-b-line-height: 16;
-  --minion-group-d-font-size: 12;
-  --minion-group-d-line-height: 16;
+  --font-size-minion-group-a: #{px-to-rem(12)};
+  --line-height-minion-group-a: #{px-to-rem(16)};
+  --font-size-minion-group-b: #{px-to-rem(12)};
+  --line-height-minion-group-b: #{px-to-rem(16)};
+  --font-size-minion-group-d: #{px-to-rem(12)};
+  --line-height-minion-group-d: #{px-to-rem(16)};
 }
