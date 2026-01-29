@@ -68,6 +68,7 @@ const OptimizelyPageMetrics = ({
 
   // only render the visit-only tracker when page views are disabled so we do not double count visits
   // when page views are tracked, visit events are sent from the page view tracker to preserve ordering
+  // for page views per visit, always enable both trackPageView and trackVisit
   const shouldTrackVisitOnly = trackVisit && !trackPageView;
 
   return (
