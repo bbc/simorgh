@@ -1,5 +1,6 @@
 import { useEffect, useState, use } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
+import { RequestContext } from '#app/contexts/RequestContext';
 
 const getScrollDepth = () =>
   Math.floor(
@@ -11,6 +12,7 @@ const getScrollDepth = () =>
 
 const useOptimizelyScrollDepth = () => {
   const { optimizely } = use(OptimizelyContext);
+  const { pageType } = use(RequestContext);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [scrollTwentyFive, setScrollTwentyFive] = useState(false);
   const [scrollFifty, setScrollFifty] = useState(false);
@@ -19,22 +21,22 @@ const useOptimizelyScrollDepth = () => {
 
   useEffect(() => {
     if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely?.track('scroll25');
+      optimizely?.track(`${pageType}_scroll25`);
       setScrollTwentyFive(true);
     }
 
     if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely?.track('scroll50');
+      optimizely?.track(`${pageType}_scroll50`);
       setScrollFifty(true);
     }
 
     if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely?.track('scroll75');
+      optimizely?.track(`${pageType}_scroll75`);
       setScrollSeventyFive(true);
     }
 
     if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely?.track('scroll100');
+      optimizely?.track(`${pageType}_scroll100`);
       setScrollHundred(true);
     }
 
@@ -47,6 +49,7 @@ const useOptimizelyScrollDepth = () => {
       );
   }, [
     optimizely,
+    pageType,
     scrollDepth,
     scrollFifty,
     scrollHundred,
