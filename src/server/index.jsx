@@ -118,6 +118,8 @@ server
       `Cache-Control`,
       `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
     );
+    res.set('Service-Worker-Allowed', `/${req.params.service}`);
+
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });

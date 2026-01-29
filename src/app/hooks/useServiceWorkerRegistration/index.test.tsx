@@ -32,7 +32,9 @@ describe('useServiceWorkerRegistration', () => {
   it('should register service worker with correct path when service is provided', () => {
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+      scope: '/mundo',
+    });
   });
 
   it('should register service worker for different services', () => {
@@ -43,12 +45,16 @@ describe('useServiceWorkerRegistration', () => {
       },
     );
 
-    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
+      scope: '/news',
+    });
 
     mockRegister.mockClear();
     rerender({ service: 'sport' });
 
-    expect(mockRegister).toHaveBeenCalledWith('/sport/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/sport/sw.js', {
+      scope: '/sport',
+    });
   });
 
   it('should not register service worker when service is undefined', () => {
@@ -124,13 +130,17 @@ describe('useServiceWorkerRegistration', () => {
     );
 
     expect(mockRegister).toHaveBeenCalledTimes(1);
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+      scope: '/mundo',
+    });
 
     mockRegister.mockClear();
     rerender({ service: 'news' });
 
     expect(mockRegister).toHaveBeenCalledTimes(1);
-    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
+      scope: '/news',
+    });
   });
 
   it('should not register again when service prop stays the same', () => {
@@ -159,7 +169,9 @@ describe('useServiceWorkerRegistration', () => {
 
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js');
+    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+      scope: '/mundo',
+    });
 
     await Promise.resolve();
 
