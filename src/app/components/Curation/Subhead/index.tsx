@@ -1,12 +1,8 @@
 import React, { Fragment, PropsWithChildren, use, useContext } from 'react';
-// import { ThemeContext } from '../../ThemeProviderSCSSModules/withThemeProvider';
 import styles from './index.module.scss';
-import '../../ThemeProviderSCSSModules/fontVariants/reith.scss';
-
 import { LeftChevron, RightChevron } from '../../icons';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
-import '../../ThemeProviderSCSSModules/fontVariants/reith.scss';
 
 console.log('Subhead styles:', styles);
 
