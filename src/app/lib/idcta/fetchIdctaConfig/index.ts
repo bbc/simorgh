@@ -32,15 +32,16 @@ export default async function fetchIdctaConfig(
     const response = await fetch(idctaConfigUrl);
 
     if (!response.ok) {
-      logger.error(IDCTA_FETCH_ERROR, {
-        url: response.url,
-        status: response.status,
-        statusText: response.statusText,
-      });
-      return null;
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
 
-    return await response.json();
+    const config = await response.json();
+
+    if (!config?.['id-availability']) {
+      throw new Error('Invalid config: missing required fields');
+    }
+
+    return config;
   } catch (error) {
     logger.error(IDCTA_FETCH_ERROR, {
       url: idctaConfigUrl,

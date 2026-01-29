@@ -29,6 +29,7 @@ import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
 import fetchIdctaConfig from '#app/lib/idcta/fetchIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
 
 interface Props {
   pageProps: {
@@ -72,7 +73,15 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
-    const toggles = await getToggles(service);
+    // configResult will be used in a future implementation
+    const [togglesResult, _configResult] = await Promise.allSettled([
+      getToggles(service),
+      fetchConfig({ service, pagePath: asPath, configType: 'navigation' }),
+    ]);
+
+    const toggles =
+      togglesResult.status === 'fulfilled' ? togglesResult.value : {};
+
     const idctaConfig = await fetchIdctaConfig(toggles, service);
 
     const pageType =
