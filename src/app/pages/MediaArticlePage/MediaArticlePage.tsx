@@ -235,6 +235,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     links: Links,
   };
 
+  // metrics are gated by experimentsForPageMetrics; add map experiment names there when ready
+  // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />

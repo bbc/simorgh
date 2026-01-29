@@ -14,6 +14,7 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
     pageType: ARTICLE_PAGE,
     activeExperiments: ['newswb_ws_oj_by_referrer'],
   },
+  // TODO add map experiment names when they are confirmed
 ];
 
 export default experimentsForPageMetrics;
