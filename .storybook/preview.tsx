@@ -6,6 +6,7 @@ import { Preview } from '@storybook/react-webpack5';
 import GlobalStyles from '../src/app/legacy/psammead/psammead-styles/src/global-styles';
 import DocsDecorator from './DocsDecorator';
 import ThemeProvider from '../src/app/components/ThemeProvider';
+import ThemeProviderSCSSModules from '#app/components/ThemeProviderSCSSModules';
 import { ServiceContextProvider } from '../src/app/contexts/ServiceContext';
 import { ToggleContextProvider } from '../src/app/contexts/ToggleContext';
 import { UserContextProvider } from '../src/app/contexts/UserContext';
@@ -36,6 +37,7 @@ import {
   REITH_SERIF_LIGHT,
   REITH_SERIF_MEDIUM,
 } from '../src/app/components/ThemeProvider/fontFaces';
+import '../src/app/components/ThemeProviderSCSSModules/fontVariants/reith.scss';
 
 const services = Object.entries(serviceConfigs)
   .sort()
@@ -225,12 +227,17 @@ const preview: Preview = {
               pageData={pageDataFixture}
             >
               <UserContextProvider>
-                <ThemeProvider
-                  service={context.globals.service.service}
+                <ThemeProviderSCSSModules
+                  service="mundo"
                   variant={context.globals.service.variant}
                 >
-                  <Story />
-                </ThemeProvider>
+                  <ThemeProvider
+                    service={context.globals.service.service}
+                    variant={context.globals.service.variant}
+                  >
+                    <Story />
+                  </ThemeProvider>
+                </ThemeProviderSCSSModules>
               </UserContextProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>

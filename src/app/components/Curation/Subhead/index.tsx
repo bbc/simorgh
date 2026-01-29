@@ -1,10 +1,14 @@
-import React, { Fragment, PropsWithChildren, use } from 'react';
+import React, { Fragment, PropsWithChildren, use, useContext } from 'react';
+// import { ThemeContext } from '../../ThemeProviderSCSSModules/withThemeProvider';
 import styles from './index.module.scss';
+import '../../ThemeProviderSCSSModules/fontVariants/reith.scss';
+
 import { LeftChevron, RightChevron } from '../../icons';
 
-console.log('Subhead styles:', styles);
-
 import { ServiceContext } from '../../../contexts/ServiceContext';
+import '../../ThemeProviderSCSSModules/fontVariants/reith.scss';
+
+console.log('Subhead styles:', styles);
 
 interface Props {
   link?: string;
@@ -19,6 +23,8 @@ const Subhead = ({
   ...curationSubheadingClickTracker
 }: PropsWithChildren<Props>) => {
   const { dir } = use(ServiceContext);
+  // useContext(ThemeContext);
+  // theme is now available for use in this component
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
         <a

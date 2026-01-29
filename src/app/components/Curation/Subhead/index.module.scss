@@ -6,6 +6,7 @@
   font-weight: var(--sans-bold-font-weight);
   @include fontSizes.gel-font-size(doublePica, groupA);
   color: var(--grey-10);
+  color: red;
 }
 
 a {
