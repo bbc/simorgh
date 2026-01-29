@@ -24,5 +24,16 @@
       "request": "launch",
       "command": "cd ws-nextjs-app && nvm use && yarn dev"
     },
+    {
+      "name": "Storybook debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn storybook",
+       "serverReadyAction": {
+        "pattern": "Local:.+(https?://[^:]+:[0-9]+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    },
   ]
 }
