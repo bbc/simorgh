@@ -168,13 +168,21 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader
-        blocks={props.blocks}
-        css={[styles.bodyMedia, styles.videoPost]}
-        className={isPortraitVideo(props.blocks) ? 'portrait-clip-media' : ''}
-      />
-    ),
+    video: (props: { blocks: MediaBlock[] }) => {
+      const { blocks } = props;
+      const isPortrait = isPortraitVideo(blocks);
+      const className = isPortrait ? 'portrait-clip-media' : '';
+
+      return (
+        <div css={isPortrait && styles.portraitVideoPlayer}>
+          <MediaLoader
+            blocks={props.blocks}
+            css={[styles.bodyMedia, styles.videoPost]}
+            className={className}
+          />
+        </div>
+      );
+    },
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
