@@ -53,6 +53,9 @@ const TopicsPage = ({
           id={`${service}-topics`}
           layout="single"
           headingLevel={1}
+          eventTrackingData={{
+            componentName: 'topics-index-links',
+          }}
         />
 
         {pageCount > 1 && (

@@ -49,11 +49,6 @@ const topics: TopicsFixtureData = {
       id: 'cvqxn2k7kv7t',
     },
     {
-      topicName: 'Afrique',
-      topicUrl: '/afrique/topics/c95y3ry6622t',
-      id: 'c95y3ry6622t',
-    },
-    {
       topicName: "Afrique de l'Est",
       topicUrl: '/afrique/topics/cz74kn467n5t',
       id: 'cz74kn467n5t',
