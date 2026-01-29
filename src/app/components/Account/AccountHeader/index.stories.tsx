@@ -4,8 +4,8 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import AccountHeader from '.';
 
 type WithProvidersArgs = {
-    isSignedIn: boolean;
-  };
+  isSignedIn: boolean;
+};
   
 const withProviders =
   ({ isSignedIn }: WithProvidersArgs) =>
@@ -17,7 +17,6 @@ const withProviders =
               isSignedIn,
               signInUrl: 'https://example.com/signin',
               forYouUrl: 'https://example.com/for-you',
-              registerUrl: 'https://example.com/register',
               isIdctaAvailable: true,
             }}
           >
