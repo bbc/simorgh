@@ -41,8 +41,6 @@ jest.mock(
     ),
 );
 
-jest.mock('./VisitTracking', () => () => <div data-testid="visit-tracking" />);
-
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
   default: [],
@@ -200,25 +198,6 @@ describe('OptimizelyPageMetrics', () => {
     });
   });
 
-  it('should render VisitTracking when trackVisit is true without page views', async () => {
-    experimentsForPageMetrics.push(
-      ...[
-        {
-          pageType: ARTICLE_PAGE,
-          activeExperiments: ['mockExperiment1', 'mockExperiment2'],
-        },
-      ],
-    );
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackVisit />
-      </ContextWrap>,
-    );
-    await waitFor(() => {
-      expect(screen.getByTestId('visit-tracking')).toBeInTheDocument();
-    });
-  });
-
   it('should render all tracking components when all flags are true', async () => {
     experimentsForPageMetrics.push(
       ...[
@@ -242,7 +221,6 @@ describe('OptimizelyPageMetrics', () => {
       expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
         'data-track-visit',
         'true',

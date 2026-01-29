@@ -7,7 +7,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
-import VisitTracking from './VisitTracking';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
 
 type Props = {
@@ -66,17 +65,14 @@ const OptimizelyPageMetrics = ({
     return null;
   }
 
-  // only render the visit-only tracker when page views are disabled so we do not double count visits
-  // when page views are tracked, visit events are sent from the page view tracker to preserve ordering
   // for page views per visit, always enable both trackPageView and trackVisit
-  const shouldTrackVisitOnly = trackVisit && !trackPageView;
+  // visit tracking runs inside the page view tracker to keep ordering and avoid duplicates
 
   return (
     <>
       {trackPageComplete && <PageCompleteTracking />}
       {trackPageDepth && <ScrollDepthTracking />}
       {trackPageView && <PageViewTracking trackVisit={trackVisit} />}
-      {shouldTrackVisitOnly && <VisitTracking />}
     </>
   );
 };

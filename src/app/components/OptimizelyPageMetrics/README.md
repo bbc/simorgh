@@ -91,6 +91,6 @@ Visit counting is session based. A new visit is counted when there has been at l
 
 When `trackPageView` and `trackVisit` are both enabled, the visit event is sent before the page view event on the same page load. This ensures the ratio metric counts the page view within Optimizely's 48 hour attribution window for the denominator.
 
-For page views per visit, enable both `trackPageView` and `trackVisit`. The visit-only tracker exists for any future visit-only metrics and is not used when page views are tracked to avoid double counting.
+For page views per visit, enable both `trackPageView` and `trackVisit`. Visit events are emitted from the page view tracker to preserve ordering and avoid duplicate visits.
 
 For interpretation, add the numerator and denominator events as separate metrics alongside the ratio metric in Optimizely.
