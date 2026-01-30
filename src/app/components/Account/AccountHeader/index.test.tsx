@@ -10,8 +10,8 @@ const realUseContext = React.useContext;
 const mockUseContext = jest.spyOn(React, 'useContext');
 
 const renderAccountHeader = ({ isSignedIn }: { isSignedIn: boolean }) => {
-  mockUseContext.mockImplementation((ctx: any) => {
-    if (ctx === AccountContext) {
+  mockUseContext.mockImplementation(context => {
+    if (context === AccountContext) {
       return {
         isSignedIn,
         signInUrl: 'https://example.com/signin',
@@ -19,7 +19,7 @@ const renderAccountHeader = ({ isSignedIn }: { isSignedIn: boolean }) => {
         isIdctaAvailable: true,
       };
     }
-    return realUseContext(ctx);
+    return realUseContext(context);
   });
 
   return render(<AccountHeader />, { service: 'ws' });
