@@ -1,30 +1,28 @@
-import { render, screen } from '@testing-library/react';
-import ThemeProvider from '#app/components/ThemeProvider';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { AccountContext } from '#contexts/AccountContext';
+import {
+  render,
+  screen,
+} from '#app/components/react-testing-library-with-providers';
+import { AccountContext } from '#app/contexts/AccountContext';
 import AccountHeader from '.';
 
-const renderWithProviders = ({ isSignedIn }: { isSignedIn: boolean }) =>
+const renderAccountHeader = ({ isSignedIn }: { isSignedIn: boolean }) =>
   render(
-    <ServiceContextProvider service="ws">
-      <ThemeProvider service="ws">
-        <AccountContext.Provider
-          value={{
-            isSignedIn,
-            signInUrl: 'https://example.com/signin',
-            forYouUrl: 'https://example.com/foryou',
-            isIdctaAvailable: true,
-          }}
-        >
-          <AccountHeader />
-        </AccountContext.Provider>
-      </ThemeProvider>
-    </ServiceContextProvider>,
+    <AccountContext.Provider
+      value={{
+        isSignedIn,
+        signInUrl: 'https://example.com/signin',
+        forYouUrl: 'https://example.com/foryou',
+        isIdctaAvailable: true,
+      }}
+    >
+      <AccountHeader />
+    </AccountContext.Provider>,
+    { service: 'ws' },
   );
 
 describe('AccountHeader', () => {
   it('shows Sign in when signed out', async () => {
-    renderWithProviders({ isSignedIn: false });
+    renderAccountHeader({ isSignedIn: false });
 
     const link = await screen.findByRole('link', { name: 'Sign in' });
     expect(link).toHaveAttribute(
@@ -34,7 +32,7 @@ describe('AccountHeader', () => {
   });
 
   it('shows For you when signed in', async () => {
-    renderWithProviders({ isSignedIn: true });
+    renderAccountHeader({ isSignedIn: true });
 
     const link = await screen.findByRole('link', { name: 'For you' });
     expect(link).toHaveAttribute(
