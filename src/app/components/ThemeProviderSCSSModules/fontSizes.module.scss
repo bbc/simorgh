@@ -3,7 +3,9 @@
 // Assumes that the following custom properties are set globally, e.g. in :root or a theme provider:
 // --font-size-atlas-group-a, --line-height-atlas-group-a, etc.
 
+
 @use "sass:map";
+@import './fontMediaQueries.module.scss';
 
 $font-sizes: (
   atlas: (
@@ -218,12 +220,27 @@ $font-sizes: (
   ),
 );
 
-@mixin gel-font-size($scale, $group) {
-  $values: map.get(map.get($font-sizes, $scale), $group);
+
+// Responsive gel-font-size mixin: infers group from media queries
+@mixin gel-font-size($scale) {
+  // Group A: up to 319px
+  $values: map.get(map.get($font-sizes, $scale), groupA);
   font-size: map.get($values, font-size);
   line-height: map.get($values, line-height);
+  // Group B: 320px - 599px
+  @media #{$group-b-only} {
+    $values: map.get(map.get($font-sizes, $scale), groupB);
+    font-size: map.get($values, font-size);
+    line-height: map.get($values, line-height);
+  }
+  // Group D: 600px+
+  @media #{$group-d-min-width} {
+    $values: map.get(map.get($font-sizes, $scale), groupD);
+    font-size: map.get($values, font-size);
+    line-height: map.get($values, line-height);
+  }
 }
 
 // Usage:
-// .headline { @include gel-font-size(atlas, groupA); }
-// This will use the global custom properties for font size and line height.
+// .headline { @include gel-font-size(atlas); }
+// This will apply font size and line height responsively by group using media queries.

@@ -6,7 +6,7 @@
   font-family: var(--sans-bold-font-family);
   font-style: var(--sans-bold-font-style);
   font-weight: var(--sans-bold-font-weight);
-  @include fontSizes.gel-font-size(doublePica, groupA);
+  @include fontSizes.gel-font-size(doublePica);
   color: $grey-10;
 
   a {
