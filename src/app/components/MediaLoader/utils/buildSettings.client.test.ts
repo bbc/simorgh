@@ -1536,5 +1536,31 @@ describe('buildSettings', () => {
         expect(result?.playerConfig.autoplay).toBe(false);
       });
     });
+
+    describe('live tv ', () => {
+      it('should use holdingImageURLForLiveTV when pageType is LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://ichef.bbci.co.uk/images/ic/800xn/p0m9xygc.png.webp',
+        );
+      });
+
+      it('should use default holdingImageURL when pageType is not LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+        );
+      });
+    });
   });
 });

@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use, useState, useEffect } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
 import useOptimizelyVariation, {
@@ -21,6 +19,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 import {
   getArticleId,
@@ -34,7 +33,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -46,9 +45,10 @@ import {
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
-import { ReadTimeArticleExperiment as ReadTime } from '#app/components/ReadTime';
+import ReadTimeArticle from '#app/components/ReadTime';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -81,12 +81,7 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../utils/portraitVideo';
-
-// EXPERIMENT: Article Read Time 2
-interface ReadTimeData {
-  readTimeValue: number | undefined;
-  readTimeVariant: string;
-}
+import getUnderArticleComponents from './helpers';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -97,66 +92,39 @@ const getImageComponent =
     />
   );
 
-// EXPERIMENT: Article Read Time 2
-const Placeholder = ({ className }: { className?: string }) => {
-  const { service } = use(ServiceContext);
-  const servicesInExperiment = ['']; // adding services will show placeholder regardless of whether experiment is running
-  return servicesInExperiment.includes(service) ? (
-    <div className={className} />
-  ) : null;
-};
-
-// EXPERIMENT: Article Read Time 2
 const getTimestampComponent =
   (
     hasByline: boolean,
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
-    readTimeData: ReadTimeData,
+    readTimeValue: number | undefined,
+    readTimeTranslations: Translations['readTime'],
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
-    // EXPERIMENT: Article Read Time 2
-    const { readTimeValue, readTimeVariant } = readTimeData;
-    const isReadTimeVariantValid = readTimeVariant !== 'off' && readTimeVariant;
-    const showReadTimeBelowTimestamp =
-      !!readTimeValue && readTimeValue !== 0 && !!isReadTimeVariantValid;
+    const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
     return hasByline ? (
-      <>
-        <Byline blocks={bylineContribBlocks}>
-          <Timestamp
-            firstPublished={new Date(firstPublished).getTime()}
-            lastPublished={new Date(lastPublished).getTime()}
-            popOut={false}
-            showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
-          />
-          {showReadTimeBelowTimestamp && (
-            <ReadTime
-              readTimeValue={readTimeValue}
-              readTimeVariant={readTimeVariant}
-            />
-          )}
-        </Byline>
-        {!showReadTimeBelowTimestamp && (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+      <Byline blocks={bylineContribBlocks}>
+        <Timestamp
+          firstPublished={new Date(firstPublished).getTime()}
+          lastPublished={new Date(lastPublished).getTime()}
+          popOut={false}
+          hasReadTime={shouldDisplayReadTime}
+        />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
-      </>
+      </Byline>
     ) : (
       <>
         <Timestamp
           {...props}
           popOut={false}
-          showReadTimeBelowTimestamp={showReadTimeBelowTimestamp}
+          hasReadTime={shouldDisplayReadTime}
         />
-        {/* EXPERIMENT: Article Read Time 2 */}
-        {showReadTimeBelowTimestamp ? (
-          <ReadTime
-            readTimeValue={readTimeValue}
-            readTimeVariant={readTimeVariant}
-          />
-        ) : (
-          <Placeholder css={styles.readTimePlaceholderBelowTimestamp} />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
         )}
       </>
     );
@@ -166,10 +134,39 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
-
+const getWsojComponent = ({
+  data,
+  blocks,
+  topStoriesContent,
+  featuresContent,
+  referrerVariant,
+  referrerExperimentName,
+  referrer,
+}: {
+  data: Recommendation[];
+  blocks: OptimoBlock[];
+  topStoriesContent?: unknown;
+  featuresContent?: unknown;
+  referrerVariant?: string | null;
+  referrerExperimentName?: string;
+  referrer?: string | null;
+}) => (
+  <Recommendations
+    data={data}
+    blocks={blocks}
+    topStoriesContent={topStoriesContent}
+    featuresContent={featuresContent}
+    referrer={referrer}
+    {...(referrerVariant && {
+      referrerVariant,
+      experimentProps: {
+        sendOptimizelyEvents: true,
+        experimentName: referrerExperimentName,
+        experimentVariant: referrerVariant,
+      },
+    })}
+  />
+);
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -202,19 +199,29 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
-  () => {
-    return (
-      <ContinueReadingButton
-        showAllContent={showAllContent}
-        setShowAllContent={setShowAllContent}
-      />
-    );
-  };
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
+    />
+  );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
+  // SSR-safe: always null on server, update on client
+  const [referrer, setReferrer] = useState<string | null>(null);
+
+  useEffect(() => {
+    setReferrer(getReferrer());
+  }, []);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -227,22 +234,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: continueReadingButtonToggle } = useToggle(
     'continueReadingButton',
   );
+  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
 
-  // EXPERIMENT: Article Read Time 2
-  const readTimeExperimentName = 'newswb_ws_article_read_time_2';
-  const readTimeExperimentVariant = useOptimizelyVariation({
-    experimentName: readTimeExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // EXPERIMENT: Time of Day Experiment
-  const timeOfDayExperimentName = 'newswb_ws_tod_article';
-  const timeOfDayExperimentVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
+  // EXPERIMENT: Referrer Experiment
+  const referrerExperimentName = 'newswb_ws_oj_by_referrer';
+  const referrerVariant = useOptimizelyVariation({
+    experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
@@ -256,9 +257,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
 
-  // EXPERIMENT: Article Read Time 2
-  const readTimeValue = pageData?.metadata?.stats?.readTime;
-
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -266,10 +264,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
@@ -280,6 +282,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
+
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
@@ -294,24 +298,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    // EXPERIMENT: Article Read Time 2
-    // Better way to handle this?
-    ...(readTimeExperimentVariant &&
-      readTimeExperimentVariant !== 'off' && {
-        experimentName: readTimeExperimentName,
-        experimentVariant: readTimeExperimentVariant,
-      }),
-    ...(timeOfDayExperimentVariant &&
-      timeOfDayExperimentVariant !== 'off' && {
-        experimentName: timeOfDayExperimentName,
-        experimentVariant: timeOfDayExperimentVariant,
-      }),
-  };
-
-  // EXPERIMENT: Article Read Time 2
-  const readTimeData = {
-    readTimeValue,
-    readTimeVariant: readTimeExperimentVariant || 'off',
   };
 
   const hasContinueReadingBlock = blocks.some(
@@ -334,13 +320,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
-    // EXPERIMENT: Article Read Time 2
     timestamp: getTimestampComponent(
       hasByline,
       bylineContribBlocks,
       firstPublished,
       lastPublished,
-      readTimeData,
+      readTimeValue,
+      translations.readTime,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -349,15 +335,31 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({
+        data,
+        blocks,
+        topStoriesContent,
+        featuresContent,
+        referrerVariant,
+        referrerExperimentName,
+        referrer,
+      }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        ...(referrerVariant && {
+          experimentProps: {
+            sendOptimizelyEvents: true,
+            experimentName: referrerExperimentName,
+            experimentVariant: referrerVariant,
+          },
+        }),
       }),
     }),
   };
@@ -389,8 +391,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
+  // EXPERIMENT: PWA Promotional Banner
+  const shouldRenderPWAPromotionalBanner =
+    !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
+
   return (
     <div css={styles.pageWrapper}>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
@@ -455,31 +463,40 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            // EXPERIMENT: Time of Day Experiment
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-          />
+
+          <div css={styles.hideBelowDesktopWidth}>
+            <div css={{ gridColumn: '1 / span 12' }}>
+              <RelatedContentSection
+                content={blocks}
+                {...(referrerVariant && {
+                  experimentProps: {
+                    sendOptimizelyEvents: true,
+                    experimentName: referrerExperimentName,
+                    experimentVariant: referrerVariant,
+                  },
+                })}
+              />
+            </div>
+          </div>
         </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // EXPERIMENT: Time of Day Experiment
-            experimentVariant={timeOfDayExperimentVariant}
-            timeOfDayExperimentName={timeOfDayExperimentName}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
+      {/* // EXPERIMENT: Referrer Experiment
+      Under-article components for mobile/tablet only */}
+      {getUnderArticleComponents({
+        referrerVariant: referrerVariant || '',
+        referrerExperimentName: referrerExperimentName || '',
+        topStoriesData: topStoriesContent,
+        featuresData: featuresContent,
+        articleBlocks: blocks,
+        grey2: GREY_2,
+        pageStyles: styles,
+        referrer,
+      }).map(component => component)}
+
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
@@ -488,15 +505,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          // EXPERIMENT: Time of Day Experiment
-          eventTrackingData={{
-            componentName: 'most-read',
-            ...(timeOfDayExperimentVariant && {
+          {...(referrerVariant && {
+            experimentProps: {
               sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-          }}
+              experimentName: referrerExperimentName,
+              experimentVariant: referrerVariant,
+            },
+          })}
         />
       )}
     </div>

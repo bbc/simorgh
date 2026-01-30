@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import {

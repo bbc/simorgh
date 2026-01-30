@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     atiAnalyticsProducerName: 'KOREAN',
-    useReverb: true,
     chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
     externalLinkText: ', 외부 사이트',
@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: '',
       pagination: {
         previousPage: '이전',
         nextPage: '다음',

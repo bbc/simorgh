@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import CollapsibleNavigation from '../../../../components/CollapsibleNavigation';
 import Navigation from '../../../psammead/psammead-navigation/src';
@@ -18,7 +18,7 @@ const LanguageNavigation = () => {
       </VisuallyHiddenText>
       <CollapsibleNavigation
         navigationSections={collapsibleNavigation}
-        as={React.Fragment}
+        as={Fragment}
       />
     </Navigation>
   );

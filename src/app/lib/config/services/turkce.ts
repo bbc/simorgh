@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     atiAnalyticsProducerName: 'TURKISH',
-    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/turkce/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
     externalLinkText: ', dış',
@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 've',
       readTime: {
         readTimePrefix: 'Okuma süresi',
         quick: 'Kısa haber',

@@ -1,4 +1,3 @@
-import React from 'react';
 import Grid, { CPSPageGrid as CPSPageGridComponent } from '.';
 import readme from './README.md';
 

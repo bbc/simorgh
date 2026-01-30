@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server.node';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';

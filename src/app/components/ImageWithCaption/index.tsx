@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
@@ -97,6 +95,7 @@ const ImageWithCaption = ({
         width={width}
         lazyLoad={lazyLoad}
         preload={shouldPreloadLeadImage}
+        fetchPriority={shouldPreloadLeadImage ? 'high' : undefined}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

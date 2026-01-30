@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
 import {
   IndexAlsos,

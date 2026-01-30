@@ -30,8 +30,7 @@ export interface Summary extends BaseSummary {
   readTime?: number;
   eventTrackingData?: EventTrackingData;
   visualProminence?: VisualProminence | string;
-  timeOfDayExperimentName?: string | null;
-  timeOfDayVariant?: string | null;
+  isPortraitImage?: boolean;
 }
 
 export const VISUAL_STYLE = {
@@ -91,6 +90,4 @@ export interface Curation extends BaseCuration {
   curationLength?: number;
   nthCurationByStyleAndProminence?: number;
   renderVisuallyHiddenH2Title?: boolean;
-  timeOfDayVariant?: string | null;
-  timeOfDayExperimentName?: string | null;
 }

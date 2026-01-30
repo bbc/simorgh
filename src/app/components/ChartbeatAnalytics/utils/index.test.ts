@@ -13,6 +13,7 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   LIVE_TV_PAGE,
+  UNKNOWN_PAGE,
 } from '../../../routes/utils/pageTypes';
 import {
   chartbeatUID,
@@ -309,7 +310,7 @@ describe('Chartbeat utilities', () => {
       ${MEDIA_ASSET_PAGE}   | ${'MAP Page Title'}           | ${'MAP Page Title'}
       ${ARTICLE_PAGE}       | ${'Article Page Title'}       | ${'Article Page Title'}
       ${MEDIA_ARTICLE_PAGE} | ${'Media Article Page Title'} | ${'Media Article Page Title'}
-      ${'unknown'}          | ${'Unknown Page Title'}       | ${'Unknown Page Title'}
+      ${UNKNOWN_PAGE}       | ${'Unknown Page Title'}       | ${'Unknown Page Title'}
     `(
       'should return correct title when pageType is $pageType',
       ({ pageType, title, expected }) => {

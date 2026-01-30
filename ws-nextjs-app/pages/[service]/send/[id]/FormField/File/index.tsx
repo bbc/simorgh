@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { ChangeEvent, use, useEffect, useRef } from 'react';
-import { jsx } from '@emotion/react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';

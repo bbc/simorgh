@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     atiAnalyticsProducerName: 'SWAHILI',
-    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/swahili/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Swahili',
     dir: `ltr`,
     externalLinkText: ', ya nje',
@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
       readTime: {
         readTimePrefix: 'Muda wa kusoma',
         long: 'Taarifa ndefu',
@@ -376,10 +377,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Tanzania',
-        url: '/swahili/topics/c5y9ng5gqert',
       },
       {
         title: 'Michezo',

@@ -1,4 +1,4 @@
-import React, { Fragment, PropsWithChildren, use, useContext } from 'react';
+import { Fragment, PropsWithChildren, use } from 'react';
 import styles from './index.module.scss';
 import { LeftChevron, RightChevron } from '../../icons';
 

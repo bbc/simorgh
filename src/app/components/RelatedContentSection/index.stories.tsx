@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Services } from '../../models/types/global';

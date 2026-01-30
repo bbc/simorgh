@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, use, useMemo } from 'react';
+import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -21,11 +21,11 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  OFFLINE_PAGE,
   LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
 import { PageTypes } from '../../models/types/global';
 import { EventTrackingContextProps } from '../../models/types/eventTracking';
-import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
 import { ServiceContext } from '../ServiceContext';
 import { ATIData } from '../../components/ATIAnalytics/types';
 
@@ -37,6 +37,7 @@ type CampaignPageTypes = Exclude<PageTypes, 'error'>;
 
 const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
+    [OFFLINE_PAGE]: 'offline',
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
@@ -79,7 +80,7 @@ export const EventTrackingContextProvider = ({
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
   const requestContext = use(RequestContext);
-  const { pageType } = requestContext;
+  const { pageType, platform, statsDestination } = requestContext;
 
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
@@ -89,13 +90,7 @@ export const EventTrackingContextProvider = ({
   const trackingProps = useMemo(() => {
     if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
-
-      const { pageIdentifier, platform, statsDestination } =
-        buildATIEventTrackingParams({
-          requestContext,
-          serviceContext,
-          atiData,
-        });
+      const { pageIdentifier } = atiData;
 
       return {
         campaignID,
@@ -113,8 +108,8 @@ export const EventTrackingContextProvider = ({
     atiData,
     eventTrackingIsEnabled,
     pageType,
-    requestContext,
-    serviceContext,
+    platform,
+    statsDestination,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {

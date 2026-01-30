@@ -166,7 +166,7 @@ exports[`AMP Media Asset Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`AMP Media Asset Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `
 {
@@ -295,7 +295,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",
@@ -325,7 +325,7 @@ exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Pidgin",

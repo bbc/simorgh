@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
-    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
     externalLinkText: ', waje',
@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
         long: 'Dogon labari',

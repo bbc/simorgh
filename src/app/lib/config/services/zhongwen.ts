@@ -13,12 +13,12 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   atiAnalyticsProducerName: 'CHINESE',
-  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
   serviceLocalizedName: '中文',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/zhongwen/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News 中文',
   dir: 'ltr' as Direction,
   service: 'zhongwen' as Services,
@@ -162,6 +162,7 @@ export const service: ZhongwenConfig = {
       variant: 'trad',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -479,6 +480,7 @@ export const service: ZhongwenConfig = {
       variant: 'simp',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',

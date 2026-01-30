@@ -5,7 +5,7 @@ import onEnvironment from '../onEnvironment';
 export type Params = {
   metricName: string;
   statusCode?: number | string;
-  pageType: PageTypes | 'Unknown';
+  pageType: PageTypes;
   requestUrl: string;
 };
 

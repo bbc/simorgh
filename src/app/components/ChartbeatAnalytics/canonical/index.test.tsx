@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { render } from '@testing-library/react';
 import CanonicalChartbeatAnalytics from '.';

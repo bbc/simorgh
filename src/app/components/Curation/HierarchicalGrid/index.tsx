@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
 import { use } from 'react';
-import { css, jsx, Theme } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 import moment from 'moment';
 import path from 'ramda/src/path';
 import isMediaType from '#app/lib/utilities/isMedia';
@@ -39,7 +37,6 @@ const HiearchicalGrid = ({
   headingLevel,
   isFirstCuration,
   eventTrackingData,
-  timeOfDayVariant,
 }: CurationGridProps) => {
   const { isAmp } = use(RequestContext);
   const { translations } = use(ServiceContext);
@@ -93,12 +90,9 @@ const HiearchicalGrid = ({
           const { isLive } = promo;
 
           const promoEventTrackingData = buildPromoEventTrackingData(promo, i);
-          const clickTrackerHandler = getClickTrackerHandler({
-            ...promoEventTrackingData,
-            sendOptimizelyEvents: true,
-            experimentName: 'newswb_ws_tod_homepage',
-            experimentVariant: timeOfDayVariant,
-          });
+          const clickTrackerHandler = getClickTrackerHandler(
+            promoEventTrackingData,
+          );
 
           return (
             <li
@@ -116,6 +110,7 @@ const HiearchicalGrid = ({
                   lazyLoad={lazyLoadImages}
                   fetchPriority={fetchpriority}
                   isAmp={isAmp}
+                  isPortraitImage={promo.isPortraitImage}
                 >
                   {isMedia && (
                     <Promo.MediaIcon type={promo.type}>
@@ -140,6 +135,11 @@ const HiearchicalGrid = ({
                         <VisuallyHiddenText data-testid="visually-hidden-text">
                           {typeTranslated}
                         </VisuallyHiddenText>
+                        <Promo.MediaIcon
+                          className="inline-icon"
+                          type={promo.type}
+                          css={styles.inlineIcon}
+                        />
                         {promo.title}
                         {showDuration && (
                           <VisuallyHiddenText>

@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React, { PropsWithChildren } from 'react';
+import type { ComponentType, PropsWithChildren } from 'react';
 import nodeLogger from '#lib/logger.node';
 import { THEME_PROVIDER_ERROR } from '#app/lib/logger.const';
 import {
@@ -18,7 +18,9 @@ import fallBackTheme from './themes/news';
 
 const logger = nodeLogger(__filename);
 
-type FallbackThemeComponent = React.FC<{ children: React.ReactNode }>;
+type FallbackThemeComponent = ComponentType<{
+  children: PropsWithChildren['children'];
+}>;
 
 const nonVariantThemes = Object.fromEntries(
   Object.entries(themes).filter(([_service, theme]) =>

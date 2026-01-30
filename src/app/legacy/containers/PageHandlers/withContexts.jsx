@@ -1,6 +1,3 @@
-import React from 'react';
-
-// context providers
 import { ThemeProvider } from '../../../components/ThemeProvider';
 import ThemeProviderSCSSModules from '../../../components/ThemeProviderSCSSModules';
 import { RequestContextProvider } from '../../../contexts/RequestContext';

@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     atiAnalyticsProducerName: 'AFRIQUE',
-    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
@@ -65,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'et',
       pagination: {
         page: 'Page',
         previousPage: 'Page précédente',
@@ -377,10 +378,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Ecoutez en direct',
         url: '/afrique/bbc_afrique_radio/liveradio',
-      },
-      {
-        title: 'CAN 2025',
-        url: '/afrique/topics/cnlvpm4xqn9t',
       },
       {
         title: 'Afrique',

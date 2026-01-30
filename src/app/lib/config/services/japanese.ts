@@ -13,13 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     atiAnalyticsProducerName: 'JAPANESE',
-    useReverb: true,
     chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
     serviceLocalizedName: 'ニュース',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/japanese/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/japanese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBCニュース',
     dir: `ltr`,
     externalLinkText: ' は外部ページです',
@@ -48,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'と',
       pagination: {
         page: 'ページ',
         previousPage: '前に戻る',

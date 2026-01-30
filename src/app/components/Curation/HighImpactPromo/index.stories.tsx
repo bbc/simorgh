@@ -1,4 +1,3 @@
-import React from 'react';
 import fixture from '#data/ws/homePage/index.json';
 import HighImpactPromo from '.';
 import { BaseCuration, Summary } from '#app/models/types/curationData';

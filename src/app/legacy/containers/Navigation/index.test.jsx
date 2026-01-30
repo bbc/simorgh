@@ -1,4 +1,3 @@
-import React from 'react';
 import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
 import ThemeProvider from '../../components/ThemeProvider';

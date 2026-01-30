@@ -1,9 +1,17 @@
 import pidginMediaArticleFixtureData from '#data/pidgin/articles/cvpde7nqj92o.json';
 import { GetServerSidePropsContext } from 'next';
-import * as fetchPageData from '#app/routes/utils/fetchPageData';
-import defaultToggles from '#app/lib/config/toggles';
-import * as shouldRender from './shouldRender';
+import * as shouldRender from '../../../utilities/shouldRender';
+import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleArticleRoute from './handleArticleRoute';
+
+jest.mock('../../../utilities/pageRequests/getPageData');
+jest.mock('../../../utilities/shouldRender', () => {
+  const originalModule = jest.requireActual('../../../utilities/shouldRender');
+  return {
+    __esModule: true,
+    ...originalModule,
+  };
+});
 
 describe('handleArticleRoute', () => {
   const mockSetHeader = jest.fn();
@@ -19,13 +27,15 @@ describe('handleArticleRoute', () => {
     query: { service: 'pidgin' },
   } satisfies GetServerSidePropsContext;
   beforeEach(() => {
+    jest.restoreAllMocks();
     jest.clearAllMocks();
-    jest.spyOn(fetchPageData, 'default').mockResolvedValue({
-      status: 200,
-      json: pidginMediaArticleFixtureData,
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: pidginMediaArticleFixtureData.data,
+        status: 200,
+      },
     });
   });
-  const toggles = defaultToggles.local;
 
   it('returns correct page type if consumableAsSFV is true', async () => {
     const result = await handleArticleRoute(mockGetServerSidePropsContext);
@@ -74,20 +84,11 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 500,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
-        toggles,
         variant: null,
       },
     });
@@ -105,20 +106,11 @@ describe('handleArticleRoute', () => {
 
     expect(result).toEqual({
       props: {
-        bbcOrigin: null,
-        isAmp: false,
-        isApp: false,
-        isLite: false,
-        isNextJs: true,
         status: 404,
-        isUK: false,
         pageType: 'article',
         pathname: '/pidgin/articles/cvpde7nqj92o',
         service: 'pidgin',
-        showAdsBasedOnLocation: false,
-        showCookieBannerBasedOnCountry: true,
         timeOnServer: 1234567890000,
-        toggles,
         variant: null,
       },
     });

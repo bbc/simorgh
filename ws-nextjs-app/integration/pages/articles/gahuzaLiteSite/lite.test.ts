@@ -3,7 +3,7 @@
  * @pathname /gahuza/articles/cey23zx8wx8o
  */
 
-import { runLiteSiteTests } from '#src/integration/common';
+import { runLiteSiteTests } from '../../../common';
 
 describe('Lite Site', () => {
   describe(pageType, () => {

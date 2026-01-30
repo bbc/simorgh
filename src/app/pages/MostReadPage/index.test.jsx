@@ -1,4 +1,3 @@
-import React from 'react';
 import { act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -14,7 +13,6 @@ fetch.mockResponse(JSON.stringify(pidginMostReadData));
 jest.mock('#lib/analyticsUtils', () => {
   return {
     ...jest.requireActual('#lib/analyticsUtils'),
-    getAtUserId: jest.fn(),
   };
 });
 

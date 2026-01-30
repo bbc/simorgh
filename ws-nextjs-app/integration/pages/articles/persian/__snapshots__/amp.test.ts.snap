@@ -69,7 +69,7 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2026 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `
 {
@@ -89,8 +89,8 @@ exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 
 exports[`AMP Articles Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-ایران",
-  "url": "/persian/topics/cwy6874zgpqt",
+  "text": "اعتراضات ایران ۱۴۰۴",
+  "url": "/persian/topics/c4g30w1p327t",
 }
 `;
 
@@ -256,7 +256,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",
@@ -269,7 +269,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -287,13 +287,13 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News فارسی",
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/persian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/persian/articles/c4vlle3q337o",
     },
   ],
@@ -302,7 +302,7 @@ exports[`AMP Articles SEO Linked data should match text 1`] = `
 
 exports[`AMP Articles SEO OG description 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
 
-exports[`AMP Articles SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`AMP Articles SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Articles SEO OG image alt 1`] = `"BBC News فارسی"`;
 
@@ -328,7 +328,7 @@ exports[`AMP Articles SEO Twitter description 1`] = `"پهپادی که برای
 
 exports[`AMP Articles SEO Twitter image alt 1`] = `"BBC News فارسی"`;
 
-exports[`AMP Articles SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/persian.png"`;
+exports[`AMP Articles SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png"`;
 
 exports[`AMP Articles SEO Twitter site 1`] = `"@bbcpersian"`;
 

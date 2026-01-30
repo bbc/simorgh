@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { OptimizelyProvider, ReactSDKClient } from '@optimizely/react-sdk';
 

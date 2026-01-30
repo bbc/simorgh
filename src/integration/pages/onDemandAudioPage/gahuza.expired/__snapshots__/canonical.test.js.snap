@@ -118,7 +118,7 @@ exports[`Canonical On Demand Audio Page Footer Anchors should match text and url
 
 exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`Canonical On Demand Audio Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `
 {
@@ -277,7 +277,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -295,13 +295,13 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Gahuza",
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
     },
   ],
