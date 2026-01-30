@@ -1,7 +1,9 @@
+@import '../../palette.module.scss';
+
 :root {
-  --brand-background: var(--postbox);
-  --brand-logo: var(--white);
-  --brand-foreground: var(--ghost);
-  --brand-highlight: var(--white);
-  --brand-border: var(--postbox-30);
+	--brand-background: #{$postbox};
+	--brand-logo: #{$white};
+	--brand-foreground: #{$ghost};
+	--brand-highlight: #{$white};
+	--brand-border: #{$postbox-30};
 }

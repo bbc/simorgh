@@ -1,16 +1,18 @@
+
 @use '../../ThemeProviderSCSSModules/fontSizes.module.scss' as fontSizes;
+@import '../../ThemeProviderSCSSModules/palette.module.scss';
 
 .h2 {
   font-family: var(--sans-bold-font-family);
   font-style: var(--sans-bold-font-style);
   font-weight: var(--sans-bold-font-weight);
   @include fontSizes.gel-font-size(doublePica, groupA);
-  color: var(--grey-10);
+  color: $grey-10;
 
   a {
-  display: inline-block;
-  color: var(--grey-10);
-  text-decoration: none;
+    display: inline-block;
+    color: $grey-10;
+    text-decoration: none;
   }
 
   span {
@@ -19,11 +21,11 @@
   }
 
   a:visited {
-    color: var(--grey-10);
+    color: $grey-10;
   }
 
   a:hover, a:focus {
-    color: var(--postbox);
+    color: $postbox;
 
     span {
       text-decoration: underline;
