@@ -821,15 +821,13 @@ describe('useClickTrackerHandler', () => {
         hl: '{timestamp}',
         ts: '{epochTimestamp}',
         lng: '{language}',
-        x6: '[{referrer}]',
         app_type: 'lite',
-        ref: '{referrer}',
         app_name: 'undefined',
         language: 'undefined',
         content_type: 'STY',
         events:
           '[{"name":"viewability.select","data":{"item":{"name":"brand","link":"{forwardingLink}"},"event":{"category":"viewability","action":"select"},"group":{"name":"custom-campaign","type":"brand"},"user":{"id":null},"app":{"type":"lite"}}}]',
-        context: '[{"data":{"page":{},"site":{"level2_id":""}}}]',
+        context: '[{"data":{"page":{},"site":{"level2_id":null}}}]',
       });
     });
   });
