@@ -6,38 +6,37 @@
   font-weight: var(--sans-bold-font-weight);
   @include fontSizes.gel-font-size(doublePica, groupA);
   color: var(--grey-10);
-  color: red;
-}
 
-a {
+  a {
   display: inline-block;
   color: var(--grey-10);
   text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+  }
+
+  a:visited {
+    color: var(--grey-10);
+  }
+
+  a:hover, a:focus {
+    color: var(--postbox);
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    margin-inline-start: 0.5rem;
+    fill: currentColor;
+    width: calc(14 / 16) * 1rem;
+    height: calc(14 / 16) * 1rem;
+    position: relative;
+  }
 }
 
-span {
-  display: inline-block;
-  position: relative;
-}
 
-a:visited {
-  color: var(--grey-10);
-}
-
-a:hover,
-a:focus {
-  color: var(--postbox);
-}
-
-a:hover span,
-a:focus span {
-  text-decoration: underline;
-}
-
-svg {
-  margin-inline-start: 0.5rem;
-  fill: currentColor;
-  width: calc(14 / 16) * 1rem;
-  height: calc(14 / 16) * 1rem;
-  position: relative;
-}
