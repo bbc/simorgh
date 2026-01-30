@@ -6,11 +6,6 @@ import getIdctaConfig from '.';
 jest.mock('#app/lib/utilities/getToggleDefinition');
 jest.mock('#app/lib/utilities/isLocal');
 jest.mock('../fetchIdctaConfig');
-jest.mock('#app/lib/logger.node', () =>
-  jest.fn(() => ({
-    error: jest.fn(),
-  })),
-);
 
 const mockGetToggleDefinitions = getToggleDefinitions as jest.Mock;
 const mockIsLocal = isLocal as jest.Mock;
@@ -80,7 +75,7 @@ describe('getIdctaConfig', () => {
     expect(mockFetchIdctaConfig).not.toHaveBeenCalled();
   });
 
-  it('should return null when fetchIdctaConfig returns null', async () => {
+  it('should return null when fetchIdctaConfig fails', async () => {
     mockFetchIdctaConfig.mockResolvedValue(null);
 
     const result = await getIdctaConfig(mockToggles, mockService);

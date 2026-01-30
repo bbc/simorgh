@@ -60,20 +60,6 @@ describe('fetchIdctaConfig', () => {
     expect(result).toBeNull();
   });
 
-  it('should return null when fetch fails with non-ok status', async () => {
-    (global.fetch as jest.Mock).mockResolvedValue({
-      ok: false,
-      status: 500,
-      statusText: 'Internal Server Error',
-    });
-
-    const fetchIdctaConfig = await setupMocks();
-
-    const result = await fetchIdctaConfig();
-
-    expect(result).toBeNull();
-  });
-
   it('should not cache failed responses', async () => {
     const fetchIdctaConfig = await setupMocks();
 

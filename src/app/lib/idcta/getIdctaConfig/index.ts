@@ -37,7 +37,7 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  // Validate required fields
+  // Validate primary field
   if (!config?.['id-availability']) {
     logger.error('Invalid IDCTA config: missing required fields', {
       config,
