@@ -1635,11 +1635,6 @@ const topics: TopicsFixtureData = {
       id: 'c2dwqj0z2pdt',
     },
     {
-      topicName: 'Man Fetur',
-      topicUrl: '/hausa/topics/c5qvpx03p7dt',
-      id: 'c5qvpx03p7dt',
-    },
-    {
       topicName: 'Manchester City',
       topicUrl: '/hausa/topics/c340qrvn90rt',
       id: 'c340qrvn90rt',
