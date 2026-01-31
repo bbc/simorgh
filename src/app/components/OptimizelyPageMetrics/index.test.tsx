@@ -366,9 +366,7 @@ describe('OptimizelyPageMetrics', () => {
         ).toBeInTheDocument();
         expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
         expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
-        expect(
-          screen.queryByTestId('visit-tracking'),
-        ).not.toBeInTheDocument();
+        expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
         expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
           'data-track-visit',
           'true',
