@@ -51,7 +51,9 @@ const getVisitTrackingState = (now: number) => {
   const storage = getStorage();
   const lastActivity = readLastActivity(storage);
   const isNewVisit =
-    !lastActivity || now < lastActivity || now - lastActivity > VISIT_TIMEOUT_MS;
+    !lastActivity ||
+    now < lastActivity ||
+    now - lastActivity > VISIT_TIMEOUT_MS;
 
   return { storage, isNewVisit };
 };
