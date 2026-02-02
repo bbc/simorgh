@@ -10,6 +10,7 @@ import {
   ServiceContext,
 } from '../../../contexts/ServiceContext';
 import { service as newsConfig } from '../../../lib/config/services/news';
+import { service as indonesiaConfig } from '../../../lib/config/services/indonesia';
 import Navigation from './index';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
@@ -147,20 +148,24 @@ describe('Navigation Container', () => {
   });
 
   it('should fall back to service config when navItems is null', () => {
-    const { navigation } = newsConfig.default;
-    const expectedTitle = navigation[0]?.title;
+    const { navigation } = indonesiaConfig.default;
 
     const { getAllByText } = render(<Navigation navItems={null} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
       pageType: ARTICLE_PAGE,
-      service: 'news',
+      service: 'indonesia',
       statusCode: 200,
-      pathname: '/news',
+      pathname: '/indonesian',
     });
 
-    expect(getAllByText(expectedTitle).length).toBeGreaterThan(0);
+    navigation.forEach(({ title }) => {
+      const elements = getAllByText(title);
+      elements.forEach(element => {
+        expect(element).toHaveTextContent(title);
+      });
+    });
   });
 
   it('should render nothing when navItems is an empty array', () => {
