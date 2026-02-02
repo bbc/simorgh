@@ -140,6 +140,7 @@ export default {
     css({
       '.portrait-clip-media': {
         margin: '20px auto 0',
+        width: `${pixelsToRem(247)}rem`,
       },
     }),
 };
