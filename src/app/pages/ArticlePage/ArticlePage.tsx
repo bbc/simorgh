@@ -305,10 +305,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length,
   );
 
+  const portraitVideoCarouselTitle =
+    pageData?.portraitVideoItems?.title ?? translations.media.watch;
+
   const portraitVideoCarouselProps = {
-    title: pageData?.portraitVideoItems?.title ?? translations.media.watch,
+    title: portraitVideoCarouselTitle,
     blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
-    eventTrackingData: { componentName: 'portrait-video-article' },
+    eventTrackingData: {
+      componentName: 'portrait-video-carousel-article',
+      groupTracker: { name: portraitVideoCarouselTitle },
+    },
     backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
 
