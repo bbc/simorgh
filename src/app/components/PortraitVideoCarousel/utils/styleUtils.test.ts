@@ -42,10 +42,15 @@ describe('styleUtils', () => {
       POINTER: 'pointer',
     } as Theme['mq'];
 
+    const mockGridWidths = {
+      1008: 1008,
+    } as Theme['gridWidths'];
+
     const navButtonWidths = calculateVariedNavContainerWidths({
       mq: mockMq,
       display: 'block',
       widthParameter: 'flexBasis',
+      gridWidths: mockGridWidths,
     });
 
     const expectedContainerQuery = `@container (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`;

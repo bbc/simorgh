@@ -7,7 +7,7 @@ const defaultBackgroundColor = 'rgba(255, 255, 255, 0.75)';
 const styles = {
   buttonGroupOverlay:
     (backgroundColor = defaultBackgroundColor) =>
-    ({ mq }: Theme) =>
+    ({ mq, gridWidths }: Theme) =>
       css({
         display: 'none',
         position: 'absolute',
@@ -16,7 +16,11 @@ const styles = {
         height: '100%',
         backgroundColor,
         zIndex: 1,
-        ...calculateVariedNavContainerWidths({ mq, display: 'flex' }),
+        ...calculateVariedNavContainerWidths({
+          mq,
+          display: 'flex',
+          gridWidths,
+        }),
       }),
   buttonGroup: ({ spacings }: Theme) =>
     css({

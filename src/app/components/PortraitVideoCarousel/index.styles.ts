@@ -36,7 +36,7 @@ const styles = {
         display: 'none',
       },
     }),
-  carousel: ({ spacings, mq }: Theme) =>
+  carousel: ({ spacings, mq, gridWidths }: Theme) =>
     css({
       containerType: 'inline-size', // required for container query
       display: 'flex',
@@ -63,6 +63,7 @@ const styles = {
           mq,
           display: 'block',
           widthParameter: 'flexBasis',
+          gridWidths,
         }),
       },
     }),
