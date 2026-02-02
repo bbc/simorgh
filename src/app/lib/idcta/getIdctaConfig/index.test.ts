@@ -23,7 +23,7 @@ describe('getIdctaConfig', () => {
     idctaBaseUrl: 'https://idcta.test.api.bbc.com/idcta',
     signInUrl: '/signin',
     registerUrl: '/register',
-    'id-availability': true,
+    'id-availability': 'GREEN',
   };
 
   beforeEach(() => {
