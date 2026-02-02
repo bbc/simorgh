@@ -238,10 +238,8 @@ server.get(
       ]);
 
       const toggles =
-        togglesResult.status === 'fulfilled' ? togglesResult.value : {};
-        navResult.status === 'fulfilled'
-          ? navResult.value?.data?.items ?? null
-          : null;
+        togglesResult.status === 'fulfilled' ? (togglesResult.value ?? {}) : {};
+
       const navItems =
         navResult.status === 'fulfilled' ? navResult.value?.data?.items : null;
 
