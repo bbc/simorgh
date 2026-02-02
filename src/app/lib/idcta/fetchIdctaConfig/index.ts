@@ -8,7 +8,7 @@ import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
 const logger = nodeLogger(__filename);
 
 const CACHE_MAX_ITEMS = 10;
-const CACHE_TTL_SECONDS = 300; // 5 minutes
+const CACHE_TTL_SECONDS = 30; // 30 seconds
 
 const cache = new LRUCache<string, IdctaConfig>({
   max: CACHE_MAX_ITEMS,
