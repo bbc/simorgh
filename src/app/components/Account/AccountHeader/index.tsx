@@ -13,7 +13,7 @@ const AccountHeader = () => {
 
   const label = isSignedIn
     ? (translations?.account?.forYou ?? 'For you')
-    : (translations?.account?.signIn ?? 'Sign in');
+    : (translations?.account?.signIn ?? 'Sign In');
 
   return (
     <div css={styles.wrapper}>

@@ -71,7 +71,7 @@ export const service: DefaultServiceConfig = {
       },
       gist: 'At a glance',
       account: {
-        signIn: 'Sign in',
+        signIn: 'Sign In',
         forYou: 'For you',
       },
       error: {

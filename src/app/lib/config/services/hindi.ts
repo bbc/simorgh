@@ -103,7 +103,7 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       account: {
-        signIn: 'Sign in',
+        signIn: 'Sign In',
         forYou: 'For you',
       },
       gist: 'सारांश',
