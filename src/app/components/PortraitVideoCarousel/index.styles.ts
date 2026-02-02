@@ -4,15 +4,8 @@ import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript
 import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
-  section: ({ mq, spacings }: Theme) =>
+  section: () =>
     css({
-      margin: `${spacings.DOUBLE}rem 0`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0`,
-      },
       [`.${OPERA_MINI_CLASSNAME} &`]: {
         display: 'none',
       },
