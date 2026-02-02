@@ -37,7 +37,9 @@ const styles = {
           fitForNItems: 3,
           gapWidth: spacings.DOUBLE,
         }),
-        [mq.POINTER]: {
+      },
+      [mq.POINTER]: {
+        [mq.GROUP_3_MIN_WIDTH]: {
           flexBasis: calculatePromoWidth({
             fitForNItems: 3,
             gapWidth: spacings.DOUBLE,
