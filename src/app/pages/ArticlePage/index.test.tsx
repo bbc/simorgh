@@ -23,7 +23,7 @@ import {
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
-import portraitVideoFixture from '#app/components/PortraitVideoCarousel/fixture';
+import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
 import {
   textBlock,
   blockContainingText,
