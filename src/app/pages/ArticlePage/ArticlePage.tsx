@@ -444,7 +444,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       )}
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
-        <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
+        <div css={styles.pglColumn}>
           <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
@@ -481,7 +481,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             </div>
           </div>
         </div>
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {/* {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />} */}
       </div>
 
       {/* // EXPERIMENT: Referrer Experiment

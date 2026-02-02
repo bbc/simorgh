@@ -23,7 +23,7 @@ export default {
     }),
   grid: ({ mq, gridWidths }: Theme) =>
     css({
-      maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
+      maxWidth: '100%',
       margin: '0 auto',
       display: 'grid',
       gridTemplateColumns: 'repeat(12, 1fr)',
