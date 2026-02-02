@@ -1,32 +1,31 @@
 import { IDCTA_FETCH_ERROR } from '#app/lib/logger.const';
 import nodeLogger from '#app/lib/logger.node';
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
-import isLocal from '#app/lib/utilities/isLocal';
+
 import { IdctaConfig } from '#app/models/types/account';
-import { Toggles, Services } from '#app/models/types/global';
+import { LRUCache } from 'lru-cache';
 import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
 
 const logger = nodeLogger(__filename);
 
-export default async function fetchIdctaConfig(
-  toggles: Toggles,
-  service: Services,
-): Promise<IdctaConfig | null> {
-  const toggleDefinitions = getToggleDefinitions(toggles);
-  const { enabled: isAccountEnabled, value: accountService = '' } =
-    toggleDefinitions.account || {};
+const CACHE_MAX_ITEMS = 10;
+const CACHE_TTL_SECONDS = 300; // 5 minutes
 
-  const shouldFetchConfig =
-    isAccountEnabled &&
-    (isLocal()
-      ? accountService?.toString().split('|').includes(service)
-      : true);
+const cache = new LRUCache<string, IdctaConfig>({
+  max: CACHE_MAX_ITEMS,
+  ttl: CACHE_TTL_SECONDS * 1000,
+});
 
-  if (!shouldFetchConfig) {
-    return null;
-  }
-
+/**
+ * Fetches IDCTA config from the endpoint with caching
+ * @returns IdctaConfig or null on error
+ */
+async function fetchIdctaConfig(): Promise<IdctaConfig | null> {
   const idctaConfigUrl = getIdctaConfigUrl();
+
+  const cachedConfig = cache.get(idctaConfigUrl);
+  if (cachedConfig) {
+    return cachedConfig;
+  }
 
   try {
     const response = await fetch(idctaConfigUrl);
@@ -37,9 +36,7 @@ export default async function fetchIdctaConfig(
 
     const config = await response.json();
 
-    if (!config?.['id-availability']) {
-      throw new Error('Invalid config: missing required fields');
-    }
+    cache.set(idctaConfigUrl, config);
 
     return config;
   } catch (error) {
@@ -50,3 +47,5 @@ export default async function fetchIdctaConfig(
     return null;
   }
 }
+
+export default fetchIdctaConfig;

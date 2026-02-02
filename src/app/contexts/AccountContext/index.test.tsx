@@ -10,7 +10,6 @@ import {
   waitFor,
 } from '../../components/react-testing-library-with-providers';
 
-// Mock dependencies
 jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');
 

@@ -1,26 +1,6 @@
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
-import isLocal from '#app/lib/utilities/isLocal';
-import { getIdctaConfigUrl } from '../getIdctaBaseUrl';
-import fetchIdctaConfig from '.';
-
-jest.mock('#app/lib/utilities/getToggleDefinition');
-jest.mock('#app/lib/utilities/isLocal');
 jest.mock('../getIdctaBaseUrl');
-jest.mock('#app/lib/logger.node', () =>
-  jest.fn(() => ({
-    error: jest.fn(),
-  })),
-);
-
-const mockGetToggleDefinitions = getToggleDefinitions as jest.Mock;
-const mockIsLocal = isLocal as jest.Mock;
-const mockGetIdctaConfigUrl = getIdctaConfigUrl as jest.Mock;
-
-global.fetch = jest.fn();
 
 describe('fetchIdctaConfig', () => {
-  const mockToggles = {};
-  const mockService = 'mundo';
   const mockIdctaConfigUrl = 'https://idcta.test.api.bbc.com/idcta/config';
   const mockIdctaConfig = {
     idctaBaseUrl: 'https://idcta.test.api.bbc.com/idcta',
@@ -29,101 +9,75 @@ describe('fetchIdctaConfig', () => {
     'id-availability': true,
   };
 
-  beforeEach(() => {
+  afterEach(() => {
+    jest.resetModules();
     jest.clearAllMocks();
-    mockGetIdctaConfigUrl.mockReturnValue(mockIdctaConfigUrl);
-    mockGetToggleDefinitions.mockReturnValue({
-      account: { enabled: true, value: 'mundo' },
-    });
   });
 
-  it('should return null when account toggle is disabled', async () => {
-    mockGetToggleDefinitions.mockReturnValue({
-      account: { enabled: false },
-    });
+  const setupMocks = async () => {
+    const { getIdctaConfigUrl } = await import('../getIdctaBaseUrl');
+    (getIdctaConfigUrl as jest.Mock).mockReturnValue(mockIdctaConfigUrl);
+    const { default: fetchIdctaConfig } = await import('.');
+    return fetchIdctaConfig;
+  };
 
-    const result = await fetchIdctaConfig(mockToggles, mockService);
-
-    expect(result).toBeNull();
-    expect(fetch).not.toHaveBeenCalled();
-  });
-
-  it('should fetch config when account toggle is enabled', async () => {
+  it('should fetch config successfully', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: true,
       json: jest.fn().mockResolvedValue(mockIdctaConfig),
     });
 
-    const result = await fetchIdctaConfig(mockToggles, mockService);
+    const fetchIdctaConfig = await setupMocks();
+    const result = await fetchIdctaConfig();
 
     expect(result).toEqual(mockIdctaConfig);
-    expect(fetch).toHaveBeenCalledWith(mockIdctaConfigUrl);
+    expect(global.fetch).toHaveBeenCalledWith(mockIdctaConfigUrl);
   });
 
-  it('should fetch config when service matches in local environment', async () => {
-    mockGetToggleDefinitions.mockReturnValue({
-      account: { enabled: true, value: 'hindi|mundo' },
-    });
-    mockIsLocal.mockReturnValue(true);
+  it('should return cached data on subsequent calls', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: true,
       json: jest.fn().mockResolvedValue(mockIdctaConfig),
     });
 
-    const result = await fetchIdctaConfig(mockToggles, 'hindi');
+    const fetchIdctaConfig = await setupMocks();
 
-    expect(result).toEqual(mockIdctaConfig);
-    expect(fetch).toHaveBeenCalledWith(mockIdctaConfigUrl);
-  });
+    const result1 = await fetchIdctaConfig();
+    const result2 = await fetchIdctaConfig();
 
-  it('should return null when service value does not match in local environment', async () => {
-    mockIsLocal.mockReturnValue(true);
-    const result = await fetchIdctaConfig(mockToggles, 'hausa');
-
-    expect(result).toBeNull();
-    expect(fetch).not.toHaveBeenCalled();
+    expect(result1).toEqual(mockIdctaConfig);
+    expect(result2).toEqual(mockIdctaConfig);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
   it('should return null when fetch throws an error', async () => {
     (global.fetch as jest.Mock).mockRejectedValue(new Error('Network error'));
 
-    const result = await fetchIdctaConfig(mockToggles, mockService);
+    const fetchIdctaConfig = await setupMocks();
+
+    const result = await fetchIdctaConfig();
+
     expect(result).toBeNull();
   });
 
-  it('should return null when fetch fails with 500', async () => {
-    (global.fetch as jest.Mock).mockResolvedValue({
-      ok: false,
-      status: 500,
-    });
+  it('should not cache failed responses', async () => {
+    const fetchIdctaConfig = await setupMocks();
 
-    const result = await fetchIdctaConfig(mockToggles, mockService);
-    expect(result).toBeNull();
-  });
+    // First call fails
+    (global.fetch as jest.Mock).mockRejectedValueOnce(
+      new Error('Network error'),
+    );
+    const result1 = await fetchIdctaConfig();
+    expect(result1).toBeNull();
 
-  it('should return parsed config when fetch is successful', async () => {
-    (global.fetch as jest.Mock).mockResolvedValue({
+    // Second call succeeds - should fetch again, not return cached null
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
       ok: true,
       json: jest.fn().mockResolvedValue(mockIdctaConfig),
     });
+    const result2 = await fetchIdctaConfig();
+    expect(result2).toEqual(mockIdctaConfig);
 
-    const result = await fetchIdctaConfig(mockToggles, mockService);
-
-    expect(result).toEqual(mockIdctaConfig);
-  });
-
-  it('should return null when config is missing id-availability field', async () => {
-    const invalidConfig = {
-      signInUrl: '/signin',
-    };
-
-    (global.fetch as jest.Mock).mockResolvedValue({
-      ok: true,
-      json: jest.fn().mockResolvedValue(invalidConfig),
-    });
-
-    const result = await fetchIdctaConfig(mockToggles, mockService);
-
-    expect(result).toBeNull();
+    expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 });

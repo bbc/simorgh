@@ -27,7 +27,7 @@ import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
 import { AccountProvider } from '#app/contexts/AccountContext';
-import fetchIdctaConfig from '#app/lib/idcta/fetchIdctaConfig';
+import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
 
@@ -82,7 +82,7 @@ export default class CustomApp extends App<Props> {
     const toggles =
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
-    const idctaConfig = await fetchIdctaConfig(toggles, service);
+    const idctaConfig = await getIdctaConfig(toggles, service);
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
