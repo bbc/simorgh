@@ -102,6 +102,10 @@ export const service: DefaultServiceConfig = {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
       },
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
+      },
       gist: 'सारांश',
       error: {
         404: {
