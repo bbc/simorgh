@@ -31,7 +31,7 @@ describe('AccountHeader', () => {
   it('shows Sign in when signed out', async () => {
     renderWithProviders();
 
-    const link = await screen.findByRole('link', { name: 'Sign in' });
+    const link = await screen.findByRole('link', { name: 'Sign In' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),
