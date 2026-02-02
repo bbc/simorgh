@@ -1,8 +1,6 @@
 /* eslint-disable cypress/no-async-tests */
 import { test, expect } from '@playwright/test';
-
-// const tests = [urlValidationTest, canonicalTests, testsForAllCanonicalPages];
-import SERVICES from '#app/lib/config/services';
+import runUrlValidationTest from '../support/helpers/runUrlValidationTest';
 
 const testSuites = [
   {
@@ -56,12 +54,6 @@ const testSuites = [
   },
 ];
 
-const SERVICES_PATTERN = SERVICES.join('|');
-
-const VALID_HREF_REGEX = new RegExp(
-  `^https://www\\.bbc\\.com/(?:${SERVICES_PATTERN}|usingthebbc/[^/]+(?:/.*)?|programmes/[a-z0-9]{8,15})(?:/.*)?$`,
-);
-
 // smoke tests
 testSuites.forEach(suite => {
   test.describe(`Home Page - ${suite.service}${suite.variant ?? ''}`, () => {
@@ -70,16 +62,11 @@ testSuites.forEach(suite => {
     }) => {
       await page.goto(suite.path);
       await expect(page).toHaveURL(suite.path);
-
-      const links = await page
-        .locator('main a[href^="https://www.bbc.com"]')
-        .elementHandles();
-
-      for (const link of links) {
-        const href = await link.getAttribute('href');
-        expect(href).not.toBeNull();
-        expect(href).toMatch(VALID_HREF_REGEX);
-      }
+      runUrlValidationTest(page);
+      // ToDo: check how to reuse the same browser instead of opening / reponeing
+      // ToDO: run canonicalTests, testsForAllCanonicalPages
+      // ToDo: differentiate between smoke / non-smoke
+      // ToDo: decide whether to migrate runPage or do a different mroe direct approach (even if it means more repetition)
     });
   });
 });
