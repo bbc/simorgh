@@ -84,7 +84,9 @@ export default class CustomApp extends App<Props> {
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
     const navItems =
-      navResult.status === 'fulfilled' ? navResult.value?.data?.items : null;
+      navResult.status === 'fulfilled'
+        ? navResult.value?.data?.items ?? null
+        : null;
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
