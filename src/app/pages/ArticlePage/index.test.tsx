@@ -19,11 +19,11 @@ import {
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
-  portraitVideoItems,
 } from '#pages/ArticlePage/fixtureData';
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import portraitVideoFixture from '#app/components/PortraitVideoCarousel/fixture';
 import {
   textBlock,
   blockContainingText,
@@ -1102,6 +1102,12 @@ describe('Article Page', () => {
     );
   });
   describe('Portrait Video Carousel', () => {
+    const portraitVideoItems = {
+      title: 'Portrait Video Carousel',
+      portraitVideo: {
+        blocks: [...portraitVideoFixture.blocks],
+      },
+    };
     it('should render the carousel when portraitVideoItems are present', async () => {
       const dataWithPVItems = {
         ...articleDataPidgin,
