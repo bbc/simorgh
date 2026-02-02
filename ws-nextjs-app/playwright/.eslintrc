@@ -1,0 +1,7 @@
+{
+  "rules": {
+    // these rules seem to be used as the common pattern for looping elemnts in playwright
+    "no-restricted-syntax": ["off", "ForOfStatement"],
+    "no-await-in-loop": "off",
+  },
+}
