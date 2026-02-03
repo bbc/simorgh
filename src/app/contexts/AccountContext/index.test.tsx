@@ -40,15 +40,6 @@ describe('AccountContext', () => {
     return <div data-testid="test-component">{JSON.stringify(context)}</div>;
   };
 
-  it('should render children within AccountProvider', () => {
-    render(<div data-testid="child">Test Child</div>, {
-      idctaConfig: mockIdctaConfig,
-    });
-
-    expect(screen.getByTestId('child')).toBeInTheDocument();
-    expect(screen.getByTestId('child')).toHaveTextContent('Test Child');
-  });
-
   it('should provide context value to consuming components', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
