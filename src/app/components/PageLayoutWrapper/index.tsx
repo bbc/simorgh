@@ -1,7 +1,7 @@
 import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import { PageTypes } from '#app/models/types/global';
+import { Navigation, PageTypes } from '#app/models/types/global';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
@@ -37,6 +37,7 @@ type Props = {
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
   };
   status: number;
+  navItems?: Navigation[] | null;
 };
 
 type wordCountType = number | undefined;
@@ -45,6 +46,7 @@ const PageLayoutWrapper = ({
   children,
   pageData,
   status,
+  navItems,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
@@ -225,6 +227,7 @@ const PageLayoutWrapper = ({
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
+          navItems={navItems}
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
           }}

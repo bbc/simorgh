@@ -8,6 +8,7 @@ import {
   Toggles,
   Variants,
   ServerSideExperiment,
+  Navigation,
 } from '#app/models/types/global';
 import ErrorPage from '#app//pages/ErrorPage/ErrorPage';
 import PageWrapper from '#app/components/PageLayoutWrapper';
@@ -53,6 +54,7 @@ interface Props {
     status: number;
     timeOnServer?: number;
     toggles: Toggles;
+    navItems: Navigation[] | null;
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
@@ -69,14 +71,22 @@ export default class CustomApp extends App<Props> {
 
     const { service } = parseRoute(asPath) as { service: Services };
 
-    // configResult will be used in a future implementation
-    const [togglesResult, _configResult] = await Promise.allSettled([
+    const [togglesResult, navResult] = await Promise.allSettled([
       getToggles(service),
-      fetchConfig({ service, pagePath: asPath, configType: 'navigation' }),
+      fetchConfig<{ data: { items: Navigation[] } }>({
+        service,
+        pagePath: asPath,
+        configType: 'navigation',
+      }),
     ]);
 
     const toggles =
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
+
+    const navItems =
+      navResult.status === 'fulfilled'
+        ? navResult.value?.data?.items ?? null
+        : null;
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
@@ -102,6 +112,7 @@ export default class CustomApp extends App<Props> {
         isNextJs: true,
         serverSideExperiments,
         toggles,
+        navItems,
       },
     };
   }
@@ -131,6 +142,7 @@ export default class CustomApp extends App<Props> {
       variant,
       isUK,
       country,
+      navItems,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -176,7 +188,11 @@ export default class CustomApp extends App<Props> {
               ) : (
                 <UserContextProvider>
                   <ThemeProvider service={service} variant={variant}>
-                    <PageWrapper pageData={pageData} status={status}>
+                    <PageWrapper
+                      navItems={navItems}
+                      pageData={pageData}
+                      status={status}
+                    >
                       {RenderChildrenOrError}
                     </PageWrapper>
                   </ThemeProvider>

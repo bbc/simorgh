@@ -48,7 +48,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   );
 };
 
-const HeaderContainer = ({ propsForTopBarOJComponent }) => {
+const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
@@ -108,6 +108,7 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
       )}
       {isLite && <LiteSiteSummary />}
       <NavigationContainer
+        navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
     </header>
