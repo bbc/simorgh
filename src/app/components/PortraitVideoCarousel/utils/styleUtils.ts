@@ -41,7 +41,7 @@ export const calculateVariedNavContainerWidths = ({
     },
   },
   [mq.GROUP_4_MIN_WIDTH]: {
-    [getContainerQuery(gridWidths[1008])]: {
+    [getContainerQuery(gridWidths[900])]: {
       display,
       [widthParameter]: calculateNavContainerWidth(4),
     },

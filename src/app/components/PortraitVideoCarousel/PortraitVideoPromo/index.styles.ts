@@ -48,7 +48,7 @@ const styles = {
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        [getContainerQuery(gridWidths[1008])]: {
+        [getContainerQuery(gridWidths[900])]: {
           flexBasis: calculatePromoWidth({
             fitForNItems: 4,
             gapWidth: spacings.DOUBLE,

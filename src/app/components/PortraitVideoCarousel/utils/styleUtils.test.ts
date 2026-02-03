@@ -1,6 +1,5 @@
 import { Theme } from '@emotion/react';
-import { GROUP_4_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
-
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import {
   calculatePromoWidth,
   calculateVariedNavContainerWidths,
@@ -43,6 +42,7 @@ describe('styleUtils', () => {
     } as Theme['mq'];
 
     const mockGridWidths = {
+      900: 900,
       1008: 1008,
     } as Theme['gridWidths'];
 
@@ -53,7 +53,13 @@ describe('styleUtils', () => {
       gridWidths: mockGridWidths,
     });
 
-    const expectedContainerQuery = `@container (min-width: ${GROUP_4_MIN_WIDTH_BP}rem)`;
+    const expectedContainerQueryGroup4 = `@container (min-width: ${pixelsToRem(
+      900,
+    )}rem)`;
+
+    const expectedContainerQueryGroup5 = `@container (min-width: ${pixelsToRem(
+      1008,
+    )}rem)`;
 
     expect(navButtonWidths).toStrictEqual({
       'group 3 min': {
@@ -63,13 +69,13 @@ describe('styleUtils', () => {
         },
       },
       'group 4 min': {
-        [expectedContainerQuery]: {
+        [expectedContainerQueryGroup4]: {
           display: 'block',
           flexBasis: 'calc(calc((100% / 4.5) - 0rem) * 0.5)',
         },
       },
       'group 5 min': {
-        [expectedContainerQuery]: {
+        [expectedContainerQueryGroup5]: {
           display: 'block',
           flexBasis: 'calc(calc((100% / 5.5) - 0rem) * 0.5)',
         },
