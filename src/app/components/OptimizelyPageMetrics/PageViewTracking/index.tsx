@@ -5,9 +5,9 @@ const PAGE_VIEW_EVENT_NAME = 'page-views';
 const VISIT_EVENT_NAME = 'visit';
 
 const VISIT_STORAGE_KEY = 'last_visit_ts';
-// 60 minute inactivity window defines a new visit for this spike
+// 30 minute inactivity window defines a new visit for this spike
 // activity is defined as a page view, so the window rolls forward on each page view
-const VISIT_TIMEOUT_MS = 60 * 60 * 1000;
+const VISIT_TIMEOUT_MS = 30 * 60 * 1000;
 
 // guard local storage access for privacy modes
 const getStorage = (): Storage | null => {
