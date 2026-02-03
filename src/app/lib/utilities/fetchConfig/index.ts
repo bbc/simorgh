@@ -32,7 +32,7 @@ const fetchConfig = async <T>({
   configType,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service !== 'indonesia' && !isLive();
+  const shouldFetchConfig = service === 'indonesia';
 
   if (!shouldFetchConfig) return Promise.resolve(null);
 
