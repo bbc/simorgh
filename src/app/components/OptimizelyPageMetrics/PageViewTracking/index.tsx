@@ -92,8 +92,8 @@ const PageViewTracking = ({ trackVisit = false }: Props) => {
     const visitState = trackVisit ? getVisitTrackingState(now) : null;
 
     if (trackVisit) {
-      // always update activity so the 60 minute window rolls forward on each page view
-      // this means a page view at minute 59 extends the same visit, while minute 61 starts a new visit
+      // always update activity so the 30 minute window rolls forward on each page view
+      // this means a page view at minute 29 extends the same visit, while minute 31 starts a new visit
       recordVisitActivity(visitState?.storage ?? null, now);
     }
 
