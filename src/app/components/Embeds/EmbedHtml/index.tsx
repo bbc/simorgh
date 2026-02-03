@@ -15,7 +15,7 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
   if (!embeddableContent) return null;
 
   if (isLite) return null;
-
+  console.log('!!!!', embeddableContent)
   // TODO: Remove this logic after the US Elections
   const isUSElectionBanner = embeddableContent.includes(
     '2024-us-presidential-election-banner',
@@ -30,6 +30,7 @@ const EmbedHtml = ({ embeddableContent }: PropsWithChildren<Props>) => {
         styles.embedDiv,
         isUSElectionBanner && styles.electionBannerOverrides,
       ]}
+      className="embed"
       suppressHydrationWarning
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: embeddableContent }}

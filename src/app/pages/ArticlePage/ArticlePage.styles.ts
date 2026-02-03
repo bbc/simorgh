@@ -81,9 +81,13 @@ export default {
       gridColumn: '1 / span 12',
       paddingBottom: '2rem',
     }),
-  mainContent: ({ palette, spacings, mq }: Theme) =>
+  mainContent: ({ palette, spacings, mq, gridWidths }: Theme) =>
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
+      '& > *:not(.embed)': {
+        maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,
+        margin: '0 auto',
+      },
 
       // Hide content after Continue Reading button
       '[id="continue-reading-button"] ~ *': {
