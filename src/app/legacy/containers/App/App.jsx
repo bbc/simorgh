@@ -34,6 +34,7 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'isLite', // isLite is here as it can come from the 'save-data' header setting
         'nonce',
         'cspHeader',
+        'navItems',
       ],
       initialData,
     ),
