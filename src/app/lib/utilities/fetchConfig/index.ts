@@ -7,7 +7,6 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
-import isLive from '../isLive';
 
 const logger = nodeLogger(__filename);
 
