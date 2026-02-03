@@ -87,7 +87,7 @@ The page views per visit ratio metric is built from two Optimizely events:
 - numerator: `page-views`
 - denominator: `visit`
 
-Visit counting is session based. A new visit is counted when there has been at least 60 minutes of inactivity since the last tracked page view. Each tracked page view updates the last activity timestamp so that continued browsing keeps the same visit.
+Visit counting is session based. A new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view. Each tracked page view updates the last activity timestamp so that continued browsing keeps the same visit.
 
 When `trackPageView` and `trackVisit` are both enabled, the visit event is sent before the page view event on the same page load. This ensures the ratio metric counts the page view within Optimizely's 48 hour attribution window for the denominator.
 
