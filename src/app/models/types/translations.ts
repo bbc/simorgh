@@ -40,6 +40,10 @@ export interface Translations {
     title?: string;
   };
   gist?: string;
+  account?: {
+    signIn?: string;
+    forYou?: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

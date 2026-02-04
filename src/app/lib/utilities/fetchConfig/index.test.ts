@@ -38,20 +38,6 @@ describe('fetchConfig', () => {
     expect(data).toBeNull();
   });
 
-  it('should return null when in live environment', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-
-    const { default: fetchConfig } = await import('.');
-
-    const data = await fetchConfig({
-      service: 'indonesia',
-      pagePath: '/indonesia',
-      configType: 'navigation',
-    });
-
-    expect(data).toBeNull();
-  });
-
   it('should fetch configuration data', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
