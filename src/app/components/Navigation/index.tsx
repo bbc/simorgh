@@ -1,4 +1,4 @@
-import { use } from 'react';
+import React, { use } from 'react';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
@@ -7,22 +7,23 @@ import {
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import LanguageNavigation from './LanguageNavigation/lazy';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
+import { NavigationItem, NavigationContainerProps } from './types';
 
 const renderListItems = (
-  Li,
-  navigation,
-  script,
-  currentPage,
-  service,
-  dir,
-  activeIndex,
-  clickTracker,
-  viewTracker,
-  isLite,
+  Li: React.ElementType,
+  navigation: NavigationItem[],
+  script: unknown,
+  currentPage: string,
+  service: string,
+  dir: string,
+  activeIndex: number,
+  clickTracker: unknown,
+  viewTracker: unknown,
+  isLite?: boolean,
 ) =>
   navigation.reduce((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
@@ -47,29 +48,32 @@ const renderListItems = (
     );
 
     return [...listAcc, listItem];
-  }, []);
+  }, [] as React.ReactNode[]);
 
-const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
+const NavigationContainer = ({
+  navItems,
+  propsForTopBarOJComponent,
+}: NavigationContainerProps) => {
   const { isAmp, isLite } = use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
     script,
     translations,
-    navigation: navFromServiceConfig,
+    navigation: navFromServiceConfig = [],
     service,
     dir,
     collapsibleNavigation,
   } = use(ServiceContext);
-  console.log('navItems:', navItems);
+
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
 
   const scrollableNavEventTrackingData = {
-    componentName: `scrollable-navigation`,
+    componentName: 'scrollable-navigation',
   };
 
   const dropdownNavEventTrackingData = {
-    componentName: `dropdown-navigation`,
+    componentName: 'dropdown-navigation',
   };
 
   const scrollableNavClickTrackerHandler = useClickTrackerHandler(
@@ -133,6 +137,7 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
         activeIndex,
         dropdownNavClickTrackerHandler,
         dropdownNavViewTracker,
+        isLite,
       )}
     </DropdownUl>
   );

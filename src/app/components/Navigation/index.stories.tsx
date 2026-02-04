@@ -3,23 +3,38 @@ import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import {
   topStoriesBlocks,
   mostReadBlocks,
-} from '../../../components/ArticleLinksBlock/helpers/fixtureData';
-import AmpDecorator from '../../../../../.storybook/helpers/ampDecorator';
+} from '../ArticleLinksBlock/helpers/fixtureData';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator/index.jsx';
 import Navigation from '.';
 
-const Component = ({ isAmp = false, service, propsForOJExperiment = null }) => (
+import type { Services } from '#models/types/global';
+import type { PropsForTopBarOJComponent } from './types';
+
+type StoryComponentProps = {
+  isAmp?: boolean;
+  service: Services;
+  propsForTopBarOJComponent?: PropsForTopBarOJComponent | null;
+};
+
+const Component = ({
+  isAmp = false,
+  service,
+  propsForTopBarOJComponent,
+}: StoryComponentProps) => (
   <RequestContextProvider
     isAmp={isAmp}
     service={service}
     pageType={HOME_PAGE}
     pathname="/pathname"
   >
-    <Navigation propsForOJExperiment={propsForOJExperiment} />
+    <Navigation
+      propsForTopBarOJComponent={propsForTopBarOJComponent ?? undefined}
+    />
   </RequestContextProvider>
 );
 
 export default {
-  title: 'Containers/Navigation/Legacy',
+  title: 'Containers/Navigation',
   Component,
   parameters: { chromatic: { disable: true } },
 };
@@ -29,21 +44,27 @@ export const Amp = (_, { service }) => <Component isAmp service={service} />;
 Amp.decorators = [AmpDecorator];
 
 export const CanonicalWithOJTopBarExperimentTopStories = (_, { service }) => {
-  const propsForOJExperiment = {
+  const propsForTopBarOJComponent = {
     blocks: topStoriesBlocks,
     experimentVariant: 'A',
   };
   return (
-    <Component service={service} propsForOJExperiment={propsForOJExperiment} />
+    <Component
+      service={service}
+      propsForTopBarOJComponent={propsForTopBarOJComponent}
+    />
   );
 };
 
 export const CanonicalWithOJTopBarExperimentMostRead = (_, { service }) => {
-  const propsForOJExperiment = {
+  const propsForTopBarOJComponent = {
     blocks: mostReadBlocks,
     experimentVariant: 'B',
   };
   return (
-    <Component service={service} propsForOJExperiment={propsForOJExperiment} />
+    <Component
+      service={service}
+      propsForTopBarOJComponent={propsForTopBarOJComponent}
+    />
   );
 };
