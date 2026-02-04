@@ -8,6 +8,7 @@ import EmbedError from '../EmbedError';
 import FlourishEmbed from '../FlourishEmbed';
 import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
+import ClientSideRiddleEmbed from '../ClientSideRiddleEmbed';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
   const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);
@@ -43,6 +44,10 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
         }}
       />
     );
+  }
+
+  if (oEmbedType === 'clientSideRiddle') {
+    return <ClientSideRiddleEmbed oembed={oembed} />;
   }
 
   if (html == null) {
