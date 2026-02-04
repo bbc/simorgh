@@ -123,7 +123,7 @@ export default async (context: GetServerSidePropsContext) => {
         externalLinks,
         ...(!scheduleIsEnabled && { radioScheduleData: null }),
         ...(showRecentEpisodes
-          ? { recentEpisodes: recentEpisodes.slice(0, recentEpisodesLimit) }
+          ? { recentEpisodes: recentEpisodes?.slice(0, recentEpisodesLimit) }
           : { recentEpisodes: null }),
       },
       pageType: AUDIO_PAGE,
