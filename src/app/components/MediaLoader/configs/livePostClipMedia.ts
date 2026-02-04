@@ -122,7 +122,7 @@ export default ({
       },
     },
     ...(!isAudio && { placeholderConfig }),
-    orientation,
+    ...(!isAudio && { orientation }),
     showAds,
   };
 };
