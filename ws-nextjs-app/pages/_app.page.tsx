@@ -191,18 +191,16 @@ export default class CustomApp extends App<Props> {
               <EventTrackingContextProvider atiData={atiAnalytics}>
                 {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>
-                    <PageWrapper
-                      navItems={navItems}
-                      pageData={pageData}
-                      status={status}
-                    >
-                      {RenderChildrenOrError}
-                    </PageWrapper>
+                    {RenderChildrenOrError}
                   </ThemeProvider>
                 ) : (
                   <UserContextProvider>
                     <ThemeProvider service={service} variant={variant}>
-                      <PageWrapper pageData={pageData} status={status}>
+                      <PageWrapper
+                        navItems={navItems}
+                        pageData={pageData}
+                        status={status}
+                      >
                         {RenderChildrenOrError}
                       </PageWrapper>
                     </ThemeProvider>
