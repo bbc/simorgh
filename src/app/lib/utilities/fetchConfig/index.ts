@@ -7,7 +7,6 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
-import isLive from '../isLive';
 
 const logger = nodeLogger(__filename);
 
@@ -32,7 +31,7 @@ const fetchConfig = async <T>({
   configType,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia' && !isLive();
+  const shouldFetchConfig = service === 'indonesia';
 
   if (!shouldFetchConfig) return Promise.resolve(null);
 
