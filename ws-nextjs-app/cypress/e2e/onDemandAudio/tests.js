@@ -12,7 +12,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
       },
       () => {
         it('should render a valid media player', () => {
-          cy.getPageDataFromWindow().then(({ pageData }) => {
+          cy.getPageDataFromWindow().then(pageData => {
             if (!getEpisodeAvailability(pageData)) {
               return cy.log(`Episode is not available: ${path}}`);
             }
@@ -47,10 +47,8 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 toggles?.[toggleName]?.value,
                 10,
               );
-              cy.getPageDataFromWindow().then(data => {
-                const {
-                  pageData: { recentEpisodes },
-                } = data;
+              cy.getPageDataFromWindow().then(pageData => {
+                const { recentEpisodes } = pageData;
 
                 if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
@@ -74,7 +72,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
       });
       describe('Radio Schedule', () => {
         it('should be displayed if there is enough schedule data', function test() {
-          cy.getPageDataFromWindow().then(({ pageData }) => {
+          cy.getPageDataFromWindow().then(pageData => {
             cy.fixture(`toggles/${service}.json`).then(toggles => {
               const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
               cy.log(
