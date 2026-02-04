@@ -12,7 +12,11 @@ const transformOrientationConfigToUpperCase = (
   return orientationConfig.map(setting => setting.toUpperCase());
 };
 
-export default (mediaOrientationConfig: string[]): Orientations => {
+export default (mediaOrientationConfig?: string[]): Orientations => {
+  if (!mediaOrientationConfig) {
+    return ORIENTATION_MAPPING.ORIGINAL;
+  }
+
   const transformedConfig = transformOrientationConfigToUpperCase(
     mediaOrientationConfig,
   );
