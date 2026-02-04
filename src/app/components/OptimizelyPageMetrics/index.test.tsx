@@ -29,9 +29,17 @@ jest.mock('./PageCompleteTracking', () => () => (
 jest.mock('./ScrollDepthTracking', () => () => (
   <div data-testid="scroll-depth-tracking" />
 ));
-jest.mock('./PageViewTracking', () => () => (
-  <div data-testid="page-view-tracking" />
-));
+// capture the trackVisit prop so tests can assert pass-through behaviour
+jest.mock(
+  './PageViewTracking',
+  () =>
+    ({ trackVisit }: { trackVisit?: boolean }) => (
+      <div
+        data-testid="page-view-tracking"
+        data-track-visit={trackVisit ? 'true' : 'false'}
+      />
+    ),
+);
 
 jest.mock('./experimentsForPageMetrics', () => ({
   __esModule: true,
@@ -83,7 +91,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageMetrics trackPageView trackPageDepth trackPageComplete />
+        <OptimizelyPageMetrics
+          trackPageView
+          trackPageDepth
+          trackPageComplete
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -96,6 +109,7 @@ describe('OptimizelyPageMetrics', () => {
       expect(
         screen.queryByTestId('page-view-tracking'),
       ).not.toBeInTheDocument();
+      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
     });
   });
 
@@ -123,6 +137,7 @@ describe('OptimizelyPageMetrics', () => {
       expect(
         screen.queryByTestId('page-view-tracking'),
       ).not.toBeInTheDocument();
+      expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
     });
   });
 
@@ -194,13 +209,22 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
       expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+      expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
+        'data-track-visit',
+        'true',
+      );
     });
   });
 
@@ -271,7 +295,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -292,7 +321,12 @@ describe('OptimizelyPageMetrics', () => {
     );
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
-        <OptimizelyPageMetrics trackPageComplete trackPageDepth trackPageView />
+        <OptimizelyPageMetrics
+          trackPageComplete
+          trackPageDepth
+          trackPageView
+          trackVisit
+        />
       </ContextWrap>,
     );
     await waitFor(() => {
@@ -322,6 +356,7 @@ describe('OptimizelyPageMetrics', () => {
             trackPageComplete
             trackPageDepth
             trackPageView
+            trackVisit
           />
         </ContextWrap>,
       );
@@ -331,6 +366,11 @@ describe('OptimizelyPageMetrics', () => {
         ).toBeInTheDocument();
         expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
         expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+        expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
+        expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
+          'data-track-visit',
+          'true',
+        );
       });
     });
 
@@ -353,6 +393,7 @@ describe('OptimizelyPageMetrics', () => {
             trackPageComplete
             trackPageDepth
             trackPageView
+            trackVisit
           />
         </ContextWrap>,
       );
@@ -366,6 +407,7 @@ describe('OptimizelyPageMetrics', () => {
         expect(
           screen.queryByTestId('page-view-tracking'),
         ).not.toBeInTheDocument();
+        expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
       });
     });
   });

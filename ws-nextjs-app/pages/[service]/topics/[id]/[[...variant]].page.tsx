@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import dynamic from 'next/dynamic';
 import { TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import nodeLogger from '#lib/logger.node';
@@ -16,7 +16,9 @@ const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
 
 const logger = nodeLogger(__filename);
 
-export const getServerSideProps: GetServerSideProps = async context => {
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext,
+) => {
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
   const {
