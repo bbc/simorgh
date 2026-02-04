@@ -423,42 +423,6 @@ export const service: DefaultServiceConfig = {
         title: 'رئيسية',
         url: '/arabic',
       },
-      {
-        title: 'شاهد البث المباشر',
-        url: '/arabic/media-49522519',
-      },
-      {
-        title: 'أخبار',
-        url: '/arabic/topics/cv2xyrnr8dnt',
-      },
-      {
-        title: 'اقتصاد',
-        url: '/arabic/topics/cqywj97d487t',
-      },
-      {
-        title: 'صحة وعلوم',
-        url: '/arabic/topics/clmj3d7282gt',
-      },
-      {
-        title: 'رياضة',
-        url: '/arabic/topics/cyx5kw7g1j2t',
-      },
-      {
-        title: 'فيديو',
-        url: '/arabic/topics/cz9mm6r1q5et',
-      },
-      {
-        title: 'تحقيقات',
-        url: '/arabic/topics/c51nnzdeg9zt',
-      },
-      {
-        title: 'بودكاست',
-        url: '/arabic/topics/cljddp5lw0dt',
-      },
-      {
-        title: 'برامجنا',
-        url: '/arabic/topics/crgyknwdlwnt',
-      },
     ],
   },
 };

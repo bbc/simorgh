@@ -423,42 +423,6 @@ export const service: DefaultServiceConfig = {
         title: 'முகப்பு',
         url: '/tamil',
       },
-      {
-        title: 'உலகம்',
-        url: '/tamil/topics/c40379e2n2zt',
-      },
-      {
-        title: 'இந்தியா',
-        url: '/tamil/topics/c2dwqdn01v5t',
-      },
-      {
-        title: 'இலங்கை',
-        url: '/tamil/topics/cz74k7p3qw7t',
-      },
-      {
-        title: 'உடல்நலம்',
-        url: '/tamil/topics/cyx5kxzdn9dt',
-      },
-      {
-        title: 'வரலாறு',
-        url: '/tamil/topics/cxnyknvykxjt',
-      },
-      {
-        title: 'விளையாட்டு',
-        url: '/tamil/topics/cdr56rv4qwdt',
-      },
-      {
-        title: 'அறிவியல்',
-        url: '/tamil/topics/c9wpm0exkdpt',
-      },
-      {
-        title: 'சினிமா',
-        url: '/tamil/topics/cyx5kxz4wkgt',
-      },
-      {
-        title: 'வீடியோ',
-        url: '/tamil/topics/c1320722p81t',
-      },
     ],
   },
 };

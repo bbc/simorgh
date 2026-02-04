@@ -333,38 +333,6 @@ export const service: DefaultServiceConfig = {
         title: '뉴스',
         url: '/korean',
       },
-      {
-        title: '국내',
-        url: '/korean/topics/cxnyk3v82rgt',
-      },
-      {
-        title: '북한',
-        url: '/korean/topics/cg726kygwz9t',
-      },
-      {
-        title: '세계',
-        url: '/korean/topics/ce71k82r6gzt',
-      },
-      {
-        title: '건강·과학',
-        url: '/korean/topics/cly27z42zk7t',
-      },
-      {
-        title: '문화',
-        url: '/korean/topics/c8y946p5qknt',
-      },
-      {
-        title: '비디오',
-        url: '/korean/topics/cnwng7v0e54t',
-      },
-      {
-        title: '라디오',
-        url: '/korean/bbc_korean_radio/programmes/w13xttll',
-      },
-      {
-        title: '다운로드',
-        url: '/korean/downloads',
-      },
     ],
     timezone: 'Asia/Seoul',
   },

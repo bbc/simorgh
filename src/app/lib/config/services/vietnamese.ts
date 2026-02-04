@@ -336,26 +336,6 @@ export const service: DefaultServiceConfig = {
         title: 'Tin chính',
         url: '/vietnamese',
       },
-      {
-        title: 'Việt Nam',
-        url: '/vietnamese/topics/ckdxnx1x5rnt',
-      },
-      {
-        title: 'Thế giới',
-        url: '/vietnamese/topics/cnlv9j1ekq0t',
-      },
-      {
-        title: 'Kinh tế',
-        url: '/vietnamese/topics/cez1ey7nzj3t',
-      },
-      {
-        title: 'Thể thao',
-        url: '/vietnamese/topics/ckdxnx1k7zxt',
-      },
-      {
-        title: 'Video',
-        url: '/vietnamese/topics/cl29j0ekkvdt',
-      },
     ],
   },
 };

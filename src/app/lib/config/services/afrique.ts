@@ -375,40 +375,6 @@ export const service: DefaultServiceConfig = {
         title: 'Accueil',
         url: '/afrique',
       },
-      {
-        title: 'Ecoutez en direct',
-        url: '/afrique/bbc_afrique_radio/liveradio',
-      },
-      {
-        title: 'Afrique',
-        url: '/afrique/topics/cvqxn2k7kv7t',
-      },
-      {
-        title: 'Monde',
-        url: '/afrique/topics/cvqxn21vx11t',
-      },
-      {
-        title: 'Santé',
-        url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'Science et technologie',
-        url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Culture',
-        url: '/afrique/topics/cnq687nrrw8t',
-      },
-      {
-        title: 'Vidéos',
-        url: '/afrique/topics/cz4vn9gyd6rt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'Nos émissions',
-        url: '/afrique/topics/c88nzggm8gxt',
-        hideOnLiteSite: true,
-      },
     ],
   },
 };
