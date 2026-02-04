@@ -11,7 +11,6 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   HOME_PAGE,
-  TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -28,7 +27,6 @@ import { AvEmbedsPageProps } from './av-embeds/types';
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
-import handleTopicsRoute from './topics/handleTopicsRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -69,7 +67,6 @@ const ROUTE_HANDLERS = {
   [AV_EMBEDS]: handleAvRoute,
   [ARTICLE_PAGE]: handleArticleRoute,
   [HOME_PAGE]: handleHomepageRoute,
-  [TOPIC_PAGE]: handleTopicsRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
