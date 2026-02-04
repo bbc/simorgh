@@ -232,7 +232,11 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        fetchUrl = Url(`/${id}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local/${id}`);
+        } else {
+          fetchUrl = Url(`/${id}`);
+        }
         break;
       case HOME_PAGE: {
         if (process.env?.NEXTJS) {
