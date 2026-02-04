@@ -106,8 +106,7 @@ exports[`Document Component should render APP version correctly 1`] = `
     />
     <script>
       
-        window.addEventListener('DOMContentLoaded', () =&gt; {
-          (function redirectScript(window) {
+        (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
   var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
@@ -128,7 +127,6 @@ exports[`Document Component should render APP version correctly 1`] = `
     }
   }
 })(window)
-        })
       
     </script>
     <script>
@@ -362,8 +360,7 @@ exports[`Document Component should render correctly 1`] = `
     />
     <script>
       
-        window.addEventListener('DOMContentLoaded', () =&gt; {
-          (function redirectScript(window) {
+        (function redirectScript(window) {
   var _window$localStorage$, _window$navigator;
   var pathname = window.location.pathname;
   var isOptedIntoLiteRedirect = (_window$localStorage$ = window.localStorage.isOptedIntoLiteRedirect) !== null && _window$localStorage$ !== void 0 ? _window$localStorage$ : 'true';
@@ -384,7 +381,6 @@ exports[`Document Component should render correctly 1`] = `
     }
   }
 })(window)
-        })
       
     </script>
     <script>

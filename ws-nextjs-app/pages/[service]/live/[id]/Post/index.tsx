@@ -15,6 +15,7 @@ import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVid
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import dynamic from 'next/dynamic';
 import styles from './styles';
 import {
   Post as PostType,
@@ -22,6 +23,10 @@ import {
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
+
+const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
+  ssr: false,
+});
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -171,8 +176,8 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
+    oEmbed: OEmbed,
   };
-
   return (
     <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );

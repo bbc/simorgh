@@ -49,7 +49,7 @@ export const REFERRER_CATEGORIES = {
   AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
 };
 
-const getReferrer = () => {
+export const getReferrer = () => {
   if (onClient()) {
     const referrer = document?.referrer?.toLowerCase();
 
