@@ -76,7 +76,7 @@ import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
-} from '../utils/portraitVideo';
+} from '../../components/MediaLoader/utils/isPortraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (

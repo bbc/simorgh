@@ -11,11 +11,10 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
-import filterForBlockType from '#app/lib/utilities/blockHandlers';
-import getMediaOrientation from '#app/components/MediaLoader/utils/getMediaOrientation';
+import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
-import { ClipMediaBlock, MediaBlock } from '#app/components/MediaLoader/types';
+import { MediaBlock } from '#app/components/MediaLoader/types';
 import styles from './styles';
 import {
   Post as PostType,
@@ -23,21 +22,6 @@ import {
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
-
-const isPortraitVideo = (mediaBlock: MediaBlock[]) => {
-  const clipMediaBlock: ClipMediaBlock = filterForBlockType(
-    mediaBlock,
-    'clipMedia',
-  );
-
-  const { video } = clipMediaBlock?.model || {};
-
-  const clipOrientation = [video?.version?.orientation || ''];
-
-  const orientation = getMediaOrientation(clipOrientation);
-
-  return orientation === 'portrait';
-};
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
