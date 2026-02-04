@@ -2,18 +2,26 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { calculateVariedNavContainerWidths } from '../utils/styleUtils';
 
+const defaultBackgroundColor = 'rgba(255, 255, 255, 0.75)';
+
 const styles = {
-  buttonGroupOverlay: ({ mq }: Theme) =>
-    css({
-      display: 'none',
-      position: 'absolute',
-      top: 0,
-      insetInlineEnd: 0,
-      height: '100%',
-      backgroundColor: 'rgba(255, 255, 255, 0.75)',
-      zIndex: 1,
-      ...calculateVariedNavContainerWidths({ mq, display: 'flex' }),
-    }),
+  buttonGroupOverlay:
+    (backgroundColor = defaultBackgroundColor) =>
+    ({ mq, gridWidths }: Theme) =>
+      css({
+        display: 'none',
+        position: 'absolute',
+        top: 0,
+        insetInlineEnd: 0,
+        height: '100%',
+        backgroundColor,
+        zIndex: 1,
+        ...calculateVariedNavContainerWidths({
+          mq,
+          display: 'flex',
+          gridWidths,
+        }),
+      }),
   buttonGroup: ({ spacings }: Theme) =>
     css({
       width: '100%',
