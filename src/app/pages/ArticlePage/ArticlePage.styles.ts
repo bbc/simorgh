@@ -201,4 +201,21 @@ export default {
     }),
     commonMarginSpacing,
   ],
+  portraitVideoCarousel: ({ mq, spacings }: Theme) =>
+    css({
+      padding: `0 ${pixelsToRem(8)}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: 0,
+      },
+    }),
 };

@@ -49,13 +49,13 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForTopBarOJComponent }) => {
+const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
     script,
     translations,
-    navigation,
+    navigation: navFromServiceConfig,
     service,
     dir,
     collapsibleNavigation,
@@ -91,6 +91,10 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   if (renderLanguageNavigation) {
     return <LanguageNavigation />;
   }
+
+  // Prefer navItems passed from props over service config
+  // Eventually all services will migrate to passing navItems via props
+  const navigation = navItems || navFromServiceConfig;
 
   if (!navigation || navigation.length === 0) {
     return null;
