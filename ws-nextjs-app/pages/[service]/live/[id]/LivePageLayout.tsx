@@ -23,6 +23,7 @@ import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
+import LatestPostButton from './LatestPostButton';
 import pageData2 from './tempPageData';
 import pageData3 from './tempPageData2';
 import hasNewPost from './utils/compareStreamData';
@@ -76,6 +77,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const [currentPageData, setPageData] = useState(pageData2);
   const previousDataRef = useRef(pageData2);
 
+  const streamRef = useRef<HTMLDivElement>(null);
   const firstPostRef = useRef<HTMLLIElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
@@ -262,6 +264,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}
               firstPostRef={firstPostRef as React.RefObject<HTMLLIElement>}
+              streamRef={streamRef as React.RefObject<HTMLDivElement>}
+            />
+            <LatestPostButton
+              streamRef={streamRef as React.RefObject<HTMLDivElement>}
               isFirstPostVisible={isFirstPostVisible}
               hasPendingUpdate={hasPendingUpdate}
             />

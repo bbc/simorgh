@@ -63,7 +63,6 @@ const LatestPostButton = ({
     }
   };
 
-  console.log(isFirstPostVisible, hasPendingUpdate);
   const showButton = !isFirstPostVisible && hasPendingUpdate;
 
   return (

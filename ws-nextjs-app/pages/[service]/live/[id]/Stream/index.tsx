@@ -5,20 +5,17 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
-import LatestPostButton from '../LatestPostButton';
 
 const Stream = ({
   streamContent,
   contributors,
   firstPostRef,
-  isFirstPostVisible,
-  hasPendingUpdate,
+  streamRef,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
   firstPostRef: React.RefObject<HTMLLIElement>;
-  isFirstPostVisible: boolean;
-  hasPendingUpdate: boolean;
+  streamRef: React.RefObject<HTMLDivElement>;
 }) => {
   const {
     translations: {
@@ -28,7 +25,6 @@ const Stream = ({
 
   const [hasShareApi, setHasShareApi] = useState(false);
   const [hashValue, setHashValue] = useState('');
-  const streamRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const URLHash = window.location.hash.substring(1);
@@ -71,27 +67,20 @@ const Stream = ({
       {hasSinglePost ? (
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
-        <>
-          <ol role="list" css={styles.orderedList}>
-            <li
-              key={streamResults[0].urn}
-              css={styles.listItem}
-              ref={firstPostRef}
-            >
-              <Post post={streamResults[0]} hasShareApi={hasShareApi} />
+        <ol role="list" css={styles.orderedList}>
+          <li
+            key={streamResults[0].urn}
+            css={styles.listItem}
+            ref={firstPostRef}
+          >
+            <Post post={streamResults[0]} hasShareApi={hasShareApi} />
+          </li>
+          {streamResults.slice(1).map(post => (
+            <li key={post.urn} css={styles.listItem}>
+              <Post post={post} hasShareApi={hasShareApi} />
             </li>
-            {streamResults.slice(1).map(post => (
-              <li key={post.urn} css={styles.listItem}>
-                <Post post={post} hasShareApi={hasShareApi} />
-              </li>
-            ))}
-          </ol>
-          <LatestPostButton
-            streamRef={streamRef as React.RefObject<HTMLDivElement>}
-            isFirstPostVisible={isFirstPostVisible}
-            hasPendingUpdate={hasPendingUpdate}
-          />
-        </>
+          ))}
+        </ol>
       )}
     </div>
   );
