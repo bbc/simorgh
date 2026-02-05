@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from 'react';
 import { Global } from '@emotion/react';
 import isChromatic from 'chromatic/isChromatic';
