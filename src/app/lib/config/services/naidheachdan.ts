@@ -379,6 +379,10 @@ export const service: DefaultServiceConfig = {
         title: 'Alba',
         url: '/naidheachdan',
       },
+      {
+        title: 'Scotland News',
+        url: '/news/scotland',
+      },
     ],
   },
 };

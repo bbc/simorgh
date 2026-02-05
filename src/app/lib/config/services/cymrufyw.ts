@@ -366,6 +366,38 @@ export const service: DefaultServiceConfig = {
         title: 'Hafan',
         url: '/cymrufyw',
       },
+      {
+        title: 'Cylchgrawn',
+        url: '/cymrufyw/cylchgrawn',
+      },
+      {
+        title: 'Gwleidyddiaeth',
+        url: '/cymrufyw/gwleidyddiaeth',
+      },
+      {
+        title: 'Gog-Orll',
+        url: '/cymrufyw/gogledd-orllewin',
+      },
+      {
+        title: 'Gog-Ddwy',
+        url: '/cymrufyw/gogledd-ddwyrain',
+      },
+      {
+        title: 'Canolbarth',
+        url: '/cymrufyw/canolbarth',
+      },
+      {
+        title: 'De-Orll',
+        url: '/cymrufyw/de-orllewin',
+      },
+      {
+        title: 'De-Ddwy',
+        url: '/cymrufyw/de-ddwyrain',
+      },
+      {
+        title: 'Wales News',
+        url: '/news/wales',
+      },
     ],
   },
 };
