@@ -201,37 +201,48 @@ export type CaptionBlock = {
 };
 
 export type AresMediaBlock = {
+  id: string;
   type: 'aresMedia';
   model: {
     blocks: [AresMediaMetadataBlock | OptimoImageBlock];
   };
+  position: number[];
 };
 
 export type AresMediaMetadataBlock = {
+  id: string;
+  blockId: string;
   type: 'aresMediaMetadata';
   model: {
     firstPublished?: string;
     live?: boolean;
-    locator: string;
-    originCode: string;
-    text: string;
+    locator?: string;
+    originCode?: string;
+    text?: string;
     title: string;
     synopses: {
-      short: string;
+      short?: string;
+      long?: string;
+      medium?: string;
     };
     imageUrl: string;
     format: MediaType;
     id: string;
     embedding: boolean;
+    advertising: boolean;
     subType: string;
     versions: {
-      availableFrom?: string;
+      availableFrom?: number;
       versionId: string;
       types: string[];
       duration: number;
       durationISO8601?: string;
       warnings?: { [key: string]: string };
+      availableTerritories?: { [key: string]: boolean };
     }[];
+    syndication?: {
+      destinations?: string[];
+    };
     webcastVersions: {
       versionId: string;
       duration: number;
@@ -241,6 +252,7 @@ export type AresMediaMetadataBlock = {
     }[];
     smpKind: string;
   };
+  position: number[];
 };
 
 export type ClipMediaBlock = {
