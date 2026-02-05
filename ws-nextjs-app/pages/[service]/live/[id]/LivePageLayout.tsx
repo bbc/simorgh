@@ -266,11 +266,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               firstPostRef={firstPostRef as React.RefObject<HTMLLIElement>}
               streamRef={streamRef as React.RefObject<HTMLDivElement>}
             />
-            <LatestPostButton
-              streamRef={streamRef as React.RefObject<HTMLDivElement>}
-              isFirstPostVisible={isFirstPostVisible}
-              hasPendingUpdate={hasPendingUpdate}
-            />
           </div>
         </div>
         <Pagination
@@ -280,6 +275,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           previousPage={previousPage}
           nextPage={nextPage}
           page={page}
+        />
+        <LatestPostButton
+          streamRef={streamRef as React.RefObject<HTMLDivElement>}
+          isFirstPostVisible={isFirstPostVisible}
+          hasPendingUpdate={hasPendingUpdate}
         />
       </main>
     </>
