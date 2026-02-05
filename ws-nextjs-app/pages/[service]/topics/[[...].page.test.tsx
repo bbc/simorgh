@@ -10,7 +10,7 @@ import TopicsIndexPage from './TopicsIndexPage';
 const validTopicsData = {
   service: 'afrique' as Services,
   pageData: {
-    headline: 'Sujets',
+    headline: 'Tous les sujets',
     summaries: [
       {
         id: 'id-1',
