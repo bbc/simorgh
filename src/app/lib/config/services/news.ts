@@ -271,46 +271,6 @@ export const service: DefaultServiceConfig = {
         title: 'Home',
         url: '/news',
       },
-      {
-        title: 'UK',
-        url: '/news/uk',
-      },
-      {
-        title: 'World',
-        url: '/news/world',
-      },
-      {
-        title: 'Business',
-        url: '/news/business',
-      },
-      {
-        title: 'Politics',
-        url: '/news/politics',
-      },
-      {
-        title: 'Tech',
-        url: '/news/technology',
-      },
-      {
-        title: 'Science',
-        url: '/news/science_and_environment',
-      },
-      {
-        title: 'Health',
-        url: '/news/health',
-      },
-      {
-        title: 'Family & Education',
-        url: '/news/education',
-      },
-      {
-        title: 'Entertainment & Arts',
-        url: '/news/entertainment_and_arts',
-      },
-      {
-        title: 'Stories',
-        url: '/news/stories',
-      },
     ],
   },
 };

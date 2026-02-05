@@ -263,38 +263,6 @@ export const service: DefaultServiceConfig = {
         title: 'Home',
         url: '/sport',
       },
-      {
-        title: 'Football',
-        url: '/sport/football',
-      },
-      {
-        title: 'Formula 1',
-        url: '/sport/formula1',
-      },
-      {
-        title: 'Cricket',
-        url: '/sport/cricket',
-      },
-      {
-        title: 'Rugby U',
-        url: '/sport/rugby-union',
-      },
-      {
-        title: 'Rugby L',
-        url: '/sport/rugby-league',
-      },
-      {
-        title: 'Tennis',
-        url: '/sport/tennis',
-      },
-      {
-        title: 'Golf',
-        url: '/sport/golf',
-      },
-      {
-        title: 'Athletics',
-        url: '/sport/athletics',
-      },
     ],
   },
 };
