@@ -11,6 +11,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
   HOME_PAGE,
+  AUDIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -21,12 +22,17 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
 
 // AV Embeds
+import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
+
+// On Demand Audio
+import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
+import { OnDemandAudioProps } from './onDemandAudio/types';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -37,7 +43,9 @@ const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
 const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
-
+const OnDemandAudioPage = dynamic(
+  () => import('./onDemandAudio/OnDemandAudioLayout'),
+);
 const getPageType = ({
   resolvedUrl,
   reqHeaders,
@@ -67,6 +75,7 @@ const ROUTE_HANDLERS = {
   [AV_EMBEDS]: handleAvRoute,
   [ARTICLE_PAGE]: handleArticleRoute,
   [HOME_PAGE]: handleHomepageRoute,
+  [AUDIO_PAGE]: handleOnDemandAudioRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -105,7 +114,8 @@ type PageProps = {
   pageType?: PageTypes;
 } & AvEmbedsPageProps &
   ArticlePageProps &
-  HomePageProps;
+  HomePageProps &
+  OnDemandAudioProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
@@ -121,6 +131,9 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
+    case AUDIO_PAGE:
+      return withMediaError(OnDemandAudioPage)({ ...props });
+    // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });
     default:
