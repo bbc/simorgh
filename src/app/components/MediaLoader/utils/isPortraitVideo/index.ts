@@ -8,7 +8,7 @@ import {
 } from '../../types';
 import getMediaOrientation from '../getMediaOrientation';
 
-const getAresMedia = (optimoBlock: OptimoBlock[]) => {
+const getAresMedia = (optimoBlock: MediaBlock[]) => {
   const aresMedia: AresMediaBlock =
     filterForBlockType(optimoBlock ?? [], 'aresMedia') ?? {};
 
@@ -46,7 +46,7 @@ const getClipMediaOrientation = (mediaBlock: ClipMediaBlock) => {
   return getMediaOrientation(clipOrientation);
 };
 
-export const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
+export const isPortraitVideo = (mediaBlock: MediaBlock[]) => {
   const inferredMediaBlock: MediaBlock[] = [];
 
   const mediaOrientationExtractor = {
@@ -77,7 +77,7 @@ export const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
 
 export const isPortraitVideoUnderHeadline = (
   articlePageBlocks: OptimoBlock[],
-  mediaBlock: OptimoBlock[],
+  mediaBlock: MediaBlock[],
 ) => {
   const blockUnderHeadline = articlePageBlocks[1];
   if (blockUnderHeadline.type !== 'video' || !isPortraitVideo(mediaBlock)) {
@@ -85,7 +85,7 @@ export const isPortraitVideoUnderHeadline = (
   }
 
   const targetAresMediaBlocks = getAresMedia(
-    (blockUnderHeadline?.model as { blocks?: OptimoBlock[] })?.blocks ?? [],
+    (blockUnderHeadline?.model as { blocks?: MediaBlock[] })?.blocks ?? [],
   );
   const targetAresMediaMetadataBlock = getAresMediaMetadata(
     targetAresMediaBlocks,

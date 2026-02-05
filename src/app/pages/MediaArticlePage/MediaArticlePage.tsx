@@ -69,7 +69,7 @@ import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVi
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    const isPortrait = isPortraitVideo(blocks);
+    const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
     const className = isPortrait ? 'portrait-media-loader' : '';
 
     return (

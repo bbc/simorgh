@@ -187,9 +187,9 @@ const getVideoComponent =
     const title = translations.media.watchMoments;
 
     const showTitle =
-      isPortraitVideo(blocks) &&
+      isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
-      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
