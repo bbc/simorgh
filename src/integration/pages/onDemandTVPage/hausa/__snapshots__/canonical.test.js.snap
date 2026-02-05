@@ -124,55 +124,6 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Wasanni",
-  "url": "/hausa/topics/cz74kjgv220t",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Nishadi",
-  "url": "/hausa/topics/cg726kz37wdt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Cikakkun Rahotanni",
-  "url": "/hausa/topics/cnl7wd77wj2t",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Bidiyo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/topics/cnl7wd9pddlt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Shirye-shiryen rediyo",
-  "url": "/hausa/topics/c4nx34q5724t",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "Duk batutuwa",
-  "url": "/hausa/topics",
-}
-`;
-
 exports[`Canonical On Demand T V Page I can see the brand title 1`] = `"Labaran Talabijin"`;
 
 exports[`Canonical On Demand T V Page I can see the episode summary 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
