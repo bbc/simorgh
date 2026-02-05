@@ -1,17 +1,24 @@
-import { use, useEffect, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
+import LatestPostButton from '../LatestPostButton';
 
 const Stream = ({
   streamContent,
   contributors,
+  firstPostRef,
+  isFirstPostVisible,
+  hasPendingUpdate,
 }: {
   streamContent: StreamResponse | null;
   contributors: string | null;
+  firstPostRef: React.RefObject<HTMLLIElement>;
+  isFirstPostVisible: boolean;
+  hasPendingUpdate: boolean;
 }) => {
   const {
     translations: {
@@ -21,6 +28,7 @@ const Stream = ({
 
   const [hasShareApi, setHasShareApi] = useState(false);
   const [hashValue, setHashValue] = useState('');
+  const streamRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const URLHash = window.location.hash.substring(1);
@@ -45,7 +53,7 @@ const Stream = ({
   if (hasNoPost) return null;
 
   return (
-    <div>
+    <div id="stream-container" ref={streamRef}>
       <Heading
         css={[
           styles.heading,
@@ -60,17 +68,30 @@ const Stream = ({
           {contributors}
         </Paragraph>
       )}
-
       {hasSinglePost ? (
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
-        <ol role="list" css={styles.orderedList}>
-          {streamResults.map(post => (
-            <li key={post.urn} css={styles.listItem}>
-              <Post post={post} hasShareApi={hasShareApi} />
+        <>
+          <ol role="list" css={styles.orderedList}>
+            <li
+              key={streamResults[0].urn}
+              css={styles.listItem}
+              ref={firstPostRef}
+            >
+              <Post post={streamResults[0]} hasShareApi={hasShareApi} />
             </li>
-          ))}
-        </ol>
+            {streamResults.slice(1).map(post => (
+              <li key={post.urn} css={styles.listItem}>
+                <Post post={post} hasShareApi={hasShareApi} />
+              </li>
+            ))}
+          </ol>
+          <LatestPostButton
+            streamRef={streamRef as React.RefObject<HTMLDivElement>}
+            isFirstPostVisible={isFirstPostVisible}
+            hasPendingUpdate={hasPendingUpdate}
+          />
+        </>
       )}
     </div>
   );

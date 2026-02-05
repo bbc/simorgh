@@ -34,6 +34,7 @@ export interface Translations {
     shareButtonText: string;
     postDateTimeFormat?: string;
     postDateFormat?: string;
+    refreshButtonText?: string;
   };
   downloads?: {
     instructions?: string;

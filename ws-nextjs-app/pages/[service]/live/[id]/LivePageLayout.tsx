@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useEffect, useState, useRef } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -9,6 +9,8 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import { useRouter } from 'next/router';
+import usePollingFake from '#app/hooks/usePollingFake';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -20,6 +22,10 @@ import KeyPoints from './KeyPoints';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
+
+import pageData2 from './tempPageData';
+import pageData3 from './tempPageData2';
+import hasNewPost from './utils/compareStreamData';
 
 interface LivePromoImage {
   url: string;
@@ -66,6 +72,83 @@ interface LivePageProps extends ComponentProps {
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
+
+  const [currentPageData, setPageData] = useState(pageData2);
+  const previousDataRef = useRef(pageData2);
+
+  const firstPostRef = useRef<HTMLLIElement>(null);
+  const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
+
+  const [hasPendingUpdate, setHasPendingUpdate] = useState(false);
+  const pendingDataRef = useRef<typeof pageData2 | null>(null);
+
+  const { forceUpdate, updateFinished } = usePollingFake();
+
+  useEffect(() => {
+    if (!firstPostRef.current) return undefined;
+
+    const firstPostObserver = new IntersectionObserver(
+      ([entry]) => {
+        setIsFirstPostVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0,
+        rootMargin: '0px',
+      },
+    );
+
+    firstPostObserver.observe(firstPostRef.current);
+
+    return () => {
+      firstPostObserver.disconnect();
+    };
+  }, [currentPageData.liveTextStream]);
+
+  useEffect(() => {
+    if (forceUpdate) {
+      const newPageData = pageData3;
+
+      if (hasNewPost(previousDataRef.current, newPageData)) {
+        if (isFirstPostVisible) {
+          console.log('first post visible');
+
+          setPageData(prev => ({
+            ...prev,
+            liveTextStream: newPageData.liveTextStream,
+          }));
+
+          previousDataRef.current = newPageData;
+          setHasPendingUpdate(false);
+          pendingDataRef.current = null;
+        } else {
+          console.log('first post not visible');
+
+          pendingDataRef.current = newPageData;
+          setHasPendingUpdate(true);
+        }
+      }
+
+      updateFinished();
+    }
+  }, [forceUpdate, updateFinished, isFirstPostVisible]);
+
+  useEffect(() => {
+    if (isFirstPostVisible && hasPendingUpdate && pendingDataRef.current) {
+      console.log('first post NOW visible, update');
+
+      const pendingData = pendingDataRef.current;
+
+      setPageData(prev => ({
+        ...prev,
+        liveTextStream: pendingData.liveTextStream,
+      }));
+
+      previousDataRef.current = pendingData;
+      setHasPendingUpdate(false);
+      pendingDataRef.current = null;
+    }
+  }, [isFirstPostVisible, hasPendingUpdate]);
+
   const {
     title,
     description,
@@ -79,7 +162,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
-  } = pageData;
+  } = currentPageData;
 
   const {
     url: imageUrl,
@@ -166,7 +249,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
           imageWidth={imageWidth}
-          mediaCollections={mediaCollections}
+          mediaCollections={null}
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
@@ -178,6 +261,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}
+              firstPostRef={firstPostRef as React.RefObject<HTMLLIElement>}
+              isFirstPostVisible={isFirstPostVisible}
+              hasPendingUpdate={hasPendingUpdate}
             />
           </div>
         </div>
