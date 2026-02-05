@@ -54,16 +54,19 @@ export const isPortraitVideo = (mediaBlock: OptimoBlock[]) => {
     clipMedia: getClipMediaOrientation,
   };
 
-  const mediaBlockType =
-    Object.keys(mediaOrientationExtractor).find(key => {
-      const filteredBlockType = filterForBlockType(mediaBlock, key);
+  const mediaBlockType = Object.keys(mediaOrientationExtractor).find(key => {
+    const filteredBlockType = filterForBlockType(mediaBlock, key);
 
-      if (filteredBlockType) {
-        inferredMediaBlock.push(filteredBlockType);
-      }
+    if (filteredBlockType) {
+      inferredMediaBlock.push(filteredBlockType);
+    }
 
-      return !!filteredBlockType;
-    }) || '';
+    return !!filteredBlockType;
+  });
+
+  if (!mediaBlockType) {
+    return false;
+  }
 
   const orientationType = mediaOrientationExtractor[mediaBlockType](
     inferredMediaBlock?.[0],
