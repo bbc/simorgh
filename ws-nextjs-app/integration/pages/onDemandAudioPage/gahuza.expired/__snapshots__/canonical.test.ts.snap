@@ -226,7 +226,7 @@ exports[`Canonical On Demand Audio Page Recent Episodes List items should match 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/gahuza/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/gahuza/images/icons/icon-192x192.png",
 }
 `;
 
@@ -258,7 +258,7 @@ exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attrib
 }
 `;
 
-exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+exports[`Canonical On Demand Audio Page SEO Canonical link 1`] = `"http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
 
 exports[`Canonical On Demand Audio Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -286,7 +286,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "name": "Kinyarwanda",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+        "@id": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
         "@type": "WebPage",
         "name": "Amakuru ya Gahuzamiryango - Amakuru ya Gahuzamiryango - Gahuza",
       },
@@ -302,7 +302,7 @@ exports[`Canonical On Demand Audio Page SEO Linked data should match text 1`] = 
         "publishingPrinciples": "https://www.bbc.com/gahuza/institutional-49283343",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
+      "url": "http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz",
     },
   ],
 }
@@ -322,7 +322,7 @@ exports[`Canonical On Demand Audio Page SEO OG title 1`] = `"Amakuru ya Gahuzami
 
 exports[`Canonical On Demand Audio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7080/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
+exports[`Canonical On Demand Audio Page SEO OG url 1`] = `"http://localhost:7081/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz"`;
 
 exports[`Canonical On Demand Audio Page SEO Page title 1`] = `"Amakuru ya Gahuzamiryango - Amakuru ya Gahuzamiryango - Gahuza - BBC News Gahuza"`;
 

@@ -8,7 +8,7 @@ import {
 } from '../../common';
 import runCommonEpisodeTests from './commonEpisodeTests';
 
-export default ({ service }) => {
+export default (service: string) => {
   runCommonCrossPlatformTests(service);
   runCommonEpisodeTests();
   runRecentEpisodesTests();
