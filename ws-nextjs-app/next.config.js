@@ -1,9 +1,5 @@
 /* eslint-disable no-param-reassign */
-const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
-const { getClientEnvVars } = require('../src/clientEnvVars');
-
-const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -70,7 +66,6 @@ module.exports = {
   generateEtags: false,
   transpilePackages: ['simorgh'],
   env: {
-    ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
