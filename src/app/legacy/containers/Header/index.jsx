@@ -1,4 +1,4 @@
-import { use, useRef, useState, useMemo } from 'react';
+import { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -12,7 +12,6 @@ import {
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import AccountHeader from '#app/components/Account/AccountHeader';
-import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
@@ -68,16 +67,6 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
-  // const accountContextValue = useContext(AccountContext);
-
-  const accountContextValue = useMemo(
-    () => ({
-      isSignedIn: false,
-      signInUrl: '/signin',
-      forYouUrl: '/for-you',
-    }),
-    [],
-  );
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
@@ -120,9 +109,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         >
-          <AccountContext.Provider value={accountContextValue}>
-            <AccountHeader />
-          </AccountContext.Provider>
+          <AccountHeader />
         </Header>
       ) : (
         <Header
@@ -130,9 +117,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         >
-          <AccountContext.Provider value={accountContextValue}>
-            <AccountHeader />
-          </AccountContext.Provider>
+          <AccountHeader />
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
