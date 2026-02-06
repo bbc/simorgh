@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useRef, useState, useContext } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -11,12 +11,21 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import AccountHeader from '#app/components/Account/AccountHeader';
+import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -43,7 +52,9 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+      >
+        {children}
+      </BrandContainer>
     </div>
   );
 };
@@ -57,6 +68,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
+  const accountContextValue = useContext(AccountContext);
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
@@ -98,13 +110,21 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountContext.Provider value={accountContextValue}>
+            <AccountHeader />
+          </AccountContext.Provider>
+        </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountContext.Provider value={accountContextValue}>
+            <AccountHeader />
+          </AccountContext.Provider>
+        </Header>
       )}
       {isLite && <LiteSiteSummary />}
       <NavigationContainer

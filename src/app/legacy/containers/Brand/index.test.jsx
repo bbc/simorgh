@@ -5,8 +5,10 @@ import {
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import BrandContainer, { getBrandPath } from '.';
 
-const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
-  <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId} />
+const BrandContainerWithContext = (skipLink, scriptLink, linkId, children) => (
+  <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId}>
+    {children}
+  </BrandContainer>
 );
 
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
@@ -51,6 +53,19 @@ describe(`BrandContainer`, () => {
 
       const skipLink = screen.getByTestId('skip-link');
       expect(skipLink).not.toBeNull();
+    });
+
+    it('should render children if provided', () => {
+      render(
+        BrandContainerWithContext(
+          mockSkipLink,
+          mockScriptLink,
+          'brandLink',
+          <div data-testid="brand-slot">slot</div>,
+        ),
+      );
+
+      expect(screen.getByTestId('brand-slot')).toBeInTheDocument();
     });
 
     it('should render script link if provided', () => {

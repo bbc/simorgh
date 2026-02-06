@@ -2,11 +2,11 @@ import { Theme } from '@emotion/react';
 
 const styles = {
   wrapper: {
-    marginInlineStart: 'auto',
-    width: '100%',
     display: 'flex',
-    justifyContent: 'flex-end',
-    paddingInlineStart: '1rem',
+    alignitems: 'center',
+    margininlineStart: 'auto',
+    flexshrink: 0,
+    paddinginlineStart: '1rem',
   },
 
   link: ({ palette }: Theme) => ({
