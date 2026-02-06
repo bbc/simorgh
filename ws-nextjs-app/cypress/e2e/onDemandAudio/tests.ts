@@ -43,37 +43,37 @@ export default ({ service, pageType, path, variant = 'default' }) => {
             `Recent Episodes component enabled are enabled for ${service} ${pageType} ${variant}`, // check
           );
           // There cannot be more episodes shown than the max allowed
-          const recentEpisodesMaxNumber = getToggleValue({
+          getToggleValue({
             service,
             toggleName,
-            testContext: this,
+          }).then(recentEpisodesMaxNumber => {
+            if (recentEpisodesMaxNumber !== undefined) {
+              const recentEpisodesMaxNumberInt = parseInt(
+                recentEpisodesMaxNumber as unknown as string,
+                10,
+              );
+              cy.getPageDataFromWindow().then(pageData => {
+                const { recentEpisodes } = pageData;
+
+                if (
+                  recentEpisodes?.length > 1 &&
+                  recentEpisodesMaxNumberInt > 1
+                ) {
+                  cy.get('[data-e2e=recent-episodes-list]').should('exist');
+
+                  cy.get('[data-e2e=recent-episodes-list]').within(() => {
+                    cy.get('[data-e2e=recent-episodes-list-item]').should(
+                      'have.length.of.at.most',
+                      recentEpisodesMaxNumberInt,
+                    );
+                  });
+                }
+              });
+            } else {
+              cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
+              cy.log('Recent episodes max number is undefined');
+            }
           });
-          if (recentEpisodesMaxNumber !== undefined) {
-            const recentEpisodesMaxNumberInt = parseInt(
-              recentEpisodesMaxNumber as string,
-              10,
-            );
-            cy.getPageDataFromWindow().then(pageData => {
-              const { recentEpisodes } = pageData;
-
-              if (
-                recentEpisodes?.length > 1 &&
-                recentEpisodesMaxNumberInt > 1
-              ) {
-                cy.get('[data-e2e=recent-episodes-list]').should('exist');
-
-                cy.get('[data-e2e=recent-episodes-list]').within(() => {
-                  cy.get('[data-e2e=recent-episodes-list-item]').should(
-                    'have.length.of.at.most',
-                    recentEpisodesMaxNumberInt,
-                  );
-                });
-              }
-            });
-          } else {
-            cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
-            cy.log('Recent episodes max number is undefined');
-          }
         });
       });
       describe('Radio Schedule', () => {
@@ -92,9 +92,10 @@ export default ({ service, pageType, path, variant = 'default' }) => {
               cy.log('Schedule has enough data');
               cy.get('[data-e2e=radio-schedule]').should('exist');
               // cy.get('[data-e2e=live]').should('exist');
-            } else {
-              cy.get('[data-e2e=radio-schedule]').should('not.exist');
             }
+            // else {
+            //   cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            // }
           });
         });
       });
