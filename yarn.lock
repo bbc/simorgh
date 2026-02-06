@@ -17409,6 +17409,7 @@ __metadata:
     undici: "npm:7.18.2"
     url-parse: "npm:1.5.10"
     wait-on: "npm:9.0.3"
+    webpack: "npm:5.104.1"
     webpack-bundle-analyzer: "npm:5.1.1"
     webpack-cli: "npm:6.0.1"
     webpack-dev-server: "npm:5.2.3"
@@ -19531,7 +19532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5":
+"webpack@npm:5, webpack@npm:5.104.1":
   version: 5.104.1
   resolution: "webpack@npm:5.104.1"
   dependencies:
