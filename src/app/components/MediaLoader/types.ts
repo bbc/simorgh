@@ -271,7 +271,7 @@ export type ClipMediaBlock = {
         duration: string;
         kind: string;
         guidance: string | null;
-        orientation: string | null;
+        orientation: Orientations;
       };
       isEmbeddingAllowed: boolean;
     };
