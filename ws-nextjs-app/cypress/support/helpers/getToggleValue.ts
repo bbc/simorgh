@@ -5,36 +5,25 @@ import { Services } from '#app/models/types/global';
  * Resolves to undefined if the toggle is not found or not enabled.
  */
 
-type Context = { skip: () => void };
-
 const getToggleValue = ({
   service,
   toggleName,
-  testContext,
 }: {
   service: Services;
   toggleName: string;
-  testContext: Context;
-}) => {
-  cy.log(`DEBUG cy.getToggles: type = ${typeof cy.getToggles}`);
-  cy.log(`DEBUG cy.getToggles: ${cy.getToggles}`);
-
-  let toggleValue: string | undefined;
-
+}): Cypress.Chainable<string | undefined> => {
   if (typeof cy.getToggles === 'function') {
     cy.getToggles(service);
-
-    cy.fixture(`toggles/${service}.json`).then(toggles => {
+    return cy.fixture(`toggles/${service}.json`).then(toggles => {
       const toggle = toggles[toggleName];
       if (toggle?.enabled) {
-        toggleValue = toggle.value;
+        return toggle.value;
       }
-      toggleValue = undefined;
+      return undefined;
     });
-  } else {
-    testContext.skip();
   }
-  return toggleValue;
+  // Return a Cypress chainable that resolves to undefined
+  return cy.wrap(undefined as string | undefined);
 };
 
 export default getToggleValue;
