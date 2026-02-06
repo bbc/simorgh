@@ -160,14 +160,12 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
     video: (props: { blocks: MediaBlock[] }) => {
       const { blocks } = props;
       const isPortrait = isPortraitVideo(blocks);
-      const className = isPortrait ? 'portrait-clip-media' : '';
 
       return (
         <div css={isPortrait && styles.portraitVideoPlayer}>
           <MediaLoader
             blocks={props.blocks}
             css={[styles.bodyMedia, styles.videoPost]}
-            className={className}
           />
         </div>
       );

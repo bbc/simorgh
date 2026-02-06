@@ -138,7 +138,7 @@ export default {
     }),
   portraitVideoPlayer: () =>
     css({
-      '.portrait-clip-media': {
+      '.media-container': {
         margin: '20px auto 0',
         width: `${pixelsToRem(247)}rem`,
       },
