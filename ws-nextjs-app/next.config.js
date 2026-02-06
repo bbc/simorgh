@@ -65,7 +65,7 @@ module.exports = {
   reactStrictMode: true,
   distDir: 'build',
   output: 'standalone',
-  assetPrefix: isLocal ? undefined : assetPrefix,
+  assetPrefix,
   poweredByHeader: false,
   generateEtags: false,
   transpilePackages: ['simorgh'],
