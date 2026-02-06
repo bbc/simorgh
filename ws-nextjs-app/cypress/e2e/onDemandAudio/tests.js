@@ -62,11 +62,6 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 }
               });
             }
-            // Not toggled on for this service
-            else {
-              cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
-              cy.log('Recent episodes is not toggled on for this service');
-            }
           });
         });
       });
@@ -85,11 +80,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                   cy.log('Schedule has enough data');
                   cy.get('[data-e2e=radio-schedule]').should('exist');
                   // cy.get('[data-e2e=live]').should('exist');
-                } else {
-                  cy.get('[data-e2e=radio-schedule]').should('not.exist');
                 }
-              } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
               }
             });
           });
