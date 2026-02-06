@@ -1,7 +1,17 @@
 import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
-  headline: 'Sujets',
+  headline: 'Tous les sujets',
+  analytics: {
+    name: 'afrique.topics.page',
+    producer: 'AFRIQUE',
+  },
+  atiAnalytics: {
+    contentId: 'urn:bbc:tipo:topic:afrique-topics-index',
+    contentType: 'index-category',
+    pageIdentifier: 'afrique.topics.index.page',
+    pageTitle: 'Tous les sujets',
+  },
   topics: [
     {
       id: 'cqywjv1rwgxt',
@@ -37,11 +47,6 @@ const topics: TopicsFixtureData = {
       topicName: 'Afrique',
       topicUrl: '/afrique/topics/cvqxn2k7kv7t',
       id: 'cvqxn2k7kv7t',
-    },
-    {
-      topicName: 'Afrique',
-      topicUrl: '/afrique/topics/c95y3ry6622t',
-      id: 'c95y3ry6622t',
     },
     {
       topicName: "Afrique de l'Est",
