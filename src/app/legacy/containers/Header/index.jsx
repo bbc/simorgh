@@ -1,4 +1,4 @@
-import { use, useRef, useState, useContext } from 'react';
+import { use, useRef, useState, useMemo } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -68,7 +68,16 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const isOperaMini = useOperaMiniDetection();
 
   const brandRef = useRef(null);
-  const accountContextValue = useContext(AccountContext);
+  // const accountContextValue = useContext(AccountContext);
+
+  const accountContextValue = useMemo(
+    () => ({
+      isSignedIn: false,
+      signInUrl: '/signin',
+      forYouUrl: '/for-you',
+    }),
+    [],
+  );
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
