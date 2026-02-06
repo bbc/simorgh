@@ -20,7 +20,6 @@ module.exports = {
           },
         ],
       },
-
       // Service worker headers to allow scope to be set correctly */
       {
         source: '/:service/sw.js',
@@ -58,24 +57,24 @@ module.exports = {
       },
     ];
   },
-  reactStrictMode: true,
-  distDir: 'build',
-  output: 'standalone',
   assetPrefix,
-  poweredByHeader: false,
-  generateEtags: false,
-  transpilePackages: ['simorgh'],
+  compiler: { emotion: true },
+  distDir: 'build',
   env: {
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
-  compiler: { emotion: true },
+  generateEtags: false,
+  output: 'standalone',
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
+  poweredByHeader: false,
+  reactStrictMode: true,
+  transpilePackages: ['simorgh'],
   webpack: (config, { webpack, isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
