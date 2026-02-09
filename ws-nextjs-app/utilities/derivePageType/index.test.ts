@@ -7,6 +7,7 @@ import {
   HOME_PAGE,
   UNKNOWN_PAGE,
   TOPIC_PAGE,
+  AUDIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -63,6 +64,18 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/institutional-1234567';
     const result = derivePageType(pathname);
     expect(result).toEqual(ARTICLE_PAGE);
+  });
+
+  it('should return AUDIO_PAGE if pathname includes `podcast`', () => {
+    const pathname = '/arabic/podcasts/p02pc9qc/p08wtg4d';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(AUDIO_PAGE);
+  });
+
+  it('should return AUDIO_PAGE if pathname includes `radio`', () => {
+    const pathname = '/arabic/bbc_arabic_radio/w3ct01yb`';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(AUDIO_PAGE);
   });
 
   it('should return Unknown if pathname does not include live or send', () => {
