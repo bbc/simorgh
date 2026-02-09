@@ -53,7 +53,7 @@ const advertisingDirectives = {
   ],
 };
 
-const advertisingCountryScripts = (country) => {
+export const advertisingCountryScripts = (country) => {
     return advertisingServiceCountryDomains(country).map(data => data?.domain)
 };
 
@@ -214,6 +214,7 @@ const directives = {
       'https://www.riddle.com',
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
     ],
@@ -245,6 +246,7 @@ const directives = {
       'https://www.riddle.com',
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
+      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
       "'unsafe-eval'",
@@ -300,7 +302,7 @@ export const generateConnectSrc = ({
 }) => {
   if (shouldServeRelaxedCsp) return ["'self'", 'https:','ws:', 'wss:'];
 
-  return isLive ? ["'self'", 'https:', 'wss:'] : ["'self'", 'https:', 'ws:', 'wss:'];
+  return isLive ? ["'self'", 'https:'] : ["'self'", 'https:', 'ws:', 'wss:'];
 };
 
 export const generateDefaultSrc = ({ shouldServeRelaxedCsp = false }) => {
@@ -366,10 +368,10 @@ export const generateScriptSrc = ({
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
     return [
-      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive, , ...advertisingCountryScriptsArray]),
+      ...new Set([...insertedNonce, ...advertisingCountryScriptsArray, ...directives.scriptSrc.canonicalNonLive]),
     ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
-  return [...insertedNonce, ...directives.scriptSrc.canonicalLive, ...advertisingCountryScriptsArray].sort();
+  return [...insertedNonce, ...advertisingCountryScriptsArray, ...directives.scriptSrc.canonicalLive].sort();
 };
 
 export const generateStyleSrc = ({
