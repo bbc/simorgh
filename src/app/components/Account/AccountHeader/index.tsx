@@ -1,12 +1,25 @@
-import { use } from 'react';
+import { useContext } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 const AccountHeader = () => {
-  const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
-  const { translations } = use(ServiceContext);
+  const { isSignedIn, signInUrl, forYouUrl } = useContext(AccountContext);
+  const { translations, service } = useContext(ServiceContext);
+  const { toggles } = useContext(RequestContext);
+
+  const { account } = getToggleDefinitions(toggles);
+
+  const enabledForService =
+    account?.enabled &&
+    (account?.value
+      ? String(account.value).split('|').includes(service)
+      : true);
+
+  if (!enabledForService) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
   if (!href) return null;

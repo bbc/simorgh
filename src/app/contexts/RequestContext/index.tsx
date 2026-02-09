@@ -6,6 +6,7 @@ import {
   Services,
   Variants,
   ServerSideExperiment,
+  Toggles,
 } from '#app/models/types/global';
 import getStatsDestination from './getStatsDestination';
 import getOriginContext from './getOriginContext';
@@ -42,6 +43,7 @@ export type RequestContextProps = {
   country?: string | null;
   nonce?: string | null;
   cspHeader: string | null;
+  toggles?: Toggles;
 };
 
 export const RequestContext = createContext<RequestContextProps>(
