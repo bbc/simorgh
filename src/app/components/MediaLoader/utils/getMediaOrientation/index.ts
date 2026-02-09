@@ -6,26 +6,18 @@ const ORIENTATION_MAPPING: Record<string, Orientations> = {
   ORIGINAL: 'landscape',
 };
 
-const transformOrientationConfigToUpperCase = (
-  orientationConfig: string[],
-): string[] => {
-  return orientationConfig.map(setting => setting.toUpperCase());
-};
-
 export default (mediaOrientationConfig?: string[]): Orientations => {
   if (!mediaOrientationConfig) {
     return ORIENTATION_MAPPING.ORIGINAL;
   }
 
-  const transformedConfig = transformOrientationConfigToUpperCase(
-    mediaOrientationConfig,
+  const transformedConfig = mediaOrientationConfig.map(setting =>
+    setting.toUpperCase(),
   );
 
   const orientationType =
-    transformedConfig.find(orientationConfig =>
-      Object.keys(ORIENTATION_MAPPING).includes(
-        orientationConfig.toUpperCase(),
-      ),
+    transformedConfig.find(
+      orientationConfig => orientationConfig in ORIENTATION_MAPPING,
     ) ?? 'ORIGINAL';
 
   return ORIENTATION_MAPPING[orientationType];
