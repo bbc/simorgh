@@ -406,13 +406,6 @@ export const generateWorkerSrc = ({ isAmp, shouldServeRelaxedCsp = false }) => {
  * On localhost these CSP headers currently only apply on the production build.
  * `yarn build && yarn start` & visit a localhost URL.
  * View the developer console for errors.
- *
- * @param {Object} options
- * @param {boolean} options.isAmp
- * @param {boolean} options.isLive
- * @param {string|null} [options.nonce]
- * @param {boolean} [options.shouldServeRelaxedCsp]
- * @param {string|null} [options.country]
  */
 export const cspDirectives = ({
   isAmp,

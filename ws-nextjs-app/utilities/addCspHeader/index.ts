@@ -82,7 +82,7 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     isLive,
     shouldServeRelaxedCsp,
     country,
-  });
+  } as Record<string, unknown>);
 
   const contentSecurityPolicyHeaderValue = directiveToString({
     ...directives,
