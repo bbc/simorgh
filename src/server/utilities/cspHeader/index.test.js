@@ -565,8 +565,7 @@ describe('Content Security Policy country-specific ad domains', () => {
     const countriesToTest = ['uk'];
     countriesToTest.forEach(country => {
       const advertisingCountryScriptsArray = advertisingCountryScripts(country);
-      const scriptSrc = generateScriptSrc({ isAmp: false, isLive: true, advertisingCountryScriptsArray });
-      expect(scriptSrc).not.toContain(country);
+      expect(advertisingCountryScriptsArray).toHaveLength(0);
     });
   });
 });
