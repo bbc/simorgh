@@ -34,7 +34,7 @@ const formatReadTime = ({
     'sinhala',
     'yoruba',
   ];
-  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
+  const servicesWithoutColon: Services[] = ['igbo', 'pidgin', 'turkce'];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
