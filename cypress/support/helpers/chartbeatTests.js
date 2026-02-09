@@ -1,9 +1,9 @@
 export default () => {
   describe('Chartbeat', () => {
     it('should have a script with src value set to chartbeat source', () => {
-      cy.get(`script[src="https://static.chartbeat.com/js/chartbeat.js"]`).should(
-        'exist',
-      );
+      cy.get(
+        `script[src="https://static.chartbeat.com/js/chartbeat.js"]`,
+      ).should('exist');
     });
   });
 
