@@ -143,7 +143,12 @@ const PWAPromotionalBannerTreatment = ({
     [onPrimaryClickTrack, promptInstall],
   );
 
-  if (!isVisible || !isInstallable || !promotionalBanner) {
+  if (
+    !isVisible ||
+    !isInstallable ||
+    !promotionalBanner?.primaryButton?.text ||
+    !promotionalBanner?.secondaryButton?.text
+  ) {
     return null;
   }
 
