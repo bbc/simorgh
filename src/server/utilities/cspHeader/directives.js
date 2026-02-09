@@ -412,7 +412,7 @@ export const cspDirectives = ({
   isLive,
   nonce = null,
   shouldServeRelaxedCsp = false,
-  country = null,
+  country = '',
 }) => {
   return {
     directives: {
