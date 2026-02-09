@@ -80,7 +80,7 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     isAmp,
     isLive,
     shouldServeRelaxedCsp,
-    country,
+    country?,
   });
 
   const contentSecurityPolicyHeaderValue = directiveToString({
