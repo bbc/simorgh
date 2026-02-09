@@ -57,9 +57,6 @@ class CustomTestEnvironment extends TestEnvironment {
           ...(shouldPassArticleHeaders.includes(this.pageType) && {
             'page-type': 'article',
           }),
-          ...(this.pageType === 'On Demand Audio Page' && {
-            'page-type': 'audio',
-          }),
         },
       });
 

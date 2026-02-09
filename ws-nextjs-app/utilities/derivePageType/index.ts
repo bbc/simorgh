@@ -8,7 +8,6 @@ import {
   HOME_PAGE,
   UNKNOWN_PAGE,
   TOPIC_PAGE,
-  AUDIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -53,8 +52,6 @@ export default function derivePageType(pathname: string): PageTypes {
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
   if (sanitisedPathname.includes('topics')) return TOPIC_PAGE;
-  if (sanitisedPathname.includes('podcast')) return AUDIO_PAGE;
-  if (sanitisedPathname.includes('radio')) return AUDIO_PAGE;
   if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
   if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
 

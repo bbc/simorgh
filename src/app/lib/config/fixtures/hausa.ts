@@ -1,17 +1,7 @@
 import { TopicsFixtureData } from './types';
 
 const topics: TopicsFixtureData = {
-  headline: 'Duk batutuwa',
-  analytics: {
-    name: 'hausa.topics.page',
-    producer: 'HAUSA',
-  },
-  atiAnalytics: {
-    contentId: 'urn:bbc:tipo:topic:hausa-topics-index',
-    contentType: 'index-category',
-    pageIdentifier: 'hausa.topics.index.page',
-    pageTitle: 'Duk batutuwa',
-  },
+  headline: 'Batutuwa',
   topics: [
     {
       topicName: "'Yan awaren Biafra",
@@ -1633,6 +1623,11 @@ const topics: TopicsFixtureData = {
       topicName: 'Man Fetur',
       topicUrl: '/hausa/topics/c2dwqj0z2pdt',
       id: 'c2dwqj0z2pdt',
+    },
+    {
+      topicName: 'Man Fetur',
+      topicUrl: '/hausa/topics/c5qvpx03p7dt',
+      id: 'c5qvpx03p7dt',
     },
     {
       topicName: 'Manchester City',

@@ -409,10 +409,6 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/topics/c88nzggm8gxt',
         hideOnLiteSite: true,
       },
-      {
-        title: 'Tous les sujets',
-        url: '/afrique/topics',
-      },
     ],
   },
 };

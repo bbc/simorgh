@@ -1,5 +1,9 @@
 /* eslint-disable no-param-reassign */
+const dotenv = require('dotenv');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+const { getClientEnvVars } = require('../src/clientEnvVars');
+
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -20,6 +24,7 @@ module.exports = {
           },
         ],
       },
+
       // Service worker headers to allow scope to be set correctly */
       {
         source: '/:service/sw.js',
@@ -57,24 +62,25 @@ module.exports = {
       },
     ];
   },
-  assetPrefix,
-  compiler: { emotion: true },
+  reactStrictMode: true,
   distDir: 'build',
+  output: 'standalone',
+  assetPrefix: isLocal ? undefined : assetPrefix,
+  poweredByHeader: false,
+  generateEtags: false,
+  transpilePackages: ['simorgh'],
   env: {
+    ...(isLocal && getClientEnvVars(DOT_ENV_CONFIG, { stringify: false })),
     LOG_TO_CONSOLE: 'true',
     NEXTJS: 'true',
   },
-  generateEtags: false,
-  output: 'standalone',
+  compiler: { emotion: true },
   /*
    Requires pages that are routed to have the .page extension, e.g. [variant].page.tsx,
    which allows for co-locating components within the pages directory, e.g. styles.ts
    - https://nextjs.org/docs/api-reference/next.config.js/custom-page-extensions#including-non-page-files-in-the-pages-directory
   */
   pageExtensions: ['page.tsx', 'page.ts', 'api.tsx', 'api.ts'],
-  poweredByHeader: false,
-  reactStrictMode: true,
-  transpilePackages: ['simorgh'],
   webpack: (config, { webpack, isServer }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,

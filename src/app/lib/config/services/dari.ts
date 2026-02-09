@@ -358,7 +358,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 10,
+      numberOfItems: 5,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -443,12 +443,8 @@ export const service: DefaultServiceConfig = {
         url: '/dari/topics/c24r373gngzt',
       },
       {
-        title: 'دانش',
+        title: 'ساینس',
         url: '/dari/topics/clyl797dek3t',
-      },
-      {
-        title: 'فرهنگ',
-        url: '/dari/topics/c4g5r3r52zet',
       },
       {
         title: 'برنامه‌های رادیویی',

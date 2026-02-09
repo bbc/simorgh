@@ -141,9 +141,7 @@ const RecentAudioEpisodes = ({
               <VisuallyHiddenText>
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
-                  format: episode?.duration?.includes('H')
-                    ? 'h,mm,ss'
-                    : 'mm,ss',
+                  format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>

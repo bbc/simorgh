@@ -1,6 +1,5 @@
 import { Summary } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { ATIData } from '#app/components/ATIAnalytics/types';
 
 export type Topic = {
   topicName: string;
@@ -8,15 +7,8 @@ export type Topic = {
   id: string;
 };
 
-export type TopicsAnalyticsData = {
-  name: string;
-  producer: string;
-};
-
 export type TopicsFixtureData = {
   headline: string;
-  analytics: TopicsAnalyticsData;
-  atiAnalytics?: ATIData;
   topics?: Topic[];
 };
 
@@ -26,7 +18,6 @@ export type PageData = {
   totalItems: number;
   metadata: {
     type: string;
-    atiAnalytics?: ATIData;
   };
 };
 
