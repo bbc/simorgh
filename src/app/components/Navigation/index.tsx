@@ -12,6 +12,7 @@ import LanguageNavigation from './LanguageNavigation/lazy';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import { NavigationItem, NavigationContainerProps } from './types';
+import TopLevelNav from './TopLevelNav';
 
 const renderListItems = (
   Li: React.ElementType,
@@ -99,7 +100,6 @@ const NavigationContainer = ({
   // Prefer navItems passed from props over service config
   // Eventually all services will migrate to passing navItems via props
   const navigation = navItems || navFromServiceConfig;
-
   if (!navigation || navigation.length === 0) {
     return null;
   }
@@ -144,16 +144,23 @@ const NavigationContainer = ({
 
   const Navigation = isAmp ? Amp : Canonical;
 
+  // --- Render TopLevelNav above the main navigation list ---
   return (
-    <Navigation
-      scrollableListItems={scrollableListItems}
-      dropdownListItems={dropdownListItems}
-      menuAnnouncedText={navMenuText}
-      dir={dir}
-      script={script}
-      service={service}
-      blocks={blocks}
-    />
+    <>
+      <div css={{ marginBottom: '1rem', fontWeight: 'bold' }}>
+        Navigation test: This is showing on the page.
+      </div>
+      <TopLevelNav dropdownList={dropdownListItems} dir={dir} />
+      <Navigation
+        scrollableListItems={scrollableListItems}
+        dropdownListItems={null}
+        menuAnnouncedText={navMenuText}
+        dir={dir}
+        script={script}
+        service={service}
+        blocks={blocks}
+      />
+    </>
   );
 };
 

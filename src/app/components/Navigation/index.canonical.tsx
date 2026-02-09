@@ -1,6 +1,6 @@
 import { useState, use } from 'react';
 import styled from '@emotion/styled';
-import Navigation from '#psammead/psammead-navigation/src';
+import Navigation from '#src/app/components/Navigation';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
@@ -13,10 +13,12 @@ import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { CanonicalNavigationContainerProps } from './types';
+import TopLevelNav from './TopLevelNav';
 
 const ScrollableWrapper = styled.div`
   position: relative;
 `;
+
 const Divider = styled.div`
   position: absolute;
   width: calc(100vw - 0.8rem);
@@ -37,6 +39,7 @@ const Divider = styled.div`
     display: none;
   }
 `;
+
 const CanonicalNavigationContainer = ({
   script,
   service,
@@ -45,10 +48,13 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
+  navItems,
+  propsForTopBarOJComponent,
 }: CanonicalNavigationContainerProps) => {
   const { isLite } = use(RequestContext);
   const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
+
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
       setIsOpen(false);
@@ -58,27 +64,38 @@ const CanonicalNavigationContainer = ({
   const topBarBlocks = Array.isArray(blocks) ? (blocks as TopStoryItem[]) : [];
 
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <ScrollableWrapper>
-        {!isLite && (
-          <CanonicalMenuButton
-            announcedText={menuAnnouncedText}
-            isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-            dir={dir}
-            script={script}
-          />
-        )}
-        {!isOpen && (
-          <ScrollableNavigation dir={dir}>
-            {scrollableListItems}
-          </ScrollableNavigation>
-        )}
-      </ScrollableWrapper>
-      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
-      <Divider />
-      {enabled && <TopBarOJs blocks={topBarBlocks} />}
-    </Navigation>
+    <>
+      <TopLevelNav dropdownList={dropdownListItems} dir={dir} />
+      <Navigation
+        script={script}
+        service={service}
+        dir={dir}
+        isOpen={isOpen}
+        navItems={navItems}
+        propsForTopBarOJComponent={propsForTopBarOJComponent}
+        menuAnnouncedText={menuAnnouncedText}
+        scrollableListItems={
+          <ScrollableWrapper>
+            {!isLite && (
+              <CanonicalMenuButton
+                announcedText={menuAnnouncedText}
+                isOpen={isOpen}
+                onClick={() => setIsOpen(!isOpen)}
+                dir={dir}
+                script={script}
+              />
+            )}
+            {!isOpen && (
+              <ScrollableNavigation dir={dir}>
+                {scrollableListItems}
+              </ScrollableNavigation>
+            )}
+          </ScrollableWrapper>
+        }
+        divider={<Divider />}
+        topBarOJs={enabled ? <TopBarOJs blocks={topBarBlocks} /> : null}
+      />
+    </>
   );
 };
 

@@ -20,8 +20,21 @@ export type PropsForTopBarOJComponent = {
 };
 
 export type NavigationContainerProps = {
+  script: unknown;
+  service: string;
+  dir: string;
+  id?: string;
+  ampOpenClass?: string;
+  scrollableListItems: ReactNode;
+  dropdownListItems: ReactNode;
+  menuAnnouncedText: string;
+  ampMenuButton?: ReactNode;
+  blocks?: unknown[];
   navItems?: NavigationItem[] | null;
   propsForTopBarOJComponent?: PropsForTopBarOJComponent | null;
+  divider?: ReactNode;
+  topBarOJs?: ReactNode;
+  isOpen?: boolean;
 };
 
 export type CanonicalNavigationContainerProps = {
@@ -32,6 +45,8 @@ export type CanonicalNavigationContainerProps = {
   scrollableListItems: ReactNode;
   dropdownListItems: ReactNode;
   blocks?: unknown[];
+  navItems?: NavigationItem[] | null;
+  propsForTopBarOJComponent?: PropsForTopBarOJComponent | null;
 };
 
 export type AmpNavigationContainerProps = {
@@ -41,6 +56,8 @@ export type AmpNavigationContainerProps = {
   menuAnnouncedText: string;
   scrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
+  navItems?: NavigationItem[] | null;
+  propsForTopBarOJComponent?: PropsForTopBarOJComponent | null;
 };
 
 export type NavigationBaseProps = {

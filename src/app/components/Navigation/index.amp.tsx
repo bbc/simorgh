@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import Navigation from '#psammead/psammead-navigation/src';
+import Navigation from '#src/app/components/Navigation';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   AmpDropdown,
@@ -38,26 +38,30 @@ const AmpNavigationContainer = ({
     dir={dir}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME as any}
-  >
-    <AmpMenuButton
-      announcedText={menuAnnouncedText}
-      onToggle={`
-        ${DROPDOWN_ID}.toggleVisibility,
-        ${SCROLLABLE_ID}.toggleClass(class=${HIDDEN_CLASS_NAME}),
-        ${NAVIGATION_ID}.toggleClass(class=${OPEN_CLASS_NAME})
-      `}
-      dir={dir}
-      script={script}
-    />
-    {/* Hidden attribute allows us to toggle visibility on the dropdown
-    using AMP actions. */}
-    <AmpDropdown id={DROPDOWN_ID} data-e2e="dropdown-nav" hidden>
-      {dropdownListItems}
-    </AmpDropdown>
-    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
-      {scrollableListItems}
-    </StyledAmpScrollableNavigation>
-  </Navigation>
+    scrollableListItems={
+      <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
+        {scrollableListItems}
+      </StyledAmpScrollableNavigation>
+    }
+    dropdownListItems={
+      <AmpDropdown id={DROPDOWN_ID} data-e2e="dropdown-nav" hidden>
+        {dropdownListItems}
+      </AmpDropdown>
+    }
+    menuAnnouncedText={menuAnnouncedText}
+    ampMenuButton={
+      <AmpMenuButton
+        announcedText={menuAnnouncedText}
+        onToggle={`
+          ${DROPDOWN_ID}.toggleVisibility,
+          ${SCROLLABLE_ID}.toggleClass(class=${HIDDEN_CLASS_NAME}),
+          ${NAVIGATION_ID}.toggleClass(class=${OPEN_CLASS_NAME})
+        `}
+        dir={dir}
+        script={script}
+      />
+    }
+  />
 );
 
 export default AmpNavigationContainer;

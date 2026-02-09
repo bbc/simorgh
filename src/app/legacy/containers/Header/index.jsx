@@ -11,9 +11,9 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import NavigationContainer from '#src/app/components/Navigation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
-import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {

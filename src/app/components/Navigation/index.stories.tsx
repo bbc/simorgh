@@ -10,6 +10,21 @@ import Navigation from '.';
 import type { Services } from '#models/types/global';
 import type { PropsForTopBarOJComponent } from './types';
 
+const mockScript = {}; // Replace with a realistic script object if needed
+const mockDir = 'ltr'; // or 'rtl' depending on the service
+const mockScrollableListItems = (
+  <ul>
+    <li>Mock Item</li>
+  </ul>
+);
+const mockDropdownListItems = (
+  <ul>
+    <li>Mock Dropdown</li>
+  </ul>
+);
+const mockMenuAnnouncedText = 'Menu';
+const mockService = 'arabic';
+
 type StoryComponentProps = {
   isAmp?: boolean;
   service: Services;
@@ -18,7 +33,7 @@ type StoryComponentProps = {
 
 const Component = ({
   isAmp = false,
-  service,
+  service = mockService,
   propsForTopBarOJComponent,
 }: StoryComponentProps) => (
   <RequestContextProvider
@@ -28,6 +43,12 @@ const Component = ({
     pathname="/pathname"
   >
     <Navigation
+      script={mockScript}
+      service={service}
+      dir={mockDir}
+      scrollableListItems={mockScrollableListItems}
+      dropdownListItems={mockDropdownListItems}
+      menuAnnouncedText={mockMenuAnnouncedText}
       propsForTopBarOJComponent={propsForTopBarOJComponent ?? undefined}
     />
   </RequestContextProvider>
