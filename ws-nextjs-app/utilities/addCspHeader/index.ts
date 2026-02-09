@@ -80,16 +80,11 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     isAmp,
     isLive,
     shouldServeRelaxedCsp,
+    country,
   });
-
-  const BUMP4SpecificConditions = {
-    'media-src': ['https:', 'blob:'],
-    'connect-src': ['https:'],
-  };
 
   const contentSecurityPolicyHeaderValue = directiveToString({
     ...directives,
-    ...BUMP4SpecificConditions,
   });
 
   ctx.res?.setHeader(

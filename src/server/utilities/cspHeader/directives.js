@@ -41,7 +41,8 @@ const advertisingDirectives = {
     'https://*.webcontentassessor.com',
     'https://*.amazon-adsystem.com',
     'https://*.teads.tv',
-    ...advertisingServiceCountryDomains,
+    'https://*.covatic.io',
+    'https://*.doubleverify.com',
   ],
   defaultSrc: [...bbcDomains, 'https://*.googlesyndication.com'],
   styleSrc: ['https://fonts.googleapis.com'],
@@ -50,6 +51,10 @@ const advertisingDirectives = {
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/',
     'https://*.teads.tv',
   ],
+};
+
+const advertisingCountryScripts = (country) => {
+    return advertisingServiceCountryDomains(country).map(data => data?.domain)
 };
 
 const directives = {
@@ -209,7 +214,6 @@ const directives = {
       'https://www.riddle.com',
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
-      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
     ],
@@ -241,7 +245,6 @@ const directives = {
       'https://www.riddle.com',
       'https://*.mapcreator.io', // Election includes
       'https://*.thomsonreuters.com', // Election includes
-      ...advertisingDirectives.scriptSrc,
       "'self'",
       "'unsafe-inline'",
       "'unsafe-eval'",
@@ -295,9 +298,9 @@ export const generateConnectSrc = ({
   isLive,
   shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeRelaxedCsp) return ["'self' https: ws:"];
+  if (shouldServeRelaxedCsp) return ["'self'", 'https:','ws:', 'wss:'];
 
-  return isLive ? ["'self' https:"] : ["'self' https: ws:"];
+  return isLive ? ["'self'", 'https:', 'wss:'] : ["'self'", 'https:', 'ws:', 'wss:'];
 };
 
 export const generateDefaultSrc = ({ shouldServeRelaxedCsp = false }) => {
@@ -353,6 +356,7 @@ export const generateScriptSrc = ({
   isLive,
   nonce,
   shouldServeRelaxedCsp = false,
+  advertisingCountryScriptsArray = [],
 }) => {
   if (shouldServeRelaxedCsp)
     return ["https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'"];
@@ -362,10 +366,10 @@ export const generateScriptSrc = ({
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
     return [
-      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive]),
+      ...new Set([...insertedNonce, ...directives.scriptSrc.canonicalNonLive, , ...advertisingCountryScriptsArray]),
     ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
-  return [...insertedNonce, ...directives.scriptSrc.canonicalLive].sort();
+  return [...insertedNonce, ...directives.scriptSrc.canonicalLive, ...advertisingCountryScriptsArray].sort();
 };
 
 export const generateStyleSrc = ({
@@ -398,6 +402,7 @@ export const cspDirectives = ({
   isLive,
   nonce = null,
   shouldServeRelaxedCsp = false,
+  country = null,
 }) => {
   return {
     directives: {
@@ -412,6 +417,7 @@ export const cspDirectives = ({
         isLive,
         nonce,
         shouldServeRelaxedCsp,
+        advertisingCountryScriptsArray: advertisingCountryScripts(country),
       }),
       'style-src': generateStyleSrc({ isAmp, isLive, shouldServeRelaxedCsp }),
       'media-src': generateMediaSrc({ shouldServeRelaxedCsp }),
