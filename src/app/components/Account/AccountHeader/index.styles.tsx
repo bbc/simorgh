@@ -3,10 +3,10 @@ import { Theme } from '@emotion/react';
 const styles = {
   wrapper: {
     display: 'flex',
-    alignitems: 'center',
-    margininlineStart: 'auto',
-    flexshrink: 0,
-    paddinginlineStart: '1rem',
+    alignItems: 'center',
+    marginInLineStart: 'auto',
+    flexShrink: 0,
+    paddingInLineStart: '1rem',
   },
 
   link: ({ palette }: Theme) => ({

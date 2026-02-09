@@ -232,7 +232,7 @@ describe('ThemeProvider', () => {
             variant={defaultServiceVariants[service] || 'default'}
           >
             <ServiceContextProvider service={service as Services}>
-              <Brand> {children} </Brand>
+              <Brand>{children}</Brand>
             </ServiceContextProvider>
           </ThemeProvider>,
         );

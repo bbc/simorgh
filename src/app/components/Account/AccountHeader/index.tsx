@@ -8,7 +8,7 @@ const AccountHeader = () => {
   const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
   const { translations } = use(ServiceContext);
 
-  const href = isSignedIn ? forYouUrl : signInUrl || '/signin';
+  const href = (isSignedIn ? forYouUrl : signInUrl) || '/signin';
 
   const label = isSignedIn
     ? (translations?.account?.forYou ?? 'For you')
