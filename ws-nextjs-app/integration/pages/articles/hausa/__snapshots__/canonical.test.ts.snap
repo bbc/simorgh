@@ -114,50 +114,50 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 {
-  "text": "Gasar Kofin Afirka",
-  "url": "/hausa/topics/c71939zq32vt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
   "text": "Wasanni",
   "url": "/hausa/topics/cz74kjgv220t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
 {
   "text": "Nishadi",
   "url": "/hausa/topics/cg726kz37wdt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
 {
   "text": "Cikakkun Rahotanni",
   "url": "/hausa/topics/cnl7wd77wj2t",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
 {
   "text": "Bidiyo",
   "url": "/hausa/topics/cn09qmz4jryt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
 {
   "text": "Shirye-shirye na Musamman",
   "url": "/hausa/topics/cnl7wd9pddlt",
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
 {
   "text": "Shirye-shiryen rediyo",
   "url": "/hausa/topics/c4nx34q5724t",
+}
+`;
+
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Duk batutuwa",
+  "url": "/hausa/topics",
 }
 `;
 

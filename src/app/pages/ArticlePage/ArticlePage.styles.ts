@@ -44,13 +44,38 @@ export default {
     }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
+      display: 'none',
       gridColumn: '1 / span 12',
-
       [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
         gridColumn: '9 / span 4',
         marginTop: '2rem',
       },
     }),
+
+  hideOnDesktop: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
+
+  hideBelowDesktopWidth: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
+
+  underArticleSection: ({ spacings }: Theme) =>
+    css({
+      display: 'block',
+      gridColumn: '9 / span 4',
+      marginTop: '2rem',
+      marginBottom: `${spacings.TRIPLE}rem`,
+    }),
+
   pglColumn: () =>
     css({
       gridColumn: '1 / span 12',
@@ -176,4 +201,21 @@ export default {
     }),
     commonMarginSpacing,
   ],
+  portraitVideoCarousel: ({ mq, spacings }: Theme) =>
+    css({
+      padding: `0 ${pixelsToRem(8)}rem`,
+      marginBottom: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_1_MIN_WIDTH]: {
+        marginBottom: `${spacings.TRIPLE}rem`,
+      },
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `0 ${pixelsToRem(16)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: 0,
+      },
+    }),
 };

@@ -380,10 +380,6 @@ export const service: DefaultServiceConfig = {
         url: '/afrique/bbc_afrique_radio/liveradio',
       },
       {
-        title: 'CAN 2025',
-        url: '/afrique/topics/cnlvpm4xqn9t',
-      },
-      {
         title: 'Afrique',
         url: '/afrique/topics/cvqxn2k7kv7t',
       },
@@ -412,6 +408,10 @@ export const service: DefaultServiceConfig = {
         title: 'Nos émissions',
         url: '/afrique/topics/c88nzggm8gxt',
         hideOnLiteSite: true,
+      },
+      {
+        title: 'Tous les sujets',
+        url: '/afrique/topics',
       },
     ],
   },
