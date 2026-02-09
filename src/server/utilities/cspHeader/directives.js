@@ -53,8 +53,8 @@ const advertisingDirectives = {
   ],
 };
 
-export const advertisingCountryScripts = (country) => {
-    return advertisingServiceCountryDomains(country).map(data => data?.domain)
+export const advertisingCountryScripts = country => {
+  return advertisingServiceCountryDomains(country).map(data => data?.domain);
 };
 
 const directives = {
@@ -300,7 +300,7 @@ export const generateConnectSrc = ({
   isLive,
   shouldServeRelaxedCsp = false,
 }) => {
-  if (shouldServeRelaxedCsp) return ["'self'", 'https:','ws:', 'wss:'];
+  if (shouldServeRelaxedCsp) return ["'self'", 'https:', 'ws:', 'wss:'];
 
   return isLive ? ["'self'", 'https:'] : ["'self'", 'https:', 'ws:', 'wss:'];
 };
@@ -368,10 +368,18 @@ export const generateScriptSrc = ({
   if (!isLive && isAmp) return directives.scriptSrc.ampNonLive.sort();
   if (!isLive && !isAmp)
     return [
-      ...new Set([...insertedNonce, ...advertisingCountryScriptsArray, ...directives.scriptSrc.canonicalNonLive]),
+      ...new Set([
+        ...insertedNonce,
+        ...advertisingCountryScriptsArray,
+        ...directives.scriptSrc.canonicalNonLive,
+      ]),
     ].sort();
   if (isLive && isAmp) return directives.scriptSrc.ampLive.sort();
-  return [...insertedNonce, ...advertisingCountryScriptsArray, ...directives.scriptSrc.canonicalLive].sort();
+  return [
+    ...insertedNonce,
+    ...advertisingCountryScriptsArray,
+    ...directives.scriptSrc.canonicalLive,
+  ].sort();
 };
 
 export const generateStyleSrc = ({
