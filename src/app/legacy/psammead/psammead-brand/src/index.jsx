@@ -215,8 +215,8 @@ const Brand = forwardRef((props, ref) => {
         ) : (
           <StyledBrand {...props} />
         )}
-        {children}
         {skipLink}
+        {children}
         {scriptLink && <div>{scriptLink}</div>}
       </SvgWrapper>
     </Banner>

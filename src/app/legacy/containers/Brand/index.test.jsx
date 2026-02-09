@@ -5,7 +5,12 @@ import {
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import BrandContainer, { getBrandPath } from '.';
 
-const BrandContainerWithContext = (skipLink, scriptLink, linkId, children) => (
+const BrandContainerWithContext = ({
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+}) => (
   <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId}>
     {children}
   </BrandContainer>
