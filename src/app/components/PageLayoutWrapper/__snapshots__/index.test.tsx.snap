@@ -441,14 +441,15 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-alignitems: center;
-  -ms-flex-item-alignitems: center;
-  alignitems: center;
-  margininline-start: auto;
-  -webkit-flexshrink: 0;
-  -ms-flexshrink: 0;
-  flexshrink: 0;
-  paddinginline-start: 1rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-in-line-start: auto;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-in-line-start: 1rem;
 }
 
 .emotion-28 {
