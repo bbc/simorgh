@@ -23,7 +23,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    return null;
+    return new Response('', { status: 503 });
   }
 };
 
@@ -109,19 +109,18 @@ const fetchEventHandler = async event => {
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
-
-    // Inspect the accept header for WebP support
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
-
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
-        fetch(imageUrlWithoutWebp, {
-          mode: 'no-cors',
-        }),
+        (async () => {
+          try {
+            return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
+          } catch (err) {
+            return new Response('', { status: 503 });
+          }
+        })(),
       );
     }
   } else if (isRequestForCacheableFile) {
@@ -130,26 +129,27 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         let response = await cache.match(event.request);
         if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
+          try {
+            response = await fetch(event.request.url);
+            cache.put(event.request, response.clone());
+          } catch (err) {
+            return new Response('', { status: 503 });
+          }
         }
         return response;
       })(),
     );
   } else if (isNavigationMode) {
     const { url } = event.request;
-
     event.respondWith(
       (async () => {
         const client = await self.clients.get(event.clientId);
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
-
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
           if (preloadResp) return preloadResp;
-
           const networkResp = await fetch(event.request);
           isPWADeviceOffline = false;
           return networkResp;
@@ -161,7 +161,6 @@ const fetchEventHandler = async event => {
               getOfflinePageUrl(service),
               self.location.origin,
             ).href;
-
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
               isPWADeviceOffline = true;
