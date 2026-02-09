@@ -4,7 +4,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.3';
+const version = 'v0.3.4';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
 const cacheName = 'simorghCache_v3';
 const pwaClients = new Map();
@@ -53,15 +53,13 @@ const cacheOfflinePageAndResources = async service => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js',
   // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts
   /\.woff2$/,
   // Frosted Promo (test and live environments only)
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-  // Moment
-  /\/moment-lib+.*?\.js$/,
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
@@ -171,7 +169,7 @@ const fetchEventHandler = async event => {
             }
           }
           // fallback to browser default behavior
-          throw err;
+          return new Response('', { status: 503 });
         }
       })(),
     );
@@ -181,12 +179,10 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         const cached = await cache.match(event.request);
         if (cached) return cached;
-        return fetch(event.request);
+        return new Response('', { status: 503 });
       })(),
     );
   }
-
-  return;
 };
 
 self.addEventListener('fetch', fetchEventHandler);
