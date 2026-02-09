@@ -68,9 +68,10 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     countryList = adsNonceToggle.value;
   }
 
-  const country =
+  const countryHeader =
     ctx?.req?.headers?.['x-country'] ||
-    ctx?.req?.headers?.['x-bbc-edge-country'] || null;
+    ctx?.req?.headers?.['x-bbc-edge-country'] || '';
+  const country = Array.isArray(countryHeader) ? countryHeader[0] : countryHeader;
 
   const shouldServeRelaxedCsp =
     hasAdsScripts &&
@@ -80,7 +81,7 @@ const addCspHeader = ({ ctx, service, toggles }: AddCspHeaderProps) => {
     isAmp,
     isLive,
     shouldServeRelaxedCsp,
-    country?,
+    country,
   });
 
   const contentSecurityPolicyHeaderValue = directiveToString({
