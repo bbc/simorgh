@@ -66,5 +66,6 @@ export default {
       top: '50%',
       transform: 'translateY(-50%)',
       insetInlineEnd: `${pixelsToRem(12)}rem`,
+      fill: 'currentColor',
     }),
 };
