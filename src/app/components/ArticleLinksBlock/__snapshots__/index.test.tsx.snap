@@ -272,6 +272,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   inset-inline-end: 0.75rem;
+  fill: currentColor;
 }
 
 .emotion-18 {
@@ -454,9 +455,9 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 .emotion-4 {
-  background: #F6F6F6;
-  padding: 0 0.5rem 1rem;
-  margin: 0;
+  background: #FFFFFF;
+  padding: 0 1rem;
+  margin: 0 0 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,16 +466,9 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 63rem) {
   .emotion-4 {
-    padding: 0 1rem 1rem;
-    margin: 0 -0.2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    padding: 0 1rem 1rem;
+    margin: 0 -1rem 1rem;
   }
 }
 
@@ -563,6 +557,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   inset-inline-end: 0.75rem;
+  fill: currentColor;
 }
 
 .emotion-8 {
@@ -737,9 +732,9 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
 }
 
 .emotion-5 {
-  background: #F6F6F6;
-  padding: 0 0.5rem 1rem;
-  margin: 0;
+  background: #FFFFFF;
+  padding: 0 1rem;
+  margin: 0 0 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -748,16 +743,9 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   width: 100%;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 63rem) {
   .emotion-5 {
-    padding: 0 1rem 1rem;
-    margin: 0 -0.2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-5 {
-    padding: 0 1rem 1rem;
+    margin: 0 -1rem 1rem;
   }
 }
 
@@ -846,6 +834,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match a11y s
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   inset-inline-end: 0.75rem;
+  fill: currentColor;
 }
 
 .emotion-9 {
@@ -970,9 +959,9 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
 }
 
 .emotion-4 {
-  background: #F6F6F6;
-  padding: 0 0.5rem 1rem;
-  margin: 0;
+  background: #141414;
+  padding: 0 1rem;
+  margin: 0 0 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -981,22 +970,15 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   width: 100%;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 63rem) {
   .emotion-4 {
-    padding: 0 1rem 1rem;
-    margin: 0 -0.2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    padding: 0 1rem 1rem;
+    margin: 0 -1rem 1rem;
   }
 }
 
 .emotion-5 {
   position: relative;
-  background-color: #E6E8EA;
+  background-color: #3A3C3E;
   padding: 1rem;
   -webkit-padding-end: 2.375rem;
   padding-inline-end: 2.375rem;
@@ -1033,7 +1015,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   overflow-y: hidden;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  color: #141414;
+  color: #F6F6F6;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1079,6 +1061,7 @@ exports[`Article Links Block Mid Page Article Links Block it should match snapsh
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   inset-inline-end: 0.75rem;
+  fill: currentColor;
 }
 
 .emotion-8 {
