@@ -129,6 +129,13 @@ exports[`AMP Articles Header Navigation link should match text and url 7`] = `
 }
 `;
 
+exports[`AMP Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Duk batutuwa",
+  "url": "/hausa/topics",
+}
+`;
+
 exports[`AMP Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
