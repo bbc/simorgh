@@ -66,25 +66,29 @@ const LatestPostButton = ({
   const showButton = !isFirstPostVisible && hasPendingUpdate;
 
   return (
-    <button
-      ref={buttonRef}
-      type="button"
-      onClick={handleClick}
-      css={styles.button}
-      tabIndex={showButton ? 0 : -1}
-      aria-live="polite"
-      aria-atomic="true"
-      style={{
-        left: `${leftPosition}`,
-        display: showButton ? 'inline-flex' : 'none',
-        transform:
-          leftPosition === '50%' ? 'translateX(-50%)' : 'translateX(-50%)',
-      }}
-    >
-      <RefreshSvg />
-      <span>{refreshButtonText}</span>
-      <VisuallyHiddenText>,is now available.</VisuallyHiddenText>
-    </button>
+    <>
+      <VisuallyHiddenText aria-live="polite">
+        {showButton && <span>New post available</span>}
+      </VisuallyHiddenText>
+      <button
+        ref={buttonRef}
+        type="button"
+        onClick={handleClick}
+        css={styles.button}
+        tabIndex={showButton ? 0 : -1}
+        aria-live="polite"
+        aria-atomic="true"
+        style={{
+          left: `${leftPosition}`,
+          display: showButton ? 'inline-flex' : 'none',
+          transform:
+            leftPosition === '50%' ? 'translateX(-50%)' : 'translateX(-50%)',
+        }}
+      >
+        <RefreshSvg />
+        <span>{refreshButtonText}</span>
+      </button>
+    </>
   );
 };
 
