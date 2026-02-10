@@ -61,6 +61,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'na',
+      readTime: {
+        readTimePrefix: 'Igihe co gusoma',
+        minute: 'iminota',
+      },
       pagination: {
         previousPage: 'Subira inyuma',
         nextPage: 'Ibikurikira',
