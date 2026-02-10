@@ -10,7 +10,7 @@ export default {
       overflowX: 'auto',
       width: '100%',
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: '0 -1rem',
+        margin: `0 -${spacings.DOUBLE}rem`,
       },
     }),
   labelComponent: ({
