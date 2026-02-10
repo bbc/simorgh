@@ -8,6 +8,7 @@ import {
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
+import { Dispatch, RefObject, SetStateAction } from 'react';
 
 export type SMPEvent = {
   playlist?: {
@@ -81,7 +82,7 @@ export type PlayerConfig = {
   ui: PlayerUiConfig;
   playlistObject?: Playlist;
   plugins?: {
-    toLoad: { html: string; playerOnly?: boolean; data?: any }[];
+    toLoad: { html: string; playerOnly?: boolean }[];
   };
 };
 
@@ -124,7 +125,6 @@ export type ConfigBuilderProps = {
   embedUrl?: string;
   embedded?: boolean;
   lang: string;
-  setVideoOverlayContainer?: any;
 };
 
 export type Orientations = 'landscape' | 'portrait';
@@ -167,10 +167,13 @@ export type Player = {
   next: () => void;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
-    pluginName: { [key: string]: string },
+    pluginName: {
+      [key: string]: string | boolean | undefined;
+    },
     parameters?: {
-      name: string;
-      data: {
+      name?: string;
+      setPluginContainer?: Dispatch<SetStateAction<HTMLElement | null>>;
+      data?: {
         adTag?: string;
       };
     },

@@ -135,7 +135,7 @@ export const statsNavigationCallback = async (
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
-  setCurrentItem?: any,
+  setCurrentItem?: (item: PortraitClipMediaBlock) => void,
 ) => {
   const { direction, method } = e || {};
 
@@ -145,7 +145,7 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-    setCurrentItem(blocks[newIndex]);
+    setCurrentItem?.(blocks[newIndex]);
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
       selectedVideo: blocks?.[newIndex],
@@ -193,12 +193,12 @@ const handlePrevNextVideo = ({
 }: {
   direction: 'previous' | 'next';
   blocks: PortraitClipMediaBlock[];
-  setCurrentItem?: any;
+  setCurrentItem?: (item: PortraitClipMediaBlock) => void;
 }) => {
   const player = getPlayerInstance();
   const index = getCurrentIndex({ blocks, player });
   const newIndex = direction === 'next' ? index + 1 : index - 1;
-  setCurrentItem(blocks[newIndex]);
+  setCurrentItem?.(blocks[newIndex]);
   player?.[direction]?.();
 };
 
@@ -211,8 +211,8 @@ export interface PortraitVideoModalProps {
   setVideoOverlayContainerRef?: React.RefObject<
     React.Dispatch<React.SetStateAction<HTMLElement | null>>
   >;
-  setCurrentItem?: any;
-  setControlsDisplayed?: any;
+  setCurrentItem?: (item: PortraitClipMediaBlock) => void;
+  setControlsDisplayed?: (displayed: boolean) => void;
 }
 
 const PortraitVideoModal = ({
@@ -383,8 +383,8 @@ const PortraitVideoModal = ({
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
-            uiControlBarShown: () => setControlsDisplayed(true),
-            uiControlBarHidden: () => setControlsDisplayed(false),
+            uiControlBarShown: () => setControlsDisplayed?.(true),
+            uiControlBarHidden: () => setControlsDisplayed?.(false),
           }}
         />
         <button

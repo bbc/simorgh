@@ -15,7 +15,7 @@ import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
 import { PluginCacheProvider } from './pluginCacheProvider';
-import VideoOverlay from './videoOverlay';
+import VideoOverlay from './VideoOverlay/index';
 
 type PortraitVideoCarouselProps = {
   title: string;

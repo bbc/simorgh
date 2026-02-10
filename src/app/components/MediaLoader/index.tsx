@@ -1,4 +1,12 @@
-import { use, useEffect, useRef, useState } from 'react';
+import {
+  Dispatch,
+  RefObject,
+  SetStateAction,
+  use,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -107,7 +115,9 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
-  setVideoOverlayContainerRef?: React.RefObject<any>;
+  setVideoOverlayContainerRef?: RefObject<
+    Dispatch<SetStateAction<HTMLElement | null>>
+  >;
   playerKey: string;
 };
 
@@ -125,7 +135,6 @@ const MediaContainer = ({
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
-  const playerRef = useRef<any>(null);
   const playerKeyRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -145,8 +154,6 @@ const MediaContainer = ({
               playerElementRef.current,
               playerConfig,
             );
-
-            playerRef.current = mediaPlayer;
 
             if (uniqueId != null) {
               const { mediaPlayers } = window;
@@ -202,12 +209,12 @@ const MediaContainer = ({
               mediaPlayer.loadPlugin(
                 {
                   html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
-                  playerOnly: true as any, // do not enable this plugin for old J2 version of the SMP player due to different UI },
-                  waitOnPluginLoad: true as any,
+                  playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI },
+                  waitOnPluginLoad: true,
                 },
                 {
                   setPluginContainer: setVideoOverlayContainerRef.current,
-                } as any,
+                },
               );
             }
             mediaPlayer.load();
@@ -219,7 +226,14 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerKey]);
+  }, [
+    eventMapping,
+    playerConfig,
+    playerKey,
+    setVideoOverlayContainerRef,
+    showAds,
+    uniqueId,
+  ]);
 
   return (
     <div
@@ -241,7 +255,9 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
-  setVideoOverlayContainerRef?: React.RefObject<any>;
+  setVideoOverlayContainerRef?: RefObject<
+    Dispatch<SetStateAction<HTMLElement | null>>
+  >;
 };
 
 const MediaLoader = ({
