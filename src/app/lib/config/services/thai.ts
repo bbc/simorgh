@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'และ',
+      readTime: {
+        readTimePrefix: 'เวลาอ่าน',
+        minute: 'นาที',
+      },
       pagination: {
         previousPage: 'ก่อนหน้านี้',
         nextPage: 'ถัดไป',

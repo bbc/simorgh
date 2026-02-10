@@ -58,6 +58,10 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'اعلان',
       },
+      readTime: {
+        readTimePrefix: 'د لوستلو وخت',
+        minute: 'دقیقې',
+      },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',

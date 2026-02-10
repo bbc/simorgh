@@ -46,6 +46,10 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'زمان مطالعه',
+        minute: 'دقیقه',
+      },
       pagination: {
         page: 'صفحه',
         previousPage: 'قبلی',
@@ -358,7 +362,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {

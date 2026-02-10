@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'жана',
+      readTime: {
+        readTimePrefix: 'Окуу убактысы',
+        minute: 'мүнөт',
+      },
       pagination: {
         page: 'бет',
         previousPage: 'Артка',

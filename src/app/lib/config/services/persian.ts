@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'آگهی',
       },
+      readTime: {
+        readTimePrefix: 'زمان مطالعه',
+        minute: 'دقیقه',
+      },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       continueReading: 'ادامه مطلب را بخوانید',

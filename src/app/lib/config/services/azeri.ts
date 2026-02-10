@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'və',
+      readTime: {
+        readTimePrefix: 'Oxuma vaxtı',
+        minute: 'dəq',
+      },
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',
