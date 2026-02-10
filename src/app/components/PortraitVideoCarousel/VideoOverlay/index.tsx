@@ -2,21 +2,27 @@ import { useEffect, useState } from 'react';
 import ShareButton from '../../ShareButton';
 import styles from './index.styles';
 
-const ShareToolComponent = ({ shareUrlPath, title }) => {
+const ShareToolComponent = ({ shareUrlPath, title, id }) => {
   const [shareUrl, setShareUrl] = useState('');
 
   useEffect(() => {
     setShareUrl(`https://bbc.com${shareUrlPath}`);
   }, [shareUrlPath]);
+
   return (
     <div key={shareUrlPath} css={styles.shareToolWrapper}>
-      <ShareButton title={title} url={shareUrl} />
+      <ShareButton
+        title={title}
+        url={shareUrl}
+        id={id}
+        type="portrait-video-share-button"
+      />
     </div>
   );
 };
 
 const VideoOverlay = ({ currentItem, controlsDisplayed }) => {
-  const { shareUrl, title } = currentItem?.model?.video || {};
+  const { shareUrl, title, id } = currentItem?.model?.video || {};
 
   return (
     <div css={styles.overlayWrapper}>
@@ -33,7 +39,7 @@ const VideoOverlay = ({ currentItem, controlsDisplayed }) => {
           className="video-overlay-footer-contents"
           css={styles.overlayFooterContents}
         >
-          <ShareToolComponent shareUrlPath={shareUrl} title={title} />
+          <ShareToolComponent shareUrlPath={shareUrl} title={title} id={id} />
         </div>
       </div>
     </div>

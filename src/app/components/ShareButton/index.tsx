@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/aria-role */
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use, useRef } from 'react';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
+import { use, useRef, MouseEvent } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './styles';
 
@@ -23,29 +26,35 @@ const ShareSvg = () => (
 
 const ShareButton = ({
   contentId,
-  //   eventTrackingData,
   title,
   url,
+  id,
+  type,
 }: {
   contentId?: string;
-  eventTrackingData?: {
-    componentName: string;
-  };
   title: string;
   url?: string;
+  id?: string;
+  type?: string;
 }) => {
-  //   const viewTracker = useViewTracker(eventTrackingData);
+  const eventTrackingData: EventTrackingData = {
+    componentName: 'share-button',
+    itemTracker: {
+      resourceId: id,
+      type,
+    },
+  };
+  const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
-  //   const { onClick: clickTrackerHandler } =
-  //     useClickTrackerHandler(eventTrackingData);
+  const { onClick: clickTrackerHandler } =
+    useClickTrackerHandler(eventTrackingData);
   const {
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
     },
   } = use(ServiceContext);
-  // (event: MouseEvent<HTMLButtonElement>)
-  const handleShare = async () => {
-    // if (clickTrackerHandler) clickTrackerHandler(event);
+  const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
+    if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       let shareUrl;
       if (!url && contentId) {
@@ -74,8 +83,7 @@ const ShareButton = ({
   };
 
   return (
-    // <div {...viewTracker} data-e2e="share">
-    <div data-e2e="share">
+    <div {...viewTracker} data-e2e="share">
       <button
         type="button"
         ref={focusRef}
