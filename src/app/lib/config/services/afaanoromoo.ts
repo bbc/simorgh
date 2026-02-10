@@ -63,6 +63,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'fi',
+      readTime: {
+        readTimePrefix: 'Yeroo dubbisuu',
+        minute: 'daqiiqaa',
+      },
       pagination: {
         previousPage: 'Kan duraa',
         nextPage: 'Itti aanee',
