@@ -50,11 +50,7 @@ export const assertPodcastPromoComponentClick = ({
     });
 
     // Click on first item
-    cy.get('[data-e2e="podcast-promo"]')
-      .find('a')
-      .last()
-      .invoke('removeAttr', 'target')
-      .click();
+    cy.get('[data-e2e="podcast-promo"]').find('a').last().click();
 
     assertATIComponentClickEvent({
       component: PODCAST_PROMO,
