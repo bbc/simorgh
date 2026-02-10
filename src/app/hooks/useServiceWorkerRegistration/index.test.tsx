@@ -1,9 +1,10 @@
-import { renderHook } from '@testing-library/react';
+import { renderHook, waitFor } from '@testing-library/react';
 import { renderHook as renderSSRHook } from '@testing-library/react-hooks/server';
 import useServiceWorkerRegistration from './index';
 
 describe('useServiceWorkerRegistration', () => {
   const mockRegister = jest.fn();
+  const mockGetRegistrations = jest.fn();
   let consoleWarnSpy: jest.SpyInstance;
   let consoleErrorSpy: jest.SpyInstance;
 
@@ -16,6 +17,7 @@ describe('useServiceWorkerRegistration', () => {
       value: {
         serviceWorker: {
           register: mockRegister,
+          getRegistrations: mockGetRegistrations,
         },
       },
       writable: true,
@@ -23,21 +25,24 @@ describe('useServiceWorkerRegistration', () => {
     });
 
     mockRegister.mockResolvedValue({});
+    mockGetRegistrations.mockResolvedValue([]);
   });
 
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it('should register service worker with correct path when service is provided', () => {
+  it('should register service worker with correct path when service is provided', async () => {
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
-      scope: '/mundo',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+        scope: '/mundo',
+      });
     });
   });
 
-  it('should register service worker for different services', () => {
+  it('should register service worker for different services', async () => {
     const { rerender } = renderHook(
       ({ service }) => useServiceWorkerRegistration(service),
       {
@@ -45,15 +50,19 @@ describe('useServiceWorkerRegistration', () => {
       },
     );
 
-    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
-      scope: '/news',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
+        scope: '/news',
+      });
     });
 
     mockRegister.mockClear();
     rerender({ service: 'sport' });
 
-    expect(mockRegister).toHaveBeenCalledWith('/sport/sw.js', {
-      scope: '/sport',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledWith('/sport/sw.js', {
+        scope: '/sport',
+      });
     });
   });
 
@@ -106,13 +115,12 @@ describe('useServiceWorkerRegistration', () => {
 
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    await Promise.resolve();
-    await Promise.resolve();
-
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      'Service worker registration failed:',
-      error,
-    );
+    await waitFor(() => {
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        'Service worker initialization failed',
+        error,
+      );
+    });
   });
 
   it('should handle server-side rendering gracefully', () => {
@@ -121,7 +129,7 @@ describe('useServiceWorkerRegistration', () => {
     expect(mockRegister).not.toHaveBeenCalled();
   });
 
-  it('should register for new service when service prop changes', () => {
+  it('should register for new service when service prop changes', async () => {
     const { rerender } = renderHook(
       ({ service }) => useServiceWorkerRegistration(service),
       {
@@ -129,21 +137,25 @@ describe('useServiceWorkerRegistration', () => {
       },
     );
 
-    expect(mockRegister).toHaveBeenCalledTimes(1);
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
-      scope: '/mundo',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledTimes(1);
+      expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+        scope: '/mundo',
+      });
     });
 
     mockRegister.mockClear();
     rerender({ service: 'news' });
 
-    expect(mockRegister).toHaveBeenCalledTimes(1);
-    expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
-      scope: '/news',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledTimes(1);
+      expect(mockRegister).toHaveBeenCalledWith('/news/sw.js', {
+        scope: '/news',
+      });
     });
   });
 
-  it('should not register again when service prop stays the same', () => {
+  it('should not register again when service prop stays the same', async () => {
     const { rerender } = renderHook(
       ({ service }) => useServiceWorkerRegistration(service),
       {
@@ -151,12 +163,16 @@ describe('useServiceWorkerRegistration', () => {
       },
     );
 
-    expect(mockRegister).toHaveBeenCalledTimes(1);
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledTimes(1);
+    });
 
     mockRegister.mockClear();
     rerender({ service: 'mundo' });
 
-    expect(mockRegister).not.toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockRegister).not.toHaveBeenCalled();
+    });
   });
 
   it('should handle registration promise that resolves with registration object', async () => {
@@ -169,13 +185,12 @@ describe('useServiceWorkerRegistration', () => {
 
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
-      scope: '/mundo',
+    await waitFor(() => {
+      expect(mockRegister).toHaveBeenCalledWith('/mundo/sw.js', {
+        scope: '/mundo',
+      });
+      expect(consoleErrorSpy).not.toHaveBeenCalled();
     });
-
-    await Promise.resolve();
-
-    expect(consoleErrorSpy).not.toHaveBeenCalled();
   });
 
   it('should handle synchronous registration error', async () => {
@@ -190,12 +205,11 @@ describe('useServiceWorkerRegistration', () => {
 
     renderHook(() => useServiceWorkerRegistration('mundo'));
 
-    await Promise.resolve();
-    await Promise.resolve();
-
-    expect(consoleErrorSpy).toHaveBeenCalledWith(
-      'Service worker registration failed:',
-      error,
-    );
+    await waitFor(() => {
+      expect(consoleErrorSpy).toHaveBeenCalledWith(
+        'Service worker initialization failed',
+        error,
+      );
+    });
   });
 });

@@ -31,6 +31,7 @@ const useServiceWorkerRegistration = (service?: string) => {
         await legacy.unregister();
       }
     };
+
     const initializeServiceWorker = async () => {
       await cleanupLegacyRegistrations();
 
@@ -41,7 +42,7 @@ const useServiceWorkerRegistration = (service?: string) => {
 
     initializeServiceWorker().catch(err => {
       // eslint-disable-next-line no-console
-      console.error('Service worker initialization failed:', err);
+      console.error('Service worker initialization failed', err);
     });
   }, [service]);
 };
