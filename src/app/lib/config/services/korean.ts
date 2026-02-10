@@ -47,7 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
-      and: ', ',
+      and: '',
+      readTime: {
+        readTimePrefix: '읽는 시간',
+        minute: '분',
+      },
       pagination: {
         previousPage: '이전',
         nextPage: '다음',

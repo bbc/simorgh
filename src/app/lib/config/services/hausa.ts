@@ -446,10 +446,6 @@ export const service: DefaultServiceConfig = {
         url: '/hausa',
       },
       {
-        title: 'Gasar Kofin Afirka',
-        url: '/hausa/topics/c71939zq32vt',
-      },
-      {
         title: 'Wasanni',
         url: '/hausa/topics/cz74kjgv220t',
       },
@@ -472,6 +468,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/topics/c4nx34q5724t',
+      },
+      {
+        title: 'Duk batutuwa',
+        url: '/hausa/topics',
       },
     ],
   },

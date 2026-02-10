@@ -4,7 +4,15 @@ import { Article } from '#app/models/types/optimo';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
-const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
+const SecondaryColumn = ({
+  pageData,
+  referrerVariant,
+  referrerExperimentName,
+}: {
+  pageData: Article;
+  referrerVariant?: string | null;
+  referrerExperimentName?: string;
+}) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
   const {
@@ -21,7 +29,17 @@ const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
           data-testid="top-stories"
           data-experiment-position="secondaryColumn"
         >
-          <TopStoriesSection content={topStoriesContent} />
+          <TopStoriesSection
+            content={topStoriesContent}
+            // EXPERIMENT: Referrer Experiment
+            {...(referrerVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: referrerExperimentName,
+                experimentVariant: referrerVariant,
+              },
+            })}
+          />
         </div>
       )}
       {featuresContent && (
@@ -30,6 +48,14 @@ const SecondaryColumn = ({ pageData }: { pageData: Article }) => {
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            // EXPERIMENT: Referrer Experiment
+            {...(referrerVariant && {
+              experimentProps: {
+                sendOptimizelyEvents: true,
+                experimentName: referrerExperimentName,
+                experimentVariant: referrerVariant,
+              },
+            })}
           />
         </div>
       )}

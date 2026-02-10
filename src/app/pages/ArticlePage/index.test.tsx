@@ -23,6 +23,7 @@ import {
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
 import {
   textBlock,
   blockContainingText,
@@ -631,9 +632,10 @@ describe('Article Page', () => {
       );
     });
 
-    const { src } = screen.getByAltText(imageAltText) as HTMLImageElement;
-
-    expect(src).toEqual(imageURL);
+    const images = screen.getAllByAltText(imageAltText) as HTMLImageElement[];
+    expect(images.length).toBeGreaterThan(0);
+    const [secondaryColumnImage] = images;
+    expect(secondaryColumnImage.src).toEqual(imageURL);
   });
 
   describe('when isApp is true', () => {
@@ -1098,5 +1100,113 @@ describe('Article Page', () => {
         }
       },
     );
+  });
+  describe('Portrait Video Carousel', () => {
+    const portraitVideoItems = {
+      title: 'Portrait Video Carousel',
+      portraitVideo: {
+        blocks: [...portraitVideoFixture.blocks],
+      },
+    };
+    it('should render the carousel when portraitVideoItems are present', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+      const { queryAllByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithPVItems} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        const carousels = queryAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoItems are absent', async () => {
+      const dataWithoutPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: undefined,
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithoutPVItems} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        expect(
+          queryByTestId('portrait-video-carousel'),
+        ).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoBlocks is empty', async () => {
+      const dataWithEmptyBlocks = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+          portraitVideo: {
+            ...portraitVideoItems.portraitVideo,
+            blocks: [],
+          },
+        },
+      };
+      const { queryAllByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithEmptyBlocks} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+      });
+    });
+
+    it('should use title if provided', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithPVItems} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        const carousels = screen.getAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toHaveAttribute(
+          'aria-label',
+          'Portrait Video Carousel',
+        );
+      });
+    });
+
+    it('should use fallback title if not provided', async () => {
+      const dataWithoutTitle = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          portraitVideo: { ...portraitVideoItems.portraitVideo },
+        },
+      };
+      render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithoutTitle} />
+        </Context>,
+      );
+
+      await waitFor(() => {
+        const fallbackTitle = 'Look'; // The fallback title comes from translations.media.watch
+        const carousels = screen.getAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toHaveAttribute('aria-label', fallbackTitle);
+      });
+    });
   });
 });

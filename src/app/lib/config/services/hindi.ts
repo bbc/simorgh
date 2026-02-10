@@ -68,6 +68,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'और',
+      readTime: {
+        readTimePrefix: 'पढ़ने का समय',
+        minute: 'मिनट',
+      },
       pagination: {
         previousPage: 'पिछला',
         nextPage: 'अगला',
@@ -101,6 +105,10 @@ export const service: DefaultServiceConfig = {
       downloads: {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
+      },
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
       },
       gist: 'सारांश',
       error: {

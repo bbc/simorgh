@@ -10,6 +10,7 @@ import {
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { MediaOverrides } from '#app/models/types/media';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -234,6 +235,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     links: Links,
   };
 
+  // metrics are gated by experimentsForPageMetrics; add map experiment names there when ready
+  // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -281,6 +284,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}
