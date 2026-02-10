@@ -12,9 +12,29 @@ import {
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import NavigationContainer from '#src/app/components/Navigation';
+import styled from '@emotion/styled';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
+
+const Divider = styled.div`
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
+  }
+  @media (min-width: 1041px) {
+    width: calc(100vw + 0.8rem);
+    margin-left: calc(-1 * (100vw - 1014px) / 2);
+  }
+  @media (min-width: 1008px) {
+    display: none;
+  }
+`;
 
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
@@ -107,6 +127,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         />
       )}
       {isLite && <LiteSiteSummary />}
+      <Divider />
       <NavigationContainer
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}

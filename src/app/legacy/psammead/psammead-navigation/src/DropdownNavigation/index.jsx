@@ -170,7 +170,9 @@ const MenuButton = styled(Button)`
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
+  background-color: ${({ navType, theme }) =>
+    navType === 'top' ? theme.palette.POSTBOX : 'transparent'};
+  color: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
@@ -199,6 +201,8 @@ const MenuButton = styled(Button)`
 
   & svg {
     vertical-align: middle;
+    color: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
+    fill: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
   }
 `;
 
@@ -208,6 +212,7 @@ export const CanonicalMenuButton = ({
   onClick,
   dir = 'ltr',
   script,
+  navType,
 }) => (
   <MenuButton
     onClick={onClick}
@@ -215,6 +220,7 @@ export const CanonicalMenuButton = ({
     dir={dir}
     script={script}
     className="focusIndicatorRemove"
+    navType={navType}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>

@@ -23,6 +23,7 @@ const renderListItems = (
   clickTracker: unknown,
   viewTracker: unknown,
   isLite?: boolean,
+  navType?: string,
 ) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
@@ -41,6 +42,7 @@ const renderListItems = (
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
+        navType={navType}
       >
         {title}
       </Li>
@@ -111,6 +113,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         undefined,
         undefined,
         isLite,
+        'top',
       )}
     </NavigationUl>
   );

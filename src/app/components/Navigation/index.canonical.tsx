@@ -137,7 +137,6 @@ const CanonicalNavigationContainer: React.FC<
             </>
           )}
         </NavRow>
-        <Divider />
         <LowerNavWrapper>
           <ScrollableNavigation dir={dir} navType={null}>
             {scrollableListItems}
@@ -146,9 +145,9 @@ const CanonicalNavigationContainer: React.FC<
         <CanonicalDropdown isOpen={isOpen}>
           {dropdownListItems}
         </CanonicalDropdown>
-        <Divider />
-        {enabled && <TopBarOJs blocks={blocks ?? []} />}
       </NavStack>
+      <Divider />
+      {enabled && <TopBarOJs blocks={blocks ?? []} />}
     </Navigation>
   );
 };
