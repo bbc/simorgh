@@ -43,6 +43,20 @@ export const assertPodcastPromoComponentClick = ({
 }: AtiAssertionFnProps) => {
   it('should send a click event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
+
+    cy.intercept('GET', 'https://www.whatsapp.com/channel/**', request => {
+      request.reply({ statusCode: 200 });
+    }).as('getWhatsAppChannel');
+
+    // cy.intercept(
+    //   {
+    //     url: 'https://www.whatsapp.com/channel/**',
+    //   },
+    //   request => {
+    //     request.reply({ statusCode: 200 });
+    //   },
+    // ).as('getWhatsAppChannel');
+
     cy.visit(path);
 
     cy.get('[data-e2e="podcast-promo"]').scrollIntoView({
