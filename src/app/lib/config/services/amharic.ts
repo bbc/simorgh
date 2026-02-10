@@ -61,6 +61,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'እና',
+      readTime: {
+        readTimePrefix: 'የንባብ ጊዜ',
+        minute: 'ደቂቃ',
+      },
       pagination: {
         page: 'ገፁ',
         previousPage: 'ከዚህ በፊት ያለ',
