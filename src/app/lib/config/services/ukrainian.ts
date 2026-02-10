@@ -64,6 +64,10 @@ const baseServiceConfig = {
   },
   translations: {
     and: 'i',
+    readTime: {
+      readTimePrefix: 'Час прочитання',
+      minute: 'хв',
+    },
     pagination: {
       previousPage: 'Повернутися',
       nextPage: 'Наступна',

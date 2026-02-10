@@ -68,6 +68,10 @@ export const service: DefaultServiceConfig = {
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
       and: 'এবং',
+      readTime: {
+        readTimePrefix: 'পড়ার সময়',
+        minute: 'মিনিট',
+      },
       pagination: {
         page: 'পৃষ্ঠা',
         previousPage: 'ফিরে যাব',

@@ -110,6 +110,10 @@ export const service: DefaultServiceConfig = {
   default: {
     translations: {
       and: 'и',
+      readTime: {
+        readTimePrefix: 'Время чтения',
+        minute: 'мин',
+      },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
     },
