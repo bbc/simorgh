@@ -6,7 +6,7 @@
 
 const version = 'v0.3.4';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v3';
+const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -130,8 +130,7 @@ const fetchEventHandler = async event => {
         let response = await cache.match(event.request);
         if (!response) {
           try {
-            response = await fetch(event.request.url);
-            cache.put(event.request, response.clone());
+            response = await cacheResource(cache, event.request.url);
           } catch (err) {
             return new Response('', { status: 503 });
           }
@@ -178,7 +177,11 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         const cached = await cache.match(event.request);
         if (cached) return cached;
-        return new Response('', { status: 503 });
+        try {
+          return await fetch(event.request);
+        } catch (err) {
+          return new Response('', { status: 503 });
+        }
       })(),
     );
   }
