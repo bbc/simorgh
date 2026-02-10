@@ -35,6 +35,7 @@ export interface Translations {
     postDateTimeFormat?: string;
     postDateFormat?: string;
     refreshButtonText?: string;
+    visuallyHiddenButtonText?: string;
   };
   downloads?: {
     instructions?: string;

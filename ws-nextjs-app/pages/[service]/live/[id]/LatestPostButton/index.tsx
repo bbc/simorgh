@@ -1,5 +1,5 @@
 import type { RefObject } from 'react';
-import { use, useEffect, useState, useRef } from 'react';
+import { use, useCallback, useEffect, useState, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
@@ -23,32 +23,55 @@ const LatestPostButton = ({
 }: LatestPostButtonProps) => {
   const [leftPosition, setLeftPosition] = useState('50%');
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const resizeTimeoutRef = useRef<NodeJS.Timeout>(null);
 
   const {
     translations: {
-      liveExperiencePage: { refreshButtonText = 'Latest Post' },
+      liveExperiencePage: {
+        refreshButtonText = 'Latest Post',
+        visuallyHiddenButtonText = 'New post available',
+      },
     },
   } = use(ServiceContext);
 
-  useEffect(() => {
-    const updatePosition = () => {
-      const streamContainerWidth = streamRef.current.clientWidth;
-      const streamContainerLeftPosition =
-        streamRef.current.getBoundingClientRect().x;
+  const updatePosition = useCallback(() => {
+    if (!streamRef?.current) {
+      setLeftPosition('50%');
+      return;
+    }
 
-      if (streamContainerWidth !== 0) {
-        setLeftPosition(
-          `${streamContainerLeftPosition + streamContainerWidth / 2}px`,
-        );
+    const streamContainerWidth = streamRef.current.clientWidth;
+    const streamContainerLeftPosition =
+      streamRef.current.getBoundingClientRect().left;
+
+    if (streamContainerWidth !== 0) {
+      setLeftPosition(
+        `${streamContainerLeftPosition + streamContainerWidth / 2}px`,
+      );
+    } else {
+      setLeftPosition('50%');
+    }
+  }, [streamRef]);
+
+  useEffect(() => {
+    updatePosition();
+
+    const handleResize = () => {
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
+      }
+      resizeTimeoutRef.current = setTimeout(updatePosition, 100);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
       }
     };
-
-    updatePosition();
-    window.addEventListener('resize', updatePosition);
-    return () => {
-      window.removeEventListener('resize', updatePosition);
-    };
-  }, [streamRef]);
+  }, [updatePosition]);
 
   const handleClick = async () => {
     const hasReducedMotion = window.matchMedia(
@@ -68,7 +91,7 @@ const LatestPostButton = ({
   return (
     <>
       <VisuallyHiddenText aria-live="polite">
-        {showButton && <span>New post available</span>}
+        {showButton && <span>{visuallyHiddenButtonText}</span>}
       </VisuallyHiddenText>
       <button
         ref={buttonRef}
