@@ -62,27 +62,35 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 }
               });
             }
+            // Not toggled on for this service
+            else {
+              cy.get('[data-e2e=recent-episodes-list]').should('not.exist');
+              cy.log('Recent episodes is not toggled on for this service');
+            }
           });
         });
       });
       describe('Radio Schedule', () => {
         it('should be displayed if there is enough schedule data', function test() {
-          cy.getPageDataFromWindow().then(pageData => {
-            cy.fixture(`toggles/${service}.json`).then(toggles => {
-              const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
-              cy.log(
-                `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
-              );
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
+            cy.log(
+              `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+            );
 
-              if (scheduleIsEnabled) {
+            if (scheduleIsEnabled) {
+              cy.getPageDataFromWindow().then(pageData => {
                 const { radioScheduleData } = pageData;
                 if (scheduleIsEnabled && radioScheduleData) {
                   cy.log('Schedule has enough data');
                   cy.get('[data-e2e=radio-schedule]').should('exist');
                   // cy.get('[data-e2e=live]').should('exist');
                 }
-              }
-            });
+              });
+            } else {
+              cy.get('[data-e2e=radio-schedule]').should('not.exist');
+              cy.log('Radio schedule is not toggled on for this service');
+            }
           });
         });
       });
