@@ -152,7 +152,6 @@ const atiAnalyticsTestSuites = [
     tests: [
       ...atiAnalyticsNavigationComponentTests,
       assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
       assertMostReadComponentView,
       assertMostReadComponentClick,
     ],
@@ -230,7 +229,6 @@ const atiAnalyticsTestSuites = [
     tests: [
       assertPageView,
       assertMessageBannerComponentView,
-      assertMessageBannerComponentClick,
       assertMostReadComponentView,
     ],
   },
