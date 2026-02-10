@@ -111,7 +111,6 @@ export const playlistLoadedCallback = (
         title: previous?.video?.title ?? '',
         holdingImageURL: previous?.video?.holdingImageURL ?? '',
         items: [{ versionID: previous?.video?.version?.id }],
-        shareUrl: previous?.video?.shareUrl ?? null,
       },
       { statsObject: { clipPID: previous?.video?.id } },
     );
@@ -123,7 +122,6 @@ export const playlistLoadedCallback = (
         title: next?.video?.title ?? '',
         holdingImageURL: next?.video?.holdingImageURL ?? '',
         items: [{ versionID: next?.video?.version?.id }],
-        shareUrl: next?.video?.shareUrl ?? null,
       },
       { statsObject: { clipPID: next?.video?.id } },
     );

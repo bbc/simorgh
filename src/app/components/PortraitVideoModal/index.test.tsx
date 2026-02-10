@@ -26,6 +26,7 @@ const mockPlayer = {
   pause: jest.fn(),
   next: jest.fn(),
   previous: jest.fn(),
+  playlist: jest.fn(),
 } satisfies Partial<Player>;
 
 describe('PortraitVideoModal', () => {
