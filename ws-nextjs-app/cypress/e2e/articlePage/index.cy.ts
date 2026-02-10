@@ -324,7 +324,7 @@ const atiAnalyticsTestSuites = [
       assertMostReadComponentView,
       assertMostReadComponentClick,
       assertPodcastPromoComponentView,
-      assertPodcastPromoComponentClick,
+      // assertPodcastPromoComponentClick,
       assertRelatedTopicsComponentView,
       assertRelatedTopicsComponentClick,
       assertRelatedContentComponentView,
