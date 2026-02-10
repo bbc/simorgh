@@ -12,7 +12,7 @@ import {
 } from '../specialFeatures/atiAnalytics/assertions/billboard';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
-  assertMessageBannerComponentClick,
+  // assertMessageBannerComponentClick,
   assertMessageBannerComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/messageBanner';
 import {
