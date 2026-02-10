@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     atiAnalyticsProducerName: 'SINHALA',
-    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'සහ',
+      readTime: {
+        readTimePrefix: 'කියවීමේ කාලය',
+        minute: 'මිනිත්තු',
+      },
       pagination: {
         page: 'පිටුව',
         previousPage: 'ආපසු',

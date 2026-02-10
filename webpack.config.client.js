@@ -102,6 +102,9 @@ module.exports = ({
             ecma: IS_LEGACY_WEB ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
+            compress: {
+              passes: 2,
+            },
           },
         }),
       ],
@@ -191,9 +194,13 @@ module.exports = ({
     },
     plugins: [
       // copy static files otherwise untouched by Webpack, e.g. favicon
-      new CopyWebpackPlugin({
-        patterns: [{ from: 'public' }],
-      }),
+      ...(BUNDLE_TYPE === 'modern'
+        ? [
+            new CopyWebpackPlugin({
+              patterns: [{ from: 'public' }],
+            }),
+          ]
+        : []),
       new DuplicatePackageCheckerPlugin({
         // Emit compilation warning or error? (Default: `false`)
         emitError: true,

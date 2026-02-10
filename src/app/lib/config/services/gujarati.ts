@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     atiAnalyticsProducerName: 'GUJARATI',
-    useReverb: true,
     chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'અને',
+      readTime: {
+        readTimePrefix: 'વાંચવાનો સમય',
+        minute: 'મિનિટ',
+      },
       pagination: {
         previousPage: 'આ પહેલાં',
         nextPage: 'આ પછી',

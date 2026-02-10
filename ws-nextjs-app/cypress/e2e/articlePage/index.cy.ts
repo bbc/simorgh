@@ -20,7 +20,6 @@ import {
   assertTopBarOJComponentClick,
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -58,9 +57,9 @@ import {
   assertSocialEmbedComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/socialEmbed';
 import {
-  assertScrollablePromoComponentClick,
-  assertScrollablePromoComponentView,
-} from '../specialFeatures/atiAnalytics/assertions/scrollablePromo';
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
@@ -289,7 +288,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    useReverb: true,
     tests: [
       assertPageView,
       assertLatestMediaComponentView,
@@ -317,7 +315,6 @@ const atiAnalyticsTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertArticleLiteSiteLinkComponentView,
@@ -344,7 +341,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertFeaturesAnalysisComponentView,
@@ -368,7 +364,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertFeaturesAnalysisComponentView,
@@ -381,8 +376,8 @@ const atiAnalyticsTestSuites = [
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
+      assertArticleLinksBlockComponentClick,
+      assertArticleLinksBlockComponentView,
     ],
   },
   {
@@ -393,7 +388,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    useReverb: true,
     tests: [
       assertPageView,
       assertLatestMediaComponentClick,
@@ -412,7 +406,6 @@ const atiAnalyticsTestSuites = [
     siteId: 135,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertTopBarOJComponentClick,
@@ -466,7 +459,6 @@ const atiAmpTestSuites = atiAnalyticsTestSuites
     return {
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-      useReverb: true,
       applicationType: 'amp',
       tests: [assertPageView],
     };
@@ -480,7 +472,6 @@ const atiAmpTestSuites = atiAnalyticsTestSuites
       siteId: 64,
       applicationType: 'amp',
       contentType: 'article',
-      useReverb: true,
       tests: [assertPageView],
     },
     {
@@ -491,7 +482,6 @@ const atiAmpTestSuites = atiAnalyticsTestSuites
       siteId: 64,
       applicationType: 'amp',
       contentType: 'article',
-      useReverb: true,
       tests: [assertPageView],
     },
   ]);
@@ -524,7 +514,6 @@ const atiLiteTestSuites = atiAnalyticsTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: true,
       tests: [...liteSiteTests],
     };
   });
@@ -537,7 +526,6 @@ runTestsForPage({
     ...atiAnalyticsTestSuites.filter(({ service }) => service !== 'news'),
     ...atiLiteTestSuites,
   ] as unknown as TestDataType[],
-  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({

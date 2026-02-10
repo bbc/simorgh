@@ -6,7 +6,6 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
-  // ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
@@ -14,11 +13,16 @@ import {
 import environment from '../../../../support/helpers/getAppEnv';
 
 const usesReverbViewabilityModel = applicationType =>
-  applicationType !== 'lite';
+  !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
-  if (service === 'ws') {
-    return '[news]';
+  const customServiceAppName = {
+    ws: '[news]',
+    romania: '[news-romanian]',
+  }[service];
+
+  if (customServiceAppName) {
+    return customServiceAppName;
   }
 
   return ['archive', 'news', 'newsround', 'scotland', 'sport'].includes(service)
@@ -93,7 +97,14 @@ const assertLocationSpecificPianoDestinationExists = ({ service }) => {
   });
 };
 
-const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
+const assertReverbViewabilityComponentEventParamsExist = ({
+  params,
+  applicationType,
+}) => {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
+  }
+
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
   expect(params).to.have.property('context');
@@ -183,7 +194,6 @@ const validateViewabilityEventDetails = ({ payload, actionType }) => {
 };
 
 export const assertPageView = ({
-  useReverb,
   pageIdentifier,
   applicationType,
   contentType,
@@ -196,10 +206,9 @@ export const assertPageView = ({
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
     const useViewabilty = usesReverbViewabilityModel(applicationType);
-    const atiPageViewAlias =
-      useReverb && useViewabilty && applicationType !== 'amp'
-        ? ATI_PAGE_VIEW_REVERB
-        : ATI_PAGE_VIEW;
+    const atiPageViewAlias = useViewabilty
+      ? ATI_PAGE_VIEW_REVERB
+      : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
@@ -209,14 +218,6 @@ export const assertPageView = ({
         contentType,
         applicationType,
       });
-
-      // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-      // if (['responsive', 'lite'].includes(applicationType)) {
-      //   expect(params.idclient).to.equal(
-      //     ATI_USER_ID_COOKIE,
-      //     'params.idclient (atuserid cookie value)',
-      //   );
-      // }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(parseInt(params.s2, 10)).to.equal(
@@ -246,20 +247,12 @@ export const assertPageView = ({
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({ params });
-
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
+  assertReverbViewabilityComponentEventParamsExist({ params, applicationType });
 
   expect(params.events).to.satisfy(
     payload =>
@@ -274,6 +267,7 @@ const assertViewabilityModelViewEvent = ({
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-view`;
@@ -286,6 +280,7 @@ export const assertATIComponentViewEvent = ({
       assertViewabilityModelViewEvent({
         pageIdentifier,
         params,
+        applicationType,
         siteId,
       });
     });
@@ -294,22 +289,15 @@ export const assertATIComponentViewEvent = ({
 const assertViewabilityModelClickEvent = ({
   pageIdentifier,
   params,
-  // applicationType,
+  applicationType,
   siteId,
 }) => {
   const eventContext = JSON.parse(params.context);
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
+    applicationType,
   });
-
-  // TODO: Commenting out temporarily until old ATI code is removed - https://bbc.atlassian.net/browse/WS-222
-  // if (['responsive', 'lite'].includes(applicationType)) {
-  //   expect(params.idclient).to.equal(
-  //     ATI_USER_ID_COOKIE,
-  //     'params.idclient (atuserid cookie value)',
-  //   );
-  // }
 
   expect(params.events).to.satisfy(
     payload =>
@@ -327,6 +315,7 @@ const assertViewabilityModelClickEvent = ({
 export const assertATIComponentClickEvent = ({
   component,
   pageIdentifier,
+  applicationType,
   siteId,
 }) => {
   const requestAlias = `@${component}-viewability-click`;
@@ -338,6 +327,7 @@ export const assertATIComponentClickEvent = ({
       assertViewabilityModelClickEvent({
         pageIdentifier,
         params,
+        applicationType,
         siteId,
       });
     });

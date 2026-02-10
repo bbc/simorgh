@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     atiAnalyticsProducerName: 'BURMESE',
-    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'နှင့်',
+      readTime: {
+        readTimePrefix: 'ဖတ်ရန်အချိန်',
+        minute: 'မိနစ်',
+      },
       pagination: {
         page: 'စာမျက်နှာ',
         previousPage: 'နောက်သို့ပြန်သွားရန်',

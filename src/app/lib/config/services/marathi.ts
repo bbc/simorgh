@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     atiAnalyticsProducerName: 'MARATHI',
-    useReverb: true,
     chartbeatDomain: 'marathi.bbc.co.uk',
     brandName: 'BBC News मराठी',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'आणि',
+      readTime: {
+        readTimePrefix: 'वाचन वेळ',
+        minute: 'मिनिटे',
+      },
       pagination: {
         page: 'पान',
         previousPage: 'मागील',

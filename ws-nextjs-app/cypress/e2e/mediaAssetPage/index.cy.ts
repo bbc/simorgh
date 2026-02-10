@@ -10,7 +10,6 @@ import ampArticleTests from './testsForAMPOnly';
 import canonicalArticleTests from './testsForCanonicalOnly';
 import liteTests from '../articlePage/testsForLiteOnly';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -51,12 +50,13 @@ const canonicalSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  {
-    path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
-    service: 'persian',
-    runforEnv: ['live'],
-    tests: canonicalTests,
-  },
+  // DISABLED DUE TO AN UNKNOWN FAULT ARISING FROM AMP MEDIA LOADER WHEN SERVING AUDIO CONTENT.
+  // {
+  //   path: '/persian/tv-and-radio-51780528', // CPS MAP with audio clip
+  //   service: 'persian',
+  //   runforEnv: ['live'],
+  //   tests: canonicalTests,
+  // },
   {
     path: '/persian/iran-23231114', // CPS MAP with audio clip
     service: 'persian',
@@ -217,7 +217,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -228,7 +227,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -239,7 +237,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
   {
@@ -250,7 +247,6 @@ const atiAnalyticsTestSuites = [
     siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
-    useReverb: true,
     tests: [...atiAnalyticsTests],
   },
 ] as unknown as TestDataType[];
@@ -395,6 +391,5 @@ runTestsForPage({
 runTestsForPage({
   pageType: MEDIA_ASSET_PAGE,
   testSuites: atiAnalyticsTestSuites,
-  beforeAll: [setUserIDCookie],
   testIsolation: true,
 });

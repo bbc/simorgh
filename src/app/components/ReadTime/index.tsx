@@ -25,12 +25,16 @@ const formatReadTime = ({
   if (!singleMinuteSuffix || !readTimePrefix) return null;
 
   const servicesWithMinutesBeforeNumber: Services[] = [
+    'afaanoromoo',
+    'burmese',
     'hausa',
+    'gahuza',
     'igbo',
-    'yoruba',
     'swahili',
+    'sinhala',
+    'yoruba',
   ];
-  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
+  const servicesWithoutColon: Services[] = ['igbo', 'pidgin', 'turkce'];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
@@ -66,7 +70,7 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
     service,
   });
 
-  if (!readTimeInMilliseconds || !readTimeText) return null;
+  if (!readTimeText) return null;
 
   return (
     <div

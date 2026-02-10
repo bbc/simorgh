@@ -14,7 +14,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
-    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage:
@@ -67,6 +66,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'اور',
+      readTime: {
+        readTimePrefix: 'مطالعے کا وقت',
+        minute: 'منٹ',
+      },
       pagination: {
         previousPage: 'پچھلا صفحہ',
         nextPage: 'اگلا صفحہ',

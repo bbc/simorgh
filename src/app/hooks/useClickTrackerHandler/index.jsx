@@ -14,6 +14,25 @@ import { sendEventBeacon } from '../../components/ATIAnalytics/beacon/index';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { isValidClick } from './clickTypes';
 
+// allowlist of onward journey components that should feed the total oj clicks event
+const OJ_COMPONENT_NAMES = [
+  'midarticle-mostread',
+  'top-stories',
+  'features',
+  'related-content',
+  'most-read',
+];
+
+// gate the total oj clicks event to a specific experiment during the spike
+const OJ_OPTIMIZELY_EXPERIMENTS = ['newswb_ws_oj_by_referrer'];
+
+const OJ_OPTIMIZELY_CLICK_EVENT = 'oj_clicks';
+
+// only fire the total oj clicks event when the component and experiment are in scope
+const shouldTrackOjClick = (componentName, experimentName) =>
+  OJ_COMPONENT_NAMES.includes(componentName) &&
+  OJ_OPTIMIZELY_EXPERIMENTS.includes(experimentName);
+
 const useClickTrackerHandler = (eventTrackingData = {}) => {
   const {
     pageIdentifier,
@@ -38,7 +57,7 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clickedIdentifier, setClickedIdentifier] = useState(null);
 
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
   const { optimizely } = use(OptimizelyContext);
 
   return useCallback(
@@ -83,6 +102,15 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               optimizely.user.id,
               overrideAttributes,
             );
+
+            // send the extra optimizely event for the total oj clicks metric
+            if (shouldTrackOjClick(componentName, experimentName)) {
+              optimizely.track(
+                OJ_OPTIMIZELY_CLICK_EVENT,
+                optimizely.user.id,
+                overrideAttributes,
+              );
+            }
           }
 
           try {
@@ -100,7 +128,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
               statsDestination,
               url: url || nextPageUrl,
               detailedPlacement,
-              useReverb,
               ...(groupTracker && { groupTracker }),
               ...(itemTracker && { itemTracker }),
               ...(experimentVariant &&
@@ -138,7 +165,6 @@ const useClickTrackerHandler = (eventTrackingData = {}) => {
       advertiserID,
       url,
       detailedPlacement,
-      useReverb,
       groupTracker,
       itemTracker,
       experimentName,
@@ -159,14 +185,9 @@ export default (eventTrackingData = {}) => {
     eventType: CLICK_EVENT,
   });
 
-  // HOT FIX FOR COMPONENT TRACKS SHOWING UP AS PAGE TRACKS:
-  const formattedReverbStaticUrl = reverbStaticUrl
-    .replace('&x6=[{referrer}]', '')
-    .replace('&ref={referrer}', '');
-
   return {
     ...(enableStaticTracking && {
-      [STATIC_REVERB_CLICK_TRACKING]: formattedReverbStaticUrl,
+      [STATIC_REVERB_CLICK_TRACKING]: reverbStaticUrl,
     }),
     ...(isHydrated && { onClick: clickTracker }),
   };

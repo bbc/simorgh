@@ -11,7 +11,7 @@ import { EventTrackingContext } from '../../contexts/EventTrackingContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
 
 const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const eventTrackingContext = use(EventTrackingContext);
 
@@ -57,7 +57,6 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
           advertiserID,
           url,
           detailedPlacement,
-          useReverb,
           ...(groupTracker && { groupTracker }),
           ...(itemTracker && { itemTracker }),
         },
@@ -69,7 +68,7 @@ const getComponentSwipeTracker = (eventTrackingData?: EventTrackingData) => {
 
       await dispatchTrackingRequests(swipeTrackingParameters);
     },
-    [eventTrackingContext, service, trackingIsEnabled, useReverb],
+    [eventTrackingContext, service, trackingIsEnabled],
   );
 
   return swipeTracker;

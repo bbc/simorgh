@@ -10,19 +10,26 @@ import styles from './index.styles';
 export type ContinueReadingButtonProps = {
   showAllContent: boolean;
   setShowAllContent: Dispatch<SetStateAction<boolean>>;
-};
-
-const eventTrackingData: EventTrackingData = {
-  componentName: 'continue-reading-button',
+  experimentProps?: {
+    sendOptimizelyEvents: boolean;
+    experimentName: string;
+    experimentVariant: string;
+  };
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
+  experimentProps,
 }: ContinueReadingButtonProps) => {
   const {
     translations: { continueReading = 'Continue reading' },
   } = use(ServiceContext);
+
+  const eventTrackingData: EventTrackingData = {
+    componentName: 'continue-reading-button',
+    ...(experimentProps && experimentProps),
+  };
 
   const viewRef = useViewTracker(eventTrackingData);
   const { onClick: clickTrackerHandler } =

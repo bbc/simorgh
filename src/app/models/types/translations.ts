@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  and?: string;
   pagination?: {
     page?: string;
     previousPage: string;
@@ -39,6 +40,10 @@ export interface Translations {
     title?: string;
   };
   gist?: string;
+  account?: {
+    signIn?: string;
+    forYou?: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

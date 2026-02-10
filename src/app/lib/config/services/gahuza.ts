@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     atiAnalyticsProducerName: 'GAHUZA',
-    useReverb: true,
     chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
@@ -61,6 +60,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
+      readTime: {
+        readTimePrefix: 'Igihe co gusoma',
+        minute: 'iminota',
+      },
       pagination: {
         previousPage: 'Subira inyuma',
         nextPage: 'Ibikurikira',

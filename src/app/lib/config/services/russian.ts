@@ -109,6 +109,11 @@ const headerFooterTranslations = {
 export const service: DefaultServiceConfig = {
   default: {
     translations: {
+      and: 'и',
+      readTime: {
+        readTimePrefix: 'Время чтения',
+        minute: 'мин',
+      },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
     },
@@ -119,7 +124,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     atiAnalyticsProducerName: 'RUSSIAN',
-    useReverb: true,
     chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',

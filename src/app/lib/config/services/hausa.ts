@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
-    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
@@ -66,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
         long: 'Dogon labari',
@@ -446,10 +446,6 @@ export const service: DefaultServiceConfig = {
         url: '/hausa',
       },
       {
-        title: 'Gasar Kofin Afirka',
-        url: '/hausa/topics/c71939zq32vt',
-      },
-      {
         title: 'Wasanni',
         url: '/hausa/topics/cz74kjgv220t',
       },
@@ -472,6 +468,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Shirye-shiryen rediyo',
         url: '/hausa/topics/c4nx34q5724t',
+      },
+      {
+        title: 'Duk batutuwa',
+        url: '/hausa/topics',
       },
     ],
   },

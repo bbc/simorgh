@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     atiAnalyticsProducerName: 'VIETNAMESE',
-    useReverb: true,
     chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
@@ -49,6 +48,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'và',
       readTime: {
         readTimePrefix: 'Thời gian đọc',
         long: 'Bài dài',

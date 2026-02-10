@@ -14,7 +14,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-dari',
     atiAnalyticsProducerId: '142',
     atiAnalyticsProducerName: 'DARI',
-    useReverb: true,
     chartbeatDomain: 'dari.bbc.co.uk',
     brandName: 'BBC News دری',
     serviceLocalizedName: 'دری',
@@ -47,6 +46,10 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      readTime: {
+        readTimePrefix: 'زمان مطالعه',
+        minute: 'دقیقه',
+      },
       pagination: {
         page: 'صفحه',
         previousPage: 'قبلی',
@@ -359,7 +362,7 @@ export const service: DefaultServiceConfig = {
     mostRead: {
       header: 'مطالب پرخواننده',
       lastUpdated: 'به روز شده در',
-      numberOfItems: 5,
+      numberOfItems: 10,
       hasMostRead: true,
     },
     radioSchedule: {
@@ -444,8 +447,12 @@ export const service: DefaultServiceConfig = {
         url: '/dari/topics/c24r373gngzt',
       },
       {
-        title: 'ساینس',
+        title: 'دانش',
         url: '/dari/topics/clyl797dek3t',
+      },
+      {
+        title: 'فرهنگ',
+        url: '/dari/topics/c4g5r3r52zet',
       },
       {
         title: 'برنامه‌های رادیویی',
