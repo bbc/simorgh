@@ -136,7 +136,6 @@ const MediaContainer = ({
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
   const playerKeyRef = useRef<string | null>(null);
-
   useEffect(() => {
     if (!playerElementRef.current) return;
 
@@ -205,7 +204,7 @@ const MediaContainer = ({
                 }
               });
             }
-            if (setVideoOverlayContainerRef) {
+            if (setVideoOverlayContainerRef && playerConfig.ui?.swipable) {
               mediaPlayer.loadPlugin(
                 {
                   html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
