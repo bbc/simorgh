@@ -5,13 +5,12 @@ export default {
   promoContainer: ({ isDarkUi, palette, mq, spacings }: Theme) =>
     css({
       background: isDarkUi ? palette.GREY_10 : palette.WHITE,
-      padding: `0 ${spacings.DOUBLE}rem`,
-      margin: `0 0 1rem`,
+      padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       display: 'flex',
       overflowX: 'auto',
       width: '100%',
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: '0 -1rem 1rem',
+        margin: '0 -1rem',
       },
     }),
   labelComponent: ({
