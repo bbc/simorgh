@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'مدة القراءة',
+        minute: 'دقائق',
+      },
       pagination: {
         page: 'صفحة',
         previousPage: 'السابق',

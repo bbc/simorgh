@@ -3261,18 +3261,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.1.0":
-  version: 20.1.0
-  resolution: "@happy-dom/jest-environment@npm:20.1.0"
+"@happy-dom/jest-environment@npm:20.4.0":
+  version: 20.4.0
+  resolution: "@happy-dom/jest-environment@npm:20.4.0"
   dependencies:
-    happy-dom: "npm:^20.1.0"
+    happy-dom: "npm:^20.4.0"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/04a1e911e6c2c9c7599ef46d3340dc2e71be147736f8eccfc2dc4ec26ba8af034985f88dcdbf40453f8674bb75ad9d86424e6cad79250cb6095c7cae61464e21
+  checksum: 10/c560a07dfeb77816a6c65f073e4654a0d81bfdc1cf261432d3a77e2f49f9d1f3084c1b3efbb9e93db61cda8b4f06ed44ff9ff573116e8603c8022f447b7cc845
   languageName: node
   linkType: hard
 
@@ -5899,12 +5899,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.0.0":
-  version: 20.19.9
-  resolution: "@types/node@npm:20.19.9"
+"@types/node@npm:>=20.0.0":
+  version: 25.2.0
+  resolution: "@types/node@npm:25.2.0"
   dependencies:
-    undici-types: "npm:~6.21.0"
-  checksum: 10/7631e541fb3cdef57d73b626cbcf4365ae5979345ee920429f0de0acceff69dbf843d4815404b58eb3957bace3f825d0ea38889051d2d218301c5dc48ada6cff
+    undici-types: "npm:~7.16.0"
+  checksum: 10/18a7245e20556bc92486161872c54bef7601e1e7970028e8a18d1f57d88aa3035efef42c144a2100f9e9bf6fba7a15b4ae8ee044cd98a8b06d6f754232611f70
   languageName: node
   linkType: hard
 
@@ -11693,16 +11693,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.1.0, happy-dom@npm:^20.1.0":
-  version: 20.1.0
-  resolution: "happy-dom@npm:20.1.0"
+"happy-dom@npm:20.4.0":
+  version: 20.4.0
+  resolution: "happy-dom@npm:20.4.0"
   dependencies:
-    "@types/node": "npm:^20.0.0"
+    "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
     "@types/ws": "npm:^8.18.1"
+    entities: "npm:^4.5.0"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.18.3"
-  checksum: 10/6f24d9d39b6dd387fe567adc621fba5e5a7fef83d5baa8cbc49cf75ecd09a91e460a242c6ac8d4ea3d2c01b134ec7f552d8c66d13ac109350ad2650450fe61de
+  checksum: 10/5e7e8ceb2e530da4b7c71671d5549468c6a8aa2273f3f2277f892da45fff76e06c1b2ebd7e7f1c5feb94b0a904a2a1966f1eaaf94091a50a70988118b76a193a
+  languageName: node
+  linkType: hard
+
+"happy-dom@npm:^20.4.0":
+  version: 20.5.0
+  resolution: "happy-dom@npm:20.5.0"
+  dependencies:
+    "@types/node": "npm:>=20.0.0"
+    "@types/whatwg-mimetype": "npm:^3.0.2"
+    "@types/ws": "npm:^8.18.1"
+    entities: "npm:^4.5.0"
+    whatwg-mimetype: "npm:^3.0.0"
+    ws: "npm:^8.18.3"
+  checksum: 10/fdbaaeda55fbee43e3606dc2d21d4dd3af41e4f6e422917abd146eb8788f52ddfd83b5ca2eb0af96fa417e3ca148b2b99d3db9546cbad39b23dc4fa867c42d73
   languageName: node
   linkType: hard
 
@@ -17294,7 +17309,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.27.2"
     "@esbuild/win32-arm64": "npm:0.27.2"
     "@esbuild/win32-x64": "npm:0.27.2"
-    "@happy-dom/jest-environment": "npm:20.1.0"
+    "@happy-dom/jest-environment": "npm:20.4.0"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
@@ -17362,7 +17377,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     express: "npm:4.21.2"
     express-static-gzip: "npm:3.0.0"
-    happy-dom: "npm:20.1.0"
+    happy-dom: "npm:20.4.0"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
@@ -18892,10 +18907,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.21.0":
-  version: 6.21.0
-  resolution: "undici-types@npm:6.21.0"
-  checksum: 10/ec8f41aa4359d50f9b59fa61fe3efce3477cc681908c8f84354d8567bb3701fafdddf36ef6bff307024d3feb42c837cf6f670314ba37fc8145e219560e473d14
+"undici-types@npm:~7.16.0":
+  version: 7.16.0
+  resolution: "undici-types@npm:7.16.0"
+  checksum: 10/db43439f69c2d94cc29f75cbfe9de86df87061d6b0c577ebe9bb3255f49b22c50162a7d7eb413b0458b6510b8ca299ac7cff38c3a29fbd31af9f504bcf7fbc0d
   languageName: node
   linkType: hard
 
