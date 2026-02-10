@@ -60,7 +60,6 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
     dir,
     collapsibleNavigation,
   } = use(ServiceContext);
-  console.log('navItems:', navItems);
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
 

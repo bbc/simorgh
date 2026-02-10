@@ -8,11 +8,9 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import LanguageNavigation from './LanguageNavigation/lazy';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import { NavigationItem, NavigationContainerProps } from './types';
-import TopLevelNav from './TopLevelNav';
+import type { NavigationItem, NavigationContainerProps } from './types';
 
 const renderListItems = (
   Li: React.ElementType,
@@ -26,7 +24,7 @@ const renderListItems = (
   viewTracker: unknown,
   isLite?: boolean,
 ) =>
-  navigation.reduce((listAcc, item, index) => {
+  navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
     const active = index === activeIndex;
 
@@ -49,57 +47,44 @@ const renderListItems = (
     );
 
     return [...listAcc, listItem];
-  }, [] as React.ReactNode[]);
+  }, []);
 
-const NavigationContainer = ({
-  navItems,
+const getTopNavLinks = (navigation: NavigationItem[]): NavigationItem[] => [
+  {
+    title: navigation?.[0]?.title || 'Home',
+    url: 'https://www.bbc.com/arabic',
+  },
+  { title: 'Watch', url: 'https://www.bbc.com/arabic/topics/crgyknwdlwnt' },
+  { title: 'Listen', url: 'https://www.bbc.com/arabic/topics/cljddp5lw0dt' },
+];
+
+const NavigationContainer: React.FC<NavigationContainerProps> = ({
   propsForTopBarOJComponent,
-}: NavigationContainerProps) => {
-  const { isAmp, isLite } = use(RequestContext);
+}) => {
+  const { isAmp, isLite, pageType } = use(RequestContext);
+  console.log('pageType', pageType);
   const { blocks = [] } = propsForTopBarOJComponent || {};
-  const {
-    script,
-    translations,
-    navigation: navFromServiceConfig = [],
-    service,
-    dir,
-    collapsibleNavigation,
-  } = use(ServiceContext);
-
+  const { script, translations, navigation, service, dir } =
+    use(ServiceContext);
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
 
   const scrollableNavEventTrackingData = {
-    componentName: 'scrollable-navigation',
+    componentName: `scrollable-navigation`,
   };
-
-  const dropdownNavEventTrackingData = {
-    componentName: 'dropdown-navigation',
-  };
+  const dropdownNavEventTrackingData = { componentName: `dropdown-navigation` };
 
   const scrollableNavClickTrackerHandler = useClickTrackerHandler(
     scrollableNavEventTrackingData,
   );
-
   const dropdownNavClickTrackerHandler = useClickTrackerHandler(
     dropdownNavEventTrackingData,
   );
-
   const scrollableNavViewTracker = useViewTracker(
     scrollableNavEventTrackingData,
   );
-
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  const renderLanguageNavigation = collapsibleNavigation?.length;
-
-  if (renderLanguageNavigation) {
-    return <LanguageNavigation />;
-  }
-
-  // Prefer navItems passed from props over service config
-  // Eventually all services will migrate to passing navItems via props
-  const navigation = navItems || navFromServiceConfig;
   if (!navigation || navigation.length === 0) {
     return null;
   }
@@ -108,16 +93,42 @@ const NavigationContainer = ({
     link => `${origin}${link.url}` === canonicalLink,
   );
 
-  const scrollableListItems = (
+  // Top scrollable nav (static links)
+  const topNavLinks = getTopNavLinks(navigation);
+  // Set activeIndex to 0 only if pageType is 'home', otherwise -1 (no active)
+  const topActiveIndex = pageType === 'home' ? 0 : -1;
+
+  const topScrollableListItems = (
     <NavigationUl>
       {renderListItems(
         NavigationLi,
-        navigation,
+        topNavLinks,
         script,
         currentPage,
         service,
         dir,
-        activeIndex,
+        topActiveIndex,
+        undefined,
+        undefined,
+        isLite,
+      )}
+    </NavigationUl>
+  );
+
+  // Remove the first item (Home) from the main navigation list
+  const mainNavLinks = navigation.slice(1);
+  const mainActiveIndex = activeIndex > 0 ? activeIndex - 1 : -1;
+  // Main scrollable nav (dynamic)
+  const scrollableListItems = (
+    <NavigationUl>
+      {renderListItems(
+        NavigationLi,
+        mainNavLinks,
+        script,
+        currentPage,
+        service,
+        dir,
+        mainActiveIndex,
         scrollableNavClickTrackerHandler,
         scrollableNavViewTracker,
         isLite,
@@ -126,7 +137,7 @@ const NavigationContainer = ({
   );
 
   const dropdownListItems = (
-    <DropdownUl role="list">
+    <DropdownUl>
       {renderListItems(
         DropdownLi,
         navigation,
@@ -137,30 +148,23 @@ const NavigationContainer = ({
         activeIndex,
         dropdownNavClickTrackerHandler,
         dropdownNavViewTracker,
-        isLite,
       )}
     </DropdownUl>
   );
 
   const Navigation = isAmp ? Amp : Canonical;
 
-  // --- Render TopLevelNav above the main navigation list ---
   return (
-    <>
-      <div css={{ marginBottom: '1rem', fontWeight: 'bold' }}>
-        Navigation test: This is showing on the page.
-      </div>
-      <TopLevelNav dropdownList={dropdownListItems} dir={dir} />
-      <Navigation
-        scrollableListItems={scrollableListItems}
-        dropdownListItems={null}
-        menuAnnouncedText={navMenuText}
-        dir={dir}
-        script={script}
-        service={service}
-        blocks={blocks}
-      />
-    </>
+    <Navigation
+      topScrollableListItems={topScrollableListItems}
+      scrollableListItems={scrollableListItems}
+      dropdownListItems={dropdownListItems}
+      menuAnnouncedText={navMenuText}
+      dir={dir}
+      script={script}
+      service={service}
+      blocks={blocks}
+    />
   );
 };
 

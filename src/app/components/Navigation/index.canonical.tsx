@@ -1,6 +1,6 @@
-import { useState, use } from 'react';
+import React, { useState, use } from 'react';
 import styled from '@emotion/styled';
-import Navigation from '#src/app/components/Navigation';
+import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
   CanonicalDropdown,
@@ -11,13 +11,23 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
-import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { CanonicalNavigationContainerProps } from './types';
-import TopLevelNav from './TopLevelNav';
 
-const ScrollableWrapper = styled.div`
-  position: relative;
-`;
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+
+interface CanonicalNavigationContainerProps {
+  script: unknown;
+  service: string;
+  dir: string;
+  menuAnnouncedText: string;
+  topScrollableListItems?: React.ReactNode;
+  topDivider?: React.ReactNode;
+  scrollableListItems: React.ReactNode;
+  dropdownListItems: React.ReactNode;
+  menuButton?: React.ReactNode;
+  isOpen?: boolean;
+  setIsOpen?: (open: boolean) => void;
+  blocks?: TopStoryItem[];
+}
 
 const Divider = styled.div`
   position: absolute;
@@ -40,62 +50,106 @@ const Divider = styled.div`
   }
 `;
 
-const CanonicalNavigationContainer = ({
+const NavStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+const NavRow = styled.div`
+  display: flex;
+  flex-direction: ${({ dir }) => (dir === 'rtl' ? 'row-reverse' : 'row')};
+  align-items: stretch;
+  justify-content: ${({ dir }) => (dir === 'rtl' ? 'flex-end' : 'flex-start')};
+  width: 100%;
+`;
+
+const LowerNavWrapper = styled.div`
+  width: 100%;
+  margin-top: 0.25rem;
+  position: relative;
+  z-index: 1;
+`;
+
+const CanonicalNavigationContainer: React.FC<
+  CanonicalNavigationContainerProps
+> = ({
   script,
   service,
   dir,
   menuAnnouncedText,
+  topScrollableListItems,
   scrollableListItems,
   dropdownListItems,
   blocks,
-  navItems,
-  propsForTopBarOJComponent,
-}: CanonicalNavigationContainerProps) => {
+}) => {
   const { isLite } = use(RequestContext);
   const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
-
   useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
     if (!event.matches) {
       setIsOpen(false);
     }
   });
-
-  const topBarBlocks = Array.isArray(blocks) ? (blocks as TopStoryItem[]) : [];
-
   return (
-    <>
-      <TopLevelNav dropdownList={dropdownListItems} dir={dir} />
-      <Navigation
-        script={script}
-        service={service}
-        dir={dir}
-        isOpen={isOpen}
-        navItems={navItems}
-        propsForTopBarOJComponent={propsForTopBarOJComponent}
-        menuAnnouncedText={menuAnnouncedText}
-        scrollableListItems={
-          <ScrollableWrapper>
-            {!isLite && (
-              <CanonicalMenuButton
-                announcedText={menuAnnouncedText}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
-                dir={dir}
-                script={script}
-              />
-            )}
-            {!isOpen && (
-              <ScrollableNavigation dir={dir}>
-                {scrollableListItems}
+    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
+      <NavStack>
+        <NavRow dir={dir}>
+          {dir === 'rtl' ? (
+            <>
+              {!isLite && (
+                <div style={{ flex: '0 0 auto' }}>
+                  <CanonicalMenuButton
+                    script={script}
+                    announcedText={menuAnnouncedText}
+                    isOpen={isOpen}
+                    onClick={() => setIsOpen(!isOpen)}
+                    dir={dir}
+                    navType="top"
+                  />
+                </div>
+              )}
+              <ScrollableNavigation dir={dir} navType="top">
+                {topScrollableListItems}
               </ScrollableNavigation>
-            )}
-          </ScrollableWrapper>
-        }
-        divider={<Divider />}
-        topBarOJs={enabled ? <TopBarOJs blocks={topBarBlocks} /> : null}
-      />
-    </>
+            </>
+          ) : (
+            <>
+              <ScrollableNavigation
+                dir={dir}
+                style={{ flex: '1 1 0', color: '#fff' }}
+                navType="top"
+              >
+                {topScrollableListItems}
+              </ScrollableNavigation>
+              {!isLite && (
+                <div style={{ flex: '0 0 auto' }}>
+                  <CanonicalMenuButton
+                    announcedText={menuAnnouncedText}
+                    isOpen={isOpen}
+                    onClick={() => setIsOpen(!isOpen)}
+                    dir={dir}
+                    script={script}
+                    navType="top"
+                  />
+                </div>
+              )}
+            </>
+          )}
+        </NavRow>
+        <Divider />
+        <LowerNavWrapper>
+          <ScrollableNavigation dir={dir} navType={null}>
+            {scrollableListItems}
+          </ScrollableNavigation>
+        </LowerNavWrapper>
+        <CanonicalDropdown isOpen={isOpen}>
+          {dropdownListItems}
+        </CanonicalDropdown>
+        <Divider />
+        {enabled && <TopBarOJs blocks={blocks ?? []} />}
+      </NavStack>
+    </Navigation>
   );
 };
 
