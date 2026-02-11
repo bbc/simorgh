@@ -28,22 +28,13 @@ const ShareButton = ({
   contentId,
   title,
   url,
-  id,
-  type,
+  eventTrackingData,
 }: {
   contentId?: string;
   title: string;
   url?: string;
-  id?: string;
-  type?: string;
+  eventTrackingData: EventTrackingData;
 }) => {
-  const eventTrackingData: EventTrackingData = {
-    componentName: 'share-button',
-    itemTracker: {
-      resourceId: id,
-      type,
-    },
-  };
   const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
   const { onClick: clickTrackerHandler } =

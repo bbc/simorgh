@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import ShareButton from '../../ShareButton';
 import styles from './index.styles';
 
@@ -9,13 +10,19 @@ const ShareToolComponent = ({ shareUrlPath, title, id }) => {
     setShareUrl(`https://bbc.com${shareUrlPath}`);
   }, [shareUrlPath]);
 
+  const eventTrackingData: EventTrackingData = {
+    componentName: 'share-button-portrait-video-carousel',
+    itemTracker: {
+      resourceId: id,
+    },
+  };
+
   return (
     <div key={shareUrlPath} css={styles.shareToolWrapper}>
       <ShareButton
         title={title}
         url={shareUrl}
-        id={id}
-        type="portrait-video-share-button"
+        eventTrackingData={eventTrackingData}
       />
     </div>
   );
