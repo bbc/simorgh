@@ -39,7 +39,7 @@ const VideoOverlay = ({
   const { shareUrl, title, id } = currentItem?.model?.video || {};
 
   return (
-    <div css={styles.overlayWrapper}>
+    <div css={[styles.overlayWrapper, !shareUrl && 'display: none']}>
       <div
         className="video-overlay-footer fadedIn fadedOut"
         // The video-overlay plugin will use this attribute to instruct SMP not to render subtitles in the space occupied by this div.
