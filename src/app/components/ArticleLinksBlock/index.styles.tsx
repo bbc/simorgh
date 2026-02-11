@@ -2,9 +2,8 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  promoContainer: ({ isDarkUi, palette, mq, spacings }: Theme) =>
+  promoContainer: ({ mq, spacings }: Theme) =>
     css({
-      background: isDarkUi ? palette.GREY_10 : palette.WHITE,
       padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       margin: 0,
       display: 'flex',
