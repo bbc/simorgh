@@ -79,8 +79,7 @@ describe('fetchConfig', () => {
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  // TODO: Add 'live' environment test once rolling out to Live environment
-  it.each(['test'])(
+  it.each(['test', 'live'])(
     'should include ctx-service-env header when renderer_env=%s',
     async env => {
       global.fetch = jest.fn().mockResolvedValue({
@@ -104,8 +103,7 @@ describe('fetchConfig', () => {
     },
   );
 
-  // TODO: Add 'live' environment test once rolling out to Live environment
-  it.each(['test'])(
+  it.each(['test', 'live'])(
     'should include ctx-service-env header when actual environment is %s without renderer_env param',
     async env => {
       process.env.SIMORGH_APP_ENV = env;
