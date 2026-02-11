@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/aria-role */
+import type { MouseEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { use, useRef, MouseEvent } from 'react';
+import { use, useRef } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import styles from './styles';
 
@@ -35,6 +36,7 @@ const ShareButton = ({
   url?: string;
   eventTrackingData: EventTrackingData;
 }) => {
+  const isLivePagePost = contentId && !url;
   const viewTracker = useViewTracker(eventTrackingData);
   const focusRef = useRef<HTMLButtonElement>(null);
   const { onClick: clickTrackerHandler } =
@@ -48,7 +50,7 @@ const ShareButton = ({
     if (clickTrackerHandler) clickTrackerHandler(event);
     try {
       let shareUrl;
-      if (!url && contentId) {
+      if (isLivePagePost) {
         const currentUrlNoHash = new URL(window.location.href.split('#')[0]);
 
         const newParams = new URLSearchParams([
@@ -59,8 +61,6 @@ const ShareButton = ({
         shareUrl = `${currentUrlNoHash.origin}${currentUrlNoHash.pathname}?${newParams}#${contentId}`;
         // await navigator.clipboard.writeText(shareUrl);
       }
-      // eslint-disable-next-line no-console
-      console.log('sharebutton ', url);
       await navigator.share({
         url: url || shareUrl,
         title,
@@ -79,7 +79,10 @@ const ShareButton = ({
         type="button"
         ref={focusRef}
         onClick={handleShare}
-        css={styles.button}
+        css={[
+          styles.button,
+          isLivePagePost ? styles.postButton : styles.portraitVideoButton,
+        ]}
       >
         <ShareSvg />
         <span role="text">
