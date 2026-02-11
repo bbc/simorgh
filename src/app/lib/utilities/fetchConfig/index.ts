@@ -30,11 +30,6 @@ const fetchConfig = async <T>({
   pagePath,
   configType,
 }: FetchConfigParams): Promise<T | null> => {
-  // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia';
-
-  if (!shouldFetchConfig) return Promise.resolve(null);
-
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
