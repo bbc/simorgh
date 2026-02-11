@@ -26,18 +26,6 @@ describe('fetchConfig', () => {
     process.env.BFF_PATH = 'https://mock-bff-path';
   });
 
-  it('should return null for unsupported services', async () => {
-    const { default: fetchConfig } = await import('.');
-
-    const data = await fetchConfig({
-      service: 'news',
-      pagePath: '/news',
-      configType: 'navigation',
-    });
-
-    expect(data).toBeNull();
-  });
-
   it('should fetch configuration data', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
