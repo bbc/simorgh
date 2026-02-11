@@ -141,6 +141,7 @@ const MediaContainer = ({
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
   } = getEnvConfig();
+  const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`;
   useEffect(() => {
     if (!playerElementRef.current) return;
 
@@ -215,7 +216,7 @@ const MediaContainer = ({
             ) {
               mediaPlayer.loadPlugin(
                 {
-                  html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`,
+                  html: videoOverlayPlugin,
                   playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI },
                   waitOnPluginLoad: true,
                 },
@@ -240,6 +241,7 @@ const MediaContainer = ({
     setVideoOverlayContainerRef,
     showAds,
     uniqueId,
+    videoOverlayPlugin,
   ]);
 
   return (
