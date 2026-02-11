@@ -5,7 +5,7 @@ export const afrique = [
     brandTitle: 'BBC Info',
     timestamp: 1605285900000,
     duration: 'PT15M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
     altText: 'BBC Info',
   },
   {
@@ -14,7 +14,7 @@ export const afrique = [
     brandTitle: 'BBC Info',
     timestamp: 1605199500000,
     duration: 'PT15M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
     altText: 'BBC Info',
   },
   {
@@ -24,7 +24,7 @@ export const afrique = [
     brandTitle: 'BBC Info',
     timestamp: 1605113100000,
     duration: 'PT15M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png',
     altText: 'BBC Info',
   },
 ];
@@ -36,7 +36,7 @@ export const pashto = [
     brandTitle: 'نړۍ دا وخت',
     timestamp: 1613779200000,
     duration: 'PT26M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
     altText: 'نړۍ دا وخت',
   },
   {
@@ -46,7 +46,7 @@ export const pashto = [
     episodeTitle: 'د شیفونو سره بحرانونه',
     timestamp: 1613692800000,
     duration: 'PT26M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
     altText: 'نړۍ دا وخت',
   },
   {
@@ -55,7 +55,7 @@ export const pashto = [
     brandTitle: 'نړۍ دا وخت',
     timestamp: 1613606400000,
     duration: 'PT26M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
     altText: 'نړۍ دا وخت',
   },
   {
@@ -65,7 +65,7 @@ export const pashto = [
     episodeTitle: 'یوه نړیواله ناروغي',
     timestamp: 1613520000000,
     duration: 'PT26M',
-    image: '//ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
+    image: 'https://ichef.bbci.co.uk/images/ic/768x432/p08b23c8.png',
     altText: 'نړۍ دا وخت',
   },
 ];
