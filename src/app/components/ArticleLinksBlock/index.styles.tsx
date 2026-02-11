@@ -6,6 +6,7 @@ export default {
     css({
       background: isDarkUi ? palette.GREY_10 : palette.WHITE,
       padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+      margin: 0,
       display: 'flex',
       overflowX: 'auto',
       width: '100%',
