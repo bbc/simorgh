@@ -58,7 +58,7 @@ export default {
   timestamp: ({ isDarkUi, palette, spacings }: Theme) =>
     css({
       marginTop: `${spacings.FULL}rem`,
-      color: isDarkUi ? palette.GREY_1 : undefined,
+      ...(isDarkUi && { color: palette.GREY_1 }),
     }),
   chevron: () =>
     css({
