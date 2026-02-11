@@ -14,6 +14,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import {
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -41,6 +42,7 @@ import AmpMediaLoader from './Amp';
 import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 ];

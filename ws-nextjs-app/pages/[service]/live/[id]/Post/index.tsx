@@ -11,6 +11,7 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
@@ -156,12 +157,19 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader
-        blocks={props.blocks}
-        css={[styles.bodyMedia, styles.videoPost]}
-      />
-    ),
+    video: (props: { blocks: MediaBlock[] }) => {
+      const { blocks } = props;
+      const isPortrait = isPortraitVideo(blocks);
+
+      return (
+        <div css={isPortrait && styles.portraitVideoPlayer}>
+          <MediaLoader
+            blocks={props.blocks}
+            css={[styles.bodyMedia, styles.videoPost]}
+          />
+        </div>
+      );
+    },
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),

@@ -136,4 +136,11 @@ export default {
     css({
       paddingBottom: `${spacings.FULL}rem`,
     }),
+  portraitVideoPlayer: () =>
+    css({
+      '.media-container': {
+        margin: '20px auto 0',
+        width: `${pixelsToRem(247)}rem`,
+      },
+    }),
 };
