@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import ShareButton from '../../ShareButton';
 import styles from './index.styles';
 
@@ -28,7 +29,13 @@ const ShareToolComponent = ({ shareUrlPath, title, id }) => {
   );
 };
 
-const VideoOverlay = ({ currentItem, controlsDisplayed }) => {
+const VideoOverlay = ({
+  currentItem,
+  controlsDisplayed,
+}: {
+  currentItem: PortraitClipMediaBlock;
+  controlsDisplayed: boolean;
+}) => {
   const { shareUrl, title, id } = currentItem?.model?.video || {};
 
   return (
