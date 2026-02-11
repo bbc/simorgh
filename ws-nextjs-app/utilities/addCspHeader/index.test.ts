@@ -163,7 +163,6 @@ describe('shouldServeRelaxedCsp', () => {
       ctx,
       service: 'pidgin',
       toggles: {},
-      country, // Pass country as a key/value
     });
 
     const setHeaderCalls = (ctx.res?.setHeader as jest.Mock).mock.calls;
@@ -182,7 +181,6 @@ describe('shouldServeRelaxedCsp', () => {
       ctx,
       service: 'pidgin',
       toggles: {},
-      // country is undefined
     });
 
     const setHeaderCalls = (ctx.res?.setHeader as jest.Mock).mock.calls;
