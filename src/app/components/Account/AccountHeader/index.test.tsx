@@ -19,13 +19,13 @@ const idctaConfig: IdctaConfig = {
 
 const renderWithProviders = () =>
   render(<AccountHeader />, {
-    service: 'ws',
+    service: 'hindi',
     idctaConfig,
     toggles: {
       _environment: 'test',
       account: {
         enabled: true,
-        value: 'ws',
+        value: 'hindi',
       },
     },
   });
@@ -47,13 +47,13 @@ describe('AccountHeader', () => {
 
   it('does not render when account toggle is disabled for service', () => {
     render(<AccountHeader />, {
-      service: 'ws',
+      service: 'hindi',
       idctaConfig,
       toggles: {
         _environment: 'test',
         account: {
           enabled: true,
-          value: 'hindi',
+          value: 'ws',
         },
       },
     });

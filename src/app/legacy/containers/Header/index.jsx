@@ -1,6 +1,7 @@
 import { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
+import { AccountProvider } from '#contexts/AccountContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import ScriptLink from '#app/components/Header/ScriptLink';
 import {
@@ -59,7 +60,7 @@ const Header = ({
 };
 
 const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
-  const { isAmp, isApp, pageType, isLite } = use(RequestContext);
+  const { isAmp, isApp, pageType, isLite, idctaConfig } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
   const { skipLinkText } = translations;
@@ -109,7 +110,9 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         >
-          <AccountHeader />
+          <AccountProvider initialConfig={idctaConfig}>
+            <AccountHeader />
+          </AccountProvider>
         </Header>
       ) : (
         <Header
@@ -117,7 +120,9 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
         >
-          <AccountHeader />
+          <AccountProvider initialConfig={idctaConfig}>
+            <AccountHeader />
+          </AccountProvider>
         </Header>
       )}
       {isLite && <LiteSiteSummary />}

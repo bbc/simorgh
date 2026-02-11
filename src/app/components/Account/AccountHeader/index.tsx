@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
+import { ToggleContext } from '#app/contexts/ToggleContext';
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import Text from '#app/components/Text';
 import styles from './index.styles';
@@ -9,9 +9,11 @@ import styles from './index.styles';
 const AccountHeader = () => {
   const { isSignedIn, signInUrl, forYouUrl } = useContext(AccountContext);
   const { translations, service } = useContext(ServiceContext);
-  const { toggles } = useContext(RequestContext);
+  const { toggleState } = useContext(ToggleContext);
+  const { account } = getToggleDefinitions(toggleState);
 
-  const { account } = getToggleDefinitions(toggles);
+  console.log('signinurl', signInUrl);
+  console.log('foryouurl', forYouUrl);
 
   const enabledForService =
     account?.enabled &&
