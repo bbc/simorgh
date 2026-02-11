@@ -6,14 +6,12 @@ const styles = {
     css({
       display: 'inline-flex',
       alignItems: 'center',
-      color: palette.WHITE,
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       padding: `${pixelsToRem(10)}rem`,
       marginBottom: `${spacings.TRIPLE}rem`,
       marginInlineStart: `${spacings.DOUBLE}rem`,
       border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
-      backgroundColor: palette.BLACK,
       cursor: 'pointer',
       '&:hover, &:focus-visible': {
         color: palette.WHITE,
@@ -41,10 +39,29 @@ const styles = {
         height: `${spacings.DOUBLE}rem`,
         marginInlineEnd: `${spacings.FULL}rem`,
         path: {
-          fill: palette.WHITE,
           [mq.FORCED_COLOURS]: {
             fill: 'canvasText',
           },
+        },
+      },
+    }),
+  postButton: ({ palette }: Theme) =>
+    css({
+      color: palette.BLACK,
+      backgroundColor: palette.WHITE,
+      svg: {
+        path: {
+          fill: palette.BLACK,
+        },
+      },
+    }),
+  portraitVideoButton: ({ palette }: Theme) =>
+    css({
+      color: palette.WHITE,
+      backgroundColor: palette.BLACK,
+      svg: {
+        path: {
+          fill: palette.WHITE,
         },
       },
     }),

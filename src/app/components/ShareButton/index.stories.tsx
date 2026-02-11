@@ -6,7 +6,7 @@ const Component = () => {
     <ShareButton
       contentId="foo"
       eventTrackingData={{ componentName: 'test' }}
-      headline="bar"
+      title="bar"
     />
   );
 };

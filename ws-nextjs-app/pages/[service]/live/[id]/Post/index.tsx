@@ -14,6 +14,7 @@ import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import ShareButton from '#app/components/ShareButton';
 import dynamic from 'next/dynamic';
 import styles from './styles';
 import {
@@ -21,7 +22,6 @@ import {
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
-import ShareButton from '../ShareButton';
 
 const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
   ssr: false,
@@ -223,7 +223,7 @@ const Post = ({
             componentName: urn,
           }}
           contentId={urn}
-          headline={firstHeadingText}
+          title={firstHeadingText}
         />
       )}
     </article>
