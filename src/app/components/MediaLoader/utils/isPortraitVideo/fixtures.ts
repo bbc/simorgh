@@ -1,6 +1,6 @@
-import { OptimoBlock } from '#app/models/types/optimo';
+import { MediaBlock } from '../../types';
 
-export const mediaBlockWithPV: OptimoBlock[] = [
+export const mediaBlockWithPV: MediaBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
@@ -51,7 +51,7 @@ export const mediaBlockWithPV: OptimoBlock[] = [
   },
 ];
 
-export const mediaBlockWithMultipleVersionsTypes: OptimoBlock[] = [
+export const mediaBlockWithMultipleVersionsTypes: MediaBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
@@ -102,7 +102,7 @@ export const mediaBlockWithMultipleVersionsTypes: OptimoBlock[] = [
   },
 ];
 
-export const mediaBlockWithoutPV: OptimoBlock[] = [
+export const mediaBlockWithoutPV: MediaBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
@@ -153,7 +153,7 @@ export const mediaBlockWithoutPV: OptimoBlock[] = [
   },
 ];
 
-export const mediaBlockWithInvalidOrientation: OptimoBlock[] = [
+export const mediaBlockWithInvalidOrientation: MediaBlock[] = [
   {
     id: '326c14fc',
     type: 'aresMedia',
