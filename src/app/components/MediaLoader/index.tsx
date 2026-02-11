@@ -20,6 +20,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   BumpType,
   EventMapping,
@@ -136,6 +137,10 @@ const MediaContainer = ({
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
   const playerKeyRef = useRef<string | null>(null);
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
   useEffect(() => {
     if (!playerElementRef.current) return;
 
@@ -210,7 +215,7 @@ const MediaContainer = ({
             ) {
               mediaPlayer.loadPlugin(
                 {
-                  html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
+                  html: `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`,
                   playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI },
                   waitOnPluginLoad: true,
                 },
