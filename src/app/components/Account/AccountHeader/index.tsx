@@ -1,26 +1,20 @@
-import { useContext } from 'react';
+import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { ToggleContext } from '#app/contexts/ToggleContext';
-import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
+import useHydrationDetection from '#hooks/useHydrationDetection';
+import useToggle from '#hooks/useToggle';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 const AccountHeader = () => {
-  const { isSignedIn, signInUrl, forYouUrl } = useContext(AccountContext);
-  const { translations, service } = useContext(ServiceContext);
-  const { toggleState } = useContext(ToggleContext);
-  const { account } = getToggleDefinitions(toggleState);
-
-  console.log('signinurl', signInUrl);
-  console.log('foryouurl', forYouUrl);
-
+  const isHidrated = useHydrationDetection();
+  const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
+  const { translations, service } = use(ServiceContext);
+  const { enabled, value } = useToggle('account');
   const enabledForService =
-    account?.enabled &&
-    (account?.value
-      ? String(account.value).split('|').includes(service)
-      : true);
+    enabled && (value ? String(value).split('|').includes(service) : true);
 
+  if (!isHidrated) return null;
   if (!enabledForService) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;

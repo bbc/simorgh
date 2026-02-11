@@ -4,6 +4,11 @@ import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
 
+jest.mock('#hooks/useHydrationDetection', () => ({
+  __esModule: true,
+  default: () => true,
+  }));
+
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
   unavailable_url: 'https://example.com/unavailable',
