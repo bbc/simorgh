@@ -7,7 +7,7 @@ import AccountHeader from '.';
 jest.mock('#hooks/useHydrationDetection', () => ({
   __esModule: true,
   default: () => true,
-  }));
+}));
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
