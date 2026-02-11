@@ -33,7 +33,7 @@ const VideoOverlay = ({
   currentItem,
   controlsDisplayed,
 }: {
-  currentItem: PortraitClipMediaBlock;
+  currentItem: PortraitClipMediaBlock | undefined;
   controlsDisplayed: boolean;
 }) => {
   const { shareUrl, title, id } = currentItem?.model?.video || {};
