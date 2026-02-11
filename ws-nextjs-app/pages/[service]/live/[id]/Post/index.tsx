@@ -220,7 +220,10 @@ const Post = ({
       {hasShareApi && (
         <ShareButton
           eventTrackingData={{
-            componentName: urn,
+            componentName: 'share-button-live-page-post',
+            itemTracker: {
+              resourceId: urn,
+            },
           }}
           contentId={urn}
           title={firstHeadingText}

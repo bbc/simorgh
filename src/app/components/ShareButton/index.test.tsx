@@ -15,7 +15,10 @@ Object.assign(navigator, {
 describe('ShareButton', () => {
   const mockLivePagePostShareButtonProps = {
     eventTrackingData: {
-      componentName: 'live-page-post-share-button',
+      componentName: 'share-button-live-page-post',
+      itemTracker: {
+        resourceId: 'urn:foo',
+      },
     },
     contentId: 'urn:foo',
     title: 'Share this post',
@@ -23,7 +26,7 @@ describe('ShareButton', () => {
 
   const mockPortraitVideoShareButtonProps = {
     eventTrackingData: {
-      componentName: 'portrait-video-share-button',
+      componentName: 'share-button-portrait-video-carousel',
       itemTracker: {
         resourceId: 'urn:foo',
       },
@@ -62,7 +65,10 @@ describe('ShareButton', () => {
       await user.click(shareButton);
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'live-page-post-share-button',
+        componentName: 'share-button-live-page-post',
+        itemTracker: {
+          resourceId: 'urn:foo',
+        },
       });
     });
   });
@@ -98,7 +104,7 @@ describe('ShareButton', () => {
       await user.click(shareButton);
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'portrait-video-share-button',
+        componentName: 'share-button-portrait-video-carousel',
         itemTracker: {
           resourceId: 'urn:foo',
         },
