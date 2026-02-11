@@ -45,6 +45,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'și',
+      readTime: {
+        readTimePrefix: 'Timp de lectură',
+        minute: 'min',
+      },
       pagination: {
         page: 'Pagina',
         previousPage: 'Înapoi',

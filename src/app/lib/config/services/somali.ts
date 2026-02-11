@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'iyo',
+      readTime: {
+        readTimePrefix: 'Waqtiga akhriska',
+        minute: 'daqiiqo',
+      },
       pagination: {
         page: 'Bog',
         previousPage: 'Biggii Hore',
