@@ -141,7 +141,7 @@ const fetchEventHandler = async event => {
           try {
             return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
           } catch (err) {
-            return new Response('', { status: 503 });
+            return new Response('WebP fetch failed', { status: 503 });
           }
         })(),
       );
