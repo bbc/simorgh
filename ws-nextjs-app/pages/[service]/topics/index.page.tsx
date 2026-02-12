@@ -73,6 +73,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
           totalItems,
           metadata: {
             type: TOPIC_PAGE,
+            analytics: topicsData.analytics,
+            atiAnalytics: topicsData.atiAnalytics,
           },
         },
       },

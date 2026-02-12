@@ -25,12 +25,21 @@ const formatReadTime = ({
   if (!singleMinuteSuffix || !readTimePrefix) return null;
 
   const servicesWithMinutesBeforeNumber: Services[] = [
+    'afaanoromoo',
+    'burmese',
     'hausa',
+    'gahuza',
     'igbo',
-    'yoruba',
     'swahili',
+    'sinhala',
+    'yoruba',
   ];
-  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
+  const servicesWithoutColon: Services[] = [
+    'igbo',
+    'pidgin',
+    'turkce',
+    'japanese',
+  ];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 

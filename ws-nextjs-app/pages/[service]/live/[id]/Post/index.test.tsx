@@ -170,7 +170,7 @@ describe('Post', () => {
       });
 
       expect(
-        container.querySelector('[data-e2e="media-loader__placeholder"]'),
+        container.querySelector('[data-e2e="media-player"]'),
       ).toBeInTheDocument();
     });
 

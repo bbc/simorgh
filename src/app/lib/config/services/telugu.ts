@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'మరియు',
+      readTime: {
+        readTimePrefix: 'చదివే సమయం',
+        minute: 'నిమిషాలు',
+      },
       pagination: {
         previousPage: 'మునుపటి',
         nextPage: 'తదుపరి',
