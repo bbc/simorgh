@@ -4,9 +4,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.4';
+const version = 'v0.3.3';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v4';
+const cacheName = 'simorghCache_v3';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -23,7 +23,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    return new Response('Resource fetch failed', { status: 503 });
+    return null;
   }
 };
 
@@ -59,7 +59,9 @@ const CACHEABLE_FILES = [
   // Fonts
   /\.woff2$/,
   // Frosted Promo (test and live environments only)
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
+  // Moment
+  /\/moment-lib+.*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
@@ -99,13 +101,6 @@ self.addEventListener('message', async event => {
   }
 });
 
-const loggerEnabled = true;
-const logger = (...args) => {
-  if (!loggerEnabled) return;
-  // eslint-disable-next-line no-console
-  console.log(`[SW ${version}]`, ...args);
-};
-
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
@@ -113,17 +108,6 @@ const fetchEventHandler = async event => {
   );
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
-
-  logger('Request', event.request.url, {
-    isNavigationMode,
-    isPWADeviceOffline,
-    requestType: event.request.destination,
-    referrer: event.request.referrer,
-  });
-
-  if (isNavigationMode) {
-    logger(`📣  Navigation mode`, { url: event.request.url });
-  }
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -137,13 +121,9 @@ const fetchEventHandler = async event => {
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
-        (async () => {
-          try {
-            return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
-          } catch (err) {
-            return new Response('WebP fetch failed', { status: 503 });
-          }
-        })(),
+        fetch(imageUrlWithoutWebp, {
+          mode: 'no-cors',
+        }),
       );
     }
   } else if (isRequestForCacheableFile) {
@@ -152,20 +132,31 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         let response = await cache.match(event.request);
         if (!response) {
-          response = await cacheResource(cache, event.request.url);
+          response = await fetch(event.request.url);
+          cache.put(event.request, response.clone());
         }
         return response;
       })(),
     );
   } else if (isNavigationMode) {
     const { url } = event.request;
+
     event.respondWith(
       (async () => {
         const client = await self.clients.get(event.clientId);
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        const getOfflineFallback = async () => {
+        try {
+          // Use preload if available
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
+
+          const networkResp = await fetch(event.request);
+          isPWADeviceOffline = false;
+          return networkResp;
+        } catch (err) {
+          // Only show offline page for installed PWA
           if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
@@ -173,48 +164,14 @@ const fetchEventHandler = async event => {
               self.location.origin,
             ).href;
 
-            logger('📌 [getOfflineFallback]', {
-              offlineUrl,
-              isPWA,
-            });
-
             const cachedOffline = await cache.match(offlineUrl);
             if (cachedOffline) {
-              logger('📌 [getOfflineFallback], returning cached offline page', {
-                offlineUrl,
-              });
               isPWADeviceOffline = true;
               return cachedOffline;
             }
           }
-          logger(
-            '❌ [getOfflineFallback] No offline page available, returning 503',
-          );
-          return new Response('Error in navigation mode', { status: 503 });
-        };
-
-        try {
-          // Use preload if available
-          const preloadResp = await event.preloadResponse;
-          if (preloadResp) return preloadResp;
-          const networkResp = await fetch(event.request);
-
-          logger(
-            '📡 Navigation fetch response:',
-            networkResp.status,
-            networkResp.ok,
-          );
-
-          if (networkResp.status >= 500) {
-            logger('⚠️ Server error (5xx), treating as offline');
-            return getOfflineFallback();
-          }
-
-          isPWADeviceOffline = false;
-          return networkResp;
-        } catch (err) {
-          logger('🔴 Fetch failed with exception:', err.message);
-          return getOfflineFallback();
+          // fallback to browser default behavior
+          throw err;
         }
       })(),
     );
@@ -224,14 +181,12 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         const cached = await cache.match(event.request);
         if (cached) return cached;
-        try {
-          return await fetch(event.request);
-        } catch (err) {
-          return new Response('PWA offline fetch failed', { status: 503 });
-        }
+        return fetch(event.request);
       })(),
     );
   }
+
+  return;
 };
 
 self.addEventListener('fetch', fetchEventHandler);
