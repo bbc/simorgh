@@ -23,7 +23,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    return new Response('', { status: 503 });
+    return new Response('Resource fetch failed', { status: 503 });
   }
 };
 
@@ -162,8 +162,7 @@ const fetchEventHandler = async event => {
               return cachedOffline;
             }
           }
-          // fallback to browser default behavior
-          return new Response('', { status: 503 });
+          return new Response('Navigation failed', { status: 503 });
         }
       })(),
     );
@@ -176,7 +175,7 @@ const fetchEventHandler = async event => {
         try {
           return await fetch(event.request);
         } catch (err) {
-          return new Response('', { status: 503 });
+          return new Response('PWA offline fetch failed', { status: 503 });
         }
       })(),
     );
