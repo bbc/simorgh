@@ -127,10 +127,13 @@ const fetchEventHandler = async event => {
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
-    // if supports webp is false in request header then don't use it
-    // if accept header doesn't indicate support for webp remove .webp extension
+
+    // Inspect the accept header for WebP support
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
+
+    // if supports webp is false in request header then don't use it
+    // if accept header doesn't indicate support for webp remove .webp extension
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
