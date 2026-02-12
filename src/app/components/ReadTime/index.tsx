@@ -5,6 +5,8 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
 import styles from './index.styles';
+import { formatDuration } from '#app/legacy/psammead/psammead-timestamp-container/src/utilities';
+import moment from 'moment';
 
 type ReadTimeProps = {
   readTimeValue: number;
@@ -16,11 +18,13 @@ const formatReadTime = ({
   singleMinuteSuffix,
   readTimePrefix,
   service,
+  datetimeLocale,
 }: {
   readTimeValue: number;
   singleMinuteSuffix?: string;
   readTimePrefix?: string;
   service: Services;
+  datetimeLocale: string;
 }) => {
   if (!singleMinuteSuffix || !readTimePrefix) return null;
 
@@ -43,13 +47,19 @@ const formatReadTime = ({
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
+  const translatedReadTime = formatDuration({
+    duration: moment.duration(readTimeValue, 'minutes').toISOString(),
+    format: 'm',
+    locale: datetimeLocale,
+  });
+
   return servicesWithMinutesBeforeNumber.includes(service)
-    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${readTimeValue}`
-    : `${readTimePrefix}${separator}${readTimeValue} ${singleMinuteSuffix}`;
+    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${translatedReadTime}`
+    : `${readTimePrefix}${separator}${translatedReadTime} ${singleMinuteSuffix}`;
 };
 
 const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
-  const { translations, service } = use(ServiceContext);
+  const { datetimeLocale, translations, service } = use(ServiceContext);
 
   const { readTime } = translations;
   const singleMinuteSuffix = readTime?.minute;
@@ -73,6 +83,7 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
     singleMinuteSuffix,
     readTimePrefix,
     service,
+    datetimeLocale,
   });
 
   if (!readTimeText) return null;
