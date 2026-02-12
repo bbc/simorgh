@@ -11,7 +11,7 @@ const BrandContainerWithContext = (props = {}) => {
     scriptLink = null,
     linkId = null,
     children = null,
-  } = props || {};
+  } = props;
 
   return (
     <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId}>

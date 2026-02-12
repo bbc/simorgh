@@ -26,13 +26,6 @@ const renderWithProviders = () =>
   render(<AccountHeader />, {
     service: 'hindi',
     idctaConfig,
-    toggles: {
-      _environment: 'test',
-      account: {
-        enabled: true,
-        value: 'hindi',
-      },
-    },
   });
 
 describe('AccountHeader', () => {
@@ -41,17 +34,7 @@ describe('AccountHeader', () => {
   });
 
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
-    render(<AccountHeader />, {
-      service: 'hindi',
-      idctaConfig,
-      toggles: {
-        _environment: 'test',
-        account: {
-          enabled: true,
-          value: 'hindi',
-        },
-      },
-    });
+    renderWithProviders();
 
     const link = await screen.findByRole('link', { name: 'Sign In' });
     expect(link).toHaveAttribute(
@@ -63,14 +46,7 @@ describe('AccountHeader', () => {
   it('does not render when account toggle is disabled for service', () => {
     render(<AccountHeader />, {
       service: 'hindi',
-      idctaConfig,
-      toggles: {
-        _environment: 'test',
-        account: {
-          enabled: true,
-          value: 'ws',
-        },
-      },
+      idctaConfig: null,
     });
 
     expect(screen.queryByRole('link')).toBeNull();
