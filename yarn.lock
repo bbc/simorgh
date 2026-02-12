@@ -6099,12 +6099,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.10":
-  version: 19.2.10
-  resolution: "@types/react@npm:19.2.10"
+"@types/react@npm:19.2.13":
+  version: 19.2.13
+  resolution: "@types/react@npm:19.2.13"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/0e34a0e42db02f4b3f4bed446128c555446c2854b833d71d597e6c8b08800dd90519a03a226ad250cccc4a0c9e51bd3f9c54cdcb79ee1219f4d5b318fb3a3813
+  checksum: 10/a3bb8d09c79f5f29dfbc7e47c5b39c687f4329b76041713993c025781f32c26e4881fbeead65ff44d728945f222b781c6053263bc1819ef90596b4fbfd83f718
   languageName: node
   linkType: hard
 
@@ -17494,7 +17494,7 @@ __metadata:
     "@types/jsdom": "npm:27.0.0"
     "@types/loadable__component": "npm:5.13.10"
     "@types/ramda": "npm:0.31.1"
-    "@types/react": "npm:19.2.10"
+    "@types/react": "npm:19.2.13"
     "@types/react-dom": "npm:19.2.3"
     "@types/react-helmet": "npm:6.1.11"
     "@types/react-lazyload": "npm:^3.2.0"
