@@ -211,10 +211,7 @@ describe('Service Worker', () => {
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       // Reverb - preview1, preview2, test & live
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh1-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh2-preview-assets/public/static/js/reverb/reverb-3.10.2.js',
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js',
       // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
@@ -438,7 +435,7 @@ describe('Service Worker', () => {
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.3',
-      fileContentHash: '5cb6c6475b78d85656632455d9c28a87',
+      fileContentHash: '12d09b3ece7b74e4a02658d93fdec703',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {
