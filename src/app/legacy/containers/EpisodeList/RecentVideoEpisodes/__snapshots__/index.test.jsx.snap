@@ -504,7 +504,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 alt="BBC Info"
                 class="emotion-21 emotion-22"
                 dir="ltr"
-                src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
+                src="https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div
@@ -607,7 +607,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 alt="BBC Info"
                 class="emotion-21 emotion-22"
                 dir="ltr"
-                src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
+                src="https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div
@@ -710,7 +710,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
                 alt="BBC Info"
                 class="emotion-21 emotion-22"
                 dir="ltr"
-                src="//ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
+                src="https://ichef.bbci.co.uk/images/ic/768x432/p08b22y1.png"
               />
             </div>
             <div

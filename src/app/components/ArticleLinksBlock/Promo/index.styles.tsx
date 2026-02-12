@@ -14,7 +14,7 @@ export default {
       overflowY: 'hidden',
       WebkitLineClamp: 4,
       WebkitBoxOrient: 'vertical',
-      color: isDarkUi ? palette.GREY_10 : palette.GREY_8,
+      color: isDarkUi ? palette.GREY_2 : palette.GREY_8,
 
       '&:hover, &:focus': {
         textDecoration: 'underline',
@@ -38,7 +38,7 @@ export default {
   promoBox: ({ isDarkUi, mq, palette, spacings }: Theme) =>
     css({
       position: 'relative',
-      backgroundColor: isDarkUi ? palette.GREY_3 : palette.WHITE,
+      backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
       padding: `${spacings.DOUBLE}rem`,
       paddingInlineEnd: `${pixelsToRem(38)}rem`,
       height: 'auto',
@@ -58,7 +58,7 @@ export default {
   timestamp: ({ isDarkUi, palette, spacings }: Theme) =>
     css({
       marginTop: `${spacings.FULL}rem`,
-      color: isDarkUi ? palette.GREY_6 : undefined,
+      ...(isDarkUi && { color: palette.GREY_1 }),
     }),
   chevron: () =>
     css({
@@ -66,5 +66,6 @@ export default {
       top: '50%',
       transform: 'translateY(-50%)',
       insetInlineEnd: `${pixelsToRem(12)}rem`,
+      fill: 'currentColor',
     }),
 };

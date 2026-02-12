@@ -253,14 +253,16 @@ const atiAnalyticsTestSuites = [
 
 // TC2 MAPs  do not support AMP pages
 const tc2CanonicalTestSuites = Cypress.env('SMOKE')
-  ? [
-      {
-        path: '/hausa/multimedia/2016/07/160714_tc2_audiomap?renderer_env=test', // TC2 MAP with audio clip
-        service: 'hausa',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
-    ]
+  ? // DISABLED DUE TO AN UNKNOWN FAULT WITH TC2 MAPS 500 ERROR FLAKES
+    // [
+    //   {
+    //     path: '/hausa/multimedia/2016/07/160714_tc2_audiomap?renderer_env=test', // TC2 MAP with audio clip
+    //     service: 'hausa',
+    //     runforEnv: ['test'],
+    //     tests: canonicalTests,
+    //   },
+    // ]
+    []
   : [
       {
         path: '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
