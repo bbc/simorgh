@@ -7,14 +7,14 @@ import Text from '#app/components/Text';
 import styles from './index.styles';
 
 const AccountHeader = () => {
-  const isHidrated = useHydrationDetection();
+  const isHydrated = useHydrationDetection();
   const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
   const { translations, service } = use(ServiceContext);
   const { enabled, value } = useToggle('account');
   const enabledForService =
     enabled && (value ? String(value).split('|').includes(service) : true);
 
-  if (!isHidrated) return null;
+  if (!isHydrated) return null;
   if (!enabledForService) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
