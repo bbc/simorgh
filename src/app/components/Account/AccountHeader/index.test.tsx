@@ -40,8 +40,18 @@ describe('AccountHeader', () => {
     Cookie.remove('ckns_id');
   });
 
-  it('shows Sign in when signed out', async () => {
-    renderWithProviders();
+  it('shows Sign in when signed out and account toggle is enabled for service', async () => {
+    render(<AccountHeader />, {
+      service: 'hindi',
+      idctaConfig,
+      toggles: {
+        _environment: 'test',
+        account: {
+          enabled: true,
+          value: 'hindi',
+        },
+      },
+    });
 
     const link = await screen.findByRole('link', { name: 'Sign In' });
     expect(link).toHaveAttribute(
