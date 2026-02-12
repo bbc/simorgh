@@ -18,18 +18,12 @@ const useServiceWorkerRegistration = (service?: string) => {
     }
 
     const cleanupLegacyRegistrations = async () => {
-      // eslint-disable-next-line no-console
-      console.log(`📌 cleanupLegacyRegistrations`, { service });
       const registrations = await sw.getRegistrations();
       const legacy = registrations.find(
         reg => new URL(reg.scope).pathname === `/${service}/`,
       );
 
       if (legacy) {
-        // eslint-disable-next-line no-console
-        console.log(
-          `📌 Cleaned up legacy service worker registration for /${service}/`,
-        );
         await legacy.unregister();
       }
     };
