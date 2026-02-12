@@ -23,7 +23,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    return new Response('Error in caching resources', { status: 503 });
+    return new Response('Resource fetch failed', { status: 503 });
   }
 };
 
@@ -127,8 +127,13 @@ const fetchEventHandler = async event => {
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
+
+    // Inspect the accept header for WebP support
     const supportsWebp =
       req.headers.has('accept') && req.headers.get('accept').includes('webp');
+
+    // if supports webp is false in request header then don't use it
+    // if accept header doesn't indicate support for webp remove .webp extension
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
@@ -136,9 +141,7 @@ const fetchEventHandler = async event => {
           try {
             return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
           } catch (err) {
-            return new Response('Error in fetching Webp Images', {
-              status: 503,
-            });
+            return new Response('WebP fetch failed', { status: 503 });
           }
         })(),
       );
@@ -194,7 +197,6 @@ const fetchEventHandler = async event => {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
           if (preloadResp) return preloadResp;
-
           const networkResp = await fetch(event.request);
 
           logger(
@@ -211,7 +213,6 @@ const fetchEventHandler = async event => {
           isPWADeviceOffline = false;
           return networkResp;
         } catch (err) {
-          // Network exception (truly offline, DNS failure, timeout, etc.)
           logger('🔴 Fetch failed with exception:', err.message);
           return getOfflineFallback();
         }
@@ -227,11 +228,7 @@ const fetchEventHandler = async event => {
         try {
           return await fetch(event.request);
         } catch (err) {
-          logger('🔴 isPWADeviceOffline: fetch failed');
-          return new Response(
-            'Error in fetching resources in PWA offline mode',
-            { status: 503 },
-          );
+          return new Response('PWA offline fetch failed', { status: 503 });
         }
       })(),
     );
