@@ -224,7 +224,6 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         const cached = await cache.match(event.request);
         if (cached) return cached;
-
         try {
           return await fetch(event.request);
         } catch (err) {
