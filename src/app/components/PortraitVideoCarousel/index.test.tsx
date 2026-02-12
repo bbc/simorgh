@@ -51,4 +51,14 @@ describe('PortraitVideoCarousel', () => {
 
     expect(screen.queryByTestId('portrait-video-carousel')).toBeNull();
   });
+
+  it('Should not render anything when isAmp is true', async () => {
+    await act(async () => {
+      render(<Component {...fixture} eventTrackingData={eventTrackingData} />, {
+        isAmp: true,
+      });
+    });
+
+    expect(screen.queryByTestId('portrait-video-carousel')).toBeNull();
+  });
 });
