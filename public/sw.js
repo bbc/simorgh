@@ -159,43 +159,41 @@ const fetchEventHandler = async event => {
         const client = await self.clients.get(event.clientId);
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
+
+        const getOfflineFallback = async () => {
+          if (isPWA) {
+            const service = getServiceFromUrl(url);
+            const offlineUrl = new URL(
+              getOfflinePageUrl(service),
+              self.location.origin,
+            ).href;
+
+            logger('📌 [getOfflineFallback]', {
+              offlineUrl,
+              isPWA,
+            });
+
+            const cachedOffline = await cache.match(offlineUrl);
+            if (cachedOffline) {
+              logger('📌 [getOfflineFallback], returning cached offline page', {
+                offlineUrl,
+              });
+              isPWADeviceOffline = true;
+              return cachedOffline;
+            }
+          }
+
+          logger(
+            '❌ [getOfflineFallback] No offline page available, returning 503',
+          );
+          return new Response('Error in navigation mode', { status: 503 });
+        };
+
         try {
           // Use preload if available
           const preloadResp = await event.preloadResponse;
           if (preloadResp) return preloadResp;
           const networkResp = await fetch(event.request);
-
-          const getOfflineFallback = async () => {
-            if (isPWA) {
-              const service = getServiceFromUrl(url);
-              const offlineUrl = new URL(
-                getOfflinePageUrl(service),
-                self.location.origin,
-              ).href;
-
-              logger('📌 [getOfflineFallback]', {
-                offlineUrl,
-                isPWA,
-              });
-
-              const cachedOffline = await cache.match(offlineUrl);
-              if (cachedOffline) {
-                logger(
-                  '📌 [getOfflineFallback], returning cached offline page',
-                  {
-                    offlineUrl,
-                  },
-                );
-                isPWADeviceOffline = true;
-                return cachedOffline;
-              }
-            }
-
-            logger(
-              '❌ [getOfflineFallback] No offline page available, returning 503',
-            );
-            return new Response('Error in navigation mode', { status: 503 });
-          };
 
           logger(
             '📡 Navigation fetch response:',
