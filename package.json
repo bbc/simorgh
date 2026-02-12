@@ -138,15 +138,15 @@
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
-    "@babel/core": "7.28.6",
+    "@babel/core": "7.29.0",
     "@babel/eslint-parser": "7.28.6",
     "@babel/plugin-proposal-export-default-from": "7.27.1",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/plugin-proposal-throw-expressions": "7.27.1",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
-    "@babel/plugin-transform-runtime": "7.28.5",
+    "@babel/plugin-transform-runtime": "7.29.0",
     "@babel/polyfill": "7.12.1",
-    "@babel/preset-env": "7.28.6",
+    "@babel/preset-env": "7.29.0",
     "@babel/preset-react": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@babel/runtime": "7.28.6",
