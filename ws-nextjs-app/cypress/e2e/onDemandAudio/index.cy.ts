@@ -1,28 +1,29 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import e2eTests from './tests';
-import testsForAllPages from '../testsForAllPages';
-import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
+import runTestsForPage, {
+  TestDataType,
+} from '#nextjs/cypress/support/helpers/runTestsForPage';
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
   assertPodcastLinksComponentClick,
   assertPodcastLinksComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
+} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/podcastLinks';
 import {
   assertRecentAudioEpisodesComponentClick,
   assertRecentAudioEpisodesComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
+import getPathWithSuffix from '#cypress/support/helpers/getPathWithSuffix';
 import {
   assertPodcastPromoComponentClick,
   assertPodcastPromoComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
+} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/podcastPromo';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
-
-const pageType = 'onDemandAudio';
+} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/radioSchedule';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import e2eTests from './tests';
+import testsForAllPages from '../testsForAllPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
 
 const tests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 const testSuites = [
@@ -446,7 +447,7 @@ const testSuites = [
     runforEnv: ['test', 'live'],
     tests,
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsPodcastComponentTests = [
   assertPageView,
@@ -534,7 +535,7 @@ const atiAnalyticsTestSuites = [
     contentType: 'player-episode',
     tests: [...atiAnalyticsPodcastComponentTests],
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
@@ -559,17 +560,17 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 });
 
 runTestsForPage({
-  pageType,
+  pageType: AUDIO_PAGE,
   testSuites,
 });
 
 runTestsForPage({
-  pageType,
+  pageType: AUDIO_PAGE,
   testSuites: atiAnalyticsTestSuites,
   testIsolation: true,
 });
 
 runTestsForPage({
-  pageType,
+  pageType: AUDIO_PAGE,
   testSuites: atiAnalyticsLiteTestSuites,
 });

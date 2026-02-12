@@ -1,7 +1,7 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
-import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
+import { getEpisodeAvailability } from '#cypress/support/helpers/onDemandRadioTv';
+import chartbeatTests from '#cypress/support/helpers/chartbeatTests';
 
 export default ({ service, pageType, path, variant = 'default' }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -12,7 +12,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
       },
       () => {
         it('should render a valid media player', () => {
-          cy.getPageDataFromWindow().then(({ pageData }) => {
+          cy.getPageDataFromWindow().then(pageData => {
             if (!getEpisodeAvailability(pageData)) {
               return cy.log(`Episode is not available: ${path}}`);
             }
@@ -47,10 +47,8 @@ export default ({ service, pageType, path, variant = 'default' }) => {
                 toggles?.[toggleName]?.value,
                 10,
               );
-              cy.getPageDataFromWindow().then(data => {
-                const {
-                  pageData: { recentEpisodes },
-                } = data;
+              cy.getPageDataFromWindow().then(pageData => {
+                const { recentEpisodes } = pageData;
 
                 if (recentEpisodes?.length > 1 && recentEpisodesMaxNumber > 1) {
                   cy.get('[data-e2e=recent-episodes-list]').should('exist');
@@ -74,26 +72,25 @@ export default ({ service, pageType, path, variant = 'default' }) => {
       });
       describe('Radio Schedule', () => {
         it('should be displayed if there is enough schedule data', function test() {
-          cy.getPageDataFromWindow().then(({ pageData }) => {
-            cy.fixture(`toggles/${service}.json`).then(toggles => {
-              const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
-              cy.log(
-                `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
-              );
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            const scheduleIsEnabled = toggles?.onDemandRadioSchedule?.enabled;
+            cy.log(
+              `On Demand Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
+            );
 
-              if (scheduleIsEnabled) {
+            if (scheduleIsEnabled) {
+              cy.getPageDataFromWindow().then(pageData => {
                 const { radioScheduleData } = pageData;
                 if (scheduleIsEnabled && radioScheduleData) {
                   cy.log('Schedule has enough data');
                   cy.get('[data-e2e=radio-schedule]').should('exist');
                   // cy.get('[data-e2e=live]').should('exist');
-                } else {
-                  cy.get('[data-e2e=radio-schedule]').should('not.exist');
                 }
-              } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
-              }
-            });
+              });
+            } else {
+              cy.get('[data-e2e=radio-schedule]').should('not.exist');
+              cy.log('Radio schedule is not toggled on for this service');
+            }
           });
         });
       });
