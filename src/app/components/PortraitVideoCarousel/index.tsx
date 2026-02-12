@@ -52,7 +52,7 @@ const PortraitVideoCarousel = ({
     }
   }, []);
 
-  const { isLite, nonce } = use(RequestContext);
+  const { isLite, isAmp, nonce } = use(RequestContext);
 
   // EXPERIMENT: Homepage Portrait Video 2
   const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
@@ -76,6 +76,8 @@ const PortraitVideoCarousel = ({
   };
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
+
+  if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
