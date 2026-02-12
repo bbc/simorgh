@@ -2,20 +2,16 @@ import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
-import useToggle from '#hooks/useToggle';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 const AccountHeader = () => {
   const isHydrated = useHydrationDetection();
-  const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
-  const { translations, service } = use(ServiceContext);
-  const { enabled, value } = useToggle('account');
-  const enabledForService =
-    enabled && (value ? String(value).split('|').includes(service) : true);
+  const { isSignedIn, signInUrl, forYouUrl, isIdctaAvailable } =
+    use(AccountContext);
+  const { translations } = use(ServiceContext);
 
-  if (!isHydrated) return null;
-  if (!enabledForService) return null;
+  if (!isHydrated || !isIdctaAvailable) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
   if (!href) return null;
