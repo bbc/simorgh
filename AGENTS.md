@@ -7,6 +7,8 @@ The Simorgh repository is made up of 2 React applications, one powered by a cust
 
 We call each of these areas a "service" and its path can be a language (e.g. arabic) or a name that doesn't correspond directly to a language (e.g. mundo)
 
+A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `mundo`, `portuguese`) can have different requirements: editorial priorities, layouts, translations, feature toggles, analytics, and even routing rules can all vary by service. When proposing code or architecture, always consider which service(s) it should apply to, and avoid assumptions that a single English/Default experience is representative.
+
 ## Dev environment tips
 - Use `nvm use` to get the correct version of node, and then `yarn` install packages. Then `yarn dev` will serve your code locally.
 - Our directory aliases can be found in dirAlias.js
@@ -18,6 +20,7 @@ We call each of these areas a "service" and its path can be a language (e.g. ara
 - Don't use any external dependencies that you don't need.
 - Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
 - Optimise all code for front end performance where possible, as 90% of our audience are on mobile devices and a large percentage of them have poor bandwidth due to their locations across the world.
+- Always be **service-aware**: many behaviours are service-specific (e.g. features, translations, routes, branding, analytics). When reading or writing code, think about which service(s) it affects, avoid hard-coding assumptions based on one service, and call out when logic should be conditional or configurable per service.
  
 ## Testing instructions
 - You can run our entire suite of unit and integration tests by running `yarn test`
