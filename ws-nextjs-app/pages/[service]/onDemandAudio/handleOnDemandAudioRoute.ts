@@ -10,6 +10,7 @@ import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
 import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
 
@@ -52,7 +53,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv,
+    rendererEnv: isTest() ? 'live' : rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: AUDIO_PAGE,
   });
