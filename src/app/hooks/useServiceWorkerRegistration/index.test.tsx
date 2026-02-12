@@ -212,4 +212,38 @@ describe('useServiceWorkerRegistration', () => {
       );
     });
   });
+
+  it('should unregister legacy service worker with trailing slash scope', async () => {
+    const mockUnregister = jest.fn().mockResolvedValue(true);
+    const legacyRegistration = {
+      scope: 'https://example.com/mundo/',
+      unregister: mockUnregister,
+    };
+
+    mockGetRegistrations.mockResolvedValue([legacyRegistration]);
+
+    renderHook(() => useServiceWorkerRegistration('mundo'));
+
+    await waitFor(() => {
+      expect(mockGetRegistrations).toHaveBeenCalled();
+      expect(mockUnregister).toHaveBeenCalled();
+    });
+  });
+
+  it('should not unregister service worker when scope does not have trailing slash', async () => {
+    const mockUnregister = jest.fn();
+    const currentRegistration = {
+      scope: 'https://example.com/mundo',
+      unregister: mockUnregister,
+    };
+
+    mockGetRegistrations.mockResolvedValue([currentRegistration]);
+
+    renderHook(() => useServiceWorkerRegistration('mundo'));
+
+    await waitFor(() => {
+      expect(mockGetRegistrations).toHaveBeenCalled();
+      expect(mockUnregister).not.toHaveBeenCalled();
+    });
+  });
 });

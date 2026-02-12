@@ -18,6 +18,10 @@ const useServiceWorkerRegistration = (service?: string) => {
     }
 
     const cleanupLegacyRegistrations = async () => {
+      if (typeof sw.getRegistrations !== 'function') {
+        return;
+      }
+
       const registrations = await sw.getRegistrations();
       const legacy = registrations.find(
         reg => new URL(reg.scope).pathname === `/${service}/`,
