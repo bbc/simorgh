@@ -23,7 +23,7 @@ const cacheResource = async (cache, url) => {
     if (response.ok) await cache.put(url, response.clone());
     return response;
   } catch (err) {
-    return new Response('', { status: 503 });
+    return new Response('Error in caching resources', { status: 503 });
   }
 };
 
@@ -136,7 +136,9 @@ const fetchEventHandler = async event => {
           try {
             return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
           } catch (err) {
-            return new Response('', { status: 503 });
+            return new Response('Error in fetching Webp Images', {
+              status: 503,
+            });
           }
         })(),
       );
@@ -226,7 +228,10 @@ const fetchEventHandler = async event => {
           return await fetch(event.request);
         } catch (err) {
           logger('🔴 isPWADeviceOffline: fetch failed');
-          return new Response('', { status: 503 });
+          return new Response(
+            'Error in fetching resources in PWA offline mode',
+            { status: 503 },
+          );
         }
       })(),
     );
