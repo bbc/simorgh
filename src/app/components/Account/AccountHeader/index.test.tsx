@@ -4,6 +4,11 @@ import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
 import AccountHeader from '.';
 
+jest.mock('#hooks/useHydrationDetection', () => ({
+  __esModule: true,
+  default: () => true,
+}));
+
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
   unavailable_url: 'https://example.com/unavailable',
@@ -19,7 +24,7 @@ const idctaConfig: IdctaConfig = {
 
 const renderWithProviders = () =>
   render(<AccountHeader />, {
-    service: 'ws',
+    service: 'hindi',
     idctaConfig,
   });
 
@@ -28,7 +33,7 @@ describe('AccountHeader', () => {
     Cookie.remove('ckns_id');
   });
 
-  it('shows Sign in when signed out', async () => {
+  it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
     const link = await screen.findByRole('link', { name: 'Sign In' });
@@ -36,6 +41,15 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+  });
+
+  it('does not render when account toggle is disabled for service', () => {
+    render(<AccountHeader />, {
+      service: 'hindi',
+      idctaConfig: null,
+    });
+
+    expect(screen.queryByRole('link')).toBeNull();
   });
 
   it('shows For you when signed in', async () => {
