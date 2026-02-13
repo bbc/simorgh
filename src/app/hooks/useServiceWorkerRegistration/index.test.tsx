@@ -170,9 +170,8 @@ describe('useServiceWorkerRegistration', () => {
     mockRegister.mockClear();
     rerender({ service: 'mundo' });
 
-    await waitFor(() => {
-      expect(mockRegister).not.toHaveBeenCalled();
-    });
+    // No waitFor needed for negative assertion
+    expect(mockRegister).not.toHaveBeenCalled();
   });
 
   it('should handle registration promise that resolves with registration object', async () => {
