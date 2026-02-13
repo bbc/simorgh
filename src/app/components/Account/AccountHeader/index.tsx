@@ -1,12 +1,17 @@
 import { use } from 'react';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
 import styles from './index.styles';
 
 const AccountHeader = () => {
-  const { isSignedIn, signInUrl, forYouUrl } = use(AccountContext);
+  const isHydrated = useHydrationDetection();
+  const { isSignedIn, signInUrl, forYouUrl, isIdctaAvailable } =
+    use(AccountContext);
   const { translations } = use(ServiceContext);
+
+  if (!isHydrated || !isIdctaAvailable) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
   if (!href) return null;

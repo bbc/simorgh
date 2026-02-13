@@ -223,6 +223,7 @@ describe('ThemeProvider', () => {
   });
 
   describe.each(SERVICES)(`brandSVG for %s`, service => {
+    const children = <span data-testid="brand-child">child</span>;
     it(`should match chameleonLogos/${service}.tsx`, async () => {
       await act(async () => {
         render(
@@ -231,7 +232,7 @@ describe('ThemeProvider', () => {
             variant={defaultServiceVariants[service] || 'default'}
           >
             <ServiceContextProvider service={service as Services}>
-              <Brand />
+              <Brand>{children}</Brand>
             </ServiceContextProvider>
           </ThemeProvider>,
         );
