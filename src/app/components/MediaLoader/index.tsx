@@ -361,18 +361,11 @@ const MediaLoader = ({
             className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={
-              hasTranscript
-                ? [
-                    isAudio && styles.captionAudio,
-                    !isAudio && [isPortrait && styles.captionPortrait],
-                    hasTranscript && styles.withTranscriptCaption,
-                  ]
-                : [
-                    isAudio && styles.captionAudio,
-                    !isAudio && [isPortrait && styles.captionPortrait],
-                  ]
-            }
+            css={[
+              isAudio && styles.captionAudio,
+              !isAudio && [isPortrait && styles.captionPortrait],
+              hasTranscript && styles.withTranscriptCaption,
+            ]}
           />
         )}
         {hasTranscript && (
