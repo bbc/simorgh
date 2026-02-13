@@ -53,13 +53,14 @@ describe('fetchConfig', () => {
     const { default: fetchConfig } = await import('.');
 
     const variant = 'lat';
-    await fetchConfig({
+    const data = await fetchConfig({
       service: 'serbian',
       pagePath: '/serbian',
       configType: 'navigation',
       variant,
     });
 
+    expect(data).toEqual(mockNavResponse);
     const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
     expect(fetchUrl).toContain(`variant=${variant}`);
   });
