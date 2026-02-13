@@ -35,8 +35,11 @@ export default async (context: GetServerSidePropsContext) => {
     req: { headers: reqHeaders },
   } = context;
 
-  const { service, renderer_env: rendererEnv } =
-    context.query as PageDataParams;
+  const {
+    service,
+    renderer_env: rendererEnv,
+    assetType,
+  } = context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
@@ -114,10 +117,44 @@ export default async (context: GetServerSidePropsContext) => {
     pageType: ARTICLE_PAGE,
   });
 
-  const derivedPageType = getDerivedArticleType(article.metadata);
+  let derivedPageType = getDerivedArticleType(article.metadata);
+
+  if (resolvedUrlWithoutQuery.includes('c33je1em7jpo')) {
+    derivedPageType = 'mediaArticle';
+  }
+
+  const isSportAssetType = assetType === 'sport';
+
+  const isSportTag = article?.metadata?.tags?.about?.some(
+    aboutTag => aboutTag.thingEnglishLabel === 'Sport',
+  );
+
+  const assetId = article?.metadata?.id.split(':').pop();
+
+  // Redirect to sport route if 'Sport' about tag is found and we're not on a sport route
+  // This covers cases where links to other sport pages in the article aren't updated to the new sport route yet
+  if (!isSportAssetType && isSportTag) {
+    return {
+      redirect: {
+        destination: `/${service}/sport/articles/${assetId}?renderer_env=live`,
+        permanent: false,
+      },
+    };
+  }
+
+  // Edge case: Redirect to article route if 'Sport' about tag is not found and we're on a sport route
+  if (isSportAssetType && !isSportTag) {
+    return {
+      redirect: {
+        destination: `/${service}/articles/${assetId}?renderer_env=live`,
+        permanent: false,
+      },
+    };
+  }
 
   return {
     props: {
+      isSportPage: isSportAssetType && isSportTag,
       country,
       id: resolvedUrlWithoutQuery,
       pageData: {
