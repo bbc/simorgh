@@ -39,7 +39,7 @@ export const getServerSideProps = async (
     page,
     service,
     variant,
-    rendererEnv,
+    rendererEnv: 'live',
     resolvedUrl: context.resolvedUrl,
     pageType: TOPIC_PAGE,
   });
@@ -87,6 +87,7 @@ export const getServerSideProps = async (
 
   return {
     props: {
+      isSportPage: context.resolvedUrl.includes('cz74kjgv220t'),
       error: data?.error || null,
       id,
       page: page || null,
