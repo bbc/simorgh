@@ -16,20 +16,34 @@ const useServiceWorkerRegistration = (service?: string) => {
       console.warn('ServiceWorker API exists but register() is not available.');
       return;
     }
-    const shouldInstallServiceWorker =
-      onClient() && 'serviceWorker' in navigator;
 
-    if (shouldInstallServiceWorker) {
-      // Scope option to ensure the service worker only controls pages under /{service}
-      const result = sw.register(`/${service}/sw.js`, {
+    const cleanupLegacyRegistrations = async () => {
+      if (typeof sw.getRegistrations !== 'function') {
+        return;
+      }
+
+      const registrations = await sw.getRegistrations();
+      const legacy = registrations.find(
+        reg => new URL(reg.scope).pathname === `/${service}/`,
+      );
+
+      if (legacy) {
+        await legacy.unregister();
+      }
+    };
+
+    const initializeServiceWorker = async () => {
+      await cleanupLegacyRegistrations();
+
+      return sw.register(`/${service}/sw.js`, {
         scope: `/${service}`,
       });
+    };
 
-      Promise.resolve(result).catch(err => {
-        // eslint-disable-next-line no-console
-        console.error('Service worker registration failed:', err);
-      });
-    }
+    initializeServiceWorker().catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Service worker initialization failed', err);
+    });
   }, [service]);
 };
 
