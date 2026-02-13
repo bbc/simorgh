@@ -41,6 +41,7 @@ interface Props {
     isLite?: boolean;
     isNextJs: boolean;
     isAvEmbeds?: boolean;
+    isSportPage?: boolean;
     serverSideExperiments: ServerSideExperiment[] | null;
     pageData: {
       metadata: {

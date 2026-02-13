@@ -38,6 +38,7 @@ type Props = {
   };
   status: number;
   navItems?: Navigation[] | null;
+  isSportPage?: boolean;
 };
 
 type wordCountType = number | undefined;
