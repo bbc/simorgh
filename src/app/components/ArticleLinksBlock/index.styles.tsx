@@ -2,20 +2,15 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  promoContainer: ({ palette, mq, spacings }: Theme) =>
+  promoContainer: ({ mq, spacings }: Theme) =>
     css({
-      background: palette.GREY_2,
-      padding: `0 ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      padding: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       margin: 0,
       display: 'flex',
       overflowX: 'auto',
       width: '100%',
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
-        margin: '0 -0.2rem',
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        padding: `0 ${spacings.DOUBLE}rem ${spacings.DOUBLE}rem`,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        margin: `0 -${spacings.DOUBLE}rem`,
       },
     }),
   labelComponent: ({

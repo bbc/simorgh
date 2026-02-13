@@ -163,10 +163,6 @@ export const service: ZhongwenConfig = {
     },
     translations: {
       and: '和',
-      readTime: {
-        readTimePrefix: '阅读时间',
-        minute: '分钟',
-      },
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -485,10 +481,6 @@ export const service: ZhongwenConfig = {
     },
     translations: {
       and: '和',
-      readTime: {
-        readTimePrefix: '閱讀時間',
-        minute: '分鐘',
-      },
       pagination: {
         previousPage: '前页',
         nextPage: '后页',

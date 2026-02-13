@@ -83,7 +83,7 @@ module.exports = {
     };
 
     config.plugins.push(
-      new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 }),
+      new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
     );
 
     /*
