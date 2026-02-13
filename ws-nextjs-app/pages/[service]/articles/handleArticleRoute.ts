@@ -152,9 +152,11 @@ export default async (context: GetServerSidePropsContext) => {
     };
   }
 
+  const isSportPage = isSportAssetType && isSportTag;
+
   return {
     props: {
-      isSportPage: isSportAssetType && isSportTag,
+      isSportPage,
       country,
       id: resolvedUrlWithoutQuery,
       pageData: {
