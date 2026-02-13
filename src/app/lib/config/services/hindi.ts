@@ -113,6 +113,7 @@ export const service: DefaultServiceConfig = {
         description:
           'Sign in or create an account to watch, listen and join in',
         closeLabel: 'Close',
+        orText: 'or',
       },
       gist: 'सारांश',
       error: {

@@ -25,7 +25,7 @@ const setBannerDismissed = () => {
 };
 
 const isBannerVisible = () => {
-  if (typeof window === 'undefined') return true;
+  if (typeof window === 'undefined') return false;
   const dismissals = getBannerDismissals();
   const lastDismissed = getBannerLastDismissed();
   const now = Date.now();
@@ -39,6 +39,7 @@ const AccountPromotionalBanner = () => {
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
+  const accountPromoBanner = translations?.accountPromoBanner;
   const [isDismissed, setIsDismissed] = useState(() => !isBannerVisible());
 
   if (
@@ -46,24 +47,22 @@ const AccountPromotionalBanner = () => {
     isSignedIn ||
     !isIdctaAvailable ||
     !signInUrl ||
-    !registerUrl
+    !registerUrl ||
+    !accountPromoBanner
   ) {
     return null;
   }
 
+  const { title, description, closeLabel, orText } = accountPromoBanner;
+
   return (
     <PromotionalBanner
       id="account-promotional-banner"
-      title={translations?.accountPromoBanner?.title || 'Discover your BBC'}
-      description={
-        translations?.accountPromoBanner?.description ||
-        'Sign in or create an account to watch, listen and join in'
-      }
-      bannerLabel={
-        translations?.accountPromoBanner?.title || 'Discover your BBC'
-      }
-      closeLabel={translations?.accountPromoBanner?.closeLabel || 'Close'}
-      orText={translations?.account?.or || 'or'}
+      title={title}
+      description={description}
+      bannerLabel={title}
+      closeLabel={closeLabel}
+      orText={orText}
       isDismissible
       onClose={() => {
         setBannerDismissed();
@@ -78,14 +77,14 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.signIn || 'Sign In'}
+              {translations?.account?.signIn}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>
 
         <Paragraph size="bodyCopy" css={styles.orText}>
-          {translations?.account?.or || 'or'}
+          {orText}
         </Paragraph>
 
         <CallToActionLink
@@ -95,7 +94,7 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.register || 'Register'}
+              {translations?.account?.register}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
