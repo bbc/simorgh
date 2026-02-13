@@ -6,6 +6,7 @@ import {
   aresMediaPortraitBlocks,
   videoClipMediaBlocks,
   legacyMediaBlock,
+  aresMediaBlockWithTranscript,
 } from './fixture';
 import { MediaBlock } from './types';
 import readme from './README.md';
@@ -66,5 +67,13 @@ export const LivePageMedia = () => (
     service="pidgin"
     pageType="live"
     blocks={videoClipMediaBlocks as MediaBlock[]}
+  />
+);
+
+export const MediaLoaderWithTranscript = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={aresMediaBlockWithTranscript as MediaBlock[]}
   />
 );
