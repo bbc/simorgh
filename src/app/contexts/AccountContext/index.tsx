@@ -32,7 +32,7 @@ export const AccountProvider = ({
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
-    setPageToReturnTo(window.location.href);
+    (async () => setPageToReturnTo(window.location.href))();
   }, []);
 
   const isIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';

@@ -220,7 +220,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [referrer, setReferrer] = useState<string | null>(null);
 
   useEffect(() => {
-    setReferrer(getReferrer());
+    (async () => setReferrer(getReferrer()))();
   }, []);
 
   const {
