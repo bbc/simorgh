@@ -108,6 +108,12 @@ export const service: DefaultServiceConfig = {
         or: 'or',
         register: 'Register',
       },
+      promoBanner: {
+        title: 'Discover your BBC',
+        description:
+          'Sign in or create an account to watch, listen and join in',
+        closeLabel: 'Close',
+      },
       gist: 'सारांश',
       error: {
         404: {

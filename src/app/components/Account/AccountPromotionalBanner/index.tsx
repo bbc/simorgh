@@ -10,25 +10,28 @@ const AccountPromotionalBanner = () => {
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
-
   const [isDismissed, setIsDismissed] = useState(false);
 
-  if (isDismissed || isSignedIn || !isIdctaAvailable) return null;
-  if (!signInUrl || !registerUrl) return null;
-
-  const hasRequiredUrls = Boolean(signInUrl && registerUrl);
-
-  if (isDismissed || isSignedIn || !isIdctaAvailable || !hasRequiredUrls) {
+  if (
+    isDismissed ||
+    isSignedIn ||
+    !isIdctaAvailable ||
+    !signInUrl ||
+    !registerUrl
+  ) {
     return null;
   }
 
   return (
     <PromotionalBanner
       id="account-promotional-banner"
-      title="Discover your BBC"
-      description="Sign in or create an account to watch, listen and join in"
-      bannerLabel="Discover your BBC"
-      closeLabel="Close"
+      title={translations?.promoBanner?.title || 'Discover your BBC'}
+      description={
+        translations?.promoBanner?.description ||
+        'Sign in or create an account to watch, listen and join in'
+      }
+      bannerLabel={translations?.promoBanner?.title || 'Discover your BBC'}
+      closeLabel={translations?.promoBanner?.closeLabel || 'Close'}
       orText={translations?.account?.or || 'or'}
       isDismissible
       onClose={() => setIsDismissed(true)}
@@ -41,7 +44,7 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.signIn || 'Sign In'}{' '}
+              {translations?.account?.signIn || 'Sign In'}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
@@ -58,7 +61,7 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.register || 'Register'}{' '}
+              {translations?.account?.register || 'Register'}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
