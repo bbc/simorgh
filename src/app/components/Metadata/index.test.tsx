@@ -236,12 +236,12 @@ describe('Metadata', () => {
   it(`should render the canonical link's top level domain as .co.uk for UK article pages`, async () => {
     render(
       <MetadataWithContext
-        service="sport"
+        service="news"
         bbcOrigin={dotCoDotUKOrigin}
         platform="canonical"
         id="c0000000001o"
         pageType={ARTICLE_PAGE}
-        pathname="/sport/cricket/articles/c0000000001o"
+        pathname="/news/articles/c0000000001o"
         isUK
         {...newsArticleMetadataProps}
       />,
@@ -253,7 +253,7 @@ describe('Metadata', () => {
         ?.getAttribute('href');
 
       expect(actual).toEqual(
-        'https://www.bbc.co.uk/sport/cricket/articles/c0000000001o',
+        'https://www.bbc.co.uk/news/articles/c0000000001o',
       );
     });
   });
@@ -261,12 +261,12 @@ describe('Metadata', () => {
   it(`should render canonical alternative links for UK article AMP pages`, async () => {
     render(
       <MetadataWithContext
-        service="sport"
+        service="news"
         platform="amp"
         bbcOrigin={dotCoDotUKOrigin}
         id="c0000000001o"
         pageType={ARTICLE_PAGE}
-        pathname="/sport/cricket/articles/c0000000001o"
+        pathname="/news/articles/c0000000001o"
         isUK
         {...newsArticleMetadataProps}
       />,
@@ -274,15 +274,15 @@ describe('Metadata', () => {
 
     const expected = [
       {
-        href: `https://www.bbc.com/sport/cricket/articles/c0000000001o`,
+        href: `https://www.bbc.com/news/articles/c0000000001o`,
         hreflang: 'x-default',
       },
       {
-        href: `https://www.bbc.com/sport/cricket/articles/c0000000001o`,
+        href: `https://www.bbc.com/news/articles/c0000000001o`,
         hreflang: 'en',
       },
       {
-        href: `https://www.bbc.co.uk/sport/cricket/articles/c0000000001o`,
+        href: `https://www.bbc.co.uk/news/articles/c0000000001o`,
         hreflang: 'en-gb',
       },
     ];

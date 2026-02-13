@@ -46,7 +46,6 @@ import serbianCyr from '../themes/serbian/cyr';
 import serbianLat from '../themes/serbian/lat';
 import sinhala from '../themes/sinhala';
 import somali from '../themes/somali';
-import sport from '../themes/sport';
 import swahili from '../themes/swahili';
 import tamil from '../themes/tamil';
 import telugu from '../themes/telugu';
@@ -115,7 +114,6 @@ const themeProvidersNoVariants: ThemeProviders = {
   scotland,
   sinhala,
   somali,
-  sport,
   swahili,
   tamil,
   telugu,

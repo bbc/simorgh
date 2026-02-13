@@ -62,7 +62,6 @@ import {
 } from '../themes/serbian/lat';
 import { theme as sinhala } from '../themes/sinhala';
 import { theme as somali, pwaTheme as somaliPWA } from '../themes/somali';
-import { theme as sport } from '../themes/sport';
 import { theme as swahili, pwaTheme as swahiliPWA } from '../themes/swahili';
 import { theme as tamil } from '../themes/tamil';
 import { theme as telugu } from '../themes/telugu';
@@ -141,7 +140,6 @@ const themesNoVariants: ServiceThemeWithNoVariant = {
   scotland,
   sinhala,
   somali,
-  sport,
   swahili,
   tamil,
   telugu,

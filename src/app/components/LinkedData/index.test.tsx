@@ -221,16 +221,6 @@ describe('LinkedData', () => {
     expect(getLinkedDataOutput()).toMatchSnapshot();
   });
 
-  it('should correctly render publisherLogo for sport', () => {
-    render(
-      <Context service="sport">
-        <LinkedData {...propsForArticle} />
-      </Context>,
-    );
-
-    expect(getLinkedDataOutput()).toMatchSnapshot();
-  });
-
   it('should correctly render publisherLogo for non-news services', () => {
     render(
       <Context service="mundo">

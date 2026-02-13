@@ -41,7 +41,6 @@ import { service as punjabi } from '../../../app/lib/config/services/punjabi';
 import { service as romania } from '../../../app/lib/config/services/romania';
 import { service as russian } from '../../../app/lib/config/services/russian';
 import { service as scotland } from '../../../app/lib/config/services/scotland';
-import { service as sport } from '../../../app/lib/config/services/sport';
 import { service as serbian } from '../../../app/lib/config/services/serbian';
 import { service as sinhala } from '../../../app/lib/config/services/sinhala';
 import { service as somali } from '../../../app/lib/config/services/somali';
@@ -112,7 +111,6 @@ const servicesNoVariants: ServiceConfigsNoVariants = {
   punjabi,
   romania,
   russian,
-  sport,
   scotland,
   sinhala,
   somali,
