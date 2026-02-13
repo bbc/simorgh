@@ -48,7 +48,6 @@ const loadableConfig: Record<Services, LoadableService> = {
   serbian: loadable(() => import('./serbian')),
   sinhala: loadable(() => import('./sinhala')),
   somali: loadable(() => import('./somali')),
-  sport: loadable(() => import('./sport')),
   swahili: loadable(() => import('./swahili')),
   tamil: loadable(() => import('./tamil')),
   telugu: loadable(() => import('./telugu')),

@@ -123,9 +123,6 @@ export const themes: Record<
   somali: loadable(
     () => import(/* webpackChunkName: "themes-somali" */ './somali'),
   ),
-  sport: loadable(
-    () => import(/* webpackChunkName: "themes-sport" */ './sport'),
-  ),
   swahili: loadable(
     () => import(/* webpackChunkName: "themes-swahili" */ './swahili'),
   ),
