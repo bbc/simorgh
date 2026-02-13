@@ -46,7 +46,7 @@ export interface Translations {
     or?: string;
     register?: string;
   };
-  promoBanner?: {
+  accountPromoBanner?: {
     title?: string;
     description?: string;
     closeLabel?: string;
