@@ -105,6 +105,8 @@ export const service: DefaultServiceConfig = {
       account: {
         signIn: 'Sign In',
         forYou: 'For you',
+        or: 'or',
+        register: 'Register',
       },
       gist: 'सारांश',
       error: {

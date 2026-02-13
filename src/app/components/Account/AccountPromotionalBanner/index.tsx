@@ -1,13 +1,15 @@
-import { useContext, useState } from 'react';
+import { use, useState } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountContext } from '#contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 
 const AccountPromotionalBanner = () => {
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
-    useContext(AccountContext);
+    use(AccountContext);
+  const { translations } = use(ServiceContext);
 
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -27,7 +29,7 @@ const AccountPromotionalBanner = () => {
       description="Sign in or create an account to watch, listen and join in"
       bannerLabel="Discover your BBC"
       closeLabel="Close"
-      orText="Or"
+      orText={translations?.account?.or || 'or'}
       isDismissible
       onClose={() => setIsDismissed(true)}
     >
@@ -39,13 +41,14 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              Sign in <CallToActionLink.Chevron />
+              {translations?.account?.signIn || 'Sign In'}{' '}
+              <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>
 
         <Paragraph size="bodyCopy" css={styles.orText}>
-          Or
+          {translations?.account?.or || 'or'}
         </Paragraph>
 
         <CallToActionLink
@@ -55,7 +58,8 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              Register <CallToActionLink.Chevron />
+              {translations?.account?.register || 'Register'}{' '}
+              <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>

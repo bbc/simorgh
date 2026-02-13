@@ -43,6 +43,8 @@ export interface Translations {
   account?: {
     signIn?: string;
     forYou?: string;
+    or?: string;
+    register?: string;
   };
   error: {
     home?: string;
