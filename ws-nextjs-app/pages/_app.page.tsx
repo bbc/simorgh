@@ -127,6 +127,7 @@ export default class CustomApp extends App<Props> {
     const { Component, pageProps } = this.props;
 
     const {
+      isSportPage,
       bbcOrigin,
       id,
       isAmp,
@@ -200,6 +201,7 @@ export default class CustomApp extends App<Props> {
                         navItems={navItems}
                         pageData={pageData}
                         status={status}
+                        isSportPage={isSportPage}
                       >
                         {RenderChildrenOrError}
                       </PageWrapper>

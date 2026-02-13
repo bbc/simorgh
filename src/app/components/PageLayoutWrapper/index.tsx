@@ -47,6 +47,7 @@ const PageLayoutWrapper = ({
   pageData,
   status,
   navItems,
+  isSportPage,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
@@ -225,7 +226,10 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div id="main-wrapper" css={styles.wrapper}>
+      <div
+        id="main-wrapper"
+        css={[styles.wrapper, isSportPage && styles.sportWrapper]}
+      >
         <HeaderContainer
           navItems={navItems}
           propsForTopBarOJComponent={{
