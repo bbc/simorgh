@@ -300,7 +300,7 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
   tags: ['!dev'],
 };
 
-export const ArticlePageWithTranscriptSustainabilityMessagePlaceholder = () => (
+export const ArticlePageWithTranscript = () => (
   <ComponentWithServiceContext
     data={articleDataWithTranscript}
     service="mundo"
