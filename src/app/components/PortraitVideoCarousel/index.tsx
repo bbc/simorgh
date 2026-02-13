@@ -77,8 +77,6 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-  if (isLite || isAmp) return null;
-
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
@@ -92,7 +90,7 @@ const PortraitVideoCarousel = ({
     setSelectedVideoIndex(null);
   }, []);
 
-  if (isLite) return null;
+  if (isLite || isAmp) return null;
 
   return (
     <>
