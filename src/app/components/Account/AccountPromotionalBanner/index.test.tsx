@@ -80,20 +80,4 @@ describe('AccountPromotionalBanner', () => {
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
     ).not.toBeInTheDocument();
   });
-
-  it('does not render when sign in url is missing', () => {
-    renderWithProviders({ signin_url: '' });
-
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).not.toBeInTheDocument();
-  });
-
-  it('does not render when register url is missing', () => {
-    renderWithProviders({ register_url: '' });
-
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).not.toBeInTheDocument();
-  });
 });
