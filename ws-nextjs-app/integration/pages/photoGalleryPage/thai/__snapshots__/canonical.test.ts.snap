@@ -118,7 +118,7 @@ exports[`Canonical Photo Gallery Page Footer Anchors should match text and url 9
 
 exports[`Canonical Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
 
-exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
+exports[`Canonical Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2026 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
 
 exports[`Canonical Photo Gallery Page Header I can see the branding 1`] = `
 {
@@ -138,40 +138,47 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 
 exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
 {
+  "text": "เลือกตั้ง 2569",
+  "url": "/thai/topics/cd9zv7dyg1kt",
+}
+`;
+
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
+{
   "text": "ประเทศไทย",
   "url": "/thai/topics/cjgn73g98rqt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
 {
   "text": "ต่างประเทศ",
   "url": "/thai/topics/c5v124k8lj7t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
 {
   "text": "วิทยาศาสตร์",
   "url": "/thai/topics/c5qvp1q33p0t",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
 {
   "text": "สุขภาพ",
   "url": "/thai/topics/cyx5kz25zxdt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
 {
   "text": "วิดีโอ",
   "url": "/thai/topics/c5ljd3jng4nt",
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
 {
   "text": "ยอดนิยม",
   "url": "/thai/popular/read",
@@ -184,6 +191,7 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="ดอกไม้ถูกนำมาวางไว้ที่ประติมานุสรณ์"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

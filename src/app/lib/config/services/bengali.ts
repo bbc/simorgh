@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
     atiAnalyticsProducerName: 'BENGALI',
-    useReverb: true,
     chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
@@ -68,6 +67,11 @@ export const service: DefaultServiceConfig = {
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
+      and: 'এবং',
+      readTime: {
+        readTimePrefix: 'পড়ার সময়',
+        minute: 'মিনিট',
+      },
       pagination: {
         page: 'পৃষ্ঠা',
         previousPage: 'ফিরে যাব',

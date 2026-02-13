@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     atiAnalyticsProducerName: 'NEPALI',
-    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
@@ -48,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'र',
+      readTime: {
+        readTimePrefix: 'पढ्ने समय',
+        minute: 'मिनेट',
+      },
       pagination: {
         page: 'पेज',
         previousPage: 'पछाडि',
@@ -346,6 +350,10 @@ export const service: DefaultServiceConfig = {
       {
         title: 'समाचार',
         url: '/nepali',
+      },
+      {
+        title: 'नेपाल निर्वाचन २०८२',
+        url: '/nepali/topics/c5ydk8xvx6jt',
       },
       {
         title: 'नेपाल',

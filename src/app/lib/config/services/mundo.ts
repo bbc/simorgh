@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     atiAnalyticsProducerName: 'MUNDO',
-    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
@@ -89,6 +88,7 @@ export const service: DefaultServiceConfig = {
       closeLabel: 'Salir',
     },
     translations: {
+      and: 'y',
       readTime: {
         readTimePrefix: 'Tiempo de lectura',
         quick: 'Lectura rápida',

@@ -95,6 +95,7 @@ const ImageWithCaption = ({
         width={width}
         lazyLoad={lazyLoad}
         preload={shouldPreloadLeadImage}
+        fetchPriority={shouldPreloadLeadImage ? 'high' : undefined}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}

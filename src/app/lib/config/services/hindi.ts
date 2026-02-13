@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
     atiAnalyticsProducerName: 'HINDI',
-    useReverb: true,
     chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
@@ -68,6 +67,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'और',
+      readTime: {
+        readTimePrefix: 'पढ़ने का समय',
+        minute: 'मिनट',
+      },
       pagination: {
         previousPage: 'पिछला',
         nextPage: 'अगला',
@@ -101,6 +105,10 @@ export const service: DefaultServiceConfig = {
       downloads: {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
+      },
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
       },
       gist: 'सारांश',
       error: {

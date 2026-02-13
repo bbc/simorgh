@@ -112,7 +112,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `
 {
@@ -139,26 +139,19 @@ exports[`Canonical Story Page Header Navigation link should match text and url 2
 
 exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
 {
-  "text": "Шайлоо-2025",
-  "url": "/kyrgyz/topics/cpdmzj1382mt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-{
   "text": "Кыргызстан",
   "url": "/kyrgyz/topics/cz74kjpyk07t",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
 {
   "text": "Дүйнө",
   "url": "/kyrgyz/topics/ck2l9z012nkt",
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
+exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
 {
   "text": "Журнал",
   "url": "/kyrgyz/topics/czp8pjrkgp0t",
@@ -171,6 +164,7 @@ exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

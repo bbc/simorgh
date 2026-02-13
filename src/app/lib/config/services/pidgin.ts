@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     atiAnalyticsProducerName: 'PIDGIN',
-    useReverb: true,
     chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
@@ -48,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',
         long: 'Tori wey long',

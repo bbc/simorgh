@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
     atiAnalyticsProducerName: 'ARABIC',
-    useReverb: true,
     chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
@@ -67,6 +66,10 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      readTime: {
+        readTimePrefix: 'مدة القراءة',
+        minute: 'دقائق',
+      },
       pagination: {
         page: 'صفحة',
         previousPage: 'السابق',

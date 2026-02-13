@@ -109,7 +109,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -129,8 +129,8 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 
 exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
 {
-  "text": "جنگ اسرائیل-ایران",
-  "url": "/persian/topics/cwy6874zgpqt",
+  "text": "اعتراضات ایران ۱۴۰۴",
+  "url": "/persian/topics/c4g30w1p327t",
 }
 `;
 
@@ -218,6 +218,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
 "
   class="css-1seqhu9"
+  fetchpriority="high"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

@@ -3,17 +3,16 @@ import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { Recommendation } from '#app/models/types/onwardJourney';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import styles from './index.styles';
 
-const eventTrackingData = {
-  componentName: 'midarticle-mostread',
-};
-
 const RecommendationsItem = ({
   recommendation,
+  eventTrackingData,
 }: {
   recommendation: Recommendation | null;
+  eventTrackingData?: EventTrackingData;
 }) => {
   const { isLite } = use(RequestContext);
 

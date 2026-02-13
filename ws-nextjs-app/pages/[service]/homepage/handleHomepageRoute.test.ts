@@ -103,4 +103,15 @@ describe('handleHomepageRoute', () => {
       expect.stringContaining('max-age=30'),
     );
   });
+
+  it('returns not found props when service is invalid', async () => {
+    const result = await handleHomepageRoute({
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/fakeservice',
+    });
+
+    expect(result).toEqual({
+      props: expect.objectContaining({ status: 404 }),
+    });
+  });
 });

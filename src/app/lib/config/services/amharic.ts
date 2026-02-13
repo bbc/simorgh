@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     atiAnalyticsProducerName: 'AMHARIC',
-    useReverb: true,
     chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
@@ -61,6 +60,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'እና',
+      readTime: {
+        readTimePrefix: 'የንባብ ጊዜ',
+        minute: 'ደቂቃ',
+      },
       pagination: {
         page: 'ገፁ',
         previousPage: 'ከዚህ በፊት ያለ',

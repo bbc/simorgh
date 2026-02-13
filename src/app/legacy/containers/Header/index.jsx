@@ -11,12 +11,20 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import AccountHeader from '#app/components/Account/AccountHeader';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
 
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -43,12 +51,14 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+      >
+        {children}
+      </BrandContainer>
     </div>
   );
 };
 
-const HeaderContainer = ({ propsForTopBarOJComponent }) => {
+const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
   const { service, script, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
@@ -98,16 +108,21 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       )}
       {isLite && <LiteSiteSummary />}
       <NavigationContainer
+        navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
     </header>

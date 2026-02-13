@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     atiAnalyticsProducerName: 'AZERI',
-    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'və',
+      readTime: {
+        readTimePrefix: 'Oxuma vaxtı',
+        minute: 'dəq',
+      },
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',

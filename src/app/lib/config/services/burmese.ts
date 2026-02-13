@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     atiAnalyticsProducerName: 'BURMESE',
-    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'နှင့်',
+      readTime: {
+        readTimePrefix: 'ဖတ်ရန်အချိန်',
+        minute: 'မိနစ်',
+      },
       pagination: {
         page: 'စာမျက်နှာ',
         previousPage: 'နောက်သို့ပြန်သွားရန်',
@@ -374,8 +378,8 @@ export const service: DefaultServiceConfig = {
         url: '/burmese',
       },
       {
-        title: 'မြန်မာငလျင်',
-        url: '/burmese/topics/c793wppj0r1t',
+        title: 'ရွေးကောက်ပွဲ',
+        url: '/burmese/topics/c1w0y2j4j70t',
       },
       {
         title: 'မြန်မာ့ရေးရာ',

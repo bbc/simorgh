@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     atiAnalyticsProducerName: 'PUNJABI',
-    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
@@ -48,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'ਅਤੇ',
+      readTime: {
+        readTimePrefix: 'ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ',
+        minute: 'ਮਿੰਟ',
+      },
       pagination: {
         previousPage: 'ਪਿੱਛੇ',
         nextPage: 'ਅੱਗੇ',

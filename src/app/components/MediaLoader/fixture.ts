@@ -337,6 +337,108 @@ export const livePageVideoClipMediaBlock = {
   },
 };
 
+export const livePagePortraitVideoClipMediaBlock = {
+  id: '1ce4d114',
+  type: 'clipMedia',
+  model: {
+    id: 'urn:bbc:pips:pid:p01thw20',
+    urns: {
+      pipsPid: 'urn:bbc:pips:pid:p01thw20',
+    },
+    images: [
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'socialImage',
+        source: 'pipsImage',
+      },
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'promoImage',
+        source: 'pipsImage',
+      },
+    ],
+    assetPath: 'p01thw20',
+    type: 'video',
+    headlines: {
+      primaryHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      seoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      promoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      socialHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+    },
+    analytics: {
+      page: {
+        name: 'programmes.av.p01thw20.page',
+        contentId: 'urn:bbc:pips:pid:p01thw20',
+        producer: 'PROGRAMMES',
+      },
+    },
+    description:
+      'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+    summary: {
+      type: 'text',
+      model: {
+        blocks: [
+          {
+            type: 'paragraph',
+            model: {
+              text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    lastPublished: '2022-07-01T08:56:56Z',
+    firstPublished: null,
+    video: {
+      id: 'p01thw20',
+      title: "BBC launch trailer for We Know Our Place women's sport campaign",
+      holdingImage: {
+        id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+      },
+      version: {
+        id: 'p01thw22',
+        duration: 'PT54S',
+        kind: 'programme',
+        guidance: null,
+        territories: ['nonuk', 'uk'],
+        orientation: 'portrait',
+      },
+      isAdvertisingAllowed: true,
+      isEmbeddingAllowed: true,
+      isUnavailable: false,
+    },
+    attributions: null,
+    link: {
+      path: '/programmes/p01thw20',
+    },
+    section: null,
+    isSharingAllowed: true,
+  },
+};
+
 export const livePageAudioClipMediaBlock = {
   id: '60207517',
   type: 'clipMedia',

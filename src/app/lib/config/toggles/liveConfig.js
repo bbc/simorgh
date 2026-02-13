@@ -2,6 +2,9 @@ import SERVICES from '../services';
 
 export default {
   _environment: 'live',
+  account: {
+    enabled: false,
+  },
   ads: {
     enabled: false,
   },

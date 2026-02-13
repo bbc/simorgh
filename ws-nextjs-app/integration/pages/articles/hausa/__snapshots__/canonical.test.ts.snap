@@ -94,7 +94,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -154,12 +154,20 @@ exports[`Canonical Articles Header Navigation link should match text and url 7`]
 }
 `;
 
+exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
+{
+  "text": "Duk batutuwa",
+  "url": "/hausa/topics",
+}
+`;
+
 exports[`Canonical Articles Image Caption should match text 1`] = `"Bayanan hoto, Wannan hoton gwaji, mallakin BBC, ya nuna taswirar Faransa. Hoton yana cikin katangar ukun farko kuma yana da wannan taken."`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Taswirar Faransa wanda ke nuna Paris da Cognac"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

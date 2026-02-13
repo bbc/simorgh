@@ -121,7 +121,7 @@ exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`Canonical Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `
 {
@@ -194,6 +194,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="864"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

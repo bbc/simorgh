@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news',
     atiAnalyticsProducerId: '30',
     atiAnalyticsProducerName: 'BBC_WORLD_NEWS',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC World Service',
     serviceLocalizedName: 'World Service',
@@ -71,6 +70,10 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'At a glance',
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
+      },
       error: {
         404: {
           statusCode: '404',

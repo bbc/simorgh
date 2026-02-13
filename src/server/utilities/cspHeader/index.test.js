@@ -12,6 +12,7 @@ import {
   generateMediaSrc,
   generateWorkerSrc,
   cspDirectives,
+  advertisingCountryScripts,
 } from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
@@ -46,7 +47,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -118,7 +119,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -212,7 +213,8 @@ describe('cspHeader', () => {
         'https://*.teads.tv',
         'https://*.mapcreator.io',
         'https://*.thomsonreuters.com',
-        ...advertisingServiceCountryDomains,
+        'https://*.covatic.io',
+        'https://*.doubleverify.com',
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
@@ -238,7 +240,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https: ws:"],
+      connectSrcExpectation: ["'self'", 'https:', 'ws:', 'wss:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -312,7 +314,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https: ws:"],
+      connectSrcExpectation: ["'self'", 'https:', 'ws:', 'wss:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -411,7 +413,8 @@ describe('cspHeader', () => {
         'https://*.teads.tv',
         'https://*.mapcreator.io',
         'https://*.thomsonreuters.com',
-        ...advertisingServiceCountryDomains,
+        'https://*.covatic.io',
+        'https://*.doubleverify.com',
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
@@ -548,6 +551,29 @@ describe('cspHeader', () => {
   );
 });
 
+describe('Content Security Policy country-specific ad domains', () => {
+  it('includes country-specific google ad domains in script-src', () => {
+    const countriesToTest = ['ae', 'ie', 'mx', 'tz'];
+    countriesToTest.forEach(country => {
+      const data = advertisingServiceCountryDomains(country);
+      const advertisingCountryScriptsArray = advertisingCountryScripts(country);
+      const scriptSrc = generateScriptSrc({
+        isAmp: false,
+        isLive: true,
+        advertisingCountryScriptsArray,
+      });
+      expect(scriptSrc).toContain(data[0].domain);
+    });
+  });
+  it('does not include country-specific google ad domain for countries we do not have', () => {
+    const countriesToTest = ['uk'];
+    countriesToTest.forEach(country => {
+      const advertisingCountryScriptsArray = advertisingCountryScripts(country);
+      expect(advertisingCountryScriptsArray).toHaveLength(0);
+    });
+  });
+});
+
 describe('cspHeader with relaxedCsp', () => {
   it('should serve relaxed CSP when shouldServeRelaxedCsp is true', () => {
     expect(
@@ -555,7 +581,7 @@ describe('cspHeader with relaxedCsp', () => {
     ).toEqual({
       directives: {
         'child-src': ["blob: https: 'self'"],
-        'connect-src': ["'self' https: ws:"],
+        'connect-src': ["'self'", 'https:', 'ws:', 'wss:'],
         'default-src': [
           "'self'",
           '*.bbc.co.uk',

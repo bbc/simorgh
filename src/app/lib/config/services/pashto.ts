@@ -15,7 +15,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     atiAnalyticsProducerName: 'PASHTO',
-    useReverb: true,
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
@@ -58,6 +57,10 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'اعلان',
+      },
+      readTime: {
+        readTimePrefix: 'د لوستلو وخت',
+        minute: 'دقیقې',
       },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',

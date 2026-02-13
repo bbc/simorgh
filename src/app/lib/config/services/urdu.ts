@@ -14,7 +14,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
-    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
     defaultImage:
@@ -67,6 +66,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'اور',
+      readTime: {
+        readTimePrefix: 'مطالعے کا وقت',
+        minute: 'منٹ',
+      },
       pagination: {
         previousPage: 'پچھلا صفحہ',
         nextPage: 'اگلا صفحہ',
@@ -261,7 +265,7 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
-        recentEpisodes: 'سابق پروگرام',
+        recentEpisodes: 'دیگر پروگرامز',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',

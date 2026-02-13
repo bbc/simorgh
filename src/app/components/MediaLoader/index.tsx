@@ -8,6 +8,7 @@ import useToggle from '#app/hooks/useToggle';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -35,6 +36,7 @@ import Message from './Message';
 import getTitleForLiteSiteTranscriptBlock from './utils/getTitleForLiteSiteTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 ];

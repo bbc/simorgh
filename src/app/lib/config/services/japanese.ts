@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-japanese',
     atiAnalyticsProducerId: '56',
     atiAnalyticsProducerName: 'JAPANESE',
-    useReverb: true,
     chartbeatDomain: 'japanese.bbc.co.uk',
     brandName: 'BBCニュース',
     product: 'BBC News',
@@ -48,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'と',
+      readTime: {
+        readTimePrefix: 'この記事は約',
+        minute: '分で読めます',
+      },
       pagination: {
         page: 'ページ',
         previousPage: '前に戻る',
