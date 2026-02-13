@@ -116,9 +116,8 @@ const fetchEventHandler = async event => {
 
   logger('Request', event.request.url, {
     isNavigationMode,
-    isPWADeviceOffline,
-    requestType: event.request.destination,
-    referrer: event.request.referrer,
+    isRequestForCacheableFile,
+    isRequestForWebpImage,
   });
 
   if (isNavigationMode) {
@@ -150,8 +149,25 @@ const fetchEventHandler = async event => {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
+
         let response = await cache.match(event.request);
+
+        if (response) {
+          // Clone it so you can read the body without consuming the original
+          const clonedForLogging = response.clone();
+          const text = await clonedForLogging.text();
+
+          logger('📣 cacheable file', {
+            url: response.url,
+            type: response.type,
+            size: text.length,
+            preview: text.substring(0, 500),
+            clonedForLogging,
+          });
+        }
+
         if (!response) {
+          logger('📣 cacheable NOT FOUND', { response });
           response = await cacheResource(cache, event.request.url);
         }
         return response;
