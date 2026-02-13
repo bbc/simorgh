@@ -1,4 +1,4 @@
-# AccountHeader
+# AccountPromotionalBanner
 
 Displays the Account Promotional Banner under the header and navigation.
 
