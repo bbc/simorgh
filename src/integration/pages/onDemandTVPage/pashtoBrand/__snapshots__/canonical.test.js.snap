@@ -356,7 +356,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-ft02fp"
+  class="media-container bbc-1ocojcj"
   data-e2e="media-loader__container"
 >
   <div
