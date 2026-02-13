@@ -43,7 +43,6 @@ const services: Record<Services, ''> = {
   serbian: '',
   sinhala: '',
   somali: '',
-  sport: '',
   swahili: '',
   tamil: '',
   telugu: '',

@@ -113,7 +113,6 @@ export type ServicesWithNoVariants = {
     | 'romania'
     | 'russian'
     | 'scotland'
-    | 'sport'
     | 'sinhala'
     | 'somali'
     | 'swahili'
