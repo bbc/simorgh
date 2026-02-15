@@ -11,8 +11,9 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
-import NavigationContainer from '#src/app/components/Navigation';
+import NewNavigationContainer from '#src/app/components/Navigation';
 import styled from '@emotion/styled';
+import LegacyNavigationContainer from '../Navigation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
@@ -111,6 +112,8 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
+  const NavigationComponent =
+    service === 'arabic' ? NewNavigationContainer : LegacyNavigationContainer;
   return (
     <header role="banner" lang={serviceLang}>
       {isAmp ? (
@@ -128,7 +131,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
       )}
       {isLite && <LiteSiteSummary />}
       <Divider />
-      <NavigationContainer
+      <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
