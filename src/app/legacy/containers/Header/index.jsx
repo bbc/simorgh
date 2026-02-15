@@ -12,11 +12,12 @@ import {
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import NewNavigationContainer from '#src/app/components/Navigation';
+import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import styled from '@emotion/styled';
-import LegacyNavigationContainer from '../Navigation';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
+import NewLogoBanner from './NewLogoBanner';
 
 const Divider = styled.div`
   position: relative;
@@ -116,6 +117,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
     service === 'arabic' ? NewNavigationContainer : LegacyNavigationContainer;
   return (
     <header role="banner" lang={serviceLang}>
+      {service === 'arabic' && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"

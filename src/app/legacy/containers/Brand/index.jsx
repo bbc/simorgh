@@ -48,6 +48,7 @@ const BrandContainer = ({
     'serbian',
     'ws',
   ];
+  const newNavBrands = ['arabic'];
 
   const brandPath = getBrandPath(service, variant);
 
