@@ -1,8 +1,9 @@
 import Cookie from 'js-cookie';
-import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-
-import { render } from '#app/components/react-testing-library-with-providers';
+import {
+  render,
+  screen,
+} from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
 
 import AccountPromotionalBanner from '.';
@@ -37,12 +38,20 @@ describe('AccountPromotionalBanner', () => {
     expect(
       await screen.findByRole('heading', { name: 'Discover your BBC' }),
     ).toBeInTheDocument();
+  });
+
+  it('shows a sign in link when rendered', () => {
+    renderWithProviders();
 
     const signInLink = screen.getByRole('link', { name: /sign in/i });
     expect(signInLink).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+  });
+
+  it('shows a register link when rendered', () => {
+    renderWithProviders();
 
     const registerLink = screen.getByRole('link', { name: /register/i });
     expect(registerLink).toHaveAttribute(
