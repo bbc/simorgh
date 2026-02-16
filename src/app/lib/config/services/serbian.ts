@@ -120,30 +120,6 @@ export const service: SerbianConfig = {
         title: 'Početna strana',
         url: '/serbian/lat',
       },
-      {
-        title: 'Studentske blokade',
-        url: '/serbian/topics/cly9dd4w09wt/lat',
-      },
-      {
-        title: 'Srbija',
-        url: '/serbian/topics/cr50vdy9q6wt/lat',
-      },
-      {
-        title: 'Balkan',
-        url: '/serbian/topics/c06g87137jgt/lat',
-      },
-      {
-        title: 'Svet',
-        url: '/serbian/topics/c2lej05e1eqt/lat',
-      },
-      {
-        title: 'Video',
-        url: '/serbian/topics/c44vyp5g049t/lat',
-      },
-      {
-        title: 'Najpopularnije',
-        url: '/serbian/lat/popular/read',
-      },
     ],
     scriptLink: {
       text: 'Ћир',
@@ -532,30 +508,6 @@ export const service: SerbianConfig = {
       {
         title: 'Почетна страна',
         url: '/serbian/cyr',
-      },
-      {
-        title: 'Студентске блокаде',
-        url: '/serbian/topics/cly9dd4w09wt/cyr',
-      },
-      {
-        title: 'Србија',
-        url: '/serbian/topics/cr50vdy9q6wt/cyr',
-      },
-      {
-        title: 'Балкан',
-        url: '/serbian/topics/c06g87137jgt/cyr',
-      },
-      {
-        title: 'Свет',
-        url: '/serbian/topics/c2lej05e1eqt/cyr',
-      },
-      {
-        title: 'Видео',
-        url: '/serbian/topics/c44vyp5g049t/cyr',
-      },
-      {
-        title: 'Најпопуларније',
-        url: '/serbian/cyr/popular/read',
       },
     ],
     scriptLink: {
