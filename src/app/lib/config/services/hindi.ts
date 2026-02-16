@@ -456,50 +456,6 @@ export const service: DefaultServiceConfig = {
         title: 'होम पेज',
         url: '/hindi',
       },
-      {
-        title: 'भारत',
-        url: '/hindi/topics/ckdxnkz7607t',
-      },
-      {
-        title: 'विदेश',
-        url: '/hindi/topics/c9wpm0en87xt',
-      },
-      {
-        title: 'हेल्थ',
-        url: '/hindi/topics/cr50ykdx5wqt',
-      },
-      {
-        title: 'मनोरंजन',
-        url: '/hindi/topics/c06gq3n0pp7t',
-      },
-      {
-        title: 'करियर',
-        url: '/hindi/topics/c95y3gjndw8t',
-      },
-      {
-        title: 'फ़ाइनेंस',
-        url: '/hindi/topics/c5qvpx5dq4qt',
-      },
-      {
-        title: 'खेल',
-        url: '/hindi/topics/cwr9j8g1kj9t',
-      },
-      {
-        title: 'विज्ञान-टेक्नॉलॉजी',
-        url: '/hindi/topics/c2lej0594knt',
-      },
-      {
-        title: 'सोशल',
-        url: '/hindi/topics/c2e4q0z9qznt',
-      },
-      {
-        title: 'वीडियो',
-        url: '/hindi/topics/cw9kv0kpxydt',
-      },
-      {
-        title: 'पॉडकास्ट',
-        url: '/hindi/topics/cv22x3pmrvmt',
-      },
     ],
   },
 };
