@@ -12,11 +12,19 @@ const ACCOUNT_BANNER_LAST_DISMISS_KEY =
 const ACCOUNT_BANNER_MAX_DISMISSALS = 3;
 const ACCOUNT_BANNER_DISMISS_INTERVAL_MS = 10 * 24 * 60 * 60 * 1000; // 10 days
 
-const getBannerDismissals = () =>
-  parseInt(localStorage.getItem(ACCOUNT_BANNER_DISMISS_KEY) ?? '0', 10);
+const getBannerDismissals = () => {
+  const accountBannerDismissValue = localStorage.getItem(
+    ACCOUNT_BANNER_DISMISS_KEY,
+  );
+  return parseInt(accountBannerDismissValue ?? '0', 10);
+};
 
-const getBannerLastDismissed = () =>
-  parseInt(localStorage.getItem(ACCOUNT_BANNER_LAST_DISMISS_KEY) ?? '0', 10);
+const getBannerLastDismissed = () => {
+  const accountBannerLastDismissValue = localStorage.getItem(
+    ACCOUNT_BANNER_LAST_DISMISS_KEY,
+  );
+  return parseInt(accountBannerLastDismissValue ?? '0', 10);
+};
 
 const setBannerDismissed = () => {
   const dismissals = getBannerDismissals() + 1;
@@ -40,6 +48,8 @@ const AccountPromotionalBanner = () => {
     use(AccountContext);
   const { translations } = use(ServiceContext);
   const accountPromoBanner = translations?.accountPromoBanner;
+  const signInText = translations?.account?.signIn;
+  const registerText = translations?.account?.register;
   const [isDismissed, setIsDismissed] = useState(() => !isBannerVisible());
 
   if (
@@ -78,7 +88,7 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.signIn}
+              {signInText}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
@@ -95,7 +105,7 @@ const AccountPromotionalBanner = () => {
         >
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {translations?.account?.register}
+              {registerText}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
