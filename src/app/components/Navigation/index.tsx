@@ -61,10 +61,10 @@ const getTopNavLinks = (navigation: NavigationItem[]): NavigationItem[] => [
 ];
 
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
+  navItems,
   propsForTopBarOJComponent,
 }) => {
   const { isAmp, isLite, pageType } = use(RequestContext);
-  console.log('pageType', pageType);
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const { script, translations, navigation, service, dir } =
     use(ServiceContext);
@@ -99,7 +99,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const topNavLinks = getTopNavLinks(navigation);
   // Set activeIndex to 0 only if pageType is 'home', otherwise -1 (no active)
   const topActiveIndex = pageType === 'home' ? 0 : -1;
-
+  console.log('navItems in Navigation Component', navItems);
   const topScrollableListItems = (
     <NavigationUl>
       {renderListItems(
