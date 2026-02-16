@@ -1,5 +1,6 @@
 import { Theme, css } from '@emotion/react';
 import pixelsToRem from '../../utilities/pixelsToRem';
+import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 const styles = {
   button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
@@ -57,6 +58,12 @@ const styles = {
       backgroundColor: palette.BLACK,
       minHeight: `${pixelsToRem(44)}rem`,
       minWidth: `${pixelsToRem(44)}rem`,
+      // global styles not applied to shadow dom, so focus indicator styles added here
+      '&:focus-visible': {
+        outline: `${focusIndicatorThickness} solid ${palette.BLACK}`,
+        boxShadow: `0 0 0 ${focusIndicatorThickness} ${palette.WHITE}`,
+        outlineOffset: `${focusIndicatorThickness}`,
+      },
       svg: {
         width: `${pixelsToRem(18)}rem`,
         height: `${pixelsToRem(18)}rem`,
