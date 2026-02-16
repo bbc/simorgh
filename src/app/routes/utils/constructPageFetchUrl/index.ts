@@ -108,10 +108,15 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
       getIdFunction = (path: string) => {
         const parsedRoute = parseRoute(path);
 
+        // 'ws' appears in many av-embeds routes, but we also have 'ws' as dedicated service
+        // The 'ws' service shouldn't appear in av-embeds routes as no media content is published under the 'ws' service
+        const derivedService =
+          parsedRoute?.service !== 'ws' ? parsedRoute?.service : null;
+
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
         const withServiceAndVariant = !isShortCpsId
-          ? `${service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          ? `${derivedService ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
           : '';
 
         const id = `${withServiceAndVariant ? `${withServiceAndVariant}/` : ''}${parsedRoute.assetId}`;
