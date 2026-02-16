@@ -44,13 +44,17 @@ const PortraitVideoCarousel = ({
     PortraitClipMediaBlock | undefined
   >();
   const [controlsDisplayed, setControlsDisplayed] = useState(false);
-  const [hasShareApi, setHasShareApi] = useState(false);
+  // const [hasShareApi, setHasShareApi] = useState(false);
 
-  useEffect(() => {
-    if ('share' in navigator) {
-      setHasShareApi(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if ('share' in navigator) {
+  //     setHasShareApi(true);
+  //   }
+  // }, []);
+
+  const hasShareApi = typeof navigator !== 'undefined' && 'share' in navigator;
+
+  console.log('hasShareApi', hasShareApi);
 
   const { isLite, isAmp, nonce } = use(RequestContext);
 
