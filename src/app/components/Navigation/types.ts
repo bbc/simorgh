@@ -1,3 +1,5 @@
+// ...existing code...
+
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 export interface AmpNavigationContainerProps {
@@ -13,9 +15,12 @@ export interface NavigationItem {
   title: string;
   url: string;
   hideOnLiteSite?: boolean;
+  subItems?: NavigationItem[];
 }
 
 export interface NavigationContainerProps {
+  navItems: NavigationItem[];
+  currentPath: string;
   propsForTopBarOJComponent?: {
     blocks?: TopStoryItem[];
   };
