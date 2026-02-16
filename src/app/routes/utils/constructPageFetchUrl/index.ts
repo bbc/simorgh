@@ -111,10 +111,10 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
         const withServiceAndVariant = !isShortCpsId
-          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          ? `${service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
           : '';
 
-        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+        const id = `${withServiceAndVariant ? `${withServiceAndVariant}/` : ''}${parsedRoute.assetId}`;
 
         return id;
       };
