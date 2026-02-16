@@ -40,7 +40,8 @@ const getAuthHeaders = (): Record<string, string> => {
     // cknsAtkn cookie value can be also passed via Cookie header as Cookie : ckns_atkn=tokenValue
     Authorization: `Bearer ${cknsAtkn}`,
     'X-Authentication-Provider': 'idv5',
-    // TODO: move API key to server-side config for production
+    // TODO: move API key to server-side config for production .
+    // This is a sandbox key and should not be used in production
     'X-API-Key': '2o7o8j33vm293',
   };
 };
