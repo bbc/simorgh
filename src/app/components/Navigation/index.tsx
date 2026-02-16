@@ -153,17 +153,27 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const scrollableNavEventTrackingData = {
     componentName: `scrollable-navigation`,
   };
+
+  const topNavEventTrackingData = {
+    componentName: `top-navigation`,
+  };
   const dropdownNavEventTrackingData = { componentName: `dropdown-navigation` };
 
   const scrollableNavClickTrackerHandler = useClickTrackerHandler(
     scrollableNavEventTrackingData,
   );
+  const topNavClickTrackerHandler = useClickTrackerHandler(
+    topNavEventTrackingData,
+  );
+
   const dropdownNavClickTrackerHandler = useClickTrackerHandler(
     dropdownNavEventTrackingData,
   );
   const scrollableNavViewTracker = useViewTracker(
     scrollableNavEventTrackingData,
   );
+
+  const topNavViewTracker = useViewTracker(topNavEventTrackingData);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
   // Compute which top item is active based on current URL
@@ -184,8 +194,8 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         service,
         dir,
         topActiveIndex,
-        undefined, // no click tracker for top strip unless you want it
-        undefined, // no view tracker for top strip unless you want it
+        topNavClickTrackerHandler,
+        topNavViewTracker,
         isLite,
         'top',
       )}
