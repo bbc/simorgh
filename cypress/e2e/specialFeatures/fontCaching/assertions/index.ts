@@ -6,7 +6,12 @@ export const fontsAreCached = ({ expectedFonts }) => {
 
   it(`${testPrefix} fonts are cached`, () => {
     cy.clearLocalStorage();
-    cy.reload(true);
+    cy.reload();
+
+    const expectedCacheThreshold = 6 + expectedFonts.length;
+    cy.window()
+      .its('localStorage.length', { timeout: 20000 })
+      .should('be.gt', expectedCacheThreshold);
 
     cy.getAllLocalStorage().then(allLocalStorage => {
       expect(allLocalStorage).not.to.be.null;
