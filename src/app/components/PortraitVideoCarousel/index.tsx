@@ -1,4 +1,5 @@
-import { use, useCallback, useEffect, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
+// import { use, useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -54,6 +55,7 @@ const PortraitVideoCarousel = ({
 
   const hasShareApi = typeof navigator !== 'undefined' && 'share' in navigator;
 
+  // eslint-disable-next-line no-console
   console.log('hasShareApi', hasShareApi);
 
   const { isLite, isAmp, nonce } = use(RequestContext);
