@@ -50,6 +50,7 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import uasApiRequest from '#app/utilities/uasApi';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -213,23 +214,53 @@ const getContinueReadingButton =
     />
   );
 
+const ACTIVITY_TYPE = 'favourites';
+const RESOURCE_DOMAIN = 'articles';
+const RESOURCE_TYPE = 'article';
+
+const buildGlobalId = (articleId: string) =>
+  `urn:bbc:${RESOURCE_DOMAIN}:${RESOURCE_TYPE}:${articleId}`;
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
-  const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
-  // SSR-safe: always null on server, update on client
-  const [referrer, setReferrer] = useState<string | null>(null);
-
-  useEffect(() => {
-    setReferrer(getReferrer());
-  }, []);
-
+  const articleId = getArticleId(pageData);
   const {
     articleAuthor,
     isTrustProjectParticipant,
     showRelatedTopics,
     brandName,
     translations,
+    service,
   } = use(ServiceContext);
+  const [showAllContent, setShowAllContent] = useState(false);
+  const { isApp, isAmp, isLite } = use(RequestContext);
+  // SSR-safe: always null on server, update on client
+  const [referrer, setReferrer] = useState<string | null>(null);
+  const [isSaved, setIsSaved] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setReferrer(getReferrer());
+  }, []);
+
+  useEffect(() => {
+    const fetchFavourites = async () => {
+      try {
+        const res = await uasApiRequest('GET', ACTIVITY_TYPE);
+        const data = await res.json();
+        // assuming data.items[] with metaData.service + metaData.articleId
+        const items = data.items || [];
+        const found = items.some(
+          (item: any) =>
+            item.metaData?.service === service && item.resourceId === articleId,
+        );
+        setIsSaved(found);
+      } catch (e) {
+        // skip for now; treat as not saved
+      }
+    };
+
+    fetchFavourites();
+  }, [articleId, service]);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: continueReadingButtonToggle } = useToggle(
@@ -413,6 +444,43 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
+  const handleToggleSave = async () => {
+    if (loading) return;
+
+    setLoading(true);
+    try {
+      if (!isSaved) {
+        // SAVE: POST
+        const body = {
+          activityType: ACTIVITY_TYPE,
+          resourceDomain: RESOURCE_DOMAIN,
+          resourceType: RESOURCE_TYPE,
+          resourceId: articleId,
+          action: 'favourited',
+          metaData: {
+            service,
+            articleId,
+            title: headline,
+            canonicalUrl: pageData?.metadata?.locators?.canonicalUrl,
+          },
+        };
+
+        await uasApiRequest('POST', ACTIVITY_TYPE, { body });
+        setIsSaved(true);
+      } else {
+        // UNSAVE: DELETE with globalId
+        const globalId = buildGlobalId(articleId);
+        await uasApiRequest('DELETE', ACTIVITY_TYPE, { globalId });
+        setIsSaved(false);
+      }
+    } catch (error) {
+      // optionally show error UI
+      // console.error('UAS toggle failed', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div css={styles.pageWrapper}>
       {/* EXPERIMENT: PWA Promotional Banner */}
@@ -425,6 +493,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
+      <button type="button" onClick={handleToggleSave} disabled={loading}>
+        {isSaved ? 'Unsave' : 'Save for later'}
+      </button>
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}

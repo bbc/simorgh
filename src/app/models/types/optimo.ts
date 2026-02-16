@@ -67,6 +67,9 @@ export type OptimoBylineBlock = {
 };
 
 export type ArticleMetadata = {
+  locators?: {
+    canonicalUrl?: string;
+  };
   adCampaignKeyword: string;
   allowAdvertising: boolean;
   analyticsLabels?: {

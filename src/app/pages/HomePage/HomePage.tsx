@@ -1,6 +1,7 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import SavedArticlesList from '#app/components/SavedArticles';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -86,6 +87,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
             <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
           </span>
         </VisuallyHiddenText>
+        <SavedArticlesList />
         <div css={styles.inner}>
           <div css={styles.margins}>
             {curations.map(
