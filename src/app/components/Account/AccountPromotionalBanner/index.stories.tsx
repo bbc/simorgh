@@ -1,7 +1,7 @@
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
-
+import README from './README.md';
 import AccountPromotionalBanner from '.';
 
 type WithProvidersArgs = {
@@ -33,6 +33,13 @@ const withProviders =
 export default {
   title: 'Account/AccountPromotionalBanner',
   component: AccountPromotionalBanner,
+  parameters: {
+    docs: {
+      description: {
+        component: README,
+      },
+    },
+  },
 };
 
 export const SignedOut = withProviders({ isSignedIn: false });

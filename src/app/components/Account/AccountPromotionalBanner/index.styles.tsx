@@ -25,9 +25,9 @@ export default {
   signInLink: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
-      backgroundColor: '#0071F1',
+      backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       '&:hover, &:focus': {
-        backgroundColor: '#0051AD',
+        backgroundColor: palette.SERVICE_NEUTRAL_DARK,
         color: palette.WHITE,
       },
     }),
@@ -36,7 +36,7 @@ export default {
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
       '&:hover, &:focus': {
-        backgroundColor: '#F6F6F6',
+        backgroundColor: palette.GREY_2,
         color: palette.BLACK,
       },
     }),
