@@ -52,8 +52,8 @@ export default {
 };
 
 export const ShareButtonLivePagePost = () => (
-  <Component url="https://www.bbc.com/news/live" />
+  <Component contentId="live-page-post" />
 );
 export const ShareButtonPortraitVideoCarousel = () => (
-  <Component contentId="portrait-video-carousel" />
+  <Component url="https://www.bbc.com/news/live" />
 );
