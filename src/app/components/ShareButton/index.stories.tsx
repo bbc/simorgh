@@ -1,18 +1,23 @@
 import ShareButton from '.';
 import metadata from './metadata.json';
 
-const Component = () => {
-  return (
-    <ShareButton
-      contentId="foo"
-      eventTrackingData={{ componentName: 'test' }}
-      title="bar"
-    />
-  );
-};
+const Component = ({
+  url,
+  contentId,
+}: {
+  url?: string;
+  contentId?: string;
+}) => (
+  <ShareButton
+    contentId={contentId}
+    eventTrackingData={{ componentName: 'test' }}
+    title="bar"
+    url={url}
+  />
+);
 
 export default {
-  title: 'Components/Live Page Share Button',
+  title: 'Components/Share Button',
   Component,
   parameters: {
     metadata,
@@ -46,4 +51,9 @@ export default {
   },
 };
 
-export const ShareButtonComponent = () => <Component />;
+export const ShareButtonLivePagePost = () => (
+  <Component url="https://www.bbc.com/news/live" />
+);
+export const ShareButtonPortraitVideoCarousel = () => (
+  <Component contentId="portrait-video-carousel" />
+);
