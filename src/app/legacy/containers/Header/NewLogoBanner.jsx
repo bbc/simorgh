@@ -15,14 +15,7 @@ const Banner = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: ${44 / 16}rem;
-
-  @media (min-width: 37.5rem) {
-    height: ${60 / 16}rem;
-  }
-  @media (min-width: 48rem) {
-    height: ${64 / 16}rem;
-  }
+  height: 4rem;
 `;
 
 /**

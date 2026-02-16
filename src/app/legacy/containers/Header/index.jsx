@@ -27,14 +27,7 @@ const Divider = styled.div`
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
-  }
-  @media (min-width: 1041px) {
-    width: calc(100vw + 0.8rem);
-    margin-left: calc(-1 * (100vw - 1014px) / 2);
-  }
-  @media (min-width: 1008px) {
-    display: none;
+    border-bottom: 0.0625rem solid #d77272;
   }
 `;
 
