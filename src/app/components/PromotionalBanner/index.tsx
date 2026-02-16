@@ -10,7 +10,7 @@ const PromotionalBanner = ({
   title,
   description,
   isDismissible = true,
-  orText,
+  buttonSeparatorText,
   primaryButton,
   secondaryButton,
   onClose,
@@ -61,7 +61,7 @@ const PromotionalBanner = ({
 
                 {primaryButton && secondaryButton && (
                   <Paragraph size="bodyCopy" css={styles.dividerText}>
-                    {orText}
+                    {buttonSeparatorText}
                   </Paragraph>
                 )}
 

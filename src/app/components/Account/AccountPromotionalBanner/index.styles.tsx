@@ -17,7 +17,7 @@ export default {
       padding: '1rem',
     }),
 
-  orText: ({ palette }: Theme) =>
+  buttonSeparatorText: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
     }),

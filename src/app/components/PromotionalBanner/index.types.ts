@@ -6,7 +6,7 @@ export interface PromotionalBannerButtonData {
 export interface PromotionalBannerConfig {
   title: string;
   description: string;
-  orText: string;
+  buttonSeparatorText: string;
   bannerLabel: string;
   closeLabel?: string;
   primaryButton?: PromotionalBannerButtonData;

@@ -49,7 +49,7 @@ export interface Translations {
     title: string;
     description: string;
     closeLabel: string;
-    orText: string;
+    buttonSeparatorText: string;
   };
   error: {
     home?: string;

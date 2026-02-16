@@ -53,7 +53,8 @@ const AccountPromotionalBanner = () => {
     return null;
   }
 
-  const { title, description, closeLabel, orText } = accountPromoBanner;
+  const { title, description, closeLabel, buttonSeparatorText } =
+    accountPromoBanner;
 
   return (
     <PromotionalBanner
@@ -62,7 +63,7 @@ const AccountPromotionalBanner = () => {
       description={description}
       bannerLabel={title}
       closeLabel={closeLabel}
-      orText={orText}
+      buttonSeparatorText={buttonSeparatorText}
       isDismissible
       onClose={() => {
         setBannerDismissed();
@@ -83,8 +84,8 @@ const AccountPromotionalBanner = () => {
           </CallToActionLink.ButtonLikeWrapper>
         </CallToActionLink>
 
-        <Paragraph size="bodyCopy" css={styles.orText}>
-          {orText}
+        <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
+          {buttonSeparatorText}
         </Paragraph>
 
         <CallToActionLink
