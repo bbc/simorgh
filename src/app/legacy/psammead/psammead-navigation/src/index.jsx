@@ -112,7 +112,7 @@ const StyledListItem = styled.li`
       left: 0;
       top: 20%;
       height: 60%;
-      width: 1px;
+      width: 1.1px; // If I make this 1 pixel like in the designs, the lines are different widths from each other????
       background: ${navType === 'top' ? '#D77272' : theme.palette.GREY_4};
       border-radius: 2px;
       display: block;
