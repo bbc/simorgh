@@ -48,7 +48,6 @@ const BrandContainer = ({
     'serbian',
     'ws',
   ];
-  const newNavBrands = ['arabic'];
 
   const brandPath = getBrandPath(service, variant);
 
@@ -64,6 +63,7 @@ const BrandContainer = ({
       skipLink={skipLink}
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
+      service={service}
       ref={brandRef}
       {...props}
     />

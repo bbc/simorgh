@@ -14,6 +14,7 @@ import {
 } from '#psammead/gel-foundations/src/spacings';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import ArabicBrandSVG from './ArabicBrandSVG';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
@@ -148,7 +149,25 @@ const StyledBrand = ({
   serviceLocalisedName = null,
   svg,
   isLongBrand,
+  service,
 }) => {
+  if (service === 'arabic') {
+    return (
+      <>
+        <ArabicBrandSVG
+          height="64"
+          width="184"
+          aria-hidden="true"
+          focusable="false"
+        />
+        <LocalisedBrandName
+          linkId={linkId}
+          product={product}
+          serviceLocalisedName={serviceLocalisedName}
+        />
+      </>
+    );
+  }
   return svg ? (
     <>
       <BrandSvg
