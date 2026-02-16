@@ -331,9 +331,7 @@ const MediaLoader = ({
 
   const playerKey = `${clipPID}-${skin}-${showAds}`;
 
-  if (isLite) return null;
-
-  if (!config || !playerConfig) return null;
+  if (isLite || !config || !playerConfig) return null;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
   const isPortrait = orientation === 'portrait';
