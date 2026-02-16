@@ -346,34 +346,6 @@ export const service: DefaultServiceConfig = {
         title: 'ዜና',
         url: '/tigrinya',
       },
-      {
-        title: 'ኤርትራ',
-        url: '/tigrinya/topics/c1gdqrg28zxt',
-      },
-      {
-        title: 'ኢትዮጵያ',
-        url: '/tigrinya/topics/cdr56vrknx6t',
-      },
-      {
-        title: 'ሱዳን',
-        url: '/tigrinya/topics/c5qvp11n2vzt',
-      },
-      {
-        title: 'ማእከላይ ምብራቕ',
-        url: '/tigrinya/topics/c5qvp1qz3q6t',
-      },
-      {
-        title: 'ሳይንስን ጥዕናን',
-        url: '/tigrinya/topics/cx2yler1d05t',
-      },
-      {
-        title: 'ቪድዮ',
-        url: '/tigrinya/topics/crldzm9n4rdt',
-      },
-      {
-        title: 'ኣመና ፍቱዋት',
-        url: '/tigrinya/popular/read',
-      },
     ],
     timezone: 'Africa/Addis_Ababa',
   },

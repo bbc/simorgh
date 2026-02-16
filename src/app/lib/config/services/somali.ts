@@ -367,38 +367,6 @@ export const service: DefaultServiceConfig = {
         title: 'War',
         url: '/somali',
       },
-      {
-        title: 'Siyaasad',
-        url: '/somali/topics/cwr9jry737xt',
-      },
-      {
-        title: 'Soomaali',
-        url: '/somali/topics/cpzd4zk7qrjt',
-      },
-      {
-        title: 'Raadiye',
-        url: '/somali/topics/cn6rqlrkm0pt',
-      },
-      {
-        title: 'Muuqaal',
-        url: '/somali/topics/c7pl4k5r9xxt',
-      },
-      {
-        title: 'Haween',
-        url: '/somali/topics/cxnykn5732gt',
-      },
-      {
-        title: 'Ciyaaro',
-        url: '/somali/topics/cpzd4zj1pn2t',
-      },
-      {
-        title: 'Saynis iyo Caafimaad',
-        url: '/somali/topics/c2dr4lek2r9t',
-      },
-      {
-        title: 'Fan iyo Dhaqan',
-        url: '/somali/topics/cwy5g18443dt',
-      },
     ],
   },
 };
