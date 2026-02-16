@@ -145,11 +145,7 @@ const MediaContainer = ({
   } = getEnvConfig();
   const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`;
   useEffect(() => {
-    if (!playerElementRef.current) return;
-
-    if (playerKeyRef.current === playerKey) {
-      return;
-    }
+    if (!playerElementRef.current || playerKeyRef.current === playerKey) return;
 
     playerKeyRef.current = playerKey;
     try {
