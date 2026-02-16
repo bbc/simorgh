@@ -586,7 +586,6 @@ export const service: DefaultServiceConfig = {
             label: 'BBC News na srpskom',
             lang: 'sr-latn',
           },
-
           {
             id: 'ukrainian',
             href: 'https://www.bbc.com/ukrainian',
@@ -624,13 +623,13 @@ export const service: DefaultServiceConfig = {
         links: [
           {
             id: 'arabic',
-            href: 'http://www.bbc.com/arabic',
+            href: 'https://www.bbc.com/arabic',
             label: 'BBC News عربي',
             lang: 'ar',
           },
           {
             id: 'persian',
-            href: 'http://www.bbc.com/persian',
+            href: 'https://www.bbc.com/persian',
             label: 'BBC News فارسی',
             lang: 'fa',
             latinTransliteration: 'Khabarha be Farsi',

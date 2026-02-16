@@ -14,6 +14,7 @@ import LiteSiteSummary from '#app/components/LiteSiteSummary';
 import NewNavigationContainer from '#src/app/components/Navigation';
 import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import styled from '@emotion/styled';
+import AccountHeader from '#app/components/Account/AccountHeader';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
@@ -31,7 +32,14 @@ const Divider = styled.div`
   }
 `;
 
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -58,7 +66,9 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+      >
+        {children}
+      </BrandContainer>
     </div>
   );
 };
@@ -116,13 +126,17 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       )}
       {isLite && <LiteSiteSummary />}
       <Divider />

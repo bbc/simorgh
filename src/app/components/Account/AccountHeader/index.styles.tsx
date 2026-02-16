@@ -2,10 +2,10 @@ import { Theme } from '@emotion/react';
 
 const styles = {
   wrapper: {
-    marginInlineStart: 'auto',
-    width: '100%',
     display: 'flex',
-    justifyContent: 'flex-end',
+    alignItems: 'center',
+    marginInlineStart: 'auto',
+    flexShrink: 0,
     paddingInlineStart: '1rem',
   },
 

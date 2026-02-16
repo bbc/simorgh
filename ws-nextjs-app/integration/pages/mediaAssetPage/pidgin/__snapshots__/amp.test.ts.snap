@@ -184,55 +184,6 @@ exports[`AMP Media Asset Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`AMP Media Asset Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Nigeria",
-  "url": "/pidgin/topics/c2dwqd1zr92t",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Africa",
-  "url": "/pidgin/topics/c404v061z85t",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "World",
-  "url": "/pidgin/topics/c0823e52dd0t",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Video",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Sport",
-  "url": "/pidgin/topics/cjgn7gv77vrt",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Entertainment",
-  "url": "/pidgin/topics/cqywjyzk2vyt",
-}
-`;
-
-exports[`AMP Media Asset Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "Most popular",
-  "url": "/pidgin/popular/read",
-}
-`;
-
 exports[`AMP Media Asset Page I can see a bulleted list item 1`] = `"this is the link text"`;
 
 exports[`AMP Media Asset Page I can see a bulleted list item with link 1`] = `"/afrique/23248423"`;

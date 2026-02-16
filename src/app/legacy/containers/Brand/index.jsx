@@ -29,6 +29,7 @@ const BrandContainer = ({
   skipLink = null,
   scriptLink = null,
   brandRef = null,
+  children,
   ...props
 }) => {
   const { product, serviceLocalizedName, service } = use(ServiceContext);
@@ -66,7 +67,9 @@ const BrandContainer = ({
       service={service}
       ref={brandRef}
       {...props}
-    />
+    >
+      {children}
+    </StyledBrand>
   );
 };
 

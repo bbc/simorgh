@@ -136,55 +136,6 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "เลือกตั้ง 2569",
-  "url": "/thai/topics/cd9zv7dyg1kt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "ประเทศไทย",
-  "url": "/thai/topics/cjgn73g98rqt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "ต่างประเทศ",
-  "url": "/thai/topics/c5v124k8lj7t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "วิทยาศาสตร์",
-  "url": "/thai/topics/c5qvp1q33p0t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "สุขภาพ",
-  "url": "/thai/topics/cyx5kz25zxdt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "วิดีโอ",
-  "url": "/thai/topics/c5ljd3jng4nt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "ยอดนิยม",
-  "url": "/thai/popular/read",
-}
-`;
-
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"คำบรรยายภาพ, ประติมานุสรณ์ ม. ธรรมศาสตร์ เป็นพื้นที่ความทรงจำในเหตุการณ์ 6 ตุลา 2519"`;
 
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
