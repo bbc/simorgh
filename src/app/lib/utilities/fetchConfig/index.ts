@@ -41,8 +41,10 @@ const fetchConfig = async <T>({
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
   fetchUrl.searchParams.set('useNewNav', 'true');
+  if (variant) {
+    fetchUrl.searchParams.set('variant', variant);
+  }
   const bffReqPath = fetchUrl.toString();
-  console.log('fetching config for', service, 'from', bffReqPath);
   const cachedResponse = cache.get(bffReqPath);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {
