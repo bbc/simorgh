@@ -157,7 +157,7 @@ const PWAPromotionalBannerTreatment = ({
       <PromotionalBanner
         title={promotionalBanner.title}
         description={promotionalBanner.description}
-        orText={promotionalBanner.orText}
+        buttonSeparatorText={promotionalBanner.buttonSeparatorText}
         primaryButton={{
           text: promotionalBanner.primaryButton.text,
           longText: promotionalBanner.primaryButton.longText,
