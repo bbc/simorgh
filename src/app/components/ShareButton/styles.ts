@@ -34,34 +34,38 @@ const styles = {
         color: 'canvasText',
         border: `${pixelsToRem(2)}rem solid canvasText`,
       },
+    }),
+  postButton: ({ palette, spacings, mq }: Theme) =>
+    css({
+      color: palette.BLACK,
+      backgroundColor: palette.WHITE,
       svg: {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         marginInlineEnd: `${spacings.FULL}rem`,
         path: {
+          fill: palette.BLACK,
           [mq.FORCED_COLOURS]: {
             fill: 'canvasText',
           },
         },
       },
     }),
-  postButton: ({ palette }: Theme) =>
-    css({
-      color: palette.BLACK,
-      backgroundColor: palette.WHITE,
-      svg: {
-        path: {
-          fill: palette.BLACK,
-        },
-      },
-    }),
-  portraitVideoButton: ({ palette }: Theme) =>
+  portraitVideoButton: ({ palette, mq }: Theme) =>
     css({
       color: palette.WHITE,
       backgroundColor: palette.BLACK,
+      minHeight: `${pixelsToRem(44)}rem`,
+      minWidth: `${pixelsToRem(44)}rem`,
       svg: {
+        width: `${pixelsToRem(18)}rem`,
+        height: `${pixelsToRem(18)}rem`,
+        margin: 'auto',
         path: {
           fill: palette.WHITE,
+          [mq.FORCED_COLOURS]: {
+            fill: 'canvasText',
+          },
         },
       },
     }),

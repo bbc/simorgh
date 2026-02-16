@@ -85,10 +85,18 @@ const ShareButton = ({
         ]}
       >
         <ShareSvg />
-        <span role="text">
-          <span>{shareButtonText}</span>
-          <VisuallyHiddenText>, {title}</VisuallyHiddenText>
-        </span>
+        {isLivePagePost ? (
+          <span role="text">
+            <span>{shareButtonText}</span>
+            <VisuallyHiddenText>, {title}</VisuallyHiddenText>
+          </span>
+        ) : (
+          <span role="text">
+            <VisuallyHiddenText>
+              {shareButtonText}, {title}
+            </VisuallyHiddenText>
+          </span>
+        )}
       </button>
     </div>
   );
