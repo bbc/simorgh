@@ -31,16 +31,16 @@ const fetchConfig = async <T>({
   configType,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia';
+  const shouldFetchConfig = service === 'indonesia' || service === 'arabic';
 
   if (!shouldFetchConfig) return Promise.resolve(null);
 
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
-
+  fetchUrl.searchParams.set('useNewNav', 'true');
   const bffReqPath = fetchUrl.toString();
-
+  console.log('fetching config for', service, 'from', bffReqPath);
   const cachedResponse = cache.get(bffReqPath);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {
@@ -56,9 +56,10 @@ const fetchConfig = async <T>({
 
   const agent = certsRequired(pagePath) ? await getAgent() : null;
 
+  const isTest = environment === 'test';
   const fetchOptions = {
     ...(agent && { agent }),
-    ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
+    ...((isLocal || isTest) && { headers: { 'ctx-service-env': 'test' } }),
     signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 
