@@ -486,6 +486,63 @@ describe('PortraitVideoModal', () => {
 
       expect(mockSwipeTracker).not.toHaveBeenCalled();
     });
+
+    it('calls setCurrentItem when navigating to next video', () => {
+      const setCurrentItem = jest.fn();
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[0].model.video.version.id }],
+        },
+        direction: 'next',
+        method: 'swipe',
+      };
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+      statsNavigationCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+        setCurrentItem,
+      );
+      expect(setCurrentItem).toHaveBeenCalledWith(blocks[1]);
+    });
+
+    it('calls setCurrentItem when navigating to previous video', () => {
+      const setCurrentItem = jest.fn();
+      const mockSMPEvent: SMPEvent = {
+        playlist: {
+          items: [{ versionID: blocks[1].model.video.version.id }],
+        },
+        direction: 'previous',
+        method: 'swipe',
+      };
+      const mockSwipeEventTrackingData = {
+        ...eventTrackingData,
+        groupTracker: {
+          name: 'group name',
+          itemCount: 20,
+          resourceId: 'urn:bbc:tipo:list:fe4a1c8c-9a7c-4a50-845d-7da91aa65204',
+          position: 4,
+        },
+      };
+      statsNavigationCallback(
+        mockSMPEvent,
+        blocks,
+        mockSwipeEventTrackingData,
+        mockSwipeTracker,
+        setCurrentItem,
+      );
+
+      expect(setCurrentItem).toHaveBeenCalledWith(blocks[0]);
+    });
   });
 
   describe('playbackEndedCallback', () => {
