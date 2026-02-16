@@ -68,6 +68,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'और',
+      readTime: {
+        readTimePrefix: 'पढ़ने का समय',
+        minute: 'मिनट',
+      },
       pagination: {
         previousPage: 'पिछला',
         nextPage: 'अगला',

@@ -81,7 +81,7 @@ import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
-} from '../utils/portraitVideo';
+} from '../../components/MediaLoader/utils/isPortraitVideo';
 import getUnderArticleComponents from './helpers';
 
 const getImageComponent =
@@ -187,9 +187,9 @@ const getVideoComponent =
     const title = translations.media.watchMoments;
 
     const showTitle =
-      isPortraitVideo(blocks) &&
+      isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
-      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
