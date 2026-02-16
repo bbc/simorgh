@@ -5,6 +5,7 @@ export const fontsAreCached = ({ expectedFonts }) => {
   const testPrefix = expectedFonts.length > 0 ? expectedFonts : 'No ';
 
   it(`${testPrefix} fonts are cached`, () => {
+    cy.clearLocalStorage();
     cy.reload(true);
 
     cy.getAllLocalStorage().then(allLocalStorage => {
