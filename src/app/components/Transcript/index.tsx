@@ -30,9 +30,11 @@ const TranscriptListItem = ({ id, start, content }: TranscriptItem) => (
 const Transcript = ({
   transcript,
   title,
+  className,
 }: {
   transcript: TranscriptBlock;
   title?: string;
+  className?: string;
 }) => {
   const eventTrackingData: EventTrackingData = {
     componentName: 'Transcript',
@@ -99,7 +101,7 @@ const Transcript = ({
   const formattedTitle = title ? `, ${title}` : '';
 
   return (
-    <details css={styles.details}>
+    <details css={styles.details} className={className}>
       <summary
         css={styles.summary}
         onClick={handleClick}

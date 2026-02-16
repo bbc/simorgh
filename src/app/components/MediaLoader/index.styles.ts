@@ -111,6 +111,7 @@ export default {
   withTranscriptVideo: ({ palette, isDarkUi }: Theme) =>
     css({
       backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
+      marginBottom: 0,
     }),
   withTranscriptCaption: ({ mq, spacings }: Theme) =>
     css({
@@ -124,5 +125,9 @@ export default {
         width: 'auto',
         margin: `${spacings.FULL}rem`,
       },
+    }),
+  transcript: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.TRIPLE}rem`,
     }),
 };

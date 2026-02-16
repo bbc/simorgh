@@ -368,13 +368,14 @@ const MediaLoader = ({
             ]}
           />
         )}
-        {hasTranscript && (
-          <Transcript
-            transcript={transcriptBlock}
-            title={placeholderConfig?.mediaInfo?.title}
-          />
-        )}
       </figure>
+      {hasTranscript && (
+        <Transcript
+          transcript={transcriptBlock}
+          title={placeholderConfig?.mediaInfo?.title}
+          css={styles.transcript}
+        />
+      )}
     </>
   );
 };
