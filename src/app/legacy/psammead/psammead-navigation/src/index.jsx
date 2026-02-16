@@ -101,7 +101,28 @@ const StyledListItem = styled.li`
   display: inline-block;
   position: relative;
   z-index: 2;
-  margin-inline-end: 0.75rem;
+  padding-inline-end: 0.375rem;
+  padding-inline-start: 0.375rem;
+  ${({ service, navType, theme }) =>
+    service === 'arabic'
+      ? `
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: ${navType === 'top' ? '#D77272' : theme.palette.GREY_4};
+      border-radius: 2px;
+      display: block;
+      opacity: 1;
+    }
+    &:last-child:before {
+      width: 0;
+    }
+  `
+      : ''}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     &:last-child {
@@ -173,7 +194,13 @@ export const NavigationLi = ({
   ...props
 }) => {
   return (
-    <StyledListItem dir={dir} role="listitem" {...viewTracker}>
+    <StyledListItem
+      navType={navType}
+      dir={dir}
+      service={service}
+      role="listitem"
+      {...viewTracker}
+    >
       {active && currentPageText ? (
         <StyledLink
           href={url}
