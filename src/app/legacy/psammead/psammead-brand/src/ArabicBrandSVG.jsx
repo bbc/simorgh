@@ -1,8 +1,3 @@
-// This file exports the BBC News World Service Arabic SVG as a React component
-// [copilot]
-
-import React from 'react';
-
 const ArabicBrandSVG = props => (
   <svg
     id="a"
