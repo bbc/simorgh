@@ -184,7 +184,7 @@ const pluginLoadedCallback = () => {
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-const handlePrevNextVideo = ({
+export const handlePrevNextVideo = ({
   direction,
   blocks,
   setCurrentItem,
