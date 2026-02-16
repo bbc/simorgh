@@ -40,7 +40,7 @@ const PortraitVideoCarousel = ({
   const [videoOverlayContainer, setVideoOverlayContainer] =
     useState<HTMLElement | null>(null);
   const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
-  const [currentItem, setCurrentItem] = useState<
+  const [currentVideo, setCurrentVideo] = useState<
     PortraitClipMediaBlock | undefined
   >();
   const [controlsDisplayed, setControlsDisplayed] = useState(false);
@@ -80,7 +80,7 @@ const PortraitVideoCarousel = ({
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
-      setCurrentItem(blocks[index]);
+      setCurrentVideo(blocks[index]);
       setIsModalOpen(true);
     }
   };
@@ -148,7 +148,7 @@ const PortraitVideoCarousel = ({
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
               setVideoOverlayContainerRef={setVideoOverlayContainerRef}
-              setCurrentItem={setCurrentItem}
+              setCurrentVideo={setCurrentVideo}
               setControlsDisplayed={setControlsDisplayed}
             />,
             document.body,
@@ -159,7 +159,7 @@ const PortraitVideoCarousel = ({
           createPortal(
             <PluginCacheProvider container={videoOverlayContainer}>
               <VideoOverlay
-                currentItem={currentItem}
+                currentVideo={currentVideo}
                 controlsDisplayed={controlsDisplayed}
               />
             </PluginCacheProvider>,

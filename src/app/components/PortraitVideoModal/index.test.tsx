@@ -487,8 +487,8 @@ describe('PortraitVideoModal', () => {
       expect(mockSwipeTracker).not.toHaveBeenCalled();
     });
 
-    it('calls setCurrentItem when navigating to next video', () => {
-      const setCurrentItem = jest.fn();
+    it('calls setCurrentVideo when navigating to next video', () => {
+      const setCurrentVideo = jest.fn();
       const mockSMPEvent: SMPEvent = {
         playlist: {
           items: [{ versionID: blocks[0].model.video.version.id }],
@@ -510,13 +510,13 @@ describe('PortraitVideoModal', () => {
         blocks,
         mockSwipeEventTrackingData,
         mockSwipeTracker,
-        setCurrentItem,
+        setCurrentVideo,
       );
-      expect(setCurrentItem).toHaveBeenCalledWith(blocks[1]);
+      expect(setCurrentVideo).toHaveBeenCalledWith(blocks[1]);
     });
 
-    it('calls setCurrentItem when navigating to previous video', () => {
-      const setCurrentItem = jest.fn();
+    it('calls setCurrentVideo when navigating to previous video', () => {
+      const setCurrentVideo = jest.fn();
       const mockSMPEvent: SMPEvent = {
         playlist: {
           items: [{ versionID: blocks[1].model.video.version.id }],
@@ -538,10 +538,10 @@ describe('PortraitVideoModal', () => {
         blocks,
         mockSwipeEventTrackingData,
         mockSwipeTracker,
-        setCurrentItem,
+        setCurrentVideo,
       );
 
-      expect(setCurrentItem).toHaveBeenCalledWith(blocks[0]);
+      expect(setCurrentVideo).toHaveBeenCalledWith(blocks[0]);
     });
   });
 
@@ -807,8 +807,8 @@ describe('PortraitVideoModal', () => {
       window.embeddedMedia = originalEmbeddedMedia;
     });
 
-    it('calls setCurrentItem and player.next for next', () => {
-      const setCurrentItem = jest.fn();
+    it('calls setCurrentVideo and player.next for next', () => {
+      const setCurrentVideo = jest.fn();
       const next = jest.fn();
       Object.defineProperty(window, 'embeddedMedia', {
         writable: true,
@@ -828,14 +828,14 @@ describe('PortraitVideoModal', () => {
       handlePrevNextVideo({
         direction: 'next',
         blocks,
-        setCurrentItem,
+        setCurrentVideo,
       });
-      expect(setCurrentItem).toHaveBeenCalledWith(blocks[1]);
+      expect(setCurrentVideo).toHaveBeenCalledWith(blocks[1]);
       expect(next).toHaveBeenCalled();
     });
 
-    it('calls setCurrentItem and player.previous for previous', () => {
-      const setCurrentItem = jest.fn();
+    it('calls setCurrentVideo and player.previous for previous', () => {
+      const setCurrentVideo = jest.fn();
       const previous = jest.fn();
       Object.defineProperty(window, 'embeddedMedia', {
         writable: true,
@@ -855,13 +855,13 @@ describe('PortraitVideoModal', () => {
       handlePrevNextVideo({
         direction: 'previous',
         blocks,
-        setCurrentItem,
+        setCurrentVideo,
       });
-      expect(setCurrentItem).toHaveBeenCalledWith(blocks[0]);
+      expect(setCurrentVideo).toHaveBeenCalledWith(blocks[0]);
       expect(previous).toHaveBeenCalled();
     });
 
-    it('does not throw if setCurrentItem is not provided', () => {
+    it('does not throw if setCurrentVideo is not provided', () => {
       const next = jest.fn();
       Object.defineProperty(window, 'embeddedMedia', {
         writable: true,
@@ -892,7 +892,7 @@ describe('PortraitVideoModal', () => {
     beforeEach(() => {
       jest.clearAllMocks();
     });
-    it('does not crash if setCurrentItem, setControlsDisplayed, setVideoOverlayContainerRef are not provided', () => {
+    it('does not crash if setCurrentVideo, setControlsDisplayed, setVideoOverlayContainerRef are not provided', () => {
       render(
         <Component
           selectedVideoIndex={0}

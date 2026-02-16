@@ -30,13 +30,13 @@ const ShareToolComponent = ({ shareUrlPath, title, id }) => {
 };
 
 const VideoOverlay = ({
-  currentItem,
+  currentVideo,
   controlsDisplayed,
 }: {
-  currentItem: PortraitClipMediaBlock | undefined;
+  currentVideo: PortraitClipMediaBlock | undefined;
   controlsDisplayed: boolean;
 }) => {
-  const { shareUrl, title, id } = currentItem?.model?.video || {};
+  const { shareUrl, title, id } = currentVideo?.model?.video || {};
 
   return (
     <div css={[styles.overlayWrapper, !shareUrl && 'display: none']}>

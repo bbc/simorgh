@@ -66,8 +66,8 @@ const getCurrentIndex = ({
   player?: Player;
 }): number => {
   const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
-  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
+  const [currentVideo] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentVideo?.vpid || currentVideo?.versionID;
 
   const currentIndex = blocks?.findIndex(
     item =>
@@ -133,7 +133,7 @@ export const statsNavigationCallback = async (
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
-  setCurrentItem?: (item: PortraitClipMediaBlock) => void,
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void,
 ) => {
   const { direction, method } = e || {};
 
@@ -143,7 +143,7 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-    setCurrentItem?.(blocks[newIndex]);
+    setCurrentVideo?.(blocks[newIndex]);
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
       selectedVideo: blocks?.[newIndex],
@@ -187,16 +187,17 @@ const pluginLoadedCallback = () => {
 export const handlePrevNextVideo = ({
   direction,
   blocks,
-  setCurrentItem,
+  setCurrentVideo,
 }: {
   direction: 'previous' | 'next';
   blocks: PortraitClipMediaBlock[];
-  setCurrentItem?: (item: PortraitClipMediaBlock) => void;
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
 }) => {
   const player = getPlayerInstance();
-  const index = getCurrentIndex({ blocks, player });
-  const newIndex = direction === 'next' ? index + 1 : index - 1;
-  setCurrentItem?.(blocks[newIndex]);
+  const currentVideoIndex = getCurrentIndex({ blocks, player });
+  const prevNextVideoIndex =
+    direction === 'next' ? currentVideoIndex + 1 : currentVideoIndex - 1;
+  setCurrentVideo?.(blocks[prevNextVideoIndex]);
   player?.[direction]?.();
 };
 
@@ -209,7 +210,7 @@ export interface PortraitVideoModalProps {
   setVideoOverlayContainerRef?: React.RefObject<
     React.Dispatch<React.SetStateAction<HTMLElement | null>>
   >;
-  setCurrentItem?: (item: PortraitClipMediaBlock) => void;
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
   setControlsDisplayed?: (displayed: boolean) => void;
 }
 
@@ -219,7 +220,7 @@ const PortraitVideoModal = ({
   selectedVideoIndex,
   eventTrackingData,
   setVideoOverlayContainerRef,
-  setCurrentItem,
+  setCurrentVideo,
   setControlsDisplayed,
 }: PortraitVideoModalProps) => {
   const {
@@ -335,7 +336,7 @@ const PortraitVideoModal = ({
               handlePrevNextVideo({
                 direction: 'previous',
                 blocks,
-                setCurrentItem,
+                setCurrentVideo,
               })
             }
             css={styles.navButton}
@@ -352,7 +353,7 @@ const PortraitVideoModal = ({
               handlePrevNextVideo({
                 direction: 'next',
                 blocks,
-                setCurrentItem,
+                setCurrentVideo,
               })
             }
             css={styles.navButton}
@@ -377,7 +378,7 @@ const PortraitVideoModal = ({
                 blocks,
                 eventTrackingData,
                 swipeTracker,
-                setCurrentItem,
+                setCurrentVideo,
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
