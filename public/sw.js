@@ -53,7 +53,7 @@ const cacheOfflinePageAndResources = async service => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.10.2.js',
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.11.0.js',
   // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts
