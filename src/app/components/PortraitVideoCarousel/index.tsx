@@ -1,4 +1,4 @@
-import { use, useCallback, useEffect, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -44,13 +44,8 @@ const PortraitVideoCarousel = ({
     PortraitClipMediaBlock | undefined
   >();
   const [controlsDisplayed, setControlsDisplayed] = useState(false);
-  const [hasShareApi, setHasShareApi] = useState(false);
 
-  useEffect(() => {
-    if ('share' in navigator) {
-      setHasShareApi(true);
-    }
-  }, []);
+  const hasShareApi = typeof navigator !== 'undefined' && 'share' in navigator;
 
   const { isLite, isAmp, nonce } = use(RequestContext);
 
