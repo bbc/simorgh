@@ -194,7 +194,7 @@ const fetchEventHandler = async event => {
         if (cached) return cached;
         try {
           return await fetch(event.request);
-        } catch (err) {
+        } catch {
           return new Response('PWA offline fetch failed', { status: 503 });
         }
       })(),
