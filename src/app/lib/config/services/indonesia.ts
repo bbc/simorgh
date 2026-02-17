@@ -365,26 +365,6 @@ export const service: DefaultServiceConfig = {
         title: 'Berita',
         url: '/indonesia',
       },
-      {
-        title: 'Indonesia',
-        url: '/indonesia/topics/cjgn7k8yx4gt',
-      },
-      {
-        title: 'Dunia',
-        url: '/indonesia/topics/cyz8evpl224t',
-      },
-      {
-        title: 'Viral',
-        url: '/indonesia/topics/cn5w7g2nq6dt',
-      },
-      {
-        title: 'Liputan Mendalam',
-        url: '/indonesia/topics/cw9qgeqd18zt',
-      },
-      {
-        title: 'Majalah',
-        url: '/indonesia/topics/cpxrqmrkeg8t',
-      },
     ],
     timezone: 'Asia/Jakarta',
   },

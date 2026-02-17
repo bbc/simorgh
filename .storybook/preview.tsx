@@ -61,6 +61,7 @@ const preview: Preview = {
          * https://storybook.js.org/docs/riot/workflows/faq#what-icons-are-available-for-my-toolbar-or-my-addon
          */
         icon: 'globe',
+        // @ts-ignore
         items: services,
         dynamicTitle: true,
       },
@@ -71,7 +72,9 @@ const preview: Preview = {
       toolbar: {
         icon: 'lightning',
         items: [
+          // @ts-ignore
           { value: false, title: 'Lite mode OFF' },
+          // @ts-ignore
           { value: true, title: 'Lite mode ON' },
         ],
         dynamicTitle: true,

@@ -351,30 +351,6 @@ export const service: DefaultServiceConfig = {
         title: 'समाचार',
         url: '/nepali',
       },
-      {
-        title: 'नेपाल निर्वाचन २०८२',
-        url: '/nepali/topics/c5ydk8xvx6jt',
-      },
-      {
-        title: 'नेपाल',
-        url: '/nepali/topics/cyx5k2yzyj6t',
-      },
-      {
-        title: 'विश्व',
-        url: '/nepali/topics/cy5nkr41gx6t',
-      },
-      {
-        title: 'स्वास्थ्य',
-        url: '/nepali/topics/c2dwqjg83q0t',
-      },
-      {
-        title: 'विज्ञान तथा प्रविधि',
-        url: '/nepali/topics/c9de5jl3967t',
-      },
-      {
-        title: 'रेडिओ',
-        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
-      },
     ],
   },
 };

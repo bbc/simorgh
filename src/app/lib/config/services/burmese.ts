@@ -377,35 +377,6 @@ export const service: DefaultServiceConfig = {
         title: 'ပင်မစာမျက်နှာ',
         url: '/burmese',
       },
-      {
-        title: 'ရွေးကောက်ပွဲ',
-        url: '/burmese/topics/c1w0y2j4j70t',
-      },
-      {
-        title: 'မြန်မာ့ရေးရာ',
-        url: '/burmese/topics/c404v08p1wxt',
-      },
-      {
-        title: 'နိုင်ငံတကာ',
-        url: '/burmese/topics/cnlv9j1z93wt',
-      },
-      {
-        title: 'ဆောင်းပါး',
-        url: '/burmese/topics/cl3rq8rkqgxt',
-      },
-      {
-        title: 'အင်တာဗျူး',
-        url: '/burmese/topics/cdg42x4kek0t',
-      },
-      {
-        title: 'ကုန်သွယ်စီးပွား',
-        url: '/burmese/topics/c9wpm0en9jdt',
-      },
-      {
-        title: 'ဗီဒီယိုများ',
-        url: '/burmese/topics/cj7v92le02qt',
-        hideOnLiteSite: true,
-      },
     ],
   },
 };
