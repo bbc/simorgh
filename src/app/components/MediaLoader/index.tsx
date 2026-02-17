@@ -21,7 +21,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+// import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   BumpType,
   EventMapping,
@@ -139,11 +139,11 @@ const MediaContainer = ({
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
   const playerKeyRef = useRef<string | null>(null);
-  const {
-    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
-    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
-  } = getEnvConfig();
-  const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`;
+  // const {
+  //   SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+  //   SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  // } = getEnvConfig();
+  // const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`;
   useEffect(() => {
     if (!playerElementRef.current || playerKeyRef.current === playerKey) return;
 
@@ -214,7 +214,8 @@ const MediaContainer = ({
             ) {
               mediaPlayer.loadPlugin(
                 {
-                  html: videoOverlayPlugin,
+                  // html: videoOverlayPlugin,
+                  html: 'https://static.files.bbci.co.uk/core/website/assets/static/scripts/smp/video-overlay-plugin.embed.869ac0e5834c1784f3ab.js',
                   playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI },
                   waitOnPluginLoad: true,
                 },
@@ -239,7 +240,7 @@ const MediaContainer = ({
     setVideoOverlayContainerRef,
     showAds,
     uniqueId,
-    videoOverlayPlugin,
+    // videoOverlayPlugin,
   ]);
 
   return (
