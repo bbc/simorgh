@@ -6,7 +6,7 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 const baseBanner: PromotionalBannerConfig = {
   title: 'Install our app',
   description: 'Get the best experience by installing our app.',
-  orText: 'or',
+  buttonSeparatorText: 'or',
   bannerLabel: 'Promotional Banner',
   primaryButton: { text: 'Install', longText: 'Install App' },
   secondaryButton: { text: 'Not now' },
