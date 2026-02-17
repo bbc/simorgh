@@ -6,7 +6,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
-import useAndroidDetection from '#app/hooks/useAdroidDetection';
+import useAndroidDetection from '#app/hooks/useAndroidDetection';
 import useClickTracker from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useCustomEventTracker from '#app/hooks/useCustomEventTracker';
