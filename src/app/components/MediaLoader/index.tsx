@@ -143,7 +143,7 @@ const MediaContainer = ({
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
   } = getEnvConfig();
-  const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js`;
+  const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js?v=1`;
   useEffect(() => {
     if (!playerElementRef.current || playerKeyRef.current === playerKey) return;
 
