@@ -1,5 +1,3 @@
-// ...existing code...
-
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 export interface AmpNavigationContainerProps {
@@ -7,6 +5,7 @@ export interface AmpNavigationContainerProps {
   service: string;
   dir: string;
   menuAnnouncedText: string;
+  topScrollableListItems?: React.ReactNode;
   scrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
 }
