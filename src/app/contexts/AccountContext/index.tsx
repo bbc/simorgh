@@ -2,7 +2,6 @@ import {
   createContext,
   PropsWithChildren,
   use,
-  useEffect,
   useMemo,
   useState,
 } from 'react';
@@ -29,11 +28,11 @@ export const AccountProvider = ({
   initialConfig,
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale } = use(ServiceContext);
-  const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
-  useEffect(() => {
-    (async () => setPageToReturnTo(window.location.href))();
-  }, []);
+  const [pageToReturnTo] = useState<string | null>(() => {
+    if (onClient()) return window.location.href;
+    return null;
+  });
 
   const isIdctaAvailable = initialConfig?.['id-availability'] === 'GREEN';
 
