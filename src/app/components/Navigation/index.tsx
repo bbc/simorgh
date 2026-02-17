@@ -35,10 +35,16 @@ const renderListItems = (
   viewTracker: unknown,
   isLite?: boolean,
   navType?: string,
+  getA11yProps?: (
+    item: NavigationItem,
+    index: number,
+    active: boolean,
+  ) => Record<string, string | undefined>,
 ) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
     const active = index === activeIndex;
+    const a11yProps = getA11yProps?.(item, index, active) ?? {};
 
     if (hideOnLiteSite && isLite) return listAcc;
 
@@ -54,6 +60,7 @@ const renderListItems = (
         clickTracker={clickTracker}
         viewTracker={viewTracker}
         navType={navType}
+        {...a11yProps}
       >
         {title}
       </Li>
@@ -184,6 +191,25 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     pageType,
   });
 
+  const getTopItemA11yProps = (
+    item: NavigationItem,
+    index: number,
+    active: boolean,
+  ) => {
+    const shouldAnnounceCurrentPage =
+      pageType === 'home' && active && index === 0;
+
+    if (!active || shouldAnnounceCurrentPage) {
+      return {};
+    }
+
+    return {
+      'aria-current': undefined,
+      'aria-label': item.title,
+      'aria-labelledby': undefined,
+    };
+  };
+
   const topScrollableListItems = (
     <NavigationUl>
       {renderListItems(
@@ -198,6 +224,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         topNavViewTracker,
         isLite,
         'top',
+        getTopItemA11yProps,
       )}
     </NavigationUl>
   );

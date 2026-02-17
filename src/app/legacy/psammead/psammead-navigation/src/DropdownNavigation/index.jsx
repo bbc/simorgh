@@ -29,7 +29,15 @@ const StyledDropdown = styled.div`
   height: 0;
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-
+  ${({ isArabic }) =>
+    isArabic &&
+    `
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    `}
   ${({ height, isOpen }) =>
     isOpen
       ? `visibility: visible; height: ${height}px;`
@@ -45,15 +53,15 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children }) => {
+export const CanonicalDropdown = ({ isOpen, children, isArabic }) => {
   const heightRef = useRef(null);
-
   return (
     <StyledDropdown
       data-e2e="dropdown-nav"
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
+      isArabic={isArabic}
     >
       {children}
     </StyledDropdown>
