@@ -1,5 +1,6 @@
-/* eslint-disable no-unused-vars */
-
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable func-names */
 class VideoOverlayPlugin {
   constructor(utils, data = {}) {
     this.utils = utils;
@@ -35,7 +36,7 @@ class VideoOverlayPlugin {
   }
 }
 
-const runPlugin = (utils, data) => {
+var runPlugin = function (utils, data) {
   const videoOverlayPlugin = new VideoOverlayPlugin(utils, data);
   return videoOverlayPlugin;
 };
