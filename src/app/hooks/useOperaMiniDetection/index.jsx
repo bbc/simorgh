@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const useOperaMiniDetection = () => {
-  const [isOperaMini, setIsOperaMini] = useState(false);
-
-  useEffect(() => {
+  const [isOperaMini] = useState(() => {
     if (typeof window !== 'undefined' && window.operamini) {
-      (async () => setIsOperaMini(true))();
+      return true;
     }
-  }, []);
+    return false;
+  });
 
   return isOperaMini;
 };
