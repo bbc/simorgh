@@ -104,7 +104,6 @@ const PageLayoutWrapper = ({
 					head.appendChild(fontStylePlaceholder);
                 };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                  console.log('🚀 retrieveAndStoreFont called ', {src: font.downloadSrc});
                     window.addEventListener("load", (e) => {
                     getFont(font.downloadSrc).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
@@ -120,15 +119,10 @@ const PageLayoutWrapper = ({
                     const storageKey = 'font-' + font.name;
                     let fontContents = localStorage.getItem(storageKey);
 
-                    console.log('🚀 fontsForStorage called', {fontContents});
-
                     if (!fontContents) {
-                        console.log('🚀 FONT not found; Fetch and store');
                         retrieveAndStoreFont(font, storageKey, true);
                     }
                     else {
-                        console.log('🚀 FOUND fonts, just attach');
-
                     	const { base64Contents, fontFamily, fontWeight, fontVersion } = JSON.parse(fontContents);
                     	const styleInnerText = '@font-face{font-family: "' + fontFamily + '"; font-weight: ' + fontWeight + '; src:url("' + base64Contents + '") format("woff2");font-display: swap;}';
                 		createStyleAndAttach(styleInnerText);
