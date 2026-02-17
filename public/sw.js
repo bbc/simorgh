@@ -165,7 +165,7 @@ const fetchEventHandler = async event => {
             }
           }
 
-          // Throw an error for browser to handle
+          // Fallback to browser default behavior
           throw err || new Error('Error in navigation mode');
         };
 
@@ -176,7 +176,8 @@ const fetchEventHandler = async event => {
           const networkResp = await fetch(event.request);
 
           if (networkResp.status >= 500) {
-            return getOfflineFallback();
+            // Return cached page or throw error synchronously
+            return await getOfflineFallback();
           }
 
           isPWADeviceOffline = false;
