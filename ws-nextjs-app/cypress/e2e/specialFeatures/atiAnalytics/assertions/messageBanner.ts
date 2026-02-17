@@ -1,5 +1,6 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import interceptExternalLinks from '../../../../support/helpers/interceptExternalLinks';
 
 const { MESSAGE_BANNER } = COMPONENTS;
 
@@ -35,6 +36,7 @@ export const assertMessageBannerComponentClick = ({
   it('should send a click event for the Message Banner component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+    interceptExternalLinks({ httpCode: 200 });
 
     cy.get('[data-testid="message-banner-1"]').scrollIntoView({
       duration: 1000,

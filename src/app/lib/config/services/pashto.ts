@@ -58,6 +58,10 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'اعلان',
       },
+      readTime: {
+        readTimePrefix: 'د لوستلو وخت',
+        minute: 'دقیقې',
+      },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
       currentPage: 'اوسنۍ پاڼه',
@@ -358,43 +362,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'کور پاڼه',
         url: '/pashto',
-      },
-      {
-        title: 'ژوندۍ: ټلویزیوني خپرونې',
-        url: '/pashto/watch/bbc_afghan_tv/live',
-      },
-      {
-        title: 'افغانستان',
-        url: '/pashto/topics/cr50y57xj52t',
-      },
-      {
-        title: 'پښتونخوا',
-        url: '/pashto/topics/cz74k7wy49jt',
-      },
-      {
-        title: 'نړۍ',
-        url: '/pashto/topics/cxe2wdp2dv3t',
-      },
-      {
-        title: 'ښځې',
-        url: '/pashto/topics/cr50y5rq23gt',
-      },
-      {
-        title: 'لوبې',
-        url: '/pashto/topics/cr50y59q860t',
-      },
-      {
-        title: 'ساینس او ټکنالوژي',
-        url: '/pashto/topics/ckgrvled11kt',
-      },
-      {
-        title: 'هنر او ادب',
-        url: '/pashto/topics/c8xqkd91knnt',
-      },
-      {
-        title: 'راډیویي خپرونې',
-        url: '/pashto/topics/c9xz1ekw79nt',
-        hideOnLiteSite: true,
       },
     ],
   },
