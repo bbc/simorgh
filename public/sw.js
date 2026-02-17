@@ -166,7 +166,7 @@ const fetchEventHandler = async event => {
           }
 
           // Throw an error for browser to handle
-          throw (err || new Error('Error in navigation mode'))
+          throw err || new Error('Error in navigation mode');
         };
 
         try {
