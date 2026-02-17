@@ -178,34 +178,6 @@ exports[`AMP Story Page Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`AMP Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Видео жаңылыктар",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
-}
-`;
-
-exports[`AMP Story Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Журнал",
-  "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
 exports[`AMP Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`AMP Story Page Image should match snapshot 1`] = `
