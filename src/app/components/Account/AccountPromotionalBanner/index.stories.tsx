@@ -43,4 +43,4 @@ export default {
 };
 
 export const SignedOut = withProviders({ isSignedIn: false });
-export const SignedIn = withProviders({ isSignedIn: true });
+export const SignedInNoRender = withProviders({ isSignedIn: true });

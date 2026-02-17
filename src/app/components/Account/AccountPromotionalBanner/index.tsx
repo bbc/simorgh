@@ -47,7 +47,7 @@ const AccountPromotionalBanner = () => {
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
-  const accountPromoBanner = translations?.accountPromoBanner;
+  const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const signInText = translations?.account?.signIn;
   const registerText = translations?.account?.register;
   const [isDismissed, setIsDismissed] = useState(() => !isBannerVisible());
@@ -58,13 +58,13 @@ const AccountPromotionalBanner = () => {
     !isIdctaAvailable ||
     !signInUrl ||
     !registerUrl ||
-    !accountPromoBanner
+    !accountPromoBannerTranslations
   ) {
     return null;
   }
 
   const { title, description, closeLabel, buttonSeparatorText } =
-    accountPromoBanner;
+    accountPromoBannerTranslations;
 
   return (
     <PromotionalBanner
