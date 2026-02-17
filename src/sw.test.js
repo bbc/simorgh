@@ -198,13 +198,9 @@ describe('Service Worker', () => {
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
       'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
       'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
-      // Moment-lib - local, test & live
-      'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
       // Frosted_promo - test & live
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
       // PWA Icons - test & live
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
@@ -275,9 +271,7 @@ describe('Service Worker', () => {
           await Promise.resolve(eventResponse);
 
           expect(fetchMock).toHaveBeenCalledWith(assetUrl);
-          expect(fetchedCache[event.request]).toStrictEqual(
-            mockResponse.clone(),
-          );
+          expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
         },
       );
     });
@@ -434,8 +428,8 @@ describe('Service Worker', () => {
 
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.3.3',
-      fileContentHash: '12d09b3ece7b74e4a02658d93fdec703',
+      number: 'v0.3.4',
+      fileContentHash: 'c74a479d63ba5dc6073870c488087910',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {
