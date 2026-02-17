@@ -157,7 +157,6 @@ const fetchEventHandler = async event => {
               self.location.origin,
             ).href;
 
-
             const cachedOffline = await cache.match(offlineUrl);
 
             if (cachedOffline) {
@@ -166,12 +165,8 @@ const fetchEventHandler = async event => {
             }
           }
 
-          // If we have an error (network failure), throw it for browser to handle
-          if (err) {
-            throw err;
-          }
-
-          return new Response('Error in navigation mode', { status: 503 });
+          // Throw an error for browser to handle
+          throw (err || new Error('Error in navigation mode'))
         };
 
         try {
