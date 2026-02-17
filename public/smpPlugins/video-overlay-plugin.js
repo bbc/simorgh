@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 class VideoOverlayPlugin {
   constructor(utils, data = {}) {
     this.utils = utils;
@@ -33,14 +35,7 @@ class VideoOverlayPlugin {
   }
 }
 
-const runVideoOverlayPlugin = (utils, data) => {
+const runPlugin = (utils, data) => {
   const videoOverlayPlugin = new VideoOverlayPlugin(utils, data);
   return videoOverlayPlugin;
 };
-
-// We need to export runVideoOverlayPlugin for a unit test, but this will throw an error when loaded by SMP
-try {
-  module.exports = { runVideoOverlayPlugin };
-} catch {
-  /* no-op */
-}
