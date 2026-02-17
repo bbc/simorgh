@@ -33,14 +33,14 @@ class VideoOverlayPlugin {
   }
 }
 
-const runPlugin = (utils, data) => {
+const runVideoOverlayPlugin = (utils, data) => {
   const videoOverlayPlugin = new VideoOverlayPlugin(utils, data);
   return videoOverlayPlugin;
 };
 
-// We need to export runPlugin for a unit test, but this will throw an error when loaded by SMP
+// We need to export runVideoOverlayPlugin for a unit test, but this will throw an error when loaded by SMP
 try {
-  module.exports = { runPlugin };
+  module.exports = { runVideoOverlayPlugin };
 } catch {
   /* no-op */
 }
