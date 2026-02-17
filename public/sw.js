@@ -22,7 +22,7 @@ const cacheResource = async (cache, url) => {
     const response = await fetch(url);
     if (response.ok) await cache.put(url, response.clone());
     return response;
-  } catch (err) {
+  } catch {
     return new Response('Resource fetch failed', { status: 503 });
   }
 };
@@ -122,7 +122,7 @@ const fetchEventHandler = async event => {
         (async () => {
           try {
             return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
-          } catch (err) {
+          } catch {
             return new Response('WebP fetch failed', { status: 503 });
           }
         })(),
