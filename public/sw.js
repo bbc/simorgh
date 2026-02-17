@@ -99,13 +99,6 @@ self.addEventListener('message', async event => {
   }
 });
 
-const loggerEnabled = true;
-const logger = (...args) => {
-  if (!loggerEnabled) return;
-  // eslint-disable-next-line no-console
-  console.log(`[SW ${version}]`, ...args);
-};
-
 // -------Fetch Handler-------------
 const fetchEventHandler = async event => {
   const isRequestForCacheableFile = CACHEABLE_FILES.some(cacheableFile =>
@@ -113,16 +106,6 @@ const fetchEventHandler = async event => {
   );
   const isRequestForWebpImage = WEBP_IMAGE.test(event.request.url);
   const isNavigationMode = event.request.mode === 'navigate';
-
-  logger('Request', event.request.url, {
-    isNavigationMode,
-    isRequestForCacheableFile,
-    isRequestForWebpImage,
-  });
-
-  if (isNavigationMode) {
-    logger(`📣  Navigation mode`, { url: event.request.url });
-  }
 
   if (isRequestForWebpImage) {
     const req = event.request.clone();
@@ -152,22 +135,7 @@ const fetchEventHandler = async event => {
 
         let response = await cache.match(event.request);
 
-        if (response) {
-          // Clone it so you can read the body without consuming the original
-          const clonedForLogging = response.clone();
-          const text = await clonedForLogging.text();
-
-          logger('📣 cacheable file', {
-            url: response.url,
-            type: response.type,
-            size: text.length,
-            preview: text.substring(0, 500),
-            clonedForLogging,
-          });
-        }
-
         if (!response) {
-          logger('📣 cacheable NOT FOUND', { response });
           response = await cacheResource(cache, event.request.url);
         }
         return response;
@@ -181,7 +149,7 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        const getOfflineFallback = async () => {
+        const getOfflineFallback = async (err = null) => {
           if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
@@ -189,24 +157,20 @@ const fetchEventHandler = async event => {
               self.location.origin,
             ).href;
 
-            logger('📌 [getOfflineFallback]', {
-              offlineUrl,
-              isPWA,
-            });
 
             const cachedOffline = await cache.match(offlineUrl);
+
             if (cachedOffline) {
-              logger('📌 [getOfflineFallback], returning cached offline page', {
-                offlineUrl,
-              });
               isPWADeviceOffline = true;
               return cachedOffline;
             }
           }
 
-          logger(
-            '❌ [getOfflineFallback] No offline page available, returning 503',
-          );
+          // If we have an error (network failure), throw it for browser to handle
+          if (err) {
+            throw err;
+          }
+
           return new Response('Error in navigation mode', { status: 503 });
         };
 
@@ -216,22 +180,14 @@ const fetchEventHandler = async event => {
           if (preloadResp) return preloadResp;
           const networkResp = await fetch(event.request);
 
-          logger(
-            '📡 Navigation fetch response:',
-            networkResp.status,
-            networkResp.ok,
-          );
-
           if (networkResp.status >= 500) {
-            logger('⚠️ Server error (5xx), treating as offline');
             return getOfflineFallback();
           }
 
           isPWADeviceOffline = false;
           return networkResp;
         } catch (err) {
-          logger('🔴 Fetch failed with exception:', err.message);
-          return getOfflineFallback();
+          return getOfflineFallback(err);
         }
       })(),
     );
