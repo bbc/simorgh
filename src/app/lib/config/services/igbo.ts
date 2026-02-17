@@ -316,18 +316,6 @@ export const service: DefaultServiceConfig = {
         title: 'Akụkọ',
         url: '/igbo',
       },
-      {
-        title: 'Egwuregwu',
-        url: '/igbo/topics/cnq68k0x2vrt',
-      },
-      {
-        title: 'Ihe nkiri',
-        url: '/igbo/topics/c3l19z3qjmyt',
-      },
-      {
-        title: 'Nke ka ewuewu',
-        url: '/igbo/popular/read',
-      },
     ],
     footer: {
       trustProjectLink: {
