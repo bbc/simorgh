@@ -210,6 +210,7 @@ export const NavigationLi = ({
           navType={navType}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
+          aria-current="page"
           className="focusIndicatorRemove"
           {...clickTracker}
           {...props}
@@ -230,6 +231,7 @@ export const NavigationLi = ({
           service={service}
           className="focusIndicatorRemove"
           navType={navType}
+          aria-current={active ? 'page' : undefined}
           {...clickTracker}
           {...props}
         >
