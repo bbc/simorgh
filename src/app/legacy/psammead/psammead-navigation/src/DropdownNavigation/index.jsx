@@ -93,7 +93,7 @@ const StyledDropdownLink = styled.a`
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
-  display: inline-block;
+  display: block;
 
   &:hover,
   &:focus {
