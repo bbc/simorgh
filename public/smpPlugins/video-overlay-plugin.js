@@ -39,3 +39,8 @@ const runPlugin = (utils, data) => {
   const videoOverlayPlugin = new VideoOverlayPlugin(utils, data);
   return videoOverlayPlugin;
 };
+
+// Export for Node/CommonJS only if needed (safe no-op in browser)
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { runPlugin };
+}
