@@ -121,57 +121,56 @@ const CanonicalNavigationContainer: React.FC<
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
       <NavStack>
-        <TopRow dir={dir}>
-          {dir === 'rtl' ? (
-            <>
-              {!isLite && (
-                <div style={{ flex: '0 0 auto' }}>
-                  <CanonicalMenuButton
-                    script={script}
-                    announcedText={menuAnnouncedText}
-                    isOpen={isOpen}
-                    onClick={() => setIsOpen(!isOpen)}
-                    dir={dir}
-                    navType="top"
-                  />
-                </div>
-              )}
-
-              <ScrollableNavigation dir={dir} navType="top">
-                {topScrollableListItems}
-              </ScrollableNavigation>
-            </>
-          ) : (
-            <>
-              <ScrollableNavigation dir={dir} navType="top">
-                {topScrollableListItems}
-              </ScrollableNavigation>
-
-              {!isLite && (
-                <div style={{ flex: '0 0 auto' }}>
-                  <CanonicalMenuButton
-                    announcedText={menuAnnouncedText}
-                    isOpen={isOpen}
-                    onClick={() => setIsOpen(!isOpen)}
-                    dir={dir}
-                    script={script}
-                    navType="top"
-                  />
-                </div>
-              )}
-            </>
-          )}
-        </TopRow>
+        <div style={{ position: 'relative', width: '100%' }}>
+          <TopRow dir={dir}>
+            {dir === 'rtl' ? (
+              <>
+                {!isLite && (
+                  <div style={{ flex: '0 0 auto' }}>
+                    <CanonicalMenuButton
+                      script={script}
+                      announcedText={menuAnnouncedText}
+                      isOpen={isOpen}
+                      onClick={() => setIsOpen(!isOpen)}
+                      dir={dir}
+                      navType="top"
+                    />
+                  </div>
+                )}
+                <ScrollableNavigation dir={dir} navType="top">
+                  {topScrollableListItems}
+                </ScrollableNavigation>
+              </>
+            ) : (
+              <>
+                <ScrollableNavigation dir={dir} navType="top">
+                  {topScrollableListItems}
+                </ScrollableNavigation>
+                {!isLite && (
+                  <div style={{ flex: '0 0 auto' }}>
+                    <CanonicalMenuButton
+                      announcedText={menuAnnouncedText}
+                      isOpen={isOpen}
+                      onClick={() => setIsOpen(!isOpen)}
+                      dir={dir}
+                      script={script}
+                      navType="top"
+                    />
+                  </div>
+                )}
+              </>
+            )}
+          </TopRow>
+          <CanonicalDropdown isOpen={isOpen} isArabic>
+            {dropdownListItems}
+          </CanonicalDropdown>
+        </div>
 
         <LowerNavWrapper>
           <ScrollableNavigation dir={dir} navType={null}>
             {scrollableListItems}
           </ScrollableNavigation>
         </LowerNavWrapper>
-
-        <CanonicalDropdown isOpen={isOpen}>
-          {dropdownListItems}
-        </CanonicalDropdown>
       </NavStack>
 
       <Divider />
