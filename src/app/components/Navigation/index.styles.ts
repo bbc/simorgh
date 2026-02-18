@@ -4,18 +4,17 @@ export default {
   divider: ({ palette }: Theme) =>
     css({
       position: 'absolute',
-      width: 'calc(100vw - 0.8rem)',
+      width: '100%',
       insetInlineStart: 0,
       '@media (min-width: 1041px)': {
-        width: 'calc(100vw + 0.8rem)',
-        insetInlineStart: 'calc(-1 * (100vw - 1014px) / 2)',
+        width: '100%',
+        insetInlineStart: '0',
       },
       '&::after': {
         content: "''",
         position: 'absolute',
         insetBlockEnd: 0,
-        insetInline: '-0.8rem 0',
-        width: 'calc(100% + 0.8rem)',
+        width: '100%',
         borderBottom: `0.0625rem solid ${palette.GREY_3}`,
       },
     }),
