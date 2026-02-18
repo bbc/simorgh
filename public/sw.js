@@ -149,7 +149,7 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        const getOfflineFallback = async (err = null) => {
+        const getOfflineFallback = async () => {
           if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
@@ -182,8 +182,8 @@ const fetchEventHandler = async event => {
 
           isPWADeviceOffline = false;
           return networkResp;
-        } catch (err) {
-          return getOfflineFallback(err);
+        } catch {
+          return getOfflineFallback();
         }
       })(),
     );
