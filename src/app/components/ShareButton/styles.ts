@@ -75,6 +75,14 @@ const styles = {
           },
         },
       },
+      '&:hover, &:focus-visible': {
+        [mq.FORCED_COLOURS]: {
+          border: `${pixelsToRem(3)}rem solid canvasText`,
+        },
+      },
+      [mq.FORCED_COLOURS]: {
+        border: `${pixelsToRem(1)}rem solid canvasText`,
+      },
     }),
 };
 export default styles;
