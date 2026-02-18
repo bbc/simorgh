@@ -128,9 +128,11 @@ const OnDemandAudioPage = ({
                         description: shortSynopsis,
                         thumbnailUrl: thumbnailImageUrl,
                         duration: durationISO8601,
-                        uploadDate: new Date(
-                          releaseDateTimeStamp,
-                        ).toISOString(),
+                        ...(releaseDateTimeStamp && {
+                          uploadDate: new Date(
+                            releaseDateTimeStamp,
+                          ).toISOString(),
+                        }),
                       },
                     ]
                   : []
