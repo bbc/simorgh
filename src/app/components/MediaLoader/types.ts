@@ -29,7 +29,8 @@ export type MediaPlayerEvents =
   | 'statsNavigation'
   | 'pause'
   | 'uiControlBarShown'
-  | 'uiControlBarHidden';
+  | 'uiControlBarHidden'
+  | 'mediaItemChanged';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>

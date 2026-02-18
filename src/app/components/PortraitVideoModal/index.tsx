@@ -133,7 +133,6 @@ export const statsNavigationCallback = async (
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
-  setCurrentVideo?: (item: PortraitClipMediaBlock) => void,
 ) => {
   const { direction, method } = e || {};
 
@@ -143,7 +142,6 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-    setCurrentVideo?.(blocks[newIndex]);
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
       selectedVideo: blocks?.[newIndex],
@@ -179,6 +177,19 @@ export const playbackEndedCallback = async (
   }
 };
 
+const mediaItemChangedCallback = async ({
+  e,
+  blocks,
+  setCurrentVideo,
+}: {
+  e: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
+}) => {
+  const currentIndex = getCurrentIndex({ e, blocks });
+  setCurrentVideo?.(blocks[currentIndex]);
+};
+
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
@@ -186,18 +197,10 @@ const pluginLoadedCallback = () => {
 
 export const handlePrevNextVideo = ({
   direction,
-  blocks,
-  setCurrentVideo,
 }: {
   direction: 'previous' | 'next';
-  blocks: PortraitClipMediaBlock[];
-  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
 }) => {
   const player = getPlayerInstance();
-  const currentVideoIndex = getCurrentIndex({ blocks, player });
-  const prevNextVideoIndex =
-    direction === 'next' ? currentVideoIndex + 1 : currentVideoIndex - 1;
-  setCurrentVideo?.(blocks[prevNextVideoIndex]);
   player?.[direction]?.();
 };
 
@@ -335,8 +338,6 @@ const PortraitVideoModal = ({
             onClick={() =>
               handlePrevNextVideo({
                 direction: 'previous',
-                blocks,
-                setCurrentVideo,
               })
             }
             css={styles.navButton}
@@ -352,8 +353,6 @@ const PortraitVideoModal = ({
             onClick={() =>
               handlePrevNextVideo({
                 direction: 'next',
-                blocks,
-                setCurrentVideo,
               })
             }
             css={styles.navButton}
@@ -382,10 +381,11 @@ const PortraitVideoModal = ({
                 blocks,
                 eventTrackingData,
                 swipeTracker,
-                setCurrentVideo,
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+            mediaItemChanged: e =>
+              mediaItemChangedCallback({ e, blocks, setCurrentVideo }),
             uiControlBarShown: () => setControlsDisplayed?.(true),
             uiControlBarHidden: () => setControlsDisplayed?.(false),
           }}
