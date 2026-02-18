@@ -48,7 +48,7 @@ const EXAMPLE_ROUTES = [
   {
     route: '/ws/av-embeds/articles/cd1rmn075d1o/p0jd37n8/ig',
     expectedOutput: {
-      service: null,
+      service: 'ws',
       platform: 'articles',
       assetId: 'cd1rmn075d1o',
       mediaId: 'p0jd37n8',
@@ -77,9 +77,20 @@ const EXAMPLE_ROUTES = [
     },
   },
   {
+    route: '/ws/av-embeds/cps/zhongwen/simp/world-53107744/p08hnckg/zh-hans',
+    expectedOutput: {
+      service: 'zhongwen',
+      variant: 'simp',
+      platform: 'cps',
+      assetId: 'world-53107744',
+      mediaId: 'p08hnckg',
+      lang: 'zh-hans',
+    },
+  },
+  {
     route: '/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm',
     expectedOutput: {
-      service: null,
+      service: 'ws',
       platform: 'tipo',
       assetId: 'c7p765ynk9qt',
       mediaId: 'p01thw20',
@@ -89,7 +100,7 @@ const EXAMPLE_ROUTES = [
   {
     route: '/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm/amp',
     expectedOutput: {
-      service: null,
+      service: 'ws',
       platform: 'tipo',
       assetId: 'c7p765ynk9qt',
       mediaId: 'p01thw20',
