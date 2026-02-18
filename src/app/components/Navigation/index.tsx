@@ -248,7 +248,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
    */
   const activeTop =
     topActiveIndex > -1 ? navigationItems[topActiveIndex] : navigationItems[0];
-  const bottomItems = (activeTop?.subItems || []) as NavigationItem[];
+  const bottomItems = activeTop?.subItems || [];
 
   // Find the active subitem index in the bottom nav
   const activeBottomIndex = bottomItems.findIndex(item =>
@@ -274,7 +274,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   // Dropdown menu: prioritise the first top-level item and all its subitems
   // CHANGE WHEN HAVE ANSWER TO THE QUESTION ABOUT THIS
-  const dropdownSource: NavigationItem[] = (() => {
+  const dropdownSource = (() => {
     if (!navigationItems.length) return [];
     const [first, ..._] = navigationItems;
     return [first, ...(first.subItems || [])];
