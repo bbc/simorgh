@@ -372,11 +372,12 @@ describe('Service Worker', () => {
       // Mock cache with offline page
       const offlineResponse = new Response('offline page');
       const mockCache = {
-        match: jest.fn(url =>
-          url.includes('/mundo/offline')
+        match: jest.fn(url => {
+          const urlString = typeof url === 'string' ? url : url.url;
+          return urlString.includes('/mundo/offline')
             ? Promise.resolve(offlineResponse)
-            : Promise.resolve(null),
-        ),
+            : Promise.resolve(null);
+        }),
         put: jest.fn(),
         delete: jest.fn(),
       };
@@ -424,12 +425,105 @@ describe('Service Worker', () => {
       const response = await respondWithPromise;
       expect(await response.text()).toBe('offline page');
     });
+
+    it('should throw error in navigation mode if resolved request status code is 5xx', async () => {
+      fetchMock.mockResolvedValueOnce(
+        new Response('Server Error', { status: 500 }),
+      );
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      await expect(respondWithPromise).rejects.toThrow();
+    });
+
+    it('should throw error when navigation mode fails if user is non-pwa', async () => {
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      await expect(respondWithPromise).rejects.toThrow();
+    });
+
+    it('should gracefully handle failed request if PWA offline mode', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: { id: 'client-1', url: 'https://bbc.com/mundo' },
+      });
+
+      // Fail a navigation request to set isPWADeviceOffline = true
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const navRequest = new Request('https://bbc.com/mundo');
+      Object.defineProperty(navRequest, 'mode', { value: 'navigate' });
+
+      let navRespondWithPromise;
+      const navEvent = {
+        request: navRequest,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          navRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(navEvent);
+      await navRespondWithPromise;
+
+      // Test non-navigation request
+      fetchMock.mockRejectedValueOnce(new Error('Asset fetch failed'));
+
+      const assetRequest = new Request('https://bbc.com/asset.js');
+      let assetRespondWithPromise;
+
+      const assetEvent = {
+        request: assetRequest,
+        respondWith: jest.fn(p => {
+          assetRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(assetEvent);
+
+      const response = await assetRespondWithPromise;
+      expect(response.status).toBe(503);
+      expect(await response.text()).toBe('PWA offline fetch failed');
+    });
   });
 
   describe('version', () => {
     const CURRENT_VERSION = {
       number: 'v0.3.4',
-      fileContentHash: '31dfff65e9ded84fccfafed6ce775159',
+      fileContentHash: '74a8ec5be9b1871ef8306713c1dfa1fc',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

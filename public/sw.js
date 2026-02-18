@@ -176,7 +176,7 @@ const fetchEventHandler = async event => {
           const networkResp = await fetch(event.request);
 
           if (networkResp.status >= 500) {
-            // Return cached page or throw error synchronously
+            // Must await to return cached offline page or throw error
             return await getOfflineFallback();
           }
 
