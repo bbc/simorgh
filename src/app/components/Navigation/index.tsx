@@ -8,6 +8,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { Direction, Services } from '#app/models/types/global';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import type { NavigationItem, NavigationContainerProps } from './types';
@@ -26,10 +27,9 @@ import type { NavigationItem, NavigationContainerProps } from './types';
 const renderListItems = (
   Li: React.ElementType,
   navigation: NavigationItem[],
-  script: unknown,
   currentPage: string,
-  service: string,
-  dir: string,
+  service: Services,
+  dir: Direction,
   activeIndex: number,
   clickTracker: unknown,
   viewTracker: unknown,
@@ -52,7 +52,6 @@ const renderListItems = (
       <Li
         key={`${title}-${url}`}
         url={url}
-        script={script}
         active={active}
         currentPageText={currentPage}
         service={service}
@@ -136,7 +135,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     use(RequestContext);
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
-    script,
     translations,
     navigation: legacyNavigation,
     service,
@@ -215,7 +213,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       {renderListItems(
         NavigationLi,
         topItems,
-        script,
         currentPage,
         service,
         dir,
@@ -248,7 +245,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       {renderListItems(
         NavigationLi,
         bottomItems,
-        script,
         currentPage,
         service,
         dir,
@@ -277,7 +273,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       {renderListItems(
         DropdownLi,
         dropdownSource,
-        script,
         currentPage,
         service,
         dir,
@@ -297,7 +292,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       dropdownListItems={dropdownListItems}
       menuAnnouncedText={navMenuText}
       dir={dir}
-      script={script}
       service={service}
       blocks={blocks}
     />
