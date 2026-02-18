@@ -24,23 +24,37 @@ import type { NavigationItem, NavigationContainerProps } from './types';
  * }
  */
 
-const renderListItems = (
-  Li: React.ElementType,
-  navigation: NavigationItem[],
-  currentPage: string,
-  service: Services,
-  dir: Direction,
-  activeIndex: number,
-  clickTracker: unknown,
-  viewTracker: unknown,
-  isLite?: boolean,
-  navType?: string,
+type RenderListItemsArgs = {
+  Li: React.ElementType;
+  navigation: NavigationItem[];
+  currentPage: string;
+  service: Services;
+  dir: Direction;
+  activeIndex: number;
+  clickTracker: unknown;
+  viewTracker: unknown;
+  isLite?: boolean;
+  navType?: string;
   getA11yProps?: (
     item: NavigationItem,
     index: number,
     active: boolean,
-  ) => Record<string, string | undefined>,
-) =>
+  ) => Record<string, string | undefined>;
+};
+
+const renderListItems = ({
+  Li,
+  navigation,
+  currentPage,
+  service,
+  dir,
+  activeIndex,
+  clickTracker,
+  viewTracker,
+  isLite,
+  navType,
+  getA11yProps,
+}: RenderListItemsArgs) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
     const active = index === activeIndex;
@@ -208,19 +222,19 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const topScrollableListItems = (
     <NavigationUl>
-      {renderListItems(
-        NavigationLi,
-        navigationItems,
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: navigationItems,
         currentPage,
         service,
         dir,
-        topActiveIndex,
-        topNavClickTrackerHandler,
-        topNavViewTracker,
+        activeIndex: topActiveIndex,
+        clickTracker: topNavClickTrackerHandler,
+        viewTracker: topNavViewTracker,
         isLite,
-        'top',
-        getTopItemA11yProps,
-      )}
+        navType: 'top',
+        getA11yProps: getTopItemA11yProps,
+      })}
     </NavigationUl>
   );
 
@@ -240,17 +254,17 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const scrollableListItems = (
     <NavigationUl>
-      {renderListItems(
-        NavigationLi,
-        bottomItems,
+      {renderListItems({
+        Li: NavigationLi,
+        navigation: bottomItems,
         currentPage,
         service,
         dir,
-        activeBottomIndex,
-        scrollableNavClickTrackerHandler,
-        scrollableNavViewTracker,
+        activeIndex: activeBottomIndex,
+        clickTracker: scrollableNavClickTrackerHandler,
+        viewTracker: scrollableNavViewTracker,
         isLite,
-      )}
+      })}
     </NavigationUl>
   );
 
@@ -264,16 +278,16 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const dropdownListItems = (
     <DropdownUl>
-      {renderListItems(
-        DropdownLi,
-        dropdownSource,
+      {renderListItems({
+        Li: DropdownLi,
+        navigation: dropdownSource,
         currentPage,
         service,
         dir,
-        -1,
-        dropdownNavClickTrackerHandler,
-        dropdownNavViewTracker,
-      )}
+        activeIndex: -1,
+        clickTracker: dropdownNavClickTrackerHandler,
+        viewTracker: dropdownNavViewTracker,
+      })}
     </DropdownUl>
   );
 
