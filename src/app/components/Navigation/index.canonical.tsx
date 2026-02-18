@@ -58,16 +58,14 @@ const CanonicalNavigationContainer: React.FC<
             {dir === 'rtl' ? (
               <>
                 {!isLite && (
-                  <div style={{ flex: '0 0 auto' }}>
-                    <CanonicalMenuButton
-                      script={script}
-                      announcedText={menuAnnouncedText}
-                      isOpen={isOpen}
-                      onClick={() => setIsOpen(!isOpen)}
-                      dir={dir}
-                      navType="top"
-                    />
-                  </div>
+                  <CanonicalMenuButton
+                    script={script}
+                    announcedText={menuAnnouncedText}
+                    isOpen={isOpen}
+                    onClick={() => setIsOpen(!isOpen)}
+                    dir={dir}
+                    navType="top"
+                  />
                 )}
                 <ScrollableNavigation dir={dir} navType="top">
                   {topScrollableListItems}
@@ -79,16 +77,14 @@ const CanonicalNavigationContainer: React.FC<
                   {topScrollableListItems}
                 </ScrollableNavigation>
                 {!isLite && (
-                  <div style={{ flex: '0 0 auto' }}>
-                    <CanonicalMenuButton
-                      announcedText={menuAnnouncedText}
-                      isOpen={isOpen}
-                      onClick={() => setIsOpen(!isOpen)}
-                      dir={dir}
-                      script={script}
-                      navType="top"
-                    />
-                  </div>
+                  <CanonicalMenuButton
+                    announcedText={menuAnnouncedText}
+                    isOpen={isOpen}
+                    onClick={() => setIsOpen(!isOpen)}
+                    dir={dir}
+                    script={script}
+                    navType="top"
+                  />
                 )}
               </>
             )}
