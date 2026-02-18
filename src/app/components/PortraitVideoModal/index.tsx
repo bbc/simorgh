@@ -179,9 +179,11 @@ export const playbackEndedCallback = async (
   }
 };
 
-const pluginLoadedCallback = () => {
-  const player = getPlayerInstance();
-  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+const pluginLoadedCallback = (e: SMPEvent) => {
+  if (e?.detail?.url && e?.detail?.url.includes('fullscreen')) {
+    const player = getPlayerInstance();
+    player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+  }
 };
 
 export const handlePrevNextVideo = ({
@@ -370,7 +372,7 @@ const PortraitVideoModal = ({
           setVideoOverlayContainerRef={setVideoOverlayContainerRef}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
+            pluginLoaded: e => pluginLoadedCallback(e),
             fullscreenExit: onClose,
             statsNavigation: e =>
               statsNavigationCallback(

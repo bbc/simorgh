@@ -11,6 +11,9 @@ import { Translations } from '#app/models/types/translations';
 import { Dispatch, SetStateAction } from 'react';
 
 export type SMPEvent = {
+  detail?: {
+    url?: string;
+  };
   playlist?: {
     items: PlaylistItem[];
   };
