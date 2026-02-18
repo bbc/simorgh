@@ -2,7 +2,6 @@ import styles from './index.styles';
 
 const NewLogoBanner = () => (
   <div css={styles.banner} data-testid="logo-banner">
-    {/* ✅ Inner wrapper controls alignment and width per breakpoint */}
     <svg
       css={styles.logoSvg}
       viewBox="0 0 168 48"
