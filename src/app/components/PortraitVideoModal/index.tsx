@@ -192,6 +192,8 @@ const mediaItemChangedCallback = async ({
 
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
+  const player2 = window.embeddedMedia.api.players().bbcMediaPlayer0;
+  console.log('player', getPlayerInstance(), player, 'player2', player2);
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
