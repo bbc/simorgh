@@ -1,5 +1,4 @@
 import React, { useState, use } from 'react';
-import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -11,8 +10,8 @@ import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
-
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import styles from './index.styles';
 
 interface CanonicalNavigationContainerProps {
   script: unknown;
@@ -28,73 +27,6 @@ interface CanonicalNavigationContainerProps {
   setIsOpen?: (open: boolean) => void;
   blocks?: TopStoryItem[];
 }
-
-const Divider = styled.div`
-  position: absolute;
-  width: calc(100vw - 0.8rem);
-  inset-inline-start: 0;
-  @media (min-width: 1041px) {
-    width: calc(100vw + 0.8rem);
-    inset-inline-start: calc(-1 * (100vw - 1014px) / 2);
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    inset-block-end: 0;
-    inset-inline: -0.8rem 0;
-    width: calc(100% + 0.8rem);
-    border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
-  }
-`;
-
-const NavStack = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
-const NavRow = styled.div<{ dir: string }>`
-  display: flex;
-  flex-direction: ${({ dir }) => (dir === 'rtl' ? 'row-reverse' : 'row')};
-  align-items: stretch;
-  justify-content: ${({ dir }) => (dir === 'rtl' ? 'flex-end' : 'flex-start')};
-  width: 100%;
-`;
-
-/**
- * ✅ TopRow is the same as NavRow, but it paints a full-bleed POSTBOX background behind it.
- * This works even though ancestors are width-constrained because we use a centered 100vw pseudo-element.
- * No spacing/height changes; content stays exactly where it is.
- */
-const TopRow = styled(NavRow)`
-  position: relative;
-  z-index: 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    /* Cover this row vertically */
-    top: 0;
-    bottom: 0;
-
-    /* Full-bleed horizontally, independent of the constrained container */
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-
-    /* POSTBOX red from theme */
-    background: ${props => props.theme.palette.POSTBOX};
-    pointer-events: none; /* ensure it never interferes with clicks */
-  }
-`;
-
-const LowerNavWrapper = styled.div`
-  width: 100%;
-  margin-top: 0.25rem;
-  position: relative;
-  z-index: 1;
-`;
 
 const CanonicalNavigationContainer: React.FC<
   CanonicalNavigationContainerProps
@@ -120,9 +52,9 @@ const CanonicalNavigationContainer: React.FC<
 
   return (
     <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <NavStack>
+      <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
-          <TopRow dir={dir}>
+          <div css={[styles.navRow, styles.topRow]}>
             {dir === 'rtl' ? (
               <>
                 {!isLite && (
@@ -160,20 +92,20 @@ const CanonicalNavigationContainer: React.FC<
                 )}
               </>
             )}
-          </TopRow>
+          </div>
           <CanonicalDropdown isOpen={isOpen} isArabic>
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
 
-        <LowerNavWrapper>
+        <div css={styles.lowerNavWrapper}>
           <ScrollableNavigation dir={dir} navType={null}>
             {scrollableListItems}
           </ScrollableNavigation>
-        </LowerNavWrapper>
-      </NavStack>
+        </div>
+      </div>
 
-      <Divider />
+      <div css={styles.divider} />
       {enabled && <TopBarOJs blocks={blocks ?? []} />}
     </Navigation>
   );
