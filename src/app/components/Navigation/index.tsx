@@ -8,10 +8,35 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { Direction, Services } from '#app/models/types/global';
+import { Direction, PageTypes, Services } from '#app/models/types/global';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import type { NavigationItem, NavigationContainerProps } from './types';
+
+const getTopItemA11yProps = ({
+  item,
+  index,
+  active,
+  pageType,
+}: {
+  item: NavigationItem;
+  index: number;
+  active: boolean;
+  pageType?: PageTypes;
+}) => {
+  const shouldAnnounceCurrentPage =
+    pageType === 'home' && active && index === 0;
+
+  if (!active || shouldAnnounceCurrentPage) {
+    return {};
+  }
+
+  return {
+    'aria-current': undefined,
+    'aria-label': item.title,
+    'aria-labelledby': undefined,
+  };
+};
 
 /**
  * EXPECTED DATA SHAPE (from server):
@@ -35,11 +60,7 @@ type RenderListItemsArgs = {
   viewTracker: unknown;
   isLite?: boolean;
   navType?: string;
-  getA11yProps?: (
-    item: NavigationItem,
-    index: number,
-    active: boolean,
-  ) => Record<string, string | undefined>;
+  pageType?: PageTypes;
 };
 
 const renderListItems = ({
@@ -53,12 +74,13 @@ const renderListItems = ({
   viewTracker,
   isLite,
   navType,
-  getA11yProps,
+  pageType,
 }: RenderListItemsArgs) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
     const { title, url, hideOnLiteSite } = item;
     const active = index === activeIndex;
-    const a11yProps = getA11yProps?.(item, index, active) ?? {};
+    const a11yProps =
+      getTopItemA11yProps({ item, index, active, pageType }) ?? {};
 
     if (hideOnLiteSite && isLite) return listAcc;
 
@@ -109,7 +131,7 @@ const getActiveTopIndex = ({
   topItems: NavigationItem[];
   canonicalLink?: string;
   origin: string;
-  pageType?: string;
+  pageType?: PageTypes;
 }) => {
   if (!topItems?.length) return -1;
 
@@ -201,25 +223,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     pageType,
   });
 
-  const getTopItemA11yProps = (
-    item: NavigationItem,
-    index: number,
-    active: boolean,
-  ) => {
-    const shouldAnnounceCurrentPage =
-      pageType === 'home' && active && index === 0;
-
-    if (!active || shouldAnnounceCurrentPage) {
-      return {};
-    }
-
-    return {
-      'aria-current': undefined,
-      'aria-label': item.title,
-      'aria-labelledby': undefined,
-    };
-  };
-
   const topScrollableListItems = (
     <NavigationUl>
       {renderListItems({
@@ -233,7 +236,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         viewTracker: topNavViewTracker,
         isLite,
         navType: 'top',
-        getA11yProps: getTopItemA11yProps,
+        pageType,
       })}
     </NavigationUl>
   );
@@ -264,6 +267,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: scrollableNavClickTrackerHandler,
         viewTracker: scrollableNavViewTracker,
         isLite,
+        pageType,
       })}
     </NavigationUl>
   );
@@ -287,6 +291,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         activeIndex: -1,
         clickTracker: dropdownNavClickTrackerHandler,
         viewTracker: dropdownNavViewTracker,
+        pageType,
       })}
     </DropdownUl>
   );
