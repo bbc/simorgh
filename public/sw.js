@@ -166,7 +166,7 @@ const fetchEventHandler = async event => {
           }
 
           // Fallback to browser default behavior
-          throw err || new Error('Error in navigation mode');
+          return Response.error();
         };
 
         try {
