@@ -79,7 +79,10 @@ const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query: Query): Services | null => {
-  const service = SERVICES.find(s => query?.includes(s));
+  const servicesWithoutWs = SERVICES.filter(s => s !== 'ws');
+  const service =
+    servicesWithoutWs.find(s => query?.includes(s)) ||
+    (query?.includes('ws') ? 'ws' : undefined);
 
   return service ?? null;
 };
