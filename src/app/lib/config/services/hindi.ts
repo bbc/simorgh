@@ -109,6 +109,14 @@ export const service: DefaultServiceConfig = {
       account: {
         signIn: 'Sign In',
         forYou: 'For you',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Discover your BBC',
+        description:
+          'Sign in or create an account to watch, listen and join in',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
       },
       gist: 'सारांश',
       error: {
