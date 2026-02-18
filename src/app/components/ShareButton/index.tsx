@@ -44,6 +44,7 @@ const ShareButton = ({
   const {
     translations: {
       liveExperiencePage: { shareButtonText = 'Share' },
+      media: { video },
     },
   } = use(ServiceContext);
   const handleShare = async (event: MouseEvent<HTMLButtonElement>) => {
@@ -93,7 +94,7 @@ const ShareButton = ({
         ) : (
           <span role="text">
             <VisuallyHiddenText>
-              {shareButtonText}, {title}
+              {`${shareButtonText} ${video}`}
             </VisuallyHiddenText>
           </span>
         )}
