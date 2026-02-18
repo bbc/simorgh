@@ -1,3 +1,6 @@
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable func-names */
 class VideoOverlayPlugin {
   constructor(utils, data = {}) {
     this.utils = utils;
@@ -33,14 +36,12 @@ class VideoOverlayPlugin {
   }
 }
 
-const runPlugin = (utils, data) => {
+var runPlugin = function (utils, data) {
   const videoOverlayPlugin = new VideoOverlayPlugin(utils, data);
   return videoOverlayPlugin;
 };
 
-// We need to export runPlugin for a unit test, but this will throw an error when loaded by SMP
-try {
+// Export for Node/CommonJS only if needed (safe no-op in browser)
+if (typeof module !== 'undefined' && module.exports) {
   module.exports = { runPlugin };
-} catch {
-  /* no-op */
 }
