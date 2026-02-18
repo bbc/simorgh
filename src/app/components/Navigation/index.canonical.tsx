@@ -5,7 +5,7 @@ import {
   CanonicalDropdown,
   CanonicalMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { GROUP_2_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import useMediaQuery from '#hooks/useMediaQuery';
 import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
@@ -44,7 +44,7 @@ const CanonicalNavigationContainer: React.FC<
   const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
 
-  useMediaQuery(`(max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX})`, event => {
+  useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP})`, event => {
     if (!event.matches) {
       setIsOpen(false);
     }
