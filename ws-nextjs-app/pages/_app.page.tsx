@@ -73,7 +73,10 @@ export default class CustomApp extends App<Props> {
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
-    const { service } = parseRoute(asPath) as { service: Services };
+    const { service, variant } = parseRoute(asPath) as {
+      service: Services;
+      variant?: Variants;
+    };
 
     const [togglesResult, navResult] = await Promise.allSettled([
       getToggles(service),
@@ -81,6 +84,7 @@ export default class CustomApp extends App<Props> {
         service,
         pagePath: asPath,
         configType: 'navigation',
+        variant,
       }),
     ]);
 

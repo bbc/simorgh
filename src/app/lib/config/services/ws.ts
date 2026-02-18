@@ -73,6 +73,14 @@ export const service: DefaultServiceConfig = {
       account: {
         signIn: 'Sign In',
         forYou: 'For you',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Discover your BBC',
+        description:
+          'Sign in or create an account to watch, listen and join in',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
       },
       error: {
         404: {
@@ -586,7 +594,6 @@ export const service: DefaultServiceConfig = {
             label: 'BBC News na srpskom',
             lang: 'sr-latn',
           },
-
           {
             id: 'ukrainian',
             href: 'https://www.bbc.com/ukrainian',
@@ -624,13 +631,13 @@ export const service: DefaultServiceConfig = {
         links: [
           {
             id: 'arabic',
-            href: 'http://www.bbc.com/arabic',
+            href: 'https://www.bbc.com/arabic',
             label: 'BBC News عربي',
             lang: 'ar',
           },
           {
             id: 'persian',
-            href: 'http://www.bbc.com/persian',
+            href: 'https://www.bbc.com/persian',
             label: 'BBC News فارسی',
             lang: 'fa',
             latinTransliteration: 'Khabarha be Farsi',

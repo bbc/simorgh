@@ -128,34 +128,6 @@ export const service: ZhongwenConfig = {
         title: '主页',
         url: '/zhongwen/simp',
       },
-      {
-        title: '国际',
-        url: '/zhongwen/topics/c83plve5vmjt/simp',
-      },
-      {
-        title: '中国',
-        url: '/zhongwen/topics/ckr7mn6r003t/simp',
-      },
-      {
-        title: '香港',
-        url: '/zhongwen/topics/cezw73jk755t/simp',
-      },
-      {
-        title: '台湾',
-        url: '/zhongwen/topics/cd6qem06z92t/simp',
-      },
-      {
-        title: '英国',
-        url: '/zhongwen/topics/c1ez1k4emn0t/simp',
-      },
-      {
-        title: '财经',
-        url: '/zhongwen/topics/cq8nqywy37yt/simp',
-      },
-      {
-        title: '视频',
-        url: '/zhongwen/topics/cgvl47l38e1t/simp',
-      },
     ],
     scriptLink: {
       text: '繁',
@@ -163,10 +135,6 @@ export const service: ZhongwenConfig = {
     },
     translations: {
       and: '和',
-      readTime: {
-        readTimePrefix: '阅读时间',
-        minute: '分钟',
-      },
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -450,34 +418,6 @@ export const service: ZhongwenConfig = {
         title: '主頁',
         url: '/zhongwen/trad',
       },
-      {
-        title: '國際',
-        url: '/zhongwen/topics/c83plve5vmjt/trad',
-      },
-      {
-        title: '中國',
-        url: '/zhongwen/topics/ckr7mn6r003t/trad',
-      },
-      {
-        title: '香港',
-        url: '/zhongwen/topics/cezw73jk755t/trad',
-      },
-      {
-        title: '台灣',
-        url: '/zhongwen/topics/cd6qem06z92t/trad',
-      },
-      {
-        title: '英國',
-        url: '/zhongwen/topics/c1ez1k4emn0t/trad',
-      },
-      {
-        title: '財經',
-        url: '/zhongwen/topics/cq8nqywy37yt/trad',
-      },
-      {
-        title: '影片',
-        url: '/zhongwen/topics/cgvl47l38e1t/trad',
-      },
     ],
     scriptLink: {
       text: '简',
@@ -485,10 +425,6 @@ export const service: ZhongwenConfig = {
     },
     translations: {
       and: '和',
-      readTime: {
-        readTimePrefix: '閱讀時間',
-        minute: '分鐘',
-      },
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
