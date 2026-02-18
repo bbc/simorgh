@@ -44,7 +44,7 @@ const CanonicalNavigationContainer: React.FC<
   const { enabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
 
-  useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP})`, event => {
+  useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
       setIsOpen(false);
     }
