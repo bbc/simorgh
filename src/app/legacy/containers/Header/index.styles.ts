@@ -5,13 +5,13 @@ const LOGO_ASPECT_RATIO = 168 / 48;
 const SVG_HEIGHT = 38;
 
 export default {
-  banner: ({ palette, mq }: Theme) =>
+  banner: ({ palette, mq, spacings }: Theme) =>
     css({
       background: palette.WHITE,
       width: '100%',
       maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
       margin: '0 auto',
-      padding: 0,
+      padding: `0 ${spacings.DOUBLE}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -19,6 +19,10 @@ export default {
 
       [mq.GROUP_2_MIN_WIDTH]: {
         justifyContent: 'flex-start',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: 0,
       },
     }),
 
