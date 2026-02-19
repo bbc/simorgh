@@ -11,6 +11,7 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
 import isLive from '#lib/utilities/isLive';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -113,7 +114,7 @@ const StyledListItem = styled.li`
       left: 0;
       top: 20%;
       height: 60%;
-      width: 1.1px; // If I make this 1 pixel like in the designs, the lines are different widths from each other????
+      width: ${pixelsToRem(1)}rem;
       background: ${navType === 'top' ? '#D77272' : theme.palette.GREY_4};
       border-radius: 2px;
       display: block;
