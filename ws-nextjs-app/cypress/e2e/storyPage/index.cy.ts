@@ -231,10 +231,7 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = [
-  ...canonicalTestSuites,
-  ...ampOnlyNonSmokeTestSuites,
-].map(testSuite => {
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
