@@ -17,7 +17,7 @@ export default {
       justifyContent: 'center',
       height: '4rem',
 
-      [mq.GROUP_2_MIN_WIDTH]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         justifyContent: 'flex-start',
       },
 
