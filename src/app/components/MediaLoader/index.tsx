@@ -31,6 +31,9 @@ import { getBootstrapSrc } from '../Ad/Canonical';
 import Metadata from './Metadata';
 import AmpMediaLoader from './Amp';
 import Message from './Message';
+import getTranscriptBlock from './utils/getTranscriptBlock';
+import Transcript from '../Transcript';
+import getTitleForLiteSiteTranscriptBlock from './utils/getTitleForLiteSiteTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   LIVE_PAGE,
@@ -226,6 +229,8 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
 }: Props) => {
+  const transcriptBlock = getTranscriptBlock(blocks);
+  const hasTranscript = !!transcriptBlock;
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('preroll');
@@ -243,6 +248,12 @@ const MediaLoader = ({
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
+
+  // returns transcript for lite site pages with transcript
+  if (isLite && hasTranscript) {
+    const title = getTitleForLiteSiteTranscriptBlock(blocks);
+    return <Transcript transcript={transcriptBlock} title={title} />;
+  }
 
   if (isLite) return null;
 
@@ -310,6 +321,7 @@ const MediaLoader = ({
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,
           ],
+          hasTranscript && styles.withTranscriptVideo,
         ]}
       >
         {isAmp ? (
@@ -352,10 +364,18 @@ const MediaLoader = ({
             css={[
               isAudio && styles.captionAudio,
               !isAudio && [isPortrait && styles.captionPortrait],
+              hasTranscript && styles.withTranscriptCaption,
             ]}
           />
         )}
       </figure>
+      {hasTranscript && (
+        <Transcript
+          transcript={transcriptBlock}
+          title={placeholderConfig?.mediaInfo?.title}
+          css={styles.transcript}
+        />
+      )}
     </>
   );
 };

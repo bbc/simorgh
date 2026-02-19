@@ -255,3 +255,18 @@ export const DownArrowIcon = () => (
     <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
   </svg>
 );
+
+export const RightArrow = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <g>
+      <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
+    </g>
+  </svg>
+);

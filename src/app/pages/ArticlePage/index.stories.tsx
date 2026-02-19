@@ -26,6 +26,7 @@ import latin from '#app/components/ThemeProvider/fontScripts/latin';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
+import articleDataWithTranscript from '#data/mundo/articles/cle16n19nd9o.json';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -298,3 +299,10 @@ export const TestArticlePageWithLiteSiteLinkRTL = {
   ),
   tags: ['!dev'],
 };
+
+export const ArticlePageWithTranscript = () => (
+  <ComponentWithServiceContext
+    data={articleDataWithTranscript}
+    service="mundo"
+  />
+);

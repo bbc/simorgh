@@ -324,6 +324,11 @@ export const service: DefaultServiceConfig = {
       topStoriesTitle: 'Principales noticias',
       featuresAnalysisTitle: 'No te lo pierdas',
       latestMediaTitle: 'Más videos',
+      transcript: {
+        readTranscript: 'Read transcript',
+        disclaimer:
+          ' This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
+      },
       ugc: {
         // No JavaScript
         noJsHeading: 'Disculpa, página no encontrada',

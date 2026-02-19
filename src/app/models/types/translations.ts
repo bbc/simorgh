@@ -188,7 +188,6 @@ export interface Translations {
     endOfContentClose?: string;
     modalLabel?: string;
   };
-
   socialEmbed: {
     caption?: {
       textPrefixVisuallyHidden: string;
@@ -220,6 +219,10 @@ export interface Translations {
   featuresAnalysisTitle?: string;
   latestMediaTitle?: string;
   infoBannerLabel?: string;
+  transcript?: {
+    readTranscript: string;
+    disclaimer: string;
+  };
   ugc?: Partial<UgcTranslations>;
   carousel?: {
     previous?: string;

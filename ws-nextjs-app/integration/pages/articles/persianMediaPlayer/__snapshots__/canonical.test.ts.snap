@@ -305,7 +305,7 @@ exports[`Canonical Articles Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Articles Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1okmog4"
+  class="media-container css-1f5b20i"
   data-e2e="media-loader__container"
 >
   <div
@@ -383,7 +383,7 @@ exports[`Canonical Articles Media Loader renders a valid container 1`] = `
     </div>
   </div>
   <figcaption
-    class="css-1vlmip3"
+    class="css-1qbj18f"
     dir="rtl"
   >
     <span
