@@ -1,16 +1,29 @@
 // import AmpDecorator from '#storybook/helpers/ampDecorator';
 import { StoryArgs } from '#app/models/types/storybook';
+// import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Navigation from '.';
-import { NavigationItem } from './types';
+import { NavigationContainerProps } from './types';
 
 interface Props {
-  topScrollableListItems?: React.ReactNode;
-  navItems: NavigationItem[];
+  navItems: NavigationContainerProps['navItems'];
   currentPath?: string;
+  // propsForTopBarOJComponent?: {
+  //   blocks?: TopStoryItem[];
+  // };
 }
 
-const Component = ({ navItems, currentPath = '' }: Props) => {
-  return <Navigation navItems={navItems} currentPath={currentPath} />;
+const Component = ({
+  navItems,
+  currentPath = '',
+  // propsForTopBarOJComponent,
+}: Props) => {
+  return (
+    <Navigation
+      navItems={navItems}
+      currentPath={currentPath}
+      // propsForTopBarOJComponent={propsForTopBarOJComponent}
+    />
+  );
 };
 
 export default {
@@ -20,9 +33,22 @@ export default {
 };
 
 export const Example = (_: StoryArgs, globalArgs: Props) => {
-  const { navItems, currentPath } = globalArgs;
+  const navItems = [
+    {
+      title: 'Home',
+      url: '/home',
+      subItems: [
+        { title: 'Section 1', url: '/home/section1' },
+        { title: 'Section 2', url: '/home/section2' },
+      ],
+    },
+    {
+      title: 'News',
+      url: '/news',
+    },
+  ];
 
-  return <Component navItems={navItems} currentPath={currentPath} />;
+  return <Component navItems={navItems} currentPath="/home" />;
 };
 
 // export const Canonical = (_, {}) => <Component />;
