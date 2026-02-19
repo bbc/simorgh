@@ -188,10 +188,6 @@ const MenuButton = styled(Button)`
     }
   }
 
-  & svg {
-    vertical-align: middle;
-  }
-
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     display: none;
     visibility: hidden;
@@ -199,6 +195,10 @@ const MenuButton = styled(Button)`
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     ${({ theme: { fontSizes, fontMq } }) =>
       getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
+  }
+
+  & svg {
+    vertical-align: middle;
   }
 `;
 

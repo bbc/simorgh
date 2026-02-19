@@ -549,10 +549,6 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-34 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -565,6 +561,10 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-34 svg {
+  vertical-align: middle;
 }
 
 .emotion-36 {
@@ -1878,10 +1878,6 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   border: 0.25rem solid #000000;
 }
 
-.emotion-34 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -1894,6 +1890,10 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-34 svg {
+  vertical-align: middle;
 }
 
 .emotion-36 {
@@ -3207,10 +3207,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-34 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -3223,6 +3219,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-34 svg {
+  vertical-align: middle;
 }
 
 .emotion-36 {
@@ -4536,10 +4536,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-34 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -4552,6 +4548,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-34 svg {
+  vertical-align: middle;
 }
 
 .emotion-36 {

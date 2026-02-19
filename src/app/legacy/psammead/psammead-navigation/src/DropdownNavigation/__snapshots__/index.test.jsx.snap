@@ -29,10 +29,6 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -45,6 +41,10 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -126,10 +126,6 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -142,6 +138,10 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -223,10 +223,6 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -239,6 +235,10 @@ exports[`Canonical Open menu button should render correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -321,10 +321,6 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -337,6 +333,10 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -419,10 +419,6 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -435,6 +431,10 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -543,10 +543,6 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   border: 0.25rem solid #000000;
 }
 
-.emotion-0 svg {
-  vertical-align: middle;
-}
-
 @media (min-width: 37.5rem) {
   .emotion-0 {
     display: none;
@@ -559,6 +555,10 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
