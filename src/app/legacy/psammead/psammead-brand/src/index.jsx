@@ -156,6 +156,7 @@ const StyledBrand = ({
     return (
       <>
         <ArabicBrandSVG
+          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
           height="64"
           width="184"
           aria-hidden="true"
