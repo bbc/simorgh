@@ -29,15 +29,7 @@ const StyledDropdown = styled.div`
   height: 0;
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-  ${({ isArabic }) =>
-    isArabic &&
-    `
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-    `}
+
   ${({ height, isOpen }) =>
     isOpen
       ? `visibility: visible; height: ${height}px;`
@@ -53,7 +45,7 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children, isArabic }) => {
+export const CanonicalDropdown = ({ isOpen, children, className = '' }) => {
   const heightRef = useRef(null);
   return (
     <StyledDropdown
@@ -61,7 +53,7 @@ export const CanonicalDropdown = ({ isOpen, children, isArabic }) => {
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
-      isArabic={isArabic}
+      className={className}
     >
       {children}
     </StyledDropdown>
@@ -178,9 +170,7 @@ const MenuButton = styled(Button)`
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: ${({ navType, theme }) =>
-    navType === 'top' ? theme.palette.POSTBOX : 'transparent'};
-  color: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
+  background-color: transparent;
   border: 0;
 
   ${({ dir }) => (dir === 'ltr' ? `float: left;` : `float: right;`)}
@@ -206,12 +196,6 @@ const MenuButton = styled(Button)`
     ${({ theme: { fontSizes, fontMq } }) =>
       getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
   }
-
-  & svg {
-    vertical-align: middle;
-    color: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
-    fill: ${({ navType }) => (navType === 'top' ? '#fff' : 'inherit')};
-  }
 `;
 
 export const CanonicalMenuButton = ({
@@ -219,16 +203,15 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
-  script,
-  navType,
+  script = '',
+  className = '',
 }) => (
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
     script={script}
-    className="focusIndicatorRemove"
-    navType={navType}
+    className={`${className} focusIndicatorRemove`}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
@@ -254,7 +237,7 @@ export const AmpMenuButton = ({
   announcedText,
   onToggle,
   dir = 'ltr',
-  script,
+  script = '',
 }) => (
   <>
     <AmpHead />

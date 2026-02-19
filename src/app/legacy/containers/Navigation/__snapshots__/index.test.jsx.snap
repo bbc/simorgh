@@ -88,10 +88,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
-.emotion-4 svg {
-  vertical-align: middle;
-}
-
 .emotion-6 {
   color: #000000;
   fill: currentColor;
@@ -153,7 +149,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -256,8 +252,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -696,8 +694,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-current="page"
               aria-labelledby="NavigationLinks-Home"
               class="focusIndicatorRemove emotion-69 emotion-70"
+              data-active="true"
               href="/news"
             >
               <span
@@ -929,10 +929,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   }
 }
 
-.emotion-4 svg {
-  vertical-align: middle;
-}
-
 .emotion-6 {
   color: #000000;
   fill: currentColor;
@@ -994,7 +990,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1092,8 +1088,10 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1669,10 +1667,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   }
 }
 
-.emotion-4 svg {
-  vertical-align: middle;
-}
-
 .emotion-6 {
   color: #000000;
   fill: currentColor;
@@ -1734,7 +1728,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1832,8 +1826,10 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -2407,10 +2403,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   }
 }
 
-.emotion-6 svg {
-  vertical-align: middle;
-}
-
 .emotion-8 {
   color: #000000;
   fill: currentColor;
@@ -2500,8 +2492,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -2715,7 +2709,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2823,8 +2817,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-current="page"
                 aria-labelledby="NavigationLinks-Home"
                 class="focusIndicatorRemove emotion-17 emotion-18"
+                data-active="true"
                 href="/news"
               >
                 <span
@@ -3253,10 +3249,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   }
 }
 
-.emotion-6 svg {
-  vertical-align: middle;
-}
-
 .emotion-8 {
   color: #000000;
   fill: currentColor;
@@ -3346,8 +3338,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -3485,7 +3479,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3998,10 +3992,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   }
 }
 
-.emotion-6 svg {
-  vertical-align: middle;
-}
-
 .emotion-8 {
   color: #000000;
   fill: currentColor;
@@ -4091,8 +4081,10 @@ exports[`Navigation Container should correctly render canonical navigation on no
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -4230,7 +4222,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
