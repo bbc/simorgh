@@ -13,6 +13,8 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import ArabicBrandSVG from '#app/components/Header/brand-svgs/ArabicBrandSVG';
+import isLive from '#lib/utilities/isLive';
+import { SERVICES_WITH_NEW_NAV } from '#app/legacy/containers/Header';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -151,10 +153,11 @@ const StyledBrand = ({
   isLongBrand,
   service,
 }) => {
-  if (service === 'arabic') {
+  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
     return (
       <>
         <ArabicBrandSVG
+          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
           height="64"
           width="184"
           aria-hidden="true"

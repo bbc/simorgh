@@ -373,7 +373,7 @@ export const service: DefaultServiceConfig = {
       title: 'Acesse a BBC News Brasil com um toque',
       description:
         'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
-      orText: 'ou',
+      buttonSeparatorText: 'ou',
       bannerLabel: 'Banner promocional',
       closeLabel: 'Sair',
       primaryButton: {

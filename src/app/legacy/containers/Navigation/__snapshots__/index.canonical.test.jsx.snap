@@ -86,10 +86,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   }
 }
 
-.emotion-6 svg {
-  vertical-align: middle;
-}
-
 .emotion-8 {
   color: #000000;
   fill: currentColor;

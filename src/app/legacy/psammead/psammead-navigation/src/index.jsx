@@ -65,21 +65,17 @@ const StyledLink = styled.a`
 
   &:hover::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ navType, theme }) =>
-      navType === 'top' ? '#fff' : theme.palette.POSTBOX};
-    ${({ currentLink, theme, navType }) =>
-      currentLink && navType === 'top'
-        ? `border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid #fff;`
-        : currentLink &&
-          `border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};`}
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
+    ${({ currentLink, theme }) =>
+      currentLink &&
+      `border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};`}
   }
 
   &:focus::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ navType, theme }) =>
-      navType === 'top' ? '#fff' : theme.palette.POSTBOX};
+    border-bottom: ${GEL_SPACING_HLF} solid ${({ theme }) =>
+      theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -89,8 +85,7 @@ const StyledLink = styled.a`
   &:focus-visible::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ navType, theme }) =>
-      navType === 'top' ? '#fff' : theme.palette.POSTBOX};
+      ${({ theme }) => theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -103,26 +98,6 @@ const StyledListItem = styled.li`
   z-index: 2;
   padding-inline-end: 0.375rem;
   padding-inline-start: 0.375rem;
-  ${({ service, navType, theme }) =>
-    service === 'arabic'
-      ? `
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 20%;
-      height: 60%;
-      width: 1.1px; // If I make this 1 pixel like in the designs, the lines are different widths from each other????
-      background: ${navType === 'top' ? '#D77272' : theme.palette.GREY_4};
-      border-radius: 2px;
-      display: block;
-      opacity: 1;
-    }
-    &:last-child:before {
-      width: 0;
-    }
-  `
-      : ''}
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     &:last-child {
@@ -149,8 +124,7 @@ const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ navType }) =>
-      navType === 'top' ? '#fff' : props => props.theme.palette.POSTBOX};
+      ${({ theme }) => theme.palette.POSTBOX};
   }
 `;
 
@@ -159,13 +133,11 @@ const CurrentLink = ({
   children: link,
   script,
   currentPageText = null,
-  navType,
 }) => (
   <StyledSpan
     // eslint-disable-next-line jsx-a11y/aria-role
     role="text"
     script={script}
-    navType={navType}
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     id={`NavigationLinks-${linkId}`}
   >
@@ -190,28 +162,21 @@ export const NavigationLi = ({
   service,
   dir = 'ltr',
   viewTracker = null,
-  navType,
   ...props
 }) => {
   return (
-    <StyledListItem
-      navType={navType}
-      dir={dir}
-      service={service}
-      role="listitem"
-      {...viewTracker}
-    >
+    <StyledListItem dir={dir} role="listitem" {...viewTracker}>
       {active && currentPageText ? (
         <StyledLink
           href={url}
           script={script}
           service={service}
           currentLink
-          navType={navType}
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
           aria-current="page"
           className="focusIndicatorRemove"
+          data-active="true"
           {...clickTracker}
           {...props}
         >
@@ -219,7 +184,6 @@ export const NavigationLi = ({
             linkId={link}
             script={script}
             currentPageText={currentPageText}
-            navType={navType}
           >
             {link}
           </CurrentLink>
@@ -230,7 +194,6 @@ export const NavigationLi = ({
           script={script}
           service={service}
           className="focusIndicatorRemove"
-          navType={navType}
           aria-current={active ? 'page' : undefined}
           {...clickTracker}
           {...props}

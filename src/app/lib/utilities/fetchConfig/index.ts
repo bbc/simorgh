@@ -6,6 +6,8 @@ import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import isLive from '#lib/utilities/isLive';
+import { SERVICES_WITH_NEW_NAV } from '#app/legacy/containers/Header';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
@@ -32,19 +34,21 @@ const fetchConfig = async <T>({
   configType,
   variant,
 }: FetchConfigParams): Promise<T | null> => {
-  // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia' || service === 'arabic';
-
-  if (!shouldFetchConfig) return Promise.resolve(null);
-
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
-  fetchUrl.searchParams.set('useNewNav', 'true');
+
   if (variant) {
     fetchUrl.searchParams.set('variant', variant);
   }
+
+  // Only fetch new nav for Arabic and Tamil services on local/Test
+  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
+    fetchUrl.searchParams.set('useNewNav', 'true');
+  }
+
   const bffReqPath = fetchUrl.toString();
+
   const cachedResponse = cache.get(bffReqPath);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {

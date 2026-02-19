@@ -10,7 +10,7 @@ const PromotionalBanner = ({
   title,
   description,
   isDismissible = true,
-  orText,
+  buttonSeparatorText,
   primaryButton,
   secondaryButton,
   onClose,
@@ -19,6 +19,7 @@ const PromotionalBanner = ({
   bannerLabel,
   closeLabel,
   id = 'promotional-banner',
+  children,
 }: PromotionalBannerProps) => {
   return (
     <aside css={styles.banner} role="complementary" aria-labelledby={id}>
@@ -37,36 +38,48 @@ const PromotionalBanner = ({
           </div>
 
           <div css={styles.actionsContainer}>
-            <Text
-              as="button"
-              type="button"
-              css={styles.primaryButton}
-              className="focusIndicatorInvert"
-              onClick={onPrimaryClick}
-              size="bodyCopy"
-              fontVariant="sansBold"
-            >
-              <span className="short-text">{primaryButton.text}</span>
-              {primaryButton.longText && (
-                <span className="long-text">{primaryButton.longText}</span>
-              )}
-            </Text>
+            {children ?? (
+              <>
+                {primaryButton && (
+                  <Text
+                    as="button"
+                    type="button"
+                    css={styles.primaryButton}
+                    className="focusIndicatorInvert"
+                    onClick={onPrimaryClick}
+                    size="bodyCopy"
+                    fontVariant="sansBold"
+                  >
+                    <span className="short-text">{primaryButton.text}</span>
+                    {primaryButton.longText && (
+                      <span className="long-text">
+                        {primaryButton.longText}
+                      </span>
+                    )}
+                  </Text>
+                )}
 
-            <Paragraph size="bodyCopy" css={styles.dividerText}>
-              {orText}
-            </Paragraph>
+                {primaryButton && secondaryButton && (
+                  <Paragraph size="bodyCopy" css={styles.dividerText}>
+                    {buttonSeparatorText}
+                  </Paragraph>
+                )}
 
-            <Text
-              as="button"
-              type="button"
-              css={styles.secondaryButton}
-              className="focusIndicatorInvert"
-              size="bodyCopy"
-              fontVariant="sansBold"
-              onClick={onSecondaryClick}
-            >
-              {secondaryButton?.text}
-            </Text>
+                {secondaryButton && (
+                  <Text
+                    as="button"
+                    type="button"
+                    css={styles.secondaryButton}
+                    className="focusIndicatorInvert"
+                    size="bodyCopy"
+                    fontVariant="sansBold"
+                    onClick={onSecondaryClick}
+                  >
+                    {secondaryButton?.text}
+                  </Text>
+                )}
+              </>
+            )}
           </div>
         </div>
         {isDismissible && onClose && (
