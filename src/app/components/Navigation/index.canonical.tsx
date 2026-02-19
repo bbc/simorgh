@@ -53,26 +53,26 @@ const CanonicalNavigationContainer: React.FC<
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={[styles.navRow, styles.topRow]}>
-            <ScrollableNavigation dir={dir} navType="top">
+            <ScrollableNavigation dir={dir} css={styles.topRowItems}>
               {topScrollableListItems}
             </ScrollableNavigation>
             {!isLite && (
               <CanonicalMenuButton
+                css={styles.menuButton}
                 announcedText={menuAnnouncedText}
                 isOpen={isOpen}
                 onClick={() => setIsOpen(!isOpen)}
                 dir={dir}
-                navType="top"
               />
             )}
           </div>
-          <CanonicalDropdown isOpen={isOpen} isArabic>
+          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
 
         <div css={styles.lowerNavWrapper}>
-          <ScrollableNavigation dir={dir} navType={null}>
+          <ScrollableNavigation dir={dir} css={styles.bottomRowItems}>
             {scrollableListItems}
           </ScrollableNavigation>
         </div>

@@ -53,7 +53,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
       {dropdownListItems}
     </AmpDropdown>
     {/* TODO: Implement the new navigation in AMP */}
-    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID} navType={null}>
+    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
   </Navigation>

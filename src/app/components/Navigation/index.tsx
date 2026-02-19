@@ -64,7 +64,6 @@ type RenderListItemsArgs = {
   clickTracker: unknown;
   viewTracker: unknown;
   isLite?: boolean;
-  navType?: string;
   pageType?: PageTypes;
 };
 
@@ -78,7 +77,6 @@ const renderListItems = ({
   clickTracker,
   viewTracker,
   isLite,
-  navType,
   pageType,
 }: RenderListItemsArgs) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
@@ -99,7 +97,6 @@ const renderListItems = ({
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
-        navType={navType}
         {...a11yProps}
       >
         {title}
@@ -241,7 +238,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: topNavClickTrackerHandler,
         viewTracker: topNavViewTracker,
         isLite,
-        navType: 'top',
         pageType,
       })}
     </NavigationUl>
