@@ -1,12 +1,15 @@
+import Navigation from '.';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 // import AmpDecorator from '#storybook/helpers/ampDecorator';
 import { StoryArgs } from '#app/models/types/storybook';
 // import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import Navigation from '.';
 import { NavigationContainerProps } from './types';
+import { Services } from '#app/models/types/global';
 
 interface Props {
   navItems: NavigationContainerProps['navItems'];
   currentPath?: string;
+  service: Services;
   // propsForTopBarOJComponent?: {
   //   blocks?: TopStoryItem[];
   // };
@@ -15,14 +18,13 @@ interface Props {
 const Component = ({
   navItems,
   currentPath = '',
+  service,
   // propsForTopBarOJComponent,
 }: Props) => {
   return (
-    <Navigation
-      navItems={navItems}
-      currentPath={currentPath}
-      // propsForTopBarOJComponent={propsForTopBarOJComponent}
-    />
+    <ServiceContextProvider service={service}>
+      <Navigation navItems={navItems} currentPath={currentPath} />
+    </ServiceContextProvider>
   );
 };
 
@@ -47,8 +49,13 @@ export const Example = (_: StoryArgs, globalArgs: Props) => {
       url: '/news',
     },
   ];
-
-  return <Component navItems={navItems} currentPath="/home" />;
+  return (
+    <Component
+      navItems={navItems}
+      currentPath="/home"
+      service={'afaanoromoo'}
+    />
+  );
 };
 
 // export const Canonical = (_, {}) => <Component />;
