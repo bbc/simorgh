@@ -33,22 +33,21 @@ const fetchConfig = async <T>({
   configType,
   variant,
 }: FetchConfigParams): Promise<T | null> => {
-  // TODO: Remove this restriction once we're ready to roll out to all services
-
-  // Only fetch for arabic if not live, always fetch for indonesia
-  const shouldFetchConfig =
-    service === 'indonesia' || (service === 'arabic' && !isLive());
-
-  if (!shouldFetchConfig) return Promise.resolve(null);
-
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
-  fetchUrl.searchParams.set('useNewNav', 'true');
+
   if (variant) {
     fetchUrl.searchParams.set('variant', variant);
   }
+
+  // Only fetch new nav for Arabic and Tamil services on local/Test
+  if (['arabic', 'tamil'].includes(service) && !isLive()) {
+    fetchUrl.searchParams.set('useNewNav', 'true');
+  }
+
   const bffReqPath = fetchUrl.toString();
+
   const cachedResponse = cache.get(bffReqPath);
 
   logger.debug(CONFIG_REQUEST_RECEIVED, {
