@@ -50,6 +50,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -890,6 +891,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -1627,6 +1629,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -2362,6 +2365,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -3207,6 +3211,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -3949,6 +3954,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;

@@ -50,6 +50,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;

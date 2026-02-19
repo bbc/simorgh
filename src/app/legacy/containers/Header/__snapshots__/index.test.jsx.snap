@@ -538,6 +538,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -1880,6 +1881,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -3222,6 +3224,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -4564,6 +4567,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
+  background-color: transparent;
   border: 0;
   float: left;
   height: 2.75rem;
