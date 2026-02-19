@@ -76,10 +76,15 @@ const LANGS = [
 
 const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 
+const SERVICES_WITHOUT_WS = SERVICES.filter(s => s !== 'ws');
+
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query: Query): Services | null => {
-  const service = SERVICES.find(s => query?.includes(s));
+  // Check if a valid service appears first, then check for the presence of 'ws' if no other service is found
+  const service =
+    SERVICES_WITHOUT_WS.find(s => query?.includes(s)) ||
+    (query?.includes('ws') ? 'ws' : undefined);
 
   return service ?? null;
 };

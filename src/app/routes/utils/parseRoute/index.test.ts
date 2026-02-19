@@ -77,6 +77,17 @@ const EXAMPLE_ROUTES = [
     },
   },
   {
+    route: '/ws/av-embeds/cps/zhongwen/simp/world-53107744/p08hnckg/zh-hans',
+    expectedOutput: {
+      service: 'zhongwen',
+      variant: 'simp',
+      platform: 'cps',
+      assetId: 'world-53107744',
+      mediaId: 'p08hnckg',
+      lang: 'zh-hans',
+    },
+  },
+  {
     route: '/ws/av-embeds/live/c7p765ynk9qt/p01thw20/pcm',
     expectedOutput: {
       service: 'ws',
