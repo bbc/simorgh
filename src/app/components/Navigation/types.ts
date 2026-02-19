@@ -1,7 +1,6 @@
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 export interface AmpNavigationContainerProps {
-  script: unknown;
   service: string;
   dir: string;
   menuAnnouncedText: string;

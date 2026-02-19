@@ -222,7 +222,7 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
-  script,
+  script = '',
   navType,
 }) => (
   <MenuButton
@@ -257,7 +257,7 @@ export const AmpMenuButton = ({
   announcedText,
   onToggle,
   dir = 'ltr',
-  script,
+  script = '',
 }) => (
   <>
     <AmpHead />

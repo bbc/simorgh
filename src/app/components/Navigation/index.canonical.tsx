@@ -14,7 +14,6 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import styles from './index.styles';
 
 interface CanonicalNavigationContainerProps {
-  script: unknown;
   service: string;
   dir: string;
   menuAnnouncedText: string;
@@ -31,7 +30,6 @@ interface CanonicalNavigationContainerProps {
 const CanonicalNavigationContainer: React.FC<
   CanonicalNavigationContainerProps
 > = ({
-  script,
   service,
   dir,
   menuAnnouncedText,
@@ -51,7 +49,7 @@ const CanonicalNavigationContainer: React.FC<
   });
 
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
+    <Navigation service={service} dir={dir} isOpen={isOpen}>
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={[styles.navRow, styles.topRow]}>
@@ -59,7 +57,6 @@ const CanonicalNavigationContainer: React.FC<
               <>
                 {!isLite && (
                   <CanonicalMenuButton
-                    script={script}
                     announcedText={menuAnnouncedText}
                     isOpen={isOpen}
                     onClick={() => setIsOpen(!isOpen)}
@@ -82,7 +79,6 @@ const CanonicalNavigationContainer: React.FC<
                     isOpen={isOpen}
                     onClick={() => setIsOpen(!isOpen)}
                     dir={dir}
-                    script={script}
                     navType="top"
                   />
                 )}
