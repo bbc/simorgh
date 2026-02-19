@@ -8,10 +8,15 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { Direction, PageTypes, Services } from '#app/models/types/global';
+import {
+  Direction,
+  Navigation,
+  PageTypes,
+  Services,
+} from '#app/models/types/global';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import type { NavigationItem, NavigationContainerProps } from './types';
+import type { NavigationContainerProps } from './types';
 
 const getTopItemA11yProps = ({
   item,
@@ -19,7 +24,7 @@ const getTopItemA11yProps = ({
   active,
   pageType,
 }: {
-  item: NavigationItem;
+  item: Navigation;
   index: number;
   active: boolean;
   pageType?: PageTypes;
@@ -40,18 +45,18 @@ const getTopItemA11yProps = ({
 
 /**
  * EXPECTED DATA SHAPE (from server):
- * navItems: NavigationItem[]  where each item is:
+ * navItems: Navigation[]  where each item is:
  * {
  *   title: string;
  *   url: string;             // relative e.g. "/arabic"
  *   hideOnLiteSite?: boolean;
- *   subItems?: NavigationItem[]; // child items with same shape (title/url/hideOnLiteSite)
+ *   subItems?: Navigation[]; // child items with same shape (title/url/hideOnLiteSite)
  * }
  */
 
 type RenderListItemsArgs = {
   Li: React.ElementType;
-  navigation: NavigationItem[];
+  navigation: Navigation[];
   currentPage: string;
   service: Services;
   dir: Direction;
@@ -128,7 +133,7 @@ const getActiveTopIndex = ({
   origin,
   pageType,
 }: {
-  topItems: NavigationItem[];
+  topItems: Navigation[];
   canonicalLink?: string;
   origin: string;
   pageType?: PageTypes;
@@ -170,15 +175,16 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const { isAmp, isLite, pageType, canonicalLink, origin } =
     use(RequestContext);
 
-  const { blocks = [] } = propsForTopBarOJComponent || {};
-
   const {
     translations,
     navigation: navFromServiceConfig,
     service,
     dir,
   } = use(ServiceContext);
+
   const { currentPage, navMenuText } = translations;
+
+  const { blocks = [] } = propsForTopBarOJComponent || {};
 
   /**
    * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
