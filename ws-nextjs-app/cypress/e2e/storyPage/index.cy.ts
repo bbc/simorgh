@@ -176,34 +176,6 @@ const canonicalNonSmokeTestSuites = [
   },
 ];
 
-const ampOnlyNonSmokeTestSuites = [
-  {
-    path: '/news/uk-56342465',
-    service: 'news',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/news/technology-56294493',
-    service: 'news',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/news/23393110',
-    service: 'news',
-    runforEnv: ['test'],
-  },
-  {
-    path: '/newsround/56331357',
-    service: 'newsround',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/newsround/23212028',
-    service: 'newsround',
-    runforEnv: ['test'],
-  },
-];
-
 const atiAnalyticsTests = [
   assertPageView,
   assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
@@ -259,10 +231,7 @@ const canonicalTestSuites = Cypress.env('SMOKE')
   ? canonicalSmokeTestSuites
   : canonicalNonSmokeTestSuites;
 
-const ampTestSuites = [
-  ...canonicalTestSuites,
-  ...ampOnlyNonSmokeTestSuites,
-].map(testSuite => {
+const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.amp`,
