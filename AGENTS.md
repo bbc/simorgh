@@ -20,6 +20,8 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 - Don't use any external dependencies that you don't need.
 - Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
 - Optimise all code for front end performance where possible, as 90% of our audience are on mobile devices and a large percentage of them have poor bandwidth due to their locations across the world.
+- Do not introduce accessibility regressions
+- Ensure you meet at least WCAG 2.1 (or 2.2/latest ver) AA for new/changed UI
 - Always be **service-aware**: many behaviours are service-specific (e.g. features, translations, routes, branding, analytics). When reading or writing code, think about which service(s) it affects, avoid hard-coding assumptions based on one service, and call out when logic should be conditional or configurable per service.
  
 ## Testing instructions
