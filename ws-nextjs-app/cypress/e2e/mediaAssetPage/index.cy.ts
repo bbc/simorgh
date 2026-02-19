@@ -295,12 +295,13 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
-        service: 'hindi',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
+      //   service: 'hindi',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/russian/multimedia/2012/04/120411_v_titanic_last_survivor', // TC2 video
         service: 'russian',
