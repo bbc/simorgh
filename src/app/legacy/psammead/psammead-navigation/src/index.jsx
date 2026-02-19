@@ -96,8 +96,7 @@ const StyledListItem = styled.li`
   display: inline-block;
   position: relative;
   z-index: 2;
-  padding-inline-end: 0.375rem;
-  padding-inline-start: 0.375rem;
+  margin-inline-end: 0.75rem;
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     &:last-child {

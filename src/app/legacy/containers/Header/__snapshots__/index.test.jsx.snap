@@ -641,10 +641,8 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-padding-end: 0.375rem;
-  padding-inline-end: 0.375rem;
-  -webkit-padding-start: 0.375rem;
-  padding-inline-start: 0.375rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1968,10 +1966,8 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-padding-end: 0.375rem;
-  padding-inline-end: 0.375rem;
-  -webkit-padding-start: 0.375rem;
-  padding-inline-start: 0.375rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -3295,10 +3291,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-padding-end: 0.375rem;
-  padding-inline-end: 0.375rem;
-  -webkit-padding-start: 0.375rem;
-  padding-inline-start: 0.375rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -4622,10 +4616,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-padding-end: 0.375rem;
-  padding-inline-end: 0.375rem;
-  -webkit-padding-start: 0.375rem;
-  padding-inline-start: 0.375rem;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
 }
 
 @media (max-width: 37.4375rem) {
