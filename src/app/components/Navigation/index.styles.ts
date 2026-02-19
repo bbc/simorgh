@@ -51,7 +51,6 @@ export default {
     }),
   lowerNavWrapper: css({
     width: '100%',
-    marginTop: '0.25rem',
     position: 'relative',
     zIndex: 1,
   }),

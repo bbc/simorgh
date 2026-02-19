@@ -111,12 +111,12 @@ const StyledListItem = styled.li`
     &:before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 20%;
+      inset-inline-end: 0;
+      top: 50%;
+      transform: translateY(-50%);
       height: 60%;
       width: ${pixelsToRem(1)}rem;
       background: ${navType === 'top' ? '#D77272' : theme.palette.GREY_4};
-      border-radius: 2px;
       display: block;
       opacity: 1;
     }
