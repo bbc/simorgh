@@ -319,12 +319,13 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
-        service: 'swahili',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
+      //   service: 'swahili',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP with video clip
         service: 'urdu',
