@@ -454,37 +454,14 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-const atiAmpTestSuites = atiAnalyticsTestSuites
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-      applicationType: 'amp',
-      tests: [assertPageView],
-    };
-  })
-  .concat([
-    {
-      path: 'news/articles/c0g992jmmkko.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c0g992jmmkko.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      tests: [assertPageView],
-    },
-    {
-      path: '/news/articles/c9djwv3q6w9o.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      tests: [assertPageView],
-    },
-  ]);
+const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
   .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')
