@@ -3,15 +3,13 @@ import pixelsToRem from '../../utilities/pixelsToRem';
 import { focusIndicatorThickness } from '../ThemeProvider/focusIndicator';
 
 const styles = {
-  button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
+  button: ({ palette, fontSizes, fontVariants, mq }: Theme) =>
     css({
       display: 'inline-flex',
       alignItems: 'center',
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       padding: `${pixelsToRem(10)}rem`,
-      marginBottom: `${spacings.TRIPLE}rem`,
-      marginInlineStart: `${spacings.DOUBLE}rem`,
       border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
       cursor: 'pointer',
       '&:hover, &:focus-visible': {
@@ -40,6 +38,8 @@ const styles = {
     css({
       color: palette.BLACK,
       backgroundColor: palette.WHITE,
+      marginInlineStart: `${spacings.DOUBLE}rem`,
+      marginBottom: `${spacings.TRIPLE}rem`,
       svg: {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
