@@ -6,6 +6,7 @@ import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import isLive from '#lib/utilities/isLive';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
@@ -33,7 +34,10 @@ const fetchConfig = async <T>({
   variant,
 }: FetchConfigParams): Promise<T | null> => {
   // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia' || service === 'arabic';
+
+  // Only fetch for arabic if not live, always fetch for indonesia
+  const shouldFetchConfig =
+    service === 'indonesia' || (service === 'arabic' && !isLive());
 
   if (!shouldFetchConfig) return Promise.resolve(null);
 

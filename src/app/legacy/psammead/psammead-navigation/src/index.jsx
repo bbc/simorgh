@@ -10,6 +10,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
+import isLive from '#lib/utilities/isLive';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -104,7 +105,7 @@ const StyledListItem = styled.li`
   padding-inline-end: 0.375rem;
   padding-inline-start: 0.375rem;
   ${({ service, navType, theme }) =>
-    service === 'arabic'
+    service === 'arabic' && !isLive()
       ? `
     &:before {
       content: '';

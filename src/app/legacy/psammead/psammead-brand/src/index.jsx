@@ -13,6 +13,7 @@ import {
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
 import ArabicBrandSVG from '#app/components/Header/brand-svgs/ArabicBrandSVG';
+import isLive from '#lib/utilities/isLive';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -151,7 +152,7 @@ const StyledBrand = ({
   isLongBrand,
   service,
 }) => {
-  if (service === 'arabic') {
+  if (service === 'arabic' && !isLive()) {
     return (
       <>
         <ArabicBrandSVG

@@ -11,6 +11,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
+import isLiveUtil from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -29,8 +30,9 @@ const StyledDropdown = styled.div`
   height: 0;
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-  ${({ isArabic }) =>
+  ${({ isArabic, isLive }) =>
     isArabic &&
+    !isLive &&
     `
       position: absolute;
       top: 100%;
@@ -62,6 +64,7 @@ export const CanonicalDropdown = ({ isOpen, children, isArabic }) => {
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
       isArabic={isArabic}
+      isLive={isLiveUtil()}
     >
       {children}
     </StyledDropdown>
