@@ -42,7 +42,7 @@ const fetchConfig = async <T>({
   }
 
   // Only fetch new nav for Arabic and Tamil services on local/Test
-  if (['arabic', 'tamil'].includes(service) && !isLive()) {
+  if (service === 'arabic' && !isLive()) {
     fetchUrl.searchParams.set('useNewNav', 'true');
   }
 

@@ -531,7 +531,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
-          columnLayout="multiColumn"
+          columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}

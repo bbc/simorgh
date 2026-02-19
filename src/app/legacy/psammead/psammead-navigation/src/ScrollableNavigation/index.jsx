@@ -22,22 +22,6 @@ const scrollableNavOutline = `
   `;
 
 const StyledScrollableNav = styled.div`
-  ${({ navType, theme }) =>
-    navType === 'top'
-      ? `
-    background: ${theme.palette.POSTBOX};
-    color: #fff;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    position: relative;
-    z-index: 2;
-    * {
-      color: #fff !important;
-    }
-  `
-      : ''}
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     white-space: nowrap;
     overflow-x: scroll;
@@ -79,11 +63,8 @@ const StyledScrollableNav = styled.div`
       z-index: 3;
       overflow: hidden;
       pointer-events: none;
-      /* Only show gradient if navType is not top */
       ${props =>
-        props.navType === 'top'
-          ? 'background: none !important;'
-          : `background: linear-gradient(
+        `background: linear-gradient(
         ${props.dir === 'ltr' ? 'to right' : 'to left'},
         ${hexToRGB(props.theme.palette.WHITE, 0)} 0%,
         ${hexToRGB(props.theme.palette.WHITE, 1)} 100%
@@ -92,18 +73,8 @@ const StyledScrollableNav = styled.div`
   }
 `;
 
-export const ScrollableNavigation = ({
-  children,
-  dir = 'ltr',
-  navType,
-  ...props
-}) => (
-  <StyledScrollableNav
-    data-e2e="scrollable-nav"
-    dir={dir}
-    navType={navType}
-    {...props}
-  >
+export const ScrollableNavigation = ({ children, dir = 'ltr', ...props }) => (
+  <StyledScrollableNav data-e2e="scrollable-nav" dir={dir} {...props}>
     {children}
   </StyledScrollableNav>
 );

@@ -17,6 +17,7 @@ import {
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import type { NavigationContainerProps } from './types';
+import styles from './index.styles';
 
 const getTopItemA11yProps = ({
   item,
@@ -64,7 +65,6 @@ type RenderListItemsArgs = {
   clickTracker: unknown;
   viewTracker: unknown;
   isLite?: boolean;
-  navType?: string;
   pageType?: PageTypes;
 };
 
@@ -78,7 +78,6 @@ const renderListItems = ({
   clickTracker,
   viewTracker,
   isLite,
-  navType,
   pageType,
 }: RenderListItemsArgs) =>
   navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
@@ -99,7 +98,6 @@ const renderListItems = ({
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
-        navType={navType}
         {...a11yProps}
       >
         {title}
@@ -241,7 +239,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: topNavClickTrackerHandler,
         viewTracker: topNavViewTracker,
         isLite,
-        navType: 'top',
         pageType,
       })}
     </NavigationUl>
@@ -305,15 +302,18 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const NavigationRenderer = isAmp ? Amp : Canonical;
 
   return (
-    <NavigationRenderer
-      topScrollableListItems={topScrollableListItems}
-      scrollableListItems={scrollableListItems}
-      dropdownListItems={dropdownListItems}
-      menuAnnouncedText={navMenuText}
-      dir={dir}
-      service={service}
-      blocks={blocks}
-    />
+    <>
+      <div css={styles.brandDivider} />
+      <NavigationRenderer
+        topScrollableListItems={topScrollableListItems}
+        scrollableListItems={scrollableListItems}
+        dropdownListItems={dropdownListItems}
+        menuAnnouncedText={navMenuText}
+        dir={dir}
+        service={service}
+        blocks={blocks}
+      />
+    </>
   );
 };
 
