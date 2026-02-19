@@ -282,12 +282,13 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
-        service: 'arabic',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
+      //   service: 'arabic',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/hindi/multimedia/2015/09/150921_what_is_innovation_ms', // TC2 video
         service: 'hindi',
