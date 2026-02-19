@@ -549,6 +549,10 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   border: 0.25rem solid #000000;
 }
 
+.emotion-34 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -780,7 +784,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1874,6 +1878,10 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   border: 0.25rem solid #000000;
 }
 
+.emotion-34 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -2105,7 +2113,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3199,6 +3207,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #000000;
 }
 
+.emotion-34 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -3430,7 +3442,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4524,6 +4536,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #000000;
 }
 
+.emotion-34 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-34 {
     display: none;
@@ -4755,7 +4771,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

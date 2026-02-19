@@ -74,6 +74,10 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   border: 0.25rem solid #000000;
 }
 
+.emotion-4 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-4 {
     display: none;

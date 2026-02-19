@@ -93,7 +93,7 @@ const StyledDropdownLink = styled.a`
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
-  display: block;
+  display: inline-block;
 
   &:hover,
   &:focus {
@@ -186,6 +186,10 @@ const MenuButton = styled(Button)`
       ${iconBorderPosition};
       border: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BLACK};
     }
+  }
+
+  & svg {
+    vertical-align: middle;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

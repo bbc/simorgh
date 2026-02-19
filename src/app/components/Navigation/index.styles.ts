@@ -132,6 +132,10 @@ export default {
     left: '0',
     width: '100%',
     zIndex: 99999,
+
+    a: {
+      display: 'block',
+    },
   }),
   lowerNavWrapper: css({
     width: '100%',

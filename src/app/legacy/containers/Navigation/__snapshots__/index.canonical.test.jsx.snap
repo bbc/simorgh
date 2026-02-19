@@ -72,6 +72,10 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   border: 0.25rem solid #000000;
 }
 
+.emotion-6 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-6 {
     display: none;

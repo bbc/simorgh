@@ -564,6 +564,10 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   border: 0.25rem solid #000000;
 }
 
+.emotion-35 svg {
+  vertical-align: middle;
+}
+
 @media (min-width: 37.5rem) {
   .emotion-35 {
     display: none;
@@ -795,7 +799,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
