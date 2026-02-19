@@ -19,6 +19,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 import {
@@ -80,7 +81,7 @@ import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
-} from '../utils/portraitVideo';
+} from '../../components/MediaLoader/utils/isPortraitVideo';
 import getUnderArticleComponents from './helpers';
 
 const getImageComponent =
@@ -186,9 +187,9 @@ const getVideoComponent =
     const title = translations.media.watchMoments;
 
     const showTitle =
-      isPortraitVideo(blocks) &&
+      isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
-      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
@@ -298,6 +299,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+  };
+
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length,
+  );
+
+  const portraitVideoCarouselTitle =
+    pageData?.portraitVideoItems?.title ?? translations.media.watch;
+
+  const portraitVideoCarouselProps = {
+    title: portraitVideoCarouselTitle,
+    blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
+    eventTrackingData: {
+      componentName: 'portrait-video-carousel-article',
+      groupTracker: { name: portraitVideoCarouselTitle },
+    },
+    backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
 
   const hasContinueReadingBlock = blocks.some(
@@ -452,7 +470,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
+          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
             <RelatedTopics
               css={[
@@ -465,7 +483,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-
+          {showPortraitVideoCarousel && (
+            <PortraitVideoCarousel
+              {...portraitVideoCarouselProps}
+              css={[styles.portraitVideoCarousel, styles.hideBelowDesktopWidth]}
+            />
+          )}
           <div css={styles.hideBelowDesktopWidth}>
             <div css={{ gridColumn: '1 / span 12' }}>
               <RelatedContentSection
@@ -483,6 +506,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
+      {showPortraitVideoCarousel && (
+        <PortraitVideoCarousel
+          {...portraitVideoCarouselProps}
+          css={[styles.portraitVideoCarousel, styles.hideOnDesktop]}
+        />
+      )}
 
       {/* // EXPERIMENT: Referrer Experiment
       Under-article components for mobile/tablet only */}

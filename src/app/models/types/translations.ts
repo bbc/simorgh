@@ -40,6 +40,17 @@ export interface Translations {
     title?: string;
   };
   gist?: string;
+  account?: {
+    signIn?: string;
+    forYou?: string;
+    register?: string;
+  };
+  accountPromoBanner?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+    buttonSeparatorText: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

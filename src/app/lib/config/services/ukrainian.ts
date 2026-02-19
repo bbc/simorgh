@@ -64,6 +64,10 @@ const baseServiceConfig = {
   },
   translations: {
     and: 'i',
+    readTime: {
+      readTimePrefix: 'Час прочитання',
+      minute: 'хв',
+    },
     pagination: {
       previousPage: 'Повернутися',
       nextPage: 'Наступна',
@@ -344,26 +348,6 @@ const baseServiceConfig = {
     {
       title: 'Головна',
       url: '/ukrainian',
-    },
-    {
-      title: 'Війна з Росією',
-      url: '/ukrainian/topics/czp6w66edqpt',
-    },
-    {
-      title: 'Історії',
-      url: '/ukrainian/topics/czrxg3vzy44t',
-    },
-    {
-      title: 'Відео',
-      url: '/ukrainian/topics/c44vmzqkzqqt',
-    },
-    {
-      title: 'Книга року BBC',
-      url: '/ukrainian/topics/cqwrq3rkdrnt',
-    },
-    {
-      title: 'Подкасти',
-      url: '/ukrainian/podcasts/p09jsy3h',
     },
   ],
 };

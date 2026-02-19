@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'жана',
+      readTime: {
+        readTimePrefix: 'Окуу убактысы',
+        minute: 'мүнөт',
+      },
       pagination: {
         page: 'бет',
         previousPage: 'Артка',
@@ -357,22 +361,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Башкы бет',
         url: '/kyrgyz',
-      },
-      {
-        title: 'Видео жаңылыктар',
-        url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
-      },
-      {
-        title: 'Кыргызстан',
-        url: '/kyrgyz/topics/cz74kjpyk07t',
-      },
-      {
-        title: 'Дүйнө',
-        url: '/kyrgyz/topics/ck2l9z012nkt',
-      },
-      {
-        title: 'Журнал',
-        url: '/kyrgyz/topics/czp8pjrkgp0t',
       },
     ],
   },

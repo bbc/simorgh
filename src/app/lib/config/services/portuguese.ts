@@ -373,7 +373,7 @@ export const service: DefaultServiceConfig = {
       title: 'Acesse a BBC News Brasil com um toque',
       description:
         'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
-      orText: 'ou',
+      buttonSeparatorText: 'ou',
       bannerLabel: 'Banner promocional',
       closeLabel: 'Sair',
       primaryButton: {
@@ -449,38 +449,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Notícias',
         url: '/portuguese',
-      },
-      {
-        title: 'Brasil',
-        url: '/portuguese/topics/cz74k717pw5t',
-      },
-      {
-        title: 'Internacional',
-        url: '/portuguese/topics/cmdm4ynm24kt',
-      },
-      {
-        title: 'Economia',
-        url: '/portuguese/topics/cvjp2jr0k9rt',
-      },
-      {
-        title: 'Saúde',
-        url: '/portuguese/topics/c340q430z4vt',
-      },
-      {
-        title: 'Ciência',
-        url: '/portuguese/topics/cr50y580rjxt',
-      },
-      {
-        title: 'Tecnologia',
-        url: '/portuguese/topics/c404v027pd4t',
-      },
-      {
-        title: 'Vídeos',
-        url: '/portuguese/topics/c9y2j35dn2zt',
-      },
-      {
-        title: 'Podcasts',
-        url: '/portuguese/topics/cx2ggnx4j72t',
       },
     ],
   },

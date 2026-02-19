@@ -27,6 +27,9 @@ import addServiceChainHeader from '#nextjs/utilities/addServiceChainHeader';
 import addOnionLocationHeader from '#nextjs/utilities/addOnionLocationHeader';
 import addVaryHeader from '#nextjs/utilities/addVaryHeader';
 import addLinkHeader from '#nextjs/utilities/addLinkHeader';
+import { AccountProvider } from '#app/contexts/AccountContext';
+import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
+import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
 
 interface Props {
@@ -58,6 +61,7 @@ interface Props {
     variant?: Variants;
     isUK?: boolean;
     country?: string | null;
+    idctaConfig: IdctaConfig | null;
   };
 }
 
@@ -69,7 +73,10 @@ export default class CustomApp extends App<Props> {
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
-    const { service } = parseRoute(asPath) as { service: Services };
+    const { service, variant } = parseRoute(asPath) as {
+      service: Services;
+      variant?: Variants;
+    };
 
     const [togglesResult, navResult] = await Promise.allSettled([
       getToggles(service),
@@ -77,15 +84,17 @@ export default class CustomApp extends App<Props> {
         service,
         pagePath: asPath,
         configType: 'navigation',
+        variant,
       }),
     ]);
 
     const toggles =
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
+    const idctaConfig = await getIdctaConfig(toggles, service);
     const navItems =
       navResult.status === 'fulfilled'
-        ? navResult.value?.data?.items ?? null
+        ? (navResult.value?.data?.items ?? null)
         : null;
 
     const pageType =
@@ -112,6 +121,7 @@ export default class CustomApp extends App<Props> {
         isNextJs: true,
         serverSideExperiments,
         toggles,
+        idctaConfig,
         navItems,
       },
     };
@@ -142,6 +152,7 @@ export default class CustomApp extends App<Props> {
       variant,
       isUK,
       country,
+      idctaConfig = null,
       navItems,
     } = pageProps;
 
@@ -180,25 +191,27 @@ export default class CustomApp extends App<Props> {
             isNextJs={isNextJs}
             isUK={isUK ?? false}
           >
-            <EventTrackingContextProvider atiData={atiAnalytics}>
-              {isAvEmbeds ? (
-                <ThemeProvider service={service} variant={variant}>
-                  {RenderChildrenOrError}
-                </ThemeProvider>
-              ) : (
-                <UserContextProvider>
+            <AccountProvider initialConfig={idctaConfig}>
+              <EventTrackingContextProvider atiData={atiAnalytics}>
+                {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>
-                    <PageWrapper
-                      navItems={navItems}
-                      pageData={pageData}
-                      status={status}
-                    >
-                      {RenderChildrenOrError}
-                    </PageWrapper>
+                    {RenderChildrenOrError}
                   </ThemeProvider>
-                </UserContextProvider>
-              )}
-            </EventTrackingContextProvider>
+                ) : (
+                  <UserContextProvider>
+                    <ThemeProvider service={service} variant={variant}>
+                      <PageWrapper
+                        navItems={navItems}
+                        pageData={pageData}
+                        status={status}
+                      >
+                        {RenderChildrenOrError}
+                      </PageWrapper>
+                    </ThemeProvider>
+                  </UserContextProvider>
+                )}
+              </EventTrackingContextProvider>
+            </AccountProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

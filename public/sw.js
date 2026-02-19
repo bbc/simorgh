@@ -4,9 +4,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
 
-const version = 'v0.3.3';
+const version = 'v0.3.4';
 // Update cache name when changing caching logic / changes in offlinepage.tsx
-const cacheName = 'simorghCache_v3';
+const cacheName = 'simorghCache_v4';
 const pwaClients = new Map();
 let isPWADeviceOffline = false;
 
@@ -22,8 +22,8 @@ const cacheResource = async (cache, url) => {
     const response = await fetch(url);
     if (response.ok) await cache.put(url, response.clone());
     return response;
-  } catch (err) {
-    return null;
+  } catch {
+    return new Response('Resource fetch failed', { status: 503 });
   }
 };
 
@@ -53,15 +53,13 @@ const cacheOfflinePageAndResources = async service => {
 
 const CACHEABLE_FILES = [
   // Reverb
-  /^https:\/\/static(?:\.test)?\.files\.bbci\.co\.uk\/ws\/(?:simorgh-assets|simorgh1-preview-assets|simorgh2-preview-assets)\/public\/static\/js\/reverb\/reverb-3.10.2.js$/,
+  'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.11.0.js',
   // Smart Tag
   'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
   // Fonts
   /\.woff2$/,
   // Frosted Promo (test and live environments only)
-  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/static\/js\/modern\.frosted_promo+.*?\.js$/,
-  // Moment
-  /\/moment-lib+.*?\.js$/,
+  /^https:\/\/static(\.test)?\.files\.bbci\.co\.uk\/ws\/simorgh-assets\/public\/_next\/static\/chunks\/frosted_promo\..*?\.js$/,
   // PWA Icons
   /\/images\/icons\/icon-.*?\.png\??v?=?\d*$/,
 ];
@@ -121,42 +119,37 @@ const fetchEventHandler = async event => {
     if (!supportsWebp) {
       const imageUrlWithoutWebp = req.url.replace('.webp', '');
       event.respondWith(
-        fetch(imageUrlWithoutWebp, {
-          mode: 'no-cors',
-        }),
+        (async () => {
+          try {
+            return await fetch(imageUrlWithoutWebp, { mode: 'no-cors' });
+          } catch {
+            return new Response('WebP fetch failed', { status: 503 });
+          }
+        })(),
       );
     }
   } else if (isRequestForCacheableFile) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(cacheName);
+
         let response = await cache.match(event.request);
+
         if (!response) {
-          response = await fetch(event.request.url);
-          cache.put(event.request, response.clone());
+          response = await cacheResource(cache, event.request.url);
         }
         return response;
       })(),
     );
   } else if (isNavigationMode) {
     const { url } = event.request;
-
     event.respondWith(
       (async () => {
         const client = await self.clients.get(event.clientId);
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        try {
-          // Use preload if available
-          const preloadResp = await event.preloadResponse;
-          if (preloadResp) return preloadResp;
-
-          const networkResp = await fetch(event.request);
-          isPWADeviceOffline = false;
-          return networkResp;
-        } catch (err) {
-          // Only show offline page for installed PWA
+        const getOfflineFallback = async () => {
           if (isPWA) {
             const service = getServiceFromUrl(url);
             const offlineUrl = new URL(
@@ -165,13 +158,32 @@ const fetchEventHandler = async event => {
             ).href;
 
             const cachedOffline = await cache.match(offlineUrl);
+
             if (cachedOffline) {
               isPWADeviceOffline = true;
               return cachedOffline;
             }
           }
-          // fallback to browser default behavior
-          throw err;
+
+          // Fallback to browser default behavior
+          return Response.error();
+        };
+
+        try {
+          // Use preload if available
+          const preloadResp = await event.preloadResponse;
+          if (preloadResp) return preloadResp;
+          const networkResp = await fetch(event.request);
+
+          if (networkResp.status >= 500) {
+            // Must await to return cached offline page or throw error
+            return await getOfflineFallback();
+          }
+
+          isPWADeviceOffline = false;
+          return networkResp;
+        } catch {
+          return getOfflineFallback();
         }
       })(),
     );
@@ -181,12 +193,14 @@ const fetchEventHandler = async event => {
         const cache = await caches.open(cacheName);
         const cached = await cache.match(event.request);
         if (cached) return cached;
-        return fetch(event.request);
+        try {
+          return await fetch(event.request);
+        } catch {
+          return new Response('PWA offline fetch failed', { status: 503 });
+        }
       })(),
     );
   }
-
-  return;
 };
 
 self.addEventListener('fetch', fetchEventHandler);

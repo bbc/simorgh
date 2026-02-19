@@ -4,10 +4,14 @@ import {
   twoPixelFocusIndicatorThickness,
   twoPixelFocusIndicatorStyle,
 } from '#app/components/ThemeProvider/focusIndicator';
-import { calculatePromoWidth, PROMO_ITEM_WIDTH_MIN } from '../utils/styleUtils';
+import {
+  calculatePromoWidth,
+  PROMO_ITEM_WIDTH_MIN,
+  getContainerQuery,
+} from '../utils/styleUtils';
 
 const styles = {
-  container: ({ mq, spacings }: Theme) =>
+  container: ({ mq, spacings, gridWidths }: Theme) =>
     css({
       all: 'unset',
       scrollSnapAlign: 'start',
@@ -42,18 +46,22 @@ const styles = {
         },
       },
       [mq.GROUP_4_MIN_WIDTH]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 4,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+        [getContainerQuery(gridWidths[900])]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 4,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
       [mq.GROUP_5_MIN_WIDTH]: {
-        flexBasis: calculatePromoWidth({
-          fitForNItems: 5,
-          gapWidth: spacings.DOUBLE,
-          navButtonAffordance: true,
-        }),
+        [getContainerQuery(gridWidths[1008])]: {
+          flexBasis: calculatePromoWidth({
+            fitForNItems: 5,
+            gapWidth: spacings.DOUBLE,
+            navButtonAffordance: true,
+          }),
+        },
       },
     }),
   button: ({ palette }: Theme) =>
