@@ -21,6 +21,8 @@ import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
 import NewLogoBanner from './NewLogoBanner';
 
+export const SERVICES_WITH_NEW_NAV = ['arabic'];
+
 const Divider = styled.div`
   position: relative;
   width: 100%;
@@ -118,12 +120,14 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   if (isApp) return null;
 
   const NavigationComponent =
-    service === 'arabic' && !isLive()
+    SERVICES_WITH_NEW_NAV.includes(service) && !isLive()
       ? NewNavigationContainer
       : LegacyNavigationContainer;
   return (
     <header role="banner" lang={serviceLang}>
-      {service === 'arabic' && !isLive() && <NewLogoBanner />}
+      {SERVICES_WITH_NEW_NAV.includes(service) && !isLive() && (
+        <NewLogoBanner />
+      )}
       {isAmp ? (
         <Header
           linkId="brandLink"

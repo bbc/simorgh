@@ -12,6 +12,7 @@ import {
 } from '#psammead/gel-foundations/src/breakpoints';
 import isLive from '#lib/utilities/isLive';
 import pixelsToRem from '#app/utilities/pixelsToRem';
+import { SERVICES_WITH_NEW_NAV } from '#app/legacy/containers/Header';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -106,7 +107,7 @@ const StyledListItem = styled.li`
   padding-inline-end: 0.375rem;
   padding-inline-start: 0.375rem;
   ${({ service, navType, theme }) =>
-    service === 'arabic' && !isLive()
+    SERVICES_WITH_NEW_NAV.includes(service) && !isLive()
       ? `
     &:before {
       content: '';
