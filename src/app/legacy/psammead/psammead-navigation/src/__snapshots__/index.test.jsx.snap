@@ -255,6 +255,7 @@ exports[`Navigation should render correctly 1`] = `
             aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
+            data-active="true"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -578,6 +579,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
             aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
+            data-active="true"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -895,6 +897,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
             aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
+            data-active="true"
             data-navigation="test_navigation"
             href="/igbo"
           >
@@ -1267,6 +1270,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
               aria-current="page"
               aria-labelledby="NavigationLinks-Akụkọ"
               class="focusIndicatorRemove emotion-10 emotion-11"
+              data-active="true"
               data-navigation="test_navigation"
               href="/igbo"
             >

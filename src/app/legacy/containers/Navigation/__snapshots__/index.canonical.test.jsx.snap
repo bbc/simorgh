@@ -48,8 +48,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -85,12 +83,6 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-6 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-8 {

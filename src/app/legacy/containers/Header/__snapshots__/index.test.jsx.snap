@@ -538,8 +538,6 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -575,12 +573,6 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-36 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-38 {
@@ -1888,8 +1880,6 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -1925,12 +1915,6 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-36 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-38 {
@@ -3238,8 +3222,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -3275,12 +3257,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-36 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-38 {
@@ -4588,8 +4564,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -4625,12 +4599,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-36 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-38 {

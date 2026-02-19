@@ -553,8 +553,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -590,12 +588,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-37 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-39 {

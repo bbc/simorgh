@@ -50,8 +50,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -87,12 +85,6 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-4 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-6 {
@@ -704,6 +696,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
               aria-current="page"
               aria-labelledby="NavigationLinks-Home"
               class="focusIndicatorRemove emotion-69 emotion-70"
+              data-active="true"
               href="/news"
             >
               <span
@@ -897,8 +890,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -934,12 +925,6 @@ exports[`Navigation Container should correctly render amp navigation on non-home
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-4 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-6 {
@@ -1642,8 +1627,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -1679,12 +1662,6 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-4 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-6 {
@@ -2385,8 +2362,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -2422,12 +2397,6 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-6 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-8 {
@@ -2847,6 +2816,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
                 aria-current="page"
                 aria-labelledby="NavigationLinks-Home"
                 class="focusIndicatorRemove emotion-17 emotion-18"
+                data-active="true"
                 href="/news"
               >
                 <span
@@ -3237,8 +3207,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -3274,12 +3242,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-6 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-8 {
@@ -3987,8 +3949,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: transparent;
-  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -4024,12 +3984,6 @@ exports[`Navigation Container should correctly render canonical navigation on no
     height: 2.75rem;
     width: 2.75rem;
   }
-}
-
-.emotion-6 svg {
-  vertical-align: middle;
-  color: inherit;
-  fill: inherit;
 }
 
 .emotion-8 {
