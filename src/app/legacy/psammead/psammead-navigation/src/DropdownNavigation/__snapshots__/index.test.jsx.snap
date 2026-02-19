@@ -6,6 +6,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -45,6 +46,8 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -103,6 +106,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: right;
   height: 2.75rem;
@@ -142,6 +146,8 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -200,6 +206,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -239,6 +246,8 @@ exports[`Canonical Open menu button should render correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -298,6 +307,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: right;
   height: 2.75rem;
@@ -337,6 +347,8 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -396,6 +408,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -435,6 +448,8 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -520,6 +535,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: right;
   height: 2.75rem;
@@ -559,6 +575,8 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
 
 .emotion-0 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-2 {
@@ -691,7 +709,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -952,7 +970,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

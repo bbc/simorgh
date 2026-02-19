@@ -57,8 +57,10 @@ exports[`Navigation should render correctly 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -250,6 +252,7 @@ exports[`Navigation should render correctly 1`] = `
           role="listitem"
         >
           <a
+            aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
@@ -377,8 +380,10 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -570,6 +575,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
           role="listitem"
         >
           <a
+            aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
@@ -691,8 +697,10 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -884,6 +892,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
           role="listitem"
         >
           <a
+            aria-current="page"
             aria-labelledby="NavigationLinks-Akụkọ"
             class="focusIndicatorRemove emotion-8 emotion-9"
             data-navigation="test_navigation"
@@ -1055,8 +1064,10 @@ exports[`Scrollable Navigation should render correctly 1`] = `
   display: inline-block;
   position: relative;
   z-index: 2;
-  -webkit-margin-end: 0.75rem;
-  margin-inline-end: 0.75rem;
+  -webkit-padding-end: 0.375rem;
+  padding-inline-end: 0.375rem;
+  -webkit-padding-start: 0.375rem;
+  padding-inline-start: 0.375rem;
 }
 
 @media (max-width: 37.4375rem) {
@@ -1253,6 +1264,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
             role="listitem"
           >
             <a
+              aria-current="page"
               aria-labelledby="NavigationLinks-Akụkọ"
               class="focusIndicatorRemove emotion-10 emotion-11"
               data-navigation="test_navigation"
