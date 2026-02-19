@@ -51,6 +51,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   padding: 0;
   margin: 0;
   background-color: transparent;
+  color: inherit;
   border: 0;
   float: left;
   height: 2.75rem;
@@ -90,6 +91,8 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 
 .emotion-4 svg {
   vertical-align: middle;
+  color: inherit;
+  fill: inherit;
 }
 
 .emotion-6 {

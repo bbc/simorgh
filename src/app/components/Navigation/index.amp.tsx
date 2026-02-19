@@ -26,7 +26,6 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
 `;
 
 const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
-  script,
   service,
   dir,
   menuAnnouncedText,
@@ -34,7 +33,6 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
   dropdownListItems,
 }) => (
   <Navigation
-    script={script}
     service={service}
     dir={dir}
     id={NAVIGATION_ID}
@@ -48,14 +46,14 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         ${NAVIGATION_ID}.toggleClass(class=${OPEN_CLASS_NAME})
       `}
       dir={dir}
-      script={script}
     />
     {/* Hidden attribute allows us to toggle visibility on the dropdown
-    using AMP actions. */}
+        using AMP actions. */}
     <AmpDropdown id={DROPDOWN_ID} data-e2e="dropdown-nav" hidden>
       {dropdownListItems}
     </AmpDropdown>
-    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
+    {/* TODO: Implement the new navigation in AMP */}
+    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID} navType={null}>
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
   </Navigation>

@@ -11,6 +11,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
 } from '#psammead/gel-foundations/src/breakpoints';
+import isLiveUtil from '#lib/utilities/isLive';
 import VisuallyHiddenText from '../../../../../components/VisuallyHiddenText';
 
 export const NAV_BAR_TOP_BOTTOM_SPACING = 0.75; // 12px
@@ -29,7 +30,16 @@ const StyledDropdown = styled.div`
   height: 0;
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-
+  ${({ isArabic, isLive }) =>
+    isArabic &&
+    !isLive &&
+    `
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    `}
   ${({ height, isOpen }) =>
     isOpen
       ? `visibility: visible; height: ${height}px;`
@@ -45,15 +55,16 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children }) => {
+export const CanonicalDropdown = ({ isOpen, children, isArabic }) => {
   const heightRef = useRef(null);
-
   return (
     <StyledDropdown
       data-e2e="dropdown-nav"
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
+      isArabic={isArabic}
+      isLive={isLiveUtil()}
     >
       {children}
     </StyledDropdown>
@@ -93,7 +104,7 @@ const StyledDropdownLink = styled.a`
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
-  display: inline-block;
+  display: block;
 
   &:hover,
   &:focus {
@@ -166,7 +177,9 @@ const getButtonDimensions = lineHeight =>
 
 const Button = ({ script, ...props }) => <button type="button" {...props} />;
 
-const MenuButton = styled(Button)`
+const MenuButton = styled(Button, {
+  shouldForwardProp: prop => prop !== 'navType',
+})`
   position: relative;
   padding: 0;
   margin: 0;
@@ -211,7 +224,7 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
-  script,
+  script = '',
   navType,
 }) => (
   <MenuButton
@@ -246,7 +259,7 @@ export const AmpMenuButton = ({
   announcedText,
   onToggle,
   dir = 'ltr',
-  script,
+  script = '',
 }) => (
   <>
     <AmpHead />

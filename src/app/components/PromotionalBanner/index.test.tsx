@@ -15,7 +15,7 @@ describe('PromotionalBanner', () => {
     title: 'Install our app',
     description: 'Get the best experience by installing our app.',
     isDismissible: true,
-    orText: 'or',
+    buttonSeparatorText: 'or',
     bannerLabel: 'Promotional Banner',
     closeLabel: 'Close',
     primaryButton: {
