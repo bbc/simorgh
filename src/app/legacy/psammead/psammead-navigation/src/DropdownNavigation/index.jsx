@@ -177,7 +177,9 @@ const getButtonDimensions = lineHeight =>
 
 const Button = ({ script, ...props }) => <button type="button" {...props} />;
 
-const MenuButton = styled(Button)`
+const MenuButton = styled(Button, {
+  shouldForwardProp: prop => prop !== 'navType',
+})`
   position: relative;
   padding: 0;
   margin: 0;
