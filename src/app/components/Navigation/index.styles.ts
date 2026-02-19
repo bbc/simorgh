@@ -24,14 +24,12 @@ export default {
     flexDirection: 'column',
     width: '100%',
   }),
-  navRow: css({
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'stretch',
-    justifyContent: 'space-between',
-  }),
   topRow: ({ palette }: Theme) =>
     css({
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'stretch',
+      justifyContent: 'space-between',
       position: 'relative',
       zIndex: 0,
 
