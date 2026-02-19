@@ -25,26 +25,24 @@ export default {
   }),
   navRow: css({
     display: 'flex',
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
     alignItems: 'stretch',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
   }),
   topRow: ({ palette }: Theme) =>
     css({
       position: 'relative',
       zIndex: 0,
+
       '&::before': {
         content: "''",
         position: 'absolute',
         zIndex: -1,
-        /* Cover this row vertically */
         top: 0,
         bottom: 0,
-        /* Full-bleed horizontally, independent of the constrained container */
         width: '100vw',
         left: '50%',
         transform: 'translateX(-50%)',
-        /* POSTBOX red from theme */
         background: palette.POSTBOX,
         pointerEvents: 'none' /* ensure it never interferes with clicks */,
       },
