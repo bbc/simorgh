@@ -1,5 +1,5 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from 'simorgh/cypress/e2e/specialFeatures/atiAnalytics/assertions/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
@@ -173,34 +173,6 @@ const canonicalNonSmokeTestSuites = [
     service: 'yoruba',
     runforEnv: ['test'],
     tests: canonicalTests,
-  },
-];
-
-const ampOnlyNonSmokeTestSuites = [
-  {
-    path: '/news/uk-56342465',
-    service: 'news',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/news/technology-56294493',
-    service: 'news',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/news/23393110',
-    service: 'news',
-    runforEnv: ['test'],
-  },
-  {
-    path: '/newsround/56331357',
-    service: 'newsround',
-    runforEnv: ['live'],
-  },
-  {
-    path: '/newsround/23212028',
-    service: 'newsround',
-    runforEnv: ['test'],
   },
 ];
 

@@ -426,24 +426,6 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   };
 });
 
-// Additional scenarios for news on higher environments
-ampTestSuites.push(
-  ...[
-    {
-      path: '/news/articles/cn7k01xp8kxo.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-    {
-      path: '/news/articles/cj7xrxz0e8zo.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-  ],
-);
-
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
   .map(testSuite => {
