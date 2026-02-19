@@ -16,9 +16,21 @@ export default {
         position: 'absolute',
         insetBlockEnd: 0,
         width: '100%',
-        borderBottom: `0.0625rem solid ${palette.GREY_3}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
+  brandDivider: css({
+    position: 'relative',
+    width: '100%',
+    margin: '0 auto',
+
+    '&::after': {
+      content: "''",
+      display: 'block',
+      width: '100%',
+      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
+    },
+  }),
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
