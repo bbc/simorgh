@@ -53,11 +53,7 @@ const CanonicalNavigationContainer: React.FC<
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={[styles.navRow, styles.topRow]}>
-            <ScrollableNavigation
-              dir={dir}
-              css={styles.topRowItems}
-              navType="top"
-            >
+            <ScrollableNavigation dir={dir} navType="top">
               {topScrollableListItems}
             </ScrollableNavigation>
             {!isLite && (
