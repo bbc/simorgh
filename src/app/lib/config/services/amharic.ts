@@ -416,47 +416,6 @@ export const service: DefaultServiceConfig = {
         title: 'ዜና',
         url: '/amharic',
       },
-      {
-        title: 'ኢትዮጵያ',
-        url: '/amharic/topics/c7zp57r92v5t',
-      },
-      {
-        title: 'ፖለቲካ',
-        url: '/amharic/topics/cg7265pj1jvt',
-      },
-      {
-        title: 'ሴቶች',
-        url: '/amharic/topics/cnq681w4dq6t',
-      },
-      {
-        title: 'ጤና',
-        url: '/amharic/topics/cxnyk76p0q2t',
-      },
-      {
-        title: 'ስፖርት',
-        url: '/amharic/topics/cdr56g2x71dt',
-      },
-      {
-        title: 'ጥበብ',
-        url: '/amharic/topics/cr50yvqzzwpt',
-      },
-      {
-        title: 'ቴክኖሎጂ',
-        url: '/amharic/topics/c06gq8wx467t',
-      },
-      {
-        title: 'ምጣኔ ሃብት',
-        url: '/amharic/topics/cnq6815jj3xt',
-      },
-      {
-        title: 'ቪዲዮ',
-        url: '/amharic/topics/c917ezk2pmvt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'በጣም የተወደዱ',
-        url: '/amharic/popular/read',
-      },
     ],
     timezone: 'Africa/Addis_Ababa',
   },

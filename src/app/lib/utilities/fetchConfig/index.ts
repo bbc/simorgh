@@ -1,7 +1,7 @@
 import nodeLogger from '#lib/logger.node';
 import { CONFIG_REQUEST_RECEIVED, CONFIG_FETCH_ERROR } from '#lib/logger.const';
 import { LRUCache } from 'lru-cache';
-import { Services } from '#app/models/types/global';
+import { Services, Variants } from '#app/models/types/global';
 import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
@@ -23,21 +23,21 @@ type FetchConfigParams = {
   service: Services;
   pagePath: string;
   configType: 'navigation';
+  variant?: Variants;
 };
 
 const fetchConfig = async <T>({
   service,
   pagePath,
   configType,
+  variant,
 }: FetchConfigParams): Promise<T | null> => {
-  // TODO: Remove this restriction once we're ready to roll out to all services
-  const shouldFetchConfig = service === 'indonesia';
-
-  if (!shouldFetchConfig) return Promise.resolve(null);
-
   const fetchUrl = new URL(process.env.BFF_PATH as string);
   fetchUrl.searchParams.set('service', service);
   fetchUrl.searchParams.set('config', configType);
+  if (variant) {
+    fetchUrl.searchParams.set('variant', variant);
+  }
 
   const bffReqPath = fetchUrl.toString();
 
