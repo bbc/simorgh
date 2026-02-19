@@ -64,7 +64,6 @@ export const serviceWorkerCaching = () => {
 
     const cacheableItems = [
       'woff2',
-      'moment-lib',
       'frosted_promo',
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.11.0.js',
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
