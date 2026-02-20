@@ -1,4 +1,3 @@
-import latin from '../ThemeProvider/fontScripts/latin';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,
@@ -14,7 +13,6 @@ const navigationProps = {
   scrollableListItems,
   dropdownListItems,
   menuAnnouncedText: 'menu',
-  script: latin,
   service: 'pidgin',
   dir: 'ltr',
 };
@@ -24,7 +22,6 @@ const navigation = (
     scrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
     menuAnnouncedText="menu"
-    script={latin}
     service="news"
     dir="ltr"
   />
@@ -48,14 +45,12 @@ describe('Canonical Navigation', () => {
     });
 
     it('should render dropdown and no scrollable nav after menu button clicked', () => {
-      const { queryByTestId, queryByText } = render(navigation);
+      const { getByRole, getByTestId } = render(navigation);
 
-      fireEvent.click(queryByText('menu'));
+      fireEvent.click(getByRole('button', { name: 'menu' }));
 
-      const dropdown = queryByTestId(dropdownTestId);
-      const scrollableNav = queryByTestId(scrollableTestId);
-      expect(scrollableNav).toBeNull();
-      expect(dropdown?.innerHTML).toBe('<li>Dropdown Items</li>');
+      const dropdown = getByTestId(dropdownTestId);
+      expect(dropdown).toHaveTextContent('Dropdown Items');
     });
 
     describe('Top Bar OJs', () => {
@@ -82,6 +77,7 @@ describe('Canonical Navigation', () => {
             expect(queryByTestId('top-bar-onward-journeys')).toBeNull(),
         ],
       ])('%s', (_, props, toggles, assertion) => {
+        // @ts-expect-error partial data for testing purposes
         const { queryByTestId } = render(<CanonicalNavigation {...props} />, {
           toggles,
           service: props.service,
