@@ -63,12 +63,11 @@ const StyledScrollableNav = styled.div`
       z-index: 3;
       overflow: hidden;
       pointer-events: none;
-      ${props =>
-        `background: linear-gradient(
-        ${props.dir === 'ltr' ? 'to right' : 'to left'},
-        ${hexToRGB(props.theme.palette.WHITE, 0)} 0%,
-        ${hexToRGB(props.theme.palette.WHITE, 1)} 100%
-      );`}
+      background: linear-gradient(
+        ${({ dir }) => (dir === 'ltr' ? 'to right' : 'to left')},
+        ${props => hexToRGB(props.theme.palette.WHITE, 0)} 0%,
+        ${props => hexToRGB(props.theme.palette.WHITE, 1)} 100%
+      );
     }
   }
 `;
