@@ -6,6 +6,7 @@ import getAgent from '#src/server/utilities/getAgent';
 import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import isLive from '#lib/utilities/isLive';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
@@ -42,7 +43,7 @@ const fetchConfig = async <T>({
   }
 
   // Only fetch new nav for Arabic and Tamil services on Local/Test
-  if (service === 'arabic' && !isLive()) {
+  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
     fetchUrl.searchParams.set('useNewNav', 'true');
   }
 
