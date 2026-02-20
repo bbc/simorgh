@@ -16,9 +16,21 @@ export default {
         position: 'absolute',
         insetBlockEnd: 0,
         width: '100%',
-        borderBottom: `0.0625rem solid ${palette.GREY_3}`,
+        borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
+  brandDivider: css({
+    position: 'relative',
+    width: '100%',
+    margin: '0 auto',
+
+    '&::after': {
+      content: "''",
+      display: 'block',
+      width: '100%',
+      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
+    },
+  }),
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
@@ -114,13 +126,60 @@ export default {
         },
       },
     }),
-  dropdown: css({
-    position: 'absolute',
-    top: '100%',
-    left: '0',
-    width: '100%',
-    zIndex: 99999,
-  }),
+  dropdown: ({ palette, spacings }: Theme) =>
+    css({
+      position: 'absolute',
+      top: '100%',
+      left: '0',
+      width: '100%',
+      zIndex: 99999,
+
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
+
+      ul: {
+        padding: 0,
+        border: 'none',
+
+        li: {
+          padding: 0,
+
+          '&:last-child': {
+            paddingBottom: 0,
+          },
+        },
+      },
+
+      a: {
+        display: 'block',
+        position: 'relative',
+        paddingInline: `${spacings.FULL}rem`,
+
+        '&:hover': {
+          backgroundColor: palette.GREY_3,
+          textDecoration: 'none',
+        },
+
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          insetInlineStart: 0,
+          height: '100%',
+          width: `${pixelsToRem(4)}rem`,
+          background: palette.POSTBOX,
+          display: 'block',
+          opacity: 0,
+        },
+
+        '&:hover::before': {
+          opacity: 1,
+        },
+
+        '&:focus-visible': {
+          outlineOffset: `-${pixelsToRem(3)}rem`,
+        },
+      },
+    }),
   lowerNavWrapper: css({
     width: '100%',
     position: 'relative',

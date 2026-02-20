@@ -88,6 +88,10 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 }
 
+.emotion-4 svg {
+  vertical-align: middle;
+}
+
 .emotion-6 {
   color: #000000;
   fill: currentColor;
