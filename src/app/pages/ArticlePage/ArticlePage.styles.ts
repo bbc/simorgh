@@ -144,20 +144,6 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  adaptiveMediaCurationSection: ({ spacings, mq, palette }: Theme) =>
-    css({
-      backgroundColor: palette.GREY_2,
-      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-      marginBottom: `${spacings.TRIPLE}rem`,
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
-      },
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
-      },
-    }),
   featuresSection: ({ spacings, mq }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,

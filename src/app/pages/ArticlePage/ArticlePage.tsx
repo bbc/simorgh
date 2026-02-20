@@ -443,10 +443,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const renderAdaptiveMediaCuration = () =>
     showAdaptiveMediaCuration ? (
-      <section
-        css={styles.adaptiveMediaCurationSection}
-        data-testid="adaptive-media-curation"
-      >
+      <section data-testid="adaptive-media-curation">
         <Curation
           visualStyle={VISUAL_STYLE.FEED}
           visualProminence={VISUAL_PROMINENCE.NORMAL}
