@@ -1,4 +1,5 @@
 const plugins = [
+  'babel-plugin-react-compiler',
   '@emotion/babel-plugin',
   '@babel/plugin-proposal-object-rest-spread', // allows ...spread notation
   '@babel/plugin-syntax-dynamic-import', // allows `await import()` syntax
@@ -11,10 +12,13 @@ const plugins = [
   ],
 ];
 
-// allows dynamic `import()` in Node tests.
 if (process.env.NODE_ENV === 'test') {
+  // Remove react-compiler plugin for tests
+  plugins.splice(plugins.indexOf('babel-plugin-react-compiler'), 1);
+  // allows dynamic `import()` in Node tests.
   plugins.push('dynamic-import-node');
-  plugins.push('@babel/plugin-proposal-throw-expressions'); // allows `throw new Error();`
+  // allows `throw new Error();`
+  plugins.push('@babel/plugin-proposal-throw-expressions');
 }
 
 const overrides = [

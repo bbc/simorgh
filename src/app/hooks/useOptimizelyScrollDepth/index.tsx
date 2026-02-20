@@ -17,27 +17,27 @@ const useOptimizelyScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
+  if (scrollDepth >= 25 && !scrollTwentyFive) {
+    optimizely?.track('scroll25');
+    setScrollTwentyFive(true);
+  }
+
+  if (scrollDepth >= 50 && !scrollFifty) {
+    optimizely?.track('scroll50');
+    setScrollFifty(true);
+  }
+
+  if (scrollDepth >= 75 && !scrollSeventyFive) {
+    optimizely?.track('scroll75');
+    setScrollSeventyFive(true);
+  }
+
+  if (scrollDepth >= 100 && !scrollHundred) {
+    optimizely?.track('scroll100');
+    setScrollHundred(true);
+  }
+
   useEffect(() => {
-    if (scrollDepth >= 25 && !scrollTwentyFive) {
-      optimizely?.track('scroll25');
-      setScrollTwentyFive(true);
-    }
-
-    if (scrollDepth >= 50 && !scrollFifty) {
-      optimizely?.track('scroll50');
-      setScrollFifty(true);
-    }
-
-    if (scrollDepth >= 75 && !scrollSeventyFive) {
-      optimizely?.track('scroll75');
-      setScrollSeventyFive(true);
-    }
-
-    if (scrollDepth >= 100 && !scrollHundred) {
-      optimizely?.track('scroll100');
-      setScrollHundred(true);
-    }
-
     document.addEventListener('scroll', () => setScrollDepth(getScrollDepth), {
       passive: true,
     });
@@ -45,18 +45,9 @@ const useOptimizelyScrollDepth = () => {
       document.removeEventListener('scroll', () =>
         setScrollDepth(getScrollDepth),
       );
-  }, [
-    optimizely,
-    scrollDepth,
-    scrollFifty,
-    scrollHundred,
-    scrollSeventyFive,
-    scrollTwentyFive,
-  ]);
+  }, []);
 
-  return {
-    setScrollDepth,
-  };
+  return { setScrollDepth };
 };
 
 export default useOptimizelyScrollDepth;

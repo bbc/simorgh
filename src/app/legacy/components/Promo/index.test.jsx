@@ -6,7 +6,9 @@ import {
 
 import Promo from '.';
 
-const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
+const dateNow = Date.now();
+
+const Fixture = ({ useLargeImages = false, timestamp = dateNow }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}
@@ -21,10 +23,7 @@ const Fixture = ({ useLargeImages = false, timestamp = Date.now() }) => (
   </Promo>
 );
 
-const FixtureWithWebp = ({
-  useLargeImages = false,
-  timestamp = Date.now(),
-}) => (
+const FixtureWithWebp = ({ useLargeImages = false, timestamp = dateNow }) => (
   <Promo>
     <Promo.Image
       useLargeImages={useLargeImages}

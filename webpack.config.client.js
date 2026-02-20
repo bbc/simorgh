@@ -19,7 +19,7 @@ const TOTAL_PAGE_TYPES = fs
   .readdirSync('./src/app/pages')
   .filter(file => file.match(/[A-Z].+?Page$/)).length;
 
-const DOT_ENV_CONFIG = dotenv.config();
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 if (DOT_ENV_CONFIG.error) {
   throw DOT_ENV_CONFIG.error;

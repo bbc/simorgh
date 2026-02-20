@@ -18,6 +18,7 @@ export default defineConfig({
       const env = config.env[appEnv];
 
       const { parsed } = dotenv.config({
+        quiet: true,
         path: `./envConfig/${config.env.APP_ENV}.env`,
       });
 

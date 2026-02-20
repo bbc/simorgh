@@ -10,7 +10,7 @@ const WithTimeMachine = ({ children, dateString, timestamp }) => {
   // This effect will start the time-machine, render the component, then reset the time-machine after the component has been rendered.
   useEffect(() => {
     startTimeMachine({ dateString, timestamp });
-    setComponentToRender(children);
+    (async () => setComponentToRender(children))();
     return resetTimeMachine;
   }, [children, dateString, timestamp]);
   return componentToRender;

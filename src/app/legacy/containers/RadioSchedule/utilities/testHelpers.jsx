@@ -30,7 +30,6 @@ const RadioSchedulesWithContext = ({
         pageType={HOME_PAGE}
         service={service}
         pathname={`/${service}`}
-        timeOnServer={Date.now()}
       >
         <ServiceContextProvider service={service}>
           <BrowserRouter>

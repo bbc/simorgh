@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import tail from 'ramda/src/tail';
