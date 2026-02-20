@@ -223,6 +223,11 @@ describe('ThemeProvider', () => {
   });
 
   describe.each(SERVICES)(`brandSVG for %s`, service => {
+    beforeAll(() => {
+      // TODO: Consider removing this one this check is removed: https://github.com/bbc/simorgh/blob/4bfea6e86e65e3fdd374ff5432bae575366a343b/src/app/legacy/psammead/psammead-brand/src/index.jsx#L155
+      process.env.SIMORGH_APP_ENV = 'live';
+    });
+
     const children = <span data-testid="brand-child">child</span>;
     it(`should match chameleonLogos/${service}.tsx`, async () => {
       await act(async () => {
