@@ -43,10 +43,15 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
@@ -247,6 +252,18 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentName: referrerExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
+  // time of day 2 experiment for articles
+  const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
+  // local test override: force adaptive variation
+  const forcedTimeOfDayArticleVariant = 'adaptive_variation';
+  const optimizelyTimeOfDayArticleVariant = useOptimizelyVariation({
+    experimentName: timeOfDayArticleExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const timeOfDayArticleVariant =
+    forcedTimeOfDayArticleVariant ?? optimizelyTimeOfDayArticleVariant;
+  const isAdaptiveTimeOfDayVariant =
+    timeOfDayArticleVariant === 'adaptive_variation';
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -267,6 +284,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const blocks = pageData?.content?.model?.blocks ?? [];
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
+  const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
@@ -408,6 +426,39 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+  // show media curation only when the user is in adaptive variation
+  const showAdaptiveMediaCuration = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      !isPGL &&
+      isAdaptiveTimeOfDayVariant &&
+      mediaCurationContent?.summaries?.length,
+  );
+  const hasRelatedContent = Boolean(
+    blocks
+      .filter(block => block.type !== 'wsoj' && block.type !== 'mpu')
+      .slice(-1)[0]?.type === 'relatedContent',
+  );
+
+  const renderAdaptiveMediaCuration = () =>
+    showAdaptiveMediaCuration ? (
+      <section
+        css={styles.adaptiveMediaCurationSection}
+        data-testid="adaptive-media-curation"
+      >
+        <Curation
+          visualStyle={VISUAL_STYLE.FEED}
+          visualProminence={VISUAL_PROMINENCE.NORMAL}
+          summaries={mediaCurationContent?.summaries}
+          title={mediaCurationContent?.title}
+          position={mediaCurationContent?.position || 0}
+          curationId={mediaCurationContent?.curationId}
+          curationLength={mediaCurationContent?.summaries?.length || 0}
+          link={mediaCurationContent?.link}
+        />
+      </section>
+    ) : null;
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -483,6 +534,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
+          {!hasRelatedContent && renderAdaptiveMediaCuration()}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
@@ -503,6 +555,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             </div>
           </div>
+          {hasRelatedContent && renderAdaptiveMediaCuration()}
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
