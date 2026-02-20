@@ -351,34 +351,27 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   }
 }
 
-@media (max-width: 24.9375rem) {
+.emotion-15 {
+  max-width: 63rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 1.5rem;
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-15 {
-    margin: 0 0.5rem;
-    padding-bottom: 1.5rem;
+    padding: 0 1rem 2rem;
   }
 }
 
-@media (min-width: 25rem) {
-  @media (max-width: 62.9375rem) {
-    .emotion-15 {
-      margin: 0 1rem;
-      padding-bottom: 2rem;
-    }
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-15 {
+    padding: 0 1rem 2.5rem;
   }
 }
 
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
+@media (min-width: 63rem) {
   .emotion-15 {
-    margin: 0 1rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-15 {
-    margin: 0 auto;
     padding: 0 1rem 1.5rem;
-    max-width: 80rem;
   }
 }
 
@@ -560,16 +553,10 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
 
   @media (min-width: 80rem) {
     .emotion-26 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-26 {
-    grid-auto-flow: row;
   }
 }
 
@@ -626,7 +613,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
 
 @media (min-width: 80rem) {
   .emotion-28 {
-    width: calc(20%);
+    width: calc(50%);
     display: inline-block;
     vertical-align: top;
   }
@@ -729,12 +716,6 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
     .emotion-31 {
       min-width: 2rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-31 {
-    min-width: 2rem;
   }
 }
 
@@ -1584,34 +1565,27 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 }
 
-@media (max-width: 24.9375rem) {
+.emotion-19 {
+  max-width: 63rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 1.5rem;
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-19 {
-    margin: 0 0.5rem;
-    padding-bottom: 1.5rem;
+    padding: 0 1rem 2rem;
   }
 }
 
-@media (min-width: 25rem) {
-  @media (max-width: 62.9375rem) {
-    .emotion-19 {
-      margin: 0 1rem;
-      padding-bottom: 2rem;
-    }
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-19 {
+    padding: 0 1rem 2.5rem;
   }
 }
 
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
+@media (min-width: 63rem) {
   .emotion-19 {
-    margin: 0 1rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-19 {
-    margin: 0 auto;
     padding: 0 1rem 1.5rem;
-    max-width: 80rem;
   }
 }
 
@@ -1793,16 +1767,10 @@ exports[`Article Page should render a news article correctly 1`] = `
 
   @media (min-width: 80rem) {
     .emotion-30 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-30 {
-    grid-auto-flow: row;
   }
 }
 
@@ -1859,7 +1827,7 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 @media (min-width: 80rem) {
   .emotion-32 {
-    width: calc(20%);
+    width: calc(50%);
     display: inline-block;
     vertical-align: top;
   }
@@ -1962,12 +1930,6 @@ exports[`Article Page should render a news article correctly 1`] = `
     .emotion-35 {
       min-width: 2rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-35 {
-    min-width: 2rem;
   }
 }
 
@@ -2141,56 +2103,6 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-45 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-75 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-75 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-75 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-75 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-75 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-75 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-75 {
-    min-width: 4rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-85 {
     min-width: 2.5rem;
@@ -2229,12 +2141,6 @@ exports[`Article Page should render a news article correctly 1`] = `
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-85 {
-    min-width: 2rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-95 {
     min-width: 2.5rem;
@@ -2270,56 +2176,6 @@ exports[`Article Page should render a news article correctly 1`] = `
     .emotion-95 {
       min-width: 4rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-95 {
-    min-width: 2rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-125 {
-    min-width: 2.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-125 {
-    min-width: 3rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-125 {
-    min-width: 4rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-125 {
-      min-width: 4rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-125 {
-    min-width: 4rem;
   }
 }
 
@@ -2634,7 +2490,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             class="emotion-34"
           >
             <div
-              class="emotion-75"
+              class="emotion-35"
               dir="ltr"
             >
               <span
@@ -2839,7 +2695,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             class="emotion-34"
           >
             <div
-              class="emotion-125"
+              class="emotion-85"
               dir="ltr"
             >
               <span
@@ -3946,34 +3802,27 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   }
 }
 
-@media (max-width: 24.9375rem) {
+.emotion-15 {
+  max-width: 63rem;
+  margin: 0 auto;
+  padding: 0 0.5rem 1.5rem;
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
   .emotion-15 {
-    margin: 0 0.5rem;
-    padding-bottom: 1.5rem;
+    padding: 0 1rem 2rem;
   }
 }
 
-@media (min-width: 25rem) {
-  @media (max-width: 62.9375rem) {
-    .emotion-15 {
-      margin: 0 1rem;
-      padding-bottom: 2rem;
-    }
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-15 {
+    padding: 0 1rem 2.5rem;
   }
 }
 
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
+@media (min-width: 63rem) {
   .emotion-15 {
-    margin: 0 1rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-15 {
-    margin: 0 auto;
     padding: 0 1rem 1.5rem;
-    max-width: 80rem;
   }
 }
 
@@ -4155,16 +4004,10 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
   @media (min-width: 80rem) {
     .emotion-26 {
-      grid-template-columns: repeat(20, 1fr);
-      grid-column-end: span 20;
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-26 {
-    grid-auto-flow: row;
   }
 }
 
@@ -4221,7 +4064,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 @media (min-width: 80rem) {
   .emotion-28 {
-    width: calc(20%);
+    width: calc(50%);
     display: inline-block;
     vertical-align: top;
   }
@@ -4324,12 +4167,6 @@ exports[`Article Page should render a rtl article (persian) with most read corre
     .emotion-31 {
       min-width: 1.5rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-31 {
-    min-width: 1.5rem;
   }
 }
 
@@ -4503,56 +4340,6 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-41 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-71 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-71 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-71 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-71 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-71 {
-    min-width: 1.5rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-71 {
-      min-width: 1.5rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-71 {
-    min-width: 2rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-81 {
     min-width: 1rem;
@@ -4591,12 +4378,6 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   }
 }
 
-@media (min-width: 80rem) {
-  .emotion-81 {
-    min-width: 1.5rem;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-91 {
     min-width: 1rem;
@@ -4632,56 +4413,6 @@ exports[`Article Page should render a rtl article (persian) with most read corre
     .emotion-91 {
       min-width: 2rem;
     }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-91 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-121 {
-    min-width: 1rem;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-121 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-121 {
-    min-width: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-121 {
-    min-width: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-121 {
-    min-width: 2rem;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  @media (min-width: 37.5rem) {
-    .emotion-121 {
-      min-width: 2rem;
-    }
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-121 {
-    min-width: 2rem;
   }
 }
 
@@ -4951,7 +4682,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             class="emotion-30"
           >
             <div
-              class="emotion-71"
+              class="emotion-31"
               dir="rtl"
             >
               <span
@@ -5156,7 +4887,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             class="emotion-30"
           >
             <div
-              class="emotion-121"
+              class="emotion-81"
               dir="rtl"
             >
               <span

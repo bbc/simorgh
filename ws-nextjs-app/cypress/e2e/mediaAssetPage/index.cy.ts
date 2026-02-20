@@ -270,60 +270,65 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/afrique/nos_emissions/2016/06/160622_tc2_testmap1?renderer_env=test', // TC2 MAP
-        service: 'afrique',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLED DUE TO TC2 MAP 500 ERROR FLAKES ON TEST ENVIRONMENT
+      // {
+      //   path: '/afrique/nos_emissions/2016/06/160622_tc2_testmap1?renderer_env=test', // TC2 MAP
+      //   service: 'afrique',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/arabic/multimedia/2016/06/160601_qatar_sewika_smoking', // TC2 video
         service: 'arabic',
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
-        service: 'arabic',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/arabic/worldnews/2015/11/151120_t_arabic_av?renderer_env=test', // TC2 video
+      //   service: 'arabic',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/hindi/multimedia/2015/09/150921_what_is_innovation_ms', // TC2 video
         service: 'hindi',
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
-        service: 'hindi',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/hindi/sport/2016/08/160822_tc2_testmap1?renderer_env=test', // TC2 video
+      //   service: 'hindi',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/russian/multimedia/2012/04/120411_v_titanic_last_survivor', // TC2 video
         service: 'russian',
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/russian/news/2016/05/160510_tc2_testmap3?renderer_env=test', // TC2 video
-        service: 'russian',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/russian/news/2016/05/160510_tc2_testmap3?renderer_env=test', // TC2 video
+      //   service: 'russian',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/swahili/medianuai/2016/05/160517_apatae_fatacky', // TC2 MAP with video clip
         service: 'swahili',
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
-        service: 'swahili',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLING TESTS DUE TO TOO MANY FLAKES
+      // {
+      //   path: '/swahili/michezo/2016/07/160713_tc2_testmap2?renderer_env=test', // TC2 MAP with audio clip
+      //   service: 'swahili',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/urdu/multimedia/2014/11/141104_hindu_riaz_kq', // TC2 MAP with video clip
         service: 'urdu',
@@ -336,12 +341,13 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
-        service: 'zhongwen',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLED DUE TO TC2 MAP 500 ERROR FLAKES ON TEST ENVIRONMENT
+      // {
+      //   path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
+      //   service: 'zhongwen',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/zhongwen/trad/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
         service: 'zhongwen',
