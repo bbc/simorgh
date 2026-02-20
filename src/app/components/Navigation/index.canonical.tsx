@@ -84,8 +84,7 @@ const CanonicalNavigationContainer: React.FC<
           </ScrollableNavigation>
         </div>
       </div>
-
-      <div css={styles.divider} />
+      <div css={styles.bottomDivider} />
       {enabled && <TopBarOJs blocks={blocks ?? []} />}
     </Navigation>
   );

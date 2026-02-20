@@ -2,7 +2,19 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  divider: ({ palette }: Theme) =>
+  brandDivider: css({
+    position: 'relative',
+    width: '100%',
+    margin: '0 auto',
+
+    '&::after': {
+      content: "''",
+      display: 'block',
+      width: '100%',
+      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
+    },
+  }),
+  bottomDivider: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       width: '100%',
@@ -19,18 +31,6 @@ export default {
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
-  brandDivider: css({
-    position: 'relative',
-    width: '100%',
-    margin: '0 auto',
-
-    '&::after': {
-      content: "''",
-      display: 'block',
-      width: '100%',
-      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
-    },
-  }),
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
