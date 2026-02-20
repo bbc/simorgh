@@ -80,7 +80,6 @@ describe('Canonical Navigation', () => {
         // @ts-expect-error partial data for testing purposes
         const { queryByTestId } = render(<CanonicalNavigation {...props} />, {
           toggles,
-          service: props.service,
         });
         assertion(queryByTestId);
       });
