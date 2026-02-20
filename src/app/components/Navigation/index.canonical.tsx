@@ -19,7 +19,7 @@ interface CanonicalNavigationContainerProps {
   menuAnnouncedText: string;
   topScrollableListItems?: React.ReactNode;
   topDivider?: React.ReactNode;
-  scrollableListItems: React.ReactNode;
+  bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
   menuButton?: React.ReactNode;
   isOpen?: boolean;
@@ -34,7 +34,7 @@ const CanonicalNavigationContainer: React.FC<
   dir,
   menuAnnouncedText,
   topScrollableListItems,
-  scrollableListItems,
+  bottomScrollableListItems,
   dropdownListItems,
   blocks,
 }) => {
@@ -81,7 +81,7 @@ const CanonicalNavigationContainer: React.FC<
             css={styles.bottomRowItems}
             navPosition="secondary"
           >
-            {scrollableListItems}
+            {bottomScrollableListItems}
           </ScrollableNavigation>
         </div>
       </div>

@@ -29,7 +29,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
   service,
   dir,
   menuAnnouncedText,
-  scrollableListItems,
+  bottomScrollableListItems,
   dropdownListItems,
 }) => (
   <Navigation
@@ -58,7 +58,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
       id={SCROLLABLE_ID}
       navPosition={null}
     >
-      {scrollableListItems}
+      {bottomScrollableListItems}
     </StyledAmpScrollableNavigation>
   </Navigation>
 );
