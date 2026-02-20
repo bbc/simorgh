@@ -26,14 +26,12 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
 `;
 
 const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
-  service,
   dir,
   menuAnnouncedText,
   bottomScrollableListItems,
   dropdownListItems,
 }) => (
   <Navigation
-    service={service}
     dir={dir}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME as any}

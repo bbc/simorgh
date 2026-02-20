@@ -1,9 +1,8 @@
-import { Navigation } from '#app/models/types/global';
+import { Direction, Navigation } from '#app/models/types/global';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 
 export interface AmpNavigationContainerProps {
-  service: string;
-  dir: string;
+  dir: Direction;
   menuAnnouncedText: string;
   topScrollableListItems?: React.ReactNode;
   bottomScrollableListItems: React.ReactNode;
