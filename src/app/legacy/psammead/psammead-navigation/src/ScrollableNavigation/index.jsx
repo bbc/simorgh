@@ -73,8 +73,17 @@ const StyledScrollableNav = styled.div`
   }
 `;
 
-export const ScrollableNavigation = ({ children, dir = 'ltr', ...props }) => (
-  <StyledScrollableNav data-e2e="scrollable-nav" dir={dir} {...props}>
+export const ScrollableNavigation = ({
+  children,
+  dir = 'ltr',
+  navPosition,
+  ...props
+}) => (
+  <StyledScrollableNav
+    data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}`}
+    dir={dir}
+    {...props}
+  >
     {children}
   </StyledScrollableNav>
 );
