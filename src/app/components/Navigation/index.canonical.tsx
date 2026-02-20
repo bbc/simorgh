@@ -11,11 +11,11 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import TopBarOJs from '#app/components/TopBarOJs';
 import useToggle from '#app/hooks/useToggle';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import { Direction } from '#app/models/types/global';
 import styles from './index.styles';
 
 interface CanonicalNavigationContainerProps {
-  service: string;
-  dir: string;
+  dir: Direction;
   menuAnnouncedText: string;
   topScrollableListItems?: React.ReactNode;
   topDivider?: React.ReactNode;
@@ -30,7 +30,6 @@ interface CanonicalNavigationContainerProps {
 const CanonicalNavigationContainer: React.FC<
   CanonicalNavigationContainerProps
 > = ({
-  service,
   dir,
   menuAnnouncedText,
   topScrollableListItems,
@@ -49,7 +48,7 @@ const CanonicalNavigationContainer: React.FC<
   });
 
   return (
-    <Navigation service={service} dir={dir} isOpen={isOpen}>
+    <Navigation dir={dir} isOpen={isOpen}>
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>

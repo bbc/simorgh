@@ -301,7 +301,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         dropdownListItems={dropdownListItems}
         menuAnnouncedText={navMenuText}
         dir={dir}
-        service={service}
         blocks={blocks}
       />
     </>
