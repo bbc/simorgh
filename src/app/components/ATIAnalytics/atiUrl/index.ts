@@ -113,11 +113,18 @@ export const buildReverbEventModel = ({
   groupTracker = {},
   eventGroupingName,
 }: ATIEventTrackingProps): ReverbBeaconConfig => {
+  // these optional fields are emitted by the portrait video skip-rate spike
   const {
     type: itemType,
     text,
     position,
     duration,
+    totalDuration,
+    completionRate,
+    skipRate,
+    navigationMethod,
+    exitReason,
+    versionId,
     label,
     mediaType,
     resourceId: itemResourceId,
@@ -156,6 +163,13 @@ export const buildReverbEventModel = ({
         ...(text && { text }),
         ...(position && { position }),
         ...(duration && { duration }),
+        // these are mapped to snake_case so the payload matches existing reverb conventions
+        ...(totalDuration && { total_duration: totalDuration }),
+        ...(completionRate != null && { completion_rate: completionRate }),
+        ...(skipRate != null && { skip_rate: skipRate }),
+        ...(navigationMethod && { navigation_method: navigationMethod }),
+        ...(exitReason && { exit_reason: exitReason }),
+        ...(versionId && { version_id: versionId }),
         ...(mediaType && { media_type: mediaType }),
         ...(label && { label }),
         ...(itemResourceId && { resource_id: itemResourceId }),
