@@ -24,6 +24,23 @@ export default {
         ...(isEmbedded && { margin: '0' }),
         ...(!isEmbedded && { margin: `0 0 ${spacings.TRIPLE}rem 0` }),
       }),
+  withTranscriptVideo: ({ palette, isDarkUi }: Theme) =>
+    css({
+      backgroundColor: isDarkUi ? palette.GREY_7 : palette.WHITE,
+    }),
+  withTranscriptCaption: ({ mq, spacings }: Theme) =>
+    css({
+      margin: `${spacings.FULL}rem`,
+      width: 'auto',
+      [mq.GROUP_2_ONLY]: {
+        width: 'auto',
+        margin: `${spacings.FULL}rem`,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: 'auto',
+        margin: `${spacings.FULL}rem`,
+      },
+    }),
 
   landscapeFigure: () => css({ aspectRatio: '16 / 9' }),
 

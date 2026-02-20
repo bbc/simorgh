@@ -29,6 +29,27 @@ const styles = {
       },
     }),
 
+  // Duplicated to prevent splitting out existing styles
+  placeholderWithTranscript: ({ mq }: Theme) =>
+    css({
+      position: 'relative',
+      cursor: 'pointer',
+      height: '100%',
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        cursor: 'default',
+      },
+      [mq.FORCED_COLOURS]: {
+        '&:hover, &:focus': {
+          '> button': {
+            backgroundColor: 'canvas',
+            border: `${pixelsToRem(3)}rem solid canvasText`,
+            '> time': { textDecoration: 'underline' },
+          },
+        },
+      },
+    }),
+
   playButton: ({ palette }: Theme) =>
     css({
       position: 'absolute',

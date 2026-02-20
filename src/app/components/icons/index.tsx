@@ -205,6 +205,21 @@ export const Play = ({ className }: { className?: string }) => (
   </svg>
 );
 
+export const RightArrow = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    focusable="false"
+    aria-hidden="true"
+    width="12"
+    height="12"
+    className={className}
+  >
+    <g>
+      <path d="M12.6,26.7L23.2,16L12.6,5.3H8.8v21.4H12.6z" />
+    </g>
+  </svg>
+);
+
 export const TriangleDown = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

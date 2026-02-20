@@ -6,9 +6,10 @@ import {
   aresMediaPortraitBlocks,
   videoClipMediaBlocks,
   legacyMediaBlock,
+  aresMediaBlockWithTranscript,
 } from './fixture';
-import { MediaBlock } from './types';
 import readme from './README.md';
+import { MediaBlock } from './types';
 
 type Props = {
   pageType: PageTypes;
@@ -32,10 +33,24 @@ const Component = ({ service, pageType, blocks }: Props) => (
 export default {
   title: 'Components/MediaLoader',
   Component,
+  argTypes: {
+    hasTranscript: {
+      options: [true, false],
+      control: { type: 'radio' },
+    },
+  },
   parameters: {
     docs: { readme },
   },
 };
+
+export const MediaLoaderWithTranscript = () => (
+  <Component
+    service="pidgin"
+    pageType="article"
+    blocks={aresMediaBlockWithTranscript as MediaBlock[]}
+  />
+);
 
 export const Landscape = () => (
   <Component

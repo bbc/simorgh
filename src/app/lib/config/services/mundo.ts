@@ -102,6 +102,11 @@ export const service: DefaultServiceConfig = {
         nextPage: 'Siguiente',
         pageXOfY: 'Página {x} de {y}',
       },
+      transcript: {
+        readTranscript: 'Read transcript',
+        disclaimer:
+          ' This transcript has been reviewed by a journalist, it was generated with AI (Artificial Intelligence).',
+      },
       ads: {
         advertisementLabel: 'Publicidad',
       },

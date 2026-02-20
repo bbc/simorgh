@@ -11,6 +11,7 @@ import {
   aresMediaBlocks,
   onDemandTvBlocks,
   onDemandTvBlocksWithOverrides,
+  aresMediaBlockWithTranscript,
 } from './fixture';
 import { MediaBlock } from './types';
 import * as buildConfig from './utils/buildSettings';
@@ -180,6 +181,43 @@ describe('MediaLoader', () => {
         'span',
       );
       expect(caption[3]?.textContent).toBe('This is a caption!');
+    });
+
+    it('Displays a transcript when provided', async () => {
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlockWithTranscript as MediaBlock[]} />,
+          {
+            id: 'testId',
+          },
+        ));
+      });
+
+      const details = (container as unknown as HTMLElement).querySelector(
+        'summary',
+      );
+      expect(details?.textContent).toContain('Read transcript');
+    });
+
+    it('Displays a transcript when provided on lite', async () => {
+      let container;
+
+      await act(async () => {
+        ({ container } = render(
+          <MediaPlayer blocks={aresMediaBlockWithTranscript as MediaBlock[]} />,
+          {
+            id: 'testId',
+            isLite: true,
+          },
+        ));
+      });
+
+      const details = (container as unknown as HTMLElement).querySelector(
+        'summary',
+      );
+      expect(details?.textContent).toContain('Read transcript');
     });
   });
 

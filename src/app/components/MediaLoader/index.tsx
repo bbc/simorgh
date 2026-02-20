@@ -5,14 +5,14 @@ import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
+import { PageTypes } from '#app/models/types/global';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import { PageTypes } from '#app/models/types/global';
-import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import {
   BumpType,
   EventMapping,
@@ -20,17 +20,20 @@ import {
   MediaPlayerEvents,
   PlayerConfig,
 } from './types';
-import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
-import buildConfig from './utils/buildSettings';
-import Placeholder from './Placeholder';
-import getProducerFromServiceName from './utils/getProducerFromServiceName';
-import getCaptionBlock from './utils/getCaptionBlock';
-import styles from './index.styles';
 import { getBootstrapSrc } from '../Ad/Canonical';
-import Metadata from './Metadata';
+import Caption from '../Caption';
+import Transcript from '../Transcript';
 import AmpMediaLoader from './Amp';
+import styles from './index.styles';
+import Metadata from './Metadata';
+import Placeholder from './Placeholder';
+import buildConfig from './utils/buildSettings';
+import getCaptionBlock from './utils/getCaptionBlock';
+import getProducerFromServiceName from './utils/getProducerFromServiceName';
+import getTranscriptBlock from './utils/getTranscriptBlock';
 import Message from './Message';
+import getTitleForLiteSiteTranscriptBlock from './utils/getTitleForLiteSiteTranscriptBlock';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
   LIVE_PAGE,
@@ -226,6 +229,8 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
 }: Props) => {
+  const transcriptBlock = getTranscriptBlock(blocks);
+  const hasTranscript = !!transcriptBlock;
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('preroll');
@@ -243,6 +248,12 @@ const MediaLoader = ({
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
   );
+
+  // returns transcript for lite site pages with transcript
+  if (isLite && hasTranscript) {
+    const title = getTitleForLiteSiteTranscriptBlock(blocks);
+    return <Transcript transcript={transcriptBlock} title={title} />;
+  }
 
   if (isLite) return null;
 
@@ -310,6 +321,7 @@ const MediaLoader = ({
             isPortrait && styles.portraitFigure(embedded),
             isLandscape && styles.landscapeFigure,
           ],
+          hasTranscript && styles.withTranscriptVideo,
         ]}
       >
         {isAmp ? (
@@ -331,6 +343,7 @@ const MediaLoader = ({
                 noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
+                hasTranscript={hasTranscript}
                 isPortraitOrientation={!!isPortrait}
               />
             ) : (
@@ -349,10 +362,24 @@ const MediaLoader = ({
             className={isPortrait ? 'portrait-caption' : ''}
             block={captionBlock}
             type={mediaType}
-            css={[
-              isAudio && styles.captionAudio,
-              !isAudio && [isPortrait && styles.captionPortrait],
-            ]}
+            css={
+              hasTranscript
+                ? [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                    hasTranscript && styles.withTranscriptCaption,
+                  ]
+                : [
+                    isAudio && styles.captionAudio,
+                    !isAudio && [isPortrait && styles.captionPortrait],
+                  ]
+            }
+          />
+        )}
+        {hasTranscript && (
+          <Transcript
+            transcript={transcriptBlock}
+            title={placeholderConfig?.mediaInfo?.title}
           />
         )}
       </figure>

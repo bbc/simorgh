@@ -7,6 +7,10 @@ export interface Translations {
     nextPage: string;
     pageXOfY: string;
   };
+  transcript?: {
+    readTranscript: string;
+    disclaimer: string;
+  };
   ads: {
     advertisementLabel: string;
   };
