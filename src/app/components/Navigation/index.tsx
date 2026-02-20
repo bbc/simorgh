@@ -73,31 +73,30 @@ const renderListItems = ({
   isLite,
   pageType,
 }: RenderListItemsArgs) =>
-  navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
-    const { title, url, hideOnLiteSite } = item;
-    const active = index === activeIndex;
-    const a11yProps =
-      getTopItemA11yProps({ item, index, active, pageType }) ?? {};
+  navigation
+    // For Lite pages, filter out any items that should be hidden on the Lite site
+    .filter(item => !(item.hideOnLiteSite && isLite))
+    .map((item, index) => {
+      const { title, url } = item;
+      const active = index === activeIndex;
+      const a11yProps =
+        getTopItemA11yProps({ item, index, active, pageType }) ?? {};
 
-    if (hideOnLiteSite && isLite) return listAcc;
-
-    const listItem = (
-      <Li
-        key={`${title}-${url}`}
-        url={url}
-        active={active}
-        currentPageText={currentPage}
-        dir={dir}
-        clickTracker={clickTracker}
-        viewTracker={viewTracker}
-        {...a11yProps}
-      >
-        {title}
-      </Li>
-    );
-
-    return [...listAcc, listItem];
-  }, []);
+      return (
+        <Li
+          key={`${title}-${url}`}
+          url={url}
+          active={active}
+          currentPageText={currentPage}
+          dir={dir}
+          clickTracker={clickTracker}
+          viewTracker={viewTracker}
+          {...a11yProps}
+        >
+          {title}
+        </Li>
+      );
+    });
 
 // this checks if the current pages url matches the navigation item url. We need this to determine which nav item should be active
 const matchesUrl = (
