@@ -184,11 +184,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
-  /**
-   * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
-   */
-  const navigationItems = navItems || navFromServiceConfig;
-
   const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
   const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 
@@ -205,6 +200,15 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const bottomNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  /**
+   * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
+   */
+  const navigationItems = navItems || navFromServiceConfig;
+
+  if (!navigationItems || navigationItems.length === 0) {
+    return null;
+  }
 
   // Compute which top item is active based on current URL
   const topActiveIndex = getActiveTopIndex({
