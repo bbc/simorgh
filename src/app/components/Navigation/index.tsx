@@ -8,12 +8,7 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  Direction,
-  Navigation,
-  PageTypes,
-  Services,
-} from '#app/models/types/global';
+import { Direction, Navigation, PageTypes } from '#app/models/types/global';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import type { NavigationContainerProps } from './types';
@@ -59,7 +54,6 @@ type RenderListItemsArgs = {
   Li: React.ElementType;
   navigation: Navigation[];
   currentPage: string;
-  service: Services;
   dir: Direction;
   activeIndex: number;
   clickTracker: unknown;
@@ -72,7 +66,6 @@ const renderListItems = ({
   Li,
   navigation,
   currentPage,
-  service,
   dir,
   activeIndex,
   clickTracker,
@@ -94,7 +87,6 @@ const renderListItems = ({
         url={url}
         active={active}
         currentPageText={currentPage}
-        service={service}
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
@@ -176,7 +168,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const {
     translations,
     navigation: navFromServiceConfig,
-    service,
     dir,
   } = use(ServiceContext);
 
@@ -224,7 +215,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         Li: NavigationLi,
         navigation: navigationItems,
         currentPage,
-        service,
         dir,
         activeIndex: topActiveIndex,
         clickTracker: topNavClickTrackerHandler,
@@ -255,7 +245,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         Li: NavigationLi,
         navigation: bottomItems,
         currentPage,
-        service,
         dir,
         activeIndex: activeBottomIndex,
         clickTracker: bottomNavClickTrackerHandler,
@@ -280,7 +269,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         Li: DropdownLi,
         navigation: dropdownSource,
         currentPage,
-        service,
         dir,
         activeIndex: -1,
         clickTracker: dropdownNavClickTrackerHandler,
