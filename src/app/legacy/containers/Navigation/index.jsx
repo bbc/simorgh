@@ -1,12 +1,16 @@
 import { use } from 'react';
+import useToggle from '#app/hooks/useToggle';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
+import { AccountContext } from '#contexts/AccountContext';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -49,8 +53,20 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
+const NavigationContainer = ({
+  navItems,
+  propsForTopBarOJComponent,
+  children,
+}) => {
   const { isAmp, isLite } = use(RequestContext);
+
+  const { enabled: accountEnabled } = useToggle('account');
+  const { isSignedIn, isIdctaAvailable } = use(AccountContext);
+  const isHydrated = useHydrationDetection();
+
+  const showAccountPromoBanner =
+    isHydrated && accountEnabled && !isSignedIn && isIdctaAvailable;
+
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
     script,
@@ -148,7 +164,10 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
       script={script}
       service={service}
       blocks={blocks}
-    />
+    >
+      {showAccountPromoBanner && <AccountPromotionalBanner />}
+      {children}
+    </Navigation>
   );
 };
 
