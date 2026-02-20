@@ -174,6 +174,13 @@ export interface ItemTracker {
   text?: string;
   position?: number;
   duration?: number;
+  // these fields support portrait video skip-rate analysis in reverb/piano
+  totalDuration?: number;
+  completionRate?: number;
+  skipRate?: number;
+  navigationMethod?: string;
+  exitReason?: string;
+  versionId?: string;
   resourceId?: string;
   label?: string;
   mediaType?: string;
