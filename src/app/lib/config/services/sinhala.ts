@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     atiAnalyticsProducerName: 'SINHALA',
-    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'සහ',
+      readTime: {
+        readTimePrefix: 'කියවීමේ කාලය',
+        minute: 'මිනිත්තු',
+      },
       pagination: {
         page: 'පිටුව',
         previousPage: 'ආපසු',
@@ -360,26 +364,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ප්‍රධාන පුවත්',
         url: '/sinhala',
-      },
-      {
-        title: 'ශ්‍රී ලංකා',
-        url: '/sinhala/topics/cg7267dz901t',
-      },
-      {
-        title: 'ලෝකය',
-        url: '/sinhala/topics/c83plvepnq1t',
-      },
-      {
-        title: 'වීඩියෝ',
-        url: '/sinhala/topics/crldzm9n2lnt',
-      },
-      {
-        title: 'ක්‍රීඩා',
-        url: '/sinhala/topics/cvjp2jy9g2qt',
-      },
-      {
-        title: 'සෞඛ්‍ය',
-        url: '/sinhala/topics/cz74k723j57t',
       },
     ],
   },

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     atiAnalyticsProducerName: 'SWAHILI',
-    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
@@ -66,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
       readTime: {
         readTimePrefix: 'Muda wa kusoma',
         long: 'Taarifa ndefu',
@@ -377,36 +377,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Uchaguzi Tanzania',
-        url: '/swahili/topics/c5y9ng5gqert',
-      },
-      {
-        title: 'Michezo',
-        url: '/swahili/topics/ckdxndddjkxt',
-      },
-      {
-        title: 'Makala',
-        url: '/swahili/topics/c6z8lg838klt',
-      },
-      {
-        title: 'Afya',
-        url: '/swahili/topics/cvjp2jj60v3t',
-      },
-      {
-        title: 'Burudani',
-        url: '/swahili/topics/c2dwqddr7y3t',
-      },
-      {
-        title: 'Video',
-        url: '/swahili/topics/cz40xlzvj6kt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'Vipindi vya Redio',
-        url: '/swahili/topics/ckrdle3133xt',
-        hideOnLiteSite: true,
       },
     ],
   },

@@ -24,10 +24,17 @@ export type Toggles =
   | Record<string, ToggleDefinition>
   | { _environment: string };
 
+export type Navigation = {
+  title: string;
+  url: string;
+  hideOnLiteSite?: boolean;
+};
+
 export type ComponentExperimentProps = {
   sendOptimizelyEvents?: boolean;
   experimentName?: string;
   experimentVariant?: string;
+  referrer?: string | null;
 };
 
 export type ServerSideExperiment = {

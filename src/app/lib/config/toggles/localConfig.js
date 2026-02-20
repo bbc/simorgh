@@ -2,6 +2,10 @@ import SERVICES from '../services';
 
 export default {
   _environment: 'local',
+  account: {
+    enabled: true,
+    value: 'hindi',
+  },
   ads: {
     enabled: true,
   },

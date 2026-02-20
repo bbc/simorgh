@@ -17,6 +17,14 @@ const Comma = () => {
   );
 };
 
+const And = ({ andTranslation }) => {
+  return (
+    <span aria-hidden="true">
+      <Text css={BylineCss.and}>{` ${andTranslation} `}</Text>
+    </span>
+  );
+};
+
 const Contributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -27,6 +35,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
       reportingFrom = 'Reporting from',
       role = 'Role',
     } = {},
+    and = 'and',
   } = translations ?? {};
 
   const hasMultipleContributors = !isSingleContributor;
@@ -54,6 +63,9 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             role="list"
             key={authorName}
           >
+            {index === lastContributorIndex && !isSingleContributor && (
+              <And andTranslation={and} />
+            )}
             {authorImage && isSingleContributor && (
               <li
                 css={[
@@ -145,7 +157,8 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 </span>
                 {(location && <Comma />) ||
                   (hasMultipleContributors &&
-                    index !== lastContributorIndex && <Comma />)}
+                    index !== lastContributorIndex &&
+                    index !== lastContributorIndex - 1 && <Comma />)}
               </li>
             ) : null}
             {location ? (
@@ -163,9 +176,9 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                     {location}
                   </Text>
                 </span>
-                {hasMultipleContributors && index !== lastContributorIndex && (
-                  <Comma />
-                )}
+                {hasMultipleContributors &&
+                  index !== lastContributorIndex &&
+                  index !== lastContributorIndex - 1 && <Comma />}
               </li>
             ) : null}
           </ul>

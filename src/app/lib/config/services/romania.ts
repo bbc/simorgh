@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-romanian',
     atiAnalyticsProducerId: '136',
     atiAnalyticsProducerName: 'ROMANIAN',
-    useReverb: true,
     chartbeatDomain: 'romania.bbc.co.uk',
     brandName: 'BBC News România',
     product: 'BBC News',
@@ -45,6 +44,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'și',
+      readTime: {
+        readTimePrefix: 'Timp de lectură',
+        minute: 'min',
+      },
       pagination: {
         page: 'Pagina',
         previousPage: 'Înapoi',

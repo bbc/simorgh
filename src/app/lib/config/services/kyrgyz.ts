@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
     atiAnalyticsProducerName: 'KYRGYZ',
-    useReverb: true,
     chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'жана',
+      readTime: {
+        readTimePrefix: 'Окуу убактысы',
+        minute: 'мүнөт',
+      },
       pagination: {
         page: 'бет',
         previousPage: 'Артка',
@@ -357,26 +361,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Башкы бет',
         url: '/kyrgyz',
-      },
-      {
-        title: 'Видео жаңылыктар',
-        url: '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t',
-      },
-      {
-        title: 'Шайлоо-2025',
-        url: '/kyrgyz/topics/cpdmzj1382mt',
-      },
-      {
-        title: 'Кыргызстан',
-        url: '/kyrgyz/topics/cz74kjpyk07t',
-      },
-      {
-        title: 'Дүйнө',
-        url: '/kyrgyz/topics/ck2l9z012nkt',
-      },
-      {
-        title: 'Журнал',
-        url: '/kyrgyz/topics/czp8pjrkgp0t',
       },
     ],
   },

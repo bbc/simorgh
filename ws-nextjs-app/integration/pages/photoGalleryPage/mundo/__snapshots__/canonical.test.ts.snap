@@ -130,89 +130,13 @@ exports[`Canonical Photo Gallery Page Header Navigation link should match text a
 }
 `;
 
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "América Latina",
-  "url": "/mundo/topics/c7zp57yyz25t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Internacional",
-  "url": "/mundo/topics/c2lej05epw5t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "EE.UU.",
-  "url": "/mundo/topics/cdr5613yzwqt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Economía",
-  "url": "/mundo/topics/c06gq9v4xp3t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Ciencia",
-  "url": "/mundo/topics/ckdxnw959n7t",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Salud",
-  "url": "/mundo/topics/cpzd498zkxgt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "Cultura",
-  "url": "/mundo/topics/c2dwq9zyv4yt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 9`] = `
-{
-  "text": "Tecnología",
-  "url": "/mundo/topics/cyx5krnw38vt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 10`] = `
-{
-  "text": "Hay Festival",
-  "url": "/mundo/topics/cr50y7p7qyqt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 11`] = `
-{
-  "text": "Centroamérica cuenta",
-  "url": "/mundo/topics/c404v5z1k8wt",
-}
-`;
-
-exports[`Canonical Photo Gallery Page Header Navigation link should match text and url 12`] = `
-{
-  "text": "Podcasts",
-  "url": "/mundo/topics/ce3wlelkgggt",
-}
-`;
-
 exports[`Canonical Photo Gallery Page Image Caption should match text 1`] = `"Pie de foto, En tenis, las competidoras en los juegos de principios del siglo XX utilizaban vestidos y medias largas, algo impensable para los estándares de la actualidad. Fue hasta 1920 en Amberes cuando las mujeres tuvieron participación reconocida oficialmente."`;
 
 exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
 <img
   alt="Tenista de 1904"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

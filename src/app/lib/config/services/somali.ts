@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     atiAnalyticsProducerName: 'SOMALI',
-    useReverb: true,
     chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'iyo',
+      readTime: {
+        readTimePrefix: 'Waqtiga akhriska',
+        minute: 'daqiiqo',
+      },
       pagination: {
         page: 'Bog',
         previousPage: 'Biggii Hore',
@@ -362,38 +366,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'War',
         url: '/somali',
-      },
-      {
-        title: 'Siyaasad',
-        url: '/somali/topics/cwr9jry737xt',
-      },
-      {
-        title: 'Soomaali',
-        url: '/somali/topics/cpzd4zk7qrjt',
-      },
-      {
-        title: 'Raadiye',
-        url: '/somali/topics/cn6rqlrkm0pt',
-      },
-      {
-        title: 'Muuqaal',
-        url: '/somali/topics/c7pl4k5r9xxt',
-      },
-      {
-        title: 'Haween',
-        url: '/somali/topics/cxnykn5732gt',
-      },
-      {
-        title: 'Ciyaaro',
-        url: '/somali/topics/cpzd4zj1pn2t',
-      },
-      {
-        title: 'Saynis iyo Caafimaad',
-        url: '/somali/topics/c2dr4lek2r9t',
-      },
-      {
-        title: 'Fan iyo Dhaqan',
-        url: '/somali/topics/cwy5g18443dt',
       },
     ],
   },

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     atiAnalyticsProducerName: 'AZERI',
-    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'və',
+      readTime: {
+        readTimePrefix: 'Oxuma vaxtı',
+        minute: 'dəq',
+      },
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',
@@ -380,26 +384,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Xəbərlər',
         url: '/azeri',
-      },
-      {
-        title: 'Azərbaycan',
-        url: '/azeri/topics/c7zp571g7y7t',
-      },
-      {
-        title: 'Region',
-        url: '/azeri/topics/czpveq9ll8pt',
-      },
-      {
-        title: 'Beynəlxalq',
-        url: '/azeri/topics/cde15l4vn02t',
-      },
-      {
-        title: 'Sağlamlıq',
-        url: '/azeri/topics/c6vzyk7592nt',
-      },
-      {
-        title: 'Sizin hekayələriniz',
-        url: '/azeri/topics/cd9y5yjez4lt',
       },
     ],
   },

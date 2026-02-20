@@ -6,7 +6,7 @@
   "configurations": [
     {
       "type": "node",
-      "runtimeVersion": "18",
+      "runtimeVersion": "22",
       "request": "launch",
       "name": "Debug Express App",
       "program": "${workspaceFolder}/node_modules/webpack/bin/webpack.js",

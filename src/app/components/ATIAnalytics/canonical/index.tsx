@@ -1,9 +1,7 @@
 import { useEffect, useState, use } from 'react';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { Helmet } from 'react-helmet';
-import { enforceLegacyDestinationForJapanese } from '#app/lib/analyticsUtils';
 import { addSendStaticBeaconToWindow } from '#app/lib/analyticsUtils/staticATITracking/sendStaticBeacon';
 import sendPageViewBeaconLite from '#app/lib/analyticsUtils/staticATITracking/processClientDeviceAndSendStaticBeacon';
 import sendBeacon from '#app/lib/analyticsUtils/sendBeacon';
@@ -14,15 +12,12 @@ import usePWAInstallTracker from '#app/hooks/usePWAInstallTracker';
 import { reverbUrlHelper } from '@bbc/reverb-url-helper';
 import useConnectionBackOnlineTracker from '#app/hooks/useConnectionBackOnlineTracker';
 import useConnectionTypeTracker from '#app/hooks/useConnectionTypeTracker';
+import usePWAOfflineTracking from '#app/hooks/usePWAOfflineTracking';
 import { ATIAnalyticsProps } from '../types';
 import getNoScriptTrackingPixelUrl from './getNoScriptTrackingPixelUrl';
 import sendPageViewBeaconOperaMini from './sendPageViewBeaconOperaMini';
 
-type ATIAnalyticsPropsExport = Pick<ATIAnalyticsProps, 'reverbParams'>;
-
-const renderNoScriptTrackingPixel = (
-  reverbParams: ATIAnalyticsPropsExport['reverbParams'],
-) => {
+const renderNoScriptTrackingPixel = ({ reverbParams }: ATIAnalyticsProps) => {
   return (
     <noscript id="analytics-noscript">
       <img
@@ -33,9 +28,7 @@ const renderNoScriptTrackingPixel = (
         // lazy and didn't want to write a fuzzy matcher for the unit AND e2e
         // tests (you can't predict the class names chosen by emotion)
         style={{ position: 'absolute' }}
-        src={enforceLegacyDestinationForJapanese(
-          getNoScriptTrackingPixelUrl(reverbParams),
-        )}
+        src={getNoScriptTrackingPixelUrl({ reverbParams })}
       />
     </noscript>
   );
@@ -45,34 +38,24 @@ const addScript = ({ script, parameters, nonce }: InlineScriptProps) => {
   return <Helmet>{addInlineScript({ script, parameters, nonce })}</Helmet>;
 };
 
-const CanonicalATIAnalytics = ({
-  pageviewParams = '',
-  reverbParams,
-}: ATIAnalyticsProps) => {
+const CanonicalATIAnalytics = ({ reverbParams }: ATIAnalyticsProps) => {
   const { isLite, nonce } = use(RequestContext);
 
   usePWAInstallTracker();
 
   useConnectionTypeTracker();
   useConnectionBackOnlineTracker();
-
-  const atiPageViewUrlString =
-    getEnvConfig().SIMORGH_ATI_BASE_URL + pageviewParams;
+  usePWAOfflineTracking();
 
   const [reverbBeaconConfig] = useState(reverbParams);
 
-  const [atiPageViewUrl] = useState(atiPageViewUrlString);
-
   useEffect(() => {
-    if (!isOperaProxy()) sendBeacon(atiPageViewUrl, reverbBeaconConfig);
-  }, [atiPageViewUrl, reverbBeaconConfig]);
+    if (!isOperaProxy()) sendBeacon(reverbBeaconConfig);
+  }, [reverbBeaconConfig]);
 
-  const liteSiteReverbURL = enforceLegacyDestinationForJapanese(
-    reverbUrlHelper.getLitePageViewUrl(reverbParams),
-  );
-  const operaMiniPageViewReverbURL = enforceLegacyDestinationForJapanese(
-    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams),
-  );
+  const liteSiteReverbURL = reverbUrlHelper.getLitePageViewUrl(reverbParams);
+  const operaMiniPageViewReverbURL =
+    reverbUrlHelper.getOperaMiniPageViewUrl(reverbParams);
 
   return (
     <>
@@ -88,7 +71,7 @@ const CanonicalATIAnalytics = ({
           script: sendPageViewBeaconOperaMini(operaMiniPageViewReverbURL),
           nonce,
         })}
-      {renderNoScriptTrackingPixel(reverbParams)}
+      {renderNoScriptTrackingPixel({ reverbParams })}
     </>
   );
 };

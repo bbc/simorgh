@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     atiAnalyticsProducerName: 'GAHUZA',
-    useReverb: true,
     chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
@@ -61,6 +60,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
+      readTime: {
+        readTimePrefix: 'Igihe co gusoma',
+        minute: 'iminota',
+      },
       pagination: {
         previousPage: 'Subira inyuma',
         nextPage: 'Ibikurikira',
@@ -363,35 +367,6 @@ export const service: DefaultServiceConfig = {
       {
         title: "Urupapuro rw'itangiriro",
         url: '/gahuza',
-      },
-      {
-        title: 'Ibitero bya M23 muri Congo',
-        url: '/gahuza/topics/cx2qn9pqx4yt',
-      },
-      {
-        title: 'Ibiyaga binini',
-        url: '/gahuza/topics/c06gq67y3w5t',
-      },
-      {
-        title: 'Afrika',
-        url: '/gahuza/topics/crvnv566zx9t',
-      },
-      {
-        title: 'Mpuzamahanga',
-        url: '/gahuza/topics/c9dvd93jjkkt',
-      },
-      {
-        title: 'Ubuzima',
-        url: '/gahuza/topics/cnq68qp4kxjt',
-      },
-      {
-        title: 'Imikino',
-        url: '/gahuza/topics/c5qvpq0jzy7t',
-      },
-      {
-        title: 'Amajwi n’amashusho',
-        url: '/gahuza/topics/crldzm936jmt',
-        hideOnLiteSite: true,
       },
     ],
   },

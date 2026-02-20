@@ -1,13 +1,11 @@
 import { interceptATIAnalyticsBeacons, COMPONENTS } from '../helpers';
 import { assertATIComponentClickEvent, assertATIComponentViewEvent } from '.';
+import interceptExternalLinks from '../../../../support/helpers/interceptExternalLinks';
 
 const { MESSAGE_BANNER } = COMPONENTS;
 
 export const assertMessageBannerComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -23,8 +21,6 @@ export const assertMessageBannerComponentView = ({
     assertATIComponentViewEvent({
       component: MESSAGE_BANNER,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -33,9 +29,6 @@ export const assertMessageBannerComponentView = ({
 
 export const assertMessageBannerComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -43,6 +36,7 @@ export const assertMessageBannerComponentClick = ({
   it('should send a click event for the Message Banner component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+    interceptExternalLinks({ httpCode: 200 });
 
     cy.get('[data-testid="message-banner-1"]').scrollIntoView({
       duration: 1000,
@@ -54,8 +48,6 @@ export const assertMessageBannerComponentClick = ({
     assertATIComponentClickEvent({
       component: MESSAGE_BANNER,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
       siteId,
     });

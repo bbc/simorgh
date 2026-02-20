@@ -130,47 +130,13 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Видео жаңылыктар",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Шайлоо-2025",
-  "url": "/kyrgyz/topics/cpdmzj1382mt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Журнал",
-  "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

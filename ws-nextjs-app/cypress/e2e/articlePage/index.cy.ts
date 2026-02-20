@@ -20,7 +20,6 @@ import {
   assertTopBarOJComponentClick,
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertArticleLiteSiteLinkComponentClick,
   assertArticleLiteSiteLinkComponentView,
@@ -58,9 +57,9 @@ import {
   assertSocialEmbedComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/socialEmbed';
 import {
-  assertScrollablePromoComponentClick,
-  assertScrollablePromoComponentView,
-} from '../specialFeatures/atiAnalytics/assertions/scrollablePromo';
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
 import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
 import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
@@ -289,7 +288,6 @@ const atiAnalyticsTestSuites = [
     siteId: 51,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    useReverb: true,
     tests: [
       assertPageView,
       assertLatestMediaComponentView,
@@ -317,7 +315,6 @@ const atiAnalyticsTestSuites = [
     siteId: 40,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertArticleLiteSiteLinkComponentView,
@@ -344,7 +341,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertFeaturesAnalysisComponentView,
@@ -368,7 +364,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertFeaturesAnalysisComponentView,
@@ -381,8 +376,8 @@ const atiAnalyticsTestSuites = [
       assertRelatedContentComponentClick,
       assertTopStoriesComponentView,
       assertTopStoriesComponentClick,
-      assertScrollablePromoComponentClick,
-      assertScrollablePromoComponentView,
+      assertArticleLinksBlockComponentClick,
+      assertArticleLinksBlockComponentView,
     ],
   },
   {
@@ -393,7 +388,6 @@ const atiAnalyticsTestSuites = [
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'article-sfv',
-    useReverb: true,
     tests: [
       assertPageView,
       assertLatestMediaComponentClick,
@@ -412,7 +406,6 @@ const atiAnalyticsTestSuites = [
     siteId: 135,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
     tests: [
       assertPageView,
       assertTopBarOJComponentClick,
@@ -433,24 +426,6 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   };
 });
 
-// Additional scenarios for news on higher environments
-ampTestSuites.push(
-  ...[
-    {
-      path: '/news/articles/cn7k01xp8kxo.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-    {
-      path: '/news/articles/cj7xrxz0e8zo.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-  ],
-);
-
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
   .map(testSuite => {
@@ -461,40 +436,14 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
-const atiAmpTestSuites = atiAnalyticsTestSuites
-  .map(testSuite => {
-    return {
-      ...testSuite,
-      path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-      useReverb: true,
-      applicationType: 'amp',
-      tests: [assertPageView],
-    };
-  })
-  .concat([
-    {
-      path: 'news/articles/c0g992jmmkko.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c0g992jmmkko.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      useReverb: true,
-      tests: [assertPageView],
-    },
-    {
-      path: '/news/articles/c9djwv3q6w9o.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      pageIdentifier: 'news.articles.c9djwv3q6w9o.page',
-      siteId: 64,
-      applicationType: 'amp',
-      contentType: 'article',
-      useReverb: true,
-      tests: [assertPageView],
-    },
-  ]);
+const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
 
 const atiLiteTestSuites = atiAnalyticsTestSuites
   .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')
@@ -524,7 +473,6 @@ const atiLiteTestSuites = atiAnalyticsTestSuites
       ...testSuite,
       path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
       applicationType: 'lite',
-      useReverb: true,
       tests: [...liteSiteTests],
     };
   });
@@ -537,7 +485,6 @@ runTestsForPage({
     ...atiAnalyticsTestSuites.filter(({ service }) => service !== 'news'),
     ...atiLiteTestSuites,
   ] as unknown as TestDataType[],
-  beforeAll: [setUserIDCookie],
 });
 
 runTestsForPage({

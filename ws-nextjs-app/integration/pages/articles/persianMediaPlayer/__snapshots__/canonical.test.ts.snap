@@ -127,90 +127,6 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "جنگ اسرائیل-ایران",
-  "url": "/persian/topics/cwy6874zgpqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "پخش زنده",
-  "url": "/persian/media-49522521",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-{
-  "text": "ویدیو",
-  "url": "/persian/topics/c6z7mnr559gt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-{
-  "text": "تلویزیون",
-  "url": "/persian/topics/cw9qgeqd1zqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-{
-  "text": "ايران",
-  "url": "/persian/topics/ckdxnwvwwjnt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "افغانستان",
-  "url": "/persian/topics/cvjp23v3083t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-{
-  "text": "جهان",
-  "url": "/persian/topics/c1d8ye58xl8t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 9`] = `
-{
-  "text": "هنر",
-  "url": "/persian/topics/c9wpm0epm45t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 10`] = `
-{
-  "text": "ورزش",
-  "url": "/persian/topics/cnq6879k7yjt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 11`] = `
-{
-  "text": "اقتصاد",
-  "url": "/persian/topics/cl8l9mvlllqt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 12`] = `
-{
-  "text": "دانش",
-  "url": "/persian/topics/ckdxnwr4r1yt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 13`] = `
-{
-  "text": "فراتر از خبر",
-  "url": "/persian/topics/cxr3ex12k6et",
-}
-`;
-
 exports[`Canonical Articles Image Caption should match text 1`] = `"توضیح تصویر، این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد."`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
@@ -218,6 +134,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="این تصویر آزمایشی ، کپی رایت بی بی سی ، نقشه ای از فرانسه را نشان می دهد. تصویر در سه بلوک اول است و این عنوان را دارد.
 "
   class="css-1seqhu9"
+  fetchpriority="high"
   height="549"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"

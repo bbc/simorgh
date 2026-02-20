@@ -139,61 +139,13 @@ exports[`Canonical Articles Header Navigation link should match text and url 1`]
 }
 `;
 
-exports[`Canonical Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "Ibitero bya M23 muri Congo",
-  "url": "/gahuza/topics/cx2qn9pqx4yt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "Ibiyaga binini",
-  "url": "/gahuza/topics/c06gq67y3w5t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 4`] = `
-{
-  "text": "Afrika",
-  "url": "/gahuza/topics/crvnv566zx9t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 5`] = `
-{
-  "text": "Mpuzamahanga",
-  "url": "/gahuza/topics/c9dvd93jjkkt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 6`] = `
-{
-  "text": "Ubuzima",
-  "url": "/gahuza/topics/cnq68qp4kxjt",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "Imikino",
-  "url": "/gahuza/topics/c5qvpq0jzy7t",
-}
-`;
-
-exports[`Canonical Articles Header Navigation link should match text and url 8`] = `
-{
-  "text": "Amajwi n’amashusho",
-  "url": "/gahuza/topics/crldzm936jmt",
-}
-`;
-
 exports[`Canonical Articles Image Caption should match text 1`] = `"Insiguro y'isanamu, Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"`;
 
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="Alexei Navalny na Yulia Navalnaya bari i Moscow mu 2013 muri metingi yo kwiyamamaza kw'abakuru b'imijyi"
   class="css-1seqhu9"
+  fetchpriority="high"
   height="864"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
