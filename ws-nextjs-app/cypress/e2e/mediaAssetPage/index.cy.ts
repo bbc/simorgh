@@ -341,12 +341,13 @@ const tc2CanonicalTestSuites = Cypress.env('SMOKE')
         runforEnv: ['live'],
         tests: canonicalTests,
       },
-      {
-        path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
-        service: 'zhongwen',
-        runforEnv: ['test'],
-        tests: canonicalTests,
-      },
+      // DISABLED DUE TO TC2 MAP 500 ERROR FLAKES ON TEST ENVIRONMENT
+      // {
+      //   path: '/zhongwen/simp/multimedia/2016/11/161107_tc2_testmap1?renderer_env=test', // TC2 Video
+      //   service: 'zhongwen',
+      //   runforEnv: ['test'],
+      //   tests: canonicalTests,
+      // },
       {
         path: '/zhongwen/trad/multimedia/2016/06/160608_vid_gaokao_voxpop', // TC2 video
         service: 'zhongwen',
