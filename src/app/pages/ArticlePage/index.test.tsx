@@ -16,6 +16,7 @@ import {
   articleDataRussianWithPVButNoWatchMomentsTranslation,
   articleDataPortugueseWithPVNotUnderHeadline,
   articleDataPortugueseWithPVUnderHeadline,
+  articleDataHindi,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -57,7 +58,6 @@ const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
 atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
 
 jest.mock('#app/components/OptimizelyPageMetrics');
-
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
   ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
@@ -1015,6 +1015,96 @@ describe('Article Page', () => {
       );
 
       expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Adaptive media curation', () => {
+    const mediaCurationFixture = {
+      title: 'वीडियो',
+      curationId: 'urn:bbc:vivo:curation:test-id',
+      link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
+      summaries: [
+        {
+          type: 'video',
+          title: 'वीडियो 1',
+          link: 'https://www.bbc.com/hindi/articles/test-video-1',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/test.jpg.webp',
+          imageAlt: 'वीडियो 1',
+        },
+      ],
+    };
+    const relatedContentBlock = {
+      id: 'related-content-test-id',
+      type: 'relatedContent',
+      model: {
+        blocks: [],
+      },
+      position: [99],
+    };
+
+    const pageDataWithMediaCuration = {
+      ...articleDataHindi,
+      secondaryColumn: {
+        topStories: [],
+        features: [],
+        mediaCuration: mediaCurationFixture,
+      },
+    };
+    const pageDataWithMediaCurationAndRelatedContent = {
+      ...pageDataWithMediaCuration,
+      content: {
+        ...pageDataWithMediaCuration.content,
+        model: {
+          ...pageDataWithMediaCuration.content.model,
+          blocks: [
+            ...(pageDataWithMediaCuration.content?.model?.blocks || []),
+            relatedContentBlock,
+          ],
+        },
+      },
+    } as Article;
+
+    it('renders media curation when adaptive variation is forced locally', () => {
+      const { queryByTestId } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithMediaCuration} />
+        </Context>,
+      );
+
+      expect(queryByTestId('adaptive-media-curation')).toBeInTheDocument();
+      expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
+    });
+
+    it('renders media curation after related content when related content is present', () => {
+      const { queryByTestId, container } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[data-e2e="related-content-heading"]',
+      );
+      const adaptiveMediaCuration = queryByTestId('adaptive-media-curation');
+
+      expect(relatedContentSection).toBeInTheDocument();
+      expect(adaptiveMediaCuration).toBeInTheDocument();
+      expect(
+        relatedContentSection?.compareDocumentPosition(
+          adaptiveMediaCuration as Node,
+        ) & Node.DOCUMENT_POSITION_FOLLOWING,
+      ).toBeTruthy();
+    });
+
+    it('does not render media curation when data is missing', () => {
+      const { queryByTestId } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={articleDataHindi} />
+        </Context>,
+      );
+
+      expect(queryByTestId('adaptive-media-curation')).not.toBeInTheDocument();
     });
   });
 
