@@ -8,8 +8,12 @@ import {
 } from '#app/models/types/media';
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
+import { Dispatch, SetStateAction } from 'react';
 
 export type SMPEvent = {
+  detail?: {
+    url?: string;
+  };
   playlist?: {
     items: PlaylistItem[];
   };
@@ -23,7 +27,10 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit'
   | 'statsNavigation'
-  | 'pause';
+  | 'pause'
+  | 'uiControlBarShown'
+  | 'uiControlBarHidden'
+  | 'mediaItemChanged';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
@@ -34,6 +41,7 @@ export type Playlist = {
   summary?: string;
   holdingImageURL?: string;
   items: PlaylistItem[] | LegacyPlayListItem[];
+  shareUrl?: string | null;
   guidance?: string;
   embedRights?: 'allowed';
   liveRewind?: boolean;
@@ -163,11 +171,14 @@ export type Player = {
   next: () => void;
   bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
-    pluginName: { [key: string]: string },
+    pluginName: {
+      [key: string]: string | boolean | undefined;
+    },
     parameters?: {
-      name: string;
-      data: {
-        adTag: string;
+      name?: string;
+      setPluginContainer?: Dispatch<SetStateAction<HTMLElement | null>>;
+      data?: {
+        adTag?: string;
       };
     },
   ) => void;
@@ -288,6 +299,7 @@ export type PortraitClipMediaBlock = {
       altText?: string;
     }[];
     video: {
+      shareUrl?: string | null;
       id: string;
       title: string;
       holdingImageURL?: string;

@@ -1,4 +1,4 @@
-import { use, useRef, useState } from 'react';
+import { use, useCallback, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
@@ -14,6 +14,8 @@ import PortraitCarouselNavigation from './PortraitVideoCarouselNavigation';
 import Heading from '../Heading';
 import PortraitVideoNoJs from './PortraitVideoNoJs';
 import { PortraitClipMediaBlock } from '../MediaLoader/types';
+import { PluginCacheProvider } from './pluginCacheProvider';
+import VideoOverlay from './VideoOverlay/index';
 
 type PortraitVideoCarouselProps = {
   title: string;
@@ -35,6 +37,15 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+  const [videoOverlayContainer, setVideoOverlayContainer] =
+    useState<HTMLElement | null>(null);
+  const setVideoOverlayContainerRef = useRef(setVideoOverlayContainer);
+  const [currentVideo, setCurrentVideo] = useState<
+    PortraitClipMediaBlock | undefined
+  >();
+  const [controlsDisplayed, setControlsDisplayed] = useState(false);
+
+  const hasShareApi = typeof navigator !== 'undefined' && 'share' in navigator;
 
   const { isLite, isAmp, nonce } = use(RequestContext);
 
@@ -61,19 +72,20 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-  if (isLite || isAmp) return null;
-
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
+      setCurrentVideo(blocks[index]);
       setIsModalOpen(true);
     }
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
-  };
+  }, []);
+
+  if (isLite || isAmp) return null;
 
   return (
     <>
@@ -130,8 +142,23 @@ const PortraitVideoCarousel = ({
               onClose={handleCloseModal}
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}
+              setVideoOverlayContainerRef={setVideoOverlayContainerRef}
+              setCurrentVideo={setCurrentVideo}
+              setControlsDisplayed={setControlsDisplayed}
             />,
             document.body,
+          )}
+        {videoOverlayContainer &&
+          selectedVideoIndex !== null &&
+          hasShareApi &&
+          createPortal(
+            <PluginCacheProvider container={videoOverlayContainer}>
+              <VideoOverlay
+                currentVideo={currentVideo}
+                controlsDisplayed={controlsDisplayed}
+              />
+            </PluginCacheProvider>,
+            videoOverlayContainer,
           )}
       </section>
     </>

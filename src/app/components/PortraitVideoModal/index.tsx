@@ -66,8 +66,8 @@ const getCurrentIndex = ({
   player?: Player;
 }): number => {
   const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
-  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
+  const [currentVideo] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentVideo?.vpid || currentVideo?.versionID;
 
   const currentIndex = blocks?.findIndex(
     item =>
@@ -105,7 +105,6 @@ export const playlistLoadedCallback = (
 
   const previous = blocks?.[currentIndex - 1]?.model;
   const next = blocks?.[currentIndex + 1]?.model;
-
   if (previous) {
     player.setPreviousPlaylist(
       {
@@ -143,7 +142,6 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
       selectedVideo: blocks?.[newIndex],
@@ -179,14 +177,32 @@ export const playbackEndedCallback = async (
   }
 };
 
+const mediaItemChangedCallback = async ({
+  e,
+  blocks,
+  setCurrentVideo,
+}: {
+  e: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
+}) => {
+  const currentIndex = getCurrentIndex({ e, blocks });
+  setCurrentVideo?.(blocks[currentIndex]);
+};
+
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
+  const player2 = window.embeddedMedia.api.players().bbcMediaPlayer0;
+  console.log('player', getPlayerInstance(), player, 'player2', player2);
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
-const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+export const handlePrevNextVideo = ({
+  direction,
+}: {
+  direction: 'previous' | 'next';
+}) => {
   const player = getPlayerInstance();
-
   player?.[direction]?.();
 };
 
@@ -196,6 +212,11 @@ export interface PortraitVideoModalProps {
   selectedVideoIndex: number;
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
+  setVideoOverlayContainerRef?: React.RefObject<
+    React.Dispatch<React.SetStateAction<HTMLElement | null>>
+  >;
+  setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
+  setControlsDisplayed?: (displayed: boolean) => void;
 }
 
 const PortraitVideoModal = ({
@@ -203,6 +224,9 @@ const PortraitVideoModal = ({
   onClose,
   selectedVideoIndex,
   eventTrackingData,
+  setVideoOverlayContainerRef,
+  setCurrentVideo,
+  setControlsDisplayed,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -313,7 +337,11 @@ const PortraitVideoModal = ({
           <button
             id="previous-video-button"
             type="button"
-            onClick={() => handlePrevNextVideo('previous')}
+            onClick={() =>
+              handlePrevNextVideo({
+                direction: 'previous',
+              })
+            }
             css={styles.navButton}
             aria-label="Previous video"
             data-testid="previous-video-button"
@@ -324,7 +352,11 @@ const PortraitVideoModal = ({
           <button
             id="next-video-button"
             type="button"
-            onClick={() => handlePrevNextVideo('next')}
+            onClick={() =>
+              handlePrevNextVideo({
+                direction: 'next',
+              })
+            }
             css={styles.navButton}
             aria-label="Next video"
             data-testid="next-video-button"
@@ -336,9 +368,14 @@ const PortraitVideoModal = ({
         <MediaLoader
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
+          setVideoOverlayContainerRef={setVideoOverlayContainerRef}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            pluginLoaded: pluginLoadedCallback,
+            pluginLoaded: e => {
+              if (e?.detail?.url && e?.detail?.url.includes('fullscreen')) {
+                pluginLoadedCallback();
+              }
+            },
             fullscreenExit: onClose,
             statsNavigation: e =>
               statsNavigationCallback(
@@ -349,6 +386,10 @@ const PortraitVideoModal = ({
               ),
             pause: e =>
               playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+            mediaItemChanged: e =>
+              mediaItemChangedCallback({ e, blocks, setCurrentVideo }),
+            uiControlBarShown: () => setControlsDisplayed?.(true),
+            uiControlBarHidden: () => setControlsDisplayed?.(false),
           }}
         />
         <button

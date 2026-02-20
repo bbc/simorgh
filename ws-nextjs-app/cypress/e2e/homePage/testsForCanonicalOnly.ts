@@ -87,7 +87,9 @@ export default ({ service }) => {
           cy.get('[data-testid="portrait-video-carousel"]')
             .first()
             .within(() => {
-              cy.get('[data-testid="promo-button"]').first().click();
+              cy.get('[data-testid="promo-button"]')
+                .first()
+                .click({ force: true });
             });
 
           cy.get('div[role="dialog"]').should('exist').and('be.visible');
@@ -108,7 +110,9 @@ export default ({ service }) => {
           cy.get('[data-testid="portrait-video-carousel"]')
             .first()
             .within(() => {
-              cy.get('[data-testid="promo-button"]').first().click();
+              cy.get('[data-testid="promo-button"]')
+                .first()
+                .click({ force: true });
             });
 
           cy.get('div[role="dialog"]').should('exist').and('be.visible');

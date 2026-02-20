@@ -1,4 +1,12 @@
-import { use, useEffect, useRef, useState } from 'react';
+import {
+  Dispatch,
+  RefObject,
+  SetStateAction,
+  use,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -13,6 +21,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import {
   BumpType,
   EventMapping,
@@ -109,6 +118,10 @@ type MediaContainerProps = {
   uniqueId?: string;
   noJsMessage?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainerRef?: RefObject<
+    Dispatch<SetStateAction<HTMLElement | null>>
+  >;
+  playerKey: string;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -120,11 +133,21 @@ const MediaContainer = ({
   uniqueId,
   noJsMessage,
   eventMapping,
+  setVideoOverlayContainerRef,
+  playerKey,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
-
+  const playerKeyRef = useRef<string | null>(null);
+  const {
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = getEnvConfig();
+  const videoOverlayPlugin = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}smpPlugins/video-overlay-plugin.js?v=1`;
   useEffect(() => {
+    if (!playerElementRef.current || playerKeyRef.current === playerKey) return;
+
+    playerKeyRef.current = playerKey;
     try {
       window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
@@ -185,7 +208,21 @@ const MediaContainer = ({
                 }
               });
             }
-
+            if (
+              setVideoOverlayContainerRef &&
+              playerConfig.ui?.swipable?.enabled
+            ) {
+              mediaPlayer.loadPlugin(
+                {
+                  html: videoOverlayPlugin,
+                  playerOnly: true, // do not enable this plugin for old J2 version of the SMP player due to different UI },
+                  waitOnPluginLoad: true,
+                },
+                {
+                  setPluginContainer: setVideoOverlayContainerRef.current,
+                },
+              );
+            }
             mediaPlayer.load();
           };
 
@@ -195,7 +232,15 @@ const MediaContainer = ({
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId, eventMapping]);
+  }, [
+    eventMapping,
+    playerConfig,
+    playerKey,
+    setVideoOverlayContainerRef,
+    showAds,
+    uniqueId,
+    videoOverlayPlugin,
+  ]);
 
   return (
     <div
@@ -217,6 +262,9 @@ type Props = {
   embedded?: boolean;
   uniqueId?: string;
   eventMapping?: EventMapping;
+  setVideoOverlayContainerRef?: RefObject<
+    Dispatch<SetStateAction<HTMLElement | null>>
+  >;
 };
 
 const MediaLoader = ({
@@ -225,6 +273,7 @@ const MediaLoader = ({
   embedded,
   uniqueId,
   eventMapping,
+  setVideoOverlayContainerRef,
 }: Props) => {
   const { lang, service, translations } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
@@ -276,6 +325,13 @@ const MediaLoader = ({
     orientation = 'landscape',
     ampIframeUrl,
   } = config;
+
+  const { clipPID } = playerConfig?.statsObject || {};
+  const { skin } = playerConfig?.ui || {};
+
+  const playerKey = `${clipPID}-${skin}-${showAds}`;
+
+  if (isLite || !config || !playerConfig) return null;
 
   const captionBlock = getCaptionBlock(blocks, pageType);
   const isPortrait = orientation === 'portrait';
@@ -340,6 +396,8 @@ const MediaLoader = ({
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
                 eventMapping={eventMapping}
+                setVideoOverlayContainerRef={setVideoOverlayContainerRef}
+                playerKey={playerKey}
               />
             )}
           </>
