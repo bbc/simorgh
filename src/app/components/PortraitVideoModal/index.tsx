@@ -1,7 +1,8 @@
 import { Global } from '@emotion/react';
-import { use, useEffect, useRef } from 'react';
+import { use, useCallback, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
+import { GROUP_3_MIN_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import {
   Player,
   Playlist,
@@ -17,6 +18,29 @@ import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
+
+//  disabled so skip-rate tracking runs on both mobile and desktop.
+const MOBILE_ONLY_SKIP_RATE_TRACKING = false;
+const MOBILE_BREAKPOINT_QUERY = `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`;
+// this name lets reverb/piano group all skip-rate events together.
+const SKIP_RATE_COMPONENT_NAME = 'portrait-video-skip-rate';
+const SKIP_RATE_EVENT_GROUPING_NAME = 'portrait-video-skip-rate';
+
+// reasoning for end of video tracked viewing session
+type SkipTrackingExitReason =
+  | 'navigation'
+  | 'autoplay-end'
+  | 'playlist-sync'
+  | 'close-button'
+  | 'backdrop'
+  | 'escape'
+  | 'fullscreen-exit'
+  | 'unmount';
+
+type ActiveVideoSession = {
+  index: number;
+  startedAt: number;
+};
 
 type ModalTrackingParameters = {
   eventTrackingData: EventTrackingData;
@@ -50,6 +74,47 @@ const getEventTrackingData = ({
       duration: moment.duration(duration).asMilliseconds(),
       resourceId: id,
     },
+  };
+};
+
+// this gates skip-rate tracking so we can ship mobile first and expand later
+const shouldTrackSkipRate = () => {
+  if (!MOBILE_ONLY_SKIP_RATE_TRACKING) {
+    return true;
+  }
+
+  return (
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia(MOBILE_BREAKPOINT_QUERY).matches
+  );
+};
+
+const isValidVideoIndex = (
+  videoIndex: number,
+  blocks: PortraitClipMediaBlock[],
+) => videoIndex >= 0 && videoIndex < blocks.length;
+
+// this converts watched time into completion and skip fractions in the 0..1 range
+const calculateSkipRateMetrics = ({
+  watchedDurationMs,
+  totalDurationMs,
+}: {
+  watchedDurationMs: number;
+  totalDurationMs: number;
+}) => {
+  const boundedWatchedDurationMs = Math.min(
+    Math.max(watchedDurationMs, 0),
+    totalDurationMs,
+  );
+  const completionRate = Number(
+    (boundedWatchedDurationMs / totalDurationMs).toFixed(4),
+  );
+
+  return {
+    watchedDurationMs: boundedWatchedDurationMs,
+    completionRate,
+    skipRate: Number((1 - completionRate).toFixed(4)),
   };
 };
 
@@ -143,10 +208,13 @@ export const statsNavigationCallback = async (
     const currentIndex = getCurrentIndex({ e, blocks });
 
     const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+    const selectedVideo = blocks?.[newIndex];
+
+    if (!selectedVideo) return;
 
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
-      selectedVideo: blocks?.[newIndex],
+      selectedVideo,
       selectedVideoIndex: newIndex,
     });
 
@@ -168,10 +236,13 @@ export const playbackEndedCallback = async (
     const currentIndex = getCurrentIndex({ blocks, player });
 
     const newIndex = currentIndex + 1;
+    const selectedVideo = blocks?.[newIndex];
+
+    if (!selectedVideo) return;
 
     const newEventTrackingData = getEventTrackingData({
       eventTrackingData,
-      selectedVideo: blocks?.[newIndex],
+      selectedVideo,
       selectedVideoIndex: newIndex,
     });
 
@@ -229,20 +300,217 @@ const PortraitVideoModal = ({
       selectedVideoIndex,
     }),
   );
+  // this sends the custom skip-rate event while reusing existing view tracking transport.
+  const skipRateTracker = useSwipeTracker({
+    ...eventTrackingData,
+    componentName: SKIP_RATE_COMPONENT_NAME,
+    eventGroupingName: SKIP_RATE_EVENT_GROUPING_NAME,
+    alwaysInView: true,
+  });
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
+  // this stores timing state for the currently active video in the modal.
+  const activeVideoSessionRef = useRef<ActiveVideoSession | null>(null);
+  // this avoids duplicate close tracking when multiple close paths fire.
+  const modalHasClosedRef = useRef(false);
+
+  // this starts timing for a specific video index.
+  const startVideoSession = useCallback(
+    (videoIndex: number) => {
+      if (!shouldTrackSkipRate()) return;
+
+      if (!isValidVideoIndex(videoIndex, blocks)) {
+        activeVideoSessionRef.current = null;
+        return;
+      }
+
+      activeVideoSessionRef.current = {
+        index: videoIndex,
+        startedAt: Date.now(),
+      };
+    },
+    [blocks],
+  );
+
+  // this emits one skip-rate event for the active video session.
+  // watched time here is modal dwell time, not smp playhead time.
+  const trackSkipRateForActiveVideo = useCallback(
+    async ({
+      exitReason,
+      navigationMethod,
+    }: {
+      exitReason: SkipTrackingExitReason;
+      navigationMethod?: string;
+    }) => {
+      if (!shouldTrackSkipRate()) return;
+
+      const activeVideoSession = activeVideoSessionRef.current;
+
+      if (
+        !activeVideoSession ||
+        !isValidVideoIndex(activeVideoSession.index, blocks)
+      ) {
+        return;
+      }
+
+      const activeVideo = blocks[activeVideoSession.index];
+      const totalDurationMs = moment
+        .duration(activeVideo?.model?.video?.version?.duration)
+        .asMilliseconds();
+
+      if (!Number.isFinite(totalDurationMs) || totalDurationMs <= 0) return;
+
+      const { watchedDurationMs, completionRate, skipRate } =
+        calculateSkipRateMetrics({
+          watchedDurationMs: Date.now() - activeVideoSession.startedAt,
+          totalDurationMs,
+        });
+
+      await skipRateTracker({
+        ...eventTrackingData,
+        componentName: SKIP_RATE_COMPONENT_NAME,
+        eventGroupingName: SKIP_RATE_EVENT_GROUPING_NAME,
+        alwaysInView: true,
+        groupTracker: {
+          ...eventTrackingData.groupTracker,
+          type: 'portrait-video-modal',
+        },
+        itemTracker: {
+          type: 'portrait-video',
+          text: activeVideo?.model?.video?.title,
+          mediaType: 'video',
+          position: activeVideoSession.index + 1,
+          duration: watchedDurationMs,
+          totalDuration: totalDurationMs,
+          completionRate,
+          skipRate,
+          navigationMethod,
+          exitReason,
+          versionId: activeVideo?.model?.video?.version?.id,
+          resourceId: activeVideo?.model?.video?.id,
+        },
+      });
+    },
+    [blocks, eventTrackingData, skipRateTracker],
+  );
+
+  // this finalises the current video's metrics and then starts timing the next one.
+  const trackVideoTransition = useCallback(
+    async ({
+      nextIndex,
+      exitReason,
+      navigationMethod,
+    }: {
+      nextIndex: number;
+      exitReason: SkipTrackingExitReason;
+      navigationMethod?: string;
+    }) => {
+      await trackSkipRateForActiveVideo({ exitReason, navigationMethod });
+      startVideoSession(nextIndex);
+    },
+    [startVideoSession, trackSkipRateForActiveVideo],
+  );
+
+  // this centralises close tracking so every close path behaves consistently.
+  const handleModalClose = useCallback(
+    (exitReason: SkipTrackingExitReason) => {
+      if (!modalHasClosedRef.current) {
+        modalHasClosedRef.current = true;
+        trackSkipRateForActiveVideo({ exitReason }).catch(() => undefined);
+        activeVideoSessionRef.current = null;
+      }
+
+      onClose();
+    },
+    [onClose, trackSkipRateForActiveVideo],
+  );
+
+  // this keeps local timing in sync with whichever video smp actually loads.
+  const handlePlaylistLoaded = useCallback(
+    (e: SMPEvent) => {
+      const currentIndex = getCurrentIndex({ e, blocks });
+      const activeVideoIndex = activeVideoSessionRef.current?.index;
+
+      if (isValidVideoIndex(currentIndex, blocks)) {
+        if (activeVideoIndex == null) {
+          startVideoSession(currentIndex);
+        } else if (activeVideoIndex !== currentIndex) {
+          trackVideoTransition({
+            nextIndex: currentIndex,
+            exitReason: 'playlist-sync',
+            navigationMethod: 'playlistLoaded',
+          }).catch(() => undefined);
+        }
+      }
+
+      playlistLoadedCallback(e, blocks);
+    },
+    [blocks, startVideoSession, trackVideoTransition],
+  );
+
+  // this tracks an intentional user navigation between videos.
+  const handleStatsNavigation = useCallback(
+    async (e: SMPEvent) => {
+      const currentIndex = getCurrentIndex({ e, blocks });
+      const nextIndex =
+        e?.direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+      if (
+        isValidVideoIndex(currentIndex, blocks) &&
+        isValidVideoIndex(nextIndex, blocks)
+      ) {
+        await trackVideoTransition({
+          nextIndex,
+          exitReason: 'navigation',
+          navigationMethod: e?.method ?? 'unknown',
+        });
+      }
+
+      await statsNavigationCallback(e, blocks, eventTrackingData, swipeTracker);
+    },
+    [blocks, eventTrackingData, swipeTracker, trackVideoTransition],
+  );
+
+  // this tracks autoplay moving from one video to the next after the current video ends.
+  const handlePlaybackEnded = useCallback(
+    async (e: SMPEvent) => {
+      const player = getPlayerInstance();
+      const hasEnded = Boolean(e?.ended);
+      const autoplayEnabled = Boolean(player?.settings?.().autoplay);
+
+      if (hasEnded && autoplayEnabled) {
+        const currentIndex = getCurrentIndex({ blocks, player });
+
+        if (isValidVideoIndex(currentIndex, blocks)) {
+          await trackVideoTransition({
+            nextIndex: currentIndex + 1,
+            exitReason: 'autoplay-end',
+            navigationMethod: 'autoplay',
+          });
+        }
+      }
+
+      await playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker);
+    },
+    [blocks, eventTrackingData, swipeTracker, trackVideoTransition],
+  );
+
+  // this starts the initial session when the modal mounts with a selected video.
+  useEffect(() => {
+    startVideoSession(selectedVideoIndex);
+  }, [selectedVideoIndex, startVideoSession]);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
       if (event.target === event.currentTarget) {
-        onClose();
+        handleModalClose('backdrop');
       }
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        onClose();
+        handleModalClose('escape');
       }
       // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
       if (event.key === 'Tab') {
@@ -280,11 +548,19 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
+      // this is a fallback so we still emit if react unmounts before an explicit close path runs.
+      if (!modalHasClosedRef.current) {
+        trackSkipRateForActiveVideo({ exitReason: 'unmount' }).catch(
+          () => undefined,
+        );
+        activeVideoSessionRef.current = null;
+      }
+
       const player = getPlayerInstance();
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
-  }, [onClose]);
+  }, [handleModalClose, trackSkipRateForActiveVideo]);
 
   return (
     <>
@@ -303,7 +579,7 @@ const PortraitVideoModal = ({
           data-testid="close-modal-button"
           css={styles.closeButton}
           className="focusIndicatorInvert"
-          onClick={onClose}
+          onClick={() => handleModalClose('close-button')}
         >
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
@@ -337,18 +613,11 @@ const PortraitVideoModal = ({
           css={styles.mediaWrapper}
           blocks={[blocks?.[selectedVideoIndex]]}
           eventMapping={{
-            playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            playlistLoaded: handlePlaylistLoaded,
             pluginLoaded: pluginLoadedCallback,
-            fullscreenExit: onClose,
-            statsNavigation: e =>
-              statsNavigationCallback(
-                e,
-                blocks,
-                eventTrackingData,
-                swipeTracker,
-              ),
-            pause: e =>
-              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+            fullscreenExit: () => handleModalClose('fullscreen-exit'),
+            statsNavigation: handleStatsNavigation,
+            pause: handlePlaybackEnded,
           }}
         />
         <button
@@ -356,7 +625,7 @@ const PortraitVideoModal = ({
           type="button"
           data-testid="close-modal-visually-hidden"
           css={styles.visuallyHiddenCloseButton}
-          onClick={onClose}
+          onClick={() => handleModalClose('close-button')}
           className="focusIndicatorInvert"
           aria-label="End of content. Close"
         >
