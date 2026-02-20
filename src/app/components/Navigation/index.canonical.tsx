@@ -53,7 +53,11 @@ const CanonicalNavigationContainer: React.FC<
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
-            <ScrollableNavigation dir={dir} css={styles.topRowItems}>
+            <ScrollableNavigation
+              dir={dir}
+              css={styles.topRowItems}
+              navPosition="primary"
+            >
               {topScrollableListItems}
             </ScrollableNavigation>
             {!isLite && (
@@ -72,7 +76,11 @@ const CanonicalNavigationContainer: React.FC<
         </div>
 
         <div css={styles.lowerNavWrapper}>
-          <ScrollableNavigation dir={dir} css={styles.bottomRowItems}>
+          <ScrollableNavigation
+            dir={dir}
+            css={styles.bottomRowItems}
+            navPosition="secondary"
+          >
             {scrollableListItems}
           </ScrollableNavigation>
         </div>

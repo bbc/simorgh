@@ -43,6 +43,10 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
   }
 }
 
+.emotion-0 svg {
+  vertical-align: middle;
+}
+
 .emotion-2 {
   color: #000000;
   fill: currentColor;
@@ -136,6 +140,10 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
   }
 }
 
+.emotion-0 svg {
+  vertical-align: middle;
+}
+
 .emotion-2 {
   color: #000000;
   fill: currentColor;
@@ -227,6 +235,10 @@ exports[`Canonical Open menu button should render correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -323,6 +335,10 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
   }
 }
 
+.emotion-0 svg {
+  vertical-align: middle;
+}
+
 .emotion-2 {
   color: #000000;
   fill: currentColor;
@@ -415,6 +431,10 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -535,6 +555,10 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
     height: 2.75rem;
     width: 2.75rem;
   }
+}
+
+.emotion-0 svg {
+  vertical-align: middle;
 }
 
 .emotion-2 {
@@ -667,7 +691,7 @@ exports[`Dropdown navigation should render correctly when closer 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -928,7 +952,7 @@ exports[`Dropdown navigation should render correctly when open 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   padding: 0.75rem 0;
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {

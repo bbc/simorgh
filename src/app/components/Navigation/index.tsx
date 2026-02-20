@@ -17,6 +17,7 @@ import {
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import type { NavigationContainerProps } from './types';
+import styles from './index.styles';
 
 const getTopItemA11yProps = ({
   item,
@@ -301,15 +302,18 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const NavigationRenderer = isAmp ? Amp : Canonical;
 
   return (
-    <NavigationRenderer
-      topScrollableListItems={topScrollableListItems}
-      scrollableListItems={scrollableListItems}
-      dropdownListItems={dropdownListItems}
-      menuAnnouncedText={navMenuText}
-      dir={dir}
-      service={service}
-      blocks={blocks}
-    />
+    <>
+      <div css={styles.brandDivider} />
+      <NavigationRenderer
+        topScrollableListItems={topScrollableListItems}
+        scrollableListItems={scrollableListItems}
+        dropdownListItems={dropdownListItems}
+        menuAnnouncedText={navMenuText}
+        dir={dir}
+        service={service}
+        blocks={blocks}
+      />
+    </>
   );
 };
 

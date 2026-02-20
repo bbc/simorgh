@@ -93,7 +93,7 @@ const StyledDropdownLink = styled.a`
   color: ${props => props.theme.palette.GREY_10};
   text-decoration: none;
   padding: ${GEL_SPACING_HLF_TRPL} 0;
-  display: block;
+  display: inline-block;
 
   &:hover,
   &:focus {
@@ -195,6 +195,10 @@ const MenuButton = styled(Button)`
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     ${({ theme: { fontSizes, fontMq } }) =>
       getButtonDimensions(fontSizes.pica[fontMq.GROUP_B_ONLY].lineHeight)}
+  }
+
+  & svg {
+    vertical-align: middle;
   }
 `;
 
