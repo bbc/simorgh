@@ -174,6 +174,10 @@ export default {
         '&:hover::before': {
           opacity: 1,
         },
+
+        '&:focus-visible': {
+          outlineOffset: `-${pixelsToRem(3)}rem`,
+        },
       },
     }),
   lowerNavWrapper: css({
