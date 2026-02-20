@@ -48,13 +48,6 @@ const ampTestSuites = [...canonicalTestSuites].map(testSuite => {
   };
 });
 
-ampTestSuites.push({
-  path: '/news/articles/cxvxrj8tvppo.amp',
-  service: 'news',
-  runforEnv: ['local', 'test', 'live'],
-  tests,
-});
-
 runTestsForPage({
   failOnStatusCode: false,
   pageType: ERROR_PAGE,

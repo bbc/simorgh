@@ -6,7 +6,7 @@ export interface AmpNavigationContainerProps {
   dir: string;
   menuAnnouncedText: string;
   topScrollableListItems?: React.ReactNode;
-  scrollableListItems: React.ReactNode;
+  bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
 }
 

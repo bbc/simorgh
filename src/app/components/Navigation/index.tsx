@@ -189,34 +189,21 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
    */
   const navigationItems = navItems || navFromServiceConfig;
 
-  const scrollableNavEventTrackingData = {
-    componentName: `scrollable-navigation`,
-  };
-
-  const topNavEventTrackingData = {
-    componentName: `top-navigation`,
-  };
-
-  const dropdownNavEventTrackingData = { componentName: `dropdown-navigation` };
-
-  const scrollableNavClickTrackerHandler = useClickTrackerHandler(
-    scrollableNavEventTrackingData,
-  );
+  const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
+  const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 
   const topNavClickTrackerHandler = useClickTrackerHandler(
-    topNavEventTrackingData,
+    navEventTrackingMetadata,
   );
-
+  const bottomNavClickTrackerHandler = useClickTrackerHandler(
+    navEventTrackingMetadata,
+  );
   const dropdownNavClickTrackerHandler = useClickTrackerHandler(
     dropdownNavEventTrackingData,
   );
 
-  const scrollableNavViewTracker = useViewTracker(
-    scrollableNavEventTrackingData,
-  );
-
-  const topNavViewTracker = useViewTracker(topNavEventTrackingData);
-
+  const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
+  const bottomNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
   // Compute which top item is active based on current URL
@@ -258,7 +245,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     matchesUrl(canonicalLink, origin, item.url),
   );
 
-  const scrollableListItems = (
+  const bottomScrollableListItems = (
     <NavigationUl>
       {renderListItems({
         Li: NavigationLi,
@@ -267,8 +254,8 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         service,
         dir,
         activeIndex: activeBottomIndex,
-        clickTracker: scrollableNavClickTrackerHandler,
-        viewTracker: scrollableNavViewTracker,
+        clickTracker: bottomNavClickTrackerHandler,
+        viewTracker: bottomNavViewTracker,
         isLite,
         pageType,
       })}
@@ -306,7 +293,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       <div css={styles.brandDivider} />
       <NavigationRenderer
         topScrollableListItems={topScrollableListItems}
-        scrollableListItems={scrollableListItems}
+        bottomScrollableListItems={bottomScrollableListItems}
         dropdownListItems={dropdownListItems}
         menuAnnouncedText={navMenuText}
         dir={dir}
