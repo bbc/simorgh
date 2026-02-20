@@ -126,17 +126,56 @@ export default {
         },
       },
     }),
-  dropdown: css({
-    position: 'absolute',
-    top: '100%',
-    left: '0',
-    width: '100%',
-    zIndex: 99999,
+  dropdown: ({ palette, spacings }: Theme) =>
+    css({
+      position: 'absolute',
+      top: '100%',
+      left: '0',
+      width: '100%',
+      zIndex: 99999,
 
-    a: {
-      display: 'block',
-    },
-  }),
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
+
+      ul: {
+        padding: 0,
+        border: 'none',
+
+        li: {
+          padding: 0,
+
+          '&:last-child': {
+            paddingBottom: 0,
+          },
+        },
+      },
+
+      a: {
+        display: 'block',
+        position: 'relative',
+        paddingInline: `${spacings.FULL}rem`,
+
+        '&:hover': {
+          backgroundColor: palette.GREY_3,
+          textDecoration: 'none',
+        },
+
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          insetInlineStart: 0,
+          height: '100%',
+          width: `${pixelsToRem(4)}rem`,
+          background: palette.POSTBOX,
+          display: 'block',
+          opacity: 0,
+        },
+
+        '&:hover::before': {
+          opacity: 1,
+        },
+      },
+    }),
   lowerNavWrapper: css({
     width: '100%',
     position: 'relative',
