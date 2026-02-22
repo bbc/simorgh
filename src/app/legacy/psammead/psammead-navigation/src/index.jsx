@@ -124,8 +124,8 @@ const StyledListItem = styled.li`
 const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ theme }) => theme.palette.POSTBOX};
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
   }
 `;
 
