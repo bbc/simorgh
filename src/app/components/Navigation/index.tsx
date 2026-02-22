@@ -9,9 +9,9 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import type { NavigationContainerProps } from './types';
 import styles from './index.styles';
 
 const getTopItemA11yProps = ({
@@ -155,6 +155,13 @@ const getActiveTopIndex = ({
   if (pageType === 'home') return 0;
 
   return -1;
+};
+
+type NavigationContainerProps = {
+  navItems: Navigation[];
+  propsForTopBarOJComponent?: {
+    blocks?: TopStoryItem[];
+  };
 };
 
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
