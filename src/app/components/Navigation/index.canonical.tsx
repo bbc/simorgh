@@ -14,18 +14,14 @@ import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStorie
 import { Direction } from '#app/models/types/global';
 import styles from './index.styles';
 
-interface CanonicalNavigationContainerProps {
+type CanonicalNavigationContainerProps = {
   dir: Direction;
   menuAnnouncedText: string;
-  topScrollableListItems?: React.ReactNode;
-  topDivider?: React.ReactNode;
+  topScrollableListItems: React.ReactNode;
   bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
-  menuButton?: React.ReactNode;
-  isOpen?: boolean;
-  setIsOpen?: (open: boolean) => void;
   blocks?: TopStoryItem[];
-}
+};
 
 const CanonicalNavigationContainer: React.FC<
   CanonicalNavigationContainerProps
@@ -38,7 +34,7 @@ const CanonicalNavigationContainer: React.FC<
   blocks,
 }) => {
   const { isLite } = use(RequestContext);
-  const { enabled } = useToggle('topBarOJs');
+  const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
@@ -73,7 +69,6 @@ const CanonicalNavigationContainer: React.FC<
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
-
         <div css={styles.lowerNavWrapper}>
           <ScrollableNavigation
             dir={dir}
@@ -85,7 +80,7 @@ const CanonicalNavigationContainer: React.FC<
         </div>
       </div>
       <div css={styles.bottomDivider} />
-      {enabled && <TopBarOJs blocks={blocks ?? []} />}
+      {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
     </Navigation>
   );
 };
