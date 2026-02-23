@@ -265,7 +265,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   // CHANGE WHEN HAVE ANSWER TO THE QUESTION ABOUT THIS
   const dropdownSource = (() => {
     if (!navigationItems.length) return [];
-    const [first, ..._] = navigationItems;
+    const [first] = navigationItems;
     return [first, ...(first.subItems || [])];
   })();
 
