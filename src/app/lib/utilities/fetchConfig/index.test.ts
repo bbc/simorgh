@@ -1,3 +1,4 @@
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { Agent } from 'undici';
 
 const mockAgent = {
@@ -18,12 +19,18 @@ const mockNavResponse = {
   },
 };
 
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
+
 describe('fetchConfig', () => {
   beforeEach(() => {
     jest.resetModules();
 
     process.env.SIMORGH_APP_ENV = 'local';
     process.env.BFF_PATH = 'https://mock-bff-path';
+  });
+
+  afterAll(() => {
+    process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
   });
 
   it('should fetch configuration data', async () => {
@@ -172,5 +179,74 @@ describe('fetchConfig', () => {
         configType: 'navigation',
       }),
     ).rejects.toThrow('Failed to fetch config for service: indonesia');
+  });
+
+  // TODO: Remove suite once new nav is rolled out to all services on Live
+  describe('useNewNav param', () => {
+    afterAll(() => {
+      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+    });
+
+    it.each(SERVICES_WITH_NEW_NAV)(
+      'should set the useNewNav param for %s on Local/Test',
+      async service => {
+        global.fetch = jest.fn().mockResolvedValue({
+          ok: true,
+          json: async () => mockNavResponse,
+        });
+
+        const { default: fetchConfig } = await import('.');
+
+        await fetchConfig({
+          service,
+          pagePath: `/${service}`,
+          configType: 'navigation',
+        });
+
+        const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+        expect(fetchUrl).toContain('useNewNav=true');
+      },
+    );
+
+    it.each(SERVICES_WITH_NEW_NAV)(
+      'should not set the useNewNav param for %s on Live',
+      async service => {
+        process.env.SIMORGH_APP_ENV = 'live';
+
+        global.fetch = jest.fn().mockResolvedValue({
+          ok: true,
+          json: async () => mockNavResponse,
+        });
+
+        const { default: fetchConfig } = await import('.');
+
+        await fetchConfig({
+          service,
+          pagePath: `/${service}`,
+          configType: 'navigation',
+        });
+
+        const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+        expect(fetchUrl).not.toContain('useNewNav=true');
+      },
+    );
+
+    it('should not set the useNewNav param for non-Arabic/Tamil services', async () => {
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockNavResponse,
+      });
+
+      const { default: fetchConfig } = await import('.');
+
+      await fetchConfig({
+        service: 'indonesia',
+        pagePath: '/indonesia',
+        configType: 'navigation',
+      });
+
+      const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+      expect(fetchUrl).not.toContain('useNewNav=true');
+    });
   });
 });
