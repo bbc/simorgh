@@ -1108,7 +1108,7 @@ describe('Article Page', () => {
         blocks: [...portraitVideoFixture.blocks],
       },
     };
-    it('should render the carousel when portraitVideoItems are present', async () => {
+    it('should render the carousel when portraitVideoItems are present and the toggle is enabled', async () => {
       const dataWithPVItems = {
         ...articleDataPidgin,
         portraitVideoItems: {
@@ -1116,9 +1116,11 @@ describe('Article Page', () => {
         },
       };
       const { queryAllByTestId } = render(
-        <Context service="pidgin">
-          <ArticlePage pageData={dataWithPVItems} />
-        </Context>,
+        <ArticlePage pageData={dataWithPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: true } },
+        },
       );
 
       await waitFor(() => {
@@ -1127,15 +1129,17 @@ describe('Article Page', () => {
       });
     });
 
-    it('should not render the carousel when portraitVideoItems are absent', async () => {
+    it('should not render the carousel when portraitVideoItems are absent and the toggle is off', async () => {
       const dataWithoutPVItems = {
         ...articleDataPidgin,
         portraitVideoItems: undefined,
       };
       const { queryByTestId } = render(
-        <Context service="pidgin">
-          <ArticlePage pageData={dataWithoutPVItems} />
-        </Context>,
+        <ArticlePage pageData={dataWithoutPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
       );
 
       await waitFor(() => {
