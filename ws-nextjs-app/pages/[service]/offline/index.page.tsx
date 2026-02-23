@@ -54,6 +54,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(),
       pathname: `/${service}/offline`,
       ...extractHeaders(context.req.headers),
+      pageData: {
+        metadata: {
+          type: OFFLINE_PAGE,
+        },
+      },
     },
   };
 };

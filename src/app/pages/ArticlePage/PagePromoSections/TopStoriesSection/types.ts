@@ -1,6 +1,25 @@
 import { MetadataTaggings } from '#app/models/types/metadata';
 import { OptimoBlock } from '#app/models/types/optimo';
 
+export type PromoHeadlineBlock = {
+  type: string;
+  model: {
+    blocks: Array<{
+      type: string;
+      model: {
+        text: string;
+        blocks?: Array<{
+          type: string;
+          model: {
+            text: string;
+            attributes?: unknown[];
+          };
+        }>;
+      };
+    }>;
+  };
+};
+
 export type TopStoryItem = {
   contentType?: string;
   uri?: string;
@@ -82,10 +101,14 @@ export type TopStoryItem = {
     headline: string;
     seoHeadline: string;
     promoHeadline: {
-      blocks: OptimoBlock[];
+      blocks: PromoHeadlineBlock[];
     };
   };
-  images: object;
+  images: {
+    defaultPromoImage?: {
+      blocks?: OptimoBlock[];
+    };
+  };
   summary: {
     blocks: OptimoBlock[];
   };

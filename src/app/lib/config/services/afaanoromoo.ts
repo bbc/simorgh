@@ -63,6 +63,10 @@ export const service: DefaultServiceConfig = {
     },
     translations: {
       and: 'fi',
+      readTime: {
+        readTimePrefix: 'Yeroo dubbisuu',
+        minute: 'daqiiqaa',
+      },
       pagination: {
         previousPage: 'Kan duraa',
         nextPage: 'Itti aanee',
@@ -362,35 +366,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Oduu',
         url: '/afaanoromoo',
-      },
-      {
-        title: 'Itoophiyaa',
-        url: '/afaanoromoo/topics/c2dwqdy81y1t',
-      },
-      {
-        title: 'Ispoortii',
-        url: '/afaanoromoo/topics/c06gq6440j8t',
-      },
-      {
-        title: 'Viidiyoo',
-        url: '/afaanoromoo/topics/ck0dg7dpjwwt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'Siyaasa',
-        url: '/afaanoromoo/topics/c2dwqdynwwrt',
-      },
-      {
-        title: 'Dubartoota',
-        url: '/afaanoromoo/topics/c8y94yq185dt',
-      },
-      {
-        title: 'Baha Jidduugalaa',
-        url: '/afaanoromoo/topics/c8y94yzd049t',
-      },
-      {
-        title: 'Jajjaboo',
-        url: '/afaanoromoo/popular/read',
       },
     ],
     timezone: 'Africa/Addis_Ababa',

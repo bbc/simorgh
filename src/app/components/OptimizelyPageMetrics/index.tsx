@@ -13,12 +13,14 @@ type Props = {
   trackPageView?: boolean;
   trackPageDepth?: boolean;
   trackPageComplete?: boolean;
+  trackVisit?: boolean;
 };
 
 const OptimizelyPageMetrics = ({
   trackPageView = false,
   trackPageDepth = false,
   trackPageComplete = false,
+  trackVisit = false,
 }: Props) => {
   const { optimizely } = useContext(OptimizelyContext);
   const { isAmp, pageType } = useContext(RequestContext);
@@ -55,17 +57,22 @@ const OptimizelyPageMetrics = ({
     trackPageComplete,
     trackPageDepth,
     trackPageView,
+    trackVisit,
     experimentsForPageType,
   ]);
 
   if (!isInExperiment) {
     return null;
   }
+
+  // for page views per visit, always enable both trackPageView and trackVisit
+  // visit tracking runs inside the page view tracker to keep ordering and avoid duplicates
+
   return (
     <>
       {trackPageComplete && <PageCompleteTracking />}
       {trackPageDepth && <ScrollDepthTracking />}
-      {trackPageView && <PageViewTracking />}
+      {trackPageView && <PageViewTracking trackVisit={trackVisit} />}
     </>
   );
 };
