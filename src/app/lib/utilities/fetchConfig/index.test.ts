@@ -19,12 +19,18 @@ const mockNavResponse = {
   },
 };
 
+const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
+
 describe('fetchConfig', () => {
   beforeEach(() => {
     jest.resetModules();
 
     process.env.SIMORGH_APP_ENV = 'local';
     process.env.BFF_PATH = 'https://mock-bff-path';
+  });
+
+  afterAll(() => {
+    process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
   });
 
   it('should fetch configuration data', async () => {
@@ -177,6 +183,10 @@ describe('fetchConfig', () => {
 
   // TODO: Remove suite once new nav is rolled out to all services on Live
   describe('useNewNav param', () => {
+    afterAll(() => {
+      process.env.SIMORGH_APP_ENV = originalSimorghAppEnv;
+    });
+
     it.each(SERVICES_WITH_NEW_NAV)(
       'should set the useNewNav param for %s on Local/Test',
       async service => {
