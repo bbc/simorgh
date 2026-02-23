@@ -1,7 +1,5 @@
 import Navigation from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import { StoryArgs } from '#app/models/types/storybook';
-// import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import type {
   Navigation as NavigationType,
   Services,
@@ -38,7 +36,7 @@ export default {
   parameters: { docs: {} },
 };
 
-export const Arabic = (_: StoryArgs, globalArgs: Props) => {
+export const Arabic = () => {
   const navItems = [
     {
       title: 'رئيسية',
@@ -59,7 +57,7 @@ export const Arabic = (_: StoryArgs, globalArgs: Props) => {
   );
 };
 
-export const Pidgin = (_: StoryArgs, globalArgs: Props) => {
+export const Pidgin = () => {
   const navItems = [
     {
       title: 'News',
