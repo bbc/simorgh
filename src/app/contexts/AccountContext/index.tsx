@@ -1,12 +1,10 @@
 import {
   createContext,
   PropsWithChildren,
-  use,
   useEffect,
   useMemo,
   useState,
 } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
@@ -22,13 +20,15 @@ const getSignedInCookie = (cookieName = 'ckns_id') => {
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
+  initialIsSignedIn?: boolean;
 };
 
 export const AccountProvider = ({
   children,
   initialConfig,
+  initialIsSignedIn,
 }: PropsWithChildren<AccountProviderProps>) => {
-  const { locale } = use(ServiceContext);
+  const { locale } = useMemo(() => ({ locale: undefined }), []);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
@@ -50,9 +50,16 @@ export const AccountProvider = ({
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
   const cookieName = initialConfig?.identity?.idSignedInCookieName;
-  const isSignedIn = isIdctaAvailable
-    ? Boolean(getSignedInCookie(cookieName))
-    : false;
+
+  const isSignedIn = useMemo(() => {
+    if (!isIdctaAvailable) return false;
+
+    if (typeof initialIsSignedIn === 'boolean') {
+      return initialIsSignedIn;
+    }
+
+    return Boolean(getSignedInCookie(cookieName));
+  }, [cookieName, initialIsSignedIn, isIdctaAvailable]);
 
   const value = useMemo(
     () => ({

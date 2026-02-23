@@ -62,6 +62,7 @@ interface Props {
     isUK?: boolean;
     country?: string | null;
     idctaConfig: IdctaConfig | null;
+    initialIsSignedIn: boolean;
   };
 }
 
@@ -69,7 +70,7 @@ export default class CustomApp extends App<Props> {
   // The 'pageProps' returned are passed down to ALL pages and merged with page
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
-    const { asPath = '' } = ctx;
+    const { asPath = '', req } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
@@ -97,6 +98,12 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
+    const cookieName = idctaConfig?.identity?.idSignedInCookieName;
+    const cookies = ctx.req?.headers?.cookie ?? '';
+    const initialIsSignedIn = Boolean(
+      cookieName && cookies.includes(`${cookieName}=`),
+    );
+
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
 
@@ -123,6 +130,7 @@ export default class CustomApp extends App<Props> {
         toggles,
         idctaConfig,
         navItems,
+        initialIsSignedIn,
       },
     };
   }
@@ -154,6 +162,7 @@ export default class CustomApp extends App<Props> {
       country,
       idctaConfig = null,
       navItems,
+      initialIsSignedIn,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -191,7 +200,10 @@ export default class CustomApp extends App<Props> {
             isNextJs={isNextJs}
             isUK={isUK ?? false}
           >
-            <AccountProvider initialConfig={idctaConfig}>
+            <AccountProvider
+              initialConfig={idctaConfig}
+              initialIsSignedIn={initialIsSignedIn}
+            >
               <EventTrackingContextProvider atiData={atiAnalytics}>
                 {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>
