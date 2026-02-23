@@ -45,7 +45,7 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children }) => {
+export const CanonicalDropdown = ({ isOpen, children, className = '' }) => {
   const heightRef = useRef(null);
   return (
     <StyledDropdown
@@ -53,6 +53,7 @@ export const CanonicalDropdown = ({ isOpen, children }) => {
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
+      className={className}
     >
       {children}
     </StyledDropdown>
@@ -107,6 +108,7 @@ const StyledCurrentLink = styled.span`
 
 export const DropdownLi = ({
   children,
+  script,
   clickTracker = null,
   currentPageText = null,
   active = false,
@@ -122,6 +124,7 @@ export const DropdownLi = ({
     // aria-labelledby is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     <StyledDropdownLi role="listitem" {...viewTracker}>
       <StyledDropdownLink
+        script={script}
         service={service}
         href={url}
         aria-labelledby={ariaId}
@@ -161,7 +164,7 @@ const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
   width: ${calculateButtonSide(lineHeight)}rem;`;
 
-const Button = ({ ...props }) => <button type="button" {...props} />;
+const Button = ({ script, ...props }) => <button type="button" {...props} />;
 
 const MenuButton = styled(Button)`
   position: relative;
@@ -204,12 +207,15 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
+  script = '',
+  className = '',
 }) => (
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
-    className="focusIndicatorRemove"
+    script={script}
+    className={`${className} focusIndicatorRemove`}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>
@@ -231,7 +237,12 @@ const expandedHandler =
 
 const initialState = { expanded: false };
 
-export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
+export const AmpMenuButton = ({
+  announcedText,
+  onToggle,
+  dir = 'ltr',
+  script = '',
+}) => (
   <>
     <AmpHead />
     <amp-state id="menuState">
@@ -246,6 +257,7 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
+      script={script}
       className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {
