@@ -69,13 +69,15 @@ const StyledLink = styled.a`
       props.theme.palette.POSTBOX};
     ${({ currentLink, theme }) =>
       currentLink &&
-      `border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};`}
+      `
+        border-bottom: ${CURRENT_ITEM_HOVER_BORDER} solid ${theme.palette.POSTBOX};
+      `}
   }
 
   &:focus::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid ${({ theme }) =>
-      theme.palette.POSTBOX};
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -84,8 +86,8 @@ const StyledLink = styled.a`
   /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ theme }) => theme.palette.POSTBOX};
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
     top: 0;
     border: ${focusIndicatorThickness} solid
       ${props => props.theme.palette.BLACK};
@@ -122,8 +124,8 @@ const StyledListItem = styled.li`
 const StyledSpan = styled.span`
   &::after {
     ${ListItemBorder}
-    border-bottom: ${GEL_SPACING_HLF} solid
-      ${({ theme }) => theme.palette.POSTBOX};
+    border-bottom: ${GEL_SPACING_HLF} solid ${props =>
+      props.theme.palette.POSTBOX};
   }
 `;
 

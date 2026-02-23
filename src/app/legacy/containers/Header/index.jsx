@@ -15,6 +15,7 @@ import NewNavigationContainer from '#src/app/components/Navigation';
 import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import AccountHeader from '#app/components/Account/AccountHeader';
 import isLive from '#lib/utilities/isLive';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
@@ -105,12 +106,15 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   if (isApp) return null;
 
   const NavigationComponent =
-    service === 'arabic' && !isLive()
+    SERVICES_WITH_NEW_NAV.includes(service) && !isLive()
       ? NewNavigationContainer
       : LegacyNavigationContainer;
+
   return (
     <header role="banner" lang={serviceLang}>
-      {service === 'arabic' && !isLive() && <NewLogoBanner />}
+      {SERVICES_WITH_NEW_NAV.includes(service) && !isLive() && (
+        <NewLogoBanner />
+      )}
       {isAmp ? (
         <Header
           linkId="brandLink"

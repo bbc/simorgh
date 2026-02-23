@@ -8,7 +8,7 @@ import {
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import styled from '@emotion/styled';
 
-import type { AmpNavigationContainerProps } from './types';
+import { Direction } from '#app/models/types/global';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
 const NAVIGATION_ID = 'si-nav';
@@ -25,15 +25,21 @@ const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
   }
 `;
 
+type AmpNavigationContainerProps = {
+  dir: Direction;
+  menuAnnouncedText: string;
+  topScrollableListItems?: React.ReactNode;
+  bottomScrollableListItems: React.ReactNode;
+  dropdownListItems: React.ReactNode;
+};
+
 const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
-  service,
   dir,
   menuAnnouncedText,
-  scrollableListItems,
+  bottomScrollableListItems,
   dropdownListItems,
 }) => (
   <Navigation
-    service={service}
     dir={dir}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME as any}
@@ -53,8 +59,12 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
       {dropdownListItems}
     </AmpDropdown>
     {/* TODO: Implement the new navigation in AMP */}
-    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
-      {scrollableListItems}
+    <StyledAmpScrollableNavigation
+      dir={dir}
+      id={SCROLLABLE_ID}
+      navPosition={null}
+    >
+      {bottomScrollableListItems}
     </StyledAmpScrollableNavigation>
   </Navigation>
 );

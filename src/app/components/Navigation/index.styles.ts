@@ -2,15 +2,24 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  divider: ({ palette }: Theme) =>
+  brandDivider: ({ palette }: Theme) =>
+    css({
+      position: 'relative',
+      width: '100%',
+      margin: '0 auto',
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+      opacity: 0.7,
+    }),
+  bottomDivider: ({ palette }: Theme) =>
     css({
       position: 'absolute',
       width: '100%',
       insetInlineStart: 0,
+
       '@media (min-width: 1041px)': {
         width: '100%',
-        insetInlineStart: '0',
       },
+
       '&::after': {
         content: "''",
         position: 'absolute',
@@ -19,18 +28,6 @@ export default {
         borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
       },
     }),
-  brandDivider: css({
-    position: 'relative',
-    width: '100%',
-    margin: '0 auto',
-
-    '&::after': {
-      content: "''",
-      display: 'block',
-      width: '100%',
-      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
-    },
-  }),
   navStack: css({
     display: 'flex',
     flexDirection: 'column',
@@ -58,7 +55,7 @@ export default {
         pointerEvents: 'none' /* ensure it never interferes with clicks */,
       },
     }),
-  topRowItems: ({ palette }: Theme) =>
+  topRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
         a: {
@@ -86,14 +83,14 @@ export default {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: 0,
+          insetInlineEnd: `-${spacings.HALF}rem`,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
           width: `${pixelsToRem(1)}rem`,
-          background: '#D77272',
+          background: palette.WHITE,
           display: 'block',
-          opacity: 1,
+          opacity: 0.3,
         },
 
         '&:last-child:before': {
@@ -105,13 +102,13 @@ export default {
         background: 'none',
       },
     }),
-  bottomRowItems: ({ palette }: Theme) =>
+  bottomRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: 0,
+          insetInlineEnd: `-${spacings.HALF}rem`,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
@@ -126,17 +123,60 @@ export default {
         },
       },
     }),
-  dropdown: css({
-    position: 'absolute',
-    top: '100%',
-    left: '0',
-    width: '100%',
-    zIndex: 99999,
+  dropdown: ({ palette, spacings }: Theme) =>
+    css({
+      position: 'absolute',
+      top: '100%',
+      left: '0',
+      width: '100%',
+      zIndex: 99999,
 
-    a: {
-      display: 'block',
-    },
-  }),
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
+
+      ul: {
+        padding: 0,
+        border: 'none',
+
+        li: {
+          padding: 0,
+
+          '&:last-child': {
+            paddingBottom: 0,
+          },
+        },
+      },
+
+      a: {
+        display: 'block',
+        position: 'relative',
+        paddingInline: `${spacings.FULL}rem`,
+
+        '&:hover': {
+          backgroundColor: palette.GREY_3,
+          textDecoration: 'none',
+        },
+
+        '&:before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          insetInlineStart: 0,
+          height: '100%',
+          width: `${pixelsToRem(4)}rem`,
+          background: palette.POSTBOX,
+          display: 'block',
+          opacity: 0,
+        },
+
+        '&:hover::before': {
+          opacity: 1,
+        },
+
+        '&:focus-visible': {
+          outlineOffset: `-${pixelsToRem(3)}rem`,
+        },
+      },
+    }),
   lowerNavWrapper: css({
     width: '100%',
     position: 'relative',

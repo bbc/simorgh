@@ -8,15 +8,10 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import {
-  Direction,
-  Navigation,
-  PageTypes,
-  Services,
-} from '#app/models/types/global';
+import { Direction, Navigation, PageTypes } from '#app/models/types/global';
+import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
-import type { NavigationContainerProps } from './types';
 import styles from './index.styles';
 
 const getTopItemA11yProps = ({
@@ -59,53 +54,46 @@ type RenderListItemsArgs = {
   Li: React.ElementType;
   navigation: Navigation[];
   currentPage: string;
-  service: Services;
   dir: Direction;
   activeIndex: number;
   clickTracker: unknown;
   viewTracker: unknown;
-  isLite?: boolean;
   pageType?: PageTypes;
+  navType?: 'top' | 'bottom' | 'dropdown';
 };
 
 const renderListItems = ({
   Li,
   navigation,
   currentPage,
-  service,
   dir,
   activeIndex,
   clickTracker,
   viewTracker,
-  isLite,
   pageType,
+  navType,
 }: RenderListItemsArgs) =>
-  navigation.reduce<React.ReactNode[]>((listAcc, item, index) => {
-    const { title, url, hideOnLiteSite } = item;
+  navigation.map((item, index) => {
+    const { title, url } = item;
     const active = index === activeIndex;
     const a11yProps =
       getTopItemA11yProps({ item, index, active, pageType }) ?? {};
 
-    if (hideOnLiteSite && isLite) return listAcc;
-
-    const listItem = (
+    return (
       <Li
         key={`${title}-${url}`}
         url={url}
         active={active}
         currentPageText={currentPage}
-        service={service}
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
-        {...a11yProps}
+        {...(navType === 'top' ? a11yProps : {})}
       >
         {title}
       </Li>
     );
-
-    return [...listAcc, listItem];
-  }, []);
+  });
 
 // this checks if the current pages url matches the navigation item url. We need this to determine which nav item should be active
 const matchesUrl = (
@@ -166,6 +154,13 @@ const getActiveTopIndex = ({
   return -1;
 };
 
+type NavigationContainerProps = {
+  navItems: Navigation[];
+  propsForTopBarOJComponent?: {
+    blocks?: TopStoryItem[];
+  };
+};
+
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
@@ -176,7 +171,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   const {
     translations,
     navigation: navFromServiceConfig,
-    service,
     dir,
   } = use(ServiceContext);
 
@@ -184,40 +178,39 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
-  /**
-   * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
-   */
-  const navigationItems = navItems || navFromServiceConfig;
-
-  const scrollableNavEventTrackingData = {
-    componentName: `scrollable-navigation`,
-  };
-
-  const topNavEventTrackingData = {
-    componentName: `top-navigation`,
-  };
-
-  const dropdownNavEventTrackingData = { componentName: `dropdown-navigation` };
-
-  const scrollableNavClickTrackerHandler = useClickTrackerHandler(
-    scrollableNavEventTrackingData,
-  );
+  const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
+  const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
 
   const topNavClickTrackerHandler = useClickTrackerHandler(
-    topNavEventTrackingData,
+    navEventTrackingMetadata,
   );
-
+  const bottomNavClickTrackerHandler = useClickTrackerHandler(
+    navEventTrackingMetadata,
+  );
   const dropdownNavClickTrackerHandler = useClickTrackerHandler(
     dropdownNavEventTrackingData,
   );
 
-  const scrollableNavViewTracker = useViewTracker(
-    scrollableNavEventTrackingData,
-  );
-
-  const topNavViewTracker = useViewTracker(topNavEventTrackingData);
-
+  const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
+  const bottomNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
+
+  /**
+   * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
+   */
+  const navItemsFromPropsOrServiceConfig = navItems || navFromServiceConfig;
+
+  if (
+    !navItemsFromPropsOrServiceConfig ||
+    navItemsFromPropsOrServiceConfig.length === 0
+  ) {
+    return null;
+  }
+
+  // For Lite pages, filter out any items that should be hidden on the Lite site
+  const navigationItems = navItemsFromPropsOrServiceConfig.filter(
+    item => !(item.hideOnLiteSite && isLite),
+  );
 
   // Compute which top item is active based on current URL
   const topActiveIndex = getActiveTopIndex({
@@ -233,13 +226,12 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         Li: NavigationLi,
         navigation: navigationItems,
         currentPage,
-        service,
         dir,
         activeIndex: topActiveIndex,
         clickTracker: topNavClickTrackerHandler,
         viewTracker: topNavViewTracker,
-        isLite,
         pageType,
+        navType: 'top',
       })}
     </NavigationUl>
   );
@@ -258,18 +250,16 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
     matchesUrl(canonicalLink, origin, item.url),
   );
 
-  const scrollableListItems = (
+  const bottomScrollableListItems = (
     <NavigationUl>
       {renderListItems({
         Li: NavigationLi,
         navigation: bottomItems,
         currentPage,
-        service,
         dir,
         activeIndex: activeBottomIndex,
-        clickTracker: scrollableNavClickTrackerHandler,
-        viewTracker: scrollableNavViewTracker,
-        isLite,
+        clickTracker: bottomNavClickTrackerHandler,
+        viewTracker: bottomNavViewTracker,
         pageType,
       })}
     </NavigationUl>
@@ -279,7 +269,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   // CHANGE WHEN HAVE ANSWER TO THE QUESTION ABOUT THIS
   const dropdownSource = (() => {
     if (!navigationItems.length) return [];
-    const [first, ..._] = navigationItems;
+    const [first] = navigationItems;
     return [first, ...(first.subItems || [])];
   })();
 
@@ -289,7 +279,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         Li: DropdownLi,
         navigation: dropdownSource,
         currentPage,
-        service,
         dir,
         activeIndex: -1,
         clickTracker: dropdownNavClickTrackerHandler,
@@ -306,11 +295,10 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
       <div css={styles.brandDivider} />
       <NavigationRenderer
         topScrollableListItems={topScrollableListItems}
-        scrollableListItems={scrollableListItems}
+        bottomScrollableListItems={bottomScrollableListItems}
         dropdownListItems={dropdownListItems}
         menuAnnouncedText={navMenuText}
         dir={dir}
-        service={service}
         blocks={blocks}
       />
     </>
