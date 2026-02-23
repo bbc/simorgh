@@ -58,7 +58,6 @@ type RenderListItemsArgs = {
   activeIndex: number;
   clickTracker: unknown;
   viewTracker: unknown;
-  isLite?: boolean;
   pageType?: PageTypes;
   navType?: 'top' | 'bottom' | 'dropdown';
 };
@@ -71,34 +70,30 @@ const renderListItems = ({
   activeIndex,
   clickTracker,
   viewTracker,
-  isLite,
   pageType,
   navType,
 }: RenderListItemsArgs) =>
-  navigation
-    // For Lite pages, filter out any items that should be hidden on the Lite site
-    .filter(item => !(item.hideOnLiteSite && isLite))
-    .map((item, index) => {
-      const { title, url } = item;
-      const active = index === activeIndex;
-      const a11yProps =
-        getTopItemA11yProps({ item, index, active, pageType }) ?? {};
+  navigation.map((item, index) => {
+    const { title, url } = item;
+    const active = index === activeIndex;
+    const a11yProps =
+      getTopItemA11yProps({ item, index, active, pageType }) ?? {};
 
-      return (
-        <Li
-          key={`${title}-${url}`}
-          url={url}
-          active={active}
-          currentPageText={currentPage}
-          dir={dir}
-          clickTracker={clickTracker}
-          viewTracker={viewTracker}
-          {...(navType === 'top' ? a11yProps : {})}
-        >
-          {title}
-        </Li>
-      );
-    });
+    return (
+      <Li
+        key={`${title}-${url}`}
+        url={url}
+        active={active}
+        currentPageText={currentPage}
+        dir={dir}
+        clickTracker={clickTracker}
+        viewTracker={viewTracker}
+        {...(navType === 'top' ? a11yProps : {})}
+      >
+        {title}
+      </Li>
+    );
+  });
 
 // this checks if the current pages url matches the navigation item url. We need this to determine which nav item should be active
 const matchesUrl = (
@@ -203,11 +198,19 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   /**
    * Prefer server-provided navItems; fallback to ServiceContext.navigation if missing.
    */
-  const navigationItems = navItems || navFromServiceConfig;
+  const navItemsFromPropsOrServiceConfig = navItems || navFromServiceConfig;
 
-  if (!navigationItems || navigationItems.length === 0) {
+  if (
+    !navItemsFromPropsOrServiceConfig ||
+    navItemsFromPropsOrServiceConfig.length === 0
+  ) {
     return null;
   }
+
+  // For Lite pages, filter out any items that should be hidden on the Lite site
+  const navigationItems = navItemsFromPropsOrServiceConfig.filter(
+    item => !(item.hideOnLiteSite && isLite),
+  );
 
   // Compute which top item is active based on current URL
   const topActiveIndex = getActiveTopIndex({
@@ -227,7 +230,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         activeIndex: topActiveIndex,
         clickTracker: topNavClickTrackerHandler,
         viewTracker: topNavViewTracker,
-        isLite,
         pageType,
         navType: 'top',
       })}
@@ -258,7 +260,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         activeIndex: activeBottomIndex,
         clickTracker: bottomNavClickTrackerHandler,
         viewTracker: bottomNavViewTracker,
-        isLite,
         pageType,
       })}
     </NavigationUl>
