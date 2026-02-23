@@ -341,18 +341,6 @@ export const service: DefaultServiceConfig = {
         title: 'Ìròyìn',
         url: '/yoruba',
       },
-      {
-        title: 'Eré ìdárayá',
-        url: '/yoruba/topics/c340q0y3p5kt',
-      },
-      {
-        title: 'Fídíò',
-        url: '/yoruba/topics/ck5rznlk6k3t',
-      },
-      {
-        title: 'Èyí to gbajúmọ̀ jù',
-        url: '/yoruba/popular/read',
-      },
     ],
   },
 };

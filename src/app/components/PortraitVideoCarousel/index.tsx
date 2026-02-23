@@ -19,12 +19,16 @@ type PortraitVideoCarouselProps = {
   title: string;
   blocks: PortraitClipMediaBlock[];
   eventTrackingData: EventTrackingData;
+  className?: string;
+  backgroundColor?: string;
 };
 
 const PortraitVideoCarousel = ({
   title,
   blocks,
   eventTrackingData,
+  className,
+  backgroundColor,
 }: PortraitVideoCarouselProps) => {
   const scrollRef = useRef<HTMLUListElement>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +36,7 @@ const PortraitVideoCarousel = ({
     null,
   );
 
-  const { isLite, nonce } = use(RequestContext);
+  const { isLite, isAmp, nonce } = use(RequestContext);
 
   // EXPERIMENT: Homepage Portrait Video 2
   const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
@@ -57,7 +61,7 @@ const PortraitVideoCarousel = ({
 
   const viewTracker = useViewTracker(eventTrackingDataExtended);
 
-  if (isLite) return null;
+  if (isLite || isAmp) return null;
 
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
@@ -79,6 +83,7 @@ const PortraitVideoCarousel = ({
         role="region"
         data-testid="portrait-video-carousel"
         css={styles.section}
+        className={className}
         {...viewTracker}
       >
         <Heading
@@ -93,7 +98,10 @@ const PortraitVideoCarousel = ({
           <PortraitVideoNoJs />
         </noscript>
         <div css={styles.carouselContainer}>
-          <PortraitCarouselNavigation scrollPaneRef={scrollRef} />
+          <PortraitCarouselNavigation
+            scrollPaneRef={scrollRef}
+            backgroundColor={backgroundColor}
+          />
           <ul
             ref={scrollRef}
             css={styles.carousel}

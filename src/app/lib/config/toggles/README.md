@@ -19,10 +19,11 @@ If a toggle is not configured in iSite or in the local toggle configs deployed w
 Feature toggles can be found in `src/app/lib/config/toggles`
 
 ## Viewing the toggles response
+
 The toggles response can be viewed here (for test, live). The `Origin` header must also be set.
 
-
 ## Fetching toggles locally
+
 By default, fetching toggles from iSite is not enabled on the local environment - it will just use the default values from the [localConfig file](https://github.com/bbc/simorgh/blob/latest/src/app/lib/config/toggles/localConfig.js). Note that this file is **not** service aware - it will set the same value for all services.
 
 In cases where the toggles response needs to be tested/validated, the following commands can be run.
@@ -34,12 +35,15 @@ FETCH_TOGGLES=true yarn dev
 ```
 
 For **Live iSite toggles**:
+
 ```
 yarn build:live:debug && yarn start
 ```
+
 > [!NOTE]  
 > Hot reloading will not work using this command - if you make a code change you need to rebuild & restart the application server.
 > If hot reloading is necessary:
+>
 > - set `SIMORGH_APP_ENV=live` in local.env (ensure these changes are not committed)
 > - run `FETCH_TOGGLES=true yarn dev` to start the application server.
 >
@@ -49,6 +53,7 @@ yarn build:live:debug && yarn start
 
 | Toggle Name             | Description                                                                         | Toggle Value                                                             | Example                                               |
 | ----------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------- |
+| `account`               | Enable Account functionality and IDCTA config fetching                              | Pipe-separated list of services (local env) to enable account for        | enabled: true, value: `hindi\|hausa`                   |
 | `ads`                   | Display Advertisements on Front Pages                                               |                                                                          |                                                       |
 | `articleLiteSiteLink`   | Display the link to the lite site on Article pages                                  |                                                                          |                                                       |
 | `comscoreAnalytics`     | Capture Comscore Analytics                                                          |                                                                          |                                                       |

@@ -25,7 +25,8 @@ const generateServiceContextStub = (
       readTime = { minute: 'mins', readTimePrefix: 'Read' },
     } = {},
   } = {},
-) => ({ service, translations: { readTime } }) as ServiceConfig;
+  datetimeLocale = '',
+) => ({ datetimeLocale, service, translations: { readTime } }) as ServiceConfig;
 
 describe('ReadTime', () => {
   beforeEach(() => {
@@ -59,6 +60,85 @@ describe('ReadTime', () => {
 
       expect(getByText('Read: 7 mins')).toBeInTheDocument();
     });
+
+    it.each([
+      {
+        readTimeValue: 3,
+        serviceName: 'persian',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'زمان مطالعه',
+              minute: 'دقیقه',
+            },
+          },
+        },
+        locale: 'fa',
+        expectedReadTime: 'زمان مطالعه: ۳ دقیقه',
+      },
+      {
+        readTimeValue: 5,
+        serviceName: 'dari',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'زمان مطالعه',
+              minute: 'دقیقه',
+            },
+          },
+        },
+        locale: 'fa-af',
+        expectedReadTime: 'زمان مطالعه: ۵ دقیقه',
+      },
+      {
+        readTimeValue: 7,
+        serviceName: 'pashto',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'د لوستلو وخت',
+              minute: 'دقیقې',
+            },
+          },
+        },
+        locale: 'ps',
+        expectedReadTime: 'د لوستلو وخت: ۷ دقیقې',
+      },
+      {
+        readTimeValue: 9,
+        serviceName: 'bengali',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'পড়ার সময়',
+              minute: 'মিনিট',
+            },
+          },
+        },
+        locale: 'bn',
+        expectedReadTime: 'পড়ার সময়: ৯ মিনিট',
+      },
+    ])(
+      'should format the read time to its localized $serviceName version',
+      ({
+        readTimeValue,
+        serviceName,
+        serviceConfig,
+        locale,
+        expectedReadTime,
+      }) => {
+        const { getByText } = ReadTimeWithContext({
+          readTimeValue,
+          contextStub: generateServiceContextStub(
+            serviceName as Services,
+            serviceConfig,
+            locale,
+          ),
+        });
+
+        expect(getByText(expectedReadTime)).toBeInTheDocument();
+      },
+    );
 
     it('should not render when translations are missing', () => {
       const { queryByTestId } = ReadTimeWithContext({
