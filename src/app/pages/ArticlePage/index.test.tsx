@@ -1178,11 +1178,10 @@ describe('Article Page', () => {
           ...portraitVideoItems,
         },
       };
-      render(
-        <Context service="pidgin">
-          <ArticlePage pageData={dataWithPVItems} />
-        </Context>,
-      );
+      render(<ArticlePage pageData={dataWithPVItems} />, {
+        service: 'pidgin',
+        toggles: { articlePortraitVideo: { enabled: true } },
+      });
 
       await waitFor(() => {
         const carousels = screen.getAllByTestId('portrait-video-carousel');
@@ -1200,11 +1199,10 @@ describe('Article Page', () => {
           portraitVideo: { ...portraitVideoItems.portraitVideo },
         },
       };
-      render(
-        <Context service="pidgin">
-          <ArticlePage pageData={dataWithoutTitle} />
-        </Context>,
-      );
+      render(<ArticlePage pageData={dataWithoutTitle} />, {
+        service: 'pidgin',
+        toggles: { articlePortraitVideo: { enabled: true } },
+      });
 
       await waitFor(() => {
         const fallbackTitle = 'Look'; // The fallback title comes from translations.media.watch
