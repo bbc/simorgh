@@ -11,11 +11,15 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import NewNavigationContainer from '#src/app/components/Navigation';
+import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
 import AccountHeader from '#app/components/Account/AccountHeader';
+import isLive from '#lib/utilities/isLive';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
-import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+import NewLogoBanner from './NewLogoBanner';
 
 const Header = ({
   brandRef,
@@ -101,8 +105,16 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
+  const NavigationComponent =
+    SERVICES_WITH_NEW_NAV.includes(service) && !isLive()
+      ? NewNavigationContainer
+      : LegacyNavigationContainer;
+
   return (
     <header role="banner" lang={serviceLang}>
+      {SERVICES_WITH_NEW_NAV.includes(service) && !isLive() && (
+        <NewLogoBanner />
+      )}
       {isAmp ? (
         <Header
           linkId="brandLink"
@@ -121,7 +133,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         </Header>
       )}
       {isLite && <LiteSiteSummary />}
-      <NavigationContainer
+      <NavigationComponent
         navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
