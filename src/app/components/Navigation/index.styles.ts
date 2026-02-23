@@ -2,18 +2,14 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
 export default {
-  brandDivider: css({
-    position: 'relative',
-    width: '100%',
-    margin: '0 auto',
-
-    '&::after': {
-      content: "''",
-      display: 'block',
+  brandDivider: ({ palette }: Theme) =>
+    css({
+      position: 'relative',
       width: '100%',
-      borderBottom: `${pixelsToRem(1)}rem solid #d77272`,
-    },
-  }),
+      margin: '0 auto',
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+      opacity: 0.7,
+    }),
   bottomDivider: ({ palette }: Theme) =>
     css({
       position: 'absolute',
@@ -59,7 +55,7 @@ export default {
         pointerEvents: 'none' /* ensure it never interferes with clicks */,
       },
     }),
-  topRowItems: ({ palette }: Theme) =>
+  topRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
         a: {
@@ -87,14 +83,14 @@ export default {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: 0,
+          insetInlineEnd: `-${spacings.HALF}rem`,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
           width: `${pixelsToRem(1)}rem`,
-          background: '#D77272',
+          background: palette.WHITE,
           display: 'block',
-          opacity: 1,
+          opacity: 0.3,
         },
 
         '&:last-child:before': {
@@ -106,13 +102,13 @@ export default {
         background: 'none',
       },
     }),
-  bottomRowItems: ({ palette }: Theme) =>
+  bottomRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: 0,
+          insetInlineEnd: `-${spacings.HALF}rem`,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
