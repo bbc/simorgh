@@ -62,7 +62,7 @@ interface Props {
     isUK?: boolean;
     country?: string | null;
     idctaConfig: IdctaConfig | null;
-    initialIsSignedIn: boolean;
+    initialIsSignedIn?: boolean;
   };
 }
 
@@ -70,7 +70,7 @@ export default class CustomApp extends App<Props> {
   // The 'pageProps' returned are passed down to ALL pages and merged with page
   // specific 'pageProps' from their getInitialProps / getServerSideProps functions
   static async getInitialProps({ ctx }: AppContext) {
-    const { asPath = '', req } = ctx;
+    const { asPath = '' } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
 
@@ -98,10 +98,10 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
+    const cookieHeader = ctx.req?.headers?.cookie ?? '';
     const cookieName = idctaConfig?.identity?.idSignedInCookieName;
-    const cookies = ctx.req?.headers?.cookie ?? '';
     const initialIsSignedIn = Boolean(
-      cookieName && cookies.includes(`${cookieName}=`),
+      cookieName && cookieHeader.includes(`${cookieName}=`),
     );
 
     const pageType =
@@ -162,7 +162,7 @@ export default class CustomApp extends App<Props> {
       country,
       idctaConfig = null,
       navItems,
-      initialIsSignedIn,
+      initialIsSignedIn = false,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
