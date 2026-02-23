@@ -1,6 +1,7 @@
 import {
   createContext,
   PropsWithChildren,
+  useContext,
   useEffect,
   useMemo,
   useState,
@@ -9,6 +10,7 @@ import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -28,7 +30,7 @@ export const AccountProvider = ({
   initialConfig,
   initialIsSignedIn,
 }: PropsWithChildren<AccountProviderProps>) => {
-  const { locale } = useMemo(() => ({ locale: undefined }), []);
+  const { locale } = useContext(ServiceContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
