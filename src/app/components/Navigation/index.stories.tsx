@@ -1,13 +1,14 @@
 import Navigation from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-// import AmpDecorator from '#storybook/helpers/ampDecorator';
 import { StoryArgs } from '#app/models/types/storybook';
 // import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
-import { NavigationContainerProps } from './types';
-import { Services } from '#app/models/types/global';
+import type {
+  Navigation as NavigationType,
+  Services,
+} from '#app/models/types/global';
 
 interface Props {
-  navItems: NavigationContainerProps['navItems'];
+  navItems: NavigationType[];
   currentPath?: string;
   service: Services;
   // propsForTopBarOJComponent?: {
@@ -17,13 +18,16 @@ interface Props {
 
 const Component = ({
   navItems,
-  currentPath = '',
+  // currentPath = '',
   service,
-  // propsForTopBarOJComponent,
+  // propsForTopBarOJComponent
 }: Props) => {
   return (
     <ServiceContextProvider service={service}>
-      <Navigation navItems={navItems} currentPath={currentPath} />
+      <Navigation
+        navItems={navItems}
+        // currentPath={currentPath}
+      />
     </ServiceContextProvider>
   );
 };
@@ -75,8 +79,3 @@ export const Pidgin = (_: StoryArgs, globalArgs: Props) => {
     <Component navItems={navItems} currentPath="/home" service={'pidgin'} />
   );
 };
-
-// export const Canonical = (_, {}) => <Component />;
-
-// export const Amp = (_, { service }) => <Component isAmp service={service} />;
-// Amp.decorators = [AmpDecorator];
