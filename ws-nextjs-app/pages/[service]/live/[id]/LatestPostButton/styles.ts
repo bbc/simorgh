@@ -5,10 +5,8 @@ import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
 const styles = {
   button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>
     css({
-      position: 'fixed',
       display: 'inline-flex',
       alignItems: 'center',
-      top: `${spacings.TRIPLE}rem`,
       color: palette.WHITE,
       ...fontSizes.pica,
       ...fontVariants.sansBold,
@@ -17,7 +15,6 @@ const styles = {
       border: 'none',
       backgroundColor: palette.BRAND_BACKGROUND,
       cursor: 'pointer',
-      zIndex: 9999,
       '&:hover, &:focus': {
         color: palette.WHITE,
         textDecoration: 'underline',
@@ -34,6 +31,12 @@ const styles = {
           },
         },
       },
+    }),
+  container: ({ spacings }: Theme) =>
+    css({
+      position: 'fixed',
+      top: `${spacings.TRIPLE}rem`,
+      zIndex: 9999,
     }),
 };
 export default styles;

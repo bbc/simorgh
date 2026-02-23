@@ -1,5 +1,4 @@
-import type { RefObject } from 'react';
-import { use, useCallback, useEffect, useState, useRef } from 'react';
+import { RefObject, use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
@@ -11,20 +10,16 @@ const RefreshSvg = () => (
 );
 
 interface LatestPostButtonProps {
-  streamRef: RefObject<HTMLDivElement>;
   isFirstPostVisible: boolean;
   hasPendingUpdate: boolean;
+  streamRef: RefObject<HTMLDivElement> | null;
 }
 
 const LatestPostButton = ({
-  streamRef,
   isFirstPostVisible,
   hasPendingUpdate,
+  streamRef,
 }: LatestPostButtonProps) => {
-  const [leftPosition, setLeftPosition] = useState('50%');
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const resizeTimeoutRef = useRef<NodeJS.Timeout>(null);
-
   const {
     translations: {
       liveExperiencePage: {
@@ -34,52 +29,13 @@ const LatestPostButton = ({
     },
   } = use(ServiceContext);
 
-  const updatePosition = useCallback(() => {
-    if (!streamRef?.current) {
-      setLeftPosition('50%');
-      return;
-    }
-
-    const streamContainerWidth = streamRef.current.clientWidth;
-    const streamContainerLeftPosition =
-      streamRef.current.getBoundingClientRect().left;
-
-    if (streamContainerWidth !== 0) {
-      setLeftPosition(
-        `${streamContainerLeftPosition + streamContainerWidth / 2}px`,
-      );
-    } else {
-      setLeftPosition('50%');
-    }
-  }, [streamRef]);
-
-  useEffect(() => {
-    updatePosition();
-
-    const handleResize = () => {
-      if (resizeTimeoutRef.current) {
-        clearTimeout(resizeTimeoutRef.current);
-      }
-      resizeTimeoutRef.current = setTimeout(updatePosition, 100);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      if (resizeTimeoutRef.current) {
-        clearTimeout(resizeTimeoutRef.current);
-      }
-    };
-  }, [updatePosition]);
-
   const handleClick = async () => {
     const hasReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
 
-    const streamContainer = document.getElementById('stream-container');
-    if (streamContainer) {
+    if (streamRef) {
+      const streamContainer = streamRef.current;
       streamContainer.scrollIntoView({
         behavior: hasReducedMotion ? 'auto' : 'smooth',
       });
@@ -89,29 +45,25 @@ const LatestPostButton = ({
   const showButton = !isFirstPostVisible && hasPendingUpdate;
 
   return (
-    <>
+    <div css={styles.container}>
       <VisuallyHiddenText aria-live="polite">
         {showButton && <span>{visuallyHiddenButtonText}</span>}
       </VisuallyHiddenText>
-      <button
-        ref={buttonRef}
-        type="button"
-        onClick={handleClick}
-        css={styles.button}
-        tabIndex={showButton ? 0 : -1}
-        aria-live="polite"
-        aria-atomic="true"
-        style={{
-          left: `${leftPosition}`,
-          display: showButton ? 'inline-flex' : 'none',
-          transform:
-            leftPosition === '50%' ? 'translateX(-50%)' : 'translateX(-50%)',
-        }}
-      >
-        <RefreshSvg />
-        <span>{refreshButtonText}</span>
-      </button>
-    </>
+      {showButton ? (
+        <button
+          data-testid="latest-post-button"
+          type="button"
+          onClick={handleClick}
+          css={styles.button}
+          tabIndex={showButton ? 0 : -1}
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <RefreshSvg />
+          <span>{refreshButtonText}</span>
+        </button>
+      ) : null}
+    </div>
   );
 };
 

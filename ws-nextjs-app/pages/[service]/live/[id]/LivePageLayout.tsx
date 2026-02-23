@@ -1,4 +1,4 @@
-import { use, useEffect, useState, useRef } from 'react';
+import { use, useEffect, useState, useRef, RefObject } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -263,8 +263,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}
-              firstPostRef={firstPostRef as React.RefObject<HTMLLIElement>}
-              streamRef={streamRef as React.RefObject<HTMLDivElement>}
+              firstPostRef={firstPostRef as RefObject<HTMLLIElement>}
+              ref={streamRef}
+            />
+            <LatestPostButton
+              isFirstPostVisible={isFirstPostVisible}
+              hasPendingUpdate={hasPendingUpdate}
+              streamRef={streamRef as RefObject<HTMLDivElement>}
             />
           </div>
         </div>
@@ -275,11 +280,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           previousPage={previousPage}
           nextPage={nextPage}
           page={page}
-        />
-        <LatestPostButton
-          streamRef={streamRef as React.RefObject<HTMLDivElement>}
-          isFirstPostVisible={isFirstPostVisible}
-          hasPendingUpdate={hasPendingUpdate}
         />
       </main>
     </>
