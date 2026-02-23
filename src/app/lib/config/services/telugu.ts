@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'మరియు',
+      readTime: {
+        readTimePrefix: 'చదివే సమయం',
+        minute: 'నిమిషాలు',
+      },
       pagination: {
         previousPage: 'మునుపటి',
         nextPage: 'తదుపరి',
@@ -343,22 +347,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'వార్తలు',
         url: '/telugu',
-      },
-      {
-        title: 'వీడియో',
-        url: '/telugu/topics/cl29j0e3e2dt',
-      },
-      {
-        title: 'ఎక్కువ మంది చదివినవి',
-        url: '/telugu/popular/read',
-      },
-      {
-        title: 'జాతీయం',
-        url: '/telugu/topics/c5qvp16w7dnt',
-      },
-      {
-        title: 'అంతర్జాతీయం',
-        url: '/telugu/topics/cvqxn2k1xvdt',
       },
     ],
   },

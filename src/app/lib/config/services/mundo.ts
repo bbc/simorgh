@@ -76,7 +76,7 @@ export const service: DefaultServiceConfig = {
       title: 'Accede a BBC Noticias con un solo toque',
       description:
         'Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo.',
-      orText: 'o',
+      buttonSeparatorText: 'o',
       primaryButton: {
         text: 'Agregar',
         longText: 'Agregar a la pantalla de inicio',
@@ -460,50 +460,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Noticias',
         url: '/mundo',
-      },
-      {
-        title: 'América Latina',
-        url: '/mundo/topics/c7zp57yyz25t',
-      },
-      {
-        title: 'Internacional',
-        url: '/mundo/topics/c2lej05epw5t',
-      },
-      {
-        title: 'EE.UU.',
-        url: '/mundo/topics/cdr5613yzwqt',
-      },
-      {
-        title: 'Economía',
-        url: '/mundo/topics/c06gq9v4xp3t',
-      },
-      {
-        title: 'Ciencia',
-        url: '/mundo/topics/ckdxnw959n7t',
-      },
-      {
-        title: 'Salud',
-        url: '/mundo/topics/cpzd498zkxgt',
-      },
-      {
-        title: 'Cultura',
-        url: '/mundo/topics/c2dwq9zyv4yt',
-      },
-      {
-        title: 'Tecnología',
-        url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
-      },
-      {
-        title: 'Centroamérica cuenta',
-        url: '/mundo/topics/c404v5z1k8wt',
-      },
-      {
-        title: 'Podcasts',
-        url: '/mundo/topics/ce3wlelkgggt',
       },
     ],
   },

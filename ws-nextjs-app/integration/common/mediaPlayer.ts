@@ -9,7 +9,9 @@ export default pageType => {
       expect(mediaPlayerContainer).toMatchSnapshot();
     });
 
-    if (!['Media Article Page', 'Media Asset Page'].includes(pageType)) {
+    if (
+      !['Media Article Page', 'Media Asset Page', 'Live'].includes(pageType)
+    ) {
       it('renders a placeholder', () => {
         const mediaPlayerPlaceholder = mediaPlayerContainer?.querySelector(
           'div[data-e2e=media-loader__placeholder]',

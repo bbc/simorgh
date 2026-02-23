@@ -445,30 +445,6 @@ export const service: DefaultServiceConfig = {
         title: 'Labaran Duniya',
         url: '/hausa',
       },
-      {
-        title: 'Wasanni',
-        url: '/hausa/topics/cz74kjgv220t',
-      },
-      {
-        title: 'Nishadi',
-        url: '/hausa/topics/cg726kz37wdt',
-      },
-      {
-        title: 'Cikakkun Rahotanni',
-        url: '/hausa/topics/cnl7wd77wj2t',
-      },
-      {
-        title: 'Bidiyo',
-        url: '/hausa/topics/cn09qmz4jryt',
-      },
-      {
-        title: 'Shirye-shirye na Musamman',
-        url: '/hausa/topics/cnl7wd9pddlt',
-      },
-      {
-        title: 'Shirye-shiryen rediyo',
-        url: '/hausa/topics/c4nx34q5724t',
-      },
     ],
   },
 };

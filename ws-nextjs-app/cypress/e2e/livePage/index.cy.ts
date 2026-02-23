@@ -18,7 +18,7 @@ const testDetails = [
   {
     path: '/pidgin/live/c7p765ynk9qt',
     id: 'c7p765ynk9qt',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['local'],
     service: 'pidgin',
     tests: [
       testsThatAlwaysRunForAllPages,
@@ -55,7 +55,7 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/pidgin/live/c7p765ynk9qt',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'pidgin',
     pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
     siteId: 70,

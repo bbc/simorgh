@@ -175,41 +175,6 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 1`]
 }
 `;
 
-exports[`AMP Most Read Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Việt Nam",
-  "url": "/vietnamese/topics/ckdxnx1x5rnt",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Thế giới",
-  "url": "/vietnamese/topics/cnlv9j1ekq0t",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Kinh tế",
-  "url": "/vietnamese/topics/cez1ey7nzj3t",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Thể thao",
-  "url": "/vietnamese/topics/ckdxnx1k7zxt",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/vietnamese/topics/cl29j0ekkvdt",
-}
-`;
-
 exports[`AMP Most Read Page I can see the headline 1`] = `"Phổ biến"`;
 
 exports[`AMP Most Read Page I can see the list items 1`] = `"1Vụ hai đồn công an ở Đắk Lắk bị tấn công: 'Tức nước vỡ bờ vì mâu thuẫn đất đai và tôn giáo'?Cập nhật gần nhất: 19 tháng 6 năm 2023"`;

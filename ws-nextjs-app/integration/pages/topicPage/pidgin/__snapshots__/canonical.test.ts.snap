@@ -124,55 +124,6 @@ exports[`Canonical Topic Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Topic Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Nigeria",
-  "url": "/pidgin/topics/c2dwqd1zr92t",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Africa",
-  "url": "/pidgin/topics/c404v061z85t",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "World",
-  "url": "/pidgin/topics/c0823e52dd0t",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Video",
-  "url": "/pidgin/topics/c3l19z3k1ert",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Sport",
-  "url": "/pidgin/topics/cjgn7gv77vrt",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Entertainment",
-  "url": "/pidgin/topics/cqywjyzk2vyt",
-}
-`;
-
-exports[`Canonical Topic Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "Most popular",
-  "url": "/pidgin/popular/read",
-}
-`;
-
 exports[`Canonical Topic Page Main heading should match text 1`] = `"Donald Trump"`;
 
 exports[`Canonical Topic Page Page content First item in the first curation is the correct headline 1`] = `"Di 34 criminal charges against former US President Donald Trump and di likely punishment"`;

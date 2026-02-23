@@ -1,9 +1,11 @@
 import { use } from 'react';
+import moment from 'moment';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Services } from '#app/models/types/global';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import Text from '#app/components/Text';
+import { formatDuration } from '#app/legacy/psammead/psammead-timestamp-container/src/utilities';
 import styles from './index.styles';
 
 type ReadTimeProps = {
@@ -16,31 +18,48 @@ const formatReadTime = ({
   singleMinuteSuffix,
   readTimePrefix,
   service,
+  datetimeLocale,
 }: {
   readTimeValue: number;
   singleMinuteSuffix?: string;
   readTimePrefix?: string;
   service: Services;
+  datetimeLocale: string;
 }) => {
   if (!singleMinuteSuffix || !readTimePrefix) return null;
 
   const servicesWithMinutesBeforeNumber: Services[] = [
+    'afaanoromoo',
+    'burmese',
     'hausa',
+    'gahuza',
     'igbo',
-    'yoruba',
     'swahili',
+    'sinhala',
+    'yoruba',
   ];
-  const servicesWithoutColon: Services[] = ['igbo', 'pidgin'];
+  const servicesWithoutColon: Services[] = [
+    'igbo',
+    'pidgin',
+    'turkce',
+    'japanese',
+  ];
 
   const separator = servicesWithoutColon.includes(service) ? ' ' : ': ';
 
+  const translatedReadTime = formatDuration({
+    duration: moment.duration(readTimeValue, 'minutes').toISOString(),
+    format: 'm',
+    locale: datetimeLocale,
+  });
+
   return servicesWithMinutesBeforeNumber.includes(service)
-    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${readTimeValue}`
-    : `${readTimePrefix}${separator}${readTimeValue} ${singleMinuteSuffix}`;
+    ? `${readTimePrefix}${separator}${singleMinuteSuffix} ${translatedReadTime}`
+    : `${readTimePrefix}${separator}${translatedReadTime} ${singleMinuteSuffix}`;
 };
 
 const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
-  const { translations, service } = use(ServiceContext);
+  const { datetimeLocale, translations, service } = use(ServiceContext);
 
   const { readTime } = translations;
   const singleMinuteSuffix = readTime?.minute;
@@ -64,6 +83,7 @@ const ReadTimeArticle = ({ readTimeValue, className }: ReadTimeProps) => {
     singleMinuteSuffix,
     readTimePrefix,
     service,
+    datetimeLocale,
   });
 
   if (!readTimeText) return null;

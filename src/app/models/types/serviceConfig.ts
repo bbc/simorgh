@@ -10,6 +10,7 @@ import {
   UzbekService,
   Direction,
   Variants,
+  Navigation,
 } from './global';
 import { Translations } from './translations';
 
@@ -97,11 +98,7 @@ export type ServiceConfig = {
   recommendations?: Recommendations;
   footer: Footer;
   collapsibleNavigation?: CollapsibleNavigationSection[];
-  navigation?: {
-    title: string;
-    url: string;
-    hideOnLiteSite?: boolean;
-  }[];
+  navigation?: Navigation[];
   scriptLink?: {
     text: string;
     variant: Variants;

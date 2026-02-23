@@ -26,32 +26,6 @@ describe('fetchConfig', () => {
     process.env.BFF_PATH = 'https://mock-bff-path';
   });
 
-  it('should return null for unsupported services', async () => {
-    const { default: fetchConfig } = await import('.');
-
-    const data = await fetchConfig({
-      service: 'news',
-      pagePath: '/news',
-      configType: 'navigation',
-    });
-
-    expect(data).toBeNull();
-  });
-
-  it('should return null when in live environment', async () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-
-    const { default: fetchConfig } = await import('.');
-
-    const data = await fetchConfig({
-      service: 'indonesia',
-      pagePath: '/indonesia',
-      configType: 'navigation',
-    });
-
-    expect(data).toBeNull();
-  });
-
   it('should fetch configuration data', async () => {
     global.fetch = jest.fn().mockResolvedValue({
       ok: true,
@@ -68,6 +42,27 @@ describe('fetchConfig', () => {
 
     expect(data).toEqual(mockNavResponse);
     expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should fetch configuration data with variant when variant is provided', async () => {
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => mockNavResponse,
+    });
+
+    const { default: fetchConfig } = await import('.');
+
+    const variant = 'lat';
+    const data = await fetchConfig({
+      service: 'serbian',
+      pagePath: '/serbian',
+      configType: 'navigation',
+      variant,
+    });
+
+    expect(data).toEqual(mockNavResponse);
+    const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+    expect(fetchUrl).toContain(`variant=${variant}`);
   });
 
   it('should return cached data on subsequent calls', async () => {
@@ -93,8 +88,7 @@ describe('fetchConfig', () => {
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
-  // TODO: Add 'live' environment test once rolling out to Live environment
-  it.each(['test'])(
+  it.each(['test', 'live'])(
     'should include ctx-service-env header when renderer_env=%s',
     async env => {
       global.fetch = jest.fn().mockResolvedValue({
@@ -118,8 +112,7 @@ describe('fetchConfig', () => {
     },
   );
 
-  // TODO: Add 'live' environment test once rolling out to Live environment
-  it.each(['test'])(
+  it.each(['test', 'live'])(
     'should include ctx-service-env header when actual environment is %s without renderer_env param',
     async env => {
       process.env.SIMORGH_APP_ENV = env;
