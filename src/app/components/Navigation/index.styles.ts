@@ -19,10 +19,11 @@ export default {
       position: 'absolute',
       width: '100%',
       insetInlineStart: 0,
+
       '@media (min-width: 1041px)': {
         width: '100%',
-        insetInlineStart: '0',
       },
+
       '&::after': {
         content: "''",
         position: 'absolute',
