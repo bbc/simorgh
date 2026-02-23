@@ -34,27 +34,45 @@ export default {
   parameters: { docs: {} },
 };
 
-export const Example = (_: StoryArgs, globalArgs: Props) => {
+export const Arabic = (_: StoryArgs, globalArgs: Props) => {
   const navItems = [
     {
-      title: 'Home',
+      title: 'رئيسية',
       url: '/home',
       subItems: [
-        { title: 'Section 1', url: '/home/section1' },
-        { title: 'Section 2', url: '/home/section2' },
+        { title: 'أخبار', url: '/home/section1' },
+        { title: 'شاهد', url: '/home/section2' },
+        { title: 'صحة وعلوم', url: '/home/section3' },
       ],
     },
     {
-      title: 'News',
+      title: 'شاهد',
       url: '/news',
     },
   ];
   return (
-    <Component
-      navItems={navItems}
-      currentPath="/home"
-      service={'afaanoromoo'}
-    />
+    <Component navItems={navItems} currentPath="/home" service={'arabic'} />
+  );
+};
+
+export const Pidgin = (_: StoryArgs, globalArgs: Props) => {
+  const navItems = [
+    {
+      title: 'News',
+      url: '/home',
+      subItems: [
+        { title: 'Nigeria', url: '/home/section1' },
+        { title: 'Africa', url: '/home/section2' },
+        { title: 'World', url: '/home/section3' },
+      ],
+    },
+    {
+      title: 'Video',
+      url: '/news',
+    },
+  ];
+  return (
+    <Component navItems={navItems} currentPath="/home" service={'pidgin'} />
   );
 };
 
