@@ -4,28 +4,15 @@ import type {
   Navigation as NavigationType,
   Services,
 } from '#app/models/types/global';
-
 interface Props {
   navItems: NavigationType[];
-  currentPath?: string;
   service: Services;
-  // propsForTopBarOJComponent?: {
-  //   blocks?: TopStoryItem[];
-  // };
 }
 
-const Component = ({
-  navItems,
-  // currentPath = '',
-  service,
-  // propsForTopBarOJComponent
-}: Props) => {
+const Component = ({ navItems, service }: Props) => {
   return (
     <ServiceContextProvider service={service}>
-      <Navigation
-        navItems={navItems}
-        // currentPath={currentPath}
-      />
+      <Navigation navItems={navItems} />
     </ServiceContextProvider>
   );
 };
@@ -52,9 +39,7 @@ export const Arabic = () => {
       url: '/news',
     },
   ];
-  return (
-    <Component navItems={navItems} currentPath="/home" service={'arabic'} />
-  );
+  return <Component navItems={navItems} service={'arabic'} />;
 };
 
 export const Pidgin = () => {
@@ -73,7 +58,5 @@ export const Pidgin = () => {
       url: '/news',
     },
   ];
-  return (
-    <Component navItems={navItems} currentPath="/home" service={'pidgin'} />
-  );
+  return <Component navItems={navItems} service={'pidgin'} />;
 };
