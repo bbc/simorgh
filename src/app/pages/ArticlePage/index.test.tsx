@@ -1129,7 +1129,30 @@ describe('Article Page', () => {
       });
     });
 
-    it('should not render the carousel when portraitVideoItems are absent and the toggle is off', async () => {
+    it('should not render the carousel when portraitVideoItems are present but the toggle is disabled', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage pageData={dataWithPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
+      );
+
+      await waitFor(() => {
+        expect(
+          queryByTestId('portrait-video-carousel'),
+        ).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoItems are absent and the toggle is disabled', async () => {
       const dataWithoutPVItems = {
         ...articleDataPidgin,
         portraitVideoItems: undefined,
