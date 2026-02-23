@@ -60,6 +60,7 @@ type RenderListItemsArgs = {
   viewTracker: unknown;
   isLite?: boolean;
   pageType?: PageTypes;
+  navType?: 'top' | 'bottom' | 'dropdown';
 };
 
 const renderListItems = ({
@@ -72,6 +73,7 @@ const renderListItems = ({
   viewTracker,
   isLite,
   pageType,
+  navType,
 }: RenderListItemsArgs) =>
   navigation
     // For Lite pages, filter out any items that should be hidden on the Lite site
@@ -91,7 +93,7 @@ const renderListItems = ({
           dir={dir}
           clickTracker={clickTracker}
           viewTracker={viewTracker}
-          {...a11yProps}
+          {...(navType === 'top' ? a11yProps : {})}
         >
           {title}
         </Li>
@@ -227,6 +229,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         viewTracker: topNavViewTracker,
         isLite,
         pageType,
+        navType: 'top',
       })}
     </NavigationUl>
   );
