@@ -4,8 +4,12 @@ This component renders a the navigation bar which comprises of two tiers, the pr
 
 ## Props
 
-| Name | type | Description |
-| ---- | ---- | ----------- |
+| Name           | type    | value                                                    |
+| -------------- | ------- | -------------------------------------------------------- |
+| title          | string  | Video                                                    |
+| url            | string  | /pidgin/topics/c3l19z3k1ert                              |
+| hideOnLiteSite | boolean | false                                                    |
+| subItems       | array   | [{ title: 'Video', url: '/pidgin/topics/c3l19z3k1ert' }] |
 
 ## How to use
 
