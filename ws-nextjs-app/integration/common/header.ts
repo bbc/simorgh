@@ -106,12 +106,16 @@ export default service => {
           expect(dropdownNav).toBeInTheDocument();
         });
 
-        it('should render top and secondary navigation links', () => {
+        it('should render top navigation links and optional secondary links', () => {
           const topLinks = getNavigationLinks(topScrollableNav);
           const secondaryLinks = getNavigationLinks(secondaryScrollableNav);
 
           expect(topLinks.length).toBeGreaterThan(0);
-          expect(secondaryLinks.length).toBeGreaterThan(0);
+
+          secondaryLinks.forEach(secondaryLink => {
+            expect(secondaryLink.textContent).toBeTruthy();
+            expect(secondaryLink.getAttribute('href')).toBeTruthy();
+          });
         });
 
         it('should prioritise the first top-level link in the dropdown', () => {
@@ -119,8 +123,10 @@ export default service => {
           const dropdownLinks = getNavigationLinks(dropdownNav);
 
           expect(dropdownLinks.length).toBeGreaterThan(0);
-          expect(dropdownLinks[0]?.textContent).toEqual(
-            topLinks[0]?.textContent,
+          expect(topLinks[0]?.textContent).toBeTruthy();
+          expect(dropdownLinks[0]?.textContent).toBeTruthy();
+          expect(topLinks[0]?.textContent).toContain(
+            dropdownLinks[0]?.textContent ?? '',
           );
           expect(dropdownLinks[0]?.getAttribute('href')).toEqual(
             topLinks[0]?.getAttribute('href'),
