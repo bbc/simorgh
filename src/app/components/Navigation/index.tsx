@@ -56,8 +56,8 @@ type RenderListItemsArgs = {
   currentPage: string;
   dir: Direction;
   activeIndex: number;
-  clickTracker: unknown;
-  viewTracker: unknown;
+  clickTracker: ReturnType<typeof useClickTrackerHandler>;
+  viewTracker?: ReturnType<typeof useViewTracker>;
   pageType?: PageTypes;
   navType?: 'top' | 'bottom' | 'dropdown';
 };
@@ -87,7 +87,7 @@ const renderListItems = ({
         currentPageText={currentPage}
         dir={dir}
         clickTracker={clickTracker}
-        viewTracker={viewTracker}
+        {...(viewTracker && { viewTracker })}
         {...(navType === 'top' ? a11yProps : {})}
       >
         {title}
@@ -172,6 +172,9 @@ type NavigationContainerProps = {
   };
 };
 
+const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
+const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
+
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
@@ -189,9 +192,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
-  const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
-  const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
-
   const topNavClickTrackerHandler = useClickTrackerHandler(
     navEventTrackingMetadata,
   );
@@ -203,7 +203,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   );
 
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
-  const bottomNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
   /**
@@ -254,6 +253,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
    */
   const activeTop =
     topActiveIndex > -1 ? navigationItems[topActiveIndex] : navigationItems[0];
+
   const bottomItems = activeTop?.subItems || [];
 
   // Find the active subitem index in the bottom nav
@@ -270,7 +270,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         dir,
         activeIndex: activeBottomIndex,
         clickTracker: bottomNavClickTrackerHandler,
-        viewTracker: bottomNavViewTracker,
         pageType,
       })}
     </NavigationUl>
