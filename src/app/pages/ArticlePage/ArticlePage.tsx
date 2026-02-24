@@ -552,10 +552,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               />
             </div>
           </div>
-          {hasRelatedContent && renderAdaptiveMediaCuration()}
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+      {hasRelatedContent && (
+        <div css={styles.adaptiveMediaCurationRow}>
+          <div css={styles.adaptiveMediaCurationInner}>
+            {renderAdaptiveMediaCuration()}
+          </div>
+        </div>
+      )}
 
       {showPortraitVideoCarousel && (
         <PortraitVideoCarousel
