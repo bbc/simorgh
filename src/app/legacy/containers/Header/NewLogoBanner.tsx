@@ -4,6 +4,8 @@ const NewLogoBanner = () => (
   <div css={styles.banner} data-testid="logo-banner">
     <svg
       css={styles.logoSvg}
+      width="168"
+      height="48"
       viewBox="0 0 168 48"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
