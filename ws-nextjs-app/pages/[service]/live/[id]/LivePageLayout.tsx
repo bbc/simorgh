@@ -17,7 +17,8 @@ import {
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-import tempPageData from './tempPageData';
+// eslint-disable-next-line import/no-relative-packages
+// import tempPageData from '../../../../../src/app/hooks/useLivePagePolling/tempPageData';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
