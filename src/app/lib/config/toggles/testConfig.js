@@ -11,9 +11,7 @@ export default {
   adsNonce: {
     enabled: false,
   },
-  articleLiteSiteLink: { 
-    enabled: true 
-  },
+  articleLiteSiteLink: { enabled: true },
   articlePortraitVideo: {
     enabled: true,
   },
