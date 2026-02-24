@@ -4,7 +4,15 @@ const pageData2 = {
   description:
     'The refugee camp has been hit by hundreds of shells, where Hamas says 100,000 people are still sheltering',
   language: 'pcm',
-  headerImage: null,
+  headerImage: {
+    url: 'https://ichef.bbci.co.uk/ace/standard/480/cpsprodpb/c124/live/1f0ccef0-10ee-11f1-9120-a910fc22c6ac.jpg',
+    urlTemplate:
+      'https://ichef.bbci.co.uk/ace/standard/{width}/cpsprodpb/c124/live/1f0ccef0-10ee-11f1-9120-a910fc22c6ac.jpg',
+    height: 533,
+    width: 800,
+    altText: 'Manchester United',
+    copyright: 'Getty Images',
+  },
   promoImage: null,
   home: 'pidgin',
   section: null,

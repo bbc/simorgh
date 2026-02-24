@@ -8,8 +8,16 @@ import {
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
 import { GetServerSidePropsContext } from 'next';
-import Live from './LivePageLayout';
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
+import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
+import { StreamResponse } from './Post/types';
+
+jest.mock('#app/hooks/useLivePagePolling', () => ({
+  __esModule: true,
+  default: jest.fn(),
+}));
 
 type HelmetMetaTag = {
   property?: string;
@@ -108,7 +116,33 @@ const mockPageDataWithMetadata = ({
   };
 };
 
+const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
+  const streamData = pageData.liveTextStream.content
+    ?.data as StreamResponse['data'];
+
+  jest.spyOn(useLivePagePolling, 'default').mockReturnValueOnce({
+    currentStreamData: streamData,
+    hasPendingUpdate: false,
+    applyPendingUpdate: () => {
+      return null;
+    },
+  });
+};
+
+const mockIntersectionObserver = new MockIntersectionObserver();
+
 describe('Live Page', () => {
+  beforeEach(() => {
+    // @ts-expect-error mocking required for tests
+    global.IntersectionObserver = jest.fn(
+      mockIntersectionObserver.getMockIntersectionObserver(),
+    );
+  });
+
+  afterEach(() => {
+    mockIntersectionObserver.clearObservers();
+  });
+
   it('Should set Cache-Control header to correct values', async () => {
     const context = {
       query: {
@@ -442,7 +476,7 @@ describe('Live Page', () => {
   it('sets the correct og:image meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl =

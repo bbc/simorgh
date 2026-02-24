@@ -66,14 +66,14 @@ interface LivePageProps extends ComponentProps {
   assetId?: string | null;
 }
 
-const LivePage = ({ assetId }: LivePageProps) => {
+const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
-  const pageData = tempPageData;
+  // const pageData = tempPageData;
   const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(initialStreamData);

@@ -3,7 +3,7 @@ import {
   screen,
   act,
 } from '#app/components/react-testing-library-with-providers';
-
+import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 
@@ -21,42 +21,18 @@ const mockStreamDataMoreThanOne = {
   results: [postFixture, postFixture],
 };
 
-const observers = new Map();
-
-const IntersectionObserver = jest.fn(cb => {
-  const item = {
-    callback: cb,
-    elements: new Set(),
-  };
-
-  const instance = {
-    observe: jest.fn(element => {
-      item.elements.add(element);
-    }),
-    disconnect: jest.fn(() => {
-      item.elements.clear();
-    }),
-  };
-
-  observers.set(instance, item);
-
-  return instance;
-});
-
-const triggerAllObservers = () => {
-  observers.forEach(item => {
-    item.callback([{ isIntersecting: true }]);
-  });
-};
+const mockIntersectionObserver = new MockIntersectionObserver();
 
 describe('Live Page Stream', () => {
   beforeEach(() => {
     // @ts-expect-error mocking required for tests
-    global.IntersectionObserver = IntersectionObserver;
+    global.IntersectionObserver = jest.fn(
+      mockIntersectionObserver.getMockIntersectionObserver(),
+    );
   });
 
   afterEach(() => {
-    observers.clear();
+    mockIntersectionObserver.clearObservers();
   });
 
   it('should return null with no stream content posts', async () => {
@@ -143,7 +119,7 @@ describe('Live Page Stream', () => {
         />,
       );
     });
-    triggerAllObservers();
+    mockIntersectionObserver.triggerAllObservers();
     expect(isVisibleCallback).toHaveBeenCalledWith(true);
     expect(applyUpdateCallback).toHaveBeenCalledTimes(1);
   });
