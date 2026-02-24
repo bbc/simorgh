@@ -1,6 +1,6 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 
-// added for running the tests locally, this can be removed when all services have been migrated to the new nav and
+// added for running the tests locally, this can be removed when all services have been migrated to the new nav
 const servicesWithNewNav = Array.isArray(SERVICES_WITH_NEW_NAV)
   ? SERVICES_WITH_NEW_NAV
   : SERVICES_WITH_NEW_NAV?.default || [];
