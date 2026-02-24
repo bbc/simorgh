@@ -17,7 +17,7 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 
 ## Coding Standards
 - See docs/Coding-Standards/README.md for our coding standards. These can be seen implemented in src/app/components/Paragraph/ along with linting rules in .eslintrc.js
-- Please use the CONTRIBUTING.md and SECURITY.md
+- Please read and follow the guidelines in CONTRIBUTING.md and SECURITY.md
 - Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
 - Don't use any external dependencies that you don't need.
 - Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
