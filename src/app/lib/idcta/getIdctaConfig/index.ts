@@ -3,9 +3,19 @@ import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
+import hasCookie from '#app/lib/utilities/hasCookie/hasCookie';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
+
+export const getInitialIsSignedIn = (
+  cookieHeader: string | undefined,
+  idctaConfig: IdctaConfig | null,
+): boolean | undefined => {
+  const cookieName = idctaConfig?.identity?.idSignedInCookieName;
+  if (!cookieHeader || !cookieName) return undefined;
+  return hasCookie(cookieHeader, cookieName);
+};
 
 /**
  * Gets IDCTA config with toggle validation and config verification
