@@ -55,6 +55,34 @@ describe('LatestPostButton', () => {
     expect(button).toBeNull();
   });
 
+  it('should clear after 10 seconds of being visible', async () => {
+    const { container } = await act(async () => {
+      return render(
+        <LastestPostButton
+          isFirstPostVisible={false}
+          hasPendingUpdate
+          streamRef={null}
+        />,
+      );
+    });
+
+    const button = container.querySelector(
+      'button[aria-atomic="true"][aria-live="polite"]',
+    );
+
+    expect(button).not.toBeNull();
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
+    const buttonAfter10Sec = container.querySelector(
+      'button[aria-atomic="true"][aria-live="polite"]',
+    );
+
+    expect(buttonAfter10Sec).toBeNull();
+  });
+
   it('scroll the page up when clicked on', async () => {
     const streamRefMock = {
       current: {

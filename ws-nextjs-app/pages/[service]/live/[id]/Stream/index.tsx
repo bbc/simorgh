@@ -1,6 +1,8 @@
 import {
+  Dispatch,
   ForwardedRef,
   forwardRef,
+  SetStateAction,
   use,
   useEffect,
   useRef,
@@ -16,12 +18,12 @@ import styles from './styles';
 type Props = {
   streamContent: StreamResponse | null;
   contributors: string | null;
-  firstPostRef: React.RefObject<HTMLLIElement>;
+  setIsFirstPostVisible: Dispatch<SetStateAction<boolean>>;
 };
 
 const Stream = forwardRef(
   (
-    { streamContent, contributors, firstPostRef }: Props,
+    { streamContent, contributors, setIsFirstPostVisible }: Props,
     streamRef: ForwardedRef<HTMLDivElement>,
   ) => {
     const {
@@ -30,6 +32,7 @@ const Stream = forwardRef(
       },
     } = use(ServiceContext);
 
+    const firstPostRef = useRef<HTMLLIElement>(null);
     const [hasShareApi, setHasShareApi] = useState(false);
     const [hashValue, setHashValue] = useState('');
 
@@ -45,6 +48,26 @@ const Stream = forwardRef(
         setHasShareApi(true);
       }
     }, [hashValue]);
+
+    useEffect(() => {
+      if (!firstPostRef.current) return undefined;
+
+      const firstPostObserver = new IntersectionObserver(
+        ([entry]) => {
+          setIsFirstPostVisible(entry.isIntersecting);
+        },
+        {
+          threshold: 0,
+          rootMargin: '0px',
+        },
+      );
+
+      firstPostObserver.observe(firstPostRef.current);
+
+      return () => {
+        firstPostObserver.disconnect();
+      };
+    }, [setIsFirstPostVisible, streamContent]);
 
     if (!streamContent) return null;
 

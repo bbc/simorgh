@@ -1,7 +1,9 @@
-import { RefObject, use } from 'react';
+import { RefObject, use, useEffect, useState } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import styles from './styles';
+
+const TEN_SECONDS = 10 * 1000;
 
 const RefreshSvg = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -29,6 +31,8 @@ const LatestPostButton = ({
     },
   } = use(ServiceContext);
 
+  const [showButton, setShowButton] = useState(false);
+
   const handleClick = async () => {
     const hasReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)',
@@ -42,7 +46,15 @@ const LatestPostButton = ({
     }
   };
 
-  const showButton = !isFirstPostVisible && hasPendingUpdate;
+  useEffect(() => {
+    const updateShowButton = !isFirstPostVisible && hasPendingUpdate;
+    if (updateShowButton) {
+      setShowButton(updateShowButton);
+      setTimeout(() => {
+        setShowButton(false);
+      }, TEN_SECONDS);
+    }
+  }, [isFirstPostVisible, hasPendingUpdate]);
 
   return (
     <div css={styles.container}>

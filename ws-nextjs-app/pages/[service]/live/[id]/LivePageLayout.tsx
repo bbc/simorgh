@@ -78,36 +78,16 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const previousDataRef = useRef(pageData2);
 
   const streamRef = useRef<HTMLDivElement>(null);
-  const firstPostRef = useRef<HTMLLIElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
   const [hasPendingUpdate, setHasPendingUpdate] = useState(false);
   const pendingDataRef = useRef<typeof pageData2 | null>(null);
 
   const { forceUpdate, updateFinished } = usePollingFake();
+  const pageIndex = currentPageData.liveTextStream.content.data.page.index;
 
   useEffect(() => {
-    if (!firstPostRef.current) return undefined;
-
-    const firstPostObserver = new IntersectionObserver(
-      ([entry]) => {
-        setIsFirstPostVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0,
-        rootMargin: '0px',
-      },
-    );
-
-    firstPostObserver.observe(firstPostRef.current);
-
-    return () => {
-      firstPostObserver.disconnect();
-    };
-  }, [currentPageData.liveTextStream]);
-
-  useEffect(() => {
-    if (forceUpdate) {
+    if (forceUpdate && pageIndex === 1) {
       const newPageData = pageData3;
 
       if (hasNewPost(previousDataRef.current, newPageData)) {
@@ -132,7 +112,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
       updateFinished();
     }
-  }, [forceUpdate, updateFinished, isFirstPostVisible]);
+  }, [forceUpdate, updateFinished, isFirstPostVisible, pageIndex]);
 
   useEffect(() => {
     if (isFirstPostVisible && hasPendingUpdate && pendingDataRef.current) {
@@ -263,7 +243,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             <Stream
               streamContent={liveTextStream.content}
               contributors={liveTextStream.contributors}
-              firstPostRef={firstPostRef as RefObject<HTMLLIElement>}
+              setIsFirstPostVisible={setIsFirstPostVisible}
               ref={streamRef}
             />
             <LatestPostButton
