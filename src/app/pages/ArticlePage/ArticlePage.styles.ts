@@ -144,6 +144,21 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
+  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
+    css({
+      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+      },
+    }),
+  adaptiveMediaCurationInner: ({ mq }: Theme) =>
+    css({
+      margin: '0 auto',
+      maxWidth: `${pixelsToRem(1008)}rem`,
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: '0 1rem',
+      },
+    }),
   featuresSection: ({ spacings, mq }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
