@@ -18,6 +18,12 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 ## Coding Standards
 - See docs/Coding-Standards/README.md for our coding standards. These can be seen implemented in src/app/components/Paragraph/ along with linting rules in .eslintrc.js
 - Please read and follow the guidelines in CONTRIBUTING.md and SECURITY.md
+- Use `nvm use` to get the correct version of node, and then `yarn` install packages. Then `yarn dev` will serve your code locally.
+- Our directory aliases can be found in dirAlias.js
+
+## Coding Standards
+- See docs/Coding-Standards/README.md for our coding standards. These can be seen implemented in bbc/simorgh/src/app/components/Paragraph/.* along with linting rules in .eslintrc.js
+- Please use the CONTRIBUTING.md and SECURITY.md
 - Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
 - Don't use any external dependencies that you don't need.
 - Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
@@ -30,5 +36,6 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 - You can run our entire suite of unit and integration tests by running `yarn test`
 - Once code is submitted for a PR it will also pass through `yarn test:e2e` on GitHub Actions which runs our cypress e2e tests, so it's useful to run that command once everything else is passing.
 - When writing React tests, import from our custom testing-library wrapper at `src/app/components/react-testing-library-with-providers.tsx` instead of importing directly from `@testing-library/react`, so that all required context providers are included.
+ 
 ## PR instructions
 - Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.

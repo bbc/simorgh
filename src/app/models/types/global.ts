@@ -28,6 +28,7 @@ export type Navigation = {
   title: string;
   url: string;
   hideOnLiteSite?: boolean;
+  subItems?: Navigation[];
 };
 
 export type ComponentExperimentProps = {
