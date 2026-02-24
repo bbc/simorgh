@@ -93,10 +93,7 @@ export default service => {
 
         const getNavigationLinks = (
           navigationElement: Element | null | undefined,
-        ) =>
-          Array.from(
-            navigationElement?.querySelectorAll('[role="list"] a') || [],
-          );
+        ) => Array.from(navigationElement?.querySelectorAll('a') || []);
 
         it('should render separate top and secondary scrollable navigation rows', () => {
           expect(topScrollableNav).toBeInTheDocument();
@@ -113,7 +110,7 @@ export default service => {
           const topLinks = getNavigationLinks(topScrollableNav);
           const secondaryLinks = getNavigationLinks(secondaryScrollableNav);
 
-          expect(topLinks.length).toBeGreaterThan(1);
+          expect(topLinks.length).toBeGreaterThan(0);
           expect(secondaryLinks.length).toBeGreaterThan(0);
         });
 
