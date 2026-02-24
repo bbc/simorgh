@@ -4,12 +4,10 @@ This component renders a the navigation bar which comprises of two tiers, the pr
 
 ## Props
 
-| Name           | type    | value                                                    |
-| -------------- | ------- | -------------------------------------------------------- |
-| title          | string  | Video                                                    |
-| url            | string  | /pidgin/topics/c3l19z3k1ert                              |
-| hideOnLiteSite | boolean | false                                                    |
-| subItems       | array   | [{ title: 'Video', url: '/pidgin/topics/c3l19z3k1ert' }] |
+| Name                      | type                        | Description                                               |
+| ------------------------- | --------------------------- | --------------------------------------------------------- |
+| navItems                  | Navigation[]                | Array of Navigation items to display within the component |
+| propsForTopBarOJComponent | { blocks?: TopStoryItem[] } | Optional object with blocks to display TopStoryItem       |
 
 ## How to use
 
