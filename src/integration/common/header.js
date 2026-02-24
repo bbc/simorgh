@@ -1,7 +1,6 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 
 // added for local test running: normalise import shape - this can be removed when all services have been migrated to the new nav and
-// the config file is a simple array export
 const servicesWithNewNav = Array.isArray(SERVICES_WITH_NEW_NAV)
   ? SERVICES_WITH_NEW_NAV
   : SERVICES_WITH_NEW_NAV?.default || [];
