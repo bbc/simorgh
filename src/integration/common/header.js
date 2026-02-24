@@ -1,6 +1,6 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 
-// added for local test running: normalise import shape - this can be removed when all services have been migrated to the new nav and
+// added for running the tests locally, this can be removed when all services have been migrated to the new nav and
 const servicesWithNewNav = Array.isArray(SERVICES_WITH_NEW_NAV)
   ? SERVICES_WITH_NEW_NAV
   : SERVICES_WITH_NEW_NAV?.default || [];
@@ -82,7 +82,7 @@ export default service => {
     }
 
     if (servicesWithNewNav.includes(service) && !isAmpPage) {
-      describe('New navigation', () => {
+      describe('New Navigation (using isite config)', () => {
         const topScrollableNav = document.querySelector(
           'header nav [data-e2e="scrollable-nav"]',
         );
