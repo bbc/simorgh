@@ -26,7 +26,7 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 - Please use the CONTRIBUTING.md and SECURITY.md
 - Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
 - Don't use any external dependencies that you don't need.
-- Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
+- Try to limit the number of parameters in functions; if you can't, use a single object parameter with destructuring instead.
 - Optimise all code for front end performance where possible, as 90% of our audience are on mobile devices and a large percentage of them have poor bandwidth due to their locations across the world.
 - Do not introduce accessibility regressions
 - Ensure you meet at least WCAG 2.1 (or 2.2/latest ver) AA for new/changed UI
