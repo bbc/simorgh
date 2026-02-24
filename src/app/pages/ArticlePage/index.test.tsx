@@ -33,7 +33,8 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-import { Article } from '#app/models/types/optimo';
+import { Curation } from '#app/models/types/curationData';
+import { Article, OptimoBlock } from '#app/models/types/optimo';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import {
@@ -1019,8 +1020,10 @@ describe('Article Page', () => {
   });
 
   describe('Adaptive media curation', () => {
-    const mediaCurationFixture = {
+    const mediaCurationFixture: Curation = {
       title: 'वीडियो',
+      visualProminence: 'NORMAL',
+      position: 0,
       curationId: 'urn:bbc:vivo:curation:test-id',
       link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
       summaries: [
@@ -1034,7 +1037,7 @@ describe('Article Page', () => {
         },
       ],
     };
-    const relatedContentBlock = {
+    const relatedContentBlock: OptimoBlock = {
       id: 'related-content-test-id',
       type: 'relatedContent',
       model: {
@@ -1043,7 +1046,7 @@ describe('Article Page', () => {
       position: [99],
     };
 
-    const pageDataWithMediaCuration = {
+    const pageDataWithMediaCuration: Article = {
       ...articleDataHindi,
       secondaryColumn: {
         topStories: [],
@@ -1051,19 +1054,19 @@ describe('Article Page', () => {
         mediaCuration: mediaCurationFixture,
       },
     };
-    const pageDataWithMediaCurationAndRelatedContent = {
+    const pageDataWithMediaCurationAndRelatedContent: Article = {
       ...pageDataWithMediaCuration,
       content: {
         ...pageDataWithMediaCuration.content,
         model: {
           ...pageDataWithMediaCuration.content.model,
           blocks: [
-            ...(pageDataWithMediaCuration.content?.model?.blocks || []),
+            ...pageDataWithMediaCuration.content.model.blocks,
             relatedContentBlock,
           ],
         },
       },
-    } as Article;
+    };
 
     it('renders media curation when adaptive variation is forced locally', () => {
       const { queryByTestId } = render(
@@ -1091,9 +1094,10 @@ describe('Article Page', () => {
       expect(relatedContentSection).toBeInTheDocument();
       expect(adaptiveMediaCuration).toBeInTheDocument();
       expect(
-        relatedContentSection?.compareDocumentPosition(
+        (relatedContentSection as Element).compareDocumentPosition(
           adaptiveMediaCuration as Node,
-        ) & Node.DOCUMENT_POSITION_FOLLOWING,
+        ) &
+          Node.DOCUMENT_POSITION_FOLLOWING,
       ).toBeTruthy();
     });
 
