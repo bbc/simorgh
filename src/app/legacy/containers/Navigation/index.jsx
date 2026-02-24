@@ -53,11 +53,7 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({
-  navItems,
-  propsForTopBarOJComponent,
-  children,
-}) => {
+const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
 
   const { enabled: accountEnabled } = useToggle('account');
@@ -166,7 +162,6 @@ const NavigationContainer = ({
       blocks={blocks}
     >
       {showAccountPromoBanner && <AccountPromotionalBanner />}
-      {children}
     </Navigation>
   );
 };

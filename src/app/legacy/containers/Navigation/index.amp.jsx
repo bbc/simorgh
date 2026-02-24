@@ -29,7 +29,6 @@ const AmpNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
-  children,
 }) => (
   <Navigation
     script={script}
@@ -56,7 +55,6 @@ const AmpNavigationContainer = ({
     <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
-    {children}
   </Navigation>
 );
 
