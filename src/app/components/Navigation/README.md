@@ -16,3 +16,10 @@ Import and use the component in your page or story:
 ```tsx
 import Navigation from './Navigation';
 ```
+
+```tsx
+<NavigationComponent
+  navItems={navItems}
+  propsForTopBarOJComponent={propsForTopBarOJComponent}
+/>
+```
