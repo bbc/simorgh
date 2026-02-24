@@ -1184,9 +1184,11 @@ describe('Article Page', () => {
         },
       };
       const { queryAllByTestId } = render(
-        <Context service="pidgin">
-          <ArticlePage pageData={dataWithEmptyBlocks} />
-        </Context>,
+        <ArticlePage pageData={dataWithEmptyBlocks} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
       );
 
       await waitFor(() => {
