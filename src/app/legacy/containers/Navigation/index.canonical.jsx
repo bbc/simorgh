@@ -54,28 +54,32 @@ const CanonicalNavigationContainer = ({
     }
   });
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
-      <ScrollableWrapper>
-        {!isLite && (
-          <CanonicalMenuButton
-            announcedText={menuAnnouncedText}
-            isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-            dir={dir}
-            script={script}
-          />
-        )}
-        {!isOpen && (
-          <ScrollableNavigation dir={dir}>
-            {scrollableListItems}
-          </ScrollableNavigation>
-        )}
-      </ScrollableWrapper>
-      {children}
-      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
-      <Divider />
+    <>
+      <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
+        <ScrollableWrapper>
+          {!isLite && (
+            <CanonicalMenuButton
+              announcedText={menuAnnouncedText}
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+              dir={dir}
+              script={script}
+            />
+          )}
+          {!isOpen && (
+            <ScrollableNavigation dir={dir}>
+              {scrollableListItems}
+            </ScrollableNavigation>
+          )}
+        </ScrollableWrapper>
+        <CanonicalDropdown isOpen={isOpen}>
+          {dropdownListItems}
+        </CanonicalDropdown>
+        <Divider />
+      </Navigation>
       {enabled && <TopBarOJs blocks={blocks} />}
-    </Navigation>
+      {children}
+    </>
   );
 };
 
