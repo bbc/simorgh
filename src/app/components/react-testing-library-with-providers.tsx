@@ -40,6 +40,7 @@ interface Props extends PropsWithChildren {
   pageLang?: string;
   isUK?: boolean | null;
   idctaConfig?: IdctaConfig | null;
+  initialIsSignedIn?: boolean;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -63,6 +64,7 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
+  initialIsSignedIn = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -88,7 +90,10 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <AccountProvider initialConfig={idctaConfig}>
+          <AccountProvider
+            initialConfig={idctaConfig}
+            initialIsSignedIn={initialIsSignedIn}
+          >
             <EventTrackingContextProvider atiData={atiData}>
               <UserContextProvider>
                 <ThemeProvider service={service} variant={variant}>
@@ -128,6 +133,7 @@ const customRender = (
     pageLang,
     isUK,
     idctaConfig,
+    initialIsSignedIn,
   } = options || {};
 
   return render(ui, {
@@ -153,6 +159,7 @@ const customRender = (
         pageLang={pageLang}
         isUK={isUK}
         idctaConfig={idctaConfig}
+        initialIsSignedIn={initialIsSignedIn}
       >
         {children}
       </AllTheProviders>

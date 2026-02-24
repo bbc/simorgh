@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
-import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import { IdctaConfig } from '#app/models/types/account';
 import { AccountContext } from '.';
@@ -10,7 +9,6 @@ import {
   waitFor,
 } from '../../components/react-testing-library-with-providers';
 
-jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');
 
 const mockIdctaConfig = {
@@ -135,39 +133,33 @@ describe('AccountContext', () => {
     expect(context.forYouUrl).toBe(mockIdctaConfig.unavailable_url);
   });
 
-  it('should set isSignedIn to true when IDCTA is available and IDCTA cookie exists', () => {
-    (Cookie.get as jest.Mock).mockReturnValue('user-id-value');
-
+  it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
+      initialIsSignedIn: true,
       service: 'hindi',
     });
 
     const testEl = screen.getByTestId('test-component');
     const context = JSON.parse(testEl.textContent as string);
 
-    expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
     expect(context.isSignedIn).toBe(true);
   });
 
-  it('should set isSignedIn to false when IDCTA is available but IDCTA cookie does not exist', () => {
-    (Cookie.get as jest.Mock).mockReturnValue(undefined);
-
+  it('should set isSignedIn to false when IDCTA is available but initialIsSignedIn is false', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
+      initialIsSignedIn: false,
       service: 'hindi',
     });
 
     const testEl = screen.getByTestId('test-component');
     const context = JSON.parse(testEl.textContent as string);
 
-    expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
     expect(context.isSignedIn).toBe(false);
   });
 
-  it('should set isSignedIn to false when IDCTA is not available regardless of cookie', () => {
-    (Cookie.get as jest.Mock).mockReturnValue('user-id-value');
-
+  it('should set isSignedIn to false when IDCTA is not available regardless of initialIsSignedIn', () => {
     const config = {
       ...mockIdctaConfig,
       'id-availability': 'RED',
@@ -175,6 +167,7 @@ describe('AccountContext', () => {
 
     render(<TestComponent />, {
       idctaConfig: config,
+      initialIsSignedIn: true,
       service: 'hindi',
     });
 
