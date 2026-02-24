@@ -1,5 +1,20 @@
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+
+// remove after new nav is completely rolled out to all services
+const servicesWithNewNav = Array.isArray(SERVICES_WITH_NEW_NAV)
+  ? SERVICES_WITH_NEW_NAV
+  : (
+      SERVICES_WITH_NEW_NAV as unknown as {
+        default?: string[];
+      }
+    ).default || [];
+
 export default service => {
   describe('Header', () => {
+    const isAmpPage =
+      document.documentElement.hasAttribute('amp') ||
+      window.location.pathname.endsWith('.amp');
+
     it('I can see the branding', () => {
       const logo = document.getElementById('brandSvgHeader');
 
@@ -65,6 +80,63 @@ export default service => {
               url: linkUrl,
             }).toMatchSnapshot();
           });
+        });
+      });
+    }
+
+    // this check avoids amp noise and limits these checks to services on the new navigation
+    if (servicesWithNewNav.includes(service) && !isAmpPage) {
+      describe('New navigation (using isite config)', () => {
+        const topScrollableNav = document.querySelector(
+          'header nav [data-e2e="scrollable-nav"]',
+        );
+        const secondaryScrollableNav = document.querySelector(
+          'header nav [data-e2e="scrollable-nav-secondary"]',
+        );
+        const dropdownNav = document.querySelector(
+          'header nav [data-e2e="dropdown-nav"]',
+        );
+        const menuButton = document.querySelector(
+          'header nav button[aria-expanded]',
+        );
+
+        const getNavigationLinks = (
+          navigationElement: Element | null | undefined,
+        ) =>
+          Array.from(
+            navigationElement?.querySelectorAll('[role="list"] a') || [],
+          );
+
+        it('should render separate top and secondary scrollable navigation rows', () => {
+          expect(topScrollableNav).toBeInTheDocument();
+          expect(secondaryScrollableNav).toBeInTheDocument();
+        });
+
+        it('should render a collapsed menu button and dropdown container', () => {
+          expect(menuButton).toBeInTheDocument();
+          expect(menuButton?.getAttribute('aria-expanded')).toEqual('false');
+          expect(dropdownNav).toBeInTheDocument();
+        });
+
+        it('should render top and secondary navigation links', () => {
+          const topLinks = getNavigationLinks(topScrollableNav);
+          const secondaryLinks = getNavigationLinks(secondaryScrollableNav);
+
+          expect(topLinks.length).toBeGreaterThan(1);
+          expect(secondaryLinks.length).toBeGreaterThan(0);
+        });
+
+        it('should prioritise the first top-level link in the dropdown', () => {
+          const topLinks = getNavigationLinks(topScrollableNav);
+          const dropdownLinks = getNavigationLinks(dropdownNav);
+
+          expect(dropdownLinks.length).toBeGreaterThan(0);
+          expect(dropdownLinks[0]?.textContent).toEqual(
+            topLinks[0]?.textContent,
+          );
+          expect(dropdownLinks[0]?.getAttribute('href')).toEqual(
+            topLinks[0]?.getAttribute('href'),
+          );
         });
       });
     }
