@@ -56,8 +56,8 @@ type RenderListItemsArgs = {
   currentPage: string;
   dir: Direction;
   activeIndex: number;
-  clickTracker: unknown;
-  viewTracker: unknown;
+  clickTracker: ReturnType<typeof useClickTrackerHandler>;
+  viewTracker?: ReturnType<typeof useViewTracker>;
   pageType?: PageTypes;
   navType?: 'top' | 'bottom' | 'dropdown';
 };
@@ -87,7 +87,7 @@ const renderListItems = ({
         currentPageText={currentPage}
         dir={dir}
         clickTracker={clickTracker}
-        viewTracker={viewTracker}
+        {...(viewTracker && { viewTracker })}
         {...(navType === 'top' ? a11yProps : {})}
       >
         {title}
@@ -96,14 +96,25 @@ const renderListItems = ({
   });
 
 // this checks if the current pages url matches the navigation item url. We need this to determine which nav item should be active
-const matchesUrl = (
-  canonicalLink: string | undefined,
-  origin: string,
-  navUrl?: string,
-) => {
+const matchesUrl = ({
+  origin,
+  canonicalLink,
+  navUrl,
+}: {
+  origin: string;
+  canonicalLink?: string;
+  navUrl?: string;
+}) => {
   if (!canonicalLink || !navUrl) return false;
-  const absolute = `${origin}${navUrl}`;
-  return canonicalLink === absolute;
+
+  try {
+    const canonicalUrl = new URL(canonicalLink, origin);
+    const navItemUrl = new URL(navUrl, origin);
+
+    return canonicalUrl.pathname === navItemUrl.pathname;
+  } catch (_error) {
+    return false;
+  }
 };
 
 /**
@@ -120,8 +131,8 @@ const getActiveTopIndex = ({
   pageType,
 }: {
   topItems: Navigation[];
-  canonicalLink?: string;
   origin: string;
+  canonicalLink?: string;
   pageType?: PageTypes;
 }) => {
   if (!topItems?.length) return -1;
@@ -129,7 +140,7 @@ const getActiveTopIndex = ({
   // try to find a direct match on the top-level items with the current page URL
   // it returns the index of the first item that matches or -1 if none match
   const directMatchIndex = topItems.findIndex(item =>
-    matchesUrl(canonicalLink, origin, item.url),
+    matchesUrl({ canonicalLink, origin, navUrl: item.url }),
   );
   // if a match is found, return the index of the matching top-level item (this is the active item)
   if (directMatchIndex > -1) return directMatchIndex;
@@ -142,7 +153,7 @@ const getActiveTopIndex = ({
   // even if the user is on a page that doesn't directly match the 'Watch' URL
   const parentIndexByChild = topItems.findIndex(parent =>
     (parent.subItems || []).some(child =>
-      matchesUrl(canonicalLink, origin, child.url),
+      matchesUrl({ canonicalLink, origin, navUrl: child.url }),
     ),
   );
   if (parentIndexByChild > -1) return parentIndexByChild;
@@ -161,6 +172,9 @@ type NavigationContainerProps = {
   };
 };
 
+const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
+const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
+
 const NavigationContainer: React.FC<NavigationContainerProps> = ({
   navItems,
   propsForTopBarOJComponent,
@@ -178,9 +192,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
 
-  const navEventTrackingMetadata = { componentName: 'scrollable-navigation' };
-  const dropdownNavEventTrackingData = { componentName: 'dropdown-navigation' };
-
   const topNavClickTrackerHandler = useClickTrackerHandler(
     navEventTrackingMetadata,
   );
@@ -192,7 +203,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   );
 
   const topNavViewTracker = useViewTracker(navEventTrackingMetadata);
-  const bottomNavViewTracker = useViewTracker(navEventTrackingMetadata);
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
   /**
@@ -243,11 +253,12 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
    */
   const activeTop =
     topActiveIndex > -1 ? navigationItems[topActiveIndex] : navigationItems[0];
+
   const bottomItems = activeTop?.subItems || [];
 
   // Find the active subitem index in the bottom nav
   const activeBottomIndex = bottomItems.findIndex(item =>
-    matchesUrl(canonicalLink, origin, item.url),
+    matchesUrl({ canonicalLink, origin, navUrl: item.url }),
   );
 
   const bottomScrollableListItems = (
@@ -259,7 +270,6 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         dir,
         activeIndex: activeBottomIndex,
         clickTracker: bottomNavClickTrackerHandler,
-        viewTracker: bottomNavViewTracker,
         pageType,
       })}
     </NavigationUl>

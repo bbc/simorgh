@@ -12,9 +12,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import ArabicBrandSVG from '#app/components/Header/brand-svgs/ArabicBrandSVG';
-import isLive from '#lib/utilities/isLive';
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
@@ -151,52 +148,7 @@ const StyledBrand = ({
   serviceLocalisedName = null,
   svg,
   isLongBrand,
-  service,
 }) => {
-  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
-    const svgMap = {
-      arabic: (
-        <ArabicBrandSVG
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          height="64"
-          width="184"
-          aria-hidden="true"
-          focusable="false"
-        />
-      ),
-      // TODO: Get new logo for Tamil
-      tamil: (
-        <BrandSvg
-          id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-          viewBox={[
-            svg.viewbox.minX || 0,
-            svg.viewbox.minY || 0,
-            svg.viewbox.width,
-            svg.viewbox.height,
-          ].join(' ')}
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          aria-hidden="true"
-          height="32"
-          isLongBrand={isLongBrand}
-        >
-          {svg.group}
-        </BrandSvg>
-      ),
-    };
-
-    return (
-      <>
-        {svgMap[service]}
-        <LocalisedBrandName
-          linkId={linkId}
-          product={product}
-          serviceLocalisedName={serviceLocalisedName}
-        />
-      </>
-    );
-  }
-
   return svg ? (
     <>
       <BrandSvg
