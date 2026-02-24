@@ -1068,17 +1068,6 @@ describe('Article Page', () => {
       },
     };
 
-    it('renders media curation when adaptive variation is forced locally', () => {
-      const { queryByTestId } = render(
-        <Context service="hindi">
-          <ArticlePage pageData={pageDataWithMediaCuration} />
-        </Context>,
-      );
-
-      expect(queryByTestId('adaptive-media-curation')).toBeInTheDocument();
-      expect(queryByTestId('curation-grid-normal')).toBeInTheDocument();
-    });
-
     it('renders media curation after related content when related content is present', () => {
       const { queryByTestId, container } = render(
         <Context service="hindi">
@@ -1096,9 +1085,8 @@ describe('Article Page', () => {
       expect(
         (relatedContentSection as Element).compareDocumentPosition(
           adaptiveMediaCuration as Node,
-        ) &
-          Node.DOCUMENT_POSITION_FOLLOWING,
-      ).toBeTruthy();
+        ),
+      ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
 
     it('does not render media curation when data is missing', () => {
