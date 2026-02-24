@@ -257,6 +257,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: articlePortraitVideoEnabled } = useToggle(
+    'articlePortraitVideo',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -302,7 +305,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const showPortraitVideoCarousel = Boolean(
-    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length,
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
+      articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
