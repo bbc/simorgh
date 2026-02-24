@@ -11,7 +11,12 @@ export default {
   adsNonce: {
     enabled: false,
   },
-  articleLiteSiteLink: { enabled: true },
+  articleLiteSiteLink: { 
+    enabled: true 
+  },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -80,9 +85,6 @@ export default {
     enabled: true,
   },
   webVitalsMonitoring: {
-    enabled: true,
-  },
-  articlePortraitVideo: { 
     enabled: true,
   },
 };
