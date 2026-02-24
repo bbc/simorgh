@@ -120,7 +120,7 @@ const mockPollingUpdate = (pageData: ComponentProps['pageData']) => {
   const streamData = pageData.liveTextStream.content
     ?.data as StreamResponse['data'];
 
-  jest.spyOn(useLivePagePolling, 'default').mockReturnValueOnce({
+  jest.spyOn(useLivePagePolling, 'default').mockReturnValue({
     currentStreamData: streamData,
     hasPendingUpdate: false,
     applyPendingUpdate: () => {
@@ -170,11 +170,10 @@ describe('Live Page', () => {
   `(
     'should use $info as the meta title',
     async ({ title, seoTitle, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({ title, seoTitle });
+      mockPollingUpdate(samplePageData);
       await act(async () => {
-        render(
-          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
-          { service: 'pidgin' },
-        );
+        render(<Live pageData={samplePageData} />, { service: 'pidgin' });
       });
 
       const { title: helmetTitle } = Helmet.peek();
@@ -190,16 +189,15 @@ describe('Live Page', () => {
   `(
     'should use $info as the meta description',
     async ({ description, seoDescription, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({
+        title: 'title',
+        description,
+        seoDescription,
+      });
+      mockPollingUpdate(samplePageData);
+
       await act(async () => {
-        render(
-          <Live
-            pageData={mockPageDataWithMetadata({
-              title: 'title',
-              description,
-              seoDescription,
-            })}
-          />,
-        );
+        render(<Live pageData={samplePageData} />);
       });
 
       const helmetContent = Helmet.peek();
@@ -217,10 +215,11 @@ describe('Live Page', () => {
   `(
     'should use $info as the schema headline',
     async ({ title, seoTitle, expected }) => {
+      const samplePageData = mockPageDataWithMetadata({ title, seoTitle });
+      mockPollingUpdate(samplePageData);
+
       await act(async () => {
-        render(
-          <Live pageData={mockPageDataWithMetadata({ title, seoTitle })} />,
-        );
+        render(<Live pageData={samplePageData} />);
       });
 
       const schemaHeadline = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -235,16 +234,15 @@ describe('Live Page', () => {
     const datePublished = '2018-09-28T22:59:02.448804522Z';
     const dateModified = '2020-09-28T22:59:02.448804522Z';
 
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+      datePublished,
+      dateModified,
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-            datePublished,
-            dateModified,
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const SEODatePublished = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -286,16 +284,15 @@ describe('Live Page', () => {
     const startDateTime = '2023-04-05T10:22:00.000Z';
     const endDateTime = '2024-04-05T10:21:00.000Z';
 
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+      startDateTime,
+      endDateTime,
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-            startDateTime,
-            endDateTime,
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -311,14 +308,13 @@ describe('Live Page', () => {
   });
 
   it('SEO should NOT contain coverageStartTime and coverageEndTime when absent', async () => {
+    const samplePageData = mockPageDataWithMetadata({
+      title: 'Title',
+    });
+    mockPollingUpdate(samplePageData);
+
     await act(async () => {
-      render(
-        <Live
-          pageData={mockPageDataWithMetadata({
-            title: 'Title',
-          })}
-        />,
-      );
+      render(<Live pageData={samplePageData} />);
     });
 
     const CoverageStartTime = Helmet.peek().scriptTags.find(({ innerHTML }) =>
@@ -349,6 +345,8 @@ describe('Live Page', () => {
         contributors: 'Not a random dude',
       },
     };
+
+    mockPollingUpdate(paginatedData);
 
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
@@ -382,7 +380,7 @@ describe('Live Page', () => {
         contributors: 'Not a random dude',
       },
     };
-
+    mockPollingUpdate(paginatedData);
     await act(async () => {
       render(<Live pageData={paginatedData} />, { service: 'pidgin' });
     });
@@ -395,6 +393,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page title', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -407,6 +406,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page description', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -419,6 +419,7 @@ describe('Live Page', () => {
   });
 
   it('should render the live page header image if provided', async () => {
+    mockPollingUpdate(mockPageData);
     await act(async () => {
       render(<Live pageData={mockPageData} />);
     });
@@ -431,6 +432,7 @@ describe('Live Page', () => {
   });
 
   it('should render the key points section', async () => {
+    mockPollingUpdate(mockPageData);
     const { container } = await act(async () => {
       return render(<Live pageData={mockPageData} />);
     });
@@ -439,6 +441,7 @@ describe('Live Page', () => {
   });
 
   it('should not render the key points section when no content is provided', async () => {
+    mockPollingUpdate(mockPageDataWithoutKeyPoints);
     const { container } = await act(async () => {
       return render(<Live pageData={mockPageDataWithoutKeyPoints} />);
     });
@@ -447,6 +450,7 @@ describe('Live Page', () => {
   });
 
   it('should render a live page with posts', async () => {
+    mockPollingUpdate(mockPageDataWithPosts);
     await act(async () => {
       render(<Live pageData={mockPageDataWithPosts} />);
     });
@@ -461,7 +465,7 @@ describe('Live Page', () => {
 
   it('creates snapshot of the live page', async () => {
     let container;
-
+    mockPollingUpdate(mockPageDataWithPosts);
     await act(
       // eslint-disable-next-line no-return-assign
       async () =>
@@ -491,7 +495,7 @@ describe('Live Page', () => {
   it('sets the correct og:title meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
     // - BBC News gets appended to the end of the title for og:title
     const expectedOgTitle =
@@ -507,7 +511,7 @@ describe('Live Page', () => {
   it('sets og:image meta tag to the page promoImage when assetId matches a post without an image, and still uses the posts title', () => {
     const assetId = 'asset:ec227190-49f3-43eb-b373-e52b6e1ba035';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
 
     const expectedImageUrl = pageData.promoImage.url;
@@ -527,7 +531,7 @@ describe('Live Page', () => {
   it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId does not match any post', () => {
     const assetId = 'asset:non-existent-id';
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} assetId={assetId} />);
     // when we are using a title for the page and not a post, seoTitle is used as priority
     // and page title is a back up if seoTitle is not available.
@@ -550,7 +554,7 @@ describe('Live Page', () => {
 
   it('sets og:title and og:image meta tags to pageTitle and promoImage when assetId is not provided', () => {
     const pageData = liveFixture.data;
-
+    mockPollingUpdate(pageData);
     render(<Live pageData={pageData} />);
 
     const expectedOgTitle = `${pageData.seo.seoTitle} - BBC News`;
