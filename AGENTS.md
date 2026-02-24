@@ -29,6 +29,6 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 ## Testing instructions
 - You can run our entire suite of unit and integration tests by running `yarn test`
 - Once code is submitted for a PR it will also pass through `yarn test:e2e` on GitHub Actions which runs our cypress e2e tests, so it's useful to run that command once everything else is passing.
- 
+- When writing React tests, import from our custom testing-library wrapper at `src/app/components/react-testing-library-with-providers.tsx` instead of importing directly from `@testing-library/react`, so that all required context providers are included.
 ## PR instructions
 - Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
