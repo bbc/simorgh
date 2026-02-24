@@ -22,7 +22,7 @@ type AccountProviderProps = {
 export const AccountProvider = ({
   children,
   initialConfig,
-  initialIsSignedIn,
+  initialIsSignedIn = false,
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale } = use(ServiceContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
@@ -45,14 +45,7 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const isSignedIn = useMemo(() => {
-    if (!isIdctaAvailable) return false;
-
-    if (typeof initialIsSignedIn === 'boolean') {
-      return initialIsSignedIn;
-    }
-    return false;
-  }, [initialIsSignedIn, isIdctaAvailable]);
+  const isSignedIn = isIdctaAvailable && initialIsSignedIn;
 
   const value = useMemo(
     () => ({
