@@ -1,4 +1,4 @@
-import { use, useEffect, useState, useRef, RefObject } from 'react';
+import { use, useState, useRef, RefObject } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -9,8 +9,7 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
-import { useRouter } from 'next/router';
-import usePollingFake from '#app/hooks/usePollingFake';
+import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -18,15 +17,12 @@ import {
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-
+import tempPageData from './tempPageData';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
 
 import LatestPostButton from './LatestPostButton';
-import pageData2 from './tempPageData';
-import pageData3 from './tempPageData2';
-import hasNewPost from './utils/compareStreamData';
 
 interface LivePromoImage {
   url: string;
@@ -70,66 +66,17 @@ interface LivePageProps extends ComponentProps {
   assetId?: string | null;
 }
 
-const LivePage = ({ pageData, assetId }: LivePageProps) => {
+const LivePage = ({ assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
-
-  const [currentPageData, setPageData] = useState(pageData2);
-  const previousDataRef = useRef(pageData2);
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
-  const [hasPendingUpdate, setHasPendingUpdate] = useState(false);
-  const pendingDataRef = useRef<typeof pageData2 | null>(null);
-
-  const { forceUpdate, updateFinished } = usePollingFake();
-  const pageIndex = currentPageData.liveTextStream.content.data.page.index;
-
-  useEffect(() => {
-    if (forceUpdate && pageIndex === 1) {
-      const newPageData = pageData3;
-
-      if (hasNewPost(previousDataRef.current, newPageData)) {
-        if (isFirstPostVisible) {
-          console.log('first post visible');
-
-          setPageData(prev => ({
-            ...prev,
-            liveTextStream: newPageData.liveTextStream,
-          }));
-
-          previousDataRef.current = newPageData;
-          setHasPendingUpdate(false);
-          pendingDataRef.current = null;
-        } else {
-          console.log('first post not visible');
-
-          pendingDataRef.current = newPageData;
-          setHasPendingUpdate(true);
-        }
-      }
-
-      updateFinished();
-    }
-  }, [forceUpdate, updateFinished, isFirstPostVisible, pageIndex]);
-
-  useEffect(() => {
-    if (isFirstPostVisible && hasPendingUpdate && pendingDataRef.current) {
-      console.log('first post NOW visible, update');
-
-      const pendingData = pendingDataRef.current;
-
-      setPageData(prev => ({
-        ...prev,
-        liveTextStream: pendingData.liveTextStream,
-      }));
-
-      previousDataRef.current = pendingData;
-      setHasPendingUpdate(false);
-      pendingDataRef.current = null;
-    }
-  }, [isFirstPostVisible, hasPendingUpdate]);
+  const pageData = tempPageData;
+  const initialStreamData = pageData.liveTextStream.content?.data ?? null;
+  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
+    useLivePagePolling(initialStreamData);
 
   const {
     title,
@@ -144,7 +91,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
-  } = currentPageData;
+  } = pageData;
 
   const {
     url: imageUrl,
@@ -231,7 +178,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
           imageWidth={imageWidth}
-          mediaCollections={null}
+          mediaCollections={mediaCollections}
         />
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
@@ -241,10 +188,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           </div>
           <div css={styles.secondSection}>
             <Stream
-              streamContent={liveTextStream.content}
+              streamData={currentStreamData}
               contributors={liveTextStream.contributors}
               setIsFirstPostVisible={setIsFirstPostVisible}
-              ref={streamRef}
+              streamRef={streamRef}
+              applyPendingUpdate={applyPendingUpdate}
             />
             <LatestPostButton
               isFirstPostVisible={isFirstPostVisible}

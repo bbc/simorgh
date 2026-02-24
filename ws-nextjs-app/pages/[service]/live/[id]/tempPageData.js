@@ -21,11 +21,7 @@ const pageData2 = {
   article: {
     id: null,
   },
-  mediaCollections: [
-    {
-      id: null,
-    },
-  ],
+  mediaCollections: null,
   supportingLinks: {
     id: null,
   },

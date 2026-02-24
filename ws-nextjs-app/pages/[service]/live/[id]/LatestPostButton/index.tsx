@@ -53,6 +53,8 @@ const LatestPostButton = ({
       setTimeout(() => {
         setShowButton(false);
       }, TEN_SECONDS);
+    } else {
+      setShowButton(updateShowButton);
     }
   }, [isFirstPostVisible, hasPendingUpdate]);
 

@@ -10,15 +10,15 @@ import Stream from './index';
 const postFixture = postsFixture.data.results[0];
 
 const mockStreamContentEmpty = {
-  data: { results: [] },
+  results: [],
 };
 
 const mockStreamContentSingle = {
-  data: { results: [postFixture] },
+  results: [postFixture],
 };
 
-const mockStreamContentMoreThanOne = {
-  data: { results: [postFixture, postFixture] },
+const mockStreamDataMoreThanOne = {
+  results: [postFixture, postFixture],
 };
 
 const observers = new Map();
@@ -63,12 +63,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentEmpty}
+          streamData={mockStreamContentEmpty}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -80,12 +83,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentSingle}
+          streamData={mockStreamContentSingle}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -102,12 +108,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentMoreThanOne}
+          streamData={mockStreamDataMoreThanOne}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -120,32 +129,38 @@ describe('Live Page Stream', () => {
     expect(screen.queryByRole('list')).toBeInTheDocument();
   });
 
-  it('should set isFirstPostVisible to true when the first post is on the screen', async () => {
-    const callback = jest.fn();
+  it('should call all relevant functions when the first post is on the screen', async () => {
+    const isVisibleCallback = jest.fn();
+    const applyUpdateCallback = jest.fn();
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentMoreThanOne}
+          streamData={mockStreamDataMoreThanOne}
           contributors={null}
-          setIsFirstPostVisible={callback}
-          ref={null}
+          setIsFirstPostVisible={isVisibleCallback}
+          streamRef={null}
+          applyPendingUpdate={applyUpdateCallback}
         />,
       );
     });
     triggerAllObservers();
-    expect(callback).toHaveBeenCalledWith(true);
+    expect(isVisibleCallback).toHaveBeenCalledWith(true);
+    expect(applyUpdateCallback).toHaveBeenCalledTimes(1);
   });
 
   it('should render contributors when supplied', async () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentSingle}
+          streamData={mockStreamContentSingle}
           contributors="Not a random dude"
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -156,12 +171,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentSingle}
+          streamData={mockStreamContentSingle}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -175,12 +193,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentSingle}
+          streamData={mockStreamContentSingle}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
@@ -195,12 +216,15 @@ describe('Live Page Stream', () => {
     await act(async () => {
       render(
         <Stream
-          streamContent={mockStreamContentSingle}
+          streamData={mockStreamContentSingle}
           contributors={null}
           setIsFirstPostVisible={() => {
             return null;
           }}
-          ref={null}
+          streamRef={null}
+          applyPendingUpdate={() => {
+            return null;
+          }}
         />,
       );
     });
