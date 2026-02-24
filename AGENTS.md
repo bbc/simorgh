@@ -12,7 +12,7 @@ We call each of these areas a "service" and its path can be a language (e.g. ara
 A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `mundo`, `portuguese`) can have different requirements: editorial priorities, layouts, translations, feature toggles, analytics, and even routing rules can all vary by service. When proposing code or architecture, always consider which service(s) it should apply to, and avoid assumptions that a single English/Default experience is representative.
 
 ## Dev environment tips
-- Use `nvm use` to get the correct version of node, and then `yarn` install packages. Then `yarn dev` will serve your code locally.
+- Use `nvm use` to get the correct version of node, and then run `yarn` to install packages. Then `yarn dev` will serve your code locally.
 - Our directory aliases can be found in dirAlias.js
 
 ## Coding Standards
