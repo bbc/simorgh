@@ -4,6 +4,9 @@ import type {
   Navigation as NavigationType,
   Services,
 } from '#app/models/types/global';
+import readme from './README.md';
+import metadata from './metadata.json';
+
 interface Props {
   navItems: NavigationType[];
   service: Services;
@@ -20,7 +23,10 @@ const Component = ({ navItems, service }: Props) => {
 export default {
   title: 'Components/Navigation',
   Component,
-  parameters: { docs: {} },
+  parameters: {
+    docs: { readme },
+    metadata,
+  },
 };
 
 export const Arabic = () => {
