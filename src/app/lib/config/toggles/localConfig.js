@@ -83,4 +83,7 @@ export default {
   webVitalsMonitoring: {
     enabled: true,
   },
+  articlePortraitVideo: { 
+    enabled: true,
+  },
 };
