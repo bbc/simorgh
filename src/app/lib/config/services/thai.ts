@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'และ',
+      readTime: {
+        readTimePrefix: 'เวลาอ่าน',
+        minute: 'นาที',
+      },
       pagination: {
         previousPage: 'ก่อนหน้านี้',
         nextPage: 'ถัดไป',
@@ -277,34 +281,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
-      },
-      {
-        title: 'เลือกตั้ง 2569',
-        url: '/thai/topics/cd9zv7dyg1kt',
-      },
-      {
-        title: 'ประเทศไทย',
-        url: '/thai/topics/cjgn73g98rqt',
-      },
-      {
-        title: 'ต่างประเทศ',
-        url: '/thai/topics/c5v124k8lj7t',
-      },
-      {
-        title: 'วิทยาศาสตร์',
-        url: '/thai/topics/c5qvp1q33p0t',
-      },
-      {
-        title: 'สุขภาพ',
-        url: '/thai/topics/cyx5kz25zxdt',
-      },
-      {
-        title: 'วิดีโอ',
-        url: '/thai/topics/c5ljd3jng4nt',
-      },
-      {
-        title: 'ยอดนิยม',
-        url: '/thai/popular/read',
       },
     ],
     footer: {

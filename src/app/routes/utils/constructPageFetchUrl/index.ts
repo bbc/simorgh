@@ -108,13 +108,18 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
       getIdFunction = (path: string) => {
         const parsedRoute = parseRoute(path);
 
+        // 'ws' appears in many av-embeds routes, but we also have 'ws' as a dedicated service
+        // The 'ws' service shouldn't appear in av-embeds routes as a "service" as no media content is published under the 'ws' service
+        const derivedService =
+          parsedRoute?.service !== 'ws' ? parsedRoute?.service : null;
+
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
         const withServiceAndVariant = !isShortCpsId
-          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          ? `${derivedService ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
           : '';
 
-        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+        const id = `${withServiceAndVariant ? `${withServiceAndVariant}/` : ''}${parsedRoute.assetId}`;
 
         return id;
       };
@@ -232,7 +237,11 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        fetchUrl = Url(`/${id}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local/${id}`);
+        } else {
+          fetchUrl = Url(`/${id}`);
+        }
         break;
       case HOME_PAGE: {
         if (process.env?.NEXTJS) {
@@ -275,13 +284,9 @@ const constructPageFetchUrl = ({
       case AV_EMBEDS: {
         const parsedRoute = parseRoute(pathname);
 
-        if (parsedRoute.isWsRoute) {
-          // handle /ws/av-embeds route
-        } else {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''} ${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
-          );
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
+        );
         break;
       }
       case LIVE_RADIO_PAGE:

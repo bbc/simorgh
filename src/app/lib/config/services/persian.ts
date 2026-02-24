@@ -76,6 +76,10 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'آگهی',
       },
+      readTime: {
+        readTimePrefix: 'زمان مطالعه',
+        minute: 'دقیقه',
+      },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       continueReading: 'ادامه مطلب را بخوانید',
@@ -449,54 +453,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/persian',
-      },
-      {
-        title: 'اعتراضات ایران ۱۴۰۴',
-        url: '/persian/topics/c4g30w1p327t',
-      },
-      {
-        title: 'پخش زنده',
-        url: '/persian/media-49522521',
-      },
-      {
-        title: 'ویدیو',
-        url: '/persian/topics/c6z7mnr559gt',
-      },
-      {
-        title: 'تلویزیون',
-        url: '/persian/topics/cw9qgeqd1zqt',
-      },
-      {
-        title: 'ايران',
-        url: '/persian/topics/ckdxnwvwwjnt',
-      },
-      {
-        title: 'افغانستان',
-        url: '/persian/topics/cvjp23v3083t',
-      },
-      {
-        title: 'جهان',
-        url: '/persian/topics/c1d8ye58xl8t',
-      },
-      {
-        title: 'هنر',
-        url: '/persian/topics/c9wpm0epm45t',
-      },
-      {
-        title: 'ورزش',
-        url: '/persian/topics/cnq6879k7yjt',
-      },
-      {
-        title: 'اقتصاد',
-        url: '/persian/topics/cl8l9mvlllqt',
-      },
-      {
-        title: 'دانش',
-        url: '/persian/topics/ckdxnwr4r1yt',
-      },
-      {
-        title: 'فراتر از خبر',
-        url: '/persian/topics/cxr3ex12k6et',
       },
     ],
   },

@@ -48,6 +48,10 @@ export const service: DefaultServiceConfig = {
     showRelatedTopics: true,
     translations: {
       and: 'と',
+      readTime: {
+        readTimePrefix: 'この記事は約',
+        minute: '分で読めます',
+      },
       pagination: {
         page: 'ページ',
         previousPage: '前に戻る',
@@ -319,46 +323,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ホーム',
         url: '/japanese',
-      },
-      {
-        title: '中東危機',
-        url: '/japanese/topics/cn7y603vz3lt',
-      },
-      {
-        title: 'ウクライナ侵攻',
-        url: '/japanese/topics/c50vpymk750t',
-      },
-      {
-        title: '気候変動',
-        url: '/japanese/topics/c2dwqjr27zjt',
-      },
-      {
-        title: '日本',
-        url: '/japanese/topics/cyx5k201n3qt',
-      },
-      {
-        title: 'アジア',
-        url: '/japanese/topics/cyx5k20kvd2t',
-      },
-      {
-        title: 'イギリス',
-        url: '/japanese/topics/c95y3gk44nyt',
-      },
-      {
-        title: 'アメリカ',
-        url: '/japanese/topics/cdr56kqdr70t',
-      },
-      {
-        title: '読み物',
-        url: '/japanese/topics/c2xj7ep5812t',
-      },
-      {
-        title: 'ビデオ',
-        url: '/japanese/topics/c132079wln0t',
-      },
-      {
-        title: 'ニュースTV',
-        url: 'https://www.bbcworldnews-japan.com/',
       },
     ],
   },
