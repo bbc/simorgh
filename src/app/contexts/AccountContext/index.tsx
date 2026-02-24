@@ -1,7 +1,7 @@
 import {
   createContext,
   PropsWithChildren,
-  useContext,
+  use,
   useEffect,
   useMemo,
   useState,
@@ -30,7 +30,7 @@ export const AccountProvider = ({
   initialConfig,
   initialIsSignedIn,
 }: PropsWithChildren<AccountProviderProps>) => {
-  const { locale } = useContext(ServiceContext);
+  const { locale } = use(ServiceContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {

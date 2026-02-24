@@ -98,10 +98,17 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
-    const cookieHeader = ctx.req?.headers?.cookie ?? '';
+    const cookieHeader = ctx.req?.headers?.cookie;
     const cookieName = idctaConfig?.identity?.idSignedInCookieName;
+    const hasCookie = (headers: string, name: string) =>
+      headers
+        .split(';')
+        .map(cookie => cookie.trim())
+        .some(cookie => cookie.startsWith(`${name}=`));
     const initialIsSignedIn = Boolean(
-      cookieName && cookieHeader.includes(`${cookieName}=`),
+      cookieHeader && cookieName
+        ? hasCookie(cookieHeader, cookieName)
+        : undefined,
     );
 
     const pageType =
