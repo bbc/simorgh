@@ -107,10 +107,14 @@ const matchesUrl = ({
 }) => {
   if (!canonicalLink || !navUrl) return false;
 
-  const canonicalUrl = new URL(canonicalLink, origin);
-  const navItemUrl = new URL(navUrl, origin);
+  try {
+    const canonicalUrl = new URL(canonicalLink, origin);
+    const navItemUrl = new URL(navUrl, origin);
 
-  return canonicalUrl?.pathname === navItemUrl?.pathname;
+    return canonicalUrl.pathname === navItemUrl.pathname;
+  } catch (_error) {
+    return false;
+  }
 };
 
 /**
