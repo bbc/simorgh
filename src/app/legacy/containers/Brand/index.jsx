@@ -64,6 +64,7 @@ const BrandContainer = ({
       skipLink={skipLink}
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
+      service={service}
       ref={brandRef}
       {...props}
     >
