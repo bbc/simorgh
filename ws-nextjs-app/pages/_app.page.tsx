@@ -31,6 +31,7 @@ import { AccountProvider } from '#app/contexts/AccountContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
+import hasCookie from '#app/lib/utilities/hasCookie/hasCookie';
 
 interface Props {
   pageProps: {
@@ -100,11 +101,6 @@ export default class CustomApp extends App<Props> {
 
     const cookieHeader = ctx.req?.headers?.cookie;
     const cookieName = idctaConfig?.identity?.idSignedInCookieName;
-    const hasCookie = (headers: string, name: string) =>
-      headers
-        .split(';')
-        .map(cookie => cookie.trim())
-        .some(cookie => cookie.startsWith(`${name}=`));
     const initialIsSignedIn = Boolean(
       cookieHeader && cookieName
         ? hasCookie(cookieHeader, cookieName)
