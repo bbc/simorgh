@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from 'react';
+import { createContext, ReactNode } from 'react';
 import { BrandSVG } from '../../models/types/theming';
 
 export const ThemeContext = createContext<Theme | undefined>(undefined);
