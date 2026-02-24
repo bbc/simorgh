@@ -1,14 +1,5 @@
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 
-// remove after new nav is completely rolled out to all services
-const servicesWithNewNav = Array.isArray(SERVICES_WITH_NEW_NAV)
-  ? SERVICES_WITH_NEW_NAV
-  : (
-      SERVICES_WITH_NEW_NAV as unknown as {
-        default?: string[];
-      }
-    ).default || [];
-
 export default service => {
   describe('Header', () => {
     const isAmpPage =
@@ -85,7 +76,7 @@ export default service => {
     }
 
     // this check avoids amp noise and limits these checks to services on the new navigation
-    if (servicesWithNewNav.includes(service) && !isAmpPage) {
+    if (SERVICES_WITH_NEW_NAV.includes(service) && !isAmpPage) {
       describe('New navigation (using isite config)', () => {
         const topScrollableNav = document.querySelector(
           'header nav [data-e2e="scrollable-nav"]',
