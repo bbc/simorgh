@@ -188,6 +188,7 @@ const mediaItemChangedCallback = async ({
 }) => {
   const currentIndex = getCurrentIndex({ e, blocks });
   setCurrentVideo?.(blocks[currentIndex]);
+  console.log('mediaItemChangedCallback is running');
 };
 
 const pluginLoadedCallback = () => {
@@ -197,11 +198,20 @@ const pluginLoadedCallback = () => {
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
+const fullScreenExitCallback = onClose => {
+  const player = getPlayerInstance();
+  if (player) {
+    player.pause();
+  }
+  onClose();
+};
+
 export const handlePrevNextVideo = ({
   direction,
 }: {
   direction: 'previous' | 'next';
 }) => {
+  console.log('handlePrevNextVideo is running with direction', direction);
   const player = getPlayerInstance();
   player?.[direction]?.();
 };
@@ -259,58 +269,73 @@ const PortraitVideoModal = ({
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
-      if (event.target === event.currentTarget) {
-        onClose();
-      }
-    };
+  // useEffect(() => {
+  //   console.log('HELLO useEffect is running');
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-      // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
-      if (event.key === 'Tab') {
-        if (
-          document.activeElement === closeButtonRef.current &&
-          event.shiftKey
-        ) {
-          event.preventDefault();
-          endOfContentButtonRef.current?.focus();
-        } else if (
-          document.activeElement === endOfContentButtonRef.current &&
-          !event.shiftKey
-        ) {
-          event.preventDefault();
-          closeButtonRef.current?.focus();
-        }
-      }
-    };
-
-    const modal = document.getElementById('portrait-video-modal-container');
-    const reactRootElement = document.getElementById('root');
-
-    if (modal) {
-      closeButtonRef.current?.focus();
-      // Prevent tabbing to elements outside the modal
-      reactRootElement?.setAttribute('inert', 'true');
-      modal.addEventListener('mousedown', handleBackdropClick);
-      modal.addEventListener('touchstart', handleBackdropClick);
-      modal.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      reactRootElement?.removeAttribute('inert');
-      modal?.removeEventListener('mousedown', handleBackdropClick);
-      modal?.removeEventListener('touchstart', handleBackdropClick);
-      modal?.removeEventListener('keydown', handleKeyDown);
-
+  // const setUpKeyboardEvents = () => {
+  const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+    console.log('event.target.id', event.target.id);
+    console.log('event.target', event.target);
+    console.log('event.currentTarget', event.currentTarget);
+    // TO DO
+    if (event.target.id === 'portrait-video-modal-container') {
+      // console.log('event.target === event.currentTarget');
       const player = getPlayerInstance();
-      // Pause any player if the modal is closed instantly
       if (player) player.pause();
-    };
-  }, [onClose]);
+      console.log("i'm closing");
+      onClose();
+    }
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      const player = getPlayerInstance();
+      if (player) player.pause();
+      onClose();
+    }
+    // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
+    if (event.key === 'Tab') {
+      if (document.activeElement === closeButtonRef.current && event.shiftKey) {
+        event.preventDefault();
+        endOfContentButtonRef.current?.focus();
+      } else if (
+        document.activeElement === endOfContentButtonRef.current &&
+        !event.shiftKey
+      ) {
+        event.preventDefault();
+        closeButtonRef.current?.focus();
+      }
+    }
+  };
+
+  const modal = document.getElementById('portrait-video-modal-container');
+  const reactRootElement = document.getElementById('root');
+
+  if (modal) {
+    closeButtonRef.current?.focus();
+    // Prevent tabbing to elements outside the modal
+    reactRootElement?.setAttribute('inert', 'true');
+    modal.addEventListener('mousedown', handleBackdropClick);
+    modal.addEventListener('touchstart', handleBackdropClick);
+    modal.addEventListener('keydown', handleKeyDown);
+  }
+
+  // return () => {
+  //   reactRootElement?.removeAttribute('inert');
+  //   modal?.removeEventListener('mousedown', handleBackdropClick);
+  //   modal?.removeEventListener('touchstart', handleBackdropClick);
+  //   modal?.removeEventListener('keydown', handleKeyDown);
+
+  //   console.log("I'm running because someone clicked a key");
+  //   const player = getPlayerInstance();
+  //   console.log("I'm the player in handleKeyDown", player);
+  //   // Pause any player if the modal is closed instantly
+  //   if (player) player.pause();
+  // };
+  // }, [onClose]);
+  // };
+
+  // setUpKeyboardEvents();
 
   return (
     <>
@@ -330,7 +355,7 @@ const PortraitVideoModal = ({
           data-testid="close-modal-button"
           css={styles.closeButton}
           className="focusIndicatorInvert"
-          onClick={onClose}
+          onClick={() => fullScreenExitCallback(onClose)}
         >
           {navigationIcons.cross}
           <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
@@ -379,7 +404,7 @@ const PortraitVideoModal = ({
                 pluginLoadedCallback();
               }
             },
-            fullscreenExit: onClose,
+            fullscreenExit: () => fullScreenExitCallback(onClose),
             statsNavigation: e =>
               statsNavigationCallback(
                 e,
@@ -400,7 +425,7 @@ const PortraitVideoModal = ({
           type="button"
           data-testid="close-modal-visually-hidden"
           css={styles.visuallyHiddenCloseButton}
-          onClick={onClose}
+          onClick={() => fullScreenExitCallback(onClose)}
           className="focusIndicatorInvert"
           aria-label="End of content. Close"
         >

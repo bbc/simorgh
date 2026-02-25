@@ -82,6 +82,7 @@ const PortraitVideoCarousel = ({
 
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
+    console.log('handleCloseModal is running');
     // setSelectedVideoIndex(null);
   }, []);
 
