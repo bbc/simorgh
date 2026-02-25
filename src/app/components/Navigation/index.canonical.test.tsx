@@ -10,20 +10,20 @@ import { render, fireEvent } from '../react-testing-library-with-providers';
 const blocks = [{ id: '1', title: 'Story' }];
 
 const navigationProps = {
-  scrollableListItems,
+  topScrollableListItems: scrollableListItems,
+  bottomScrollableListItems: scrollableListItems,
   dropdownListItems,
   menuAnnouncedText: 'menu',
-  service: 'pidgin',
   dir: 'ltr',
 };
 
 const navigation = (
   <CanonicalNavigation
     topScrollableListItems={scrollableListItems}
+    bottomScrollableListItems={scrollableListItems}
     dropdownListItems={dropdownListItems}
     menuAnnouncedText="menu"
     dir="ltr"
-    bottomScrollableListItems={scrollableListItems}
   />
 );
 
@@ -47,7 +47,9 @@ describe('Navigation - Canonical', () => {
     it('should render dropdown and no scrollable nav after menu button clicked', () => {
       const { getByRole, getByTestId } = render(navigation);
 
-      fireEvent.click(getByRole('button', { name: 'menu' }));
+      const menuButton = getByRole('button', { name: 'menu' });
+      fireEvent.click(menuButton);
+      expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
       const dropdown = getByTestId(dropdownTestId);
       expect(dropdown).toHaveTextContent('Dropdown Items');
