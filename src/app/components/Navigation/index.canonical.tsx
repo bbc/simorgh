@@ -164,7 +164,6 @@ const CanonicalNavigationContainer: React.FC<
         }
       `}
       aria-label="Sticky navigation"
-      role="navigation"
       aria-hidden="true"
     >
       <Navigation dir={dir} isOpen={isOpen} role="navigation">
