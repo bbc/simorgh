@@ -255,7 +255,7 @@
     "timemachine": "0.3.2",
     "ts-jest": "29.4.4",
     "ts-loader": "9.5.4",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "typescript-plugin-css-modules": "5.2.0",
     "wait-on": "9.0.3",
     "webpack": "5.105.2",
