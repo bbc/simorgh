@@ -74,6 +74,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
+  // COMMENTED OUT FOR DEV PURPOSES
   // const pageData = tempPageData;
   const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
