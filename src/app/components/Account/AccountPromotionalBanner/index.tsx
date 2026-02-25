@@ -80,37 +80,39 @@ const AccountPromotionalBanner = () => {
         setIsDismissed(true);
       }}
     >
-      <div css={styles.actionLinkWrapper}>
-        <CallToActionLink
-          url={signInUrl}
-          className="focusIndicatorInvert"
-          css={[styles.callToActionLink, styles.signInLink]}
-        >
-          <CallToActionLink.ButtonLikeWrapper>
-            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {signInText}
-              <CallToActionLink.Chevron />
-            </CallToActionLink.Text>
-          </CallToActionLink.ButtonLikeWrapper>
-        </CallToActionLink>
+      <CallToActionLink
+        url={signInUrl}
+        className="focusIndicatorInvert"
+        css={[styles.callToActionLink, styles.signInLink]}
+        aria-label={`${title} - ${description} - ${signInText}`}
+      >
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {signInText}
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>
 
-        <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
-          {buttonSeparatorText}
-        </Paragraph>
+      <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
+        {buttonSeparatorText}
+      </Paragraph>
 
-        <CallToActionLink
-          url={registerUrl}
-          className="focusIndicatorInvert"
-          css={[styles.callToActionLink, styles.registerLink]}
-        >
+      <CallToActionLink
+        url={registerUrl}
+        className="focusIndicatorInvert"
+        css={[styles.callToActionLink, styles.registerLink]}
+        aria-label={`${registerText}`}
+      >
+        <div css={styles.actionLinkWrapper}>
           <CallToActionLink.ButtonLikeWrapper>
             <CallToActionLink.Text shouldUnderlineOnHoverFocus>
               {registerText}
               <CallToActionLink.Chevron />
             </CallToActionLink.Text>
           </CallToActionLink.ButtonLikeWrapper>
-        </CallToActionLink>
-      </div>
+        </div>
+      </CallToActionLink>
     </PromotionalBanner>
   );
 };
