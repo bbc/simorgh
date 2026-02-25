@@ -632,10 +632,9 @@ describe('Article Page', () => {
       );
     });
 
-    const images = screen.getAllByAltText(imageAltText) as HTMLImageElement[];
-    expect(images.length).toBeGreaterThan(0);
-    const [secondaryColumnImage] = images;
-    expect(secondaryColumnImage.src).toEqual(imageURL);
+    const { src } = screen.getByAltText(imageAltText) as HTMLImageElement;
+
+    expect(src).toEqual(imageURL);
   });
 
   describe('when isApp is true', () => {

@@ -17,7 +17,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
+import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
@@ -33,11 +33,7 @@ interface MostReadProps {
   headingBackgroundColour?: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
-  experimentProps?: {
-    sendOptimizelyEvents: boolean;
-    experimentName: string;
-    experimentVariant: string;
-  };
+  experimentProps?: ComponentExperimentProps;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -135,10 +131,7 @@ const MostRead = ({
     variant,
     isBff,
   });
-  // Use the eventTrackingData prop if provided, otherwise construct a minimal default
-  // this is because most read is used on both the article page and the home page
-  // on the home page, we have an object containing more information passed in
-  // on the article page we don't have all of these pieces of data (do we need it?), but we do need the optimizely props
+
   const trackingData = eventTrackingData || {
     componentName: 'most-read',
     ...(experimentProps && experimentProps),
