@@ -2,7 +2,7 @@ import { css, Theme } from '@emotion/react';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const LOGO_ASPECT_RATIO = 168 / 48;
-const SVG_HEIGHT = 38;
+const SVG_HEIGHT = 32;
 
 export default {
   banner: ({ palette, mq, spacings }: Theme) =>
@@ -25,7 +25,6 @@ export default {
         padding: 0,
       },
     }),
-
   logoSvg: ({ palette }: Theme) =>
     css({
       boxSizing: 'content-box',
