@@ -31,7 +31,6 @@ import { AccountProvider } from '#app/contexts/AccountContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
-import hasCookie from '#app/lib/utilities/hasCookie';
 
 interface Props {
   pageProps: {
@@ -93,19 +92,18 @@ export default class CustomApp extends App<Props> {
     const toggles =
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
-    const idctaConfig = await getIdctaConfig(toggles, service);
     const navItems =
       navResult.status === 'fulfilled'
         ? (navResult.value?.data?.items ?? null)
         : null;
 
     const cookieHeader = ctx.req?.headers?.cookie;
-    const cookieName = idctaConfig?.identity?.idSignedInCookieName;
-    const initialIsSignedIn = Boolean(
-      cookieHeader && cookieName
-        ? hasCookie(cookieHeader, cookieName)
-        : undefined,
-    );
+    const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
+
+    const initialIsSignedIn = idctaResult?.initialIsSignedIn ?? false;
+    const idctaConfig = idctaResult
+      ? { ...idctaResult, initialIsSignedIn: undefined }
+      : null;
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);

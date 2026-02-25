@@ -24,6 +24,7 @@ describe('getIdctaConfig', () => {
     signInUrl: '/signin',
     registerUrl: '/register',
     'id-availability': 'GREEN',
+    initialIsSignedIn: false,
   };
 
   beforeEach(() => {

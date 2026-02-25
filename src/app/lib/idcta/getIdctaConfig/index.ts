@@ -8,25 +8,18 @@ import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
 
-export const getInitialIsSignedIn = (
-  cookieHeader: string | undefined,
-  idctaConfig: IdctaConfig | null,
-): boolean | undefined => {
-  const cookieName = idctaConfig?.identity?.idSignedInCookieName;
-  if (!cookieHeader || !cookieName) return undefined;
-  return hasCookie(cookieHeader, cookieName);
-};
-
 /**
  * Gets IDCTA config with toggle validation and config verification
  * @param toggles - Feature toggles
  * @param service - Service name
- * @returns Validated IdctaConfig or null
+ * @param cookieHeader - Cookie header from request
+ * @returns Validated IdctaConfig with initialIsSignedIn or null
  */
 export default async function getIdctaConfig(
   toggles: Toggles,
   service: Services,
-): Promise<IdctaConfig | null> {
+  cookieHeader?: string,
+): Promise<(IdctaConfig & { initialIsSignedIn: boolean }) | null> {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isAccountEnabled, value: accountService = '' } =
     toggleDefinitions.account || {};
@@ -47,7 +40,6 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  // Validate primary field
   if (!config?.['id-availability']) {
     logger.error('Invalid IDCTA config: missing required fields', {
       config,
@@ -55,5 +47,12 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  return config;
+  const cookieName = config?.identity?.idSignedInCookieName;
+  const initialIsSignedIn = Boolean(
+    cookieHeader && cookieName
+      ? hasCookie(cookieHeader, cookieName)
+      : undefined,
+  );
+
+  return { ...config, initialIsSignedIn };
 }
