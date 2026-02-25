@@ -68,11 +68,12 @@ const WithContexts = Component => {
               data={pageData}
             >
               <UserContextProvider>
-                <ThemeProviderSCSSModules service={service} variant={variant}>
-                  <ThemeProvider service={service} variant={variant}>
-                    <Component {...props} />
-                  </ThemeProvider>
-                </ThemeProviderSCSSModules>
+                {/* Disabled as only works on Mundo currently */}
+                {/* <ThemeProviderSCSSModules service={service} variant={variant}> */}
+                <ThemeProvider service={service} variant={variant}>
+                  <Component {...props} />
+                </ThemeProvider>
+                {/* </ThemeProviderSCSSModules> */}
               </UserContextProvider>
             </EventTrackingContextProvider>
           </RequestContextProvider>
