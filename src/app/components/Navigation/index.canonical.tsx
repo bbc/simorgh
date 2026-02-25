@@ -76,7 +76,6 @@ const CanonicalNavigationContainer: React.FC<
         </div>
         <div css={styles.lowerNavWrapper}>
           <ScrollableNavigation
-            data-testid="scrollable-nav-secondary"
             dir={dir}
             css={styles.bottomRowItems}
             navPosition="secondary"
