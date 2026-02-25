@@ -55,15 +55,8 @@ export default ({ service, pageType }: ServiceParametersType) => {
                     // eslint-disable-next-line cypress/unsafe-to-chain-command
                     cy.wrap($img).then($el => {
                       // Check if the element and all its parents are visible
-                      const isVisible =
-                        Cypress.$($el).is(':visible') &&
-                        !$el
-                          .parents()
-                          .toArray()
-                          .some(
-                            parent =>
-                              Cypress.$(parent).css('display') === 'none',
-                          );
+                      const isVisible = Cypress.$($el).is(':visible');
+
                       if (isVisible) {
                         cy.wrap($el)
                           .invoke('attr', 'src')
