@@ -84,7 +84,6 @@ const AccountPromotionalBanner = () => {
         url={signInUrl}
         className="focusIndicatorInvert"
         css={[styles.callToActionLink, styles.signInLink]}
-        aria-label={`${title} - ${description} - ${signInText}`}
       >
         <CallToActionLink.ButtonLikeWrapper>
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>
@@ -102,7 +101,6 @@ const AccountPromotionalBanner = () => {
         url={registerUrl}
         className="focusIndicatorInvert"
         css={[styles.callToActionLink, styles.registerLink]}
-        aria-label={`${registerText}`}
       >
         <div css={styles.actionLinkWrapper}>
           <CallToActionLink.ButtonLikeWrapper>
