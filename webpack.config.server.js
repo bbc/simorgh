@@ -45,14 +45,12 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         {
           test: /\.module\.scss$/,
           use: [
-            'style-loader',
             {
               loader: 'css-loader',
               options: {
-                modules: {
-                  localIdentName: '[name]__[local]___[hash:base64:5]',
-                },
+                modules: true,
                 importLoaders: 1,
+                esModule: false,
               },
             },
             'sass-loader',
@@ -60,7 +58,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         },
         {
           test: /(?<!\.module)\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader'],
+          use: ['css-loader', 'sass-loader'],
         },
       ],
     },
