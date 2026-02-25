@@ -44,9 +44,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      pageData: {
-        mostReadData,
-      },
       pageType: OFFLINE_PAGE,
       service,
       status: 200,
@@ -55,6 +52,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       pathname: `/${service}/offline`,
       ...extractHeaders(context.req.headers),
       pageData: {
+        mostReadData,
         metadata: {
           type: OFFLINE_PAGE,
         },

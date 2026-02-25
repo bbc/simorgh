@@ -128,7 +128,7 @@ const MostRead = ({
   }
 
   // If not in local environment, use the BFF, otherwise use fixture data
-  const isBff = !isLocal();
+  const isBff = false;
 
   const endpoint = getMostReadEndpoint({
     service,

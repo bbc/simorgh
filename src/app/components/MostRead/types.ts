@@ -76,25 +76,27 @@ export interface OptimoMostReadRecord {
   };
 }
 
+export type MostReadDataItem = {
+  id: string;
+  rank: number;
+  href: string;
+  title: string;
+  timestamp: number | string;
+  images?: {
+    defaultPromoImage: OptimoBlock[];
+  };
+  indexImage?: {
+    width: number;
+    height: number;
+    altText: string;
+    originCode: string;
+    locator: string;
+  };
+};
+
 export interface MostReadData {
   generated?: string;
   lastRecordTimeStamp: string;
   firstRecordTimeStamp?: string;
-  items: {
-    id: string;
-    rank: number;
-    href: string;
-    title: string;
-    timestamp: number | string;
-    images?: {
-      defaultPromoImage: OptimoBlock[];
-    };
-    indexImage?: {
-      width: number;
-      height: number;
-      altText: string;
-      originCode: string;
-      locator: string;
-    };
-  }[];
+  items: MostReadDataItem[];
 }
