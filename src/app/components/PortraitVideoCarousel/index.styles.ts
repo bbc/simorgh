@@ -10,6 +10,15 @@ const styles = {
         display: 'none',
       },
     }),
+  showModal: () =>
+    css({
+      border: '1px solid yellow',
+      display: 'flex',
+    }),
+  hiddenModal: () =>
+    css({
+      display: 'none',
+    }),
   heading: ({ palette, mq, spacings }: Theme) =>
     css({
       display: 'inline-block',

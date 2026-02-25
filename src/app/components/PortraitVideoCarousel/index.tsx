@@ -82,7 +82,7 @@ const PortraitVideoCarousel = ({
 
   const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
-    setSelectedVideoIndex(null);
+    // setSelectedVideoIndex(null);
   }, []);
 
   if (isLite || isAmp) return null;
@@ -133,8 +133,7 @@ const PortraitVideoCarousel = ({
             ))}
           </ul>
         </div>
-        {isModalOpen &&
-          selectedVideoIndex !== null &&
+        {selectedVideoIndex !== null &&
           createPortal(
             <PortraitVideoModal
               blocks={blocks}
@@ -145,6 +144,7 @@ const PortraitVideoCarousel = ({
               setVideoOverlayContainerRef={setVideoOverlayContainerRef}
               setCurrentVideo={setCurrentVideo}
               setControlsDisplayed={setControlsDisplayed}
+              css={isModalOpen ? styles.showModal : styles.hiddenModal}
             />,
             document.body,
           )}

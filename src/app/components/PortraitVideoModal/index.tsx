@@ -217,6 +217,7 @@ export interface PortraitVideoModalProps {
   >;
   setCurrentVideo?: (item: PortraitClipMediaBlock) => void;
   setControlsDisplayed?: (displayed: boolean) => void;
+  className?: string;
 }
 
 const PortraitVideoModal = ({
@@ -227,6 +228,7 @@ const PortraitVideoModal = ({
   setVideoOverlayContainerRef,
   setCurrentVideo,
   setControlsDisplayed,
+  className,
 }: PortraitVideoModalProps) => {
   const {
     translations: {
@@ -320,6 +322,7 @@ const PortraitVideoModal = ({
         css={styles.modal}
         id="portrait-video-modal-container"
         {...viewTracker}
+        className={className}
       >
         <button
           ref={closeButtonRef}
