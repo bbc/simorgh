@@ -1,0 +1,388 @@
+{
+  "blocks": [
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/045b/live/791252b0-11db-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/045b/live/791252b0-11db-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Imagem de dois carros de cabeça para baixo sendo arrastados pela enchente em Uba"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/045b/live/791252b0-11db-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/045b/live/791252b0-11db-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Imagem de dois carros de cabeça para baixo sendo arrastados pela enchente em Uba"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:cp81z6nd7zjo",
+          "title": "'Só dá para ver a mão': o desespero de moradores durante chuvas em Minas Gerais",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/045b/live/791252b0-11db-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n31rzp",
+            "duration": "PT43S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/cp81z6nd7zjo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/ff17/live/0867fae0-1228-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ff17/live/0867fae0-1228-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Greg Squire"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/ff17/live/0867fae0-1228-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ff17/live/0867fae0-1228-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Greg Squire"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:c80jgvln58eo",
+          "title": "Como parede levou polícia a salvar menina que sofreu anos de abuso",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/ff17/live/0867fae0-1228-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n334nx",
+            "duration": "PT1M28S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/c80jgvln58eo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/2c6d/live/2c38eed0-115f-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2c6d/live/2c38eed0-115f-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Prédios em São Paulo"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/2c6d/live/2c38eed0-115f-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/2c6d/live/2c38eed0-115f-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Prédios em São Paulo"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:ce9431p9kk9o",
+          "title": "BBC flagra desvios no Minha Casa Minha Vida",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/2c6d/live/2c38eed0-115f-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n2wnks",
+            "duration": "PT2M56S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/ce9431p9kk9o"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/dcc0/live/9017d360-115c-11f1-801d-ed3cff6bf876.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dcc0/live/9017d360-115c-11f1-801d-ed3cff6bf876.jpg.webp",
+            "altText": "Gisele Pelicot"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/dcc0/live/9017d360-115c-11f1-801d-ed3cff6bf876.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/dcc0/live/9017d360-115c-11f1-801d-ed3cff6bf876.jpg.webp",
+            "altText": "Gisele Pelicot"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:cvg1vjjgeqdo",
+          "title": "Gisèle Pelicot: 'Espero visitar Sr. Pelicot na cadeia para ter respostas'",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/dcc0/live/9017d360-115c-11f1-801d-ed3cff6bf876.jpg",
+          "version": {
+            "id": "p0n2wm5w",
+            "duration": "PT50S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/cvg1vjjgeqdo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/1b9d/live/afaeac60-111d-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1b9d/live/afaeac60-111d-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Tatiana Sampaio no laboratório"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/1b9d/live/afaeac60-111d-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/1b9d/live/afaeac60-111d-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Tatiana Sampaio no laboratório"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:c0q3l8gk759o",
+          "title": "'O esperado é que ela funcione', diz Tatiana Sampaio sobre polilaminina, esperança para reverter paralisia por lesões na medula",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/1b9d/live/afaeac60-111d-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n2vfny",
+            "duration": "PT2M32S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/c0q3l8gk759o"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/66a5/live/1ac90500-1091-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/66a5/live/1ac90500-1091-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Menino (com rosto borrado) no colo de policial"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/66a5/live/1ac90500-1091-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/66a5/live/1ac90500-1091-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Menino (com rosto borrado) no colo de policial"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:c0lj433rz1go",
+          "title": "Como prisão no Brasil salvou vida de menino sequestrado na Rússia",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/66a5/live/1ac90500-1091-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n2ptc5",
+            "duration": "PT2M57S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/c0lj433rz1go"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/fa07/live/bab844e0-0fe2-11f1-801d-ed3cff6bf876.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fa07/live/bab844e0-0fe2-11f1-801d-ed3cff6bf876.jpg.webp",
+            "altText": "Macaco com homem"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/fa07/live/bab844e0-0fe2-11f1-801d-ed3cff6bf876.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/fa07/live/bab844e0-0fe2-11f1-801d-ed3cff6bf876.jpg.webp",
+            "altText": "Macaco com homem"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:czj1kvk3myeo",
+          "title": "O momento emocionante em que macaco vê cicatrizes de seu salvador",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/fa07/live/bab844e0-0fe2-11f1-801d-ed3cff6bf876.jpg",
+          "version": {
+            "id": "p0n2lnn8",
+            "duration": "PT33S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/czj1kvk3myeo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/7b5a/live/8b7d06a0-0ecc-11f1-9120-a910fc22c6ac.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7b5a/live/8b7d06a0-0ecc-11f1-9120-a910fc22c6ac.jpg.webp",
+            "altText": "Empresário sorri para foto"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/7b5a/live/8b7d06a0-0ecc-11f1-9120-a910fc22c6ac.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/7b5a/live/8b7d06a0-0ecc-11f1-9120-a910fc22c6ac.jpg.webp",
+            "altText": "Empresário sorri para foto"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:clyxgx5vq2qo",
+          "title": "Fim da escala 6x1: 'Consumidor aceitará pagar mais por isso?'",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/7b5a/live/8b7d06a0-0ecc-11f1-9120-a910fc22c6ac.jpg",
+          "version": {
+            "id": "p0n2dyyg",
+            "duration": "PT1M16S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/clyxgx5vq2qo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/001e/live/f1f43a90-0ecf-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/001e/live/f1f43a90-0ecf-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Montanha coberta de neve"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/001e/live/f1f43a90-0ecf-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/001e/live/f1f43a90-0ecf-11f1-b048-c9424b2cf5fd.jpg.webp",
+            "altText": "Montanha coberta de neve"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:c5y6k6yyzn0o",
+          "title": "A trágica história do alpinista que deixou namorada morrer congelada",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/001e/live/f1f43a90-0ecf-11f1-b048-c9424b2cf5fd.jpg",
+          "version": {
+            "id": "p0n2dzh7",
+            "duration": "PT2M59S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/c5y6k6yyzn0o"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/cc6a/live/8beeb8e0-0d87-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cc6a/live/8beeb8e0-0d87-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "altText": "Amanda Souza"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/cc6a/live/8beeb8e0-0d87-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/cc6a/live/8beeb8e0-0d87-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "altText": "Amanda Souza"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:cjenwp0771qo",
+          "title": "'Meu ex disse que meu futuro seria de solidão antes de matar nossos filhos'",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/cc6a/live/8beeb8e0-0d87-11f1-b7e1-afb6d0884c18.jpg",
+          "version": {
+            "id": "p0n205lh",
+            "duration": "PT1M46S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/cjenwp0771qo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/b324/live/224c0e30-0d3a-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b324/live/224c0e30-0d3a-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+            "altText": "Mulher usando óculos"
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/b324/live/224c0e30-0d3a-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b324/live/224c0e30-0d3a-11f1-b5e2-dd58fc65f0f6.jpg.webp",
+            "altText": "Mulher usando óculos"
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:c4ge49xzj8yo",
+          "title": "A mulher que se apaixonou por modelo de ChatGPT",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/b324/live/224c0e30-0d3a-11f1-b5e2-dd58fc65f0f6.jpg",
+          "version": {
+            "id": "p0n1y2nb",
+            "duration": "PT1M37S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/c4ge49xzj8yo"
+        }
+      }
+    },
+    {
+      "type": "portraitClipMedia",
+      "model": {
+        "type": "video",
+        "images": [
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/c7fd/live/277191a0-0c4f-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c7fd/live/277191a0-0c4f-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "altText": "Juliana Peres durante julgamento nos EUA."
+          },
+          {
+            "source": "https://ichef.bbci.co.uk/ace/ws/1024/cpsprodpb/c7fd/live/277191a0-0c4f-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "urlTemplate": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c7fd/live/277191a0-0c4f-11f1-b7e1-afb6d0884c18.jpg.webp",
+            "altText": "Juliana Peres durante julgamento nos EUA."
+          }
+        ],
+        "video": {
+          "id": "urn:bbc:optimo:asset:cjwz2x2d32no",
+          "title": "A babá brasileira condenada por participar do assassinato de patroa nos EUA",
+          "holdingImageURL": "https://ichef.bbci.co.uk/ace/standard/512/cpsprodpb/c7fd/live/277191a0-0c4f-11f1-b7e1-afb6d0884c18.jpg",
+          "version": {
+            "id": "p0n1pc0y",
+            "duration": "PT2M59S",
+            "kind": "programme",
+            "guidance": null,
+            "territories": ["uk", "nonuk"]
+          },
+          "isEmbeddingAllowed": false,
+          "shareUrl": "/portuguese/articles/cjwz2x2d32no"
+        }
+      }
+    }
+  ]
+}
