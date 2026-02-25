@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { StreamResponse } from '#nextjs/pages/[service]/live/[id]/Post/types';
 import fakeRequest from './fakeRequest';
 
-const FAKE_POLLING_INTERVAL = 5000;
+export const POLLING_INTERVAL = 5000;
 
 const useLivePagePolling = (
   initialStreamData: StreamResponse['data'] | null,
@@ -25,7 +25,7 @@ const useLivePagePolling = (
         setHasPendingUpdate(true);
         setNewData(newStream);
       }
-    }, FAKE_POLLING_INTERVAL);
+    }, POLLING_INTERVAL);
 
     return () => clearTimeout(timerId);
   }, [currentStreamData?.page?.index, currentStreamData?.results.length]);
