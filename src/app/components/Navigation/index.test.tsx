@@ -14,6 +14,15 @@ import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Navigation', () => {
+  beforeEach(() => {
+    jest.spyOn(clickTracking, 'default').mockReturnValue({
+      onClick: jest.fn(),
+    });
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
   // AMP functionality and testing will be completed in a follow-up ticket in the next sprint
 
   //   it('should correctly render amp navigation', () => {
