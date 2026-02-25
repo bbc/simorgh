@@ -53,28 +53,15 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
                     // Images are lazy loaded so we need to scroll to them, check they have loaded before getting currentSrc
                     // eslint-disable-next-line cypress/unsafe-to-chain-command
-                    cy.wrap($img).then($el => {
-                      // Check if the element and all its parents are visible
-                      const isVisible =
-                        Cypress.$($el).is(':visible') &&
-                        !$el
-                          .parents()
-                          .toArray()
-                          .some(
-                            parent =>
-                              Cypress.$(parent).css('display') === 'none',
-                          );
-                      if (isVisible) {
-                        cy.wrap($el)
-                          .invoke('attr', 'src')
-                          .then(src => {
-                            cy.log(src ?? '');
-                            expect((src ?? '').endsWith('.webp')).to.equal(
-                              true,
-                            );
-                          });
-                      }
-                    });
+                    cy.wrap($img)
+                      .scrollIntoView()
+                      .should('be.visible')
+                      .then($visibleImg => {
+                        const src = $visibleImg.attr('src') ?? '';
+                        cy.log(src);
+                        // eslint-disable-next-line no-unused-expressions
+                        expect(src.endsWith('.webp')).to.be.true;
+                      });
                   },
                 );
               }
