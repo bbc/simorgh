@@ -37,8 +37,9 @@ const CanonicalNavigationContainer: React.FC<
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
   const [isOpen, setIsOpen] = useState(false);
   const [showSticky, setShowSticky] = useState(false);
+  // Refs and state for sticky nav
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isKeyboardNav, setIsKeyboardNav] = useState(false);
+  const [isKeyboardNav, setIsKeyboardNav] = useState(false); // this is to prevent showing sticky nav when keyboard navigation is detected
   const navRef = useRef<HTMLDivElement>(null);
   const stickyNavRef = useRef<HTMLDivElement>(null);
 
@@ -59,17 +60,18 @@ const CanonicalNavigationContainer: React.FC<
           if (!navElement) return;
           const navRect = navElement.getBoundingClientRect();
           const { scrollY } = window;
-          const scrollingUp = scrollY < lastScrollY;
+          const scrollingUp = scrollY < lastScrollY; // detects scroll direction
           setLastScrollY(scrollY);
           // Only show sticky nav if nav is fully out of view and user is scrolling up
           // Hide sticky nav before original nav is visible (with threshold)
-          const threshold = 65; // px, adjust for seamless merge
+          const threshold = 65; // px, adjust for not seeing both original and sticky nav at the same time
           if (navRect.bottom < -threshold && scrollingUp && !isKeyboardNav) {
+            // do not show sticky nav if keyboard navigation is detected
             setShowSticky(true);
           } else {
             setShowSticky(false);
           }
-          ticking = false;
+          ticking = false; // the ticking flag is used to prevent multiple requestAnimationFrame calls from stacking up and causing performance issues during fast scrolling.
         });
         ticking = true;
       }
@@ -101,14 +103,7 @@ const CanonicalNavigationContainer: React.FC<
 
   // Main nav (normal)
   const mainNav = (
-    <Navigation
-      dir={dir}
-      isOpen={isOpen}
-      ref={navRef}
-      aria-hidden={showSticky}
-      tabIndex={showSticky ? -1 : 0}
-      role="navigation"
-    >
+    <Navigation dir={dir} isOpen={isOpen} ref={navRef} role="navigation">
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
@@ -149,65 +144,65 @@ const CanonicalNavigationContainer: React.FC<
   );
 
   // Sticky nav (always rendered, animates in/out)
-  const stickyNav =
-    !isKeyboardNav && showSticky ? (
-      <div
-        ref={stickyNavRef}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          zIndex: 10000,
-          background: 'inherit',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-          pointerEvents: 'auto',
-          transform: 'translateY(0)',
-          transition: 'transform 0.4s cubic-bezier(.4,0,.2,1)',
-        }}
-        aria-label="Sticky navigation"
-        role="navigation"
-      >
-        <Navigation dir={dir} isOpen={isOpen} role="navigation">
-          <div css={styles.navStack}>
-            <div style={{ position: 'relative', width: '100%' }}>
-              <div css={styles.topRow}>
-                <ScrollableNavigation
-                  dir={dir}
-                  css={styles.topRowItems}
-                  navPosition="primary"
-                >
-                  {topScrollableListItems}
-                </ScrollableNavigation>
-                {!isLite && (
-                  <CanonicalMenuButton
-                    css={styles.menuButton}
-                    announcedText={menuAnnouncedText}
-                    isOpen={isOpen}
-                    onClick={() => setIsOpen(!isOpen)}
-                    dir={dir}
-                  />
-                )}
-              </div>
-              <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
-                {dropdownListItems}
-              </CanonicalDropdown>
-            </div>
-            <div css={styles.lowerNavWrapper}>
+  const stickyNav = !isKeyboardNav ? (
+    <div
+      ref={stickyNavRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 10000,
+        background: 'inherit',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+        pointerEvents: showSticky ? 'auto' : 'none',
+        transform: showSticky ? 'translateY(0)' : 'translateY(-100%)',
+        transition: 'transform 0.4s cubic-bezier(.4,0,.2,1)',
+      }}
+      aria-label="Sticky navigation"
+      role="navigation"
+      aria-hidden="true"
+    >
+      <Navigation dir={dir} isOpen={isOpen} role="navigation">
+        <div css={styles.navStack}>
+          <div style={{ position: 'relative', width: '100%' }}>
+            <div css={styles.topRow}>
               <ScrollableNavigation
                 dir={dir}
-                css={styles.bottomRowItems}
-                navPosition="secondary"
+                css={styles.topRowItems}
+                navPosition="primary"
               >
-                {bottomScrollableListItems}
+                {topScrollableListItems}
               </ScrollableNavigation>
+              {!isLite && (
+                <CanonicalMenuButton
+                  css={styles.menuButton}
+                  announcedText={menuAnnouncedText}
+                  isOpen={isOpen}
+                  onClick={() => setIsOpen(!isOpen)}
+                  dir={dir}
+                />
+              )}
             </div>
+            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+              {dropdownListItems}
+            </CanonicalDropdown>
           </div>
-          <div css={styles.bottomDivider} />
-          {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
-        </Navigation>
-      </div>
-    ) : null;
+          <div css={styles.lowerNavWrapper}>
+            <ScrollableNavigation
+              dir={dir}
+              css={styles.bottomRowItems}
+              navPosition="secondary"
+            >
+              {bottomScrollableListItems}
+            </ScrollableNavigation>
+          </div>
+        </div>
+        <div css={styles.bottomDivider} />
+        {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
+      </Navigation>
+    </div>
+  ) : null;
 
   return (
     <>
