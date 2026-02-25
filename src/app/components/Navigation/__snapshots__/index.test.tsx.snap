@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Navigation should correctly render canonical navigation 1`] = `<div />`;
+
+exports[`Navigation should correctly render canonical navigation on non-home navigation page 1`] = `<div />`;
+
+exports[`Navigation should correctly render canonical navigation on non-navigation page 1`] = `<div />`;

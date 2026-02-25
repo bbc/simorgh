@@ -5,7 +5,7 @@ import {
 } from '../react-testing-library-with-providers';
 import CollapsibleNavigation from './index';
 
-const sections = [
+export const sections = [
   {
     id: 'section1',
     title: 'Section 1',
