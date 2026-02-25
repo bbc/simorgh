@@ -29,15 +29,13 @@ const getUserId = () => {
 };
 
 const isMobile = () => {
-  if (onClient()) {
-    const matchMedia = window.matchMedia(
-      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-    );
+  if (!onClient()) return false;
 
-    if (matchMedia.matches) return true;
+  const matchMedia = window.matchMedia(
+    `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+  );
 
-    return false;
-  }
+  if (matchMedia.matches) return true;
 
   return false;
 };
@@ -50,32 +48,42 @@ export const REFERRER_CATEGORIES = {
 };
 
 export const getReferrer = () => {
-  if (onClient()) {
-    const referrer = document?.referrer?.toLowerCase();
+  if (!onClient()) return null;
 
-    const urlParams = new URLSearchParams(window.location.search);
+  const referrer = document?.referrer?.toLowerCase();
 
-    const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
+  const urlParams = new URLSearchParams(window.location.search);
 
-    if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
-      return 'search';
+  const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
 
-    if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
-      return 'social';
+  if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
+    return 'search';
 
-    if (
-      atParam &&
-      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
-    )
-      return 'social';
+  if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
+    return 'social';
 
-    if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
-      return 'direct';
+  if (
+    atParam &&
+    REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
+  )
+    return 'social';
 
-    if (!referrer) return 'direct';
-  }
+  if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
+    return 'direct';
 
-  return null;
+  return 'direct';
+};
+
+const getClientTimeOfDay = () => {
+  if (!onClient()) return null;
+
+  const hour = new Date().getHours();
+
+  if (hour >= 6 && hour < 12) return 'morning';
+  if (hour >= 12 && hour < 17) return 'afternoon';
+  if (hour >= 17) return 'evening';
+
+  return 'night'; // 0–5
 };
 
 const optimizely = createInstance({
@@ -103,6 +111,7 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
             mobile: isMobile(),
             referrer: getReferrer(),
             country: country ?? null,
+            timeOfDay: getClientTimeOfDay(),
           },
         }}
       >
