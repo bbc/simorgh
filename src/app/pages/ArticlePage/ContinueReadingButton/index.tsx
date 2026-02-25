@@ -5,16 +5,13 @@ import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 
 export type ContinueReadingButtonProps = {
   showAllContent: boolean;
   setShowAllContent: Dispatch<SetStateAction<boolean>>;
-  experimentProps?: {
-    sendOptimizelyEvents: boolean;
-    experimentName: string;
-    experimentVariant: string;
-  };
+  experimentProps?: ComponentExperimentProps;
 };
 
 const ContinueReadingButton = ({
