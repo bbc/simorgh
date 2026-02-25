@@ -4,11 +4,11 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
+import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
