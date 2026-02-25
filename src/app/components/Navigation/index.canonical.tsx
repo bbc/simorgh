@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, use } from 'react';
+import { css } from '@emotion/react';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
 import {
@@ -147,18 +148,21 @@ const CanonicalNavigationContainer: React.FC<
   const stickyNav = !isKeyboardNav ? (
     <div
       ref={stickyNavRef}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        zIndex: 10000,
-        background: 'inherit',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-        pointerEvents: showSticky ? 'auto' : 'none',
-        transform: showSticky ? 'translateY(0)' : 'translateY(-100%)',
-        transition: 'transform 0.4s cubic-bezier(.4,0,.2,1)',
-      }}
+      css={css`
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+        background: inherit;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        pointer-events: ${showSticky ? 'auto' : 'none'};
+        transform: ${showSticky ? 'translateY(0)' : 'translateY(-100%)'};
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        @media (prefers-reduced-motion: reduce) {
+          transition: none;
+        }
+      `}
       aria-label="Sticky navigation"
       role="navigation"
       aria-hidden="true"
