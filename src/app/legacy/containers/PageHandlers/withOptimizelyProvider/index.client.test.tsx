@@ -97,7 +97,7 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   describe('mobile attribute', () => {
-    it('should set mobile to true when the viewport width is less than or equal to GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    it('should set mobile to true when the viewport width is less than or equal to GROUP_3_MAX_WIDTH_BP', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
         matches: query === `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
@@ -110,7 +110,7 @@ describe('withOptimizelyProvider HOC', () => {
       ).toBe(true);
     });
 
-    it('should set mobile to false when the viewport width is greater than GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    it('should set mobile to false when the viewport width is greater than GROUP_3_MAX_WIDTH_BP', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
         matches: query !== `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
