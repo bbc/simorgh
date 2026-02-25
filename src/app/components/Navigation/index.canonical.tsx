@@ -49,7 +49,6 @@ const CanonicalNavigationContainer: React.FC<
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
             <ScrollableNavigation
-              data-testid="scrollable-nav"
               dir={dir}
               css={styles.topRowItems}
               navPosition="primary"
