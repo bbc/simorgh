@@ -427,13 +427,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
-      {showPortraitVideoCarousel && (
-        <PortraitVideoCarousel
-          {...portraitVideoCarouselProps}
-          css={styles.portraitVideoCarousel}
-        />
-      )}
-
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
