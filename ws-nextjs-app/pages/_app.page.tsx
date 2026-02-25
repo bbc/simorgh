@@ -31,7 +31,7 @@ import { AccountProvider } from '#app/contexts/AccountContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
-import hasCookie from '#app/lib/utilities/hasCookie/hasCookie';
+import hasCookie from '#app/lib/utilities/hasCookie';
 
 interface Props {
   pageProps: {
