@@ -148,6 +148,10 @@ const CanonicalNavigationContainer: React.FC<
   const stickyNav = !isKeyboardNav ? (
     <div
       ref={stickyNavRef}
+      // box-shadow adds a slight shadow under the sticky nav so that it is distinguishable
+      //  from the background of the article when the colours are similar
+      // 'translateY(-100%)' slides the sticky nav up out of view when not shown, and 'translateY(0)' brings it back down into view when shown
+      // transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); animates the transition of the slide over 0.4 seconds. this can be changed
       css={css`
         position: fixed;
         top: 0;
@@ -202,7 +206,6 @@ const CanonicalNavigationContainer: React.FC<
           </div>
         </div>
         <div css={styles.bottomDivider} />
-        {topBarOJsEnabled && <TopBarOJs blocks={blocks ?? []} />}
       </Navigation>
     </div>
   ) : null;
