@@ -251,14 +251,6 @@ describe('Navigation', () => {
       componentName: 'dropdown-navigation',
     };
 
-    const clickTrackerSpy = jest
-      .spyOn(clickTracking, 'default')
-      .mockImplementation();
-
-    beforeEach(() => {
-      clickTrackerSpy.mockRestore();
-    });
-
     it('should call the view tracking hook when on scrollable navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation navItems={mockNavigation} />, {
