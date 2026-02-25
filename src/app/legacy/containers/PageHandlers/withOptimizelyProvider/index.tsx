@@ -107,10 +107,10 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
         user={{
           id: getUserId(),
           attributes: {
+            country: country ?? null,
             service,
             mobile: isMobile(),
             referrer: getReferrer(),
-            country: country ?? null,
             timeOfDay: getClientTimeOfDay(),
           },
         }}
