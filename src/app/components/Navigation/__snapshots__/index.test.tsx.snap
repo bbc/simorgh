@@ -1,7 +1,2170 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Navigation should correctly render canonical navigation 1`] = `<div />`;
+exports[`Navigation should correctly render canonical navigation 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 0.0625rem solid #B80000;
+  opacity: 0.7;
+}
 
-exports[`Navigation should correctly render canonical navigation on non-home navigation page 1`] = `<div />`;
+.emotion-1 {
+  position: relative;
+  background-color: #FFFFFF;
+}
 
-exports[`Navigation should correctly render canonical navigation on non-navigation page 1`] = `<div />`;
+@media (min-width: 62.9375rem) {
+  .emotion-1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
+}
+
+.emotion-1 .emotion-12::after {
+  left: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-3 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.emotion-6::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #B80000;
+  pointer-events: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-7:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-7 li a {
+  color: #FFFFFF;
+}
+
+.emotion-7 li a:hover::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus-visible::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a[data-active="true"] span::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #FFFFFF;
+  display: block;
+  opacity: 0.3;
+}
+
+.emotion-7 li:last-child:before {
+  display: none;
+}
+
+.emotion-7:after {
+  background: none;
+}
+
+.emotion-9 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    overflow: hidden;
+  }
+}
+
+.emotion-11 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-11:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+  outline: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-13 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-13:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-13:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-13:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-19 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-19:hover,
+.emotion-19:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-19:hover::after,
+.emotion-19:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #000000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-19 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+  fill: #FFFFFF;
+}
+
+.emotion-21 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-21 {
+    fill: linkText;
+  }
+}
+
+.emotion-23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-24 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: 0.1875rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-24 ul {
+  padding: 0;
+  border: none;
+}
+
+.emotion-24 ul li {
+  padding: 0;
+}
+
+.emotion-24 ul li:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-24 a {
+  display: block;
+  position: relative;
+  padding-inline: 0.5rem;
+}
+
+.emotion-24 a:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-24 a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-24 a:hover::before {
+  opacity: 1;
+}
+
+.emotion-24 a:focus-visible {
+  outline-offset: -0.1875rem;
+}
+
+.emotion-26 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-30 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+.emotion-32 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-33 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-33::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-33:focus-visible {
+    outline: none;
+  }
+
+  .emotion-33:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-33:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-33:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-33 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #B0B2B4;
+  display: block;
+  opacity: 1;
+}
+
+.emotion-33 li:last-child:before {
+  display: none;
+}
+
+.emotion-37 {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-37 {
+    width: 100%;
+  }
+}
+
+.emotion-37::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  width: 100%;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  />
+  <nav
+    class="emotion-1 emotion-2"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="position: relative; width: 100%;"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7 emotion-8"
+              data-e2e="scrollable-nav"
+              data-testid="scrollable-nav"
+              dir="ltr"
+            >
+              <ul
+                class="emotion-9 emotion-10"
+                role="list"
+              >
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/home"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/about"
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-expanded="false"
+              class="focusIndicatorRemove emotion-19 emotion-20"
+              dir="ltr"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-21 emotion-22"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <span
+                class="emotion-23"
+              >
+                Sections
+              </span>
+            </button>
+          </div>
+          <div
+            class="emotion-24 emotion-25"
+            data-e2e="dropdown-nav"
+            height="0"
+          >
+            <ul
+              class="emotion-26 emotion-27"
+            >
+              <li
+                class="emotion-28 emotion-29"
+                role="listitem"
+              >
+                <a
+                  aria-labelledby="dropdownNavigation-home"
+                  class="emotion-30 emotion-31"
+                  href="/home"
+                >
+                  <span
+                    id="dropdownNavigation-home"
+                  >
+                    Home
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-32"
+        >
+          <div
+            class="emotion-33 emotion-8"
+            data-e2e="scrollable-nav-secondary"
+            data-testid="scrollable-nav-secondary"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-9 emotion-10"
+              role="list"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-37"
+      />
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Navigation should correctly render canonical navigation on non-home navigation page 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 0.0625rem solid #B80000;
+  opacity: 0.7;
+}
+
+.emotion-1 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 62.9375rem) {
+  .emotion-1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
+}
+
+.emotion-1 .emotion-12::after {
+  left: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-3 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.emotion-6::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #B80000;
+  pointer-events: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-7:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-7 li a {
+  color: #FFFFFF;
+}
+
+.emotion-7 li a:hover::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus-visible::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a[data-active="true"] span::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #FFFFFF;
+  display: block;
+  opacity: 0.3;
+}
+
+.emotion-7 li:last-child:before {
+  display: none;
+}
+
+.emotion-7:after {
+  background: none;
+}
+
+.emotion-9 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    overflow: hidden;
+  }
+}
+
+.emotion-11 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-11:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+  outline: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-13 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-13:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-13:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-13:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-19 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-19:hover,
+.emotion-19:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-19:hover::after,
+.emotion-19:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #000000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-19 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+  fill: #FFFFFF;
+}
+
+.emotion-21 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-21 {
+    fill: linkText;
+  }
+}
+
+.emotion-23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-24 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: 0.1875rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-24 ul {
+  padding: 0;
+  border: none;
+}
+
+.emotion-24 ul li {
+  padding: 0;
+}
+
+.emotion-24 ul li:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-24 a {
+  display: block;
+  position: relative;
+  padding-inline: 0.5rem;
+}
+
+.emotion-24 a:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-24 a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-24 a:hover::before {
+  opacity: 1;
+}
+
+.emotion-24 a:focus-visible {
+  outline-offset: -0.1875rem;
+}
+
+.emotion-26 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-30 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+.emotion-32 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-33 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-33::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-33:focus-visible {
+    outline: none;
+  }
+
+  .emotion-33:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-33:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-33:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-33 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #B0B2B4;
+  display: block;
+  opacity: 1;
+}
+
+.emotion-33 li:last-child:before {
+  display: none;
+}
+
+.emotion-37 {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-37 {
+    width: 100%;
+  }
+}
+
+.emotion-37::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  width: 100%;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  />
+  <nav
+    class="emotion-1 emotion-2"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="position: relative; width: 100%;"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7 emotion-8"
+              data-e2e="scrollable-nav"
+              data-testid="scrollable-nav"
+              dir="ltr"
+            >
+              <ul
+                class="emotion-9 emotion-10"
+                role="list"
+              >
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/home"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/about"
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-expanded="false"
+              class="focusIndicatorRemove emotion-19 emotion-20"
+              dir="ltr"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-21 emotion-22"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <span
+                class="emotion-23"
+              >
+                Sections
+              </span>
+            </button>
+          </div>
+          <div
+            class="emotion-24 emotion-25"
+            data-e2e="dropdown-nav"
+            height="0"
+          >
+            <ul
+              class="emotion-26 emotion-27"
+            >
+              <li
+                class="emotion-28 emotion-29"
+                role="listitem"
+              >
+                <a
+                  aria-labelledby="dropdownNavigation-home"
+                  class="emotion-30 emotion-31"
+                  href="/home"
+                >
+                  <span
+                    id="dropdownNavigation-home"
+                  >
+                    Home
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-32"
+        >
+          <div
+            class="emotion-33 emotion-8"
+            data-e2e="scrollable-nav-secondary"
+            data-testid="scrollable-nav-secondary"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-9 emotion-10"
+              role="list"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-37"
+      />
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`Navigation should correctly render canonical navigation on non-navigation page 1`] = `
+.emotion-0 {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 0.0625rem solid #B80000;
+  opacity: 0.7;
+}
+
+.emotion-1 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 62.9375rem) {
+  .emotion-1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
+}
+
+.emotion-1 .emotion-12::after {
+  left: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-3 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-3 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.emotion-6::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #B80000;
+  pointer-events: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-7:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-7 li a {
+  color: #FFFFFF;
+}
+
+.emotion-7 li a:hover::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus-visible::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a[data-active="true"] span::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #FFFFFF;
+  display: block;
+  opacity: 0.3;
+}
+
+.emotion-7 li:last-child:before {
+  display: none;
+}
+
+.emotion-7:after {
+  background: none;
+}
+
+.emotion-9 {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    overflow: hidden;
+  }
+}
+
+.emotion-11 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-margin-end: 0.75rem;
+  margin-inline-end: 0.75rem;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-11:last-child {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 80rem;
+    border-bottom: 0.0625rem solid #E6E8EA;
+    z-index: -1;
+  }
+}
+
+.emotion-13 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.75rem 0.25rem;
+  outline: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-13 {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+.emotion-13:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+}
+
+.emotion-13:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-13:focus-visible::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 0.25rem solid #B80000;
+  top: 0;
+  border: 0.1875rem solid #000000;
+}
+
+.emotion-19 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+  background-color: #B80000;
+  color: #FFFFFF;
+}
+
+.emotion-19:hover,
+.emotion-19:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-19:hover::after,
+.emotion-19:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #000000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-19 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+}
+
+.emotion-19 svg {
+  vertical-align: middle;
+  fill: #FFFFFF;
+}
+
+.emotion-21 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-21 {
+    fill: linkText;
+  }
+}
+
+.emotion-23 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-24 {
+  background-color: #FFFFFF;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: 0.1875rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emotion-24 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.emotion-24 ul {
+  padding: 0;
+  border: none;
+}
+
+.emotion-24 ul li {
+  padding: 0;
+}
+
+.emotion-24 ul li:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-24 a {
+  display: block;
+  position: relative;
+  padding-inline: 0.5rem;
+}
+
+.emotion-24 a:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-24 a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-24 a:hover::before {
+  opacity: 1;
+}
+
+.emotion-24 a:focus-visible {
+  outline-offset: -0.1875rem;
+}
+
+.emotion-26 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0.5rem;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28 {
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+.emotion-28:last-child {
+  padding-bottom: 0.25rem;
+  border: 0;
+}
+
+.emotion-30 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #141414;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-30 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
+}
+
+.emotion-32 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-33 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-33::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-33:focus-visible {
+    outline: none;
+  }
+
+  .emotion-33:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-33:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-33:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-33 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: -0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #B0B2B4;
+  display: block;
+  opacity: 1;
+}
+
+.emotion-33 li:last-child:before {
+  display: none;
+}
+
+.emotion-37 {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0;
+}
+
+@media (min-width: 1041px) {
+  .emotion-37 {
+    width: 100%;
+  }
+}
+
+.emotion-37::after {
+  content: '';
+  position: absolute;
+  inset-block-end: 0;
+  width: 100%;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
+<div>
+  <div
+    class="emotion-0"
+  />
+  <nav
+    class="emotion-1 emotion-2"
+    dir="ltr"
+    role="navigation"
+  >
+    <div
+      class="emotion-3 emotion-4"
+    >
+      <div
+        class="emotion-5"
+      >
+        <div
+          style="position: relative; width: 100%;"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7 emotion-8"
+              data-e2e="scrollable-nav"
+              data-testid="scrollable-nav"
+              dir="ltr"
+            >
+              <ul
+                class="emotion-9 emotion-10"
+                role="list"
+              >
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/home"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li
+                  class="emotion-11 emotion-12"
+                  dir="ltr"
+                  role="listitem"
+                >
+                  <a
+                    class="focusIndicatorRemove emotion-13 emotion-14"
+                    href="/about"
+                  >
+                    About
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button
+              aria-expanded="false"
+              class="focusIndicatorRemove emotion-19 emotion-20"
+              dir="ltr"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-21 emotion-22"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <span
+                class="emotion-23"
+              >
+                Sections
+              </span>
+            </button>
+          </div>
+          <div
+            class="emotion-24 emotion-25"
+            data-e2e="dropdown-nav"
+            height="0"
+          >
+            <ul
+              class="emotion-26 emotion-27"
+            >
+              <li
+                class="emotion-28 emotion-29"
+                role="listitem"
+              >
+                <a
+                  aria-labelledby="dropdownNavigation-home"
+                  class="emotion-30 emotion-31"
+                  href="/home"
+                >
+                  <span
+                    id="dropdownNavigation-home"
+                  >
+                    Home
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-32"
+        >
+          <div
+            class="emotion-33 emotion-8"
+            data-e2e="scrollable-nav-secondary"
+            data-testid="scrollable-nav-secondary"
+            dir="ltr"
+          >
+            <ul
+              class="emotion-9 emotion-10"
+              role="list"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-37"
+      />
+    </div>
+  </nav>
+</div>
+`;

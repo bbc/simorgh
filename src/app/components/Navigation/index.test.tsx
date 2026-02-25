@@ -24,8 +24,13 @@ describe('Navigation', () => {
     jest.restoreAllMocks();
   });
 
+  const navItems = [
+    { title: 'Home', url: '/home' },
+    { title: 'About', url: '/about' },
+  ];
+
   it('should correctly render canonical navigation', () => {
-    const { container } = render(<Navigation navItems={[]} />, {
+    const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
@@ -38,7 +43,7 @@ describe('Navigation', () => {
   });
 
   it('should correctly render canonical navigation on non-home navigation page', () => {
-    const { container } = render(<Navigation navItems={[]} />, {
+    const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
@@ -51,7 +56,7 @@ describe('Navigation', () => {
   });
 
   it('should correctly render canonical navigation on non-navigation page', () => {
-    const { container } = render(<Navigation navItems={[]} />, {
+    const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
@@ -93,11 +98,6 @@ describe('Navigation', () => {
   });
 
   it('should prefer navItems prop over service config', () => {
-    const navItems = [
-      { title: 'Home', url: '/home' },
-      { title: 'About', url: '/about' },
-    ];
-
     const { getAllByText, queryAllByText } = render(
       <Navigation navItems={navItems} />,
       {
