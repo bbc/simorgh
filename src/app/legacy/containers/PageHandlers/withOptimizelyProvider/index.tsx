@@ -74,7 +74,7 @@ export const getReferrer = () => {
   return 'direct';
 };
 
-const getClientTimeOfDay = () => {
+export const getClientTimeOfDay = () => {
   if (!onClient()) return null;
 
   const hour = new Date().getHours();
