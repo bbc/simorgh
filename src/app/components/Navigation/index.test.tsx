@@ -90,7 +90,7 @@ describe('Navigation', () => {
     const { getAllByRole } = render(navigationComponent);
     const listItems = getAllByRole('listitem');
 
-    (navigation ?? [])?.forEach((navItem, index) => {
+    (navigation ?? []).forEach((navItem, index) => {
       const link = listItems[index].querySelector('a');
       const href = link?.getAttribute('href');
       expect(href).toEqual(navItem.url);
