@@ -4,7 +4,7 @@ import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
@@ -99,7 +99,7 @@ describe('withOptimizelyProvider HOC', () => {
   describe('mobile attribute', () => {
     it('should set mobile to true when the viewport width is less than or equal to GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-        matches: query === `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+        matches: query === `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
 
       render(<TestComponent />);
@@ -112,7 +112,7 @@ describe('withOptimizelyProvider HOC', () => {
 
     it('should set mobile to false when the viewport width is greater than GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-        matches: query !== `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+        matches: query !== `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
 
       render(<TestComponent />);

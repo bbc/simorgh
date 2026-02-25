@@ -6,7 +6,7 @@ import {
 } from '@optimizely/react-sdk';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
@@ -32,7 +32,7 @@ const isMobile = () => {
   if (!onClient()) return false;
 
   const matchMedia = window.matchMedia(
-    `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+    `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
   );
 
   if (matchMedia.matches) return true;
