@@ -274,10 +274,9 @@ const PortraitVideoModal = ({
 
   // const setUpKeyboardEvents = () => {
   const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
-    console.log('event.target.id', event.target.id);
-    console.log('event.target', event.target);
-    console.log('event.currentTarget', event.currentTarget);
     // TO DO
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore is needed here to access the id property on event.target, which can be either a MouseEvent or TouchEvent
     if (event.target.id === 'portrait-video-modal-container') {
       // console.log('event.target === event.currentTarget');
       const player = getPlayerInstance();
