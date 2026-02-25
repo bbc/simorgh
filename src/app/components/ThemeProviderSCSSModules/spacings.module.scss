@@ -1,6 +1,7 @@
+@use 'sass:math';
 // SCSS variables for spacing, matching spacings.ts
 $full: 0.5rem; // 8px
-$half: $full / 2; // 0.25rem (4px)
+$half: math.div($full, 2); // 0.25rem (4px)
 $double: $full * 2; // 1rem (16px)
 $triple: $full * 3; // 1.5rem (24px)
 $quadruple: $full * 4; // 2rem (32px)

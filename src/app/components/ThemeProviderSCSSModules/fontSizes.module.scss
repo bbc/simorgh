@@ -5,7 +5,7 @@
 
 
 @use "sass:map";
-@import './fontMediaQueries.module.scss';
+@use './fontMediaQueries.module.scss' as fontMediaQueries;
 
 $font-sizes: (
   atlas: (
@@ -228,13 +228,13 @@ $font-sizes: (
   font-size: map.get($values, font-size);
   line-height: map.get($values, line-height);
   // Group B: 320px - 599px
-  @media #{$group-b-only} {
+  @media #{fontMediaQueries.$group-b-only} {
     $values: map.get(map.get($font-sizes, $scale), groupB);
     font-size: map.get($values, font-size);
     line-height: map.get($values, line-height);
   }
   // Group D: 600px+
-  @media #{$group-d-min-width} {
+  @media #{fontMediaQueries.$group-d-min-width} {
     $values: map.get(map.get($font-sizes, $scale), groupD);
     font-size: map.get($values, font-size);
     line-height: map.get($values, line-height);
