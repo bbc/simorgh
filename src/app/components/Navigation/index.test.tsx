@@ -1,6 +1,7 @@
 import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
 import { render, act } from '../react-testing-library-with-providers';
 import {
   ServiceContextProvider,
@@ -341,7 +342,7 @@ describe('Navigation', () => {
   describe('Language Navigation', () => {
     it('should render LanguageNavigation for WS service in all environment', async () => {
       const { getByTestId } = await act(async () =>
-        render(<Navigation navItems={[]} />, {
+        render(<LanguageNavigation />, {
           bbcOrigin: 'https://www.test.bbc.co.uk',
           id: 'c0000000000o',
           isAmp: false,
