@@ -83,7 +83,7 @@ const getClientTimeOfDay = () => {
   if (hour >= 12 && hour < 17) return 'afternoon';
   if (hour >= 17) return 'evening';
 
-  return 'night'; // 0–5
+  return 'night'; // return if hour is between 0 and 5
 };
 
 const optimizely = createInstance({
