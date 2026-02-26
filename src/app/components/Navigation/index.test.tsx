@@ -108,7 +108,7 @@ describe('Navigation', () => {
     const { navigation } = indonesiaConfig.default;
 
     const { getAllByText } = render(
-      <Navigation {...({ navItems: undefined } as any)} />,
+      <Navigation {...({ navItems: null } as any)} />,
       {
         bbcOrigin: 'https://www.test.bbc.co.uk',
         id: 'c0000000000o',
