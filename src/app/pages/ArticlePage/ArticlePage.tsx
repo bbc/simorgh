@@ -217,11 +217,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // time of day 2 experiment for articles
   const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
-  const optimizelyTimeOfDayArticleVariant = useOptimizelyVariation({
+  const timeOfDayArticleVariant = useOptimizelyVariation({
     experimentName: timeOfDayArticleExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  const timeOfDayArticleVariant = optimizelyTimeOfDayArticleVariant;
   const isAdaptiveTimeOfDayVariant =
     timeOfDayArticleVariant === 'adaptive_variation';
   // build one shared experiment payload so all oj components use the same values
@@ -360,7 +359,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
-        experimentProps: timeOfDayExperimentProps || undefined,
+        ...(timeOfDayExperimentProps && {
+          experimentProps: timeOfDayExperimentProps,
+        }),
       }),
     }),
   };
@@ -400,12 +401,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       isAdaptiveTimeOfDayVariant &&
       mediaCurationContent?.summaries?.length,
   );
-  const hasRelatedContent = Boolean(
-    blocks
-      .filter(block => block.type !== 'wsoj' && block.type !== 'mpu')
-      .slice(-1)[0]?.type === 'relatedContent',
-  );
-
   const renderAdaptiveMediaCuration = () =>
     showAdaptiveMediaCuration ? (
       <section data-testid="adaptive-media-curation">
@@ -499,7 +494,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {!hasRelatedContent && renderAdaptiveMediaCuration()}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
@@ -513,6 +507,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             })}
           />
         </div>
+        {showAdaptiveMediaCuration && (
+          <div css={styles.adaptiveMediaCurationRow}>
+            {renderAdaptiveMediaCuration()}
+          </div>
+        )}
         {!isApp && !isPGL && (
           <SecondaryColumn
             pageData={pageData}
@@ -522,13 +521,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           />
         )}
       </div>
-      {hasRelatedContent && (
-        <div css={styles.adaptiveMediaCurationRow}>
-          <div css={styles.adaptiveMediaCurationInner}>
-            {renderAdaptiveMediaCuration()}
-          </div>
-        </div>
-      )}
 
       {!isApp && !isPGL && (
         <MostRead
