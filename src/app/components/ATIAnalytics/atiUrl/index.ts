@@ -68,7 +68,7 @@ export const buildReverbAnalyticsModel = ({
   };
 
   // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'mv_creation';
-  const experimentSuffix = getExperimentVariantSuffix(experimentName);
+  const experimentVariantSuffix = getExperimentVariantSuffix(experimentName);
 
   const reverbVariables = {
     params: {
@@ -99,7 +99,7 @@ export const buildReverbAnalyticsModel = ({
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
-              mv_creation: `${experimentVariant}${experimentSuffix}`,
+              mv_creation: `${experimentVariant}${experimentVariantSuffix}`,
             }),
         },
       },
@@ -147,7 +147,7 @@ export const buildReverbEventModel = ({
   } = groupTracker;
 
   // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
-  const experimentSuffix = getExperimentVariantSuffix(experimentName);
+  const experimentVariantSuffix = getExperimentVariantSuffix(experimentName);
 
   return {
     params: {
@@ -196,7 +196,7 @@ export const buildReverbEventModel = ({
         experience: {
           engine_type: ['experimentation'],
           engine_id: [
-            `optimizely.${experimentName}.${experimentVariant}${experimentSuffix}`,
+            `optimizely.${experimentName}.${experimentVariant}${experimentVariantSuffix}`,
           ],
         },
       }),
