@@ -9,7 +9,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
+import withOptimizelyProvider from '.';
+import { REFERRER_CATEGORIES } from './userAttributes';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',

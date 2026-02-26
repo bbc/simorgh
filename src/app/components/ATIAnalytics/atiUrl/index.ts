@@ -1,10 +1,10 @@
+import { getClientTimeOfDay } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider/userAttributes';
 import {
   CLICK_EVENT,
   VIEW_EVENT,
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { getClientTimeOfDay } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import {
   getAppType,
   getHref,
