@@ -48,6 +48,9 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '9 / span 4',
+        // keep secondary column in the first desktop grid row
+        // so adaptive media curation can still sit before it in dom for mobile
+        gridRow: 1,
         marginTop: '2rem',
       },
     }),
@@ -121,17 +124,15 @@ export default {
     }),
   adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
+      gridColumn: '1 / span 12',
       margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+
       [mq.GROUP_2_MIN_WIDTH]: {
         margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
-    }),
-  adaptiveMediaCurationInner: ({ mq }: Theme) =>
-    css({
-      margin: '0 auto',
-      maxWidth: `${pixelsToRem(1008)}rem`,
+
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: '0 1rem',
+        margin: `0 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>
