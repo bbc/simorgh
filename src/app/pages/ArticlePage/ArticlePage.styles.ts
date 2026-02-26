@@ -44,38 +44,13 @@ export default {
     }),
   secondaryColumn: ({ mq }: Theme) =>
     css({
-      display: 'none',
       gridColumn: '1 / span 12',
+
       [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'block',
         gridColumn: '9 / span 4',
         marginTop: '2rem',
       },
     }),
-
-  hideOnDesktop: ({ mq }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'none',
-      },
-    }),
-
-  hideBelowDesktopWidth: ({ mq }: Theme) =>
-    css({
-      display: 'none',
-      [mq.GROUP_4_MIN_WIDTH]: {
-        display: 'block',
-      },
-    }),
-
-  underArticleSection: ({ spacings }: Theme) =>
-    css({
-      display: 'block',
-      gridColumn: '9 / span 4',
-      marginTop: '2rem',
-      marginBottom: `${spacings.TRIPLE}rem`,
-    }),
-
   pglColumn: () =>
     css({
       gridColumn: '1 / span 12',

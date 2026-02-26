@@ -4,12 +4,13 @@ import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { UserInfo } from '@optimizely/react-sdk/dist/utils';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
+import { GROUP_3_MAX_WIDTH_BP } from '#app/components/ThemeProvider/mediaQueries';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext, RequestContextProps } from '#contexts/RequestContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import withOptimizelyProvider, { REFERRER_CATEGORIES } from '.';
+import withOptimizelyProvider from '.';
+import { REFERRER_CATEGORIES } from './userAttributes';
 
 const props = {
   bbcOrigin: 'https://www.bbc.com',
@@ -97,9 +98,9 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   describe('mobile attribute', () => {
-    it('should set mobile to true when the viewport width is less than or equal to GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    it('should set mobile to true when the viewport width is less than or equal to GROUP_3_MAX_WIDTH_BP', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-        matches: query === `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+        matches: query === `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
 
       render(<TestComponent />);
@@ -110,9 +111,9 @@ describe('withOptimizelyProvider HOC', () => {
       ).toBe(true);
     });
 
-    it('should set mobile to false when the viewport width is greater than GEL_GROUP_3_SCREEN_WIDTH_MAX', () => {
+    it('should set mobile to false when the viewport width is greater than GROUP_3_MAX_WIDTH_BP', () => {
       window.matchMedia = jest.fn().mockImplementation(query => ({
-        matches: query !== `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+        matches: query !== `(max-width: ${GROUP_3_MAX_WIDTH_BP}rem)`,
       }));
 
       render(<TestComponent />);
@@ -235,25 +236,6 @@ describe('withOptimizelyProvider HOC', () => {
           ?.referrer,
       ).toBe('direct');
     });
-
-    it('should set referrer to null when no conditions are met', () => {
-      Object.defineProperty(document, 'referrer', {
-        value: 'https://www.unknownsource.com',
-        writable: true,
-      });
-
-      Object.defineProperty(window, 'location', {
-        value: { search: '' },
-        writable: true,
-      });
-
-      render(<TestComponent />);
-
-      expect(
-        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
-          ?.referrer,
-      ).toBeNull();
-    });
   });
 
   describe('country attribute', () => {
@@ -273,6 +255,55 @@ describe('withOptimizelyProvider HOC', () => {
         (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
           ?.country,
       ).toBeNull();
+    });
+  });
+
+  describe('timeOfDay attribute', () => {
+    afterEach(() => {
+      jest.useRealTimers();
+    });
+
+    it('should set timeOfDay to "morning" when the current hour is between 6 and 11', () => {
+      jest.useFakeTimers().setSystemTime(new Date('2024-01-01T08:00:00'));
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.timeOfDay,
+      ).toBe('morning');
+    });
+
+    it('should set timeOfDay to "afternoon" when the current hour is between 12 and 16', () => {
+      jest.useFakeTimers().setSystemTime(new Date('2024-01-01T13:00:00'));
+
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.timeOfDay,
+      ).toBe('afternoon');
+    });
+
+    it('should set timeOfDay to "evening" when the current hour is between 17 and 23', () => {
+      jest.useFakeTimers().setSystemTime(new Date('2024-01-01T18:00:00'));
+
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.timeOfDay,
+      ).toBe('evening');
+    });
+
+    it('should set timeOfDay to "night" when the current hour is between 0 and 5', () => {
+      jest.useFakeTimers().setSystemTime(new Date('2024-01-01T02:00:00'));
+
+      render(<TestComponent />);
+
+      expect(
+        (optimizelyProviderSpy.mock.calls[0]?.[0]?.user as UserInfo)?.attributes
+          ?.timeOfDay,
+      ).toBe('night');
     });
   });
 });
