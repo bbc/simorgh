@@ -21,11 +21,11 @@ const OJ_COMPONENT_NAMES = [
   'features',
   'related-content',
   'most-read',
-  // media curation renders as simple-curation-grid tracking events.
+  // media curation renders as simple-curation-grid tracking events
   'simple-curation-grid',
 ];
 
-// gate the total oj clicks event to specific onward journey experiments
+// handle the total oj clicks event to specific onward journey experiments
 const OJ_OPTIMIZELY_EXPERIMENTS = [
   'newswb_ws_oj_by_referrer',
   'newswb_ws_tod_article_2',
