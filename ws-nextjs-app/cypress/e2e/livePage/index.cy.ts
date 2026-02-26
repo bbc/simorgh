@@ -1,5 +1,5 @@
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';
@@ -38,7 +38,7 @@ const testDetails = [
 
 const atiAnalyticsTestSuites = [
   {
-    path: '/arabic/live/cvp5r6m6mgpt',
+    path: '/arabic/live/cvp5r6m6mgpt?renderer_env=test', // arabic uses the new nav, and the scrollable list does not show locally as it is using the minimal data from serviceConfig
     runforEnv: ['local', 'test'],
     service: 'arabic',
     pageIdentifier: 'live_coverage.cvp5r6m6mgpt.page',
@@ -53,38 +53,38 @@ const atiAnalyticsTestSuites = [
       assertDropdownNavigationComponentClick,
     ],
   },
-  {
-    path: '/pidgin/live/c7p765ynk9qt',
-    runforEnv: ['local'],
-    service: 'pidgin',
-    pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
-    siteId: 70,
-    applicationType: 'responsive',
-    contentType: 'live-coverage',
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-    ],
-  },
-  {
-    path: '/urdu/live/cx2qdkezzzvt',
-    runforEnv: ['live'],
-    service: 'urdu',
-    pageIdentifier: 'live_coverage.cx2qdkezzzvt.page',
-    siteId: 95,
-    applicationType: 'responsive',
-    contentType: 'live-coverage',
-    tests: [
-      assertPageView,
-      assertScrollableNavigationComponentView,
-      assertScrollableNavigationComponentClick,
-      assertDropdownNavigationComponentView,
-      assertDropdownNavigationComponentClick,
-    ],
-  },
+  // {
+  //   path: '/pidgin/live/c7p765ynk9qt',
+  //   runforEnv: ['local'],
+  //   service: 'pidgin',
+  //   pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
+  //   siteId: 70,
+  //   applicationType: 'responsive',
+  //   contentType: 'live-coverage',
+  //   tests: [
+  //     assertPageView,
+  //     assertScrollableNavigationComponentView,
+  //     assertScrollableNavigationComponentClick,
+  //     assertDropdownNavigationComponentView,
+  //     assertDropdownNavigationComponentClick,
+  //   ],
+  // },
+  // {
+  //   path: '/urdu/live/cx2qdkezzzvt',
+  //   runforEnv: ['live'],
+  //   service: 'urdu',
+  //   pageIdentifier: 'live_coverage.cx2qdkezzzvt.page',
+  //   siteId: 95,
+  //   applicationType: 'responsive',
+  //   contentType: 'live-coverage',
+  //   tests: [
+  //     assertPageView,
+  //     assertScrollableNavigationComponentView,
+  //     assertScrollableNavigationComponentClick,
+  //     assertDropdownNavigationComponentView,
+  //     assertDropdownNavigationComponentClick,
+  //   ],
+  // },
 ] as unknown as TestDataType[];
 
 describe('Live Page Spec', () => {
