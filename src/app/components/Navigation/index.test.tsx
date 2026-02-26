@@ -231,19 +231,13 @@ describe('Navigation', () => {
       { title: 'Sport', url: '/sport' },
     ];
 
-    it('should call the view tracking hook when on scrollable navigation', () => {
+    it('should call the view tracking hook for both scrollable navigation and dropdown navigation', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<Navigation navItems={mockNavigation} />);
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'scrollable-navigation',
       });
-    });
-
-    it('should call the view tracking hook when on dropdown navigation', () => {
-      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-      render(<Navigation navItems={mockNavigation} />);
-
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'dropdown-navigation',
       });
