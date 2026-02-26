@@ -8,36 +8,17 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
-import { OptimoBlock } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
 import RecommendationsItem from './RecommendationsItem';
-import {
-  getRelatedContentData,
-  mapOptimoBlockToRecommendation,
-  mapFeaturesToRecommendation,
-  mapTopStoryToRecommendation,
-} from './helpers';
 
 interface RecommendationsProps {
   data: Recommendation[];
-  blocks?: OptimoBlock[];
-  topStoriesContent?: unknown;
-  featuresContent?: unknown;
-  referrerVariant?: string;
-  experimentProps?: Record<string, unknown>;
-  referrer?: string | null;
+  experimentProps?: ComponentExperimentProps;
 }
 
-const Recommendations = ({
-  data, // control
-  blocks, // search
-  topStoriesContent, // direct
-  featuresContent, // social
-  referrerVariant, // experiment variant for referrer
-  experimentProps,
-  referrer,
-}: RecommendationsProps) => {
-  const { recommendations, script, service, dir, translations } =
+const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
+  const { recommendations, mostRead, script, service, dir } =
     use(ServiceContext);
 
   const {
@@ -46,43 +27,9 @@ const Recommendations = ({
 
   const { enabled } = useToggle('midArticleOnwardJourney');
 
-  let displayData: Recommendation[] = [];
   const { skipLink, header } = recommendations || {};
 
-  let title = header ?? 'Most read';
-  // EXPERIMENT: Referrer Experiment
-  // most read  was there originally, so is there for control and when the user is not in an experiment
-  if (
-    !referrerVariant ||
-    referrerVariant === 'off' ||
-    referrerVariant.includes('control')
-  ) {
-    displayData = data ?? [];
-  } else if (referrerVariant === 'adaptive_variation') {
-    switch (referrer) {
-      case 'search':
-        displayData = getRelatedContentData(blocks ?? []).map(
-          mapOptimoBlockToRecommendation,
-        );
-        title = translations?.relatedContent ?? 'Related Content';
-        break;
-      case 'direct':
-        displayData = Array.isArray(topStoriesContent)
-          ? topStoriesContent.map(mapTopStoryToRecommendation)
-          : [];
-        title = translations?.topStoriesTitle ?? 'Top Stories';
-        break;
-      case 'social':
-        displayData = Array.isArray(featuresContent)
-          ? featuresContent.slice(0, 4).map(mapFeaturesToRecommendation)
-          : [];
-        title = translations?.featuresAnalysisTitle ?? 'Features & Analysis';
-        break;
-      default:
-        displayData = data ?? [];
-        break;
-    }
-  }
+  const title = header ?? 'Most read';
 
   const componentName = 'midarticle-mostread';
   const groupTracker = {
@@ -91,19 +38,17 @@ const Recommendations = ({
     itemCount: 4,
   };
 
-  const baseEventTrackingData = {
+  const eventTrackingData = {
     componentName,
     groupTracker,
-  };
-
-  const eventTrackingData = {
-    ...baseEventTrackingData,
     ...(experimentProps && experimentProps),
   };
 
   const viewTracker = useViewTracker(eventTrackingData);
 
-  if (!enabled || !displayData.length) return null;
+  const { hasMostRead } = mostRead || {};
+
+  if (!enabled || !hasMostRead || !data?.length) return null;
 
   const labelId = 'recommendations-heading';
 
@@ -119,7 +64,7 @@ const Recommendations = ({
 
   const terms = { '%title%': title };
 
-  const isSinglePromo = displayData.length === 1;
+  const isSinglePromo = data.length === 1;
 
   const endTextId = `end-of-recommendations`;
 
@@ -154,10 +99,10 @@ const Recommendations = ({
           </SectionLabel>
         ) : null}
         {isSinglePromo ? (
-          <RecommendationsItem recommendation={displayData?.[0]} />
+          <RecommendationsItem recommendation={data?.[0]} />
         ) : (
           <ul css={styles.recommendationsList} role="list" {...viewTracker}>
-            {displayData?.map((recommendation, index) => (
+            {data?.map((recommendation, index) => (
               <li key={recommendation.id} role="listitem">
                 <RecommendationsItem
                   recommendation={recommendation}
