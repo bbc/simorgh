@@ -102,16 +102,10 @@ const cacheResource = async (cache, url) => {
   }
 };
 
-const cacheOfflinePageAndResources = async service => {
-  const cache = await caches.open(cacheName);
-  const offlinePageUrl = new URL(
-    getOfflinePageUrl(service),
-    self.location.origin,
-  ).href;
+const cachePageAndResources = async (cache, url) => {
+  if (await cache.match(url)) return;
 
-  if (await cache.match(offlinePageUrl)) return;
-
-  const resp = await cacheResource(cache, offlinePageUrl);
+  const resp = await cacheResource(cache, url);
   if (!resp || !resp.ok) return;
 
   const html = await resp.text();
@@ -123,36 +117,45 @@ const cacheOfflinePageAndResources = async service => {
   );
 
   const resources = [...scriptSrcs, ...linkHrefs].filter(Boolean);
-  await Promise.allSettled(resources.map(url => cacheResource(cache, url)));
+  await Promise.allSettled(resources.map(r => cacheResource(cache, r)));
 };
 
-// TODO: merge with cacheOfflinePageAndResources?
-const getMostReadArticlesFromOfflinePage = async service => {
+const cacheOfflinePageAndResources = async service => {
+  const cache = await caches.open(cacheName);
   const offlinePageUrl = new URL(
     getOfflinePageUrl(service),
     self.location.origin,
   ).href;
 
-  const resp = await fetch(offlinePageUrl);
-  if (!resp.ok) return [];
+  await cachePageAndResources(cache, offlinePageUrl);
+};
 
-  const html = await resp.text();
+const getMostReadDataFromOfflinePage = async service => {
+  const offlinePageUrl = new URL(
+    getOfflinePageUrl(service),
+    self.location.origin,
+  ).href;
+
+  const cache = await caches.open(cacheName);
+  const cachedResponse = await cache.match(offlinePageUrl);
+  if (!cachedResponse) return null;
+
+  const html = await cachedResponse.text();
 
   const match = html.match(
     /<script[^>]*id="most-read-data"[^>]*>(.+?)<\/script>/s,
   );
-
-  if (!match) return [];
+  if (!match) return null;
 
   try {
     return JSON.parse(match[1]);
   } catch {
-    return [];
+    return null;
   }
 };
 
+// Main Article caching logic
 const cacheArticles = async service => {
-  // Rate-limit: only run once per 24h
   const lastSync = await dbGet('meta', 'lastArticleSync');
   const now = Date.now();
   logger('📌 cacheArticles called', { lastSync });
@@ -160,20 +163,17 @@ const cacheArticles = async service => {
   // TODO: Temporarily commenting it out
   // if (lastSync && now - lastSync.value < REFRESH_INTERVAL_MS) return;
 
-  const mostRead = await getMostReadArticlesFromOfflinePage(service);
+  const mostRead = await getMostReadDataFromOfflinePage(service);
   logger(`👀 fetched:`, { mostRead });
 
   const mostReadArticles = mostRead?.items;
-  if (!mostReadArticles.length) return;
+  if (!mostReadArticles?.length) return;
 
   const cache = await caches.open(cacheName);
   const mostReadUrls = new Set(mostReadArticles.map(a => a.href));
 
-  console.log({ mostReadUrls });
-
   // Delete stale articles not in most-read and older than 72h
   const cachedArticleMeta = await dbGetAll(STORE_NAME);
-  // eslint-disable-next-line no-restricted-syntax
   for (const entry of cachedArticleMeta) {
     const isTooOld = now - entry.cachedAt > MAX_ARTICLE_AGE_MS;
     const isNotMostRead = !mostReadUrls.has(entry.href);
@@ -185,23 +185,24 @@ const cacheArticles = async service => {
     }
   }
 
-  // Cache new or updated articles
+  // Cache new or updated articles including their scripts and stylesheets
   for (const article of mostReadArticles) {
     logger('article', { article });
 
     // eslint-disable-next-line no-await-in-loop
     const existing = await dbGet(STORE_NAME, article.href);
     const needsUpdate =
-      !existing || // not cached yet
-      (article.lastUpdated && existing.lastUpdated !== article.lastUpdated); // stale
+      !existing ||
+      (article.timestamp && existing.timestamp !== article.timestamp);
 
     if (needsUpdate) {
+      const articleUrl = new URL(article.href, self.location.origin).href;
       // eslint-disable-next-line no-await-in-loop
-      await cacheResource(cache, article.href);
+      await cachePageAndResources(cache, articleUrl);
       // eslint-disable-next-line no-await-in-loop
       await dbPut(STORE_NAME, {
         url: article.href,
-        lastUpdated: article.lastUpdated,
+        timestamp: article.timestamp,
         cachedAt: now,
       });
     }
@@ -312,6 +313,7 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
+        // TODO: We should also check if article is not outdated here
         const getOfflineFallback = async () => {
           logger('getOfflineFallback', { url });
           if (isPWA) {
