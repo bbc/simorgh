@@ -65,11 +65,7 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <CanonicalDropdown
-            data-testid="dropdown-nav"
-            isOpen={isOpen}
-            css={styles.dropdown}
-          >
+          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
