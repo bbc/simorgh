@@ -76,10 +76,11 @@ export const ScrollableNavigation = ({
   children,
   dir = 'ltr',
   navPosition,
+  isSticky = false,
   ...props
 }) => (
   <StyledScrollableNav
-    data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}`}
+    data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}${isSticky ? '-sticky' : ''}`}
     dir={dir}
     {...props}
   >
