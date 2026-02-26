@@ -217,14 +217,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // time of day 2 experiment for articles
   const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
-  // local test override: force adaptive variation
-  const forcedTimeOfDayArticleVariant = 'adaptive_variation';
   const optimizelyTimeOfDayArticleVariant = useOptimizelyVariation({
     experimentName: timeOfDayArticleExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
-  const timeOfDayArticleVariant =
-    forcedTimeOfDayArticleVariant ?? optimizelyTimeOfDayArticleVariant;
+  const timeOfDayArticleVariant = optimizelyTimeOfDayArticleVariant;
   const isAdaptiveTimeOfDayVariant =
     timeOfDayArticleVariant === 'adaptive_variation';
   // build one shared experiment payload so all oj components use the same values
