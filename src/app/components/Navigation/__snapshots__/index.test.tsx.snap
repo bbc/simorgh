@@ -614,7 +614,6 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
             <div
               class="emotion-7 emotion-8"
               data-e2e="scrollable-nav"
-              data-testid="scrollable-nav"
               dir="ltr"
             >
               <ul
@@ -705,7 +704,6 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
           <div
             class="emotion-33 emotion-8"
             data-e2e="scrollable-nav-secondary"
-            data-testid="scrollable-nav-secondary"
             dir="ltr"
           >
             <ul
@@ -1337,7 +1335,6 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
             <div
               class="emotion-7 emotion-8"
               data-e2e="scrollable-nav"
-              data-testid="scrollable-nav"
               dir="ltr"
             >
               <ul
@@ -1428,7 +1425,6 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
           <div
             class="emotion-33 emotion-8"
             data-e2e="scrollable-nav-secondary"
-            data-testid="scrollable-nav-secondary"
             dir="ltr"
           >
             <ul
@@ -2060,7 +2056,6 @@ exports[`Navigation should correctly render canonical navigation on non-navigati
             <div
               class="emotion-7 emotion-8"
               data-e2e="scrollable-nav"
-              data-testid="scrollable-nav"
               dir="ltr"
             >
               <ul
@@ -2151,7 +2146,6 @@ exports[`Navigation should correctly render canonical navigation on non-navigati
           <div
             class="emotion-33 emotion-8"
             data-e2e="scrollable-nav-secondary"
-            data-testid="scrollable-nav-secondary"
             dir="ltr"
           >
             <ul

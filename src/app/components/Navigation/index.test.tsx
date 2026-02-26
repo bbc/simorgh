@@ -14,16 +14,6 @@ import * as viewTracking from '../../hooks/useViewTracker';
 import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Navigation', () => {
-  beforeEach(() => {
-    jest.spyOn(clickTracking, 'default').mockReturnValue({
-      onClick: jest.fn(),
-    });
-  });
-
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
-
   const navItems = [
     { title: 'Home', url: '/home' },
     { title: 'About', url: '/about' },
@@ -237,6 +227,10 @@ describe('Navigation', () => {
   });
 
   describe('View and click tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
     const mockNavigation = [
       { title: 'Home', url: '/home' },
       { title: 'News', url: '/news' },
