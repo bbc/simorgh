@@ -58,7 +58,7 @@ export const buildReverbAnalyticsModel = ({
 
   let experimentSuffix = '';
 
-  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
+  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'mv_creation';
   if (experimentName === 'newswb_ws_tod_article_2') {
     const timeOfDay = getClientTimeOfDay();
 
