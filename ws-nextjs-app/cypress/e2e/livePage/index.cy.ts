@@ -38,7 +38,7 @@ const testDetails = [
 
 const atiAnalyticsTestSuites = [
   {
-    path: '/arabic/live/cvp5r6m6mgpt?renderer_env=test', // arabic uses the new nav, and the scrollable list does not show locally as it is using the minimal data from serviceConfig
+    path: '/arabic/live/cvp5r6m6mgpt',
     runforEnv: ['local', 'test'],
     service: 'arabic',
     pageIdentifier: 'live_coverage.cvp5r6m6mgpt.page',
