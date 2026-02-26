@@ -42,6 +42,7 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import {
   VISUAL_PROMINENCE,
   VISUAL_STYLE,
@@ -138,8 +139,14 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({ data }: { data: Recommendation[] }) => (
-  <Recommendations data={data} />
+const getWsojComponent = ({
+  data,
+  experimentProps,
+}: {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps | null;
+}) => (
+  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -173,11 +180,16 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
     />
   );
 
@@ -215,6 +227,23 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     forcedTimeOfDayArticleVariant ?? optimizelyTimeOfDayArticleVariant;
   const isAdaptiveTimeOfDayVariant =
     timeOfDayArticleVariant === 'adaptive_variation';
+  // build one shared experiment payload so all oj components use the same values
+  const getActiveExperimentProps = (
+    experimentName: string,
+    experimentVariant: string | null,
+  ): ComponentExperimentProps | null =>
+    experimentVariant && experimentVariant !== 'off'
+      ? {
+          sendOptimizelyEvents: true,
+          experimentName,
+          experimentVariant,
+        }
+      : null;
+
+  const timeOfDayExperimentProps = getActiveExperimentProps(
+    timeOfDayArticleExperimentName,
+    timeOfDayArticleVariant,
+  );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -326,13 +355,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({ data, experimentProps: timeOfDayExperimentProps }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        experimentProps: timeOfDayExperimentProps || undefined,
       }),
     }),
   };
@@ -390,6 +421,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           curationId={mediaCurationContent?.curationId}
           curationLength={mediaCurationContent?.summaries?.length || 0}
           link={mediaCurationContent?.link}
+          {...(timeOfDayExperimentProps && {
+            experimentProps: timeOfDayExperimentProps,
+          })}
         />
       </section>
     ) : null;
@@ -475,9 +509,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          <RelatedContentSection
+            content={blocks}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
+          />
         </div>
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
+          />
+        )}
       </div>
       {hasRelatedContent && (
         <div css={styles.adaptiveMediaCurationRow}>
@@ -495,6 +541,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
+          {...(timeOfDayExperimentProps && {
+            experimentProps: timeOfDayExperimentProps,
+          })}
         />
       )}
     </div>
