@@ -73,7 +73,7 @@ export const assertDropdownNavigationComponentView = ({
     cy.visit(path);
 
     cy.viewport(320, 480);
-    cy.get('nav button').click();
+    cy.get('nav button:visible').click();
 
     assertATIComponentViewEvent({
       component: DROPDOWN_NAVIGATION,
@@ -95,7 +95,7 @@ export const assertDropdownNavigationComponentClick = ({
     cy.visit(path);
 
     cy.viewport(320, 480);
-    cy.get('nav button').click();
+    cy.get('nav button:visible').click();
 
     // Click on first item, then return to the original page
     cy.get('[data-e2e="dropdown-nav"]').find('a').first().click();
