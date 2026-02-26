@@ -19,6 +19,17 @@ import {
   ReverbBeaconConfig,
 } from '../types';
 
+// EXPERIMENT: Time of day v2 - Function to add time of day suffix to experiment variant
+const getExperimentVariantSuffix = (experimentName?: string | null) => {
+  if (experimentName === 'newswb_ws_tod_article_2') {
+    const timeOfDay = getClientTimeOfDay();
+
+    if (timeOfDay) return `_${timeOfDay}`;
+  }
+
+  return '';
+};
+
 /*
  * For AMP pages, certain browser and device values are determined
  * https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md#device-and-browser
@@ -56,16 +67,8 @@ export const buildReverbAnalyticsModel = ({
     eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
   };
 
-  let experimentSuffix = '';
-
   // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'mv_creation';
-  if (experimentName === 'newswb_ws_tod_article_2') {
-    const timeOfDay = getClientTimeOfDay();
-
-    if (timeOfDay) {
-      experimentSuffix = `_${timeOfDay}`;
-    }
-  }
+  const experimentSuffix = getExperimentVariantSuffix(experimentName);
 
   const reverbVariables = {
     params: {
@@ -143,16 +146,8 @@ export const buildReverbEventModel = ({
     link,
   } = groupTracker;
 
-  let experimentSuffix = '';
-
   // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
-  if (experimentName === 'newswb_ws_tod_article_2') {
-    const timeOfDay = getClientTimeOfDay();
-
-    if (timeOfDay) {
-      experimentSuffix = `_${timeOfDay}`;
-    }
-  }
+  const experimentSuffix = getExperimentVariantSuffix(experimentName);
 
   return {
     params: {
