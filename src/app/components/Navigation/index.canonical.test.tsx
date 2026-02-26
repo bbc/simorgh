@@ -1,4 +1,3 @@
-import React from 'react';
 import CanonicalNavigationContainer from './index.canonical';
 import {
   render,
