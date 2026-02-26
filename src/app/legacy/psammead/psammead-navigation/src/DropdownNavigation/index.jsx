@@ -45,11 +45,16 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children, className = '' }) => {
+export const CanonicalDropdown = ({
+  isOpen,
+  children,
+  className = '',
+  isSticky = false,
+}) => {
   const heightRef = useRef(null);
   return (
     <StyledDropdown
-      data-e2e="dropdown-nav"
+      data-e2e={isSticky ? 'dropdown-nav-sticky' : 'dropdown-nav'}
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}

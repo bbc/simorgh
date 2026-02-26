@@ -178,6 +178,7 @@ const CanonicalNavigationContainer: React.FC<
                 dir={dir}
                 css={styles.topRowItems}
                 navPosition="primary"
+                isSticky
               >
                 {topScrollableListItems}
               </ScrollableNavigation>
@@ -191,7 +192,7 @@ const CanonicalNavigationContainer: React.FC<
                 />
               )}
             </div>
-            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+            <CanonicalDropdown isOpen={isOpen} css={styles.dropdown} isSticky>
               {dropdownListItems}
             </CanonicalDropdown>
           </div>
@@ -200,6 +201,7 @@ const CanonicalNavigationContainer: React.FC<
               dir={dir}
               css={styles.bottomRowItems}
               navPosition="secondary"
+              isSticky
             >
               {bottomScrollableListItems}
             </ScrollableNavigation>
