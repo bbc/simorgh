@@ -60,18 +60,15 @@ describe('Navigation', () => {
   it('should render navigation links in the correct format', () => {
     const { navigation } = newsConfig.default;
 
-    const { getAllByRole } = render(
-      <Navigation navItems={navigation ?? []} />,
-      {
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        id: 'c0000000000o',
-        isAmp: false,
-        pageType: ARTICLE_PAGE,
-        service: 'news',
-        statusCode: 200,
-        pathname: '/news',
-      },
-    );
+    const { getAllByRole } = render(<Navigation navItems={navigation} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
     const listItems = getAllByRole('listitem');
 
     (navigation ?? []).forEach((navItem, index) => {
@@ -103,18 +100,15 @@ describe('Navigation', () => {
   it('should fall back to service config when navItems is null', () => {
     const { navigation } = indonesiaConfig.default;
 
-    const { getAllByText } = render(
-      <Navigation {...({ navItems: null } as any)} />,
-      {
-        bbcOrigin: 'https://www.test.bbc.co.uk',
-        id: 'c0000000000o',
-        isAmp: false,
-        pageType: ARTICLE_PAGE,
-        service: 'indonesia',
-        statusCode: 200,
-        pathname: '/indonesia',
-      },
-    );
+    const { getAllByText } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'indonesia',
+      statusCode: 200,
+      pathname: '/indonesia',
+    });
 
     const fallbackConfig = navigation?.[0]?.title ?? 'Home';
     const elements = getAllByText(fallbackConfig);
@@ -137,7 +131,7 @@ describe('Navigation', () => {
   });
 
   it('should not render listItem in scrollable list when hideOnLiteSite is true and isLite is true', () => {
-    const { navigation, ...rest } = newsConfig.default;
+    const { ...rest } = newsConfig.default;
     const mockNavigation = [
       { title: 'Home', url: '/home', hideOnLiteSite: true, subItems: [] },
       { title: 'News', url: '/news', subItems: [] },
@@ -165,7 +159,7 @@ describe('Navigation', () => {
   });
 
   it('should render listItem in scrollable list when hideOnLiteSite is true and isLite is false', () => {
-    const { navigation, ...rest } = newsConfig.default;
+    const { ...rest } = newsConfig.default;
     const mockNavigation = [
       { title: 'Home', url: '/home', hideOnLiteSite: true },
       { title: 'News', url: '/news' },
@@ -193,7 +187,7 @@ describe('Navigation', () => {
   });
 
   it('should render listItem in scrollable list when hideOnLiteSite is false/not set', () => {
-    const { navigation, ...rest } = newsConfig.default;
+    const { ...rest } = newsConfig.default;
     const mockNavigation = [
       { title: 'Home', url: '/home', subItems: [] },
       { title: 'News', url: '/news', subItems: [] },
