@@ -1,5 +1,4 @@
 import { use } from 'react';
-import getTopicPageUrl from '#app/utilities/getTopicPageUrl';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { TopicTag } from '#app/models/types/metadata';
@@ -24,6 +23,14 @@ export const TopicTags = ({
   const { service, translations } = use(ServiceContext);
   const { variant } = use(RequestContext);
 
+  const getTopicPageUrl = (id: string) => {
+    const isPublicService = ['news', 'cymrufyw', 'naidheachdan'];
+    const hostname = `https://www.bbc.${isPublicService.includes(service) ? 'co.uk' : 'com'}`;
+    const topicsPath = translations?.topicsPath ?? 'topics';
+
+    return `${hostname}/${service}/${topicsPath}/${id}${variant ? `/${variant}` : ''}`;
+  };
+
   const hasMultiple = tags.length > 1;
 
   return hasMultiple ? (
@@ -35,15 +42,7 @@ export const TopicTags = ({
     >
       {tags.map(tag => (
         <li key={tag.topicId} css={styles.topicTagItem}>
-          <a
-            href={getTopicPageUrl(
-              tag.topicId,
-              service,
-              variant,
-              translations?.topicsPath ?? 'topics',
-            )}
-            {...clickTrackerHandler}
-          >
+          <a href={getTopicPageUrl(tag.topicId)} {...clickTrackerHandler}>
             {tag.topicName}
           </a>
         </li>
@@ -56,15 +55,7 @@ export const TopicTags = ({
       {...viewTracker}
     >
       <div css={styles.topicTagItem}>
-        <a
-          href={getTopicPageUrl(
-            tags[0].topicId,
-            service,
-            variant,
-            translations?.topicsPath ?? 'topics',
-          )}
-          {...clickTrackerHandler}
-        >
+        <a href={getTopicPageUrl(tags[0].topicId)} {...clickTrackerHandler}>
           {tags[0].topicName}
         </a>
       </div>
