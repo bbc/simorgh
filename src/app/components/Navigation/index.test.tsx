@@ -1,8 +1,11 @@
-import { fireEvent } from '@testing-library/dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
-import { render, act } from '../react-testing-library-with-providers';
+import {
+  render,
+  act,
+  fireEvent,
+} from '../react-testing-library-with-providers';
 import {
   ServiceContextProvider,
   ServiceContext,
