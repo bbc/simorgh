@@ -64,23 +64,18 @@ describe('Navigation', () => {
   it('should render navigation links in the correct format', () => {
     const { navigation } = newsConfig.default;
 
-    const navigationComponent = (
-      <ServiceContextProvider service="news">
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          id="c0000000000o"
-          isAmp={false}
-          pageType={ARTICLE_PAGE}
-          service="news"
-          statusCode={200}
-          pathname="/news"
-        >
-          <Navigation navItems={navigation ?? []} />
-        </RequestContextProvider>
-      </ServiceContextProvider>
+    const { getAllByRole } = render(
+      <Navigation navItems={navigation ?? []} />,
+      {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: false,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      },
     );
-
-    const { getAllByRole } = render(navigationComponent);
     const listItems = getAllByRole('listitem');
 
     (navigation ?? []).forEach((navItem, index) => {
