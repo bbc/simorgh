@@ -1,4 +1,3 @@
-import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
 import {
@@ -6,10 +5,7 @@ import {
   act,
   fireEvent,
 } from '../react-testing-library-with-providers';
-import {
-  ServiceContextProvider,
-  ServiceContext,
-} from '../../contexts/ServiceContext';
+import { ServiceContext } from '../../contexts/ServiceContext';
 import { service as newsConfig } from '../../lib/config/services/news';
 import { service as indonesiaConfig } from '../../lib/config/services/indonesia';
 import Navigation from './index';
