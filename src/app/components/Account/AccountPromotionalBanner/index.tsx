@@ -102,14 +102,12 @@ const AccountPromotionalBanner = () => {
         className="focusIndicatorInvert"
         css={[styles.callToActionLink, styles.registerLink]}
       >
-        <div css={styles.actionLinkWrapper}>
-          <CallToActionLink.ButtonLikeWrapper>
-            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {registerText}
-              <CallToActionLink.Chevron />
-            </CallToActionLink.Text>
-          </CallToActionLink.ButtonLikeWrapper>
-        </div>
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {registerText}
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>
     </PromotionalBanner>
   );
