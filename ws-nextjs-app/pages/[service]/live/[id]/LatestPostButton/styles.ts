@@ -1,6 +1,5 @@
 import { Theme, css } from '@emotion/react';
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   button: ({ palette, fontSizes, fontVariants, spacings, mq }: Theme) =>

@@ -47,14 +47,14 @@ const LatestPostButton = ({
   };
 
   useEffect(() => {
-    const updateShowButton = !isFirstPostVisible && hasPendingUpdate;
-    if (updateShowButton) {
-      setShowButton(updateShowButton);
+    const shouldShowButton = !isFirstPostVisible && hasPendingUpdate;
+    if (shouldShowButton) {
+      setShowButton(shouldShowButton);
       setTimeout(() => {
         setShowButton(false);
       }, TEN_SECONDS);
     } else {
-      setShowButton(updateShowButton);
+      setShowButton(shouldShowButton);
     }
   }, [isFirstPostVisible, hasPendingUpdate]);
 
@@ -63,20 +63,18 @@ const LatestPostButton = ({
       <VisuallyHiddenText aria-live="polite">
         {showButton && <span>{visuallyHiddenButtonText}</span>}
       </VisuallyHiddenText>
-      {showButton ? (
+      {showButton && (
         <button
           data-testid="latest-post-button"
           type="button"
           onClick={handleClick}
           css={styles.button}
           tabIndex={showButton ? 0 : -1}
-          aria-live="polite"
-          aria-atomic="true"
         >
           <RefreshSvg />
           <span>{refreshButtonText}</span>
         </button>
-      ) : null}
+      )}
     </div>
   );
 };
