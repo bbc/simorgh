@@ -98,8 +98,6 @@ export default class CustomApp extends App<Props> {
 
     const cookieHeader = ctx.req?.headers?.cookie;
     const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
-    const idctaConfig = idctaResult ?? null;
-
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
 
@@ -124,7 +122,7 @@ export default class CustomApp extends App<Props> {
         isNextJs: true,
         serverSideExperiments,
         toggles,
-        idctaConfig,
+        idctaConfig: idctaResult,
         navItems,
       },
     };

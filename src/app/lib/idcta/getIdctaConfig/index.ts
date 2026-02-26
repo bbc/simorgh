@@ -19,7 +19,7 @@ export default async function getIdctaConfig(
   toggles: Toggles,
   service: Services,
   cookieHeader?: string,
-): Promise<(IdctaConfig & { initialIsSignedIn: boolean }) | null> {
+): Promise<IdctaConfig | null> {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isAccountEnabled, value: accountService = '' } =
     toggleDefinitions.account || {};
