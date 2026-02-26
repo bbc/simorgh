@@ -35,6 +35,7 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import {
@@ -148,6 +149,8 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
+  const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
+
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -1019,6 +1022,15 @@ describe('Article Page', () => {
   });
 
   describe('Adaptive media curation', () => {
+    beforeEach(() => {
+      // force the article tod2 variant in these tests so adaptive curation can render.
+      mockUseOptimizelyVariation.mockReturnValue('adaptive_variation');
+    });
+
+    afterEach(() => {
+      mockUseOptimizelyVariation.mockReset();
+    });
+
     const mediaCurationFixture: Curation = {
       title: 'वीडियो',
       visualProminence: 'NORMAL',
