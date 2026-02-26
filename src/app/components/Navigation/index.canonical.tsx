@@ -71,6 +71,7 @@ const CanonicalNavigationContainer: React.FC<
             setShowSticky(true);
           } else {
             setShowSticky(false);
+            setIsOpen(false); // Close dropdown when sticky nav hides
           }
           ticking = false; // the ticking flag is used to prevent multiple requestAnimationFrame calls from stacking up and causing performance issues during fast scrolling.
         });
