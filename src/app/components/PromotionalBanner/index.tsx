@@ -22,31 +22,17 @@ const PromotionalBanner = ({
   children,
 }: PromotionalBannerProps) => {
   return (
-    <aside
-      css={styles.banner}
-      role="complementary"
-      aria-labelledby={`${id} - title`}
-      aria-describedby={`${id} - description`}
-    >
+    <aside css={styles.banner} role="complementary" aria-labelledby={id}>
       <VisuallyHiddenText as="strong" id={id}>
         {bannerLabel}
       </VisuallyHiddenText>
       <div css={styles.innerContainer}>
         <div css={styles.content}>
           <div css={styles.textContainer}>
-            <Heading
-              level={2}
-              css={styles.title}
-              size="paragon"
-              id={`${id}-title`}
-            >
+            <Heading level={2} css={styles.title} size="paragon">
               {title}
             </Heading>
-            <Paragraph
-              css={styles.description}
-              size="longPrimer"
-              id={`${id}-description`}
-            >
+            <Paragraph css={styles.description} size="longPrimer">
               {description}
             </Paragraph>
           </div>
