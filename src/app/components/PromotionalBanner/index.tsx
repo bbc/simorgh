@@ -38,14 +38,14 @@ const PromotionalBanner = ({
               level={2}
               css={styles.title}
               size="paragon"
-              id={`${id} - title`}
+              id={`${id}-title`}
             >
               {title}
             </Heading>
             <Paragraph
               css={styles.description}
               size="longPrimer"
-              id={`${id} - description`}
+              id={`${id}-description`}
             >
               {description}
             </Paragraph>
