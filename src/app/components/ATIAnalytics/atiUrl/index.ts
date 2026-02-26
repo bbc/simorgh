@@ -56,6 +56,17 @@ export const buildReverbAnalyticsModel = ({
     eventName: 'pageView' as ReverbBeaconConfig['eventDetails']['eventName'],
   };
 
+  let experimentSuffix = '';
+
+  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
+  if (experimentName === 'newswb_ws_tod_article_2') {
+    const timeOfDay = getClientTimeOfDay();
+
+    if (timeOfDay) {
+      experimentSuffix = `_${timeOfDay}`;
+    }
+  }
+
   const reverbVariables = {
     params: {
       env: getEnvConfig().SIMORGH_APP_ENV,
@@ -85,7 +96,7 @@ export const buildReverbAnalyticsModel = ({
           ...(experimentVariant &&
             experimentName && {
               mv_test: experimentName,
-              mv_creation: experimentVariant,
+              mv_creation: `${experimentVariant}${experimentSuffix}`,
             }),
         },
       },
