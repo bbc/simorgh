@@ -45,6 +45,21 @@ describe('Navigation - Canonical', () => {
       expect(stickyNav).toHaveStyle('transform: translateY(-100%)');
     });
 
+    it('does not render sticky nav on lite site', () => {
+      render(
+        <CanonicalNavigationContainer
+          dir={dir}
+          menuAnnouncedText={menuAnnouncedText}
+          topScrollableListItems={topScrollableListItems}
+          bottomScrollableListItems={bottomScrollableListItems}
+          dropdownListItems={dropdownListItems}
+        />,
+        { isLite: true },
+      );
+      const stickyNav = screen.queryByLabelText('Sticky navigation');
+      expect(stickyNav).toBeNull();
+    });
+
     it('hides sticky nav when keyboard navigation is detected', () => {
       render(
         <CanonicalNavigationContainer
