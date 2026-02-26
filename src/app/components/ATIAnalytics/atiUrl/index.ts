@@ -4,6 +4,7 @@ import {
   VIEWABILITY_CLICK_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import { getClientTimeOfDay } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import {
   getAppType,
   getHref,
@@ -131,6 +132,17 @@ export const buildReverbEventModel = ({
     link,
   } = groupTracker;
 
+  let experimentSuffix = '';
+
+  // EXPERIMENT: Time of day v2 - Append the client time of day to the end of 'engine_id';
+  if (experimentName === 'newswb_ws_tod_article_2') {
+    const timeOfDay = getClientTimeOfDay();
+
+    if (timeOfDay) {
+      experimentSuffix = `_${timeOfDay}`;
+    }
+  }
+
   return {
     params: {
       page: {
@@ -177,7 +189,9 @@ export const buildReverbEventModel = ({
       ...(experimentVariant && {
         experience: {
           engine_type: ['experimentation'],
-          engine_id: [`optimizely.${experimentName}.${experimentVariant}`],
+          engine_id: [
+            `optimizely.${experimentName}.${experimentVariant}${experimentSuffix}`,
+          ],
         },
       }),
     },
