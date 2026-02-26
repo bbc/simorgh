@@ -9,6 +9,7 @@ export type IdctaConfig = {
   settings_url: string;
   signout_url: string;
   foryou_url: string;
+  initialIsSignedIn: boolean;
   identity: {
     idSignedInCookieName: string;
   };

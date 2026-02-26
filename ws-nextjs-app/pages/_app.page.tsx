@@ -62,7 +62,6 @@ interface Props {
     isUK?: boolean;
     country?: string | null;
     idctaConfig: IdctaConfig | null;
-    initialIsSignedIn?: boolean;
   };
 }
 
@@ -99,11 +98,7 @@ export default class CustomApp extends App<Props> {
 
     const cookieHeader = ctx.req?.headers?.cookie;
     const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
-
-    const initialIsSignedIn = idctaResult?.initialIsSignedIn ?? false;
-    const idctaConfig = idctaResult
-      ? { ...idctaResult, initialIsSignedIn: undefined }
-      : null;
+    const idctaConfig = idctaResult ?? null;
 
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
@@ -131,7 +126,6 @@ export default class CustomApp extends App<Props> {
         toggles,
         idctaConfig,
         navItems,
-        initialIsSignedIn,
       },
     };
   }
@@ -163,7 +157,6 @@ export default class CustomApp extends App<Props> {
       country,
       idctaConfig = null,
       navItems,
-      initialIsSignedIn = false,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -201,10 +194,7 @@ export default class CustomApp extends App<Props> {
             isNextJs={isNextJs}
             isUK={isUK ?? false}
           >
-            <AccountProvider
-              initialConfig={idctaConfig}
-              initialIsSignedIn={initialIsSignedIn}
-            >
+            <AccountProvider initialConfig={idctaConfig}>
               <EventTrackingContextProvider atiData={atiAnalytics}>
                 {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>

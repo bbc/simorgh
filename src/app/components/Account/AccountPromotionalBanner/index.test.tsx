@@ -19,18 +19,10 @@ const idctaConfig: IdctaConfig = {
   },
 } as unknown as IdctaConfig;
 
-const renderWithProviders = (
-  idctaOverrides: Partial<IdctaConfig> = {},
-  {
-    initialIsSignedIn = false,
-  }: {
-    initialIsSignedIn?: boolean;
-  } = {},
-) =>
+const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
     idctaConfig: { ...idctaConfig, ...idctaOverrides },
-    initialIsSignedIn,
   });
 
 describe('AccountPromotionalBanner', () => {
@@ -63,7 +55,7 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('does not render when signed in', () => {
-    renderWithProviders({}, { initialIsSignedIn: true });
+    renderWithProviders({ initialIsSignedIn: true });
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),

@@ -64,7 +64,6 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
-  initialIsSignedIn = false,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -90,10 +89,7 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <AccountProvider
-            initialConfig={idctaConfig}
-            initialIsSignedIn={initialIsSignedIn}
-          >
+          <AccountProvider initialConfig={idctaConfig}>
             <EventTrackingContextProvider atiData={atiData}>
               <UserContextProvider>
                 <ThemeProvider service={service} variant={variant}>

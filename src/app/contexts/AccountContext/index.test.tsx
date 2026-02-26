@@ -19,6 +19,7 @@ const mockIdctaConfig = {
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
   unavailable_url: 'https://example.com/unavailable',
+  initialIsSignedIn: true,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
@@ -136,7 +137,6 @@ describe('AccountContext', () => {
   it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
-      initialIsSignedIn: true,
       service: 'hindi',
     });
 
@@ -148,8 +148,7 @@ describe('AccountContext', () => {
 
   it('should set isSignedIn to false when IDCTA is available but initialIsSignedIn is false', () => {
     render(<TestComponent />, {
-      idctaConfig: mockIdctaConfig,
-      initialIsSignedIn: false,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
       service: 'hindi',
     });
 
@@ -167,7 +166,6 @@ describe('AccountContext', () => {
 
     render(<TestComponent />, {
       idctaConfig: config,
-      initialIsSignedIn: true,
       service: 'hindi',
     });
 

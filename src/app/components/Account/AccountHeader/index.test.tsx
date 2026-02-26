@@ -16,16 +16,16 @@ const idctaConfig: IdctaConfig = {
   settings_url: 'https://example.com/settings',
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
+  initialIsSignedIn: false,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
 };
 
-const renderWithProviders = (overrides = {}, options = {}) =>
+const renderWithProviders = (overrides = {}) =>
   render(<AccountHeader />, {
     service: 'hindi',
     idctaConfig: { ...idctaConfig, ...overrides },
-    ...options,
   });
 
 describe('AccountHeader', () => {
@@ -49,7 +49,7 @@ describe('AccountHeader', () => {
   });
 
   it('shows For you when signed in', async () => {
-    renderWithProviders({}, { initialIsSignedIn: true });
+    renderWithProviders({ initialIsSignedIn: true });
 
     const link = await screen.findByRole('link', { name: 'For you' });
     expect(link).toHaveAttribute(
