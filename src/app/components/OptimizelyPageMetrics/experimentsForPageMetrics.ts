@@ -10,8 +10,8 @@ type ExperimentsForPageTypeMetrics = {
 
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
-    // EXPERIMENT: OJ Referrer
-    // include tod2 so page-level metrics also fire on article pages for this experiment.
+    // include tod2 so page-level metrics also fire on article pages for this experiment
+    // can prob remove referrer now?
     pageType: ARTICLE_PAGE,
     activeExperiments: ['newswb_ws_oj_by_referrer', 'newswb_ws_tod_article_2'],
   },
