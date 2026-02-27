@@ -1,5 +1,14 @@
 import { ServiceTheme } from '#app/models/types/theming';
-import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
+import {
+  GHOST,
+  WHITE,
+  POSTBOX,
+  POSTBOX_30,
+  SPORT_YELLOW,
+  BLACK,
+  MIDNIGHT_BLACK,
+  SPORT_YELLOW_30,
+} from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
@@ -22,6 +31,17 @@ export const theme: ServiceTheme = {
   brandSVG,
 };
 
+export const sportTheme: ServiceTheme = {
+  ...theme,
+  palette: {
+    BRAND_BACKGROUND: SPORT_YELLOW,
+    BRAND_LOGO: BLACK,
+    BRAND_FOREGROUND: MIDNIGHT_BLACK,
+    BRAND_HIGHLIGHT: SPORT_YELLOW_30,
+    BRAND_BORDER: BLACK,
+  },
+};
+
 export const pwaTheme = getPWATypographyTheme();
 
-export default withThemeProvider(theme, pwaTheme);
+export default withThemeProvider(theme, pwaTheme, sportTheme);

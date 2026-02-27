@@ -40,11 +40,13 @@ type Props = {
 const withThemeProvider = (
   baseTheme: ServiceTheme,
   pwaTheme?: Partial<ServiceTheme>,
+  sportTheme?: ServiceTheme,
 ) => {
   const ThemeProvider: FC<Props> = ({ children }) => {
-    const { isAmp, isLite, pageType } = use(RequestContext);
+    const { isAmp, isLite, pageType, isSportPage } = use(RequestContext);
 
-    const brandTheme = useMergeTheme(baseTheme, pwaTheme);
+    const baseThemeToUse = isSportPage && sportTheme ? sportTheme : baseTheme;
+    const brandTheme = useMergeTheme(baseThemeToUse, pwaTheme);
 
     return (
       <EmotionThemeProvider
