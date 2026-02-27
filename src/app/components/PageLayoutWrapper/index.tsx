@@ -39,7 +39,6 @@ type Props = {
   };
   status: number;
   navItems?: Navigation[] | null;
-  isSportPage?: boolean;
 };
 
 type wordCountType = number | undefined;
@@ -49,7 +48,6 @@ const PageLayoutWrapper = ({
   pageData,
   status,
   navItems,
-  isSportPage,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
@@ -229,10 +227,7 @@ const PageLayoutWrapper = ({
       <ManifestContainer />
       {!isErrorPage && !isOfflinePage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
-      <div
-        id="main-wrapper"
-        css={[styles.wrapper, isSportPage && styles.sportWrapper]}
-      >
+      <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
           navItems={navItems}
           propsForTopBarOJComponent={{
