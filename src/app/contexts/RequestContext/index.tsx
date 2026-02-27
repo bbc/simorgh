@@ -42,6 +42,7 @@ export type RequestContextProps = {
   country?: string | null;
   nonce?: string | null;
   cspHeader: string | null;
+  isOfflineMode?: boolean;
 };
 
 export const RequestContext = createContext<RequestContextProps>(
@@ -69,6 +70,7 @@ type RequestProviderProps = {
   country?: string | null;
   nonce?: string | null;
   cspHeader?: string | null;
+  isOfflineMode?: boolean;
 };
 
 export const RequestContextProvider = ({
@@ -93,6 +95,7 @@ export const RequestContextProvider = ({
   timeOnServer = null,
   variant = null,
   isUK = null,
+  isOfflineMode = false,
 }: PropsWithChildren<RequestProviderProps>) => {
   let { origin } = getOriginContext(bbcOrigin);
   const env: Environments = getEnv(origin);
@@ -146,6 +149,7 @@ export const RequestContextProvider = ({
       country,
       nonce,
       cspHeader,
+      isOfflineMode,
     }),
     [
       derivedPageType,
@@ -171,6 +175,7 @@ export const RequestContextProvider = ({
       country,
       cspHeader,
       nonce,
+      isOfflineMode,
     ],
   );
 

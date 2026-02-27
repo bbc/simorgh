@@ -31,6 +31,7 @@ import { AccountProvider } from '#app/contexts/AccountContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
+import isOffline from '#app/lib/utilities/isOfflineMode';
 
 interface Props {
   pageProps: {
@@ -62,6 +63,7 @@ interface Props {
     isUK?: boolean;
     country?: string | null;
     idctaConfig: IdctaConfig | null;
+    isOfflineMode: boolean;
   };
 }
 
@@ -72,6 +74,7 @@ export default class CustomApp extends App<Props> {
     const { asPath = '' } = ctx;
 
     const { isApp, isAmp, isLite } = getPathExtension(asPath);
+    const isOfflineMode = isOffline(asPath);
 
     const { service, variant } = parseRoute(asPath) as {
       service: Services;
@@ -118,6 +121,7 @@ export default class CustomApp extends App<Props> {
         isApp,
         isAmp,
         isLite,
+        isOfflineMode,
         isNextJs: true,
         serverSideExperiments,
         toggles,
@@ -154,6 +158,7 @@ export default class CustomApp extends App<Props> {
       country,
       idctaConfig = null,
       navItems,
+      isOfflineMode,
     } = pageProps;
 
     const { metadata: { atiAnalytics = undefined } = {} } = pageData ?? {};
@@ -178,6 +183,7 @@ export default class CustomApp extends App<Props> {
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            isOfflineMode={isOfflineMode}
             pageType={pageType}
             service={service}
             statusCode={status}

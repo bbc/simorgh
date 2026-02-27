@@ -46,6 +46,7 @@ import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import Heading from '#app/components/Heading';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -175,7 +176,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const { isApp, isAmp, isLite, isOfflineMode } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -275,6 +276,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isAmp &&
       !isLite &&
       !isApp &&
+      !isOfflineMode &&
       hasContinueReadingBlock &&
       continueReadingButtonToggle,
   );
@@ -348,62 +350,73 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   return (
     <div css={styles.pageWrapper}>
-      {/* EXPERIMENT: PWA Promotional Banner */}
-      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
-      <ATIAnalytics atiData={atiData} />
-      <ChartbeatAnalytics
-        sectionName={pageData?.relatedContent?.section?.name}
-        title={headline}
-        authors={authors}
-      />
-      <ComscoreAnalytics />
-      <NielsenAnalytics />
-      <ArticleMetadata
-        articleId={getArticleId(pageData)}
-        title={headline}
-        author={articleAuthor}
-        twitterHandle={articleAuthorTwitterHandle}
-        firstPublished={firstPublished}
-        lastPublished={lastPublished}
-        section={getArticleSection(pageData)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
-        lang={getLang(pageData)}
-        description={description}
-        imageLocator={promoImage}
-        imageAltText={promoImageAltText}
-        hasAmpPage={!isTC2Asset}
-      />
-      <LinkedData
-        showAuthor
-        bylineLinkedData={bylineLinkedData}
-        type={
-          !isPGL
-            ? categoryName(isTrustProjectParticipant, taggings, formats)
-            : 'Article'
-        }
-        seoTitle={headline}
-        headline={headline}
-        description={description}
-        datePublished={firstPublished}
-        dateModified={lastPublished}
-        aboutTags={aboutTags}
-        imageLocator={promoImage}
-      />
-      {allowAdvertising && (
-        <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+      {!isOfflineMode && (
+        <>
+          {/* EXPERIMENT: PWA Promotional Banner */}
+          {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
+          <ATIAnalytics atiData={atiData} />
+          <ChartbeatAnalytics
+            sectionName={pageData?.relatedContent?.section?.name}
+            title={headline}
+            authors={authors}
+          />
+          <ComscoreAnalytics />
+          <NielsenAnalytics />
+          <ArticleMetadata
+            articleId={getArticleId(pageData)}
+            title={headline}
+            author={articleAuthor}
+            twitterHandle={articleAuthorTwitterHandle}
+            firstPublished={firstPublished}
+            lastPublished={lastPublished}
+            section={getArticleSection(pageData)}
+            aboutTags={aboutTags}
+            mentionsTags={getMentions(pageData)}
+            lang={getLang(pageData)}
+            description={description}
+            imageLocator={promoImage}
+            imageAltText={promoImageAltText}
+            hasAmpPage={!isTC2Asset}
+          />
+          <LinkedData
+            showAuthor
+            bylineLinkedData={bylineLinkedData}
+            type={
+              !isPGL
+                ? categoryName(isTrustProjectParticipant, taggings, formats)
+                : 'Article'
+            }
+            seoTitle={headline}
+            headline={headline}
+            description={description}
+            datePublished={firstPublished}
+            dateModified={lastPublished}
+            aboutTags={aboutTags}
+            imageLocator={promoImage}
+          />
+          {allowAdvertising && (
+            <AdContainer slotType="leaderboard" adcampaign={adcampaign} />
+          )}
+          <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
+        </>
       )}
-      <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
           <main css={styles.mainContent} role="main">
+            {isOfflineMode && (
+              <Heading level={4} style={{ margin: '1rem 0' }}>
+                ⚠️ This is the offline mode.⚠️
+              </Heading>
+            )}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            <OptimizelyPageMetrics trackPageComplete />
+            {!isOfflineMode && <OptimizelyPageMetrics trackPageComplete />}
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          {!isOfflineMode && (
+            <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          )}
           {showTopics && (
             <RelatedTopics
               css={[

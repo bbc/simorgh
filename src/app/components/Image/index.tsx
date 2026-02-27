@@ -55,11 +55,11 @@ const Image = ({
   hasCaption,
   isPortraitOrientation,
 }: PropsWithChildren<ImageProps>) => {
-  const { pageType, isLite, isAmp } = use(RequestContext);
+  const { pageType, isLite, isAmp, isOfflineMode } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 
-  const showPlaceholder = placeholder && !isLoaded;
+  const showPlaceholder = placeholder && (!isLoaded || isOfflineMode);
   const hasDimensions = width && height;
   const hasFixedAspectRatio = !!aspectRatio || !!hasDimensions;
   const [aspectRatioX, aspectRatioY] = aspectRatio ||
@@ -88,6 +88,37 @@ const Image = ({
   };
   const imgSrcSet = getImgSrcSet();
   const imgSizes = getImgSizes();
+
+  // TODO: TBC how the images should be shown
+  if (isOfflineMode) {
+    return (
+      <div
+        className={className}
+        css={theme => [
+          styles.wrapper,
+          hasFixedAspectRatio
+            ? styles.wrapperFixedAspectRatio
+            : styles.wrapperResponsiveRatio,
+          isPortraitOrientation && styles.portraitOrientation,
+          placeholder && [
+            styles.placeholder,
+            {
+              backgroundColor: darkPlaceholder
+                ? theme.palette.SHADOW
+                : theme.palette.LUNAR,
+            },
+          ],
+        ]}
+        style={{
+          paddingBottom: hasFixedAspectRatio ? legacyBrowserAspectRatio : 0,
+          ...(!hasCaption && { overflow: 'hidden' }),
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
+
   return (
     <>
       {preload && (
