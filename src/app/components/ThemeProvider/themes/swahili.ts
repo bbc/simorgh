@@ -13,6 +13,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/swahili';
+import brandSVGSport from '../chameleonLogos/sport';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme = {
@@ -40,6 +41,7 @@ export const sportTheme: ServiceTheme = {
     BRAND_HIGHLIGHT: SPORT_YELLOW_30,
     BRAND_BORDER: BLACK,
   },
+  brandSVG: brandSVGSport,
 };
 
 export const pwaTheme = getPWATypographyTheme();
