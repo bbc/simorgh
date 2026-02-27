@@ -11,6 +11,7 @@ import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
+import isLocal from '../../lib/utilities/isLocal';
 import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
@@ -123,7 +124,7 @@ const MostRead = ({
   }
 
   // If not in local environment, use the BFF, otherwise use fixture data
-  const isBff = false;
+  const isBff = !isLocal();
 
   const endpoint = getMostReadEndpoint({
     service,
