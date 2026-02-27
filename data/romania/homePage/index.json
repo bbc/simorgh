@@ -1,0 +1,83 @@
+{
+  "data": {
+    "title": "Home - BBC România",
+    "description": "Add a description",
+    "pageType": "home",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "„Flota fantomă\" a Rusiei are până la 1.000 de nave, afirmă Macron",
+            "firstPublished": "2025-10-01T14:25:45.586Z",
+            "lastPublished": "2025-10-01T14:25:45.586Z",
+            "link": "https://www.bbc.com/romania/articles/c0peyevn99no",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fd8f/test/107a80f0-9ed2-11f0-8743-fdd152a2466d.jpg.webp",
+            "description": "Președintele francez Emmanuel Macron a afirmat miercuri că este „un lucru bun\" faptul că Franța anchetează o presupusă încălcare a legii de către petrolierul Boracay",
+            "imageAlt": "„Flota fantomă\" a Rusiei are până la 1.000 de nave",
+            "isPortraitImage": false,
+            "id": "c0peyevn99no",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "„Flota fantomă\" a Rusiei are până la 1.000 de nave, afirmă Macron",
+            "firstPublished": "2025-10-01T14:25:00.077Z",
+            "lastPublished": "2025-10-01T14:25:00.077Z",
+            "link": "https://www.bbc.com/romania/articles/c81p8pkxv53o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fd8f/test/107a80f0-9ed2-11f0-8743-fdd152a2466d.jpg.webp",
+            "description": "Președintele francez Emmanuel Macron a afirmat miercuri că este „un lucru bun\" faptul că Franța anchetează o presupusă încălcare a legii de către petrolierul Boracay",
+            "imageAlt": "„Flota fantomă\" a Rusiei are până la 1.000 de nave",
+            "isPortraitImage": false,
+            "id": "c81p8pkxv53o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "„Flota fantomă\" a Rusiei are până la 1.000 de nave, afirmă Macron",
+            "firstPublished": "2025-10-01T14:23:31.982Z",
+            "lastPublished": "2025-10-01T14:23:31.982Z",
+            "link": "https://www.bbc.com/romania/articles/cqr353vwv57o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsdevpb/fd8f/test/107a80f0-9ed2-11f0-8743-fdd152a2466d.jpg.webp",
+            "description": "Președintele francez Emmanuel Macron a afirmat miercuri că este „un lucru bun\" faptul că Franța anchetează o presupusă încălcare a legii ",
+            "imageAlt": "„Flota fantomă\" a Rusiei are până la 1.000 de nave",
+            "isPortraitImage": false,
+            "id": "cqr353vwv57o",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:eb5458d5-256e-42a7-a1a9-9b1d046d3d4a",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "visualProminence": "HIGH",
+        "title": "Top Stories",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:c60935d1-26bd-4c10-b923-4544c2050bb6",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "visualProminence": "HIGH",
+        "title": "Editor's choice",
+        "visualStyle": "COLLECTION"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cj4p63k4kxw6t",
+        "contentType": "index-home",
+        "pageIdentifier": "romania.page",
+        "pageTitle": "Home - BBC România"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

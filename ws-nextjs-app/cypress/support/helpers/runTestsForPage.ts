@@ -11,7 +11,6 @@ export type TestDataType = {
   tests: TestType[];
   runforEnv: string[];
   service: string;
-  useReverb?: boolean;
   contentType?: string;
   applicationType?: string;
   siteId?: string;
@@ -27,6 +26,7 @@ type FunctionProps = {
   testIsolation?: boolean;
   deleteServiceWorker?: boolean;
   headers?: Record<string, string>;
+  clearCache?: boolean;
 };
 
 export default ({
@@ -38,6 +38,7 @@ export default ({
   testIsolation = false,
   deleteServiceWorker = false,
   headers,
+  clearCache,
 }: FunctionProps) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
 
@@ -82,6 +83,10 @@ export default ({
                   });
               }
             };
+
+            if (clearCache) {
+              cy.clearLocalStorage();
+            }
 
             cy.visit(path, {
               failOnStatusCode,

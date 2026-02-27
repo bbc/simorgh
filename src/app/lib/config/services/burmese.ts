@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     atiAnalyticsProducerName: 'BURMESE',
-    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
@@ -62,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'နှင့်',
+      readTime: {
+        readTimePrefix: 'ဖတ်ရန်အချိန်',
+        minute: 'မိနစ်',
+      },
       pagination: {
         page: 'စာမျက်နှာ',
         previousPage: 'နောက်သို့ပြန်သွားရန်',
@@ -372,35 +376,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ပင်မစာမျက်နှာ',
         url: '/burmese',
-      },
-      {
-        title: 'မြန်မာငလျင်',
-        url: '/burmese/topics/c793wppj0r1t',
-      },
-      {
-        title: 'မြန်မာ့ရေးရာ',
-        url: '/burmese/topics/c404v08p1wxt',
-      },
-      {
-        title: 'နိုင်ငံတကာ',
-        url: '/burmese/topics/cnlv9j1z93wt',
-      },
-      {
-        title: 'ဆောင်းပါး',
-        url: '/burmese/topics/cl3rq8rkqgxt',
-      },
-      {
-        title: 'အင်တာဗျူး',
-        url: '/burmese/topics/cdg42x4kek0t',
-      },
-      {
-        title: 'ကုန်သွယ်စီးပွား',
-        url: '/burmese/topics/c9wpm0en9jdt',
-      },
-      {
-        title: 'ဗီဒီယိုများ',
-        url: '/burmese/topics/cj7v92le02qt',
-        hideOnLiteSite: true,
       },
     ],
   },

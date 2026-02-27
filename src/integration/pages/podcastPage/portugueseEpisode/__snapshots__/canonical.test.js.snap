@@ -106,7 +106,7 @@ exports[`Canonical Podcast Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Podcast Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/portuguese"`;
 
-exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
+exports[`Canonical Podcast Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. A BBC não se responsabiliza pelo conteúdo de sites externos. Leia sobre nossa política em relação a links externos."`;
 
 exports[`Canonical Podcast Page Header I can see the branding 1`] = `
 {
@@ -121,62 +121,6 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 {
   "text": "Notícias",
   "url": "/portuguese",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Brasil",
-  "url": "/portuguese/topics/cz74k717pw5t",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Internacional",
-  "url": "/portuguese/topics/cmdm4ynm24kt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Economia",
-  "url": "/portuguese/topics/cvjp2jr0k9rt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Saúde",
-  "url": "/portuguese/topics/c340q430z4vt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Ciência",
-  "url": "/portuguese/topics/cr50y580rjxt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Tecnologia",
-  "url": "/portuguese/topics/c404v027pd4t",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "Vídeos",
-  "url": "/portuguese/topics/c9y2j35dn2zt",
-}
-`;
-
-exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
-{
-  "text": "Podcasts",
-  "url": "/portuguese/topics/cx2ggnx4j72t",
 }
 `;
 

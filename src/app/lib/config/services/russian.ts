@@ -109,6 +109,11 @@ const headerFooterTranslations = {
 export const service: DefaultServiceConfig = {
   default: {
     translations: {
+      and: 'и',
+      readTime: {
+        readTimePrefix: 'Время чтения',
+        minute: 'мин',
+      },
       ...russianUkrainianSharedTranslations,
       ...headerFooterTranslations,
     },
@@ -119,7 +124,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-russian',
     atiAnalyticsProducerId: '75',
     atiAnalyticsProducerName: 'RUSSIAN',
-    useReverb: true,
     chartbeatDomain: 'russian.bbc.co.uk',
     brandName: 'BBC News Русская служба',
     product: 'BBC News',
@@ -246,30 +250,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Главная',
         url: '/russian',
-      },
-      {
-        title: 'Война в Украине',
-        url: '/russian/topics/cez0n29ggrdt',
-      },
-      {
-        title: 'Сводка потерь',
-        url: '/russian/topics/cqx9qqylwvgt',
-      },
-      {
-        title: 'Истории',
-        url: '/russian/topics/cv27xky1pppt',
-      },
-      {
-        title: 'Видео',
-        url: '/russian/topics/c44vyp57qy4t',
-      },
-      {
-        title: 'Фильмы',
-        url: '/russian/topics/cl4x0jkk3e5t',
-      },
-      {
-        title: 'Подкасты',
-        url: '/russian/topics/c3l19z3z0p2t',
       },
     ],
   },

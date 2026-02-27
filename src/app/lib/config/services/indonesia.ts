@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     atiAnalyticsProducerName: 'INDONESIAN',
-    useReverb: true,
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
@@ -68,6 +67,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'dan',
       readTime: {
         readTimePrefix: 'Waktu membaca',
         long: 'Artikel panjang',
@@ -364,26 +364,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Berita',
         url: '/indonesia',
-      },
-      {
-        title: 'Indonesia',
-        url: '/indonesia/topics/cjgn7k8yx4gt',
-      },
-      {
-        title: 'Dunia',
-        url: '/indonesia/topics/cyz8evpl224t',
-      },
-      {
-        title: 'Viral',
-        url: '/indonesia/topics/cn5w7g2nq6dt',
-      },
-      {
-        title: 'Liputan Mendalam',
-        url: '/indonesia/topics/cw9qgeqd18zt',
-      },
-      {
-        title: 'Majalah',
-        url: '/indonesia/topics/cpxrqmrkeg8t',
       },
     ],
     timezone: 'Asia/Jakarta',

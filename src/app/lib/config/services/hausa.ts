@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
-    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
@@ -66,6 +65,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'da',
       readTime: {
         readTimePrefix: 'Lokacin karatu',
         long: 'Dogon labari',
@@ -444,30 +444,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Labaran Duniya',
         url: '/hausa',
-      },
-      {
-        title: 'Wasanni',
-        url: '/hausa/topics/cz74kjgv220t',
-      },
-      {
-        title: 'Nishadi',
-        url: '/hausa/topics/cg726kz37wdt',
-      },
-      {
-        title: 'Cikakkun Rahotanni',
-        url: '/hausa/topics/cnl7wd77wj2t',
-      },
-      {
-        title: 'Bidiyo',
-        url: '/hausa/topics/cn09qmz4jryt',
-      },
-      {
-        title: 'Shirye-shirye na Musamman',
-        url: '/hausa/topics/cnl7wd9pddlt',
-      },
-      {
-        title: 'Shirye-shiryen rediyo',
-        url: '/hausa/topics/c4nx34q5724t',
       },
     ],
   },

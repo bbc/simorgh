@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Canonical Home Page A11y I can see the skip to content link 1`] = `"إذهب الى المحتوى"`;
+
+exports[`Canonical Home Page Ads should have the following properties 1`] = `
+<div
+  class="dotcom-ad"
+  id="dotcom-leaderboard"
+/>
+`;
+
+exports[`Canonical Home Page Ads should have the following properties 2`] = `
+<div
+  class="dotcom-ad"
+  id="dotcom-mpu"
+/>
+`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel excluding src 1`] = `"<img height="1px" width="1px" alt="" style="position:absolute" >"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel hostname 1`] = `"https://logws1363.ati-host.net/hit.xiti"`;
+
+exports[`Canonical Home Page Analytics ATI tracking pixel search params 1`] = `
+[
+  {
+    "s": "598343",
+  },
+  {
+    "s2": "5",
+  },
+  {
+    "p": "arabic.page",
+  },
+  {
+    "x1": "[urn:bbc:tipo:topic:cx35pee6zvpt]",
+  },
+  {
+    "x2": "[responsive]",
+  },
+  {
+    "x3": "[news-arabic]",
+  },
+  {
+    "x4": "[ar]",
+  },
+  {
+    "x7": "[index-home]",
+  },
+  {
+    "x8": "[simorgh-nojs]",
+  },
+  {
+    "x9": "[BBC%20News%20عربي]",
+  },
+]
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 1`] = `
+{
+  "text": "BBC News, عربي",
+  "url": "/arabic",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 2`] = `
+{
+  "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-49283069",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 3`] = `
+{
+  "text": "شروط الاستخدام",
+  "url": "https://www.bbc.com/arabic/institutional-37731351",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 4`] = `
+{
+  "text": "عن بي بي سي",
+  "url": "https://www.bbc.com/arabic/institutional-37731352",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 5`] = `
+{
+  "text": "سياسة الخصوصية",
+  "url": "https://www.bbc.com/arabic/institutional-37731353",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 6`] = `
+{
+  "text": "ملفات الارتباط Cookies",
+  "url": "https://www.bbc.com/usingthebbc/cookies/",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 7`] = `
+{
+  "text": "اتصل بـ بي بي سي",
+  "url": "https://www.bbc.co.uk/arabic/send/u50853203",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 8`] = `
+{
+  "text": "بي بي سي نيوز عربي في لغات أخرى",
+  "url": "https://www.bbc.com/ws/languages",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 9`] = `
+{
+  "text": "Do not share or sell my info",
+  "url": "#",
+}
+`;
+
+exports[`Canonical Home Page Footer Anchors should match text and url 10`] = `
+{
+  "text": "سياستنا بخصوص الروابط الخارجية.",
+  "url": "https://www.bbc.com/editorialguidelines/guidance/links-and-feeds",
+}
+`;
+
+exports[`Canonical Home Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+
+exports[`Canonical Home Page Footer Paragraphs should match text 1`] = `"© 2026 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+
+exports[`Canonical Home Page Header I can see the branding 1`] = `
+{
+  "brandLink": "BBC News, عربي",
+  "svg": <path
+    d="M69.2815 108.598C61.5506 96.2101 53.7196 83.7963 45.7918 71.3566C37.8613 58.9196 30.0325 46.8519 22.3021 35.1562V108.598H0.298828V2.30035H23.4912C31.5195 14.2934 39.4219 26.3103 47.2042 38.3525C54.9833 50.3943 62.7397 62.6107 70.4706 74.999V2.30035H92.4739V108.598L69.2815 108.598ZM113.54 2.30034H186.686V21.3295H136.435V44.3737H181.036V63.4028H136.435V89.5687H189.511V108.598H113.54L113.54 2.30034ZM291.455 108.598C288.084 96.6075 284.788 84.6139 281.568 72.6203C278.346 60.6294 275.199 48.6358 272.127 36.6427C269.154 48.6358 266.081 60.6294 262.91 72.6203C259.737 84.6139 256.466 96.6075 253.098 108.598H228.865C223.81 91.2553 218.953 73.7121 214.295 55.9698C209.636 38.2293 205.227 20.34 201.064 2.30034H226.04C228.517 16.0773 231.144 29.8548 233.92 43.6302C236.693 57.4077 239.618 70.9364 242.691 84.2165C249.33 58.3486 255.626 32.5309 261.572 6.76035H283.872C286.846 19.4483 289.893 32.1081 293.016 44.7452C296.138 57.3817 299.334 69.9956 302.605 82.5813C305.578 69.4986 308.452 56.218 311.228 42.7379C314.001 29.2605 316.579 15.7804 318.958 2.30034H343.489C339.326 20.34 334.915 38.2293 330.257 55.9698C325.597 73.7121 320.743 91.2553 315.688 108.598H291.455ZM386.825 110.828C380.976 110.828 375.203 110.183 369.505 108.896C363.804 107.609 358.329 105.576 353.077 102.8V82.2839C363.681 88.7279 374.931 91.9474 386.825 91.9474C393.564 91.9474 398.693 90.8092 402.212 88.5283C405.729 86.2491 407.49 83.0782 407.49 79.0135C407.49 75.9426 406.621 73.5379 404.888 71.8027C403.153 70.0702 400.848 68.681 397.975 67.6401C395.099 66.5997 391.88 65.6329 388.312 64.7412C382.463 63.3542 377.31 61.7676 372.85 59.9837C368.39 58.1998 364.622 56.0953 361.551 53.6652C358.478 51.2378 356.148 48.313 354.564 44.8939C352.977 41.4742 352.185 37.3862 352.185 32.6288C352.185 25.8896 353.895 20.0918 357.314 15.2343C360.733 10.3795 365.565 6.63707 371.809 4.00961C378.053 1.38486 385.487 0.0703125 394.11 0.0703125C399.759 0.0703125 405.309 0.715954 410.761 2.00291C416.21 3.29203 421.116 5.02728 425.479 7.20646V27.4253C421.116 24.7491 416.187 22.6678 410.686 21.1813C405.186 19.6943 399.659 18.9508 394.11 18.9508C388.063 18.9508 383.38 19.9917 380.061 22.073C376.739 24.1543 375.08 27.1279 375.08 30.9931C375.08 33.7692 375.872 35.9738 377.459 37.609C379.043 39.2442 381.298 40.5825 384.223 41.6229C387.145 42.6638 390.59 43.681 394.556 44.6705C399.611 45.9602 404.317 47.3726 408.679 48.9078C413.039 50.4456 416.879 52.4015 420.201 54.7802C423.52 57.1589 426.096 60.1833 427.932 63.849C429.765 67.5168 430.682 72.026 430.682 77.3777C430.682 84.4165 428.947 90.4377 425.479 95.4411C422.008 100.447 417.004 104.264 410.463 106.889C403.922 109.514 396.042 110.828 386.825 110.828Z"
+  />,
+}
+`;
+
+exports[`Canonical Home Page Header Navigation link should match text and url 1`] = `
+{
+  "text": "الصفحة الحالية, رئيسية",
+  "url": "/arabic",
+}
+`;
+
+exports[`Canonical Home Page Main heading should match text 1`] = `"BBC News, عربي - الرئيسية"`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct headline 1`] = `"مرأة الخارقة ""`;
+
+exports[`Canonical Home Page Page content First item in the first curation is the correct image 1`] = `
+<img
+  alt="الرياضه"
+  class="css-1seqhu9"
+  fetchpriority="high"
+  loading="eager"
+  src="https://ichef.test.bbci.co.uk/ace/standard/240/cpsdevpb/36C4/test/_63702041_tv000117434.jpg"
+  style="aspect-ratio:16 / 9"
+/>
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 1`] = `
+{
+  "sizes": null,
+  "url": "http://localhost:7081/arabic/images/icons/icon-192x192.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 2`] = `
+{
+  "sizes": "152x152",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-152x152.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 3`] = `
+{
+  "sizes": "180x180",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-180x180.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 4`] = `
+{
+  "sizes": "384x384",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-384x384.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Apple Touch Icon should match attributes 5`] = `
+{
+  "sizes": "512x512",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/icons/icon-512x512.png",
+}
+`;
+
+exports[`Canonical Home Page SEO Canonical link 1`] = `"http://localhost:7081/arabic"`;
+
+exports[`Canonical Home Page SEO Dir attribute 1`] = `"rtl"`;
+
+exports[`Canonical Home Page SEO FB app ID 1`] = `"1609039196070050"`;
+
+exports[`Canonical Home Page SEO Heading level 1 1`] = `"BBC News, عربي - الرئيسية"`;
+
+exports[`Canonical Home Page SEO Lang attribute 1`] = `"ar"`;
+
+exports[`Canonical Home Page SEO Linked data should match text 1`] = `
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "headline": "BBC News عربي",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "ar",
+        "name": "Arabic",
+      },
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/arabic",
+        "@type": "WebPage",
+        "name": "BBC News عربي",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 576,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
+          "width": 1024,
+        },
+        "name": "BBC News عربي",
+        "publishingPrinciples": "https://www.bbc.com/arabic/institutional-49283069",
+      },
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7081/arabic",
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-23233470",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.bbc.com/arabic/23231121",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.bbc.com/arabic/tv-and-radio-23233465",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.bbc.com/swahili/23231091",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.bbc.com/arabic/trending-23083197",
+        },
+        {
+          "@context": "http://schema.org",
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.bbc.com/arabic/business-23083189",
+        },
+      ],
+      "name": "BBC News عربي",
+      "numberOfItems": 6,
+    },
+  ],
+}
+`;
+
+exports[`Canonical Home Page SEO OG description 1`] = `"BBC News عربي: الأخبار والمعلومات باللغة العربية."`;
+
+exports[`Canonical Home Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO OG image alt 1`] = `"BBC News عربي"`;
+
+exports[`Canonical Home Page SEO OG locale 1`] = `"ar"`;
+
+exports[`Canonical Home Page SEO OG site name 1`] = `"BBC News عربي"`;
+
+exports[`Canonical Home Page SEO OG title 1`] = `"BBC News عربي - BBC News عربي"`;
+
+exports[`Canonical Home Page SEO OG type 1`] = `"website"`;
+
+exports[`Canonical Home Page SEO OG url 1`] = `"http://localhost:7081/arabic"`;
+
+exports[`Canonical Home Page SEO Page title 1`] = `"BBC News عربي - BBC News عربي"`;
+
+exports[`Canonical Home Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
+
+exports[`Canonical Home Page SEO Twitter card 1`] = `"summary_large_image"`;
+
+exports[`Canonical Home Page SEO Twitter creator 1`] = `"@BBCArabic"`;
+
+exports[`Canonical Home Page SEO Twitter description 1`] = `"BBC News عربي: الأخبار والمعلومات باللغة العربية."`;
+
+exports[`Canonical Home Page SEO Twitter image alt 1`] = `"BBC News عربي"`;
+
+exports[`Canonical Home Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png"`;
+
+exports[`Canonical Home Page SEO Twitter site 1`] = `"@BBCArabic"`;
+
+exports[`Canonical Home Page SEO Twitter title 1`] = `"BBC News عربي - BBC News عربي"`;
+
+exports[`Canonical Home Page Timestamp should match text and date 1`] = `
+{
+  "date": "2019-03-13",
+  "text": "13 مارس/ آذار 2019",
+}
+`;

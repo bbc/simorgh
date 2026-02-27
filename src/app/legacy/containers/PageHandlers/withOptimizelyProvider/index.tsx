@@ -4,15 +4,15 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
+import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import Cookie from 'js-cookie';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
+import { getClientTimeOfDay, getReferrer, isMobile } from './userAttributes';
 
 const isInCypress = isCypress();
 const isStoryBook = process.env.STORYBOOK;
@@ -26,56 +26,6 @@ const getUserId = () => {
   if (disableOptimizely || !onClient() || isOperaProxy()) return null;
 
   return Cookie.get('ckns_mvt') ?? null;
-};
-
-const isMobile = () => {
-  if (onClient()) {
-    const matchMedia = window.matchMedia(
-      `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
-    );
-
-    if (matchMedia.matches) return true;
-
-    return false;
-  }
-
-  return false;
-};
-
-export const REFERRER_CATEGORIES = {
-  DIRECT: ['bbc.com'],
-  SEARCH: ['google', 'bing', 'msn', 'yahoo', 'duckduckgo', 'yandex', 'ecosia'],
-  SOCIAL: ['facebook', 'instagram', 't.co', 'youtube', 'threads', 'linkin'],
-  AT_PARAM_VALUES: ['social', 'social_flow', 'ws_whatsapp'],
-};
-
-const getReferrer = () => {
-  if (onClient()) {
-    const referrer = document?.referrer?.toLowerCase();
-
-    const urlParams = new URLSearchParams(window.location.search);
-
-    const atParam = urlParams.get('at_campaign') || urlParams.get('at_medium');
-
-    if (REFERRER_CATEGORIES.SEARCH.some(domain => referrer.includes(domain)))
-      return 'search';
-
-    if (REFERRER_CATEGORIES.SOCIAL.some(domain => referrer.includes(domain)))
-      return 'social';
-
-    if (
-      atParam &&
-      REFERRER_CATEGORIES.AT_PARAM_VALUES.includes(atParam.toLowerCase())
-    )
-      return 'social';
-
-    if (REFERRER_CATEGORIES.DIRECT.some(domain => referrer.includes(domain)))
-      return 'direct';
-
-    if (!referrer) return 'direct';
-  }
-
-  return null;
 };
 
 const optimizely = createInstance({
@@ -99,10 +49,11 @@ const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
         user={{
           id: getUserId(),
           attributes: {
+            country: country ?? null,
             service,
             mobile: isMobile(),
             referrer: getReferrer(),
-            country: country ?? null,
+            timeOfDay: getClientTimeOfDay(),
           },
         }}
       >

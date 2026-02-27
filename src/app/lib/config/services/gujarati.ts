@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gujarati',
     atiAnalyticsProducerId: '50',
     atiAnalyticsProducerName: 'GUJARATI',
-    useReverb: true,
     chartbeatDomain: 'gujarati.bbc.co.uk',
     brandName: 'BBC News ગુજરાતી',
     product: 'BBC News',
@@ -66,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'અને',
+      readTime: {
+        readTimePrefix: 'વાંચવાનો સમય',
+        minute: 'મિનિટ',
+      },
       pagination: {
         previousPage: 'આ પહેલાં',
         nextPage: 'આ પછી',
@@ -359,38 +363,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'સમાચાર',
         url: '/gujarati',
-      },
-      {
-        title: 'ગુજરાત',
-        url: '/gujarati/topics/cz74kjn4j5wt',
-      },
-      {
-        title: 'ભારત',
-        url: '/gujarati/topics/c06gq3993v3t',
-      },
-      {
-        title: 'વિદેશ',
-        url: '/gujarati/topics/c83plvezd90t',
-      },
-      {
-        title: 'હવામાન સમાચાર',
-        url: '/gujarati/topics/cv2gk3nze31t',
-      },
-      {
-        title: 'સ્પોર્ટ્સ',
-        url: '/gujarati/topics/c404vn5qxq9t',
-      },
-      {
-        title: 'વીડિયો',
-        url: '/gujarati/topics/cpev7m0rry0t',
-      },
-      {
-        title: 'મૅગેઝિન',
-        url: '/gujarati/topics/c89lm5l6w4pt',
-      },
-      {
-        title: 'લોકપ્રિય',
-        url: '/gujarati/popular/read',
       },
     ],
   },

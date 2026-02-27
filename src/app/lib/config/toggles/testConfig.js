@@ -2,6 +2,9 @@ import SERVICES from '../services';
 
 export default {
   _environment: 'test',
+  account: {
+    enabled: false,
+  },
   ads: {
     enabled: false,
   },
@@ -9,6 +12,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pidgin',
     atiAnalyticsProducerId: '70',
     atiAnalyticsProducerName: 'PIDGIN',
-    useReverb: true,
     chartbeatDomain: 'pidgin.bbc.co.uk',
     brandName: 'BBC News Pidgin',
     product: 'BBC News',
@@ -48,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'and',
       readTime: {
         readTimePrefix: 'Read am in',
         long: 'Tori wey long',
@@ -288,34 +288,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Home',
         url: '/pidgin',
-      },
-      {
-        title: 'Nigeria',
-        url: '/pidgin/topics/c2dwqd1zr92t',
-      },
-      {
-        title: 'Africa',
-        url: '/pidgin/topics/c404v061z85t',
-      },
-      {
-        title: 'World',
-        url: '/pidgin/topics/c0823e52dd0t',
-      },
-      {
-        title: 'Video',
-        url: '/pidgin/topics/c3l19z3k1ert',
-      },
-      {
-        title: 'Sport',
-        url: '/pidgin/topics/cjgn7gv77vrt',
-      },
-      {
-        title: 'Entertainment',
-        url: '/pidgin/topics/cqywjyzk2vyt',
-      },
-      {
-        title: 'Most popular',
-        url: '/pidgin/popular/read',
       },
     ],
     footer: {

@@ -69,7 +69,7 @@ exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`AMP Articles Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `
 {
@@ -84,48 +84,6 @@ exports[`AMP Articles Header Navigation link should match text and url 1`] = `
 {
   "text": "Labaran Duniya",
   "url": "/hausa",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 2`] = `
-{
-  "text": "Wasanni",
-  "url": "/hausa/topics/cz74kjgv220t",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 3`] = `
-{
-  "text": "Nishadi",
-  "url": "/hausa/topics/cg726kz37wdt",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 4`] = `
-{
-  "text": "Cikakkun Rahotanni",
-  "url": "/hausa/topics/cnl7wd77wj2t",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 5`] = `
-{
-  "text": "Bidiyo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 6`] = `
-{
-  "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/topics/cnl7wd9pddlt",
-}
-`;
-
-exports[`AMP Articles Header Navigation link should match text and url 7`] = `
-{
-  "text": "Shirye-shiryen rediyo",
-  "url": "/hausa/topics/c4nx34q5724t",
 }
 `;
 

@@ -8,24 +8,43 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
-import RecommendationsItem from './RecommendationsItem';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
+import RecommendationsItem from './RecommendationsItem';
 
-const eventTrackingData = {
-  componentName: 'midarticle-mostread',
-};
+interface RecommendationsProps {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps;
+}
 
-const Recommendations = ({ data }: { data: Recommendation[] }) => {
+const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
   const { recommendations, mostRead, script, service, dir } =
     use(ServiceContext);
-
-  const viewTracker = useViewTracker(eventTrackingData);
 
   const {
     palette: { GREY_2 },
   } = useTheme();
 
   const { enabled } = useToggle('midArticleOnwardJourney');
+
+  const { skipLink, header } = recommendations || {};
+
+  const title = header ?? 'Most read';
+
+  const componentName = 'midarticle-mostread';
+  const groupTracker = {
+    name: title,
+    type: componentName,
+    itemCount: 4,
+  };
+
+  const eventTrackingData = {
+    componentName,
+    groupTracker,
+    ...(experimentProps && experimentProps),
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const { hasMostRead } = mostRead || {};
 
@@ -38,18 +57,14 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
     'aria-labelledby': labelId,
   };
 
-  const { skipLink, header } = recommendations || {};
-
   const { text, endTextVisuallyHidden } = skipLink || {
     text: 'Skip %title% and continue reading',
     endTextVisuallyHidden: 'End of %title%',
   };
 
-  const title = header ?? 'Most read';
-
   const terms = { '%title%': title };
 
-  const isSinglePromo = data?.length === 1;
+  const isSinglePromo = data.length === 1;
 
   const endTextId = `end-of-recommendations`;
 
@@ -87,9 +102,19 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
           <RecommendationsItem recommendation={data?.[0]} />
         ) : (
           <ul css={styles.recommendationsList} role="list" {...viewTracker}>
-            {data?.map(recommendation => (
+            {data?.map((recommendation, index) => (
               <li key={recommendation.id} role="listitem">
-                <RecommendationsItem recommendation={recommendation} />
+                <RecommendationsItem
+                  recommendation={recommendation}
+                  eventTrackingData={{
+                    ...eventTrackingData,
+                    itemTracker: {
+                      type: 'midarticle-mostread-promo',
+                      text: recommendation.title,
+                      position: index + 1,
+                    },
+                  }}
+                />
               </li>
             ))}
           </ul>

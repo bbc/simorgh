@@ -113,6 +113,7 @@ export const RequestContextProvider = ({
   };
 
   const platform = getPlatform();
+
   const statsDestination = getStatsDestination({
     isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
