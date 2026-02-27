@@ -46,6 +46,7 @@ const withThemeProvider = (
     const { isAmp, isLite, pageType, isSportPage } = use(RequestContext);
 
     const baseThemeToUse = isSportPage && sportTheme ? sportTheme : baseTheme;
+
     const brandTheme = useMergeTheme(baseThemeToUse, pwaTheme);
 
     return (
