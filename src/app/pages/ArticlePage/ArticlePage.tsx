@@ -294,6 +294,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(timeOfDayExperimentProps && {
+      experimentName: timeOfDayExperimentProps.experimentName,
+      experimentVariant: timeOfDayExperimentProps.experimentVariant,
+    }),
   };
 
   const showPortraitVideoCarousel = Boolean(
