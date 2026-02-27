@@ -31,7 +31,7 @@ describe('LatestPostButton', () => {
     });
 
     const button = container.querySelector(
-      'button[aria-atomic="true"][aria-live="polite"]',
+      'button[data-testid="latest-post-button"]',
     );
 
     expect(button).not.toBeNull();
@@ -49,7 +49,7 @@ describe('LatestPostButton', () => {
     });
 
     const button = container.querySelector(
-      'button[aria-atomic="true"][aria-live="polite"]',
+      'button[data-testid="latest-post-button"]',
     );
 
     expect(button).toBeNull();
@@ -67,7 +67,7 @@ describe('LatestPostButton', () => {
     });
 
     const button = container.querySelector(
-      'button[aria-atomic="true"][aria-live="polite"]',
+      'button[data-testid="latest-post-button"]',
     );
 
     expect(button).not.toBeNull();
@@ -77,7 +77,7 @@ describe('LatestPostButton', () => {
     });
 
     const buttonAfter10Sec = container.querySelector(
-      'button[aria-atomic="true"][aria-live="polite"]',
+      'button[data-testid="latest-post-button"]',
     );
 
     expect(buttonAfter10Sec).toBeNull();
