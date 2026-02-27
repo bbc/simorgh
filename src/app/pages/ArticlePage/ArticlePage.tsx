@@ -1,10 +1,7 @@
-import { use, useState, useEffect } from 'react';
+import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -20,7 +17,6 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-import { getReferrer } from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 
 import {
   getArticleId,
@@ -82,7 +78,6 @@ import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
 } from '../../components/MediaLoader/utils/isPortraitVideo';
-import getUnderArticleComponents from './helpers';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -135,38 +130,8 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({
-  data,
-  blocks,
-  topStoriesContent,
-  featuresContent,
-  referrerVariant,
-  referrerExperimentName,
-  referrer,
-}: {
-  data: Recommendation[];
-  blocks: OptimoBlock[];
-  topStoriesContent?: unknown;
-  featuresContent?: unknown;
-  referrerVariant?: string | null;
-  referrerExperimentName?: string;
-  referrer?: string | null;
-}) => (
-  <Recommendations
-    data={data}
-    blocks={blocks}
-    topStoriesContent={topStoriesContent}
-    featuresContent={featuresContent}
-    referrer={referrer}
-    {...(referrerVariant && {
-      referrerVariant,
-      experimentProps: {
-        sendOptimizelyEvents: true,
-        experimentName: referrerExperimentName,
-        experimentVariant: referrerVariant,
-      },
-    })}
-  />
+const getWsojComponent = ({ data }: { data: Recommendation[] }) => (
+  <Recommendations data={data} />
 );
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -200,28 +165,17 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({
-    showAllContent,
-    setShowAllContent,
-    experimentProps,
-  }: ContinueReadingButtonProps) =>
+  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
-      experimentProps={experimentProps}
     />
   );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
-  // SSR-safe: always null on server, update on client
-  const [referrer, setReferrer] = useState<string | null>(null);
-
-  useEffect(() => {
-    setReferrer(getReferrer());
-  }, []);
 
   const {
     articleAuthor,
@@ -241,13 +195,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
-  // EXPERIMENT: Referrer Experiment
-  const referrerExperimentName = 'newswb_ws_oj_by_referrer';
-  const referrerVariant = useOptimizelyVariation({
-    experimentName: referrerExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -257,6 +204,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: articlePortraitVideoEnabled } = useToggle(
+    'articlePortraitVideo',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -265,8 +215,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
-  const topStoriesContent = pageData?.secondaryColumn?.topStories;
-  const featuresContent = pageData?.secondaryColumn?.features;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
@@ -302,7 +250,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   };
 
   const showPortraitVideoCarousel = Boolean(
-    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length,
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
+      articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -355,29 +304,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({
-        data,
-        blocks,
-        topStoriesContent,
-        featuresContent,
-        referrerVariant,
-        referrerExperimentName,
-        referrer,
-      }),
+    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
-        ...(referrerVariant && {
-          experimentProps: {
-            sendOptimizelyEvents: true,
-            experimentName: referrerExperimentName,
-            experimentVariant: referrerVariant,
-          },
-        }),
       }),
     }),
   };
@@ -486,62 +419,22 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
-              css={[styles.portraitVideoCarousel, styles.hideBelowDesktopWidth]}
+              css={styles.portraitVideoCarousel}
             />
           )}
-          <div css={styles.hideBelowDesktopWidth}>
-            <div css={{ gridColumn: '1 / span 12' }}>
-              <RelatedContentSection
-                content={blocks}
-                {...(referrerVariant && {
-                  experimentProps: {
-                    sendOptimizelyEvents: true,
-                    experimentName: referrerExperimentName,
-                    experimentVariant: referrerVariant,
-                  },
-                })}
-              />
-            </div>
-          </div>
+          <RelatedContentSection content={blocks} />
         </div>
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
-
-      {showPortraitVideoCarousel && (
-        <PortraitVideoCarousel
-          {...portraitVideoCarouselProps}
-          css={[styles.portraitVideoCarousel, styles.hideOnDesktop]}
-        />
-      )}
-
-      {/* // EXPERIMENT: Referrer Experiment
-      Under-article components for mobile/tablet only */}
-      {getUnderArticleComponents({
-        referrerVariant: referrerVariant || '',
-        referrerExperimentName: referrerExperimentName || '',
-        topStoriesData: topStoriesContent,
-        featuresData: featuresContent,
-        articleBlocks: blocks,
-        grey2: GREY_2,
-        pageStyles: styles,
-        referrer,
-      }).map(component => component)}
 
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
-          columnLayout="multiColumn"
+          columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          {...(referrerVariant && {
-            experimentProps: {
-              sendOptimizelyEvents: true,
-              experimentName: referrerExperimentName,
-              experimentVariant: referrerVariant,
-            },
-          })}
         />
       )}
     </div>

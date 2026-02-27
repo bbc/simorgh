@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { Navigation, PageTypes } from '#app/models/types/global';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -56,6 +57,7 @@ const PageLayoutWrapper = ({
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
+  const isOfflinePage = pageType === OFFLINE_PAGE;
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
@@ -225,7 +227,7 @@ const PageLayoutWrapper = ({
       )}
       <ServiceWorker />
       <ManifestContainer />
-      {!isErrorPage && <WebVitals pageType={pageType} />}
+      {!isErrorPage && !isOfflinePage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div
         id="main-wrapper"
