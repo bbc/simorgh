@@ -132,7 +132,7 @@ export default async (context: GetServerSidePropsContext) => {
   if (!isSportAssetType && isSportTag) {
     return {
       redirect: {
-        destination: `/${service}/sport/articles/${assetId}?renderer_env=live`,
+        destination: `/${service}/sport/articles/${assetId}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`,
         permanent: false,
       },
     };
@@ -142,7 +142,7 @@ export default async (context: GetServerSidePropsContext) => {
   if (isSportAssetType && !isSportTag) {
     return {
       redirect: {
-        destination: `/${service}/articles/${assetId}?renderer_env=live`,
+        destination: `/${service}/articles/${assetId}${rendererEnv ? `?renderer_env=${rendererEnv}` : ''}`,
         permanent: false,
       },
     };
