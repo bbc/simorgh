@@ -1,5 +1,5 @@
 import { PageTypes } from '#app/models/types/global';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 // Any running serverside and client side experiments which collect Optimizely Page Metrics; page view, page complete, scroll depth
 // Includes PageType so that different experiments can be run on different pageTypes
 
@@ -12,6 +12,11 @@ const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
     // include tod2 so page-level metrics also fire on article pages for this experiment
     pageType: ARTICLE_PAGE,
+    activeExperiments: ['newswb_ws_tod_article_2'],
+  },
+  {
+    // include maps so page views and visits still count when the video grid links to media pages
+    pageType: MEDIA_ASSET_PAGE,
     activeExperiments: ['newswb_ws_tod_article_2'],
   },
 ];
