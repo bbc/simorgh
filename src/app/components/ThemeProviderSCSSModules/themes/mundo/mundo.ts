@@ -1,10 +1,10 @@
-import '../../fontFaces/reith-sans-bold.module.scss';
-import '../../fontFaces/reith-sans-regular.module.scss';
-import '../../fontFaces/reith-serif-medium.module.scss';
-import '../../fontFaces/reith-serif-light.module.scss';
-import '../../fontVariants/reith.module.scss';
-import './palette.module.scss';
-import '../../fontScripts/latinWithDiacritics.module.scss';
+import '../../fontFaces/reith-sans-bold.scss';
+import '../../fontFaces/reith-sans-regular.scss';
+import '../../fontFaces/reith-serif-medium.scss';
+import '../../fontFaces/reith-serif-light.scss';
+import '../../fontVariants/reith.scss';
+import './palette.scss';
+import '../../fontScripts/latinWithDiacritics.scss';
 import withThemeProvider from '#app/components/ThemeProviderSCSSModules/withThemeProvider';
 import brandSVG from '../../chameleonLogos/mundo';
 
