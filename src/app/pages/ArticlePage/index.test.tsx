@@ -1100,6 +1100,24 @@ describe('Article Page', () => {
       ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
 
+    it('passes the active experiment to ati analytics when the adaptive variant is on', () => {
+      render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
+        </Context>,
+      );
+
+      expect(atiAnalyticsSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          atiData: expect.objectContaining({
+            experimentName: 'newswb_ws_tod_article_2',
+            experimentVariant: 'adaptive_variation',
+          }),
+        }),
+        undefined,
+      );
+    });
+
     it('does not render media curation when data is missing', () => {
       const { queryByTestId } = render(
         <Context service="hindi">
