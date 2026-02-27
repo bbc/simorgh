@@ -495,7 +495,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
         {showAdaptiveMediaCuration && (
           <div css={styles.adaptiveMediaCurationRow}>
-            <section data-testid="adaptive-media-curation">
+            <div data-testid="adaptive-media-curation">
               <Curation
                 visualStyle={VISUAL_STYLE.FEED}
                 visualProminence={VISUAL_PROMINENCE.NORMAL}
@@ -509,7 +509,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   experimentProps: timeOfDayExperimentProps,
                 })}
               />
-            </section>
+            </div>
           </div>
         )}
         {!isApp && !isPGL && (
