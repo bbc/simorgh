@@ -45,6 +45,8 @@ const withThemeProvider = (
   const ThemeProvider: FC<Props> = ({ children }) => {
     const { isAmp, isLite, pageType, isSportPage } = use(RequestContext);
 
+    const isDarkUi = isDarkUiPage(pageType);
+
     const baseThemeToUse = isSportPage && sportTheme ? sportTheme : baseTheme;
 
     const brandTheme = useMergeTheme(baseThemeToUse, pwaTheme);
@@ -53,7 +55,7 @@ const withThemeProvider = (
       <EmotionThemeProvider
         theme={getThemeConfig({
           ...brandTheme,
-          isDarkUi: isDarkUiPage(pageType),
+          isDarkUi,
           isLite,
         })}
       >
