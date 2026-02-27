@@ -66,7 +66,7 @@ const StyledLink = styled.a`
   &:hover::after {
     ${ListItemBorder}
     border-bottom: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.POSTBOX};
+      props.theme.palette.BRAND_BORDER};
     ${({ currentLink, theme }) =>
       currentLink &&
       `
