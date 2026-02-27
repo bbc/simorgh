@@ -7,7 +7,6 @@ import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
@@ -19,7 +18,7 @@ const testDetails = [
   {
     path: '/pidgin/live/c7p765ynk9qt',
     id: 'c7p765ynk9qt',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['local'],
     service: 'pidgin',
     tests: [
       testsThatAlwaysRunForAllPages,
@@ -46,7 +45,6 @@ const atiAnalyticsTestSuites = [
     siteId: 5,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -57,13 +55,12 @@ const atiAnalyticsTestSuites = [
   },
   {
     path: '/pidgin/live/c7p765ynk9qt',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'pidgin',
     pageIdentifier: 'live_coverage.c7p765ynk9qt.page',
     siteId: 70,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -80,7 +77,6 @@ const atiAnalyticsTestSuites = [
     siteId: 95,
     applicationType: 'responsive',
     contentType: 'live-coverage',
-    useReverb: true,
     tests: [
       assertPageView,
       assertScrollableNavigationComponentView,
@@ -100,7 +96,6 @@ describe('Live Page Spec', () => {
   runTestsForPage({
     pageType: LIVE_PAGE,
     testSuites: atiAnalyticsTestSuites,
-    beforeAll: [setUserIDCookie],
     testIsolation: true,
   });
 });

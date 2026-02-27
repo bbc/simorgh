@@ -67,7 +67,7 @@ exports[`Canonical Live Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Live Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
 
-exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
 exports[`Canonical Live Header I can see the branding 1`] = `
 {
@@ -82,48 +82,6 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 {
   "text": "Početna strana",
   "url": "/serbian/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "Studentske blokade",
-  "url": "/serbian/topics/cly9dd4w09wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
-{
-  "text": "Srbija",
-  "url": "/serbian/topics/cr50vdy9q6wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 4`] = `
-{
-  "text": "Balkan",
-  "url": "/serbian/topics/c06g87137jgt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 5`] = `
-{
-  "text": "Svet",
-  "url": "/serbian/topics/c2lej05e1eqt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/serbian/topics/c44vyp5g049t/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 7`] = `
-{
-  "text": "Najpopularnije",
-  "url": "/serbian/lat/popular/read",
 }
 `;
 

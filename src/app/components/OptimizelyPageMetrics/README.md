@@ -22,6 +22,7 @@ The `OptimizelyPageMetric` component:
 | trackPageView     | boolean | false   | Enables tracking of page views.     |
 | trackPageDepth    | boolean | false   | Enables tracking of scroll depth.   |
 | trackPageComplete | boolean | false   | Enables tracking of page completes. |
+| trackVisit        | boolean | false   | Enables tracking of visits.         |
 
 ## experimentsForPageMetrics Array
 
@@ -78,3 +79,18 @@ Or multiple times to invoke different page metrics in different sections of the 
   <OptimizelyPageMetrics trackPageView trackPageDepth />;
 }
 ```
+
+## Page views per visit ratio metric
+
+The page views per visit ratio metric is built from two Optimizely events:
+
+- numerator: `page-views`
+- denominator: `visit`
+
+Visit counting is session based. A new visit is counted when there has been at least 30 minutes of inactivity since the last tracked page view. Each tracked page view updates the last activity timestamp so that continued browsing keeps the same visit.
+
+When `trackPageView` and `trackVisit` are both enabled, the visit event is sent before the page view event on the same page load. This ensures the ratio metric counts the page view within Optimizely's 48 hour attribution window for the denominator.
+
+For page views per visit, enable both `trackPageView` and `trackVisit`. Visit events are emitted from the page view tracker to preserve ordering and avoid duplicate visits.
+
+For interpretation, add the numerator and denominator events as separate metrics alongside the ratio metric in Optimizely.

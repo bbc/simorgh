@@ -5,13 +5,12 @@ import {
   assertATIComponentViewEvent,
 } from '../../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import { AtiAssertionFnProps } from './type';
+import interceptExternalLinks from '../../../../support/helpers/interceptExternalLinks';
 
 const { PODCAST_PROMO } = COMPONENTS;
 
 export const assertPodcastPromoComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -31,8 +30,6 @@ export const assertPodcastPromoComponentView = ({
     assertATIComponentViewEvent({
       component: PODCAST_PROMO,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });
@@ -41,8 +38,6 @@ export const assertPodcastPromoComponentView = ({
 
 export const assertPodcastPromoComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
   siteId,
@@ -50,6 +45,7 @@ export const assertPodcastPromoComponentClick = ({
   it('should send a click event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
     cy.visit(path);
+    interceptExternalLinks({ httpCode: 200 });
 
     cy.get('[data-e2e="podcast-promo"]').scrollIntoView({
       duration: 1000,
@@ -61,8 +57,6 @@ export const assertPodcastPromoComponentClick = ({
     assertATIComponentClickEvent({
       component: PODCAST_PROMO,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
       siteId,
     });

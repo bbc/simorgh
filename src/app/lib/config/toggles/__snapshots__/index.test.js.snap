@@ -3,6 +3,9 @@
 exports[`Toggles Config when application environment is live should contain correct default values 1`] = `
 {
   "_environment": "live",
+  "account": {
+    "enabled": false,
+  },
   "ads": {
     "enabled": false,
   },
@@ -10,6 +13,9 @@ exports[`Toggles Config when application environment is live should contain corr
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -88,6 +94,10 @@ exports[`Toggles Config when application environment is live should contain corr
 exports[`Toggles Config when application environment is local should contain correct default values 1`] = `
 {
   "_environment": "local",
+  "account": {
+    "enabled": true,
+    "value": "hindi",
+  },
   "ads": {
     "enabled": true,
   },
@@ -95,6 +105,9 @@ exports[`Toggles Config when application environment is local should contain cor
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {
@@ -173,6 +186,9 @@ exports[`Toggles Config when application environment is local should contain cor
 exports[`Toggles Config when application environment is test should contain correct default values 1`] = `
 {
   "_environment": "test",
+  "account": {
+    "enabled": false,
+  },
   "ads": {
     "enabled": false,
   },
@@ -180,6 +196,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": false,
   },
   "articleLiteSiteLink": {
+    "enabled": true,
+  },
+  "articlePortraitVideo": {
     "enabled": true,
   },
   "comscoreAnalytics": {

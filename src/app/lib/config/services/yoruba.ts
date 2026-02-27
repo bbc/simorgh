@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     atiAnalyticsProducerName: 'YORUBA',
-    useReverb: true,
     chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
@@ -61,6 +60,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle: 'Àbáwọlé',
     translations: {
+      and: 'ati',
       pagination: {
         previousPage: 'Ìṣájú',
         nextPage: 'Tókàn',
@@ -340,18 +340,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Ìròyìn',
         url: '/yoruba',
-      },
-      {
-        title: 'Eré ìdárayá',
-        url: '/yoruba/topics/c340q0y3p5kt',
-      },
-      {
-        title: 'Fídíò',
-        url: '/yoruba/topics/ck5rznlk6k3t',
-      },
-      {
-        title: 'Èyí to gbajúmọ̀ jù',
-        url: '/yoruba/popular/read',
       },
     ],
   },

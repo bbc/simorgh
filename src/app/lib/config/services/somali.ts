@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-somali',
     atiAnalyticsProducerId: '83',
     atiAnalyticsProducerName: 'SOMALI',
-    useReverb: true,
     chartbeatDomain: 'somali.bbc.co.uk',
     brandName: 'BBC News Somali',
     product: 'BBC News',
@@ -47,7 +46,30 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Somali',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Xayeysiin WhatsApp',
+      brandTitle: 'BBC Somali WhatsApp',
+      brandDescription:
+        'Warbixinada qotada dheer iyo wararka BBC Somali oo toos kuugu imanaaya WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mqc02v.png',
+        alt: 'BBC Somali xayeysiin WhatsApp',
+      },
+      linkLabel: {
+        text: 'Halkaan kaga soo biir',
+        href: 'https://www.whatsapp.com/channel/0029Vb7CBbA0rGiHILXDlJ3u',
+      },
+      skipLink: {
+        text: 'Iska gudbi, siina wada aqrinta',
+        endTextVisuallyHidden: 'Dhamaadka xayeysiinta',
+      },
+    },
     translations: {
+      and: 'iyo',
+      readTime: {
+        readTimePrefix: 'Waqtiga akhriska',
+        minute: 'daqiiqo',
+      },
       pagination: {
         page: 'Bog',
         previousPage: 'Biggii Hore',
@@ -344,38 +366,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'War',
         url: '/somali',
-      },
-      {
-        title: 'Siyaasad',
-        url: '/somali/topics/cwr9jry737xt',
-      },
-      {
-        title: 'Soomaali',
-        url: '/somali/topics/cpzd4zk7qrjt',
-      },
-      {
-        title: 'Raadiye',
-        url: '/somali/topics/cn6rqlrkm0pt',
-      },
-      {
-        title: 'Muuqaal',
-        url: '/somali/topics/c7pl4k5r9xxt',
-      },
-      {
-        title: 'Haween',
-        url: '/somali/topics/cxnykn5732gt',
-      },
-      {
-        title: 'Ciyaaro',
-        url: '/somali/topics/cpzd4zj1pn2t',
-      },
-      {
-        title: 'Saynis iyo Caafimaad',
-        url: '/somali/topics/c2dr4lek2r9t',
-      },
-      {
-        title: 'Fan iyo Dhaqan',
-        url: '/somali/topics/cwy5g18443dt',
       },
     ],
   },

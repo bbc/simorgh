@@ -2,9 +2,6 @@ import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -19,6 +16,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 
 import {
   getArticleId,
@@ -44,11 +42,10 @@ import {
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
-import PersonalisedContent from '../../components/PersonalisedContent';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -80,7 +77,7 @@ import ArticleHeadline from './ArticleHeadline';
 import {
   isPortraitVideo,
   isPortraitVideoUnderHeadline,
-} from '../utils/portraitVideo';
+} from '../../components/MediaLoader/utils/isPortraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -133,10 +130,9 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
-
+const getWsojComponent = ({ data }: { data: Recommendation[] }) => (
+  <Recommendations data={data} />
+);
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -156,9 +152,9 @@ const getVideoComponent =
     const title = translations.media.watchMoments;
 
     const showTitle =
-      isPortraitVideo(blocks) &&
+      isPortraitVideo(blocks as MediaBlock[]) &&
       title &&
-      !isPortraitVideoUnderHeadline(pageBlocks, blocks);
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
@@ -170,18 +166,17 @@ const getVideoComponent =
 
 const getContinueReadingButton =
   ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
-  () => {
-    return (
-      <ContinueReadingButton
-        showAllContent={showAllContent}
-        setShowAllContent={setShowAllContent}
-      />
-    );
-  };
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+    />
+  );
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -194,24 +189,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const { enabled: continueReadingButtonToggle } = useToggle(
     'continueReadingButton',
   );
+  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
 
   const {
     palette: { GREY_2 },
   } = useTheme();
-
-  // EXPERIMENT: Time of Day Experiment
-  const timeOfDayExperimentName = 'newswb_ws_tod_article';
-  const timeOfDayExperimentVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // EXPERIMENT: Location based Topics Experiment
-  const personalisedContentExperimentName = 'newswb_ws_location_based_topics';
-  const personalisedContentExperimentVariant = useOptimizelyVariation({
-    experimentName: personalisedContentExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
@@ -222,6 +204,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
+  const { enabled: articlePortraitVideoEnabled } = useToggle(
+    'articlePortraitVideo',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -262,12 +247,24 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    // Better way to handle this?
-    ...(timeOfDayExperimentVariant &&
-      timeOfDayExperimentVariant !== 'off' && {
-        experimentName: timeOfDayExperimentName,
-        experimentVariant: timeOfDayExperimentVariant,
-      }),
+  };
+
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
+      articlePortraitVideoEnabled,
+  );
+
+  const portraitVideoCarouselTitle =
+    pageData?.portraitVideoItems?.title ?? translations.media.watch;
+
+  const portraitVideoCarouselProps = {
+    title: portraitVideoCarouselTitle,
+    blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
+    eventTrackingData: {
+      componentName: 'portrait-video-carousel-article',
+      groupTracker: { name: portraitVideoCarouselTitle },
+    },
+    backgroundColor: 'rgba(246, 246, 246, 0.75)',
   };
 
   const hasContinueReadingBlock = blocks.some(
@@ -305,9 +302,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
@@ -345,28 +342,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
-  // EXPERIMENT: Location based Topics Experiment
-  const showPersonalisedContent = Boolean(
-    !isAmp &&
-      !isLite &&
-      !isApp &&
-      personalisedContentExperimentVariant &&
-      personalisedContentExperimentVariant !== 'off',
-  );
-
-  // EXPERIMENT: Location based Topics Experiment
-  const personalisedContentBlock = showPersonalisedContent ? (
-    <PersonalisedContent
-      pageData={pageData}
-      personalisedTopicCurationExperimentVariant={
-        personalisedContentExperimentVariant ?? ''
-      }
-    />
-  ) : null;
-
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
-    !pageData?.secondaryColumn?.topStories?.length;
+    !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
   return (
     <div css={styles.pageWrapper}>
@@ -425,7 +403,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
             <OptimizelyPageMetrics trackPageComplete />
           </main>
-          <OptimizelyPageMetrics trackPageView trackPageDepth />
+          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
             <RelatedTopics
               css={[
@@ -438,71 +416,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               mobileDivider={false}
             />
           )}
-          {/* EXPERIMENT: Location based Topics Experiment */}
-          {personalisedContentExperimentVariant === 'variation_2' &&
-            personalisedContentBlock}
-          <RelatedContentSection
-            content={blocks}
-            // EXPERIMENT: Time of Day Experiment
-            {...(timeOfDayExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: timeOfDayExperimentName,
-                experimentVariant: timeOfDayExperimentVariant,
-              },
-            })}
-            // EXPERIMENT: Location based Topics Experiment
-            {...(personalisedContentExperimentVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: personalisedContentExperimentName,
-                experimentVariant: personalisedContentExperimentVariant,
-              },
-            })}
-          />
-          {/* EXPERIMENT: Location based Topics Experiment */}
-          {personalisedContentExperimentVariant === 'variation_1' &&
-            personalisedContentBlock}
+          {showPortraitVideoCarousel && (
+            <PortraitVideoCarousel
+              {...portraitVideoCarouselProps}
+              css={styles.portraitVideoCarousel}
+            />
+          )}
+          <RelatedContentSection content={blocks} />
         </div>
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            // EXPERIMENT: Location based Topics Experiment
-            personalisedContentExperimentVariant={
-              personalisedContentExperimentVariant
-            }
-            personalisedContentExperimentName={
-              personalisedContentExperimentName
-            }
-            // EXPERIMENT: Time of Day Experiment
-            timeOfDayExperimentVariant={timeOfDayExperimentVariant}
-            timeOfDayExperimentName={timeOfDayExperimentName}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
+
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
-          columnLayout="multiColumn"
+          columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          eventTrackingData={{
-            componentName: 'most-read',
-            // EXPERIMENT: Time of Day Experiment
-            ...(timeOfDayExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayExperimentVariant,
-            }),
-            // EXPERIMENT: Location based Topics Experiment
-            ...(personalisedContentExperimentVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: personalisedContentExperimentName,
-              experimentVariant: personalisedContentExperimentVariant,
-            }),
-          }}
         />
       )}
     </div>

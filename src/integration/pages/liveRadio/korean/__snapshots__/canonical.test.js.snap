@@ -106,7 +106,7 @@ exports[`Canonical Korean Live Radio Page Footer Anchors should match text and u
 
 exports[`Canonical Korean Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
 
-exports[`Canonical Korean Live Radio Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
+exports[`Canonical Korean Live Radio Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`Canonical Korean Live Radio Page Header I can see the branding 1`] = `
 {
@@ -121,62 +121,6 @@ exports[`Canonical Korean Live Radio Page Header Navigation link should match te
 {
   "text": "뉴스",
   "url": "/korean",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "국내",
-  "url": "/korean/topics/cxnyk3v82rgt",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "북한",
-  "url": "/korean/topics/cg726kygwz9t",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "세계",
-  "url": "/korean/topics/ce71k82r6gzt",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "건강·과학",
-  "url": "/korean/topics/cly27z42zk7t",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "문화",
-  "url": "/korean/topics/c8y946p5qknt",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "비디오",
-  "url": "/korean/topics/cnwng7v0e54t",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 8`] = `
-{
-  "text": "라디오",
-  "url": "/korean/bbc_korean_radio/programmes/w13xttll",
-}
-`;
-
-exports[`Canonical Korean Live Radio Page Header Navigation link should match text and url 9`] = `
-{
-  "text": "다운로드",
-  "url": "/korean/downloads",
 }
 `;
 

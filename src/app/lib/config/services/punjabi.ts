@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     atiAnalyticsProducerName: 'PUNJABI',
-    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
@@ -48,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'ਅਤੇ',
+      readTime: {
+        readTimePrefix: 'ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ',
+        minute: 'ਮਿੰਟ',
+      },
       pagination: {
         previousPage: 'ਪਿੱਛੇ',
         nextPage: 'ਅੱਗੇ',
@@ -289,22 +293,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
-      },
-      {
-        title: 'ਵੀਡੀਓ',
-        url: '/punjabi/topics/cx12qmz6jm4t',
-      },
-      {
-        title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
-        url: '/punjabi/popular/read',
-      },
-      {
-        title: 'ਭਾਰਤ',
-        url: '/punjabi/topics/cz74k76gjqxt',
-      },
-      {
-        title: 'ਕੌਮਾਂਤਰੀ',
-        url: '/punjabi/topics/c2lej05e43lt',
       },
     ],
     footer: {

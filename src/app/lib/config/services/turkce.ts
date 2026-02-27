@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     atiAnalyticsProducerName: 'TURKISH',
-    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
@@ -48,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 've',
       readTime: {
         readTimePrefix: 'Okuma süresi',
         quick: 'Kısa haber',
@@ -335,34 +335,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Haberler',
         url: '/turkce',
-      },
-      {
-        title: 'Türkiye',
-        url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: 'Ortadoğu',
-        url: '/turkce/topics/cg726y2qxg1t',
-      },
-      {
-        title: 'Rusya-Ukrayna Savaşı',
-        url: '/turkce/topics/cy0ryl4pvx6t',
-      },
-      {
-        title: 'Ekonomi',
-        url: '/turkce/topics/cg726y2k82dt',
-      },
-      {
-        title: 'Sağlık',
-        url: '/turkce/topics/cnq68n6wgzdt',
-      },
-      {
-        title: 'Bilim',
-        url: '/turkce/topics/c404v74nk56t',
-      },
-      {
-        title: 'Teknoloji',
-        url: '/turkce/topics/c2dwqnwkvnqt',
       },
     ],
   },

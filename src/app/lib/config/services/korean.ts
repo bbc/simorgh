@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     atiAnalyticsProducerName: 'KOREAN',
-    useReverb: true,
     chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
@@ -48,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: '',
+      readTime: {
+        readTimePrefix: '읽는 시간',
+        minute: '분',
+      },
       pagination: {
         previousPage: '이전',
         nextPage: '다음',
@@ -332,38 +336,6 @@ export const service: DefaultServiceConfig = {
       {
         title: '뉴스',
         url: '/korean',
-      },
-      {
-        title: '국내',
-        url: '/korean/topics/cxnyk3v82rgt',
-      },
-      {
-        title: '북한',
-        url: '/korean/topics/cg726kygwz9t',
-      },
-      {
-        title: '세계',
-        url: '/korean/topics/ce71k82r6gzt',
-      },
-      {
-        title: '건강·과학',
-        url: '/korean/topics/cly27z42zk7t',
-      },
-      {
-        title: '문화',
-        url: '/korean/topics/c8y946p5qknt',
-      },
-      {
-        title: '비디오',
-        url: '/korean/topics/cnwng7v0e54t',
-      },
-      {
-        title: '라디오',
-        url: '/korean/bbc_korean_radio/programmes/w13xttll',
-      },
-      {
-        title: '다운로드',
-        url: '/korean/downloads',
       },
     ],
     timezone: 'Asia/Seoul',

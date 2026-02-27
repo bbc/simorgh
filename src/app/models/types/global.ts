@@ -24,6 +24,13 @@ export type Toggles =
   | Record<string, ToggleDefinition>
   | { _environment: string };
 
+export type Navigation = {
+  title: string;
+  url: string;
+  hideOnLiteSite?: boolean;
+  subItems?: Navigation[];
+};
+
 export type ComponentExperimentProps = {
   sendOptimizelyEvents?: boolean;
   experimentName?: string;
@@ -134,3 +141,11 @@ export type ServicesVariantsProps = {
   service: Services;
   variant?: Variants;
 };
+
+export type EffectiveNetworkType =
+  | 'slow-2g'
+  | '2g'
+  | '3g'
+  | '4g'
+  | '5g'
+  | 'unknown';

@@ -10,6 +10,7 @@ import {
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
 import { MediaOverrides } from '#app/models/types/media';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import useToggle from '../../hooks/useToggle';
 import {
   getArticleId,
@@ -24,7 +25,7 @@ import {
 } from '../../lib/utilities/parseAssetData';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
-import ScrollablePromo from '../../legacy/components/ScrollablePromo';
+import ArticleLinksBlock from '../../components/ArticleLinksBlock';
 
 import headings from '../../legacy/containers/Headings';
 import visuallyHiddenHeadline from '../../legacy/containers/VisuallyHiddenHeadline';
@@ -63,12 +64,12 @@ import styles from './MediaArticlePage.styles';
 import { ComponentToRenderProps, TimestampProps } from './types';
 import checkIsLiveMedia from './utils/checkIsLiveMedia';
 
-import { isPortraitVideo } from '../utils/portraitVideo';
+import { isPortraitVideo } from '../../components/MediaLoader/utils/isPortraitVideo';
 
 const getAudioVideoComponent =
   (isCpsMap: boolean) => (props: ComponentToRenderProps) => {
     const { blocks } = props;
-    const isPortrait = isPortraitVideo(blocks);
+    const isPortrait = isPortraitVideo(blocks as MediaBlock[]);
     const className = isPortrait ? 'portrait-media-loader' : '';
 
     return (
@@ -121,7 +122,9 @@ const getBylineComponent =
       </Byline>
     ) : null;
 
-const Links = (props: ComponentToRenderProps) => <ScrollablePromo {...props} />;
+const Links = (props: ComponentToRenderProps) => (
+  <ArticleLinksBlock {...props} />
+);
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -232,6 +235,8 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
     links: Links,
   };
 
+  // metrics are gated by experimentsForPageMetrics; add map experiment names there when ready
+  // flags mirror article page for page views per visit tracking
   return (
     <div css={styles.pageWrapper}>
       <ATIAnalytics atiData={atiData} />
@@ -279,6 +284,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
           <main css={styles.mainContent} role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
             <RelatedTopics css={styles.relatedTopics} topics={topics} />
           )}

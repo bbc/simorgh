@@ -1,5 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
@@ -19,7 +20,48 @@ import {
   assertTopBarOJComponentClick,
   assertTopBarOJComponentView,
 } from '../specialFeatures/atiAnalytics/assertions/topBarOjs';
-import { setUserIDCookie } from '../specialFeatures/atiAnalytics/helpers';
+import {
+  assertArticleLiteSiteLinkComponentClick,
+  assertArticleLiteSiteLinkComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLiteSiteLink';
+import {
+  assertTopStoriesComponentClick,
+  assertTopStoriesComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/topStories';
+import {
+  assertFeaturesAnalysisComponentClick,
+  assertFeaturesAnalysisComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/featuresAnalysis';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRelatedTopicsComponentClick,
+  assertRelatedTopicsComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/relatedTopics';
+import {
+  assertRelatedContentComponentClick,
+  assertRelatedContentComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/relatedContent';
+import {
+  assertMostReadComponentClick,
+  assertMostReadComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/mostRead';
+import {
+  assertLatestMediaComponentClick,
+  assertLatestMediaComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/latestMedia';
+import {
+  assertSocialEmbedComponentClick,
+  assertSocialEmbedComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/socialEmbed';
+import {
+  assertArticleLinksBlockComponentClick,
+  assertArticleLinksBlockComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/articleLinksBlock';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 
 const canonicalTests = [
   testsForAllPages,
@@ -239,6 +281,20 @@ const nonSmokeCanonicalTestSuites = [
 
 const atiAnalyticsTestSuites = [
   {
+    path: '/hausa/articles/cw43vy8zdjvo',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.articles.cw43vy8zdjvo.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentView,
+      assertLatestMediaComponentClick,
+    ],
+  },
+  {
     path: '/hindi/articles/cn8xe1llnyyo',
     runforEnv: ['live'],
     service: 'hindi',
@@ -252,6 +308,97 @@ const atiAnalyticsTestSuites = [
     ],
   },
   {
+    path: '/gahuza/articles/c5y51yxeg53o',
+    runforEnv: ['local'],
+    service: 'gahuza',
+    pageIdentifier: 'gahuza.articles.c5y51yxeg53o.page',
+    siteId: 40,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [
+      assertPageView,
+      assertArticleLiteSiteLinkComponentView,
+      assertArticleLiteSiteLinkComponentClick,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertPodcastPromoComponentView,
+      assertPodcastPromoComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/ce9wk6glg4lo',
+    runforEnv: ['local', 'live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.ce9wk6glg4lo.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [
+      assertPageView,
+      assertFeaturesAnalysisComponentView,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertSocialEmbedComponentView,
+      assertSocialEmbedComponentClick,
+    ],
+  },
+  {
+    path: '/pidgin/articles/cyv3zm4y428o',
+    runforEnv: ['live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cyv3zm4y428o.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'article',
+    tests: [
+      assertPageView,
+      assertFeaturesAnalysisComponentView,
+      assertFeaturesAnalysisComponentClick,
+      assertMostReadComponentView,
+      assertMostReadComponentClick,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+      assertTopStoriesComponentView,
+      assertTopStoriesComponentClick,
+      assertArticleLinksBlockComponentClick,
+      assertArticleLinksBlockComponentView,
+    ],
+  },
+  {
+    path: '/pidgin/articles/cw0x29n2pvqo',
+    runforEnv: ['local', 'live'],
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.articles.cw0x29n2pvqo.page',
+    siteId: 70,
+    applicationType: 'responsive',
+    contentType: 'article-sfv',
+    tests: [
+      assertPageView,
+      assertLatestMediaComponentClick,
+      assertLatestMediaComponentView,
+      assertRelatedTopicsComponentView,
+      assertRelatedTopicsComponentClick,
+      assertRelatedContentComponentView,
+      assertRelatedContentComponentClick,
+    ],
+  },
+  {
     path: '/polska/articles/c639526lxlro',
     runforEnv: ['local'],
     service: 'polska',
@@ -259,8 +406,11 @@ const atiAnalyticsTestSuites = [
     siteId: 135,
     applicationType: 'responsive',
     contentType: 'article',
-    useReverb: true,
-    tests: [assertTopBarOJComponentClick, assertTopBarOJComponentView],
+    tests: [
+      assertPageView,
+      assertTopBarOJComponentClick,
+      assertTopBarOJComponentView,
+    ],
   },
 ] as unknown as TestDataType[];
 
@@ -276,24 +426,6 @@ const ampTestSuites = canonicalTestSuites.map(testSuite => {
   };
 });
 
-// Additional scenarios for news on higher environments
-ampTestSuites.push(
-  ...[
-    {
-      path: '/news/articles/cn7k01xp8kxo.amp',
-      runforEnv: ['local', 'test'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-    {
-      path: '/news/articles/cj7xrxz0e8zo.amp',
-      runforEnv: ['live'],
-      service: 'news',
-      tests: [...ampTests],
-    },
-  ],
-);
-
 const liteTestSuites = canonicalTestSuites
   .filter(({ service }) => service !== 'news')
   .map(testSuite => {
@@ -304,18 +436,55 @@ const liteTestSuites = canonicalTestSuites
     };
   });
 
+const atiAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
+    applicationType: 'amp',
+    tests: [assertPageView],
+  };
+});
+
+const atiLiteTestSuites = atiAnalyticsTestSuites
+  .filter(({ path, service }) => path !== '/ws/languages' && service !== 'news')
+  .map(testSuite => {
+    const excludedLiteTests = [
+      assertPodcastPromoComponentView, // Podcast promo removed from lite article pages
+      assertPodcastPromoComponentClick, // Podcast promo removed from lite article pages
+      assertSocialEmbedComponentView, // Social embeds removed from lite article pages
+      assertSocialEmbedComponentClick, // Social embeds removed from lite article pages
+      assertArticleLiteSiteLinkComponentView, // Lite Site Link only displayed on canonical article pages
+      assertArticleLiteSiteLinkComponentClick, // Lite Site Link only displayed on canonical article pages
+      assertFeaturesAnalysisComponentClick, // Features & Analysis component click event test not working on lite pages
+    ];
+
+    const liteSiteTests = testSuite.tests
+      .filter(test => !excludedLiteTests.includes(test))
+      .filter(
+        test =>
+          // Exclude component click tests, as component click support is not supported on all components yet
+          !test.name.toLowerCase().includes('click'),
+      );
+
+    // All lite enabled pages should have the Lite Site Summary component
+    liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+    return {
+      ...testSuite,
+      path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+      applicationType: 'lite',
+      tests: [...liteSiteTests],
+    };
+  });
+
 runTestsForPage({
   pageType: ARTICLE_PAGE,
   beforeEachFns: [],
   testSuites: [
-    ...atiAnalyticsTestSuites,
-    ...atiAnalyticsTestSuites.map(testSuite => ({
-      ...testSuite,
-      path: `${testSuite.path}.lite`,
-      applicationType: 'lite',
-    })),
-  ],
-  beforeAll: [setUserIDCookie],
+    ...atiAmpTestSuites,
+    ...atiAnalyticsTestSuites.filter(({ service }) => service !== 'news'),
+    ...atiLiteTestSuites,
+  ] as unknown as TestDataType[],
 });
 
 runTestsForPage({

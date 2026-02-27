@@ -157,7 +157,7 @@ exports[`AMP Most Read Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
-exports[`AMP Most Read Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+exports[`AMP Most Read Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `
 {
@@ -172,41 +172,6 @@ exports[`AMP Most Read Page Header Navigation link should match text and url 1`]
 {
   "text": "Tin chính",
   "url": "/vietnamese",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Việt Nam",
-  "url": "/vietnamese/topics/ckdxnx1x5rnt",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Thế giới",
-  "url": "/vietnamese/topics/cnlv9j1ekq0t",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Kinh tế",
-  "url": "/vietnamese/topics/cez1ey7nzj3t",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Thể thao",
-  "url": "/vietnamese/topics/ckdxnx1k7zxt",
-}
-`;
-
-exports[`AMP Most Read Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/vietnamese/topics/cl29j0ekkvdt",
 }
 `;
 
