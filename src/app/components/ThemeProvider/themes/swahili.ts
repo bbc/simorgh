@@ -3,7 +3,6 @@ import {
   GHOST,
   WHITE,
   POSTBOX,
-  POSTBOX_30,
   SPORT_YELLOW,
   BLACK,
   MIDNIGHT_BLACK,
@@ -22,7 +21,7 @@ export const theme = {
     BRAND_LOGO: WHITE,
     BRAND_FOREGROUND: GHOST,
     BRAND_HIGHLIGHT: WHITE,
-    BRAND_BORDER: POSTBOX_30,
+    BRAND_BORDER: POSTBOX,
   },
   typography: {
     script: latinScript,
