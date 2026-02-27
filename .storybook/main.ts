@@ -64,7 +64,8 @@ const storybookConfig: StorybookConfig = {
     {
       name: '@storybook/addon-styling-webpack',
       options: {
-        rules: [          {
+        rules: [
+          {
             test: /\.module\.scss$/,
             use: [
               'style-loader',
@@ -80,7 +81,11 @@ const storybookConfig: StorybookConfig = {
                 loader: 'sass-loader',
               },
             ],
-          }
+          },
+          {
+            test: /(?<!\.module)\.scss$/,
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
         ],
       },
     },
