@@ -401,24 +401,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       isAdaptiveTimeOfDayVariant &&
       mediaCurationContent?.summaries?.length,
   );
-  const renderAdaptiveMediaCuration = () =>
-    showAdaptiveMediaCuration ? (
-      <section data-testid="adaptive-media-curation">
-        <Curation
-          visualStyle={VISUAL_STYLE.FEED}
-          visualProminence={VISUAL_PROMINENCE.NORMAL}
-          summaries={mediaCurationContent?.summaries}
-          title={mediaCurationContent?.title}
-          position={mediaCurationContent?.position || 0}
-          curationId={mediaCurationContent?.curationId}
-          curationLength={mediaCurationContent?.summaries?.length || 0}
-          link={mediaCurationContent?.link}
-          {...(timeOfDayExperimentProps && {
-            experimentProps: timeOfDayExperimentProps,
-          })}
-        />
-      </section>
-    ) : null;
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -509,7 +491,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
         </div>
         {showAdaptiveMediaCuration && (
           <div css={styles.adaptiveMediaCurationRow}>
-            {renderAdaptiveMediaCuration()}
+            <section data-testid="adaptive-media-curation">
+              <Curation
+                visualStyle={VISUAL_STYLE.FEED}
+                visualProminence={VISUAL_PROMINENCE.NORMAL}
+                summaries={mediaCurationContent?.summaries}
+                title={mediaCurationContent?.title}
+                position={mediaCurationContent?.position || 0}
+                curationId={mediaCurationContent?.curationId}
+                curationLength={mediaCurationContent?.summaries?.length || 0}
+                link={mediaCurationContent?.link}
+                {...(timeOfDayExperimentProps && {
+                  experimentProps: timeOfDayExperimentProps,
+                })}
+              />
+            </section>
           </div>
         )}
         {!isApp && !isPGL && (
