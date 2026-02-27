@@ -1,6 +1,6 @@
 
-@use '../../ThemeProviderSCSSModules/fontSizes.module.scss' as fontSizes;
-@use '../../ThemeProviderSCSSModules/palette.module.scss' as palette;
+@use '../../ThemeProviderSCSSModules/fontSizes.scss' as fontSizes;
+@use '../../ThemeProviderSCSSModules/palette.scss' as palette;
 
 .h2 {
   font-family: var(--sans-bold-font-family);
