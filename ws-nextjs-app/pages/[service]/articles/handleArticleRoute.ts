@@ -117,11 +117,7 @@ export default async (context: GetServerSidePropsContext) => {
     pageType: ARTICLE_PAGE,
   });
 
-  let derivedPageType = getDerivedArticleType(article.metadata);
-
-  if (resolvedUrlWithoutQuery.includes('c33je1em7jpo')) {
-    derivedPageType = 'mediaArticle';
-  }
+  const derivedPageType = getDerivedArticleType(article.metadata);
 
   const isSportAssetType = assetType === 'sport';
 
