@@ -40,7 +40,6 @@ interface Props extends PropsWithChildren {
   pageLang?: string;
   isUK?: boolean | null;
   idctaConfig?: IdctaConfig | null;
-  initialIsSignedIn?: boolean;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -129,7 +128,6 @@ const customRender = (
     pageLang,
     isUK,
     idctaConfig,
-    initialIsSignedIn,
   } = options || {};
 
   return render(ui, {
@@ -155,7 +153,6 @@ const customRender = (
         pageLang={pageLang}
         isUK={isUK}
         idctaConfig={idctaConfig}
-        initialIsSignedIn={initialIsSignedIn}
       >
         {children}
       </AllTheProviders>
