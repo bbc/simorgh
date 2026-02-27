@@ -348,6 +348,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
+  // eslint-disable-next-line no-console
+  console.log(`📌 ArticlePage`, { isOfflineMode });
+
   return (
     <div css={styles.pageWrapper}>
       {!isOfflineMode && (

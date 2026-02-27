@@ -50,12 +50,13 @@ const PageLayoutWrapper = ({
   navItems,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
-  const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
+  const { isLite, isAmp, nonce, cspHeader, isOfflineMode } =
+    use(RequestContext);
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
-  const isOfflinePage = pageType === OFFLINE_PAGE;
+  const isOfflinePage = pageType === OFFLINE_PAGE || isOfflineMode;
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
