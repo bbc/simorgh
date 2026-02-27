@@ -41,6 +41,7 @@ export type RequestContextProps = {
   variant: Variants | null;
   country?: string | null;
   nonce?: string | null;
+  isSportPage?: boolean;
   cspHeader: string | null;
 };
 
@@ -56,6 +57,7 @@ type RequestProviderProps = {
   isApp?: boolean;
   isLite?: boolean;
   isNextJs?: boolean;
+  isSportPage?: boolean;
   pageType: PageTypes;
   pathname: string;
   service: Services;
@@ -80,6 +82,7 @@ export const RequestContextProvider = ({
   isApp = false,
   isLite = false,
   isNextJs = false,
+  isSportPage = false,
   serverSideExperiments = null,
   pageType,
   pathname,
@@ -132,6 +135,7 @@ export const RequestContextProvider = ({
       isApp,
       isLite,
       isNextJs,
+      isSportPage,
       platform,
       statsDestination,
       statusCode,
@@ -156,6 +160,7 @@ export const RequestContextProvider = ({
       isApp,
       isLite,
       isNextJs,
+      isSportPage,
       serverSideExperiments,
       origin,
       pageType,

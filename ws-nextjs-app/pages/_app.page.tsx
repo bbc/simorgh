@@ -180,6 +180,7 @@ export default class CustomApp extends App<Props> {
             isAmp={isAmp}
             isApp={isApp}
             isLite={isLite}
+            isSportPage={isSportPage}
             pageType={pageType}
             service={service}
             statusCode={status}
@@ -206,7 +207,6 @@ export default class CustomApp extends App<Props> {
                         navItems={navItems}
                         pageData={pageData}
                         status={status}
-                        isSportPage={isSportPage}
                       >
                         {RenderChildrenOrError}
                       </PageWrapper>
