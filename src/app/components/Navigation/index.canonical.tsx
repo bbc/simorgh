@@ -36,7 +36,10 @@ const CanonicalNavigationContainer: React.FC<
 }) => {
   const { isLite } = use(RequestContext);
   const { enabled: topBarOJsEnabled } = useToggle('topBarOJs');
-  const [isOpen, setIsOpen] = useState(false);
+  // Track which nav's dropdown is open: 'main', 'sticky', or null
+  const [openDropdown, setOpenDropdown] = useState<null | 'main' | 'sticky'>(
+    null,
+  );
   const [showSticky, setShowSticky] = useState(false);
   // Refs and state for sticky nav
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -46,7 +49,7 @@ const CanonicalNavigationContainer: React.FC<
 
   useMediaQuery(`(max-width: ${GROUP_2_MAX_WIDTH_BP}rem)`, event => {
     if (!event.matches) {
-      setIsOpen(false);
+      setOpenDropdown(null);
     }
   });
 
@@ -71,7 +74,7 @@ const CanonicalNavigationContainer: React.FC<
             setShowSticky(true);
           } else {
             setShowSticky(false);
-            setIsOpen(false); // Close dropdown when sticky nav hides
+            setOpenDropdown(null); // Close dropdown when sticky nav hides
           }
           ticking = false; // the ticking flag is used to prevent multiple requestAnimationFrame calls from stacking up and causing performance issues during fast scrolling.
         });
@@ -106,7 +109,12 @@ const CanonicalNavigationContainer: React.FC<
 
   // Main nav (normal)
   const mainNav = (
-    <Navigation dir={dir} isOpen={isOpen} ref={navRef} role="navigation">
+    <Navigation
+      dir={dir}
+      isOpen={openDropdown === 'main'}
+      ref={navRef}
+      role="navigation"
+    >
       <div css={styles.navStack}>
         <div style={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
@@ -121,13 +129,18 @@ const CanonicalNavigationContainer: React.FC<
               <CanonicalMenuButton
                 css={styles.menuButton}
                 announcedText={menuAnnouncedText}
-                isOpen={isOpen}
-                onClick={() => setIsOpen(!isOpen)}
+                isOpen={openDropdown === 'main'}
+                onClick={() =>
+                  setOpenDropdown(openDropdown === 'main' ? null : 'main')
+                }
                 dir={dir}
               />
             )}
           </div>
-          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+          <CanonicalDropdown
+            isOpen={openDropdown === 'main'}
+            css={styles.dropdown}
+          >
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
@@ -151,10 +164,6 @@ const CanonicalNavigationContainer: React.FC<
     !isLite && !isKeyboardNav ? (
       <div
         ref={stickyNavRef}
-        // box-shadow adds a slight shadow under the sticky nav so that it is distinguishable
-        //  from the background of the article when the colours are similar
-        // 'translateY(-100%)' slides the sticky nav up out of view when not shown, and 'translateY(0)' brings it back down into view when shown
-        // transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); animates the transition of the slide over 0.4 seconds. this can be changed
         css={css`
           position: fixed;
           top: 0;
@@ -173,7 +182,11 @@ const CanonicalNavigationContainer: React.FC<
         aria-label="Sticky navigation"
         aria-hidden="true"
       >
-        <Navigation dir={dir} isOpen={isOpen} role="navigation">
+        <Navigation
+          dir={dir}
+          isOpen={openDropdown === 'sticky'}
+          role="navigation"
+        >
           <div css={styles.navStack}>
             <div style={{ position: 'relative', width: '100%' }}>
               <div css={styles.topRow}>
@@ -189,13 +202,21 @@ const CanonicalNavigationContainer: React.FC<
                   <CanonicalMenuButton
                     css={styles.menuButton}
                     announcedText={menuAnnouncedText}
-                    isOpen={isOpen}
-                    onClick={() => setIsOpen(!isOpen)}
+                    isOpen={openDropdown === 'sticky'}
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === 'sticky' ? null : 'sticky',
+                      )
+                    }
                     dir={dir}
                   />
                 )}
               </div>
-              <CanonicalDropdown isOpen={isOpen} css={styles.dropdown} isSticky>
+              <CanonicalDropdown
+                isOpen={openDropdown === 'sticky'}
+                css={styles.dropdown}
+                isSticky
+              >
                 {dropdownListItems}
               </CanonicalDropdown>
             </div>
