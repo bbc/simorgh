@@ -18,7 +18,7 @@ import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
 // eslint-disable-next-line import/no-relative-packages
-// import tempPageData from '../../../../../src/app/hooks/useLivePagePolling/tempPageData';
+import tempPageData from '../../../../../src/app/hooks/useLivePagePolling/tempPageData';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
@@ -67,7 +67,7 @@ interface LivePageProps extends ComponentProps {
   assetId?: string | null;
 }
 
-const LivePage = ({ pageData, assetId }: LivePageProps) => {
+const LivePage = ({ assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
 
@@ -75,7 +75,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
   // COMMENTED OUT FOR DEV PURPOSES
-  // const pageData = tempPageData;
+  const pageData = tempPageData;
   const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(initialStreamData);
