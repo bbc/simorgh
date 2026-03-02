@@ -91,12 +91,13 @@ export default class CustomApp extends App<Props> {
     const toggles =
       togglesResult.status === 'fulfilled' ? togglesResult.value : {};
 
-    const idctaConfig = await getIdctaConfig(toggles, service);
     const navItems =
       navResult.status === 'fulfilled'
         ? (navResult.value?.data?.items ?? null)
         : null;
 
+    const cookieHeader = ctx.req?.headers?.cookie;
+    const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
 
@@ -121,7 +122,7 @@ export default class CustomApp extends App<Props> {
         isNextJs: true,
         serverSideExperiments,
         toggles,
-        idctaConfig,
+        idctaConfig: idctaResult,
         navItems,
       },
     };
