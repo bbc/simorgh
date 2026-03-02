@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import SERVICES_WITH_NEW_NAV from '#src/app/components/Navigation/config';
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
-import SERVICES_WITH_NEW_NAV from '../../../src/app/components/Navigation/config';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }: ServiceParametersType) => {
@@ -34,7 +34,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
       serviceName === 'ukchina' || serviceName === 'persian';
 
     const testTwoTierNav =
-      SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() !== 'live';
+      SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() === 'test';
 
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
