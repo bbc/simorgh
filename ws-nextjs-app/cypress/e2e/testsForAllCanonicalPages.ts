@@ -55,11 +55,20 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
     // this check limits these tests to arabic and tamil services on test
     if (testTwoTierNav) {
-      it('should show two tier navigation ', () => {
+      it('should show two tier navigation on desktop on test environment', () => {
         cy.viewport(1008, 900);
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
 
-        cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
+        cy.get('nav')
+          .find('[data-e2e="scrollable-nav-secondary"] ul')
+          .should('be.visible');
+      });
+
+      it('should show two tier navigation on mobile on test environment', () => {
+        cy.viewport(320, 480);
+        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
+
+        cy.get('nav button').click();
 
         cy.get('nav')
           .find('[data-e2e="scrollable-nav-secondary"] ul')
