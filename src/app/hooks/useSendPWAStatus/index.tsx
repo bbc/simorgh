@@ -1,8 +1,18 @@
-import { useEffect } from 'react';
+import { use, useEffect } from 'react';
+import useToggle from '#app/hooks/useToggle';
+import isLocal from '#app/lib/utilities/isLocal';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const useSendPWAStatus = (isPWA: boolean) => {
+  const { service } = use(ServiceContext);
+  const { enabled, value } = useToggle('offlineArticle');
+
+  const isOfflineArticleEnabled =
+    enabled &&
+    (isLocal() ? value?.toString().split('|').includes(service) : true);
+
   useEffect(() => {
-    // Service workers not available - exit .
+    // Service workers not available - exit.
     if (typeof window === 'undefined' || !navigator.serviceWorker) {
       return;
     }
@@ -14,13 +24,13 @@ const useSendPWAStatus = (isPWA: boolean) => {
         sw.controller.postMessage({
           type: 'PWA_STATUS',
           isPWA,
+          isOfflineArticleEnabled,
         });
       }
     };
 
     const sw = navigator.serviceWorker;
 
-    // if SW ready
     if (sw.ready && typeof sw.ready.then === 'function') {
       sw.ready.then(sendPWAStatus);
     }
@@ -32,7 +42,7 @@ const useSendPWAStatus = (isPWA: boolean) => {
     return () => {
       sw.removeEventListener('controllerchange', sendPWAStatus);
     };
-  }, [isPWA]);
+  }, [isPWA, isOfflineArticleEnabled]);
 };
 
 export default useSendPWAStatus;

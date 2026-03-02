@@ -251,13 +251,18 @@ self.addEventListener('message', async event => {
 
   if (event.data?.type === 'PWA_STATUS') {
     const clientId = event.source.id;
-    const { isPWA } = event.data;
+    const { isPWA, isOfflineArticleEnabled } = event.data;
 
     if (isPWA) {
       pwaClients.set(clientId, true);
       const service = getServiceFromUrl(event.source.url);
       await cacheOfflinePageAndResources(service);
-      await cacheArticles(service);
+
+      logger({ isOfflineArticleEnabled });
+
+      if (isOfflineArticleEnabled) {
+        await cacheArticles(service);
+      }
     }
   }
 });
