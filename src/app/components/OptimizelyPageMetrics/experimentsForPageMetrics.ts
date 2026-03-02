@@ -10,15 +10,15 @@ type ExperimentsForPageTypeMetrics = {
 
 const experimentsForPageMetrics: ExperimentsForPageTypeMetrics = [
   {
-    // EXPERIMENT: OJ Referrer
+    // include tod2 so page-level metrics also fire on article pages for this experiment
     pageType: ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_oj_by_referrer'],
+    activeExperiments: ['newswb_ws_tod_article_2'],
   },
   {
+    // include media article pages so page metrics still count after clicking into a video page
     pageType: MEDIA_ARTICLE_PAGE,
-    activeExperiments: ['newswb_ws_oj_by_referrer'],
+    activeExperiments: ['newswb_ws_tod_article_2'],
   },
-  // TODO add map experiment names when they are confirmed
 ];
 
 export default experimentsForPageMetrics;
