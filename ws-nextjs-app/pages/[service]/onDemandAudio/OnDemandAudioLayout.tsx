@@ -15,7 +15,9 @@ import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
 import MetadataContainer from '#app/components/Metadata';
 import LinkedData from '#app/components/LinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
+import useToggle from '#app/hooks/useToggle';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -51,6 +53,78 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
+  const { pathname, canonicalNonUkLink } = use(RequestContext);
+
+  const { enabled: showPodcastEpisodeLinkedData } = useToggle(
+    'podcastEpisodeLinkedData',
+  );
+
+  const isPodcastEpisodePage = /\/podcasts\/[^/]+\/[^/]+(?:\.lite)?$/.test(
+    pathname,
+  );
+
+  const shouldEmitPodcastEpisodeSchema =
+    isPodcast && isPodcastEpisodePage && showPodcastEpisodeLinkedData;
+
+  const episodeCanonicalUrl = canonicalNonUkLink;
+  const seriesCanonicalUrl = episodeCanonicalUrl.replace(
+    /\/([^/]+)(?:\.lite)?$/,
+    '',
+  );
+
+  const seriesId = `${seriesCanonicalUrl}#series`;
+  const episodeId = `${episodeCanonicalUrl}#episode`;
+  const audioId = `${episodeCanonicalUrl}#audio`;
+
+  const versions = pageData.mediaBlocks?.[0]?.model?.versions ?? [];
+  const availableFrom = versions[0]?.availableFrom;
+
+  const uploadDate = availableFrom
+    ? new Date(availableFrom).toISOString()
+    : new Date(releaseDateTimeStamp).toISOString();
+
+  const audioEntities = !mediaIsAvailable
+    ? []
+    : [
+        {
+          '@type': 'AudioObject',
+          name: promoBrandTitle,
+          description: shortSynopsis,
+          thumbnailUrl: thumbnailImageUrl,
+          duration: durationISO8601,
+          uploadDate,
+        },
+      ];
+
+  const podcastEntities =
+    shouldEmitPodcastEpisodeSchema && mediaIsAvailable
+      ? [
+          {
+            '@type': 'PodcastSeries',
+            '@id': seriesId,
+            name: brandTitle,
+          },
+          {
+            '@type': 'PodcastEpisode',
+            '@id': episodeId,
+            name: episodeTitle || brandTitle,
+            description: shortSynopsis || summary,
+            datePublished: new Date(releaseDateTimeStamp).toISOString(),
+            partOfSeries: { '@id': seriesId },
+            associatedMedia: {
+              '@type': 'AudioObject',
+              '@id': audioId,
+              name: episodeTitle || promoBrandTitle,
+              description: shortSynopsis,
+              duration: durationISO8601,
+              thumbnailUrl: thumbnailImageUrl,
+              uploadDate,
+            },
+          },
+        ]
+      : null;
+
+  const linkedDataEntities = podcastEntities ?? audioEntities;
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
@@ -119,23 +193,9 @@ const OnDemandAudioPage = ({
             <LinkedData
               type="WebPage"
               seoTitle={metadataTitle}
-              entities={
-                mediaIsAvailable
-                  ? [
-                      {
-                        '@type': 'AudioObject',
-                        name: promoBrandTitle,
-                        description: shortSynopsis,
-                        thumbnailUrl: thumbnailImageUrl,
-                        duration: durationISO8601,
-                        ...(releaseDateTimeStamp && {
-                          uploadDate: new Date(
-                            releaseDateTimeStamp,
-                          ).toISOString(),
-                        }),
-                      },
-                    ]
-                  : []
+              entities={linkedDataEntities}
+              mainEntityId={
+                shouldEmitPodcastEpisodeSchema ? episodeId : undefined
               }
             />
           </main>
