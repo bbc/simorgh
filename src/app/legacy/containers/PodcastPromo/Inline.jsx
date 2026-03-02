@@ -164,7 +164,6 @@ const StyledInArticlePromoIconWrapper = styled.div`
 
 const icons = {
   podcast: mediaIcons.podcast,
-  whatsapp: mediaIcons.whatsapp,
   youtube: mediaIcons.youtube,
 };
 
@@ -173,7 +172,7 @@ const getIconFromUrl = url => {
     url?.toLowerCase().includes(key),
   );
 
-  return icons[match] || icons.podcast;
+  return icons[match] || mediaIcons.communication;
 };
 
 const Promo = () => {

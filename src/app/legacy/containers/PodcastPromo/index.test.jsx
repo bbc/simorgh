@@ -16,7 +16,7 @@ import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 const PromoWithContext = ({
   inline = false,
   serviceConfigTransformer = identity,
-  config = burmeseServiceConfig,
+  config = russianServiceConfig,
 }) => (
   <ToggleContextProvider
     toggles={{
@@ -39,19 +39,19 @@ const {
 
 describe('Inline', () => {
   it('Should render a promo for podcasts correctly', () => {
-    const { container } = render(<PromoWithContext inline />, {
-      service: 'burmese',
-    });
+    const { container } = render(
+      <PromoWithContext inline config={burmeseServiceConfig} />,
+      {
+        service: 'burmese',
+      },
+    );
     expect(container).toMatchSnapshot();
   });
 
   it('Should render a promo for whatsapp correctly', () => {
-    const { container } = render(
-      <PromoWithContext inline config={russianServiceConfig} />,
-      {
-        service: 'russian',
-      },
-    );
+    const { container } = render(<PromoWithContext inline />, {
+      service: 'russian',
+    });
     expect(container).toMatchSnapshot();
   });
 

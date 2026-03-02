@@ -61,6 +61,17 @@ exports[`mediaIcons SVG should render correctly 1`] = `
       d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
     />
   </AudioMediaIcon>,
+  "communication": <InArticlePromoIcon
+    aria-hidden="true"
+    focusable="false"
+    height="32"
+    viewBox="0 0 32 32"
+    width="32"
+  >
+    <path
+      d="M1,25.1h18.8v-8.4l-7.3-0.5v-5.7H1V25.1z M8.5,24.7h-4v4.7H6L8.5,24.7z M31,17.9V2.6H11.5v15.3H31z M28.6,15.5H14V5h14.6 V15.5z M23.5,17.5l2.5,4.7h1.5v-4.7H23.5z"
+    />
+  </InArticlePromoIcon>,
   "guidance": <GuidanceIcon
     aria-hidden="true"
     focusable="false"
@@ -88,7 +99,7 @@ exports[`mediaIcons SVG should render correctly 1`] = `
       r="5.5"
     />
   </PhotoMediaIcon>,
-  "podcast": <PodcastIcon
+  "podcast": <InArticlePromoIcon
     aria-hidden="true"
     focusable="false"
     height="32"
@@ -98,7 +109,7 @@ exports[`mediaIcons SVG should render correctly 1`] = `
     <path
       d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
     />
-  </PodcastIcon>,
+  </InArticlePromoIcon>,
   "seriesstack": <SeriesStackIcon
     aria-hidden="true"
     focusable="false"
@@ -137,6 +148,17 @@ exports[`mediaIcons SVG should render correctly 1`] = `
       />
     </g>
   </VideoMediaIcon>,
+  "youtube": <InArticlePromoIcon
+    aria-hidden="true"
+    focusable="false"
+    height="32"
+    viewBox="0 0 16 16"
+    width="32"
+  >
+    <path
+      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+    />
+  </InArticlePromoIcon>,
 }
 `;
 

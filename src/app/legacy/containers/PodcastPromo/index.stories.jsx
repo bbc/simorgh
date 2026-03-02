@@ -29,13 +29,36 @@ const serviceContextMock = {
   },
 };
 
-const Component = ({ inline = false }) => (
+const serviceContextMockYoutube = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.youtube.com',
+    },
+  },
+};
+
+const serviceContextMockPodcast = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.bbc.co.uk/podcast',
+    },
+  },
+};
+
+
+const Component = ({ inline = false,  value = serviceContextMock }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
     }}
   >
-    <ServiceContext.Provider value={serviceContextMock}>
+    <ServiceContext.Provider value={value}>
       {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
     </ServiceContext.Provider>
   </ToggleContextProvider>
@@ -48,3 +71,7 @@ export default {
 
 export const SecondaryColumnPromo = () => <Component />;
 export const InlinePromo = () => <Component inline />;
+export const InlinePromoYoutube = () => <Component inline value={serviceContextMockYoutube} />;
+export const InlinePromoPodcast = () => <Component inline value={serviceContextMockPodcast} />;
+
+
