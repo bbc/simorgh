@@ -13,9 +13,16 @@ const styles = {
       borderRadius: '500px',
       border: 'none',
       backgroundColor: palette.BRAND_BACKGROUND,
+      [mq.FORCED_COLOURS]: {
+        color: 'canvas',
+        backgroundColor: 'CanvasText',
+      },
       cursor: 'pointer',
       '&:hover, &:focus': {
         color: palette.WHITE,
+        [mq.FORCED_COLOURS]: {
+          color: 'canvas',
+        },
         textDecoration: 'underline',
         textUnderlineOffset: `${pixelsToRem(4)}rem`,
       },
@@ -26,7 +33,7 @@ const styles = {
         path: {
           fill: palette.WHITE,
           [mq.FORCED_COLOURS]: {
-            fill: 'canvasText',
+            fill: 'canvas',
           },
         },
       },
