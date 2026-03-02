@@ -1,6 +1,9 @@
 import { use, useState } from 'react';
 import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -39,10 +42,16 @@ import {
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
 import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
 import ReadTimeArticle from '#app/components/ReadTime';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
@@ -130,8 +139,14 @@ const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = ({ data }: { data: Recommendation[] }) => (
-  <Recommendations data={data} />
+const getWsojComponent = ({
+  data,
+  experimentProps,
+}: {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps | null;
+}) => (
+  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
 );
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
@@ -165,11 +180,16 @@ const getVideoComponent =
   };
 
 const getContinueReadingButton =
-  ({ showAllContent, setShowAllContent }: ContinueReadingButtonProps) =>
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
   () => (
     <ContinueReadingButton
       showAllContent={showAllContent}
       setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
     />
   );
 
@@ -195,6 +215,32 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
+  // time of day 2 experiment for articles
+  const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
+  const timeOfDayArticleVariant = useOptimizelyVariation({
+    experimentName: timeOfDayArticleExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const isAdaptiveTimeOfDayVariant =
+    timeOfDayArticleVariant === 'adaptive_variation';
+  // build one shared experiment payload so all oj components use the same values
+  const getActiveExperimentProps = (
+    experimentName: string,
+    experimentVariant: string | null,
+  ): ComponentExperimentProps | null =>
+    experimentVariant && experimentVariant !== 'off'
+      ? {
+          sendOptimizelyEvents: true,
+          experimentName,
+          experimentVariant,
+        }
+      : null;
+
+  const timeOfDayExperimentProps = getActiveExperimentProps(
+    timeOfDayArticleExperimentName,
+    timeOfDayArticleVariant,
+  );
+
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -215,6 +261,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
@@ -247,6 +294,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
+    ...(timeOfDayExperimentProps && {
+      experimentName: timeOfDayExperimentProps.experimentName,
+      experimentVariant: timeOfDayExperimentProps.experimentVariant,
+    }),
   };
 
   const showPortraitVideoCarousel = Boolean(
@@ -304,13 +355,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({ data, experimentProps: timeOfDayExperimentProps }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
+        ...(timeOfDayExperimentProps && {
+          experimentProps: timeOfDayExperimentProps,
+        }),
       }),
     }),
   };
@@ -341,6 +396,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+  // show media curation only when the user is in adaptive variation
+  const showAdaptiveMediaCuration = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      !isPGL &&
+      isAdaptiveTimeOfDayVariant &&
+      mediaCurationContent?.summaries?.length,
+  );
 
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
@@ -422,9 +486,40 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection content={blocks} />
+          <RelatedContentSection
+            content={blocks}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
+          />
         </div>
-        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
+        {showAdaptiveMediaCuration && (
+          <div css={styles.adaptiveMediaCurationRow}>
+            <div data-testid="adaptive-media-curation">
+              <Curation
+                visualStyle={VISUAL_STYLE.FEED}
+                visualProminence={VISUAL_PROMINENCE.NORMAL}
+                summaries={mediaCurationContent?.summaries}
+                title={mediaCurationContent?.title}
+                position={mediaCurationContent?.position || 0}
+                curationId={mediaCurationContent?.curationId}
+                curationLength={mediaCurationContent?.summaries?.length || 0}
+                link={mediaCurationContent?.link}
+                {...(timeOfDayExperimentProps && {
+                  experimentProps: timeOfDayExperimentProps,
+                })}
+              />
+            </div>
+          </div>
+        )}
+        {!isApp && !isPGL && (
+          <SecondaryColumn
+            pageData={pageData}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
+          />
+        )}
       </div>
 
       {!isApp && !isPGL && (
@@ -435,6 +530,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
+          {...(timeOfDayExperimentProps && {
+            experimentProps: timeOfDayExperimentProps,
+          })}
         />
       )}
     </div>
