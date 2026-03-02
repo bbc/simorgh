@@ -50,6 +50,10 @@ export default {
   nielsenAnalytics: {
     enabled: true,
   },
+  offlineArticle: {
+    enabled: true,
+    value: 'mundo|hindi|arabic',
+  },
   onDemandRadioSchedule: {
     enabled: true,
   },
