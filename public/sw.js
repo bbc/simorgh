@@ -154,7 +154,6 @@ const getMostReadDataFromOfflinePage = async service => {
   }
 };
 
-// Main Article caching logic
 const cacheArticles = async service => {
   const lastSync = await dbGet('meta', 'lastArticleSync');
   const now = Date.now();
@@ -164,6 +163,7 @@ const cacheArticles = async service => {
   // if (lastSync && now - lastSync.value < REFRESH_INTERVAL_MS) return;
 
   const mostRead = await getMostReadDataFromOfflinePage(service);
+
   logger(`👀 fetched:`, { mostRead });
 
   const mostReadArticles = mostRead?.items;
@@ -174,39 +174,43 @@ const cacheArticles = async service => {
 
   // Delete stale articles not in most-read and older than 72h
   const cachedArticleMeta = await dbGetAll(STORE_NAME);
-  for (const entry of cachedArticleMeta) {
+  const staleEntries = cachedArticleMeta.filter(entry => {
     const isTooOld = now - entry.cachedAt > MAX_ARTICLE_AGE_MS;
     const isNotMostRead = !mostReadUrls.has(entry.href);
-    if (isTooOld && isNotMostRead) {
-      // eslint-disable-next-line no-await-in-loop
-      await cache.delete(entry.href);
-      // eslint-disable-next-line no-await-in-loop
-      await dbDelete(STORE_NAME, entry.href);
-    }
-  }
+    return isTooOld && isNotMostRead;
+  });
+
+  await Promise.allSettled(
+    staleEntries.flatMap(entry => [
+      cache.delete(entry.href),
+      dbDelete(STORE_NAME, entry.href),
+    ]),
+  );
 
   // Cache new or updated articles including their scripts and stylesheets
-  for (const article of mostReadArticles) {
-    logger('article', { article });
+  const existingMeta = await Promise.all(
+    mostReadArticles.map(article => dbGet(STORE_NAME, article.href)),
+  );
 
-    // eslint-disable-next-line no-await-in-loop
-    const existing = await dbGet(STORE_NAME, article.href);
-    const needsUpdate =
-      !existing ||
-      (article.timestamp && existing.timestamp !== article.timestamp);
+  await Promise.allSettled(
+    mostReadArticles.map(async (article, i) => {
+      const existing = existingMeta[i];
+      const needsUpdate =
+        !existing ||
+        (article.timestamp && existing.timestamp !== article.timestamp);
 
-    if (needsUpdate) {
+      if (!needsUpdate) return;
+
+      // We need absolute path for cache.match
       const articleUrl = new URL(article.href, self.location.origin).href;
-      // eslint-disable-next-line no-await-in-loop
       await cachePageAndResources(cache, articleUrl);
-      // eslint-disable-next-line no-await-in-loop
       await dbPut(STORE_NAME, {
         url: article.href,
         timestamp: article.timestamp,
         cachedAt: now,
       });
-    }
-  }
+    }),
+  );
 
   await dbPut('meta', { key: 'lastArticleSync', value: now });
 };
@@ -251,6 +255,8 @@ self.addEventListener('message', async event => {
     const { isPWA, offlineArticle } = event.data;
     const { isEnabled: isOfflineArticleEnabled, service } =
       offlineArticle ?? {};
+
+    logger('📌 Message', { isOfflineArticleEnabled, service });
 
     if (isPWA) {
       pwaClients.set(event.source.id, true);
