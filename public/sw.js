@@ -247,18 +247,20 @@ self.addEventListener('activate', event => {
 
 // -------Message Event-------------
 self.addEventListener('message', async event => {
-  logger(`${generatedTimestamp} Message event`);
-
   if (event.data?.type === 'PWA_STATUS') {
-    const clientId = event.source.id;
-    const { isPWA, isOfflineArticleEnabled } = event.data;
+    const { isPWA, offlineArticle } = event.data;
+    const { isEnabled: isOfflineArticleEnabled, service } =
+      offlineArticle ?? {};
 
     if (isPWA) {
-      pwaClients.set(clientId, true);
-      const service = getServiceFromUrl(event.source.url);
-      await cacheOfflinePageAndResources(service);
+      pwaClients.set(event.source.id, true);
 
-      logger({ isOfflineArticleEnabled });
+      await dbPut('meta', {
+        key: `offlineArticleEnabled_${service}`,
+        value: !!isOfflineArticleEnabled,
+      });
+
+      await cacheOfflinePageAndResources(service);
 
       if (isOfflineArticleEnabled) {
         await cacheArticles(service);
@@ -318,21 +320,37 @@ const fetchEventHandler = async event => {
         const isPWA = client && pwaClients.get(client.id);
         const cache = await caches.open(cacheName);
 
-        // TODO: We should also check if article is not outdated here
         const getOfflineFallback = async () => {
-          logger('getOfflineFallback', { url });
           if (isPWA) {
             const service = getServiceFromUrl(url);
 
-            // Check if this IS a cached article (not the offline page)
-            const cachedArticle = await cache.match(url);
-            if (cachedArticle) {
-              logger('🎉 cachedArticle', { url });
-              isPWADeviceOffline = true;
-              return cachedArticle;
+            const offlineArticleMeta = await dbGet(
+              'meta',
+              `offlineArticleEnabled_${service}`,
+            );
+            const isOfflineArticleEnabled = offlineArticleMeta?.value ?? false;
+
+            if (isOfflineArticleEnabled) {
+              const cachedArticle = await cache.match(url);
+
+              if (cachedArticle) {
+                // Check article is not outdated before serving
+                const articleMeta = await dbGet(STORE_NAME, url);
+                const isOutdated =
+                  !articleMeta ||
+                  Date.now() - articleMeta.cachedAt > MAX_ARTICLE_AGE_MS;
+
+                if (!isOutdated) {
+                  logger('🎉 cachedArticle', { url });
+                  isPWADeviceOffline = true;
+                  return cachedArticle;
+                }
+
+                logger('⚠️ cachedArticle is outdated, skipping', { url });
+              }
             }
 
-            // Fallback to offline page
+            // Offline page fallback is always available regardless of toggle
             const offlineUrl = new URL(
               getOfflinePageUrl(service),
               self.location.origin,
@@ -343,6 +361,7 @@ const fetchEventHandler = async event => {
               return cachedOffline;
             }
           }
+          // If offline page/article not available, return error response
           return Response.error();
         };
 

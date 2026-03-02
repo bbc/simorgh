@@ -24,7 +24,10 @@ const useSendPWAStatus = (isPWA: boolean) => {
         sw.controller.postMessage({
           type: 'PWA_STATUS',
           isPWA,
-          isOfflineArticleEnabled,
+          offlineArticle: {
+            isEnabled: isOfflineArticleEnabled,
+            service,
+          },
         });
       }
     };
@@ -42,7 +45,7 @@ const useSendPWAStatus = (isPWA: boolean) => {
     return () => {
       sw.removeEventListener('controllerchange', sendPWAStatus);
     };
-  }, [isPWA, isOfflineArticleEnabled]);
+  }, [isPWA, isOfflineArticleEnabled, service]);
 };
 
 export default useSendPWAStatus;
