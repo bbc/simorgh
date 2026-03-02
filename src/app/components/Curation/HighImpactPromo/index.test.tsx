@@ -89,7 +89,9 @@ describe('High Impact Promo', () => {
         link: { url: '/pidgin' },
       },
     ];
-    render(<Fixture attributions={customAttributions} />, { service: 'mundo' });
+    render(<Fixture attributions={customAttributions} />, {
+      service: 'pidgin',
+    });
 
     const attributionLink = screen.getByRole('link', {
       name: 'BBC News Pidgin',
