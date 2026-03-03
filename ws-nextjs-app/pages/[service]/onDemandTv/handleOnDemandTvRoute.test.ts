@@ -57,12 +57,26 @@ describe('handleOnDemandTvRoute', () => {
   });
 
   it('returns recent episodes using the toggle limit', async () => {
+    jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
+      recentVideoEpisodes: { enabled: true, value: 3 },
+    } as Toggles);
+
     const result = await handleOnDemandTvRoute(mockGetServerSidePropsContext);
 
-    expect(result.props.pageData.recentEpisodes).toHaveLength(4);
+    expect(result.props.pageData.recentEpisodes).toHaveLength(3);
     expect(result.props.pageData.recentEpisodes[0].id).toEqual(
       'w172zmspxm02pfr',
     );
+  });
+
+  it('returns no recent episodes when the toggle is null', async () => {
+    jest.spyOn(getTogglesModule, 'default').mockResolvedValue({
+      recentVideoEpisodes: null,
+    } as unknown as Toggles);
+
+    const result = await handleOnDemandTvRoute(mockGetServerSidePropsContext);
+
+    expect(result.props.pageData.recentEpisodes).toBeNull();
   });
 
   it('returns no recent episodes when the toggle is disabled', async () => {
