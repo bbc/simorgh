@@ -60,6 +60,12 @@ export default async (context: GetServerSidePropsContext) => {
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
 
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: HOME_PAGE,
+    });
+
     return {
       props: {
         service,
