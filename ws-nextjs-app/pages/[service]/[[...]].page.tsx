@@ -12,12 +12,14 @@ import {
   PHOTO_GALLERY_PAGE,
   HOME_PAGE,
   AUDIO_PAGE,
+  TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
+import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
 
@@ -33,6 +35,8 @@ import handleHomepageRoute from './homepage/handleHomepageRoute';
 // On Demand Audio
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import { OnDemandAudioProps } from './onDemandAudio/types';
+// on demand tv
+import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -45,6 +49,9 @@ const MediaArticlePage = dynamic(
 const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
 const OnDemandAudioPage = dynamic(
   () => import('./onDemandAudio/OnDemandAudioLayout'),
+);
+const OnDemandTvPage = dynamic(
+  () => import('#app/pages/OnDemandTvPage/OnDemandTvPage'),
 );
 const getPageType = ({
   resolvedUrl,
@@ -76,6 +83,7 @@ const ROUTE_HANDLERS = {
   [ARTICLE_PAGE]: handleArticleRoute,
   [HOME_PAGE]: handleHomepageRoute,
   [AUDIO_PAGE]: handleOnDemandAudioRoute,
+  [TV_PAGE]: handleOnDemandTvRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -115,7 +123,8 @@ type PageProps = {
 } & AvEmbedsPageProps &
   ArticlePageProps &
   HomePageProps &
-  OnDemandAudioProps;
+  OnDemandAudioProps &
+  OnDemandTVProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
@@ -133,6 +142,8 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
       return <MediaArticlePage {...props} />;
     case AUDIO_PAGE:
       return withMediaError(OnDemandAudioPage)({ ...props });
+    case TV_PAGE:
+      return withMediaError(OnDemandTvPage)({ ...props });
     // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });
