@@ -8,7 +8,6 @@ import { OK } from '#app/lib/statusCodes.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
-import shouldRender from '#nextjs/utilities/shouldRender';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
@@ -54,24 +53,19 @@ export const getServerSideProps = async (
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData: data.pageData, status: data.status },
-    service,
-  );
-
-  if (!hasRequestSucceeded && renderStatus !== OK) {
+  if (status !== OK) {
     routingInfoLogger = logger.error;
 
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,
-      status: renderStatus,
+      status,
       pageType: TOPIC_PAGE,
     });
 
     return {
       props: {
         service,
-        status: renderStatus,
+        status,
         timeOnServer: Date.now(),
         variant,
         pageType: TOPIC_PAGE,
