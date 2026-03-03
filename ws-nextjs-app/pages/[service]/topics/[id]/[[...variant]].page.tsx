@@ -84,7 +84,7 @@ export const getServerSideProps = async (
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {
-    url: context.resolvedUrl,
+    url: resolvedUrlWithoutQuery,
     status: data.status,
     pageType: TOPIC_PAGE,
   });
@@ -102,7 +102,7 @@ export const getServerSideProps = async (
         },
       },
       pageType: TOPIC_PAGE,
-      pathname: context.resolvedUrl,
+      pathname: resolvedUrlWithoutQuery,
       service,
       status: data.status,
       timeOnServer: Date.now(),
