@@ -18,12 +18,6 @@ A core part of what makes Simorgh unique is that each service (e.g. `arabic`, `m
 ## Coding Standards
 - See docs/Coding-Standards/README.md for our coding standards. These can be seen implemented in src/app/components/Paragraph/ along with linting rules in .eslintrc.js
 - Please read and follow the guidelines in CONTRIBUTING.md and SECURITY.md
-- Use `nvm use` to get the correct version of node, and then `yarn` install packages. Then `yarn dev` will serve your code locally.
-- Our directory aliases can be found in dirAlias.js
-
-## Coding Standards
-- See docs/Coding-Standards/README.md for our coding standards. These can be seen implemented in bbc/simorgh/src/app/components/Paragraph/.* along with linting rules in .eslintrc.js
-- Please use the CONTRIBUTING.md and SECURITY.md
 - Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
 - Don't use any external dependencies that you don't need.
 - Try to limit the number of parameters in functions; if you can't, use a single object parameter with destructuring instead.
