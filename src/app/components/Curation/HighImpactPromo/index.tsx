@@ -37,7 +37,7 @@ const HighImpactPromo = ({
 
   const [firstAttribution] = attributions || [];
   const attributionLink =
-    firstAttribution?.link?.path || (service ? getBrandPath(service) : null);
+    firstAttribution?.link?.url || (service ? getBrandPath(service) : null);
   const attributionText = firstAttribution?.title || brandName;
   const hasAttribution = attributionLink && attributionText;
 
