@@ -5,7 +5,6 @@ import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
-import shouldRender from '#nextjs/utilities/shouldRender';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
 import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
@@ -64,24 +63,19 @@ export default async (context: GetServerSidePropsContext) => {
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
-    service,
-  );
-
-  if (!hasRequestSucceeded && renderStatus !== OK) {
+  if (status !== OK) {
     routingInfoLogger = logger.error;
 
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,
-      status: renderStatus,
+      status,
       pageType: AUDIO_PAGE,
     });
 
     return {
       props: {
         service,
-        status: renderStatus,
+        status,
         timeOnServer: Date.now(),
         variant: variant || null,
         pageType: AUDIO_PAGE,
