@@ -1,4 +1,3 @@
-// TEMP
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-useless-return */
 /* eslint-disable import/prefer-default-export */
@@ -93,7 +92,6 @@ const getOfflinePageUrl = service => `/${service}/offline`;
 const cacheResource = async (cache, url) => {
   logger('cacheResource', { url });
   try {
-    // TODO: temp CORS
     const response = await fetch(url);
     if (response.ok) await cache.put(url, response.clone());
     return response;
@@ -102,8 +100,8 @@ const cacheResource = async (cache, url) => {
   }
 };
 
-const cachePageAndResources = async (cache, url) => {
-  if (await cache.match(url)) return;
+const cachePageAndResources = async (cache, url, forceRefresh = false) => {
+  if (!forceRefresh && (await cache.match(url))) return;
 
   const resp = await cacheResource(cache, url);
   if (!resp || !resp.ok) return;
@@ -120,14 +118,14 @@ const cachePageAndResources = async (cache, url) => {
   await Promise.allSettled(resources.map(r => cacheResource(cache, r)));
 };
 
-const cacheOfflinePageAndResources = async service => {
+const cacheOfflinePageAndResources = async (service, forceRefresh = false) => {
   const cache = await caches.open(cacheName);
   const offlinePageUrl = new URL(
     getOfflinePageUrl(service),
     self.location.origin,
   ).href;
 
-  await cachePageAndResources(cache, offlinePageUrl);
+  await cachePageAndResources(cache, offlinePageUrl, forceRefresh);
 };
 
 const getMostReadDataFromOfflinePage = async service => {
@@ -159,8 +157,7 @@ const cacheArticles = async service => {
   const now = Date.now();
   logger('📌 cacheArticles called', { lastSync });
 
-  // TODO: Temporarily commenting it out
-  // if (lastSync && now - lastSync.value < REFRESH_INTERVAL_MS) return;
+  if (lastSync && now - lastSync.value < REFRESH_INTERVAL_MS) return;
 
   const mostRead = await getMostReadDataFromOfflinePage(service);
 
@@ -195,15 +192,18 @@ const cacheArticles = async service => {
   await Promise.allSettled(
     mostReadArticles.map(async (article, i) => {
       const existing = existingMeta[i];
-      const needsUpdate =
-        !existing ||
-        (article.timestamp && existing.timestamp !== article.timestamp);
 
-      if (!needsUpdate) return;
+      const isMissing = !existing;
+      const isOutdated =
+        !!existing &&
+        article.timestamp &&
+        existing.timestamp !== article.timestamp;
 
-      // We need absolute path for cache.match
+      if (!isMissing && !isOutdated) return;
+
       const articleUrl = new URL(article.href, self.location.origin).href;
-      await cachePageAndResources(cache, articleUrl);
+      // Force refresh only when we know it's outdated, not when simply missing
+      await cachePageAndResources(cache, articleUrl, isOutdated);
       await dbPut(STORE_NAME, {
         url: article.href,
         timestamp: article.timestamp,
@@ -266,10 +266,20 @@ self.addEventListener('message', async event => {
         value: !!isOfflineArticleEnabled,
       });
 
-      await cacheOfflinePageAndResources(service);
-
       if (isOfflineArticleEnabled) {
-        await cacheArticles(service);
+        const lastSync = await dbGet('meta', 'lastArticleSync');
+        const isOutdated =
+          !lastSync || Date.now() - lastSync.value >= REFRESH_INTERVAL_MS;
+
+        // Always cache offline page first — cacheArticles depends on it
+        await cacheOfflinePageAndResources(service, isOutdated);
+
+        if (isOutdated) {
+          await cacheArticles(service);
+        }
+      } else {
+        // Still cache the offline page itself regardless of article toggle
+        await cacheOfflinePageAndResources(service);
       }
     }
   }
