@@ -105,16 +105,15 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
-  const NavigationComponent =
-    SERVICES_WITH_NEW_NAV.includes(service) && !isLive()
-      ? NewNavigationContainer
-      : LegacyNavigationContainer;
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service) && !isLive();
+
+  const NavigationComponent = shouldUseNewNav
+    ? NewNavigationContainer
+    : LegacyNavigationContainer;
 
   return (
     <header role="banner" lang={serviceLang}>
-      {SERVICES_WITH_NEW_NAV.includes(service) && !isLive() && (
-        <NewLogoBanner />
-      )}
+      {shouldUseNewNav && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"

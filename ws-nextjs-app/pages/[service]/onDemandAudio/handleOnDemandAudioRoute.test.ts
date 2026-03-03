@@ -1,18 +1,10 @@
 import { GetServerSidePropsContext } from 'next';
 import gahuzaOnDemandAudio from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
 import * as isTest from '#app/lib/utilities/isTest';
-import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandAudioRoute from './handleOnDemandAudioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('../../../utilities/shouldRender', () => {
-  const originalModule = jest.requireActual('../../../utilities/shouldRender');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 jest.mock('#app/lib/utilities/isTest', () => {
   const originalModule = jest.requireActual('#app/lib/utilities/isTest');
@@ -47,7 +39,7 @@ describe('handleOnDemandAudioRoute', () => {
     });
   });
 
-  it('returns expected props if shouldRender succeeds', async () => {
+  it('returns expected props if data fetch succeeds', async () => {
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
 
     const result = await handleOnDemandAudioRoute(
@@ -58,10 +50,12 @@ describe('handleOnDemandAudioRoute', () => {
     expect(result.props.pageType).toEqual('audio');
   });
 
-  it('returns error props if shouldRender fails - 500', async () => {
-    jest.spyOn(shouldRender, 'default').mockReturnValue({
-      hasRequestSucceeded: false,
-      status: 500,
+  it('returns error props if data fetch returns 500', async () => {
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaOnDemandAudio,
+        status: 500,
+      },
     });
 
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);
@@ -79,10 +73,12 @@ describe('handleOnDemandAudioRoute', () => {
     });
   });
 
-  it('returns error props if shouldRender fails - 404', async () => {
-    jest.spyOn(shouldRender, 'default').mockReturnValue({
-      hasRequestSucceeded: false,
-      status: 404,
+  it('returns error props if data fetch returns 404', async () => {
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaOnDemandAudio,
+        status: 404,
+      },
     });
 
     jest.spyOn(Date, 'now').mockImplementation(() => 1234567890000);

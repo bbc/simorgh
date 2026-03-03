@@ -1,11 +1,9 @@
-import Cookie from 'js-cookie';
 import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
-
 import AccountPromotionalBanner from '.';
 
 const idctaConfig: IdctaConfig = {
@@ -19,7 +17,7 @@ const idctaConfig: IdctaConfig = {
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
-};
+} as unknown as IdctaConfig;
 
 const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
@@ -28,10 +26,6 @@ const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   });
 
 describe('AccountPromotionalBanner', () => {
-  afterEach(() => {
-    Cookie.remove('ckns_id');
-  });
-
   it('renders when signed out and IDCTA is available', async () => {
     renderWithProviders();
 
@@ -61,9 +55,7 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('does not render when signed in', () => {
-    Cookie.set('ckns_id', '1');
-
-    renderWithProviders();
+    renderWithProviders({ initialIsSignedIn: true });
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
