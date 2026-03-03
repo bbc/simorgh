@@ -60,7 +60,7 @@ export default async (context: GetServerSidePropsContext) => {
   let routingInfoLogger = logger.debug;
 
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
+    { pageData: pageData?.article, status },
     service,
   );
 
