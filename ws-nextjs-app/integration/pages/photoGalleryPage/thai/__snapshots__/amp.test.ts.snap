@@ -166,7 +166,7 @@ exports[`AMP Photo Gallery Page Footer Anchors should match text and url 9`] = `
 
 exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/thai"`;
 
-exports[`AMP Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2025 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
+exports[`AMP Photo Gallery Page Footer Paragraphs should match text 1`] = `"© 2026 บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก. อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก"`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `
 {
@@ -181,48 +181,6 @@ exports[`AMP Photo Gallery Page Header Navigation link should match text and url
 {
   "text": "หน้าแรก",
   "url": "/thai",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "ประเทศไทย",
-  "url": "/thai/topics/cjgn73g98rqt",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "ต่างประเทศ",
-  "url": "/thai/topics/c5v124k8lj7t",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "วิทยาศาสตร์",
-  "url": "/thai/topics/c5qvp1q33p0t",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "สุขภาพ",
-  "url": "/thai/topics/cyx5kz25zxdt",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "วิดีโอ",
-  "url": "/thai/topics/c5ljd3jng4nt",
-}
-`;
-
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "ยอดนิยม",
-  "url": "/thai/popular/read",
 }
 `;
 
@@ -254,61 +212,26 @@ exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 1`]
 
 exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 7`] = `
+exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 10`] = `
+exports[`AMP Photo Gallery Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/icons/icon-512x512.png",
@@ -336,7 +259,7 @@ exports[`AMP Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News ไทย",
@@ -367,7 +290,7 @@ exports[`AMP Photo Gallery Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/thai.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News ไทย",

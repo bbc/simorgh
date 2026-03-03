@@ -8,11 +8,11 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-6bu8o5"
+    class="css-xey5ks"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -24,17 +24,17 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -64,12 +64,12 @@ exports[`Canonical Av-embeds Media Loader renders a figure caption 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
@@ -85,11 +85,11 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="css-6bu8o5"
+    class="css-xey5ks"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="css-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -101,17 +101,17 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     type="button"
   >
     <span
-      class="css-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
     </span>
     <div
       aria-hidden="true"
-      class="css-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="css-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1kk1qa21"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -141,12 +141,12 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
     </time>
   </button>
   <div
-    class="css-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="css-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"
@@ -158,7 +158,7 @@ exports[`Canonical Av-embeds Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-1kswlui"
+  class="media-container css-1kfc8lh"
   data-e2e="media-loader__container"
 >
   <div
@@ -166,11 +166,11 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="css-6bu8o5"
+      class="css-xey5ks"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="css-lllaou"
+        class="css-n2zqlz"
       >
         <strong>
           Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер
@@ -182,17 +182,17 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       type="button"
     >
       <span
-        class="css-m04vo2"
+        class="css-2ozlq5"
       >
         Play video, ""Здесь же кругом люди": жизнь в 100 метрах от взлетной полосы", Продолжительность 2,53
       </span>
       <div
         aria-hidden="true"
-        class="css-d0ra4q"
+        class="css-7qcky8"
       >
         <svg
           aria-hidden="true"
-          class="css-vja2s5 e1s2dgdk5"
+          class="css-vja2s5 e1kk1qa21"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -222,12 +222,12 @@ exports[`Canonical Av-embeds Media Loader renders a valid container 1`] = `
       </time>
     </button>
     <div
-      class="css-1jf2q50"
+      class="css-10dp2sw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="css-1uq6tv3"
+        class="css-ey0vwc"
         loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/512xn/p07q3ycc.jpg.webp"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p07q3ycc.jpg.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p07q3ycc.jpg.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p07q3ycc.jpg.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p07q3ycc.jpg.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p07q3ycc.jpg.webp 800w"

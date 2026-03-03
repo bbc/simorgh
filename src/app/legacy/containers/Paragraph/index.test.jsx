@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../components/react-testing-library-with-providers';
 import ParagraphContainer from '.';
 import getUUID from '../../../lib/utilities/getUUID';

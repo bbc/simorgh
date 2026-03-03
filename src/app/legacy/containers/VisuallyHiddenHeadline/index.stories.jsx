@@ -1,4 +1,3 @@
-import React from 'react';
 import Component from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 

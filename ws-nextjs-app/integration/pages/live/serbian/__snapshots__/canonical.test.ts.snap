@@ -33,7 +33,7 @@ exports[`Canonical Live Footer Anchors should match text and url 4`] = `
 exports[`Canonical Live Footer Anchors should match text and url 5`] = `
 {
   "text": "Pravila privatnosti",
-  "url": "https://www.bbc.com/privacy/",
+  "url": "https://www.bbc.com/usingthebbc/privacy/",
 }
 `;
 
@@ -67,7 +67,7 @@ exports[`Canonical Live Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Live Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/serbian/lat"`;
 
-exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
+exports[`Canonical Live Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC nije odgovoran za sadržaj drugih sajtova. Pročitajte naša pravila o linkovanju drugih sajtova."`;
 
 exports[`Canonical Live Header I can see the branding 1`] = `
 {
@@ -85,48 +85,6 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 }
 `;
 
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "Studentske blokade",
-  "url": "/serbian/topics/cly9dd4w09wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
-{
-  "text": "Srbija",
-  "url": "/serbian/topics/cr50vdy9q6wt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 4`] = `
-{
-  "text": "Balkan",
-  "url": "/serbian/topics/c06g87137jgt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 5`] = `
-{
-  "text": "Svet",
-  "url": "/serbian/topics/c2lej05e1eqt/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/serbian/topics/c44vyp5g049t/lat",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 7`] = `
-{
-  "text": "Najpopularnije",
-  "url": "/serbian/lat/popular/read",
-}
-`;
-
 exports[`Canonical Live Main heading should match text 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Apple Touch Icon should match attributes 1`] = `
@@ -138,61 +96,26 @@ exports[`Canonical Live SEO Apple Touch Icon should match attributes 1`] = `
 
 exports[`Canonical Live SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical Live SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Live SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Live SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical Live SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/icons/icon-512x512.png",
@@ -220,7 +143,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
@@ -232,7 +155,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -250,13 +173,13 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News na srpskom",
         "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
     {
@@ -271,7 +194,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
 
 exports[`Canonical Live SEO OG description 1`] = `"Live test page"`;
 
-exports[`Canonical Live SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO OG image alt 1`] = `"BBC News na srpskom"`;
 
@@ -297,7 +220,7 @@ exports[`Canonical Live SEO Twitter description 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Twitter image alt 1`] = `"BBC News na srpskom"`;
 
-exports[`Canonical Live SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png"`;
+exports[`Canonical Live SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live SEO Twitter site 1`] = `"@bbcnasrpskom"`;
 

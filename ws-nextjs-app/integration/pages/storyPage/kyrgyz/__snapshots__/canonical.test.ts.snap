@@ -112,7 +112,7 @@ exports[`Canonical Story Page Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
 
-exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
+exports[`Canonical Story Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`Canonical Story Page Header I can see the branding 1`] = `
 {
@@ -130,40 +130,13 @@ exports[`Canonical Story Page Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Story Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Видео жаңылыктар",
-  "url": "/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx?limit=4t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Кыргызстан",
-  "url": "/kyrgyz/topics/cz74kjpyk07t",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Дүйнө",
-  "url": "/kyrgyz/topics/ck2l9z012nkt",
-}
-`;
-
-exports[`Canonical Story Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Журнал",
-  "url": "/kyrgyz/topics/czp8pjrkgp0t",
-}
-`;
-
 exports[`Canonical Story Page Image Caption should match text 1`] = `"Сүрөттүн түшүндүрмөсү, Social media"`;
 
 exports[`Canonical Story Page Image should match snapshot 1`] = `
 <img
   alt="social media"
-  class="css-4ejld5"
+  class="css-1seqhu9"
+  fetchpriority="high"
   height="351"
   loading="eager"
   sizes="(min-width: 1008px) 760px, 100vw"
@@ -222,61 +195,26 @@ exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 1`] =
 
 exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical Story Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-512x512.png",
@@ -304,7 +242,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",
@@ -335,7 +273,7 @@ exports[`Canonical Story Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Кыргыз Кызматы",

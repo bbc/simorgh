@@ -1,9 +1,8 @@
-import React from 'react';
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
+import { IncomingHttpHeaders } from 'node:http';
+
 import logResponseTime from '#server/utilities/logResponseTime';
-import extractHeaders from '#server/utilities/extractHeaders';
-import getPathExtension from '#app/utilities/getPathExtension';
 import {
   AV_EMBEDS,
   ARTICLE_PAGE,
@@ -11,18 +10,29 @@ import {
   CORRESPONDENT_STORY_PAGE,
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
+  HOME_PAGE,
+  AUDIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
-// AV Embeds
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import { IncomingHttpHeaders } from 'node:http';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
+import { HomePageProps } from '#app/pages/HomePage/HomePage';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
+import derivePageType from '#nextjs/utilities/derivePageType';
+
+// AV Embeds
+import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
 import handleArticleRoute from './articles/handleArticleRoute';
 import { ArticlePageProps } from './articles/types';
+import handleHomepageRoute from './homepage/handleHomepageRoute';
+
+// On Demand Audio
+import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
+import { OnDemandAudioProps } from './onDemandAudio/types';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -32,25 +42,40 @@ const ArticlePage = dynamic(() => import('#app/pages/ArticlePage/ArticlePage'));
 const MediaArticlePage = dynamic(
   () => import('#app/pages/MediaArticlePage/MediaArticlePage'),
 );
+const HomePage = dynamic(() => import('#app/pages/HomePage/HomePage'));
+const OnDemandAudioPage = dynamic(
+  () => import('./onDemandAudio/OnDemandAudioLayout'),
+);
+const getPageType = ({
+  resolvedUrl,
+  reqHeaders,
+}: {
+  resolvedUrl: string;
+  reqHeaders: IncomingHttpHeaders;
+}) => {
+  const pageTypeHeader = reqHeaders['page-type']?.toString() as PageTypes;
 
-type PageProps = {
-  pageType?: PageTypes;
-} & AvEmbedsPageProps &
-  ArticlePageProps;
+  const { SIMORGH_APP_ENV } = getEnvConfig();
 
-const getPageTypeFromHeaders = (headers: IncomingHttpHeaders) => {
-  // TODO: 'pagetype' header is for testing purposes only
-  const pageTypeHeader = headers['page-type']?.toString()?.toLowerCase();
+  switch (SIMORGH_APP_ENV) {
+    // In local development, use the 'page-type' header if it exists,
+    // otherwise derive the page-type from the URL
+    case 'local': {
+      if (pageTypeHeader) return pageTypeHeader;
 
-  switch (pageTypeHeader) {
-    case AV_EMBEDS?.toLowerCase():
-      return AV_EMBEDS;
-    case ARTICLE_PAGE:
-    case 'tc2': // Legacy TC2 articles are handled as ARTICLE_PAGE
-      return ARTICLE_PAGE;
+      return derivePageType(resolvedUrl);
+    }
+    // In all other environments, always derive the page-type from the 'page-type' header
     default:
-      return null;
+      return pageTypeHeader;
   }
+};
+
+const ROUTE_HANDLERS = {
+  [AV_EMBEDS]: handleAvRoute,
+  [ARTICLE_PAGE]: handleArticleRoute,
+  [HOME_PAGE]: handleHomepageRoute,
+  [AUDIO_PAGE]: handleOnDemandAudioRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -63,18 +88,12 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   const variant = deriveVariant(variantFromUrl);
 
-  // Determine the page type
-  const pageType = getPageTypeFromHeaders(reqHeaders);
+  const pageType = getPageType({ resolvedUrl, reqHeaders });
 
-  if (resolvedUrl?.includes('av-embeds')) {
-    return handleAvRoute(context);
+  // If a route handler exists for the derived page type, render that page
+  if (ROUTE_HANDLERS?.[pageType]) {
+    return ROUTE_HANDLERS[pageType](context);
   }
-
-  if (pageType === ARTICLE_PAGE) {
-    return handleArticleRoute(context);
-  }
-
-  const { isAmp, isApp, isLite } = getPathExtension(resolvedUrl);
 
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
@@ -82,25 +101,29 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   return {
     props: {
-      isApp,
-      isAmp,
-      isLite,
-      isNextJs: true,
+      pathname: resolvedUrl?.split('?')?.[0],
       service,
       status: 404,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };
+
+type PageProps = {
+  pageType?: PageTypes;
+} & AvEmbedsPageProps &
+  ArticlePageProps &
+  HomePageProps &
+  OnDemandAudioProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
     // AV Embeds
     case AV_EMBEDS:
       return <AvEmbedsPageLayout {...props} />;
-    // Article Pages (CPS + Legacy TC2 assets)
+    // Article Pages (Cymrufyw and Naidheachdan - erthyglau & sgeulachdan AMP + CPS + Legacy TC2 assets)
+    case ARTICLE_PAGE:
     case STORY_PAGE:
     case CORRESPONDENT_STORY_PAGE:
     case PHOTO_GALLERY_PAGE:
@@ -108,6 +131,11 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
     // Media Article Pages (CPS + Legacy TC2 assets)
     case MEDIA_ASSET_PAGE:
       return <MediaArticlePage {...props} />;
+    case AUDIO_PAGE:
+      return withMediaError(OnDemandAudioPage)({ ...props });
+    // Home Page
+    case HOME_PAGE:
+      return withOptimizelyProvider(HomePage)({ ...props });
     default:
       // Return nothing, 404 is handled in _app.tsx
       return null;

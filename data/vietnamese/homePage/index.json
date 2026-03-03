@@ -2,7 +2,9 @@
   "data": {
     "title": "BBC News Tiếng Việt",
     "description": "BBC Tiếng Việt đem lại tin tức trung thực, khách quan về thế giới và Việt Nam.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "BBC News Tiếng Việt",
+  "seoDescription": "BBC Tiếng Việt đem lại tin tức trung thực, khách quan về thế giới và Việt Nam.",
     "curations": [
       {
         "summaries": [

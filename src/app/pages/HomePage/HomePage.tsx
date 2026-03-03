@@ -1,12 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
-import useOptimizelyVariation, {
-  ExperimentType,
-} from '#app/hooks/useOptimizelyVariation';
-import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -25,7 +19,6 @@ import getItemList from '../../lib/seoUtils/getItemList';
 import ChartbeatAnalytics from '../../components/ChartbeatAnalytics';
 import getNthCurationByStyleAndProminence from '../utils/getNthCurationByStyleAndProminence';
 import getIndexOfFirstNonBanner from '../utils/getIndexOfFirstNonBanner';
-import reorderCurations from './utils/reorderCurations';
 
 export interface HomePageProps {
   pageData: {
@@ -33,6 +26,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
@@ -48,50 +43,38 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-    service,
   } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
+    seoTitle,
+    seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
-  let { curations } = pageData;
+  const { curations } = pageData;
 
-  // EXPERIMENT: Homepage Time of Day Adaptive Curations
-  const timeOfDayExperimentName = 'newswb_ws_tod_homepage';
-  const timeOfDayVariant = useOptimizelyVariation({
-    experimentName: timeOfDayExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-
-  // if variant is set to 'homepage_time_of_day_a' or 'homepage_time_of_day_b' then reorder curations
-  if (
-    timeOfDayVariant === 'homepage_time_of_day_a' ||
-    timeOfDayVariant === 'homepage_time_of_day_b'
-  ) {
-    curations = reorderCurations({
-      curations,
-      service,
-    });
-  }
+  const metadataTitle = seoTitle || homePageTitle;
+  const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={homePageTitle}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={title}
-        headline={title}
+        seoTitle={metadataTitle}
+        headline={metadataTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
@@ -129,7 +112,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <React.Fragment key={`${curationId}-${position}`}>
+                  <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -144,20 +127,16 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       }
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
-                      timeOfDayVariant={timeOfDayVariant}
                       {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
+                  </Fragment>
                 );
               },
             )}
           </div>
         </div>
       </main>
-      {timeOfDayVariant && (
-        <OptimizelyPageMetrics trackPageView trackPageDepth />
-      )}
     </>
   );
 };

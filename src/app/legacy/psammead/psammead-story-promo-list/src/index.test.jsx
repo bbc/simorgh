@@ -1,4 +1,3 @@
-import React from 'react';
 import StoryPromo, {
   Headline,
   Summary,
@@ -19,8 +18,8 @@ const Info = (
 describe('StoryPromo list', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLi>
+      <StoryPromoUl role="list">
+        <StoryPromoLi border>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
       </StoryPromoUl>,
@@ -30,7 +29,7 @@ describe('StoryPromo list', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl>
+      <StoryPromoUl role="list">
         <StoryPromoLi border={false}>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
@@ -43,8 +42,8 @@ describe('StoryPromo list', () => {
 describe('StoryPromo list base', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLiBase>
+      <StoryPromoUl role="list">
+        <StoryPromoLiBase border role="listitem">
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,
@@ -54,8 +53,8 @@ describe('StoryPromo list base', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLiBase border={false}>
+      <StoryPromoUl role="list">
+        <StoryPromoLiBase border={false} role="listitem">
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,

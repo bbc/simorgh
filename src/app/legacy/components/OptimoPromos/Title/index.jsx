@@ -1,4 +1,3 @@
-import React from 'react';
 import StyledTitle from './index.styles';
 
 const Title = ({ children, className = '', as = '' }) => {

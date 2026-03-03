@@ -4,6 +4,7 @@ import {
   AUDIO_PAGE,
   LIVE_PAGE,
   LIVE_RADIO_PAGE,
+  LIVE_TV_PAGE,
   TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import hausaLiveRadio from '#data/hausa/bbc_hausa_radio/liveradio.json';
@@ -24,6 +25,9 @@ import {
   aresMediaBlock,
   aresMediaLiveStreamBlocks,
   legacyMediaBlock,
+  livePageVideoClipMediaBlock,
+  liveTvPageMediaBlock,
+  livePagePortraitVideoClipMediaBlock,
 } from '../fixture';
 import {
   BuildConfigProps,
@@ -118,6 +122,76 @@ describe('buildSettings', () => {
           translatedNoJSMessage:
             'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
         },
+        orientation: 'landscape',
+        showAds: false,
+      } satisfies ConfigBuilderReturnProps);
+    });
+
+    it('Should process a portrait video ClipMedia block into a valid playlist item for a "Live" page.', () => {
+      const result = buildSettings({
+        ...baseSettings,
+        blocks: [livePagePortraitVideoClipMediaBlock as MediaBlock],
+        pageType: 'live',
+      });
+
+      expect(result).toStrictEqual({
+        mediaType: 'video',
+        playerConfig: {
+          autoplay: false,
+          product: 'news',
+          statsObject: {
+            clipPID: 'p01thw20',
+            destination: 'WS_NEWS_LANGUAGES',
+            producer: 'SERBIAN',
+          },
+          enableToucan: true,
+          externalEmbedUrl:
+            'https://www.bbc.com/serbian/lat/av-embeds/srbija-68707945/vpid/p01thw22',
+          appName: 'news-serbian',
+          appType: 'responsive',
+          counterName: 'live_coverage.testID.page',
+          superResponsive: true,
+          playlistObject: {
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            summary: '',
+            holdingImageURL:
+              'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+            items: [
+              {
+                duration: 54,
+                kind: 'programme',
+                versionID: 'p01thw22',
+              },
+            ],
+            embedRights: 'allowed',
+          },
+          ui: {
+            skin: 'classic',
+            controls: { enabled: true },
+            locale: { lang: 'sr-latn' },
+            subtitles: { enabled: true, defaultOn: true },
+            fullscreen: { enabled: true },
+          },
+        },
+        placeholderConfig: {
+          mediaInfo: {
+            datetime: 'PT54S',
+            duration: '00:54',
+            durationSpoken: 'Duration 0,54',
+            guidanceMessage: null,
+            title:
+              "BBC launch trailer for We Know Our Place women's sport campaign",
+            type: 'video',
+          },
+          placeholderSrc:
+            'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+          placeholderSrcset:
+            'https://ichef.test.bbci.co.uk/images/ic/240xn/p01thw3g.jpg.webp 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01thw3g.jpg.webp 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01thw3g.jpg.webp 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01thw3g.jpg.webp 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01thw3g.jpg.webp 800w',
+          translatedNoJSMessage:
+            'This video cannot play in your browser. Please enable JavaScript or try a different browser.',
+        },
+        orientation: 'portrait',
         showAds: false,
       } satisfies ConfigBuilderReturnProps);
     });
@@ -1464,6 +1538,99 @@ describe('buildSettings', () => {
           },
         },
         showAds: false,
+      });
+    });
+
+    describe('autoplay behaviour', () => {
+      beforeEach(() => {
+        jest
+          .spyOn(window.location, 'hostname', 'get')
+          .mockReturnValue('www.bbc.com');
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
+      });
+
+      afterEach(() => {
+        jest.restoreAllMocks(); // Automatically restores all mocks
+      });
+
+      it('Should autoplay media if referrer is internal and pageType is LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(true);
+      });
+
+      it('Should not autoplay media if referrer is external and pageType is LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.google.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is empty and pageType is LIVE_TV_PAGE.', () => {
+        jest.spyOn(document, 'referrer', 'get').mockReturnValue('');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+
+      it('Should not autoplay media if referrer is internal and pageType is not LIVE_TV_PAGE.', () => {
+        jest
+          .spyOn(document, 'referrer', 'get')
+          .mockReturnValue('https://www.bbc.com');
+
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig.autoplay).toBe(false);
+      });
+    });
+
+    describe('live tv ', () => {
+      it('should use holdingImageURLForLiveTV when pageType is LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [liveTvPageMediaBlock as MediaBlock],
+          pageType: LIVE_TV_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://ichef.bbci.co.uk/images/ic/800xn/p0m9xygc.png.webp',
+        );
+      });
+
+      it('should use default holdingImageURL when pageType is not LIVE_TV_PAGE', () => {
+        const result = buildSettings({
+          ...baseSettings,
+          blocks: [livePageVideoClipMediaBlock as MediaBlock],
+          pageType: LIVE_PAGE,
+        });
+
+        expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
+          'https://ichef.test.bbci.co.uk/images/ic/512xn/p01thw3g.jpg.webp',
+        );
       });
     });
   });

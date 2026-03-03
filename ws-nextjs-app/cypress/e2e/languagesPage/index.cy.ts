@@ -1,10 +1,13 @@
-import { STATIC_PAGE } from '#app/routes/utils/pageTypes';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
 import {
-  assertWSLanguagesPage,
+  assertWSLanguagesPageURNLive,
   assertWSLanguagesPageURN,
   assertWSLanguagesPageLocal,
 } from './assertions';
-import runTestsForPage from '../../support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 
 const testSuites = [
   {
@@ -23,11 +26,30 @@ const testSuites = [
     path: '/ws/languages',
     service: 'ws',
     runforEnv: ['live'],
-    tests: [assertWSLanguagesPage],
+    tests: [assertWSLanguagesPageURNLive],
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/ws/languages',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'ws',
+    pageIdentifier: 'ws.languages.page',
+    siteId: 30,
+    applicationType: 'responsive',
+    contentType: 'index-home',
+    tests: [assertPageView],
+  },
+] as unknown as TestDataType[];
+
 runTestsForPage({
   testSuites,
-  pageType: STATIC_PAGE,
+  pageType: HOME_PAGE,
+});
+
+runTestsForPage({
+  pageType: HOME_PAGE,
+  testSuites: atiAnalyticsTestSuites,
+  testIsolation: true,
 });

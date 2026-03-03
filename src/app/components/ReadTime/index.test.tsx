@@ -1,103 +1,170 @@
-import React from 'react';
 import { render } from '#app/components/react-testing-library-with-providers';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
+import { Services } from '#app/models/types/global';
 import * as viewTracking from '../../hooks/useViewTracker';
-import { ReadTimeArticleExperiment, ReadTime } from '.';
+import ReadTimeArticle from '.';
+
+const ReadTimeWithContext = ({
+  readTimeValue,
+  contextStub,
+}: {
+  readTimeValue: number;
+  contextStub: ServiceConfig;
+}) =>
+  render(
+    <ServiceContext.Provider value={contextStub}>
+      <ReadTimeArticle readTimeValue={readTimeValue} />
+    </ServiceContext.Provider>,
+  );
+
+const generateServiceContextStub = (
+  service: Services,
+  {
+    translations: {
+      readTime = { minute: 'mins', readTimePrefix: 'Read' },
+    } = {},
+  } = {},
+  datetimeLocale = '',
+) => ({ datetimeLocale, service, translations: { readTime } }) as ServiceConfig;
 
 describe('ReadTime', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  it.each([
-    {
-      variant: 'variant',
-      variantKey: 'below_headline_minutes_bold',
-      expectedCopy: 'Estimated Read Time: 4 minutes',
-    },
-    {
-      variant: 'variant',
-      variantKey: 'below_timestamp_quick_long_bold',
-      expectedCopy: 'Quick Read',
-    },
-  ])(
-    'should render $expectedCopy when readTime is supplied with a $variant variant',
-    ({ variantKey, expectedCopy }) => {
-      const { getByText } = render(
-        <ReadTime
-          readTimeValue={4}
-          promoId="12345"
-          readTimeVariant={variantKey}
-        />,
-      );
-      expect(getByText(expectedCopy)).toBeInTheDocument();
-    },
-  );
-  it('Optimizely - Should render a blank div for a control variant', () => {
-    const container = render(
-      <ReadTime readTimeValue={4} promoId="12345" readTimeVariant="control" />,
+
+  describe('formatting behaviour', () => {
+    it(`should format with 'minutes' before number for specific services`, () => {
+      const { getByText } = ReadTimeWithContext({
+        readTimeValue: 5,
+        contextStub: generateServiceContextStub('hausa'),
+      });
+
+      expect(getByText('Read: mins 5')).toBeInTheDocument();
+    });
+
+    it(`should format with 'minutes' before number and no colon for specific services`, () => {
+      const { getByText } = ReadTimeWithContext({
+        readTimeValue: 2,
+        contextStub: generateServiceContextStub('igbo'),
+      });
+
+      expect(getByText('Read mins 2')).toBeInTheDocument();
+    });
+
+    it(`should format with 'minutes' after number`, () => {
+      const { getByText } = ReadTimeWithContext({
+        readTimeValue: 7,
+        contextStub: generateServiceContextStub('news'),
+      });
+
+      expect(getByText('Read: 7 mins')).toBeInTheDocument();
+    });
+
+    it.each([
+      {
+        readTimeValue: 3,
+        serviceName: 'persian',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'زمان مطالعه',
+              minute: 'دقیقه',
+            },
+          },
+        },
+        locale: 'fa',
+        expectedReadTime: 'زمان مطالعه: ۳ دقیقه',
+      },
+      {
+        readTimeValue: 5,
+        serviceName: 'dari',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'زمان مطالعه',
+              minute: 'دقیقه',
+            },
+          },
+        },
+        locale: 'fa-af',
+        expectedReadTime: 'زمان مطالعه: ۵ دقیقه',
+      },
+      {
+        readTimeValue: 7,
+        serviceName: 'pashto',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'د لوستلو وخت',
+              minute: 'دقیقې',
+            },
+          },
+        },
+        locale: 'ps',
+        expectedReadTime: 'د لوستلو وخت: ۷ دقیقې',
+      },
+      {
+        readTimeValue: 9,
+        serviceName: 'bengali',
+        serviceConfig: {
+          translations: {
+            readTime: {
+              readTimePrefix: 'পড়ার সময়',
+              minute: 'মিনিট',
+            },
+          },
+        },
+        locale: 'bn',
+        expectedReadTime: 'পড়ার সময়: ৯ মিনিট',
+      },
+    ])(
+      'should format the read time to its localized $serviceName version',
+      ({
+        readTimeValue,
+        serviceName,
+        serviceConfig,
+        locale,
+        expectedReadTime,
+      }) => {
+        const { getByText } = ReadTimeWithContext({
+          readTimeValue,
+          contextStub: generateServiceContextStub(
+            serviceName as Services,
+            serviceConfig,
+            locale,
+          ),
+        });
+
+        expect(getByText(expectedReadTime)).toBeInTheDocument();
+      },
     );
-    expect(container.queryByTestId('read-time')).not.toBeInTheDocument();
+
+    it('should not render when translations are missing', () => {
+      const { queryByTestId } = ReadTimeWithContext({
+        readTimeValue: 3,
+        contextStub: generateServiceContextStub('pidgin', {
+          translations: { readTime: { readTimePrefix: '', minute: '' } },
+        }),
+      });
+
+      expect(queryByTestId('read-time')).toBeNull();
+    });
   });
+
   describe('view tracking', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
-    it('should register view tracker', () => {
-      render(
-        <ReadTime
-          readTimeValue={4}
-          promoId="12345"
-          readTimeVariant="minutes"
-        />,
-      );
+    it('should register view tracker with correct duration', () => {
+      render(<ReadTimeArticle readTimeValue={1} />);
 
-      const expected = {
-        componentName: 'read-time',
-        experimentName: 'newswb_ws_homepage_read_time',
-        experimentVariant: 'minutes',
-        sendOptimizelyEvents: true,
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'read-time-on-article',
         itemTracker: {
-          duration: 240000,
-          label: 'Read time: 4 minutes',
-          resourceId: '12345',
+          duration: 60000,
+          label: 'Read time: 1 min',
+          type: 'read-time',
         },
-      };
-
-      expect(viewTrackerSpy).toHaveBeenCalledWith(expected);
-    });
-  });
-  describe('On Article Page Experiment', () => {
-    it('should render when readTime is supplied', () => {
-      const { getByText } = render(
-        <ReadTimeArticleExperiment
-          readTimeValue={4}
-          readTimeVariant="minutes"
-        />,
-      );
-      expect(getByText('Estimated Read Time: 4 minutes')).toBeInTheDocument();
-    });
-    describe('view tracking', () => {
-      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-
-      it('should register view tracker', () => {
-        render(
-          <ReadTimeArticleExperiment
-            readTimeValue={4}
-            readTimeVariant="minutes"
-          />,
-        );
-
-        const expected = {
-          componentName: 'read-time-on-article',
-          experimentName: 'newswb_ws_article_read_time',
-          experimentVariant: 'minutes',
-          itemTracker: {
-            duration: 240000,
-            label: 'Read time: 4 minutes',
-            type: 'read-time',
-          },
-          sendOptimizelyEvents: true,
-        };
-
-        expect(viewTrackerSpy).toHaveBeenCalledWith(expected);
       });
     });
   });

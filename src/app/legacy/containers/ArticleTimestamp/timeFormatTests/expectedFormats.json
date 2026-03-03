@@ -249,6 +249,16 @@
       "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
+  "newsround": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+    }
+  },
   "pashto": {
     "default": {
       "one minute ago": "۱ دقیقه وړاندې",
@@ -311,12 +321,12 @@
   },
   "romania": {
     "default": {
-      "one minute ago": "1 minute ago",
-      "five minutes ago": "5 minutes ago",
-      "one hour ago": "1 hour ago",
-      "five hours ago": "5 hours ago",
-      "exact date": "10 October 2018",
-      "exact date and time with timezone": "12 July 2019, 13:55 BST"
+      "one minute ago": "acum un minut",
+      "five minutes ago": "acum 5 minute",
+      "one hour ago": "acum o oră",
+      "five hours ago": "acum 5 ore",
+      "exact date": "10 octombrie 2018",
+      "exact date and time with timezone": "12 iulie 2019, 15:55 EEST"
     }
   },
   "russian": {
@@ -527,6 +537,16 @@
       "five hours ago": "5 giờ trước",
       "exact date": "10 tháng 10 2018",
       "exact date and time with timezone": "12 tháng 7 2019, 19:55 +07"
+    }
+  },
+  "ws": {
+    "default": {
+      "one minute ago": "1 minute ago",
+      "five minutes ago": "5 minutes ago",
+      "one hour ago": "1 hour ago",
+      "five hours ago": "5 hours ago",
+      "exact date": "10 October 2018",
+      "exact date and time with timezone": "12 July 2019, 13:55 BST"
     }
   },
   "yoruba": {

@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,

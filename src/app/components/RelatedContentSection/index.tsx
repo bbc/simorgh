@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
 import { use } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -43,7 +41,6 @@ type Props = {
 
 const RelatedContentSection = ({ content, experimentProps }: Props) => {
   const { translations } = use(ServiceContext);
-
   const {
     palette: { GREY_2 },
   } = useTheme();

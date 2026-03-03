@@ -1,4 +1,3 @@
-import React from 'react';
 import CanonicalNavigation from './index.canonical';
 import {
   dropdownTestId,

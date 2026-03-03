@@ -104,4 +104,5 @@ const testSuites = [
 runTestsForPage({
   pageType: HOME_PAGE,
   testSuites,
+  clearCache: true,
 });

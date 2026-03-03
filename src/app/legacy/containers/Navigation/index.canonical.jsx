@@ -1,4 +1,4 @@
-import React, { useState, use } from 'react';
+import { useState, use } from 'react';
 import styled from '@emotion/styled';
 import Navigation from '#psammead/psammead-navigation/src';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
@@ -41,6 +41,7 @@ const CanonicalNavigationContainer = ({
   scrollableListItems,
   dropdownListItems,
   blocks,
+  children,
 }) => {
   const { isLite } = use(RequestContext);
   const { enabled } = useToggle('topBarOJs');
@@ -51,26 +52,31 @@ const CanonicalNavigationContainer = ({
     }
   });
   return (
-    <Navigation dir={dir} isOpen={isOpen}>
-      <ScrollableWrapper>
-        {!isLite && (
-          <CanonicalMenuButton
-            announcedText={menuAnnouncedText}
-            isOpen={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-            dir={dir}
-          />
-        )}
-        {!isOpen && (
-          <ScrollableNavigation dir={dir}>
-            {scrollableListItems}
-          </ScrollableNavigation>
-        )}
-      </ScrollableWrapper>
-      <CanonicalDropdown isOpen={isOpen}>{dropdownListItems}</CanonicalDropdown>
-      <Divider />
+    <>
+      <Navigation dir={dir} isOpen={isOpen}>
+        <ScrollableWrapper>
+          {!isLite && (
+            <CanonicalMenuButton
+              announcedText={menuAnnouncedText}
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
+              dir={dir}
+            />
+          )}
+          {!isOpen && (
+            <ScrollableNavigation dir={dir}>
+              {scrollableListItems}
+            </ScrollableNavigation>
+          )}
+        </ScrollableWrapper>
+        <CanonicalDropdown isOpen={isOpen}>
+          {dropdownListItems}
+        </CanonicalDropdown>
+        <Divider />
+      </Navigation>
       {enabled && <TopBarOJs blocks={blocks} />}
-    </Navigation>
+      {children}
+    </>
   );
 };
 

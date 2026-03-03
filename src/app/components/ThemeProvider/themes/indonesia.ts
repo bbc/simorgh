@@ -3,7 +3,7 @@ import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/indonesian';
+import brandSVG from '../chameleonLogos/indonesia';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme: ServiceTheme = {

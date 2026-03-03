@@ -1,4 +1,3 @@
-import React from 'react';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import serbianCyrCps from '#data/serbian/av-embeds/cyr/srbija-68707945.json';

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { use } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -129,7 +129,9 @@ const RecentAudioEpisodes = ({
               <VisuallyHiddenText>
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
-                  format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
+                  format: episode?.duration?.includes('H')
+                    ? 'h,mm,ss'
+                    : 'mm,ss',
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>

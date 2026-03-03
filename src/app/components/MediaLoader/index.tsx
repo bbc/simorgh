@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -9,6 +6,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import {
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
@@ -35,6 +33,7 @@ import AmpMediaLoader from './Amp';
 import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 ];
@@ -127,65 +126,70 @@ const MediaContainer = ({
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], async (Bump: BumpType) => {
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          const mediaPlayer = Bump.player(
-            playerElementRef.current,
-            playerConfig,
-          );
+          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
+          const initPlayer = async () => {
+            const mediaPlayer = Bump.player(
+              playerElementRef.current,
+              playerConfig,
+            );
 
-          if (uniqueId != null) {
-            const { mediaPlayers } = window;
-            if (mediaPlayers == null) {
-              window.mediaPlayers = { [uniqueId]: mediaPlayer };
-            } else {
-              mediaPlayers[uniqueId] = mediaPlayer;
-            }
-          }
-
-          // Bind any events passed in to the player
-          if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
-            Object.keys(eventMapping).forEach(bindingKey => {
-              const key = bindingKey as MediaPlayerEvents;
-              const handler = eventMapping[key];
-
-              if (handler) mediaPlayer.bind(key, handler);
-            });
-          }
-
-          if (showAds) {
-            const adTag = await window.dotcom.ads.getAdTag();
-
-            if (adTag) {
-              mediaPlayer.loadPlugin(
-                {
-                  swf: 'name:dfpAds.swf',
-                  html: 'name:dfpAds.js',
-                },
-                {
-                  name: 'AdsPluginParameters',
-                  data: {
-                    adTag,
-                  },
-                },
-              );
+            if (uniqueId != null) {
+              const { mediaPlayers } = window;
+              if (mediaPlayers == null) {
+                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+              } else {
+                mediaPlayers[uniqueId] = mediaPlayer;
+              }
             }
 
-            mediaPlayer.bind('playlistLoaded', async () => {
-              const updatedAdTag = await window.dotcom.ads.getAdTag();
+            // Bind any events passed in to the player
+            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+              Object.keys(eventMapping).forEach(bindingKey => {
+                const key = bindingKey as MediaPlayerEvents;
+                const handler = eventMapping[key];
 
-              if (updatedAdTag) {
-                mediaPlayer.dispatchEvent(
-                  'bbc.smp.plugins.ads.event.updateAdTag',
+                if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
+
+            if (showAds) {
+              const adTag = await window.dotcom.ads.getAdTag();
+
+              if (adTag) {
+                mediaPlayer.loadPlugin(
                   {
-                    adTag: updatedAdTag,
+                    swf: 'name:dfpAds.swf',
+                    html: 'name:dfpAds.js',
+                  },
+                  {
+                    name: 'AdsPluginParameters',
+                    data: {
+                      adTag,
+                    },
                   },
                 );
               }
-            });
-          }
 
-          mediaPlayer.load();
+              mediaPlayer.bind('playlistLoaded', async () => {
+                const updatedAdTag = await window.dotcom.ads.getAdTag();
+
+                if (updatedAdTag) {
+                  mediaPlayer.dispatchEvent(
+                    'bbc.smp.plugins.ads.event.updateAdTag',
+                    {
+                      adTag: updatedAdTag,
+                    },
+                  );
+                }
+              });
+            }
+
+            mediaPlayer.load();
+          };
+
+          initPlayer();
         }
       });
     } catch (error) {

@@ -108,7 +108,6 @@ The `#legacy/psammead-navigation/src` package is a set of two components, `Navig
 ## Navigation Usage
 
 ```jsx
-import React from 'react';
 import { ScrollableNavigation } from '#psammead/psammead-navigation/src/scrollable';
 import Navigation, {
   NavigationUl,
@@ -160,7 +159,6 @@ import Navigation, {
 ## Dropdown Navigation Usage
 
 ```jsx
-import React from 'react';
 import {
   Dropdown,
   DropdownUl,
@@ -182,7 +180,6 @@ import {
 ## Canonical Menu Button Usage
 
 ```jsx
-import React from 'react';
 import { CanonicalMenuButton } from '#psammead/psammead-navigation/src/dropdown';
 
 <CanonicalMenuButton
@@ -198,7 +195,6 @@ import { CanonicalMenuButton } from '#psammead/psammead-navigation/src/dropdown'
 ## Amp Menu Button Usage
 
 ```jsx
-import React from 'react';
 import { AmpMenuButton } from '#psammead/psammead-navigation/src/dropdown';
 
 <AmpMenuButton

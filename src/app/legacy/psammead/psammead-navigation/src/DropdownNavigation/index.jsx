@@ -1,4 +1,4 @@
-import React, { cloneElement, useRef } from 'react';
+import { cloneElement, useRef } from 'react';
 import styled from '@emotion/styled';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
 import {
@@ -45,15 +45,15 @@ const StyledDropdown = styled.div`
   }
 `;
 
-export const CanonicalDropdown = ({ isOpen, children }) => {
+export const CanonicalDropdown = ({ isOpen, children, className = '' }) => {
   const heightRef = useRef(null);
-
   return (
     <StyledDropdown
       data-e2e="dropdown-nav"
       ref={heightRef}
       height={heightRef.current ? heightRef.current.scrollHeight : 0}
       isOpen={isOpen}
+      className={className}
     >
       {children}
     </StyledDropdown>
@@ -76,10 +76,6 @@ export const DropdownUl = styled.ul`
   padding: 0 ${GEL_SPACING};
   border-bottom: 0.0625rem solid ${props => props.theme.palette.GREY_3};
 `;
-
-DropdownUl.defaultProps = {
-  role: 'list',
-};
 
 const StyledDropdownLi = styled.li`
   padding: 0.75rem 0;
@@ -110,10 +106,6 @@ const StyledCurrentLink = styled.span`
   ${({ dir, theme }) => getStyles(dir, theme)}
 `;
 
-StyledCurrentLink.defaultProps = {
-  role: 'text',
-};
-
 export const DropdownLi = ({
   children,
   clickTracker = null,
@@ -132,7 +124,8 @@ export const DropdownLi = ({
       <StyledDropdownLink href={url} aria-labelledby={ariaId} {...clickTracker}>
         {active && currentPageText ? (
           // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
-          <StyledCurrentLink dir={dir} id={ariaId}>
+          // eslint-disable-next-line jsx-a11y/aria-role
+          <StyledCurrentLink dir={dir} id={ariaId} role="text">
             <VisuallyHiddenText>{`${currentPageText}, `}</VisuallyHiddenText>
             {children}
           </StyledCurrentLink>
@@ -157,13 +150,13 @@ const iconBorderPosition = `
 // The sideLength of the button should be
 //  line height + top padding + bottom padding
 const calculateButtonSide = lineHeight =>
-  lineHeight / 16 + NAV_BAR_TOP_BOTTOM_SPACING * 2;
+  parseFloat(lineHeight) + NAV_BAR_TOP_BOTTOM_SPACING * 2;
 
 const getButtonDimensions = lineHeight =>
   `height: ${calculateButtonSide(lineHeight)}rem;
   width: ${calculateButtonSide(lineHeight)}rem;`;
 
-const Button = ({ script, ...props }) => <button type="button" {...props} />;
+const Button = ({ ...props }) => <button type="button" {...props} />;
 
 const MenuButton = styled(Button)`
   position: relative;
@@ -206,12 +199,13 @@ export const CanonicalMenuButton = ({
   isOpen,
   onClick,
   dir = 'ltr',
+  className = '',
 }) => (
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
     dir={dir}
-    className="focusIndicatorRemove"
+    className={`${className} focusIndicatorRemove`}
   >
     {isOpen ? navigationIcons.cross : navigationIcons.hamburger}
     <VisuallyHiddenText>{announcedText}</VisuallyHiddenText>

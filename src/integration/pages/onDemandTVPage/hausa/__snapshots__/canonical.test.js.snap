@@ -106,7 +106,7 @@ exports[`Canonical On Demand T V Page Footer Anchors should match text and url 9
 
 exports[`Canonical On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/hausa"`;
 
-exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
+exports[`Canonical On Demand T V Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ba za ta dauki alhakin abubuwan da wasu shafukan daban suka wallafa ba.  Karanta hanyoyin da muke bi dangane da adireshin waje."`;
 
 exports[`Canonical On Demand T V Page Header I can see the branding 1`] = `
 {
@@ -121,48 +121,6 @@ exports[`Canonical On Demand T V Page Header Navigation link should match text a
 {
   "text": "Labaran Duniya",
   "url": "/hausa",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Wasanni",
-  "url": "/hausa/topics/cz74kjgv220t",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Nishadi",
-  "url": "/hausa/topics/cg726kz37wdt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Cikakkun Rahotanni",
-  "url": "/hausa/topics/cnl7wd77wj2t",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Bidiyo",
-  "url": "/hausa/topics/cn09qmz4jryt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Shirye-shirye na Musamman",
-  "url": "/hausa/topics/cnl7wd9pddlt",
-}
-`;
-
-exports[`Canonical On Demand T V Page Header Navigation link should match text and url 7`] = `
-{
-  "text": "Shirye-shiryen rediyo",
-  "url": "/hausa/topics/c4nx34q5724t",
 }
 `;
 
@@ -182,11 +140,11 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-1xawjgp"
+    class="bbc-1qgypv3"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-n2zqlz"
+      class="bbc-lllaou"
     >
       <strong>
         Na'urarku na da matsalar sauraren sauti
@@ -204,7 +162,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </span>
     <div
       aria-hidden="true"
-      class="bbc-7qcky8"
+      class="bbc-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -243,7 +201,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
   >
     <img
       alt=""
-      class="bbc-ipdj63"
+      class="bbc-1uq6tv3"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -259,11 +217,11 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-1xawjgp"
+    class="bbc-1qgypv3"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-n2zqlz"
+      class="bbc-lllaou"
     >
       <strong>
         Na'urarku na da matsalar sauraren sauti
@@ -281,7 +239,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </span>
     <div
       aria-hidden="true"
-      class="bbc-7qcky8"
+      class="bbc-d0ra4q"
     >
       <svg
         aria-hidden="true"
@@ -320,7 +278,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
   >
     <img
       alt=""
-      class="bbc-ipdj63"
+      class="bbc-1uq6tv3"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -332,7 +290,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-1ayt58x"
+  class="media-container bbc-ft02fp"
   data-e2e="media-loader__container"
 >
   <div
@@ -340,11 +298,11 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-1xawjgp"
+      class="bbc-1qgypv3"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="bbc-n2zqlz"
+        class="bbc-lllaou"
       >
         <strong>
           Na'urarku na da matsalar sauraren sauti
@@ -362,7 +320,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </span>
       <div
         aria-hidden="true"
-        class="bbc-7qcky8"
+        class="bbc-d0ra4q"
       >
         <svg
           aria-hidden="true"
@@ -401,7 +359,7 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
     >
       <img
         alt=""
-        class="bbc-ipdj63"
+        class="bbc-1uq6tv3"
         loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -449,61 +407,26 @@ exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attribut
 
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/icons/icon-512x512.png",
@@ -529,7 +452,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -547,13 +470,13 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Hausa",
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
     },
     {
@@ -570,7 +493,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical On Demand T V Page SEO OG description 1`] = `"Sashen Hausa na BBC ya fara gabatar da shirin talabijin a ranakun Litinin zuwa Juma'a na kowane mako."`;
 
-exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical On Demand T V Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical On Demand T V Page SEO OG image alt 1`] = `"BBC News Hausa"`;
 
@@ -596,7 +519,7 @@ exports[`Canonical On Demand T V Page SEO Twitter description 1`] = `"Sashen Hau
 
 exports[`Canonical On Demand T V Page SEO Twitter image alt 1`] = `"BBC News Hausa"`;
 
-exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png"`;
+exports[`Canonical On Demand T V Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical On Demand T V Page SEO Twitter site 1`] = `"@bbchausa"`;
 

@@ -1,7 +1,10 @@
-import { services } from '../services/loadableConfig';
+import SERVICES from '../services';
 
 export default {
   _environment: 'test',
+  account: {
+    enabled: false,
+  },
   ads: {
     enabled: false,
   },
@@ -9,6 +12,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -20,7 +26,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: true,
-    value: `(${services.join('|')})`,
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,

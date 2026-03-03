@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-yoruba',
     atiAnalyticsProducerId: '107',
     atiAnalyticsProducerName: 'YORUBA',
-    useReverb: true,
     chartbeatDomain: 'yoruba.bbc.co.uk',
     brandName: 'BBC News Yorùbá',
     product: 'BBC News',
     serviceLocalizedName: 'Yorùbá',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/yoruba/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',
     externalLinkText: ', ìta',
@@ -48,7 +48,7 @@ export const service: DefaultServiceConfig = {
       },
       linkLabel: {
         text: 'Darapọ̀ mọ́ wa nibì',
-        href: 'https://bit.ly/3Xgfl35',
+        href: 'https://www.whatsapp.com/channel/0029Vb18ZTM9Gv7NliClgu0M',
       },
     },
     noBylinesPolicy:
@@ -60,6 +60,7 @@ export const service: DefaultServiceConfig = {
     swPath: '/sw.js',
     homePageTitle: 'Àbáwọlé',
     translations: {
+      and: 'ati',
       pagination: {
         previousPage: 'Ìṣájú',
         nextPage: 'Tókàn',
@@ -67,6 +68,11 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'Advertisement',
+      },
+      readTime: {
+        readTimePrefix: 'Ìye àkókó tí a fi kà á',
+        long: 'Àkààkàtán',
+        minute: 'Ìṣẹ́jú',
       },
       seeAll: 'Wo gbogbo ẹ̀',
       home: 'Ìròyìn',
@@ -334,18 +340,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Ìròyìn',
         url: '/yoruba',
-      },
-      {
-        title: 'Eré ìdárayá',
-        url: '/yoruba/topics/c340q0y3p5kt',
-      },
-      {
-        title: 'Fídíò',
-        url: '/yoruba/topics/ck5rznlk6k3t',
-      },
-      {
-        title: 'Èyí to gbajúmọ̀ jù',
-        url: '/yoruba/popular/read',
       },
     ],
   },

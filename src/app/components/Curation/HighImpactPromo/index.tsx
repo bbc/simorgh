@@ -1,11 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import { Summary } from '#app/models/types/curationData';
 import Promo from '#components/Promo';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { getBrandPath } from '#app/legacy/containers/Brand';
 import styles from './index.styles';
 
 type Attribution = {
@@ -29,7 +28,8 @@ const HighImpactPromo = ({
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
-  const attributionLink = attribution?.link || (service ? `/${service}` : null);
+  const attributionLink =
+    attribution?.link || (service ? getBrandPath(service) : null);
   const attributionText = attribution?.text || brandName;
   const hasAttribution = attributionLink && attributionText;
 

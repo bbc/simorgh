@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hindi',
     atiAnalyticsProducerId: '52',
     atiAnalyticsProducerName: 'HINDI',
-    useReverb: true,
     chartbeatDomain: 'hindi.bbc.co.uk',
     brandName: 'BBC News हिंदी',
     product: 'BBC News',
     serviceLocalizedName: 'हिंदी',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/hindi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
     externalLinkText: ', बाहरी',
@@ -67,6 +67,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'और',
+      readTime: {
+        readTimePrefix: 'पढ़ने का समय',
+        minute: 'मिनट',
+      },
       pagination: {
         previousPage: 'पिछला',
         nextPage: 'अगला',
@@ -100,6 +105,18 @@ export const service: DefaultServiceConfig = {
       downloads: {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
+      },
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Discover your BBC',
+        description:
+          'Sign in or create an account to watch, listen and join in',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
       },
       gist: 'सारांश',
       error: {
@@ -438,54 +455,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'होम पेज',
         url: '/hindi',
-      },
-      {
-        title: 'भारत',
-        url: '/hindi/topics/ckdxnkz7607t',
-      },
-      {
-        title: 'बिहार विधानसभा चुनाव',
-        url: '/hindi/topics/c98yre1dg81t',
-      },
-      {
-        title: 'विदेश',
-        url: '/hindi/topics/c9wpm0en87xt',
-      },
-      {
-        title: 'हेल्थ',
-        url: '/hindi/topics/cr50ykdx5wqt',
-      },
-      {
-        title: 'मनोरंजन',
-        url: '/hindi/topics/c06gq3n0pp7t',
-      },
-      {
-        title: 'करियर',
-        url: '/hindi/topics/c95y3gjndw8t',
-      },
-      {
-        title: 'फ़ाइनेंस',
-        url: '/hindi/topics/c5qvpx5dq4qt',
-      },
-      {
-        title: 'खेल',
-        url: '/hindi/topics/cwr9j8g1kj9t',
-      },
-      {
-        title: 'विज्ञान-टेक्नॉलॉजी',
-        url: '/hindi/topics/c2lej0594knt',
-      },
-      {
-        title: 'सोशल',
-        url: '/hindi/topics/c2e4q0z9qznt',
-      },
-      {
-        title: 'वीडियो',
-        url: '/hindi/topics/cw9kv0kpxydt',
-      },
-      {
-        title: 'पॉडकास्ट',
-        url: '/hindi/topics/cv22x3pmrvmt',
       },
     ],
   },

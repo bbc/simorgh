@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { render } from '#app/components/react-testing-library-with-providers';
 import * as boilerplate from './amp-boilerplate';

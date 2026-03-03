@@ -1,4 +1,5 @@
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
@@ -40,7 +41,7 @@ export default {
         textDecoration: 'underline',
       },
 
-      [`.${NO_JS_CLASSNAME} &`]: {
+      [`.${NO_JS_CLASSNAME} &, .${OPERA_MINI_CLASSNAME} &`]: {
         display: 'none',
       },
 

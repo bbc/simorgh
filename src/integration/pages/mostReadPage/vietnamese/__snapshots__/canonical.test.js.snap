@@ -109,7 +109,7 @@ exports[`Canonical Most Read Page Footer Anchors should match text and url 9`] =
 
 exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
 
-exports[`Canonical Most Read Page Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
+exports[`Canonical Most Read Page Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `
 {
@@ -124,41 +124,6 @@ exports[`Canonical Most Read Page Header Navigation link should match text and u
 {
   "text": "Tin chính",
   "url": "/vietnamese",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 2`] = `
-{
-  "text": "Việt Nam",
-  "url": "/vietnamese/topics/ckdxnx1x5rnt",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 3`] = `
-{
-  "text": "Thế giới",
-  "url": "/vietnamese/topics/cnlv9j1ekq0t",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 4`] = `
-{
-  "text": "Kinh tế",
-  "url": "/vietnamese/topics/cez1ey7nzj3t",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 5`] = `
-{
-  "text": "Thể thao",
-  "url": "/vietnamese/topics/ckdxnx1k7zxt",
-}
-`;
-
-exports[`Canonical Most Read Page Header Navigation link should match text and url 6`] = `
-{
-  "text": "Video",
-  "url": "/vietnamese/topics/cl29j0ekkvdt",
 }
 `;
 
@@ -265,61 +230,26 @@ exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 1
 
 exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical Most Read Page SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/icons/icon-512x512.png",
@@ -345,7 +275,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -363,13 +293,13 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
         "logo": {
           "@type": "ImageObject",
           "height": 576,
-          "url": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
           "width": 1024,
         },
         "name": "BBC News Tiếng Việt",
         "publishingPrinciples": "https://www.bbc.com/vietnamese/institutional-49283563",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png",
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7080/vietnamese/popular/read",
     },
   ],
@@ -378,7 +308,7 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 
 exports[`Canonical Most Read Page SEO OG description 1`] = `"Phổ biến - BBC News Tiếng Việt"`;
 
-exports[`Canonical Most Read Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+exports[`Canonical Most Read Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Most Read Page SEO OG image alt 1`] = `"BBC News Tiếng Việt"`;
 
@@ -404,7 +334,7 @@ exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Phổ biến -
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Tiếng Việt"`;
 
-exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png"`;
+exports[`Canonical Most Read Page SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Most Read Page SEO Twitter site 1`] = `"@bbcvietnamese"`;
 

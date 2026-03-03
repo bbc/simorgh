@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { useCallback, use, useEffect, useState, RefObject } from 'react';
-import { jsx } from '@emotion/react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
@@ -15,9 +13,13 @@ type ScrollDirection = 'left' | 'right';
 
 type PortraitVideoCarouselNavigationProps = {
   scrollPaneRef: RefObject<HTMLUListElement | null>;
+  backgroundColor?: string;
 };
 
-export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
+export default ({
+  scrollPaneRef,
+  backgroundColor,
+}: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
@@ -61,7 +63,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay} aria-hidden="true">
+    <div css={styles.buttonGroupOverlay(backgroundColor)} aria-hidden="true">
       <div css={styles.buttonGroup}>
         <button
           type="button"

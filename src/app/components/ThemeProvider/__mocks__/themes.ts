@@ -192,7 +192,6 @@ export const themes = [
   ...Object.entries(themesNoVariants),
   ...Object.entries(themesWithVariants),
 ].reduce((themeConfig, [service, serviceTheme]) => {
-  // @ts-expect-error need to initialise the object in case it does not exist
   themeConfig[service] = {};
 
   if (Object.keys(themesNoVariants).includes(service)) {
@@ -203,7 +202,6 @@ export const themes = [
     });
   } else {
     Object.entries(serviceTheme).forEach(([variant, variantTheme]) => {
-      // @ts-expect-error service with variant theme
       themeConfig[service][variant] = getThemeConfig({
         ...defaultThemeProps,
         ...variantTheme,
@@ -266,7 +264,6 @@ export const pwaThemes = [
   ...Object.entries(pwaThemesWithVariants),
 ].reduce(
   (pwaThemeConfig, [service, pwaTheme]) => {
-    // @ts-expect-error need to initialise the object in case it does not exist
     pwaThemeConfig[service] = {};
 
     if (Object.keys(pwaThemesNoVariants).includes(service)) {
@@ -279,7 +276,6 @@ export const pwaThemes = [
         pwaTheme: pwaTheme as ServiceTheme,
       });
 
-      // @ts-expect-error service theme
       pwaThemeConfig[service] = getThemeConfig({
         ...defaultThemeProps,
         ...themeWithPWA,
@@ -302,7 +298,6 @@ export const pwaThemes = [
           pwaTheme: variantPWATheme,
         });
 
-        // @ts-expect-error service with variant theme
         pwaThemeConfig[service][variant] = getThemeConfig({
           ...defaultThemeProps,
           ...themeWithPWA,

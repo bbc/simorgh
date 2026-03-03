@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useMemo } from 'react';
+import { createContext, PropsWithChildren, useMemo } from 'react';
 import {
   Environments,
   Platforms,
@@ -44,7 +44,7 @@ export type RequestContextProps = {
   cspHeader: string | null;
 };
 
-export const RequestContext = React.createContext<RequestContextProps>(
+export const RequestContext = createContext<RequestContextProps>(
   {} as RequestContextProps,
 );
 
@@ -113,6 +113,7 @@ export const RequestContextProvider = ({
   };
 
   const platform = getPlatform();
+
   const statsDestination = getStatsDestination({
     isUK: platform === 'amp' ? true : formattedIsUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,

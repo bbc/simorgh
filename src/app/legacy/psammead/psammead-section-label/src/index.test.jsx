@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import SectionLabel from './index';
 

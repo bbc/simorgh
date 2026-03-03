@@ -13,13 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-portuguese',
     atiAnalyticsProducerId: '33',
     atiAnalyticsProducerName: 'BRASIL',
-    useReverb: true,
     chartbeatDomain: 'brasil.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Brasil',
     product: 'BBC News',
     serviceLocalizedName: 'Brasil',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/portuguese/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Brasil',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -68,6 +67,12 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'e',
+      readTime: {
+        readTimePrefix: 'Tempo de leitura',
+        long: 'Leitura longa',
+        minute: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -364,6 +369,21 @@ export const service: DefaultServiceConfig = {
         closedDescription: 'Foi encerrado em {{date}}.',
       },
     },
+    promotionalBanner: {
+      title: 'Acesse a BBC News Brasil com um toque',
+      description:
+        'Inclua um atalho para a BBC News Brasil na sua tela para um acesso mais fácil e rápido',
+      buttonSeparatorText: 'ou',
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Sair',
+      primaryButton: {
+        longText: 'Inclua um atalho na sua tela',
+        text: 'Adicionar',
+      },
+      secondaryButton: {
+        text: 'Pular por enquanto',
+      },
+    },
     mostRead: {
       header: 'Mais clicadas',
       lastUpdated: 'Última atualização:',
@@ -429,38 +449,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Notícias',
         url: '/portuguese',
-      },
-      {
-        title: 'Brasil',
-        url: '/portuguese/topics/cz74k717pw5t',
-      },
-      {
-        title: 'Internacional',
-        url: '/portuguese/topics/cmdm4ynm24kt',
-      },
-      {
-        title: 'Economia',
-        url: '/portuguese/topics/cvjp2jr0k9rt',
-      },
-      {
-        title: 'Saúde',
-        url: '/portuguese/topics/c340q430z4vt',
-      },
-      {
-        title: 'Ciência',
-        url: '/portuguese/topics/cr50y580rjxt',
-      },
-      {
-        title: 'Tecnologia',
-        url: '/portuguese/topics/c404v027pd4t',
-      },
-      {
-        title: 'Vídeos',
-        url: '/portuguese/topics/c9y2j35dn2zt',
-      },
-      {
-        title: 'Podcasts',
-        url: '/portuguese/topics/cx2ggnx4j72t',
       },
     ],
   },

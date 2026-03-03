@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-telugu',
     atiAnalyticsProducerId: '89',
     atiAnalyticsProducerName: 'TELUGU',
-    useReverb: true,
     chartbeatDomain: 'telugu.bbc.co.uk',
     brandName: 'BBC News తెలుగు',
     product: 'BBC News',
     serviceLocalizedName: 'తెలుగు',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/telugu/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News తెలుగు',
     dir: `ltr`,
     externalLinkText: ', ఇతర',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'మరియు',
+      readTime: {
+        readTimePrefix: 'చదివే సమయం',
+        minute: 'నిమిషాలు',
+      },
       pagination: {
         previousPage: 'మునుపటి',
         nextPage: 'తదుపరి',
@@ -311,7 +316,7 @@ export const service: DefaultServiceConfig = {
           text: 'బీబీసీ గురించి',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ప్రైవసీ పాలసీ',
         },
         {
@@ -342,22 +347,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'వార్తలు',
         url: '/telugu',
-      },
-      {
-        title: 'వీడియో',
-        url: '/telugu/topics/cl29j0e3e2dt',
-      },
-      {
-        title: 'ఎక్కువ మంది చదివినవి',
-        url: '/telugu/popular/read',
-      },
-      {
-        title: 'జాతీయం',
-        url: '/telugu/topics/c5qvp16w7dnt',
-      },
-      {
-        title: 'అంతర్జాతీయం',
-        url: '/telugu/topics/cvqxn2k1xvdt',
       },
     ],
   },

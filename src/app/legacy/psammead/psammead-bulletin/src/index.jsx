@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -154,10 +153,6 @@ const PlayCTA = styled.div`
   ${({ bulletinType }) => playCtaStyles[bulletinType]};
 `;
 
-PlayCTA.defaultProps = {
-  'aria-hidden': true,
-};
-
 const Bulletin = ({
   dir = 'ltr',
   image = null,
@@ -216,7 +211,12 @@ const Bulletin = ({
             {summaryText}
           </BulletinSummary>
         )}
-        <PlayCTA isLive={isLive} bulletinType={bulletinType} dir={dir}>
+        <PlayCTA
+          isLive={isLive}
+          bulletinType={bulletinType}
+          dir={dir}
+          aria-hidden="true"
+        >
           <IconWrapper dir={dir}>{mediaIcons[mediaType]}</IconWrapper>
           {ctaText}
         </PlayCTA>
@@ -225,4 +225,5 @@ const Bulletin = ({
   );
 };
 
+/** @deprecated */
 export default Bulletin;

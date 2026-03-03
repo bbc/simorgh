@@ -1,4 +1,3 @@
-import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '#psammead/psammead-headings/src';
@@ -66,10 +65,13 @@ const HeadingsContainer = ({
   const headingId = isFirstBlock ? 'content' : null; // Used for the skiplink
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
+  const isSubHeading = type === 'subheadline';
+
   const headingProps = {
+    ...(isHeading && isFirstBlock && { tabIndex: '-1' }),
+    ...(isSubHeading && { tabIndex: '-1' }),
     id: isHeading ? headingId : subHeadingId,
     as: isHeading && !isFirstBlock ? 'strong' : null,
-    tabIndex: isHeading && !isFirstBlock ? null : '-1',
     className,
   };
 

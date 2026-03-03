@@ -696,8 +696,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-current="page"
               aria-labelledby="NavigationLinks-Home"
               class="focusIndicatorRemove emotion-69 emotion-70"
+              data-active="true"
               href="/news"
             >
               <span
@@ -2823,8 +2825,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-current="page"
                 aria-labelledby="NavigationLinks-Home"
                 class="focusIndicatorRemove emotion-17 emotion-18"
+                data-active="true"
                 href="/news"
               >
                 <span

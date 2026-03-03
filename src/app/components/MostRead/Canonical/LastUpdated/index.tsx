@@ -1,4 +1,3 @@
-import React from 'react';
 import Timestamp from '../../../../legacy/psammead/psammead-timestamp-container/src';
 
 interface LastUpdatedProps {

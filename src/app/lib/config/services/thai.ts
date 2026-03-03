@@ -15,12 +15,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-thai',
     atiAnalyticsProducerId: '90',
     atiAnalyticsProducerName: 'THAI',
-    useReverb: true,
     chartbeatDomain: 'thai.bbc.co.uk',
     brandName: 'BBC News ไทย',
     product: 'BBC News',
     serviceLocalizedName: 'ไทย',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/thai/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
     externalLinkText: ', จากภายนอก',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'และ',
+      readTime: {
+        readTimePrefix: 'เวลาอ่าน',
+        minute: 'นาที',
+      },
       pagination: {
         previousPage: 'ก่อนหน้านี้',
         nextPage: 'ถัดไป',
@@ -276,30 +281,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'หน้าแรก',
         url: '/thai',
-      },
-      {
-        title: 'ประเทศไทย',
-        url: '/thai/topics/cjgn73g98rqt',
-      },
-      {
-        title: 'ต่างประเทศ',
-        url: '/thai/topics/c5v124k8lj7t',
-      },
-      {
-        title: 'วิทยาศาสตร์',
-        url: '/thai/topics/c5qvp1q33p0t',
-      },
-      {
-        title: 'สุขภาพ',
-        url: '/thai/topics/cyx5kz25zxdt',
-      },
-      {
-        title: 'วิดีโอ',
-        url: '/thai/topics/c5ljd3jng4nt',
-      },
-      {
-        title: 'ยอดนิยม',
-        url: '/thai/popular/read',
       },
     ],
     footer: {

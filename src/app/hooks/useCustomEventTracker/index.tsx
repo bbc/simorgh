@@ -7,7 +7,11 @@ import { ServiceContext } from '../../contexts/ServiceContext';
 
 interface CustomEventData {
   eventName: string;
+  experimentName?: string;
+  experimentVariant?: string;
 }
+
+type TrackEventFunction = (stringifiedData?: string) => Promise<void>;
 
 /**
  * A specialized React hook for tracking custom (non-click, non-view) events.
@@ -15,10 +19,14 @@ interface CustomEventData {
  * If a payload (`stringifiedData`) is provided to the `trackEvent` function, it will appear in Piano under the "Item name" field.
  *
  * @param {CustomEventData} eventName - A string representing the name of the custom event.
- * @returns {Object} An object containing the `trackEvent` function, which can be called to trigger the event.
+ * @returns {TrackEventFunction} A function that triggers the custom event. Accepts an optional stringified data parameter.
  */
 
-const useCustomEventTracker = ({ eventName }: CustomEventData) => {
+const useCustomEventTracker = ({
+  eventName,
+  experimentName,
+  experimentVariant,
+}: CustomEventData): TrackEventFunction => {
   const {
     pageIdentifier,
     producerId,
@@ -31,10 +39,10 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
   });
 
   const { trackingIsEnabled } = useTrackingToggle();
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   const trackEvent = useCallback(
-    async (stringifiedData: string) => {
+    async (stringifiedData = '') => {
       if (!trackingIsEnabled || !eventName) return;
 
       const shouldSendEvent = [
@@ -61,7 +69,8 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
             producerName,
             service,
             statsDestination,
-            useReverb,
+            experimentName,
+            experimentVariant,
           });
         } catch (error) {
           // eslint-disable-next-line no-console
@@ -79,13 +88,12 @@ const useCustomEventTracker = ({ eventName }: CustomEventData) => {
       producerName,
       service,
       statsDestination,
-      useReverb,
+      experimentName,
+      experimentVariant,
     ],
   );
 
-  return {
-    trackEvent,
-  };
+  return trackEvent;
 };
 
 export default useCustomEventTracker;

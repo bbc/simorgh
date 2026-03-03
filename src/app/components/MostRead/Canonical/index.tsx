@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';

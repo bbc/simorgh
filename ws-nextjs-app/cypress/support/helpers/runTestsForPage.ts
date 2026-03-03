@@ -1,5 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
+import handleContinueReadingButton from './handleContinueReadingButton';
 import { ServiceParametersType } from '../../types';
 import getOptimizelyKey from '../../../../cypress/support/helpers/getOptimizelyKey';
 
@@ -10,7 +11,6 @@ export type TestDataType = {
   tests: TestType[];
   runforEnv: string[];
   service: string;
-  useReverb?: boolean;
   contentType?: string;
   applicationType?: string;
   siteId?: string;
@@ -26,6 +26,7 @@ type FunctionProps = {
   testIsolation?: boolean;
   deleteServiceWorker?: boolean;
   headers?: Record<string, string>;
+  clearCache?: boolean;
 };
 
 export default ({
@@ -37,6 +38,7 @@ export default ({
   testIsolation = false,
   deleteServiceWorker = false,
   headers,
+  clearCache,
 }: FunctionProps) => {
   const serviceToRun = Cypress.env('ONLY_SERVICE');
 
@@ -82,6 +84,10 @@ export default ({
               }
             };
 
+            if (clearCache) {
+              cy.clearLocalStorage();
+            }
+
             cy.visit(path, {
               failOnStatusCode,
               ...(deleteServiceWorker && { onBeforeLoad: removeServiceWorker }),
@@ -90,6 +96,9 @@ export default ({
           });
 
           beforeEach(() => {
+            // This is a special case to reveal the article before any other test runs
+            handleContinueReadingButton();
+
             beforeEachFns.forEach(runBeforeEach => runBeforeEach());
 
             cy.intercept(

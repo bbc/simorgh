@@ -104,7 +104,7 @@ On the other hand, a `promoType` prop of `leading` can be passed to place the In
 This prop must be passed to the StoryPromo, Headline and Summary components.
 
 ```jsx
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import StoryPromo, {
   Headline,
   Summary,

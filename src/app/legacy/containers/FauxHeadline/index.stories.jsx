@@ -1,4 +1,3 @@
-import React from 'react';
 import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 import { ServiceContext } from '../../../contexts/ServiceContext';

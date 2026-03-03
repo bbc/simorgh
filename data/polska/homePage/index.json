@@ -2,7 +2,9 @@
   "data": {
     "title": "Strona główna - BBC News Polska",
     "description": "Najświeższe informacje dotyczące wydarzeń w Europie i na świecie, środowiska, zdrowia, kultury oraz biznesu. Pełna oferta multimedialna w języku polskim obejmująca wiadomości i analizy, zdjęcia, materiały wideo oraz treści interaktywne przygotowane przez BBC News.",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "Strona główna - BBC News Polska",
+  "seoDescription": "Najświeższe informacje dotyczące wydarzeń w Europie i na świecie, środowiska, zdrowia, kultury oraz biznesu. Pełna oferta multimedialna w języku polskim obejmująca wiadomości i analizy, zdjęcia, materiały wideo oraz treści interaktywne przygotowane przez BBC News.",
     "curations": [
       {
         "summaries": [

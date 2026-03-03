@@ -1,7 +1,11 @@
-import { services } from '../services/loadableConfig';
+import SERVICES from '../services';
 
 export default {
   _environment: 'local',
+  account: {
+    enabled: true,
+    value: 'hindi',
+  },
   ads: {
     enabled: true,
   },
@@ -9,6 +13,9 @@ export default {
     enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
     enabled: true,
   },
@@ -20,7 +27,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
-    value: `(${services.join('|')})`,
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,

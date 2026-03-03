@@ -293,14 +293,14 @@ exports[`SubHeading component should render correctly with arabic script typogra
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 1.5rem;
-    line-height: 2.125rem;
+    line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 2rem;
-    line-height: 2.625rem;
+    line-height: 2.25rem;
   }
 }
 

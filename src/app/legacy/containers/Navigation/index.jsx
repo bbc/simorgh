@@ -1,13 +1,16 @@
-import React, { use } from 'react';
+import { use } from 'react';
+import useToggle from '#app/hooks/useToggle';
 import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
 import {
   DropdownUl,
   DropdownLi,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
-import isLive from '#app/lib/utilities/isLive';
+import { AccountContext } from '#contexts/AccountContext';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -46,11 +49,23 @@ const renderListItems = (
     return [...listAcc, listItem];
   }, []);
 
-const NavigationContainer = ({ propsForTopBarOJComponent }) => {
+const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isLite } = use(RequestContext);
+
+  const { enabled: accountEnabled } = useToggle('account');
+  const { isSignedIn, isIdctaAvailable } = use(AccountContext);
+  const isHydrated = useHydrationDetection();
+
+  const showAccountPromoBanner =
+    isHydrated && accountEnabled && !isSignedIn && isIdctaAvailable;
+
   const { blocks = [] } = propsForTopBarOJComponent || {};
-  const { translations, navigation, dir, collapsibleNavigation } =
-    use(ServiceContext);
+  const {
+    translations,
+    navigation: navFromServiceConfig,
+    dir,
+    collapsibleNavigation,
+  } = use(ServiceContext);
 
   const { canonicalLink, origin } = use(RequestContext);
   const { currentPage, navMenuText } = translations;
@@ -77,12 +92,15 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
 
   const dropdownNavViewTracker = useViewTracker(dropdownNavEventTrackingData);
 
-  // TODO: isLive statement to be removed when Global Language page goes live. https://bbc.atlassian.net/browse/WS-1254
-  const renderLanguageNavigation = !isLive() && collapsibleNavigation?.length;
+  const renderLanguageNavigation = collapsibleNavigation?.length;
 
   if (renderLanguageNavigation) {
     return <LanguageNavigation />;
   }
+
+  // Prefer navItems passed from props over service config
+  // Eventually all services will migrate to passing navItems via props
+  const navigation = navItems || navFromServiceConfig;
 
   if (!navigation || navigation.length === 0) {
     return null;
@@ -108,7 +126,7 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
   );
 
   const dropdownListItems = (
-    <DropdownUl>
+    <DropdownUl role="list">
       {renderListItems(
         DropdownLi,
         navigation,
@@ -130,7 +148,9 @@ const NavigationContainer = ({ propsForTopBarOJComponent }) => {
       menuAnnouncedText={navMenuText}
       dir={dir}
       blocks={blocks}
-    />
+    >
+      {showAccountPromoBanner && <AccountPromotionalBanner />}
+    </Navigation>
   );
 };
 

@@ -67,7 +67,7 @@ exports[`Canonical Send Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Send Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
 
-exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
+exports[`Canonical Send Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`Canonical Send Header I can see the branding 1`] = `
 {
@@ -82,62 +82,6 @@ exports[`Canonical Send Header Navigation link should match text and url 1`] = `
 {
   "text": "War",
   "url": "/somali",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 2`] = `
-{
-  "text": "Siyaasad",
-  "url": "/somali/topics/cwr9jry737xt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 3`] = `
-{
-  "text": "Soomaali",
-  "url": "/somali/topics/cpzd4zk7qrjt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 4`] = `
-{
-  "text": "Raadiye",
-  "url": "/somali/topics/cn6rqlrkm0pt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 5`] = `
-{
-  "text": "Muuqaal",
-  "url": "/somali/topics/c7pl4k5r9xxt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 6`] = `
-{
-  "text": "Haween",
-  "url": "/somali/topics/cxnykn5732gt",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 7`] = `
-{
-  "text": "Ciyaaro",
-  "url": "/somali/topics/cpzd4zj1pn2t",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 8`] = `
-{
-  "text": "Saynis iyo Caafimaad",
-  "url": "/somali/topics/c2dr4lek2r9t",
-}
-`;
-
-exports[`Canonical Send Header Navigation link should match text and url 9`] = `
-{
-  "text": "Fan iyo Dhaqan",
-  "url": "/somali/topics/cwy5g18443dt",
 }
 `;
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import dissocPath from 'ramda/src/dissocPath';
 import identity from 'ramda/src/identity';
 

@@ -335,6 +335,108 @@ export const livePageVideoClipMediaBlock = {
   },
 };
 
+export const livePagePortraitVideoClipMediaBlock = {
+  id: '1ce4d114',
+  type: 'clipMedia',
+  model: {
+    id: 'urn:bbc:pips:pid:p01thw20',
+    urns: {
+      pipsPid: 'urn:bbc:pips:pid:p01thw20',
+    },
+    images: [
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'socialImage',
+        source: 'pipsImage',
+      },
+      {
+        url: 'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01thw3g.jpg',
+        urlTemplate:
+          'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+        type: 'promoImage',
+        source: 'pipsImage',
+      },
+    ],
+    assetPath: 'p01thw20',
+    type: 'video',
+    headlines: {
+      primaryHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      seoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      promoHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+      socialHeadline:
+        "BBC launch trailer for We Know Our Place women's sport campaign",
+    },
+    analytics: {
+      page: {
+        name: 'programmes.av.p01thw20.page',
+        contentId: 'urn:bbc:pips:pid:p01thw20',
+        producer: 'PROGRAMMES',
+      },
+    },
+    description:
+      'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+    summary: {
+      type: 'text',
+      model: {
+        blocks: [
+          {
+            type: 'paragraph',
+            model: {
+              text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+              blocks: [
+                {
+                  type: 'fragment',
+                  model: {
+                    text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+                    attributes: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    lastPublished: '2022-07-01T08:56:56Z',
+    firstPublished: null,
+    video: {
+      id: 'p01thw20',
+      title: "BBC launch trailer for We Know Our Place women's sport campaign",
+      holdingImage: {
+        id: 'https://ichef.test.bbci.co.uk/images/ic/$recipe/p01thw3g.jpg',
+        altText:
+          'BBC launch trailer for We Know Our Place women\'s sport campaign"',
+      },
+      version: {
+        id: 'p01thw22',
+        duration: 'PT54S',
+        kind: 'programme',
+        guidance: null,
+        territories: ['nonuk', 'uk'],
+        orientation: 'portrait',
+      },
+      isAdvertisingAllowed: true,
+      isEmbeddingAllowed: true,
+      isUnavailable: false,
+    },
+    attributions: null,
+    link: {
+      path: '/programmes/p01thw20',
+    },
+    section: null,
+    isSharingAllowed: true,
+  },
+};
+
 export const livePageAudioClipMediaBlock = {
   id: '60207517',
   type: 'clipMedia',
@@ -640,6 +742,52 @@ export const aresMediaLiveStreamBlocks = [
   },
   aresMediaCaptionBlock,
 ];
+
+export const liveTvPageMediaBlock = {
+  type: 'liveMedia',
+  model: {
+    urn: 'urn:bbc:pips:sid:bbc_arabic_tv',
+    title: '04/11/2025 19:05 GMT',
+    type: 'episode',
+    synopses: {
+      short:
+        'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+      medium:
+        'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+      long: 'Latif Al Ani is known as the father of Iraqi photography. In this film he searches for the people and places he shot from the 1950s onwards. Iraqis now can’t imagine the world in his photos was real.',
+    },
+    mediaType: 'audio_video',
+    imageUrlTemplate:
+      'https://ichef.bbci.co.uk/ace/standard/$recipe/cpsdevpb/9f44/test/1703f820-b025-11f0-8c86-5d50166f9cdc.png',
+    masterbrand: {
+      id: 'bbc_arabic_tv',
+      name: 'BBC Arabic TV',
+      networkName: 'BBC Arabic TV',
+      type: 'tv',
+      imageUrlTemplate: 'ichef.bbci.co.uk/images/ic/$recipe/p0m9xygc.png',
+    },
+    version: {
+      vpid: 'n4pdm42036',
+      duration: 'PT55M',
+      availabilityType: 'simulcast',
+      versionTypes: [
+        {
+          type: 'Original',
+          name: 'Original version',
+        },
+      ],
+      schedule: {
+        start: null,
+      },
+      serviceId: 'bbc_arabic_tv',
+      authToken: null,
+      status: 'LIVE',
+      warnings: null,
+    },
+    overTypedTitle: 'BBC Arabic TV',
+    leadMedia: true,
+  },
+};
 
 export const aresMediaBlocks = [aresMediaBlock, aresMediaCaptionBlock];
 export const videoClipMediaBlocks = [

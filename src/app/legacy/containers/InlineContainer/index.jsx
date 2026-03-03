@@ -1,4 +1,3 @@
-import React from 'react';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { storiesOf } from '@storybook/react-webpack5';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';

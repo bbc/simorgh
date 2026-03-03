@@ -11,15 +11,15 @@ export const service: DefaultServiceConfig = {
     articleTimestampPrefix: 'Updated',
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news',
-    atiAnalyticsProducerId: '64',
-    atiAnalyticsProducerName: 'NEWS',
+    atiAnalyticsProducerId: '30',
+    atiAnalyticsProducerName: 'BBC_WORLD_NEWS',
     chartbeatDomain: 'bbc.co.uk',
-    brandName: 'BBC News',
+    brandName: 'BBC World Service',
     serviceLocalizedName: 'World Service',
     product: 'BBC News',
     defaultImage:
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
-    defaultImageAltText: 'BBC News',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/ws/images/metadata/poster-1024x576.png',
+    defaultImageAltText: 'BBC World Service',
     dir: 'ltr',
     externalLinkText: ', external',
     imageCaptionOffscreenText: 'Image caption, ',
@@ -70,6 +70,18 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       gist: 'At a glance',
+      account: {
+        signIn: 'Sign In',
+        forYou: 'For you',
+        register: 'Register',
+      },
+      accountPromoBanner: {
+        title: 'Discover your BBC',
+        description:
+          'Sign in or create an account to watch, listen and join in',
+        closeLabel: 'Close',
+        buttonSeparatorText: 'or',
+      },
       error: {
         404: {
           statusCode: '404',
@@ -347,8 +359,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'afrique',
             href: 'https://www.bbc.com/afrique',
-            label: "L'actualité en Français",
-            lang: 'fr',
+            label: 'BBC News Afrique',
           },
           {
             id: 'hausa',
@@ -365,8 +376,8 @@ export const service: DefaultServiceConfig = {
           {
             id: 'gahuza',
             href: 'https://www.bbc.com/gahuza',
-            label: 'Amakuru mu Kinyarwanda/ Kirundi',
-            lang: 'rw',
+            label: 'BBC News Gahuza',
+            disableTranslation: true,
           },
           {
             id: 'pidgin',
@@ -422,8 +433,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'indonesia',
             href: 'https://www.bbc.com/indonesia',
-            label: 'Berita Indonesia',
-            lang: 'id',
+            label: 'BBC News Indonesia',
           },
           {
             id: 'japanese',
@@ -465,9 +475,8 @@ export const service: DefaultServiceConfig = {
           {
             id: 'dari',
             href: 'https://www.bbc.com/dari',
-            label: 'BBC News دری',
-            lang: 'fa-AF',
-            latinTransliteration: 'BBC News Dari',
+            label: 'BBC News Dari',
+            disableTranslation: true,
           },
           {
             id: 'gujarati',
@@ -506,7 +515,7 @@ export const service: DefaultServiceConfig = {
           {
             id: 'punjabi',
             href: 'https://www.bbc.com/punjabi',
-            label: 'ਪੰਜਾਬੀ ਖ਼ਬਰਾਂ',
+            label: 'BBC News ਪੰਜਾਬੀ',
             lang: 'pa',
             latinTransliteration: 'Punjabi khabaran',
           },
@@ -569,16 +578,9 @@ export const service: DefaultServiceConfig = {
             lang: 'en',
           },
           {
-            id: 'naidheachdan',
-            href: 'https://www.bbc.co.uk/naidheachdan',
-            label: 'Naidheachdan',
-            lang: 'gd',
-          },
-          {
             id: 'polska',
             href: 'https://www.bbc.com/polska',
-            label: 'BBC News po polsku',
-            lang: 'pl',
+            label: 'BBC News Polska',
           },
           {
             id: 'russian',
@@ -591,12 +593,6 @@ export const service: DefaultServiceConfig = {
             href: 'https://www.bbc.com/serbian',
             label: 'BBC News na srpskom',
             lang: 'sr-latn',
-          },
-          {
-            id: 'turkce',
-            href: 'https://www.bbc.com/turkce',
-            label: 'BBC News Türkçe',
-            lang: 'tr',
           },
           {
             id: 'ukrainian',
@@ -620,14 +616,12 @@ export const service: DefaultServiceConfig = {
           {
             id: 'portuguese',
             href: 'https://www.bbc.com/portuguese',
-            label: 'Notícias em Português',
-            lang: 'pt',
+            label: 'BBC News Brasil',
           },
           {
             id: 'mundo',
             href: 'https://www.bbc.com/mundo',
-            label: 'Noticias para hispanoparlantes',
-            lang: 'es',
+            label: 'BBC News Mundo',
           },
         ],
       },
@@ -637,16 +631,22 @@ export const service: DefaultServiceConfig = {
         links: [
           {
             id: 'arabic',
-            href: 'http://www.bbc.com/arabic',
+            href: 'https://www.bbc.com/arabic',
             label: 'BBC News عربي',
             lang: 'ar',
           },
           {
             id: 'persian',
-            href: 'http://www.bbc.com/persian',
+            href: 'https://www.bbc.com/persian',
             label: 'BBC News فارسی',
             lang: 'fa',
             latinTransliteration: 'Khabarha be Farsi',
+          },
+          {
+            id: 'turkce',
+            href: 'https://www.bbc.com/turkce',
+            label: 'BBC News Türkçe',
+            lang: 'tr',
           },
         ],
       },

@@ -1,12 +1,9 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-
-import React, { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import { PageTypes } from '#app/models/types/global';
+import { Navigation, PageTypes } from '#app/models/types/global';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -41,6 +38,7 @@ type Props = {
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
   };
   status: number;
+  navItems?: Navigation[] | null;
 };
 
 type wordCountType = number | undefined;
@@ -49,6 +47,7 @@ const PageLayoutWrapper = ({
   children,
   pageData,
   status,
+  navItems,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
@@ -56,6 +55,7 @@ const PageLayoutWrapper = ({
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
+  const isOfflinePage = pageType === OFFLINE_PAGE;
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
@@ -225,10 +225,11 @@ const PageLayoutWrapper = ({
       )}
       <ServiceWorker />
       <ManifestContainer />
-      {!isErrorPage && <WebVitals pageType={pageType} />}
+      {!isErrorPage && !isOfflinePage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
+          navItems={navItems}
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
           }}

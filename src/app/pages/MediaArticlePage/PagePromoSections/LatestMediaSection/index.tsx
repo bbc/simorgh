@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
@@ -65,6 +63,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
       ) : (

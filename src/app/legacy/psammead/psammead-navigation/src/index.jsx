@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -166,7 +165,9 @@ export const NavigationLi = ({
           currentLink
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
+          aria-current="page"
           className="focusIndicatorRemove"
+          data-active="true"
           {...clickTracker}
           {...props}
         >
@@ -178,6 +179,7 @@ export const NavigationLi = ({
         <StyledLink
           href={url}
           className="focusIndicatorRemove"
+          aria-current={active ? 'page' : undefined}
           {...clickTracker}
           {...props}
         >

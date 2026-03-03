@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import { Headline, SubHeading } from './index';
 import { MEDIA_ARTICLE_PAGE } from '../../../../routes/utils/pageTypes';
@@ -26,13 +25,15 @@ describe('Headline component', () => {
 
 describe('SubHeading component', () => {
   it('should render correctly', () => {
-    const { container } = render(<SubHeading>This is a SubHeading</SubHeading>);
+    const { container } = render(
+      <SubHeading tabIndex={-1}>This is a SubHeading</SubHeading>,
+    );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly on page types that support a dark ui', () => {
     const { container } = render(
-      <SubHeading>This is a SubHeading</SubHeading>,
+      <SubHeading tabIndex={-1}>This is a SubHeading</SubHeading>,
       {
         pageType: MEDIA_ARTICLE_PAGE,
       },
@@ -41,15 +42,17 @@ describe('SubHeading component', () => {
   });
 
   it('should render correctly with arabic script typography values', () => {
-    const { container } = render(<SubHeading>هذا عنوان فرعي</SubHeading>, {
-      service: 'persian',
-    });
+    const { container } = render(
+      <SubHeading tabIndex={-1}>هذا عنوان فرعي</SubHeading>,
+    );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly with an ID', () => {
     const { container } = render(
-      <SubHeading id="This-is-a-SubHeading">This is a SubHeading</SubHeading>,
+      <SubHeading id="This-is-a-SubHeading" service="news" tabIndex={-1}>
+        This is a SubHeading
+      </SubHeading>,
     );
     expect(container).toMatchSnapshot();
   });

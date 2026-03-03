@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import MediaIndicator from './index';
 
@@ -20,7 +19,7 @@ describe('MediaIndicator', () => {
 
   it('should render video indicator correctly when inline on RTL', () => {
     const { container } = render(
-      <MediaIndicator type="video" dir="rtl" isInline />,
+      <MediaIndicator type="video" service="persian" dir="rtl" isInline />,
       { service: 'persian' },
     );
     expect(container).toMatchSnapshot();
