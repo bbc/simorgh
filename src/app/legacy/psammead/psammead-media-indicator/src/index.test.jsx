@@ -19,7 +19,7 @@ describe('MediaIndicator', () => {
 
   it('should render video indicator correctly when inline on RTL', () => {
     const { container } = render(
-      <MediaIndicator type="video" service="persian" dir="rtl" isInline />,
+      <MediaIndicator type="video" dir="rtl" isInline />,
       { service: 'persian' },
     );
     expect(container).toMatchSnapshot();

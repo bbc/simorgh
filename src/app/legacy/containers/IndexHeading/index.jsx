@@ -6,7 +6,7 @@ const IndexHeadingContainer = ({ children = null, ...props }) => {
   const { dir } = use(ServiceContext);
 
   return (
-    <IndexHeading dir={dir} {...props}>
+    <IndexHeading tabIndex={-1} dir={dir} {...props}>
       {children}
     </IndexHeading>
   );

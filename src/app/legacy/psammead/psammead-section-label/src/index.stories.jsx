@@ -66,7 +66,6 @@ storiesOf(STORY_KIND, module)
           false,
         )}
         labelId="example-section-label"
-        service={service}
         linkText={service === 'news' ? 'See All' : selectFirst2Words(text)}
         href="https://www.bbc.com/igbo"
       >
