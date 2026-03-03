@@ -19,7 +19,9 @@ const logger = nodeLogger(__filename);
 export const getServerSideProps = async (
   context: GetServerSidePropsContext,
 ) => {
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+  const { resolvedUrl } = context;
+
+  logResponseTime({ path: resolvedUrl }, context.res, () => null);
 
   const {
     id,
@@ -34,13 +36,15 @@ export const getServerSideProps = async (
   const rendererEnv =
     isTest() && !rendererEnvFromQuery ? 'live' : rendererEnvFromQuery;
 
+  const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+
   const { data } = await getPageData({
     id,
     page,
     service,
     variant,
     rendererEnv,
-    resolvedUrl: context.resolvedUrl,
+    resolvedUrl: resolvedUrlWithoutQuery,
     pageType: TOPIC_PAGE,
   });
 
@@ -58,6 +62,12 @@ export const getServerSideProps = async (
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
 
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: TOPIC_PAGE,
+    });
+
     return {
       props: {
         service,
@@ -65,7 +75,7 @@ export const getServerSideProps = async (
         timeOnServer: Date.now(),
         variant,
         pageType: TOPIC_PAGE,
-        pathname: context.resolvedUrl,
+        pathname: resolvedUrlWithoutQuery,
       },
     };
   }
