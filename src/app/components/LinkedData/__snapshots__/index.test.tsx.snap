@@ -2,7 +2,7 @@
 
 exports[`LinkedData bylineLinkedData should change author contents and locationCreated when byline is present 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -57,7 +57,7 @@ exports[`LinkedData bylineLinkedData should change author contents and locationC
 
 exports[`LinkedData should correctly render linked data for Ondemand Radio page 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
@@ -106,7 +106,7 @@ exports[`LinkedData should correctly render linked data for Ondemand Radio page 
 
 exports[`LinkedData should correctly render linked data for Photo Gallery page 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -161,7 +161,7 @@ exports[`LinkedData should correctly render linked data for Photo Gallery page 1
 
 exports[`LinkedData should correctly render linked data for article pages for service with no trust project markup 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -213,7 +213,7 @@ exports[`LinkedData should correctly render linked data for article pages for se
 
 exports[`LinkedData should correctly render linked data for articles 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -267,7 +267,7 @@ exports[`LinkedData should correctly render linked data for articles 1`] = `
 
 exports[`LinkedData should correctly render linked data for articles with byline 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -321,7 +321,7 @@ exports[`LinkedData should correctly render linked data for articles with byline
 
 exports[`LinkedData should correctly render linked data for home pages 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
@@ -428,7 +428,7 @@ exports[`LinkedData should correctly render linked data for podcast episode page
 
 exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "RadioChannel",
@@ -456,7 +456,7 @@ exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 
 exports[`LinkedData should correctly render publisherLogo for news 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -510,7 +510,7 @@ exports[`LinkedData should correctly render publisherLogo for news 1`] = `
 
 exports[`LinkedData should correctly render publisherLogo for non-news services 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -564,7 +564,7 @@ exports[`LinkedData should correctly render publisherLogo for non-news services 
 
 exports[`LinkedData should correctly render publisherLogo for sport 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
@@ -616,7 +616,7 @@ exports[`LinkedData should correctly render publisherLogo for sport 1`] = `
 
 exports[`LinkedData showAuthor should exclude author from article when false 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
