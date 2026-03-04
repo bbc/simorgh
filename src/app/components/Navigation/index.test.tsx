@@ -155,6 +155,25 @@ describe('Navigation', () => {
     expect(elements[0]).toBeInTheDocument();
   });
 
+  it('should fall back to service config when navItems is null on amp', () => {
+    const { navigation } = indonesiaConfig.default;
+
+    const { getAllByText } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'indonesia',
+      statusCode: 200,
+      pathname: '/indonesia',
+    });
+
+    const fallbackConfig = navigation?.[0]?.title ?? 'Home';
+    const elements = getAllByText(fallbackConfig);
+
+    expect(elements[0]).toBeInTheDocument();
+  });
+
   it('should render nothing when navItems is an empty array', () => {
     const { container } = render(<Navigation navItems={[]} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
