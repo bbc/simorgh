@@ -6,19 +6,13 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import Cookie from 'js-cookie';
-import onClient from '#app/lib/utilities/onClient';
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
 );
-
-const getSignedInCookie = (cookieName = 'ckns_id') => {
-  return onClient() ? Cookie.get(cookieName) : false;
-};
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
@@ -49,10 +43,8 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const cookieName = initialConfig?.identity?.idSignedInCookieName;
-  const isSignedIn = isIdctaAvailable
-    ? Boolean(getSignedInCookie(cookieName))
-    : false;
+  const isSignedIn =
+    isIdctaAvailable && Boolean(initialConfig?.initialIsSignedIn);
 
   const value = useMemo(
     () => ({

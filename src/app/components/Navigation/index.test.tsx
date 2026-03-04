@@ -1,0 +1,269 @@
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import LanguageNavigation from '#app/legacy/containers/Navigation/LanguageNavigation';
+import {
+  render,
+  act,
+  fireEvent,
+} from '../react-testing-library-with-providers';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import { service as newsConfig } from '../../lib/config/services/news';
+import { service as indonesiaConfig } from '../../lib/config/services/indonesia';
+import Navigation from './index';
+import * as viewTracking from '../../hooks/useViewTracker';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
+
+describe('Navigation', () => {
+  const navItems = [
+    { title: 'Home', url: '/home' },
+    { title: 'About', url: '/about' },
+  ];
+
+  it('should correctly render canonical navigation', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render canonical navigation on non-home navigation page', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/uk',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render canonical navigation on non-navigation page', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/not-a-navigation-page',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render navigation links in the correct format', () => {
+    const { navigation } = newsConfig.default;
+
+    const { getAllByRole } = render(<Navigation navItems={navigation} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    const listItems = getAllByRole('listitem');
+
+    (navigation ?? []).forEach((navItem, index) => {
+      const link = listItems[index].querySelector('a');
+      const href = link?.getAttribute('href');
+      expect(href).toEqual(navItem.url);
+    });
+  });
+
+  it('should prefer navItems prop over service config', () => {
+    const { getAllByText, queryAllByText } = render(
+      <Navigation navItems={navItems} />,
+      {
+        bbcOrigin: 'https://www.test.bbc.co.uk',
+        id: 'c0000000000o',
+        isAmp: false,
+        pageType: ARTICLE_PAGE,
+        service: 'news',
+        statusCode: 200,
+        pathname: '/news',
+      },
+    );
+
+    expect(getAllByText('Home').length).toBeGreaterThan(0);
+    expect(getAllByText('About').length).toBeGreaterThan(0);
+    expect(queryAllByText('World')).toHaveLength(0);
+  });
+
+  it('should fall back to service config when navItems is null', () => {
+    const { navigation } = indonesiaConfig.default;
+
+    const { getAllByText } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'indonesia',
+      statusCode: 200,
+      pathname: '/indonesia',
+    });
+
+    const fallbackConfig = navigation?.[0]?.title ?? 'Home';
+    const elements = getAllByText(fallbackConfig);
+
+    expect(elements[0]).toBeInTheDocument();
+  });
+
+  it('should render nothing when navItems is an empty array', () => {
+    const { container } = render(<Navigation navItems={[]} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+
+    expect(container.firstChild).toBeNull();
+  });
+
+  it('should not render listItem in scrollable list when hideOnLiteSite is true and isLite is true', () => {
+    const { ...rest } = newsConfig.default;
+    const mockNavigation = [
+      { title: 'Home', url: '/home', hideOnLiteSite: true, subItems: [] },
+      { title: 'News', url: '/news', subItems: [] },
+      { title: 'Sport', url: '/sport', subItems: [] },
+    ];
+
+    const navigationComponent = (
+      <ServiceContext.Provider value={{ navigation: mockNavigation, ...rest }}>
+        <Navigation navItems={mockNavigation} />
+      </ServiceContext.Provider>
+    );
+
+    const { queryByText } = render(navigationComponent, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+      isLite: true,
+    });
+
+    expect(queryByText(mockNavigation[0].title)).not.toBeInTheDocument();
+  });
+
+  it('should render listItem in scrollable list when hideOnLiteSite is true and isLite is false', () => {
+    const { ...rest } = newsConfig.default;
+    const mockNavigation = [
+      { title: 'Home', url: '/home', hideOnLiteSite: true },
+      { title: 'News', url: '/news' },
+      { title: 'Sport', url: '/sport' },
+    ];
+
+    const navigationComponent = (
+      <ServiceContext.Provider value={{ navigation: mockNavigation, ...rest }}>
+        <Navigation navItems={mockNavigation} />
+      </ServiceContext.Provider>
+    );
+
+    const { queryAllByText } = render(navigationComponent, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+      isLite: false,
+    });
+
+    expect(queryAllByText(mockNavigation[0].title)[0]).toBeVisible();
+  });
+
+  it('should render listItem in scrollable list when hideOnLiteSite is false/not set', () => {
+    const { ...rest } = newsConfig.default;
+    const mockNavigation = [
+      { title: 'Home', url: '/home', subItems: [] },
+      { title: 'News', url: '/news', subItems: [] },
+      { title: 'Sport', url: '/sport', subItems: [] },
+    ];
+
+    const navigationComponent = (
+      <ServiceContext.Provider value={{ navigation: mockNavigation, ...rest }}>
+        <Navigation navItems={mockNavigation} />
+      </ServiceContext.Provider>
+    );
+
+    const { queryAllByText } = render(navigationComponent, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+      isLite: false,
+    });
+
+    expect(queryAllByText(mockNavigation[0].title)[0]).toBeVisible();
+  });
+
+  describe('View and click tracking', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    const mockNavigation = [
+      { title: 'Home', url: '/home' },
+      { title: 'News', url: '/news' },
+      { title: 'Sport', url: '/sport' },
+    ];
+
+    it('should call the view tracking hook for both scrollable navigation and dropdown navigation', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(<Navigation navItems={mockNavigation} />);
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'scrollable-navigation',
+      });
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'dropdown-navigation',
+      });
+    });
+
+    it('should call the click tracking hook when scrollable navigation is clicked', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      const { getByRole } = render(<Navigation navItems={mockNavigation} />);
+
+      fireEvent.click(getByRole('link', { name: 'Home' }));
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'scrollable-navigation',
+      });
+    });
+  });
+
+  describe('Language Navigation', () => {
+    it('should render LanguageNavigation for WS service in all environment', async () => {
+      const { getByTestId } = await act(async () =>
+        render(<LanguageNavigation />, {
+          bbcOrigin: 'https://www.test.bbc.co.uk',
+          id: 'c0000000000o',
+          isAmp: false,
+          pageType: HOME_PAGE,
+          service: 'ws',
+          statusCode: 200,
+          pathname: '/ws/languages',
+        }),
+      );
+
+      expect(getByTestId('collapsible-nav')).toBeInTheDocument();
+    });
+  });
+});

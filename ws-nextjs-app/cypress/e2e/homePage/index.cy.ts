@@ -93,6 +93,12 @@ const testSuites = [
     tests,
   },
   {
+    path: '/tamil',
+    runforEnv: ['local', 'test'],
+    service: 'tamil',
+    tests,
+  },
+  {
     path: '/uzbek/lat',
     runforEnv: ['local', 'test', 'live'],
     service: 'uzbek',

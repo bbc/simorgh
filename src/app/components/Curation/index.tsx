@@ -3,6 +3,7 @@ import {
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -51,6 +52,11 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+interface CurationProps extends Curation {
+  // keep this local so we do not change the shared bff curation data shape
+  experimentProps?: ComponentExperimentProps;
+}
+
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -68,7 +74,8 @@ export default ({
   renderVisuallyHiddenH2Title = false,
   curationId,
   mediaCollection,
-}: Curation) => {
+  experimentProps,
+}: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -95,6 +102,8 @@ export default ({
     isLive: summaryIsLive,
     title: linkText,
   } = firstSummary || {};
+  // flatten this once so the tracking object stays easy to read below
+  const experimentTrackingProps = experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
     componentName,
@@ -106,6 +115,7 @@ export default ({
       ...(curationId && { resourceId: curationId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
+    ...experimentTrackingProps,
   };
 
   switch (componentName) {
