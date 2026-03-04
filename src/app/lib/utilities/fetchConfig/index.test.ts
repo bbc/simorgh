@@ -188,7 +188,7 @@ describe('fetchConfig', () => {
     });
 
     it.each(SERVICES_WITH_NEW_NAV)(
-      'should set the useNewNav param for %s on Local/Test',
+      'should set the useNewNav param for %s service',
       async service => {
         global.fetch = jest.fn().mockResolvedValue({
           ok: true,
