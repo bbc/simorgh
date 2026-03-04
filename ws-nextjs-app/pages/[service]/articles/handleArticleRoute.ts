@@ -60,13 +60,20 @@ export default async (context: GetServerSidePropsContext) => {
   let routingInfoLogger = logger.debug;
 
   const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData, status },
+    { pageData: pageData?.article, status },
     service,
+    ['brasil', 'BBCScotland'], // Passport homes to ignore for service validation
   );
 
   // If request has fails or should not be rendered, return non-200 status
   if (!hasRequestSucceeded && renderStatus !== OK) {
     routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status: renderStatus,
+      pageType: ARTICLE_PAGE,
+    });
 
     return {
       props: {

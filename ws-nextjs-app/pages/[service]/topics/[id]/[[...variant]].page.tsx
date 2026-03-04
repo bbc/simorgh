@@ -8,7 +8,6 @@ import { OK } from '#app/lib/statusCodes.const';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import isTest from '#app/lib/utilities/isTest';
-import shouldRender from '#nextjs/utilities/shouldRender';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '../../../../utilities/pageRequests/getPageData';
 
@@ -19,7 +18,9 @@ const logger = nodeLogger(__filename);
 export const getServerSideProps = async (
   context: GetServerSidePropsContext,
 ) => {
-  logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
+  const { resolvedUrl } = context;
+
+  logResponseTime({ path: resolvedUrl }, context.res, () => null);
 
   const {
     id,
@@ -34,13 +35,15 @@ export const getServerSideProps = async (
   const rendererEnv =
     isTest() && !rendererEnvFromQuery ? 'live' : rendererEnvFromQuery;
 
+  const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+
   const { data } = await getPageData({
     id,
     page,
     service,
     variant,
     rendererEnv,
-    resolvedUrl: context.resolvedUrl,
+    resolvedUrl: resolvedUrlWithoutQuery,
     pageType: TOPIC_PAGE,
   });
 
@@ -50,22 +53,23 @@ export const getServerSideProps = async (
 
   let routingInfoLogger = logger.debug;
 
-  const { hasRequestSucceeded, status: renderStatus } = shouldRender(
-    { pageData: data.pageData, status: data.status },
-    service,
-  );
-
-  if (!hasRequestSucceeded && renderStatus !== OK) {
+  if (status !== OK) {
     routingInfoLogger = logger.error;
+
+    routingInfoLogger(ROUTING_INFORMATION, {
+      url: resolvedUrlWithoutQuery,
+      status,
+      pageType: TOPIC_PAGE,
+    });
 
     return {
       props: {
         service,
-        status: renderStatus,
+        status,
         timeOnServer: Date.now(),
         variant,
         pageType: TOPIC_PAGE,
-        pathname: context.resolvedUrl,
+        pathname: resolvedUrlWithoutQuery,
       },
     };
   }
@@ -80,7 +84,7 @@ export const getServerSideProps = async (
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {
-    url: context.resolvedUrl,
+    url: resolvedUrlWithoutQuery,
     status: data.status,
     pageType: TOPIC_PAGE,
   });
@@ -98,7 +102,7 @@ export const getServerSideProps = async (
         },
       },
       pageType: TOPIC_PAGE,
-      pathname: context.resolvedUrl,
+      pathname: resolvedUrlWithoutQuery,
       service,
       status: data.status,
       timeOnServer: Date.now(),

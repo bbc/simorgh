@@ -18,7 +18,6 @@ import { GetServerSidePropsContext } from 'next';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import _OnDemandAudioPage from './OnDemandAudioLayout';
 import { OnDemandAudioProps } from './types';
-import * as shouldRender from '../../../utilities/shouldRender';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleOnDemandAudioRoute from './handleOnDemandAudioRoute';
 
@@ -42,23 +41,13 @@ const mockToggles = {
 };
 
 jest.mock('../../../utilities/pageRequests/getPageData');
-jest.mock('../../../utilities/shouldRender', () => {
-  const originalModule = jest.requireActual('../../../utilities/shouldRender');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
+
 jest.mock('react-helmet', () => {
   return {
     Helmet: ({ children }: { children: React.ReactNode }) => (
       <div>{children}</div>
     ),
   };
-});
-jest.spyOn(shouldRender, 'default').mockReturnValue({
-  hasRequestSucceeded: true,
-  status: 200,
 });
 
 interface PageProps {
