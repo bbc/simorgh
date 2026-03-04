@@ -31,6 +31,19 @@ describe('Navigation', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should correctly render amp navigation', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should correctly render canonical navigation on non-home navigation page', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -44,11 +57,37 @@ describe('Navigation', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should correctly render amp navigation on non-home navigation page', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/uk',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should correctly render canonical navigation on non-navigation page', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/not-a-navigation-page',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render amp navigation on non-navigation page', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
       pageType: ARTICLE_PAGE,
       service: 'news',
       statusCode: 200,
