@@ -6,13 +6,12 @@ import {
   AmpMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
 import { Direction } from '#app/models/types/global';
-import styles from './index.styles';
+import styles, { HIDDEN_CLASS_NAME } from './index.styles';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
 const NAVIGATION_ID = 'si-nav';
 const SCROLLABLE_ID = 'si-nav-scrollable';
 const OPEN_CLASS_NAME = 'si-nav-open';
-export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
 type AmpNavigationContainerProps = {
   dir: Direction;

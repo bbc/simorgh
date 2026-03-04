@@ -136,7 +136,7 @@ describe('Navigation', () => {
     expect(queryAllByText('World')).toHaveLength(0);
   });
 
-  it('should fall back to service config when navItems is null', () => {
+  it('should fall back to service config when navItems are not provided', () => {
     const { navigation } = indonesiaConfig.default;
 
     const { getAllByText } = render(<Navigation />, {
@@ -155,7 +155,7 @@ describe('Navigation', () => {
     expect(elements[0]).toBeInTheDocument();
   });
 
-  it('should fall back to service config when navItems is null on amp', () => {
+  it('should fall back to service config when navItems are not provided on amp', () => {
     const { navigation } = indonesiaConfig.default;
 
     const { getAllByText } = render(<Navigation />, {

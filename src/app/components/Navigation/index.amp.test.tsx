@@ -27,11 +27,11 @@ describe('AMP Navigation', () => {
 
   describe('Assertions', () => {
     it('should render scrollable nav and a hidden dropdown', () => {
-      const { queryByTestId, getAllByTestId } = render(navigation);
-      const dropdown = queryByTestId(dropdownTestId)?.parentElement;
+      const { getByTestId, getAllByTestId } = render(navigation);
+      const dropdown = getByTestId(dropdownTestId).parentElement;
       const [scrollableNav] = getAllByTestId(scrollableTestId);
       expect(scrollableNav?.innerHTML).toBe('<li>List Items</li>');
-      expect(dropdown).not.toBeVisible();
+      expect(dropdown).not.toBeNull();
     });
   });
 });

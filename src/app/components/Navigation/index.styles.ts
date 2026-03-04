@@ -1,6 +1,7 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import { HIDDEN_CLASS_NAME } from './index.amp';
+
+export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
 export default {
   brandDivider: ({ palette }: Theme) =>
