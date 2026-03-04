@@ -85,14 +85,14 @@ describe('High Impact Promo', () => {
   it('should render correct attribution when an attributions prop is provided', () => {
     const customAttributions = [
       {
-        title: 'Pidging Related Topic',
+        title: 'Pidgin Related Topic',
         link: { url: '/pidgin/topics/234567' },
       },
     ];
     render(<Fixture attributions={customAttributions} />);
 
     const attributionLink = screen.getByRole('link', {
-      name: 'Pidging Related Topic',
+      name: 'Pidgin Related Topic',
     });
     expect(attributionLink).toBeInTheDocument();
     expect(attributionLink).toHaveAttribute('href', '/pidgin/topics/234567');
