@@ -108,15 +108,12 @@ const Stream = ({
         <Post post={streamResults[0]} hasShareApi={hasShareApi} />
       ) : (
         <ol role="list" css={styles.orderedList}>
-          <li
-            key={streamResults[0].urn}
-            css={styles.listItem}
-            ref={firstPostRef}
-          >
-            <Post post={streamResults[0]} hasShareApi={hasShareApi} />
-          </li>
-          {streamResults.slice(1).map(post => (
-            <li key={post.urn} css={styles.listItem}>
+          {streamResults.map((post, index) => (
+            <li
+              key={post.urn}
+              css={styles.listItem}
+              {...(index === 0 && { ref: firstPostRef })}
+            >
               <Post post={post} hasShareApi={hasShareApi} />
             </li>
           ))}
