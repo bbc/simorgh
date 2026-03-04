@@ -17,7 +17,7 @@ export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 type AmpNavigationContainerProps = {
   dir: Direction;
   menuAnnouncedText: string;
-  topScrollableListItems?: React.ReactNode;
+  topScrollableListItems: React.ReactNode;
   bottomScrollableListItems: React.ReactNode;
   dropdownListItems: React.ReactNode;
 };
