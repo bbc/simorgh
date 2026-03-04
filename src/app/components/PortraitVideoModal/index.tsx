@@ -26,7 +26,8 @@ const MOBILE_BREAKPOINT_QUERY = `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`;
 const SKIP_RATE_COMPONENT_NAME = 'portrait-video-skip-rate';
 const SKIP_RATE_EVENT_GROUPING_NAME = 'portrait-video-skip-rate';
 
-// this stays a type because string literal unions are clearer than interfaces here.
+// tracks an exit reason for the current video session to help us
+// understand how users are navigating through the modal and why they're leaving videos early
 type SessionTrackingExitReason =
   | 'navigation'
   | 'autoplay-end'
@@ -333,7 +334,7 @@ const PortraitVideoModal = ({
     [blocks],
   );
 
-  // this emits one skip-rate event for the active video session.
+  // emits one skip-rate event for the active video session.
   // watched time here is modal dwell time, not smp playhead time.
   const trackSkipRateForActiveVideo = useCallback(
     async ({
