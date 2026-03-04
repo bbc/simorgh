@@ -5,25 +5,14 @@ import {
   AmpDropdown,
   AmpMenuButton,
 } from '#psammead/psammead-navigation/src/DropdownNavigation';
-import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '#psammead/gel-foundations/src/breakpoints';
-import styled from '@emotion/styled';
 import { Direction } from '#app/models/types/global';
 import styles from './index.styles';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
 const NAVIGATION_ID = 'si-nav';
 const SCROLLABLE_ID = 'si-nav-scrollable';
-const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 const OPEN_CLASS_NAME = 'si-nav-open';
-
-const StyledAmpScrollableNavigation = styled(ScrollableNavigation)`
-  &.${HIDDEN_CLASS_NAME} {
-    @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-`;
+export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
 type AmpNavigationContainerProps = {
   dir: Direction;
@@ -44,13 +33,13 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
     <div css={styles.navStack}>
       <div style={{ position: 'relative', width: '100%' }}>
         <div css={styles.topRow}>
-          <StyledAmpScrollableNavigation
+          <ScrollableNavigation
             dir={dir}
-            css={styles.topRowItems}
+            css={[styles.topRowItems, styles.ampScrollableNav]}
             navPosition="primary"
           >
             {topScrollableListItems}
-          </StyledAmpScrollableNavigation>
+          </ScrollableNavigation>
           <AmpMenuButton
             css={styles.menuButton}
             announcedText={menuAnnouncedText}
@@ -72,14 +61,14 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         </AmpDropdown>
       </div>
       <div css={styles.lowerNavWrapper}>
-        <StyledAmpScrollableNavigation
-          dir={dir}
+        <ScrollableNavigation
           id={SCROLLABLE_ID}
-          navPosition={null}
-          css={styles.bottomRowItems}
+          dir={dir}
+          css={[styles.bottomRowItems, styles.ampScrollableNav]}
+          navPosition="secondary"
         >
           {bottomScrollableListItems}
-        </StyledAmpScrollableNavigation>
+        </ScrollableNavigation>
       </div>
     </div>
   </Navigation>
