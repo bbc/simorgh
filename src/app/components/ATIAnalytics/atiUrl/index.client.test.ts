@@ -268,7 +268,7 @@ describe('atiUrl', () => {
             completionRate: 0.75,
             skipRate: 0.25,
             navigationMethod: 'swipe',
-            exitReason: 'navigation',
+            sessionExitReason: 'navigation',
             versionId: 'p1234567',
             resourceId: 'urn:bbc:pips:pid:p1234567',
           },
@@ -277,7 +277,7 @@ describe('atiUrl', () => {
         expect(componentSpecificTrack.eventDetails.item).toEqual({
           attribution: 'advertiserID',
           duration: 9000,
-          exit_reason: 'navigation',
+          session_exit_reason: 'navigation',
           link: 'http://localhost',
           name: 'top-stories',
           navigation_method: 'swipe',
