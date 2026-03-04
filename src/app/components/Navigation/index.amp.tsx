@@ -42,6 +42,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
   <Navigation
     dir={dir}
     id={NAVIGATION_ID}
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ampOpenClass={OPEN_CLASS_NAME as any}
   >
     <AmpMenuButton

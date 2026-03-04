@@ -53,8 +53,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-4:hover,
@@ -83,8 +83,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -896,8 +896,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-4:hover,
@@ -926,8 +926,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -1636,8 +1636,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-4:hover,
@@ -1666,8 +1666,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 
 @media (min-width: 20rem) {
   .emotion-4 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -2374,8 +2374,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-6:hover,
@@ -2404,8 +2404,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -3222,8 +3222,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-6:hover,
@@ -3252,8 +3252,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 
@@ -3967,8 +3967,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   background-color: transparent;
   border: 0;
   float: left;
-  height: NaNrem;
-  width: NaNrem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .emotion-6:hover,
@@ -3997,8 +3997,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
 
 @media (min-width: 20rem) {
   .emotion-6 {
-    height: NaNrem;
-    width: NaNrem;
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }
 

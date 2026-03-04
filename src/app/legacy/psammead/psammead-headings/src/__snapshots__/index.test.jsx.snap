@@ -280,8 +280,8 @@ exports[`SubHeading component should render correctly with an ID 1`] = `
 exports[`SubHeading component should render correctly with arabic script typography values 1`] = `
 .emotion-0 {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  line-height: 1.5rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 700;
   color: #141414;

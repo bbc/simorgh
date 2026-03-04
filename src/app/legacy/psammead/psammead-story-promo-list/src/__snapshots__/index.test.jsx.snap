@@ -109,22 +109,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+  display: inline-block;
 }
 
 .emotion-14 {
@@ -136,6 +121,7 @@ exports[`StoryPromo list base should render correctly 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -149,20 +135,6 @@ exports[`StoryPromo list base should render correctly 1`] = `
   .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -318,22 +290,7 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+  display: inline-block;
 }
 
 .emotion-14 {
@@ -345,6 +302,7 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -358,20 +316,6 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -563,22 +507,7 @@ exports[`StoryPromo list should render correctly 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+  display: inline-block;
 }
 
 .emotion-14 {
@@ -590,6 +519,7 @@ exports[`StoryPromo list should render correctly 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -603,20 +533,6 @@ exports[`StoryPromo list should render correctly 1`] = `
   .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
   }
 }
 
@@ -801,22 +717,7 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+  display: inline-block;
 }
 
 .emotion-14 {
@@ -828,6 +729,7 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -841,20 +743,6 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-14 {
-    display: none;
-    visibility: hidden;
   }
 }
 
