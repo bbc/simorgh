@@ -12,21 +12,18 @@ const promoFixtureData = summaries?.[0] as HighImpactPromoProps;
 interface FixtureProps {
   promoData?: HighImpactPromoProps;
   headingLevel?: number;
-  attribution?: {
-    link: string;
-    text: string;
-  };
+  attributions?: { title: string; link: { url: string } }[] | null;
 }
 
 const Fixture = ({
   promoData = promoFixtureData,
   headingLevel,
-  attribution,
+  attributions,
 }: FixtureProps) => (
   <HighImpactPromo
     {...promoData}
     headingLevel={headingLevel}
-    attribution={attribution}
+    attributions={attributions}
   />
 );
 
@@ -85,18 +82,37 @@ describe('High Impact Promo', () => {
     });
   });
 
-  it('should render correct attribution when an attribution prop is provided', () => {
-    const customAttribution = {
-      link: '/pidgin',
-      text: 'BBC News Pidgin',
-    };
-    render(<Fixture attribution={customAttribution} />, { service: 'mundo' });
+  it('should render correct attribution when an attributions prop is provided', () => {
+    const customAttributions = [
+      {
+        title: 'Pidgin Related Topic',
+        link: { url: '/pidgin/topics/234567' },
+      },
+    ];
+    render(<Fixture attributions={customAttributions} />);
 
     const attributionLink = screen.getByRole('link', {
-      name: 'BBC News Pidgin',
+      name: 'Pidgin Related Topic',
     });
     expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/pidgin');
+    expect(attributionLink).toHaveAttribute('href', '/pidgin/topics/234567');
+  });
+  it('should render default attribution when attributions prop is null', () => {
+    render(<Fixture attributions={null} />, { service: 'mundo' });
+    const attributionLink = screen.getByRole('link', {
+      name: 'BBC News Mundo',
+    });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute('href', '/mundo');
+  });
+
+  it('should render default attribution when attributions prop is an empty array', () => {
+    render(<Fixture attributions={[]} />, { service: 'mundo' });
+    const attributionLink = screen.getByRole('link', {
+      name: 'BBC News Mundo',
+    });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute('href', '/mundo');
   });
 
   it.each<[Services, string]>([
