@@ -26,8 +26,8 @@ const MOBILE_BREAKPOINT_QUERY = `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`;
 const SKIP_RATE_COMPONENT_NAME = 'portrait-video-skip-rate';
 const SKIP_RATE_EVENT_GROUPING_NAME = 'portrait-video-skip-rate';
 
-// reasoning for end of video tracked viewing session
-type SkipTrackingExitReason =
+// this stays a type because string literal unions are clearer than interfaces here.
+type SessionTrackingExitReason =
   | 'navigation'
   | 'autoplay-end'
   | 'playlist-sync'
@@ -337,10 +337,10 @@ const PortraitVideoModal = ({
   // watched time here is modal dwell time, not smp playhead time.
   const trackSkipRateForActiveVideo = useCallback(
     async ({
-      exitReason,
+      sessionExitReason,
       navigationMethod,
     }: {
-      exitReason: SkipTrackingExitReason;
+      sessionExitReason: SessionTrackingExitReason;
       navigationMethod?: string;
     }) => {
       if (!shouldTrackSkipRate()) return;
@@ -386,7 +386,7 @@ const PortraitVideoModal = ({
           completionRate,
           skipRate,
           navigationMethod,
-          exitReason,
+          sessionExitReason,
           versionId: activeVideo?.model?.video?.version?.id,
           resourceId: activeVideo?.model?.video?.id,
         },
@@ -399,14 +399,17 @@ const PortraitVideoModal = ({
   const trackVideoTransition = useCallback(
     async ({
       nextIndex,
-      exitReason,
+      sessionExitReason,
       navigationMethod,
     }: {
       nextIndex: number;
-      exitReason: SkipTrackingExitReason;
+      sessionExitReason: SessionTrackingExitReason;
       navigationMethod?: string;
     }) => {
-      await trackSkipRateForActiveVideo({ exitReason, navigationMethod });
+      await trackSkipRateForActiveVideo({
+        sessionExitReason,
+        navigationMethod,
+      });
       startVideoSession(nextIndex);
     },
     [startVideoSession, trackSkipRateForActiveVideo],
@@ -414,10 +417,12 @@ const PortraitVideoModal = ({
 
   // this centralises close tracking so every close path behaves consistently.
   const handleModalClose = useCallback(
-    (exitReason: SkipTrackingExitReason) => {
+    (sessionExitReason: SessionTrackingExitReason) => {
       if (!modalHasClosedRef.current) {
         modalHasClosedRef.current = true;
-        trackSkipRateForActiveVideo({ exitReason }).catch(() => undefined);
+        trackSkipRateForActiveVideo({ sessionExitReason }).catch(
+          () => undefined,
+        );
         activeVideoSessionRef.current = null;
       }
 
@@ -438,7 +443,7 @@ const PortraitVideoModal = ({
         } else if (activeVideoIndex !== currentIndex) {
           trackVideoTransition({
             nextIndex: currentIndex,
-            exitReason: 'playlist-sync',
+            sessionExitReason: 'playlist-sync',
             navigationMethod: 'playlistLoaded',
           }).catch(() => undefined);
         }
@@ -462,7 +467,7 @@ const PortraitVideoModal = ({
       ) {
         await trackVideoTransition({
           nextIndex,
-          exitReason: 'navigation',
+          sessionExitReason: 'navigation',
           navigationMethod: e?.method ?? 'unknown',
         });
       }
@@ -485,7 +490,7 @@ const PortraitVideoModal = ({
         if (isValidVideoIndex(currentIndex, blocks)) {
           await trackVideoTransition({
             nextIndex: currentIndex + 1,
-            exitReason: 'autoplay-end',
+            sessionExitReason: 'autoplay-end',
             navigationMethod: 'autoplay',
           });
         }
@@ -550,9 +555,9 @@ const PortraitVideoModal = ({
 
       // this is a fallback so we still emit if react unmounts before an explicit close path runs.
       if (!modalHasClosedRef.current) {
-        trackSkipRateForActiveVideo({ exitReason: 'unmount' }).catch(
-          () => undefined,
-        );
+        trackSkipRateForActiveVideo({
+          sessionExitReason: 'unmount',
+        }).catch(() => undefined);
         activeVideoSessionRef.current = null;
       }
 
