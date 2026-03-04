@@ -5,6 +5,8 @@ import InlinePodcastPromo from './Inline';
 import SecondaryColumnPodcastPromo from './SecondaryColumn';
 
 const serviceContextMock = {
+  dir: 'ltr',
+  service: 'news',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
