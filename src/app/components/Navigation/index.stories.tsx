@@ -6,16 +6,27 @@ import type {
 } from '#app/models/types/global';
 import readme from './README.md';
 import metadata from './metadata.json';
+import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { HOME_PAGE } from '#app/routes/utils/pageTypes';
+import AmpDecorator from '#storybook/helpers/ampDecorator';
 
 interface Props {
   navItems: NavigationType[];
   service: Services;
+  isAmp?: boolean;
 }
 
-const Component = ({ navItems, service }: Props) => {
+const Component = ({ isAmp = false, navItems, service }: Props) => {
   return (
     <ServiceContextProvider service={service}>
-      <Navigation navItems={navItems} />
+      <RequestContextProvider
+        isAmp={isAmp}
+        service={service}
+        pageType={HOME_PAGE}
+        pathname="/pathname"
+      >
+        <Navigation navItems={navItems} />
+      </RequestContextProvider>
     </ServiceContextProvider>
   );
 };
@@ -45,7 +56,7 @@ export const Arabic = () => {
       url: '/news',
     },
   ];
-  return <Component navItems={navItems} service={'arabic'} />;
+  return <Component navItems={navItems} service="arabic" />;
 };
 
 export const Pidgin = () => {
@@ -64,5 +75,26 @@ export const Pidgin = () => {
       url: '/news',
     },
   ];
-  return <Component navItems={navItems} service={'pidgin'} />;
+  return <Component navItems={navItems} service="pidgin" />;
 };
+
+export const PidginAmp = () => {
+  const navItems = [
+    {
+      title: 'News',
+      url: '/home',
+      subItems: [
+        { title: 'Nigeria', url: '/home/section1' },
+        { title: 'Africa', url: '/home/section2' },
+        { title: 'World', url: '/home/section3' },
+      ],
+    },
+    {
+      title: 'Video',
+      url: '/news',
+    },
+  ];
+  return <Component isAmp navItems={navItems} service="pidgin" />;
+};
+
+PidginAmp.decorators = [AmpDecorator];
