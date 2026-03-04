@@ -31,7 +31,9 @@ export default class MockIntersectionObserver {
 
   triggerAllObservers = () => {
     this.observers.forEach(item => {
-      item.callback([{ isIntersecting: true }]);
+      item.callback([
+        { isIntersecting: true, boundingClientRect: { bottom: 1 } },
+      ]);
     });
   };
 

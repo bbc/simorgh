@@ -57,9 +57,12 @@ const Stream = ({
 
     const firstPostObserver = new IntersectionObserver(
       ([entry]) => {
-        const { isIntersecting } = entry;
-        setIsFirstPostVisible(isIntersecting);
-        if (isIntersecting) {
+        const { boundingClientRect } = entry;
+
+        const isPostInView = boundingClientRect.bottom > 0;
+
+        setIsFirstPostVisible(isPostInView);
+        if (isPostInView) {
           applyPendingUpdate();
         }
       },
