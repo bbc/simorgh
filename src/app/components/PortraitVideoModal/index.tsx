@@ -19,15 +19,14 @@ import styles from './index.styles';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { DownArrowIcon, UpArrowIcon } from '../icons';
 
-//  disabled so skip-rate tracking runs on both mobile and desktop.
+// disabled so skip-rate tracking runs on both mobile and desktop
 const MOBILE_ONLY_SKIP_RATE_TRACKING = false;
 const MOBILE_BREAKPOINT_QUERY = `(max-width: ${GROUP_3_MIN_WIDTH_BP}rem)`;
-// this name lets reverb/piano group all skip-rate events together.
+// this name lets reverb and piano group all skip-rate events together
 const SKIP_RATE_COMPONENT_NAME = 'portrait-video-skip-rate';
 const SKIP_RATE_EVENT_GROUPING_NAME = 'portrait-video-skip-rate';
 
-// tracks an exit reason for the current video session to help us
-// understand how users are navigating through the modal and why they're leaving videos early
+// this labels why the current video session ended
 type SessionTrackingExitReason =
   | 'navigation'
   | 'autoplay-end'
@@ -35,12 +34,13 @@ type SessionTrackingExitReason =
   | 'close-button'
   | 'backdrop'
   | 'escape'
-  | 'fullscreen-exit'
-  | 'unmount';
+  | 'fullscreen-exit';
 
 type ActiveVideoSession = {
   index: number;
-  startedAt: number;
+  hasStartedPlaying: boolean;
+  maxPlayedPositionMs: number;
+  totalDurationMs: number;
 };
 
 type ModalTrackingParameters = {
@@ -95,6 +95,36 @@ const isValidVideoIndex = (
   videoIndex: number,
   blocks: PortraitClipMediaBlock[],
 ) => videoIndex >= 0 && videoIndex < blocks.length;
+
+// this uses the metadata duration as a fallback until smp gives us a live duration
+const getTotalDurationMs = ({
+  videoIndex,
+  blocks,
+}: {
+  videoIndex: number;
+  blocks: PortraitClipMediaBlock[];
+}) => {
+  if (!isValidVideoIndex(videoIndex, blocks)) {
+    return 0;
+  }
+
+  const totalDurationMs = moment
+    .duration(blocks[videoIndex]?.model?.video?.version?.duration)
+    .asMilliseconds();
+
+  return Number.isFinite(totalDurationMs) && totalDurationMs > 0
+    ? totalDurationMs
+    : 0;
+};
+
+// smp docs say timeupdate values are in seconds so we normalise to milliseconds here
+const getMillisecondsFromSmpTime = (value?: number) => {
+  if (!Number.isFinite(value) || value == null || value < 0) {
+    return null;
+  }
+
+  return value * 1000;
+};
 
 // this converts watched time into completion and skip fractions in the 0..1 range
 const calculateSkipRateMetrics = ({
@@ -224,16 +254,15 @@ export const statsNavigationCallback = async (
 };
 
 export const playbackEndedCallback = async (
-  e: SMPEvent,
+  _e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
   const player = getPlayerInstance();
-  const { ended } = e;
-  const { autoplay } = player.settings();
+  const autoplay = Boolean(player?.settings?.().autoplay);
 
-  if (ended && autoplay) {
+  if (player && autoplay) {
     const currentIndex = getCurrentIndex({ blocks, player });
 
     const newIndex = currentIndex + 1;
@@ -254,12 +283,6 @@ export const playbackEndedCallback = async (
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
-};
-
-const handlePrevNextVideo = (direction: 'previous' | 'next') => {
-  const player = getPlayerInstance();
-
-  player?.[direction]?.();
 };
 
 export interface PortraitVideoModalProps {
@@ -301,7 +324,7 @@ const PortraitVideoModal = ({
       selectedVideoIndex,
     }),
   );
-  // this sends the custom skip-rate event while reusing existing view tracking transport.
+  // this sends the custom skip-rate event while reusing existing view tracking transport
   const skipRateTracker = useSwipeTracker({
     ...eventTrackingData,
     componentName: SKIP_RATE_COMPONENT_NAME,
@@ -311,31 +334,104 @@ const PortraitVideoModal = ({
 
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
-  // this stores timing state for the currently active video in the modal.
+  // this stores playback state for the currently active video in the modal
   const activeVideoSessionRef = useRef<ActiveVideoSession | null>(null);
-  // this avoids duplicate close tracking when multiple close paths fire.
+  // this avoids duplicate close tracking when multiple close paths fire
   const modalHasClosedRef = useRef(false);
+  // this remembers the last transition reason until the next playlist is loaded
+  const pendingSessionExitReasonRef = useRef<SessionTrackingExitReason | null>(
+    null,
+  );
+  // this remembers how the user asked to move to the next video
+  const pendingNavigationMethodRef = useRef<string | undefined>(undefined);
 
-  // this starts timing for a specific video index.
+  // clears any pending transition hints once they have been used
+  const clearPendingVideoTransitionTracking = useCallback(() => {
+    pendingSessionExitReasonRef.current = null;
+    pendingNavigationMethodRef.current = undefined;
+  }, []);
+
+  // this resets tracking for whichever video is active now
   const startVideoSession = useCallback(
     (videoIndex: number) => {
       if (!shouldTrackSkipRate()) return;
 
       if (!isValidVideoIndex(videoIndex, blocks)) {
         activeVideoSessionRef.current = null;
+        clearPendingVideoTransitionTracking();
         return;
       }
 
       activeVideoSessionRef.current = {
         index: videoIndex,
-        startedAt: Date.now(),
+        hasStartedPlaying: false,
+        maxPlayedPositionMs: 0,
+        totalDurationMs: getTotalDurationMs({ videoIndex, blocks }),
       };
+
+      clearPendingVideoTransitionTracking();
+    },
+    [blocks, clearPendingVideoTransitionTracking],
+  );
+
+  // smp docs say timeupdate gives us currentTime and duration
+  // we keep the highest playhead reached so we can measure actual playback instead of modal dwell time
+  const updateActiveVideoPlaybackPosition = useCallback(
+    (e?: SMPEvent) => {
+      const activeVideoSession = activeVideoSessionRef.current;
+
+      if (
+        !activeVideoSession ||
+        !isValidVideoIndex(activeVideoSession.index, blocks)
+      ) {
+        return;
+      }
+
+      const currentPlayedPositionMs = getMillisecondsFromSmpTime(
+        e?.currentTime,
+      );
+      const currentTotalDurationMs = getMillisecondsFromSmpTime(e?.duration);
+
+      if (currentTotalDurationMs != null && currentTotalDurationMs > 0) {
+        activeVideoSession.totalDurationMs = currentTotalDurationMs;
+      }
+
+      if (currentPlayedPositionMs != null) {
+        activeVideoSession.maxPlayedPositionMs = Math.max(
+          activeVideoSession.maxPlayedPositionMs,
+          currentPlayedPositionMs,
+        );
+
+        if (currentPlayedPositionMs > 0) {
+          activeVideoSession.hasStartedPlaying = true;
+        }
+      }
     },
     [blocks],
   );
 
-  // emits one skip-rate event for the active video session.
-  // watched time here is modal dwell time, not smp playhead time.
+  // this marks the session as real playback once smp says the video is playing
+  const handlePlaying = useCallback(
+    (e: SMPEvent) => {
+      updateActiveVideoPlaybackPosition(e);
+
+      if (activeVideoSessionRef.current) {
+        activeVideoSessionRef.current.hasStartedPlaying = true;
+      }
+    },
+    [updateActiveVideoPlaybackPosition],
+  );
+
+  // this keeps the session playhead in sync with the player while the video is running
+  const handlePlaybackProgress = useCallback(
+    (e: SMPEvent) => {
+      updateActiveVideoPlaybackPosition(e);
+    },
+    [updateActiveVideoPlaybackPosition],
+  );
+
+  // this emits one skip-rate event for the active video session
+  // if playback never actually started we skip the event so failed loads do not look like real skips
   const trackSkipRateForActiveVideo = useCallback(
     async ({
       sessionExitReason,
@@ -356,15 +452,25 @@ const PortraitVideoModal = ({
       }
 
       const activeVideo = blocks[activeVideoSession.index];
-      const totalDurationMs = moment
-        .duration(activeVideo?.model?.video?.version?.duration)
-        .asMilliseconds();
+      const totalDurationMs =
+        activeVideoSession.totalDurationMs ||
+        getTotalDurationMs({
+          videoIndex: activeVideoSession.index,
+          blocks,
+        });
 
       if (!Number.isFinite(totalDurationMs) || totalDurationMs <= 0) return;
 
+      if (
+        !activeVideoSession.hasStartedPlaying &&
+        activeVideoSession.maxPlayedPositionMs <= 0
+      ) {
+        return;
+      }
+
       const { watchedDurationMs, completionRate, skipRate } =
         calculateSkipRateMetrics({
-          watchedDurationMs: Date.now() - activeVideoSession.startedAt,
+          watchedDurationMs: activeVideoSession.maxPlayedPositionMs,
           totalDurationMs,
         });
 
@@ -396,43 +502,42 @@ const PortraitVideoModal = ({
     [blocks, eventTrackingData, skipRateTracker],
   );
 
-  // this finalises the current video's metrics and then starts timing the next one.
-  const trackVideoTransition = useCallback(
-    async ({
-      nextIndex,
+  // tracks the current session and clears it straight away so stale smp events cannot spill into the next video
+  const trackAndClearActiveVideoSession = useCallback(
+    ({
       sessionExitReason,
       navigationMethod,
     }: {
-      nextIndex: number;
       sessionExitReason: SessionTrackingExitReason;
       navigationMethod?: string;
     }) => {
-      await trackSkipRateForActiveVideo({
+      const trackingPromise = trackSkipRateForActiveVideo({
         sessionExitReason,
         navigationMethod,
-      });
-      startVideoSession(nextIndex);
+      }).catch(() => undefined);
+
+      activeVideoSessionRef.current = null;
+      clearPendingVideoTransitionTracking();
+
+      return trackingPromise;
     },
-    [startVideoSession, trackSkipRateForActiveVideo],
+    [clearPendingVideoTransitionTracking, trackSkipRateForActiveVideo],
   );
 
-  // this centralises close tracking so every close path behaves consistently.
+  // centralises close tracking so every close path behaves the same way
   const handleModalClose = useCallback(
     (sessionExitReason: SessionTrackingExitReason) => {
       if (!modalHasClosedRef.current) {
         modalHasClosedRef.current = true;
-        trackSkipRateForActiveVideo({ sessionExitReason }).catch(
-          () => undefined,
-        );
-        activeVideoSessionRef.current = null;
+        trackAndClearActiveVideoSession({ sessionExitReason });
       }
 
       onClose();
     },
-    [onClose, trackSkipRateForActiveVideo],
+    [onClose, trackAndClearActiveVideoSession],
   );
 
-  // this keeps local timing in sync with whichever video smp actually loads.
+  // keeps session tracking in sync with whichever playlist smp loads next
   const handlePlaylistLoaded = useCallback(
     (e: SMPEvent) => {
       const currentIndex = getCurrentIndex({ e, blocks });
@@ -442,70 +547,102 @@ const PortraitVideoModal = ({
         if (activeVideoIndex == null) {
           startVideoSession(currentIndex);
         } else if (activeVideoIndex !== currentIndex) {
-          trackVideoTransition({
-            nextIndex: currentIndex,
-            sessionExitReason: 'playlist-sync',
-            navigationMethod: 'playlistLoaded',
-          }).catch(() => undefined);
+          trackAndClearActiveVideoSession({
+            sessionExitReason:
+              pendingSessionExitReasonRef.current ?? 'playlist-sync',
+            navigationMethod:
+              pendingNavigationMethodRef.current ?? 'playlistLoaded',
+          });
+          startVideoSession(currentIndex);
+        } else if (pendingSessionExitReasonRef.current) {
+          clearPendingVideoTransitionTracking();
         }
       }
 
       playlistLoadedCallback(e, blocks);
     },
-    [blocks, startVideoSession, trackVideoTransition],
+    [
+      blocks,
+      clearPendingVideoTransitionTracking,
+      startVideoSession,
+      trackAndClearActiveVideoSession,
+    ],
   );
 
-  // this tracks an intentional user navigation between videos.
+  // records swipe and wheel intent and then waits for the next playlist load before ending the current session
   const handleStatsNavigation = useCallback(
     async (e: SMPEvent) => {
-      const currentIndex = getCurrentIndex({ e, blocks });
-      const nextIndex =
-        e?.direction === 'next' ? currentIndex + 1 : currentIndex - 1;
-
-      if (
-        isValidVideoIndex(currentIndex, blocks) &&
-        isValidVideoIndex(nextIndex, blocks)
-      ) {
-        await trackVideoTransition({
-          nextIndex,
-          sessionExitReason: 'navigation',
-          navigationMethod: e?.method ?? 'unknown',
-        });
-      }
+      pendingSessionExitReasonRef.current = 'navigation';
+      pendingNavigationMethodRef.current = e?.method ?? 'unknown';
 
       await statsNavigationCallback(e, blocks, eventTrackingData, swipeTracker);
     },
-    [blocks, eventTrackingData, swipeTracker, trackVideoTransition],
+    [blocks, eventTrackingData, swipeTracker],
   );
 
-  // this tracks autoplay moving from one video to the next after the current video ends.
+  // marks the session as completed when smp says the current item has ended
+  // autoplay is handled here but the next session waits for the next playlist to actually load
   const handlePlaybackEnded = useCallback(
     async (e: SMPEvent) => {
+      updateActiveVideoPlaybackPosition(e);
+
       const player = getPlayerInstance();
-      const hasEnded = Boolean(e?.ended);
       const autoplayEnabled = Boolean(player?.settings?.().autoplay);
+      const activeVideoSession = activeVideoSessionRef.current;
 
-      if (hasEnded && autoplayEnabled) {
-        const currentIndex = getCurrentIndex({ blocks, player });
-
-        if (isValidVideoIndex(currentIndex, blocks)) {
-          await trackVideoTransition({
-            nextIndex: currentIndex + 1,
-            sessionExitReason: 'autoplay-end',
-            navigationMethod: 'autoplay',
+      if (activeVideoSession) {
+        const completedDurationMs =
+          activeVideoSession.totalDurationMs ||
+          getTotalDurationMs({
+            videoIndex: activeVideoSession.index,
+            blocks,
           });
+
+        if (completedDurationMs > 0) {
+          activeVideoSession.totalDurationMs = completedDurationMs;
+          activeVideoSession.maxPlayedPositionMs = Math.max(
+            activeVideoSession.maxPlayedPositionMs,
+            completedDurationMs,
+          );
+          activeVideoSession.hasStartedPlaying = true;
         }
+      }
+
+      if (autoplayEnabled) {
+        await trackAndClearActiveVideoSession({
+          sessionExitReason: 'autoplay-end',
+          navigationMethod: 'autoplay',
+        });
       }
 
       await playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker);
     },
-    [blocks, eventTrackingData, swipeTracker, trackVideoTransition],
+    [
+      blocks,
+      eventTrackingData,
+      swipeTracker,
+      trackAndClearActiveVideoSession,
+      updateActiveVideoPlaybackPosition,
+    ],
   );
 
-  // this starts the initial session when the modal mounts with a selected video.
+  // this starts the initial session when the modal opens
   useEffect(() => {
     startVideoSession(selectedVideoIndex);
   }, [selectedVideoIndex, startVideoSession]);
+
+  // sets the expected reason before we ask smp to move with the desktop buttons
+  const handlePrevNextVideo = useCallback((direction: 'previous' | 'next') => {
+    const player = getPlayerInstance();
+
+    if (!player) {
+      return;
+    }
+
+    pendingSessionExitReasonRef.current = 'navigation';
+    pendingNavigationMethodRef.current = 'button';
+    player[direction]();
+  }, []);
 
   useEffect(() => {
     const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
@@ -541,7 +678,7 @@ const PortraitVideoModal = ({
 
     if (modal) {
       closeButtonRef.current?.focus();
-      // Prevent tabbing to elements outside the modal
+      // prevent tabbing to elements outside the modal
       reactRootElement?.setAttribute('inert', 'true');
       modal.addEventListener('mousedown', handleBackdropClick);
       modal.addEventListener('touchstart', handleBackdropClick);
@@ -554,19 +691,15 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      // this is a fallback so we still emit if react unmounts before an explicit close path runs.
-      if (!modalHasClosedRef.current) {
-        trackSkipRateForActiveVideo({
-          sessionExitReason: 'unmount',
-        }).catch(() => undefined);
-        activeVideoSessionRef.current = null;
-      }
+      // clear local tracking on teardown without sending analytics
+      clearPendingVideoTransitionTracking();
+      activeVideoSessionRef.current = null;
 
       const player = getPlayerInstance();
-      // Pause any player if the modal is closed instantly
+      // pause any player if the modal is closed instantly
       if (player) player.pause();
     };
-  }, [handleModalClose, trackSkipRateForActiveVideo]);
+  }, [clearPendingVideoTransitionTracking, handleModalClose]);
 
   return (
     <>
@@ -623,7 +756,10 @@ const PortraitVideoModal = ({
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: () => handleModalClose('fullscreen-exit'),
             statsNavigation: handleStatsNavigation,
-            pause: handlePlaybackEnded,
+            ended: handlePlaybackEnded,
+            playing: handlePlaying,
+            timeupdate: handlePlaybackProgress,
+            significanttimeupdate: handlePlaybackProgress,
           }}
         />
         <button
