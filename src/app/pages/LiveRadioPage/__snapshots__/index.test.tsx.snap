@@ -723,7 +723,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
 .emotion-40::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: NaNrem;
   margin-left: 0.625rem;
   width: 100%;
 }

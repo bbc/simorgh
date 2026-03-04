@@ -481,7 +481,6 @@ exports[`RadioSchedule With initial data renders correctly for a service 1`] = `
 .emotion-29::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
-  top: NaNrem;
   margin-right: 0.625rem;
   width: 100%;
 }

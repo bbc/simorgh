@@ -46,8 +46,6 @@ const StyledTimestamp = styled.span`
   &::after {
     content: '';
     border-top: 0.0625rem solid ${props => props.theme.palette.PEBBLE};
-    top: ${({ theme: { fontSizes } }) =>
-      0.5 + fontSizes.minion.lineHeight / 2 / 16}rem;
     ${({ dir }) =>
       dir === 'ltr' ? `margin-left: 0.625rem;` : `margin-right: 0.625rem;`}
     width: 100%;
