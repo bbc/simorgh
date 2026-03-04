@@ -7,7 +7,6 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import isLive from '#lib/utilities/isLive';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
@@ -42,8 +41,8 @@ const fetchConfig = async <T>({
     fetchUrl.searchParams.set('variant', variant);
   }
 
-  // Only fetch new nav for Arabic and Tamil services on Local/Test
-  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
+  // Only fetch new nav for Arabic and Tamil services
+  if (SERVICES_WITH_NEW_NAV.includes(service)) {
     fetchUrl.searchParams.set('useNewNav', 'true');
   }
 
