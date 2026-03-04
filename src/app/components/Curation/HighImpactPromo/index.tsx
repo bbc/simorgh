@@ -66,7 +66,7 @@ const HighImpactPromo = ({
           </Promo.A>
         </Promo.Heading>
         {hasAttribution && <div css={styles.divider} />}
-        {hasAttribution && (
+        {hasAttribution && attributionLink && (
           <Promo.A
             href={attributionLink}
             css={styles.subject}
