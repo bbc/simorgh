@@ -93,7 +93,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-7 {
+  .emotion-6 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -102,15 +102,15 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-7::-webkit-scrollbar {
+  .emotion-6::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-7:focus-visible {
+  .emotion-6:focus-visible {
     outline: none;
   }
 
-  .emotion-7:focus-visible::after {
+  .emotion-6:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -118,7 +118,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     height: 100%;
   }
 
-  .emotion-7:after {
+  .emotion-6:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -136,40 +136,33 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-7:after {
+    .emotion-6:after {
       width: 6rem;
     }
   }
 }
 
-@media (max-width: 37.4375rem) {
-  .emotion-7.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-7 li a {
+.emotion-6 li a {
   color: #FFFFFF;
 }
 
-.emotion-7 li a:hover::after {
+.emotion-6 li a:hover::after {
   border-bottom-color: #FFFFFF;
 }
 
-.emotion-7 li a:focus::after {
+.emotion-6 li a:focus::after {
   border-bottom-color: #FFFFFF;
 }
 
-.emotion-7 li a:focus-visible::after {
+.emotion-6 li a:focus-visible::after {
   border-bottom-color: #FFFFFF;
 }
 
-.emotion-7 li a[data-active="true"] span::after {
+.emotion-6 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }
 
-.emotion-7 li:before {
+.emotion-6 li:before {
   content: "";
   position: absolute;
   inset-inline-end: -0.25rem;
@@ -185,15 +178,22 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   opacity: 0.3;
 }
 
-.emotion-7 li:last-child:before {
+.emotion-6 li:last-child:before {
   display: none;
 }
 
-.emotion-7:after {
+.emotion-6:after {
   background: none;
 }
 
-.emotion-9 {
+@media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-8 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -206,14 +206,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   color: #FFFFFF;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
+.emotion-8:hover,
+.emotion-8:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-9:hover::after,
-.emotion-9:focus::after {
+.emotion-8:hover::after,
+.emotion-8:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -224,40 +224,40 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-8 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-9 {
+  .emotion-8 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-9 svg {
+.emotion-8 svg {
   vertical-align: middle;
 }
 
-.emotion-9 svg {
+.emotion-8 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-11 {
+.emotion-10 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-11 {
+  .emotion-10 {
     fill: linkText;
   }
 }
 
-.emotion-15 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -268,7 +268,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-15 {
   background-color: #FFFFFF;
   clear: both;
   position: absolute;
@@ -280,38 +280,38 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-16 ul {
+.emotion-15 ul {
   padding: 0;
   border: none;
 }
 
-.emotion-16 ul li {
+.emotion-15 ul li {
   padding: 0;
 }
 
-.emotion-16 ul li:last-child {
+.emotion-15 ul li:last-child {
   padding-bottom: 0;
 }
 
-.emotion-16 a {
+.emotion-15 a {
   display: block;
   position: relative;
   padding-inline: 0.5rem;
 }
 
-.emotion-16 a:hover {
+.emotion-15 a:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-16 a:before {
+.emotion-15 a:before {
   content: "";
   position: absolute;
   top: 0;
@@ -323,22 +323,22 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   opacity: 0;
 }
 
-.emotion-16 a:hover::before {
+.emotion-15 a:hover::before {
   opacity: 1;
 }
 
-.emotion-16 a:focus-visible {
+.emotion-15 a:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-18 {
+.emotion-17 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-18 {
     white-space: nowrap;
     overflow-x: scroll;
     scroll-behavior: auto;
@@ -347,15 +347,15 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     -ms-overflow-style: none;
   }
 
-  .emotion-20::-webkit-scrollbar {
+  .emotion-18::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-20:focus-visible {
+  .emotion-18:focus-visible {
     outline: none;
   }
 
-  .emotion-20:focus-visible::after {
+  .emotion-18:focus-visible::after {
     outline: 0.1875rem solid #000000;
     content: '';
     position: absolute;
@@ -363,7 +363,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
     height: 100%;
   }
 
-  .emotion-20:after {
+  .emotion-18:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -381,20 +381,13 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 
   @media (min-width: 25rem) {
-    .emotion-20:after {
+    .emotion-18:after {
       width: 6rem;
     }
   }
 }
 
-@media (max-width: 37.4375rem) {
-  .emotion-20.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.emotion-20 li:before {
+.emotion-18 li:before {
   content: "";
   position: absolute;
   inset-inline-end: -0.25rem;
@@ -410,8 +403,15 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   opacity: 1;
 }
 
-.emotion-20 li:last-child:before {
+.emotion-18 li:last-child:before {
   display: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-18.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 <div>
@@ -434,7 +434,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             class="emotion-5"
           >
             <div
-              class="emotion-6 emotion-7 emotion-8"
+              class="emotion-6 emotion-7"
               data-e2e="scrollable-nav"
               dir="ltr"
             >
@@ -457,7 +457,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             </amp-state>
             <button
               aria-expanded="false"
-              class="focusIndicatorRemove emotion-9 emotion-10"
+              class="focusIndicatorRemove emotion-8 emotion-9"
               data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
               dir="ltr"
               on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -469,7 +469,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="emotion-11 emotion-12"
+                class="emotion-10 emotion-11"
                 data-amp-bind-hidden="menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -482,7 +482,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
               </svg>
               <svg
                 aria-hidden="true"
-                class="emotion-11 emotion-12"
+                class="emotion-10 emotion-11"
                 data-amp-bind-hidden="!menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -496,14 +496,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
                 />
               </svg>
               <span
-                class="emotion-15"
+                class="emotion-14"
               >
                 menu
               </span>
             </button>
           </div>
           <div
-            class="emotion-16 emotion-17"
+            class="emotion-15 emotion-16"
             data-e2e="dropdown-nav"
             hidden=""
             id="si-nav-dropdown-menu"
@@ -518,11 +518,11 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
           </div>
         </div>
         <div
-          class="emotion-18"
+          class="emotion-17"
         >
           <div
-            class="emotion-6 emotion-20 emotion-8"
-            data-e2e="scrollable-nav"
+            class="emotion-18 emotion-7"
+            data-e2e="scrollable-nav-secondary"
             dir="ltr"
             id="si-nav-scrollable"
           >
