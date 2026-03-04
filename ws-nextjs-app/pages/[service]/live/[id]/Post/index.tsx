@@ -98,26 +98,62 @@ const PostHeaderBanner = ({
   );
 };
 
-const PostHeadings = ({ headerBlock }: { headerBlock: PostHeadingBlock }) => {
-  const isHeadline = headerBlock.type === 'headline';
-  const headingText =
-    headerBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+const PostHeading = ({
+  headerBlocks,
+}: {
+  headerBlocks: PostHeadingBlock[];
+}) => {
+  const componentsToRender = {
+    headline: (props: ComponentToRenderProps) => {
+      const { blocks } = props;
+
+      const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
+
+      return (
+        <Text
+          fontVariant={'sansBold'}
+          size={'greatPrimer'}
+          className="headingStyling"
+          css={[styles.postHeadings, styles.postHeadline]}
+        >
+          {headingText}
+        </Text>
+      );
+    },
+    subheadline: (props: ComponentToRenderProps) => {
+      const { blocks } = props;
+
+      const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
+
+      return (
+        <>
+          <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
+          <Text
+            fontVariant={'sansRegular'}
+            size={'brevier'}
+            className="headingStyling"
+            css={[styles.postHeadings, styles.postSubHeadline]}
+          >
+            {headingText}
+          </Text>
+        </>
+      );
+    },
+    contributor: (props: ComponentToRenderProps) => {
+      const { blocks } = props;
+
+      console.log('###################');
+      console.log('eventDetails: contributor');
+      console.log('- props -');
+      console.log(JSON.stringify(props));
+      console.log('- blocks -');
+      console.log(JSON.stringify(blocks));
+      console.log('###################');
+    },
+  };
 
   return (
-    <>
-      {!isHeadline && <VisuallyHiddenText>{`, `}</VisuallyHiddenText>}
-      <Text
-        fontVariant={isHeadline ? 'sansBold' : 'sansRegular'}
-        size={isHeadline ? 'greatPrimer' : 'brevier'}
-        className="headingStyling"
-        css={[
-          styles.postHeadings,
-          isHeadline ? styles.postHeadline : styles.postSubHeadline,
-        ]}
-      >
-        {headingText}
-      </Text>
-    </>
+    <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
   );
 };
 
@@ -217,9 +253,7 @@ const Post = ({
             timestamp={timestamp}
           />
 
-          {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
-          ))}
+          <PostHeading headerBlocks={headerBlocks} />
         </span>
       </Heading>
       <div css={styles.postContent}>
