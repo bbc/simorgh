@@ -16,6 +16,8 @@ export type SMPEvent = {
   direction?: string;
   method?: 'swipe' | 'wheel';
   ended?: boolean;
+  currentTime?: number;
+  duration?: number;
 };
 
 export type MediaPlayerEvents =
@@ -23,7 +25,11 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit'
   | 'statsNavigation'
-  | 'pause';
+  | 'pause'
+  | 'ended'
+  | 'playing'
+  | 'timeupdate'
+  | 'significanttimeupdate';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>
