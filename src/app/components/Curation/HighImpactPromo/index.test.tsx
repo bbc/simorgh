@@ -97,6 +97,23 @@ describe('High Impact Promo', () => {
     expect(attributionLink).toBeInTheDocument();
     expect(attributionLink).toHaveAttribute('href', '/pidgin/topics/234567');
   });
+  it('should render default attribution when attributions prop is null', () => {
+    render(<Fixture attributions={null} />, { service: 'mundo' });
+    const attributionLink = screen.getByRole('link', {
+      name: 'BBC News Mundo',
+    });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute('href', '/mundo');
+  });
+
+  it('should render default attribution when attributions prop is an empty array', () => {
+    render(<Fixture attributions={[]} />, { service: 'mundo' });
+    const attributionLink = screen.getByRole('link', {
+      name: 'BBC News Mundo',
+    });
+    expect(attributionLink).toBeInTheDocument();
+    expect(attributionLink).toHaveAttribute('href', '/mundo');
+  });
 
   it.each<[Services, string]>([
     ['mundo', 'ltr'],
