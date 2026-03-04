@@ -39,7 +39,7 @@ const HighImpactPromo = ({
   const attributionLink =
     firstAttribution?.link?.url || (service ? getBrandPath(service) : null);
   const attributionText = firstAttribution?.title || brandName;
-  const hasAttribution = attributionLink && attributionText;
+  const hasAttribution = Boolean(attributionLink && attributionText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
