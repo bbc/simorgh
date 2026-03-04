@@ -30,7 +30,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
 }) => (
   <Navigation dir={dir} id={NAVIGATION_ID} ampOpenClass={OPEN_CLASS_NAME}>
     <div css={styles.navStack}>
-      <div style={{ position: 'relative', width: '100%' }}>
+      <div css={{ position: 'relative', width: '100%' }}>
         <div css={styles.topRow}>
           <ScrollableNavigation
             dir={dir}
