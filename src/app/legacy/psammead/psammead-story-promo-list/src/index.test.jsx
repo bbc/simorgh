@@ -9,8 +9,12 @@ const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
 const Info = (
   <>
-    <Headline>The headline of the promo</Headline>
-    <Summary>The summary of the promo</Summary>
+    <Headline promoType="regular" promoHasImage>
+      The headline of the promo
+    </Headline>
+    <Summary promoType="regular" promoHasImage>
+      The summary of the promo
+    </Summary>
     <time>12 March 2019</time>
   </>
 );
