@@ -140,15 +140,18 @@ const PostHeading = ({
       );
     },
     contributor: (props: ComponentToRenderProps) => {
-      const { blocks } = props;
+      const {
+        blocks,
+        name: contributorName,
+        subtitle: contributorSubtitle,
+      } = props;
 
-      console.log('###################');
-      console.log('eventDetails: contributor');
-      console.log('- props -');
-      console.log(JSON.stringify(props));
-      console.log('- blocks -');
-      console.log(JSON.stringify(blocks));
-      console.log('###################');
+      const contributorImage = blocks?.[0]?.model?.blocks?.[0]?.model?.locator;
+      const contributorOriginCode =
+        blocks?.[0]?.model?.blocks?.[0]?.model?.originCode;
+      const controbutorImageAltText =
+        blocks?.[0]?.model?.blocks?.[1]?.model?.blocks?.[0]?.model?.blocks?.[0]
+          ?.model?.text;
     },
   };
 
