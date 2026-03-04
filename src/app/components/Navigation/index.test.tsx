@@ -14,7 +14,7 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Navigation', () => {
   const navItems = [
-    { title: 'Home', url: '/home' },
+    { title: 'Home', url: '/news' },
     { title: 'About', url: '/about' },
   ];
 
@@ -52,7 +52,7 @@ describe('Navigation', () => {
       pageType: ARTICLE_PAGE,
       service: 'news',
       statusCode: 200,
-      pathname: '/uk',
+      pathname: '/about',
     });
     expect(container).toMatchSnapshot();
   });
@@ -65,12 +65,12 @@ describe('Navigation', () => {
       pageType: ARTICLE_PAGE,
       service: 'news',
       statusCode: 200,
-      pathname: '/uk',
+      pathname: '/about',
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should correctly render canonical navigation on non-navigation page', () => {
+  it('should correctly render canonical navigation on a URL not associated with navigation items', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
@@ -83,7 +83,7 @@ describe('Navigation', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should correctly render amp navigation on non-navigation page', () => {
+  it('should correctly render amp navigation on a URL not associated with navigation items', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',

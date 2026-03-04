@@ -31,7 +31,7 @@ describe('AMP Navigation', () => {
       const dropdown = getByTestId(dropdownTestId).parentElement;
       const [scrollableNav] = getAllByTestId(scrollableTestId);
       expect(scrollableNav?.innerHTML).toBe('<li>List Items</li>');
-      expect(dropdown).not.toBeNull();
+      expect(dropdown).toHaveAttribute('hidden');
     });
   });
 });
