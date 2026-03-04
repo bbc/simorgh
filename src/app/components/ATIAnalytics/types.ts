@@ -179,7 +179,7 @@ export interface ItemTracker {
   completionRate?: number;
   skipRate?: number;
   navigationMethod?: string;
-  exitReason?: string;
+  sessionExitReason?: string;
   versionId?: string;
   resourceId?: string;
   label?: string;
