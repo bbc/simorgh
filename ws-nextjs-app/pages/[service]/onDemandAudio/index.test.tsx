@@ -36,6 +36,9 @@ const mockToggles = {
   onDemandRadioSchedule: {
     enabled: true,
   },
+  podcastEpisodeLinkedData: {
+    enabled: true,
+  },
 };
 
 jest.mock('../../../utilities/pageRequests/getPageData');
@@ -63,6 +66,8 @@ interface PageProps {
   service: Services;
   variant?: Variants;
   lang?: string;
+  pathname?: string;
+  toggles?: typeof mockToggles;
 }
 
 const renderPage = async ({
@@ -70,11 +75,13 @@ const renderPage = async ({
   service,
   variant,
   lang = 'ko',
+  pathname = '/some-podcast',
+  toggles = mockToggles,
 }: PageProps) => {
   let result;
   await act(async () => {
     result = render(
-      <ToggleContextProvider toggles={mockToggles}>
+      <ToggleContextProvider toggles={toggles}>
         <OnDemandAudioPage service={service} pageData={pageData} />
       </ToggleContextProvider>,
       {
@@ -84,9 +91,9 @@ const renderPage = async ({
         bbcOrigin: 'https://www.test.bbc.com',
         pageType: AUDIO_PAGE,
         derivedPageType: 'On Demand Radio',
-        pathname: '/some-podcast',
+        pathname,
         statusCode: 200,
-        toggles: mockToggles,
+        toggles,
       },
     );
   });
@@ -147,6 +154,60 @@ describe('OnDemand Radio Page ', () => {
     const { container } = await renderPage({
       pageData: result.props.pageData,
       service: 'gahuza',
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot for podcast episode page with PodcastEpisode schema', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const { container } = await renderPage({
+      pageData: result.props.pageData,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      toggles: {
+        ...mockToggles,
+        podcastEpisodeLinkedData: { enabled: true },
+      },
+    });
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should match snapshot for when podcastEpisodeLinkedData toggle is off', async () => {
+    const mockCtx = {
+      ...mockGetServerSidePropsContext,
+      resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+    } satisfies GetServerSidePropsContext;
+    jest.spyOn(getPageDataModule, 'default').mockResolvedValue({
+      data: {
+        pageData: gahuzaPodcastPage.data,
+        status: 200,
+      },
+    });
+
+    const result = await handleOnDemandAudioRoute(mockCtx);
+
+    const { container } = await renderPage({
+      pageData: result.props.pageData,
+      service: 'gahuza',
+      pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
+      toggles: {
+        ...mockToggles,
+        podcastEpisodeLinkedData: { enabled: false },
+      },
     });
 
     expect(container).toMatchSnapshot();

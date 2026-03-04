@@ -359,6 +359,73 @@ exports[`LinkedData should correctly render linked data for home pages 1`] = `
 }
 `;
 
+exports[`LinkedData should correctly render linked data for podcast episode pages with PodcastEpisode schema 1`] = `
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "image": {
+        "@type": "ImageObject",
+        "height": 576,
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+        "width": 1024,
+      },
+      "inLanguage": {
+        "@type": "Language",
+        "alternateName": "en-GB",
+        "name": "English",
+      },
+      "mainEntity": {
+        "@id": "https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9#episode",
+      },
+      "mainEntityOfPage": {
+        "@id": "https://www.test.bbc.com/pathname",
+        "@type": "WebPage",
+        "name": "Episode Title - Brand - Gahuza",
+      },
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "height": 16,
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/publisher-nx16.png",
+          "width": 103,
+        },
+        "name": "BBC News",
+        "publishingPrinciples": "https://www.bbc.com/news/help-41670342",
+      },
+      "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png",
+      "url": "https://www.test.bbc.com/pathname",
+    },
+    {
+      "@id": "https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9#series",
+      "@type": "PodcastSeries",
+      "name": "Imvo n'imvano",
+    },
+    {
+      "@id": "https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9#episode",
+      "@type": "PodcastEpisode",
+      "associatedMedia": {
+        "@id": "https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9#audio",
+        "@type": "AudioObject",
+        "description": "Episode synopsis",
+        "duration": "PT29M30S",
+        "name": "Episode Title",
+        "thumbnailUrl": "https://ichef.bbci.co.uk/...",
+        "uploadDate": "2024-11-02T12:00:00.000Z",
+      },
+      "datePublished": "2024-11-02T12:00:00.000Z",
+      "description": "Episode synopsis",
+      "name": "Episode Title",
+      "partOfSeries": {
+        "@id": "https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9#series",
+      },
+    },
+  ],
+}
+`;
+
 exports[`LinkedData should correctly render linked data for radio pages 1`] = `
 {
   "@context": "http://schema.org",
