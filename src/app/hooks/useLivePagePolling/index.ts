@@ -6,6 +6,7 @@ export const POLLING_INTERVAL = 5000;
 
 const useLivePagePolling = (
   initialStreamData: StreamResponse['data'] | null,
+  enableFeature: boolean,
 ) => {
   const [currentStreamData, setCurrentData] = useState(initialStreamData);
   const [newData, setNewData] = useState(initialStreamData);
@@ -13,6 +14,7 @@ const useLivePagePolling = (
 
   useEffect(() => {
     const timerId = setInterval(() => {
+      if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
       // Fetch data here
       const request = fakeRequest();
@@ -28,7 +30,11 @@ const useLivePagePolling = (
     }, POLLING_INTERVAL);
 
     return () => clearTimeout(timerId);
-  }, [currentStreamData?.page?.index, currentStreamData?.results.length]);
+  }, [
+    currentStreamData?.page?.index,
+    currentStreamData?.results.length,
+    enableFeature,
+  ]);
 
   const applyPendingUpdate = () => {
     if (hasPendingUpdate) {

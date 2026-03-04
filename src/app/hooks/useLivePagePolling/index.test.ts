@@ -21,7 +21,9 @@ describe('useLivePagePolling', () => {
         tempPageDataUpdate as unknown as ComponentProps['pageData'],
       );
 
-    const { result } = renderHook(() => useLivePagePolling(initialStreamData));
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialStreamData, true),
+    );
     const { currentStreamData } = result.current;
 
     expect(currentStreamData).toStrictEqual(initialStreamData);
@@ -35,7 +37,9 @@ describe('useLivePagePolling', () => {
         tempPageDataUpdate as unknown as ComponentProps['pageData'],
       );
 
-    const { result } = renderHook(() => useLivePagePolling(initialStreamData));
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialStreamData, true),
+    );
     act(() => {
       jest.advanceTimersByTime(POLLING_INTERVAL);
     });
@@ -54,7 +58,9 @@ describe('useLivePagePolling', () => {
         tempPageDataUpdate as unknown as ComponentProps['pageData'],
       );
 
-    const { result } = renderHook(() => useLivePagePolling(initialStreamData));
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialStreamData, true),
+    );
 
     act(() => {
       jest.advanceTimersByTime(POLLING_INTERVAL);
@@ -86,6 +92,7 @@ describe('useLivePagePolling', () => {
     renderHook(() =>
       useLivePagePolling(
         initialStreamData as unknown as StreamResponse['data'],
+        true,
       ),
     );
 
