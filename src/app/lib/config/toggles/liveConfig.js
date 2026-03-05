@@ -59,7 +59,7 @@ export default {
     enabled: true,
   },
   podcastEpisodeLinkedData: {
-    enabled: true,
+    enabled: false,
   },
   podcastPromo: {
     enabled: false,
