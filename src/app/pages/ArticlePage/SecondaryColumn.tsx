@@ -1,17 +1,16 @@
 import { useTheme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
 import styles from './ArticlePage.styles';
 
 const SecondaryColumn = ({
   pageData,
-  referrerVariant,
-  referrerExperimentName,
+  experimentProps,
 }: {
   pageData: Article;
-  referrerVariant?: string | null;
-  referrerExperimentName?: string;
+  experimentProps?: ComponentExperimentProps;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
@@ -31,14 +30,7 @@ const SecondaryColumn = ({
         >
           <TopStoriesSection
             content={topStoriesContent}
-            // EXPERIMENT: Referrer Experiment
-            {...(referrerVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: referrerExperimentName,
-                experimentVariant: referrerVariant,
-              },
-            })}
+            experimentProps={experimentProps}
           />
         </div>
       )}
@@ -48,14 +40,7 @@ const SecondaryColumn = ({
             content={featuresContent}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
-            // EXPERIMENT: Referrer Experiment
-            {...(referrerVariant && {
-              experimentProps: {
-                sendOptimizelyEvents: true,
-                experimentName: referrerExperimentName,
-                experimentVariant: referrerVariant,
-              },
-            })}
+            experimentProps={experimentProps}
           />
         </div>
       )}

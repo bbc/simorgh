@@ -1,20 +1,18 @@
 import { Theme, css } from '@emotion/react';
 
 export default {
-  actionLinkWrapper: ({ mq }) =>
+  callToActionLink: ({ mq }) =>
     css({
-      display: 'flex',
+      padding: '1rem',
+      display: 'inline-flex',
+      justifyContent: 'center',
       flexDirection: 'column',
-      flex: '1 1 auto',
+      flex: '0 0 auto',
       alignItems: 'center',
       gap: '1rem',
       [mq.GROUP_2_MIN_WIDTH]: {
         flexDirection: 'row',
       },
-    }),
-  callToActionLink: () =>
-    css({
-      padding: '1rem',
     }),
 
   buttonSeparatorText: ({ palette }: Theme) =>
