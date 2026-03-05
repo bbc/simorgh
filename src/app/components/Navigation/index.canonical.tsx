@@ -68,7 +68,7 @@ const CanonicalNavigationContainer: React.FC<
           setLastScrollY(scrollY);
           // Only show sticky nav if nav is fully out of view and user is scrolling up
           // Hide sticky nav before original nav is visible (with threshold)
-          const threshold = 65; // px, adjust for not seeing both original and sticky nav at the same time
+          const threshold = 70; // px, adjust for not seeing both original and sticky nav at the same time
           if (mainNavBar.bottom < -threshold && scrollingUp && !isKeyboardNav) {
             // do not show sticky nav if keyboard navigation is detected
             setShowSticky(true);
