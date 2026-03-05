@@ -1,7 +1,6 @@
 import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
-import pageData2 from './tempPageData2';
 
+// This is a placeholder function, this will be replaced by a proper fetch statement to the BFF in due time.
 export default () => {
-  console.log('CHECK UPDATE');
-  return pageData2 as unknown as ComponentProps['pageData'];
+  return null as unknown as ComponentProps['pageData'];
 };
