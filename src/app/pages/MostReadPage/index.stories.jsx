@@ -36,6 +36,7 @@ const Component = ({ service, variant }) => {
         pathname={`/${service}/popular/read`}
         status={200}
         pageData={pageData}
+        service={service}
       />
     </BrowserRouter>
   );

@@ -34,6 +34,7 @@ const Component = ({ service, isLite }: StoryProps) => {
         match={matchFixtures(service)}
         pageData={onDemandTvFixtures[service] || afrique}
         status={200}
+        service={service}
         loading={false}
         error=""
         pageType={TV_PAGE}
