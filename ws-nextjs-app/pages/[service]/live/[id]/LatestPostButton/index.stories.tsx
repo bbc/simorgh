@@ -10,11 +10,11 @@ const Component = () => {
 };
 
 export default {
-  title: 'Components/Live Post Button',
+  title: 'Components/Latest Post Button',
   Component,
   parameters: {
     metadata
   },
 };
 
-export const ShareButtonComponent = () => <Component />;
+export const LatestPostButton = () => <Component />;

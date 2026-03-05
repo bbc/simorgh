@@ -16,6 +16,9 @@ const styles = {
       [mq.FORCED_COLOURS]: {
         color: 'canvas',
         backgroundColor: 'CanvasText',
+        span: {
+          backgroundColor: 'CanvasText',
+        },
       },
       cursor: 'pointer',
       '&:hover, &:focus': {

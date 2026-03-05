@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://www.dropbox.com/scl/fi/6fgrkpk39wh6o5lxqeorc/A11Y-Swarm-Latest-Post-Update-Button.paper?rlkey=7iaqyzyq3evdtdd5xltj2cqg4&dl=0",
       "label": "Accessibility Swarm Notes"
