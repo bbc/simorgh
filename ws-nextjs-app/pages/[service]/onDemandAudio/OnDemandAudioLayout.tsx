@@ -59,9 +59,8 @@ const OnDemandAudioPage = ({
     'podcastEpisodeLinkedData',
   );
 
-  const isPodcastEpisodePage = /\/podcasts\/[^/]+\/[^/]+(?:\.lite)?$/.test(
-    pathname,
-  );
+  const isPodcastEpisodePage =
+    /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
 
   const shouldEmitPodcastEpisodeSchema =
     isPodcast && isPodcastEpisodePage && showPodcastEpisodeLinkedData;
@@ -131,7 +130,7 @@ const OnDemandAudioPage = ({
     ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
     : headline;
 
-  const shouldSetMainEntity = Boolean(podcastEntities)
+  const shouldSetMainEntity = Boolean(podcastEntities);
 
   const metadataImageProps = is(String, imageUrl)
     ? {
@@ -196,9 +195,7 @@ const OnDemandAudioPage = ({
               type="WebPage"
               seoTitle={metadataTitle}
               entities={linkedDataEntities}
-              mainEntityId={
-                shouldSetMainEntity ? episodeId : undefined
-              }
+              mainEntityId={shouldSetMainEntity ? episodeId : undefined}
             />
           </main>
 
