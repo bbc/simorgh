@@ -5,7 +5,7 @@ import styles from './index.styles';
 const GLOBAL_LANGUAGES_PATH = '/ws/languages';
 
 const isGlobalLanguageHomepage = (inputPathname: string) => {
-  const pathname = inputPathname.split(/[?#]/)[0].replace(/\/$/, '');
+  const pathname = inputPathname.split(/[?#]/)?.[0]?.replace(/\/$/, '');
   return pathname === GLOBAL_LANGUAGES_PATH;
 };
 
