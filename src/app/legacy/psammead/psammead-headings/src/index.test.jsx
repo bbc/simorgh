@@ -50,7 +50,7 @@ describe('SubHeading component', () => {
 
   it('should render correctly with an ID', () => {
     const { container } = render(
-      <SubHeading id="This-is-a-SubHeading" service="news" tabIndex={-1}>
+      <SubHeading id="This-is-a-SubHeading" tabIndex={-1}>
         This is a SubHeading
       </SubHeading>,
     );

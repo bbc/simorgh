@@ -67,7 +67,7 @@ Data attributes, such as `data-e2e` can be passed in for testing as well.
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example        |
 | -------- | ---- | -------- | ------- | -------------- |
-| children | node | yes      | N/A     | `<IndexAlsosLi  url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator  type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi service="news url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
+| children | node | yes      | N/A     | `<IndexAlsosLi  url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator  type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
 
 #### IndexAlsoLi Props
 
