@@ -1,5 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import SERVICES_WITH_NEW_NAV from '#src/app/components/Navigation/config';
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
 import config from '../support/config/services';
@@ -33,8 +32,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const testMobileNav =
       serviceName === 'ukchina' || serviceName === 'persian';
 
-    const testTwoTierNav =
-      SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() === 'test';
+    const testTwoTierNav = SERVICES_WITH_NEW_NAV.includes(service);
 
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
@@ -53,9 +51,9 @@ export default ({ service, pageType }: ServiceParametersType) => {
       });
     }
 
-    // this check limits these tests to arabic and tamil services on test
+    // this check limits these tests to arabic and tamil services
     if (testTwoTierNav) {
-      it('should show two tier navigation on desktop on test environment', () => {
+      it('should show two tier navigation on desktop', () => {
         cy.viewport(1008, 900);
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
 
@@ -64,11 +62,11 @@ export default ({ service, pageType }: ServiceParametersType) => {
           .should('be.visible');
       });
 
-      it('should show two tier navigation on mobile on test environment', () => {
+      it('should show two tier navigation on mobile', () => {
         cy.viewport(320, 480);
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
 
-        cy.get('nav button').click({ force: true });
+        // cy.get('nav button').click({ force: true });
 
         cy.get('nav')
           .find('[data-e2e="scrollable-nav-secondary"] ul')

@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import config from '../support/config/services';
-import getAppEnv from '../support/helpers/getAppEnv';
 import { ServiceParametersType } from '../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -13,8 +12,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
       const testMobileNav =
         serviceName === 'ukchina' || serviceName === 'persian';
 
-      const testTwoTierNav =
-        SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() === 'test';
+      const testTwoTierNav = SERVICES_WITH_NEW_NAV.includes(service);
 
       if (testMobileNav) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
@@ -39,7 +37,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
         });
       }
 
-      // this check limits these tests to arabic and tamil services on test
+      // this check limits these tests to arabic and tamil services
       if (testTwoTierNav) {
         it('should show two tier navigation on mobile on test environment', () => {
           cy.viewport(320, 480);
