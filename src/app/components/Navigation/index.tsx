@@ -166,7 +166,7 @@ const getActiveTopIndex = ({
 };
 
 type NavigationContainerProps = {
-  navItems: Navigation[];
+  navItems?: Navigation[];
   propsForTopBarOJComponent?: {
     blocks?: TopStoryItem[];
   };

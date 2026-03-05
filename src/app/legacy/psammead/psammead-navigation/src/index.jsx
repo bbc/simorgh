@@ -246,7 +246,7 @@ const Navigation = ({
   children,
   dir = 'ltr',
   isOpen = false,
-  ampOpenClass = null,
+  ampOpenClass = '',
   ...props
 }) => {
   return (

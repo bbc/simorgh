@@ -1,4 +1,3 @@
-import Cookie from 'js-cookie';
 import { screen } from '@testing-library/react';
 import { render } from '#app/components/react-testing-library-with-providers';
 import { IdctaConfig } from '#app/models/types/account';
@@ -17,22 +16,19 @@ const idctaConfig: IdctaConfig = {
   settings_url: 'https://example.com/settings',
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
+  initialIsSignedIn: false,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
 };
 
-const renderWithProviders = () =>
+const renderWithProviders = (overrides = {}) =>
   render(<AccountHeader />, {
     service: 'hindi',
-    idctaConfig,
+    idctaConfig: { ...idctaConfig, ...overrides },
   });
 
 describe('AccountHeader', () => {
-  afterEach(() => {
-    Cookie.remove('ckns_id');
-  });
-
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
@@ -53,9 +49,7 @@ describe('AccountHeader', () => {
   });
 
   it('shows For you when signed in', async () => {
-    Cookie.set('ckns_id', '1');
-
-    renderWithProviders();
+    renderWithProviders({ initialIsSignedIn: true });
 
     const link = await screen.findByRole('link', { name: 'For you' });
     expect(link).toHaveAttribute(

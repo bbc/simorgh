@@ -46,7 +46,7 @@ const CanonicalNavigationContainer: React.FC<
   return (
     <Navigation dir={dir} isOpen={isOpen}>
       <div css={styles.navStack}>
-        <div style={{ position: 'relative', width: '100%' }}>
+        <div css={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
             <ScrollableNavigation
               dir={dir}
