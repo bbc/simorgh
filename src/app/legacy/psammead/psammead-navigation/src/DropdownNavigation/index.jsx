@@ -227,7 +227,12 @@ const expandedHandler =
 
 const initialState = { expanded: false };
 
-export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
+export const AmpMenuButton = ({
+  announcedText,
+  onToggle,
+  dir = 'ltr',
+  className = '',
+}) => (
   <>
     <AmpHead />
     <amp-state id="menuState">
@@ -242,7 +247,7 @@ export const AmpMenuButton = ({ announcedText, onToggle, dir = 'ltr' }) => (
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
-      className="focusIndicatorRemove"
+      className={`${className} focusIndicatorRemove`}
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',
