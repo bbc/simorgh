@@ -131,6 +131,8 @@ const OnDemandAudioPage = ({
     ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
     : headline;
 
+  const shouldSetMainEntity = Boolean(podcastEntities)
+
   const metadataImageProps = is(String, imageUrl)
     ? {
         image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
@@ -195,7 +197,7 @@ const OnDemandAudioPage = ({
               seoTitle={metadataTitle}
               entities={linkedDataEntities}
               mainEntityId={
-                shouldEmitPodcastEpisodeSchema ? episodeId : undefined
+                shouldSetMainEntity ? episodeId : undefined
               }
             />
           </main>
