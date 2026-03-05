@@ -103,11 +103,11 @@ describe('LinkedData', () => {
     ],
   };
 
-  const podcastEpisodePathname =
-    'https://www.test.bbc.com/gahuza/podcasts/p07yh8hb/p0k1qjp9';
-  const seriesId = `${podcastEpisodePathname}#series`;
-  const episodeId = `${podcastEpisodePathname}#episode`;
-  const audioId = `${podcastEpisodePathname}#audio`;
+  const podcastEpisodePathname = '/gahuza/podcasts/p07yh8hb/p0k1qjp9';
+
+  const seriesId = `https://www.test.bbc.com${podcastEpisodePathname}#series`;
+  const episodeId = `https://www.test.bbc.com${podcastEpisodePathname}#episode`;
+  const audioId = `https://www.test.bbc.com${podcastEpisodePathname}#audio`;
 
   const propsForPodcastEpisode = {
     type: 'WebPage',
@@ -145,8 +145,7 @@ describe('LinkedData', () => {
         <LinkedData {...propsForPodcastEpisode} />
       </Context>,
       {
-        pathname: '/gahuza/podcasts/p07yh8hb/p0k1qjp9',
-        bbcOrigin: 'https://www.test.bbc.com',
+        pathname: podcastEpisodePathname,
       },
     );
 
