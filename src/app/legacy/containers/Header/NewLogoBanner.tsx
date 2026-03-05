@@ -4,8 +4,10 @@ import styles from './index.styles';
 
 const GLOBAL_LANGUAGES_PATH = '/ws/languages';
 
-const isGlobalLanguageHomepage = (pathname: string) =>
-  pathname.replace(/\/$/, '') === GLOBAL_LANGUAGES_PATH;
+const isGlobalLanguageHomepage = (inputPathname: string) => {
+  const pathname = inputPathname.split(/[?#]/)[0].replace(/\/$/, '');
+  return pathname === GLOBAL_LANGUAGES_PATH;
+};
 
 const NewLogoBanner = () => {
   const { pathname } = use(RequestContext);
