@@ -1,6 +1,8 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
+export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
+
 export default {
   brandDivider: ({ palette }: Theme) =>
     css({
@@ -33,6 +35,15 @@ export default {
     flexDirection: 'column',
     width: '100%',
   }),
+  ampScrollableNav: ({ mq }: Theme) =>
+    css({
+      [`&.${HIDDEN_CLASS_NAME}`]: {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          display: 'none',
+          visibility: 'hidden',
+        },
+      },
+    }),
   topRow: ({ palette }: Theme) =>
     css({
       display: 'flex',
