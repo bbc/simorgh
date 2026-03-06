@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import SERVICES_WITH_NEW_NAV from '#src/app/components/Navigation/config';
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
 import config from '../support/config/services';
@@ -32,7 +33,10 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const testMobileNav =
       serviceName === 'ukchina' || serviceName === 'persian';
 
-    const testTwoTierNav = SERVICES_WITH_NEW_NAV.includes(service);
+    // Two tier nav only available on select services and requires non-local data as
+    // the nav configuration is fetched from the back-end API
+    const testTwoTierNav =
+      SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() !== 'local';
 
     const initialUrl = '';
     let initialSecondaryNavItemLinkTexts: string[] = [];
