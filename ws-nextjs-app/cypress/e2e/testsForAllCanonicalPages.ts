@@ -37,14 +37,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const initialUrl = '';
     let initialSecondaryNavItemLinkTexts: string[] = [];
 
-    before(() => {
-      cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
-        initialSecondaryNavItemLinkTexts = $links
-          .toArray()
-          .map(link => link.textContent || '');
-      });
-    });
-
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
         cy.viewport(320, 480);
@@ -59,6 +51,8 @@ export default ({ service, pageType }: ServiceParametersType) => {
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('not.exist');
 
         cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
+
+        cy.get('nav button').click();
       });
     }
 
@@ -66,33 +60,25 @@ export default ({ service, pageType }: ServiceParametersType) => {
     if (testTwoTierNav) {
       it('should show two tier navigation on desktop', () => {
         cy.viewport(1008, 900);
-        cy.get('nav').within(() => {
-          cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
-          cy.get('[data-e2e="scrollable-nav-secondary"] ul').should(
-            'be.visible',
-          );
-          cy.get('[data-e2e="scrollable-nav"] a').each($el => {
-            cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
-          });
-          cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
-            cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
-          });
+        cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav"] a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
         });
       });
 
       it('should show two tier navigation on mobile', () => {
         cy.viewport(320, 480);
-        cy.get('nav').within(() => {
-          cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
-          cy.get('[data-e2e="scrollable-nav-secondary"] ul').should(
-            'be.visible',
-          );
-          cy.get('[data-e2e="scrollable-nav"] a').each($el => {
-            cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
-          });
-          cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
-            cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
-          });
+        cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav"] a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
         });
       });
 
@@ -107,6 +93,13 @@ export default ({ service, pageType }: ServiceParametersType) => {
       });
       // run a fuller set of nav tests on the home page
       if (pageType === 'home') {
+        before(() => {
+          cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
+            initialSecondaryNavItemLinkTexts = $links
+              .toArray()
+              .map(link => link.textContent || '');
+          });
+        });
         it('should stay on the same page when brand link is clicked', () => {
           cy.location('pathname').then(currentPath => {
             cy.get('a#topPage').click();
