@@ -29,7 +29,7 @@ const useLivePagePolling = (
       }
     }, POLLING_INTERVAL);
 
-    return () => clearTimeout(timerId);
+    return () => clearInterval(timerId);
   }, [
     currentStreamData?.page?.index,
     currentStreamData?.results.length,
