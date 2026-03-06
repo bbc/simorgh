@@ -32,6 +32,19 @@ describe('useServiceWorkerRegistration', () => {
     jest.restoreAllMocks();
   });
 
+  it('should not register service worker when swPath is undefined', () => {
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: 'news', swPath: undefined }),
+    );
+    expect(mockRegister).not.toHaveBeenCalled();
+  });
+
+  it('should not register service worker when swPath is empty string', () => {
+    renderHook(() =>
+      useServiceWorkerRegistration({ service: 'news', swPath: '' }),
+    );
+    expect(mockRegister).not.toHaveBeenCalled();
+  });
   it('should register service worker with correct path when service is provided', async () => {
     renderHook(() =>
       useServiceWorkerRegistration({

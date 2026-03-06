@@ -12,7 +12,7 @@ jest.mock('#app/hooks/useIsPWA', () => jest.fn());
 jest.mock('#app/lib/utilities/isLocal', () => jest.fn());
 
 const contextStub = {
-  swPath: '/news/sw.js',
+  swPath: '/sw.js',
   service: 'news',
 };
 

@@ -42,22 +42,24 @@ export default () => {
       : '';
   const isPWA = useIsPWA();
 
-  let registrationSwPath: string | undefined;
-  if (service && swPath) {
-    if (swPath.startsWith(`/${service}/`)) {
-      registrationSwPath = swPath;
-    } else if (swPath.startsWith('/')) {
-      registrationSwPath = `/${service}${swPath}`;
-    } else {
-      registrationSwPath = `/${service}/${swPath}`;
-    }
-  } else {
-    registrationSwPath = undefined;
-  }
+  const getNormalizedSwPath = ({
+    svc,
+    path,
+  }: {
+    svc?: string;
+    path?: string;
+  }): string | undefined => {
+    if (!svc || !path) return undefined;
+    if (path.startsWith(`/${svc}/`)) return path;
+    if (path.startsWith('/')) return `/${svc}${path}`;
+    return `/${svc}/${path}`;
+  };
+
+  const normalizedSwPath = getNormalizedSwPath({ svc: service, path: swPath });
 
   useServiceWorkerRegistration({
     service,
-    swPath: registrationSwPath,
+    swPath: normalizedSwPath,
   });
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
