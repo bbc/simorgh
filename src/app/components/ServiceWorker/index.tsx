@@ -36,10 +36,7 @@ const AmpServiceWorker = ({
 export default () => {
   const { swPath, service } = use(ServiceContext);
   const { isAmp, canonicalLink } = use(RequestContext);
-  const swSrc =
-    service && swPath
-      ? `${getEnvConfig().SIMORGH_BASE_URL}${swPath.startsWith('/') ? '' : '/'}${service}${swPath}`
-      : '';
+  const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
   const isPWA = useIsPWA();
 
   const getNormalizedSwPath = ({
