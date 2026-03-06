@@ -18,7 +18,7 @@ const NewLogoBanner = () => {
 
   return (
     <div css={styles.banner} data-testid="logo-banner">
-      <a href={logoHref} aria-label="BBC">
+      <a href={logoHref} aria-label="BBC News world service languages">
         <svg
           css={styles.logoSvg}
           width="168"
