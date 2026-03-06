@@ -118,6 +118,12 @@ export default {
   bottomRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
+        a: {
+          '&:hover::after': {
+            insetInlineStart: `-${spacings.FULL}rem`,
+            insetInlineEnd: `-${spacings.HALF}rem`,
+          },
+        },
         '&:before': {
           content: '""',
           position: 'absolute',
