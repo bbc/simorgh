@@ -20,7 +20,7 @@ const CURRENT_ITEM_HOVER_BORDER = '0.3125rem'; // 5px
 const NavWrapper = styled.div`
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: ${props => props.theme.palette.WHITE};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0.8rem;
