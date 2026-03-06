@@ -46,7 +46,7 @@ describe('ServiceWorkerContainer', () => {
       ${'/news/sw.js'} | ${undefined} | ${{ service: undefined, swPath: undefined }}
       ${undefined}     | ${undefined} | ${{ service: undefined, swPath: undefined }}
     `(
-      'does not register when swPath or service is missing (swPath: $swPath, service: $service)',
+      'calls service worker registration hook with undefined values when swPath or service is missing (swPath: $swPath, service: $service)',
       ({ swPath, service, expected }) => {
         render(
           // @ts-expect-error only require a subset of properties on service context for testing purposes
