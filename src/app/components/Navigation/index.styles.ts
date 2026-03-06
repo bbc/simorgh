@@ -74,6 +74,8 @@ export default {
 
           '&:hover::after': {
             borderBottomColor: palette.WHITE,
+            insetInlineStart: `-${spacings.FULL}rem`,
+            insetInlineEnd: `-${spacings.HALF}rem`,
           },
           '&:focus::after': {
             borderBottomColor: palette.WHITE,
