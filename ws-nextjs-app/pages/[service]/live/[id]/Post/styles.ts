@@ -143,4 +143,5 @@ export default {
         width: `${pixelsToRem(247)}rem`,
       },
     }),
+  bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
 };

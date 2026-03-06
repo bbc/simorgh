@@ -3,6 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
+import Image from '#app/components/Image';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
@@ -23,6 +24,7 @@ import {
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
 
 const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
   ssr: false,
@@ -146,12 +148,59 @@ const PostHeading = ({
         subtitle: contributorSubtitle,
       } = props;
 
-      const contributorImage = blocks?.[0]?.model?.blocks?.[0]?.model?.locator;
-      const contributorOriginCode =
-        blocks?.[0]?.model?.blocks?.[0]?.model?.originCode;
-      const controbutorImageAltText =
+      const locator = blocks?.[0]?.model?.blocks?.[0]?.model?.locator;
+      const originCode = blocks?.[0]?.model?.blocks?.[0]?.model?.originCode;
+      const altText =
         blocks?.[0]?.model?.blocks?.[1]?.model?.blocks?.[0]?.model?.blocks?.[0]
           ?.model?.text;
+      const authorImageUrl = buildIChefURL({
+        originCode,
+        locator,
+        resolution: 160,
+      });
+
+      const { translations, dir } = use(ServiceContext);
+      const isRtl = dir === 'rtl';
+      const { byline: { author = 'Author', role = 'Role' } = {} } =
+        translations ?? {};
+
+      return (
+        <>
+          <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
+          <section
+            role="region"
+            aria-labelledby="post-byline"
+            data-testid="post-byline"
+          >
+            <ul css={styles.bylineList} role="list" key={contributorName}>
+              {authorImageUrl && (
+                <li>
+                  <Image
+                    src={authorImageUrl}
+                    alt=""
+                    placeholder={false}
+                    aspectRatio={[1, 1]}
+                  />
+                </li>
+              )}
+              <li>
+                <span role="text">
+                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                  <Text fontVariant="sansBold" size="bodyCopy">
+                    {contributorName}
+                  </Text>
+                </span>
+              </li>
+              <li>
+                <span role="text">
+                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                  <Text size="brevier">{contributorSubtitle}</Text>
+                </span>
+              </li>
+            </ul>
+          </section>
+        </>
+      );
     },
   };
 
