@@ -36,10 +36,29 @@ const AmpServiceWorker = ({
 export default () => {
   const { swPath, service } = use(ServiceContext);
   const { isAmp, canonicalLink } = use(RequestContext);
-  const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
+  const swSrc =
+    service && swPath
+      ? `${getEnvConfig().SIMORGH_BASE_URL}${swPath.startsWith('/') ? '' : '/'}${service}${swPath}`
+      : '';
   const isPWA = useIsPWA();
 
-  useServiceWorkerRegistration(service);
+  let registrationSwPath: string | undefined;
+  if (service && swPath) {
+    if (swPath.startsWith(`/${service}/`)) {
+      registrationSwPath = swPath;
+    } else if (swPath.startsWith('/')) {
+      registrationSwPath = `/${service}${swPath}`;
+    } else {
+      registrationSwPath = `/${service}/${swPath}`;
+    }
+  } else {
+    registrationSwPath = undefined;
+  }
+
+  useServiceWorkerRegistration({
+    service,
+    swPath: registrationSwPath,
+  });
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
 

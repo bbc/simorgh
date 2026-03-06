@@ -1,10 +1,18 @@
 import { useEffect } from 'react';
 import onClient from '#lib/utilities/onClient';
 
-const useServiceWorkerRegistration = (service?: string) => {
+interface UseServiceWorkerRegistrationParams {
+  service?: string;
+  swPath?: string;
+}
+
+const useServiceWorkerRegistration = ({
+  service,
+  swPath,
+}: UseServiceWorkerRegistrationParams) => {
   useEffect(() => {
-    // Exit if SW API is not available or service is missing
-    if (!onClient() || !('serviceWorker' in navigator) || !service) {
+    // Exit if SW API is not available, service or swPath is missing
+    if (!onClient() || !('serviceWorker' in navigator) || !service || !swPath) {
       return;
     }
 
@@ -34,8 +42,7 @@ const useServiceWorkerRegistration = (service?: string) => {
 
     const initializeServiceWorker = async () => {
       await cleanupLegacyRegistrations();
-
-      return sw.register(`/${service}/sw.js`, {
+      return sw.register(swPath, {
         scope: `/${service}`,
       });
     };
@@ -44,7 +51,7 @@ const useServiceWorkerRegistration = (service?: string) => {
       // eslint-disable-next-line no-console
       console.error('Service worker initialization failed', err);
     });
-  }, [service]);
+  }, [service, swPath]);
 };
 
 export default useServiceWorkerRegistration;

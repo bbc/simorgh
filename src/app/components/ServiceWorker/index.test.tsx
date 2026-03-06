@@ -24,7 +24,7 @@ describe('ServiceWorkerContainer', () => {
   });
 
   describe('Canonical', () => {
-    it('calls service worker registration hook with service', () => {
+    it('calls service worker registration hook with service and swPath', () => {
       render(
         // @ts-expect-error only require a subset of properties on service context for testing purposes
         <ServiceContext.Provider value={contextStub}>
@@ -32,8 +32,31 @@ describe('ServiceWorkerContainer', () => {
         </ServiceContext.Provider>,
       );
 
-      expect(useServiceWorkerRegistration).toHaveBeenCalledWith('news');
+      expect(useServiceWorkerRegistration).toHaveBeenCalledWith({
+        service: 'news',
+        swPath: '/news/sw.js',
+      });
     });
+
+    it.each`
+      swPath           | service      | expected
+      ${undefined}     | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${null}          | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${''}            | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${'/news/sw.js'} | ${undefined} | ${{ service: undefined, swPath: undefined }}
+      ${undefined}     | ${undefined} | ${{ service: undefined, swPath: undefined }}
+    `(
+      'does not register when swPath or service is missing (swPath: $swPath, service: $service)',
+      ({ swPath, service, expected }) => {
+        render(
+          // @ts-expect-error only require a subset of properties on service context for testing purposes
+          <ServiceContext.Provider value={{ swPath, service }}>
+            <ServiceWorkerContainer />
+          </ServiceContext.Provider>,
+        );
+        expect(useServiceWorkerRegistration).toHaveBeenCalledWith(expected);
+      },
+    );
   });
 
   describe('Amp', () => {
