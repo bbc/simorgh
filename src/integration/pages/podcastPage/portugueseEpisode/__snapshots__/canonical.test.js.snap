@@ -228,7 +228,7 @@ exports[`Canonical Podcast Page SEO Lang attribute 1`] = `"pt-br"`;
 
 exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
