@@ -214,7 +214,10 @@ const Post = ({
           />
 
           {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+            <PostHeadings
+              key={`${headerBlock.type}-${headerBlock.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`}
+              headerBlock={headerBlock}
+            />
           ))}
         </span>
       </Heading>
