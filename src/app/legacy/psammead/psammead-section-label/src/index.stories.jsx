@@ -19,9 +19,8 @@ storiesOf(STORY_KIND, module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ text, script, dir, service }) => (
+    ({ text, dir, service }) => (
       <SectionLabel
-        script={script}
         dir={dir}
         bar={boolean('show bar?', true)}
         mobileDivider={boolean('show divider on mobile?', true)}
@@ -30,7 +29,6 @@ storiesOf(STORY_KIND, module)
           false,
         )}
         labelId="example-section-label"
-        service={service}
       >
         {service === 'news' ? 'Most Read' : text}
       </SectionLabel>
@@ -39,9 +37,8 @@ storiesOf(STORY_KIND, module)
   )
   .add(
     'with heading overriden to be a strong element',
-    ({ text, script, dir, service }) => (
+    ({ text, dir, service }) => (
       <SectionLabel
-        script={script}
         dir={dir}
         bar={boolean('show bar?', true)}
         mobileDivider={boolean('show divider on mobile?', true)}
@@ -50,7 +47,6 @@ storiesOf(STORY_KIND, module)
           false,
         )}
         labelId="example-section-label"
-        service={service}
         overrideHeadingAs="strong"
       >
         {service === 'news' ? 'Most Read' : text}
@@ -60,9 +56,8 @@ storiesOf(STORY_KIND, module)
   )
   .add(
     'with a link',
-    ({ text, script, dir, service }) => (
+    ({ text, dir, service }) => (
       <SectionLabel
-        script={script}
         dir={dir}
         bar={boolean('show bar?', true)}
         mobileDivider={boolean('show divider on mobile?', true)}
@@ -71,7 +66,6 @@ storiesOf(STORY_KIND, module)
           false,
         )}
         labelId="example-section-label"
-        service={service}
         linkText={service === 'news' ? 'See All' : selectFirst2Words(text)}
         href="https://www.bbc.com/igbo"
       >

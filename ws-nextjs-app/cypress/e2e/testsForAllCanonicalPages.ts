@@ -68,7 +68,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
         cy.viewport(320, 480);
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
 
-        cy.get('nav button').click();
+        cy.get('nav button').click({ force: true });
 
         cy.get('nav')
           .find('[data-e2e="scrollable-nav-secondary"] ul')

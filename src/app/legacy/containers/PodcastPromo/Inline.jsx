@@ -177,7 +177,7 @@ const getIconFromUrl = url => {
 };
 
 const Promo = () => {
-  const { podcastPromo, script, service, dir } = use(ServiceContext);
+  const { podcastPromo, dir } = use(ServiceContext);
   const { pageType, isLite } = use(RequestContext);
   const {
     podcastPromoTitle,
@@ -222,18 +222,12 @@ const Promo = () => {
       dir={dir}
       data-e2e="podcast-promo"
     >
-      <StyledPromoComponent
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
+      <StyledPromoComponent role="region" aria-labelledby="podcast-promo">
         <SkipLinkWrapper
           endTextId="end-of-podcasts"
           terms={terms}
           text={text}
           endTextVisuallyHidden={endTextVisuallyHidden}
-          service={service}
         >
           <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
@@ -257,12 +251,7 @@ const Promo = () => {
             </StyledInArticlePromoIconWrapper>
             <StyledCardContentWrapper>
               <strong>
-                <StyledCardLink
-                  href={url}
-                  {...clickTrackerRef}
-                  script={script}
-                  service={service}
-                >
+                <StyledCardLink href={url} {...clickTrackerRef}>
                   <span
                     id="podcast-promo"
                     className="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
@@ -271,10 +260,10 @@ const Promo = () => {
                   </span>
                 </StyledCardLink>
               </strong>
-              <StyledCardDescriptionWrapper script={script}>
+              <StyledCardDescriptionWrapper>
                 {description}
               </StyledCardDescriptionWrapper>
-              <StyledEpisodeTextWrapper dir={dir} script={script}>
+              <StyledEpisodeTextWrapper dir={dir}>
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>
