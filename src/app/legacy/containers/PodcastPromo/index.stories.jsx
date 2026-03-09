@@ -50,6 +50,17 @@ const serviceContextMockPodcast = {
     },
   },
 };
+const serviceContextMockWhatsapp = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://whatsapp',
+    },
+  },
+};
+
 
 
 const Component = ({ inline = false,  value = serviceContextMock }) => (
@@ -70,7 +81,8 @@ export default {
 };
 
 export const SecondaryColumnPromo = () => <Component />;
-export const InlinePromo = () => <Component inline />;
+export const InlinePromoGeneric = () => <Component inline />;
+export const InlinePromoWhatsapp = () => <Component inline value={serviceContextMockWhatsapp}/>;
 export const InlinePromoYoutube = () => <Component inline value={serviceContextMockYoutube} />;
 export const InlinePromoPodcast = () => <Component inline value={serviceContextMockPodcast} />;
 

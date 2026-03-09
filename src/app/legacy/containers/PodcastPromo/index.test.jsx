@@ -64,6 +64,31 @@ describe('Inline', () => {
     );
     expect(container).toMatchSnapshot();
   });
+  it('Should render a generic promo for other socials correctly', () => {
+    const genericPromoConfig = {
+      ...amharicServiceConfig,
+      default: {
+        ...amharicServiceConfig.default,
+        podcastPromo: {
+          ...amharicServiceConfig.default.podcastPromo,
+          image: {
+            ...amharicServiceConfig.default.podcastPromo.image,
+          },
+          linkLabel: {
+            ...amharicServiceConfig.default.podcastPromo.linkLabel,
+            href: 'other-social-url',
+          },
+        },
+      },
+    };
+    const { container } = render(
+      <PromoWithContext inline config={genericPromoConfig} />,
+      {
+        service: 'amharic',
+      },
+    );
+    expect(container).toMatchSnapshot();
+  });
   it('should show when all props are available', () => {
     const { getByText, getByRole } = render(<PromoWithContext inline />, {
       service: 'russian',

@@ -165,6 +165,7 @@ const StyledInArticlePromoIconWrapper = styled.div`
 const icons = {
   podcast: mediaIcons.podcast,
   youtube: mediaIcons.youtube,
+  whatsapp: mediaIcons.whatsapp,
 };
 
 const getIconFromUrl = url => {

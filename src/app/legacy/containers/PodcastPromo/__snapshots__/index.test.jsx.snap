@@ -1,5 +1,663 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
+exports[`Inline Should render a generic promo for other socials correctly 1`] = `
+.emotion-0 {
+  float: right;
+  margin: 0 0.5rem 1.5rem;
+  height: auto;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    width: 45%;
+    margin: 0.5rem 0.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-0 {
+    margin: 0.25rem 1rem 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    margin-inline: 1rem 0;
+    direction: ltr;
+  }
+}
+
+.emotion-3 {
+  background-color: #F2F2F2;
+  padding: 1rem;
+  padding: 0;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-3 {
+    border: 0.1875rem solid transparent;
+  }
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-7 {
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-7:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  background-color: #FFFFFF;
+  display: block;
+}
+
+@media (min-width: 63rem) {
+  .emotion-9 {
+    display: block;
+  }
+}
+
+.emotion-9:hover .podcast-promo--hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-11 {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  display: none;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 20rem) {
+  .emotion-11 {
+    display: block;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: 6.5rem;
+    -ms-flex-preferred-size: 6.5rem;
+    flex-basis: 6.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-11 {
+    -webkit-flex-basis: 6.8125rem;
+    -ms-flex-preferred-size: 6.8125rem;
+    flex-basis: 6.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    -webkit-flex-basis: 11.125rem;
+    -ms-flex-preferred-size: 11.125rem;
+    flex-basis: 11.125rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-11 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 15rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-13 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-13 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-15 {
+  position: absolute;
+  float: bottom;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+}
+
+@media (max-width: 15rem) {
+  .emotion-15 {
+    position: relative;
+    -webkit-transform: translateY(0.75rem);
+    -moz-transform: translateY(0.75rem);
+    -ms-transform: translateY(0.75rem);
+    transform: translateY(0.75rem);
+    margin: 0.75rem 0.5rem;
+    width: 2.5rem;
+  }
+}
+
+.emotion-17 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.podcastIconWrapper .emotion-17 {
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+}
+
+@media (max-width: 16.25rem) {
+  .podcastIconWrapper .emotion-17 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.emotion-19 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-19 {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-19 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-19 {
+    padding: 0 0.75rem 0.75rem;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-19 {
+    padding: 0 1rem 1rem;
+  }
+}
+
+.emotion-21 {
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  margin-top: 0.75rem;
+  color: #141414;
+}
+
+.emotion-21:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-21:visited .podcast-promo--visited {
+  color: #6E6E73;
+}
+
+.emotion-21:focus .podcast-promo--focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-21:visited {
+  color: #545658;
+}
+
+@media (max-width: 15rem) {
+  .emotion-21 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-21 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-21 {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-21 {
+      font-size: 1rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.emotion-24 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 30rem;
+  color: #6E6E73;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin: 0.75rem 0;
+  overflow-wrap: break-word;
+  color: #141414;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-24 {
+    margin: 1rem 0;
+  }
+}
+
+.emotion-27 {
+  display: inline;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #6E6E73;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #141414;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-27>svg {
+  fill: currentColor;
+  color: unset;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  bottom: 0.125rem;
+  right: 0.1875rem;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-27>svg {
+    fill: canvasText;
+  }
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-27 {
+    margin: 0 0.25rem;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-27 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 16.25rem) {
+  .emotion-27 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-27 {
+    margin: 0 0.25rem;
+  }
+}
+
+@media (min-width: 22.5rem) {
+  .emotion-27 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin: 0 0.25rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-27 {
+      font-size: 0.9375rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-27 {
+      font-size: 0.9375rem;
+      line-height: 1.25rem;
+    }
+  }
+}
+
+.emotion-29 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-31 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    data-e2e="podcast-promo"
+    dir="ltr"
+  >
+    <section
+      aria-labelledby="podcast-promo"
+      class="emotion-2 emotion-3 emotion-4"
+      role="region"
+    >
+      <div
+        class="emotion-5 emotion-6"
+      >
+        <a
+          class="emotion-7 emotion-8"
+          href="#end-of-podcasts"
+        >
+          Skip podcast promotion and continue reading
+        </a>
+        <div
+          class="emotion-9 emotion-10"
+        >
+          <div
+            class="emotion-11 emotion-12"
+          >
+            <div
+              class="emotion-13 emotion-14"
+              data-e2e="image-placeholder"
+              style="padding-bottom: 100%;"
+            >
+              <div
+                class="lazyload-wrapper "
+              >
+                <div
+                  class="lazyload-placeholder"
+                />
+              </div>
+              <noscript />
+            </div>
+          </div>
+          <div
+            class="podcastIconWrapper emotion-15 emotion-16"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-17 emotion-18"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+            >
+              <path
+                d="M1,25.1h18.8v-8.4l-7.3-0.5v-5.7H1V25.1z M8.5,24.7h-4v4.7H6L8.5,24.7z M31,17.9V2.6H11.5v15.3H31z M28.6,15.5H14V5h14.6 V15.5z M23.5,17.5l2.5,4.7h1.5v-4.7H23.5z"
+              />
+            </svg>
+          </div>
+          <div
+            class="emotion-19 emotion-20"
+          >
+            <strong>
+              <a
+                class="emotion-21 emotion-22"
+                href="other-social-url"
+              >
+                <span
+                  class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+                  id="podcast-promo"
+                >
+                  የቢቢሲ አማርኛ ዩቲዩብ ቻናል
+                </span>
+              </a>
+            </strong>
+            <p
+              class="emotion-23 emotion-24 emotion-25"
+            >
+              ዜና፣ ትንታኔ እና ታሪኮችን በምሥል እና በድምጽ ለማግኘት
+            </p>
+            <p
+              class="emotion-26 emotion-27 emotion-28"
+              dir="ltr"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-29 emotion-30"
+                focusable="false"
+                height="32"
+                viewBox="0 0 32 32"
+                width="32"
+              >
+                <polygon
+                  points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+                />
+                <polygon
+                  points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+                />
+                <path
+                  d="M0,32H24V8H0ZM4,12H20V28H4Z"
+                />
+              </svg>
+              ይህንን በመጫን ሰብስክራይብ ያድርጉ
+            </p>
+          </div>
+        </div>
+        <p
+          class="emotion-31 emotion-32"
+          id="end-of-podcasts"
+          tabindex="-1"
+        >
+          End of podcast promotion
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
 exports[`Inline Should render a promo for podcasts correctly 1`] = `
 .emotion-0 {
   float: right;
@@ -1252,7 +1910,7 @@ exports[`Inline Should render a promo for whatsapp correctly 1`] = `
               width="32"
             >
               <path
-                d="M1,25.1h18.8v-8.4l-7.3-0.5v-5.7H1V25.1z M8.5,24.7h-4v4.7H6L8.5,24.7z M31,17.9V2.6H11.5v15.3H31z M28.6,15.5H14V5h14.6 V15.5z M23.5,17.5l2.5,4.7h1.5v-4.7H23.5z"
+                d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"
               />
             </svg>
           </div>

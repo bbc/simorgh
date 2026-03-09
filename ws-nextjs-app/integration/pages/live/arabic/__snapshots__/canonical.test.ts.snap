@@ -15,17 +15,3 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
   "url": "/arabic",
 }
 `;
-
-exports[`Canonical Live Header Navigation link should match text and url 2`] = `
-{
-  "text": "شاهد",
-  "url": "/arabic/media-49522519",
-}
-`;
-
-exports[`Canonical Live Header Navigation link should match text and url 3`] = `
-{
-  "text": "استمع",
-  "url": "/arabic/topics/cljddp5lw0dt",
-}
-`;
