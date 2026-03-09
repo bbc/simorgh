@@ -3,17 +3,16 @@ import StoryPromo, {
   Summary,
 } from '#psammead/psammead-story-promo/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
 const Info = (
   <>
-    <Headline script={latin} service="news" promoType="regular" promoHasImage>
+    <Headline promoType="regular" promoHasImage>
       The headline of the promo
     </Headline>
-    <Summary script={latin} service="news" promoType="regular" promoHasImage>
+    <Summary promoType="regular" promoHasImage>
       The summary of the promo
     </Summary>
     <time>12 March 2019</time>

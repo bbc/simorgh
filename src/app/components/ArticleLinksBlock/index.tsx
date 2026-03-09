@@ -18,7 +18,7 @@ const ArticleLinksBlock = ({
   blocks,
   blockGroupIndex = null,
 }: ArticleLinksBlockProps) => {
-  const { translations, recommendations, service } = use(ServiceContext);
+  const { translations, recommendations } = use(ServiceContext);
 
   const eventTrackingData = {
     componentName: `edoj${blockGroupIndex}`,
@@ -73,7 +73,7 @@ const ArticleLinksBlock = ({
 
   return (
     <section {...a11yAttributes} data-e2e="article-links-block">
-      <SkipLinkWrapper service={service} {...skipLinkProps}>
+      <SkipLinkWrapper {...skipLinkProps}>
         {typeof title === 'string' && title.length > 0 && (
           <strong
             css={styles.labelComponent}

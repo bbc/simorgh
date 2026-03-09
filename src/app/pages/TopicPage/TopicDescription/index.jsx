@@ -1,4 +1,3 @@
-import { use } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -9,7 +8,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { ServiceContext } from '../../../contexts/ServiceContext';
 
 const Paragraph = styled.p`
   ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
@@ -26,13 +24,7 @@ const Paragraph = styled.p`
 `;
 
 const TopicDescription = ({ children }) => {
-  const { service, script } = use(ServiceContext);
-
-  return (
-    <Paragraph service={service} script={script}>
-      {children}
-    </Paragraph>
-  );
+  return <Paragraph>{children}</Paragraph>;
 };
 
 export default TopicDescription;
