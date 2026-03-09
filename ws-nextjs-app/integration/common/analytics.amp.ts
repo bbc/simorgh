@@ -9,7 +9,7 @@ export default () => {
 
       it(`${type}`, () => {
         const script = analyticsEl.querySelector(
-          'script[type="application/json"',
+          'script[type="application/json"]',
         );
         expect(script).toBeInTheDocument();
         expect(script?.textContent).toBeTruthy();
