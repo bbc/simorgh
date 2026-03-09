@@ -1,10 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import onClient from '#lib/utilities/onClient';
-
-interface UseServiceWorkerRegistrationParams {
-  service?: string;
-  swPath?: string;
-}
 
 const getNormalizedSwPath = ({
   svc,
@@ -19,10 +15,8 @@ const getNormalizedSwPath = ({
   return `/${svc}/${path}`;
 };
 
-const useServiceWorkerRegistration = ({
-  service,
-  swPath,
-}: UseServiceWorkerRegistrationParams) => {
+const useServiceWorkerRegistration = () => {
+  const { service, swPath } = useContext(ServiceContext) || {};
   const normalizedSwPath = getNormalizedSwPath({ svc: service, path: swPath });
   useEffect(() => {
     // Exit if SW API is not available, service or swPath is missing
