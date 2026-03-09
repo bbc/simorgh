@@ -56,7 +56,7 @@ const buildSettings = ({
     },
     ...(!embedded && { superResponsive: true }),
     ...(counterName && { counterName }),
-    ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    ...(isTestRequested() && { mediator: { host: 'open.live.bbc.co.uk' } }),
     statsObject: {
       destination: statsDestination,
       producer,

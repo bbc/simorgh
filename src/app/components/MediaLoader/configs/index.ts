@@ -42,6 +42,8 @@ const blockTypeMapping: Record<
 export default (blocks: MediaBlock[]) => {
   const blockType = BLOCK_TYPES.find(type => filterForBlockType(blocks, type));
 
+  console.log('blockType', blockType);
+
   if (!blockType) return null;
 
   return blockTypeMapping[blockType];

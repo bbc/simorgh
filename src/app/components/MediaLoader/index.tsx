@@ -266,6 +266,8 @@ const MediaLoader = ({
     embedded,
   });
 
+  console.log(config);
+
   if (!config) return null;
 
   const {

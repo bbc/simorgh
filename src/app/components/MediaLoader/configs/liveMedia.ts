@@ -77,6 +77,23 @@ export default ({
         summary: short,
         ...(warning && { warning }),
       },
+      // Currently no simple way to determine from the data wether to load the plugin, as a Dazzler stream can't be distinguished from media collection items in TIPO.
+      plugins: {
+        toLoad: [
+          {
+            html: 'https://ws-dazzler-web-statics-dev.s3.eu-west-1.amazonaws.com/plugin/DazzlerEdgePlugin.js',
+            playerOnly: true,
+            // @ts-expect-error - this is a custom property used to pass data to the plugin when it initializes
+            data: {
+              env: 'test',
+              sid: 'bbc_hindi_tv',
+              holdingImageURL:
+                'https://ichef.bbci.co.uk/images/ic/1920x1080/p08b8mq7.png',
+              uiLanguage: 'hi',
+            },
+          },
+        ],
+      },
     },
     mediaType: 'video',
     showAds: false,

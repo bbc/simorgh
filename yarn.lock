@@ -17482,6 +17482,7 @@ __metadata:
     npm-run-all2: "npm:8.0.4"
     sharp: "npm:0.34.5"
     swc-loader: "npm:0.2.7"
+    temporal-polyfill: "npm:0.3.0"
     ts-node: "npm:10.9.2"
   languageName: unknown
   linkType: soft
@@ -18404,6 +18405,22 @@ __metadata:
   dependencies:
     rimraf: "npm:~2.6.2"
   checksum: 10/0a7f76b49637415bc391c3f6e69377cc4c38afac95132b4158fa711e77b70b082fe56fd886f9d11ffab9d148df181a105a93c8b618fb72266eeaa5e5ddbfe37f
+  languageName: node
+  linkType: hard
+
+"temporal-polyfill@npm:0.3.0":
+  version: 0.3.0
+  resolution: "temporal-polyfill@npm:0.3.0"
+  dependencies:
+    temporal-spec: "npm:0.3.0"
+  checksum: 10/e4f5c0e546bf663720569b8b68fc41aa43ea891a77043a5614f6c1f2109cd01fe60c90b9de2f5d4f92f3155bfbdd17ad3ec7de1e9aaf01fa3cf156f230a0e41a
+  languageName: node
+  linkType: hard
+
+"temporal-spec@npm:0.3.0":
+  version: 0.3.0
+  resolution: "temporal-spec@npm:0.3.0"
+  checksum: 10/5863e3e3f364a5cf64bf999c85bf19b08924a91ee8d618489d9bf6cfff2452e4f916080c8ede93fc91de609200fc20002928e0146c7fc15375b123b20234799b
   languageName: node
   linkType: hard
 
