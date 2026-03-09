@@ -3,6 +3,7 @@ import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
+import { AccountIcon } from '#app/components/icons';
 import styles from './index.styles';
 
 const AccountHeader = () => {
@@ -23,6 +24,7 @@ const AccountHeader = () => {
   return (
     <div css={styles.wrapper}>
       <Text as="a" css={styles.link} href={href}>
+        <AccountIcon css={styles.icon} />
         {label}
       </Text>
     </div>
