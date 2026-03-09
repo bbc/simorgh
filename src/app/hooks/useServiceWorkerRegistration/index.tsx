@@ -6,13 +6,32 @@ interface UseServiceWorkerRegistrationParams {
   swPath?: string;
 }
 
+const getNormalizedSwPath = ({
+  svc,
+  path,
+}: {
+  svc?: string;
+  path?: string;
+}): string | undefined => {
+  if (!svc || !path) return undefined;
+  if (path.startsWith(`/${svc}/`)) return path;
+  if (path.startsWith('/')) return `/${svc}${path}`;
+  return `/${svc}/${path}`;
+};
+
 const useServiceWorkerRegistration = ({
   service,
   swPath,
 }: UseServiceWorkerRegistrationParams) => {
+  const normalizedSwPath = getNormalizedSwPath({ svc: service, path: swPath });
   useEffect(() => {
     // Exit if SW API is not available, service or swPath is missing
-    if (!onClient() || !('serviceWorker' in navigator) || !service || !swPath) {
+    if (
+      !onClient() ||
+      !('serviceWorker' in navigator) ||
+      !service ||
+      !normalizedSwPath
+    ) {
       return;
     }
 
@@ -42,7 +61,7 @@ const useServiceWorkerRegistration = ({
 
     const initializeServiceWorker = async () => {
       await cleanupLegacyRegistrations();
-      return sw.register(swPath, {
+      return sw.register(normalizedSwPath, {
         scope: `/${service}`,
       });
     };
@@ -51,7 +70,7 @@ const useServiceWorkerRegistration = ({
       // eslint-disable-next-line no-console
       console.error('Service worker initialization failed', err);
     });
-  }, [service, swPath]);
+  }, [service, normalizedSwPath]);
 };
 
 export default useServiceWorkerRegistration;

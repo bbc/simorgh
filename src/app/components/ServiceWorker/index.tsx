@@ -39,24 +39,9 @@ export default () => {
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
   const isPWA = useIsPWA();
 
-  const getNormalizedSwPath = ({
-    svc,
-    path,
-  }: {
-    svc?: string;
-    path?: string;
-  }): string | undefined => {
-    if (!svc || !path) return undefined;
-    if (path.startsWith(`/${svc}/`)) return path;
-    if (path.startsWith('/')) return `/${svc}${path}`;
-    return `/${svc}/${path}`;
-  };
-
-  const normalizedSwPath = getNormalizedSwPath({ svc: service, path: swPath });
-
   useServiceWorkerRegistration({
     service,
-    swPath: normalizedSwPath,
+    swPath,
   });
   // Send PWA status to service worker
   useSendPWAStatus(isPWA);
