@@ -19,9 +19,7 @@ import Amp from './index.amp';
 const renderListItems = (
   Li,
   navigation,
-  script,
   currentPage,
-  service,
   dir,
   activeIndex,
   clickTracker,
@@ -38,10 +36,8 @@ const renderListItems = (
       <Li
         key={title}
         url={url}
-        script={script}
         active={active}
         currentPageText={currentPage}
-        service={service}
         dir={dir}
         clickTracker={clickTracker}
         viewTracker={viewTracker}
@@ -65,10 +61,8 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
-    script,
     translations,
     navigation: navFromServiceConfig,
-    service,
     dir,
     collapsibleNavigation,
   } = use(ServiceContext);
@@ -121,9 +115,7 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
       {renderListItems(
         NavigationLi,
         navigation,
-        script,
         currentPage,
-        service,
         dir,
         activeIndex,
         scrollableNavClickTrackerHandler,
@@ -138,9 +130,7 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
       {renderListItems(
         DropdownLi,
         navigation,
-        script,
         currentPage,
-        service,
         dir,
         activeIndex,
         dropdownNavClickTrackerHandler,
@@ -157,8 +147,6 @@ const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
       dropdownListItems={dropdownListItems}
       menuAnnouncedText={navMenuText}
       dir={dir}
-      script={script}
-      service={service}
       blocks={blocks}
     >
       {showAccountPromoBanner && <AccountPromotionalBanner />}

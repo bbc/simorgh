@@ -18,8 +18,7 @@ interface RecommendationsProps {
 }
 
 const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
-  const { recommendations, mostRead, script, service, dir } =
-    use(ServiceContext);
+  const { recommendations, mostRead, dir } = use(ServiceContext);
 
   const {
     palette: { GREY_2 },
@@ -81,12 +80,10 @@ const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
       data-e2e={labelId}
       {...a11yAttributes}
     >
-      <SkipLinkWrapper service={service} {...skipLinkProps}>
+      <SkipLinkWrapper {...skipLinkProps}>
         {title ? (
           <SectionLabel
             css={styles.labelComponent}
-            script={script}
-            service={service}
             dir={dir}
             labelId={labelId}
             columnType="main"

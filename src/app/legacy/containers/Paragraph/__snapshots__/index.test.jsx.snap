@@ -128,7 +128,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -165,6 +165,7 @@ exports[`ParagraphContainer should render correctly 1`] = `
   >
     <p
       class="emotion-2 emotion-3"
+      dir="ltr"
     >
       <b>
         This is some text.
@@ -316,7 +317,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -350,6 +351,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
   >
     <p
       class="emotion-2 emotion-3"
+      dir="ltr"
     >
       <b>
         This is some text.
@@ -359,7 +361,7 @@ exports[`ParagraphContainer should render correctly with inline block 1`] = `
         lang="fa"
       >
         <a
-          aria-label="چیسربرگرundefined"
+          aria-label="چیسربرگر, external"
           class="focusIndicatorReducedWidth emotion-6 emotion-7"
           href="https://google.com"
         >

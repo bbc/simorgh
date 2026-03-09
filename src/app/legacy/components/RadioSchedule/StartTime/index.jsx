@@ -56,17 +56,10 @@ export const StartTimestamp = ({
   timestamp,
   timezone = 'Europe/London',
   locale = 'en-gb',
-  script,
-  service,
   dir = 'ltr',
 }) => {
   return (
-    <StyledTimestamp
-      script={script}
-      service={service}
-      dir={dir}
-      aria-hidden="true"
-    >
+    <StyledTimestamp dir={dir} aria-hidden="true">
       <TimestampContainer
         timestamp={timestamp}
         dateTimeFormat="YYYY-MM-DD"
@@ -74,16 +67,14 @@ export const StartTimestamp = ({
         isRelative={false}
         padding={false}
         timezone={timezone}
-        script={script}
         locale={locale}
-        service={service}
       />
     </StyledTimestamp>
   );
 };
 
 const StartTime = ({ timestamp }) => {
-  const { script, locale, service, timezone, dir } = use(ServiceContext);
+  const { locale, timezone, dir } = use(ServiceContext);
   return (
     <Wrapper>
       <ClockIcon dir={dir} />
@@ -91,8 +82,6 @@ const StartTime = ({ timestamp }) => {
         timestamp={timestamp}
         timezone={timezone}
         locale={locale}
-        script={script}
-        service={service}
         dir={dir}
       />
     </Wrapper>
