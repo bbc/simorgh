@@ -35,4 +35,5 @@ export interface LinkedDataProps {
   bylineLinkedData?: (BylineLinkedData | null)[];
   coverageStartTime?: string;
   coverageEndTime?: string;
+  mainEntityId?: string;
 }

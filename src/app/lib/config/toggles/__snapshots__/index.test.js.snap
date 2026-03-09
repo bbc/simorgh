@@ -55,6 +55,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "onDemandRadioSchedule": {
     "enabled": false,
   },
+  "podcastEpisodeLinkedData": {
+    "enabled": false,
+  },
   "podcastPromo": {
     "enabled": false,
   },
@@ -147,6 +150,9 @@ exports[`Toggles Config when application environment is local should contain cor
   "onDemandRadioSchedule": {
     "enabled": true,
   },
+  "podcastEpisodeLinkedData": {
+    "enabled": true,
+  },
   "podcastPromo": {
     "enabled": true,
   },
@@ -236,6 +242,9 @@ exports[`Toggles Config when application environment is test should contain corr
     "enabled": true,
   },
   "onDemandRadioSchedule": {
+    "enabled": true,
+  },
+  "podcastEpisodeLinkedData": {
     "enabled": true,
   },
   "podcastPromo": {
