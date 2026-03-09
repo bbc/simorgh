@@ -1,5 +1,4 @@
 import { render } from '../../../react-testing-library-with-providers';
-import latin from '../../../ThemeProvider/fontScripts/latin';
 import LastUpdated from '.';
 
 describe('MostReadCanonical - LastUpdated', () => {
@@ -8,8 +7,6 @@ describe('MostReadCanonical - LastUpdated', () => {
       <LastUpdated
         timestamp={864691200}
         prefix="Last Updated:"
-        script={latin}
-        service="news"
         locale="en-gb"
         timezone="Europe/London"
       />,

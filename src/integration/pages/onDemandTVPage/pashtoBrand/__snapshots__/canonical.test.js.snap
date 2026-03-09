@@ -448,7 +448,7 @@ exports[`Canonical On Demand T V Page SEO Lang attribute 1`] = `"ps"`;
 
 exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",

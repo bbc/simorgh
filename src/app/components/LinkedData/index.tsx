@@ -72,6 +72,7 @@ const LinkedData = ({
   entities = [],
   imageLocator,
   bylineLinkedData,
+  mainEntityId,
 }: LinkedDataProps) => {
   const {
     brandName,
@@ -230,13 +231,14 @@ const LinkedData = ({
     ...(showAuthor && { author }),
     ...(hasByline && places.length > 0 && { locationCreated }),
     ...(speakableXpaths && { speakable: speakableXpaths }),
+    ...(mainEntityId && { mainEntity: { '@id': mainEntityId } }),
   };
 
   return (
     <Helmet>
       <script type="application/ld+json">
         {serialiseForScript({
-          '@context': 'http://schema.org',
+          '@context': 'https://schema.org',
           '@graph': [{ ...linkedData }, ...entities],
         })}
       </script>
