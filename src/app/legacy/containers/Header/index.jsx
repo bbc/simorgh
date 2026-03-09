@@ -64,7 +64,7 @@ const Header = ({
 
 const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
-  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+  const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
   const { skipLinkText } = translations;
 
@@ -77,8 +77,6 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
-      service={service}
-      script={script}
       dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
