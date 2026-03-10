@@ -54,7 +54,31 @@ const getEventTrackingData = ({
 };
 
 const getPlayerInstance = () =>
-  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0; // TO remove
+
+const getCurrentId = (e: SMPEvent): string | undefined => {
+  const playlist = (e?.playlist || {}) as Playlist;
+  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  console.log("I'm the currentId", currentId);
+
+  return currentId;
+};
+
+const findPlayerInstanceByCurrentId = (e: SMPEvent) => {
+  const playerInstances = window?.embeddedMedia?.api?.players(); // Assuming this returns an object with player instances keyed by their IDs
+  if (!playerInstances) return undefined;
+
+  const currentId = getCurrentId(e); // Get the current video ID from the event or player state
+
+  return Object.values(playerInstances).find(player => {
+    const playlistItems = player.playlist()?.items || [];
+    return playlistItems.some(
+      item => item.vpid === currentId || item.versionID === currentId,
+    );
+  });
+};
 
 const getCurrentIndex = ({
   e,
@@ -82,7 +106,15 @@ export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
 ) => {
+  console.log('playlistLoadedCallback triggered with event:', e);
   const player = getPlayerInstance();
+
+  const player1 = findPlayerInstanceByCurrentId(e);
+
+  console.log(
+    "I'm the player returned by findPlayerInstanceByCurrentId",
+    player1,
+  );
 
   if (!player) return;
 
@@ -160,7 +192,10 @@ export const playbackEndedCallback = async (
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
+  console.log('playbackEndedCallback triggered with event:', e);
   const player = getPlayerInstance();
+  // const player1 = findPlayerInstanceByCurrentId(e);
+
   const { ended } = e;
   const { autoplay } = player.settings();
 
@@ -179,12 +214,23 @@ export const playbackEndedCallback = async (
   }
 };
 
+// const pluginLoadedCallback = (e: SMPEvent) => {
+//   const player = findPlayerInstanceByCurrentId(e);
+//   if (!player) return;
+//   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+// };
+
+// const handlePrevNextVideo = (direction: 'previous' | 'next', e: SMPEvent) => {
+//   const player = findPlayerInstanceByCurrentId(e);
+//   if (!player) return;
+
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 };
 
 const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+  console.log('handlePrevNextVideo triggered with direction:', direction);
   const player = getPlayerInstance();
 
   player?.[direction]?.();
@@ -262,7 +308,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = document.getElementById('portrait-video-modal-container');
+    const modal = document.getElementById('portrait-video-modal-container'); // check
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -280,7 +326,8 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      const player = getPlayerInstance();
+      const player = getPlayerInstance(); // TO DO
+      console.log("I'm the player instance in the cleanup function", player);
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
@@ -338,6 +385,7 @@ const PortraitVideoModal = ({
           blocks={[blocks?.[selectedVideoIndex]]}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            // pluginLoaded: e => pluginLoadedCallback(e),
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
             statsNavigation: e =>
