@@ -35,6 +35,7 @@ const PortraitVideoCarousel = ({
   const [selectedVideoIndex, setSelectedVideoIndex] = useState<number | null>(
     null,
   );
+  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null); // to store the selected video id for player initialization in the modal
 
   const { isLite, isAmp, nonce } = use(RequestContext);
 
@@ -66,6 +67,7 @@ const PortraitVideoCarousel = ({
   const handlePromoClick = (index: number) => {
     if (blocks?.[index]?.model?.video) {
       setSelectedVideoIndex(index);
+      setSelectedVideoId(blocks[index].model.video.id);
       setIsModalOpen(true);
     }
   };
@@ -73,6 +75,7 @@ const PortraitVideoCarousel = ({
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedVideoIndex(null);
+    setSelectedVideoId(null);
   };
 
   return (
@@ -123,10 +126,12 @@ const PortraitVideoCarousel = ({
         </div>
         {isModalOpen &&
           selectedVideoIndex !== null &&
+          selectedVideoId !== null &&
           createPortal(
             <PortraitVideoModal
               blocks={blocks}
               selectedVideoIndex={selectedVideoIndex}
+              selectedVideoId={selectedVideoId}
               onClose={handleCloseModal}
               nonce={nonce}
               eventTrackingData={eventTrackingDataExtended}

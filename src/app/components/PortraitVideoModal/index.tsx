@@ -54,30 +54,64 @@ const getEventTrackingData = ({
 };
 
 const getPlayerInstance = () =>
-  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0; // TO remove
+  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0; // TO do
 
-const getCurrentId = (e: SMPEvent): string | undefined => {
-  const playlist = (e?.playlist || {}) as Playlist;
-  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
-  const currentId = currentItem?.vpid || currentItem?.versionID;
+// const getCurrentId = (e: SMPEvent): string | undefined => {
+//   const playlist = (e?.playlist || {}) as Playlist;
+//   const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+//   const currentId = currentItem?.vpid || currentItem?.versionID;
 
-  console.log("I'm the currentId", currentId);
+//   console.log("I'm the currentId", currentId);
 
-  return currentId;
-};
+//   return currentId;
+// };
 
-const findPlayerInstanceByCurrentId = (e: SMPEvent) => {
+// const findPlayerInstanceByCurrentId = (e: SMPEvent) => {
+//   const playerInstances = window?.embeddedMedia?.api?.players(); // Assuming this returns an object with player instances keyed by their IDs
+//   if (!playerInstances) return undefined;
+
+//   const currentId = getCurrentId(e); // Get the current video ID from the event or player state
+
+//   return Object.values(playerInstances).find(player => {
+//     const playlistItems = player.playlist()?.items || [];
+//     return playlistItems.some(
+//       item => item.vpid === currentId || item.versionID === currentId,
+//     );
+//   });
+// };
+
+// add a new function that takes the currentID
+// it checks how many playerInstances there are in const playerInstances = window?.embeddedMedia?.api?.players();
+// it returns the index of the array which matches the currentID, either 0 or 1
+// if the index is 0 it returns bbcMediaPlayer0, if the index is 1 it returns bbcMediaPlayer1
+const findPlayerInstanceUsingCurrentId = (currentId: string) => {
   const playerInstances = window?.embeddedMedia?.api?.players(); // Assuming this returns an object with player instances keyed by their IDs
+  console.log('1 playerInstances', playerInstances);
   if (!playerInstances) return undefined;
 
-  const currentId = getCurrentId(e); // Get the current video ID from the event or player state
+  // I need to find the key of the playerInstance where the playlistItems matches the currentId
 
-  return Object.values(playerInstances).find(player => {
-    const playlistItems = player.playlist()?.items || [];
+  const playerKeys = Object.keys(playerInstances);
+  console.log('2 playerKeys', playerKeys); // returns "0: bbcMediaPlayer0"
+  const index = playerKeys.findIndex(key => {
+    const playlistItems = playerInstances[key].playlist()?.items || [];
+    console.log('3 playlistItems', playlistItems); // returns "0: bbcMediaPlayer0"
     return playlistItems.some(
       item => item.vpid === currentId || item.versionID === currentId,
     );
   });
+  console.log('4 index', index); // returns 0 or 1 depending on which player has the currentId in its playlistItems
+
+  // return Object.values(playerInstances).find(player => {
+  //   const playlistItems = player.playlist()?.items || [];
+  //   return playlistItems.some(
+  //     item => item.vpid === currentId || item.versionID === currentId,
+  //   );
+  // });
+
+  if (index === 0) return 'bbcMediaPlayer0';
+  if (index === 1) return 'bbcMediaPlayer1';
+  return undefined;
 };
 
 const getCurrentIndex = ({
@@ -106,15 +140,14 @@ export const playlistLoadedCallback = (
   e: SMPEvent,
   blocks: PortraitClipMediaBlock[],
 ) => {
-  console.log('playlistLoadedCallback triggered with event:', e);
   const player = getPlayerInstance();
 
-  const player1 = findPlayerInstanceByCurrentId(e);
+  // const player1 = findPlayerInstanceByCurrentId(e);
 
-  console.log(
-    "I'm the player returned by findPlayerInstanceByCurrentId",
-    player1,
-  );
+  // console.log(
+  //   "I'm the player returned by findPlayerInstanceByCurrentId",
+  //   player1,
+  // );
 
   if (!player) return;
 
@@ -192,9 +225,8 @@ export const playbackEndedCallback = async (
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
-  console.log('playbackEndedCallback triggered with event:', e);
+  // console.log('playbackEndedCallback triggered with event:', e);
   const player = getPlayerInstance();
-  // const player1 = findPlayerInstanceByCurrentId(e);
 
   const { ended } = e;
   const { autoplay } = player.settings();
@@ -215,14 +247,19 @@ export const playbackEndedCallback = async (
 };
 
 // const pluginLoadedCallback = (e: SMPEvent) => {
-//   const player = findPlayerInstanceByCurrentId(e);
-//   if (!player) return;
+//   const player = getPlayerInstance();
+//   const player1 = findPlayerInstanceByCurrentId(e);
+//   console.log('player1 from handlePrevNextVideo', player1);
 //   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
 // };
 
 // const handlePrevNextVideo = (direction: 'previous' | 'next', e: SMPEvent) => {
-//   const player = findPlayerInstanceByCurrentId(e);
-//   if (!player) return;
+//   const player = getPlayerInstance();
+//   const player1 = findPlayerInstanceByCurrentId(e);
+//   console.log('player1 from handlePrevNextVideo', player1);
+
+//   player?.[direction]?.();
+// };
 
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
@@ -230,7 +267,6 @@ const pluginLoadedCallback = () => {
 };
 
 const handlePrevNextVideo = (direction: 'previous' | 'next') => {
-  console.log('handlePrevNextVideo triggered with direction:', direction);
   const player = getPlayerInstance();
 
   player?.[direction]?.();
@@ -240,6 +276,7 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
+  selectedVideoId: string; // to check if always true
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
 }
@@ -248,6 +285,7 @@ const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
+  selectedVideoId,
   eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
@@ -259,6 +297,14 @@ const PortraitVideoModal = ({
       },
     },
   } = use(ServiceContext);
+
+  // TO do - see what happens if a player already exists
+  // call function that uses selectedVideoId to check
+  const myValue = findPlayerInstanceUsingCurrentId(selectedVideoId);
+  console.log(
+    "I'm the value returned by findPlayerInstanceUsingCurrentId",
+    myValue,
+  );
 
   const viewTracker = useViewTracker(
     getEventTrackingData({
@@ -326,8 +372,7 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      const player = getPlayerInstance(); // TO DO
-      console.log("I'm the player instance in the cleanup function", player);
+      const player = getPlayerInstance();
       // Pause any player if the modal is closed instantly
       if (player) player.pause();
     };
@@ -360,6 +405,7 @@ const PortraitVideoModal = ({
           <button
             id="previous-video-button"
             type="button"
+            // onClick={e => handlePrevNextVideo('previous', e)}
             onClick={() => handlePrevNextVideo('previous')}
             css={styles.navButton}
             aria-label="Previous video"
@@ -371,6 +417,7 @@ const PortraitVideoModal = ({
           <button
             id="next-video-button"
             type="button"
+            // onClick={e => handlePrevNextVideo('next', e)}
             onClick={() => handlePrevNextVideo('next')}
             css={styles.navButton}
             aria-label="Next video"
@@ -385,7 +432,6 @@ const PortraitVideoModal = ({
           blocks={[blocks?.[selectedVideoIndex]]}
           eventMapping={{
             playlistLoaded: e => playlistLoadedCallback(e, blocks),
-            // pluginLoaded: e => pluginLoadedCallback(e),
             pluginLoaded: pluginLoadedCallback,
             fullscreenExit: onClose,
             statsNavigation: e =>
