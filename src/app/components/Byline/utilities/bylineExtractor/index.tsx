@@ -2,6 +2,7 @@ import {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
+import { PageTypes } from '#app/models/types/global';
 import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
@@ -25,7 +26,47 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
+const livePageBylineExtractor = blocks => {
+  return blocks
+    .map(contribBlock => {
+      const {
+        blocks: imagesBlock,
+        name: authorName,
+        subtitle: jobRole,
+      } = contribBlock;
+
+      const locator = pathOrZeroIndexModelBlocks(1, 'locator', imagesBlock[0]);
+      const originCode = pathOrZeroIndexModelBlocks(
+        1,
+        'originCode',
+        imagesBlock[0],
+      );
+      const authorImage =
+        locator && originCode
+          ? buildIChefURL({
+              originCode,
+              locator,
+              resolution: 160,
+            })
+          : '';
+
+      console.log('###################');
+      console.log('eventDetails');
+      console.log(authorName);
+      console.log(jobRole);
+      console.log(authorImage);
+      console.log('###################');
+
+      return {
+        authorName,
+        jobRole,
+        authorImage,
+      };
+    })
+    .filter(Boolean);
+};
+
+const articlePageBylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
   return blocks
     .map(contribBlock => {
       const bylineBlocks = contribBlock?.model?.blocks || [];
@@ -79,6 +120,23 @@ const bylineExtractor = (blocks: OptimoBylineContributorBlock[]) => {
       };
     })
     .filter(Boolean);
+};
+
+const bylineExtractor = ({
+  blocks,
+  pageType,
+}: {
+  blocks: OptimoBylineContributorBlock[];
+  pageType: PageTypes;
+}) => {
+  if (!blocks || !pageType) return [];
+
+  return (
+    {
+      live: livePageBylineExtractor,
+      article: articlePageBylineExtractor,
+    }[pageType](blocks) || []
+  );
 };
 
 export default bylineExtractor;
