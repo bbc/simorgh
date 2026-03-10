@@ -144,4 +144,24 @@ export default {
       },
     }),
   bylineList: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
+  bylineContainer: () =>
+    css({
+      display: 'flex',
+      flexWrap: 'wrap',
+      padding: '16px 16px',
+    }),
+  bylineImageContainer: () =>
+    css({
+      height: '64px',
+      width: '64px',
+      marginRight: '8px',
+    }),
+  bylineImage: () =>
+    css({
+      height: '64px',
+      width: '64px',
+      borderRadius: '48px',
+    }),
+  imageLtr: () => css({ float: 'left' }),
+  imageRtl: () => css({ float: 'right' }),
 };

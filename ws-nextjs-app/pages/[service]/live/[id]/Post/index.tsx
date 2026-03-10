@@ -172,32 +172,40 @@ const PostHeading = ({
             aria-labelledby="post-byline"
             data-testid="post-byline"
           >
-            <ul css={styles.bylineList} role="list" key={contributorName}>
-              {authorImageUrl && (
+            <div css={styles.bylineContainer}>
+              <ul css={styles.bylineList} role="list" key={contributorName}>
+                {authorImageUrl && (
+                  <li
+                    css={[
+                      styles.bylineImageContainer,
+                      isRtl ? styles.imageRtl : styles.imageLtr,
+                    ]}
+                  >
+                    <Image
+                      css={styles.bylineImage}
+                      src={authorImageUrl}
+                      alt=""
+                      placeholder={false}
+                      aspectRatio={[1, 1]}
+                    />
+                  </li>
+                )}
                 <li>
-                  <Image
-                    src={authorImageUrl}
-                    alt=""
-                    placeholder={false}
-                    aspectRatio={[1, 1]}
-                  />
+                  <span role="text">
+                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                    <Text fontVariant="sansBold" size="bodyCopy">
+                      {contributorName}
+                    </Text>
+                  </span>
                 </li>
-              )}
-              <li>
-                <span role="text">
-                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                  <Text fontVariant="sansBold" size="bodyCopy">
-                    {contributorName}
-                  </Text>
-                </span>
-              </li>
-              <li>
-                <span role="text">
-                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                  <Text size="brevier">{contributorSubtitle}</Text>
-                </span>
-              </li>
-            </ul>
+                <li>
+                  <span role="text">
+                    <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                    <Text size="brevier">{contributorSubtitle}</Text>
+                  </span>
+                </li>
+              </ul>
+            </div>
           </section>
         </>
       );
