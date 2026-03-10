@@ -195,7 +195,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -271,7 +271,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  });
 
   const hasByline = bylineLinkedData.length > 0;
 

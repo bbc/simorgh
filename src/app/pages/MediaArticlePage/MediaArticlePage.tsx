@@ -56,6 +56,7 @@ import {
 } from '../../components/Byline/utilities';
 
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
 
 import SecondaryColumn from './SecondaryColumn';
@@ -140,6 +141,8 @@ const getTimestampComponent =
     showTimestamp ? <Timestamp {...props} popOut={false} /> : null;
 
 const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
+  const { pageType } = use(RequestContext);
+
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -162,7 +165,10 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  });
 
   const hasByline = bylineLinkedData.length > 0;
 
