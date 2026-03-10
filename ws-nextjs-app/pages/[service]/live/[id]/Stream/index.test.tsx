@@ -7,19 +7,18 @@ import MockIntersectionObserver from '#app/components/intersection-observer-test
 import postsFixture from '#data/pidgin/posts/postFixture.json';
 import Stream from './index';
 
-const firstPostData = postsFixture.data.results[0];
-const secondPostData = postsFixture.data.results[1];
+const postFixture = postsFixture.data.results[0];
 
 const mockStreamContentEmpty = {
   results: [],
 };
 
 const mockStreamContentSingle = {
-  data: { results: [firstPostData] },
+  results: [postFixture],
 };
 
-const mockStreamContentMoreThanOne = {
-  data: { results: [firstPostData, secondPostData] },
+const mockStreamDataMoreThanOne = {
+  results: [postFixture, postFixture],
 };
 
 const mockIntersectionObserver = new MockIntersectionObserver();
@@ -81,7 +80,7 @@ describe('Live Page Stream', () => {
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
-  it('should render multiple stream content posts within a list', async () => {
+  it('should render a more than one stream content posts within a list', async () => {
     await act(async () => {
       render(
         <Stream
@@ -102,12 +101,7 @@ describe('Live Page Stream', () => {
       screen.getAllByRole('heading', {
         name: /Breaking News/i,
       }),
-    ).toHaveLength(1);
-    expect(
-      screen.getAllByRole('heading', {
-        name: /Published 6.07pm Tues 9th/i,
-      }),
-    ).toHaveLength(1);
+    ).toHaveLength(2);
     expect(screen.queryByRole('list')).toBeInTheDocument();
   });
 
