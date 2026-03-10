@@ -145,7 +145,7 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   }
 `;
 
-const StyledPodcastIconWrapper = styled.div`
+const StyledInArticlePromoIconWrapper = styled.div`
   position: absolute;
   float: bottom;
   transform: translateY(-100%);
@@ -162,10 +162,23 @@ const StyledPodcastIconWrapper = styled.div`
   }
 `;
 
+const icons = {
+  podcast: mediaIcons.podcast,
+  youtube: mediaIcons.youtube,
+  whatsapp: mediaIcons.whatsapp,
+};
+
+const getIconFromUrl = url => {
+  const match = Object.keys(icons).find(key =>
+    url?.toLowerCase().includes(key),
+  );
+
+  return icons[match] || mediaIcons.communication;
+};
+
 const Promo = () => {
   const { podcastPromo, dir } = use(ServiceContext);
   const { pageType, isLite } = use(RequestContext);
-
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -201,6 +214,8 @@ const Promo = () => {
     '%title%': podcastPromoTitle,
   };
 
+  const promoIcon = getIconFromUrl(url);
+
   return (
     <ResponsivePodcastPromoWrapper
       {...viewTrackerRef}
@@ -228,12 +243,12 @@ const Promo = () => {
                 lazyLoad
               />
             </StyledImageWrapper>
-            <StyledPodcastIconWrapper
+            <StyledInArticlePromoIconWrapper
               className="podcastIconWrapper"
               isOptimo={pageType === ARTICLE_PAGE}
             >
-              {mediaIcons.podcast}
-            </StyledPodcastIconWrapper>
+              {promoIcon}
+            </StyledInArticlePromoIconWrapper>
             <StyledCardContentWrapper>
               <strong>
                 <StyledCardLink href={url} {...clickTrackerRef}>
