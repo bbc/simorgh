@@ -41,9 +41,9 @@ describe('ServiceWorkerContainer', () => {
     it.each`
       swPath       | service      | expected
       ${undefined} | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${null}      | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${''}        | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${'/sw.js'}  | ${undefined} | ${{ service: undefined, swPath: undefined }}
+      ${null}      | ${'news'}    | ${{ service: 'news', swPath: null }}
+      ${''}        | ${'news'}    | ${{ service: 'news', swPath: '' }}
+      ${'/sw.js'}  | ${undefined} | ${{ service: undefined, swPath: '/sw.js' }}
       ${undefined} | ${undefined} | ${{ service: undefined, swPath: undefined }}
     `(
       'calls service worker registration hook with undefined values when swPath or service is missing (swPath: $swPath, service: $service)',
