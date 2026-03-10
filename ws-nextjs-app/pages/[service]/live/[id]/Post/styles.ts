@@ -148,12 +148,15 @@ export default {
     css({
       display: 'flex',
       flexWrap: 'wrap',
+      alignItems: 'center',
       padding: '16px 16px',
     }),
   bylineImageContainer: () =>
     css({
       height: '64px',
       width: '64px',
+      display: 'inline-flex',
+      justifyContent: 'center',
       marginRight: '8px',
     }),
   bylineImage: () =>
@@ -164,4 +167,5 @@ export default {
     }),
   imageLtr: () => css({ float: 'left' }),
   imageRtl: () => css({ float: 'right' }),
+  bylineAuthor: () => css({ display: 'inline-block', verticalAlign: 'middle' }),
 };

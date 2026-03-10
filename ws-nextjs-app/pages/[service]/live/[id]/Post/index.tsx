@@ -193,7 +193,11 @@ const PostHeading = ({
                 <li>
                   <span role="text">
                     <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                    <Text fontVariant="sansBold" size="bodyCopy">
+                    <Text
+                      css={[styles.bylineAuthor]}
+                      fontVariant="sansBold"
+                      size="bodyCopy"
+                    >
                       {contributorName}
                     </Text>
                   </span>
