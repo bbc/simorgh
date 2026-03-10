@@ -47,15 +47,21 @@ const LatestPostButton = ({
   };
 
   useEffect(() => {
+    let timeoutId;
     const shouldShowButton = !isFirstPostVisible && hasPendingUpdate;
     if (shouldShowButton) {
       setShowButton(shouldShowButton);
-      setTimeout(() => {
+
+      timeoutId = setTimeout(() => {
         setShowButton(false);
       }, TEN_SECONDS);
     } else {
       setShowButton(shouldShowButton);
     }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [isFirstPostVisible, hasPendingUpdate]);
 
   return (
