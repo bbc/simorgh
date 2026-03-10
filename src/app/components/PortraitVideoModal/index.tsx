@@ -53,7 +53,7 @@ const getEventTrackingData = ({
   };
 };
 
-const findPlayerInstances = () => {
+const findPlayerKey = () => {
   let playerKey;
   const playerInstances = window?.embeddedMedia?.api?.players();
   if (!playerInstances) {
@@ -75,7 +75,7 @@ const findPlayerInstances = () => {
 };
 
 const getPlayerInstance = () => {
-  const playerKey = findPlayerInstances();
+  const playerKey = findPlayerKey();
 
   return window?.embeddedMedia?.api?.players()?.[playerKey];
 };
@@ -185,7 +185,6 @@ export const playbackEndedCallback = async (
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
   const player = getPlayerInstance();
-
   const { ended } = e;
   const { autoplay } = player.settings();
 
