@@ -81,7 +81,7 @@ const StyledListItem = styled.li`
 `;
 
 const PodcastExternalLink = ({ linkUrl, children, aria }) => {
-  const { service, script, dir } = use(ServiceContext);
+  const { dir } = use(ServiceContext);
   const eventTrackingData = {
     componentName: 'third-party',
     campaignID: 'player-episode-podcast',
@@ -90,21 +90,14 @@ const PodcastExternalLink = ({ linkUrl, children, aria }) => {
   const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
   return (
-    <Link
-      href={linkUrl}
-      service={service}
-      script={script}
-      dir={dir}
-      {...clickTrackerRef}
-      {...aria}
-    >
+    <Link href={linkUrl} dir={dir} {...clickTrackerRef} {...aria}>
       {children}
     </Link>
   );
 };
 
 const PodcastExternalLinks = ({ brandTitle, links }) => {
-  const { translations, service, script, dir, lang } = use(ServiceContext);
+  const { translations, dir, lang } = use(ServiceContext);
   const { externalLinkText } = use(ServiceContext);
 
   const eventTrackingData = {
@@ -142,11 +135,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {...viewTrackerRef}
       data-e2e="podcast-links"
     >
-      <ThirdPartyLinksTitle
-        script={script}
-        service={service}
-        id="third-party-links"
-      >
+      <ThirdPartyLinksTitle id="third-party-links">
         {title}
       </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
