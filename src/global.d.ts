@@ -45,6 +45,7 @@ declare global {
       api: {
         players: () => {
           bbcMediaPlayer0: Player;
+          bbcMediaPlayer1: Player;
         };
       };
     };

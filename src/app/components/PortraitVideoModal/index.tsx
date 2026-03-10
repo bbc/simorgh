@@ -55,28 +55,18 @@ const getEventTrackingData = ({
 
 const findPlayerInstances = () => {
   let playerKey;
-  // ts-ignore - need to check the type of players and playlist items to make this work
   const playerInstances = window?.embeddedMedia?.api?.players();
-  console.log('1 playerInstances', playerInstances);
   if (!playerInstances) {
-    // if there are no other active players on the page, then this is the first player
-    console.log('No active players found, defaulting to bbcMediaPlayer0');
     playerKey = `bbcMediaPlayer0`;
     return playerKey;
   }
 
   if (Object.keys(playerInstances).length === 1) {
-    // if there is one other active player on the page, then this is not the first player and we need to do x
-    console.log(
-      'playerInstances).length === 1, we assume this is the only media player, so we default to bbcMediaPlayer0',
-    );
     playerKey = `bbcMediaPlayer0`;
     return playerKey;
   }
 
   if (Object.keys(playerInstances).length > 1) {
-    // this is when both players have been opened and closed and the PV is reopended.
-    console.log('playerInstances).length > 1 do something, y');
     playerKey = `bbcMediaPlayer1`;
     return playerKey;
   }
@@ -84,113 +74,11 @@ const findPlayerInstances = () => {
   return playerKey;
 };
 
-// const getPlayerInstanceOLD = () => {
-//   return window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0; // TO do
-// };
-
 const getPlayerInstance = () => {
-  console.log('Attempting to get player instance');
   const playerKey = findPlayerInstances();
-  if (playerKey === 'bbcMediaPlayer0') {
-    console.log('Returning bbcMediaPlayer0');
-  } else if (playerKey === 'bbcMediaPlayer1') {
-    console.log('Returning bbcMediaPlayer1');
-  } else {
-    console.log('No player key found, returning undefined');
-    return undefined;
-  }
+
   return window?.embeddedMedia?.api?.players()?.[playerKey];
 };
-
-// const getCurrentId = (e: SMPEvent): string | undefined => {
-//   const playlist = (e?.playlist || {}) as Playlist;
-//   const [currentItem] = (playlist?.items || []) as PlaylistItem[];
-//   const currentId = currentItem?.vpid || currentItem?.versionID;
-
-//   console.log("I'm the currentId", currentId);
-
-//   return currentId;
-// };
-
-// const findPlayerInstanceByCurrentId = (e: SMPEvent) => {
-//   const playerInstances = window?.embeddedMedia?.api?.players(); // Assuming this returns an object with player instances keyed by their IDs
-//   if (!playerInstances) return undefined;
-
-//   const currentId = getCurrentId(e); // Get the current video ID from the event or player state
-
-//   return Object.values(playerInstances).find(player => {
-//     const playlistItems = player.playlist()?.items || [];
-//     return playlistItems.some(
-//       item => item.vpid === currentId || item.versionID === currentId,
-//     );
-//   });
-// };
-
-// add a new function that takes the currentID
-// it checks how many playerInstances there are in const playerInstances = window?.embeddedMedia?.api?.players();
-// it returns the index of the array which matches the currentID if it exists
-// const findPlayerInstanceUsingCurrentId = (currentId: string) => {
-//   let playerKey;
-//   console.log('0 currentId', currentId);
-//   // ts-ignore - need to check the type of players and playlist items to make this work
-//   const playerInstances = window?.embeddedMedia?.api?.players();
-//   console.log('1 playerInstances', playerInstances);
-//   if (!playerInstances) {
-//     // if there are no other active players on the page, then this is the first player
-//     console.log('No active players found, defaulting to bbcMediaPlayer0');
-//     playerKey = `bbcMediaPlayer0`;
-//     return playerKey;
-//   }
-
-//   if (Object.keys(playerInstances).length === 1) {
-//     // if there is one other active player on the page, then this is not the first player and we need to do x
-//     console.log(
-//       'playerInstances).length === 1, we assume the other video has been played and closed, so we default to bbcMediaPlayer1',
-//     );
-//     playerKey = `bbcMediaPlayer1`;
-//     return playerKey;
-//   }
-
-//   if (Object.keys(playerInstances).length > 1) {
-//     // this is when both players have been opened and closed and the PV is reopended.
-//     console.log('playerInstances).length > 1 do something, y');
-//   }
-
-//   // if (playerInstances) {
-//   //   console.log('Active players found, defaulting to bbcMediaPlayer1');
-//   //   playerKey = `bbcMediaPlayer1`;
-//   //   return playerKey;
-//   // }
-
-//   const playerKeys = Object.keys(playerInstances);
-//   console.log('2 playerKeys', playerKeys);
-
-//   const matchingIndex = playerKeys.findIndex(key => {
-//     const playlistItems = playerInstances[key].playlist()?.items || [];
-//     console.log('3 playlistItems', playlistItems); // returns "0: bbcMediaPlayer0"
-//     return playlistItems.some(
-//       item => item.vpid === currentId || item.versionID === currentId,
-//     );
-//   });
-//   console.log('4 matchingIndex', matchingIndex);
-
-//   // if the index does not match and there are no other active players on the page, then this is the first player
-//   if (matchingIndex === -1 && playerKeys.length < 1) {
-//     playerKey = `bbcMediaPlayer0`;
-//   }
-
-//   // if the index does not match but there are active players on the page, then this is not the first player and we need to take the index
-//   if (matchingIndex === -1 && playerKeys.length > 0) {
-//     playerKey = `bbcMediaPlayer${playerKeys.length}`;
-//   }
-
-//   // if the index matches then take that id - I need to check if this will happen
-//   if (matchingIndex !== -1) {
-//     playerKey = `bbcMediaPlayer${matchingIndex}`;
-//   }
-
-//   return playerKey;
-// };
 
 const getCurrentIndex = ({
   e,
@@ -219,13 +107,6 @@ export const playlistLoadedCallback = (
   blocks: PortraitClipMediaBlock[],
 ) => {
   const player = getPlayerInstance();
-
-  // const player1 = findPlayerInstanceByCurrentId(e);
-
-  // console.log(
-  //   "I'm the player returned by findPlayerInstanceByCurrentId",
-  //   player1,
-  // );
 
   if (!player) return;
 
@@ -303,7 +184,6 @@ export const playbackEndedCallback = async (
   eventTrackingData: EventTrackingData,
   swipeTracker: ReturnType<typeof useSwipeTracker>,
 ) => {
-  // console.log('playbackEndedCallback triggered with event:', e);
   const player = getPlayerInstance();
 
   const { ended } = e;
@@ -324,21 +204,6 @@ export const playbackEndedCallback = async (
   }
 };
 
-// const pluginLoadedCallback = (e: SMPEvent) => {
-//   const player = getPlayerInstance();
-//   const player1 = findPlayerInstanceByCurrentId(e);
-//   console.log('player1 from handlePrevNextVideo', player1);
-//   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
-// };
-
-// const handlePrevNextVideo = (direction: 'previous' | 'next', e: SMPEvent) => {
-//   const player = getPlayerInstance();
-//   const player1 = findPlayerInstanceByCurrentId(e);
-//   console.log('player1 from handlePrevNextVideo', player1);
-
-//   player?.[direction]?.();
-// };
-
 const pluginLoadedCallback = () => {
   const player = getPlayerInstance();
   player.dispatchEvent('fullScreenPlugin.launchFullscreen');
@@ -354,7 +219,6 @@ export interface PortraitVideoModalProps {
   blocks: PortraitClipMediaBlock[];
   onClose: () => void;
   selectedVideoIndex: number;
-  // selectedVideoId: string; // to check if always true
   nonce?: string | null;
   eventTrackingData: EventTrackingData;
 }
@@ -363,7 +227,6 @@ const PortraitVideoModal = ({
   blocks,
   onClose,
   selectedVideoIndex,
-  // selectedVideoId,
   eventTrackingData,
 }: PortraitVideoModalProps) => {
   const {
@@ -375,15 +238,6 @@ const PortraitVideoModal = ({
       },
     },
   } = use(ServiceContext);
-
-  // TO do - see what happens if a player already exists
-  // call function that uses selectedVideoId to check
-  // const myValue = findPlayerInstanceUsingCurrentId(selectedVideoId);
-  const myValue = findPlayerInstances();
-  console.log(
-    "I'm the value returned by findPlayerInstanceUsingCurrentId",
-    myValue,
-  );
 
   const viewTracker = useViewTracker(
     getEventTrackingData({
@@ -433,7 +287,7 @@ const PortraitVideoModal = ({
       }
     };
 
-    const modal = document.getElementById('portrait-video-modal-container'); // check
+    const modal = document.getElementById('portrait-video-modal-container');
     const reactRootElement = document.getElementById('root');
 
     if (modal) {
@@ -484,7 +338,6 @@ const PortraitVideoModal = ({
           <button
             id="previous-video-button"
             type="button"
-            // onClick={e => handlePrevNextVideo('previous', e)}
             onClick={() => handlePrevNextVideo('previous')}
             css={styles.navButton}
             aria-label="Previous video"
@@ -496,7 +349,6 @@ const PortraitVideoModal = ({
           <button
             id="next-video-button"
             type="button"
-            // onClick={e => handlePrevNextVideo('next', e)}
             onClick={() => handlePrevNextVideo('next')}
             css={styles.navButton}
             aria-label="Next video"
