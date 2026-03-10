@@ -19,41 +19,52 @@ describe('LatestPostButton', () => {
     });
   });
 
-  it('should be visible when there is a pending update, and when the first post is not visible', async () => {
-    const { container } = await act(async () => {
-      return render(
-        <LastestPostButton
-          isFirstPostVisible={false}
-          hasPendingUpdate
-          streamRef={null}
-        />,
+  it.each([
+    {
+      title:
+        'should be visible when there is a pending update, and when the first post is not visible',
+      isFirstPostVisible: false,
+      hasPendingUpdate: true,
+      shouldButtonBeVisible: true,
+    },
+    {
+      title:
+        'should be invisible when there is no pending update and the first post is visible',
+      isFirstPostVisible: true,
+      hasPendingUpdate: false,
+      shouldButtonBeVisible: false,
+    },
+    {
+      title:
+        'should be invisible when there is a pending update but the first post is visible',
+      isFirstPostVisible: true,
+      hasPendingUpdate: true,
+      shouldButtonBeVisible: false,
+    },
+  ])(
+    '$title',
+    async ({ isFirstPostVisible, hasPendingUpdate, shouldButtonBeVisible }) => {
+      const { container } = await act(async () => {
+        return render(
+          <LastestPostButton
+            isFirstPostVisible={isFirstPostVisible}
+            hasPendingUpdate={hasPendingUpdate}
+            streamRef={null}
+          />,
+        );
+      });
+
+      const button = container.querySelector(
+        'button[data-testid="latest-post-button"]',
       );
-    });
 
-    const button = container.querySelector(
-      'button[data-testid="latest-post-button"]',
-    );
-
-    expect(button).not.toBeNull();
-  });
-
-  it('should be invisible when there is no pending update or when the first post is not visible', async () => {
-    const { container } = await act(async () => {
-      return render(
-        <LastestPostButton
-          isFirstPostVisible
-          hasPendingUpdate={false}
-          streamRef={null}
-        />,
-      );
-    });
-
-    const button = container.querySelector(
-      'button[data-testid="latest-post-button"]',
-    );
-
-    expect(button).toBeNull();
-  });
+      if (shouldButtonBeVisible) {
+        expect(button).not.toBeNull();
+      } else {
+        expect(button).toBeNull();
+      }
+    },
+  );
 
   it('should clear after 10 seconds of being visible', async () => {
     const { container } = await act(async () => {
