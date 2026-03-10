@@ -80,6 +80,13 @@ const getPlayerInstance = () => {
   return window?.embeddedMedia?.api?.players()?.[playerKey];
 };
 
+const getAllPlayerInstances = () => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  if (!playerInstances) return [];
+
+  return Object.values(playerInstances);
+};
+
 const getCurrentIndex = ({
   e,
   blocks,
@@ -109,6 +116,15 @@ export const playlistLoadedCallback = (
   const player = getPlayerInstance();
 
   if (!player) return;
+
+  const allPlayerInstances = getAllPlayerInstances();
+
+  // Pause embedded players when PV Carousel is loaded
+  if (allPlayerInstances) {
+    allPlayerInstances.forEach(playerInstance => {
+      playerInstance.pause();
+    });
+  }
 
   const currentIndex = getCurrentIndex({ e, blocks });
 
@@ -304,9 +320,14 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      const player = getPlayerInstance();
+      const allPlayerInstances = getAllPlayerInstances();
+
       // Pause any player if the modal is closed instantly
-      if (player) player.pause();
+      if (allPlayerInstances) {
+        allPlayerInstances.forEach(player => {
+          player.pause();
+        });
+      }
     };
   }, [onClose]);
 
