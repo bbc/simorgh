@@ -34,17 +34,17 @@ describe('ServiceWorkerContainer', () => {
 
       expect(useServiceWorkerRegistration).toHaveBeenCalledWith({
         service: 'news',
-        swPath: '/news/sw.js',
+        swPath: '/sw.js',
       });
     });
 
     it.each`
-      swPath           | service      | expected
-      ${undefined}     | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${null}          | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${''}            | ${'news'}    | ${{ service: 'news', swPath: undefined }}
-      ${'/news/sw.js'} | ${undefined} | ${{ service: undefined, swPath: undefined }}
-      ${undefined}     | ${undefined} | ${{ service: undefined, swPath: undefined }}
+      swPath       | service      | expected
+      ${undefined} | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${null}      | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${''}        | ${'news'}    | ${{ service: 'news', swPath: undefined }}
+      ${'/sw.js'}  | ${undefined} | ${{ service: undefined, swPath: undefined }}
+      ${undefined} | ${undefined} | ${{ service: undefined, swPath: undefined }}
     `(
       'calls service worker registration hook with undefined values when swPath or service is missing (swPath: $swPath, service: $service)',
       ({ swPath, service, expected }) => {
