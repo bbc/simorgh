@@ -4,9 +4,11 @@ const styles = {
   wrapper: {
     display: 'flex',
     alignItems: 'center',
-    marginInlineStart: 'auto',
+    marginInlineStart: 0,
     flexShrink: 0,
-    paddingInlineStart: '1rem',
+    paddingBlockStart: '0.5rem',
+    paddingBlockEnd: '0.5rem',
+    width: 'fit-content',
   },
   link: ({ palette }: Theme) => ({
     display: 'flex',

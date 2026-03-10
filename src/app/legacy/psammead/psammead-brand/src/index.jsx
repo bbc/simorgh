@@ -21,7 +21,7 @@ const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
 
 const SvgWrapper = styled.div`
-  height: 100%;
+  height: auto;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -40,12 +40,13 @@ const SvgWrapper = styled.div`
 
 const Banner = styled.div`
   background-color: ${props => props.theme.palette.BRAND_BACKGROUND};
-  height: ${44 / 16}rem;
+  min-height: ${44 / 16}rem;
+  height: auto;
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    height: ${60 / 16}rem;
+    min-height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING};
   }
 
@@ -101,6 +102,7 @@ const StyledLink = styled.a`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     ${({ scriptLink }) =>
       scriptLink && `height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX}`}
+    padding-block-start: 0.5rem;
   }
 `;
 

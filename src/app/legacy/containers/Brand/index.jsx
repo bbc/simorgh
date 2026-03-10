@@ -9,6 +9,7 @@ import { RequestContext } from '../../../contexts/RequestContext';
 const StyledBrand = styled(Brand)`
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
   svg {
     fill: currentColor;
     @media screen and (forced-colors: active) {
