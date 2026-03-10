@@ -50,13 +50,6 @@ const livePageBylineExtractor = blocks => {
             })
           : '';
 
-      console.log('###################');
-      console.log('eventDetails');
-      console.log(authorName);
-      console.log(jobRole);
-      console.log(authorImage);
-      console.log('###################');
-
       return {
         authorName,
         jobRole,
