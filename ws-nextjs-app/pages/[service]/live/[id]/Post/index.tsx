@@ -3,13 +3,13 @@ import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
 import Text from '#app/components/Text';
-import Image from '#app/components/Image';
 import Blocks from '#app/legacy/containers/Blocks';
 import Paragraph from '#app/legacy/containers/Paragraph';
 import UnorderedList from '#app/legacy/containers/BulletedList';
 import MediaLoader from '#app/components/MediaLoader';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
+import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
 import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
@@ -24,7 +24,6 @@ import {
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
 
 const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
   ssr: false,
@@ -142,75 +141,10 @@ const PostHeading = ({
       );
     },
     contributor: (props: ComponentToRenderProps) => {
-      const {
-        blocks,
-        name: contributorName,
-        subtitle: contributorSubtitle,
-      } = props;
-
-      const locator = blocks?.[0]?.model?.blocks?.[0]?.model?.locator;
-      const originCode = blocks?.[0]?.model?.blocks?.[0]?.model?.originCode;
-      const altText =
-        blocks?.[0]?.model?.blocks?.[1]?.model?.blocks?.[0]?.model?.blocks?.[0]
-          ?.model?.text;
-      const authorImageUrl = buildIChefURL({
-        originCode,
-        locator,
-        resolution: 160,
-      });
-
-      const { translations, dir } = use(ServiceContext);
-      const isRtl = dir === 'rtl';
-      const { byline: { author = 'Author', role = 'Role' } = {} } =
-        translations ?? {};
-
       return (
         <>
           <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
-          <section
-            role="region"
-            aria-labelledby="post-byline"
-            data-testid="post-byline"
-          >
-            <div css={styles.bylineContainer}>
-              <ul css={styles.bylineList} role="list" key={contributorName}>
-                {authorImageUrl && (
-                  <li
-                    css={[
-                      styles.bylineImageContainer,
-                      isRtl ? styles.imageRtl : styles.imageLtr,
-                    ]}
-                  >
-                    <Image
-                      css={styles.bylineImage}
-                      src={authorImageUrl}
-                      alt=""
-                      placeholder={false}
-                      aspectRatio={[1, 1]}
-                    />
-                  </li>
-                )}
-                <li>
-                  <span role="text">
-                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                    <Text
-                      css={[styles.bylineAuthor]}
-                      fontVariant="sansBold"
-                      size="bodyCopy"
-                    >
-                      {contributorName}
-                    </Text>
-                  </span>
-                </li>
-                <li>
-                  <span role="text">
-                    <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                    <Text size="brevier">{contributorSubtitle}</Text>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </section>
+          <Byline blocks={[props]} />
         </>
       );
     },
