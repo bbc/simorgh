@@ -198,11 +198,6 @@ const Byline = ({
 
   const contributorValues = bylineExtractor({ blocks, pageType });
 
-  console.log('###################');
-  console.log('eventDetails');
-  console.log(JSON.stringify(contributorValues, null, 2));
-  console.log('###################');
-
   const isSingleContributor = contributorValues.length === 1;
 
   const { byline: { articleInformation = 'Article Information' } = {} } =
