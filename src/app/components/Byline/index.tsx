@@ -2,6 +2,7 @@
 import { Children, use, PropsWithChildren } from 'react';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
 import { RightChevron, LeftChevron } from '../icons';
@@ -193,8 +194,9 @@ const Byline = ({
   children = null,
 }: PropsWithChildren<OptimoBylineBlock['model']>) => {
   const { translations } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
 
-  const contributorValues = bylineExtractor(blocks);
+  const contributorValues = bylineExtractor({ blocks, pageType });
 
   const isSingleContributor = contributorValues.length === 1;
 
