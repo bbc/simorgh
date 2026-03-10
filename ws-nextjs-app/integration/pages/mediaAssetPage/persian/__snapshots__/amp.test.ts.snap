@@ -227,7 +227,7 @@ exports[`AMP Media Asset Page SEO Lang attribute 1`] = `"fa"`;
 
 exports[`AMP Media Asset Page SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Article",
