@@ -19,7 +19,7 @@ const styles = {
     fontWeight: 700,
     border: `1px solid ${palette.WHITE}`,
     borderRadius: 0,
-    padding: '0.5rem',
+    padding: 'calc(0.5rem + 1px)',
     '&:hover, &:focus': {
       outline: `4px solid ${palette.WHITE}`,
       outlineOffset: '-1px',
