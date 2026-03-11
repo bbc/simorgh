@@ -1,7 +1,7 @@
 import {
   ServiceContextProvider,
   ServiceContext,
-} from '../../../contexts/ServiceContext';
+} from '#app/contexts/ServiceContext';
 
 import ThemeProvider from '../../ThemeProvider';
 

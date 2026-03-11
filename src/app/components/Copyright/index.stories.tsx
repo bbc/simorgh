@@ -1,7 +1,7 @@
 import {
   ServiceContext,
   ServiceContextProvider,
-} from '../../contexts/ServiceContext';
+} from '#app/contexts/ServiceContext';
 import CopyrightContainer from '.';
 import { StoryProps, StoryArgs } from '../../models/types/storybook';
 
