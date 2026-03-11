@@ -152,9 +152,15 @@ export default {
       borderRadius: '48px',
     }),
 
+  displayBlock: () =>
+    css({
+      display: `block`,
+    }),
+
   displayFlex: () =>
     css({
       display: `flex`,
+      alignItems: 'center',
     }),
 
   displayInline: () =>

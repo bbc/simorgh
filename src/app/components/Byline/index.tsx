@@ -131,36 +131,45 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 </>
               ) : (
                 <>
-                  <div>
-                    <span role="text">
-                      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                      <Text
-                        css={[
-                          BylineCss.author,
-                          isSingleContributor &&
-                            BylineCss.authorSingleContributor,
-                        ]}
-                        fontVariant="sansBold"
-                        size="bodyCopy"
-                      >
-                        {authorName}
-                      </Text>
-                    </span>
-                  </div>
-                  <div>
-                    <span role="text">
-                      <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                      <Text
-                        css={BylineCss.jobRole}
-                        {...(isSingleContributor
-                          ? { size: 'brevier' }
-                          : { size: 'bodyCopy' })}
-                      >
-                        {jobRole}
-                      </Text>
-                    </span>
-                  </div>
+                  <span role="text" css={BylineCss.displayBlock}>
+                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                    <Text
+                      css={[
+                        BylineCss.author,
+                        isSingleContributor &&
+                          BylineCss.authorSingleContributor,
+                      ]}
+                      fontVariant="sansBold"
+                      size="bodyCopy"
+                    >
+                      {authorName}
+                    </Text>
+                  </span>
+                  <span role="text" css={BylineCss.displayBlock}>
+                    <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                    <Text
+                      css={BylineCss.jobRole}
+                      {...(isSingleContributor
+                        ? { size: 'brevier' }
+                        : { size: 'bodyCopy' })}
+                    >
+                      {jobRole}
+                    </Text>
+                  </span>
                 </>
+                // <span role="text">
+                //   <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                //   <Text
+                //     css={[
+                //       BylineCss.author,
+                //       isSingleContributor && BylineCss.authorSingleContributor,
+                //     ]}
+                //     fontVariant="sansBold"
+                //     size="bodyCopy"
+                //   >
+                //     {authorName}
+                //   </Text>
+                // </span>
               )}
               {hasMultipleContributors &&
                 !isLastContributorNameOnly(index, jobRole, location) && (
