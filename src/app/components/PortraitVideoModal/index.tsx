@@ -56,10 +56,7 @@ const getEventTrackingData = ({
 const findPlayerKey = (): string => {
   const playerInstances = window?.embeddedMedia?.api?.players();
   const keys = playerInstances ? Object.keys(playerInstances) : [];
-  // if (keys.length === 0) return 'bbcMediaPlayer0';
-  // if (keys.length === 1) return 'bbcMediaPlayer0';
-  // if (keys.length > 1) return keys[keys.length - 1]; // Return the last player key if multiple instances are found
-  // return 'bbcMediaPlayer0';
+  // Return the last player key if multiple instances are found, else return a fallback
   return keys[keys.length - 1] || 'bbcMediaPlayer0';
 };
 

@@ -773,5 +773,26 @@ describe('PortraitVideoModal', () => {
 
       expect(getPlayerInstance()).toBe(mockPlayer2);
     });
+
+    it('returns bbcMediaPlayer2 when three players exist', () => {
+      const mockPlayer1 = { pause: jest.fn() } as Partial<Player>;
+      const mockPlayer2 = { pause: jest.fn() } as Partial<Player>;
+      const mockPlayer3 = { pause: jest.fn() } as Partial<Player>;
+
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({
+              bbcMediaPlayer0: mockPlayer1,
+              bbcMediaPlayer1: mockPlayer2,
+              bbcMediaPlayer2: mockPlayer3,
+            }),
+          },
+        },
+      });
+
+      expect(getPlayerInstance()).toBe(mockPlayer3);
+    });
   });
 });
