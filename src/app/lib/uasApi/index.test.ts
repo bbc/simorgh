@@ -1,18 +1,25 @@
+import Cookie from 'js-cookie';
+import { getEnvConfig } from '../utilities/getEnvConfig';
 import uasApiRequest from './index';
 
-jest.mock('./getAuthHeader', () =>
-  jest.fn(() => ({
-    Authorization: 'Bearer mocked-token',
-    'X-Authentication-Provider': 'idv5',
-    'X-API-Key': 'mocked-api-key',
-  })),
-);
+jest.mock('js-cookie');
+jest.mock('../utilities/getEnvConfig');
 
 global.fetch = jest.fn();
+
+const mockCookie = Cookie as jest.Mocked<typeof Cookie>;
+const mockGetEnvConfig = getEnvConfig as jest.MockedFunction<
+  typeof getEnvConfig
+>;
 
 describe('uasApiRequest', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    // Default mock setup: both cookie and API key are present
+    (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
+    mockGetEnvConfig.mockReturnValue({
+      UAS_PUBLIC_API_KEY: 'mocked-api-key',
+    } as ReturnType<typeof getEnvConfig>);
   });
 
   it('should make a GET request with correct headers and URL', async () => {
@@ -112,5 +119,39 @@ describe('uasApiRequest', () => {
     await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
       'UAS request failed with status 500',
     );
+  });
+
+  it('should throw an error when ckns_atkn cookie is missing', async () => {
+    // Mock the scenario where the ckns_atkn cookie is not in storage
+    (mockCookie.get as jest.Mock).mockReturnValue(undefined);
+    mockGetEnvConfig.mockReturnValue({
+      UAS_PUBLIC_API_KEY: 'mocked-api-key',
+    } as ReturnType<typeof getEnvConfig>);
+
+    const activityType = 'favourites';
+
+    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
+      'Missing authentication for UAS request',
+    );
+
+    // Verify that fetch was never called since authentication failed
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should throw an error when API key is missing', async () => {
+    // Mock the scenario where the API key is not configured
+    (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
+    mockGetEnvConfig.mockReturnValue({
+      UAS_PUBLIC_API_KEY: undefined,
+    } as unknown as ReturnType<typeof getEnvConfig>);
+
+    const activityType = 'favourites';
+
+    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
+      'Missing authentication for UAS request',
+    );
+
+    // Verify that fetch was never called since authentication failed
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 });
