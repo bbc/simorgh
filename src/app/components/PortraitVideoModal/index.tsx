@@ -53,31 +53,20 @@ const getEventTrackingData = ({
   };
 };
 
-const findPlayerKey = () => {
-  let playerKey;
+const findPlayerKey = (): string => {
   const playerInstances = window?.embeddedMedia?.api?.players();
-  if (!playerInstances) {
-    playerKey = `bbcMediaPlayer0`;
-    return playerKey;
-  }
-
-  if (Object.keys(playerInstances).length === 1) {
-    playerKey = `bbcMediaPlayer0`;
-    return playerKey;
-  }
-
-  if (Object.keys(playerInstances).length > 1) {
-    playerKey = `bbcMediaPlayer1`;
-    return playerKey;
-  }
-
-  return playerKey;
+  const keys = playerInstances ? Object.keys(playerInstances) : [];
+  // if (keys.length === 0) return 'bbcMediaPlayer0';
+  // if (keys.length === 1) return 'bbcMediaPlayer0';
+  // if (keys.length > 1) return keys[keys.length - 1]; // Return the last player key if multiple instances are found
+  // return 'bbcMediaPlayer0';
+  return keys[keys.length - 1] || 'bbcMediaPlayer0';
 };
 
 export const getPlayerInstance = () => {
   const playerKey = findPlayerKey();
 
-  return window?.embeddedMedia?.api?.players()?.[playerKey];
+  return window?.embeddedMedia?.api?.players()?.[playerKey] as Player;
 };
 
 const getAllPlayerInstances = () => {
@@ -323,11 +312,9 @@ const PortraitVideoModal = ({
       const allPlayerInstances = getAllPlayerInstances();
 
       // Pause any player if the modal is closed instantly
-      if (allPlayerInstances) {
-        allPlayerInstances.forEach(player => {
-          player.pause();
-        });
-      }
+      allPlayerInstances.forEach(player => {
+        player.pause();
+      });
     };
   }, [onClose]);
 
