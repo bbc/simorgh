@@ -152,6 +152,11 @@ export default {
       borderRadius: '48px',
     }),
 
+  displayFlex: () =>
+    css({
+      display: `flex`,
+    }),
+
   displayInline: () =>
     css({
       // display: `inline`,

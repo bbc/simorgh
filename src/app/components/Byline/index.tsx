@@ -60,6 +60,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
             css={[
               BylineCss.list,
               hasMultipleContributors && BylineCss.displayInline,
+              isSingleContributor && BylineCss.displayFlex,
             ]}
             role="list"
             key={authorName}
@@ -129,26 +130,44 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                   </a>
                 </>
               ) : (
-                <span role="text">
-                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                  <Text
-                    css={[
-                      BylineCss.author,
-                      isSingleContributor && BylineCss.authorSingleContributor,
-                    ]}
-                    fontVariant="sansBold"
-                    size="bodyCopy"
-                  >
-                    {authorName}
-                  </Text>
-                </span>
+                <>
+                  <div>
+                    <span role="text">
+                      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+                      <Text
+                        css={[
+                          BylineCss.author,
+                          isSingleContributor &&
+                            BylineCss.authorSingleContributor,
+                        ]}
+                        fontVariant="sansBold"
+                        size="bodyCopy"
+                      >
+                        {authorName}
+                      </Text>
+                    </span>
+                  </div>
+                  <div>
+                    <span role="text">
+                      <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                      <Text
+                        css={BylineCss.jobRole}
+                        {...(isSingleContributor
+                          ? { size: 'brevier' }
+                          : { size: 'bodyCopy' })}
+                      >
+                        {jobRole}
+                      </Text>
+                    </span>
+                  </div>
+                </>
               )}
               {hasMultipleContributors &&
                 !isLastContributorNameOnly(index, jobRole, location) && (
                   <Comma />
                 )}
             </li>
-            {jobRole ? (
+            {/* {jobRole ? (
               <li css={BylineCss.displayInline}>
                 <span role="text">
                   <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
@@ -166,7 +185,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                     index !== lastContributorIndex &&
                     index !== lastContributorIndex - 1 && <Comma />)}
               </li>
-            ) : null}
+            ) : null} */}
             {location ? (
               <li css={BylineCss.displayInline}>
                 <span role="text">
