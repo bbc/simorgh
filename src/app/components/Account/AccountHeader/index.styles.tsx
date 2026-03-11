@@ -7,8 +7,7 @@ const styles = {
     alignItems: 'center',
     marginInlineStart: 0,
     flexShrink: 0,
-    paddingBlockStart: '0.5rem',
-    paddingBlockEnd: '0.5rem',
+    paddingBlock: '0.5rem',
     width: 'fit-content',
   },
   link: ({ palette }: Theme) => ({
