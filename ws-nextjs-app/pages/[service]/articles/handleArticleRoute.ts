@@ -111,6 +111,7 @@ export default async (context: GetServerSidePropsContext) => {
     billboardCuration = null,
     mediaCuration = null,
     portraitVideoItems = null,
+    topicTagsCurations = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -122,7 +123,8 @@ export default async (context: GetServerSidePropsContext) => {
   });
 
   const derivedPageType = getDerivedArticleType(article.metadata);
-
+  console.log('article in handleArticleRoute is', secondaryData);
+  console.log(JSON.stringify(secondaryData.topicTagsCurations, null, 2));
   return {
     props: {
       country,
@@ -138,6 +140,7 @@ export default async (context: GetServerSidePropsContext) => {
         },
         mostRead,
         portraitVideoItems,
+        topicTagsCurations,
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,

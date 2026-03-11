@@ -33,7 +33,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#app/components/RelatedTopics';
+import TabbedTopics from '#app/components/TabbedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -196,7 +196,7 @@ const getContinueReadingButton =
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite } = use(RequestContext);
-
+  console.log('pageData in ArticlePage is', pageData);
   const {
     articleAuthor,
     isTrustProjectParticipant,
@@ -262,6 +262,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
+  const { topicTagsCurations } = pageData;
+  console.log('topicTagsCuration in ArticlePage is', topicTagsCurations);
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
   const bylineBlock = blocks.find(
@@ -469,15 +471,20 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
-            <RelatedTopics
+            <TabbedTopics
               css={[
                 styles.relatedTopics,
                 ...(showContinueReadingButton
                   ? [!showAllContent && styles.hideRelatedTopics]
                   : []),
               ]}
-              topics={topics}
-              mobileDivider={false}
+              topics={
+                topicTagsCurations?.map(t => ({
+                  title: t.curation.title,
+                  summaries: t.curation.summaries,
+                  link: t.curation.link,
+                })) ?? []
+              }
             />
           )}
           {showPortraitVideoCarousel && (

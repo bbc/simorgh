@@ -19,6 +19,7 @@ const PageTypeToRender = withOptimizelyProvider(function PageTypeToRender({
   pageType,
   ...rest
 }: PageProps) {
+  console.log('rest in PageTypeToRender is', rest);
   switch (pageType) {
     case ARTICLE_PAGE:
       return <ArticlePage {...rest} />;
