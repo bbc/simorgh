@@ -36,8 +36,6 @@ const OnDemandAudioPage = ({
     headline,
     summary,
     shortSynopsis,
-    mediumSynopsis,
-    longSynopsis,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
@@ -141,8 +139,6 @@ const OnDemandAudioPage = ({
         imageHeight: 400,
       }
     : {};
-
-  const synopsisForSummary = longSynopsis || mediumSynopsis || shortSynopsis;
 
   return (
     <>
