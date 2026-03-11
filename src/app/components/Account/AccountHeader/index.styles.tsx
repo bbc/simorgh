@@ -22,7 +22,7 @@ const styles = {
     padding: `${pixelsToRem(9)}rem`,
     '&:hover, &:focus': {
       outline: `4px solid ${palette.WHITE}`,
-      textDecoration: 'none',
+      textDecoration: 'underline',
     },
   }),
 
