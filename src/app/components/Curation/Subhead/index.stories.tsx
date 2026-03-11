@@ -1,6 +1,8 @@
-import { ServiceContextProvider } from '../../../contexts/ServiceContext';
+import {
+  ServiceContextProvider,
+  ServiceContext,
+} from '../../../contexts/ServiceContext';
 
-import services from '../../../../server/utilities/serviceConfigs';
 import ThemeProvider from '../../ThemeProvider';
 
 import Subheading from '.';
@@ -10,9 +12,11 @@ const Component = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <Subheading>
-          {services[service][variant].translations.relatedContent}
-        </Subheading>
+        <ServiceContext.Consumer>
+          {({ translations }) => (
+            <Subheading>{translations?.relatedContent}</Subheading>
+          )}
+        </ServiceContext.Consumer>
       </ServiceContextProvider>
     </ThemeProvider>
   );
@@ -22,9 +26,13 @@ const WithLink = (_: StoryArgs, { service, variant }: StoryProps) => {
   return (
     <ThemeProvider service={service} variant={variant}>
       <ServiceContextProvider service={service} variant={variant}>
-        <Subheading link="https://bbc.com">
-          {services[service][variant].translations.relatedContent}
-        </Subheading>
+        <ServiceContext.Consumer>
+          {({ translations }) => (
+            <Subheading link="https://bbc.com">
+              {translations.relatedContent}
+            </Subheading>
+          )}
+        </ServiceContext.Consumer>
       </ServiceContextProvider>
     </ThemeProvider>
   );
