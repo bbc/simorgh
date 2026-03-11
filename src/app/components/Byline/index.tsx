@@ -83,7 +83,12 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            <li css={hasMultipleContributors && BylineCss.displayInline}>
+            <li
+              css={[
+                hasMultipleContributors && BylineCss.displayInline,
+                isSingleContributor && BylineCss.displayInline2,
+              ]}
+            >
               {authorTopicUrl ? (
                 <>
                   <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>

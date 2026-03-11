@@ -16,7 +16,9 @@ export default {
   bylineContainerSingleContributor: () =>
     css({
       display: 'flex',
-      flexWrap: 'wrap',
+      flexDirection: 'row',
+      // flexWrap: 'wrap',
+      alignItems: 'center',
     }),
 
   list: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
@@ -29,7 +31,7 @@ export default {
 
   authorSingleContributor: () =>
     css({
-      verticalAlign: 'middle',
+      // verticalAlign: 'middle',
     }),
 
   jobRole: ({ palette, isDarkUi }: Theme) =>
@@ -112,9 +114,12 @@ export default {
       display: 'inline-flex',
       alignItems: 'flex-end',
       justifyContent: 'center',
-      width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(60)}rem`,
-      backgroundColor: `${palette.GREY_7}`,
+      // width: `${pixelsToRem(80)}rem`,
+      // height: `${pixelsToRem(60)}rem`,
+      width: `${pixelsToRem(64)}rem`,
+      height: `${pixelsToRem(64)}rem`,
+      // backgroundColor: `${palette.GREY_7}`,
+      backgroundColor: `${palette.GREY_2}`,
       overflow: 'visible',
     }),
 
@@ -122,9 +127,9 @@ export default {
     css([
       {
         float: 'left',
-        margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
-          16,
-        )}rem 0px`,
+        // margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
+        //   16,
+        // )}rem 0px`,
       },
     ]),
 
@@ -140,11 +145,19 @@ export default {
 
   imageSrc: () =>
     css({
-      width: `${pixelsToRem(80)}rem`,
-      height: `${pixelsToRem(80)}rem`,
+      // width: `${pixelsToRem(80)}rem`,
+      // height: `${pixelsToRem(80)}rem`,
+      width: `${pixelsToRem(64)}rem`,
+      height: `${pixelsToRem(64)}rem`,
+      borderRadius: '48px',
     }),
 
   displayInline: () =>
+    css({
+      // display: `inline`,
+    }),
+
+  displayInline2: () =>
     css({
       display: `inline`,
     }),
