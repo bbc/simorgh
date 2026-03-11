@@ -42,6 +42,8 @@ export interface OnDemandAudioProps {
     headline: string;
     summary?: string;
     shortSynopsis: string;
+    mediumSynopsis: string;
+    longSynopsis: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
@@ -74,6 +76,8 @@ const OnDemandAudioPage = ({
     headline,
     summary,
     shortSynopsis,
+    mediumSynopsis,
+    longSynopsis,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
@@ -105,6 +109,9 @@ const OnDemandAudioPage = ({
       }
     : {};
 
+  const synopsisForParagraphContainer =
+    longSynopsis || mediumSynopsis || shortSynopsis;
+
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
@@ -135,7 +142,10 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer testid="summary" text={summary} />
+                <OnDemandParagraphContainer
+                  testid="summary"
+                  text={synopsisForParagraphContainer}
+                />
                 {episodeTitle && (
                   <FooterTimestamp
                     releaseDateTimeStamp={releaseDateTimeStamp}
