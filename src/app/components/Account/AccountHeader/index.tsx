@@ -18,7 +18,7 @@ const AccountHeader = () => {
   if (!href) return null;
 
   const label = isSignedIn
-    ? (translations?.account?.forYou ?? 'For you')
+    ? (translations?.account?.forYou ?? 'Your Account')
     : (translations?.account?.signIn ?? 'Sign In');
 
   return (
