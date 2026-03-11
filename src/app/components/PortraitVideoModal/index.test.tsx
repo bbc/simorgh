@@ -2,6 +2,7 @@ import Component, {
   playlistLoadedCallback,
   statsNavigationCallback,
   playbackEndedCallback,
+  getPlayerInstance,
 } from '.';
 import {
   screen,
@@ -735,6 +736,42 @@ describe('PortraitVideoModal', () => {
       nextButton.click();
 
       expect(mockPlayer.next).toHaveBeenCalled();
+    });
+  });
+
+  describe('getPlayerInstance', () => {
+    it('returns bbcMediaPlayer0 when only one player exists', () => {
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({
+              bbcMediaPlayer0: mockPlayer,
+            }),
+          },
+        },
+      });
+
+      expect(getPlayerInstance()).toBe(mockPlayer);
+    });
+
+    it('returns bbcMediaPlayer1 when two players exist', () => {
+      const mockPlayer1 = { pause: jest.fn() } as Partial<Player>;
+      const mockPlayer2 = { pause: jest.fn() } as Partial<Player>;
+
+      Object.defineProperty(window, 'embeddedMedia', {
+        writable: true,
+        value: {
+          api: {
+            players: () => ({
+              bbcMediaPlayer0: mockPlayer1,
+              bbcMediaPlayer1: mockPlayer2,
+            }),
+          },
+        },
+      });
+
+      expect(getPlayerInstance()).toBe(mockPlayer2);
     });
   });
 });

@@ -74,7 +74,7 @@ const findPlayerKey = () => {
   return playerKey;
 };
 
-const getPlayerInstance = () => {
+export const getPlayerInstance = () => {
   const playerKey = findPlayerKey();
 
   return window?.embeddedMedia?.api?.players()?.[playerKey];
