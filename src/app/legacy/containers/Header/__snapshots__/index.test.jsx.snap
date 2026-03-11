@@ -286,16 +286,18 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -324,7 +326,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -383,6 +385,12 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-21 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-23 {
@@ -1615,16 +1623,18 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -1653,7 +1663,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 .emotion-19 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1712,6 +1722,12 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-21 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-23 {
@@ -2944,16 +2960,18 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -2982,7 +3000,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3041,6 +3059,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-21 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-23 {
@@ -4273,16 +4297,18 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-17 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -4311,7 +4337,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-19 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4370,6 +4396,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-21 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-23 {

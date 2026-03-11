@@ -301,16 +301,18 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-18 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-18 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -339,7 +341,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-20 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -398,6 +400,12 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-22 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-24 {
@@ -890,17 +898,19 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-142 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
   position: relative;
   z-index: 1;
+  margin-block-start: '0.5rem';
 }
 
 @media (min-width: 15rem) {
   .emotion-142 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }

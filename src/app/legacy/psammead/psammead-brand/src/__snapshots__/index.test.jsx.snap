@@ -3,14 +3,15 @@
 exports[`Brand should render correctly with link not provided 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
 }
 
 @media (min-width: 15rem) {
   .emotion-0 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -29,7 +30,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -138,14 +139,15 @@ exports[`Brand should render correctly with link not provided 1`] = `
 exports[`Brand should render correctly with link provided 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
 }
 
 @media (min-width: 15rem) {
   .emotion-0 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -164,7 +166,7 @@ exports[`Brand should render correctly with link provided 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,6 +225,12 @@ exports[`Brand should render correctly with link provided 1`] = `
   right: -0.1875rem;
   border-top: 0.25rem solid #FFFFFF;
   outline: 0.25rem solid #FFFFFF;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
+    padding-block-start: 0.5rem;
+  }
 }
 
 .emotion-6 {
@@ -313,14 +321,15 @@ exports[`Brand should render correctly with link provided 1`] = `
 exports[`Brand should render correctly with no service Localised Name 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
 }
 
 @media (min-width: 15rem) {
   .emotion-0 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -339,7 +348,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -440,7 +449,8 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 exports[`Brand should render correctly with transparent borders 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
+  height: auto;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -449,7 +459,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
 
 @media (min-width: 15rem) {
   .emotion-0 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
@@ -468,7 +478,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
 }
 
 .emotion-2 {
-  height: 100%;
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
