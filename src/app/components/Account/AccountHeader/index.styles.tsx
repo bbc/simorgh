@@ -1,4 +1,5 @@
 import { Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   wrapper: {
@@ -19,10 +20,9 @@ const styles = {
     fontWeight: 700,
     border: `1px solid ${palette.WHITE}`,
     borderRadius: 0,
-    padding: 'calc(0.5rem + 1px)',
+    padding: `${pixelsToRem(9)}rem`,
     '&:hover, &:focus': {
       outline: `4px solid ${palette.WHITE}`,
-      outlineOffset: '-1px',
       textDecoration: 'none',
     },
   }),
