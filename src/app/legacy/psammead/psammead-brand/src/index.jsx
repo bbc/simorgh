@@ -21,7 +21,7 @@ const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
 
 const SvgWrapper = styled.div`
-  height: auto;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -40,8 +40,7 @@ const SvgWrapper = styled.div`
 
 const Banner = styled.div`
   background-color: ${props => props.theme.palette.BRAND_BACKGROUND};
-  min-height: ${44 / 16}rem;
-  height: auto;
+  height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
