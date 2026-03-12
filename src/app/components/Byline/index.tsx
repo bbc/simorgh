@@ -26,12 +26,7 @@ const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
         />
       );
     case 'live':
-      return (
-        <PostContributor
-          contributorValues={contributorValues}
-          isSingleContributor={isSingleContributor}
-        />
-      );
+      return <PostContributor contributorValues={contributorValues} />;
     default:
       return null;
   }

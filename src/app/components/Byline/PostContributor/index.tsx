@@ -6,7 +6,7 @@ import Text from '../../Text';
 import Image from '../../Image';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 
-const Contributors = ({ contributorValues, isSingleContributor }) => {
+const Contributors = ({ contributorValues }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
 
@@ -55,12 +55,7 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
               </span>
               <span role="text" css={BylineCss.displayBlock}>
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                <Text
-                  css={BylineCss.jobRole}
-                  {...(isSingleContributor
-                    ? { size: 'brevier' }
-                    : { size: 'bodyCopy' })}
-                >
+                <Text css={BylineCss.jobRole} size="brevier">
                   {jobRole}
                 </Text>
               </span>
