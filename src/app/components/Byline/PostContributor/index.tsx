@@ -42,14 +42,11 @@ const Contributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            <li css={BylineCss.displayInline}>
+            <li>
               <span role="text" css={BylineCss.displayBlock}>
                 <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                 <Text
-                  css={[
-                    BylineCss.author,
-                    isSingleContributor && BylineCss.authorSingleContributor,
-                  ]}
+                  css={[BylineCss.author]}
                   fontVariant="sansBold"
                   size="bodyCopy"
                 >
