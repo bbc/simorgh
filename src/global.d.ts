@@ -43,9 +43,7 @@ declare global {
     ) => void;
     embeddedMedia: {
       api: {
-        players: () => {
-          bbcMediaPlayer0: Player;
-        };
+        players: () => Record<string, Player>;
       };
     };
     mediaPlayers: Record<string, Player>;
