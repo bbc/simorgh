@@ -3,7 +3,7 @@ import { getEnvConfig } from '../utilities/getEnvConfig';
 
 const getAuthHeaders = (): Record<string, string> => {
   const cknsAtkn = Cookie.get('ckns_atkn');
-  const apiKey = getEnvConfig().UAS_PUBLIC_API_KEY;
+  const apiKey = getEnvConfig().SIMORGH_UAS_PUBLIC_API_KEY;
 
   if (!cknsAtkn || !apiKey) {
     throw new Error('Missing authentication for UAS request');

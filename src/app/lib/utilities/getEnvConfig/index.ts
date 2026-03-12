@@ -28,7 +28,7 @@ export const getProcessEnvAppVariables = () => ({
     process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
   SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE:
     process.env.SIMORGH_WEBVITALS_DEFAULT_SAMPLING_RATE,
-  UAS_PUBLIC_API_KEY: process.env.UAS_PUBLIC_API_KEY,
+  SIMORGH_UAS_PUBLIC_API_KEY: process.env.UAS_PUBLIC_API_KEY,
 });
 
 export function getEnvConfig(): EnvConfig {

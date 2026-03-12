@@ -18,7 +18,7 @@ describe('uasApiRequest', () => {
     // Default mock setup: both cookie and API key are present
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
     mockGetEnvConfig.mockReturnValue({
-      UAS_PUBLIC_API_KEY: 'mocked-api-key',
+      SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
     } as ReturnType<typeof getEnvConfig>);
   });
 
@@ -125,7 +125,7 @@ describe('uasApiRequest', () => {
     // Mock the scenario where the ckns_atkn cookie is not in storage
     (mockCookie.get as jest.Mock).mockReturnValue(undefined);
     mockGetEnvConfig.mockReturnValue({
-      UAS_PUBLIC_API_KEY: 'mocked-api-key',
+      SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
     } as ReturnType<typeof getEnvConfig>);
 
     const activityType = 'favourites';
@@ -142,7 +142,7 @@ describe('uasApiRequest', () => {
     // Mock the scenario where the API key is not configured
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
     mockGetEnvConfig.mockReturnValue({
-      UAS_PUBLIC_API_KEY: undefined,
+      SIMORGH_UAS_PUBLIC_API_KEY: undefined,
     } as unknown as ReturnType<typeof getEnvConfig>);
 
     const activityType = 'favourites';
