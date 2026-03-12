@@ -3,8 +3,7 @@
 exports[`Brand should render correctly with link not provided 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -30,7 +29,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
 }
 
 .emotion-2 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -139,8 +138,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
 exports[`Brand should render correctly with link provided 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -166,7 +164,7 @@ exports[`Brand should render correctly with link provided 1`] = `
 }
 
 .emotion-2 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -321,8 +319,7 @@ exports[`Brand should render correctly with link provided 1`] = `
 exports[`Brand should render correctly with no service Localised Name 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
 }
@@ -348,7 +345,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 }
 
 .emotion-2 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -449,8 +446,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 exports[`Brand should render correctly with transparent borders 1`] = `
 .emotion-0 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -478,7 +474,7 @@ exports[`Brand should render correctly with transparent borders 1`] = `
 }
 
 .emotion-2 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;

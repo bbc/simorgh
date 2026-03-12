@@ -3,13 +3,11 @@
 exports[`BrandContainer should render correctly 1`] = `
 .emotion-1 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -43,7 +41,7 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .emotion-3 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;

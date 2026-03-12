@@ -32,14 +32,12 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-3 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -73,7 +71,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-5 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;

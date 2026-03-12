@@ -286,13 +286,11 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -326,7 +324,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 }
 
 .emotion-19 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1623,13 +1621,11 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 
 .emotion-17 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -1663,7 +1659,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 }
 
 .emotion-19 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2960,13 +2956,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -3000,7 +2994,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 }
 
 .emotion-19 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4297,13 +4291,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 
 .emotion-17 {
   background-color: #B80000;
-  min-height: 2.75rem;
-  height: auto;
+  height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   position: relative;
   z-index: 1;
-  padding-block-start: 0.5rem;
 }
 
 @media (min-width: 15rem) {
@@ -4337,7 +4329,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 }
 
 .emotion-19 {
-  height: auto;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
