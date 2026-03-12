@@ -29,7 +29,6 @@ const WarningText = styled.small`
 
 const CaptionWrapper = ({
   children,
-  service,
   text,
   additionalText = null,
   describedById = null,
@@ -43,7 +42,6 @@ const CaptionWrapper = ({
       <WarningText
         {...(describedById && { id: describedById })}
         isLive={isLive}
-        service={service}
       >
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </WarningText>
