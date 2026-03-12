@@ -2690,6 +2690,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cypress/request@npm:^3.0.10":
+  version: 3.0.10
+  resolution: "@cypress/request@npm:3.0.10"
+  dependencies:
+    aws-sign2: "npm:~0.7.0"
+    aws4: "npm:^1.8.0"
+    caseless: "npm:~0.12.0"
+    combined-stream: "npm:~1.0.6"
+    extend: "npm:~3.0.2"
+    forever-agent: "npm:~0.6.1"
+    form-data: "npm:~4.0.4"
+    http-signature: "npm:~1.4.0"
+    is-typedarray: "npm:~1.0.0"
+    isstream: "npm:~0.1.2"
+    json-stringify-safe: "npm:~5.0.1"
+    mime-types: "npm:~2.1.19"
+    performance-now: "npm:^2.1.0"
+    qs: "npm:~6.14.1"
+    safe-buffer: "npm:^5.1.2"
+    tough-cookie: "npm:^5.0.0"
+    tunnel-agent: "npm:^0.6.0"
+    uuid: "npm:^8.3.2"
+  checksum: 10/23c86075f5fbbd4a56403cb98dbce92b2bc33cbb0ec5779d7cb45c9ad50b5d056ff73037f11680842bb2bc4f2b79b995d91880ca7e9a893b8be650d93fad2e33
+  languageName: node
+  linkType: hard
+
 "@cypress/request@npm:^3.0.9":
   version: 3.0.9
   resolution: "@cypress/request@npm:3.0.9"
@@ -9240,6 +9266,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress@npm:15.11.0":
+  version: 15.11.0
+  resolution: "cypress@npm:15.11.0"
+  dependencies:
+    "@cypress/request": "npm:^3.0.10"
+    "@cypress/xvfb": "npm:^1.2.4"
+    "@types/sinonjs__fake-timers": "npm:8.1.1"
+    "@types/sizzle": "npm:^2.3.2"
+    "@types/tmp": "npm:^0.2.3"
+    arch: "npm:^2.2.0"
+    blob-util: "npm:^2.0.2"
+    bluebird: "npm:^3.7.2"
+    buffer: "npm:^5.7.1"
+    cachedir: "npm:^2.3.0"
+    chalk: "npm:^4.1.0"
+    ci-info: "npm:^4.1.0"
+    cli-cursor: "npm:^3.1.0"
+    cli-table3: "npm:0.6.1"
+    commander: "npm:^6.2.1"
+    common-tags: "npm:^1.8.0"
+    dayjs: "npm:^1.10.4"
+    debug: "npm:^4.3.4"
+    enquirer: "npm:^2.3.6"
+    eventemitter2: "npm:6.4.7"
+    execa: "npm:4.1.0"
+    executable: "npm:^4.1.1"
+    extract-zip: "npm:2.0.1"
+    figures: "npm:^3.2.0"
+    fs-extra: "npm:^9.1.0"
+    hasha: "npm:5.2.2"
+    is-installed-globally: "npm:~0.4.0"
+    listr2: "npm:^3.8.3"
+    lodash: "npm:^4.17.23"
+    log-symbols: "npm:^4.0.0"
+    minimist: "npm:^1.2.8"
+    ospath: "npm:^1.2.2"
+    pretty-bytes: "npm:^5.6.0"
+    process: "npm:^0.11.10"
+    proxy-from-env: "npm:1.0.0"
+    request-progress: "npm:^3.0.0"
+    supports-color: "npm:^8.1.1"
+    systeminformation: "npm:^5.31.1"
+    tmp: "npm:~0.2.4"
+    tree-kill: "npm:1.2.2"
+    tslib: "npm:1.14.1"
+    untildify: "npm:^4.0.0"
+    yauzl: "npm:^2.10.0"
+  bin:
+    cypress: bin/cypress
+  checksum: 10/1d1d4c47b022d381a72e11ab8905e08246cc22ccf6f24426090d9ff6ef2608611dcd1cb69411cd031dce8e107d2b1ae8717ab81bf3b110db734b164e1e1f1ca0
+  languageName: node
+  linkType: hard
+
 "cypress@npm:15.4.0":
   version: 15.4.0
   resolution: "cypress@npm:15.4.0"
@@ -14053,7 +14132,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.23, lodash@npm:^4.17.4":
   version: 4.17.23
   resolution: "lodash@npm:4.17.23"
   checksum: 10/82504c88250f58da7a5a4289f57a4f759c44946c005dd232821c7688b5fcfbf4a6268f6a6cdde4b792c91edd2f3b5398c1d2a0998274432cff76def48735e233
@@ -16050,6 +16129,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qs@npm:~6.14.1":
+  version: 6.14.2
+  resolution: "qs@npm:6.14.2"
+  dependencies:
+    side-channel: "npm:^1.1.0"
+  checksum: 10/682933a85bb4b7bd0d66e13c0a40d9e612b5e4bcc2cb9238f711a9368cd22d91654097a74fff93551e58146db282c56ac094957dfdc60ce64ea72c3c9d7779ac
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -17415,7 +17503,7 @@ __metadata:
     copy-webpack-plugin: "npm:13.0.1"
     core-js: "npm:3.46.0"
     crypto: "npm:1.0.1"
-    cypress: "npm:15.4.0"
+    cypress: "npm:15.11.0"
     cypress-axe: "npm:1.7.0"
     cypress-multi-reporters: "npm:2.0.5"
     cypress-terminal-report: "npm:7.2.1"
@@ -18181,6 +18269,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"systeminformation@npm:^5.31.1":
+  version: 5.31.4
+  resolution: "systeminformation@npm:5.31.4"
+  bin:
+    systeminformation: lib/cli.js
+  checksum: 10/8b42b0ff666ff748535324223aad2a71a61a3828a477331d245933beed2291cd5a2ca9fe68d565341cf484d79175685ff90ba708197cd58c2fd2658f6ef8fb14
+  conditions: (os=darwin | os=linux | os=win32 | os=freebsd | os=openbsd | os=netbsd | os=sunos | os=android)
+  languageName: node
+  linkType: hard
+
 "table@npm:^6.0.9":
   version: 6.9.0
   resolution: "table@npm:6.9.0"
@@ -18742,7 +18840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.3":
+"tslib@npm:1.14.1, tslib@npm:^1.8.1, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10/7dbf34e6f55c6492637adb81b555af5e3b4f9cc6b998fb440dac82d3b42bdc91560a35a5fb75e20e24a076c651438234da6743d139e4feabf0783f3cdfe1dddb
