@@ -11,6 +11,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { AccountContext } from '#contexts/AccountContext';
 import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import LanguageNavigation from './LanguageNavigation/lazy';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import Canonical from './index.canonical';
@@ -50,14 +51,18 @@ const renderListItems = (
   }, []);
 
 const NavigationContainer = ({ navItems, propsForTopBarOJComponent }) => {
-  const { isAmp, isLite } = use(RequestContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
 
   const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable } = use(AccountContext);
   const isHydrated = useHydrationDetection();
 
   const showAccountPromoBanner =
-    isHydrated && accountEnabled && !isSignedIn && isIdctaAvailable;
+    isHydrated &&
+    accountEnabled &&
+    !isSignedIn &&
+    isIdctaAvailable &&
+    [ARTICLE_PAGE, HOME_PAGE].includes(pageType);
 
   const { blocks = [] } = propsForTopBarOJComponent || {};
   const {
