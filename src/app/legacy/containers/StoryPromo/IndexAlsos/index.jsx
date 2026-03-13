@@ -27,24 +27,12 @@ const getMediaType = (cpsType, mediaType) => {
   return isPGL ? 'photogallery' : media.toLowerCase();
 };
 
-const buildIndexAlsosMediaIndicator = ({
-  cpsType,
-  mediaType,
-  script,
-  service,
-  dir = 'ltr',
-}) => {
+const buildIndexAlsosMediaIndicator = ({ cpsType, mediaType, dir = 'ltr' }) => {
   const indexAlsosMediaType = getMediaType(cpsType, mediaType);
 
   return (
     indexAlsosMediaType && (
-      <MediaIndicator
-        type={indexAlsosMediaType}
-        script={script}
-        service={service}
-        dir={dir}
-        isInline
-      />
+      <MediaIndicator type={indexAlsosMediaType} dir={dir} isInline />
     )
   );
 };
@@ -73,7 +61,7 @@ const extractAssetPromoData = item => {
  * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
  * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
  */
-const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
+const IndexAlsosContainer = ({ alsoItems, dir = 'ltr' }) => {
   const {
     translations: { media: mediaTranslations, relatedContent },
   } = use(ServiceContext);
@@ -98,8 +86,6 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
             mediaType,
-            script,
-            service,
             dir,
           });
           const indexAlsoMediaType =
@@ -108,8 +94,6 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir = 'ltr' }) => {
           return (
             <IndexAlsoItem
               key={id}
-              script={script}
-              service={service}
               url={url}
               dir={dir}
               mediaIndicator={indexAlsoMediaIndicator}

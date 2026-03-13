@@ -4,7 +4,6 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Helmet } from 'react-helmet';
 import { render } from '../react-testing-library-with-providers';
-import latinDiacritics from '../ThemeProvider/fontScripts/latinWithDiacritics';
 import {
   ServiceContext,
   ServiceContextProvider,
@@ -13,7 +12,6 @@ import AdContainer from './index';
 
 const context = {
   service: 'mundo',
-  script: latinDiacritics,
   dir: 'ltr',
   translations: {
     ads: {
