@@ -63,8 +63,6 @@ const PostHeaderBanner = ({
     datetimeLocale,
     serviceDatetimeLocale,
     altCalendar,
-    service,
-    script,
     translations: {
       liveExperiencePage: {
         breaking = 'Breaking',
@@ -84,8 +82,6 @@ const PostHeaderBanner = ({
         format={postDateFormat || 'D MMMM YYYY'}
         locale={locale}
         timezone={timezone}
-        service={service}
-        script={script}
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
@@ -218,7 +214,10 @@ const Post = ({
           />
 
           {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+            <PostHeadings
+              key={`${headerBlock.type}-${headerBlock.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`}
+              headerBlock={headerBlock}
+            />
           ))}
         </span>
       </Heading>
