@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Timestamp should add prefix and suffix 1`] = `
 .emotion-0 {
@@ -7,8 +7,8 @@ exports[`Timestamp should add prefix and suffix 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -47,8 +47,8 @@ exports[`Timestamp should render correctly 1`] = `
   color: #545658;
   display: block;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
@@ -83,26 +83,26 @@ exports[`Timestamp should render correctly 1`] = `
 exports[`Timestamp should render without a leading zero on the day 1`] = `
 .emotion-0 {
   font-size: 0.875rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
   color: #545658;
   display: block;
   font-family: "BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   padding-bottom: 0.25rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 0.875rem;
-    line-height: 1.125rem;
+    line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 0.8125rem;
-    line-height: 1rem;
+    line-height: 1.25rem;
   }
 }
 

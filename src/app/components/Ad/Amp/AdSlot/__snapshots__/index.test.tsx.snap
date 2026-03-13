@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Amp AdSlot Snapshots should correctly render a leaderboard AdSlot 1`] = `
 <div>

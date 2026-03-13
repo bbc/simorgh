@@ -10,8 +10,6 @@ export const ATI_PAGE_VIEW = 'ati-page-view';
 
 export const ATI_PAGE_VIEW_REVERB = 'ati-page-view-reverb';
 
-export const ATI_USER_ID_COOKIE = 'atuserid-cookie-value';
-
 const SCROLLABLE_NAVIGATION = 'scrollable-navigation';
 const DROPDOWN_NAVIGATION = 'dropdown-navigation';
 const TOP_STORIES = 'top-stories';
@@ -28,11 +26,13 @@ const RECENT_AUDIO_EPISODES = 'episodes-audio';
 const PODCAST_LINKS = 'third-party';
 const LATEST_MEDIA = 'latest';
 const RECOMMENDATIONS = 'midarticle-mostread';
-const SCROLLABLE_PROMO = 'edoj';
+const ARTICLE_LINKS_BLOCK = 'edoj';
 const BILLBOARD = 'billboard';
 const SOCIAL_EMBED = 'social-consent-banner';
 const LIVE_MEDIA = 'live-header-media';
 const SHARE = 'asset:';
+const PORTRAIT_VIDEO_CAROUSEL = 'portrait-video-carousel';
+const PORTRAIT_VIDEO_MODAL = 'portrait-video-modal';
 
 export const COMPONENTS = {
   ARTICLE_LITE_SITE_LINK,
@@ -52,86 +52,44 @@ export const COMPONENTS = {
   RELATED_CONTENT,
   RELATED_TOPICS,
   SCROLLABLE_NAVIGATION,
-  SCROLLABLE_PROMO,
+  ARTICLE_LINKS_BLOCK,
   SHARE,
   SOCIAL_EMBED,
   TOP_STORIES,
+  PORTRAIT_VIDEO_CAROUSEL,
+  PORTRAIT_VIDEO_MODAL,
 };
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
 
-  // Component Views & Clicks - Click Per View Model
-  Object.values(COMPONENTS).forEach(component => {
-    const viewClickEventRegex = new RegExp(
-      `PUB-\\[(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
-      'g',
-    );
-
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          ati: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          atc: viewClickEventRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-ati-click`);
-  });
-
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    const viewabilityViewRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.view","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"view"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+    cy.intercept('GET', `${atiUrl}/**`, request => {
+      const { query } = request;
+      const viewabilityModelString = query.events;
+      if (viewabilityModelString) {
+        const isViewEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"view"}`,
+        );
+        const isClickEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"select"}`,
+        );
 
-    const viewabilityClickRegex = new RegExp(
-      `\\[\\{"name":"viewability\\.select","data":\\{(?:.*)?"event":\\{"category":"viewability","action":"select"\\}(?:.*)?"item":\\{(?:.*)?"name":"${component}(.*)?"(?:.*)?\\}\\}\\}\\]`,
-      'g',
-    );
+        const containsExpectedComponent = viewabilityModelString.includes(
+          `"name":"${component}`,
+        );
 
-    // Component Views
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityViewRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-view`);
-
-    // Component Clicks
-    cy.intercept(
-      {
-        url: `${atiUrl}/*`,
-        query: {
-          events: viewabilityClickRegex,
-        },
-      },
-      request => {
-        request.reply({ statusCode: 200 });
-      },
-    ).as(`${component}-viewability-click`);
+        if (isViewEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-view`;
+          request.reply({ statusCode: 200 });
+        }
+        if (isClickEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-click`;
+          request.reply({ statusCode: 200 });
+        }
+      }
+    });
   });
 
   // NOT REVERB - Page View (only fires once per page visit)
@@ -161,24 +119,15 @@ export const interceptATIAnalyticsBeacons = () => {
   ).as(`${ATI_PAGE_VIEW_REVERB}`);
 };
 
-export const getPathWithSuffix = ({ path, suffix = '' }) => {
-  const { pathname, search } = new URL(`https://www.bbc.com${path}`);
-
-  return `${pathname}${suffix}${search}`;
-};
-
-export const setUserIDCookie = () => {
-  cy.setCookie('atuserid', JSON.stringify({ val: ATI_USER_ID_COOKIE }));
-};
-
 export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
-  const publicServiceDestinationNames = {
+  const dedicatedPianoDestinationNamesByService = {
     news: 'NEWS_PS',
     cymrufyw: 'NEWS_LANGUAGES_PS',
     naidheachdan: 'NEWS_LANGUAGES_PS',
-    scotland: 'PS_HOMEPAGE',
+    scotland: 'HOMEPAGE_PS',
     newsround: 'NEWSROUND',
     sport: 'SPORT_PS',
+    japanese: 'NEWS_LANGUAGES_GNL',
   };
 
   const expectedAtiDestinationsForAmp = {
@@ -186,30 +135,32 @@ export const getExpectedAtiDestination = ({ service, applicationEnv }) => {
     WS_NEWS_LANGUAGES_TEST: '598343',
     NEWS_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 644937)',
     NEWS_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
     NEWS_LANGUAGES_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 646753)',
     NEWS_LANGUAGES_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-    PS_HOMEPAGE: '598273',
-    PS_HOMEPAGE_TEST: '598274',
+    HOMEPAGE_PS: '598273',
+    HOMEPAGE_PS_TEST: '598274',
     NEWSROUND: '598293',
     NEWSROUND_TEST: '598294',
     SPORT_PS:
       // eslint-disable-next-line no-template-curly-in-string
-      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 644938)',
     SPORT_PS_TEST:
       // eslint-disable-next-line no-template-curly-in-string
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
+    NEWS_LANGUAGES_GNL: 646753,
+    NEWS_LANGUAGES_GNL_TEST: 598290,
   };
 
   const destinationName =
-    publicServiceDestinationNames[service] ?? 'WS_NEWS_LANGUAGES';
+    dedicatedPianoDestinationNamesByService[service] ?? 'WS_NEWS_LANGUAGES';
 
   return expectedAtiDestinationsForAmp[
     applicationEnv === 'live' ? destinationName : `${destinationName}_TEST`

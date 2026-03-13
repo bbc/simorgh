@@ -14,10 +14,10 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-urdu',
     atiAnalyticsProducerId: '95',
     atiAnalyticsProducerName: 'URDU',
-    useReverb: true,
     chartbeatDomain: 'urdu.bbc.co.uk',
     brandName: 'BBC News اردو',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News اردو',
     dir: 'rtl',
     externalLinkText: '، بیرو',
@@ -53,7 +53,7 @@ export const service: DefaultServiceConfig = {
       brandDescription:
         'بی بی سی اردو کی خبروں اور فیچرز کو اپنے فون پر حاصل کریں اور سب سے پہلے جانیں پاکستان اور دنیا بھر سے ان کہانیوں کے بارے میں جو آپ کے لیے معنی رکھتی ہیں',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0k7ks07.png',
+        src: 'http://ichef.bbci.co.uk/images/ic/448xn/p0m0rsyc.png',
         alt: 'بی بی سی اردو اب واٹس ایپ پر',
       },
       linkLabel: {
@@ -66,6 +66,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'اور',
+      readTime: {
+        readTimePrefix: 'مطالعے کا وقت',
+        minute: 'منٹ',
+      },
       pagination: {
         previousPage: 'پچھلا صفحہ',
         nextPage: 'اگلا صفحہ',
@@ -82,7 +87,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
       relatedTopics: 'متعلقہ عنوانات',
+      moreOnThis: '',
       navMenuText: 'سیکشن',
+      liteSite: {
+        onboardingMessage:
+          'آپ اس وقت اس ویب سائٹ کا ٹیکسٹ پر مبنی ورژن دیکھ رہے ہیں جو کم ڈیٹا استعمال کرتا ہے۔ مرکزی ویب سائٹ جہاں تمام تصاویر اور ویڈیوز موجود ہیں دیکھیے',
+        toMainSite: 'مجھے مرکزی ویب سائٹ یا ورژن پر لے جائیں',
+        informationPage:
+          'کم ڈیٹا استعمال کرنے والے ورژن کے بارے میں مزید جانیں',
+        informationPageLink: 'https://www.bbc.com/urdu/articles/cp866m0l4gno',
+        dataSaving: 'کم ڈیٹا استعمال کرنے کے لیے صرف تحریر پڑھیں',
+        articleDataSavingLinkText:
+          'کم ڈیٹا استعمال کرنے کے لیے صرف تحریر پڑھیں',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -248,10 +265,11 @@ export const service: DefaultServiceConfig = {
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
-        recentEpisodes: 'سابق پروگرام',
+        recentEpisodes: 'دیگر پروگرامز',
         podcastExternalLinks: 'یہ پوڈکاسٹ ان پلیٹفارمز پر بھی دستیاب ہے',
         download: 'قسط ڈاؤن لوڈ کریں',
         closeVideo: 'بند کریں',
+        endOfContentClose: 'یہاں مواد ختم ہوتا ہے۔ بند کریں',
       },
       socialEmbed: {
         caption: {
@@ -377,7 +395,7 @@ export const service: DefaultServiceConfig = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
@@ -420,34 +438,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحۂ اول',
         url: '/urdu',
-      },
-      {
-        title: 'پاکستان',
-        url: '/urdu/topics/cjgn7n9zzq7t',
-      },
-      {
-        title: 'آس پاس',
-        url: '/urdu/topics/cl8l9mveql2t',
-      },
-      {
-        title: 'ورلڈ',
-        url: '/urdu/topics/cw57v2pmll9t',
-      },
-      {
-        title: 'کھیل',
-        url: '/urdu/topics/c340q0p2585t',
-      },
-      {
-        title: 'فن فنکار',
-        url: '/urdu/topics/ckdxnx900n5t',
-      },
-      {
-        title: 'سائنس',
-        url: '/urdu/topics/c40379e2ymxt',
-      },
-      {
-        title: 'ویڈیو',
-        url: '/urdu/topics/c1e0mzr3r2yt',
       },
     ],
   },

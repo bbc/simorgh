@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  FormEvent,
-  PropsWithChildren,
-  useContext,
-  useState,
-} from 'react';
+import { createContext, FormEvent, PropsWithChildren, use, useState } from 'react';
 
 import { useRouter } from 'next/router';
 import { OK } from '#app/lib/statusCodes.const';
@@ -251,5 +245,5 @@ export const FormContextProvider = ({
 };
 
 export function useFormContext() {
-  return useContext(FormContext);
+  return use(FormContext);
 }

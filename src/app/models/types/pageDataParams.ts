@@ -2,7 +2,7 @@ import { ParsedUrlQuery } from 'querystring';
 import { PageTypes, Services } from './global';
 
 export default interface PageDataParams extends ParsedUrlQuery {
-  id: string;
+  id?: string;
   page?: string;
   service: Services;
   variant?: string[];

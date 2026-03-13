@@ -39,7 +39,9 @@ export default async ({ service, path: pathname, variant, page, getAgent }) => {
       status,
       pageData: {
         title: data.title,
+        seoTitle: data.seoTitle,
         description: data.description,
+        seoDescription: data.seoDescription,
         imageData,
         curations: data.curations,
         activePage: data.activePage || 1,

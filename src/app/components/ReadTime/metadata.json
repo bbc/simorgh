@@ -1,0 +1,29 @@
+{
+  "alpha": true,
+  "lastUpdated": {
+    "day": 12,
+    "month": "Jan",
+    "year": 2026
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/xIOunUThBXwKijvaF5HS7X/Read-Time-designs?node-id=1-184&p=f&t=Eqofh6kYiI6UY5Bh-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/Read-Time-1-on-Article-page-A11y-Acceptance-Criteria-AAC--C1GZ8TsYi968TaBkgYneucWQAg-2ve3KcsIk2ZO5m0vMdQrj",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Article-Read-Time-Experiment--C1Avg9kGq58UTgBh5qicsOopAg-qz77913Je6AjGorYxog3n",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

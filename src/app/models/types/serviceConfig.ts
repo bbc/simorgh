@@ -1,3 +1,5 @@
+import { CollapsibleNavigationSection } from '#app/components/CollapsibleNavigation/types';
+import { PromotionalBannerConfig } from '#app/components/PromotionalBanner/index.types';
 import {
   Services,
   ServicesWithNoVariants,
@@ -8,6 +10,7 @@ import {
   UzbekService,
   Direction,
   Variants,
+  Navigation,
 } from './global';
 import { Translations } from './translations';
 
@@ -43,7 +46,6 @@ export type ServiceConfig = {
   atiAnalyticsAppName: string;
   atiAnalyticsProducerId: string;
   atiAnalyticsProducerName?: string;
-  useReverb?: boolean;
   chartbeatDomain: string;
   brandName: string;
   product: string;
@@ -95,12 +97,8 @@ export type ServiceConfig = {
   radioSchedule?: RadioSchedule;
   recommendations?: Recommendations;
   footer: Footer;
-  fonts?: ((baseUrlOverride: string) => string)[];
-  navigation?: {
-    title: string;
-    url: string;
-    hideOnLiteSite?: boolean;
-  }[];
+  collapsibleNavigation?: CollapsibleNavigationSection[];
+  navigation?: Navigation[];
   scriptLink?: {
     text: string;
     variant: Variants;
@@ -112,6 +110,17 @@ export type ServiceConfig = {
     };
   };
   googleSiteVerification?: string;
+  promotionalBanner?: PromotionalBannerConfig;
+  electionBanner?: {
+    heights?: {
+      desktop: number;
+      tablet: number;
+      mobile: number;
+    };
+    electionThingIds: string[];
+    iframeSrc: string;
+    iframeDevSrc: string;
+  };
 };
 
 export type PodcastPromo = {

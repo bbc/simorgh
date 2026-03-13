@@ -1,18 +1,11 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, {
-  Fragment,
-  PropsWithChildren,
-  useState,
-  useContext,
-} from 'react';
-import { Global, jsx } from '@emotion/react';
+import { Fragment, PropsWithChildren, useState, use } from 'react';
+import { Global } from '@emotion/react';
 import { Helmet } from 'react-helmet';
 import styles from './index.styles';
 import { RequestContext } from '../../contexts/RequestContext';
 import { HOME_PAGE } from '../../routes/utils/pageTypes';
 
-type Props = {
+export type ImageProps = {
   alt: string;
   aspectRatio?: [x: number, y: number];
   attribution?: string;
@@ -20,7 +13,6 @@ type Props = {
   fallbackMediaType?: string;
   fallbackSrcSet?: string;
   height?: number;
-  isAmp?: boolean;
   lazyLoad?: boolean;
   placeholder?: boolean;
   darkPlaceholder?: boolean;
@@ -32,6 +24,7 @@ type Props = {
   width?: number;
   fetchPriority?: 'high';
   hasCaption?: boolean;
+  isPortraitOrientation?: boolean;
 };
 
 const roundNumber = (num: number) => Math.round(num * 100) / 100;
@@ -48,7 +41,6 @@ const Image = ({
   fallbackMediaType,
   fallbackSrcSet,
   height,
-  isAmp = false,
   lazyLoad = false,
   placeholder = true,
   darkPlaceholder = false,
@@ -61,8 +53,9 @@ const Image = ({
   children,
   fetchPriority,
   hasCaption,
-}: PropsWithChildren<Props>) => {
-  const { pageType, isLite } = useContext(RequestContext);
+  isPortraitOrientation,
+}: PropsWithChildren<ImageProps>) => {
+  const { pageType, isLite, isAmp } = use(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
   if (isLite) return null;
 
@@ -105,6 +98,7 @@ const Image = ({
             href={src}
             imageSrcSet={srcSet}
             imageSizes={sizes}
+            {...(fetchPriority && { fetchPriority })}
           />
         </Helmet>
       )}
@@ -115,6 +109,7 @@ const Image = ({
           hasFixedAspectRatio
             ? styles.wrapperFixedAspectRatio
             : styles.wrapperResponsiveRatio,
+          isPortraitOrientation && styles.portraitOrientation,
           showPlaceholder && [
             styles.placeholder,
             {

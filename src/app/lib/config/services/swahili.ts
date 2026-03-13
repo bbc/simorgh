@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-swahili',
     atiAnalyticsProducerId: '86',
     atiAnalyticsProducerName: 'SWAHILI',
-    useReverb: true,
     chartbeatDomain: 'swahili.bbc.co.uk',
     brandName: 'BBC News Swahili',
     product: 'BBC News',
     serviceLocalizedName: 'Swahili',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/swahili.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/swahili/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Swahili',
     dir: `ltr`,
     externalLinkText: ', ya nje',
@@ -46,7 +46,31 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Swahili',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'BBC Swahili sasa kwenye WhatsApp',
+      brandDescription:
+        'Pata habari za kina kutoka BBC News Swahili, moja kwa moja kupitia WhatsApp.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr69d.png',
+        alt: 'BBC Swahili WhatsApp bofya kutufuatilia',
+      },
+      linkLabel: {
+        text: 'Bonyeza hapa kujiunga',
+        href: 'https://www.whatsapp.com/channel/0029Vaguu59FcowC5O1Nl01o',
+      },
+      skipLink: {
+        text: 'Hauhitaji %title%',
+        endTextVisuallyHidden: 'Mwisho wa %title%',
+      },
+    },
     translations: {
+      and: 'na',
+      readTime: {
+        readTimePrefix: 'Muda wa kusoma',
+        long: 'Taarifa ndefu',
+        minute: 'Dakika',
+      },
       pagination: {
         page: 'Ukurasa',
         previousPage: 'Rejea',
@@ -58,12 +82,25 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Tazama zote',
       home: 'Habari',
-      continueReading: 'Endelea kusoma',
+      continueReading: 'Soma zaidi',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
       relatedTopics: 'Mada zinazohusiana',
+      moreOnThis: '',
       navMenuText: 'Yaliyomo',
+      liteSite: {
+        onboardingMessage:
+          'Hii ni tovuti ya maandishi pekee ambayo inatumia data kidogo. Tazama toleo kuu la tovuti likijumuisha picha na video zote.',
+        toMainSite: 'Bofya kuelekea tovuti kuu',
+        informationPage:
+          'Pata maelezo zaidi kuhusu toleo hili la linalotumia kiasi kidogo cha data',
+        informationPageLink:
+          'https://www.bbc.com/swahili/articles/cpw79gwzkv1o',
+        dataSaving: 'Usomaji maandishi tu kupunguza gharama za data',
+        articleDataSavingLinkText:
+          'Usomaji maandishi tu kupunguza gharama za data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',
         audioPlayer: 'Kicheza Sauti',
@@ -240,6 +277,8 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
         recentEpisodes: 'Vipindi vilivyopita',
+        closeVideo: 'Funga',
+        endOfContentClose: 'Mwisho wa maudhui. Funga',
       },
       socialEmbed: {
         caption: {
@@ -296,7 +335,7 @@ export const service: DefaultServiceConfig = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [
@@ -338,30 +377,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Habari',
         url: '/swahili',
-      },
-      {
-        title: 'Michezo',
-        url: '/swahili/topics/ckdxndddjkxt',
-      },
-      {
-        title: 'Makala',
-        url: '/swahili/topics/c6z8lg838klt',
-      },
-      {
-        title: 'Afya',
-        url: '/swahili/topics/cvjp2jj60v3t',
-      },
-      {
-        title: 'Burudani',
-        url: '/swahili/topics/c2dwqddr7y3t',
-      },
-      {
-        title: 'Video',
-        url: '/swahili/topics/cz40xlzvj6kt',
-      },
-      {
-        title: 'Vipindi vya Redio',
-        url: '/swahili/topics/ckrdle3133xt',
       },
     ],
   },

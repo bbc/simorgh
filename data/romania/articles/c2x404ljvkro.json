@@ -1,0 +1,284 @@
+{
+    "data": {
+        "article": {
+            "metadata": {
+                "atiAnalytics": {
+                    "categoryName": null,
+                    "contentId": "urn:bbc:optimo:asset:c2x404ljvkro",
+                    "contentType": "article",
+                    "language": "ro",
+                    "ldpThingIds": null,
+                    "ldpThingLabels": null,
+                    "nationsProducer": null,
+                    "pageIdentifier": "romania.articles.c2x404ljvkro.page",
+                    "pageTitle": "Test Romanian article",
+                    "timePublished": "2025-07-21T11:26:33.853Z",
+                    "timeUpdated": "2025-07-21T11:26:33.853Z",
+                    "readTimeMilliseconds": 60000
+                },
+                "id": "urn:bbc:ares::article:c2x404ljvkro",
+                "locators": {
+                    "optimoUrn": "urn:bbc:optimo:asset:c2x404ljvkro",
+                    "canonicalUrl": "https://www.bbc.com/romania/articles/c2x404ljvkro"
+                },
+                "type": "article",
+                "createdBy": "Romania",
+                "language": "ro",
+                "firstPublished": 1753097193853,
+                "lastPublished": 1753097193853,
+                "isOppm": false,
+                "options": {
+                    "includeComments": false
+                },
+                "analyticsLabels": {
+                    "contentId": "urn:bbc:optimo:asset:c2x404ljvkro",
+                    "producer": "Romanian",
+                    "page": "romania.articles.c2x404ljvkro.page",
+                    "irisKeyword": null
+                },
+                "passport": {
+                    "language": "ro",
+                    "home": "http://www.bbc.co.uk/ontologies/passport/home/Romania",
+                    "taggings": [
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+                            "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+                            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+                        },
+                        {
+                            "predicate": "http://www.bbc.co.uk/ontologies/creativework/dateFirstReleased",
+                            "value": "2025-07-21T11:26:33.853Z"
+                        }
+                    ],
+                    "predicates": {
+                        "infoClass": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id",
+                                "type": "infoClass"
+                            }
+                        ],
+                        "primaryMediaType": [
+                            {
+                                "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id",
+                                "type": "primaryMediaType"
+                            }
+                        ],
+                        "dateFirstReleased": [
+                            {
+                                "value": "2025-07-21T11:26:33.853Z",
+                                "type": "dateFirstReleased"
+                            }
+                        ]
+                    }
+                },
+                "blockTypes": [
+                    "headline",
+                    "text",
+                    "paragraph",
+                    "fragment"
+                ],
+                "includeComments": false,
+                "consumableAsSFV": false,
+                "allowAdvertising": true,
+                "consumableOnRedButton": false,
+                "consumableOnlyOnRedButton": false,
+                "breakingNews": {
+                    "isBreaking": false
+                },
+                "useSensitiveOnwardJourneys": false,
+                "stats": {
+                    "readTime": 1,
+                    "wordCount": 6
+                },
+                "isTransliterated": false,
+                "isKeyPointsFormatAsset": false
+            },
+            "content": {
+                "model": {
+                    "blocks": [
+                        {
+                            "id": "339ae788",
+                            "type": "headline",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "id": "5dc4cf71",
+                                        "type": "text",
+                                        "model": {
+                                            "blocks": [
+                                                {
+                                                    "id": "c79ad153",
+                                                    "type": "paragraph",
+                                                    "model": {
+                                                        "text": "Test Romanian article",
+                                                        "blocks": [
+                                                            {
+                                                                "id": "bccb4467",
+                                                                "type": "fragment",
+                                                                "model": {
+                                                                    "text": "Test Romanian article",
+                                                                    "attributes": []
+                                                                },
+                                                                "position": [
+                                                                    1,
+                                                                    1,
+                                                                    1,
+                                                                    1
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    "position": [
+                                                        1,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            1,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                1
+                            ]
+                        },
+                        {
+                            "id": "84410f23",
+                            "type": "timestamp",
+                            "model": {
+                                "firstPublished": 1753097193853,
+                                "lastPublished": 1753097193853
+                            },
+                            "position": [
+                                2
+                            ]
+                        },
+                        {
+                            "id": "ffc9e18e",
+                            "type": "text",
+                            "model": {
+                                "suitableForAbridgement": false,
+                                "blocks": [
+                                    {
+                                        "id": "c1d837b7",
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "content in Romanian",
+                                            "blocks": [
+                                                {
+                                                    "id": "04e50d33",
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "content in Romanian",
+                                                        "attributes": []
+                                                    },
+                                                    "position": [
+                                                        3,
+                                                        1,
+                                                        1
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "position": [
+                                            3,
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            "position": [
+                                3
+                            ]
+                        },
+                        {
+                            "id": "688481a8",
+                            "type": "mpu",
+                            "model": {},
+                            "position": [
+                                4
+                            ]
+                        }
+                    ]
+                }
+            },
+            "promo": {
+                "headlines": {
+                    "seoHeadline": "Test Romanian article",
+                    "promoHeadline": {
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "paragraph",
+                                            "model": {
+                                                "text": "Test Romanian article",
+                                                "blocks": [
+                                                    {
+                                                        "type": "fragment",
+                                                        "model": {
+                                                            "text": "Test Romanian article",
+                                                            "attributes": []
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                "summary": {
+                    "blocks": [
+                        {
+                            "type": "text",
+                            "model": {
+                                "blocks": [
+                                    {
+                                        "type": "paragraph",
+                                        "model": {
+                                            "text": "",
+                                            "blocks": [
+                                                {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                        "text": "",
+                                                        "attributes": []
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "serviceIdentifier": "Romania",
+                "breakingNews": {
+                    "isBreaking": false
+                },
+                "consumableAsSFV": false
+            }
+        },
+        "secondaryData": {
+            "topStories": null,
+            "features": null,
+            "mostRead": null,
+            "latestMedia": null
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}

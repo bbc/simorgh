@@ -1,5 +1,5 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
+import type { ReactElement } from 'react';
 import { EmotionCritical } from '@emotion/server/create-instance';
 
 import { HelmetData } from 'react-helmet';
@@ -15,9 +15,11 @@ type Props = {
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
-  legacyScripts: React.ReactElement;
-  links: React.ReactElement;
-  modernScripts: React.ReactElement;
+  legacyScripts: ReactElement;
+  links: ReactElement;
+  modernScripts: ReactElement;
+  service?: string;
+  nonce?: string;
 };
 
 const Document = ({
@@ -30,6 +32,8 @@ const Document = ({
   legacyScripts,
   links,
   modernScripts,
+  service,
+  nonce,
 }: Props) => {
   const title = helmet.title.toComponent();
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -59,15 +63,16 @@ const Document = ({
     case isAmp:
       return (
         <AmpRenderer
+          bodyContent={
+            <div id="root" dangerouslySetInnerHTML={{ __html: html || '' }} />
+          }
           helmetMetaTags={helmetMetaTags}
           helmetLinkTags={helmetLinkTags}
           helmetScriptTags={helmetScriptTags}
-          html={html}
           htmlAttrs={htmlAttrs}
           ids={ids}
           styles={css}
           title={title}
-          data={data}
         />
       );
     default:
@@ -86,6 +91,8 @@ const Document = ({
           modernScripts={modernScripts}
           styles={css}
           title={title}
+          service={service}
+          nonce={nonce}
         />
       );
   }

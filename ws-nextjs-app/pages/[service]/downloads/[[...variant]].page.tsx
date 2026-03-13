@@ -8,8 +8,6 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import dataFetch from './dataFetch';
 
-import extractHeaders from '../../../../src/server/utilities/extractHeaders';
-
 const downloadsPageLayout = dynamic(() => import('./downloadsPageLayout'));
 
 const pageTitle = '다운로드 - BBC News 코리아';
@@ -46,13 +44,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const downloadData = await dataFetch(service);
   const toggles = await getToggles(service);
 
-  const { headers: reqHeaders } = context.req;
-
   return {
     props: {
       error: null,
-      isAmp: false,
-      isNextJs: true,
       pageData: {
         downloadData,
         metadata: {
@@ -68,7 +62,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
       timeOnServer: Date.now(), // TODO: check if needed?
       toggles,
       variant,
-      ...extractHeaders(reqHeaders),
     },
   };
 };

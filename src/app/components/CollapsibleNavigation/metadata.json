@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 19,
+    "month": "Aug",
+    "year": 2025
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/i3vnRc2lvPJFc01whAfUev/Navigation-Languages-HP-Handover-file?node-id=104-10&p=f&t=XfBXfgv55VRVIWPl-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/WS-Global-Homepage-Navigation-Accessibility-Acceptance-Criteria--Cr~rbT9mB71F9jw532spTBy0Ag-5Y8xYlXOdUJOLRTHK6Qn2",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Navigation-component--Cr9jHi37hB7ljjaVi8dniDLlAg-XoxtRyx8ipPcfNX6ukveW",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

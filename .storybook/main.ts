@@ -1,38 +1,59 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
+import dotenv from 'dotenv';
 import webpack from 'webpack';
 import {
   getProjectRoot,
   resolvePathInStorybookCache,
-} from '@storybook/core-common';
-import { webpackDirAlias } from '../dirAlias';
+} from 'storybook/internal/common';
+import type { StorybookConfig } from '@storybook/react-webpack5';
+
+import alias from '../dirAlias';
+
+import { getClientEnvVars } from '../src/clientEnvVars';
+import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
+
+const require = createRequire(import.meta.url);
+const DOT_ENV_CONFIG = dotenv.config({ quiet: true });
 
 const storybookConfig: StorybookConfig = {
+  previewHead(config) {
+    const fontLinkTags = Object.values(fontInfo)
+      .map(font => {
+        return `
+        <link
+          rel="preload"
+          href="${font.downloadSrc}"
+          as="font"
+          crossorigin="anonymous"
+        />
+      `;
+      })
+      .join('\n');
+
+    return `
+      ${config}
+      ${fontLinkTags}
+    `;
+  },
   staticDirs: ['./static', { from: '../data', to: 'data' }],
   stories: [
     '../src/app/legacy/components/**/*.stories.@(t|j)sx',
     '../src/app/legacy/containers/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
+    '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
-    './SidebarLabel/**/*.stories.@(t|j)sx',
     '../ws-nextjs-app/**/*.stories.tsx',
     '../docs/**/*.mdx',
     '../src/**/*.mdx',
   ],
   addons: [
-    '@storybook/addon-backgrounds',
-    '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
-    '@storybook/addon-toolbars',
-    './SidebarLabel/preset.cjs',
+    getAbsolutePath('@storybook/addon-a11y'),
     {
-      name: '@storybook/addon-docs',
+      name: getAbsolutePath('@storybook/addon-docs'),
       options: {
         configureJSX: true,
         babelOptions: {},
@@ -41,6 +62,10 @@ const storybookConfig: StorybookConfig = {
       },
     },
   ],
+  env: config => ({
+    ...config,
+    ...getClientEnvVars(DOT_ENV_CONFIG, { stringify: false }),
+  }),
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);
     const typescriptOptions = await options.presets.apply(
@@ -78,6 +103,7 @@ const storybookConfig: StorybookConfig = {
        * side replacement. This mimics the behaviour of the client side
        * bundle generation in webpack.config.client.js
        */
+      // @ts-expect-error
       new webpack.NormalModuleReplacementPlugin(
         /(.*)logger.node(\.*)/,
         resource => {
@@ -101,18 +127,21 @@ const storybookConfig: StorybookConfig = {
 
     config.resolve!.alias = {
       ...config.resolve!.alias,
-      ...webpackDirAlias,
+      ...alias.webpackDirAlias,
     };
     return config;
   },
   framework: {
-    name: '@storybook/react-webpack5',
+    name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
   docs: {
     defaultName: 'README',
-    autodocs: true,
   },
 };
 
 export default storybookConfig;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, 'package.json')));
+}

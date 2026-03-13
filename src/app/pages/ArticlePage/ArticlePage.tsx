@@ -1,12 +1,11 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { useContext, useState } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use, useState } from 'react';
+import { useTheme } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
+import useOptimizelyVariation, {
+  ExperimentType,
+} from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
-import useOptimizelyMvtVariation from '#app/hooks/useOptimizelyMvtVariation';
-import OptimizelyArticleCompleteTracking from '#app/legacy/containers/OptimizelyArticleCompleteTracking';
-import OptimizelyPageViewTracking from '#app/legacy/containers/OptimizelyPageViewTracking';
+import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
 import Headings from '#containers/Headings';
@@ -20,7 +19,7 @@ import SocialEmbedContainer from '#containers/SocialEmbed';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
-import OPTIMIZELY_CONFIG from '#app/lib/config/optimizely';
+import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
 
 import {
   getArticleId,
@@ -34,19 +33,28 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#containers/RelatedTopics';
+import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
   Article,
+  OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
 } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
+import {
+  VISUAL_PROMINENCE,
+  VISUAL_STYLE,
+} from '#app/models/types/curationData';
 import { Translations } from '#app/models/types/translations';
 import { Recommendation } from '#app/models/types/onwardJourney';
 
-import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleLinksBlock from '#app/components/ArticleLinksBlock';
+import Curation from '#app/components/Curation';
 import Recommendations from '#app/components/Recommendations';
+import ReadTimeArticle from '#app/components/ReadTime';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -71,9 +79,14 @@ import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
 import { ComponentToRenderProps, TimeStampProps } from './types';
-import ContinueReadingButton from './ContinueReadingButton';
+import ContinueReadingButton, {
+  ContinueReadingButtonProps,
+} from './ContinueReadingButton';
 import ArticleHeadline from './ArticleHeadline';
-import isPortraitVideo from '../utils/isPortraitVideo';
+import {
+  isPortraitVideo,
+  isPortraitVideoUnderHeadline,
+} from '../../components/MediaLoader/utils/isPortraitVideo';
 
 const getImageComponent =
   (preloadLeadImageToggle: boolean) => (props: ComponentToRenderProps) => (
@@ -90,28 +103,51 @@ const getTimestampComponent =
     bylineContribBlocks: OptimoBylineContributorBlock[],
     firstPublished: string,
     lastPublished: string,
+    readTimeValue: number | undefined,
+    readTimeTranslations: Translations['readTime'],
   ) =>
-  (props: ComponentToRenderProps & TimeStampProps) =>
-    hasByline ? (
+  (props: ComponentToRenderProps & TimeStampProps) => {
+    const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
+
+    return hasByline ? (
       <Byline blocks={bylineContribBlocks}>
         <Timestamp
           firstPublished={new Date(firstPublished).getTime()}
           lastPublished={new Date(lastPublished).getTime()}
           popOut={false}
+          hasReadTime={shouldDisplayReadTime}
         />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
+        )}
       </Byline>
     ) : (
-      <Timestamp {...props} popOut={false} />
+      <>
+        <Timestamp
+          {...props}
+          popOut={false}
+          hasReadTime={shouldDisplayReadTime}
+        />
+        {shouldDisplayReadTime && (
+          <ReadTimeArticle readTimeValue={readTimeValue} />
+        )}
+      </>
     );
+  };
 
 const getMpuComponent =
   (allowAdvertising: boolean) => (props: ComponentToRenderProps) =>
     allowAdvertising ? <AdContainer {...props} slotType="mpu" /> : null;
 
-const getWsojComponent = (
-  props: ComponentToRenderProps & { data: Recommendation[] },
-) => <Recommendations data={props.data} />;
-
+const getWsojComponent = ({
+  data,
+  experimentProps,
+}: {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps | null;
+}) => (
+  <Recommendations data={data} {...(experimentProps && { experimentProps })} />
+);
 const DisclaimerWithPaddingOverride = (props: ComponentToRenderProps) => (
   <Disclaimer {...props} increasePaddingOnDesktop={false} />
 );
@@ -124,24 +160,42 @@ const getHeadlineComponent = (props: ComponentToRenderProps) => (
 );
 
 const getVideoComponent =
-  (translations: Translations) => (props: ComponentToRenderProps) => {
+  (translations: Translations, pageBlocks: OptimoBlock[]) =>
+  (props: ComponentToRenderProps) => {
     const { blocks } = props;
 
-    const title = translations.media.watchMoments || 'Watch Moments';
+    const title = translations.media.watchMoments;
+
+    const showTitle =
+      isPortraitVideo(blocks as MediaBlock[]) &&
+      title &&
+      !isPortraitVideoUnderHeadline(pageBlocks, blocks as MediaBlock[]);
 
     return (
       <>
-        {isPortraitVideo(blocks) && (
-          <strong css={styles.portraitVideoTitle}>{title}</strong>
-        )}
+        {showTitle && <strong css={styles.portraitVideoTitle}>{title}</strong>}
         <MediaLoader blocks={blocks as MediaBlock[]} />
       </>
     );
   };
 
+const getContinueReadingButton =
+  ({
+    showAllContent,
+    setShowAllContent,
+    experimentProps,
+  }: ContinueReadingButtonProps) =>
+  () => (
+    <ContinueReadingButton
+      showAllContent={showAllContent}
+      setShowAllContent={setShowAllContent}
+      experimentProps={experimentProps}
+    />
+  );
+
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = useContext(RequestContext);
+  const { isApp, isAmp, isLite } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -149,19 +203,44 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
+  const { enabled: continueReadingButtonToggle } = useToggle(
+    'continueReadingButton',
+  );
+  const { enabled: isTopBarOJsEnabled } = useToggle('topBarOJs');
 
   const {
-    palette: { GREY_2, WHITE },
+    palette: { GREY_2 },
   } = useTheme();
 
-  const experimentVariant = useOptimizelyMvtVariation(
-    OPTIMIZELY_CONFIG.ruleKey,
+  // time of day 2 experiment for articles
+  const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
+  const timeOfDayArticleVariant = useOptimizelyVariation({
+    experimentName: timeOfDayArticleExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+  const isAdaptiveTimeOfDayVariant =
+    timeOfDayArticleVariant === 'adaptive_variation';
+  // build one shared experiment payload so all oj components use the same values
+  const getActiveExperimentProps = (
+    experimentName: string,
+    experimentVariant: string | null,
+  ): ComponentExperimentProps | null =>
+    experimentVariant && experimentVariant !== 'off'
+      ? {
+          sendOptimizelyEvents: true,
+          experimentName,
+          experimentVariant,
+        }
+      : null;
+
+  const timeOfDayExperimentProps = getActiveExperimentProps(
+    timeOfDayArticleExperimentName,
+    timeOfDayArticleVariant,
   );
 
-  const isInExperiment = experimentVariant && experimentVariant !== 'off';
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
   const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
@@ -171,7 +250,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   } = pageData;
 
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
-  const { enabled: liteCTAShows } = useToggle('liteSiteCTA');
+  const { enabled: articlePortraitVideoEnabled } = useToggle(
+    'articlePortraitVideo',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -180,20 +261,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
+  const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
+
   const bylineBlock = blocks.find(
-    block => block.type === 'byline',
-  ) as OptimoBylineBlock;
+    (block): block is OptimoBylineBlock =>
+      block.type === 'byline' || block.type === 'subByline',
+  );
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
   const bylineLinkedData = bylineExtractor(bylineContribBlocks);
 
-  const hasByline = !!bylineLinkedData;
+  const hasByline = bylineLinkedData.length > 0;
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
+
+  const readTimeValue = pageData?.metadata?.stats?.readTime;
 
   const taggings = pageData?.metadata?.passport?.taggings ?? [];
   const formats = pageData?.metadata?.passport?.predicates?.formats ?? [];
@@ -208,15 +294,48 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(isInExperiment && { experimentVariant }),
+    ...(timeOfDayExperimentProps && {
+      experimentName: timeOfDayExperimentProps.experimentName,
+      experimentVariant: timeOfDayExperimentProps.experimentVariant,
+    }),
   };
+
+  const showPortraitVideoCarousel = Boolean(
+    pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
+      articlePortraitVideoEnabled,
+  );
+
+  const portraitVideoCarouselTitle =
+    pageData?.portraitVideoItems?.title ?? translations.media.watch;
+
+  const portraitVideoCarouselProps = {
+    title: portraitVideoCarouselTitle,
+    blocks: pageData?.portraitVideoItems?.portraitVideo?.blocks ?? [],
+    eventTrackingData: {
+      componentName: 'portrait-video-carousel-article',
+      groupTracker: { name: portraitVideoCarouselTitle },
+    },
+    backgroundColor: 'rgba(246, 246, 246, 0.75)',
+  };
+
+  const hasContinueReadingBlock = blocks.some(
+    block => block.type === 'continueReading',
+  );
+
+  const showContinueReadingButton = Boolean(
+    !isAmp &&
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
+  );
 
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
     subheadline: Headings,
     audio: MediaLoader,
-    video: getVideoComponent(translations),
+    video: getVideoComponent(translations, blocks),
     text,
     image: getImageComponent(preloadLeadImageToggle),
     timestamp: getTimestampComponent(
@@ -224,6 +343,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       bylineContribBlocks,
       firstPublished,
       lastPublished,
+      readTimeValue,
+      translations.readTime,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -232,11 +353,21 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     embedImages: EmbedImages,
     embedUploader: Uploader,
     group: gist,
-    links: ScrollablePromo,
+    links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: getWsojComponent,
+    wsoj: ({ data }: { data: Recommendation[] }) =>
+      getWsojComponent({ data, experimentProps: timeOfDayExperimentProps }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
+    ...(showContinueReadingButton && {
+      continueReading: getContinueReadingButton({
+        showAllContent,
+        setShowAllContent,
+        ...(timeOfDayExperimentProps && {
+          experimentProps: timeOfDayExperimentProps,
+        }),
+      }),
+    }),
   };
 
   const visuallyHiddenBlock = {
@@ -264,22 +395,30 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-
-  const showContinueReadingButton = Boolean(
+  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+  // show media curation only when the user is in adaptive variation
+  const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
       !isLite &&
       !isApp &&
-      ['read-more-a', 'read-more-b', 'read-more-a-and-top-stories'].includes(
-        experimentVariant,
-      ),
+      !isPGL &&
+      isAdaptiveTimeOfDayVariant &&
+      mediaCurationContent?.summaries?.length,
   );
+
+  // EXPERIMENT: PWA Promotional Banner
+  const shouldRenderPWAPromotionalBanner =
+    !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
+
   return (
     <div css={styles.pageWrapper}>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      {shouldRenderPWAPromotionalBanner && <PWAPromotionalBanner />}
       <ATIAnalytics atiData={atiData} />
       <ChartbeatAnalytics
         sectionName={pageData?.relatedContent?.section?.name}
         title={headline}
-        {...(hasByline && { authors: bylineLinkedData.authorName })}
+        authors={authors}
       />
       <ComscoreAnalytics />
       <NielsenAnalytics />
@@ -321,30 +460,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main
-            css={[
-              styles.mainContent,
-              ...(showContinueReadingButton
-                ? [!showAllContent && styles.contentHidden(liteCTAShows)]
-                : []),
-            ]}
-            role="main"
-          >
+          <main css={styles.mainContent} role="main">
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
-            {showContinueReadingButton && (
-              <ContinueReadingButton
-                showAllContent={showAllContent}
-                setShowAllContent={() => setShowAllContent(true)}
-                variation={experimentVariant}
-                liteCTAShows={liteCTAShows}
-              />
-            )}
-            {isInExperiment && <OptimizelyArticleCompleteTracking />}
+            <OptimizelyPageMetrics trackPageComplete />
           </main>
-          {isInExperiment && <OptimizelyPageViewTracking />}
+          <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
           {showTopics && (
             <RelatedTopics
               css={[
@@ -355,28 +478,61 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               ]}
               topics={topics}
               mobileDivider={false}
-              backgroundColour={GREY_2}
-              tagBackgroundColour={WHITE}
+            />
+          )}
+          {showPortraitVideoCarousel && (
+            <PortraitVideoCarousel
+              {...portraitVideoCarouselProps}
+              css={styles.portraitVideoCarousel}
             />
           )}
           <RelatedContentSection
             content={blocks}
-            sendOptimizelyEvents={false}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
           />
         </div>
+        {showAdaptiveMediaCuration && (
+          <div css={styles.adaptiveMediaCurationRow}>
+            <div data-testid="adaptive-media-curation">
+              <Curation
+                visualStyle={VISUAL_STYLE.FEED}
+                visualProminence={VISUAL_PROMINENCE.NORMAL}
+                summaries={mediaCurationContent?.summaries}
+                title={mediaCurationContent?.title}
+                position={mediaCurationContent?.position || 0}
+                curationId={mediaCurationContent?.curationId}
+                curationLength={mediaCurationContent?.summaries?.length || 0}
+                link={mediaCurationContent?.link}
+                {...(timeOfDayExperimentProps && {
+                  experimentProps: timeOfDayExperimentProps,
+                })}
+              />
+            </div>
+          </div>
+        )}
         {!isApp && !isPGL && (
-          <SecondaryColumn pageData={pageData} sendOptimizelyEvents={false} />
+          <SecondaryColumn
+            pageData={pageData}
+            {...(timeOfDayExperimentProps && {
+              experimentProps: timeOfDayExperimentProps,
+            })}
+          />
         )}
       </div>
+
       {!isApp && !isPGL && (
         <MostRead
           css={styles.mostReadSection}
           data={mostReadInitialData}
-          columnLayout="multiColumn"
+          columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          sendOptimizelyEvents={false}
+          {...(timeOfDayExperimentProps && {
+            experimentProps: timeOfDayExperimentProps,
+          })}
         />
       )}
     </div>

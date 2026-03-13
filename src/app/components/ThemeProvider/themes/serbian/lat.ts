@@ -1,15 +1,18 @@
 import { mergeDeepLeft } from 'ramda';
 import latinWithDiacriticsScript from '../../fontScripts/latinWithDiacritics';
 import withThemeProvider from '../../withThemeProvider';
-import baseSerbianTheme from './base';
+import serbianTheme from './base';
+import getPWATypographyTheme from '../getPWATypographyTheme';
 
-const serbianLatinTheme = mergeDeepLeft(
+export const theme = mergeDeepLeft(
   {
     typography: {
       script: latinWithDiacriticsScript,
     },
   },
-  baseSerbianTheme,
+  serbianTheme,
 );
 
-export default withThemeProvider(serbianLatinTheme);
+export const pwaTheme = getPWATypographyTheme(latinWithDiacriticsScript);
+
+export default withThemeProvider(theme, pwaTheme);

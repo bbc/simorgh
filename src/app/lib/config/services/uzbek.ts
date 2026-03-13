@@ -12,10 +12,10 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-uzbek',
   atiAnalyticsProducerId: '96',
   atiAnalyticsProducerName: 'UZBEK',
-  useReverb: true,
   chartbeatDomain: 'uzbek.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/uzbek.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/uzbek/images/metadata/poster-1024x576.png',
   dir: `ltr` as Direction,
   service: 'uzbek' as Services,
   languageName: 'Uzbek',
@@ -58,6 +58,12 @@ const defaultCyrillicConfig = {
   imageCaptionOffscreenText: 'Сурат тагсўзи, ',
   imageCopyrightOffscreenText: 'Сурат манбаси, ',
   translations: {
+    and: 'ва',
+    readTime: {
+      readTimePrefix: 'Ўқилиш вақти',
+      long: 'Узун мақола',
+      minute: 'дақ',
+    },
     pagination: {
       previousPage: 'Олдингиси',
       nextPage: 'Кейингиси',
@@ -73,6 +79,7 @@ const defaultCyrillicConfig = {
     skipLinkText: 'Саҳифага ўтиш',
     relatedContent: 'Мавзуга алоқадор',
     relatedTopics: 'Алоқадор мавзулар',
+    moreOnThis: '',
     navMenuText: 'Бўлимлар',
     mediaAssetPage: {
       mediaPlayer: 'Медиа плейер',
@@ -244,6 +251,7 @@ const defaultCyrillicConfig = {
       duration: 'Давомийлиги',
       recentEpisodes: 'Олдинги дастурлар',
       closeVideo: 'Чиқиш',
+      endOfContentClose: 'Бу контентнинг охири. Чиқиш',
     },
     socialEmbed: {
       caption: {
@@ -298,7 +306,7 @@ const defaultCyrillicConfig = {
       text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
       text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
     },
     links: [
@@ -307,7 +315,11 @@ const defaultCyrillicConfig = {
         text: 'Фойдаланиш шартлари',
       },
       {
-        href: 'https://www.bbc.com/uzbek/institutional-36824300',
+        href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/cyr',
+        text: 'ББC ҳақида',
+      },
+      {
+        href: 'https://www.bbc.com/usingthebbc/privacy/',
         text: 'Шахсий ҳаёт махфийлиги сиёсати',
       },
       {
@@ -335,34 +347,6 @@ const defaultCyrillicConfig = {
     {
       title: 'Бош саҳифа',
       url: '/uzbek',
-    },
-    {
-      title: 'Ўзбекистон',
-      url: '/uzbek/topics/c8y949r98pgt/cyr',
-    },
-    {
-      title: 'Минтақа',
-      url: '/uzbek/topics/cwr9j9dz4gpt/cyr',
-    },
-    {
-      title: 'Дунё',
-      url: '/uzbek/topics/cl8l9mved19t/cyr',
-    },
-    {
-      title: 'Спорт',
-      url: '/uzbek/topics/cxnykykk1zkt/cyr',
-    },
-    {
-      title: 'Илм-Фан',
-      url: '/uzbek/topics/cg7262681krt/cyr',
-    },
-    {
-      title: 'Технология',
-      url: '/uzbek/topics/cjgn7n7v3yjt/cyr',
-    },
-    {
-      title: 'BBC News O‘zbek TV dasturi',
-      url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
     },
   ],
 };
@@ -401,6 +385,12 @@ export const service: UzbekConfig = {
     imageCaptionOffscreenText: 'Surat tagso‘zi, ',
     imageCopyrightOffscreenText: 'Surat manbasi, ',
     translations: {
+      and: 'va',
+      readTime: {
+        readTimePrefix: "O'qilish vaqti",
+        long: 'Uzun maqola',
+        minute: 'daq',
+      },
       pagination: {
         previousPage: 'Oldingisi',
         nextPage: 'Keyingisi',
@@ -640,7 +630,7 @@ export const service: UzbekConfig = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
@@ -649,7 +639,11 @@ export const service: UzbekConfig = {
           text: 'Фойдаланиш шартлари',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36824300',
+          href: 'https://www.bbc.com/uzbek/articles/cgmgv0ek2w8o/lat',
+          text: 'ББC ҳақида',
+        },
+        {
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Шахсий ҳаёт махфийлиги сиёсати',
         },
         {
@@ -677,34 +671,6 @@ export const service: UzbekConfig = {
       {
         title: 'Bosh sahifa',
         url: '/uzbek',
-      },
-      {
-        title: 'O‘zbekiston',
-        url: '/uzbek/topics/c8y949r98pgt/lat',
-      },
-      {
-        title: 'Mintaqa',
-        url: '/uzbek/topics/cwr9j9dz4gpt/lat',
-      },
-      {
-        title: 'Dunyo',
-        url: '/uzbek/topics/cl8l9mved19t/lat',
-      },
-      {
-        title: 'Sport',
-        url: '/uzbek/topics/cxnykykk1zkt/lat',
-      },
-      {
-        title: 'Ilm-Fan',
-        url: '/uzbek/topics/cg7262681krt/lat',
-      },
-      {
-        title: 'Texnologiya',
-        url: '/uzbek/topics/cjgn7n7v3yjt/lat',
-      },
-      {
-        title: 'BBC News O‘zbek TV dasturi',
-        url: '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv?limit=4',
       },
     ],
     scriptLink: {

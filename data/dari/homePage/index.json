@@ -1,0 +1,594 @@
+{
+  "data": {
+    "title": "صفحه افغانستان",
+    "description": "",
+    "pageType": "home",
+    "seoTitle": "صفحه افغانستان",
+    "seoDescription": "این صفحه اخبار و تحلیل‌های مهم افغانستان را ارائه می‌دهد.",
+    "curations": [
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "اولین تشکل سیاسی ترکمن‌های افغانستان؛ «با طالبان مذاکره می‌کنیم»",
+            "firstPublished": "2025-08-13T10:01:42.717Z",
+            "lastPublished": "2025-08-13T10:01:42.717Z",
+            "link": "https://www.bbc.com/persian/articles/c98l4r5775vo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/32a2/live/4937c6b0-7834-11f0-8071-1788c7e8ae0e.jpg.webp",
+            "description": "اخیرا، گروهی از نخبگان سیاسی، فرهنگی و اجتماعی ترکمن‌های افغانستان برای اولین‌بار، تاسیس تشکل جدیدی به نام «حزب عدالت ملی افغانستان» را اعلام کردند. محمدعیسی مصباح به‌عنوان رئیس این تشکل سیاسی انتخاب شده است به بی‌بی‌سی گفت که آنها در پی گفت‌وگو با حکومت طالبان هستند.",
+            "imageAlt": "اعضای حزب تازه تاسیس در دو ردیف ایستاده و یک ردیف نشسته که خانم‌ها هستند ",
+            "id": "c98l4r5775vo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "«وکیل مجردها»؛ چگونه نماینده پیشین افغانستان ازدواج هزاران زوج را ممکن ساخت؟",
+            "firstPublished": "2025-08-06T14:41:54.215Z",
+            "lastPublished": "2025-08-06T14:41:54.215Z",
+            "link": "https://www.bbc.com/persian/articles/c14gl5reg87o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e14c/live/fb732bb0-6ef4-11f0-8415-3f856a662103.png.webp",
+            "description": "در افغانستان، دوران نامزدی معمولاً سال‌ها طول می‌کشد – گاهی بیش از یک دهه – تا زمانی که داماد بتواند هزینه‌های عروسی را پس‌انداز کند. ",
+            "imageAlt": "سید احمد سیلاب",
+            "id": "c14gl5reg87o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "اخراج یک و نیم میلیون افغان از ایران؛ برخی به جاسوسی برای اسرائیل متهم شدند",
+            "firstPublished": "2025-08-02T04:53:07.543Z",
+            "lastPublished": "2025-08-02T04:53:07.543Z",
+            "link": "https://www.bbc.com/persian/articles/cd0de8312ddo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/15cb/live/48c0fb80-6edd-11f0-acb4-c965e62f8963.png.webp",
+            "description": "ایران که می‌گوید میزبان بیش از چهار میلیون افغان بدون مدرک است که از جنگ در کشورشان گریخته‌اند، در ماه‌های اخیر روند اخراج‌ افغان‌ها را شدت بخشیده است. ",
+            "imageAlt": "مردی پیراهنش را بالا زده و پشتش پر از کبودی‌های ناشی از کت خوردن نشان می‌دهد",
+            "id": "cd0de8312ddo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "بحران خاموش تشنگی در کابل؛ «آب نیست، زندگی نیست»",
+            "firstPublished": "2025-08-01T13:34:39.746Z",
+            "lastPublished": "2025-08-01T13:34:39.746Z",
+            "link": "https://www.bbc.com/persian/articles/cx2kw3nzn3mo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0cd8/live/9bbbf5c0-687e-11f0-8f9f-1d38db11c370.jpg.webp",
+            "description": "چاه‌ها در کابل یکی پس از دیگری خشک می‌شوند، حتی چاه‌هایی که تا عمق ۲۵۰ متر حفاری شده‌اند. تانکرهای آب در کوچه‌ها رفت‌وآمد دارند، اما نه برای همه، بلکه تنها برای کسانی که توان پرداخت پول برای خرید آب را دارند. به گفته سازمان بین‌المللی مرسی کورپس، بیش از ۸۰ درصد منابع آب کابل آلوده‌ است. آب‌هایی که سلامت مردم، به‌ویژه کودکان، سالمندان و زنان باردار را به خطر انداخته است.",
+            "imageAlt": "مهدی مجبور است هر روز برای خانواده شش نفره که چاه حویلی شان خشک شده آب تهیه کند. ",
+            "id": "cx2kw3nzn3mo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "آیا تاجیکستان هم می‌خواهد افغان‌ها را اخراج کند؟",
+            "firstPublished": "2025-07-24T11:22:37.022Z",
+            "lastPublished": "2025-07-24T11:22:37.022Z",
+            "link": "https://www.bbc.com/persian/articles/cd781j3np2ro",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9a00/live/c0f15480-67dd-11f0-af20-030418be2ca5.jpg.webp",
+            "description": "کمیته دولتی امنیت ملی تاجیکستان با نشر خبرنامه‌ای در وب‌سایت خاور، خبرگزاری دولتی این کشور اخراج «تعداد معین شهروندان افغانستان» را تأیید کرده است.\nدر این خبر که از نام مرکز مطبوعات نیروهای مرزبانی تاجیکستان، یک ساختار نظامی زیر نظر کمیته دولتی امنیت ملی این کشور به نشر رسیده، برخی از شهروندان خارجی به نقض مقررات اقامت در قلمرو تاجیکستان و ورود غیرقانونی به خاک این کشور متهم شده‌اند.",
+            "imageAlt": "ساختمان سفارت افغانستان در دوشنبه تاجیکستان",
+            "id": "cd781j3np2ro",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "سازمان ملل: افغان‌های بازگردانده‌شده از ایران و پاکستان، در خطر آزار و انتقامجویی در حکومت طالبان هستند",
+            "firstPublished": "2025-07-24T10:12:30.854Z",
+            "lastPublished": "2025-07-24T10:12:30.854Z",
+            "link": "https://www.bbc.com/persian/articles/c98j816q608o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/a118/live/04ea74c0-6872-11f0-89ea-4d6f9851f623.jpg.webp",
+            "description": "سازمان ملل می‌گوید مقام‌های حکومت طالبان مرتکب نقض حقوق بشر افغان‌هایی شده‌اند که از ایران و پاکستان به افغانستان بازگردانده شده‌اند که این موارد شامل «شکنجه و بازداشت‌ خودسرانه» می‌شود و زنان بیشتر در معرض این خطر هستند.",
+            "imageAlt": "مهاجران افغان",
+            "id": "c98j816q608o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "حکم بازداشت رهبر طالبان؛ گام‌های بعدی دیوان کیفری بین‌المللی چیست؟",
+            "firstPublished": "2025-07-23T00:06:26.022Z",
+            "lastPublished": "2025-07-23T00:06:26.022Z",
+            "link": "https://www.bbc.com/persian/articles/c056032z690o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4858/live/6fca2e40-5d85-11f0-a6b8-21ace6496903.jpg.webp",
+            "description": "دیوان کیفری بین‌المللی در لاهه هلند حکم بازداشت هبت‌الله آخوندزاده، رهبر و عبدالحکیم حقانی، رئیس دادگاه عالی حکومت طالبان را به اتهام «ارتکاب جنایت علیه بشریت» صادر کرده است.  حکومت طالبان، این اقدام دیوان کیفری بین‌المللی را «محکوم» کرده و گفته است این نهاد را «به رسمیت نمی‌شناسد.»",
+            "imageAlt": "هبت‌الله آخوندزاده، رهبر طالبان",
+            "id": "c056032z690o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "بحرانی انسانی، تلاشی انسانی؛ هرات به روی مهاجران رانده شده از ایران لبخند زد",
+            "firstPublished": "2025-07-19T23:34:22.559Z",
+            "lastPublished": "2025-07-19T23:34:22.559Z",
+            "link": "https://www.bbc.com/persian/articles/cjwn599d5jlo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/07c0/live/57c53600-64f6-11f0-9d43-33180c788338.jpg.webp",
+            "description": "این روزها یک شهرک مرزی کوچک در افغانستان در نقطه کانونی یک بحران انسانی است. در پی تشدید سیاست اخراج پناهجویان و مهاجران افغان، شهرک اسلام قلعه پذیرای صدها هزار نفر در مدت چند ماه بوده است. شمار افغان‌هایی که در چند ماه اخیر از ایران به افغانستان بازگشت داده شده اند، تا یک میلیون نفر تخمین زده می‌شود.\n\n",
+            "imageAlt": "اخراج صدها هزار مهاجر افغان از ایران در مدت زمانی کوتاه در گذشته بسیار کم سابقه بوده است. مهاجران بازگشته و مردم افغانستان غافلگیر شدند",
+            "id": "cjwn599d5jlo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "سازمان ملی مهاجرت، نهادی برای جلوگیری از ماندن یا برای ساماندهی مهاجران؟",
+            "firstPublished": "2025-07-20T12:11:00.701Z",
+            "lastPublished": "2025-07-20T12:11:00.701Z",
+            "link": "https://www.bbc.com/persian/articles/c1mzv137xm5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/98a8/live/7bbc3060-655d-11f0-9a2a-e5f350a58481.jpg.webp",
+            "description": "نمایندگان مجلس در ایران با بررسی لایحه ساختار وظایف و اختیارات «سازمان ملی مهاجرت» در کمیسیون مشترک امنیت ملی و سیاست خارجی و همچنین امور داخلی کشور و شوراها موافقت کردند. اکثریت نمایندگان در صحن علنی مجلس، یکشنبه ۲۹ خرداد، ۲۰ ژوئیه به بررسی اساسنامه تاسیس این سازمان بر اساس اصل ۸۵ قانون اساسی رای دادند.",
+            "imageAlt": "کارگر افغان مقیم ایران",
+            "id": "c1mzv137xm5o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "نام چند جاسوس و نیروی ویژه بریتانیا هم در میان اسناد درز اطلاعات هزاران افغان‌ است",
+            "firstPublished": "2025-07-17T21:00:14.545Z",
+            "lastPublished": "2025-07-17T21:00:14.545Z",
+            "link": "https://www.bbc.com/persian/articles/cwykm0xydw4o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/affd/live/b1359e20-6350-11f0-af20-030418be2ca5.jpg.webp",
+            "description": "نام بیش از ۱۰۰ کارمند دولت بریتانیا از جمله اعضای نیروهای ویژه این کشور و افسران سرویس اطلاعات مخفی بریتانیا - ام‌آی۶ - در میان اسناد فاش شده‌ای است که هویت هزاران افغان را برملا کرد و موجب شد بسیاری از آنها در یک طرح پنهانی به بریتانیا منتقل شوند.",
+            "imageAlt": "افشای نام هزار ان افغان متقاضی مهاجرت به بریتانیا",
+            "id": "cwykm0xydw4o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "عکس‌های محمد بالابلوکی از مهاجران اخراجی افغان؛ «عروسکم ایرانی است، می‌خواهم با من مهاجر شود»",
+            "firstPublished": "2025-07-17T05:59:21.340Z",
+            "lastPublished": "2025-07-17T05:59:21.340Z",
+            "link": "https://www.bbc.com/persian/articles/cm20p291j2xo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bea9/live/bc4402e0-6268-11f0-83d2-4f671b8c1523.jpg.webp",
+            "description": "در پی جنگ ۱۲ روزه بین اسرائیل و ایران، روند اخراج مهاجران افغان از ایران به شکل کم‌سابقه‌ای سرعت گرفته و بر اساس گزارش‌ها گاهی روزانه بین ۳۰ تا ۴۰ هزار مهاجر افغان با اتوبوس به مرز دوغارون منتقل می‌شوند. محمد بالابلوکی، عکاس هراتی، برای ثبت این وقایع به مرز اسلام‌ قلعه و دوغارون رفته است. ناجیه غلامی با استناد به این عکس‌ها و گفتگویی که با آقای بالابلوکی داشته این گزارش را تهیه کرده است.",
+            "imageAlt": "دختر مهاجر افغان عروسکی در دست دارد",
+            "id": "cm20p291j2xo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "افشای یک طرح مخفیانه؛ هزاران افغان به بریتانیا منتقل شده‌اند",
+            "firstPublished": "2025-07-15T16:49:15.639Z",
+            "lastPublished": "2025-07-15T16:49:15.639Z",
+            "link": "https://www.bbc.com/persian/articles/c1dn2dy6gyvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d9e3/live/e1f59eb0-6194-11f0-b5c5-012c5796682d.jpg.webp",
+            "description": "پس از اینکه یک مقام بریتانیایی ناخواسته باعث افشای اطلاعات شخصی هزاران شهروند افغان شد، آنها در یک طرح پنهانی به بریتانیا منتقل شدند.",
+            "imageAlt": "هزاران افغان، در یک طرح مخفیانه به بریتانیا منتقل شدند",
+            "id": "c1dn2dy6gyvo",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:726e8597-7840-4cf0-9862-417530a8430e",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "مهمترین خبرها",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ابهام و «سکوت» در قتل کبری رضایی، دختر مهاجر افغان در تهران",
+            "firstPublished": "2025-06-12T16:49:24.246Z",
+            "lastPublished": "2025-06-12T16:49:24.246Z",
+            "link": "https://www.bbc.com/persian/articles/cj427vj5eqwo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/0931/live/fe324730-46dd-11f0-9e29-496c47d2add7.jpg.webp",
+            "description": "در پی قتل تکان‌دهنده کبری رضایی، زن مهاجر افغان در تهران، منابعی که نخواستند نام‌شان در گزارش ذکر شود، در صحبت با بی‌بی‌سی می‎‌گویند خانواده و وکیل او «به‌شدت» تحت فشار مقام‌های امنیتی ایران قرار دارند تا در باره این قتل خبررسانی نکنند.",
+            "imageAlt": "کبری رضایی",
+            "id": "cj427vj5eqwo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "افزایش «افغان‌ستیزی» و اخراج هزاران نفر پس از جنگ اسرائیل و ایران",
+            "firstPublished": "2025-07-02T17:36:51.766Z",
+            "lastPublished": "2025-07-02T17:36:51.766Z",
+            "link": "https://www.bbc.com/persian/articles/c2d00y41g92o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/b04a/live/754aa9d0-5682-11f0-95fc-edf89039c20a.jpg.webp",
+            "description": "پس از جنگ ۱۲ روزه ایران و اسرائیل، بازداشت و اخراج مهاجران افغان از ایران شدت گرفته است. طبق اعلام وزارت کشور ایران، حتی در طول روزهای جنگ نیز روند بازداشت افغان‌ها متوقف نشد. دولت ایران اسفند پارسال برای برگشت افغان‌های «غیرمجاز» ضرب‌الاجل اعلام کرد ولی پس از جنگ اسرائیل و ایران این روند شدت بی‌سابقه‌ای یافته است. ",
+            "imageAlt": "حنفی و مقام‌های طالبان",
+            "id": "c2d00y41g92o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ممنوعیت سفر افغان‌ها به آمریکا؛ چه کسانی اجازه سفر دارند؟",
+            "firstPublished": "2025-06-05T14:18:48.149Z",
+            "lastPublished": "2025-06-05T14:18:48.149Z",
+            "link": "https://www.bbc.com/persian/articles/cx2xl187nlno",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/ee46/live/dfe519f0-fd96-11ef-a8ac-935cce157cc6.jpg.webp",
+            "description": "در فرمان تازه مسافرتی دونالد ترامپ، رئیس جمهور آمریکا، افغانستان در فهرست کشورهایی است که ورود شهروندانش به این کشور به‌طور کامل ممنوع شده است.\nافغانستان و ۱۱ کشور دیگر از جمله ایران، یمن، لیبی، سودان، سومالی، گینه استوایی، چاد،‌ کنگو، برمه، اریتره و هائیتی، بنا به فرمان جدید ورود شهروندانشان به خاک آمریکا ممنوع اعلام شده است.\nکاخ‌سفید گفته این ممنوعیت‌ها از روز دوشنبه آینده، ۹ ژوئن  به اجرا گذاشته خواهد شد.\n",
+            "imageAlt": "دو مهاجر تازه وارد افغان در فرودگاه دالاس ورجنیا ",
+            "id": "cx2xl187nlno",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "اعدام دو برادر افغان در ایران؛ «بیشتر نگران آینده دخترانم هستم»",
+            "firstPublished": "2025-06-11T04:52:26.804Z",
+            "lastPublished": "2025-06-11T04:52:26.804Z",
+            "link": "https://www.bbc.com/persian/articles/c23mgppr1dzo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/18e6/live/59d42700-2507-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "«مادر، دعا کن، این روز آمدنی بود. به طلب‌کارانم بگو اگر پسرانم توانستند بدهی‌هایم را پرداخت خواهند کرد، وگرنه بر من ببخشند. ... بیشتر نگران دخترانم هستم.» \nاین بخشی از آخرین سخنان نور محمد ۴۰ ساله است که سال گذشته (۲۰۲۴) به جرم قاچاق مواد مخدر در ایران اعدام شد. او یکی از حدود ۸۰ شهروند افغانستان بود که به همین جرم در ایران اعدام شده‌اند.\n",
+            "imageAlt": "نور محمد در ماشین نشسته و دستش را به فرمان تکیه داده است",
+            "id": "c23mgppr1dzo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "طالبان و سینمای افغانستان؛ فیلم‌های نوستالژیک کجا ساخته می‌شد؟ ",
+            "firstPublished": "2025-06-01T04:37:44.685Z",
+            "lastPublished": "2025-06-01T04:37:44.685Z",
+            "link": "https://www.bbc.com/persian/articles/clyg8vrlpj7o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/bb87/live/18ceb1e0-3e6a-11f0-a20f-01cabd8eb75e.jpg.webp",
+            "description": "حکومت طالبان در تازه‌ترین اقدام، نام اداره «افغان فلم» را به ریاست سمعی و بصری تغییر داده‌است. بر اساس گزارش‌ها، ماهیت این نهاد هم تغییر کرده و فعالیتش نسبت به گذشته متفاوت خواهد بود.\nافغان فلم، هم از نظر تاریخی و هم از نظر هنر و سینما اهمیت زیادی برای افغانستان دارد. فیلم‌های مستند دوران جنگ جهانی و جنگ افغان - انگلیس و سفر‌های شاه امان الله از شروع حکومت او در سال ۱۹۱۹میلادی ثبت این آرشیف اند.\n",
+            "imageAlt": "صحنه‌ای از فیلم حماسه عشق",
+            "id": "clyg8vrlpj7o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "دختر پناهجوی افغان که مرگش الهام‌بخش یک کتاب مصور در کرواسی شد",
+            "firstPublished": "2025-05-24T05:02:16.690Z",
+            "lastPublished": "2025-05-24T05:02:16.690Z",
+            "link": "https://www.bbc.com/persian/articles/cd90044qvv5o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/5d74/live/3aff0210-3636-11f0-a37a-396a0d1059f3.png.webp",
+            "description": "اولی یک شخصیت تخیلی است که به‌تازگی به شهر زاگرب نقل مکان کرده و «از آن‌جا می‌تواند به هرکجای دنیا که دلش خواست سفر کند.» دومی، «نمادی از مرگ‌و‌میر در مرزها و مسیرهای مهاجرت به کرواسی» است؛ و کسی که دور از خانه‌ «در طولانی‌ترین خیابان دنیا» و در اردوگاه‌های پناهجویان بزرگ شده است.",
+            "imageAlt": "دختر افغان",
+            "id": "cd90044qvv5o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "چرا چین دومین معدن مس جهان در افغانستان را  استخراج نمی‌کند؟",
+            "firstPublished": "2025-05-30T13:01:44.419Z",
+            "lastPublished": "2025-05-30T13:01:44.419Z",
+            "link": "https://www.bbc.com/persian/articles/c20p0z236dgo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3877/live/30333000-3d7e-11f0-bace-e1270fc31f5e.jpg.webp",
+            "description": "۱۷ سال پس از امضای قرارداد تاریخی مس عینک میان افغانستان و چین، هنوز استخراج مس در این معدن آغاز نشده است. کارشناسان و افرادی که از نزدیک در این پروژه دخیل بوده‌اند به بی‌بی‌سی گفتند چین «هرگز» مس عینک را استخراج نمی‌کند اما حکومت طالبان می‌گوید کار استخراج آغاز خواهد شد.",
+            "imageAlt": ".",
+            "id": "c20p0z236dgo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "از کودک همسری در افغانستان تا قهرمانی در نروژ؛ رویا کریمی: «مردم تنها ظاهر و بیکینی من را می‌بینند»",
+            "firstPublished": "2025-05-08T06:41:11.247Z",
+            "lastPublished": "2025-05-08T06:41:11.247Z",
+            "link": "https://www.bbc.com/persian/articles/cwy02n14r37o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c2dd/live/2a1931a0-2687-11f0-9b5b-234434c99085.jpg.webp",
+            "description": "رویا کریمی، زن افغان که زمانی کودک‌همسر بود، امروز یکی از چهره‌های موفق بدن‌سازی در نروژ است. داستان زندگی او، تصویری از مبارزه با سنت‌های محدودکننده، بازسازی هویت فردی و الهام‌بخشی برای زنانی است که همچنان با قید و بندهای گسترده روبه‌رو هستند.",
+            "imageAlt": "رویا کریمی، برنده مسابقات «استوپریت اوپن» نروژ در دستهٔ تندرستی ",
+            "id": "cwy02n14r37o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "«من نباشم، کسی نیست که نوزاد را به دنیا بیاورد»",
+            "firstPublished": "2025-05-05T18:55:48.066Z",
+            "lastPublished": "2025-05-05T18:55:48.066Z",
+            "link": "https://www.bbc.com/persian/articles/cr78yd5xn7eo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/9317/live/01cc5df0-28ce-11f0-9761-1905a59d240c.png.webp",
+            "description": "«چند روز پیش، پنج زن برای زایمان به این درمانگاه آمدند، من به یکی پس از دیگری کمک می‌کردم. یکی از تخت پایین می‌آمد و دیگری باید روی تخت بالا می‌شد. تنها کاری که می‌توانستم این بود که سریعا دست‌هایم را بشویم و به نفر بعدی برسم.»\n«آن روز همش با خودم فکر می‌کردم که کاش قابله (ماما) دیگری هم اینجا می‌بود که کمکم می‌کرد.»\n",
+            "imageAlt": "وضعیت ماماها در افغانستان ",
+            "id": "cr78yd5xn7eo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": " تنش هند و پاکستان؛ انتخاب دشوار طالبان",
+            "firstPublished": "2025-05-03T13:56:30.294Z",
+            "lastPublished": "2025-05-03T13:56:30.294Z",
+            "link": "https://www.bbc.com/persian/articles/cdxnd0w1xedo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4ee3/live/b14c6aa0-282d-11f0-b26b-ab62c890638b.jpg.webp",
+            "description": "ارتش پاکستان می‌گوید طی سه روز اخیر ۷۱ شبه‌نظامی را کشته‌اند  که «از افغانستان» وارد این کشور شدند. در حالیکه تنش میان پاکستان و هند به احتمال «درگیری نظامی» رسیده است. ",
+            "imageAlt": "فرمانده ارتش پاکستان با چند نظامی صحبت می‌کند",
+            "id": "cdxnd0w1xedo",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "چهار دلیل عمده پاکستان برای اخراج افغان‌ها ",
+            "firstPublished": "2025-04-24T05:03:38.259Z",
+            "lastPublished": "2025-04-24T05:03:38.259Z",
+            "link": "https://www.bbc.com/persian/articles/cj9ew2emzy0o",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/d070/live/7330be90-1939-11f0-8cf4-4b4e0621abf0.jpg.webp",
+            "description": "پاکستان از اول ماه آوریل سال جاری، مرحله دوم اخراج مهاجران افغان را آغاز کرده است. بنا به گزارش‌ها از اول تا دوازدهم آوریل بیش از ۳۰ هزار مهاجر افغان بازگردانده شده‌اند.\nدر مرحله اول که در نوامبر سال ۲۰۲۳ آغاز شد، حدود ۸۰۰ هزار مهاجر افغان اجباری یا داوطلبانه به کشورشان بازگشتند.\n",
+            "imageAlt": "شش کودک افغان روی اثاثیه‌های بار کامیون نشسته‌اند و با لبخند دست تکان می‌دهند",
+            "id": "cj9ew2emzy0o",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "article",
+            "isLive": false,
+            "title": "ژنرال ارشد نیروهای ویژه، بر روند جلوگیری از ورود افغان‌های شاهد «جنایات جنگی» به بریتانیا نظارت داشت",
+            "firstPublished": "2025-05-12T19:38:31.608Z",
+            "lastPublished": "2025-05-12T19:38:31.608Z",
+            "link": "https://www.bbc.com/persian/articles/cp92zvk45yvo",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/105f/live/08d6ac50-2cd8-11f0-8ff1-59f5dcf8e9f5.jpg.webp",
+            "description": "برنامه پانورامای بی‌بی‌سی فاش کرده است که نظارت بر روند رد شدن صدها درخواست اسکان کماندوهای افغان در بریتانیا، بر عهده یک ژنرال ارشد بوده که قبلا از گزارش کردن شواهد جنایات جنگی ادعایی علیه نیروهای ویژه اس‌ای‌اس بریتانیا در افغانستان خودداری کرده بود. این کماندوهای افغان در کنار نیروهای ویژه بریتانیا در افغانستان خدمت کرده بودند. ژنرال سِر گوین جنکینز بر روندی نظارت داشت که طی آن، نیروهای ویژه افغان از اسکان در بریتانیا باز داشته شدند.",
+            "imageAlt": "Gen Sir Gwyn Jenkins, in military uniform with medals on his chest, standing in front of the Commando Memorial in Locharber in the Scottish Highlands",
+            "id": "cp92zvk45yvo",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:8a59afd3-c987-43d0-b800-721792907bea",
+        "curationType": "tipo-curation",
+        "position": 1,
+        "title": "تحلیل و گزارش",
+        "visualProminence": "HIGH",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "شنیدن برنامه زنده",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/liveradio",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/56a8/live/85161360-7d56-11ee-a503-4588075e3427.png.webp",
+            "description": "بی‌بی‌سی برای افغانستان تازه‌ترین و دقیق‌ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می‌کند.",
+            "imageAlt": "BBC",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fliveradio",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:a2cfd338-6e5a-4f35-bc79-cd38f3edd2eb",
+        "curationType": "tipo-curation",
+        "position": 2,
+        "title": "رادیو بی‌بی‌سی افغانستان",
+        "visualProminence": "NORMAL",
+        "visualStyle": "BANNER"
+      },
+      {
+        "summaries": [],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:5f5ea7f6-fa96-4f51-af1b-7c13d1ef4a88",
+        "curationType": "tipo-curation",
+        "position": 3,
+        "title": "ویدیو",
+        "visualProminence": "LOW",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "summaries": [
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "چشم دو",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340v11",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e111/live/dd0ab3f0-80ca-11ef-ad45-893aa022fcbc.png.webp",
+            "description": "مجله شامگاهی",
+            "imageAlt": "میکروفون",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fp0340v11",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "خبر و نظر",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340v0d",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/75cf/live/2db590e0-9855-11ee-8df3-1d2983d8814f.jpg.webp",
+            "description": "برنامه نویسی از سرویس بی بی سی فارسی",
+            "imageAlt": "خبر و نظر",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fp0340v0d",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "بحث هفته",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p04yc8v2",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/e034/live/154f4630-847d-11ef-83dd-fbf1b9732cf0.png.webp",
+            "imageAlt": "میکروفون",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fp04yc8v2",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "صدای شما",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340v0t",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/3951/live/dd21d1c0-9854-11ee-b9a7-c91b9dfa91e5.jpg.webp",
+            "description": "در این برنامه شنونده ها به بی بی سی زنگ می زنند و در مورد یکی از موضوعات داغ روز ابراز نظر می کنند.",
+            "imageAlt": "صدای شما",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fp0340v0t",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "audio",
+            "isLive": false,
+            "title": "مصاحبه ویژه",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/p0340v0k",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/c497/live/0e28a190-9855-11ee-b9a7-c91b9dfa91e5.jpg.webp",
+            "description": "برنامه نویسی از سرویس بی بی سی فارسی",
+            "imageAlt": "مصاحبه ویژه ",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fp0340v0k",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "مجله زن",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/persian/bbc_dari_radio/programmes/w13xtvnv",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/749b/live/0acfb100-b53d-11ee-beb5-e1400df560f2.png.webp",
+            "description": "زن – برنامه هفتگی بی‌بی‌سی درباره موضوعات مهم مربوط به زنان",
+            "imageAlt": "BBC Dari",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Fpersian%2Fbbc_dari_radio%2Fprogrammes%2Fw13xtvnv",
+            "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "مجموعه برنامه‌های آموزشی درس بی‌بی‌سی",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.youtube.com/@BBCNewsPersian/courses",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/4edf/live/af2ca260-3c7a-11f0-b6e6-4ddb91039da1.png.webp",
+            "description": "در درس این هفته با دانش‌آموز نخبه‌ای در هند آشنا می‌شوید که به رغم نظریات ناپسند مردم در مورد ظاهر و موهای صورتش روی رویاهای خود تمرکز می‌کند.\nدر دو بخش آموزش زبان انگلیسی٬ مکالمه در مورد ماه‌های سال و در بخش ریاضی این هفته جمع و تفریق کسرها را می‌آموزید.\nتماشای دریچه این هفته که سراسر خبرهای جالب و دیدنی دارد را نیز از دست ندهید.",
+            "imageAlt": "درس",
+            "id": "https%3A%2F%2Fbbc.in%2F4bPcpzn",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "activePage": 1,
+        "pageCount": 1,
+        "curationId": "urn:bbc:tipo:list:e475f26f-e9f1-4c0c-90ca-c86ff527123a",
+        "curationType": "tipo-curation",
+        "position": 4,
+        "title": "برنامه‌های رادیو",
+        "visualProminence": "NORMAL",
+        "visualStyle": "COLLECTION"
+      },
+      {
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_arabic_tv",
+              "title": "08/09/2025 15:00 GMT",
+              "type": "episode",
+              "synopses": {
+                "short": "نشرة خاصة بوسائل التواصل الاجتماعي",
+                "medium": "نشرة خاصة بوسائل التواصل الاجتماعي",
+                "long": "نشرة خاصة بوسائل التواصل الاجتماعي"
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png",
+              "masterbrand": {
+                "id": "bbc_arabic_tv",
+                "name": "تلفزيون بي بي سي عربي",
+                "networkName": "تلفزيون بي بي سي عربي",
+                "type": "tv",
+                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png"
+              },
+              "version": {
+                "vpid": "n4pdmd48l3",
+                "duration": "PT30M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_arabic_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              },
+              "leadMedia": true
+            }
+          }
+        ],
+        "curationId": "urn:bbc:tipo:list:105b7867-4ce7-4682-9fdb-c9c97c8bafdb",
+        "curationType": "tipo-curation",
+        "position": 5,
+        "title": "Arabic TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER"
+      },
+      {
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_persian_tv",
+              "title": "05/09/2025 23:30 GMT",
+              "type": "episode",
+              "synopses": {
+                "short": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
+                "medium": "دستچین بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی.",
+                "long": "برنامه خبرنگاران هر شنبه مجموعه‌ای از بهترین گزارش‌های تهیه شده توسط خبرنگاران بی‌بی‌سی فارسی در لندن و شهرهای دیگر جهان را ارائه می‌دهد."
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p061c4nc.jpg",
+              "masterbrand": {
+                "id": "bbc_persian_tv",
+                "name": "BBC Persian TV",
+                "networkName": "BBC Persian TV",
+                "type": "tv",
+                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b21g3.png"
+              },
+              "version": {
+                "vpid": "n4pdm49gqv",
+                "duration": "PT30M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_persian_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              },
+              "overtypedTitle": "BBC Persian TV"
+            }
+          }
+        ],
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 6,
+        "title": "Persian TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER"
+      }
+    ],
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:crezq2dg9zwt",
+        "contentType": "index-home",
+        "pageIdentifier": "dari.page",
+        "pageTitle": "صفحه افغانستان"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

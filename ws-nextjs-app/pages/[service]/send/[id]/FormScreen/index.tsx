@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import React, { useEffect, useRef, useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { useEffect, useRef, use } from 'react';
 import Heading from '#app/components/Heading';
 import { LiveRegionContextProvider } from '#app/components/LiveRegion/LiveRegionContext';
 import LiveRegion from '#app/components/LiveRegion';
@@ -38,7 +36,7 @@ export default function FormScreen({
         validationRequired = fallbackTranslations.validationRequired,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const ref = useRef<HTMLDivElement>(null);
 

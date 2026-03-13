@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '#contexts/RequestContext';
@@ -158,10 +155,9 @@ const AdWithPlaceholder = ({
 };
 
 const AmpAd = ({ slotType }: AdProps) => {
-  const { translations, dir, service, showAdPlaceholder } =
-    useContext(ServiceContext);
+  const { translations, dir, service, showAdPlaceholder } = use(ServiceContext);
 
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],

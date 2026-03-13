@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
@@ -13,8 +13,8 @@ import Wrapper from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const SocialEmbedContainer = ({ blocks, source }) => {
-  const { isAmp, isLite, pageType } = useContext(RequestContext);
-  const { service, translations } = useContext(ServiceContext);
+  const { isAmp, isLite, pageType } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   if (isLite) return null;
   if (!blocks || !source) return null;
@@ -63,7 +63,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
-            service={service}
             id={id}
             fallback={fallback}
             skipLink={skipLink}
@@ -73,7 +72,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         ) : (
           <CanonicalSocialEmbed
             provider={provider}
-            service={service}
             id={id}
             oEmbed={oEmbed}
             fallback={fallback}

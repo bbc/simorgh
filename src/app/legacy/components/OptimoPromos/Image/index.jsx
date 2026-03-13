@@ -1,5 +1,3 @@
-import React, { useContext } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
 import IMAGE from '../../../../components/Image';
 
 const Image = ({
@@ -9,13 +7,12 @@ const Image = ({
   fallbackSrcset = '',
   width,
   height,
+  isPortraitImage = false,
 }) => {
-  const { isAmp } = useContext(RequestContext);
   const ASPECT_RATIO = [16, 9];
 
   return (
     <IMAGE
-      isAmp={isAmp}
       src={src}
       alt={altText}
       srcSet={srcset}
@@ -24,6 +21,7 @@ const Image = ({
       width={width}
       height={height}
       lazyLoad
+      {...(isPortraitImage && { placeholder: false })}
     />
   );
 };

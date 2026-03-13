@@ -1,12 +1,14 @@
+import { use } from 'react';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { useContext } from 'react';
 import { EventTrackingData, EventTrackingProps } from '../types';
 
 export default ({
   eventTrackingData,
   eventType,
+  eventTrackingContextFromHook,
 }: EventTrackingProps): EventTrackingData => {
-  const eventTrackingContext = useContext(EventTrackingContext);
+  const eventTrackingContext =
+    eventTrackingContextFromHook || use(EventTrackingContext);
 
   const {
     componentName = '',
@@ -16,9 +18,12 @@ export default ({
     detailedPlacement,
     preventNavigation,
     sendOptimizelyEvents,
+    experimentName,
+    experimentVariant,
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   } = eventTrackingData || {};
 
   const {
@@ -47,8 +52,11 @@ export default ({
     producerName,
     preventNavigation,
     sendOptimizelyEvents,
+    experimentName,
+    experimentVariant,
     itemTracker,
     groupTracker,
     viewThreshold,
+    alwaysInView,
   };
 };

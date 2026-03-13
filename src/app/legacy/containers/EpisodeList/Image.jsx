@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import omit from 'ramda/src/omit';
 import styled from '@emotion/styled';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -75,8 +73,8 @@ const PlayWrapper = withEpisodeContext(styled.div`
 `);
 
 const DurationWrapper = withEpisodeContext(styled.span`
-  ${({ script }) => getMinion(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.WHITE};
   ${({ dir }) =>
     dir === 'rtl'
@@ -91,7 +89,7 @@ const StyledImage = styled.img`
 const EpisodeImage = props => {
   const { duration = '', alt = '', dir } = props;
 
-  const { isLite } = useContext(RequestContext);
+  const { isLite } = use(RequestContext);
 
   // This component only uses a subset of its props
   // the remaining props are passed down to the underlying <img> element

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-igbo',
     atiAnalyticsProducerId: '53',
     atiAnalyticsProducerName: 'IGBO',
-    useReverb: true,
     chartbeatDomain: 'igbo.bbc.co.uk',
     brandName: 'BBC News Ìgbò',
     product: 'BBC News',
@@ -25,7 +24,8 @@ export const service: DefaultServiceConfig = {
     service: 'igbo',
     serviceName: 'Igbo',
     languageName: 'Igbo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
     externalLinkText: ', na mpụta',
@@ -46,7 +46,30 @@ export const service: DefaultServiceConfig = {
     twitterSite: '@BBCNews', // to be updated
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Ọkwa azụmahịa WhatsApp',
+      brandTitle: 'Anyị nọ na WhatsApp',
+      brandDescription: `Ugbua, i nwereike inweta akụkọ BBC Igbo niile n'ekwenti gị.`,
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq7863.png',
+        alt: `WhatsApp BBC News Igbo nọ n'obaozi`,
+      },
+      linkLabel: {
+        text: 'Pịa aka ebe a ka i soro anyị',
+        href: 'https://www.whatsapp.com/channel/0029Vb7AO14Ae5Vgu4VMmJ0R',
+      },
+      skipLink: {
+        text: `Gafere %title% ma gaa n'ihu na-agụ`,
+        endTextVisuallyHidden: 'Ebe %title% kwụsịrị',
+      },
+    },
     translations: {
+      and: 'na',
+      readTime: {
+        readTimePrefix: 'Oge e ji agụ akụkọ',
+        long: 'Akụkọ ogologo',
+        minute: 'nkeji',
+      },
       pagination: {
         previousPage: 'Ikpeazụ',
         nextPage: 'Osote',
@@ -62,6 +85,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
       relatedTopics: 'Isiokwu ndị emetụtara',
+      moreOnThis: '',
       navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -235,6 +259,7 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         closeVideo: 'Wepu',
+        endOfContentClose: 'Ngwugwu nke ọdịnaya a. Pụọ',
       },
       socialEmbed: {
         caption: {
@@ -291,18 +316,6 @@ export const service: DefaultServiceConfig = {
         title: 'Akụkọ',
         url: '/igbo',
       },
-      {
-        title: 'Egwuregwu',
-        url: '/igbo/topics/cnq68k0x2vrt',
-      },
-      {
-        title: 'Ihe nkiri',
-        url: '/igbo/topics/c3l19z3qjmyt',
-      },
-      {
-        title: 'Nke ka ewuewu',
-        url: '/igbo/popular/read',
-      },
     ],
     footer: {
       trustProjectLink: {
@@ -310,7 +323,7 @@ export const service: DefaultServiceConfig = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [

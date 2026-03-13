@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  PropsWithChildren,
-  useContext,
-  useMemo,
-} from 'react';
+import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
@@ -26,25 +21,13 @@ import {
   LIVE_RADIO_PAGE,
   TV_PAGE,
   AUDIO_PAGE,
+  OFFLINE_PAGE,
+  LIVE_TV_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes, Platforms } from '../../models/types/global';
-import { buildATIEventTrackingParams } from '../../components/ATIAnalytics/params';
+import { PageTypes } from '../../models/types/global';
+import { EventTrackingContextProps } from '../../models/types/eventTracking';
 import { ServiceContext } from '../ServiceContext';
-import {
-  ATIData,
-  ATIEventTrackingProps,
-} from '../../components/ATIAnalytics/types';
-
-type EventTrackingContextProps =
-  | {
-      campaignID: string;
-      pageIdentifier: string;
-      platform: Platforms;
-      producerId: string;
-      statsDestination: string;
-      producerName: string;
-    }
-  | Record<string, never>;
+import { ATIData } from '../../components/ATIAnalytics/types';
 
 export const EventTrackingContext = createContext<EventTrackingContextProps>(
   {} as EventTrackingContextProps,
@@ -54,6 +37,7 @@ type CampaignPageTypes = Exclude<PageTypes, 'error'>;
 
 const getCampaignID = (pageType: CampaignPageTypes) => {
   const campaignID = {
+    [OFFLINE_PAGE]: 'offline',
     [ARTICLE_PAGE]: 'article',
     [MEDIA_ARTICLE_PAGE]: 'article-sfv',
     [MOST_READ_PAGE]: 'list-datadriven-read',
@@ -72,6 +56,7 @@ const getCampaignID = (pageType: CampaignPageTypes) => {
     [LIVE_RADIO_PAGE]: 'player-live',
     [AUDIO_PAGE]: 'player-episode',
     [TV_PAGE]: 'player-episode',
+    [LIVE_TV_PAGE]: 'live-tv',
   }[pageType];
 
   if (!campaignID) {
@@ -94,10 +79,10 @@ export const EventTrackingContextProvider = ({
   children,
   atiData,
 }: PropsWithChildren<EventTrackingProviderProps>) => {
-  const requestContext = useContext(RequestContext);
-  const { pageType } = requestContext;
+  const requestContext = use(RequestContext);
+  const { pageType, platform, statsDestination } = requestContext;
 
-  const serviceContext = useContext(ServiceContext);
+  const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
@@ -105,13 +90,7 @@ export const EventTrackingContextProvider = ({
   const trackingProps = useMemo(() => {
     if (eventTrackingIsEnabled && atiData) {
       const campaignID = getCampaignID(pageType as CampaignPageTypes);
-
-      const { pageIdentifier, platform, statsDestination } =
-        buildATIEventTrackingParams({
-          requestContext,
-          serviceContext,
-          atiData,
-        }) as ATIEventTrackingProps;
+      const { pageIdentifier } = atiData;
 
       return {
         campaignID,
@@ -129,8 +108,8 @@ export const EventTrackingContextProvider = ({
     atiData,
     eventTrackingIsEnabled,
     pageType,
-    requestContext,
-    serviceContext,
+    platform,
+    statsDestination,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {

@@ -1,5 +1,5 @@
 /* eslint-disable no-shadow */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Curation } from '#app/models/types/curationData';
@@ -93,6 +93,13 @@ export const Example = {
 export const Test = {
   render: (_: StoryArgs, { variant }: StoryProps) => (
     <Component service="kyrgyz" variant={variant} />
+  ),
+  tags: ['!dev'],
+};
+
+export const TestWSLanguages = {
+  render: (_: StoryArgs, { variant }: StoryProps) => (
+    <Component service="ws" variant={variant} />
   ),
   tags: ['!dev'],
 };

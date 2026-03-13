@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-indonesia',
     atiAnalyticsProducerId: '54',
     atiAnalyticsProducerName: 'INDONESIAN',
-    useReverb: true,
     chartbeatDomain: 'indonesian.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Indonesia',
     product: 'BBC News',
     serviceLocalizedName: 'Indonesia',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Indonesia',
     dir: `ltr`,
     externalLinkText: ', eksternal',
@@ -67,6 +67,12 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'dan',
+      readTime: {
+        readTimePrefix: 'Waktu membaca',
+        long: 'Artikel panjang',
+        minute: 'menit',
+      },
       pagination: {
         previousPage: 'Sebelum',
         nextPage: 'Berikut',
@@ -81,6 +87,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
       relatedTopics: 'Topik terkait',
+      moreOnThis: '',
       navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
@@ -255,6 +262,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Podcast ini juga tersedia di',
         download: 'Unduh episode',
         closeVideo: 'Keluar',
+        endOfContentClose: 'Akhir dari konten ini. Keluar',
       },
       socialEmbed: {
         caption: {
@@ -356,26 +364,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Berita',
         url: '/indonesia',
-      },
-      {
-        title: 'Indonesia',
-        url: '/indonesia/topics/cjgn7k8yx4gt',
-      },
-      {
-        title: 'Dunia',
-        url: '/indonesia/topics/cyz8evpl224t',
-      },
-      {
-        title: 'Viral',
-        url: '/indonesia/topics/cn5w7g2nq6dt',
-      },
-      {
-        title: 'Liputan Mendalam',
-        url: '/indonesia/topics/cw9qgeqd18zt',
-      },
-      {
-        title: 'Majalah',
-        url: '/indonesia/topics/cpxrqmrkeg8t',
       },
     ],
     timezone: 'Asia/Jakarta',

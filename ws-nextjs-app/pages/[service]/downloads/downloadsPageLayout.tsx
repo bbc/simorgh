@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
-import React, { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import Heading from '#app/components/Heading';
 import ATIAnalytics from '#app/components/ATIAnalytics';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -18,14 +15,13 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
     timezone,
     locale,
     altCalendar,
-    script,
     translations: {
       downloads: {
         instructions = 'You can download and view today’s news.',
         title = 'File Download',
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const capitalisedService = service[0].toUpperCase() + service.slice(1);
   const description = `${capitalisedService} Downloads`;
@@ -56,8 +52,6 @@ const DownloadsPageLayout = ({ service, pageData }: PageProps) => {
                     format="D MMMM YYYY"
                     locale={locale}
                     timezone={timezone}
-                    service={service}
-                    script={script}
                     altCalendar={altCalendar}
                     padding={false}
                     isRelative={false}

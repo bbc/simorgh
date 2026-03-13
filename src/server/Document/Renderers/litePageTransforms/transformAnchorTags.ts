@@ -1,7 +1,5 @@
 import { Services } from '#app/models/types/global';
-import services from '#lib/config/services/loadableConfig';
-
-const SERVICES = Object.keys(services) as Services[];
+import SERVICES from '#lib/config/services';
 
 const RESTRICTED_ON_SOFT_LAUNCH = ['/ws/languages'];
 

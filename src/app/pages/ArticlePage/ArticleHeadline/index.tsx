@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useContext } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
@@ -12,8 +9,8 @@ import { ComponentToRenderProps } from '../types';
 import styles from './index.styles';
 
 const ArticleHeadline = (props: ComponentToRenderProps) => {
-  const { pathname, isLite, isAmp, isApp } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { pathname, isLite, isAmp, isApp } = use(RequestContext);
+  const { translations } = use(ServiceContext);
   const eventTrackingData = {
     componentName: 'article-lite-site-link',
   };

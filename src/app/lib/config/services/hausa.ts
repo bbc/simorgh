@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-hausa',
     atiAnalyticsProducerId: '51',
     atiAnalyticsProducerName: 'HAUSA',
-    useReverb: true,
     chartbeatDomain: 'hausa.bbc.co.uk',
     brandName: 'BBC News Hausa',
     product: 'BBC News',
     serviceLocalizedName: 'Hausa',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
     externalLinkText: ', waje',
@@ -47,20 +47,30 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Podcast',
-      brandTitle: 'Korona: Ina Mafita?',
+      title: 'Whatsapp',
+      brandTitle: 'Tasharmu ta WhatsApp',
       brandDescription:
-        'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
+        'Yanzu za ku iya samun labaran BBC Hausa kai-tsaye a wayoyinku.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08mlbpj.jpg',
-        alt: 'Korona: Ina Mafita?',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0ljr61s.jpg',
+        alt: 'BBC News Hausa WhatsApp latsa nan domin shiga tasharmu',
       },
       linkLabel: {
-        text: 'Kashi-kashi',
-        href: 'https://www.bbc.com/hausa/podcasts/p08mlgcb',
+        text: 'Latsa nan domin shiga',
+        href: 'https://www.whatsapp.com/channel/0029VahbuTkEwEjqW42kXB2K',
+      },
+      skipLink: {
+        text: 'Tsallake %title%',
+        endTextVisuallyHidden: 'Karshen %title%',
       },
     },
     translations: {
+      and: 'da',
+      readTime: {
+        readTimePrefix: 'Lokacin karatu',
+        long: 'Dogon labari',
+        minute: 'Minti',
+      },
       pagination: {
         previousPage: 'Koma baya',
         nextPage: 'Na gaba',
@@ -76,14 +86,24 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
       relatedTopics: 'Labarai masu alaka',
+      moreOnThis: '',
       navMenuText: 'Sassa',
+      liteSite: {
+        onboardingMessage:
+          'Kana amfani da shafin BBC mai bayyana rubutu kawai (babu hoto) domin rage cin data. Idan ana so a ga hotuna da bidiyo sai a koma babban shafinmu.',
+        toMainSite: 'Koma shafi mai hoto',
+        informationPage: 'Samu ƙarin bayani kan shafin tattalin data',
+        informationPageLink: 'https://www.bbc.com/hausa/articles/c3355en3g6jo',
+        dataSaving: 'Karanta rubutu kawai domin rage cin data',
+        articleDataSavingLinkText: 'Karanta rubutu kawai domin rage cin data',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
       liveExperiencePage: {
-        liveLabel: 'Kai-tsaye',
+        liveLabel: 'Kai tsaye',
         liveCoverage: 'Rahoto kai-tsaye',
         breaking: 'Labarai da dumi-dumi',
         postedAt: 'An wallafa a',
@@ -245,6 +265,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'Saurari',
         watch: 'Kalla',
+        watchMoments: 'Kalli abubuwan da ke faruwa',
         listenLive: 'Saurara Kai Tsaye',
         listenNext: 'Saurari na gaba',
         liveLabel: 'KAI TSAYE',
@@ -256,6 +277,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
         download: 'Sauke shiri',
         closeVideo: 'Fita',
+        endOfContentClose: 'Karshen wannan abun ciki. Fita',
       },
       socialEmbed: {
         caption: {
@@ -379,7 +401,7 @@ export const service: DefaultServiceConfig = {
         text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [
@@ -422,30 +444,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Labaran Duniya',
         url: '/hausa',
-      },
-      {
-        title: 'Wasanni',
-        url: '/hausa/topics/cz74kjgv220t',
-      },
-      {
-        title: 'Nishadi',
-        url: '/hausa/topics/cg726kz37wdt',
-      },
-      {
-        title: 'Cikakkun Rahotanni',
-        url: '/hausa/topics/cnl7wd77wj2t',
-      },
-      {
-        title: 'Bidiyo',
-        url: '/hausa/topics/cn09qmz4jryt',
-      },
-      {
-        title: 'Shirye-shirye na Musamman',
-        url: '/hausa/topics/cnl7wd9pddlt',
-      },
-      {
-        title: 'Shirye-shiryen rediyo',
-        url: '/hausa/topics/c4nx34q5724t',
       },
     ],
   },

@@ -17,6 +17,15 @@ const styles = {
       }),
     }),
 
+  listStretchHeight: ({ mq }: Theme) =>
+    css({
+      [mq.GROUP_2_MIN_WIDTH]: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'stretch',
+      },
+    }),
+
   item: ({ spacings, mq, palette }: Theme) =>
     css({
       '.promo-image': {
@@ -25,7 +34,7 @@ const styles = {
           display: 'inline-block',
           verticalAlign: 'top',
         },
-        'div div:nth-child(2)': {
+        'div div:last-child': {
           [mq.GROUP_1_MAX_WIDTH]: {
             position: 'relative',
           },
@@ -42,7 +51,7 @@ const styles = {
               },
             },
             time: {
-              marginLeft: `${spacings.FULL}rem`,
+              marginInlineStart: `${spacings.FULL}rem`,
               padding: '0',
             },
           },
@@ -60,6 +69,7 @@ const styles = {
       display: 'inline-block',
       marginBottom: `${spacings.DOUBLE}rem`,
       width: '100%',
+
       [mq.GROUP_2_MAX_WIDTH]: {
         borderTop: `1px ${palette.GREY_3} solid`,
         paddingTop: `${spacings.FULL}rem`,

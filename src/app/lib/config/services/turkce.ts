@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     atiAnalyticsProducerName: 'TURKISH',
-    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/turkce/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
     externalLinkText: ', dış',
@@ -47,6 +47,14 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 've',
+      readTime: {
+        readTimePrefix: 'Okuma süresi',
+        quick: 'Kısa haber',
+        long: 'Uzun haber',
+        minute: 'dk',
+        minutes: 'dk',
+      },
       pagination: {
         previousPage: 'Önceki',
         nextPage: 'Sonraki',
@@ -57,10 +65,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
+      continueReading: 'Okumaya devam edin',
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',
       relatedTopics: 'İlgili Konular',
+      moreOnThis: '',
       navMenuText: 'Kategoriler',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -229,6 +239,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Diğerleri',
         closeVideo: 'Çıkış',
+        endOfContentClose: 'Bu içerik sona erdi. Çıkış',
       },
       socialEmbed: {
         caption: {
@@ -285,7 +296,7 @@ export const service: DefaultServiceConfig = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [
@@ -324,34 +335,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Haberler',
         url: '/turkce',
-      },
-      {
-        title: 'Türkiye',
-        url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: 'Orta Doğu',
-        url: '/turkce/topics/cg726y2qxg1t',
-      },
-      {
-        title: 'Rusya-Ukrayna Savaşı',
-        url: '/turkce/topics/cy0ryl4pvx6t',
-      },
-      {
-        title: 'Ekonomi',
-        url: '/turkce/topics/cg726y2k82dt',
-      },
-      {
-        title: 'Sağlık',
-        url: '/turkce/topics/cnq68n6wgzdt',
-      },
-      {
-        title: 'Bilim',
-        url: '/turkce/topics/c404v74nk56t',
-      },
-      {
-        title: 'Teknoloji',
-        url: '/turkce/topics/c2dwqnwkvnqt',
       },
     ],
   },

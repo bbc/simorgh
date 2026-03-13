@@ -1,7 +1,4 @@
-/** @jsx jsx */
-
-import { PropsWithChildren, useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import Text from '#app/components/Text';
 import CallToActionLinkContext from '../CallToActionLinkContext';
 import styles from './index.styles';
@@ -18,7 +15,7 @@ export default ({
   className,
   shouldUnderlineOnHoverFocus,
 }: PropsWithChildren<TextProps>) => {
-  const { fontVariant, size } = useContext(CallToActionLinkContext);
+  const { fontVariant, size } = use(CallToActionLinkContext);
   return (
     <Text
       as={as}

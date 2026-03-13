@@ -1,23 +1,19 @@
-/** @jsx jsx */
-
-import { jsx, useTheme } from '@emotion/react';
-
+import { useTheme } from '@emotion/react';
 import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import { Article } from '#app/models/types/optimo';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import TopStoriesSection from './PagePromoSections/TopStoriesSection';
-
 import styles from './ArticlePage.styles';
 
 const SecondaryColumn = ({
   pageData,
-  sendOptimizelyEvents,
+  experimentProps,
 }: {
   pageData: Article;
-  sendOptimizelyEvents: boolean;
+  experimentProps?: ComponentExperimentProps;
 }) => {
   const topStoriesContent = pageData?.secondaryColumn?.topStories;
   const featuresContent = pageData?.secondaryColumn?.features;
-
   const {
     palette: { GREY_2 },
   } = useTheme();
@@ -34,7 +30,7 @@ const SecondaryColumn = ({
         >
           <TopStoriesSection
             content={topStoriesContent}
-            sendOptimizelyEvents={sendOptimizelyEvents}
+            experimentProps={experimentProps}
           />
         </div>
       )}
@@ -42,9 +38,9 @@ const SecondaryColumn = ({
         <div css={styles.featuresSection} data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
-            sendOptimizelyEvents={sendOptimizelyEvents}
             parentColumns={{}}
             sectionLabelBackground={GREY_2}
+            experimentProps={experimentProps}
           />
         </div>
       )}

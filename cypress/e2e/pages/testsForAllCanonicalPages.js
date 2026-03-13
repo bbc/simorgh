@@ -1,14 +1,7 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable cypress/unsafe-to-chain-command */
-/* eslint-disable import/prefer-default-export */
 import envConfig from '../../support/config/envs';
-import config from '../../support/config/services';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
-  service,
-  pageType,
-}) => {
+export default ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
     describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
@@ -28,10 +21,8 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
   }
 
   describe('Header Tests', () => {
-    const serviceName = config[service]?.name || service;
     // limit number of tests to 2 services for navigation toggling
-    const testMobileNav =
-      serviceName === 'ukchina' || serviceName === 'persian';
+    const testMobileNav = service === 'zhongwen' || service === 'persian';
 
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {

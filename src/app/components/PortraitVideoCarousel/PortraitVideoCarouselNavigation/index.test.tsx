@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import { RefObject } from 'react';
 import {
   act,
   screen,
@@ -96,6 +96,7 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     const leftButton = screen.getByTestId('pv-scroll-left');
+    const rightButton = screen.getByTestId('pv-scroll-right');
 
     await act(async () => {
       fireEvent.click(leftButton);
@@ -104,6 +105,7 @@ describe('PortraitCarouselNavigation', () => {
 
     expect(mockRef.current.scrollLeft).toBe(0);
     expect(leftButton).toBeDisabled();
+    expect(rightButton).not.toBeDisabled();
   });
 
   it('Should disable right button when the scroll pane is at the end', async () => {
@@ -118,6 +120,7 @@ describe('PortraitCarouselNavigation', () => {
     });
 
     const rightButton = screen.getByTestId('pv-scroll-right');
+    const leftButton = screen.getByTestId('pv-scroll-left');
 
     await act(async () => {
       fireEvent.click(rightButton);
@@ -128,5 +131,24 @@ describe('PortraitCarouselNavigation', () => {
 
     expect(mockRef.current.scrollLeft).toBe(PROMO_ITEM_WIDTH_MIN * 3);
     expect(rightButton).toBeDisabled();
+    expect(leftButton).not.toBeDisabled();
+  });
+
+  it('Should enable both left and right buttons when scrolled mid way', async () => {
+    const mockRef = createMockScrollElementRef({
+      startScrollPosition: PROMO_ITEM_WIDTH_MIN,
+      itemCount: 4,
+      paneWidth: 1,
+    });
+
+    await act(async () => {
+      render(<PortraitCarouselNavigation scrollPaneRef={mockRef} />);
+    });
+
+    const leftButton = screen.getByTestId('pv-scroll-left');
+    const rightButton = screen.getByTestId('pv-scroll-right');
+
+    expect(leftButton).not.toBeDisabled();
+    expect(rightButton).not.toBeDisabled();
   });
 });

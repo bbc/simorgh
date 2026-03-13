@@ -9,6 +9,52 @@ import {
 import { OptimoImageBlock } from '#app/models/types/optimo';
 import { Translations } from '#app/models/types/translations';
 
+export type SMPEvent = {
+  playlist?: {
+    items: PlaylistItem[];
+  };
+  direction?: string;
+  method?: 'swipe' | 'wheel';
+  ended?: boolean;
+};
+
+export type MediaPlayerEvents =
+  | 'playlistLoaded'
+  | 'pluginLoaded'
+  | 'fullscreenExit'
+  | 'statsNavigation'
+  | 'pause';
+
+export type EventMapping = Partial<
+  Record<MediaPlayerEvents, (_e: SMPEvent) => void>
+>;
+
+export type Playlist = {
+  title: string;
+  summary?: string;
+  holdingImageURL?: string;
+  items: PlaylistItem[] | LegacyPlayListItem[];
+  guidance?: string;
+  embedRights?: 'allowed';
+  liveRewind?: boolean;
+  simulcast?: boolean;
+  warning?: string;
+};
+
+export type PlaylistItem = {
+  versionID?: string;
+  kind?: string;
+  duration?: number;
+  live?: boolean;
+  serviceID?: string;
+  vpid?: string;
+};
+
+export type LegacyPlayListItem = {
+  href: string;
+  kind: string;
+};
+
 export type PlayerConfig = {
   autoplay?: boolean;
   preload?: string;
@@ -17,6 +63,7 @@ export type PlayerConfig = {
   counterName?: string;
   appType: 'amp' | 'responsive';
   appName: `news-${Services}` | 'news';
+  supportFakeFullscreen?: boolean;
   insideIframe?: boolean;
   embeddedOffsite?: boolean;
   externalEmbedUrl?: string;
@@ -24,21 +71,14 @@ export type PlayerConfig = {
   statsObject: {
     clipPID?: string | null;
     episodePID?: string | null;
-    destination: string;
-    producer: string | '';
+    destination?: string;
+    producer?: string | '';
   };
   mediator?: { host: string };
   ui: PlayerUiConfig;
-  playlistObject?: {
-    title: string;
-    summary?: string;
-    holdingImageURL?: string;
-    items: PlaylistItem[] | LegacyPlayListItem[];
-    guidance?: string;
-    embedRights?: 'allowed';
-    liveRewind?: boolean;
-    simulcast?: boolean;
-    warning?: string;
+  playlistObject?: Playlist;
+  plugins?: {
+    toLoad: { html: string; playerOnly?: boolean }[];
   };
 };
 
@@ -49,25 +89,25 @@ export type PlayerUiConfig = {
   baseColour?: string;
   colourOnBaseColour?: string;
   fallbackBackgroundColour?: string;
-  controls?: { enabled: boolean; volumeSlider?: boolean };
+  controls?: {
+    enabled: boolean;
+    volumeSlider?: boolean;
+    includeNextButton?: boolean;
+    includePreviousButton?: boolean;
+  };
   locale?: { lang: string };
   subtitles?: { enabled: boolean; defaultOn: boolean };
-  fullscreen?: { enabled: boolean };
-};
-
-export type PlaylistItem = {
-  versionID?: string;
-  kind: string;
-  duration?: number;
-  live?: boolean;
-  embedRights?: 'allowed';
-  vpid?: string;
-  serviceID?: string;
-};
-
-export type LegacyPlayListItem = {
-  href: string;
-  kind: string;
+  fullscreen?: { enabled: boolean; useCloseIconForExitFullscreen?: boolean };
+  swipable?: {
+    enabled: boolean;
+    direction: 'Y' | 'X';
+  };
+  poster?: {
+    availableWhenSettingUp: boolean;
+  };
+  pictureInPicture?: {
+    enabled: boolean;
+  };
 };
 
 export type ConfigBuilderProps = {
@@ -113,23 +153,30 @@ export type MediaInfo = {
 export type Player = {
   dispatchEvent(
     dispatchEvent: string,
-    parameters: { updatedAdTag: string },
+    parameters?: { adTag: string | null },
   ): void;
   load: () => void;
   play: () => void;
+  playlist: () => Playlist;
   pause: () => void;
-  bind: (event: string, callback: () => void) => void;
+  previous: () => void;
+  next: () => void;
+  bind: (event: MediaPlayerEvents, callback: (e: SMPEvent) => void) => void;
   loadPlugin: (
     pluginName: { [key: string]: string },
-    parameters: {
+    parameters?: {
       name: string;
       data: {
         adTag: string;
-        debug: boolean;
       };
     },
   ) => void;
-  player: { paused: () => boolean };
+  queuePlaylist: (playlist: Playlist, options?: Partial<PlayerConfig>) => void;
+  setPreviousPlaylist: (
+    playlist: Playlist,
+    options?: Partial<PlayerConfig>,
+  ) => void;
+  settings: () => PlayerConfig;
 };
 
 export type BumpType = {
@@ -154,37 +201,48 @@ export type CaptionBlock = {
 };
 
 export type AresMediaBlock = {
+  id: string;
   type: 'aresMedia';
   model: {
     blocks: [AresMediaMetadataBlock | OptimoImageBlock];
   };
+  position: number[];
 };
 
 export type AresMediaMetadataBlock = {
+  id: string;
+  blockId: string;
   type: 'aresMediaMetadata';
   model: {
     firstPublished?: string;
     live?: boolean;
-    locator: string;
-    originCode: string;
-    text: string;
+    locator?: string;
+    originCode?: string;
+    text?: string;
     title: string;
     synopses: {
-      short: string;
+      short?: string;
+      long?: string;
+      medium?: string;
     };
     imageUrl: string;
     format: MediaType;
     id: string;
     embedding: boolean;
+    advertising: boolean;
     subType: string;
     versions: {
-      availableFrom?: string;
+      availableFrom?: number;
       versionId: string;
       types: string[];
       duration: number;
       durationISO8601?: string;
       warnings?: { [key: string]: string };
+      availableTerritories?: { [key: string]: boolean };
     }[];
+    syndication?: {
+      destinations?: string[];
+    };
     webcastVersions: {
       versionId: string;
       duration: number;
@@ -194,6 +252,7 @@ export type AresMediaMetadataBlock = {
     }[];
     smpKind: string;
   };
+  position: number[];
 };
 
 export type ClipMediaBlock = {
@@ -212,6 +271,7 @@ export type ClipMediaBlock = {
         duration: string;
         kind: string;
         guidance: string | null;
+        orientation: Orientations;
       };
       isEmbeddingAllowed: boolean;
     };
@@ -225,16 +285,18 @@ export type PortraitClipMediaBlock = {
     images: {
       source: string;
       urlTemplate?: string;
+      altText?: string;
     }[];
     video: {
       id: string;
       title: string;
+      holdingImageURL?: string;
       version: {
         id: string;
         duration: string;
         kind: string;
         guidance: string | null;
-        territories: string[];
+        territories?: string[];
       };
       isEmbeddingAllowed: boolean;
     };
@@ -272,6 +334,8 @@ export type MediaCollection = {
   model: {
     synopses: {
       short: string;
+      medium: string;
+      long: string;
     };
     masterbrand: {
       networkName: string;
@@ -284,6 +348,7 @@ export type MediaCollection = {
     };
     imageUrlTemplate: string;
     title: string;
+    overtypedTitle?: string;
   };
 };
 

@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tigrinya',
     atiAnalyticsProducerId: '91',
     atiAnalyticsProducerName: 'TIGRINYA',
-    useReverb: true,
     chartbeatDomain: 'tigrinya.bbc.co.uk',
     brandName: 'BBC News ትግርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'ትግርኛ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tigrinya.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tigrinya/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ትግርኛ',
     dir: `ltr`,
     externalLinkText: ', ደጋዊ',
@@ -64,6 +64,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'እና',
+      readTime: {
+        readTimePrefix: 'ንባብ',
+        minute: 'ደቓይቕ',
+      },
       pagination: {
         previousPage: 'ናይ ሕሉፍ',
         nextPage: 'ዝቕጽል',
@@ -74,11 +79,23 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'ንኹሉ ርኣዩ',
       home: 'መእተዊ ገጽ',
+      continueReading: 'ምንባብ ቀጽል',
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
       relatedTopics: 'ተዛማዲ ዛዕባታት',
+      moreOnThis: '',
       navMenuText: 'ክፍልታት',
+      liteSite: {
+        onboardingMessage:
+          'እዚ ውሑድ ዳታ ብምጥቃም፡ ጽሑፍ ጥራይ እተንብቡሉ መርበብ ሓበሬታ ቢቢሲ ትግርኛ እዩ። ምሉእ ኣሳእልን ቪድዮታትን ንምርኣይ ድማ ቀንዲ መርበብ ሓበሬታና ተጠቐሙ።',
+        toMainSite: 'ናብ ቀንዲ መርበብ ሓበሬታ ንምብጻሕ [መላግቦ ‘ምሉእ ትሕዝቶ’] ተጠቐሙ',
+        informationPage: 'ብዛዕባ ዳታ ምቝጣብ ንምፍላጥ ኣብዚ መላግቦ ነዚ ዝገልጽ ዓንቀጽ ጠውቑ',
+        informationPageLink:
+          'https://www.bbc.com/tigrinya/articles/cp3lwnwjp3qo',
+        dataSaving: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
+        articleDataSavingLinkText: 'ብውሑድ ዳታ ጽሑፍ ጥራሕ ኣንብቡ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -231,6 +248,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ዕምሪ ፈነወ',
         recentEpisodes: 'ዝሓለፉ ክፋላት',
         closeVideo: 'ออก',
+        endOfContentClose: 'እዚ ትሕዝቶ ተወዲኡ። ዝጽዉዑ',
       },
       socialEmbed: {
         caption: {
@@ -286,7 +304,7 @@ export const service: DefaultServiceConfig = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [
@@ -327,34 +345,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ዜና',
         url: '/tigrinya',
-      },
-      {
-        title: 'ኤርትራ',
-        url: '/tigrinya/topics/c1gdqrg28zxt',
-      },
-      {
-        title: 'ኢትዮጵያ',
-        url: '/tigrinya/topics/cdr56vrknx6t',
-      },
-      {
-        title: 'ሱዳን',
-        url: '/tigrinya/topics/c5qvp11n2vzt',
-      },
-      {
-        title: 'ማእከላይ ምብራቕ',
-        url: '/tigrinya/topics/c5qvp1qz3q6t',
-      },
-      {
-        title: 'ሳይንስን ጥዕናን',
-        url: '/tigrinya/topics/cx2yler1d05t',
-      },
-      {
-        title: 'ቪድዮ',
-        url: '/tigrinya/topics/crldzm9n4rdt',
-      },
-      {
-        title: 'ኣመና ፍቱዋት',
-        url: '/tigrinya/popular/read',
       },
     ],
     timezone: 'Africa/Addis_Ababa',

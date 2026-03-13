@@ -1,17 +1,17 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
-import { PortraitVideoPromoProps } from '#app/models/types/portraitVideo';
+import { useTheme } from '@emotion/react';
 import Image from '#app/components/Image';
 import Text from '#app/components/Text';
 import { Play } from '#app/components/icons';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import moment from 'moment';
 import formatDuration from '#app/lib/utilities/formatDuration';
-import { useContext, FocusEvent } from 'react';
+import { use, FocusEvent } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
@@ -19,34 +19,48 @@ const DEFAULT_TRANSLATION = {
   play: 'Play',
   duration: 'Duration',
 };
-export default (item: PortraitVideoPromoProps) => {
+
+type PortraitVideoPromoProps = {
+  block: PortraitClipMediaBlock;
+  eventTrackingData: EventTrackingData;
+  blockPosition?: number;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation?: string;
+  onClick?: () => void;
+};
+
+export default ({
+  block,
+  blockPosition = 0,
+  eventTrackingData,
+  onClick,
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  playDurationVariation,
+}: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
-  const {
-    id,
-    images,
-    headlines,
-    video,
-    onClick,
-    itemPosition = 0,
-    groupTracker,
-  } = item;
   const {
     defaultImage,
     defaultImageAltText,
     translations: { media = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
-  const imageUrl = images?.[0]?.url ?? defaultImage;
+  const { images, video } = block.model;
+  // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+  const isLargeVariation = playDurationVariation === 'large';
+
+  const imageUrl = images?.[0]?.source ?? defaultImage;
   const imageUrlTemplate = images?.[0]?.urlTemplate;
   const alt = images?.[0]?.altText || defaultImageAltText;
-  const headline = headlines?.promoHeadline || '';
-  const mediaISO8601Duration = video?.version.duration;
+  const headline = video?.title || '';
+  const mediaISO8601Duration = video?.version?.duration;
+
   const {
     video: mediaType,
     play: actionType,
     duration: durationTranslation,
   } = media;
-  let momentDuration = null;
+
+  let momentDuration: moment.Duration | null = null;
   let durationString = '';
   let durationSpokenString = '';
   if (mediaISO8601Duration) {
@@ -77,28 +91,38 @@ export default (item: PortraitVideoPromoProps) => {
     imageWidthLarge: 256,
   });
 
-  const adjustedItemPosition = itemPosition + 1;
-  const eventTrackingData = {
-    componentName: `portrait-video-promo-${adjustedItemPosition}`,
-    groupTracker,
+  const fallbackSrcSets = getSrcSets({
+    imageUrlTemplate: imageUrlTemplate?.replace('.webp', ''),
+    mq,
+    imageWidthSmall: 64,
+    imageWidthLarge: 256,
+  });
+
+  const eventTrackingDataExtended = {
+    ...eventTrackingData,
+    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+    ...(playDurationVariation && {
+      sendOptimizelyEvents: true,
+      experimentName: 'newswb_ws_play_and_duration_size_increase_2',
+      experimentVariant: playDurationVariation,
+    }),
     viewThreshold: 1,
     itemTracker: {
       type: 'portrait-video-promo',
       text: headline,
-      position: adjustedItemPosition,
-      ...(momentDuration && { duration: momentDuration.asSeconds() }),
-      resourceId: id,
+      position: blockPosition + 1,
+      resourceId: video?.id,
+      ...(momentDuration && { duration: momentDuration.asMilliseconds() }),
     },
   };
 
-  const viewTracker = useViewTracker(eventTrackingData);
+  const viewTracker = useViewTracker(eventTrackingDataExtended);
+
   const { onClick: clickTrackerHandler } =
-    useClickTrackerHandler(eventTrackingData);
+    useClickTrackerHandler(eventTrackingDataExtended) ?? {};
 
   const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    if (clickTrackerHandler) {
-      clickTrackerHandler(e);
-    }
+    if (clickTrackerHandler) clickTrackerHandler(e);
     if (onClick) onClick();
   };
 
@@ -109,6 +133,7 @@ export default (item: PortraitVideoPromoProps) => {
         src={imageUrl}
         aspectRatio={[9, 16]}
         srcSet={srcSets?.srcSet}
+        fallbackSrcSet={fallbackSrcSets?.srcSet}
         sizes={srcSets?.sizes}
         lazyLoad
       />
@@ -121,12 +146,21 @@ export default (item: PortraitVideoPromoProps) => {
         data-testid="promo-button"
       >
         <div css={styles.gradientOverlay}>
-          <div css={styles.forcedColourBackground}>
+          <div css={styles.textWrapper}>
             {mediaISO8601Duration && (
               <div css={styles.durationContainer} aria-hidden="true">
-                <Play css={styles.playIcon} />
+                <Play
+                  css={
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    isLargeVariation ? styles.playIconLarge : styles.playIcon
+                  }
+                />
                 <time dateTime={mediaISO8601Duration}>
-                  <Text size="brevier" css={styles.duration}>
+                  <Text
+                    // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
+                    size={isLargeVariation ? 'pica' : 'brevier'}
+                    css={styles.duration}
+                  >
                     {durationString}
                   </Text>
                 </time>

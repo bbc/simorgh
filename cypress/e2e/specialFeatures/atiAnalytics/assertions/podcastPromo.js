@@ -5,10 +5,9 @@ const { PODCAST_PROMO } = COMPONENTS;
 
 export const assertPodcastPromoComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertPodcastPromoComponentView = ({
     assertATIComponentViewEvent({
       component: PODCAST_PROMO,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertPodcastPromoComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Podcast Promo component', () => {
     interceptATIAnalyticsBeacons();
@@ -49,9 +46,8 @@ export const assertPodcastPromoComponentClick = ({
     assertATIComponentClickEvent({
       component: PODCAST_PROMO,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

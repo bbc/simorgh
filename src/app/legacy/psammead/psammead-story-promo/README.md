@@ -29,8 +29,6 @@ The `StoryPromo` component is designed to be used on 'index' pages, which are pa
 <!-- prettier-ignore -->
 | Argument  | Type | Required | Default | Example |
 | --------- | ---- | -------- | ------- | ------- |
-| Script    | object | yes | latin | `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
-| service | string | yes | N/A | `'news'` |
 | promoHasImage | bool | no | true | `false` |
 | promoType | string | no | `regular` | `top` |
 
@@ -39,8 +37,6 @@ The `StoryPromo` component is designed to be used on 'index' pages, which are pa
 <!-- prettier-ignore -->
 | Argument  | Type | Required | Default | Example |
 | --------- | ---- | -------- | ------- | ------- |
-| Script    | object | yes | latin | `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
-| service | string | yes | N/A | `'news'` |
 | promoHasImage | bool | no | true | `false` |
 | promoType | string | no | `regular` | `top` |
 
@@ -61,7 +57,7 @@ On the other hand, when there is exactly one Index Also, it should use the `Inde
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example        |
 | -------- | ---- | -------- | ------- | -------------- |
-| children | node | yes      | N/A     | `<IndexAlsosUl><IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi></IndexAlsosUl>`|
+| children | node | yes      | N/A     | `<IndexAlsosUl><IndexAlsosLi  url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator  type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi  url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi></IndexAlsosUl>`|
 | offScreenText | string | no | null | `Related content` |
 
 Data attributes, such as `data-e2e` can be passed in for testing as well.
@@ -71,7 +67,7 @@ Data attributes, such as `data-e2e` can be passed in for testing as well.
 <!-- prettier-ignore -->
 | Argument | Type | Required | Default | Example        |
 | -------- | ---- | -------- | ------- | -------------- |
-| children | node | yes      | N/A     | `<IndexAlsosLi script={latin} service="news" url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator service="news" type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi script={latin} service="news url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
+| children | node | yes      | N/A     | `<IndexAlsosLi  url="https://www.bbc.co.uk/news" mediaIndicator={<MediaIndicator  type="video" indexAlsos/>}>Related content 1</IndexAlsosLi><IndexAlsosLi url="https://www.bbc.co.uk/news">Related content 2</IndexAlsosLi>`|
 
 #### IndexAlsoLi Props
 
@@ -79,11 +75,9 @@ Data attributes, such as `data-e2e` can be passed in for testing as well.
 | Argument       | Type   | Required | Default | Example  |
 | -------------- | ------ | -------- | ------- | -------- |
 | children       | node   | yes      | N/A     | `This is a headline` |
-| script         | object | yes      | latin | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service        | string | yes      | N/A     | `'news'`|
 | url            | string | yes      | N/A     | `'https://www.bbc.co.uk/news'`|
 | dir            | string | no       | `ltr`   | `rtl`   |
-| mediaIndicator | node   | no       | null    | `<MediaIndicator service="news" type="video" indexAlsos/>` |
+| mediaIndicator | node   | no       | null    | `<MediaIndicator  type="video" indexAlsos/>` |
 | mediaType      | string | no       | null    | `Video` |
 
 #### IndexAlso Props
@@ -92,11 +86,9 @@ Data attributes, such as `data-e2e` can be passed in for testing as well.
 | Argument       | Type   | Required | Default | Example  |
 | -------------- | ------ | -------- | ------- | -------- |
 | children       | node   | yes      | N/A     | `This is a headline` |
-| script         | object | yes      | latin | { canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }|
-| service        | string | yes      | N/A     | `'news'`|
 | url            | string | yes      | N/A     | `'https://www.bbc.co.uk/news'`|
 | dir            | string | no       | `ltr`   | `rtl`   |
-| mediaIndicator | node   | no       | null    | `<MediaIndicator service="news" type="video" indexAlsos/>` |
+| mediaIndicator | node   | no       | null    | `<MediaIndicator  type="video" indexAlsos/>` |
 | mediaType      | string | no       | null    | `Video` |
 
 ## Usage
@@ -112,7 +104,7 @@ On the other hand, a `promoType` prop of `leading` can be passed to place the In
 This prop must be passed to the StoryPromo, Headline and Summary components.
 
 ```jsx
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import StoryPromo, {
   Headline,
   Summary,
@@ -123,32 +115,23 @@ import StoryPromo, {
   IndexAlsosLi,
 } from '#psammead/psammead-story-promo/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import LiveLabel from '#psammead/psammead-live-label/src';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const Image = <img src="https://foobar.com/image.jpg" />;
 
-const IndexAlsosComponent = ({ alsoItems, script, service }) => (
+const IndexAlsosComponent = ({ alsoItems }) => (
   //This example doesn't show how the alsoItems are destructured to get the respective data
   <IndexAlsos offScreenText="Related content">
     {alsoItems.length > 1 ? (
       <IndexAlsosUl>
         <IndexAlsosLi
-          script={script}
-          service={service}
           url="https://www.bbc.co.uk/news"
-          mediaIndicator={
-            <MediaIndicator service={service} type="video" indexAlsos />
-          }
+          mediaIndicator={<MediaIndicator type="video" indexAlsos />}
         >
           Related text 1
         </IndexAlsosLi>
-        <IndexAlsosLi
-          script={script}
-          service={service}
-          url="https://www.bbc.co.uk/news"
-        >
+        <IndexAlsosLi url="https://www.bbc.co.uk/news">
           Related text 2
         </IndexAlsosLi>
       </IndexAlsosUl>
@@ -160,28 +143,18 @@ const IndexAlsosComponent = ({ alsoItems, script, service }) => (
 
 const Info = ({ isLive, alsoItems }) => (
   <Fragment>
-    <Headline script={latin} service="news" promoType="top">
+    <Headline promoType="top">
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel>
-            The headline of the live promo
-          </LiveLabel>
+          <LiveLabel>The headline of the live promo</LiveLabel>
         ) : (
           'The headline of the promo'
         )}
       </Link>
     </Headline>
-    <Summary script={latin} service="news" promoType="top">
-      The summary of the promo
-    </Summary>
+    <Summary promoType="top">The summary of the promo</Summary>
     <time>12 March 2019</time>
-    {topStory && alsoItems && (
-      <IndexAlsosComponent
-        alsoItems={alsoItems}
-        script={latin}
-        service="news"
-      />
-    )}
+    {topStory && alsoItems && <IndexAlsosComponent alsoItems={alsoItems} />}
   </Fragment>
 );
 

@@ -1,15 +1,16 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
-import { EventTrackingMetadata } from '#app/models/types/eventTracking';
+import { Summary } from '#app/models/types/curationData';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Heading from '../Heading';
 import MaskedImage from '../MaskedImage';
 import styles from './index.styles';
 import Text from '../Text';
 import LivePulse from '../LivePulse';
 import LiveText from '../LiveText';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import BillboardCurationGrid from './BillboardCurationGrid';
 
 interface BillboardProps {
   heading: string;
@@ -18,8 +19,9 @@ interface BillboardProps {
   image: string;
   altText: string;
   id?: string;
-  eventTrackingData?: EventTrackingMetadata;
+  eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
+  summaries?: Summary[];
 }
 
 export default ({
@@ -29,23 +31,42 @@ export default ({
   image,
   altText,
   id = 'billboard',
-  eventTrackingData,
   showLiveLabel,
+  eventTrackingData = { componentName: 'billboard' },
+  summaries = [],
 }: BillboardProps) => {
-  const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const { translations } = use(ServiceContext);
+  const showMoreOnThisTitle = translations.moreOnThis;
+  const hasPromoItems = summaries.length > 1;
+  const isSingleImageLayout = !hasPromoItems;
+
+  const eventTrackingDataWithOptimizelyEvents = {
+    ...eventTrackingData,
+  };
+
+  const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
+  const clickTrackerHandler = useClickTrackerHandler(
+    eventTrackingDataWithOptimizelyEvents,
+  );
 
   return (
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
-        <div css={styles.backgroundContainer} />
-        <div css={styles.contentContainer}>
+        <div css={[styles.backgroundContainer, styles.backgroundRedGradient]} />
+        <div
+          css={[
+            styles.contentContainer,
+            !hasPromoItems && styles.contentContainerNoPromos,
+          ]}
+        >
           <MaskedImage
             imageUrl={image.replace('{width}', '240')}
             imageUrlTemplate={image}
             altText={altText}
             imageWidth={660}
             showPlaceholder={false}
+            showVignette={hasPromoItems}
+            singleImageLayout={isSingleImageLayout}
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -72,6 +93,24 @@ export default ({
               </Text>
             )}
           </div>
+          {hasPromoItems && (
+            <div css={styles.curationGridSection}>
+              {showMoreOnThisTitle && (
+                <Heading
+                  level={2}
+                  size="greatPrimer"
+                  css={[styles.billboardMoreOnThisHeading]}
+                >
+                  {showMoreOnThisTitle}
+                </Heading>
+              )}
+
+              <BillboardCurationGrid
+                summaries={summaries.slice(1)}
+                eventTrackingData={eventTrackingData}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ The `psammead-consent-banner` component is a styled `div` that encapsulates info
 | Argument | Type | Required | Default | Example |
 | -------- | ---- | -------- | ------- | --------|
 | title | string | Yes | N/A | `We've updated our Privacy and Cookies Policy` |
-| text | element | Yes | N/A | `<ConsentBannerText script={script}> This is some text</ConsentBannerText>` |
+| text | element | Yes | N/A | `<ConsentBannerText> This is some text</ConsentBannerText>` |
 | accept | element | Yes | N/A | `<button type="button">Accept</button>` |
 | reject | element | Yes | N/A | `<a href="https://www.bbc.co.uk/usingthebbc/your-data-matters">Find out what's changed</a>` |
 | id | string | No | Null | `ConsentBanner` |
@@ -37,7 +37,6 @@ import {
   ConsentBanner,
   ConsentBannerText,
 } from '#psammead/psammead-consent-banner/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 
 const Accept = (
   <button onClick={() => {}} type="button">
@@ -52,7 +51,7 @@ const Reject = (
 );
 
 const Text = (
-  <ConsentBannerText dir="ltr" script={latin} service="news">
+  <ConsentBannerText dir="ltr">
     This is some text with <a href="https://www.bbc.com/news">a link</a> inside
     the consent banner. We have made some important changes to our Privacy and
     Cookie Policy.
@@ -67,7 +66,6 @@ const props = {
   reject: Reject,
   id: null,
   hidden: false,
-  script: latin,
   service: 'news',
 };
 

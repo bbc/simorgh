@@ -31,16 +31,35 @@ jobs:
       - name: Add bbc.com domain
         run: sudo echo "127.0.0.1 localhost.bbc.com" | sudo tee -a /etc/hosts
 
+      - name: Install Cypress dependency
+        run: |
+          chmod +x ./scripts/installCypress.sh
+          ./scripts/installCypress.sh
+
+      - name: Install Cypress binary
+        run: yarn cypress:install
+
       - name: Run Simorgh E2Es (Application)
         uses: cypress-io/github-action@v6
         with:
+          install: false
           build: yarn build
           start: yarn start
           command: yarn cypress:application
 
+      - name: Install Cypress dependency (Next.js app)
+        run: |
+          chmod +x ./scripts/installCypress.sh
+          ./scripts/installCypress.sh ws-nextjs-app
+
+      - name: Install Cypress binary (Next.js app)
+        working-directory: ws-nextjs-app
+        run: yarn cypress:install
+
       - name: Run Simorgh NextJS E2Es
         uses: cypress-io/github-action@v6
         with:
+          install: false
           working-directory: ws-nextjs-app
           build: yarn build
           start: yarn start

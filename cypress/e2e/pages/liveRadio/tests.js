@@ -1,8 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
 import path from 'ramda/src/path';
-import config from '../../../support/config/services';
-import envConfig from '../../../support/config/envs';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -30,19 +29,11 @@ export default ({ service, pageType }) =>
       },
     );
 
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have a script with src value set to chartbeat source', () => {
-          cy.hasScriptWithChartbeatSrc();
-        });
-        it('should have chartbeat config set to window object', () => {
-          cy.hasGlobalChartbeatConfig();
-        });
-      }
-    });
+    chartbeatTests();
+
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
-        cy.fixture(`toggles/${config[service].name}.json`).then(toggles => {
+        cy.fixture(`toggles/${service}.json`).then(toggles => {
           const scheduleIsEnabled = path(
             ['liveRadioSchedule', 'enabled'],
             toggles,

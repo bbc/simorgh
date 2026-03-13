@@ -12,8 +12,7 @@ export const service: DefaultServiceConfig = {
     articleTimestampSuffix: '',
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
-    atiAnalyticsProducerName: 'POLSKA',
-    useReverb: true,
+    atiAnalyticsProducerName: 'POLISH',
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -45,6 +44,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'i',
       pagination: {
         page: 'Strona',
         previousPage: 'Poprzednia',
@@ -53,6 +53,11 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'Reklama',
+      },
+      readTime: {
+        readTimePrefix: 'Czas czytania',
+        long: 'Długi format',
+        minute: 'min',
       },
       byline: {
         articleInformation: 'Informacje o artykule',
@@ -68,6 +73,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Przejdź do treści',
       relatedContent: 'Powiązane treści',
       relatedTopics: 'Powiązane tematy',
+      moreOnThis: '',
       navMenuText: 'Sekcje',
       liteSite: {
         onboardingMessage:
@@ -238,6 +244,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Ten podcast dostępny jest też na',
         download: 'Pobierz',
         closeVideo: 'Zamknij',
+        endOfContentClose: 'Koniec tej treści. Zamknij',
       },
       socialEmbed: {
         caption: {
@@ -272,7 +279,7 @@ export const service: DefaultServiceConfig = {
       },
       topStoriesTitle: 'Najważniejsze Wiadomości',
       latestMediaTitle: 'Najnowsze wideo',
-      featuresAnalysisTitle: 'Zobacz więcej',
+      featuresAnalysisTitle: 'Polecane przez redakcję',
       ugc: {
         noJsHeading: 'Nie można załadować tej strony.',
         noJsDescription:
@@ -349,7 +356,7 @@ export const service: DefaultServiceConfig = {
         text: 'Dlaczego ufamy BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Przeczytaj o naszych zasadach linkowania zewnętrznego.',
       },
       links: [
@@ -370,6 +377,10 @@ export const service: DefaultServiceConfig = {
           text: 'Pliki cookie',
         },
         {
+          href: 'https://www.bbc.com/polska/send/u203797512',
+          text: 'Skontaktuj się z nami',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Inne języki',
         },
@@ -384,6 +395,12 @@ export const service: DefaultServiceConfig = {
         'BBC. BBC nie ponosi odpowiedzialności za treści na stronach zewnętrznych.',
     },
     timezone: 'Europe/Warsaw',
+    navigation: [
+      {
+        title: 'Strona główna',
+        url: '/polska',
+      },
+    ],
   },
 };
 export default withContext(service);

@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter } from 'react-router-dom';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
@@ -8,11 +8,15 @@ import {
   articleDataNews,
   articleDataNewsWithEmbeds,
   articleDataPersian,
+  articleDataPersianWithFourParagraphs,
   articleDataPidgin,
   articleDataPidginWithAds,
   articleDataPidginWithByline,
-  articleDataPidginWithPV,
-  articleDataPortugueseWithPV,
+  articleDataPidginWithSubByline,
+  articleDataRussianWithPVButNoWatchMomentsTranslation,
+  articleDataPortugueseWithPVNotUnderHeadline,
+  articleDataPortugueseWithPVUnderHeadline,
+  articleDataHindi,
   promoSample,
   articlePglDataPidgin,
   articleStyDataPidgin,
@@ -20,6 +24,7 @@ import {
 import { data as newsMostReadData } from '#data/news/mostRead/index.json';
 import { data as persianMostReadData } from '#data/persian/mostRead/index.json';
 import { data as pidginMostReadData } from '#data/pidgin/mostRead/index.json';
+import { portraitVideoFixture } from '#app/components/PortraitVideoCarousel/fixture';
 import {
   textBlock,
   blockContainingText,
@@ -28,8 +33,9 @@ import {
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';
-
-import { Article } from '#app/models/types/optimo';
+import { Curation } from '#app/models/types/curationData';
+import { Article, OptimoBlock } from '#app/models/types/optimo';
+import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import {
@@ -53,12 +59,17 @@ jest.mock('../../components/ChartbeatAnalytics', () => {
 const atiAnalyticsSpy = jest.spyOn(ATIAnalytics, 'default');
 atiAnalyticsSpy.mockImplementation(() => <div>ATI Analytics</div>);
 
-jest.mock('#app/legacy/containers/OptimizelyArticleCompleteTracking');
-jest.mock('#app/legacy/containers/OptimizelyPageViewTracking');
-
+jest.mock('#app/components/OptimizelyPageMetrics');
 jest.mock('#app/hooks/useOptimizelyVariation', () => ({
   __esModule: true,
+  ...jest.requireActual('#app/hooks/useOptimizelyVariation'),
   default: jest.fn(),
+}));
+
+jest.mock('#app/lib/utilities/onClient', () => ({
+  __esModule: true,
+  default: jest.fn(),
+  onClient: jest.fn(() => true),
 }));
 
 const input = {
@@ -138,6 +149,12 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
+  const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it.each([
     {
       testScenario:
@@ -758,6 +775,34 @@ describe('Article Page', () => {
     expect(getByText('UGC Core Features 1 - Custom Form')).toBeInTheDocument();
   });
 
+  it('should render a byline when passed a byline', async () => {
+    const pageDataWithByline = {
+      ...articleDataPidginWithByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
+  it('should render a byline when passed a subByline', async () => {
+    const pageDataWithSubByline = {
+      ...articleDataPidginWithSubByline,
+    };
+
+    const { getByTestId } = render(
+      <Context service="news">
+        <ArticlePage pageData={pageDataWithSubByline} />
+      </Context>,
+    );
+
+    expect(getByTestId('byline')).toBeInTheDocument();
+  });
+
   it('should set "amphtml" link tag for asset', async () => {
     render(
       <Context service="pidgin">
@@ -908,21 +953,398 @@ describe('Article Page', () => {
 
   describe('when rendering an article page with a portrait video', () => {
     it.each`
-      pageData                       | service         | expected
-      ${articleDataPidginWithPV}     | ${'pidgin'}     | ${'Watch Moments'}
-      ${articleDataPortugueseWithPV} | ${'portuguese'} | ${'Assista'}
-    `(
-      `should render the $expected title with the MediaLoader component`,
-      ({ pageData, service, expected }) => {
-        render(
-          <Context service={service}>
-            <ArticlePage pageData={pageData} />
-          </Context>,
+      pageData                                                | service         | expected     | scenario
+      ${articleDataPortugueseWithPVNotUnderHeadline}          | ${'portuguese'} | ${'Assista'} | ${'should render the Watch Moments title because translation exists'}
+      ${articleDataRussianWithPVButNoWatchMomentsTranslation} | ${'russian'}    | ${undefined} | ${'should not render the Watch Moments title because no translation exists'}
+    `('$scenario', ({ pageData, service, expected }) => {
+      render(
+        <Context service={service}>
+          <ArticlePage pageData={pageData} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      if (expected) {
+        expect(title).toBeInTheDocument();
+        expect(title?.textContent).toEqual(expected);
+      } else {
+        expect(title).not.toBeInTheDocument();
+      }
+    });
+
+    it('should not render the portrait video title when the portrait video is directly under a headline', () => {
+      render(
+        <Context service="portuguese">
+          <ArticlePage pageData={articleDataPortugueseWithPVUnderHeadline} />
+        </Context>,
+      );
+
+      const title = screen.queryByRole('strong');
+      expect(title).not.toBeInTheDocument();
+    });
+
+    it('should render read time component when readTime is supplied in metadata', () => {
+      const dataWithReadTime = {
+        ...articleDataPidginWithByline,
+        metadata: {
+          ...articleDataPidginWithByline.metadata,
+          stats: {
+            readTime: 5,
+            wordCount: 500,
+          },
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataWithReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).toBeInTheDocument();
+    });
+
+    it('should not render read time component when readTime is not supplied in metadata', () => {
+      const dataMissingReadTime = {
+        ...articleDataPidginWithByline,
+        metadata: {
+          ...articleDataPidginWithByline.metadata,
+          stats: {},
+        },
+      };
+      const { queryByTestId } = render(
+        <Context service="pidgin">
+          <ArticlePage pageData={dataMissingReadTime} />
+        </Context>,
+      );
+
+      expect(queryByTestId('read-time')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Adaptive media curation', () => {
+    beforeEach(() => {
+      // force the article tod2 variant in these tests so adaptive curation can render.
+      mockUseOptimizelyVariation.mockReturnValue('adaptive_variation');
+    });
+
+    afterEach(() => {
+      mockUseOptimizelyVariation.mockReset();
+    });
+
+    const mediaCurationFixture: Curation = {
+      title: 'वीडियो',
+      visualProminence: 'NORMAL',
+      position: 0,
+      curationId: 'urn:bbc:vivo:curation:test-id',
+      link: 'https://www.bbc.com/hindi/topics/cw9kv0kpxydt',
+      summaries: [
+        {
+          type: 'video',
+          title: 'वीडियो 1',
+          link: 'https://www.bbc.com/hindi/articles/test-video-1',
+          imageUrl:
+            'https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/test.jpg.webp',
+          imageAlt: 'वीडियो 1',
+        },
+      ],
+    };
+    const relatedContentBlock: OptimoBlock = {
+      id: 'related-content-test-id',
+      type: 'relatedContent',
+      model: {
+        blocks: [],
+      },
+      position: [99],
+    };
+
+    const pageDataWithMediaCuration: Article = {
+      ...articleDataHindi,
+      secondaryColumn: {
+        topStories: [],
+        features: [],
+        mediaCuration: mediaCurationFixture,
+      },
+    };
+    const pageDataWithMediaCurationAndRelatedContent: Article = {
+      ...pageDataWithMediaCuration,
+      content: {
+        ...pageDataWithMediaCuration.content,
+        model: {
+          ...pageDataWithMediaCuration.content.model,
+          blocks: [
+            ...pageDataWithMediaCuration.content.model.blocks,
+            relatedContentBlock,
+          ],
+        },
+      },
+    };
+
+    it('renders media curation after related content when related content is present', () => {
+      const { queryByTestId, container } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
+        </Context>,
+      );
+
+      const relatedContentSection = container.querySelector(
+        '[data-e2e="related-content-heading"]',
+      );
+      const adaptiveMediaCuration = queryByTestId('adaptive-media-curation');
+
+      expect(relatedContentSection).toBeInTheDocument();
+      expect(adaptiveMediaCuration).toBeInTheDocument();
+      expect(
+        (relatedContentSection as Element).compareDocumentPosition(
+          adaptiveMediaCuration as Node,
+        ),
+      ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+
+    it('passes the active experiment to ati analytics when the adaptive variant is on', () => {
+      render(
+        <Context service="hindi">
+          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
+        </Context>,
+      );
+
+      expect(atiAnalyticsSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          atiData: expect.objectContaining({
+            experimentName: 'newswb_ws_tod_article_2',
+            experimentVariant: 'adaptive_variation',
+          }),
+        }),
+        undefined,
+      );
+    });
+
+    it('does not render media curation when data is missing', () => {
+      const { queryByTestId } = render(
+        <Context service="hindi">
+          <ArticlePage pageData={articleDataHindi} />
+        </Context>,
+      );
+
+      expect(queryByTestId('adaptive-media-curation')).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Continue Reading Toggle', () => {
+    it.each([
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is false',
+        toggleEnabled: false,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button when toggle is true but no block is present',
+        toggleEnabled: true,
+        hasContinueReadingBlock: false,
+        isLite: false,
+        shouldBeDisplayed: false,
+      },
+      {
+        testScenario:
+          'should render Continue Reading Button when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: false,
+        shouldBeDisplayed: true,
+      },
+      {
+        testScenario:
+          'should not render Continue Reading Button on Lite pages when toggle is true',
+        toggleEnabled: true,
+        hasContinueReadingBlock: true,
+        isLite: true,
+        shouldBeDisplayed: false,
+      },
+    ])(
+      '$testScenario',
+      ({
+        toggleEnabled,
+        shouldBeDisplayed,
+        hasContinueReadingBlock,
+        isLite = false,
+      }) => {
+        const continueReadingBlock = {
+          id: 'continue-reading-block',
+          type: 'continueReading',
+          model: {},
+        };
+        const baseBlocks =
+          articleDataPersianWithFourParagraphs.content.model.blocks;
+
+        const blocks = hasContinueReadingBlock
+          ? [...baseBlocks, continueReadingBlock]
+          : [...baseBlocks];
+
+        const pageData: Article = {
+          ...articleDataPersianWithFourParagraphs,
+          content: {
+            ...articleDataPersianWithFourParagraphs.content,
+            model: {
+              ...articleDataPersianWithFourParagraphs.content.model,
+              blocks,
+            },
+          },
+        };
+
+        render(<ArticlePage pageData={pageData} />, {
+          service: 'persian',
+          isLite,
+          toggles: { continueReadingButton: { enabled: toggleEnabled } },
+        });
+
+        const continueReadingButton = screen.queryByTestId(
+          'continue-reading-button',
         );
 
-        const title = screen.queryByRole('strong');
-        expect(title?.textContent).toEqual(expected);
+        if (shouldBeDisplayed) {
+          expect(continueReadingButton).toBeInTheDocument();
+        } else {
+          expect(continueReadingButton).not.toBeInTheDocument();
+        }
       },
     );
+  });
+  describe('Portrait Video Carousel', () => {
+    const portraitVideoItems = {
+      title: 'Portrait Video Carousel',
+      portraitVideo: {
+        blocks: [...portraitVideoFixture.blocks],
+      },
+    };
+    it('should render the carousel when portraitVideoItems are present and the toggle is enabled', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+      const { queryAllByTestId } = render(
+        <ArticlePage pageData={dataWithPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: true } },
+        },
+      );
+
+      await waitFor(() => {
+        const carousels = queryAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoItems are present but the toggle is disabled', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+
+      const { queryByTestId } = render(
+        <ArticlePage pageData={dataWithPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
+      );
+
+      await waitFor(() => {
+        expect(
+          queryByTestId('portrait-video-carousel'),
+        ).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoItems are absent and the toggle is disabled', async () => {
+      const dataWithoutPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: undefined,
+      };
+      const { queryByTestId } = render(
+        <ArticlePage pageData={dataWithoutPVItems} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
+      );
+
+      await waitFor(() => {
+        expect(
+          queryByTestId('portrait-video-carousel'),
+        ).not.toBeInTheDocument();
+      });
+    });
+
+    it('should not render the carousel when portraitVideoBlocks is empty', async () => {
+      const dataWithEmptyBlocks = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+          portraitVideo: {
+            ...portraitVideoItems.portraitVideo,
+            blocks: [],
+          },
+        },
+      };
+      const { queryAllByTestId } = render(
+        <ArticlePage pageData={dataWithEmptyBlocks} />,
+        {
+          service: 'pidgin',
+          toggles: { articlePortraitVideo: { enabled: false } },
+        },
+      );
+
+      await waitFor(() => {
+        expect(queryAllByTestId('portrait-video-carousel')).toHaveLength(0);
+      });
+    });
+
+    it('should use title if provided', async () => {
+      const dataWithPVItems = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          ...portraitVideoItems,
+        },
+      };
+      render(<ArticlePage pageData={dataWithPVItems} />, {
+        service: 'pidgin',
+        toggles: { articlePortraitVideo: { enabled: true } },
+      });
+
+      await waitFor(() => {
+        const carousels = screen.getAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toHaveAttribute(
+          'aria-label',
+          'Portrait Video Carousel',
+        );
+      });
+    });
+
+    it('should use fallback title if not provided', async () => {
+      const dataWithoutTitle = {
+        ...articleDataPidgin,
+        portraitVideoItems: {
+          portraitVideo: { ...portraitVideoItems.portraitVideo },
+        },
+      };
+      render(<ArticlePage pageData={dataWithoutTitle} />, {
+        service: 'pidgin',
+        toggles: { articlePortraitVideo: { enabled: true } },
+      });
+
+      await waitFor(() => {
+        const fallbackTitle = 'Look'; // The fallback title comes from translations.media.watch
+        const carousels = screen.getAllByTestId('portrait-video-carousel');
+        expect(carousels[0]).toHaveAttribute('aria-label', fallbackTitle);
+      });
+    });
   });
 });

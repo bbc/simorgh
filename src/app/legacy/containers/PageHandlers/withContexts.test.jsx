@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, act } from '@testing-library/react';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
@@ -52,7 +51,7 @@ describe('withContexts HOC', () => {
         enabled: false,
       },
     },
-    mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+    serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
     isUK: true,
   };
 
@@ -109,7 +108,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
         await act(async () => render(<ContextsHOC {...fixture} />));
         expect(requestContextSpy).toHaveBeenCalled();
@@ -145,7 +144,7 @@ describe('withContexts HOC', () => {
             enabled: false,
           },
         },
-        mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+        serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
       };
 
       await act(async () => render(<ContextsHOC {...fixture} />));
@@ -286,7 +285,7 @@ describe('withContexts HOC', () => {
               enabled: false,
             },
           },
-          mvtExperiments: [{ experimentName: 'foo', variation: 'bar' }],
+          serverSideExperiments: [{ experimentName: 'foo', variation: 'bar' }],
         };
 
         await act(async () => render(<ContextsHOC {...fixture} />));

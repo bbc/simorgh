@@ -2,6 +2,8 @@
   "data": {
     "title": "BBC News Afrique",
     "description": "",
+    "seoTitle": "BBC News Afrique",
+    "seoDescription": "",
     "pageType": "home",
     "curations": [
       {
@@ -78,6 +80,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:89df7c50-e6ca-472c-aed4-8e4eb6c08045",
         "curationType": "tipo-curation",
+        "link": "https://www.bbc.com/mundo/articles/cmyk0d45ddpo",
         "position": 1,
         "title": "This is the title of the curation",
         "visualProminence": "MAXIMUM",
@@ -168,6 +171,7 @@
         "pageCount": 1,
         "curationId": "urn:bbc:tipo:list:b327c1d9-9454-4061-9d79-f27a313f6fec",
         "curationType": "tipo-curation",
+        "link": "https://www.bbc.com/mundo/articles/cmyk0d45ddpo",
         "position": 3,
         "title": "Choix de la rédaction",
         "visualProminence": "HIGH",

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import React, { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import Metadata from '#app/components/Metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './styles';
@@ -24,7 +22,7 @@ const UGCPageLayout = ({ initialScreen = 'form', pageData }: PageProps) => {
         noJsDescription = fallbackTranslations.noJsDescription,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const {
     title,

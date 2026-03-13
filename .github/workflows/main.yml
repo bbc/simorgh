@@ -1,0 +1,62 @@
+name: Notify on PR with >12 Comments
+
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  notify-on-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR comments count
+        id: get_comments
+        uses: actions/github-script@v7
+        with:
+          script: |
+            let prNumber;
+            let totalComments = 0;
+            
+            if (context.eventName === 'pull_request') {
+              prNumber = context.payload.pull_request.number;
+            } else if (context.eventName === 'issue_comment') {
+              // Check if the comment is on a PR
+              if (!context.payload.issue.pull_request) {
+                console.log('Comment is not on a PR, skipping');
+                return;
+              }
+              prNumber = context.payload.issue.number;
+            } else if (context.eventName === 'pull_request_review_comment') {
+              prNumber = context.payload.pull_request.number;
+            } else {
+              console.log('Unsupported event type:', context.eventName);
+              return;
+            }
+            console.log('prNumber', prNumber);
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            const { data: review_comments } = await github.rest.pulls.listReviewComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+            });
+            console.log('review_comments.length', review_comments.length);
+            
+            totalComments = review_comments.length + comments.length;
+            console.log('totalComments', totalComments);
+            core.setOutput("totalComments", totalComments);
+            core.setOutput("prNumber", prNumber);
+          result-encoding: string
+
+      - name: Send slack message if comment threshold is exceeded
+        if: steps.get_comments.outputs.totalComments > 12
+        uses: slackapi/slack-github-action@v2.1.0
+        with:
+          webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            "text": "Pull Request #${{ steps.get_comments.outputs.prNumber }} now has over 12 comments.\n<https://github.com/bbc/simorgh/pull/${{ steps.get_comments.outputs.prNumber }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.totalComments }}"

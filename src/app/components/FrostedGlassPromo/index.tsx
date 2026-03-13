@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import React, { PropsWithChildren, useContext } from 'react';
+import type { ReactNode } from 'react';
+
+import { PropsWithChildren, use } from 'react';
 import pick from 'ramda/src/pick';
 import Lazyload from 'react-lazyload';
 
@@ -32,7 +32,7 @@ type FrostedGlassPromoProps = {
     width: number;
     height: number;
   };
-  footer: React.ReactNode | null;
+  footer: ReactNode | null;
   url: string;
   eventTrackingData: EventTrackingBlock | null;
   index: number;
@@ -50,7 +50,7 @@ const FrostedGlassPromo = ({
   minimumContrast = 8,
   paletteSize = 10,
 }: PropsWithChildren<FrostedGlassPromoProps>) => {
-  const { isAmp } = useContext(RequestContext);
+  const { isAmp } = use(RequestContext);
   const isCanonical = !isAmp;
   const relativeUrl = makeRelativeUrlPath(url);
 
@@ -60,7 +60,7 @@ const FrostedGlassPromo = ({
   });
 
   const promoText = (
-    <React.Fragment>
+    <>
       <h3 css={styles.header}>
         <a
           css={theme => [
@@ -80,7 +80,7 @@ const FrostedGlassPromo = ({
         </a>
       </h3>
       {footer}
-    </React.Fragment>
+    </>
   );
 
   // The ClickableArea component is an anchor ("a") element

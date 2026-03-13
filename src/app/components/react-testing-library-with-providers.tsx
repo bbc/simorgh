@@ -1,6 +1,8 @@
-import React, { FC, PropsWithChildren, ReactElement } from 'react';
+import { FC, PropsWithChildren, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 
+import { AccountProvider } from '#app/contexts/AccountContext';
+import { IdctaConfig } from '#app/models/types/account';
 import { ServiceContextProvider } from '../contexts/ServiceContext';
 import { RequestContextProvider } from '../contexts/RequestContext';
 import { ToggleContextProvider } from '../contexts/ToggleContext';
@@ -11,6 +13,11 @@ import { PageTypes, Services, Toggles, Variants } from '../models/types/global';
 import { ATIData } from './ATIAnalytics/types';
 
 jest.mock('./ThemeProvider');
+
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
 
 interface Props extends PropsWithChildren {
   id?: string | null;
@@ -32,6 +39,7 @@ interface Props extends PropsWithChildren {
   isNextJs?: boolean;
   pageLang?: string;
   isUK?: boolean | null;
+  idctaConfig?: IdctaConfig | null;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -54,6 +62,7 @@ const AllTheProviders: FC<Props> = ({
   statusCode = null,
   isNextJs = false,
   isUK = null,
+  idctaConfig = null,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -79,13 +88,15 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <EventTrackingContextProvider atiData={atiData}>
-            <UserContextProvider>
-              <ThemeProvider service={service} variant={variant}>
-                {children}
-              </ThemeProvider>
-            </UserContextProvider>
-          </EventTrackingContextProvider>
+          <AccountProvider initialConfig={idctaConfig}>
+            <EventTrackingContextProvider atiData={atiData}>
+              <UserContextProvider>
+                <ThemeProvider service={service} variant={variant}>
+                  {children}
+                </ThemeProvider>
+              </UserContextProvider>
+            </EventTrackingContextProvider>
+          </AccountProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     </ToggleContextProvider>
@@ -116,6 +127,7 @@ const customRender = (
     isNextJs,
     pageLang,
     isUK,
+    idctaConfig,
   } = options || {};
 
   return render(ui, {
@@ -140,6 +152,7 @@ const customRender = (
         isNextJs={isNextJs}
         pageLang={pageLang}
         isUK={isUK}
+        idctaConfig={idctaConfig}
       >
         {children}
       </AllTheProviders>

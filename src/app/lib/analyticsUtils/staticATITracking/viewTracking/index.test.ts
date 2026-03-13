@@ -1,4 +1,4 @@
-import { STATIC_ATI_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
+import { STATIC_REVERB_VIEW_TRACKING } from '#app/lib/analyticsUtils/analytics.const';
 import viewTracker from '.';
 
 jest.useFakeTimers();
@@ -12,23 +12,23 @@ describe('View tracking script', () => {
     window.processClientDeviceAndSendStaticBeacon = jest.fn();
   });
 
-  it('STATIC_ATI_VIEW_TRACKING variable is correct', () => {
+  it('STATIC_REVERB_VIEW_TRACKING variable is correct', () => {
     const viewTrackerString = viewTracker.toString();
 
-    const pattern = /STATIC_ATI_VIEW_TRACKING = '([^']+)'/;
+    const pattern = /STATIC_REVERB_VIEW_TRACKING = '([^']+)'/;
 
     const matches = viewTrackerString.match(pattern) || [];
-    const [, liteAtiViewTracking] = matches;
+    const [, liteReverbViewTracking] = matches;
 
-    // STATIC_ATI_VIEW_TRACKING in ./index.ts must match the value of STATIC_ATI_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
-    expect(liteAtiViewTracking).toBe(STATIC_ATI_VIEW_TRACKING);
+    // STATIC_REVERB_VIEW_TRACKING in ./index.ts must match the value of STATIC_REVERB_VIEW_TRACKING in #app/lib/analyticsUtils/analytics.const
+    expect(liteReverbViewTracking).toBe(STATIC_REVERB_VIEW_TRACKING);
   });
 
   it('Calls processClientDeviceAndSendStaticBeacon() when the IntersectionObserver marks it as intersecting.', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
-      STATIC_ATI_VIEW_TRACKING,
-      'https://logws1363.ati-host.net/?',
+      STATIC_REVERB_VIEW_TRACKING,
+      'https://logws1363.xiti.net/?',
     );
     const mockElement = { isIntersecting: true, target: anchorElement };
 
@@ -42,14 +42,14 @@ describe('View tracking script', () => {
 
     expect(
       window.processClientDeviceAndSendStaticBeacon as jest.Mock,
-    ).toHaveBeenCalledWith('https://logws1363.ati-host.net/?');
+    ).toHaveBeenCalledWith({ reverbUrl: 'https://logws1363.xiti.net/?' });
   });
 
   it('should not call processClientDeviceAndSendStaticBeacon() more than once for the same url', () => {
     const anchorElement = document.createElement('a');
     anchorElement.setAttribute(
-      STATIC_ATI_VIEW_TRACKING,
-      'https://logws1363.ati-host.net/?',
+      STATIC_REVERB_VIEW_TRACKING,
+      'https://logws1363.xiti.net/?',
     );
     const mockElement = { isIntersecting: true, target: anchorElement };
 

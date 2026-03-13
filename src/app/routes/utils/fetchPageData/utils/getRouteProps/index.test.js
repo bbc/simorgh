@@ -1,6 +1,5 @@
 import reactRouterConfig from 'react-router-config';
-import isAmpPath from '#app/routes/utils/isAmpPath';
-import isAppPath from '#app/routes/utils/isAppPath';
+import getPathExtension from '#app/utilities/getPathExtension';
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
 import getRouteProps from '.';
 import fallbackServiceParam from './fallbackServiceParam';
@@ -11,16 +10,12 @@ jest.mock('./fallbackServiceParam', () =>
   jest.fn().mockImplementation(() => 'fallbackService'),
 );
 
-jest.mock('#app/routes/utils/isAmpPath', () =>
-  jest.fn().mockImplementation(() => true),
-);
-
-jest.mock('#app/routes/utils/isAppPath', () =>
-  jest.fn().mockImplementation(() => true),
-);
-
-jest.mock('#app/routes/utils/isLitePath', () =>
-  jest.fn().mockImplementation(() => true),
+jest.mock('#app/utilities/getPathExtension', () =>
+  jest.fn().mockImplementation(() => ({
+    isAmp: true,
+    isApp: true,
+    isLite: true,
+  })),
 );
 
 describe('getRouteProps', () => {
@@ -45,16 +40,15 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).toHaveBeenCalled();
-      expect(isAppPath).toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toStrictEqual({
         assetUri: undefined,
         errorCode: undefined,
         id: undefined,
-        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
-        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isAmp: true, // Resolves to true because of the getPathExtension mock (ln14)
+        isApp: true, // Resolves to true because of the getPathExtension mock (ln18)
         isLite: true,
         match: {
           params: {
@@ -88,16 +82,15 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).toHaveBeenCalled();
-      expect(isAppPath).toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toStrictEqual({
         assetUri: undefined,
         errorCode: undefined,
         id: undefined,
-        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
-        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isAmp: true, // Resolves to true because of the getPathExtension mock (ln14)
+        isApp: true, // Resolves to true because of the getPathExtension mock (ln18)
         isLite: true,
         match: {
           params: {
@@ -133,8 +126,7 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).not.toHaveBeenCalled();
-      expect(isAppPath).toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toStrictEqual({
@@ -142,7 +134,7 @@ describe('getRouteProps', () => {
         errorCode: undefined,
         id: undefined,
         isAmp: true,
-        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isApp: true, // Resolves to true because of the getPathExtension mock (ln18)
         isLite: true,
         match: {
           params: {
@@ -175,8 +167,8 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).not.toHaveBeenCalled();
-      expect(isAppPath).toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
+
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toStrictEqual({
@@ -184,7 +176,7 @@ describe('getRouteProps', () => {
         errorCode: undefined,
         id: undefined,
         isAmp: true,
-        isApp: true, // Resolves to true because of the isAppPath mock (ln18)
+        isApp: true, // Resolves to true because of the getPathExtension mock (ln18)
         isLite: true,
         match: {
           params: {
@@ -219,15 +211,15 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('url');
 
-      expect(isAmpPath).toHaveBeenCalled();
-      expect(isAppPath).not.toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
+
       expect(fallbackServiceParam).not.toHaveBeenCalled();
 
       expect(methodCall).toStrictEqual({
         assetUri: undefined,
         errorCode: undefined,
         id: undefined,
-        isAmp: true, // Resolves to true because of the isAmpPath mock (ln14)
+        isAmp: true, // Resolves to true because of the getPathExtension mock (ln14)
         isApp: true,
         isLite: true,
         match: {
@@ -256,8 +248,8 @@ describe('getRouteProps', () => {
 
       const methodCall = await getRouteProps('unknownURL');
 
-      expect(isAmpPath).toHaveBeenCalledWith('unknownURL');
-      expect(isAppPath).toHaveBeenCalledWith('unknownURL');
+      expect(getPathExtension).toHaveBeenCalledWith('unknownURL');
+
       expect(fallbackServiceParam).toHaveBeenCalledWith('unknownURL');
 
       expect(methodCall).toStrictEqual({
@@ -299,8 +291,8 @@ describe('getRouteProps', () => {
         variant: undefined,
       });
 
-      expect(isAmpPath).toHaveBeenCalled();
-      expect(isAppPath).toHaveBeenCalled();
+      expect(getPathExtension).toHaveBeenCalled();
+
       expect(fallbackServiceParam).toHaveBeenCalled();
     });
   });

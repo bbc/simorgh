@@ -1,4 +1,3 @@
-import React from 'react';
 import Footer from '#app/components/Footer';
 import { render, screen } from '../react-testing-library-with-providers';
 
@@ -24,16 +23,6 @@ describe('Footer', () => {
       const linkElement = screen.getByText(text);
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute('href', href);
-    });
-  });
-
-  describe('AMP', () => {
-    it('should render the cookie settings link as a button element', () => {
-      render(<Footer />, { isAmp: true });
-      expect(screen.getByText('Do not share or sell my info')).toHaveAttribute(
-        'data-testid',
-        'amp-cookie-settings-button',
-      );
     });
   });
 

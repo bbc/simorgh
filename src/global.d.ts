@@ -1,7 +1,15 @@
 import { ReverbClient } from '#models/types/eventTracking';
-import { BumpType } from '#app/components/MediaLoader/types';
+import { BumpType, Player } from '#app/components/MediaLoader/types';
+import { EffectiveNetworkType } from '#app/models/types/global';
 
 declare global {
+  interface Navigator {
+    connection?: {
+      effectiveType?: EffectiveNetworkType;
+      addEventListener?: (type: string, listener: () => void) => void;
+      removeEventListener?: (type: string, listener: () => void) => void;
+    };
+  }
   interface Window {
     bbcpage:
       | {
@@ -33,6 +41,11 @@ declare global {
       bumpVersion: string[],
       callback: (Bump: BumpType) => void,
     ) => void;
+    embeddedMedia: {
+      api: {
+        players: () => Record<string, Player>;
+      };
+    };
     mediaPlayers: Record<string, Player>;
     dotcom: {
       ads: {
@@ -43,7 +56,11 @@ declare global {
       cmd: { push: () => void };
     };
     sendStaticBeacon: (url: string, data?: BodyInit | null) => boolean;
-    processClientDeviceAndSendStaticBeacon: (url: string) => void;
+    processClientDeviceAndSendStaticBeacon: (props: {
+      atiUrl?: string;
+      reverbUrl?: string;
+      forwardingUrl?: string;
+    }) => void;
   }
 }
 

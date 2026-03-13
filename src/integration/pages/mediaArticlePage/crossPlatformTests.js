@@ -5,8 +5,8 @@ export default service => {
   runTimestampTests();
 
   describe(`Related Content`, () => {
-    const relatedContentLinks = document.querySelectorAll(
-      '[data-e2e="related-content-heading"] a',
+    const relatedContentLinks = Array.from(
+      document.querySelectorAll('[data-e2e="related-content-heading"] a'),
     );
 
     if (relatedContentLinks) {
@@ -33,8 +33,8 @@ export default service => {
   });
 
   describe('Latest Media', () => {
-    const latestMediaLinks = document.querySelectorAll(
-      '[data-testid="latest-media"] a',
+    const latestMediaLinks = Array.from(
+      document.querySelectorAll('[data-testid="latest-media"] a'),
     );
 
     if (latestMediaLinks) {

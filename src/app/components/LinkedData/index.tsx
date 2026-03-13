@@ -1,11 +1,61 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
+import { Services } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import getAboutTagsContent from './getAboutTagsContent';
-import { LinkedDataProps } from './types';
+import { BylineLinkedData, LinkedDataProps } from './types';
+
+type OrgAuthor = {
+  noBylinesPolicy?: string | null | undefined;
+  '@type': string;
+  name: string;
+  logo: {
+    '@type': string;
+    width: number;
+    height: number;
+    url: string;
+  };
+};
+
+type AuthorStructure = {
+  image?: string;
+  sameAs?: string[];
+  '@type': string;
+  name: string | undefined;
+};
+
+type Author = AuthorStructure | AuthorStructure[];
+
+type SpeakableSpecification = {
+  '@type': 'SpeakableSpecification';
+  xpath: string[];
+};
+
+const SPEAKABLE_ENABLED_SERVICES = ['hindi']; // TODO: to be extended
+const SUPPORTED_SPEAKABLE_TYPES = ['WebPage'];
+
+const getSpeakableXpaths = ({
+  service,
+  seoTitle,
+  type,
+}: {
+  service: Services;
+  seoTitle?: string;
+  type: string;
+}): SpeakableSpecification[] | null => {
+  if (!SUPPORTED_SPEAKABLE_TYPES.includes(type)) return null;
+  if (!SPEAKABLE_ENABLED_SERVICES.includes(service)) return null;
+  if (!seoTitle) return null;
+  return [
+    {
+      '@type': 'SpeakableSpecification',
+      xpath: ['/html/head/title'],
+    },
+  ];
+};
 
 const LinkedData = ({
   showAuthor = false,
@@ -22,6 +72,7 @@ const LinkedData = ({
   entities = [],
   imageLocator,
   bylineLinkedData,
+  mainEntityId,
 }: LinkedDataProps) => {
   const {
     brandName,
@@ -32,8 +83,8 @@ const LinkedData = ({
     service,
     languageName,
     lang,
-  } = useContext(ServiceContext);
-  const { canonicalNonUkLink } = useContext(RequestContext);
+  } = use(ServiceContext);
+  const { canonicalNonUkLink } = use(RequestContext);
   const IMG_TYPE = 'ImageObject';
   const ORG_TYPE = isTrustProjectParticipant
     ? 'NewsMediaOrganization'
@@ -111,12 +162,33 @@ const LinkedData = ({
 
   const hasByline = !!bylineLinkedData;
 
-  const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
-    bylineLinkedData || {};
+  const places: string[] = [];
 
-  const sameAs = [authorTopicUrl, twitterLink].filter(Boolean);
+  const getAuthorTagging = (data: BylineLinkedData | null) => {
+    const { authorName, authorTopicUrl, twitterLink, authorImage, location } =
+      data || {};
 
-  const locationCreated = { '@place': location };
+    const sameAs = [authorTopicUrl, twitterLink].filter(
+      (link): link is string => Boolean(link),
+    );
+    if (location) {
+      if (!places.includes(location)) {
+        places.push(location);
+      }
+    }
+
+    return {
+      '@type': 'Person',
+      name: authorName,
+      ...(sameAs.length && { sameAs }),
+      ...(authorImage && { image: authorImage }),
+    };
+  };
+  const bylineAuthors = bylineLinkedData?.map(data => getAuthorTagging(data));
+
+  const locationCreated = {
+    '@place': places.length === 1 ? places[0] : places,
+  };
 
   const orgAuthor = {
     '@type': ORG_TYPE,
@@ -130,14 +202,17 @@ const LinkedData = ({
     ...(isTrustProjectParticipant && { noBylinesPolicy }),
   };
 
-  const bylineAuthor = {
-    '@type': 'Person',
-    name: authorName,
-    ...(sameAs.length && { sameAs }),
-    ...(authorImage && { image: authorImage }),
-  };
+  let author: OrgAuthor | Author = orgAuthor;
 
-  const author = hasByline ? bylineAuthor : orgAuthor;
+  if (hasByline && bylineAuthors && bylineAuthors.length > 0) {
+    author = bylineAuthors.length === 1 ? bylineAuthors[0] : bylineAuthors;
+  }
+
+  const speakableXpaths = getSpeakableXpaths({
+    service,
+    seoTitle,
+    type,
+  });
 
   const linkedData = {
     '@type': type,
@@ -153,17 +228,17 @@ const LinkedData = ({
     coverageEndTime,
     inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
-    ...(showAuthor && {
-      author,
-    }),
-    ...(hasByline && location && { locationCreated }),
+    ...(showAuthor && { author }),
+    ...(hasByline && places.length > 0 && { locationCreated }),
+    ...(speakableXpaths && { speakable: speakableXpaths }),
+    ...(mainEntityId && { mainEntity: { '@id': mainEntityId } }),
   };
 
   return (
     <Helmet>
       <script type="application/ld+json">
         {serialiseForScript({
-          '@context': 'http://schema.org',
+          '@context': 'https://schema.org',
           '@graph': [{ ...linkedData }, ...entities],
         })}
       </script>

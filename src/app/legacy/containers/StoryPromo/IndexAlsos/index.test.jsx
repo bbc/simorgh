@@ -1,57 +1,32 @@
-import React from 'react';
-import compose from 'ramda/src/compose';
-import {
-  shouldMatchSnapshot,
-  suppressPropWarnings,
-} from '#psammead/psammead-test-helpers/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
 import relatedItems from './relatedItems';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
-import { ServiceContextProvider } from '../../../../contexts/ServiceContext';
 import IndexAlsosContainer from '.';
-import ThemeProvider from '../../../../components/ThemeProvider';
-
-const withServiceContext = component => (
-  <ThemeProvider service="hausa">
-    <ServiceContextProvider service="hausa">{component}</ServiceContextProvider>
-  </ThemeProvider>
-);
-
-const renderWithContext = compose(render, withServiceContext);
-const shouldMatchSnapshotWithContext = (title, component) =>
-  shouldMatchSnapshot(title, withServiceContext(component));
 
 describe('Index Alsos', () => {
-  suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
   describe('Snapshots', () => {
-    shouldMatchSnapshotWithContext(
-      'should render multiple correctly',
-      <IndexAlsosContainer
-        alsoItems={relatedItems}
-        script={latin}
-        service="news"
-      />,
-    );
+    it('should render multiple correctly', () => {
+      const { container } = render(
+        <IndexAlsosContainer alsoItems={relatedItems} />,
+        { service: 'hausa' },
+      );
+      expect(container).toMatchSnapshot();
+    });
 
-    shouldMatchSnapshotWithContext(
-      'should render one correctly',
-      <IndexAlsosContainer
-        alsoItems={[relatedItems[0]]}
-        script={latin}
-        service="news"
-      />,
-    );
+    it('should render one correctly', () => {
+      const { container } = render(
+        <IndexAlsosContainer alsoItems={[relatedItems[0]]} />,
+        { service: 'hausa' },
+      );
+
+      expect(container).toMatchSnapshot();
+    });
   });
 
   describe('Assertions', () => {
     describe('It links to a CPS asset', () => {
       it('should render a regular headline', () => {
-        const { container } = renderWithContext(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+        const { container } = render(
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const firstListItem = container.querySelector('li');
@@ -61,12 +36,8 @@ describe('Index Alsos', () => {
       });
 
       it('should render an overtyped headline', () => {
-        const { container } = renderWithContext(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+        const { container } = render(
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const secondListItem = container.querySelectorAll('li')[1];
@@ -76,12 +47,8 @@ describe('Index Alsos', () => {
       });
 
       it('should render a CPS url', () => {
-        const { container } = renderWithContext(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+        const { container } = render(
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const firstListItem = container.querySelector('li');
@@ -92,12 +59,8 @@ describe('Index Alsos', () => {
 
     describe('It links to a url', () => {
       it('should render a promo headline', () => {
-        const { container } = renderWithContext(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+        const { container } = render(
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const thirdListItem = container.querySelectorAll('li')[2];
@@ -107,12 +70,8 @@ describe('Index Alsos', () => {
       });
 
       it('should render a promo hyperlink', () => {
-        const { container } = renderWithContext(
-          <IndexAlsosContainer
-            alsoItems={relatedItems}
-            script={latin}
-            service="news"
-          />,
+        const { container } = render(
+          <IndexAlsosContainer alsoItems={relatedItems} />,
         );
 
         const thirdListItem = container.querySelectorAll('li')[2];

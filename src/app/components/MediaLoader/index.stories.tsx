@@ -1,11 +1,10 @@
-import React from 'react';
 import { PageTypes, Services } from '#app/models/types/global';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import MediaLoaderComponent from '.';
 import {
   aresMediaBlocks,
   aresMediaPortraitBlocks,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
   legacyMediaBlock,
 } from './fixture';
 import { MediaBlock } from './types';
@@ -66,6 +65,6 @@ export const LivePageMedia = () => (
   <Component
     service="pidgin"
     pageType="live"
-    blocks={clipMediaBlocks as MediaBlock[]}
+    blocks={videoClipMediaBlocks as MediaBlock[]}
   />
 );

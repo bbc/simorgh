@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-marathi',
     atiAnalyticsProducerId: '59',
     atiAnalyticsProducerName: 'MARATHI',
-    useReverb: true,
     chartbeatDomain: 'marathi.bbc.co.uk',
     brandName: 'BBC News मराठी',
     product: 'BBC News',
     serviceLocalizedName: 'मराठी',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/marathi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
     externalLinkText: ', बाहेर',
@@ -61,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'आणि',
+      readTime: {
+        readTimePrefix: 'वाचन वेळ',
+        minute: 'मिनिटे',
+      },
       pagination: {
         page: 'पान',
         previousPage: 'मागील',
@@ -77,6 +82,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
       relatedTopics: 'संबंधित विषय',
+      moreOnThis: '',
       navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
@@ -247,6 +253,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
         download: 'एपिसोड डाऊनलोड करा',
         closeVideo: 'बंद करा',
+        endOfContentClose: 'या सामग्रीचा अंत. बंद करा',
       },
       socialEmbed: {
         caption: {
@@ -305,7 +312,7 @@ export const service: DefaultServiceConfig = {
         text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [
@@ -314,7 +321,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'गोपनीयतेचं धोरण',
         },
         {
@@ -345,30 +352,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'बातम्या',
         url: '/marathi',
-      },
-      {
-        title: 'महाराष्ट्र',
-        url: '/marathi/topics/c5qvpxvv7y3t',
-      },
-      {
-        title: 'भारत',
-        url: '/marathi/topics/cxnyk3y49x6t',
-      },
-      {
-        title: 'आंतरराष्ट्रीय',
-        url: '/marathi/topics/c719d2enyn3t',
-      },
-      {
-        title: 'व्हीडिओ',
-        url: '/marathi/topics/cl29j0epz13t',
-      },
-      {
-        title: 'सोपी गोष्ट',
-        url: '/marathi/topics/cpxrqmrke02t',
-      },
-      {
-        title: 'लोकप्रिय',
-        url: '/marathi/popular/read',
       },
     ],
   },

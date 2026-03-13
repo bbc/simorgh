@@ -1,6 +1,12 @@
-import loadable from '@loadable/component';
+import { Services, ServicesWithVariants } from '#app/models/types/global';
+import { LoadableTheme } from '#app/models/types/theming';
+import loadable from 'next/dynamic';
 
-export const themes = {
+export const themes: Record<
+  Services,
+  | LoadableTheme
+  | Partial<Record<ServicesWithVariants['variant'], LoadableTheme>>
+> = {
   afaanoromoo: loadable(
     () => import(/* webpackChunkName: "themes-afaanoromoo" */ './afaanoromoo'),
   ),
@@ -28,6 +34,7 @@ export const themes = {
   cymrufyw: loadable(
     () => import(/* webpackChunkName: "themes-cymrufyw" */ './cymrufyw'),
   ),
+  dari: loadable(() => import(/* webpackChunkName: "themes-dari" */ './dari')),
   gahuza: loadable(
     () => import(/* webpackChunkName: "themes-gahuza" */ './gahuza'),
   ),
@@ -52,6 +59,9 @@ export const themes = {
   ),
   kyrgyz: loadable(
     () => import(/* webpackChunkName: "themes-kyrgyz" */ './kyrgyz'),
+  ),
+  magyarul: loadable(
+    () => import(/* webpackChunkName: "themes-magyarul" */ './magyarul'),
   ),
   marathi: loadable(
     () => import(/* webpackChunkName: "themes-marathi" */ './marathi'),
@@ -87,6 +97,9 @@ export const themes = {
   ),
   punjabi: loadable(
     () => import(/* webpackChunkName: "themes-punjabi" */ './punjabi'),
+  ),
+  romania: loadable(
+    () => import(/* webpackChunkName: "themes-romania" */ './romania'),
   ),
   russian: loadable(
     () => import(/* webpackChunkName: "themes-russian" */ './russian'),

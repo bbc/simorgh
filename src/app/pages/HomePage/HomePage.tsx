@@ -1,8 +1,6 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -28,6 +26,8 @@ export interface HomePageProps {
     title: string;
     curations: Curation[];
     description: string;
+    seoTitle?: string;
+    seoDescription?: string;
     metadata: {
       atiAnalytics: ATIData;
       type: string;
@@ -43,30 +43,38 @@ const HomePage = ({ pageData }: HomePageProps) => {
     homePageTitle,
     lang,
     brandName,
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const { topStoriesTitle, home } = translations;
   const {
     title,
     description,
-    curations,
+    seoTitle,
+    seoDescription,
     metadata: { atiAnalytics },
   } = pageData;
+  const { curations } = pageData;
+
+  const metadataTitle = seoTitle || homePageTitle;
+  const metadataDescription = seoDescription || description;
+
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
+      {/* EXPERIMENT: PWA Promotional Banner */}
+      <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
-        title={homePageTitle}
+        title={metadataTitle}
         lang={lang}
-        description={description}
+        description={metadataDescription}
         openGraphType="website"
         hasAmpPage={false}
       />
       <LinkedData
         type="CollectionPage"
-        seoTitle={title}
-        headline={title}
+        seoTitle={metadataTitle}
+        headline={metadataTitle}
         entities={[itemList]}
       />
       <Ad slotType="leaderboard" />
@@ -90,12 +98,9 @@ const HomePage = ({ pageData }: HomePageProps) => {
                   link,
                   position,
                   visualStyle,
-                  mostRead,
-                  radioSchedule,
-                  embed,
-                  portraitVideo,
-                },
-                index,
+                  ...curationProps
+                }: Curation,
+                index: number,
               ) => {
                 const nthCurationByStyleAndProminence =
                   getNthCurationByStyleAndProminence({
@@ -107,7 +112,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
                 const indexOfFirstNonBanner =
                   getIndexOfFirstNonBanner(curations);
                 return (
-                  <React.Fragment key={`${curationId}-${position}`}>
+                  <Fragment key={`${curationId}-${position}`}>
                     <HomeCuration
                       visualStyle={visualStyle as VisualStyle}
                       visualProminence={visualProminence as VisualProminence}
@@ -117,18 +122,15 @@ const HomePage = ({ pageData }: HomePageProps) => {
                       position={position}
                       link={link}
                       curationLength={curations?.length}
-                      mostRead={mostRead}
-                      radioSchedule={radioSchedule}
                       nthCurationByStyleAndProminence={
                         nthCurationByStyleAndProminence
                       }
-                      embed={embed}
-                      portraitVideo={portraitVideo}
                       renderVisuallyHiddenH2Title={position === 0}
                       curationId={curationId}
+                      {...curationProps}
                     />
                     {index === indexOfFirstNonBanner && <MPU />}
-                  </React.Fragment>
+                  </Fragment>
                 );
               },
             )}

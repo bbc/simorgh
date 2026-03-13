@@ -1,5 +1,3 @@
-import React from 'react';
-
 import HierarchicalGrid from './index';
 import { pidginPromos, pidginPromosWithMedia } from './fixtures';
 
@@ -12,17 +10,22 @@ const Component = ({
 }) => {
   const fixtureData =
     promosToRender === 'default' ? pidginPromos : pidginPromosWithMedia;
-  return (
-    <HierarchicalGrid
-      headingLevel={2}
-      summaries={fixtureData.slice(0, promoCount)}
-    />
-  );
+
+    const eventTrackingData = {
+      componentName: 'hierarchical-curation-grid',
+    };
+    return (
+      <HierarchicalGrid
+        headingLevel={2}
+        summaries={fixtureData.slice(0, promoCount)}
+        eventTrackingData={eventTrackingData}
+      />
+    );
 };
 
 export default {
   title: 'Components/Curation/Grid - Hierarchical',
-  Component,
+ component: Component,
   args: {
     promoCount: 12,
     promosToRender: 'default',
@@ -45,9 +48,11 @@ export default {
   },
 };
 
-export const WithMedia = {
-  render: () => <Component promoCount={12} promosToRender="withMedia" />,
-  tags: ['!dev'],
-};
+export const Example = (args) => <Component {...args} />;
 
-export const Example = Component;
+export const WithMedia = {
+  args: {
+    promoCount: 12,
+    promosToRender: 'withMedia',
+  },
+};

@@ -5,10 +5,9 @@ const { ARTICLE_LITE_SITE_LINK } = COMPONENTS;
 
 export const assertArticleLiteSiteLinkComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertArticleLiteSiteLinkComponentView = ({
     assertATIComponentViewEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertArticleLiteSiteLinkComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Article Lite Site Link component', () => {
     interceptATIAnalyticsBeacons();
@@ -49,9 +46,8 @@ export const assertArticleLiteSiteLinkComponentClick = ({
     assertATIComponentClickEvent({
       component: ARTICLE_LITE_SITE_LINK,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

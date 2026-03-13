@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { PropsWithChildren, useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import Grid from '../../../../legacy/psammead/psammead-grid/src';
 import { mostReadListGridProps } from '../../utilities/gridProps';
 import * as styles from './index.styles';
@@ -13,7 +11,7 @@ const MostReadList = ({
   columnLayout: initialColumnLayout = 'multiColumn',
   children,
 }: PropsWithChildren<MostReadBaseProps>) => {
-  const { service } = useContext(ServiceContext);
+  const { service } = use(ServiceContext);
   const columnLayout =
     service === 'burmese' ? 'oneColumn' : initialColumnLayout;
 

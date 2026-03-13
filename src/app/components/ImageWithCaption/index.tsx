@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { useContext } from 'react';
+import { use } from 'react';
 import buildIChefURL from '../../lib/utilities/ichefURL';
 import urlWithPageAnchor from '../../lib/utilities/pageAnchor';
 import { createSrcsets } from '../../lib/utilities/srcSet';
@@ -14,7 +12,6 @@ import { RequestContext } from '../../contexts/RequestContext';
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
 
-// @ts-expect-error - TODO: fix types for blocks
 const getText = ({ model }) => model.blocks[0].model.blocks[0].model.text;
 
 const getCopyright = (copyrightHolder: string) => {
@@ -50,7 +47,7 @@ const ImageWithCaption = ({
   sizes,
   shouldPreload,
 }: Props) => {
-  const { isAmp, isLite } = useContext(RequestContext);
+  const { isAmp, isLite } = use(RequestContext);
 
   if (isLite) return null;
   if (!blocks) return null;
@@ -98,12 +95,12 @@ const ImageWithCaption = ({
         width={width}
         lazyLoad={lazyLoad}
         preload={shouldPreloadLeadImage}
+        fetchPriority={shouldPreloadLeadImage ? 'high' : undefined}
         srcSet={primarySrcset || undefined}
         fallbackSrcSet={fallbackSrcset || undefined}
         mediaType={primaryMimeType || undefined}
         fallbackMediaType={fallbackMimeType || undefined}
         sizes={!isAmp ? sizes : undefined}
-        isAmp={isAmp}
         placeholder
         hasCaption
       >

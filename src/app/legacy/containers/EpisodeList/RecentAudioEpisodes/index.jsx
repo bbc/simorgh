@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/aria-role */
-import React, { useContext } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -51,8 +51,8 @@ const RecentAudioEpisodes = ({
   brandId = '',
   pageType,
 }) => {
-  const { translations, service, script, dir, timezone, datetimeLocale } =
-    useContext(ServiceContext);
+  const { translations, service, dir, timezone, datetimeLocale } =
+    use(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
     campaignID:
@@ -63,7 +63,7 @@ const RecentAudioEpisodes = ({
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
-  const { variant } = useContext(RequestContext);
+  const { variant } = use(RequestContext);
 
   if (!episodes.length) return null;
 
@@ -101,22 +101,10 @@ const RecentAudioEpisodes = ({
 
   return (
     <Spacer role="complementary" aria-labelledby="recent-episodes">
-      <StyledSectionLabel
-        script={script}
-        service={service}
-        dir={dir}
-        bar={false}
-        labelId="recent-episodes"
-      >
+      <StyledSectionLabel dir={dir} bar={false} labelId="recent-episodes">
         {recentEpisodesTranslation}
       </StyledSectionLabel>
-      <EpisodeList
-        script={script}
-        service={service}
-        dir={dir}
-        ulProps={ulProps}
-        liProps={liProps}
-      >
+      <EpisodeList dir={dir} ulProps={ulProps} liProps={liProps}>
         {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
@@ -141,7 +129,9 @@ const RecentAudioEpisodes = ({
               <VisuallyHiddenText>
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,
-                  format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
+                  format: episode?.duration?.includes('H')
+                    ? 'h,mm,ss'
+                    : 'mm,ss',
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
@@ -163,9 +153,7 @@ const RecentAudioEpisodes = ({
                     format="LL"
                     dateTimeFormat="YYYY-MM-DD"
                     padding={false}
-                    script={script}
                     locale={datetimeLocale}
-                    service={service}
                     timezone={timezone}
                   />
                 </InlineDiv>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AmpComscoreAnalytics = () => (
   <amp-analytics type="comscore">
     <script

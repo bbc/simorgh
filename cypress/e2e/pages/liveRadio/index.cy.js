@@ -1,9 +1,16 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
+import testsForAllPages from '../testsForAllPages';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import {
+  assertRadioScheduleComponentClick,
+  assertRadioScheduleComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
 
 const pageType = 'liveRadio';
 
-const tests = [e2eTests];
+const tests = [e2eTests, testsForAllPages, testsForAllCanonicalPages];
 
 const testSuites = [
   {
@@ -31,15 +38,15 @@ const testSuites = [
     tests,
   },
   {
-    path: '/bengali/bbc_bangla_radio/liveradio',
-    service: 'bengali',
+    path: '/burmese/bbc_burmese_radio/liveradio',
+    service: 'burmese',
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
   {
-    path: '/burmese/bbc_burmese_radio/liveradio',
-    service: 'burmese',
-    runforEnv: ['local', 'test', 'live'],
+    path: '/dari/bbc_dari_radio/liveradio',
+    service: 'dari',
+    runforEnv: ['test'],
     tests,
   },
   {
@@ -55,20 +62,8 @@ const testSuites = [
     tests,
   },
   {
-    path: '/indonesia/bbc_indonesian_radio/liveradio',
-    service: 'hausa',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/korean/bbc_korean_radio/liveradio',
     service: 'korean',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/kyrgyz/bbc_kyrgyz_radio/liveradio',
-    service: 'kyrgyz',
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
@@ -85,12 +80,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/persian/bbc_dari_radio/liveradio',
-    service: 'persian',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/somali/bbc_somali_radio/liveradio',
     service: 'somali',
     runforEnv: ['local', 'test', 'live'],
@@ -103,20 +92,8 @@ const testSuites = [
     tests,
   },
   {
-    path: '/tamil/bbc_tamil_radio/liveradio',
-    service: 'tamil',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
     path: '/tigrinya/bbc_tigrinya_radio/liveradio',
     service: 'tigrinya',
-    runforEnv: ['local', 'test', 'live'],
-    tests,
-  },
-  {
-    path: '/urdu/bbc_urdu_radio/liveradio',
-    service: 'urdu',
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
@@ -128,7 +105,30 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/hausa/bbc_hausa_radio/liveradio',
+    runforEnv: ['local', 'live'],
+    service: 'hausa',
+    pageIdentifier: 'hausa.bbc_hausa_radio.liveradio.page',
+    siteId: 51,
+    applicationType: 'responsive',
+    contentType: 'player-live',
+    tests: [
+      assertPageView,
+      assertRadioScheduleComponentView,
+      assertRadioScheduleComponentClick,
+    ],
+  },
+];
+
 runTestsForPage({
   pageType,
   testSuites,
+});
+
+runTestsForPage({
+  pageType: 'liveRadio',
+  testSuites: atiAnalyticsTestSuites,
+  testIsolation: true,
 });

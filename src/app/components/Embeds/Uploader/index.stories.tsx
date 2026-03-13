@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 import Uploader from '.';
@@ -25,11 +25,11 @@ const Component = ({ blocks }: PropsWithChildren<ComponentProps>) => (
 export default {
   title: 'Components/Embeds/Uploader',
   Component,
+  globals: {
+    backgrounds: { value: 'Optimo' },
+  },
   parameters: {
     metadata,
-    backgrounds: {
-      default: 'Optimo',
-    },
   },
 };
 

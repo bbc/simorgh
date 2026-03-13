@@ -1,7 +1,5 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
-import { GEL_BREVIER } from '#psammead/gel-foundations/src/typography';
 import { GEL_SPACING } from '#psammead/gel-foundations/src/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
@@ -14,8 +12,8 @@ const Container = styled.div`
 `;
 
 const WarningText = styled.small`
-  ${({ service }) => getSansRegular(service)}
-  ${GEL_BREVIER}
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   display: block;
 
   ${({ isLive }) => `
@@ -31,12 +29,11 @@ const WarningText = styled.small`
 
 const CaptionWrapper = ({
   children,
-  service,
   text,
   additionalText = null,
   describedById = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const isLive = pageType === LIVE_PAGE;
 
   return (
@@ -45,7 +42,6 @@ const CaptionWrapper = ({
       <WarningText
         {...(describedById && { id: describedById })}
         isLive={isLive}
-        service={service}
       >
         {`${text}${additionalText ? ` ${additionalText}` : ''}`}
       </WarningText>

@@ -2,9 +2,7 @@ import { matchRoutes } from 'react-router-config';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
-import isAmpPath from '#app/routes/utils/isAmpPath';
-import isAppPath from '#app/routes/utils/isAppPath';
-import isLitePath from '#app/routes/utils/isLitePath';
+import getPathExtension from '#app/utilities/getPathExtension';
 import routes from '#app/routes';
 import fallbackServiceParam from './fallbackServiceParam';
 
@@ -41,10 +39,12 @@ const getRouteProps = url => {
       ? `${service}${variant ? `/${variant}` : ''}/${assetUri}`
       : undefined;
 
+  const { isAmp, isApp, isLite } = getPathExtension(url);
+
   return {
-    isAmp: amp || isAmpPath(url),
-    isApp: app || isAppPath(url),
-    isLite: lite || isLitePath(url),
+    isAmp: amp || isAmp,
+    isApp: app || isApp,
+    isLite: lite || isLite,
     service: service || fallbackServiceParam(url),
     variant,
     id: id || cpsId,

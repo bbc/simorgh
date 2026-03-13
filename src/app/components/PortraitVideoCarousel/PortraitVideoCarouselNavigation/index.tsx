@@ -1,10 +1,4 @@
-/** @jsx jsx */
-import { useCallback, useContext, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
-import {
-  ScrollDirection,
-  PortraitVideoCarouselNavigationProps,
-} from '#app/models/types/portraitVideo';
+import { useCallback, use, useEffect, useState, RefObject } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
 import styles from './index.styles';
@@ -15,11 +9,21 @@ const DEFAULT_TRANSLATION = {
   next: 'Scroll to next item',
 };
 
-export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
+type ScrollDirection = 'left' | 'right';
+
+type PortraitVideoCarouselNavigationProps = {
+  scrollPaneRef: RefObject<HTMLUListElement | null>;
+  backgroundColor?: string;
+};
+
+export default ({
+  scrollPaneRef,
+  backgroundColor,
+}: PortraitVideoCarouselNavigationProps) => {
   const {
     dir,
     translations: { carousel = DEFAULT_TRANSLATION },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
@@ -59,7 +63,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
   }, [checkScrollButtons, scrollPaneRef]);
 
   return (
-    <div css={styles.buttonGroupOverlay}>
+    <div css={styles.buttonGroupOverlay(backgroundColor)} aria-hidden="true">
       <div css={styles.buttonGroup}>
         <button
           type="button"
@@ -67,6 +71,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           onClick={() => scroll(dir === 'ltr' ? 'left' : 'right')}
           disabled={!canScrollLeft}
           css={styles.navButton}
+          tabIndex={-1}
           data-testid="pv-scroll-left"
         >
           <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
@@ -77,6 +82,7 @@ export default ({ scrollPaneRef }: PortraitVideoCarouselNavigationProps) => {
           onClick={() => scroll(dir === 'ltr' ? 'right' : 'left')}
           disabled={!canScrollRight}
           css={styles.navButton}
+          tabIndex={-1}
           data-testid="pv-scroll-right"
         >
           <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />

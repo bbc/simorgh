@@ -13,12 +13,12 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-zhongwen',
   atiAnalyticsProducerId: '38',
   atiAnalyticsProducerName: 'CHINESE',
-  useReverb: true,
   chartbeatDomain: 'zhongwen.bbc.co.uk',
   brandName: 'BBC News 中文',
   product: 'BBC News',
   serviceLocalizedName: '中文',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/zhongwen.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/zhongwen/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News 中文',
   dir: 'ltr' as Direction,
   service: 'zhongwen' as Services,
@@ -49,7 +49,6 @@ const baseServiceConfig = {
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
-  fonts: [],
   timezone: 'GMT',
 };
 
@@ -78,7 +77,7 @@ export const service: ZhongwenConfig = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -129,40 +128,13 @@ export const service: ZhongwenConfig = {
         title: '主页',
         url: '/zhongwen/simp',
       },
-      {
-        title: '国际',
-        url: '/zhongwen/topics/c83plve5vmjt/simp',
-      },
-      {
-        title: '中国',
-        url: '/zhongwen/topics/ckr7mn6r003t/simp',
-      },
-      {
-        title: '香港',
-        url: '/zhongwen/topics/cezw73jk755t/simp',
-      },
-      {
-        title: '台湾',
-        url: '/zhongwen/topics/cd6qem06z92t/simp',
-      },
-      {
-        title: '英国',
-        url: '/zhongwen/topics/c1ez1k4emn0t/simp',
-      },
-      {
-        title: '财经',
-        url: '/zhongwen/topics/cq8nqywy37yt/simp',
-      },
-      {
-        title: '视频',
-        url: '/zhongwen/topics/cgvl47l38e1t/simp',
-      },
     ],
     scriptLink: {
       text: '繁',
       variant: 'trad',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -177,6 +149,7 @@ export const service: ZhongwenConfig = {
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
       relatedTopics: '相关主题内容',
+      moreOnThis: '',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
@@ -336,6 +309,7 @@ export const service: ZhongwenConfig = {
         podcastExternalLinks: 'This podcast is also available on',
         download: '下载本集节目',
         closeVideo: '退出',
+        endOfContentClose: '内容结尾。退出',
       },
       socialEmbed: {
         caption: {
@@ -393,7 +367,7 @@ export const service: ZhongwenConfig = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
@@ -444,40 +418,13 @@ export const service: ZhongwenConfig = {
         title: '主頁',
         url: '/zhongwen/trad',
       },
-      {
-        title: '國際',
-        url: '/zhongwen/topics/c83plve5vmjt/trad',
-      },
-      {
-        title: '中國',
-        url: '/zhongwen/topics/ckr7mn6r003t/trad',
-      },
-      {
-        title: '香港',
-        url: '/zhongwen/topics/cezw73jk755t/trad',
-      },
-      {
-        title: '台灣',
-        url: '/zhongwen/topics/cd6qem06z92t/trad',
-      },
-      {
-        title: '英國',
-        url: '/zhongwen/topics/c1ez1k4emn0t/trad',
-      },
-      {
-        title: '財經',
-        url: '/zhongwen/topics/cq8nqywy37yt/trad',
-      },
-      {
-        title: '影片',
-        url: '/zhongwen/topics/cgvl47l38e1t/trad',
-      },
     ],
     scriptLink: {
       text: '简',
       variant: 'simp',
     },
     translations: {
+      and: '和',
       pagination: {
         previousPage: '前页',
         nextPage: '后页',
@@ -651,6 +598,7 @@ export const service: ZhongwenConfig = {
         podcastExternalLinks: 'This podcast is also available on',
         download: '下載本集節目',
         closeVideo: '退出',
+        endOfContentClose: '內容結尾。退出',
       },
       socialEmbed: {
         caption: {

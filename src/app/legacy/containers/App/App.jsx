@@ -18,6 +18,8 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'variant',
         'id',
         'assetUri',
+        'cspHeader',
+        'nonce',
         'errorCode',
       ],
       routeProps,
@@ -30,6 +32,9 @@ const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
         'timeOnServer',
         'errorCode',
         'isLite', // isLite is here as it can come from the 'save-data' header setting
+        'nonce',
+        'cspHeader',
+        'navItems',
       ],
       initialData,
     ),
@@ -47,8 +52,9 @@ export const App = ({ initialData, bbcOrigin }) => {
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
     toggles,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
+    country,
   } = initialData;
 
   const routeProps = getRouteProps(pathname);
@@ -62,10 +68,11 @@ export const App = ({ initialData, bbcOrigin }) => {
 
   return renderRoutes(routes, {
     ...state,
+    country,
     bbcOrigin,
     showAdsBasedOnLocation,
     showCookieBannerBasedOnCountry,
-    mvtExperiments,
+    serverSideExperiments,
     isUK,
   });
 };

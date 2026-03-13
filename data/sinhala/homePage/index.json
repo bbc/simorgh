@@ -2,7 +2,9 @@
   "data": {
     "title": "BBC News සිංහල",
     "description": "ශ්‍රී ලංකාව සම්බන්ධ නැවුම් පුවත්, අලුත්ම පුවත්, ක්‍රිකට්, විශේෂ සම්මුඛ සාකච්ඡා, හඬපට, වීඩියෝ පට, ප්‍රවෘත්ති විශ්ලේෂණ, විශේෂාංග, කාලීන ප්‍රවෘත්ති සහ ව්‍යාපාරික හා කලා තොරතුරු දැන ගැනීමට බීබීසී සිංහල වෙබ් අඩවියට පිවිසෙන්න. BBC Sandeshaya, BBC Sinhala",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "BBC News සිංහල",
+  "seoDescription": "ච්‍රි ලංකාවේ සම්බන්ධ ප්‍රධාන, අලුත් ප්‍රවෘත්ති, ක්‍රිකට්, විශේෂ සම්බන්ධතා, BBC Sandeshaya, BBC Sinhala",
     "curations": [
       {
         "summaries": [

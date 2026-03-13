@@ -1,4 +1,3 @@
-import React from 'react';
 import BrandContainer from '.';
 
 const Component = () => {

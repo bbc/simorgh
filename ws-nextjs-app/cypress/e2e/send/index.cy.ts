@@ -1,5 +1,5 @@
 import pageVisit from './pageVisit';
-import { testsThatAlwaysRunForAllPages } from '../testsForAllPages';
+import testsThatAlwaysRunForAllPages from '../testsForAllPages';
 import runTestsForPage from '../../support/helpers/runTestsForPage';
 
 const canonicalTestSuites = [

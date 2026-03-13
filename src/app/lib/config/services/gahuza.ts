@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-gahuza',
     atiAnalyticsProducerId: '40',
     atiAnalyticsProducerName: 'GAHUZA',
-    useReverb: true,
     chartbeatDomain: 'gahuza.bbc.co.uk',
     brandName: 'BBC News Gahuza',
     product: 'BBC News',
     serviceLocalizedName: 'Gahuza',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Gahuza',
     dir: `ltr`,
     externalLinkText: ', bivuye ahandi',
@@ -60,6 +60,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'na',
+      readTime: {
+        readTimePrefix: 'Igihe co gusoma',
+        minute: 'iminota',
+      },
       pagination: {
         previousPage: 'Subira inyuma',
         nextPage: 'Ibikurikira',
@@ -70,10 +75,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Raba vyose',
       home: `Urupapuro rw'itangiriro`,
+      continueReading: 'Komeza usome',
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
       relatedTopics: 'Ibindi bisa n’ibi',
+      moreOnThis: '',
       navMenuText: 'Imice',
       liteSite: {
         onboardingMessage: `Uriko ubona ku rubuga aherekana amakuru mu nyandiko gusa, hakoresha uburyo buke. Ja ku rubuga nyamukuru ubone amakuru mu nyandiko iherekejwe n'amasanamu.`,
@@ -259,6 +266,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
         download: 'Pakurura ikiganiro',
         closeVideo: 'Sohoka',
+        endOfContentClose: 'Iyi nkuru irangiye. Sohoka',
       },
       socialEmbed: {
         caption: {
@@ -317,7 +325,7 @@ export const service: DefaultServiceConfig = {
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
@@ -359,35 +367,6 @@ export const service: DefaultServiceConfig = {
       {
         title: "Urupapuro rw'itangiriro",
         url: '/gahuza',
-      },
-      {
-        title: 'Ibitero bya M23 muri Congo',
-        url: '/gahuza/topics/cx2qn9pqx4yt',
-      },
-      {
-        title: 'Ibiyaga binini',
-        url: '/gahuza/topics/c06gq67y3w5t',
-      },
-      {
-        title: 'Afrika',
-        url: '/gahuza/topics/crvnv566zx9t',
-      },
-      {
-        title: 'Mpuzamahanga',
-        url: '/gahuza/topics/c9dvd93jjkkt',
-      },
-      {
-        title: 'Ubuzima',
-        url: '/gahuza/topics/cnq68qp4kxjt',
-      },
-      {
-        title: 'Imikino',
-        url: '/gahuza/topics/c5qvpq0jzy7t',
-      },
-      {
-        title: 'Amajwi n’amashusho',
-        url: '/gahuza/topics/crldzm936jmt',
-        hideOnLiteSite: true,
       },
     ],
   },

@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const appDirectory = fs.realpathSync(process.cwd());
+const appDirectory = fs.realpathSync(__dirname);
 
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 

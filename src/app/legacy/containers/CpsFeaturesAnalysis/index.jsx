@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -14,7 +14,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '#psammead/gel-foundations/src/spacings';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import FrostedGlassPromo from '../../../components/FrostedGlassPromo/lazy';
@@ -61,34 +60,27 @@ const StoryPromoLiFeatures = styled(StoryPromoLi)`
   }
 `;
 
-const PromoListComponent = ({
-  promoItems,
-  dir = 'ltr',
-  sendOptimizelyEvents,
-}) => {
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
+const PromoListComponent = ({ promoItems, dir = 'ltr', experimentProps }) => {
+  const { serviceDatetimeLocale } = use(ServiceContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
       ...eventTrackingData.block,
-      ...(sendOptimizelyEvents && {
-        optimizely,
-        optimizelyMetricNameOverride: 'features',
-      }),
+      ...(experimentProps && experimentProps),
     },
   };
 
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizely.block);
 
   return (
-    <StoryPromoUlFeatures>
+    <StoryPromoUlFeatures role="list">
       {promoItems.map((item, promoIndex) => {
         return (
           <StoryPromoLiFeatures
             key={item.id || item.uri}
             {...viewTracker}
             border={false}
+            role="listitem"
           >
             <FrostedGlassPromo
               item={item}
@@ -107,17 +99,13 @@ const PromoListComponent = ({
   );
 };
 
-const PromoComponent = ({ promo, dir = 'ltr', sendOptimizelyEvents }) => {
-  const { optimizely } = useContext(OptimizelyContext);
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
+const PromoComponent = ({ promo, dir = 'ltr', experimentProps }) => {
+  const { serviceDatetimeLocale } = use(ServiceContext);
 
   const eventTrackingDataWithOptimizely = {
     block: {
       ...eventTrackingData.block,
-      ...(sendOptimizelyEvents && {
-        optimizely,
-        optimizelyMetricNameOverride: 'features',
-      }),
+      ...(experimentProps && experimentProps),
     },
   };
 
@@ -141,9 +129,9 @@ const FeaturesAnalysis = ({
   content,
   parentColumns,
   sectionLabelBackground,
-  sendOptimizelyEvents,
+  experimentProps = {},
 }) => {
-  const { translations } = useContext(ServiceContext);
+  const { translations } = use(ServiceContext);
 
   const title = pathOr(
     'Features & Analysis',
@@ -161,7 +149,7 @@ const FeaturesAnalysis = ({
       promoListComponent={PromoListComponent}
       columnType="secondary"
       sectionLabelBackground={sectionLabelBackground}
-      sendOptimizelyEvents={sendOptimizelyEvents}
+      experimentProps={experimentProps}
     />
   );
 };

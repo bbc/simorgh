@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { OptimizelyContext, ReactSDKClient } from '@optimizely/react-sdk';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
 import Amp from './Amp';
@@ -17,11 +17,7 @@ import {
   CORRESPONDENT_STORY_PAGE,
   ARTICLE_PAGE,
 } from '../../routes/utils/pageTypes';
-import { PageTypes } from '../../models/types/global';
-
-const blockLevelEventTrackingData = {
-  componentName: 'most-read',
-};
+import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
 
 const mostReadAmpPageTypes: PageTypes[] = [
   STORY_PAGE,
@@ -36,7 +32,8 @@ interface MostReadProps {
   mobileDivider?: boolean;
   headingBackgroundColour?: string;
   className?: string;
-  sendOptimizelyEvents?: boolean;
+  eventTrackingData?: EventTrackingData;
+  experimentProps?: ComponentExperimentProps;
 }
 
 // We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
@@ -84,10 +81,7 @@ const CanonicalMostRead = ({
   headingBackgroundColour: string;
   columnLayout?: ColumnLayout;
   size: Size;
-  eventTrackingData: {
-    optimizely?: ReactSDKClient | null | undefined;
-    componentName: string;
-  };
+  eventTrackingData?: EventTrackingData;
 }) =>
   data ? (
     <MostReadSection className={className}>
@@ -111,14 +105,14 @@ const MostRead = ({
   mobileDivider = false,
   headingBackgroundColour = WHITE,
   className = '',
-  sendOptimizelyEvents = false,
+  experimentProps,
+  eventTrackingData,
 }: MostReadProps) => {
-  const { isAmp, pageType, variant } = useContext(RequestContext);
-  const { optimizely } = useContext(OptimizelyContext);
+  const { isAmp, pageType, variant } = use(RequestContext);
   const {
     service,
     mostRead: { hasMostRead },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { enabled } = useToggle('mostRead');
 
@@ -138,11 +132,9 @@ const MostRead = ({
     isBff,
   });
 
-  const eventTrackingData = {
-    ...blockLevelEventTrackingData,
-    ...(sendOptimizelyEvents && {
-      optimizely,
-    }),
+  const trackingData = eventTrackingData || {
+    componentName: 'most-read',
+    ...(experimentProps && experimentProps),
   };
 
   return isAmp ? (
@@ -162,7 +154,7 @@ const MostRead = ({
       headingBackgroundColour={headingBackgroundColour}
       columnLayout={columnLayout}
       size={size}
-      eventTrackingData={eventTrackingData}
+      eventTrackingData={trackingData}
     />
   );
 };

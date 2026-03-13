@@ -10,7 +10,6 @@ const styles = {
       ...fontSizes.pica,
       ...fontVariants.sansBold,
       padding: `${pixelsToRem(10)}rem`,
-      marginTop: `${spacings.FULL}rem`,
       marginBottom: `${spacings.TRIPLE}rem`,
       marginInlineStart: `${spacings.DOUBLE}rem`,
       border: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,

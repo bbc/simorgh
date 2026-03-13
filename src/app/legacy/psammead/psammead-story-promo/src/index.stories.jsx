@@ -1,5 +1,4 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-webpack5';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import Image from '#psammead/psammead-image/src';
 import MediaIndicator from '#psammead/psammead-media-indicator/src';
@@ -40,21 +39,9 @@ const StyledTime = styled.time`
   padding: 0 ${GEL_SPACING_HLF};
 `;
 
-const MediaIndicatorComponent = ({
-  type,
-  script,
-  service,
-  dir,
-  mediaIndicatorIsInline,
-}) => {
+const MediaIndicatorComponent = ({ type, dir, mediaIndicatorIsInline }) => {
   return (
-    <MediaIndicator
-      type={type}
-      script={script}
-      service={service}
-      dir={dir}
-      isInline={mediaIndicatorIsInline}
-    >
+    <MediaIndicator type={type} dir={dir} isInline={mediaIndicatorIsInline}>
       {!mediaIndicatorIsInline && (
         <StyledTime dateTime="PT2M15S">2:15</StyledTime>
       )}
@@ -64,19 +51,17 @@ const MediaIndicatorComponent = ({
 
 const HiddenText = ({ type, headline }) => (
   /* eslint-disable-next-line jsx-a11y/aria-role */
-  <span role="text">
+  (<span role="text">
     <VisuallyHiddenText>{`${type}, `}</VisuallyHiddenText>
     <span>{headline}</span>
     <VisuallyHiddenText>, 2,15</VisuallyHiddenText>
-  </span>
+  </span>)
 );
 
 const InfoComponent = ({
   headlineText,
   summaryText,
-  script,
   promoType,
-  service,
   isLive,
   dir,
   type,
@@ -86,20 +71,13 @@ const InfoComponent = ({
 }) => (
   <>
     <Headline
-      script={script}
       promoType={promoType}
-      service={service}
       promoHasImage={promoHasImage}
       mediaIndicatorIsInline={mediaIndicatorIsInline}
     >
       <Link href="https://www.bbc.co.uk/news">
         {isLive ? (
-          <LiveLabel
-            service={service}
-            dir={dir}
-            ariaHidden
-            offScreenText="Live"
-          >
+          <LiveLabel dir={dir} ariaHidden offScreenText="Live">
             {headlineText}
           </LiveLabel>
         ) : (
@@ -108,7 +86,6 @@ const InfoComponent = ({
       </Link>
     </Headline>
     <Summary
-      script={script}
       promoType={promoType}
       service={service}
       promoHasImage={promoHasImage}
@@ -116,19 +93,14 @@ const InfoComponent = ({
       {summaryText}
     </Summary>
     {promoType === 'top' && alsoItems && (
-      <IndexAlsosContainer
-        alsoItems={alsoItems}
-        script={script}
-        service={service}
-        dir={dir}
-      />
+      <IndexAlsosContainer alsoItems={alsoItems} dir={dir} />
     )}
   </>
 );
 
 const generateStory =
   ({ promoType, alsoItems = null, displayImage = true }) =>
-  ({ longText: textSnippet, script, service, dir }) => {
+  ({ longText: textSnippet, dir }) => {
     const mediaType = select(
       'Media Type',
       ['No media', 'video', 'audio', 'photogallery'],
@@ -139,9 +111,7 @@ const generateStory =
       <InfoComponent
         headlineText={textSnippet}
         summaryText={textSnippet}
-        script={script}
         promoType={promoType}
-        service={service}
         isLive={boolean('isLive', false)}
         dir={dir}
         type={mediaType}
@@ -164,8 +134,6 @@ const generateStory =
           mediaType !== 'No media' &&
           MediaIndicatorComponent({
             type: mediaType,
-            script,
-            service,
             dir,
             mediaIndicatorIsInline: mediaType && !displayImage,
           })

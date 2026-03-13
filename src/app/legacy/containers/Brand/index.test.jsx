@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   render,
   screen,
@@ -6,17 +5,28 @@ import {
 import { suppressPropWarnings } from '../../psammead/psammead-test-helpers/src';
 import BrandContainer, { getBrandPath } from '.';
 
-const BrandContainerWithContext = (skipLink, scriptLink, linkId) => (
-  <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId} />
-);
+const BrandContainerWithContext = (props = {}) => {
+  const {
+    skipLink = null,
+    scriptLink = null,
+    linkId = null,
+    children = null,
+  } = props;
+
+  return (
+    <BrandContainer skipLink={skipLink} scriptLink={scriptLink} linkId={linkId}>
+      {children}
+    </BrandContainer>
+  );
+};
 
 const mockSkipLink = <div data-testid="skip-link">Skip Link</div>;
 const mockScriptLink = <div data-testid="script-link">Script Link</div>;
 
 describe('getBrandPath', () => {
-  it('should return /ws/languages for ws service', () => {
-    expect(getBrandPath('ws')).toBe('/ws/languages');
-    expect(getBrandPath('ws', 'cyr')).toBe('/ws/languages');
+  it('should return /news for ws service', () => {
+    expect(getBrandPath('ws')).toBe('/news');
+    expect(getBrandPath('ws', 'cyr')).toBe('/news');
   });
 
   it('should return /[service]/[variant] when valid', () => {
@@ -48,14 +58,27 @@ describe(`BrandContainer`, () => {
 
   describe('Assertions', () => {
     it('should render skip to content link if provided', () => {
-      render(BrandContainerWithContext(mockSkipLink));
+      render(BrandContainerWithContext({ skipLink: mockSkipLink }));
 
       const skipLink = screen.getByTestId('skip-link');
       expect(skipLink).not.toBeNull();
     });
 
+    it('should render children if provided', () => {
+      render(
+        BrandContainerWithContext({
+          skipLink: mockSkipLink,
+          scriptLink: mockScriptLink,
+          linkId: 'brandLink',
+          children: <div data-testid="brand-slot">slot</div>,
+        }),
+      );
+
+      expect(screen.getByTestId('brand-slot')).toBeInTheDocument();
+    });
+
     it('should render script link if provided', () => {
-      render(BrandContainerWithContext(null, mockScriptLink));
+      render(BrandContainerWithContext({ scriptLink: mockScriptLink }));
 
       const scriptLink = screen.getByTestId('script-link');
       expect(scriptLink).not.toBeNull();
@@ -69,7 +92,7 @@ describe(`BrandContainer`, () => {
     });
 
     it('should not render script link if not provided', () => {
-      render(BrandContainerWithContext(mockSkipLink));
+      render(BrandContainerWithContext({ skipLink: mockSkipLink }));
 
       const scriptLink = screen.queryByTestId('script-link');
       expect(scriptLink).toBeNull();
@@ -77,7 +100,11 @@ describe(`BrandContainer`, () => {
 
     it('should render a focussable linkId if provided', () => {
       const { container } = render(
-        BrandContainerWithContext(mockSkipLink, mockScriptLink, 'brandLink'),
+        BrandContainerWithContext({
+          skipLink: mockSkipLink,
+          scriptLink: mockScriptLink,
+          linkId: 'brandLink',
+        }),
       );
 
       expect(container.querySelector('#brandLink')).toBe(

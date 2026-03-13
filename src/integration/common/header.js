@@ -2,10 +2,33 @@ export default service => {
   describe('Header', () => {
     it('I can see the branding', () => {
       const logo = document.getElementById('brandSvgHeader');
-
       expect(logo).toBeInTheDocument();
-      expect(logo.parentNode.textContent).toBeTruthy();
-      expect(logo.parentNode.textContent).toMatchSnapshot();
+
+      const logoContainer = logo?.parentNode;
+      expect(logoContainer).toBeTruthy();
+
+      const possibleBrandingLinks = [
+        document.getElementById('topPage'),
+        document.getElementById('brandLink'),
+      ];
+      const brandingLink = possibleBrandingLinks.find(Boolean);
+
+      const brandingTextId = brandingLink?.getAttribute('aria-labelledby');
+      const brandingTextElement = brandingTextId
+        ? document.getElementById(brandingTextId)
+        : null;
+
+      expect(
+        brandingTextElement && brandingTextElement.textContent,
+      ).toBeTruthy();
+      const brandingText = brandingTextElement?.textContent ?? '';
+
+      const svgPath = logo.querySelector('g path');
+
+      expect({
+        svg: svgPath,
+        brandLink: brandingText,
+      }).toMatchSnapshot();
     });
 
     if (service !== 'news' && service !== 'scotland') {
@@ -19,9 +42,11 @@ export default service => {
 
     if (service !== 'scotland') {
       describe('Navigation link', () => {
-        const navigationLinks = document
-          .querySelector('header nav [role="list"]')
-          .querySelectorAll('a');
+        const navigationLinks = Array.from(
+          document
+            .querySelector('header nav [role="list"]')
+            .querySelectorAll('a'),
+        );
 
         navigationLinks.forEach(navigationLink => {
           const linkText = navigationLink.textContent;

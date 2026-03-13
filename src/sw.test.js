@@ -16,19 +16,20 @@ fs.writeFileSync(
   serviceWorkerCode,
 );
 
-Object.defineProperty(self, 'location', {
-  writable: true,
-  value: { assign: jest.fn() },
-});
-
 describe('Service Worker', () => {
   let fetchEventHandler;
 
-  beforeEach(() => {
-    global.self.location = {
-      pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-      hostname: 'www.bbc.com',
-    };
+  beforeAll(() => {
+    Object.defineProperty(navigator, 'serviceWorker', {
+      value: {
+        ready: Promise.resolve({}),
+        addEventListener: jest.fn(),
+        controller: null,
+        register: jest.fn().mockResolvedValue({}),
+        location: { origin: 'https://bbc.com' },
+      },
+      configurable: true,
+    });
   });
 
   afterEach(() => {
@@ -164,10 +165,6 @@ describe('Service Worker', () => {
       global.caches = {
         open: () => Promise.resolve(serviceWorkerCache),
       };
-      global.self.location = {
-        pathname: 'https://www.bbc.com/mundo/articles/c2343244t',
-        hostname: 'www.bbc.com',
-      };
     });
 
     describe('when url is not cacheable', () => {
@@ -198,22 +195,20 @@ describe('Service Worker', () => {
 
     const cacheableAssets = [
       // Fonts
-      'https://ws-downloads.files.bbci.co.uk/fonts/ReithQalam/v1.210/bold.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Rg.woff2',
+      'https://static.files.bbci.co.uk/fonts/reith-qalam/1.310/BBCReithQalam_W_Bd.woff2',
       'https://static.files.bbci.co.uk/fonts/reith/2.512/BBCReithSans_W_Bd.woff2',
-      // Moment-lib - local, test & live
-      'http://localhost:7080/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.../moment-lib.abcd1234.js',
       // Frosted_promo - test & live
-      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
-      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/static/js/modern.frosted_promo.abcd1234.js',
+      'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/_next/static/chunks/frosted_promo.abcd1234.js',
       // PWA Icons - test & live
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-72x72.png?v=1',
       'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
       'https://static.files.bbci.co.uk/ws/simorgh-assets/public/igbo/images/icons/icon-144x144.png?v=2',
-      // Reverb
-      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.9.2.js',
+      // Reverb - preview1, preview2, test & live
+      'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/reverb-3.11.0.js',
+      // Smart Tag
       'https://mybbc-analytics.files.bbci.co.uk/reverb-client-js/smarttag-5.29.4.min.js',
     ];
 
@@ -276,18 +271,259 @@ describe('Service Worker', () => {
           await Promise.resolve(eventResponse);
 
           expect(fetchMock).toHaveBeenCalledWith(assetUrl);
-          expect(fetchedCache[event.request]).toStrictEqual(
-            mockResponse.clone(),
-          );
+          expect(fetchedCache[assetUrl]).toStrictEqual(mockResponse.clone());
         },
       );
     });
   });
 
+  describe('PWA offline page caching (message event)', () => {
+    let messageHandler;
+    let cachePut;
+
+    beforeEach(async () => {
+      jest.resetModules();
+      cachePut = jest.fn();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+      };
+
+      global.caches = {
+        open: jest.fn(() =>
+          Promise.resolve({
+            match: jest.fn().mockResolvedValue(null),
+            put: cachePut,
+            delete: jest.fn(),
+          }),
+        ),
+      };
+
+      await import('./service-worker-test');
+
+      // extract the message handler registered by sw.js
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
+
+    it('caches offline page  when PWA is installed', async () => {
+      fetchMock.mockResolvedValueOnce(
+        new Response('<html></html>', { status: 200 }),
+      );
+
+      const event = {
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      };
+
+      await messageHandler(event);
+
+      expect(cachePut).toHaveBeenCalledWith(
+        expect.stringContaining('/offline'),
+        expect.any(Response),
+      );
+      expect(fetchMock).toHaveBeenCalledWith('https://bbc.com/mundo/offline');
+    });
+
+    it('does not cache offline page when PWA is not installed', async () => {
+      await import('./service-worker-test');
+
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: false },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      });
+
+      expect(cachePut).not.toHaveBeenCalledWith(
+        expect.stringContaining('/offline'),
+        expect.any(Response),
+      );
+    });
+  });
+
+  describe('Offline navigation handling in PWA mode', () => {
+    let messageHandler;
+
+    beforeEach(async () => {
+      jest.resetModules();
+      fetchMock.resetMocks();
+
+      global.self = {
+        addEventListener: jest.fn(),
+        location: { origin: 'https://bbc.com' },
+        clients: {
+          get: jest.fn(() =>
+            Promise.resolve({
+              id: 'client-1',
+              url: 'https://bbc.com/mundo',
+            }),
+          ),
+        },
+      };
+
+      // Mock cache with offline page
+      const offlineResponse = new Response('offline page');
+      const mockCache = {
+        match: jest.fn(url => {
+          const urlString = typeof url === 'string' ? url : url.url;
+          return urlString.includes('/mundo/offline')
+            ? Promise.resolve(offlineResponse)
+            : Promise.resolve(null);
+        }),
+        put: jest.fn(),
+        delete: jest.fn(),
+      };
+      global.caches = {
+        open: jest.fn(() => Promise.resolve(mockCache)),
+      };
+
+      ({ fetchEventHandler } = await import('./service-worker-test'));
+
+      // eslint-disable-next-line prefer-destructuring
+      messageHandler = self.addEventListener.mock.calls.find(
+        ([eventName]) => eventName === 'message',
+      )[1];
+    });
+
+    it('returns cached offline page when navigation fails and PWA is installed', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: {
+          id: 'client-1',
+          url: 'https://bbc.com/mundo',
+        },
+      });
+
+      // Network failure
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      const response = await respondWithPromise;
+      expect(await response.text()).toBe('offline page');
+    });
+
+    it('should throw error in navigation mode if resolved request status code is 5xx', async () => {
+      fetchMock.mockResolvedValueOnce(
+        new Response('Server Error', { status: 500 }),
+      );
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      await expect(respondWithPromise).rejects.toThrow();
+    });
+
+    it('should throw error when navigation mode fails if user is non-pwa', async () => {
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const request = new Request('https://bbc.com/mundo');
+      Object.defineProperty(request, 'mode', { value: 'navigate' });
+
+      let respondWithPromise;
+
+      const event = {
+        request,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          respondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(event);
+
+      expect(event.respondWith).toHaveBeenCalled();
+      await expect(respondWithPromise).rejects.toThrow();
+    });
+
+    it('should gracefully handle failed request if PWA offline mode', async () => {
+      await messageHandler({
+        data: { type: 'PWA_STATUS', isPWA: true },
+        source: { id: 'client-1', url: 'https://bbc.com/mundo' },
+      });
+
+      // Fail a navigation request to set isPWADeviceOffline = true
+      fetchMock.mockRejectedValueOnce(new Error('Network error'));
+
+      const navRequest = new Request('https://bbc.com/mundo');
+      Object.defineProperty(navRequest, 'mode', { value: 'navigate' });
+
+      let navRespondWithPromise;
+      const navEvent = {
+        request: navRequest,
+        clientId: 'client-1',
+        preloadResponse: Promise.resolve(undefined),
+        respondWith: jest.fn(p => {
+          navRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(navEvent);
+      await navRespondWithPromise;
+
+      // Test non-navigation request
+      fetchMock.mockRejectedValueOnce(new Error('Asset fetch failed'));
+
+      const assetRequest = new Request('https://bbc.com/asset.js');
+      let assetRespondWithPromise;
+
+      const assetEvent = {
+        request: assetRequest,
+        respondWith: jest.fn(p => {
+          assetRespondWithPromise = p;
+        }),
+      };
+
+      await fetchEventHandler(assetEvent);
+
+      const response = await assetRespondWithPromise;
+      expect(response.status).toBe(503);
+      expect(await response.text()).toBe('PWA offline fetch failed');
+    });
+  });
+
   describe('version', () => {
     const CURRENT_VERSION = {
-      number: 'v0.2.5',
-      fileContentHash: '26974f5a6392e235157568399fbb498b',
+      number: 'v0.3.4',
+      fileContentHash: '835dec35a993a4c41ebdcaa5c73e333f',
     };
 
     it(`version number should be ${CURRENT_VERSION.number}`, async () => {

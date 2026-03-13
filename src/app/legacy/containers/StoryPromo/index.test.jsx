@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
 import loggerMock from '#testHelpers/loggerMock';
@@ -32,6 +31,11 @@ import StoryPromoContainer from '.';
 import { buildUniquePromoId } from './utilities';
 
 jest.mock('../../../components/ThemeProvider');
+
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,

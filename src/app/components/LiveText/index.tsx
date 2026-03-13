@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { PropsWithChildren, useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
@@ -13,7 +11,7 @@ const Text = ({
   offScreenText,
   className,
 }: PropsWithChildren<TextProps>) => {
-  const { dir, translations } = useContext(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
 
   const { liveLabel } = translations.media;
 

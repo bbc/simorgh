@@ -5,10 +5,9 @@ const { LIVE_MEDIA } = COMPONENTS;
 
 export const assertLiveMediaComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Live Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertLiveMediaComponentView = ({
     assertATIComponentViewEvent({
       component: LIVE_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertLiveMediaComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Live Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -48,9 +45,8 @@ export const assertLiveMediaComponentClick = ({
     assertATIComponentClickEvent({
       component: LIVE_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { useContext } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use } from 'react';
+import { useTheme } from '@emotion/react';
 
 import useToggle from '#hooks/useToggle';
 import SectionLabel from '#psammead/psammead-section-label/src';
@@ -9,24 +8,42 @@ import SkipLinkWrapper from '#components/SkipLinkWrapper';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { Recommendation } from '#app/models/types/onwardJourney';
-import RecommendationsItem from './RecommendationsItem';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import styles from './index.styles';
+import RecommendationsItem from './RecommendationsItem';
 
-const eventTrackingData = {
-  componentName: 'midarticle-mostread',
-};
+interface RecommendationsProps {
+  data: Recommendation[];
+  experimentProps?: ComponentExperimentProps;
+}
 
-const Recommendations = ({ data }: { data: Recommendation[] }) => {
-  const { recommendations, mostRead, script, service, dir } =
-    useContext(ServiceContext);
-
-  const viewTracker = useViewTracker(eventTrackingData);
+const Recommendations = ({ data, experimentProps }: RecommendationsProps) => {
+  const { recommendations, mostRead, dir } = use(ServiceContext);
 
   const {
     palette: { GREY_2 },
   } = useTheme();
 
   const { enabled } = useToggle('midArticleOnwardJourney');
+
+  const { skipLink, header } = recommendations || {};
+
+  const title = header ?? 'Most read';
+
+  const componentName = 'midarticle-mostread';
+  const groupTracker = {
+    name: title,
+    type: componentName,
+    itemCount: 4,
+  };
+
+  const eventTrackingData = {
+    componentName,
+    groupTracker,
+    ...(experimentProps && experimentProps),
+  };
+
+  const viewTracker = useViewTracker(eventTrackingData);
 
   const { hasMostRead } = mostRead || {};
 
@@ -39,18 +56,14 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
     'aria-labelledby': labelId,
   };
 
-  const { skipLink, header } = recommendations || {};
-
   const { text, endTextVisuallyHidden } = skipLink || {
     text: 'Skip %title% and continue reading',
     endTextVisuallyHidden: 'End of %title%',
   };
 
-  const title = header ?? 'Most read';
-
   const terms = { '%title%': title };
 
-  const isSinglePromo = data?.length === 1;
+  const isSinglePromo = data.length === 1;
 
   const endTextId = `end-of-recommendations`;
 
@@ -67,12 +80,10 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
       data-e2e={labelId}
       {...a11yAttributes}
     >
-      <SkipLinkWrapper service={service} {...skipLinkProps}>
+      <SkipLinkWrapper {...skipLinkProps}>
         {title ? (
           <SectionLabel
             css={styles.labelComponent}
-            script={script}
-            service={service}
             dir={dir}
             labelId={labelId}
             columnType="main"
@@ -88,9 +99,19 @@ const Recommendations = ({ data }: { data: Recommendation[] }) => {
           <RecommendationsItem recommendation={data?.[0]} />
         ) : (
           <ul css={styles.recommendationsList} role="list" {...viewTracker}>
-            {data?.map(recommendation => (
+            {data?.map((recommendation, index) => (
               <li key={recommendation.id} role="listitem">
-                <RecommendationsItem recommendation={recommendation} />
+                <RecommendationsItem
+                  recommendation={recommendation}
+                  eventTrackingData={{
+                    ...eventTrackingData,
+                    itemTracker: {
+                      type: 'midarticle-mostread-promo',
+                      text: recommendation.title,
+                      position: index + 1,
+                    },
+                  }}
+                />
               </li>
             ))}
           </ul>

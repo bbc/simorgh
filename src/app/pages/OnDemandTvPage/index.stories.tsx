@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
@@ -21,7 +20,6 @@ const onDemandTvFixtures: {
 
 const matchFixtures = (service: Services) => ({
   params: {
-    // @ts-expect-error partial data for testing
     serviceId: {
       afrique: 'bbc_afrique_tv',
       pashto: 'bbc_pashto_tv',
@@ -34,7 +32,6 @@ const Component = ({ service, isLite }: StoryProps) => {
     <BrowserRouter>
       <OnDemandTvPage
         match={matchFixtures(service)}
-        // @ts-expect-error partial data for testing purposes
         pageData={onDemandTvFixtures[service] || afrique}
         status={200}
         service={service}
@@ -53,7 +50,7 @@ export default {
   decorators: [
     (story: () => unknown) => (
       // @ts-expect-error use default params
-      <WithTimeMachine>{story()}</WithTimeMachine>
+      (<WithTimeMachine>{story()}</WithTimeMachine>)
     ),
   ],
 };

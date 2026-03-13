@@ -16,4 +16,6 @@ export const CLICK_EVENT = 'click';
 export const VIEWABILITY_CLICK_EVENT = 'select';
 
 export const STATIC_ATI_VIEW_TRACKING = 'data-static-ati-view';
+export const STATIC_REVERB_VIEW_TRACKING = 'data-static-reverb-view';
 export const STATIC_ATI_CLICK_TRACKING = 'data-static-ati-click';
+export const STATIC_REVERB_CLICK_TRACKING = 'data-static-reverb-click';

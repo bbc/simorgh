@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     atiAnalyticsProducerName: 'NEPALI',
-    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/nepali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
     externalLinkText: ', बाह्य',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'र',
+      readTime: {
+        readTimePrefix: 'पढ्ने समय',
+        minute: 'मिनेट',
+      },
       pagination: {
         page: 'पेज',
         previousPage: 'पछाडि',
@@ -62,7 +67,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
       relatedTopics: 'सम्बन्धित सामग्री',
+      moreOnThis: '',
       navMenuText: 'सूची',
+      liteSite: {
+        onboardingMessage:
+          'तपाईँ अहिले हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने ‘टेक्स्ट-ओन्ली’ साइटमा हुनुहुन्छ। सबै तस्बिर र भिडिओसहित मूल वेबसाइटमा जान यहाँ क्लिक गर्नुहोस्।',
+        toMainSite: 'मूल वेबसाइट तथा पूरा संस्करणमा जानुहोस्।',
+        informationPage:
+          'हाम्रो वेबसाइटको थोरै डेटा प्रयोग हुने संस्करणबारे थप जान्नुहोस्।',
+        informationPageLink: 'https://www.bbc.com/nepali/articles/c3w44py8q72o',
+        dataSaving: 'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+        articleDataSavingLinkText:
+          'थोरै डेटा खपत गर्ने गरी पढ्न मिल्ने संस्करण हेर्नुहोस्।',
+      },
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
@@ -232,6 +249,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
         download: 'एपिसोड डाउनलोड',
         closeVideo: 'बाहिरिनुहोस्',
+        endOfContentClose: 'यस सामग्रीको अन्त्य। बाहिरिनुहोस्',
       },
       socialEmbed: {
         caption: {
@@ -289,7 +307,7 @@ export const service: DefaultServiceConfig = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [
@@ -332,26 +350,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'समाचार',
         url: '/nepali',
-      },
-      {
-        title: 'नेपाल',
-        url: '/nepali/topics/cyx5k2yzyj6t',
-      },
-      {
-        title: 'विश्व',
-        url: '/nepali/topics/cy5nkr41gx6t',
-      },
-      {
-        title: 'स्वास्थ्य',
-        url: '/nepali/topics/c2dwqjg83q0t',
-      },
-      {
-        title: 'विज्ञान तथा प्रविधि',
-        url: '/nepali/topics/c9de5jl3967t',
-      },
-      {
-        title: 'रेडिओ',
-        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
       },
     ],
   },

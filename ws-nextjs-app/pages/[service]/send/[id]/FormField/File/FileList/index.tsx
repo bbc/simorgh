@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { SetStateAction, useContext, useEffect, useState } from 'react';
-import { jsx } from '@emotion/react';
+import { SetStateAction, use, useEffect, useState } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -45,7 +43,7 @@ export default ({
         fileUploadRemoveButton = fallbackTranslations.fileUploadRemoveButton,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { handleChange } = useFormContext();
   const [thumbnailState, setThumbnailState] = useState<string[]>([]);

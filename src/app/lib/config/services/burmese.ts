@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-burmese',
     atiAnalyticsProducerId: '35',
     atiAnalyticsProducerName: 'BURMESE',
-    useReverb: true,
     chartbeatDomain: 'burmese.bbc.co.uk',
     brandName: 'BBC News မြန်မာ',
     product: 'BBC News',
     serviceLocalizedName: 'မြန်မာ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/burmese.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/burmese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News မြန်မာ',
     dir: `ltr`,
     externalLinkText: ', ပြင်ပစာမျက်နှာ',
@@ -61,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'နှင့်',
+      readTime: {
+        readTimePrefix: 'ဖတ်ရန်အချိန်',
+        minute: 'မိနစ်',
+      },
       pagination: {
         page: 'စာမျက်နှာ',
         previousPage: 'နောက်သို့ပြန်သွားရန်',
@@ -76,6 +81,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
       relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
+      moreOnThis: '',
       navMenuText: 'ကဏ္ဍများ',
       liteSite: {
         onboardingMessage: `ဒေတာကုန်ကျမှုလျှော့ချနိုင်ရန်အတွက် ယခုဝက်ဘ်ဆိုက်မှ စာမျက်နှာများကို ရုပ်ပုံမပါ စာသားဖြင့်သာတင်ဆက်ပေးထားပါသည်။ ရုပ်ပုံ ဗီဒီယိုများနှင့် ကြည့်လိုလျှင် မူလစာမျက်နှာတွင်ကြည့်နိုင်ပါသည်။`,
@@ -270,6 +276,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
         download: 'ဒေါင်းလုပ်လုပ် ရယူရန်',
         closeVideo: 'ပိတ်မယ်',
+        endOfContentClose: 'ဤအကြောင်းအရာ၏ အဆုံးဖြစ်သည်။ ပိတ်မယ်',
       },
       socialEmbed: {
         caption: {
@@ -330,7 +337,7 @@ export const service: DefaultServiceConfig = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
       links: [
@@ -369,35 +376,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ပင်မစာမျက်နှာ',
         url: '/burmese',
-      },
-      {
-        title: 'မြန်မာငလျင်',
-        url: '/burmese/topics/c793wppj0r1t',
-      },
-      {
-        title: 'မြန်မာ့ရေးရာ',
-        url: '/burmese/topics/c404v08p1wxt',
-      },
-      {
-        title: 'နိုင်ငံတကာ',
-        url: '/burmese/topics/cnlv9j1z93wt',
-      },
-      {
-        title: 'ဆောင်းပါး',
-        url: '/burmese/topics/cl3rq8rkqgxt',
-      },
-      {
-        title: 'အင်တာဗျူး',
-        url: '/burmese/topics/cdg42x4kek0t',
-      },
-      {
-        title: 'ကုန်သွယ်စီးပွား',
-        url: '/burmese/topics/c9wpm0en9jdt',
-      },
-      {
-        title: 'ဗီဒီယိုများ',
-        url: '/burmese/topics/cj7v92le02qt',
-        hideOnLiteSite: true,
       },
     ],
   },

@@ -32,6 +32,7 @@ export interface ATIData {
   timePublished?: string | null;
   timeUpdated?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 
@@ -125,6 +126,7 @@ export type ReverbEventDetails = {
   event?: {
     category: string;
     action: 'select' | 'view';
+    grouping?: string;
   };
   eventName: 'pageView' | 'sectionView' | 'sectionClick';
   eventPublisher?: string;
@@ -140,14 +142,12 @@ export type ReverbBeaconConfig = {
 };
 
 export interface ATIAnalyticsProps {
-  baseUrl?: string;
-  pageviewParams: string;
-  reverbParams?: ReverbBeaconConfig | null;
+  reverbParams: ReverbBeaconConfig;
 }
 
 export interface ATIEventTrackingProps {
   campaignID?: string;
-  componentName?: string;
+  componentName: string;
   format?: string;
   pageIdentifier?: string;
   platform?: Platforms;
@@ -159,13 +159,14 @@ export interface ATIEventTrackingProps {
   advertiserID?: string;
   url?: string;
   detailedPlacement?: string;
-  useReverb?: boolean;
-  experimentVariant?: string;
+  experimentName?: string;
+  experimentVariant?: string | null;
   ampExperimentName?: string;
-  preventNavigation?: string;
+  preventNavigation?: boolean;
   itemTracker?: ItemTracker;
   groupTracker?: GroupTracker;
   viewThreshold?: number;
+  eventGroupingName?: string;
 }
 
 export interface ItemTracker {
@@ -174,11 +175,17 @@ export interface ItemTracker {
   position?: number;
   duration?: number;
   resourceId?: string;
+  label?: string;
+  mediaType?: string;
 }
 
 export interface GroupTracker {
-  itemCount?: number;
+  name?: string;
+  type?: string;
+  position?: string | number;
   resourceId?: string;
+  itemCount?: number;
+  link?: string;
 }
 
 export interface ATIPageTrackingProps {
@@ -201,6 +208,7 @@ export interface ATIPageTrackingProps {
   campaigns?: { campaignId?: string; campaignName?: string }[] | null;
   nationsProducer?: string | null;
   ampExperimentName?: string;
+  experimentName?: string | null;
   experimentVariant?: string | null;
 }
 

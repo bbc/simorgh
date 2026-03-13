@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import useToggle from '../../hooks/useToggle';
+import { use } from 'react';
 import { RequestContext } from '../../contexts/RequestContext';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import AmpChartbeatBeacon from './amp';
@@ -18,12 +17,8 @@ const ChartbeatAnalytics = ({
   producer,
   chapter,
 }: ChartbeatProps) => {
-  const { service, brandName, chartbeatDomain } = useContext(ServiceContext);
-  const { env, isAmp, platform, pageType } = useContext(RequestContext);
-
-  const { enabled } = useToggle('chartbeatAnalytics');
-
-  if (!enabled) return null;
+  const { service, brandName, chartbeatDomain } = use(ServiceContext);
+  const { env, isAmp, platform, pageType, nonce } = use(RequestContext);
 
   const configDependencies: GetConfigProps = {
     isAmp,
@@ -48,7 +43,9 @@ const ChartbeatAnalytics = ({
 
   if (isAmp) return <AmpChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
 
-  return <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} />;
+  return (
+    <CanonicalChartbeatBeacon chartbeatConfig={chartbeatConfig} nonce={nonce} />
+  );
 };
 
 export default ChartbeatAnalytics;

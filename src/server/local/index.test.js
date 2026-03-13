@@ -42,7 +42,7 @@ describe('Local Server', () => {
     async ({ dataPath, expectedDataFile }) => {
       const response = await makeRequest(dataPath);
       expect(response.status).toBe(200);
-      expect(sendFileSpy).toBeCalled();
+      expect(sendFileSpy).toHaveBeenCalled();
       expect(sendFileSpy.mock.calls[0][0]).toEqual(
         path.join(DATA_DIRECTORY, expectedDataFile),
       );

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';

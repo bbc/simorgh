@@ -5,7 +5,9 @@ export default service => {
 
   runTimestampTests();
 
-  const bulletedListItem = document.querySelector('main ul[role="list"] > li');
+  const bulletedListItem = document.querySelector(
+    'main ul[role="list"] > li:last-of-type',
+  );
 
   if (bulletedListItem) {
     it('I can see a bulleted list item', () => {
@@ -28,8 +30,8 @@ export default service => {
   }
 
   describe(`Related Content`, () => {
-    const relatedContentLinks = document.querySelectorAll(
-      '[data-e2e="related-content-heading"] a',
+    const relatedContentLinks = Array.from(
+      document.querySelectorAll('[data-e2e="related-content-heading"] a'),
     );
 
     if (relatedContentLinks) {

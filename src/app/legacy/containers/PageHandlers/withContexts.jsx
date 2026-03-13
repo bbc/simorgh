@@ -1,6 +1,3 @@
-import React from 'react';
-
-// context providers
 import { ThemeProvider } from '../../../components/ThemeProvider';
 import { RequestContextProvider } from '../../../contexts/RequestContext';
 import { ToggleContextProvider } from '../../../contexts/ToggleContext';
@@ -26,9 +23,12 @@ const WithContexts = Component => {
       pageData = null,
       showAdsBasedOnLocation = false,
       showCookieBannerBasedOnCountry = true,
-      mvtExperiments = null,
+      serverSideExperiments = null,
       isNextJs = false,
       isUK = false,
+      country = null,
+      nonce = null,
+      cspHeader = null,
     } = props;
 
     const { metadata: { atiAnalytics } = {} } = pageData ?? {};
@@ -55,9 +55,12 @@ const WithContexts = Component => {
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
             showCookieBannerBasedOnCountry={showCookieBannerBasedOnCountry}
-            mvtExperiments={mvtExperiments}
+            serverSideExperiments={serverSideExperiments}
             isNextJs={isNextJs}
             isUK={isUK}
+            country={country}
+            nonce={nonce}
+            cspHeader={cspHeader}
           >
             <EventTrackingContextProvider
               atiData={atiAnalytics}

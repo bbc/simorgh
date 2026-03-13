@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     atiAnalyticsProducerName: 'PUNJABI',
-    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
     serviceLocalizedName: 'ਪੰਜਾਬੀ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/punjabi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ਪੰਜਾਬੀ',
     dir: `ltr`,
     externalLinkText: ', ਬਾਹਰੀ',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'ਅਤੇ',
+      readTime: {
+        readTimePrefix: 'ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ',
+        minute: 'ਮਿੰਟ',
+      },
       pagination: {
         previousPage: 'ਪਿੱਛੇ',
         nextPage: 'ਅੱਗੇ',
@@ -62,6 +67,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: `ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ`,
       relatedContent: 'ਇਸ ਖ਼ਬਰ ਬਾਰੇ ਹੋਰ',
       relatedTopics: 'ਸਬੰਧਿਤ ਵਿਸ਼ੇ',
+      moreOnThis: '',
       navMenuText: 'ਸੈਕਸ਼ਨਜ਼',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -231,6 +237,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'ਤਾਜ਼ਾ ਐਪੀਸੋਡ',
         closeVideo: 'ਬਾਹਰ ਜਾਓ',
+        endOfContentClose: 'ਇਸ ਸਮੱਗਰੀ ਦਾ ਅੰਤ। ਬਾਹਰ ਜਾਓ',
       },
       socialEmbed: {
         caption: {
@@ -287,22 +294,6 @@ export const service: DefaultServiceConfig = {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
       },
-      {
-        title: 'ਵੀਡੀਓ',
-        url: '/punjabi/topics/cx12qmz6jm4t',
-      },
-      {
-        title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
-        url: '/punjabi/popular/read',
-      },
-      {
-        title: 'ਭਾਰਤ',
-        url: '/punjabi/topics/cz74k76gjqxt',
-      },
-      {
-        title: 'ਕੌਮਾਂਤਰੀ',
-        url: '/punjabi/topics/c2lej05e43lt',
-      },
     ],
     footer: {
       trustProjectLink: {
@@ -310,7 +301,7 @@ export const service: DefaultServiceConfig = {
         text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ',
       },
       links: [
@@ -323,7 +314,7 @@ export const service: DefaultServiceConfig = {
           text: 'BBC ਬਾਰੇ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ਨਿੱਜਤਾ ਪਾਲਿਸੀ',
         },
         {

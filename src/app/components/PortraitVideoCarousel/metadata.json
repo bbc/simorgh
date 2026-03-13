@@ -20,9 +20,9 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
-      "url": "",
+      "url": "https://paper.dropbox.com/doc/A11Y-Swarm-Portrait-Video-Carousel--Cn_EkEH~EIbQan~WE2kn0UYzAg-bLd37MnqliqI6nGU9kUqd",
       "label": "Accessibility Swarm"
     }
   }

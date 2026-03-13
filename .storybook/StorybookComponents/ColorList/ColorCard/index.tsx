@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './index.styles';
 import Text from '../../../../src/app/components/Text';
 

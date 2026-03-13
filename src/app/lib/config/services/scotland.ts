@@ -13,12 +13,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'scotland',
     atiAnalyticsProducerId: '79',
     atiAnalyticsProducerName: 'SCOTLAND',
-    useReverb: true,
     chartbeatDomain: 'bbc.co.uk',
     brandName: 'BBC Scotland',
     product: 'BBC Scotland',
     defaultImage:
-      'https://news.files.bbci.co.uk/include/articles/public/scotland/images/metadata/poster-1024x576.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/scotland/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC Scotland',
     dir: 'ltr',
     externalLinkText: ', external',
@@ -50,6 +49,7 @@ export const service: DefaultServiceConfig = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      moreOnThis: '',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

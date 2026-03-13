@@ -1,14 +1,12 @@
-/** @jsx jsx */
-import { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
 
 const ScriptLink = () => {
-  const { scriptLink } = useContext(ServiceContext);
-  const { pathname, variant: currentVariant } = useContext(RequestContext);
+  const { scriptLink } = use(ServiceContext);
+  const { pathname, variant: currentVariant } = use(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
 
   const { text, variant: alternateVariant } = scriptLink || {};
@@ -19,7 +17,8 @@ const ScriptLink = () => {
 
   const pathPartsWithoutExtension = pathname
     .replace(/\.[^/.]+$/, '') // remove any extensions, we don't want to link to AMP pages directly
-    .split('/');
+    .split('?')?.[0] // remove any query parameters
+    .split('/'); // split path into parts
 
   const currentVariantIndex = pathPartsWithoutExtension.indexOf(
     currentVariant as string,

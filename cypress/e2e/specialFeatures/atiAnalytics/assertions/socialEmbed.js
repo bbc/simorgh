@@ -5,10 +5,9 @@ const { SOCIAL_EMBED } = COMPONENTS;
 
 export const assertSocialEmbedComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Social Embed component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertSocialEmbedComponentView = ({
     assertATIComponentViewEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertSocialEmbedComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Social Embed component', () => {
     interceptATIAnalyticsBeacons();
@@ -49,9 +46,8 @@ export const assertSocialEmbedComponentClick = ({
     assertATIComponentClickEvent({
       component: SOCIAL_EMBED,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

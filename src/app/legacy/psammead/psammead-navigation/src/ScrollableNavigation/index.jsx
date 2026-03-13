@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { GEL_SPACING_SEXT } from '#psammead/gel-foundations/src/spacings';
 import {
@@ -73,8 +72,17 @@ const StyledScrollableNav = styled.div`
   }
 `;
 
-export const ScrollableNavigation = ({ children, dir = 'ltr', ...props }) => (
-  <StyledScrollableNav data-e2e="scrollable-nav" dir={dir} {...props}>
+export const ScrollableNavigation = ({
+  children,
+  dir = 'ltr',
+  navPosition,
+  ...props
+}) => (
+  <StyledScrollableNav
+    data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}`}
+    dir={dir}
+    {...props}
+  >
     {children}
   </StyledScrollableNav>
 );

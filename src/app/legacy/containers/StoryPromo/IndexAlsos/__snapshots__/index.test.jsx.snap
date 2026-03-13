@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 .emotion-0 {
@@ -32,9 +32,9 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 .emotion-7 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -72,9 +72,9 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
 .emotion-9 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;
@@ -245,9 +245,9 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
 .emotion-5 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 700;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -285,9 +285,9 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
 .emotion-7 {
   color: #222222;
   background-color: #FFFFFF;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
   display: inline-block;

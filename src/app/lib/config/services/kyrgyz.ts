@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-kyrgyz',
     atiAnalyticsProducerId: '58',
     atiAnalyticsProducerName: 'KYRGYZ',
-    useReverb: true,
     chartbeatDomain: 'kyrgyz.bbc.co.uk',
     brandName: 'BBC News Кыргыз Кызматы',
     product: 'BBC News',
     serviceLocalizedName: 'Кыргыз КызMATы',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
     externalLinkText: ', баракчалар',
@@ -46,7 +46,30 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp Жарыя',
+      brandTitle: 'Би-Би-Синин WhatsApp каналы',
+      brandDescription:
+        'Күндүн башкы жаңылыктарын Би-Би-Синин WhatsApp каналынан окуңуз',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mmpvc4.jpg',
+        alt: 'Би-Би-Си Кыргыз кызматынын WhatsApp каналына кошулунуз',
+      },
+      linkLabel: {
+        text: 'Катталыңыз',
+        href: 'https://www.whatsapp.com/channel/0029VbBgIP4D8SE3ZSu7YG0e',
+      },
+      skipLink: {
+        text: 'Жарыяны өткөрүп, макаланы окууну улантыңыз',
+        endTextVisuallyHidden: 'Жарыянын аягы',
+      },
+    },
     translations: {
+      and: 'жана',
+      readTime: {
+        readTimePrefix: 'Окуу убактысы',
+        minute: 'мүнөт',
+      },
       pagination: {
         page: 'бет',
         previousPage: 'Артка',
@@ -62,6 +85,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
       relatedTopics: 'Тектеш темалар',
+      moreOnThis: '',
       navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -237,6 +261,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
         download: 'Подкастты жүктөп алыңыз',
         closeVideo: 'Чыгуу',
+        endOfContentClose: 'Бул контенттин аягы. Чыгуу',
       },
       socialEmbed: {
         caption: {
@@ -293,7 +318,7 @@ export const service: DefaultServiceConfig = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -334,28 +359,8 @@ export const service: DefaultServiceConfig = {
     timezone: 'GMT',
     navigation: [
       {
-        title: 'Башталгыч бет',
+        title: 'Башкы бет',
         url: '/kyrgyz',
-      },
-      {
-        title: 'Кыргызстан',
-        url: '/kyrgyz/topics/cz74kjpyk07t',
-      },
-      {
-        title: 'Дүйнө',
-        url: '/kyrgyz/topics/ck2l9z012nkt',
-      },
-      {
-        title: 'САПАР',
-        url: '/kyrgyz/topics/c6z8lg83w7mt',
-      },
-      {
-        title: 'Журнал',
-        url: '/kyrgyz/topics/czp8pjrkgp0t',
-      },
-      {
-        title: 'Подкасттар',
-        url: '/kyrgyz/podcasts/p0c80v81',
       },
     ],
   },

@@ -5,10 +5,9 @@ const { FEATURES } = COMPONENTS;
 
 export const assertFeaturesAnalysisComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
@@ -19,19 +18,17 @@ export const assertFeaturesAnalysisComponentView = ({
     assertATIComponentViewEvent({
       component: FEATURES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertFeaturesAnalysisComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Features & Analysis component', () => {
     interceptATIAnalyticsBeacons();
@@ -45,9 +42,8 @@ export const assertFeaturesAnalysisComponentClick = ({
     assertATIComponentClickEvent({
       component: FEATURES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

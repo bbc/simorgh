@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
@@ -17,6 +16,11 @@ import { Services } from '../../models/types/global';
 import { OptimoBlock } from '../../models/types/optimo';
 
 jest.mock('../ThemeProvider');
+
+jest.mock('#app/hooks/useIsPWA', () => ({
+  __esModule: true,
+  default: () => false,
+}));
 
 type Props = {
   fixtureData: OptimoBlock[];

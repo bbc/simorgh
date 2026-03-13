@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { useContext } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use } from 'react';
+import { useTheme } from '@emotion/react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
@@ -11,16 +9,14 @@ import identity from 'ramda/src/identity';
 import last from 'ramda/src/last';
 import filter from 'ramda/src/filter';
 import pipe from 'ramda/src/pipe';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import useViewTracker from '#hooks/useViewTracker';
-import { ViewTracker } from '#app/lib/analyticsUtils/types';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import styles from './index.styles';
 import generatePromoId from '../../lib/utilities/generatePromoId';
 import RelatedContentItem from './RelatedContentItem';
 import PromoList from '../../legacy/components/OptimoPromos/PromoList';
 import PromoItem from '../../legacy/components/OptimoPromos/PromoItem/index.styles';
-import { EventTrackingBlock } from '../../models/types/eventTracking';
 import { OptimoBlock } from '../../models/types/optimo';
 
 const BLOCKS_TO_IGNORE = ['wsoj', 'mpu'];
@@ -38,69 +34,13 @@ const isHeadlineFirst = (item: object) => {
   );
 };
 
-type RelatedContentListProps = {
-  item: object;
-  index: number;
-  eventTrackingData: EventTrackingBlock;
-  viewTracker: ViewTracker;
-};
-
-const renderRelatedContentList = ({
-  item,
-  index,
-  eventTrackingData,
-  viewTracker,
-}: RelatedContentListProps) => {
-  const assetUri = pathOr(
-    '',
-    [
-      'model',
-      'blocks',
-      1,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'blocks',
-      0,
-      'model',
-      'locator',
-    ],
-    item,
-  );
-
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'promo-rel-content',
-    assetUri,
-    index,
-  });
-
-  const headlineFirst = isHeadlineFirst(item);
-
-  return (
-    <PromoItem
-      css={headlineFirst ? styles.promoItemFullWidth : styles.promoItem}
-      key={ariaLabelledBy}
-    >
-      <RelatedContentItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        viewTracker={viewTracker}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
-
 type Props = {
   content: OptimoBlock[];
-  sendOptimizelyEvents?: boolean;
+  experimentProps?: ComponentExperimentProps;
 };
 
-const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
-  const { translations, script, service } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
-
+const RelatedContentSection = ({ content, experimentProps }: Props) => {
+  const { translations } = use(ServiceContext);
   const {
     palette: { GREY_2 },
   } = useTheme();
@@ -109,9 +49,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
   const eventTrackingData = {
     block: {
       componentName: 'related-content',
-      ...(sendOptimizelyEvents && {
-        optimizely,
-      }),
+      ...(experimentProps && experimentProps),
     },
   };
   const viewTracker = useViewTracker(eventTrackingData.block);
@@ -161,7 +99,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
     reducedStoryPromoItems[0],
   );
 
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'promo-rel-content',
     assetUri,
   });
@@ -173,12 +111,7 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
       role="region"
       data-e2e={LABEL_ID}
     >
-      <SectionLabel
-        labelId={LABEL_ID}
-        backgroundColor={GREY_2}
-        script={script}
-        service={service}
-      >
+      <SectionLabel labelId={LABEL_ID} backgroundColor={GREY_2}>
         {title}
       </SectionLabel>
       {hasSingleContent ? (
@@ -198,14 +131,49 @@ const RelatedContentSection = ({ content, sendOptimizelyEvents }: Props) => {
         </div>
       ) : (
         <PromoList css={styles.relatedContentGrid}>
-          {reducedStoryPromoItems.map((item, index) =>
-            renderRelatedContentList({
+          {reducedStoryPromoItems.map((item, index) => {
+            const itemAssetUri = pathOr(
+              '',
+              [
+                'model',
+                'blocks',
+                1,
+                'model',
+                'blocks',
+                0,
+                'model',
+                'blocks',
+                0,
+                'model',
+                'locator',
+              ],
               item,
+            );
+
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'promo-rel-content',
+              assetUri: itemAssetUri,
               index,
-              eventTrackingData,
-              viewTracker,
-            }),
-          )}
+            });
+
+            return (
+              <PromoItem
+                css={
+                  isHeadlineFirst(item)
+                    ? styles.promoItemFullWidth
+                    : styles.promoItem
+                }
+                key={ariaLabelledBy}
+              >
+                <RelatedContentItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                  viewTracker={viewTracker}
+                  eventTrackingData={eventTrackingData}
+                />
+              </PromoItem>
+            );
+          })}
         </PromoList>
       )}
     </section>

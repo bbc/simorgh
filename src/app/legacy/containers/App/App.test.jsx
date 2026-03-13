@@ -1,4 +1,3 @@
-import React from 'react';
 import reactRouterConfig from 'react-router-config';
 import { render, act } from '@testing-library/react';
 import getToggles from '#app/lib/utilities/getToggles';
@@ -21,6 +20,10 @@ describe('App', () => {
     toggles: {
       mockToggle: { enabled: true },
     },
+    navItems: [
+      { title: 'Home', url: '/home' },
+      { title: 'About', url: '/about' },
+    ],
   };
 
   const match = {
@@ -70,6 +73,7 @@ describe('App', () => {
       showAdsBasedOnLocation: false,
       variant: 'simp',
       timeOnServer: initialData.timeOnServer,
+      navItems: initialData.navItems,
     });
     expect(container).toMatchInlineSnapshot(`
       <div>

@@ -26,3 +26,12 @@ it('should get the page type from integration test paths for lite', () => {
 
   expect(actual).toEqual(expected);
 });
+
+it('should get the page type from integration test paths for articles on nextJS app', () => {
+  const actual = getPageTypeFromTestPath(
+    'ws-nextjs-app/integration/pages/articles/hausa/canonical.test.ts',
+  );
+  const expected = 'articles';
+
+  expect(actual).toEqual(expected);
+});

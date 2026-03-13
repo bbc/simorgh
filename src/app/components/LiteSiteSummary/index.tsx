@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import Paragraph from '../Paragraph';
 import Text from '../Text';
@@ -11,8 +9,8 @@ import defaultTranslations from './defaultTranslations';
 import CallToActionLink from '../CallToActionLink';
 
 const LiteSiteSummary = () => {
-  const { translations } = useContext(ServiceContext);
-  const { canonicalLink } = useContext(RequestContext);
+  const { translations } = use(ServiceContext);
+  const { canonicalLink } = use(RequestContext);
   const { liteSite = defaultTranslations } = translations;
   const {
     onboardingMessage,
@@ -42,6 +40,7 @@ const LiteSiteSummary = () => {
         </Paragraph>
         <Paragraph data-e2e="to-main-site">
           <CallToActionLink
+            id="go-back-to-canonical-link"
             url={canonicalLink}
             data-ignore-lite
             {...clickTrackerHandler}

@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import React, { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { OptimoBlock } from '#models/types/optimo';
 import Heading from '#app/components/Heading';
@@ -13,9 +11,11 @@ import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import ImageWithCaption from '#app/components/ImageWithCaption';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
 import { MediaBlock } from '#app/components/MediaLoader/types';
+import dynamic from 'next/dynamic';
 import styles from './styles';
 import {
   Post as PostType,
@@ -23,6 +23,10 @@ import {
   ComponentToRenderProps,
 } from './types';
 import ShareButton from '../ShareButton';
+
+const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
+  ssr: false,
+});
 
 const PostBreakingNewsLabel = ({
   isBreakingNews,
@@ -59,8 +63,6 @@ const PostHeaderBanner = ({
     datetimeLocale,
     serviceDatetimeLocale,
     altCalendar,
-    service,
-    script,
     translations: {
       liveExperiencePage: {
         breaking = 'Breaking',
@@ -68,7 +70,7 @@ const PostHeaderBanner = ({
         postDateFormat,
       },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
   const locale = serviceDatetimeLocale || datetimeLocale;
   const isRelative = isTenHoursAgo(new Date(curated).getTime());
   return (
@@ -80,8 +82,6 @@ const PostHeaderBanner = ({
         format={postDateFormat || 'D MMMM YYYY'}
         locale={locale}
         timezone={timezone}
-        service={service}
-        script={script}
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}
@@ -153,15 +153,25 @@ const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
         position={[9]}
       />
     ),
-    video: (props: { blocks: MediaBlock[] }) => (
-      <MediaLoader blocks={props.blocks} css={styles.bodyMedia} />
-    ),
+    video: (props: { blocks: MediaBlock[] }) => {
+      const { blocks } = props;
+      const isPortrait = isPortraitVideo(blocks);
+
+      return (
+        <div css={isPortrait && styles.portraitVideoPlayer}>
+          <MediaLoader
+            blocks={props.blocks}
+            css={[styles.bodyMedia, styles.videoPost]}
+          />
+        </div>
+      );
+    },
     audio: (props: { blocks: MediaBlock[] }) => (
       <MediaLoader blocks={props.blocks} css={styles.audioPost} />
     ),
     social: SocialEmbedContainer,
+    oEmbed: OEmbed,
   };
-
   return (
     <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
   );
@@ -204,7 +214,10 @@ const Post = ({
           />
 
           {headerBlocks.map(headerBlock => (
-            <PostHeadings key={headerBlock.id} headerBlock={headerBlock} />
+            <PostHeadings
+              key={`${headerBlock.type}-${headerBlock.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`}
+              headerBlock={headerBlock}
+            />
           ))}
         </span>
       </Heading>

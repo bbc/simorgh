@@ -1,4 +1,4 @@
-import React, { useContext, useId } from 'react';
+import { use, useId } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import {
   EmbedConsentBannerCanonical,
@@ -44,7 +44,6 @@ const checkIsSupportedProvider = (provider, pageType) => {
  */
 export const CanonicalSocialEmbed = ({
   provider,
-  service,
   skipLink,
   id,
   oEmbed = null,
@@ -52,7 +51,7 @@ export const CanonicalSocialEmbed = ({
   fallback,
   onRender = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   const isSupportedProvider = checkIsSupportedProvider(provider, pageType);
@@ -61,11 +60,11 @@ export const CanonicalSocialEmbed = ({
   if (!isSupportedProvider || !oEmbed)
     return (
       <>
-        <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-          <Notice service={service} provider={provider} {...fallback} />
+        <SkipLinkWrapper provider={provider} {...skipLink}>
+          <Notice provider={provider} {...fallback} />
         </SkipLinkWrapper>
         <noscript>
-          <Notice service={service} provider={provider} {...fallback} />
+          <Notice provider={provider} {...fallback} />
         </noscript>
       </>
     );
@@ -73,17 +72,12 @@ export const CanonicalSocialEmbed = ({
   return (
     <>
       <SkipLinkWrapper
-        service={service}
         provider={provider}
         {...(embedCaption && { describedById: captionId })}
         {...skipLink}
       >
         {embedCaption ? (
-          <CaptionWrapper
-            service={service}
-            describedById={captionId}
-            {...embedCaption}
-          >
+          <CaptionWrapper describedById={captionId} {...embedCaption}>
             <EmbedConsentBannerCanonical provider={provider} id={id}>
               <CanonicalEmbed
                 provider={provider}
@@ -103,7 +97,7 @@ export const CanonicalSocialEmbed = ({
         )}
       </SkipLinkWrapper>
       <noscript>
-        <Notice service={service} provider={provider} {...fallback} />
+        <Notice provider={provider} {...fallback} />
       </noscript>
     </>
   );
@@ -115,14 +109,13 @@ export const CanonicalSocialEmbed = ({
  */
 export const AmpSocialEmbed = ({
   provider,
-  service,
   skipLink,
   id,
   caption,
   fallback,
   source = null,
 }) => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType } = use(RequestContext);
   const embedCaption = getCaptionText({ pageType, caption, provider });
 
   if (!id) {
@@ -134,15 +127,15 @@ export const AmpSocialEmbed = ({
 
   if (!isSupportedProvider || !AmpElement)
     return (
-      <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
-        <Notice service={service} provider={provider} {...fallback} />
+      <SkipLinkWrapper provider={provider} {...skipLink}>
+        <Notice provider={provider} {...fallback} />
       </SkipLinkWrapper>
     );
 
   return (
-    <SkipLinkWrapper service={service} provider={provider} {...skipLink}>
+    <SkipLinkWrapper provider={provider} {...skipLink}>
       {embedCaption ? (
-        <CaptionWrapper service={service} {...embedCaption}>
+        <CaptionWrapper {...embedCaption}>
           <EmbedConsentBannerAmp provider={provider} id={id}>
             <AmpElement id={id} source={source} />
           </EmbedConsentBannerAmp>

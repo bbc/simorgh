@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { useContext, FC, HTMLAttributes } from 'react';
-import { jsx, Theme } from '@emotion/react';
+import { use, FC, HTMLAttributes } from 'react';
+import { Theme } from '@emotion/react';
 import Url from 'url-parse';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -34,7 +32,7 @@ const InlineLink: FC<Props> = ({
   to,
   ...htmlAttributes
 }: Props) => {
-  const { externalLinkText } = useContext(ServiceContext);
+  const { externalLinkText } = use(ServiceContext);
   const { hostname } = new Url(to);
   const isExternalLink =
     hostname && !bbcDomains.some(bbcDomain => hostname === bbcDomain);

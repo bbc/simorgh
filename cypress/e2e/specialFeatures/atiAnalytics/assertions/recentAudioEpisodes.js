@@ -5,10 +5,9 @@ const { RECENT_AUDIO_EPISODES } = COMPONENTS;
 
 export const assertRecentAudioEpisodesComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Recent Audio Episodes component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertRecentAudioEpisodesComponentView = ({
     assertATIComponentViewEvent({
       component: RECENT_AUDIO_EPISODES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertRecentAudioEpisodesComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Recent Audio Episodes component', () => {
     interceptATIAnalyticsBeacons();
@@ -49,9 +46,8 @@ export const assertRecentAudioEpisodesComponentClick = ({
     assertATIComponentClickEvent({
       component: RECENT_AUDIO_EPISODES,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

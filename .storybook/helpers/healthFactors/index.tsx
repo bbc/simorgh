@@ -1,7 +1,8 @@
 import path from 'ramda/src/path';
 import count from 'ramda/src/count';
+import HealthFactorsMetadata from '../../DocsDecorator/types';
 
-export const getActionCount = metadata => {
+export const getActionCount = (metadata: HealthFactorsMetadata | undefined) => {
   const uxAccessibility = path(['uxAccessibilityDoc'], metadata);
   const uxSwarm = path(['swarm'], metadata);
   const acceptanceCriteria = path(['acceptanceCriteria'], metadata);
@@ -14,7 +15,7 @@ export const getActionCount = metadata => {
   );
 };
 
-export const isExempt = context => {
+export const isExempt = (context: any) => {
   const EXEMPTED = [
     'docs',
     'hooks',

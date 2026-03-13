@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -188,6 +188,7 @@ const Brand = forwardRef((props, ref) => {
     isLongBrand = false,
     skipLink = null,
     linkId = null,
+    children,
     ...rest
   } = props;
 
@@ -215,6 +216,7 @@ const Brand = forwardRef((props, ref) => {
           <StyledBrand {...props} />
         )}
         {skipLink}
+        {children}
         {scriptLink && <div>{scriptLink}</div>}
       </SvgWrapper>
     </Banner>

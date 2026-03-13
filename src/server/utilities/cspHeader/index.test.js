@@ -11,18 +11,13 @@ import {
   generateStyleSrc,
   generateMediaSrc,
   generateWorkerSrc,
+  cspDirectives,
+  advertisingCountryScripts,
 } from './directives';
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
-// Express Fixtures
-const req = ({ urlExample = '', originExample = '' } = {}) => ({
-  url: urlExample,
-  headers: {
-    'user-agent': 'local-agent',
-    'bbc-origin': originExample,
-  },
-});
+const nonce = '7088dae1fe17eee6bf8a2ccbcf9ac115';
 
 let headers = {};
 
@@ -30,9 +25,10 @@ const res = {
   setHeader: (key, value) => {
     headers[key] = value;
   },
+  set: (key, value) => {
+    headers[key] = value;
+  },
 };
-
-const next = jest.fn();
 
 describe('cspHeader', () => {
   afterEach(() => {
@@ -51,7 +47,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -123,7 +119,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.bbc.com',
       urlExample: 'https://www.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -207,7 +203,6 @@ describe('cspHeader', () => {
         'https://sb.scorecardresearch.com',
         'https://*.twimg.com',
         'https://*.twitter.com',
-        'https://*.wearehearken.eu',
         'https://*.webcontentassessor.com',
         'https://www.tiktok.com',
         'https://lf16-tiktok-web.ttwstatic.com',
@@ -218,9 +213,14 @@ describe('cspHeader', () => {
         'https://*.teads.tv',
         'https://*.mapcreator.io',
         'https://*.thomsonreuters.com',
-        ...advertisingServiceCountryDomains,
+        'https://*.covatic.io',
+        'https://*.doubleverify.com',
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
+        'blob:',
+        'data:',
+        `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
         ...bbcDomains,
@@ -240,7 +240,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin.amp',
       childSrcExpectation: ['blob:'],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:', 'ws:', 'wss:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -314,7 +314,7 @@ describe('cspHeader', () => {
       originExample: 'https://www.test.bbc.com',
       urlExample: 'https://www.test.bbc.com/pidgin',
       childSrcExpectation: ["'self'"],
-      connectSrcExpectation: ["'self' https:"],
+      connectSrcExpectation: ["'self'", 'https:', 'ws:', 'wss:'],
       defaultSrcExpectation: [
         ...bbcDomains,
         'https://*.googlesyndication.com',
@@ -381,10 +381,10 @@ describe('cspHeader', () => {
       ].sort(),
       scriptSrcExpectation: [
         ...bbcDomains,
-        'https://*.wearehearken.eu',
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',
+        'http://localhost:7080',
         'https://*.twitter.com',
         'https://www.instagram.com',
         'https://*.twimg.com',
@@ -413,9 +413,14 @@ describe('cspHeader', () => {
         'https://*.teads.tv',
         'https://*.mapcreator.io',
         'https://*.thomsonreuters.com',
-        ...advertisingServiceCountryDomains,
+        'https://*.covatic.io',
+        'https://*.doubleverify.com',
         "'self'",
         "'unsafe-inline'",
+        "'unsafe-eval'",
+        'blob:',
+        'data:',
+        `'nonce-${nonce}'`,
       ].sort(),
       styleSrcExpectation: [
         ...bbcDomains,
@@ -433,8 +438,6 @@ describe('cspHeader', () => {
     ({
       isAmp,
       isLive,
-      originExample,
-      urlExample,
       childSrcExpectation,
       connectSrcExpectation,
       defaultSrcExpectation,
@@ -454,7 +457,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this connectSrc`, () => {
-          expect(generateConnectSrc()).toEqual(connectSrcExpectation);
+          expect(generateConnectSrc({ isLive })).toEqual(connectSrcExpectation);
         });
 
         it(`Then it has this defaultSrc`, () => {
@@ -480,7 +483,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this scriptSrc`, () => {
-          expect(generateScriptSrc({ isAmp, isLive })).toEqual(
+          expect(generateScriptSrc({ isAmp, isLive, nonce })).toEqual(
             scriptSrcExpectation,
           );
         });
@@ -492,7 +495,7 @@ describe('cspHeader', () => {
         });
 
         it(`Then it has this mediaSrc`, () => {
-          expect(generateMediaSrc()).toEqual(mediaSrcExpectation);
+          expect(generateMediaSrc({})).toEqual(mediaSrcExpectation);
         });
 
         it(`Then it has this workerSrc`, () => {
@@ -502,9 +505,7 @@ describe('cspHeader', () => {
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next);
-
-          expect(next).toHaveBeenCalled();
+          injectCspHeader({ isAmp, nonce, res });
 
           const expectedCSPHeaderString =
             `default-src ${defaultSrcExpectation.join(' ')};` +
@@ -518,7 +519,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `report-to worldsvc;` +
-            `upgrade-insecure-requests`;
+            `upgrade-insecure-requests;`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
@@ -529,7 +530,7 @@ describe('cspHeader', () => {
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
           process.env.SIMORGH_CSP_REPORTING_ENDPOINT = 'mocked-value';
 
-          injectCspHeader(req({ urlExample, originExample }), res, next);
+          injectCspHeader({ isAmp, nonce, res });
 
           expect(headers['report-to']).toEqual(
             JSON.stringify({
@@ -548,4 +549,59 @@ describe('cspHeader', () => {
       });
     },
   );
+});
+
+describe('Content Security Policy country-specific ad domains', () => {
+  it('includes country-specific google ad domains in script-src', () => {
+    const countriesToTest = ['ae', 'ie', 'mx', 'tz'];
+    countriesToTest.forEach(country => {
+      const data = advertisingServiceCountryDomains(country);
+      const advertisingCountryScriptsArray = advertisingCountryScripts(country);
+      const scriptSrc = generateScriptSrc({
+        isAmp: false,
+        isLive: true,
+        advertisingCountryScriptsArray,
+      });
+      expect(scriptSrc).toContain(data[0].domain);
+    });
+  });
+  it('does not include country-specific google ad domain for countries we do not have', () => {
+    const countriesToTest = ['uk'];
+    countriesToTest.forEach(country => {
+      const advertisingCountryScriptsArray = advertisingCountryScripts(country);
+      expect(advertisingCountryScriptsArray).toHaveLength(0);
+    });
+  });
+});
+
+describe('cspHeader with relaxedCsp', () => {
+  it('should serve relaxed CSP when shouldServeRelaxedCsp is true', () => {
+    expect(
+      cspDirectives({ isAmp: true, isLive: true, shouldServeRelaxedCsp: true }),
+    ).toEqual({
+      directives: {
+        'child-src': ["blob: https: 'self'"],
+        'connect-src': ["'self'", 'https:', 'ws:', 'wss:'],
+        'default-src': [
+          "'self'",
+          '*.bbc.co.uk',
+          '*.bbc.com',
+          '*.bbci.co.uk',
+          '*.bbci.com',
+          'https://*.googlesyndication.com',
+        ],
+        'font-src': ["https:  data: blob: 'self'"],
+        'frame-src': ['https: data:'],
+        'img-src': ['https: data: blob:'],
+        'media-src': ["'self' blob: data: https:"],
+        'report-to': 'worldsvc',
+        'script-src': [
+          "https: 'unsafe-inline' 'unsafe-eval' blob: data: 'self'",
+        ],
+        'style-src': ["https: 'unsafe-inline'"],
+        'upgrade-insecure-requests': [],
+        'worker-src': ['blob:', 'data:', "'self'", '*.bbc.co.uk', '*.bbc.com'],
+      },
+    });
+  });
 });

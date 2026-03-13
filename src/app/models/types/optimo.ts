@@ -3,8 +3,10 @@ import { Tag } from '#app/components/Metadata/types';
 import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
+import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { PageTypes } from './global';
-import { MetadataFormats, MetadataTaggings, MetadataTopics } from './metadata';
+import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
+import { Curation } from './curationData';
 
 export type OptimoBlock = {
   type: string;
@@ -98,8 +100,12 @@ export type ArticleMetadata = {
     about: Tag[];
     mentions: Tag[];
   };
-  topics: MetadataTopics;
+  topics: TopicTag[];
   type: PageTypes;
+  stats?: {
+    readTime?: number;
+    wordCount?: number;
+  };
 };
 
 export type ArticleContent = {
@@ -126,8 +132,11 @@ export type ArticlePromo = {
 };
 
 export type SecondaryColumn = {
+  billboardCuration?: Curation;
+  mediaCuration?: Curation;
   topStories: TopStoryItem[];
   features: object[];
+  personalisedContent?: object[];
   latestMedia?: LatestMedia[];
 };
 
@@ -142,6 +151,13 @@ export type RelatedContent = {
   };
 };
 
+export type PortraitVideoItems = {
+  title?: string;
+  portraitVideo: {
+    blocks: PortraitClipMediaBlock[];
+  };
+};
+
 export type Article = {
   content: ArticleContent;
   metadata: ArticleMetadata;
@@ -150,4 +166,5 @@ export type Article = {
   secondaryColumn?: SecondaryColumn;
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
+  portraitVideoItems?: PortraitVideoItems;
 };

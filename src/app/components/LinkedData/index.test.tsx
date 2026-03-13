@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Helmet from 'react-helmet';
 import assocPath from 'ramda/src/assocPath';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -102,6 +102,93 @@ describe('LinkedData', () => {
       },
     ],
   };
+
+  const podcastEpisodePathname = '/gahuza/podcasts/p07yh8hb/p0k1qjp9';
+
+  const seriesId = `https://www.test.bbc.com${podcastEpisodePathname}#series`;
+  const episodeId = `https://www.test.bbc.com${podcastEpisodePathname}#episode`;
+  const audioId = `https://www.test.bbc.com${podcastEpisodePathname}#audio`;
+
+  const propsForPodcastEpisode = {
+    type: 'WebPage',
+    seoTitle: 'Episode Title - Brand - Gahuza',
+    entities: [
+      {
+        '@type': 'PodcastSeries',
+        '@id': seriesId,
+        name: "Imvo n'imvano",
+      },
+      {
+        '@type': 'PodcastEpisode',
+        '@id': episodeId,
+        name: 'Episode Title',
+        description: 'Episode synopsis',
+        datePublished: '2024-11-02T12:00:00.000Z',
+        partOfSeries: { '@id': seriesId },
+        associatedMedia: {
+          '@type': 'AudioObject',
+          '@id': audioId,
+          name: 'Episode Title',
+          description: 'Episode synopsis',
+          duration: 'PT29M30S',
+          thumbnailUrl: 'https://ichef.bbci.co.uk/...',
+          uploadDate: '2024-11-02T12:00:00.000Z',
+        },
+      },
+    ],
+    mainEntityId: episodeId,
+  };
+
+  it('should correctly render linked data for podcast episode pages with PodcastEpisode schema', () => {
+    render(
+      <Context>
+        <LinkedData {...propsForPodcastEpisode} />
+      </Context>,
+      {
+        pathname: podcastEpisodePathname,
+      },
+    );
+
+    expect(getLinkedDataOutput()).toMatchSnapshot();
+  });
+
+  describe('SpeakableSpecification schema', () => {
+    const baseProps = {
+      type: 'WebPage',
+      seoTitle: 'Hindi Most Read Title',
+      datePublished: '2024-01-01T12:00:00.000Z',
+      dateModified: '2024-01-01T13:00:00.000Z',
+    };
+
+    it('includes SpeakableSpecification for Hindi service with title only', () => {
+      render(
+        <Context service="hindi">
+          <LinkedData {...baseProps} />
+        </Context>,
+      );
+      const output = getLinkedDataOutput();
+      const speakable = output['@graph'].find(
+        (item: Record<string, unknown>) => item.speakable,
+      );
+      expect(speakable).toBeTruthy();
+      expect(speakable.speakable).toEqual([
+        { '@type': 'SpeakableSpecification', xpath: ['/html/head/title'] },
+      ]);
+    });
+
+    it('does not include SpeakableSpecification for non-enabled service', () => {
+      render(
+        <Context service="news">
+          <LinkedData {...baseProps} />
+        </Context>,
+      );
+      const output = getLinkedDataOutput();
+      const speakable = output['@graph'].find(
+        (item: Record<string, unknown>) => item.speakable,
+      );
+      expect(speakable).toBeUndefined();
+    });
+  });
 
   it('should correctly render linked data for Ondemand Radio page', () => {
     render(
@@ -218,15 +305,17 @@ describe('LinkedData', () => {
   });
 
   describe('bylineLinkedData', () => {
-    const bylineLinkedData = {
-      authorName: 'John',
-      jobRole: 'Journalist',
-      twitterText: 'BBC News',
-      twitterLink: 'https://twitter.com/BBCNews',
-      authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
-      location: 'London',
-      authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
-    };
+    const bylineLinkedData = [
+      {
+        authorName: 'John',
+        jobRole: 'Journalist',
+        twitterText: 'BBC News',
+        twitterLink: 'https://twitter.com/BBCNews',
+        authorImage: 'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
+        location: 'London',
+        authorTopicUrl: 'https://www.bbc.co.uk/news/topics/cg2gmrxlde0t',
+      },
+    ];
 
     const articleProps = assocPath(
       ['bylineLinkedData'],

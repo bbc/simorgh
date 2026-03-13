@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     atiAnalyticsProducerName: 'SINHALA',
-    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
     serviceLocalizedName: 'සිංහල',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sinhala/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News සිංහල',
     dir: `ltr`,
     externalLinkText: ', බාහිර',
@@ -46,7 +46,26 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'ප්‍රධාන පුවත්',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Whatsapp',
+      brandTitle: 'අපගේ BBC News සිංහල නිල WhatsApp Channel එක follow කරන්න',
+      brandDescription:
+        'උණුසුම් පුවත්, විශ්ලේෂණ සහ විශේෂ විශේෂාංග ඔබේ දුරකතනය වෙත ඍජුව ම ලබා ගන්න.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp7qwf.png',
+        alt: 'WhatsApp BBC News සිංහල',
+      },
+      linkLabel: {
+        text: 'සම්බන්ධ වීමට link එක click කරන්න',
+        href: 'https://www.whatsapp.com/channel/0029VbAdrSX5PO0xbywORN25',
+      },
+    },
     translations: {
+      and: 'සහ',
+      readTime: {
+        readTimePrefix: 'කියවීමේ කාලය',
+        minute: 'මිනිත්තු',
+      },
       pagination: {
         page: 'පිටුව',
         previousPage: 'ආපසු',
@@ -62,7 +81,20 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
       relatedTopics: 'සබැඳි විෂයයන්',
+      moreOnThis: '',
       navMenuText: 'අංශ',
+      liteSite: {
+        onboardingMessage:
+          'ඔබ මේ දකින්නේ අවම ඩේටා ප්‍රමාණයක් භාවිත කරන මෙම වෙබ් අඩවියේ පෙළ පමණක් කියවිය හැකි අනුවාදයකි. රූප සහ වීඩියෝ අන්තර්ගත අපගේ මුලික වෙබ් අඩවිය මෙතැනින් නරඹන්න.',
+        toMainSite: 'ප්‍රධාන වෙබ් අඩවියට ගෙන යන්න',
+        informationPage:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිතා කරන මෙම වෙබ් පිටු පිළිබඳ වැඩිදුර කියවන්න',
+        informationPageLink:
+          'https://www.bbc.com/sinhala/articles/c4gdp0d3mzpo',
+        dataSaving: 'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+        articleDataSavingLinkText:
+          'අවම ඩේටා ප්‍රමාණයක් භාවිත කිරීමට පෙළ පමණක් කියවන්න',
+      },
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',
@@ -71,7 +103,7 @@ export const service: DefaultServiceConfig = {
       liveExperiencePage: {
         liveLabel: 'සජීවී',
         liveCoverage: 'සජීවී වාර්තාකරණය',
-        breaking: 'අලුත්ම පුවතක්',
+        breaking: 'Breaking',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
         shareButtonText: 'යවන්න',
@@ -111,6 +143,9 @@ export const service: DefaultServiceConfig = {
           callToActionLast: '',
           callToActionLinkUrl: 'https://www.bbc.com/sinhala',
         },
+      },
+      byline: {
+        reportingFrom: 'වාර්තාකරණය',
       },
       consentBanner: {
         privacy: {
@@ -221,6 +256,7 @@ export const service: DefaultServiceConfig = {
         },
         listen: 'සවන්දෙන්න',
         watch: 'නරඹන්න',
+        watchMoments: 'වීඩියෝව නරඹන්න',
         listenLive: 'සජීව ශ්‍රවණය',
         liveLabel: 'සජීවී.',
         nextLabel: 'NEXT',
@@ -229,6 +265,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ධාවන කාලය',
         recentEpisodes: 'පෙර වැඩසටහන්',
         closeVideo: 'ඉවත්වෙන්න',
+        endOfContentClose: 'මෙම අන්තර්ගතයේ අවසන්. ඉවත්වෙන්න',
       },
       socialEmbed: {
         caption: {
@@ -285,7 +322,7 @@ export const service: DefaultServiceConfig = {
         text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.',
       },
       links: [
@@ -306,6 +343,10 @@ export const service: DefaultServiceConfig = {
           text: 'බීබීසී ය අමතන්න',
         },
         {
+          href: 'https://www.bbc.com/sinhala.lite',
+          text: 'ලිපිවල පෙළ පමණක් අඩංගු වෙබ් අඩවිය',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'බීබීසී පුවත් වෙනත් භාෂාවලින්',
         },
@@ -323,26 +364,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ප්‍රධාන පුවත්',
         url: '/sinhala',
-      },
-      {
-        title: 'ශ්‍රී ලංකා',
-        url: '/sinhala/topics/cg7267dz901t',
-      },
-      {
-        title: 'ලෝකය',
-        url: '/sinhala/topics/c83plvepnq1t',
-      },
-      {
-        title: 'වීඩියෝ',
-        url: '/sinhala/topics/crldzm9n2lnt',
-      },
-      {
-        title: 'ක්‍රීඩා',
-        url: '/sinhala/topics/cvjp2jy9g2qt',
-      },
-      {
-        title: 'සෞඛ්‍ය',
-        url: '/sinhala/topics/cz74k723j57t',
       },
     ],
   },

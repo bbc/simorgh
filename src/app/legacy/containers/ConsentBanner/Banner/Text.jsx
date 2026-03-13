@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import { ConsentBannerText } from '#psammead/psammead-consent-banner/src';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
 const BannerText = ({ uk, international }) => {
-  const { isUK } = useContext(RequestContext);
-  const { dir, script } = useContext(ServiceContext);
+  const { isUK } = use(RequestContext);
+  const { dir } = use(ServiceContext);
 
   const { first, linkText, linkUrl, last } = isUK ? uk : international;
 
@@ -17,7 +17,7 @@ const BannerText = ({ uk, international }) => {
     ) : null;
 
   return (
-    <ConsentBannerText dir={dir} script={script}>
+    <ConsentBannerText dir={dir}>
       {first}
       {Link}
       {last}

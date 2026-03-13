@@ -1,9 +1,6 @@
-import React from 'react';
 import moment from 'moment-timezone';
 import styled from '@emotion/styled';
 import { GEL_SPACING_HLF } from '#psammead/gel-foundations/src/spacings';
-import { getMinion } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { mediaIcons } from '#psammead/psammead-assets/src/svgs';
 import formatDuration from '#lib/utilities/formatDuration';
 
@@ -17,8 +14,8 @@ const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
   color: ${props => props.theme.palette.EBON};
   background-color: ${props => props.theme.palette.WHITE};
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => script && getMinion(script)};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
+  ${({ theme: { fontSizes } }) => fontSizes.minion};
 `;
 
 const StyledTime = styled.time`
@@ -39,22 +36,10 @@ const formatChildren = children => {
   );
 };
 
-const MediaIcon = ({
-  script,
-  service,
-  children = null,
-  type = null,
-  className,
-}) => {
+const MediaIcon = ({ children, type, className = '' }) => {
   if (!type || !mediaIcons[type]) return null;
   return (
-    <Wrapper
-      script={script}
-      service={service}
-      aria-hidden="true"
-      className={className}
-      data-e2e="media-icon"
-    >
+    <Wrapper aria-hidden="true" className={className} data-e2e="media-icon">
       {mediaIcons[type]}
       {formatChildren(children)}
     </Wrapper>

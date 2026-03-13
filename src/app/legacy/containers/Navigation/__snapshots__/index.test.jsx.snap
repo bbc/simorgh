@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-0 {
@@ -147,8 +147,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -281,8 +281,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -357,8 +357,8 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -696,8 +696,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-current="page"
               aria-labelledby="NavigationLinks-Home"
               class="focusIndicatorRemove emotion-69 emotion-70"
+              data-active="true"
               href="/news"
             >
               <span
@@ -988,8 +990,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1117,8 +1119,8 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -1728,8 +1730,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1857,8 +1859,8 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2525,8 +2527,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2601,8 +2603,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -2709,8 +2711,8 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2823,8 +2825,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-current="page"
                 aria-labelledby="NavigationLinks-Home"
                 class="focusIndicatorRemove emotion-17 emotion-18"
+                data-active="true"
                 href="/news"
               >
                 <span
@@ -3371,8 +3375,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -3479,8 +3483,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4116,8 +4120,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -4224,8 +4228,8 @@ exports[`Navigation Container should correctly render canonical navigation on no
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;

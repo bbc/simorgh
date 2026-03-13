@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import liveFixtureWithLiveMedia from '#data/mundo/live/c7dkx155e626t.json';

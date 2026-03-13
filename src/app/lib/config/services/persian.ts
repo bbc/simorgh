@@ -1,7 +1,7 @@
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import 'moment/locale/fa';
 import '#psammead/moment-timezone-include/tz/GMT';
-import jalaali from '../../../legacy/psammead/psammead-calendars/src';
+import jalaali from '#psammead/psammead-calendars/src';
+import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
 import withContext from '../../../contexts/utils/withContext';
 import { DefaultServiceConfig } from '../../../models/types/serviceConfig';
 
@@ -15,11 +15,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-persian',
     atiAnalyticsProducerId: '69',
     atiAnalyticsProducerName: 'PERSIAN',
-    useReverb: true,
     chartbeatDomain: 'persian.bbc.co.uk',
     brandName: 'BBC News فارسی',
     serviceLocalizedName: 'فارسی',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
     externalLinkText: '، خارجی',
@@ -49,21 +49,21 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'پادکست',
-      brandTitle: 'اسطوره تختی',
+      title: 'معرفی خبرنامه',
+      brandTitle: 'خبرنامه بی‌بی‌سی فارسی',
       brandDescription:
-        'در مجموعه چهار قسمتی «اسطوره تختی» از زندگی شخصی، ورزشی و اجتماعی غلامرضا تختی می‌شنویم.',
+        'گزیده‌ای از مهم‌ترین خبرها، گزارش‌های میدانی و گفت‌وگوهای اختصاصی را هر هفته در ایمیل خود دریافت کنید.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0jkc7rj.jpg',
-        alt: 'اسطوره تختی',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mwpjgy.jpg',
+        alt: 'خبرنامه',
       },
       linkLabel: {
-        text: 'پادکست',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
+        text: 'اینجا مشترک شوید',
+        href: 'https://www.bbc.com/persian/send/u209231908',
       },
       skipLink: {
-        text: 'از %title% رد شوید و به خواندن ادامه دهید',
-        endTextVisuallyHidden: 'پایان %title%',
+        text: 'از % title % عبور کنید و به ادامه مطلب بروید',
+        endTextVisuallyHidden: 'پایان   % title %',
       },
     },
     translations: {
@@ -76,13 +76,30 @@ export const service: DefaultServiceConfig = {
       ads: {
         advertisementLabel: 'آگهی',
       },
+      readTime: {
+        readTimePrefix: 'زمان مطالعه',
+        minute: 'دقیقه',
+      },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
+      continueReading: 'ادامه مطلب را بخوانید',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
       relatedTopics: 'موضوعات مرتبط',
+      moreOnThis: '',
       navMenuText: 'صفحه ها',
+      liteSite: {
+        onboardingMessage: `شما در حال مشاهده نسخه متنی وب‌سایت بی‌بی‌سی هستید که از داده کمتری استفاده می‌کند. نسخه اصلی وب‌سایت را که شامل تمام تصاویر و ویدیوهاست، مشاهده کنید.`,
+        toMainSite: 'بازگشت به وب‌سایت یا نسخه اصلی',
+        informationPage:
+          'اطلاعات بیشتر درباره نسخه لایت که برای مصرف کمتر حجم داده‌هاست',
+        informationPageLink:
+          'https://www.bbc.com/persian/articles/cr7953ky5dpo',
+        dataSaving: 'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
+        articleDataSavingLinkText:
+          'مشاهده نسخه متنی (بدون عکس یا ویدیو) از این مطلب',
+      },
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',
         audioPlayer: 'پخش صدا',
@@ -249,11 +266,6 @@ export const service: DefaultServiceConfig = {
           subtitle:
             'مجله خبری بخش فارسی رادیو بی‌بی‌سی را هر روز از ساعت ۶ تا ۸ صبح به وقت تهران (۲:۳۰ تا ۴:۳۰ به وقت گرینیچ) بشنوید. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است.',
         },
-        bbc_dari_radio: {
-          title: 'بی بی سی افغانستان (برنامه های دری)',
-          subtitle:
-            'بی بی سی برای افغانستان تازه ترین و دقیق ترین خبرهای افغانستان ، منطقه و جهان را با تحلیل های همه جانبه ارایه می کند. برنامه های مختلف سیاسی، اجتماعی، فرهنگی و آموزشی از ساعت پنج صبح تا دوازده شب به زبان های دری و پشتو از بی بی سی برای افغانستان.',
-        },
         bbc_persian_tv: {
           title: '۶٠ دقیقه',
           subtitle:
@@ -271,6 +283,7 @@ export const service: DefaultServiceConfig = {
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
         download: 'دانلود برنامه',
         closeVideo: 'خروج',
+        endOfContentClose: 'پایان این محتوا. خروج',
       },
       socialEmbed: {
         caption: {
@@ -341,18 +354,19 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'اگر محتوایی را برای استفاده در وبسایت یا برنامه ای ارسال کرده اید، در صورتی که ما از ان محتوا استفاده کرده باشیم دیگرامکان حذف آن موجود نیست.',
-        retentionPeriodDays: undefined,
+          'اگر محتوایی را برای استفاده در وب‌سایت یا برنامه‌ای ارسال کرده‌اید، در صورتی که ما از آن محتوا استفاده کرده باشیم دیگر امکان حذف آن موجود نیست.',
+        retentionPeriodDays:
+          'اطلاعات ارسالی شما تا ۹۰ روز نگهداری خواهد شد و در صورتی که مورد استفاده قرار نگیرد، همراه با سایر اطلاعات ارسالی، حذف خواهد شد.',
         referenceNumber: 'شماره',
         submissionInfoSignedOutMessage:
           'شاید بخواهید این جزئیات را برای خود یادداشت کنید.',
         privacyInfoHtml:
           'نگران نباشید، ما از اطلاعات شما محافظت می کنیم - برای اطلاعات بیشتر {{privacyInfoLink}} را بخوانید.',
         emailToHtml:
-          'اگر نظر خود را تغییر داده اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
+          'اگر نظر خود را تغییر داده‌اید، به ما ایمیل {{emailLink}} بزنید. شماره را ذکر کنید و به ما بگویید که ما از آن استفاده نکنیم.',
 
         // Form Screen
-        dataPolicyHeading: undefined,
+        dataPolicyHeading: 'سیاست حفظ حریم خصوصی',
 
         // Uploading Screen
         uploadingHeading: 'در حال آپلود فایل ها...',
@@ -397,7 +411,7 @@ export const service: DefaultServiceConfig = {
         text: 'چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟',
       },
       externalLink: {
-        href: 'https://www.bbc.com/persian/institutional/2011/04/000001_links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'سیاست ما درباره لینک دادن به سایت های دیگر.',
       },
       links: [
@@ -439,54 +453,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'صفحه اول',
         url: '/persian',
-      },
-      {
-        title: 'بحران خاورمیانه',
-        url: '/persian/topics/cj31ldvmg1et',
-      },
-      {
-        title: 'پخش زنده',
-        url: '/persian/media-49522521',
-      },
-      {
-        title: 'ویدیو',
-        url: '/persian/topics/c6z7mnr559gt',
-      },
-      {
-        title: 'تلویزیون',
-        url: '/persian/topics/cw9qgeqd1zqt',
-      },
-      {
-        title: 'ايران',
-        url: '/persian/topics/ckdxnwvwwjnt',
-      },
-      {
-        title: 'افغانستان',
-        url: '/persian/afghanistan',
-      },
-      {
-        title: 'جهان',
-        url: '/persian/topics/c1d8ye58xl8t',
-      },
-      {
-        title: 'هنر',
-        url: '/persian/topics/c9wpm0epm45t',
-      },
-      {
-        title: 'ورزش',
-        url: '/persian/topics/cnq6879k7yjt',
-      },
-      {
-        title: 'اقتصاد',
-        url: '/persian/topics/cl8l9mvlllqt',
-      },
-      {
-        title: 'دانش',
-        url: '/persian/topics/ckdxnwr4r1yt',
-      },
-      {
-        title: 'فراتر از خبر',
-        url: '/persian/topics/cxr3ex12k6et',
       },
     ],
   },

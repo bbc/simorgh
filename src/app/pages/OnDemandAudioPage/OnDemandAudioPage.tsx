@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { useContext } from 'react';
-import { jsx } from '@emotion/react';
+import type { Component } from 'react';
+import { use } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -60,7 +58,7 @@ export interface OnDemandAudioProps {
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
-  MediaError: React.Component;
+  MediaError: Component;
 }
 
 const OnDemandAudioPage = ({
@@ -92,7 +90,7 @@ const OnDemandAudioPage = ({
 
   const pageType = path(['metadata', 'type'], pageData);
 
-  const { serviceName } = useContext(ServiceContext);
+  const { serviceName } = use(ServiceContext);
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
@@ -204,6 +202,7 @@ const OnDemandAudioPage = ({
         <RadioScheduleContainer
           initialData={radioScheduleData}
           toggleName="onDemandRadioSchedule"
+          eventTrackingData={{ componentName: 'radio-schedule' }}
         />
       )}
     </>

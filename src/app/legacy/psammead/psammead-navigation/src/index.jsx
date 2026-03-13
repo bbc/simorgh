@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -11,8 +10,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import { getPica } from '#psammead/gel-foundations/src/typography';
-import { getSansRegular } from '#psammead/psammead-styles/src/font-styles';
 import { NAV_BAR_TOP_BOTTOM_SPACING } from './DropdownNavigation';
 import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -53,8 +50,8 @@ const ListItemBorder = `
 `;
 
 const StyledLink = styled.a`
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => getSansRegular(service)};
+  ${({ theme: { fontSizes } }) => fontSizes.pica};
+  ${({ theme: { fontVariants } }) => fontVariants.sansRegular};
   color: ${props => props.theme.palette.GREY_10};
   cursor: pointer;
   text-decoration: none;
@@ -132,16 +129,10 @@ const StyledSpan = styled.span`
   }
 `;
 
-const CurrentLink = ({
-  linkId,
-  children: link,
-  script,
-  currentPageText = null,
-}) => (
+const CurrentLink = ({ linkId, children: link, currentPageText = null }) => (
   <StyledSpan
     // eslint-disable-next-line jsx-a11y/aria-role
     role="text"
-    script={script}
     // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     id={`NavigationLinks-${linkId}`}
   >
@@ -159,11 +150,9 @@ export const NavigationUl = ({ children, ...props }) => (
 export const NavigationLi = ({
   children: link,
   url,
-  script,
   clickTracker = null,
   currentPageText = null,
   active = false,
-  service,
   dir = 'ltr',
   viewTracker = null,
   ...props
@@ -173,29 +162,24 @@ export const NavigationLi = ({
       {active && currentPageText ? (
         <StyledLink
           href={url}
-          script={script}
-          service={service}
           currentLink
           // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
           aria-labelledby={`NavigationLinks-${link}`}
+          aria-current="page"
           className="focusIndicatorRemove"
+          data-active="true"
           {...clickTracker}
           {...props}
         >
-          <CurrentLink
-            linkId={link}
-            script={script}
-            currentPageText={currentPageText}
-          >
+          <CurrentLink linkId={link} currentPageText={currentPageText}>
             {link}
           </CurrentLink>
         </StyledLink>
       ) : (
         <StyledLink
           href={url}
-          script={script}
-          service={service}
           className="focusIndicatorRemove"
+          aria-current={active ? 'page' : undefined}
           {...clickTracker}
           {...props}
         >
@@ -246,7 +230,7 @@ const Navigation = ({
   children,
   dir = 'ltr',
   isOpen = false,
-  ampOpenClass = null,
+  ampOpenClass = '',
   ...props
 }) => {
   return (

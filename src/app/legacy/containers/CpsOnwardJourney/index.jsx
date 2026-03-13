@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import styled from '@emotion/styled';
 import {
@@ -77,15 +77,9 @@ const SingleContentWrapper = styled.div`
   `}
 `;
 
-const OptionallyRenderedSkipWrapper = ({
-  skipLink = null,
-  service,
-  children,
-}) =>
+const OptionallyRenderedSkipWrapper = ({ skipLink = null, children }) =>
   skipLink ? (
-    <SkipLinkWrapper service={service} {...skipLink}>
-      {children}
-    </SkipLinkWrapper>
+    <SkipLinkWrapper {...skipLink}>{children}</SkipLinkWrapper>
   ) : (
     children
   );
@@ -128,9 +122,9 @@ const CpsOnwardJourney = ({
   columnType,
   skipLink = null,
   eventTrackingData = null,
-  sendOptimizelyEvents = false,
+  experimentProps = null,
 }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { dir } = use(ServiceContext);
 
   const a11yAttributes = {
     as: 'section',
@@ -150,11 +144,9 @@ const CpsOnwardJourney = ({
       className={className}
       dir={dir}
     >
-      <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
+      <OptionallyRenderedSkipWrapper skipLink={skipLink}>
         {title ? (
           <LabelComponent
-            script={script}
-            service={service}
             dir={dir}
             labelId={labelId}
             columnType={columnType}
@@ -171,7 +163,7 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
-              sendOptimizelyEvents={sendOptimizelyEvents}
+              experimentProps={experimentProps}
             />
           </SingleContentWrapper>
         ) : (
@@ -180,7 +172,7 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
-            sendOptimizelyEvents={sendOptimizelyEvents}
+            experimentProps={experimentProps}
           />
         )}
       </OptionallyRenderedSkipWrapper>

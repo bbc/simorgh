@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  and?: string;
   pagination?: {
     page?: string;
     previousPage: string;
@@ -16,6 +17,7 @@ export interface Translations {
   relatedContent: string;
   topicsPath?: string;
   relatedTopics?: string;
+  moreOnThis?: string;
   navMenuText: string;
   liteSite?: LiteSiteTranslations;
   mediaAssetPage: {
@@ -32,12 +34,25 @@ export interface Translations {
     shareButtonText: string;
     postDateTimeFormat?: string;
     postDateFormat?: string;
+    refreshButtonText?: string;
+    visuallyHiddenButtonText?: string;
   };
   downloads?: {
     instructions?: string;
     title?: string;
   };
   gist?: string;
+  account?: {
+    signIn?: string;
+    forYou?: string;
+    register?: string;
+  };
+  accountPromoBanner?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+    buttonSeparatorText: string;
+  };
   error: {
     home?: string;
     currentPage?: string;
@@ -46,6 +61,13 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  readTime?: Partial<{
+    readTimePrefix: string;
+    quick: string;
+    long: string;
+    minute: string;
+    minutes: string;
+  }>;
   byline?: {
     author?: string;
     articleInformation?: string;
@@ -165,6 +187,8 @@ export interface Translations {
     podcastExternalLinks?: string;
     download?: string;
     closeVideo?: string;
+    endOfContentClose?: string;
+    modalLabel?: string;
   };
 
   socialEmbed: {

@@ -1,9 +1,17 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import {
+  assertDropdownNavigationComponentClick,
+  assertDropdownNavigationComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/navigation';
 
 const pageType = 'onDemandTV';
 
-const tests = [e2eTests];
+const tests = [e2eTests, testsForAllCanonicalPages];
 const testSuites = [
   {
     path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
@@ -193,14 +201,71 @@ const testSuites = [
   },
 ];
 
+const atiAnalyticsTestSuites = [
+  {
+    path: '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv_programmes.w13xttmz.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    tests: [assertPageView],
+  },
+  {
+    path: '/afrique/bbc_afrique_tv/tv/w3ct05mp',
+    runforEnv: ['local', 'test', 'live'],
+    service: 'afrique',
+    pageIdentifier: 'afrique.bbc_afrique_tv.tv.w3ct05mp.page',
+    siteId: 3,
+    applicationType: 'responsive',
+    contentType: 'player-episode',
+    tests: [assertPageView],
+  },
+];
+
 const liteTestSuites = testSuites.map(testSuite => {
   return {
     ...testSuite,
     path: `${testSuite.path}.lite`,
+    tests: [e2eTests],
+  };
+});
+
+const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
+  const excludedLiteTests = [
+    assertDropdownNavigationComponentView, // Dropdown navigation removed from all pages, as it requires JS
+    assertDropdownNavigationComponentClick, // Dropdown navigation removed from all pages, as it requires JS
+  ];
+
+  const liteSiteTests = testSuite.tests.filter(
+    test => !excludedLiteTests.includes(test),
+  );
+
+  // All lite enabled pages should have the Lite Site Summary component
+  liteSiteTests.push(assertLiteSiteSummaryComponentToMainSiteClick);
+
+  return {
+    ...testSuite,
+    path: getPathWithSuffix({ path: testSuite.path, suffix: '.lite' }),
+    applicationType: 'lite',
+    siteId: testSuite.siteId,
+    tests: [...liteSiteTests],
   };
 });
 
 runTestsForPage({
   pageType,
   testSuites: [...testSuites, ...liteTestSuites],
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsTestSuites,
+  testIsolation: true,
+});
+
+runTestsForPage({
+  pageType,
+  testSuites: atiAnalyticsLiteTestSuites,
 });

@@ -1,7 +1,4 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
 import { MEDIA_PLAYER_STATUS } from '#app/lib/logger.const';
@@ -9,13 +6,20 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import useLocation from '#app/hooks/useLocation';
 import useToggle from '#app/hooks/useToggle';
 import {
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { PageTypes } from '#app/models/types/global';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
-import { BumpType, MediaBlock, PlayerConfig } from './types';
+import {
+  BumpType,
+  EventMapping,
+  MediaBlock,
+  MediaPlayerEvents,
+  PlayerConfig,
+} from './types';
 import Caption from '../Caption';
 import nodeLogger from '../../lib/logger.node';
 import buildConfig from './utils/buildSettings';
@@ -29,19 +33,25 @@ import AmpMediaLoader from './Amp';
 import Message from './Message';
 
 const PAGETYPES_IGNORE_PLACEHOLDER: PageTypes[] = [
+  LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
 ];
 
 const logger = nodeLogger(__filename);
 
-export const BumpLoader = () => (
+type BumpLoaderProps = {
+  nonce?: string | null;
+};
+
+export const BumpLoader = ({ nonce }: BumpLoaderProps) => (
   <Helmet>
     <script
       type="text/javascript"
+      {...(nonce ? { nonce } : {})}
       src="https://static.bbci.co.uk/frameworks/requirejs/0.13.0/sharedmodules/require.js"
     />
-    <script type="text/javascript">
+    <script type="text/javascript" {...(nonce ? { nonce } : {})}>
       {`bbcRequireMap = {
             "bump-4":"https://emp.bbci.co.uk/emp/bump-4/bump-4"
         }
@@ -98,6 +108,7 @@ type MediaContainerProps = {
   showAds: boolean;
   uniqueId?: string;
   noJsMessage?: string;
+  eventMapping?: EventMapping;
 };
 
 const isAudioPlayer = (playerConfig: PlayerConfig) =>
@@ -108,62 +119,83 @@ const MediaContainer = ({
   showAds,
   uniqueId,
   noJsMessage,
+  eventMapping,
 }: MediaContainerProps) => {
   const playerElementRef = useRef<HTMLDivElement>(null);
   const isAudio = isAudioPlayer(playerConfig);
 
   useEffect(() => {
     try {
-      window.requirejs(['bump-4'], async (Bump: BumpType) => {
+      window.requirejs(['bump-4'], (Bump: BumpType) => {
         if (playerElementRef?.current && playerConfig) {
-          const mediaPlayer = Bump.player(
-            playerElementRef.current,
-            playerConfig,
-          );
-
-          mediaPlayer.load();
-
-          if (uniqueId != null) {
-            const { mediaPlayers } = window;
-            if (mediaPlayers == null) {
-              window.mediaPlayers = { [uniqueId]: mediaPlayer };
-            } else {
-              mediaPlayers[uniqueId] = mediaPlayer;
-            }
-          }
-
-          if (showAds) {
-            const adTag = await window.dotcom.ads.getAdTag();
-            mediaPlayer.loadPlugin(
-              {
-                swf: 'name:dfpAds.swf',
-                html: 'name:dfpAds.js',
-              },
-              {
-                name: 'AdsPluginParameters',
-                data: {
-                  adTag,
-                  debug: true,
-                },
-              },
+          // The requirejs callback cannot be async, so we wrap async logic in an inner function and invoke it immediately.
+          const initPlayer = async () => {
+            const mediaPlayer = Bump.player(
+              playerElementRef.current,
+              playerConfig,
             );
 
-            mediaPlayer.bind('playlistLoaded', async () => {
-              const updatedAdTag = await window.dotcom.ads.getAdTag();
-              mediaPlayer.dispatchEvent(
-                'bbc.smp.plugins.ads.event.updateAdTag',
-                {
-                  updatedAdTag,
-                },
-              );
-            });
-          }
+            if (uniqueId != null) {
+              const { mediaPlayers } = window;
+              if (mediaPlayers == null) {
+                window.mediaPlayers = { [uniqueId]: mediaPlayer };
+              } else {
+                mediaPlayers[uniqueId] = mediaPlayer;
+              }
+            }
+
+            // Bind any events passed in to the player
+            if (eventMapping && Object.keys(eventMapping || {}).length > 0) {
+              Object.keys(eventMapping).forEach(bindingKey => {
+                const key = bindingKey as MediaPlayerEvents;
+                const handler = eventMapping[key];
+
+                if (handler) mediaPlayer.bind(key, handler);
+              });
+            }
+
+            if (showAds) {
+              const adTag = await window.dotcom.ads.getAdTag();
+
+              if (adTag) {
+                mediaPlayer.loadPlugin(
+                  {
+                    swf: 'name:dfpAds.swf',
+                    html: 'name:dfpAds.js',
+                  },
+                  {
+                    name: 'AdsPluginParameters',
+                    data: {
+                      adTag,
+                    },
+                  },
+                );
+              }
+
+              mediaPlayer.bind('playlistLoaded', async () => {
+                const updatedAdTag = await window.dotcom.ads.getAdTag();
+
+                if (updatedAdTag) {
+                  mediaPlayer.dispatchEvent(
+                    'bbc.smp.plugins.ads.event.updateAdTag',
+                    {
+                      adTag: updatedAdTag,
+                    },
+                  );
+                }
+              });
+            }
+
+            mediaPlayer.load();
+          };
+
+          initPlayer();
         }
       });
     } catch (error) {
       logger.error(MEDIA_PLAYER_STATUS, error);
     }
-  }, [playerConfig, showAds, uniqueId]);
+  }, [playerConfig, showAds, uniqueId, eventMapping]);
 
   return (
     <div
@@ -184,12 +216,19 @@ type Props = {
   className?: string;
   embedded?: boolean;
   uniqueId?: string;
+  eventMapping?: EventMapping;
 };
 
-const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
-  const { lang, service, translations } = useContext(ServiceContext);
-  const { pageIdentifier } = useContext(EventTrackingContext);
-  const { enabled: adsEnabled } = useToggle('ads');
+const MediaLoader = ({
+  blocks,
+  className,
+  embedded,
+  uniqueId,
+  eventMapping,
+}: Props) => {
+  const { lang, service, translations } = use(ServiceContext);
+  const { pageIdentifier } = use(EventTrackingContext);
+  const { enabled: adsEnabled } = useToggle('preroll');
 
   const {
     id,
@@ -198,7 +237,8 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
     isAmp,
     isLite,
     showAdsBasedOnLocation,
-  } = useContext(RequestContext);
+    nonce,
+  } = use(RequestContext);
 
   const [showPlaceholder, setShowPlaceholder] = useState(
     !PAGETYPES_IGNORE_PLACEHOLDER.includes(pageType),
@@ -263,7 +303,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
       }
       <figure
         data-e2e="media-loader__container"
-        className={className}
+        className={`media-container${className ? ` ${className}` : ''}`}
         css={[
           styles.figure(embedded),
           !isAudio && [
@@ -283,7 +323,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
         ) : (
           <>
             {showAds && <AdvertTagLoader />}
-            <BumpLoader />
+            <BumpLoader nonce={nonce} />
             {hasPlaceholder ? (
               <Placeholder
                 src={placeholderSrc}
@@ -291,6 +331,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 noJsMessage={noJsMessage}
                 mediaInfo={mediaInfo}
                 onClick={() => setShowPlaceholder(false)}
+                isPortraitOrientation={!!isPortrait}
               />
             ) : (
               <MediaContainer
@@ -298,6 +339,7 @@ const MediaLoader = ({ blocks, className, embedded, uniqueId }: Props) => {
                 showAds={showAds}
                 uniqueId={uniqueId}
                 noJsMessage={noJsMessage}
+                eventMapping={eventMapping}
               />
             )}
           </>

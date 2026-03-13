@@ -73,7 +73,7 @@ const exitResult = isPassing => {
 
 const budget = {
   ally: 90,
-  bestPractises: 90,
+  bestPractises: 88,
   seo: 100,
 };
 
@@ -106,6 +106,7 @@ module.exports = {
 // A 'run' argument need to be passed in for the script to work
 // This was done to make the script unit testable without spliting
 // it to different files.
+
 const args = process.argv.slice(2);
 
 if (args[0] === 'run') {

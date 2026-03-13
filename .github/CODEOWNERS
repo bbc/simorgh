@@ -1,1 +1,5 @@
-*       @bbc/simorgh
+/package.json @bbc/simorgh
+/ws-nextjs-app/package.json  @bbc/simorgh
+/.yarn/cache @bbc/simorgh
+/yarn.lock @bbc/simorgh
+/.github/workflows/*.yml @bbc/simorgh-admins

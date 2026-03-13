@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { Ref, useContext } from 'react';
-import { jsx } from '@emotion/react';
+import { use } from 'react';
 import SectionLabel from '#psammead/psammead-section-label/src';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 import PromoItem from '../../../../legacy/components/OptimoPromos/PromoItem/index.styles';
@@ -10,37 +8,9 @@ import generatePromoId from '../../../../lib/utilities/generatePromoId';
 import LatestMediaItem from './LatestMediaItem';
 import styles from './index.styles';
 import { LatestMedia } from './types';
-import { EventTrackingBlock } from '../../../../models/types/eventTracking';
-
-const renderLatestMediaList = (
-  item: LatestMedia,
-  index: number,
-  eventTrackingData: EventTrackingBlock,
-  viewTracker: Ref<HTMLDivElement>,
-) => {
-  const ariaLabelledBy = generatePromoId({
-    sectionType: 'latest-media',
-    assetUri: null,
-    canonicalUrl: item.link,
-    uri: null,
-    contentType: item.type,
-    index,
-  });
-
-  return (
-    <PromoItem key={index} css={styles.latestMediaPromoBorderAndWidth}>
-      <LatestMediaItem
-        item={item}
-        ariaLabelledBy={ariaLabelledBy}
-        ref={viewTracker}
-        eventTrackingData={eventTrackingData}
-      />
-    </PromoItem>
-  );
-};
 
 const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
-  const { service, dir, translations, script } = useContext(ServiceContext);
+  const { dir, translations } = use(ServiceContext);
 
   const eventTrackingData = {
     block: {
@@ -58,7 +28,7 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
   const hasSingleItem = content.length === 1;
   const singleItem = content[0];
 
-  const ariaLabelledBy = generatePromoId({
+  let ariaLabelledBy = generatePromoId({
     sectionType: 'latest-media',
     assetUri: null,
     canonicalUrl: singleItem.link,
@@ -79,8 +49,6 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
         href=""
         labelId={LABEL_ID}
         linkText=""
-        script={script}
-        service={service}
         backgroundColor="transparent"
         overrideHeadingAs=""
         visuallyHidden={false}
@@ -95,13 +63,35 @@ const LatestMediaSection = ({ content }: { content: LatestMedia[] | null }) => {
             ariaLabelledBy={ariaLabelledBy}
             ref={viewTracker}
             eventTrackingData={eventTrackingData}
+            isPortraitImage={singleItem.isPortraitImage}
           />
         </div>
       ) : (
         <PromoList css={styles.latestMediaGridWrapper}>
-          {content.map((item, index) =>
-            renderLatestMediaList(item, index, eventTrackingData, viewTracker),
-          )}
+          {content.map((item, index) => {
+            ariaLabelledBy = generatePromoId({
+              sectionType: 'latest-media',
+              assetUri: null,
+              canonicalUrl: item.link,
+              uri: null,
+              contentType: item.type,
+              index,
+            });
+
+            return (
+              <PromoItem
+                key={item.id}
+                css={styles.latestMediaPromoBorderAndWidth}
+              >
+                <LatestMediaItem
+                  item={item}
+                  ariaLabelledBy={ariaLabelledBy}
+                  ref={viewTracker}
+                  eventTrackingData={eventTrackingData}
+                />
+              </PromoItem>
+            );
+          })}
         </PromoList>
       )}
     </section>

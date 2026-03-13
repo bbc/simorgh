@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-amharic',
     atiAnalyticsProducerId: '4',
     atiAnalyticsProducerName: 'AMHARIC',
-    useReverb: true,
     chartbeatDomain: 'amharic.bbc.co.uk',
     brandName: 'BBC News አማርኛ',
     product: 'BBC News',
     serviceLocalizedName: 'አማርኛ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/amharic.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/amharic/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News አማርኛ',
     dir: `ltr`,
     externalLinkText: ', ውጫዊ',
@@ -47,19 +47,24 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ቢቢሲ አማርኛ በዋትስአፕ',
-      brandTitle: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
-      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በቀጥታ በዋትስአፕ ለማግኘት',
+      title: 'ቢቢሲ አማርኛ YouTube',
+      brandTitle: 'የቢቢሲ አማርኛ ዩቲዩብ ቻናል',
+      brandDescription: 'ዜና፣ ትንታኔ እና ታሪኮችን በምሥል እና በድምጽ ለማግኘት',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe//p0krq6vq.png',
-        alt: 'የቢቢሲ አማርኛ ዋትስአፕ ቻናል',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0lp7mqk.png',
+        alt: 'BBC News Amharic የቢቢሲ አማርኛ ዩቲዩብ ቻናላችንን ይቀላቀሉ!',
       },
       linkLabel: {
-        text: 'ይህን በመጫን የቻናላችን አባል ይሁኑ!',
-        href: 'https://bit.ly/4gsoTyI',
+        text: 'ይህንን በመጫን ሰብስክራይብ ያድርጉ',
+        href: 'https://www.youtube.com/@BBCNewsAmharic',
       },
     },
     translations: {
+      and: 'እና',
+      readTime: {
+        readTimePrefix: 'የንባብ ጊዜ',
+        minute: 'ደቂቃ',
+      },
       pagination: {
         page: 'ገፁ',
         previousPage: 'ከዚህ በፊት ያለ',
@@ -75,7 +80,18 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
       relatedTopics: 'ተያያዥ ርዕሶች',
+      moreOnThis: '',
       navMenuText: 'ክፍሎች',
+      liteSite: {
+        onboardingMessage:
+          'ይህ ዝቅተኛ ዳታን በመጠቀም ጽሑፍ ብቻ የሚቀርብበት የቢቢሲ አማርኛ ድረ ገጽ ነው',
+        toMainSite: 'ወደ ሙሉው የቢቢሲ አማርኛ ድረ ገጽ ለመመለስ',
+        informationPage: 'ዳታን ለመቆጠብ ስለሚያስችለው የቢቢሲ አማርኛ ድረ ገጽ ለማወቅ ይህንን ያንብቡ',
+        informationPageLink:
+          'https://www.bbc.com/amharic/articles/c93lkdyenpno',
+        dataSaving: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+        articleDataSavingLinkText: 'ዳታን በመቆጠብ ጽሑፍ ብቻ ለማንበብ',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
@@ -237,6 +253,7 @@ export const service: DefaultServiceConfig = {
         duration: 'ርዝመት',
         recentEpisodes: 'ያለፉ ዝግጅቶች’',
         closeVideo: 'ይውጡ',
+        endOfContentClose: 'ይውጡ ወደ መጨረሻ',
       },
       socialEmbed: {
         caption: {
@@ -357,7 +374,7 @@ export const service: DefaultServiceConfig = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
@@ -398,46 +415,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ዜና',
         url: '/amharic',
-      },
-      {
-        title: 'ኢትዮጵያ',
-        url: '/amharic/topics/c7zp57r92v5t',
-      },
-      {
-        title: 'ፖለቲካ',
-        url: '/amharic/topics/cg7265pj1jvt',
-      },
-      {
-        title: 'ሴቶች',
-        url: '/amharic/topics/cnq681w4dq6t',
-      },
-      {
-        title: 'ጤና',
-        url: '/amharic/topics/cxnyk76p0q2t',
-      },
-      {
-        title: 'ስፖርት',
-        url: '/amharic/topics/cdr56g2x71dt',
-      },
-      {
-        title: 'ጥበብ',
-        url: '/amharic/topics/cr50yvqzzwpt',
-      },
-      {
-        title: 'ቴክኖሎጂ',
-        url: '/amharic/topics/c06gq8wx467t',
-      },
-      {
-        title: 'ምጣኔ ሃብት',
-        url: '/amharic/topics/cnq6815jj3xt',
-      },
-      {
-        title: 'ቪዲዮ',
-        url: '/amharic/topics/c917ezk2pmvt',
-      },
-      {
-        title: 'በጣም የተወደዱ',
-        url: '/amharic/popular/read',
       },
     ],
     timezone: 'Africa/Addis_Ababa',

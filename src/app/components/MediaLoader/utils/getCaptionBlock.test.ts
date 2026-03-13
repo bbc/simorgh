@@ -1,7 +1,7 @@
 import {
   aresMediaBlocks,
   aresMediaCaptionBlock,
-  clipMediaBlocks,
+  videoClipMediaBlocks,
   livePageCaptionBlock,
 } from '../fixture';
 import { MediaBlock } from '../types';
@@ -15,7 +15,10 @@ describe('getCaptionBlock', () => {
   });
 
   it('Should return a valid caption block for a ClipMedia block for a live page.', () => {
-    const result = getCaptionBlock(clipMediaBlocks as MediaBlock[], 'live');
+    const result = getCaptionBlock(
+      videoClipMediaBlocks as MediaBlock[],
+      'live',
+    );
 
     expect(result).toStrictEqual(livePageCaptionBlock);
   });

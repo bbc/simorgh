@@ -1,25 +1,23 @@
 import { getEnvConfig } from '.';
+import * as onClient from '../onClient';
 
-let windowSpy: jest.SpyInstance<Window | undefined, []>;
+const onClientSpy = jest.spyOn(onClient, 'default');
 
 describe('getEnvConfig', () => {
   const originalProcessEnv = process.env;
 
   beforeEach(() => {
-    process.env = originalProcessEnv;
-    windowSpy = jest.spyOn(window, 'window', 'get');
+    onClientSpy.mockImplementation(() => false);
   });
 
   afterEach(() => {
-    windowSpy.mockRestore();
+    jest.clearAllMocks();
+    process.env = originalProcessEnv;
   });
 
   it('server side - should return values from "getEnvConfig"', () => {
     process.env.SIMORGH_APP_ENV = 'test';
     process.env.SIMORGH_BASE_URL = 'https://test.com';
-
-    // simulate server side by removing window object
-    windowSpy.mockImplementation(() => undefined);
 
     const results = getEnvConfig();
 
@@ -28,19 +26,15 @@ describe('getEnvConfig', () => {
   });
 
   it('client side - should return values from "getEnvConfig"', () => {
-    // simulate client side by adding window object
-    windowSpy.mockImplementation(
-      () =>
-        ({
-          location: {
-            origin: 'https://test.com',
-          },
-          SIMORGH_ENV_VARS: {
-            SIMORGH_APP_ENV: 'test',
-            SIMORGH_BASE_URL: 'https://test.com',
-          },
-        }) as Window,
-    );
+    Object.defineProperty(window, 'SIMORGH_ENV_VARS', {
+      writable: true,
+      value: {
+        SIMORGH_APP_ENV: 'test',
+        SIMORGH_BASE_URL: 'https://test.com',
+      },
+    });
+
+    onClientSpy.mockImplementation(() => true);
 
     const results = getEnvConfig();
 
@@ -50,5 +44,7 @@ describe('getEnvConfig', () => {
       SIMORGH_APP_ENV: 'test',
       SIMORGH_BASE_URL: 'https://test.com',
     });
+    // @ts-expect-error The operand of a 'delete' operator must be optional.ts(2790)
+    delete window.SIMORGH_ENV_VARS;
   });
 });

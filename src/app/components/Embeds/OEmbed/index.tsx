@@ -1,7 +1,5 @@
 /* eslint-disable camelcase */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { memo, useContext } from 'react';
+import { memo, use } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { RequestContext } from '../../../contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -10,10 +8,11 @@ import EmbedError from '../EmbedError';
 import FlourishEmbed from '../FlourishEmbed';
 import AmpIframeEmbed from '../AmpIframeEmbed';
 import { OEmbedProps } from '../types';
+import ClientSideRiddleEmbed from '../ClientSideRiddleEmbed';
 
 const OEmbedLoader = ({ oembed }: OEmbedProps) => {
-  const { isAmp, isLite, canonicalLink } = useContext(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { isAmp, isLite, canonicalLink, nonce } = use(RequestContext);
+  const { translations } = use(ServiceContext);
 
   if (isLite) return null;
 
@@ -47,15 +46,22 @@ const OEmbedLoader = ({ oembed }: OEmbedProps) => {
     );
   }
 
+  if (oEmbedType === 'clientSideRiddle') {
+    return <ClientSideRiddleEmbed oembed={oembed} />;
+  }
+
   if (html == null) {
     return null;
   }
+  const parsedHtml = nonce
+    ? html.replaceAll('<script', `<script nonce="${nonce}"`)
+    : html;
 
   if (provider_name === 'Flourish') {
-    return <FlourishEmbed {...oembed} />;
+    return FlourishEmbed(oembed, nonce);
   }
 
-  return <EmbedHtml embeddableContent={html} />;
+  return <EmbedHtml embeddableContent={parsedHtml} />;
 };
 
 export default memo(OEmbedLoader);

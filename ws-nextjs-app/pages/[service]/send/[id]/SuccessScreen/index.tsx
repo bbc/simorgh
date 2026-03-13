@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { use, useEffect, useRef } from 'react';
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import Text from '#app/components/Text';
-import { useContext, useEffect, useRef } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import styles from './index.styles';
 import TickSvg from './svgs';
@@ -36,7 +34,7 @@ const SuccessScreen = ({
         privacyPolicyLinkText = fallbackTranslations.privacyPolicyLinkText,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { submissionID } = useFormContext();
 

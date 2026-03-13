@@ -1,7 +1,5 @@
-/** @jsx jsx */
-
-import { useContext } from 'react';
-import { jsx, useTheme } from '@emotion/react';
+import { use } from 'react';
+import { useTheme } from '@emotion/react';
 import Heading from '#app/components/Heading';
 import LegacyText from '#app/legacy/containers/Text';
 import LegacyParagraph from '#app/legacy/containers/Paragraph';
@@ -24,7 +22,7 @@ const KeyPoints = ({
     translations: {
       liveExperiencePage: { summary = 'Summary' },
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const listItems = keyPointsContent?.[0]?.model?.blocks?.[0]?.model?.blocks;
   if (!listItems || listItems.length === 0) return null;

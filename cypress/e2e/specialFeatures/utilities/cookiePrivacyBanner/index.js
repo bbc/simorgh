@@ -1,22 +1,20 @@
 import appConfig from '../../../../../src/server/utilities/serviceConfigs';
-import config from '../../../../support/config/services';
 
 export const getPrivacyBanner = (service, variant) =>
   cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.privacy
-      .title,
+    appConfig[service][variant].translations.consentBanner.privacy.title,
   );
 
 export const getCookieBannerCanonical = (service, variant) =>
   cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.cookie
-      .canonical.title,
+    appConfig[service][variant].translations.consentBanner.cookie.canonical
+      .title,
   );
 
 export const getCookieBannerAmp = (service, variant) =>
   cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.cookie
-      .amp.initial.title,
+    appConfig[service][variant].translations.consentBanner.cookie.amp.initial
+      .title,
   );
 
 const getPrivacyBannerContainer = (service, variant) =>
@@ -32,48 +30,45 @@ export const getPrivacyBannerAccept = (service, variant) =>
   getPrivacyBannerContainer(service, variant)
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner
-        .privacy.accept,
+      appConfig[service][variant].translations.consentBanner.privacy.accept,
     );
 
 export const getCookieBannerAcceptCanonical = (service, variant) =>
   getCookieBannerContainerCanonical(service, variant)
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .canonical.accept,
+      appConfig[service][variant].translations.consentBanner.cookie.canonical
+        .accept,
     );
 
 export const getCookieBannerAcceptAmp = (service, variant) =>
   getCookieBannerContainerAmp(service, variant)
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .amp.accept,
+      appConfig[service][variant].translations.consentBanner.cookie.amp.accept,
     );
 
 export const getCookieBannerRejectCanonical = (service, variant) =>
   getCookieBannerContainerCanonical(service, variant)
     .find('a')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .canonical.reject,
+      appConfig[service][variant].translations.consentBanner.cookie.canonical
+        .reject,
     );
 
 export const getCookieBannerRejectAmp = (service, variant) =>
   getCookieBannerContainerAmp(service, variant)
     .find('a')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .amp.reject,
+      appConfig[service][variant].translations.consentBanner.cookie.amp.reject,
     );
 
 export const getCookieBannerManageSettingsButton = (service, variant) =>
   getCookieBannerContainerAmp(service, variant)
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .amp.initial.manage,
+      appConfig[service][variant].translations.consentBanner.cookie.amp.initial
+        .manage,
     );
 
 export const getCookieBannerManageSettings = () =>
@@ -84,8 +79,7 @@ export const getCookieBannerAcceptInManageSettings = (service, variant) =>
     .get('[data-testid=amp-cookie-banner-manage-settings]')
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .amp.accept,
+      appConfig[service][variant].translations.consentBanner.cookie.amp.accept,
     );
 
 export const getCookieBannerRejectInManageSettings = (service, variant) =>
@@ -93,8 +87,7 @@ export const getCookieBannerRejectInManageSettings = (service, variant) =>
     .get('[data-testid=amp-cookie-banner-manage-settings]')
     .find('button')
     .contains(
-      appConfig[config[service].name][variant].translations.consentBanner.cookie
-        .amp.reject,
+      appConfig[service][variant].translations.consentBanner.cookie.amp.reject,
     );
 
 export const shouldRunBannerTest = ({ isPrivacyTests, testContext }) => {

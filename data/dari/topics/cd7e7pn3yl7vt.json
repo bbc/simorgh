@@ -1,0 +1,73 @@
+{
+  "data": {
+    "title": "Dari Live TV (topic)",
+    "description": "Dari Live TV page as topic",
+    "imageData": null,
+    "curations": [
+      {
+        "curationId": "urn:bbc:tipo:list:7aa12492-4236-4190-8161-5b109355e94f",
+        "curationType": "tipo-curation",
+        "position": 0,
+        "title": "Afghan TV Stream",
+        "visualProminence": "NORMAL",
+        "visualStyle": "NONE",
+        "intent": "MEDIA_PLAYER",
+        "mediaCollection": [
+          {
+            "type": "liveMedia",
+            "model": {
+              "urn": "urn:bbc:pips:sid:bbc_persian_tv",
+              "title": "BBC Persian TV",
+              "type": "episode",
+              "synopses": {
+                "short": "Paddy reviews the very rare, very expensive Aston Martin Victor, while Freddie sets out to become a proper, qualified racing driver.",
+                "medium": "Paddy reviews the very rare, very expensive Aston Martin Victor, while Freddie sets out to become a proper, qualified racing driver.",
+                "long": ""
+              },
+              "mediaType": "audio_video",
+              "imageUrlTemplate": "https://ichef.bbci.co.uk/images/ic/$recipe/p08b21g3.png",
+              "masterbrand": {
+                "id": "bbc_persian_tv",
+                "name": "BBC Persian TV",
+                "networkName": "BBC Persian TV",
+                "type": "tv",
+                "imageUrlTemplate": "ichef.bbci.co.uk/images/ic/$recipe/p08b21g3.png"
+              },
+              "version": {
+                "vpid": "n4pdl9b9h4",
+                "duration": "PT55M",
+                "availabilityType": "simulcast",
+                "versionTypes": [
+                  {
+                    "type": "Original",
+                    "name": "Original version"
+                  }
+                ],
+                "schedule": null,
+                "serviceId": "bbc_persian_tv",
+                "authToken": null,
+                "status": "LIVE",
+                "warnings": null
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "activePage": null,
+    "pageCount": null,
+    "metadata": {
+      "analytics": {
+        "name": "dari.topics.cd7e7pn3yl7vt.page",
+        "producer": "DARI"
+      },
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:cd7e7pn3yl7vt",
+        "contentType": "index-category",
+        "pageIdentifier": "dari.topics.cd7e7pn3yl7vt.page",
+        "pageTitle": "Dari Live TV (topic)"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

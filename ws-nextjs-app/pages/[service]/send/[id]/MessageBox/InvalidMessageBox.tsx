@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import { useContext, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { use, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { jsx } from '@emotion/react';
 import Text from '#app/components/Text';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
@@ -61,7 +59,7 @@ const InvalidMessageBox = forwardRef(
   ) => {
     const {
       translations: { ugc = fallbackTranslations },
-    } = useContext(ServiceContext);
+    } = use(ServiceContext);
 
     const message = formatValidationMessage(
       ugc[messageCode ?? InvalidMessageCodes.FieldRequired] ?? '',

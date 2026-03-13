@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     atiAnalyticsProducerName: 'KOREAN',
-    useReverb: true,
     chartbeatDomain: 'korean.bbc.co.uk',
     brandName: 'BBC News 코리아',
     product: 'BBC News',
     serviceLocalizedName: '코리아',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/korean.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/korean/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News 코리아',
     dir: `ltr`,
     externalLinkText: ', 외부 사이트',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: '',
+      readTime: {
+        readTimePrefix: '읽는 시간',
+        minute: '분',
+      },
       pagination: {
         previousPage: '이전',
         nextPage: '다음',
@@ -61,6 +66,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
       relatedTopics: '관련 토픽',
+      moreOnThis: '',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',
@@ -228,6 +234,7 @@ export const service: DefaultServiceConfig = {
         duration: '방송 길이',
         recentEpisodes: '이전',
         closeVideo: '나가기',
+        endOfContentClose: '이 콘텐츠의 끝입니다. 나가기',
       },
       socialEmbed: {
         caption: {
@@ -287,7 +294,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
@@ -329,26 +336,6 @@ export const service: DefaultServiceConfig = {
       {
         title: '뉴스',
         url: '/korean',
-      },
-      {
-        title: '2025 대선',
-        url: '/korean/topics/crldxe422e0t',
-      },
-      {
-        title: '비디오',
-        url: '/korean/topics/cnwng7v0e54t',
-      },
-      {
-        title: '라디오',
-        url: '/korean/bbc_korean_radio/programmes/w13xttll',
-      },
-      {
-        title: '다운로드',
-        url: '/korean/downloads',
-      },
-      {
-        title: 'TOP 뉴스',
-        url: '/korean/popular/read',
       },
     ],
     timezone: 'Asia/Seoul',

@@ -20,7 +20,7 @@ moment.relativeTimeThreshold('d', 30);
 moment.relativeTimeThreshold('M', 12);
 
 export const formatDuration = ({ duration, format, locale = 'en-gb' }) => {
-  const defaultDurationFormat = duration.includes('H') ? 'h:mm:ss' : 'mm:ss';
+  const defaultDurationFormat = duration?.includes('H') ? 'h:mm:ss' : 'mm:ss';
   const durationInMilliseconds = moment.duration(duration).asMilliseconds();
   return moment
     .utc(durationInMilliseconds)
@@ -56,6 +56,6 @@ export const formatUnixTimestamp = ({
   if (isRelative) {
     return momentObj.fromNow();
   }
-  const defaultFormat = 'LL, LT z';
-  return format ? momentObj.format(format) : momentObj.format(defaultFormat);
+
+  return momentObj.format(format || 'LL, LT z');
 };

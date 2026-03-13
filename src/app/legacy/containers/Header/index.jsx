@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -8,14 +8,27 @@ import {
   HOME_PAGE,
   TOPIC_PAGE,
   ERROR_PAGE,
+  LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import NewNavigationContainer from '#src/app/components/Navigation';
+import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
+import AccountHeader from '#app/components/Account/AccountHeader';
+import isLive from '#lib/utilities/isLive';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
-import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+import NewLogoBanner from './NewLogoBanner';
 
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  brandRef,
+  borderBottom,
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -42,15 +55,17 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+      >
+        {children}
+      </BrandContainer>
     </div>
   );
 };
 
-const HeaderContainer = ({ propsForOJExperiment }) => {
-  const { isAmp, isApp, pageType, isLite } = useContext(RequestContext);
-  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
-    useContext(ServiceContext);
+const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
+  const { isAmp, isApp, pageType, isLite } = use(RequestContext);
+  const { service, translations, dir, scriptLink, lang, serviceLang } =
+    use(ServiceContext);
   const { skipLinkText } = translations;
 
   const isOperaMini = useOperaMiniDetection();
@@ -62,11 +77,10 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
   // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
-      service={service}
-      script={script}
-      dir={dir}
+      dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
+      className="focusIndicatorRemove"
     >
       <div>{skipLinkText}</div>
     </SkipLink>
@@ -76,6 +90,7 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
 
   if (scriptLink) {
     switch (true) {
+      case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
         shouldRenderScriptSwitch = false;
@@ -88,23 +103,37 @@ const HeaderContainer = ({ propsForOJExperiment }) => {
 
   if (isApp) return null;
 
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service) && !isLive();
+
+  const NavigationComponent = shouldUseNewNav
+    ? NewNavigationContainer
+    : LegacyNavigationContainer;
+
   return (
     <header role="banner" lang={serviceLang}>
+      {shouldUseNewNav && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+        >
+          <AccountHeader />
+        </Header>
       )}
       {isLite && <LiteSiteSummary />}
-      <NavigationContainer propsForOJExperiment={propsForOJExperiment} />
+      <NavigationComponent
+        navItems={navItems}
+        propsForTopBarOJComponent={propsForTopBarOJComponent}
+      />
     </header>
   );
 };

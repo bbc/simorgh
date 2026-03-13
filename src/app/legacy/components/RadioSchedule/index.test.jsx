@@ -1,13 +1,11 @@
 import { render } from '../../../components/react-testing-library-with-providers';
-import arabic from '../../../components/ThemeProvider/fontScripts/arabic';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { renderRadioSchedule } from './testHelpers/helper';
 import * as viewTracking from '../../../hooks/useViewTracker';
 import * as clickTracking from '../../../hooks/useClickTrackerHandler';
 
 describe('RadioSchedule', () => {
   it('should render ltr radio schedules correctly', () => {
-    const { container } = render(renderRadioSchedule({}));
+    const { container } = render(renderRadioSchedule({ service: 'news' }));
     expect(container).toMatchSnapshot();
   });
 
@@ -15,10 +13,8 @@ describe('RadioSchedule', () => {
     const { container } = render(
       renderRadioSchedule({
         service: 'arabic',
-        script: arabic,
         dir: 'rtl',
         locale: 'ar',
-        selectedService: 'arabic',
       }),
       { service: 'arabic' },
     );
@@ -28,6 +24,7 @@ describe('RadioSchedule', () => {
   it('should render with passed component', () => {
     const { container } = render(
       renderRadioSchedule({
+        service: 'news',
         linkComponent: 'aside',
         linkComponentAttr: 'to',
       }),
@@ -40,17 +37,18 @@ describe('RadioSchedule', () => {
   describe('Event Tracking', () => {
     const eventTrackingData = {
       componentName: 'radio-schedule',
+      groupTracker: {
+        itemCount: 4,
+      },
     };
 
     it('should call the view tracking hook with the correct params', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
         renderRadioSchedule({
-          service: 'hausa',
-          script: latin,
           dir: 'ltr',
           locale: 'ha',
-          selectedService: 'hausa',
+          service: 'hausa',
         }),
       );
 
@@ -62,18 +60,38 @@ describe('RadioSchedule', () => {
       render(
         renderRadioSchedule({
           service: 'hausa',
-          script: latin,
           dir: 'ltr',
           locale: 'ha',
-          selectedService: 'hausa',
         }),
       );
 
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(1, {
-        componentName: 'radio-schedule-live',
+        componentName: 'radio-schedule',
+        groupTracker: {
+          itemCount: 4,
+        },
+        itemTracker: {
+          duration: 3600000,
+          mediaType: 'audio',
+          position: 1,
+          resourceId: 'p0',
+          text: '27 August 2019',
+          type: 'radio-schedule-live',
+        },
       });
       expect(clickTrackerSpy).toHaveBeenNthCalledWith(2, {
-        componentName: 'radio-schedule-onDemand',
+        componentName: 'radio-schedule',
+        groupTracker: {
+          itemCount: 4,
+        },
+        itemTracker: {
+          duration: 3600000,
+          mediaType: 'audio',
+          position: 2,
+          resourceId: 'p1',
+          text: '27 August 2019',
+          type: 'radio-schedule-onDemand',
+        },
       });
     });
   });

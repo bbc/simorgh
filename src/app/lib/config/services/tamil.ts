@@ -13,12 +13,13 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     atiAnalyticsProducerName: 'TAMIL',
-    useReverb: true,
+
     chartbeatDomain: 'tamil.bbc.co.uk',
     brandName: 'BBC News தமிழ்',
     product: 'BBC News',
     serviceLocalizedName: 'தமிழ்',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tamil/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
     externalLinkText: ', வெளி',
@@ -47,6 +48,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'மற்றும்',
+      readTime: {
+        readTimePrefix: 'வாசிக்கும் நேரம்',
+        minute: 'நிமிடங்கள்',
+      },
       pagination: {
         page: 'பக்கம்',
         previousPage: 'முந்தையது',
@@ -63,6 +69,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
       relatedTopics: 'தொடர்புடைய தலைப்புகள்',
+      moreOnThis: '',
       navMenuText: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
@@ -245,7 +252,10 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'அடுத்த வானொலி நிகழ்ச்சி',
         duration: 'கால அளவு',
         recentEpisodes: 'முந்தைய நிகழ்ச்சிகள்',
+        podcastExternalLinks: 'இந்த பாட்காஸ்ட் இங்கே கிடைக்கும்',
+        download: 'எபிசோடை பதிவிறக்கம் செய்ய',
         closeVideo: 'மூடுக',
+        endOfContentClose: 'இந்த உள்ளடக்கத்தின் முடிவு. மூடுக',
       },
       socialEmbed: {
         caption: {
@@ -372,7 +382,7 @@ export const service: DefaultServiceConfig = {
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'வெளியார் இணைப்புகள் தொடர்பான எங்கள் அணுகுமுறையைப் பற்றி படிக்கவும்.',
       },
       links: [
@@ -416,42 +426,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'முகப்பு',
         url: '/tamil',
-      },
-      {
-        title: 'உலகம்',
-        url: '/tamil/topics/c40379e2n2zt',
-      },
-      {
-        title: 'இந்தியா',
-        url: '/tamil/topics/c2dwqdn01v5t',
-      },
-      {
-        title: 'இலங்கை',
-        url: '/tamil/topics/cz74k7p3qw7t',
-      },
-      {
-        title: 'உடல்நலம்',
-        url: '/tamil/topics/cyx5kxzdn9dt',
-      },
-      {
-        title: 'வரலாறு',
-        url: '/tamil/topics/cxnyknvykxjt',
-      },
-      {
-        title: 'விளையாட்டு',
-        url: '/tamil/topics/cdr56rv4qwdt',
-      },
-      {
-        title: 'அறிவியல்',
-        url: '/tamil/topics/c9wpm0exkdpt',
-      },
-      {
-        title: 'சினிமா',
-        url: '/tamil/topics/cyx5kxz4wkgt',
-      },
-      {
-        title: 'வீடியோ',
-        url: '/tamil/topics/c1320722p81t',
       },
     ],
   },

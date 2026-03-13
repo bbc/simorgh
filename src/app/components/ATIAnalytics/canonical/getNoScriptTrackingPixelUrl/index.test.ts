@@ -37,7 +37,7 @@ const mockReverbParams = {
 describe('trackingPixelUrl', () => {
   it('should return the correct tracking pixel URL', () => {
     const { origin, pathname, searchParams } = new URL(
-      getNoScriptTrackingPixelUrl(mockReverbParams),
+      getNoScriptTrackingPixelUrl({ reverbParams: mockReverbParams }),
     );
 
     expect(origin).toEqual('https://a1.api.bbc.co.uk');

@@ -5,10 +5,9 @@ const { LATEST_MEDIA } = COMPONENTS;
 
 export const assertLatestMediaComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Latest Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -19,19 +18,17 @@ export const assertLatestMediaComponentView = ({
     assertATIComponentViewEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertLatestMediaComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Latest Media component', () => {
     interceptATIAnalyticsBeacons();
@@ -47,9 +44,8 @@ export const assertLatestMediaComponentClick = ({
     assertATIComponentClickEvent({
       component: LATEST_MEDIA,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

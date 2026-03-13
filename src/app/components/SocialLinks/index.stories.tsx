@@ -1,4 +1,3 @@
-import React from 'react';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import ThemeProvider from '#app/components/ThemeProvider';
@@ -47,6 +46,7 @@ const Component = ({
           <SocialLinks
             summaries={curation.summaries as Summary[]}
             title={curation.title || 'Social Links'}
+            eventTrackingData={{ componentName: 'social-links' }}
           />
         </ServiceContextProvider>
       </ThemeProvider>

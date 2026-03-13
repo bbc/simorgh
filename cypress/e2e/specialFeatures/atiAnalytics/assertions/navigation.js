@@ -5,11 +5,9 @@ const { SCROLLABLE_NAVIGATION, DROPDOWN_NAVIGATION } = COMPONENTS;
 
 export const assertScrollableNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -22,20 +20,17 @@ export const assertScrollableNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertScrollableNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Scrollable Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -51,9 +46,8 @@ export const assertScrollableNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: SCROLLABLE_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
@@ -61,11 +55,9 @@ export const assertScrollableNavigationComponentClick = ({
 // Assertions for nav bar at smaller breakpoints
 export const assertDropdownNavigationComponentView = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -77,20 +69,17 @@ export const assertDropdownNavigationComponentView = ({
     assertATIComponentViewEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertDropdownNavigationComponentClick = ({
   pageIdentifier,
-  contentType,
-  componentTrackingContentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Dropdown Navigation component', () => {
     interceptATIAnalyticsBeacons();
@@ -105,9 +94,8 @@ export const assertDropdownNavigationComponentClick = ({
     assertATIComponentClickEvent({
       component: DROPDOWN_NAVIGATION,
       pageIdentifier,
-      contentType: componentTrackingContentType || contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

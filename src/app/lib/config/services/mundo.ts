@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-mundo',
     atiAnalyticsProducerId: '62',
     atiAnalyticsProducerName: 'MUNDO',
-    useReverb: true,
     chartbeatDomain: 'mundo.bbc.co.uk',
     brandName: 'BBC News Mundo',
     product: 'BBC News',
     serviceLocalizedName: 'Mundo',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/mundo.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/mundo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Mundo',
     dir: `ltr`,
     externalLinkText: ', externo',
@@ -47,7 +47,55 @@ export const service: DefaultServiceConfig = {
     iTunesAppId: 515255747,
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    electionBanner: {
+      electionThingIds: ['647d5613-e0e2-4ef5-b0ce-b491de38bdbd'],
+      iframeSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/mundo/app',
+      iframeDevSrc:
+        'include/vjafwest/1365-2024-us-presidential-election-banner/develop/mundo/app',
+    },
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Improbable',
+      brandDescription:
+        'El nuevo podcast de BBC Mundo sobre un amor que triunfó contra todo pronóstico',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mkt8rx.jpg',
+        alt: 'Logo del podcast Improbable sobre una foto de boda de una pareja',
+      },
+      linkLabel: {
+        text: 'Episodios',
+        href: 'https://www.bbc.com/mundo/podcasts/p0mhhr0q/p0mk4fhg',
+      },
+      skipLink: {
+        text: 'Saltar %title% y continuar leyendo',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
+    promotionalBanner: {
+      title: 'Accede a BBC Noticias con un solo toque',
+      description:
+        'Agrega un acceso directo de BBC Mundo a tu pantalla de inicio para un acceso rápido y sencillo.',
+      buttonSeparatorText: 'o',
+      primaryButton: {
+        text: 'Agregar',
+        longText: 'Agregar a la pantalla de inicio',
+      },
+      secondaryButton: {
+        text: 'No ahora',
+      },
+      bannerLabel: 'Banner promocional',
+      closeLabel: 'Salir',
+    },
     translations: {
+      and: 'y',
+      readTime: {
+        readTimePrefix: 'Tiempo de lectura',
+        quick: 'Lectura rápida',
+        long: 'Lectura extensa',
+        minute: 'min',
+        minutes: 'min',
+      },
       pagination: {
         page: 'Página',
         previousPage: 'Anterior',
@@ -59,10 +107,12 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Ver todo',
       home: 'Página de inicio',
+      continueReading: 'Continuar leyendo',
       currentPage: 'Página actual',
       skipLinkText: 'Ir al contenido',
       relatedContent: 'Contenido relacionado',
       relatedTopics: 'Temas relacionados',
+      moreOnThis: '',
       navMenuText: 'Secciones',
       mediaAssetPage: {
         mediaPlayer: 'Reproductor multimedia',
@@ -234,7 +284,10 @@ export const service: DefaultServiceConfig = {
         nextRadioShow: 'Próximo programa',
         duration: 'Duración',
         recentEpisodes: 'Más',
+        podcastExternalLinks: 'Este podcast también está disponible en:',
+        download: 'Descargar episodio',
         closeVideo: 'Salir',
+        endOfContentClose: 'Fin de este contenido. Salir',
       },
       socialEmbed: {
         caption: {
@@ -309,26 +362,26 @@ export const service: DefaultServiceConfig = {
 
         // Messaging
         removalGuidelineText:
-          'Si has enviado algo para un programa o en línea, no podremos eliminarlo una vez que lo usemos.',
+          'Si has enviado algo para un programa o nuestras plataformas digitales, no podremos eliminarlo una vez que lo usemos.',
         retentionPeriodDays:
-          'Mantendremos tu envío durante {{days}} días y si no lo usamos, lo eliminaremos junto con la demás información que nos enviaste.',
+          'La información enviada la guardaremos durante {{days}} días y, en caso de no usarla, la eliminaremos.',
         referenceNumber: 'Número de referencia',
         submissionInfoSignedOutMessage:
-          'Quizás quieres tomar nota de estos detalles para futura referencia.',
+          'Si te has suscrito a nuestro newsletter, por favor, revisa tu correo. Si nos has enviado información, toma nota de este número para futura referencia.',
         privacyInfoHtml:
-          'No te preocupes, tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
+          'Y recuerda que tu información está protegida. Lee nuestra {{privacyInfoLink}} para más detalles.',
         emailToHtml:
-          'Escribe a {{emailLink}} si cambiaste de opinión. Incluye el número de referencia y simplemente déjanos saber que ya no quieres que usemos tu contribución.',
+          'Si tienes alguna duda o cambias de opinión, escríbenos a {{emailLink}} incluyendo el número de referencia.',
 
         // Form Screen
         dataPolicyHeading: 'Nuestra política de manejo de datos',
 
         // Uploading Screen
-        uploadingHeading: 'Subiendo tus archivos...',
+        uploadingHeading: 'Enviando…',
         uploadingDescription: 'Por favor, espera hasta que haya finalizado.',
         // Success Screen
-        successHeading: 'Mensaje enviado',
-        successDescription: 'Gracias por contactarnos.',
+        successHeading: 'Enviado',
+        successDescription: 'Muchas gracias.',
         privacyPolicyLinkHref:
           'https://www.bbc.com/mundo/institucional-36400009',
         privacyPolicyLinkText: 'Política de privacidad',
@@ -364,7 +417,7 @@ export const service: DefaultServiceConfig = {
         text: 'Por qué puedes confiar en la BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Lee sobre nuestra postura acerca de enlaces externos.',
       },
       links: [
@@ -407,46 +460,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Noticias',
         url: '/mundo',
-      },
-      {
-        title: 'América Latina',
-        url: '/mundo/topics/c7zp57yyz25t',
-      },
-      {
-        title: 'Internacional',
-        url: '/mundo/topics/c2lej05epw5t',
-      },
-      {
-        title: 'EE.UU.',
-        url: '/mundo/topics/cdr5613yzwqt',
-      },
-      {
-        title: 'Economía',
-        url: '/mundo/topics/c06gq9v4xp3t',
-      },
-      {
-        title: 'Ciencia',
-        url: '/mundo/topics/ckdxnw959n7t',
-      },
-      {
-        title: 'Salud',
-        url: '/mundo/topics/cpzd498zkxgt',
-      },
-      {
-        title: 'Cultura',
-        url: '/mundo/topics/c2dwq9zyv4yt',
-      },
-      {
-        title: 'Tecnología',
-        url: '/mundo/topics/cyx5krnw38vt',
-      },
-      {
-        title: 'Hay Festival',
-        url: '/mundo/topics/cr50y7p7qyqt',
-      },
-      {
-        title: 'Centroamérica cuenta',
-        url: '/mundo/topics/c404v5z1k8wt',
       },
     ],
   },

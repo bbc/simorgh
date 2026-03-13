@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import {
@@ -22,9 +22,9 @@ const ImageContainer = styled.div`
 `;
 
 const getSrc = ({ imageUrl, size }) =>
-  imageUrl.endsWith('.webp')
-    ? `https://${imageUrl.replace('$recipe', `${size}x${size}`)}`
-    : `https://${imageUrl.replace('$recipe', `${size}x${size}`)}.webp`;
+  imageUrl?.endsWith('.webp')
+    ? `https://${imageUrl?.replace('$recipe', `${size}x${size}`)}`
+    : `https://${imageUrl?.replace('$recipe', `${size}x${size}`)}.webp`;
 
 const getSrcSet = ({ imageUrl, sizes }) =>
   sizes.map(size => `${getSrc({ imageUrl, size })} ${size}w`).join(',');
@@ -34,9 +34,9 @@ const mediumImageSize = 256;
 const largeImageSize = 480;
 
 const OnDemandImage = ({ imageUrl, alt: altFromProps, className = '' }) => {
-  const { defaultImageAltText, dir } = useContext(ServiceContext);
+  const { defaultImageAltText, dir } = use(ServiceContext);
+  const { isLite } = use(RequestContext);
 
-  const { isLite } = useContext(RequestContext);
   if (isLite) return null;
 
   const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;

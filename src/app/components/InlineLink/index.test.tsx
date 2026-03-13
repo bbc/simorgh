@@ -1,5 +1,3 @@
-import React from 'react';
-
 import InlineLink from '.';
 import { render, screen } from '../react-testing-library-with-providers';
 

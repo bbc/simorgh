@@ -1,10 +1,9 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { useContext, useEffect } from 'react';
+import { use } from 'react';
+import useIsPWA from '#app/hooks/useIsPWA';
+import useSendPWAStatus from '#app/hooks/useSendPWAStatus';
+import useServiceWorkerRegistration from '#app/hooks/useServiceWorkerRegistration';
 import { Helmet } from 'react-helmet';
-import onClient from '#lib/utilities/onClient';
 import { RequestContext } from '#contexts/RequestContext';
-import { jsx } from '@emotion/react';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ServiceContext } from '../../contexts/ServiceContext';
 
@@ -35,18 +34,17 @@ const AmpServiceWorker = ({
 );
 
 export default () => {
-  const { swPath, service } = useContext(ServiceContext);
-  const { isAmp, canonicalLink } = useContext(RequestContext);
+  const { swPath, service } = use(ServiceContext);
+  const { isAmp, canonicalLink } = use(RequestContext);
   const swSrc = `${getEnvConfig().SIMORGH_BASE_URL}/${service}${swPath}`;
+  const isPWA = useIsPWA();
 
-  useEffect(() => {
-    const shouldInstallServiceWorker =
-      swPath && onClient() && 'serviceWorker' in navigator;
-
-    if (shouldInstallServiceWorker) {
-      navigator.serviceWorker.register(`/${service}${swPath}`);
-    }
-  }, [swPath, service]);
+  useServiceWorkerRegistration({
+    service,
+    swPath,
+  });
+  // Send PWA status to service worker
+  useSendPWAStatus(isPWA);
 
   return isAmp && swPath ? (
     <>

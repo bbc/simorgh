@@ -2,7 +2,6 @@
 import appConfig from '#src/server/utilities/serviceConfigs';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import { serviceNumerals } from '#app/components/MostRead/Canonical/Rank';
-import config from '#cypress/support/config/services';
 import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import ampOnlyServices from '#cypress/support/helpers/ampOnlyServices';
 
@@ -10,20 +9,18 @@ import ampOnlyServices from '#cypress/support/helpers/ampOnlyServices';
 const MOST_READ_EXCLUDED_SERVICES = [...ampOnlyServices, 'ukchina'];
 
 export const crossPlatform = ({ service, variant = 'default' }) => {
-  const serviceID = config[service]?.name || service;
-
-  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(service)) {
     const {
       mostRead: { hasMostRead, numberOfItems },
-    } = appConfig[serviceID][variant];
+    } = appConfig[service][variant];
 
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(serviceID);
+          cy.getToggles(service);
         });
         it(`should render ${numberOfItems} items`, () => {
-          cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"] li').should(
@@ -35,9 +32,9 @@ export const crossPlatform = ({ service, variant = 'default' }) => {
         });
 
         it(`should show correct numerals`, () => {
-          cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
-              const expectedMostReadRank = serviceNumerals(serviceID);
+              const expectedMostReadRank = serviceNumerals(service);
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]')
                 .find('li span')
@@ -49,7 +46,7 @@ export const crossPlatform = ({ service, variant = 'default' }) => {
         });
 
         it(`should have links with href and title`, () => {
-          cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]').within(() => {
@@ -69,20 +66,17 @@ export const crossPlatform = ({ service, variant = 'default' }) => {
 };
 
 export const ampOnly = ({ service, variant = 'default' }) => {
-  const serviceID = config[service]?.name || service;
-
-  if (!MOST_READ_EXCLUDED_SERVICES.includes(serviceID)) {
+  if (!MOST_READ_EXCLUDED_SERVICES.includes(service)) {
     const {
       mostRead: { hasMostRead },
-    } = appConfig[serviceID][variant];
+    } = appConfig[service][variant];
     if (hasMostRead) {
       describe('Most Read Component', () => {
         beforeEach(() => {
-          cy.getToggles(serviceID);
+          cy.getToggles(service);
         });
         it('should not render when data fetch fails', () => {
           const mostReadPath = getMostReadEndpoint({
-            service: serviceID,
             variant: variant !== 'default' && variant,
             isBff: getAppEnv() !== 'local',
           });
@@ -94,7 +88,7 @@ export const ampOnly = ({ service, variant = 'default' }) => {
             { statusCode: 404 },
           );
           cy.reload();
-          cy.fixture(`toggles/${serviceID}.json`).then(toggles => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"] li').should('not.exist');

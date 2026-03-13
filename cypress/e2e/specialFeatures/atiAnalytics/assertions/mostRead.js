@@ -6,11 +6,10 @@ const { MOST_READ } = COMPONENTS;
 
 export const assertMostReadComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   service,
   applicationType,
+  siteId,
 }) => {
   it(`should send a view event for the Most Read component`, function test() {
     runIfToggleEnabled({
@@ -27,20 +26,18 @@ export const assertMostReadComponentView = ({
     assertATIComponentViewEvent({
       component: MOST_READ,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertMostReadComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   service,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Most Read component', function test() {
     runIfToggleEnabled({
@@ -60,9 +57,8 @@ export const assertMostReadComponentClick = ({
     assertATIComponentClickEvent({
       component: MOST_READ,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

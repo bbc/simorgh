@@ -5,7 +5,7 @@ import burmeseFontVariants from '../fontVariants/burmese';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/burmese';
 
-const burmeseTheme = {
+export const theme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -21,4 +21,4 @@ const burmeseTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(burmeseTheme);
+export default withThemeProvider(theme);

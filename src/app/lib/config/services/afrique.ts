@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     atiAnalyticsProducerName: 'AFRIQUE',
-    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
@@ -47,7 +47,29 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Accueil',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Promotion WhatsApp',
+      brandTitle: 'BBC Afrique est sur WhatsApp',
+      brandDescription: 'Des informations vérifiées à portée de main',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lp89nq.jpg',
+        alt: `BBC News Afrique Whatsapp : L'information sur votre téléphone`,
+      },
+      linkLabel: {
+        text: 'Cliquez ici et abonnez-vous !',
+        href: 'https://www.whatsapp.com/channel/0029Vb5lcPBIHphLRjicWN1K',
+      },
+      skipLink: {
+        text: 'Ignorer %title% et continuer la lecture',
+        endTextVisuallyHidden: 'Fin de %title%',
+      },
+    },
     translations: {
+      and: 'et',
+      readTime: {
+        readTimePrefix: 'Temps de lecture',
+        minute: 'min',
+      },
       pagination: {
         page: 'Page',
         previousPage: 'Page précédente',
@@ -64,7 +86,19 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
       relatedTopics: 'Sujets associés',
+      moreOnThis: '',
       navMenuText: 'Rubriques',
+      liteSite: {
+        onboardingMessage:
+          'Vous visualisez une version texte de ce site web qui utilise moins de données. Voir la version principale du site, avec toutes les images et vidéos.',
+        toMainSite: 'Me rediriger vers le site principal',
+        informationPage: 'En savoir plus sur cette version économe en données',
+        informationPageLink:
+          'https://www.bbc.com/afrique/articles/c861e868x5eo',
+        dataSaving: 'Lire uniquement le texte pour utiliser moins de données',
+        articleDataSavingLinkText:
+          'Lire uniquement le texte pour utiliser moins de données',
+      },
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
@@ -238,6 +272,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Durée',
         recentEpisodes: 'Editions Précédentes',
         closeVideo: 'Sortir',
+        endOfContentClose: 'Fin de ce contenu. Sortir',
       },
       socialEmbed: {
         caption: {
@@ -296,7 +331,7 @@ export const service: DefaultServiceConfig = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
@@ -321,6 +356,10 @@ export const service: DefaultServiceConfig = {
           text: 'Contactez la BBC',
         },
         {
+          href: 'https://www.bbc.com/afrique.lite',
+          text: 'Lire en version allégée',
+        },
+        {
           href: 'https://www.bbc.com/ws/languages',
           text: 'Autres langues',
         },
@@ -339,46 +378,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Accueil',
         url: '/afrique',
-      },
-      {
-        title: 'Conflit en RDC',
-        url: '/afrique/topics/cge72ry253jt',
-      },
-      {
-        title: 'Ecoutez en direct',
-        url: '/afrique/bbc_afrique_radio/liveradio',
-      },
-      {
-        title: 'Afrique',
-        url: '/afrique/topics/cvqxn2k7kv7t',
-      },
-      {
-        title: 'Monde',
-        url: '/afrique/topics/cvqxn21vx11t',
-      },
-      {
-        title: 'Santé',
-        url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'Science et technologie',
-        url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Economie',
-        url: '/afrique/topics/cnq687nr9v1t',
-      },
-      {
-        title: 'Culture',
-        url: '/afrique/topics/cnq687nrrw8t',
-      },
-      {
-        title: 'Vidéos',
-        url: '/afrique/topics/cz4vn9gyd6rt',
-      },
-      {
-        title: 'Nos émissions',
-        url: '/afrique/topics/c88nzggm8gxt',
       },
     ],
   },

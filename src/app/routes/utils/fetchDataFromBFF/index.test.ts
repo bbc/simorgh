@@ -43,7 +43,7 @@ describe('Fetch Data from BFF', () => {
 
     it.each`
       environment | pathname                      | path                                                                                        | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/articles/cwl08rd38p6o'}                                          | ${undefined} | ${undefined}
+      ${'local'}  | ${url}                        | ${'http://localhost/api/local/pidgin/articles/cwl08rd38p6o'}                                | ${undefined} | ${undefined}
       ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
       ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
       ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=cwl08rd38p6o&service=pidgin&pageType=article&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
@@ -157,13 +157,13 @@ describe('Fetch Data from BFF', () => {
     const url = '/pidgin/popular/read';
 
     it.each`
-      environment | pathname                      | path                                                                                     | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/mostread'}                                                    | ${undefined} | ${undefined}
-      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=mostRead&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      environment | pathname                      | path                                                                                   | agent        | optHeaders
+      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/mostread'}                                                  | ${undefined} | ${undefined}
+      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
     `(
       'when environment is $environment and pathname is $pathname, should invoke the BFF with the expected params',
       async ({ environment, path, agent, optHeaders, pathname }) => {
@@ -195,12 +195,12 @@ describe('Fetch Data from BFF', () => {
     const url = '/pidgin';
 
     it.each`
-      environment | pathname                      | path                                                                                     | agent        | optHeaders
-      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=ck3yk9nz25qt&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=c93v2kkz841t&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=ck3yk9nz25qt&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=ck3yk9nz25qt&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      environment | pathname                      | path                                                                               | agent        | optHeaders
+      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=home&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
+      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
+      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=home&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
     `(
       'when environment is $environment and pathname is $pathname, should invoke the BFF with the expected params',
       async ({ environment, path, agent, optHeaders, pathname }) => {

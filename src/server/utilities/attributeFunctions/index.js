@@ -2,22 +2,25 @@ import encodeChunkFilename from '../encodeChunkUri';
 
 const crossOrigin = 'anonymous';
 
-export const getScriptAttributes = bundleType => chunk => {
-  if (chunk) {
-    const { url } = chunk;
+export const getScriptAttributes =
+  (bundleType, nonce = null) =>
+  chunk => {
+    if (chunk) {
+      const { url } = chunk;
 
-    return {
-      async: false,
-      defer: true,
-      crossOrigin,
-      ...(url && { src: encodeChunkFilename(chunk) }),
-      ...(bundleType === 'modern' && { type: 'module' }),
-      ...(bundleType === 'legacy' && { noModule: true }),
-    };
-  }
+      return {
+        async: false,
+        defer: true,
+        crossOrigin,
+        ...(url && { src: encodeChunkFilename(chunk) }),
+        ...(bundleType === 'modern' && { type: 'module' }),
+        ...(bundleType === 'legacy' && { noModule: true }),
+        ...(nonce && { nonce }),
+      };
+    }
 
-  return {};
-};
+    return {};
+  };
 
 export const getLinkAttributes = chunk => {
   const rel =

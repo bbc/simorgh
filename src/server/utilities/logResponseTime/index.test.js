@@ -25,7 +25,7 @@ describe('logResponseTime', () => {
 
     logResponseTime(req, res, next);
 
-    expect(loggerMock.debug).toBeCalledWith('server_response_time', {
+    expect(loggerMock.debug).toHaveBeenCalledWith('server_response_time', {
       nanoseconds: 1000012345,
       path: '/path',
     });
@@ -40,7 +40,7 @@ describe('logResponseTime', () => {
 
     logResponseTime(req, res, next);
 
-    expect(loggerMock.warn).toBeCalledWith('slow_server_response_time', {
+    expect(loggerMock.warn).toHaveBeenCalledWith('slow_server_response_time', {
       nanoseconds: 3000012345,
       path: '/path',
     });

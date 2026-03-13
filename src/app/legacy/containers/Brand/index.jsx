@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import Brand from '#psammead/psammead-brand/src';
 import { useTheme } from '@emotion/react';
@@ -18,7 +18,7 @@ const StyledBrand = styled(Brand)`
 `;
 
 export const getBrandPath = (service, variant) => {
-  if (service === 'ws') return '/ws/languages';
+  if (service === 'ws') return '/news';
   if (variant && servicesWithVariants[service]?.includes(variant)) {
     return `/${service}/${variant}`;
   }
@@ -29,10 +29,11 @@ const BrandContainer = ({
   skipLink = null,
   scriptLink = null,
   brandRef = null,
+  children,
   ...props
 }) => {
-  const { product, serviceLocalizedName, service } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { product, serviceLocalizedName, service } = use(ServiceContext);
+  const { variant } = use(RequestContext);
 
   const { brandSVG } = useTheme();
   const svgMaxHeight = 24;
@@ -65,7 +66,9 @@ const BrandContainer = ({
       isLongBrand={longBrands.includes(service)}
       ref={brandRef}
       {...props}
-    />
+    >
+      {children}
+    </StyledBrand>
   );
 };
 

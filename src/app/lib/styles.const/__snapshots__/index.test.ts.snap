@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Styles NEGATIVE_MARGIN should match text 1`] = `
 "@media (max-width: 24.9375rem) {

@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     atiAnalyticsProducerName: 'AZERI',
-    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/azeri/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Azərbaycanca',
     dir: `ltr`,
     externalLinkText: ', BBC-dən kənar',
@@ -46,7 +46,30 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'Xəbərlər, Qaynar Xəbərlər, Analiz, Video',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'WhatsApp reklamı',
+      brandTitle: 'WhatsApp kanalımızı izləyin',
+      brandDescription:
+        'BBC News Azərbaycancanın xəbərlərini indi telefonunuzda ala bilərsiniz.',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq79gb.png',
+        alt: 'BBC News Azarbaycancanin Whatsapp kanalina qosulun',
+      },
+      linkLabel: {
+        text: 'Buradan izləyin',
+        href: 'https://www.whatsapp.com/channel/0029Vb6Ewy00lwgwO4iuS32p',
+      },
+      skipLink: {
+        text: '%title%-ı bağlayın  və oxumağa davam edin',
+        endTextVisuallyHidden: '%title%-ın sonu',
+      },
+    },
     translations: {
+      and: 'və',
+      readTime: {
+        readTimePrefix: 'Oxuma vaxtı',
+        minute: 'dəq',
+      },
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',
@@ -62,6 +85,7 @@ export const service: DefaultServiceConfig = {
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
       relatedTopics: 'Əlaqəli mövzular',
+      moreOnThis: '',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -230,6 +254,7 @@ export const service: DefaultServiceConfig = {
         duration: 'Duration',
         recentEpisodes: 'Daha ətraflı',
         closeVideo: 'Bağla',
+        endOfContentClose: 'Bu məzmunun sonu. Bağla',
       },
       socialEmbed: {
         caption: {
@@ -317,7 +342,7 @@ export const service: DefaultServiceConfig = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.com/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.com/editorialguidelines/guidance/links-and-feeds',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -359,22 +384,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Xəbərlər',
         url: '/azeri',
-      },
-      {
-        title: 'Azərbaycan',
-        url: '/azeri/topics/c7zp571g7y7t',
-      },
-      {
-        title: 'Region',
-        url: '/azeri/topics/czpveq9ll8pt',
-      },
-      {
-        title: 'Beynəlxalq',
-        url: '/azeri/topics/cde15l4vn02t',
-      },
-      {
-        title: 'COP29',
-        url: '/azeri/topics/cv2dz9j8ywyt',
       },
     ],
   },

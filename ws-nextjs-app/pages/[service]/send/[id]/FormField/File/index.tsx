@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { ChangeEvent, useContext, useEffect, useRef } from 'react';
-import { jsx } from '@emotion/react';
+import { ChangeEvent, use, useEffect, useRef } from 'react';
 import { useLiveRegionContext } from '#app/components/LiveRegion/LiveRegionContext';
 import Text from '#app/components/Text';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -28,7 +26,7 @@ export default ({
         fileUploadListHeading = fallbackTranslations.fileUploadListHeading,
       } = {},
     },
-  } = useContext(ServiceContext);
+  } = use(ServiceContext);
 
   const { handleChange } = useFormContext();
   const inputRef = useRef<HTMLInputElement>(null);

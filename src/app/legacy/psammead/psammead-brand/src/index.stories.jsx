@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   color,
   select,
@@ -7,7 +6,7 @@ import {
   withKnobs,
   boolean,
 } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react-webpack5';
 import * as svgs from '#psammead/psammead-assets/src/svgs';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import {
@@ -124,13 +123,7 @@ storiesOf(STORY_KIND, module)
     'with script link',
     ({ service, script }) => {
       const scriptLink = (
-        <ScriptLink
-          script={script}
-          service={service}
-          href="https://www.bbc.com/serbian/lat"
-        >
-          Lat
-        </ScriptLink>
+        <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>
       );
 
       const {
@@ -169,13 +162,7 @@ storiesOf(STORY_KIND, module)
     'with skip to content link and script link',
     ({ service, script, dir }) => {
       const scriptLink = (
-        <ScriptLink
-          script={script}
-          service={service}
-          href="https://www.bbc.com/serbian/lat"
-        >
-          Lat
-        </ScriptLink>
+        <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>
       );
 
       const {
@@ -192,7 +179,7 @@ storiesOf(STORY_KIND, module)
       } = inputs();
 
       const skipLink = (
-        <SkipLink service={service} script={script} href="#content" dir={dir}>
+        <SkipLink href="#content" dir={dir}>
           Skip to content
         </SkipLink>
       );

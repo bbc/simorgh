@@ -5,10 +5,9 @@ const { RELATED_TOPICS } = COMPONENTS;
 
 export const assertRelatedTopicsComponentView = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a view event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
@@ -21,19 +20,17 @@ export const assertRelatedTopicsComponentView = ({
     assertATIComponentViewEvent({
       component: RELATED_TOPICS,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };
 
 export const assertRelatedTopicsComponentClick = ({
   pageIdentifier,
-  contentType,
-  useReverb,
   path,
   applicationType,
+  siteId,
 }) => {
   it('should send a click event for the Related Topics component', () => {
     interceptATIAnalyticsBeacons();
@@ -49,9 +46,8 @@ export const assertRelatedTopicsComponentClick = ({
     assertATIComponentClickEvent({
       component: RELATED_TOPICS,
       pageIdentifier,
-      contentType,
-      useReverb,
       applicationType,
+      siteId,
     });
   });
 };

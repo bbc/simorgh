@@ -102,7 +102,7 @@ export default {
     }),
   bodyMedia: ({ spacings, mq }: Theme) =>
     css({
-      marginBottom: `${spacings.QUINTUPLE}rem`,
+      marginBottom: `${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         paddingLeft: `${spacings.DOUBLE}rem`,
         paddingRight: `${spacings.DOUBLE}rem`,
@@ -114,7 +114,6 @@ export default {
     }),
   audioPost: ({ mq, spacings }: Theme) =>
     css({
-      aspectRatio: '16 / 9',
       overflow: 'hidden',
       '& .media-player': {
         height: '140px',
@@ -131,6 +130,17 @@ export default {
         [mq.GROUP_4_MIN_WIDTH]: {
           marginInlineStart: `-${spacings.DOUBLE}rem`,
         },
+      },
+    }),
+  videoPost: ({ spacings }: Theme) =>
+    css({
+      paddingBottom: `${spacings.FULL}rem`,
+    }),
+  portraitVideoPlayer: () =>
+    css({
+      '.media-container': {
+        margin: '20px auto 0',
+        width: `${pixelsToRem(247)}rem`,
       },
     }),
 };

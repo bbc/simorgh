@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { use } from 'react';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import {
@@ -15,13 +15,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
-import {
-  getPica,
-  getBrevier,
-  getLongPrimer,
-  getGreatPrimer,
-} from '#psammead/gel-foundations/src/typography';
-import { getSerifMedium } from '#psammead/psammead-styles/src/font-styles';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
@@ -92,7 +85,7 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
-  ${({ script }) => getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
   margin: ${GEL_SPACING_HLF_TRPL} 0;
   overflow-wrap: break-word;
   color: ${props => props.theme.palette.GREY_10};
@@ -102,7 +95,7 @@ const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
-  ${({ script }) => getBrevier(script)}
+  ${({ theme: { fontSizes } }) => fontSizes.brevier};
 
   color: ${props => props.theme.palette.GREY_10};
 
@@ -127,14 +120,14 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ script }) => getLongPrimer(script)}
+    ${({ theme: { fontSizes } }) => fontSizes.longPrimer};
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ script }) => getGreatPrimer(script)}
-  ${({ service }) => getSerifMedium(service)}
+  ${({ theme: { fontSizes } }) => fontSizes.greatPrimer};
+  ${({ theme: { fontVariants } }) => fontVariants.serifMedium};
   display: block;
   margin-top: ${GEL_SPACING_HLF_TRPL};
   color: ${props => props.theme.palette.GREY_10};
@@ -148,11 +141,11 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
     margin-top: ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ script }) => getPica(script)}
+    ${({ theme: { fontSizes } }) => fontSizes.pica};
   }
 `;
 
-const StyledPodcastIconWrapper = styled.div`
+const StyledInArticlePromoIconWrapper = styled.div`
   position: absolute;
   float: bottom;
   transform: translateY(-100%);
@@ -169,10 +162,23 @@ const StyledPodcastIconWrapper = styled.div`
   }
 `;
 
-const Promo = () => {
-  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
-  const { pageType, isLite } = useContext(RequestContext);
+const icons = {
+  podcast: mediaIcons.podcast,
+  youtube: mediaIcons.youtube,
+  whatsapp: mediaIcons.whatsapp,
+};
 
+const getIconFromUrl = url => {
+  const match = Object.keys(icons).find(key =>
+    url?.toLowerCase().includes(key),
+  );
+
+  return icons[match] || mediaIcons.communication;
+};
+
+const Promo = () => {
+  const { podcastPromo, dir } = use(ServiceContext);
+  const { pageType, isLite } = use(RequestContext);
   const {
     podcastPromoTitle,
     podcastBrandTitle,
@@ -208,24 +214,20 @@ const Promo = () => {
     '%title%': podcastPromoTitle,
   };
 
+  const promoIcon = getIconFromUrl(url);
+
   return (
     <ResponsivePodcastPromoWrapper
       {...viewTrackerRef}
       dir={dir}
       data-e2e="podcast-promo"
     >
-      <StyledPromoComponent
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
+      <StyledPromoComponent role="region" aria-labelledby="podcast-promo">
         <SkipLinkWrapper
           endTextId="end-of-podcasts"
           terms={terms}
           text={text}
           endTextVisuallyHidden={endTextVisuallyHidden}
-          service={service}
         >
           <PromoComponent.Card inlinePromo isOptimo={pageType === ARTICLE_PAGE}>
             <StyledImageWrapper>
@@ -241,20 +243,15 @@ const Promo = () => {
                 lazyLoad
               />
             </StyledImageWrapper>
-            <StyledPodcastIconWrapper
+            <StyledInArticlePromoIconWrapper
               className="podcastIconWrapper"
               isOptimo={pageType === ARTICLE_PAGE}
             >
-              {mediaIcons.podcast}
-            </StyledPodcastIconWrapper>
+              {promoIcon}
+            </StyledInArticlePromoIconWrapper>
             <StyledCardContentWrapper>
               <strong>
-                <StyledCardLink
-                  href={url}
-                  {...clickTrackerRef}
-                  script={script}
-                  service={service}
-                >
+                <StyledCardLink href={url} {...clickTrackerRef}>
                   <span
                     id="podcast-promo"
                     className="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
@@ -263,10 +260,10 @@ const Promo = () => {
                   </span>
                 </StyledCardLink>
               </strong>
-              <StyledCardDescriptionWrapper script={script}>
+              <StyledCardDescriptionWrapper>
                 {description}
               </StyledCardDescriptionWrapper>
-              <StyledEpisodeTextWrapper dir={dir} script={script}>
+              <StyledEpisodeTextWrapper dir={dir}>
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>

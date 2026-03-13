@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StoryPromo list base should render correctly 1`] = `
 .emotion-0 {
@@ -107,8 +107,8 @@ exports[`StoryPromo list base should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -131,8 +131,8 @@ exports[`StoryPromo list base should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -316,8 +316,8 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -340,8 +340,8 @@ exports[`StoryPromo list base should render correctly without border 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -561,8 +561,8 @@ exports[`StoryPromo list should render correctly 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -585,8 +585,8 @@ exports[`StoryPromo list should render correctly 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -799,8 +799,8 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   margin: 0;
   padding-bottom: 0.5rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 500;
   font-style: normal;
+  font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.25rem;
 }
@@ -823,8 +823,8 @@ exports[`StoryPromo list should render correctly without border 1`] = `
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
   color: #3F3F42;
   margin: 0;
   padding-bottom: 0.5rem;

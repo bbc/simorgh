@@ -1,121 +1,398 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
-import { useState, useEffect, useRef } from 'react';
+import { Global } from '@emotion/react';
+import { use, useEffect, useRef } from 'react';
+import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
-import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
+import {
+  Player,
+  Playlist,
+  PlaylistItem,
+  PortraitClipMediaBlock,
+  SMPEvent,
+} from '#app/components/MediaLoader/types';
 import { navigationIcons } from '#psammead/psammead-assets/src/svgs';
-import { LeftChevron, RightChevron } from '../icons';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useViewTracker from '../../hooks/useViewTracker';
+import useSwipeTracker from '../../hooks/useSwipeTracker';
 import styles from './index.styles';
+import VisuallyHiddenText from '../VisuallyHiddenText';
+import { DownArrowIcon, UpArrowIcon } from '../icons';
 
-interface PortraitVideoModalProps {
-  items: {
-    id: string;
-    title: string;
-    versionId: string;
-    duration: string;
-    kind: string;
-    guidance: string | null;
-    territories: string[];
-    isEmbeddingAllowed: boolean;
-    images: {
-      url: string;
-      urlTemplate?: string;
-    }[];
-  }[];
-  initialVideoIndex: number;
+type ModalTrackingParameters = {
+  eventTrackingData: EventTrackingData;
+  selectedVideo: PortraitClipMediaBlock;
+  selectedVideoIndex: number;
+};
+
+const getEventTrackingData = ({
+  eventTrackingData,
+  selectedVideo,
+  selectedVideoIndex,
+}: ModalTrackingParameters) => {
+  const {
+    id,
+    title,
+    version: { duration },
+  } = selectedVideo.model.video;
+
+  return {
+    componentName: 'portrait-video-modal',
+    alwaysInView: true,
+    groupTracker: {
+      ...eventTrackingData.groupTracker,
+      type: 'portrait-video-modal',
+    },
+    itemTracker: {
+      type: 'portrait-video',
+      text: title,
+      mediaType: 'video',
+      position: selectedVideoIndex + 1,
+      duration: moment.duration(duration).asMilliseconds(),
+      resourceId: id,
+    },
+  };
+};
+
+const findPlayerKey = (): string => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  const keys = playerInstances ? Object.keys(playerInstances) : [];
+  // Return the last player key if multiple instances are found, else return a fallback
+  return keys[keys.length - 1] || 'bbcMediaPlayer0';
+};
+
+export const getPlayerInstance = () => {
+  const playerKey = findPlayerKey();
+
+  return window?.embeddedMedia?.api?.players()?.[playerKey] as Player;
+};
+
+const getAllPlayerInstances = () => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  if (!playerInstances) return [];
+
+  return Object.values(playerInstances);
+};
+
+const getCurrentIndex = ({
+  e,
+  blocks,
+  player,
+}: {
+  e?: SMPEvent;
+  blocks: PortraitClipMediaBlock[];
+  player?: Player;
+}): number => {
+  const playlist = (e?.playlist || player?.playlist() || {}) as Playlist;
+  const [currentItem] = (playlist?.items || []) as PlaylistItem[];
+  const currentId = currentItem?.vpid || currentItem?.versionID;
+
+  const currentIndex = blocks?.findIndex(
+    item =>
+      item.model.video.id === currentId ||
+      item.model.video.version.id === currentId,
+  );
+
+  return currentIndex;
+};
+
+export const playlistLoadedCallback = (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+) => {
+  const player = getPlayerInstance();
+
+  if (!player) return;
+
+  const allPlayerInstances = getAllPlayerInstances();
+
+  // Pause embedded players when PV Carousel is loaded
+  if (allPlayerInstances) {
+    allPlayerInstances.forEach(playerInstance => {
+      playerInstance.pause();
+    });
+  }
+
+  const currentIndex = getCurrentIndex({ e, blocks });
+
+  const prevVideoButton = document.getElementById('previous-video-button');
+  const nextVideoButton = document.getElementById('next-video-button');
+
+  // Handle disabling buttons based on current index
+  if (currentIndex === 0) {
+    prevVideoButton?.setAttribute('disabled', 'true');
+    nextVideoButton?.removeAttribute('disabled');
+  } else if (currentIndex === blocks.length - 1) {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.setAttribute('disabled', 'true');
+  } else {
+    prevVideoButton?.removeAttribute('disabled');
+    nextVideoButton?.removeAttribute('disabled');
+  }
+
+  const previous = blocks?.[currentIndex - 1]?.model;
+  const next = blocks?.[currentIndex + 1]?.model;
+
+  if (previous) {
+    player.setPreviousPlaylist(
+      {
+        title: previous?.video?.title ?? '',
+        holdingImageURL: previous?.video?.holdingImageURL ?? '',
+        items: [{ versionID: previous?.video?.version?.id }],
+      },
+      { statsObject: { clipPID: previous?.video?.id } },
+    );
+  }
+
+  if (next) {
+    player.queuePlaylist(
+      {
+        title: next?.video?.title ?? '',
+        holdingImageURL: next?.video?.holdingImageURL ?? '',
+        items: [{ versionID: next?.video?.version?.id }],
+      },
+      { statsObject: { clipPID: next?.video?.id } },
+    );
+  }
+};
+
+export const statsNavigationCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const { direction, method } = e || {};
+
+  const isSupportedNavigation = method && ['swipe', 'wheel'].includes(method);
+
+  if (isSupportedNavigation) {
+    const currentIndex = getCurrentIndex({ e, blocks });
+
+    const newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
+export const playbackEndedCallback = async (
+  e: SMPEvent,
+  blocks: PortraitClipMediaBlock[],
+  eventTrackingData: EventTrackingData,
+  swipeTracker: ReturnType<typeof useSwipeTracker>,
+) => {
+  const player = getPlayerInstance();
+  const { ended } = e;
+  const { autoplay } = player.settings();
+
+  if (ended && autoplay) {
+    const currentIndex = getCurrentIndex({ blocks, player });
+
+    const newIndex = currentIndex + 1;
+
+    const newEventTrackingData = getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[newIndex],
+      selectedVideoIndex: newIndex,
+    });
+
+    await swipeTracker(newEventTrackingData);
+  }
+};
+
+const pluginLoadedCallback = () => {
+  const player = getPlayerInstance();
+  player.dispatchEvent('fullScreenPlugin.launchFullscreen');
+};
+
+const handlePrevNextVideo = (direction: 'previous' | 'next') => {
+  const player = getPlayerInstance();
+
+  player?.[direction]?.();
+};
+
+export interface PortraitVideoModalProps {
+  blocks: PortraitClipMediaBlock[];
   onClose: () => void;
+  selectedVideoIndex: number;
+  nonce?: string | null;
+  eventTrackingData: EventTrackingData;
 }
 
 const PortraitVideoModal = ({
-  items,
-  initialVideoIndex,
+  blocks,
   onClose,
+  selectedVideoIndex,
+  eventTrackingData,
 }: PortraitVideoModalProps) => {
-  const modalRef = useRef<HTMLDialogElement>(null);
-  const [currentVideoIndex, setCurrentIndex] = useState(initialVideoIndex);
-  const video = items[currentVideoIndex];
-
-  const block: PortraitClipMediaBlock = {
-    type: 'portraitClipMedia',
-    model: {
-      type: 'video',
-      images: video.images.map(img => ({
-        source: img.url,
-        urlTemplate: img.urlTemplate,
-      })),
-      video: {
-        id: video.id,
-        title: video.title,
-        version: {
-          id: video.versionId,
-          duration: video.duration,
-          kind: video.kind,
-          guidance: video.guidance,
-          territories: video.territories,
-        },
-        isEmbeddingAllowed: video.isEmbeddingAllowed,
+  const {
+    translations: {
+      media: {
+        closeVideo = 'Close',
+        modalLabel = 'Media player',
+        endOfContentClose = 'End of content. Close',
       },
     },
-  };
+  } = use(ServiceContext);
 
-  const handlePrev = () => {
-    if (currentVideoIndex > 0) {
-      setCurrentIndex(i => i - 1);
-    }
-  };
+  const viewTracker = useViewTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
 
-  const handleNext = () => {
-    if (currentVideoIndex < items.length - 1) {
-      setCurrentIndex(i => i + 1);
-    }
-  };
+  const swipeTracker = useSwipeTracker(
+    getEventTrackingData({
+      eventTrackingData,
+      selectedVideo: blocks?.[selectedVideoIndex],
+      selectedVideoIndex,
+    }),
+  );
+
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const endOfContentButtonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
-      document.body.style.overflow = 'hidden';
+    const handleBackdropClick = (event: MouseEvent | TouchEvent) => {
+      if (event.target === event.currentTarget) {
+        onClose();
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose();
+      }
+      // - Tab/Shift+Tab loops focus between the close button and the end-of-content button
+      if (event.key === 'Tab') {
+        if (
+          document.activeElement === closeButtonRef.current &&
+          event.shiftKey
+        ) {
+          event.preventDefault();
+          endOfContentButtonRef.current?.focus();
+        } else if (
+          document.activeElement === endOfContentButtonRef.current &&
+          !event.shiftKey
+        ) {
+          event.preventDefault();
+          closeButtonRef.current?.focus();
+        }
+      }
+    };
+
+    const modal = document.getElementById('portrait-video-modal-container');
+    const reactRootElement = document.getElementById('root');
+
+    if (modal) {
+      closeButtonRef.current?.focus();
+      // Prevent tabbing to elements outside the modal
+      reactRootElement?.setAttribute('inert', 'true');
+      modal.addEventListener('mousedown', handleBackdropClick);
+      modal.addEventListener('touchstart', handleBackdropClick);
+      modal.addEventListener('keydown', handleKeyDown);
     }
 
     return () => {
-      document.body.removeAttribute('style');
+      reactRootElement?.removeAttribute('inert');
+      modal?.removeEventListener('mousedown', handleBackdropClick);
+      modal?.removeEventListener('touchstart', handleBackdropClick);
+      modal?.removeEventListener('keydown', handleKeyDown);
+
+      const allPlayerInstances = getAllPlayerInstances();
+
+      // Pause any player if the modal is closed instantly
+      allPlayerInstances.forEach(player => {
+        player.pause();
+      });
     };
-  }, []);
+  }, [onClose]);
 
   return (
-    <dialog ref={modalRef} css={styles.dialog}>
-      <button
-        type="button"
-        css={styles.closeButton}
-        onClick={onClose}
-        aria-label="Close modal"
+    <>
+      <Global styles={styles.bodyOverflowHidden} />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={modalLabel}
+        css={styles.modal}
+        id="portrait-video-modal-container"
+        {...viewTracker}
       >
-        {navigationIcons.cross}
-      </button>
-
-      <div css={styles.navWrapper}>
         <button
+          ref={closeButtonRef}
           type="button"
-          onClick={handlePrev}
-          disabled={currentVideoIndex === 0}
-          aria-label="Previous video"
-          css={styles.navButton}
+          data-testid="close-modal-button"
+          css={styles.closeButton}
+          className="focusIndicatorInvert"
+          onClick={onClose}
         >
-          <LeftChevron />
+          {navigationIcons.cross}
+          <VisuallyHiddenText>{closeVideo}</VisuallyHiddenText>
         </button>
-
-        <MediaLoader blocks={[block]} />
-
+        {/* Navigation Buttons */}
+        <div css={styles.navButtonColumn}>
+          <button
+            id="previous-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('previous')}
+            css={styles.navButton}
+            aria-label="Previous video"
+            data-testid="previous-video-button"
+            className="focusIndicatorInvert"
+          >
+            <UpArrowIcon />
+          </button>
+          <button
+            id="next-video-button"
+            type="button"
+            onClick={() => handlePrevNextVideo('next')}
+            css={styles.navButton}
+            aria-label="Next video"
+            data-testid="next-video-button"
+            className="focusIndicatorInvert"
+          >
+            <DownArrowIcon />
+          </button>
+        </div>
+        <MediaLoader
+          css={styles.mediaWrapper}
+          blocks={[blocks?.[selectedVideoIndex]]}
+          eventMapping={{
+            playlistLoaded: e => playlistLoadedCallback(e, blocks),
+            pluginLoaded: pluginLoadedCallback,
+            fullscreenExit: onClose,
+            statsNavigation: e =>
+              statsNavigationCallback(
+                e,
+                blocks,
+                eventTrackingData,
+                swipeTracker,
+              ),
+            pause: e =>
+              playbackEndedCallback(e, blocks, eventTrackingData, swipeTracker),
+          }}
+        />
         <button
+          ref={endOfContentButtonRef}
           type="button"
-          onClick={handleNext}
-          disabled={currentVideoIndex === items.length - 1}
-          aria-label="Next video"
-          css={styles.navButton}
+          data-testid="close-modal-visually-hidden"
+          css={styles.visuallyHiddenCloseButton}
+          onClick={onClose}
+          className="focusIndicatorInvert"
+          aria-label="End of content. Close"
         >
-          <RightChevron />
+          {endOfContentClose}
         </button>
       </div>
-    </dialog>
+    </>
   );
 };
 
