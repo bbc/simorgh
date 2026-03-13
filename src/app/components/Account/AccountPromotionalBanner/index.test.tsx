@@ -88,4 +88,13 @@ describe('AccountPromotionalBanner', () => {
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
     ).not.toBeInTheDocument();
   });
+
+  it('does not render when account toggle is disabled', () => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+    renderWithProviders();
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).not.toBeInTheDocument();
+  });
 });
