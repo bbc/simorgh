@@ -73,16 +73,21 @@ export default {
           color: palette.WHITE,
 
           '&:hover::after': {
-            borderBottomColor: palette.WHITE,
             insetInlineStart: `-${spacings.FULL}rem`,
             insetInlineEnd: `-${spacings.HALF}rem`,
           },
-          '&:focus::after': {
-            borderBottomColor: palette.WHITE,
-          },
+
           '&:focus-visible::after': {
-            borderBottomColor: palette.WHITE,
+            boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+            outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+            outlineOffset: `${pixelsToRem(-2)}rem`,
+            insetInlineStart: `-${spacings.FULL}rem`,
+            insetInlineEnd: `-${spacings.HALF}rem`,
           },
+        },
+
+        '&:first-of-type a:focus-visible::after': {
+          insetInlineStart: 0,
         },
 
         'a[data-active="true"]': {
