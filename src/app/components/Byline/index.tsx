@@ -46,6 +46,13 @@ const Byline = ({
   const { byline: { articleInformation = 'Article Information' } = {} } =
     translations ?? {};
 
+  const bylineContainer =
+    {
+      live: [BylineCss.postBylineContainer],
+      article: [BylineCss.bylineContainer],
+      mediaArticle: [BylineCss.bylineContainer],
+    }[pageType] || [];
+
   return (
     contributorValues?.[0] && (
       <section
@@ -56,10 +63,10 @@ const Byline = ({
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
-        <ul css={BylineCss.list}>
+        <ul css={[BylineCss.list]}>
           <li
             css={[
-              BylineCss.bylineContainer,
+              ...bylineContainer,
               isSingleContributor && BylineCss.bylineContainerSingleContributor,
             ]}
           >

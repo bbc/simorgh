@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '../../utilities/pixelsToRem';
 
 export default {
   bylineContainer: ({ spacings, mq }: Theme) =>
@@ -10,6 +11,11 @@ export default {
         paddingInlineStart: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_4_MIN_WIDTH]: { paddingInlineStart: 0 },
+    }),
+
+  postBylineContainer: () =>
+    css({
+      padding: `${pixelsToRem(16)}rem`,
     }),
 
   bylineContainerSingleContributor: () =>

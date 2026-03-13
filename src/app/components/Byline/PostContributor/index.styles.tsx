@@ -28,9 +28,7 @@ export default {
     css([
       {
         float: 'left',
-        // margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
-        //   16,
-        // )}rem 0px`,
+        marginRight: `${pixelsToRem(8)}rem`,
       },
     ]),
 
@@ -38,9 +36,7 @@ export default {
     css([
       {
         float: 'right',
-        margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
-          8,
-        )}rem`,
+        marginLeft: `${pixelsToRem(8)}rem`,
       },
     ]),
 
