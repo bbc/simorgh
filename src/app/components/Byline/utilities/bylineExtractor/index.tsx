@@ -3,6 +3,11 @@ import {
   OptimoBylineContributorMetadataBlock,
 } from '#app/models/types/optimo';
 import { PageTypes } from '#app/models/types/global';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
@@ -126,8 +131,9 @@ const bylineExtractor = ({
 
   return (
     {
-      live: livePageBylineExtractor,
-      article: articlePageBylineExtractor,
+      [LIVE_PAGE]: livePageBylineExtractor,
+      [ARTICLE_PAGE]: articlePageBylineExtractor,
+      [MEDIA_ARTICLE_PAGE]: articlePageBylineExtractor,
     }[pageType](blocks) || []
   );
 };
