@@ -1,6 +1,10 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
+import { AccountContext } from '#app/contexts/AccountContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useToggle from '#app/hooks/useToggle';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -54,13 +58,21 @@ const HomePage = ({ pageData }: HomePageProps) => {
   } = pageData;
   const { curations } = pageData;
 
+  const { enabled: accountEnabled } = useToggle('account');
+  const { isSignedIn, isIdctaAvailable } = use(AccountContext);
+  const isHydrated = useHydrationDetection();
+
   const metadataTitle = seoTitle || homePageTitle;
   const metadataDescription = seoDescription || description;
+
+  const showAccountPromoBanner =
+    isHydrated && accountEnabled && !isSignedIn && isIdctaAvailable;
 
   const itemList = getItemList({ curations, name: brandName });
 
   return (
     <>
+      {showAccountPromoBanner && <AccountPromotionalBanner />}
       {/* EXPERIMENT: PWA Promotional Banner */}
       <PWAPromotionalBanner />
       <ChartbeatAnalytics title={title} />
