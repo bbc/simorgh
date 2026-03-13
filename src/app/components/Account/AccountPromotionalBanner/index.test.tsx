@@ -4,6 +4,7 @@ import {
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
+import useToggle from '#hooks/useToggle';
 import AccountPromotionalBanner from '.';
 
 const idctaConfig: IdctaConfig = {
@@ -19,6 +20,8 @@ const idctaConfig: IdctaConfig = {
   },
 } as unknown as IdctaConfig;
 
+jest.mock('#hooks/useToggle');
+
 const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
@@ -26,6 +29,10 @@ const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   });
 
 describe('AccountPromotionalBanner', () => {
+  beforeEach(() => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: true });
+  });
+
   it('renders when signed out and IDCTA is available', async () => {
     renderWithProviders();
 
