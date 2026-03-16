@@ -4,7 +4,7 @@ import {
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
-import useToggle from '#hooks/useToggle';
+import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
 
 const idctaConfig: IdctaConfig = {
@@ -20,7 +20,7 @@ const idctaConfig: IdctaConfig = {
   },
 } as unknown as IdctaConfig;
 
-jest.mock('#hooks/useToggle');
+jest.mock('#app/hooks/useToggle');
 
 const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
