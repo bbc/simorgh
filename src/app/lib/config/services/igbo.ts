@@ -99,6 +99,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Ebisara na',
         summary: 'Nchịkọta',
         shareButtonText: 'Kekọrịta',
+        refreshButtonText: 'Ọhụrụ ihe e dere',
+        visuallyHiddenButtonText: 'E nwere ozi ọhụrụ dị',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
