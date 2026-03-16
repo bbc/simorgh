@@ -3385,18 +3385,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.7.0":
-  version: 20.7.0
-  resolution: "@happy-dom/jest-environment@npm:20.7.0"
+"@happy-dom/jest-environment@npm:20.8.3":
+  version: 20.8.3
+  resolution: "@happy-dom/jest-environment@npm:20.8.3"
   dependencies:
-    happy-dom: "npm:^20.7.0"
+    happy-dom: "npm:^20.8.3"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/07db6c6162a75eae8df73710599921a72ab77736d694d5f514ad36f63ed47a30457f3f8b84eddb9566fa588b2541d97adce817cf3cdef04acca43748406286c9
+  checksum: 10/9e352b40d1ac9276ffd2016629e261e0423a08edbb55960ff75c65675ab40817c3efa7eb37150c4443a37e81919632f2853ef72c4e0430d5ac754d1337098c95
   languageName: node
   linkType: hard
 
@@ -11762,21 +11762,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.7.0":
-  version: 20.7.0
-  resolution: "happy-dom@npm:20.7.0"
-  dependencies:
-    "@types/node": "npm:>=20.0.0"
-    "@types/whatwg-mimetype": "npm:^3.0.2"
-    "@types/ws": "npm:^8.18.1"
-    entities: "npm:^7.0.1"
-    whatwg-mimetype: "npm:^3.0.0"
-    ws: "npm:^8.18.3"
-  checksum: 10/78b4faff61c1c812fb37d3438c91668b07dac164980a9f71f9addcc66fc4f099de0657d8daa871395fe61312ee7222d3d750ba573ffea03eccc312ce4d59f271
-  languageName: node
-  linkType: hard
-
-"happy-dom@npm:^20.7.0":
+"happy-dom@npm:20.8.3":
   version: 20.8.3
   resolution: "happy-dom@npm:20.8.3"
   dependencies:
@@ -11787,6 +11773,20 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.18.3"
   checksum: 10/57b2fd3186637728f7f8707b538ffcea7eaa651b14441abc15b289fd2b8632d573080a253ccebf3de20b9a61ba7201837ef5d4e4860ff37267c5c9b3fb21371c
+  languageName: node
+  linkType: hard
+
+"happy-dom@npm:^20.8.3":
+  version: 20.8.4
+  resolution: "happy-dom@npm:20.8.4"
+  dependencies:
+    "@types/node": "npm:>=20.0.0"
+    "@types/whatwg-mimetype": "npm:^3.0.2"
+    "@types/ws": "npm:^8.18.1"
+    entities: "npm:^7.0.1"
+    whatwg-mimetype: "npm:^3.0.0"
+    ws: "npm:^8.18.3"
+  checksum: 10/fcad6a58433f10e11e653aa14f8f6696bd4917f5ca33c3363e380d34ba58d15d0490d91efc74e0cfddeb369c247f6fe07301c5752b65d43fc734f1e170ac000c
   languageName: node
   linkType: hard
 
@@ -17377,7 +17377,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.27.3"
     "@esbuild/win32-arm64": "npm:0.27.3"
     "@esbuild/win32-x64": "npm:0.27.3"
-    "@happy-dom/jest-environment": "npm:20.7.0"
+    "@happy-dom/jest-environment": "npm:20.8.3"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
@@ -17445,7 +17445,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     express: "npm:4.22.1"
     express-static-gzip: "npm:3.0.0"
-    happy-dom: "npm:20.7.0"
+    happy-dom: "npm:20.8.3"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
