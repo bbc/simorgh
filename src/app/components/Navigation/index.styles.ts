@@ -4,6 +4,8 @@ import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
+const MAX_NAV_ITEM_HEIGHT = 44;
+
 export default {
   brandDivider: ({ palette }: Theme) =>
     css({
@@ -75,7 +77,7 @@ export default {
         a: {
           color: palette.WHITE,
           padding: `0 ${spacings.FULL}rem`,
-          height: `${pixelsToRem(44)}rem`,
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -135,7 +137,7 @@ export default {
 
         a: {
           padding: `0 ${spacings.FULL}rem`,
-          height: `${pixelsToRem(44)}rem`,
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -227,12 +229,12 @@ export default {
       backgroundColor: palette.POSTBOX,
       color: palette.WHITE,
 
-      width: `${pixelsToRem(44)}rem`,
-      height: `${pixelsToRem(44)}rem`,
+      width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
       [GROUP_B_MIN_WIDTH]: {
-        width: `${pixelsToRem(44)}rem`,
-        height: `${pixelsToRem(44)}rem`,
+        width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
       svg: {
