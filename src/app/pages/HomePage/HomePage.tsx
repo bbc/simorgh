@@ -1,6 +1,7 @@
 import { Fragment, use } from 'react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
+import AccountPromotionalBanner from '#app/components/Account/AccountPromotionalBanner';
 import ATIAnalytics from '../../components/ATIAnalytics';
 import {
   Curation,
@@ -63,6 +64,7 @@ const HomePage = ({ pageData }: HomePageProps) => {
     <>
       {/* EXPERIMENT: PWA Promotional Banner */}
       <PWAPromotionalBanner />
+      <AccountPromotionalBanner />
       <ChartbeatAnalytics title={title} />
       <MetadataContainer
         title={metadataTitle}

@@ -4,6 +4,7 @@ import {
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
+import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
 
 const idctaConfig: IdctaConfig = {
@@ -19,6 +20,8 @@ const idctaConfig: IdctaConfig = {
   },
 } as unknown as IdctaConfig;
 
+jest.mock('#app/hooks/useToggle');
+
 const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
@@ -26,6 +29,10 @@ const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   });
 
 describe('AccountPromotionalBanner', () => {
+  beforeEach(() => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: true });
+  });
+
   it('renders when signed out and IDCTA is available', async () => {
     renderWithProviders();
 
@@ -76,6 +83,15 @@ describe('AccountPromotionalBanner', () => {
 
   it('does not render when IDCTA is not available', () => {
     renderWithProviders({ 'id-availability': 'RED' });
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('does not render when account toggle is disabled', () => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+    renderWithProviders();
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
