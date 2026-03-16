@@ -1,5 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
@@ -69,8 +70,15 @@ export default {
   topRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
+        marginInlineEnd: 0,
+
         a: {
           color: palette.WHITE,
+          padding: `0 ${spacings.FULL}rem`,
+          height: `${pixelsToRem(44)}rem`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
 
           '&:hover::after': {
             insetInlineStart: `-${spacings.FULL}rem`,
@@ -101,7 +109,7 @@ export default {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: `-${spacings.HALF}rem`,
+          insetInlineEnd: 0,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
@@ -123,7 +131,15 @@ export default {
   bottomRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
+        marginInlineEnd: 0,
+
         a: {
+          padding: `0 ${spacings.FULL}rem`,
+          height: `${pixelsToRem(44)}rem`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+
           '&:hover::after': {
             insetInlineStart: `-${spacings.FULL}rem`,
             insetInlineEnd: `-${spacings.HALF}rem`,
@@ -132,7 +148,7 @@ export default {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: `-${spacings.HALF}rem`,
+          insetInlineEnd: 0,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
@@ -210,6 +226,14 @@ export default {
     css({
       backgroundColor: palette.POSTBOX,
       color: palette.WHITE,
+
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
+
+      [GROUP_B_MIN_WIDTH]: {
+        width: `${pixelsToRem(44)}rem`,
+        height: `${pixelsToRem(44)}rem`,
+      },
 
       svg: {
         verticalAlign: 'middle',
