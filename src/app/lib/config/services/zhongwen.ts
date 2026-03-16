@@ -165,6 +165,8 @@ export const service: ZhongwenConfig = {
         shareButtonText: '分享',
         postDateTimeFormat: 'YYYY年M月DD日',
         postDateFormat: 'YYYY年M月D日',
+        refreshButtonText: '最新消息',
+        visuallyHiddenButtonText: '已新增内容',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -454,6 +456,8 @@ export const service: ZhongwenConfig = {
         shareButtonText: '分享',
         postDateTimeFormat: 'YYYY年M月DD日',
         postDateFormat: 'YYYY年M月D日',
+        refreshButtonText: '最新消息',
+        visuallyHiddenButtonText: '已新增內容',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

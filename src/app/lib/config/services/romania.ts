@@ -96,6 +96,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Postat la',
         summary: 'Sumar',
         shareButtonText: 'Trimite',
+        refreshButtonText: 'Ultima actualizare',
+        visuallyHiddenButtonText: 'O nouă actualizare',
       },
       downloads: {
         instructions: 'Puteți descărca și vizualiza știrile de astăzi.',

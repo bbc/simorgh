@@ -105,6 +105,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ပို့စ် တင်တဲ့အချိန်',
         summary: 'အနှစ်ချုပ်',
         shareButtonText: 'ဝေမျှပါ',
+        refreshButtonText: 'နောက်ဆုံးပိုစ့်',
+        visuallyHiddenButtonText: 'ပိုစ့်အသစ်',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

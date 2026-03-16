@@ -25,6 +25,8 @@ export default {
     postedAt: 'Отправлено в',
     summary: 'Коротко',
     shareButtonText: 'Поделиться',
+    refreshButtonText: 'Последний пост',
+    visuallyHiddenButtonText: 'Вышел новый пост',
   },
   downloads: {
     instructions: 'You can download and view today’s news.',
