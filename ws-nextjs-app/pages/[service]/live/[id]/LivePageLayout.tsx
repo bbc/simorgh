@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState, useRef, RefObject } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Pagination from '#app/components/Pagination';
 import ChartbeatAnalytics from '#app/components/ChartbeatAnalytics';
@@ -9,6 +9,7 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -16,10 +17,11 @@ import {
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
+
+import LatestPostButton from './LatestPostButton';
 
 interface LivePromoImage {
   url: string;
@@ -66,6 +68,14 @@ interface LivePageProps extends ComponentProps {
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
+
+  const streamRef = useRef<HTMLDivElement>(null);
+  const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
+
+  const initialStreamData = pageData.liveTextStream.content?.data ?? null;
+  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
+    useLivePagePolling(initialStreamData, false);
+
   const {
     title,
     description,
@@ -176,8 +186,16 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           </div>
           <div css={styles.secondSection}>
             <Stream
-              streamContent={liveTextStream.content}
+              streamData={currentStreamData}
               contributors={liveTextStream.contributors}
+              setIsFirstPostVisible={setIsFirstPostVisible}
+              streamRef={streamRef}
+              applyPendingUpdate={applyPendingUpdate}
+            />
+            <LatestPostButton
+              isFirstPostVisible={isFirstPostVisible}
+              hasPendingUpdate={hasPendingUpdate}
+              streamRef={streamRef as RefObject<HTMLDivElement>}
             />
           </div>
         </div>

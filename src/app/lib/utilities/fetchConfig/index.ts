@@ -66,10 +66,6 @@ const fetchConfig = async <T>({
   const fetchOptions = {
     ...(agent && { agent }),
     ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
-    // TODO: Temporary override to fetch from Test data for new navigation until it's ready in Live
-    ...(fetchUrl.searchParams.get('useNewNav') === 'true' && {
-      headers: { 'ctx-service-env': 'test' },
-    }),
     signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 
