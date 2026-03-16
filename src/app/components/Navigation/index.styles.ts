@@ -4,7 +4,7 @@ import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
-const MAX_NAV_ITEM_HEIGHT = 44;
+export const MAX_NAV_ITEM_HEIGHT = 44;
 
 export default {
   brandDivider: ({ palette }: Theme) =>

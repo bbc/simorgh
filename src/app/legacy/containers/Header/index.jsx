@@ -20,6 +20,7 @@ import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
 import NewLogoBanner from './NewLogoBanner';
+import styles from './index.styles';
 
 const Header = ({
   brandRef,
@@ -28,6 +29,7 @@ const Header = ({
   scriptLink,
   linkId,
   children,
+  className,
 }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
@@ -55,6 +57,7 @@ const Header = ({
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
+        className={className}
       >
         {children}
       </BrandContainer>
@@ -125,6 +128,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          css={shouldUseNewNav ? styles.headerBrand : null}
         >
           <AccountHeader />
         </Header>
