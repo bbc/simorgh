@@ -164,20 +164,13 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 .emotion-7 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-7 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-7 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-7 li a[data-active="true"] span::after {
@@ -443,11 +436,6 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-17 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
 }
 
 .emotion-17 li:before {

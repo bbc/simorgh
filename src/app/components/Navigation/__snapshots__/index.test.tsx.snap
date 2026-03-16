@@ -178,20 +178,13 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -684,11 +677,6 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   justify-content: center;
 }
 
-.emotion-39 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
 .emotion-39 li:before {
   content: "";
   position: absolute;
@@ -1070,20 +1058,13 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -1500,11 +1481,6 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   justify-content: center;
 }
 
-.emotion-36 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
 .emotion-36 li:before {
   content: "";
   position: absolute;
@@ -1873,20 +1849,13 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -2379,11 +2348,6 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   justify-content: center;
 }
 
-.emotion-39 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
 .emotion-39 li:before {
   content: "";
   position: absolute;
@@ -2759,20 +2723,13 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -3271,11 +3228,6 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   justify-content: center;
 }
 
-.emotion-37 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
 .emotion-37 li:before {
   content: "";
   position: absolute;
@@ -3633,20 +3585,13 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -4069,11 +4014,6 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   justify-content: center;
 }
 
-.emotion-34 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
 .emotion-34 li:before {
   content: "";
   position: absolute;
@@ -4418,20 +4358,13 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 .emotion-8 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
+  border-bottom-color: #FFFFFF;
 }
 
 .emotion-8 li a:focus-visible::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
-}
-
-.emotion-8 li:first-of-type a:focus-visible::after {
-  inset-inline-start: 0;
 }
 
 .emotion-8 li a[data-active="true"] span::after {
@@ -4928,11 +4861,6 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-37 li a:hover::after {
-  inset-inline-start: -0.5rem;
-  inset-inline-end: -0.25rem;
 }
 
 .emotion-37 li:before {
