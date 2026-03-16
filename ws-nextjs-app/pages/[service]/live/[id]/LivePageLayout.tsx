@@ -44,6 +44,7 @@ export type ComponentProps = {
     } | null;
     summaryPoints: { content: KeyPointsResponse | null };
     liveTextStream: {
+      id: string;
       content: StreamResponse | null;
       contributors: string | null;
     };
@@ -72,9 +73,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
-  const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(initialStreamData, false);
+    useLivePagePolling(pageData, false);
 
   const {
     title,
