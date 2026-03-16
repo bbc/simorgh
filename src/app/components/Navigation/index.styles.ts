@@ -82,22 +82,17 @@ export default {
           flexDirection: 'column',
           justifyContent: 'center',
 
-          '&:hover::after': {
-            insetInlineStart: `-${spacings.FULL}rem`,
-            insetInlineEnd: `-${spacings.HALF}rem`,
+          '&:hover': {
+            '&::after': {
+              borderBottomColor: palette.WHITE,
+            },
           },
 
           '&:focus-visible::after': {
             boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
             outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
             outlineOffset: `${pixelsToRem(-2)}rem`,
-            insetInlineStart: `-${spacings.FULL}rem`,
-            insetInlineEnd: `-${spacings.HALF}rem`,
           },
-        },
-
-        '&:first-of-type a:focus-visible::after': {
-          insetInlineStart: 0,
         },
 
         'a[data-active="true"]': {
@@ -141,11 +136,6 @@ export default {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-
-          '&:hover::after': {
-            insetInlineStart: `-${spacings.FULL}rem`,
-            insetInlineEnd: `-${spacings.HALF}rem`,
-          },
         },
         '&:before': {
           content: '""',
