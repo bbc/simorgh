@@ -82,10 +82,8 @@ export default {
           flexDirection: 'column',
           justifyContent: 'center',
 
-          '&:hover': {
-            '&::after': {
-              borderBottomColor: palette.WHITE,
-            },
+          '&:hover::after': {
+            borderBottomColor: palette.WHITE,
           },
 
           '&:focus-visible::after': {
@@ -93,12 +91,12 @@ export default {
             outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
             outlineOffset: `${pixelsToRem(-2)}rem`,
           },
-        },
 
-        'a[data-active="true"]': {
-          span: {
-            '&::after': {
-              borderBottomColor: palette.WHITE,
+          '&[data-active="true"]': {
+            span: {
+              '&::after': {
+                borderBottomColor: palette.WHITE,
+              },
             },
           },
         },
@@ -137,6 +135,7 @@ export default {
           flexDirection: 'column',
           justifyContent: 'center',
         },
+
         '&:before': {
           content: '""',
           position: 'absolute',
