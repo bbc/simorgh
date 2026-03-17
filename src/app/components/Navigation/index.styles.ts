@@ -92,6 +92,12 @@ export default {
             outlineOffset: `${pixelsToRem(-2)}rem`,
           },
 
+          '&:focus::after': {
+            boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+            outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+            outlineOffset: `${pixelsToRem(-2)}rem`,
+          },
+
           '&[data-active="true"]': {
             span: {
               '&::after': {
