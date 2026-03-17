@@ -108,6 +108,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ዝተለጠፈሉ',
         summary: 'ጽማቝ ሓበሬታ',
         shareButtonText: 'ኣባፅሑ',
+        refreshButtonText: 'መጨረሻ ፖስት',
+        visuallyHiddenButtonText: 'ፖስት ሓድሽ ኣሎ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

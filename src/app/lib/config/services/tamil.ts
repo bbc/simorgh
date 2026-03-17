@@ -83,6 +83,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
         summary: 'முக்கிய சாராம்சம்',
         shareButtonText: 'பகிர்க',
+        refreshButtonText: 'சமீபத்திய பதிவு',
+        visuallyHiddenButtonText: 'புதிய பதிவு கிடைக்கிறது',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
