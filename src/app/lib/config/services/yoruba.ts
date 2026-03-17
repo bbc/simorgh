@@ -94,6 +94,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Tí a fiṣọwọ́ ní',
         summary: 'Ìsọníṣókí',
         shareButtonText: 'Ṣe alábàápín',
+        refreshButtonText: 'Ifiweranṣẹ tuntun',
+        visuallyHiddenButtonText: 'Ifiweranṣẹ tuntun wa',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
