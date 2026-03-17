@@ -15,15 +15,15 @@ const AccountHeader = () => {
   if (!isHydrated || !isIdctaAvailable) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
-  if (!href) return null;
-
   const label = isSignedIn
-    ? (translations?.account?.forYou ?? 'Your Account')
-    : (translations?.account?.signIn ?? 'Sign In');
+    ? translations?.account?.forYou
+    : translations?.account?.signIn;
+
+  if (!href || !label) return null;
 
   return (
     <div css={styles.wrapper}>
-      <Text as="a" css={styles.link} href={href}>
+      <Text as="a" css={styles.link} href={href} fontVariant="sansBold">
         <AccountIcon css={styles.icon} />
         {label}
       </Text>

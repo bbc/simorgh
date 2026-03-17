@@ -21,6 +21,7 @@ const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
 
 const SvgWrapper = styled.div`
+  min-height: inherit;
   height: 100%;
   position: relative;
   display: flex;
@@ -40,26 +41,30 @@ const SvgWrapper = styled.div`
 
 const Banner = styled.div`
   background-color: ${props => props.theme.palette.BRAND_BACKGROUND};
-  height: ${44 / 16}rem;
+  min-height: ${({ hasChildren }) => (hasChildren ? '100%' : `${44 / 16}rem`)};
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    height: ${60 / 16}rem;
+    min-height: ${({ hasChildren }) =>
+      hasChildren ? '100%' : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    height: ${60 / 16}rem;
+    min-height: ${({ hasChildren }) =>
+      hasChildren ? '100%' : `${60 / 16}rem`};
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    height: ${64 / 16}rem;
+    min-height: ${({ hasChildren }) =>
+      hasChildren ? '100%' : `${64 / 16}rem`};
   }
 
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    ${({ scriptLink }) => scriptLink && 'height: 100%'}
+    ${({ scriptLink, hasChildren }) =>
+      (scriptLink || hasChildren) && 'min-height: 100%'}
   }
 
   ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`};
@@ -77,12 +82,14 @@ const styledLinkOutline = `
   `;
 
 const StyledLink = styled.a`
-  height: 100%;
+  align-self: stretch;
   display: flex;
   align-items: center;
   position: relative;
   bottom: 0.125rem;
   padding-top: 0.125rem;
+  min-height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX};
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -97,10 +104,6 @@ const StyledLink = styled.a`
     border-top: ${GEL_SPACING_HLF} solid ${props =>
       props.theme.palette.BRAND_LOGO};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
-  }
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    ${({ scriptLink }) =>
-      scriptLink && `height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX}`}
   }
 `;
 
@@ -188,6 +191,7 @@ const Brand = forwardRef((props, ref) => {
     isLongBrand = false,
     skipLink = null,
     linkId = null,
+    hasAccountHeader = null,
     children,
     ...rest
   } = props;
@@ -198,6 +202,7 @@ const Brand = forwardRef((props, ref) => {
       borderTop={borderTop}
       borderBottom={borderBottom}
       scriptLink={scriptLink}
+      hasChildren={hasAccountHeader}
       {...rest}
     >
       <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
@@ -209,6 +214,7 @@ const Brand = forwardRef((props, ref) => {
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
             scriptLink={scriptLink}
+            hasChildren={hasAccountHeader}
           >
             <StyledBrand {...props} />
           </StyledLink>
