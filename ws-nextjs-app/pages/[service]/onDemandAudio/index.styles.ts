@@ -4,6 +4,40 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
+  collapsedSynopsis: ({ mq, palette, spacings }: Theme) =>
+    css({
+      [mq.GROUP_3_MAX_WIDTH]: {
+        display: '-webkit-box',
+        WebkitBoxOrient: 'vertical',
+        WebkitLineClamp: 4,
+        overflow: 'hidden',
+        position: 'relative',
+      },
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: `${spacings.FULL}rem`,
+        background: `linear-gradient(
+        to bottom,
+        transparent,
+        ${palette.GREY_1} 1%)`,
+      },
+    }),
+  continueReadingWrapper: ({ mq, spacings }: Theme) =>
+    css({
+      '& .continueReadingButtonOverride': {
+        display: 'block',
+        width: 'auto',
+        margin: `0 0 ${spacings.FULL}rem 0`,
+
+        [mq.GROUP_4_MIN_WIDTH]: {
+          display: 'none',
+        },
+      },
+    }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,

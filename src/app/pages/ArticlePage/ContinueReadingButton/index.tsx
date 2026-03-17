@@ -12,12 +12,14 @@ export type ContinueReadingButtonProps = {
   showAllContent: boolean;
   setShowAllContent: Dispatch<SetStateAction<boolean>>;
   experimentProps?: ComponentExperimentProps;
+  className?: string;
 };
 
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
   experimentProps,
+  className,
 }: ContinueReadingButtonProps) => {
   const {
     translations: { continueReading = 'Continue reading' },
@@ -71,6 +73,7 @@ const ContinueReadingButton = ({
     <button
       id="continue-reading-button"
       css={styles.continueReadingButton}
+      className={className}
       type="button"
       onClick={handleEvent}
       data-testid="continue-reading-button"

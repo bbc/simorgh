@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -18,6 +18,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import useToggle from '#app/hooks/useToggle';
+import ContinueReadingButton from '#app/pages/ArticlePage/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -140,6 +141,12 @@ const OnDemandAudioPage = ({
       }
     : {};
 
+  const [showAllContent, setShowAllContent] = useState(false);
+
+  const hasExtraSynopsisContent = summary && summary !== shortSynopsis;
+
+  const shouldShowContinueReadingButton = isPodcast && hasExtraSynopsisContent;
+
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
@@ -170,10 +177,18 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer
-                  testid="summary"
-                  text="Опубликован план Дональда Трампа по окончанию российско-украинской войны. В нем идет речь о признании Крыма и Донбасса «де-факто» российскими, «повторной интеграции России в мировую экономику», гарантиях безопасности и мерах по восстановлению Украины. Некоторые пункты этого документа напоминают максималистские требования Москвы. Можно ли считать план Трампа дипломатической победой России? Объясняет корреспондент Русской службы Би-би-си Сергей Горяшко. 00:00 Ведущий Илья Кизиров. Приветствие 00:51 Что в плане написано про территории? 03:33 Какие гарантии безопасности США обещают Украине? 11:55 Как Москва реагирует на этот план? 21:35 Что будет делать Зеленский? 25:17 План Трампа – шаг к миру? Нас можно слушать и смотреть на YouTube: https://bit.ly/3rot87v"
-                />
+                <div css={showAllContent ? null : styles.collapsedSynopsis}>
+                  <OnDemandParagraphContainer testid="summary" text={summary} />
+                </div>
+                {shouldShowContinueReadingButton && (
+                  <div css={styles.continueReadingWrapper}>
+                    <ContinueReadingButton
+                      className="continueReadingButtonOverride"
+                      showAllContent={showAllContent}
+                      setShowAllContent={setShowAllContent}
+                    />
+                  </div>
+                )}
                 {episodeTitle && (
                   <FooterTimestamp
                     releaseDateTimeStamp={releaseDateTimeStamp}
