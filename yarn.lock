@@ -6311,6 +6311,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid4@npm:^2":
+  version: 2.0.3
+  resolution: "@types/uuid4@npm:2.0.3"
+  checksum: 10/7839986b18e1c04afccef193ac17ebfd17189bf165ffb8a47999f006a0ea3494de8f9c35f12a7a0f616731978520d38eb56bb7210ff97c7aac0d1ee33de2d90d
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:11.0.0":
+  version: 11.0.0
+  resolution: "@types/uuid@npm:11.0.0"
+  dependencies:
+    uuid: "npm:*"
+  checksum: 10/9f94bd34e5d220c53cc58ea9f48a0061d3bc343e29bc33a17edc705f5e21fedda21553318151f2bc227c2b2b03727bbb536da2b82a61f84d2e1ca38abc5e5c3f
+  languageName: node
+  linkType: hard
+
 "@types/whatwg-mimetype@npm:^3.0.2":
   version: 3.0.2
   resolution: "@types/whatwg-mimetype@npm:3.0.2"
@@ -17416,6 +17432,8 @@ __metadata:
     "@types/react-router-dom": "npm:5.3.3"
     "@types/testing-library__react": "npm:10.2.0"
     "@types/url-parse": "npm:^1.4.8"
+    "@types/uuid": "npm:11.0.0"
+    "@types/uuid4": "npm:^2"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
     "@typescript-eslint/parser": "npm:8.52.0"
     amphtml-validator: "npm:1.0.38"
@@ -17500,6 +17518,7 @@ __metadata:
     typescript: "npm:5.9.3"
     undici: "npm:7.24.0"
     url-parse: "npm:1.5.10"
+    uuid4: "npm:2.0.3"
     wait-on: "npm:9.0.3"
     webpack: "npm:5.105.4"
     webpack-bundle-analyzer: "npm:5.2.0"
@@ -19262,6 +19281,22 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: 10/5d6949693d58cb2e636a84f3ee1c6e7b2f9c16cb1d42d0ecb386d8c025c69e327205aa1c69e2868cc06a01e5e20681fbba55a4e0ed0cce913d60334024eae798
+  languageName: node
+  linkType: hard
+
+"uuid4@npm:2.0.3":
+  version: 2.0.3
+  resolution: "uuid4@npm:2.0.3"
+  checksum: 10/7302c369cf9174083071fd26e3b04de5af5b85f4e2784cb6c085e01f7191a006e0df2071bd84f0422ad867f3701f1cdbf08571cc742f7bf935ab0937513e2f71
+  languageName: node
+  linkType: hard
+
+"uuid@npm:*":
+  version: 13.0.0
+  resolution: "uuid@npm:13.0.0"
+  bin:
+    uuid: dist-node/bin/uuid
+  checksum: 10/2742b24d1e00257e60612572e4d28679423469998cafbaf1fe9f1482e3edf9c40754b31bfdb3d08d71b29239f227a304588f75210b3b48f2609f0673f1feccef
   languageName: node
   linkType: hard
 

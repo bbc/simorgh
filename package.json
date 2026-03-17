@@ -111,6 +111,7 @@
     "@loadable/component": "5.16.7",
     "@loadable/server": "5.16.7",
     "@optimizely/react-sdk": "3.3.1",
+    "@types/uuid": "11.0.0",
     "aws-embedded-metrics": "4.2.0",
     "compression": "1.8.1",
     "core-js": "3.46.0",
@@ -135,6 +136,7 @@
     "react-router-dom": "5.3.4",
     "undici": "7.24.0",
     "url-parse": "1.5.10",
+    "uuid4": "2.0.3",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
@@ -186,6 +188,7 @@
     "@types/react-router-dom": "5.3.3",
     "@types/testing-library__react": "10.2.0",
     "@types/url-parse": "^1.4.8",
+    "@types/uuid4": "^2",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "8.52.0",
     "amphtml-validator": "1.0.38",
