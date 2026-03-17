@@ -7,6 +7,8 @@ import * as makeRequest from './makeRequest/makeRequest';
 
 jest.useFakeTimers();
 
+jest.mock('uuid', () => ({ v4: () => '00000000-0000-0000-0000-000000000000' }));
+
 describe('useLivePagePolling', () => {
   beforeEach(() => {
     jest.clearAllMocks();
