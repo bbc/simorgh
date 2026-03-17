@@ -26,12 +26,13 @@ export default {
         ${palette.GREY_1} 1%)`,
       },
     }),
-  continueReadingWrapper: ({ mq, spacings }: Theme) =>
+  continueReadingWrapper: ({ mq, palette, spacings }: Theme) =>
     css({
       '& .continueReadingButtonOverride': {
+        backgroundColor: `${palette.GREY_1}`,
         display: 'block',
-        width: 'auto',
-        margin: `0 0 ${spacings.FULL}rem 0`,
+        width: '100%',
+        margin: `0 0 ${spacings.TRIPLE}rem 0`,
 
         [mq.GROUP_4_MIN_WIDTH]: {
           display: 'none',
