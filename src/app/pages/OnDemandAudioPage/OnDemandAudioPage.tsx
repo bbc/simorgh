@@ -74,10 +74,8 @@ const OnDemandAudioPage = ({
     language,
     brandTitle,
     headline,
-    summary,
     shortSynopsis,
-    mediumSynopsis,
-    longSynopsis,
+    summary,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
@@ -108,10 +106,6 @@ const OnDemandAudioPage = ({
         imageHeight: 400,
       }
     : {};
-
-  const synopsisForParagraphContainer =
-    longSynopsis || mediumSynopsis || shortSynopsis;
-
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
@@ -127,7 +121,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={summary}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -142,10 +136,7 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer
-                  testid="summary"
-                  text={synopsisForParagraphContainer}
-                />
+                <OnDemandParagraphContainer testid="summary" text={summary} />
                 {episodeTitle && (
                   <FooterTimestamp
                     releaseDateTimeStamp={releaseDateTimeStamp}
