@@ -15,7 +15,11 @@ describe('addFullHeightToFlourishSrc', () => {
       html: sampleFlourishIframe,
     } as OEmbedData;
 
-    jest.spyOn(uuId, 'v4').mockReturnValueOnce('uniqueID-1234' as string);
+    jest
+      .spyOn(uuId, 'v4')
+      .mockReturnValueOnce(
+        'uniqueID-1234' as unknown as Uint8Array<ArrayBufferLike>,
+      );
 
     const actual = addFullHeightToFlourishSrc(flourishBlock);
     const { sizeAdjustScript } = actual as OEmbedData;

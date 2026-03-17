@@ -30,7 +30,11 @@ describe('enrichVivoEmbed', () => {
         },
       } as OptimoBlock;
 
-      jest.spyOn(uuId, 'v4').mockReturnValueOnce('uniqueId-1234' as string);
+      jest
+        .spyOn(uuId, 'v4')
+        .mockReturnValueOnce(
+          'uniqueId-1234' as unknown as Uint8Array<ArrayBufferLike>,
+        );
 
       const result = enrichVivoEmbed(sampleFlourishEmbed);
       expect(result).toStrictEqual({
