@@ -1,4 +1,8 @@
-import { bylineSamplePost } from 'simorgh-nextjs/pages/[service]/live/[id]/Post/fixture';
+import {
+  bylineSamplePost,
+  bylinesSamplePostWithoutImage,
+  bylinesSamplePostWithoutSubtitle,
+} from 'simorgh-nextjs/pages/[service]/live/[id]/Post/fixture';
 import {
   bylineWithNoAuthor,
   bylineWithLink,
@@ -115,7 +119,7 @@ describe('bylineExtractor', () => {
         header: {
           model: { blocks: postHeaderBlocks },
         },
-      } = bylineSamplePost;
+      } = bylinesSamplePostWithoutImage;
       const { model: contributorData } = filterForBlockType(
         postHeaderBlocks,
         'contributor',
@@ -127,10 +131,36 @@ describe('bylineExtractor', () => {
       });
 
       const sampleContributor = {
-        authorName: 'Gahuza contributor',
-        jobRole: 'gahuza contributor',
+        authorName: 'new contributor in test',
+        jobRole: 'contributor',
+        authorImage: '',
+      };
+
+      expect(bylineValues).toHaveLength(1);
+      expect(bylineValues).toEqual([sampleContributor]);
+    });
+
+    it('should return an array with the byline data for the post contributor where the subtitle is missing', () => {
+      const {
+        header: {
+          model: { blocks: postHeaderBlocks },
+        },
+      } = bylinesSamplePostWithoutSubtitle;
+      const { model: contributorData } = filterForBlockType(
+        postHeaderBlocks,
+        'contributor',
+      );
+
+      const bylineValues = bylineExtractor({
+        blocks: [contributorData],
+        pageType: LIVE_PAGE,
+      });
+
+      const sampleContributor = {
+        authorName: 'John Doe',
+        jobRole: null,
         authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb//vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
+          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb//vivo/test/images/2015/1/20/d3be9c18-8975-4e20-9923-5c309c2dc00d.gif.webp',
       };
 
       expect(bylineValues).toHaveLength(1);

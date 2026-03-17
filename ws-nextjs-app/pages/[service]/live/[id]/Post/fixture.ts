@@ -1178,3 +1178,198 @@ export const bylinesSamplePostWithoutImage = {
     },
   ],
 };
+
+export const bylinesSamplePostWithoutSubtitle = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'A second post with contributors',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'A second post with contributors',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'contributor',
+          model: {
+            name: 'John Doe',
+            link: 'https://google.com',
+            subtitle: null,
+            external: 'false',
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 100,
+                        height: 100,
+                        locator:
+                          '/vivo/test/images/2015/1/20/d3be9c18-8975-4e20-9923-5c309c2dc00d.gif',
+                        originCode: 'cpsdevpb',
+                        copyrightHolder: 'BBC',
+                      },
+                    },
+                    {
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  type: 'paragraph',
+                                  model: {
+                                    text: '',
+                                    blocks: [
+                                      {
+                                        type: 'fragment',
+                                        model: {
+                                          text: '',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:1f798a3d-d31b-4577-b761-101b434c81a7',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+    includeComments: false,
+  },
+  dates: {
+    firstPublished: '2026-03-10T14:29:15.000Z',
+    lastPublished: '2026-03-16T09:40:53.000Z',
+    time: null,
+    curated: '2026-03-10T14:29:16.587Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
