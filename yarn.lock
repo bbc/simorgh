@@ -6311,6 +6311,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/uuid@npm:10.0.0":
+  version: 10.0.0
+  resolution: "@types/uuid@npm:10.0.0"
+  checksum: 10/e3958f8b0fe551c86c14431f5940c3470127293280830684154b91dc7eb3514aeb79fe3216968833cf79d4d1c67f580f054b5be2cd562bebf4f728913e73e944
+  languageName: node
+  linkType: hard
+
 "@types/whatwg-mimetype@npm:^3.0.2":
   version: 3.0.2
   resolution: "@types/whatwg-mimetype@npm:3.0.2"
@@ -17416,6 +17423,7 @@ __metadata:
     "@types/react-router-dom": "npm:5.3.3"
     "@types/testing-library__react": "npm:10.2.0"
     "@types/url-parse": "npm:^1.4.8"
+    "@types/uuid": "npm:10.0.0"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
     "@typescript-eslint/parser": "npm:8.52.0"
     amphtml-validator: "npm:1.0.38"
@@ -17500,6 +17508,7 @@ __metadata:
     typescript: "npm:5.9.3"
     undici: "npm:7.24.0"
     url-parse: "npm:1.5.10"
+    uuid: "npm:11.1.0"
     wait-on: "npm:9.0.3"
     webpack: "npm:5.105.4"
     webpack-bundle-analyzer: "npm:5.2.0"
@@ -19262,6 +19271,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: 10/5d6949693d58cb2e636a84f3ee1c6e7b2f9c16cb1d42d0ecb386d8c025c69e327205aa1c69e2868cc06a01e5e20681fbba55a4e0ed0cce913d60334024eae798
+  languageName: node
+  linkType: hard
+
+"uuid@npm:11.1.0":
+  version: 11.1.0
+  resolution: "uuid@npm:11.1.0"
+  bin:
+    uuid: dist/esm/bin/uuid
+  checksum: 10/d2da43b49b154d154574891ced66d0c83fc70caaad87e043400cf644423b067542d6f3eb641b7c819224a7cd3b4c2f21906acbedd6ec9c6a05887aa9115a9cf5
   languageName: node
   linkType: hard
 
