@@ -4,7 +4,11 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
-  collapsedSynopsis: ({ mq, palette, spacings }: Theme) =>
+  expandedSummary: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+  collapsedSummary: ({ mq, palette, spacings }: Theme) =>
     css({
       [mq.GROUP_3_MAX_WIDTH]: {
         display: '-webkit-box',
