@@ -38,7 +38,7 @@ export default {
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
-      'a[aria-labelledby="BrandLink-topPage"]': {
+      'a[aria-labelledby^="BrandLink-"]': {
         paddingTop: `${pixelsToRem(4)}rem`,
       },
     }),
