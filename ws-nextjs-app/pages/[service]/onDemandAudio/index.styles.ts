@@ -33,6 +33,7 @@ export default {
   continueReadingWrapper: ({ mq, palette, spacings }: Theme) =>
     css({
       '& .continueReadingButtonOverride': {
+        borderBottom: 'none',
         backgroundColor: `${palette.GREY_1}`,
         display: 'block',
         width: '100%',

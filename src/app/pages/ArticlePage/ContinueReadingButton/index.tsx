@@ -14,7 +14,6 @@ export type ContinueReadingButtonProps = {
   experimentProps?: ComponentExperimentProps;
   className?: string;
 };
-
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
