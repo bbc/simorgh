@@ -3,7 +3,7 @@ import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout
 import useLivePagePolling, { POLLING_INTERVAL } from '.';
 import fixtureLivePageData from './fixture/fixtureLivePageData';
 import fixtureLivePageDataUpdate from './fixture/fixtureStreamDataUpdate';
-import * as makeRequest from './makeRequest';
+import * as makeRequest from './makeRequest/makeRequest';
 
 jest.useFakeTimers();
 

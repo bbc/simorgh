@@ -1,7 +1,7 @@
 import { map, pipe } from 'ramda';
-import handlePostBlocks from './transformers/handlePostBlocks';
-import addIdsToPost from './transformers/addIdsToPost';
-import addIndexesToEmbeds from './transformers/addIndexesToEmbeds';
+import handlePostBlocks from '../transformers/handlePostBlocks';
+import addIdsToPost from '../transformers/addIdsToPost';
+import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
 
 export default async (liveTextStreamId: string) => {
   try {

@@ -1,4 +1,4 @@
-import fixtureStreamDataWithFlourish from './fixture/fixtureStreamDataWithFlourish';
+import fixtureStreamDataWithFlourish from '../fixture/fixtureStreamDataWithFlourish';
 import makeRequest from './makeRequest';
 
 jest.mock('uuid', () => ({
