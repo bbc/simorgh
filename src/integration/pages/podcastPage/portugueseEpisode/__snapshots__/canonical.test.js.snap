@@ -192,20 +192,20 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist�
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-oeagp1-figure-MediaLoader"
+  class="media-container bbc-16wwgxo"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player bbc-ujxpgi-audioMediaContainer"
+    class="media-player bbc-1ty1x88"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="bbc-l06ev1-messageWrapper"
+          class="bbc-1ezssgh"
         >
           <strong
-            class="bbc-hzy8u9-message"
+            class="bbc-pow7hy"
           >
             A reprodução deste formato de vídeo não é compatível com seu dispositivo
           </strong>
