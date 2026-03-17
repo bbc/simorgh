@@ -99,6 +99,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Чыгарылган убакыт',
         summary: 'Корутунду',
         shareButtonText: 'Бөлүшүү',
+        refreshButtonText: 'Акыркы маалымат',
+        visuallyHiddenButtonText: 'Жаңы маалымат жарыяланды',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

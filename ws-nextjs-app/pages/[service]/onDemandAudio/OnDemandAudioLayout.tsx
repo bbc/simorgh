@@ -132,11 +132,14 @@ const OnDemandAudioPage = ({
 
   const shouldSetMainEntity = Boolean(podcastEntities);
 
+  const imageHeight = isPodcastEpisodePage ? 675 : 400;
+  const imageWidth = isPodcastEpisodePage ? 1200 : 400;
+  const image = `https://${imageUrl?.replace('$recipe', `${imageWidth}x${imageHeight}`)}`;
   const metadataImageProps = is(String, imageUrl)
     ? {
-        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
-        imageWidth: 400,
-        imageHeight: 400,
+        image,
+        imageWidth,
+        imageHeight,
       }
     : {};
 
@@ -182,6 +185,7 @@ const OnDemandAudioPage = ({
                 alt={imageAltText}
                 css={styles.image}
                 className="imageStyles"
+                isPodcastEpisodePage
               />
             </div>
             {mediaIsAvailable ? (
@@ -196,6 +200,10 @@ const OnDemandAudioPage = ({
               seoTitle={metadataTitle}
               entities={linkedDataEntities}
               mainEntityId={shouldSetMainEntity ? episodeId : undefined}
+              {...(isPodcastEpisodePage &&
+                metadataImageProps && {
+                  metadataImageProps,
+                })}
             />
           </main>
 
