@@ -9,7 +9,8 @@ export default async (liveTextStreamId: string) => {
     const response = await fetch(fetchUrl);
     const { status } = response;
     const { data } = await response.json();
-    if (status === 200) {
+
+    if (status === 200 && data.results.length > 0) {
       const formattedData = map(
         pipe(handlePostBlocks, addIdsToPost, addIndexesToEmbeds),
         data.results,
