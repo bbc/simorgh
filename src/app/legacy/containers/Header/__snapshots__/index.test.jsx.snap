@@ -501,7 +501,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0 auto;
+  margin: 0;
   background-color: #FFFFFF;
 }
 
@@ -1831,7 +1831,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0 auto;
+  margin: 0;
   background-color: #FFFFFF;
 }
 
@@ -3161,7 +3161,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0 auto;
+  margin: 0;
   background-color: #FFFFFF;
 }
 
@@ -4491,7 +4491,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0 auto;
+  margin: 0;
   background-color: #FFFFFF;
 }
 
