@@ -109,6 +109,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'An wallafa a',
         summary: 'Taƙaitattu',
         shareButtonText: 'Aika',
+        refreshButtonText: 'Sabon bayani',
+        visuallyHiddenButtonText: 'Sabon bayanin ya samu',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

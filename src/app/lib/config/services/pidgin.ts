@@ -82,6 +82,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posted at',
         summary: 'Summary',
         shareButtonText: 'Share dis tori',
+        refreshButtonText: 'Las post',
+        visuallyHiddenButtonText: 'New post dey',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

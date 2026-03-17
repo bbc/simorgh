@@ -81,6 +81,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'పోస్ట్ చేసిన సమయం',
         summary: 'సారాంశం',
         shareButtonText: 'షేర్ చేయండి',
+        refreshButtonText: 'తాజా పోสต์',
+        visuallyHiddenButtonText: 'కొత్త పోస్ట్ అందుబాటులో ఉంది',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
