@@ -1,9 +1,9 @@
 import { act, renderHook } from '@testing-library/react';
 import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
 import useLivePagePolling, { POLLING_INTERVAL } from '.';
-import fixtureData from './fixtureData';
-import fixtureDataUpdate from './fixtureDataUpdate';
-import * as fakeRequest from './makeRequest';
+import fixtureLivePageData from './fixture/fixtureLivePageData';
+import fixtureLivePageDataUpdate from './fixture/fixtureStreamDataUpdate';
+import * as makeRequest from './makeRequest';
 
 jest.useFakeTimers();
 
@@ -14,11 +14,11 @@ describe('useLivePagePolling', () => {
 
   it('should return the initial stream data on initialisation', () => {
     const initialPageData =
-      fixtureData as unknown as ComponentProps['pageData'];
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
 
     jest
-      .spyOn(fakeRequest, 'default')
-      .mockResolvedValue(fixtureDataUpdate.liveTextStream.content.data);
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -33,11 +33,11 @@ describe('useLivePagePolling', () => {
 
   it('should set pending update to true when a change in stream data is detected', async () => {
     const initialPageData =
-      fixtureData as unknown as ComponentProps['pageData'];
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
 
     jest
-      .spyOn(fakeRequest, 'default')
-      .mockResolvedValue(fixtureDataUpdate.liveTextStream.content.data);
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -54,13 +54,11 @@ describe('useLivePagePolling', () => {
 
   it('should update currentStreamData when applyPendingUpdate is called', async () => {
     const initialPageData =
-      fixtureData as unknown as ComponentProps['pageData'];
-
-    const updatedStreamData = fixtureDataUpdate.liveTextStream.content?.data;
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
 
     jest
-      .spyOn(fakeRequest, 'default')
-      .mockResolvedValue(fixtureDataUpdate.liveTextStream.content.data);
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     const { result } = renderHook(() =>
       useLivePagePolling(initialPageData, true),
@@ -76,12 +74,12 @@ describe('useLivePagePolling', () => {
     });
     const { currentStreamData } = result.current;
 
-    expect(currentStreamData).toStrictEqual(updatedStreamData);
+    expect(currentStreamData).toStrictEqual(fixtureLivePageDataUpdate);
   });
 
   it('should not poll if the user is not on the first page', async () => {
     const initialStreamData = {
-      ...fixtureData.liveTextStream.content?.data,
+      ...fixtureLivePageData.liveTextStream.content?.data,
       page: {
         index: 2,
       },
@@ -96,8 +94,8 @@ describe('useLivePagePolling', () => {
     };
 
     const requestSpy = jest
-      .spyOn(fakeRequest, 'default')
-      .mockResolvedValue(fixtureDataUpdate.liveTextStream.content.data);
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageDataUpdate);
 
     renderHook(() =>
       useLivePagePolling(
