@@ -12,7 +12,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '#psammead/gel-foundations/src/spacings';
-import { focusIndicatorThickness } from '../../../../components/ThemeProvider/focusIndicator';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
@@ -72,38 +71,29 @@ const Banner = styled.div`
     borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
 
-const styledLinkOutline = `
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -${focusIndicatorThickness};
-  bottom: 0;
-  right: -${focusIndicatorThickness};
-  `;
-
 const StyledLink = styled.a`
   align-self: stretch;
   display: flex;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
   min-height: ${SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX};
 
-  &:hover,
-  &:focus {
-    text-decoration: none;
+  &:hover::before,
+  &:focus::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     border-bottom: ${GEL_SPACING_HLF} solid
       ${props => props.theme.palette.BRAND_LOGO};
-    margin-bottom: -${GEL_SPACING_HLF};
   }
 
   /* Custom focus indicator styling applied to pseudo-element. Global focus indicator styling has been removed. */
   &:focus-visible::after {
-    ${styledLinkOutline}
-    border-top: ${GEL_SPACING_HLF} solid ${props =>
-      props.theme.palette.BRAND_LOGO};
+    content: '';
+    position: absolute;
+    inset: 0px -${GEL_SPACING};
     outline: ${GEL_SPACING_HLF} solid ${props => props.theme.palette.BRAND_LOGO};
+    outline-offset: -${GEL_SPACING_HLF};
   }
 `;
 
