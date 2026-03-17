@@ -120,6 +120,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
+          css={shouldUseNewNav ? styles.headerBrand : null}
         >
           <AccountHeader />
         </Header>
