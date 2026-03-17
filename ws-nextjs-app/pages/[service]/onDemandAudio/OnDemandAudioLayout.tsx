@@ -143,9 +143,7 @@ const OnDemandAudioPage = ({
 
   const [showAllContent, setShowAllContent] = useState(false);
 
-  const hasExtraSynopsisContent = summary && summary !== shortSynopsis;
-
-  const shouldShowContinueReadingButton = isPodcast && hasExtraSynopsisContent;
+  const shouldShowContinueReadingButton = isPodcast;
 
   return (
     <>
