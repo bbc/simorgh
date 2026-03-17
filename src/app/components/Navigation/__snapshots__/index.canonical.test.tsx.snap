@@ -173,6 +173,12 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   outline-offset: -0.125rem;
 }
 
+.emotion-7 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
 .emotion-7 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }

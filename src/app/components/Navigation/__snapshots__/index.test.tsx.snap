@@ -187,6 +187,12 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   outline-offset: -0.125rem;
 }
 
+.emotion-8 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
 .emotion-8 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }
@@ -1067,6 +1073,12 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   outline-offset: -0.125rem;
 }
 
+.emotion-8 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
 .emotion-8 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }
@@ -1853,6 +1865,12 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 .emotion-8 li a:focus-visible::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
+.emotion-8 li a:focus::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
@@ -2732,6 +2750,12 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   outline-offset: -0.125rem;
 }
 
+.emotion-8 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
 .emotion-8 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }
@@ -3594,6 +3618,12 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   outline-offset: -0.125rem;
 }
 
+.emotion-8 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
 .emotion-8 li a[data-active="true"] span::after {
   border-bottom-color: #FFFFFF;
 }
@@ -4362,6 +4392,12 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 .emotion-8 li a:focus-visible::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
+.emotion-8 li a:focus::after {
   box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
   outline: 0.125rem solid #000000;
   outline-offset: -0.125rem;
