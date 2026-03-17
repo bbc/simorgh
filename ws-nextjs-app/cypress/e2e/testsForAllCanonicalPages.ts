@@ -38,7 +38,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const testTwoTierNav =
       SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() !== 'local';
 
-    const initialUrl = '';
     let initialSecondaryNavItemLinkTexts: string[] = [];
 
     if (testMobileNav) {
@@ -108,6 +107,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
               .map(link => link.textContent || '');
           });
         });
+
         it('should stay on the same page when brand link is clicked', () => {
           cy.location('pathname').then(currentPath => {
             cy.get('a#topPage').click();
@@ -116,27 +116,35 @@ export default ({ service, pageType }: ServiceParametersType) => {
         });
 
         it('navigates to new page and secondary nav changes when clicking 2nd item in top nav', () => {
-          cy.get('[data-e2e="scrollable-nav"] li').eq(1).find('a').click();
-          cy.location('pathname').should('not.eq', initialUrl);
-          cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
-            const newTexts = $links
-              .toArray()
-              .map(link => link.textContent || '');
-            expect(newTexts).to.not.deep.equal(
-              initialSecondaryNavItemLinkTexts,
+          cy.location('pathname').then(previousUrl => {
+            cy.get('[data-e2e="scrollable-nav"] li').eq(1).find('a').click();
+            cy.location('pathname').should('not.eq', previousUrl);
+            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
+              $links => {
+                const newTexts = $links
+                  .toArray()
+                  .map(link => link.textContent || '');
+                expect(newTexts).to.not.deep.equal(
+                  initialSecondaryNavItemLinkTexts,
+                );
+              },
             );
           });
         });
 
         it('navigates to another new page and secondary nav changes when clicking 3rd item in top nav', () => {
-          cy.get('[data-e2e="scrollable-nav"] li').eq(2).find('a').click();
-          cy.location('pathname').should('not.eq', initialUrl);
-          cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
-            const newTexts = $links
-              .toArray()
-              .map(link => link.textContent || '');
-            expect(newTexts).to.not.deep.equal(
-              initialSecondaryNavItemLinkTexts,
+          cy.location('pathname').then(previousUrl => {
+            cy.get('[data-e2e="scrollable-nav"] li').eq(2).find('a').click();
+            cy.location('pathname').should('not.eq', previousUrl);
+            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
+              $links => {
+                const newTexts = $links
+                  .toArray()
+                  .map(link => link.textContent || '');
+                expect(newTexts).to.not.deep.equal(
+                  initialSecondaryNavItemLinkTexts,
+                );
+              },
             );
           });
         });
