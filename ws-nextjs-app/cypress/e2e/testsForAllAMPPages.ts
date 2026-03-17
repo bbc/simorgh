@@ -43,7 +43,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
       // this check limits these tests to arabic and tamil services
       if (testTwoTierNav) {
-        it('should show two tier navigation on mobile on test environment', () => {
+        it('should show two tier navigation on mobile', () => {
           cy.viewport(320, 480);
           cy.get('nav')
             .find('[data-e2e="scrollable-nav"]')
