@@ -113,6 +113,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Imepakiwa mnamo',
         summary: 'Muhtasari',
         shareButtonText: 'Mshirikishe mwenzako',
+        refreshButtonText: 'Chapisho jipya',
+        visuallyHiddenButtonText: 'Chapisho jipya kinapatikana',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
