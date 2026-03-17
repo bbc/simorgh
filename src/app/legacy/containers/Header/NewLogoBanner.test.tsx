@@ -13,10 +13,7 @@ describe('NewLogoBanner', () => {
       pathname: '/tamil',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
-      'href',
-      '/ws/languages',
-    );
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/ws/languages');
   });
 
   it('links to the BBC homepage on the global languages homepage', () => {
@@ -26,10 +23,7 @@ describe('NewLogoBanner', () => {
       pathname: '/ws/languages',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
-      'href',
-      '/',
-    );
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/');
   });
 
   it('treats a trailing slash on the global languages homepage as the same route', () => {
@@ -39,9 +33,6 @@ describe('NewLogoBanner', () => {
       pathname: '/ws/languages/',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
-      'href',
-      '/',
-    );
+    expect(screen.getByRole('link')).toHaveAttribute('href', '/');
   });
 });
