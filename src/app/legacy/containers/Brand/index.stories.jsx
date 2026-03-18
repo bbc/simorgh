@@ -11,7 +11,6 @@ const BrandStory = ({
   service = 'news',
   variant = null,
   scriptLink = null,
-  scriptLinkConfig = null,
 }) => {
   const brandRef = useRef(null);
 

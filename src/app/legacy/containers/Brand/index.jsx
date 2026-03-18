@@ -29,7 +29,6 @@ const BrandContainer = ({
   skipLink = null,
   scriptLink = null,
   brandRef = null,
-  hasAccountHeader = null,
   children,
   ...props
 }) => {
@@ -65,7 +64,6 @@ const BrandContainer = ({
       skipLink={skipLink}
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
-      hasAccountHeader={hasAccountHeader}
       ref={brandRef}
       {...props}
     >

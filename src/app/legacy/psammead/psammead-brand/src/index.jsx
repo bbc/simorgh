@@ -38,30 +38,22 @@ const SvgWrapper = styled.div`
 
 const Banner = styled.div`
   background-color: ${props => props.theme.palette.BRAND_BACKGROUND};
-  min-height: ${({ hasChildren }) => (hasChildren ? '100%' : `${44 / 16}rem`)};
+  min-height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    min-height: ${({ hasChildren }) =>
-      hasChildren ? '100%' : `${60 / 16}rem`};
+    min-height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    min-height: ${({ hasChildren }) =>
-      hasChildren ? '100%' : `${60 / 16}rem`};
+    min-height: ${60 / 16}rem;
     padding: 0 ${GEL_SPACING_DBL};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    min-height: ${({ hasChildren }) =>
-      hasChildren ? '100%' : `${64 / 16}rem`};
-  }
-
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    ${({ scriptLink, hasChildren }) =>
-      (scriptLink || hasChildren) && 'min-height: 100%'}
+    min-height: ${64 / 16}rem;
   }
 `;
 
@@ -175,7 +167,6 @@ const Brand = forwardRef((props, ref) => {
     isLongBrand = false,
     skipLink = null,
     linkId = null,
-    hasAccountHeader = null,
     children,
     ...rest
   } = props;
@@ -186,7 +177,6 @@ const Brand = forwardRef((props, ref) => {
       borderTop={borderTop}
       borderBottom={borderBottom}
       scriptLink={scriptLink}
-      hasChildren={hasAccountHeader}
       {...rest}
     >
       <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
@@ -198,7 +188,6 @@ const Brand = forwardRef((props, ref) => {
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
             scriptLink={scriptLink}
-            hasChildren={hasAccountHeader}
           >
             <StyledBrand {...props} />
           </StyledLink>
