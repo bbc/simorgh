@@ -157,10 +157,21 @@ describe('catch-all route', () => {
   });
 
   describe('On Demand TV page type', () => {
-    it('should call the On Demand TV route handler if an On Demand TV page is requested using URL', async () => {
+    it('should call the On Demand TV route handler if an On Demand TV page is requested using URL for /tv/', async () => {
       const context = {
         ...commonContext,
-        resolvedUrl: '/pidgin/bbc_pidgin_tv/some-tv-page',
+        resolvedUrl: '/pidgin/bbc_pidgin_tv/tv/some-tv-page',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandTvRoute).toHaveBeenCalled();
+    });
+
+    it('should call the On Demand TV route handler if an On Demand TV page is requested using URL for /tv_programmes/', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/pidgin/bbc_pidgin_tv/tv_programmes/some-tv-page',
       };
 
       await getServerSideProps(context);

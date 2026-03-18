@@ -46,7 +46,7 @@ const isOnDemandAudioPath = (pathname: string) =>
   /\/bbc_[a-z]+_radio\//.test(pathname) || pathname.includes('/podcasts/');
 
 const isOnDemandTvPath = (pathname: string) =>
-  /\/bbc_[a-z]+_tv\//.test(pathname);
+  /\/bbc_[a-z]+_tv\/(?:tv|tv_programmes)\//.test(pathname);
 
 export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
