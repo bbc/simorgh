@@ -23,10 +23,7 @@ export default {
           right: 0,
           bottom: 0,
           height: `${spacings.FULL}rem`,
-          background: `linear-gradient(
-          to bottom,
-          transparent,
-          ${palette.GREY_1} 1%)`,
+          backgroundColor: palette.GREY_1,
         },
       },
     }),
