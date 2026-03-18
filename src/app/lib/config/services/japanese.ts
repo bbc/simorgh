@@ -81,6 +81,8 @@ export const service: DefaultServiceConfig = {
         postedAt: '投稿時間',
         summary: '要点',
         shareButtonText: '共有する',
+        refreshButtonText: '最新の投稿',
+        visuallyHiddenButtonText: '新しい投稿があります',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

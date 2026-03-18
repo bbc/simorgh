@@ -93,6 +93,8 @@ const defaultCyrillicConfig = {
       postedAt: '...да чоп этилган',
       summary: 'Қисқача',
       shareButtonText: 'Баҳам кўринг',
+      refreshButtonText: 'Охирги пост',
+      visuallyHiddenButtonText: 'Янги пост мавжуд',
     },
     downloads: {
       instructions: 'You can download and view today’s news.',
@@ -419,6 +421,8 @@ export const service: UzbekConfig = {
         postedAt: '...da chop etilgan',
         summary: 'Qisqacha',
         shareButtonText: 'Baham ko‘rinг',
+        refreshButtonText: 'Oxirgi post',
+        visuallyHiddenButtonText: 'Yangi post mavjud',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

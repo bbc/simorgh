@@ -2,7 +2,7 @@
 
 exports[`Topic Page SEO should correctly render linked data 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "CollectionPage",

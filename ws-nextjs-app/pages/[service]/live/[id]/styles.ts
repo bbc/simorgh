@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react';
+// eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../../src/app/utilities/pixelsToRem';
 
 export default {
@@ -40,7 +41,9 @@ export default {
     }),
   secondSection: ({ mq }: Theme) =>
     css({
+      display: 'flex',
       gridColumn: '1 / 13',
+      justifyContent: 'center',
 
       [mq.GROUP_4_MIN_WIDTH]: {
         gridColumn: '5 / 13',

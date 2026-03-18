@@ -103,6 +103,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Vyashizwe isaha',
         summary: 'Incamake',
         shareButtonText: 'Sangira',
+        refreshButtonText: 'Inkuru ya vuba',
+        visuallyHiddenButtonText: 'Raba inkuru ya vuba',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

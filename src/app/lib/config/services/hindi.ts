@@ -101,6 +101,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'पोस्ट किया गया',
         summary: 'सारांश',
         shareButtonText: 'साझा कीजिए',
+        refreshButtonText: 'नवीनतम पोस्ट',
+        visuallyHiddenButtonText: 'नया पोस्ट उपलब्ध है',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

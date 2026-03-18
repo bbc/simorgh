@@ -35,4 +35,18 @@ export interface LinkedDataProps {
   bylineLinkedData?: (BylineLinkedData | null)[];
   coverageStartTime?: string;
   coverageEndTime?: string;
+  mainEntityId?: string;
+  metadataImageProps?: MetadataImageProps;
 }
+
+type MetadataImageProps =
+  | {
+      image: string;
+      imageWidth: number;
+      imageHeight: number;
+    }
+  | {
+      image?: undefined;
+      imageWidth?: undefined;
+      imageHeight?: undefined;
+    };

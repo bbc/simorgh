@@ -80,6 +80,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'โพสต์ทาง',
         summary: 'สรุป',
         shareButtonText: 'แชร์"',
+        refreshButtonText: 'โพสต์ล่าสุด',
+        visuallyHiddenButtonText: 'มีโพสต์ใหม่',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

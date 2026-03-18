@@ -112,6 +112,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'به روزشده در',
         summary: 'خلاصه',
         shareButtonText: 'هم‌رسانی',
+        refreshButtonText: 'تازه‌ترین خبر',
+        visuallyHiddenButtonText: 'خبر تازه در دسترس است',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

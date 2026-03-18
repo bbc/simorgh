@@ -516,7 +516,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-31 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -1246,6 +1246,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
           >
             <button
               aria-expanded="false"
+              aria-label="Sections"
               class="focusIndicatorRemove emotion-35 emotion-36"
               dir="ltr"
               type="button"
