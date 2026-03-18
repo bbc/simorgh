@@ -179,9 +179,11 @@ const OnDemandAudioPage = ({
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
                 {episodeTitle && (
-                  <FooterTimestamp
-                    releaseDateTimeStamp={releaseDateTimeStamp}
-                  />
+                  <div>
+                    <FooterTimestamp
+                      releaseDateTimeStamp={releaseDateTimeStamp}
+                    />
+                  </div>
                 )}
                 {mediaIsAvailable ? (
                   <MediaLoader blocks={pageData?.mediaBlocks} />
