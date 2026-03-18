@@ -43,7 +43,7 @@ const isHomePagePath = (pathname: string) =>
   });
 
 const isOnDemandAudioPath = (pathname: string) =>
-  /\/bbc_[a-z]+_radio\//.test(pathname) || pathname.includes('/podcasts/');
+  /\/bbc_[a-z]+_radio\/|\/podcasts\//.test(pathname);
 
 const isOnDemandTvPath = (pathname: string) =>
   /\/bbc_[a-z]+_tv\/(?:tv|tv_programmes)\//.test(pathname);
