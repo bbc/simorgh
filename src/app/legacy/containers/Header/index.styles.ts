@@ -14,6 +14,7 @@ export default {
       maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
       margin: '0 auto',
       padding: `0 ${spacings.DOUBLE}rem`,
+      paddingTop: `${spacings.HALF}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
