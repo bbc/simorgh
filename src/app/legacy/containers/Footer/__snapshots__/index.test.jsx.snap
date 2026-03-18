@@ -32,7 +32,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 .emotion-3 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
@@ -42,21 +42,21 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 
 @media (min-width: 15rem) {
   .emotion-3 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-3 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-3 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -71,6 +71,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-5 {
+  min-height: inherit;
   height: 100%;
   position: relative;
   display: -webkit-box;
@@ -99,7 +100,9 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-7 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,27 +112,23 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-7:hover::before,
+.emotion-7:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-7:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-9 {
