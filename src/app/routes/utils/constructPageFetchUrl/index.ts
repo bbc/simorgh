@@ -244,28 +244,18 @@ const constructPageFetchUrl = ({
         }
         break;
       case HOME_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
-          );
-        } else {
-          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+        );
         break;
       }
       case MOST_READ_PAGE:
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        } else {
-          fetchUrl = Url(
-            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+        );
         break;
       }
       case LIVE_PAGE: {
