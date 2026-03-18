@@ -887,6 +887,45 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   }
 }
 
+.emotion-142 {
+  background-color: #B80000;
+  min-height: 2.75rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 15rem) {
+  .emotion-142 {
+    min-height: 3.75rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-142 {
+    min-height: 3.75rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-142 {
+    min-height: 4rem;
+  }
+}
+
+.emotion-142 svg {
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-142 svg {
+    fill: linkText;
+  }
+}
+
 .emotion-151 {
   font-size: 0.875rem;
   line-height: 1.125rem;
@@ -1577,7 +1616,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
       role="contentinfo"
     >
       <div
-        class="emotion-17 emotion-18 emotion-19"
+        class="emotion-17 emotion-142 emotion-19"
       >
         <div
           class="emotion-20 emotion-21"
