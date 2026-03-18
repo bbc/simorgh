@@ -73,6 +73,7 @@ const LinkedData = ({
   imageLocator,
   bylineLinkedData,
   mainEntityId,
+  metadataImageProps,
 }: LinkedDataProps) => {
   const {
     brandName,
@@ -93,7 +94,6 @@ const LinkedData = ({
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
   const LANGUAGE_TYPE = 'Language';
   const isNotRadioChannel = type !== 'RadioChannel';
-
   const brandedIndexImage = imageLocator
     ? getBrandedImage(imageLocator, service)
     : null;
@@ -133,11 +133,19 @@ const LinkedData = ({
 
   const publisherLogo = choosePublisherLogo();
 
+  const {
+    image: imageUrl,
+    imageWidth,
+    imageHeight,
+  } = metadataImageProps || {
+    imageWidth: 1024,
+    imageHeight: 576,
+  };
   const image = {
     '@type': IMG_TYPE,
-    width: 1024,
-    height: 576,
-    url: brandedIndexImage || defaultImage,
+    width: imageWidth,
+    height: imageHeight,
+    url: imageUrl || brandedIndexImage || defaultImage,
   };
 
   const thumbnailUrl = promoImage || brandedIndexImage || defaultImage;
@@ -213,7 +221,6 @@ const LinkedData = ({
     seoTitle,
     type,
   });
-
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
