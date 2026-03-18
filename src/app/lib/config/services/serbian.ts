@@ -161,6 +161,8 @@ export const service: SerbianConfig = {
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
         shareButtonText: 'Deli',
+        refreshButtonText: 'Najnoviji post',
+        visuallyHiddenButtonText: 'Dostupan je novi post',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -549,6 +551,8 @@ export const service: SerbianConfig = {
         postedAt: 'Објављено у',
         summary: 'Сажетак',
         shareButtonText: 'Дели',
+        refreshButtonText: 'Последњи пост',
+        visuallyHiddenButtonText: 'Доступан је нови пост',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

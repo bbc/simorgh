@@ -80,6 +80,8 @@ export const service: DefaultServiceConfig = {
         postedAt: '작성',
         summary: '요약',
         shareButtonText: '공유',
+        refreshButtonText: '최신 게시',
+        visuallyHiddenButtonText: '새 게시물이 있습니다',
       },
       downloads: {
         instructions: '오늘의 뉴스를 다운받아 보실 수 있습니다',

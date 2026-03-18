@@ -52,7 +52,6 @@ const EndText = styled.p`
 
 const SkipLinkWrapper = ({
   provider,
-  service,
   endTextId,
   text,
   children,
@@ -63,7 +62,6 @@ const SkipLinkWrapper = ({
   return (
     <Wrapper>
       <SkipLink
-        service={service}
         href={`#${detokenise(endTextId, dictionary)}`}
         className="focusIndicatorRemove"
         {...(describedById && { 'aria-describedby': describedById })}

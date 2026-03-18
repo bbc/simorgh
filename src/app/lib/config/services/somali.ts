@@ -100,6 +100,8 @@ export const service: DefaultServiceConfig = {
         postedAt: '',
         summary: 'Kooban',
         shareButtonText: 'La wadaag',
+        refreshButtonText: 'Qoraalka ugu dambeeya',
+        visuallyHiddenButtonText: 'Qoraal cusub ayaa diyaar ah',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
