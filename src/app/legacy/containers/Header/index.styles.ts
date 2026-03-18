@@ -13,8 +13,7 @@ export default {
       width: '100%',
       maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
       margin: '0 auto',
-      padding: `0 ${spacings.DOUBLE}rem`,
-      paddingTop: `${spacings.HALF}rem`,
+      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -25,8 +24,7 @@ export default {
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        padding: 0,
-        paddingTop: `${spacings.HALF}rem`,
+        padding: `${spacings.HALF}rem 0 0`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
