@@ -24,4 +24,8 @@ export default {
         width: '100%',
       },
     }),
+  mediaPlayer: () =>
+    css({
+      margin: 0,
+    }),
 };

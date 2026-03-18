@@ -155,7 +155,10 @@ const OnDemandTvPage = ({
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>
           {mediaIsAvailable ? (
-            <MediaLoader blocks={pageData?.mediaBlocks} />
+            <MediaLoader
+              blocks={pageData?.mediaBlocks}
+              css={styles.mediaPlayer}
+            />
           ) : (
             //  @ts-expect-error allow rendering of MediaError component when media is not available
             <MediaError skin="video" />
