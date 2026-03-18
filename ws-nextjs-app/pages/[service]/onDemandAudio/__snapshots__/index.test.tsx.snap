@@ -331,27 +331,8 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
   height: auto;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-23 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    position: relative;
-  }
-}
-
-.emotion-23::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.5rem;
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          #FEFEFE 1%);
+.emotion-23 {
+  margin-bottom: 1rem;
 }
 
 .emotion-24 {
@@ -3278,19 +3259,19 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
     overflow: hidden;
     position: relative;
   }
-}
 
-.emotion-23::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.5rem;
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          #FEFEFE 1%);
+  .emotion-23::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.5rem;
+    background: linear-gradient(
+              to bottom,
+              transparent,
+              #FEFEFE 1%);
+  }
 }
 
 .emotion-24 {
@@ -6491,19 +6472,19 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
     overflow: hidden;
     position: relative;
   }
-}
 
-.emotion-23::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.5rem;
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          #FEFEFE 1%);
+  .emotion-23::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.5rem;
+    background: linear-gradient(
+              to bottom,
+              transparent,
+              #FEFEFE 1%);
+  }
 }
 
 .emotion-24 {
@@ -9748,27 +9729,8 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   height: auto;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-25 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    position: relative;
-  }
-}
-
-.emotion-25::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.5rem;
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          #FEFEFE 1%);
+.emotion-25 {
+  margin-bottom: 1rem;
 }
 
 .emotion-26 {
@@ -12509,27 +12471,8 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   height: auto;
 }
 
-@media (max-width: 62.9375rem) {
-  .emotion-25 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    position: relative;
-  }
-}
-
-.emotion-25::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.5rem;
-  background: linear-gradient(
-          to bottom,
-          transparent,
-          #FEFEFE 1%);
+.emotion-25 {
+  margin-bottom: 1rem;
 }
 
 .emotion-26 {
