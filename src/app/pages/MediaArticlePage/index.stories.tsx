@@ -10,7 +10,7 @@ import {
   MEDIA_ASSET_PAGE,
 } from '../../routes/utils/pageTypes';
 import articleData from '../../../../data/hausa/articles/cw43vy8zdjvo.json';
-import tamilArticle from '../../../../data/tamil/articles/c84m2jl4dpzo.json';
+import tamilArticle from '../../../../data/tamil/articles/cddn1vjyv0eo.json';
 import pidginArticle from '../../../../data/pidgin/articles/cw0x29n2pvqo.json';
 import portraitVideoArticle from '../../../../data/portuguese/articles/cn7v03e37eko.json';
 import portraitVideoArticleWithCaption from '../../../../data/portuguese/articles/cp319w676r0o.json';
