@@ -175,7 +175,6 @@ storiesOf(STORY_KIND, module)
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
           url="https://www.bbc.com/news"
-
           backgroundColour={backgroundColour}
           logoColour={logoColour}
           skipLink={skipLink}
