@@ -13,7 +13,7 @@ describe('NewLogoBanner', () => {
       pathname: '/tamil',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /bbc/i })).toHaveAttribute(
       'href',
       '/ws/languages',
     );
@@ -26,7 +26,7 @@ describe('NewLogoBanner', () => {
       pathname: '/ws/languages',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /bbc/i })).toHaveAttribute(
       'href',
       '/',
     );
@@ -39,7 +39,7 @@ describe('NewLogoBanner', () => {
       pathname: '/ws/languages/',
     });
 
-    expect(screen.getByRole('link', { name: 'BBC' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /bbc/i })).toHaveAttribute(
       'href',
       '/',
     );
