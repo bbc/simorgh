@@ -22,7 +22,7 @@ export interface OnDemandAudioProps {
     headline: string;
     summary?: string;
     shortSynopsis: string;
-    mediumSynopsi?: string;
+    mediumSynopsis?: string;
     longSynopsis?: string;
     masterBrand: string;
     episodeId: string;
