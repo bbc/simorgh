@@ -191,24 +191,6 @@ const OnDemandAudioPage = ({
                   //  @ts-expect-error allow rendering of MediaError component when media is not available
                   <MediaError skin="audio" />
                 )}
-                <div
-                  css={
-                    showAllContent
-                      ? styles.expandedSummary
-                      : styles.collapsedSummary
-                  }
-                >
-                  <OnDemandParagraphContainer testid="summary" text={summary} />
-                </div>
-                {shouldShowContinueReadingButton && (
-                  <div css={styles.continueReadingWrapper}>
-                    <ContinueReadingButton
-                      className="continueReadingButtonOverride"
-                      showAllContent={showAllContent}
-                      setShowAllContent={setShowAllContent}
-                    />
-                  </div>
-                )}
               </div>
               <EpisodeImage
                 imageUrl={imageUrl}
@@ -218,6 +200,24 @@ const OnDemandAudioPage = ({
                 isPodcastEpisodePage
               />
             </div>
+            <div
+              css={
+                showAllContent
+                  ? styles.expandedSummary
+                  : styles.collapsedSummary
+              }
+            >
+              <OnDemandParagraphContainer testid="summary" text={summary} />
+            </div>
+            {shouldShowContinueReadingButton && (
+              <div css={styles.continueReadingWrapper}>
+                <ContinueReadingButton
+                  className="continueReadingButtonOverride"
+                  showAllContent={showAllContent}
+                  setShowAllContent={setShowAllContent}
+                />
+              </div>
+            )}
 
             <LinkedData
               type="WebPage"
