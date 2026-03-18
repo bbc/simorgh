@@ -27,7 +27,7 @@ export default {
         padding: 0,
       },
     }),
-  headerBrand: ({ mq }: Theme) =>
+  headerBrand: ({ mq, spacings }: Theme) =>
     css({
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
@@ -44,6 +44,12 @@ export default {
 
       'a[aria-labelledby^="BrandLink-"]': {
         paddingTop: `${pixelsToRem(4)}rem`,
+      },
+
+      '&[class*="-Banner-StyledBrand"]': {
+        [mq.GROUP_2_MIN_WIDTH]: {
+          padding: `0 ${spacings.FULL}rem`,
+        },
       },
     }),
   logoSvg: ({ palette }: Theme) =>
