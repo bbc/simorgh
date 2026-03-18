@@ -20,6 +20,8 @@ export default async (context: GetServerSidePropsContext) => {
   const { service, variant } = parseRoute(resolvedUrl);
 
   if (!service) {
+    context.res.statusCode = NOT_FOUND;
+
     return {
       props: {
         service,
