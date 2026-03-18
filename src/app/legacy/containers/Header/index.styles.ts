@@ -26,6 +26,7 @@ export default {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,
+        paddingTop: `${spacings.HALF}rem`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
