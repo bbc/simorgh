@@ -16,18 +16,18 @@ export default {
         WebkitLineClamp: 4,
         overflow: 'hidden',
         position: 'relative',
-      },
-      '&::after': {
-        content: '""',
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        bottom: 0,
-        height: `${spacings.FULL}rem`,
-        background: `linear-gradient(
-        to bottom,
-        transparent,
-        ${palette.GREY_1} 1%)`,
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: `${spacings.FULL}rem`,
+          background: `linear-gradient(
+          to bottom,
+          transparent,
+          ${palette.GREY_1} 1%)`,
+        },
       },
     }),
   continueReadingWrapper: ({ mq, palette, spacings }: Theme) =>
