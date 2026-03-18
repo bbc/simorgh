@@ -150,6 +150,11 @@ const OnDemandAudioPage = ({
 
   const shouldShowContinueReadingButton = isPodcast;
 
+  const summaryStyles =
+    shouldShowContinueReadingButton && !showAllContent
+      ? styles.collapsedSummary
+      : styles.expandedSummary;
+
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
@@ -202,13 +207,7 @@ const OnDemandAudioPage = ({
                 isPodcastEpisodePage
               />
             </div>
-            <div
-              css={
-                showAllContent
-                  ? styles.expandedSummary
-                  : styles.collapsedSummary
-              }
-            >
+            <div css={summaryStyles}>
               <OnDemandParagraphContainer testid="summary" text={description} />
             </div>
             {shouldShowContinueReadingButton && (
