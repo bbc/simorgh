@@ -72,6 +72,7 @@ exports[`Canonical Closed menu button should render correctly 1`] = `
 <div>
   <button
     aria-expanded="false"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     dir="ltr"
     type="button"
@@ -169,6 +170,7 @@ exports[`Canonical Closed menu button should render rtl correctly 1`] = `
 <div>
   <button
     aria-expanded="false"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     dir="rtl"
     type="button"
@@ -266,6 +268,7 @@ exports[`Canonical Open menu button should render correctly 1`] = `
 <div>
   <button
     aria-expanded="true"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     dir="ltr"
     type="button"
@@ -364,6 +367,7 @@ exports[`Canonical Open menu button should render rtl correctly 1`] = `
 <div>
   <button
     aria-expanded="true"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     dir="rtl"
     type="button"
@@ -471,6 +475,7 @@ exports[`Dropdown navigation AMP Menu Button should render correctly 1`] = `
   </amp-state>
   <button
     aria-expanded="false"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="ltr"
@@ -595,6 +600,7 @@ exports[`Dropdown navigation AMP Menu Button should render rtl correctly 1`] = `
   </amp-state>
   <button
     aria-expanded="false"
+    aria-label="Menu"
     class="focusIndicatorRemove emotion-0 emotion-1"
     data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
     dir="rtl"

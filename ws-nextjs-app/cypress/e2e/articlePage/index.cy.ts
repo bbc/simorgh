@@ -200,6 +200,12 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
+    path: '/arabic/articles/cl5m3453w36o',
+    runforEnv: ['test'],
+    service: 'arabic',
+    tests: [...canonicalTests],
+  },
+  {
     path: '/azeri/articles/cv0lm08kngmo',
     runforEnv: ['live'],
     service: 'azeri',
@@ -269,6 +275,12 @@ const nonSmokeCanonicalTestSuites = [
     path: '/polska/articles/c639526lxlro',
     runforEnv: ['local', 'test'],
     service: 'polska',
+    tests: [...canonicalTests],
+  },
+  {
+    path: '/tamil/articles/c84m2jl4dpzo',
+    runforEnv: ['local', 'live'],
+    service: 'tamil',
     tests: [...canonicalTests],
   },
   {

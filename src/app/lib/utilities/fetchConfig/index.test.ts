@@ -188,7 +188,7 @@ describe('fetchConfig', () => {
     });
 
     it.each(SERVICES_WITH_NEW_NAV)(
-      'should set the useNewNav param for %s on Local/Test',
+      'should set the useNewNav param for %s service',
       async service => {
         global.fetch = jest.fn().mockResolvedValue({
           ok: true,
@@ -205,29 +205,6 @@ describe('fetchConfig', () => {
 
         const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
         expect(fetchUrl).toContain('useNewNav=true');
-      },
-    );
-
-    it.each(SERVICES_WITH_NEW_NAV)(
-      'should not set the useNewNav param for %s on Live',
-      async service => {
-        process.env.SIMORGH_APP_ENV = 'live';
-
-        global.fetch = jest.fn().mockResolvedValue({
-          ok: true,
-          json: async () => mockNavResponse,
-        });
-
-        const { default: fetchConfig } = await import('.');
-
-        await fetchConfig({
-          service,
-          pagePath: `/${service}`,
-          configType: 'navigation',
-        });
-
-        const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-        expect(fetchUrl).not.toContain('useNewNav=true');
       },
     );
 

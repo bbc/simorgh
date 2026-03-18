@@ -500,7 +500,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -967,6 +967,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -1828,7 +1829,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -2295,6 +2296,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -3156,7 +3158,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -3623,6 +3625,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
@@ -4484,7 +4487,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-30 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -4951,6 +4954,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-34 emotion-35"
           dir="ltr"
           type="button"
