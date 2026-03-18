@@ -24,16 +24,4 @@ export default {
         width: '100%',
       },
     }),
-  mediaPlayer: ({ mq, spacings }: Theme) =>
-    css({
-      [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0px 0px 0px`,
-      },
-      [mq.GROUP_2_MAX_WIDTH]: {
-        margin: `0px -${spacings.DOUBLE}rem 0px`,
-      },
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0px -${spacings.FULL}rem 0px`,
-      },
-    }),
 };
