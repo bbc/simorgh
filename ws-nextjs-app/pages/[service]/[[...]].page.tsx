@@ -35,7 +35,7 @@ import handleHomepageRoute from './homepage/handleHomepageRoute';
 // On Demand Audio
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import { OnDemandAudioProps } from './onDemandAudio/types';
-// On Ddemand TV
+// On Demand TV
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 
 // Dynamic imports of page layouts
