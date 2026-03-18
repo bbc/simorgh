@@ -19,12 +19,12 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOptimizelyProvider';
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
-import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
 
 // AV Embeds
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
+import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -35,7 +35,7 @@ import handleHomepageRoute from './homepage/handleHomepageRoute';
 // On Demand Audio
 import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import { OnDemandAudioProps } from './onDemandAudio/types';
-// on demand tv
+// On Ddemand TV
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 
 // Dynamic imports of page layouts
@@ -53,6 +53,7 @@ const OnDemandAudioPage = dynamic(
 const OnDemandTvPage = dynamic(
   () => import('#app/pages/OnDemandTvPage/OnDemandTvPage'),
 );
+
 const getPageType = ({
   resolvedUrl,
   reqHeaders,
