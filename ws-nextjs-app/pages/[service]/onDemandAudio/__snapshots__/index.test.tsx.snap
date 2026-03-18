@@ -3267,10 +3267,7 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
     right: 0;
     bottom: 0;
     height: 0.5rem;
-    background: linear-gradient(
-              to bottom,
-              transparent,
-              #FEFEFE 1%);
+    background-color: #FEFEFE;
   }
 }
 
@@ -6480,10 +6477,7 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
     right: 0;
     bottom: 0;
     height: 0.5rem;
-    background: linear-gradient(
-              to bottom,
-              transparent,
-              #FEFEFE 1%);
+    background-color: #FEFEFE;
   }
 }
 
