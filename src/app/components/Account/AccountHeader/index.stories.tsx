@@ -3,6 +3,8 @@ import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
 import AccountHeader from '.';
 import BrandContainer from '#app/legacy/containers/Brand';
+import metadata from './metadata.json';
+import readme from './README.md';
 
 type WithProvidersArgs = {
   isSignedIn: boolean;
@@ -31,6 +33,10 @@ const withProviders =
 export default {
   title: 'Account/AccountHeader',
   component: AccountHeader,
+  parameters: {
+    metadata,
+    docs: { readme },
+  },
 };
 
 export const SignedOut = withProviders({ isSignedIn: false });

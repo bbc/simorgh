@@ -35,7 +35,6 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
   position: relative;
   z-index: 1;
 }

@@ -17,8 +17,6 @@ import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
-const TRANSPARENT_BORDER = `0.0625rem solid transparent`;
-
 const SvgWrapper = styled.div`
   min-height: inherit;
   height: 100%;
@@ -65,10 +63,6 @@ const Banner = styled.div`
     ${({ scriptLink, hasChildren }) =>
       (scriptLink || hasChildren) && 'min-height: 100%'}
   }
-
-  ${({ borderTop }) => borderTop && `border-top: ${TRANSPARENT_BORDER}`};
-  ${({ borderBottom }) =>
-    borderBottom && `border-bottom: ${TRANSPARENT_BORDER}`};
 `;
 
 const StyledLink = styled.a`
