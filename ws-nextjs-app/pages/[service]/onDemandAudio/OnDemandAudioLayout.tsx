@@ -83,13 +83,15 @@ const OnDemandAudioPage = ({
     ? new Date(availableFrom).toISOString()
     : new Date(releaseDateTimeStamp).toISOString();
 
+  const description = summary || shortSynopsis;
+
   const audioEntities = !mediaIsAvailable
     ? []
     : [
         {
           '@type': 'AudioObject',
           name: promoBrandTitle,
-          description: summary,
+          description,
           thumbnailUrl: thumbnailImageUrl,
           duration: durationISO8601,
           uploadDate,
@@ -108,14 +110,14 @@ const OnDemandAudioPage = ({
             '@type': 'PodcastEpisode',
             '@id': episodeId,
             name: episodeTitle || brandTitle,
-            description: summary,
+            description,
             datePublished: new Date(releaseDateTimeStamp).toISOString(),
             partOfSeries: { '@id': seriesId },
             associatedMedia: {
               '@type': 'AudioObject',
               '@id': audioId,
               name: episodeTitle || promoBrandTitle,
-              description: summary,
+              description,
               duration: durationISO8601,
               thumbnailUrl: thumbnailImageUrl,
               uploadDate,
@@ -163,7 +165,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={description}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -207,7 +209,7 @@ const OnDemandAudioPage = ({
                   : styles.collapsedSummary
               }
             >
-              <OnDemandParagraphContainer testid="summary" text={summary} />
+              <OnDemandParagraphContainer testid="summary" text={description} />
             </div>
             {shouldShowContinueReadingButton && (
               <div css={styles.continueReadingWrapper}>
