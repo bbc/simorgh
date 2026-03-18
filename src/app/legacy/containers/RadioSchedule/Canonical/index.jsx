@@ -90,12 +90,7 @@ const CanonicalRadioSchedule = ({
   className = '',
   eventTrackingData,
 }) => {
-  const {
-    service,
-    script,
-    dir,
-    radioSchedule: radioScheduleConfig = {},
-  } = use(ServiceContext);
+  const { dir, radioSchedule: radioScheduleConfig = {} } = use(ServiceContext);
 
   const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
     radioScheduleConfig;
@@ -117,9 +112,7 @@ const CanonicalRadioSchedule = ({
       {...(className ? { className } : undefined)}
     >
       <RadioScheduleSectionLabel
-        script={script}
         labelId="Radio-Schedule"
-        service={service}
         dir={dir}
         bar={false}
         backgroundColor={LUNAR}
@@ -133,11 +126,7 @@ const CanonicalRadioSchedule = ({
           eventTrackingData={eventTrackingData}
         />
         {frequenciesPageUrl && (
-          <RadioFrequencyLink
-            href={frequenciesPageUrl}
-            script={script}
-            service={service}
-          >
+          <RadioFrequencyLink href={frequenciesPageUrl}>
             {frequenciesPageLabel}
           </RadioFrequencyLink>
         )}

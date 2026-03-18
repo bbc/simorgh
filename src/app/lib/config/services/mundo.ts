@@ -126,6 +126,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Publicado',
         summary: 'Puntos clave',
         shareButtonText: 'Compartir',
+        refreshButtonText: 'Última publicación',
+        visuallyHiddenButtonText: 'Nueva publicación disponible',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

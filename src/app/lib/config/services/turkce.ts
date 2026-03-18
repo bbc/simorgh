@@ -84,6 +84,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Basım saati',
         summary: 'Özet',
         shareButtonText: 'Paylaş',
+        refreshButtonText: 'Son gönderi',
+        visuallyHiddenButtonText: 'Yeni gönderi mevcut',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

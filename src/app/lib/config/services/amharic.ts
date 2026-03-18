@@ -104,6 +104,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'የታተመዉ',
         summary: 'ጭምቅ ሃሳብ',
         shareButtonText: 'ያጋሩ',
+        refreshButtonText: 'የቅርብ መልዕክት',
+        visuallyHiddenButtonText: 'አዲስ ፖስት ዝግጁ ነው',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

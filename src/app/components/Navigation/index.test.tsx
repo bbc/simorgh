@@ -14,7 +14,7 @@ import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 describe('Navigation', () => {
   const navItems = [
-    { title: 'Home', url: '/home' },
+    { title: 'Home', url: '/news' },
     { title: 'About', url: '/about' },
   ];
 
@@ -31,6 +31,19 @@ describe('Navigation', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should correctly render amp navigation', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/news',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   it('should correctly render canonical navigation on non-home navigation page', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -39,16 +52,42 @@ describe('Navigation', () => {
       pageType: ARTICLE_PAGE,
       service: 'news',
       statusCode: 200,
-      pathname: '/uk',
+      pathname: '/about',
     });
     expect(container).toMatchSnapshot();
   });
 
-  it('should correctly render canonical navigation on non-navigation page', () => {
+  it('should correctly render amp navigation on non-home navigation page', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/about',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render canonical navigation on a URL not associated with navigation items', () => {
     const { container } = render(<Navigation navItems={navItems} />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'news',
+      statusCode: 200,
+      pathname: '/not-a-navigation-page',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should correctly render amp navigation on a URL not associated with navigation items', () => {
+    const { container } = render(<Navigation navItems={navItems} />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
       pageType: ARTICLE_PAGE,
       service: 'news',
       statusCode: 200,
@@ -97,13 +136,32 @@ describe('Navigation', () => {
     expect(queryAllByText('World')).toHaveLength(0);
   });
 
-  it('should fall back to service config when navItems is null', () => {
+  it('should fall back to service config when navItems are not provided', () => {
     const { navigation } = indonesiaConfig.default;
 
     const { getAllByText } = render(<Navigation />, {
       bbcOrigin: 'https://www.test.bbc.co.uk',
       id: 'c0000000000o',
       isAmp: false,
+      pageType: ARTICLE_PAGE,
+      service: 'indonesia',
+      statusCode: 200,
+      pathname: '/indonesia',
+    });
+
+    const fallbackConfig = navigation?.[0]?.title ?? 'Home';
+    const elements = getAllByText(fallbackConfig);
+
+    expect(elements[0]).toBeInTheDocument();
+  });
+
+  it('should fall back to service config when navItems are not provided on amp', () => {
+    const { navigation } = indonesiaConfig.default;
+
+    const { getAllByText } = render(<Navigation />, {
+      bbcOrigin: 'https://www.test.bbc.co.uk',
+      id: 'c0000000000o',
+      isAmp: true,
       pageType: ARTICLE_PAGE,
       service: 'indonesia',
       statusCode: 200,

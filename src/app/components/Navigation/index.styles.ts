@@ -1,5 +1,10 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
+
+export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
+
+export const MAX_NAV_ITEM_HEIGHT = 44;
 
 export default {
   brandDivider: ({ palette }: Theme) =>
@@ -33,6 +38,15 @@ export default {
     flexDirection: 'column',
     width: '100%',
   }),
+  ampScrollableNav: ({ mq }: Theme) =>
+    css({
+      [`&.${HIDDEN_CLASS_NAME}`]: {
+        [mq.GROUP_2_MAX_WIDTH]: {
+          display: 'none',
+          visibility: 'hidden',
+        },
+      },
+    }),
   topRow: ({ palette }: Theme) =>
     css({
       display: 'flex',
@@ -58,24 +72,37 @@ export default {
   topRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
+        marginInlineEnd: 0,
+
         a: {
           color: palette.WHITE,
+          padding: `0 ${spacings.FULL}rem`,
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
 
           '&:hover::after': {
             borderBottomColor: palette.WHITE,
           },
-          '&:focus::after': {
-            borderBottomColor: palette.WHITE,
-          },
-          '&:focus-visible::after': {
-            borderBottomColor: palette.WHITE,
-          },
-        },
 
-        'a[data-active="true"]': {
-          span: {
-            '&::after': {
-              borderBottomColor: palette.WHITE,
+          '&:focus-visible::after': {
+            boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+            outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+            outlineOffset: `${pixelsToRem(-2)}rem`,
+          },
+
+          '&:focus::after': {
+            boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
+            outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
+            outlineOffset: `${pixelsToRem(-2)}rem`,
+          },
+
+          '&[data-active="true"]': {
+            span: {
+              '&::after': {
+                borderBottomColor: palette.WHITE,
+              },
             },
           },
         },
@@ -83,7 +110,7 @@ export default {
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: `-${spacings.HALF}rem`,
+          insetInlineEnd: 0,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
@@ -105,10 +132,20 @@ export default {
   bottomRowItems: ({ palette, spacings }: Theme) =>
     css({
       li: {
+        marginInlineEnd: 0,
+
+        a: {
+          padding: `0 ${spacings.FULL}rem`,
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        },
+
         '&:before': {
           content: '""',
           position: 'absolute',
-          insetInlineEnd: `-${spacings.HALF}rem`,
+          insetInlineEnd: 0,
           top: '50%',
           transform: 'translateY(-50%)',
           height: '60%',
@@ -186,6 +223,14 @@ export default {
     css({
       backgroundColor: palette.POSTBOX,
       color: palette.WHITE,
+
+      width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+
+      [GROUP_B_MIN_WIDTH]: {
+        width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
 
       svg: {
         verticalAlign: 'middle',

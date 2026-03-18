@@ -24,7 +24,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -229,6 +229,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
       >
         <button
           aria-expanded="false"
+          aria-label="menu"
           class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
