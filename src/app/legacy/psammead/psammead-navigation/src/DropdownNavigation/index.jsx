@@ -204,6 +204,7 @@ export const CanonicalMenuButton = ({
   <MenuButton
     onClick={onClick}
     aria-expanded={isOpen ? 'true' : 'false'}
+    aria-label={announcedText}
     dir={dir}
     className={`${className} focusIndicatorRemove`}
   >
@@ -244,6 +245,7 @@ export const AmpMenuButton = ({
     </amp-state>
     <MenuButton
       aria-expanded="false"
+      aria-label={announcedText}
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}

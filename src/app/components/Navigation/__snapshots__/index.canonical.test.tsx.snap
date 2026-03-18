@@ -24,7 +24,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -141,20 +141,42 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 }
 
+.emotion-7 li {
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+}
+
 .emotion-7 li a {
   color: #FFFFFF;
+  padding: 0 0.5rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-7 li a:hover::after {
   border-bottom-color: #FFFFFF;
 }
 
-.emotion-7 li a:focus::after {
-  border-bottom-color: #FFFFFF;
+.emotion-7 li a:focus-visible::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
 }
 
-.emotion-7 li a:focus-visible::after {
-  border-bottom-color: #FFFFFF;
+.emotion-7 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
 }
 
 .emotion-7 li a[data-active="true"] span::after {
@@ -164,7 +186,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 .emotion-7 li:before {
   content: "";
   position: absolute;
-  inset-inline-end: -0.25rem;
+  inset-inline-end: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -196,6 +218,8 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   width: 2.75rem;
   background-color: #B80000;
   color: #FFFFFF;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
 .emotion-9:hover,
@@ -231,6 +255,13 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 
 .emotion-9 svg {
   vertical-align: middle;
+}
+
+@media (min-width: 20rem) {
+  .emotion-9 {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }
 
 .emotion-9 svg {
@@ -392,10 +423,31 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   }
 }
 
+.emotion-17 li {
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+}
+
+.emotion-17 li a {
+  padding: 0 0.5rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 .emotion-17 li:before {
   content: "";
   position: absolute;
-  inset-inline-end: -0.25rem;
+  inset-inline-end: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -465,6 +517,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
             </div>
             <button
               aria-expanded="false"
+              aria-label="menu"
               class="focusIndicatorRemove emotion-9 emotion-10"
               dir="ltr"
               type="button"

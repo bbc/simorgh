@@ -24,7 +24,7 @@ exports[`Navigation should render correctly 1`] = `
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -346,7 +346,7 @@ exports[`Navigation should render correctly when ampOpenClass prop is provided 1
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -662,7 +662,7 @@ exports[`Navigation should render correctly when isOpen is true 1`] = `
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -1028,7 +1028,7 @@ exports[`Scrollable Navigation should render correctly 1`] = `
 .emotion-4 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
