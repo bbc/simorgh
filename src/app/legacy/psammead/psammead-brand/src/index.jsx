@@ -161,8 +161,6 @@ const Brand = forwardRef((props, ref) => {
     maxWidth,
     minWidth,
     url = null,
-    borderTop = false,
-    borderBottom = false,
     scriptLink = null,
     isLongBrand = false,
     skipLink = null,
@@ -172,13 +170,7 @@ const Brand = forwardRef((props, ref) => {
   } = props;
 
   return (
-    <Banner
-      svgHeight={svgHeight}
-      borderTop={borderTop}
-      borderBottom={borderBottom}
-      scriptLink={scriptLink}
-      {...rest}
-    >
+    <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
       <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
         {url ? (
           <StyledLink

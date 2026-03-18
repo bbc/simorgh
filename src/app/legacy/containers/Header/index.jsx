@@ -21,14 +21,7 @@ import ConsentBanner from '../ConsentBanner';
 import BrandContainer from '../Brand';
 import NewLogoBanner from './NewLogoBanner';
 
-const Header = ({
-  brandRef,
-  borderBottom,
-  skipLink,
-  scriptLink,
-  linkId,
-  children,
-}) => {
+const Header = ({ brandRef, skipLink, scriptLink, linkId, children }) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -50,7 +43,6 @@ const Header = ({
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer
-        borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}

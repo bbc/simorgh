@@ -45,5 +45,5 @@ export default {
 
 export const Brand = () => <BrandStory />;
 export const BrandZhongwen = () => (
-  <BrandStory service="zhongwen" variant={'simp'} scriptLink={<ScriptLink />} />
+  <BrandStory service="zhongwen" variant="simp" scriptLink={<ScriptLink />} />
 );
