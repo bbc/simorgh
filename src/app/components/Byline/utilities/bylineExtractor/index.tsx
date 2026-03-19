@@ -40,13 +40,17 @@ const livePageBylineExtractor = blocks => {
         subtitle: jobRole,
       } = contribBlock;
 
-      const locator = pathOrZeroIndexModelBlocks(1, 'locator', imagesBlock[0]);
+      const locator = pathOrZeroIndexModelBlocks(
+        1,
+        'locator',
+        imagesBlock[0],
+      ).replace(/^\/+/g, '');
       const originCode = pathOrZeroIndexModelBlocks(
         1,
         'originCode',
         imagesBlock[0],
       );
-      const authorImage =
+      let authorImage =
         locator && originCode
           ? buildIChefURL({
               originCode,
@@ -54,6 +58,8 @@ const livePageBylineExtractor = blocks => {
               resolution: 160,
             })
           : '';
+
+      if (!authorImage.endsWith('.png.webp')) authorImage = '';
 
       return {
         authorName,

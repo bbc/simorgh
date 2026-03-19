@@ -107,7 +107,7 @@ describe('bylineExtractor', () => {
         authorName: 'Gahuza contributor',
         jobRole: 'gahuza contributor',
         authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb//vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
+          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
       };
 
       expect(bylineValues).toHaveLength(1);
@@ -160,7 +160,7 @@ describe('bylineExtractor', () => {
         authorName: 'John Doe',
         jobRole: null,
         authorImage:
-          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb//vivo/test/images/2015/1/20/d3be9c18-8975-4e20-9923-5c309c2dc00d.gif.webp',
+          'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb/vivo/test/images/2015/1/20/d3be9c18-8975-4e20-9923-5c309c2dc00d.gif.webp',
       };
 
       expect(bylineValues).toHaveLength(1);
