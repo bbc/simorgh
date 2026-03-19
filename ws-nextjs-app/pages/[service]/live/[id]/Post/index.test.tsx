@@ -143,6 +143,22 @@ describe('Post', () => {
         'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
       );
     });
+
+    it('should render a byline with the requisite off screen text for screen readers', async () => {
+      await act(async () => {
+        render(<Post post={bylineSamplePost} />, { pageType: 'live' });
+      });
+
+      const byline = screen.getByTestId('byline');
+
+      const author = within(byline).getByText('Author,');
+      const role = within(byline).getByText('Role,');
+
+      expect(byline).toBeInTheDocument();
+
+      expect(author).toBeInTheDocument();
+      expect(role).toBeInTheDocument();
+    });
   });
   describe('Content', () => {
     it('should render paragraphs when provided', async () => {
