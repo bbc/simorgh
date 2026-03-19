@@ -1,5 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
-import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
+import { TV_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
@@ -7,30 +7,14 @@ import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
 import handleError from '#app/routes/utils/handleError';
-import getPodcastExternalLinks from '#app/routes/onDemandAudio/podcastExternalLinks';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
 
-const getConfig = (pathname: string) => {
-  const isPodcast = pathname.includes('podcast');
-  const recentEpisodesToggle = isPodcast
-    ? 'recentPodcastEpisodes'
-    : 'recentAudioEpisodes';
-
-  return {
-    isPodcast,
-    recentEpisodesToggle,
-  };
-};
-
 export default async (context: GetServerSidePropsContext) => {
   const { resolvedUrl } = context;
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
-
-  const { isPodcast, recentEpisodesToggle } = getConfig(resolvedUrl);
-
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const { service, variant } = parseRoute(resolvedUrl);
@@ -44,7 +28,7 @@ export default async (context: GetServerSidePropsContext) => {
         status: NOT_FOUND,
         timeOnServer: Date.now(),
         variant: variant || null,
-        pageType: AUDIO_PAGE,
+        pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,
       },
     };
@@ -56,7 +40,7 @@ export default async (context: GetServerSidePropsContext) => {
     variant: variant || undefined,
     rendererEnv: isTest() ? 'live' : rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
-    pageType: AUDIO_PAGE,
+    pageType: TV_PAGE,
   });
 
   const { pageData, status } = data;
@@ -71,7 +55,7 @@ export default async (context: GetServerSidePropsContext) => {
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,
       status,
-      pageType: AUDIO_PAGE,
+      pageType: TV_PAGE,
     });
 
     return {
@@ -80,32 +64,26 @@ export default async (context: GetServerSidePropsContext) => {
         status,
         timeOnServer: Date.now(),
         variant: variant || null,
-        pageType: AUDIO_PAGE,
+        pageType: TV_PAGE,
         pathname: resolvedUrlWithoutQuery,
       },
     };
   }
 
   if (!pageData) {
-    throw handleError('AudioPage data is malformed', 500);
+    throw handleError('On Demand TV data is malformed', 500);
   }
 
   const toggles = await getToggles(service);
 
-  const { externalLinkVersionId, brandId, recentEpisodes } = pageData;
-  const { enabled: scheduleIsEnabled } = toggles.onDemandRadioSchedule;
+  // this keeps the recent episodes toggle matching the express route
+  const showRecentEpisodes = toggles?.recentVideoEpisodes?.enabled;
+  const recentEpisodesLimit = Number(toggles?.recentVideoEpisodes?.value || 4);
 
-  const { enabled: showRecentEpisodes, value: recentEpisodesLimit } =
-    toggles[recentEpisodesToggle];
-
-  const externalLinks = isPodcast
-    ? await getPodcastExternalLinks({
-        service,
-        variant: variant || undefined,
-        brandId,
-        versionId: externalLinkVersionId,
-      })
-    : [];
+  const recentEpisodes =
+    showRecentEpisodes && recentEpisodesLimit > 0
+      ? (pageData.recentEpisodes?.slice(0, recentEpisodesLimit) ?? null)
+      : null;
 
   context.res.setHeader(
     'Cache-Control',
@@ -115,7 +93,7 @@ export default async (context: GetServerSidePropsContext) => {
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
     status,
-    pageType: AUDIO_PAGE,
+    pageType: TV_PAGE,
   });
 
   return {
@@ -123,13 +101,9 @@ export default async (context: GetServerSidePropsContext) => {
       id: resolvedUrlWithoutQuery,
       pageData: {
         ...pageData,
-        externalLinks,
-        ...(!scheduleIsEnabled && { radioScheduleData: null }),
-        ...(showRecentEpisodes
-          ? { recentEpisodes: recentEpisodes?.slice(0, recentEpisodesLimit) }
-          : { recentEpisodes: null }),
+        recentEpisodes,
       },
-      pageType: AUDIO_PAGE,
+      pageType: TV_PAGE,
       pathname: resolvedUrlWithoutQuery,
       service,
       status,
