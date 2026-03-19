@@ -4,8 +4,6 @@ import { LeftChevron, RightChevron } from '../../icons';
 
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
-console.log('Subhead styles:', styles);
-
 interface Props {
   link?: string;
   id?: string;
@@ -19,8 +17,6 @@ const Subhead = ({
   ...curationSubheadingClickTracker
 }: PropsWithChildren<Props>) => {
   const { dir } = use(ServiceContext);
-  // useContext(ThemeContext);
-  // theme is now available for use in this component
   const Wrapper = link
     ? ({ children: innerChildren }: PropsWithChildren<Props>) => (
         <a

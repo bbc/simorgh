@@ -122,30 +122,6 @@ const storybookConfig: StorybookConfig = {
           include: [getProjectRoot()],
           exclude: [/node_modules/],
         },
-        // // SCSS Modules: Only files ending with .module.scss are treated as CSS Modules (locally scoped styles)
-        // {
-        //   test: /\.module\.scss$/,
-        //   use: [
-        //     'style-loader',
-        //     {
-        //       loader: 'css-loader',
-        //       options: {
-        //         modules: true,
-        //         importLoaders: 1,
-        //       },
-        //     },
-        //     'sass-loader',
-        //   ],
-        // },
-        // // Global SCSS: All other .scss files (not ending with .module.scss) are treated as global styles
-        // {
-        //   test: /(?<!\.module)\.scss$/,
-        //   use: [
-        //     require.resolve('style-loader'),
-        //     require.resolve('css-loader'),
-        //     require.resolve('sass-loader'),
-        //   ],
-        // },
       ],
     };
 
