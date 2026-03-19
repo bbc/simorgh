@@ -59,7 +59,7 @@ const livePageBylineExtractor = blocks => {
             })
           : '';
 
-      if (!authorImage.endsWith('.png.webp')) authorImage = '';
+      if (!authorImage.endsWith('.webp')) authorImage = '';
 
       return {
         authorName,
