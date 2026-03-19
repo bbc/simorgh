@@ -1,11 +1,9 @@
-
 @use '../../ThemeProviderSCSSModules/fontSizes.scss' as fontSizes;
 @use '../../ThemeProviderSCSSModules/palette.scss' as palette;
+@use '../../ThemeProviderSCSSModules/fontVariants.scss' as fontVariants;
 
 .h2 {
-  font-family: var(--sans-bold-font-family);
-  font-style: var(--sans-bold-font-style);
-  font-weight: var(--sans-bold-font-weight);
+  @include fontVariants.gel-font-variant('sans-bold');
   @include fontSizes.gel-font-size(doublePica);
   color: palette.$grey-10;
 

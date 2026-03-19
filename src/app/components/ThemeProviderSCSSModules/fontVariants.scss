@@ -1,0 +1,5 @@
+@mixin gel-font-variant($variant) {
+  font-family: var(--#{$variant}-font-family);
+  font-style: var(--#{$variant}-font-style);
+  font-weight: var(--#{$variant}-font-weight);
+}
