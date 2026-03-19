@@ -1,6 +1,7 @@
 import {
   bylineSamplePost,
   bylinesSamplePostWithoutImage,
+  bylineSamplePostWithUnsupportedImage,
   bylinesSamplePostWithoutSubtitle,
 } from 'simorgh-nextjs/pages/[service]/live/[id]/Post/fixture';
 import {
@@ -133,6 +134,32 @@ describe('bylineExtractor', () => {
       const sampleContributor = {
         authorName: 'new contributor in test',
         jobRole: 'contributor',
+        authorImage: '',
+      };
+
+      expect(bylineValues).toHaveLength(1);
+      expect(bylineValues).toEqual([sampleContributor]);
+    });
+
+    it('should return an array with the byline data for the post contributor where the image is an unsupported format', () => {
+      const {
+        header: {
+          model: { blocks: postHeaderBlocks },
+        },
+      } = bylineSamplePostWithUnsupportedImage;
+      const { model: contributorData } = filterForBlockType(
+        postHeaderBlocks,
+        'contributor',
+      );
+
+      const bylineValues = bylineExtractor({
+        blocks: [contributorData],
+        pageType: LIVE_PAGE,
+      });
+
+      const sampleContributor = {
+        authorName: 'Gahuza contributor',
+        jobRole: 'gahuza contributor',
         authorImage: '',
       };
 
