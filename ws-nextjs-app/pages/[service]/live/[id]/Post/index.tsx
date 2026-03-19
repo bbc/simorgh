@@ -25,6 +25,29 @@ import {
 } from './types';
 import ShareButton from '../ShareButton';
 
+const inferBlockIdentifier = ({
+  headingItem,
+}: {
+  headingItem: PostHeadingBlock;
+}) =>
+  ({
+    headline: block =>
+      `${block.type}-${block.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`,
+    subheadline: block =>
+      `${block.type}-${block.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text}`,
+    contributor: block => `${block.type}-${block.model?.name}`,
+  })[headingItem.type](headingItem);
+
+const enrichHeaderBlocksWithId = ({
+  headerBlocks,
+}: {
+  headerBlocks: PostHeadingBlock[];
+}) =>
+  headerBlocks.map(headingItem => ({
+    ...headingItem,
+    id: inferBlockIdentifier({ headingItem }),
+  }));
+
 const OEmbed = dynamic(() => import('#app/components/Embeds/OEmbed'), {
   ssr: false,
 });
@@ -226,6 +249,7 @@ const Post = ({
     ['header', 'model', 'blocks'],
     post,
   );
+  const enrichedHeaderBlocks = enrichHeaderBlocksWithId({ headerBlocks });
 
   const firstHeadingText =
     headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
@@ -249,7 +273,7 @@ const Post = ({
             isBreakingNews={isBreakingNews}
             timestamp={timestamp}
           />
-          <PostHeading headerBlocks={headerBlocks} />
+          <PostHeading headerBlocks={enrichedHeaderBlocks} />
         </span>
       </Heading>
       <div css={styles.postContent}>
