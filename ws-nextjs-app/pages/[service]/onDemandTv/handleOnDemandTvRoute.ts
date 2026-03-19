@@ -78,7 +78,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   // this keeps the recent episodes toggle matching the express route
   const showRecentEpisodes = toggles?.recentVideoEpisodes?.enabled;
-  const recentEpisodesLimit = Number(toggles?.recentVideoEpisodes?.value ?? 4);
+  const recentEpisodesLimit = Number(toggles?.recentVideoEpisodes?.value || 4);
 
   const recentEpisodes =
     showRecentEpisodes && recentEpisodesLimit > 0
