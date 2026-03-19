@@ -40,6 +40,10 @@ const livePageBylineExtractor = blocks => {
         subtitle: jobRole,
       } = contribBlock;
 
+      if (!authorName) {
+        return null;
+      }
+
       const locator = pathOrZeroIndexModelBlocks(
         1,
         'locator',
