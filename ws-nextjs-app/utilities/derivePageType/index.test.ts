@@ -8,6 +8,7 @@ import {
   UNKNOWN_PAGE,
   TOPIC_PAGE,
   AUDIO_PAGE,
+  TV_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -76,6 +77,18 @@ describe('derivePageType', () => {
     const pathname = '/arabic/bbc_arabic_radio/w3ct01yb`';
     const result = derivePageType(pathname);
     expect(result).toEqual(AUDIO_PAGE);
+  });
+
+  it('should return TV_PAGE for on demand tv brand paths', () => {
+    const pathname = '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(TV_PAGE);
+  });
+
+  it('should return TV_PAGE for on demand tv episode paths', () => {
+    const pathname = '/hausa/bbc_hausa_tv/tv/w172yjj7rfhxp1p';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(TV_PAGE);
   });
 
   it('should return Unknown if pathname does not include live or send', () => {
