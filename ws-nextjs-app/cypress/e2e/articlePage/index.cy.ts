@@ -278,7 +278,7 @@ const nonSmokeCanonicalTestSuites = [
     tests: [...canonicalTests],
   },
   {
-    path: '/tamil/articles/c84m2jl4dpzo',
+    path: '/tamil/articles/cqxdxv159rlo',
     runforEnv: ['local', 'live'],
     service: 'tamil',
     tests: [...canonicalTests],
