@@ -11,21 +11,14 @@ import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
 import bylineExtractor from './utilities/bylineExtractor';
-import ArticleContributors from './ArticleContributors';
+import ArticleContributor from './ArticleContributor';
 import PostContributor from './PostContributor';
 
 const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
   switch (pageType) {
-    case ARTICLE_PAGE:
+    case ARTICLE_PAGE || MEDIA_ARTICLE_PAGE:
       return (
-        <ArticleContributors
-          contributorValues={contributorValues}
-          isSingleContributor={isSingleContributor}
-        />
-      );
-    case MEDIA_ARTICLE_PAGE:
-      return (
-        <ArticleContributors
+        <ArticleContributor
           contributorValues={contributorValues}
           isSingleContributor={isSingleContributor}
         />
