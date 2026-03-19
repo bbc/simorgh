@@ -63,8 +63,6 @@ const PostHeaderBanner = ({
     datetimeLocale,
     serviceDatetimeLocale,
     altCalendar,
-    service,
-    script,
     translations: {
       liveExperiencePage: {
         breaking = 'Breaking',
@@ -84,8 +82,6 @@ const PostHeaderBanner = ({
         format={postDateFormat || 'D MMMM YYYY'}
         locale={locale}
         timezone={timezone}
-        service={service}
-        script={script}
         altCalendar={altCalendar}
         padding={false}
         isRelative={isRelative}

@@ -37,7 +37,6 @@ const Component = ({ service, variant }) => {
         status={200}
         pageData={pageData}
         service={service}
-        variant={variant}
       />
     </BrowserRouter>
   );
@@ -49,14 +48,18 @@ export default {
 };
 
 export const Example = {
-  render: (_, { service, variant }) => (<Component service={service} variant={variant} />),
+  render: (_, { service, variant }) => (
+    <Component service={service} variant={variant} />
+  ),
   parameters: {
     chromatic: {
-      disableSnapshot: true
-    }
-  }
+      disableSnapshot: true,
+    },
+  },
 };
 
 // This story is for chromatic testing purposes only
-export const Test = (_, { variant }) => <Component service="pidgin" variant={variant}/>;
-Test.tags = ['!dev']
+export const Test = (_, { variant }) => (
+  <Component service="pidgin" variant={variant} />
+);
+Test.tags = ['!dev'];

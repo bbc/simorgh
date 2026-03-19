@@ -34,7 +34,7 @@
     "@swc/core": "1.15.11",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.1",
-    "cypress": "15.4.0",
+    "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
     "cypress-multi-reporters": "2.0.5",
     "cypress-terminal-report": "7.2.1",
@@ -47,7 +47,7 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
-    "next": "16.1.6",
+    "next": "16.1.7",
     "sharp": "0.34.5"
   }
 }

@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/react-webpack5';
 import { boolean, withKnobs } from '@storybook/addon-knobs';
 import Timestamp from '#psammead/psammead-timestamp/src';
 import Image from '#psammead/psammead-image/src';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import StoryPromo, {
   Headline,
   Summary,
@@ -27,18 +26,11 @@ const ImageComponent = ({ alt, src }) => (
 
 const InfoComponent = ({ headlineText, summaryText, datetime, dateformat }) => (
   <>
-    <Headline script={latin} service="news">
+    <Headline>
       <Link href="https://www.bbc.co.uk/news">{headlineText}</Link>
     </Headline>
-    <Summary script={latin} service="news">
-      {summaryText}
-    </Summary>
-    <Timestamp
-      datetime={datetime}
-      script={latin}
-      padding={false}
-      service="news"
-    >
+    <Summary>{summaryText}</Summary>
+    <Timestamp datetime={datetime} padding={false}>
       {dateformat}
     </Timestamp>
   </>

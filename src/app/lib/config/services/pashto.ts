@@ -93,6 +93,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
         shareButtonText: 'شریک یې کړئ',
+        refreshButtonText: 'وروستی پوسټ',
+        visuallyHiddenButtonText: 'نوی پوست شتون لري',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

@@ -103,10 +103,12 @@ export const service: DefaultServiceConfig = {
       liveExperiencePage: {
         liveLabel: 'සජීවී',
         liveCoverage: 'සජීවී වාර්තාකරණය',
-        breaking: 'අලුත්ම පුවතක්',
+        breaking: 'Breaking',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
         shareButtonText: 'යවන්න',
+        refreshButtonText: 'නවතම පළ කිරීම',
+        visuallyHiddenButtonText: 'නව පළ කිරීමක් තිබේ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
