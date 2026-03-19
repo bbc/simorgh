@@ -240,7 +240,7 @@
     "storybook": "10.2.15",
     "stream-browserify": "3.0.0",
     "strip-ansi": "7.1.2",
-    "supertest": "7.1.4",
+    "supertest": "7.2.2",
     "terser-webpack-plugin": "5.3.14",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.4",
