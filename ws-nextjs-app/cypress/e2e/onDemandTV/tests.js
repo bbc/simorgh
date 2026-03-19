@@ -1,9 +1,9 @@
 /* eslint-disable consistent-return */
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
+import chartbeatTests from '../support/helpers/chartbeatTests';
 import {
   getEpisodeAvailability,
   videoPlaceholderImageUrl,
-} from '../../../support/helpers/onDemandRadioTv';
+} from '../../support/helpers/onDemandRadioTv';
 
 export default ({ service, pageType, path, variant = 'default' }) => {
   const isLite = path.endsWith('lite');
