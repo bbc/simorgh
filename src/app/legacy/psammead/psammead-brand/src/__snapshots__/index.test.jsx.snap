@@ -95,7 +95,6 @@ exports[`Brand should render correctly with link not provided 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
-    data-banner-type="styled-brand"
   >
     <div
       class="emotion-2 emotion-3"
@@ -265,7 +264,6 @@ exports[`Brand should render correctly with link provided 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
-    data-banner-type="styled-brand"
   >
     <div
       class="emotion-2 emotion-3"
@@ -407,7 +405,6 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
-    data-banner-type="styled-brand"
   >
     <div
       class="emotion-2 emotion-3"
@@ -537,7 +534,6 @@ exports[`Brand should render correctly with transparent borders 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
-    data-banner-type="styled-brand"
   >
     <div
       class="emotion-2 emotion-3"
