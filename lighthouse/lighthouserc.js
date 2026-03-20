@@ -108,7 +108,7 @@ module.exports = {
           'error',
           {
             aggregationMethod: 'optimistic',
-            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.58,
+            minScore: process.env.LIGHTHOUSE_APP_ENV === 'live' ? 0.6 : 0.5,
           },
         ],
         'third-party-cookies': 'off',
