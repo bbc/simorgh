@@ -198,8 +198,8 @@ const Brand = forwardRef((props, ref) => {
       borderTop={borderTop}
       borderBottom={borderBottom}
       scriptLink={scriptLink}
-      {...rest}
       data-banner-type="styled-brand"
+      {...rest}
     >
       <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
         {url ? (
