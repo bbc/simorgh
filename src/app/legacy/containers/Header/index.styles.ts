@@ -46,7 +46,16 @@ export default {
         paddingTop: `${pixelsToRem(4)}rem`,
       },
 
-      '&[data-brand^="banner-styled-brand"]': {
+      // '&[data-brand^="banner-styled-brand"]': {
+      //   [mq.GROUP_2_MIN_WIDTH]: {
+      //     padding: `0 ${spacings.FULL}rem`,
+      //   },
+      //   [mq.GROUP_3_MIN_WIDTH]: {
+      //     padding: `0 ${pixelsToRem(12)}rem`,
+      //   },
+      // },
+
+      '&:has(a[aria-labelledby^="BrandLink-"])': {
         [mq.GROUP_2_MIN_WIDTH]: {
           padding: `0 ${spacings.FULL}rem`,
         },
