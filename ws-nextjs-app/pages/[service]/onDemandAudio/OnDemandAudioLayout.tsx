@@ -54,7 +54,7 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
-  const { pathname, canonicalNonUkLink } = use(RequestContext);
+  const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
   const { enabled: showPodcastEpisodeLinkedData } = useToggle(
     'podcastEpisodeLinkedData',
@@ -83,15 +83,13 @@ const OnDemandAudioPage = ({
     ? new Date(availableFrom).toISOString()
     : new Date(releaseDateTimeStamp).toISOString();
 
-  const description = summary || shortSynopsis;
-
   const audioEntities = !mediaIsAvailable
     ? []
     : [
         {
           '@type': 'AudioObject',
           name: promoBrandTitle,
-          description,
+          description: summary,
           thumbnailUrl: thumbnailImageUrl,
           duration: durationISO8601,
           uploadDate,
@@ -110,14 +108,14 @@ const OnDemandAudioPage = ({
             '@type': 'PodcastEpisode',
             '@id': episodeId,
             name: episodeTitle || brandTitle,
-            description,
+            description: summary,
             datePublished: new Date(releaseDateTimeStamp).toISOString(),
             partOfSeries: { '@id': seriesId },
             associatedMedia: {
               '@type': 'AudioObject',
               '@id': audioId,
               name: episodeTitle || promoBrandTitle,
-              description,
+              description: summary,
               duration: durationISO8601,
               thumbnailUrl: thumbnailImageUrl,
               uploadDate,
@@ -148,7 +146,10 @@ const OnDemandAudioPage = ({
 
   const [showAllContent, setShowAllContent] = useState(false);
 
-  const shouldShowContinueReadingButton = isPodcast;
+  const summaryIsShort = Boolean(summary === shortSynopsis);
+
+  const shouldShowContinueReadingButton =
+    isPodcast && !isLite && !summaryIsShort;
 
   const summaryStyles =
     shouldShowContinueReadingButton && !showAllContent
@@ -170,7 +171,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={description}
+        description={summary}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -208,7 +209,7 @@ const OnDemandAudioPage = ({
               />
             </div>
             <div css={summaryStyles}>
-              <OnDemandParagraphContainer testid="summary" text={description} />
+              <OnDemandParagraphContainer testid="summary" text={summary} />
             </div>
             {shouldShowContinueReadingButton && (
               <div css={styles.continueReadingWrapper}>
