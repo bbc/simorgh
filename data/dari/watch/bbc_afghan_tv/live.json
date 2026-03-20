@@ -125,6 +125,17 @@
             "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
             "id": "https%3A%2F%2Fwww.bbc.com%2Farabic%2Fsend%2Fu50853203",
             "visualProminence": "NORMAL"
+          },
+          {
+            "type": "link",
+            "isLive": false,
+            "title": "Example 2nd Link",
+            "firstPublished": "",
+            "lastPublished": "",
+            "link": "https://www.bbc.com/arabic/send/u50853203",
+            "imageUrl": "https://ichef.bbci.co.uk/ace/ws/{width}/cpsprodpb/36D1/production/_127933041__63970643_bbc-news-world-service-logo-nc.png.webp",
+            "id": "https%3A%2F%2Fwww.bbc.com%2Farabic%2Fsend%2Fu50853203",
+            "visualProminence": "NORMAL"
           }
         ],
         "activePage": 1,
