@@ -38,14 +38,20 @@ const styles = {
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.QUINTUPLE}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),
-  curationStyles: ({ palette }: Theme) =>
+  curationStyles: ({ palette, spacings }: Theme) =>
     css({
       '& h2, & a': {
         color: palette.GHOST,
+      },
+      '& h2': {
+        marginBottom: `${spacings.DOUBLE}rem`,
+      },
+      '& section': {
+        marginTop: 0,
       },
       '& a:visited': {
         color: palette.GREY_5,
