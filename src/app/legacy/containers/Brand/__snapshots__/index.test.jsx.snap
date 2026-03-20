@@ -140,6 +140,7 @@ exports[`BrandContainer should render correctly 1`] = `
 
 <div
   class="emotion-0 emotion-1 emotion-2"
+  data-banner-type="styled-brand"
 >
   <div
     class="emotion-3 emotion-4"
