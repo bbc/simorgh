@@ -13,6 +13,6 @@ export default () => {
   runCanonicalAnalyticsTests();
   runCommonCrossPlatformTests(service);
   runCommonEpisodeTests();
-  runMediaPlayerTests();
+  runMediaPlayerTests(pageType);
   runRecentEpisodesTests();
 };
