@@ -50,6 +50,9 @@ const styles = {
       '& h2': {
         marginBottom: `${spacings.DOUBLE}rem`,
       },
+      '.useful-links > h2': {
+        marginBottom: `${spacings.HALF}rem`,
+      },
       '& section': {
         marginTop: 0,
       },
