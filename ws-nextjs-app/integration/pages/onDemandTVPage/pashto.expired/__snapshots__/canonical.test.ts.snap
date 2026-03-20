@@ -173,7 +173,7 @@ exports[`Canonical Pashto On Demand TV Page Recent Episodes List items should ma
 exports[`Canonical Pashto On Demand TV Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/pashto/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/pashto/images/icons/icon-192x192.png",
 }
 `;
 
@@ -205,7 +205,7 @@ exports[`Canonical Pashto On Demand TV Page SEO Apple Touch Icon should match at
 }
 `;
 
-exports[`Canonical Pashto On Demand TV Page SEO Canonical link 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
+exports[`Canonical Pashto On Demand TV Page SEO Canonical link 1`] = `"http://localhost:7081/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO Dir attribute 1`] = `"rtl"`;
 
@@ -233,7 +233,7 @@ exports[`Canonical Pashto On Demand TV Page SEO Linked data should match text 1`
         "name": "Pashto",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
+        "@id": "http://localhost:7081/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
         "@type": "WebPage",
         "name": " د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو",
       },
@@ -249,7 +249,7 @@ exports[`Canonical Pashto On Demand TV Page SEO Linked data should match text 1`
         "publishingPrinciples": "https://www.bbc.com/pashto/institutional-49283007",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
+      "url": "http://localhost:7081/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1",
     },
   ],
 }
@@ -269,7 +269,7 @@ exports[`Canonical Pashto On Demand TV Page SEO OG title 1`] = `" د بي بي 
 
 exports[`Canonical Pashto On Demand TV Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Pashto On Demand TV Page SEO OG url 1`] = `"http://localhost:7080/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
+exports[`Canonical Pashto On Demand TV Page SEO OG url 1`] = `"http://localhost:7081/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1"`;
 
 exports[`Canonical Pashto On Demand TV Page SEO Page title 1`] = `" د بي بي سي خبرونه  - نړۍ دا وخت - BBC News پښتو - BBC News پښتو"`;
 
