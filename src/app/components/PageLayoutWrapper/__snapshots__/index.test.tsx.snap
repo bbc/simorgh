@@ -1184,6 +1184,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
         </div>
         <div
           class="emotion-17 emotion-18 emotion-19"
+          data-banner-type="styled-brand"
         >
           <div
             class="emotion-20 emotion-21"
@@ -1619,6 +1620,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
     >
       <div
         class="emotion-17 emotion-142 emotion-19"
+        data-banner-type="styled-brand"
       >
         <div
           class="emotion-20 emotion-21"
