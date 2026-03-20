@@ -136,15 +136,15 @@ exports[`Canonical On Demand T V Page Media Loader a11y assistive technology can
 
 exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] = `
 <div
-  class="bbc-145siv3"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-1qgypv3"
+    class="css-ts6b6g"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Na'urarku na da matsalar sauraren sauti
@@ -152,21 +152,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-4vlf9b"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
-      class="bbc-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, "Labaran Talabijin", Tsawon lokaci 10,00
     </span>
     <div
       aria-hidden="true"
-      class="bbc-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="bbc-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1xc513p1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -189,19 +189,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
     </div>
     <time
       aria-hidden="true"
-      class="bbc-digyti"
+      class="css-digyti"
       datetime="PT10M"
     >
       10:00
     </time>
   </button>
   <div
-    class="bbc-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="bbc-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -213,15 +213,15 @@ exports[`Canonical On Demand T V Page Media Loader renders a figure caption 1`] 
 
 exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 <div
-  class="bbc-145siv3"
+  class="css-145siv3"
   data-e2e="media-loader__placeholder"
 >
   <div
-    class="bbc-1qgypv3"
+    class="css-ts6b6g"
     data-e2e="media-player__guidance"
   >
     <noscript
-      class="bbc-lllaou"
+      class="css-n2zqlz"
     >
       <strong>
         Na'urarku na da matsalar sauraren sauti
@@ -229,21 +229,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </noscript>
   </div>
   <button
-    class="focusIndicatorRemove bbc-4vlf9b"
+    class="focusIndicatorRemove css-4vlf9b"
     type="button"
   >
     <span
-      class="bbc-m04vo2"
+      class="css-2ozlq5"
     >
       Play video, "Labaran Talabijin", Tsawon lokaci 10,00
     </span>
     <div
       aria-hidden="true"
-      class="bbc-d0ra4q"
+      class="css-7qcky8"
     >
       <svg
         aria-hidden="true"
-        class="bbc-vja2s5 e1s2dgdk5"
+        class="css-vja2s5 e1xc513p1"
         focusable="false"
         height="12"
         viewBox="0 0 12 12"
@@ -266,19 +266,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
     </div>
     <time
       aria-hidden="true"
-      class="bbc-digyti"
+      class="css-digyti"
       datetime="PT10M"
     >
       10:00
     </time>
   </button>
   <div
-    class="bbc-1jf2q50"
+    class="css-10dp2sw"
     style="padding-bottom:0;overflow:hidden"
   >
     <img
       alt=""
-      class="bbc-1uq6tv3"
+      class="css-ey0vwc"
       loading="eager"
       src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
       srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -290,19 +290,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a placeholder 1`] = `
 
 exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-1ks9odh"
+  class="media-container css-12jlusf"
   data-e2e="media-loader__container"
 >
   <div
-    class="bbc-145siv3"
+    class="css-145siv3"
     data-e2e="media-loader__placeholder"
   >
     <div
-      class="bbc-1qgypv3"
+      class="css-ts6b6g"
       data-e2e="media-player__guidance"
     >
       <noscript
-        class="bbc-lllaou"
+        class="css-n2zqlz"
       >
         <strong>
           Na'urarku na da matsalar sauraren sauti
@@ -310,21 +310,21 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </noscript>
     </div>
     <button
-      class="focusIndicatorRemove bbc-4vlf9b"
+      class="focusIndicatorRemove css-4vlf9b"
       type="button"
     >
       <span
-        class="bbc-m04vo2"
+        class="css-2ozlq5"
       >
         Play video, "Labaran Talabijin", Tsawon lokaci 10,00
       </span>
       <div
         aria-hidden="true"
-        class="bbc-d0ra4q"
+        class="css-7qcky8"
       >
         <svg
           aria-hidden="true"
-          class="bbc-vja2s5 e1s2dgdk5"
+          class="css-vja2s5 e1xc513p1"
           focusable="false"
           height="12"
           viewBox="0 0 12 12"
@@ -347,19 +347,19 @@ exports[`Canonical On Demand T V Page Media Loader renders a valid container 1`]
       </div>
       <time
         aria-hidden="true"
-        class="bbc-digyti"
+        class="css-digyti"
         datetime="PT10M"
       >
         10:00
       </time>
     </button>
     <div
-      class="bbc-1jf2q50"
+      class="css-10dp2sw"
       style="padding-bottom:0;overflow:hidden"
     >
       <img
         alt=""
-        class="bbc-1uq6tv3"
+        class="css-ey0vwc"
         loading="eager"
         src="https://ichef.bbci.co.uk/images/ic/$recipe/p08b216l.png"
         srcset="https://ichef.bbci.co.uk/images/ic/240xn/p08b216l.png.webp 240w, https://ichef.bbci.co.uk/images/ic/320xn/p08b216l.png.webp 320w, https://ichef.bbci.co.uk/images/ic/480xn/p08b216l.png.webp 480w, https://ichef.bbci.co.uk/images/ic/624xn/p08b216l.png.webp 624w, https://ichef.bbci.co.uk/images/ic/800xn/p08b216l.png.webp 800w"
@@ -401,7 +401,7 @@ exports[`Canonical On Demand T V Page Recent Episodes List items should match te
 exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/hausa/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/hausa/images/icons/icon-192x192.png",
 }
 `;
 
@@ -433,7 +433,7 @@ exports[`Canonical On Demand T V Page SEO Apple Touch Icon should match attribut
 }
 `;
 
-exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
+exports[`Canonical On Demand T V Page SEO Canonical link 1`] = `"http://localhost:7081/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
 
 exports[`Canonical On Demand T V Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -461,7 +461,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "name": "Hausa",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
+        "@id": "http://localhost:7081/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
         "@type": "WebPage",
         "name": "Labaran Talabijin - Labaran Talabijin - BBC News Hausa",
       },
@@ -477,7 +477,7 @@ exports[`Canonical On Demand T V Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/hausa/game-da-mu-49283501",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/hausa/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
+      "url": "http://localhost:7081/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj",
     },
     {
       "@type": "VideoObject",
@@ -505,7 +505,7 @@ exports[`Canonical On Demand T V Page SEO OG title 1`] = `"Labaran Talabijin - L
 
 exports[`Canonical On Demand T V Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7080/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
+exports[`Canonical On Demand T V Page SEO OG url 1`] = `"http://localhost:7081/hausa/bbc_hausa_tv/tv/w172yjj83ptptnj"`;
 
 exports[`Canonical On Demand T V Page SEO Page title 1`] = `"Labaran Talabijin - Labaran Talabijin - BBC News Hausa - BBC News Hausa"`;
 
