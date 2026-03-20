@@ -906,6 +906,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
     </div>
     <div
       class="emotion-16 emotion-17 emotion-18"
+      data-banner-type="styled-brand"
     >
       <div
         class="emotion-19 emotion-20"
@@ -2236,6 +2237,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
     </div>
     <div
       class="emotion-16 emotion-17 emotion-18"
+      data-banner-type="styled-brand"
     >
       <div
         class="emotion-19 emotion-20"
@@ -3566,6 +3568,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     </div>
     <div
       class="emotion-16 emotion-17 emotion-18"
+      data-banner-type="styled-brand"
     >
       <div
         class="emotion-19 emotion-20"
@@ -4896,6 +4899,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     </div>
     <div
       class="emotion-16 emotion-17 emotion-18"
+      data-banner-type="styled-brand"
     >
       <div
         class="emotion-19 emotion-20"
