@@ -225,6 +225,16 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 .emotion-12 {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+}
+
+.emotion-13 {
+  height: 165px;
+}
+
+.emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -271,13 +281,13 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 @media (max-width:22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: none;
   }
 }
 
 @media (min-width: 22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: -webkit-box;
     display: -webkit-unset;
     display: -ms-unsetbox;
@@ -291,13 +301,13 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-18 {
     -webkit-margin-end: 1rem;
     margin-inline-end: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -312,20 +322,20 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
 }
 
 @media (min-width:25rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   display: block;
   width: 100%;
   height: auto;
@@ -1650,18 +1660,18 @@ exports[`OnDemand Radio Page  should match snapshot 1`] = `
             </figure>
           </div>
           <div
-            class="imageStyles emotion-16 emotion-17"
+            class="imageStyles emotion-18 emotion-19"
             data-e2e="on-demand-image"
             dir="ltr"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-20 emotion-21"
               data-e2e="image-placeholder"
               style="padding-bottom: 100%;"
             >
               <img
                 alt="BBC News Gahuza"
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
                 src="https://ichef.bbci.co.uk/images/ic/256x256/p0gdh4dw.png.webp"
@@ -3145,6 +3155,16 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
 }
 
 .emotion-12 {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+}
+
+.emotion-13 {
+  height: 165px;
+}
+
+.emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3191,13 +3211,13 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
 }
 
 @media (max-width:22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: none;
   }
 }
 
 @media (min-width: 22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: -webkit-box;
     display: -webkit-unset;
     display: -ms-unsetbox;
@@ -3211,13 +3231,13 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-18 {
     -webkit-margin-end: 1rem;
     margin-inline-end: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -3232,20 +3252,20 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
 }
 
 @media (min-width:25rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   display: block;
   width: 100%;
   height: auto;
@@ -4708,18 +4728,18 @@ exports[`OnDemand Radio Page  should match snapshot for podcast episode page wit
             </figure>
           </div>
           <div
-            class="imageStyles emotion-16 emotion-17"
+            class="imageStyles emotion-18 emotion-19"
             data-e2e="on-demand-image"
             dir="ltr"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-20 emotion-21"
               data-e2e="image-placeholder"
               style="padding-bottom: 100%;"
             >
               <img
                 alt=""
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
                 src="https://ichef.bbci.co.uk/images/ic/256x256/p082wk67.jpg.webp"
@@ -6355,6 +6375,16 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
 }
 
 .emotion-12 {
+  position: relative;
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+}
+
+.emotion-13 {
+  height: 165px;
+}
+
+.emotion-14 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -6394,20 +6424,20 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
   height: 165px;
 }
 
-.emotion-16 {
+.emotion-18 {
   padding: 2rem 0 1.5rem;
   padding-right: 1rem;
   display: none;
 }
 
 @media (max-width:22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: none;
   }
 }
 
 @media (min-width: 22.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     display: -webkit-box;
     display: -webkit-unset;
     display: -ms-unsetbox;
@@ -6421,13 +6451,13 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-18 {
     -webkit-margin-end: 1rem;
     margin-inline-end: 1rem;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -6442,20 +6472,20 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
 }
 
 @media (min-width:25rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width:63rem) {
-  .emotion-18 {
+  .emotion-20 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   display: block;
   width: 100%;
   height: auto;
@@ -7918,18 +7948,18 @@ exports[`OnDemand Radio Page  should match snapshot for when podcastEpisodeLinke
             </figure>
           </div>
           <div
-            class="imageStyles emotion-16 emotion-17"
+            class="imageStyles emotion-18 emotion-19"
             data-e2e="on-demand-image"
             dir="ltr"
           >
             <div
-              class="emotion-18 emotion-19"
+              class="emotion-20 emotion-21"
               data-e2e="image-placeholder"
               style="padding-bottom: 100%;"
             >
               <img
                 alt=""
-                class="emotion-20 emotion-21 emotion-22"
+                class="emotion-22 emotion-23 emotion-24"
                 height="256"
                 sizes="(min-width: 1008px) 228px, 30vw"
                 src="https://ichef.bbci.co.uk/images/ic/256x256/p082wk67.jpg.webp"
@@ -12307,6 +12337,68 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 }
 
 .emotion-12 {
+  position: relative;
+  min-height: 165px;
+  margin-bottom: 2rem;
+}
+
+.emotion-14 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.0625rem solid transparent;
+  color: #FFFFFF;
+  background-color: rgba(34, 34, 34, 0.75);
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-14 {
+    background-color: transparent;
+  }
+}
+
+.emotion-15 {
+  display: block;
+  font-weight: normal;
+  bottom: 0;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-15 {
+    padding: 1rem;
+  }
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-15 {
+    background-color: window;
+  }
+}
+
+.emotion-16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
