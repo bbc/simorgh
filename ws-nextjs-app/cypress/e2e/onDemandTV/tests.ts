@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import chartbeatTests from '../support/helpers/chartbeatTests';
+import chartbeatTests from '../../support/helpers/chartbeatTests';
 import {
   getEpisodeAvailability,
   videoPlaceholderImageUrl,
