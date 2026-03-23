@@ -173,6 +173,12 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
+                {mediaIsAvailable ? (
+                  <MediaLoader blocks={pageData?.mediaBlocks} />
+                ) : (
+                  //  @ts-expect-error allow rendering of MediaError component when media is not available
+                  <MediaError skin="audio" />
+                )}
                 <OnDemandParagraphContainer testid="summary" text={summary} />
                 {episodeTitle && (
                   <FooterTimestamp
@@ -188,12 +194,6 @@ const OnDemandAudioPage = ({
                 isPodcastEpisodePage
               />
             </div>
-            {mediaIsAvailable ? (
-              <MediaLoader blocks={pageData?.mediaBlocks} />
-            ) : (
-              //  @ts-expect-error allow rendering of MediaError component when media is not available
-              <MediaError skin="audio" />
-            )}
 
             <LinkedData
               type="WebPage"
