@@ -6,6 +6,8 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ComponentExperimentProps } from '#app/models/types/global';
+import type { Theme } from '@emotion/react';
+import type { Interpolation } from '@emotion/serialize';
 import styles from './index.styles';
 
 export type ContinueReadingButtonProps = {
@@ -13,12 +15,14 @@ export type ContinueReadingButtonProps = {
   setShowAllContent: Dispatch<SetStateAction<boolean>>;
   experimentProps?: ComponentExperimentProps;
   className?: string;
+  css?: Interpolation<Theme>;
 };
 const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
   experimentProps,
   className,
+  css: cssOverride,
 }: ContinueReadingButtonProps) => {
   const {
     translations: { continueReading = 'Continue reading' },
@@ -71,7 +75,7 @@ const ContinueReadingButton = ({
   return (
     <button
       id="continue-reading-button"
-      css={styles.continueReadingButton}
+      css={[styles.continueReadingButton, cssOverride]}
       className={className}
       type="button"
       onClick={handleEvent}

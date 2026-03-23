@@ -187,7 +187,7 @@ const OnDemandAudioPage = ({
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
                 {episodeTitle && (
-                  <div>
+                  <div css={styles.footerTimestampWrapper}>
                     <FooterTimestamp
                       releaseDateTimeStamp={releaseDateTimeStamp}
                     />
@@ -212,13 +212,11 @@ const OnDemandAudioPage = ({
               <OnDemandParagraphContainer testid="summary" text={summary} />
             </div>
             {shouldShowContinueReadingButton && (
-              <div css={styles.continueReadingWrapper}>
-                <ContinueReadingButton
-                  className="continueReadingButtonOverride"
-                  showAllContent={showAllContent}
-                  setShowAllContent={setShowAllContent}
-                />
-              </div>
+              <ContinueReadingButton
+                css={styles.continueReadingButton}
+                showAllContent={showAllContent}
+                setShowAllContent={setShowAllContent}
+              />
             )}
 
             <LinkedData

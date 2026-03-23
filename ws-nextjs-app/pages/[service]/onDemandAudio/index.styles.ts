@@ -4,41 +4,52 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
+  footerTimestampWrapper: () =>
+    css({
+      display: 'block',
+    }),
   expandedSummary: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.DOUBLE}rem`,
     }),
   collapsedSummary: ({ mq, palette, spacings }: Theme) =>
     css({
-      [mq.GROUP_3_MAX_WIDTH]: {
-        display: '-webkit-box',
-        WebkitBoxOrient: 'vertical',
-        WebkitLineClamp: 4,
-        overflow: 'hidden',
-        position: 'relative',
+      display: '-webkit-box',
+      WebkitBoxOrient: 'vertical',
+      WebkitLineClamp: 4,
+      overflow: 'hidden',
+      position: 'relative',
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: `${spacings.FULL}rem`,
+        backgroundColor: palette.GREY_1,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+        WebkitLineClamp: 'unset',
+        overflow: 'visible',
+        position: 'static',
         '&::after': {
-          content: '""',
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          bottom: 0,
-          height: `${spacings.FULL}rem`,
-          backgroundColor: palette.GREY_1,
+          content: 'none',
         },
       },
     }),
-  continueReadingWrapper: ({ mq, palette, spacings }: Theme) =>
+  continueReadingButton: ({ mq, palette }: Theme) =>
     css({
-      '& .continueReadingButtonOverride': {
-        borderBottom: 'none',
-        backgroundColor: `${palette.GREY_1}`,
-        display: 'block',
-        width: '100%',
-        margin: `0 0 ${spacings.TRIPLE}rem 0`,
+      borderBottom: 'none',
+      backgroundColor: `${palette.GREY_1}`,
+      display: 'block',
+      width: '100%',
+      '&&': {
+        margin: '0',
+      },
 
-        [mq.GROUP_4_MIN_WIDTH]: {
-          display: 'none',
-        },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
       },
     }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
