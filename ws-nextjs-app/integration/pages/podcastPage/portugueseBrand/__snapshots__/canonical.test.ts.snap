@@ -15,10 +15,10 @@ exports[`Canonical Podcast Page Analytics ATI tracking pixel search params 1`] =
     "s2": "33",
   },
   {
-    "p": "portuguese.bbc_brasil.podcasts.p083x9gr.page",
+    "p": "portuguese.bbc_brasil.podcasts.programmes.p07r3r3t.page",
   },
   {
-    "x1": "[urn:bbc:pips:p083x9gr]",
+    "x1": "[urn:bbc:pips:p07r3r3t]",
   },
   {
     "x2": "[responsive]",
@@ -27,7 +27,7 @@ exports[`Canonical Podcast Page Analytics ATI tracking pixel search params 1`] =
     "x3": "[news-portuguese]",
   },
   {
-    "x4": "[pt-BR]",
+    "x4": "[pt-br]",
   },
   {
     "x7": "[player-episode]",
@@ -126,30 +126,30 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 
 exports[`Canonical Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
-exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria."`;
+exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética."`;
 
-exports[`Canonical Podcast Page I can see the episode title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu'"`;
+exports[`Canonical Podcast Page I can see the episode title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico'"`;
 
-exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p0k13ck5.png.webp"`;
+exports[`Canonical Podcast Page I can see the hero image 1`] = `"https://ichef.bbci.co.uk/images/ic/256x256/p0k13gnp.png.webp"`;
 
-exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
+exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que História!, A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico'"`;
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-16wwgxo"
+  class="media-container css-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player bbc-1ty1x88"
+    class="media-player css-1kf4wj3"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="bbc-1ezssgh"
+          class="css-1ezssgh"
         >
           <strong
-            class="bbc-pow7hy"
+            class="css-pow7hy"
           >
             A reprodução deste formato de vídeo não é compatível com seu dispositivo
           </strong>
@@ -162,29 +162,64 @@ exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 1`] = `
 {
-  "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:4323 julho 2024",
-  "url": "/portuguese/podcasts/p07r3r3t/p0jd7041",
+  "text": "Áudio, Que História!, 'Como encontrei tesouro enterrado na 2ª Guerra com mapa desenhado a mão por meu pai',  Duration 21,30  Duration 21:3017 setembro 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdspsp",
 }
 `;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 2`] = `
 {
-  "text": "Áudio, Que História!, Segunda temporada vem aí: ouça o trailer,  Duration 00,49  Duration 00:4931 março 2021",
-  "url": "/portuguese/podcasts/p07r3r3t/p09chbv1",
+  "text": "Áudio, Que História!, A família que passou 38 dias perdida no Pacífico,  Duration 22,10  Duration 22:1010 setembro 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdsnk1",
 }
 `;
 
 exports[`Canonical Podcast Page Recent Episodes List items should match text and url 3`] = `
 {
-  "text": "Áudio, Que História!, Bem-vindo a Que História!,  Duration 00,39  Duration 00:3914 outubro 2019",
-  "url": "/portuguese/podcasts/p07r3r3t/p07r3s60",
+  "text": "Áudio, Que História!, 'Aos 11 anos convenci a polícia de que meu pai era o assassino de minha mãe',  Duration 23,54  Duration 23:543 setembro 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdsmk2",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 4`] = `
+{
+  "text": "Áudio, Que História!, 'Como descobri a chocante identidade secreta do meu noivo',  Duration 22,54  Duration 22:5427 agosto 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdsk9x",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 5`] = `
+{
+  "text": "Áudio, Que História!, A mulher que caiu de avião destruído por raio a 3 km de altura,  Duration 17,54  Duration 17:5413 agosto 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdsd64",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 6`] = `
+{
+  "text": "Áudio, Que História!, O 'roubo do século' desvendado graças a reclamação sobre lixo jogado em terreno,  Duration 24,06  Duration 24:066 agosto 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdschj",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 7`] = `
+{
+  "text": "Áudio, Que História!, O homem encontrado vivo em navio afundado,  Duration 20,44  Duration 20:4425 julho 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jdsg17",
+}
+`;
+
+exports[`Canonical Podcast Page Recent Episodes List items should match text and url 8`] = `
+{
+  "text": "Áudio, Que História!, Vem aí a 3ª temporada do 'Que História!': ouça o trailer,  Duration 00,43  Duration 00:4323 julho 2024",
+  "url": "/portuguese/podcasts/p07r3r3t/p0jd7041",
 }
 `;
 
 exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/portuguese/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/portuguese/images/icons/icon-192x192.png",
 }
 `;
 
@@ -216,13 +251,13 @@ exports[`Canonical Podcast Page SEO Apple Touch Icon should match attributes 5`]
 }
 `;
 
-exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://localhost:7080/portuguese/podcasts/p07r3r3t/p083x9gr"`;
+exports[`Canonical Podcast Page SEO Canonical link 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t"`;
 
 exports[`Canonical Podcast Page SEO Dir attribute 1`] = `"ltr"`;
 
 exports[`Canonical Podcast Page SEO FB app ID 1`] = `"1609039196070050"`;
 
-exports[`Canonical Podcast Page SEO Heading level 1 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
+exports[`Canonical Podcast Page SEO Heading level 1 1`] = `"Que História!, A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico'"`;
 
 exports[`Canonical Podcast Page SEO Lang attribute 1`] = `"pt-br"`;
 
@@ -244,9 +279,9 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "name": "Portuguese",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/portuguese/podcasts/p07r3r3t/p083x9gr",
+        "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t",
         "@type": "WebPage",
-        "name": "'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil",
+        "name": "A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil",
       },
       "publisher": {
         "@type": "NewsMediaOrganization",
@@ -260,23 +295,23 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/portuguese/institutional-50054434",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/portuguese/images/metadata/poster-1024x576.png",
-      "url": "http://localhost:7080/portuguese/podcasts/p07r3r3t/p083x9gr",
+      "url": "http://localhost:7081/portuguese/podcasts/p07r3r3t",
     },
     {
       "@type": "AudioObject",
-      "description": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
-      "duration": "PT16M22S",
+      "description": "Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim.",
+      "duration": "PT20M40S",
       "name": "Que História!",
-      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13ck5.png",
-      "uploadDate": "2020-03-13T00:00:00.000Z",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13gnp.png",
+      "uploadDate": "2024-09-25T10:00:00.000Z",
     },
   ],
 }
 `;
 
-exports[`Canonical Podcast Page SEO OG description 1`] = `"Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela."`;
+exports[`Canonical Podcast Page SEO OG description 1`] = `"Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim."`;
 
-exports[`Canonical Podcast Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k13ck5.png"`;
+exports[`Canonical Podcast Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k13gnp.png"`;
 
 exports[`Canonical Podcast Page SEO OG image alt 1`] = `"BBC News Brasil"`;
 
@@ -284,13 +319,13 @@ exports[`Canonical Podcast Page SEO OG locale 1`] = `"pt-BR"`;
 
 exports[`Canonical Podcast Page SEO OG site name 1`] = `"BBC News Brasil"`;
 
-exports[`Canonical Podcast Page SEO OG title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil - BBC News Brasil"`;
+exports[`Canonical Podcast Page SEO OG title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil - BBC News Brasil"`;
 
 exports[`Canonical Podcast Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Podcast Page SEO OG url 1`] = `"http://localhost:7080/portuguese/podcasts/p07r3r3t/p083x9gr"`;
+exports[`Canonical Podcast Page SEO OG url 1`] = `"http://localhost:7081/portuguese/podcasts/p07r3r3t"`;
 
-exports[`Canonical Podcast Page SEO Page title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil - BBC News Brasil"`;
+exports[`Canonical Podcast Page SEO Page title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil - BBC News Brasil"`;
 
 exports[`Canonical Podcast Page SEO Robots meta tag 1`] = `"noodp, noydir, max-image-preview:large"`;
 
@@ -298,14 +333,14 @@ exports[`Canonical Podcast Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Podcast Page SEO Twitter creator 1`] = `"@bbcbrasil"`;
 
-exports[`Canonical Podcast Page SEO Twitter description 1`] = `"Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela."`;
+exports[`Canonical Podcast Page SEO Twitter description 1`] = `"Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim."`;
 
 exports[`Canonical Podcast Page SEO Twitter image alt 1`] = `"BBC News Brasil"`;
 
-exports[`Canonical Podcast Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k13ck5.png"`;
+exports[`Canonical Podcast Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k13gnp.png"`;
 
 exports[`Canonical Podcast Page SEO Twitter site 1`] = `"@bbcbrasil"`;
 
-exports[`Canonical Podcast Page SEO Twitter title 1`] = `"'A vida secreta de meu filho que só conheci quando ele morreu' - Que História! - News Brasil - BBC News Brasil"`;
+exports[`Canonical Podcast Page SEO Twitter title 1`] = `"A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico' - Que História! - News Brasil - BBC News Brasil"`;
 
-exports[`Canonical Podcast Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Que História!, 'A vida secreta de meu filho que só conheci quando ele morreu'"`;
+exports[`Canonical Podcast Page a11y Assistive technology reads the brand and episode title as the headline 1`] = `"Que História!, A mulher que teve três pais: 'Meu mundo caiu quando soube verdade sobre pai biológico'"`;
