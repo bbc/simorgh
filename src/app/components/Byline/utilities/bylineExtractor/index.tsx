@@ -8,13 +8,20 @@ import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
+import {
+  PostContributor,
+  PostContributorImage,
+} from 'simorgh-nextjs/pages/[service]/live/[id]/Post/types';
 import pathOr from 'ramda/src/pathOr';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (
   noModelBlocks: number,
   endModelType: string,
-  block: OptimoBylineContributorMetadataBlock | undefined,
+  block:
+    | OptimoBylineContributorMetadataBlock
+    | PostContributorImage
+    | undefined,
 ) => {
   if (!block) return '';
 
@@ -31,7 +38,7 @@ const pathOrZeroIndexModelBlocks = (
   return pathOr('', givenPath, block);
 };
 
-const livePageBylineExtractor = blocks => {
+const livePageBylineExtractor = (blocks: PostContributor['model'][]) => {
   return blocks
     .map(contribBlock => {
       const {
@@ -134,7 +141,7 @@ const bylineExtractor = ({
   blocks,
   pageType,
 }: {
-  blocks: OptimoBylineContributorBlock[];
+  blocks: OptimoBylineContributorBlock[] | PostContributor['model'][];
   pageType: PageTypes;
 }) => {
   if (!blocks || !pageType) return [];

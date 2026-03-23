@@ -6,6 +6,7 @@ import {
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
+import { PostContributor as LivePageContributor } from 'simorgh-nextjs/pages/[service]/live/[id]/Post/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
@@ -13,6 +14,10 @@ import BylineCss from './index.styles';
 import bylineExtractor from './utilities/bylineExtractor';
 import ArticleContributor from './ArticleContributor';
 import PostContributor from './PostContributor';
+
+type BylineBlock =
+  | OptimoBylineBlock['model']
+  | { blocks: LivePageContributor['model'][] };
 
 const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
   switch (pageType) {
@@ -33,7 +38,7 @@ const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
 const Byline = ({
   blocks,
   children = null,
-}: PropsWithChildren<OptimoBylineBlock['model']>) => {
+}: PropsWithChildren<BylineBlock>) => {
   const { translations } = use(ServiceContext);
   const { pageType } = use(RequestContext);
 

@@ -34,7 +34,19 @@ type ContributorRawImageBlock = Omit<
   'suitableForSyndication'
 >;
 
-interface PostContributor {
+export interface PostContributorImage {
+  type: 'image';
+  model: {
+    blocks: (
+      | (Omit<OptimoRawImageBlock, 'model'> & {
+          model: ContributorRawImageBlock;
+        })
+      | OptimoAltTextBlock
+    )[];
+  };
+}
+
+export interface PostContributor {
   id: string;
   type: 'contributor';
   model: {
@@ -42,23 +54,11 @@ interface PostContributor {
     link?: string;
     subtitle?: string;
     external: boolean;
-    blocks:
-      | {
-          type: 'image';
-          model: {
-            blocks: (
-              | (Omit<OptimoRawImageBlock, 'model'> & {
-                  model: ContributorRawImageBlock;
-                })
-              | OptimoAltTextBlock
-            )[];
-          };
-        }[]
-      | [];
+    blocks: PostContributorImage[] | [];
   };
 }
 
-interface PostHeadline {
+export interface PostHeadline {
   id: string;
   type: 'headline' | 'subheadline';
   model: {

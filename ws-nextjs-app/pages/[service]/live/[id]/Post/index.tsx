@@ -20,6 +20,8 @@ import dynamic from 'next/dynamic';
 import styles from './styles';
 import {
   Post as PostType,
+  PostHeadline,
+  PostContributor,
   PostHeadingBlock,
   ComponentToRenderProps,
 } from './types';
@@ -124,7 +126,7 @@ const PostHeading = ({
   headerBlocks: PostHeadingBlock[];
 }) => {
   const componentsToRender = {
-    headline: (props: ComponentToRenderProps) => {
+    headline: (props: { blocks: PostHeadline['model'] }) => {
       const { blocks } = props;
 
       const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
@@ -140,7 +142,7 @@ const PostHeading = ({
         </Text>
       );
     },
-    subheadline: (props: ComponentToRenderProps) => {
+    subheadline: (props: { blocks: PostHeadline['model'] }) => {
       const { blocks } = props;
 
       const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
@@ -159,7 +161,7 @@ const PostHeading = ({
         </>
       );
     },
-    contributor: (props: ComponentToRenderProps) => {
+    contributor: (props: PostContributor['model']) => {
       return (
         <>
           <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
@@ -248,8 +250,9 @@ const Post = ({
   );
   const enrichedHeaderBlocks = enrichHeaderBlocksWithId({ headerBlocks });
 
+  const postHeadline = headerBlocks[0] as PostHeadline;
   const firstHeadingText =
-    headerBlocks[0]?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+    postHeadline?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
