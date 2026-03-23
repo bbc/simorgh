@@ -20,7 +20,7 @@
     }
   },
   "swarm": {
-    "done": false,
+    "done": true,
     "reference": {
       "url": "https://www.dropbox.com/scl/fi/cocw7h80bi19h67n13sh8/A11Y-Swarm-Sign-in-Button.paper?rlkey=5cccpxj3lx352raprq0clcgh2&dl=0",
       "label": "Accessibility Swarm Notes"
