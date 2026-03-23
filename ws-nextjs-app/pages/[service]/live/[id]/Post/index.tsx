@@ -127,7 +127,6 @@ const PostHeading = ({
     headline: (props: ComponentToRenderProps) => {
       const { blocks } = props;
 
-      // @ts-expect-error Fix difference in block structure between PostHeadingBlock and OptimoBlock
       const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
 
       return (
@@ -144,7 +143,6 @@ const PostHeading = ({
     subheadline: (props: ComponentToRenderProps) => {
       const { blocks } = props;
 
-      // @ts-expect-error Fix difference in block structure between PostHeadingBlock and OptimoBlock
       const headingText = blocks?.[0].model?.blocks?.[0]?.model?.text;
 
       return (
@@ -165,7 +163,6 @@ const PostHeading = ({
       return (
         <>
           <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
-          {/* @ts-expect-error Fix difference in block structure between OptimoBylineContributorBlock and ComponentToRenderProps */}
           <Byline blocks={[props]} />
         </>
       );
