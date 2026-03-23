@@ -12,18 +12,21 @@ const promoFixtureData = summaries?.[0] as HighImpactPromoProps;
 interface FixtureProps {
   promoData?: HighImpactPromoProps;
   headingLevel?: number;
-  attributions?: { title: string; link: { url: string } }[] | null;
+  attributions?: { title: string; link: { url: string } }[] | null | undefined;
+  relatedTopic?: { title: string; link: { url: string } } | null | undefined;
 }
 
 const Fixture = ({
   promoData = promoFixtureData,
   headingLevel,
   attributions,
+  relatedTopic,
 }: FixtureProps) => (
   <HighImpactPromo
     {...promoData}
     headingLevel={headingLevel}
-    attributions={attributions}
+    {...(attributions !== undefined && { attributions })}
+    {...(relatedTopic !== undefined && { relatedTopic })}
   />
 );
 
@@ -122,5 +125,42 @@ describe('High Impact Promo', () => {
     render(<Fixture />, { service });
     const promo = screen.getByTestId('high-impact-promo');
     expect(promo).toHaveAttribute('dir', dir);
+  });
+
+  it('should render relatedTopic when provided', () => {
+    const relatedTopic = {
+      title: 'Россия',
+      link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
+    };
+    render(<Fixture relatedTopic={relatedTopic} attributions={null} />);
+
+    const relatedTopicLink = screen.getByRole('link', {
+      name: 'Россия',
+    });
+    expect(relatedTopicLink).toBeInTheDocument();
+    expect(relatedTopicLink).toHaveAttribute(
+      'href',
+      'https://www.bbc.com/russian/topics/cw6eyw7m0m1t',
+    );
+  });
+
+  it('should prioritize relatedTopic over attributions when both are provided', () => {
+    const relatedTopic = {
+      title: 'Related Topic Title',
+      link: { url: '/related/path' },
+    };
+    const attributions = [
+      {
+        title: 'Attribution Title',
+        link: { url: '/attribution/path' },
+      },
+    ];
+    render(<Fixture relatedTopic={relatedTopic} attributions={attributions} />);
+
+    const relatedTopicLink = screen.getByRole('link', {
+      name: 'Related Topic Title',
+    });
+    expect(relatedTopicLink).toBeInTheDocument();
+    expect(relatedTopicLink).toHaveAttribute('href', '/related/path');
   });
 });
