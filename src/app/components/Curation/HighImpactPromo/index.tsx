@@ -15,11 +15,12 @@ type AttributionLink = {
 };
 
 type Attribution = {
-  title: string;
   link: AttributionLink;
+  title: string;
 };
 export interface HighImpactPromoProps extends Summary {
   attributions?: Attribution[] | null;
+  relatedTopic?: Attribution | null;
 }
 
 const HighImpactPromo = ({
@@ -31,15 +32,22 @@ const HighImpactPromo = ({
   headingLevel = 3,
   eventTrackingData,
   attributions,
+  relatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
-  const [firstAttribution] = attributions || [];
-  const attributionLink =
-    firstAttribution?.link?.url || (service ? getBrandPath(service) : null);
-  const attributionText = firstAttribution?.title || brandName;
-  const hasAttribution = Boolean(attributionLink && attributionText);
+  let subjectLink: string | null = null;
+  let subjectText: string | null = null;
+  if (relatedTopic?.link?.url && relatedTopic?.title) {
+    subjectLink = relatedTopic.link.url;
+    subjectText = relatedTopic.title;
+  } else {
+    subjectLink =
+      attributions?.[0]?.link?.url || (service ? getBrandPath(service) : null);
+    subjectText = attributions?.[0]?.title || brandName;
+  }
+  const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
 
@@ -65,14 +73,14 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
-        {hasAttribution && <div css={styles.divider} />}
-        {hasAttribution && (
+        {hasSubject && <div css={styles.divider} />}
+        {hasSubject && (
           <Promo.A
-            href={attributionLink}
+            href={subjectLink}
             css={styles.subject}
             {...clickTrackerHandler}
           >
-            {attributionText}
+            {subjectText}
           </Promo.A>
         )}
       </div>
