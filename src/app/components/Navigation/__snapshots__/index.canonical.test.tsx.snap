@@ -86,28 +86,11 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 @media (max-width: 37.4375rem) {
   .emotion-5 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-5::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-5:focus-visible {
-    outline: none;
-  }
-
-  .emotion-5:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-5::after {
@@ -115,12 +98,10 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -128,10 +109,14 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
       width: 6rem;
     }
   }
+}
 
-  .emotion-5[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-5::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-5[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-5 li {
@@ -204,15 +189,50 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   display: none;
 }
 
-.emotion-5.emotion-5::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-6 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-6 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-6::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-6:focus-visible {
+    outline: none;
+  }
+
+  .emotion-6:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -221,50 +241,50 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-7 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-6 {
+  .emotion-7 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-6 svg {
+.emotion-7 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-7:hover,
+.emotion-7:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-6:hover::after,
-.emotion-6:focus::after {
+.emotion-7:hover::after,
+.emotion-7:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-7 {
+.emotion-8 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-7 {
+  .emotion-8 {
     fill: linkText;
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -275,7 +295,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -293,89 +313,74 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-11 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-10 {
+  .emotion-11 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-11 {
+.emotion-12 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-12.si-nav-scrollable-hidden {
+  .emotion-13.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-13 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-12::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-12:focus-visible {
-    outline: none;
-  }
-
-  .emotion-12:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-12::after {
+  .emotion-13::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-12::after {
+    .emotion-13::after {
       width: 6rem;
     }
   }
-
-  .emotion-12[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-12 li {
+.emotion-13::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-13[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-13 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-12 li a {
+.emotion-13 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -391,7 +396,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   justify-content: center;
 }
 
-.emotion-12 li:before {
+.emotion-13 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -407,15 +412,15 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   opacity: 1;
 }
 
-.emotion-12 li:last-child:before {
+.emotion-13 li:last-child:before {
   display: none;
 }
 
-.emotion-13 {
+.emotion-15 {
   position: relative;
 }
 
-.emotion-13::after {
+.emotion-15::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -451,24 +456,28 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
-                data-testid="scrollable-nav"
+              <div
+                class="emotion-6"
               >
-                <li>
-                  List Items
-                </li>
-              </ul>
+                <ul
+                  data-testid="scrollable-nav"
+                >
+                  <li>
+                    List Items
+                  </li>
+                </ul>
+              </div>
             </div>
             <button
               aria-expanded="false"
               aria-label="menu"
-              class="focusIndicatorRemove emotion-6"
+              class="focusIndicatorRemove emotion-7"
               dir="ltr"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-7 emotion-8"
+                class="emotion-8 emotion-9"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -479,14 +488,14 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
                 />
               </svg>
               <span
-                class="emotion-9"
+                class="emotion-10"
               >
                 menu
               </span>
             </button>
           </div>
           <div
-            class="emotion-10"
+            class="emotion-11"
             data-e2e="dropdown-nav"
             style="height: 0px;"
           >
@@ -500,25 +509,29 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
           </div>
         </div>
         <div
-          class="emotion-11"
+          class="emotion-12"
         >
           <div
-            class="emotion-12"
+            class="emotion-13"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
           >
-            <ul
-              data-testid="scrollable-nav"
+            <div
+              class="emotion-6"
             >
-              <li>
-                List Items
-              </li>
-            </ul>
+              <ul
+                data-testid="scrollable-nav"
+              >
+                <li>
+                  List Items
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-13"
+        class="emotion-15"
       />
     </div>
   </nav>

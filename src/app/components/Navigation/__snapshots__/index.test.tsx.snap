@@ -100,28 +100,11 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -129,12 +112,10 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -142,10 +123,14 @@ exports[`Navigation should correctly render amp navigation 1`] = `
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -218,11 +203,43 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -230,12 +247,12 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -244,7 +261,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -254,7 +271,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -270,26 +287,26 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -298,15 +315,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-10::after {
+.emotion-11::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -315,7 +332,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -326,11 +343,14 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -339,50 +359,50 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-14 svg {
+.emotion-15 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-15:hover,
+.emotion-15:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-14:hover::after,
-.emotion-14:focus::after {
+.emotion-15:hover::after,
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-15 {
+  .emotion-16 {
     fill: linkText;
   }
 }
 
-.emotion-20 {
+.emotion-21 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -394,28 +414,28 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-21 {
+.emotion-22 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-22 {
+.emotion-23 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-22:last-child {
+.emotion-23:last-child {
   border: 0;
 }
 
-.emotion-23 {
+.emotion-24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -430,26 +450,26 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-23:hover {
+.emotion-24:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-23::before {
+.emotion-24::before {
   content: "";
   position: absolute;
   top: 0;
@@ -461,84 +481,69 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   opacity: 0;
 }
 
-.emotion-23:hover::before {
+.emotion-24:hover::before {
   opacity: 1;
 }
 
-.emotion-23:focus-visible {
+.emotion-24:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-24 {
+.emotion-25 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-25.si-nav-scrollable-hidden {
+  .emotion-26.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-26 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-25::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-25:focus-visible {
-    outline: none;
-  }
-
-  .emotion-25:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-25::after {
+  .emotion-26::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-25::after {
+    .emotion-26::after {
       width: 6rem;
     }
   }
-
-  .emotion-25[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-25 li {
+.emotion-26::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-26[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-26 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-25 li a {
+.emotion-26 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -554,7 +559,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   justify-content: center;
 }
 
-.emotion-25 li:before {
+.emotion-26 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -570,15 +575,15 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   opacity: 1;
 }
 
-.emotion-25 li:last-child:before {
+.emotion-26 li:last-child:before {
   display: none;
 }
 
-.emotion-27 {
+.emotion-29 {
   position: relative;
 }
 
-.emotion-27::after {
+.emotion-29::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -618,48 +623,52 @@ exports[`Navigation should correctly render amp navigation 1`] = `
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    aria-label="Home"
-                    class="focusIndicatorRemove emotion-9"
-                    data-active="true"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    <span
-                      class="emotion-10"
-                      id="NavigationLinks-Home"
-                      role="text"
+                    <a
+                      aria-label="Home"
+                      class="focusIndicatorRemove emotion-10"
+                      data-active="true"
+                      href="/news"
                     >
                       <span
                         class="emotion-11"
+                        id="NavigationLinks-Home"
+                        role="text"
                       >
-                        Current page, 
+                        <span
+                          class="emotion-12"
+                        >
+                          Current page, 
+                        </span>
+                        Home
                       </span>
-                      Home
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/about"
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    About
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <amp-state
               id="menuState"
@@ -673,7 +682,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-14"
+              class="focusIndicatorRemove emotion-15"
               data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
               dir="ltr"
               on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -685,7 +694,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 data-amp-bind-hidden="menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -698,7 +707,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
               </svg>
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 data-amp-bind-hidden="!menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -712,29 +721,29 @@ exports[`Navigation should correctly render amp navigation 1`] = `
                 />
               </svg>
               <span
-                class="emotion-11"
+                class="emotion-12"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-20"
+            class="emotion-21"
             data-e2e="dropdown-nav"
             hidden=""
             id="si-nav-dropdown-menu"
           >
             <ul
-              class="emotion-21"
+              class="emotion-22"
               role="list"
             >
               <li
-                class="emotion-22"
+                class="emotion-23"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-23"
+                  class="emotion-24"
                   href="/news"
                 >
                   <span
@@ -748,23 +757,27 @@ exports[`Navigation should correctly render amp navigation 1`] = `
           </div>
         </div>
         <div
-          class="emotion-24"
+          class="emotion-25"
         >
           <div
-            class="emotion-25"
+            class="emotion-26"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
             id="si-nav-scrollable"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-27"
+        class="emotion-29"
       />
     </div>
   </nav>
@@ -871,28 +884,11 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -900,12 +896,10 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -913,10 +907,14 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -989,11 +987,43 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1001,12 +1031,12 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -1015,7 +1045,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -1025,7 +1055,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1041,26 +1071,26 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -1069,19 +1099,22 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -1090,50 +1123,50 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-12 svg {
+.emotion-13 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-12:hover::after,
-.emotion-12:focus::after {
+.emotion-13:hover::after,
+.emotion-13:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-13 {
+  .emotion-14 {
     fill: linkText;
   }
 }
 
-.emotion-17 {
+.emotion-18 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1144,7 +1177,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   margin: 0;
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1156,28 +1189,28 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-20 {
+.emotion-21 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-20:last-child {
+.emotion-21:last-child {
   border: 0;
 }
 
-.emotion-21 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1192,26 +1225,26 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-21::before {
+.emotion-22::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1223,84 +1256,69 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   opacity: 0;
 }
 
-.emotion-21:hover::before {
+.emotion-22:hover::before {
   opacity: 1;
 }
 
-.emotion-21:focus-visible {
+.emotion-22:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23.si-nav-scrollable-hidden {
+  .emotion-24.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-23::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-23:focus-visible {
-    outline: none;
-  }
-
-  .emotion-23:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-23::after {
+  .emotion-24::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-23::after {
+    .emotion-24::after {
       width: 6rem;
     }
   }
-
-  .emotion-23[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-23 li {
+.emotion-24::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-23 li a {
+.emotion-24 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -1316,7 +1334,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   justify-content: center;
 }
 
-.emotion-23 li:before {
+.emotion-24 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -1332,15 +1350,15 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   opacity: 1;
 }
 
-.emotion-23 li:last-child:before {
+.emotion-24 li:last-child:before {
   display: none;
 }
 
-.emotion-25 {
+.emotion-27 {
   position: relative;
 }
 
-.emotion-25::after {
+.emotion-27::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1380,35 +1398,39 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    Home
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/about"
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/news"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    About
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <amp-state
               id="menuState"
@@ -1422,7 +1444,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-12"
+              class="focusIndicatorRemove emotion-13"
               data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
               dir="ltr"
               on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -1434,7 +1456,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
             >
               <svg
                 aria-hidden="true"
-                class="emotion-13 emotion-14"
+                class="emotion-14 emotion-15"
                 data-amp-bind-hidden="menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -1447,7 +1469,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
               </svg>
               <svg
                 aria-hidden="true"
-                class="emotion-13 emotion-14"
+                class="emotion-14 emotion-15"
                 data-amp-bind-hidden="!menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -1461,29 +1483,29 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
                 />
               </svg>
               <span
-                class="emotion-17"
+                class="emotion-18"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-18"
+            class="emotion-19"
             data-e2e="dropdown-nav"
             hidden=""
             id="si-nav-dropdown-menu"
           >
             <ul
-              class="emotion-19"
+              class="emotion-20"
               role="list"
             >
               <li
-                class="emotion-20"
+                class="emotion-21"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-21"
+                  class="emotion-22"
                   href="/news"
                 >
                   <span
@@ -1497,23 +1519,27 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
           </div>
         </div>
         <div
-          class="emotion-22"
+          class="emotion-23"
         >
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
             id="si-nav-scrollable"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-25"
+        class="emotion-27"
       />
     </div>
   </nav>
@@ -1620,28 +1646,11 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -1649,12 +1658,10 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -1662,10 +1669,14 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -1738,11 +1749,43 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -1750,12 +1793,12 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -1764,7 +1807,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -1774,7 +1817,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1790,26 +1833,26 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -1818,15 +1861,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-12::after {
+.emotion-13::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -1835,7 +1878,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1846,11 +1889,14 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -1859,50 +1905,50 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-14 svg {
+.emotion-15 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-15:hover,
+.emotion-15:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-14:hover::after,
-.emotion-14:focus::after {
+.emotion-15:hover::after,
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-15 {
+  .emotion-16 {
     fill: linkText;
   }
 }
 
-.emotion-20 {
+.emotion-21 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -1914,28 +1960,28 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-21 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-21 {
+.emotion-22 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-22 {
+.emotion-23 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-22:last-child {
+.emotion-23:last-child {
   border: 0;
 }
 
-.emotion-23 {
+.emotion-24 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1950,26 +1996,26 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-23:hover {
+.emotion-24:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-23::before {
+.emotion-24::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1981,84 +2027,69 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   opacity: 0;
 }
 
-.emotion-23:hover::before {
+.emotion-24:hover::before {
   opacity: 1;
 }
 
-.emotion-23:focus-visible {
+.emotion-24:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-24 {
+.emotion-25 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-25.si-nav-scrollable-hidden {
+  .emotion-26.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-26 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-25::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-25:focus-visible {
-    outline: none;
-  }
-
-  .emotion-25:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-25::after {
+  .emotion-26::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-25::after {
+    .emotion-26::after {
       width: 6rem;
     }
   }
-
-  .emotion-25[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-25 li {
+.emotion-26::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-26[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-26 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-25 li a {
+.emotion-26 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -2074,7 +2105,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   justify-content: center;
 }
 
-.emotion-25 li:before {
+.emotion-26 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -2090,15 +2121,15 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   opacity: 1;
 }
 
-.emotion-25 li:last-child:before {
+.emotion-26 li:last-child:before {
   display: none;
 }
 
-.emotion-27 {
+.emotion-29 {
   position: relative;
 }
 
-.emotion-27::after {
+.emotion-29::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -2138,48 +2169,52 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    Home
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    aria-label="About"
-                    class="focusIndicatorRemove emotion-9"
-                    data-active="true"
-                    href="/about"
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/news"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    <span
-                      class="emotion-12"
-                      id="NavigationLinks-About"
-                      role="text"
+                    <a
+                      aria-label="About"
+                      class="focusIndicatorRemove emotion-10"
+                      data-active="true"
+                      href="/about"
                     >
                       <span
                         class="emotion-13"
+                        id="NavigationLinks-About"
+                        role="text"
                       >
-                        Current page, 
+                        <span
+                          class="emotion-14"
+                        >
+                          Current page, 
+                        </span>
+                        About
                       </span>
-                      About
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <amp-state
               id="menuState"
@@ -2193,7 +2228,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-14"
+              class="focusIndicatorRemove emotion-15"
               data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
               dir="ltr"
               on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
@@ -2205,7 +2240,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
             >
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 data-amp-bind-hidden="menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -2218,7 +2253,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
               </svg>
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 data-amp-bind-hidden="!menuState.expanded"
                 focusable="false"
                 height="2.75rem"
@@ -2232,29 +2267,29 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
                 />
               </svg>
               <span
-                class="emotion-13"
+                class="emotion-14"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-20"
+            class="emotion-21"
             data-e2e="dropdown-nav"
             hidden=""
             id="si-nav-dropdown-menu"
           >
             <ul
-              class="emotion-21"
+              class="emotion-22"
               role="list"
             >
               <li
-                class="emotion-22"
+                class="emotion-23"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-23"
+                  class="emotion-24"
                   href="/news"
                 >
                   <span
@@ -2268,23 +2303,27 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
           </div>
         </div>
         <div
-          class="emotion-24"
+          class="emotion-25"
         >
           <div
-            class="emotion-25"
+            class="emotion-26"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
             id="si-nav-scrollable"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-27"
+        class="emotion-29"
       />
     </div>
   </nav>
@@ -2385,28 +2424,11 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -2414,12 +2436,10 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -2427,10 +2447,14 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -2503,11 +2527,43 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -2515,12 +2571,12 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -2529,7 +2585,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -2539,7 +2595,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2555,26 +2611,26 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -2583,15 +2639,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-10::after {
+.emotion-11::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -2600,7 +2656,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2611,11 +2667,14 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -2624,50 +2683,50 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-14 svg {
+.emotion-15 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-15:hover,
+.emotion-15:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-14:hover::after,
-.emotion-14:focus::after {
+.emotion-15:hover::after,
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-15 {
+  .emotion-16 {
     fill: linkText;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -2685,35 +2744,35 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-18 {
+  .emotion-19 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-20 {
+.emotion-21 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-20:last-child {
+.emotion-21:last-child {
   border: 0;
 }
 
-.emotion-21 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2728,26 +2787,26 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-21::before {
+.emotion-22::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2759,84 +2818,69 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   opacity: 0;
 }
 
-.emotion-21:hover::before {
+.emotion-22:hover::before {
   opacity: 1;
 }
 
-.emotion-21:focus-visible {
+.emotion-22:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23.si-nav-scrollable-hidden {
+  .emotion-24.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-23::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-23:focus-visible {
-    outline: none;
-  }
-
-  .emotion-23:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-23::after {
+  .emotion-24::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-23::after {
+    .emotion-24::after {
       width: 6rem;
     }
   }
-
-  .emotion-23[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-23 li {
+.emotion-24::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-23 li a {
+.emotion-24 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -2852,7 +2896,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   justify-content: center;
 }
 
-.emotion-23 li:before {
+.emotion-24 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -2868,15 +2912,15 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   opacity: 1;
 }
 
-.emotion-23 li:last-child:before {
+.emotion-24 li:last-child:before {
   display: none;
 }
 
-.emotion-25 {
+.emotion-27 {
   position: relative;
 }
 
-.emotion-25::after {
+.emotion-27::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -2915,59 +2959,63 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    aria-label="Home"
-                    class="focusIndicatorRemove emotion-9"
-                    data-active="true"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    <span
-                      class="emotion-10"
-                      id="NavigationLinks-Home"
-                      role="text"
+                    <a
+                      aria-label="Home"
+                      class="focusIndicatorRemove emotion-10"
+                      data-active="true"
+                      href="/news"
                     >
                       <span
                         class="emotion-11"
+                        id="NavigationLinks-Home"
+                        role="text"
                       >
-                        Current page, 
+                        <span
+                          class="emotion-12"
+                        >
+                          Current page, 
+                        </span>
+                        Home
                       </span>
-                      Home
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/about"
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    About
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-14"
+              class="focusIndicatorRemove emotion-15"
               dir="ltr"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -2978,28 +3026,28 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
                 />
               </svg>
               <span
-                class="emotion-11"
+                class="emotion-12"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-18"
+            class="emotion-19"
             data-e2e="dropdown-nav"
             style="height: 0px;"
           >
             <ul
-              class="emotion-19"
+              class="emotion-20"
               role="list"
             >
               <li
-                class="emotion-20"
+                class="emotion-21"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-21"
+                  class="emotion-22"
                   href="/news"
                 >
                   <span
@@ -3013,22 +3061,26 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
           </div>
         </div>
         <div
-          class="emotion-22"
+          class="emotion-23"
         >
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-25"
+        class="emotion-27"
       />
     </div>
   </nav>
@@ -3129,28 +3181,11 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -3158,12 +3193,10 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -3171,10 +3204,14 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -3247,11 +3284,43 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -3259,12 +3328,12 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -3273,7 +3342,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -3283,7 +3352,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3299,26 +3368,26 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -3327,19 +3396,22 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-12 {
+.emotion-13 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -3348,50 +3420,50 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-12 {
+  .emotion-13 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-12 {
+  .emotion-13 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-12 svg {
+.emotion-13 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-12:hover,
-.emotion-12:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-12:hover::after,
-.emotion-12:focus::after {
+.emotion-13:hover::after,
+.emotion-13:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-13 {
+.emotion-14 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-13 {
+  .emotion-14 {
     fill: linkText;
   }
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -3402,7 +3474,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   margin: 0;
 }
 
-.emotion-16 {
+.emotion-17 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -3420,35 +3492,35 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-17 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-16 {
+  .emotion-17 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-17 {
+.emotion-18 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-18 {
+.emotion-19 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-18:last-child {
+.emotion-19:last-child {
   border: 0;
 }
 
-.emotion-19 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -3463,26 +3535,26 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-19:hover {
+.emotion-20:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-19::before {
+.emotion-20::before {
   content: "";
   position: absolute;
   top: 0;
@@ -3494,84 +3566,69 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   opacity: 0;
 }
 
-.emotion-19:hover::before {
+.emotion-20:hover::before {
   opacity: 1;
 }
 
-.emotion-19:focus-visible {
+.emotion-20:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-20 {
+.emotion-21 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21.si-nav-scrollable-hidden {
+  .emotion-22.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-21::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-21:focus-visible {
-    outline: none;
-  }
-
-  .emotion-21:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-21::after {
+  .emotion-22::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-21::after {
+    .emotion-22::after {
       width: 6rem;
     }
   }
-
-  .emotion-21[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-21 li {
+.emotion-22::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-22[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-22 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-21 li a {
+.emotion-22 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -3587,7 +3644,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   justify-content: center;
 }
 
-.emotion-21 li:before {
+.emotion-22 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -3603,15 +3660,15 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   opacity: 1;
 }
 
-.emotion-21 li:last-child:before {
+.emotion-22 li:last-child:before {
   display: none;
 }
 
-.emotion-23 {
+.emotion-25 {
   position: relative;
 }
 
-.emotion-23::after {
+.emotion-25::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -3650,46 +3707,50 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    Home
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/about"
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/news"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    About
-                  </a>
-                </li>
-              </ul>
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/about"
+                    >
+                      About
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-12"
+              class="focusIndicatorRemove emotion-13"
               dir="ltr"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-13 emotion-14"
+                class="emotion-14 emotion-15"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -3700,28 +3761,28 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
                 />
               </svg>
               <span
-                class="emotion-15"
+                class="emotion-16"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-16"
+            class="emotion-17"
             data-e2e="dropdown-nav"
             style="height: 0px;"
           >
             <ul
-              class="emotion-17"
+              class="emotion-18"
               role="list"
             >
               <li
-                class="emotion-18"
+                class="emotion-19"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-19"
+                  class="emotion-20"
                   href="/news"
                 >
                   <span
@@ -3735,22 +3796,26 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
           </div>
         </div>
         <div
-          class="emotion-20"
+          class="emotion-21"
         >
           <div
-            class="emotion-21"
+            class="emotion-22"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-23"
+        class="emotion-25"
       />
     </div>
   </nav>
@@ -3851,28 +3916,11 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .emotion-6::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-6:focus-visible {
-    outline: none;
-  }
-
-  .emotion-6:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
   .emotion-6::after {
@@ -3880,12 +3928,10 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
@@ -3893,10 +3939,14 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
       width: 6rem;
     }
   }
+}
 
-  .emotion-6[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
+.emotion-6::after {
+  background: linear-gradient(to right, transparent 0%, #B80000 100%);
+}
+
+.emotion-6[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #B80000 100%);
 }
 
 .emotion-6 li {
@@ -3969,11 +4019,43 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   display: none;
 }
 
-.emotion-6.emotion-6::after {
-  background: none;
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    position: relative;
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-padding-end: 3rem;
+    padding-inline-end: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7 {
+      -webkit-padding-end: 6rem;
+      padding-inline-end: 6rem;
+    }
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    outline: 0.1875rem solid #000000;
+  }
 }
 
-.emotion-7 {
+.emotion-8 {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -3981,12 +4063,12 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-8 {
     overflow: hidden;
   }
 }
 
-.emotion-8 {
+.emotion-9 {
   display: inline-block;
   position: relative;
   z-index: 2;
@@ -3995,7 +4077,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8::after {
+  .emotion-9::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -4005,7 +4087,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   }
 }
 
-.emotion-9 {
+.emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -4021,26 +4103,26 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-9 {
+  .emotion-10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-9 {
+  .emotion-10 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-9:hover::after {
+.emotion-10:hover::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -4049,15 +4131,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-9:focus::after,
-.emotion-9:focus-visible::after {
+.emotion-10:focus::after,
+.emotion-10:focus-visible::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.1875rem solid #000000;
 }
 
-.emotion-12::after {
+.emotion-13::after {
   content: '';
   position: absolute;
   inset-inline-start: 0;
@@ -4066,7 +4148,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   border-bottom: 0.25rem solid #B80000;
 }
 
-.emotion-13 {
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -4077,11 +4159,14 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   margin: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   position: relative;
   padding: 0;
   margin: 0;
   border: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   float: inline-start;
   background-color: #B80000;
   color: #FFFFFF;
@@ -4090,50 +4175,50 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 20rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 2.75rem;
     height: 2.75rem;
   }
 }
 
-.emotion-14 svg {
+.emotion-15 svg {
   vertical-align: middle;
   fill: #FFFFFF;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
+.emotion-15:hover,
+.emotion-15:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-14:hover::after,
-.emotion-14:focus::after {
+.emotion-15:hover::after,
+.emotion-15:focus::after {
   content: '';
   position: absolute;
   inset: 0;
   border: 0.25rem solid #000000;
 }
 
-.emotion-15 {
+.emotion-16 {
   color: #000000;
   fill: currentColor;
 }
 
 @media screen and (forced-colors: active) {
-  .emotion-15 {
+  .emotion-16 {
     fill: linkText;
   }
 }
 
-.emotion-18 {
+.emotion-19 {
   position: absolute;
   top: 100%;
   left: 0;
@@ -4151,35 +4236,35 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-19 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .emotion-18 {
+  .emotion-19 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-19 {
+.emotion-20 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-20 {
+.emotion-21 {
   padding: 0;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
-.emotion-20:last-child {
+.emotion-21:last-child {
   border: 0;
 }
 
-.emotion-21 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -4194,26 +4279,26 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-21:hover {
+.emotion-22:hover {
   background-color: #E6E8EA;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-21::before {
+.emotion-22::before {
   content: "";
   position: absolute;
   top: 0;
@@ -4225,84 +4310,69 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   opacity: 0;
 }
 
-.emotion-21:hover::before {
+.emotion-22:hover::before {
   opacity: 1;
 }
 
-.emotion-21:focus-visible {
+.emotion-22:focus-visible {
   outline-offset: -0.1875rem;
 }
 
-.emotion-22 {
+.emotion-23 {
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23.si-nav-scrollable-hidden {
+  .emotion-24.si-nav-scrollable-hidden {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-23 {
+  .emotion-24 {
     position: relative;
-    white-space: nowrap;
-    overflow-x: scroll;
-    scroll-behavior: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    min-width: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .emotion-23::-webkit-scrollbar {
-    display: none;
-  }
-
-  .emotion-23:focus-visible {
-    outline: none;
-  }
-
-  .emotion-23:focus-visible::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    outline: 0.1875rem solid #000000;
-  }
-
-  .emotion-23::after {
+  .emotion-24::after {
     content: ' ';
     height: 100%;
     width: 3rem;
     position: absolute;
+    top: 0;
     inset-inline-end: 0;
-    bottom: 0;
     z-index: 3;
-    overflow: hidden;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
   }
 
   @media (min-width: 25rem) {
-    .emotion-23::after {
+    .emotion-24::after {
       width: 6rem;
     }
   }
-
-  .emotion-23[dir="rtl"]::after {
-    background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
-  }
 }
 
-.emotion-23 li {
+.emotion-24::after {
+  background: linear-gradient(to right, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24[dir="rtl"]::after {
+  background: linear-gradient(to left, transparent 0%, #FFFFFF 100%);
+}
+
+.emotion-24 li {
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
 
-.emotion-23 li a {
+.emotion-24 li a {
   padding: 0 0.5rem;
   height: 2.75rem;
   display: -webkit-box;
@@ -4318,7 +4388,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   justify-content: center;
 }
 
-.emotion-23 li:before {
+.emotion-24 li:before {
   content: "";
   position: absolute;
   inset-inline-end: 0;
@@ -4334,15 +4404,15 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   opacity: 1;
 }
 
-.emotion-23 li:last-child:before {
+.emotion-24 li:last-child:before {
   display: none;
 }
 
-.emotion-25 {
+.emotion-27 {
   position: relative;
 }
 
-.emotion-25::after {
+.emotion-27::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -4381,59 +4451,63 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
               data-e2e="scrollable-nav"
               dir="ltr"
             >
-              <ul
+              <div
                 class="emotion-7"
-                role="list"
               >
-                <li
+                <ul
                   class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
+                  role="list"
                 >
-                  <a
-                    class="focusIndicatorRemove emotion-9"
-                    href="/news"
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    Home
-                  </a>
-                </li>
-                <li
-                  class="emotion-8"
-                  dir="ltr"
-                  role="listitem"
-                >
-                  <a
-                    aria-label="About"
-                    class="focusIndicatorRemove emotion-9"
-                    data-active="true"
-                    href="/about"
+                    <a
+                      class="focusIndicatorRemove emotion-10"
+                      href="/news"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li
+                    class="emotion-9"
+                    dir="ltr"
+                    role="listitem"
                   >
-                    <span
-                      class="emotion-12"
-                      id="NavigationLinks-About"
-                      role="text"
+                    <a
+                      aria-label="About"
+                      class="focusIndicatorRemove emotion-10"
+                      data-active="true"
+                      href="/about"
                     >
                       <span
                         class="emotion-13"
+                        id="NavigationLinks-About"
+                        role="text"
                       >
-                        Current page, 
+                        <span
+                          class="emotion-14"
+                        >
+                          Current page, 
+                        </span>
+                        About
                       </span>
-                      About
-                    </span>
-                  </a>
-                </li>
-              </ul>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <button
               aria-expanded="false"
               aria-label="Sections"
-              class="focusIndicatorRemove emotion-14"
+              class="focusIndicatorRemove emotion-15"
               dir="ltr"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-15 emotion-16"
+                class="emotion-16 emotion-17"
                 focusable="false"
                 height="2.75rem"
                 viewBox="0 0 44 44"
@@ -4444,28 +4518,28 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
                 />
               </svg>
               <span
-                class="emotion-13"
+                class="emotion-14"
               >
                 Sections
               </span>
             </button>
           </div>
           <div
-            class="emotion-18"
+            class="emotion-19"
             data-e2e="dropdown-nav"
             style="height: 0px;"
           >
             <ul
-              class="emotion-19"
+              class="emotion-20"
               role="list"
             >
               <li
-                class="emotion-20"
+                class="emotion-21"
                 role="listitem"
               >
                 <a
                   aria-labelledby="dropdownNavigation-home"
-                  class="emotion-21"
+                  class="emotion-22"
                   href="/news"
                 >
                   <span
@@ -4479,22 +4553,26 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
           </div>
         </div>
         <div
-          class="emotion-22"
+          class="emotion-23"
         >
           <div
-            class="emotion-23"
+            class="emotion-24"
             data-e2e="scrollable-nav-secondary"
             dir="ltr"
           >
-            <ul
+            <div
               class="emotion-7"
-              role="list"
-            />
+            >
+              <ul
+                class="emotion-8"
+                role="list"
+              />
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="emotion-25"
+        class="emotion-27"
       />
     </div>
   </nav>
