@@ -3,7 +3,10 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 import { HIDDEN_CLASS_NAME, MAX_NAV_ITEM_HEIGHT } from '../index.styles';
 
 export default {
-  scrollableNav: ({ palette, mq, spacings }: Theme) =>
+  // Outer non-scrolling wrapper — owns the gradient overlay.
+  // Keeping gradient here (not on the inner scroll div) means it stays fixed
+  // to the edge of the component while content scrolls underneath it.
+  scrollableNav: ({ mq, spacings }: Theme) =>
     css({
       // AMP hidden class — toggled via AMP actions, harmless on canonical
       [`&.${HIDDEN_CLASS_NAME}`]: {
@@ -14,11 +17,46 @@ export default {
       },
       [mq.GROUP_2_MAX_WIDTH]: {
         position: 'relative',
+        // Flex item defaults: min-width:auto prevents shrinking, flex-grow:0 doesn't fill space.
+        // minWidth:0 + flexGrow:1 means this wrapper fills all space left by the fixed-width
+        // hamburger button, keeping the button on-screen at any viewport width.
+        minWidth: 0,
+        flexGrow: 1,
+
+        /* Gradient fade overlay — positioned on the non-scrolling wrapper so it
+           stays fixed at the edge while inner content scrolls beneath it */
+        '&::after': {
+          content: "' '",
+          height: '100%',
+          width: `${spacings.SEXTUPLE}rem`,
+          [mq.GROUP_2_MIN_WIDTH]: {
+            width: '6rem',
+          },
+          position: 'absolute',
+          top: 0,
+          insetInlineEnd: 0,
+          zIndex: 3,
+          pointerEvents: 'none',
+        },
+      },
+    }),
+
+  // Inner scrolling div — handles overflow, scrollbar hiding and focus ring
+  scrollableNavInner: ({ palette, mq, spacings }: Theme) =>
+    css({
+      [mq.GROUP_2_MAX_WIDTH]: {
+        position: 'relative',
         whiteSpace: 'nowrap',
         overflowX: 'scroll',
         /* Avoid smooth scrolling — it causes accessibility issues */
         scrollBehavior: 'auto',
         WebkitOverflowScrolling: 'touch',
+
+        /* Pad the end so the last item can scroll fully clear of the gradient overlay */
+        paddingInlineEnd: `${spacings.SEXTUPLE}rem`,
+        [mq.GROUP_2_MIN_WIDTH]: {
+          paddingInlineEnd: '6rem',
+        },
 
         /* Hide scrollbar */
         scrollbarWidth: 'none',
@@ -31,36 +69,12 @@ export default {
           outline: 'none',
         },
 
-        /* Focus indicator applied to pseudo-element for Firefox compatibility */
+        /* Focus indicator on pseudo-element for Firefox compatibility */
         '&:focus-visible::after': {
           content: "''",
           position: 'absolute',
-          width: '100%',
-          height: '100%',
+          inset: 0,
           outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
-        },
-
-        /* Gradient fade overlay to indicate scrollable content */
-        '&::after': {
-          content: "' '",
-          height: '100%',
-          width: `${spacings.SEXTUPLE}rem`,
-          [mq.GROUP_2_MIN_WIDTH]: {
-            width: '6rem',
-          },
-          position: 'absolute',
-          insetInlineEnd: 0,
-          bottom: 0,
-          zIndex: 3,
-          overflow: 'hidden',
-          pointerEvents: 'none',
-          /* LTR: fade to the right */
-          background: `linear-gradient(to right, transparent 0%, ${palette.WHITE} 100%)`,
-        },
-
-        /* RTL: flip gradient to fade toward the left */
-        '&[dir="rtl"]::after': {
-          background: `linear-gradient(to left, transparent 0%, ${palette.WHITE} 100%)`,
         },
       },
     }),
@@ -68,6 +82,14 @@ export default {
   // Applied when navPosition="primary" — sits on POSTBOX background; suppresses gradient overlay
   primary: ({ palette, spacings }: Theme) =>
     css({
+      '&::after': {
+        background: `linear-gradient(to right, transparent 0%, ${palette.POSTBOX} 100%)`,
+      },
+
+      '&[dir="rtl"]::after': {
+        background: `linear-gradient(to left, transparent 0%, ${palette.POSTBOX} 100%)`,
+      },
+
       li: {
         marginInlineEnd: 0,
 
@@ -129,17 +151,19 @@ export default {
           display: 'none',
         },
       },
-
-      // Double selector (0,2,0) beats scrollableNav's gradient (0,1,0), regardless of
-      // stylesheet injection order (child class is injected after parent class in React).
-      '&&::after': {
-        background: 'none',
-      },
     }),
 
   // Applied when navPosition="secondary" — white background row
   secondary: ({ palette, spacings }: Theme) =>
     css({
+      '&::after': {
+        background: `linear-gradient(to right, transparent 0%, ${palette.WHITE} 100%)`,
+      },
+
+      '&[dir="rtl"]::after': {
+        background: `linear-gradient(to left, transparent 0%, ${palette.WHITE} 100%)`,
+      },
+
       li: {
         marginInlineEnd: 0,
 

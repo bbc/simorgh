@@ -108,6 +108,7 @@ export default {
       padding: 0,
       margin: 0,
       border: 0,
+      flexShrink: 0, // never let the flex container squeeze the button off-screen
       float: 'inline-start',
       backgroundColor: palette.POSTBOX,
       color: palette.WHITE,

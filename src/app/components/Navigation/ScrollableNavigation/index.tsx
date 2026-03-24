@@ -27,7 +27,7 @@ const ScrollableNavigation = ({
     id={id}
     className={className}
   >
-    {children}
+    <div css={styles.scrollableNavInner}>{children}</div>
   </div>
 );
 
