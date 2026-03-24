@@ -6,8 +6,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ComponentExperimentProps } from '#app/models/types/global';
-import type { Theme } from '@emotion/react';
-import type { Interpolation } from '@emotion/serialize';
+import type { Theme, Interpolation } from '@emotion/react';
 import styles from './index.styles';
 
 export type ContinueReadingButtonProps = {
