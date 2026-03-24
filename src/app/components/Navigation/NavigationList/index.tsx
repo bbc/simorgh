@@ -10,7 +10,6 @@ type NavigationListItemProps = {
   dir?: Direction;
   clickTracker?: Record<string, unknown> | null;
   viewTracker?: Record<string, unknown> | null;
-  className?: string;
 };
 
 type CurrentLinkProps = PropsWithChildren<{
@@ -52,7 +51,6 @@ export const NavigationListItem = ({
   active = false,
   dir = 'ltr',
   viewTracker = null,
-  className,
   ...anchorProps
 }: PropsWithChildren<NavigationListItemProps>) => (
   <li
@@ -68,7 +66,7 @@ export const NavigationListItem = ({
         // Temporary fix for a11y nested span bug in TalkBack: https://github.com/bbc/simorgh/issues/9652
         aria-labelledby={`NavigationLinks-${link}`}
         aria-current="page"
-        className={`focusIndicatorRemove${className ? ` ${className}` : ''}`}
+        className="focusIndicatorRemove"
         data-active="true"
         {...(clickTracker as object)}
         {...anchorProps}
@@ -81,7 +79,7 @@ export const NavigationListItem = ({
       <a
         css={styles.link}
         href={url}
-        className={`focusIndicatorRemove${className ? ` ${className}` : ''}`}
+        className="focusIndicatorRemove"
         aria-current={active ? 'page' : undefined}
         {...(clickTracker as object)}
         {...anchorProps}

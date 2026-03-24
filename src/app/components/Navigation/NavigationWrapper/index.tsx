@@ -6,7 +6,6 @@ type Props = {
   isOpen?: boolean;
   ampOpenClass?: string;
   id?: string;
-  className?: string;
 };
 
 const NavigationWrapper = ({
@@ -15,13 +14,11 @@ const NavigationWrapper = ({
   isOpen = false,
   ampOpenClass,
   id,
-  className,
 }: PropsWithChildren<Props>) => (
   <nav
     role="navigation"
     dir={dir}
     id={id}
-    className={className}
     css={[
       styles.nav,
       isOpen && styles.navOpen,

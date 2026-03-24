@@ -6,7 +6,6 @@ type Props = {
   dir?: Direction;
   navPosition?: 'primary' | 'secondary';
   id?: string;
-  className?: string;
 };
 
 const ScrollableNavigation = ({
@@ -14,7 +13,6 @@ const ScrollableNavigation = ({
   dir = 'ltr',
   navPosition,
   id,
-  className,
 }: PropsWithChildren<Props>) => (
   <div
     css={[
@@ -25,7 +23,6 @@ const ScrollableNavigation = ({
     data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}`}
     dir={dir}
     id={id}
-    className={className}
   >
     <div css={styles.scrollableNavInner}>{children}</div>
   </div>

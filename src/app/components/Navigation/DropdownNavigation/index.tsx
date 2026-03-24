@@ -7,13 +7,11 @@ import styles from './index.styles';
 
 type CanonicalDropdownProps = {
   isOpen: boolean;
-  className?: string;
 };
 
 export const CanonicalDropdown = ({
   isOpen,
   children,
-  className,
 }: PropsWithChildren<CanonicalDropdownProps>) => {
   const heightRef = useRef<HTMLDivElement>(null);
   return (
@@ -24,7 +22,6 @@ export const CanonicalDropdown = ({
       style={{
         height: `${isOpen && heightRef.current ? heightRef.current.scrollHeight : 0}px`,
       }}
-      className={className}
     >
       {children}
     </div>
@@ -33,23 +30,15 @@ export const CanonicalDropdown = ({
 
 type AmpDropdownProps = {
   id?: string;
-  className?: string;
   hidden?: boolean;
 };
 
 export const AmpDropdown = ({
   children,
   id,
-  className,
   hidden,
 }: PropsWithChildren<AmpDropdownProps>) => (
-  <div
-    css={styles.ampDropdown}
-    id={id}
-    className={className}
-    hidden={hidden}
-    data-e2e="dropdown-nav"
-  >
+  <div css={styles.ampDropdown} id={id} hidden={hidden} data-e2e="dropdown-nav">
     {children}
   </div>
 );
@@ -157,14 +146,12 @@ type AmpMenuButtonProps = {
   announcedText: string;
   onToggle: string;
   dir?: Direction;
-  className?: string;
 };
 
 export const AmpMenuButton = ({
   announcedText,
   onToggle,
   dir = 'ltr',
-  className,
 }: AmpMenuButtonProps) => (
   <>
     <AmpHead />
@@ -183,7 +170,7 @@ export const AmpMenuButton = ({
       data-amp-bind-aria-expanded='menuState.expanded ? "true" : "false"'
       on={`tap:${expandedHandler},${onToggle}`}
       dir={dir}
-      className={`focusIndicatorRemove${className ? ` ${className}` : ''}`}
+      className="focusIndicatorRemove"
     >
       {cloneElement(navigationIcons.hamburger, {
         'data-amp-bind-hidden': 'menuState.expanded',
