@@ -1,6 +1,6 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeader';
-import activityTypes from './activityTypes';
+import { activityTypes } from './uasUtility';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
