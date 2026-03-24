@@ -6,7 +6,7 @@ import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
 
 export default async (liveTextStreamId: string) => {
   try {
-    const webCdnHost = 'https://web-cdn.test.api.bbci.co.uk'; // getEnvConfig().SIMORGH_MOST_READ_CDN_URL;
+    const webCdnHost = getEnvConfig().SIMORGH_MOST_READ_CDN_URL;
     console.log('CHECK CDN', webCdnHost);
 
     const fetchUrl = `${webCdnHost}/fd/stream?liveTextStreamId=${liveTextStreamId}&type=curated`;
