@@ -37,6 +37,8 @@ describe('AccountHeader', () => {
       'href',
       expect.stringContaining('https://example.com/signin'),
     );
+    const icon = link.querySelector('svg');
+    expect(icon).toBeInTheDocument();
   });
 
   it('does not render when account toggle is disabled for service', () => {
@@ -48,13 +50,15 @@ describe('AccountHeader', () => {
     expect(screen.queryByRole('link')).toBeNull();
   });
 
-  it('shows For you when signed in', async () => {
+  it('shows Your Account when signed in', async () => {
     renderWithProviders({ initialIsSignedIn: true });
 
-    const link = await screen.findByRole('link', { name: 'For you' });
+    const link = await screen.findByRole('link', { name: 'Your Account' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/foryou'),
     );
+    const icon = link.querySelector('svg');
+    expect(icon).toBeInTheDocument();
   });
 });
