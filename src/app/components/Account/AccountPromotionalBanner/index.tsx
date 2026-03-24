@@ -4,6 +4,8 @@ import PromotionalBanner from '#app/components/PromotionalBanner';
 import CallToActionLink from '#app/components/CallToActionLink';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useToggle from '#app/hooks/useToggle';
 import styles from './index.styles';
 
 const ACCOUNT_BANNER_DISMISS_KEY = 'account_promotional_banner_dismissals';
@@ -44,8 +46,10 @@ const isBannerVisible = () => {
 };
 
 const AccountPromotionalBanner = () => {
+  const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
+  const isHydrated = useHydrationDetection();
   const { translations } = use(ServiceContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const signInText = translations?.account?.signIn;
@@ -55,10 +59,12 @@ const AccountPromotionalBanner = () => {
   if (
     isDismissed ||
     isSignedIn ||
+    !accountEnabled ||
     !isIdctaAvailable ||
     !signInUrl ||
     !registerUrl ||
-    !accountPromoBannerTranslations
+    !accountPromoBannerTranslations ||
+    !isHydrated
   ) {
     return null;
   }
@@ -80,37 +86,35 @@ const AccountPromotionalBanner = () => {
         setIsDismissed(true);
       }}
     >
-      <div css={styles.actionLinkWrapper}>
-        <CallToActionLink
-          url={signInUrl}
-          className="focusIndicatorInvert"
-          css={[styles.callToActionLink, styles.signInLink]}
-        >
-          <CallToActionLink.ButtonLikeWrapper>
-            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {signInText}
-              <CallToActionLink.Chevron />
-            </CallToActionLink.Text>
-          </CallToActionLink.ButtonLikeWrapper>
-        </CallToActionLink>
+      <CallToActionLink
+        url={signInUrl}
+        className="focusIndicatorInvert"
+        css={[styles.callToActionLink, styles.signInLink]}
+      >
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {signInText}
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>
 
-        <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
-          {buttonSeparatorText}
-        </Paragraph>
+      <Paragraph size="bodyCopy" css={styles.buttonSeparatorText}>
+        {buttonSeparatorText}
+      </Paragraph>
 
-        <CallToActionLink
-          url={registerUrl}
-          className="focusIndicatorInvert"
-          css={[styles.callToActionLink, styles.registerLink]}
-        >
-          <CallToActionLink.ButtonLikeWrapper>
-            <CallToActionLink.Text shouldUnderlineOnHoverFocus>
-              {registerText}
-              <CallToActionLink.Chevron />
-            </CallToActionLink.Text>
-          </CallToActionLink.ButtonLikeWrapper>
-        </CallToActionLink>
-      </div>
+      <CallToActionLink
+        url={registerUrl}
+        className="focusIndicatorInvert"
+        css={[styles.callToActionLink, styles.registerLink]}
+      >
+        <CallToActionLink.ButtonLikeWrapper>
+          <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+            {registerText}
+            <CallToActionLink.Chevron />
+          </CallToActionLink.Text>
+        </CallToActionLink.ButtonLikeWrapper>
+      </CallToActionLink>
     </PromotionalBanner>
   );
 };

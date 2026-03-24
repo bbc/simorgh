@@ -134,7 +134,7 @@ exports[`Canonical Live SEO Lang attribute 1`] = `"sr-latn"`;
 
 exports[`Canonical Live SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "NewsArticle",

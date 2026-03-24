@@ -18,24 +18,30 @@ const Component = () => {
     >
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[0] as Summary)}
-        attribution={{
-          link: '/pidgin',
-          text: 'BBC News Pidgin',
-        }}
+        attributions={[
+          {
+            title: 'BBC News Pidgin',
+            link: { url: '/pidgin' },
+          },
+        ]}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[1] as Summary)}
-        attribution={{
-          link: '/mundo',
-          text: 'BBC News Mundo',
-        }}
+        attributions={[
+          {
+            title: 'BBC News Mundo',
+            link: { url: '/mundo' },
+          },
+        ]}
       />
       <HighImpactPromo
         {...(highImpactFixtureCuration.summaries?.[2] as Summary)}
-        attribution={{
-          link: '/',
-          text: 'BBC',
-        }}
+        attributions={[
+          {
+            title: 'BBC',
+            link: { url: '/' },
+          },
+        ]}
       />
     </div>
   );

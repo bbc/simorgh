@@ -29,9 +29,7 @@
 | padding | boolean | No | `true` | `false` |
 | prefix | string | No | `null` | `Updated` |
 | suffix | string | No | `null` | `This is a suffix` |
-| script | object | Yes | N/A | `{ canon: { groupA: { fontSize: '28', lineHeight: '32',}, groupB: { fontSize: '32', lineHeight: '36', }, groupD: { fontSize: '44', lineHeight: '48', }, }, trafalgar: { groupA: { fontSize: '20', lineHeight: '24', }, groupB: { fontSize: '24', lineHeight: '28', }, groupD: { fontSize: '32', lineHeight: '36', }, }, }` |
 | locale | string | no | `null` | `en` |
-| service | string | yes | `null` | `news` |
 | altCalendar | object | no | `null` | See the `jalaali` calendar in [psammead-calendars](https://github.com/bbc/psammead/blob/566e8115e5bc4a92313bdf352d56b9d5efcf0278/packages/utilities/psammead-calendars/src/calendars/jalaali.js#L47) as an example |
 
 `locale` should be a momentjs locale.
@@ -39,8 +37,6 @@
 ## Usage
 
 ```jsx
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
-
 const WrappingContainer = () => (
   <Timestamp
     timestamp={1530947227000}
@@ -50,7 +46,6 @@ const WrappingContainer = () => (
     timezone="Europe/London"
     prefix="Updated"
     suffix="."
-    script={latin}
     locale="en"
   />
 );

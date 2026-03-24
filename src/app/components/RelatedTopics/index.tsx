@@ -20,7 +20,7 @@ const RelatedTopics = ({
   bar = true,
   className = '',
 }: RelatedTopicsProps) => {
-  const { service, script, translations, dir } = use(ServiceContext);
+  const { service, translations, dir } = use(ServiceContext);
   const { variant } = use(RequestContext);
 
   const shouldDisplayTopics =
@@ -40,8 +40,6 @@ const RelatedTopics = ({
     >
       <SectionLabel
         bar={bar}
-        script={script}
-        service={service}
         dir={dir}
         labelId="related-topics"
         mobileDivider={mobileDivider}

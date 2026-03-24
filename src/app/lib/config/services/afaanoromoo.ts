@@ -106,6 +106,8 @@ export const service: DefaultServiceConfig = {
         postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
         shareButtonText: 'Qoodi',
+        refreshButtonText: 'Poostii Haaraa',
+        visuallyHiddenButtonText: 'Poostiin haaraa jira',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

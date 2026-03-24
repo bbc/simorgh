@@ -80,8 +80,6 @@ const inputs = () => {
   const minWidthInput = number('minimum svg width', svgRatio * svgMinHeight);
   const maxWidthInput = number('maximum svg width', svgRatio * svgMaxHeight);
   const svgHeightInput = number('desired height svg', svgMaxHeight);
-  const borderBottom = boolean('Border Bottom', false);
-  const borderTop = boolean('Border Top', false);
 
   return {
     productInput,
@@ -90,8 +88,6 @@ const inputs = () => {
     svgHeightInput,
     minWidthInput,
     maxWidthInput,
-    borderTop,
-    borderBottom,
     backgroundColour,
     logoColour,
   };
@@ -105,8 +101,6 @@ const getBrand = () => {
     minWidthInput,
     maxWidthInput,
     svgChoice,
-    borderBottom,
-    borderTop,
   } = inputs();
 
   return (
@@ -118,22 +112,13 @@ const getBrand = () => {
       maxWidth={maxWidthInput}
       svg={svgs[svgChoice]}
       url="https://www.bbc.com/news"
-      borderBottom={borderBottom}
-      borderTop={borderTop}
     />
   );
 };
 
-const dropdownNavigationStory = (
-  currentPageText,
-  navData,
-  dir,
-  isAmp,
-  script,
-  service,
-) => (
+const dropdownNavigationStory = (currentPageText, navData, dir) => (
   <>
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <ScrollableNavigation dir={dir}>
         <DropdownUl>
           {navData.map((item, index) => {
@@ -144,8 +129,6 @@ const dropdownNavigationStory = (
               <DropdownLi
                 key={title}
                 url={url}
-                script={script}
-                active={active}
                 currentPageText={currentPageText}
                 service={service}
                 dir={dir}
@@ -160,19 +143,11 @@ const dropdownNavigationStory = (
   </>
 );
 
-const navigationStory = (
-  currentPageText,
-  navData,
-  dir,
-  brand,
-  isAmp,
-  script,
-  service,
-) => (
+const navigationStory = (currentPageText, navData, dir, brand) => (
   <>
     {brand && getBrand()}
 
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <ScrollableNavigation dir={dir}>
         <NavigationUl>
           {navData.map((item, index) => {
@@ -183,7 +158,6 @@ const navigationStory = (
               <NavigationLi
                 key={title}
                 url={url}
-                script={script}
                 active={active}
                 currentPageText={currentPageText}
                 service={service}
@@ -199,10 +173,10 @@ const navigationStory = (
   </>
 );
 
-const animationStory = (dir, script, service) => {
+const animationStory = dir => {
   const isOpen = boolean('Open', false);
   return (
-    <Navigation script={script} service={service} dir={dir}>
+    <Navigation dir={dir}>
       <CanonicalDropdown isOpen={isOpen}>
         <DropdownUl>
           {pidginNavData.map((item, index) => {
@@ -210,8 +184,6 @@ const animationStory = (dir, script, service) => {
             const { title, url } = item;
             return (
               <DropdownLi
-                script={script}
-                service={service}
                 key={title}
                 dir={dir}
                 url={url}
@@ -257,7 +229,7 @@ navStoriesData.map(item => {
 
 canonicalStories.add(
   'Canonical Menu Button',
-  ({ dir, script }) => {
+  ({ dir }) => {
     const isOpen = boolean('Open', true);
     return (
       <BackgroundContainer>
@@ -266,7 +238,6 @@ canonicalStories.add(
           onClick={() => {}}
           isOpen={isOpen}
           dir={dir}
-          script={script}
         />
       </BackgroundContainer>
     );
@@ -351,13 +322,12 @@ navStoriesData.map(item => {
 
 ampStories.add(
   'AMP Menu Button',
-  ({ dir, script }) => (
+  ({ dir }) => (
     <BackgroundContainer>
       <AmpMenuButton
         announcedText="Menu"
         onToggle="other-element.toggleVisibility"
         dir={dir}
-        script={script}
       />
       <ToggledContainer id="other-element">
         Toggled with AMP action

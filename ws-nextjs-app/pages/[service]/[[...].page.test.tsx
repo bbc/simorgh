@@ -4,6 +4,8 @@ import { getServerSideProps } from './[[...]].page';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import handleArticleRoute from './articles/handleArticleRoute';
 import handleHomepageRoute from './homepage/handleHomepageRoute';
+import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
+import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
 
 jest.mock('#server/utilities/logResponseTime', () => ({
   __esModule: true,
@@ -21,6 +23,16 @@ jest.mock('./articles/handleArticleRoute', () => ({
 }));
 
 jest.mock('./homepage/handleHomepageRoute', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
+jest.mock('./onDemandAudio/handleOnDemandAudioRoute', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue({}),
+}));
+
+jest.mock('./onDemandTv/handleOnDemandTvRoute', () => ({
   __esModule: true,
   default: jest.fn().mockResolvedValue({}),
 }));
@@ -115,6 +127,69 @@ describe('catch-all route', () => {
       await getServerSideProps(context);
 
       expect(handleHomepageRoute).toHaveBeenCalled();
+    });
+  });
+
+  describe('On Demand Audio page type', () => {
+    it('should call the On Demand Audio route handler if an On Demand Audio page is requested using URL', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/pidgin/bbc_pidgin_radio/some-audio-page',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandAudioRoute).toHaveBeenCalled();
+    });
+
+    it('should call the On Demand Audio route handler if an On Demand Audio page is requested using page-type header', async () => {
+      const context = {
+        ...commonContext,
+        req: {
+          headers: { 'page-type': 'audio' },
+        } as unknown as GetServerSidePropsContext['req'],
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandAudioRoute).toHaveBeenCalled();
+    });
+  });
+
+  describe('On Demand TV page type', () => {
+    it('should call the On Demand TV route handler if an On Demand TV page is requested using URL for /tv/', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/pidgin/bbc_pidgin_tv/tv/some-tv-page',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandTvRoute).toHaveBeenCalled();
+    });
+
+    it('should call the On Demand TV route handler if an On Demand TV page is requested using URL for /tv_programmes/', async () => {
+      const context = {
+        ...commonContext,
+        resolvedUrl: '/pidgin/bbc_pidgin_tv/tv_programmes/some-tv-page',
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandTvRoute).toHaveBeenCalled();
+    });
+
+    it('should call the On Demand TV route handler if an On Demand TV page is requested using page-type header', async () => {
+      const context = {
+        ...commonContext,
+        req: {
+          headers: { 'page-type': 'tv' },
+        } as unknown as GetServerSidePropsContext['req'],
+      };
+
+      await getServerSideProps(context);
+
+      expect(handleOnDemandTvRoute).toHaveBeenCalled();
     });
   });
 

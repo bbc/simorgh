@@ -1,11 +1,10 @@
-import Cookie from 'js-cookie';
 import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
 } from '#app/components/react-testing-library-with-providers';
 import type { IdctaConfig } from '#app/models/types/account';
-
+import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
 
 const idctaConfig: IdctaConfig = {
@@ -19,7 +18,9 @@ const idctaConfig: IdctaConfig = {
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
-};
+} as unknown as IdctaConfig;
+
+jest.mock('#app/hooks/useToggle');
 
 const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
@@ -28,8 +29,8 @@ const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   });
 
 describe('AccountPromotionalBanner', () => {
-  afterEach(() => {
-    Cookie.remove('ckns_id');
+  beforeEach(() => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: true });
   });
 
   it('renders when signed out and IDCTA is available', async () => {
@@ -61,9 +62,7 @@ describe('AccountPromotionalBanner', () => {
   });
 
   it('does not render when signed in', () => {
-    Cookie.set('ckns_id', '1');
-
-    renderWithProviders();
+    renderWithProviders({ initialIsSignedIn: true });
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
@@ -84,6 +83,15 @@ describe('AccountPromotionalBanner', () => {
 
   it('does not render when IDCTA is not available', () => {
     renderWithProviders({ 'id-availability': 'RED' });
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('does not render when account toggle is disabled', () => {
+    (useToggle as jest.Mock).mockReturnValue({ enabled: false });
+    renderWithProviders();
 
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),

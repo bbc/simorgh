@@ -3,6 +3,7 @@ import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useHydrationDetection from '#hooks/useHydrationDetection';
 import Text from '#app/components/Text';
+import { AccountIcon } from '#app/components/icons';
 import styles from './index.styles';
 
 const AccountHeader = () => {
@@ -14,15 +15,16 @@ const AccountHeader = () => {
   if (!isHydrated || !isIdctaAvailable) return null;
 
   const href = isSignedIn ? forYouUrl : signInUrl;
-  if (!href) return null;
-
   const label = isSignedIn
-    ? (translations?.account?.forYou ?? 'For you')
-    : (translations?.account?.signIn ?? 'Sign In');
+    ? translations?.account?.forYou
+    : translations?.account?.signIn;
+
+  if (!href || !label) return null;
 
   return (
     <div css={styles.wrapper}>
-      <Text as="a" css={styles.link} href={href}>
+      <Text as="a" css={styles.link} href={href} fontVariant="sansBold">
+        <AccountIcon css={styles.icon} />
         {label}
       </Text>
     </div>
