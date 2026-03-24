@@ -153,8 +153,8 @@ const bylineExtractor = ({
   switch (pageType) {
     case ARTICLE_PAGE:
     case MEDIA_ARTICLE_PAGE:
-    case PHOTO_GALLERY_PAGE:
     case MEDIA_ASSET_PAGE:
+    case PHOTO_GALLERY_PAGE:
     case STORY_PAGE:
       return articlePageBylineExtractor(
         blocks as OptimoBylineContributorBlock[],

@@ -5,6 +5,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
+import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -274,7 +275,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const bylineLinkedData = bylineExtractor({
     blocks: bylineContribBlocks,
     pageType,
-  });
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 

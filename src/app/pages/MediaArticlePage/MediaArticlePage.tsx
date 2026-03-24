@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react';
 import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { Tag } from '#app/components/LinkedData/types';
+import { BylineLinkedData, Tag } from '#app/components/LinkedData/types';
 import {
   Article,
   OptimoBylineBlock,
@@ -168,7 +168,7 @@ const MediaArticlePage = ({ pageData }: { pageData: Article }) => {
   const bylineLinkedData = bylineExtractor({
     blocks: bylineContribBlocks,
     pageType,
-  });
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 
