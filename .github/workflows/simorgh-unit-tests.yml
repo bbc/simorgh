@@ -41,6 +41,7 @@ jobs:
           git config --global user.email "DESimorghMaintainers@bbc.co.uk"
           git config --global user.name "ws-simorgh-unified-framework"
           git config --list --global
+          curl -i -s -H "Authorization: Bearer $WS_UTF_AUTH" https://api.github.com/repos/bbc/unified-web-e2e-framework
           git ls-remote https://github.com/bbc/unified-web-e2e-framework.git
 
       - name: Install Node Modules
