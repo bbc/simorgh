@@ -23,6 +23,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.WS_UTF_AUTH }}
 
       - name: Cache Node Modules
         id: cache
@@ -33,9 +35,16 @@ jobs:
             ws-nextjs-app/node_modules
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
-      - name: Install Unified Testing Framework
-        run: |
-          git clone https://oauth2:$WS_UTF_AUTH@github.com/bbc/unified-web-e2e-framework.git
+      # - name: Install Unified Testing Framework
+      #   run: |
+      #     git clone https://oauth2:$WS_UTF_AUTH@github.com/bbc/unified-web-e2e-framework.git
+
+      - name: use auth token for yarn
+        uses: v-venes/create-npmrc@v1.0.0
+        with:
+          org_name: bbc
+          auth_token: WS_UTF_AUTH
+          always_auth: true
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
