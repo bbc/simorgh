@@ -187,7 +187,7 @@ const OnDemandAudioPage = ({
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
                 {episodeTitle && (
-                  <div css={styles.footerTimestampWrapper}>
+                  <div css={styles.footerTimeStampWrapper}>
                     <FooterTimestamp
                       releaseDateTimeStamp={releaseDateTimeStamp}
                     />

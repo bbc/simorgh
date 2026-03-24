@@ -4,7 +4,7 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
-  footerTimestampWrapper: () =>
+  footerTimeStampWrapper: () =>
     css({
       display: 'block',
     }),
