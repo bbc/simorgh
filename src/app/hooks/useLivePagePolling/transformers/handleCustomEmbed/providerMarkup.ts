@@ -3,13 +3,13 @@ const providerClass: { [char: string]: string } = {
   instagram: 'instagram-media',
   tiktok: 'tiktok-media',
   twitter: 'twitter-tweet',
-  youtube: 'youtube-media'
+  youtube: 'youtube-media',
 };
 const capitalize = (s: string) => `${s?.charAt(0).toUpperCase()}${s?.slice(1)}`;
 
 export const instagram = ({
   provider,
-  url
+  url,
 }: {
   provider: string;
   url: string;
@@ -73,7 +73,7 @@ export const twitter = ({ provider, url }: { provider: string; url: string }) =>
   `<blockquote class="${
     providerClass[provider]
   }"><a href="${url}">View original content on ${capitalize(
-    provider
+    provider,
   )}</a></blockquote>`;
 
 export const youtube = ({ provider, url }: { provider: string; url: string }) =>
