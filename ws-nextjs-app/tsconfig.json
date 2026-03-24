@@ -27,6 +27,7 @@
     "build",
     "src/app/legacy/**/*",
     "cypress",
-    "cypress.config.ts"
+    "cypress.config.ts",
+    "playwright/**/*.ts"
   ]
 }

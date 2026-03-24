@@ -15,7 +15,6 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
-      WS_UTF_AUTH: ${{ secrets.WS_UTF_AUTH }}
 
     steps:
       - uses: actions/checkout@v4
@@ -23,8 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-        env:
-          WS_UTF_TOKEN: ${{ secrets.WS_UTF_AUTH }}
 
       - name: Cache Node Modules
         id: cache
@@ -35,20 +32,13 @@ jobs:
             ws-nextjs-app/node_modules
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
-      # - name: use auth token for yarn
-      #   uses: v-venes/create-npmrc@v1.0.0
-      #   with:
-      #     org_name: bbc
-      #     auth_token: ${{ secrets.WS_UTF_AUTH }}
-      #     always_auth: true
-
       - name: Install Node Modules
-        # if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache.ohutputs.cache-hit != 'true'
         run: |
           rm -rf node_modules
           git config --global user.email "DESimorghMaintainers@bbc.co.uk"
           git config --global user.name "ws-simorgh-unified-framework"
-          git config --global url.https://${{ secrets.WS_UTsF_AUTH }}@github.com/.insteadOf https://github.com/
+          git config --global url.https://${{ secrets.WS_UTF_AUTH }}@github.com/.insteadOf https://github.com/
           ./scripts/installNodeModules.sh
 
       - name: Build Simorgh - Express App

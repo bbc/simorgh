@@ -20,12 +20,6 @@ jobs:
       CYPRESS_APP_ENV: 'local'
 
     steps:
-      - name: Show GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
-        shell: bash
-
       - name: Checkout
         uses: actions/checkout@v4
 
