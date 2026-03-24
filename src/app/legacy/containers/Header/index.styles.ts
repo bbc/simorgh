@@ -52,6 +52,10 @@ export default {
         },
         [mq.GROUP_3_MIN_WIDTH]: {
           padding: `0 ${spacings.DOUBLE}rem`,
+          minHeight: `${pixelsToRem(60)}rem`,
+        },
+        [mq.GROUP_4_MIN_WIDTH]: {
+          minHeight: `${pixelsToRem(60)}rem`,
         },
       },
     }),
