@@ -11,9 +11,9 @@ export default {
     css({
       background: palette.WHITE,
       width: '100%',
-      maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
+      maxWidth: `calc(${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
-      padding: `${spacings.HALF}rem ${spacings.DOUBLE}rem 0`,
+      padding: `0 ${spacings.DOUBLE}rem`,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -23,44 +23,40 @@ export default {
         justifyContent: 'flex-start',
       },
 
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `${spacings.HALF}rem 0 0`,
+      a: {
+        lineHeight: 0,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
-      'a[aria-labelledby^="BrandLink-"]': {
+      minHeight: 'auto',
+      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+
+      [mq.GROUP_1_MIN_WIDTH]: {
+        minHeight: 'auto',
+      },
+
+      [mq.GROUP_2_MIN_WIDTH]: {
+        minHeight: 'auto',
+        padding: `0 ${spacings.FULL}rem`,
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        minHeight: 'auto',
+        padding: `0 ${spacings.DOUBLE}rem`,
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
+
+      a: {
         paddingTop: `${pixelsToRem(2)}rem`,
       },
-
-      '&[data-banner-type="styled-brand"]': {
-        minHeight: 'auto',
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-
-        [mq.GROUP_1_MIN_WIDTH]: {
-          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-        },
-
-        [mq.GROUP_2_MIN_WIDTH]: {
-          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-          padding: `0 ${spacings.FULL}rem`,
-        },
-        [mq.GROUP_3_MIN_WIDTH]: {
-          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-          padding: `0 ${spacings.DOUBLE}rem`,
-        },
-      },
     }),
-  logoSvg: ({ mq, palette, spacings }: Theme) =>
+  logoSvg: ({ palette }: Theme) =>
     css({
       boxSizing: 'content-box',
       color: palette.BLACK,
       fill: 'currentColor',
       height: `${SVG_HEIGHT}px`,
       maxWidth: `${LOGO_ASPECT_RATIO * SVG_HEIGHT}px`,
-
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: `0 ${spacings.DOUBLE}rem`,
-      },
     }),
 };
