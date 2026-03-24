@@ -30,7 +30,7 @@ export default {
           height: '100%',
           width: `${spacings.SEXTUPLE}rem`,
           [mq.GROUP_2_MIN_WIDTH]: {
-            width: '6rem',
+            width: `${pixelsToRem(96)}rem`,
           },
           position: 'absolute',
           top: 0,
@@ -55,7 +55,7 @@ export default {
         /* Pad the end so the last item can scroll fully clear of the gradient overlay */
         paddingInlineEnd: `${spacings.SEXTUPLE}rem`,
         [mq.GROUP_2_MIN_WIDTH]: {
-          paddingInlineEnd: '6rem',
+          paddingInlineEnd: `${pixelsToRem(96)}rem`,
         },
 
         /* Hide scrollbar */

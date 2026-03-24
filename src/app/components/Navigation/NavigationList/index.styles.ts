@@ -25,8 +25,8 @@ export default {
         '&::after': {
           content: "''",
           position: 'absolute',
-          bottom: '-1px',
-          width: '63.5rem',
+          bottom: `-${pixelsToRem(1)}rem`,
+          width: `${pixelsToRem(1016)}rem`,
           borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_3}`,
           zIndex: -1,
         },
@@ -35,7 +35,7 @@ export default {
 
   // Visual defaults for all services. The new-nav container's topRowItems/bottomRowItems
   // descendant styles (higher CSS specificity) override these for POSTBOX-background rows.
-  link: ({ palette, fontSizes, fontVariants, mq }: Theme) =>
+  link: ({ palette, fontSizes, fontVariants, mq, spacings }: Theme) =>
     css({
       ...fontSizes.pica,
       ...fontVariants.sansRegular,
@@ -43,10 +43,10 @@ export default {
       cursor: 'pointer',
       textDecoration: 'none',
       display: 'inline-block',
-      padding: '0.75rem 0.25rem',
+      padding: `${pixelsToRem(12)}rem ${spacings.HALF}rem`,
       outline: 'none',
       [mq.GROUP_2_MAX_WIDTH]: {
-        padding: `0.75rem ${pixelsToRem(8)}rem`,
+        padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       },
       '&:hover::after': {
         content: "''",

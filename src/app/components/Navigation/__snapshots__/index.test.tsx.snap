@@ -264,7 +264,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
@@ -1051,7 +1051,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
@@ -1816,7 +1816,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
@@ -2597,7 +2597,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
@@ -3357,7 +3357,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;
@@ -4095,7 +4095,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   .emotion-9::after {
     content: '';
     position: absolute;
-    bottom: -1px;
+    bottom: -0.0625rem;
     width: 63.5rem;
     border-bottom: 0.0625rem solid #E6E8EA;
     z-index: -1;

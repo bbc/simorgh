@@ -71,7 +71,7 @@ export default {
       textDecoration: 'none',
       display: 'block',
       position: 'relative',
-      padding: `0.75rem ${spacings.FULL}rem`,
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       '&:hover': {
         backgroundColor: palette.GREY_3,
         textDecoration: 'none',
