@@ -65,6 +65,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         </ScrollableNavigation>
       </div>
     </div>
+    <div css={styles.bottomDivider} />
   </NavigationWrapper>
 );
 
