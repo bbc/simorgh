@@ -72,7 +72,7 @@ export const service: DefaultServiceConfig = {
       gist: 'At a glance',
       account: {
         signIn: 'Sign In',
-        forYou: 'For you',
+        forYou: 'Your Account',
         register: 'Register',
       },
       accountPromoBanner: {
