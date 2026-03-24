@@ -17,7 +17,6 @@ const useLivePagePolling = (
 
   useEffect(() => {
     const timerId = setInterval(async () => {
-      console.log('CHECK INIT', enableFeature, currentStreamData?.page?.index);
       if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
 
