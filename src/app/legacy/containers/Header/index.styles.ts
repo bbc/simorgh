@@ -30,9 +30,7 @@ export default {
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
       'a[aria-labelledby^="BrandLink-"]': {
-        [mq.GROUP_0_MAX_WIDTH]: {
-          paddingTop: `${pixelsToRem(2)}rem`,
-        },
+        paddingTop: `${pixelsToRem(2)}rem`,
       },
 
       '&[data-banner-type="styled-brand"]': {
