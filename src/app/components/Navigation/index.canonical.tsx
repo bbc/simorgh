@@ -45,11 +45,7 @@ const CanonicalNavigationContainer: React.FC<
       <div css={styles.navStack}>
         <div css={{ position: 'relative', width: '100%' }}>
           <div css={styles.topRow}>
-            <ScrollableNavigation
-              dir={dir}
-              css={styles.topRowItems}
-              navPosition="primary"
-            >
+            <ScrollableNavigation dir={dir} navPosition="primary">
               {topScrollableListItems}
             </ScrollableNavigation>
             {!isLite && (
@@ -61,16 +57,12 @@ const CanonicalNavigationContainer: React.FC<
               />
             )}
           </div>
-          <CanonicalDropdown isOpen={isOpen} css={styles.dropdown}>
+          <CanonicalDropdown isOpen={isOpen}>
             {dropdownListItems}
           </CanonicalDropdown>
         </div>
         <div css={styles.lowerNavWrapper}>
-          <ScrollableNavigation
-            dir={dir}
-            css={styles.bottomRowItems}
-            navPosition="secondary"
-          >
+          <ScrollableNavigation dir={dir} navPosition="secondary">
             {bottomScrollableListItems}
           </ScrollableNavigation>
         </div>

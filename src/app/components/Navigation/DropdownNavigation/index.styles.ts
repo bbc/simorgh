@@ -6,7 +6,13 @@ import { MAX_NAV_ITEM_HEIGHT } from '../index.styles';
 export default {
   dropdown: ({ palette, mq }: Theme) =>
     css({
+      position: 'absolute',
+      top: '100%',
+      left: 0,
+      width: '100%',
+      zIndex: 99999,
       backgroundColor: palette.WHITE,
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
       clear: 'both',
       overflow: 'hidden',
       height: 0,
@@ -28,7 +34,13 @@ export default {
 
   ampDropdown: ({ palette, mq }: Theme) =>
     css({
+      position: 'absolute',
+      top: '100%',
+      left: 0,
+      width: '100%',
+      zIndex: 99999,
       backgroundColor: palette.WHITE,
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
       clear: 'both',
       [mq.GROUP_3_MIN_WIDTH]: {
         display: 'none',
@@ -51,19 +63,35 @@ export default {
       },
     }),
 
-  // Visual defaults for legacy nav services.
-  // The new-nav container's `dropdown` descendant styles override display, padding and hover.
-  dropdownLink: ({ palette, fontSizes, fontVariants }: Theme) =>
+  dropdownLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontSizes.pica,
       ...fontVariants.sansRegular,
       color: palette.GREY_10,
       textDecoration: 'none',
-      padding: '0.75rem 0',
-      display: 'inline-block',
-      '&:hover, &:focus': {
-        textDecoration: 'underline',
-        textDecorationColor: palette.POSTBOX,
+      display: 'block',
+      position: 'relative',
+      padding: `0.75rem ${spacings.FULL}rem`,
+      '&:hover': {
+        backgroundColor: palette.GREY_3,
+        textDecoration: 'none',
+      },
+      '&::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        insetInlineStart: 0,
+        height: '100%',
+        width: `${pixelsToRem(4)}rem`,
+        background: palette.POSTBOX,
+        display: 'block',
+        opacity: 0,
+      },
+      '&:hover::before': {
+        opacity: 1,
+      },
+      '&:focus-visible': {
+        outlineOffset: `-${pixelsToRem(3)}rem`,
       },
     }),
 

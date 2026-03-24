@@ -33,11 +33,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
     <div css={styles.navStack}>
       <div css={{ position: 'relative', width: '100%' }}>
         <div css={styles.topRow}>
-          <ScrollableNavigation
-            dir={dir}
-            css={[styles.topRowItems, styles.ampScrollableNav]}
-            navPosition="primary"
-          >
+          <ScrollableNavigation dir={dir} navPosition="primary">
             {topScrollableListItems}
           </ScrollableNavigation>
           <AmpMenuButton
@@ -50,7 +46,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
             dir={dir}
           />
         </div>
-        <AmpDropdown id={DROPDOWN_ID} css={styles.dropdown} hidden>
+        <AmpDropdown id={DROPDOWN_ID} hidden>
           {dropdownListItems}
         </AmpDropdown>
       </div>
@@ -58,7 +54,6 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         <ScrollableNavigation
           id={SCROLLABLE_ID}
           dir={dir}
-          css={[styles.bottomRowItems, styles.ampScrollableNav]}
           navPosition="secondary"
         >
           {bottomScrollableListItems}

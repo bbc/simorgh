@@ -17,7 +17,11 @@ const ScrollableNavigation = ({
   className,
 }: PropsWithChildren<Props>) => (
   <div
-    css={styles.scrollableNav}
+    css={[
+      styles.scrollableNav,
+      navPosition === 'primary' && styles.primary,
+      navPosition === 'secondary' && styles.secondary,
+    ]}
     data-e2e={`scrollable-nav${navPosition === 'secondary' ? '-secondary' : ''}`}
     dir={dir}
     id={id}
