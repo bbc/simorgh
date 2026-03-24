@@ -75,6 +75,9 @@ export default {
       '&:hover': {
         backgroundColor: palette.GREY_3,
         textDecoration: 'none',
+        '&::before': {
+          opacity: 1,
+        },
       },
       '&::before': {
         content: '""',
@@ -87,10 +90,9 @@ export default {
         display: 'block',
         opacity: 0,
       },
-      '&:hover::before': {
-        opacity: 1,
-      },
       '&:focus-visible': {
+        textDecoration: 'underline',
+        textDecorationColor: palette.POSTBOX,
         outlineOffset: `-${pixelsToRem(3)}rem`,
       },
     }),
