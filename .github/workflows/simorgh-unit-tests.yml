@@ -41,7 +41,7 @@ jobs:
           git config --global user.email "DESimorghMaintainers@bbc.co.uk"
           git config --global user.name "ws-simorgh-unified-framework"
           git config --list --global
-          git ls-remote https://github.com/bbc/simorgh.git
+          git ls-remote https://github.com/bbc/unified-web-e2e-framework.git
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
