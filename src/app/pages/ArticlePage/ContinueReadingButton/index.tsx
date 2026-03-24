@@ -20,7 +20,6 @@ const ContinueReadingButton = ({
   showAllContent,
   setShowAllContent,
   experimentProps,
-  className,
   css: cssOverride,
 }: ContinueReadingButtonProps) => {
   const {
