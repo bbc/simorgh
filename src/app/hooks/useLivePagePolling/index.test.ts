@@ -33,7 +33,7 @@ describe('useLivePagePolling', () => {
     );
   });
 
-  it('should set pending update to true when a change in stream data is detected', async () => {
+  it('should set pending update to true when a change in urn for the first post is detected', async () => {
     const initialPageData =
       fixtureLivePageData as unknown as ComponentProps['pageData'];
 
@@ -111,5 +111,26 @@ describe('useLivePagePolling', () => {
     });
 
     expect(requestSpy).not.toHaveBeenCalled();
+  });
+
+  it('should set pending update to false when there is no change in urn for the first post', async () => {
+    const initialPageData =
+      fixtureLivePageData as unknown as ComponentProps['pageData'];
+
+    jest
+      .spyOn(makeRequest, 'default')
+      .mockResolvedValue(fixtureLivePageData.liveTextStream.content.data);
+
+    const { result } = renderHook(() =>
+      useLivePagePolling(initialPageData, true),
+    );
+
+    await act(async () => {
+      jest.advanceTimersByTime(POLLING_INTERVAL);
+    });
+
+    const { hasPendingUpdate } = result.current;
+
+    expect(hasPendingUpdate).toBe(false);
   });
 });
