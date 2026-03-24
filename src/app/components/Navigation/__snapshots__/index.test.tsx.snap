@@ -469,6 +469,10 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   text-decoration: none;
 }
 
+.emotion-24:hover::before {
+  opacity: 1;
+}
+
 .emotion-24::before {
   content: "";
   position: absolute;
@@ -481,11 +485,10 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   opacity: 0;
 }
 
-.emotion-24:hover::before {
-  opacity: 1;
-}
-
 .emotion-24:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
@@ -1244,6 +1247,10 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   text-decoration: none;
 }
 
+.emotion-22:hover::before {
+  opacity: 1;
+}
+
 .emotion-22::before {
   content: "";
   position: absolute;
@@ -1256,11 +1263,10 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   opacity: 0;
 }
 
-.emotion-22:hover::before {
-  opacity: 1;
-}
-
 .emotion-22:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
@@ -2015,6 +2021,10 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   text-decoration: none;
 }
 
+.emotion-24:hover::before {
+  opacity: 1;
+}
+
 .emotion-24::before {
   content: "";
   position: absolute;
@@ -2027,11 +2037,10 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   opacity: 0;
 }
 
-.emotion-24:hover::before {
-  opacity: 1;
-}
-
 .emotion-24:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
@@ -2806,6 +2815,10 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   text-decoration: none;
 }
 
+.emotion-22:hover::before {
+  opacity: 1;
+}
+
 .emotion-22::before {
   content: "";
   position: absolute;
@@ -2818,11 +2831,10 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   opacity: 0;
 }
 
-.emotion-22:hover::before {
-  opacity: 1;
-}
-
 .emotion-22:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
@@ -3554,6 +3566,10 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   text-decoration: none;
 }
 
+.emotion-20:hover::before {
+  opacity: 1;
+}
+
 .emotion-20::before {
   content: "";
   position: absolute;
@@ -3566,11 +3582,10 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   opacity: 0;
 }
 
-.emotion-20:hover::before {
-  opacity: 1;
-}
-
 .emotion-20:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
@@ -4298,6 +4313,10 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   text-decoration: none;
 }
 
+.emotion-22:hover::before {
+  opacity: 1;
+}
+
 .emotion-22::before {
   content: "";
   position: absolute;
@@ -4310,11 +4329,10 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   opacity: 0;
 }
 
-.emotion-22:hover::before {
-  opacity: 1;
-}
-
 .emotion-22:focus-visible {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: #B80000;
   outline-offset: -0.1875rem;
 }
 
