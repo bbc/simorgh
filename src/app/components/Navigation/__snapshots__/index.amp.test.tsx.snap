@@ -83,6 +83,13 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-5.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-5 {
     position: relative;
     white-space: nowrap;
@@ -207,13 +214,6 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   background: none;
 }
 
-@media (max-width: 37.4375rem) {
-  .emotion-5.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 .emotion-6 {
   position: relative;
   padding: 0;
@@ -282,14 +282,14 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 }
 
 .emotion-12 {
-  background-color: #FFFFFF;
-  clear: both;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 99999;
+  background-color: #FFFFFF;
   border-bottom: 0.1875rem solid #B80000;
+  clear: both;
 }
 
 @media (min-width: 37.5rem) {
@@ -299,55 +299,17 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   }
 }
 
-.emotion-12 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-12 ul li {
-  padding: 0;
-}
-
-.emotion-12 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-12 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-12 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-12 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-12 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-12 a:focus-visible {
-  outline-offset: -0.1875rem;
-}
-
 .emotion-13 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-14.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -440,13 +402,6 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 
 .emotion-14 li:last-child:before {
   display: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-14.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-15 {

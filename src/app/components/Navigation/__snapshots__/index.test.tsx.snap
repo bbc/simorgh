@@ -91,6 +91,13 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
     white-space: nowrap;
@@ -213,13 +220,6 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 
 .emotion-6.emotion-6::after {
   background: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-6.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-7 {
@@ -383,14 +383,14 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 }
 
 .emotion-20 {
-  background-color: #FFFFFF;
-  clear: both;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 99999;
+  background-color: #FFFFFF;
   border-bottom: 0.1875rem solid #B80000;
+  clear: both;
 }
 
 @media (min-width: 37.5rem) {
@@ -398,51 +398,6 @@ exports[`Navigation should correctly render amp navigation 1`] = `
     display: none;
     visibility: hidden;
   }
-}
-
-.emotion-20 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-20 ul li {
-  padding: 0;
-}
-
-.emotion-20 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-20 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-20 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-20 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-20 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-20 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-21 {
@@ -469,8 +424,9 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -487,17 +443,43 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
-.emotion-23:hover,
-.emotion-23:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-23:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-23:hover::before {
+  opacity: 1;
+}
+
+.emotion-23:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-24 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-25.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -590,13 +572,6 @@ exports[`Navigation should correctly render amp navigation 1`] = `
 
 .emotion-25 li:last-child:before {
   display: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-25.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-27 {
@@ -887,6 +862,13 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
     white-space: nowrap;
@@ -1009,13 +991,6 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 
 .emotion-6.emotion-6::after {
   background: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-6.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-7 {
@@ -1170,14 +1145,14 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 }
 
 .emotion-18 {
-  background-color: #FFFFFF;
-  clear: both;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 99999;
+  background-color: #FFFFFF;
   border-bottom: 0.1875rem solid #B80000;
+  clear: both;
 }
 
 @media (min-width: 37.5rem) {
@@ -1185,51 +1160,6 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
     display: none;
     visibility: hidden;
   }
-}
-
-.emotion-18 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-18 ul li {
-  padding: 0;
-}
-
-.emotion-18 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-18 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-18 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-18 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-18 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-18 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-19 {
@@ -1256,8 +1186,9 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1274,17 +1205,43 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-21:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-21::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-21:hover::before {
+  opacity: 1;
+}
+
+.emotion-21:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-22 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-23.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -1377,13 +1334,6 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
 
 .emotion-23 li:last-child:before {
   display: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-23.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-25 {
@@ -1661,6 +1611,13 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
     white-space: nowrap;
@@ -1783,13 +1740,6 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 
 .emotion-6.emotion-6::after {
   background: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-6.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-7 {
@@ -1953,14 +1903,14 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 }
 
 .emotion-20 {
-  background-color: #FFFFFF;
-  clear: both;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   z-index: 99999;
+  background-color: #FFFFFF;
   border-bottom: 0.1875rem solid #B80000;
+  clear: both;
 }
 
 @media (min-width: 37.5rem) {
@@ -1968,51 +1918,6 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
     display: none;
     visibility: hidden;
   }
-}
-
-.emotion-20 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-20 ul li {
-  padding: 0;
-}
-
-.emotion-20 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-20 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-20 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-20 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-20 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-20 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-21 {
@@ -2039,8 +1944,9 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2057,17 +1963,43 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
-.emotion-23:hover,
-.emotion-23:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-23:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-23:hover::before {
+  opacity: 1;
+}
+
+.emotion-23:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-24 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-25.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -2160,13 +2092,6 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
 
 .emotion-25 li:last-child:before {
   display: none;
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-25.si-nav-scrollable-hidden {
-    display: none;
-    visibility: hidden;
-  }
 }
 
 .emotion-27 {
@@ -2448,6 +2373,13 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   transform: translateX(-50%);
   background: #B80000;
   pointer-events: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -2736,7 +2668,13 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 .emotion-18 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
   background-color: #FFFFFF;
+  border-bottom: 0.1875rem solid #B80000;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -2744,12 +2682,6 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 99999;
-  border-bottom: 0.1875rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -2764,51 +2696,6 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
     -webkit-transition: none;
     transition: none;
   }
-}
-
-.emotion-18 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-18 ul li {
-  padding: 0;
-}
-
-.emotion-18 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-18 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-18 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-18 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-18 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-18 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-19 {
@@ -2835,8 +2722,9 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2853,17 +2741,43 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   }
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-21:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-21::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-21:hover::before {
+  opacity: 1;
+}
+
+.emotion-21:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-22 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-23.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -3206,6 +3120,13 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
     white-space: nowrap;
@@ -3482,7 +3403,13 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 .emotion-16 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
   background-color: #FFFFFF;
+  border-bottom: 0.1875rem solid #B80000;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -3490,12 +3417,6 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 99999;
-  border-bottom: 0.1875rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -3510,51 +3431,6 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
     -webkit-transition: none;
     transition: none;
   }
-}
-
-.emotion-16 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-16 ul li {
-  padding: 0;
-}
-
-.emotion-16 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-16 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-16 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-16 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-16 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-17 {
@@ -3581,8 +3457,9 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3599,17 +3476,43 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   }
 }
 
-.emotion-19:hover,
-.emotion-19:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-19:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-19::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-19:hover::before {
+  opacity: 1;
+}
+
+.emotion-19:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-20 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-21.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
@@ -3939,6 +3842,13 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 @media (max-width: 37.4375rem) {
+  .emotion-6.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 37.4375rem) {
   .emotion-6 {
     position: relative;
     white-space: nowrap;
@@ -4224,7 +4134,13 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 .emotion-18 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
   background-color: #FFFFFF;
+  border-bottom: 0.1875rem solid #B80000;
   clear: both;
   overflow: hidden;
   height: 0;
@@ -4232,12 +4148,6 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   transition: all 0.2s ease-out;
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 99999;
-  border-bottom: 0.1875rem solid #B80000;
 }
 
 @media (min-width: 37.5rem) {
@@ -4252,51 +4162,6 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
     -webkit-transition: none;
     transition: none;
   }
-}
-
-.emotion-18 ul {
-  padding: 0;
-  border: none;
-}
-
-.emotion-18 ul li {
-  padding: 0;
-}
-
-.emotion-18 ul li:last-child {
-  padding-bottom: 0;
-}
-
-.emotion-18 a {
-  display: block;
-  position: relative;
-  padding-inline: 0.5rem;
-}
-
-.emotion-18 a:hover {
-  background-color: #E6E8EA;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-18 a:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  height: 100%;
-  width: 0.25rem;
-  background: #B80000;
-  display: block;
-  opacity: 0;
-}
-
-.emotion-18 a:hover::before {
-  opacity: 1;
-}
-
-.emotion-18 a:focus-visible {
-  outline-offset: -0.1875rem;
 }
 
 .emotion-19 {
@@ -4323,8 +4188,9 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   color: #141414;
   -webkit-text-decoration: none;
   text-decoration: none;
-  padding: 0.75rem 0;
-  display: inline-block;
+  display: block;
+  position: relative;
+  padding: 0.75rem 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -4341,17 +4207,43 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   }
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  text-decoration-color: #B80000;
+.emotion-21:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-21::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-21:hover::before {
+  opacity: 1;
+}
+
+.emotion-21:focus-visible {
+  outline-offset: -0.1875rem;
 }
 
 .emotion-22 {
   width: 100%;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-23.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 37.4375rem) {
