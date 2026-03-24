@@ -8,6 +8,9 @@ import {
   ARTICLE_PAGE,
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   PostContributor,
@@ -147,13 +150,20 @@ const bylineExtractor = ({
 }) => {
   if (!blocks || !pageType) return [];
 
-  return (
-    {
-      [LIVE_PAGE]: livePageBylineExtractor,
-      [ARTICLE_PAGE]: articlePageBylineExtractor,
-      [MEDIA_ARTICLE_PAGE]: articlePageBylineExtractor,
-    }[pageType](blocks) || []
-  );
+  switch (pageType) {
+    case ARTICLE_PAGE:
+    case MEDIA_ARTICLE_PAGE:
+    case PHOTO_GALLERY_PAGE:
+    case MEDIA_ASSET_PAGE:
+    case STORY_PAGE:
+      return articlePageBylineExtractor(
+        blocks as OptimoBylineContributorBlock[],
+      );
+    case LIVE_PAGE:
+      return livePageBylineExtractor(blocks as PostContributor['model'][]);
+    default:
+      return [];
+  }
 };
 
 export default bylineExtractor;
