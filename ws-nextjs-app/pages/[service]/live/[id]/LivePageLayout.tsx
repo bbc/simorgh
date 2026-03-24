@@ -74,7 +74,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(pageData, false);
+    useLivePagePolling(pageData, true);
 
   const {
     title,

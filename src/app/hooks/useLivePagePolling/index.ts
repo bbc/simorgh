@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ComponentProps } from '#nextjs/pages/[service]/live/[id]/LivePageLayout';
 import makeRequest from './makeRequest/makeRequest';
 
-export const POLLING_INTERVAL = 5000;
+export const POLLING_INTERVAL = 1000;
 
 const useLivePagePolling = (
   pageData: ComponentProps['pageData'],
@@ -17,6 +17,7 @@ const useLivePagePolling = (
 
   useEffect(() => {
     const timerId = setInterval(async () => {
+      console.log('CHECK INIT', enableFeature, currentStreamData?.page?.index);
       if (enableFeature === false) return;
       if (currentStreamData?.page?.index !== 1) return;
 

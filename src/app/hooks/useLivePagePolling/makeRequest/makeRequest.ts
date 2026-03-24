@@ -1,16 +1,26 @@
 import { map, pipe } from 'ramda';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import handlePostBlocks from '../transformers/handlePostBlocks';
 import addIdsToPost from '../transformers/addIdsToPost';
 import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
 
 export default async (liveTextStreamId: string) => {
   try {
-    const fetchUrl = `/fd/ws-poll/stream?liveTextStreamId=${liveTextStreamId}&page=1&pageSize=20&type=curated`;
+    const webCdnHost = getEnvConfig().SIMORGH_MOST_READ_CDN_URL;
+    console.log('CHECK CDN', webCdnHost);
+
+    const fetchUrl = `${webCdnHost}/fd/stream?liveTextStreamId=${liveTextStreamId}&type=curated`;
+
+    console.log('CHECK FETCH URL', fetchUrl);
     const response = await fetch(fetchUrl);
     const { status } = response;
-    const { data } = await response.json();
+    const { data, headers } = await response.json();
 
+    console.log('CHECK STAT', status);
     if (status === 200 && data.results.length > 0) {
+      console.log('CHECK DATA', data);
+      console.log('CHECK HEAD', headers);
+      console.log('+==============+');
       const formattedData = map(
         pipe(handlePostBlocks, addIdsToPost, addIndexesToEmbeds),
         data.results,
