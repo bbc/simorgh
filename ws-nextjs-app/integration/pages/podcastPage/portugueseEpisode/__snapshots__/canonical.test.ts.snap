@@ -124,6 +124,62 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 }
 `;
 
+exports[`Canonical Podcast Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Brasil",
+  "url": "/portuguese/topics/cz74k717pw5t",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/portuguese/topics/cmdm4ynm24kt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Economia",
+  "url": "/portuguese/topics/cvjp2jr0k9rt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Saúde",
+  "url": "/portuguese/topics/c340q430z4vt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciência",
+  "url": "/portuguese/topics/cr50y580rjxt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Tecnologia",
+  "url": "/portuguese/topics/c404v027pd4t",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Vídeos",
+  "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "Podcasts",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
+}
+`;
+
 exports[`Canonical Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
 exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria."`;
@@ -136,20 +192,20 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist�
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-ucozvf"
+  class="media-container css-1h3uo5r"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
+    class="media-player css-169uiqx"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-1ezssgh"
+          class="css-12vn9sc"
         >
           <strong
-            class="css-pow7hy"
+            class="css-1kbuwoi"
           >
             A reprodução deste formato de vídeo não é compatível com seu dispositivo
           </strong>
@@ -276,14 +332,14 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
       "associatedMedia": {
         "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t/p083x9gr#audio",
         "@type": "AudioObject",
-        "description": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
+        "description": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
         "duration": "PT16M22S",
         "name": "'A vida secreta de meu filho que só conheci quando ele morreu'",
         "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13ck5.png",
         "uploadDate": "2020-03-13T09:00:00.000Z",
       },
       "datePublished": "2020-03-13T00:00:00.000Z",
-      "description": "Quando jovem morreu de doença degenerativa, pais descobriram que ele teve vida paralela.",
+      "description": "Pais de Mats Steen achavam que filho teve vida solitária; mas quando anunciaram sua morte, não tinham ideia da comoção que isso causaria.",
       "name": "'A vida secreta de meu filho que só conheci quando ele morreu'",
       "partOfSeries": {
         "@id": "http://localhost:7081/portuguese/podcasts/p07r3r3t#series",

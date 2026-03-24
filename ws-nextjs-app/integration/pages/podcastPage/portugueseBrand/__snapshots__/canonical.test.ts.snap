@@ -124,6 +124,62 @@ exports[`Canonical Podcast Page Header Navigation link should match text and url
 }
 `;
 
+exports[`Canonical Podcast Page Header Navigation link should match text and url 2`] = `
+{
+  "text": "Brasil",
+  "url": "/portuguese/topics/cz74k717pw5t",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 3`] = `
+{
+  "text": "Internacional",
+  "url": "/portuguese/topics/cmdm4ynm24kt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 4`] = `
+{
+  "text": "Economia",
+  "url": "/portuguese/topics/cvjp2jr0k9rt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 5`] = `
+{
+  "text": "Saúde",
+  "url": "/portuguese/topics/c340q430z4vt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 6`] = `
+{
+  "text": "Ciência",
+  "url": "/portuguese/topics/cr50y580rjxt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 7`] = `
+{
+  "text": "Tecnologia",
+  "url": "/portuguese/topics/c404v027pd4t",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 8`] = `
+{
+  "text": "Vídeos",
+  "url": "/portuguese/topics/c9y2j35dn2zt",
+}
+`;
+
+exports[`Canonical Podcast Page Header Navigation link should match text and url 9`] = `
+{
+  "text": "Podcasts",
+  "url": "/portuguese/topics/cx2ggnx4j72t",
+}
+`;
+
 exports[`Canonical Podcast Page I can see the brand title 1`] = `"Que História!"`;
 
 exports[`Canonical Podcast Page I can see the episode summary 1`] = `"Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética."`;
@@ -136,20 +192,20 @@ exports[`Canonical Podcast Page Main heading should match text 1`] = `"Que Hist�
 
 exports[`Canonical Podcast Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container css-ucozvf"
+  class="media-container css-1h3uo5r"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player css-1kf4wj3"
+    class="media-player css-169uiqx"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="css-1ezssgh"
+          class="css-12vn9sc"
         >
           <strong
-            class="css-pow7hy"
+            class="css-1kbuwoi"
           >
             A reprodução deste formato de vídeo não é compatível com seu dispositivo
           </strong>
@@ -299,7 +355,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
     },
     {
       "@type": "AudioObject",
-      "description": "Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim.",
+      "description": "Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética.",
       "duration": "PT20M40S",
       "name": "Que História!",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13gnp.png",
