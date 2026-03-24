@@ -23,7 +23,6 @@ import styles from './index.styles';
 
 const Header = ({
   brandRef,
-  borderBottom,
   skipLink,
   scriptLink,
   linkId,
@@ -51,7 +50,6 @@ const Header = ({
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer
-        borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}
