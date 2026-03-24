@@ -15,6 +15,7 @@ jobs:
     env:
       CI: true
       LOG_LEVEL: 'error'
+      WS_UTF_AUTH: ${{ secrets.WS_UTF_AUTH }}
 
     steps:
       - uses: actions/checkout@v4
@@ -31,6 +32,16 @@ jobs:
             node_modules
             ws-nextjs-app/node_modules
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
+
+      - name: Install Unified Testing Framework
+        run: |
+          git config --global url."https://ws-simorgh-unified-framework:$WS_UTF_AUTH@github.com/".insteadOf "ssh://git@github.com/" --add
+          git config --global url."https://ws-simorgh-unified-framework:$WS_UTF_AUTH@github.com/".insteadOf "git://github.com/" --add
+          git config --global url."https://ws-simorgh-unified-framework:$WS_UTF_AUTH@github.com/".insteadOf "https://github.com/" --add
+          git config --global user.email "DESimorghMaintainers@bbc.co.uk"
+          git config --global user.name "ws-simorgh-unified-framework"
+          git config --list --global
+          git ls-remote https://github.com/bbc/unified-web-e2e-framework.git
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
