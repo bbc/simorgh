@@ -41,9 +41,6 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      },
 
       'a[aria-labelledby^="BrandLink-"]': {
         paddingTop: `${pixelsToRem(4)}rem`,
