@@ -1,0 +1,29 @@
+{
+  "alpha": false,
+  "lastUpdated": {
+    "day": 18,
+    "month": "Mar",
+    "year": 2026
+  },
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "https://www.figma.com/design/QIpLAsoiIRlt5OHSYVlQ5w/WS-Sign-in-button-_promoMVP?node-id=1-15698&t=LFlhd86RaU8UadX7-0",
+      "label": "Screen Reader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://www.dropbox.com/scl/fi/4iotgauz7h421zvu9a13s/WS-Sign-in-Button-AAC.paper?rlkey=x24y7pfb5gu4n1234u0i5f1e4&dl=0",
+      "label": "Accessibility Acceptance Criteria"
+    }
+  },
+  "swarm": {
+    "done": true,
+    "reference": {
+      "url": "https://www.dropbox.com/scl/fi/cocw7h80bi19h67n13sh8/A11Y-Swarm-Sign-in-Button.paper?rlkey=5cccpxj3lx352raprq0clcgh2&dl=0",
+      "label": "Accessibility Swarm Notes"
+    }
+  }
+}

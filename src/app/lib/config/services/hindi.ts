@@ -110,7 +110,7 @@ export const service: DefaultServiceConfig = {
       },
       account: {
         signIn: 'Sign In',
-        forYou: 'For you',
+        forYou: 'Your Account',
         register: 'Register',
       },
       accountPromoBanner: {
