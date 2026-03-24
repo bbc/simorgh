@@ -1,11 +1,8 @@
 import React from 'react';
-import Navigation from '#psammead/psammead-navigation/src';
-import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
-import {
-  AmpDropdown,
-  AmpMenuButton,
-} from '#psammead/psammead-navigation/src/DropdownNavigation';
 import { Direction } from '#app/models/types/global';
+import NavigationWrapper from './NavigationWrapper';
+import ScrollableNavigation from './ScrollableNavigation';
+import { AmpDropdown, AmpMenuButton } from './DropdownNavigation';
 import styles, { HIDDEN_CLASS_NAME } from './index.styles';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
@@ -28,7 +25,11 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
   bottomScrollableListItems,
   dropdownListItems,
 }) => (
-  <Navigation dir={dir} id={NAVIGATION_ID} ampOpenClass={OPEN_CLASS_NAME}>
+  <NavigationWrapper
+    dir={dir}
+    id={NAVIGATION_ID}
+    ampOpenClass={OPEN_CLASS_NAME}
+  >
     <div css={styles.navStack}>
       <div css={{ position: 'relative', width: '100%' }}>
         <div css={styles.topRow}>
@@ -40,7 +41,6 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
             {topScrollableListItems}
           </ScrollableNavigation>
           <AmpMenuButton
-            css={styles.menuButton}
             announcedText={menuAnnouncedText}
             onToggle={`
               ${DROPDOWN_ID}.toggleVisibility,
@@ -50,12 +50,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
             dir={dir}
           />
         </div>
-        <AmpDropdown
-          id={DROPDOWN_ID}
-          data-e2e="dropdown-nav"
-          css={styles.dropdown}
-          hidden
-        >
+        <AmpDropdown id={DROPDOWN_ID} css={styles.dropdown} hidden>
           {dropdownListItems}
         </AmpDropdown>
       </div>
@@ -70,7 +65,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         </ScrollableNavigation>
       </div>
     </div>
-  </Navigation>
+  </NavigationWrapper>
 );
 
 export default AmpNavigationContainer;

@@ -1,15 +1,12 @@
 import React, { use } from 'react';
-import { NavigationUl, NavigationLi } from '#psammead/psammead-navigation/src';
-import {
-  DropdownUl,
-  DropdownLi,
-} from '#psammead/psammead-navigation/src/DropdownNavigation';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Direction, Navigation, PageTypes } from '#app/models/types/global';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
+import { DropdownList, DropdownListItem } from './DropdownNavigation';
+import { NavigationList, NavigationListItem } from './NavigationList';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 import styles from './index.styles';
@@ -231,9 +228,9 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   });
 
   const topScrollableListItems = (
-    <NavigationUl>
+    <NavigationList>
       {renderListItems({
-        Li: NavigationLi,
+        Li: NavigationListItem,
         navigation: navigationItems,
         currentPage,
         dir,
@@ -243,7 +240,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         pageType,
         navType: 'top',
       })}
-    </NavigationUl>
+    </NavigationList>
   );
 
   /**
@@ -262,9 +259,9 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   );
 
   const bottomScrollableListItems = (
-    <NavigationUl>
+    <NavigationList>
       {renderListItems({
-        Li: NavigationLi,
+        Li: NavigationListItem,
         navigation: bottomItems,
         currentPage,
         dir,
@@ -272,7 +269,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         clickTracker: bottomNavClickTrackerHandler,
         pageType,
       })}
-    </NavigationUl>
+    </NavigationList>
   );
 
   // Dropdown menu: prioritise the first top-level item and all its subitems
@@ -284,9 +281,9 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
   })();
 
   const dropdownListItems = (
-    <DropdownUl>
+    <DropdownList>
       {renderListItems({
-        Li: DropdownLi,
+        Li: DropdownListItem,
         navigation: dropdownSource,
         currentPage,
         dir,
@@ -295,7 +292,7 @@ const NavigationContainer: React.FC<NavigationContainerProps> = ({
         viewTracker: dropdownNavViewTracker,
         pageType,
       })}
-    </DropdownUl>
+    </DropdownList>
   );
 
   const NavigationRenderer = isAmp ? Amp : Canonical;

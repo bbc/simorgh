@@ -1,6 +1,5 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
-import { GROUP_B_MIN_WIDTH } from '../ThemeProvider/fontMediaQueries';
 
 export const HIDDEN_CLASS_NAME = 'si-nav-scrollable-hidden';
 
@@ -83,16 +82,26 @@ export default {
           justifyContent: 'center',
 
           '&:hover::after': {
+            // Override base POSTBOX hover colour — links sit on a POSTBOX background
             borderBottomColor: palette.WHITE,
           },
 
           '&:focus-visible::after': {
+            // Generate the pseudo-element, clear the old border, apply new focus indicator
+            content: "''",
+            position: 'absolute',
+            inset: 0,
+            border: 'none',
             boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
             outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
             outlineOffset: `${pixelsToRem(-2)}rem`,
           },
 
           '&:focus::after': {
+            content: "''",
+            position: 'absolute',
+            inset: 0,
+            border: 'none',
             boxShadow: `inset 0 0 0 ${pixelsToRem(3)}rem ${palette.WHITE}`,
             outline: `${pixelsToRem(2)}rem solid ${palette.BLACK}`,
             outlineOffset: `${pixelsToRem(-2)}rem`,
@@ -125,7 +134,9 @@ export default {
         },
       },
 
-      '&:after': {
+      // Double selector (0,2,0) beats scrollableNav's gradient (0,1,0), regardless of
+      // stylesheet injection order (child class is injected after parent class in React).
+      '&&::after': {
         background: 'none',
       },
     }),
@@ -219,22 +230,4 @@ export default {
     position: 'relative',
     zIndex: 1,
   }),
-  menuButton: ({ palette }: Theme) =>
-    css({
-      backgroundColor: palette.POSTBOX,
-      color: palette.WHITE,
-
-      width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-
-      [GROUP_B_MIN_WIDTH]: {
-        width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      },
-
-      svg: {
-        verticalAlign: 'middle',
-        fill: palette.WHITE,
-      },
-    }),
 };
