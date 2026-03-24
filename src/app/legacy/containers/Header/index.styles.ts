@@ -51,7 +51,7 @@ export default {
           padding: `0 ${spacings.FULL}rem`,
         },
         [mq.GROUP_3_MIN_WIDTH]: {
-          padding: `0 ${pixelsToRem(12)}rem`,
+          padding: `0 ${spacings.DOUBLE}rem`,
         },
       },
     }),
