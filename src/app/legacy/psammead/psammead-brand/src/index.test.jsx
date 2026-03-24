@@ -69,23 +69,6 @@ describe('Brand', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly with transparent borders', () => {
-    const { container } = render(
-      <Brand
-        product="BBC News"
-        svg={svg}
-        svgHeight={24}
-        maxWidth={280}
-        minWidth={180}
-        borderTop
-        borderBottom
-        backgroundColour={POSTBOX}
-        logoColour={WHITE}
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
   describe('assertions - visually hidden text', () => {
     it('should have role of text when serviceLocalisedName is provided', () => {
       const { container } = render(
@@ -184,8 +167,6 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          borderTop
-          borderBottom
           backgroundColour={POSTBOX}
           logoColour={WHITE}
           linkId="brandLink"
