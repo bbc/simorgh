@@ -65,7 +65,6 @@ const BrandContainer = ({
       scriptLink={scriptLink}
       isLongBrand={longBrands.includes(service)}
       ref={brandRef}
-      data-banner-type="styled-brand"
       {...props}
     >
       {children}
