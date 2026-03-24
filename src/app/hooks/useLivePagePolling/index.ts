@@ -10,7 +10,7 @@ const useLivePagePolling = (
 ) => {
   const initialStreamData = pageData.liveTextStream.content?.data ?? null;
   const streamId = pageData.liveTextStream.id;
-  const firstPostUrn = initialStreamData?.results[0].urn;
+  const firstPostUrn = initialStreamData?.results?.[0]?.urn;
 
   const [currentStreamData, setCurrentData] = useState(initialStreamData);
   const [newData, setNewData] = useState(initialStreamData);
@@ -25,7 +25,7 @@ const useLivePagePolling = (
       const polledStream = await makeRequest(streamId);
 
       if (polledStream != null) {
-        const polledStreamFirstPostUrn = polledStream.results?.[0].urn;
+        const polledStreamFirstPostUrn = polledStream.results?.[0]?.urn;
         if (polledStreamFirstPostUrn !== currentFirstPostUrn) {
           setHasPendingUpdate(true);
           setNewData(polledStream);
