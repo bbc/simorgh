@@ -80,8 +80,6 @@ const inputs = () => {
   const minWidthInput = number('minimum svg width', svgRatio * svgMinHeight);
   const maxWidthInput = number('maximum svg width', svgRatio * svgMaxHeight);
   const svgHeightInput = number('desired height svg', svgMaxHeight);
-  const borderBottom = boolean('Border Bottom', false);
-  const borderTop = boolean('Border Top', false);
 
   return {
     productInput,
@@ -90,8 +88,6 @@ const inputs = () => {
     svgHeightInput,
     minWidthInput,
     maxWidthInput,
-    borderTop,
-    borderBottom,
     backgroundColour,
     logoColour,
   };
@@ -105,8 +101,6 @@ const getBrand = () => {
     minWidthInput,
     maxWidthInput,
     svgChoice,
-    borderBottom,
-    borderTop,
   } = inputs();
 
   return (
@@ -118,8 +112,6 @@ const getBrand = () => {
       maxWidth={maxWidthInput}
       svg={svgs[svgChoice]}
       url="https://www.bbc.com/news"
-      borderBottom={borderBottom}
-      borderTop={borderTop}
     />
   );
 };
