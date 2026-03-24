@@ -26,7 +26,7 @@ const useLivePagePolling = (
 
       if (polledStream != null) {
         const polledStreamFirstPostUrn = polledStream.results?.[0].urn;
-        if (polledStream && polledStreamFirstPostUrn !== currentFirstPostUrn) {
+        if (polledStreamFirstPostUrn !== currentFirstPostUrn) {
           setHasPendingUpdate(true);
           setNewData(polledStream);
           setFirstPostUrn(polledStreamFirstPostUrn);
