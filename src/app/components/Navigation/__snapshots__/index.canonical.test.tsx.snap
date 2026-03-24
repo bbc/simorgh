@@ -443,22 +443,19 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
 }
 
 .emotion-13 {
-  position: absolute;
-  width: 100%;
-  inset-inline-start: 0;
-}
-
-@media (min-width: 1041px) {
-  .emotion-13 {
-    width: 100%;
-  }
+  position: relative;
 }
 
 .emotion-13::after {
   content: '';
   position: absolute;
-  inset-block-end: 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 

@@ -599,6 +599,23 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   }
 }
 
+.emotion-27 {
+  position: relative;
+}
+
+.emotion-27::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -771,6 +788,9 @@ exports[`Navigation should correctly render amp navigation 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="emotion-27"
+      />
     </div>
   </nav>
 </div>
@@ -1366,6 +1386,23 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   }
 }
 
+.emotion-25 {
+  position: relative;
+}
+
+.emotion-25::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -1525,6 +1562,9 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
           </div>
         </div>
       </div>
+      <div
+        class="emotion-25"
+      />
     </div>
   </nav>
 </div>
@@ -2129,6 +2169,23 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   }
 }
 
+.emotion-27 {
+  position: relative;
+}
+
+.emotion-27::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
+  border-bottom: 0.0625rem solid #E6E8EA;
+}
+
 <div>
   <div
     class="emotion-0"
@@ -2301,6 +2358,9 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
           </div>
         </div>
       </div>
+      <div
+        class="emotion-27"
+      />
     </div>
   </nav>
 </div>
@@ -2899,22 +2959,19 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
 }
 
 .emotion-25 {
-  position: absolute;
-  width: 100%;
-  inset-inline-start: 0;
-}
-
-@media (min-width: 1041px) {
-  .emotion-25 {
-    width: 100%;
-  }
+  position: relative;
 }
 
 .emotion-25::after {
   content: '';
   position: absolute;
-  inset-block-end: 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -3648,22 +3705,19 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
 }
 
 .emotion-23 {
-  position: absolute;
-  width: 100%;
-  inset-inline-start: 0;
-}
-
-@media (min-width: 1041px) {
-  .emotion-23 {
-    width: 100%;
-  }
+  position: relative;
 }
 
 .emotion-23::after {
   content: '';
   position: absolute;
-  inset-block-end: 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
@@ -4393,22 +4447,19 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
 }
 
 .emotion-25 {
-  position: absolute;
-  width: 100%;
-  inset-inline-start: 0;
-}
-
-@media (min-width: 1041px) {
-  .emotion-25 {
-    width: 100%;
-  }
+  position: relative;
 }
 
 .emotion-25::after {
   content: '';
   position: absolute;
-  inset-block-end: 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100vw;
   border-bottom: 0.0625rem solid #E6E8EA;
 }
 
