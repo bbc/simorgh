@@ -1,3 +1,4 @@
+import pathOr from 'ramda/src/pathOr';
 import {
   OptimoBylineContributorBlock,
   OptimoBylineContributorMetadataBlock,
@@ -11,8 +12,8 @@ import {
 import {
   PostContributor,
   PostContributorImage,
-} from 'simorgh-nextjs/pages/[service]/live/[id]/Post/types';
-import pathOr from 'ramda/src/pathOr';
+  // eslint-disable-next-line import/no-relative-packages
+} from '../../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import buildIChefURL from '../../../../lib/utilities/ichefURL';
 
 const pathOrZeroIndexModelBlocks = (

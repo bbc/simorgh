@@ -6,7 +6,8 @@ import {
   MEDIA_ARTICLE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
-import { PostContributor as LivePageContributor } from 'simorgh-nextjs/pages/[service]/live/[id]/Post/types';
+// eslint-disable-next-line import/no-relative-packages
+import { PostContributor as LivePageContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';

@@ -1,4 +1,5 @@
-import { bylineSamplePost } from 'simorgh-nextjs/pages/[service]/live/[id]/Post/fixture';
+// eslint-disable-next-line import/no-relative-packages
+import { bylineSamplePost } from '../../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/fixture';
 import {
   render,
   screen,
