@@ -41,6 +41,9 @@ export default {
       [mq.GROUP_3_MIN_WIDTH]: {
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      },
 
       'a[aria-labelledby^="BrandLink-"]': {
         paddingTop: `${pixelsToRem(4)}rem`,
@@ -55,12 +58,16 @@ export default {
         },
       },
     }),
-  logoSvg: ({ palette }: Theme) =>
+  logoSvg: ({ mq, palette, spacings }: Theme) =>
     css({
       boxSizing: 'content-box',
       color: palette.BLACK,
       fill: 'currentColor',
       height: `${SVG_HEIGHT}px`,
       maxWidth: `${LOGO_ASPECT_RATIO * SVG_HEIGHT}px`,
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        padding: `0 ${spacings.DOUBLE}rem`,
+      },
     }),
 };
