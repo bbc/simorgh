@@ -74,6 +74,7 @@ module.exports = {
           'custom-element',
           'custom-template',
           'fallback',
+          'on', // AMP event handler attribute — https://amp.dev/documentation/guides-and-tutorials/learn/amp-actions-and-events/
         ],
       },
     ],

@@ -12,7 +12,7 @@ declare namespace React.JSX {
 }
 
 declare namespace React {
-  interface HTMLAttributes<T> {
+  interface HTMLAttributes {
     /**
      * AMP event handler attribute — used for AMP actions like `tap:element.toggleVisibility`.
      * See: https://amp.dev/documentation/guides-and-tutorials/learn/amp-actions-and-events/
