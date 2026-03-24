@@ -29,33 +29,25 @@ export default {
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
-      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-
-      [mq.GROUP_1_MIN_WIDTH]: {
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      },
-
-      [mq.GROUP_2_MIN_WIDTH]: {
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
-      },
-
       'a[aria-labelledby^="BrandLink-"]': {
         paddingTop: `${pixelsToRem(4)}rem`,
       },
 
       '&[data-banner-type="styled-brand"]': {
+        minHeight: 'auto',
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+
+        [mq.GROUP_1_MIN_WIDTH]: {
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+        },
+
         [mq.GROUP_2_MIN_WIDTH]: {
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
           padding: `0 ${spacings.FULL}rem`,
         },
         [mq.GROUP_3_MIN_WIDTH]: {
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
           padding: `0 ${spacings.DOUBLE}rem`,
-          minHeight: `${pixelsToRem(60)}rem`,
-        },
-        [mq.GROUP_4_MIN_WIDTH]: {
-          minHeight: `${pixelsToRem(60)}rem`,
         },
       },
     }),
