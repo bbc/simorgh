@@ -1,13 +1,14 @@
+/* eslint-disable import/no-relative-packages */
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/navigation';
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
 
 const pageType = 'onDemandTV';
 
