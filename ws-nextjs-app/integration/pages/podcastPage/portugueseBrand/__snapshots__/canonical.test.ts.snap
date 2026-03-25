@@ -299,7 +299,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
     },
     {
       "@type": "AudioObject",
-      "description": "Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim.",
+      "description": "Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética.",
       "duration": "PT20M40S",
       "name": "Que História!",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p0k13gnp.png",
@@ -309,7 +309,7 @@ exports[`Canonical Podcast Page SEO Linked data should match text 1`] = `
 }
 `;
 
-exports[`Canonical Podcast Page SEO OG description 1`] = `"Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim."`;
+exports[`Canonical Podcast Page SEO OG description 1`] = `"Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética."`;
 
 exports[`Canonical Podcast Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p0k13gnp.png"`;
 
@@ -333,7 +333,7 @@ exports[`Canonical Podcast Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Podcast Page SEO Twitter creator 1`] = `"@bbcbrasil"`;
 
-exports[`Canonical Podcast Page SEO Twitter description 1`] = `"Ela descobriu que foras concebida com sêmen de doador e, depois, que não foi bem assim."`;
+exports[`Canonical Podcast Page SEO Twitter description 1`] = `"Aos 16 anos, Eve Wiley descobriu que fora concebida com sêmen de doador anônimo. Mas anos depois, após doença de seu filho, fez descoberta chocante sobre sua identidade genética."`;
 
 exports[`Canonical Podcast Page SEO Twitter image alt 1`] = `"BBC News Brasil"`;
 
