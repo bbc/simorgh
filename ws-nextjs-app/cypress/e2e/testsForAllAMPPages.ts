@@ -1,3 +1,4 @@
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
@@ -11,9 +12,15 @@ export default ({ service, pageType }: ServiceParametersType) => {
       const testMobileNav =
         serviceName === 'ukchina' || serviceName === 'persian';
 
-      const testTwoTierNav =
-        (serviceName === 'arabic' || serviceName === 'tamil') &&
-        getAppEnv() !== 'local';
+      const twoTierNavServices = {
+        local: null, // Don't test two tier nav locally as the local environment can't fetch config
+        test: ['arabic', 'tamil'], // Test env isn't guaranteed to have the new nav config, so only run tests for services we know have it
+        live: SERVICES_WITH_NEW_NAV,
+      };
+
+      const cypressAppEnv = getAppEnv();
+
+      const testTwoTierNav = twoTierNavServices[cypressAppEnv];
 
       if (testMobileNav) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
