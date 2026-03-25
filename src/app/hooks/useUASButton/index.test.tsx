@@ -1,5 +1,5 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
-import useFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import isLocal from '#app/lib/utilities/isLocal';
 import useUASButton from './index';
 
@@ -9,7 +9,7 @@ jest.mock('#app/hooks/useUASFetchSaveStatus');
 jest.mock('../useToggle');
 jest.mock('#app/lib/utilities/isLocal');
 
-const mockUseFetchSaveStatus = useFetchSaveStatus as jest.Mock;
+const mockuseUASFetchSaveStatus = useUASFetchSaveStatus as jest.Mock;
 const mockUseToggle = useToggle as jest.Mock;
 const mockIsLocal = isLocal as jest.Mock;
 
@@ -28,7 +28,7 @@ describe('useUASButton', () => {
     mockUseToggle.mockReturnValue({ enabled: false });
     mockIsLocal.mockReturnValue(false);
 
-    mockUseFetchSaveStatus.mockReturnValue({
+    mockuseUASFetchSaveStatus.mockReturnValue({
       isSaved: false,
       loading: false,
       error: null,
@@ -54,7 +54,7 @@ describe('useUASButton', () => {
     mockUseToggle.mockReturnValue({ enabled: true });
     mockIsLocal.mockReturnValue(false);
 
-    mockUseFetchSaveStatus.mockReturnValue({
+    mockuseUASFetchSaveStatus.mockReturnValue({
       isSaved: true,
       loading: false,
       error: null,
@@ -65,11 +65,11 @@ describe('useUASButton', () => {
     expect(result.current.showButton).toBe(true);
   });
 
-  test('passes articleId to useFetchSaveStatus when showButton is true', () => {
+  test('passes articleId to useUASFetchSaveStatus when showButton is true', () => {
     mockUseToggle.mockReturnValue({ enabled: true });
     mockIsLocal.mockReturnValue(false);
 
-    mockUseFetchSaveStatus.mockReturnValue({
+    mockuseUASFetchSaveStatus.mockReturnValue({
       isSaved: false,
       loading: false,
       error: null,
@@ -77,7 +77,7 @@ describe('useUASButton', () => {
 
     renderHook(() => useUASButton(defaultProps));
 
-    expect(mockUseFetchSaveStatus).toHaveBeenCalledWith('123');
+    expect(mockuseUASFetchSaveStatus).toHaveBeenCalledWith('123');
   });
 
   test('passes empty string when showButton is false', () => {
@@ -86,7 +86,7 @@ describe('useUASButton', () => {
 
     renderHook(() => useUASButton(defaultProps));
 
-    expect(mockUseFetchSaveStatus).toHaveBeenCalledWith('');
+    expect(mockuseUASFetchSaveStatus).toHaveBeenCalledWith('');
   });
 
   test('respects local environment service filtering', () => {
@@ -96,7 +96,7 @@ describe('useUASButton', () => {
     });
     mockIsLocal.mockReturnValue(true);
 
-    mockUseFetchSaveStatus.mockReturnValue({
+    mockuseUASFetchSaveStatus.mockReturnValue({
       isSaved: false,
       loading: false,
       error: null,

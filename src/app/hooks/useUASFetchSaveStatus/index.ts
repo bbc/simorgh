@@ -5,13 +5,15 @@ import { buildGlobalId, ACTIVITY_TYPE } from '#app/lib/uasApi/uasUtility';
 /** A hook that fetches an article’s saved status from the UAS API,
  * returning the saved status, loading state, and any error encountered. */
 
-interface UseFetchSaveStatusReturn {
+interface useUASFetchSaveStatusReturn {
   isSaved: boolean;
   loading: boolean;
   error: Error | null;
 }
 
-const useFetchSaveStatus = (articleId: string): UseFetchSaveStatusReturn => {
+const useUASFetchSaveStatus = (
+  articleId: string,
+): useUASFetchSaveStatusReturn => {
   const [isSaved, setIsSaved] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -47,4 +49,4 @@ const useFetchSaveStatus = (articleId: string): UseFetchSaveStatusReturn => {
   return { isSaved, loading, error };
 };
 
-export default useFetchSaveStatus;
+export default useUASFetchSaveStatus;

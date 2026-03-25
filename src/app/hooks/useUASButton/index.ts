@@ -1,4 +1,4 @@
-import useFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import isLocal from '#app/lib/utilities/isLocal';
 import useToggle from '../useToggle';
 
@@ -35,7 +35,7 @@ const useUASButton = ({
 
   const showButton = isUASEnabled && isSignedIn;
 
-  const { isSaved, loading, error } = useFetchSaveStatus(
+  const { isSaved, loading, error } = useUASFetchSaveStatus(
     showButton ? articleId : '',
   );
   return {

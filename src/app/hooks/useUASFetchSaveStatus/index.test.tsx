@@ -2,7 +2,7 @@ import { renderHook } from '#app/components/react-testing-library-with-providers
 import { waitFor } from '@testing-library/react';
 import uasApiRequest from '#app/lib/uasApi';
 import { buildGlobalId, ACTIVITY_TYPE } from '#app/lib/uasApi/uasUtility';
-import useFetchSaveStatus from './index';
+import useUASFetchSaveStatus from './index';
 
 jest.mock('#app/lib/uasApi');
 jest.mock('#app/lib/uasApi/uasUtility');
@@ -10,7 +10,7 @@ jest.mock('#app/lib/uasApi/uasUtility');
 const mockUasApiRequest = uasApiRequest as jest.Mock;
 const mockBuildGlobalId = buildGlobalId as jest.Mock;
 
-describe('useFetchSaveStatus', () => {
+describe('useUASFetchSaveStatus', () => {
   const defaultArticleId = '123';
 
   afterEach(() => {
@@ -21,7 +21,9 @@ describe('useFetchSaveStatus', () => {
     mockBuildGlobalId.mockReturnValue('global-123');
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 200 });
 
-    const { result } = renderHook(() => useFetchSaveStatus(defaultArticleId));
+    const { result } = renderHook(() =>
+      useUASFetchSaveStatus(defaultArticleId),
+    );
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -36,7 +38,9 @@ describe('useFetchSaveStatus', () => {
     mockBuildGlobalId.mockReturnValue('global-123');
     mockUasApiRequest.mockResolvedValue({ ok: true, status: 204 });
 
-    const { result } = renderHook(() => useFetchSaveStatus(defaultArticleId));
+    const { result } = renderHook(() =>
+      useUASFetchSaveStatus(defaultArticleId),
+    );
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -49,7 +53,9 @@ describe('useFetchSaveStatus', () => {
     const apiError = new Error('API failed');
     mockUasApiRequest.mockRejectedValue(apiError);
 
-    const { result } = renderHook(() => useFetchSaveStatus(defaultArticleId));
+    const { result } = renderHook(() =>
+      useUASFetchSaveStatus(defaultArticleId),
+    );
 
     await waitFor(() => expect(result.current.loading).toBe(false));
 
@@ -58,7 +64,7 @@ describe('useFetchSaveStatus', () => {
   });
 
   test('does not call API when articleId is empty', () => {
-    renderHook(() => useFetchSaveStatus(''));
+    renderHook(() => useUASFetchSaveStatus(''));
 
     expect(mockUasApiRequest).not.toHaveBeenCalled();
   });
