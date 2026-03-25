@@ -1,5 +1,4 @@
 import path from 'ramda/src/path';
-
 import envConfig from '../config/envs';
 
 // the externalId `bbc_oromo_radio` is overriden to `bbc_afaanoromoo` in production code
