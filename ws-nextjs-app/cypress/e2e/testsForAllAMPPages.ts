@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
@@ -13,10 +11,9 @@ export default ({ service, pageType }: ServiceParametersType) => {
       const testMobileNav =
         serviceName === 'ukchina' || serviceName === 'persian';
 
-      // Two tier nav only available on select services and requires non-local data as
-      // the nav configuration is fetched from the back-end API
       const testTwoTierNav =
-        SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() !== 'local';
+        (serviceName === 'arabic' || serviceName === 'tamil') &&
+        getAppEnv() !== 'local';
 
       if (testMobileNav) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
