@@ -11,6 +11,15 @@ type RequestPathParts = {
   optionalParams?: string[];
 };
 
+const oneTimeFailureTarget = {
+  service: 'pidgin' as Services,
+  pageType: 'live' as PageTypes,
+  id: 'c7p765ynk9qt',
+};
+
+const simulated500ResponseCount = 2;
+let simulated500ResponsesServed = 0;
+
 const constructDataFilePath = ({
   service,
   pageType,
@@ -42,7 +51,23 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   try {
-    const dataFilePath = constructDataFilePath(req.query as RequestPathParts);
+    const requestPathParts = req.query as RequestPathParts;
+
+    const isConfiguredFailureRequest =
+      requestPathParts.service === oneTimeFailureTarget.service &&
+      requestPathParts.pageType === oneTimeFailureTarget.pageType &&
+      requestPathParts.id === oneTimeFailureTarget.id;
+
+    if (
+      isConfiguredFailureRequest &&
+      simulated500ResponsesServed < simulated500ResponseCount
+    ) {
+      simulated500ResponsesServed += 1;
+
+      return res.status(500).send({ error: 'Simulated error for this asset' });
+    }
+
+    const dataFilePath = constructDataFilePath(requestPathParts);
     const pageData = await fs.readFile(dataFilePath, {
       encoding: 'utf8',
     });
