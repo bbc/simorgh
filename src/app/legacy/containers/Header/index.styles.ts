@@ -11,7 +11,7 @@ export default {
     css({
       background: palette.WHITE,
       width: '100%',
-      maxWidth: SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX,
+      maxWidth: `calc(${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX} + ${spacings.QUADRUPLE}rem)`,
       margin: '0 auto',
       padding: `0 ${spacings.DOUBLE}rem`,
       display: 'flex',
@@ -23,23 +23,40 @@ export default {
         justifyContent: 'flex-start',
       },
 
-      [mq.GROUP_4_MIN_WIDTH]: {
-        padding: 0,
+      a: {
+        lineHeight: 0,
       },
     }),
-  headerBrand: ({ mq }: Theme) =>
+  headerBrand: ({ mq, spacings }: Theme) =>
     css({
+      minHeight: 'auto',
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
+      [mq.GROUP_1_MIN_WIDTH]: {
+        minHeight: 'auto',
+      },
+
       [mq.GROUP_2_MIN_WIDTH]: {
+        minHeight: 'auto',
+        padding: `0 ${spacings.FULL}rem`,
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
+        minHeight: 'auto',
+        padding: `0 ${spacings.DOUBLE}rem`,
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
-      'a[aria-labelledby^="BrandLink-"]': {
-        paddingTop: `${pixelsToRem(4)}rem`,
+      svg: {
+        height: '1.5rem',
+
+        [mq.GROUP_3_MIN_WIDTH]: {
+          height: '1.875rem',
+        },
+      },
+
+      a: {
+        paddingTop: `${pixelsToRem(2)}rem`,
       },
     }),
   logoSvg: ({ palette }: Theme) =>
