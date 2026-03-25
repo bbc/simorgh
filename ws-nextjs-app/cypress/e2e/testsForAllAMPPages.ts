@@ -41,7 +41,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
         });
       }
 
-      // this check limits these tests to arabic and tamil services
       if (testTwoTierNav) {
         it('should show two tier navigation on mobile', () => {
           cy.viewport(320, 480);
