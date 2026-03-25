@@ -71,7 +71,7 @@ const ContinueReadingButton = ({
   return (
     <button
       id="continue-reading-button"
-      css={[styles.continueReadingButton]}
+      css={styles.continueReadingButton}
       type="button"
       onClick={handleEvent}
       className={className}
