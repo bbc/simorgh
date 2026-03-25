@@ -41,7 +41,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const cypressAppEnv = getAppEnv();
 
     const testTwoTierNav =
-      twoTierNavServices[cypressAppEnv]?.includes(service) ?? false;
+      twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
 
     let initialSecondaryNavItemLinkTexts: string[] = [];
 

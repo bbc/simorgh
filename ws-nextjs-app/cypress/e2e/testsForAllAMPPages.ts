@@ -21,7 +21,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
       const cypressAppEnv = getAppEnv();
 
       const testTwoTierNav =
-        twoTierNavServices[cypressAppEnv]?.includes(service) ?? false;
+        twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
 
       if (testMobileNav) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
