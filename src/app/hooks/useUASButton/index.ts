@@ -24,8 +24,10 @@ const useUASButton = ({
   isSignedIn,
   articleId,
 }: UseUASButtonProps): UseUASButtonReturn => {
-  const { enabled: featureToggleOn, value: accountService = '' } =
-    useToggle('uasEnable') || {};
+  const {
+    enabled: featureToggleOn = false,
+    value: accountService = '',
+  } = useToggle('uasEnable');
 
   const isUASEnabled =
     featureToggleOn &&
