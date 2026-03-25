@@ -20,6 +20,16 @@ describe('useUASButton', () => {
     service: 'hindi',
   };
 
+  beforeEach(() => {
+    jest.clearAllMocks();
+
+    mockuseUASFetchSaveStatus.mockReturnValue({
+      isSaved: false,
+      loading: false,
+      error: null,
+    });
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -27,12 +37,6 @@ describe('useUASButton', () => {
   test('returns showButton = false when feature toggle is off', () => {
     mockUseToggle.mockReturnValue({ enabled: false });
     mockIsLocal.mockReturnValue(false);
-
-    mockuseUASFetchSaveStatus.mockReturnValue({
-      isSaved: false,
-      loading: false,
-      error: null,
-    });
 
     const { result } = renderHook(() => useUASButton(defaultProps));
 
@@ -69,12 +73,6 @@ describe('useUASButton', () => {
     mockUseToggle.mockReturnValue({ enabled: true });
     mockIsLocal.mockReturnValue(false);
 
-    mockuseUASFetchSaveStatus.mockReturnValue({
-      isSaved: false,
-      loading: false,
-      error: null,
-    });
-
     renderHook(() => useUASButton(defaultProps));
 
     expect(mockuseUASFetchSaveStatus).toHaveBeenCalledWith('123');
@@ -95,12 +93,6 @@ describe('useUASButton', () => {
       value: 'hindi|sport',
     });
     mockIsLocal.mockReturnValue(true);
-
-    mockuseUASFetchSaveStatus.mockReturnValue({
-      isSaved: false,
-      loading: false,
-      error: null,
-    });
 
     const { result } = renderHook(() => useUASButton(defaultProps));
 
