@@ -8,16 +8,11 @@ const highImpactFixtureCuration = fixture.data.curations[0] as BaseCuration;
 const baseProps = highImpactFixtureCuration.summaries?.[0] as Summary;
 
 interface ExternalProps {
-  attributions?: { title: string; link: { url: string } }[] | null;
   relatedTopic?: { title: string; link: { url: string } } | null;
 }
 
-const Component = ({ attributions, relatedTopic }: ExternalProps) => (
-  <HighImpactPromo
-    {...baseProps}
-    attributions={attributions}
-    relatedTopic={relatedTopic}
-  />
+const Component = ({ relatedTopic }: ExternalProps) => (
+  <HighImpactPromo {...baseProps} relatedTopic={relatedTopic} />
 );
 
 export default {
@@ -43,19 +38,12 @@ export default {
     chromatic: { disable: true },
   },
   args: {
-    attributions: [
-      {
-        title: 'BBC News Pidgin',
-        link: { url: '/pidgin' },
-      },
-    ],
     relatedTopic: {
       title: 'Related Topic Example',
       link: { url: '/topic/example' },
     },
   },
   argTypes: {
-    attributions: { control: 'object' },
     relatedTopic: { control: 'object' },
   },
 };

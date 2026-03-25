@@ -7,20 +7,19 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { getBrandPath } from '#app/legacy/containers/Brand';
 import styles from './index.styles';
 
-type AttributionLink = {
+type RelatedTopicLink = {
   url: string;
   scheme?: string;
   host?: string;
   path?: string;
 };
 
-type Attribution = {
-  link: AttributionLink;
+type RelatedTopic = {
+  link: RelatedTopicLink;
   title: string;
 };
 export interface HighImpactPromoProps extends Summary {
-  attributions?: Attribution[] | null;
-  relatedTopic?: Attribution | null;
+  relatedTopic?: RelatedTopic | null;
 }
 
 const HighImpactPromo = ({
@@ -31,23 +30,14 @@ const HighImpactPromo = ({
   link,
   headingLevel = 3,
   eventTrackingData,
-  attributions,
   relatedTopic,
 }: HighImpactPromoProps) => {
   const { isAmp } = use(RequestContext);
   const { dir, service, brandName } = use(ServiceContext) || {};
 
-  let subjectLink: string | undefined;
-  let subjectText: string | undefined;
-  if (relatedTopic?.link?.url && relatedTopic?.title) {
-    subjectLink = relatedTopic.link.url;
-    subjectText = relatedTopic.title;
-  } else {
-    subjectLink =
-      attributions?.[0]?.link?.url ||
-      (service ? getBrandPath(service) : undefined);
-    subjectText = attributions?.[0]?.title || brandName;
-  }
+  const subjectLink =
+    relatedTopic?.link?.url || (service ? getBrandPath(service) : undefined);
+  const subjectText = relatedTopic?.title || brandName;
   const hasSubject = Boolean(subjectLink && subjectText);
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);

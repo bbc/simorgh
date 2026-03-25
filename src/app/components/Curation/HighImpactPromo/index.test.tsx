@@ -12,20 +12,17 @@ const promoFixtureData = summaries?.[0] as HighImpactPromoProps;
 interface FixtureProps {
   promoData?: HighImpactPromoProps;
   headingLevel?: number;
-  attributions?: { title: string; link: { url: string } }[] | null | undefined;
   relatedTopic?: { title: string; link: { url: string } } | null | undefined;
 }
 
 const Fixture = ({
   promoData = promoFixtureData,
   headingLevel,
-  attributions,
   relatedTopic,
 }: FixtureProps) => (
   <HighImpactPromo
     {...promoData}
     headingLevel={headingLevel}
-    {...(attributions !== undefined && { attributions })}
     {...(relatedTopic !== undefined && { relatedTopic })}
   />
 );
@@ -67,50 +64,17 @@ describe('High Impact Promo', () => {
     );
   });
 
-  it('should render default values if attribution prop is not provided', () => {
+  it('should render default subject values when relatedTopic prop is not provided', () => {
     render(<Fixture />, { service: 'mundo' });
 
-    const attributionLink = screen.getByRole('link', {
+    const subjectLink = screen.getByRole('link', {
       name: 'BBC News Mundo',
     });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/mundo');
-    expect(attributionLink).toHaveStyle({
+    expect(subjectLink).toBeInTheDocument();
+    expect(subjectLink).toHaveAttribute('href', '/mundo');
+    expect(subjectLink).toHaveStyle({
       'margin-top': 'auto',
     });
-  });
-
-  it('should render correct attribution when an attributions prop is provided', () => {
-    const customAttributions = [
-      {
-        title: 'Pidgin Related Topic',
-        link: { url: '/pidgin/topics/234567' },
-      },
-    ];
-    render(<Fixture attributions={customAttributions} />);
-
-    const attributionLink = screen.getByRole('link', {
-      name: 'Pidgin Related Topic',
-    });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/pidgin/topics/234567');
-  });
-  it('should render default attribution when attributions prop is null', () => {
-    render(<Fixture attributions={null} />, { service: 'mundo' });
-    const attributionLink = screen.getByRole('link', {
-      name: 'BBC News Mundo',
-    });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/mundo');
-  });
-
-  it('should render default attribution when attributions prop is an empty array', () => {
-    render(<Fixture attributions={[]} />, { service: 'mundo' });
-    const attributionLink = screen.getByRole('link', {
-      name: 'BBC News Mundo',
-    });
-    expect(attributionLink).toBeInTheDocument();
-    expect(attributionLink).toHaveAttribute('href', '/mundo');
   });
 
   it.each<[Services, string]>([
@@ -127,7 +91,7 @@ describe('High Impact Promo', () => {
       title: 'Россия',
       link: { url: 'https://www.bbc.com/russian/topics/cw6eyw7m0m1t' },
     };
-    render(<Fixture relatedTopic={relatedTopic} attributions={null} />);
+    render(<Fixture relatedTopic={relatedTopic} />);
 
     const relatedTopicLink = screen.getByRole('link', {
       name: 'Россия',
@@ -137,25 +101,5 @@ describe('High Impact Promo', () => {
       'href',
       'https://www.bbc.com/russian/topics/cw6eyw7m0m1t',
     );
-  });
-
-  it('should prioritize relatedTopic over attributions when both are provided', () => {
-    const relatedTopic = {
-      title: 'Related Topic Title',
-      link: { url: '/related/path' },
-    };
-    const attributions = [
-      {
-        title: 'Attribution Title',
-        link: { url: '/attribution/path' },
-      },
-    ];
-    render(<Fixture relatedTopic={relatedTopic} attributions={attributions} />);
-
-    const relatedTopicLink = screen.getByRole('link', {
-      name: 'Related Topic Title',
-    });
-    expect(relatedTopicLink).toBeInTheDocument();
-    expect(relatedTopicLink).toHaveAttribute('href', '/related/path');
   });
 });
