@@ -16,7 +16,7 @@ export default ({ service, pageType, path, variant = 'default' }) => {
         },
         () => {
           it('should render a valid media player', () => {
-            cy.getPageDataFromWindow().then(({ pageData }) => {
+            cy.getPageDataFromWindow().then(pageData => {
               if (!getEpisodeAvailability(pageData)) {
                 return cy.log(`Episode is not available: ${path}`);
               }
