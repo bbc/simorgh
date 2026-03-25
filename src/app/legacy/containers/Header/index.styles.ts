@@ -47,6 +47,14 @@ export default {
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
+      svg: {
+        height: '1.5rem',
+
+        [mq.GROUP_3_MIN_WIDTH]: {
+          height: '1.875rem',
+        },
+      },
+
       a: {
         paddingTop: `${pixelsToRem(2)}rem`,
       },
