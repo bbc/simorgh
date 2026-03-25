@@ -85,6 +85,9 @@ exports[`Toggles Config when application environment is live should contain corr
   "topBarOJs": {
     "enabled": true,
   },
+  "uasEnable": {
+    "enabled": false,
+  },
   "variantCookie": {
     "enabled": true,
   },
@@ -180,6 +183,10 @@ exports[`Toggles Config when application environment is local should contain cor
   "topBarOJs": {
     "enabled": true,
   },
+  "uasEnable": {
+    "enabled": true,
+    "value": "hindi",
+  },
   "variantCookie": {
     "enabled": true,
   },
@@ -273,6 +280,9 @@ exports[`Toggles Config when application environment is test should contain corr
   },
   "topBarOJs": {
     "enabled": true,
+  },
+  "uasEnable": {
+    "enabled": false,
   },
   "variantCookie": {
     "enabled": true,
