@@ -79,6 +79,15 @@ export default {
       },
     }),
 
+  divider: ({ spacings }: Theme) =>
+    css({
+      marginTop: 'auto',
+      marginBottom: `${spacings.HALF + spacings.FULL}rem`,
+      height: `${pixelsToRem(3)}rem`,
+      width: `${pixelsToRem(40)}rem`,
+      background: '#EB0000',
+    }),
+
   subject: ({ palette, fontSizes, fontVariants, spacings }: Theme) =>
     css({
       ...fontSizes.brevier,
@@ -86,19 +95,6 @@ export default {
       color: palette.GREY_2,
       position: 'relative',
       alignSelf: 'flex-start',
-      marginTop: 'auto',
-      paddingTop: `${spacings.HALF + spacings.FULL}rem`,
-
-      '&::after': {
-        content: '""',
-        display: 'block',
-        position: 'absolute',
-        top: 0,
-        insetInlineStart: 0,
-        height: `${pixelsToRem(3)}rem`,
-        width: `${pixelsToRem(40)}rem`,
-        background: '#EB0000',
-      },
 
       '&:before': {
         content: '""',

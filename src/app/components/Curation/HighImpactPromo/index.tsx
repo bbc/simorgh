@@ -64,6 +64,7 @@ const HighImpactPromo = ({
             {title}
           </Promo.A>
         </Promo.Heading>
+        {hasSubject && <div css={styles.divider} />}
         {hasSubject && (
           <Promo.A
             href={subjectLink}

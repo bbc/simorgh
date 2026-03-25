@@ -72,8 +72,13 @@ describe('High Impact Promo', () => {
     });
     expect(subjectLink).toBeInTheDocument();
     expect(subjectLink).toHaveAttribute('href', '/mundo');
-    expect(subjectLink).toHaveStyle({
-      'margin-top': 'auto',
+
+    const divider = subjectLink.previousElementSibling;
+    expect(divider).toBeInTheDocument();
+    expect(divider).toHaveStyle({
+      'background-color': '#EB0000',
+      width: '2.5rem',
+      height: '0.1875rem',
     });
   });
 
