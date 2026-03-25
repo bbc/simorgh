@@ -18,7 +18,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import useToggle from '#app/hooks/useToggle';
-import ContinueReadingButton from '#app/pages/ArticlePage/ContinueReadingButton';
+import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
