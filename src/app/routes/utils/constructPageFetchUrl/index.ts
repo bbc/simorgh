@@ -99,7 +99,7 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
         // Special case for Most Read pages which are actually Topic pages
-        if (path === 'mostReadTopic') return path;
+        if (path.includes('mostReadTopic')) return path;
 
         return getTipoId(path);
       };
