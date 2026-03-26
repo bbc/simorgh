@@ -23,7 +23,6 @@ export const getServerSideProps = async (
   logResponseTime({ path: resolvedUrl }, context.res, () => null);
 
   const {
-    id = 'mostReadTopic',
     service,
     variant: variantFromUrl,
     renderer_env: rendererEnvFromQuery,
@@ -36,6 +35,8 @@ export const getServerSideProps = async (
     isTest() && !rendererEnvFromQuery ? 'live' : rendererEnvFromQuery;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
+
+  const id = 'mostReadTopic';
 
   const { data } = await getPageData({
     id,
