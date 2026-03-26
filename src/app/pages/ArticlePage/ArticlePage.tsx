@@ -110,6 +110,9 @@ const getTimestampComponent =
     articleId: string,
     isSignedIn: boolean,
     service: string,
+    isAmp: boolean,
+    isLite: boolean,
+    isApp: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -141,11 +144,13 @@ const getTimestampComponent =
           </>
         )}
         {/* Temporary SaveArticleButton */}
-        <SaveArticleButton
-          isSignedIn={isSignedIn}
-          articleId={parseArticleID(articleId)}
-          service={service}
-        />
+        {!isAmp && !isLite && !isApp && (
+          <SaveArticleButton
+            isSignedIn={isSignedIn}
+            articleId={parseArticleID(articleId)}
+            service={service}
+          />
+        )}
       </>
     );
   };
@@ -367,6 +372,9 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       articleId,
       isSignedIn,
       service,
+      isAmp,
+      isLite,
+      isApp,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
