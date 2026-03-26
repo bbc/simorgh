@@ -33,9 +33,9 @@ const styles = {
       gap: `${spacings.HALF}rem`,
       padding: `0 ${spacings.FULL}rem`,
     }),
-  navButton: ({ palette, spacings }: Theme) =>
+  navButton: ({ palette, spacings, isDarkUi }: Theme) =>
     css({
-      backgroundColor: palette.BLACK,
+      backgroundColor: isDarkUi ? palette.GREY_2 : palette.BLACK,
       border: 'none',
       width: '100%',
       maxWidth: `${pixelsToRem(44)}rem`,
@@ -44,7 +44,7 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
-      color: palette.GREY_2,
+      color: isDarkUi ? palette.BLACK : palette.GREY_2,
       '&:disabled': {
         opacity: 0.2,
         cursor: 'not-allowed',
