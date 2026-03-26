@@ -2,6 +2,7 @@
 import { use } from 'react';
 import onClient from '#app/lib/utilities/onClient';
 import { IdctaConfig } from '#app/models/types/account';
+import Cookie from 'js-cookie';
 import { AccountContext } from '.';
 import {
   render,
@@ -173,6 +174,21 @@ describe('AccountContext', () => {
     const context = JSON.parse(testEl.textContent as string);
 
     expect(context.isSignedIn).toBe(false);
+  });
+
+  it('should set isSignedIn to true when ckns_id cookie is present', () => {
+    jest.spyOn(Cookie, 'get').mockReturnValue('ckns_id_cookie_value' as any);
+
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
+    expect(context.isSignedIn).toBe(true);
   });
 
   it('should handle null initialConfig gracefully', () => {
