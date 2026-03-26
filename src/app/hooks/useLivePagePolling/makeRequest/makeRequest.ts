@@ -1,7 +1,6 @@
 import { map, pipe } from 'ramda';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import handlePostBlocks from '../transformers/handlePostBlocks';
-import addIdsToPost from '../transformers/addIdsToPost';
 import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
 
 export default async (liveTextStreamId: string) => {
@@ -15,7 +14,7 @@ export default async (liveTextStreamId: string) => {
 
     if (status === 200 && data.results.length > 0) {
       const formattedData = map(
-        pipe(handlePostBlocks, addIdsToPost, addIndexesToEmbeds),
+        pipe(handlePostBlocks, addIndexesToEmbeds),
         data.results,
       );
 
