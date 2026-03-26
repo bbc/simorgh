@@ -23,7 +23,7 @@ export const getServerSideProps = async (
   logResponseTime({ path: resolvedUrl }, context.res, () => null);
 
   const {
-    id = 'clyz5rkxlnwt',
+    id = 'mostReadTopic',
     service,
     variant: variantFromUrl,
     renderer_env: rendererEnvFromQuery,
