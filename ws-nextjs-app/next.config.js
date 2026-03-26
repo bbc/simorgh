@@ -59,7 +59,7 @@ module.exports = {
       //  e.g. /serbian/cyr/popular/read -> /serbian/popular/read/cyr
       {
         source: '/:service/:variant/popular/read',
-        destination: '/:service/popular/read/:variant*',
+        destination: '/:service/popular/read/:variant',
       },
     ];
   },
