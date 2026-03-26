@@ -36,6 +36,10 @@ describe('AccountContext', () => {
     window.location = { href: 'https://example.com/current-page' } as any;
   });
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   const TestComponent = () => {
     const context = use(AccountContext);
     return <div data-testid="test-component">{JSON.stringify(context)}</div>;
@@ -86,6 +90,18 @@ describe('AccountContext', () => {
     const context = JSON.parse(testEl.textContent as string);
 
     expect(context.isIdctaAvailable).toBe(false);
+  });
+
+  it('should set isSignedIn to false on the server when IDCTA is available', () => {
+    (onClient as jest.Mock).mockReturnValue(false);
+    (Cookie.get as jest.Mock).mockClear();
+    render(<TestComponent />, {
+      idctaConfig: mockIdctaConfig,
+      service: 'hindi',
+    });
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+    expect(context.isSignedIn).toBe(false);
   });
 
   it('should set isIdctaAvailable to false when initialConfig is null', () => {
