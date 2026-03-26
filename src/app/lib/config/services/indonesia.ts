@@ -101,6 +101,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Diterbitkan di',
         summary: 'Rangkuman',
         shareButtonText: 'Kirim',
+        refreshButtonText: 'Postingan terbaru',
+        visuallyHiddenButtonText: 'Postingan baru tersedia',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

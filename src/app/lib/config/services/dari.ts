@@ -46,6 +46,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'و',
       readTime: {
         readTimePrefix: 'زمان مطالعه',
         minute: 'دقیقه',
@@ -89,6 +90,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'به روزشده در',
         summary: 'خلاصه',
         shareButtonText: 'هم‌رسانی',
+        refreshButtonText: 'آخرین پست',
+        visuallyHiddenButtonText: 'پست تازه در دسترس است',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

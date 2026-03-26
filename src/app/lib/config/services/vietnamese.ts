@@ -82,6 +82,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
         shareButtonText: 'Chia sẻ',
+        refreshButtonText: 'Bài viết mới nhất',
+        visuallyHiddenButtonText: 'Có bài viết mới',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
