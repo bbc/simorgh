@@ -98,6 +98,9 @@ const getId = ({ pageType, service, variant }: GetIdProps) => {
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
+        // Special case for Most Read pages which are actually Topic pages
+        if (path === 'mostReadTopic') return path;
+
         return getTipoId(path);
       };
       break;
@@ -237,35 +240,22 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(`${host}${port}/api/local/${id}`);
-        } else {
-          fetchUrl = Url(`/${id}`);
-        }
+        fetchUrl = Url(`${host}${port}/api/local/${id}`);
         break;
       case HOME_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
-          );
-        } else {
-          fetchUrl = Url(`/${service}${variant ? `/${variant}` : ''}`);
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/homePage/${variant ? `${variant}` : 'index'}`,
+        );
         break;
       }
       case MOST_READ_PAGE:
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC_PAGE: {
-        if (process.env?.NEXTJS) {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        } else {
-          fetchUrl = Url(
-            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
-          );
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+        );
+
         break;
       }
       case LIVE_PAGE: {
