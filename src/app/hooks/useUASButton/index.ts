@@ -25,7 +25,7 @@ const useUASButton = ({
   articleId,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { enabled: featureToggleOn = false, value: accountService = '' } =
-    useToggle('uasEnable');
+    useToggle('uasPersonalization');
 
   const isUASEnabled =
     featureToggleOn &&

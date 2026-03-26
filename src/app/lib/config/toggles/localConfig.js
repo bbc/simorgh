@@ -86,7 +86,7 @@ export default {
   variantCookie: {
     enabled: true,
   },
-  uasEnable: {
+  uasPersonalization: {
     enabled: true,
     value: 'hindi',
   },
