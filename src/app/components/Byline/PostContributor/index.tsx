@@ -23,12 +23,7 @@ const Contributors = ({ contributorValues }) => {
         return (
           <ul css={[BylineCss.list]} role="list" key={authorName}>
             {authorImage && (
-              <li
-                css={[
-                  BylineCss.imageWrapper,
-                  isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-                ]}
-              >
+              <li css={[BylineCss.imageWrapper]}>
                 <Image
                   css={BylineCss.imageSrc}
                   src={authorImage}

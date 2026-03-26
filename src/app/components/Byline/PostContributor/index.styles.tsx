@@ -29,23 +29,10 @@ export default {
       height: `${pixelsToRem(64)}rem`,
       backgroundColor: `${palette.GREY_2}`,
       overflow: 'visible',
+      float: 'inline-start',
+      marginInlineEnd: `${pixelsToRem(8)}rem`,
+      writingMode: 'horizontal-tb',
     }),
-
-  imageLtr: () =>
-    css([
-      {
-        float: 'left',
-        marginRight: `${pixelsToRem(8)}rem`,
-      },
-    ]),
-
-  imageRtl: () =>
-    css([
-      {
-        float: 'right',
-        marginLeft: `${pixelsToRem(8)}rem`,
-      },
-    ]),
 
   imageSrc: () =>
     css({
