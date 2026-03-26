@@ -10,7 +10,6 @@ import {
   TOPIC_PAGE,
   TV_PAGE,
   UGC_PAGE,
-  MOST_READ_PAGE,
 } from '../pageTypes';
 
 process.env.BFF_PATH = 'https://mock-bff-path';
