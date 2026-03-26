@@ -11,7 +11,9 @@ import isTest from '#app/lib/utilities/isTest';
 import handleError from '#app/routes/utils/handleError';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 
-const TopicPage = dynamic(() => import('#app/pages/TopicPage/TopicPage'));
+const MostReadAsTopicPage = dynamic(
+  () => import('#app/pages/TopicPage/TopicPage'),
+);
 
 const logger = nodeLogger(__filename);
 
@@ -112,4 +114,4 @@ export const getServerSideProps = async (
   };
 };
 
-export default TopicPage;
+export default MostReadAsTopicPage;
