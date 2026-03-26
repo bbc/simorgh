@@ -1,15 +1,12 @@
 import { map, pipe } from 'ramda';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import isLocal from '#app/lib/utilities/isLocal';
 import handlePostBlocks from '../transformers/handlePostBlocks';
 import addIdsToPost from '../transformers/addIdsToPost';
 import addIndexesToEmbeds from '../transformers/addIndexesToEmbeds';
 
 export default async (liveTextStreamId: string) => {
   try {
-    const webCdnHost = isLocal()
-      ? 'https://web-cdn.test.api.bbci.co.uk'
-      : getEnvConfig().SIMORGH_MOST_READ_CDN_URL;
+    const webCdnHost = getEnvConfig().WEB_CDN_URL;
 
     const fetchUrl = `${webCdnHost}/fd/stream?liveTextStreamId=${liveTextStreamId}&type=curated`;
     const response = await fetch(fetchUrl);
