@@ -37,6 +37,8 @@ jobs:
         run: |
           rm -rf node_modules
           git config --global url.https://${{ secrets.WS_UTF_AUTH }}@github.com/.insteadOf https://github.com/
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           ./scripts/installNodeModules.sh
 
       - name: Build Simorgh - Express App
