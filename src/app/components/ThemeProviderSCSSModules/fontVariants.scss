@@ -1,5 +1,87 @@
+// Utility mixins for font variant fallbacks
+@mixin get-sans-regular {
+  font-family: var(--sans-regular-font-family);
+  font-style: var(--sans-regular-font-style);
+  font-weight: var(--sans-regular-font-weight);
+}
+
+@mixin get-sans-regular-italic {
+  font-family: var(--sans-regular-italic-font-family, var(--sans-regular-font-family));
+  font-style: var(--sans-regular-italic-font-style, var(--sans-regular-font-style));
+  font-weight: var(--sans-regular-italic-font-weight, var(--sans-regular-font-weight));
+}
+
+@mixin get-sans-bold {
+  font-family: var(--sans-bold-font-family, var(--sans-regular-font-family));
+  font-style: var(--sans-bold-font-style, var(--sans-regular-font-style));
+  font-weight: var(--sans-bold-font-weight, var(--sans-regular-font-weight));
+}
+
+@mixin get-sans-bold-italic {
+  font-family: var(--sans-bold-italic-font-family, var(--sans-bold-font-family, var(--sans-regular-font-family)));
+  font-style: var(--sans-bold-italic-font-style, var(--sans-bold-font-style, var(--sans-regular-font-style)));
+  font-weight: var(--sans-bold-italic-font-weight, var(--sans-bold-font-weight, var(--sans-regular-font-weight)));
+}
+
+@mixin get-sans-light {
+  font-family: var(--sans-light-font-family, var(--sans-regular-font-family));
+  font-style: var(--sans-light-font-style, var(--sans-regular-font-style));
+  font-weight: var(--sans-light-font-weight, var(--sans-regular-font-weight));
+}
+
+@mixin get-serif-regular {
+  font-family: var(--serif-medium-font-family, var(--sans-regular-font-family));
+  font-style: var(--serif-medium-font-style, var(--sans-regular-font-style));
+  font-weight: var(--serif-medium-font-weight, var(--sans-regular-font-weight));
+}
+
+@mixin get-serif-medium {
+  font-family: var(--serif-medium-font-family, var(--sans-bold-font-family, var(--sans-regular-font-family)));
+  font-style: var(--serif-medium-font-style, var(--sans-bold-font-style, var(--sans-regular-font-style)));
+  font-weight: var(--serif-medium-font-weight, var(--sans-bold-font-weight, var(--sans-regular-font-weight)));
+}
+
+@mixin get-serif-medium-italic {
+  font-family: var(--serif-medium-italic-font-family, var(--sans-bold-italic-font-family, var(--sans-bold-font-family, var(--sans-regular-font-family))));
+  font-style: var(--serif-medium-italic-font-style, var(--sans-bold-italic-font-style, var(--sans-bold-font-style, var(--sans-regular-font-style))));
+  font-weight: var(--serif-medium-italic-font-weight, var(--sans-bold-italic-font-weight, var(--sans-bold-font-weight, var(--sans-regular-font-weight))));
+}
+
+@mixin get-serif-bold {
+  font-family: var(--serif-bold-font-family, var(--sans-bold-font-family, var(--sans-regular-font-family)));
+  font-style: var(--serif-bold-font-style, var(--sans-bold-font-style, var(--sans-regular-font-style)));
+  font-weight: var(--serif-bold-font-weight, var(--sans-bold-font-weight, var(--sans-regular-font-weight)));
+}
+
+@mixin get-serif-light {
+  font-family: var(--serif-light-font-family, var(--serif-medium-font-family, var(--sans-regular-font-family)));
+  font-style: var(--serif-light-font-style, var(--serif-medium-font-style, var(--sans-regular-font-style)));
+  font-weight: var(--serif-light-font-weight, var(--serif-medium-font-weight, var(--sans-regular-font-weight)));
+}
+
+// Main mixin
 @mixin gel-font-variant($variant) {
-  font-family: var(--#{$variant}-font-family);
-  font-style: var(--#{$variant}-font-style);
-  font-weight: var(--#{$variant}-font-weight);
+  @if $variant == 'sans-regular' {
+    @include get-sans-regular;
+  } @else if $variant == 'sans-regular-italic' {
+    @include get-sans-regular-italic;
+  } @else if $variant == 'sans-bold' {
+    @include get-sans-bold;
+  } @else if $variant == 'sans-bold-italic' {
+    @include get-sans-bold-italic;
+  } @else if $variant == 'sans-light' {
+    @include get-sans-light;
+  } @else if $variant == 'serif-regular' {
+    @include get-serif-regular;
+  } @else if $variant == 'serif-medium' {
+    @include get-serif-medium;
+  } @else if $variant == 'serif-medium-italic' {
+    @include get-serif-medium-italic;
+  } @else if $variant == 'serif-bold' {
+    @include get-serif-bold;
+  } @else if $variant == 'serif-light' {
+    @include get-serif-light;
+  } @else {
+    @include get-sans-regular;
+  }
 }
