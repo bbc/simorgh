@@ -46,6 +46,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'و',
       readTime: {
         readTimePrefix: 'زمان مطالعه',
         minute: 'دقیقه',
