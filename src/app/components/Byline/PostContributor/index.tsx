@@ -29,7 +29,7 @@ const Contributors = ({ contributorValues }) => {
             {authorImage && (
               <li
                 css={[
-                  BylineCss.ImageWrapper,
+                  BylineCss.imageWrapper,
                   isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                 ]}
               >

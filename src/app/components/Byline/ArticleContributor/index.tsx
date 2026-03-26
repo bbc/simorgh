@@ -67,7 +67,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
             {authorImage && isSingleContributor && (
               <li
                 css={[
-                  BylineCss.ImageWrapper,
+                  BylineCss.imageWrapper,
                   isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                 ]}
               >

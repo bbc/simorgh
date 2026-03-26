@@ -13,7 +13,7 @@ export default {
   jobRole: ({ palette, isDarkUi }: Theme) =>
     css({ color: isDarkUi ? palette.GREY_2 : palette.GREY_6 }),
 
-  ImageWrapper: ({ palette }: Theme) =>
+  imageWrapper: ({ palette }: Theme) =>
     css({
       display: 'inline-flex',
       alignItems: 'flex-end',
