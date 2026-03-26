@@ -20,8 +20,10 @@ export interface OnDemandAudioProps {
     language: string;
     brandTitle: string;
     headline: string;
-    summary?: string;
+    summary: string;
     shortSynopsis: string;
+    mediumSynopsis?: string;
+    longSynopsis?: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
