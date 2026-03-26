@@ -20,7 +20,6 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
     position,
     ...curationProps
   } = curation;
-
   return (
     <Fragment key={`${curationId}-${position}`}>
       <Curation
