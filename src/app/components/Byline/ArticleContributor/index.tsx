@@ -130,8 +130,7 @@ const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
 };
 
 const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
-  const { translations, dir } = use(ServiceContext);
-  const isRtl = dir === 'rtl';
+  const { translations } = use(ServiceContext);
 
   const {
     byline: {
@@ -171,12 +170,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
               <And andTranslation={and} />
             )}
             {authorImage && isSingleContributor && (
-              <li
-                css={[
-                  BylineCss.imageWrapper,
-                  isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-                ]}
-              >
+              <li css={[BylineCss.imageWrapper]}>
                 <AuthorImage authorImage={authorImage} />
               </li>
             )}

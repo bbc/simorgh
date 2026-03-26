@@ -7,8 +7,7 @@ import Image from '../../Image';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 
 const Contributors = ({ contributorValues }) => {
-  const { translations, dir } = use(ServiceContext);
-  const isRtl = dir === 'rtl';
+  const { translations } = use(ServiceContext);
 
   const { byline: { author = 'Author', role = 'Role' } = {} } =
     translations ?? {};

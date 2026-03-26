@@ -99,27 +99,13 @@ export default {
       height: `${pixelsToRem(60)}rem`,
       backgroundColor: `${palette.GREY_7}`,
       overflow: 'visible',
+      float: 'inline-start',
+      marginTop: `${pixelsToRem(25)}rem`,
+      marginBottom: `${pixelsToRem(16)}rem`,
+      marginInlineEnd: `${pixelsToRem(8)}rem`,
+      marginInlineStart: '0px',
+      writingMode: 'horizontal-tb',
     }),
-
-  imageLtr: () =>
-    css([
-      {
-        float: 'left',
-        margin: `${pixelsToRem(25)}rem ${pixelsToRem(8)}rem ${pixelsToRem(
-          16,
-        )}rem 0px`,
-      },
-    ]),
-
-  imageRtl: () =>
-    css([
-      {
-        float: 'right',
-        margin: `${pixelsToRem(25)}rem 0px ${pixelsToRem(16)}rem ${pixelsToRem(
-          8,
-        )}rem`,
-      },
-    ]),
 
   imageSrc: () =>
     css({
