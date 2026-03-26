@@ -1,10 +1,10 @@
-// import { test, expect } from '@bbc/unified-web-e2e-framework';
+/* eslint-disable cypress/no-async-tests */
+import { test, expect } from '@bbc/unified-web-e2e-framework';
 
-// test('Verify page title', async ({ page }) => {
-//   await page.goto('https://www.bbc.co.uk/');
-//   expect(await page.title()).toBe('BBC - Home');
-// });
-import { test, expect } from '@playwright/test';
+test('Verify page title', async ({ page }) => {
+  await page.goto('https://www.bbc.co.uk/');
+  expect(await page.title()).toBe('BBC - Home');
+});
 
 test.describe('Home Page - Arabic', () => {
   test('should load and display expected content', async ({ page }) => {

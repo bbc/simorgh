@@ -1,12 +1,11 @@
 /* eslint-disable cypress/no-async-tests */
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@bbc/unified-web-e2e-framework';
 import runUrlValidationTest from '../support/helpers/runUrlValidationTest';
 
 const testSuites = [
   {
     path: '/arabic',
     service: 'arabic',
-    variant: undefined,
   },
   {
     path: '/dari',

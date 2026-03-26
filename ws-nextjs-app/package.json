@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "@bbc/unified-web-e2e-framework": "github:bbc/unified-web-e2e-framework#v2.1.8",
+    "@playwright/test": "^1.52.0",
     "next": "16.1.7",
     "sharp": "0.34.5"
   }

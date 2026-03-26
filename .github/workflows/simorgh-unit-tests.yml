@@ -36,8 +36,6 @@ jobs:
         if: steps.cache.ohutputs.cache-hit != 'true'
         run: |
           rm -rf node_modules
-          git config --global user.email "DESimorghMaintainers@bbc.co.uk"
-          git config --global user.name "ws-simorgh-unified-framework"
           git config --global url.https://${{ secrets.WS_UTF_AUTH }}@github.com/.insteadOf https://github.com/
           ./scripts/installNodeModules.sh
 
