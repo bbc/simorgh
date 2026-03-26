@@ -75,7 +75,7 @@ export const getServerSideProps = async (
   }
 
   if (!data?.pageData) {
-    throw handleError('TopicPage data is malformed', 500);
+    throw handleError('MostReadPage data is malformed', 500);
   }
 
   context.res.setHeader(
