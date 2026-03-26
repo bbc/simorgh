@@ -38,7 +38,7 @@ const styles = {
     }),
   description: ({ palette, spacings }: Theme) =>
     css({
-      paddingBottom: `${spacings.QUINTUPLE}rem`,
+      paddingBottom: `${spacings.TRIPLE}rem`,
       display: 'block',
       color: palette.GHOST,
     }),
