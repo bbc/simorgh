@@ -1,6 +1,6 @@
 import { GetServerSidePropsContext } from 'next';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
-import pidginMostReadTopicFixture from '#data/pidgin/mostRead/mostReadTopic.json';
+import pidginMostReadTopicFixture from '#data/pidgin/topics/mostReadTopic.json';
 import * as getPageDataModule from '../../../../utilities/pageRequests/getPageData';
 import { getServerSideProps as handleMostReadRoute } from './[[...variant]].page';
 
