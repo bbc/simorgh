@@ -56,7 +56,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
           <ul
             css={[
               BylineCss.list,
-              hasMultipleContributors && BylineCss.displayInline,
+              hasMultipleContributors && BylineCss.contributorTextWrapper,
             ]}
             role="list"
             key={authorName}
@@ -80,7 +80,9 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                 />
               </li>
             )}
-            <li css={hasMultipleContributors && BylineCss.displayInline}>
+            <li
+              css={hasMultipleContributors && BylineCss.contributorTextWrapper}
+            >
               {authorTopicUrl ? (
                 <>
                   <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
@@ -141,7 +143,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                 )}
             </li>
             {jobRole ? (
-              <li css={BylineCss.displayInline}>
+              <li css={BylineCss.contributorTextWrapper}>
                 <span role="text">
                   <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                   <Text
@@ -160,7 +162,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
               </li>
             ) : null}
             {location ? (
-              <li css={BylineCss.displayInline}>
+              <li css={BylineCss.contributorTextWrapper}>
                 <span role="text">
                   <VisuallyHiddenText>
                     {`${reportingFrom}, `}{' '}

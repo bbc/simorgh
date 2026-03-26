@@ -21,11 +21,7 @@ const Contributors = ({ contributorValues }) => {
         const { authorName, jobRole, authorImage } = contributor;
 
         return (
-          <ul
-            css={[BylineCss.list, BylineCss.displayFlex]}
-            role="list"
-            key={authorName}
-          >
+          <ul css={[BylineCss.list]} role="list" key={authorName}>
             {authorImage && (
               <li
                 css={[
@@ -43,7 +39,7 @@ const Contributors = ({ contributorValues }) => {
               </li>
             )}
             <li>
-              <span role="text" css={BylineCss.displayBlock}>
+              <span role="text" css={BylineCss.contributorTextWrapper}>
                 <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                 <Text
                   css={[BylineCss.author]}
@@ -53,7 +49,7 @@ const Contributors = ({ contributorValues }) => {
                   {authorName}
                 </Text>
               </span>
-              <span role="text" css={BylineCss.displayBlock}>
+              <span role="text" css={BylineCss.contributorTextWrapper}>
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                 <Text css={BylineCss.jobRole} size="brevier">
                   {jobRole}

@@ -127,7 +127,7 @@ export default {
       height: `${pixelsToRem(80)}rem`,
     }),
 
-  displayInline: () =>
+  contributorTextWrapper: () =>
     css({
       display: `inline`,
     }),

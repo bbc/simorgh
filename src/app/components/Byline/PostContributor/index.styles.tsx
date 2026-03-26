@@ -2,7 +2,14 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
-  list: () => css({ listStyle: 'none', padding: 0, margin: 0 }),
+  list: () =>
+    css({
+      alignItems: 'center',
+      display: `flex`,
+      listStyle: 'none',
+      padding: 0,
+      margin: 0,
+    }),
 
   author: ({ palette, isDarkUi }: Theme) =>
     css({
@@ -47,14 +54,8 @@ export default {
       borderRadius: '48px',
     }),
 
-  displayBlock: () =>
+  contributorTextWrapper: () =>
     css({
       display: `block`,
-    }),
-
-  displayFlex: () =>
-    css({
-      display: `flex`,
-      alignItems: 'center',
     }),
 };
