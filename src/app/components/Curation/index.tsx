@@ -55,7 +55,6 @@ const getGridComponent = (componentName: string | null) => {
 interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
-  className?: string;
 }
 
 export default ({
@@ -76,7 +75,6 @@ export default ({
   curationId,
   mediaCollection,
   experimentProps,
-  className,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -197,7 +195,6 @@ export default ({
           title={title}
           id={`useful-links-${nthCurationByStyleAndProminence}`}
           eventTrackingData={eventTrackingData}
-          className={className}
         />
       );
     case SOCIAL_LINKS:

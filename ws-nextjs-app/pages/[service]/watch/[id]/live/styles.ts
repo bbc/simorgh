@@ -42,19 +42,10 @@ const styles = {
       display: 'block',
       color: palette.GHOST,
     }),
-  curationStyles: ({ palette, spacings }: Theme) =>
+  curationStyles: ({ palette }: Theme) =>
     css({
       '& h2, & a': {
         color: palette.GHOST,
-      },
-      '& h2': {
-        marginBottom: `${spacings.DOUBLE}rem`,
-      },
-      '.useful-links > h2': {
-        marginBottom: `${spacings.HALF}rem`,
-      },
-      '& section': {
-        marginTop: 0,
       },
       '& a:visited': {
         color: palette.GREY_5,

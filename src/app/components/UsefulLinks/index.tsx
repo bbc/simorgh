@@ -14,7 +14,6 @@ interface UsefulLinksProps {
   eventTrackingData?: EventTrackingMetadata;
   layout?: UsefulLinksLayout;
   headingLevel?: 1 | 2 | 3 | 4;
-  className?: string;
 }
 
 const UsefulLinks = ({
@@ -24,7 +23,6 @@ const UsefulLinks = ({
   eventTrackingData,
   layout = 'double',
   headingLevel = 2,
-  className,
 }: UsefulLinksProps) => {
   const viewTracker = useViewTracker(eventTrackingData);
   const getClickTrackerHandler = useClickTrackerHandler;
@@ -51,7 +49,6 @@ const UsefulLinks = ({
       data-testid={id}
       css={styles.container}
       {...viewTracker}
-      className={className}
     >
       <Heading level={headingLevel} id={id} css={styles.heading}>
         {title}

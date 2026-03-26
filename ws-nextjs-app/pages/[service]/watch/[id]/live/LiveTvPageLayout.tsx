@@ -21,8 +21,6 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
     ...curationProps
   } = curation;
 
-  const isUsefulLinks =
-    curation.visualStyle === 'LINKS' && curation.visualProminence === 'LOW';
   return (
     <Fragment key={`${curationId}-${position}`}>
       <Curation
@@ -32,7 +30,6 @@ const renderCuration = ({ curation }: { curation: CurationType }) => {
         link={link}
         renderVisuallyHiddenH2Title={position === 0}
         curationId={curationId}
-        className={isUsefulLinks ? 'useful-links' : undefined}
         {...curationProps}
       />
     </Fragment>
