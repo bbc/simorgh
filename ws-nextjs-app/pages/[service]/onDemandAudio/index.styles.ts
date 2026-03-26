@@ -4,6 +4,54 @@ import pixelsToRem from '#app/utilities/pixelsToRem';
 const showOnDemandImage = '22.4375rem';
 
 export default {
+  footerTimeStampWrapper: () =>
+    css({
+      display: 'block',
+    }),
+  expandedSummary: ({ spacings }: Theme) =>
+    css({
+      marginBottom: `${spacings.DOUBLE}rem`,
+    }),
+  collapsedSummary: ({ mq, palette, spacings }: Theme) =>
+    css({
+      display: '-webkit-box',
+      WebkitBoxOrient: 'vertical',
+      WebkitLineClamp: 4,
+      overflow: 'hidden',
+      position: 'relative',
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: `${spacings.FULL}rem`,
+        backgroundColor: palette.GREY_1,
+      },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+        WebkitLineClamp: 'unset',
+        overflow: 'visible',
+        position: 'static',
+        '&::after': {
+          content: 'none',
+        },
+      },
+    }),
+  continueReadingButton: ({ mq, palette }: Theme) =>
+    css({
+      borderBottom: 'none',
+      backgroundColor: `${palette.GREY_1}`,
+      display: 'block',
+      width: '100%',
+      '&&': {
+        margin: '0',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
   grid: ({ mq, gridWidths, spacings }: Theme) =>
     css({
       maxWidth: `${pixelsToRem(gridWidths[1008])}rem`,

@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -18,6 +18,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
 import useToggle from '#app/hooks/useToggle';
+import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
 
@@ -53,7 +54,7 @@ const OnDemandAudioPage = ({
   const pageType = path(['metadata', 'type'], pageData);
 
   const { serviceName } = use(ServiceContext);
-  const { pathname, canonicalNonUkLink } = use(RequestContext);
+  const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
   const { enabled: showPodcastEpisodeLinkedData } = useToggle(
     'podcastEpisodeLinkedData',
@@ -88,7 +89,7 @@ const OnDemandAudioPage = ({
         {
           '@type': 'AudioObject',
           name: promoBrandTitle,
-          description: shortSynopsis,
+          description: summary,
           thumbnailUrl: thumbnailImageUrl,
           duration: durationISO8601,
           uploadDate,
@@ -107,14 +108,14 @@ const OnDemandAudioPage = ({
             '@type': 'PodcastEpisode',
             '@id': episodeId,
             name: episodeTitle || brandTitle,
-            description: shortSynopsis || summary,
+            description: summary,
             datePublished: new Date(releaseDateTimeStamp).toISOString(),
             partOfSeries: { '@id': seriesId },
             associatedMedia: {
               '@type': 'AudioObject',
               '@id': audioId,
               name: episodeTitle || promoBrandTitle,
-              description: shortSynopsis,
+              description: summary,
               duration: durationISO8601,
               thumbnailUrl: thumbnailImageUrl,
               uploadDate,
@@ -143,6 +144,18 @@ const OnDemandAudioPage = ({
       }
     : {};
 
+  const [showAllContent, setShowAllContent] = useState(false);
+
+  const summaryIsShort = Boolean(summary === shortSynopsis);
+
+  const shouldShowContinueReadingButton =
+    isPodcast && !isLite && !summaryIsShort;
+
+  const summaryStyles =
+    shouldShowContinueReadingButton && !showAllContent
+      ? styles.collapsedSummary
+      : styles.expandedSummary;
+
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata?.atiAnalytics ?? undefined} />
@@ -158,7 +171,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={summary}
         {...metadataImageProps}
         hasAmpPage={false}
       />
@@ -173,11 +186,18 @@ const OnDemandAudioPage = ({
                   episodeTitle={episodeTitle}
                   releaseDateTimeStamp={releaseDateTimeStamp}
                 />
-                <OnDemandParagraphContainer testid="summary" text={summary} />
                 {episodeTitle && (
-                  <FooterTimestamp
-                    releaseDateTimeStamp={releaseDateTimeStamp}
-                  />
+                  <div css={styles.footerTimeStampWrapper}>
+                    <FooterTimestamp
+                      releaseDateTimeStamp={releaseDateTimeStamp}
+                    />
+                  </div>
+                )}
+                {mediaIsAvailable ? (
+                  <MediaLoader blocks={pageData?.mediaBlocks} />
+                ) : (
+                  //  @ts-expect-error allow rendering of MediaError component when media is not available
+                  <MediaError skin="audio" />
                 )}
               </div>
               <EpisodeImage
@@ -188,11 +208,15 @@ const OnDemandAudioPage = ({
                 isPodcastEpisodePage
               />
             </div>
-            {mediaIsAvailable ? (
-              <MediaLoader blocks={pageData?.mediaBlocks} />
-            ) : (
-              //  @ts-expect-error allow rendering of MediaError component when media is not available
-              <MediaError skin="audio" />
+            <div css={summaryStyles}>
+              <OnDemandParagraphContainer testid="summary" text={summary} />
+            </div>
+            {shouldShowContinueReadingButton && (
+              <ContinueReadingButton
+                css={styles.continueReadingButton}
+                showAllContent={showAllContent}
+                setShowAllContent={setShowAllContent}
+              />
             )}
 
             <LinkedData

@@ -49,6 +49,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'او',
       pagination: {
         page: 'پاڼه',
         previousPage: 'مخکينۍ پاڼه',
