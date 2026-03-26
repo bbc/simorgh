@@ -1,8 +1,4 @@
-// px to rem conversion utility
-@use 'sass:math';
-@function px-to-rem($px, $base: 16) {
-  @return math.div($px, $base) * 1rem;
-}
+@use '../px-to-rem.scss' as *;
 :root {
   --font-size-atlas-group-a: #{px-to-rem(78)};
   --line-height-atlas-group-a: #{px-to-rem(84)};
