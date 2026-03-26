@@ -23,6 +23,18 @@ const And = ({ andTranslation }) => {
   );
 };
 
+const AuthorImage = ({ authorImage }) => {
+  return (
+    <Image
+      css={BylineCss.imageSrc}
+      src={authorImage}
+      alt=""
+      placeholder={false}
+      aspectRatio={[1, 1]}
+    />
+  );
+};
+
 const AuthorTopicUrl = ({
   author,
   authorName,
@@ -165,13 +177,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
                 ]}
               >
-                <Image
-                  css={BylineCss.imageSrc}
-                  src={authorImage}
-                  alt=""
-                  placeholder={false}
-                  aspectRatio={[1, 1]}
-                />
+                <AuthorImage authorImage={authorImage} />
               </li>
             )}
             <li
@@ -197,7 +203,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   <Comma />
                 )}
             </li>
-            {jobRole ? (
+            {jobRole && (
               <li css={BylineCss.contributorTextWrapper}>
                 <AuthorRole jobRole={jobRole} role={role} isSingleContributor />
                 {(location && <Comma />) ||
@@ -205,8 +211,8 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                     index !== lastContributorIndex &&
                     index !== lastContributorIndex - 1 && <Comma />)}
               </li>
-            ) : null}
-            {location ? (
+            )}
+            {location && (
               <li css={BylineCss.contributorTextWrapper}>
                 <AuthorLocation
                   location={location}
@@ -217,7 +223,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   index !== lastContributorIndex &&
                   index !== lastContributorIndex - 1 && <Comma />}
               </li>
-            ) : null}
+            )}
           </ul>
         );
       })}
