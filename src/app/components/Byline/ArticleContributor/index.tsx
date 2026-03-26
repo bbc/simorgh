@@ -23,6 +23,100 @@ const And = ({ andTranslation }) => {
   );
 };
 
+const AuthorTopicUrl = ({
+  author,
+  authorName,
+  authorTopicUrl,
+  isSingleContributor,
+  isRtl,
+}) => {
+  return (
+    <>
+      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+      <a
+        css={[
+          BylineCss.link,
+          isSingleContributor
+            ? BylineCss.linkSingleContributor
+            : BylineCss.linkMultipleContributor,
+        ]}
+        href={authorTopicUrl}
+        className="focusIndicatorReducedWidth"
+      >
+        <Text
+          className="byline-link"
+          size="bodyCopy"
+          fontVariant="sansBold"
+          css={[
+            BylineCss.author,
+            isSingleContributor && BylineCss.authorSingleContributor,
+          ]}
+        >
+          {authorName}
+        </Text>
+        {isSingleContributor &&
+          (isRtl ? (
+            <LeftChevron
+              className="byline-link"
+              css={BylineCss.authorChevron}
+            />
+          ) : (
+            <RightChevron
+              className="byline-link"
+              css={BylineCss.authorChevron}
+            />
+          ))}
+      </a>
+    </>
+  );
+};
+
+const AuthorName = ({ author, authorName, isSingleContributor }) => {
+  return (
+    <span role="text">
+      <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
+      <Text
+        css={[
+          BylineCss.author,
+          isSingleContributor && BylineCss.authorSingleContributor,
+        ]}
+        fontVariant="sansBold"
+        size="bodyCopy"
+      >
+        {authorName}
+      </Text>
+    </span>
+  );
+};
+
+const AuthorRole = ({ jobRole, isSingleContributor, role }) => {
+  return (
+    <span role="text">
+      <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+      <Text
+        css={BylineCss.jobRole}
+        {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
+      >
+        {jobRole}
+      </Text>
+    </span>
+  );
+};
+
+const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
+  return (
+    <span role="text">
+      <VisuallyHiddenText>{`${reportingFrom}, `} </VisuallyHiddenText>
+      <Text
+        css={[BylineCss.locationText]}
+        {...(isSingleContributor ? { size: 'brevier' } : { size: 'bodyCopy' })}
+      >
+        {location}
+      </Text>
+    </span>
+  );
+};
+
 const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
   const { translations, dir } = use(ServiceContext);
   const isRtl = dir === 'rtl';
@@ -84,58 +178,19 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
               css={hasMultipleContributors && BylineCss.contributorTextWrapper}
             >
               {authorTopicUrl ? (
-                <>
-                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                  <a
-                    css={[
-                      BylineCss.link,
-                      isSingleContributor
-                        ? BylineCss.linkSingleContributor
-                        : BylineCss.linkMultipleContributor,
-                    ]}
-                    href={authorTopicUrl}
-                    className="focusIndicatorReducedWidth"
-                  >
-                    <Text
-                      className="byline-link"
-                      size="bodyCopy"
-                      fontVariant="sansBold"
-                      css={[
-                        BylineCss.author,
-                        isSingleContributor &&
-                          BylineCss.authorSingleContributor,
-                      ]}
-                    >
-                      {authorName}
-                    </Text>
-                    {isSingleContributor &&
-                      (isRtl ? (
-                        <LeftChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      ) : (
-                        <RightChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      ))}
-                  </a>
-                </>
+                <AuthorTopicUrl
+                  author={author}
+                  authorName={authorName}
+                  authorTopicUrl={authorTopicUrl}
+                  isSingleContributor
+                  isRtl
+                />
               ) : (
-                <span role="text">
-                  <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                  <Text
-                    css={[
-                      BylineCss.author,
-                      isSingleContributor && BylineCss.authorSingleContributor,
-                    ]}
-                    fontVariant="sansBold"
-                    size="bodyCopy"
-                  >
-                    {authorName}
-                  </Text>
-                </span>
+                <AuthorName
+                  author={author}
+                  authorName={authorName}
+                  isSingleContributor
+                />
               )}
               {hasMultipleContributors &&
                 !isLastContributorNameOnly(index, jobRole, location) && (
@@ -144,17 +199,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
             </li>
             {jobRole ? (
               <li css={BylineCss.contributorTextWrapper}>
-                <span role="text">
-                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                  <Text
-                    css={BylineCss.jobRole}
-                    {...(isSingleContributor
-                      ? { size: 'brevier' }
-                      : { size: 'bodyCopy' })}
-                  >
-                    {jobRole}
-                  </Text>
-                </span>
+                <AuthorRole jobRole={jobRole} role={role} isSingleContributor />
                 {(location && <Comma />) ||
                   (hasMultipleContributors &&
                     index !== lastContributorIndex &&
@@ -163,19 +208,11 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
             ) : null}
             {location ? (
               <li css={BylineCss.contributorTextWrapper}>
-                <span role="text">
-                  <VisuallyHiddenText>
-                    {`${reportingFrom}, `}{' '}
-                  </VisuallyHiddenText>
-                  <Text
-                    css={[BylineCss.locationText]}
-                    {...(isSingleContributor
-                      ? { size: 'brevier' }
-                      : { size: 'bodyCopy' })}
-                  >
-                    {location}
-                  </Text>
-                </span>
+                <AuthorLocation
+                  location={location}
+                  reportingFrom={reportingFrom}
+                  isSingleContributor
+                />
                 {hasMultipleContributors &&
                   index !== lastContributorIndex &&
                   index !== lastContributorIndex - 1 && <Comma />}
