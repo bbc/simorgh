@@ -55,6 +55,10 @@ module.exports = {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
       },
+      {
+        source: '/:service/:variant/popular/read',
+        destination: '/:service/popular/read/:variant*',
+      },
     ];
   },
   assetPrefix,
