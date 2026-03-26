@@ -30,14 +30,9 @@ describe('AccountContext', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     (onClient as jest.Mock).mockReturnValue(true);
-    jest.spyOn(Cookie, 'get').mockReturnValue('some-cookie-value' as any);
 
     delete (window as any).location;
     window.location = { href: 'https://example.com/current-page' } as any;
-  });
-
-  afterEach(() => {
-    jest.restoreAllMocks();
   });
 
   const TestComponent = () => {
@@ -92,18 +87,6 @@ describe('AccountContext', () => {
     expect(context.isIdctaAvailable).toBe(false);
   });
 
-  it('should set isSignedIn to false on the server when IDCTA is available', () => {
-    (onClient as jest.Mock).mockReturnValue(false);
-    (Cookie.get as jest.Mock).mockClear();
-    render(<TestComponent />, {
-      idctaConfig: mockIdctaConfig,
-      service: 'hindi',
-    });
-    const testEl = screen.getByTestId('test-component');
-    const context = JSON.parse(testEl.textContent as string);
-    expect(context.isSignedIn).toBe(false);
-  });
-
   it('should set isIdctaAvailable to false when initialConfig is null', () => {
     render(<TestComponent />, {
       idctaConfig: null,
@@ -152,11 +135,21 @@ describe('AccountContext', () => {
     expect(context.forYouUrl).toBe(mockIdctaConfig.unavailable_url);
   });
 
-  it('should set isSignedIn to false when IDCTA is available and ckns_id cookie is absent', () => {
-    (Cookie.get as jest.Mock).mockReturnValue(undefined as any);
-
+  it('should set isSignedIn to true when IDCTA is available and initialIsSignedIn is true', () => {
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(context.isSignedIn).toBe(true);
+  });
+
+  it('should set isSignedIn to false when IDCTA is available but initialIsSignedIn is false', () => {
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
       service: 'hindi',
     });
 
@@ -166,7 +159,7 @@ describe('AccountContext', () => {
     expect(context.isSignedIn).toBe(false);
   });
 
-  it('should set isSignedIn to false when IDCTA is not available regardless of cookie ckns_id', () => {
+  it('should set isSignedIn to false when IDCTA is not available regardless of initialIsSignedIn', () => {
     const config = {
       ...mockIdctaConfig,
       'id-availability': 'RED',
@@ -183,9 +176,11 @@ describe('AccountContext', () => {
     expect(context.isSignedIn).toBe(false);
   });
 
-  it('should set isSignedIn to true when IDCTA is available and ckns_id cookie is present', () => {
+  it('should set isSignedIn to true when ckns_id cookie is present', () => {
+    jest.spyOn(Cookie, 'get').mockReturnValue('ckns_id_cookie_value' as any);
+
     render(<TestComponent />, {
-      idctaConfig: mockIdctaConfig,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
       service: 'hindi',
     });
 

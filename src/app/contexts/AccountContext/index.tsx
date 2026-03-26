@@ -51,8 +51,12 @@ export const AccountProvider = ({
 
   // TODO: Only checks client-side cookie presence, it will be improved to detect signed-in status server side
   // Ticket: https://bbc.atlassian.net/browse/WS-2388
-  const cookieName = initialConfig?.identity?.idSignedInCookieName;
-  const isSignedIn = isIdctaAvailable && Boolean(getSignedInCookie(cookieName));
+  const clientSignedInState = getSignedInCookie(
+    initialConfig?.identity?.idSignedInCookieName,
+  );
+  const isSignedIn =
+    isIdctaAvailable &&
+    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
 
   const value = useMemo(
     () => ({
