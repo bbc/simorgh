@@ -137,7 +137,7 @@ describe('AccountContext', () => {
   });
 
   it('should set isSignedIn to false when IDCTA is available and ckns_id cookie is absent', () => {
-    jest.spyOn(Cookie, 'get').mockReturnValue(undefined as any);
+    (Cookie.get as jest.Mock).mockReturnValue(undefined as any);
 
     render(<TestComponent />, {
       idctaConfig: mockIdctaConfig,
@@ -178,21 +178,6 @@ describe('AccountContext', () => {
 
     expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
     expect(context.isSignedIn).toBe(true);
-  });
-
-  it('should set isSignedIn to false when IDCTA is available but ckns_id cookie is absent', () => {
-    jest.spyOn(Cookie, 'get').mockReturnValue(undefined as any);
-
-    render(<TestComponent />, {
-      idctaConfig: mockIdctaConfig,
-      service: 'hindi',
-    });
-
-    const testEl = screen.getByTestId('test-component');
-    const context = JSON.parse(testEl.textContent as string);
-
-    expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
-    expect(context.isSignedIn).toBe(false);
   });
 
   it('should handle null initialConfig gracefully', () => {
