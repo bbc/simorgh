@@ -41,7 +41,6 @@ const fetchConfig = async <T>({
     fetchUrl.searchParams.set('variant', variant);
   }
 
-  // Only fetch new nav for Arabic and Tamil services
   if (SERVICES_WITH_NEW_NAV.includes(service)) {
     fetchUrl.searchParams.set('useNewNav', 'true');
   }
