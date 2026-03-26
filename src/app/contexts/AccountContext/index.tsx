@@ -49,7 +49,8 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  // TODO: Only checks client-side cookie presence, it will be improved to detect signed-in status server side
+  // TODO: initialIsSignedIn is always false in test/live env due to filtered cookie header,
+  // it will be improved to detect signed-in status server side in the future
   // Ticket: https://bbc.atlassian.net/browse/WS-2388
   const clientSignedInState = getSignedInCookie(
     initialConfig?.identity?.idSignedInCookieName,
