@@ -164,6 +164,13 @@ Cypress.Commands.overwrite(
       return visit(normalizedVisitOptions);
     };
 
+    if (!failOnStatusCode || getAppEnv() === 'local') {
+      return runVisit().then(() => {
+        // Handle Continue Reading button if it appears when cy.visit() is called
+        handleContinueReadingButton();
+      });
+    }
+
     const checkStatus = (retriesLeft = 2): Cypress.Chainable => {
       return cy
         .request({
@@ -187,13 +194,6 @@ Cypress.Commands.overwrite(
           );
         });
     };
-
-    if (!failOnStatusCode) {
-      return runVisit().then(() => {
-        // Handle Continue Reading button if it appears when cy.visit() is called
-        handleContinueReadingButton();
-      });
-    }
 
     // Pre-check: Verify the page returns a 200 response before visiting.
     // This mitigates Lambda cold-start failures where the first request returns a 500,
