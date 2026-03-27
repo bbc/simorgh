@@ -6,6 +6,14 @@ exports[`BrandContainer should render correctly 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
@@ -41,8 +49,9 @@ exports[`BrandContainer should render correctly 1`] = `
 }
 
 .emotion-3 {
-  min-height: inherit;
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -61,12 +70,8 @@ exports[`BrandContainer should render correctly 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-3 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-5 {
@@ -106,6 +111,7 @@ exports[`BrandContainer should render correctly 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
