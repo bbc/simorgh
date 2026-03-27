@@ -1,0 +1,11 @@
+@use './fontBaseUrls.scss' as fontUrls;
+
+@font-face {
+  font-family: 'BBC Reith Qalam';
+  src:
+  url('#{fontUrls.$reith-qalam-fonts-dir}BBCReithQalam_W_Bd.woff2') format('woff2'),
+  url('#{fontUrls.$reith-qalam-fonts-dir}BBCReithQalam_W_Bd.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: optional;
+}

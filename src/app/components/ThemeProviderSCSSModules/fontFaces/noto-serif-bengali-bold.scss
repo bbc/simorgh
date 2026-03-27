@@ -1,0 +1,13 @@
+@use './fontBaseUrls.scss' as fontUrls;
+
+@font-face {
+  font-family: 'Noto Serif Bengali';
+  font-weight: 700;
+  font-style: normal;
+  src:
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/bold.woff2') format('woff2'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/bold.woff') format('woff'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/normal.eot') format('eot'),
+  url('#{fontUrls.$font-base-url}/fonts/NotoSerifBengali/v1.00/bold.ttf') format('ttf');
+  font-display: swap;
+}
