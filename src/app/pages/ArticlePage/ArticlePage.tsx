@@ -60,7 +60,6 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
-import { AccountContext } from '#app/contexts/AccountContext';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -109,11 +108,7 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articleId: string,
-    isSignedIn: boolean,
     service: string,
-    isAmp: boolean,
-    isLite: boolean,
-    isApp: boolean,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -145,13 +140,10 @@ const getTimestampComponent =
           </>
         )}
         {/* Temporary SaveArticleButton */}
-        {!isAmp && !isLite && !isApp && (
-          <SaveArticleButton
-            isSignedIn={isSignedIn}
-            articleId={parseArticleID(articleId)}
-            service={service}
-          />
-        )}
+        <SaveArticleButton
+          articleId={parseArticleID(articleId)}
+          service={service}
+        />
       </>
     );
   };
@@ -226,7 +218,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     translations,
     service,
   } = use(ServiceContext);
-  const { isSignedIn } = use(AccountContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: continueReadingButtonToggle } = useToggle(
@@ -370,11 +361,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       articleId,
-      isSignedIn,
       service,
-      isAmp,
-      isLite,
-      isApp,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,

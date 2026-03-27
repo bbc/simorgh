@@ -2,7 +2,6 @@ import useUASButton from '#app/hooks/useUASButton';
 import styles from './index.styles';
 
 interface SaveArticleButtonProps {
-  isSignedIn: boolean;
   articleId: string;
   service: string;
 }
@@ -11,13 +10,8 @@ interface SaveArticleButtonProps {
  * and displaying the saved status, loading state, and handling errors from the UAS API.
  * FUTURE TODO : Implement button click handler to toggle saved state */
 
-const SaveArticleButton = ({
-  isSignedIn,
-  articleId,
-  service,
-}: SaveArticleButtonProps) => {
-  const { showButton, isSaved, loading, error } = useUASButton({
-    isSignedIn,
+const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
+  const { showButton, isSaved, isLoading, error } = useUASButton({
     articleId,
     service,
   });
@@ -29,7 +23,7 @@ const SaveArticleButton = ({
   const buttonLabel = isSaved ? 'Remove from saved' : 'Save for later';
 
   const getButtonText = () => {
-    if (loading) return 'Loading...';
+    if (isLoading) return 'Loading...';
     return isSaved ? 'Remove from saved' : 'Save for later';
   };
 
@@ -43,7 +37,7 @@ const SaveArticleButton = ({
     <button
       css={styles.buttonWrapper}
       type="button"
-      disabled={loading}
+      disabled={isLoading}
       aria-label={buttonLabel}
       title={buttonLabel}
     >

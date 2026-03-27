@@ -25,13 +25,15 @@ describe('useUASFetchSaveStatus', () => {
       useUASFetchSaveStatus(defaultArticleId),
     );
 
-    await waitFor(() => expect(result.current.loading).toBe(false));
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.isSaved).toBe(true);
     expect(result.current.error).toBeNull();
-    expect(mockUasApiRequest).toHaveBeenCalledWith('GET', ACTIVITY_TYPE, {
-      globalId: 'global-123',
-    });
+    expect(mockUasApiRequest).toHaveBeenCalledWith(
+      'GET',
+      ACTIVITY_TYPE,
+      expect.objectContaining({ globalId: 'global-123' }),
+    );
   });
 
   test('returns isSaved = false when API returns 204', async () => {
@@ -42,7 +44,7 @@ describe('useUASFetchSaveStatus', () => {
       useUASFetchSaveStatus(defaultArticleId),
     );
 
-    await waitFor(() => expect(result.current.loading).toBe(false));
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.isSaved).toBe(false);
     expect(result.current.error).toBeNull();
@@ -57,7 +59,7 @@ describe('useUASFetchSaveStatus', () => {
       useUASFetchSaveStatus(defaultArticleId),
     );
 
-    await waitFor(() => expect(result.current.loading).toBe(false));
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.isSaved).toBe(false);
     expect(result.current.error).toBe(apiError);

@@ -8,7 +8,6 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 
 describe('SaveArticleButton', () => {
   const defaultProps = {
-    isSignedIn: true,
     articleId: '123',
     service: 'hindi',
   };
@@ -21,7 +20,7 @@ describe('SaveArticleButton', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: false,
       isSaved: false,
-      loading: false,
+      isLoading: false,
     });
 
     const { container } = render(<SaveArticleButton {...defaultProps} />);
@@ -32,7 +31,7 @@ describe('SaveArticleButton', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
-      loading: false,
+      isLoading: false,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -43,7 +42,7 @@ describe('SaveArticleButton', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: true,
-      loading: false,
+      isLoading: false,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -54,7 +53,7 @@ describe('SaveArticleButton', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
-      loading: true,
+      isLoading: true,
     });
 
     render(<SaveArticleButton {...defaultProps} />);

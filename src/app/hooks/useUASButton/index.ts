@@ -1,4 +1,6 @@
+import { use } from 'react';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
+import { AccountContext } from '#app/contexts/AccountContext';
 import isLocal from '#app/lib/utilities/isLocal';
 import useToggle from '../useToggle';
 
@@ -7,7 +9,6 @@ import useToggle from '../useToggle';
  * with room to later expand for toggling the save state based on user actions. */
 
 interface UseUASButtonProps {
-  isSignedIn: boolean;
   articleId: string;
   service: string;
 }
@@ -15,15 +16,15 @@ interface UseUASButtonProps {
 interface UseUASButtonReturn {
   showButton: boolean;
   isSaved: boolean;
-  loading: boolean;
+  isLoading: boolean;
   error: Error | null;
 }
 
 const useUASButton = ({
   service,
-  isSignedIn,
   articleId,
 }: UseUASButtonProps): UseUASButtonReturn => {
+  const { isSignedIn } = use(AccountContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
 
@@ -35,13 +36,13 @@ const useUASButton = ({
 
   const showButton = isUASEnabled && isSignedIn;
 
-  const { isSaved, loading, error } = useUASFetchSaveStatus(
+  const { isSaved, isLoading, error } = useUASFetchSaveStatus(
     showButton ? articleId : '',
   );
   return {
     showButton,
     isSaved,
-    loading,
+    isLoading,
     error,
   };
 };
