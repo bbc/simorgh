@@ -10,6 +10,7 @@ import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
+import useToggle from '#app/hooks/useToggle';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -20,7 +21,6 @@ import KeyPoints from './KeyPoints';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
-
 import LatestPostButton from './LatestPostButton';
 
 interface LivePromoImage {
@@ -69,12 +69,12 @@ interface LivePageProps extends ComponentProps {
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
+  const { enabled: livePagePollingEnabled } = useToggle(
+    'livePagePollingEnabled',
+  );
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
-
-  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
-    useLivePagePolling(pageData, false);
 
   const {
     title,
@@ -90,6 +90,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     promoImage,
     mediaCollections,
   } = pageData;
+
+  const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
+    useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
   const {
     url: imageUrl,
