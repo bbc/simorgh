@@ -41,14 +41,6 @@ const BrandContainer = ({
   const svgRatio = brandSVG && brandSVG.ratio;
   const minWidth = svgRatio * svgMinHeight;
   const maxWidth = svgRatio * svgMaxHeight;
-  const longBrands = [
-    'afaanoromoo',
-    'azeri',
-    'kyrgyz',
-    'russian',
-    'serbian',
-    'ws',
-  ];
 
   const brandPath = getBrandPath(service, variant);
 
@@ -63,7 +55,6 @@ const BrandContainer = ({
       url={brandPath}
       skipLink={skipLink}
       scriptLink={scriptLink}
-      isLongBrand={longBrands.includes(service)}
       ref={brandRef}
       {...props}
     >
