@@ -6,23 +6,19 @@ export default {
         model: {
           blocks: [
             {
-              id: 'd7b98f96',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '71da6a96',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '13ef8d2e',
                           type: 'paragraph',
                           model: {
                             text: 'Post 1337 after refresh',
                             blocks: [
                               {
-                                id: 'a9aeb7b0',
                                 type: 'fragment',
                                 model: {
                                   text: 'Post 1337 after refresh',
@@ -39,23 +35,19 @@ export default {
               },
             },
             {
-              id: 'f76561d9',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '48b5af62',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '4c493b8d',
                           type: 'paragraph',
                           model: {
                             text: 'Ho Ting Lok',
                             blocks: [
                               {
-                                id: 'be78608d',
                                 type: 'fragment',
                                 model: {
                                   text: 'Ho Ting Lok',
@@ -78,13 +70,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '6d86d4aa',
               type: 'paragraph',
               model: {
                 text: 'Testing with a new card',
                 blocks: [
                   {
-                    id: '2b208a16',
                     type: 'fragment',
                     model: {
                       text: 'Testing with a new card',
@@ -137,23 +127,19 @@ export default {
         model: {
           blocks: [
             {
-              id: 'd6a72f96',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '71da6a96',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '13ef8d2e',
                           type: 'paragraph',
                           model: {
                             text: 'Another test for refresh',
                             blocks: [
                               {
-                                id: 'a9aeb7b0',
                                 type: 'fragment',
                                 model: {
                                   text: 'Another test for refresh',
@@ -170,23 +156,19 @@ export default {
               },
             },
             {
-              id: 'f76561d9',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '48b5af62',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '4c493b8d',
                           type: 'paragraph',
                           model: {
                             text: 'Harvey Peachey',
                             blocks: [
                               {
-                                id: 'be78608d',
                                 type: 'fragment',
                                 model: {
                                   text: 'Harvey Peachey',
@@ -209,13 +191,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '6d86d4aa',
               type: 'paragraph',
               model: {
                 text: 'Testing with a new card',
                 blocks: [
                   {
-                    id: '2b208a16',
                     type: 'fragment',
                     model: {
                       text: 'Testing with a new card',
@@ -268,23 +248,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '2e190dea',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '61821195',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'de3f3753',
                           type: 'paragraph',
                           model: {
                             text: 'Test for refresh',
                             blocks: [
                               {
-                                id: 'a8e693e5',
                                 type: 'fragment',
                                 model: {
                                   text: 'Test for refresh',
@@ -301,23 +277,19 @@ export default {
               },
             },
             {
-              id: 'af161441',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '6024187a',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '8c6398cb',
                           type: 'paragraph',
                           model: {
                             text: 'Rushdi Abu Alouf - Reporting from Istanbul',
                             blocks: [
                               {
-                                id: '750f0ec9',
                                 type: 'fragment',
                                 model: {
                                   text: 'Rushdi Abu Alouf - Reporting from Istanbul',
@@ -340,13 +312,11 @@ export default {
         model: {
           blocks: [
             {
-              id: 'aadb6527',
               type: 'paragraph',
               model: {
                 text: 'Yo',
                 blocks: [
                   {
-                    id: '67b55e81',
                     type: 'fragment',
                     model: {
                       text: 'Yo',
@@ -357,13 +327,11 @@ export default {
               },
             },
             {
-              id: 'a167e64f',
               type: 'paragraph',
               model: {
                 text: 'No 10 has decided to split the role. So Michael Tomlinson has been appointed Minister for Illegal Migration in the Home Office, with Tom Pursglove as Minister for Legal Migration and Delivery.',
                 blocks: [
                   {
-                    id: 'dc257088',
                     type: 'fragment',
                     model: {
                       text: 'No 10 has decided to split the role. So Michael Tomlinson has been appointed Minister for Illegal Migration in the Home Office, with Tom Pursglove as Minister for Legal Migration and Delivery.',
@@ -374,13 +342,11 @@ export default {
               },
             },
             {
-              id: 'ff80de8f',
               type: 'paragraph',
               model: {
                 text: 'Testing an update within this post card',
                 blocks: [
                   {
-                    id: '9e4a10bb',
                     type: 'fragment',
                     model: {
                       text: 'Testing an update within this post card',
@@ -391,7 +357,6 @@ export default {
               },
             },
             {
-              id: '4fd0a6a4',
               type: 'paragraph',
               model: {
                 text: '',
@@ -441,23 +406,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '954c0501',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: 'eb02f4ab',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'f22b7b41',
                           type: 'paragraph',
                           model: {
                             text: 'More fuel aid for Gaza but fighting threatens distribution',
                             blocks: [
                               {
-                                id: 'f0aad72e',
                                 type: 'fragment',
                                 model: {
                                   text: 'More fuel aid for Gaza but fighting threatens distribution',
@@ -474,23 +435,19 @@ export default {
               },
             },
             {
-              id: '5b9eec2d',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: 'ffa717ba',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '90cda8ed',
                           type: 'paragraph',
                           model: {
                             text: 'Yvette Tan, Live editor',
                             blocks: [
                               {
-                                id: 'c1925b88',
                                 type: 'fragment',
                                 model: {
                                   text: 'Yvette Tan, Live editor',
@@ -513,13 +470,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '0d255f30',
               type: 'paragraph',
               model: {
                 text: 'Israel has announced what it called a "minimal" increase in fuel supplies to southern Gaza.',
                 blocks: [
                   {
-                    id: '91ee3a94',
                     type: 'fragment',
                     model: {
                       text: 'Israel has announced what it called a "minimal" increase in fuel supplies to southern Gaza.',
@@ -530,7 +485,6 @@ export default {
               },
             },
             {
-              id: '118e76e7',
               type: 'paragraph',
               model: {
                 text: '',
@@ -538,13 +492,11 @@ export default {
               },
             },
             {
-              id: 'f3cf35a2',
               type: 'video',
               model: {
                 locator: 'urn:bbc:pips:pid:p01thw20',
                 blocks: [
                   {
-                    id: '6217b8cb',
                     type: 'clipMedia',
                     model: {
                       id: 'urn:bbc:pips:pid:p01thw20',
@@ -645,23 +597,19 @@ export default {
                     },
                   },
                   {
-                    id: '375c36e7',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: '454cef61',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '48256880',
                                 type: 'paragraph',
                                 model: {
                                   text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
                                   blocks: [
                                     {
-                                      id: 'adbafc7d',
                                       type: 'fragment',
                                       model: {
                                         text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
@@ -723,23 +671,19 @@ export default {
         model: {
           blocks: [
             {
-              id: 'a098eef6',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: 'a38f616a',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '45cff07c',
                           type: 'paragraph',
                           model: {
                             text: "Sunak moves to split Jenrick's old job in two",
                             blocks: [
                               {
-                                id: '3e7e4f6b',
                                 type: 'fragment',
                                 model: {
                                   text: "Sunak moves to split Jenrick's old job in two",
@@ -756,23 +700,19 @@ export default {
               },
             },
             {
-              id: '7eb243ab',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: 'b2786c3f',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '337dbce8',
                           type: 'paragraph',
                           model: {
                             text: 'Rushdi Abu Alouf - Reporting from Istanbul',
                             blocks: [
                               {
-                                id: '34c4143a',
                                 type: 'fragment',
                                 model: {
                                   text: 'Rushdi Abu Alouf - Reporting from Istanbul',
@@ -795,13 +735,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '5ac4ba9b',
               type: 'paragraph',
               model: {
                 text: 'Downing Street has moved to announce who will replace Robert Jenrick who quit last night as immigration minister.',
                 blocks: [
                   {
-                    id: '9e2d8eb1',
                     type: 'fragment',
                     model: {
                       text: 'Downing Street has moved to announce who will replace Robert Jenrick who quit last night as immigration minister.',
@@ -812,13 +750,11 @@ export default {
               },
             },
             {
-              id: '944a0d29',
               type: 'paragraph',
               model: {
                 text: 'No 10 has decided to split the role. So Michael Tomlinson has been appointed Minister for Illegal Migration in the Home Office, with Tom Pursglove as Minister for Legal Migration and Delivery.',
                 blocks: [
                   {
-                    id: '26d20b5a',
                     type: 'fragment',
                     model: {
                       text: 'No 10 has decided to split the role. So Michael Tomlinson has been appointed Minister for Illegal Migration in the Home Office, with Tom Pursglove as Minister for Legal Migration and Delivery.',
@@ -829,7 +765,6 @@ export default {
               },
             },
             {
-              id: '810a842e',
               type: 'paragraph',
               model: {
                 text: '',
@@ -879,23 +814,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '99a697a6',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: 'ba28af16',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '0d359313',
                           type: 'paragraph',
                           model: {
                             text: 'Gazans squeezed into smaller areas in the south as fighting rages (Twitter)',
                             blocks: [
                               {
-                                id: '4065aaff',
                                 type: 'fragment',
                                 model: {
                                   text: 'Gazans squeezed into smaller areas in the south as fighting rages (Twitter)',
@@ -912,23 +843,19 @@ export default {
               },
             },
             {
-              id: 'fc5c475a',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: 'dec8f82f',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'ef84715b',
                           type: 'paragraph',
                           model: {
                             text: 'UK Defence Secretary Grant Shapps has said more aid needs to reach Gaza',
                             blocks: [
                               {
-                                id: 'f024cc2f',
                                 type: 'fragment',
                                 model: {
                                   text: 'UK Defence Secretary Grant Shapps has said more aid needs to reach Gaza',
@@ -951,13 +878,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '7b331369',
               type: 'paragraph',
               model: {
                 text: "It's been an intense day of fighting in Gaza as the Israeli army continues to push into Khan Younis, where tens of thousands of displaced people have been sheltering.",
                 blocks: [
                   {
-                    id: '851e280a',
                     type: 'fragment',
                     model: {
                       text: "It's been an intense day of fighting in Gaza as the Israeli army continues to push into Khan Younis, where tens of thousands of displaced people have been sheltering.",
@@ -968,20 +893,17 @@ export default {
               },
             },
             {
-              id: '91879de6',
               type: 'social',
               model: {
                 source:
                   'https://twitter.com/bbcnewspidgin/status/1670883488562569216?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1670883488562569216%7Ctwgr%5Ed30de9a475cd9b9a73cc4e79ef778e5655a79963%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps3A2F2Ftwitter.com2Fbbcnewspidgin2Fstatus2F1670883488562569216widget%3DTweet',
                 blocks: [
                   {
-                    id: '4d8e5689',
                     type: 'renditions',
                     model: {
                       locator: '',
                       blocks: [
                         {
-                          id: 'bf6457df',
                           type: 'aresOEmbed',
                           model: {
                             oembed: {
@@ -999,13 +921,11 @@ export default {
               },
             },
             {
-              id: 'd6319261',
               type: 'paragraph',
               model: {
                 text: 'While the focus of the Israeli ground operation seems to be in the south, hundreds of tank shells hit Jabalia refugee camp in the north.',
                 blocks: [
                   {
-                    id: '357d8814',
                     type: 'fragment',
                     model: {
                       text: 'While the focus of the Israeli ground operation seems to be in the south, hundreds of tank shells hit Jabalia refugee camp in the north.',
@@ -1016,20 +936,17 @@ export default {
               },
             },
             {
-              id: '4f53740a',
               type: 'social',
               model: {
                 source:
                   'https://twitter.com/bbcnewspidgin/status/1700039661874282772',
                 blocks: [
                   {
-                    id: '0ce22756',
                     type: 'renditions',
                     model: {
                       locator: '',
                       blocks: [
                         {
-                          id: 'c6c840bd',
                           type: 'aresOEmbed',
                           model: {
                             oembed: {
@@ -1089,23 +1006,19 @@ export default {
         model: {
           blocks: [
             {
-              id: 'ab52b05b',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '8653e72f',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '0d5b5b5e',
                           type: 'paragraph',
                           model: {
                             text: 'UK looking at more routes for aid to reach Gaza',
                             blocks: [
                               {
-                                id: 'af9fa7be',
                                 type: 'fragment',
                                 model: {
                                   text: 'UK looking at more routes for aid to reach Gaza',
@@ -1122,23 +1035,19 @@ export default {
               },
             },
             {
-              id: 'b68facfc',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '355d29d8',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'af5ffc9b',
                           type: 'paragraph',
                           model: {
                             text: 'Anna Foster, BBC News, Rishpon, central Israel',
                             blocks: [
                               {
-                                id: 'f0f55479',
                                 type: 'fragment',
                                 model: {
                                   text: 'Anna Foster, BBC News, Rishpon, central Israel',
@@ -1161,13 +1070,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '324ba41b',
               type: 'paragraph',
               model: {
                 text: 'In pictures: Scenes in Gaza today',
                 blocks: [
                   {
-                    id: 'e408009a',
                     type: 'fragment',
                     model: {
                       text: 'In pictures: Scenes in Gaza today',
@@ -1178,12 +1085,10 @@ export default {
               },
             },
             {
-              id: '9a400467',
               type: 'image',
               model: {
                 blocks: [
                   {
-                    id: '5704ca75',
                     type: 'rawImage',
                     model: {
                       height: 416,
@@ -1195,23 +1100,19 @@ export default {
                     },
                   },
                   {
-                    id: '1e9878c1',
                     type: 'altText',
                     model: {
                       blocks: [
                         {
-                          id: '2d82ebad',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: 'e8414d85',
                                 type: 'paragraph',
                                 model: {
                                   text: 'Bombing over the Gaza Strip',
                                   blocks: [
                                     {
-                                      id: 'c421803a',
                                       type: 'fragment',
                                       model: {
                                         text: 'Bombing over the Gaza Strip',
@@ -1228,23 +1129,19 @@ export default {
                     },
                   },
                   {
-                    id: '362d3d46',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: '3a7b642a',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '4a57330c',
                                 type: 'paragraph',
                                 model: {
                                   text: 'A view of Gaza shows smoke rising during Israeli shelling, taken from southern Israel',
                                   blocks: [
                                     {
-                                      id: 'a2d4cfe4',
                                       type: 'fragment',
                                       model: {
                                         text: 'A view of Gaza shows smoke rising during Israeli shelling, taken from southern Israel',
@@ -1264,7 +1161,6 @@ export default {
               },
             },
             {
-              id: 'bc05d5b5',
               type: 'paragraph',
               model: {
                 text: '',
@@ -1272,13 +1168,11 @@ export default {
               },
             },
             {
-              id: '2fdd0b7d',
               type: 'paragraph',
               model: {
                 text: "What's been happening",
                 blocks: [
                   {
-                    id: 'd23c9475',
                     type: 'fragment',
                     model: {
                       text: "What's been happening",
@@ -1289,12 +1183,10 @@ export default {
               },
             },
             {
-              id: '3d9e514a',
               type: 'image',
               model: {
                 blocks: [
                   {
-                    id: '875506f7',
                     type: 'rawImage',
                     model: {
                       height: 416,
@@ -1306,23 +1198,19 @@ export default {
                     },
                   },
                   {
-                    id: 'ebcaa97e',
                     type: 'altText',
                     model: {
                       blocks: [
                         {
-                          id: '39313cfb',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '36c5481e',
                                 type: 'paragraph',
                                 model: {
                                   text: 'Israeli construction work in Silwan, East Jerusalem',
                                   blocks: [
                                     {
-                                      id: '5249c7b9',
                                       type: 'fragment',
                                       model: {
                                         text: 'Israeli construction work in Silwan, East Jerusalem',
@@ -1339,23 +1227,19 @@ export default {
                     },
                   },
                   {
-                    id: '00ad66db',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: 'fa05b434',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: 'bbd29234',
                                 type: 'paragraph',
                                 model: {
                                   text: 'Israeli construction work in Silwan, East Jerusalem',
                                   blocks: [
                                     {
-                                      id: '7ea2ef0a',
                                       type: 'fragment',
                                       model: {
                                         text: 'Israeli construction work in Silwan, East Jerusalem',
@@ -1417,23 +1301,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '5c2f1a01',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '488d3001',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'f488ff4d',
                           type: 'paragraph',
                           model: {
                             text: "What's happening in Jabalia?",
                             blocks: [
                               {
-                                id: '14212621',
                                 type: 'fragment',
                                 model: {
                                   text: "What's happening in Jabalia?",
@@ -1450,23 +1330,19 @@ export default {
               },
             },
             {
-              id: '1c77a90c',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '7a4faa16',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '992e87d4',
                           type: 'paragraph',
                           model: {
                             text: 'This is a subheadline',
                             blocks: [
                               {
-                                id: '8dac0e73',
                                 type: 'fragment',
                                 model: {
                                   text: 'This is a subheadline',
@@ -1489,13 +1365,11 @@ export default {
         model: {
           blocks: [
             {
-              id: 'd137e7cf',
               type: 'paragraph',
               model: {
                 text: "Jabalia refugee camp in the north of Gaza used to be one of the most densely populated areas on the Strip and the territory's largest refugee camp.",
                 blocks: [
                   {
-                    id: 'd50bc555',
                     type: 'fragment',
                     model: {
                       text: "Jabalia refugee camp in the north of Gaza used to be one of the most densely populated areas on the Strip and the territory's largest refugee camp.",
@@ -1506,12 +1380,10 @@ export default {
               },
             },
             {
-              id: 'e6aff1c6',
               type: 'image',
               model: {
                 blocks: [
                   {
-                    id: '93db331e',
                     type: 'rawImage',
                     model: {
                       height: 402,
@@ -1523,23 +1395,19 @@ export default {
                     },
                   },
                   {
-                    id: 'dd545210',
                     type: 'altText',
                     model: {
                       blocks: [
                         {
-                          id: 'faaa23d9',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '9a489469',
                                 type: 'paragraph',
                                 model: {
                                   text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
                                   blocks: [
                                     {
-                                      id: 'd65fee54',
                                       type: 'fragment',
                                       model: {
                                         text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
@@ -1556,23 +1424,19 @@ export default {
                     },
                   },
                   {
-                    id: 'b0e97c8b',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: 'ef8cc6a1',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '890e39ec',
                                 type: 'paragraph',
                                 model: {
                                   text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
                                   blocks: [
                                     {
-                                      id: '33707898',
                                       type: 'fragment',
                                       model: {
                                         text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
@@ -1592,7 +1456,6 @@ export default {
               },
             },
             {
-              id: '3a0532e2',
               type: 'paragraph',
               model: {
                 text: '',
@@ -1600,13 +1463,11 @@ export default {
               },
             },
             {
-              id: '96e46473',
               type: 'paragraph',
               model: {
                 text: 'Read the full story here.',
                 blocks: [
                   {
-                    id: 'cf4e0fe1',
                     type: 'urlLink',
                     model: {
                       text: 'Read the full story here.',
@@ -1614,7 +1475,6 @@ export default {
                         'https://www.bbc.co.uk/news/world-middle-east-67636785',
                       blocks: [
                         {
-                          id: '80a087df',
                           type: 'fragment',
                           model: {
                             text: 'Read the full story here.',
@@ -1628,13 +1488,11 @@ export default {
               },
             },
             {
-              id: '33a13089',
               type: 'video',
               model: {
                 locator: 'urn:bbc:pips:pid:p01thw20',
                 blocks: [
                   {
-                    id: 'acf61501',
                     type: 'clipMedia',
                     model: {
                       id: 'urn:bbc:pips:pid:p01thw20',
@@ -1735,23 +1593,19 @@ export default {
                     },
                   },
                   {
-                    id: '8e9131b4',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: '51e42ceb',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: 'e5b2683a',
                                 type: 'paragraph',
                                 model: {
                                   text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
                                   blocks: [
                                     {
-                                      id: '2642aaf8',
                                       type: 'fragment',
                                       model: {
                                         text: 'BBC launch trailer for We Know Our Place women\'s sport campaign"',
@@ -1771,7 +1625,6 @@ export default {
               },
             },
             {
-              id: 'c032daa7',
               type: 'paragraph',
               model: {
                 text: '',
@@ -1779,13 +1632,11 @@ export default {
               },
             },
             {
-              id: '00408c86',
               type: 'paragraph',
               model: {
                 text: 'Follow BBC posts on X',
                 blocks: [
                   {
-                    id: 'a96f8565',
                     type: 'urlLink',
                     model: {
                       text: 'Follow BBC posts on X',
@@ -1793,7 +1644,6 @@ export default {
                         'https://twitter.com/bbcnewspidgin/status/1670883488562569216?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1670883488562569216%7Ctwgr%5Ed30de9a475cd9b9a73cc4e79ef778e5655a79963%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps3A2F2Ftwitter.com2Fbbcnewspidgin2Fstatus2F1670883488562569216widget%3DTweet',
                       blocks: [
                         {
-                          id: '14b0b806',
                           type: 'fragment',
                           model: {
                             text: 'Follow BBC posts on X',
@@ -1807,20 +1657,17 @@ export default {
               },
             },
             {
-              id: '19592809',
               type: 'social',
               model: {
                 source:
                   'https://twitter.com/bbcnewspidgin/status/1670883488562569216?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1670883488562569216%7Ctwgr%5Ed30de9a475cd9b9a73cc4e79ef778e5655a79963%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Fquery%3Dhttps3A2F2Ftwitter.com2Fbbcnewspidgin2Fstatus2F1670883488562569216widget%3DTweet',
                 blocks: [
                   {
-                    id: '4348e19c',
                     type: 'renditions',
                     model: {
                       locator: '',
                       blocks: [
                         {
-                          id: '17852586',
                           type: 'aresOEmbed',
                           model: {
                             oembed: {
@@ -1879,23 +1726,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '6853db61',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '89ba1324',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'd5f4b159',
                           type: 'paragraph',
                           model: {
                             text: "What's been happening",
                             blocks: [
                               {
-                                id: 'e2996a6d',
                                 type: 'fragment',
                                 model: {
                                   text: "What's been happening",
@@ -1912,23 +1755,19 @@ export default {
               },
             },
             {
-              id: 'b6b7d046',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '5cee0d20',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '845534c0',
                           type: 'paragraph',
                           model: {
                             text: 'Rushdi Abu Alouf, Reporting from Istanbul',
                             blocks: [
                               {
-                                id: 'c17eea39',
                                 type: 'fragment',
                                 model: {
                                   text: 'Rushdi Abu Alouf, Reporting from Istanbul',
@@ -1951,13 +1790,11 @@ export default {
         model: {
           blocks: [
             {
-              id: 'e668dfda',
               type: 'paragraph',
               model: {
                 text: "It is another difficult day for civilians in Gaza, as Israel continues its bombardment of the Palestinian enclave. Here's a recap of what's been happening:",
                 blocks: [
                   {
-                    id: 'c0c7815b',
                     type: 'fragment',
                     model: {
                       text: 'It is another difficult day for civilians in ',
@@ -1965,7 +1802,6 @@ export default {
                     },
                   },
                   {
-                    id: 'fd38742e',
                     type: 'fragment',
                     model: {
                       text: 'Gaza',
@@ -1973,7 +1809,6 @@ export default {
                     },
                   },
                   {
-                    id: '2efb7eb1',
                     type: 'fragment',
                     model: {
                       text: ", as Israel continues its bombardment of the Palestinian enclave. Here's a recap of what's been happening:",
@@ -1984,17 +1819,14 @@ export default {
               },
             },
             {
-              id: '7dca7d2a',
               type: 'orderedList',
               model: {
                 blocks: [
                   {
-                    id: '078afdbd',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: '74584d65',
                           type: 'fragment',
                           model: {
                             text: '\n      Israel is attacking targets inboth northern and southern Gaza\n    ',
@@ -2005,12 +1837,10 @@ export default {
                     },
                   },
                   {
-                    id: '026fa1d5',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: '066e20af',
                           type: 'fragment',
                           model: {
                             text: '\n      One of the focal points isJabalia refugee campin the north, where Israel maintains Hamas has a stronghold\n    ',
@@ -2021,12 +1851,10 @@ export default {
                     },
                   },
                   {
-                    id: '83ac3dba',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: 'd4562b25',
                           type: 'fragment',
                           model: {
                             text: '\n      Al Jazeera reported thatone of its journalists had lost 22 family membersin an Israeli attack on Jabalia camp yesterday\n    ',
@@ -2040,7 +1868,6 @@ export default {
               },
             },
             {
-              id: '576b5457',
               type: 'paragraph',
               model: {
                 text: '',
@@ -2048,17 +1875,14 @@ export default {
               },
             },
             {
-              id: '9981db91',
               type: 'unorderedList',
               model: {
                 blocks: [
                   {
-                    id: '1b5abf08',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: '4cbbac8f',
                           type: 'fragment',
                           model: {
                             text: "\n      Israel's military has alsoadvanced into the heart of Khan Younisin southern Gaza, which had been sheltering hundreds of thousands who fled the fighting in the north\n    ",
@@ -2072,17 +1896,14 @@ export default {
               },
             },
             {
-              id: 'b6d52554',
               type: 'unorderedList',
               model: {
                 blocks: [
                   {
-                    id: '2fb06dee',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: '13fc3bcf',
                           type: 'fragment',
                           model: {
                             text: '\n      No aidhas reached the north since the humanitarian truce ended at the start of December\n    ',
@@ -2093,12 +1914,10 @@ export default {
                     },
                   },
                   {
-                    id: 'b8e3ab42',
                     type: 'listItem',
                     model: {
                       blocks: [
                         {
-                          id: 'ea102f59',
                           type: 'fragment',
                           model: {
                             text: '\n      UN chief Antonio Guterres yesterday warned that thehumanitarian system in Gaza may collapse and public order could completely break down\n    ',
@@ -2112,7 +1931,6 @@ export default {
               },
             },
             {
-              id: '70568e0e',
               type: 'paragraph',
               model: {
                 text: '',
@@ -2120,20 +1938,17 @@ export default {
               },
             },
             {
-              id: 'f5a15008',
               type: 'paragraph',
               model: {
                 text: 'More information here.',
                 blocks: [
                   {
-                    id: 'e4c83804',
                     type: 'urlLink',
                     model: {
                       text: 'More information here.',
                       locator: 'https://www.bbc.com/pidgin',
                       blocks: [
                         {
-                          id: 'c6d613b2',
                           type: 'fragment',
                           model: {
                             text: 'More information here.',
@@ -2147,7 +1962,6 @@ export default {
               },
             },
             {
-              id: '189f1b93',
               type: 'paragraph',
               model: {
                 text: '',
@@ -2155,7 +1969,6 @@ export default {
               },
             },
             {
-              id: '8426af93',
               type: 'paragraph',
               model: {
                 text: '',
@@ -2205,23 +2018,19 @@ export default {
         model: {
           blocks: [
             {
-              id: 'ee98df43',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '62f8f04c',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'e757d68e',
                           type: 'paragraph',
                           model: {
                             text: 'Calls for war crime investigation over Lebanon border strikes',
                             blocks: [
                               {
-                                id: '2157a586',
                                 type: 'fragment',
                                 model: {
                                   text: 'Calls for war crime investigation over Lebanon border strikes',
@@ -2238,23 +2047,19 @@ export default {
               },
             },
             {
-              id: 'c5131497',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '10058ae8',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '9a53b629',
                           type: 'paragraph',
                           model: {
                             text: 'New sub headline',
                             blocks: [
                               {
-                                id: 'a9ea1d43',
                                 type: 'fragment',
                                 model: {
                                   text: 'New sub headline',
@@ -2277,20 +2082,17 @@ export default {
         model: {
           blocks: [
             {
-              id: '50bc560c',
               type: 'paragraph',
               model: {
                 text: 'Read more about the border area known as the Blue Line, the unofficial frontier between Lebanon and Israel here.  Article share tools',
                 blocks: [
                   {
-                    id: '608df11b',
                     type: 'urlLink',
                     model: {
                       text: 'Read more about the border area known as the Blue Line, the unofficial frontier between Lebanon and Israel here.  Article share tools',
                       locator: 'https://www.bbc.com/news',
                       blocks: [
                         {
-                          id: 'e3a2dcff',
                           type: 'fragment',
                           model: {
                             text: 'Read more about the border area known as the Blue Line, the unofficial frontier between Lebanon and Israel here.  Article share tools',
@@ -2304,12 +2106,10 @@ export default {
               },
             },
             {
-              id: 'bbcd7ea1',
               type: 'image',
               model: {
                 blocks: [
                   {
-                    id: '1ede5379',
                     type: 'rawImage',
                     model: {
                       height: 402,
@@ -2321,23 +2121,19 @@ export default {
                     },
                   },
                   {
-                    id: 'e7cfff77',
                     type: 'altText',
                     model: {
                       blocks: [
                         {
-                          id: '02775107',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: '20e13b05',
                                 type: 'paragraph',
                                 model: {
                                   text: 'Smoke rises from the ruins of structures in Jabalia refugee camp in northern Gaza',
                                   blocks: [
                                     {
-                                      id: '2efecb99',
                                       type: 'fragment',
                                       model: {
                                         text: 'Smoke rises from the ruins of structures in Jabalia refugee camp in northern Gaza',
@@ -2354,23 +2150,19 @@ export default {
                     },
                   },
                   {
-                    id: '6c89c19f',
                     type: 'caption',
                     model: {
                       blocks: [
                         {
-                          id: '1f36ad07',
                           type: 'text',
                           model: {
                             blocks: [
                               {
-                                id: 'd4a2edcb',
                                 type: 'paragraph',
                                 model: {
                                   text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
                                   blocks: [
                                     {
-                                      id: 'fab13af2',
                                       type: 'fragment',
                                       model: {
                                         text: "Israel's attacks on Jabalia refugee camp in northern Gaza have left dozens of structures in ruins.",
@@ -2432,23 +2224,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '20ceb403',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '8576ad02',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '21b045d7',
                           type: 'paragraph',
                           model: {
                             text: 'No incident set',
                             blocks: [
                               {
-                                id: '4c03ef88',
                                 type: 'fragment',
                                 model: {
                                   text: 'No incident set',
@@ -2465,23 +2253,19 @@ export default {
               },
             },
             {
-              id: '60ba3f2f',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '00e5c93f',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'a8f36da0',
                           type: 'paragraph',
                           model: {
                             text: 'This has nothing set',
                             blocks: [
                               {
-                                id: '94c4f2cd',
                                 type: 'fragment',
                                 model: {
                                   text: 'This has nothing set',
@@ -2504,13 +2288,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '0ac627a2',
               type: 'paragraph',
               model: {
                 text: 'This has no incident type set',
                 blocks: [
                   {
-                    id: '37f67d29',
                     type: 'fragment',
                     model: {
                       text: 'This has no incident type set',
@@ -2563,23 +2345,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '89fdd650',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '41f1a21e',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '5c1a27f5',
                           type: 'paragraph',
                           model: {
                             text: 'Get Involved',
                             blocks: [
                               {
-                                id: '08a41dde',
                                 type: 'fragment',
                                 model: {
                                   text: 'Get Involved',
@@ -2596,23 +2374,19 @@ export default {
               },
             },
             {
-              id: 'de58646a',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: '152241af',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '5a1bd7ee',
                           type: 'paragraph',
                           model: {
                             text: 'This is get involved',
                             blocks: [
                               {
-                                id: '4cbeae38',
                                 type: 'fragment',
                                 model: {
                                   text: 'This is get involved',
@@ -2635,13 +2409,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '5dff95aa',
               type: 'paragraph',
               model: {
                 text: "This is a 'get involved' incident type",
                 blocks: [
                   {
-                    id: 'def2bc24',
                     type: 'fragment',
                     model: {
                       text: "This is a 'get involved' incident type",
@@ -2694,23 +2466,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '2b6e13a5',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: 'b79fd6bc',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'ddec6dd4',
                           type: 'paragraph',
                           model: {
                             text: 'Question',
                             blocks: [
                               {
-                                id: 'efde3799',
                                 type: 'fragment',
                                 model: {
                                   text: 'Question',
@@ -2727,23 +2495,19 @@ export default {
               },
             },
             {
-              id: 'ac991462',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: 'c0d536bf',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '68398ea9',
                           type: 'paragraph',
                           model: {
                             text: 'This is question',
                             blocks: [
                               {
-                                id: '162f25fb',
                                 type: 'fragment',
                                 model: {
                                   text: 'This is question',
@@ -2766,13 +2530,11 @@ export default {
         model: {
           blocks: [
             {
-              id: 'c63f6f3c',
               type: 'paragraph',
               model: {
                 text: "This is a 'question' incident type",
                 blocks: [
                   {
-                    id: '4b397bcd',
                     type: 'fragment',
                     model: {
                       text: "This is a 'question' incident type",
@@ -2825,23 +2587,19 @@ export default {
         model: {
           blocks: [
             {
-              id: '56ca39a5',
               type: 'headline',
               model: {
                 blocks: [
                   {
-                    id: '36a79ee5',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: '54378703',
                           type: 'paragraph',
                           model: {
                             text: 'Analysis',
                             blocks: [
                               {
-                                id: 'a6bf6332',
                                 type: 'fragment',
                                 model: {
                                   text: 'Analysis',
@@ -2858,23 +2616,19 @@ export default {
               },
             },
             {
-              id: 'c12efedb',
               type: 'subheadline',
               model: {
                 blocks: [
                   {
-                    id: 'b44aa79d',
                     type: 'text',
                     model: {
                       blocks: [
                         {
-                          id: 'cf425b55',
                           type: 'paragraph',
                           model: {
                             text: 'This is analysis',
                             blocks: [
                               {
-                                id: '45be9576',
                                 type: 'fragment',
                                 model: {
                                   text: 'This is analysis',
@@ -2897,13 +2651,11 @@ export default {
         model: {
           blocks: [
             {
-              id: '56b53010',
               type: 'paragraph',
               model: {
                 text: "This is an 'analysis' incident type",
                 blocks: [
                   {
-                    id: '13f524d8',
                     type: 'fragment',
                     model: {
                       text: "This is an 'analysis' incident type",

@@ -12,7 +12,6 @@ const mockPageData = {
   liveTextStream: {
     content: postFixture,
     contributors: 'Not a random dude',
-    id: 'some32BitValue',
   },
   someResponse: {
     block: 'Its a block',
