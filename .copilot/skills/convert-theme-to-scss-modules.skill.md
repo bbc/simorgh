@@ -16,6 +16,23 @@ The original theme file in emotion can be found here: src/app/components/ThemePr
 The final theme is made available to be dynamically imported in src/app/components/ThemeProviderSCSSModules/themes/loadableConfig.ts; this mirrors the approach in src/app/components/ThemeProvider/themes/loadableConfig.ts
 
 ## Steps
-1. Inspect the mundo theme as a guide
-2. Make a similar theme for the user's chosen service
-3. Present this for feedback and iterate.
+1. Inspect the mundo theme as a guide: `src/app/components/ThemeProviderSCSSModules/themes/mundo/`
+2. Create a new directory for the service under `src/app/components/ThemeProviderSCSSModules/themes/<service>/`
+3. Create `palette.scss` in that directory, mapping the service's palette tokens to CSS custom properties (use `src/app/components/ThemeProviderSCSSModules/themes/mundo/palette.scss` as a guide, importing from `../../palette.scss`)
+4. Create the main `<service>.ts` theme entrypoint, importing:
+   - The appropriate font face SCSS files from `../../fontFaces/`
+   - The appropriate font variant SCSS file from `../../fontVariants/`
+   - The appropriate font script SCSS file from `../../fontScripts/`
+   - `./palette.scss`
+   - `withThemeProvider` from `#app/components/ThemeProviderSCSSModules/withThemeProvider`
+   - `brandSVG` from `../../chameleonLogos/<service>` (see step 5)
+5. **Copy the chameleon logo** from `src/app/components/ThemeProvider/chameleonLogos/<service>.tsx` into `src/app/components/ThemeProviderSCSSModules/chameleonLogos/<service>.tsx` — this step is easy to miss and must not be skipped
+6. **Register the theme in `loadableConfig.ts`** at `src/app/components/ThemeProviderSCSSModules/themes/loadableConfig.ts`, adding a new entry following the same pattern as `mundo` — this step is easy to miss and must not be skipped
+7. Present this for feedback and iterate.
+
+## Checklist
+Before considering a migration complete, verify all of the following:
+- [ ] `themes/<service>/palette.scss` created with correct CSS custom properties
+- [ ] `themes/<service>/<service>.ts` created, importing font faces, variants, script, palette, and brandSVG
+- [ ] `chameleonLogos/<service>.tsx` copied from `ThemeProvider/chameleonLogos/<service>.tsx`
+- [ ] `themes/loadableConfig.ts` updated to include the new service
