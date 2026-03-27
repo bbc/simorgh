@@ -9,6 +9,8 @@ import {
 import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import onClient from '#app/lib/utilities/onClient';
+import Cookie from 'js-cookie';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -16,6 +18,10 @@ export const AccountContext = createContext<AccountContextProps>(
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
+};
+
+const getSignedInCookie = (cookieName = 'ckns_id') => {
+  return onClient() ? Cookie.get(cookieName) : false;
 };
 
 export const AccountProvider = ({
@@ -43,8 +49,15 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
+  // TODO: initialIsSignedIn is always false in test/live env due to filtered cookie header,
+  // it will be improved to detect signed-in status server side in the future
+  // Ticket: https://bbc.atlassian.net/browse/WS-2388
+  const clientSignedInState = getSignedInCookie(
+    initialConfig?.identity?.idSignedInCookieName,
+  );
   const isSignedIn =
-    isIdctaAvailable && Boolean(initialConfig?.initialIsSignedIn);
+    isIdctaAvailable &&
+    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
 
   const value = useMemo(
     () => ({

@@ -6,6 +6,14 @@ exports[`Brand should render correctly with link not provided 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 @media (min-width: 15rem) {
@@ -29,8 +37,9 @@ exports[`Brand should render correctly with link not provided 1`] = `
 }
 
 .emotion-2 {
-  min-height: inherit;
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,12 +58,8 @@ exports[`Brand should render correctly with link not provided 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-2 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -62,6 +67,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -142,6 +148,14 @@ exports[`Brand should render correctly with link provided 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 @media (min-width: 15rem) {
@@ -165,8 +179,9 @@ exports[`Brand should render correctly with link provided 1`] = `
 }
 
 .emotion-2 {
-  min-height: inherit;
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -185,12 +200,8 @@ exports[`Brand should render correctly with link provided 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-2 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -230,6 +241,7 @@ exports[`Brand should render correctly with link provided 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -316,6 +328,14 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 @media (min-width: 15rem) {
@@ -339,8 +359,9 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
 }
 
 .emotion-2 {
-  min-height: inherit;
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -359,12 +380,8 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-2 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-4 {
@@ -372,6 +389,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
