@@ -304,14 +304,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   position: relative;
   z-index: 1;
 }
@@ -347,9 +339,8 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-20 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  min-height: inherit;
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -368,8 +359,12 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-  -webkit-column-gap: 0.25rem;
-  column-gap: 0.25rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-20 {
+    display: block;
+  }
 }
 
 .emotion-22 {
@@ -409,7 +404,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
-  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -898,14 +892,6 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   position: relative;
   z-index: 1;
 }

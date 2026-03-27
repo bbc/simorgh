@@ -1,7 +1,9 @@
 import { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '#psammead/gel-foundations/src/breakpoints';
@@ -16,7 +18,8 @@ const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const SIZE_OF_BRAND_LINK_WITH_VARIANT_BELOW_239PX = '2.625rem';
 
 const SvgWrapper = styled.div`
-  flex: 1;
+  min-height: inherit;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -24,7 +27,13 @@ const SvgWrapper = styled.div`
   flex-wrap: wrap;
   max-width: ${SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX};
   margin: 0 auto;
-  column-gap: ${GEL_SPACING_HLF};
+
+  @media (max-width: ${({ isLongBrand }) =>
+      isLongBrand
+        ? GEL_GROUP_1_SCREEN_WIDTH_MAX
+        : GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    display: block;
+  }
 `;
 
 const Banner = styled.div`
@@ -32,8 +41,6 @@ const Banner = styled.div`
   min-height: ${44 / 16}rem;
   width: 100%;
   padding: 0 ${GEL_SPACING};
-  display: flex;
-  align-items: stretch;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     min-height: ${60 / 16}rem;
@@ -82,7 +89,6 @@ const BrandSvg = styled.svg`
   color: ${props => props.theme.palette.BRAND_LOGO};
   fill: currentColor;
   height: ${20 / 16}rem;
-  max-width: 100%;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     height: ${24 / 16}rem;
