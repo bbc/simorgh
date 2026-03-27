@@ -11919,9 +11919,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.8.3":
-  version: 20.8.3
-  resolution: "happy-dom@npm:20.8.3"
+"happy-dom@npm:20.8.8":
+  version: 20.8.8
+  resolution: "happy-dom@npm:20.8.8"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -11929,7 +11929,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.18.3"
-  checksum: 10/57b2fd3186637728f7f8707b538ffcea7eaa651b14441abc15b289fd2b8632d573080a253ccebf3de20b9a61ba7201837ef5d4e4860ff37267c5c9b3fb21371c
+  checksum: 10/aa07ee59a6402c4ff8871b177e09f4711c12acc611f843915efb5eebb18be5f77cdf4dab0dde196ecd86fbfcbc7697ad039eb8998737dee19c2ac85765759fae
   languageName: node
   linkType: hard
 
@@ -17733,7 +17733,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     express: "npm:4.22.1"
     express-static-gzip: "npm:3.0.0"
-    happy-dom: "npm:20.8.3"
+    happy-dom: "npm:20.8.8"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
