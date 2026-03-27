@@ -115,13 +115,7 @@ const LocalisedBrandName = ({
   );
 };
 
-const StyledBrand = ({
-  linkId,
-  product,
-  serviceLocalisedName = null,
-  svg,
-  isLongBrand,
-}) => {
+const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
   return svg ? (
     <>
       <BrandSvg
@@ -136,7 +130,6 @@ const StyledBrand = ({
         focusable="false"
         aria-hidden="true"
         height="32"
-        isLongBrand={isLongBrand}
       >
         {svg.group}
       </BrandSvg>
@@ -156,7 +149,6 @@ const Brand = forwardRef((props, ref) => {
     minWidth,
     url = null,
     scriptLink = null,
-    isLongBrand = false,
     skipLink = null,
     linkId = null,
     children,
@@ -165,7 +157,7 @@ const Brand = forwardRef((props, ref) => {
 
   return (
     <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref} isLongBrand={isLongBrand}>
+      <SvgWrapper ref={ref}>
         {url ? (
           <StyledLink
             href={url}
