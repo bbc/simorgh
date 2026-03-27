@@ -230,7 +230,7 @@ const preview: Preview = {
             >
               <UserContextProvider>
                 <ThemeProviderSCSSModules
-                  service="mundo"
+                  service={context.globals.service.service}
                   variant={context.globals.service.variant}
                 >
                   <ThemeProvider

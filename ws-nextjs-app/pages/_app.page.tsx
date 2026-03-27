@@ -201,7 +201,10 @@ export default class CustomApp extends App<Props> {
                   </ThemeProvider>
                 ) : (
                   <UserContextProvider>
-                    <ThemeProviderSCSSModules service="mundo">
+                    <ThemeProviderSCSSModules
+                      service={service}
+                      variant={variant}
+                    >
                       <ThemeProvider service={service} variant={variant}>
                         <PageWrapper
                           navItems={navItems}
