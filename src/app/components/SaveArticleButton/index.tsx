@@ -15,7 +15,18 @@ const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
     articleId,
     service,
   });
-
+  // Logging for debugging - will remove before merge
+  // eslint-disable-next-line no-console
+  console.log(
+    'SaveArticleButton- showButton: ',
+    showButton,
+    'isSaved:',
+    isSaved,
+    'isLoading:',
+    isLoading,
+    'error:',
+    error,
+  );
   if (!showButton) {
     return null;
   }

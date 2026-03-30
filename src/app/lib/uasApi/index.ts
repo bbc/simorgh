@@ -63,6 +63,15 @@ const uasApiRequest = async (
     ...getAuthHeaders(),
   };
 
+  // Logging for debugging - will remove before merge
+  // eslint-disable-next-line no-console
+  console.log('UAS API Request', {
+    method,
+    url,
+    headers,
+    body,
+  });
+
   if (method === 'POST') {
     headers['Content-Type'] = 'application/json';
   }
@@ -77,6 +86,11 @@ const uasApiRequest = async (
   });
 
   if (!response.ok) {
+    // eslint-disable-next-line no-console
+    console.error(`UAS API request failed: ${method} ${url}`, {
+      status: response.status,
+      statusText: response.statusText,
+    });
     throw new Error(`UAS request failed with status ${response.status}`);
   }
 

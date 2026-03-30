@@ -20,6 +20,12 @@ const useUASFetchSaveStatus = (
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    // Logging for debugging - will remove before merge
+    // eslint-disable-next-line no-console
+    console.log(
+      'useUASFetchSaveStatus-Fetching saved status for articleId:',
+      articleId,
+    );
     if (!articleId) return;
     const abortController = new AbortController();
 
@@ -43,6 +49,13 @@ const useUASFetchSaveStatus = (
         // If the request was aborted, don't update state
         const isAbort = (err as { name?: string })?.name === 'AbortError';
         if (isAbort) return;
+
+        // Logging for debugging - will remove before merge
+        // eslint-disable-next-line no-console
+        console.error(
+          'useUASFetchSaveStatus -Error fetching article save status:',
+          err,
+        );
 
         // If API call fails or returns error, treat as not saved
         setError(err instanceof Error ? err : new Error('Unknown error'));
