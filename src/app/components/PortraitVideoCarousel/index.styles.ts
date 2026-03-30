@@ -18,9 +18,6 @@ const styles = {
       [mq.GROUP_3_MIN_WIDTH]: {
         margin: `${spacings.DOUBLE}rem 0 0 0`,
       },
-      [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0 0 0`,
-      },
     }),
   carouselContainer: () =>
     css({
