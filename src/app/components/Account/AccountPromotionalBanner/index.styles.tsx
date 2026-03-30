@@ -1,4 +1,5 @@
 import { Theme, css } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
   callToActionLink: ({ mq }) =>
@@ -18,24 +19,51 @@ export default {
   buttonSeparatorText: ({ palette }: Theme) =>
     css({
       color: palette.WHITE,
+      padding: `${pixelsToRem(4)}rem`,
     }),
 
-  signInLink: ({ palette }: Theme) =>
+  signInLink: ({ palette, mq }: Theme) =>
     css({
+      width: `${pixelsToRem(83)}rem`,
+      height: `${pixelsToRem(44)}rem`,
+      padding: `${pixelsToRem(4)}rem`,
       color: palette.WHITE,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       '&:hover, &:focus': {
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
         color: palette.WHITE,
       },
+      '&:visited': {
+        color: palette.WHITE,
+      },
+      [mq.GROUP_3_MIN_WIDTH]: {
+        width: `${pixelsToRem(147)}rem`,
+      },
+    }),
+
+  accountIcon: ({ palette }: Theme) =>
+    css({
+      fill: palette.WHITE,
+      width: `${pixelsToRem(14)}rem`,
+      height: `${pixelsToRem(14)}rem`,
+      alignSelf: 'center',
+      marginInlineEnd: `${pixelsToRem(4)}rem`,
     }),
   registerLink: ({ palette }: Theme) =>
     css({
-      color: palette.BLACK,
-      backgroundColor: palette.WHITE,
+      width: `${pixelsToRem(60)}rem`,
+      height: `${pixelsToRem(44)}rem`,
+      color: palette.WHITE,
+      textDecoration: 'underline',
+      textDecorationThickness: `${pixelsToRem(2)}rem`,
+      padding: `${pixelsToRem(8)}rem`,
+      cursor: 'pointer',
       '&:hover, &:focus': {
-        backgroundColor: palette.GREY_2,
-        color: palette.BLACK,
+        color: palette.WHITE,
+        textDecoration: 'underline',
+      },
+      '&:visited': {
+        color: palette.WHITE,
       },
     }),
 };
