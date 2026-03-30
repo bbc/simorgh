@@ -69,9 +69,7 @@ interface LivePageProps extends ComponentProps {
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
-  const { enabled: livePagePollingEnabled } = useToggle(
-    'livePagePollingEnabled',
-  );
+  const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
 
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
