@@ -139,29 +139,20 @@ Cypress.Commands.overwrite(
     // Keeps the original signature of cy.visit() intact while allowing for flexible options handling https://docs.cypress.io/api/commands/visit#Usage
     const [options] = rest as [Partial<Cypress.VisitOptions>?];
 
-    const normalizedVisitOptions =
-      typeof urlOrOptions === 'string'
-        ? ({
-            ...(options ?? {}),
-            url: urlOrOptions,
-          } as Partial<Cypress.VisitOptions> & { url: string })
-        : (urlOrOptions as Partial<Cypress.VisitOptions> & { url: string });
+    const visitUrl =
+      typeof urlOrOptions === 'string' ? urlOrOptions : urlOrOptions.url;
+    const visitOptionsObj =
+      typeof urlOrOptions === 'string' ? (options ?? {}) : urlOrOptions;
+    const { failOnStatusCode = true, headers } = visitOptionsObj;
 
-    const { failOnStatusCode = true, headers, url } = normalizedVisitOptions;
-
-    const runVisit = (): Cypress.Chainable => {
-      const visit = originalFn as Cypress.CommandOriginalFn<'visit'> as (
-        urlOrOptionsParam:
-          | string
-          | (Partial<Cypress.VisitOptions> & { url: string }),
-        optionsParam?: Partial<Cypress.VisitOptions>,
-      ) => Cypress.Chainable;
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const originalFnAsAny = originalFn as (...args: any[]) => Cypress.Chainable;
+    const runVisit = () => {
       if (typeof urlOrOptions === 'string') {
-        return visit(urlOrOptions, options);
+        return originalFnAsAny(urlOrOptions, options);
       }
 
-      return visit(normalizedVisitOptions);
+      return originalFnAsAny(urlOrOptions);
     };
 
     if (!failOnStatusCode || getAppEnv() === 'local') {
@@ -174,7 +165,7 @@ Cypress.Commands.overwrite(
     const checkStatus = (retriesLeft = 2): Cypress.Chainable => {
       return cy
         .request({
-          url,
+          url: visitUrl,
           failOnStatusCode: false,
           ...(headers && { headers }),
         })
@@ -190,7 +181,7 @@ Cypress.Commands.overwrite(
           }
 
           throw new Error(
-            `Expected status 200 but got ${status} for ${url} after all retries`,
+            `Expected status 200 but got ${status} for ${visitUrl} after all retries`,
           );
         });
     };
