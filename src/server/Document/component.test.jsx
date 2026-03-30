@@ -39,6 +39,7 @@ describe('Document Component', () => {
 
   beforeEach(() => {
     process.env.SIMORGH_APP_ENV = 'local';
+    process.env.SIMORGH_UAS_PUBLIC_API_KEY = 'd50mlibdoklnk';
   });
 
   afterEach(() => {
