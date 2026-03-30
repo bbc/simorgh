@@ -20,7 +20,11 @@ const Contributors = ({ contributorValues }) => {
         const { authorName, jobRole, authorImage } = contributor;
 
         return (
-          <ul css={[BylineCss.list]} role="list" key={authorName}>
+          <ul
+            css={[BylineCss.list, authorImage && BylineCss.listWithImage]}
+            role="list"
+            key={authorName}
+          >
             {authorImage && (
               <li css={[BylineCss.imageWrapper]}>
                 <Image
@@ -32,8 +36,13 @@ const Contributors = ({ contributorValues }) => {
                 />
               </li>
             )}
-            <li>
-              <span role="text" css={BylineCss.contributorTextWrapper}>
+            <li
+              css={[
+                BylineCss.contributorTextWrapper,
+                authorImage && BylineCss.nameAlignEnd,
+              ]}
+            >
+              <span role="text">
                 <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
                 <Text
                   css={[BylineCss.author]}
@@ -43,7 +52,14 @@ const Contributors = ({ contributorValues }) => {
                   {authorName}
                 </Text>
               </span>
-              <span role="text" css={BylineCss.contributorTextWrapper}>
+            </li>
+            <li
+              css={[
+                BylineCss.contributorTextWrapper,
+                authorImage && BylineCss.roleAlignStart,
+              ]}
+            >
+              <span role="text">
                 <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
                 <Text css={BylineCss.jobRole} size="brevier">
                   {jobRole}

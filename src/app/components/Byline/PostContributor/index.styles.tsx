@@ -4,11 +4,15 @@ import pixelsToRem from '../../../utilities/pixelsToRem';
 export default {
   list: () =>
     css({
-      alignItems: 'center',
-      display: `flex`,
       listStyle: 'none',
       padding: 0,
       margin: 0,
+    }),
+
+  listWithImage: () =>
+    css({
+      display: 'grid',
+      gridTemplateColumns: 'auto 1fr',
     }),
 
   author: ({ palette, isDarkUi }: Theme) =>
@@ -22,6 +26,7 @@ export default {
 
   imageWrapper: ({ palette }: Theme) =>
     css({
+      gridRow: '1 / 3',
       display: 'inline-flex',
       alignItems: 'flex-end',
       justifyContent: 'center',
@@ -29,7 +34,6 @@ export default {
       height: `${pixelsToRem(64)}rem`,
       backgroundColor: `${palette.GREY_2}`,
       overflow: 'visible',
-      float: 'inline-start',
       marginInlineEnd: `${pixelsToRem(8)}rem`,
       writingMode: 'horizontal-tb',
     }),
@@ -44,5 +48,15 @@ export default {
   contributorTextWrapper: () =>
     css({
       display: `block`,
+    }),
+
+  nameAlignEnd: () =>
+    css({
+      alignSelf: 'end',
+    }),
+
+  roleAlignStart: () =>
+    css({
+      alignSelf: 'start',
     }),
 };
