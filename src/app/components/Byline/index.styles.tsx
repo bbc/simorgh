@@ -15,7 +15,7 @@ export default {
 
   postBylineContainer: () =>
     css({
-      padding: `${pixelsToRem(16)}rem`,
+      margin: `${pixelsToRem(16)}rem`,
     }),
 
   bylineContainerSingleContributor: () =>
