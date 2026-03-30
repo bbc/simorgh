@@ -18,7 +18,6 @@ export default {
   author: ({ palette, isDarkUi }: Theme) =>
     css({
       color: isDarkUi ? palette.GREY_2 : palette.GREY_10,
-      display: 'inline-block',
     }),
 
   jobRole: ({ palette, isDarkUi }: Theme) =>
@@ -35,7 +34,6 @@ export default {
       backgroundColor: `${palette.GREY_2}`,
       overflow: 'visible',
       marginInlineEnd: `${pixelsToRem(8)}rem`,
-      writingMode: 'horizontal-tb',
     }),
 
   imageSrc: () =>
