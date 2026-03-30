@@ -12,6 +12,7 @@ import ImageWithCaption from '#app/components/ImageWithCaption';
 import Byline from '#app/components/Byline';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import isTenHoursAgo from '#app/lib/utilities/isTenHoursAgo';
+import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { isPortraitVideo } from '#app/components/MediaLoader/utils/isPortraitVideo';
 import TimeStampContainer from '#app/legacy/psammead/psammead-timestamp-container/src';
 import SocialEmbedContainer from '#app/legacy/containers/SocialEmbed';
@@ -161,19 +162,21 @@ const PostHeading = ({
         </>
       );
     },
-    contributor: (props: PostContributor['model']) => {
-      return (
-        <>
-          <VisuallyHiddenText>{`, `}</VisuallyHiddenText>
-          <Byline blocks={[props]} />
-        </>
-      );
-    },
   };
 
   return (
     <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
   );
+};
+
+const PostByline = ({
+  postContributorBlocks,
+}: {
+  postContributorBlocks: PostContributor;
+}) => {
+  const { model: contributorData } = postContributorBlocks;
+
+  return <Byline blocks={[contributorData]} />;
 };
 
 const PostContent = ({ contentBlocks }: { contentBlocks: OptimoBlock[] }) => {
@@ -250,9 +253,17 @@ const Post = ({
   );
   const enrichedHeaderBlocks = enrichHeaderBlocksWithId({ headerBlocks });
 
-  const postHeadline = headerBlocks[0] as PostHeadline;
+  const postHeadline = filterForBlockType(
+    enrichedHeaderBlocks,
+    'headline',
+  ) as PostHeadline;
   const firstHeadingText =
     postHeadline?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const postContributorBlocks = filterForBlockType(
+    enrichedHeaderBlocks,
+    'contributor',
+  );
 
   const contentBlocks = pathOr<OptimoBlock[]>(
     [],
@@ -276,6 +287,9 @@ const Post = ({
           <PostHeading headerBlocks={enrichedHeaderBlocks} />
         </span>
       </Heading>
+      {postContributorBlocks && (
+        <PostByline postContributorBlocks={postContributorBlocks} />
+      )}
       <div css={styles.postContent}>
         <PostContent contentBlocks={contentBlocks} />
       </div>
