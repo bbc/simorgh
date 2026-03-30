@@ -22,7 +22,8 @@ type BylineBlock =
 
 const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
   switch (pageType) {
-    case ARTICLE_PAGE || MEDIA_ARTICLE_PAGE:
+    case ARTICLE_PAGE:
+    case MEDIA_ARTICLE_PAGE:
       return (
         <ArticleContributor
           contributorValues={contributorValues}
