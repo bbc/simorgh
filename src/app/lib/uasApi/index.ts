@@ -87,7 +87,7 @@ const uasApiRequest = async (
 
   if (!response.ok) {
     // eslint-disable-next-line no-console
-    console.error(`UAS API request failed: ${method} ${url}`, {
+    console.log(`UAS API request failed: ${method} ${url}`, {
       status: response.status,
       statusText: response.statusText,
     });

@@ -6,7 +6,7 @@ import { HTTP_NO_CONTENT } from '#app/lib/statusCodes.const';
 /** A hook that fetches an article’s saved status from the UAS API,
  * returning the saved status, loading state, and any error encountered. */
 
-interface useUASFetchSaveStatusReturn {
+interface UseUASFetchSaveStatusReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
@@ -14,9 +14,9 @@ interface useUASFetchSaveStatusReturn {
 
 const useUASFetchSaveStatus = (
   articleId: string,
-): useUASFetchSaveStatusReturn => {
+): UseUASFetchSaveStatusReturn => {
   const [isSaved, setIsSaved] = useState(false);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const useUASFetchSaveStatus = (
 
         // Logging for debugging - will remove before merge
         // eslint-disable-next-line no-console
-        console.error(
+        console.log(
           'useUASFetchSaveStatus -Error fetching article save status:',
           err,
         );
