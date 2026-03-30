@@ -45,6 +45,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'és',
       pagination: {
         page: 'Lap',
         previousPage: 'Előző oldal',
