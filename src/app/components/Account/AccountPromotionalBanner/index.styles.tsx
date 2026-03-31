@@ -22,11 +22,12 @@ export default {
       padding: `${spacings.HALF}rem`,
     }),
 
-  signInLink: ({ palette, mq, spacings }: Theme) =>
+  signInLink: ({ palette, spacings }: Theme) =>
     css({
       height: `${pixelsToRem(44)}rem`,
       padding: `${spacings.HALF}rem`,
       color: palette.WHITE,
+      textDecorationThickness: `${pixelsToRem(1)}rem`,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       '&:hover, &:focus': {
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
@@ -54,6 +55,7 @@ export default {
       height: `${pixelsToRem(44)}rem`,
       color: palette.WHITE,
       textDecoration: 'underline',
+      textDecorationThickness: `${pixelsToRem(1)}rem`,
       padding: 0,
       cursor: 'pointer',
       '&&:hover, &&:focus': {
