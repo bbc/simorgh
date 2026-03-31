@@ -58,6 +58,8 @@ import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
+import SaveArticleButton from '#app/components/SaveArticleButton';
+import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -105,32 +107,43 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
+    articleId: string,
+    service: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
-    return hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-          hasReadTime={shouldDisplayReadTime}
-        />
-        {shouldDisplayReadTime && (
-          <ReadTimeArticle readTimeValue={readTimeValue} />
-        )}
-      </Byline>
-    ) : (
+    return (
       <>
-        <Timestamp
-          {...props}
-          popOut={false}
-          hasReadTime={shouldDisplayReadTime}
-        />
-        {shouldDisplayReadTime && (
-          <ReadTimeArticle readTimeValue={readTimeValue} />
+        {hasByline ? (
+          <Byline blocks={bylineContribBlocks}>
+            <Timestamp
+              firstPublished={new Date(firstPublished).getTime()}
+              lastPublished={new Date(lastPublished).getTime()}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
+            />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </Byline>
+        ) : (
+          <>
+            <Timestamp
+              {...props}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
+            />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </>
         )}
+        {/* Temporary SaveArticleButton */}
+        <SaveArticleButton
+          articleId={parseArticleID(articleId)}
+          service={service}
+        />
       </>
     );
   };
@@ -203,6 +216,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
+    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -259,6 +273,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
@@ -345,6 +360,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       lastPublished,
       readTimeValue,
       translations.readTime,
+      articleId,
+      service,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,

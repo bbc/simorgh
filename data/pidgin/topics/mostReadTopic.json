@@ -1,0 +1,711 @@
+{
+  "data": {
+    "title": "Di one wey dem dey read well well",
+    "description": "",
+    "imageData": null,
+    "curations": [
+      {
+        "curationId": "urn:bbc:onward-journeys:most:read?=site=News",
+        "curationType": "most-popular",
+        "position": 0,
+        "visualProminence": "NORMAL",
+        "title": "Di one wey oda users dey read well well",
+        "visualStyle": "RANKED",
+        "link": "https://www.bbc.com/pidgin/popular/read",
+        "mostRead": {
+          "generated": "2026-03-26T11:05:14.296060186Z",
+          "lastRecordTimeStamp": "2026-03-26T11:03:00Z",
+          "firstRecordTimeStamp": "2026-03-26T09:03:00Z",
+          "items": [
+            {
+              "id": "urn:bbc:optimo:asset:c4gx3ww7p0do",
+              "rank": 1,
+              "title": "Iran reject US peace plan, give five conditions to end di war - State media",
+              "href": "https://www.bbc.com/pidgin/articles/c4gx3ww7p0do",
+              "timestamp": "2026-03-25T17:37:15.489Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Iran get di most number of pipo wey don kpai since 28 February from di US-Israeli attacks - dis foto show one elderly woman wey dem dey carry from di scene of one strike for one residential building in Tehran on 16 March",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Iran get di most number of pipo wey don kpai since 28 February from di US-Israeli attacks - dis foto show one elderly woman wey dem dey carry from di scene of one strike for one residential building in Tehran on 16 March",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Tow women dey carry one elderly woman by hand . Di woman dey use walking stick.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Tow women dey carry one elderly woman by hand . Di woman dey use walking stick.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 800,
+                        "height": 450,
+                        "locator": "6ff3/live/0be5da90-286f-11f1-831a-89df8c4bf49f.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:ckgr30e262eo",
+              "rank": 2,
+              "title": "How two Nigerians chop prison sentences for US sake of multimillion-dollar wire fraud",
+              "href": "https://www.bbc.com/pidgin/articles/ckgr30e262eo",
+              "timestamp": "2026-03-24T18:14:31.055Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "James Junior Aliyu chop 90 months in prison",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "James Junior Aliyu chop 90 months in prison",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Photos of James Junior Aliyu and FBI agent",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Photos of James Junior Aliyu and FBI agent",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 2418,
+                        "height": 1360,
+                        "locator": "30c3/live/bc5c4da0-27ac-11f1-a79a-77e93010d956.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Ice/Facebook, FBI",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4g4ld6lp38o",
+              "rank": 3,
+              "title": "Canada 2026-2027 immigration plan go reduce international workers and students, set new target for temporary residents",
+              "href": "https://www.bbc.com/pidgin/articles/c4g4ld6lp38o",
+              "timestamp": "2026-03-21T14:16:38.791Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Canada PM wit construction workers",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Canada PM wit construction workers",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1024,
+                        "height": 683,
+                        "locator": "5170/live/177d1a90-0cfd-11f1-b5e2-dd58fc65f0f6.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Arlyn McAdorey/Bloomberg via Getty Images",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4gdjx5614no",
+              "rank": 4,
+              "title": "'If to say I listen to my mama dat day, I for no go jail' – Victim of EndSars protest regret afta six years in jail",
+              "href": "https://www.bbc.com/pidgin/articles/c4gdjx5614no",
+              "timestamp": "2026-03-25T08:06:09.802Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "23-year-old Wasiu Rasheed sidon inside BBC studio for Lagos ",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "23-year-old Wasiu Rasheed sidon inside BBC studio for Lagos ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1081,
+                        "height": 608,
+                        "locator": "a96b/live/fa5b54b0-2820-11f1-9fca-7da6a2456b50.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "BBC",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cq8wv01v737o",
+              "rank": 5,
+              "title": "No girl don come out say dem rape am – Police update on 'Ozoro festival'",
+              "href": "https://www.bbc.com/pidgin/articles/cq8wv01v737o",
+              "timestamp": "2026-03-23T09:33:26.536Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Sexual harrasment placard",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Sexual harrasment placard",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 695,
+                        "height": 391,
+                        "locator": "9b5a/live/d0d67250-269a-11f1-808c-67652ea9e2d6.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "CRIS BOURONCLE/AFP via Getty Images",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c30rdl7z7r5o",
+              "rank": 6,
+              "title": "'Di gravest crime against humanity': Transatlantic slave trade kontris suppose pay compensation?",
+              "href": "https://www.bbc.com/pidgin/articles/c30rdl7z7r5o",
+              "timestamp": "2026-03-26T10:35:58.057Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "A 19th Century photograph shows black enslaved people in chains at a market on the island of Zanzibar. They can be seen looking at the camera.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "A 19th Century photograph shows black enslaved people in chains at a market on the island of Zanzibar. They can be seen looking at the camera.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1920,
+                        "height": 1080,
+                        "locator": "f0b7/live/620e8da0-287d-11f1-934f-036468834728.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c4g4pr17599o",
+              "rank": 7,
+              "title": "UN vote to recognise slavery as 'gravest crime against humanity'",
+              "href": "https://www.bbc.com/pidgin/articles/c4g4pr17599o",
+              "timestamp": "2026-03-25T18:17:59.768Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Around 12-15 million Africans dey captured during di slave trade",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Around 12-15 million Africans dey captured during di slave trade",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "One black and white sketch of three slaves wey dem dey try hold",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "One black and white sketch of three slaves wey dem dey try hold",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1500,
+                        "height": 844,
+                        "locator": "28f6/live/81639b50-2841-11f1-b297-95b0a0a8331e.jpg",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Universal Images Group via Getty Images",
+                        "suitableForSyndication": true
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:cpqd5yy8p4xo",
+              "rank": 8,
+              "title": "Wetin pipo see na Baltasar Engonga sex videos but wetin dey happun for Equatorial Guinea pass like dat ",
+              "href": "https://www.bbc.com/pidgin/articles/cpqd5yy8p4xo",
+              "timestamp": "2024-11-10T07:44:00.348Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "caption",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Baltasar Ebang Engonga bin chop detention sake of suspicion of corruption bifor di videos bin leak",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Baltasar Ebang Engonga bin chop detention sake of suspicion of corruption bifor di videos bin leak",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Foto of Baltasar Ebang Engonga wia im wear blue suit, white shirt and patterned tie.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Foto of Baltasar Ebang Engonga wia im wear blue suit, white shirt and patterned tie.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 800,
+                        "height": 450,
+                        "locator": "2498/live/02651140-9eb2-11ef-913b-11aa6a75fea1.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Baltasar Ebang Engonga / Facebook",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "urn:bbc:optimo:asset:c9qdjvw2xrwo",
+              "rank": 9,
+              "title": "Fifa World Cup play-offs - who dey play who?",
+              "href": "https://www.bbc.com/pidgin/articles/c9qdjvw2xrwo",
+              "timestamp": "2026-03-26T10:07:15.923Z",
+              "images": {
+                "defaultPromoImage": {
+                  "blocks": [
+                    {
+                      "type": "altText",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Italy team rejoicing",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Italy team rejoicing",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "rawImage",
+                      "model": {
+                        "width": 1561,
+                        "height": 878,
+                        "locator": "da0a/live/84fea4b0-28f7-11f1-a95f-75471ca6e71e.png",
+                        "originCode": "cpsprodpb",
+                        "copyrightHolder": "Mattia Ozbot/Getty Images",
+                        "suitableForSyndication": false
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "510267e1-5f04-4f57-854f-f9a0cc7f3610",
+              "rank": 10,
+              "title": "Lagos state DSVA, police and odas dey investigate alleged sexual violence involving minors for Chrisland",
+              "href": "/pidgin/tori-61138014",
+              "timestamp": "2022-04-19T07:40:58.000Z",
+              "indexImage": {
+                "id": "124198351",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/3C1D/production/_124198351_chrisland-high-school-vgc-600x400.jpg",
+                "path": "/cpsprodpb/3C1D/production/_124198351_chrisland-high-school-vgc-600x400.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Chrisland School",
+                "copyrightHolder": "Chrisland School",
+                "originCode": "cpsprodpb",
+                "allowSyndication": false,
+                "type": "image"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "activePage": null,
+    "pageCount": null,
+    "metadata": {
+      "analytics": {
+        "name": "pidgin.topics.c99j8zr15mmt.page",
+        "producer": "PIDGIN"
+      },
+      "atiAnalytics": {
+        "contentType": "list-datadriven",
+        "pageIdentifier": "pidgin.popular.read.page",
+        "timePublished": "2026-03-26T09:03:00Z",
+        "timeUpdated": "2026-03-26T11:03:00Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}
