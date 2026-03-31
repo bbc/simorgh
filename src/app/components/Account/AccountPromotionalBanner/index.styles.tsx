@@ -41,13 +41,16 @@ export default {
       },
     }),
 
-  accountIcon: ({ palette, spacings }: Theme) =>
+  accountIcon: ({ mq, spacings }: Theme) =>
     css({
-      fill: palette.WHITE,
+      fill: 'currentColor',
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
       alignSelf: 'center',
       marginInlineEnd: `${spacings.HALF}rem`,
+      [mq.FORCED_COLOURS]: {
+        fill: 'ButtonText',
+      },
     }),
   registerLink: ({ palette }: Theme) =>
     css({
