@@ -130,7 +130,8 @@ const AuthorLocation = ({ location, reportingFrom, isSingleContributor }) => {
 };
 
 const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
-  const { translations } = use(ServiceContext);
+  const { translations, dir } = use(ServiceContext);
+  const isRtl = dir === 'rtl';
 
   const {
     byline: {
@@ -182,14 +183,14 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   author={author}
                   authorName={authorName}
                   authorTopicUrl={authorTopicUrl}
-                  isSingleContributor
-                  isRtl
+                  isSingleContributor={isSingleContributor}
+                  isRtl={isRtl}
                 />
               ) : (
                 <AuthorName
                   author={author}
                   authorName={authorName}
-                  isSingleContributor
+                  isSingleContributor={isSingleContributor}
                 />
               )}
               {hasMultipleContributors &&
@@ -199,7 +200,11 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
             </li>
             {jobRole && (
               <li css={BylineCss.contributorTextWrapper}>
-                <AuthorRole jobRole={jobRole} role={role} isSingleContributor />
+                <AuthorRole
+                  jobRole={jobRole}
+                  role={role}
+                  isSingleContributor={isSingleContributor}
+                />
                 {(location && <Comma />) ||
                   (hasMultipleContributors &&
                     index !== lastContributorIndex &&
@@ -211,7 +216,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                 <AuthorLocation
                   location={location}
                   reportingFrom={reportingFrom}
-                  isSingleContributor
+                  isSingleContributor={isSingleContributor}
                 />
                 {hasMultipleContributors &&
                   index !== lastContributorIndex &&
