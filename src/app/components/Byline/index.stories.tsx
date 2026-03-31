@@ -14,16 +14,30 @@ import {
 import Byline from '.';
 import readme from './README.md';
 import metadata from './metadata.json';
+import { RequestContextProvider } from '../../contexts/RequestContext';
+import { ServiceContextProvider } from '../../contexts/ServiceContext';
+import { ARTICLE_PAGE } from '../../routes/utils/pageTypes';
+import { Services } from '../../models/types/global';
 
 interface ComponentProps {
+  service?: Services;
   fixture: OptimoBylineBlock['model']['blocks'];
 }
 
 const Component = ({
+  service = 'pidgin',
   fixture,
   children,
 }: PropsWithChildren<ComponentProps>) => (
-  <Byline blocks={fixture}>{children}</Byline>
+  <RequestContextProvider
+    pageType={ARTICLE_PAGE}
+    pathname="/pathname"
+    service={service}
+  >
+    <ServiceContextProvider service={service}>
+      <Byline blocks={fixture}>{children}</Byline>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 export default {
