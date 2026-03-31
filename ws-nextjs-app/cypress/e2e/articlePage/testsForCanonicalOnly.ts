@@ -8,7 +8,6 @@ import {
   AresMediaMetadataBlock,
   CaptionBlock,
 } from '#app/components/MediaLoader/types';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import { ServiceParametersType } from '../../types';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 import runIfToggleEnabled from '../../support/helpers/runIfToggleEnabled';
@@ -102,10 +101,7 @@ export default ({
       cy.go('back');
     });
 
-    // TODO: Remove once Test env assets are fixed
-    const describeOrSkip = getAppEnv() !== 'live' ? describe.skip : describe;
-
-    describeOrSkip('Media Player: Canonical', () => {
+    describe('Media Player: Canonical', () => {
       it('should render a visible placeholder image', () => {
         cy.window()
           .getPageDataFromWindow()

@@ -1,13 +1,9 @@
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import { ServiceParametersType } from '../../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType, path }: ServiceParametersType) => {
   describe(`AMP tests for ${service} ${pageType} ${path}`, () => {
-    // TODO: Remove once Test env assets are fixed
-    const describeOrSkip = getAppEnv() !== 'live' ? describe.skip : describe;
-
-    describeOrSkip('Media Player', () => {
+    describe('Media Player', () => {
       it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
           cy.get(`amp-iframe`).should('be.visible');
