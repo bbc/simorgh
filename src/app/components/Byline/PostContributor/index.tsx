@@ -53,19 +53,21 @@ const Contributors = ({ contributorValues }) => {
                 </Text>
               </span>
             </li>
-            <li
-              css={[
-                BylineCss.contributorTextWrapper,
-                authorImage && BylineCss.roleAlignStart,
-              ]}
-            >
-              <span role="text">
-                <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                <Text css={BylineCss.jobRole} size="brevier">
-                  {jobRole}
-                </Text>
-              </span>
-            </li>
+            {jobRole && (
+              <li
+                css={[
+                  BylineCss.contributorTextWrapper,
+                  authorImage && BylineCss.roleAlignStart,
+                ]}
+              >
+                <span role="text">
+                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
+                  <Text css={BylineCss.jobRole} size="brevier">
+                    {jobRole}
+                  </Text>
+                </span>
+              </li>
+            )}
           </ul>
         );
       })}

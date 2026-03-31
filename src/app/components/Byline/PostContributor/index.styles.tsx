@@ -36,6 +36,16 @@ export default {
       marginInlineEnd: `${pixelsToRem(8)}rem`,
     }),
 
+  imageWithNameAndRole: () =>
+    css({
+      gridRow: '1 / 3',
+    }),
+
+  imageWithNameOnly: () =>
+    css({
+      gridRow: '1',
+    }),
+
   imageSrc: () =>
     css({
       width: `${pixelsToRem(64)}rem`,
@@ -46,6 +56,11 @@ export default {
   contributorTextWrapper: () =>
     css({
       display: `block`,
+    }),
+
+  nameAlignCenter: () =>
+    css({
+      alignSelf: 'center',
     }),
 
   nameAlignEnd: () =>
