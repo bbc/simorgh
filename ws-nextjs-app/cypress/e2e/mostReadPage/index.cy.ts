@@ -1,5 +1,5 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
 import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import runTestsForPage from '../../support/helpers/runTestsForPage';
 import {
   assertMostReadComponentClick,
   assertMostReadComponentView,
