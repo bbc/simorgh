@@ -47,6 +47,23 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'முகப்பு',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'வாட்ஸ்அப் விளம்பரம்',
+      brandTitle: 'வாட்ஸ்ஆப்பில்',
+      brandDescription: 'பிபிசி தமிழ் செய்திகளை செல்போனிலேயே படிக்கலாம்',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0n959h0.png',
+        alt: `வாட்ஸ்அப் விளம்பரம் - படம்`,
+      },
+      linkLabel: {
+        text: 'பின்தொடர கிளிக் செய்யவும்',
+        href: 'https://www.whatsapp.com/channel/0029VaaJj0BKLaHwTA7BOi3N',
+      },
+      skipLink: {
+        text: '%title% - ஐ புறக்கணித்துவிட்டு தொடர்ந்து படிக்கவும்',
+        endTextVisuallyHidden: '%title% - முடிவு',
+      },
+    },
     translations: {
       and: 'மற்றும்',
       readTime: {
