@@ -1,4 +1,5 @@
 import { Services } from '#app/models/types/global';
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import skipOnLocal from '../../support/helpers/skipOnLocal';
 import { ServiceParametersType } from '../../types';
 import { ampOnly as crossPlatform } from '../assertions/crossPlatformAssertion';
@@ -45,7 +46,10 @@ export default ({
       }
     });
 
-    describe('Media Player: AMP', () => {
+    // TODO: Remove once Test env assets are fixed
+    const describeOrSkip = getAppEnv() !== 'live' ? describe.skip : describe;
+
+    describeOrSkip('Media Player: AMP', () => {
       it('should render an iframe with a valid URL', () => {
         if (articleHasPlayer(articleId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
