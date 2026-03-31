@@ -111,7 +111,7 @@ export const service: DefaultServiceConfig = {
       account: {
         signIn: 'साइन‑इन',
         forYou: 'Your Account',
-        register: 'खाता बनाएं',
+        register: 'रजिस्टर करें',
       },
       accountPromoBanner: {
         title: 'अपना BBC खोजिए',
