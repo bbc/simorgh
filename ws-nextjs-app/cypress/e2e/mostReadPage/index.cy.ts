@@ -1,23 +1,23 @@
 import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
-import testsForCanonicalOnly from './testsForCanonicalOnly';
-import crossPlatformTests from './tests';
-import testsForAllPages from '../testsForAllPages';
-import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
-import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  assertMostReadComponentClick,
+  assertMostReadComponentView,
+} from '../specialFeatures/atiAnalytics/assertions/mostRead';
 import {
   assertDropdownNavigationComponentClick,
   assertDropdownNavigationComponentView,
   assertScrollableNavigationComponentClick,
   assertScrollableNavigationComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/navigation';
-import {
-  assertMostReadComponentClick,
-  assertMostReadComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/mostRead';
+} from '../specialFeatures/atiAnalytics/assertions/navigation';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import getPathWithSuffix from '../../support/helpers/getPathWithSuffix';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
+import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
+import testsForAllPages from '../testsForAllPages';
+import crossPlatformTests from './tests';
+import testsForCanonicalOnly from './testsForCanonicalOnly';
 
-const pageType = 'mostReadPage';
 const tests = [
   crossPlatformTests,
   testsForCanonicalOnly,
@@ -25,13 +25,6 @@ const tests = [
   testsForAllCanonicalPages,
 ];
 
-/**
- * Use a selection of services to ensure Most Read page renders as expected
- * arabic: RTL service
- * igbo: small service, only 5 items displayed
- * pidgin: LTR service
- * serbian: service with variant
- */
 const testSuites = [
   {
     path: '/pidgin/popular/read',
@@ -42,31 +35,23 @@ const testSuites = [
   {
     path: '/arabic/popular/read',
     service: 'arabic',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/igbo/popular/read',
     service: 'igbo',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
   {
     path: '/serbian/cyr/popular/read',
     service: 'serbian',
     variant: 'cyr',
-    runforEnv: ['local', 'test', 'live'],
+    runforEnv: ['test', 'live'],
     tests,
   },
 ];
-
-const ampTestSuites = testSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: `${testSuite.path}.amp`,
-    tests: [crossPlatformTests],
-  };
-});
 
 const liteTestSuites = testSuites.map(testSuite => {
   return {
@@ -78,11 +63,11 @@ const liteTestSuites = testSuites.map(testSuite => {
 
 const atiAnalyticsTestSuites = [
   {
-    path: '/gahuza/popular/read',
+    path: '/pidgin/popular/read',
     runforEnv: ['local', 'test', 'live'],
-    service: 'gahuza',
-    pageIdentifier: 'gahuza.popular.read.page',
-    siteId: 40,
+    service: 'pidgin',
+    pageIdentifier: 'pidgin.popular.read.page',
+    siteId: 70,
     applicationType: 'responsive',
     contentType: 'list-datadriven',
     tests: [
@@ -96,15 +81,6 @@ const atiAnalyticsTestSuites = [
     ],
   },
 ];
-
-const atiAnalyticsAmpTestSuites = atiAnalyticsTestSuites.map(testSuite => {
-  return {
-    ...testSuite,
-    path: getPathWithSuffix({ path: testSuite.path, suffix: '.amp' }),
-    applicationType: 'amp',
-    tests: [assertPageView],
-  };
-});
 
 const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
   const excludedLiteTests = [
@@ -128,17 +104,17 @@ const atiAnalyticsLiteTestSuites = atiAnalyticsTestSuites.map(testSuite => {
 });
 
 runTestsForPage({
-  pageType,
-  testSuites: [...testSuites, ...ampTestSuites, ...liteTestSuites],
+  pageType: MOST_READ_PAGE,
+  testSuites: [...testSuites, ...liteTestSuites],
 });
 
 runTestsForPage({
-  pageType,
+  pageType: MOST_READ_PAGE,
   testSuites: atiAnalyticsTestSuites,
   testIsolation: true,
 });
 
 runTestsForPage({
-  pageType,
-  testSuites: [...atiAnalyticsAmpTestSuites, ...atiAnalyticsLiteTestSuites],
+  pageType: MOST_READ_PAGE,
+  testSuites: [...atiAnalyticsLiteTestSuites],
 });
