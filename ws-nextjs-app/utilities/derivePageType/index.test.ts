@@ -9,6 +9,7 @@ import {
   TOPIC_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
@@ -91,15 +92,21 @@ describe('derivePageType', () => {
     expect(result).toEqual(TV_PAGE);
   });
 
-  it('should return Unknown if pathname does not include live or send', () => {
-    const pathname = '/pidgin/xxxxxxxxx';
-    const result = derivePageType(pathname);
-    expect(result).toEqual(UNKNOWN_PAGE);
-  });
-
   it("should return TOPIC_PAGE if pathname includes 'topic'", () => {
     const pathname = '/pidgin/topics/c95y35941vrt';
     const result = derivePageType(pathname);
     expect(result).toEqual(TOPIC_PAGE);
+  });
+
+  it('should return MOST_READ_PAGE if pathname includes popular/read', () => {
+    const pathname = '/pidgin/popular/read';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(MOST_READ_PAGE);
+  });
+
+  it('should return Unknown if pathname does not include live or send', () => {
+    const pathname = '/pidgin/xxxxxxxxx';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(UNKNOWN_PAGE);
   });
 });
