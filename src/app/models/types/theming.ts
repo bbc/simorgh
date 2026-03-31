@@ -16,6 +16,7 @@ export interface BrandPalette {
 }
 
 interface Palette extends BrandPalette {
+  HYPERLINK: readonly string[] | Color | readonly Color[] | undefined;
   ARCHIVE_BLUE: string;
   BLACK: string;
   BLUEJAY: string;

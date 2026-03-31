@@ -16,51 +16,51 @@ export default {
       },
     }),
 
-  buttonSeparatorText: ({ palette }: Theme) =>
+  buttonSeparatorText: ({ palette, spacings }: Theme) =>
     css({
       color: palette.WHITE,
-      padding: `${pixelsToRem(4)}rem`,
+      padding: `${spacings.HALF}rem`,
     }),
 
-  signInLink: ({ palette, mq }: Theme) =>
+  signInLink: ({ palette, mq, spacings }: Theme) =>
     css({
-      width: `${pixelsToRem(83)}rem`,
       height: `${pixelsToRem(44)}rem`,
-      padding: `${pixelsToRem(4)}rem`,
+      padding: `${spacings.HALF}rem`,
       color: palette.WHITE,
       backgroundColor: palette.SERVICE_NEUTRAL_CORE,
       '&:hover, &:focus': {
         backgroundColor: palette.SERVICE_NEUTRAL_DARK,
         color: palette.WHITE,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
       },
       '&:visited': {
         color: palette.WHITE,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${pixelsToRem(147)}rem`,
+        minWidth: `${pixelsToRem(147)}rem`,
       },
     }),
 
-  accountIcon: ({ palette }: Theme) =>
+  accountIcon: ({ palette, spacings }: Theme) =>
     css({
       fill: palette.WHITE,
       width: `${pixelsToRem(14)}rem`,
       height: `${pixelsToRem(14)}rem`,
       alignSelf: 'center',
-      marginInlineEnd: `${pixelsToRem(4)}rem`,
+      marginInlineEnd: `${spacings.HALF}rem`,
     }),
-  registerLink: ({ palette }: Theme) =>
+  registerLink: ({ palette, spacings }: Theme) =>
     css({
       width: `${pixelsToRem(60)}rem`,
       height: `${pixelsToRem(44)}rem`,
       color: palette.WHITE,
       textDecoration: 'underline',
-      textDecorationThickness: `${pixelsToRem(2)}rem`,
-      padding: `${pixelsToRem(8)}rem`,
+      padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
       '&:hover, &:focus': {
-        color: palette.WHITE,
-        textDecoration: 'underline',
+        color: palette.HYPERLINK,
+        textDecorationThickness: `${pixelsToRem(2)}rem`,
+        textDecorationColor: palette.HYPERLINK,
       },
       '&:visited': {
         color: palette.WHITE,
