@@ -33,7 +33,7 @@ export default {
       },
 
       [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem -${spacings.TRIPLE}rem ${spacings.FULL}rem`,
+        margin: `0 ${spacings.FULL}rem -${spacings.HALF}rem ${spacings.FULL}rem`,
         width: `calc(100% - ${spacings.DOUBLE}rem)`,
       },
 
