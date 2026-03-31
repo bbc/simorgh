@@ -280,4 +280,28 @@ export default {
       linkType: 'gaana',
     },
   ],
+  p08rwt31: [
+    {
+      linkText: 'Spotify',
+      linkUrl: 'https://open.spotify.com/show/5r4uhPPvUI4MNbgXUNflkh',
+      linkType: 'spotify',
+    },
+    {
+      linkText: 'Apple',
+      linkUrl:
+        'https://podcasts.apple.com/in/podcast/fit-%E0%A4%9C-%E0%A4%A6%E0%A4%97/id1532430310',
+      linkType: 'apple',
+    },
+    {
+      linkText: 'Jio Saavn',
+      linkUrl:
+        'https://www.jiosaavn.com/shows/fit-%e0%a4%9c%e0%a4%bc%e0%a4%bf%e0%a4%82%e0%a4%a6%e0%a4%97%e0%a5%80/1/8kUvuq2K1GQ_',
+      linkType: 'jiosaavn',
+    },
+    {
+      linkText: 'Gaana',
+      linkUrl: 'https://gaana.com/podcast/fit-season-1',
+      linkType: 'gaana',
+    },
+  ],
 };

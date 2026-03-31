@@ -1,6 +1,6 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeader';
-import activityTypes from './activityTypes';
+import { activityTypes } from './uasUtility';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -18,6 +18,7 @@ export interface UasApiRequestBody {
 interface UasRequestOptions {
   body?: UasApiRequestBody;
   globalId?: string;
+  signal?: AbortSignal;
 }
 
 const getUasHost = () =>
@@ -52,7 +53,7 @@ const validateRequest = (
 const uasApiRequest = async (
   method: UasMethod,
   activityType: string,
-  { body, globalId }: UasRequestOptions = {},
+  { body, globalId, signal }: UasRequestOptions = {},
 ): Promise<Response> => {
   validateRequest(method, { body, globalId }, activityType);
 
@@ -71,6 +72,8 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
+    // Allow callers to abort the request
+    ...(signal ? { signal } : {}),
   });
 
   if (!response.ok) {
