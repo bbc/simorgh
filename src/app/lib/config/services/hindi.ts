@@ -114,9 +114,9 @@ export const service: DefaultServiceConfig = {
         register: 'Register',
       },
       accountPromoBanner: {
-        title: 'Discover your BBC',
+        title: 'अपना BBC खोजिए',
         description:
-          'Sign in or create an account to watch, listen and join in',
+          'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
         closeLabel: 'Close',
         buttonSeparatorText: 'or',
       },
