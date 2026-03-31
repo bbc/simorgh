@@ -15,18 +15,7 @@ const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
     articleId,
     service,
   });
-  // Logging for debugging - will remove before merge
-  // eslint-disable-next-line no-console
-  console.log(
-    'SaveArticleButton- showButton: ',
-    showButton,
-    'isSaved:',
-    isSaved,
-    'isLoading:',
-    isLoading,
-    'error:',
-    error,
-  );
+
   if (!showButton) {
     return null;
   }
@@ -41,6 +30,12 @@ const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
   // TODO : Will modify based on future error handling implementation,
   //  currently just hides the button if there is an error fetching save status
   if (error) {
+    // Logging until we have proper error handling in place
+    // eslint-disable-next-line no-console
+    console.log('Error fetching saved status for article:', {
+      articleId,
+      error,
+    });
     return null;
   }
 

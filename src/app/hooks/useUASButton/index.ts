@@ -35,16 +35,7 @@ const useUASButton = ({
       : true);
 
   const showButton = isUASEnabled && isSignedIn;
-  // Logging for debugging - will remove before merge
-  // eslint-disable-next-line no-console
-  console.log(
-    'useUASButton - showButton:',
-    showButton,
-    'isUASEnabled:',
-    isUASEnabled,
-    'isSignedIn:',
-    isSignedIn,
-  );
+
   const { isSaved, isLoading, error } = useUASFetchSaveStatus(
     showButton ? articleId : '',
   );
