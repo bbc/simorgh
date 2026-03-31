@@ -25,7 +25,6 @@ export default {
 
   imageWrapper: ({ palette }: Theme) =>
     css({
-      gridRow: '1 / 3',
       display: 'inline-flex',
       alignItems: 'flex-end',
       justifyContent: 'center',

@@ -26,7 +26,14 @@ const Contributors = ({ contributorValues }) => {
             key={authorName}
           >
             {authorImage && (
-              <li css={[BylineCss.imageWrapper]}>
+              <li
+                css={[
+                  BylineCss.imageWrapper,
+                  jobRole
+                    ? BylineCss.imageWithNameAndRole
+                    : BylineCss.imageWithNameOnly,
+                ]}
+              >
                 <Image
                   css={BylineCss.imageSrc}
                   src={authorImage}
@@ -39,7 +46,7 @@ const Contributors = ({ contributorValues }) => {
             <li
               css={[
                 BylineCss.contributorTextWrapper,
-                authorImage && BylineCss.nameAlignEnd,
+                jobRole ? BylineCss.nameAlignEnd : BylineCss.nameAlignCenter,
               ]}
             >
               <span role="text">
