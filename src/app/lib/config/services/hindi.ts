@@ -109,16 +109,16 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       account: {
-        signIn: 'Sign In',
+        signIn: 'साइन‑इन',
         forYou: 'Your Account',
-        register: 'Register',
+        register: 'खाता बनाएं',
       },
       accountPromoBanner: {
         title: 'अपना BBC खोजिए',
         description:
           'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
         closeLabel: 'Close',
-        buttonSeparatorText: 'or',
+        buttonSeparatorText: 'या',
       },
       gist: 'सारांश',
       error: {
