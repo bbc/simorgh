@@ -58,9 +58,9 @@ export default {
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
       '&:hover, &:focus': {
-        color: palette.HYPERLINK,
         textDecorationThickness: `${pixelsToRem(2)}rem`,
-        textDecorationColor: palette.HYPERLINK,
+        color: palette.NEUTRAL_LIGHT,
+        textDecorationColor: palette.NEUTRAL_LIGHT,
       },
       '&:visited': {
         color: palette.WHITE,
