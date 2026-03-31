@@ -36,9 +36,6 @@ export default {
       '&:visited': {
         color: palette.WHITE,
       },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        minWidth: `${pixelsToRem(147)}rem`,
-      },
     }),
 
   accountIcon: ({ mq, spacings }: Theme) =>
