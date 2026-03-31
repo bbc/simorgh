@@ -12,7 +12,6 @@ const articleHasPlayer = (articleId: string) =>
     'cgwk9w4zlg8o', // pidgin/articles/cgwk9w4zlg8o on LIVE
     'cj7xrxz0e8zo', // news/articles/cj7xrxz0e8zo on LIVE
     'c25rp5glj5qo', // persian/articles/c25rp5glj5qo on LIVE
-    'cwl08rd38l6o', // pidgin/articles/cwl08rd38l6o on TEST
     'cej3lzd5e0go', // persian/articles/cej3lzd5e0go on TEST
   ].includes(articleId);
 
