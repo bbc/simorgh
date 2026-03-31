@@ -49,13 +49,12 @@ export default {
       alignSelf: 'center',
       marginInlineEnd: `${spacings.HALF}rem`,
     }),
-  registerLink: ({ palette, spacings }: Theme) =>
+  registerLink: ({ palette }: Theme) =>
     css({
-      width: `${pixelsToRem(60)}rem`,
       height: `${pixelsToRem(44)}rem`,
       color: palette.WHITE,
       textDecoration: 'underline',
-      padding: `${spacings.FULL}rem`,
+      padding: 0,
       cursor: 'pointer',
       '&&:hover, &&:focus': {
         textDecorationThickness: `${pixelsToRem(2)}rem`,
