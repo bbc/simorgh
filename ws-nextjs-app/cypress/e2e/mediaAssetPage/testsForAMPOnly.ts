@@ -5,10 +5,10 @@ import { ServiceParametersType } from '../../types';
 export default ({ service, pageType, path }: ServiceParametersType) => {
   describe(`AMP tests for ${service} ${pageType} ${path}`, () => {
     // TODO: Remove once Test env assets are fixed
-    const itOrSkip = getAppEnv() !== 'live' ? it.skip : it;
+    const describeOrSkip = getAppEnv() !== 'live' ? describe.skip : describe;
 
-    describe('Media Player', () => {
-      itOrSkip('should render an iframe with a valid URL', () => {
+    describeOrSkip('Media Player', () => {
+      it('should render an iframe with a valid URL', () => {
         if (!`${Cypress.env('currentPath')}`.includes('/russian/av/')) {
           cy.get(`amp-iframe`).should('be.visible');
 

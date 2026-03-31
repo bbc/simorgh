@@ -46,11 +46,11 @@ export default ({
       }
     });
 
-    describe('Media Player: AMP', () => {
-      // TODO: Remove once Test env assets are fixed
-      const itOrSkip = getAppEnv() !== 'live' ? it.skip : it;
+    // TODO: Remove once Test env assets are fixed
+    const describeOrSkip = getAppEnv() !== 'live' ? describe.skip : describe;
 
-      itOrSkip('should render an iframe with a valid URL', () => {
+    describeOrSkip('Media Player: AMP', () => {
+      it('should render an iframe with a valid URL', () => {
         if (articleHasPlayer(articleId)) {
           cy.get('[data-e2e="media-player"]').should('be.visible');
           cy.get('[data-e2e="media-player"]')
