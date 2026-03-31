@@ -57,7 +57,7 @@ export default {
       textDecoration: 'underline',
       padding: `${spacings.FULL}rem`,
       cursor: 'pointer',
-      '&:hover, &:focus': {
+      '&&:hover, &&:focus': {
         textDecorationThickness: `${pixelsToRem(2)}rem`,
         color: palette.NEUTRAL_LIGHT,
         textDecorationColor: palette.NEUTRAL_LIGHT,
