@@ -1,29 +1,13 @@
 import { use } from 'react';
-import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
-import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import Canonical from './Canonical';
-import Amp from './Amp';
 import { ColumnLayout, Size, MostReadData } from './types';
 import MostReadSection from './Section';
 import MostReadSectionLabel from './Label';
 import { WHITE } from '../ThemeProvider/palette';
-import isLocal from '../../lib/utilities/isLocal';
-import {
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  ARTICLE_PAGE,
-} from '../../routes/utils/pageTypes';
-import { ComponentExperimentProps, PageTypes } from '../../models/types/global';
-
-const mostReadAmpPageTypes: PageTypes[] = [
-  STORY_PAGE,
-  CORRESPONDENT_STORY_PAGE,
-  ARTICLE_PAGE,
-];
+import { ComponentExperimentProps } from '../../models/types/global';
 
 interface MostReadProps {
   data?: MostReadData;
@@ -35,35 +19,6 @@ interface MostReadProps {
   eventTrackingData?: EventTrackingData;
   experimentProps?: ComponentExperimentProps;
 }
-
-// We render amp on ONLY STY, CSP and ARTICLE pages using amp-list.
-const AmpMostRead = ({
-  pageType,
-  className,
-  mobileDivider,
-  headingBackgroundColour,
-  endpoint,
-  size,
-}: {
-  pageType: PageTypes;
-  className: string;
-  mobileDivider: boolean;
-  headingBackgroundColour: string;
-  endpoint: string;
-  size: Size;
-}) =>
-  mostReadAmpPageTypes.includes(pageType) ? (
-    <MostReadSection {...(className ? { className } : undefined)}>
-      <MostReadSectionLabel
-        mobileDivider={mobileDivider}
-        backgroundColor={headingBackgroundColour}
-      />
-      <Amp
-        endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
-        size={size}
-      />
-    </MostReadSection>
-  ) : null;
 
 // Do not render on Canonical if data is not provided
 const CanonicalMostRead = ({
@@ -108,9 +63,7 @@ const MostRead = ({
   experimentProps,
   eventTrackingData,
 }: MostReadProps) => {
-  const { isAmp, pageType, variant } = use(RequestContext);
   const {
-    service,
     mostRead: { hasMostRead },
   } = use(ServiceContext);
 
@@ -123,30 +76,12 @@ const MostRead = ({
     return null;
   }
 
-  // If not in local environment, use the BFF, otherwise use fixture data
-  const isBff = !isLocal();
-
-  const endpoint = getMostReadEndpoint({
-    service,
-    variant,
-    isBff,
-  });
-
   const trackingData = eventTrackingData || {
     componentName: 'most-read',
     ...(experimentProps && experimentProps),
   };
 
-  return isAmp ? (
-    <AmpMostRead
-      pageType={pageType}
-      className={className}
-      mobileDivider={mobileDivider}
-      headingBackgroundColour={headingBackgroundColour}
-      endpoint={endpoint}
-      size={size}
-    />
-  ) : (
+  return (
     <CanonicalMostRead
       data={data}
       className={className}
