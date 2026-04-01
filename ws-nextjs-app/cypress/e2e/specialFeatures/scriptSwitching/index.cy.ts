@@ -223,7 +223,7 @@ const scriptSwitchTestSuites = [
   //   service: 'serbian',
   //   variant: 'cyr',
   //   otherVariant: 'lat',
-  //   runforEnv: ['local', 'test', 'live'],
+  //   runforEnv: ['test', 'live'],
   //   tests: [assertScriptSwitch],
   // },
   // {
@@ -231,7 +231,7 @@ const scriptSwitchTestSuites = [
   //   service: 'serbian',
   //   variant: 'lat',
   //   otherVariant: 'cyr',
-  //   runforEnv: ['local', 'test', 'live'],
+  //   runforEnv: ['test', 'live'],
   //   tests: [assertScriptSwitch],
   // },
   // // Most Read zhongwen
@@ -240,7 +240,7 @@ const scriptSwitchTestSuites = [
   //   service: 'zhongwen',
   //   variant: 'simp',
   //   otherVariant: 'trad',
-  //   runforEnv: ['local', 'test', 'live'],
+  //   runforEnv: ['test', 'live'],
   //   tests: [assertScriptSwitch],
   // },
   // {
@@ -248,7 +248,7 @@ const scriptSwitchTestSuites = [
   //   service: 'zhongwen',
   //   variant: 'trad',
   //   otherVariant: 'simp',
-  //   runforEnv: ['local', 'test', 'live'],
+  //   runforEnv: ['test', 'live'],
   //   tests: [assertScriptSwitch],
   // },
 ];
