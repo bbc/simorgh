@@ -268,6 +268,8 @@ exports[`Canonical Most Read Page SEO Linked data should match text 1`] = `
 }
 `;
 
+exports[`Canonical Most Read Page SEO OG description 1`] = `"Most Read"`;
+
 exports[`Canonical Most Read Page SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Most Read Page SEO OG image alt 1`] = `"BBC News Pidgin"`;
@@ -289,6 +291,8 @@ exports[`Canonical Most Read Page SEO Robots meta tag 1`] = `"noodp, noydir, max
 exports[`Canonical Most Read Page SEO Twitter card 1`] = `"summary_large_image"`;
 
 exports[`Canonical Most Read Page SEO Twitter creator 1`] = `"@BBCNews"`;
+
+exports[`Canonical Most Read Page SEO Twitter description 1`] = `"Most Read"`;
 
 exports[`Canonical Most Read Page SEO Twitter image alt 1`] = `"BBC News Pidgin"`;
 
