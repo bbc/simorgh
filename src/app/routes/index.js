@@ -1,6 +1,5 @@
 import homePage from './homePage';
 import liveRadio from './liveRadio';
-import mostRead from './mostRead';
 import podcast from './podcast';
 import onDemandRadio from './onDemandRadio';
 import onDemandTV from './onDemandTV';
@@ -11,7 +10,6 @@ import errorNoRouteMatch from './errorNoRouteMatch';
 export default [
   homePage,
   liveRadio,
-  mostRead,
   podcast,
   onDemandRadio,
   onDemandTV,
