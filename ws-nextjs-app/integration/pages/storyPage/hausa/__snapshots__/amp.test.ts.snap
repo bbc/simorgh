@@ -206,6 +206,41 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Ɗanɗano: Kuskure a Hausa da Ƙa’idar hira da baƙì - Ɓ ɓ ɗ Ɗ ƙ Ƙ"`;
 
+exports[`AMP Story Page Most Read has item with rank 1`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 32",
+  "url": "/hausa/23057301",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 2`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 3",
+  "url": "/hausa/23055778",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 3`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 11",
+  "url": "/hausa/23055796",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 23",
+  "url": "/hausa/23055836",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 5`] = `
+{
+  "text": "Zuma ya fuskanci koma baya kan cin hanci 34",
+  "url": "/hausa/23057304",
+}
+`;
+
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

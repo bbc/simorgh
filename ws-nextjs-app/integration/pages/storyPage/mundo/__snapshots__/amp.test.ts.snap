@@ -204,6 +204,76 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
 
+exports[`AMP Story Page Most Read has item with rank 1`] = `
+{
+  "text": "3 posibles escenarios en Venezuela tras el triunfo de Maduro rechazado por la oposición",
+  "url": "https://www.bbc.com/mundo/articles/c3gekqplyn4o",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 2`] = `
+{
+  "text": "El Consejo Nacional Electoral anuncia el triunfo de Nicolás Maduro en las elecciones presidenciales de Venezuela y la oposición rechaza los resultados",
+  "url": "https://www.bbc.com/mundo/articles/cn38n9knl3no",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 3`] = `
+{
+  "text": ""Difíciles de creer": los cuestionamientos internacionales a los resultados que dieron ganador a Maduro en Venezuela",
+  "url": "https://www.bbc.com/mundo/articles/cz47dxzyzd1o",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 4`] = `
+{
+  "text": "Cómo funciona el proceso electoral en Venezuela y por qué han puesto en duda el resultado de los comicios",
+  "url": "https://www.bbc.com/mundo/articles/c2x0vlnzm17o",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 5`] = `
+{
+  "text": ""Hay un nuevo presidente electo y es Edmundo González": la oposición de Venezuela rechaza la victoria de Maduro anunciada por el CNE",
+  "url": "https://www.bbc.com/mundo/articles/cv2gwyg11z1o",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 6`] = `
+{
+  "text": "La elaborada operación encubierta con la que engañaron al capo de las drogas "El Mayo" Zambada para llevarlo a EE.UU.",
+  "url": "https://www.bbc.com/mundo/articles/c4ngy135jw5o",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 7`] = `
+{
+  "text": "¿Es la comida fermentada buena para la salud de tus intestinos? Y otras 8 preguntas sobre estos alimentos",
+  "url": "https://www.bbc.com/mundo/articles/c3g0r9vgl9lo",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 8`] = `
+{
+  "text": ""Si alguien como El Mayo soltara toda la información, sería algo potencialmente desestabilizador para las relaciones de México y EE.UU."",
+  "url": "https://www.bbc.com/mundo/articles/cg3jxdg727xo",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 9`] = `
+{
+  "text": "La física cuyo descubrimiento ayudó a predecir partículas como el bosón de Higgs y ahora recibe su doctorado (a los 98 años)",
+  "url": "https://www.bbc.com/mundo/articles/c4ngv9gr7qlo",
+}
+`;
+
+exports[`AMP Story Page Most Read has item with rank 10`] = `
+{
+  "text": "Nicolás Maduro: "Hay que respetar al árbitro y que nadie pretenda manchar esta jornada bella"",
+  "url": "https://www.bbc.com/mundo/articles/cy945e5nen4o",
+}
+`;
+
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,

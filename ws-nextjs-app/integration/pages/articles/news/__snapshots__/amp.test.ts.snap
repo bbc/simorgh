@@ -176,6 +176,76 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 
 exports[`AMP Articles Main heading should match text 1`] = `"Royal wedding flowers given to Hackney hospice"`;
 
+exports[`AMP Articles Most Read has item with rank 1`] = `
+{
+  "text": "The rise of the priority queue",
+  "url": "/news/magazine-19712847",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 2`] = `
+{
+  "text": "Laura Trott sees off challenge!",
+  "url": "/sport/cycling/23039307",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 3`] = `
+{
+  "text": "Japan MP drinks Fukushima water",
+  "url": "/news/world-asia-pacific-15533018",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 4`] = `
+{
+  "text": "Inside the 21st floor of Grenfell Tower",
+  "url": "/news/uk-23154961",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 5`] = `
+{
+  "text": "Ai Weiwei served with tax demand",
+  "url": "/news/world-asia-pacific-15533014",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 6`] = `
+{
+  "text": "Two die in Israel hotel shootings",
+  "url": "/news/world-middle-east-19841596",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 7`] = `
+{
+  "text": "Soong enters Taiwan election race",
+  "url": "/news/world-asia-pacific-15538239",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 8`] = `
+{
+  "text": "Welcome to the UKs peaceful place",
+  "url": "/news/business-20070473",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 9`] = `
+{
+  "text": "Budget 2018: Everything you need to know",
+  "url": "/news/uk-23220380",
+}
+`;
+
+exports[`AMP Articles Most Read has item with rank 10`] = `
+{
+  "text": "Anger grows over Bangkok floods new",
+  "url": "/news/world-asia-pacific-15533579",
+}
+`;
+
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
