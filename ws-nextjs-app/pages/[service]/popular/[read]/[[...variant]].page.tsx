@@ -101,6 +101,10 @@ export const getServerSideProps = async (
         ...data.pageData,
         metadata: {
           ...data.pageData.metadata,
+          atiAnalytics: {
+            ...data.pageData.metadata.atiAnalytics,
+            pageTitle: data.pageData.title || null,
+          },
           type: MOST_READ_PAGE,
         },
       },
