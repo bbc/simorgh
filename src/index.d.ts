@@ -37,4 +37,27 @@ declare namespace React.JSX {
   interface IntrinsicElements {
     'amp-iframe': AmpIframeProps;
   }
+
+  interface AmpListProps {
+    src: string;
+    items: string;
+    'max-items': number;
+    layout: string;
+    width: string;
+    height: string;
+  }
+
+  interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
+    fallback?: string;
+  }
+
+  interface TemplateProps extends React.HTMLAttributes<HTMLTemplateElement> {
+    type: string;
+  }
+  interface IntrinsicElements {
+    'amp-script': React.PropsWithChildren<ScriptHTMLAttributesHTMLScriptElement>;
+    'amp-list': React.PropsWithChildren<AmpListProps>;
+    template: TemplateProps;
+    p: ParagraphProps;
+  }
 }
