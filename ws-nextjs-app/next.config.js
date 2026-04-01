@@ -61,6 +61,10 @@ module.exports = {
         source: '/:service/:variant/popular/read',
         destination: '/:service/popular/read/:variant',
       },
+      {
+        source: '/:service/:variant/popular/read.lite',
+        destination: '/:service/popular/read/:variant.lite',
+      },
     ];
   },
   assetPrefix,

@@ -17748,6 +17748,7 @@ __metadata:
     typescript: "npm:5.9.3"
     undici: "npm:7.24.0"
     url-parse: "npm:1.5.10"
+    uuid: "npm:13.0.0"
     wait-on: "npm:9.0.3"
     webpack: "npm:5.105.4"
     webpack-bundle-analyzer: "npm:5.2.0"
@@ -19511,6 +19512,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: 10/5d6949693d58cb2e636a84f3ee1c6e7b2f9c16cb1d42d0ecb386d8c025c69e327205aa1c69e2868cc06a01e5e20681fbba55a4e0ed0cce913d60334024eae798
+  languageName: node
+  linkType: hard
+
+"uuid@npm:13.0.0":
+  version: 13.0.0
+  resolution: "uuid@npm:13.0.0"
+  bin:
+    uuid: dist-node/bin/uuid
+  checksum: 10/2742b24d1e00257e60612572e4d28679423469998cafbaf1fe9f1482e3edf9c40754b31bfdb3d08d71b29239f227a304588f75210b3b48f2609f0673f1feccef
   languageName: node
   linkType: hard
 
