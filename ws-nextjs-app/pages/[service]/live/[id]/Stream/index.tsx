@@ -10,6 +10,7 @@ import {
 import Heading from '#app/components/Heading';
 import Paragraph from '#app/components/Paragraph';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useScrollToLinkable from '#app/hooks/useScrollToLinkable';
 import { StreamResponse } from '../Post/types';
 import Post from '../Post';
 import styles from './styles';
@@ -20,6 +21,7 @@ type Props = {
   setIsFirstPostVisible: Dispatch<SetStateAction<boolean>>;
   streamRef: ForwardedRef<HTMLDivElement>;
   applyPendingUpdate: () => void;
+  postTest: string | null;
 };
 
 const Stream = ({
@@ -28,12 +30,18 @@ const Stream = ({
   setIsFirstPostVisible,
   streamRef,
   applyPendingUpdate,
+  postTest,
 }: Props) => {
   const {
     translations: {
       liveExperiencePage: { liveCoverage = 'Live Coverage' },
     },
   } = use(ServiceContext);
+
+  useScrollToLinkable({
+    elementId: postTest,
+    isReducedMotion: true,
+  });
 
   const firstPostRef = useRef<HTMLLIElement>(null);
   const [hasShareApi, setHasShareApi] = useState(false);

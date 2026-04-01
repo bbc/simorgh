@@ -64,9 +64,10 @@ export type ComponentProps = {
 
 interface LivePageProps extends ComponentProps {
   assetId?: string | null;
+  postTest: string | null; // maybe should be ?
 }
 
-const LivePage = ({ pageData, assetId }: LivePageProps) => {
+const LivePage = ({ pageData, assetId, postTest }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
@@ -192,6 +193,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
               setIsFirstPostVisible={setIsFirstPostVisible}
               streamRef={streamRef}
               applyPendingUpdate={applyPendingUpdate}
+              postTest={postTest}
             />
             <LatestPostButton
               isFirstPostVisible={isFirstPostVisible}

@@ -40,6 +40,8 @@ export const getServerSideProps: GetServerSideProps = async context => {
     post: assetId,
   } = context.query as PageDataParams;
 
+  console.log('Live page query params assetId', assetId);
+
   const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
@@ -111,6 +113,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
       status: data.status,
       timeOnServer: Date.now(), // TODO: check if needed?
       variant,
+      postTest: assetId || null,
     },
   };
 };
