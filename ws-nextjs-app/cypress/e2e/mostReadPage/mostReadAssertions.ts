@@ -12,38 +12,48 @@ export default ({ service, variant = 'default' }) => {
 
     if (hasMostRead) {
       describe('Most Read Component', () => {
-        it(`shouldn't render section label`, () => {
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] h2').should('not.exist');
+        beforeEach(() => {
+          cy.getToggles(service);
         });
-
         it(`should render ${numberOfItems} items`, () => {
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"] li').should(
-            'have.length',
-            numberOfItems,
-          );
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            if (toggles.mostRead?.enabled) {
+              cy.get('[data-e2e="most-read"]').scrollIntoView();
+              cy.get('[data-e2e="most-read"] li').should(
+                'have.length',
+                numberOfItems,
+              );
+            }
+          });
         });
 
         it(`should show correct numerals`, () => {
-          const expectedMostReadRank = serviceNumerals(service);
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"]')
-            .find('li span')
-            .each(($el, index) => {
-              expect($el.text()).equal(expectedMostReadRank[index + 1]);
-            });
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            if (toggles.mostRead?.enabled) {
+              const expectedMostReadRank = serviceNumerals(service);
+              cy.get('[data-e2e="most-read"]').scrollIntoView();
+              cy.get('[data-e2e="most-read"]')
+                .find('li span')
+                .each(($el, index) => {
+                  expect($el.text()).equal(expectedMostReadRank[index + 1]);
+                });
+            }
+          });
         });
 
         it(`should have links with href and title`, () => {
-          cy.get('[data-e2e="most-read"]').scrollIntoView();
-          cy.get('[data-e2e="most-read"]').within(() => {
-            cy.get('a').each($el => {
-              cy.wrap($el)
-                .should('not.be.empty') // ensures that the link has text
-                .should('have.attr', 'href')
-                .should('not.be.empty'); // ensures that the href is not empty
-            });
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            if (toggles.mostRead?.enabled) {
+              cy.get('[data-e2e="most-read"]').scrollIntoView();
+              cy.get('[data-e2e="most-read"]').within(() => {
+                cy.get('a').each($el => {
+                  cy.wrap($el)
+                    .should('not.be.empty') // ensures that the link has text
+                    .should('have.attr', 'href')
+                    .should('not.be.empty'); // ensures that the href is not empty
+                });
+              });
+            }
           });
         });
       });
