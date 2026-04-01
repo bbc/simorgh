@@ -8,7 +8,7 @@ interface MostReadSectionProps {
 const MostReadSection = ({
   children,
   className = '',
-  showSectionLabel,
+  showSectionLabel = true,
 }: PropsWithChildren<MostReadSectionProps>) => (
   <section
     data-e2e="most-read"
