@@ -46,7 +46,15 @@ const Component = ({
     service={service}
   >
     <ServiceContextProvider service={service}>
-      <Byline blocks={fixture}>{children}</Byline>
+      {pageType === ARTICLE_PAGE ? (
+        <Byline blocks={fixture as OptimoBylineBlock['model']['blocks']}>
+          {children}
+        </Byline>
+      ) : (
+        <Byline blocks={fixture as PostContributor['model'][]}>
+          {children}
+        </Byline>
+      )}
     </ServiceContextProvider>
   </RequestContextProvider>
 );
