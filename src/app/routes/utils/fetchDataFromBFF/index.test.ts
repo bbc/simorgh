@@ -3,7 +3,6 @@ import {
   ARTICLE_PAGE,
   CPS_ASSET,
   HOME_PAGE,
-  MOST_READ_PAGE,
   TOPIC_PAGE,
 } from '#app/routes/utils/pageTypes';
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
@@ -141,44 +140,6 @@ describe('Fetch Data from BFF', () => {
 
         expect(fetchPageDataSpy).toHaveBeenCalledWith({
           pageType: TOPIC_PAGE,
-          path,
-          agent,
-          optHeaders,
-          timeout:
-            environment === 'local' && !pathname.includes('renderer_env')
-              ? localTimeout
-              : undefined,
-        });
-      },
-    );
-  });
-
-  describe('for a most read page', () => {
-    const url = '/pidgin/popular/read';
-
-    it.each`
-      environment | pathname                      | path                                                                                   | agent        | optHeaders
-      ${'local'}  | ${url}                        | ${'http://localhost/pidgin/mostread'}                                                  | ${undefined} | ${undefined}
-      ${'local'}  | ${`${url}?renderer_env=test`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'local'}  | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'test'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=test'} | ${mockAgent} | ${{ 'ctx-service-env': 'test' }}
-      ${'test'}   | ${`${url}?renderer_env=live`} | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-      ${'live'}   | ${url}                        | ${'https://mock-bff-path/?id=pidgin&service=pidgin&pageType=mostRead&serviceEnv=live'} | ${mockAgent} | ${{ 'ctx-service-env': 'live' }}
-    `(
-      'when environment is $environment and pathname is $pathname, should invoke the BFF with the expected params',
-      async ({ environment, path, agent, optHeaders, pathname }) => {
-        const fetchPageDataSpy = jest.spyOn(fetchPageData, 'default');
-        process.env.SIMORGH_APP_ENV = environment;
-
-        await fetchDataFromBFF({
-          pathname,
-          pageType: MOST_READ_PAGE,
-          service: 'pidgin',
-          getAgent: mockGetAgent,
-        });
-
-        expect(fetchPageDataSpy).toHaveBeenCalledWith({
-          pageType: MOST_READ_PAGE,
           path,
           agent,
           optHeaders,
