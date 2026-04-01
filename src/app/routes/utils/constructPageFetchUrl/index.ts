@@ -1,7 +1,6 @@
 import Url from 'url-parse';
 import pipe from 'ramda/src/pipe';
 import getEnvironment from '#app/routes/utils/getEnvironment';
-import { getMostReadEndpoint } from '#app/lib/utilities/getUrlHelpers/getMostReadUrls';
 import { getUrlPath } from '#lib/utilities/urlParser';
 import {
   Services,
@@ -258,9 +257,6 @@ const constructPageFetchUrl = ({
         }
         break;
       }
-      case MOST_READ_PAGE:
-        fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
-        break;
       case TOPIC_PAGE: {
         if (process.env?.NEXTJS) {
           fetchUrl = Url(
