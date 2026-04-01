@@ -45,6 +45,7 @@ const AmpMostRead = ({
   headingBackgroundColour,
   endpoint,
   size,
+  showSectionLabel,
 }: {
   pageType: PageTypes;
   className: string;
@@ -52,13 +53,16 @@ const AmpMostRead = ({
   headingBackgroundColour: string;
   endpoint: string;
   size: Size;
+  showSectionLabel: boolean;
 }) =>
   mostReadAmpPageTypes.includes(pageType) ? (
     <MostReadSection {...(className ? { className } : undefined)}>
-      <MostReadSectionLabel
-        mobileDivider={mobileDivider}
-        backgroundColor={headingBackgroundColour}
-      />
+      {showSectionLabel && (
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={headingBackgroundColour}
+        />
+      )}
       <Amp
         endpoint={`${getEnvConfig().SIMORGH_MOST_READ_CDN_URL}${endpoint}`}
         size={size}
@@ -145,6 +149,7 @@ const MostRead = ({
 
   return isAmp ? (
     <AmpMostRead
+      showSectionLabel={showSectionLabel}
       pageType={pageType}
       className={className}
       mobileDivider={mobileDivider}
