@@ -1,6 +1,10 @@
 /* eslint-disable import/no-relative-packages */
 import { PageTypes } from '#app/models/types/global';
-import { ARTICLE_PAGE, LIVE_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MOST_READ_PAGE,
+} from '#app/routes/utils/pageTypes';
 import assertPageWeight from './assertions/liteSiteWeight';
 import runTestsForPage, {
   TestDataType,
@@ -19,6 +23,13 @@ const testSuites = [
     tests,
     pageType: LIVE_PAGE,
     service: 'burmese',
+  },
+  {
+    path: '/mundo/popular/read.lite',
+    runforEnv,
+    pageType: MOST_READ_PAGE,
+    tests,
+    service: 'mundo',
   },
 ] as unknown as TestDataType[];
 

@@ -216,6 +216,40 @@ const scriptSwitchTestSuites = [
     runforEnv: ['live'],
     tests: [assertScriptSwitch],
   },
+  // Most Read Serbian
+  {
+    path: '/serbian/cyr/popular/read',
+    service: 'serbian',
+    variant: 'cyr',
+    otherVariant: 'lat',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/serbian/lat/popular/read',
+    service: 'serbian',
+    variant: 'lat',
+    otherVariant: 'cyr',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  // Most Read zhongwen
+  {
+    path: '/zhongwen/simp/popular/read',
+    service: 'zhongwen',
+    variant: 'simp',
+    otherVariant: 'trad',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
+  {
+    path: '/zhongwen/trad/popular/read',
+    service: 'zhongwen',
+    variant: 'trad',
+    otherVariant: 'simp',
+    runforEnv: ['test', 'live'],
+    tests: [assertScriptSwitch],
+  },
 ];
 
 runTestsForPage({

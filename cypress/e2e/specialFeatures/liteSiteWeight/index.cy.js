@@ -21,12 +21,6 @@ const testSuites = [
     tests,
   },
   {
-    path: '/mundo/popular/read.lite',
-    runforEnv,
-    pageType: 'Most Read',
-    tests,
-  },
-  {
     path: '/gahuza/bbc_gahuza_radio/programmes/p0340x2m.lite',
     runforEnv,
     pageType: 'On Demand Audio - Brand',
