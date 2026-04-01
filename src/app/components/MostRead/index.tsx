@@ -26,6 +26,7 @@ const mostReadAmpPageTypes: PageTypes[] = [
 ];
 
 interface MostReadProps {
+  showSectionLabel?: boolean;
   data?: MostReadData;
   columnLayout?: ColumnLayout;
   size?: Size;
@@ -74,21 +75,25 @@ const CanonicalMostRead = ({
   columnLayout,
   size,
   eventTrackingData,
+  showSectionLabel,
 }: {
   data: MostReadData | undefined;
   className: string;
   mobileDivider: boolean;
   headingBackgroundColour: string;
-  columnLayout?: ColumnLayout;
+  showSectionLabel: boolean;
   size: Size;
+  columnLayout?: ColumnLayout;
   eventTrackingData?: EventTrackingData;
 }) =>
   data ? (
-    <MostReadSection className={className}>
-      <MostReadSectionLabel
-        mobileDivider={mobileDivider}
-        backgroundColor={headingBackgroundColour}
-      />
+    <MostReadSection className={className} showSectionLabel={showSectionLabel}>
+      {showSectionLabel && (
+        <MostReadSectionLabel
+          mobileDivider={mobileDivider}
+          backgroundColor={headingBackgroundColour}
+        />
+      )}
       <Canonical
         data={data}
         columnLayout={columnLayout}
@@ -99,6 +104,7 @@ const CanonicalMostRead = ({
   ) : null;
 
 const MostRead = ({
+  showSectionLabel = true,
   data,
   columnLayout = 'multiColumn',
   size = 'default',
@@ -148,6 +154,7 @@ const MostRead = ({
     />
   ) : (
     <CanonicalMostRead
+      showSectionLabel={showSectionLabel}
       data={data}
       className={className}
       mobileDivider={mobileDivider}
