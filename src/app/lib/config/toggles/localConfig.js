@@ -86,6 +86,10 @@ export default {
   variantCookie: {
     enabled: true,
   },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi',
+  },
   webVitalsMonitoring: {
     enabled: true,
   },
