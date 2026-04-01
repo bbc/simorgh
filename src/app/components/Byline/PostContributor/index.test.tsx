@@ -57,7 +57,7 @@ describe('Post Contributor', () => {
     const contributor = screen.getByRole('list');
     const contributorItems = within(contributor).getAllByRole('listitem');
 
-    expect(contributorItems.length).toBe(2);
+    expect(contributorItems.length).toBe(3);
   });
 
   it('should correctly use the buildIChefURL function to create the image url', () => {

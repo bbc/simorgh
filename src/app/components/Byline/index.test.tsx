@@ -258,7 +258,7 @@ describe('Byline', () => {
       const firstContributorItems =
         within(firstContributor).getAllByRole('listitem');
 
-      expect(firstContributorItems.length).toBe(3);
+      expect(firstContributorItems.length).toBe(4);
     });
 
     it('should correctly use the buildIChefURL function to create the image url', () => {
