@@ -5,6 +5,7 @@ import { css, Theme } from '@emotion/react';
 const SVG_WRAPPER_MAX_WIDTH_ABOVE_1280PX = '63rem';
 const LOGO_ASPECT_RATIO = 168 / 48;
 const SVG_HEIGHT = 32;
+const BRAND_LINK_SELECTOR = '& > div > a[aria-labelledby^="BrandLink-"]';
 
 export default {
   banner: ({ palette, mq, spacings }: Theme) =>
@@ -31,6 +32,21 @@ export default {
     css({
       minHeight: 'auto',
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      [BRAND_LINK_SELECTOR]: {
+        paddingTop: `${pixelsToRem(2)}rem`,
+      },
+
+      [mq.GROUP_0_MAX_WIDTH]: {
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT * 2)}rem`,
+        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT * 2)}rem`,
+
+        [BRAND_LINK_SELECTOR]: {
+          minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+          height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+          width: '100%',
+          alignSelf: 'flex-start',
+        },
+      },
 
       [mq.GROUP_1_MIN_WIDTH]: {
         minHeight: 'auto',
@@ -53,10 +69,6 @@ export default {
         [mq.GROUP_3_MIN_WIDTH]: {
           height: '1.875rem',
         },
-      },
-
-      a: {
-        paddingTop: `${pixelsToRem(2)}rem`,
       },
     }),
   logoSvg: ({ palette }: Theme) =>
