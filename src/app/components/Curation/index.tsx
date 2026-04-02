@@ -160,6 +160,7 @@ export default ({
     case MOST_READ:
       return (
         <MostRead
+          showSectionLabel={curationLength > 1}
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
