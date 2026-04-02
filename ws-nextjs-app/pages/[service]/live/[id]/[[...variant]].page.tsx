@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     variant: variantFromUrl,
     renderer_env: rendererEnv,
     page = '1',
-    postToScrollTo: assetId,
+    post: assetId,
   } = context.query as PageDataParams;
 
   const variant = deriveVariant(variantFromUrl);
