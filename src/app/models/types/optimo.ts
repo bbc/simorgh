@@ -131,6 +131,30 @@ export type ArticlePromo = {
       };
 };
 
+export type TopicTagsCurations = {
+  topicId: string;
+  curation: {
+    title: string;
+    curationType: string;
+    curationId: string;
+    link: string;
+    summaries: Array<{
+      type: string;
+      isLive: boolean;
+      title: string;
+      firstPublished: string;
+      lastPublished: string;
+      link: string;
+      imageUrl: string;
+      description: string;
+      imageAlt: string;
+      isPortraitImage: boolean;
+      id: string;
+      duration?: string;
+    }>;
+  };
+};
+
 export type SecondaryColumn = {
   billboardCuration?: Curation;
   mediaCuration?: Curation;
@@ -167,4 +191,5 @@ export type Article = {
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
   portraitVideoItems?: PortraitVideoItems;
+  topicTagsCurations?: TopicTagsCurations[];
 };
