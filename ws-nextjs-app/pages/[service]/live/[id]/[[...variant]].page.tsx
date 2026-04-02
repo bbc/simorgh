@@ -40,8 +40,6 @@ export const getServerSideProps: GetServerSideProps = async context => {
     post: assetId,
   } = context.query as PageDataParams;
 
-  console.log("I'm the assetId", assetId);
-
   const variant = deriveVariant(variantFromUrl);
 
   if (!isValidPageNumber(page)) {
