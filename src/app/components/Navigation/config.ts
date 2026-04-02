@@ -10,6 +10,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'hausa',
   'igbo',
   'marathi',
+  'pidgin',
   'punjabi',
   'tamil',
   'telugu',
