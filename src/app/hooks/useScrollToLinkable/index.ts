@@ -27,7 +27,7 @@ const useScrollToLinkable = ({ elementId, isReducedMotion }) => {
 
     if (elementId) {
       timer = setTimeout(() => {
-        const component = document.getElementById(elementId); // to tidy
+        const component = document.getElementById(elementId);
 
         scrollIntoView(component, hasScrolled, isReducedMotion);
       }, 800);
