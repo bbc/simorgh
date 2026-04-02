@@ -2,6 +2,7 @@ import { Services } from '#app/models/types/global';
 
 const SERVICES_WITH_NEW_NAV: Services[] = [
   'afaanoromoo',
+  'afrique',
   'amharic',
   'arabic',
   'bengali',
