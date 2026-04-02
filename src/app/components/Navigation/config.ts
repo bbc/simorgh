@@ -16,6 +16,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'swahili',
   'tamil',
   'telugu',
+  'tigrinya',
   'urdu',
 ] as const;
 
