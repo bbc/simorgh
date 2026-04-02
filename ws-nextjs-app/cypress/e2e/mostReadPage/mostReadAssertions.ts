@@ -15,6 +15,16 @@ export default ({ service, variant = 'default' }) => {
         beforeEach(() => {
           cy.getToggles(service);
         });
+
+        it('should not render section label', () => {
+          cy.fixture(`toggles/${service}.json`).then(toggles => {
+            if (toggles.mostRead?.enabled) {
+              cy.get('[data-e2e="most-read"]').scrollIntoView();
+              cy.get('[data-e2e="most-read"] h2').should('not.exist');
+            }
+          });
+        });
+
         it(`should render ${numberOfItems} items`, () => {
           cy.fixture(`toggles/${service}.json`).then(toggles => {
             if (toggles.mostRead?.enabled) {

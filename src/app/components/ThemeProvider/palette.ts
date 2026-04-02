@@ -53,5 +53,6 @@ export const SPORT_YELLOW_30 = '#BB9A31';
 export const STONE = '#D5D0CD';
 export const STORM = '#404040';
 export const SUCCESS_CORE = '#148A00';
+export const NEUTRAL_LIGHT = '#73B5FF';
 export const WEATHER_BLUE = '#067EB3';
 export const WHITE = '#FFFFFF';

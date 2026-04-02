@@ -761,3 +761,983 @@ export const audioSamplePost = {
     },
   ],
 };
+
+export const bylineSamplePost = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          id: 'e10c0e32',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: '623789d6',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'e61a8ee3',
+                      type: 'paragraph',
+                      model: {
+                        text: 'A post with contributors',
+                        blocks: [
+                          {
+                            id: 'a2d95df7',
+                            type: 'fragment',
+                            model: {
+                              text: 'A post with contributors',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'a88789fd',
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                id: '559ef7f2',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '87e0eb44',
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            id: '60de97dc',
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: '0d73cf94',
+          type: 'contributor',
+          model: {
+            name: 'Gahuza contributor',
+            link: null,
+            subtitle: 'gahuza contributor',
+            external: 'false',
+            blocks: [
+              {
+                id: 'b0a50b26',
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      id: '88183c7a',
+                      type: 'rawImage',
+                      model: {
+                        width: 100,
+                        height: 100,
+                        locator:
+                          '/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg',
+                        originCode: 'cpsdevpb',
+                        copyrightHolder: 'BBC',
+                      },
+                    },
+                    {
+                      id: '3048f752',
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            id: '3d9385ab',
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  id: 'e22dcf20',
+                                  type: 'paragraph',
+                                  model: {
+                                    text: '',
+                                    blocks: [
+                                      {
+                                        id: '9c923ea2',
+                                        type: 'fragment',
+                                        model: {
+                                          text: '',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          id: '6a3690a1',
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          id: '6d24c155',
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                id: '857bec2b',
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'dca0a027',
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:d69557ee-183e-4c79-b69a-5a04c00de8ac',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+  },
+  dates: {
+    firstPublished: '2026-01-12T09:00:01.000Z',
+    lastPublished: '2026-01-12T09:00:01.000Z',
+    time: null,
+    curated: '2026-01-12T09:00:02.378Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
+
+export const bylineSamplePostWithoutAuthorName = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          id: 'e10c0e32',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: '623789d6',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'e61a8ee3',
+                      type: 'paragraph',
+                      model: {
+                        text: 'A post with contributors',
+                        blocks: [
+                          {
+                            id: 'a2d95df7',
+                            type: 'fragment',
+                            model: {
+                              text: 'A post with contributors',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'a88789fd',
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                id: '559ef7f2',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '87e0eb44',
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            id: '60de97dc',
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: '0d73cf94',
+          type: 'contributor',
+          model: {
+            link: null,
+            subtitle: 'gahuza contributor',
+            external: 'false',
+            blocks: [
+              {
+                id: 'b0a50b26',
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      id: '88183c7a',
+                      type: 'rawImage',
+                      model: {
+                        width: 100,
+                        height: 100,
+                        locator:
+                          '/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg',
+                        originCode: 'cpsdevpb',
+                        copyrightHolder: 'BBC',
+                      },
+                    },
+                    {
+                      id: '3048f752',
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            id: '3d9385ab',
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  id: 'e22dcf20',
+                                  type: 'paragraph',
+                                  model: {
+                                    text: '',
+                                    blocks: [
+                                      {
+                                        id: '9c923ea2',
+                                        type: 'fragment',
+                                        model: {
+                                          text: '',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          id: '6a3690a1',
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          id: '6d24c155',
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                id: '857bec2b',
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'dca0a027',
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:d69557ee-183e-4c79-b69a-5a04c00de8ac',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+  },
+  dates: {
+    firstPublished: '2026-01-12T09:00:01.000Z',
+    lastPublished: '2026-01-12T09:00:01.000Z',
+    time: null,
+    curated: '2026-01-12T09:00:02.378Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
+
+export const bylinesSamplePostWithoutImage = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'A post with contributors without an image',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'A post with contributors without an image',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'contributor',
+          model: {
+            name: 'new contributor in test',
+            link: null,
+            subtitle: 'contributor',
+            external: 'false',
+            blocks: [],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:4a12e039-abaa-4556-a706-f0a6b98c64d8',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+    includeComments: false,
+  },
+  dates: {
+    firstPublished: '2026-03-16T16:17:28.000Z',
+    lastPublished: '2026-03-16T16:17:28.000Z',
+    time: null,
+    curated: '2026-03-16T16:17:29.538Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
+
+export const bylinesSamplePostWithoutSubtitle = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'A second post with contributors',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'A second post with contributors',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'contributor',
+          model: {
+            name: 'John Doe',
+            link: 'https://google.com',
+            subtitle: null,
+            external: 'false',
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 100,
+                        height: 100,
+                        locator:
+                          '/vivo/test/images/2015/1/20/d3be9c18-8975-4e20-9923-5c309c2dc00d.gif',
+                        originCode: 'cpsdevpb',
+                        copyrightHolder: 'BBC',
+                      },
+                    },
+                    {
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  type: 'paragraph',
+                                  model: {
+                                    text: '',
+                                    blocks: [
+                                      {
+                                        type: 'fragment',
+                                        model: {
+                                          text: '',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:1f798a3d-d31b-4577-b761-101b434c81a7',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+    includeComments: false,
+  },
+  dates: {
+    firstPublished: '2026-03-10T14:29:15.000Z',
+    lastPublished: '2026-03-16T09:40:53.000Z',
+    time: null,
+    curated: '2026-03-10T14:29:16.587Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
+
+export const bylineSamplePostWithUnsupportedImage = {
+  typeCode: null,
+  header: {
+    model: {
+      blocks: [
+        {
+          id: 'e10c0e32',
+          type: 'headline',
+          model: {
+            blocks: [
+              {
+                id: '623789d6',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: 'e61a8ee3',
+                      type: 'paragraph',
+                      model: {
+                        text: 'A post with contributors',
+                        blocks: [
+                          {
+                            id: 'a2d95df7',
+                            type: 'fragment',
+                            model: {
+                              text: 'A post with contributors',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'a88789fd',
+          type: 'subheadline',
+          model: {
+            blocks: [
+              {
+                id: '559ef7f2',
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      id: '87e0eb44',
+                      type: 'paragraph',
+                      model: {
+                        text: 'This is the sub-headline',
+                        blocks: [
+                          {
+                            id: '60de97dc',
+                            type: 'fragment',
+                            model: {
+                              text: 'This is the sub-headline',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: '0d73cf94',
+          type: 'contributor',
+          model: {
+            name: 'Gahuza contributor',
+            link: null,
+            subtitle: 'gahuza contributor',
+            external: 'false',
+            blocks: [
+              {
+                id: 'b0a50b26',
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      id: '88183c7a',
+                      type: 'rawImage',
+                      model: {
+                        width: 100,
+                        height: 100,
+                        locator:
+                          '/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.svg',
+                        originCode: 'cpsdevpb',
+                        copyrightHolder: 'BBC',
+                      },
+                    },
+                    {
+                      id: '3048f752',
+                      type: 'altText',
+                      model: {
+                        blocks: [
+                          {
+                            id: '3d9385ab',
+                            type: 'text',
+                            model: {
+                              blocks: [
+                                {
+                                  id: 'e22dcf20',
+                                  type: 'paragraph',
+                                  model: {
+                                    text: '',
+                                    blocks: [
+                                      {
+                                        id: '9c923ea2',
+                                        type: 'fragment',
+                                        model: {
+                                          text: '',
+                                          attributes: [],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  content: {
+    model: {
+      blocks: [
+        {
+          id: '6a3690a1',
+          type: 'fragment',
+          model: {
+            text: '\n      ',
+            attributes: [],
+          },
+        },
+        {
+          id: '6d24c155',
+          type: 'paragraph',
+          model: {
+            text: "This is the post's body text",
+            blocks: [
+              {
+                id: '857bec2b',
+                type: 'fragment',
+                model: {
+                  text: "This is the post's body text",
+                  attributes: [],
+                },
+              },
+            ],
+          },
+        },
+        {
+          id: 'dca0a027',
+          type: 'fragment',
+          model: {
+            text: '\n    ',
+            attributes: [],
+          },
+        },
+      ],
+    },
+  },
+  link: null,
+  urn: 'asset:d69557ee-183e-4c79-b69a-5a04c00de8ac',
+  type: 'POST',
+  options: {
+    isBreakingNews: false,
+  },
+  dates: {
+    firstPublished: '2026-01-12T09:00:01.000Z',
+    lastPublished: '2026-01-12T09:00:01.000Z',
+    time: null,
+    curated: '2026-01-12T09:00:02.378Z',
+  },
+  titles: [
+    {
+      title: null,
+      source: 'primary',
+    },
+  ],
+  descriptions: [
+    {
+      text: null,
+      source: 'summary',
+    },
+  ],
+  images: [
+    {
+      originalUrl: null,
+      altText: null,
+      copyright: null,
+      urlTemplate: null,
+      url: null,
+    },
+  ],
+};
