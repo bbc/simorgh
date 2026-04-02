@@ -45,14 +45,19 @@ const buildApp = () =>
 const startApp = () => {
   const portNumber = argv.nextJS ? 7081 : 7080;
   const pathname = argv.nextJS ? '' : '/status';
-  return new Promise(resolve => {
-    const child = exec(
+  return new Promise((resolve, reject) => {
+    exec(
       `yarn ${
         isDev ? 'dev' : 'start'
       } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}${pathname}`,
+      error => {
+        if (error) {
+          reject(error);
+          return;
+        }
+        resolve();
+      },
     );
-
-    child.on('exit', resolve);
   });
 };
 
@@ -138,7 +143,8 @@ if (onlyRunTests) {
       await stopApp();
       process.exit(0);
     })
-    .catch(async () => {
+    .catch(async error => {
+      console.log('Command returned an error =>', error);
       await stopApp();
       process.exit(1);
     });
