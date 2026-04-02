@@ -21,7 +21,7 @@ type Props = {
   setIsFirstPostVisible: Dispatch<SetStateAction<boolean>>;
   streamRef: ForwardedRef<HTMLDivElement>;
   applyPendingUpdate: () => void;
-  postTest: string | null;
+  postToScrollTo?: string | null;
 };
 
 const Stream = ({
@@ -30,7 +30,7 @@ const Stream = ({
   setIsFirstPostVisible,
   streamRef,
   applyPendingUpdate,
-  postTest,
+  postToScrollTo,
 }: Props) => {
   const {
     translations: {
@@ -39,7 +39,7 @@ const Stream = ({
   } = use(ServiceContext);
 
   useScrollToLinkable({
-    elementId: postTest,
+    elementId: postToScrollTo,
     isReducedMotion: true,
   });
 

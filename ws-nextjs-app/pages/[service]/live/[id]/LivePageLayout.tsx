@@ -64,10 +64,10 @@ export type ComponentProps = {
 
 interface LivePageProps extends ComponentProps {
   assetId?: string | null;
-  postTest: string | null; // maybe should be ?
+  postToScrollTo?: string | null;
 }
 
-const LivePage = ({ pageData, assetId, postTest }: LivePageProps) => {
+const LivePage = ({ pageData, assetId, postToScrollTo }: LivePageProps) => {
   const { lang, translations, defaultImage, brandName } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
@@ -193,7 +193,7 @@ const LivePage = ({ pageData, assetId, postTest }: LivePageProps) => {
               setIsFirstPostVisible={setIsFirstPostVisible}
               streamRef={streamRef}
               applyPendingUpdate={applyPendingUpdate}
-              postTest={postTest}
+              {...(postToScrollTo && { postToScrollTo })}
             />
             <LatestPostButton
               isFirstPostVisible={isFirstPostVisible}
