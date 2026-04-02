@@ -15,7 +15,6 @@ const scrollIntoView = (componentToScrollTo, hasScrolled, isReducedMotion) => {
   }
 };
 
-// to do - minifiy to remove scroll
 const useScrollToLinkable = ({ elementId, isReducedMotion }) => {
   const hasScrolled = useRef(null);
 
