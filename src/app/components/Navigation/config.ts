@@ -13,6 +13,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'pidgin',
   'punjabi',
   'somali',
+  'swahili',
   'tamil',
   'telugu',
   'urdu',
