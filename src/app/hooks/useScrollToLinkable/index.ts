@@ -19,8 +19,6 @@ const scrollIntoView = (componentToScrollTo, hasScrolled, isReducedMotion) => {
 const useScrollToLinkable = ({ elementId, isReducedMotion }) => {
   const hasScrolled = useRef(null);
 
-  console.log("I'm the elementId in the scroll hook", elementId);
-
   useEffect(() => {
     hasScrolled.current = null;
   }, [elementId]);

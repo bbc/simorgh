@@ -72,8 +72,6 @@ const LivePage = ({ pageData, assetId, postToScrollTo }: LivePageProps) => {
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
 
-  console.log("I'm the postToScrollTo in the live page layout", postToScrollTo);
-
   const streamRef = useRef<HTMLDivElement>(null);
   const [isFirstPostVisible, setIsFirstPostVisible] = useState(true);
 
