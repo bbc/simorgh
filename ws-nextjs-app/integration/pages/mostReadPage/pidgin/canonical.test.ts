@@ -1,6 +1,6 @@
 /**
- * @service mundo
- * @pathname /mundo/popular/read
+ * @service pidgin
+ * @pathname /pidgin/popular/read
  */
 
 import runCanonicalTests from '../canonicalTests';

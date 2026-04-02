@@ -8,8 +8,8 @@ export default service => {
     const h1El = document.querySelector('h1');
 
     expect(h1El).toBeInTheDocument();
-    expect(h1El.textContent).toBeTruthy();
-    expect(h1El.textContent).toMatchSnapshot();
+    expect(h1El?.textContent).toBeTruthy();
+    expect(h1El?.textContent).toMatchSnapshot();
   });
 
   it('I can see the list items', () => {
