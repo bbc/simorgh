@@ -10,6 +10,7 @@
   ],
   "workspaces": {
     "packages": [
+      "ws-nextjs-app/test/e2e",
       "ws-nextjs-app",
       "src/app/routes/article/getInitialData",
       "src/app/routes/utils/fetchDataFromBFF",
