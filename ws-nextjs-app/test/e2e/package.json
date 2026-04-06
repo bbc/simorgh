@@ -1,0 +1,26 @@
+{
+  "name": "e2e-tests",
+  "version": "1.0.0",
+  "description": "automation / e2e tests",
+  "private": true,
+  "packageManager": "yarn@4.12.0",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e:chrome:playwright": "npx playwright test --project='WorldService - Chrome'",
+    "test:e2e:ci:uk:playwright": "SAUCE_REGION='eu-central-1' SAUCE_CONNECT_TUNNEL=true SUITE='Sounds web e2es using unified framework' npx runTestsOnSauceLabs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "saucectl": "^0.195.2"
+  },
+  "devDependencies": {
+    "@bbc/unified-web-e2e-framework": "github:bbc/unified-web-e2e-framework#v3.0.0",
+    "@playwright/test": "1.57.0",
+    "@types/config": "3.3.5",
+    "@types/supertest": "6.0.3",
+    "supertest": "7.1.1",
+    "tsx": "4.19.4",
+    "typescript": "5.8.3"
+  }
+}
