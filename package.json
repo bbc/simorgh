@@ -51,7 +51,7 @@
     "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node --max-old-space-size=3500 build/server.js",
-    "fallbackStart": "yarn dev",
+    "fallbackStart": "yarn start",
     "stop": "./scripts/killApp.sh",
     "storybook": "storybook dev -p 9001 -c .storybook",
     "test": "yarn build && yarn test:local",
