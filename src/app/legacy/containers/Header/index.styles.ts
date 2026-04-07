@@ -73,7 +73,7 @@ export default {
         },
         '& > div > a:first-of-type': {
           [mq.GROUP_1_MIN_WIDTH]: {
-            flex: '1 1 auto',
+            flex: '0 1 auto',
             minWidth: 0,
           },
         },
