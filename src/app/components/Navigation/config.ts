@@ -7,6 +7,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'arabic',
   'bengali',
   'gahuza',
+  'gujarati',
   'hausa',
   'igbo',
   'marathi',
