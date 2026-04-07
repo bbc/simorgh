@@ -86,10 +86,15 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
     </SkipLink>
   );
 
+  const shouldUseNewNav =
+    SERVICES_WITH_NEW_NAV.includes(service) &&
+    !(service === 'ukchina' && pageType !== ARTICLE_PAGE);
+
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
     switch (true) {
+      case service === 'ukchina' && pageType !== ARTICLE_PAGE:
       case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
@@ -102,8 +107,10 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   }
 
   if (isApp) return null;
-
-  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+  const headerBrandCss = shouldUseNewNav
+    ? theme =>
+        styles.headerBrand(theme, { hasScriptLink: shouldRenderScriptSwitch })
+    : null;
 
   const NavigationComponent = shouldUseNewNav
     ? NewNavigationContainer
@@ -116,8 +123,12 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={shouldUseNewNav ? styles.headerBrand : null}
+          scriptLink={
+            shouldRenderScriptSwitch && (
+              <ScriptLink isNewNavigation={shouldUseNewNav} />
+            )
+          }
+          css={headerBrandCss}
         >
           <AccountHeader />
         </Header>
@@ -125,8 +136,12 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={shouldUseNewNav ? styles.headerBrand : null}
+          scriptLink={
+            shouldRenderScriptSwitch && (
+              <ScriptLink isNewNavigation={shouldUseNewNav} />
+            )
+          }
+          css={headerBrandCss}
         >
           <AccountHeader />
         </Header>
