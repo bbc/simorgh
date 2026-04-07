@@ -1,12 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
 
-const NEW_NAV_SCRIPT_LINK_HEIGHT = pixelsToRem(36);
-const NEW_NAV_SCRIPT_LINK_MIN_WIDTH = pixelsToRem(34);
-const NEW_NAV_SCRIPT_LINK_PADDING = pixelsToRem(6);
-const NEW_NAV_SCRIPT_LINK_BORDER = pixelsToRem(1);
-const NEW_NAV_SCRIPT_LINK_FOCUS_BORDER = pixelsToRem(4);
-
 const styles = {
   link: (
     { fontSizes, fontVariants, palette, spacings, mq }: Theme,
@@ -23,9 +17,9 @@ const styles = {
           boxSizing: 'border-box',
           color: palette.WHITE,
           textDecoration: 'none',
-          height: `${NEW_NAV_SCRIPT_LINK_HEIGHT}rem`,
-          minWidth: `${NEW_NAV_SCRIPT_LINK_MIN_WIDTH}rem`,
-          border: `${NEW_NAV_SCRIPT_LINK_BORDER}rem solid ${palette.WHITE}`,
+          height: `${pixelsToRem(36)}rem`,
+          minWidth: `${pixelsToRem(34)}rem`,
+          border: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
           textAlign: 'center',
           whiteSpace: 'nowrap',
           '&:focus::after, &:hover::after': {
@@ -33,7 +27,7 @@ const styles = {
             position: 'absolute',
             inset: 0,
             boxSizing: 'border-box',
-            border: `${NEW_NAV_SCRIPT_LINK_FOCUS_BORDER}rem solid ${palette.WHITE}`,
+            border: `${pixelsToRem(4)}rem solid ${palette.WHITE}`,
             pointerEvents: 'none',
           },
         })
@@ -72,7 +66,7 @@ const styles = {
           justifyContent: 'center',
           boxSizing: 'border-box',
           height: '100%',
-          paddingInline: `${NEW_NAV_SCRIPT_LINK_PADDING}rem`,
+          paddingInline: `${pixelsToRem(6)}rem`,
           lineHeight: 1,
         })
       : css({
