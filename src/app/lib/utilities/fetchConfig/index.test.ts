@@ -218,6 +218,7 @@ describe('fetchConfig', () => {
 
       await fetchConfig({
         service: 'serbian',
+        variant: 'cyr',
         pagePath: '/serbian/cyr',
         configType: 'navigation',
       });
