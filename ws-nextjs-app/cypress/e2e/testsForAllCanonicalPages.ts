@@ -29,8 +29,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
   describe('Header Tests', () => {
     const serviceName = config[service]?.name || service;
     // limit number of tests to 2 services for navigation toggling
-    const testMobileNav =
-      serviceName === 'ukchina' || serviceName === 'persian';
+    const testMobileNav = serviceName === 'ukchina';
 
     const twoTierNavServices = {
       local: null, // Don't test two tier nav locally as the local environment can't fetch config

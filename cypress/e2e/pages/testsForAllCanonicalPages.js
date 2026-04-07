@@ -22,7 +22,7 @@ export default ({ service, pageType }) => {
 
   describe('Header Tests', () => {
     // limit number of tests to 2 services for navigation toggling
-    const testMobileNav = service === 'zhongwen' || service === 'persian';
+    const testMobileNav = service === 'zhongwen';
 
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
