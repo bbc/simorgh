@@ -5,7 +5,7 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
 import extractHeaders from '#server/utilities/extractHeaders';
 import logResponseTime from '#server/utilities/logResponseTime';
-import getToggles from '#app/lib/utilities/getToggles';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 
@@ -17,6 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
   if (!isUasPersonalizationEnabled) {
+    context.res.statusCode = 4004;
     return {
       props: {
         service,
