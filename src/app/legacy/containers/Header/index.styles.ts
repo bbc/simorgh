@@ -27,7 +27,10 @@ export default {
         lineHeight: 0,
       },
     }),
-  headerBrand: ({ mq, spacings }: Theme) =>
+  headerBrand: (
+    { mq, spacings }: Theme,
+    { hasScriptLink = false }: { hasScriptLink?: boolean } = {},
+  ) =>
     css({
       minHeight: 'auto',
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
@@ -47,17 +50,49 @@ export default {
         height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
-      svg: {
-        height: '1.5rem',
+      '& > div > a:first-of-type': {
+        paddingTop: `${pixelsToRem(2)}rem`,
 
-        [mq.GROUP_3_MIN_WIDTH]: {
-          height: '1.875rem',
+        svg: {
+          height: '1.5rem',
+
+          [mq.GROUP_3_MIN_WIDTH]: {
+            height: '1.875rem',
+          },
         },
       },
 
-      a: {
-        paddingTop: `${pixelsToRem(2)}rem`,
-      },
+      ...(hasScriptLink && {
+        [mq.GROUP_0_MAX_WIDTH]: {
+          height: 'auto',
+        },
+        '& > div': {
+          [mq.GROUP_1_MIN_WIDTH]: {
+            flexWrap: 'nowrap',
+          },
+        },
+        '& > div > a:first-of-type': {
+          [mq.GROUP_1_MIN_WIDTH]: {
+            flex: '1 1 auto',
+            minWidth: 0,
+          },
+        },
+        '& > div > div:last-child': {
+          [mq.GROUP_0_MAX_WIDTH]: {
+            flexBasis: '100%',
+            margin: `${spacings.FULL}rem 0`,
+          },
+          [mq.GROUP_1_MIN_WIDTH]: {
+            display: 'flex',
+            alignItems: 'center',
+            flex: '0 0 auto',
+            marginInlineStart: 'auto',
+          },
+          [mq.GROUP_3_MIN_WIDTH]: {
+            marginInlineEnd: `${pixelsToRem(-4)}rem`,
+          },
+        },
+      }),
     }),
   logoSvg: ({ palette }: Theme) =>
     css({
