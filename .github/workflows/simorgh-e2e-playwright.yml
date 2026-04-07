@@ -41,16 +41,12 @@ jobs:
           git config --global url.https://${{ secrets.WS_UTF_AUTH }}@github.com/.insteadOf https://github.com/
           ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn build
-
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         working-directory: ws-nextjs-app
-        run: npx playwright test --project="WorldService - Chrome"
+        run: HEADLESS=true npx playwright test --project="WorldService - Chrome"
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
