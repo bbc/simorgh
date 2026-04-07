@@ -14,5 +14,5 @@ export default build({
       <path d="M1447,252.46V172.38h14.34q10.08,14.56,19.88,29.35t19.55,30V172.38h13.66v80.08h-14.34q-6.37-10-13-20.16t-13.27-20.16q-6.6-10-13.1-19.37v59.69Z" />
     </>
   ),
-  viewbox: { minY: 145, minX: 685, width: 830, height: 135 },
+  viewbox: { minY: 145, minX: 690, width: 830, height: 135 },
 });
