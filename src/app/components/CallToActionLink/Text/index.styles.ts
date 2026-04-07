@@ -2,9 +2,9 @@ import { css, Theme } from '@emotion/react';
 import pixelsToRem from '../../../utilities/pixelsToRem';
 
 export default {
-  text: ({ palette }: Theme) =>
+  text: () =>
     css({
-      color: palette.GREY_10,
+      color: 'inherit',
     }),
   defaultTextStyles: ({ palette }: Theme) =>
     css({
