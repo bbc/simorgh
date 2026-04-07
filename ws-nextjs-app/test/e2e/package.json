@@ -11,9 +11,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "saucectl": "^0.195.2"
-  },
   "devDependencies": {
     "@bbc/unified-web-e2e-framework": "github:bbc/unified-web-e2e-framework#v3.0.0",
     "@playwright/test": "1.57.0",
