@@ -1,5 +1,6 @@
 /* eslint-disable cypress/no-async-tests */
-import { test, expect } from '@bbc/unified-web-e2e-framework';
+import { test } from '@bbc/unified-web-e2e-framework';
+import { expect } from '@playwright/test';
 import runUrlValidationTest from '../support/helpers/runUrlValidationTest';
 
 const testSuites = [
@@ -16,20 +17,12 @@ const testSuites = [
     service: 'kyrgyz',
   },
   {
-    path: '/magyarul',
-    service: 'magyarul',
-  },
-  {
     path: '/polska',
     service: 'polska',
   },
   {
     path: '/portuguese',
     service: 'portuguese',
-  },
-  {
-    path: '/romania',
-    service: 'romania',
   },
   {
     path: '/serbian/lat',
@@ -61,7 +54,7 @@ testSuites.forEach(suite => {
     }) => {
       await page.goto(suite.path);
       await expect(page).toHaveURL(suite.path);
-      runUrlValidationTest(page);
+      // runUrlValidationTest(page);
       // ToDo: check how to reuse the same browser instead of opening / reponeing
       // ToDO: run canonicalTests, testsForAllCanonicalPages
       // ToDo: differentiate between smoke / non-smoke

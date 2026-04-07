@@ -27,8 +27,8 @@ export default function runTestsForPage({
   testSuites,
   beforeAll = [],
   beforeEachFns = [],
-  testIsolation = false,
-  headers,
+  // testIsolation = false,
+  // headers,
 }: FunctionProps) {
   const serviceToRun = process.env.ONLY_SERVICE;
 
@@ -51,10 +51,10 @@ export default function runTestsForPage({
       base.describe(`${path}`, () => {
         base.beforeAll(async ({ page }) => {
           for (const fn of beforeAll) fn();
-          await page.goto(path, { waitUntil: 'domcontentloaded', headers });
+          await page.goto(path, { waitUntil: 'domcontentloaded' });
         });
 
-        base.beforeEach(async ({ page }) => {
+        base.beforeEach(async () => {
           for (const fn of beforeEachFns) fn();
           // Add any Playwright-specific setup here
         });
