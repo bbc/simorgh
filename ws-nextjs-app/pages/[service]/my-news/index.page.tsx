@@ -3,9 +3,9 @@ import { GetServerSideProps } from 'next';
 import { MY_NEWS_PAGE } from '#app/routes/utils/pageTypes';
 import PageDataParams from '#app/models/types/pageDataParams';
 import deriveVariant from '#nextjs/utilities/deriveVariant';
-import extractHeaders from '#server/utilities/extractHeaders';
 import logResponseTime from '#server/utilities/logResponseTime';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 
 const MyNewsPage = dynamic(() => import('./MyNewsPage'));
 
@@ -22,10 +22,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       props: {
         service,
         variant,
-        status: 404,
+        status: NOT_FOUND,
         timeOnServer: Date.now(),
         pathname: `/${service}/my-news`,
-        ...extractHeaders(context.req.headers),
       },
     };
   }
@@ -42,10 +41,9 @@ export const getServerSideProps: GetServerSideProps = async context => {
       service,
       variant,
       pageType: MY_NEWS_PAGE,
-      status: 200,
+      status: OK,
       timeOnServer: Date.now(),
       pathname: `/${service}/my-news`,
-      ...extractHeaders(context.req.headers),
       pageData: {
         metadata: {
           type: MY_NEWS_PAGE,
