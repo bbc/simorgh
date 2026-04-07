@@ -4,6 +4,10 @@ import uasApiRequest from './index';
 
 jest.mock('js-cookie');
 jest.mock('../utilities/getEnvConfig');
+jest.mock('./tokenRefresh/tokenManager', () => ({
+  __esModule: true,
+  default: jest.fn().mockResolvedValue(undefined),
+}));
 
 global.fetch = jest.fn();
 
