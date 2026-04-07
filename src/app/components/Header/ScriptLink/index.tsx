@@ -1,11 +1,16 @@
 import { use } from 'react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
 
-const ScriptLink = () => {
-  const { scriptLink } = use(ServiceContext);
+type Props = {
+  isNewNavigation?: boolean;
+};
+
+const ScriptLink = ({ isNewNavigation = false }: Props) => {
+  const { scriptLink, service } = use(ServiceContext);
   const { pathname, variant: currentVariant } = use(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
 
@@ -26,15 +31,27 @@ const ScriptLink = () => {
 
   pathPartsWithoutExtension[currentVariantIndex] = alternateVariant;
   const pathToVariant = pathPartsWithoutExtension.join('/');
+  const useNewNavigationStyles =
+    isNewNavigation && SERVICES_WITH_NEW_NAV.includes(service);
 
   return (
     <a
-      css={styles.link}
+      css={theme =>
+        styles.link(theme, { isNewNavigation: useNewNavigationStyles })
+      }
       href={pathToVariant}
       data-variant={alternateVariant}
       className="focusIndicatorRemove"
     >
-      <span css={styles.container}>{text}</span>
+      <span
+        css={theme =>
+          styles.container(theme, {
+            isNewNavigation: useNewNavigationStyles,
+          })
+        }
+      >
+        {text}
+      </span>
     </a>
   );
 };
