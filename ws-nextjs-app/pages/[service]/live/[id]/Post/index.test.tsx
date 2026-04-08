@@ -2,6 +2,7 @@ import {
   render,
   screen,
   act,
+  within,
 } from '#app/components/react-testing-library-with-providers';
 import postFixture from '#data/pidgin/posts/postFixtureCleaned.json';
 import { LIVE_PAGE } from '#src/app/routes/utils/pageTypes';
@@ -11,6 +12,7 @@ import {
   samplePost,
   twitterSamplePost,
   videoSamplePost,
+  bylineSamplePost,
 } from './fixture';
 
 const singlePostWithTitle = postFixture.data.results[0];
@@ -117,6 +119,45 @@ describe('Post', () => {
       });
 
       expect(screen.getAllByRole('text')[0].closest('h3')).toBeInTheDocument();
+    });
+
+    it('should render a byline when contributor data is provided', async () => {
+      await act(async () => {
+        render(<Post post={bylineSamplePost} />, { pageType: 'live' });
+      });
+
+      const byline = screen.getByTestId('byline');
+
+      const authorName = within(byline).getByText('Gahuza contributor');
+      const authorRole = within(byline).getByText('gahuza contributor');
+      const authorImage = within(byline).getByRole('presentation');
+
+      expect(byline).toBeInTheDocument();
+
+      expect(authorName).toBeInTheDocument();
+      expect(authorRole).toBeInTheDocument();
+      expect(authorImage).toBeInTheDocument();
+
+      expect(authorImage).toHaveAttribute(
+        'src',
+        'https://ichef.bbci.co.uk/ace/ws/160/cpsdevpb/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg.webp',
+      );
+    });
+
+    it('should render a byline with the requisite off screen text for screen readers', async () => {
+      await act(async () => {
+        render(<Post post={bylineSamplePost} />, { pageType: 'live' });
+      });
+
+      const byline = screen.getByTestId('byline');
+
+      const author = within(byline).getByText('Author,');
+      const role = within(byline).getByText('Role,');
+
+      expect(byline).toBeInTheDocument();
+
+      expect(author).toBeInTheDocument();
+      expect(role).toBeInTheDocument();
     });
   });
   describe('Content', () => {
