@@ -45,14 +45,25 @@ const buildApp = () =>
 const startApp = () => {
   const portNumber = argv.nextJS ? 7081 : 7080;
   const pathname = argv.nextJS ? '' : '/status';
-  return new Promise(resolve => {
-    const child = exec(
-      `yarn ${
-        isDev ? 'dev' : 'start'
-      } & ./node_modules/.bin/wait-on -t 20000 http://localhost:${portNumber}${pathname}`,
-    );
 
-    child.on('exit', resolve);
+  const statusCommand = `sleep 20 && curl http://localhost:${portNumber}${pathname}`;
+
+  const initialCommand = `yarn ${isDev ? 'dev' : 'start'}`;
+  const fallbackCommand = `yarn ${isDev ? 'dev' : 'fallbackStart'}`;
+
+  return new Promise((resolve, reject) => {
+    exec(initialCommand, error => {
+      if (error) {
+        exec(fallbackCommand);
+      }
+    });
+
+    exec(statusCommand, error => {
+      if (error) {
+        reject(new Error('Both the initial and fallback start up failed'));
+      }
+      resolve();
+    });
   });
 };
 
@@ -138,7 +149,11 @@ if (onlyRunTests) {
       await stopApp();
       process.exit(0);
     })
-    .catch(async () => {
+    .catch(async error => {
+      console.log(
+        'Running /integration/utils/runTests/index.js returned an error => \n',
+        error,
+      );
       await stopApp();
       process.exit(1);
     });
