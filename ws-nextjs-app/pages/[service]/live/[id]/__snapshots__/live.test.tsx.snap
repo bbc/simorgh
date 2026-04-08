@@ -471,7 +471,15 @@ exports[`Live Page creates snapshot of the live page 1`] = `
 }
 
 .emotion-22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   grid-column: 1/13;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 @media (min-width: 63rem) {
@@ -1168,6 +1176,12 @@ exports[`Live Page creates snapshot of the live page 1`] = `
   border-radius: 50%;
 }
 
+.emotion-122 {
+  position: fixed;
+  top: 1.5rem;
+  z-index: 9999;
+}
+
 <div>
   <noscript
     id="analytics-noscript"
@@ -1270,7 +1284,9 @@ exports[`Live Page creates snapshot of the live page 1`] = `
       <div
         class="emotion-22"
       >
-        <div>
+        <div
+          id="stream-container"
+        >
           <h2
             class="emotion-23"
           >
@@ -1632,6 +1648,14 @@ exports[`Live Page creates snapshot of the live page 1`] = `
               </article>
             </li>
           </ol>
+        </div>
+        <div
+          class="emotion-122"
+        >
+          <span
+            aria-live="polite"
+            class="emotion-33"
+          />
         </div>
       </div>
     </div>

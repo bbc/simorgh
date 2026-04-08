@@ -101,22 +101,24 @@ export const service: DefaultServiceConfig = {
         postedAt: 'पोस्ट किया गया',
         summary: 'सारांश',
         shareButtonText: 'साझा कीजिए',
+        refreshButtonText: 'नवीनतम पोस्ट',
+        visuallyHiddenButtonText: 'नया पोस्ट उपलब्ध है',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
         title: 'File Download',
       },
       account: {
-        signIn: 'Sign In',
-        forYou: 'For you',
-        register: 'Register',
+        signIn: 'साइन‑इन',
+        forYou: 'Your Account',
+        register: 'रजिस्टर करें',
       },
       accountPromoBanner: {
-        title: 'Discover your BBC',
+        title: 'अपना BBC खोजिए',
         description:
-          'Sign in or create an account to watch, listen and join in',
+          'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
         closeLabel: 'Close',
-        buttonSeparatorText: 'or',
+        buttonSeparatorText: 'या',
       },
       gist: 'सारांश',
       error: {

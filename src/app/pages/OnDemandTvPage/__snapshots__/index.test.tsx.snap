@@ -227,24 +227,7 @@ exports[`OnDemand TV Page  Dark Mode Design - should match snapshot 1`] = `
   width: 100%;
   margin: 0 0 1.5rem 0;
   aspect-ratio: 16/9;
-}
-
-@media (min-width: 63rem) {
-  .emotion-7 {
-    margin: 0px 0px 0px;
-  }
-}
-
-@media (max-width: 37.4375rem) {
-  .emotion-7 {
-    margin: 0px -1rem 0px;
-  }
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-7 {
-    margin: 0px -0.5rem 0px;
-  }
+  margin: 0;
 }
 
 .emotion-8 {

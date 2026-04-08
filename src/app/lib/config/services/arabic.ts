@@ -66,6 +66,7 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'و',
       readTime: {
         readTimePrefix: 'مدة القراءة',
         minute: 'دقائق',
@@ -100,6 +101,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
         shareButtonText: 'شارك',
+        refreshButtonText: 'أحدث منشور',
+        visuallyHiddenButtonText: 'منشور جديد متاح',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

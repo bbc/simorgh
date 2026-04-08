@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import config from '../support/config/services';
-import getAppEnv from '../support/helpers/getAppEnv';
 import { ServiceParametersType } from '../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
@@ -13,8 +12,16 @@ export default ({ service, pageType }: ServiceParametersType) => {
       const testMobileNav =
         serviceName === 'ukchina' || serviceName === 'persian';
 
+      const twoTierNavServices = {
+        local: null, // Don't test two tier nav locally as the local environment can't fetch config
+        test: ['arabic', 'tamil'], // Test env isn't guaranteed to have the new nav config, so only run tests for services we know have it
+        live: SERVICES_WITH_NEW_NAV,
+      };
+
+      const cypressAppEnv = getAppEnv();
+
       const testTwoTierNav =
-        SERVICES_WITH_NEW_NAV.includes(service) && getAppEnv() === 'test';
+        twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
 
       if (testMobileNav) {
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
@@ -39,9 +46,8 @@ export default ({ service, pageType }: ServiceParametersType) => {
         });
       }
 
-      // this check limits these tests to arabic and tamil services on test
       if (testTwoTierNav) {
-        it('should show two tier navigation on mobile on test environment', () => {
+        it('should show two tier navigation on mobile', () => {
           cy.viewport(320, 480);
           cy.get('nav')
             .find('[data-e2e="scrollable-nav"]')

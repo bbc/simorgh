@@ -301,30 +301,38 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-18 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-18 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-18 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-18 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -339,7 +347,9 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-20 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,16 +368,14 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-20 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-22 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,27 +385,23 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-22:hover,
-.emotion-22:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-22:hover::before,
+.emotion-22:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-22:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-24 {
@@ -405,6 +409,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -516,7 +521,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-31 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -890,31 +895,38 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-142 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-142 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-142 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-142 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -1246,6 +1258,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
           >
             <button
               aria-expanded="false"
+              aria-label="Sections"
               class="focusIndicatorRemove emotion-35 emotion-36"
               dir="ltr"
               type="button"

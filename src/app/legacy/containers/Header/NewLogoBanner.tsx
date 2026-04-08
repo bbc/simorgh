@@ -4,8 +4,10 @@ import styles from './index.styles';
 
 const GLOBAL_LANGUAGES_PATH = '/ws/languages';
 
-const isGlobalLanguageHomepage = (inputPathname: string) => {
-  const pathname = inputPathname.split(/[?#]/)?.[0]?.replace(/\/$/, '');
+const isGlobalLanguageHomepage = (inputPathname?: string) => {
+  if (!inputPathname) return false;
+
+  const pathname = inputPathname?.split(/[?#]/)?.[0]?.replace(/\/$/, '');
   return pathname === GLOBAL_LANGUAGES_PATH;
 };
 
@@ -18,7 +20,7 @@ const NewLogoBanner = () => {
 
   return (
     <div css={styles.banner} data-testid="logo-banner">
-      <a href={logoHref} aria-label="BBC">
+      <a href={logoHref} aria-label="BBC News World Service">
         <svg
           css={styles.logoSvg}
           width="168"

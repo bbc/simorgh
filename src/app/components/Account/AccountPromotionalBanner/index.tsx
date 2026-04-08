@@ -2,8 +2,11 @@ import { use, useState } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import CallToActionLink from '#app/components/CallToActionLink';
+import { AccountIcon } from '#app/components/icons';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
+import useToggle from '#app/hooks/useToggle';
 import styles from './index.styles';
 
 const ACCOUNT_BANNER_DISMISS_KEY = 'account_promotional_banner_dismissals';
@@ -44,8 +47,10 @@ const isBannerVisible = () => {
 };
 
 const AccountPromotionalBanner = () => {
+  const { enabled: accountEnabled } = useToggle('account');
   const { isSignedIn, isIdctaAvailable, signInUrl, registerUrl } =
     use(AccountContext);
+  const isHydrated = useHydrationDetection();
   const { translations } = use(ServiceContext);
   const accountPromoBannerTranslations = translations?.accountPromoBanner;
   const signInText = translations?.account?.signIn;
@@ -55,10 +60,12 @@ const AccountPromotionalBanner = () => {
   if (
     isDismissed ||
     isSignedIn ||
+    !accountEnabled ||
     !isIdctaAvailable ||
     !signInUrl ||
     !registerUrl ||
-    !accountPromoBannerTranslations
+    !accountPromoBannerTranslations ||
+    !isHydrated
   ) {
     return null;
   }
@@ -86,9 +93,9 @@ const AccountPromotionalBanner = () => {
         css={[styles.callToActionLink, styles.signInLink]}
       >
         <CallToActionLink.ButtonLikeWrapper>
+          <AccountIcon css={styles.accountIcon} />
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>
             {signInText}
-            <CallToActionLink.Chevron />
           </CallToActionLink.Text>
         </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>
@@ -105,7 +112,6 @@ const AccountPromotionalBanner = () => {
         <CallToActionLink.ButtonLikeWrapper>
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>
             {registerText}
-            <CallToActionLink.Chevron />
           </CallToActionLink.Text>
         </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>

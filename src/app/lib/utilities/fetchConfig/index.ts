@@ -7,7 +7,6 @@ import certsRequired from '#app/routes/utils/certsRequired';
 import { FetchError } from '#app/models/types/fetch';
 import getEnvironment from '#app/routes/utils/getEnvironment';
 import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
-import isLive from '#lib/utilities/isLive';
 import { PRIMARY_DATA_TIMEOUT } from '../getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
@@ -42,8 +41,7 @@ const fetchConfig = async <T>({
     fetchUrl.searchParams.set('variant', variant);
   }
 
-  // Only fetch new nav for Arabic and Tamil services on Local/Test
-  if (SERVICES_WITH_NEW_NAV.includes(service) && !isLive()) {
+  if (SERVICES_WITH_NEW_NAV.includes(service)) {
     fetchUrl.searchParams.set('useNewNav', 'true');
   }
 
@@ -67,10 +65,6 @@ const fetchConfig = async <T>({
   const fetchOptions = {
     ...(agent && { agent }),
     ...(!isLocal && { headers: { 'ctx-service-env': environment } }),
-    // TODO: Temporary override to fetch from Test data for new navigation until it's ready in Live
-    ...(fetchUrl.searchParams.get('useNewNav') === 'true' && {
-      headers: { 'ctx-service-env': 'test' },
-    }),
     signal: AbortSignal.timeout(PRIMARY_DATA_TIMEOUT),
   };
 

@@ -95,6 +95,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Opublikowano o',
         summary: 'Podsumowanie',
         shareButtonText: 'Udostępnij',
+        refreshButtonText: 'Najnowszy wpis',
+        visuallyHiddenButtonText: 'Nowy wpis dostępny',
       },
       downloads: {
         instructions: 'Możesz pobrać i obejrzeć dzisiejsze wiadomości.',

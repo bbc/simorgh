@@ -94,6 +94,8 @@ const baseServiceConfig = {
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
       shareButtonText: 'Поділитися',
+      refreshButtonText: 'Останній допис',
+      visuallyHiddenButtonText: 'Доступний новий допис',
     },
     downloads: {
       instructions: 'You can download and view today’s news.',

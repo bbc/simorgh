@@ -255,3 +255,20 @@ export const DownArrowIcon = () => (
     <path d="M.9 29.5H31v-2.8H.9zm16.8-10.8L1 2.5v6.7l15 14.7L31.1 9.2V2.5L14.3 18.7z" />
   </svg>
 );
+
+export const AccountIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    width="20"
+    height="18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M16 17.5a7.88 7.88 0 0 1-8-7.75A7.88 7.88 0 0 1 16 2a7.88 7.88 0 0 1 8 7.75 7.88 7.88 0 0 1-8 7.75M2 30c0-5.883 7.519-10 14.014-10C22.48 20 30 24.12 30 29.994c0 .005-28 .007-28 .005"
+    />
+  </svg>
+);

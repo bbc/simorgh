@@ -85,6 +85,9 @@ export default {
   variantCookie: {
     enabled: true,
   },
+  uasPersonalization: {
+    enabled: false,
+  },
   webVitalsMonitoring: {
     enabled: true,
   },

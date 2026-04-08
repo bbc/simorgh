@@ -49,6 +49,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'او',
       pagination: {
         page: 'پاڼه',
         previousPage: 'مخکينۍ پاڼه',
@@ -93,6 +94,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
         shareButtonText: 'شریک یې کړئ',
+        refreshButtonText: 'وروستی پوسټ',
+        visuallyHiddenButtonText: 'نوی پوست شتون لري',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

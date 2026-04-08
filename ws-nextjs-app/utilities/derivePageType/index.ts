@@ -9,6 +9,8 @@ import {
   UNKNOWN_PAGE,
   TOPIC_PAGE,
   AUDIO_PAGE,
+  TV_PAGE,
+  MOST_READ_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   isOptimoIdCheck,
@@ -41,6 +43,12 @@ const isHomePagePath = (pathname: string) =>
     return false;
   });
 
+const isOnDemandAudioPath = (pathname: string) =>
+  /\/bbc_[a-z]+_radio\/|\/podcasts\//.test(pathname);
+
+const isOnDemandTvPath = (pathname: string) =>
+  /\/bbc_[a-z]+_tv\/(?:tv|tv_programmes)\//.test(pathname);
+
 export default function derivePageType(pathname: string): PageTypes {
   const sanitisedPathname = new URL(
     removeRendererExtension(pathname),
@@ -53,8 +61,9 @@ export default function derivePageType(pathname: string): PageTypes {
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
   if (sanitisedPathname.includes('topics')) return TOPIC_PAGE;
-  if (sanitisedPathname.includes('podcast')) return AUDIO_PAGE;
-  if (sanitisedPathname.includes('radio')) return AUDIO_PAGE;
+  if (sanitisedPathname.includes('popular/read')) return MOST_READ_PAGE;
+  if (isOnDemandAudioPath(sanitisedPathname)) return AUDIO_PAGE;
+  if (isOnDemandTvPath(sanitisedPathname)) return TV_PAGE;
   if (isOptimoIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
   if (isCpsIdCheck(sanitisedPathname)) return ARTICLE_PAGE;
 
