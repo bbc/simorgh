@@ -26,7 +26,7 @@ describe(`Script Link`, () => {
   });
 
   it('should render correctly for new navigation', () => {
-    const { container } = render(<ScriptLink isNewNavigation />, {
+    const { container } = render(<ScriptLink />, {
       toggles: enabledToggleState,
       service: 'ukchina',
       variant: 'trad',
