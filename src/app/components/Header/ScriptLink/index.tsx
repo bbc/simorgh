@@ -28,25 +28,19 @@ const ScriptLink = () => {
   pathPartsWithoutExtension[currentVariantIndex] = alternateVariant;
   const pathToVariant = pathPartsWithoutExtension.join('/');
   const useNewNavigationStyles = SERVICES_WITH_NEW_NAV.includes(service);
+  const linkStyles = useNewNavigationStyles ? styles.newNavLink : styles.link;
+  const containerStyles = useNewNavigationStyles
+    ? styles.newNavContainer
+    : styles.container;
 
   return (
     <a
-      css={theme =>
-        styles.link(theme, { isNewNavigation: useNewNavigationStyles })
-      }
+      css={linkStyles}
       href={pathToVariant}
       data-variant={alternateVariant}
       className="focusIndicatorRemove"
     >
-      <span
-        css={theme =>
-          styles.container(theme, {
-            isNewNavigation: useNewNavigationStyles,
-          })
-        }
-      >
-        {text}
-      </span>
+      <span css={containerStyles}>{text}</span>
     </a>
   );
 };
