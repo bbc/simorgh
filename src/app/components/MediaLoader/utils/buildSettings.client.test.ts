@@ -1414,6 +1414,21 @@ describe('buildSettings', () => {
             summary: 'Toon in, kick back and relax to 100% cartoons!',
             title: 'Non-Stop Cartoons!',
           },
+          plugins: {
+            toLoad: [
+              {
+                html: 'https://ws-dazzler-web-statics-dev.s3.eu-west-1.amazonaws.com/plugin/DazzlerEdgePlugin.js',
+                playerOnly: true,
+                data: {
+                  env: 'live',
+                  sid: 'cbbc',
+                  holdingImageURL:
+                    'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
+                  uiLanguage: 'es',
+                },
+              },
+            ],
+          },
           product: 'news',
           statsObject: {
             destination: 'WS_NEWS_LANGUAGES',
@@ -1513,6 +1528,21 @@ describe('buildSettings', () => {
             summary:
               'جولة إخبارية يومية تتناول أهم الأحداث العربية والعالمية في تقارير ولقاءات وتحليلات ',
             title: 'BBC Arabic TV',
+          },
+          plugins: {
+            toLoad: [
+              {
+                html: 'https://ws-dazzler-web-statics-dev.s3.eu-west-1.amazonaws.com/plugin/DazzlerEdgePlugin.js',
+                playerOnly: true,
+                data: {
+                  env: 'live',
+                  sid: 'bbc_arabic_tv',
+                  holdingImageURL:
+                    'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
+                  uiLanguage: 'ar',
+                },
+              },
+            ],
           },
           product: 'news',
           statsObject: {

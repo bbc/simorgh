@@ -22,6 +22,8 @@ const isTestRequested = () => {
   return false;
 };
 
+const dazzlerStreamLangs = ['hi'];
+
 const buildSettings = ({
   id,
   blocks,
@@ -56,7 +58,13 @@ const buildSettings = ({
     },
     ...(!embedded && { superResponsive: true }),
     ...(counterName && { counterName }),
-    ...(isTestRequested() && { mediator: { host: 'open.live.bbc.co.uk' } }),
+    ...(isTestRequested() && {
+      mediator: {
+        host: dazzlerStreamLangs.includes(lang)
+          ? 'open.live.bbc.co.uk'
+          : 'open.test.bbc.co.uk',
+      },
+    }),
     statsObject: {
       destination: statsDestination,
       producer,
