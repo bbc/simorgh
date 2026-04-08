@@ -22,6 +22,7 @@ const webpSupportedPatterns = [
 
 const isSupportedWebpUrl = url =>
   webpSupportedPatterns.every(pattern => pattern.test(url));
+
 const buildPlaceholderSrc = (src, resolution) => {
   const imageSrc =
     src || 'https://ichef.bbci.co.uk/images/ic/640xn/p0b36kgx.png';
