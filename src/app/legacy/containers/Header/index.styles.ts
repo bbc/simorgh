@@ -80,7 +80,7 @@ export default {
         '& > div > div:last-child': {
           [mq.GROUP_0_MAX_WIDTH]: {
             flexBasis: '100%',
-            margin: `${spacings.FULL}rem 0`,
+            margin: `0 0 ${spacings.FULL}rem 0`,
           },
           [mq.GROUP_1_MIN_WIDTH]: {
             display: 'flex',
