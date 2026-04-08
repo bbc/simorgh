@@ -3,23 +3,24 @@ import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
+import isLive from '#app/lib/utilities/isLive';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,
   basePlayerConfig,
   pageType,
+  lang,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
   let warning: string | null = null;
-
   const {
     imageUrlTemplate: holdingImageURL,
     version: video,
     title,
     synopses: { short },
+    masterbrand: { id },
   } = liveMediaBlock;
-
   const {
     warnings,
     serviceId: serviceID,
@@ -85,11 +86,10 @@ export default ({
             playerOnly: true,
             // @ts-expect-error - this is a custom property used to pass data to the plugin when it initializes
             data: {
-              env: 'test',
-              sid: 'bbc_hindi_tv',
-              holdingImageURL:
-                'https://ichef.bbci.co.uk/images/ic/1920x1080/p08b8mq7.png',
-              uiLanguage: 'hi',
+              env: isLive() ? 'live' : 'test',
+              sid: id,
+              holdingImageURL: holdingImageURLForLiveTV,
+              uiLanguage: lang,
             },
           },
         ],
