@@ -147,7 +147,7 @@ exports[`BrandContainer should render correctly 1`] = `
   class="emotion-0 emotion-1 emotion-2"
 >
   <div
-    class="emotion-3 emotion-4"
+    class="brand-svg-wrapper emotion-3 emotion-4"
   >
     <a
       aria-labelledby="BrandLink-null"

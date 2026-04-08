@@ -913,7 +913,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
@@ -2248,7 +2248,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
@@ -3583,7 +3583,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
@@ -4918,7 +4918,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
