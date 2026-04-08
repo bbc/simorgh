@@ -17,7 +17,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
   const isUasPersonalizationEnabled = toggles?.uasPersonalization?.enabled;
 
   if (!isUasPersonalizationEnabled) {
-    context.res.statusCode = 4004;
+    context.res.statusCode = NOT_FOUND;
     return {
       props: {
         service,
