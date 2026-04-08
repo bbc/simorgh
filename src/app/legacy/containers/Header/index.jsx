@@ -86,15 +86,12 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
     </SkipLink>
   );
 
-  const shouldUseNewNav =
-    SERVICES_WITH_NEW_NAV.includes(service) &&
-    !(service === 'ukchina' && pageType !== ARTICLE_PAGE);
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
 
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
     switch (true) {
-      case service === 'ukchina' && pageType !== ARTICLE_PAGE:
       case pageType === LIVE_PAGE:
       case service === 'uzbek' &&
         ![ARTICLE_PAGE, HOME_PAGE, TOPIC_PAGE, ERROR_PAGE].includes(pageType):
