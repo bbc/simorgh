@@ -177,7 +177,7 @@ Cypress.Commands.overwrite(
 
           if (retriesLeft > 0) {
             // eslint-disable-next-line cypress/no-unnecessary-waiting
-            return cy.wait(5000).then(() => checkStatus(retriesLeft - 1));
+            return cy.wait(10000).then(() => checkStatus(retriesLeft - 1));
           }
 
           throw new Error(
