@@ -1,5 +1,5 @@
 import isLive from '#app/lib/utilities/isLive';
-import getAuthHeaders from './getAuthHeader';
+import getAuthHeaders from './getAuthHeaders';
 import { activityTypes } from './uasUtility';
 import ensureTokens from './tokenRefresh/tokenManager';
 

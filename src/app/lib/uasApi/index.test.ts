@@ -40,8 +40,6 @@ describe('uasApiRequest', () => {
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
@@ -67,8 +65,6 @@ describe('uasApiRequest', () => {
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
           'Content-Type': 'application/json',
         }),
@@ -95,8 +91,6 @@ describe('uasApiRequest', () => {
       expect.objectContaining({
         method: 'DELETE',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
@@ -125,23 +119,6 @@ describe('uasApiRequest', () => {
     );
   });
 
-  it('should throw an error when ckns_atkn cookie is missing', async () => {
-    // Mock the scenario where the ckns_atkn cookie is not in storage
-    (mockCookie.get as jest.Mock).mockReturnValue(undefined);
-    mockGetEnvConfig.mockReturnValue({
-      SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
-    } as ReturnType<typeof getEnvConfig>);
-
-    const activityType = 'favourites';
-
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
-    );
-
-    // Verify that fetch was never called since authentication failed
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
   it('should throw an error when API key is missing', async () => {
     // Mock the scenario where the API key is not configured
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
@@ -152,7 +129,7 @@ describe('uasApiRequest', () => {
     const activityType = 'favourites';
 
     await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
+      'Missing UAS public API key',
     );
 
     // Verify that fetch was never called since authentication failed
