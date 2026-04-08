@@ -1420,7 +1420,7 @@ describe('buildSettings', () => {
                 html: 'https://ws-dazzler-web-statics-dev.s3.eu-west-1.amazonaws.com/plugin/DazzlerEdgePlugin.js',
                 playerOnly: true,
                 data: {
-                  env: 'live',
+                  env: 'test',
                   sid: 'cbbc',
                   holdingImageURL:
                     'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
@@ -1535,7 +1535,7 @@ describe('buildSettings', () => {
                 html: 'https://ws-dazzler-web-statics-dev.s3.eu-west-1.amazonaws.com/plugin/DazzlerEdgePlugin.js',
                 playerOnly: true,
                 data: {
-                  env: 'live',
+                  env: 'test',
                   sid: 'bbc_arabic_tv',
                   holdingImageURL:
                     'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',

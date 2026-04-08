@@ -3,7 +3,7 @@ import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import isLive from '#app/lib/utilities/isLive';
+import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
@@ -86,7 +86,7 @@ export default ({
             playerOnly: true,
             // @ts-expect-error - this is a custom property used to pass data to the plugin when it initializes
             data: {
-              env: isLive() ? 'live' : 'test',
+              env: getEnvConfig().SIMORGH_APP_ENV === 'live' ? 'live' : 'test',
               sid: id,
               holdingImageURL: holdingImageURLForLiveTV,
               uiLanguage: lang,
