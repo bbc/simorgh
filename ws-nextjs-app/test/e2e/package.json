@@ -7,7 +7,6 @@
   "main": "index.js",
   "scripts": {
     "test:e2e:chrome:playwright": "npx playwright test --project='WorldService - Chrome'",
-    "test:e2e:ci:uk:playwright": "SAUCE_REGION='eu-central-1' SAUCE_CONNECT_TUNNEL=true SUITE='Sounds web e2es using unified framework' npx runTestsOnSauceLabs"
   },
   "author": "",
   "license": "ISC",
