@@ -47,7 +47,7 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
-    "temporal-polyfill": "0.3.0"
+    "temporal-polyfill": "0.3.0",
     "next": "16.1.7",
     "sharp": "0.34.5"
   }
