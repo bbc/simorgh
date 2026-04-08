@@ -49,7 +49,7 @@ const startApp = () => {
   const statusCommand = `sleep 20 && curl http://localhost:${portNumber}${pathname}`;
 
   const initialCommand = `yarn ${isDev ? 'dev' : 'start'}`;
-  const fallbackCommand = `yarn fallbackStart`;
+  const fallbackCommand = `yarn ${isDev ? 'dev' : 'fallbackStart'}`;
 
   return new Promise((resolve, reject) => {
     exec(initialCommand, error => {
@@ -60,9 +60,7 @@ const startApp = () => {
 
     exec(statusCommand, error => {
       if (error) {
-        reject(
-          new Error('Both the initial and fallback start up command failed'),
-        );
+        reject(new Error('Both the initial and fallback start up failed'));
       }
       resolve();
     });
