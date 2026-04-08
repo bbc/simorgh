@@ -8,10 +8,10 @@ import {
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { PageTypes, Services } from '#app/models/types/global';
 import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
+import { NotificationListener } from '@optimizely/optimizely-sdk';
 import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
-import { NotificationListener } from '@optimizely/optimizely-sdk';
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
