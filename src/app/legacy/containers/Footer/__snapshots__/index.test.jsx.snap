@@ -362,7 +362,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       class="emotion-2 emotion-3 emotion-4"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="brand-svg-wrapper emotion-5 emotion-6"
       >
         <a
           aria-labelledby="BrandLink-footer"

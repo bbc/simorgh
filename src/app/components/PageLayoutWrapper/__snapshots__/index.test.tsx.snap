@@ -1198,7 +1198,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
           class="emotion-17 emotion-18 emotion-19"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="brand-svg-wrapper emotion-20 emotion-21"
           >
             <a
               aria-labelledby="BrandLink-topPage"
@@ -1633,7 +1633,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
         class="emotion-17 emotion-142 emotion-19"
       >
         <div
-          class="emotion-20 emotion-21"
+          class="brand-svg-wrapper emotion-20 emotion-21"
         >
           <a
             aria-labelledby="BrandLink-footer"
