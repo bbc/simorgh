@@ -150,6 +150,8 @@ describe('constructPageFetchUrl', () => {
     ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'local'}  | ${'/dari/watch/bbc_afghan_tv/live'}                            | ${'http://localhost/api/local/dari/watch/bbc_afghan_tv/live'}
     ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'test'}   | ${'/dari/watch/bbc_afghan_tv/live'}                            | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=test'}
     ${LIVE_TV_PAGE}    | ${'dari'}       | ${null}    | ${'live'}   | ${'/dari/watch/bbc_afghan_tv/live'}                            | ${'https://mock-bff-path/?id=bbc_afghan_tv&service=dari&pageType=liveTV&serviceEnv=live'}
+    ${TOPIC_PAGE}      | ${'pidgin'}     | ${null}    | ${'test'}   | ${'mostReadTopic'}                                             | ${'https://mock-bff-path/?id=mostReadTopic&service=pidgin&pageType=topic&serviceEnv=test'}
+    ${TOPIC_PAGE}      | ${'pidgin'}     | ${null}    | ${'live'}   | ${'mostReadTopic'}                                             | ${'https://mock-bff-path/?id=mostReadTopic&service=pidgin&pageType=topic&serviceEnv=live'}
   `(
     `on $environment environment, should return $expected when path is $pathname, pageType is $pageType, service is $serviceOverride and variant is $variant`,
     ({

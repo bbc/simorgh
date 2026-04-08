@@ -12,3 +12,14 @@ exports[`MostReadSectionLabel assertion should render most-read section with cor
   </section>
 </div>
 `;
+
+exports[`MostReadSectionLabel assertion should render most-read section without aria attributes when showSectionLabel is false 1`] = `
+<div>
+  <section
+    data-e2e="most-read"
+    data-testid="most-read"
+  >
+    Some child content
+  </section>
+</div>
+`;

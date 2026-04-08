@@ -32,12 +32,10 @@ describe('uasApiRequest', () => {
     const response = await uasApiRequest('GET', activityType);
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
@@ -59,12 +57,10 @@ describe('uasApiRequest', () => {
     const response = await uasApiRequest('POST', activityType, { body });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
           'Content-Type': 'application/json',
         }),
@@ -87,12 +83,10 @@ describe('uasApiRequest', () => {
     await uasApiRequest('DELETE', activityType, { globalId });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}/${encodeURIComponent(globalId)}`,
+      `https://activity.test.api.bbc.com/my/${activityType}/${encodeURIComponent(globalId)}`,
       expect.objectContaining({
         method: 'DELETE',
         headers: expect.objectContaining({
-          Authorization: 'Bearer mocked-token',
-          'X-Authentication-Provider': 'idv5',
           'X-API-Key': 'mocked-api-key',
         }),
       }),
@@ -121,23 +115,6 @@ describe('uasApiRequest', () => {
     );
   });
 
-  it('should throw an error when ckns_atkn cookie is missing', async () => {
-    // Mock the scenario where the ckns_atkn cookie is not in storage
-    (mockCookie.get as jest.Mock).mockReturnValue(undefined);
-    mockGetEnvConfig.mockReturnValue({
-      SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
-    } as ReturnType<typeof getEnvConfig>);
-
-    const activityType = 'favourites';
-
-    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
-    );
-
-    // Verify that fetch was never called since authentication failed
-    expect(global.fetch).not.toHaveBeenCalled();
-  });
-
   it('should throw an error when API key is missing', async () => {
     // Mock the scenario where the API key is not configured
     (mockCookie.get as jest.Mock).mockReturnValue('mocked-token');
@@ -148,7 +125,7 @@ describe('uasApiRequest', () => {
     const activityType = 'favourites';
 
     await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Missing authentication for UAS request',
+      'Missing UAS public API key',
     );
 
     // Verify that fetch was never called since authentication failed
