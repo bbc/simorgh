@@ -52,6 +52,7 @@ interface Palette extends BrandPalette {
   LUNAR_LIGHT: string;
   METAL: string;
   MIDNIGHT_BLACK: string;
+  NEUTRAL_LIGHT: string;
   NEWSROUND_PURPLE: string;
   NEWSROUND_PURPLE_30: string;
   OAT_LHT: string;

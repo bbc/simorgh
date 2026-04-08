@@ -2,6 +2,7 @@ import { use, useState } from 'react';
 import Paragraph from '#app/components/Paragraph';
 import PromotionalBanner from '#app/components/PromotionalBanner';
 import CallToActionLink from '#app/components/CallToActionLink';
+import { AccountIcon } from '#app/components/icons';
 import { AccountContext } from '#contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import useHydrationDetection from '#app/hooks/useHydrationDetection';
@@ -92,9 +93,9 @@ const AccountPromotionalBanner = () => {
         css={[styles.callToActionLink, styles.signInLink]}
       >
         <CallToActionLink.ButtonLikeWrapper>
+          <AccountIcon css={styles.accountIcon} />
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>
             {signInText}
-            <CallToActionLink.Chevron />
           </CallToActionLink.Text>
         </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>
@@ -111,7 +112,6 @@ const AccountPromotionalBanner = () => {
         <CallToActionLink.ButtonLikeWrapper>
           <CallToActionLink.Text shouldUnderlineOnHoverFocus>
             {registerText}
-            <CallToActionLink.Chevron />
           </CallToActionLink.Text>
         </CallToActionLink.ButtonLikeWrapper>
       </CallToActionLink>
