@@ -8,8 +8,9 @@ const styles = {
   ) =>
     isNewNavigation
       ? css({
-          ...fontSizes.pica,
           ...fontVariants.sansRegular,
+          fontSize: `${pixelsToRem(15)}rem`,
+          lineHeight: 1,
           position: 'relative',
           display: 'inline-flex',
           alignItems: 'stretch',
