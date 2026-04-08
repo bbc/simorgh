@@ -25,6 +25,16 @@ describe(`Script Link`, () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should render correctly for new navigation', () => {
+    const { container } = render(<ScriptLink isNewNavigation />, {
+      toggles: enabledToggleState,
+      service: 'ukchina',
+      variant: 'trad',
+      pathname: '/ukchina/trad/articles/c0e8weny66ko',
+    });
+    expect(container).toMatchSnapshot();
+  });
+
   describe('assertions', () => {
     describe.each(['canonical', 'amp', 'lite'])('%s', platform => {
       it.each`
