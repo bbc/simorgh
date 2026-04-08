@@ -120,11 +120,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink isNewNavigation={shouldUseNewNav} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
           <AccountHeader />
@@ -133,11 +129,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={
-            shouldRenderScriptSwitch && (
-              <ScriptLink isNewNavigation={shouldUseNewNav} />
-            )
-          }
+          scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
           css={headerBrandCss}
         >
           <AccountHeader />

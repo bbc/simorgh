@@ -5,11 +5,7 @@ import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import styles from './index.styles';
 
-type Props = {
-  isNewNavigation?: boolean;
-};
-
-const ScriptLink = ({ isNewNavigation = false }: Props) => {
+const ScriptLink = () => {
   const { scriptLink, service } = use(ServiceContext);
   const { pathname, variant: currentVariant } = use(RequestContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
@@ -31,8 +27,7 @@ const ScriptLink = ({ isNewNavigation = false }: Props) => {
 
   pathPartsWithoutExtension[currentVariantIndex] = alternateVariant;
   const pathToVariant = pathPartsWithoutExtension.join('/');
-  const useNewNavigationStyles =
-    isNewNavigation && SERVICES_WITH_NEW_NAV.includes(service);
+  const useNewNavigationStyles = SERVICES_WITH_NEW_NAV.includes(service);
 
   return (
     <a
