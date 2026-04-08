@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { act, PropsWithChildren } from 'react';
 import { screen, waitFor } from '@testing-library/react';
 import {
   OptimizelyDecision,
@@ -11,6 +11,7 @@ import { ARTICLE_PAGE, HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { render } from '../react-testing-library-with-providers';
 import OptimizelyPageMetrics from '.';
 import experimentsForPageMetrics from './experimentsForPageMetrics';
+import { NotificationListener } from '@optimizely/optimizely-sdk';
 
 const optimizely = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -409,6 +410,108 @@ describe('OptimizelyPageMetrics', () => {
         ).not.toBeInTheDocument();
         expect(screen.queryByTestId('visit-tracking')).not.toBeInTheDocument();
       });
+    });
+  });
+  describe('Notification listener', () => {
+    it('should mount trackers when user is bucketed after load', async () => {
+      experimentsForPageMetrics.push(
+        ...[
+          {
+            pageType: ARTICLE_PAGE,
+            activeExperiments: ['mockExperiment1'],
+          },
+        ],
+      );
+
+      let decisionListener: NotificationListener<any> | null = null;
+
+      const mockOptimizely = {
+        ...optimizely,
+        decideAll: jest.fn(() => ({
+          mockExperiment1: { variationKey: 'off' } as OptimizelyDecision,
+        })),
+        notificationCenter: {
+          addNotificationListener: jest.fn((_, callback) => {
+            decisionListener = callback;
+            return 1;
+          }),
+          removeNotificationListener: jest.fn(),
+          clearNotificationListeners: jest.fn(),
+          clearAllNotificationListeners: jest.fn(),
+        },
+      } satisfies Partial<ReactSDKClient>;
+
+      render(
+        <ContextWrap
+          pageType={ARTICLE_PAGE}
+          service="news"
+          mockOptimizely={mockOptimizely}
+        >
+          <OptimizelyPageMetrics trackPageView />
+        </ContextWrap>,
+      );
+
+      await waitFor(() => {
+        expect(
+          screen.queryByTestId('page-view-tracking'),
+        ).not.toBeInTheDocument();
+      });
+
+      act(() => {
+        decisionListener?.({
+          type: 'flag',
+          decisionInfo: {
+            flagKey: 'mockExperiment1',
+            variationKey: 'variation_1',
+          },
+        });
+      });
+
+      await waitFor(() => {
+        expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
+      });
+    });
+
+    it('should remove the decision listener on unmount', async () => {
+      experimentsForPageMetrics.push(
+        ...[
+          {
+            pageType: ARTICLE_PAGE,
+            activeExperiments: ['mockExperiment1'],
+          },
+        ],
+      );
+
+      const addNotificationListener = jest.fn(() => 1);
+      const removeNotificationListener = jest.fn();
+
+      const mockOptimizely = {
+        ...optimizely,
+        notificationCenter: {
+          addNotificationListener,
+          removeNotificationListener,
+          clearNotificationListeners: jest.fn(),
+          clearAllNotificationListeners: jest.fn(),
+        },
+      } satisfies Partial<ReactSDKClient>;
+
+      const { unmount } = render(
+        <ContextWrap
+          pageType={ARTICLE_PAGE}
+          service="news"
+          mockOptimizely={mockOptimizely}
+        >
+          <OptimizelyPageMetrics trackPageView />
+        </ContextWrap>,
+      );
+
+      await waitFor(() => {
+        expect(addNotificationListener).toHaveBeenCalled();
+      });
+
+      unmount();
+
+      expect(removeNotificationListener).toHaveBeenCalledWith(1);
     });
   });
 });
