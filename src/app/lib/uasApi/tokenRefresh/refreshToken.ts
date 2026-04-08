@@ -7,10 +7,10 @@ const getSessionUrl = (): string => {
 };
 
 const getRefreshTokenFetchOptions = (): RequestInit => ({
-  credentials: 'include',
-  headers: {
-    'Content-Type': 'application/json',
-  },
+  // credentials: 'include',
+  // headers: {
+  //   'Content-Type': 'application/json',
+  // },
 });
 
 const refreshTokens = async (): Promise<Response> => {

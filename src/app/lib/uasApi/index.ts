@@ -23,7 +23,7 @@ interface UasRequestOptions {
 }
 
 const getUasHost = () =>
-  isLive() ? 'activity.api.bbc.co.uk' : 'activity.test.api.bbc.co.uk';
+  isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
 
 const buildUrl = (activityType: string, globalId?: string) => {
   const base = `https://${getUasHost()}/my/${activityType}`;
