@@ -169,7 +169,7 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    it('should not render script link for ukchina home pages', () => {
+    it('should render script link for ukchina home pages', () => {
       const { container } = HeaderContainerWithContext({
         renderOptions: {
           pageType: HOME_PAGE,
@@ -178,7 +178,7 @@ describe(`Header`, () => {
         },
       });
 
-      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
     describe('when service is uzbek', () => {
