@@ -27,10 +27,7 @@ export default {
         lineHeight: 0,
       },
     }),
-  headerBrand: (
-    { mq, spacings }: Theme,
-    { hasScriptLink = false }: { hasScriptLink?: boolean } = {},
-  ) =>
+  headerBrand: ({ mq, spacings }: Theme) =>
     css({
       minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
@@ -47,7 +44,7 @@ export default {
         minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
-      '#topPage, #brandLink': {
+      '.brand-link': {
         paddingTop: `${pixelsToRem(2)}rem`,
 
         svg: {
@@ -57,36 +54,31 @@ export default {
             height: '1.875rem',
           },
         },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flex: '0 1 auto',
+          minWidth: 0,
+        },
       },
-
-      ...(hasScriptLink && {
-        '.brand-svg-wrapper': {
-          [mq.GROUP_1_MIN_WIDTH]: {
-            flexWrap: 'nowrap',
-          },
+      '.brand-svg-wrapper': {
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flexWrap: 'nowrap',
         },
-        '#topPage, #brandLink': {
-          [mq.GROUP_1_MIN_WIDTH]: {
-            flex: '0 1 auto',
-            minWidth: 0,
-          },
+      },
+      '.script-link-wrapper': {
+        [mq.GROUP_0_MAX_WIDTH]: {
+          flexBasis: '100%',
+          margin: `0 0 ${spacings.FULL}rem 0`,
         },
-        '.script-link-wrapper': {
-          [mq.GROUP_0_MAX_WIDTH]: {
-            flexBasis: '100%',
-            margin: `0 0 ${spacings.FULL}rem 0`,
-          },
-          [mq.GROUP_1_MIN_WIDTH]: {
-            display: 'flex',
-            alignItems: 'center',
-            flex: '0 0 auto',
-            marginInlineStart: 'auto',
-          },
-          [mq.GROUP_3_MIN_WIDTH]: {
-            marginInlineEnd: `${pixelsToRem(-4)}rem`,
-          },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          display: 'flex',
+          alignItems: 'center',
+          flex: '0 0 auto',
+          marginInlineStart: 'auto',
         },
-      }),
+        [mq.GROUP_3_MIN_WIDTH]: {
+          marginInlineEnd: `${pixelsToRem(-4)}rem`,
+        },
+      },
     }),
   logoSvg: ({ palette }: Theme) =>
     css({
