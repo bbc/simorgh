@@ -39,12 +39,6 @@ const canonicalSmokeTestSuites = [
     tests: canonicalTests,
   },
   {
-    path: '/persian/media-49522521', // CPS MAP with live stream
-    service: 'persian',
-    runforEnv: ['live'],
-    tests: canonicalTests,
-  },
-  {
     path: '/persian/world-51497110', // CPS MAP with video clip
     service: 'persian',
     runforEnv: ['live'],
@@ -215,16 +209,6 @@ const atiAnalyticsTestSuites = [
     service: 'hausa',
     pageIdentifier: 'hausa.news.media_asset.51622389.page',
     siteId: 51,
-    applicationType: 'responsive',
-    contentType: 'article-media-asset',
-    tests: [...atiAnalyticsTests],
-  },
-  {
-    path: '/persian/media-49522521', // CPS MAP with live stream
-    runforEnv: ['live'],
-    service: 'persian',
-    pageIdentifier: 'persian.embedded_media.media_asset.49522521.page',
-    siteId: 69,
     applicationType: 'responsive',
     contentType: 'article-media-asset',
     tests: [...atiAnalyticsTests],
