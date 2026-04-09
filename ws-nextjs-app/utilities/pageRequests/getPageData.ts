@@ -4,6 +4,7 @@ import sendCustomMetric from '#server/utilities/customMetrics';
 import { NON_200_RESPONSE } from '#server/utilities/customMetrics/metrics.const';
 import getAgent from '#server/utilities/getAgent';
 import fetchDataFromBFF from '#app/routes/utils/fetchDataFromBFF';
+import fetchDataFromSportData from '#app/routes/utils/fetchDataFromSportData';
 import nodeLogger from '#lib/logger.node';
 import { PageTypes, Services, Variants } from '#app/models/types/global';
 
@@ -67,8 +68,35 @@ const getPageData = async ({
     });
   }
 
+  // Evaluate the presence of sportDataEvent
+  // Fetch Sport Data
+  const sportDataEvent = json?.data?.sportDataEvent || null;
+
+  let sportEventDetails;
+
+  if (sportDataEvent) {
+    const { id: sportEventId } = sportDataEvent;
+    const { status: sportDataStatus, json: sportDataJson } =
+      (await fetchDataFromSportData({
+        type: 'event',
+        urn: sportEventId,
+        getAgent,
+      })) || null;
+
+    sportEventDetails = {
+      status: sportDataStatus,
+      ...sportDataJson.data,
+    };
+  }
+
   const data = json
-    ? { pageData: json.data, status }
+    ? {
+        pageData: {
+          ...json.data,
+          sportEventDetails,
+        },
+        status,
+      }
     : { error: message, status };
 
   return { data };
