@@ -40,7 +40,7 @@ const styles = {
       color: palette.WHITE,
       textDecoration: 'none',
       height: `${pixelsToRem(36)}rem`,
-      minWidth: `${pixelsToRem(34)}rem`,
+      width: `${pixelsToRem(34)}rem`,
       border: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
       textAlign: 'center',
       whiteSpace: 'nowrap',

@@ -74,8 +74,6 @@ export default {
           alignItems: 'center',
           flex: '0 0 auto',
           marginInlineStart: 'auto',
-        },
-        [mq.GROUP_3_MIN_WIDTH]: {
           marginInlineEnd: `${pixelsToRem(-4)}rem`,
         },
       },
