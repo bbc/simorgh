@@ -8,9 +8,9 @@ const getSessionUrl = (): string => {
 
 const getRefreshTokenFetchOptions = (): RequestInit => ({
   credentials: 'include',
-  // headers: {
-  //   'Content-Type': 'application/json',
-  // },
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 const refreshTokens = async (): Promise<Response> => {
