@@ -60,13 +60,9 @@ const uasApiRequest = async (
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
 
-  try {
-    await ensureTokens();
-  } catch (error) {
-    throw new Error(
-      `Error while ensuring tokens: ${error instanceof Error ? error.message : String(error)}`,
-    );
-  }
+  // Ensure tokens are valid before making the API request.
+  // This will refresh tokens if they are expired or about to expire.
+  await ensureTokens();
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),

@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
-import refreshTokens from './refreshToken';
+import refreshTokens from '.';
 
 const TOKEN_COOKIE_NAME = 'ckns_id';
 const TOKEN_EXPIRY_BUFFER_MS = 5 * 60 * 1000; // 5 minutes before expiry

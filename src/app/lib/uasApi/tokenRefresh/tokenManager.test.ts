@@ -1,11 +1,11 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
-import refreshTokens from './refreshToken';
+import refreshTokens from '.';
 import ensureTokens, { isTokenValidFor } from './tokenManager';
 
 jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');
-jest.mock('./refreshToken');
+jest.mock('./index');
 
 const mockCookieGet = Cookie.get as jest.Mock;
 const mockOnClient = onClient as jest.Mock;

@@ -144,7 +144,7 @@ describe('uasApiRequest', () => {
     const activityType = 'favourites';
 
     await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
-      'Error while ensuring tokens: Token refresh failed',
+      'Token refresh failed',
     );
 
     // Verify that fetch was never called since token validation failed
