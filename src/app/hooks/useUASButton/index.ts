@@ -1,16 +1,18 @@
-import { use } from 'react';
+import { use, useCallback, useState } from 'react';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { AccountContext } from '#app/contexts/AccountContext';
 import isLocal from '#app/lib/utilities/isLocal';
+import uasApiRequest from '#app/lib/uasApi';
+import {
+  FAVOURITES_CONFIG,
+  createFavouritesPayload,
+} from '#app/lib/uasApi/uasUtility';
 import useToggle from '../useToggle';
-
-/** A hook that fetches an article’s saved status and controls showing the save UAS button
- * based on feature toggles and sign in status,
- * with room to later expand for toggling the save state based on user actions. */
 
 interface UseUASButtonProps {
   articleId: string;
   service: string;
+  title: string;
 }
 
 interface UseUASButtonReturn {
@@ -18,15 +20,18 @@ interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
+  handleSaveArticle: () => Promise<void>;
 }
 
 const useUASButton = ({
   service,
   articleId,
+  title,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
+  const [isSaving, setIsSaving] = useState(false);
 
   const isUASEnabled =
     featureToggleOn &&
@@ -36,14 +41,29 @@ const useUASButton = ({
 
   const showButton = isUASEnabled && isSignedIn;
 
-  const { isSaved, isLoading, error } = useUASFetchSaveStatus(
+  const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
     showButton ? articleId : '',
   );
+
+  const handleSaveArticle = useCallback(async () => {
+    if (isSaving || isSaved) return;
+
+    setIsSaving(true);
+    try {
+      const body = createFavouritesPayload({ articleId, service, title });
+      await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+      setIsSaved(true);
+    } finally {
+      setIsSaving(false);
+    }
+  }, [articleId, service, title, isSaving, isSaved, setIsSaved]);
+
   return {
     showButton,
     isSaved,
-    isLoading,
+    isLoading: isLoading || isSaving,
     error,
+    handleSaveArticle,
   };
 };
 

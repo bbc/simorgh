@@ -110,6 +110,7 @@ const getTimestampComponent =
     readTimeTranslations: Translations['readTime'],
     articleId: string,
     service: string,
+    articleTitle: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -144,6 +145,7 @@ const getTimestampComponent =
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
           service={service}
+          title={articleTitle}
         />
       </>
     );
@@ -366,6 +368,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       translations.readTime,
       articleId,
       service,
+      headline,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
