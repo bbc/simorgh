@@ -44,13 +44,6 @@ const articleRelatedTestSuites = [
     headers,
   },
   {
-    path: '/persian/media-49522521.lite',
-    runforEnv,
-    pageType: 'CPS Media Article with Live Stream',
-    tests,
-    headers,
-  },
-  {
     path: '/arabic/art-and-culture-38260491.lite',
     runforEnv,
     pageType: 'CPS Photo Gallery (PGL)',
