@@ -104,10 +104,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   }
 
   if (isApp) return null;
-  const headerBrandCss = shouldUseNewNav
-    ? theme =>
-        styles.headerBrand(theme, { hasScriptLink: shouldRenderScriptSwitch })
-    : null;
+  const headerBrandCss = shouldUseNewNav ? styles.headerBrand : null;
 
   const NavigationComponent = shouldUseNewNav
     ? NewNavigationContainer
