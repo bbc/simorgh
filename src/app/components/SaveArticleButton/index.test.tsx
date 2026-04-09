@@ -10,7 +10,10 @@ describe('SaveArticleButton', () => {
   const defaultProps = {
     articleId: '123',
     service: 'hindi',
+    title: 'Test Article Title',
   };
+
+  const mockHandleSaveAction = jest.fn();
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -21,6 +24,7 @@ describe('SaveArticleButton', () => {
       showButton: false,
       isSaved: false,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     const { container } = render(<SaveArticleButton {...defaultProps} />);
@@ -32,6 +36,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -43,6 +48,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: true,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -54,6 +60,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: true,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -61,5 +68,37 @@ describe('SaveArticleButton', () => {
 
     expect(button).toHaveTextContent('Loading...');
     expect(button).toBeDisabled();
+  });
+
+  test('calls handleSaveAction with save when button is clicked and not saved', async () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />);
+    screen.getByRole('button').click();
+
+    expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
+    expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
+  });
+
+  test('passes title to useUASButton hook', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />);
+
+    expect(mockedUseUASButton).toHaveBeenCalledWith({
+      articleId: '123',
+      service: 'hindi',
+      title: 'Test Article Title',
+    });
   });
 });

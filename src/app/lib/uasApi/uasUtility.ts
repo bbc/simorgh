@@ -1,22 +1,45 @@
-const activityTypes = ['favourites'];
-const RESOURCE_DOMAIN = 'articles';
-const RESOURCE_TYPE = 'article';
-const ACTIVITY_TYPE = 'favourites';
-const ACTIVITY_FAVOURITE_ACTION = 'favourited';
+import type { UasApiRequestBody } from './index';
 
-const buildGlobalId = (articleId: string): string =>
-  `urn:bbc:${RESOURCE_DOMAIN}:${RESOURCE_TYPE}:${articleId}`;
+const FAVOURITES_CONFIG = {
+  activityType: 'favourites',
+  resourceDomain: 'articles',
+  resourceType: 'article',
+  action: 'favourited',
+} as const;
+
+const activityTypes: string[] = [FAVOURITES_CONFIG.activityType];
+
+const buildGlobalId = (
+  resourceId: string,
+  resourceDomain = FAVOURITES_CONFIG.resourceDomain,
+  resourceType = FAVOURITES_CONFIG.resourceType,
+): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
 const parseArticleID = (articleId: string): string => {
   return articleId.split(':').pop() || '';
 };
 
+const createFavouritesPayload = ({
+  articleId,
+  service,
+  title,
+}: {
+  articleId: string;
+  service: string;
+  title: string;
+}): UasApiRequestBody => ({
+  activityType: FAVOURITES_CONFIG.activityType,
+  resourceDomain: FAVOURITES_CONFIG.resourceDomain,
+  resourceType: FAVOURITES_CONFIG.resourceType,
+  resourceId: articleId,
+  action: FAVOURITES_CONFIG.action,
+  metaData: { service, articleId, title },
+});
+
 export {
+  FAVOURITES_CONFIG,
   activityTypes,
   buildGlobalId,
-  ACTIVITY_TYPE,
-  RESOURCE_DOMAIN,
-  RESOURCE_TYPE,
-  ACTIVITY_FAVOURITE_ACTION,
+  createFavouritesPayload,
   parseArticleID,
 };
