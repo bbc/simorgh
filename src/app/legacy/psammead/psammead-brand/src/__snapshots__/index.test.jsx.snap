@@ -282,7 +282,7 @@ exports[`Brand should render correctly with link provided 1`] = `
     >
       <a
         aria-labelledby="BrandLink-null"
-        class="focusIndicatorRemove emotion-4 emotion-5"
+        class="brand-link focusIndicatorRemove emotion-4 emotion-5"
         href="https://www.bbc.co.uk/news"
       >
         <svg

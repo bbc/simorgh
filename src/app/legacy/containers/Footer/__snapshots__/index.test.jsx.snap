@@ -366,7 +366,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       >
         <a
           aria-labelledby="BrandLink-footer"
-          class="focusIndicatorRemove emotion-7 emotion-8"
+          class="brand-link focusIndicatorRemove emotion-7 emotion-8"
           href="/news"
           id="footer"
         >

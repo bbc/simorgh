@@ -1202,7 +1202,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
           >
             <a
               aria-labelledby="BrandLink-topPage"
-              class="focusIndicatorRemove emotion-22 emotion-23"
+              class="brand-link focusIndicatorRemove emotion-22 emotion-23"
               href="/news"
               id="topPage"
             >
@@ -1637,7 +1637,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
         >
           <a
             aria-labelledby="BrandLink-footer"
-            class="focusIndicatorRemove emotion-22 emotion-23"
+            class="brand-link focusIndicatorRemove emotion-22 emotion-23"
             href="/news"
             id="footer"
           >
