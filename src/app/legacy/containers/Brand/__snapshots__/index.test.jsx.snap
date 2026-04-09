@@ -151,7 +151,7 @@ exports[`BrandContainer should render correctly 1`] = `
   >
     <a
       aria-labelledby="BrandLink-null"
-      class="focusIndicatorRemove emotion-5 emotion-6"
+      class="brand-link focusIndicatorRemove emotion-5 emotion-6"
       href="/news"
     >
       <svg
