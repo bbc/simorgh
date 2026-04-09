@@ -52,5 +52,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: ws-nextjs-app/playwright-report/
+          path: ws-nextjs-app/playwright-report
           retention-days: 30
