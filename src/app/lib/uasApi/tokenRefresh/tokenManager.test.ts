@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import refreshTokens from './refreshToken';
-import ensureTokens, { validateToken } from './tokenManager';
+import ensureTokens, { isTokenValidFor } from './tokenManager';
 
 jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');
@@ -11,35 +11,40 @@ const mockCookieGet = Cookie.get as jest.Mock;
 const mockOnClient = onClient as jest.Mock;
 const mockRefreshTokens = refreshTokens as jest.Mock;
 
-const ONE_HOUR_FROM_NOW = Math.floor(Date.now() / 1000) + 3600;
-const ONE_HOUR_AGO = Math.floor(Date.now() / 1000) - 3600;
-const FOUR_MINUTES_FROM_NOW = Math.floor(Date.now() / 1000) + 4 * 60;
+const TOKEN_EXPIRY_BUFFER_MS = 5 * 60 * 1000; // 5 minutes
+const ONE_HOUR_FROM_NOW = Date.now() + 3600 * 1000;
+const ONE_HOUR_AGO = Date.now() - 3600 * 1000;
+const FOUR_MINUTES_FROM_NOW = Date.now() + 4 * 60 * 1000;
 
-const createTestToken = (expSeconds: number): string => {
-  const payload = btoa(JSON.stringify({ exp: expSeconds }));
-  return `header.${payload}.signature`;
+const createTestToken = (expiryMs: number): string => {
+  const payload = btoa(JSON.stringify({ 'tkn-exp': expiryMs }));
+  return encodeURIComponent(payload);
 };
 
-describe('validateToken', () => {
-  it('returns false for a non-JWT string', () => {
-    expect(validateToken('not-a-jwt')).toBe(false);
+describe('isTokenValidFor', () => {
+  it('returns false for an empty token', () => {
+    expect(isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, '')).toBe(false);
   });
 
-  it('returns false for a token with no exp claim', () => {
-    const payload = btoa(JSON.stringify({ sub: 'user123' }));
-    expect(validateToken(`header.${payload}.sig`)).toBe(false);
+  it('returns false for an undefined token', () => {
+    expect(isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, undefined)).toBe(false);
   });
 
   it('returns false for an expired token', () => {
-    expect(validateToken(createTestToken(ONE_HOUR_AGO))).toBe(false);
+    const expiredToken = createTestToken(ONE_HOUR_AGO);
+    expect(isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, expiredToken)).toBe(false);
   });
 
-  it('returns false for a token expiring within the 5-minute buffer', () => {
-    expect(validateToken(createTestToken(FOUR_MINUTES_FROM_NOW))).toBe(false);
+  it('returns false for a token expiring within the buffer window', () => {
+    const soonExpiringToken = createTestToken(FOUR_MINUTES_FROM_NOW);
+    expect(isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, soonExpiringToken)).toBe(
+      false,
+    );
   });
 
   it('returns true for a token with expiry well beyond the buffer', () => {
-    expect(validateToken(createTestToken(ONE_HOUR_FROM_NOW))).toBe(true);
+    const validToken = createTestToken(ONE_HOUR_FROM_NOW);
+    expect(isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, validToken)).toBe(true);
   });
 });
 
@@ -56,13 +61,9 @@ describe('ensureTokens', () => {
     expect(mockRefreshTokens).not.toHaveBeenCalled();
   });
 
-  it('does not refresh when both tokens are present and ckns_id is valid', async () => {
+  it('does not refresh when ckns_id token is valid and present', async () => {
     const validToken = createTestToken(ONE_HOUR_FROM_NOW);
-    mockCookieGet.mockImplementation((name: string) => {
-      if (name === 'ckns_id') return validToken;
-      if (name === 'ckns_atkn') return 'valid-access-token';
-      return undefined;
-    });
+    mockCookieGet.mockReturnValue(validToken);
 
     await ensureTokens();
 
@@ -70,22 +71,7 @@ describe('ensureTokens', () => {
   });
 
   it('triggers refresh when ckns_id cookie is missing', async () => {
-    mockCookieGet.mockImplementation((name: string) => {
-      if (name === 'ckns_atkn') return 'valid-access-token';
-      return undefined;
-    });
-
-    await ensureTokens();
-
-    expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
-  });
-
-  it('triggers refresh when ckns_atkn cookie is missing', async () => {
-    const validToken = createTestToken(ONE_HOUR_FROM_NOW);
-    mockCookieGet.mockImplementation((name: string) => {
-      if (name === 'ckns_id') return validToken;
-      return undefined;
-    });
+    mockCookieGet.mockReturnValue(undefined);
 
     await ensureTokens();
 
@@ -94,11 +80,7 @@ describe('ensureTokens', () => {
 
   it('triggers refresh when ckns_id is expired', async () => {
     const expiredToken = createTestToken(ONE_HOUR_AGO);
-    mockCookieGet.mockImplementation((name: string) => {
-      if (name === 'ckns_id') return expiredToken;
-      if (name === 'ckns_atkn') return 'valid-access-token';
-      return undefined;
-    });
+    mockCookieGet.mockReturnValue(expiredToken);
 
     await ensureTokens();
 
@@ -107,11 +89,7 @@ describe('ensureTokens', () => {
 
   it('triggers refresh when ckns_id expires within the buffer window', async () => {
     const soonExpiringToken = createTestToken(FOUR_MINUTES_FROM_NOW);
-    mockCookieGet.mockImplementation((name: string) => {
-      if (name === 'ckns_id') return soonExpiringToken;
-      if (name === 'ckns_atkn') return 'valid-access-token';
-      return undefined;
-    });
+    mockCookieGet.mockReturnValue(soonExpiringToken);
 
     await ensureTokens();
 
