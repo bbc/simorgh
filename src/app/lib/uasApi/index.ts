@@ -1,6 +1,7 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
 import { activityTypes } from './uasUtility';
+import ensureTokens from './tokenRefresh/tokenManager';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -58,6 +59,14 @@ const uasApiRequest = async (
   validateRequest(method, { body, globalId }, activityType);
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
+
+  try {
+    await ensureTokens();
+  } catch (error) {
+    throw new Error(
+      `Error while ensuring tokens: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),
