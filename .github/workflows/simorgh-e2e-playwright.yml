@@ -33,7 +33,7 @@ jobs:
           key: node-modules-${{ hashFiles('yarn.lock', 'ws-nextjs-app/yarn.lock') }}
 
       - name: Install Node Modules
-        if: steps.cache.ohutputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           rm -rf node_modules
           git config --global user.name "${{ secrets.WS_UTF_USERNAME }}"
@@ -52,5 +52,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: playwright-report/
+          path: ws-nextjs-app/playwright-report/
           retention-days: 30
