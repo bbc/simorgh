@@ -135,7 +135,7 @@ describe('useUASButton', () => {
     expect(result.current.showButton).toBe(false);
   });
 
-  describe('handleSaveArticle', () => {
+  describe('handleSaveAction', () => {
     beforeEach(() => {
       mockUseToggle.mockReturnValue({ enabled: true });
       mockIsLocal.mockReturnValue(false);
@@ -143,7 +143,7 @@ describe('useUASButton', () => {
       mockUasApiRequest.mockResolvedValue({ ok: true, status: 202 });
     });
 
-    test('sends POST request with correct payload when clicked', async () => {
+    test('sends POST request with correct payload when saving', async () => {
       mockuseUASFetchSaveStatus.mockReturnValue({
         isSaved: false,
         isLoading: false,
@@ -154,7 +154,7 @@ describe('useUASButton', () => {
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
-        await result.current.handleSaveArticle();
+        await result.current.handleSaveAction('save');
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('POST', 'favourites', {
@@ -173,7 +173,7 @@ describe('useUASButton', () => {
       });
     });
 
-    test('sets isSaved to true on successful POST', async () => {
+    test('sets isSaved to true on successful save', async () => {
       mockuseUASFetchSaveStatus.mockReturnValue({
         isSaved: false,
         isLoading: false,
@@ -184,7 +184,7 @@ describe('useUASButton', () => {
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
-        await result.current.handleSaveArticle();
+        await result.current.handleSaveAction('save');
       });
 
       expect(mockSetIsSaved).toHaveBeenCalledWith(true);
@@ -201,23 +201,10 @@ describe('useUASButton', () => {
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
-        await result.current.handleSaveArticle();
+        await result.current.handleSaveAction('save');
       });
 
       expect(mockUasApiRequest).not.toHaveBeenCalled();
-    });
-
-    test('returns handleSaveArticle function', () => {
-      mockuseUASFetchSaveStatus.mockReturnValue({
-        isSaved: false,
-        isLoading: false,
-        error: null,
-        setIsSaved: mockSetIsSaved,
-      });
-
-      const { result } = renderHook(() => useUASButton(defaultProps));
-
-      expect(typeof result.current.handleSaveArticle).toBe('function');
     });
   });
 });

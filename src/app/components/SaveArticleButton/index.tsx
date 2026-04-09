@@ -7,12 +7,17 @@ interface SaveArticleButtonProps {
   title: string;
 }
 
+/** A button component that allows users to save an article for later reading,
+ * showing the button based on user sign in status and feature toggles,
+ * and displaying the saved status, loading state, and handling errors from the UAS API.
+ * FUTURE TODO : Implement button click handler to toggle saved state */
+
 const SaveArticleButton = ({
   articleId,
   service,
   title,
 }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error, handleSaveArticle } =
+  const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       service,
@@ -46,7 +51,7 @@ const SaveArticleButton = ({
     <button
       css={styles.buttonWrapper}
       type="button"
-      onClick={handleSaveArticle}
+      onClick={() => handleSaveAction(isSaved ? 'remove' : 'save')}
       disabled={isLoading}
       aria-label={buttonLabel}
       title={buttonLabel}

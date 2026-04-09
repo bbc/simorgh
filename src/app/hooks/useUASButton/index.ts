@@ -9,18 +9,24 @@ import {
 } from '#app/lib/uasApi/uasUtility';
 import useToggle from '../useToggle';
 
+/** A hook that fetches an article’s saved status and controls showing the save UAS button
+ * based on feature toggles and sign in status,
+ * with room to later expand for toggling the save state based on user actions. */
+
 interface UseUASButtonProps {
   articleId: string;
   service: string;
   title: string;
 }
 
+type UASAction = 'save' | 'remove';
+
 interface UseUASButtonReturn {
   showButton: boolean;
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
-  handleSaveArticle: () => Promise<void>;
+  handleSaveAction: (action: UASAction) => Promise<void>;
 }
 
 const useUASButton = ({
@@ -32,6 +38,7 @@ const useUASButton = ({
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
   const [isSaving, setIsSaving] = useState(false);
+  const [saveError, setSaveError] = useState<Error | null>(null);
 
   const isUASEnabled =
     featureToggleOn &&
@@ -45,25 +52,43 @@ const useUASButton = ({
     showButton ? articleId : '',
   );
 
-  const handleSaveArticle = useCallback(async () => {
-    if (isSaving || isSaved) return;
+  const handleSaveAction = useCallback(
+    async (action: UASAction) => {
+      if (isSaving) return;
 
-    setIsSaving(true);
-    try {
-      const body = createFavouritesPayload({ articleId, service, title });
-      await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
-      setIsSaved(true);
-    } finally {
-      setIsSaving(false);
-    }
-  }, [articleId, service, title, isSaving, isSaved, setIsSaved]);
+      setIsSaving(true);
+      try {
+        setSaveError(null);
+
+        if (action === 'save') {
+          const body = createFavouritesPayload({ articleId, service, title });
+          await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+          setIsSaved(true);
+        } else {
+          // TO be implemented with https://bbc.atlassian.net/browse/WS-2212
+          // const globalId = buildGlobalId(articleId);
+          // await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+          //   globalId,
+          // });
+          setIsSaved(false);
+        }
+      } catch (err) {
+        const saveErr = err instanceof Error ? err : new Error(String(err));
+        setSaveError(saveErr);
+        throw saveErr;
+      } finally {
+        setIsSaving(false);
+      }
+    },
+    [articleId, service, title, isSaving, setIsSaved],
+  );
 
   return {
     showButton,
     isSaved,
     isLoading: isLoading || isSaving,
-    error,
-    handleSaveArticle,
+    error: saveError || error,
+    handleSaveAction,
   };
 };
 

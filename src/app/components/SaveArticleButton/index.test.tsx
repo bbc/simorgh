@@ -13,7 +13,7 @@ describe('SaveArticleButton', () => {
     title: 'Test Article Title',
   };
 
-  const mockHandleSaveArticle = jest.fn();
+  const mockHandleSaveAction = jest.fn();
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -24,7 +24,7 @@ describe('SaveArticleButton', () => {
       showButton: false,
       isSaved: false,
       isLoading: false,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     const { container } = render(<SaveArticleButton {...defaultProps} />);
@@ -36,7 +36,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -48,7 +48,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: true,
       isLoading: false,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -60,7 +60,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: true,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -70,18 +70,19 @@ describe('SaveArticleButton', () => {
     expect(button).toBeDisabled();
   });
 
-  test('calls handleSaveArticle when button is clicked', async () => {
+  test('calls handleSaveAction with save when button is clicked and not saved', async () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
       isLoading: false,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
     screen.getByRole('button').click();
 
-    expect(mockHandleSaveArticle).toHaveBeenCalledTimes(1);
+    expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
+    expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
   });
 
   test('passes title to useUASButton hook', () => {
@@ -89,7 +90,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
-      handleSaveArticle: mockHandleSaveArticle,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
