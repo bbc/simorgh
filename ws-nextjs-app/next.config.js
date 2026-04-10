@@ -5,8 +5,6 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
-const isLocal = process.env.SIMORGH_APP_ENV === 'local';
-
 /** @type {import('next').NextConfig} */
 module.exports = {
   async headers() {
