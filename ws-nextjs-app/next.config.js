@@ -57,7 +57,7 @@ module.exports = {
       },
     ];
   },
-  allowedDevOrigins: ['localhost', 'localhost.bbc.com'],
+  allowedDevOrigins: ['localhost.bbc.com'],
   assetPrefix,
   compiler: { emotion: true },
   distDir: 'build',
