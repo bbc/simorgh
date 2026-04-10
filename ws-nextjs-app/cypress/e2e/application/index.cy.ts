@@ -31,7 +31,7 @@ describe('Application', () => {
         cy.testResponseCodeAndType({
           path: `/${service}/manifest.json`,
           responseCode: 200,
-          type: 'application/json',
+          type: 'application/manifest+json',
         });
       });
     },
