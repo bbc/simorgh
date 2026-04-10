@@ -1,4 +1,4 @@
-import React, { createRef, useMemo } from 'react';
+import { forwardRef, createRef, useMemo } from 'react';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import Cookies from 'js-cookie';
@@ -19,7 +19,7 @@ const defaultToggleState = {
 
 const mockToggleDispatch = jest.fn();
 
-const CanonicalBannerWithContext = React.forwardRef(
+const CanonicalBannerWithContext = forwardRef(
   ({ serviceConfig, variant, toggleStateOverride }, ref) => {
     const toggleContextValue = useMemo(
       () => ({

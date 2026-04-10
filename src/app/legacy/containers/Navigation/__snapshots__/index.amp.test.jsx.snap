@@ -30,7 +30,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -204,6 +204,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       </amp-state>
       <button
         aria-expanded="false"
+        aria-label="menu"
         class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"

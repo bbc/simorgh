@@ -322,6 +322,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
         class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -682,6 +683,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
         class="emotion-11"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -987,6 +989,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
         class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1308,6 +1311,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
         class="emotion-10"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1606,6 +1610,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
         class="emotion-9"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>
@@ -1966,6 +1971,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
         class="emotion-11"
         loading="eager"
         src="http://foo.bar/placeholder.png"
+        style="aspect-ratio: auto;"
       />
     </div>
   </div>

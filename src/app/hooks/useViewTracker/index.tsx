@@ -5,12 +5,12 @@ import { use, useEffect, useState, useRef, useCallback } from 'react';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import {
-  STATIC_ATI_VIEW_TRACKING,
+  STATIC_REVERB_VIEW_TRACKING,
   VIEW_EVENT,
 } from '#app/lib/analyticsUtils/analytics.const';
-import constructStaticATIUrl from '#app/lib/analyticsUtils/staticATITracking/constructATIUrl';
 import extractATITrackingProps from '#app/lib/analyticsUtils/extractATITrackingProps';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import constructReverbUrl from '#app/lib/analyticsUtils/staticATITracking/constructReverbUrl';
 import useTrackingToggle from '../useTrackingToggle';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import dispatchTrackingRequests from '../../lib/analyticsUtils/dispatchTrackingRequests';
@@ -52,7 +52,7 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
 
-  const { service, useReverb } = use(ServiceContext);
+  const { service } = use(ServiceContext);
 
   useEffect(() => {
     if (componentHasComeIntoView && !timer.current) {
@@ -79,7 +79,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
             advertiserID,
             url,
             detailedPlacement,
-            useReverb,
             ...(groupTracker && { groupTracker }),
             ...(itemTracker && { itemTracker }),
             ...(experimentVariant &&
@@ -134,7 +133,6 @@ const getComponentViewTracker = (eventTrackingData?: EventTrackingData) => {
     experimentName,
     experimentVariant,
     detailedPlacement,
-    useReverb,
     itemTracker,
     groupTracker,
     alwaysInView,
@@ -168,13 +166,15 @@ export default (eventTrackingData?: EventTrackingData): any => {
 
   const viewTracker = getComponentViewTracker(eventTrackingData);
 
-  const staticATIUrl = constructStaticATIUrl({
+  const reverbStaticUrl = constructReverbUrl({
     eventTrackingData,
     eventType: VIEW_EVENT,
   });
 
   return isLite
-    ? { [STATIC_ATI_VIEW_TRACKING]: staticATIUrl }
+    ? {
+        [STATIC_REVERB_VIEW_TRACKING]: reverbStaticUrl,
+      }
     : {
         ref: viewTracker,
       };

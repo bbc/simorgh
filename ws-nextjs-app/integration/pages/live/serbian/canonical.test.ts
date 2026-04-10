@@ -3,10 +3,10 @@
  * @pathname /serbian/live/media-23179005/lat
  */
 
-import { runCommonCrossPlatformTests } from '../../../../../src/integration/common';
+import { runCommonCrossPlatformTests } from '../../../common';
 
 describe('Canonical', () => {
   describe(pageType, () => {
-    runCommonCrossPlatformTests();
+    runCommonCrossPlatformTests(service);
   });
 });

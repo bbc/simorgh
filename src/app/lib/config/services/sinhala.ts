@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-sinhala',
     atiAnalyticsProducerId: '82',
     atiAnalyticsProducerName: 'SINHALA',
-    useReverb: true,
     chartbeatDomain: 'sinhala.bbc.co.uk',
     brandName: 'BBC News සිංහල',
     product: 'BBC News',
     serviceLocalizedName: 'සිංහල',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/sinhala.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/sinhala/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News සිංහල',
     dir: `ltr`,
     externalLinkText: ', බාහිර',
@@ -61,6 +61,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'සහ',
+      readTime: {
+        readTimePrefix: 'කියවීමේ කාලය',
+        minute: 'මිනිත්තු',
+      },
       pagination: {
         page: 'පිටුව',
         previousPage: 'ආපසු',
@@ -98,10 +103,12 @@ export const service: DefaultServiceConfig = {
       liveExperiencePage: {
         liveLabel: 'සජීවී',
         liveCoverage: 'සජීවී වාර්තාකරණය',
-        breaking: 'අලුත්ම පුවතක්',
+        breaking: 'Breaking',
         postedAt: 'යාවත්කාලීන කළේ',
         summary: 'සාරාංශය',
         shareButtonText: 'යවන්න',
+        refreshButtonText: 'නවතම පළ කිරීම',
+        visuallyHiddenButtonText: 'නව පළ කිරීමක් තිබේ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -359,26 +366,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'ප්‍රධාන පුවත්',
         url: '/sinhala',
-      },
-      {
-        title: 'ශ්‍රී ලංකා',
-        url: '/sinhala/topics/cg7267dz901t',
-      },
-      {
-        title: 'ලෝකය',
-        url: '/sinhala/topics/c83plvepnq1t',
-      },
-      {
-        title: 'වීඩියෝ',
-        url: '/sinhala/topics/crldzm9n2lnt',
-      },
-      {
-        title: 'ක්‍රීඩා',
-        url: '/sinhala/topics/cvjp2jy9g2qt',
-      },
-      {
-        title: 'සෞඛ්‍ය',
-        url: '/sinhala/topics/cz74k723j57t',
       },
     ],
   },

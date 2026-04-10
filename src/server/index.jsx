@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 /* eslint-disable no-console */
 /* eslint-disable camelcase */
 import express from 'express';
@@ -18,6 +19,7 @@ import {
   SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
+import fetchConfig from '#app/lib/utilities/fetchConfig';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
 import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import isLocal from '#app/lib/utilities/isLocal';
@@ -39,8 +41,9 @@ import {
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
-import serviceConfigs from './utilities/serviceConfigs';
+import services from './utilities/serviceConfigs';
 import createAdNonce from '../app/utilities/createAdNonce';
+import { UNKNOWN_PAGE } from '../app/routes/utils/pageTypes';
 
 const morgan = require('morgan');
 
@@ -115,6 +118,8 @@ server
       `Cache-Control`,
       `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
     );
+    res.set('Service-Worker-Allowed', `/${req.params.service}`);
+
     res.sendFile(swPath, {}, error => {
       if (error) {
         logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
@@ -125,7 +130,7 @@ server
   .get(homePageManifestPath, async ({ params }, res) => {
     const { service } = params;
     const variant = defaultServiceVariants[service] || 'default';
-    const manifestPath = `${__dirname}/public${serviceConfigs[service][variant].manifestPath}`;
+    const manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
     res.set(
       'Cache-Control',
       'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
@@ -167,21 +172,21 @@ const injectPlatformToRequestChainHeader = (req, res, next) => {
 };
 
 const injectResourceHintsHeader = (req, res, next) => {
-  const thisService = req.originalUrl.split('/')[1];
-
-  const assetOrigins = getAssetOrigins(thisService);
-  res.set(
-    'Link',
-    assetOrigins
-      .map(domainName => {
-        const crossOrigin =
-          domainName === 'https://static.files.bbci.co.uk'
-            ? `,<${domainName}>; rel="preconnect"; crossorigin`
-            : '';
-        return `<${domainName}>; rel="dns-prefetch", <${domainName}>; rel="preconnect"${crossOrigin}`;
-      })
-      .join(','),
+  const { dnsPrefetchOrigins, preconnectOrigins } = getAssetOrigins(
+    req.originalUrl,
   );
+
+  const resourceHintsConfig = [
+    ...dnsPrefetchOrigins.map(
+      domainName => `<${domainName}>; rel="dns-prefetch"`,
+    ),
+    ...preconnectOrigins.map(
+      domainName => `<${domainName}>; rel="preconnect"; crossorigin`,
+    ),
+  ];
+
+  res.set('Link', resourceHintsConfig.join(','));
+
   next();
 };
 // Set Referrer-Policy
@@ -200,7 +205,7 @@ server.get(
     injectPlatformToRequestChainHeader,
   ],
   async ({ url, query, headers, path: urlPath }, res) => {
-    let derivedPageType = 'Unknown';
+    let derivedPageType = UNKNOWN_PAGE;
     let serverSideExperiments = [];
 
     try {
@@ -227,7 +232,16 @@ server.get(
         pageType: derivedPageType,
       });
 
-      const toggles = await getToggles(service);
+      const [togglesResult, navResult] = await Promise.allSettled([
+        getToggles(service),
+        fetchConfig({ service, pagePath: url, configType: 'navigation' }),
+      ]);
+
+      const toggles =
+        togglesResult.status === 'fulfilled' ? (togglesResult.value ?? {}) : {};
+
+      const navItems =
+        navResult.status === 'fulfilled' ? navResult.value?.data?.items : null;
 
       const data = await getInitialData({
         path: url,
@@ -243,6 +257,7 @@ server.get(
       const { isUK, showCookieBannerBasedOnCountry } = extractHeaders(headers);
 
       data.toggles = toggles;
+      data.navItems = navItems;
       data.path = urlPath;
       data.timeOnServer = Date.now();
       data.showAdsBasedOnLocation = headers['bbc-adverts'] === 'true';

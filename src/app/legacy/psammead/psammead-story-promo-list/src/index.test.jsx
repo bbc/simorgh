@@ -1,20 +1,18 @@
-import React from 'react';
 import StoryPromo, {
   Headline,
   Summary,
 } from '#psammead/psammead-story-promo/src';
 import { render } from '../../../../components/react-testing-library-with-providers';
-import latin from '../../../../components/ThemeProvider/fontScripts/latin';
 import { StoryPromoLi, StoryPromoLiBase, StoryPromoUl } from './index';
 
 const Image = <img src="https://foobar.com/image.png" alt="Alt text" />;
 
 const Info = (
   <>
-    <Headline script={latin} service="news">
+    <Headline promoType="regular" promoHasImage>
       The headline of the promo
     </Headline>
-    <Summary script={latin} service="news">
+    <Summary promoType="regular" promoHasImage>
       The summary of the promo
     </Summary>
     <time>12 March 2019</time>
@@ -24,8 +22,8 @@ const Info = (
 describe('StoryPromo list', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLi>
+      <StoryPromoUl role="list">
+        <StoryPromoLi border>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
       </StoryPromoUl>,
@@ -35,7 +33,7 @@ describe('StoryPromo list', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl>
+      <StoryPromoUl role="list">
         <StoryPromoLi border={false}>
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLi>
@@ -48,8 +46,8 @@ describe('StoryPromo list', () => {
 describe('StoryPromo list base', () => {
   it('should render correctly', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLiBase>
+      <StoryPromoUl role="list">
+        <StoryPromoLiBase border role="listitem">
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,
@@ -59,8 +57,8 @@ describe('StoryPromo list base', () => {
 
   it('should render correctly without border', () => {
     const { container } = render(
-      <StoryPromoUl>
-        <StoryPromoLiBase border={false}>
+      <StoryPromoUl role="list">
+        <StoryPromoLiBase border={false} role="listitem">
           <StoryPromo image={Image} info={Info} />
         </StoryPromoLiBase>
       </StoryPromoUl>,

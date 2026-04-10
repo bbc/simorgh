@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { Helmet } from 'react-helmet';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -34,7 +34,7 @@ const getThumbnailUri = (url?: string) => {
   return `https://${imageUrl.replace('$recipe', '1024x576')}`;
 };
 
-const getUploadDate = (availableFrom?: string, firstPublished?: string) => {
+const getUploadDate = (availableFrom?: number, firstPublished?: string) => {
   const uploadDate = availableFrom || firstPublished;
 
   if (!uploadDate) return null;

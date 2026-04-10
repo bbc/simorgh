@@ -1,8 +1,10 @@
-import services from '#lib/config/services/loadableConfig';
+import SERVICES from '#lib/config/services';
 import { Services, Variants } from '#app/models/types/global';
 
 type Query = string[];
 type Platform = 'cps' | 'articles' | 'tipo';
+
+const MAX_ID_LENGTH = 1000;
 
 // Asset ID regexes
 const TC2_ID_REGEX = /^[a-z0-9-_]{1,}$/;
@@ -74,11 +76,15 @@ const LANGS = [
 
 const LANGS_REGEX = new RegExp(`^(${LANGS.join('|')})$`);
 
-const SERVICES = Object.keys(services) as Services[];
+const SERVICES_WITHOUT_WS = SERVICES.filter(s => s !== 'ws');
+
 const VARIANTS = ['lat', 'cyr', 'trad', 'simp'] as Variants[];
 
 const extractService = (query: Query): Services | null => {
-  const service = SERVICES.find(s => s !== 'ws' && query?.includes(s));
+  // Check if a valid service appears first, then check for the presence of 'ws' if no other service is found
+  const service =
+    SERVICES_WITHOUT_WS.find(s => query?.includes(s)) ||
+    (query?.includes('ws') ? 'ws' : undefined);
 
   return service ?? null;
 };
@@ -94,6 +100,8 @@ const extractPlatform = (query: Query): Platform | null => {
 
   // eslint-disable-next-line no-restricted-syntax
   for (const id of query ?? []) {
+    if (id.length >= MAX_ID_LENGTH) break;
+
     if (CPS_ID_REGEX.test(id)) {
       platform = 'cps';
       break;
@@ -115,6 +123,8 @@ const extractAssetId = (query: Query) => {
   let assetId;
 
   assetId = query?.find((id: string) => {
+    if (id.length >= MAX_ID_LENGTH) return null;
+
     return (
       CPS_ID_REGEX.test(id) ||
       OPTIMO_ID_REGEX.test(id) ||

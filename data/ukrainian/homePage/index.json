@@ -2,7 +2,9 @@
   "data": {
     "title": "BBC News Україна",
     "description": "Останні новини України та світу, новини дня на BBC Україна",
-    "pageType": "home",
+  "pageType": "home",
+  "seoTitle": "BBC News Україна",
+  "seoDescription": "Останні новини України та світу, новини дня на BBC Україна",
     "curations": [
       {
         "summaries": [

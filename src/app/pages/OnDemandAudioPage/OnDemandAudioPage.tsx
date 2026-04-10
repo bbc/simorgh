@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import React, { use } from 'react';
-import { jsx } from '@emotion/react';
+import type { Component } from 'react';
+import { use } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -42,8 +40,10 @@ export interface OnDemandAudioProps {
     language: string;
     brandTitle: string;
     headline: string;
-    summary?: string;
+    summary: string;
     shortSynopsis: string;
+    mediumSynopsis?: string;
+    longSynopsis?: string;
     masterBrand: string;
     episodeId: string;
     releaseDateTimeStamp: number;
@@ -60,7 +60,7 @@ export interface OnDemandAudioProps {
     contentType: ContentType;
   };
   mediaIsAvailable?: boolean;
-  MediaError: React.Component;
+  MediaError: Component;
 }
 
 const OnDemandAudioPage = ({
@@ -74,8 +74,8 @@ const OnDemandAudioPage = ({
     language,
     brandTitle,
     headline,
-    summary,
     shortSynopsis,
+    summary,
     masterBrand,
     releaseDateTimeStamp,
     imageUrl,
@@ -106,7 +106,6 @@ const OnDemandAudioPage = ({
         imageHeight: 400,
       }
     : {};
-
   return (
     <>
       <ATIAnalytics atiData={pageData?.metadata.atiAnalytics} />
@@ -122,7 +121,7 @@ const OnDemandAudioPage = ({
         openGraphType="website"
         lang={language}
         title={metadataTitle}
-        description={shortSynopsis}
+        description={summary}
         {...metadataImageProps}
         hasAmpPage={false}
       />

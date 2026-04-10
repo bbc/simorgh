@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { PropsWithChildren, useMemo } from 'react';
-import { jsx } from '@emotion/react';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import { FontVariant, GelFontSize } from '../../models/types/theming';
@@ -11,6 +9,7 @@ import styles from './index.styles';
 import CallToActionLinkContext from './CallToActionLinkContext';
 
 type CallToActionLinkProps = {
+  id?: string;
   url: string;
   className?: string;
   eventTrackingData?: EventTrackingData;
@@ -21,6 +20,7 @@ type CallToActionLinkProps = {
 };
 
 const CallToActionLink = ({
+  id,
   url,
   children,
   eventTrackingData,
@@ -45,6 +45,7 @@ const CallToActionLink = ({
 
   return (
     <a
+      {...(id && { id })}
       href={url}
       {...(eventTrackingData && clickTrackerHandler)}
       className={className}

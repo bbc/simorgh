@@ -1,4 +1,6 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import withThemeProvider from '../../withThemeProvider';
-import baseUkChinaTheme from './base';
+import ukChinaTheme from './base';
 
-export default withThemeProvider(baseUkChinaTheme);
+export const theme: ServiceTheme = ukChinaTheme;
+export default withThemeProvider(ukChinaTheme);

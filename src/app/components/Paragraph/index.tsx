@@ -1,14 +1,12 @@
-/** @jsx jsx */
-
+import type { ReactNode } from 'react';
 import { FC, HTMLAttributes } from 'react';
-import { jsx } from '@emotion/react';
 
 import { FontVariant, GelFontSize } from '../../models/types/theming';
 import Text from '../Text';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   fontVariant?: FontVariant;
   size?: GelFontSize;
 }

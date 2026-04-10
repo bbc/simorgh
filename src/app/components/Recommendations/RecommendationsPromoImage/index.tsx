@@ -1,4 +1,3 @@
-import React from 'react';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import Image from '#app/components/Image';

@@ -1,7 +1,5 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { Global, jsx } from '@emotion/react';
-import React, { use, useEffect, useRef } from 'react';
+import { Global } from '@emotion/react';
+import { use, useEffect, useRef } from 'react';
 import moment from 'moment-timezone';
 import MediaLoader from '#app/components/MediaLoader';
 import {
@@ -55,8 +53,25 @@ const getEventTrackingData = ({
   };
 };
 
-const getPlayerInstance = () =>
-  window?.embeddedMedia?.api?.players()?.bbcMediaPlayer0;
+const findPlayerKey = (): string => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  const keys = playerInstances ? Object.keys(playerInstances) : [];
+  // Return the last player key if multiple instances are found, else return a fallback
+  return keys[keys.length - 1] || 'bbcMediaPlayer0';
+};
+
+export const getPlayerInstance = () => {
+  const playerKey = findPlayerKey();
+
+  return window?.embeddedMedia?.api?.players()?.[playerKey] as Player;
+};
+
+const getAllPlayerInstances = () => {
+  const playerInstances = window?.embeddedMedia?.api?.players();
+  if (!playerInstances) return [];
+
+  return Object.values(playerInstances);
+};
 
 const getCurrentIndex = ({
   e,
@@ -87,6 +102,15 @@ export const playlistLoadedCallback = (
   const player = getPlayerInstance();
 
   if (!player) return;
+
+  const allPlayerInstances = getAllPlayerInstances();
+
+  // Pause embedded players when PV Carousel is loaded
+  if (allPlayerInstances) {
+    allPlayerInstances.forEach(playerInstance => {
+      playerInstance.pause();
+    });
+  }
 
   const currentIndex = getCurrentIndex({ e, blocks });
 
@@ -282,9 +306,12 @@ const PortraitVideoModal = ({
       modal?.removeEventListener('touchstart', handleBackdropClick);
       modal?.removeEventListener('keydown', handleKeyDown);
 
-      const player = getPlayerInstance();
+      const allPlayerInstances = getAllPlayerInstances();
+
       // Pause any player if the modal is closed instantly
-      if (player) player.pause();
+      allPlayerInstances.forEach(player => {
+        player.pause();
+      });
     };
   }, [onClose]);
 

@@ -15,6 +15,7 @@ const logCodes = {
   DATA_REQUEST_RECEIVED: 'data_request_received',
   DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
+  IDCTA_FETCH_ERROR: 'idcta_fetch_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',
@@ -85,6 +86,9 @@ const logCodes = {
 
   // Logging
   ATI_LOGGING_ERROR: 'ati_logging_error',
+
+  // ThemeProvider error
+  THEME_PROVIDER_ERROR: 'theme_provider_error',
 };
 
 module.exports = logCodes;

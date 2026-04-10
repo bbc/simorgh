@@ -1,4 +1,5 @@
-/* eslint-disable import/prefer-default-export */
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
+import getAppEnv from '#cypress/support/helpers/getAppEnv';
 import envConfig, { EnvironmentConfigType } from '../support/config/envs';
 import config from '../support/config/services';
 import { ServiceParametersType } from '../types';
@@ -31,6 +32,19 @@ export default ({ service, pageType }: ServiceParametersType) => {
     const testMobileNav =
       serviceName === 'ukchina' || serviceName === 'persian';
 
+    const twoTierNavServices = {
+      local: null, // Don't test two tier nav locally as the local environment can't fetch config
+      test: ['arabic', 'tamil'], // Test env isn't guaranteed to have the new nav config, so only run tests for services we know have it
+      live: SERVICES_WITH_NEW_NAV,
+    };
+
+    const cypressAppEnv = getAppEnv();
+
+    const testTwoTierNav =
+      twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
+
+    let initialSecondaryNavItemLinkTexts: string[] = [];
+
     if (testMobileNav) {
       it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
         cy.viewport(320, 480);
@@ -45,7 +59,111 @@ export default ({ service, pageType }: ServiceParametersType) => {
         cy.get('nav').find('[data-e2e="scrollable-nav"]').should('not.exist');
 
         cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
+
+        cy.get('nav button').click();
       });
+    }
+
+    if (testTwoTierNav) {
+      it('should show two tier navigation on desktop', () => {
+        cy.viewport(1008, 900);
+        cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav"] a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+      });
+
+      it('should show two tier navigation on mobile', () => {
+        cy.viewport(320, 480);
+        cy.get('[data-e2e="scrollable-nav"]').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul').should('be.visible');
+        cy.get('[data-e2e="scrollable-nav"] a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+        cy.get('[data-e2e="scrollable-nav-secondary"] ul a').each($el => {
+          cy.wrap($el).should('have.attr', 'href').and('not.be.empty');
+        });
+      });
+
+      it('dropdown menu should open and close when the menu button is clicked', () => {
+        cy.viewport(320, 480);
+        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
+        cy.get('nav')
+          .find('[data-e2e="dropdown-nav"] ul')
+          .should('not.be.visible');
+        cy.get('nav button').click({ force: true });
+        cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
+        cy.get('nav button').click({ force: true });
+        cy.get('nav')
+          .find('[data-e2e="dropdown-nav"] ul')
+          .should('not.be.visible');
+      });
+      // run a fuller set of nav tests on the home page
+      if (pageType === 'home') {
+        before(() => {
+          cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
+            initialSecondaryNavItemLinkTexts = $links
+              .toArray()
+              .map(link => link.textContent || '');
+          });
+        });
+
+        it('should stay on the same page when brand link is clicked', () => {
+          cy.location('pathname').then(currentPath => {
+            cy.get('a#topPage').click();
+            cy.location('pathname').should('eq', currentPath);
+          });
+        });
+
+        it('navigates to new page and secondary nav changes when clicking 2nd item in top nav', () => {
+          cy.location('pathname').then(previousUrl => {
+            cy.get('[data-e2e="scrollable-nav"] li').eq(1).find('a').click();
+            cy.location('pathname').should('not.eq', previousUrl);
+            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
+              $links => {
+                const newTexts = $links
+                  .toArray()
+                  .map(link => link.textContent || '');
+                expect(newTexts).to.not.deep.equal(
+                  initialSecondaryNavItemLinkTexts,
+                );
+              },
+            );
+          });
+        });
+
+        it('navigates to another new page and secondary nav changes when clicking 3rd item in top nav', () => {
+          cy.location('pathname').then(previousUrl => {
+            cy.get('[data-e2e="scrollable-nav"] li').eq(2).find('a').click();
+            cy.location('pathname').should('not.eq', previousUrl);
+            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
+              $links => {
+                const newTexts = $links
+                  .toArray()
+                  .map(link => link.textContent || '');
+                expect(newTexts).to.not.deep.equal(
+                  initialSecondaryNavItemLinkTexts,
+                );
+              },
+            );
+          });
+        });
+
+        it('clicking 1st item in top nav navigates to the home page and secondary scrollable nav has corresponding items', () => {
+          cy.get('[data-e2e="scrollable-nav"] li').eq(0).find('a').click();
+          cy.location('pathname').should('include', `/${service}`);
+          cy.get('[data-e2e="scrollable-nav-secondary"] li a').then($links => {
+            const resetTexts = $links
+              .toArray()
+              .map(link => link.textContent || '');
+            expect(resetTexts).to.deep.equal(initialSecondaryNavItemLinkTexts);
+          });
+        });
+      }
     }
   });
 };

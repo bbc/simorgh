@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-azeri',
     atiAnalyticsProducerId: '6',
     atiAnalyticsProducerName: 'AZERI',
-    useReverb: true,
     chartbeatDomain: 'azeri.bbc.co.uk',
     brandName: 'BBC News Azərbaycanca',
     product: 'BBC News',
     serviceLocalizedName: 'Azərbaycanca',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/azeri.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/azeri/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Azərbaycanca',
     dir: `ltr`,
     externalLinkText: ', BBC-dən kənar',
@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'və',
+      readTime: {
+        readTimePrefix: 'Oxuma vaxtı',
+        minute: 'dəq',
+      },
       pagination: {
         page: 'səhifə',
         previousPage: 'Geriyə',
@@ -94,6 +99,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Xəbərin vaxtı',
         summary: 'Xülasə',
         shareButtonText: 'Paylaş',
+        refreshButtonText: 'Ən son post',
+        visuallyHiddenButtonText: 'Yeni paylaşım mövcuddur',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -379,26 +386,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Xəbərlər',
         url: '/azeri',
-      },
-      {
-        title: 'Azərbaycan',
-        url: '/azeri/topics/c7zp571g7y7t',
-      },
-      {
-        title: 'Region',
-        url: '/azeri/topics/czpveq9ll8pt',
-      },
-      {
-        title: 'Beynəlxalq',
-        url: '/azeri/topics/cde15l4vn02t',
-      },
-      {
-        title: 'Sağlamlıq',
-        url: '/azeri/topics/c6vzyk7592nt',
-      },
-      {
-        title: 'Sizin hekayələriniz',
-        url: '/azeri/topics/cd9y5yjez4lt',
       },
     ],
   },

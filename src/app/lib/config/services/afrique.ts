@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-afrique',
     atiAnalyticsProducerId: '3',
     atiAnalyticsProducerName: 'AFRIQUE',
-    useReverb: true,
     chartbeatDomain: 'afrique.bbc.co.uk',
     brandName: 'BBC News Afrique',
     product: 'BBC News',
     serviceLocalizedName: 'Afrique',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afrique/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
     externalLinkText: ', externe',
@@ -65,6 +65,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'et',
+      readTime: {
+        readTimePrefix: 'Temps de lecture',
+        minute: 'min',
+      },
       pagination: {
         page: 'Page',
         previousPage: 'Page précédente',
@@ -106,6 +111,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Posté à',
         summary: 'Points clés',
         shareButtonText: 'Partager',
+        refreshButtonText: 'Dernier message',
+        visuallyHiddenButtonText: 'Nouveau message disponible',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -373,48 +380,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Accueil',
         url: '/afrique',
-      },
-      {
-        title: 'Ecoutez en direct',
-        url: '/afrique/bbc_afrique_radio/liveradio',
-      },
-      {
-        title: 'Election Côte d’Ivoire',
-        url: '/afrique/topics/ckglqk3zzxxt',
-      },
-      {
-        title: 'Election Cameroun',
-        url: '/afrique/topics/c70xvpqg58yt',
-      },
-      {
-        title: 'Afrique',
-        url: '/afrique/topics/cvqxn2k7kv7t',
-      },
-      {
-        title: 'Monde',
-        url: '/afrique/topics/cvqxn21vx11t',
-      },
-      {
-        title: 'Santé',
-        url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
-        title: 'Science et technologie',
-        url: '/afrique/topics/crezq2zk0q4t',
-      },
-      {
-        title: 'Culture',
-        url: '/afrique/topics/cnq687nrrw8t',
-      },
-      {
-        title: 'Vidéos',
-        url: '/afrique/topics/cz4vn9gyd6rt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'Nos émissions',
-        url: '/afrique/topics/c88nzggm8gxt',
-        hideOnLiteSite: true,
       },
     ],
   },

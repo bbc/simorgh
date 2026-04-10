@@ -1,5 +1,4 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react-webpack5'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react-webpack5';
 import { withServicesKnob } from '#psammead/psammead-storybook-helpers/src';
 import {
   boolean,
@@ -106,7 +105,7 @@ storiesOf('Containers/TimestampContainer', module)
   .addDecorator(withServicesKnob())
   .add(
     'default',
-    ({ locale, script, service }) => {
+    ({ locale }) => {
       updateAllTimestamps();
       const storyTimestamp = select(
         'Timestamp',
@@ -117,16 +116,14 @@ storiesOf('Containers/TimestampContainer', module)
         ({
           fa: jalaali,
           ps: jalaali,
-        }[locale]);
+        })[locale];
       return (
         <TimestampContainer
           timestamp={getTimestampValue(storyTimestamp)}
           dateTimeFormat="YYYY-MM-DD"
           format={text('Format', 'D MMMM YYYY, HH:mm z')}
           isRelative={boolean('isRelative', false)}
-          script={script}
           locale={locale}
-          service={service}
           altCalendar={getAltCalendar()}
         />
       );
@@ -135,7 +132,7 @@ storiesOf('Containers/TimestampContainer', module)
   )
   .add(
     'with prefix',
-    ({ locale, script, service }) => {
+    ({ locale }) => {
       updateAllTimestamps();
 
       const storyTimestamp = select(
@@ -150,9 +147,7 @@ storiesOf('Containers/TimestampContainer', module)
           format={text('Format', 'D MMMM YYYY, HH:mm z')}
           isRelative={boolean('isRelative', false)}
           prefix={text('Prefix text', 'Updated')}
-          script={script}
           locale={locale}
-          service={service}
         />
       );
     },
@@ -160,7 +155,7 @@ storiesOf('Containers/TimestampContainer', module)
   )
   .add(
     'with prefix and suffix',
-    ({ locale, script, service }) => {
+    ({ locale }) => {
       updateAllTimestamps();
 
       const storyTimestamp = select(
@@ -176,9 +171,7 @@ storiesOf('Containers/TimestampContainer', module)
           isRelative={boolean('isRelative', false)}
           prefix={text('Prefix text', 'This')}
           suffix={text('Suffix text', 'is date of last update')}
-          script={script}
           locale={locale}
-          service={service}
         />
       );
     },

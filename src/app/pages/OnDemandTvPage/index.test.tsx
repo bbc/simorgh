@@ -1,7 +1,5 @@
 import { FetchMock } from 'jest-fetch-mock';
-import React from 'react';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { TV_PAGE } from '#app/routes/utils/pageTypes';
@@ -31,7 +29,7 @@ interface Props {
 const renderPage = async ({ pageData, service }: Props) => {
   let result;
   await act(async () => {
-    result = render(<OnDemandTvPage service={service} pageData={pageData} />, {
+    result = render(<OnDemandTvPage pageData={pageData} />, {
       bbcOrigin: 'https://www.test.bbc.com',
       derivedPageType: 'On Demand TV',
       pageType,
@@ -43,8 +41,6 @@ const renderPage = async ({ pageData, service }: Props) => {
 
   return result;
 };
-
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
 
 const fetchMock = fetch as FetchMock;
 
@@ -94,7 +90,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByTestId } = await renderPage({
       pageData,
       service: 'pashto',
@@ -115,7 +110,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -136,7 +130,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -154,7 +147,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -172,7 +164,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -190,7 +181,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -210,7 +200,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required query
     const { container } = await renderPage({
       pageData,
       service: 'pashto',
@@ -236,7 +225,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required queries
     const { container, getByText } = await renderPage({
       pageData,
       service: 'pashto',
@@ -258,7 +246,6 @@ describe('OnDemand TV Page ', () => {
       pageType,
       toggles,
     });
-    // @ts-expect-error react testing library returns the required queries
     const { container, getByText } = await renderPage({
       pageData,
       service: 'pashto',

@@ -13,7 +13,6 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-polska',
     atiAnalyticsProducerId: '135',
     atiAnalyticsProducerName: 'POLISH',
-    useReverb: true,
     chartbeatDomain: 'polska.bbc.co.uk',
     brandName: 'BBC News Polska',
     product: 'BBC News',
@@ -45,6 +44,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'i',
       pagination: {
         page: 'Strona',
         previousPage: 'Poprzednia',
@@ -53,6 +53,11 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'Reklama',
+      },
+      readTime: {
+        readTimePrefix: 'Czas czytania',
+        long: 'Długi format',
+        minute: 'min',
       },
       byline: {
         articleInformation: 'Informacje o artykule',
@@ -90,6 +95,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Opublikowano o',
         summary: 'Podsumowanie',
         shareButtonText: 'Udostępnij',
+        refreshButtonText: 'Najnowszy wpis',
+        visuallyHiddenButtonText: 'Nowy wpis dostępny',
       },
       downloads: {
         instructions: 'Możesz pobrać i obejrzeć dzisiejsze wiadomości.',
@@ -394,22 +401,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Strona główna',
         url: '/polska',
-      },
-      {
-        title: 'Polska',
-        url: '/polska/topics/cly1xdxypzet',
-      },
-      {
-        title: 'Świat',
-        url: '/polska/topics/cvg9w8yplg1t',
-      },
-      {
-        title: 'Zdrowie',
-        url: '/polska/topics/c15nxyq4pqnt',
-      },
-      {
-        title: 'Wideo',
-        url: '/polska/topics/c4gk270dy10t',
       },
     ],
   },

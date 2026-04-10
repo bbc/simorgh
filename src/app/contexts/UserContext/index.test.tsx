@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import { render } from '@testing-library/react';
 import Cookie from 'js-cookie';
 import * as onClient from '#app/lib/utilities/onClient';
@@ -47,8 +47,8 @@ describe('UserContext', () => {
 
     expect(personalisationEnabled).toHaveBeenCalledWith('111');
 
-    expect(React.use).toHaveBeenCalledTimes(1);
-    expect(React.use).toHaveReturnedWith({
+    expect(use).toHaveBeenCalledTimes(1);
+    expect(use).toHaveReturnedWith({
       cookiePolicy: '111',
       personalisationEnabled: true,
       updateCookiePolicy: expect.any(Function),
@@ -67,7 +67,7 @@ describe('UserContext', () => {
     });
 
     it('should call cookie logic when not opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
 
       render(<DummyComponentWithContext />);
@@ -76,7 +76,7 @@ describe('UserContext', () => {
     });
 
     it('should not call cookie logic when on opera mini and is on client', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => true);
 
       render(<DummyComponentWithContext />);
@@ -94,7 +94,7 @@ describe('UserContext', () => {
     });
 
     it('should not set cookie when ckns_mvt cookie already exists', () => {
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       setCookie({ name: 'ckns_mvt', value: 'foo' });
       cookieSetterSpy.mockClear();
@@ -108,7 +108,7 @@ describe('UserContext', () => {
     it('should set cookie when no ckns_mvt cookie exists', () => {
       const uuidRegex =
         /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-      onClientSpy.mockImplementationOnce(() => true as unknown as Location);
+      onClientSpy.mockImplementationOnce(() => true);
       isOperaProxySpy.mockImplementationOnce(() => false);
       // @ts-expect-error This should be able to be mocked as a string or undefined
       cookieGetterSpy.mockImplementationOnce(() => undefined);

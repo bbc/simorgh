@@ -11,8 +11,13 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
 } from '../../src/app/legacy/psammead/gel-foundations/src/breakpoints';
-import * as spacings from '../../src/app/components/ThemeProvider/spacings'
-import {MARGIN_BELOW_400PX, MARGIN_ABOVE_400PX, GUTTER_BELOW_600PX, GUTTER_ABOVE_600PX} from '../../src/app/components/ThemeProvider/spacings'
+import * as spacings from '../../src/app/components/ThemeProvider/spacings';
+import {
+  MARGIN_BELOW_400PX,
+  MARGIN_ABOVE_400PX,
+  GUTTER_BELOW_600PX,
+  GUTTER_ABOVE_600PX,
+} from '../../src/app/components/ThemeProvider/spacings';
 
 <Meta title="Coding Standards/Migrating Legacy Components" />
 
@@ -155,73 +160,12 @@ _Ensure that the `jsx` function is imported from the `@emotion/react` library, p
 
 ```jsx
 
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
-
 import styles from './index.styles';
 
 ...
 
 <a css={styles.link} href={href}>Link Text Here</a>
 ```
-
-## Migrating `fontVariants` and `fontSizes`
-
-### Before
-
-`script` and `service` were passed as props to the styled component, and used to determine the font size based on script , and the font variant, based on `service`.
-
-**(index.jsx)**
-
-```jsx
-const StyledLink = styled.a`
-  /* Font Size */
-  ${({ script }) => script && getCanon(script)}
-  /* Font Variant */
-  ${({ service }) => getSerifMedium(service)}
-  ...otherProps
-`;
-```
-
-### After
-
-**(index.styles.ts)**
-
-```jsx
-
-import { css, Theme } from '@emotion/react';
-
-const styles = {
-  link: ({ fontSizes, fontVariants }: Theme) => css({
-    ...fontSizes.canon,
-    ...fontVariants.serifMedium
-    ...otherProps
-  }),
-};
-
-export const styles;
-```
-
-### Font Sizes Mappings
-
-<Markdown>
-  {`
-| Before                                                                                                                                                     | After                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| \`${({ script }) => script && getCanon(script)}\` <br /> **OR** <br />\`${({ script }) => getCanon(script)}\` <br /> **OR** <br /> \`${() => getCanon(script)}\` | \`...fontSizes.canon\` |
-`}
-</Markdown>
-
-### Font Variants Mappings
-
-<Markdown>
-  {`
-| Before                                                                                                | After                         |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------- |
-| \`${({ service }) => getSerifMedium(service)}\` <br /> **OR** <br /> \`${() => getSerifMedium(service)}\` | \`...fontVariants.serifMedium\` |
-`}
-</Markdown>
 
 ## Migrating Media Queries
 

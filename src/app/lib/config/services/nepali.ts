@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-nepali',
     atiAnalyticsProducerId: '63',
     atiAnalyticsProducerName: 'NEPALI',
-    useReverb: true,
     chartbeatDomain: 'nepali.bbc.co.uk',
     brandName: 'BBC News नेपाली',
     product: 'BBC News',
     serviceLocalizedName: 'नेपाली',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/nepali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
     externalLinkText: ', बाह्य',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'र',
+      readTime: {
+        readTimePrefix: 'पढ्ने समय',
+        minute: 'मिनेट',
+      },
       pagination: {
         page: 'पेज',
         previousPage: 'पछाडि',
@@ -87,6 +92,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'पोस्ट गरिएको',
         summary: 'सारांश',
         shareButtonText: 'शेयर गर्नुहोस्',
+        refreshButtonText: 'नयाँ पोस्ट',
+        visuallyHiddenButtonText: 'नयाँ पोस्ट उपलब्ध छ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -345,26 +352,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'समाचार',
         url: '/nepali',
-      },
-      {
-        title: 'नेपाल',
-        url: '/nepali/topics/cyx5k2yzyj6t',
-      },
-      {
-        title: 'विश्व',
-        url: '/nepali/topics/cy5nkr41gx6t',
-      },
-      {
-        title: 'स्वास्थ्य',
-        url: '/nepali/topics/c2dwqjg83q0t',
-      },
-      {
-        title: 'विज्ञान तथा प्रविधि',
-        url: '/nepali/topics/c9de5jl3967t',
-      },
-      {
-        title: 'रेडिओ',
-        url: '/nepali/bbc_nepali_radio/programmes/p0340xzv',
       },
     ],
   },

@@ -9,7 +9,6 @@ exports[`Index Heading snapshot should render correctly for IDX 1`] = `
   font-weight: 400;
   color: #6E6E73;
   margin: 0;
-  padding-bottom: 1.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -23,26 +22,6 @@ exports[`Index Heading snapshot should render correctly for IDX 1`] = `
   .emotion-0 {
     font-size: 1.5rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    padding: 1.5rem 0 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-0 {
-    padding: 1.5rem 0 0;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 
@@ -66,7 +45,6 @@ exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
   font-weight: 400;
   color: #6E6E73;
   margin: 0;
-  padding-bottom: 1.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -80,26 +58,6 @@ exports[`Index Heading snapshot should render rtl correctly for IDX 1`] = `
   .emotion-0 {
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    padding: 1.5rem 0 0.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-0 {
-    padding: 1.5rem 0 0;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 80rem;
   }
 }
 

@@ -301,30 +301,38 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-18 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-18 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-18 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-18 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -339,7 +347,9 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 }
 
 .emotion-20 {
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,16 +368,14 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-20 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-22 {
-  height: 100%;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -377,27 +385,23 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  bottom: 0.125rem;
-  padding-top: 0.125rem;
+  min-height: 2.625rem;
 }
 
-.emotion-22:hover,
-.emotion-22:focus {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.emotion-22:hover::before,
+.emotion-22:focus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   border-bottom: 0.25rem solid #FFFFFF;
-  margin-bottom: -0.25rem;
 }
 
 .emotion-22:focus-visible::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -0.1875rem;
-  bottom: 0;
-  right: -0.1875rem;
-  border-top: 0.25rem solid #FFFFFF;
+  inset: 0px -0.5rem;
   outline: 0.25rem solid #FFFFFF;
+  outline-offset: -0.25rem;
 }
 
 .emotion-24 {
@@ -405,6 +409,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -516,7 +521,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 .emotion-31 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -890,31 +895,38 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 .emotion-142 {
   background-color: #B80000;
-  height: 2.75rem;
+  min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
-  border-top: 0.0625rem solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
 
 @media (min-width: 15rem) {
   .emotion-142 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-142 {
-    height: 3.75rem;
+    min-height: 3.75rem;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-142 {
-    height: 4rem;
+    min-height: 4rem;
   }
 }
 
@@ -1246,6 +1258,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
           >
             <button
               aria-expanded="false"
+              aria-label="Sections"
               class="focusIndicatorRemove emotion-35 emotion-36"
               dir="ltr"
               type="button"
@@ -1735,7 +1748,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
               ©
                
             </span>
-            2025 BBC. The BBC is not responsible for the content of external sites.
+            2026 BBC. The BBC is not responsible for the content of external sites.
              
             <a
               class="focusIndicatorInvert emotion-163"
@@ -1753,7 +1766,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
 
 exports[`PageLayoutWrapper should render fonts for afaanoromoo 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1761,7 +1774,7 @@ exports[`PageLayoutWrapper should render fonts for afaanoromoo 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for afrique 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1769,7 +1782,7 @@ exports[`PageLayoutWrapper should render fonts for afrique 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for amharic 1`] = `
 {
-  "font-family": ""Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1777,7 +1790,7 @@ exports[`PageLayoutWrapper should render fonts for amharic 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for arabic 1`] = `
 {
-  "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1785,7 +1798,7 @@ exports[`PageLayoutWrapper should render fonts for arabic 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for archive 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1793,7 +1806,7 @@ exports[`PageLayoutWrapper should render fonts for archive 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for azeri 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1801,7 +1814,7 @@ exports[`PageLayoutWrapper should render fonts for azeri 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for bengali 1`] = `
 {
-  "font-family": ""Noto Serif Bengali",Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": ""Noto Serif Bengali", Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1809,7 +1822,7 @@ exports[`PageLayoutWrapper should render fonts for bengali 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for burmese 1`] = `
 {
-  "font-family": "Padauk,Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": "Padauk, Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1817,7 +1830,7 @@ exports[`PageLayoutWrapper should render fonts for burmese 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for cymrufyw 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1825,7 +1838,7 @@ exports[`PageLayoutWrapper should render fonts for cymrufyw 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for dari 1`] = `
 {
-  "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1833,7 +1846,7 @@ exports[`PageLayoutWrapper should render fonts for dari 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for gahuza 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1841,7 +1854,7 @@ exports[`PageLayoutWrapper should render fonts for gahuza 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for gujarati 1`] = `
 {
-  "font-family": ""Noto Sans Gujarati",Rasa,"Hind vadodara",Shruti,Gautami,"Gujarati Sangam MN","Gujarati MT",sans-serif",
+  "font-family": ""Noto Sans Gujarati", Rasa, "Hind vadodara", Shruti, Gautami, "Gujarati Sangam MN", "Gujarati MT", sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1849,7 +1862,7 @@ exports[`PageLayoutWrapper should render fonts for gujarati 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for hausa 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1857,7 +1870,7 @@ exports[`PageLayoutWrapper should render fonts for hausa 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for hindi 1`] = `
 {
-  "font-family": "Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": "Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1865,7 +1878,7 @@ exports[`PageLayoutWrapper should render fonts for hindi 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for igbo 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1873,7 +1886,7 @@ exports[`PageLayoutWrapper should render fonts for igbo 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for indonesia 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1881,7 +1894,7 @@ exports[`PageLayoutWrapper should render fonts for indonesia 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for japanese 1`] = `
 {
-  "font-family": ""Hiragino Kaku Gothic Pro","ﾋﾗギﾉ角ゴPro W3","MS PGothic","MS UI Gothic",Helvetica,Arial,sans-serif",
+  "font-family": ""Hiragino Kaku Gothic Pro", "ﾋﾗギﾉ角ゴPro W3", "MS PGothic", "MS UI Gothic", Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1889,7 +1902,7 @@ exports[`PageLayoutWrapper should render fonts for japanese 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for korean 1`] = `
 {
-  "font-family": ""Apple SD Gothic Neo",AppleGothic,"Malgun Gothic",Dotum,"Noto Sans CJK KR",sans-serif",
+  "font-family": ""Apple SD Gothic Neo", AppleGothic, "Malgun Gothic", Dotum, "Noto Sans CJK KR", sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1897,7 +1910,7 @@ exports[`PageLayoutWrapper should render fonts for korean 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for kyrgyz 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1905,7 +1918,7 @@ exports[`PageLayoutWrapper should render fonts for kyrgyz 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for magyarul 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1913,7 +1926,7 @@ exports[`PageLayoutWrapper should render fonts for magyarul 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for marathi 1`] = `
 {
-  "font-family": ""Noto Sans Devanagari",Hind,"Mukta Vaani",Gautami,"Kohinoor Devanagari",sans-serif",
+  "font-family": ""Noto Sans Devanagari", Hind, "Mukta Vaani", Gautami, "Kohinoor Devanagari", sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1921,7 +1934,7 @@ exports[`PageLayoutWrapper should render fonts for marathi 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for mundo 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1929,7 +1942,7 @@ exports[`PageLayoutWrapper should render fonts for mundo 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for naidheachdan 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1937,7 +1950,7 @@ exports[`PageLayoutWrapper should render fonts for naidheachdan 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for nepali 1`] = `
 {
-  "font-family": "Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": "Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1945,7 +1958,15 @@ exports[`PageLayoutWrapper should render fonts for nepali 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for news 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
+  "font-style": "normal",
+  "font-weight": "400",
+}
+`;
+
+exports[`PageLayoutWrapper should render fonts for newsround 1`] = `
+{
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1953,7 +1974,7 @@ exports[`PageLayoutWrapper should render fonts for news 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for pashto 1`] = `
 {
-  "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1961,7 +1982,7 @@ exports[`PageLayoutWrapper should render fonts for pashto 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for persian 1`] = `
 {
-  "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1969,7 +1990,7 @@ exports[`PageLayoutWrapper should render fonts for persian 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for pidgin 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1977,7 +1998,7 @@ exports[`PageLayoutWrapper should render fonts for pidgin 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for polska 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1985,7 +2006,7 @@ exports[`PageLayoutWrapper should render fonts for polska 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for portuguese 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -1993,7 +2014,7 @@ exports[`PageLayoutWrapper should render fonts for portuguese 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for punjabi 1`] = `
 {
-  "font-family": ""Noto Sans Gurmukhi",Gautami,"Kohinoor Gurmukhi",sans-serif",
+  "font-family": ""Noto Sans Gurmukhi", Gautami, "Kohinoor Gurmukhi", sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2001,7 +2022,7 @@ exports[`PageLayoutWrapper should render fonts for punjabi 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for romania 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2009,7 +2030,7 @@ exports[`PageLayoutWrapper should render fonts for romania 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for russian 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2017,7 +2038,7 @@ exports[`PageLayoutWrapper should render fonts for russian 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for scotland 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2025,7 +2046,7 @@ exports[`PageLayoutWrapper should render fonts for scotland 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for serbian 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2033,7 +2054,7 @@ exports[`PageLayoutWrapper should render fonts for serbian 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for sinhala 1`] = `
 {
-  "font-family": ""Noto Serif Sinhala",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""Noto Serif Sinhala", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2041,7 +2062,7 @@ exports[`PageLayoutWrapper should render fonts for sinhala 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for somali 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2049,7 +2070,7 @@ exports[`PageLayoutWrapper should render fonts for somali 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for sport 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2057,7 +2078,7 @@ exports[`PageLayoutWrapper should render fonts for sport 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for swahili 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2065,7 +2086,7 @@ exports[`PageLayoutWrapper should render fonts for swahili 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for tamil 1`] = `
 {
-  "font-family": ""Noto Sans Tamil",Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": ""Noto Sans Tamil", Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2073,7 +2094,7 @@ exports[`PageLayoutWrapper should render fonts for tamil 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for telugu 1`] = `
 {
-  "font-family": ""Noto Sans Telugu","Hind Guntur",Gautami,"Kohinoor Telugu",sans-serif",
+  "font-family": ""Noto Sans Telugu", "Hind Guntur", Gautami, "Kohinoor Telugu", sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2081,7 +2102,7 @@ exports[`PageLayoutWrapper should render fonts for telugu 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for thai 1`] = `
 {
-  "font-family": "Tahoma,Helmet,freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Tahoma, Helmet, freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2089,7 +2110,7 @@ exports[`PageLayoutWrapper should render fonts for thai 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for tigrinya 1`] = `
 {
-  "font-family": ""Noto Sans Ethiopic",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""Noto Sans Ethiopic", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2097,7 +2118,7 @@ exports[`PageLayoutWrapper should render fonts for tigrinya 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for turkce 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2105,7 +2126,7 @@ exports[`PageLayoutWrapper should render fonts for turkce 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for ukchina 1`] = `
 {
-  "font-family": "Helvetica,Arial,STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体",
+  "font-family": "Helvetica, Arial, STHeiti, "Microsoft YaHei", SimSun",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2113,7 +2134,7 @@ exports[`PageLayoutWrapper should render fonts for ukchina 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for ukrainian 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2121,7 +2142,7 @@ exports[`PageLayoutWrapper should render fonts for ukrainian 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for urdu 1`] = `
 {
-  "font-family": ""BBC Reith Qalam","Times New Roman",Arial,Verdana,Geneva,Helvetica,sans-serif",
+  "font-family": ""BBC Reith Qalam", "Times New Roman", Arial, Verdana, Geneva, Helvetica, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2129,7 +2150,7 @@ exports[`PageLayoutWrapper should render fonts for urdu 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for uzbek 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2137,7 +2158,7 @@ exports[`PageLayoutWrapper should render fonts for uzbek 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for vietnamese 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2145,7 +2166,7 @@ exports[`PageLayoutWrapper should render fonts for vietnamese 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for ws 1`] = `
 {
-  "font-family": "ReithSans,Helvetica,Arial,sans-serif",
+  "font-family": "ReithSans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2153,7 +2174,7 @@ exports[`PageLayoutWrapper should render fonts for ws 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for yoruba 1`] = `
 {
-  "font-family": "Helmet,Freesans,Helvetica,Arial,sans-serif",
+  "font-family": "Helmet, Freesans, Helvetica, Arial, sans-serif",
   "font-style": "normal",
   "font-weight": "400",
 }
@@ -2161,7 +2182,7 @@ exports[`PageLayoutWrapper should render fonts for yoruba 1`] = `
 
 exports[`PageLayoutWrapper should render fonts for zhongwen 1`] = `
 {
-  "font-family": "Helvetica,Arial,STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体",
+  "font-family": "Helvetica, Arial, STHeiti, "Microsoft YaHei", SimSun",
   "font-style": "normal",
   "font-weight": "400",
 }

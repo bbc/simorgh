@@ -1,13 +1,9 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-
-import React, { PropsWithChildren, use } from 'react';
-import { jsx } from '@emotion/react';
+import { PropsWithChildren, use } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
-import { PageTypes } from '#app/models/types/global';
-import useIsPWA from '#app/hooks/useIsPWA';
+import { Navigation, PageTypes } from '#app/models/types/global';
 import appendAdDomainsToCSPHeader from '#app/utilities/appendAdDomainsToCSPHeader';
+import { OFFLINE_PAGE } from '#app/routes/utils/pageTypes';
 import { TopStoryItem } from '../../pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import WebVitals from '../../legacy/containers/WebVitals';
 import HeaderContainer from '../../legacy/containers/Header';
@@ -16,7 +12,7 @@ import ManifestContainer from '../../legacy/containers/Manifest';
 import ServiceWorker from '../ServiceWorker';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '../../contexts/RequestContext';
-import fontFacesLazy from '../ThemeProvider/fontFacesLazy';
+import fontFaces from '../ThemeProvider/fontFaces';
 import styles from './index.styles';
 import { OptimoMostReadRecord, CPSMostReadRecord } from '../MostRead/types';
 
@@ -42,6 +38,7 @@ type Props = {
     mostRead?: { items: (OptimoMostReadRecord | CPSMostReadRecord)[] };
   };
   status: number;
+  navItems?: Navigation[] | null;
 };
 
 type wordCountType = number | undefined;
@@ -50,14 +47,15 @@ const PageLayoutWrapper = ({
   children,
   pageData,
   status,
+  navItems,
 }: PropsWithChildren<Props>) => {
   const { service } = use(ServiceContext);
   const { isLite, isAmp, nonce, cspHeader } = use(RequestContext);
-  const isPWA = useIsPWA();
 
   const isErrorPage = ![200].includes(status) || !status;
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
+  const isOfflinePage = pageType === OFFLINE_PAGE;
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
@@ -75,7 +73,7 @@ const PageLayoutWrapper = ({
       }, 0);
   }
 
-  const serviceFonts = fontFacesLazy(service, isPWA);
+  const serviceFonts = fontFaces();
 
   const fontJs =
     isLite ||
@@ -108,9 +106,8 @@ const PageLayoutWrapper = ({
 					head.appendChild(fontStylePlaceholder);
                 };
                 const retrieveAndStoreFont = (font, storageKey, shouldAttachStyle) => {
-                	const fontLocation = font.src ? font.src : 'https://static.files.bbci.co.uk/fonts/reith/'+ font.version + (font.subsets ? '/subsets' : '') + '/' + font.name + '.woff2';
                     window.addEventListener("load", (e) => {
-                    getFont(fontLocation).then((fontContents) => {
+                    getFont(font.downloadSrc).then((fontContents) => {
                     	const forStorage = { base64Contents: fontContents, fontFamily: font.fontFamily, fontWeight: font.fontWeight, fontVersion: font.version };
                     	localStorage.setItem(storageKey, JSON.stringify(forStorage));
                     	if (shouldAttachStyle) {
@@ -228,10 +225,11 @@ const PageLayoutWrapper = ({
       )}
       <ServiceWorker />
       <ManifestContainer />
-      {!isErrorPage && <WebVitals pageType={pageType} />}
+      {!isErrorPage && !isOfflinePage && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
+          navItems={navItems}
           propsForTopBarOJComponent={{
             blocks: pageData?.secondaryColumn?.topStories || [],
           }}

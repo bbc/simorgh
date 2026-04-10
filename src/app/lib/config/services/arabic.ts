@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-arabic',
     atiAnalyticsProducerId: '5',
     atiAnalyticsProducerName: 'ARABIC',
-    useReverb: true,
     chartbeatDomain: 'arabic.bbc.co.uk',
     brandName: 'BBC News عربي',
     product: 'BBC News',
     serviceLocalizedName: 'عربي',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/arabic/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
     externalLinkText: '، خارجي ',
@@ -66,6 +66,11 @@ export const service: DefaultServiceConfig = {
       },
     },
     translations: {
+      and: 'و',
+      readTime: {
+        readTimePrefix: 'مدة القراءة',
+        minute: 'دقائق',
+      },
       pagination: {
         page: 'صفحة',
         previousPage: 'السابق',
@@ -96,6 +101,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'توقيت النشر',
         summary: 'ملخص',
         shareButtonText: 'شارك',
+        refreshButtonText: 'أحدث منشور',
+        visuallyHiddenButtonText: 'منشور جديد متاح',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -422,42 +429,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'رئيسية',
         url: '/arabic',
-      },
-      {
-        title: 'شاهد البث المباشر',
-        url: '/arabic/media-49522519',
-      },
-      {
-        title: 'أخبار',
-        url: '/arabic/topics/cv2xyrnr8dnt',
-      },
-      {
-        title: 'اقتصاد',
-        url: '/arabic/topics/cqywj97d487t',
-      },
-      {
-        title: 'صحة وعلوم',
-        url: '/arabic/topics/clmj3d7282gt',
-      },
-      {
-        title: 'رياضة',
-        url: '/arabic/topics/cyx5kw7g1j2t',
-      },
-      {
-        title: 'فيديو',
-        url: '/arabic/topics/cz9mm6r1q5et',
-      },
-      {
-        title: 'تحقيقات',
-        url: '/arabic/topics/c51nnzdeg9zt',
-      },
-      {
-        title: 'بودكاست',
-        url: '/arabic/topics/cljddp5lw0dt',
-      },
-      {
-        title: 'برامجنا',
-        url: '/arabic/topics/crgyknwdlwnt',
       },
     ],
   },

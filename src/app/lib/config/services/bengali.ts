@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-bengali',
     atiAnalyticsProducerId: '31',
     atiAnalyticsProducerName: 'BENGALI',
-    useReverb: true,
     chartbeatDomain: 'bengali.bbc.co.uk',
     brandName: 'BBC News বাংলা',
     product: 'BBC News',
     serviceLocalizedName: 'বাংলা',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/bengali/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News বাংলা',
     dir: `ltr`,
     externalLinkText: ', বাইরের',
@@ -67,6 +67,11 @@ export const service: DefaultServiceConfig = {
     },
     googleSiteVerification: 'D-aEHUiyVaMoUJXjVRbDVkxS0dLTMUZLD3dLPTnWO4Q',
     translations: {
+      and: 'এবং',
+      readTime: {
+        readTimePrefix: 'পড়ার সময়',
+        minute: 'মিনিট',
+      },
       pagination: {
         page: 'পৃষ্ঠা',
         previousPage: 'ফিরে যাব',
@@ -106,6 +111,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'পোস্ট করা হয়েছে',
         summary: 'সার সংক্ষেপ',
         shareButtonText: 'শেয়ার করুন',
+        refreshButtonText: 'সর্বশেষ পোস্ট',
+        visuallyHiddenButtonText: 'নতুন পোস্ট উপলব্ধ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -362,38 +369,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'মূলপাতা',
         url: '/bengali',
-      },
-      {
-        title: 'রাজনীতি',
-        url: '/bengali/topics/cqywj91rkg6t',
-      },
-      {
-        title: 'সর্বাধিক পঠিত',
-        url: '/bengali/popular/read',
-      },
-      {
-        title: 'বিশ্ব',
-        url: '/bengali/topics/c907347rezkt',
-      },
-      {
-        title: 'অর্থনীতি',
-        url: '/bengali/topics/cjgn7233zk5t',
-      },
-      {
-        title: 'স্বাস্থ্য',
-        url: '/bengali/topics/cg7265yyxn1t',
-      },
-      {
-        title: 'খেলা',
-        url: '/bengali/topics/cdr56g57y01t',
-      },
-      {
-        title: 'প্রযুক্তি',
-        url: '/bengali/topics/c8y94k95v52t',
-      },
-      {
-        title: 'ভিডিও',
-        url: '/bengali/topics/cxy7jg418e7t',
       },
     ],
   },

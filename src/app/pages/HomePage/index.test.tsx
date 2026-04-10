@@ -1,5 +1,4 @@
 import { fireEvent } from '@testing-library/react';
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { data as kyrgyzHomePageData } from '#data/kyrgyz/homePage/index.json';
@@ -19,16 +18,11 @@ import { suppressPropWarnings } from '../../legacy/psammead/psammead-test-helper
 
 jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
-  default: jest.fn(),
+  default: jest.fn(() => ({ onClick: jest.fn() })),
 }));
 
 // Mock useViewTracker hook globally
 jest.mock('../../hooks/useViewTracker', () => ({
-  __esModule: true,
-  default: jest.fn(),
-}));
-
-jest.mock('../../hooks/useClickTrackerHandler', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
@@ -161,7 +155,7 @@ describe('Home Page', () => {
       service: 'kyrgyz',
     });
     expect(Helmet.peek().title).toEqual(
-      'Кабарлар, акыркы мүнөттөгү кабарлар, талдоо, видео - BBC News Кыргыз Кызматы',
+      'BBC News Kyrgyz - BBC News Кыргыз Кызматы',
     );
   });
 

@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import bengaliScript from '../fontScripts/bengali';
 import {
@@ -6,9 +7,9 @@ import {
 } from '../fontFaces';
 import bengaliFontVariants from '../fontVariants/bengali';
 import withThemeProvider from '../withThemeProvider';
-import brandSVG from '../chameleonLogos/bangla';
+import brandSVG from '../chameleonLogos/bengali';
 
-const bengaliTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -24,4 +25,4 @@ const bengaliTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(bengaliTheme);
+export default withThemeProvider(theme);

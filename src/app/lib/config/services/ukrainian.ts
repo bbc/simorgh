@@ -2,9 +2,9 @@ import cyrillic from '../../../components/ThemeProvider/fontScripts/cyrillic';
 import '#psammead/moment-timezone-include/tz/GMT';
 import '#psammead/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
-import { mainTranslations as russianMainTranslations } from './russian';
 import { UkrainianConfig } from '../../../models/types/serviceConfig';
 import { Direction, Services } from '../../../models/types/global';
+import russianUkrainianSharedTranslations from './russianUkrainianSharedTranslations';
 
 const secondaryColumnTranslations = {
   topStoriesTitle: 'Головне',
@@ -17,12 +17,12 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   atiAnalyticsProducerName: 'UKRAINIAN',
-  useReverb: true,
   chartbeatDomain: 'ukrainian.bbc.co.uk',
   brandName: 'BBC News Україна',
   product: 'BBC News',
   serviceLocalizedName: 'Україна',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/metadata/poster-1024x576.png',
   defaultImageAltText: 'BBC News Україна',
   dir: 'ltr' as Direction,
   externalLinkText: ', зовнішнє',
@@ -46,16 +46,16 @@ const baseServiceConfig = {
   showAdPlaceholder: true,
   showRelatedTopics: true,
   podcastPromo: {
-    title: 'Viber',
-    brandTitle: 'Як дізнатися головне про Україну та світ?',
-    brandDescription: 'Стежте за BBC News Україна у Viber!',
+    title: 'Whatsapp',
+    brandTitle: 'BBC Україна тепер у WhatsApp!',
+    brandDescription: 'Як дізнатися головне про Україну та світ?',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0ld00bz.jpg',
-      alt: 'Підписуйтесь на наш Viber',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0kv11pb.png',
+      alt: 'BBC News Україна підписуйтеся на наш WhatsApp',
     },
     linkLabel: {
-      text: 'Підписуйтеся на канал тут!',
-      href: 'https://invite.viber.com/?g2=AQAYCiHrGU3SlUeR%2FZaHRAQ4%2FGdXWGFgaUOXbMnWlHpIli4mBJEfTyN%2FHRPjb7GW',
+      text: 'Підписуйтеся на наш канал тут.',
+      href: 'https://www.whatsapp.com/channel/0029Vau5deM0QeaqQRTPVs2e',
     },
     skipLink: {
       text: 'Пропустити %title% і продовжити',
@@ -63,6 +63,11 @@ const baseServiceConfig = {
     },
   },
   translations: {
+    and: 'i',
+    readTime: {
+      readTimePrefix: 'Час прочитання',
+      minute: 'хв',
+    },
     pagination: {
       previousPage: 'Повернутися',
       nextPage: 'Наступна',
@@ -89,6 +94,8 @@ const baseServiceConfig = {
       postedAt: 'Опубілковано о',
       summary: 'Стисло',
       shareButtonText: 'Поділитися',
+      refreshButtonText: 'Останній допис',
+      visuallyHiddenButtonText: 'Доступний новий допис',
     },
     downloads: {
       instructions: 'You can download and view today’s news.',
@@ -344,26 +351,6 @@ const baseServiceConfig = {
       title: 'Головна',
       url: '/ukrainian',
     },
-    {
-      title: 'Війна з Росією',
-      url: '/ukrainian/topics/czp6w66edqpt',
-    },
-    {
-      title: 'Історії',
-      url: '/ukrainian/topics/czrxg3vzy44t',
-    },
-    {
-      title: 'Відео',
-      url: '/ukrainian/topics/c44vmzqkzqqt',
-    },
-    {
-      title: 'Книга року BBC',
-      url: '/ukrainian/topics/cqwrq3rkdrnt',
-    },
-    {
-      title: 'Подкасти',
-      url: '/ukrainian/podcasts/p09jsy3h',
-    },
   ],
 };
 
@@ -382,7 +369,7 @@ export const service: UkrainianConfig = {
     languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
-      ...russianMainTranslations,
+      ...russianUkrainianSharedTranslations,
       ...secondaryColumnTranslations,
       relatedTopics: 'Темы',
     },

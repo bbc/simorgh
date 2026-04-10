@@ -1,0 +1,600 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
+.emotion-0 {
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0.si-nav-open {
+    background-color: #222222;
+  }
+}
+
+@media (min-width: 62.9375rem) {
+  .emotion-0::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 0.0625rem solid #E6E8EA;
+  }
+}
+
+.emotion-0 .e11sm0on2::after {
+  left: 0;
+}
+
+.emotion-2 {
+  position: relative;
+  max-width: 63.4rem;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    margin: 0 0.8rem;
+  }
+}
+
+@media (min-width: 66rem) {
+  .emotion-2 {
+    margin: 0 auto;
+  }
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-5 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.emotion-6::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #B80000;
+  pointer-events: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-7 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-7::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-7:focus-visible {
+    outline: none;
+  }
+
+  .emotion-7:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-7:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-7:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-7 li {
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+}
+
+.emotion-7 li a {
+  color: #FFFFFF;
+  padding: 0 0.5rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 li a:hover::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li a:focus-visible::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
+.emotion-7 li a:focus::after {
+  box-shadow: inset 0 0 0 0.1875rem #FFFFFF;
+  outline: 0.125rem solid #000000;
+  outline-offset: -0.125rem;
+}
+
+.emotion-7 li a[data-active="true"] span::after {
+  border-bottom-color: #FFFFFF;
+}
+
+.emotion-7 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #FFFFFF;
+  display: block;
+  opacity: 0.3;
+}
+
+.emotion-7 li:last-child:before {
+  display: none;
+}
+
+.emotion-7:after {
+  background: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-7.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-9 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  float: left;
+  height: 2.75rem;
+  width: 2.75rem;
+  background-color: #B80000;
+  color: #FFFFFF;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.emotion-9:hover,
+.emotion-9:focus {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.25rem #FFFFFF;
+}
+
+.emotion-9:hover::after,
+.emotion-9:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 0.25rem solid #000000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-9 {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+.emotion-9 svg {
+  vertical-align: middle;
+}
+
+@media (min-width: 20rem) {
+  .emotion-9 {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+.emotion-9 svg {
+  vertical-align: middle;
+  fill: #FFFFFF;
+}
+
+.emotion-11 {
+  color: #000000;
+  fill: currentColor;
+}
+
+@media screen and (forced-colors: active) {
+  .emotion-11 {
+    fill: linkText;
+  }
+}
+
+.emotion-15 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
+  background-color: #FFFFFF;
+  clear: both;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: 0.1875rem solid #B80000;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.emotion-16 ul {
+  padding: 0;
+  border: none;
+}
+
+.emotion-16 ul li {
+  padding: 0;
+}
+
+.emotion-16 ul li:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-16 a {
+  display: block;
+  position: relative;
+  padding-inline: 0.5rem;
+}
+
+.emotion-16 a:hover {
+  background-color: #E6E8EA;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-16 a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 0.25rem;
+  background: #B80000;
+  display: block;
+  opacity: 0;
+}
+
+.emotion-16 a:hover::before {
+  opacity: 1;
+}
+
+.emotion-16 a:focus-visible {
+  outline-offset: -0.1875rem;
+}
+
+.emotion-18 {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-19 {
+    white-space: nowrap;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .emotion-19::-webkit-scrollbar {
+    display: none;
+  }
+
+  .emotion-19:focus-visible {
+    outline: none;
+  }
+
+  .emotion-19:focus-visible::after {
+    outline: 0.1875rem solid #000000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .emotion-19:after {
+    content: ' ';
+    height: 100%;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+  }
+
+  @media (min-width: 25rem) {
+    .emotion-19:after {
+      width: 6rem;
+    }
+  }
+}
+
+.emotion-19 li {
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
+}
+
+.emotion-19 li a {
+  padding: 0 0.5rem;
+  height: 2.75rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-19 li:before {
+  content: "";
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 60%;
+  width: 0.0625rem;
+  background: #B0B2B4;
+  display: block;
+  opacity: 1;
+}
+
+.emotion-19 li:last-child:before {
+  display: none;
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-19.si-nav-scrollable-hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+<div>
+  <nav
+    class="emotion-0 emotion-1"
+    dir="ltr"
+    id="si-nav"
+    role="navigation"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4"
+      >
+        <div
+          class="emotion-5"
+        >
+          <div
+            class="emotion-6"
+          >
+            <div
+              class="emotion-7 emotion-8"
+              data-e2e="scrollable-nav"
+              dir="ltr"
+            >
+              <ul
+                data-testid="scrollable-nav"
+              >
+                <li>
+                  List Items
+                </li>
+              </ul>
+            </div>
+            <amp-state
+              id="menuState"
+            >
+              <script
+                type="application/json"
+              >
+                {"expanded":false}
+              </script>
+            </amp-state>
+            <button
+              aria-expanded="false"
+              aria-label="menu"
+              class="focusIndicatorRemove emotion-9 emotion-10"
+              data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
+              dir="ltr"
+              on="tap:AMP.setState({ menuState: { expanded: !menuState.expanded }}),
+              si-nav-dropdown-menu.toggleVisibility,
+              si-nav-scrollable.toggleClass(class=si-nav-scrollable-hidden),
+              si-nav.toggleClass(class=si-nav-open)
+            "
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="emotion-11 emotion-12"
+                data-amp-bind-hidden="menuState.expanded"
+                focusable="false"
+                height="2.75rem"
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M12 29h21v-2.333H12V29zm0-5.833h21v-2.334H12v2.334zM12 15v2.333h21V15H12z"
+                />
+              </svg>
+              <svg
+                aria-hidden="true"
+                class="emotion-11 emotion-12"
+                data-amp-bind-hidden="!menuState.expanded"
+                focusable="false"
+                height="2.75rem"
+                hidden=""
+                viewBox="0 0 44 44"
+                width="2.75rem"
+              >
+                <path
+                  d="M26.741 15L21.6 20.142 16.458 15 15 16.458l5.142 5.142L15 26.742l1.458 1.458 5.142-5.141 5.141 5.141 1.459-1.458-5.142-5.142 5.142-5.142z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+              <span
+                class="emotion-15"
+              >
+                menu
+              </span>
+            </button>
+          </div>
+          <div
+            class="emotion-16 emotion-17"
+            data-e2e="dropdown-nav"
+            hidden=""
+            id="si-nav-dropdown-menu"
+          >
+            <ul
+              data-testid="dropdown"
+            >
+              <li>
+                Dropdown Items
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="emotion-18"
+        >
+          <div
+            class="emotion-19 emotion-8"
+            data-e2e="scrollable-nav-secondary"
+            dir="ltr"
+            id="si-nav-scrollable"
+          >
+            <ul
+              data-testid="scrollable-nav"
+            >
+              <li>
+                List Items
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+`;

@@ -1,4 +1,4 @@
-import React, { use, useRef, useState } from 'react';
+import { use, useRef, useState } from 'react';
 import SkipLink from '#psammead/psammead-brand/src/SkipLink';
 import { RequestContext } from '#contexts/RequestContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
@@ -11,12 +11,24 @@ import {
   LIVE_PAGE,
 } from '#app/routes/utils/pageTypes';
 import LiteSiteSummary from '#app/components/LiteSiteSummary';
+import NewNavigationContainer from '#src/app/components/Navigation';
+import LegacyNavigationContainer from '#src/app/legacy/containers/Navigation';
+import AccountHeader from '#app/components/Account/AccountHeader';
+import SERVICES_WITH_NEW_NAV from '#app/components/Navigation/config';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import ConsentBanner from '../ConsentBanner';
-import NavigationContainer from '../Navigation';
 import BrandContainer from '../Brand';
+import NewLogoBanner from './NewLogoBanner';
+import styles from './index.styles';
 
-const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+const Header = ({
+  brandRef,
+  skipLink,
+  scriptLink,
+  linkId,
+  children,
+  className,
+}) => {
   const [showConsentBanner, setShowConsentBanner] = useState(true);
 
   const handleBannerBlur = event => {
@@ -38,19 +50,21 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
     <div onBlur={handleBannerBlur}>
       {showConsentBanner && <ConsentBanner onDismissFocusRef={brandRef} />}
       <BrandContainer
-        borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}
         linkId={linkId || 'topPage'}
-      />
+        className={className}
+      >
+        {children}
+      </BrandContainer>
     </div>
   );
 };
 
-const HeaderContainer = ({ propsForTopBarOJComponent }) => {
+const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   const { isAmp, isApp, pageType, isLite } = use(RequestContext);
-  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+  const { service, translations, dir, scriptLink, lang, serviceLang } =
     use(ServiceContext);
   const { skipLinkText } = translations;
 
@@ -63,11 +77,10 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
   // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
-      service={service}
-      script={script}
-      dir={dir}
+      dir={dir || 'ltr'}
       href="#content"
       lang={serviceLang && lang}
+      className="focusIndicatorRemove"
     >
       <div>{skipLinkText}</div>
     </SkipLink>
@@ -90,23 +103,37 @@ const HeaderContainer = ({ propsForTopBarOJComponent }) => {
 
   if (isApp) return null;
 
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+
+  const NavigationComponent = shouldUseNewNav
+    ? NewNavigationContainer
+    : LegacyNavigationContainer;
+
   return (
     <header role="banner" lang={serviceLang}>
+      {shouldUseNewNav && <NewLogoBanner />}
       {isAmp ? (
         <Header
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+          css={shouldUseNewNav ? styles.headerBrand : null}
+        >
+          <AccountHeader />
+        </Header>
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-        />
+          css={shouldUseNewNav ? styles.headerBrand : null}
+        >
+          <AccountHeader />
+        </Header>
       )}
       {isLite && <LiteSiteSummary />}
-      <NavigationContainer
+      <NavigationComponent
+        navItems={navItems}
         propsForTopBarOJComponent={propsForTopBarOJComponent}
       />
     </header>

@@ -30,7 +30,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -440,6 +440,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       </amp-state>
       <button
         aria-expanded="false"
+        aria-label="Sections"
         class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"
@@ -696,8 +697,10 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-current="page"
               aria-labelledby="NavigationLinks-Home"
               class="focusIndicatorRemove emotion-69 emotion-70"
+              data-active="true"
               href="/news"
             >
               <span
@@ -871,7 +874,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -1200,6 +1203,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
       </amp-state>
       <button
         aria-expanded="false"
+        aria-label="Sections"
         class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"
@@ -1611,7 +1615,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -1940,6 +1944,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
       </amp-state>
       <button
         aria-expanded="false"
+        aria-label="Sections"
         class="focusIndicatorRemove emotion-4 emotion-5"
         data-amp-bind-aria-expanded="menuState.expanded ? "true" : "false""
         dir="ltr"
@@ -2345,7 +2350,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -2786,6 +2791,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
@@ -2823,8 +2829,10 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-current="page"
                 aria-labelledby="NavigationLinks-Home"
                 class="focusIndicatorRemove emotion-17 emotion-18"
+                data-active="true"
                 href="/news"
               >
                 <span
@@ -3191,7 +3199,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -3551,6 +3559,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"
@@ -3936,7 +3945,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
 .emotion-2 {
   position: relative;
   max-width: 63.4rem;
-  margin: 0;
+  margin: 0 auto;
   background-color: #FFFFFF;
 }
 
@@ -4296,6 +4305,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       >
         <button
           aria-expanded="false"
+          aria-label="Sections"
           class="focusIndicatorRemove emotion-6 emotion-7"
           dir="ltr"
           type="button"

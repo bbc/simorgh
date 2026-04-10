@@ -23,8 +23,30 @@ const unitTests = {
   ],
   testMatch: [
     '**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
+    '**/?(*.)+(test).{js,jsx,ts,tsx}',
+    '!**/?(*.)+(client.test).{js,jsx,ts,tsx}',
     '!**/src/integration/!(utils)/**/*',
+    '!**/puppeteer/**/*',
+  ],
+};
+
+const clientUnitTests = {
+  preset: 'ts-jest',
+  setupFiles: ['./src/testHelpers/jest-setup.js'],
+  setupFilesAfterEnv: [
+    './src/testHelpers/setupTests.js',
+    'jest-expect-message',
+  ],
+  moduleNameMapper: jestDirAlias,
+  testEnvironment: '@happy-dom/jest-environment',
+  snapshotSerializers: ['@emotion/jest/serializer'],
+  transform: {
+    '^.+\\.[tj]sx?$': 'babel-jest',
+  },
+  displayName: 'Unit Tests (Client)',
+  testMatch: [
+    '**/?(*.)+(client.test).{js,jsx,ts,tsx}',
+    '!**/src/integration/**/*',
     '!**/puppeteer/**/*',
   ],
 };
@@ -95,7 +117,6 @@ const liteIntegrationTests = {
 const puppeteerTests = {
   preset: 'ts-jest',
   setupFiles: ['./puppeteer/jest-setup.js'],
-  setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   moduleNameMapper: jestDirAlias,
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
@@ -107,6 +128,7 @@ const puppeteerTests = {
 module.exports = {
   projects: [
     unitTests,
+    clientUnitTests,
     ampIntegrationTests,
     canonicalIntegrationTests,
     liteIntegrationTests,

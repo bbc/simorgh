@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-turkce',
     atiAnalyticsProducerId: '92',
     atiAnalyticsProducerName: 'TURKISH',
-    useReverb: true,
     chartbeatDomain: 'turkish.bbc.co.uk', // this is meant to be different to the service name
     brandName: 'BBC News Türkçe',
     product: 'BBC News',
     serviceLocalizedName: 'Türkçe',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/turkce/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
     externalLinkText: ', dış',
@@ -47,6 +47,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 've',
       readTime: {
         readTimePrefix: 'Okuma süresi',
         quick: 'Kısa haber',
@@ -83,6 +84,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Basım saati',
         summary: 'Özet',
         shareButtonText: 'Paylaş',
+        refreshButtonText: 'Son gönderi',
+        visuallyHiddenButtonText: 'Yeni gönderi mevcut',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -334,34 +337,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Haberler',
         url: '/turkce',
-      },
-      {
-        title: 'Türkiye',
-        url: '/turkce/topics/ckdxn2xk95gt',
-      },
-      {
-        title: 'Ortadoğu',
-        url: '/turkce/topics/cg726y2qxg1t',
-      },
-      {
-        title: 'Rusya-Ukrayna Savaşı',
-        url: '/turkce/topics/cy0ryl4pvx6t',
-      },
-      {
-        title: 'Ekonomi',
-        url: '/turkce/topics/cg726y2k82dt',
-      },
-      {
-        title: 'Sağlık',
-        url: '/turkce/topics/cnq68n6wgzdt',
-      },
-      {
-        title: 'Bilim',
-        url: '/turkce/topics/c404v74nk56t',
-      },
-      {
-        title: 'Teknoloji',
-        url: '/turkce/topics/c2dwqnwkvnqt',
       },
     ],
   },

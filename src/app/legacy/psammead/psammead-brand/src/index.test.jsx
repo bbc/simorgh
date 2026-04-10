@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { POSTBOX, WHITE } from '../../../../components/ThemeProvider/palette';
 import { render } from '../../../../components/react-testing-library-with-providers';
@@ -62,23 +62,6 @@ describe('Brand', () => {
         svgHeight={24}
         maxWidth={280}
         minWidth={180}
-        backgroundColour={POSTBOX}
-        logoColour={WHITE}
-      />,
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should render correctly with transparent borders', () => {
-    const { container } = render(
-      <Brand
-        product="BBC News"
-        svg={svg}
-        svgHeight={24}
-        maxWidth={280}
-        minWidth={180}
-        borderTop
-        borderBottom
         backgroundColour={POSTBOX}
         logoColour={WHITE}
       />,
@@ -184,8 +167,6 @@ describe('Brand', () => {
           svgHeight={24}
           maxWidth={280}
           minWidth={180}
-          borderTop
-          borderBottom
           backgroundColour={POSTBOX}
           logoColour={WHITE}
           linkId="brandLink"

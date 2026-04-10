@@ -6,7 +6,6 @@ import {
 import {
   ATI_PAGE_VIEW,
   ATI_PAGE_VIEW_REVERB,
-  ATI_USER_ID_COOKIE,
   getATIParamsFromURL,
   interceptATIAnalyticsBeacons,
   getExpectedAtiDestination,
@@ -14,7 +13,7 @@ import {
 import environment from '../../../../support/helpers/getAppEnv';
 
 const usesReverbViewabilityModel = applicationType =>
-  applicationType !== 'lite';
+  !['lite', 'amp'].includes(applicationType);
 
 const getAppName = service => {
   if (service === 'ws') {
@@ -93,33 +92,14 @@ const assertLocationSpecificPianoDestinationExists = ({ service }) => {
   });
 };
 
-const assertATIComponentViewEventParamsExist = ({ params, useReverb }) => {
-  expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('idclient');
-  expect(params).to.have.property('ati'); // view event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
-
-  if (!useReverb) {
-    expect(params).to.have.property('p'); // page identifier
+const assertReverbViewabilityComponentEventParamsExist = ({
+  params,
+  applicationType,
+}) => {
+  if (['responsive', 'lite'].includes(applicationType)) {
+    expect(params).to.have.property('idclient');
   }
-};
 
-const assertATIComponentClickEventParamsExist = ({ params, useReverb }) => {
-  expect(params).to.have.property('s'); // destination
-  expect(params).to.have.property('idclient');
-  expect(params).to.have.property('atc'); // click event
-  expect(params).to.have.property('type');
-  expect(params.type).to.equal('AT', 'params.type');
-
-  if (useReverb) {
-    expect(params).to.have.property('patc'); // page identifier
-  } else {
-    expect(params).to.have.property('p'); // page identifier
-  }
-};
-
-const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
   expect(params).to.have.property('context');
@@ -129,12 +109,6 @@ const assertReverbViewabilityComponentEventParamsExist = ({ params }) => {
   expect(eventContext[0].data.page).to.have.property('$');
   expect(eventContext[0].data.site).to.have.property('level2_id');
 };
-
-const getViewClickDetailsRegex = ({ contentType, component, pageIdentifier }) =>
-  new RegExp(
-    `PUB-\\[${contentType}(.*)?\\]-\\[${component}(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[${pageIdentifier}\\]-\\[(.*)?\\]-\\[(.*)?\\]-\\[(.*)?\\]`,
-    'g',
-  );
 
 const fieldIsValidString = field =>
   typeof field === 'string' && field.trim().length > 0;
@@ -215,7 +189,6 @@ const validateViewabilityEventDetails = ({ payload, actionType }) => {
 };
 
 export const assertPageView = ({
-  useReverb,
   pageIdentifier,
   applicationType,
   contentType,
@@ -227,10 +200,10 @@ export const assertPageView = ({
     interceptATIAnalyticsBeacons();
     cy.visit(path, { retryOnStatusCodeFailure: true });
 
-    const atiPageViewAlias =
-      useReverb && applicationType !== 'amp'
-        ? ATI_PAGE_VIEW_REVERB
-        : ATI_PAGE_VIEW;
+    const useViewabilty = usesReverbViewabilityModel(applicationType);
+    const atiPageViewAlias = useViewabilty
+      ? ATI_PAGE_VIEW_REVERB
+      : ATI_PAGE_VIEW;
 
     cy.wait(`@${atiPageViewAlias}`).then(({ request }) => {
       const params = getATIParamsFromURL(request.url);
@@ -240,13 +213,6 @@ export const assertPageView = ({
         contentType,
         applicationType,
       });
-
-      if (['responsive', 'lite'].includes(applicationType)) {
-        expect(params.idclient).to.equal(
-          ATI_USER_ID_COOKIE,
-          'params.idclient (atuserid cookie value)',
-        );
-      }
 
       expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
       expect(parseInt(params.s2, 10)).to.equal(
@@ -273,45 +239,6 @@ export const assertPageView = ({
   });
 };
 
-const assertClickPerViewModelViewEvent = ({
-  component,
-  pageIdentifier,
-  contentType,
-  useReverb,
-  params,
-  applicationType,
-  siteId,
-}) => {
-  assertATIComponentViewEventParamsExist({ params, useReverb });
-
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
-
-  if (!useReverb) {
-    expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-  }
-
-  expect(parseInt(params.s2, 10)).to.equal(
-    siteId,
-    'params.s2 (Level 2 site / Producer ID)',
-  );
-
-  expect(params.app_type).to.equal(applicationType, 'params.app_type');
-
-  expect(params.ati).to.match(
-    getViewClickDetailsRegex({
-      contentType,
-      component,
-      pageIdentifier,
-    }),
-    'params.ati (publisher impression)',
-  );
-};
-
 const assertViewabilityModelViewEvent = ({
   pageIdentifier,
   params,
@@ -320,14 +247,7 @@ const assertViewabilityModelViewEvent = ({
 }) => {
   const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({ params });
-
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
+  assertReverbViewabilityComponentEventParamsExist({ params, applicationType });
 
   expect(params.events).to.satisfy(
     payload =>
@@ -342,83 +262,24 @@ const assertViewabilityModelViewEvent = ({
 export const assertATIComponentViewEvent = ({
   component,
   pageIdentifier,
-  contentType,
-  useReverb,
   applicationType,
   siteId,
 }) => {
-  const useViewabilty = usesReverbViewabilityModel(applicationType);
-  const requestAlias = useViewabilty
-    ? `@${component}-viewability-view`
-    : `@${component}-ati-view`;
+  const requestAlias = `@${component}-viewability-view`;
 
   cy.wait(requestAlias)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
 
-      if (useViewabilty) {
-        assertViewabilityModelViewEvent({
-          component,
-          pageIdentifier,
-          contentType,
-          params,
-          siteId,
-        });
-      } else {
-        assertClickPerViewModelViewEvent({
-          component,
-          pageIdentifier,
-          contentType,
-          useReverb,
-          params,
-          applicationType,
-          siteId,
-        });
-      }
+      assertViewabilityModelViewEvent({
+        component,
+        pageIdentifier,
+        params,
+        applicationType,
+        siteId,
+      });
     });
-};
-
-const assertClickPerViewModelClickEvent = ({
-  component,
-  contentType,
-  pageIdentifier,
-  applicationType,
-  useReverb,
-  params,
-}) => {
-  assertATIComponentClickEventParamsExist({
-    params,
-    useReverb,
-    applicationType,
-  });
-
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
-
-  expect(params.app_type).to.equal(applicationType, 'params.app_type');
-
-  if (useReverb) {
-    expect(params.patc).to.equal(
-      pageIdentifier,
-      'params.patc (page identifier)',
-    );
-  } else {
-    expect(params.p).to.equal(pageIdentifier, 'params.p (page identifier)');
-  }
-
-  expect(params.atc).to.match(
-    getViewClickDetailsRegex({
-      contentType,
-      pageIdentifier,
-      component,
-    }),
-    'params.atc (publisher click)',
-  );
 };
 
 const assertViewabilityModelClickEvent = ({
@@ -431,14 +292,8 @@ const assertViewabilityModelClickEvent = ({
 
   assertReverbViewabilityComponentEventParamsExist({
     params,
+    applicationType,
   });
-
-  if (['responsive', 'lite'].includes(applicationType)) {
-    expect(params.idclient).to.equal(
-      ATI_USER_ID_COOKIE,
-      'params.idclient (atuserid cookie value)',
-    );
-  }
 
   expect(params.events).to.satisfy(
     payload =>
@@ -455,40 +310,22 @@ const assertViewabilityModelClickEvent = ({
 
 export const assertATIComponentClickEvent = ({
   component,
-  contentType,
   pageIdentifier,
   applicationType,
-  useReverb,
   siteId,
 }) => {
-  const useViewability = usesReverbViewabilityModel(applicationType);
-  const requestAlias = useViewability
-    ? `@${component}-viewability-click`
-    : `@${component}-ati-click`;
+  const requestAlias = `@${component}-viewability-click`;
 
   cy.wait(requestAlias)
     .its('request.url')
     .then(url => {
       const params = getATIParamsFromURL(url);
-
-      if (useViewability) {
-        assertViewabilityModelClickEvent({
-          component,
-          contentType,
-          pageIdentifier,
-          params,
-          siteId,
-        });
-      } else {
-        assertClickPerViewModelClickEvent({
-          component,
-          contentType,
-          pageIdentifier,
-          applicationType,
-          useReverb,
-          params,
-          siteId,
-        });
-      }
+      assertViewabilityModelClickEvent({
+        component,
+        pageIdentifier,
+        params,
+        applicationType,
+        siteId,
+      });
     });
 };

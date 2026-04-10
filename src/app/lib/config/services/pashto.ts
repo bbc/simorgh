@@ -15,11 +15,11 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-pashto',
     atiAnalyticsProducerId: '68',
     atiAnalyticsProducerName: 'PASHTO',
-    useReverb: true,
     brandName: 'BBC News پښتو',
     chartbeatDomain: 'pashto.bbc.co.uk',
     serviceLocalizedName: 'پښتو',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/pashto/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News پښتو',
     dir: 'rtl',
     externalLinkText: '، بهرنی',
@@ -49,6 +49,7 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'او',
       pagination: {
         page: 'پاڼه',
         previousPage: 'مخکينۍ پاڼه',
@@ -57,6 +58,10 @@ export const service: DefaultServiceConfig = {
       },
       ads: {
         advertisementLabel: 'اعلان',
+      },
+      readTime: {
+        readTimePrefix: 'د لوستلو وخت',
+        minute: 'دقیقې',
       },
       seeAll: 'ټول وګورئ',
       home: 'کور پاڼه',
@@ -89,6 +94,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'د خپرېدو نیټه',
         summary: 'لنډیز',
         shareButtonText: 'شریک یې کړئ',
+        refreshButtonText: 'وروستی پوسټ',
+        visuallyHiddenButtonText: 'نوی پوست شتون لري',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -358,43 +365,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'کور پاڼه',
         url: '/pashto',
-      },
-      {
-        title: 'افغانستان',
-        url: '/pashto/topics/cr50y57xj52t',
-      },
-      {
-        title: 'پښتونخوا',
-        url: '/pashto/topics/cz74k7wy49jt',
-      },
-      {
-        title: 'نړۍ',
-        url: '/pashto/topics/cxe2wdp2dv3t',
-      },
-      {
-        title: 'ښځې',
-        url: '/pashto/topics/cr50y5rq23gt',
-      },
-      {
-        title: 'لوبې',
-        url: '/pashto/topics/cr50y59q860t',
-      },
-      {
-        title: 'اقتصاد او سوداګري',
-        url: '/pashto/topics/cy087kqvl1yt',
-      },
-      {
-        title: 'ساینس او ټکنالوژي',
-        url: '/pashto/topics/ckgrvled11kt',
-      },
-      {
-        title: 'هنر او ادب',
-        url: '/pashto/topics/c8xqkd91knnt',
-      },
-      {
-        title: 'راډیویي خپرونې',
-        url: '/pashto/topics/c9xz1ekw79nt',
-        hideOnLiteSite: true,
       },
     ],
   },

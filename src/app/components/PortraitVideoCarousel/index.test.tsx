@@ -1,4 +1,4 @@
-import React, { act } from 'react';
+import { act } from 'react';
 import Component from '.';
 import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
@@ -46,6 +46,16 @@ describe('PortraitVideoCarousel', () => {
     await act(async () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />, {
         isLite: true,
+      });
+    });
+
+    expect(screen.queryByTestId('portrait-video-carousel')).toBeNull();
+  });
+
+  it('Should not render anything when isAmp is true', async () => {
+    await act(async () => {
+      render(<Component {...fixture} eventTrackingData={eventTrackingData} />, {
+        isAmp: true,
       });
     });
 

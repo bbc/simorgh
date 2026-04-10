@@ -11,10 +11,6 @@ import {
 } from '#models/types/global';
 import handleError from '../handleError';
 import {
-  TOPIC_PAGE_CONFIG,
-  TopicPagePaths,
-} from '../../topic/getInitialData/page-config';
-import {
   ARTICLE_PAGE,
   AV_EMBEDS,
   CPS_ASSET,
@@ -52,7 +48,7 @@ interface GetIdProps {
   env: Environments;
 }
 
-const getId = ({ pageType, service, variant, env }: GetIdProps) => {
+const getId = ({ pageType, service, variant }: GetIdProps) => {
   let getIdFunction;
 
   switch (pageType) {
@@ -102,9 +98,12 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
 
     case TOPIC_PAGE:
       getIdFunction = (path: string) => {
-        return (
-          TOPIC_PAGE_CONFIG?.[path as TopicPagePaths]?.[env] || getTipoId(path)
-        );
+        const normalizedPath = removeLeadingSlash(path);
+
+        // Special case for Most Read pages which are actually Topic pages
+        if (normalizedPath === 'mostReadTopic') return normalizedPath;
+
+        return getTipoId(path);
       };
       break;
     case UGC_PAGE:
@@ -114,13 +113,18 @@ const getId = ({ pageType, service, variant, env }: GetIdProps) => {
       getIdFunction = (path: string) => {
         const parsedRoute = parseRoute(path);
 
+        // 'ws' appears in many av-embeds routes, but we also have 'ws' as a dedicated service
+        // The 'ws' service shouldn't appear in av-embeds routes as a "service" as no media content is published under the 'ws' service
+        const derivedService =
+          parsedRoute?.service !== 'ws' ? parsedRoute?.service : null;
+
         const isShortCpsId = parsedRoute?.assetId?.length === 8;
 
         const withServiceAndVariant = !isShortCpsId
-          ? `${parsedRoute.service ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
+          ? `${derivedService ?? ''}${parsedRoute.variant ? `/${parsedRoute.variant}` : ''}`
           : '';
 
-        const id = `${withServiceAndVariant}/${parsedRoute.assetId}`;
+        const id = `${withServiceAndVariant ? `${withServiceAndVariant}/` : ''}${parsedRoute.assetId}`;
 
         return id;
       };
@@ -238,7 +242,11 @@ const constructPageFetchUrl = ({
       case CPS_ASSET:
       case AUDIO_PAGE:
       case TV_PAGE:
-        fetchUrl = Url(`/${id}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local/${id}`);
+        } else {
+          fetchUrl = Url(`/${id}`);
+        }
         break;
       case HOME_PAGE: {
         if (process.env?.NEXTJS) {
@@ -254,8 +262,15 @@ const constructPageFetchUrl = ({
         fetchUrl = Url(getMostReadEndpoint({ service, variant }).split('.')[0]);
         break;
       case TOPIC_PAGE: {
-        const variantPath = variant ? `/${variant}` : '';
-        fetchUrl = Url(`/${service}/topics/${id}${variantPath}`);
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(
+            `${host}${port}/api/local/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        } else {
+          fetchUrl = Url(
+            `/${service}/topics/${id}${variant ? `/${variant}` : ''}`,
+          );
+        }
         break;
       }
       case LIVE_PAGE: {
@@ -274,13 +289,9 @@ const constructPageFetchUrl = ({
       case AV_EMBEDS: {
         const parsedRoute = parseRoute(pathname);
 
-        if (parsedRoute.isWsRoute) {
-          // handle /ws/av-embeds route
-        } else {
-          fetchUrl = Url(
-            `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''} ${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
-          );
-        }
+        fetchUrl = Url(
+          `${host}${port}/api/local/${parsedRoute.service}/av-embeds/${parsedRoute.variant ? `${parsedRoute?.variant}/` : ''}${parsedRoute.assetId}${parsedRoute.mediaId ? `/${parsedRoute.mediaDelimiter}/${parsedRoute.mediaId}` : ''}${parsedRoute.lang ? `/${parsedRoute.lang}` : ''}`,
+        );
         break;
       }
       case LIVE_RADIO_PAGE:

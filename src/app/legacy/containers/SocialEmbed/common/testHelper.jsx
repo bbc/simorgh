@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '../../../../contexts/ServiceContext';

@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode } from 'react';
+import { createContext, ReactNode } from 'react';
 import {
   renderHook,
   act,
@@ -60,7 +60,6 @@ beforeEach(() => {
       atiAnalyticsProducerId: '70',
       atiAnalyticsProducerName: 'PIDGIN',
       service: 'pidgin',
-      useReverb: true,
     }),
   );
 });
@@ -99,7 +98,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledTimes(1);
@@ -114,7 +113,6 @@ describe('useCustomEventTracker', () => {
       producerName: 'PIDGIN',
       service: 'pidgin',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      useReverb: true,
     });
   });
 
@@ -127,7 +125,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent(stringifiedData);
+      await result.current(stringifiedData);
     });
 
     expect(mockSendEventBeacon).toHaveBeenCalledWith(
@@ -150,7 +148,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -165,7 +163,7 @@ describe('useCustomEventTracker', () => {
     );
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();
@@ -179,7 +177,7 @@ describe('useCustomEventTracker', () => {
     });
 
     await act(async () => {
-      await result.current.trackEvent('');
+      await result.current();
     });
 
     expect(mockSendEventBeacon).not.toHaveBeenCalled();

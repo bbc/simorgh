@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { Fragment, use } from 'react';
 import path from 'ramda/src/path';
 import Curation from '#app/components/Curation';
 import AdContainer from '../../components/Ad';
@@ -20,6 +20,8 @@ const TopicPage = ({ pageData }) => {
   const {
     title,
     description,
+    seoTitle,
+    seoDescription,
     imageData,
     curations,
     pageCount,
@@ -41,7 +43,10 @@ const TopicPage = ({ pageData }) => {
     .replace('{x}', activePage)
     .replace('{y}', pageCount);
 
-  const pageTitle = `${title}, ${translatedPage}`;
+  const metadataBaseTitle = seoTitle || title;
+  const seoPaginatedTitle = `${metadataBaseTitle}, ${translatedPage}`;
+  const metadataTitle = activePage >= 2 ? seoPaginatedTitle : metadataBaseTitle;
+  const metadataDescription = seoDescription || description;
 
   const itemList = getItemList({ curations, name: brandName });
 
@@ -53,16 +58,16 @@ const TopicPage = ({ pageData }) => {
           <ATIAnalytics atiData={atiAnalytics} />
           <ChartbeatAnalytics title={title} />
           <MetadataContainer
-            title={activePage >= 2 ? pageTitle : title}
-            socialHeadline={title}
+            title={metadataTitle}
+            socialHeadline={metadataBaseTitle}
             lang={lang}
-            description={description}
+            description={metadataDescription}
             openGraphType="website"
             hasAmpPage={false}
           />
           <LinkedData
             type="CollectionPage"
-            seoTitle={title}
+            seoTitle={metadataBaseTitle}
             headline={title}
             entities={[itemList]}
           />
@@ -93,7 +98,7 @@ const TopicPage = ({ pageData }) => {
                 });
 
               return (
-                <React.Fragment key={`${curationId}-${position}`}>
+                <Fragment key={`${curationId}-${position}`}>
                   <Curation
                     visualStyle={visualStyle}
                     visualProminence={visualProminence}
@@ -108,7 +113,7 @@ const TopicPage = ({ pageData }) => {
                     }
                     {...curationProps}
                   />
-                </React.Fragment>
+                </Fragment>
               );
             },
           )}

@@ -1,4 +1,3 @@
-import React from 'react';
 import PageLayoutWrapper from '#app/components/PageLayoutWrapper';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import liveFixtureWithLiveMedia from '#data/mundo/live/c7dkx155e626t.json';
@@ -11,6 +10,7 @@ const mockLiveData =
 const mockPageData = {
   ...liveFixture.data,
   liveTextStream: {
+    id: '3861CC0A9EA7434981EEE3FCE9880391',
     content: postFixture,
     contributors: 'Not a random dude',
   },

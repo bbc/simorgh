@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import styles from './index.styles';
 import SectionLabel from '../../../legacy/psammead/psammead-section-label/src';
 import { GREY_2 } from '../../ThemeProvider/palette';
@@ -24,17 +22,13 @@ const MostReadSectionLabel = ({
   overrideHeadingAs,
 }: MostReadSectionLabelProps) => {
   const {
-    service,
-    script,
     dir,
     mostRead: { header },
   } = use(ServiceContext);
   return (
     <SectionLabel
       css={styles.sectionLabel}
-      script={script}
       labelId="Most-Read"
-      service={service}
       dir={dir}
       mobileDivider={mobileDivider}
       backgroundColor={backgroundColor}

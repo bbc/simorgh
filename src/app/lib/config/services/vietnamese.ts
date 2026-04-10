@@ -13,13 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-vietnamese',
     atiAnalyticsProducerId: '97',
     atiAnalyticsProducerName: 'VIETNAMESE',
-    useReverb: true,
     chartbeatDomain: 'vietnamese.bbc.co.uk',
     brandName: 'BBC News Tiếng Việt',
     product: 'BBC News',
     serviceLocalizedName: 'Tiếng Việt',
     defaultImage:
-      'https://news.files.bbci.co.uk/ws/img/logos/og/vietnamese.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/vietnamese/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Tiếng Việt',
     dir: `ltr`,
     externalLinkText: ', bên ngoài',
@@ -49,6 +48,12 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     translations: {
+      and: 'và',
+      readTime: {
+        readTimePrefix: 'Thời gian đọc',
+        long: 'Bài dài',
+        minute: 'phút',
+      },
       pagination: {
         previousPage: 'Quay Lại',
         nextPage: 'Xem Tiếp',
@@ -77,6 +82,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'Đăng ở',
         summary: 'Tóm tắt',
         shareButtonText: 'Chia sẻ',
+        refreshButtonText: 'Bài viết mới nhất',
+        visuallyHiddenButtonText: 'Có bài viết mới',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -330,26 +337,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Tin chính',
         url: '/vietnamese',
-      },
-      {
-        title: 'Việt Nam',
-        url: '/vietnamese/topics/ckdxnx1x5rnt',
-      },
-      {
-        title: 'Thế giới',
-        url: '/vietnamese/topics/cnlv9j1ekq0t',
-      },
-      {
-        title: 'Kinh tế',
-        url: '/vietnamese/topics/cez1ey7nzj3t',
-      },
-      {
-        title: 'Thể thao',
-        url: '/vietnamese/topics/ckdxnx1k7zxt',
-      },
-      {
-        title: 'Video',
-        url: '/vietnamese/topics/cl29j0ekkvdt',
       },
     ],
   },

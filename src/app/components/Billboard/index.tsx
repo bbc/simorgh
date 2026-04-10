@@ -1,6 +1,3 @@
-/** @jsx jsx */
-/* @jsxFrag React.Fragment */
-import { jsx } from '@emotion/react';
 import { use } from 'react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -25,8 +22,6 @@ interface BillboardProps {
   eventTrackingData?: EventTrackingData;
   showLiveLabel?: boolean;
   summaries?: Summary[];
-  timeOfDayExperimentName?: string;
-  timeOfDayVariant?: string;
 }
 
 export default ({
@@ -39,21 +34,16 @@ export default ({
   showLiveLabel,
   eventTrackingData = { componentName: 'billboard' },
   summaries = [],
-  timeOfDayExperimentName,
-  timeOfDayVariant,
 }: BillboardProps) => {
   const { translations } = use(ServiceContext);
   const showMoreOnThisTitle = translations.moreOnThis;
-  // this curation type is used in the home page experiment as well.
-  // if they will not be running at the same time (?) we can make it so the experiment name is only for the current experiment
+  const hasPromoItems = summaries.length > 1;
+  const isSingleImageLayout = !hasPromoItems;
+
   const eventTrackingDataWithOptimizelyEvents = {
     ...eventTrackingData,
-    ...(timeOfDayVariant && {
-      sendOptimizelyEvents: true,
-      experimentName: timeOfDayExperimentName, // might want to change this to just the article page experiment name and not need to pass it into this component
-      experimentVariant: timeOfDayVariant,
-    }),
   };
+
   const viewTracker = useViewTracker(eventTrackingDataWithOptimizelyEvents);
   const clickTrackerHandler = useClickTrackerHandler(
     eventTrackingDataWithOptimizelyEvents,
@@ -63,14 +53,20 @@ export default ({
     <section role="region" aria-labelledby={id} data-testid={id}>
       <div css={styles.headerContainer} {...viewTracker}>
         <div css={[styles.backgroundContainer, styles.backgroundRedGradient]} />
-        <div css={styles.contentContainer}>
+        <div
+          css={[
+            styles.contentContainer,
+            !hasPromoItems && styles.contentContainerNoPromos,
+          ]}
+        >
           <MaskedImage
             imageUrl={image.replace('{width}', '240')}
             imageUrlTemplate={image}
             altText={altText}
             imageWidth={660}
             showPlaceholder={false}
-            showVignette
+            showVignette={hasPromoItems}
+            singleImageLayout={isSingleImageLayout}
           />
           <div css={styles.textContainer}>
             <Heading level={2} size="paragon" css={styles.heading} id={id}>
@@ -97,7 +93,7 @@ export default ({
               </Text>
             )}
           </div>
-          {summaries.length > 1 && (
+          {hasPromoItems && (
             <div css={styles.curationGridSection}>
               {showMoreOnThisTitle && (
                 <Heading

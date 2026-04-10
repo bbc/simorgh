@@ -1,29 +1,16 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TEXT_VARIANTS from '#storybook/withServicesDecorator/text-variants';
 import Timestamp from '../../../legacy/psammead/psammead-timestamp/src';
 import { ServiceContextProvider } from '../../../contexts/ServiceContext';
-import latin from '../../ThemeProvider/fontScripts/latin';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
 import { Services, Direction } from '../../../models/types/global';
-import { TypographyScript } from '../../../models/types/theming';
 import { MostReadBaseProps, MostReadData, Size } from '../types';
 
-const lastUpdated = ({
-  script,
-  service,
-}: {
-  script: TypographyScript;
-  service: Services;
-}) => (
+const lastUpdated = () => (
   // This will return the provided english translations
-  <Timestamp
-    datetime="2019-03-01T14:00+00:00"
-    script={script}
-    padding={false}
-    service={service}
-  >
+  <Timestamp datetime="2019-03-01T14:00+00:00" padding={false}>
     Last updated: 5th November 2016
   </Timestamp>
 );
@@ -49,9 +36,7 @@ export const getItem = ({
 }) => {
   const baseUrl = 'https://www.bbc.com';
   const { text, articlePath } = TEXT_VARIANTS[service];
-  const timestamp = withTimestamp
-    ? lastUpdated({ script: latin, service })
-    : null;
+  const timestamp = withTimestamp ? lastUpdated() : null;
 
   return {
     id: `${Math.floor(Math.random() * 100000) + 1}`,
@@ -83,6 +68,7 @@ export const getItemWrapperArray = ({
   const item = getItem({ service, withTimestamp });
   for (let i = 1; i <= numberOfItems; i += 1) {
     itemWrapperArray.push(
+      // @ts-expect-error test data
       <MostReadItemWrapper dir={dir} key={i} columnLayout={columnLayout}>
         <MostReadRank
           service={service}

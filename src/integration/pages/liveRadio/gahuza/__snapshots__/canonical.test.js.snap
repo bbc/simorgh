@@ -106,7 +106,7 @@ exports[`Canonical Live Radio Footer Anchors should match text and url 9`] = `
 
 exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
 
-exports[`Canonical Live Radio Footer Paragraphs should match text 1`] = `"© 2025 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
+exports[`Canonical Live Radio Footer Paragraphs should match text 1`] = `"© 2026 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `
 {
@@ -124,60 +124,11 @@ exports[`Canonical Live Radio Header Navigation link should match text and url 1
 }
 `;
 
-exports[`Canonical Live Radio Header Navigation link should match text and url 2`] = `
-{
-  "text": "Ibitero bya M23 muri Congo",
-  "url": "/gahuza/topics/cx2qn9pqx4yt",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 3`] = `
-{
-  "text": "Ibiyaga binini",
-  "url": "/gahuza/topics/c06gq67y3w5t",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 4`] = `
-{
-  "text": "Afrika",
-  "url": "/gahuza/topics/crvnv566zx9t",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 5`] = `
-{
-  "text": "Mpuzamahanga",
-  "url": "/gahuza/topics/c9dvd93jjkkt",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 6`] = `
-{
-  "text": "Ubuzima",
-  "url": "/gahuza/topics/cnq68qp4kxjt",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 7`] = `
-{
-  "text": "Imikino",
-  "url": "/gahuza/topics/c5qvpq0jzy7t",
-}
-`;
-
-exports[`Canonical Live Radio Header Navigation link should match text and url 8`] = `
-{
-  "text": "Amajwi n’amashusho",
-  "url": "/gahuza/topics/crldzm936jmt",
-}
-`;
-
 exports[`Canonical Live Radio Main heading should match text 1`] = `"Radio BBC Gahuza"`;
 
 exports[`Canonical Live Radio Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-ucozvf"
+  class="media-container bbc-16wwgxo"
   data-e2e="media-loader__container"
 >
   <div
@@ -210,61 +161,26 @@ exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 1`] =
 
 exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 2`] = `
 {
-  "sizes": "72x72",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-72x72.png",
-}
-`;
-
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 3`] = `
-{
-  "sizes": "96x96",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-96x96.png",
-}
-`;
-
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 4`] = `
-{
-  "sizes": "128x128",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-128x128.png",
-}
-`;
-
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 5`] = `
-{
-  "sizes": "144x144",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-144x144.png",
-}
-`;
-
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 6`] = `
-{
   "sizes": "152x152",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-152x152.png",
 }
 `;
 
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 7`] = `
+exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 3`] = `
 {
   "sizes": "180x180",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-180x180.png",
 }
 `;
 
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 8`] = `
-{
-  "sizes": "192x192",
-  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-192x192.png",
-}
-`;
-
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 9`] = `
+exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 4`] = `
 {
   "sizes": "384x384",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-384x384.png",
 }
 `;
 
-exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 10`] = `
+exports[`Canonical Live Radio SEO Apple Touch Icon should match attributes 5`] = `
 {
   "sizes": "512x512",
   "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/icons/icon-512x512.png",
@@ -283,14 +199,14 @@ exports[`Canonical Live Radio SEO Lang attribute 1`] = `"rw"`;
 
 exports[`Canonical Live Radio SEO Linked data should match text 1`] = `
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "RadioChannel",
       "image": {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png",
+        "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png",
         "width": 1024,
       },
       "inLanguage": {
@@ -311,7 +227,7 @@ exports[`Canonical Live Radio SEO Linked data should match text 1`] = `
 
 exports[`Canonical Live Radio SEO OG description 1`] = `"Amakuru y’amahanga, ubusesenguzi, amakuru y’akarere k’ibiyaga bigari, ikinamico, ubuzima, imibereho y’abagore. Kuri FM no kuri internet."`;
 
-exports[`Canonical Live Radio SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+exports[`Canonical Live Radio SEO OG image 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live Radio SEO OG image alt 1`] = `"BBC News Gahuza"`;
 
@@ -337,7 +253,7 @@ exports[`Canonical Live Radio SEO Twitter description 1`] = `"Amakuru y’amahan
 
 exports[`Canonical Live Radio SEO Twitter image alt 1`] = `"BBC News Gahuza"`;
 
-exports[`Canonical Live Radio SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/gahuza.png"`;
+exports[`Canonical Live Radio SEO Twitter image src 1`] = `"https://static.files.bbci.co.uk/ws/simorgh-assets/public/gahuza/images/metadata/poster-1024x576.png"`;
 
 exports[`Canonical Live Radio SEO Twitter site 1`] = `"@bbcgahuza"`;
 

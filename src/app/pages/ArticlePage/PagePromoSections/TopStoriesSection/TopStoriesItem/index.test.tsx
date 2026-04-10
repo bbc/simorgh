@@ -1,4 +1,3 @@
-import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { suppressPropWarnings } from '#psammead/psammead-test-helpers/src';
 import { Services } from '#app/models/types/global';

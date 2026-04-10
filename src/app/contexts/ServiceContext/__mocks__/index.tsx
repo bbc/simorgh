@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import { createContext, PropsWithChildren } from 'react';
 import getLangOverride from '../../../lib/utilities/langHandler';
 import { getVariant } from '../../../lib/utilities/variantHandler';
 import services from '../../../../server/utilities/serviceConfigs';
@@ -15,7 +15,7 @@ interface Props {
  * async behavior in tests across the application when
  * using service contexts.
  */
-export const ServiceContext = React.createContext({});
+export const ServiceContext = createContext({});
 
 export const ServiceContextProvider = ({
   children,

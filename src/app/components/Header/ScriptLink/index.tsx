@@ -1,6 +1,4 @@
-/** @jsx jsx */
 import { use } from 'react';
-import { jsx } from '@emotion/react';
 import useToggle from '#hooks/useToggle';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ServiceContext } from '../../../contexts/ServiceContext';
@@ -19,7 +17,8 @@ const ScriptLink = () => {
 
   const pathPartsWithoutExtension = pathname
     .replace(/\.[^/.]+$/, '') // remove any extensions, we don't want to link to AMP pages directly
-    .split('/');
+    .split('?')?.[0] // remove any query parameters
+    .split('/'); // split path into parts
 
   const currentVariantIndex = pathPartsWithoutExtension.indexOf(
     currentVariant as string,

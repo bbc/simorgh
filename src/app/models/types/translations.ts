@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 export interface Translations {
+  and?: string;
   pagination?: {
     page?: string;
     previousPage: string;
@@ -33,12 +34,25 @@ export interface Translations {
     shareButtonText: string;
     postDateTimeFormat?: string;
     postDateFormat?: string;
+    refreshButtonText?: string;
+    visuallyHiddenButtonText?: string;
   };
   downloads?: {
     instructions?: string;
     title?: string;
   };
   gist?: string;
+  account?: {
+    signIn?: string;
+    forYou?: string;
+    register?: string;
+  };
+  accountPromoBanner?: {
+    title: string;
+    description: string;
+    closeLabel: string;
+    buttonSeparatorText: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

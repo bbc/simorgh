@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { extractBundlesForPageType } from './pageTypeBundleExtractor.js';
-import services from './serviceList.js'
-import { pages } from './pages.js';
+import services from './serviceList.js';
+import pages from './pages.js';
 
 const bundleType = process.env.bundleType || 'modern';
 
@@ -131,4 +131,3 @@ export const getServiceThemeBundleData = () =>
         0,
       ),
     }));
-

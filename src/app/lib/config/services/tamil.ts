@@ -13,12 +13,13 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-tamil',
     atiAnalyticsProducerId: '87',
     atiAnalyticsProducerName: 'TAMIL',
-    useReverb: true,
+
     chartbeatDomain: 'tamil.bbc.co.uk',
     brandName: 'BBC News தமிழ்',
     product: 'BBC News',
     serviceLocalizedName: 'தமிழ்',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/tamil/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
     externalLinkText: ', வெளி',
@@ -46,7 +47,29 @@ export const service: DefaultServiceConfig = {
     homePageTitle: 'முகப்பு',
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'வாட்ஸ்அப் விளம்பரம்',
+      brandTitle: 'வாட்ஸ்ஆப்பில்',
+      brandDescription: 'பிபிசி தமிழ் செய்திகளை செல்போனிலேயே படிக்கலாம்',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0n959h0.png',
+        alt: `வாட்ஸ்அப் விளம்பரம் - படம்`,
+      },
+      linkLabel: {
+        text: 'பின்தொடர கிளிக் செய்யவும்',
+        href: 'https://www.whatsapp.com/channel/0029VaaJj0BKLaHwTA7BOi3N',
+      },
+      skipLink: {
+        text: '%title% - ஐ புறக்கணித்துவிட்டு தொடர்ந்து படிக்கவும்',
+        endTextVisuallyHidden: '%title% - முடிவு',
+      },
+    },
     translations: {
+      and: 'மற்றும்',
+      readTime: {
+        readTimePrefix: 'வாசிக்கும் நேரம்',
+        minute: 'நிமிடங்கள்',
+      },
       pagination: {
         page: 'பக்கம்',
         previousPage: 'முந்தையது',
@@ -77,6 +100,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'பிரசுரிக்கப்பட்ட நேரம்',
         summary: 'முக்கிய சாராம்சம்',
         shareButtonText: 'பகிர்க',
+        refreshButtonText: 'சமீபத்திய பதிவு',
+        visuallyHiddenButtonText: 'புதிய பதிவு கிடைக்கிறது',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -420,42 +445,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'முகப்பு',
         url: '/tamil',
-      },
-      {
-        title: 'உலகம்',
-        url: '/tamil/topics/c40379e2n2zt',
-      },
-      {
-        title: 'இந்தியா',
-        url: '/tamil/topics/c2dwqdn01v5t',
-      },
-      {
-        title: 'இலங்கை',
-        url: '/tamil/topics/cz74k7p3qw7t',
-      },
-      {
-        title: 'உடல்நலம்',
-        url: '/tamil/topics/cyx5kxzdn9dt',
-      },
-      {
-        title: 'வரலாறு',
-        url: '/tamil/topics/cxnyknvykxjt',
-      },
-      {
-        title: 'விளையாட்டு',
-        url: '/tamil/topics/cdr56rv4qwdt',
-      },
-      {
-        title: 'அறிவியல்',
-        url: '/tamil/topics/c9wpm0exkdpt',
-      },
-      {
-        title: 'சினிமா',
-        url: '/tamil/topics/cyx5kxz4wkgt',
-      },
-      {
-        title: 'வீடியோ',
-        url: '/tamil/topics/c1320722p81t',
       },
     ],
   },

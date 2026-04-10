@@ -1,10 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import {
   Curation,
   VISUAL_STYLE,
   VISUAL_PROMINENCE,
 } from '#app/models/types/curationData';
+import { ComponentExperimentProps } from '#app/models/types/global';
 import RadioSchedule from '#app/legacy/containers/RadioSchedule';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -53,6 +52,11 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+interface CurationProps extends Curation {
+  // keep this local so we do not change the shared bff curation data shape
+  experimentProps?: ComponentExperimentProps;
+}
+
 export default ({
   visualStyle = NONE,
   visualProminence = NORMAL,
@@ -69,10 +73,9 @@ export default ({
   portraitVideo,
   renderVisuallyHiddenH2Title = false,
   curationId,
-  timeOfDayExperimentName,
-  timeOfDayVariant,
   mediaCollection,
-}: Curation) => {
+  experimentProps,
+}: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
     visualProminence,
@@ -99,6 +102,8 @@ export default ({
     isLive: summaryIsLive,
     title: linkText,
   } = firstSummary || {};
+  // flatten this once so the tracking object stays easy to read below
+  const experimentTrackingProps = experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
     componentName,
@@ -110,6 +115,7 @@ export default ({
       ...(curationId && { resourceId: curationId }),
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
+    ...experimentTrackingProps,
   };
 
   switch (componentName) {
@@ -130,8 +136,6 @@ export default ({
               showLiveLabel={summaryIsLive}
               altText={imageAlt}
               summaries={summaries}
-              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );
@@ -156,6 +160,7 @@ export default ({
     case MOST_READ:
       return (
         <MostRead
+          showSectionLabel={curationLength > 1}
           data={mostRead}
           columnLayout="twoColumn"
           headingBackgroundColour={GHOST}
@@ -179,7 +184,7 @@ export default ({
             title={title}
             blocks={portraitVideo.blocks}
             eventTrackingData={eventTrackingData}
-            timeOfDayVariant={timeOfDayVariant ?? undefined}
+            css={styles.pvCarousel}
           />
         );
       }
@@ -219,17 +224,9 @@ export default ({
     case HIERARCHICAL_CURATION_GRID:
     default:
       if (summaries.length > 0) {
-        // we are currently not tracking views on this component for the home page time of day experiment in optimizely
-        // so I have only added the optimizely events in the case that it is the article time of day experiment
         const viewTracker = useViewTracker({
           ...eventTrackingData,
           viewThreshold: 0.2,
-          ...(timeOfDayExperimentName === 'newswb_ws_tod_article' &&
-            timeOfDayVariant && {
-              sendOptimizelyEvents: true,
-              experimentName: timeOfDayExperimentName,
-              experimentVariant: timeOfDayVariant,
-            }),
         });
 
         const curationSubheadingClickTracker =
@@ -257,8 +254,6 @@ export default ({
                 headingLevel={3}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
-                timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-                timeOfDayVariant={timeOfDayVariant ?? undefined}
               />
             </div>
           </section>
@@ -269,8 +264,6 @@ export default ({
               headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
-              timeOfDayExperimentName={timeOfDayExperimentName || undefined}
-              timeOfDayVariant={timeOfDayVariant ?? undefined}
             />
           </div>
         );

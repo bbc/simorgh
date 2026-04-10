@@ -13,13 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-afaanoromoo',
     atiAnalyticsProducerId: '2',
     atiAnalyticsProducerName: 'AFAAN_OROMOO',
-    useReverb: true,
     chartbeatDomain: 'afaanoromoo.bbc.co.uk',
     brandName: 'BBC News Afaan Oromoo',
     product: 'BBC News',
     serviceLocalizedName: 'Afaan Oromoo',
     defaultImage:
-      'https://news.files.bbci.co.uk/ws/img/logos/og/afaanoromoo.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/afaanoromoo/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News Afaan Oromoo',
     dir: `ltr`,
     externalLinkText: ' alaan',
@@ -52,17 +51,22 @@ export const service: DefaultServiceConfig = {
       title: 'WhatsApp',
       brandTitle: 'Chaanaalii WhatsApp BBC Afaan Oromoo',
       brandDescription:
-        'Oduu, xiinxalaafi odeessa adda addaa kallattiin argachuuf',
+        'Oduufi xiinxala kallattiin bilbila keessan irratti argachuuf ammuma',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0kthbd3.png',
-        alt: 'BBC News Afaan Oromo WhatsApp irrati argadhaa',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0mnxg49.png',
+        alt: `Oduu ho'aaf WhatsApp BBC Afaan Oromoo hordofaa.`,
       },
       linkLabel: {
         text: 'Asiin seenaa',
-        href: 'https://bit.ly/4hIe50g',
+        href: 'https://www.whatsapp.com/channel/0029VawyHE6CBtx7GK5AV32J',
       },
     },
     translations: {
+      and: 'fi',
+      readTime: {
+        readTimePrefix: 'Yeroo dubbisuu',
+        minute: 'daqiiqaa',
+      },
       pagination: {
         previousPage: 'Kan duraa',
         nextPage: 'Itti aanee',
@@ -102,6 +106,8 @@ export const service: DefaultServiceConfig = {
         postedAt: '...tti maxxanfame',
         summary: 'Guduunfaa',
         shareButtonText: 'Qoodi',
+        refreshButtonText: 'Poostii Haaraa',
+        visuallyHiddenButtonText: 'Poostiin haaraa jira',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -362,35 +368,6 @@ export const service: DefaultServiceConfig = {
       {
         title: 'Oduu',
         url: '/afaanoromoo',
-      },
-      {
-        title: 'Itoophiyaa',
-        url: '/afaanoromoo/topics/c2dwqdy81y1t',
-      },
-      {
-        title: 'Ispoortii',
-        url: '/afaanoromoo/topics/c06gq6440j8t',
-      },
-      {
-        title: 'Viidiyoo',
-        url: '/afaanoromoo/topics/ck0dg7dpjwwt',
-        hideOnLiteSite: true,
-      },
-      {
-        title: 'Siyaasa',
-        url: '/afaanoromoo/topics/c2dwqdynwwrt',
-      },
-      {
-        title: 'Dubartoota',
-        url: '/afaanoromoo/topics/c8y94yq185dt',
-      },
-      {
-        title: 'Baha Jidduugalaa',
-        url: '/afaanoromoo/topics/c8y94yzd049t',
-      },
-      {
-        title: 'Jajjaboo',
-        url: '/afaanoromoo/popular/read',
       },
     ],
     timezone: 'Africa/Addis_Ababa',

@@ -1,198 +1,90 @@
 /* eslint-disable jsx-a11y/aria-role */
-/** @jsx jsx */
-/** @jsxFrag */
-import { jsx } from '@emotion/react';
-import React, { use, PropsWithChildren } from 'react';
+import { Children, use, PropsWithChildren } from 'react';
+import {
+  ARTICLE_PAGE,
+  LIVE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
+// eslint-disable-next-line import/no-relative-packages
+import { PostContributor as LivePageContributor } from '../../../../ws-nextjs-app/pages/[service]/live/[id]/Post/types';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import { RequestContext } from '../../contexts/RequestContext';
 import VisuallyHiddenText from '../VisuallyHiddenText';
 import BylineCss from './index.styles';
-import { RightChevron, LeftChevron } from '../icons';
-import Text from '../Text';
-import Image from '../Image';
 import bylineExtractor from './utilities/bylineExtractor';
+import ArticleContributor from './ArticleContributor';
+import PostContributor from './PostContributor';
+
+type BylineBlock =
+  | OptimoBylineBlock['model']
+  | { blocks: LivePageContributor['model'][] };
+
+const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
+  switch (pageType) {
+    case ARTICLE_PAGE:
+    case MEDIA_ARTICLE_PAGE:
+      return (
+        <ArticleContributor
+          contributorValues={contributorValues}
+          isSingleContributor={isSingleContributor}
+        />
+      );
+    case LIVE_PAGE:
+      return <PostContributor contributorValues={contributorValues} />;
+    default:
+      return null;
+  }
+};
 
 const Byline = ({
   blocks,
   children = null,
-}: PropsWithChildren<OptimoBylineBlock['model']>) => {
-  const { translations, dir } = use(ServiceContext);
-  const isRtl = dir === 'rtl';
+}: PropsWithChildren<BylineBlock>) => {
+  const { translations } = use(ServiceContext);
+  const { pageType } = use(RequestContext);
 
-  const bylineValues = bylineExtractor(blocks);
+  const contributorValues = bylineExtractor({ blocks, pageType });
 
-  const {
-    byline: {
-      author = 'Author',
-      articleInformation = 'Article Information',
-      reportingFrom = 'Reporting from',
-      role = 'Role',
-    } = {},
-  } = translations ?? {};
+  const isSingleContributor = contributorValues.length === 1;
 
-  const contributors =
-    bylineValues.length === 0
-      ? null
-      : bylineValues?.map(values => {
-          if (!values) return null;
+  const { byline: { articleInformation = 'Article Information' } = {} } =
+    translations ?? {};
 
-          const {
-            authorName,
-            jobRole,
-            twitterText,
-            twitterLink,
-            authorImage,
-            location,
-            authorTopicUrl,
-          } = values;
-
-          return (
-            <ul
-              css={[BylineCss.bylineList, BylineCss.bylineSection]}
-              role="list"
-              key={authorName}
-            >
-              {authorImage && (
-                <li
-                  css={[
-                    BylineCss.ImageWrapper,
-                    isRtl ? BylineCss.imageRtl : BylineCss.imageLtr,
-                  ]}
-                  role="presentation"
-                >
-                  <Image
-                    css={BylineCss.imageSrc}
-                    src={authorImage}
-                    alt={authorName}
-                    placeholder={false}
-                    aspectRatio={[1, 1]}
-                  />
-                </li>
-              )}
-              <li>
-                {authorTopicUrl ? (
-                  <>
-                    <VisuallyHiddenText>{`${author}, ${authorName}`}</VisuallyHiddenText>
-                    <a
-                      css={[BylineCss.link]}
-                      href={authorTopicUrl}
-                      className="focusIndicatorReducedWidth"
-                    >
-                      <Text
-                        className="byline-link"
-                        size="bodyCopy"
-                        fontVariant="sansBold"
-                        css={BylineCss.author}
-                      >
-                        {authorName}
-                      </Text>
-                      {isRtl ? (
-                        <LeftChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      ) : (
-                        <RightChevron
-                          className="byline-link"
-                          css={BylineCss.authorChevron}
-                        />
-                      )}
-                    </a>
-                  </>
-                ) : (
-                  <span role="text">
-                    <VisuallyHiddenText>{`${author}, `}</VisuallyHiddenText>
-                    <Text
-                      css={[BylineCss.author]}
-                      size="bodyCopy"
-                      fontVariant="sansBold"
-                    >
-                      {authorName}
-                    </Text>
-                  </span>
-                )}
-              </li>
-              <li>
-                <span role="text">
-                  <VisuallyHiddenText>{`${role}, `} </VisuallyHiddenText>
-                  <Text
-                    css={BylineCss.jobRole}
-                    fontVariant="sansBold"
-                    size="brevier"
-                  >
-                    {jobRole}
-                  </Text>
-                </span>
-              </li>
-              {twitterLink ? (
-                <li>
-                  <a
-                    css={[BylineCss.link, BylineCss.twitterLink]}
-                    className="focusIndicatorReducedWidth"
-                    href={twitterLink}
-                    aria-labelledby="byline-twitter-link"
-                  >
-                    <span role="text" id="byline-twitter-link">
-                      <VisuallyHiddenText lang="en-GB">{`X, `}</VisuallyHiddenText>
-                      <Text
-                        className="byline__link-text"
-                        css={BylineCss.twitterText}
-                        size="brevier"
-                        fontVariant="sansBold"
-                      >{`@${twitterText}`}</Text>
-                      {isRtl ? (
-                        <LeftChevron css={BylineCss.twitterChevron} />
-                      ) : (
-                        <RightChevron css={BylineCss.twitterChevron} />
-                      )}
-                    </span>
-                  </a>
-                </li>
-              ) : null}
-              {location ? (
-                <li>
-                  <span
-                    role="text"
-                    css={BylineCss.location}
-                    aria-label={`${reportingFrom} ${location}`}
-                  >
-                    <Text
-                      css={BylineCss.reportingFromText}
-                      size="brevier"
-                      fontVariant="sansRegularItalic"
-                      aria-hidden="true"
-                    >
-                      {`${reportingFrom} `}{' '}
-                    </Text>
-                    <Text
-                      css={BylineCss.locationText}
-                      size="brevier"
-                      fontVariant="sansRegular"
-                      aria-hidden="true"
-                    >
-                      {location}
-                    </Text>
-                  </span>
-                </li>
-              ) : null}
-            </ul>
-          );
-        });
+  const bylineContainer =
+    {
+      [LIVE_PAGE]: [BylineCss.postBylineContainer],
+      [ARTICLE_PAGE]: [BylineCss.bylineContainer],
+      [MEDIA_ARTICLE_PAGE]: [BylineCss.bylineContainer],
+    }[pageType] || [];
 
   return (
-    contributors?.[0] && (
-      <section role="region" aria-labelledby="article-byline">
+    contributorValues?.[0] && (
+      <section
+        role="region"
+        aria-labelledby="article-byline"
+        data-testid="byline"
+      >
         <VisuallyHiddenText as="strong" id="article-byline" aria-hidden>
           {articleInformation}
         </VisuallyHiddenText>
-        <ul css={BylineCss.bylineList}>
-          <li css={BylineCss.bylineContainer}>{contributors}</li>
-          {/* EXPERIMENT: Article Read Time */}
+        <ul css={[BylineCss.list]}>
+          <li
+            css={[
+              ...bylineContainer,
+              isSingleContributor && BylineCss.bylineContainerSingleContributor,
+            ]}
+          >
+            <Contributors
+              contributorValues={contributorValues}
+              isSingleContributor={isSingleContributor}
+              pageType={pageType}
+            />
+          </li>
           {children &&
-            React.Children.map(children, (child, index) => (
-              <li key={index} css={BylineCss.timestampLineBreak}>
-                {child}
-              </li>
+            Children.map(children, (child, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <li key={index}>{child}</li>
             ))}
         </ul>
       </section>

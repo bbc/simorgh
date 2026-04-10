@@ -12,10 +12,10 @@ const baseServiceConfig = {
   atiAnalyticsAppName: 'news-serbian',
   atiAnalyticsProducerId: '81',
   atiAnalyticsProducerName: 'SERBIAN',
-  useReverb: true,
   chartbeatDomain: 'serbian.bbc.co.uk',
   product: 'BBC News',
-  defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/serbian.png',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
   dir: 'ltr' as Direction,
   service: 'serbian' as Services,
   languageName: 'Serbian',
@@ -78,7 +78,7 @@ export const service: SerbianConfig = {
           text: 'O BBC-ju',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Pravila privatnosti',
         },
         {
@@ -120,36 +120,18 @@ export const service: SerbianConfig = {
         title: 'Početna strana',
         url: '/serbian/lat',
       },
-      {
-        title: 'Studentske blokade',
-        url: '/serbian/topics/cly9dd4w09wt/lat',
-      },
-      {
-        title: 'Srbija',
-        url: '/serbian/topics/cr50vdy9q6wt/lat',
-      },
-      {
-        title: 'Balkan',
-        url: '/serbian/topics/c06g87137jgt/lat',
-      },
-      {
-        title: 'Svet',
-        url: '/serbian/topics/c2lej05e1eqt/lat',
-      },
-      {
-        title: 'Video',
-        url: '/serbian/topics/c44vyp5g049t/lat',
-      },
-      {
-        title: 'Najpopularnije',
-        url: '/serbian/lat/popular/read',
-      },
     ],
     scriptLink: {
       text: 'Ћир',
       variant: 'cyr',
     },
     translations: {
+      and: 'i',
+      readTime: {
+        readTimePrefix: 'Vreme čitanja',
+        long: 'članak',
+        minute: 'min',
+      },
       pagination: {
         page: 'Stranica',
         previousPage: 'Prethodno',
@@ -179,6 +161,8 @@ export const service: SerbianConfig = {
         postedAt: 'Objavljeno u',
         summary: 'Sažetak',
         shareButtonText: 'Deli',
+        refreshButtonText: 'Najnoviji post',
+        visuallyHiddenButtonText: 'Dostupan je novi post',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -485,7 +469,7 @@ export const service: SerbianConfig = {
           text: 'О ББЦ-ју',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'Правила приватности',
         },
         {
@@ -527,36 +511,18 @@ export const service: SerbianConfig = {
         title: 'Почетна страна',
         url: '/serbian/cyr',
       },
-      {
-        title: 'Студентске блокаде',
-        url: '/serbian/topics/cly9dd4w09wt/cyr',
-      },
-      {
-        title: 'Србија',
-        url: '/serbian/topics/cr50vdy9q6wt/cyr',
-      },
-      {
-        title: 'Балкан',
-        url: '/serbian/topics/c06g87137jgt/cyr',
-      },
-      {
-        title: 'Свет',
-        url: '/serbian/topics/c2lej05e1eqt/cyr',
-      },
-      {
-        title: 'Видео',
-        url: '/serbian/topics/c44vyp5g049t/cyr',
-      },
-      {
-        title: 'Најпопуларније',
-        url: '/serbian/cyr/popular/read',
-      },
     ],
     scriptLink: {
       text: 'Lat',
       variant: 'lat',
     },
     translations: {
+      and: 'и',
+      readTime: {
+        readTimePrefix: 'Време читања',
+        long: 'Чланак',
+        minute: 'мин',
+      },
       pagination: {
         page: 'Страница',
         previousPage: 'Претходно',
@@ -585,6 +551,8 @@ export const service: SerbianConfig = {
         postedAt: 'Објављено у',
         summary: 'Сажетак',
         shareButtonText: 'Дели',
+        refreshButtonText: 'Последњи пост',
+        visuallyHiddenButtonText: 'Доступан је нови пост',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',

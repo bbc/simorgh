@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   color,
   select,
@@ -31,8 +30,6 @@ const inputs = (service = 'news') => {
   const minWidthInput = number('minimum svg width', svgRatio * svgMinHeight);
   const maxWidthInput = number('maximum svg width', svgRatio * svgMaxHeight);
   const svgHeightInput = number('desired height svg', svgMaxHeight);
-  const borderBottom = boolean('Border Bottom', false);
-  const borderTop = boolean('Border Top', false);
   const backgroundColour = color('Background colour', `${POSTBOX}`);
   const logoColour = color('Logo colour', `${WHITE}`);
 
@@ -43,8 +40,6 @@ const inputs = (service = 'news') => {
     svgHeightInput,
     minWidthInput,
     maxWidthInput,
-    borderTop,
-    borderBottom,
     backgroundColour,
     logoColour,
   };
@@ -63,8 +58,6 @@ storiesOf(STORY_KIND, module)
         minWidthInput,
         maxWidthInput,
         svgChoice,
-        borderBottom,
-        borderTop,
         backgroundColour,
         logoColour,
       } = inputs(service);
@@ -77,8 +70,6 @@ storiesOf(STORY_KIND, module)
           minWidth={minWidthInput}
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
-          borderBottom={borderBottom}
-          borderTop={borderTop}
           backgroundColour={backgroundColour}
           logoColour={logoColour}
         />
@@ -96,8 +87,6 @@ storiesOf(STORY_KIND, module)
         minWidthInput,
         maxWidthInput,
         svgChoice,
-        borderBottom,
-        borderTop,
         backgroundColour,
         logoColour,
       } = inputs(service);
@@ -111,8 +100,6 @@ storiesOf(STORY_KIND, module)
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
           url="https://www.bbc.com/news"
-          borderBottom={borderBottom}
-          borderTop={borderTop}
           backgroundColour={backgroundColour}
           logoColour={logoColour}
         />
@@ -124,13 +111,7 @@ storiesOf(STORY_KIND, module)
     'with script link',
     ({ service, script }) => {
       const scriptLink = (
-        <ScriptLink
-          script={script}
-          service={service}
-          href="https://www.bbc.com/serbian/lat"
-        >
-          Lat
-        </ScriptLink>
+        <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>
       );
 
       const {
@@ -140,8 +121,6 @@ storiesOf(STORY_KIND, module)
         minWidthInput,
         maxWidthInput,
         svgChoice,
-        borderBottom,
-        borderTop,
         backgroundColour,
         logoColour,
       } = inputs();
@@ -155,8 +134,6 @@ storiesOf(STORY_KIND, module)
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
           url="https://www.bbc.com/news"
-          borderBottom={borderBottom}
-          borderTop={borderTop}
           backgroundColour={backgroundColour}
           logoColour={logoColour}
           scriptLink={scriptLink}
@@ -169,13 +146,7 @@ storiesOf(STORY_KIND, module)
     'with skip to content link and script link',
     ({ service, script, dir }) => {
       const scriptLink = (
-        <ScriptLink
-          script={script}
-          service={service}
-          href="https://www.bbc.com/serbian/lat"
-        >
-          Lat
-        </ScriptLink>
+        <ScriptLink href="https://www.bbc.com/serbian/lat">Lat</ScriptLink>
       );
 
       const {
@@ -185,14 +156,12 @@ storiesOf(STORY_KIND, module)
         minWidthInput,
         maxWidthInput,
         svgChoice,
-        borderBottom,
-        borderTop,
         backgroundColour,
         logoColour,
       } = inputs();
 
       const skipLink = (
-        <SkipLink service={service} script={script} href="#content" dir={dir}>
+        <SkipLink href="#content" dir={dir}>
           Skip to content
         </SkipLink>
       );
@@ -206,8 +175,6 @@ storiesOf(STORY_KIND, module)
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
           url="https://www.bbc.com/news"
-          borderBottom={borderBottom}
-          borderTop={borderTop}
           backgroundColour={backgroundColour}
           logoColour={logoColour}
           skipLink={skipLink}
@@ -227,8 +194,6 @@ storiesOf(STORY_KIND, module)
         minWidthInput,
         maxWidthInput,
         svgChoice,
-        borderBottom,
-        borderTop,
         backgroundColour,
         logoColour,
       } = inputs(service);
@@ -242,8 +207,6 @@ storiesOf(STORY_KIND, module)
           maxWidth={maxWidthInput}
           svg={svgs[svgChoice]}
           url="https://www.bbc.com/news"
-          borderBottom={borderBottom}
-          borderTop={borderTop}
           backgroundColour={backgroundColour}
           logoColour={logoColour}
           linkId="brandLink"

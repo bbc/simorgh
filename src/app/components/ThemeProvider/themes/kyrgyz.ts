@@ -1,3 +1,4 @@
+import { ServiceTheme } from '#app/models/types/theming';
 import { GHOST, WHITE, POSTBOX, POSTBOX_30 } from '../palette';
 import cyrillicScript from '../fontScripts/cyrillic';
 import helmetFontVariants from '../fontVariants/helmet';
@@ -5,7 +6,7 @@ import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/kyrgyz';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
-const kyrgyzTheme = {
+export const theme: ServiceTheme = {
   palette: {
     BRAND_BACKGROUND: POSTBOX,
     BRAND_LOGO: WHITE,
@@ -21,7 +22,6 @@ const kyrgyzTheme = {
   brandSVG,
 };
 
-export default withThemeProvider(
-  kyrgyzTheme,
-  getPWATypographyTheme(cyrillicScript),
-);
+export const pwaTheme = getPWATypographyTheme(cyrillicScript);
+
+export default withThemeProvider(theme, pwaTheme);

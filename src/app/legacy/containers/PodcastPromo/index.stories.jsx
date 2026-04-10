@@ -1,15 +1,12 @@
-import React from 'react';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import latin from '../../../components/ThemeProvider/fontScripts/latin';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 
 import InlinePodcastPromo from './Inline';
 import SecondaryColumnPodcastPromo from './SecondaryColumn';
 
 const serviceContextMock = {
-  service: 'news',
-  script: latin,
   dir: 'ltr',
+  service: 'news',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
@@ -30,13 +27,47 @@ const serviceContextMock = {
   },
 };
 
-const Component = ({ inline = false }) => (
+const serviceContextMockYoutube = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.youtube.com',
+    },
+  },
+};
+
+const serviceContextMockPodcast = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://www.bbc.co.uk/podcast',
+    },
+  },
+};
+const serviceContextMockWhatsapp = {
+  ...serviceContextMock,
+  podcastPromo: {
+    ...serviceContextMock.podcastPromo,
+    linkLabel: {
+      ...serviceContextMock.podcastPromo.linkLabel,
+      href: 'https://whatsapp',
+    },
+  },
+};
+
+
+
+const Component = ({ inline = false,  value = serviceContextMock }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
     }}
   >
-    <ServiceContext.Provider value={serviceContextMock}>
+    <ServiceContext.Provider value={value}>
       {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
     </ServiceContext.Provider>
   </ToggleContextProvider>
@@ -48,4 +79,9 @@ export default {
 };
 
 export const SecondaryColumnPromo = () => <Component />;
-export const InlinePromo = () => <Component inline />;
+export const InlinePromoGeneric = () => <Component inline />;
+export const InlinePromoWhatsapp = () => <Component inline value={serviceContextMockWhatsapp}/>;
+export const InlinePromoYoutube = () => <Component inline value={serviceContextMockYoutube} />;
+export const InlinePromoPodcast = () => <Component inline value={serviceContextMockPodcast} />;
+
+

@@ -8,6 +8,7 @@ import {
   TOGGLE_API_RESPONSE_TIME,
   CONFIG_RESPONSE_EMPTY_ERROR,
 } from '#lib/logger.const';
+import onClient from '#lib/utilities/onClient';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import { getEnvConfig } from '../getEnvConfig';
 
@@ -15,16 +16,14 @@ const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
 const logResponseTime = async (url, origin, service, timeout) => {
-  const isBrowser =
-    typeof window !== 'undefined' && typeof window.document !== 'undefined';
+  const response = await fetch(url, { headers: { origin }, timeout });
 
-  if (isBrowser) {
-    return fetch(url, { headers: { origin }, timeout });
+  if (onClient()) {
+    return response;
   }
 
   logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
   const startHrTime = process.hrtime();
-  const response = await fetch(url, { headers: { origin }, timeout });
   const elapsedHrTime = process.hrtime(startHrTime);
   logger.info(TOGGLE_API_RESPONSE_TIME, {
     nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
@@ -36,9 +35,9 @@ const logResponseTime = async (url, origin, service, timeout) => {
 };
 
 const getToggles = async (service, cache) => {
-  const environment = getEnvConfig().SIMORGH_APP_ENV || 'local';
-  const timeout =
-    parseInt(getEnvConfig().SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
+  const envConfig = getEnvConfig();
+  const environment = envConfig.SIMORGH_APP_ENV || 'local';
+  const timeout = parseInt(envConfig.SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
   const localToggles = defaultToggles[environment];
   if (!localToggles.enableFetchingToggles.enabled) {
     return localToggles;

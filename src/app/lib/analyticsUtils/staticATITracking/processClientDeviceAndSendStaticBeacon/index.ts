@@ -1,6 +1,9 @@
 /* istanbul ignore next */
 export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
-  window.processClientDeviceAndSendStaticBeacon = (atiURL, reverbURL) => {
+  window.processClientDeviceAndSendStaticBeacon = ({
+    reverbUrl,
+    forwardingUrl = '',
+  }) => {
     const {
       screen: { width, height, colorDepth, pixelDepth },
       innerWidth,
@@ -11,6 +14,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
     const hours = now.getHours();
     const mins = now.getMinutes();
     const secs = now.getSeconds();
+    const epochTimestamp = now.getTime().toString();
 
     // COOKIE SETTINGS
     const cookieName = 'atuserid';
@@ -67,65 +71,40 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    if (reverbURL) {
-      let processedReverbUrl = reverbURL
+    if (reverbUrl) {
+      let processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
         .replace('{browserViewportResolution}', params.re)
         .replace('{timestamp}', params.hl)
         .replace('{language}', params.lng)
         .replaceAll('{referrer}', params.ref)
-        .replace('{idclient}', params.idclient);
+        .replace('{idclient}', params.idclient)
+        .replace('{epochTimestamp}', epochTimestamp)
+        .replace('{forwardingLink}', forwardingUrl)
+        .replaceAll('ref=&', '');
 
       const searchParams = new URLSearchParams(window.location.search);
 
       searchParams.forEach((value, key) => {
-        if (key.startsWith('utm_') || key.startsWith('at_')) {
+        if (
+          key.startsWith('utm_') ||
+          key.startsWith('at_') ||
+          key.startsWith('xtor')
+        ) {
           processedReverbUrl +=
-            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`.replace(
-              'at_',
-              'src_',
-            );
+            `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+              .replace('at_', 'src_')
+              .replace('xtor', 'xto');
         }
       });
 
       window.sendStaticBeacon(processedReverbUrl);
-    } else if (atiURL) {
-      if (isLiteSite && window.location.search.length) {
-        const kvpairs: Record<string, string> = window.location.search
-          .substring(1)
-          .split('&')
-          .map((param): [string, string] => {
-            const pieces = param.split('=');
-            return [
-              decodeURIComponent(pieces[0]),
-              decodeURIComponent(pieces[1]),
-            ];
-          })
-          .reduce<Record<string, string>>((values, kv) => {
-            // eslint-disable-next-line no-param-reassign, prefer-destructuring
-            values[kv[0]] = kv[1];
-            return values;
-          }, {});
-
-        Object.keys(kvpairs).forEach(keyName => {
-          if (keyName.indexOf('at_') === 0) {
-            params[keyName.replace('at_', 'src_')] = kvpairs[keyName];
-          } else if (keyName.indexOf('utm_') === 0) {
-            params[keyName] = kvpairs[keyName];
-          }
-        });
-      }
-
-      const paramValues = Object.keys(params)
-        .map(key => `${key}=${params[key]}`)
-        .join('&');
-      window.sendStaticBeacon(`${atiURL}&${paramValues}`);
     }
   };
 };
 
-export default (atiURL: string, reverbURL?: string) => {
+export default (reverbUrl: string) => {
   window.addEventListener('load', () => {
-    window.processClientDeviceAndSendStaticBeacon(atiURL, reverbURL);
+    window.processClientDeviceAndSendStaticBeacon({ reverbUrl });
   });
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import IMAGE from '../../../../components/Image';
 
 const Image = ({
@@ -8,6 +7,7 @@ const Image = ({
   fallbackSrcset = '',
   width,
   height,
+  isPortraitImage = false,
 }) => {
   const ASPECT_RATIO = [16, 9];
 
@@ -21,6 +21,7 @@ const Image = ({
       width={width}
       height={height}
       lazyLoad
+      {...(isPortraitImage && { placeholder: false })}
     />
   );
 };

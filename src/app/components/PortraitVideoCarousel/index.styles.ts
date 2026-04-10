@@ -1,16 +1,13 @@
 import { css, Theme } from '@emotion/react';
 import NO_JS_CLASSNAME from '#app/lib/noJs.const';
+import { OPERA_MINI_CLASSNAME } from '#app/lib/utilities/addOperaMiniClassScript';
 import { calculateVariedNavContainerWidths } from './utils/styleUtils';
 
 const styles = {
-  section: ({ mq, spacings }: Theme) =>
+  section: () =>
     css({
-      margin: `${spacings.DOUBLE}rem 0`,
-      [mq.GROUP_1_MIN_WIDTH]: {
-        margin: `${spacings.TRIPLE}rem 0`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `${spacings.DOUBLE}rem 0`,
+      [`.${OPERA_MINI_CLASSNAME} &`]: {
+        display: 'none',
       },
     }),
   heading: ({ palette, mq, spacings }: Theme) =>
@@ -27,12 +24,14 @@ const styles = {
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
+      containerType: 'inline-size', // required for container query
       [`.${NO_JS_CLASSNAME} &`]: {
         display: 'none',
       },
     }),
-  carousel: ({ spacings, mq }: Theme) =>
+  carousel: ({ spacings, mq, gridWidths }: Theme) =>
     css({
+      containerType: 'inline-size', // required for container query
       display: 'flex',
       flex: 1,
       overflowX: 'auto',
@@ -57,6 +56,7 @@ const styles = {
           mq,
           display: 'block',
           widthParameter: 'flexBasis',
+          gridWidths,
         }),
       },
     }),

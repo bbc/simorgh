@@ -1,13 +1,25 @@
+import SERVICES from '../services';
+
 export default {
   _environment: 'local',
+  account: {
+    enabled: true,
+    value: 'hindi',
+  },
   ads: {
     enabled: true,
   },
   adsNonce: {
-    enabled: true,
+    enabled: false,
   },
   articleLiteSiteLink: { enabled: true },
+  articlePortraitVideo: {
+    enabled: true,
+  },
   comscoreAnalytics: {
+    enabled: true,
+  },
+  continueReadingButton: {
     enabled: true,
   },
   electionBanner: {
@@ -15,8 +27,7 @@ export default {
   },
   enableFetchingToggles: {
     enabled: process?.env.FETCH_TOGGLES === 'true' || false,
-    value:
-      '(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|dari|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|magyarul|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|polska|portuguese|punjabi|romania|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|ws|vietnamese|yoruba|zhongwen)',
+    value: `(${SERVICES.join('|')})`,
   },
   eventTracking: {
     enabled: true,
@@ -45,7 +56,7 @@ export default {
   preloadLeadImage: {
     enabled: true,
   },
-  prerollAds: {
+  preroll: {
     enabled: true,
   },
   podcastPromo: {
@@ -66,8 +77,15 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  topBarOJs: {
+    enabled: true,
+  },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: true,
+    value: 'hindi',
   },
   webVitalsMonitoring: {
     enabled: true,

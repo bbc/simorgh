@@ -1,7 +1,5 @@
-import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Services } from '#app/models/types/global';
@@ -37,8 +35,6 @@ const Page = ({ pageData, service, lang }: Props) => (
   </BrowserRouter>
 );
 
-(analyticsUtils.getAtUserId as jest.Mock) = jest.fn();
-
 jest.mock('../../components/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
   return ChartbeatAnalytics;
@@ -52,6 +48,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(container).toMatchSnapshot();
@@ -64,6 +61,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(getByText('BBC Afrique Radio')).toBeInTheDocument();
@@ -76,6 +74,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
 
     expect(getByText('Infos, musique et sports')).toBeInTheDocument();
@@ -121,6 +120,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
     const audioPlayerElement = document.querySelector(
       '[data-e2e="media-player"]',
@@ -136,6 +136,7 @@ describe('Radio Page Main', () => {
         service="afrique"
         lang="fr"
       />,
+      { service: 'afrique' },
     );
     const radioScheduleTitle = getByText('Journaux et Magazines');
     const scheduleWrapper = document.querySelector(
@@ -153,6 +154,7 @@ describe('Radio Page Main', () => {
         service="kyrgyz"
         lang="ky"
       />,
+      { service: 'kyrgyz' },
     );
 
     const scheduleWrapper = container.querySelector(

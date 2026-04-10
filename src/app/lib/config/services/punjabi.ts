@@ -13,12 +13,12 @@ export const service: DefaultServiceConfig = {
     atiAnalyticsAppName: 'news-punjabi',
     atiAnalyticsProducerId: '73',
     atiAnalyticsProducerName: 'PUNJABI',
-    useReverb: true,
     chartbeatDomain: 'punjabi.bbc.co.uk',
     brandName: 'BBC News ਪੰਜਾਬੀ',
     product: 'BBC News',
     serviceLocalizedName: 'ਪੰਜਾਬੀ',
-    defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/punjabi.png',
+    defaultImage:
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/punjabi/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News ਪੰਜਾਬੀ',
     dir: `ltr`,
     externalLinkText: ', ਬਾਹਰੀ',
@@ -47,6 +47,11 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     translations: {
+      and: 'ਅਤੇ',
+      readTime: {
+        readTimePrefix: 'ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ',
+        minute: 'ਮਿੰਟ',
+      },
       pagination: {
         previousPage: 'ਪਿੱਛੇ',
         nextPage: 'ਅੱਗੇ',
@@ -76,6 +81,8 @@ export const service: DefaultServiceConfig = {
         postedAt: 'ਇਸ ‘ਤੇ ਪੋਸਟ ਕੀਤਾ',
         summary: 'ਸਾਰ',
         shareButtonText: 'ਸਾਂਝਾ ਕਰੋ',
+        refreshButtonText: 'ਤਾਜਾ ਪੋਸਟ',
+        visuallyHiddenButtonText: 'ਨਵਾਂ ਪੋਸਟ ਉਪਲਬਧ ਹੈ',
       },
       downloads: {
         instructions: 'You can download and view today’s news.',
@@ -289,22 +296,6 @@ export const service: DefaultServiceConfig = {
         title: 'ਖ਼ਬਰਾਂ',
         url: '/punjabi',
       },
-      {
-        title: 'ਵੀਡੀਓ',
-        url: '/punjabi/topics/cx12qmz6jm4t',
-      },
-      {
-        title: 'ਪਾਠਕਾਂ ਦੀ ਪਸੰਦ',
-        url: '/punjabi/popular/read',
-      },
-      {
-        title: 'ਭਾਰਤ',
-        url: '/punjabi/topics/cz74k76gjqxt',
-      },
-      {
-        title: 'ਕੌਮਾਂਤਰੀ',
-        url: '/punjabi/topics/c2lej05e43lt',
-      },
     ],
     footer: {
       trustProjectLink: {
@@ -325,7 +316,7 @@ export const service: DefaultServiceConfig = {
           text: 'BBC ਬਾਰੇ',
         },
         {
-          href: 'https://www.bbc.com/privacy/',
+          href: 'https://www.bbc.com/usingthebbc/privacy/',
           text: 'ਨਿੱਜਤਾ ਪਾਲਿਸੀ',
         },
         {

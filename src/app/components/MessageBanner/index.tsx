@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import Paragraph from '../Paragraph';
@@ -75,7 +74,10 @@ const MessageBanner = ({
             css={styles.callToActionLink}
           >
             <CallToActionLink.ButtonLikeWrapper>
-              <CallToActionLink.Text shouldUnderlineOnHoverFocus>
+              <CallToActionLink.Text
+                shouldUnderlineOnHoverFocus
+                css={styles.callToActionLinkText}
+              >
                 {linkText}
                 <CallToActionLink.Chevron />
               </CallToActionLink.Text>

@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import Text from '../../../../src/app/components/Text';
 import { Confirm, Close, ExternalLink, Help } from '../Icons';
 import styles from './index.styles';
