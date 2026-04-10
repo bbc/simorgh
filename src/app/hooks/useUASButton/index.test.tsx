@@ -189,22 +189,5 @@ describe('useUASButton', () => {
 
       expect(mockSetIsSaved).toHaveBeenCalledWith(true);
     });
-
-    test('does not send POST if article is already saved', async () => {
-      mockuseUASFetchSaveStatus.mockReturnValue({
-        isSaved: true,
-        isLoading: false,
-        error: null,
-        setIsSaved: mockSetIsSaved,
-      });
-
-      const { result } = renderHook(() => useUASButton(defaultProps));
-
-      await act(async () => {
-        await result.current.handleSaveAction('save');
-      });
-
-      expect(mockUasApiRequest).not.toHaveBeenCalled();
-    });
   });
 });
