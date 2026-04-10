@@ -34,6 +34,17 @@ module.exports = {
           { key: 'Content-Type', value: 'application/javascript' },
         ],
       },
+      {
+        source: '/:service/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value:
+              'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
+          },
+          { key: 'Content-Type', value: 'application/manifest+json' },
+        ],
+      },
     ];
   },
   async rewrites() {
