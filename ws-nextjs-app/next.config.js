@@ -54,10 +54,6 @@ module.exports = {
         destination: '/sw.js',
       },
       {
-        source: '/:service/manifest.json',
-        destination: '/manifest.json',
-      },
-      {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
       },
