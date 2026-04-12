@@ -1,7 +1,12 @@
-/* eslint-disable cypress/no-async-tests */
+import SERVICES from '#app/lib/config/services';
 import { test } from '@bbc/unified-web-e2e-framework';
 import { expect } from '@playwright/test';
-import runUrlValidationTest from '../support/helpers/runUrlValidationTest';
+
+const SERVICES_PATTERN = SERVICES.join('|');
+
+const VALID_HREF_REGEX = new RegExp(
+  `^https://www\\.bbc\\.com/(?:${SERVICES_PATTERN}|usingthebbc/[^/]+(?:/.*)?|programmes/[a-z0-9]{8,15})(?:/.*)?$`,
+);
 
 const testSuites = [
   {
@@ -17,12 +22,22 @@ const testSuites = [
     service: 'kyrgyz',
   },
   {
+    path: '/magyarul',
+    service: 'magyarul',
+    expectedPath: '/magyarul/articles/cwywderkzy2o',
+  },
+  {
     path: '/polska',
     service: 'polska',
   },
   {
     path: '/portuguese',
     service: 'portuguese',
+  },
+  {
+    path: '/romania',
+    service: 'romania',
+    expectedPath: '/romania/articles/c993yged1xno',
   },
   {
     path: '/serbian/lat',
@@ -46,19 +61,27 @@ const testSuites = [
   },
 ];
 
-// smoke tests
 testSuites.forEach(suite => {
   test.describe(`Home Page - ${suite.service}${suite.variant ?? ''}`, () => {
     test('all links within <main> element should be a valid World Service URL', async ({
       page,
     }) => {
+      const expectedPath = suite.expectedPath || suite.path;
+
       await page.goto(suite.path);
-      await expect(page).toHaveURL(suite.path);
-      // runUrlValidationTest(page);
-      // ToDo: check how to reuse the same browser instead of opening / reponeing
-      // ToDO: run canonicalTests, testsForAllCanonicalPages
-      // ToDo: differentiate between smoke / non-smoke
-      // ToDo: decide whether to migrate runPage or do a different mroe direct approach (even if it means more repetition)
+      await expect(page).toHaveURL(expectedPath);
+
+      const pageLinks = await page
+        .locator('main a[href^="https://www.bbc.com"]')
+        .all();
+
+      // eslint-disable-next-line no-restricted-syntax
+      for (const link of pageLinks) {
+        // eslint-disable-next-line no-await-in-loop
+        const href = await link.getAttribute('href');
+        expect(href).not.toBeNull();
+        expect(href).toMatch(VALID_HREF_REGEX);
+      }
     });
   });
 });
