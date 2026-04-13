@@ -11,6 +11,7 @@ import {
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
   bylineWithMultipleContributors,
+  bylineWithMultipleContributorsRTL,
   bylineWithMultipleContributorsNoRole,
 } from '../../pages/ArticlePage/fixtureData';
 import {
@@ -32,6 +33,7 @@ interface ComponentProps {
   service?: Services;
   pageType?: PageTypes;
   fixture: OptimoBylineBlock['model']['blocks'] | PostContributor['model'][];
+  dir?: 'ltr' | 'rtl';
 }
 
 const Component = ({
@@ -39,6 +41,7 @@ const Component = ({
   pageType = ARTICLE_PAGE,
   fixture,
   children,
+  dir = 'ltr',
 }: PropsWithChildren<ComponentProps>) => (
   <RequestContextProvider
     pageType={pageType}
@@ -47,9 +50,11 @@ const Component = ({
   >
     <ServiceContextProvider service={service}>
       {pageType === ARTICLE_PAGE ? (
-        <Byline blocks={fixture as OptimoBylineBlock['model']['blocks']}>
-          {children}
-        </Byline>
+        <div dir={dir}>
+          <Byline blocks={fixture as OptimoBylineBlock['model']['blocks']}>
+            {children}
+          </Byline>
+        </div>
       ) : (
         <Byline blocks={fixture as PostContributor['model'][]}>
           {children}
@@ -81,7 +86,11 @@ export const MultipleContributorsByline = () => (
 );
 
 export const MultipleContributorsBylineRTL = () => (
-  <Component service={'arabic'}fixture={bylineWithMultipleContributors} />
+  <Component
+    service={'arabic'}
+    fixture={bylineWithMultipleContributorsRTL}
+    dir={'rtl'}
+  />
 );
 
 export const MultipleContributorsBylineFinalContributorNoRole = () => (
