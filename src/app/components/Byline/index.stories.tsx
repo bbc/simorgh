@@ -80,6 +80,10 @@ export const MultipleContributorsByline = () => (
   <Component fixture={bylineWithMultipleContributors} />
 );
 
+export const MultipleContributorsBylineRTL = () => (
+  <Component service={'arabic'}fixture={bylineWithMultipleContributors} />
+);
+
 export const MultipleContributorsBylineFinalContributorNoRole = () => (
   <Component fixture={bylineWithMultipleContributorsNoRole} />
 );

@@ -7,10 +7,10 @@ import Image from '../../Image';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { RightChevron, LeftChevron } from '../../icons';
 
-const Comma = () => {
+const Comma = ({ isRtl }) => {
   return (
     <span aria-hidden="true" css={BylineCss.comma}>
-      ,{' '}
+      {isRtl ? '،' : ','}{' '}
     </span>
   );
 };
@@ -195,7 +195,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
               )}
               {hasMultipleContributors &&
                 !isLastContributorNameOnly(index, jobRole, location) && (
-                  <Comma />
+                  <Comma isRtl={isRtl} />
                 )}
             </li>
             {jobRole && (
@@ -205,10 +205,12 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   role={role}
                   isSingleContributor={isSingleContributor}
                 />
-                {(location && <Comma />) ||
+                {(location && <Comma isRtl={isRtl} />) ||
                   (hasMultipleContributors &&
                     index !== lastContributorIndex &&
-                    index !== lastContributorIndex - 1 && <Comma />)}
+                    index !== lastContributorIndex - 1 && (
+                      <Comma isRtl={isRtl} />
+                    ))}
               </li>
             )}
             {location && (
@@ -220,7 +222,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                 />
                 {hasMultipleContributors &&
                   index !== lastContributorIndex &&
-                  index !== lastContributorIndex - 1 && <Comma />}
+                  index !== lastContributorIndex - 1 && <Comma isRtl={isRtl} />}
               </li>
             )}
           </ul>
