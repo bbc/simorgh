@@ -1,4 +1,4 @@
-import useUASButton from '#app/hooks/useUASButton';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import styles from './index.styles';
 
 interface SaveArticleButtonProps {
@@ -51,7 +51,9 @@ const SaveArticleButton = ({
     <button
       css={styles.buttonWrapper}
       type="button"
-      onClick={() => handleSaveAction(isSaved ? 'remove' : 'save')}
+      onClick={() =>
+        handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE)
+      }
       disabled={isLoading}
       aria-label={buttonLabel}
       title={buttonLabel}

@@ -19,7 +19,10 @@ interface UseUASButtonProps {
   title: string;
 }
 
-type UASAction = 'save' | 'remove';
+enum UASAction {
+  SAVE = 'save',
+  REMOVE = 'remove',
+}
 
 interface UseUASButtonReturn {
   showButton: boolean;
@@ -60,7 +63,7 @@ const useUASButton = ({
       try {
         setSaveError(null);
 
-        if (action === 'save') {
+        if (action === UASAction.SAVE) {
           const body = createFavouritesPayload({ articleId, service, title });
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);
@@ -92,4 +95,5 @@ const useUASButton = ({
   };
 };
 
+export { UASAction };
 export default useUASButton;
