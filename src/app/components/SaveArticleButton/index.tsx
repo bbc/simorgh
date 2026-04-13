@@ -1,9 +1,10 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import { Services } from '#app/models/types/global';
 import styles from './index.styles';
 
 interface SaveArticleButtonProps {
   articleId: string;
-  service: string;
+  service: Services;
   articleTitle: string;
 }
 
@@ -36,16 +37,15 @@ const SaveArticleButton = ({
   };
 
   // TODO : Will modify based on future error handling implementation,
-  //  currently just hides the button if there is an error fetching save status
-  if (error) {
-    // Logging until we have proper error handling in place
-    // eslint-disable-next-line no-console
-    console.log('Error fetching saved status for article:', {
-      articleId,
-      error,
-    });
-    return null;
-  }
+  // if (error) {
+  //   // Logging until we have proper error handling in place
+  //   // eslint-disable-next-line no-console
+  //   console.log('Error fetching saved status for article:', {
+  //     articleId,
+  //     error,
+  //   });
+  //   return null;
+  // }
 
   return (
     <button

@@ -1,4 +1,5 @@
 import type { UasApiRequestBody } from './index';
+import type { Services } from '#app/models/types/global';
 
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
@@ -25,7 +26,7 @@ const createFavouritesPayload = ({
   articleTitle,
 }: {
   articleId: string;
-  service: string;
+  service: Services;
   articleTitle: string;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,

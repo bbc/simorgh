@@ -1,21 +1,23 @@
 import { use, useCallback, useState } from 'react';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
 import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
+import { Services } from '#app/models/types/global';
 import useToggle from '../useToggle';
 
-/** A hook that fetches an article’s saved status and controls showing the save UAS button
+/** A hook that fetches an article's saved status and controls showing the save UAS button
  * based on feature toggles and sign in status,
  * with room to later expand for toggling the save state based on user actions. */
 
 interface UseUASButtonProps {
   articleId: string;
-  service: string;
+  service: Services;
   articleTitle: string;
 }
 
@@ -38,6 +40,7 @@ const useUASButton = ({
   articleTitle,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
+  const { platform } = use(RequestContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
   const [isSaving, setIsSaving] = useState(false);
@@ -49,7 +52,7 @@ const useUASButton = ({
       ? accountService?.toString().split('|').includes(service)
       : true);
 
-  const showButton = isUASEnabled && isSignedIn;
+  const showButton = isUASEnabled && isSignedIn && platform === 'canonical';
 
   const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
     showButton ? articleId : '',
