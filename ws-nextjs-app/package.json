@@ -5,7 +5,7 @@
   "scripts": {
     "setupDevEnv": "cp ../envConfig/local.env .env && sed 's/:7080/:7081/g' .env > .env.tmp && mv .env.tmp .env && mkdir -p public && cp -r ../public/. public",
     "copyStaticFiles": "mkdir -p build/standalone/ws-nextjs-app/public/_next/static && cp -r build/static/. build/standalone/ws-nextjs-app/public/_next/static",
-    "copyPublicFiles": "mkdir -p build/standalone/ws-nextjs-app/public && cp -r ../public/. build/standalone/ws-nextjs-app/public",
+    "copyPublicFiles": "mkdir -p build/standalone/ws-nextjs-app/public && rsync -a --exclude='fonts/' --exclude='*/images/' ../public/ build/standalone/ws-nextjs-app/public/",
     "build:local": "yarn setupDevEnv && next build --webpack && yarn copyStaticFiles && yarn copyPublicFiles",
     "build:preview": "cp ../envConfig/preview1.env .env && next build --webpack && yarn copyPublicFiles",
     "build:preview1": "cp ../envConfig/preview1.env .env && next build --webpack && yarn copyPublicFiles",
