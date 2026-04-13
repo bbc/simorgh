@@ -5,7 +5,7 @@ describe('appendCtaQueryParams', () => {
     const url = 'https://example.com/signin';
     const result = appendCtaQueryParams(url);
     expect(result).toBe(
-      'https://example.com/signin?skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
+      'https://example.com/signin?skipAgeBracketScreen=true&context=international',
     );
   });
 
@@ -13,7 +13,7 @@ describe('appendCtaQueryParams', () => {
     const url = 'https://example.com/signin';
     const result = appendCtaQueryParams(url, { pageToReturnTo: '/home' });
     expect(result).toBe(
-      'https://example.com/signin?ptrt=%2Fhome&skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
+      'https://example.com/signin?ptrt=%2Fhome&skipAgeBracketScreen=true&context=international',
     );
   });
 
@@ -21,7 +21,7 @@ describe('appendCtaQueryParams', () => {
     const url = 'https://example.com/signin';
     const result = appendCtaQueryParams(url, { lang: 'en' });
     expect(result).toBe(
-      'https://example.com/signin?lang=en&skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
+      'https://example.com/signin?lang=en&skipAgeBracketScreen=true&context=international',
     );
   });
 
@@ -60,7 +60,7 @@ describe('appendCtaQueryParams', () => {
       lang: 'es',
     });
     expect(result).toBe(
-      'https://example.com/signin?existing=param&ptrt=%2Fhome&lang=es&skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
+      'https://example.com/signin?existing=param&ptrt=%2Fhome&lang=es&skipAgeBracketScreen=true&context=international',
     );
   });
 
@@ -69,7 +69,7 @@ describe('appendCtaQueryParams', () => {
       'https://example.com/signin?skipAgeBracketScreen=false&context=local';
     const result = appendCtaQueryParams(url);
     expect(result).toBe(
-      'https://example.com/signin?skipAgeBracketScreen=true&context=international&userOrigin=WS_NEWS_HINDI_TEST',
+      'https://example.com/signin?skipAgeBracketScreen=true&context=international',
     );
   });
 });
