@@ -13,7 +13,7 @@ export type IdctaConfig = {
   identity: {
     idSignedInCookieName: string;
   };
-  env: string | null;
+  env?: string | null;
 };
 
 export type AccountContextProps = {
