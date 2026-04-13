@@ -10,6 +10,7 @@ const mockLiveData =
 const mockPageData = {
   ...liveFixture.data,
   liveTextStream: {
+    id: '3861CC0A9EA7434981EEE3FCE9880391',
     content: postFixture,
     contributors: 'Not a random dude',
   },

@@ -32,7 +32,7 @@ describe('AccountHeader', () => {
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
-    const link = await screen.findByRole('link', { name: 'Sign In' });
+    const link = await screen.findByRole('link', { name: 'साइन‑इन' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),

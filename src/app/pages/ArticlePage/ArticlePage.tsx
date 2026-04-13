@@ -5,6 +5,7 @@ import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
 import { singleTextBlock } from '#app/models/blocks';
+import { BylineLinkedData } from '#app/components/LinkedData/types';
 import OptimizelyPageMetrics from '#app/components/OptimizelyPageMetrics';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { RequestContext } from '#contexts/RequestContext';
@@ -58,6 +59,8 @@ import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
+import SaveArticleButton from '#app/components/SaveArticleButton';
+import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -105,32 +108,43 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
+    articleId: string,
+    service: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
 
-    return hasByline ? (
-      <Byline blocks={bylineContribBlocks}>
-        <Timestamp
-          firstPublished={new Date(firstPublished).getTime()}
-          lastPublished={new Date(lastPublished).getTime()}
-          popOut={false}
-          hasReadTime={shouldDisplayReadTime}
-        />
-        {shouldDisplayReadTime && (
-          <ReadTimeArticle readTimeValue={readTimeValue} />
-        )}
-      </Byline>
-    ) : (
+    return (
       <>
-        <Timestamp
-          {...props}
-          popOut={false}
-          hasReadTime={shouldDisplayReadTime}
-        />
-        {shouldDisplayReadTime && (
-          <ReadTimeArticle readTimeValue={readTimeValue} />
+        {hasByline ? (
+          <Byline blocks={bylineContribBlocks}>
+            <Timestamp
+              firstPublished={new Date(firstPublished).getTime()}
+              lastPublished={new Date(lastPublished).getTime()}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
+            />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </Byline>
+        ) : (
+          <>
+            <Timestamp
+              {...props}
+              popOut={false}
+              hasReadTime={shouldDisplayReadTime}
+            />
+            {shouldDisplayReadTime && (
+              <ReadTimeArticle readTimeValue={readTimeValue} />
+            )}
+          </>
         )}
+        {/* Temporary SaveArticleButton */}
+        <SaveArticleButton
+          articleId={parseArticleID(articleId)}
+          service={service}
+        />
       </>
     );
   };
@@ -195,7 +209,7 @@ const getContinueReadingButton =
 
 const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
-  const { isApp, isAmp, isLite } = use(RequestContext);
+  const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
   const {
     articleAuthor,
@@ -203,6 +217,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
+    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -259,6 +274,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
@@ -271,7 +287,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const bylineContribBlocks = bylineBlock?.model?.blocks || [];
 
-  const bylineLinkedData = bylineExtractor(bylineContribBlocks);
+  const bylineLinkedData = bylineExtractor({
+    blocks: bylineContribBlocks,
+    pageType,
+  }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
 
@@ -345,6 +364,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       lastPublished,
       readTimeValue,
       translations.readTime,
+      articleId,
+      service,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
