@@ -22,18 +22,18 @@ const parseArticleID = (articleId: string): string => {
 const createFavouritesPayload = ({
   articleId,
   service,
-  title,
+  articleTitle,
 }: {
   articleId: string;
   service: string;
-  title: string;
+  articleTitle: string;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
-  metaData: { service, articleId, title },
+  metaData: { service, articleId, title: articleTitle },
 });
 
 export {

@@ -16,7 +16,7 @@ import useToggle from '../useToggle';
 interface UseUASButtonProps {
   articleId: string;
   service: string;
-  title: string;
+  articleTitle: string;
 }
 
 enum UASAction {
@@ -35,7 +35,7 @@ interface UseUASButtonReturn {
 const useUASButton = ({
   service,
   articleId,
-  title,
+  articleTitle,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
@@ -64,7 +64,11 @@ const useUASButton = ({
         setSaveError(null);
 
         if (action === UASAction.SAVE) {
-          const body = createFavouritesPayload({ articleId, service, title });
+          const body = createFavouritesPayload({
+            articleId,
+            service,
+            articleTitle,
+          });
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);
         } else {
@@ -78,12 +82,11 @@ const useUASButton = ({
       } catch (err) {
         const saveErr = err instanceof Error ? err : new Error(String(err));
         setSaveError(saveErr);
-        throw saveErr;
       } finally {
         setIsSaving(false);
       }
     },
-    [articleId, service, title, isSaving, setIsSaved],
+    [articleId, service, articleTitle, isSaving, setIsSaved],
   );
 
   return {

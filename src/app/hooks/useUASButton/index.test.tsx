@@ -6,7 +6,7 @@ import {
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
-import useUASButton from './index';
+import useUASButton, { UASAction } from './index';
 
 import useToggle from '../useToggle';
 
@@ -28,7 +28,7 @@ describe('useUASButton', () => {
   const defaultProps = {
     articleId: '123',
     service: 'hindi',
-    title: 'Test Article',
+    articleTitle: 'Test Article',
   };
 
   const mockSetIsSaved = jest.fn();
@@ -154,7 +154,7 @@ describe('useUASButton', () => {
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
-        await result.current.handleSaveAction('save');
+        await result.current.handleSaveAction(UASAction.SAVE);
       });
 
       expect(mockUasApiRequest).toHaveBeenCalledWith('POST', 'favourites', {
@@ -184,7 +184,7 @@ describe('useUASButton', () => {
       const { result } = renderHook(() => useUASButton(defaultProps));
 
       await act(async () => {
-        await result.current.handleSaveAction('save');
+        await result.current.handleSaveAction(UASAction.SAVE);
       });
 
       expect(mockSetIsSaved).toHaveBeenCalledWith(true);

@@ -10,7 +10,7 @@ describe('SaveArticleButton', () => {
   const defaultProps = {
     articleId: '123',
     service: 'hindi',
-    title: 'Test Article Title',
+    articleTitle: 'Test Article Title',
   };
 
   const mockHandleSaveAction = jest.fn();
@@ -98,7 +98,7 @@ describe('SaveArticleButton', () => {
     expect(mockedUseUASButton).toHaveBeenCalledWith({
       articleId: '123',
       service: 'hindi',
-      title: 'Test Article Title',
+      articleTitle: 'Test Article Title',
     });
   });
 });

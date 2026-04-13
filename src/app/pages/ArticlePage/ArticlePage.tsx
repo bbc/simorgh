@@ -145,7 +145,7 @@ const getTimestampComponent =
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
           service={service}
-          title={articleTitle}
+          articleTitle={articleTitle}
         />
       </>
     );

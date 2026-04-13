@@ -4,7 +4,7 @@ import styles from './index.styles';
 interface SaveArticleButtonProps {
   articleId: string;
   service: string;
-  title: string;
+  articleTitle: string;
 }
 
 /** A button component that allows users to save an article for later reading,
@@ -15,13 +15,13 @@ interface SaveArticleButtonProps {
 const SaveArticleButton = ({
   articleId,
   service,
-  title,
+  articleTitle,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       service,
-      title,
+      articleTitle,
     });
 
   if (!showButton) {
