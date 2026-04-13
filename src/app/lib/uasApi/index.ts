@@ -1,7 +1,7 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
 import { activityTypes } from './uasUtility';
-import ensureTokens from './tokenRefresh/tokenManager';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -60,9 +60,7 @@ const uasApiRequest = async (
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
 
-  // Ensure tokens are valid before making the API request.
-  // This will refresh tokens if they are expired or about to expire.
-  await ensureTokens();
+  await refreshTokensIfExpired();
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),

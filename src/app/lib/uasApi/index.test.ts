@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
 import { getEnvConfig } from '../utilities/getEnvConfig';
-import ensureTokens from './tokenRefresh/tokenManager';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 import uasApiRequest from './index';
 
 jest.mock('js-cookie');
@@ -22,8 +22,8 @@ describe('uasApiRequest', () => {
     mockGetEnvConfig.mockReturnValue({
       SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
     } as ReturnType<typeof getEnvConfig>);
-    // Mock ensureTokens to resolve successfully by default
-    (ensureTokens as jest.Mock).mockResolvedValue(undefined);
+    // Mock refreshTokensIfExpired to resolve successfully by default
+    (refreshTokensIfExpired as jest.Mock).mockResolvedValue(undefined);
   });
 
   it('should make a GET request with correct headers and URL', async () => {
@@ -136,8 +136,8 @@ describe('uasApiRequest', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should throw an error when ensureTokens fails', async () => {
-    (ensureTokens as jest.Mock).mockRejectedValue(
+  it('should throw an error when refreshTokensIfExpired fails', async () => {
+    (refreshTokensIfExpired as jest.Mock).mockRejectedValue(
       new Error('Token refresh failed'),
     );
 

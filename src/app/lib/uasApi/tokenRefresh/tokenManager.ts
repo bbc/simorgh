@@ -1,6 +1,6 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
-import refreshTokens from '.';
+import refreshTokens from './refreshTokens';
 
 const TOKEN_COOKIE_NAME = 'ckns_id';
 const TOKEN_EXPIRY_BUFFER_MS = 5 * 60 * 1000; // 5 minutes before expiry
@@ -45,7 +45,9 @@ const hasValidTokens = (): boolean => {
   return isTokenValidFor(TOKEN_EXPIRY_BUFFER_MS, idToken);
 };
 
-export const ensureTokens = async (): Promise<void> => {
+// Ensure tokens are valid before making the API request.
+// This will refresh tokens if they are expired or about to expire.
+export const refreshTokensIfExpired = async (): Promise<void> => {
   if (!onClient()) return;
   if (hasValidTokens()) return;
 
@@ -57,5 +59,3 @@ export const ensureTokens = async (): Promise<void> => {
     );
   }
 };
-
-export default ensureTokens;

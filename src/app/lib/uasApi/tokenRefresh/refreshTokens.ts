@@ -6,18 +6,15 @@ const getSessionUrl = (): string => {
     : 'https://session.test.bbc.com/session';
 };
 
-const getRefreshTokenFetchOptions = (): RequestInit => ({
-  credentials: 'include',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
-
 const refreshTokens = async (): Promise<Response> => {
   const url = getSessionUrl();
-  const options = getRefreshTokenFetchOptions();
 
-  const response = await fetch(url, options);
+  const response = await fetch(url, {
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
   if (!response.ok) {
     throw new Error(`Token refresh failed with status code ${response.status}`);

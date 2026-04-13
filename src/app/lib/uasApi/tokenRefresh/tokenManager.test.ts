@@ -1,11 +1,11 @@
 import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
-import refreshTokens from '.';
-import ensureTokens, { isTokenValidFor } from './tokenManager';
+import refreshTokens from './refreshTokens';
+import { refreshTokensIfExpired, isTokenValidFor } from './tokenManager';
 
 jest.mock('js-cookie');
 jest.mock('#app/lib/utilities/onClient');
-jest.mock('./index');
+jest.mock('./refreshTokens');
 
 const mockCookieGet = Cookie.get as jest.Mock;
 const mockOnClient = onClient as jest.Mock;
@@ -44,7 +44,7 @@ describe('isTokenValidFor', () => {
   });
 });
 
-describe('ensureTokens', () => {
+describe('refreshTokensIfExpired', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockOnClient.mockReturnValue(true);
@@ -53,7 +53,7 @@ describe('ensureTokens', () => {
 
   it('does nothing when not running on the client', async () => {
     mockOnClient.mockReturnValue(false);
-    await ensureTokens();
+    await refreshTokensIfExpired();
     expect(mockRefreshTokens).not.toHaveBeenCalled();
   });
 
@@ -61,7 +61,7 @@ describe('ensureTokens', () => {
     const validToken = createTestToken(ONE_HOUR_FROM_NOW);
     mockCookieGet.mockReturnValue(validToken);
 
-    await ensureTokens();
+    await refreshTokensIfExpired();
 
     expect(mockRefreshTokens).not.toHaveBeenCalled();
   });
@@ -69,7 +69,7 @@ describe('ensureTokens', () => {
   it('triggers refresh when ckns_id cookie is missing', async () => {
     mockCookieGet.mockReturnValue(undefined);
 
-    await ensureTokens();
+    await refreshTokensIfExpired();
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -78,7 +78,7 @@ describe('ensureTokens', () => {
     const expiredToken = createTestToken(ONE_HOUR_AGO);
     mockCookieGet.mockReturnValue(expiredToken);
 
-    await ensureTokens();
+    await refreshTokensIfExpired();
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -87,7 +87,7 @@ describe('ensureTokens', () => {
     const soonExpiringToken = createTestToken(FOUR_MINUTES_FROM_NOW);
     mockCookieGet.mockReturnValue(soonExpiringToken);
 
-    await ensureTokens();
+    await refreshTokensIfExpired();
 
     expect(mockRefreshTokens).toHaveBeenCalledTimes(1);
   });
@@ -96,7 +96,7 @@ describe('ensureTokens', () => {
     mockCookieGet.mockReturnValue(undefined);
     mockRefreshTokens.mockRejectedValue(new Error('Network error'));
 
-    await expect(ensureTokens()).rejects.toThrow(
+    await expect(refreshTokensIfExpired()).rejects.toThrow(
       'Error while ensuring tokens: Network error',
     );
   });
