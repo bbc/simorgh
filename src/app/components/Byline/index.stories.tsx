@@ -26,14 +26,14 @@ import metadata from './metadata.json';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ARTICLE_PAGE, LIVE_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, Services } from '../../models/types/global';
+import { PageTypes, Services, Direction } from '../../models/types/global';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
 interface ComponentProps {
   service?: Services;
   pageType?: PageTypes;
   fixture: OptimoBylineBlock['model']['blocks'] | PostContributor['model'][];
-  dir?: 'ltr' | 'rtl';
+  dir?: Direction;
 }
 
 const Component = ({
