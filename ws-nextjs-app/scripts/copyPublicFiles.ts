@@ -7,15 +7,15 @@
   Excludes the fonts and images directories as these are served from the CDN/static-assets route.
 */
 
-const { cpSync } = require('fs');
-const { basename } = require('path');
+import { cpSync } from 'fs';
+import { basename } from 'path';
 
 const EXCLUDED_DIRS = ['fonts', 'images'];
 
-const SRC = '../public';
-const DEST = 'build/standalone/ws-nextjs-app/public';
+const PUBLIC_SRC = '../public';
+const PUBLIC_DEST = 'build/standalone/ws-nextjs-app/public';
 
-cpSync(SRC, DEST, {
+cpSync(PUBLIC_SRC, PUBLIC_DEST, {
   recursive: true,
   filter: (srcPath: string) => !EXCLUDED_DIRS.includes(basename(srcPath)),
 });
