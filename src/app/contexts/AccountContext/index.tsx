@@ -50,7 +50,10 @@ export const AccountProvider = ({
       ? appendCtaQueryParams(url, {
           pageToReturnTo,
           lang: locale,
-          env: initialConfig?.env,
+          userOrigin:
+            initialConfig?.env === 'live'
+              ? 'WS_NEWS_HINDI'
+              : 'WS_NEWS_HINDI_TEST',
         })
       : initialConfig?.unavailable_url;
   };

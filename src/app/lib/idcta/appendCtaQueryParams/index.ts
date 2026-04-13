@@ -1,12 +1,12 @@
 type Params = {
   pageToReturnTo?: string | null;
   lang?: string | null;
-  env?: string | null;
+  userOrigin?: string | null;
 };
 
 export default (
   url: string,
-  { pageToReturnTo, lang, env }: Params = {},
+  { pageToReturnTo, lang, userOrigin }: Params = {},
 ): string => {
   const ctaUrl = new URL(url);
 
@@ -14,10 +14,7 @@ export default (
   if (lang) ctaUrl.searchParams.set('lang', lang);
 
   ctaUrl.searchParams.set('skipAgeBracketScreen', 'true');
-  ctaUrl.searchParams.set(
-    'userOrigin',
-    env === 'live' ? 'WS_NEWS_HINDI' : 'WS_NEWS_HINDI_TEST',
-  );
+  if (userOrigin) ctaUrl.searchParams.set('userOrigin', userOrigin);
   ctaUrl.searchParams.set('context', 'international');
 
   return ctaUrl.toString();

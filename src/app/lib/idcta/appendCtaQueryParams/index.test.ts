@@ -27,7 +27,7 @@ describe('appendCtaQueryParams', () => {
 
   it('should set userOrigin to WS_NEWS_HINDI when env is live', () => {
     const url = 'https://example.com/signin';
-    const result = appendCtaQueryParams(url, { env: 'live' });
+    const result = appendCtaQueryParams(url, { userOrigin: 'WS_NEWS_HINDI' });
     expect(result).toBe(
       'https://example.com/signin?skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI&context=international',
     );
@@ -35,7 +35,9 @@ describe('appendCtaQueryParams', () => {
 
   it('should set userOrigin to WS_NEWS_HINDI_TEST when env is test', () => {
     const url = 'https://example.com/signin';
-    const result = appendCtaQueryParams(url, { env: 'test' });
+    const result = appendCtaQueryParams(url, {
+      userOrigin: 'WS_NEWS_HINDI_TEST',
+    });
     expect(result).toBe(
       'https://example.com/signin?skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
     );
@@ -43,7 +45,9 @@ describe('appendCtaQueryParams', () => {
 
   it('should set userOrigin to WS_NEWS_HINDI_TEST for local/dev/sandbox env', () => {
     const url = 'https://example.com/signin';
-    const result = appendCtaQueryParams(url, { env: 'local' });
+    const result = appendCtaQueryParams(url, {
+      userOrigin: 'WS_NEWS_HINDI_TEST',
+    });
     expect(result).toBe(
       'https://example.com/signin?skipAgeBracketScreen=true&userOrigin=WS_NEWS_HINDI_TEST&context=international',
     );
