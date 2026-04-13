@@ -3385,18 +3385,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.8.8":
-  version: 20.8.8
-  resolution: "@happy-dom/jest-environment@npm:20.8.8"
+"@happy-dom/jest-environment@npm:20.8.9":
+  version: 20.8.9
+  resolution: "@happy-dom/jest-environment@npm:20.8.9"
   dependencies:
-    happy-dom: "npm:^20.8.8"
+    happy-dom: "npm:^20.8.9"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/39fc07ba998138c923190b39bd850b06a4668011b1d3a1ed0418b432a84a99e5fd27133bbb66f6f9b20968f6eefdd79609bbf1093f9d159710583cb08feca390
+  checksum: 10/3be4983374e790d3bd498b20afcf03a907f2cebb3b3643e11dab02fc468e48ecbfcfa4191b78e8618da4e1768ab65152c4f90926656ce59a0cfaef560eeb37cf
   languageName: node
   linkType: hard
 
@@ -11884,7 +11884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.8.9, happy-dom@npm:^20.8.8":
+"happy-dom@npm:20.8.9, happy-dom@npm:^20.8.9":
   version: 20.8.9
   resolution: "happy-dom@npm:20.8.9"
   dependencies:
@@ -17634,7 +17634,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.27.4"
     "@esbuild/win32-arm64": "npm:0.27.4"
     "@esbuild/win32-x64": "npm:0.27.4"
-    "@happy-dom/jest-environment": "npm:20.8.8"
+    "@happy-dom/jest-environment": "npm:20.8.9"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
