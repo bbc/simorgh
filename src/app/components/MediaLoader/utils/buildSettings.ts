@@ -1,6 +1,7 @@
 import onClient from '#app/lib/utilities/onClient';
 import isLive from '#app/lib/utilities/isLive';
 import filterForBlockType from '#app/lib/utilities/blockHandlers';
+import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import { BuildConfigProps, PlayerConfig } from '../types';
 import configForMediaBlockType from '../configs';
 
@@ -21,6 +22,8 @@ const isTestRequested = () => {
 
   return false;
 };
+
+const dazzlerStreamLangs = ['hi'];
 
 const buildSettings = ({
   id,
@@ -56,7 +59,14 @@ const buildSettings = ({
     },
     ...(!embedded && { superResponsive: true }),
     ...(counterName && { counterName }),
-    ...(isTestRequested() && { mediator: { host: 'open.test.bbc.co.uk' } }),
+    ...(isTestRequested() && {
+      mediator: {
+        host:
+          dazzlerStreamLangs.includes(lang) && pageType === LIVE_TV_PAGE
+            ? 'open.live.bbc.co.uk'
+            : 'open.test.bbc.co.uk',
+      },
+    }),
     statsObject: {
       destination: statsDestination,
       producer,
