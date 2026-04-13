@@ -47,12 +47,8 @@
     "ts-node": "10.9.2"
   },
   "dependencies": {
-<<<<<<< WS-2031-simorgh-dazzler-stream
-    "temporal-polyfill": "0.3.0",
-    "next": "16.1.7",
-=======
     "next": "16.2.3",
->>>>>>> latest
-    "sharp": "0.34.5"
+    "sharp": "0.34.5",
+    "temporal-polyfill": "0.3.0"
   }
 }
