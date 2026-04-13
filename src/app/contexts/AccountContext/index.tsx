@@ -47,7 +47,11 @@ export const AccountProvider = ({
 
   const buildAccountUrl = (url?: string) => {
     return isIdctaAvailable && url
-      ? appendCtaQueryParams(url, { pageToReturnTo, lang: locale })
+      ? appendCtaQueryParams(url, {
+          pageToReturnTo,
+          lang: locale,
+          env: initialConfig?.env,
+        })
       : initialConfig?.unavailable_url;
   };
 
