@@ -5,6 +5,7 @@ import {
   LIVE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { OptimoBylineBlock } from '#app/models/types/optimo';
@@ -24,6 +25,7 @@ type BylineBlock =
 
 const Contributors = ({ contributorValues, isSingleContributor, pageType }) => {
   switch (pageType) {
+    case PHOTO_GALLERY_PAGE:
     case STORY_PAGE:
     case ARTICLE_PAGE:
     case MEDIA_ASSET_PAGE:

@@ -5,6 +5,7 @@ import {
   ARTICLE_PAGE,
   MEDIA_ARTICLE_PAGE,
   MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import {
   bylineSamplePost,
@@ -35,6 +36,7 @@ describe('Byline', () => {
     { name: 'Article Page', pageType: ARTICLE_PAGE },
     { name: 'Media Article Page', pageType: MEDIA_ARTICLE_PAGE },
     { name: 'Media Asset Page', pageType: MEDIA_ASSET_PAGE },
+    { name: 'Photo Gallery Page', pageType: PHOTO_GALLERY_PAGE },
   ])('$name', ({ pageType }) => {
     it('Should render Byline correctly when only required data is passed', () => {
       render(<Byline blocks={bylineWithNameAndRole} />, { pageType });
@@ -210,10 +212,6 @@ describe('Byline', () => {
       expect(findTranslation).toBeInTheDocument();
     });
   });
-
-  // describe('Article Page', () => {
-
-  // });
 
   describe('Live Page', () => {
     const {
