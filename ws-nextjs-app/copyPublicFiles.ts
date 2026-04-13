@@ -3,7 +3,7 @@
 
 /* 
   Copies /public folder from root directory into the Next.js standalone output folder.
-  This allows Next.js to serve the files in public (namely sw.js and manifest.json).
+  This allows Next.js to serve the files in /public (namely sw.js and manifest.json).
   Excludes the fonts and images directories as these are served from the CDN/static-assets route.
 */
 
