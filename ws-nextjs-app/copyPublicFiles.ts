@@ -6,10 +6,10 @@ const { basename } = require('path');
 
 const EXCLUDED_DIRS = ['fonts', 'images'];
 
-const src = '../public';
-const dest = 'build/standalone/ws-nextjs-app/public';
+const SRC = '../public';
+const DEST = 'build/standalone/ws-nextjs-app/public';
 
-cpSync(src, dest, {
+cpSync(SRC, DEST, {
   recursive: true,
-  filter: srcPath => !EXCLUDED_DIRS.includes(basename(srcPath)),
+  filter: (srcPath: string) => !EXCLUDED_DIRS.includes(basename(srcPath)),
 });
