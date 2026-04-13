@@ -60,6 +60,7 @@ const Byline = ({
   const bylineContainer =
     {
       [LIVE_PAGE]: [BylineCss.postBylineContainer],
+      [PHOTO_GALLERY_PAGE]: [BylineCss.bylineContainer],
       [STORY_PAGE]: [BylineCss.bylineContainer],
       [ARTICLE_PAGE]: [BylineCss.bylineContainer],
       [MEDIA_ASSET_PAGE]: [BylineCss.bylineContainer],
