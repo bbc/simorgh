@@ -18,12 +18,11 @@ const SaveArticleButton = ({
   service,
   articleTitle,
 }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error, handleSaveAction } =
-    useUASButton({
-      articleId,
-      service,
-      articleTitle,
-    });
+  const { showButton, isSaved, isLoading, handleSaveAction } = useUASButton({
+    articleId,
+    service,
+    articleTitle,
+  });
 
   if (!showButton) {
     return null;
