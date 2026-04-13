@@ -1,7 +1,6 @@
 import { use, useCallback, useState } from 'react';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { AccountContext } from '#app/contexts/AccountContext';
-import { RequestContext } from '#app/contexts/RequestContext';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
 import {
@@ -40,7 +39,6 @@ const useUASButton = ({
   articleTitle,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
-  const { platform } = use(RequestContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
   const [isSaving, setIsSaving] = useState(false);
@@ -52,7 +50,7 @@ const useUASButton = ({
       ? accountService?.toString().split('|').includes(service)
       : true);
 
-  const showButton = isUASEnabled && isSignedIn && platform === 'canonical';
+  const showButton = isUASEnabled && isSignedIn;
 
   const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
     showButton ? articleId : '',

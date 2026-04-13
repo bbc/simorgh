@@ -93,14 +93,6 @@ describe('uasApiRequest', () => {
     );
   });
 
-  it('should throw an error for invalid activity type', async () => {
-    const invalidActivityType = 'invalidType';
-
-    await expect(uasApiRequest('GET', invalidActivityType)).rejects.toThrow(
-      'Invalid activity type',
-    );
-  });
-
   it('should throw an error for failed requests', async () => {
     (global.fetch as jest.Mock).mockResolvedValue({
       ok: false,

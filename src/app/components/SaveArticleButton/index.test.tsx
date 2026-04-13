@@ -1,4 +1,5 @@
 import useUASButton from '#app/hooks/useUASButton';
+import { Services } from '#app/models/types/global';
 import { render, screen } from '../react-testing-library-with-providers';
 import SaveArticleButton from './index';
 
@@ -9,7 +10,7 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 describe('SaveArticleButton', () => {
   const defaultProps = {
     articleId: '123',
-    service: 'hindi',
+    service: 'hindi' as Services,
     articleTitle: 'Test Article Title',
   };
 
@@ -70,7 +71,7 @@ describe('SaveArticleButton', () => {
     expect(button).toBeDisabled();
   });
 
-  test('calls handleSaveAction with save when button is clicked and not saved', async () => {
+  test('calls handleSaveAction with save when button is clicked and not already saved', async () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,

@@ -8,7 +8,7 @@ const FAVOURITES_CONFIG = {
   action: 'favourited',
 } as const;
 
-const activityTypes: string[] = [FAVOURITES_CONFIG.activityType];
+export type ActivityType = (typeof FAVOURITES_CONFIG)['activityType'];
 
 const buildGlobalId = (
   resourceId: string,
@@ -39,7 +39,6 @@ const createFavouritesPayload = ({
 
 export {
   FAVOURITES_CONFIG,
-  activityTypes,
   buildGlobalId,
   createFavouritesPayload,
   parseArticleID,
