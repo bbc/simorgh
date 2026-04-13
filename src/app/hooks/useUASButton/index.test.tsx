@@ -6,6 +6,7 @@ import {
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
+import type { Services } from '#app/models/types/global';
 import useUASButton, { UASAction } from './index';
 
 import useToggle from '../useToggle';
@@ -27,7 +28,7 @@ const mockUasApiRequest = uasApiRequest as jest.Mock;
 describe('useUASButton', () => {
   const defaultProps = {
     articleId: '123',
-    service: 'hindi',
+    service: 'hindi' as Services,
     articleTitle: 'Test Article',
   };
 

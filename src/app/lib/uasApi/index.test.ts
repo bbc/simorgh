@@ -52,7 +52,10 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const body = { activityType: 'test', metaData: { key: 'value' } };
+    const body = {
+      activityType: 'favourites' as const,
+      metaData: { key: 'value' },
+    };
 
     const response = await uasApiRequest('POST', activityType, { body });
 

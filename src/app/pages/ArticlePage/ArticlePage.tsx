@@ -80,6 +80,7 @@ import {
   getAuthorTwitterHandle,
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
+import type { Services } from '#app/models/types/global';
 import RelatedContentSection from '../../components/RelatedContentSection';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
@@ -144,7 +145,7 @@ const getTimestampComponent =
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
-          service={service}
+          service={service as Services}
           articleTitle={articleTitle}
         />
       </>
