@@ -55,18 +55,9 @@ module.exports = {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
       },
-      // TODO: This can be removed once we redirect variant paths to have variant at the end of the path,
-      //  e.g. /serbian/cyr/popular/read -> /serbian/popular/read/cyr
-      {
-        source: '/:service/:variant/popular/read',
-        destination: '/:service/popular/read/:variant',
-      },
-      {
-        source: '/:service/:variant/popular/read.lite',
-        destination: '/:service/popular/read/:variant.lite',
-      },
     ];
   },
+  allowedDevOrigins: ['localhost.bbc.com'],
   assetPrefix,
   compiler: { emotion: true },
   distDir: 'build',

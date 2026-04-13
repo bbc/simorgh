@@ -17,7 +17,6 @@ import LinkedData from '#app/components/LinkedData';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { ContentType } from '#app/components/ChartbeatAnalytics/types';
-import useToggle from '#app/hooks/useToggle';
 import ContinueReadingButton from '#app/components/ContinueReadingButton';
 import styles from './index.styles';
 import { OnDemandAudioProps } from './types';
@@ -56,15 +55,10 @@ const OnDemandAudioPage = ({
   const { serviceName } = use(ServiceContext);
   const { isLite, pathname, canonicalNonUkLink } = use(RequestContext);
 
-  const { enabled: showPodcastEpisodeLinkedData } = useToggle(
-    'podcastEpisodeLinkedData',
-  );
-
   const isPodcastEpisodePage =
     /\/podcasts\/(?!programmes\/)[^/]+\/[^/]+(?:\.lite)?$/.test(pathname);
 
-  const shouldEmitPodcastEpisodeSchema =
-    isPodcast && isPodcastEpisodePage && showPodcastEpisodeLinkedData;
+  const shouldEmitPodcastEpisodeSchema = isPodcast && isPodcastEpisodePage;
 
   const episodeCanonicalUrl = canonicalNonUkLink;
   const seriesCanonicalUrl = episodeCanonicalUrl.replace(

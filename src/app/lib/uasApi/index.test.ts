@@ -32,7 +32,7 @@ describe('uasApiRequest', () => {
     const response = await uasApiRequest('GET', activityType);
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
@@ -57,7 +57,7 @@ describe('uasApiRequest', () => {
     const response = await uasApiRequest('POST', activityType, { body });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
@@ -83,7 +83,7 @@ describe('uasApiRequest', () => {
     await uasApiRequest('DELETE', activityType, { globalId });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}/${encodeURIComponent(globalId)}`,
+      `https://activity.test.api.bbc.com/my/${activityType}/${encodeURIComponent(globalId)}`,
       expect.objectContaining({
         method: 'DELETE',
         headers: expect.objectContaining({
