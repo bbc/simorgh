@@ -20,6 +20,7 @@ const idctaConfig: IdctaConfig = {
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
+  env: null,
 };
 
 const renderWithProviders = (overrides = {}) =>
