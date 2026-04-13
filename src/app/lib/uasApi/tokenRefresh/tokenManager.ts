@@ -11,6 +11,9 @@ interface DecodedTokenPayload {
   [key: string]: unknown;
 }
 
+// Lock mechanism to prevent parallel token refreshes
+let tokenRefreshPromise: Promise<void> | null = null;
+
 const decodeBase64JsonString = (encodedString: string): unknown => {
   try {
     const decodedValue = window.atob(encodedString);
@@ -51,11 +54,26 @@ export const refreshTokensIfExpired = async (): Promise<void> => {
   if (!onClient()) return;
   if (hasValidTokens()) return;
 
-  try {
-    await refreshTokens();
-  } catch (error) {
-    throw new Error(
-      `Error while ensuring tokens: ${error instanceof Error ? error.message : String(error)}`,
-    );
+  // If refresh is already in progress, wait for it instead of starting a new one
+  if (tokenRefreshPromise) {
+    await tokenRefreshPromise;
+    return;
   }
+
+  // Create a new refresh promise and store it
+  tokenRefreshPromise = (async () => {
+    try {
+      await refreshTokens();
+    } catch (error) {
+      throw new Error(
+        `Error while ensuring tokens: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    } finally {
+      // Clear the promise after refresh completes (success or failure)
+      tokenRefreshPromise = null;
+    }
+  })();
+
+  // Wait for the refresh to complete
+  await tokenRefreshPromise;
 };
