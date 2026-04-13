@@ -12,6 +12,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
+import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -29,8 +30,13 @@ export const AccountProvider = ({
   children,
   initialConfig,
 }: PropsWithChildren<AccountProviderProps>) => {
-  const { locale } = use(ServiceContext);
-  const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
+  const { locale, atiAnalyticsProducerName } = use(ServiceContext);
+  const {
+    isAmp = false,
+    isApp = false,
+    isLite = false,
+    env,
+  } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
@@ -50,10 +56,7 @@ export const AccountProvider = ({
       ? appendCtaQueryParams(url, {
           pageToReturnTo,
           lang: locale,
-          userOrigin:
-            initialConfig?.env === 'live'
-              ? 'WS_NEWS_HINDI'
-              : 'WS_NEWS_HINDI_TEST',
+          userOrigin: getIdctaUserOrigin(atiAnalyticsProducerName, env),
         })
       : initialConfig?.unavailable_url;
   };
