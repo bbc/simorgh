@@ -5,6 +5,8 @@ import onClient from '#app/lib/utilities/onClient';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { use } from 'react';
 
 const placeholderUrls = {
   hi: 'https://ichef.bbc.co.uk/images/ic/800xn/p0nd9p60.png',
@@ -16,6 +18,8 @@ export default ({
   pageType,
   lang,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
+  const { defaultImage } = use(ServiceContext);
+
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
   let warning: string | null = null;
   const {
@@ -36,7 +40,6 @@ export default ({
   if (warnings) {
     warning = warnings.warning_text;
   }
-
   const rawDuration = moment.duration(duration).asSeconds();
 
   const isInternalReferrer = onClient()
@@ -46,18 +49,8 @@ export default ({
   // Enable autoplay only on live TV pages when the user is coming to the page from an internal link
   const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
 
-  const getPlaceholderURL = () => {
-    if (pageType === LIVE_TV_PAGE) {
-      return lang in placeholderUrls
-        ? placeholderUrls[lang]
-        : buildIChefURL({
-            originCode: 'pips',
-            locator: liveMediaBlock?.masterbrand?.imageUrlTemplate,
-            resolution: 800,
-          });
-    }
-    return holdingImageURL;
-  };
+  const getPlaceholderURL = () =>
+    pageType === LIVE_TV_PAGE ? defaultImage : holdingImageURL;
 
   const holdingImageURLForLiveTV = getPlaceholderURL();
 
