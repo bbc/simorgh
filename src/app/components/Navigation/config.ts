@@ -13,17 +13,13 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'marathi',
   'pidgin',
   'punjabi',
-  'serbian',
   'somali',
   'swahili',
   'tamil',
   'telugu',
   'tigrinya',
-  'ukchina',
   'urdu',
-  'uzbek',
   'yoruba',
-  'zhongwen',
 ] as const;
 
 export default SERVICES_WITH_NEW_NAV;
