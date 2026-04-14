@@ -27,8 +27,6 @@ export default function runTestsForPage({
   testSuites,
   beforeAll = [],
   beforeEachFns = [],
-  // testIsolation = false,
-  // headers,
 }: FunctionProps) {
   const serviceToRun = process.env.ONLY_SERVICE;
 
