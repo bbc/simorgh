@@ -2,15 +2,10 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { use } from 'react';
-
-const placeholderUrls = {
-  hi: 'https://ichef.bbc.co.uk/images/ic/800xn/p0nd9p60.png',
-};
+import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
   blocks,
