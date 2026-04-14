@@ -55,6 +55,7 @@ export default {
       justifyContent: 'space-between',
       position: 'relative',
       zIndex: 0,
+      backgroundColor: palette.POSTBOX,
 
       '&::before': {
         content: "''",

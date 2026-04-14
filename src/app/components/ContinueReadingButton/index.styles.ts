@@ -11,7 +11,7 @@ export default {
       display: 'block',
       width: `calc(100% - ${spacings.QUADRUPLE}rem)`,
       padding: `${spacings.DOUBLE}rem 0`,
-      margin: `0 ${spacings.DOUBLE}rem -${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      margin: `0 ${spacings.DOUBLE}rem ${pixelsToRem(12)}rem ${spacings.DOUBLE}rem`,
       backgroundColor: palette.GREY_2,
       color: palette.GREY_10,
       textAlign: 'start',
@@ -33,7 +33,7 @@ export default {
       },
 
       [mq.GROUP_1_MAX_WIDTH]: {
-        margin: `0 ${spacings.FULL}rem -${spacings.HALF}rem ${spacings.FULL}rem`,
+        margin: `0 ${spacings.FULL}rem ${pixelsToRem(12)}rem ${spacings.FULL}rem`,
         width: `calc(100% - ${spacings.DOUBLE}rem)`,
       },
 
