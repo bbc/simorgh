@@ -11,6 +11,7 @@ import {
   bylineWithNonPngPhoto,
   bylineWithPngPhoto,
   bylineWithMultipleContributors,
+  bylineWithMultipleContributorsRTL,
   bylineWithMultipleContributorsNoRole,
 } from '../../pages/ArticlePage/fixtureData';
 import {
@@ -25,13 +26,14 @@ import metadata from './metadata.json';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ARTICLE_PAGE, LIVE_PAGE } from '../../routes/utils/pageTypes';
-import { PageTypes, Services } from '../../models/types/global';
+import { PageTypes, Services, Direction } from '../../models/types/global';
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
 interface ComponentProps {
   service?: Services;
   pageType?: PageTypes;
   fixture: OptimoBylineBlock['model']['blocks'] | PostContributor['model'][];
+  dir?: Direction;
 }
 
 const Component = ({
@@ -39,6 +41,7 @@ const Component = ({
   pageType = ARTICLE_PAGE,
   fixture,
   children,
+  dir = 'ltr',
 }: PropsWithChildren<ComponentProps>) => (
   <RequestContextProvider
     pageType={pageType}
@@ -47,9 +50,11 @@ const Component = ({
   >
     <ServiceContextProvider service={service}>
       {pageType === ARTICLE_PAGE ? (
-        <Byline blocks={fixture as OptimoBylineBlock['model']['blocks']}>
-          {children}
-        </Byline>
+        <div dir={dir}>
+          <Byline blocks={fixture as OptimoBylineBlock['model']['blocks']}>
+            {children}
+          </Byline>
+        </div>
       ) : (
         <Byline blocks={fixture as PostContributor['model'][]}>
           {children}
@@ -78,6 +83,14 @@ export const AuthorNoRoleByline = () => (
 
 export const MultipleContributorsByline = () => (
   <Component fixture={bylineWithMultipleContributors} />
+);
+
+export const MultipleContributorsBylineRTL = () => (
+  <Component
+    service={'arabic'}
+    fixture={bylineWithMultipleContributorsRTL}
+    dir={'rtl'}
+  />
 );
 
 export const MultipleContributorsBylineFinalContributorNoRole = () => (
