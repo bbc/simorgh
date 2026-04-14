@@ -12,6 +12,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
+import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -29,7 +30,7 @@ export const AccountProvider = ({
   children,
   initialConfig,
 }: PropsWithChildren<AccountProviderProps>) => {
-  const { locale } = use(ServiceContext);
+  const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
@@ -47,7 +48,11 @@ export const AccountProvider = ({
 
   const buildAccountUrl = (url?: string) => {
     return isIdctaAvailable && url
-      ? appendCtaQueryParams(url, { pageToReturnTo, lang: locale })
+      ? appendCtaQueryParams(url, {
+          pageToReturnTo,
+          lang: locale,
+          userOrigin: getIdctaUserOrigin(atiAnalyticsProducerName),
+        })
       : initialConfig?.unavailable_url;
   };
 
