@@ -12,7 +12,7 @@ import latinScript from '../fontScripts/latin';
 import helmetFontVariants from '../fontVariants/helmet';
 import withThemeProvider from '../withThemeProvider';
 import brandSVG from '../chameleonLogos/swahili';
-import brandSVGSport from '../chameleonLogos/sport';
+import brandSVGSport from '../chameleonLogos/swahiliSport';
 import getPWATypographyTheme from './getPWATypographyTheme';
 
 export const theme = {
