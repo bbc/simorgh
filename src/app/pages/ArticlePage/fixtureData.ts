@@ -3415,6 +3415,804 @@ export const bylineWithMultipleContributors = [
   },
 ] as OptimoBylineContributorBlock[];
 
+export const bylineWithMultipleContributorsRTL = [
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'جورج رايت',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'جورج رايت',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'رايتشل تشن',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'رايتشل تشن',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'المغرب',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'Lagos, Nigeria',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'جورج رايت',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'جورج رايت',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'رايتشل تشن',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'رايتشل تشن',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'المغرب',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'المغرب',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'جورج رايت',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'جورج رايت',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'رايتشل تشن',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'رايتشل تشن',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'المغرب',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'المغرب',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'جورج رايت',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'جورج رايت',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'رايتشل تشن',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'رايتشل تشن',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'المغرب',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'المغرب',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    type: 'contributor',
+    model: {
+      topicId: '',
+      topicUrl: '/news/topics/c8qx38nq177t',
+      blocks: [
+        {
+          type: 'name',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'جورج رايت',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'جورج رايت',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'role',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'رايتشل تشن',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'رايتشل تشن',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'link',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'MayeniJones',
+                        blocks: [
+                          {
+                            type: 'urlLink',
+                            model: {
+                              text: 'MayeniJones',
+                              locator: 'https://twitter.com/MayeniJones',
+                              blocks: [
+                                {
+                                  type: 'fragment',
+                                  model: {
+                                    text: 'MayeniJones',
+                                    attributes: [],
+                                  },
+                                },
+                              ],
+                              isExternal: true,
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'location',
+          model: {
+            blocks: [
+              {
+                type: 'text',
+                model: {
+                  blocks: [
+                    {
+                      type: 'paragraph',
+                      model: {
+                        text: 'المغرب',
+                        blocks: [
+                          {
+                            type: 'fragment',
+                            model: {
+                              text: 'المغرب',
+                              attributes: [],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+        {
+          type: 'images',
+          model: {
+            blocks: [
+              {
+                type: 'image',
+                model: {
+                  blocks: [
+                    {
+                      type: 'rawImage',
+                      model: {
+                        width: 640,
+                        height: 562,
+                        locator:
+                          'f974/live/36226e20-94aa-11ec-9acc-37a09ce5ea88.png',
+                        originCode: 'cpsprodpb',
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+] as OptimoBylineContributorBlock[];
+
 export const bylineWithMultipleContributorsNoRole = [
   {
     type: 'contributor',
