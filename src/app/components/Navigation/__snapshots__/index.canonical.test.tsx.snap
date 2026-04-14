@@ -73,6 +73,7 @@ exports[`Navigation - Canonical snapshots should correctly render Canonical navi
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-6::before {

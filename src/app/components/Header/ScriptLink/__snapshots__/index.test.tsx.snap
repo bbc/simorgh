@@ -72,3 +72,76 @@ exports[`Script Link should render correctly 1`] = `
   </a>
 </div>
 `;
+
+exports[`Script Link should render correctly for new navigation 1`] = `
+.emotion-0 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: Helvetica,Arial,STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  color: #FFFFFF;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  height: 2.75rem;
+  border: 0.0625rem solid #FFFFFF;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  min-width: 2.75rem;
+  text-align: center;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-0:focus span,
+.emotion-0:hover span {
+  margin: 0;
+  border: 0.1875rem solid #FFFFFF;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    line-height: calc(2.25rem - 0.5rem);
+  }
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+}
+
+.emotion-1 {
+  margin-top: 0.1875rem;
+  width: 100%;
+  display: inline-block;
+  height: calc(100%);
+  line-height: calc(2.75rem - 0.5rem);
+}
+
+<div>
+  <a
+    class="focusIndicatorRemove emotion-0"
+    data-variant="simp"
+    href="/ukchina/simp/articles/c0e8weny66ko"
+  >
+    <span
+      class="emotion-1"
+    >
+      简
+    </span>
+  </a>
+</div>
+`;

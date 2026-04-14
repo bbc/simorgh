@@ -157,12 +157,12 @@ const Brand = forwardRef((props, ref) => {
 
   return (
     <Banner svgHeight={svgHeight} scriptLink={scriptLink} {...rest}>
-      <SvgWrapper ref={ref}>
+      <SvgWrapper ref={ref} className="brand-svg-wrapper">
         {url ? (
           <StyledLink
             href={url}
             id={linkId}
-            className="focusIndicatorRemove"
+            className="brand-link focusIndicatorRemove"
             // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             aria-labelledby={`BrandLink-${linkId}`}
             scriptLink={scriptLink}
@@ -174,7 +174,7 @@ const Brand = forwardRef((props, ref) => {
         )}
         {skipLink}
         {children}
-        {scriptLink && <div>{scriptLink}</div>}
+        {scriptLink && <div className="script-link-wrapper">{scriptLink}</div>}
       </SvgWrapper>
     </Banner>
   );
