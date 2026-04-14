@@ -1,5 +1,4 @@
 import useUASButton from '#app/hooks/useUASButton';
-import { Services } from '#app/models/types/global';
 import { render, screen } from '../react-testing-library-with-providers';
 import SaveArticleButton from './index';
 
@@ -10,7 +9,6 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 describe('SaveArticleButton', () => {
   const defaultProps = {
     articleId: '123',
-    service: 'hindi' as Services,
     articleTitle: 'Test Article Title',
   };
 
@@ -20,7 +18,7 @@ describe('SaveArticleButton', () => {
     jest.clearAllMocks();
   });
 
-  test('does not render button when showButton is false', () => {
+  it('does not render button when showButton is false', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: false,
       isSaved: false,
@@ -32,7 +30,7 @@ describe('SaveArticleButton', () => {
     expect(container.firstChild).toBeNull();
   });
 
-  test('renders "Save for later" when not saved', () => {
+  it('renders "Save for later" when not saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
@@ -44,7 +42,7 @@ describe('SaveArticleButton', () => {
     expect(screen.getByRole('button')).toHaveTextContent('Save for later');
   });
 
-  test('renders "Remove from saved" when saved', () => {
+  it('renders "Remove from saved" when saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: true,
@@ -56,7 +54,7 @@ describe('SaveArticleButton', () => {
     expect(screen.getByRole('button')).toHaveTextContent('Remove from saved');
   });
 
-  test('renders loading state and disables button', () => {
+  it('renders loading state and disables button', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
@@ -71,7 +69,7 @@ describe('SaveArticleButton', () => {
     expect(button).toBeDisabled();
   });
 
-  test('calls handleSaveAction with save when button is clicked and not already saved', async () => {
+  it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
@@ -86,7 +84,7 @@ describe('SaveArticleButton', () => {
     expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
   });
 
-  test('passes title to useUASButton hook', () => {
+  it('passes title to useUASButton hook', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
@@ -98,7 +96,6 @@ describe('SaveArticleButton', () => {
 
     expect(mockedUseUASButton).toHaveBeenCalledWith({
       articleId: '123',
-      service: 'hindi',
       articleTitle: 'Test Article Title',
     });
   });

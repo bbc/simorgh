@@ -1,13 +1,13 @@
 import { use, useCallback, useState } from 'react';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { AccountContext } from '#app/contexts/AccountContext';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
 import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
-import { Services } from '#app/models/types/global';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
@@ -16,7 +16,6 @@ import useToggle from '../useToggle';
 
 interface UseUASButtonProps {
   articleId: string;
-  service: Services;
   articleTitle: string;
 }
 
@@ -34,11 +33,11 @@ interface UseUASButtonReturn {
 }
 
 const useUASButton = ({
-  service,
   articleId,
   articleTitle,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
+  const { service } = use(ServiceContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
   const [isSaving, setIsSaving] = useState(false);

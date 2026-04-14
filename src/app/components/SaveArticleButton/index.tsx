@@ -1,10 +1,8 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { Services } from '#app/models/types/global';
 import styles from './index.styles';
 
 interface SaveArticleButtonProps {
   articleId: string;
-  service: Services;
   articleTitle: string;
 }
 
@@ -15,13 +13,11 @@ interface SaveArticleButtonProps {
 
 const SaveArticleButton = ({
   articleId,
-  service,
   articleTitle,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
-      service,
       articleTitle,
     });
 

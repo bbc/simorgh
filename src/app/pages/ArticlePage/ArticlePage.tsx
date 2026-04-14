@@ -60,7 +60,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import type { Services } from '#app/models/types/global';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -110,7 +109,6 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articleId: string,
-    service: string,
     articleTitle: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
@@ -145,7 +143,6 @@ const getTimestampComponent =
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
-          service={service as Services}
           articleTitle={articleTitle}
         />
       </>
@@ -220,7 +217,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -368,7 +364,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       articleId,
-      service,
       headline,
     ),
     social: SocialEmbedContainer,
