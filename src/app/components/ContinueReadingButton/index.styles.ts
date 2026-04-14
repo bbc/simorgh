@@ -37,10 +37,6 @@ export default {
         width: `calc(100% - ${spacings.DOUBLE}rem)`,
       },
 
-      [mq.GROUP_3_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem -${spacings.HALF}rem ${spacings.DOUBLE}rem`,
-      },
-
       '&:hover, &:focus': {
         textDecoration: 'underline',
       },
