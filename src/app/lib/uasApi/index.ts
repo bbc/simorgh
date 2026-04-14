@@ -1,6 +1,7 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
 import type { ActivityType } from './uasUtility';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
@@ -50,6 +51,8 @@ const uasApiRequest = async (
   validateRequest(method, { body, globalId });
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
+
+  await refreshTokensIfExpired();
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),
