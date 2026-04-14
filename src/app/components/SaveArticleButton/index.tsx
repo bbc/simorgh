@@ -18,11 +18,12 @@ const SaveArticleButton = ({
   service,
   articleTitle,
 }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, handleSaveAction } = useUASButton({
-    articleId,
-    service,
-    articleTitle,
-  });
+  const { showButton, isSaved, isLoading, error, handleSaveAction } =
+    useUASButton({
+      articleId,
+      service,
+      articleTitle,
+    });
 
   if (!showButton) {
     return null;
@@ -36,15 +37,14 @@ const SaveArticleButton = ({
   };
 
   // TODO : Will modify based on future error handling implementation,
-  // if (error) {
-  //   // Logging until we have proper error handling in place
-  //   // eslint-disable-next-line no-console
-  //   console.log('Error fetching saved status for article:', {
-  //     articleId,
-  //     error,
-  //   });
-  //   return null;
-  // }
+  if (error) {
+    // eslint-disable-next-line no-console
+    console.log('Error fetching saved status for article:', {
+      articleId,
+      error,
+    });
+    // return null;
+  }
 
   return (
     <button
