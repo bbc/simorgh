@@ -2,7 +2,6 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
-import buildIChefURL from '#app/lib/utilities/ichefURL';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
@@ -11,6 +10,7 @@ export default ({
   basePlayerConfig,
   pageType,
   lang,
+  defaultImage,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
   let warning: string | null = null;
@@ -32,7 +32,6 @@ export default ({
   if (warnings) {
     warning = warnings.warning_text;
   }
-
   const rawDuration = moment.duration(duration).asSeconds();
 
   const isInternalReferrer = onClient()
@@ -43,13 +42,7 @@ export default ({
   const shouldAutoplay = pageType === LIVE_TV_PAGE && isInternalReferrer;
 
   const getPlaceholderURL = () =>
-    pageType === LIVE_TV_PAGE
-      ? buildIChefURL({
-          originCode: 'pips',
-          locator: liveMediaBlock?.masterbrand?.imageUrlTemplate,
-          resolution: 800,
-        })
-      : holdingImageURL;
+    pageType === LIVE_TV_PAGE ? defaultImage : holdingImageURL;
 
   const holdingImageURLForLiveTV = getPlaceholderURL();
 

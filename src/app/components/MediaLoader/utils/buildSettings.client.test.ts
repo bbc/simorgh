@@ -49,6 +49,8 @@ const baseSettings = {
   statsDestination: 'WS_NEWS_LANGUAGES',
   producer: 'SERBIAN',
   id: 'serbian/lat/srbija-68707945',
+  defaultImage:
+    'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
 } as BuildConfigProps;
 
 describe('buildSettings', () => {
@@ -1639,7 +1641,7 @@ describe('buildSettings', () => {
     });
 
     describe('live tv ', () => {
-      it('should use holdingImageURLForLiveTV when pageType is LIVE_TV_PAGE', () => {
+      it('should use deafultImage from service context when pageType is LIVE_TV_PAGE', () => {
         const result = buildSettings({
           ...baseSettings,
           blocks: [liveTvPageMediaBlock as MediaBlock],
@@ -1647,7 +1649,7 @@ describe('buildSettings', () => {
         });
 
         expect(result?.playerConfig?.playlistObject?.holdingImageURL).toBe(
-          'https://ichef.bbci.co.uk/images/ic/800xn/p0m9xygc.png.webp',
+          'https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png',
         );
       });
 
