@@ -38,10 +38,11 @@ jobs:
           rm -rf node_modules
           git config --global user.name "${{ secrets.WS_UTF_USERNAME }}"
           git config --global user.email "${{ secrets.WS_UTF_EMAIL }}"
-          git config --global url.https://${{ secrets.WS_UTF_AUTH }}@github.com/.insteadOf https://github.com/
+          git config --global url."https://${{ secrets.WS_UTF_AUTH }}@github.com/".insteadOf "https://github.com/"
           ./scripts/installNodeModules.sh
 
       - name: Install Playwright Browsers
+        working-directory: ws-nextjs-app
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests

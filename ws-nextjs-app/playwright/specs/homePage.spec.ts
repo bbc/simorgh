@@ -75,9 +75,7 @@ testSuites.forEach(suite => {
         .locator('main a[href^="https://www.bbc.com"]')
         .all();
 
-      // eslint-disable-next-line no-restricted-syntax
       for (const link of pageLinks) {
-        // eslint-disable-next-line no-await-in-loop
         const href = await link.getAttribute('href');
         expect(href).not.toBeNull();
         expect(href).toMatch(VALID_HREF_REGEX);
