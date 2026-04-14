@@ -6,16 +6,12 @@ exports[`Script Link should render correctly 1`] = `
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
-  line-height: 1;
+  line-height: 1rem;
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -51,7 +47,7 @@ exports[`Script Link should render correctly 1`] = `
   position: absolute;
   inset: 0;
   box-sizing: border-box;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.1875rem solid #FFFFFF;
   pointer-events: none;
 }
 
@@ -95,16 +91,12 @@ exports[`Script Link should render correctly for new navigation 1`] = `
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
-  line-height: 1;
+  line-height: 1rem;
   position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -140,7 +132,7 @@ exports[`Script Link should render correctly for new navigation 1`] = `
   position: absolute;
   inset: 0;
   box-sizing: border-box;
-  border: 0.25rem solid #FFFFFF;
+  border: 0.1875rem solid #FFFFFF;
   pointer-events: none;
 }
 

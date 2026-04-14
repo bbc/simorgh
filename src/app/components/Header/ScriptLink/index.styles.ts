@@ -31,10 +31,8 @@ const styles = {
     css({
       ...fontVariants.sansRegular,
       ...fontSizes.minion,
-      lineHeight: 1,
       position: 'relative',
-      display: 'inline-flex',
-      alignItems: 'stretch',
+      display: 'flex',
       justifyContent: 'center',
       boxSizing: 'border-box',
       color: palette.WHITE,
@@ -44,12 +42,13 @@ const styles = {
       border: `${pixelsToRem(1)}rem solid ${palette.WHITE}`,
       textAlign: 'center',
       whiteSpace: 'nowrap',
+
       '&:focus::after, &:hover::after': {
         content: '""',
         position: 'absolute',
         inset: 0,
         boxSizing: 'border-box',
-        border: `${pixelsToRem(4)}rem solid ${palette.WHITE}`,
+        border: `${pixelsToRem(3)}rem solid ${palette.WHITE}`,
         pointerEvents: 'none',
       },
     }),
