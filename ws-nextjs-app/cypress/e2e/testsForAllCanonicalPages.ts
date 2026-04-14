@@ -118,11 +118,11 @@ export default ({ service, pageType }: ServiceParametersType) => {
           });
         });
 
+        // eslint-disable-next-line func-names
         it('navigates to a new page and secondary nav changes when clicking a non-home item in top nav', function () {
           cy.get('[data-e2e="scrollable-nav"] li').then($items => {
             if ($items.length < 2) {
               this.skip();
-              return;
             }
             cy.location('pathname').then(previousUrl => {
               cy.wrap($items).eq(1).find('a').click();
