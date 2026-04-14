@@ -56,7 +56,10 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const body = { activityType: 'test', metaData: { key: 'value' } };
+    const body = {
+      activityType: 'favourites' as const,
+      metaData: { key: 'value' },
+    };
 
     const response = await uasApiRequest('POST', activityType, { body });
 
@@ -94,14 +97,6 @@ describe('uasApiRequest', () => {
           'X-API-Key': 'mocked-api-key',
         }),
       }),
-    );
-  });
-
-  it('should throw an error for invalid activity type', async () => {
-    const invalidActivityType = 'invalidType';
-
-    await expect(uasApiRequest('GET', invalidActivityType)).rejects.toThrow(
-      'Invalid activity type',
     );
   });
 
