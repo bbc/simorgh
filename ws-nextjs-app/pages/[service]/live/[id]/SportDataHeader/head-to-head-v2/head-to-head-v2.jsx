@@ -7,15 +7,18 @@ import shouldShowTeamBadges from './helpers/badges/should-show-team-badges';
 
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header.jsx';
-import { getStatusBorderStyles } from './helpers/colour-styles.js';
+// import { getStatusBorderStyles } from './helpers/colour-styles.js';
 import { HeadToHeadBanner } from './components/head-to-head-banner.jsx';
 import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link.jsx';
 import { Actions } from './components/actions.jsx';
 
 const StyledHeadToHeadWrapper = styled.div`
   background: ${({ isConciseView }) => (isConciseView ? '#202020' : '#181818')};
-  border-left: ${({ status, isConciseView }) =>
-    getStatusBorderStyles({ status, isConciseView })};
+  ${
+    '' /* border-left: ${({ status, isConciseView }) =>
+    getStatusBorderStyles({ status, isConciseView })}; */
+  }
+  border-left: '#009E9E';
 `;
 
 const StyledHeadToHead = styled.div`

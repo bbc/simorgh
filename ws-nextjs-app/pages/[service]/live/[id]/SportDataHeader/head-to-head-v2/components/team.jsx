@@ -1,29 +1,43 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import { GROUP_3, fontScaleBody, createSize, SPACING_3, SPACING_2, SPACING_5 } from '@bbc/web-gel-foundations';
-import SportBadge from '@bbc/web-components/sport-badge/index.js';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+
+import styled, { css } from '@emotion/styled';
+
+// import {
+//   /GROUP_3,
+//   fontScaleBody,
+//   createSize,
+//   SPACING_3,
+//   SPACING_2,
+//   SPACING_5,
+// } from '@bbc/web-gel-foundations';
+import SportBadge from './sport-badge/index.js';
 import TeamName from './team-name.jsx';
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const StyledTeam = styled.div`
   display: flex;
-  gap: ${SPACING_2};
+  gap: '8px';
   align-items: center;
   justify-content: flex-start;
   flex-grow: 2;
-  ${fontScaleBody}
+  font-size: 1rem;
+  line-height: 1.375;
 
-  flex-direction: ${({ isConciseView, shouldHideBadges }) => (isConciseView || shouldHideBadges ? 'row' : 'column')};
+  flex-direction: ${({ isConciseView, shouldHideBadges }) =>
+    isConciseView || shouldHideBadges ? 'row' : 'column'};
 
-  @media (min-width: ${GROUP_3}) {
-    gap: ${SPACING_5};
+  @media (min-width: '${pixelsToRem(600)}rem') {
+    gap: '20px';
     flex-direction: row;
   }
 
   ${({ isConciseView }) =>
     isConciseView &&
     css`
-      @media (min-width: ${GROUP_3}) {
-        gap: ${SPACING_3};
+      @media (min-width: '${pixelsToRem(600)}rem') {
+        gap: '12px';
       }
     `}
 `;
@@ -35,7 +49,9 @@ const HomeTeam = styled(StyledTeam)`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc(${GROUP_3} - ${createSize(1)})) {
+      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
+          1,
+        )}rem')) {
         justify-content: flex-end;
         flex-direction: column-reverse;
         text-align: center;
@@ -51,17 +67,32 @@ const AwayTeam = styled(StyledTeam)`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc(${GROUP_3} - ${createSize(1)})) {
+      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
+          1,
+        )}rem')) {
         text-align: center;
       }
     `}
 `;
 
-const Team = ({ alignment, name, shortName, urn, isConciseView, shouldHideBadges, badgePlaceholderFallbackType }) => {
-  const size = isConciseView ? { small: 20, medium: 24, large: 24 } : { small: 40, medium: 44, large: 44 };
+const Team = ({
+  alignment,
+  name,
+  shortName,
+  urn,
+  isConciseView,
+  shouldHideBadges,
+  badgePlaceholderFallbackType,
+}) => {
+  const size = isConciseView
+    ? { small: 20, medium: 24, large: 24 }
+    : { small: 40, medium: 44, large: 44 };
   if (alignment === 'home') {
     return (
-      <HomeTeam isConciseView={isConciseView} shouldHideBadges={shouldHideBadges}>
+      <HomeTeam
+        isConciseView={isConciseView}
+        shouldHideBadges={shouldHideBadges}
+      >
         <TeamName
           fullName={name}
           shortName={shortName}

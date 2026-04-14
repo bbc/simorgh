@@ -9,7 +9,7 @@ export const getStatusBorderStyles = ({ theme, status, isConciseView }) => {
     Abandoned: `4px solid ${theme.colourPalette.secondary}`,
     MidEvent: `4px solid ${theme.colourPalette.states.live}`,
     Intermission: `4px solid ${theme.colourPalette.states.live}`,
-    PostEvent: `4px solid ${theme.colourPalette.accent}`
+    PostEvent: `4px solid ${theme.colourPalette.accent}`,
   };
 
   if (isConciseView) {
@@ -28,7 +28,7 @@ export const getStyledLineColour = ({ theme, status, isConciseView }) => {
     Suspended: theme.colourPalette.border.decorativeStrong,
     MidEvent: theme.colourPalette.states.live,
     Intermission: theme.colourPalette.states.live,
-    PostEvent: theme.colourPalette.accent
+    PostEvent: theme.colourPalette.accent,
   };
 
   if (isConciseView) {
@@ -45,7 +45,7 @@ export const getScoreColourStyle = ({ status, theme, isConciseView }) => {
     Abandoned: theme.colourPalette.secondary,
     Suspended: theme.colourPalette.secondary,
     MidEvent: theme.colourPalette.states.live,
-    Intermission: theme.colourPalette.states.live
+    Intermission: theme.colourPalette.states.live,
   };
 
   return isConciseView ? scoreStyles[status] : theme.colourPalette.primary;

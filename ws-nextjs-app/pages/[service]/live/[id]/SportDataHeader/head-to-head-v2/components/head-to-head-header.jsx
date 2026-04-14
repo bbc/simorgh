@@ -1,31 +1,36 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import {
-  GROUP_3,
-  SPACING_6,
-  SPACING_4,
-  SPACING_2,
-  SPACING_1,
-  fontScaleBody,
-  fontScaleDescription
-} from '@bbc/web-gel-foundations';
-import { isLiveStatus } from '@bbc/web-sport-utils';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+import styled, { css } from '@emotion/styled';
+// import {
+//   GROUP_3,
+//   SPACING_6,
+//   SPACING_4,
+//   SPACING_2,
+//   SPACING_1,
+//   fontScaleBody,
+//   fontScaleDescription
+// } from '@bbc/web-gel-foundations';
+import { isLiveStatus } from '../helpers/event-status-groups';
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  ${fontScaleDescription}
-  padding-bottom: ${SPACING_4};
+  font-size: 14px;
+  line-height: 1.2857142857142858;
+  padding-bottom: '16px';
 
   ${({ status }) => css`
-    padding-top: ${isLiveStatus(status) ? 0 : SPACING_4};
+    padding-top: ${isLiveStatus(status) ? 0 : '16px'};
   `}
-  @media (min-width: ${GROUP_3}) {
+  @media (min-width: '${pixelsToRem(600)}rem') {
     flex-direction: row;
-    ${fontScaleBody}
+    font-size: 1rem;
+    line-height: 1.375;
     ${({ status }) => css`
-      padding-top: ${isLiveStatus(status) ? SPACING_2 : SPACING_6};
+      padding-top: ${isLiveStatus(status) ? '8px' : '24px'};
     `}
   }
 `;
@@ -35,7 +40,7 @@ const DateWrapper = styled.div`
   justify-content: flex-end;
 
   flex-direction: column;
-  @media (min-width: ${GROUP_3}) {
+  @media (min-width: '${pixelsToRem(600)}rem') {
     flex-direction: row;
   }
 `;
@@ -44,19 +49,19 @@ const DateHeader = styled.div`
   display: flex;
   justify-content: center;
 
-  padding-bottom: ${SPACING_1};
-  @media (min-width: ${GROUP_3}) {
+  padding-bottom: '4px';
+  @media (min-width: '${pixelsToRem(600)}rem') {
     padding-bottom: 0;
   }
 `;
 
 const Interpunct = styled.div`
-  color: ${({ theme }) => theme.colourPalette.secondary};
+  color: '#A8A8A8';
 
   display: none;
-  @media (min-width: ${GROUP_3}) {
+  @media (min-width: '${pixelsToRem(600)}rem') {
     display: inline;
-    padding: 0 ${SPACING_2};
+    padding: '0 8px';
   }
 `;
 
@@ -67,7 +72,7 @@ const TournamentHeader = styled.div`
 `;
 
 const Date = styled.time`
-  color: ${({ theme }) => theme.colourPalette.secondary};
+  color: '#A8A8A8';
   flex-shrink: 0;
 `;
 
@@ -84,9 +89,17 @@ const formatTournamentDescriptionLabel = tournamentDescriptionLabel => {
 
   return tournamentGroupsArray.map((element, i) => {
     if (tournamentGroupsArray.length === i + 1) {
-      return <CompetitionFormatter key={`tournament_part_${i}`}>{element}</CompetitionFormatter>;
+      return (
+        <CompetitionFormatter key={`tournament_part_${i}`}>
+          {element}
+        </CompetitionFormatter>
+      );
     }
-    return <CompetitionFormatter key={`tournament_part_${i}`}>{element} - </CompetitionFormatter>;
+    return (
+      <CompetitionFormatter key={`tournament_part_${i}`}>
+        {element} -{' '}
+      </CompetitionFormatter>
+    );
   });
 };
 
@@ -100,7 +113,9 @@ const HeadToHeadHeader = ({ date, tournamentDescriptionLabel, status }) => (
         <Interpunct aria-hidden>‧</Interpunct>
       </DateWrapper>
     )}
-    <TournamentHeader>{formatTournamentDescriptionLabel(tournamentDescriptionLabel)}</TournamentHeader>
+    <TournamentHeader>
+      {formatTournamentDescriptionLabel(tournamentDescriptionLabel)}
+    </TournamentHeader>
   </HeaderWrapper>
 );
 

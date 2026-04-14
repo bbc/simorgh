@@ -1,34 +1,38 @@
 // import React from 'react';
 // import styled from '@bbc/web-styled';
 import styled from '@emotion/styled';
-import {
-  SPACING_1,
-  SPACING_2,
-  GROUP_3,
-  SPACING_4,
-  fontScaleDescription,
-  fontScaleBody,
-  createSize,
-} from '@bbc/web-gel-foundations';
-import { getStyledLineColour } from '../helpers/colour-styles.js';
+// import {
+//   SPACING_1,
+//   SPACING_2,
+//   GROUP_3,
+//   SPACING_4,
+//   fontScaleDescription,
+//   fontScaleBody,
+//   createSize,
+// } from '@bbc/web-gel-foundations';
+// import { getStyledLineColour } from '../helpers/colour-styles.js';
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const StyledFooter = styled.div`
-  ${fontScaleDescription}
-  padding-bottom: ${SPACING_4};
+  font-size: 14px;
+  line-height: 1.2857142857142858;
+  padding-bottom: 16px;
   text-align: center;
 
-  @media (min-width: ${GROUP_3}) {
-    ${fontScaleBody}
-    padding-bottom: ${SPACING_2};
+  @media (min-width: '${pixelsToRem(600)}rem') {
+    font-size: 1rem;
+    line-height: 1.375;
+    padding-bottom: 8px;
   }
 `;
 
 const FooterTextWrapper = styled.div`
   display: inline-block;
-  font-size: ${createSize(13)};
+  font-size: '${pixelsToRem(13)}rem';
 
   &:not(:first-child) {
-    margin-left: ${SPACING_2};
+    margin-left: 8px;
   }
 `;
 
@@ -36,7 +40,7 @@ const Venue = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: ${SPACING_1};
+  padding-bottom: 4px;
 `;
 
 const AttendanceValue = styled.div`
@@ -47,20 +51,24 @@ const AttendanceValue = styled.div`
 `;
 
 const VenueLabel = styled.span`
-  color: ${({ theme }) => theme.colourPalette.secondary};
-  padding-right: ${SPACING_1};
+  color: '#A8A8A8';
+  padding-right: 4px;
 `;
 
 const AttendanceLabel = styled.span`
-  color: ${({ theme }) => theme.colourPalette.secondary};
-  padding-right: ${SPACING_1};
+  color: '#A8A8A8';
+  padding-right: 4px;
 `;
 
 const HorizontalRule = styled.hr`
-  width: ${createSize(12)};
+  width: '${pixelsToRem(12)}rem';
   border: none;
-  border-top: 1px solid ${({ theme, status, isConciseView }) => getStyledLineColour({ theme, status, isConciseView })};
-  padding-bottom: ${SPACING_1};
+  ${
+    '' /* border-top: 1px solid ${({ theme, status, isConciseView }) => getStyledLineColour({ theme, status, isConciseView })};
+     */
+  }
+  border-top: '1px solid #FFD230';
+  padding-bottom: 4px;
 `;
 
 const Footer = ({ venue, status, attendanceValue, attendanceInfo }) => {

@@ -25,19 +25,23 @@ const OnwardJourneyLink = styled.a`
   }
 `;
 
+// eslint-disable-next-line import/prefer-default-export
 export const ConditionalOnwardJourneyLink = ({
   isConciseView,
   onwardJourneyLink,
   children,
   tipoTopicId,
-  trackingEvent
+  trackingEvent,
 }) => {
   if (isConciseView && onwardJourneyLink) {
     return trackingEvent ? (
       <Track tracking={trackingEvent}>
         {({ trackRef }) => (
           <div ref={trackRef}>
-            <OnwardJourneyLink href={onwardJourneyLink} data-tipo-id={tipoTopicId}>
+            <OnwardJourneyLink
+              href={onwardJourneyLink}
+              data-tipo-id={tipoTopicId}
+            >
               {children}
             </OnwardJourneyLink>
           </div>

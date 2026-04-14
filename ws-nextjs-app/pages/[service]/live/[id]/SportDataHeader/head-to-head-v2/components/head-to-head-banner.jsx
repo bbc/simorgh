@@ -1,11 +1,18 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
-import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+import styled, { css } from '@emotion/styled';
+
+// import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
+
+// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+// eslint-disable-next-line import/no-relative-packages
+import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
 import Team from './team.jsx';
 import Centre from './centre.jsx';
 import MatchProgress from './match-progress.jsx';
 import PenaltyScores from './penalty-scores.jsx';
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 export const GridContainer = styled.div`
   display: grid;
@@ -18,7 +25,9 @@ export const GridContainer = styled.div`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc(${GROUP_3} - ${createSize(1)})) {
+      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
+          1,
+        )}rem')) {
         grid-template-columns: 1fr auto auto 1fr;
         grid-template-areas:
           'home_team         scores            scores            away_team'
@@ -55,11 +64,23 @@ const MatchProgressContainer = styled.div`
   grid-area: progress;
 `;
 
-const ItemWrapper = ({ data, isConciseView, shouldHideBadges, maxScoreLength, teamBadgePlaceholderFallbackType }) => {
-  const shouldDisplayPenScores = data.home.runningScores?.penaltyShootout && data.away.runningScores?.penaltyShootout;
+const ItemWrapper = ({
+  data,
+  isConciseView,
+  shouldHideBadges,
+  maxScoreLength,
+  teamBadgePlaceholderFallbackType,
+}) => {
+  const shouldDisplayPenScores =
+    data.home.runningScores?.penaltyShootout &&
+    data.away.runningScores?.penaltyShootout;
   return (
     <>
-      <GridContainer isConciseView={isConciseView} data-event-id={data.id} shouldHideBadges={shouldHideBadges}>
+      <GridContainer
+        isConciseView={isConciseView}
+        data-event-id={data.id}
+        shouldHideBadges={shouldHideBadges}
+      >
         <TeamHome data-participant-id={data.home.id}>
           <Team
             alignment={'home'}
@@ -72,8 +93,14 @@ const ItemWrapper = ({ data, isConciseView, shouldHideBadges, maxScoreLength, te
           />
         </TeamHome>
         <Scores>
-          <Centre data={data} isConciseView={isConciseView} maxScoreLength={maxScoreLength} />
-          {data.status === 'PreEvent' && <VisuallyHidden>plays</VisuallyHidden>}
+          <Centre
+            data={data}
+            isConciseView={isConciseView}
+            maxScoreLength={maxScoreLength}
+          />
+          {data.status === 'PreEvent' && (
+            <VisuallyHiddenText>plays</VisuallyHiddenText>
+          )}
         </Scores>
         <TeamAway data-participant-id={data.away.id}>
           <Team
@@ -90,7 +117,9 @@ const ItemWrapper = ({ data, isConciseView, shouldHideBadges, maxScoreLength, te
           <MatchProgress data={data} isConciseView={isConciseView} />
         </MatchProgressContainer>
       </GridContainer>
-      {shouldDisplayPenScores && <PenaltyScores data={data} isConciseView={isConciseView} />}
+      {shouldDisplayPenScores && (
+        <PenaltyScores data={data} isConciseView={isConciseView} />
+      )}
     </>
   );
 };
@@ -101,10 +130,10 @@ export const HeadToHeadBanner = ({
   eventSummary,
   shouldHideBadges,
   maxScoreLength,
-  teamBadgePlaceholderFallbackType
+  teamBadgePlaceholderFallbackType,
 }) => (
   <>
-    <VisuallyHidden>{eventSummary}</VisuallyHidden>
+    <VisuallyHiddenText>{eventSummary}</VisuallyHiddenText>
     <ItemWrapper
       data={data}
       isConciseView={isConciseView}
