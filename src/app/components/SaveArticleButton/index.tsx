@@ -1,20 +1,25 @@
-import useUASButton from '#app/hooks/useUASButton';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import styles from './index.styles';
 
 interface SaveArticleButtonProps {
   articleId: string;
-  service: string;
+  articleTitle: string;
 }
+
 /** A button component that allows users to save an article for later reading,
  * showing the button based on user sign in status and feature toggles,
  * and displaying the saved status, loading state, and handling errors from the UAS API.
  * FUTURE TODO : Implement button click handler to toggle saved state */
 
-const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error } = useUASButton({
-    articleId,
-    service,
-  });
+const SaveArticleButton = ({
+  articleId,
+  articleTitle,
+}: SaveArticleButtonProps) => {
+  const { showButton, isSaved, isLoading, error, handleSaveAction } =
+    useUASButton({
+      articleId,
+      articleTitle,
+    });
 
   if (!showButton) {
     return null;
@@ -28,21 +33,22 @@ const SaveArticleButton = ({ articleId, service }: SaveArticleButtonProps) => {
   };
 
   // TODO : Will modify based on future error handling implementation,
-  //  currently just hides the button if there is an error fetching save status
   if (error) {
-    // Logging until we have proper error handling in place
     // eslint-disable-next-line no-console
     console.log('Error fetching saved status for article:', {
       articleId,
       error,
     });
-    return null;
+    // return null;
   }
 
   return (
     <button
       css={styles.buttonWrapper}
       type="button"
+      onClick={() =>
+        handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE)
+      }
       disabled={isLoading}
       aria-label={buttonLabel}
       title={buttonLabel}

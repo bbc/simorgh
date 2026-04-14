@@ -109,7 +109,7 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articleId: string,
-    service: string,
+    articleTitle: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -143,7 +143,7 @@ const getTimestampComponent =
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
-          service={service}
+          articleTitle={articleTitle}
         />
       </>
     );
@@ -217,7 +217,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -365,7 +364,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       articleId,
-      service,
+      headline,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
