@@ -79,6 +79,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-6::before {

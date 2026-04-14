@@ -104,7 +104,7 @@ exports[`Brand should render correctly with link not provided 1`] = `
     class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="brand-svg-wrapper emotion-2 emotion-3"
     >
       <svg
         aria-hidden="true"
@@ -278,11 +278,11 @@ exports[`Brand should render correctly with link provided 1`] = `
     class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="brand-svg-wrapper emotion-2 emotion-3"
     >
       <a
         aria-labelledby="BrandLink-null"
-        class="focusIndicatorRemove emotion-4 emotion-5"
+        class="brand-link focusIndicatorRemove emotion-4 emotion-5"
         href="https://www.bbc.co.uk/news"
       >
         <svg
@@ -426,7 +426,7 @@ exports[`Brand should render correctly with no service Localised Name 1`] = `
     class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="brand-svg-wrapper emotion-2 emotion-3"
     >
       <svg
         aria-hidden="true"
