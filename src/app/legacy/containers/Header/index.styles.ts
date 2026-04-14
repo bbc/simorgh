@@ -32,7 +32,7 @@ export default {
       minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
       [mq.GROUP_1_MIN_WIDTH]: {
-        minHeight: 'auto',
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
