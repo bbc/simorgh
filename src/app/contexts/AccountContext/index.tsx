@@ -31,12 +31,7 @@ export const AccountProvider = ({
   initialConfig,
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
-  const {
-    isAmp = false,
-    isApp = false,
-    isLite = false,
-    env,
-  } = use(RequestContext);
+  const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
 
   useEffect(() => {
@@ -56,7 +51,7 @@ export const AccountProvider = ({
       ? appendCtaQueryParams(url, {
           pageToReturnTo,
           lang: locale,
-          userOrigin: getIdctaUserOrigin(atiAnalyticsProducerName, env),
+          userOrigin: getIdctaUserOrigin(atiAnalyticsProducerName),
         })
       : initialConfig?.unavailable_url;
   };
