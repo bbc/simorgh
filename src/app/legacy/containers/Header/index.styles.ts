@@ -24,39 +24,58 @@ export default {
       },
 
       a: {
-        lineHeight: 0,
+        marginTop: `${pixelsToRem(5)}rem`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
     css({
-      minHeight: 'auto',
-      height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+      minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
 
       [mq.GROUP_1_MIN_WIDTH]: {
-        minHeight: 'auto',
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        minHeight: 'auto',
         padding: `0 ${spacings.FULL}rem`,
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        minHeight: 'auto',
         padding: `0 ${spacings.DOUBLE}rem`,
-        height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
+        minHeight: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       },
 
-      svg: {
-        height: '1.5rem',
+      '.brand-link': {
+        paddingTop: `${pixelsToRem(2)}rem`,
 
-        [mq.GROUP_3_MIN_WIDTH]: {
-          height: '1.875rem',
+        svg: {
+          height: '1.5rem',
+
+          [mq.GROUP_3_MIN_WIDTH]: {
+            height: '1.875rem',
+          },
+        },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flex: '0 1 auto',
+          minWidth: 0,
         },
       },
-
-      a: {
-        paddingTop: `${pixelsToRem(2)}rem`,
+      '.brand-svg-wrapper': {
+        [mq.GROUP_1_MIN_WIDTH]: {
+          flexWrap: 'nowrap',
+        },
+      },
+      '.script-link-wrapper': {
+        [mq.GROUP_0_MAX_WIDTH]: {
+          flexBasis: '100%',
+          margin: `0 0 ${spacings.FULL}rem 0`,
+        },
+        [mq.GROUP_1_MIN_WIDTH]: {
+          display: 'flex',
+          alignItems: 'center',
+          flex: '0 0 auto',
+          marginInlineStart: 'auto',
+          marginInlineEnd: `${pixelsToRem(-4)}rem`,
+        },
       },
     }),
   logoSvg: ({ palette }: Theme) =>
