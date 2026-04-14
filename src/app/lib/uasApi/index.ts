@@ -1,12 +1,12 @@
 import isLive from '#app/lib/utilities/isLive';
 import getAuthHeaders from './getAuthHeaders';
-import { activityTypes } from './uasUtility';
+import type { ActivityType } from './uasUtility';
 import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
 export interface UasApiRequestBody {
-  activityType: string;
+  activityType: ActivityType;
   resourceDomain?: string;
   resourceType?: string;
   resourceId?: string;
@@ -30,11 +30,7 @@ const buildUrl = (activityType: string, globalId?: string) => {
   return globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
 };
 
-const validateRequest = (
-  method: UasMethod,
-  options: UasRequestOptions,
-  activityType: string,
-) => {
+const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
   const { body, globalId } = options;
 
   if (method === 'DELETE' && !globalId) {
@@ -44,19 +40,15 @@ const validateRequest = (
   if (method === 'POST' && !body) {
     throw new Error('POST requests require a body');
   }
-
-  if (!activityType || !activityTypes.includes(activityType)) {
-    throw new Error('Invalid activity type');
-  }
   // TODO : Add more validation , if needed
 };
 
 const uasApiRequest = async (
   method: UasMethod,
-  activityType: string,
+  activityType: ActivityType,
   { body, globalId, signal }: UasRequestOptions = {},
 ): Promise<Response> => {
-  validateRequest(method, { body, globalId }, activityType);
+  validateRequest(method, { body, globalId });
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
 
