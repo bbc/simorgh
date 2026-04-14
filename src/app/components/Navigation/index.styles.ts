@@ -12,7 +12,7 @@ export default {
       position: 'relative',
       width: '100%',
       margin: '0 auto',
-      borderBottom: `${pixelsToRem(1)}rem solid ${palette.POSTBOX}`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.BRAND_BACKGROUND}`,
       opacity: 0.7,
     }),
   bottomDivider: ({ palette }: Theme) =>
@@ -55,7 +55,7 @@ export default {
       justifyContent: 'space-between',
       position: 'relative',
       zIndex: 0,
-      backgroundColor: palette.POSTBOX,
+      backgroundColor: palette.BRAND_BACKGROUND,
 
       '&::before': {
         content: "''",
@@ -66,7 +66,7 @@ export default {
         width: '100vw',
         left: '50%',
         transform: 'translateX(-50%)',
-        background: palette.POSTBOX,
+        background: palette.BRAND_BACKGROUND,
         pointerEvents: 'none' /* ensure it never interferes with clicks */,
       },
     }),
@@ -76,7 +76,7 @@ export default {
         marginInlineEnd: 0,
 
         a: {
-          color: palette.WHITE,
+          color: palette.BRAND_FOREGROUND,
           padding: `0 ${spacings.FULL}rem`,
           height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
           display: 'flex',
@@ -169,7 +169,7 @@ export default {
       width: '100%',
       zIndex: 99999,
 
-      borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
+      borderBottom: `${pixelsToRem(3)}rem solid ${palette.BRAND_BACKGROUND}`,
 
       ul: {
         padding: 0,
@@ -201,7 +201,7 @@ export default {
           insetInlineStart: 0,
           height: '100%',
           width: `${pixelsToRem(4)}rem`,
-          background: palette.POSTBOX,
+          background: palette.BRAND_BACKGROUND,
           display: 'block',
           opacity: 0,
         },
@@ -222,8 +222,8 @@ export default {
   }),
   menuButton: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.POSTBOX,
-      color: palette.WHITE,
+      backgroundColor: palette.BRAND_BACKGROUND,
+      color: palette.BRAND_FOREGROUND,
 
       width: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
       height: `${pixelsToRem(MAX_NAV_ITEM_HEIGHT)}rem`,
@@ -235,7 +235,7 @@ export default {
 
       svg: {
         verticalAlign: 'middle',
-        fill: palette.WHITE,
+        fill: palette.BRAND_FOREGROUND,
       },
     }),
 };
