@@ -3,8 +3,6 @@ import moment from 'moment';
 import { LIVE_TV_PAGE } from '#app/routes/utils/pageTypes';
 import onClient from '#app/lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import { use } from 'react';
 import { ConfigBuilderProps, ConfigBuilderReturnProps } from '../types';
 
 export default ({
@@ -12,9 +10,8 @@ export default ({
   basePlayerConfig,
   pageType,
   lang,
+  defaultImage,
 }: ConfigBuilderProps): ConfigBuilderReturnProps => {
-  const { defaultImage } = use(ServiceContext);
-
   const { model: liveMediaBlock } = filterForBlockType(blocks, 'liveMedia');
   let warning: string | null = null;
   const {
