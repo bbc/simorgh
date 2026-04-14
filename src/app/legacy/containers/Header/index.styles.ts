@@ -24,7 +24,7 @@ export default {
       },
 
       a: {
-        marginTop: `${pixelsToRem(6)}rem`,
+        marginTop: `${pixelsToRem(5)}rem`,
       },
     }),
   headerBrand: ({ mq, spacings }: Theme) =>
