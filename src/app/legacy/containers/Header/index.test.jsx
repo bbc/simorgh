@@ -157,6 +157,30 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(0);
     });
 
+    it('should render script link for ukchina article pages', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: ARTICLE_PAGE,
+          service: 'ukchina',
+          variant: 'trad',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
+    it('should render script link for ukchina home pages', () => {
+      const { container } = HeaderContainerWithContext({
+        renderOptions: {
+          pageType: HOME_PAGE,
+          service: 'ukchina',
+          variant: 'trad',
+        },
+      });
+
+      expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
+    });
+
     describe('when service is uzbek', () => {
       describe.each(['cyr', 'lat'])('and variant is %s', variant => {
         const supportedUzbekPageTypes = [

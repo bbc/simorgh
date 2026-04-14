@@ -208,7 +208,7 @@ describe('fetchConfig', () => {
       },
     );
 
-    it('should not set the useNewNav param for non-Arabic/Tamil services', async () => {
+    it('should not set the useNewNav param for script services', async () => {
       global.fetch = jest.fn().mockResolvedValue({
         ok: true,
         json: async () => mockNavResponse,
@@ -217,8 +217,9 @@ describe('fetchConfig', () => {
       const { default: fetchConfig } = await import('.');
 
       await fetchConfig({
-        service: 'indonesia',
-        pagePath: '/indonesia',
+        service: 'serbian',
+        variant: 'cyr',
+        pagePath: '/serbian/cyr',
         configType: 'navigation',
       });
 
