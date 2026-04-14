@@ -7,12 +7,8 @@ import Image from '../../Image';
 import VisuallyHiddenText from '../../VisuallyHiddenText';
 import { RightChevron, LeftChevron } from '../../icons';
 
-const Comma = ({ isRtl }) => {
-  return (
-    <span aria-hidden="true" css={BylineCss.comma}>
-      {isRtl ? '،' : ','}{' '}
-    </span>
-  );
+const Comma = () => {
+  return <span aria-hidden="true" css={BylineCss.comma} />;
 };
 
 const And = ({ andTranslation }) => {
@@ -195,7 +191,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
               )}
               {hasMultipleContributors &&
                 !isLastContributorNameOnly(index, jobRole, location) && (
-                  <Comma isRtl={isRtl} />
+                  <Comma />
                 )}
             </li>
             {jobRole && (
@@ -205,12 +201,10 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                   role={role}
                   isSingleContributor={isSingleContributor}
                 />
-                {(location && <Comma isRtl={isRtl} />) ||
+                {(location && <Comma />) ||
                   (hasMultipleContributors &&
                     index !== lastContributorIndex &&
-                    index !== lastContributorIndex - 1 && (
-                      <Comma isRtl={isRtl} />
-                    ))}
+                    index !== lastContributorIndex - 1 && <Comma />)}
               </li>
             )}
             {location && (
@@ -222,7 +216,7 @@ const ArticleContributors = ({ contributorValues, isSingleContributor }) => {
                 />
                 {hasMultipleContributors &&
                   index !== lastContributorIndex &&
-                  index !== lastContributorIndex - 1 && <Comma isRtl={isRtl} />}
+                  index !== lastContributorIndex - 1 && <Comma />}
               </li>
             )}
           </ul>
