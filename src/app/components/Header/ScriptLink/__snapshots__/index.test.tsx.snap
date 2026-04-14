@@ -5,7 +5,7 @@ exports[`Script Link should render correctly 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   line-height: 1;
   position: relative;
   display: -webkit-inline-box;
@@ -29,6 +29,20 @@ exports[`Script Link should render correctly 1`] = `
   border: 0.0625rem solid #FFFFFF;
   text-align: center;
   white-space: nowrap;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 .emotion-0:focus::after,
@@ -80,7 +94,7 @@ exports[`Script Link should render correctly for new navigation 1`] = `
   font-family: Helvetica,Arial,STHeiti,华文黑体,"Microsoft YaHei",微软雅黑,SimSun,宋体;
   font-style: normal;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1;
   position: relative;
   display: -webkit-inline-box;
@@ -104,6 +118,20 @@ exports[`Script Link should render correctly for new navigation 1`] = `
   border: 0.0625rem solid #FFFFFF;
   text-align: center;
   white-space: nowrap;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
 }
 
 .emotion-0:focus::after,

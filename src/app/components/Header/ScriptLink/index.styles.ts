@@ -27,10 +27,10 @@ const styles = {
         margin: `${spacings.FULL}rem 0 ${spacings.FULL}rem 0`,
       },
     }),
-  newNavLink: ({ fontVariants, palette }: Theme) =>
+  newNavLink: ({ fontVariants, fontSizes, palette }: Theme) =>
     css({
       ...fontVariants.sansRegular,
-      fontSize: `${pixelsToRem(15)}rem`,
+      ...fontSizes.minion,
       lineHeight: 1,
       position: 'relative',
       display: 'inline-flex',
