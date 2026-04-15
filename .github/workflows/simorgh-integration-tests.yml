@@ -35,12 +35,7 @@ jobs:
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          rm -rf node_modules
-          git config --global user.name "${{ secrets.WS_UTF_USERNAME }}"
-          git config --global user.email "${{ secrets.WS_UTF_EMAIL }}"
-          git config --global url."https://${{ secrets.WS_UTF_AUTH }}@github.com/".insteadOf "https://github.com/"
-          ./scripts/installNodeModules.sh
+        run: ./scripts/installNodeModules.sh
 
       - name: Integration Tests - Express
         run: yarn test:integration:ci
