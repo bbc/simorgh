@@ -15,6 +15,7 @@ const buildConfig = async (config: Config): Promise<Config> => {
       ...(config.testPathIgnorePatterns || []),
       'build',
       'node_modules',
+      'playwright',
     ],
   })();
 };

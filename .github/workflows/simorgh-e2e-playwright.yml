@@ -1,4 +1,4 @@
-name: Simorgh CI - Integration Tests
+name: Playwright E2E - Simorgh
 on:
   pull_request:
     branches:
@@ -18,7 +18,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
@@ -42,8 +41,17 @@ jobs:
           git config --global url."https://${{ secrets.WS_UTF_AUTH }}@github.com/".insteadOf "https://github.com/"
           ./scripts/installNodeModules.sh
 
-      - name: Integration Tests - Express
-        run: yarn test:integration:ci
+      - name: Install Playwright Browsers
+        working-directory: ws-nextjs-app
+        run: npx playwright install --with-deps
 
-      - name: Integration Tests - Next
-        run: yarn test:integration --nextJS
+      - name: Run Playwright tests
+        working-directory: ws-nextjs-app
+        run: HEADLESS=true npx playwright test --project="WorldService - Chrome"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: ws-nextjs-app/playwright-report
+          retention-days: 30
