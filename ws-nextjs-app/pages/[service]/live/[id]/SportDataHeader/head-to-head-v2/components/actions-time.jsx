@@ -1,23 +1,34 @@
-import React from 'react';
-import styled from '@bbc/web-styled';
-import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+// import React from 'react';
+// import styled from '@bbc/web-styled';
+import styled from '@emotion/styled';
+
+// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+
+// eslint-disable-next-line import/no-relative-packages
+import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+
 import Card from './card.jsx';
 
 const goalTypesHandled = {
   Penalty: 'pen',
-  'Own Goal': 'og'
+  'Own Goal': 'og',
 };
 
 const TextBlock = styled.span`
   white-space: nowrap;
 `;
 
-const displayGoalType = goalType => (goalTypesHandled[goalType] ? ` ${goalTypesHandled[goalType]}` : '');
+const displayGoalType = goalType =>
+  goalTypesHandled[goalType] ? ` ${goalTypesHandled[goalType]}` : '';
 
 const ActionsTime = ({ player }) => {
-  const times = player.actions.map(action => `${action.timeLabel.value}${displayGoalType(action.type)}`);
+  const times = player.actions.map(
+    action => `${action.timeLabel.value}${displayGoalType(action.type)}`,
+  );
   const timesAccessible = player.actions
-    .map(action => `${action.typeLabel.accessible} ${action.timeLabel.accessible}`)
+    .map(
+      action => `${action.typeLabel.accessible} ${action.timeLabel.accessible}`,
+    )
     .join(', ');
   return (
     <>
@@ -32,7 +43,7 @@ const ActionsTime = ({ player }) => {
           {index !== times.length - 1 && ', '}
         </span>
       ))}
-      <VisuallyHidden>{timesAccessible}</VisuallyHidden>
+      <VisuallyHiddenText>{timesAccessible}</VisuallyHiddenText>
     </>
   );
 };

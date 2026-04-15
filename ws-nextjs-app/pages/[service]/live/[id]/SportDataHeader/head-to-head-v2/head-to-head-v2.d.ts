@@ -7,7 +7,7 @@ declare enum EventStatus {
   Abandoned = 'Abandoned',
   Cancelled = 'Cancelled',
   Suspended = 'Suspended',
-  Postponed = 'Postponed'
+  Postponed = 'Postponed',
 }
 
 type Action = {

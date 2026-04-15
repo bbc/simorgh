@@ -18,6 +18,7 @@ import {
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
+import HeadToHeadV2 from './SportDataHeader/head-to-head-v2';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
@@ -59,6 +60,7 @@ export type ComponentProps = {
     endDateTime?: string;
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
+    sportEventDetails?: object | null;
   };
 };
 
@@ -87,7 +89,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
+    sportEventDetails,
   } = pageData;
+
+  // console.log('&&&&&&&&&&&&&&&&&&&&&');
+  // console.log('SPORT DATA');
+  // console.log(JSON.stringify(sportEventDetails));
+  // console.log('&&&&&&&&&&&&&&&&&&&&&');
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
@@ -179,6 +187,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
         />
+        {sportEventDetails && (
+          <div>
+            <HeadToHeadV2 data={sportEventDetails?.event} />
+          </div>
+        )}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (
