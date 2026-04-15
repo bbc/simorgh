@@ -14,7 +14,6 @@ const styles = {
   container: ({ mq, spacings, gridWidths }: Theme) =>
     css({
       all: 'unset',
-      scrollSnapAlign: 'start',
       textDecoration: 'none',
       display: 'block',
       position: 'relative',

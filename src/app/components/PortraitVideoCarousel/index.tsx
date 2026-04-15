@@ -6,6 +6,7 @@ import { EventTrackingData } from '#app/lib/analyticsUtils/types';
 import useOptimizelyVariation, {
   ExperimentType,
 } from '#app/hooks/useOptimizelyVariation';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 import PortraitVideoModal from '../PortraitVideoModal';
 import { BumpLoader } from '../MediaLoader';
@@ -37,6 +38,8 @@ const PortraitVideoCarousel = ({
   );
 
   const { isLite, isAmp, nonce } = use(RequestContext);
+
+  const isHydrated = useHydrationDetection();
 
   // EXPERIMENT: Homepage Portrait Video 2
   const playDurationExperimentName = 'newswb_ws_homepage_portrait_video';
@@ -117,6 +120,7 @@ const PortraitVideoCarousel = ({
                 blockPosition={index}
                 eventTrackingData={eventTrackingDataExtended}
                 playDurationVariation={playDurationVariation}
+                isHydrated={isHydrated}
               />
             ))}
           </ul>
