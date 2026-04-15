@@ -1,0 +1,216 @@
+# Testing UAS Endpoints Locally
+
+This guide provides instructions for developers to test User Activity Service (UAS) endpoints locally on their development environment.
+
+## Overview
+
+Testing UAS endpoints locally requires several setup steps to handle authentication, CORS issues, and session management.
+This document outlines all necessary configurations.
+
+## Prerequisites
+
+- Local development environment running on `http://localhost:7081`
+- Access to test or production BBC accounts
+- A testing browser with extension support
+
+## Step 1: Install Browser Extension for CORS Testing
+
+To bypass CORS restrictions during local testing, you need to install a browser extension that allows you to modify HTTP headers.
+
+### Recommended Extension: ModHeader
+
+1. Install **ModHeader** extension for your browser:
+
+2. Configure ModHeader to set the `Access-Control-Allow-Origin` header:
+   - Open ModHeader extension settings
+   - Add a new request header:
+     - **Header Name**: `Access-Control-Allow-Origin`
+     - **Header Value**: `http://localhost:7081`
+   - Enable the extension for your local testing
+
+### Alternative Extensions
+
+You can use any browser extension that allows request/response header modification, such as:
+
+- CORS Unblock
+- Allow CORS
+- Requestly
+
+## Step 2: Disable Token Refresh to Avoid Session Endpoint CORS Issues
+
+The `refreshTokensIfExpired()` function in the UAS API layer makes calls to session endpoints that may encounter CORS issues in local testing.
+
+### File: `src/app/lib/uasApi/index.ts`
+
+**Action**: Comment out this line
+// await refreshTokensIfExpired();
+
+```
+
+This prevents unnecessary token refresh calls during local development and testing.
+Make sure to re-enable this before committing to ensure production token management works correctly.
+
+```
+
+## Step 3: Obtain and Store Authentication Token
+
+The UAS API requires the `ckns_atkn` cookie for authentication via the Bearer token in the Authorization header.
+
+### How to Get the Token
+
+1. **Open the target BBC service** in your browser:
+   - Visit `https://test.bbc.com` or `https://bbc.com`
+   - Log in with your BBC account
+
+2. **Extract the cookie**:
+   - Open Developer Tools (F12 or Cmd+Option+I)
+   - Go to the **Application** or **Storage** tab
+   - Navigate to **Cookies**
+   - Copy the entire value
+
+3. **Store the cookie locally**:
+   - In your local development environment (`http://localhost:7081`), open Developer Tools
+   - Go to the **Application** or **Storage** tab
+   - Navigate to **Cookies**
+   - Create a new cookie:
+     - **Name**: `ckns_atkn`
+     - **Value**: Paste the value you copied from test.bbc.com or bbc.com
+     - **Domain**: `localhost` (will auto generate)
+     - **Path**: `/`
+     - **Expires**: Set to a future date or leave as Session
+   - Save the cookie
+
+### Token Expiration
+
+Tokens have a limited lifespan. If your tests fail with authentication errors, follow the steps above again to refresh the `ckns_atkn` cookie.
+
+## Step 4: Understand Current Authentication Implementation
+
+### Important: Cookie-Based Authentication in Production
+
+The current production implementation uses **cookie-based authentication** via the `credentials: 'include'` option in fetch requests.
+This automatically includes all cookies (including `ckns_atkn`) in requests to the UAS API.
+
+**Current fetch configuration in `src/app/lib/uasApi/index.ts`**:
+
+```typescript
+const response = await fetch(url, {
+  method,
+  headers,
+  credentials: 'include', // ← Automatically includes cookies like ckns_atkn
+  body: method === 'POST' ? JSON.stringify(body) : undefined,
+  ...(signal ? { signal } : {}),
+});
+```
+
+The `credentials: 'include'` setting means the browser automatically sends the `ckns_atkn` cookie with each request without explicit header manipulation.
+
+### Local Development Workaround: Authorization Bearer Header
+
+Modify the `getAuthHeaders` function with `Authorization: Bearer ${cknsAtkn}` header.
+**This is a local development and testing workaround only** and is NOT used in production.
+
+### File: `src/app/lib/uasApi/getAuthHeaders.ts`
+
+**Proposed way for local development**:
+
+```typescript
+import Cookie from 'js-cookie';
+import { getEnvConfig } from '../utilities/getEnvConfig';
+
+const getAuthHeaders = (): HeadersInit => {
+  const apiKey = getEnvConfig().SIMORGH_UAS_PUBLIC_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('Missing UAS public API key');
+  }
+  const cknsAtkn = Cookie.get('ckns_atkn') || '';
+  const headers: HeadersInit = {
+    Authorization: `Bearer ${cknsAtkn}`,
+    'X-API-Key': apiKey,
+    'X-Authentication-Provider': 'idv5',
+  };
+
+  return headers;
+};
+
+export default getAuthHeaders;
+```
+
+**Key Lines to Review**:
+
+- **Line 1**: Imports `js-cookie` library for cookie access
+- **Line 10**: Extracts `ckns_atkn` from cookies with empty string fallback
+- **Line 12 and 14**: Sets the Authorization Bearer header with the token and 'X-Authentication-Provider' **(LOCAL TESTING ONLY)**
+- **Line 14**: Sets the X-API-Key header for API authentication
+
+### Why This Workaround Exists
+
+During local development:
+
+- The browser's automatic cookie-sending mechanism (`credentials: 'include'`) may not work as expected due to localhost restrictions and CORS configurations
+- The `Authorization: Bearer ${cknsAtkn}` header provides an explicit way to pass the authentication token
+- This allows developers to test UAS endpoints locally without waiting for full CORS configuration resolution
+
+## Testing Checklist
+
+- [ ] ModHeader (or similar extension) installed and configured with `Access-Control-Allow-Origin: http://localhost:7081`
+- [ ] Line 63 in `src/app/lib/uasApi/index.ts` is commented out
+- [ ] `ckns_atkn` cookie is stored in browser local storage for `localhost`
+- [ ] `getAuthHeaders` function is modified
+- [ ] Development server is running on `http://localhost:7081`
+- [ ] Browser is using the configured profile with the extension enabled
+
+## Troubleshooting
+
+### CORS Errors
+
+**Issue**: `Access to fetch at 'https://activity.api.bbc.com' has been blocked by CORS policy`
+
+**Solution**:
+
+- Ensure ModHeader extension is installed and enabled
+- Verify that the `Access-Control-Allow-Origin` header is set to `http://localhost:7081`
+- Check that the extension is configured for all sites
+
+### Authentication Errors (401/403)
+
+**Issue**: `UAS request failed with status 401`
+
+**Solution**:
+
+- Verify the `ckns_atkn` cookie is present in browser storage
+- Copy a fresh token from test.bbc.com or bbc.com
+- Check that the token hasn't expired
+- Ensure the cookie domain is set correctly (should be `localhost` or left unspecified)
+
+### Token Expired
+
+**Issue**: Requests work initially but fail after some time
+
+**Solution**:
+
+- Tokens have limited lifespan (typically a few hours)
+- Refresh the token by following Step 3 again
+- Consider enabling `refreshTokensIfExpired()` in production once CORS issues are resolved
+
+## Notes for Developers
+
+- **Local Testing Only**: The `Authorization: Bearer ${cknsAtkn}` header workaround in `getAuthHeaders` is intended for local development only
+- **Production Authentication**: Production uses `credentials: 'include'` in fetch requests to automatically send cookies - NOT the explicit Authorization header
+- **Security**: Never commit changes that add Authorization headers for production use; this is a local-testing-only pattern
+- **Token Safety**: Handle authentication tokens carefully; never share them or commit them to version control
+- **Service Awareness**: Remember that UAS endpoint behavior may vary across different BBC services
+- **Production Readiness**: Before deploying, ensure:
+  - No explicit `Authorization: Bearer` headers are added for production
+  - Remove 'X-Authentication-Provider' from getAUthHeaders
+  - `refreshTokensIfExpired()` is enabled in index.ts
+  - Authentication relies on `credentials: 'include'` and automatic cookie handling
+  - All authentication enhancements are properly tested
+  - No development-only modifications remain in the code
+
+## Additional Resources
+
+- [UAS Spike Documentation](#) (ihttps://www.dropbox.com/scl/fi/94qiwdrnobq3epmu4m880/UAS-Spike.paper?rlkey=6jqwue2tvb8j49xfy58ejq01b&dl=0)
+- [UAS spec documentation](#) (https://confluence.dev.bbc.co.uk/spaces/AudienceDataPlatform/pages/269311433/UAS+User+Activity+Service)
+- [CORS Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
