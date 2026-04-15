@@ -47,20 +47,19 @@ const startApp = () => {
   const pathname = argv.nextJS ? '' : '/status';
 
   const statusCommand = `sleep 20 && curl http://localhost:${portNumber}${pathname}`;
-
   const initialCommand = `yarn ${isDev ? 'dev' : 'start'}`;
-  const fallbackCommand = `yarn ${isDev ? 'dev' : 'fallbackStart'}`;
+  let errorMsg = '';
 
   return new Promise((resolve, reject) => {
     exec(initialCommand, error => {
       if (error) {
-        exec(fallbackCommand);
+        errorMsg = error;
       }
     });
 
     exec(statusCommand, error => {
       if (error) {
-        reject(new Error('Both the initial and fallback start up failed'));
+        reject(new Error(errorMsg));
       }
       resolve();
     });

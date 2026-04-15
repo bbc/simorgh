@@ -1,5 +1,13 @@
 /* eslint-disable no-template-curly-in-string */
 import {
+  LIVE_PAGE,
+  STORY_PAGE,
+  ARTICLE_PAGE,
+  MEDIA_ARTICLE_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
+import {
   bylineSamplePost,
   bylineSamplePostWithoutAuthorName,
   bylineSamplePostWithUnsupportedImage,
@@ -23,9 +31,15 @@ import {
 import filterForBlockType from '../../lib/utilities/blockHandlers';
 
 describe('Byline', () => {
-  describe('Article Page', () => {
+  describe.each([
+    { name: 'Story Page', pageType: STORY_PAGE },
+    { name: 'Article Page', pageType: ARTICLE_PAGE },
+    { name: 'Media Article Page', pageType: MEDIA_ARTICLE_PAGE },
+    { name: 'Media Asset Page', pageType: MEDIA_ASSET_PAGE },
+    { name: 'Photo Gallery Page', pageType: PHOTO_GALLERY_PAGE },
+  ])('$name', ({ pageType }) => {
     it('Should render Byline correctly when only required data is passed', () => {
-      render(<Byline blocks={bylineWithNameAndRole} />);
+      render(<Byline blocks={bylineWithNameAndRole} />, { pageType });
 
       const author = screen.getByText('Single Byline (all values)');
       const role = screen.getByText('Test');
@@ -35,13 +49,15 @@ describe('Byline', () => {
     });
 
     it('Should return null when there is no author in the data', () => {
-      const { container } = render(<Byline blocks={bylineWithNoAuthor} />);
+      const { container } = render(<Byline blocks={bylineWithNoAuthor} />, {
+        pageType,
+      });
 
       expect(container).toBeEmptyDOMElement();
     });
 
     it('should render Byline correctly when passed TopicUrl links', () => {
-      render(<Byline blocks={bylineWithLink} />);
+      render(<Byline blocks={bylineWithLink} />, { pageType });
 
       const AuthorLink = screen.getByText('Single Byline (all values)');
       const Links = screen.getAllByRole('link');
@@ -52,7 +68,7 @@ describe('Byline', () => {
     });
 
     it('should render a section with role region', () => {
-      render(<Byline blocks={bylineWithNameAndRole} />);
+      render(<Byline blocks={bylineWithNameAndRole} />, { pageType });
 
       const region = screen.getByRole('region');
 
@@ -60,7 +76,7 @@ describe('Byline', () => {
     });
 
     it('should render a list when required data is passed correctly', () => {
-      render(<Byline blocks={bylineWithNameAndRole} />);
+      render(<Byline blocks={bylineWithNameAndRole} />, { pageType });
 
       const [list] = screen.getAllByRole('list');
 
@@ -68,7 +84,7 @@ describe('Byline', () => {
     });
 
     it('should render all listitems correctly', () => {
-      render(<Byline blocks={bylineWithPngPhoto} />);
+      render(<Byline blocks={bylineWithPngPhoto} />, { pageType });
 
       const [firstContributor] = screen.getAllByRole('list');
       const firstContributorItems =
@@ -78,7 +94,7 @@ describe('Byline', () => {
     });
 
     it('should correctly use the buildIChefURL function to create the image url', () => {
-      render(<Byline blocks={bylineWithPngPhoto} />);
+      render(<Byline blocks={bylineWithPngPhoto} />, { pageType });
 
       const imageSrc = screen.getByRole('presentation');
 
@@ -89,7 +105,7 @@ describe('Byline', () => {
     });
 
     it('should render one image in the byline', () => {
-      render(<Byline blocks={bylineWithPngPhoto} />);
+      render(<Byline blocks={bylineWithPngPhoto} />, { pageType });
 
       const image = screen.getAllByRole('presentation');
 
@@ -97,7 +113,7 @@ describe('Byline', () => {
     });
 
     it('should not render an image if a png photo is not used', () => {
-      render(<Byline blocks={bylineWithNonPngPhoto} />);
+      render(<Byline blocks={bylineWithNonPngPhoto} />, { pageType });
 
       const image = screen.queryByRole('presentation');
 
@@ -113,6 +129,7 @@ describe('Byline', () => {
             popOut={false}
           />
         </Byline>,
+        { pageType },
       );
 
       const timestamp = screen.getByText('20 January 1970');
@@ -128,6 +145,7 @@ describe('Byline', () => {
             popOut={false}
           />
         </Byline>,
+        { pageType },
       );
 
       const listItems = screen.getAllByRole('listitem');
@@ -136,7 +154,7 @@ describe('Byline', () => {
     });
 
     it('should render the Byline correctly with location, image and links', () => {
-      render(<Byline blocks={bylineWithPngPhoto} />);
+      render(<Byline blocks={bylineWithPngPhoto} />, { pageType });
 
       const AuthorLink = screen.getByText('Mayeni Jones');
       const Location = screen.getByText('Lagos, Nigeria');
@@ -161,6 +179,7 @@ describe('Byline', () => {
             popOut={false}
           />
         </Byline>,
+        { pageType },
       );
 
       const findText = screen.getByText(text);
@@ -183,6 +202,7 @@ describe('Byline', () => {
           />
         </Byline>,
         {
+          pageType,
           service: 'afaanoromoo',
         },
       );
@@ -205,7 +225,7 @@ describe('Byline', () => {
     );
 
     it('Should render Byline correctly when only required data is passed', () => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const author = screen.getByText('Gahuza contributor');
       const role = screen.getByText('gahuza contributor');
@@ -228,7 +248,7 @@ describe('Byline', () => {
       const { container } = render(
         <Byline blocks={[bylineDataWithoutAuthorName]} />,
         {
-          pageType: 'live',
+          pageType: LIVE_PAGE,
         },
       );
 
@@ -236,7 +256,7 @@ describe('Byline', () => {
     });
 
     it('should render a section with role region', () => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const region = screen.getByRole('region');
 
@@ -244,7 +264,7 @@ describe('Byline', () => {
     });
 
     it('should render a list when required data is passed correctly', () => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const [list] = screen.getAllByRole('list');
 
@@ -252,7 +272,7 @@ describe('Byline', () => {
     });
 
     it('should render all listitems correctly', () => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const [firstContributor] = screen.getAllByRole('list');
       const firstContributorItems =
@@ -262,7 +282,7 @@ describe('Byline', () => {
     });
 
     it('should correctly use the buildIChefURL function to create the image url', () => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const imageSrc = screen.getByRole('presentation');
 
@@ -284,7 +304,7 @@ describe('Byline', () => {
       );
 
       render(<Byline blocks={[bylineDataWithUnsupportedImage]} />, {
-        pageType: 'live',
+        pageType: LIVE_PAGE,
       });
 
       const image = screen.queryByRole('presentation');
@@ -297,7 +317,7 @@ describe('Byline', () => {
       ${'Author'} | ${'Author'} | ${'Author,'}
       ${'Role'}   | ${'Role'}   | ${'Role,'}
     `('should correctly announce $expectation for $info', ({ text }) => {
-      render(<Byline blocks={[bylineData]} />, { pageType: 'live' });
+      render(<Byline blocks={[bylineData]} />, { pageType: LIVE_PAGE });
 
       const findText = screen.getByText(text);
 
@@ -310,7 +330,7 @@ describe('Byline', () => {
       ${'role'}   | ${'Gahee,'}
     `('should translate $info announcement correctly', ({ translation }) => {
       render(<Byline blocks={[bylineData]} />, {
-        pageType: 'live',
+        pageType: LIVE_PAGE,
         service: 'afaanoromoo',
       });
 

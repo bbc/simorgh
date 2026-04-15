@@ -58,9 +58,6 @@ export default {
   preroll: {
     enabled: true,
   },
-  podcastEpisodeLinkedData: {
-    enabled: false,
-  },
   podcastPromo: {
     enabled: false,
   },
