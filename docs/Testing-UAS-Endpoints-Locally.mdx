@@ -1,3 +1,7 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="docs/Test-UAS-locally" />
+
 # Testing UAS Endpoints Locally
 
 This guide provides instructions for developers to test User Activity Service (UAS) endpoints locally on their development environment.
@@ -59,7 +63,7 @@ The UAS API requires the `ckns_atkn` cookie for authentication via the Bearer to
 ### How to Get the Token
 
 1. **Open the target BBC service** in your browser:
-   - Visit `https://test.bbc.com` or `https://bbc.com`
+   - Visit `https://test.bbc.com`
    - Log in with your BBC account
 
 2. **Extract the cookie**:
@@ -74,7 +78,7 @@ The UAS API requires the `ckns_atkn` cookie for authentication via the Bearer to
    - Navigate to **Cookies**
    - Create a new cookie:
      - **Name**: `ckns_atkn`
-     - **Value**: Paste the value you copied from test.bbc.com or bbc.com
+     - **Value**: Paste the value you copied from test.bbc.com
      - **Domain**: `localhost` (will auto generate)
      - **Path**: `/`
      - **Expires**: Set to a future date or leave as Session
@@ -193,7 +197,7 @@ During local development:
 **Solution**:
 
 - Verify the `ckns_atkn` cookie is present in browser storage
-- Copy a fresh token from test.bbc.com or bbc.com
+- Copy a fresh token from test.bbc.com
 - Check that the token hasn't expired
 - Ensure the cookie domain is set correctly (should be `localhost` or left unspecified)
 
