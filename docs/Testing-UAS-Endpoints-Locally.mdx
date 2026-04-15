@@ -105,7 +105,7 @@ const response = await fetch(url, {
 
 ### Local Development Workaround: Authorization Bearer Header
 
-Modify the `getAuthHeaders` function with `Authorization: Bearer ${cknsAtkn}` and add `'X-Authentication-Provider': 'idv5 '`in headers.
+Modify the `getAuthHeaders` function with `Authorization: Bearer ${cknsAtkn}` and add `'X-Authentication-Provider': 'idv5'` in headers.
 **This is a local development and testing workaround only** and is NOT used in production.
 
 ### File: `src/app/lib/uasApi/getAuthHeaders.ts`
@@ -153,8 +153,8 @@ During local development:
 ## Testing Checklist
 
 - [ ] ModHeader (or similar extension) installed and configured with `Access-Control-Allow-Origin: http://localhost:7081`
-- [ ] Line 63 in `src/app/lib/uasApi/index.ts` is commented out
-- [ ] `ckns_atkn` cookie is stored in browser local storage for `localhost`
+- [ ] `await refreshTokensIfExpired();` in `src/app/lib/uasApi/index.ts` is commented out
+- [ ] `ckns_atkn` cookie is present in the browser's cookie store for `localhost`
 - [ ] `getAuthHeaders` function is modified
 - [ ] Development server is running on `http://localhost:7081`
 - [ ] Browser is using the configured profile with the extension enabled
@@ -168,7 +168,7 @@ During local development:
 - **Service Awareness**: Remember that UAS endpoint behavior may vary across different BBC services
 - **Production Readiness**: Before deploying, ensure:
   - No explicit `Authorization: Bearer` headers are added for production
-  - Remove 'X-Authentication-Provider' from getAUthHeaders
+  - Remove 'X-Authentication-Provider' from getAuthHeaders
   - `refreshTokensIfExpired()` is enabled in index.ts
   - Authentication relies on `credentials: 'include'` and automatic cookie handling
   - All authentication enhancements are properly tested
@@ -208,6 +208,6 @@ During local development:
 
 ## Additional Resources
 
-- [UAS Spike Documentation](#) (ihttps://www.dropbox.com/scl/fi/94qiwdrnobq3epmu4m880/UAS-Spike.paper?rlkey=6jqwue2tvb8j49xfy58ejq01b&dl=0)
+- [UAS Spike Documentation](#) (https://www.dropbox.com/scl/fi/94qiwdrnobq3epmu4m880/UAS-Spike.paper?rlkey=6jqwue2tvb8j49xfy58ejq01b&dl=0)
 - [UAS spec documentation](#) (https://confluence.dev.bbc.co.uk/spaces/AudienceDataPlatform/pages/269311433/UAS+User+Activity+Service)
 - [CORS Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
