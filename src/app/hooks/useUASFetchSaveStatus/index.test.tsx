@@ -1,7 +1,7 @@
 import { renderHook } from '#app/components/react-testing-library-with-providers';
 import { waitFor } from '@testing-library/react';
 import uasApiRequest from '#app/lib/uasApi';
-import { buildGlobalId, ACTIVITY_TYPE } from '#app/lib/uasApi/uasUtility';
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import useUASFetchSaveStatus from './index';
 
 jest.mock('#app/lib/uasApi');
@@ -31,7 +31,7 @@ describe('useUASFetchSaveStatus', () => {
     expect(result.current.error).toBeNull();
     expect(mockUasApiRequest).toHaveBeenCalledWith(
       'GET',
-      ACTIVITY_TYPE,
+      FAVOURITES_CONFIG.activityType,
       expect.objectContaining({ globalId: 'global-123' }),
     );
   });
