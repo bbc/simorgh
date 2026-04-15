@@ -1,20 +1,27 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import { GROUP_3, SPACING_4 } from '@bbc/web-gel-foundations';
-import Heading from '@bbc/web-components/heading/index.js';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
+// import { GROUP_3, SPACING_4 } from '@bbc/web-gel-foundations';
+// import Heading from '@bbc/web-components/heading/index.js';
 import Action from './action.jsx';
 import { GRID_AREAS } from './action-grid.jsx';
 
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+
 const KeyEventsStyles = css`
-  padding: 0 ${SPACING_4};
-  @media (min-width: ${GROUP_3}) {
+  padding: '0 16px';
+  @media (min-width: '${pixelsToRem(600)}rem') {
     padding: 0;
   }
 
   @supports not (display: grid) {
     display: inline-flex;
     width: 50%;
-    padding: 0 ${SPACING_4};
+    padding: '0 16px';
     box-sizing: border-box;
   }
 `;
@@ -30,21 +37,26 @@ const KeyEventsAway = styled.div`
   grid-area: ${GRID_AREAS.awayText};
 `;
 
-export const KeyEvents = ({ homeKeyEvents, awayKeyEvents, homeName, awayName }) => (
+export const KeyEvents = ({
+  homeKeyEvents,
+  awayKeyEvents,
+  // homeName,
+  // awayName,
+}) => (
   <>
-    <Heading level="3" fontScale="headlineLarge" isVisuallyHidden>
+    {/* <Heading level="3" fontScale="headlineLarge" isVisuallyHidden>
       Key Events
-    </Heading>
+    </Heading> */}
     <KeyEventsHome>
-      <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
+      {/* <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
         {homeName}
-      </Heading>
+      </Heading> */}
       <Action contestantActions={homeKeyEvents} alignment="home" />
     </KeyEventsHome>
     <KeyEventsAway>
-      <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
+      {/* <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
         {awayName}
-      </Heading>
+      </Heading> */}
       <Action contestantActions={awayKeyEvents} alignment="away" />
     </KeyEventsAway>
   </>

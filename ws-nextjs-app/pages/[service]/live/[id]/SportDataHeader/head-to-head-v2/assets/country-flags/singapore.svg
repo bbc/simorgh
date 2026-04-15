@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="900"
+   height="600"
+   viewBox="0 0 54 36"
+   fill="#ffffff"
+   version="1.1"
+   id="svg5"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <path
+     d="M 0,0 H 54 V 36 H 0 Z"
+     id="path1" />
+  <path
+     d="M 0,0 H 54 V 18 H 0 Z"
+     fill="#ed2939"
+     id="path2" />
+  <circle
+     cx="11.405"
+     cy="9"
+     r="6.625"
+     id="circle2" />
+  <circle
+     cx="14.405"
+     cy="9"
+     r="6.625"
+     fill="#ed2939"
+     id="circle3" />
+  <path
+     id="s"
+     d="m 15.03,3.475 -1.01393,3.120554 2.654502,-1.928609 h -3.281145 l 2.654502,1.928609 z" />
+  <g
+     id="t">
+    <use
+       xlink:href="#s"
+       transform="rotate(72,15.03,9)"
+       id="use3" />
+    <use
+       xlink:href="#s"
+       transform="rotate(-144,15.03,9)"
+       id="use4" />
+  </g>
+  <use
+     xlink:href="#t"
+     transform="rotate(72,15.03,9)"
+     id="use5" />
+  <rect
+     stroke="#e6e8ea"
+     width="100%"
+     height="100%"
+     fill="transparent"
+     stroke-width="1.5"
+     id="rect5"
+     style="fill:#000000;fill-opacity:0"
+     x="0"
+     y="0" />
+</svg>

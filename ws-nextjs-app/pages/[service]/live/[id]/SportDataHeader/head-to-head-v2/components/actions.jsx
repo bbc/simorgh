@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+
 import { GroupedEvents } from './grouped-events.jsx';
 import { ActionGrid } from './action-grid.jsx';
 import ScoreDetails from './score-details.jsx';
@@ -8,7 +9,8 @@ export const Actions = ({ data }) => {
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
 
-  const hasGroupedEvents = data.groupedActions && data.groupedActions.length > 0;
+  const hasGroupedEvents =
+    data.groupedActions && data.groupedActions.length > 0;
   const hasKeyEvents = homeKeyEvents.length > 0 || awayKeyEvents.length > 0;
 
   return (
