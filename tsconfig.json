@@ -43,5 +43,5 @@
     }
   },
   "include": ["src/**/*", "src/app/legacy/**/*.ts*"],
-  "exclude": ["node_modules", "build", "ws-nextjs-app/playwright/**/*.ts"]
+  "exclude": ["node_modules", "build"]
 }
