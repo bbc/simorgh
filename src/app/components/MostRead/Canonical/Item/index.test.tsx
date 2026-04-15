@@ -70,6 +70,31 @@ describe('MostReadLink', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it('should render a live pulse icon if the item refers to a live page', () => {
+    const { container } = render(
+      <MostReadLink
+        href="https://www.bbc.com/hausa/live/c98kkrezn3jt"
+        service="hausa"
+        title="Placeholder title"
+        dir="ltr"
+        size="default"
+        id=""
+        position={0}
+      />,
+      {
+        service: 'hausa',
+        toggles: {
+          eventTracking: { enabled: true },
+        },
+      },
+    );
+
+    const livePulse = container.querySelector(
+      '[data-e2e=most-read-live-pulse]',
+    );
+    expect(livePulse).not.toBeNull();
+  });
 });
 
 describe('MostReadItemWrapper', () => {
@@ -106,29 +131,6 @@ describe('MostReadItemWrapper', () => {
 
     it('should return a value when columnLayout is not oneColumn', () => {
       expect(getParentColumns('twoColumn')).not.toBeNull();
-    });
-
-    it('should render a live pulse icon if the item refers to a live page', () => {
-      const { container } = render(
-        <MostReadLink
-          href="https://www.bbc.com/hausa/live/c98kkrezn3jt"
-          service="hausa"
-          title="Placeholder title"
-          dir="ltr"
-          size="default"
-          id=""
-          position={0}
-        />,
-        {
-          service: 'hausa',
-          toggles: {
-            eventTracking: { enabled: true },
-          },
-        },
-      );
-
-      const livePulse = container.querySelector('[data-e2e=live-pulse]');
-      expect(livePulse).not.toBeNull();
     });
   });
 });
