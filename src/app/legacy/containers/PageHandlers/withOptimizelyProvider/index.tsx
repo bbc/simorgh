@@ -36,7 +36,7 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-optimizely.notificationCenter.addNotificationListener(
+optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (
     notification: ListenerPayload & {
