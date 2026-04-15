@@ -14,7 +14,7 @@ const canonicalTestSuites = [
     path: '/mundo/send/u50853489',
     id: 'u50853489',
     service: 'mundo',
-    runforEnv: ['test', 'local'],
+    runforEnv: ['live', 'local'],
     tests: [testsThatAlwaysRunForAllPages, pageVisit],
   },
 ];
