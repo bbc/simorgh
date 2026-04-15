@@ -73,7 +73,11 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {isLiveLink && <LiveLabel />}
+        {isLiveLink && (
+          <span data-e2e="most-read-live-pulse">
+            <LiveLabel />
+          </span>
+        )}
         {title}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}

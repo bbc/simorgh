@@ -17,12 +17,12 @@ const LiveLabel = ({
   ];
 
   return (
-    <span data-e2e="live-pulse">
+    <>
       <Pulse className={className} width="16" height="16" css={pulse} />
       <Text lang={lang} id={id} offScreenText={offScreenText}>
         {children}
       </Text>
-    </span>
+    </>
   );
 };
 
