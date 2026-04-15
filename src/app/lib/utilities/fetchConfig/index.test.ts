@@ -218,13 +218,13 @@ describe('fetchConfig', () => {
 
       await fetchConfig({
         service: 'serbian',
-        variant: 'serbian',
+        variant: 'cyr',
         pagePath: '/serbian',
         configType: 'navigation',
       });
 
       const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-      expect(fetchUrl).toContain('variant=serbian');
+      expect(fetchUrl).toContain('variant=cyr');
       expect(fetchUrl).toContain('useNewNav=true');
     });
   });
