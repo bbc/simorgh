@@ -1,4 +1,5 @@
-import { isLiveStatus } from '@bbc/web-sport-utils';
+// import { isLiveStatus } from '@bbc/web-sport-utils';
+import { isLiveStatus } from './event-status-groups';
 
 export const getStatusBorderStyles = ({ theme, status, isConciseView }) => {
   const borderStylesByMatchStatus = {
@@ -35,7 +36,9 @@ export const getStyledLineColour = ({ theme, status, isConciseView }) => {
     return verticalLineStyles[status];
   }
 
-  return isLiveStatus(status) ? theme.colourPalette.states.liveText : theme.colourPalette.accent;
+  return isLiveStatus(status)
+    ? theme.colourPalette.states.liveText
+    : theme.colourPalette.accent;
 };
 
 export const getScoreColourStyle = ({ status, theme, isConciseView }) => {
@@ -52,7 +55,11 @@ export const getScoreColourStyle = ({ status, theme, isConciseView }) => {
 };
 
 export const getStyledMatchProgress = ({ status, theme, isConciseView }) => {
-  const defaultColour = isConciseView ? theme.colourPalette.primary : theme.colourPalette.accent;
+  const defaultColour = isConciseView
+    ? theme.colourPalette.primary
+    : theme.colourPalette.accent;
 
-  return isLiveStatus(status) ? theme.colourPalette.states.liveText : defaultColour;
+  return isLiveStatus(status)
+    ? theme.colourPalette.states.liveText
+    : defaultColour;
 };

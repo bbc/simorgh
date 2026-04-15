@@ -1,9 +1,14 @@
-import { css } from '@bbc/web-styled';
-import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
+// import { css } from '@bbc/web-styled';
+import { css } from '@emotion/styled';
+
+// import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
+
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 export const fixedHeightConciseView = css`
-  min-height: ${createSize(24)};
-  @media (min-width: ${GROUP_3}) {
-    min-height: ${createSize(32)};
+  min-height: '${pixelsToRem(24)}rem';
+  @media (min-width: '${pixelsToRem(600)}rem') {
+    min-height: '${pixelsToRem(32)}rem';
   }
 `;

@@ -7,5 +7,5 @@ export const SPORT_EVENT_STATUS = {
   Suspended: 'Suspended',
   Delayed: 'Delayed',
   Intermission: 'Intermission',
-  Abandoned: 'Abandoned'
+  Abandoned: 'Abandoned',
 };

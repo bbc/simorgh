@@ -1,6 +1,7 @@
 // import React from 'react';
 // import styled, { css } from '@bbc/web-styled';
-import styled, { css } from '@emotion/styled';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 // import {
 //   GROUP_3,
 //   SPACING_6,
