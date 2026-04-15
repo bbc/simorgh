@@ -43,9 +43,9 @@ The `refreshTokensIfExpired()` function in the UAS API layer makes calls to sess
 ### File: `src/app/lib/uasApi/index.ts`
 
 **Action**: Comment out this line
-// await refreshTokensIfExpired();
 
 ```
+// await refreshTokensIfExpired();
 
 This prevents unnecessary token refresh calls during local development and testing.
 Make sure to re-enable this before committing to ensure production token management works correctly.
@@ -103,11 +103,9 @@ const response = await fetch(url, {
 });
 ```
 
-The `credentials: 'include'` setting means the browser automatically sends the `ckns_atkn` cookie with each request without explicit header manipulation.
-
 ### Local Development Workaround: Authorization Bearer Header
 
-Modify the `getAuthHeaders` function with `Authorization: Bearer ${cknsAtkn}` header.
+Modify the `getAuthHeaders` function with `Authorization: Bearer ${cknsAtkn}` and add `'X-Authentication-Provider': 'idv5 '`in headers.
 **This is a local development and testing workaround only** and is NOT used in production.
 
 ### File: `src/app/lib/uasApi/getAuthHeaders.ts`
@@ -161,6 +159,21 @@ During local development:
 - [ ] Development server is running on `http://localhost:7081`
 - [ ] Browser is using the configured profile with the extension enabled
 
+## Notes for Developers
+
+- **Local Testing Only**: The `Authorization: Bearer ${cknsAtkn}` header workaround in `getAuthHeaders` is intended for local development only
+- **Production Authentication**: Production uses `credentials: 'include'` in fetch requests to automatically send cookies - NOT the explicit Authorization header
+- **Security**: Never commit changes that add Authorization headers for production use; this is a local-testing-only pattern
+- **Token Safety**: Handle authentication tokens carefully; never share them or commit them to version control
+- **Service Awareness**: Remember that UAS endpoint behavior may vary across different BBC services
+- **Production Readiness**: Before deploying, ensure:
+  - No explicit `Authorization: Bearer` headers are added for production
+  - Remove 'X-Authentication-Provider' from getAUthHeaders
+  - `refreshTokensIfExpired()` is enabled in index.ts
+  - Authentication relies on `credentials: 'include'` and automatic cookie handling
+  - All authentication enhancements are properly tested
+  - No development-only modifications remain in the code
+
 ## Troubleshooting
 
 ### CORS Errors
@@ -173,7 +186,7 @@ During local development:
 - Verify that the `Access-Control-Allow-Origin` header is set to `http://localhost:7081`
 - Check that the extension is configured for all sites
 
-### Authentication Errors (401/403)
+### Authentication Errors (401)
 
 **Issue**: `UAS request failed with status 401`
 
@@ -192,22 +205,6 @@ During local development:
 
 - Tokens have limited lifespan (typically a few hours)
 - Refresh the token by following Step 3 again
-- Consider enabling `refreshTokensIfExpired()` in production once CORS issues are resolved
-
-## Notes for Developers
-
-- **Local Testing Only**: The `Authorization: Bearer ${cknsAtkn}` header workaround in `getAuthHeaders` is intended for local development only
-- **Production Authentication**: Production uses `credentials: 'include'` in fetch requests to automatically send cookies - NOT the explicit Authorization header
-- **Security**: Never commit changes that add Authorization headers for production use; this is a local-testing-only pattern
-- **Token Safety**: Handle authentication tokens carefully; never share them or commit them to version control
-- **Service Awareness**: Remember that UAS endpoint behavior may vary across different BBC services
-- **Production Readiness**: Before deploying, ensure:
-  - No explicit `Authorization: Bearer` headers are added for production
-  - Remove 'X-Authentication-Provider' from getAUthHeaders
-  - `refreshTokensIfExpired()` is enabled in index.ts
-  - Authentication relies on `credentials: 'include'` and automatic cookie handling
-  - All authentication enhancements are properly tested
-  - No development-only modifications remain in the code
 
 ## Additional Resources
 
