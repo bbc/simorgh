@@ -1,11 +1,8 @@
 import React from 'react';
-import Navigation from '#psammead/psammead-navigation/src';
-import { ScrollableNavigation } from '#psammead/psammead-navigation/src/ScrollableNavigation';
-import {
-  AmpDropdown,
-  AmpMenuButton,
-} from '#psammead/psammead-navigation/src/DropdownNavigation';
 import { Direction } from '#app/models/types/global';
+import NavigationWrapper from './NavigationWrapper';
+import ScrollableNavigation from './ScrollableNavigation';
+import { AmpDropdown, AmpMenuButton } from './DropdownNavigation';
 import styles, { HIDDEN_CLASS_NAME } from './index.styles';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
@@ -28,19 +25,18 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
   bottomScrollableListItems,
   dropdownListItems,
 }) => (
-  <Navigation dir={dir} id={NAVIGATION_ID} ampOpenClass={OPEN_CLASS_NAME}>
+  <NavigationWrapper
+    dir={dir}
+    id={NAVIGATION_ID}
+    ampOpenClass={OPEN_CLASS_NAME}
+  >
     <div css={styles.navStack}>
       <div css={{ position: 'relative', width: '100%' }}>
         <div css={styles.topRow}>
-          <ScrollableNavigation
-            dir={dir}
-            css={[styles.topRowItems, styles.ampScrollableNav]}
-            navPosition="primary"
-          >
+          <ScrollableNavigation dir={dir} navPosition="primary">
             {topScrollableListItems}
           </ScrollableNavigation>
           <AmpMenuButton
-            css={styles.menuButton}
             announcedText={menuAnnouncedText}
             onToggle={`
               ${DROPDOWN_ID}.toggleVisibility,
@@ -50,12 +46,7 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
             dir={dir}
           />
         </div>
-        <AmpDropdown
-          id={DROPDOWN_ID}
-          data-e2e="dropdown-nav"
-          css={styles.dropdown}
-          hidden
-        >
+        <AmpDropdown id={DROPDOWN_ID} hidden>
           {dropdownListItems}
         </AmpDropdown>
       </div>
@@ -63,14 +54,14 @@ const AmpNavigationContainer: React.FC<AmpNavigationContainerProps> = ({
         <ScrollableNavigation
           id={SCROLLABLE_ID}
           dir={dir}
-          css={[styles.bottomRowItems, styles.ampScrollableNav]}
           navPosition="secondary"
         >
           {bottomScrollableListItems}
         </ScrollableNavigation>
       </div>
     </div>
-  </Navigation>
+    <div css={styles.bottomDivider} />
+  </NavigationWrapper>
 );
 
 export default AmpNavigationContainer;

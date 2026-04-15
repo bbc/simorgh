@@ -41,7 +41,7 @@ describe('Navigation - Canonical', () => {
       const dropdown = queryByTestId(dropdownTestId)?.parentElement;
       const [scrollableNavTopRow] = getAllByTestId(scrollableTestId);
       expect(scrollableNavTopRow).toBeInTheDocument();
-      expect(dropdown).toHaveAttribute('height', '0');
+      expect(dropdown).toHaveStyle('height: 0');
     });
 
     it('should render dropdown and no scrollable nav after menu button clicked', () => {
