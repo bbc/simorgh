@@ -1,5 +1,9 @@
-import placeholder from '@bbc/web-assets/static/sport/placeholders/placeholder-badge.svg';
-import flagPlaceholder from '@bbc/web-assets/static/sport/placeholders/placeholder-flag.svg';
+// import placeholder from '@bbc/web-assets/static/sport/placeholders/placeholder-badge.svg';
+// import flagPlaceholder from '@bbc/web-assets/static/sport/placeholders/placeholder-flag.svg';
+
+import placeholder from './placeholders/placeholder-badge.svg';
+import flagPlaceholder from './placeholders/placeholder-flag.svg';
+
 import { americanFootball } from './mappings/american-football.js';
 import basketball from './mappings/basketball.js';
 import { getBaseCountryFlagsMapping } from './mappings/country-flags.js';
@@ -34,10 +38,14 @@ const badgesMap = {
   ...getBaseCountryFlagsMapping('golf'),
   ...getBaseCountryFlagsMapping('darts'),
   ...getBaseCountryFlagsMapping('snooker'),
-  ...getBaseCountryFlagsMapping('tennis')
+  ...getBaseCountryFlagsMapping('tennis'),
 };
 
-export const getImage = ({ id, usePlaceholderFallback, placeholderFallbackType }) => {
+export const getImage = ({
+  id,
+  usePlaceholderFallback,
+  placeholderFallbackType,
+}) => {
   const image = badgesMap[id];
 
   if (!image && usePlaceholderFallback) {
@@ -47,13 +55,16 @@ export const getImage = ({ id, usePlaceholderFallback, placeholderFallbackType }
       case 'flag':
         return flagPlaceholder;
       default:
-        throw new Error(`Invalid placeholder fallback type '${placeholderFallbackType}'`);
+        throw new Error(
+          `Invalid placeholder fallback type '${placeholderFallbackType}'`,
+        );
     }
   }
 
   return image;
 };
 
-export const hasMapping = id => Boolean(getImage({ id, usePlaceholderFallback: false }));
+export const hasMapping = id =>
+  Boolean(getImage({ id, usePlaceholderFallback: false }));
 
 export default badgesMap;
