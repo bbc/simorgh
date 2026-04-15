@@ -10,4 +10,4 @@
 export const VARIANCE = 5;
 
 export const MIN_SIZE = 935;
-export const MAX_SIZE = 1309;
+export const MAX_SIZE = 1439;

@@ -84,9 +84,7 @@ describe('OptimizelyPageMetrics', () => {
     expect(
       screen.queryByTestId('scroll-depth-tracking'),
     ).not.toBeInTheDocument();
-    expect(
-      screen.queryByTestId('page-view-tracking'),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByTestId('page-view-tracking')).not.toBeInTheDocument();
   });
 
   it('should render no tracking components by default when all tracking flags are false', () => {
@@ -106,9 +104,7 @@ describe('OptimizelyPageMetrics', () => {
     expect(
       screen.queryByTestId('scroll-depth-tracking'),
     ).not.toBeInTheDocument();
-    expect(
-      screen.queryByTestId('page-view-tracking'),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByTestId('page-view-tracking')).not.toBeInTheDocument();
   });
 
   it('should render PageCompleteTracking when trackPageComplete is true', () => {
@@ -264,9 +260,7 @@ describe('OptimizelyPageMetrics', () => {
           />
         </ContextWrap>,
       );
-      expect(
-        screen.getByTestId('page-complete-tracking'),
-      ).toBeInTheDocument();
+      expect(screen.getByTestId('page-complete-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('scroll-depth-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toBeInTheDocument();
       expect(screen.getByTestId('page-view-tracking')).toHaveAttribute(
