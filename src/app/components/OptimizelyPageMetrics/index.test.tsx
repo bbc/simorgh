@@ -62,7 +62,7 @@ describe('OptimizelyPageMetrics', () => {
     resetDecisionStore();
   });
 
-  it('should return null when isAmp is true', () => {
+  it('should not include tracking when isAmp is true', () => {
     experimentsForPageMetrics.push({
       pageType: ARTICLE_PAGE,
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
@@ -174,7 +174,7 @@ describe('OptimizelyPageMetrics', () => {
     );
   });
 
-  it('should return null when there are no experiments running', () => {
+  it('should not include tracking when there are no experiments running', () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news">
         <OptimizelyPageMetrics trackPageComplete />
@@ -185,7 +185,7 @@ describe('OptimizelyPageMetrics', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('should return null when a user is not activated in any experiment', () => {
+  it('should not include tracking when a user is not activated in any experiment', () => {
     experimentsForPageMetrics.push({
       pageType: ARTICLE_PAGE,
       activeExperiments: ['mockExperiment1'],
@@ -200,7 +200,7 @@ describe('OptimizelyPageMetrics', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('should return null when pageType does not match', () => {
+  it('should not include tracking when pageType does not match', () => {
     experimentsForPageMetrics.push({
       pageType: HOME_PAGE,
       activeExperiments: ['mockExperiment1', 'mockExperiment2'],
@@ -216,7 +216,7 @@ describe('OptimizelyPageMetrics', () => {
     ).not.toBeInTheDocument();
   });
 
-  it('should return null when experiment names do not match activated experiments', () => {
+  it('should not include tracking when experiment names do not match activated experiments', () => {
     experimentsForPageMetrics.push({
       pageType: ARTICLE_PAGE,
       activeExperiments: ['invalidExperiment'],
@@ -269,7 +269,7 @@ describe('OptimizelyPageMetrics', () => {
       );
     });
 
-    it('should return null when a user is not in an experiment on the current page type', () => {
+    it('should not include tracking when a user is not in an experiment on the current page type', () => {
       experimentsForPageMetrics.push(
         {
           pageType: ARTICLE_PAGE,
