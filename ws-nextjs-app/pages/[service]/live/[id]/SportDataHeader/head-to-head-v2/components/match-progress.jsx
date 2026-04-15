@@ -1,10 +1,22 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
-import { fontScaleDescription, SPACING_1, SPACING_2 } from '@bbc/web-gel-foundations';
-import { getFallbackFootballPeriodLabel, isInProgressStatus } from '@bbc/web-sport-utils';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
+// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+// import {
+//   fontScaleDescription,
+//   SPACING_1,
+//   SPACING_2,
+// } from '@bbc/web-gel-foundations';
+import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
+import { isInProgressStatus } from '../helpers/event-status-groups.js';
 import { shouldShowScores } from './centre.jsx';
 import Period from './period.jsx';
+
+// eslint-disable-next-line import/no-relative-packages
+import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
 
 const MatchProgressWrapper = styled.div`
   display: flex;
@@ -13,27 +25,33 @@ const MatchProgressWrapper = styled.div`
   ${({ isConciseView }) =>
     !isConciseView &&
     css`
-      padding: ${SPACING_2} 0 ${SPACING_1};
-      gap: ${SPACING_2};
+      padding: '8px 0 4px';
+      gap: '8px';
     `}
 `;
 
 const AggregateScore = styled.div`
-  ${fontScaleDescription}
+  font-size: 14px;
+  line-height: 1.2857142857142858;
   text-align: center;
-  ${({ theme, isConciseView }) =>
+  ${
+    '' /* ${({ theme, isConciseView }) =>
     isConciseView &&
     css`
-      padding: ${SPACING_1} 0;
+      padding: '4px 0';
       color: ${theme.colourPalette.secondary};
-    `}
+    `} */
+  }
 `;
 
 const MatchProgress = ({ data, isConciseView }) => {
   const { home, away, periodLabel, status, multiLeg } = data;
 
   const shouldDisplayAggScore =
-    multiLeg && multiLeg.leg > 1 && home.runningScores?.aggregate && away.runningScores?.aggregate;
+    multiLeg &&
+    multiLeg.leg > 1 &&
+    home.runningScores?.aggregate &&
+    away.runningScores?.aggregate;
 
   const fallbackPeriod =
     periodLabel &&
@@ -43,10 +61,11 @@ const MatchProgress = ({ data, isConciseView }) => {
       home.runningScores,
       away.runningScores,
       home.fullName,
-      away.fullName
+      away.fullName,
     );
 
-  const shouldDisplayPeriod = periodLabel && fallbackPeriod && shouldShowScores(status);
+  const shouldDisplayPeriod =
+    periodLabel && fallbackPeriod && shouldShowScores(status);
 
   if (!shouldDisplayAggScore && !shouldDisplayPeriod) {
     return null;
@@ -56,21 +75,27 @@ const MatchProgress = ({ data, isConciseView }) => {
     <MatchProgressWrapper isConciseView={isConciseView}>
       {shouldDisplayAggScore && (
         <>
-          <VisuallyHidden>
+          <VisuallyHiddenText>
             {`Aggregate score ${home.fullName} ${home.runningScores.aggregate} , ${away.fullName} ${away.runningScores.aggregate}`}
-          </VisuallyHidden>
-          <AggregateScore data-testid="agg-score" aria-hidden="true" isConciseView={isConciseView}>
+          </VisuallyHiddenText>
+          <AggregateScore
+            data-testid="agg-score"
+            aria-hidden="true"
+            isConciseView={isConciseView}
+          >
             {`(Agg ${home.runningScores.aggregate}-${away.runningScores.aggregate})`}
           </AggregateScore>
         </>
       )}
       {shouldDisplayPeriod && (
         <>
-          <VisuallyHidden>
+          <VisuallyHiddenText>
             {`${fallbackPeriod.accessible}${
-              isInProgressStatus(status) && periodLabel.value !== 'PENS' ? ' , in progress' : ''
+              isInProgressStatus(status) && periodLabel.value !== 'PENS'
+                ? ' , in progress'
+                : ''
             }`}
-          </VisuallyHidden>
+          </VisuallyHiddenText>
           <Period
             status={status}
             labels={periodLabel}

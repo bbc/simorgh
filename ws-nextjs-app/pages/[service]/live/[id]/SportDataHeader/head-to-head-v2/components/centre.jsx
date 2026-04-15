@@ -1,14 +1,32 @@
-import React from 'react';
-import styled, { css } from '@bbc/web-styled';
-import { createSize, GROUP_3 } from '@bbc/web-gel-foundations';
-import { isCalledOffStatus, isInProgressStatus, isResultStatus } from '@bbc/web-sport-utils';
-import Time from './fixture-time.jsx';
-import Score from './score.jsx';
+// import React from 'react';
+// import styled, { css } from '@bbc/web-styled';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+
+// import { createSize, GROUP_3 } from '@bbc/web-gel-foundations';
+// import {
+//   isCalledOffStatus,
+//   isInProgressStatus,
+//   isResultStatus,
+// } from '@bbc/web-sport-utils';
+import {
+  isCalledOffStatus,
+  isInProgressStatus,
+  isResultStatus,
+} from '../helpers/event-status-groups';
+
+import Time from './fixture-time';
+import Score from './score';
+
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 // ensures team names / badges line up down the page across "HH:mm", "TBC", single-digit and double-digit scores
 // it is acceptable for the badges/team names to be spaced more widely for triple-digit+ scores, as these are very rare
 const getCentreMinWidthPx = maxScoreLength =>
-  maxScoreLength && maxScoreLength > 1 ? { desktop: 106, mobile: 90 } : { desktop: 85, mobile: 77 };
+  maxScoreLength && maxScoreLength > 1
+    ? { desktop: 106, mobile: 90 }
+    : { desktop: 85, mobile: 77 };
 
 const StyledCentre = styled.div`
   display: flex;
@@ -16,9 +34,11 @@ const StyledCentre = styled.div`
   align-self: space-evenly;
 
   ${({ maxScoreLength }) => css`
-    min-width: ${createSize(getCentreMinWidthPx(maxScoreLength).mobile)};
-    @media (min-width: ${GROUP_3}) {
-      min-width: ${createSize(getCentreMinWidthPx(maxScoreLength).desktop)};
+    min-width: '${pixelsToRem(getCentreMinWidthPx(maxScoreLength).mobile)}rem';
+    @media (min-width: '${pixelsToRem(600)}rem') {
+      min-width: '${pixelsToRem(
+        getCentreMinWidthPx(maxScoreLength).desktop,
+      )}rem';
     }
   `}
 `;
