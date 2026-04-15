@@ -102,9 +102,8 @@ export default ({
         );
       });
     });
-    // SKIPPED: The following tests have been skipped as the Error Page hasn't yet been migrated.
     if ((envConfig as EnvironmentConfigType).standaloneErrorPages) {
-      describe.skip(`${service} error page routes`, () => {
+      describe(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
           cy.testResponseCodeAndType({
             path: `/${service}/404`,

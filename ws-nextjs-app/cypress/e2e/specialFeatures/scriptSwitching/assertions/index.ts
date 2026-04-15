@@ -1,11 +1,10 @@
-import { Variants } from '#app/models/types/global';
 import serviceConfigs from '#src/server/utilities/serviceConfigs';
 import { ServiceParametersType } from '../../../../types';
 
 import {
   clickScriptSwitcher,
-  // clickHomePageLink,
-  // clickPromoLinkOnHomePage,
+  clickHomePageLink,
+  clickPromoLinkOnHomePage,
 } from '../helpers';
 
 const assertScriptSwitchButton = ({
@@ -57,7 +56,7 @@ const allVariantAssertions = ({ service, variant }: ServiceParametersType) => {
 
 export default ({
   service,
-  // pageType,
+  pageType,
   variant,
   otherVariant,
 }: ServiceParametersType) => {
@@ -69,38 +68,36 @@ export default ({
       allVariantAssertions({ service, variant });
 
       // Clicks script switcher
-      clickScriptSwitcher(otherVariant as Variants);
+      clickScriptSwitcher({ service, variant: otherVariant });
 
       cy.log(
         `Asserting script switch button, url and document lang for other variant: ${otherVariant}`,
       );
       allVariantAssertions({ service, variant: otherVariant });
 
-      // SKIPPED: The following tests have been skipped as the Home Page hasn't yet been migrated.
-      // SKIPPED: When we migrate home pages we should consider refactoring these tests to reduce visits we make to home pages
-      // // Navigate to home page by clicking link in the banner
-      // clickHomePageLink(service, otherVariant);
+      // Navigate to home page by clicking link in the banner
+      clickHomePageLink({ service, variant: otherVariant });
 
-      // cy.log(
-      //   `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
-      // );
-      // allVariantAssertions(service, otherVariant);
+      cy.log(
+        `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+      );
+      allVariantAssertions({ service, variant: otherVariant });
 
-      // // Finding a link to click on the home page
-      // clickPromoLinkOnHomePage(pageType);
+      // Finding a link to click on the home page
+      clickPromoLinkOnHomePage({ service, variant, pageType });
 
-      // cy.log(
-      //   `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
-      // );
-      // allVariantAssertions(service, otherVariant);
+      cy.log(
+        `Asserting script switch button, url and document lang has persisted for other variant: ${otherVariant}`,
+      );
+      allVariantAssertions({ service, variant: otherVariant });
 
-      // // Clicks script switcher to original variant
-      // clickScriptSwitcher(variant as Variants);
+      // Clicks script switcher to original variant
+      clickScriptSwitcher({ service, variant });
 
-      // cy.log(
-      //   `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
-      // );
-      // allVariantAssertions({ service, variant });
+      cy.log(
+        `Asserting script switch button, url and document lang have changed after clicking script switcher to ${variant}`,
+      );
+      allVariantAssertions({ service, variant });
     });
   });
 };
