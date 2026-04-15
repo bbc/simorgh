@@ -1,6 +1,7 @@
 import { forwardRef, PropsWithChildren } from 'react';
 import { SerializedStyles, Theme } from '@emotion/react';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import LiveLabel from '#app/components/LiveLabel';
 import styles from './index.styles';
 import {
   mostReadListGridProps,
@@ -62,6 +63,7 @@ export const MostReadLink = ({
   };
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
+  const isLiveLink = href.includes('live');
 
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -71,6 +73,7 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
+        {isLiveLink && <LiveLabel />}
         {title}
       </a>
       {children && <div css={styles.timestamp}>{children}</div>}
