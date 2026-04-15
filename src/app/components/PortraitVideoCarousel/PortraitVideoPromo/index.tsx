@@ -12,6 +12,7 @@ import useViewTracker from '#app/hooks/useViewTracker';
 import getSrcSets from '#app/utilities/getSrcSets';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
 import { EventTrackingData } from '#app/lib/analyticsUtils/types';
+import useHydrationDetection from '#app/hooks/useHydrationDetection';
 import styles from './index.styles';
 
 const DEFAULT_TRANSLATION = {
@@ -37,6 +38,8 @@ export default ({
   // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
   playDurationVariation,
 }: PortraitVideoPromoProps) => {
+  const isHydrated = useHydrationDetection();
+
   const { mq } = useTheme();
   const {
     defaultImage,
@@ -125,6 +128,8 @@ export default ({
     if (clickTrackerHandler) clickTrackerHandler(e);
     if (onClick) onClick();
   };
+
+  if (!isHydrated) return null;
 
   return (
     <li css={styles.container}>
