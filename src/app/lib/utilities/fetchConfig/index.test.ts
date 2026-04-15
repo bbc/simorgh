@@ -207,5 +207,25 @@ describe('fetchConfig', () => {
         expect(fetchUrl).toContain('useNewNav=true');
       },
     );
+
+    it('should set both variant and useNewNav params for a dual-script service', async () => {
+      global.fetch = jest.fn().mockResolvedValue({
+        ok: true,
+        json: async () => mockNavResponse,
+      });
+
+      const { default: fetchConfig } = await import('.');
+
+      await fetchConfig({
+        service: 'serbian',
+        variant: 'serbian',
+        pagePath: '/serbian',
+        configType: 'navigation',
+      });
+
+      const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
+      expect(fetchUrl).toContain('variant=serbian');
+      expect(fetchUrl).toContain('useNewNav=true');
+    });
   });
 });
