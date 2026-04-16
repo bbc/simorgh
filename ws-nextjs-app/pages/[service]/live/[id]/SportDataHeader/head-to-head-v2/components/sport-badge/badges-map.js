@@ -6,7 +6,7 @@ import flagPlaceholder from '../../assets/placeholders/placeholder-flag.svg';
 
 // import { americanFootball } from './mappings/american-football.js';
 // import basketball from './mappings/basketball.js';
-import { getBaseCountryFlagsMapping } from './mappings/country-flags.js';
+// import { getBaseCountryFlagsMapping } from './mappings/country-flags.js';
 // import netball from './mappings/netball.js';
 import englishFootball from './mappings/football-english-domestic.js';
 import europeanFootball from './mappings/football-european-domestic.js';
@@ -32,13 +32,13 @@ const badgesMap = {
   // ...paralympics,
   // ...rugbyUnion,
   // ...iceHockey,
-  ...getBaseCountryFlagsMapping('formula1'),
-  ...getBaseCountryFlagsMapping('athletics'),
-  ...getBaseCountryFlagsMapping('cycling'),
-  ...getBaseCountryFlagsMapping('golf'),
-  ...getBaseCountryFlagsMapping('darts'),
-  ...getBaseCountryFlagsMapping('snooker'),
-  ...getBaseCountryFlagsMapping('tennis'),
+  // ...getBaseCountryFlagsMapping('formula1'),
+  // ...getBaseCountryFlagsMapping('athletics'),
+  // ...getBaseCountryFlagsMapping('cycling'),
+  // ...getBaseCountryFlagsMapping('golf'),
+  // ...getBaseCountryFlagsMapping('darts'),
+  // ...getBaseCountryFlagsMapping('snooker'),
+  // ...getBaseCountryFlagsMapping('tennis'),
 };
 
 export const getImage = ({

@@ -17,7 +17,7 @@ import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: ${({ isConciseView }) => (isConciseView ? `center` : `none`)};
+  align-items: ${({ isConciseView }) => (isConciseView ? 'center' : 'none')};
   grid-template-areas:
     'home_team         scores            away_team'
     'progress          progress          progress';
@@ -25,9 +25,7 @@ export const GridContainer = styled.div`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
-          1,
-        )}rem')) {
+      @media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem)) {
         grid-template-columns: 1fr auto auto 1fr;
         grid-template-areas:
           'home_team         scores            scores            away_team'

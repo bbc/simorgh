@@ -19,7 +19,7 @@ import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const StyledTeam = styled.div`
   display: flex;
-  gap: '8px';
+  gap: 8px;
   align-items: center;
   justify-content: flex-start;
   flex-grow: 2;
@@ -29,16 +29,16 @@ const StyledTeam = styled.div`
   flex-direction: ${({ isConciseView, shouldHideBadges }) =>
     isConciseView || shouldHideBadges ? 'row' : 'column'};
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    gap: '20px';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    gap: 20px;
     flex-direction: row;
   }
 
   ${({ isConciseView }) =>
     isConciseView &&
     css`
-      @media (min-width: '${pixelsToRem(600)}rem') {
-        gap: '12px';
+      @media (min-width: ${pixelsToRem(600)}rem) {
+        gap: 12px;
       }
     `}
 `;
@@ -50,9 +50,7 @@ const HomeTeam = styled(StyledTeam)`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
-          1,
-        )}rem')) {
+      @media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem)) {
         justify-content: flex-end;
         flex-direction: column-reverse;
         text-align: center;
@@ -68,9 +66,7 @@ const AwayTeam = styled(StyledTeam)`
     !isConciseView &&
     !shouldHideBadges &&
     css`
-      @media (max-width: calc('${pixelsToRem(600)}rem' - '${pixelsToRem(
-          1,
-        )}rem')) {
+      @media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem)) {
         text-align: center;
       }
     `}

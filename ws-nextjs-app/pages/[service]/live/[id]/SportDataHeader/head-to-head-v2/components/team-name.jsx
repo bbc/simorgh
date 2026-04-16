@@ -24,7 +24,7 @@ import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const TeamNameWrapper = styled.div`
   display: flex;
-  gap: '8px';
+  gap: 8px;
   align-items: center;
   ${
     '' /* ${({ shouldHideBadges }) =>
@@ -33,15 +33,15 @@ const TeamNameWrapper = styled.div`
   font-size: 1rem;
   line-height: 1.375;
   padding: ${({ shouldHideBadges }) =>
-    shouldHideBadges ? `0 8px` : `0 0 8px`};
+    shouldHideBadges ? '0 8px' : '0 0 8px'};
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     padding: 0;
     ${'' /* ${fontScaleIndexHeadlineMedium} */}
     font-size: 1.25rem;
     line-height: 1.2;
 
-    @media (min-width: '${pixelsToRem(600)}rem') {
+    @media (min-width: ${pixelsToRem(600)}rem) {
       font-size: 1.5rem;
       line-height: 1.1666666666666667;
     }
@@ -56,22 +56,22 @@ const TeamNameWrapper = styled.div`
       line-height: 1.2857142857142858;
       padding: 0;
 
-      @media (min-width: '${pixelsToRem(600)}rem') {
-        font-size: '${pixelsToRem(16)}rem';
+      @media (min-width: ${pixelsToRem(600)}rem) {
+        font-size: ${pixelsToRem(16)}rem;
         line-height: 1.375;
       }
     `}
 `;
 
 const MobileValue = styled.span`
-  @media (min-width: '${pixelsToRem(900)}rem') {
+  @media (min-width: ${pixelsToRem(900)}rem) {
     display: none;
   }
 `;
 
 const DesktopValue = styled.span`
   display: none;
-  @media (min-width: '${pixelsToRem(900)}rem') {
+  @media (min-width: ${pixelsToRem(900)}rem) {
     display: inline;
   }
 `;

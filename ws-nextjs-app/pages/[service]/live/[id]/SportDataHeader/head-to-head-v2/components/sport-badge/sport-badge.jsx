@@ -13,17 +13,17 @@ const BadgeContainer = styled.div`
   justify-content: center;
   flex-shrink: 0;
 
-  width: '${({ size = 20 }) => pixelsToRem(size.small || size)}rem';
-  height: '${({ size = 20 }) => pixelsToRem(size.small || size)}rem';
+  width: ${({ size = 20 }) => pixelsToRem(size.small || size)}rem;
+  height: ${({ size = 20 }) => pixelsToRem(size.small || size)}rem;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    width: '${({ size = 20 }) => pixelsToRem(size.medium || size)}rem';
-    height: '${({ size = 20 }) => pixelsToRem(size.medium || size)}rem';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    width: ${({ size = 20 }) => pixelsToRem(size.medium || size)}rem;
+    height: ${({ size = 20 }) => pixelsToRem(size.medium || size)}rem;
   }
 
-  @media (min-width: '${pixelsToRem(900)}rem') {
-    width: '${({ size = 27 }) => pixelsToRem(size.large || size)}rem';
-    height: '${({ size = 27 }) => pixelsToRem(size.large || size)}rem';
+  @media (min-width: ${pixelsToRem(900)}rem) {
+    width: ${({ size = 27 }) => pixelsToRem(size.large || size)}rem;
+    height: ${({ size = 27 }) => pixelsToRem(size.large || size)}rem;
   }
 `;
 
@@ -58,8 +58,9 @@ const SportBadge = ({
       <BadgeImage
         alt={alt}
         data-testid={`badge-img-${testId}`}
-        src={src}
+        // src={src}
         aria-hidden={!alt}
+        {...src}
       />
     </BadgeContainer>
   );
