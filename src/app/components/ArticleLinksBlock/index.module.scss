@@ -1,0 +1,43 @@
+@use '../ThemeProviderSCSSModules/fontSizes.scss' as fontSizes;
+@use '../ThemeProviderSCSSModules/palette.scss' as palette;
+@use '../ThemeProviderSCSSModules/fontVariants.scss' as fontVariants;
+@use '../ThemeProviderSCSSModules/spacings.scss' as spacings;
+@use '../ThemeProviderSCSSModules/mediaQueries.scss' as mediaQueries;
+@use '../ThemeProviderSCSSModules/px-to-rem.scss' as pixelsToRem;
+
+.promoContainer {
+  padding: 0 #{spacings.$double} #{spacings.$triple};
+  margin: 0;
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
+    margin: 0 -#{spacings.$double};
+  }
+}
+
+.labelComponent {
+  @include fontSizes.gel-font-size(brevier);
+  @include fontVariants.gel-font-variant('sans-regular');
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: #{spacings.$quadruple};
+  color: palette.$shadow;
+  padding: 0 #{spacings.$double};
+
+  @media #{mediaQueries.$forced-colours} {
+    border: solid #{pixelsToRem.px-to-rem(3)} transparent;
+    border-bottom: transparent;
+  }
+
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
+    padding: 0;
+  }
+
+  // Dark UI override
+  :global([data-is-dark-ui='true']) & {
+    color: palette.$grey-2;
+  }
+}

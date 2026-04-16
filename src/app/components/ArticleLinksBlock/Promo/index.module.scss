@@ -1,0 +1,94 @@
+@use '../../ThemeProviderSCSSModules/fontSizes.scss' as fontSizes;
+@use '../../ThemeProviderSCSSModules/fontVariants.scss' as fontVariants;
+@use '../../ThemeProviderSCSSModules/palette.scss' as palette;
+@use '../../ThemeProviderSCSSModules/spacings.scss' as spacings;
+@use '../../ThemeProviderSCSSModules/mediaQueries.scss' as mediaQueries;
+@use '../../ThemeProviderSCSSModules/px-to-rem.scss' as pixelsToRem;
+
+.link {
+  @include fontSizes.gel-font-size(pica);
+  @include fontVariants.gel-font-variant('serif-bold');
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  color: palette.$grey-8;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: palette.$grey-6;
+  }
+
+  &::before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  // Dark UI override
+  :global([data-is-dark-ui='true']) & {
+    color: palette.$grey-2;
+  }
+}
+
+.promoBox {
+  position: relative;
+  background-color: palette.$white;
+  padding: #{spacings.$double};
+  padding-inline-end: #{pixelsToRem.px-to-rem(38)};
+  height: auto;
+  display: block;
+  width: 100%;
+
+  // Dark UI override
+  :global([data-is-dark-ui='true']) & {
+    background-color: palette.$grey-7;
+  }
+
+  // Opera Mini overrides
+  :global(.is-opera-mini) & {
+    position: relative;
+    background-color: palette.$white;
+    padding: #{spacings.$double};
+    margin-bottom: #{spacings.$double};
+    width: calc(100% - #{spacings.$full});
+
+    :global([data-is-dark-ui='true']) & {
+      background-color: palette.$grey-3;
+    }
+
+    @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
+      width: calc(50% - #{spacings.$double});
+    }
+  }
+}
+
+.timestamp {
+  margin-top: #{spacings.$full};
+
+  // Dark UI override
+  :global([data-is-dark-ui='true']) & {
+    color: palette.$grey-1;
+  }
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: #{pixelsToRem.px-to-rem(12)};
+  fill: currentColor;
+}

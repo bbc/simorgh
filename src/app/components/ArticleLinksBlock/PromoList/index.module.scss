@@ -1,0 +1,63 @@
+@use '../../ThemeProviderSCSSModules/spacings.scss' as spacings;
+@use '../../ThemeProviderSCSSModules/mediaQueries.scss' as mediaQueries;
+@use '../../ThemeProviderSCSSModules/px-to-rem.scss' as pixelsToRem;
+
+.promo {
+  & ul {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: #{spacings.$full}rem;
+    width: 100%;
+  }
+
+  // Opera Mini overrides
+  :global(.is-opera-mini) & {
+    list-style: none;
+    padding-inline-start: 0;
+    margin: 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-shrink: 0;
+  margin-inline: #{spacings.$full}rem;
+
+  &:last-of-type {
+    margin-bottom: #{spacings.$triple}rem;
+  }
+
+  @media #{mediaQueries.$forced-colours} {
+    border: solid #{pixelsToRem.px-to-rem(3)}rem transparent;
+  }
+
+  @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
+    margin-inline: #{spacings.$double}rem;
+  }
+
+  @media (min-width: #{mediaQueries.$group-3-min-width-bp}rem) {
+    margin-inline: #{spacings.$double}rem;
+  }
+
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+    margin-inline: 0;
+  }
+
+  // Opera Mini overrides
+  :global(.is-opera-mini) & {
+    @media (max-width: #{mediaQueries.$group-0-max-width-bp}rem) {
+      margin-inline: #{spacings.$full}rem;
+    }
+
+    @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
+      margin-inline: #{spacings.$double}rem;
+    }
+
+    @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+      margin-inline: 0;
+    }
+  }
+}

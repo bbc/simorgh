@@ -11,8 +11,12 @@ $group-4-min-width-bp: 63; // 1008px / 16
 $group-4-max-width-bp: 79.9375; // 1279px / 16
 $group-5-min-width-bp: 80; // 1280px / 16
 
+// Media query strings
+$forced-colours: 'screen and (forced-colors: active)';
+$pointer-fine: '(pointer: fine)';
+
 // Usage example:
 // @media (max-width: #{$group-0-max-width-bp}rem) { ... }
 // @media (min-width: #{$group-1-min-width-bp}rem) and (max-width: #{$group-1-max-width-bp}rem) { ... }
-// @media (pointer: fine) { ... }
-// @media screen and (forced-colors: active) { ... }
+// @media #{$pointer-fine} { ... }
+// @media #{$forced-colours} { ... }
