@@ -25,8 +25,8 @@ const MatchProgressWrapper = styled.div`
   ${({ isConciseView }) =>
     !isConciseView &&
     css`
-      padding: '8px 0 4px';
-      gap: '8px';
+      padding: 8px 0 4px;
+      gap: 8px;
     `}
 `;
 

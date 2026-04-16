@@ -22,7 +22,7 @@ const StyledPeriod = styled.div`
     getStyledMatchProgress({ status, theme, isConciseView })}; */
   }
   ${'' /* ${fontScaleBody} */}
-  color: '#FFD230';
+  color: #FFD230;
   font-size: 1rem;
   line-height: 1.375;
 
