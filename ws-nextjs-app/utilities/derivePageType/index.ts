@@ -16,6 +16,7 @@ import {
   isOptimoIdCheck,
   isTipoIdCheck,
   isCpsIdCheck,
+  isUgcIdCheck,
   removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
 import SERVICES from '#app/lib/config/services';
@@ -52,11 +53,11 @@ export default function derivePageType(pathname: string): PageTypes {
     'http://bbc.com',
   ).pathname;
 
-  if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
   if (sanitisedPathname.includes('popular/read')) return MOST_READ_PAGE;
 
+  if (isUgcIdCheck(sanitisedPathname)) return UGC_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('topics'))
     return TOPIC_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('live'))

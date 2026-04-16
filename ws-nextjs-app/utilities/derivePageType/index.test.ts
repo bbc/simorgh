@@ -39,7 +39,7 @@ describe('derivePageType', () => {
   });
 
   it("should return UGC_PAGE if pathname includes 'send'", () => {
-    const pathname = '/pidgin/send/xxxxxxxxx';
+    const pathname = '/pidgin/send/u50853489';
     const result = derivePageType(pathname);
     expect(result).toEqual(UGC_PAGE);
   });
