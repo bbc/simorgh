@@ -32,8 +32,14 @@ describe('derivePageType', () => {
     expect(result).toEqual(HOME_PAGE);
   });
 
-  it("should return LIVE_PAGE if pathname includes 'live'", () => {
+  it("should return LIVE_PAGE if pathname is a TIPO ID and includes 'live'", () => {
     const pathname = '/pidgin/live/cew7pxl4p4xt';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_PAGE);
+  });
+
+  it("should return LIVE_PAGE if pathname is a CPS ID and includes 'live'", () => {
+    const pathname = '/zhongwen/live/68720252/simp';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });

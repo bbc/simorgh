@@ -62,6 +62,8 @@ export default function derivePageType(pathname: string): PageTypes {
     return TOPIC_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('live'))
     return LIVE_PAGE;
+  if (isCpsIdCheck(sanitisedPathname) && sanitisedPathname.includes('live'))
+    return LIVE_PAGE;
   if (isHomePagePath(sanitisedPathname)) return HOME_PAGE;
   if (isOnDemandAudioEpisodeOrBrandPath(sanitisedPathname)) return AUDIO_PAGE;
   if (isOnDemandAudioPodcastPath(sanitisedPathname)) return AUDIO_PAGE;
