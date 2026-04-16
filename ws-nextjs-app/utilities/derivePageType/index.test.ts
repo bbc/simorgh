@@ -15,7 +15,7 @@ import derivePageType from '.';
 
 describe('derivePageType', () => {
   it('should strip out query params from the pathname', () => {
-    const pathname = '/pidgin/live/xxxxxxxxx?foo=bar';
+    const pathname = '/pidgin/live/cew7pxl4p4xt?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
@@ -33,7 +33,7 @@ describe('derivePageType', () => {
   });
 
   it("should return LIVE_PAGE if pathname includes 'live'", () => {
-    const pathname = '/pidgin/live/xxxxxxxxx';
+    const pathname = '/pidgin/live/cew7pxl4p4xt';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
