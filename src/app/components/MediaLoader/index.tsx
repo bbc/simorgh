@@ -184,6 +184,25 @@ const MediaContainer = ({
                   );
                 }
               });
+              mediaPlayer.bind('enterFakeFullscreen', async () => {
+                console.log('ENTERING FAKE FULLSCREEN');
+                const consentBanner = document.getElementById('consent-banner');
+                console.log('banner', consentBanner);
+                if (consentBanner) {
+                  consentBanner.style.zIndex = '-1';
+                  console.log('banner2', consentBanner);
+                }
+              });
+              mediaPlayer.bind('exitFakeFullscreen', async () => {
+                console.log('EXITING FAKE FULLSCREEN');
+
+                const consentBanner = document.getElementById('consent-banner');
+                console.log('banner', consentBanner);
+                if (consentBanner) {
+                  consentBanner.style.zIndex = '2147483647';
+                  console.log('banner2', consentBanner);
+                }
+              });
             }
 
             mediaPlayer.load();
