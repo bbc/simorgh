@@ -40,17 +40,19 @@ optimizely?.notificationCenter?.addNotificationListener(
   enums.NOTIFICATION_TYPES.DECISION,
   (
     notification: ListenerPayload & {
-      decisionInfo: {
-        flagKey: string;
-        variationKey: string;
-        decisionEventDispatched: boolean;
+      decisionInfo?: {
+        flagKey?: string;
+        variationKey?: string;
+        decisionEventDispatched?: boolean;
       };
     },
   ) => {
-    const { flagKey, variationKey, decisionEventDispatched } =
-      notification.decisionInfo;
+    const flagKey = notification.decisionInfo?.flagKey;
+    const variationKey = notification.decisionInfo?.variationKey;
+    const decisionEventDispatched =
+      notification.decisionInfo?.decisionEventDispatched;
 
-    if (decisionEventDispatched && variationKey !== 'off') {
+    if (decisionEventDispatched && variationKey !== 'off' && flagKey) {
       notifyDecision(flagKey);
     }
   },
