@@ -52,6 +52,20 @@ const getGridComponent = (componentName: string | null) => {
   }
 };
 
+const enterFakeScreenCallback = () => {
+  const consentBanner = document.getElementById('consent-banner');
+  if (consentBanner) {
+    consentBanner.style.zIndex = '-1';
+  }
+};
+
+const exitFakeScreenCallback = () => {
+  const consentBanner = document.getElementById('consent-banner');
+  if (consentBanner) {
+    consentBanner.style.zIndex = '2147483647';
+  }
+};
+
 interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
@@ -116,20 +130,6 @@ export default ({
       ...(summaries?.length > 0 && { itemCount: summaries.length }),
     },
     ...experimentTrackingProps,
-  };
-
-  const enterFakeScreenCallback = () => {
-    const consentBanner = document.getElementById('consent-banner');
-    if (consentBanner) {
-      consentBanner.style.zIndex = '-1';
-    }
-  };
-
-  const exitFakeScreenCallback = () => {
-    const consentBanner = document.getElementById('consent-banner');
-    if (consentBanner) {
-      consentBanner.style.zIndex = '2147483647';
-    }
   };
 
   switch (componentName) {
