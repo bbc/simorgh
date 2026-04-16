@@ -320,7 +320,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-      articlePortraitVideoEnabled,
+    articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -342,10 +342,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      hasContinueReadingBlock &&
-      continueReadingButtonToggle,
+    !isLite &&
+    !isApp &&
+    hasContinueReadingBlock &&
+    continueReadingButtonToggle,
   );
 
   const componentsToRender = {
@@ -419,11 +419,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      !isPGL &&
-      isAdaptiveTimeOfDayVariant &&
-      mediaCurationContent?.summaries?.length,
+    !isLite &&
+    !isApp &&
+    !isPGL &&
+    isAdaptiveTimeOfDayVariant &&
+    mediaCurationContent?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner
