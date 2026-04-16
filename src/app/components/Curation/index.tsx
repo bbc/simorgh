@@ -118,6 +118,26 @@ export default ({
     ...experimentTrackingProps,
   };
 
+  const enterFakeScreenCallback = () => {
+    console.log('MAPPING ENTERING FAKE FULLSCREEN');
+    const consentBanner = document.getElementById('consent-banner');
+    console.log('MAP banner', consentBanner);
+    if (consentBanner) {
+      consentBanner.style.zIndex = '-1';
+      console.log('MAP banner2', consentBanner);
+    }
+  };
+
+  const exitFakeScreenCallback = () => {
+    console.log('MAPPINGEXITING FAKE FULLSCREEN');
+    const consentBanner = document.getElementById('consent-banner');
+    console.log('MAP banner', consentBanner);
+    if (consentBanner) {
+      consentBanner.style.zIndex = '2147483647';
+      console.log('MAP banner2', consentBanner);
+    }
+  };
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;
@@ -216,7 +236,13 @@ export default ({
           aria-labelledby="bbcMediaPlayer0"
           data-testid={mediaCollectionId}
         >
-          <MediaLoader blocks={mediaCollection} />
+          <MediaLoader
+            blocks={mediaCollection}
+            eventMapping={{
+              enterFakeFullscreen: enterFakeScreenCallback,
+              exitFakeFullscreen: exitFakeScreenCallback,
+            }}
+          />
         </section>
       ) : null;
     }
