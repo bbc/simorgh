@@ -24,10 +24,10 @@ const PenaltyScoresContainer = styled.div`
   font-size: 1rem;
   line-height: 1.375;
   text-align: center;
-  padding: '4px 0';
+  padding: 4px 0;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    padding-bottom: '8px';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    padding-bottom: 8px;
   }
 
   ${
@@ -41,19 +41,19 @@ const PenaltyScoresContainer = styled.div`
 
 const WinningTeamName = styled.span`
   ${'' /* ${fontEmphasised} */}
-  font-family: 'ReithSans, Helvetica, Arial, freesans, sans-serif';
+  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
   font-weight: 700;
   font-feature-settings: 'ss01' off;
   ${
     '' /* color: ${({ theme, isConciseView }) =>
     isConciseView ? theme.colourPalette.primary : theme.colourPalette.accent}; */
   }
-  color: "#FFD230";
+  color: #FFD230;
 `;
 
 const PenaltiesText = styled.div`
   ${'' /* color: ${({ theme }) => theme.colourPalette.secondary}; */}
-  color: "#A8A8A8";
+  color: #A8A8A8;
 `;
 
 const PenaltyScores = ({ data, isConciseView }) => {
