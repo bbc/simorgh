@@ -34,11 +34,9 @@ const StyledCentre = styled.div`
   align-self: space-evenly;
 
   ${({ maxScoreLength }) => css`
-    min-width: '${pixelsToRem(getCentreMinWidthPx(maxScoreLength).mobile)}rem';
-    @media (min-width: '${pixelsToRem(600)}rem') {
-      min-width: '${pixelsToRem(
-        getCentreMinWidthPx(maxScoreLength).desktop,
-      )}rem';
+    min-width: ${pixelsToRem(getCentreMinWidthPx(maxScoreLength).mobile)}rem;
+    @media (min-width: ${pixelsToRem(600)}rem) {
+      min-width: ${pixelsToRem(getCentreMinWidthPx(maxScoreLength).desktop)}rem;
     }
   `}
 `;

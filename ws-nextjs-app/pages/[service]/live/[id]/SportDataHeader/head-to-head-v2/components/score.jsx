@@ -44,18 +44,18 @@ const StyledScore = styled.div`
     '' /* color: ${({ theme, status, isConciseView }) =>
     getScoreColourStyle({ theme, status, isConciseView })}; */
   }
-  color: '#F8F8F8';
+  color: #F8F8F8;
 
-  font-size: '${pixelsToRem(40)}rem';
+  font-size: ${pixelsToRem(40)}rem;
   line-height: 1.1;
   padding-left: 4px;
   padding-right: 4px;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    font-size: '${pixelsToRem(50)}rem';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    font-size: ${pixelsToRem(50)}rem;
     line-height: 1.08;
-    padding-left: '24px';
-    padding-right: '24px';
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   ${
@@ -97,14 +97,14 @@ export const VerticalLine = styled.div`
       ${getStyledLineColour({ theme, status, isConciseView })};
   `}; */
   }
-  border-left: '${pixelsToRem(2)}rem solid #FFD230';
+  border-left: ${pixelsToRem(2)}rem solid #FFD230;
   display: inline-block;
-  margin: '0 16px';
+  margin: 0 16px;
   grid-area: ${VERTICAL_LINE};
 
-  height: '${pixelsToRem(38)}rem';
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    height: '${pixelsToRem(44)}rem';
+  height: ${pixelsToRem(38)}rem;
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    height: ${pixelsToRem(44)}rem;
   }
 
   ${

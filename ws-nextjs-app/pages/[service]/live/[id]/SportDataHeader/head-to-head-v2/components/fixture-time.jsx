@@ -34,13 +34,13 @@ const StyledTime = styled.time`
   font-size: 16px;
   line-height: 1.375;
 
-  font-size: '${pixelsToRem(40)}rem';
+  font-size: ${pixelsToRem(40)}rem;
   line-height: 1.125;
   font-weight: 500;
   padding: 0 4px;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    font-size: '${pixelsToRem(50)}rem';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    font-size: ${pixelsToRem(50)}rem;
     line-height: 1.08;
     padding: 0 32px;
   }
