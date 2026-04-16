@@ -19,21 +19,14 @@ import {
   removeRendererExtension,
 } from '#app/routes/utils/constructPageFetchUrl';
 import SERVICES from '#app/lib/config/services';
-
-const SERVICES_WITH_VARIANTS = {
-  serbian: ['lat', 'cyr'],
-  ukchina: ['simp', 'trad'],
-  uzbek: ['lat', 'cyr'],
-  zhongwen: ['simp', 'trad'],
-  ukrainian: ['lat', 'cyr'],
-};
+import { servicesWithVariants } from '#lib/utilities/variantHandler';
 
 const isHomePagePath = (pathname: string) =>
   SERVICES.some(service => {
     if (pathname === `/${service}` || pathname === `/${service}/`) {
       return true;
     }
-    const variants = SERVICES_WITH_VARIANTS[service];
+    const variants = servicesWithVariants[service];
     if (variants) {
       return variants.some(
         variant =>
@@ -62,9 +55,10 @@ export default function derivePageType(pathname: string): PageTypes {
   if (sanitisedPathname.includes('send')) return UGC_PAGE;
   if (sanitisedPathname.includes('av-embeds')) return AV_EMBEDS;
   if (sanitisedPathname.includes('downloads')) return DOWNLOADS_PAGE;
-  if (sanitisedPathname.includes('topics')) return TOPIC_PAGE;
   if (sanitisedPathname.includes('popular/read')) return MOST_READ_PAGE;
 
+  if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('topics'))
+    return TOPIC_PAGE;
   if (isTipoIdCheck(sanitisedPathname) && sanitisedPathname.includes('live'))
     return LIVE_PAGE;
   if (isHomePagePath(sanitisedPathname)) return HOME_PAGE;
