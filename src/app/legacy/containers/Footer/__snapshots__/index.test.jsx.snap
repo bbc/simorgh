@@ -35,6 +35,14 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   min-height: 2.75rem;
   width: 100%;
   padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   position: relative;
   z-index: 1;
 }
@@ -70,8 +78,9 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
 }
 
 .emotion-5 {
-  min-height: inherit;
-  height: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -90,12 +99,8 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   flex-wrap: wrap;
   max-width: 63rem;
   margin: 0 auto;
-}
-
-@media (max-width: 14.9375rem) {
-  .emotion-5 {
-    display: block;
-  }
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .emotion-7 {
@@ -135,6 +140,7 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
   color: #FFFFFF;
   fill: currentColor;
   height: 1.25rem;
+  max-width: 100%;
 }
 
 @media (min-width: 25rem) {
@@ -356,11 +362,11 @@ exports[`FooterContainer snapshots should render correctly 1`] = `
       class="emotion-2 emotion-3 emotion-4"
     >
       <div
-        class="emotion-5 emotion-6"
+        class="brand-svg-wrapper emotion-5 emotion-6"
       >
         <a
           aria-labelledby="BrandLink-footer"
-          class="focusIndicatorRemove emotion-7 emotion-8"
+          class="brand-link focusIndicatorRemove emotion-7 emotion-8"
           href="/news"
           id="footer"
         >

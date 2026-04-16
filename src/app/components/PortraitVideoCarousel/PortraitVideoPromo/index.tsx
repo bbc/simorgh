@@ -23,6 +23,7 @@ const DEFAULT_TRANSLATION = {
 type PortraitVideoPromoProps = {
   block: PortraitClipMediaBlock;
   eventTrackingData: EventTrackingData;
+  isHydrated?: boolean;
   blockPosition?: number;
   // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
   playDurationVariation?: string;
@@ -36,6 +37,7 @@ export default ({
   onClick,
   // EXPERIMENT: Portrait Video Homepage Play Duration Sizing
   playDurationVariation,
+  isHydrated,
 }: PortraitVideoPromoProps) => {
   const { mq } = useTheme();
   const {
@@ -127,7 +129,7 @@ export default ({
   };
 
   return (
-    <li css={styles.container}>
+    <li css={[styles.container, isHydrated && { scrollSnapAlign: 'start' }]}>
       <Image
         alt={alt}
         src={imageUrl}

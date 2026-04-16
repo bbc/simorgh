@@ -133,9 +133,67 @@ Cypress.Commands.add('getToggles', getToggles);
 Cypress.Commands.add('hasNoscriptImgAtiUrl', hasNoscriptImgAtiUrl);
 Cypress.Commands.add('testResponseCodeAndType', testResponseCodeAndType);
 
-Cypress.Commands.overwrite('visit', (originalFn, url, options) => {
-  return originalFn(url, options).then(() => {
-    // Handle Continue Reading button if it appears when cy.visit() is called
-    handleContinueReadingButton();
-  });
-});
+Cypress.Commands.overwrite(
+  'visit',
+  (originalFn, urlOrOptions, ...rest): Cypress.Chainable => {
+    // Keeps the original signature of cy.visit() intact while allowing for flexible options handling https://docs.cypress.io/api/commands/visit#Usage
+    const [options] = rest as [Partial<Cypress.VisitOptions>?];
+
+    const visitUrl =
+      typeof urlOrOptions === 'string' ? urlOrOptions : urlOrOptions.url;
+    const visitOptionsObj =
+      typeof urlOrOptions === 'string' ? (options ?? {}) : urlOrOptions;
+    const { failOnStatusCode = true, headers } = visitOptionsObj;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const originalFnAsAny = originalFn as (...args: any[]) => Cypress.Chainable;
+    const runVisit = () => {
+      if (typeof urlOrOptions === 'string') {
+        return originalFnAsAny(urlOrOptions, options);
+      }
+
+      return originalFnAsAny(urlOrOptions);
+    };
+
+    if (!failOnStatusCode || getAppEnv() === 'local') {
+      return runVisit().then(() => {
+        // Handle Continue Reading button if it appears when cy.visit() is called
+        handleContinueReadingButton();
+      });
+    }
+
+    const checkStatus = (retriesLeft = 2): Cypress.Chainable => {
+      return cy
+        .request({
+          url: visitUrl,
+          failOnStatusCode: false,
+          ...(headers && { headers }),
+        })
+        .then(({ status }) => {
+          if (status === 200) {
+            const noOp = () => undefined;
+            return cy.then(noOp);
+          }
+
+          if (retriesLeft > 0) {
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            return cy.wait(10000).then(() => checkStatus(retriesLeft - 1));
+          }
+
+          throw new Error(
+            `Expected status 200 but got ${status} for ${visitUrl} after all retries`,
+          );
+        });
+    };
+
+    // Pre-check: Verify the page returns a 200 response before visiting.
+    // This mitigates Lambda cold-start failures where the first request returns a 500,
+    // retrying here means before() hooks never surface these transient failures directly.
+    return checkStatus().then(() => {
+      return runVisit().then(() => {
+        // Handle Continue Reading button if it appears when cy.visit() is called
+        handleContinueReadingButton();
+      });
+    });
+  },
+);

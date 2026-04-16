@@ -58,9 +58,6 @@ export default {
   preroll: {
     enabled: true,
   },
-  podcastEpisodeLinkedData: {
-    enabled: true,
-  },
   podcastPromo: {
     enabled: true,
   },
@@ -84,6 +81,9 @@ export default {
   },
   variantCookie: {
     enabled: true,
+  },
+  uasPersonalization: {
+    enabled: false,
   },
   webVitalsMonitoring: {
     enabled: true,

@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import { IncomingHttpHeaders } from 'node:http';
 
+import SERVICES from '#app/lib/config/services';
 import logResponseTime from '#server/utilities/logResponseTime';
 import {
   AV_EMBEDS,
@@ -25,6 +26,7 @@ import derivePageType from '#nextjs/utilities/derivePageType';
 // AV Embeds
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
 import { OnDemandTVProps } from '#app/pages/OnDemandTvPage/OnDemandTvPage';
+import { NOT_FOUND } from '#app/lib/statusCodes.const';
 import handleAvRoute from './av-embeds/handleAvRoute';
 import { AvEmbedsPageProps } from './av-embeds/types';
 // Articles (Optimo + CPS)
@@ -93,8 +95,10 @@ export const getServerSideProps: GetServerSideProps = async context => {
     req: { headers: reqHeaders },
   } = context;
 
-  const { service, variant: variantFromUrl } = context.query as PageDataParams;
+  const { service: serviceFromUrl, variant: variantFromUrl } =
+    context.query as PageDataParams;
 
+  const service = SERVICES.find(s => serviceFromUrl === s);
   const variant = deriveVariant(variantFromUrl);
 
   const pageType = getPageType({ resolvedUrl, reqHeaders });
@@ -106,13 +110,13 @@ export const getServerSideProps: GetServerSideProps = async context => {
 
   logResponseTime({ path: context.resolvedUrl }, context.res, () => null);
 
-  context.res.statusCode = 404;
+  context.res.statusCode = NOT_FOUND;
 
   return {
     props: {
       pathname: resolvedUrl?.split('?')?.[0],
-      service,
-      status: 404,
+      service: service || 'news', // Fallback to 'news' to display error page if service cannot be determined from URL
+      status: NOT_FOUND,
       timeOnServer: Date.now(), // TODO: check if needed? See https://github.com/bbc/simorgh/pull/10857/files#r1200274478
       variant,
     },

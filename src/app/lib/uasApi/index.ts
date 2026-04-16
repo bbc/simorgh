@@ -1,11 +1,12 @@
 import isLive from '#app/lib/utilities/isLive';
-import getAuthHeaders from './getAuthHeader';
-import activityTypes from './activityTypes';
+import getAuthHeaders from './getAuthHeaders';
+import type { ActivityType } from './uasUtility';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 
 export type UasMethod = 'POST' | 'DELETE' | 'GET';
 
 export interface UasApiRequestBody {
-  activityType: string;
+  activityType: ActivityType;
   resourceDomain?: string;
   resourceType?: string;
   resourceId?: string;
@@ -18,21 +19,18 @@ export interface UasApiRequestBody {
 interface UasRequestOptions {
   body?: UasApiRequestBody;
   globalId?: string;
+  signal?: AbortSignal;
 }
 
 const getUasHost = () =>
-  isLive() ? 'activity.api.bbc.co.uk' : 'activity.test.api.bbc.co.uk';
+  isLive() ? 'activity.api.bbc.com' : 'activity.test.api.bbc.com';
 
 const buildUrl = (activityType: string, globalId?: string) => {
   const base = `https://${getUasHost()}/my/${activityType}`;
   return globalId ? `${base}/${encodeURIComponent(globalId)}` : base;
 };
 
-const validateRequest = (
-  method: UasMethod,
-  options: UasRequestOptions,
-  activityType: string,
-) => {
+const validateRequest = (method: UasMethod, options: UasRequestOptions) => {
   const { body, globalId } = options;
 
   if (method === 'DELETE' && !globalId) {
@@ -42,21 +40,19 @@ const validateRequest = (
   if (method === 'POST' && !body) {
     throw new Error('POST requests require a body');
   }
-
-  if (!activityType || !activityTypes.includes(activityType)) {
-    throw new Error('Invalid activity type');
-  }
   // TODO : Add more validation , if needed
 };
 
 const uasApiRequest = async (
   method: UasMethod,
-  activityType: string,
-  { body, globalId }: UasRequestOptions = {},
+  activityType: ActivityType,
+  { body, globalId, signal }: UasRequestOptions = {},
 ): Promise<Response> => {
-  validateRequest(method, { body, globalId }, activityType);
+  validateRequest(method, { body, globalId });
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
+
+  await refreshTokensIfExpired();
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),
@@ -71,6 +67,8 @@ const uasApiRequest = async (
     headers,
     credentials: 'include',
     body: method === 'POST' ? JSON.stringify(body) : undefined,
+    // Allow callers to abort the request
+    ...(signal ? { signal } : {}),
   });
 
   if (!response.ok) {
