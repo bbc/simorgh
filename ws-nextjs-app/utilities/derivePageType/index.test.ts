@@ -86,6 +86,12 @@ describe('derivePageType', () => {
     expect(result).toEqual(AUDIO_PAGE);
   });
 
+  it('should return AUDIO_PAGE if pathname includes `programmes`', () => {
+    const pathname = '/arabic/bbc_arabic_radio/programmes/p02pc9qc';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(AUDIO_PAGE);
+  });
+
   it('should return TV_PAGE for on demand tv brand paths', () => {
     const pathname = '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw';
     const result = derivePageType(pathname);
