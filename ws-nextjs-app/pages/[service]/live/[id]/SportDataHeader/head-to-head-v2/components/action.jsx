@@ -19,7 +19,7 @@ import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const StyledAction = styled.li`
   ${'' /* ${fontEmphasised} */}
-  font-family: 'ReithSans, Helvetica, Arial, freesans, sans-serif';
+  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
   font-weight: 700;
   font-feature-settings: 'ss01' off;
 
@@ -27,22 +27,24 @@ const StyledAction = styled.li`
   font-size: 14px;
   line-height: 1.2857142857142858;
 
-  padding-bottom: '8px';
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  padding-bottom: 8px;
+  @media (min-width: ${pixelsToRem(600)}rem) {
     ${'' /* ${fontScaleBody} */}
     font-size: 1rem;
     line-height: 1.375;
-    padding-bottom: '8px';
+    padding-bottom: 8px;
     ${({ alignment }) =>
       `padding-${alignment === 'home' ? 'left' : 'right'}: 12px`};
   }
 `;
 
 const StyledUl = styled.ul`
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  list-style: none;
+
+  @media (min-width: ${pixelsToRem(600)}rem) {
     display: flex;
     flex-wrap: wrap;
-    padding-top: '4px';
+    padding-top: 4px;
     justify-content: ${({ alignment }) =>
       alignment === 'home' ? `flex-end` : `flex-start`};
   }

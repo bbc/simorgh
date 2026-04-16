@@ -21,7 +21,7 @@ const StyledFooter = styled.div`
   padding-bottom: 16px;
   text-align: center;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     font-size: 1rem;
     line-height: 1.375;
     padding-bottom: 8px;
@@ -30,7 +30,7 @@ const StyledFooter = styled.div`
 
 const FooterTextWrapper = styled.div`
   display: inline-block;
-  font-size: '${pixelsToRem(13)}rem';
+  font-size: ${pixelsToRem(13)}rem;
 
   &:not(:first-child) {
     margin-left: 8px;
@@ -52,23 +52,23 @@ const AttendanceValue = styled.div`
 `;
 
 const VenueLabel = styled.span`
-  color: '#A8A8A8';
+  color: #A8A8A8;
   padding-right: 4px;
 `;
 
 const AttendanceLabel = styled.span`
-  color: '#A8A8A8';
+  color: #A8A8A8;
   padding-right: 4px;
 `;
 
 const HorizontalRule = styled.hr`
-  width: '${pixelsToRem(12)}rem';
+  width: ${pixelsToRem(12)}rem;
   border: none;
   ${
     '' /* border-top: 1px solid ${({ theme, status, isConciseView }) => getStyledLineColour({ theme, status, isConciseView })};
      */
   }
-  border-top: '1px solid #FFD230';
+  border-top: 1px solid #FFD230;
   padding-bottom: 4px;
 `;
 

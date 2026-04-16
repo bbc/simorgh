@@ -19,8 +19,8 @@ export const ActionGrid = styled.div`
     '${GRID_AREAS.centreText}   ${GRID_AREAS.centreText}'
     '${GRID_AREAS.homeText}     ${GRID_AREAS.awayText}';
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    grid-template-columns: '1fr ${pixelsToRem(150)}rem 1fr';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    grid-template-columns: 1fr ${pixelsToRem(150)}rem 1fr;
     grid-template-areas: '${GRID_AREAS.homeText}   ${GRID_AREAS.centreText}   ${GRID_AREAS.awayText}';
   }
 `;

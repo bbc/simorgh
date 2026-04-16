@@ -27,7 +27,7 @@ import VisuallyHiddenText from '../../../../../../../../src/app/components/Visua
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const GroupedEventsWrapper = styled.div`
-  margin: '8px 24px 0';
+  margin: 8px 24px 0;
 `;
 
 const ActionWrapper = styled.div`
@@ -37,13 +37,13 @@ const ActionWrapper = styled.div`
   `}; */
   }
 
-  border-top: '${pixelsToRem(1)}rem solid #505050';
+  border-top: ${pixelsToRem(1)}rem solid #505050;
 `;
 
 const GroupLabel = styled.div`
   grid-area: ${GRID_AREAS.centreText};
   ${'' /* ${fontEmphasised} */}
-  font-family: 'ReithSans, Helvetica, Arial, freesans, sans-serif';
+  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
   font-weight: 700;
   font-feature-settings: 'ss01' off;
 
@@ -52,10 +52,10 @@ const GroupLabel = styled.div`
   font-size: 1rem;
   line-height: 1.375;
 
-  padding: '8px 0 4px';
+  padding: 8px 0 4px;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    padding: '8px 0 20px';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    padding: 8px 0 20px;
   }
 `;
 
@@ -67,14 +67,14 @@ const GroupedHomeEvent = styled.div`
   font-size: 14px;
   line-height: 1.2857142857142858;
 
-  padding: '0 16px 12px 0';
+  padding: 0 16px 12px 0;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     ${'' /* ${fontScaleBody} */}
     font-size: 1rem;
     line-height: 1.375;
 
-    padding: '8px 0 20px';
+    padding: 8px 0 20px;
   }
 `;
 
@@ -86,13 +86,13 @@ const GroupedAwayEvent = styled.div`
   font-size: 14px;
   line-height: 1.2857142857142858;
 
-  padding: '0 0 12px 16px';
+  padding: 0 0 12px 16px;
 
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     ${'' /* ${fontScaleBody} */}
     font-size: 1rem;
     line-height: 1.375;
-    padding: '8px 0 20px';
+    padding: 8px 0 20px;
   }
 `;
 

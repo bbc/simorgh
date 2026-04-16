@@ -22,21 +22,21 @@ import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 const ScoreDetailsWrapper = styled.div`
   grid-area: ${GRID_AREAS.centreText};
   display: flex;
-  row-gap: '8px';
+  row-gap: 8px;
   ${'' /* ${fontScaleDescription} */}
   font-size: 14px;
   line-height: 1.2857142857142858;
 
   text-align: center;
   ${'' /* color: ${({ theme }) => theme.colourPalette.primary}; */}
-  color: '#F8F8F8';
+  color: #F8F8F8;
 
-  padding: '4px 0 12px';
+  padding: 4px 0 12px;
 
   flex-direction: row;
   justify-content: center;
-  @media (min-width: '${pixelsToRem(600)}rem') {
-    padding: '4px 0 8px';
+  @media (min-width: ${pixelsToRem(600)}rem) {
+    padding: 4px 0 8px;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -44,15 +44,15 @@ const ScoreDetailsWrapper = styled.div`
 
 const Score = styled.div`
   ${'' /* color: ${({ theme }) => theme.colourPalette.secondary}; */}
-  color: '#A8A8A8';
+  color: #A8A8A8;
 `;
 
 const Comma = styled.span`
   ${'' /* color: ${({ theme }) => theme.colourPalette.secondary}; */}
-  color: '#A8A8A8';
+  color: #A8A8A8;
 
-  padding-right: '4px';
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  padding-right: 4px;
+  @media (min-width: ${pixelsToRem(600)}rem) {
     display: none;
   }
 `;

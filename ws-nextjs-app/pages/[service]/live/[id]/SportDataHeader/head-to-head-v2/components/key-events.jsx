@@ -13,15 +13,15 @@ import { GRID_AREAS } from './action-grid.jsx';
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const KeyEventsStyles = css`
-  padding: '0 16px';
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  padding: 0 16px;
+  @media (min-width: ${pixelsToRem(600)}rem) {
     padding: 0;
   }
 
   @supports not (display: grid) {
     display: inline-flex;
     width: 50%;
-    padding: '0 16px';
+    padding: 0 16px;
     box-sizing: border-box;
   }
 `;

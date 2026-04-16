@@ -15,17 +15,17 @@ import secondyellowcard from '../assets/football/second-yellow-card.svg';
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const CardImage = styled.img`
-  padding: '0 ${pixelsToRem(3.2)}rem 0 ${pixelsToRem(3.2)}rem';
+  padding: 0 ${pixelsToRem(3.2)}rem 0 ${pixelsToRem(3.2)}rem;
 `;
 
 const StyledRedCard = styled(CardImage)`
-  width: '${pixelsToRem(11.2)}rem';
-  margin-bottom: '${pixelsToRem(-3.2)}rem';
+  width: ${pixelsToRem(11.2)}rem;
+  margin-bottom: ${pixelsToRem(-3.2)}rem;
 `;
 
 const StyledYellowCard = styled(CardImage)`
-  margin-bottom: '${pixelsToRem(-6.4)}rem';
-  width: '${pixelsToRem(16)}rem';
+  margin-bottom: ${pixelsToRem(-6.4)}rem;
+  width: ${pixelsToRem(16)}rem;
 `;
 
 const CardContainer = styled.div`
