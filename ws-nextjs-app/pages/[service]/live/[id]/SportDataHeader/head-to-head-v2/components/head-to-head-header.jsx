@@ -21,12 +21,12 @@ const HeaderWrapper = styled.div`
   flex-direction: column;
   font-size: 14px;
   line-height: 1.2857142857142858;
-  padding-bottom: '16px';
+  padding-bottom: 16px;
 
   ${({ status }) => css`
     padding-top: ${isLiveStatus(status) ? 0 : '16px'};
   `}
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     flex-direction: row;
     font-size: 1rem;
     line-height: 1.375;
@@ -41,7 +41,7 @@ const DateWrapper = styled.div`
   justify-content: flex-end;
 
   flex-direction: column;
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     flex-direction: row;
   }
 `;
@@ -50,19 +50,19 @@ const DateHeader = styled.div`
   display: flex;
   justify-content: center;
 
-  padding-bottom: '4px';
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  padding-bottom: 4px;
+  @media (min-width: ${pixelsToRem(600)}rem) {
     padding-bottom: 0;
   }
 `;
 
 const Interpunct = styled.div`
-  color: '#A8A8A8';
+  color: #A8A8A8;
 
   display: none;
-  @media (min-width: '${pixelsToRem(600)}rem') {
+  @media (min-width: ${pixelsToRem(600)}rem) {
     display: inline;
-    padding: '0 8px';
+    padding: 0 8px;
   }
 `;
 
@@ -73,7 +73,7 @@ const TournamentHeader = styled.div`
 `;
 
 const Date = styled.time`
-  color: '#A8A8A8';
+  color: #A8A8A8;
   flex-shrink: 0;
 `;
 

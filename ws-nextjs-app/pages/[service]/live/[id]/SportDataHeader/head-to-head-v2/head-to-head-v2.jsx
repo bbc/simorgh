@@ -12,23 +12,26 @@ import { HeadToHeadBanner } from './components/head-to-head-banner.jsx';
 import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link.jsx';
 import { Actions } from './components/actions.jsx';
 
+// eslint-disable-next-line import/no-relative-packages
+import pixelsToRem from '../../../../../../../src/app/utilities/pixelsToRem';
+
 const StyledHeadToHeadWrapper = styled.div`
   background: ${({ isConciseView }) => (isConciseView ? '#202020' : '#181818')};
   ${
     '' /* border-left: ${({ status, isConciseView }) =>
     getStatusBorderStyles({ status, isConciseView })}; */
   }
-  border-left: '#009E9E';
+  border-left: medium none #009E9E;
 `;
 
 const StyledHeadToHead = styled.div`
-  font-family: 'ReithSans, Helvetica, Arial, freesans, sans-serif';
+  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
   font-weight: 400;
   font-feature-settings: 'ss01' off;
-  color: '#F8F8F8';
+  color: #F8F8F8;
   padding: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
 
-  @media (max-width: 600px) {
+  @media (max-width: ${pixelsToRem(600)}rem) {
     padding-top: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
   }
 `;
