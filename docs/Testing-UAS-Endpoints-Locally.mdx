@@ -16,6 +16,13 @@ This document outlines all necessary configurations.
 - Local development environment running on `http://localhost:7081`
 - Access to test or production BBC accounts
 - A testing browser with extension support
+- **Feature Toggle**: Ensure the `uasPersonalization` feature toggle is enabled in your environment configuration:
+  ```json
+  uasPersonalization: {
+    enabled: true
+  }
+  ```
+  This enables the UAS personalization features required for testing
 
 ## Step 1: Install Browser Extension for CORS Testing
 
@@ -88,6 +95,29 @@ The UAS API requires the `ckns_atkn` cookie for authentication via the Bearer to
 
 Tokens have a limited lifespan. If your tests fail with authentication errors, follow the steps above again to refresh the `ckns_atkn` cookie.
 
+## Step 3.2: Verify User Sign-In Status with `ckns_id` Cookie
+
+### Why This Cookie Matters
+
+The `ckns_id` cookie is essential for UAS functionality.
+**Without this cookie, the UAS button will not be visible** in your local testing environment, even if other setup is correct.
+This cookie validates whether the user is signed in or not and is required for the UI to display UAS-related features.
+
+### How to Verify and Add the `ckns_id` Cookie
+
+1. **Extract the `ckns_id` cookie from test.bbc.com**:
+
+2. **Store the `ckns_id` cookie locally**:
+
+### Verifying Both Authentication Cookies
+
+After completing Steps 3 and 3.2, you should have **both** cookies in your local browser storage:
+
+- `ckns_atkn` - Authentication token for API requests
+- `ckns_id` - User identification and sign-in status (required for UAS UI visibility)
+
+If the UAS button is still not visible, verify that both cookies are present and have valid values.
+
 ## Step 4: Understand Current Authentication Implementation
 
 ### Important: Cookie-Based Authentication in Production
@@ -159,9 +189,11 @@ During local development:
 - [ ] ModHeader (or similar extension) installed and configured with `Access-Control-Allow-Origin: http://localhost:7081`
 - [ ] `await refreshTokensIfExpired();` in `src/app/lib/uasApi/index.ts` is commented out
 - [ ] `ckns_atkn` cookie is present in the browser's cookie store for `localhost`
+- [ ] `ckns_id` cookie is present in the browser's cookie store for `localhost` (required for UAS button visibility)
 - [ ] `getAuthHeaders` function is modified
 - [ ] Development server is running on `http://localhost:7081`
 - [ ] Browser is using the configured profile with the extension enabled
+- [ ] UAS button is visible in the UI (indicates user is properly authenticated)
 
 ## Notes for Developers
 
@@ -209,6 +241,20 @@ During local development:
 
 - Tokens have limited lifespan (typically a few hours)
 - Refresh the token by following Step 3 again
+
+### UAS Button Not Visible
+
+**Issue**: The UAS feature button is not appearing in the UI despite other setup being complete
+
+**Solution**:
+
+- Ensure `uasPersonalization` toggle is ON in local config
+- Verify that the `ckns_id` cookie is present in your browser's cookie store for `localhost`
+- Copy a fresh `ckns_id` cookie from test.bbc.com following Step 3.5
+- Ensure both `ckns_atkn` and `ckns_id` cookies are present
+- The `ckns_id` cookie validates user sign-in status; without it, the UI will not display UAS features
+- Clear browser cache and reload the page after adding the cookies
+- Check the browser console for any errors related to authentication or feature detection
 
 ## Additional Resources
 
