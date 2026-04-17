@@ -295,7 +295,9 @@ const constructPageFetchUrl = ({
         break;
       }
       case LIVE_RADIO_PAGE:
-        fetchUrl = Url(`${pathname}`);
+        // TODO - check is required, if so update tests
+        fetchUrl = Url(`${host}${port}/api/local${pathname}`); // TODO? - destructure pathname?
+        // fetchUrl = Url(`${pathname}`);
         break;
       case LIVE_TV_PAGE: {
         fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);

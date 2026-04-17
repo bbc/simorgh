@@ -14,6 +14,7 @@ import {
   HOME_PAGE,
   AUDIO_PAGE,
   TV_PAGE,
+  LIVE_RADIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import { PageTypes } from '#app/models/types/global';
 import PageDataParams from '#app/models/types/pageDataParams';
@@ -22,6 +23,7 @@ import withOptimizelyProvider from '#app/legacy/containers/PageHandlers/withOpti
 import { HomePageProps } from '#app/pages/HomePage/HomePage';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import derivePageType from '#nextjs/utilities/derivePageType';
+import { LiveRadioPageProps } from '#app/pages/LiveRadioPage/types';
 
 // AV Embeds
 import withMediaError from '#app/lib/utilities/episodeAvailability/withMediaError';
@@ -39,6 +41,8 @@ import handleOnDemandAudioRoute from './onDemandAudio/handleOnDemandAudioRoute';
 import { OnDemandAudioProps } from './onDemandAudio/types';
 // On Demand TV
 import handleOnDemandTvRoute from './onDemandTv/handleOnDemandTvRoute';
+// Live Radio
+import handleLiveRadioRoute from './liveRadio/handleLiveRadioRoute';
 
 // Dynamic imports of page layouts
 const AvEmbedsPageLayout = dynamic(
@@ -54,6 +58,10 @@ const OnDemandAudioPage = dynamic(
 );
 const OnDemandTvPage = dynamic(
   () => import('#app/pages/OnDemandTvPage/OnDemandTvPage'),
+);
+
+const LiveRadioPage = dynamic(
+  () => import('#app/pages/LiveRadioPage/LiveRadioPage'),
 );
 
 const getPageType = ({
@@ -87,6 +95,7 @@ const ROUTE_HANDLERS = {
   [HOME_PAGE]: handleHomepageRoute,
   [AUDIO_PAGE]: handleOnDemandAudioRoute,
   [TV_PAGE]: handleOnDemandTvRoute,
+  [LIVE_RADIO_PAGE]: handleLiveRadioRoute,
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
@@ -129,7 +138,8 @@ type PageProps = {
   ArticlePageProps &
   HomePageProps &
   OnDemandAudioProps &
-  OnDemandTVProps;
+  OnDemandTVProps &
+  LiveRadioPageProps;
 
 export default function PageTypeToRender({ pageType, ...props }: PageProps) {
   switch (pageType) {
@@ -149,6 +159,9 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
       return withMediaError(OnDemandAudioPage)({ ...props });
     case TV_PAGE:
       return withMediaError(OnDemandTvPage)({ ...props });
+    // TO DO -- Props type
+    case LIVE_RADIO_PAGE:
+      return withMediaError(LiveRadioPage)({ ...props });
     // Home Page
     case HOME_PAGE:
       return withOptimizelyProvider(HomePage)({ ...props });
