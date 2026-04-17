@@ -5,6 +5,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import isLocal from '#app/lib/utilities/isLocal';
 import uasApiRequest from '#app/lib/uasApi';
 import {
+  buildGlobalId,
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
@@ -72,11 +73,10 @@ const useUASButton = ({
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);
         } else {
-          // TO be implemented with https://bbc.atlassian.net/browse/WS-2212
-          // const globalId = buildGlobalId(articleId);
-          // await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-          //   globalId,
-          // });
+          const globalId = buildGlobalId(articleId);
+          await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+            globalId,
+          });
           setIsSaved(false);
         }
       } catch (err) {
