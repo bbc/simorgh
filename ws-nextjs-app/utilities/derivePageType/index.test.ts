@@ -15,7 +15,7 @@ import derivePageType from '.';
 
 describe('derivePageType', () => {
   it('should strip out query params from the pathname', () => {
-    const pathname = '/pidgin/live/xxxxxxxxx?foo=bar';
+    const pathname = '/pidgin/live/cew7pxl4p4xt?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
@@ -32,14 +32,20 @@ describe('derivePageType', () => {
     expect(result).toEqual(HOME_PAGE);
   });
 
-  it("should return LIVE_PAGE if pathname includes 'live'", () => {
-    const pathname = '/pidgin/live/xxxxxxxxx';
+  it("should return LIVE_PAGE if pathname is a TIPO ID and includes 'live'", () => {
+    const pathname = '/pidgin/live/cew7pxl4p4xt';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
 
-  it("should return UGC_PAGE if pathname includes 'send'", () => {
-    const pathname = '/pidgin/send/xxxxxxxxx';
+  it("should return LIVE_PAGE if pathname is a CPS ID and includes 'live'", () => {
+    const pathname = '/zhongwen/live/68720252/simp';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_PAGE);
+  });
+
+  it("should return UGC_PAGE if pathname is a UGC ID and includes 'send'", () => {
+    const pathname = '/pidgin/send/u50853489';
     const result = derivePageType(pathname);
     expect(result).toEqual(UGC_PAGE);
   });
@@ -76,6 +82,12 @@ describe('derivePageType', () => {
 
   it('should return AUDIO_PAGE if pathname includes `radio`', () => {
     const pathname = '/arabic/bbc_arabic_radio/w3ct01yb`';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(AUDIO_PAGE);
+  });
+
+  it('should return AUDIO_PAGE if pathname includes `programmes`', () => {
+    const pathname = '/arabic/bbc_arabic_radio/programmes/p02pc9qc';
     const result = derivePageType(pathname);
     expect(result).toEqual(AUDIO_PAGE);
   });
