@@ -192,5 +192,65 @@ describe('useUASButton', () => {
 
       expect(mockSetIsSaved).toHaveBeenCalledWith(true);
     });
+
+    it('sends DELETE request with correct globalId when removing', async () => {
+      mockuseUASFetchSaveStatus.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        error: null,
+        setIsSaved: mockSetIsSaved,
+      });
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.REMOVE);
+      });
+
+      expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
+        globalId: 'urn:bbc:articles:article:123',
+      });
+    });
+
+    it('sets isSaved to false on successful remove', async () => {
+      mockuseUASFetchSaveStatus.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        error: null,
+        setIsSaved: mockSetIsSaved,
+      });
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.REMOVE);
+      });
+
+      expect(mockSetIsSaved).toHaveBeenCalledWith(false);
+    });
+
+    it('captures error when DELETE request fails', async () => {
+      mockUasApiRequest.mockRejectedValueOnce(
+        new Error('UAS request failed with status 500'),
+      );
+
+      mockuseUASFetchSaveStatus.mockReturnValue({
+        isSaved: true,
+        isLoading: false,
+        error: null,
+        setIsSaved: mockSetIsSaved,
+      });
+
+      const { result } = renderHook(() => useUASButton(defaultProps));
+
+      await act(async () => {
+        await result.current.handleSaveAction(UASAction.REMOVE);
+      });
+
+      expect(result.current.error).toEqual(
+        new Error('UAS request failed with status 500'),
+      );
+      expect(mockSetIsSaved).not.toHaveBeenCalled();
+    });
   });
 });
