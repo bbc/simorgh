@@ -34,29 +34,29 @@
     border: solid #{pixelsToRem.px-to-rem(3)} transparent;
   }
 
-  @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
     margin-inline: #{spacings.$double};
   }
 
-  @media (min-width: #{mediaQueries.$group-3-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-3-min-width-bp}) {
     margin-inline: #{spacings.$double};
   }
 
-  @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
     margin-inline: 0;
   }
 
   // Opera Mini overrides
   :global(.is-opera-mini) & {
-    @media (max-width: #{mediaQueries.$group-0-max-width-bp}rem) {
+    @media (max-width: #{mediaQueries.$group-0-max-width-bp}) {
       margin-inline: #{spacings.$full};
     }
 
-    @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
+    @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
       margin-inline: #{spacings.$double};
     }
 
-    @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+    @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
       margin-inline: 0;
     }
   }

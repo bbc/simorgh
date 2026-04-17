@@ -1,22 +1,24 @@
 // mediaQueries.scss
 // SCSS variables for GEL Grid breakpoints, matching mediaQueries.ts
-$group-0-max-width-bp: 14.9375; // 239px / 16
-$group-1-min-width-bp: 15; // 240px / 16
-$group-1-max-width-bp: 24.9375; // 399px / 16
-$group-2-min-width-bp: 25; // 400px / 16
-$group-2-max-width-bp: 37.4375; // 599px / 16
-$group-3-min-width-bp: 37.5; // 600px / 16
-$group-3-max-width-bp: 62.9375; // 1007px / 16
-$group-4-min-width-bp: 63; // 1008px / 16
-$group-4-max-width-bp: 79.9375; // 1279px / 16
-$group-5-min-width-bp: 80; // 1280px / 16
+@use './px-to-rem.scss' as pixelsToRem;
+
+$group-0-max-width-bp: pixelsToRem.px-to-rem(239);
+$group-1-min-width-bp: pixelsToRem.px-to-rem(240);
+$group-1-max-width-bp: pixelsToRem.px-to-rem(399);
+$group-2-min-width-bp: pixelsToRem.px-to-rem(400);
+$group-2-max-width-bp: pixelsToRem.px-to-rem(599);
+$group-3-min-width-bp: pixelsToRem.px-to-rem(600);
+$group-3-max-width-bp: pixelsToRem.px-to-rem(1007);
+$group-4-min-width-bp: pixelsToRem.px-to-rem(1008);
+$group-4-max-width-bp: pixelsToRem.px-to-rem(1279);
+$group-5-min-width-bp: pixelsToRem.px-to-rem(1280);
 
 // Media query strings
 $forced-colours: 'screen and (forced-colors: active)';
 $pointer-fine: '(pointer: fine)';
 
 // Usage example:
-// @media (max-width: #{$group-0-max-width-bp}rem) { ... }
-// @media (min-width: #{$group-1-min-width-bp}rem) and (max-width: #{$group-1-max-width-bp}rem) { ... }
+// @media (max-width: #{$group-0-max-width-bp}) { ... }
+// @media (min-width: #{$group-1-min-width-bp}) and (max-width: #{$group-1-max-width-bp}) { ... }
 // @media #{$pointer-fine} { ... }
 // @media #{$forced-colours} { ... }

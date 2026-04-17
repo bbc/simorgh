@@ -12,7 +12,7 @@
   overflow-x: auto;
   width: 100%;
 
-  @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
     margin: 0 -#{spacings.$double};
   }
 }
@@ -32,7 +32,7 @@
     border-bottom: transparent;
   }
 
-  @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
     padding: 0;
   }
 

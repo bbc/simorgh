@@ -70,7 +70,7 @@
       background-color: palette.$grey-3;
     }
 
-    @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
+    @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
       width: calc(50% - #{spacings.$double});
     }
   }
