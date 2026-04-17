@@ -50,6 +50,7 @@ export default ({
     playerConfig: {
       ...basePlayerConfig,
       autoplay: shouldAutoplay,
+      supportFakeFullscreen: true,
       statsObject: {
         ...basePlayerConfig.statsObject,
         episodePID: liveMediaBlock.id,

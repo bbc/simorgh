@@ -1402,6 +1402,7 @@ describe('buildSettings', () => {
           counterName: 'live_coverage.c7dkx155e626t.page',
           enableToucan: true,
           superResponsive: true,
+          supportFakeFullscreen: true,
           playlistObject: {
             holdingImageURL:
               'https://ichef.bbci.co.uk/images/ic/$recipe/p0k31t4d.jpg',
@@ -1517,6 +1518,7 @@ describe('buildSettings', () => {
           counterName: 'live_coverage.cvp5r6m6mgpt.page',
           enableToucan: true,
           superResponsive: true,
+          supportFakeFullscreen: true,
           playlistObject: {
             holdingImageURL:
               'https://ichef.bbci.co.uk/images/ic/$recipe/p08b23t4.png',
