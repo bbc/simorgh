@@ -159,7 +159,6 @@ export default function PageTypeToRender({ pageType, ...props }: PageProps) {
       return withMediaError(OnDemandAudioPage)({ ...props });
     case TV_PAGE:
       return withMediaError(OnDemandTvPage)({ ...props });
-    // TO DO -- Props type
     case LIVE_RADIO_PAGE:
       return withMediaError(LiveRadioPage)({ ...props });
     // Home Page
