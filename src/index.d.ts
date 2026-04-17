@@ -1,5 +1,10 @@
 declare module '*.md';
 
+declare module '*.module.scss' {
+  const styles: { [className: string]: string };
+  export default styles;
+}
+
 declare module 'intersection-observer';
 
 declare namespace React.JSX {
