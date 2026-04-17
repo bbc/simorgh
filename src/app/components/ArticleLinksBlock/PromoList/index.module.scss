@@ -9,7 +9,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: #{spacings.$full}rem;
+    gap: #{spacings.$full};
     width: 100%;
   }
 
@@ -24,39 +24,39 @@
 .list {
   display: flex;
   flex-shrink: 0;
-  margin-inline: #{spacings.$full}rem;
+  margin-inline: #{spacings.$full};
 
   &:last-of-type {
-    margin-bottom: #{spacings.$triple}rem;
+    margin-bottom: #{spacings.$triple};
   }
 
   @media #{mediaQueries.$forced-colours} {
-    border: solid #{pixelsToRem.px-to-rem(3)}rem transparent;
+    border: solid #{pixelsToRem.px-to-rem(3)} transparent;
   }
 
-  @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
-    margin-inline: #{spacings.$double}rem;
+  @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
+    margin-inline: #{spacings.$double};
   }
 
-  @media (min-width: #{mediaQueries.$group-3-min-width-bp}rem) {
-    margin-inline: #{spacings.$double}rem;
+  @media (min-width: #{mediaQueries.$group-3-min-width-bp}) {
+    margin-inline: #{spacings.$double};
   }
 
-  @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
     margin-inline: 0;
   }
 
   // Opera Mini overrides
   :global(.is-opera-mini) & {
-    @media (max-width: #{mediaQueries.$group-0-max-width-bp}rem) {
-      margin-inline: #{spacings.$full}rem;
+    @media (max-width: #{mediaQueries.$group-0-max-width-bp}) {
+      margin-inline: #{spacings.$full};
     }
 
-    @media (min-width: #{mediaQueries.$group-2-min-width-bp}rem) {
-      margin-inline: #{spacings.$double}rem;
+    @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
+      margin-inline: #{spacings.$double};
     }
 
-    @media (min-width: #{mediaQueries.$group-4-min-width-bp}rem) {
+    @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
       margin-inline: 0;
     }
   }
