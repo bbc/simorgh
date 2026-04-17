@@ -12,6 +12,7 @@ const options = {
     '@testing-library/dom',
     '@storybook/addon-knobs',
     'next', // next/dynamic is referenced in some shared components with Express and Next.js, but is swapped out by Babel at build time in the Express app, so depcheck thinks it's missing
+    'ThemeProviderSCSSModules', // internal SCSS module path resolved via webpack/next.js sassOptions.loadPaths
   ],
 };
 
