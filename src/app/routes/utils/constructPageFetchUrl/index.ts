@@ -42,7 +42,7 @@ export const isUgcIdCheck = (path: string) =>
 export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 export const isCpsIdCheck = (path: string) =>
-  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})(\/[a-z]+)?$/.test(path);
+  /[a-z0-9\-_]*[0-9]{5,9}[a-z0-9\-_]*(\/[a-z]+)?$/.test(path);
 export const isTipoIdCheck = (path: string) =>
   /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
