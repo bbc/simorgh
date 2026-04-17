@@ -272,3 +272,33 @@ export const AccountIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+
+export const BookmarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="13"
+    height="18"
+    viewBox="0 0 13 18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M11.25 1.25V15.375L6.25 12.5625L1.25 15.375V1.25H11.25ZM12.5 0H0V17.5L6.25 14L12.5 17.5V0Z"
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
+export const Spinner = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 32 32"
+    width="1em"
+    height="1em"
+    className={className}
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="m29 8.3-2.5 1.5c1.1 1.8 1.6 3.9 1.6 6.2 0 6.9-5.3 12.2-12.1 12.2-6.9 0-12.1-5.3-12.1-12.2S9.1 3.8 16 3.8V1C7.5 1 1 7.5 1 16s6.5 15 15 15 15-6.5 15-15c0-2.9-.7-5.5-2-7.7" />
+  </svg>
+);

@@ -1,3 +1,6 @@
+import { Spinner, BookmarkIcon } from '#app/components/icons';
+import styles from './index.styles';
+
 export interface ActionButtonProps {
   onClick: () => void;
   isLoading?: boolean;
@@ -15,12 +18,15 @@ const ActionButton = ({
 }: ActionButtonProps) => {
   return (
     <button
+      css={styles.buttonWrapper}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}
       aria-label={label}
       title={label}
     >
+      {isLoading && <Spinner css={styles.buttonAnimation} />}
+      {!isLoading && <BookmarkIcon />}
       {buttonText}
     </button>
   );

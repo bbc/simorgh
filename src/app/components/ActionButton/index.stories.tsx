@@ -55,23 +55,24 @@ export default {
 };
 
 export const Unsaved = withProviders({
-  buttonText: 'Save article',
+  buttonText: 'Save for later',
   label: 'Save this article',
-});
-
-export const Saved = withProviders({
-  buttonText: 'Article saved',
-  label: 'Article has been saved',
 });
 
 export const Loading = withProviders({
   isLoading: true,
-  buttonText: 'Saving...',
+  buttonText: 'Saving',
   label: 'Saving article',
 });
 
-export const Disabled = withProviders({
+export const Saved = withProviders({
+  buttonText: 'Saved to My News',
+  label: 'Article has been saved',
+});
+
+
+export const Remove = withProviders({
   disabled: true,
-  buttonText: 'Save article',
-  label: 'Save this article',
+  buttonText: 'Remove',
+  label: 'Remove this article from saved',
 });
