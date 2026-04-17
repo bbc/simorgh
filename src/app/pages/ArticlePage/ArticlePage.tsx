@@ -231,7 +231,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   // test experiment to verify if page views are being tracked correctly
   const testPageViewsExperimentName = 'test_page_views_aa';
-  const testPageViewsExperimentVariant = useOptimizelyVariation({
+  const testPageViewsVariant = useOptimizelyVariation({
     experimentName: testPageViewsExperimentName,
     experimentType: ExperimentType.CLIENT_SIDE,
   });
@@ -259,7 +259,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const testPageViewsExperimentProps = getActiveExperimentProps(
     testPageViewsExperimentName,
-    testPageViewsExperimentVariant,
+    testPageViewsVariant,
   );
 
   const timeOfDayExperimentProps = getActiveExperimentProps(
