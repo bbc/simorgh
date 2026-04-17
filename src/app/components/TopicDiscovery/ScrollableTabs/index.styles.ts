@@ -72,6 +72,10 @@ const styles = {
         cursor: 'default',
         color: '#8A8C8E',
       },
+      '&:focus-visible': {
+        outline: `3px solid ${palette.BLACK}`,
+        outlineOffset: '-3px',
+      },
     }),
 };
 

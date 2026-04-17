@@ -103,8 +103,7 @@ const ScrollableTabs = ({
         css={styles.scrollButton}
         onClick={() => scroll('start')}
         disabled={!canScrollStart}
-        aria-hidden="true"
-        tabIndex={-1}
+        aria-label="Scroll tabs left"
         data-testid="scroll-start"
       >
         <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
@@ -144,8 +143,7 @@ const ScrollableTabs = ({
         css={styles.scrollButton}
         onClick={() => scroll('end')}
         disabled={!canScrollEnd}
-        aria-hidden="true"
-        tabIndex={-1}
+        aria-label="Scroll tabs right"
         data-testid="scroll-end"
       >
         <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
