@@ -109,6 +109,11 @@ module.exports = ({
             },
             {
               loader: 'sass-loader',
+              options: {
+                sassOptions: {
+                  loadPaths: [resolvePath('src/app/components')],
+                },
+              },
             },
           ],
         },
@@ -117,7 +122,14 @@ module.exports = ({
           use: [
             IS_PROD ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',
-            'sass-loader',
+            {
+              loader: 'sass-loader',
+              options: {
+                sassOptions: {
+                  loadPaths: [resolvePath('src/app/components')],
+                },
+              },
+            },
           ],
         },
       ],

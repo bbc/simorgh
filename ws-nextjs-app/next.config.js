@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
 
 const assetPrefix =
@@ -62,6 +63,9 @@ module.exports = {
   allowedDevOrigins: ['localhost.bbc.com'],
   assetPrefix,
   compiler: { emotion: true },
+  sassOptions: {
+    includePaths: [path.join(__dirname, '../src/app/components')],
+  },
   distDir: 'build',
   env: {
     LOG_TO_CONSOLE: 'true',

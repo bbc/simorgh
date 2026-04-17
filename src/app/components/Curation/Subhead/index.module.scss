@@ -1,15 +1,13 @@
-@use '../../ThemeProviderSCSSModules/fontSizes.scss' as fontSizes;
-@use '../../ThemeProviderSCSSModules/palette.scss' as palette;
-@use '../../ThemeProviderSCSSModules/fontVariants.scss' as fontVariants;
+@use 'ThemeProviderSCSSModules/themeTokens.scss' as theme;
 
 .h2 {
-  @include fontVariants.gel-font-variant('sans-bold');
-  @include fontSizes.gel-font-size(doublePica);
-  color: palette.$grey-10;
+  @include theme.fontVariants-gel-font-variant('sans-bold');
+  @include theme.fontSizes-gel-font-size(doublePica);
+  color: theme.$palette-grey-10;
 
   a {
     display: inline-block;
-    color: palette.$grey-10;
+    color: theme.$palette-grey-10;
     text-decoration: none;
   }
 
@@ -19,11 +17,11 @@
   }
 
   a:visited {
-    color: palette.$grey-10;
+    color: theme.$palette-grey-10;
   }
 
   a:hover, a:focus {
-    color: palette.$postbox;
+    color: theme.$palette-postbox;
 
     span {
       text-decoration: underline;

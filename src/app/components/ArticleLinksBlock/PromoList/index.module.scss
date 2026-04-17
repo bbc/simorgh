@@ -1,6 +1,4 @@
-@use '../../ThemeProviderSCSSModules/spacings.scss' as spacings;
-@use '../../ThemeProviderSCSSModules/mediaQueries.scss' as mediaQueries;
-@use '../../ThemeProviderSCSSModules/px-to-rem.scss' as pixelsToRem;
+@use 'ThemeProviderSCSSModules/themeTokens.scss' as theme;
 
 .promo {
   & ul {
@@ -9,7 +7,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: #{spacings.$full};
+    gap: #{theme.$spacings-full};
     width: 100%;
   }
 
@@ -24,39 +22,39 @@
 .list {
   display: flex;
   flex-shrink: 0;
-  margin-inline: #{spacings.$full};
+  margin-inline: #{theme.$spacings-full};
 
   &:last-of-type {
-    margin-bottom: #{spacings.$triple};
+    margin-bottom: #{theme.$spacings-triple};
   }
 
-  @media #{mediaQueries.$forced-colours} {
-    border: solid #{pixelsToRem.px-to-rem(3)} transparent;
+  @media #{theme.$mediaQueries-forced-colours} {
+    border: solid #{theme.pixelsToRem-px-to-rem(3)} transparent;
   }
 
-  @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
-    margin-inline: #{spacings.$double};
+  @media (min-width: #{theme.$mediaQueries-group-2-min-width-bp}) {
+    margin-inline: #{theme.$spacings-double};
   }
 
-  @media (min-width: #{mediaQueries.$group-3-min-width-bp}) {
-    margin-inline: #{spacings.$double};
+  @media (min-width: #{theme.$mediaQueries-group-3-min-width-bp}) {
+    margin-inline: #{theme.$spacings-double};
   }
 
-  @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
+  @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
     margin-inline: 0;
   }
 
   // Opera Mini overrides
   :global(.is-opera-mini) & {
-    @media (max-width: #{mediaQueries.$group-0-max-width-bp}) {
-      margin-inline: #{spacings.$full};
+    @media (max-width: #{theme.$mediaQueries-group-0-max-width-bp}) {
+      margin-inline: #{theme.$spacings-full};
     }
 
-    @media (min-width: #{mediaQueries.$group-2-min-width-bp}) {
-      margin-inline: #{spacings.$double};
+    @media (min-width: #{theme.$mediaQueries-group-2-min-width-bp}) {
+      margin-inline: #{theme.$spacings-double};
     }
 
-    @media (min-width: #{mediaQueries.$group-4-min-width-bp}) {
+    @media (min-width: #{theme.$mediaQueries-group-4-min-width-bp}) {
       margin-inline: 0;
     }
   }
