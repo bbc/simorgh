@@ -21,7 +21,7 @@ const styles = {
       },
     }),
 
-  tab: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  tab: ({ palette, spacings, fontSizes, fontVariants, mq }: Theme) =>
     css({
       ...fontVariants.sansRegular,
       ...fontSizes.pica,
@@ -29,12 +29,15 @@ const styles = {
       background: 'none',
       border: 'none',
       borderBottom: '3px solid transparent',
-      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
+      [mq.GROUP_2_MIN_WIDTH]: {
+        padding: `${spacings.DOUBLE}rem`,
+      },
       cursor: 'pointer',
       color: palette.GREY_6,
       '&:hover': {
         color: palette.GREY_10,
-        borderBottomColor: palette.GREY_5,
+        borderBottomColor: '#B80000',
       },
       '&:focus-visible': {
         outline: `3px solid ${palette.BLACK}`,
@@ -45,7 +48,7 @@ const styles = {
   tabActive: ({ palette }: Theme) =>
     css({
       color: palette.GREY_10,
-      borderBottomColor: palette.POSTBOX,
+      borderBottomColor: '#B80000',
       fontWeight: 700,
     }),
 
