@@ -53,10 +53,10 @@ jobs:
           result-encoding: string
 
       - name: Send slack message if comment threshold is exceeded
-        if: steps.get_comments.outputs.totalComments > 20
+        if: steps.get_comments.outputs.totalComments == 21
         uses: slackapi/slack-github-action@v2.1.0
         with:
           webhook: ${{ secrets.SLACK_PR_COMMENTS_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            "text": "Pull Request #${{ steps.get_comments.outputs.prNumber }} now has over 12 comments.\n<https://github.com/bbc/simorgh/pull/${{ steps.get_comments.outputs.prNumber }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.totalComments }}"
+            "text": "Pull Request #${{ steps.get_comments.outputs.prNumber }} now has over 20 comments.\n<https://github.com/bbc/simorgh/pull/${{ steps.get_comments.outputs.prNumber }}|View Pull Request>\nCurrent comment count: ${{ steps.get_comments.outputs.totalComments }}"
