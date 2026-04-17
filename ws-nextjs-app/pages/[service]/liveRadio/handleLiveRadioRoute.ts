@@ -43,10 +43,10 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv, // TODO - check if needed
+    rendererEnv: isTest() ? 'live' : rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: LIVE_RADIO_PAGE,
-    disableRadioSchedule, // TODO - check if its still optimial to fetch toggles before pageData
+    disableRadioSchedule,
   });
 
   const { pageData, status } = data;

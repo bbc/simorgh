@@ -48,7 +48,6 @@ const isOnDemandAudioPodcastPath = (pathname: string) =>
 const isOnDemandTvPath = (pathname: string) =>
   /\/bbc_[a-z]+_tv\/(?:tv|tv_programmes)\//.test(pathname);
 
-// to do - check against incoming changes
 const isLiveRadioPath = (pathname: string) =>
   /\/bbc_[a-z]+_radio\/liveradio/.test(pathname);
 
