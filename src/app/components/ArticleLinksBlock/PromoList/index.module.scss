@@ -1,4 +1,4 @@
-@use 'ThemeProviderSCSSModules/themeTokens.scss' as theme;
+@use '@scss/themeTokens' as theme;
 
 .promo {
   & ul {

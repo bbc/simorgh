@@ -63,9 +63,6 @@ module.exports = {
   allowedDevOrigins: ['localhost.bbc.com'],
   assetPrefix,
   compiler: { emotion: true },
-  sassOptions: {
-    includePaths: [path.join(__dirname, '../src/app/components')],
-  },
   distDir: 'build',
   env: {
     LOG_TO_CONSOLE: 'true',
@@ -86,6 +83,11 @@ module.exports = {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
+    };
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@scss': path.join(__dirname, '../src/app/components/ThemeProviderSCSSModules'),
     };
 
     config.plugins.push(

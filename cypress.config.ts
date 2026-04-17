@@ -85,32 +85,6 @@ export default defineConfig({
                   },
                 ],
               },
-              {
-                test: /\.module\.(css|scss)$/,
-                use: [
-                  'style-loader',
-                  {
-                    loader: 'css-loader',
-                    options: {
-                      modules: true,
-                      importLoaders: 1,
-                      esModule: false,
-                    },
-                  },
-                  {
-                    loader: 'sass-loader',
-                    options: {
-                      sassOptions: {
-                        loadPaths: [resolvePath('src/app/components')],
-                      },
-                    },
-                  },
-                ],
-              },
-              {
-                test: /(?<!\.module)\.(css|scss)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-              },
             ],
           },
           plugins: [

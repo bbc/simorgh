@@ -1,4 +1,4 @@
-@use 'ThemeProviderSCSSModules/themeTokens.scss' as theme;
+@use '@scss/themeTokens' as theme;
 
 .link {
   @include theme.fontSizes-gel-font-size(pica);

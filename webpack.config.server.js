@@ -54,30 +54,12 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
                 esModule: false,
               },
             },
-            {
-              loader: 'sass-loader',
-              options: {
-                sassOptions: {
-                  loadPaths: [resolvePath('src/app/components')],
-                },
-              },
-            },
+            'sass-loader',
           ],
         },
         {
           test: /(?<!\.module)\.scss$/,
-          use: [
-            'style-loader',
-            'css-loader',
-            {
-              loader: 'sass-loader',
-              options: {
-                sassOptions: {
-                  loadPaths: [resolvePath('src/app/components')],
-                },
-              },
-            },
-          ],
+          use: ['style-loader', 'css-loader', 'sass-loader'],
         },
       ],
     },
