@@ -26,7 +26,7 @@ const SaveArticleButton = ({
   }
 
   const buttonLabel = isSaved ? 'Remove from saved' : 'Save for later';
-  const buttonText = isLoading ? 'Loading...' : buttonLabel;
+  const buttonText = isLoading ? 'Saving' : buttonLabel;
 
   const handleClick = () => {
     if (onSignInRequired) {
@@ -40,6 +40,7 @@ const SaveArticleButton = ({
     <ActionButton
       onClick={handleClick}
       isLoading={isLoading}
+      isSaved={isSaved}
       disabled={isLoading}
       label={buttonLabel}
       buttonText={buttonText}

@@ -1,9 +1,14 @@
-import { Spinner, BookmarkIcon } from '#app/components/icons';
+import {
+  Spinner,
+  BookmarkIcon,
+  FilledBookmarkIcon,
+} from '#app/components/icons';
 import styles from './index.styles';
 
 export interface ActionButtonProps {
   onClick: () => void;
   isLoading?: boolean;
+  isSaved?: boolean;
   disabled?: boolean;
   label: string;
   buttonText: string;
@@ -12,6 +17,7 @@ export interface ActionButtonProps {
 const ActionButton = ({
   onClick,
   isLoading = false,
+  isSaved = false,
   disabled = false,
   label,
   buttonText,
@@ -26,7 +32,8 @@ const ActionButton = ({
       title={label}
     >
       {isLoading && <Spinner css={styles.buttonAnimation} />}
-      {!isLoading && <BookmarkIcon />}
+      {!isLoading && !isSaved && <BookmarkIcon />}
+      {!isLoading && isSaved && <FilledBookmarkIcon />}
       {buttonText}
     </button>
   );

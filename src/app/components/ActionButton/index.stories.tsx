@@ -10,12 +10,14 @@ type WithProvidersArgs = {
   disabled?: boolean;
   buttonText?: string;
   label?: string;
+  isSaved?: boolean;
 };
 
 const withProviders =
   ({ 
     isLoading = false, 
     disabled = false, 
+    isSaved = false,
     buttonText = 'Save article', 
     label = 'Save this article' 
   }: WithProvidersArgs) =>
@@ -36,6 +38,7 @@ const withProviders =
           <ActionButton
             onClick={() => console.log('Button clicked')}
             isLoading={isLoading}
+            isSaved={isSaved}
             disabled={disabled}
             label={label}
             buttonText={buttonText}
@@ -68,6 +71,7 @@ export const Loading = withProviders({
 export const Saved = withProviders({
   buttonText: 'Saved to My News',
   label: 'Article has been saved',
+  isSaved: true,
 });
 
 
