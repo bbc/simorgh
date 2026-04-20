@@ -10,6 +10,7 @@ import handleError from '#app/routes/utils/handleError';
 import { PageTypes } from '#app/models/types/global';
 
 import { ArticleMetadata } from '#app/models/types/optimo';
+import topicDiscoveryFixture from '#app/components/TopicDiscovery/fixtures';
 import augmentWithDisclaimer from './augmentWithDisclaimer';
 import shouldRender from '../../../utilities/shouldRender';
 import getPageData from '../../../utilities/pageRequests/getPageData';
@@ -111,6 +112,7 @@ export default async (context: GetServerSidePropsContext) => {
     billboardCuration = null,
     mediaCuration = null,
     portraitVideoItems = null,
+    topicDiscovery = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -138,6 +140,7 @@ export default async (context: GetServerSidePropsContext) => {
         },
         mostRead,
         portraitVideoItems,
+        topicDiscovery: topicDiscovery ?? topicDiscoveryFixture,
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,

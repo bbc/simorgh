@@ -81,6 +81,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -512,6 +513,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               experimentProps: timeOfDayExperimentProps,
             })}
           />
+          {!isAmp && !isLite && pageData.topicDiscovery && (
+            <TopicDiscovery
+              topicDiscovery={pageData.topicDiscovery}
+              headingText={
+                translations.topicDiscovery?.heading ?? 'Discover more'
+              }
+            />
+          )}
         </div>
         {showAdaptiveMediaCuration && (
           <div css={styles.adaptiveMediaCurationRow}>

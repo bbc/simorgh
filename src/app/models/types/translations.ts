@@ -61,6 +61,9 @@ export interface Translations {
     500: TranslationsError;
   };
   continueReading?: string;
+  topicDiscovery?: {
+    heading: string;
+  };
   readTime?: Partial<{
     readTimePrefix: string;
     quick: string;
