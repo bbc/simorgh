@@ -98,16 +98,19 @@ const ScrollableTabs = ({
 
   return (
     <div css={styles.wrapper}>
-      <button
-        type="button"
-        css={styles.scrollButton}
-        onClick={() => scroll('start')}
-        disabled={!canScrollStart}
-        aria-label="Scroll tabs left"
-        data-testid="scroll-start"
-      >
-        <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
-      </button>
+      <div css={styles.scrollButtonWrapper}>
+        <button
+          type="button"
+          css={styles.scrollButton}
+          onClick={() => scroll('start')}
+          disabled={!canScrollStart}
+          aria-label="Scroll tabs left"
+          data-testid="scroll-start"
+        >
+          <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
+        </button>
+        <span css={styles.scrollButtonFadeStart} aria-hidden="true" />
+      </div>
 
       <div
         ref={tabListRef}
@@ -138,16 +141,19 @@ const ScrollableTabs = ({
         })}
       </div>
 
-      <button
-        type="button"
-        css={styles.scrollButton}
-        onClick={() => scroll('end')}
-        disabled={!canScrollEnd}
-        aria-label="Scroll tabs right"
-        data-testid="scroll-end"
-      >
-        <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
-      </button>
+      <div css={styles.scrollButtonWrapper}>
+        <span css={styles.scrollButtonFadeEnd} aria-hidden="true" />
+        <button
+          type="button"
+          css={styles.scrollButton}
+          onClick={() => scroll('end')}
+          disabled={!canScrollEnd}
+          aria-label="Scroll tabs right"
+          data-testid="scroll-end"
+        >
+          <Chevron orientation={ChevronOrientation.FORWARD} dir={dir} />
+        </button>
+      </div>
     </div>
   );
 };

@@ -57,11 +57,12 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      flexShrink: 0,
+      width: '44px',
+      height: '44px',
       background: 'none',
       border: 'none',
       cursor: 'pointer',
-      padding: `${spacings.HALF}rem`,
+      padding: 0,
       color: palette.GREY_6,
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
@@ -78,6 +79,53 @@ const styles = {
       '&:focus-visible': {
         outline: `3px solid ${palette.BLACK}`,
         outlineOffset: '-3px',
+      },
+    }),
+
+  scrollButtonWrapper: () =>
+    css({
+      position: 'relative',
+      flexShrink: 0,
+      display: 'flex',
+      alignItems: 'center',
+      zIndex: 1,
+    }),
+
+  scrollButtonFadeStart: () =>
+    css({
+      position: 'absolute',
+      top: 0,
+      height: '100%',
+      width: '16px',
+      pointerEvents: 'none',
+      "[dir='ltr'] &": {
+        right: '-16px',
+        background:
+          'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+      },
+      "[dir='rtl'] &": {
+        left: '-16px',
+        background:
+          'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+      },
+    }),
+
+  scrollButtonFadeEnd: () =>
+    css({
+      position: 'absolute',
+      top: 0,
+      height: '100%',
+      width: '16px',
+      pointerEvents: 'none',
+      "[dir='ltr'] &": {
+        left: '-16px',
+        background:
+          'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+      },
+      "[dir='rtl'] &": {
+        right: '-16px',
+        background:
+          'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
       },
     }),
 };
