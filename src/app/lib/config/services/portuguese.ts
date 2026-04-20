@@ -85,6 +85,9 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Ver todos',
       home: 'Início',
       continueReading: 'Continue lendo',
+      topicDiscovery: {
+        heading: 'Tópicos relacionados',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
