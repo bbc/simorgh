@@ -8,6 +8,10 @@ type ScrollableTabsProps = {
   activeTabId: string;
   onTabChange: (tabId: string) => void;
   labelledBy: string;
+  clickTrackerHandler?: {
+    onClick?: (event: React.MouseEvent) => void;
+    [key: string]: unknown;
+  };
 };
 
 const ScrollableTabs = ({
@@ -15,6 +19,7 @@ const ScrollableTabs = ({
   activeTabId,
   onTabChange,
   labelledBy,
+  clickTrackerHandler,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -133,7 +138,10 @@ const ScrollableTabs = ({
               aria-controls={`tabpanel-${tab.id}`}
               tabIndex={isActive ? 0 : -1}
               css={[styles.tab, isActive && styles.tabActive]}
-              onClick={() => onTabChange(tab.id)}
+              onClick={event => {
+                onTabChange(tab.id);
+                clickTrackerHandler?.onClick?.(event);
+              }}
             >
               {tab.label}
             </button>

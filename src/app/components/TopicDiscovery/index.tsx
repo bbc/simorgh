@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import { Summary } from '#app/models/types/curationData';
+import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import { TopicDiscoveryData, TopicDiscoveryItem } from './types';
@@ -44,6 +46,12 @@ const TopicDiscovery = ({
 
   const [activeTabId, setActiveTabId] = useState(validTopics[0]?.topicId ?? '');
 
+  const viewTracker = useViewTracker(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler({
+    ...eventTrackingData,
+    preventNavigation: true,
+  });
+
   if (validTopics.length === 0) return null;
 
   const activeTopic = validTopics.find(topic => topic.topicId === activeTabId);
@@ -58,7 +66,11 @@ const TopicDiscovery = ({
   const summaries = activeTopic.items.map(mapItemToSummary);
 
   return (
-    <section css={styles.section} data-testid="topic-discovery">
+    <section
+      css={styles.section}
+      data-testid="topic-discovery"
+      {...viewTracker}
+    >
       <h2 id={HEADING_ID} css={styles.heading}>
         {headingText}
       </h2>
@@ -67,6 +79,7 @@ const TopicDiscovery = ({
         activeTabId={activeTabId}
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
+        clickTrackerHandler={clickTrackerHandler}
       />
       <div
         role="tabpanel"
