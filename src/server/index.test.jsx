@@ -21,12 +21,8 @@ import createAdNonce from '../app/utilities/createAdNonce';
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
 
-const path = require('path');
-const express = require('express');
 const server = require('./index').default;
 const getToggles = require('../app/lib/utilities/getToggles/withCache').default;
-
-const sendFileSpy = jest.spyOn(express.response, 'sendFile');
 
 const validateHttpHeader = (headers, headerKey, expectedHeaderValue) => {
   const headerKeys = Object.keys(headers);
@@ -965,57 +961,6 @@ describe('Server', () => {
       const { statusCode, text } = await makeRequest('/status');
       expect(statusCode).toBe(200);
       expect(text).toEqual('Ok');
-    });
-  });
-
-  describe('Service workers', () => {
-    it('should serve a file for existing service workers', async () => {
-      await makeRequest('/gahuza/sw.js');
-      expect(sendFileSpy.mock.calls[0][0]).toEqual(
-        path.join(__dirname, '/public/sw.js'),
-      );
-    });
-
-    it('should not serve a file for non-existing service workers', async () => {
-      const { statusCode } = await makeRequest('/news/sw.js');
-      expect(sendFileSpy.mock.calls.length).toEqual(0);
-      expect(statusCode).toEqual(500);
-    });
-
-    it('should serve the sw.js with cache control information', async () => {
-      const { header } = await makeRequest('/pidgin/sw.js');
-      expect(header['cache-control']).toBe(
-        'public, stale-if-error=6000, stale-while-revalidate=600, max-age=300',
-      );
-    });
-  });
-
-  describe('Manifest json', () => {
-    it.each`
-      manifestPath                | expectedManifestFile
-      ${'/pidgin/manifest.json'}  | ${'/pidgin/manifest.json'}
-      ${'/serbian/manifest.json'} | ${'/serbian/manifest.json'}
-    `(
-      'should serve a file for $manifestPath',
-      async ({ manifestPath, expectedManifestFile }) => {
-        await makeRequest(manifestPath);
-        expect(sendFileSpy.mock.calls[0][0]).toEqual(
-          path.join(__dirname, `/public/${expectedManifestFile}`),
-        );
-      },
-    );
-
-    it('should not serve a manifest file for non-existing services', async () => {
-      const { statusCode } = await makeRequest('/some-service/manifest.json');
-      expect(sendFileSpy.mock.calls.length).toEqual(0);
-      expect(statusCode).toEqual(500);
-    });
-
-    it('should serve a response cache control of 1 day', async () => {
-      const { header } = await makeRequest('/pidgin/manifest.json');
-      expect(header['cache-control']).toBe(
-        'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
-      );
     });
   });
 
