@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import {
   Spinner,
   BookmarkIcon,
   FilledBookmarkIcon,
+  Close,
 } from '#app/components/icons';
 import styles from './index.styles';
 
@@ -22,6 +24,8 @@ const ActionButton = ({
   label,
   buttonText,
 }: ActionButtonProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <button
       css={styles.buttonWrapper}
@@ -30,11 +34,15 @@ const ActionButton = ({
       disabled={disabled || isLoading}
       aria-label={label}
       title={label}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {isLoading && <Spinner css={styles.buttonAnimation} />}
       {!isLoading && !isSaved && <BookmarkIcon />}
-      {!isLoading && isSaved && <FilledBookmarkIcon />}
-      {buttonText}
+      {!isLoading &&
+        isSaved &&
+        (isHovered ? <Close /> : <FilledBookmarkIcon />)}
+      {isHovered && isSaved ? 'Remove' : buttonText}
     </button>
   );
 };
