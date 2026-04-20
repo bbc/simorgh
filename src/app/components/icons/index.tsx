@@ -290,6 +290,23 @@ export const BookmarkIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="13"
+    height="18"
+    viewBox="0 0 13 18"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path
+      d="M3.75 1.25V18.75L9.625 15.4375L10 15.25L10.375 15.4375L16.25 18.75V1.25H3.75Z"
+      fillRule="evenodd"
+    />
+  </svg>
+);
+
 export const Spinner = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"

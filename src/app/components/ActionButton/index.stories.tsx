@@ -72,7 +72,6 @@ export const Saved = withProviders({
 
 
 export const Remove = withProviders({
-  disabled: true,
   buttonText: 'Remove',
   label: 'Remove this article from saved',
 });
