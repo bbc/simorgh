@@ -37,7 +37,7 @@ const styles = {
       color: palette.GREY_6,
       '&:hover': {
         color: palette.GREY_10,
-        borderBottomColor: '#B80000',
+        borderBottom: '4px solid #B80000',
       },
       '&:focus-visible': {
         outline: `3px solid ${palette.BLACK}`,
