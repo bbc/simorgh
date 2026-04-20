@@ -18,7 +18,6 @@ import {
   EnvConfig,
   getProcessEnvAppVariables,
 } from '#lib/utilities/getEnvConfig';
-import isLive from '#app/lib/utilities/isLive';
 
 import AmpRenderer from '#server/Document/Renderers/AmpRenderer';
 import LiteRenderer from '#server/Document/Renderers/LiteRenderer';
@@ -41,7 +40,6 @@ type DocProps = {
   htmlAttrs: HTMLAttributes<HTMLHtmlElement>;
   ids: string[];
   pageType: string;
-  articleId: string;
   isAmp: boolean;
   isApp: boolean;
   isLite: boolean;
@@ -76,8 +74,6 @@ export default class AppDocument extends Document<DocProps> {
 
     const { css, ids } = extractCritical(initialProps.html);
 
-    const articleId = !isLive() ? url.split('/').at(-1) : null;
-
     // Read env variables from the server and expose them to the client
     const clientSideEnvVariables = getProcessEnvAppVariables();
 
@@ -93,7 +89,6 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
-      articleId,
     };
   }
 
@@ -107,7 +102,6 @@ export default class AppDocument extends Document<DocProps> {
       isAmp,
       isApp,
       isLite,
-      articleId,
     } = this.props;
 
     const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -178,14 +172,6 @@ export default class AppDocument extends Document<DocProps> {
             <body>
               <Main />
               <NextScript />
-              {(!isLive() && pageType === 'article' && articleId === 'ce4krqk1334o') && (
-                <script
-                  type="text/javascript"
-                  dangerouslySetInnerHTML={{
-                    __html: `addEventListener("DOMContentLoaded", (event) => {const myheader = document.querySelector('h1');Array.from(Array(400).keys()).forEach((i) => { setTimeout( () => { myheader.style.display = (i % 2 === 1) ? 'block' : 'none' }, 200 * i )})});`,
-                  }}
-                />
-              )}
             </body>
           </Html>
         );
