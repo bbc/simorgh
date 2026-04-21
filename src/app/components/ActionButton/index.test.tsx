@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { render } from '../react-testing-library-with-providers';
 import ActionButton from '.';
 
 const noop = () => undefined;
