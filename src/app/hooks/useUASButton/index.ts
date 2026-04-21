@@ -1,4 +1,6 @@
 import { use, useCallback, useState } from 'react';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -9,6 +11,7 @@ import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
+import uasKeys from '#app/lib/uasApi/queryKeys';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
@@ -41,8 +44,7 @@ const useUASButton = ({
   const { service } = use(ServiceContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
     useToggle('uasPersonalization');
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveError, setSaveError] = useState<Error | null>(null);
+  const queryClient = useQueryClient();
 
   const isUASEnabled =
     featureToggleOn &&
@@ -52,48 +54,53 @@ const useUASButton = ({
 
   const showButton = isUASEnabled && isSignedIn;
 
-  const { isSaved, isLoading, error, setIsSaved } = useUASFetchSaveStatus(
+  const { isSaved, isLoading, error } = useUASFetchSaveStatus(
     showButton ? articleId : '',
   );
 
-  const handleSaveAction = useCallback(
-    async (action: UASAction) => {
-      if (isSaving) return;
+  const mutation = useMutation({
+    mutationFn: async (action: UASAction) => {
+      console.log(
+        `📌  Performing ${action} action for article ${articleId} with title "${articleTitle}" on service ${service}`,
+      );
 
-      setIsSaving(true);
-      try {
-        setSaveError(null);
-
-        if (action === UASAction.SAVE) {
-          const body = createFavouritesPayload({
-            articleId,
-            service,
-            articleTitle,
-          });
-          await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
-          setIsSaved(true);
-        } else {
-          const globalId = buildGlobalId(articleId);
-          await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
-            globalId,
-          });
-          setIsSaved(false);
-        }
-      } catch (err) {
-        const saveErr = err instanceof Error ? err : new Error(String(err));
-        setSaveError(saveErr);
-      } finally {
-        setIsSaving(false);
+      if (action === UASAction.SAVE) {
+        const body = createFavouritesPayload({
+          articleId,
+          service,
+          articleTitle,
+        });
+        await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
+      } else {
+        const globalId = buildGlobalId(articleId);
+        await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
+          globalId,
+        });
       }
     },
-    [articleId, service, articleTitle, isSaving, setIsSaved],
+    onSuccess: (_, action) => {
+      console.log(
+        `📌  Successfully performed ${action} action for article ${articleId}`,
+      );
+
+      const newSavedStatus = action === UASAction.SAVE;
+      queryClient.setQueryData(
+        uasKeys.favouriteStatus(articleId),
+        newSavedStatus,
+      );
+    },
+  });
+
+  const handleSaveAction = useCallback(
+    (action: UASAction) => mutation.mutateAsync(action),
+    [mutation],
   );
 
   return {
     showButton,
     isSaved,
-    isLoading: isLoading || isSaving,
-    error: saveError || error,
+    isLoading: isLoading || mutation.isPending,
+    error: mutation.error || error,
     handleSaveAction,
   };
 };
