@@ -8,7 +8,6 @@ import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
 import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
-import isTest from '#app/lib/utilities/isTest';
 
 const logger = nodeLogger(__filename);
 
