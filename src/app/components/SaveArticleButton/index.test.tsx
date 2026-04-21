@@ -65,7 +65,7 @@ describe('SaveArticleButton', () => {
     render(<SaveArticleButton {...defaultProps} />);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveTextContent('Loading...');
+    expect(button).toHaveTextContent('Saving');
     expect(button).toBeDisabled();
   });
 
