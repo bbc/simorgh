@@ -15,7 +15,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: spacings.FULL,
+      gap: '0.5rem',
       whiteSpace: 'nowrap',
       width: '100%',
       padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
@@ -59,13 +59,14 @@ const styles = {
         marginRight: '0',
       },
     }),
-  buttonAnimation: ({ spacings }: Theme) =>
+  buttonAnimation: ({ palette }: Theme) =>
     css({
       display: 'block',
-      height: spacings.DOUBLE,
-      width: spacings.DOUBLE,
+      height: '1rem',
+      width: '1rem',
       animation: `${spinAnimation} 1s linear 0s infinite normal none running`,
       animationName: spinAnimation,
+      '& svg': { fill: palette.WHITE },
     }),
 };
 
