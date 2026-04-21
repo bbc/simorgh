@@ -22,6 +22,7 @@ import HeadToHeadV2 from './SportDataHeader/head-to-head-v2';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
+import { HeadToHeadV2Data } from './SportDataHeader/head-to-head-v2/head-to-head-v2.d';
 import LatestPostButton from './LatestPostButton';
 
 interface LivePromoImage {
@@ -60,7 +61,14 @@ export type ComponentProps = {
     endDateTime?: string;
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
-    sportEventDetails?: object | null;
+    sportDataEventContent?: {
+      id: string;
+      content: {
+        data: {
+          sportDataEvent: HeadToHeadV2Data;
+        };
+      };
+    } | null;
   };
 };
 
@@ -89,13 +97,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
-    sportEventDetails,
+    sportDataEventContent,
   } = pageData;
-
-  // console.log('&&&&&&&&&&&&&&&&&&&&&');
-  // console.log('SPORT DATA');
-  // console.log(JSON.stringify(sportEventDetails));
-  // console.log('&&&&&&&&&&&&&&&&&&&&&');
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
@@ -187,9 +190,14 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
         />
-        {sportEventDetails && (
+        {sportDataEventContent && (
           <div>
-            <HeadToHeadV2 data={sportEventDetails?.event} />
+            <HeadToHeadV2
+              data={sportDataEventContent?.content?.data?.sportDataEvent}
+              isConciseView={false} // defaulted to false for developement/ MVP
+              shouldHideBadges={false} // defaulted to false for developement/ MVP
+              shouldShowActions={false} // defaulted to false for developement/ MVP
+            />
           </div>
         )}
         <div css={styles.outerGrid}>

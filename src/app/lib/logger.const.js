@@ -15,7 +15,6 @@ const logCodes = {
   DATA_REQUEST_RECEIVED: 'data_request_received',
   DATA_RESPONSE_FROM_CACHE: 'data_response_from_cache',
   BFF_FETCH_ERROR: 'bff_fetch_error',
-  SPORT_DATA_FETCH_ERROR: 'sport_data_fetch_error',
   IDCTA_FETCH_ERROR: 'idcta_fetch_error',
 
   // Files
