@@ -10,63 +10,60 @@ const spinAnimation = keyframes`
 `;
 
 const styles = {
-  buttonWrapper: ({ mq }: Theme) =>
+  buttonWrapper: ({ mq, palette, spacings }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: '0.5rem',
+      gap: spacings.FULL,
       whiteSpace: 'nowrap',
       width: '100%',
-      padding: '0.5rem 1rem',
+      padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       cursor: 'pointer',
-      backgroundColor: '#FFFFFF',
-      color: '#202224',
-      border: '1px solid #202224',
-      marginTop: '1rem',
-      marginBottom: '1rem',
-      marginLeft: '0.5rem',
-      marginRight: '0.5rem',
+      backgroundColor: palette.WHITE,
+      color: palette.GREY_8,
+      border: `pixelsToRem(1) solid ${palette.GREY_8}`,
+      margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       ':hover': {
-        backgroundColor: '#202224',
-        color: '#FFFFFF',
+        backgroundColor: palette.GREY_8,
+        color: palette.WHITE,
         '& svg': {
-          fill: '#FFFFFF',
+          fill: palette.WHITE,
         },
       },
       ':focus-visible': {
-        backgroundColor: '#202224',
-        color: '#FFFFFF',
-        outline: '3px solid #202224',
-        boxShadow: '0 0 0 6px #fff, 0 0 0 9px #202224',
+        backgroundColor: palette.GREY_8,
+        color: palette.WHITE,
+        outline: `pixelsToRem(3) solid ${palette.GREY_8}`,
+        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 pixelsToRem(9) ${palette.GREY_8}`,
         '& svg': {
-          fill: '#FFFFFF',
+          fill: palette.WHITE,
         },
       },
       ':disabled': {
-        backgroundColor: '#202224',
-        color: '#FFFFFF',
+        backgroundColor: palette.GREY_8,
+        color: palette.WHITE,
         cursor: 'not-allowed',
         '& svg': {
-          fill: '#FFFFFF',
+          fill: palette.WHITE,
         },
       },
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginLeft: '1rem',
-        marginRight: '1rem',
+        marginLeft: spacings.DOUBLE,
+        marginRight: spacings.DOUBLE,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: '17.5rem',
-        marginLeft: '1rem',
+        marginLeft: spacings.DOUBLE,
         marginRight: '0',
       },
     }),
-  buttonAnimation: () =>
+  buttonAnimation: ({ spacings }: Theme) =>
     css({
       display: 'block',
-      height: '1rem',
-      width: '1rem',
+      height: spacings.DOUBLE,
+      width: spacings.DOUBLE,
       animation: `${spinAnimation} 1s linear 0s infinite normal none running`,
       animationName: spinAnimation,
     }),
