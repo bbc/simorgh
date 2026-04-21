@@ -23,7 +23,7 @@ describe('ActionButton', () => {
       <ActionButton
         onClick={noop}
         label="Save for later"
-        buttonText="Loading..."
+        buttonText="Saving"
         isLoading
       />,
     );
