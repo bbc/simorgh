@@ -16,6 +16,7 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
+        isLive={false}
       />,
       {
         service: 'pidgin',
@@ -37,6 +38,7 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
+        isLive={false}
       />,
       {
         service: 'persian',
@@ -58,6 +60,7 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
+        isLive={false}
       >
         {pidginItem.timestamp}
       </MostReadLink>,
@@ -71,7 +74,20 @@ describe('MostReadLink', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render a live pulse icon if the item refers to a live page', () => {
+  it.each([
+    {
+      title:
+        'should render a live pulse icon if the item refers to a live page',
+      isLive: true,
+      shouldShow: true,
+    },
+    {
+      title:
+        'should not render a live pulse icon if the item refers to a normal page',
+      isLive: false,
+      shouldShow: false,
+    },
+  ])('$title', ({ isLive, shouldShow }) => {
     const { container } = render(
       <MostReadLink
         href="https://www.bbc.com/hausa/live/c98kkrezn3jt"
@@ -81,6 +97,7 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
+        isLive={isLive}
       />,
       {
         service: 'hausa',
@@ -93,7 +110,11 @@ describe('MostReadLink', () => {
     const livePulse = container.querySelector(
       '[data-e2e=most-read-live-pulse]',
     );
-    expect(livePulse).not.toBeNull();
+    if (shouldShow) {
+      expect(livePulse).not.toBeNull();
+    } else {
+      expect(livePulse).toBeNull();
+    }
   });
 });
 

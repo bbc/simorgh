@@ -46,6 +46,7 @@ export const MostReadLink = ({
   size,
   id,
   position,
+  isLive,
   eventTrackingData,
 }: PropsWithChildren<MostReadLinkProps>) => {
   const positionIndex =
@@ -63,7 +64,6 @@ export const MostReadLink = ({
   };
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
-  const isLiveLink = href.includes('live');
 
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -73,7 +73,7 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {isLiveLink && (
+        {isLive && (
           <span data-e2e="most-read-live-pulse">
             <LiveLabel />
           </span>

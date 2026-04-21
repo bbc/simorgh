@@ -61,7 +61,7 @@ const MostRead = ({
       columnLayout={columnLayout}
     >
       {items.map(
-        ({ id, timestamp, title, href }, i) =>
+        ({ id, timestamp, title, href, isLive }, i) =>
           title &&
           href && (
             <MostReadItemWrapper
@@ -86,6 +86,7 @@ const MostRead = ({
                 size={size}
                 id={id}
                 position={i + 1}
+                isLive={isLive ?? false}
                 eventTrackingData={eventTrackingDataExtended}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (
