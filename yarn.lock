@@ -4861,7 +4861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/optimizely-sdk@npm:^5.4.1":
+"@optimizely/optimizely-sdk@npm:5.4.1, @optimizely/optimizely-sdk@npm:^5.4.1":
   version: 5.4.1
   resolution: "@optimizely/optimizely-sdk@npm:5.4.1"
   dependencies:
@@ -17657,6 +17657,7 @@ __metadata:
     "@loadable/component": "npm:5.16.7"
     "@loadable/server": "npm:5.16.7"
     "@loadable/webpack-plugin": "npm:5.15.2"
+    "@optimizely/optimizely-sdk": "npm:5.4.1"
     "@optimizely/react-sdk": "npm:3.3.1"
     "@storybook/addon-a11y": "npm:10.3.5"
     "@storybook/addon-docs": "npm:10.3.5"
