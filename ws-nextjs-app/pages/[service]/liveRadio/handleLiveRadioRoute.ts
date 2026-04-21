@@ -43,7 +43,7 @@ export default async (context: GetServerSidePropsContext) => {
     id: resolvedUrlWithoutQuery,
     service,
     variant: variant || undefined,
-    rendererEnv: isTest() ? 'live' : rendererEnv,
+    rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
     pageType: LIVE_RADIO_PAGE,
     disableRadioSchedule,
@@ -94,9 +94,7 @@ export default async (context: GetServerSidePropsContext) => {
   return {
     props: {
       id: resolvedUrlWithoutQuery,
-      pageData: {
-        ...pageData,
-      },
+      pageData,
       pageType: LIVE_RADIO_PAGE,
       pathname: resolvedUrlWithoutQuery,
       service,

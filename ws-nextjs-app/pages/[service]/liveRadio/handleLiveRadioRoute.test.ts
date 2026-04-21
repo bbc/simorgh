@@ -180,15 +180,4 @@ describe('handleLiveRadioRoute', () => {
       props: expect.objectContaining({ status: 404 }),
     });
   });
-
-  it('should render live assets on test environments', async () => {
-    jest.spyOn(isTest, 'default').mockReturnValueOnce(true);
-    const pageDataSpy = jest.spyOn(getPageDataModule, 'default');
-
-    await handleLiveRadioRoute(mockGetServerSidePropsContext);
-
-    expect(pageDataSpy).toHaveBeenCalledWith(
-      expect.objectContaining({ rendererEnv: 'live' }),
-    );
-  });
 });
