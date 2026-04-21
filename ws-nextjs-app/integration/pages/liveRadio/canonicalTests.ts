@@ -15,7 +15,7 @@ export default ({ service, hasRadioSchedule }) => {
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
-    const summaryText = summaryEl.textContent;
+    const summaryText = summaryEl?.textContent;
 
     it('should be in the document', () => {
       expect(summaryEl).toBeInTheDocument();
