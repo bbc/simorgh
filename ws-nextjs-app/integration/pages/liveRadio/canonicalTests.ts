@@ -6,7 +6,13 @@ import {
   runMediaPlayerAudioTests,
 } from '../../common';
 
-export default ({ service, hasRadioSchedule }) => {
+export default ({
+  service,
+  hasRadioSchedule,
+}: {
+  service: string;
+  hasRadioSchedule?: boolean;
+}) => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runRadioScheduleTests(hasRadioSchedule);
