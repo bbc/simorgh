@@ -230,6 +230,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
+  // test experiment to verify if page views are being tracked correctly
+  const testPageViewsExperimentName = 'test_page_views_aa';
+  const testPageViewsVariant = useOptimizelyVariation({
+    experimentName: testPageViewsExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   // time of day 2 experiment for articles
   const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
   const timeOfDayArticleVariant = useOptimizelyVariation({
@@ -250,6 +257,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           experimentVariant,
         }
       : null;
+
+  const testPageViewsExperimentProps = getActiveExperimentProps(
+    testPageViewsExperimentName,
+    testPageViewsVariant,
+  );
 
   const timeOfDayExperimentProps = getActiveExperimentProps(
     timeOfDayArticleExperimentName,
@@ -316,6 +328,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ...(timeOfDayExperimentProps && {
       experimentName: timeOfDayExperimentProps.experimentName,
       experimentVariant: timeOfDayExperimentProps.experimentVariant,
+    }),
+    ...(testPageViewsExperimentProps && {
+      experimentName: testPageViewsExperimentProps.experimentName,
+      experimentVariant: testPageViewsExperimentProps.experimentVariant,
     }),
   };
 
