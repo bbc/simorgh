@@ -4,11 +4,13 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
+import { enums, ListenerPayload } from '@optimizely/optimizely-sdk';
 import Cookie from 'js-cookie';
 import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import isOperaProxy from '#app/lib/utilities/isOperaProxy';
+import { notifyDecision } from '#app/lib/optimizelyDecisionStore';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isCypress from './isCypress';
@@ -33,6 +35,28 @@ const optimizely = createInstance({
   eventBatchSize: 10,
   eventFlushInterval: 1000,
 });
+
+optimizely?.notificationCenter?.addNotificationListener(
+  enums.NOTIFICATION_TYPES.DECISION,
+  (
+    notification: ListenerPayload & {
+      decisionInfo?: {
+        flagKey?: string;
+        variationKey?: string;
+        decisionEventDispatched?: boolean;
+      };
+    },
+  ) => {
+    const flagKey = notification.decisionInfo?.flagKey;
+    const variationKey = notification.decisionInfo?.variationKey;
+    const decisionEventDispatched =
+      notification.decisionInfo?.decisionEventDispatched;
+
+    if (decisionEventDispatched && variationKey !== 'off' && flagKey) {
+      notifyDecision(flagKey);
+    }
+  },
+);
 
 const withOptimizelyProvider = <T,>(Component: ComponentType<T>) => {
   return props => {

@@ -11,8 +11,6 @@ import routes from '#app/routes';
 import nodeLogger from '#lib/logger.node';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import {
-  SERVICE_WORKER_SENDFILE_ERROR,
-  MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
@@ -21,15 +19,10 @@ import {
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
 import { BAD_REQUEST, INTERNAL_SERVER_ERROR, OK } from '#lib/statusCodes.const';
-import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
 import isLocal from '#app/lib/utilities/isLocal';
 import injectCspHeader from './utilities/cspHeader';
 import logResponseTime from './utilities/logResponseTime';
 import renderDocument from './Document';
-import {
-  homePageManifestPath,
-  homePageSwPath,
-} from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
@@ -41,7 +34,6 @@ import {
 import getAssetOrigins from './utilities/getAssetOrigins';
 import extractHeaders from './utilities/extractHeaders';
 import addPlatformToRequestChainHeader from './utilities/addPlatformToRequestChainHeader';
-import services from './utilities/serviceConfigs';
 import createAdNonce from '../app/utilities/createAdNonce';
 import { UNKNOWN_PAGE } from '../app/routes/utils/pageTypes';
 
@@ -106,41 +98,6 @@ server
       logger.error(SERVER_STATUS_ENDPOINT_ERROR, { error });
       res.status(500).send('Unable to determine status');
     }
-  });
-
-/*
- * Application env routes
- */
-server
-  .get(homePageSwPath, (req, res) => {
-    const swPath = `${__dirname}/public/sw.js`;
-    res.set(
-      `Cache-Control`,
-      `public, stale-if-error=6000, stale-while-revalidate=600, max-age=300`,
-    );
-    res.set('Service-Worker-Allowed', `/${req.params.service}`);
-
-    res.sendFile(swPath, {}, error => {
-      if (error) {
-        logger.error(SERVICE_WORKER_SENDFILE_ERROR, { error });
-        res.status(500).send(`Unable to find service worker in ${swPath}`);
-      }
-    });
-  })
-  .get(homePageManifestPath, async ({ params }, res) => {
-    const { service } = params;
-    const variant = defaultServiceVariants[service] || 'default';
-    const manifestPath = `${__dirname}/public${services[service][variant].manifestPath}`;
-    res.set(
-      'Cache-Control',
-      'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
-    );
-    res.sendFile(manifestPath, {}, error => {
-      if (error) {
-        logger.error(MANIFEST_SENDFILE_ERROR, { error });
-        res.status(500).send('Unable to find manifest.');
-      }
-    });
   });
 
 // Set Up Local Server

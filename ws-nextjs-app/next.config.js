@@ -5,8 +5,6 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
-const isLocal = process.env.SIMORGH_APP_ENV === 'local';
-
 /** @type {import('next').NextConfig} */
 module.exports = {
   async headers() {
@@ -36,37 +34,32 @@ module.exports = {
           { key: 'Content-Type', value: 'application/javascript' },
         ],
       },
+      {
+        source: '/:service/manifest.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value:
+              'public, stale-if-error=172800, stale-while-revalidate=172800, max-age=86400',
+          },
+          { key: 'Content-Type', value: 'application/manifest+json' },
+        ],
+      },
     ];
   },
   async rewrites() {
     return [
-      // Service worker is registered at the root (e.g. /pidgin) so will work as is on Test/Live
-      // but will not work on localhost. This rewrites requests from paths outside of root
-      // to the sw.js file found in the 'public' folder, which is served from the root.
-      ...(isLocal
-        ? [
-            {
-              source: '/:path/sw.js',
-              destination: '/sw.js',
-            },
-          ]
-        : []),
+      {
+        source: '/:service/sw.js',
+        destination: '/sw.js',
+      },
       {
         source: '/:service/og/:id',
         destination: '/api/:service/og/:id',
       },
-      // TODO: This can be removed once we redirect variant paths to have variant at the end of the path,
-      //  e.g. /serbian/cyr/popular/read -> /serbian/popular/read/cyr
-      {
-        source: '/:service/:variant/popular/read',
-        destination: '/:service/popular/read/:variant',
-      },
-      {
-        source: '/:service/:variant/popular/read.lite',
-        destination: '/:service/popular/read/:variant.lite',
-      },
     ];
   },
+  allowedDevOrigins: ['localhost.bbc.com'],
   assetPrefix,
   compiler: { emotion: true },
   distDir: 'build',

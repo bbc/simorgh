@@ -1,9 +1,11 @@
 import Cookie from 'js-cookie';
 import { getEnvConfig } from '../utilities/getEnvConfig';
+import { refreshTokensIfExpired } from './tokenRefresh/tokenManager';
 import uasApiRequest from './index';
 
 jest.mock('js-cookie');
 jest.mock('../utilities/getEnvConfig');
+jest.mock('./tokenRefresh/tokenManager');
 
 global.fetch = jest.fn();
 
@@ -20,6 +22,8 @@ describe('uasApiRequest', () => {
     mockGetEnvConfig.mockReturnValue({
       SIMORGH_UAS_PUBLIC_API_KEY: 'mocked-api-key',
     } as ReturnType<typeof getEnvConfig>);
+    // Mock refreshTokensIfExpired to resolve successfully by default
+    (refreshTokensIfExpired as jest.Mock).mockResolvedValue(undefined);
   });
 
   it('should make a GET request with correct headers and URL', async () => {
@@ -32,7 +36,7 @@ describe('uasApiRequest', () => {
     const response = await uasApiRequest('GET', activityType);
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'GET',
         headers: expect.objectContaining({
@@ -52,12 +56,15 @@ describe('uasApiRequest', () => {
     });
 
     const activityType = 'favourites';
-    const body = { activityType: 'test', metaData: { key: 'value' } };
+    const body = {
+      activityType: 'favourites' as const,
+      metaData: { key: 'value' },
+    };
 
     const response = await uasApiRequest('POST', activityType, { body });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}`,
+      `https://activity.test.api.bbc.com/my/${activityType}`,
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
@@ -83,21 +90,13 @@ describe('uasApiRequest', () => {
     await uasApiRequest('DELETE', activityType, { globalId });
 
     expect(global.fetch).toHaveBeenCalledWith(
-      `https://activity.test.api.bbc.co.uk/my/${activityType}/${encodeURIComponent(globalId)}`,
+      `https://activity.test.api.bbc.com/my/${activityType}/${encodeURIComponent(globalId)}`,
       expect.objectContaining({
         method: 'DELETE',
         headers: expect.objectContaining({
           'X-API-Key': 'mocked-api-key',
         }),
       }),
-    );
-  });
-
-  it('should throw an error for invalid activity type', async () => {
-    const invalidActivityType = 'invalidType';
-
-    await expect(uasApiRequest('GET', invalidActivityType)).rejects.toThrow(
-      'Invalid activity type',
     );
   });
 
@@ -129,6 +128,21 @@ describe('uasApiRequest', () => {
     );
 
     // Verify that fetch was never called since authentication failed
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should throw an error when refreshTokensIfExpired fails', async () => {
+    (refreshTokensIfExpired as jest.Mock).mockRejectedValue(
+      new Error('Token refresh failed'),
+    );
+
+    const activityType = 'favourites';
+
+    await expect(uasApiRequest('GET', activityType)).rejects.toThrow(
+      'Token refresh failed',
+    );
+
+    // Verify that fetch was never called since token validation failed
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });
