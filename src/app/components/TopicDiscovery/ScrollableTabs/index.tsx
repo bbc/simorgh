@@ -42,14 +42,12 @@ const ScrollableTabs = ({
     if (!el) return undefined;
 
     el.addEventListener('scroll', checkOverflow);
+    window.addEventListener('resize', checkOverflow);
     checkOverflow();
-
-    const resizeObserver = new ResizeObserver(checkOverflow);
-    resizeObserver.observe(el);
 
     return () => {
       el.removeEventListener('scroll', checkOverflow);
-      resizeObserver.disconnect();
+      window.removeEventListener('resize', checkOverflow);
     };
   }, [checkOverflow]);
 
