@@ -23,7 +23,9 @@ export type MediaPlayerEvents =
   | 'pluginLoaded'
   | 'fullscreenExit'
   | 'statsNavigation'
-  | 'pause';
+  | 'pause'
+  | 'enterFakeFullscreen'
+  | 'exitFakeFullscreen';
 
 export type EventMapping = Partial<
   Record<MediaPlayerEvents, (_e: SMPEvent) => void>

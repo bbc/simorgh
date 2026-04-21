@@ -1,32 +1,38 @@
-import { GetServerSidePropsContext } from 'next';
-import { HOME_PAGE } from '#app/routes/utils/pageTypes';
-import parseRoute from '#app/routes/utils/parseRoute';
+import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
+import { ROUTING_INFORMATION } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
-import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
-import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+import { GetServerSidePropsContext } from 'next';
 import PageDataParams from '#app/models/types/pageDataParams';
+import parseRoute from '#app/routes/utils/parseRoute';
+import { NOT_FOUND, OK } from '#app/lib/statusCodes.const';
+import getPageData from '#nextjs/utilities/pageRequests/getPageData';
 import handleError from '#app/routes/utils/handleError';
-import getPageData from '../../../utilities/pageRequests/getPageData';
+import getToggles from '#app/lib/utilities/getToggles/withCache';
 
 const logger = nodeLogger(__filename);
 
 export default async (context: GetServerSidePropsContext) => {
   const { resolvedUrl } = context;
-
   const { renderer_env: rendererEnv } = context.query as PageDataParams;
 
   const resolvedUrlWithoutQuery = resolvedUrl.split('?')?.[0];
 
   const { service, variant } = parseRoute(resolvedUrl);
 
+  const toggles = await getToggles(service);
+  const { enabled: scheduleIsEnabled } = toggles.liveRadioSchedule;
+  const disableRadioSchedule = !scheduleIsEnabled;
+
   if (!service) {
+    context.res.statusCode = NOT_FOUND;
+
     return {
       props: {
         service,
         status: NOT_FOUND,
         timeOnServer: Date.now(),
         variant: variant || null,
-        pageType: HOME_PAGE,
+        pageType: LIVE_RADIO_PAGE,
         pathname: resolvedUrlWithoutQuery,
       },
     };
@@ -38,7 +44,8 @@ export default async (context: GetServerSidePropsContext) => {
     variant: variant || undefined,
     rendererEnv,
     resolvedUrl: resolvedUrlWithoutQuery,
-    pageType: HOME_PAGE,
+    pageType: LIVE_RADIO_PAGE,
+    disableRadioSchedule,
   });
 
   const { pageData, status } = data;
@@ -53,7 +60,7 @@ export default async (context: GetServerSidePropsContext) => {
     routingInfoLogger(ROUTING_INFORMATION, {
       url: resolvedUrlWithoutQuery,
       status,
-      pageType: HOME_PAGE,
+      pageType: LIVE_RADIO_PAGE,
     });
 
     return {
@@ -62,14 +69,14 @@ export default async (context: GetServerSidePropsContext) => {
         status,
         timeOnServer: Date.now(),
         variant: variant || null,
-        pageType: HOME_PAGE,
+        pageType: LIVE_RADIO_PAGE,
         pathname: resolvedUrlWithoutQuery,
       },
     };
   }
 
   if (!pageData) {
-    throw handleError('HomePage data is malformed', 500);
+    throw handleError('LiveRadioPage data is malformed', 500);
   }
 
   context.res.setHeader(
@@ -80,21 +87,14 @@ export default async (context: GetServerSidePropsContext) => {
   routingInfoLogger(ROUTING_INFORMATION, {
     url: resolvedUrlWithoutQuery,
     status,
-    pageType: HOME_PAGE,
+    pageType: LIVE_RADIO_PAGE,
   });
 
   return {
     props: {
       id: resolvedUrlWithoutQuery,
-      pageData: {
-        title: pageData.title ?? null,
-        seoTitle: pageData.seoTitle ?? null,
-        metadata: { ...pageData.metadata, type: HOME_PAGE },
-        curations: pageData.curations ?? null,
-        description: pageData.description ?? null,
-        seoDescription: pageData.seoDescription ?? null,
-      },
-      pageType: HOME_PAGE,
+      pageData,
+      pageType: LIVE_RADIO_PAGE,
       pathname: resolvedUrlWithoutQuery,
       service,
       status,
