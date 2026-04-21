@@ -86,7 +86,7 @@ const MostRead = ({
                 size={size}
                 id={id}
                 position={i + 1}
-                isLive={isLive ?? false}
+                isLive={isLive}
                 eventTrackingData={eventTrackingDataExtended}
               >
                 {shouldRenderLastUpdated(timestamp) && timestamp && (

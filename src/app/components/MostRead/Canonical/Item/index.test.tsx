@@ -16,7 +16,6 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
-        isLive={false}
       />,
       {
         service: 'pidgin',
@@ -38,7 +37,6 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
-        isLive={false}
       />,
       {
         service: 'persian',
@@ -60,7 +58,6 @@ describe('MostReadLink', () => {
         size="default"
         id=""
         position={0}
-        isLive={false}
       >
         {pidginItem.timestamp}
       </MostReadLink>,

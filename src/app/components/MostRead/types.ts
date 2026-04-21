@@ -32,7 +32,7 @@ export interface MostReadLinkProps {
   size: Size;
   id: string;
   position: number | string;
-  isLive: boolean | string;
+  isLive?: boolean | string;
   eventTrackingData?: EventTrackingData;
 }
 
