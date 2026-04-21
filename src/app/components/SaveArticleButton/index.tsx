@@ -37,14 +37,16 @@ const SaveArticleButton = ({
   };
 
   return (
-    <ActionButton
-      onClick={handleClick}
-      isLoading={isLoading}
-      isSaved={isSaved}
-      disabled={isLoading}
-      label={buttonLabel}
-      buttonText={buttonText}
-    />
+    <div css={{ margin: '1.5rem 0.5rem' }}>
+      <ActionButton
+        onClick={handleClick}
+        isLoading={isLoading}
+        isSaved={isSaved}
+        disabled={isLoading}
+        label={buttonLabel}
+        buttonText={buttonText}
+      />
+    </div>
   );
 };
 

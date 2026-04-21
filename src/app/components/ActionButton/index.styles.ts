@@ -23,7 +23,6 @@ const styles = {
       backgroundColor: palette.WHITE,
       color: palette.GREY_8,
       border: `pixelsToRem(1) solid ${palette.GREY_8}`,
-      margin: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       ':hover': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,

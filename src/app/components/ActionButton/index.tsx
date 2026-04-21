@@ -5,6 +5,7 @@ import {
   FilledBookmarkIcon,
   Close,
 } from '#app/components/icons';
+import { Theme } from '@emotion/react';
 import styles from './index.styles';
 
 export interface ActionButtonProps {
@@ -28,7 +29,7 @@ const ActionButton = ({
 
   return (
     <button
-      css={styles.buttonWrapper}
+      css={(theme: Theme) => styles.buttonWrapper(theme)}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}
