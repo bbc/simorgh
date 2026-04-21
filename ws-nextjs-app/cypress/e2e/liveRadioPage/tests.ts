@@ -39,11 +39,10 @@ export default ({ service, pageType }) =>
           );
 
           if (scheduleIsEnabled) {
-            cy.getPageDataFromWindow().then(data => {
-              const { pageData } = data;
-              const schedules = pageData.radioScheduleData;
+            cy.getPageDataFromWindow().then(pageData => {
+              const { radioScheduleData } = pageData;
 
-              if (schedules) {
+              if (radioScheduleData) {
                 cy.log('Schedule has enough data');
                 cy.get('[data-e2e=radio-schedule]').should('exist');
               } else {
