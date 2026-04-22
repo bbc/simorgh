@@ -117,7 +117,7 @@ export const service: DefaultServiceConfig = {
         title: 'अपना BBC खोजिए',
         description:
           'देखने, सुनने और भाग लेने के लिए साइन‑इन करें या खाता बनाएं',
-        closeLabel: 'Close',
+        closeLabel: 'बंद करें',
         buttonSeparatorText: 'या',
       },
       gist: 'सारांश',
