@@ -160,7 +160,24 @@ it('should render MostReadLink (ltr)', () => {
 });
 ```
 
-Example where a snapshot is appropriate (small, stable JSON config output):
+Examples where a snapshot is appropriate:
+
+**Small, stable serialised regex output:**
+
+✅
+
+```js
+// Test
+it(`should create expected regex from getArticleRegex`, () => {
+  expect(regexGenerators.getArticleRegex(SERVICES)).toMatchSnapshot();
+});
+
+// Snapshot output — a compact string, not a DOM tree
+exports[`regex utils snapshots should create expected regex from getArticleRegex 1`] =
+  `"/:service(afaanoromoo|afrique|amharic|arabic|...)?:discipline(/[a-z0-9-_]{1,})?/:local(articles|erthyglau|sgeulachdan)/:id(c[a-zA-Z0-9]{10}o):variant(/simp|/trad|/cyr|/lat)?:nonCanonicalArticleRenderPlatform(.amp|.app|.lite)?"`;
+```
+
+**Small, stable JSON config output:**
 
 ✅
 
