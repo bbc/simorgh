@@ -6,11 +6,11 @@ import styled from '@emotion/styled';
 import shouldShowTeamBadges from './helpers/badges/should-show-team-badges';
 
 import Footer from './components/footer';
-import HeadToHeadHeader from './components/head-to-head-header.jsx';
+import HeadToHeadHeader from './components/head-to-head-header';
 // import { getStatusBorderStyles } from './helpers/colour-styles.js';
-import { HeadToHeadBanner } from './components/head-to-head-banner.jsx';
-import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link.jsx';
-import { Actions } from './components/actions.jsx';
+import { HeadToHeadBanner } from './components/head-to-head-banner';
+import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link';
+import { Actions } from './components/actions';
 
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../../../../src/app/utilities/pixelsToRem';
