@@ -2,6 +2,8 @@ import fixtureData from '#data/afrique/live/c7gk1vjglxn1t.json';
 import HeadToHeadV2 from './';
 import type { HeadToHeadV2Data } from './head-to-head-v2';
 import metadata from './metadata.json';
+// @ts-expect-error - PS copy and paste - unhappy with naming of import
+import mdx from './head-to-head-v2.mdx';
 
 type StoryData = HeadToHeadV2Data & {
   onwardJourneyLink?: string;
@@ -40,11 +42,17 @@ const Component = ({
 };
 
 export default {
-  title:
-    'Components/Live Page Sport Data Header/Head To Head V2 - General tests',
+  title: 'Components/Live Page Sport Data Header/Head To Head V2 - General',
   Component,
   parameters: {
     metadata,
+    docs: {
+      description: {
+        component:
+          'The `Head To Head V2` component is used to render event data.',
+      },
+      page: mdx,
+    },
   },
 };
 
