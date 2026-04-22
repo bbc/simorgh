@@ -18,9 +18,33 @@ const styles = {
       paddingBottom: `${spacings.FULL}rem`,
     }),
 
-  tabPanel: ({ spacings }: Theme) =>
+  tabPanel: ({ spacings, mq }: Theme) =>
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
+
+      [mq.GROUP_2_MAX_WIDTH]: {
+        li: {
+          width: `calc(50% - ${spacings.FULL}rem)`,
+          marginInlineEnd: `${spacings.DOUBLE}rem`,
+          borderTop: 'none',
+          paddingTop: 0,
+
+          '&:nth-of-type(2n)': {
+            marginInlineEnd: 0,
+          },
+
+          '.promo-image': {
+            width: '100%',
+            display: 'block',
+          },
+
+          '.promo-text': {
+            width: '100%',
+            display: 'block',
+            paddingInlineStart: 0,
+          },
+        },
+      },
     }),
 };
 
