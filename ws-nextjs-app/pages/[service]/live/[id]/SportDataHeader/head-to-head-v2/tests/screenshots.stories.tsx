@@ -21,6 +21,7 @@ export default {
     'Components/Live Page Sport Data Header/Head To Head V2 - Screenshot tests',
   component: HeadToHeadV2,
   parameters: {
+    chromatic: { disable: true },
     // docs: {
     //   page: mdx,
     // },

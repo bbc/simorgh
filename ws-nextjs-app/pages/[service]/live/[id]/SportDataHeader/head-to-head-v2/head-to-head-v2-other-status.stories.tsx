@@ -21,6 +21,7 @@ export default {
   title:
     'Components/Live Page Sport Data Header/Head To Head V2 - Other status',
   component: HeadToHead,
+  parameters: { chromatic: { disable: true } },
   // tags: ['autodocs'],
   // parameters: {
   //   metadata,

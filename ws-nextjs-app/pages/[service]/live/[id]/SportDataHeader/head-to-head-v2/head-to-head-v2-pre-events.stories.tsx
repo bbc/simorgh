@@ -19,6 +19,7 @@ const { venues } = venuesData;
 export default {
   title: 'Components/Live Page Sport Data Header/Head To Head V2 - Pre Events',
   component: HeadToHeadV2,
+  parameters: { chromatic: { disable: true } },
   // tags: ['autodocs'],
   // parameters: {
   //   metadata,

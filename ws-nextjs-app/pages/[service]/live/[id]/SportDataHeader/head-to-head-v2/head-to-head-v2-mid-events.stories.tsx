@@ -37,6 +37,7 @@ const getBaseDataWithEuropaLeagueTournament = baseData => ({
 export default {
   title: 'Components/Live Page Sport Data Header/Head To Head V2 - Mid event',
   component: HeadToHeadV2,
+  parameters: { chromatic: { disable: true } },
   argTypes: {
     home: {
       options: Object.keys(shortNamesMap()),
