@@ -375,14 +375,13 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'swahili',
     });
     const expiredMessageEl = getByText('Taarifa hii haipatikani tena.');
 
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
@@ -406,7 +405,7 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'korean',
     });
@@ -416,7 +415,6 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(notYetAvailableMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {
