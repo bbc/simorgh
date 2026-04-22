@@ -1,4 +1,3 @@
-// import React from 'react';
 import {
   render,
   screen,
@@ -10,7 +9,7 @@ import suspendedMockData from '../static-data/event/transformed/suspended.json';
 import {
   preEventData as preEventMockData,
   preEventNoTeamsOrVenueProvided as preEventNoTeamsMockData,
-} from '../static-data/event/transformed/pre-event/index'; // @bbc/web-sport-utils/tests/static-data/football/event/transformed/pre-event/index.js
+} from '../static-data/event/transformed/pre-event/index';
 import {
   postEventAETData,
   postEventAgg90Data,
@@ -18,17 +17,16 @@ import {
   postEventPens90Data,
   postEventPensAetData,
   finishedAetAggData,
-} from '../static-data/event/transformed/post-event/index'; // @bbc/web-sport-utils/tests/static-data/football/event/transformed/post-event/index.js
-// import {
-//   firstHalf90Data as firstHalfData,
-//   firstHalfAddedTimeData,
-//   etFirstHalfData,
-//   inPensAetData,
-//   beforePensAetData,
-//   inPens90Data,
-//   secondHalf90Data
-// } from '@bbc/web-sport-utils/tests/static-data/football/event/transformed/mid-event/index.js';
-// import { rugbyTransformedMidEvent } from '@bbc/web-sport-utils/tests/static-data/rugby/event/transformed/index.js';
+} from '../static-data/event/transformed/post-event/index';
+import {
+  firstHalf90Data as firstHalfData,
+  firstHalfAddedTimeData,
+  etFirstHalfData,
+  inPensAetData,
+  beforePensAetData,
+  inPens90Data,
+  secondHalf90Data,
+} from '../static-data/event/transformed/mid-event/index';
 import HeadToHead from '../head-to-head-v2';
 
 const renderComponent = (data, isConciseView, shouldShowActions, props) => {
@@ -111,37 +109,37 @@ describe.each([true, false])('head to head concise view %s', isConciseView => {
     expect(a11yAggScore).not.toBeInTheDocument();
   });
 
-  // test('renders the head to head of MidEvent status', () => {
-  //   const { queryByText, getAllByText } = renderComponent(
-  //     firstHalfData,
-  //     isConciseView,
-  //   );
-  //   const homeTeamName = getAllByText('Liepāja');
-  //   const awayTeamName = getAllByText('Gjilani');
-  //   const homeScore = getAllByText('0');
-  //   const homeUnconfirmedScore = getAllByText('1');
-  //   const awayScore = getAllByText('0');
-  //   const time = queryByText("9'");
+  test.skip('renders the head to head of MidEvent status', () => {
+    const { queryByText, getAllByText } = renderComponent(
+      firstHalfData,
+      isConciseView,
+    );
+    const homeTeamName = getAllByText('Liepāja');
+    const awayTeamName = getAllByText('Gjilani');
+    const homeScore = getAllByText('0');
+    const homeUnconfirmedScore = getAllByText('1');
+    const awayScore = getAllByText('0');
+    const time = queryByText("9'");
 
-  //   expect(homeTeamName).toHaveLength(3);
-  //   expect(awayTeamName).toHaveLength(3);
-  //   expect(homeScore[0]).toBeInTheDocument();
-  //   expect(homeUnconfirmedScore[0]).toBeInTheDocument();
-  //   expect(awayScore[0]).toBeInTheDocument();
-  //   expect(time).toBeInTheDocument();
-  // });
+    expect(homeTeamName).toHaveLength(3);
+    expect(awayTeamName).toHaveLength(3);
+    expect(homeScore[0]).toBeInTheDocument();
+    expect(homeUnconfirmedScore[0]).toBeInTheDocument();
+    expect(awayScore[0]).toBeInTheDocument();
+    expect(time).toBeInTheDocument();
+  });
 
-  // test('renders the head to head of MidEvent with added time', () => {
-  //   const { queryByText } = renderComponent(
-  //     firstHalfAddedTimeData,
-  //     isConciseView,
-  //   );
-  //   const period = queryByText('45 minutes plus 2 , in progress');
-  //   const matchProgress = queryByText("45'+2");
+  test('renders the head to head of MidEvent with added time', () => {
+    const { queryByText } = renderComponent(
+      firstHalfAddedTimeData,
+      isConciseView,
+    );
+    const period = queryByText('45 minutes plus 2 , in progress');
+    const matchProgress = queryByText("45'+2");
 
-  //   expect(period).toBeInTheDocument();
-  //   expect(matchProgress).toBeInTheDocument();
-  // });
+    expect(period).toBeInTheDocument();
+    expect(matchProgress).toBeInTheDocument();
+  });
 
   test.skip('renders the head to head of PostEvent with added time', () => {
     const { queryByText, getByText } = renderComponent(
@@ -194,12 +192,13 @@ describe.each([true, false])('head to head concise view %s', isConciseView => {
   });
 });
 
-// test('does not wrap the card with a link when not given an onward journey path', () => {
-//   const { queryByRole } = renderComponent(firstHalfData, true);
-//   const onwardJourneyLink = queryByRole('link');
+// skipped - we do not support OJ path in MVP
+test.skip('does not wrap the card with a link when not given an onward journey path', () => {
+  const { queryByRole } = renderComponent(firstHalfData, true);
+  const onwardJourneyLink = queryByRole('link');
 
-//   expect(onwardJourneyLink).not.toBeInTheDocument();
-// });
+  expect(onwardJourneyLink).not.toBeInTheDocument();
+});
 
 // skipped - we do not support OJ path in MVP
 test.skip('wraps the card with a link when given an onward journey path', async () => {
@@ -234,7 +233,6 @@ test('renders head to head component of PreEvent status with No teams', async ()
   expect(teamName).toBeInTheDocument();
 });
 
-// please update this test like the one above to use render screen asyn await etc
 test('renders head to head component of PreEvent status', async () => {
   await act(async () => {
     render(<HeadToHead data={preEventMockData} />);
@@ -247,168 +245,179 @@ test('renders head to head component of PreEvent status', async () => {
   expect(tournamentLabel).toBeInTheDocument();
 });
 
-// test('renders the head to head of MidEvent status', () => {
-//   const tournamentDescriptionLabel = 'UEFA Europa Conference League';
+test('renders the head to head of MidEvent status', async () => {
+  const tournamentDescriptionLabel = 'UEFA Europa Conference League';
 
-//   const { queryByText } = renderComponent({
-//     ...firstHalfData,
-//     tournamentDescriptionLabel,
-//   });
-//   const tournamentText = queryByText(tournamentDescriptionLabel);
-//   const time = queryByText(firstHalfData.date);
-//   const venue = queryByText('Stadions Daugava');
+  await renderHeadToHead({
+    ...firstHalfData,
+    tournamentDescriptionLabel,
+  });
+  const tournamentText = screen.queryByText(tournamentDescriptionLabel);
+  const time = screen.queryByText(firstHalfData.date);
+  const venue = screen.queryByText('Stadions Daugava');
 
-//   expect(tournamentText).toBeInTheDocument();
-//   expect(time).not.toBeInTheDocument();
-//   expect(venue).toBeInTheDocument();
-// });
+  expect(tournamentText).toBeInTheDocument();
+  expect(time).not.toBeInTheDocument();
+  expect(venue).toBeInTheDocument();
+});
 
-// test('renders head to head with half time, full time scores for a MidEvent in Extra Time', () => {
-//   const { getByText } = renderComponent(etFirstHalfData);
-//   const halfTimeScore = getByText('HT 1-1');
-//   const fullTime = getByText('FT 2-2');
-//   const extraTime = getByText("98' ET");
-//   const minsInProgress = getByText('98 minutes extra time , in progress');
-//   const a11yFTScore = getByText('Full Time Liepāja 2 , Gjilani 2');
-//   const a11yHTScore = getByText('Half Time Liepāja 1 , Gjilani 1');
+test('renders head to head with half time, full time scores for a MidEvent in Extra Time', async () => {
+  await renderHeadToHead(etFirstHalfData);
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTime = screen.getByText('FT 2-2');
+  const extraTime = screen.getByText("98' ET");
+  const minsInProgress = screen.getByText(
+    '98 minutes extra time , in progress',
+  );
+  const a11yFTScore = screen.getByText('Full Time Liepāja 2 , Gjilani 2');
+  const a11yHTScore = screen.getByText('Half Time Liepāja 1 , Gjilani 1');
 
-//   const a11ySummaryRegex = /Liepāja 2 , Gjilani 2 Extra time in progress/;
-//   const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummaryRegex = /Liepāja 2 , Gjilani 2 Extra time in progress/;
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(fullTime).toBeInTheDocument();
-//   expect(extraTime).toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(minsInProgress).toBeInTheDocument();
-//   expect(a11yFTScore).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-// });
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(fullTime).toBeInTheDocument();
+  expect(extraTime).toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(minsInProgress).toBeInTheDocument();
+  expect(a11yFTScore).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+});
 
-// test('renders head to head with half time, full time and penalties scores for a MidEvent in Pens aet', () => {
-//   const { getByText } = renderComponent(inPensAetData);
-//   const halfTimeScore = getByText('HT 1-1');
-//   const fullTime = getByText('FT 2-2');
-//   const pens = getByText('Penalties 1-1');
-//   const a11yFTScore = getByText('Full Time Liepāja 2 , Gjilani 2');
-//   const a11yHTScore = getByText('Half Time Liepāja 1 , Gjilani 1');
+test('renders head to head with half time, full time and penalties scores for a MidEvent in Pens aet', async () => {
+  await renderHeadToHead(inPensAetData);
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTime = screen.getByText('FT 2-2');
+  const pens = screen.getByText('Penalties 1-1');
+  const a11yFTScore = screen.getByText('Full Time Liepāja 2 , Gjilani 2');
+  const a11yHTScore = screen.getByText('Half Time Liepāja 1 , Gjilani 1');
 
-//   const a11ySummaryRegex =
-//     /Liepāja 2 , Gjilani 2 after extra time penalties in progress/;
-//   const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummaryRegex =
+    /Liepāja 2 , Gjilani 2 after extra time penalties in progress/;
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(fullTime).toBeInTheDocument();
-//   expect(pens).toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(a11yFTScore).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-// });
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(fullTime).toBeInTheDocument();
+  expect(pens).toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(a11yFTScore).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+});
 
-// test('renders head to head with half time, full time and penalties scores for a MidEvent aet before pens', () => {
-//   const { getByText, queryByText } = renderComponent(beforePensAetData);
-//   const halfTimeScore = getByText('HT 1-1');
-//   const fullTime = getByText('FT 2-2');
-//   const pens = getByText('Penalties');
-//   const excludedPensScore = queryByText('Penalties 1-0');
-//   const a11yPenPeriod = getByText('Penalties');
-//   const a11yFTScore = getByText('Full Time Liepāja 2 , Gjilani 2');
-//   const a11yHTScore = getByText('Half Time Liepāja 1 , Gjilani 1');
+test('renders head to head with half time, full time and penalties scores for a MidEvent aet before pens', async () => {
+  await renderHeadToHead(beforePensAetData);
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTime = screen.getByText('FT 2-2');
+  const pens = screen.getByText('Penalties');
+  const excludedPensScore = screen.queryByText('Penalties 1-0');
+  const a11yPenPeriod = screen.getByText('Penalties');
+  const a11yFTScore = screen.getByText('Full Time Liepāja 2 , Gjilani 2');
+  const a11yHTScore = screen.getByText('Half Time Liepāja 1 , Gjilani 1');
 
-//   const a11ySummaryRegex =
-//     /Liepāja 2 , Gjilani 2 after extra time going to penalties/;
-//   const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummaryRegex =
+    /Liepāja 2 , Gjilani 2 after extra time going to penalties/;
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(fullTime).toBeInTheDocument();
-//   expect(pens).toBeInTheDocument();
-//   expect(excludedPensScore).not.toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(a11yPenPeriod).toBeInTheDocument();
-//   expect(a11yFTScore).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-// });
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(fullTime).toBeInTheDocument();
+  expect(pens).toBeInTheDocument();
+  expect(excludedPensScore).not.toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(a11yPenPeriod).toBeInTheDocument();
+  expect(a11yFTScore).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+});
 
-// test('renders head to head with half time, full time and penalties scores for a MidEvent after 90 mins in pens', () => {
-//   const { getByText } = renderComponent(inPens90Data);
-//   const halfTimeScore = getByText('HT 2-3');
-//   const pens = getByText('Penalties 2-3');
-//   const a11yPenPeriod = getByText('Penalties Liepāja 2 , Gjilani 3');
-//   const a11yHTScore = getByText('Half Time Liepāja 2 , Gjilani 3');
+test('renders head to head with half time, full time and penalties scores for a MidEvent after 90 mins in pens', async () => {
+  await renderHeadToHead(inPens90Data);
+  const halfTimeScore = screen.getByText('HT 2-3');
+  const pens = screen.getByText('Penalties 2-3');
+  const a11yPenPeriod = screen.getByText('Penalties Liepāja 2 , Gjilani 3');
+  const a11yHTScore = screen.getByText('Half Time Liepāja 2 , Gjilani 3');
 
-//   const a11ySummaryRegex =
-//     /Liepāja 3 , Gjilani 3 after full time penalties in progress/;
-//   const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummaryRegex =
+    /Liepāja 3 , Gjilani 3 after full time penalties in progress/;
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(pens).toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(a11yPenPeriod).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-// });
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(pens).toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(a11yPenPeriod).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+});
 
-// test('renders head to head and shows actions data when showScorers prop is true', () => {
-//   const { getByText } = renderComponent(inPensAetData, true, true);
-//   const player = getByText('A. Karašausks');
-//   const firstGoalByMinutes = getByText(/13'/);
-//   const secondGoalByMinutes = getByText(/85'/);
+test('renders head to head and shows actions data when showScorers prop is true', async () => {
+  await act(async () => {
+    render(<HeadToHead data={inPensAetData} isConciseView shouldShowActions />);
+  });
+  const player = screen.getByText('A. Karašausks');
+  const firstGoalByMinutes = screen.getByText(/13'/);
+  const secondGoalByMinutes = screen.getByText(/85'/);
 
-//   expect(player).toBeInTheDocument();
-//   expect(firstGoalByMinutes).toBeInTheDocument();
-//   expect(secondGoalByMinutes).toBeInTheDocument();
-// });
+  expect(player).toBeInTheDocument();
+  expect(firstGoalByMinutes).toBeInTheDocument();
+  expect(secondGoalByMinutes).toBeInTheDocument();
+});
 
-// test('renders head to head but does not show actions data when showScorers prop is false', () => {
-//   const { queryByText } = renderComponent(inPensAetData, true, false);
-//   const player = queryByText('A. Karašausks');
-//   const goalsByMinutes = queryByText(`13', 85'`);
+test('renders head to head but does not show actions data when showScorers prop is false', async () => {
+  await act(async () => {
+    render(
+      <HeadToHead
+        data={inPensAetData}
+        isConciseView
+        shouldShowActions={false}
+      />,
+    );
+  });
+  const player = screen.queryByText('A. Karašausks');
+  const goalsByMinutes = screen.queryByText(`13', 85'`);
 
-//   expect(player).not.toBeInTheDocument();
-//   expect(goalsByMinutes).not.toBeInTheDocument();
-// });
+  expect(player).not.toBeInTheDocument();
+  expect(goalsByMinutes).not.toBeInTheDocument();
+});
 
-// test('renders head to head with aet and penalties scores for a MidEvent after aet', () => {
-//   const { queryByText } = renderComponent(inPens90Data);
-//   const halfTimeScore = queryByText('HT 2-3');
-//   const pens = queryByText('Penalties 2-3');
-//   const a11yPenPeriod = queryByText('Penalties Liepāja 2 , Gjilani 3');
-//   const a11yHTScore = queryByText('Half Time Liepāja 2 , Gjilani 3');
+test('renders head to head with aet and penalties scores for a MidEvent after aet', async () => {
+  await renderHeadToHead(inPens90Data);
+  const halfTimeScore = screen.queryByText('HT 2-3');
+  const pens = screen.queryByText('Penalties 2-3');
+  const a11yPenPeriod = screen.queryByText('Penalties Liepāja 2 , Gjilani 3');
+  const a11yHTScore = screen.queryByText('Half Time Liepāja 2 , Gjilani 3');
 
-//   const a11ySummaryRegex =
-//     /Liepāja 3 , Gjilani 3 after full time penalties in progress/;
-//   const a11ySummary = queryByText(a11ySummaryRegex);
+  const a11ySummaryRegex =
+    /Liepāja 3 , Gjilani 3 after full time penalties in progress/;
+  const a11ySummary = screen.queryByText(a11ySummaryRegex);
 
-//   expect(pens).toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(a11yPenPeriod).toBeInTheDocument();
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-// });
+  expect(pens).toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(a11yPenPeriod).toBeInTheDocument();
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+});
 
-// test('renders head to head after aet and displays penalties before pens start in MidEvent', () => {
-//   const { queryByText } = renderComponent(beforePensAetData);
-//   const halfTimeScore = queryByText('HT 1-1');
-//   const fullTime = queryByText('FT 2-2');
-//   const pens = queryByText('Penalties');
-//   const excludedPensScore = queryByText('Penalties 1-0');
-//   const a11yPenPeriod = queryByText('Penalties');
-//   const a11yFTScore = queryByText('Full Time Liepāja 2 , Gjilani 2');
-//   const a11yHTScore = queryByText('Half Time Liepāja 1 , Gjilani 1');
+test('renders head to head after aet and displays penalties before pens start in MidEvent', async () => {
+  await renderHeadToHead(beforePensAetData);
+  const halfTimeScore = screen.queryByText('HT 1-1');
+  const fullTime = screen.queryByText('FT 2-2');
+  const pens = screen.queryByText('Penalties');
+  const excludedPensScore = screen.queryByText('Penalties 1-0');
+  const a11yPenPeriod = screen.queryByText('Penalties');
+  const a11yFTScore = screen.queryByText('Full Time Liepāja 2 , Gjilani 2');
+  const a11yHTScore = screen.queryByText('Half Time Liepāja 1 , Gjilani 1');
 
-//   const a11ySummaryRegex =
-//     /Liepāja 2 , Gjilani 2 after extra time going to penalties/;
-//   const a11ySummary = queryByText(a11ySummaryRegex);
+  const a11ySummaryRegex =
+    /Liepāja 2 , Gjilani 2 after extra time going to penalties/;
+  const a11ySummary = screen.queryByText(a11ySummaryRegex);
 
-//   expect(pens).toBeInTheDocument();
-//   expect(a11ySummary).toBeInTheDocument();
-//   expect(a11yPenPeriod).toBeInTheDocument();
-//   expect(a11yHTScore).toBeInTheDocument();
-//   expect(a11yFTScore).toBeInTheDocument();
-//   expect(halfTimeScore).toBeInTheDocument();
-//   expect(fullTime).toBeInTheDocument();
-//   expect(excludedPensScore).not.toBeInTheDocument();
-// });
+  expect(pens).toBeInTheDocument();
+  expect(a11ySummary).toBeInTheDocument();
+  expect(a11yPenPeriod).toBeInTheDocument();
+  expect(a11yHTScore).toBeInTheDocument();
+  expect(a11yFTScore).toBeInTheDocument();
+  expect(halfTimeScore).toBeInTheDocument();
+  expect(fullTime).toBeInTheDocument();
+  expect(excludedPensScore).not.toBeInTheDocument();
+});
 
-// please do the same for all the non-commented-out tests below, to update them to use the react testing library with providers, act, async await, etc
 test('renders head to head if an event is cancelled with match status letter data', async () => {
   await renderHeadToHead(cancelledMockData);
 
@@ -789,61 +798,64 @@ test.each([
   },
 );
 
-// test('renders the value of Attendance', () => {
-//   const { queryByText } = renderComponent({
-//     ...secondHalf90Data,
-//     attendance: {
-//       value: 73456,
-//     },
-//   });
+// please update the below tests to be like the ones above to use render screen asyn await etc
 
-//   const attendanceValue = queryByText('73,456');
+test('renders the value of Attendance', async () => {
+  await renderHeadToHead({
+    ...secondHalf90Data,
+    attendance: {
+      value: 73456,
+    },
+  });
 
-//   expect(attendanceValue).toBeInTheDocument();
-// });
+  const attendanceValue = screen.queryByText('73,456');
 
-// test('renders the value of AttendanceInfo in the venue', () => {
-//   const { queryByText } = renderComponent({
-//     ...secondHalf90Data,
-//     attendance: {
-//       additionalInfo: 'Limited Audience',
-//     },
-//   });
+  expect(attendanceValue).toBeInTheDocument();
+});
 
-//   const venue = queryByText('Stadions Daugava (Limited Audience)');
+test('renders the value of AttendanceInfo in the venue', async () => {
+  await renderHeadToHead({
+    ...secondHalf90Data,
+    attendance: {
+      additionalInfo: 'Limited Audience',
+    },
+  });
 
-//   expect(venue).toBeInTheDocument();
-// });
+  const venue = screen.queryByText('Stadions Daugava (Limited Audience)');
 
-// test('renders the value of Attendance and Attendance Info', () => {
-//   const { queryByText } = renderComponent({
-//     ...secondHalf90Data,
-//     attendance: {
-//       value: 73456,
-//       additionalInfo: 'Limited Audience',
-//     },
-//   });
+  expect(venue).toBeInTheDocument();
+});
 
-//   const attendanceValue = queryByText('73,456');
-//   const venue = queryByText('Stadions Daugava (Limited Audience)');
+test('renders the value of Attendance and Attendance Info', async () => {
+  await renderHeadToHead({
+    ...secondHalf90Data,
+    attendance: {
+      value: 73456,
+      additionalInfo: 'Limited Audience',
+    },
+  });
 
-//   expect(attendanceValue).toBeInTheDocument();
-//   expect(venue).toBeInTheDocument();
-// });
+  const attendanceValue = screen.queryByText('73,456');
+  const venue = screen.queryByText('Stadions Daugava (Limited Audience)');
 
-// test('does not render the value of Attendance and Attendance Info when they are not present in the data', () => {
-//   const { queryByText } = renderComponent({
-//     ...secondHalf90Data,
-//     attendance: {},
-//   });
+  expect(attendanceValue).toBeInTheDocument();
+  expect(venue).toBeInTheDocument();
+});
 
-//   const attendanceValue = queryByText('73,456');
-//   const venue = queryByText('Stadions Daugava');
+test('does not render the value of Attendance and Attendance Info when they are not present in the data', async () => {
+  await renderHeadToHead({
+    ...secondHalf90Data,
+    attendance: {},
+  });
 
-//   expect(attendanceValue).not.toBeInTheDocument();
-//   expect(venue).toBeInTheDocument();
-// });
+  const attendanceValue = screen.queryByText('73,456');
+  const venue = screen.queryByText('Stadions Daugava');
 
+  expect(attendanceValue).not.toBeInTheDocument();
+  expect(venue).toBeInTheDocument();
+});
+
+// Not MVP - Rugby fixture data required
 // test('renders head to head with a goal summary', () => {
 //   const isConciseView = false;
 //   const shouldShowActions = true;
