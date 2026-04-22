@@ -1,7 +1,6 @@
-import React from 'react';
-import { formatDate } from '@bbc/web-gel-date-formatter';
-import HeadToHeadV2 from '@bbc/web-components/head-to-head-v2/index.js';
-import { shortNamesMap } from './short-name-map.js';
+import moment from 'moment';
+import { HeadToHeadV2 } from '../../head-to-head-v2';
+import { shortNamesMap } from './short-name-map';
 
 export const HeadToHeadV2ConciseComponent = args => {
   const {
@@ -16,13 +15,22 @@ export const HeadToHeadV2ConciseComponent = args => {
     date,
     baseData,
     homeActions,
-    awayActions
+    awayActions,
   } = args;
-  const matchDate = formatDate(date, 'd MMM yyyy');
-  const day = new Date(date).toLocaleString('en-gb', { weekday: 'short' });
-  const matchTime = formatDate(date, 'HH:mm');
 
-  const buildTeamObject = (team, score, scoreUnconfirmed, actions, alignment, data) => {
+  // Swapped out a PS function for moment.
+  const matchDate = moment(date).locale('en').format('d MMM YYYY');
+  const day = new Date(date).toLocaleString('en-gb', { weekday: 'short' });
+  const matchTime = moment(date).locale('en').format('HH:mm');
+
+  const buildTeamObject = (
+    team,
+    score,
+    scoreUnconfirmed,
+    actions,
+    alignment,
+    data,
+  ) => {
     const { runningScores } = data[alignment];
     const obj = {};
     if (score) {
@@ -35,7 +43,7 @@ export const HeadToHeadV2ConciseComponent = args => {
       shortName: shortNamesMap(team),
       urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
       actions,
-      runningScores
+      runningScores,
     };
   };
 
@@ -44,17 +52,37 @@ export const HeadToHeadV2ConciseComponent = args => {
     date: `${day} ${matchDate}`,
     time: { displayTimeUK: matchTime, accessibleTime: matchTime },
     venue: {
-      name: venue
+      name: venue,
     },
     tournament: {
       name: tournament.name,
-      urn: tournament.urn
+      urn: tournament.urn,
     },
-    home: buildTeamObject(home, homeScore, homeScoreUnconfirmed, homeActions, 'home', baseData),
-    away: buildTeamObject(away, awayScore, awayScoreUnconfirmed, awayActions, 'away', baseData)
+    home: buildTeamObject(
+      home,
+      homeScore,
+      homeScoreUnconfirmed,
+      homeActions,
+      'home',
+      baseData,
+    ),
+    away: buildTeamObject(
+      away,
+      awayScore,
+      awayScoreUnconfirmed,
+      awayActions,
+      'away',
+      baseData,
+    ),
   };
 
-  return <HeadToHeadV2 data={updatedStoryBookControls} renderEventSummaryHeading isConciseView={'true'} />;
+  return (
+    <HeadToHeadV2
+      data={updatedStoryBookControls}
+      renderEventSummaryHeading
+      isConciseView="true"
+    />
+  );
 };
 
 export const HeadToHeadV2Component = args => {
@@ -71,13 +99,21 @@ export const HeadToHeadV2Component = args => {
     baseData,
     homeActions,
     awayActions,
-    onwardJourneyLink
+    onwardJourneyLink,
   } = args;
-  const matchDate = formatDate(date, 'd MMM yyyy');
+  // Swapped out a PS function for moment.
+  const matchDate = moment(date).locale('en').format('d MMM YYYY');
   const day = new Date(date).toLocaleString('en-gb', { weekday: 'short' });
-  const matchTime = formatDate(date, 'HH:mm');
+  const matchTime = moment(date).locale('en').format('HH:mm');
 
-  const buildTeamObject = (team, score, scoreUnconfirmed, actions, alignment, data) => {
+  const buildTeamObject = (
+    team,
+    score,
+    scoreUnconfirmed,
+    actions,
+    alignment,
+    data,
+  ) => {
     const { runningScores } = data[alignment];
     const obj = {};
     if (score) {
@@ -91,7 +127,7 @@ export const HeadToHeadV2Component = args => {
       shortName: shortNamesMap(team),
       urn: `urn:bbc:sportsdata:football:team:${team.toLowerCase().split(' ').join('-')}`,
       actions,
-      runningScores
+      runningScores,
     };
   };
 
@@ -100,16 +136,32 @@ export const HeadToHeadV2Component = args => {
     date: `${day} ${matchDate}`,
     time: { displayTimeUK: matchTime, accessibleTime: matchTime },
     venue: {
-      name: venue
+      name: venue,
     },
     tournament: {
       name: tournament.name,
-      urn: tournament.urn
+      urn: tournament.urn,
     },
-    home: buildTeamObject(home, homeScore, homeScoreUnconfirmed, homeActions, 'home', baseData),
-    away: buildTeamObject(away, awayScore, awayScoreUnconfirmed, awayActions, 'away', baseData),
-    onwardJourneyLink
+    home: buildTeamObject(
+      home,
+      homeScore,
+      homeScoreUnconfirmed,
+      homeActions,
+      'home',
+      baseData,
+    ),
+    away: buildTeamObject(
+      away,
+      awayScore,
+      awayScoreUnconfirmed,
+      awayActions,
+      'away',
+      baseData,
+    ),
+    onwardJourneyLink,
   };
 
-  return <HeadToHeadV2 data={updatedStoryBookControls} renderEventSummaryHeading />;
+  return (
+    <HeadToHeadV2 data={updatedStoryBookControls} renderEventSummaryHeading />
+  );
 };

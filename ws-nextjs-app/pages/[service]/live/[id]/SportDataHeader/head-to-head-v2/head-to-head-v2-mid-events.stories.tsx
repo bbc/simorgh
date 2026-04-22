@@ -1,5 +1,3 @@
-import { BREAKPOINT_VIEWPORTS } from '@bbc/web-gel-foundations';
-import { INITIAL_VIEWPORTS } from 'storybook/viewport';
 import {
   firstHalf90Data,
   secondHalf90Data,
@@ -11,14 +9,14 @@ import {
   beforeEtData,
   inPens90Data,
   secondLegETData,
-  secondLegAETInPensData
-} from '@bbc/web-sport-utils/tests/static-data/football/event/transformed/mid-event/index.js';
-
-import mdx from './head-to-head-v2.mdx';
-import metadata from './metadata.json';
-import { HeadToHeadV2 } from './head-to-head-v2.jsx';
-import { shortNamesMap } from './storybook/helpers/short-name-map.js';
-import { HeadToHeadV2Component, HeadToHeadV2ConciseComponent } from './storybook/helpers/base-component.jsx';
+  secondLegAETInPensData,
+} from './static-data/event/transformed/mid-event';
+import { HeadToHeadV2 } from './head-to-head-v2';
+import { shortNamesMap } from './storybook/helpers/short-name-map';
+import {
+  HeadToHeadV2Component,
+  HeadToHeadV2ConciseComponent,
+} from './storybook/helpers/base-component';
 
 import venuesData from './static-data/premier-league-venues.json';
 
@@ -26,55 +24,42 @@ const { venues } = venuesData;
 
 const getBaseDataWithEuropaLeagueTournament = baseData => ({
   ...baseData,
-  tournamentDescriptionLabel: 'UEFA Europa Conference League'
+  tournamentDescriptionLabel: 'UEFA Europa Conference League',
 });
 
+// OPTIONAL - KEEP STORY ARGS SIMPLE
+// export default {
+//   title: 'Components/Live Page Sport Data Header/Head To Head V2 - Mid event',
+//   component: HeadToHeadV2,
+// };
+
+// OPTIONAL - MORE COMPLEX STORY ARGS - USES SHORT NAMES MAP ETC, REDUCED FROM PS ORIGINAL
 export default {
-  title: 'Components/Presentation/Head To Head V2/Mid Event',
+  title: 'Components/Live Page Sport Data Header/Head To Head V2 - Mid event',
   component: HeadToHeadV2,
-  tags: ['autodocs'],
-  parameters: {
-    metadata,
-    docs: {
-      description: {
-        component: 'The `Head to Head V2` component is used to render event data.'
-      },
-      page: mdx
-    },
-    chromatic: {
-      viewports: [375, ...BREAKPOINT_VIEWPORTS]
-    },
-    viewport: {
-      viewports: INITIAL_VIEWPORTS
-    }
-  },
-  globals: {
-    corePalette: 'lightAlternative',
-    servicePalette: 'sportLight',
-    fontPalette: 'sansSimple'
-  },
   argTypes: {
     home: {
       options: Object.keys(shortNamesMap()),
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     away: {
       options: Object.keys(shortNamesMap()),
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     venue: {
       options: venues,
-      control: { type: 'select' }
+      control: { type: 'select' },
     },
     status: {
-      table: { disable: true }
+      table: { disable: true },
     },
-    date: { control: 'date' }
-  }
+    date: { control: 'date' },
+  },
 };
 
 export const FirstHalfOf90Mins = HeadToHeadV2Component.bind({});
-export const FirstHalfOf90MinsWithHomeScoreUnconfirmed = HeadToHeadV2Component.bind({});
+export const FirstHalfOf90MinsWithHomeScoreUnconfirmed =
+  HeadToHeadV2Component.bind({});
 export const SecondHalfOf90Mins = HeadToHeadV2Component.bind({});
 export const InPenaltiesAfter90Mins = HeadToHeadV2Component.bind({});
 export const ExtraTime = HeadToHeadV2Component.bind({});
@@ -83,20 +68,29 @@ export const BeforePensAfterExtraTime = HeadToHeadV2Component.bind({});
 export const BeforeEt = HeadToHeadV2Component.bind({});
 export const FirstHalfOf90MinsSecondLeg = HeadToHeadV2Component.bind({});
 export const ExtraTimeSecondLeg = HeadToHeadV2Component.bind({});
-export const InPenaltiesAfterExtraTimeSecondLeg = HeadToHeadV2Component.bind({});
+export const InPenaltiesAfterExtraTimeSecondLeg = HeadToHeadV2Component.bind(
+  {},
+);
 export const BeforePens = HeadToHeadV2Component.bind({});
 export const FirstHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({});
 export const SecondHalfOf90MinsConcise = HeadToHeadV2ConciseComponent.bind({});
-export const InPenaltiesAfter90MinsConcise = HeadToHeadV2ConciseComponent.bind({});
+export const InPenaltiesAfter90MinsConcise = HeadToHeadV2ConciseComponent.bind(
+  {},
+);
 export const ExtraTimeConcise = HeadToHeadV2ConciseComponent.bind({});
-export const InPenaltiesAfterExtraTimeConcise = HeadToHeadV2ConciseComponent.bind({});
+export const InPenaltiesAfterExtraTimeConcise =
+  HeadToHeadV2ConciseComponent.bind({});
 export const BeforePensConcise = HeadToHeadV2ConciseComponent.bind({});
-export const BeforePensAfterExtraTimeConcise = HeadToHeadV2ConciseComponent.bind({});
+export const BeforePensAfterExtraTimeConcise =
+  HeadToHeadV2ConciseComponent.bind({});
 export const BeforeEtConcise = HeadToHeadV2ConciseComponent.bind({});
-export const FirstHalfOf90MinsSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
+export const FirstHalfOf90MinsSecondLegConcise =
+  HeadToHeadV2ConciseComponent.bind({});
 export const ExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
-export const InPenaltiesAfterExtraTimeSecondLegConcise = HeadToHeadV2ConciseComponent.bind({});
+export const InPenaltiesAfterExtraTimeSecondLegConcise =
+  HeadToHeadV2ConciseComponent.bind({});
 
+// @ts-expect-error - PS copy and paste
 FirstHalfOf90Mins.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -105,11 +99,15 @@ FirstHalfOf90Mins.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(firstHalf90Data),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'Premier League', urn: 'urn:bbc:sportsdata:football:tournament:premier-league' },
+  tournament: {
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:premier-league',
+  },
   homeActions: firstHalf90Data.home.actions,
-  awayActions: firstHalf90Data.away.actions
+  awayActions: firstHalf90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 FirstHalfOf90MinsWithHomeScoreUnconfirmed.args = {
   home: 'Arsenal',
   homeScore: '3',
@@ -120,11 +118,15 @@ FirstHalfOf90MinsWithHomeScoreUnconfirmed.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(firstHalf90Data),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'Premier League', urn: 'urn:bbc:sportsdata:football:tournament:premier-league' },
+  tournament: {
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:premier-league',
+  },
   homeActions: firstHalf90Data.home.actions,
-  awayActions: firstHalf90Data.away.actions
+  awayActions: firstHalf90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 SecondHalfOf90Mins.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -133,11 +135,15 @@ SecondHalfOf90Mins.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(secondHalf90Data),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'Premier League', urn: 'urn:bbc:sportsdata:football:tournament:premier-league' },
+  tournament: {
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:premier-league',
+  },
   homeActions: secondHalf90Data.home.actions,
-  awayActions: secondHalf90Data.away.actions
+  awayActions: secondHalf90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfter90Mins.args = {
   home: 'Arsenal',
   homeScore: '3',
@@ -146,11 +152,15 @@ InPenaltiesAfter90Mins.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(inPens90Data),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'League Cup', urn: 'urn:bbc:sportsdata:football:tournament:league-cup' },
+  tournament: {
+    name: 'League Cup',
+    urn: 'urn:bbc:sportsdata:football:tournament:league-cup',
+  },
   homeActions: inPens90Data.home.actions,
-  awayActions: inPens90Data.away.actions
+  awayActions: inPens90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforePens.args = {
   home: 'Arsenal',
   homeScore: '3',
@@ -159,11 +169,15 @@ BeforePens.args = {
   baseData: beforePensData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'League Cup', urn: 'urn:bbc:sportsdata:football:tournament:league-cup' },
+  tournament: {
+    name: 'League Cup',
+    urn: 'urn:bbc:sportsdata:football:tournament:league-cup',
+  },
   homeActions: beforePensData.home.actions,
-  awayActions: beforePensData.away.actions
+  awayActions: beforePensData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforeEt.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -172,11 +186,15 @@ BeforeEt.args = {
   baseData: beforeEtData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'FA Cup - 3rd Round', urn: 'urn:bbc:sportsdata:football:tournament:fa-cup' },
+  tournament: {
+    name: 'FA Cup - 3rd Round',
+    urn: 'urn:bbc:sportsdata:football:tournament:fa-cup',
+  },
   homeActions: beforeEtData.home.actions,
-  awayActions: beforeEtData.away.actions
+  awayActions: beforeEtData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 ExtraTime.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -185,11 +203,15 @@ ExtraTime.args = {
   baseData: etFirstHalfData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'FA Cup - 3rd Round', urn: 'urn:bbc:sportsdata:football:tournament:fa-cup' },
+  tournament: {
+    name: 'FA Cup - 3rd Round',
+    urn: 'urn:bbc:sportsdata:football:tournament:fa-cup',
+  },
   homeActions: etFirstHalfData.home.actions,
-  awayActions: etFirstHalfData.away.actions
+  awayActions: etFirstHalfData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTime.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -198,11 +220,15 @@ InPenaltiesAfterExtraTime.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(inPensAetData),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: inPensAetData.home.actions,
-  awayActions: inPensAetData.away.actions
+  awayActions: inPensAetData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforePensAfterExtraTime.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -211,11 +237,15 @@ BeforePensAfterExtraTime.args = {
   baseData: beforePensAetData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: beforePensAetData.home.actions,
-  awayActions: beforePensAetData.away.actions
+  awayActions: beforePensAetData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 FirstHalfOf90MinsSecondLeg.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -224,11 +254,15 @@ FirstHalfOf90MinsSecondLeg.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(firstHalfAggData),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Champions League', urn: 'urn:bbc:sportsdata:football:tournament:champions-league' },
+  tournament: {
+    name: 'UEFA Champions League',
+    urn: 'urn:bbc:sportsdata:football:tournament:champions-league',
+  },
   homeActions: firstHalfAggData.home.actions,
-  awayActions: firstHalfAggData.away.actions
+  awayActions: firstHalfAggData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 ExtraTimeSecondLeg.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -237,11 +271,15 @@ ExtraTimeSecondLeg.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(secondLegETData),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: secondLegETData.home.actions,
-  awayActions: secondLegETData.away.actions
+  awayActions: secondLegETData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTimeSecondLeg.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -250,11 +288,15 @@ InPenaltiesAfterExtraTimeSecondLeg.args = {
   baseData: getBaseDataWithEuropaLeagueTournament(secondLegAETInPensData),
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: secondLegAETInPensData.home.actions,
-  awayActions: secondLegAETInPensData.away.actions
+  awayActions: secondLegAETInPensData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 FirstHalfOf90MinsConcise.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -263,11 +305,15 @@ FirstHalfOf90MinsConcise.args = {
   baseData: firstHalf90Data,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'Premier League', urn: 'urn:bbc:sportsdata:football:tournament:premier-league' },
+  tournament: {
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:premier-league',
+  },
   homeActions: firstHalf90Data.home.actions,
-  awayActions: firstHalf90Data.away.actions
+  awayActions: firstHalf90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 SecondHalfOf90MinsConcise.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -276,11 +322,15 @@ SecondHalfOf90MinsConcise.args = {
   baseData: secondHalf90Data,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'Premier League', urn: 'urn:bbc:sportsdata:football:tournament:premier-league' },
+  tournament: {
+    name: 'Premier League',
+    urn: 'urn:bbc:sportsdata:football:tournament:premier-league',
+  },
   homeActions: secondHalf90Data.home.actions,
-  awayActions: secondHalf90Data.away.actions
+  awayActions: secondHalf90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfter90MinsConcise.args = {
   home: 'Arsenal',
   homeScore: '3',
@@ -289,11 +339,15 @@ InPenaltiesAfter90MinsConcise.args = {
   baseData: inPens90Data,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'League Cup', urn: 'urn:bbc:sportsdata:football:tournament:league-cup' },
+  tournament: {
+    name: 'League Cup',
+    urn: 'urn:bbc:sportsdata:football:tournament:league-cup',
+  },
   homeActions: inPens90Data.home.actions,
-  awayActions: inPens90Data.away.actions
+  awayActions: inPens90Data.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 ExtraTimeConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -302,11 +356,15 @@ ExtraTimeConcise.args = {
   baseData: etFirstHalfData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'FA Cup - 3rd Round', urn: 'urn:bbc:sportsdata:football:tournament:fa-cup' },
+  tournament: {
+    name: 'FA Cup - 3rd Round',
+    urn: 'urn:bbc:sportsdata:football:tournament:fa-cup',
+  },
   homeActions: etFirstHalfData.home.actions,
-  awayActions: etFirstHalfData.away.actions
+  awayActions: etFirstHalfData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforeEtConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -315,11 +373,15 @@ BeforeEtConcise.args = {
   baseData: beforeEtData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'FA Cup - 3rd Round', urn: 'urn:bbc:sportsdata:football:tournament:fa-cup' },
+  tournament: {
+    name: 'FA Cup - 3rd Round',
+    urn: 'urn:bbc:sportsdata:football:tournament:fa-cup',
+  },
   homeActions: beforeEtData.home.actions,
-  awayActions: beforeEtData.away.actions
+  awayActions: beforeEtData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforePensConcise.args = {
   home: 'Arsenal',
   homeScore: '3',
@@ -328,11 +390,15 @@ BeforePensConcise.args = {
   baseData: beforePensData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'League Cup', urn: 'urn:bbc:sportsdata:football:tournament:league-cup' },
+  tournament: {
+    name: 'League Cup',
+    urn: 'urn:bbc:sportsdata:football:tournament:league-cup',
+  },
   homeActions: beforePensData.home.actions,
-  awayActions: beforePensData.away.actions
+  awayActions: beforePensData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTimeConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -341,11 +407,15 @@ InPenaltiesAfterExtraTimeConcise.args = {
   baseData: inPensAetData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: inPensAetData.home.actions,
-  awayActions: inPensAetData.away.actions
+  awayActions: inPensAetData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 BeforePensAfterExtraTimeConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -354,11 +424,15 @@ BeforePensAfterExtraTimeConcise.args = {
   baseData: beforePensAetData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: beforePensAetData.home.actions,
-  awayActions: beforePensAetData.away.actions
+  awayActions: beforePensAetData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 FirstHalfOf90MinsSecondLegConcise.args = {
   home: 'Arsenal',
   homeScore: '0',
@@ -367,11 +441,15 @@ FirstHalfOf90MinsSecondLegConcise.args = {
   baseData: firstHalfAggData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Champions League', urn: 'urn:bbc:sportsdata:football:tournament:champions-league' },
+  tournament: {
+    name: 'UEFA Champions League',
+    urn: 'urn:bbc:sportsdata:football:tournament:champions-league',
+  },
   homeActions: firstHalfAggData.home.actions,
-  awayActions: firstHalfAggData.away.actions
+  awayActions: firstHalfAggData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 ExtraTimeSecondLegConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -380,11 +458,15 @@ ExtraTimeSecondLegConcise.args = {
   baseData: secondLegETData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: secondLegETData.home.actions,
-  awayActions: secondLegETData.away.actions
+  awayActions: secondLegETData.away.actions,
 };
 
+// @ts-expect-error - PS copy and paste
 InPenaltiesAfterExtraTimeSecondLegConcise.args = {
   home: 'Arsenal',
   homeScore: '2',
@@ -393,7 +475,10 @@ InPenaltiesAfterExtraTimeSecondLegConcise.args = {
   baseData: secondLegAETInPensData,
   date: new Date('2023-01-01T13:00:00Z'),
   venue: 'Emirates Stadium',
-  tournament: { name: 'UEFA Europa League', urn: 'urn:bbc:sportsdata:football:tournament:europa-league' },
+  tournament: {
+    name: 'UEFA Europa League',
+    urn: 'urn:bbc:sportsdata:football:tournament:europa-league',
+  },
   homeActions: secondLegAETInPensData.home.actions,
-  awayActions: secondLegAETInPensData.away.actions
+  awayActions: secondLegAETInPensData.away.actions,
 };
