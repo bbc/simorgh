@@ -79,7 +79,7 @@ View all component states and interactions in [Storybook](./index.stories.tsx).
 The component can be tested using the enhanced testing library:
 
 ```tsx
-import { render, screen } from '#app/components/react-testing-library-with-providers';
+import { render, screen, fireEvent } from '#app/components/react-testing-library-with-providers';
 import ActionButton from '.';
 
 test('calls onClick when clicked', () => {

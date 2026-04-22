@@ -37,6 +37,8 @@ const ActionButton = ({
       title={label}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
     >
       {isLoading && <Spinner css={styles.buttonAnimation} />}
       {!isLoading && !isSaved && <BookmarkIcon />}

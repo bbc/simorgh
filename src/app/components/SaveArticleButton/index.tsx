@@ -4,13 +4,11 @@ import ActionButton from '../ActionButton';
 interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
-  onSignInRequired?: () => void;
 }
 
 const SaveArticleButton = ({
   articleId,
   articleTitle,
-  onSignInRequired,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({ articleId, articleTitle });
@@ -29,10 +27,6 @@ const SaveArticleButton = ({
   const buttonText = isLoading ? 'Saving' : buttonLabel;
 
   const handleClick = () => {
-    if (onSignInRequired) {
-      onSignInRequired();
-      return;
-    }
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
