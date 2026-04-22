@@ -17,16 +17,6 @@ import useToggle from '../useToggle';
  * based on feature toggles and sign in status,
  * with room to later expand for toggling the save state based on user actions. */
 
-// interface UseUASButtonProps {
-//   articleId: string;
-//   articleTitle: string;
-//   promoImageObj?: {
-//     url: string;
-//     altText: string;
-//     promoImageRawBlock?: OptimoRawImageBlock;
-//   };
-// }
-
 enum UASAction {
   SAVE = 'save',
   REMOVE = 'remove',
@@ -118,5 +108,4 @@ const useUASButton = ({
 };
 
 export { UASAction };
-// export type { UseUASButtonProps };
 export default useUASButton;
