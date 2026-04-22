@@ -28,7 +28,7 @@ const StyledHeadToHead = styled.div`
   font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
   font-weight: 400;
   font-feature-settings: 'ss01' off;
-  color: #F8F8F8;
+  color: #f8f8f8;
   padding: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
 
   @media (max-width: ${pixelsToRem(600)}rem) {
