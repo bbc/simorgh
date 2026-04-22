@@ -1,0 +1,289 @@
+{
+  "data": {
+    "urn": "urn:bbc:sportsdata:football:event:3n1x4716kyvjqbh4hdw42atja",
+    "type": "event",
+    "event": {
+      "id": "3n1x4716kyvjqbh4hdw42atja",
+      "urn": "urn:bbc:sportsdata:football:event:3n1x4716kyvjqbh4hdw42atja",
+      "sport": "football",
+      "startDateTime": "2022-07-14T14:00:00Z",
+      "time": {
+        "accessibleTime": "15:00",
+        "displayTimeUK": "15:00",
+        "timeCertainty": true
+      },
+      "status": "MidEvent",
+      "period": "pens",
+      "periodLabel": {
+        "value": "PENS",
+        "accessible": "Match going to penalties"
+      },
+      "participants": [
+        {
+          "id": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "urn": "urn:bbc:sportsdata:football:team:liepja",
+          "name": {
+            "fullName": "Liepāja",
+            "shortName": "Liepāja"
+          },
+          "score": "2",
+          "runningScores": {
+            "halftime": "0",
+            "fulltime": "1",
+            "extratime": "2"
+          },
+          "alignment": "home"
+        },
+        {
+          "id": "57m9hz7bq5v1va8q1pyr1u1nt",
+          "urn": "urn:bbc:sportsdata:football:team:gjilani",
+          "name": {
+            "fullName": "Gjilani",
+            "shortName": "Gjilani"
+          },
+          "score": "2",
+          "runningScores": {
+            "halftime": "0",
+            "fulltime": "1",
+            "extratime": "2"
+          },
+          "alignment": "away"
+        }
+      ],
+      "currentLeader": "draw",
+      "venue": {
+        "name": "Stadions Daugava",
+        "shortName": "Stadions Daugava"
+      },
+      "tournament": {
+        "id": "c7b8o53flg36wbuevfzy3lb10",
+        "name": "UEFA Europa Conference League",
+        "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+      },
+      "stage": {
+        "id": "brodav2njw2t51ew6v6jovfv8",
+        "name": "1st Qualifying Round",
+        "urn": "urn:bbc:sportsdata:football:stage:brodav2njw2t51ew6v6jovfv8"
+      },
+      "country": {
+        "name": "Europe"
+      },
+      "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+      "actions": [
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "49r6bwib87uwofysv25m8xnf9",
+          "playerName": "N. Kapun",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "9'",
+            "accessible": "9 minutes"
+          },
+          "timestamp": "2022-07-14T14:09:51Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "d6gxb6xjfwt2mesg2z6xz9al1",
+          "playerName": "L. Strumia",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "40'",
+            "accessible": "40 minutes"
+          },
+          "timestamp": "2022-07-14T14:40:51Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "dwdvbvwbbfxvu5mewytnflnf9",
+          "playerName": "Lucas Villela",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "45'+2",
+            "accessible": "45 minutes plus 2"
+          },
+          "timestamp": "2022-07-14T14:47:51Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "27ey3ns91z8a6j5fl4aprwout",
+          "playerName": "Inácio Miguel",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "45'+3",
+            "accessible": "45 minutes plus 3"
+          },
+          "timestamp": "2022-07-14T14:48:51Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "57m9hz7bq5v1va8q1pyr1u1nt",
+          "playerId": "axg0pv9oofxwlo92zdlikfb6y",
+          "playerName": "Aziz Keita",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "away",
+          "timeLabel": {
+            "value": "45'+3",
+            "accessible": "45 minutes plus 3"
+          },
+          "timestamp": "2022-07-14T14:48:51Z"
+        },
+        {
+          "actionType": "goal",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "2k62450281k97i0qtrw18vkd1",
+          "playerName": "A. Karašausks",
+          "type": "Penalty",
+          "typeLabel": {
+            "value": "Penalty",
+            "accessible": "Penalty"
+          },
+          "alignment": "home",
+          "timeLabel": {
+            "value": "49'",
+            "accessible": "49 minutes"
+          },
+          "timestamp": "2022-07-14T15:11:37Z"
+        },
+        {
+          "actionType": "goal",
+          "participantId": "57m9hz7bq5v1va8q1pyr1u1nt",
+          "playerId": "1dmfp2ow658dsv0re73r62ndh",
+          "playerName": "B. Krasniqi",
+          "type": "Goal",
+          "typeLabel": {
+            "value": "Goal",
+            "accessible": "Goal"
+          },
+          "alignment": "away",
+          "timeLabel": {
+            "value": "51'",
+            "accessible": "51 minutes"
+          },
+          "timestamp": "2022-07-14T15:13:37Z"
+        },
+        {
+          "actionType": "goal",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "7uufcg0dvus42emi9yev9i9cl",
+          "playerName": "N. Belaković",
+          "type": "Goal",
+          "typeLabel": {
+            "value": "Goal",
+            "accessible": "Goal"
+          },
+          "alignment": "home",
+          "timeLabel": {
+            "value": "64'",
+            "accessible": "64 minutes"
+          },
+          "timestamp": "2022-07-14T15:26:37Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "7uufcg0dvus42emi9yev9i9cl",
+          "playerName": "N. Belaković",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "64'",
+            "accessible": "64 minutes"
+          },
+          "timestamp": "2022-07-14T15:26:37Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "57m9hz7bq5v1va8q1pyr1u1nt",
+          "playerId": "aqcizetak2a4jboljk147tb6d",
+          "playerName": "Y. Hoxha",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "away",
+          "timeLabel": {
+            "value": "68'",
+            "accessible": "68 minutes"
+          },
+          "timestamp": "2022-07-14T15:30:37Z"
+        },
+        {
+          "actionType": "goal",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "1bb4r1zujrcabivulk02hqkt1",
+          "playerName": "Dodo",
+          "type": "Penalty",
+          "typeLabel": {
+            "value": "Penalty",
+            "accessible": "Penalty"
+          },
+          "alignment": "home",
+          "timeLabel": {
+            "value": "88'",
+            "accessible": "88 minutes"
+          },
+          "timestamp": "2022-07-14T15:50:37Z"
+        },
+        {
+          "actionType": "card",
+          "participantId": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "playerId": "1bb4r1zujrcabivulk02hqkt1",
+          "playerName": "Dodo",
+          "type": "Yellow Card",
+          "typeLabel": {
+            "value": "Yellow Card",
+            "accessible": "Yellow Card"
+          },
+          "reason": "Foul",
+          "alignment": "home",
+          "timeLabel": {
+            "value": "89'",
+            "accessible": "89 minutes"
+          },
+          "timestamp": "2022-07-14T15:51:37Z"
+        }
+      ],
+      "lastUpdated": "2022-07-14T14:01:08Z"
+    }
+  }
+}

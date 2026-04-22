@@ -1,0 +1,63 @@
+{
+  "data": {
+    "urn": "urn:bbc:sportsdata:football:event:78bis3qan491aqnwxn71ix6oq",
+    "type": "event",
+    "tipoTopicId": "cvp5j5ndx5nt",
+    "event": {
+      "id": "78bis3qan491aqnwxn71ix6oq",
+      "urn": "urn:bbc:sportsdata:football:event:78bis3qan491aqnwxn71ix6oq",
+      "sport": "football",
+      "startDateTime": "2022-08-06T11:30:00Z",
+      "time": {
+        "accessibleTime": "12:30",
+        "displayTimeUK": "12:30",
+        "timeCertainty": true
+      },
+      "status": "PreEvent",
+      "periodLabel": {
+        "value": "Scheduled",
+        "accessible": "Scheduled"
+      },
+      "participants": [
+        {
+          "id": "hzqh7z0mdl3v7gwete66syxp",
+          "urn": "urn:bbc:sportsdata:football:team:fulham",
+          "name": {
+            "fullName": "Fulham",
+            "shortName": "Fulham"
+          },
+          "alignment": "home"
+        },
+        {
+          "id": "c8h9bw1l82s06h77xxrelzhur",
+          "urn": "urn:bbc:sportsdata:football:team:liverpool",
+          "name": {
+            "fullName": "Liverpool",
+            "shortName": "Liverpool"
+          },
+          "alignment": "away"
+        }
+      ],
+      "venue": {
+        "name": "Craven Cottage",
+        "shortName": "Craven Cottage"
+      },
+      "tournament": {
+        "id": "2kwbbcootiqqgmrzs6o5inle5",
+        "name": "Premier League",
+        "urn": "urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5"
+      },
+      "stage": {
+        "id": "80qbeanalyj5cvxikkq351iqc",
+        "name": "Regular Season",
+        "urn": "urn:bbc:sportsdata:football:stage:80qbeanalyj5cvxikkq351iqc"
+      },
+      "country": {
+        "name": "England"
+      },
+      "tournamentDescriptionLabel": "Premier League",
+      "lastUpdated": "2022-06-19T14:46:04Z"
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

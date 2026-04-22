@@ -1,0 +1,73 @@
+{
+  "data": {
+    "urn": "urn:bbc:sportsdata:football:event:3n1x4716kyvjqbh4hdw42atjd",
+    "type": "event",
+    "event": {
+      "id": "3n1x4716kyvjqbh4hdw42atjd",
+      "urn": "urn:bbc:sportsdata:football:event:3n1x4716kyvjqbh4hdw42atjd",
+      "sport": "football",
+      "startDateTime": "2022-07-14T14:00:00Z",
+      "time": {
+        "accessibleTime": "15:00",
+        "displayTimeUK": "15:00",
+        "timeCertainty": true
+      },
+      "status": "MidEvent",
+      "period": "firsthalf",
+      "periodLabel": {
+        "value": "45'+2",
+        "accessible": "45 minutes plus 2"
+      },
+      "participants": [
+        {
+          "id": "3rutx3wc2j6q3qq8uqdn8pdja",
+          "urn": "urn:bbc:sportsdata:football:team:liepja",
+          "name": {
+            "fullName": "Liepāja",
+            "shortName": "Liepāja"
+          },
+          "score": "0",
+          "runningScores": {
+            "fulltime": "0",
+            "aggregate": "0"
+          },
+          "alignment": "home"
+        },
+        {
+          "id": "57m9hz7bq5v1va8q1pyr1u1nt",
+          "urn": "urn:bbc:sportsdata:football:team:gjilani",
+          "name": {
+            "fullName": "Gjilani",
+            "shortName": "Gjilani"
+          },
+          "score": "0",
+          "runningScores": {
+            "fulltime": "0",
+            "aggregate": "1"
+          },
+          "alignment": "away"
+        }
+      ],
+      "currentLeader": "draw",
+      "venue": {
+        "name": "Stadions Daugava",
+        "shortName": "Stadions Daugava"
+      },
+      "tournament": {
+        "id": "c7b8o53flg36wbuevfzy3lb10",
+        "name": "UEFA Europa Conference League",
+        "urn": "urn:bbc:sportsdata:football:tournament:c7b8o53flg36wbuevfzy3lb10"
+      },
+      "stage": {
+        "id": "brodav2njw2t51ew6v6jovfv8",
+        "name": "1st Qualifying Round",
+        "urn": "urn:bbc:sportsdata:football:stage:brodav2njw2t51ew6v6jovfv8"
+      },
+      "country": {
+        "name": "Europe"
+      },
+      "tournamentDescriptionLabel": "UEFA Europa Conference League - 1st Qualifying Round",
+      "lastUpdated": "2022-07-14T14:40:34Z"
+    }
+  }
+}
