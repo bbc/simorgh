@@ -1,7 +1,3 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-
-<Meta isTemplate />
-
 ## Props
 
 | Argument       |          Type          | Required | Description                                                       |
@@ -77,7 +73,11 @@ const figure = () => (
   <HeadToHeadV2
     status="MidEvent"
     leftParticipant={{ id: 'TFBB3', name: 'Arsenal', score: 1 }}
-    rightParticipant={{ id: 'TFBB36', name: 'Brighton & Hove Albion', score: 3 }}
+    rightParticipant={{
+      id: 'TFBB36',
+      name: 'Brighton & Hove Albion',
+      score: 3,
+    }}
     date={{ time: '14:00', iso: '2022-11-09T14:00:00.000Z' }}
   />
 );
