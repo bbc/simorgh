@@ -1,6 +1,6 @@
 // import React from 'react';
 // import { BREAKPOINT_VIEWPORTS } from '@bbc/web-gel-foundations';
-// import Heading from '@bbc/web-components/heading/index.js';
+import Heading from '#app/components/Heading';
 // import { Stack } from '@bbc/web-gel-layouts';
 import { preEventData } from '../static-data/event/transformed/pre-event/index';
 import {
@@ -154,10 +154,7 @@ const PostEventConciseViewInDoubleDigitScorePage = () => (
 
 export const ScoreTests = () => (
   <>
-    {/* // <Stack spacing={4}>
-  //   <Heading level="1" fontScale="indexHeadlineLarge">
-  //     Score Length Tests: Full View
-  //   </Heading> */}
+    <Heading level={1}>Score Length Tests: Full View</Heading>
     <SingleDigitsScoreFull />
     <DoubleScoreFullHome />
     <DoubleScoreFullAway />
@@ -167,9 +164,7 @@ export const ScoreTests = () => (
     <NoScoreFullAway />
     <LongScoreFullHome />
     <LongScoreFullAway />
-    {/* // <Heading level="1" fontScale="indexHeadlineLarge">
-    //   Score Length Tests: Concise View
-    // </Heading> */}
+    <Heading level={1}>Score Length Tests: Concise View</Heading>
     <SingleDigitsScoreConcise />
     <DoubleScoreConciseHome />
     <DoubleScoreConciseAway />
@@ -179,9 +174,9 @@ export const ScoreTests = () => (
     <NoScoreConciseAway />
     <LongScoreConciseHome />
     <LongScoreConciseAway />
-    {/* // <Heading level="1" fontScale="indexHeadlineLarge">
-    //   Single Digit Score in a container with other double digit scores
-    // </Heading> */}
+    <Heading level={1}>
+      Single Digit Score in a container with other double digit scores
+    </Heading>
     <PostEventConciseViewInDoubleDigitScorePage />
   </>
 );
@@ -301,11 +296,8 @@ const AbandonedEventConciseViewWithoutBadges = () => (
 );
 
 export const HiddenBadgesTests = () => (
-  // <Stack spacing={4}>
-  //   <Heading level="1" fontScale="indexHeadlineLarge">
-  //     No Badge Tests: Full View
-  //   </Heading>
   <>
+    <Heading level={1}>No Badge Tests: Full View</Heading>
     <PreEventFullViewWithoutBadges />
     <MidEventFullViewWithoutBadges />
     <PostEventFullViewWithoutBadges />
@@ -313,9 +305,7 @@ export const HiddenBadgesTests = () => (
     <PostponedEventFullViewWithoutBadges />
     <SuspendedEventFullViewWithoutBadges />
     <AbandonedEventFullViewWithoutBadges />
-    {/* <Heading level="1" fontScale="indexHeadlineLarge">
-      No Badge Tests: Concise View
-    </Heading> */}
+    <Heading level={1}>No Badge Tests: Concise View</Heading>
     <PreEventConciseViewWithoutBadges />
     <MidEventConciseViewWithoutBadges />
     <PostEventConciseViewWithoutBadges />
@@ -327,6 +317,7 @@ export const HiddenBadgesTests = () => (
 );
 
 const getNoPeriodLabelData = data => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { periodLabel, ...rest } = data;
   return rest;
 };
@@ -363,25 +354,16 @@ const PostEventConciseViewWithoutPeriodLabel = () => (
 );
 
 export const Tests = () => (
-  // <Stack spacing={4}>
   <>
-    {/* <Heading level="1" fontScale="indexHeadlineLarge">
-      No Period Label Tests: Full View
-    </Heading> */}
+    <Heading level={1}>No Period Label Tests: Full View</Heading>
     <MidEventFullViewWithoutPeriodLabel />
     <PostEventFullViewWithoutPeriodLabel />
-    {/* <Heading level="1" fontScale="indexHeadlineLarge">
-      MidEvent Period Label Tests: Full View
-    </Heading> */}
+    <Heading level={1}>MidEvent Period Label Tests: Full View</Heading>
     {/* <MidEventFullViewWithPeriodLabel /> */}
-    {/* <Heading level="1" fontScale="indexHeadlineLarge">
-      No Period Label Tests: Concise View
-    </Heading> */}
+    <Heading level={1}>No Period Label Tests: Concise View</Heading>
     <MidEventConciseViewWithoutPeriodLabel />
     <PostEventConciseViewWithoutPeriodLabel />
-    {/* <Heading level="1" fontScale="indexHeadlineLarge">
-      MidEvent Period Label Tests: Concise View
-    </Heading> */}
+    <Heading level={1}>MidEvent Period Label Tests: Concise View</Heading>
     {/* <MidEventConciseViewWithPeriodLabel /> */}
   </>
 );
