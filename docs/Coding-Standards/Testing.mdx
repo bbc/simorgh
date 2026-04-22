@@ -128,11 +128,39 @@ Snapshot tests can still be useful for small, stable serialised outputs, such as
 
 Avoid full container snapshots that include generated styles or class names, as these are noisy and brittle.
 
-Integration snapshots are currently excluded from this migration and can remain where they provide service-specific regression value.
+Integration snapshots are currently excluded from this rule and can remain where they provide service-specific regression value.
 
 For visual regression, prefer Storybook with Chromatic.
 
 If any unit snapshots remain, keep them small and review snapshot diffs carefully in PR.
+
+Example from a Most Read unit test migration:
+
+❌
+
+```js
+it('should render MostReadLink (ltr)', () => {
+  const { container } = render(
+    <MostReadLink dir="ltr" href="/pidgin/articles/c123" name="Story title" />,
+  );
+
+  expect(container).toMatchSnapshot();
+});
+```
+
+✅
+
+```js
+it('should render MostReadLink (ltr)', () => {
+  render(<MostReadLink dir="ltr" href="/pidgin/articles/c123" name="Story title" />);
+
+  const link = screen.getByRole('link', { name: 'Story title' });
+
+  expect(link).toHaveAttribute('href', '/pidgin/articles/c123');
+  expect(link).toBeInTheDocument();
+  expect(link.closest('[dir="ltr"]')).toBeInTheDocument();
+});
+```
 
 ## Use good test descriptions for test reports
 
