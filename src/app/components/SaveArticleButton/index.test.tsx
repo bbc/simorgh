@@ -42,7 +42,7 @@ describe('SaveArticleButton', () => {
     expect(screen.getByRole('button')).toHaveTextContent('Save for later');
   });
 
-  it('renders "Remove from saved" when saved', () => {
+  it('renders "Saved to My News" when saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: true,
@@ -51,7 +51,7 @@ describe('SaveArticleButton', () => {
     });
 
     render(<SaveArticleButton {...defaultProps} />);
-    expect(screen.getByRole('button')).toHaveTextContent('Remove from saved');
+    expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
   });
 
   it('renders loading state and disables button', () => {
