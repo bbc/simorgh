@@ -1,4 +1,4 @@
-import { render } from '../../../react-testing-library-with-providers';
+import { render, screen } from '../../../react-testing-library-with-providers';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities/testHelpers';
 
@@ -24,7 +24,12 @@ describe('MostReadLink', () => {
         },
       },
     );
-    expect(container).toMatchSnapshot();
+
+    const link = screen.getByRole('link', { name: pidginItem.title });
+
+    expect(link).toHaveAttribute('href', pidginItem.href);
+    expect(link).toHaveTextContent(pidginItem.title);
+    expect(container.querySelector('div[dir="ltr"]')).not.toBeNull();
   });
 
   it('should render rtl correctly', () => {
@@ -45,11 +50,16 @@ describe('MostReadLink', () => {
         },
       },
     );
-    expect(container).toMatchSnapshot();
+
+    const link = screen.getByRole('link', { name: persianItem.title });
+
+    expect(link).toHaveAttribute('href', persianItem.href);
+    expect(link).toHaveTextContent(persianItem.title);
+    expect(container.querySelector('div[dir="rtl"]')).not.toBeNull();
   });
 
   it('should render with last updated date correctly', () => {
-    const { container } = render(
+    render(
       <MostReadLink
         href={pidginItem.href}
         service="pidgin"
@@ -68,7 +78,13 @@ describe('MostReadLink', () => {
         },
       },
     );
-    expect(container).toMatchSnapshot();
+
+    expect(
+      screen.getByRole('link', { name: pidginItem.title }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText('Last updated: 5th November 2016'),
+    ).toBeInTheDocument();
   });
 });
 
@@ -83,7 +99,12 @@ describe('MostReadItemWrapper', () => {
       }),
       { service: 'pidgin' },
     );
-    expect(container).toMatchSnapshot();
+
+    expect(container.querySelectorAll('li[role="listitem"]')).toHaveLength(10);
+    expect(container.querySelectorAll('a[href]')).toHaveLength(10);
+    expect(container.querySelectorAll('div[dir="ltr"] > a[href]')).toHaveLength(
+      10,
+    );
   });
 
   it('should render rtl correctly with 10 items', () => {
@@ -96,7 +117,12 @@ describe('MostReadItemWrapper', () => {
       }),
       { service: 'persian' },
     );
-    expect(container).toMatchSnapshot();
+
+    expect(container.querySelectorAll('li[role="listitem"]')).toHaveLength(10);
+    expect(container.querySelectorAll('a[href]')).toHaveLength(10);
+    expect(container.querySelectorAll('div[dir="rtl"] > a[href]')).toHaveLength(
+      10,
+    );
   });
 
   describe('getParentColumns helper method', () => {
