@@ -1,9 +1,6 @@
-import { useState, useContext, useEffect } from 'react';
-import {
-  OptimizelyContext,
-  OptimizelyDecideOption,
-} from '@optimizely/react-sdk';
+import { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
+import { useActivatedExperiments } from '#app/lib/optimizelyDecisionStore';
 import PageCompleteTracking from './PageCompleteTracking';
 import ScrollDepthTracking from './ScrollDepthTracking';
 import PageViewTracking from './PageViewTracking';
@@ -22,51 +19,26 @@ const OptimizelyPageMetrics = ({
   trackPageComplete = false,
   trackVisit = false,
 }: Props) => {
-  const { optimizely } = useContext(OptimizelyContext);
   const { isAmp, pageType } = useContext(RequestContext);
-  const [isInExperiment, setisInExperiment] = useState(false);
+  const activatedExperiments = useActivatedExperiments();
 
   const experimentsForPageType = experimentsForPageMetrics.find(
     entry => entry.pageType === pageType,
   )?.activeExperiments;
 
-  const optimizelyExperimentsEnabled =
-    experimentsForPageType && !isAmp && !isInExperiment;
+  const optimizelyExperimentsEnabled = Boolean(
+    experimentsForPageType?.length && !isAmp,
+  );
 
-  useEffect(() => {
-    if (optimizelyExperimentsEnabled) {
-      optimizely?.onReady().then(() => {
-        const decisions = optimizely.decideAll([
-          OptimizelyDecideOption.DISABLE_DECISION_EVENT,
-        ]);
-        const isUserInAnyExperiments = experimentsForPageType.some(
-          experimentName => {
-            const decision = decisions[experimentName];
-            return decision && decision.variationKey !== 'off';
-          },
-        );
-
-        if (isUserInAnyExperiments) {
-          setisInExperiment(true);
-        }
-      });
-    }
-  }, [
-    optimizelyExperimentsEnabled,
-    optimizely,
-    trackPageComplete,
-    trackPageDepth,
-    trackPageView,
-    trackVisit,
-    experimentsForPageType,
-  ]);
+  const isInExperiment =
+    optimizelyExperimentsEnabled &&
+    Boolean(
+      experimentsForPageType?.some(name => activatedExperiments.has(name)),
+    );
 
   if (!isInExperiment) {
     return null;
   }
-
-  // for page views per visit, always enable both trackPageView and trackVisit
-  // visit tracking runs inside the page view tracker to keep ordering and avoid duplicates
 
   return (
     <>
