@@ -3,7 +3,6 @@ import {
   render,
   screen,
   act,
-  waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import cancelledMockData from '../static-data/event/transformed/cancelled.json';
 import postponedMockData from '../static-data/event/transformed/postponed.json';
@@ -32,18 +31,27 @@ import {
 // import { rugbyTransformedMidEvent } from '@bbc/web-sport-utils/tests/static-data/rugby/event/transformed/index.js';
 import HeadToHead from '../head-to-head-v2';
 
-// const renderComponent = (data, isConciseView, shouldShowActions, props) => {
-//   console.log('renderComponent data BYE', data);
-//   return render(
-//     <HeadToHead
-//       data={data}
-//       isConciseView={isConciseView}
-//       shouldShowActions={shouldShowActions}
-//       renderEventSummaryHeading
-//       {...props}
-//     />,
-//   );
-// };
+const renderComponent = (data, isConciseView, shouldShowActions, props) => {
+  return render(
+    <HeadToHead
+      data={data}
+      isConciseView={isConciseView}
+      shouldShowActions={shouldShowActions}
+      renderEventSummaryHeading
+      {...props}
+    />,
+  );
+};
+
+const renderHeadToHead = async data => {
+  let renderResult;
+
+  await act(async () => {
+    renderResult = render(<HeadToHead data={data} />);
+  });
+
+  return renderResult;
+};
 
 // skipped - we do not support consise view in MVP
 describe.each([true, false])('head to head concise view %s', isConciseView => {
@@ -400,13 +408,15 @@ test('renders head to head component of PreEvent status', async () => {
 //   expect(excludedPensScore).not.toBeInTheDocument();
 // });
 
-test('renders head to head if an event is cancelled with match status letter data', () => {
-  const { getAllByText } = renderComponent(cancelledMockData);
-  const homeTeam = getAllByText('Fulham');
-  const awayTeam = getAllByText('Liverpool');
-  const matchProgress = getAllByText('Match Cancelled');
-  const homeReplacementScore = getAllByText('C');
-  const awayReplacementScore = getAllByText('C');
+// please do the same for all the non-commented-out tests below, to update them to use the react testing library with providers, act, async await, etc
+test('renders head to head if an event is cancelled with match status letter data', async () => {
+  await renderHeadToHead(cancelledMockData);
+
+  const homeTeam = screen.getAllByText('Fulham');
+  const awayTeam = screen.getAllByText('Liverpool');
+  const matchProgress = screen.getAllByText('Match Cancelled');
+  const homeReplacementScore = screen.getAllByText('C');
+  const awayReplacementScore = screen.getAllByText('C');
 
   expect(homeTeam).toHaveLength(3);
   expect(awayTeam).toHaveLength(3);
@@ -415,13 +425,14 @@ test('renders head to head if an event is cancelled with match status letter dat
   expect(awayReplacementScore[1]).toBeInTheDocument();
 });
 
-test('renders head to head if an event is postponed with match status letter data', () => {
-  const { getAllByText } = renderComponent(postponedMockData);
-  const homeTeam = getAllByText('Fulham');
-  const awayTeam = getAllByText('Liverpool');
-  const matchProgress = getAllByText('Match Postponed');
-  const homeReplacementScore = getAllByText('P');
-  const awayReplacementScore = getAllByText('P');
+test('renders head to head if an event is postponed with match status letter data', async () => {
+  await renderHeadToHead(postponedMockData);
+
+  const homeTeam = screen.getAllByText('Fulham');
+  const awayTeam = screen.getAllByText('Liverpool');
+  const matchProgress = screen.getAllByText('Match Postponed');
+  const homeReplacementScore = screen.getAllByText('P');
+  const awayReplacementScore = screen.getAllByText('P');
 
   expect(homeTeam).toHaveLength(3);
   expect(awayTeam).toHaveLength(3);
@@ -430,12 +441,13 @@ test('renders head to head if an event is postponed with match status letter dat
   expect(awayReplacementScore[1]).toBeInTheDocument();
 });
 
-test('renders head to head if an event is suspended with score data', () => {
-  const { getByText, getAllByText } = renderComponent(suspendedMockData);
-  const homeTeam = getAllByText('Liepāja');
-  const awayTeam = getAllByText('Gjilani');
-  const matchProgress = getByText('Suspended');
-  const runningScore = getAllByText('0');
+test('renders head to head if an event is suspended with score data', async () => {
+  await renderHeadToHead(suspendedMockData);
+
+  const homeTeam = screen.getAllByText('Liepāja');
+  const awayTeam = screen.getAllByText('Gjilani');
+  const matchProgress = screen.getByText('Suspended');
+  const runningScore = screen.getAllByText('0');
 
   expect(homeTeam).toHaveLength(3);
   expect(awayTeam).toHaveLength(3);
@@ -444,31 +456,36 @@ test('renders head to head if an event is suspended with score data', () => {
   expect(runningScore[1]).toBeInTheDocument();
 });
 
-test('renders the head to head of PostEvent with added time and accessibility text', () => {
-  const { queryByText } = renderComponent(postEventAETData);
+test('renders the head to head of PostEvent with added time and accessibility text', async () => {
+  await renderHeadToHead(postEventAETData);
 
-  const a11yHTScore = queryByText('Half Time Southampton 0 , Liverpool 0');
-  const a11yFTScore = queryByText('Full Time Southampton 1 , Liverpool 1');
+  const a11yHTScore = screen.queryByText(
+    'Half Time Southampton 0 , Liverpool 0',
+  );
+  const a11yFTScore = screen.queryByText(
+    'Full Time Southampton 1 , Liverpool 1',
+  );
 
   const a11ySummaryRegex = /Southampton 1 , Liverpool 2 After extra time/;
-  const a11ySummary = queryByText(a11ySummaryRegex);
+  const a11ySummary = screen.queryByText(a11ySummaryRegex);
 
   expect(a11ySummary).toBeInTheDocument();
   expect(a11yHTScore).toBeInTheDocument();
   expect(a11yFTScore).toBeInTheDocument();
 });
 
-test('renders head to head with half time and full time scores of PostEvent after extra time', () => {
-  const { getByText } = renderComponent(postEventAETData);
-  const halfTimeScore = getByText('HT 0-0');
-  const fullTimeScore = getByText('FT 1-1');
-  const period = getByText('AET');
-  const a11yAETPeriod = getByText('After extra time');
-  const a11yFTScore = getByText('Full Time Southampton 1 , Liverpool 1');
-  const a11yHTScore = getByText('Half Time Southampton 0 , Liverpool 0');
+test('renders head to head with half time and full time scores of PostEvent after extra time', async () => {
+  await renderHeadToHead(postEventAETData);
+
+  const halfTimeScore = screen.getByText('HT 0-0');
+  const fullTimeScore = screen.getByText('FT 1-1');
+  const period = screen.getByText('AET');
+  const a11yAETPeriod = screen.getByText('After extra time');
+  const a11yFTScore = screen.getByText('Full Time Southampton 1 , Liverpool 1');
+  const a11yHTScore = screen.getByText('Half Time Southampton 0 , Liverpool 0');
 
   const a11ySummaryRegex = /Southampton 1 , Liverpool 2 After extra time/;
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(fullTimeScore).toBeInTheDocument();
@@ -479,17 +496,22 @@ test('renders head to head with half time and full time scores of PostEvent afte
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with the full time scores of PostEvent aet', () => {
-  const { queryByText, getByText } = renderComponent(postEventAETData);
-  const period = queryByText('AET');
-  const homeScore = getByText('1');
-  const awayScore = getByText('2');
-  const a11yAETPeriod = queryByText('After extra time');
-  const a11yHTScore = queryByText('Half Time Southampton 0 , Liverpool 0');
-  const a11yFTScore = queryByText('Full Time Southampton 1 , Liverpool 1');
+test('renders head to head with the full time scores of PostEvent aet', async () => {
+  await renderHeadToHead(postEventAETData);
+
+  const period = screen.queryByText('AET');
+  const homeScore = screen.getByText('1');
+  const awayScore = screen.getByText('2');
+  const a11yAETPeriod = screen.queryByText('After extra time');
+  const a11yHTScore = screen.queryByText(
+    'Half Time Southampton 0 , Liverpool 0',
+  );
+  const a11yFTScore = screen.queryByText(
+    'Full Time Southampton 1 , Liverpool 1',
+  );
 
   const a11ySummaryRegex = /Southampton 1 , Liverpool 2 After extra time/;
-  const a11ySummary = queryByText(a11ySummaryRegex);
+  const a11ySummary = screen.queryByText(a11ySummaryRegex);
 
   expect(homeScore).toBeInTheDocument();
   expect(awayScore).toBeInTheDocument();
@@ -500,7 +522,7 @@ test('renders head to head with the full time scores of PostEvent aet', () => {
   expect(a11yFTScore).toBeInTheDocument();
 });
 
-test('does not render the aggregate score if it is the Leg 1 of a game', () => {
+test('does not render the aggregate score if it is the Leg 1 of a game', async () => {
   const data = {
     ...postEventAgg90Data,
     multiLeg: {
@@ -509,9 +531,10 @@ test('does not render the aggregate score if it is the Leg 1 of a game', () => {
       aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
     },
   };
-  const { queryByText } = renderComponent(data);
-  const aggScore = queryByText('(Agg 1-2)');
-  const a11yAggScore = queryByText(
+  await renderHeadToHead(data);
+
+  const aggScore = screen.queryByText('(Agg 1-2)');
+  const a11yAggScore = screen.queryByText(
     'Aggregate score Southampton 1 , Liverpool 2',
   );
 
@@ -519,7 +542,7 @@ test('does not render the aggregate score if it is the Leg 1 of a game', () => {
   expect(a11yAggScore).not.toBeInTheDocument();
 });
 
-test('renders head to head with half time, full time and aggregate scores of PostEvent FT and a win on agg', () => {
+test('renders head to head with half time, full time and aggregate scores of PostEvent FT and a win on agg', async () => {
   const data = {
     ...postEventAgg90Data,
     multiLeg: {
@@ -528,17 +551,20 @@ test('renders head to head with half time, full time and aggregate scores of Pos
       aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
     },
   };
-  const { getByText } = renderComponent(data);
-  const halfTimeScore = getByText('HT 1-1');
-  const aggScore = getByText('(Agg 1-2)');
-  const period = getByText('FT');
-  const a11yAggScore = getByText('Aggregate score Southampton 1 , Liverpool 2');
-  const a11yFTPeriod = getByText('Full time');
-  const a11yHTScore = getByText('Half Time Southampton 1 , Liverpool 1');
+  await renderHeadToHead(data);
+
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const aggScore = screen.getByText('(Agg 1-2)');
+  const period = screen.getByText('FT');
+  const a11yAggScore = screen.getByText(
+    'Aggregate score Southampton 1 , Liverpool 2',
+  );
+  const a11yFTPeriod = screen.getByText('Full time');
+  const a11yHTScore = screen.getByText('Half Time Southampton 1 , Liverpool 1');
 
   const a11ySummaryRegex =
     /Southampton 1 , Liverpool 2 at Full time , Liverpool win 2 - 1 on aggregate/;
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(aggScore).toBeInTheDocument();
@@ -549,7 +575,7 @@ test('renders head to head with half time, full time and aggregate scores of Pos
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with half time, full time, aggregate scores and AET period of PostEvent AET and a win on agg', () => {
+test('renders head to head with half time, full time, aggregate scores and AET period of PostEvent AET and a win on agg', async () => {
   const data = {
     ...finishedAetAggData,
     multiLeg: {
@@ -558,19 +584,22 @@ test('renders head to head with half time, full time, aggregate scores and AET p
       aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
     },
   };
-  const { getByText } = renderComponent(data);
-  const halfTimeScore = getByText('HT 2-1');
-  const fullTimeScore = getByText('FT 2-2');
-  const aggScore = getByText('(Agg 5-3)');
-  const period = getByText('AET');
-  const a11yAggScore = getByText('Aggregate score Southampton 5 , Liverpool 3');
-  const a11yAetPeriod = getByText('After extra time');
-  const a11yFTScore = getByText('Full Time Southampton 2 , Liverpool 2');
-  const a11yHTScore = getByText('Half Time Southampton 2 , Liverpool 1');
+  await renderHeadToHead(data);
+
+  const halfTimeScore = screen.getByText('HT 2-1');
+  const fullTimeScore = screen.getByText('FT 2-2');
+  const aggScore = screen.getByText('(Agg 5-3)');
+  const period = screen.getByText('AET');
+  const a11yAggScore = screen.getByText(
+    'Aggregate score Southampton 5 , Liverpool 3',
+  );
+  const a11yAetPeriod = screen.getByText('After extra time');
+  const a11yFTScore = screen.getByText('Full Time Southampton 2 , Liverpool 2');
+  const a11yHTScore = screen.getByText('Half Time Southampton 2 , Liverpool 1');
 
   const a11ySummaryRegex =
     /Southampton 4 , Liverpool 2 After extra time , Southampton win 5 - 3 on aggregate/;
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(fullTimeScore).toBeInTheDocument();
@@ -583,36 +612,45 @@ test('renders head to head with half time, full time, aggregate scores and AET p
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with half time score, full time status and penalties scores of PostEvent after 90 straight to penalties', () => {
-  const { container, getByText, queryByText } =
-    renderComponent(postEventPens90Data);
-  const halfTimeScore = getByText('HT 1-1');
-  const fullTimeScore = queryByText('FT 1-1');
-  const period = getByText('FT');
-  const a11yFTPeriod = getByText('Full time');
-  const a11yPenScore = getByText('Liverpool win 5 - 3 on penalties');
-  const a11yHTScore = getByText('Half Time Southampton 1 , Liverpool 1');
+test('renders head to head with half time score, full time status and penalties scores of PostEvent after 90 straight to penalties', async () => {
+  let renderResult;
+
+  await act(async () => {
+    renderResult = render(<HeadToHead data={postEventPens90Data} />);
+  });
+
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTimeScore = screen.queryByText('FT 1-1');
+  const period = screen.getByText('FT');
+  const a11yFTPeriod = screen.getByText('Full time');
+  const a11yPenScore = screen.getByText('Liverpool win 5 - 3 on penalties');
+  const a11yHTScore = screen.getByText('Half Time Southampton 1 , Liverpool 1');
 
   const a11ySummaryRegex =
     /Southampton 1 , Liverpool 1 at Full time , Liverpool win 5 - 3 on penalties/;
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(fullTimeScore).not.toBeInTheDocument();
   expect(period).toBeInTheDocument();
-  expect(container).toHaveTextContent(/Liverpool win 5-3 on pens/);
+  expect(renderResult.container).toHaveTextContent(/Liverpool win 5-3 on pens/);
   expect(a11ySummary).toBeInTheDocument();
   expect(a11yFTPeriod).toBeInTheDocument();
   expect(a11yPenScore).toBeInTheDocument();
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with FT scores and AET of PostEvent including penalties', () => {
-  const { queryByText } = renderComponent(postEventPensAetData);
-  const halfTimeScore = queryByText('HT 1-1');
-  const fullTime = queryByText('FT 1-1');
-  const a11yFTScore = queryByText('Full Time Southampton 1 , Liverpool 1');
-  const a11yHTScore = queryByText('Half Time Southampton 1 , Liverpool 1');
+test('renders head to head with FT scores and AET of PostEvent including penalties', async () => {
+  await renderHeadToHead(postEventPensAetData);
+
+  const halfTimeScore = screen.queryByText('HT 1-1');
+  const fullTime = screen.queryByText('FT 1-1');
+  const a11yFTScore = screen.queryByText(
+    'Full Time Southampton 1 , Liverpool 1',
+  );
+  const a11yHTScore = screen.queryByText(
+    'Half Time Southampton 1 , Liverpool 1',
+  );
 
   expect(a11yHTScore).toBeInTheDocument();
   expect(halfTimeScore).toBeInTheDocument();
@@ -620,23 +658,30 @@ test('renders head to head with FT scores and AET of PostEvent including penalti
   expect(fullTime).toBeInTheDocument();
 });
 
-test('renders head to head with half time, full time scores and AET of PostEvent AET and penalties', () => {
-  const { getByText, container } = renderComponent(postEventPensAetData);
-  const halfTimeScore = getByText('HT 1-1');
-  const fullTime = getByText('FT 1-1');
-  const aet = getByText('AET');
-  const a11yAetPeriod = getByText('After extra time');
-  const a11yPenScore = getByText('Southampton win 5 - 3 on penalties');
-  const a11yFTScore = getByText('Full Time Southampton 1 , Liverpool 1');
-  const a11yHTScore = getByText('Half Time Southampton 1 , Liverpool 1');
+test('renders head to head with half time, full time scores and AET of PostEvent AET and penalties', async () => {
+  let renderResult;
+
+  await act(async () => {
+    renderResult = render(<HeadToHead data={postEventPensAetData} />);
+  });
+
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTime = screen.getByText('FT 1-1');
+  const aet = screen.getByText('AET');
+  const a11yAetPeriod = screen.getByText('After extra time');
+  const a11yPenScore = screen.getByText('Southampton win 5 - 3 on penalties');
+  const a11yFTScore = screen.getByText('Full Time Southampton 1 , Liverpool 1');
+  const a11yHTScore = screen.getByText('Half Time Southampton 1 , Liverpool 1');
 
   const a11ySummaryRegex =
     /Southampton 1 , Liverpool 1 After extra time , Southampton win 5 - 3 on penalties/;
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(fullTime).toBeInTheDocument();
-  expect(container).toHaveTextContent('Southampton win 5-3 on pens');
+  expect(renderResult.container).toHaveTextContent(
+    'Southampton win 5-3 on pens',
+  );
   expect(aet).toBeInTheDocument();
   expect(a11ySummary).toBeInTheDocument();
   expect(a11yAetPeriod).toBeInTheDocument();
@@ -645,7 +690,7 @@ test('renders head to head with half time, full time scores and AET of PostEvent
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with half time, full time scores and AET of PostEvent with agg AET and penalties', () => {
+test('renders head to head with half time, full time scores and AET of PostEvent with agg AET and penalties', async () => {
   const data = {
     ...postEventPensAetAggData,
     seriesWinner: postEventPensAetAggData.winner,
@@ -655,25 +700,34 @@ test('renders head to head with half time, full time scores and AET of PostEvent
       aggregateWinnerId: 's-9q0arba2kbnywth8bkxlhgmdr',
     },
   };
-  const { getByText, container } = renderComponent(data);
-  const halfTimeScore = getByText('HT 1-1');
-  const fullTime = getByText('FT 1-1');
-  const aet = getByText('AET');
-  const agg = getByText('(Agg 2-2)');
-  const a11yAetPeriod = getByText('After extra time');
-  const a11yAggScore = getByText('Aggregate score Southampton 2 , Liverpool 2');
-  const a11yPenScore = getByText('Southampton win 5 - 3 on penalties');
-  const a11yFTScore = getByText('Full Time Southampton 1 , Liverpool 1');
-  const a11yHTScore = getByText('Half Time Southampton 1 , Liverpool 1');
+  let renderResult;
+
+  await act(async () => {
+    renderResult = render(<HeadToHead data={data} />);
+  });
+
+  const halfTimeScore = screen.getByText('HT 1-1');
+  const fullTime = screen.getByText('FT 1-1');
+  const aet = screen.getByText('AET');
+  const agg = screen.getByText('(Agg 2-2)');
+  const a11yAetPeriod = screen.getByText('After extra time');
+  const a11yAggScore = screen.getByText(
+    'Aggregate score Southampton 2 , Liverpool 2',
+  );
+  const a11yPenScore = screen.getByText('Southampton win 5 - 3 on penalties');
+  const a11yFTScore = screen.getByText('Full Time Southampton 1 , Liverpool 1');
+  const a11yHTScore = screen.getByText('Half Time Southampton 1 , Liverpool 1');
 
   const a11ySummaryRegex =
     /Southampton 1 , Liverpool 1 After extra time , Southampton 2 , Liverpool 2 on aggregate , Southampton win 5 - 3 on penalties/;
 
-  const a11ySummary = getByText(a11ySummaryRegex);
+  const a11ySummary = screen.getByText(a11ySummaryRegex);
 
   expect(halfTimeScore).toBeInTheDocument();
   expect(fullTime).toBeInTheDocument();
-  expect(container).toHaveTextContent('Southampton win 5-3 on pens');
+  expect(renderResult.container).toHaveTextContent(
+    'Southampton win 5-3 on pens',
+  );
   expect(aet).toBeInTheDocument();
   expect(agg).toBeInTheDocument();
   expect(a11ySummary).toBeInTheDocument();
@@ -684,7 +738,7 @@ test('renders head to head with half time, full time scores and AET of PostEvent
   expect(a11yHTScore).toBeInTheDocument();
 });
 
-test('renders head to head with penalty scores using seriesWinner if present', () => {
+test('renders head to head with penalty scores using seriesWinner if present', async () => {
   const data = {
     ...postEventPensAetAggData,
     winner: 'home',
@@ -696,7 +750,7 @@ test('renders head to head with penalty scores using seriesWinner if present', (
     },
   };
 
-  renderComponent(data);
+  await renderHeadToHead(data);
   const penaltiesText = screen.getByTestId('penalties-text');
 
   expect(penaltiesText).toBeInTheDocument();
@@ -722,13 +776,13 @@ test.each([
   },
 ])(
   'renders head to head without penalty scores for match with penalties when $text',
-  ({ props }) => {
+  async ({ props }) => {
     const data = {
       ...postEventPensAetAggData,
       ...props,
     };
-    const { getByText } = renderComponent(data);
-    const fullTime = getByText('FT 1-1');
+    await renderHeadToHead(data);
+    const fullTime = screen.getByText('FT 1-1');
 
     expect(fullTime).toBeInTheDocument();
     expect(screen.queryByTestId('penalties-text')).not.toBeInTheDocument();
