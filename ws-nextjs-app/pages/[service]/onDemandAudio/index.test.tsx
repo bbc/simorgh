@@ -166,8 +166,33 @@ describe('OnDemand Radio Page ', () => {
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    const page = container.querySelector('main');
-    expect(page).toBeInTheDocument();
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+
+    expect(linkedDataScript).toBeInTheDocument();
+
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    );
+    const podcastSeries = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastSeries',
+    );
+    const webPageSchema = graph.find(
+      graphEntry => graphEntry['@type'] === 'WebPage',
+    );
+
+    expect(podcastEpisode).toBeDefined();
+    expect(podcastSeries).toBeDefined();
+    expect(webPageSchema).toBeDefined();
+    expect(webPageSchema?.mainEntity).toEqual({
+      '@id': podcastEpisode?.['@id'],
+    });
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
