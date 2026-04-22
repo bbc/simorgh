@@ -109,8 +109,8 @@ export const service: DefaultServiceConfig = {
         title: 'File Download',
       },
       account: {
-        signIn: 'साइन‑इन',
-        forYou: 'Your Account',
+        signIn: 'लॉग‑इन',
+        forYou: 'आपका अकाउंट',
         register: 'रजिस्टर करें',
       },
       accountPromoBanner: {
