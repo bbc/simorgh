@@ -23,7 +23,7 @@ const SaveArticleButton = ({
     });
   }
 
-  const buttonLabel = isSaved ? 'Remove from saved' : 'Save for later';
+  const buttonLabel = isSaved ? 'Saved to My News' : 'Save for later';
   const buttonText = isLoading ? 'Saving' : buttonLabel;
 
   const handleClick = () => {

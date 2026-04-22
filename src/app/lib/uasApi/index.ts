@@ -52,7 +52,7 @@ const uasApiRequest = async (
 
   const url = buildUrl(activityType, method !== 'POST' ? globalId : undefined);
 
-  await refreshTokensIfExpired();
+  // await refreshTokensIfExpired();
 
   const headers: HeadersInit = {
     ...getAuthHeaders(),
