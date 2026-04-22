@@ -56,7 +56,7 @@ describe('AccountHeader', () => {
     const link = await screen.findByRole('link', { name: 'आपका अकाउंट' });
     expect(link).toHaveAttribute(
       'href',
-      expect.stringContaining('https://example.com/foryou'),
+      expect.stringContaining('https://example.com/settings'),
     );
     const icon = link.querySelector('svg');
     expect(icon).toBeInTheDocument();
