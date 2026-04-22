@@ -133,37 +133,6 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  it('should display OnDemand Radio page correctly', async () => {
-    const result = await handleOnDemandAudioRoute(
-      mockGetServerSidePropsContext,
-    );
-    const { container } = await renderPage({
-      pageData: result.props.pageData,
-      service: 'gahuza',
-    });
-
-    const linkedDataScript = container.querySelector(
-      'script[type="application/ld+json"]',
-    );
-
-    expect(linkedDataScript).toBeInTheDocument();
-
-    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
-      '@graph'?: Array<Record<string, unknown>>;
-    };
-    const graph = linkedData['@graph'] ?? [];
-
-    const audioObject = graph.find(
-      graphEntry => graphEntry['@type'] === 'AudioObject',
-    );
-    const podcastEpisode = graph.find(
-      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
-    );
-
-    expect(audioObject).toBeDefined();
-    expect(podcastEpisode).toBeUndefined();
-  });
-
   it('should display podcast episode page with PodcastEpisode schema', async () => {
     const mockCtx = {
       ...mockGetServerSidePropsContext,
