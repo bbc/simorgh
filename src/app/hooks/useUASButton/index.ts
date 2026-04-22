@@ -1,4 +1,4 @@
-import { use, useCallback, useState } from 'react';
+import { use, useCallback } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
@@ -60,10 +60,6 @@ const useUASButton = ({
 
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
-      console.log(
-        `📌  Performing ${action} action for article ${articleId} with title "${articleTitle}" on service ${service}`,
-      );
-
       if (action === UASAction.SAVE) {
         const body = createFavouritesPayload({
           articleId,
@@ -79,10 +75,6 @@ const useUASButton = ({
       }
     },
     onSuccess: (_, action) => {
-      console.log(
-        `📌  Successfully performed ${action} action for article ${articleId}`,
-      );
-
       const newSavedStatus = action === UASAction.SAVE;
       queryClient.setQueryData(
         uasKeys.favouriteStatus(articleId),

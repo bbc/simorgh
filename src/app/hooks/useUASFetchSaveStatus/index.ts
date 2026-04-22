@@ -14,8 +14,6 @@ interface UseUASFetchSaveStatusReturn {
 }
 
 const fetchSaveStatus = async (articleId: string): Promise<boolean> => {
-  console.log('📌 Fetching save status for articleId:', articleId); // Debug log
-
   const globalId = buildGlobalId(articleId);
   const response = await uasApiRequest('GET', FAVOURITES_CONFIG.activityType, {
     globalId,
