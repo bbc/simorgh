@@ -142,8 +142,26 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
     });
 
-    const form = container.querySelector('form');
-    expect(form).toBeInTheDocument();
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+
+    expect(linkedDataScript).toBeInTheDocument();
+
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const audioObject = graph.find(
+      graphEntry => graphEntry['@type'] === 'AudioObject',
+    );
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    );
+
+    expect(audioObject).toBeDefined();
+    expect(podcastEpisode).toBeUndefined();
   });
 
   it('should display podcast episode page with PodcastEpisode schema', async () => {
