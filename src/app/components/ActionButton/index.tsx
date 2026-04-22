@@ -29,7 +29,7 @@ const ActionButton = ({
 
   return (
     <button
-      css={(theme: Theme) => styles.buttonWrapper(theme)}
+      css={(theme: Theme) => styles.buttonWrapper(theme, isSaved)}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}
@@ -40,7 +40,9 @@ const ActionButton = ({
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
     >
-      {isLoading && <Spinner css={styles.buttonAnimation} />}
+      {isLoading && (
+        <Spinner css={(theme: Theme) => styles.buttonAnimation(theme)} />
+      )}
       {!isLoading && !isSaved && <BookmarkIcon />}
       {!isLoading &&
         isSaved &&

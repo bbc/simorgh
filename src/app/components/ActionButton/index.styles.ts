@@ -10,7 +10,7 @@ const spinAnimation = keyframes`
 `;
 
 const styles = {
-  buttonWrapper: ({ mq, palette, spacings }: Theme) =>
+  buttonWrapper: ({ mq, palette, spacings }: Theme, isSaved: boolean) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -20,8 +20,8 @@ const styles = {
       width: '100%',
       padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       cursor: 'pointer',
-      backgroundColor: palette.WHITE,
-      color: palette.GREY_8,
+      backgroundColor: isSaved ? palette.GREY_8 : palette.WHITE,
+      color: isSaved ? palette.WHITE : palette.GREY_8,
       border: `1px solid ${palette.GREY_8}`,
       ':hover': {
         backgroundColor: palette.GREY_8,
