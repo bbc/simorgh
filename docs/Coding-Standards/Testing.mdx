@@ -162,6 +162,31 @@ it('should render MostReadLink (ltr)', () => {
 });
 ```
 
+Example where a snapshot is appropriate (small, stable JSON config output):
+
+✅
+
+```js
+it('should render amp-experiment config', () => {
+  const { container } = render(
+    <AmpExperiment experimentConfig={experimentConfig} />,
+  );
+
+  expect(container.querySelector('amp-experiment')).toBeInTheDocument();
+  expect(container).toMatchInlineSnapshot(`
+    <div>
+      <amp-experiment>
+        <script
+          type="application/json"
+        >
+          {"someAmpExperiment":{"variants":{"control":33,"variant_1":33,"variant_2":33}}}
+        </script>
+      </amp-experiment>
+    </div>
+  `);
+});
+```
+
 ## Use good test descriptions for test reports
 
 Test descriptions in test reports should be able to be read as full sentences so that we can tell immediately what went wrong. For example:
