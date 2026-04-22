@@ -12,6 +12,7 @@ import { MediaCollection } from '#app/components/MediaLoader/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
+import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -104,6 +105,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
+  const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
+  const showSportData = sportData && !isLiveEnv();
+
   const {
     url: imageUrl,
     urlTemplate: imageUrlTemplate,
@@ -182,7 +186,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
-        {sportDataEventContent ? (
+        {showSportData ? (
           <VisuallyHiddenText as="h1">{title}</VisuallyHiddenText>
         ) : (
           <Header
@@ -195,9 +199,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             mediaCollections={mediaCollections}
           />
         )}
-        {sportDataEventContent && (
+        {showSportData && (
           <HeadToHeadV2
-            data={sportDataEventContent?.content?.data?.sportDataEvent}
+            data={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldHideBadges={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
