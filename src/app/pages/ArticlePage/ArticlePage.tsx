@@ -34,7 +34,6 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
 import {
@@ -212,13 +211,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
-  const {
-    articleAuthor,
-    isTrustProjectParticipant,
-    showRelatedTopics,
-    brandName,
-    translations,
-  } = use(ServiceContext);
+  const { articleAuthor, isTrustProjectParticipant, brandName, translations } =
+    use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const { enabled: continueReadingButtonToggle } = useToggle(
@@ -287,7 +281,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const articleId = getArticleId(pageData) ?? '';
-  const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
@@ -431,7 +424,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const promoImage = promoImageRawBlock?.model?.locator;
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
@@ -505,18 +497,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {showTopics && (
-            <RelatedTopics
-              css={[
-                styles.relatedTopics,
-                ...(showContinueReadingButton
-                  ? [!showAllContent && styles.hideRelatedTopics]
-                  : []),
-              ]}
-              topics={topics}
-              mobileDivider={false}
-            />
-          )}
           {showPortraitVideoCarousel && (
             <PortraitVideoCarousel
               {...portraitVideoCarouselProps}
@@ -574,7 +554,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
+          mobileDivider={!isAmp && !isLite && !!pageData.topicDiscovery}
           {...(timeOfDayExperimentProps && {
             experimentProps: timeOfDayExperimentProps,
           })}
