@@ -1,6 +1,17 @@
 import type { Services } from '#app/models/types/global';
 import type { UasApiRequestBody } from './index';
 
+export interface SavedArticle {
+  id: string;
+  title: string;
+  link: string;
+  promoImage?: string;
+  type: string;
+  description?: string;
+  imageAlt: string;
+  imageUrl: string;
+}
+
 const FAVOURITES_CONFIG = {
   activityType: 'favourites',
   resourceDomain: 'articles',
@@ -24,17 +35,27 @@ const createFavouritesPayload = ({
   articleId,
   service,
   articleTitle,
+  promoImage,
+  promoImageAltText,
 }: {
   articleId: string;
   service: Services;
   articleTitle: string;
+  promoImage?: string;
+  promoImageAltText?: string;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
   resourceType: FAVOURITES_CONFIG.resourceType,
   resourceId: articleId,
   action: FAVOURITES_CONFIG.action,
-  metaData: { service, articleId, title: articleTitle },
+  metaData: {
+    service,
+    articleId,
+    title: articleTitle,
+    promoImage: promoImage || '',
+    promoImageAltText: promoImageAltText || '',
+  },
 });
 
 export {

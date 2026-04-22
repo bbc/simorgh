@@ -42,6 +42,7 @@ import {
   OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
+  OptimoRawImageBlock,
 } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import {
@@ -110,6 +111,10 @@ const getTimestampComponent =
     readTimeTranslations: Translations['readTime'],
     articleId: string,
     articleTitle: string,
+    promoImageObj?: {
+      altText: string;
+      promoImageRawBlock?: OptimoRawImageBlock;
+    },
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -144,6 +149,7 @@ const getTimestampComponent =
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
+          promoImageObj={promoImageObj}
         />
       </>
     );
@@ -336,7 +342,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-    articlePortraitVideoEnabled,
+      articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -358,11 +364,30 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    hasContinueReadingBlock &&
-    continueReadingButtonToggle,
+      !isLite &&
+      !isApp &&
+      hasContinueReadingBlock &&
+      continueReadingButtonToggle,
   );
+
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const promoImageAltTextBlock = filterForBlockType(
+    promoImageBlocks,
+    'altText',
+  );
+
+  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
+  const promoImageAltText =
+    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+
+  const promoImage = promoImageRawBlock?.model?.locator;
+
+  const promoImageObj = {
+    altText: promoImageAltText,
+    promoImageRawBlock,
+  };
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -381,6 +406,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       translations.readTime,
       articleId,
       headline,
+      promoImageObj,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -416,30 +442,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const promoImageBlocks =
-    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
-
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
-
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const promoImage = promoImageRawBlock?.model?.locator;
-
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
-    !isLite &&
-    !isApp &&
-    !isPGL &&
-    isAdaptiveTimeOfDayVariant &&
-    mediaCurationContent?.summaries?.length,
+      !isLite &&
+      !isApp &&
+      !isPGL &&
+      isAdaptiveTimeOfDayVariant &&
+      mediaCurationContent?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner

@@ -9,16 +9,23 @@ import {
   FAVOURITES_CONFIG,
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
  * based on feature toggles and sign in status,
  * with room to later expand for toggling the save state based on user actions. */
 
-interface UseUASButtonProps {
-  articleId: string;
-  articleTitle: string;
-}
+// interface UseUASButtonProps {
+//   articleId: string;
+//   articleTitle: string;
+//   promoImageObj?: {
+//     url: string;
+//     altText: string;
+//     promoImageRawBlock?: OptimoRawImageBlock;
+//   };
+// }
 
 enum UASAction {
   SAVE = 'save',
@@ -36,7 +43,8 @@ interface UseUASButtonReturn {
 const useUASButton = ({
   articleId,
   articleTitle,
-}: UseUASButtonProps): UseUASButtonReturn => {
+  promoImageObj,
+}: SaveArticleButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
@@ -65,10 +73,21 @@ const useUASButton = ({
         setSaveError(null);
 
         if (action === UASAction.SAVE) {
+          const promoImageBuild =
+            promoImageObj?.promoImageRawBlock?.model?.locator &&
+            promoImageObj?.promoImageRawBlock?.model?.originCode
+              ? buildIChefURL({
+                  originCode: promoImageObj.promoImageRawBlock.model.originCode,
+                  locator: promoImageObj.promoImageRawBlock.model.locator,
+                  resolution: 320,
+                })
+              : '';
           const body = createFavouritesPayload({
             articleId,
             service,
             articleTitle,
+            promoImage: promoImageBuild,
+            promoImageAltText: promoImageObj?.altText || '',
           });
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);
@@ -86,7 +105,7 @@ const useUASButton = ({
         setIsSaving(false);
       }
     },
-    [articleId, service, articleTitle, isSaving, setIsSaved],
+    [articleId, service, articleTitle, promoImageObj, isSaving, setIsSaved],
   );
 
   return {
@@ -99,4 +118,5 @@ const useUASButton = ({
 };
 
 export { UASAction };
+// export type { UseUASButtonProps };
 export default useUASButton;

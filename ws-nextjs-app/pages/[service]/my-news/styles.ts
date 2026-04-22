@@ -16,6 +16,16 @@ const styles = {
   heading: css({
     padding: '2rem 0',
   }),
+
+  empty: css({
+    textAlign: 'center',
+    padding: '3rem 0',
+
+    '& p': {
+      color: '#333333',
+      marginTop: '1rem',
+    },
+  }),
 };
 
 export default styles;
