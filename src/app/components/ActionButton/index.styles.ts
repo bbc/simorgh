@@ -22,7 +22,7 @@ const styles = {
       cursor: 'pointer',
       backgroundColor: palette.WHITE,
       color: palette.GREY_8,
-      border: `pixelsToRem(1) solid ${palette.GREY_8}`,
+      border: `1px solid ${palette.GREY_8}`,
       ':hover': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
@@ -33,8 +33,8 @@ const styles = {
       ':focus-visible': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
-        outline: `pixelsToRem(3) solid ${palette.GREY_8}`,
-        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 pixelsToRem(9) ${palette.GREY_8}`,
+        outline: `3px solid ${palette.GREY_8}`,
+        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 9px ${palette.GREY_8}`,
         '& svg': {
           fill: palette.WHITE,
         },

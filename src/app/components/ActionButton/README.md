@@ -8,6 +8,7 @@ A reusable button component that handles common interactive states including loa
 |------|------|----------|---------|-------------|
 | `onClick` | `() => void` | Yes | - | Function called when button is clicked |
 | `isLoading` | `boolean` | No | `false` | Shows loading state and disables interaction |
+| `isSaved` | `boolean` | No | `false` | Shows the saved state to indicate the action has completed |
 | `disabled` | `boolean` | No | `false` | Disables the button |
 | `label` | `string` | Yes | - | Accessible label for screen readers |
 | `buttonText` | `string` | Yes | - | Visible text displayed on the button |
