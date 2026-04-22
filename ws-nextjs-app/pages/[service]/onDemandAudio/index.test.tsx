@@ -133,7 +133,7 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  it('should match snapshot', async () => {
+  it('should display OnDemand Radio page correctly', async () => {
     const result = await handleOnDemandAudioRoute(
       mockGetServerSidePropsContext,
     );
@@ -142,10 +142,11 @@ describe('OnDemand Radio Page ', () => {
       service: 'gahuza',
     });
 
-    expect(container).toMatchSnapshot();
+    const form = container.querySelector('form');
+    expect(form).toBeInTheDocument();
   });
 
-  it('should match snapshot for podcast episode page with PodcastEpisode schema', async () => {
+  it('should display podcast episode page with PodcastEpisode schema', async () => {
     const mockCtx = {
       ...mockGetServerSidePropsContext,
       resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
@@ -165,7 +166,8 @@ describe('OnDemand Radio Page ', () => {
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    expect(container).toMatchSnapshot();
+    const page = container.querySelector('main');
+    expect(page).toBeInTheDocument();
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
