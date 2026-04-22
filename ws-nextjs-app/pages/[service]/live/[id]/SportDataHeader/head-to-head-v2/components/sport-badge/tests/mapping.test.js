@@ -1,4 +1,4 @@
-import { getImage, hasMapping } from '../badges-map.js';
+import { getImage, hasMapping } from '../badges-map';
 
 describe('get image', () => {
   test.each(['badge', 'flag'])(
@@ -7,24 +7,36 @@ describe('get image', () => {
       const src = getImage({
         id: 'urn:bbc:sportsdata:blitzball:team:super-team',
         usePlaceholderFallback: true,
-        placeholderFallbackType
+        placeholderFallbackType,
       });
 
       expect(src).not.toBeUndefined();
-    }
+    },
   );
 
   test('returns undefined if URN or ID is not mapped and use placeholder fallback is falsy', () => {
     expect(getImage({ id: 'invalid-mapping' })).toBeUndefined();
-    expect(getImage({ id: 'invalid-mapping', usePlaceholderFallback: null })).toBeUndefined();
-    expect(getImage({ id: 'invalid-mapping', usePlaceholderFallback: false })).toBeUndefined();
+    expect(
+      getImage({ id: 'invalid-mapping', usePlaceholderFallback: null }),
+    ).toBeUndefined();
+    expect(
+      getImage({ id: 'invalid-mapping', usePlaceholderFallback: false }),
+    ).toBeUndefined();
   });
 
   test('throws error when invalid fallback type given', () => {
     const placeholderFallbackType = 'invalid-fallback-type';
 
-    expect(() => getImage({ id: 'some-unmapped-id', usePlaceholderFallback: true, placeholderFallbackType })).toThrow(
-      new Error(`Invalid placeholder fallback type '${placeholderFallbackType}'`)
+    expect(() =>
+      getImage({
+        id: 'some-unmapped-id',
+        usePlaceholderFallback: true,
+        placeholderFallbackType,
+      }),
+    ).toThrow(
+      new Error(
+        `Invalid placeholder fallback type '${placeholderFallbackType}'`,
+      ),
     );
   });
 });
