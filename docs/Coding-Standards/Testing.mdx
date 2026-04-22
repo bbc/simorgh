@@ -120,6 +120,20 @@ it.each`
 });
 ```
 
+## Snapshot tests
+
+For unit and component tests, prefer explicit assertions over broad DOM snapshots.
+
+Snapshot tests can still be useful for small, stable serialised outputs, such as short config output or regular expression output.
+
+Avoid full container snapshots that include generated styles or class names, as these are noisy and brittle.
+
+Integration snapshots are currently excluded from this migration and can remain where they provide service-specific regression value.
+
+For visual regression, prefer Storybook with Chromatic.
+
+If any unit snapshots remain, keep them small and review snapshot diffs carefully in PR.
+
 ## Use good test descriptions for test reports
 
 Test descriptions in test reports should be able to be read as full sentences so that we can tell immediately what went wrong. For example:
