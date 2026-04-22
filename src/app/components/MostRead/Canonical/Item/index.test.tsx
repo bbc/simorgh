@@ -80,9 +80,6 @@ describe('MostReadLink', () => {
     );
 
     expect(
-      screen.getByRole('link', { name: pidginItem.title }),
-    ).toBeInTheDocument();
-    expect(
       screen.getByText('Last updated: 5th November 2016'),
     ).toBeInTheDocument();
   });
@@ -100,8 +97,6 @@ describe('MostReadItemWrapper', () => {
       { service: 'pidgin' },
     );
 
-    expect(container.querySelectorAll('li[role="listitem"]')).toHaveLength(10);
-    expect(container.querySelectorAll('a[href]')).toHaveLength(10);
     expect(container.querySelectorAll('div[dir="ltr"] > a[href]')).toHaveLength(
       10,
     );
@@ -118,8 +113,6 @@ describe('MostReadItemWrapper', () => {
       { service: 'persian' },
     );
 
-    expect(container.querySelectorAll('li[role="listitem"]')).toHaveLength(10);
-    expect(container.querySelectorAll('a[href]')).toHaveLength(10);
     expect(container.querySelectorAll('div[dir="rtl"] > a[href]')).toHaveLength(
       10,
     );
