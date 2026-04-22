@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 // import React from 'react';
 // import styled, { css } from '@bbc/web-styled';
 
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
-
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 // import { GROUP_3, SPACING_4 } from '@bbc/web-gel-foundations';
 // import Heading from '@bbc/web-components/heading/index.js';
 import Action from './action.jsx';
@@ -40,23 +41,17 @@ const KeyEventsAway = styled.div`
 export const KeyEvents = ({
   homeKeyEvents,
   awayKeyEvents,
-  // homeName,
-  // awayName,
+  homeName,
+  awayName,
 }) => (
   <>
-    {/* <Heading level="3" fontScale="headlineLarge" isVisuallyHidden>
-      Key Events
-    </Heading> */}
+    <VisuallyHiddenText as="h3">Key Events</VisuallyHiddenText>
     <KeyEventsHome>
-      {/* <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
-        {homeName}
-      </Heading> */}
+      <VisuallyHiddenText as="h4">{homeName}</VisuallyHiddenText>
       <Action contestantActions={homeKeyEvents} alignment="home" />
     </KeyEventsHome>
     <KeyEventsAway>
-      {/* <Heading level="4" fontScale="headlineLarge" isVisuallyHidden>
-        {awayName}
-      </Heading> */}
+      <VisuallyHiddenText as="h4">{awayName}</VisuallyHiddenText>
       <Action contestantActions={awayKeyEvents} alignment="away" />
     </KeyEventsAway>
   </>

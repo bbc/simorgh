@@ -11,6 +11,7 @@ import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -181,24 +182,26 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
-        <Header
-          showLiveLabel={isLive}
-          title={title}
-          description={description}
-          imageUrl={imageUrl}
-          imageUrlTemplate={imageUrlTemplate}
-          imageWidth={imageWidth}
-          mediaCollections={mediaCollections}
-        />
+        {sportDataEventContent ? (
+          <VisuallyHiddenText as="h1">{title}</VisuallyHiddenText>
+        ) : (
+          <Header
+            showLiveLabel={isLive}
+            title={title}
+            description={description}
+            imageUrl={imageUrl}
+            imageUrlTemplate={imageUrlTemplate}
+            imageWidth={imageWidth}
+            mediaCollections={mediaCollections}
+          />
+        )}
         {sportDataEventContent && (
-          <div>
-            <HeadToHeadV2
-              data={sportDataEventContent?.content?.data?.sportDataEvent}
-              isConciseView={false} // defaulted to false for developement/ MVP
-              shouldHideBadges={false} // defaulted to false for developement/ MVP
-              shouldShowActions={false} // defaulted to false for developement/ MVP
-            />
-          </div>
+          <HeadToHeadV2
+            data={sportDataEventContent?.content?.data?.sportDataEvent}
+            isConciseView={false} // defaulted to false for developement/ MVP
+            shouldHideBadges={false} // defaulted to false for developement/ MVP
+            shouldShowActions={false} // defaulted to false for developement/ MVP
+          />
         )}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
