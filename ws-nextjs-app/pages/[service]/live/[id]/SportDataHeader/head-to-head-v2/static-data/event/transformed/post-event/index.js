@@ -15,5 +15,5 @@ export {
   postEventPens90Data,
   postEventPensAetData,
   postEventPensAetAggData,
-  postEventData
+  postEventData,
 };

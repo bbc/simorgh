@@ -25,5 +25,5 @@ export {
   beforePensData,
   beforePensAetData,
   beforeEtData,
-  inPens90Data
+  inPens90Data,
 };

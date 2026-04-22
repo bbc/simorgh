@@ -11,5 +11,5 @@ export {
   preEventJustHomeParticipantData,
   preEventNoTeamsOrVenueProvided,
   preEventNoTeamsProvidedData,
-  preEventNoTimeProvidedData
+  preEventNoTimeProvidedData,
 };
