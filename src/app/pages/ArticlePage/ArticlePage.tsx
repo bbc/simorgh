@@ -59,8 +59,9 @@ import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
-import SaveArticleButton from '#app/components/SaveArticleButton';
+import SaveArticleButton from '#app/components/SaveArticleButton/lazy';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
+import isLocal from '#app/lib/utilities/isLocal';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -113,6 +114,15 @@ const getTimestampComponent =
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
+    const { service } = use(ServiceContext);
+    const { enabled: featureToggleOn, value: accountService } =
+      useToggle('uasPersonalization');
+
+    const isPersonalizationEnabled =
+      featureToggleOn &&
+      (isLocal()
+        ? accountService?.toString().split('|').includes(service)
+        : true);
 
     return (
       <>
@@ -140,11 +150,12 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {/* Temporary SaveArticleButton */}
-        <SaveArticleButton
-          articleId={parseArticleID(articleId)}
-          articleTitle={articleTitle}
-        />
+        {isPersonalizationEnabled && (
+          <SaveArticleButton
+            articleId={parseArticleID(articleId)}
+            articleTitle={articleTitle}
+          />
+        )}
       </>
     );
   };

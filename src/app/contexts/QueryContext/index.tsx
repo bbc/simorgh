@@ -1,54 +1,33 @@
-import type { PropsWithChildren } from 'react';
-import { QueryClient } from '@tanstack/react-query';
-import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import { createAsyncStoragePersister } from '@tanstack/query-async-storage-persister';
+import { use, type PropsWithChildren } from 'react';
+import dynamic from 'next/dynamic';
 import useToggle from '#app/hooks/useToggle';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import isLocal from '#app/lib/utilities/isLocal';
 
-const isClientError = (error: unknown) => {
-  const status = (error as { status?: number })?.status;
-  return status !== undefined && status >= 400 && status < 500;
-};
-
-const retryConfig = {
-  retry: (failureCount: number, error: unknown) =>
-    !isClientError(error) && failureCount < 3,
-};
-
-const STALE_TIME = 5 * 60 * 1000;
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      ...retryConfig,
-      staleTime: STALE_TIME,
-      refetchOnWindowFocus: false,
-    },
-    mutations: retryConfig,
-  },
-});
-
-const persister = createAsyncStoragePersister({
-  storage: typeof window !== 'undefined' ? window.sessionStorage : undefined,
-});
+const PersistentQueryProvider = dynamic(() => import('./lazy'));
 
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  const { enabled: isUASEnabled } = useToggle('uasPersonalization');
+  const { service } = use(ServiceContext);
   const { enabled: isAccountEnabled } = useToggle('account');
+  const { enabled: featureToggleOn, value: accountService } =
+    useToggle('uasPersonalization');
 
-  const hasAnyToggleEnabled = [isUASEnabled, isAccountEnabled].some(Boolean);
+  const isPersonalizationEnabled =
+    featureToggleOn &&
+    (isLocal()
+      ? accountService?.toString().split('|').includes(service)
+      : true);
 
-  if (!hasAnyToggleEnabled) {
+  const hasAllTogglesEnabled = [
+    isPersonalizationEnabled,
+    isAccountEnabled,
+  ].every(Boolean);
+
+  if (!hasAllTogglesEnabled) {
     return children;
   }
 
-  return (
-    <PersistQueryClientProvider
-      client={queryClient}
-      persistOptions={{ persister, maxAge: STALE_TIME }}
-    >
-      {children}
-    </PersistQueryClientProvider>
-  );
+  return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
 };
 
 export default QueryProvider;
