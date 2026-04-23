@@ -97,7 +97,15 @@ const useUASButton = ({
         setIsSaving(false);
       }
     },
-    [articleId, service, articleTitle, promoImageObj, isSaving, setIsSaved],
+    [
+      articleId,
+      service,
+      articleTitle,
+      promoImageObj,
+      articlePageData,
+      isSaving,
+      setIsSaved,
+    ],
   );
 
   return {
