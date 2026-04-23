@@ -70,6 +70,49 @@ describe('MostReadLink', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it.each([
+    {
+      title:
+        'should render a live pulse icon if the item refers to a live page',
+      isLive: true,
+      shouldShow: true,
+    },
+    {
+      title:
+        'should not render a live pulse icon if the item refers to a normal page',
+      isLive: false,
+      shouldShow: false,
+    },
+  ])('$title', ({ isLive, shouldShow }) => {
+    const { container } = render(
+      <MostReadLink
+        href="https://www.bbc.com/hausa/live/c98kkrezn3jt"
+        service="hausa"
+        title="Placeholder title"
+        dir="ltr"
+        size="default"
+        id=""
+        position={0}
+        isLive={isLive}
+      />,
+      {
+        service: 'hausa',
+        toggles: {
+          eventTracking: { enabled: true },
+        },
+      },
+    );
+
+    const livePulse = container.querySelector(
+      '[data-e2e=most-read-live-pulse]',
+    );
+    if (shouldShow) {
+      expect(livePulse).not.toBeNull();
+    } else {
+      expect(livePulse).toBeNull();
+    }
+  });
 });
 
 describe('MostReadItemWrapper', () => {
