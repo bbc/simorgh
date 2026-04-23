@@ -32,7 +32,7 @@ export const service: DefaultServiceConfig = {
     service: 'magyarul',
     serviceName: 'Magyarul',
     serviceLocalizedName: 'Magyarul',
-    languageName: 'Angol',
+    languageName: 'Magyar',
     twitterCreator: '@BBCNewsMagyarul',
     twitterSite: '@BBCNewsMagyarul',
     noBylinesPolicy: 'https://www.bbc.com/magyarul/articles/c8xr72zw50xo',
@@ -157,7 +157,7 @@ export const service: DefaultServiceConfig = {
                 first:
                   'A partnereinkkel közösen olyan technológiákat használunk, mint például',
                 linkText: 'a sütik',
-                last: ',és böngészési adatokat gyűjtünk annak érdekében, hogy a lehető legjobb online élményt nyújtsuk, valamint személyre szabjuk az önnek megjelenített tartalmakat és hirdetéseket. Kérjük, jelezze, hogy egyetért-e ezzel.',
+                last: ', és böngészési adatokat gyűjtünk annak érdekében, hogy a lehető legjobb online élményt nyújtsuk, valamint személyre szabjuk az önnek megjelenített tartalmakat és hirdetéseket. Kérjük, jelezze, hogy egyetért-e ezzel.',
                 linkUrl:
                   'https://www.bbc.com/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -183,11 +183,11 @@ export const service: DefaultServiceConfig = {
                 para6:
                   'Amikor hozzájárul az adatgyűjtéshez az AMP-oldalakon, ahhoz is hozzájárul, hogy az Egyesült Királyságon kívül személyre szabott, önre szabott hirdetéseket jelenítsünk meg.',
                 para7: {
-                  text: 'Tudjon meg többet arról, hogyan szabja önre hirdetéseit a BBC és partnerei..',
+                  text: 'Tudjon meg többet arról, hogyan szabja önre hirdetéseit a BBC és partnerei.',
                   url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
-                  'Az alábbi „Adatgyűjtés elutasítása és folytatás” gombra kattintva kiválaszthatja, hogy nem szeretne személyre szabott hirdetéseket kapni. Ugyanakkor, kérjük, vegye figyelembe, hogy továbbra is látni fog hirdetéseket, de azok nem lesznek az ön számára személyre szabva.”',
+                  'Az alábbi „Adatgyűjtés elutasítása és folytatás” gombra kattintva kiválaszthatja, hogy nem szeretne személyre szabott hirdetéseket kapni. Ugyanakkor, kérjük, vegye figyelembe, hogy továbbra is látni fog hirdetéseket, de azok nem lesznek az ön számára személyre szabva.',
                 para9:
                   'Ezeket a beállításokat bármikor módosíthatja az oldal láblécében található „Hirdetési beállítások / Ne adja el az adataimat” gombra kattintva.',
               },
@@ -304,7 +304,7 @@ export const service: DefaultServiceConfig = {
         retentionPeriodDays:
           'Az ön által beküldött adatokat {{days}} napig tartjuk meg - ha nem használjuk fel, kitöröljük őket.',
         privacyInfoHtml:
-          'Ne aggódjon, megvédjük adatait - olvassa el a{{privacyInfoLink}}, ha további információra van szüksége.',
+          'Ne aggódjon, megvédjük adatait - olvassa el a {{privacyInfoLink}}, ha további információra van szüksége.',
         emailToHtml:
           'Ha meggondolta magát és nem szeretné, ha felhasználnánk az adatokat, lépjen kapcsolatba velünk a(z) {{emailLink}} címen. Ne felejtse megadni az azonosítóját.',
         removalGuidelineText:
@@ -388,7 +388,7 @@ export const service: DefaultServiceConfig = {
     navigation: [
       {
         title: 'Hírek',
-        url: 'https://www.bbc.com/magyarul',
+        url: '/magyarul',
         hideOnLiteSite: false,
       },
     ],
