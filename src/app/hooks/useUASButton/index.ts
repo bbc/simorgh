@@ -34,6 +34,7 @@ const useUASButton = ({
   articleId,
   articleTitle,
   promoImageObj,
+  articlePageData,
 }: SaveArticleButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
@@ -78,6 +79,7 @@ const useUASButton = ({
             articleTitle,
             promoImage: promoImageBuild,
             promoImageAltText: promoImageObj?.altText || '',
+            locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
           });
           await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
           setIsSaved(true);

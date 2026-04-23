@@ -37,12 +37,14 @@ const createFavouritesPayload = ({
   articleTitle,
   promoImage,
   promoImageAltText,
+  locatorUrl,
 }: {
   articleId: string;
   service: Services;
   articleTitle: string;
   promoImage?: string;
   promoImageAltText?: string;
+  locatorUrl?: string;
 }): UasApiRequestBody => ({
   activityType: FAVOURITES_CONFIG.activityType,
   resourceDomain: FAVOURITES_CONFIG.resourceDomain,
@@ -55,6 +57,7 @@ const createFavouritesPayload = ({
     title: articleTitle,
     promoImage: promoImage || '',
     promoImageAltText: promoImageAltText || '',
+    locatorUrl: locatorUrl || '',
   },
 });
 

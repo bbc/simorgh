@@ -1,10 +1,11 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { OptimoRawImageBlock } from '#app/models/types/optimo';
+import { Article, OptimoRawImageBlock } from '#app/models/types/optimo';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
+  articlePageData?: Article;
   promoImageObj?: {
     altText: string;
     promoImageRawBlock?: OptimoRawImageBlock;
@@ -20,12 +21,14 @@ const SaveArticleButton = ({
   articleId,
   articleTitle,
   promoImageObj,
+  articlePageData,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       articleTitle,
       promoImageObj,
+      articlePageData,
     });
 
   if (!showButton) {

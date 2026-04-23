@@ -111,6 +111,7 @@ const getTimestampComponent =
     readTimeTranslations: Translations['readTime'],
     articleId: string,
     articleTitle: string,
+    articlePageData?: Article,
     promoImageObj?: {
       altText: string;
       promoImageRawBlock?: OptimoRawImageBlock;
@@ -150,6 +151,7 @@ const getTimestampComponent =
           articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
           promoImageObj={promoImageObj}
+          articlePageData={articlePageData}
         />
       </>
     );
@@ -406,6 +408,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       translations.readTime,
       articleId,
       headline,
+      pageData,
       promoImageObj,
     ),
     social: SocialEmbedContainer,

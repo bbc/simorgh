@@ -173,6 +173,7 @@ describe('useUASButton', () => {
             title: 'Test Article',
             promoImage: '',
             promoImageAltText: '',
+            locatorUrl: '',
           },
         },
       });

@@ -18,6 +18,7 @@ export interface UasActivityItem {
     title?: string;
     promoImage?: string;
     promoImageAltText?: string;
+    locatorUrl?: string;
   };
   '@id': string;
 }
@@ -42,7 +43,9 @@ const transformActivityToSavedArticle = (
 ): SavedArticle => ({
   id: item.resourceId,
   title: item?.metaData?.title || 'Untitled',
-  link: `/${item?.metaData?.service}/articles/${item.resourceId}`,
+  link:
+    item?.metaData?.locatorUrl ||
+    `/${item?.metaData?.service}/articles/${item.resourceId}`,
   promoImage: item?.metaData?.promoImage,
   imageAlt: item?.metaData?.promoImageAltText || '',
   imageUrl: item?.metaData?.promoImage || '',
