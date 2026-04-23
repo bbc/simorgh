@@ -8,11 +8,11 @@ import flagPlaceholder from '../../assets/placeholders/placeholder-flag.svg';
 // import basketball from './mappings/basketball.js';
 // import { getBaseCountryFlagsMapping } from './mappings/country-flags.js';
 // import netball from './mappings/netball.js';
-import englishFootball from './mappings/football-english-domestic.js';
-import europeanFootball from './mappings/football-european-domestic.js';
-import footballWorldwideDomestic from './mappings/football-worldwide-domestic.js';
-import scottishFootball from './mappings/football-scottish-domestic.js';
-import internationalFootball from './mappings/international-football.js';
+// import englishFootball from './mappings/football-english-domestic.js';
+// import europeanFootball from './mappings/football-european-domestic.js';
+// import footballWorldwideDomestic from './mappings/football-worldwide-domestic.js';
+// import scottishFootball from './mappings/football-scottish-domestic.js';
+// import internationalFootball from './mappings/international-football.js';
 // import olympics from './mappings/olympics.js';
 // import paralympics from './mappings/paralympics.js';
 // import rugbyUnion from './mappings/rugby-union.js';
@@ -23,11 +23,11 @@ const badgesMap = {
   // ...americanFootball,
   // ...basketball,
   // ...netball,
-  ...englishFootball,
-  ...europeanFootball,
-  ...footballWorldwideDomestic,
-  ...scottishFootball,
-  ...internationalFootball,
+  // ...englishFootball,
+  // ...europeanFootball,
+  // ...footballWorldwideDomestic,
+  // ...scottishFootball,
+  // ...internationalFootball,
   // ...olympics,
   // ...paralympics,
   // ...rugbyUnion,
