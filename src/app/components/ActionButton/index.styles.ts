@@ -15,6 +15,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      height: '2.75rem',
+      fontFamily: 'ReithSans, Arial, Helvetica, sans-serif',
       gap: '0.5rem',
       whiteSpace: 'nowrap',
       width: '100%',

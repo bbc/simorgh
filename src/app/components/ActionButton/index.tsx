@@ -15,6 +15,7 @@ export interface ActionButtonProps {
   disabled?: boolean;
   label: string;
   buttonText: string;
+  removeText?: string;
 }
 
 const ActionButton = ({
@@ -24,6 +25,7 @@ const ActionButton = ({
   disabled = false,
   label,
   buttonText,
+  removeText = 'Remove',
 }: ActionButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -40,14 +42,12 @@ const ActionButton = ({
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
     >
-      {isLoading && (
-        <Spinner css={(theme: Theme) => styles.buttonAnimation(theme)} />
-      )}
+      {isLoading && <Spinner css={styles.buttonAnimation} />}
       {!isLoading && !isSaved && <BookmarkIcon />}
       {!isLoading &&
         isSaved &&
         (isHovered ? <Close /> : <FilledBookmarkIcon />)}
-      {isHovered && isSaved ? 'Remove' : buttonText}
+      {isHovered && isSaved ? removeText : buttonText}
     </button>
   );
 };
