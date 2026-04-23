@@ -1,29 +1,22 @@
 import { use, type PropsWithChildren } from 'react';
 import dynamic from 'next/dynamic';
 import useToggle from '#app/hooks/useToggle';
-import { ServiceContext } from '#app/contexts/ServiceContext';
-import isLocal from '#app/lib/utilities/isLocal';
+import { AccountContext } from '#app/contexts/AccountContext';
 
 const PersistentQueryProvider = dynamic(() => import('./lazy'));
 
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  const { service } = use(ServiceContext);
+  const { isSignedIn } = use(AccountContext);
   const { enabled: isAccountEnabled } = useToggle('account');
-  const { enabled: featureToggleOn, value: accountService } =
-    useToggle('uasPersonalization');
+  const { enabled: isPersonalizationEnabled } = useToggle('uasPersonalization');
 
-  const isPersonalizationEnabled =
-    featureToggleOn &&
-    (isLocal()
-      ? accountService?.toString().split('|').includes(service)
-      : true);
-
-  const hasAllTogglesEnabled = [
+  const shouldRenderQueryProvider = [
     isPersonalizationEnabled,
     isAccountEnabled,
+    isSignedIn,
   ].every(Boolean);
 
-  if (!hasAllTogglesEnabled) {
+  if (!shouldRenderQueryProvider) {
     return children;
   }
 
