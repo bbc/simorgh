@@ -1,8 +1,0 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1350 900" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect fill="#c1272d" width="1350" height="900"/>
-<polygon id="s" fill="#006233" stroke="#000" stroke-width="3" points="711.562,461.741 614.498,532.773 628.918,488.656 606.393,472.292 563.992,602.791 720.541,489.051"/>
-<use xlink:href="#s" transform="rotate(-72, 675, 450)"/>
-<use xlink:href="#s" transform="rotate(-144, 675, 450)"/>
-<use xlink:href="#s" transform="rotate(-216, 675, 450)"/>
-<use xlink:href="#s" transform="rotate(-288, 675, 450)"/>
-</svg>
