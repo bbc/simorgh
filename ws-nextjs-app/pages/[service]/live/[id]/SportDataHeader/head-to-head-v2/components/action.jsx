@@ -40,6 +40,8 @@ const StyledAction = styled.li`
 
 const StyledUl = styled.ul`
   list-style: none;
+  padding: 0; // reset
+  margin: 0; // reset
 
   @media (min-width: ${pixelsToRem(600)}rem) {
     display: flex;
