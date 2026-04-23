@@ -31,7 +31,7 @@
       "content": {
         "data": {
           "title": "Villa gain upper hand with gritty Europa League win at Bologna",
-          "live": false,
+          "live": true,
           "startDateTime": "2026-04-09T19:00:00.000Z",
           "uasActivityData": {
             "action": "heartbeat",
