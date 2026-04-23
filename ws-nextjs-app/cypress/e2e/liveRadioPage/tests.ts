@@ -45,10 +45,11 @@ export default ({ service, pageType }) =>
               if (radioScheduleData) {
                 cy.log('Schedule has enough data');
                 cy.get('[data-e2e=radio-schedule]').should('exist');
-              } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
               }
             });
+          } else {
+            cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            cy.log('Radio schedule is not toggled on for this service');
           }
         });
       });
