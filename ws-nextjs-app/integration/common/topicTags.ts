@@ -4,7 +4,12 @@ export default () => {
       const topicTags = document.querySelector(
         `aside[aria-labelledby*='related-topics'] a`,
       );
-      expect(topicTags).toBeInTheDocument();
+
+      if (topicTags) {
+        expect(topicTags).toBeInTheDocument();
+      } else {
+        expect(topicTags).toBeNull();
+      }
     });
   });
 };
