@@ -67,6 +67,7 @@ const TopicDiscovery = ({
 
   return (
     <section
+      aria-labelledby={HEADING_ID}
       css={styles.section}
       data-testid="topic-discovery"
       {...viewTracker}
