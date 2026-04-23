@@ -128,7 +128,7 @@ export const service: DefaultServiceConfig = {
             'Verifică adresa paginii de internet',
             'Re-încărcă pagina de internet',
           ],
-          callToActionFirst: 'Alternatively, please visit the ',
+          callToActionFirst: 'Alternativ, te rugăm să revii la ',
           callToActionLinkText: 'BBC News România.',
           callToActionLast: ' pagina principală. ',
           callToActionLinkUrl: 'https://www.bbc.com/romania',
@@ -158,7 +158,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'OK',
           reject: 'Află ce s-a schimbat',
-          rejectUrl: 'https://www.bbc.co.uk/usingthebbc/privacy-policy/',
+          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
         },
         cookie: {
           amp: {
@@ -166,7 +166,7 @@ export const service: DefaultServiceConfig = {
             reject: 'Respinge colectarea datelor și continuă',
             initial: {
               title:
-                'Anunță=-ne dacă ești de acord cu colectarea datelor pe platforma AMP',
+                'Anunță-ne dacă ești de acord cu colectarea datelor pe platforma AMP',
               description: {
                 first: 'Noi și partenerii noștri folosim tehnologii precum ',
                 linkText: 'cookies',
