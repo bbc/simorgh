@@ -39,6 +39,7 @@ const SaveArticleButton = ({
         disabled={isLoading}
         label={buttonLabel}
         buttonText={buttonText}
+        removeText="Remove"
       />
     </div>
   );
