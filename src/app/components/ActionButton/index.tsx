@@ -25,7 +25,7 @@ const ActionButton = ({
   disabled = false,
   label,
   buttonText,
-  removeText = 'Remove',
+  removeText = '',
 }: ActionButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 

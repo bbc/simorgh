@@ -1,4 +1,6 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import { useContext } from 'react';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ActionButton from '../ActionButton';
 
 interface SaveArticleButtonProps {
@@ -13,6 +15,9 @@ const SaveArticleButton = ({
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({ articleId, articleTitle });
 
+  const { translations } = useContext(ServiceContext);
+  const { saveArticleButton } = translations;
+
   if (!showButton) return null;
 
   if (error) {
@@ -23,8 +28,13 @@ const SaveArticleButton = ({
     });
   }
 
-  const buttonLabel = isSaved ? 'Saved to My News' : 'Save for later';
-  const buttonText = isLoading ? 'Saving' : buttonLabel;
+  const buttonLabel = isSaved
+    ? (saveArticleButton?.savedButton ?? 'Saved to My News')
+    : (saveArticleButton?.saveButton ?? 'Save for later');
+
+  const buttonText = isLoading
+    ? (saveArticleButton?.savingButton ?? 'Saving')
+    : buttonLabel;
 
   const handleClick = () => {
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
@@ -39,7 +49,7 @@ const SaveArticleButton = ({
         disabled={isLoading}
         label={buttonLabel}
         buttonText={buttonText}
-        removeText="Remove"
+        removeText={saveArticleButton?.removeButton ?? 'Remove'}
       />
     </div>
   );

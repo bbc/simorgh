@@ -68,4 +68,53 @@ describe('ActionButton', () => {
       'Save for later',
     );
   });
+
+  it('shows buttonText when not saved and not loading', () => {
+    render(
+      <ActionButton
+        onClick={noop}
+        label="Save for later"
+        buttonText="Save for later"
+      />,
+    );
+    expect(screen.getByText('Save for later')).toBeInTheDocument();
+  });
+
+  it('shows saving text when isLoading is true', () => {
+    render(
+      <ActionButton
+        onClick={noop}
+        label="Save for later"
+        buttonText="Saving"
+        isLoading
+      />,
+    );
+    expect(screen.getByText('Saving')).toBeInTheDocument();
+  });
+
+  it('shows saved text when isSaved is true', () => {
+    render(
+      <ActionButton
+        onClick={noop}
+        label="Saved to My News"
+        buttonText="Saved to My News"
+        isSaved
+      />,
+    );
+    expect(screen.getByText('Saved to My News')).toBeInTheDocument();
+  });
+
+  it('shows removeText when hovered and saved', async () => {
+    render(
+      <ActionButton
+        onClick={noop}
+        label="Save for later"
+        buttonText="Saved to My News"
+        isSaved
+        removeText="Remove"
+      />,
+    );
+    await userEvent.hover(screen.getByRole('button'));
+    expect(screen.getByText('Remove')).toBeInTheDocument();
+  });
 });

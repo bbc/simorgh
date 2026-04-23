@@ -53,6 +53,12 @@ export interface Translations {
     closeLabel: string;
     buttonSeparatorText: string;
   };
+  saveArticleButton?: {
+    saveButton?: string;
+    savingButton?: string;
+    savedButton?: string;
+    removeButton?: string;
+  };
   error: {
     home?: string;
     currentPage?: string;

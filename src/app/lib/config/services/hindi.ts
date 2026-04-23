@@ -120,6 +120,12 @@ export const service: DefaultServiceConfig = {
         closeLabel: 'Close',
         buttonSeparatorText: 'या',
       },
+      saveArticleButton: {
+        saveButton: 'Save for later',
+        savingButton: 'Saving',
+        savedButton: 'Saved to My News',
+        removeButton: 'Remove',
+      },
       gist: 'सारांश',
       error: {
         404: {
