@@ -6,7 +6,13 @@ import {
   runMediaPlayerAudioTests,
 } from '../../common';
 
-export default ({ service, hasRadioSchedule }) => {
+export default ({
+  service,
+  hasRadioSchedule,
+}: {
+  service: string;
+  hasRadioSchedule?: boolean;
+}) => {
   runCoreCanonicalTests();
   runCanonicalAnalyticsTests();
   runRadioScheduleTests(hasRadioSchedule);
@@ -15,7 +21,7 @@ export default ({ service, hasRadioSchedule }) => {
 
   describe('Summary', () => {
     const summaryEl = document.querySelector('main p');
-    const summaryText = summaryEl.textContent;
+    const summaryText = summaryEl?.textContent;
 
     it('should be in the document', () => {
       expect(summaryEl).toBeInTheDocument();
