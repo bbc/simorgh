@@ -31,11 +31,15 @@ const StyledHeadToHead = styled.div`
   font-feature-settings: 'ss01' off;
   color: #f8f8f8;
   padding: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
-  padding-bottom: ${pixelsToRem(24)}rem;
+  padding-bottom: ${({ isConciseView }) =>
+    !isConciseView &&
+    `${pixelsToRem(24)}rem`}; // TODO - decide if we want to move these styles to live page layout
 
   @media (max-width: ${pixelsToRem(600)}rem) {
     padding-top: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
-    padding-bottom: ${pixelsToRem(8)}rem;
+    padding-bottom: ${({ isConciseView }) =>
+      !isConciseView &&
+      `${pixelsToRem(8)}rem`}; // TODO - decide if we want to move these styles to live page layout
   }
 `;
 

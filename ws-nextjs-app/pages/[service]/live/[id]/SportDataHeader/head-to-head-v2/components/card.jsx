@@ -15,7 +15,7 @@ import secondyellowcard from '../assets/football/second-yellow-card.svg';
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
 const CardImage = styled.img`
-  padding: 0 ${pixelsToRem(3.2)}rem 0 ${pixelsToRem(3.2)}rem;
+  padding: 0 ${pixelsToRem(3.2)}rem;
 `;
 
 const StyledRedCard = styled(CardImage)`
@@ -30,6 +30,7 @@ const StyledYellowCard = styled(CardImage)`
 
 const CardContainer = styled.div`
   display: inline-block;
+  box-sizing: content-box;
 `;
 
 const Card = ({ player }) => (
