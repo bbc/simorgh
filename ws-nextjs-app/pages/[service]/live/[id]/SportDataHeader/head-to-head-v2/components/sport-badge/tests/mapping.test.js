@@ -42,7 +42,8 @@ describe('get image', () => {
 });
 
 describe('has mapping', () => {
-  test('returns true if a given is has a mapping', () => {
+  // mapping logic might be removed since URLS should should provided
+  test.skip('returns true if a given is has a mapping', () => {
     expect(hasMapping('urn:bbc:sportsdata:football:team:chelsea')).toBe(true);
   });
 

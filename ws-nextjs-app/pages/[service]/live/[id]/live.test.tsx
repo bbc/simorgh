@@ -642,7 +642,7 @@ describe('Live Page', () => {
       expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
     });
 
-    it('should render a visually hidden h1 when displaying sportData', async () => {
+    it('should render a h1 when displaying sportData', async () => {
       const pageDataWithSportData = {
         ...mockPageData,
         sportDataEventContent: sportDataFixture.data.sportDataEventContent,
@@ -653,7 +653,24 @@ describe('Live Page', () => {
         return render(<Live pageData={pageDataWithSportData} />);
       });
 
-      const visuallyHiddenTitle = container.querySelector('h1');
+      const title = container.querySelector('h1');
+      expect(title).toBeInTheDocument();
+    });
+
+    it('should render a visually hidden h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const visuallyHiddenTitle = screen.getByText(
+        'Villa gain upper hand with gritty Europa League win at Bologna',
+      );
       expect(visuallyHiddenTitle).toBeInTheDocument();
       expect(visuallyHiddenTitle).toHaveStyle(
         'overflow: hidden; position: absolute; width: 1px;',
