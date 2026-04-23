@@ -17,15 +17,16 @@ const styles = {
     padding: '2rem 0',
   }),
 
-  empty: css({
-    textAlign: 'center',
-    padding: '3rem 0',
+  empty: ({ palette }) =>
+    css({
+      textAlign: 'center',
+      padding: '3rem 0',
 
-    '& p': {
-      color: '#333333',
-      marginTop: '1rem',
-    },
-  }),
+      '& p': {
+        color: palette.GREY_10,
+        marginTop: '1rem',
+      },
+    }),
 };
 
 export default styles;
