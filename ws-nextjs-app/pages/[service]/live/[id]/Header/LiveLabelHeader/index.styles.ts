@@ -38,55 +38,31 @@ const styles = {
       'span:first-of-type': {
         color: palette.LIVE_LIGHT,
         verticalAlign: 'middle',
-        // position: 'relative', // to add
+        position: 'relative',
         [mq.GROUP_3_MIN_WIDTH]: {
           ...fontVariants.sansBold,
           ...fontSizes.paragon,
         },
       },
     }),
-  liveLabelTextWithImage: ({
-    // palette,
-    spacings,
-    // fontSizes,
-    // fontVariants,
-    // mq,
-  }: Theme) =>
+  liveLabelTextWithImage: ({ spacings }: Theme) =>
     css({
       'span:first-of-type': {
-        // color: palette.LIVE_LIGHT,
-        // verticalAlign: 'middle',
         display: 'inline',
-        // [mq.GROUP_3_MIN_WIDTH]: {
-        //   ...fontVariants.sansBold,
-        //   ...fontSizes.paragon,
-        // },
       },
       'span:nth-of-type(3)': {
         marginTop: `${spacings.DOUBLE}rem`,
       },
     }),
-  liveLabelTextWithoutImage: ({
-    mq,
-    // palette,
-    fontSizes,
-    fontVariants,
-  }: Theme) =>
+  liveLabelTextWithoutImage: ({ mq, fontSizes, fontVariants }: Theme) =>
     css({
       'span:first-of-type': {
         display: 'inline-flex',
-        // color: palette.LIVE_LIGHT, // same
-        // verticalAlign: 'middle', // same
         'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
         [mq.GROUP_0_MAX_WIDTH]: {
           display: 'inline',
         },
-        // [mq.GROUP_3_MIN_WIDTH]: {
-        //   // same
-        //   ...fontVariants.sansBold, // same
-        //   ...fontSizes.paragon, // same
-        // },
         [mq.GROUP_4_MIN_WIDTH]: {
           width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,
           ...fontVariants.sansBold,
