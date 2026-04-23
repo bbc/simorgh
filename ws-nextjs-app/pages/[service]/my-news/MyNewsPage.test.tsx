@@ -160,10 +160,12 @@ describe('MyNewsPage', () => {
     });
 
     await waitFor(() => {
-      expect(mockGetRecentActivity).toHaveBeenCalledWith({
-        itemsPerPage: 10,
-        startIndex: 0,
-      });
+      expect(mockGetRecentActivity).toHaveBeenCalledWith(
+        expect.objectContaining({
+          itemsPerPage: 10,
+          startIndex: 0,
+        }),
+      );
     });
   });
 });

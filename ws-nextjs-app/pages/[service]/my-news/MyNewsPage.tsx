@@ -31,10 +31,15 @@ const MyNewsPage = () => {
   const pageFromQuery = Array.isArray(router.query.page)
     ? router.query.page[0]
     : router.query.page;
-  const activePage = Math.max(1, Number(pageFromQuery ?? 1));
+  const requestedPage = Math.max(1, Number(pageFromQuery ?? 1));
+
+  const pageCount = Math.max(1, Math.ceil(state.totalItems / ITEMS_PER_PAGE));
+  const activePage = Math.min(requestedPage, pageCount);
 
   // Fetch data client-side when component mounts or page changes
   useEffect(() => {
+    const abortController = new AbortController();
+
     const fetchData = async () => {
       try {
         setState(prev => ({ ...prev, isLoading: true, error: null }));
@@ -43,6 +48,7 @@ const MyNewsPage = () => {
         const { savedArticles, total } = await getRecentActivity({
           itemsPerPage: ITEMS_PER_PAGE,
           startIndex,
+          signal: abortController.signal,
         });
 
         setState({
@@ -52,6 +58,10 @@ const MyNewsPage = () => {
           error: null,
         });
       } catch (err) {
+        if (err instanceof Error && err.name === 'AbortError') {
+          return;
+        }
+
         const errorMessage =
           err instanceof Error ? err.message : 'Failed to load articles';
         setState(prev => ({
@@ -63,10 +73,11 @@ const MyNewsPage = () => {
     };
 
     fetchData();
-  }, [router.query.service, activePage]);
 
-  const pageCount = Math.max(1, Math.ceil(state.totalItems / ITEMS_PER_PAGE));
-  const safeActivePage = Math.min(activePage, pageCount);
+    return () => {
+      abortController.abort();
+    };
+  }, [router.query.service, activePage]);
 
   const {
     pageXOfY = 'Page {x} of {y}',
@@ -76,7 +87,7 @@ const MyNewsPage = () => {
   } = translations?.pagination || {};
 
   const translatedPage = pageXOfY
-    .replace('{x}', String(safeActivePage))
+    .replace('{x}', String(activePage))
     .replace('{y}', String(pageCount));
 
   const metadataTitle =
@@ -115,7 +126,7 @@ const MyNewsPage = () => {
 
           {pageCount > 1 && (
             <Pagination
-              activePage={safeActivePage}
+              activePage={activePage}
               pageCount={pageCount}
               pageXOfY={pageXOfY}
               previousPage={previousPage}
