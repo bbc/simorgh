@@ -1,4 +1,3 @@
-
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import fetchIdctaConfig from '../fetchIdctaConfig';
@@ -109,7 +108,6 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService, '1');
 
-
     expect(result?.initialIsSignedIn).toBe(true);
   });
 
@@ -117,7 +115,6 @@ describe('getIdctaConfig', () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
     const result = await getIdctaConfig(mockToggles, mockService, '0');
-
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
@@ -127,7 +124,6 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-
     expect(result?.initialIsSignedIn).toBe(false);
   });
 
@@ -135,7 +131,6 @@ describe('getIdctaConfig', () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
     const result = await getIdctaConfig(mockToggles, mockService, 'invalid');
-
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
