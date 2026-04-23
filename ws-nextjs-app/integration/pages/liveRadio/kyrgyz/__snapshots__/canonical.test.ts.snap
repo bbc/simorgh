@@ -128,20 +128,20 @@ exports[`Canonical Kyrgyz Live Radio Page Main heading should match text 1`] = `
 
 exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container 1`] = `
 <figure
-  class="media-container bbc-16wwgxo"
+  class="media-container css-ucozvf"
   data-e2e="media-loader__container"
 >
   <div
-    class="media-player bbc-1ty1x88"
+    class="media-player css-1kf4wj3"
     data-e2e="media-player"
   >
     <noscript>
       <div>
         <div
-          class="bbc-1mgo2mg"
+          class="css-1mgo2mg"
         >
           <strong
-            class="bbc-pow7hy"
+            class="css-pow7hy"
           >
             Жабдыгыңыз медианын бул түрүн ойнотууга ылайыктуу эмес.
           </strong>
@@ -155,7 +155,7 @@ exports[`Canonical Kyrgyz Live Radio Page Media Loader renders a valid container
 exports[`Canonical Kyrgyz Live Radio Page SEO Apple Touch Icon should match attributes 1`] = `
 {
   "sizes": null,
-  "url": "http://localhost:7080/kyrgyz/images/icons/icon-192x192.png",
+  "url": "http://localhost:7081/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
@@ -187,7 +187,7 @@ exports[`Canonical Kyrgyz Live Radio Page SEO Apple Touch Icon should match attr
 }
 `;
 
-exports[`Canonical Kyrgyz Live Radio Page SEO Canonical link 1`] = `"http://localhost:7080/kyrgyz/bbc_kyrgyz_radio/liveradio"`;
+exports[`Canonical Kyrgyz Live Radio Page SEO Canonical link 1`] = `"http://localhost:7081/kyrgyz/bbc_kyrgyz_radio/liveradio"`;
 
 exports[`Canonical Kyrgyz Live Radio Page SEO Dir attribute 1`] = `"ltr"`;
 
@@ -215,11 +215,11 @@ exports[`Canonical Kyrgyz Live Radio Page SEO Linked data should match text 1`] 
         "name": "Kyrgyz",
       },
       "mainEntityOfPage": {
-        "@id": "http://localhost:7080/kyrgyz/bbc_kyrgyz_radio/liveradio",
+        "@id": "http://localhost:7081/kyrgyz/bbc_kyrgyz_radio/liveradio",
         "@type": "WebPage",
         "name": "Би-Би-Си Кыргыз кызматынын радиосу",
       },
-      "url": "http://localhost:7080/kyrgyz/bbc_kyrgyz_radio/liveradio",
+      "url": "http://localhost:7081/kyrgyz/bbc_kyrgyz_radio/liveradio",
     },
   ],
 }
@@ -239,7 +239,7 @@ exports[`Canonical Kyrgyz Live Radio Page SEO OG title 1`] = `"Би-Би-Си К
 
 exports[`Canonical Kyrgyz Live Radio Page SEO OG type 1`] = `"website"`;
 
-exports[`Canonical Kyrgyz Live Radio Page SEO OG url 1`] = `"http://localhost:7080/kyrgyz/bbc_kyrgyz_radio/liveradio"`;
+exports[`Canonical Kyrgyz Live Radio Page SEO OG url 1`] = `"http://localhost:7081/kyrgyz/bbc_kyrgyz_radio/liveradio"`;
 
 exports[`Canonical Kyrgyz Live Radio Page SEO Page title 1`] = `"Би-Би-Си Кыргыз кызматынын радиосу - BBC News Кыргыз Кызматы"`;
 
