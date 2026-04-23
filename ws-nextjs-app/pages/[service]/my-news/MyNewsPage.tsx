@@ -34,9 +34,6 @@ const MyNewsPage = () => {
     : router.query.page;
   const requestedPage = Math.max(1, Number(pageFromQuery ?? 1));
 
-  const pageCount = Math.max(1, Math.ceil(state.totalItems / ITEMS_PER_PAGE));
-  const activePage = Math.min(requestedPage, pageCount);
-
   // Fetch data client-side when component mounts or page changes
   useEffect(() => {
     const abortController = new AbortController();
@@ -45,7 +42,7 @@ const MyNewsPage = () => {
       try {
         setState(prev => ({ ...prev, isLoading: true, error: null }));
 
-        const startIndex = (activePage - 1) * ITEMS_PER_PAGE;
+        const startIndex = (requestedPage - 1) * ITEMS_PER_PAGE;
         const { savedArticles, total } = await getRecentActivity({
           itemsPerPage: ITEMS_PER_PAGE,
           startIndex,
@@ -78,7 +75,10 @@ const MyNewsPage = () => {
     return () => {
       abortController.abort();
     };
-  }, [router.query.service, activePage]);
+  }, [router.query.service, requestedPage]);
+
+  const pageCount = Math.max(1, Math.ceil(state.totalItems / ITEMS_PER_PAGE));
+  const safeActivePage = Math.min(requestedPage, pageCount);
 
   const {
     pageXOfY = 'Page {x} of {y}',
@@ -88,11 +88,11 @@ const MyNewsPage = () => {
   } = translations?.pagination || {};
 
   const translatedPage = pageXOfY
-    .replace('{x}', String(activePage))
+    .replace('{x}', String(safeActivePage))
     .replace('{y}', String(pageCount));
 
   const metadataTitle =
-    activePage >= 2 ? `My News, ${translatedPage}` : 'My News';
+    safeActivePage >= 2 ? `My News, ${translatedPage}` : 'My News';
 
   const renderContent = () => {
     if (state.isLoading) {
@@ -127,7 +127,7 @@ const MyNewsPage = () => {
 
           {pageCount > 1 && (
             <Pagination
-              activePage={activePage}
+              activePage={safeActivePage}
               pageCount={pageCount}
               pageXOfY={pageXOfY}
               previousPage={previousPage}
