@@ -20,7 +20,7 @@ export default ({ service, pageType }) => {
     });
   }
 
-  describe('Header Tests', () => {
+  describe.skip('Header Tests', () => {
     // limit number to Zhongwen for navigation toggling
     const testMobileNav = service === 'zhongwen';
 

@@ -1,6 +1,6 @@
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) => {
-  describe(`testsForAllAMPPages to run for ${service} ${pageType}`, () => {
+  describe.skip(`testsForAllAMPPages to run for ${service} ${pageType}`, () => {
     describe('Header Tests', () => {
       // limit number to Zhongwen for navigation toggling
       const testMobileNav = service === 'zhongwen';

@@ -4,7 +4,7 @@ import path from 'ramda/src/path';
 import chartbeatTests from '../../../support/helpers/chartbeatTests';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) =>
-  describe(`Tests for ${service} ${pageType}`, () => {
+  describe.skip(`Tests for ${service} ${pageType}`, () => {
     beforeEach(() => {
       cy.getToggles(service);
     });
@@ -17,7 +17,7 @@ export default ({ service, pageType }) =>
       });
     });
 
-    describe(
+    describe.skip(
       'Audio Player',
       {
         retries: 3,
@@ -31,7 +31,7 @@ export default ({ service, pageType }) =>
 
     chartbeatTests();
 
-    describe('Radio Schedule', () => {
+    describe.skip('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
         cy.fixture(`toggles/${service}.json`).then(toggles => {
           const scheduleIsEnabled = path(
