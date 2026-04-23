@@ -64,12 +64,14 @@ const Header = ({
                 isHeaderImage={isWithImageLayout}
                 showSportData={showSportData}
               >
-                <VisuallyHiddenText as="h1">{title}</VisuallyHiddenText>
+                <VisuallyHiddenText>{title}</VisuallyHiddenText>
               </LiveLabelHeader>
             ) : (
-              <VisuallyHiddenText as="h1">{title}</VisuallyHiddenText>
+              <VisuallyHiddenText>{title}</VisuallyHiddenText>
             )}
           </Heading>
+          {/* TODO - translations needed. Added H2 for accessibility reasons, matches PS */}
+          <VisuallyHiddenText as="h2">Match Summary</VisuallyHiddenText>
         </div>
       </div>
     );
