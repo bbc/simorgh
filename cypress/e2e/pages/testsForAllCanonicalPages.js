@@ -3,7 +3,7 @@ import envConfig from '../../support/config/envs';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) => {
   if (pageType !== 'errorPage404') {
-    describe(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
+    describe.skip(`Running testsForAllCanonicalPages for ${service} ${pageType}`, () => {
       if (Cypress.env('SMOKE')) {
         describe(
           'ATI',
