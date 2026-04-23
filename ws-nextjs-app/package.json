@@ -24,6 +24,8 @@
     "test:integration:amp": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - AMP'",
     "test:integration:lite": "NODE_OPTIONS=--no-experimental-strip-types jest --ci --colors --selectProjects='Integration Tests - Lite'",
     "cypress": "cypress run --browser chrome",
+    "cypress:onefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false cypress run --spec './cypress/e2e/articlePage/*'",
+    "cypress:oneserviceandonefile": "CYPRESS_APP_ENV=live CYPRESS_SMOKE=false CYPRESS_ONLY_SERVICE=mundo cypress run  --spec './cypress/e2e/articlePage/*'",
     "cypress:interactive": "cypress open --browser chrome",
     "test:e2e": "yarn stop && yarn build && run-p --race start cypress -- --e2e",
     "test:e2e:interactive": "yarn stop && yarn build && run-p --race start cypress:interactive -- --e2e"
