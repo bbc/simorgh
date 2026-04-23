@@ -275,8 +275,8 @@ export const AccountIcon = ({ className }: { className?: string }) => (
 
 export const BookmarkIcon = ({ className }: { className?: string }) => (
   <svg
-    width="13"
-    height="18"
+    width="20"
+    height="20"
     viewBox="0 0 18 18"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -292,8 +292,8 @@ export const BookmarkIcon = ({ className }: { className?: string }) => (
 
 export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
   <svg
-    width="13"
-    height="18"
+    width="20"
+    height="20"
     viewBox="0 0 18 18"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -310,8 +310,8 @@ export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
 export const Spinner = ({ className }: { className?: string }) => (
   <svg
     viewBox="0 0 32 32"
-    width="1em"
-    height="1em"
+    width="20"
+    height="20"
     className={className}
     focusable="false"
     aria-hidden="true"
