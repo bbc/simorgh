@@ -1,3 +1,4 @@
+
 import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import fetchIdctaConfig from '../fetchIdctaConfig';
@@ -101,5 +102,41 @@ describe('getIdctaConfig', () => {
     const result = await getIdctaConfig(mockToggles, mockService);
 
     expect(result).toBeNull();
+  });
+
+  it('should set initialIsSignedIn to true when x-id-oidc-signedin header is "1"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, '1');
+
+
+    expect(result?.initialIsSignedIn).toBe(true);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is "0"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, '0');
+
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is absent', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService);
+
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header has an invalid value', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, 'invalid');
+
+
+    expect(result?.initialIsSignedIn).toBe(false);
   });
 });

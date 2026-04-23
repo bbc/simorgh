@@ -10,9 +10,6 @@ export type IdctaConfig = {
   signout_url: string;
   foryou_url: string;
   initialIsSignedIn?: boolean;
-  identity: {
-    idSignedInCookieName: string;
-  };
 };
 
 export type AccountContextProps = {

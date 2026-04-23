@@ -3,7 +3,6 @@ import getToggleDefinitions from '#app/lib/utilities/getToggleDefinition';
 import isLocal from '#app/lib/utilities/isLocal';
 import { IdctaConfig } from '#app/models/types/account';
 import { Toggles, Services } from '#app/models/types/global';
-import hasCookie from '#app/lib/utilities/hasCookie';
 import fetchIdctaConfig from '../fetchIdctaConfig';
 
 const logger = nodeLogger(__filename);
@@ -12,13 +11,13 @@ const logger = nodeLogger(__filename);
  * Gets IDCTA config with toggle validation and config verification
  * @param toggles - Feature toggles
  * @param service - Service name
- * @param cookieHeader - Cookie header from request
+ * @param signedInHeader - Value of x-id-oidc-signedin header forwarded by Belfrage
  * @returns Validated IdctaConfig with initialIsSignedIn or null
  */
 export default async function getIdctaConfig(
   toggles: Toggles,
   service: Services,
-  cookieHeader?: string,
+  signedInHeader?: string,
 ): Promise<IdctaConfig | null> {
   const toggleDefinitions = getToggleDefinitions(toggles);
   const { enabled: isAccountEnabled, value: accountService = '' } =
@@ -47,12 +46,6 @@ export default async function getIdctaConfig(
     return null;
   }
 
-  const cookieName = config?.identity?.idSignedInCookieName;
-  const initialIsSignedIn = Boolean(
-    cookieHeader && cookieName
-      ? hasCookie(cookieHeader, cookieName)
-      : undefined,
-  );
-
+  const initialIsSignedIn = signedInHeader === '1';
   return { ...config, initialIsSignedIn };
 }

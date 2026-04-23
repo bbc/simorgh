@@ -17,9 +17,6 @@ const idctaConfig: IdctaConfig = {
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
   initialIsSignedIn: false,
-  identity: {
-    idSignedInCookieName: 'ckns_id',
-  },
 };
 
 const renderWithProviders = (overrides = {}) =>

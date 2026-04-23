@@ -15,9 +15,6 @@ const idctaConfig: IdctaConfig = {
   settings_url: 'https://example.com/settings',
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
-  identity: {
-    idSignedInCookieName: 'ckns_id',
-  },
 } as unknown as IdctaConfig;
 
 jest.mock('#app/hooks/useToggle');
