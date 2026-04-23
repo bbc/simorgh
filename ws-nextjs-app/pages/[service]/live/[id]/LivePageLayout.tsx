@@ -11,7 +11,6 @@ import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema
 import { MediaCollection } from '#app/components/MediaLoader/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
-import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
@@ -186,19 +185,16 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
       />
       <main>
-        {showSportData ? (
-          <VisuallyHiddenText as="h1">{title}</VisuallyHiddenText>
-        ) : (
-          <Header
-            showLiveLabel={isLive}
-            title={title}
-            description={description}
-            imageUrl={imageUrl}
-            imageUrlTemplate={imageUrlTemplate}
-            imageWidth={imageWidth}
-            mediaCollections={mediaCollections}
-          />
-        )}
+        <Header
+          showLiveLabel={isLive}
+          title={title}
+          description={description}
+          imageUrl={imageUrl}
+          imageUrlTemplate={imageUrlTemplate}
+          imageWidth={imageWidth}
+          mediaCollections={mediaCollections}
+          showSportData={showSportData}
+        />
         {showSportData && (
           <HeadToHeadV2
             data={sportData}

@@ -39,6 +39,10 @@ export default {
       bottom: 0,
       position: 'absolute',
     }),
+  backgroundColorSportData: ({ palette }: Theme) =>
+    css({
+      backgroundColor: palette.GREY_16, // non-consise view background colour - MVP
+    }),
   contentContainer: ({ mq, gridWidths }: Theme) =>
     css({
       [mq.GROUP_4_MIN_WIDTH]: {

@@ -16,7 +16,8 @@ import { Actions } from './components/actions';
 import pixelsToRem from '../../../../../../../src/app/utilities/pixelsToRem';
 
 const StyledHeadToHeadWrapper = styled.div`
-  background: ${({ isConciseView }) => (isConciseView ? '#202020' : '#181818')};
+  background: ${({ isConciseView }) =>
+    isConciseView ? '#202020' : '#181818'}; // GREY_15 : GREY_16
   ${
     '' /* border-left: ${({ status, isConciseView }) =>
     getStatusBorderStyles({ status, isConciseView })}; */
