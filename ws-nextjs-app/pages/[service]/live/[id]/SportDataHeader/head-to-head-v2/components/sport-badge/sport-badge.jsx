@@ -52,15 +52,19 @@ const SportBadge = ({
 
   if (!src) return null;
 
+  const isStorybook = Boolean(process.env.STORYBOOK);
+  const badgeSrc = isStorybook
+    ? 'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-badge.4476e22b04.svg'
+    : src;
+
   return (
     <BadgeContainer size={size} data-testid={`badge-container-${testId}`}>
       {/* Empty alt string should hide images from assistive technology, but won't hide certain SVG contents in some browsers - e.g. Safari */}
       <BadgeImage
         alt={alt}
         data-testid={`badge-img-${testId}`}
-        // src={src}
         aria-hidden={!alt}
-        {...src}
+        src={badgeSrc}
       />
     </BadgeContainer>
   );
