@@ -1,4 +1,5 @@
 import CurationGrid from '#app/components/Curation/CurationGrid';
+import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { useContext, useEffect, useState } from 'react';
@@ -97,7 +98,7 @@ const MyNewsPage = () => {
     if (state.isLoading) {
       return (
         <div css={styles.empty}>
-          <h2 css={styles.heading}>My News</h2>
+          <Heading level={2}>My News</Heading>
           <p>Loading your articles...</p>
         </div>
       );
@@ -106,7 +107,7 @@ const MyNewsPage = () => {
     if (state.error) {
       return (
         <div css={styles.empty}>
-          <h2 css={styles.heading}>My News</h2>
+          <Heading level={2}>My News</Heading>
           <p>Error loading articles: {state.error}</p>
         </div>
       );
@@ -115,7 +116,7 @@ const MyNewsPage = () => {
     if (state.savedArticles.length > 0) {
       return (
         <>
-          <h2 css={styles.heading}>My News</h2>
+          <Heading level={2}>My News</Heading>
           <CurationGrid
             summaries={state.savedArticles}
             headingLevel={2}
@@ -140,7 +141,7 @@ const MyNewsPage = () => {
 
     return (
       <div css={styles.empty}>
-        <h2 css={styles.heading}>My News</h2>
+        <Heading level={2}>My News</Heading>
         <p>No saved articles yet</p>
       </div>
     );
