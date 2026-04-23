@@ -11,6 +11,7 @@ type WithProvidersArgs = {
   buttonText?: string;
   label?: string;
   isSaved?: boolean;
+  removeText?: string;
 };
 
 const withProviders =
@@ -19,7 +20,8 @@ const withProviders =
     disabled = false, 
     isSaved = false,
     buttonText = 'Save article', 
-    label = 'Save this article' 
+    label = 'Save this article',
+    removeText,
   }: WithProvidersArgs) =>
   () => (
     <ThemeProvider service="pidgin">
@@ -42,6 +44,7 @@ const withProviders =
             disabled={disabled}
             label={label}
             buttonText={buttonText}
+            removeText={removeText}
           />
         </AccountContext.Provider>
       </ServiceContextProvider>
@@ -72,6 +75,7 @@ export const Saved = withProviders({
   buttonText: 'Saved to My News',
   label: 'Article has been saved',
   isSaved: true,
+  removeText: 'Remove',
 });
 
 
