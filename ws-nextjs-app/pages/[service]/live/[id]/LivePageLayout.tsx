@@ -66,7 +66,9 @@ export type ComponentProps = {
       id: string;
       content: {
         data: {
+          live: boolean;
           sportDataEvent: HeadToHeadV2Data;
+          title: string;
         };
       };
     } | null;
@@ -105,7 +107,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
   const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
-  const showSportData = sportData && !isLiveEnv();
+  const isSportDataLive = sportDataEventContent?.content?.data?.live;
+  const sportDataTitle = sportDataEventContent?.content?.data?.title;
+  const showSportData = !!sportData && !isLiveEnv();
 
   const {
     url: imageUrl,
@@ -186,8 +190,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={isLive}
-          title={title}
+          showLiveLabel={
+            showSportData && !!isSportDataLive ? isSportDataLive : isLive
+          }
+          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
