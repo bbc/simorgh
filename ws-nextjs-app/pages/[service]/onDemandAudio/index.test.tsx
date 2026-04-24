@@ -177,8 +177,12 @@ describe('OnDemand Radio Page ', () => {
     expect(podcastEpisode).toBeDefined();
     expect(podcastSeries).toBeDefined();
     expect(webPageSchema).toBeDefined();
+
+    const podcastEpisodeId = podcastEpisode?.['@id'];
+
+    expect(podcastEpisodeId).toEqual(expect.any(String));
     expect(webPageSchema?.mainEntity).toEqual({
-      '@id': podcastEpisode?.['@id'],
+      '@id': podcastEpisodeId,
     });
   });
 
