@@ -54,8 +54,6 @@ const styles = {
   buttonAnimation: ({ palette }: Theme) =>
     css({
       display: 'block',
-      height: '1rem',
-      width: '1rem',
       animation: `${spinAnimation} 1s linear 0s infinite normal none running`,
       '& svg': { fill: palette.WHITE },
     }),

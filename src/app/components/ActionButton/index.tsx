@@ -42,7 +42,7 @@ const ActionButton = ({
       {!isLoading && !isSaved && <BookmarkIcon />}
       {!isLoading &&
         isSaved &&
-        (isHovered ? <Close /> : <FilledBookmarkIcon />)}
+        (isHovered ? <Close width="20" height="20" /> : <FilledBookmarkIcon />)}
       {isHovered && isSaved ? removeText : buttonText}
     </button>
   );
