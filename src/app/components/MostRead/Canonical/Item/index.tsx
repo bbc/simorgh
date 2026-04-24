@@ -50,6 +50,9 @@ export const MostReadLink = ({
   const positionIndex =
     typeof position === 'string' ? parseInt(position, 10) : position;
 
+  const isCurrentPage =
+    typeof window !== 'undefined' && href.includes(window.location.pathname);
+
   const eventTrackingDataExtended = {
     ...eventTrackingData,
     itemTracker: {
@@ -67,7 +70,12 @@ export const MostReadLink = ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
       <a
-        css={[styles.link, size === 'default' && styles.defaultLink]}
+        css={[
+          styles.link,
+          size === 'default' && styles.defaultLink,
+          styles.visitedItem(),
+          isCurrentPage && styles.visitedItem(),
+        ]}
         href={href}
         {...clickTrackerHandler}
       >
