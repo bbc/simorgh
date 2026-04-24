@@ -1,30 +1,27 @@
 import { css, Theme, keyframes } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
-const spinAnimation = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
+const spinAnimation = keyframes({
+  '0%': { transform: 'rotate(0deg)' },
+  '100%': { transform: 'rotate(360deg)' },
+});
 
 const styles = {
-  buttonWrapper: ({ mq, palette, spacings }: Theme, isSaved: boolean) =>
+  buttonWrapper: ({ mq, palette, spacings, fontVariants }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       height: '2.75rem',
-      fontFamily: 'ReithSans, Arial, Helvetica, sans-serif',
+      ...fontVariants.sansBold,
       gap: '0.5rem',
       whiteSpace: 'nowrap',
       width: '100%',
       padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
       cursor: 'pointer',
-      backgroundColor: isSaved ? palette.WHITE : palette.WHITE,
-      color: isSaved ? palette.GREY_8 : palette.GREY_8,
-      border: `1px solid ${palette.GREY_8}`,
+      backgroundColor: palette.WHITE,
+      color: palette.GREY_8,
+      border: `${pixelsToRem(1)}rem solid ${palette.GREY_8}`,
       ':hover': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
@@ -35,8 +32,8 @@ const styles = {
       ':focus-visible': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
-        outline: `3px solid ${palette.GREY_8}`,
-        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 9px ${palette.GREY_8}`,
+        outline: `${pixelsToRem(3)}rem solid ${palette.GREY_8}`,
+        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 ${pixelsToRem(9)}rem ${palette.GREY_8}`,
         '& svg': {
           fill: palette.WHITE,
         },
@@ -66,7 +63,6 @@ const styles = {
       height: '1rem',
       width: '1rem',
       animation: `${spinAnimation} 1s linear 0s infinite normal none running`,
-      animationName: spinAnimation,
       '& svg': { fill: palette.WHITE },
     }),
 };

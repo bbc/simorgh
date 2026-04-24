@@ -31,7 +31,7 @@ const ActionButton = ({
 
   return (
     <button
-      css={(theme: Theme) => styles.buttonWrapper(theme, isSaved)}
+      css={(theme: Theme) => styles.buttonWrapper(theme)}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}
