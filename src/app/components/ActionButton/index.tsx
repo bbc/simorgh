@@ -35,8 +35,6 @@ const ActionButton = ({
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}
-      aria-label={label}
-      title={label}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}

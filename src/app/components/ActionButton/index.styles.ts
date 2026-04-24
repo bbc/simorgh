@@ -22,7 +22,7 @@ const styles = {
       backgroundColor: palette.WHITE,
       color: palette.GREY_8,
       border: `${pixelsToRem(1)}rem solid ${palette.GREY_8}`,
-      ':hover': {
+      ':hover, :focus-visible': {
         backgroundColor: palette.GREY_8,
         color: palette.WHITE,
         '& svg': {
@@ -30,13 +30,8 @@ const styles = {
         },
       },
       ':focus-visible': {
-        backgroundColor: palette.GREY_8,
-        color: palette.WHITE,
         outline: `${pixelsToRem(3)}rem solid ${palette.GREY_8}`,
-        boxShadow: `0 0 0 ${palette.WHITE}, 0 0 0 ${pixelsToRem(9)}rem ${palette.GREY_8}`,
-        '& svg': {
-          fill: palette.WHITE,
-        },
+        boxShadow: `0 0 0 ${pixelsToRem(4)}rem ${palette.WHITE}, 0 0 0 ${pixelsToRem(9)}rem ${palette.GREY_8}`,
       },
       ':disabled': {
         backgroundColor: palette.GREY_8,
@@ -46,7 +41,6 @@ const styles = {
           fill: palette.WHITE,
         },
       },
-
       [mq.GROUP_2_MIN_WIDTH]: {
         marginLeft: spacings.DOUBLE,
         marginRight: spacings.DOUBLE,
