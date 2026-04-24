@@ -252,7 +252,7 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(input).toBeInTheDocument();
-    expect(input).toHaveAttribute('required');
+    expect(label).toHaveTextContent('This is a required text field');
     expect(label).not.toHaveTextContent(/\boptional\b/i);
   });
 
