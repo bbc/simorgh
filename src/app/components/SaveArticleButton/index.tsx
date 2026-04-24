@@ -16,9 +16,11 @@ const SaveArticleButton = ({
     useUASButton({ articleId, articleTitle });
 
   const { translations } = useContext(ServiceContext);
-  const { saveArticleButton } = translations;
+  const { saveArticleButton } = translations || {};
 
   if (!showButton) return null;
+
+  if (!saveArticleButton) return null;
 
   if (error) {
     // eslint-disable-next-line no-console
@@ -29,12 +31,10 @@ const SaveArticleButton = ({
   }
 
   const buttonLabel = isSaved
-    ? (saveArticleButton?.savedButton ?? 'Saved to My News')
-    : (saveArticleButton?.saveButton ?? 'Save for later');
+    ? saveArticleButton.saved
+    : saveArticleButton.save;
 
-  const buttonText = isLoading
-    ? (saveArticleButton?.savingButton ?? 'Saving')
-    : buttonLabel;
+  const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
 
   const handleClick = () => {
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
@@ -48,7 +48,7 @@ const SaveArticleButton = ({
         isSaved={isSaved}
         disabled={isLoading}
         buttonText={buttonText}
-        removeText={saveArticleButton?.removeButton ?? 'Remove'}
+        removeText={saveArticleButton.remove}
       />
     </div>
   );

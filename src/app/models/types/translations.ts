@@ -54,10 +54,10 @@ export interface Translations {
     buttonSeparatorText: string;
   };
   saveArticleButton?: {
-    saveButton?: string;
-    savingButton?: string;
-    savedButton?: string;
-    removeButton?: string;
+    save: string;
+    saving: string;
+    saved: string;
+    remove: string;
   };
   error: {
     home?: string;

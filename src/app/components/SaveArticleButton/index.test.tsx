@@ -26,7 +26,9 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    const { container } = render(<SaveArticleButton {...defaultProps} />);
+    const { container } = render(<SaveArticleButton {...defaultProps} />, {
+      service: 'hindi',
+    });
     expect(container.firstChild).toBeNull();
   });
 
@@ -38,7 +40,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />);
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
     expect(screen.getByRole('button')).toHaveTextContent('Save for later');
   });
 
@@ -50,7 +52,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />);
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
     expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
   });
 
@@ -62,7 +64,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />);
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
     const button = screen.getByRole('button');
 
     expect(button).toHaveTextContent('Saving');
@@ -77,7 +79,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />);
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
     screen.getByRole('button').click();
 
     expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
@@ -92,7 +94,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />);
+    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
 
     expect(mockedUseUASButton).toHaveBeenCalledWith({
       articleId: '123',
