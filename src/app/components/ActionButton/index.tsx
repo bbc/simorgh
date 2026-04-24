@@ -13,7 +13,6 @@ export interface ActionButtonProps {
   isLoading?: boolean;
   isSaved?: boolean;
   disabled?: boolean;
-  label: string;
   buttonText: string;
   removeText?: string;
 }
@@ -23,7 +22,6 @@ const ActionButton = ({
   isLoading = false,
   isSaved = false,
   disabled = false,
-  label,
   buttonText,
   removeText = '',
 }: ActionButtonProps) => {

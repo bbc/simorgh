@@ -47,7 +47,6 @@ const SaveArticleButton = ({
         isLoading={isLoading}
         isSaved={isSaved}
         disabled={isLoading}
-        label={buttonLabel}
         buttonText={buttonText}
         removeText={saveArticleButton?.removeButton ?? 'Remove'}
       />

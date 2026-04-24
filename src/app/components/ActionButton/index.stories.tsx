@@ -9,7 +9,6 @@ type WithProvidersArgs = {
   isLoading?: boolean;
   disabled?: boolean;
   buttonText?: string;
-  label?: string;
   isSaved?: boolean;
   removeText?: string;
 };
@@ -20,7 +19,6 @@ const withProviders =
     disabled = false, 
     isSaved = false,
     buttonText = 'Save article', 
-    label = 'Save this article',
     removeText,
   }: WithProvidersArgs) =>
   () => (
@@ -42,7 +40,6 @@ const withProviders =
             isLoading={isLoading}
             isSaved={isSaved}
             disabled={disabled}
-            label={label}
             buttonText={buttonText}
             removeText={removeText}
           />
@@ -62,18 +59,15 @@ export default {
 
 export const Unsaved = withProviders({
   buttonText: 'Save for later',
-  label: 'Save this article',
 });
 
 export const Loading = withProviders({
   isLoading: true,
   buttonText: 'Saving',
-  label: 'Saving article',
 });
 
 export const Saved = withProviders({
   buttonText: 'Saved to My News',
-  label: 'Article has been saved',
   isSaved: true,
   removeText: 'Remove',
 });
