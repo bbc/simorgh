@@ -5,9 +5,13 @@ import PageDataParams from '#app/models/types/pageDataParams';
 import { INTERNAL_SERVER_ERROR, OK } from '#app/lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
 import { ROUTING_INFORMATION } from '#app/lib/logger.const';
+
 import getPageData from '../../utilities/pageRequests/getPageData';
 
 const HomePage = dynamic(() => import('#pages/HomePage/HomePage'));
+const Globe = dynamic(() => import('#app/components/3d/3dComponents/Globe'), {
+  ssr: false,
+});
 
 const logger = nodeLogger(__filename);
 
@@ -62,4 +66,11 @@ export const getServerSideProps: GetServerSideProps = async context => {
   };
 };
 
-export default HomePage;
+const LanguagesPage = props => (
+  <>
+    <Globe />
+    <HomePage {...props} />
+  </>
+);
+
+export default LanguagesPage;
