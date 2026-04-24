@@ -252,6 +252,8 @@ describe('FormField', () => {
 
     expect(label).toBeInTheDocument();
     expect(input).toBeInTheDocument();
+    expect(input).toHaveAttribute('required');
+    expect(label).not.toHaveTextContent(/\boptional\b/i);
   });
 
   it.each([
