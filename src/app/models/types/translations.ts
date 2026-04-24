@@ -46,6 +46,7 @@ export interface Translations {
     signIn?: string;
     forYou?: string;
     register?: string;
+    settings?: string;
   };
   accountPromoBanner?: {
     title: string;
