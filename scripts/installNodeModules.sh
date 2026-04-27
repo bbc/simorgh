@@ -1,5 +1,7 @@
 #!/bin/bash
 if [ "$1" = "--production" ]; then
+  yarn config set supportedArchitectures.os --json '["linux"]'
+  yarn config set supportedArchitectures.cpu --json '["arm64"]'
   echo "Removing node modules"
   rm -rf node_modules
   echo "Installing 'production' node modules"
