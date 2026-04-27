@@ -24,7 +24,7 @@ const styles = {
 
   tab: ({ palette, spacings, fontSizes, fontVariants, mq }: Theme) =>
     css({
-      ...fontVariants.sansRegular,
+      ...fontVariants.sansBold,
       ...fontSizes.pica,
       whiteSpace: 'nowrap',
       background: 'none',
@@ -35,9 +35,8 @@ const styles = {
         padding: `${spacings.DOUBLE}rem`,
       },
       cursor: 'pointer',
-      color: palette.GREY_6,
+      color: palette.GREY_10,
       '&:hover': {
-        color: palette.GREY_10,
         borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
       },
       '&:focus-visible': {
@@ -48,9 +47,7 @@ const styles = {
 
   tabActive: ({ palette }: Theme) =>
     css({
-      color: palette.GREY_10,
       borderBottomColor: palette.POSTBOX,
-      fontWeight: 700,
     }),
 
   scrollButton: ({ palette, spacings }: Theme) =>
