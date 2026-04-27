@@ -22,22 +22,28 @@ const styles = {
       },
     }),
 
-  tab: ({ palette, spacings, fontSizes, fontVariants, mq }: Theme) =>
+  tab: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.pica,
+      position: 'relative',
       whiteSpace: 'nowrap',
       background: 'none',
       border: 'none',
-      borderBottom: `${pixelsToRem(3)}rem solid transparent`,
-      padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
-      [mq.GROUP_2_MIN_WIDTH]: {
-        padding: `${spacings.DOUBLE}rem`,
-      },
+      padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       cursor: 'pointer',
       color: palette.GREY_10,
+
       '&:hover': {
-        borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          left: 0,
+          bottom: 0,
+          width: '100%',
+          height: `${spacings.HALF}rem`,
+          background: palette.POSTBOX,
+        },
       },
       '&:focus-visible': {
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
@@ -45,13 +51,22 @@ const styles = {
       },
     }),
 
-  tabActive: ({ palette }: Theme) =>
+  tabActive: ({ spacings, palette }: Theme) =>
     css({
-      borderBottomColor: palette.POSTBOX,
+      '&::after': {
+        content: '""',
+        position: 'absolute',
+        left: 0,
+        bottom: 0,
+        width: '100%',
+        height: `${spacings.HALF}rem`,
+        background: palette.POSTBOX,
+      },
     }),
 
   scrollButton: ({ palette, spacings }: Theme) =>
     css({
+      position: 'relative',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -61,18 +76,15 @@ const styles = {
       border: 'none',
       cursor: 'pointer',
       padding: 0,
-      color: palette.GREY_6,
+      color: palette.GREY_10,
       '& svg': {
         width: `${spacings.DOUBLE}rem`,
         height: `${spacings.DOUBLE}rem`,
         fill: 'currentcolor',
       },
-      '&:hover:not(:disabled)': {
-        color: palette.GREY_10,
-      },
       '&:disabled': {
         cursor: 'default',
-        color: '#8A8C8E',
+        color: `${palette.GREY_5}`,
       },
       '&:focus-visible': {
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
@@ -86,7 +98,6 @@ const styles = {
       flexShrink: 0,
       display: 'flex',
       alignItems: 'center',
-      zIndex: 1,
     }),
 
   scrollButtonWrapperHidden: () =>
