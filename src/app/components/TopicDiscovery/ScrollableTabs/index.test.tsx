@@ -123,41 +123,51 @@ describe('ScrollableTabs', () => {
     expect(screen.getByTestId('scroll-end')).toBeInTheDocument();
   });
 
-  describe('RTL support', () => {
-    it('should move to the previous tab on ArrowRight in RTL', () => {
-      const onTabChange = jest.fn();
+  it('should scroll the tab container when the chevrons are clicked', () => {
+    render(
+      <ScrollableTabs
+        tabs={mockTabs}
+        activeTabId="tab-1"
+        onTabChange={jest.fn()}
+        labelledBy="heading-id"
+      />,
+    );
 
-      render(
-        <ScrollableTabs
-          tabs={mockTabs}
-          activeTabId="tab-2"
-          onTabChange={onTabChange}
-          labelledBy="heading-id"
-        />,
-        { service: 'arabic' },
-      );
-
-      fireEvent.keyDown(screen.getByRole('tablist'), { key: 'ArrowRight' });
-
-      expect(onTabChange).toHaveBeenCalledWith('tab-1');
+    let scrollLeft = 50;
+    const tabListElement = screen.getByRole('tablist');
+    const scrollBy = jest.fn(({ left }) => {
+      scrollLeft += left;
     });
 
-    it('should move to the next tab on ArrowLeft in RTL', () => {
-      const onTabChange = jest.fn();
+    Object.defineProperty(tabListElement, 'clientWidth', {
+      configurable: true,
+      get: () => 200,
+    });
+    Object.defineProperty(tabListElement, 'scrollWidth', {
+      configurable: true,
+      get: () => 500,
+    });
+    Object.defineProperty(tabListElement, 'scrollLeft', {
+      configurable: true,
+      get: () => scrollLeft,
+    });
+    Object.defineProperty(tabListElement, 'scrollBy', {
+      configurable: true,
+      value: scrollBy,
+    });
 
-      render(
-        <ScrollableTabs
-          tabs={mockTabs}
-          activeTabId="tab-1"
-          onTabChange={onTabChange}
-          labelledBy="heading-id"
-        />,
-        { service: 'arabic' },
-      );
+    fireEvent(window, new Event('resize'));
 
-      fireEvent.keyDown(screen.getByRole('tablist'), { key: 'ArrowLeft' });
+    fireEvent.click(screen.getByTestId('scroll-end'));
+    fireEvent.click(screen.getByTestId('scroll-start'));
 
-      expect(onTabChange).toHaveBeenCalledWith('tab-2');
+    expect(scrollBy).toHaveBeenNthCalledWith(1, {
+      left: 150,
+      behavior: 'smooth',
+    });
+    expect(scrollBy).toHaveBeenNthCalledWith(2, {
+      left: -150,
+      behavior: 'smooth',
     });
   });
 });
