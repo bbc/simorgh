@@ -1,4 +1,7 @@
 import type { Services } from '#app/models/types/global';
+import type { OptimoRawImageBlock, Article } from '#app/models/types/optimo';
+import buildIChefURL from '#app/lib/utilities/ichefURL';
+import extractPromoImage from '#app/lib/utilities/extractPromoImage';
 import type { UasApiRequestBody } from './index';
 
 export interface SavedArticle {
@@ -61,9 +64,41 @@ const createFavouritesPayload = ({
   },
 });
 
+const extractPromoImageFromArticleData = (articlePageData?: Article) => {
+  const promoImageBlocks =
+    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
+
+  return {
+    altText,
+    promoImageRawBlock: rawBlock,
+  };
+};
+
+const buildPromoImageUrl = (promoImageObj?: {
+  altText: string;
+  promoImageRawBlock?: OptimoRawImageBlock;
+}): string => {
+  if (
+    !promoImageObj?.promoImageRawBlock?.model?.locator ||
+    !promoImageObj?.promoImageRawBlock?.model?.originCode
+  ) {
+    return '';
+  }
+
+  return buildIChefURL({
+    originCode: promoImageObj.promoImageRawBlock.model.originCode,
+    locator: promoImageObj.promoImageRawBlock.model.locator,
+    resolution: 320,
+  });
+};
+
 export {
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
   parseArticleID,
+  extractPromoImageFromArticleData,
+  buildPromoImageUrl,
 };
