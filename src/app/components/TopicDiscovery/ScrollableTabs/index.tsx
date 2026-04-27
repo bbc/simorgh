@@ -100,13 +100,13 @@ const ScrollableTabs = ({
           const isActive = tab.id === activeTabId;
           return (
             <button
+              {...(isActive && { 'aria-controls': `tabpanel-${tab.id}` })}
               key={tab.id}
               type="button"
               role="tab"
               id={`tab-${tab.id}`}
               data-tab-id={tab.id}
               aria-selected={isActive}
-              aria-controls={`tabpanel-${tab.id}`}
               css={[styles.tab, isActive && styles.tabActive]}
               onClick={event => {
                 onTabChange(tab.id);
