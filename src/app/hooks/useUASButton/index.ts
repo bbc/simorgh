@@ -49,12 +49,12 @@ const extractPromoImageFromArticleData = (
 const buildPromoImageUrl = (promoImageObj?: {
   altText: string;
   promoImageRawBlock?: OptimoRawImageBlock;
-}): string | boolean => {
+}): string => {
   if (
     !promoImageObj?.promoImageRawBlock?.model?.locator ||
     !promoImageObj?.promoImageRawBlock?.model?.originCode
   ) {
-    return true; // For fallback image
+    return '';
   }
 
   return buildIChefURL({
@@ -104,7 +104,7 @@ const useUASButton = ({
             articleId,
             service,
             articleTitle,
-            promoImage: promoImageBuild,
+            promoImage: promoImageBuild || true, // If promo image URL is not available, send true to indicate fallback should be used
             promoImageAltText: promoImageObj?.altText || '',
             locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
           });
