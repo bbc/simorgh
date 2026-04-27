@@ -3385,18 +3385,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@happy-dom/jest-environment@npm:20.8.9":
-  version: 20.8.9
-  resolution: "@happy-dom/jest-environment@npm:20.8.9"
+"@happy-dom/jest-environment@npm:20.9.0":
+  version: 20.9.0
+  resolution: "@happy-dom/jest-environment@npm:20.9.0"
   dependencies:
-    happy-dom: "npm:^20.8.9"
+    happy-dom: "npm:^20.9.0"
   peerDependencies:
     "@jest/environment": ">=25.0.0"
     "@jest/fake-timers": ">=25.0.0"
     "@jest/types": ">=25.0.0"
     jest-mock: ">=25.0.0"
     jest-util: ">=25.0.0"
-  checksum: 10/3be4983374e790d3bd498b20afcf03a907f2cebb3b3643e11dab02fc468e48ecbfcfa4191b78e8618da4e1768ab65152c4f90926656ce59a0cfaef560eeb37cf
+  checksum: 10/ad29dd6cf093a2c33fbbaf585f1768315a2331a52fbb94e28887911587246a2649c63716ab3c91f0245e8e14fa0c6fe9450aad40dcb30a0dc62553d2ab64d9d7
   languageName: node
   linkType: hard
 
@@ -11901,9 +11901,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:20.8.9, happy-dom@npm:^20.8.9":
-  version: 20.8.9
-  resolution: "happy-dom@npm:20.8.9"
+"happy-dom@npm:20.9.0, happy-dom@npm:^20.9.0":
+  version: 20.9.0
+  resolution: "happy-dom@npm:20.9.0"
   dependencies:
     "@types/node": "npm:>=20.0.0"
     "@types/whatwg-mimetype": "npm:^3.0.2"
@@ -11911,7 +11911,7 @@ __metadata:
     entities: "npm:^7.0.1"
     whatwg-mimetype: "npm:^3.0.0"
     ws: "npm:^8.18.3"
-  checksum: 10/81fabd8c630c2165eedd57b72f38b58e8891ff2ff543302c5bdf88860fc3b45b16decd27dabfc72739af6a927d711b04008c61b7e8090893da1fe5feba2dc80e
+  checksum: 10/5b54d641b467a8826de995a4541e55d79f58e3513e78209c5ff7ef8aa598c201550a8c2975aad465d5605bcf2788314164402f350eaa9014c0d6d6f896cc30c7
   languageName: node
   linkType: hard
 
@@ -17650,7 +17650,7 @@ __metadata:
     "@esbuild/linux-x64": "npm:0.28.0"
     "@esbuild/win32-arm64": "npm:0.28.0"
     "@esbuild/win32-x64": "npm:0.28.0"
-    "@happy-dom/jest-environment": "npm:20.8.9"
+    "@happy-dom/jest-environment": "npm:20.9.0"
     "@jest/environment": "npm:30.2.0"
     "@jest/globals": "npm:30.2.0"
     "@loadable/babel-plugin": "npm:5.16.1"
@@ -17719,7 +17719,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     express: "npm:4.22.1"
     express-static-gzip: "npm:3.0.0"
-    happy-dom: "npm:20.8.9"
+    happy-dom: "npm:20.9.0"
     helmet: "npm:8.1.0"
     husky: "npm:9.1.7"
     intersection-observer: "npm:0.12.2"
