@@ -3,9 +3,10 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   section: ({ spacings, mq }: Theme) =>
     css({
-      marginTop: `${spacings.DOUBLE}rem`,
+      padding: `0 ${spacings.DOUBLE}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
+
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${spacings.TRIPLE}rem`,
+        padding: 0,
       },
     }),
 
@@ -15,7 +16,7 @@ const styles = {
       ...fontSizes.doublePica,
       color: palette.GREY_10,
       margin: 0,
-      paddingBottom: `${spacings.FULL}rem`,
+      paddingBottom: `${spacings.DOUBLE}rem`,
     }),
 
   tabPanel: ({ spacings, mq }: Theme) =>
