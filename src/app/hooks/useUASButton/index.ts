@@ -10,7 +10,9 @@ import {
   createFavouritesPayload,
 } from '#app/lib/uasApi/uasUtility';
 import buildIChefURL from '#app/lib/utilities/ichefURL';
+import extractPromoImage from '#app/lib/utilities/extractPromoImage';
 import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
+import type { OptimoRawImageBlock } from '#app/models/types/optimo';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
@@ -30,10 +32,41 @@ interface UseUASButtonReturn {
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
 
+const extractPromoImageFromArticleData = (
+  articlePageData?: SaveArticleButtonProps['articlePageData'],
+) => {
+  const promoImageBlocks =
+    articlePageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const { altText, rawBlock } = extractPromoImage(promoImageBlocks);
+
+  return {
+    altText,
+    promoImageRawBlock: rawBlock,
+  };
+};
+
+const buildPromoImageUrl = (promoImageObj?: {
+  altText: string;
+  promoImageRawBlock?: OptimoRawImageBlock;
+}): string | boolean => {
+  if (
+    !promoImageObj?.promoImageRawBlock?.model?.locator ||
+    !promoImageObj?.promoImageRawBlock?.model?.originCode
+  ) {
+    return true; // For fallback image
+  }
+
+  return buildIChefURL({
+    originCode: promoImageObj.promoImageRawBlock.model.originCode,
+    locator: promoImageObj.promoImageRawBlock.model.locator,
+    resolution: 320,
+  });
+};
+
 const useUASButton = ({
   articleId,
   articleTitle,
-  promoImageObj,
   articlePageData,
 }: SaveArticleButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
@@ -55,6 +88,8 @@ const useUASButton = ({
     showButton ? articleId : '',
   );
 
+  const promoImageObj = extractPromoImageFromArticleData(articlePageData);
+
   const handleSaveAction = useCallback(
     async (action: UASAction) => {
       if (isSaving) return;
@@ -64,15 +99,7 @@ const useUASButton = ({
         setSaveError(null);
 
         if (action === UASAction.SAVE) {
-          const promoImageBuild =
-            promoImageObj?.promoImageRawBlock?.model?.locator &&
-            promoImageObj?.promoImageRawBlock?.model?.originCode
-              ? buildIChefURL({
-                  originCode: promoImageObj.promoImageRawBlock.model.originCode,
-                  locator: promoImageObj.promoImageRawBlock.model.locator,
-                  resolution: 320,
-                })
-              : '';
+          const promoImageBuild = buildPromoImageUrl(promoImageObj);
           const body = createFavouritesPayload({
             articleId,
             service,

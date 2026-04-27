@@ -33,7 +33,7 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
-import filterForBlockType from '#lib/utilities/blockHandlers';
+import extractPromoImage from '#lib/utilities/extractPromoImage';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -42,7 +42,6 @@ import {
   OptimoBlock,
   OptimoBylineBlock,
   OptimoBylineContributorBlock,
-  OptimoRawImageBlock,
 } from '#app/models/types/optimo';
 import { ComponentExperimentProps } from '#app/models/types/global';
 import {
@@ -112,10 +111,6 @@ const getTimestampComponent =
     articleId: string,
     articleTitle: string,
     articlePageData?: Article,
-    promoImageObj?: {
-      altText: string;
-      promoImageRawBlock?: OptimoRawImageBlock;
-    },
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -150,7 +145,6 @@ const getTimestampComponent =
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
-          promoImageObj={promoImageObj}
           articlePageData={articlePageData}
         />
       </>
@@ -375,21 +369,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
+  const { altText: promoImageAltText, rawBlock: promoImageRawBlock } =
+    extractPromoImage(promoImageBlocks);
 
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const promoImage = promoImageRawBlock?.model?.locator;
-
-  const promoImageObj = {
-    altText: promoImageAltText,
-    promoImageRawBlock,
-  };
+  const promoImage = (
+    promoImageRawBlock?.model as { locator?: string } | undefined
+  )?.locator;
 
   const componentsToRender = {
     visuallyHiddenHeadline,
@@ -409,7 +394,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       articleId,
       headline,
       pageData,
-      promoImageObj,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,

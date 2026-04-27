@@ -1,15 +1,11 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { Article, OptimoRawImageBlock } from '#app/models/types/optimo';
+import { Article } from '#app/models/types/optimo';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
   articlePageData?: Article;
-  promoImageObj?: {
-    altText: string;
-    promoImageRawBlock?: OptimoRawImageBlock;
-  };
 }
 
 /** A button component that allows users to save an article for later reading,
@@ -20,14 +16,12 @@ export interface SaveArticleButtonProps {
 const SaveArticleButton = ({
   articleId,
   articleTitle,
-  promoImageObj,
   articlePageData,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       articleTitle,
-      promoImageObj,
       articlePageData,
     });
 

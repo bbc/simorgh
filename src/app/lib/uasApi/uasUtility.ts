@@ -42,7 +42,7 @@ const createFavouritesPayload = ({
   articleId: string;
   service: Services;
   articleTitle: string;
-  promoImage?: string;
+  promoImage?: string | boolean;
   promoImageAltText?: string;
   locatorUrl?: string;
 }): UasApiRequestBody => ({
