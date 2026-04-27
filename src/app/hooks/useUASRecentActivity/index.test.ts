@@ -4,7 +4,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
 import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
-import useRecentActivity from '.';
+import useUASRecentActivity from '.';
 
 jest.mock('#app/lib/uasApi/getRecentActivity');
 
@@ -35,7 +35,7 @@ const mockSavedArticles: SavedArticle[] = [
   },
 ];
 
-describe('useRecentActivity', () => {
+describe('useUASRecentActivity', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -49,7 +49,7 @@ describe('useRecentActivity', () => {
         startIndex: 0,
       });
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -69,7 +69,7 @@ describe('useRecentActivity', () => {
       });
 
       renderHook(() =>
-        useRecentActivity({
+        useUASRecentActivity({
           itemsPerPage: 20,
           startIndex: 10,
         }),
@@ -93,7 +93,7 @@ describe('useRecentActivity', () => {
         startIndex: 0,
       });
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -110,7 +110,7 @@ describe('useRecentActivity', () => {
       const errorMessage = 'Network error';
       mockGetRecentActivity.mockRejectedValueOnce(new Error(errorMessage));
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -123,7 +123,7 @@ describe('useRecentActivity', () => {
     it('should handle non-Error exceptions with default message', async () => {
       mockGetRecentActivity.mockRejectedValueOnce('String error');
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -137,7 +137,7 @@ describe('useRecentActivity', () => {
       abortError.name = 'AbortError';
       mockGetRecentActivity.mockRejectedValueOnce(abortError);
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(result.current.isLoading).toBe(false);
@@ -156,7 +156,7 @@ describe('useRecentActivity', () => {
         startIndex: 0,
       });
 
-      const { result } = renderHook(() => useRecentActivity());
+      const { result } = renderHook(() => useUASRecentActivity());
 
       expect(result.current.isLoading).toBe(true);
 
@@ -177,7 +177,7 @@ describe('useRecentActivity', () => {
         startIndex: 0,
       });
 
-      renderHook(() => useRecentActivity());
+      renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(mockGetRecentActivity).toHaveBeenCalledWith(
@@ -198,7 +198,7 @@ describe('useRecentActivity', () => {
 
       const abortSpy = jest.spyOn(AbortController.prototype, 'abort');
 
-      const { unmount } = renderHook(() => useRecentActivity());
+      const { unmount } = renderHook(() => useUASRecentActivity());
 
       await waitFor(() => {
         expect(mockGetRecentActivity).toHaveBeenCalled();
@@ -222,7 +222,7 @@ describe('useRecentActivity', () => {
 
       const { rerender } = renderHook(
         ({ startIndex }: { startIndex: number }) =>
-          useRecentActivity({ startIndex }),
+          useUASRecentActivity({ startIndex }),
         {
           initialProps: { startIndex: 0 },
         },
@@ -255,7 +255,7 @@ describe('useRecentActivity', () => {
 
       const { rerender } = renderHook(
         ({ itemsPerPage }: { itemsPerPage: number }) =>
-          useRecentActivity({ itemsPerPage }),
+          useUASRecentActivity({ itemsPerPage }),
         {
           initialProps: { itemsPerPage: 10 },
         },

@@ -14,7 +14,7 @@ interface UseRecentActivityReturn {
   error: string | null;
 }
 
-const useRecentActivity = ({
+const useUASRecentActivity = ({
   itemsPerPage = 10,
   startIndex = 0,
 }: UseRecentActivityParams = {}): UseRecentActivityReturn => {
@@ -62,4 +62,4 @@ const useRecentActivity = ({
   return { savedArticles, total, isLoading, error };
 };
 
-export default useRecentActivity;
+export default useUASRecentActivity;

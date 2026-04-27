@@ -4,10 +4,10 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import useRecentActivity from '#app/hooks/useRecentActivity';
+import useUASRecentActivity from '#app/hooks/useUASRecentActivity';
 import MyNewsPage from './MyNewsPage';
 
-jest.mock('#app/hooks/useRecentActivity');
+jest.mock('#app/hooks/useUASRecentActivity');
 jest.mock('next/router', () => ({
   useRouter: () => ({
     query: { service: 'hindi' },
@@ -15,8 +15,8 @@ jest.mock('next/router', () => ({
   }),
 }));
 
-const mockUseRecentActivity = useRecentActivity as jest.MockedFunction<
-  typeof useRecentActivity
+const mockUseRecentActivity = useUASRecentActivity as jest.MockedFunction<
+  typeof useUASRecentActivity
 >;
 
 const mockSavedArticles = [
@@ -142,7 +142,7 @@ describe('MyNewsPage', () => {
     });
   });
 
-  it('should call useRecentActivity with correct pagination params', async () => {
+  it('should call useUASRecentActivity with correct pagination params', async () => {
     mockUseRecentActivity.mockReturnValueOnce({
       savedArticles: mockSavedArticles,
       total: 2,
