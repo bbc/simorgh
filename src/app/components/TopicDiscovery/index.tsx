@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
-import { Summary } from '#app/models/types/curationData';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
-import { TopicDiscoveryData, TopicDiscoveryItem } from './types';
+import { TopicDiscoveryData } from './types';
 
 type TopicDiscoveryProps = {
   topicDiscovery: TopicDiscoveryData;
@@ -14,27 +13,9 @@ type TopicDiscoveryProps = {
 
 const HEADING_ID = 'topic-discovery-heading';
 
-const DEFAULT_IMAGE_WIDTH = 660;
-
 const eventTrackingData = {
   componentName: 'topic-discovery',
 };
-
-const mapItemToSummary = (item: TopicDiscoveryItem): Summary => ({
-  id: item.id,
-  title: item.title,
-  link: item.link,
-  imageUrl: item.imageUrl.replace('{width}', String(DEFAULT_IMAGE_WIDTH)),
-  imageAlt: item.imageAlt,
-  type: item.type,
-  mediaType: item.type === 'article' ? undefined : item.type,
-  description: item.description,
-  firstPublished: item.firstPublished,
-  lastPublished: item.lastPublished,
-  isLive: item.isLive,
-  duration: item.duration,
-  isPortraitImage: item.isPortraitImage,
-});
 
 const TopicDiscovery = ({
   topicDiscovery,
@@ -63,8 +44,6 @@ const TopicDiscovery = ({
     label: topic.topicName,
   }));
 
-  const summaries = activeTopic.items.map(mapItemToSummary);
-
   return (
     <section
       aria-labelledby={HEADING_ID}
@@ -89,7 +68,7 @@ const TopicDiscovery = ({
         css={styles.tabPanel}
       >
         <CurationGrid
-          summaries={summaries}
+          summaries={activeTopic.items}
           eventTrackingData={eventTrackingData}
         />
       </div>
