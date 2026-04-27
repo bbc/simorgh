@@ -23,6 +23,7 @@ const ScrollableTabs = ({
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
+  const [hasOverflow, setHasOverflow] = useState(false);
   const [canScrollStart, setCanScrollStart] = useState(false);
   const [canScrollEnd, setCanScrollEnd] = useState(false);
 
@@ -32,9 +33,11 @@ const ScrollableTabs = ({
 
     const { scrollLeft, scrollWidth, clientWidth } = el;
     const absScroll = Math.abs(scrollLeft);
+    const isOverflowing = scrollWidth > clientWidth + 1;
 
-    setCanScrollStart(absScroll > 0);
-    setCanScrollEnd(absScroll + clientWidth + 1 < scrollWidth);
+    setHasOverflow(isOverflowing);
+    setCanScrollStart(isOverflowing && absScroll > 0);
+    setCanScrollEnd(isOverflowing && absScroll + clientWidth + 1 < scrollWidth);
   }, []);
 
   useEffect(() => {
@@ -101,7 +104,12 @@ const ScrollableTabs = ({
 
   return (
     <div css={styles.wrapper}>
-      <div css={styles.scrollButtonWrapper}>
+      <div
+        css={[
+          styles.scrollButtonWrapper,
+          !hasOverflow && styles.scrollButtonWrapperHidden,
+        ]}
+      >
         <button
           type="button"
           css={styles.scrollButton}
@@ -147,7 +155,12 @@ const ScrollableTabs = ({
         })}
       </div>
 
-      <div css={styles.scrollButtonWrapper}>
+      <div
+        css={[
+          styles.scrollButtonWrapper,
+          !hasOverflow && styles.scrollButtonWrapperHidden,
+        ]}
+      >
         <span css={styles.scrollButtonFadeEnd} aria-hidden="true" />
         <button
           type="button"

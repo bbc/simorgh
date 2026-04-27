@@ -92,6 +92,11 @@ const styles = {
       zIndex: 1,
     }),
 
+  scrollButtonWrapperHidden: () =>
+    css({
+      display: 'none',
+    }),
+
   scrollButtonFadeStart: ({ palette, spacings }: Theme) =>
     css({
       position: 'absolute',
