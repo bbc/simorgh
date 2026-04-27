@@ -25,6 +25,7 @@ import { service as newsConfig } from '#app/lib/config/services/news';
 import { Services } from '#app/models/types/global';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import articleDataMultipleContributors from '#data/news/articles/cgrj2g29kzxo.json';
+import topicDiscoveryFixture from '#app/components/TopicDiscovery/fixtures';
 import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
@@ -273,6 +274,28 @@ export const ArticlePageWithMultipleContributors = {
       service="news"
     />
   ),
+};
+
+export const ArticlePageWithTopicDiscovery = {
+  render: () => {
+    const articleDataWithTopicDiscovery = {
+      ...articleData,
+      data: {
+        ...articleData.data,
+        article: {
+          ...articleData.data.article,
+          topicDiscovery: topicDiscoveryFixture,
+        },
+      },
+    };
+
+    return (
+      <ComponentWithContext
+        data={articleDataWithTopicDiscovery}
+        service="news"
+      />
+    );
+  },
 };
 
 export const TestArticlePageWithLiteSiteLink = {
