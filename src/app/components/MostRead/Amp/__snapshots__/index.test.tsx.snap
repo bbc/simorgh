@@ -199,6 +199,10 @@ exports[`AmpMostRead should render as expected 1`] = `
   z-index: 1;
 }
 
+.emotion-7:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-7 {
     font-size: 1.125rem;

@@ -243,6 +243,10 @@ exports[`MostReadItemWrapper should render ltr correctly with 10 items 1`] = `
   z-index: 1;
 }
 
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-6 {
     font-size: 1.125rem;
@@ -1041,6 +1045,10 @@ exports[`MostReadItemWrapper should render rtl correctly with 10 items 1`] = `
   z-index: 1;
 }
 
+.emotion-6:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-6 {
     font-size: 1.125rem;
@@ -1654,6 +1662,10 @@ exports[`MostReadLink should render ltr correctly 1`] = `
   z-index: 1;
 }
 
+.emotion-1:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-1 {
     font-size: 1.125rem;
@@ -1748,6 +1760,10 @@ exports[`MostReadLink should render rtl correctly 1`] = `
   z-index: 1;
 }
 
+.emotion-1:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-1 {
     font-size: 1.125rem;
@@ -1840,6 +1856,10 @@ exports[`MostReadLink should render with last updated date correctly 1`] = `
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-1:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
