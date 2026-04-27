@@ -43,6 +43,7 @@ const styles = {
           width: '100%',
           height: `${spacings.HALF}rem`,
           background: palette.POSTBOX,
+          zIndex: 1,
         },
       },
       '[type=button]&:focus-visible': {
@@ -61,6 +62,7 @@ const styles = {
         width: '100%',
         height: `${spacings.HALF}rem`,
         background: palette.POSTBOX,
+        zIndex: 1,
       },
     }),
 
