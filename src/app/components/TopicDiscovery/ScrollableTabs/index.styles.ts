@@ -38,7 +38,7 @@ const styles = {
       color: palette.GREY_6,
       '&:hover': {
         color: palette.GREY_10,
-        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
+        borderBottom: `${pixelsToRem(3)}rem solid ${palette.POSTBOX}`,
       },
       '&:focus-visible': {
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
