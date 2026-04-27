@@ -23,6 +23,27 @@ const styles = {
     css({
       paddingTop: `${spacings.DOUBLE}rem`,
 
+      li: {
+        '.promo-image': {
+          'div div:last-child': {
+            div: {
+              padding: `${spacings.FULL}rem`,
+              position: 'absolute',
+              bottom: 0,
+
+              svg: {
+                width: `${spacings.DOUBLE}rem`,
+                height: `${spacings.DOUBLE}rem`,
+              },
+
+              [mq.GROUP_2_MIN_WIDTH]: {
+                position: 'relative',
+              },
+            },
+          },
+        },
+      },
+
       [mq.GROUP_2_MAX_WIDTH]: {
         li: {
           width: `calc(50% - ${spacings.FULL}rem)`,
