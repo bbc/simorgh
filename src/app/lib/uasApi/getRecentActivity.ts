@@ -1,4 +1,5 @@
 import nodeLogger from '#lib/logger.node';
+import { UAS_API_ERROR } from '../logger.const';
 import uasApiRequest from './index';
 import type { SavedArticle } from './uasUtility';
 import { FAVOURITES_CONFIG } from './uasUtility';
@@ -92,7 +93,7 @@ const getRecentActivity = async ({
       startIndex: data.pagination.startIndex,
     };
   } catch (error) {
-    logger.error('Failed to fetch recent activity from UAS', {
+    logger.error(UAS_API_ERROR, {
       error: error instanceof Error ? error.message : 'Unknown error',
     });
 
