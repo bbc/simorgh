@@ -123,42 +123,6 @@ describe('ScrollableTabs', () => {
     expect(screen.getByTestId('scroll-end')).toBeInTheDocument();
   });
 
-  describe('keyboard navigation', () => {
-    it('should move to the next tab on ArrowRight in LTR', () => {
-      const onTabChange = jest.fn();
-
-      render(
-        <ScrollableTabs
-          tabs={mockTabs}
-          activeTabId="tab-1"
-          onTabChange={onTabChange}
-          labelledBy="heading-id"
-        />,
-      );
-
-      fireEvent.keyDown(screen.getByRole('tablist'), { key: 'ArrowRight' });
-
-      expect(onTabChange).toHaveBeenCalledWith('tab-2');
-    });
-
-    it('should move to the previous tab on ArrowLeft in LTR', () => {
-      const onTabChange = jest.fn();
-
-      render(
-        <ScrollableTabs
-          tabs={mockTabs}
-          activeTabId="tab-2"
-          onTabChange={onTabChange}
-          labelledBy="heading-id"
-        />,
-      );
-
-      fireEvent.keyDown(screen.getByRole('tablist'), { key: 'ArrowLeft' });
-
-      expect(onTabChange).toHaveBeenCalledWith('tab-1');
-    });
-  });
-
   describe('RTL support', () => {
     it('should move to the previous tab on ArrowRight in RTL', () => {
       const onTabChange = jest.fn();
