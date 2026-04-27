@@ -1132,6 +1132,7 @@ exports[`PageLayoutWrapper should render default page wrapper with children 1`] 
       <div>
         <div
           class="emotion-1 emotion-2"
+          id="consent-banner"
         >
           <div
             class="emotion-3 emotion-4"
