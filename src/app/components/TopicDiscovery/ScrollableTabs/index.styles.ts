@@ -45,9 +45,9 @@ const styles = {
           background: palette.POSTBOX,
         },
       },
-      '&:focus-visible': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
+        boxShadow: 'none',
       },
     }),
 
@@ -86,9 +86,9 @@ const styles = {
         cursor: 'default',
         color: `${palette.GREY_5}`,
       },
-      '&:focus-visible': {
-        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+      '[type=button]&:focus-visible': {
         outlineOffset: `${pixelsToRem(-3)}rem`,
+        boxShadow: 'none',
       },
     }),
 

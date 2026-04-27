@@ -69,39 +69,6 @@ const ScrollableTabs = ({
     });
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    const currentIndex = tabs.findIndex(tab => tab.id === activeTabId);
-    let nextIndex: number | null = null;
-
-    if (event.key === 'ArrowRight') {
-      nextIndex =
-        dir === 'ltr'
-          ? (currentIndex + 1) % tabs.length
-          : (currentIndex - 1 + tabs.length) % tabs.length;
-    } else if (event.key === 'ArrowLeft') {
-      nextIndex =
-        dir === 'ltr'
-          ? (currentIndex - 1 + tabs.length) % tabs.length
-          : (currentIndex + 1) % tabs.length;
-    } else if (event.key === 'Home') {
-      nextIndex = 0;
-    } else if (event.key === 'End') {
-      nextIndex = tabs.length - 1;
-    }
-
-    if (nextIndex !== null) {
-      event.preventDefault();
-      const nextTab = tabs[nextIndex];
-      onTabChange(nextTab.id);
-
-      const tabEl = tabListRef.current?.querySelector(
-        `[data-tab-id="${CSS.escape(nextTab.id)}"]`,
-      ) as HTMLButtonElement | null;
-      tabEl?.focus();
-      tabEl?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-    }
-  };
-
   return (
     <div css={styles.wrapper}>
       <div
@@ -123,14 +90,7 @@ const ScrollableTabs = ({
         <span css={styles.scrollButtonFadeStart} aria-hidden="true" />
       </div>
 
-      <div
-        ref={tabListRef}
-        role="tablist"
-        aria-labelledby={labelledBy}
-        css={styles.tabList}
-        onKeyDown={handleKeyDown}
-        tabIndex={0}
-      >
+      <div ref={tabListRef} aria-labelledby={labelledBy} css={styles.tabList}>
         {tabs.map(tab => {
           const isActive = tab.id === activeTabId;
           return (
@@ -142,7 +102,6 @@ const ScrollableTabs = ({
               data-tab-id={tab.id}
               aria-selected={isActive}
               aria-controls={`tabpanel-${tab.id}`}
-              tabIndex={isActive ? 0 : -1}
               css={[styles.tab, isActive && styles.tabActive]}
               onClick={event => {
                 onTabChange(tab.id);
