@@ -62,10 +62,11 @@ export const COMPONENTS = {
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
+  const reverbAtiUrl = new URL(envs.reverbAtiUrl).origin;
 
   // Component Views & Clicks - Viewability Model
   Object.values(COMPONENTS).forEach(component => {
-    cy.intercept('GET', `${atiUrl}/**`, request => {
+    cy.intercept('GET', `${reverbAtiUrl}/**`, request => {
       const { query } = request;
       const viewabilityModelString = query.events;
       if (viewabilityModelString) {
@@ -108,7 +109,7 @@ export const interceptATIAnalyticsBeacons = () => {
   // REVERB - Page View (only fires once per page visit)
   cy.intercept(
     {
-      url: `${atiUrl}/*`,
+      url: `${reverbAtiUrl}/*`,
       query: {
         x8: 'simorgh',
       },
