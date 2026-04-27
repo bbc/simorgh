@@ -369,7 +369,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0,
+    showRelatedTopics && topics.length > 0 && !topicDiscovery,
   );
 
   // show media curation only when the user is in adaptive variation
