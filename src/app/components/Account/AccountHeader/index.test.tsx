@@ -32,7 +32,7 @@ describe('AccountHeader', () => {
   it('shows Sign in when signed out and account toggle is enabled for service', async () => {
     renderWithProviders();
 
-    const link = await screen.findByRole('link', { name: 'साइन‑इन' });
+    const link = await screen.findByRole('link', { name: 'लॉग‑इन' });
     expect(link).toHaveAttribute(
       'href',
       expect.stringContaining('https://example.com/signin'),
@@ -53,10 +53,10 @@ describe('AccountHeader', () => {
   it('shows Your Account when signed in', async () => {
     renderWithProviders({ initialIsSignedIn: true });
 
-    const link = await screen.findByRole('link', { name: 'Your Account' });
+    const link = await screen.findByRole('link', { name: 'आपका अकाउंट' });
     expect(link).toHaveAttribute(
       'href',
-      expect.stringContaining('https://example.com/foryou'),
+      expect.stringContaining('https://example.com/settings'),
     );
     const icon = link.querySelector('svg');
     expect(icon).toBeInTheDocument();

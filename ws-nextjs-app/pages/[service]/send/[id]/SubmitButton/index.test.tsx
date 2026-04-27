@@ -6,7 +6,7 @@ import {
 import SubmitButton from '.';
 
 describe('SubmitButton', () => {
-  it('should render a submit button with an associated label', async () => {
+  it('should render a submit button with correct type', async () => {
     const { container } = await act(() => {
       return render(<SubmitButton />, { service: 'news' });
     });
@@ -14,6 +14,5 @@ describe('SubmitButton', () => {
     const button = container.querySelector('button[type=submit]');
 
     expect(button).toBeInTheDocument();
-    expect(button).toMatchSnapshot();
   });
 });

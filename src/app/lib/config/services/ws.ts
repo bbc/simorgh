@@ -74,6 +74,7 @@ export const service: DefaultServiceConfig = {
         signIn: 'Sign In',
         forYou: 'Your Account',
         register: 'Register',
+        settings: 'Settings',
       },
       accountPromoBanner: {
         title: 'Discover your BBC',
