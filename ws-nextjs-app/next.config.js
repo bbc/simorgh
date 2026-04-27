@@ -5,8 +5,15 @@ const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
+const isrRolloutServices = (process.env.SIMORGH_ISR_ROLLOUT_SERVICES || '')
+  .split(',')
+  .map(value => value.trim())
+  .filter(Boolean);
+
 /** @type {import('next').NextConfig} */
 module.exports = {
+  cacheHandler: require.resolve('./cache-handler.js'),
+  cacheMaxMemorySize: 0,
   async headers() {
     return [
       {
@@ -49,6 +56,10 @@ module.exports = {
   },
   async rewrites() {
     return [
+      ...isrRolloutServices.map(service => ({
+        source: `/${service}/articles/:path*`,
+        destination: `/${service}/articles-isr/:path*`,
+      })),
       {
         source: '/:service/sw.js',
         destination: '/sw.js',
