@@ -38,7 +38,7 @@ const styles = {
       color: palette.GREY_6,
       '&:hover': {
         color: palette.GREY_10,
-        borderBottom: `${pixelsToRem(4)}rem solid #B80000`,
+        borderBottom: `${pixelsToRem(4)}rem solid ${palette.POSTBOX}`,
       },
       '&:focus-visible': {
         outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
@@ -49,7 +49,7 @@ const styles = {
   tabActive: ({ palette }: Theme) =>
     css({
       color: palette.GREY_10,
-      borderBottomColor: '#B80000',
+      borderBottomColor: palette.POSTBOX,
       fontWeight: 700,
     }),
 
