@@ -26,6 +26,9 @@ const styles = {
         whiteSpace: 'nowrap',
         zIndex: 1,
       },
+      '&:visited': {
+        color: palette.METAL,
+      },
     }),
 
   defaultLink: ({ mq, fontSizes }: Theme) =>
@@ -46,17 +49,6 @@ const styles = {
       flexDirection: 'row',
       margin: 0,
       padding: 0,
-    }),
-
-  visitedItem: () =>
-    css({
-      '&:visited': {
-        color: '#6E6E73 !important',
-      },
-      // current article"
-      '&.is-current': {
-        color: '#6E6E73 !important',
-      },
     }),
 
   grid: ({ spacings }: Theme) =>
