@@ -387,7 +387,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
 
   // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = Boolean(topicDiscovery && !isAmp && !isLite);
+  const showTopicDiscovery = topicDiscovery && !isAmp && !isLite;
 
   const visuallyHiddenBlock = {
     id: null,
