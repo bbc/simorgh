@@ -92,7 +92,7 @@ const styles = {
       zIndex: 1,
     }),
 
-  scrollButtonFadeStart: ({ spacings }: Theme) =>
+  scrollButtonFadeStart: ({ palette, spacings }: Theme) =>
     css({
       position: 'absolute',
       top: 0,
@@ -101,17 +101,15 @@ const styles = {
       pointerEvents: 'none',
       "[dir='ltr'] &": {
         right: `-${spacings.DOUBLE}rem`,
-        background:
-          'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+        background: `linear-gradient(to right, ${palette.GREY_2}, ${palette.GREY_2}00)`,
       },
       "[dir='rtl'] &": {
         left: `-${spacings.DOUBLE}rem`,
-        background:
-          'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+        background: `linear-gradient(to right, ${palette.GREY_2}00, ${palette.GREY_2})`,
       },
     }),
 
-  scrollButtonFadeEnd: ({ spacings }: Theme) =>
+  scrollButtonFadeEnd: ({ palette, spacings }: Theme) =>
     css({
       position: 'absolute',
       top: 0,
@@ -120,13 +118,11 @@ const styles = {
       pointerEvents: 'none',
       "[dir='ltr'] &": {
         left: `-${spacings.DOUBLE}rem`,
-        background:
-          'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
+        background: `linear-gradient(to right, ${palette.GREY_2}00, ${palette.GREY_2})`,
       },
       "[dir='rtl'] &": {
         right: `-${spacings.DOUBLE}rem`,
-        background:
-          'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+        background: `linear-gradient(to right, ${palette.GREY_2}, ${palette.GREY_2}00)`,
       },
     }),
 };
