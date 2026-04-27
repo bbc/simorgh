@@ -71,6 +71,10 @@ const TopicDiscovery = ({
           summaries={activeTopic.items}
           eventTrackingData={eventTrackingData}
         />
+        <a
+          css={styles.moreFromLink}
+          href={activeTopic?.topicUrl}
+        >{`More from ${activeTopic?.topicName}`}</a>
       </div>
     </section>
   );

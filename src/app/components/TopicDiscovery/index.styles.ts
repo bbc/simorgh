@@ -47,6 +47,19 @@ const styles = {
         },
       },
     }),
+  moreFromLink: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+    css({
+      ...fontVariants.sansBold,
+      ...fontSizes.longPrimer,
+      color: palette.BLACK,
+      display: 'inline-block',
+      marginTop: `${spacings.DOUBLE}rem`,
+      textDecoration: 'none',
+
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+    }),
 };
 
 export default styles;
