@@ -2,19 +2,11 @@ import CurationGrid from '#app/components/Curation/CurationGrid';
 import Heading from '#app/components/Heading';
 import Pagination from '#app/components/Pagination';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useRouter } from 'next/router';
 import MetadataContainer from '#app/components/Metadata';
-import type { SavedArticle } from '#app/lib/uasApi/uasUtility';
-import getRecentActivity from '#app/lib/uasApi/getRecentActivity';
+import useRecentActivity from '#app/hooks/useRecentActivity';
 import styles from './styles';
-
-interface MyNewsPageState {
-  savedArticles: SavedArticle[];
-  totalItems: number;
-  isLoading: boolean;
-  error: string | null;
-}
 
 const ITEMS_PER_PAGE = 10;
 
@@ -22,62 +14,18 @@ const MyNewsPage = () => {
   const router = useRouter();
   const { translations, lang } = useContext(ServiceContext);
 
-  const [state, setState] = useState<MyNewsPageState>({
-    savedArticles: [],
-    totalItems: 0,
-    isLoading: true,
-    error: null,
-  });
-
   const pageFromQuery = Array.isArray(router.query.page)
     ? router.query.page[0]
     : router.query.page;
   const requestedPage = Math.max(1, Number(pageFromQuery ?? 1));
 
-  // Fetch data client-side when component mounts or page changes
-  useEffect(() => {
-    const abortController = new AbortController();
+  const startIndex = (requestedPage - 1) * ITEMS_PER_PAGE;
+  const { savedArticles, total, isLoading, error } = useRecentActivity({
+    itemsPerPage: ITEMS_PER_PAGE,
+    startIndex,
+  });
 
-    const fetchData = async () => {
-      try {
-        setState(prev => ({ ...prev, isLoading: true, error: null }));
-
-        const startIndex = (requestedPage - 1) * ITEMS_PER_PAGE;
-        const { savedArticles, total } = await getRecentActivity({
-          itemsPerPage: ITEMS_PER_PAGE,
-          startIndex,
-          signal: abortController.signal,
-        });
-
-        setState({
-          savedArticles,
-          totalItems: total,
-          isLoading: false,
-          error: null,
-        });
-      } catch (err) {
-        if (err instanceof Error && err.name === 'AbortError') {
-          return;
-        }
-
-        const errorMessage =
-          err instanceof Error ? err.message : 'Failed to load articles';
-        setState(prev => ({
-          ...prev,
-          isLoading: false,
-          error: errorMessage,
-        }));
-      }
-    };
-
-    fetchData();
-
-    return () => {
-      abortController.abort();
-    };
-  }, [router.query.service, requestedPage]);
-
-  const pageCount = Math.max(1, Math.ceil(state.totalItems / ITEMS_PER_PAGE));
+  const pageCount = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
   const safeActivePage = Math.min(requestedPage, pageCount);
 
   const {
@@ -95,7 +43,7 @@ const MyNewsPage = () => {
     safeActivePage >= 2 ? `My News, ${translatedPage}` : 'My News';
 
   const renderContent = () => {
-    if (state.isLoading) {
+    if (isLoading) {
       return (
         <div css={styles.empty}>
           <Heading level={2}>My News</Heading>
@@ -104,21 +52,21 @@ const MyNewsPage = () => {
       );
     }
 
-    if (state.error) {
+    if (error) {
       return (
         <div css={styles.empty}>
           <Heading level={2}>My News</Heading>
-          <p>Error loading articles: {state.error}</p>
+          <p>Error loading articles: {error}</p>
         </div>
       );
     }
 
-    if (state.savedArticles.length > 0) {
+    if (savedArticles.length > 0) {
       return (
         <>
           <Heading level={2}>My News</Heading>
           <CurationGrid
-            summaries={state.savedArticles}
+            summaries={savedArticles}
             headingLevel={2}
             eventTrackingData={{
               componentName: 'my-news-curation-grid',

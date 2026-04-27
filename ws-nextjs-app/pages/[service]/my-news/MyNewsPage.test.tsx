@@ -4,10 +4,10 @@ import {
   act,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
-import * as getRecentActivityModule from '#app/lib/uasApi/getRecentActivity';
+import useRecentActivity from '#app/hooks/useRecentActivity';
 import MyNewsPage from './MyNewsPage';
 
-jest.mock('#app/lib/uasApi/getRecentActivity');
+jest.mock('#app/hooks/useRecentActivity');
 jest.mock('next/router', () => ({
   useRouter: () => ({
     query: { service: 'hindi' },
@@ -15,10 +15,9 @@ jest.mock('next/router', () => ({
   }),
 }));
 
-const mockGetRecentActivity =
-  getRecentActivityModule.default as jest.MockedFunction<
-    typeof getRecentActivityModule.default
-  >;
+const mockUseRecentActivity = useRecentActivity as jest.MockedFunction<
+  typeof useRecentActivity
+>;
 
 const mockSavedArticles = [
   {
@@ -47,19 +46,12 @@ describe('MyNewsPage', () => {
   });
 
   it('should render loading state initially', async () => {
-    mockGetRecentActivity.mockImplementationOnce(
-      () =>
-        new Promise(resolve => {
-          setTimeout(() => {
-            resolve({
-              savedArticles: mockSavedArticles,
-              total: 2,
-              itemsPerPage: 10,
-              startIndex: 0,
-            });
-          }, 100);
-        }),
-    );
+    mockUseRecentActivity.mockReturnValueOnce({
+      savedArticles: [],
+      total: 0,
+      isLoading: true,
+      error: null,
+    });
 
     await act(async () => {
       render(<MyNewsPage />);
@@ -69,11 +61,11 @@ describe('MyNewsPage', () => {
   });
 
   it('should render saved articles after fetching', async () => {
-    mockGetRecentActivity.mockResolvedValueOnce({
+    mockUseRecentActivity.mockReturnValueOnce({
       savedArticles: mockSavedArticles,
       total: 2,
-      itemsPerPage: 10,
-      startIndex: 0,
+      isLoading: false,
+      error: null,
     });
 
     await act(async () => {
@@ -87,11 +79,11 @@ describe('MyNewsPage', () => {
   });
 
   it('should display empty state when no articles', async () => {
-    mockGetRecentActivity.mockResolvedValueOnce({
+    mockUseRecentActivity.mockReturnValueOnce({
       savedArticles: [],
       total: 0,
-      itemsPerPage: 10,
-      startIndex: 0,
+      isLoading: false,
+      error: null,
     });
 
     await act(async () => {
@@ -104,9 +96,12 @@ describe('MyNewsPage', () => {
   });
 
   it('should display error state when API fails', async () => {
-    mockGetRecentActivity.mockRejectedValueOnce(
-      new Error('Failed to load articles'),
-    );
+    mockUseRecentActivity.mockReturnValueOnce({
+      savedArticles: [],
+      total: 0,
+      isLoading: false,
+      error: 'Failed to load articles',
+    });
 
     await act(async () => {
       render(<MyNewsPage />);
@@ -120,7 +115,7 @@ describe('MyNewsPage', () => {
   });
 
   it('should render pagination when pageCount > 1', async () => {
-    mockGetRecentActivity.mockResolvedValueOnce({
+    mockUseRecentActivity.mockReturnValueOnce({
       savedArticles: Array.from({ length: 25 }, (_, i) => ({
         id: `id-${i}`,
         title: `Article ${i}`,
@@ -131,8 +126,8 @@ describe('MyNewsPage', () => {
         description: 'hindi',
       })),
       total: 25,
-      itemsPerPage: 10,
-      startIndex: 0,
+      isLoading: false,
+      error: null,
     });
 
     await act(async () => {
@@ -147,12 +142,12 @@ describe('MyNewsPage', () => {
     });
   });
 
-  it('should fetch data with correct pagination params', async () => {
-    mockGetRecentActivity.mockResolvedValueOnce({
+  it('should call useRecentActivity with correct pagination params', async () => {
+    mockUseRecentActivity.mockReturnValueOnce({
       savedArticles: mockSavedArticles,
       total: 2,
-      itemsPerPage: 10,
-      startIndex: 0,
+      isLoading: false,
+      error: null,
     });
 
     await act(async () => {
@@ -160,7 +155,7 @@ describe('MyNewsPage', () => {
     });
 
     await waitFor(() => {
-      expect(mockGetRecentActivity).toHaveBeenCalledWith(
+      expect(mockUseRecentActivity).toHaveBeenCalledWith(
         expect.objectContaining({
           itemsPerPage: 10,
           startIndex: 0,
