@@ -42,12 +42,12 @@ const styles = {
         },
       },
       [mq.GROUP_2_MIN_WIDTH]: {
-        marginLeft: spacings.DOUBLE,
-        marginRight: spacings.DOUBLE,
+        marginLeft: `${spacings.DOUBLE}rem`,
+        marginRight: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
         width: '17.5rem',
-        marginLeft: spacings.DOUBLE,
+        marginLeft: `${spacings.DOUBLE}rem`,
         marginRight: '0',
       },
     }),
