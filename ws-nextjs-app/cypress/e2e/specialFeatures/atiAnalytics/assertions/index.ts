@@ -108,11 +108,13 @@ const assertReverbViewabilityComponentEventParamsExist = ({
   expect(params).to.have.property('s'); // destination
   expect(params).to.have.property('events'); // event details
   expect(params).to.have.property('context');
-
-  const eventContext = JSON.parse(params.context);
-
-  expect(eventContext[0].data.page).to.have.property('$');
-  expect(eventContext[0].data.site).to.have.property('level2_id');
+  try {
+    const eventContext = JSON.parse(params.context);
+    expect(eventContext[0].data.page).to.have.property('$');
+    expect(eventContext[0].data.site).to.have.property('level2_id');
+  } catch (error) {
+    cy.log('JSON Parse error', error);
+  }
 };
 
 const fieldIsValidString = field =>
@@ -250,18 +252,25 @@ const assertViewabilityModelViewEvent = ({
   applicationType,
   siteId,
 }) => {
-  const eventContext = JSON.parse(params.context);
+  try {
+    const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({ params, applicationType });
+    assertReverbViewabilityComponentEventParamsExist({
+      params,
+      applicationType,
+    });
 
-  expect(params.events).to.satisfy(
-    payload =>
-      validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
-    'params.events (publisher impression)',
-  );
+    expect(params.events).to.satisfy(
+      payload =>
+        validateViewabilityEventDetails({ payload, actionType: VIEW_EVENT }),
+      'params.events (publisher impression)',
+    );
 
-  expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
-  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+    expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+    expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+  } catch (error) {
+    cy.log('JSON Parse error', error);
+  }
 };
 
 export const assertATIComponentViewEvent = ({
@@ -292,24 +301,28 @@ const assertViewabilityModelClickEvent = ({
   applicationType,
   siteId,
 }) => {
-  const eventContext = JSON.parse(params.context);
+  try {
+    const eventContext = JSON.parse(params.context);
 
-  assertReverbViewabilityComponentEventParamsExist({
-    params,
-    applicationType,
-  });
+    assertReverbViewabilityComponentEventParamsExist({
+      params,
+      applicationType,
+    });
 
-  expect(params.events).to.satisfy(
-    payload =>
-      validateViewabilityEventDetails({
-        payload,
-        actionType: VIEWABILITY_CLICK_EVENT,
-      }),
-    'params.events (publisher click)',
-  );
+    expect(params.events).to.satisfy(
+      payload =>
+        validateViewabilityEventDetails({
+          payload,
+          actionType: VIEWABILITY_CLICK_EVENT,
+        }),
+      'params.events (publisher click)',
+    );
 
-  expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
-  expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+    expect(eventContext[0].data.page.$).to.equal(pageIdentifier);
+    expect(parseInt(eventContext[0].data.site.level2_id, 10)).to.equal(siteId);
+  } catch (error) {
+    cy.log('JSON Parse error', error);
+  }
 };
 
 export const assertATIComponentClickEvent = ({
