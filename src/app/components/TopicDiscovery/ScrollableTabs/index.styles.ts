@@ -1,4 +1,5 @@
 import { css, Theme } from '@emotion/react';
+import pixelsToRem from '#app/utilities/pixelsToRem';
 
 const styles = {
   wrapper: ({ palette, spacings }: Theme) =>
@@ -6,7 +7,7 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       gap: `${spacings.HALF}rem`,
-      borderBottom: `1px solid ${palette.GREY_5}`,
+      borderBottom: `${pixelsToRem(1)}rem solid ${palette.GREY_5}`,
     }),
 
   tabList: () =>
@@ -28,7 +29,7 @@ const styles = {
       whiteSpace: 'nowrap',
       background: 'none',
       border: 'none',
-      borderBottom: '3px solid transparent',
+      borderBottom: `${pixelsToRem(3)}rem solid transparent`,
       padding: `${spacings.DOUBLE}rem ${spacings.FULL}rem`,
       [mq.GROUP_2_MIN_WIDTH]: {
         padding: `${spacings.DOUBLE}rem`,
@@ -37,11 +38,11 @@ const styles = {
       color: palette.GREY_6,
       '&:hover': {
         color: palette.GREY_10,
-        borderBottom: '4px solid #B80000',
+        borderBottom: `${pixelsToRem(4)}rem solid #B80000`,
       },
       '&:focus-visible': {
-        outline: `3px solid ${palette.BLACK}`,
-        outlineOffset: '-3px',
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(-3)}rem`,
       },
     }),
 
@@ -57,8 +58,8 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      width: '44px',
-      height: '44px',
+      width: `${pixelsToRem(44)}rem`,
+      height: `${pixelsToRem(44)}rem`,
       background: 'none',
       border: 'none',
       cursor: 'pointer',
@@ -77,8 +78,8 @@ const styles = {
         color: '#8A8C8E',
       },
       '&:focus-visible': {
-        outline: `3px solid ${palette.BLACK}`,
-        outlineOffset: '-3px',
+        outline: `${pixelsToRem(3)}rem solid ${palette.BLACK}`,
+        outlineOffset: `${pixelsToRem(-3)}rem`,
       },
     }),
 
@@ -91,39 +92,39 @@ const styles = {
       zIndex: 1,
     }),
 
-  scrollButtonFadeStart: () =>
+  scrollButtonFadeStart: ({ spacings }: Theme) =>
     css({
       position: 'absolute',
       top: 0,
       height: '100%',
-      width: '16px',
+      width: `${spacings.DOUBLE}rem`,
       pointerEvents: 'none',
       "[dir='ltr'] &": {
-        right: '-16px',
+        right: `-${spacings.DOUBLE}rem`,
         background:
           'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
       },
       "[dir='rtl'] &": {
-        left: '-16px',
+        left: `-${spacings.DOUBLE}rem`,
         background:
           'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
       },
     }),
 
-  scrollButtonFadeEnd: () =>
+  scrollButtonFadeEnd: ({ spacings }: Theme) =>
     css({
       position: 'absolute',
       top: 0,
       height: '100%',
-      width: '16px',
+      width: `${spacings.DOUBLE}rem`,
       pointerEvents: 'none',
       "[dir='ltr'] &": {
-        left: '-16px',
+        left: `-${spacings.DOUBLE}rem`,
         background:
           'linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))',
       },
       "[dir='rtl'] &": {
-        right: '-16px',
+        right: `-${spacings.DOUBLE}rem`,
         background:
           'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
       },
