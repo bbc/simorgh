@@ -90,7 +90,12 @@ const ScrollableTabs = ({
         <span css={styles.scrollButtonFadeStart} aria-hidden="true" />
       </div>
 
-      <div ref={tabListRef} aria-labelledby={labelledBy} css={styles.tabList}>
+      <div
+        ref={tabListRef}
+        role="tablist"
+        aria-labelledby={labelledBy}
+        css={styles.tabList}
+      >
         {tabs.map(tab => {
           const isActive = tab.id === activeTabId;
           return (
