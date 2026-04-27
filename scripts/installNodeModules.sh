@@ -7,7 +7,7 @@ if [ "$1" = "--production" ]; then
 else
   yarn config set supportedArchitectures.os --json '["linux"]'
   yarn config set supportedArchitectures.cpu --json '["arm64"]'
-  yarn config set supportedArchitectures.libc --json '[""]'
+  yarn config set supportedArchitectures.libc --json '["glibc"]'
   echo "Removing node modules"
   rm -rf node_modules
   echo "Installing all node modules"
