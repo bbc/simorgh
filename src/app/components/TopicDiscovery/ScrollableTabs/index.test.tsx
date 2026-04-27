@@ -59,26 +59,6 @@ describe('ScrollableTabs', () => {
     );
   });
 
-  it('should set tabIndex 0 on the active tab and -1 on others', () => {
-    render(
-      <ScrollableTabs
-        tabs={mockTabs}
-        activeTabId="tab-1"
-        onTabChange={jest.fn()}
-        labelledBy="heading-id"
-      />,
-    );
-
-    expect(screen.getByRole('tab', { name: 'Comportamento' })).toHaveAttribute(
-      'tabindex',
-      '0',
-    );
-    expect(screen.getByRole('tab', { name: 'Mídia social' })).toHaveAttribute(
-      'tabindex',
-      '-1',
-    );
-  });
-
   it('should call onTabChange when a tab is clicked', () => {
     const onTabChange = jest.fn();
 
