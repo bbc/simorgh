@@ -77,6 +77,7 @@ const useUASButton = ({
           await uasApiRequest('DELETE', FAVOURITES_CONFIG.activityType, {
             globalId,
           });
+          console.log('DELETE called with globalID: ', globalId);
           setIsSaved(false);
         }
       } catch (err) {

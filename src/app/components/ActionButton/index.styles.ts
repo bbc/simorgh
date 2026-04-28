@@ -46,7 +46,7 @@ const styles = {
         marginRight: `${spacings.DOUBLE}rem`,
       },
       [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${pixelsToRem(3)}rem`,
+        width: `${pixelsToRem(280)}rem`,
         marginLeft: `${spacings.DOUBLE}rem`,
         marginRight: '0',
       },
