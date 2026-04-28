@@ -1,9 +1,6 @@
 // import placeholder from '@bbc/web-assets/static/sport/placeholders/placeholder-badge.svg';
 // import flagPlaceholder from '@bbc/web-assets/static/sport/placeholders/placeholder-flag.svg';
 
-import placeholder from '../../assets/placeholders/placeholder-badge.svg';
-import flagPlaceholder from '../../assets/placeholders/placeholder-flag.svg';
-
 // import { americanFootball } from './mappings/american-football.js';
 // import basketball from './mappings/basketball.js';
 // import { getBaseCountryFlagsMapping } from './mappings/country-flags.js';
@@ -19,7 +16,7 @@ import flagPlaceholder from '../../assets/placeholders/placeholder-flag.svg';
 // import iceHockey from './mappings/ice-hockey.js';
 
 const badgesMap = {
-  0: placeholder,
+  // 0: placeholder,
   // ...americanFootball,
   // ...basketball,
   // ...netball,
@@ -41,6 +38,12 @@ const badgesMap = {
   // ...getBaseCountryFlagsMapping('tennis'),
 };
 
+// TO DO - either get these from static assets or use a fallback URL
+const tempPlaceholderSrc =
+  'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-badge.4476e22b04.svg';
+const tempFlagPlaceholderSrc =
+  'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-flag.9cbbd1b8e7.svg';
+
 export const getImage = ({
   id,
   usePlaceholderFallback,
@@ -51,9 +54,9 @@ export const getImage = ({
   if (!image && usePlaceholderFallback) {
     switch (placeholderFallbackType) {
       case 'badge':
-        return placeholder;
+        return tempPlaceholderSrc;
       case 'flag':
-        return flagPlaceholder;
+        return tempFlagPlaceholderSrc;
       default:
         throw new Error(
           `Invalid placeholder fallback type '${placeholderFallbackType}'`,

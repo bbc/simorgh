@@ -52,11 +52,6 @@ const SportBadge = ({
 
   if (!src) return null;
 
-  const isStorybook = Boolean(process.env.STORYBOOK); // TO DO - Decide if we want to remove this, it allows us to see a hardcoded placeholder on storybook. Else it does not render
-  const badgeSrc = isStorybook
-    ? 'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-badge.4476e22b04.svg'
-    : src.src; // TODO - not sure src will always be an object.
-
   return (
     <BadgeContainer size={size} data-testid={`badge-container-${testId}`}>
       {/* Empty alt string should hide images from assistive technology, but won't hide certain SVG contents in some browsers - e.g. Safari */}
@@ -64,7 +59,7 @@ const SportBadge = ({
         alt={alt}
         data-testid={`badge-img-${testId}`}
         aria-hidden={!alt}
-        src={badgeSrc}
+        src={src}
       />
     </BadgeContainer>
   );

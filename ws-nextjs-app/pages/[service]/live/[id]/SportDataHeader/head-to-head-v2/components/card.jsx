@@ -8,11 +8,14 @@ import styled from '@emotion/styled';
 // import redcard from '@bbc/web-assets/static/sport/football/red-card.svg';
 // import secondyellowcard from '@bbc/web-assets/static/sport/football/second-yellow-card.svg';
 
-import redcard from '../assets/football/red-card.svg';
-import secondyellowcard from '../assets/football/second-yellow-card.svg';
-
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+
+// TO DO - either get these from static assets or use a fallback URL
+const tempRedCardSrc =
+  'https://static.files.bbci.co.uk/core/website/assets/static/sport/football/red-card.870c169464.svg';
+const tempSecondYellowCardSrc =
+  'https://static.files.bbci.co.uk/core/website/assets/static/sport/football/second-yellow-card.face6badd0.svg';
 
 const CardImage = styled.img`
   padding: 0 ${pixelsToRem(3.2)}rem;
@@ -40,14 +43,14 @@ const Card = ({ player }) => (
         aria-hidden
         alt=""
         data-testid="red-card-img"
-        src={redcard}
+        src={tempRedCardSrc}
       />
     ) : (
       <StyledYellowCard
         aria-hidden
         alt=""
         data-testid="second-yellow-card-img"
-        src={secondyellowcard}
+        src={tempSecondYellowCardSrc}
       />
     )}
   </CardContainer>
