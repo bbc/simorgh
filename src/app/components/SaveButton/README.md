@@ -1,4 +1,4 @@
-# ActionButton
+# SaveButton
 
 A reusable button component that handles common interactive states including loading, disabled, and accessibility features.
 
@@ -18,13 +18,13 @@ A reusable button component that handles common interactive states including loa
 ### Basic Usage
 
 ```tsx
-import ActionButton from '#app/components/ActionButton';
+import SaveButton from '#app/components/SaveButton';
 
 const handleSaveArticle = () => {
   // Save article logic
 };
 
-<ActionButton
+<SaveButton
   onClick={handleSaveArticle}
   label="Save this article"
   buttonText="Save article"
@@ -34,7 +34,7 @@ const handleSaveArticle = () => {
 ### Loading State
 
 ```tsx
-<ActionButton
+<SaveButton
   onClick={handleSaveArticle}
   isLoading={true}
   label="Saving article"
@@ -45,7 +45,7 @@ const handleSaveArticle = () => {
 ### Disabled State
 
 ```tsx
-<ActionButton
+<SaveButton
   onClick={handleSaveArticle}
   disabled={true}
   label="Save this article"
@@ -80,13 +80,13 @@ The component can be tested using the enhanced testing library:
 
 ```tsx
 import { render, screen, fireEvent } from '#app/components/react-testing-library-with-providers';
-import ActionButton from '.';
+import SaveButton from '.';
 
 test('calls onClick when clicked', () => {
   const handleClick = jest.fn();
   
   render(
-    <ActionButton
+    <SaveButton
       onClick={handleClick}
       label="Test button"
       buttonText="Click me"
