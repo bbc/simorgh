@@ -208,7 +208,7 @@ describe('fetchConfig', () => {
       },
     );
 
-    it('should not set the useNewNav param for script services', async () => {
+    it('should set both variant and useNewNav params for a dual-script service', async () => {
       global.fetch = jest.fn().mockResolvedValue({
         ok: true,
         json: async () => mockNavResponse,
@@ -219,12 +219,13 @@ describe('fetchConfig', () => {
       await fetchConfig({
         service: 'serbian',
         variant: 'cyr',
-        pagePath: '/serbian/cyr',
+        pagePath: '/serbian',
         configType: 'navigation',
       });
 
       const fetchUrl = (global.fetch as jest.Mock).mock.calls[0][0];
-      expect(fetchUrl).not.toContain('useNewNav=true');
+      expect(fetchUrl).toContain('variant=cyr');
+      expect(fetchUrl).toContain('useNewNav=true');
     });
   });
 });
