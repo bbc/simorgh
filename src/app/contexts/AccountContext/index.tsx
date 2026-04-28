@@ -68,9 +68,9 @@ export const AccountProvider = ({
     initialConfig?.identity?.idSignedInCookieName,
   );
 
-  const isSignedIn = Boolean(
-    initialConfig?.initialIsSignedIn || clientSignedInState,
-  );
+  const isSignedIn =
+    isIdctaAvailable &&
+    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
   const value = useMemo(
     () => ({
       isIdctaAvailable,
