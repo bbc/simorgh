@@ -3,20 +3,11 @@ import liveRadioJson from '#data/korean/bbc_korean_radio/liveradio.json';
 import { LIVE_RADIO_PAGE } from '#app/routes/utils/pageTypes';
 import { Toggles } from '#app/models/types/global';
 import * as getTogglesModule from '#app/lib/utilities/getToggles/withCache';
-import * as isTest from '#app/lib/utilities/isTest';
 import * as getPageDataModule from '../../../utilities/pageRequests/getPageData';
 import handleLiveRadioRoute from './handleLiveRadioRoute';
 
 jest.mock('../../../utilities/pageRequests/getPageData');
 jest.mock('#app/lib/utilities/getToggles/withCache');
-
-jest.mock('#app/lib/utilities/isTest', () => {
-  const originalModule = jest.requireActual('#app/lib/utilities/isTest');
-  return {
-    __esModule: true,
-    ...originalModule,
-  };
-});
 
 describe('handleLiveRadioRoute', () => {
   const mockSetHeader = jest.fn();
