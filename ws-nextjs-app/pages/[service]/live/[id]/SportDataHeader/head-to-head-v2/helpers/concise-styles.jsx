@@ -1,5 +1,5 @@
 // import { css } from '@bbc/web-styled';
-import { css } from '@emotion/styled';
+import { css } from '@emotion/react';
 
 // import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
 
