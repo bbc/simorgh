@@ -14,7 +14,7 @@ const styles = {
       justifyContent: 'center',
       height: '2.75rem',
       ...fontVariants.sansBold,
-      gap: '0.5rem',
+      gap: `${spacings.FULL}rem`,
       whiteSpace: 'nowrap',
       width: '100%',
       padding: `${spacings.FULL}rem ${spacings.DOUBLE}rem`,
