@@ -70,31 +70,35 @@ export const interceptATIAnalyticsBeacons = () => {
   const reverbAtiUrl = new URL((envs as EnvironmentConfigType).reverbAtiUrl)
     .origin;
 
-  Object.values(COMPONENTS).forEach(component => {
-    cy.intercept('GET', `${reverbAtiUrl}/**`, request => {
-      const { query } = request;
-      const viewabilityModelString = query.events as string;
-      if (viewabilityModelString) {
-        const isViewEvent = viewabilityModelString.includes(
-          `"event":{"category":"viewability","action":"view"}`,
-        );
-        const isClickEvent = viewabilityModelString.includes(
-          `"event":{"category":"viewability","action":"select"}`,
-        );
+  const viewablityHosts = [reverbAtiUrl, atiUrl];
 
-        const containsExpectedComponent = viewabilityModelString.includes(
-          `"name":"${component}`,
-        );
+  viewablityHosts.forEach(collectionDomains => {
+    Object.values(COMPONENTS).forEach(component => {
+      cy.intercept('GET', `${collectionDomains}/**`, request => {
+        const { query } = request;
+        const viewabilityModelString = query.events as string;
+        if (viewabilityModelString) {
+          const isViewEvent = viewabilityModelString.includes(
+            `"event":{"category":"viewability","action":"view"}`,
+          );
+          const isClickEvent = viewabilityModelString.includes(
+            `"event":{"category":"viewability","action":"select"}`,
+          );
 
-        if (isViewEvent && containsExpectedComponent) {
-          request.alias = `${component}-viewability-view`;
-          request.reply({ statusCode: 200 });
+          const containsExpectedComponent = viewabilityModelString.includes(
+            `"name":"${component}`,
+          );
+
+          if (isViewEvent && containsExpectedComponent) {
+            request.alias = `${component}-viewability-view`;
+            request.reply({ statusCode: 200 });
+          }
+          if (isClickEvent && containsExpectedComponent) {
+            request.alias = `${component}-viewability-click`;
+            request.reply({ statusCode: 200 });
+          }
         }
-        if (isClickEvent && containsExpectedComponent) {
-          request.alias = `${component}-viewability-click`;
-          request.reply({ statusCode: 200 });
-        }
-      }
+      });
     });
   });
 

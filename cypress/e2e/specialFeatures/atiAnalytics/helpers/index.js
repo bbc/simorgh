@@ -64,32 +64,36 @@ export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
   const reverbAtiUrl = new URL(envs.reverbAtiUrl).origin;
 
+  const viewabilityHosts = [reverbAtiUrl, atiUrl];
+
   // Component Views & Clicks - Viewability Model
-  Object.values(COMPONENTS).forEach(component => {
-    cy.intercept('GET', `${reverbAtiUrl}/**`, request => {
-      const { query } = request;
-      const viewabilityModelString = query.events;
-      if (viewabilityModelString) {
-        const isViewEvent = viewabilityModelString.includes(
-          `"event":{"category":"viewability","action":"view"}`,
-        );
-        const isClickEvent = viewabilityModelString.includes(
-          `"event":{"category":"viewability","action":"select"}`,
-        );
+  viewabilityHosts.forEach(collectionDomains => {
+    Object.values(COMPONENTS).forEach(component => {
+      cy.intercept('GET', `${collectionDomains}/**`, request => {
+        const { query } = request;
+        const viewabilityModelString = query.events;
+        if (viewabilityModelString) {
+          const isViewEvent = viewabilityModelString.includes(
+            `"event":{"category":"viewability","action":"view"}`,
+          );
+          const isClickEvent = viewabilityModelString.includes(
+            `"event":{"category":"viewability","action":"select"}`,
+          );
 
-        const containsExpectedComponent = viewabilityModelString.includes(
-          `"name":"${component}`,
-        );
+          const containsExpectedComponent = viewabilityModelString.includes(
+            `"name":"${component}`,
+          );
 
-        if (isViewEvent && containsExpectedComponent) {
-          request.alias = `${component}-viewability-view`;
-          request.reply({ statusCode: 200 });
+          if (isViewEvent && containsExpectedComponent) {
+            request.alias = `${component}-viewability-view`;
+            request.reply({ statusCode: 200 });
+          }
+          if (isClickEvent && containsExpectedComponent) {
+            request.alias = `${component}-viewability-click`;
+            request.reply({ statusCode: 200 });
+          }
         }
-        if (isClickEvent && containsExpectedComponent) {
-          request.alias = `${component}-viewability-click`;
-          request.reply({ statusCode: 200 });
-        }
-      }
+      });
     });
   });
 
