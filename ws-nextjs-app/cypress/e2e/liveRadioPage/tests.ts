@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import path from 'ramda/src/path';
-import chartbeatTests from '../../../support/helpers/chartbeatTests';
+import chartbeatTests from '../../support/helpers/chartbeatTests';
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export default ({ service, pageType }) =>
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -34,26 +33,23 @@ export default ({ service, pageType }) =>
     describe('Radio Schedule', () => {
       it('should be displayed if there is enough schedule data', function test() {
         cy.fixture(`toggles/${service}.json`).then(toggles => {
-          const scheduleIsEnabled = path(
-            ['liveRadioSchedule', 'enabled'],
-            toggles,
-          );
+          const scheduleIsEnabled = toggles?.liveRadioSchedule?.enabled;
           cy.log(
             `Live Radio Page configured for Radio Schedule? ${scheduleIsEnabled}`,
           );
 
           if (scheduleIsEnabled) {
-            cy.getPageDataFromWindow().then(data => {
-              const { pageData } = data;
-              const schedules = pageData.radioScheduleData;
+            cy.getPageDataFromWindow().then(pageData => {
+              const { radioScheduleData } = pageData;
 
-              if (schedules) {
+              if (radioScheduleData) {
                 cy.log('Schedule has enough data');
                 cy.get('[data-e2e=radio-schedule]').should('exist');
-              } else {
-                cy.get('[data-e2e=radio-schedule]').should('not.exist');
               }
             });
+          } else {
+            cy.get('[data-e2e=radio-schedule]').should('not.exist');
+            cy.log('Radio schedule is not toggled on for this service');
           }
         });
       });
