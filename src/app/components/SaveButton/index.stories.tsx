@@ -1,7 +1,7 @@
 import ThemeProvider from '#app/components/ThemeProvider';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { AccountContext } from '#app/contexts/AccountContext';
-import ActionButton from '.';
+import SaveButton from '.';
 import metadata from './metadata.json';
 import readme from './README.md';
 
@@ -35,7 +35,7 @@ const withProviders =
             forYouUrl: undefined,
           }}
         >
-          <ActionButton
+          <SaveButton
             onClick={() => console.log('Button clicked')}
             isLoading={isLoading}
             isSaved={isSaved}
@@ -49,8 +49,8 @@ const withProviders =
   );
 
 export default {
-  title: 'Components/ActionButton',
-  component: ActionButton,
+  title: 'Components/SaveButton',
+  component: SaveButton,
   parameters: {
     metadata,
     docs: { readme },

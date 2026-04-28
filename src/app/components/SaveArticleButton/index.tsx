@@ -1,7 +1,7 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
-import ActionButton from '../ActionButton';
+import SaveButton from '../SaveButton';
 
 interface SaveArticleButtonProps {
   articleId: string;
@@ -42,7 +42,7 @@ const SaveArticleButton = ({
 
   return (
     <div css={{ margin: '1.5rem 0' }}>
-      <ActionButton
+      <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
         isSaved={isSaved}

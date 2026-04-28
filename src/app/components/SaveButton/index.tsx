@@ -8,7 +8,7 @@ import {
 import { Theme } from '@emotion/react';
 import styles from './index.styles';
 
-export interface ActionButtonProps {
+export interface SaveButtonProps {
   onClick: () => void;
   isLoading?: boolean;
   isSaved?: boolean;
@@ -17,14 +17,14 @@ export interface ActionButtonProps {
   removeText?: string;
 }
 
-const ActionButton = ({
+const SaveButton = ({
   onClick,
   isLoading = false,
   isSaved = false,
   disabled = false,
   buttonText,
   removeText = '',
-}: ActionButtonProps) => {
+}: SaveButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -48,4 +48,4 @@ const ActionButton = ({
   );
 };
 
-export default ActionButton;
+export default SaveButton;
