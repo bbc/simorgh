@@ -308,6 +308,10 @@ exports[`MostReadList should render burmese most read with a one column layout 1
   z-index: 1;
 }
 
+.emotion-8:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 1rem;
@@ -812,6 +816,10 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
@@ -1683,6 +1691,10 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
   z-index: 1;
 }
 
+.emotion-8:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 1rem;
@@ -2484,6 +2496,10 @@ exports[`MostReadList should render with ltr news items with a max of one column
   z-index: 1;
 }
 
+.emotion-8:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 1.125rem;
@@ -3131,6 +3147,10 @@ exports[`MostReadList should render with ltr news items with a max of two column
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
@@ -3906,6 +3926,10 @@ exports[`MostReadList should render with ltr news items with a multi column layo
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
@@ -4789,6 +4813,10 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
   z-index: 1;
 }
 
+.emotion-8:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-8 {
     font-size: 1.125rem;
@@ -5668,6 +5696,10 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-8:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {

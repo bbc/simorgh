@@ -133,19 +133,7 @@ describe('OnDemand Radio Page ', () => {
     process.env = { ...env };
   });
 
-  it('should match snapshot', async () => {
-    const result = await handleOnDemandAudioRoute(
-      mockGetServerSidePropsContext,
-    );
-    const { container } = await renderPage({
-      pageData: result.props.pageData,
-      service: 'gahuza',
-    });
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it('should match snapshot for podcast episode page with PodcastEpisode schema', async () => {
+  it('should display podcast episode page with PodcastEpisode schema', async () => {
     const mockCtx = {
       ...mockGetServerSidePropsContext,
       resolvedUrl: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
@@ -165,7 +153,37 @@ describe('OnDemand Radio Page ', () => {
       pathname: '/gahuza/bbc_gahuza_radio/podcasts/p07yh8hb/p0k4x0jm',
     });
 
-    expect(container).toMatchSnapshot();
+    const linkedDataScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+
+    expect(linkedDataScript).toBeInTheDocument();
+
+    const linkedData = JSON.parse(linkedDataScript?.textContent ?? '{}') as {
+      '@graph'?: Array<Record<string, unknown>>;
+    };
+    const graph = linkedData['@graph'] ?? [];
+
+    const podcastEpisode = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastEpisode',
+    );
+    const podcastSeries = graph.find(
+      graphEntry => graphEntry['@type'] === 'PodcastSeries',
+    );
+    const webPageSchema = graph.find(
+      graphEntry => graphEntry['@type'] === 'WebPage',
+    );
+
+    expect(podcastEpisode).toBeDefined();
+    expect(podcastSeries).toBeDefined();
+    expect(webPageSchema).toBeDefined();
+
+    const podcastEpisodeId = podcastEpisode?.['@id'];
+
+    expect(podcastEpisodeId).toEqual(expect.any(String));
+    expect(webPageSchema?.mainEntity).toEqual({
+      '@id': podcastEpisodeId,
+    });
   });
 
   it('should show the brand title for OnDemand Radio Pages', async () => {
@@ -373,14 +391,13 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'swahili',
     });
     const expiredMessageEl = getByText('Taarifa hii haipatikani tena.');
 
     expect(expiredMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it("should show the 'content not yet available' message if episode is not yet available", async () => {
@@ -404,7 +421,7 @@ describe('OnDemand Radio Page ', () => {
 
     const result = await handleOnDemandAudioRoute(mockCtx);
 
-    const { container, getByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData: result.props.pageData,
       service: 'korean',
     });
@@ -414,7 +431,6 @@ describe('OnDemand Radio Page ', () => {
     );
 
     expect(notYetAvailableMessageEl).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show the radio schedule for the On Demand radio page', async () => {

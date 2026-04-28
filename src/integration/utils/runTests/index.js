@@ -75,6 +75,7 @@ const runExpressTests = () =>
       '--colors',
       '--detectOpenHandles',
       '--forceExit',
+      '--passWithNoTests', // Allows the test suite to pass now all page types are migrated to NextJS
       ...getJestArgs(),
     ],
     {
