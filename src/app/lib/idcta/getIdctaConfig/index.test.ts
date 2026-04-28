@@ -106,7 +106,9 @@ describe('getIdctaConfig', () => {
   it('should set initialIsSignedIn to true when x-id-oidc-signedin header is "1"', async () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
-    const result = await getIdctaConfig(mockToggles, mockService, '1');
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '1',
+    });
 
     expect(result?.initialIsSignedIn).toBe(true);
   });
@@ -114,7 +116,9 @@ describe('getIdctaConfig', () => {
   it('should set initialIsSignedIn to false when x-id-oidc-signedin header is "0"', async () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
-    const result = await getIdctaConfig(mockToggles, mockService, '0');
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '0',
+    });
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
@@ -122,7 +126,7 @@ describe('getIdctaConfig', () => {
   it('should set initialIsSignedIn to false when x-id-oidc-signedin header is absent', async () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
-    const result = await getIdctaConfig(mockToggles, mockService);
+    const result = await getIdctaConfig(mockToggles, mockService, {});
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
@@ -130,7 +134,9 @@ describe('getIdctaConfig', () => {
   it('should set initialIsSignedIn to false when x-id-oidc-signedin header has an invalid value', async () => {
     mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
 
-    const result = await getIdctaConfig(mockToggles, mockService, 'invalid');
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': 'invalid',
+    });
 
     expect(result?.initialIsSignedIn).toBe(false);
   });

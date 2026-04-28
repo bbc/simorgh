@@ -20,11 +20,13 @@ export const AccountContext = createContext<AccountContextProps>(
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
+  initialIsAccountPromoBannerVisible?: boolean;
 };
 
 export const AccountProvider = ({
   children,
   initialConfig,
+  initialIsAccountPromoBannerVisible = true,
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
@@ -78,6 +80,7 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
+      isAccountPromoBannerVisible: initialIsAccountPromoBannerVisible,
     }),
     [
       forYouUrl,
@@ -87,6 +90,7 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
+      initialIsAccountPromoBannerVisible,
     ],
   );
 

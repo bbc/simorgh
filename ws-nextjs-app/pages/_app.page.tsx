@@ -31,6 +31,7 @@ import { AccountProvider } from '#app/contexts/AccountContext';
 import getIdctaConfig from '#app/lib/idcta/getIdctaConfig';
 import { IdctaConfig } from '#app/models/types/account';
 import fetchConfig from '#app/lib/utilities/fetchConfig';
+import { isAccountPromoBannerVisible } from '#app/components/Account/AccountPromotionalBanner/utilities/index';
 
 interface Props {
   pageProps: {
@@ -62,6 +63,7 @@ interface Props {
     isUK?: boolean;
     country?: string | null;
     idctaConfig: IdctaConfig | null;
+    initialIsAccountPromoBannerVisible: boolean;
   };
 }
 
@@ -98,6 +100,9 @@ export default class CustomApp extends App<Props> {
 
     const requestHeaders = ctx.req?.headers;
     const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
+    const initialIsAccountPromoBannerVisible = isAccountPromoBannerVisible(
+      requestHeaders?.cookie ?? '',
+    );
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
     const serverSideExperiments = getServerExperiments({
@@ -122,6 +127,7 @@ export default class CustomApp extends App<Props> {
         serverSideExperiments,
         toggles,
         idctaConfig: idctaResult,
+        initialIsAccountPromoBannerVisible,
         navItems,
       },
     };
@@ -153,6 +159,7 @@ export default class CustomApp extends App<Props> {
       isUK,
       country,
       idctaConfig = null,
+      initialIsAccountPromoBannerVisible = true,
       navItems,
     } = pageProps;
 
@@ -191,7 +198,12 @@ export default class CustomApp extends App<Props> {
             isNextJs={isNextJs}
             isUK={isUK ?? false}
           >
-            <AccountProvider initialConfig={idctaConfig}>
+            <AccountProvider
+              initialConfig={idctaConfig}
+              initialIsAccountPromoBannerVisible={
+                initialIsAccountPromoBannerVisible
+              }
+            >
               <EventTrackingContextProvider atiData={atiAnalytics}>
                 {isAvEmbeds ? (
                   <ThemeProvider service={service} variant={variant}>

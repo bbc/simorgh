@@ -23,4 +23,5 @@ export type AccountContextProps = {
   settingsUrl?: string;
   signOutUrl?: string;
   forYouUrl?: string;
+  isAccountPromoBannerVisible: boolean;
 };
