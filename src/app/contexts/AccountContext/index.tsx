@@ -10,6 +10,8 @@ import { AccountContextProps, IdctaConfig } from '#app/models/types/account';
 import appendCtaQueryParams from '#app/lib/idcta/appendCtaQueryParams';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
+import onClient from '#app/lib/utilities/onClient';
+import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 
 export const AccountContext = createContext<AccountContextProps>(
@@ -50,15 +52,23 @@ export const AccountProvider = ({
       : initialConfig?.unavailable_url;
   };
 
+  const getSignedInCookie = (cookieName = 'ckns_id') => {
+    return onClient() ? Cookie.get(cookieName) : false;
+  };
+
   const signInUrl = buildAccountUrl(initialConfig?.signin_url);
   const registerUrl = buildAccountUrl(initialConfig?.register_url);
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const isSignedIn =
-    isIdctaAvailable && Boolean(initialConfig?.initialIsSignedIn);
+  const clientSignedInState = getSignedInCookie(
+    initialConfig?.identity?.idSignedInCookieName,
+  );
 
+  const isSignedIn = Boolean(
+    initialConfig?.initialIsSignedIn || clientSignedInState,
+  );
   const value = useMemo(
     () => ({
       isIdctaAvailable,
