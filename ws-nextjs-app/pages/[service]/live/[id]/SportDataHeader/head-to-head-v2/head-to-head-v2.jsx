@@ -44,7 +44,7 @@ const StyledHeadToHead = styled.div`
 `;
 
 /**
- * @type {typeof import('./head-to-head-v2.d.ts').HeadToHeadV2}
+ * @type {typeof import('./types.ts').HeadToHeadV2}
  */
 export const HeadToHeadV2 = ({
   data,

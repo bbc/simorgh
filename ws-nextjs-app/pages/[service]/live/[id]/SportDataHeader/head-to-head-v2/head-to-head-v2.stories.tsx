@@ -12,7 +12,7 @@ import {
 } from './storybook/helpers/base-component';
 import readme from './README.md';
 import metadata from './metadata.json';
-import type { HeadToHeadV2Data } from './head-to-head-v2';
+import type { HeadToHeadV2Data } from './types';
 import HeadToHeadV2 from '.';
 import { shortNamesMap } from './storybook/helpers/short-name-map';
 import venuesData from './static-data/premier-league-venues.json';

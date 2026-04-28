@@ -23,7 +23,7 @@ import HeadToHeadV2 from './SportDataHeader/head-to-head-v2';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
-import { HeadToHeadV2Data } from './SportDataHeader/head-to-head-v2/head-to-head-v2.d';
+import { HeadToHeadV2Data } from './SportDataHeader/head-to-head-v2/types';
 import LatestPostButton from './LatestPostButton';
 
 interface LivePromoImage {
