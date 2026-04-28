@@ -96,10 +96,8 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
-    const signedInHeader = ctx.req?.headers?.['x-id-oidc-signedin'] as
-      | string
-      | undefined;
-    const idctaResult = await getIdctaConfig(toggles, service, signedInHeader);
+    const requestHeaders = ctx.req?.headers;
+    const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
     const serverSideExperiments = getServerExperiments({
