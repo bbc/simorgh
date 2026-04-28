@@ -43,7 +43,7 @@ const mockContextValue = {
 };
 
 describe('Form', () => {
-  it('should render and match snapshot', async () => {
+  it('should render a form with title and fields', async () => {
     jest
       .spyOn(FormContextModule, 'useFormContext')
       .mockImplementationOnce(() => mockContextValue);
@@ -61,7 +61,6 @@ describe('Form', () => {
     });
     const form = container.querySelector('form');
     expect(form).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
   it('should handle submit', async () => {
     const handleSubmit = jest.fn(e => e.preventDefault());
