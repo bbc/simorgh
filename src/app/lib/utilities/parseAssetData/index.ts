@@ -29,3 +29,17 @@ export const getMentions = (articleData: Article) =>
 
 export const getLang = (articleData: Article) =>
   articleData?.metadata?.language;
+
+export const getAssetIdFromCanonicalUrl = (
+  canonicalUrl?: string,
+): string | null => {
+  if (!canonicalUrl) return null;
+
+  try {
+    const { pathname } = new URL(canonicalUrl);
+    const segments = pathname.split('/').filter(Boolean);
+    return segments[segments.length - 1] || null;
+  } catch {
+    return null;
+  }
+};
