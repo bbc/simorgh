@@ -1,12 +1,14 @@
-import runTestsForPage from '#nextjs/cypress/support/helpers/runTestsForPage';
+import runTestsForPage, {
+  TestDataType,
+} from '../../support/helpers/runTestsForPage';
 import e2eTests from './tests';
 import testsForAllPages from '../testsForAllPages';
 import testsForAllCanonicalPages from '../testsForAllCanonicalPages';
-import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from '../specialFeatures/atiAnalytics/assertions';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
-} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
+} from '../specialFeatures/atiAnalytics/assertions/radioSchedule';
 
 const pageType = 'liveRadio';
 
@@ -103,7 +105,7 @@ const testSuites = [
     runforEnv: ['local', 'test', 'live'],
     tests,
   },
-];
+] as unknown as TestDataType[];
 
 const atiAnalyticsTestSuites = [
   {
@@ -120,7 +122,7 @@ const atiAnalyticsTestSuites = [
       assertRadioScheduleComponentClick,
     ],
   },
-];
+] as unknown as TestDataType[];
 
 runTestsForPage({
   pageType,
