@@ -70,9 +70,9 @@ export const interceptATIAnalyticsBeacons = () => {
   const reverbAtiUrl = new URL((envs as EnvironmentConfigType).reverbAtiUrl)
     .origin;
 
-  const viewablityHosts = [reverbAtiUrl, atiUrl];
+  const viewabilityHosts = Array.from(new Set([reverbAtiUrl, atiUrl]));
 
-  viewablityHosts.forEach(collectionDomains => {
+  viewabilityHosts.forEach(collectionDomains => {
     Object.values(COMPONENTS).forEach(component => {
       cy.intercept('GET', `${collectionDomains}/**`, request => {
         const { query } = request;

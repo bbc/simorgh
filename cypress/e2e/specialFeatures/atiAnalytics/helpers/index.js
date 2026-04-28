@@ -64,7 +64,7 @@ export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
   const reverbAtiUrl = new URL(envs.reverbAtiUrl).origin;
 
-  const viewabilityHosts = [reverbAtiUrl, atiUrl];
+  const viewabilityHosts = Array.from(new Set([reverbAtiUrl, atiUrl]));
 
   // Component Views & Clicks - Viewability Model
   viewabilityHosts.forEach(collectionDomains => {
