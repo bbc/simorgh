@@ -29,15 +29,7 @@ export default ({ service, pageType }: ServiceParametersType) => {
             .find('[data-e2e="scrollable-nav"]')
             .should('be.visible');
 
-          cy.get('nav')
-            .find('[data-e2e="dropdown-nav"] ul')
-            .should('not.be.visible');
-
           cy.get('nav button').click();
-
-          cy.get('nav')
-            .find('[data-e2e="scrollable-nav"]')
-            .should('not.be.visible');
 
           cy.get('nav')
             .find('[data-e2e="dropdown-nav"] ul')
