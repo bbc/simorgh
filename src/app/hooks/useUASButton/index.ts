@@ -71,7 +71,7 @@ const useUASButton = ({
             articleId,
             service,
             articleTitle,
-            promoImage: promoImageBuild || true, // If promo image URL is not available, send true to indicate fallback should be used
+            promoImage: promoImageBuild,
             promoImageAltText: promoImageObj?.altText || '',
             locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
           });

@@ -22,13 +22,8 @@ const extractPromoImage = (blocks: OptimoBlock[]): PromoImageData => {
     | OptimoRawImageBlock
     | undefined;
 
-  const altText = (
-    altTextBlock?.model as {
-      blocks?: Array<{
-        model?: { blocks?: Array<{ model?: { text?: string } }> };
-      }>;
-    }
-  )?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
+  const altText =
+    altTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
   return {
     altText: altText || '',
