@@ -3,6 +3,7 @@
 // import styled from '@bbc/web-styled';
 
 import styled from '@emotion/styled';
+import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 
 // import { createSize } from '@bbc/web-gel-foundations';
 // import redcard from '@bbc/web-assets/static/sport/football/red-card.svg';
@@ -11,22 +12,19 @@ import styled from '@emotion/styled';
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
 
-// TO DO - either get these from static assets or use a fallback URL
-const tempRedCardSrc =
-  'https://static.files.bbci.co.uk/core/website/assets/static/sport/football/red-card.870c169464.svg';
-const tempSecondYellowCardSrc =
-  'https://static.files.bbci.co.uk/core/website/assets/static/sport/football/second-yellow-card.face6badd0.svg';
-
-const CardImage = styled.img`
+// in the original implementation, this is an img element with empty alt text and accepts a URL to the svg as an src.
+const CardWrapper = styled.span`
   padding: 0 ${pixelsToRem(3.2)}rem;
+  display: inline-block; // keeps styling in line with PS
+  vertical-align: bottom; // keeps styling in line with PS
 `;
 
-const StyledRedCard = styled(CardImage)`
+const StyledRedCard = styled(CardWrapper)`
   width: ${pixelsToRem(11.2)}rem;
   margin-bottom: ${pixelsToRem(-3.2)}rem;
 `;
 
-const StyledYellowCard = styled(CardImage)`
+const StyledYellowCard = styled(CardWrapper)`
   margin-bottom: ${pixelsToRem(-6.4)}rem;
   width: ${pixelsToRem(16)}rem;
 `;
@@ -39,19 +37,13 @@ const CardContainer = styled.div`
 const Card = ({ player }) => (
   <CardContainer role="text">
     {player.actions[0].type === 'Red Card' ? (
-      <StyledRedCard
-        aria-hidden
-        alt=""
-        data-testid="red-card-img"
-        src={tempRedCardSrc}
-      />
+      <StyledRedCard aria-hidden data-testid="red-card-img">
+        <RedCardSVG />
+      </StyledRedCard>
     ) : (
-      <StyledYellowCard
-        aria-hidden
-        alt=""
-        data-testid="second-yellow-card-img"
-        src={tempSecondYellowCardSrc}
-      />
+      <StyledYellowCard aria-hidden data-testid="second-yellow-card-img">
+        <SecondYellowCardSVG />
+      </StyledYellowCard>
     )}
   </CardContainer>
 );

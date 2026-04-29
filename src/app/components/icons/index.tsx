@@ -272,3 +272,41 @@ export const AccountIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+
+export const RedCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 9.22 13.36"
+    viewBox="0 0 9.22 13.36"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-29.51 285.84v-9.72h-4.53v11.82h8.48v-2.1z" fill="#ffd230" />
+    <path d="m-163.79-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-102.17-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <g fill="#f51a5a">
+      <path d="m24 0h9.22v13.36h-9.22z" />
+      <path d="m0 0h9.22v13.36h-9.22z" />
+      <path d="m-28.42 0h9.22v13.36h-9.22z" />
+    </g>
+    <path d="m-29.5 14.44v-9.89h-4.54v13.36h9.23v-3.47z" fill="#ffd230" />
+  </svg>
+);
+
+export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 14.84 17.91"
+    viewBox="0 0 14.84 17.91"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m4.52 285.84v-9.72h-4.52v11.82h8.47v-2.1z" fill="#ffd230" />
+    <path d="m-129.76-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-68.14-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <path d="m5.61 0h9.22v13.36h-9.22z" fill="#f51a5a" />
+    <path d="m4.53 14.44v-9.89h-4.53v13.36h9.22v-3.47z" fill="#ffd230" />
+  </svg>
+);
