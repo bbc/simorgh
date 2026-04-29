@@ -7,7 +7,7 @@ const spinAnimation = keyframes({
 });
 
 const styles = {
-  buttonWrapper: ({ mq, palette, spacings, fontVariants }: Theme) =>
+  buttonWrapper: ({ palette, spacings, fontVariants }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
@@ -40,15 +40,6 @@ const styles = {
         '& svg': {
           fill: palette.WHITE,
         },
-      },
-      [mq.GROUP_2_MIN_WIDTH]: {
-        marginLeft: `${spacings.DOUBLE}rem`,
-        marginRight: `${spacings.DOUBLE}rem`,
-      },
-      [mq.GROUP_3_MIN_WIDTH]: {
-        width: `${pixelsToRem(280)}rem`,
-        marginLeft: `${spacings.DOUBLE}rem`,
-        marginRight: '0',
       },
     }),
   buttonAnimation: ({ palette }: Theme) =>

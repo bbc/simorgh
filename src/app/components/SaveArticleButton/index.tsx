@@ -1,7 +1,9 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { Theme } from '@emotion/react';
 import SaveButton from '../SaveButton';
+import styles from './index.styles';
 
 interface SaveArticleButtonProps {
   articleId: string;
@@ -41,7 +43,7 @@ const SaveArticleButton = ({
   };
 
   return (
-    <div css={{ margin: '1.5rem 0' }}>
+    <div css={(theme: Theme) => styles.buttonWrapper(theme)}>
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
