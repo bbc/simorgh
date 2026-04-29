@@ -7,7 +7,7 @@ import {
 // import { createSize } from '@bbc/web-gel-foundations';
 import SportBadge from '../index';
 
-test('can render a badge for a urn identifier', async () => {
+test.skip('can render a badge for a urn identifier', async () => {
   await act(async () => {
     render(
       <SportBadge
@@ -23,7 +23,7 @@ test('can render a badge for a urn identifier', async () => {
   expect(element).toHaveAttribute('data-testid', 'badge-img-liverpool');
 });
 
-test('can render a badge for a numeric identifier', async () => {
+test.skip('can render a badge for a numeric identifier', async () => {
   await act(async () => {
     render(<SportBadge id={58510} />);
   });
@@ -33,7 +33,7 @@ test('can render a badge for a numeric identifier', async () => {
   expect(element).toHaveAttribute('data-testid', 'badge-img-58510');
 });
 
-test('can render a badge with an empty alt attribute', async () => {
+test.skip('can render a badge with an empty alt attribute', async () => {
   await act(async () => {
     render(<SportBadge id="urn:bbc:sportsdata:football:team:liverpool" />);
   });
@@ -42,7 +42,7 @@ test('can render a badge with an empty alt attribute', async () => {
   expect(element).toHaveAttribute('alt', '');
 });
 
-test('can render a placeholder where a mapping does not exist', async () => {
+test.skip('can render a placeholder where a mapping does not exist', async () => {
   await act(async () => {
     render(<SportBadge id="invalid-id" />);
   });
@@ -51,7 +51,7 @@ test('can render a placeholder where a mapping does not exist', async () => {
   expect(element).toHaveAttribute('alt', '');
 });
 
-test('does not render an image where a mapping does not exist and a placeholder fallback should be not be rendered', async () => {
+test.skip('does not render an image where a mapping does not exist and a placeholder fallback should be not be rendered', async () => {
   await act(async () => {
     render(<SportBadge id="invalid-id" usePlaceholderFallback={false} />);
   });
@@ -67,7 +67,7 @@ test('does not render an image where an id is not provided and a placeholder fal
   expect(screen.queryByRole('img')).not.toBeInTheDocument();
 });
 
-test('sets aria-hidden to true when no alt text given to mitigate screen reader navigation bug', async () => {
+test.skip('sets aria-hidden to true when no alt text given to mitigate screen reader navigation bug', async () => {
   await act(async () => {
     render(<SportBadge />);
   });

@@ -38,12 +38,6 @@ const badgesMap = {
   // ...getBaseCountryFlagsMapping('tennis'),
 };
 
-// TO DO - either get these from static assets or use a fallback URL
-const tempPlaceholderSrc =
-  'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-badge.4476e22b04.svg';
-const tempFlagPlaceholderSrc =
-  'https://static.files.bbci.co.uk/core/website/assets/static/sport/placeholders/placeholder-flag.9cbbd1b8e7.svg';
-
 export const getImage = ({
   id,
   usePlaceholderFallback,
@@ -54,9 +48,9 @@ export const getImage = ({
   if (!image && usePlaceholderFallback) {
     switch (placeholderFallbackType) {
       case 'badge':
-        return tempPlaceholderSrc;
+        return null; // TODO - add badge placeholder asset and return it here
       case 'flag':
-        return tempFlagPlaceholderSrc;
+        return null; // TODO - add flag placeholder asset and return it here
       default:
         throw new Error(
           `Invalid placeholder fallback type '${placeholderFallbackType}'`,

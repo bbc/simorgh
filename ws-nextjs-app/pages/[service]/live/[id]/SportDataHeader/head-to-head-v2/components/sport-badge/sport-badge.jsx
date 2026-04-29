@@ -58,8 +58,8 @@ const SportBadge = ({
       <BadgeImage
         alt={alt}
         data-testid={`badge-img-${testId}`}
-        aria-hidden={!alt}
         src={src}
+        aria-hidden={!alt}
       />
     </BadgeContainer>
   );
