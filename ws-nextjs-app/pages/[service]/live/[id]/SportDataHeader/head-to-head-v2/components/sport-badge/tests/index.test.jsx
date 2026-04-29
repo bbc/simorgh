@@ -23,7 +23,6 @@ test('can render a badge for a urn identifier', async () => {
   expect(element).toHaveAttribute('data-testid', 'badge-img-liverpool');
 });
 
-// please update the below uncommmentedout tests to use await act async screen etc as above
 test('can render a badge for a numeric identifier', async () => {
   await act(async () => {
     render(<SportBadge id={58510} />);
