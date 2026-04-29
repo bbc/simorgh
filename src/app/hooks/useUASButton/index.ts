@@ -30,12 +30,17 @@ interface UseUASButtonReturn {
   error: Error | null;
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
+interface UseUASButtonProps {
+  articleId: string;
+  articleTitle: string;
+  articlePageData?: SaveArticleButtonProps['articlePageData'];
+}
 
 const useUASButton = ({
   articleId,
   articleTitle,
   articlePageData,
-}: SaveArticleButtonProps): UseUASButtonReturn => {
+}: UseUASButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =

@@ -1,9 +1,13 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import {
+  getAssetIdFromCanonicalUrl,
+  getArticleId,
+} from '#app/lib/utilities/parseAssetData';
 import { Article } from '#app/models/types/optimo';
+import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articleId: string;
   articleTitle: string;
   articlePageData?: Article;
 }
@@ -14,13 +18,26 @@ export interface SaveArticleButtonProps {
  * FUTURE TODO : Implement button click handler to toggle saved state */
 
 const SaveArticleButton = ({
-  articleId,
   articleTitle,
   articlePageData,
 }: SaveArticleButtonProps) => {
+  const getArticleIdFromData = () => {
+    if (articlePageData?.metadata?.locators?.canonicalUrl) {
+      return getAssetIdFromCanonicalUrl(
+        articlePageData.metadata.locators.canonicalUrl,
+      );
+    }
+    if (articlePageData) {
+      return parseArticleID(getArticleId(articlePageData));
+    }
+    return '';
+  };
+
+  const articleId = getArticleIdFromData();
+
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
-      articleId,
+      articleId: articleId || '',
       articleTitle,
       articlePageData,
     });

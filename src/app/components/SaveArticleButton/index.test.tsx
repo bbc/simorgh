@@ -8,7 +8,6 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 
 describe('SaveArticleButton', () => {
   const defaultProps = {
-    articleId: '123',
     articleTitle: 'Test Article Title',
   };
 
@@ -84,7 +83,65 @@ describe('SaveArticleButton', () => {
     expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
   });
 
-  it('passes title to useUASButton hook', () => {
+  it('passes articleId and title to useUASButton hook', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    type ArticlePageData = React.ComponentProps<
+      typeof SaveArticleButton
+    >['articlePageData'];
+    const articlePageData: ArticlePageData = {
+      metadata: {
+        locators: {
+          canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+        },
+      },
+    } as ArticlePageData;
+
+    render(
+      <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
+    );
+
+    expect(mockedUseUASButton).toHaveBeenCalledWith({
+      articleId: 'c1l97706v5mo',
+      articleTitle: 'Test Article Title',
+      articlePageData,
+    });
+  });
+
+  it('extracts articleId from metadata when canonicalUrl is not available', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    type ArticlePageData = React.ComponentProps<
+      typeof SaveArticleButton
+    >['articlePageData'];
+    const articlePageData: ArticlePageData = {
+      metadata: {
+        id: 'urn:bbc:ares::article:test123',
+      },
+    } as ArticlePageData;
+
+    render(
+      <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
+    );
+
+    expect(mockedUseUASButton).toHaveBeenCalledWith({
+      articleId: 'test123',
+      articleTitle: 'Test Article Title',
+      articlePageData,
+    });
+  });
+
+  it('passes empty articleId when no articlePageData is provided', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
@@ -95,8 +152,9 @@ describe('SaveArticleButton', () => {
     render(<SaveArticleButton {...defaultProps} />);
 
     expect(mockedUseUASButton).toHaveBeenCalledWith({
-      articleId: '123',
+      articleId: '',
       articleTitle: 'Test Article Title',
+      articlePageData: undefined,
     });
   });
 });
