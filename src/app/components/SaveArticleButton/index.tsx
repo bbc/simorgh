@@ -1,7 +1,6 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { Theme } from '@emotion/react';
 import { Article } from '#app/models/types/optimo';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';

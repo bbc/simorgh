@@ -5,7 +5,6 @@ import {
   FilledBookmarkIcon,
   Close,
 } from '#app/components/icons';
-import { Theme } from '@emotion/react';
 import styles from './index.styles';
 
 export interface SaveButtonProps {
