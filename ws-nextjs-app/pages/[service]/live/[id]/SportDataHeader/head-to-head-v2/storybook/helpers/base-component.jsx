@@ -80,7 +80,7 @@ export const HeadToHeadV2ConciseComponent = args => {
     <HeadToHeadV2
       data={updatedStoryBookControls}
       renderEventSummaryHeading
-      isConciseView="true"
+      isConciseView
     />
   );
 };
