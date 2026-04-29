@@ -2,20 +2,27 @@ import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { Theme } from '@emotion/react';
+import { Article } from '#app/models/types/optimo';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';
 
-interface SaveArticleButtonProps {
+export interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
+  articlePageData?: Article;
 }
 
 const SaveArticleButton = ({
   articleId,
   articleTitle,
+  articlePageData,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
-    useUASButton({ articleId, articleTitle });
+    useUASButton({
+      articleId,
+      articleTitle,
+      articlePageData,
+    });
 
   const { translations } = useContext(ServiceContext);
   const { saveArticleButton } = translations || {};
