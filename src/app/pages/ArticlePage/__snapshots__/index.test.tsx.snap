@@ -781,6 +781,10 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   z-index: 1;
 }
 
+.emotion-31:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-31 {
     font-size: 1.125rem;
@@ -1962,6 +1966,10 @@ exports[`Article Page should render a news article correctly 1`] = `
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-35:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
@@ -4106,6 +4114,10 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-31:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {
