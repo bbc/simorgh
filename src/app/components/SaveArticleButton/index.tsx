@@ -1,9 +1,11 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import { Article } from '#app/models/types/optimo';
 import styles from './index.styles';
 
-interface SaveArticleButtonProps {
+export interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
+  articlePageData?: Article;
 }
 
 /** A button component that allows users to save an article for later reading,
@@ -14,11 +16,13 @@ interface SaveArticleButtonProps {
 const SaveArticleButton = ({
   articleId,
   articleTitle,
+  articlePageData,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       articleTitle,
+      articlePageData,
     });
 
   if (!showButton) {
