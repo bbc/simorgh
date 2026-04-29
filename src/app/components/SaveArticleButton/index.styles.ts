@@ -4,27 +4,15 @@ import { css, Theme } from '@emotion/react';
 const styles = {
   buttonWrapper: ({ spacings, mq }: Theme) =>
     css({
-      marginTop: `${spacings.TRIPLE}rem`,
-      marginBottom: `${spacings.TRIPLE}rem`,
+      paddingBlock: `${spacings.TRIPLE}rem`,
       [mq.GROUP_2_MAX_WIDTH]: {
-        width: '100%',
-        marginLeft: `${spacings.FULL}rem`,
-        marginRight: `${spacings.FULL}rem`,
+        marginInline: `${spacings.FULL}rem`,
       },
       [mq.GROUP_2_MIN_WIDTH]: {
-        width: `${pixelsToRem(280)}rem`,
-        marginLeft: `${spacings.DOUBLE}rem`,
-        marginRight: '0',
+        marginInline: `${spacings.DOUBLE}rem`,
       },
-      [mq.GROUP_3_ONLY]: {
+      [mq.GROUP_3_MIN_WIDTH]: {
         width: `${pixelsToRem(280)}rem`,
-        marginLeft: `${spacings.DOUBLE}rem`,
-        marginRight: '0',
-      },
-      [mq.GROUP_4_MIN_WIDTH]: {
-        width: `${pixelsToRem(280)}rem`,
-        marginLeft: 0,
-        marginRight: 0,
       },
     }),
 };

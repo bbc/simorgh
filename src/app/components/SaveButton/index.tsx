@@ -29,7 +29,7 @@ const SaveButton = ({
 
   return (
     <button
-      css={(theme: Theme) => styles.buttonWrapper(theme)}
+      css={styles.buttonWrapper}
       type="button"
       onClick={onClick}
       disabled={disabled || isLoading}

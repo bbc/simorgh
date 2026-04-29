@@ -50,7 +50,7 @@ const SaveArticleButton = ({
   };
 
   return (
-    <div css={(theme: Theme) => styles.buttonWrapper(theme)}>
+    <div css={styles.buttonWrapper}>
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
