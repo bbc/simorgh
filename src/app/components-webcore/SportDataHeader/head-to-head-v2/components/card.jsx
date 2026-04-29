@@ -9,8 +9,7 @@ import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 // import redcard from '@bbc/web-assets/static/sport/football/red-card.svg';
 // import secondyellowcard from '@bbc/web-assets/static/sport/football/second-yellow-card.svg';
 
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 // in the original implementation, this is an img element with empty alt text and accepts a URL to the svg as an src.
 const CardWrapper = styled.span`

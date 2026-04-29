@@ -21,7 +21,7 @@ const shortNamesMap = team => {
     'West Ham United': 'West Ham',
     'Wolverhampton Wanderers': 'Wolves',
     'Unknown FC': 'Unknown',
-    TBC: 'TBC'
+    TBC: 'TBC',
   };
   return map[team] || map;
 };

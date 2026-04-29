@@ -15,12 +15,12 @@ import { css } from '@emotion/react';
 
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 // eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 // import { fixedHeightConciseView } from '../helpers/concise-styles.jsx';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const TeamNameWrapper = styled.div`
   display: flex;

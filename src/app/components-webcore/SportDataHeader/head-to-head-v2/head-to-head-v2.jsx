@@ -11,9 +11,7 @@ import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
-
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../utilities/pixelsToRem';
 
 const StyledHeadToHeadWrapper = styled.div`
   background: ${({ isConciseView }) =>

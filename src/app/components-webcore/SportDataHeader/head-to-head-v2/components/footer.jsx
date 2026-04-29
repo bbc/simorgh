@@ -13,7 +13,7 @@ import styled from '@emotion/styled';
 // import { getStyledLineColour } from '../helpers/colour-styles.js';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const StyledFooter = styled.div`
   font-size: 14px;
@@ -52,12 +52,12 @@ const AttendanceValue = styled.div`
 `;
 
 const VenueLabel = styled.span`
-  color: #A8A8A8;
+  color: #a8a8a8;
   padding-right: 4px;
 `;
 
 const AttendanceLabel = styled.span`
-  color: #A8A8A8;
+  color: #a8a8a8;
   padding-right: 4px;
 `;
 

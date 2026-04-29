@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 
 // eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 import Card from './card.jsx';
 

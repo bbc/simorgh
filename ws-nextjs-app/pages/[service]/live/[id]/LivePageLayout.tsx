@@ -9,6 +9,8 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
+import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
 import isLiveEnv from '#app/lib/utilities/isLive';
@@ -19,11 +21,9 @@ import {
 import Stream from './Stream';
 import Header from './Header';
 import KeyPoints from './KeyPoints';
-import HeadToHeadV2 from './SportDataHeader/head-to-head-v2';
 import styles from './styles';
 import { StreamResponse } from './Post/types';
 import { KeyPointsResponse } from './KeyPoints/types';
-import { HeadToHeadV2Data } from './SportDataHeader/head-to-head-v2/types';
 import LatestPostButton from './LatestPostButton';
 
 interface LivePromoImage {

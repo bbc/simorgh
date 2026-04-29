@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { getImage } from './badges-map';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../../utilities/pixelsToRem';
 
 const BadgeContainer = styled.div`
   display: flex;

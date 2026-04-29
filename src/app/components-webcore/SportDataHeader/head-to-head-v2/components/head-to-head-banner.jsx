@@ -6,13 +6,13 @@ import { css } from '@emotion/react';
 
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 // eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import Team from './team.jsx';
 import Centre from './centre.jsx';
 import MatchProgress from './match-progress.jsx';
 import PenaltyScores from './penalty-scores.jsx';
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 export const GridContainer = styled.div`
   display: grid;

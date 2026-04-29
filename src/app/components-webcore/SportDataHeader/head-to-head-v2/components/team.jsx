@@ -15,7 +15,7 @@ import { css } from '@emotion/react';
 import SportBadge from './sport-badge/index.js';
 import TeamName from './team-name.jsx';
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const StyledTeam = styled.div`
   display: flex;

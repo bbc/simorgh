@@ -22,8 +22,7 @@ import styled from '@emotion/styled';
 // } from '../helpers/colour-styles.js';
 // import { fixedHeightConciseView } from '../helpers/concise-styles.jsx';
 
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const HOME_SCORE = 'home_score';
 const VERTICAL_LINE = 'vertical_line';

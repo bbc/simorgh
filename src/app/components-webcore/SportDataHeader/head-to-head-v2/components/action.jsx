@@ -15,7 +15,7 @@ import styled from '@emotion/styled';
 import ActionsTime from './actions-time.jsx';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const StyledAction = styled.li`
   ${'' /* ${fontEmphasised} */}

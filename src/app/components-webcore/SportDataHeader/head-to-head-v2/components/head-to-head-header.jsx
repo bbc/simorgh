@@ -13,7 +13,7 @@ import { css } from '@emotion/react';
 // } from '@bbc/web-gel-foundations';
 import { isLiveStatus } from '../helpers/event-status-groups';
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -57,7 +57,7 @@ const DateHeader = styled.div`
 `;
 
 const Interpunct = styled.div`
-  color: #A8A8A8;
+  color: #a8a8a8;
 
   display: none;
   @media (min-width: ${pixelsToRem(600)}rem) {
@@ -73,7 +73,7 @@ const TournamentHeader = styled.div`
 `;
 
 const Date = styled.time`
-  color: #A8A8A8;
+  color: #a8a8a8;
   flex-shrink: 0;
 `;
 

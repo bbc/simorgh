@@ -26,14 +26,14 @@ export const SUPPORTED_TOURNAMENT_URNS = {
     // Women's international tournaments
     'urn:bbc:sportsdata:rugby-union:tournament:womens-six-nations',
     'urn:bbc:sportsdata:rugby-union:tournament:womens-international-match',
-    'urn:bbc:sportsdata:rugby-union:tournament:womens-world-cup'
+    'urn:bbc:sportsdata:rugby-union:tournament:womens-world-cup',
   ],
   basketball: [
     'urn:bbc:sportsdata:basketball:tournament:nba',
     'urn:bbc:sportsdata:basketball:tournament:bbl',
     'urn:bbc:sportsdata:basketball:tournament:bbl-cup',
-    'urn:bbc:sportsdata:basketball:tournament:bbl-trophy'
+    'urn:bbc:sportsdata:basketball:tournament:bbl-trophy',
   ],
   'american-football': ['urn:bbc:sportsdata:american-football:tournament:nfl'],
-  'ice-hockey': ['urn:bbc:sportsdata:ice-hockey:tournament:nhl']
+  'ice-hockey': ['urn:bbc:sportsdata:ice-hockey:tournament:nhl'],
 };

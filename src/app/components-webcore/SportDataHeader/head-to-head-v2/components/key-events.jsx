@@ -11,7 +11,7 @@ import Action from './action.jsx';
 import { GRID_AREAS } from './action-grid.jsx';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const KeyEventsStyles = css`
   padding: 0 16px;

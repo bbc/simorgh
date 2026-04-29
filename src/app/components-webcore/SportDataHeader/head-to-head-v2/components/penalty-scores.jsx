@@ -14,11 +14,9 @@ import styled from '@emotion/styled';
 // } from '@bbc/web-gel-foundations';
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 
-// eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const PenaltyScoresContainer = styled.div`
   font-size: 1rem;

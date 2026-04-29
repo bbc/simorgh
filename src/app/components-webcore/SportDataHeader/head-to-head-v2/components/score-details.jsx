@@ -4,8 +4,7 @@ import styled from '@emotion/styled';
 
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 
-// eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 // import {
 //   fontScaleDescription,
@@ -16,8 +15,7 @@ import VisuallyHiddenText from '../../../../../../../../src/app/components/Visua
 // } from '@bbc/web-gel-foundations';
 import { GRID_AREAS } from './action-grid.jsx';
 
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const ScoreDetailsWrapper = styled.div`
   grid-area: ${GRID_AREAS.centreText};

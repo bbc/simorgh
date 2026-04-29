@@ -18,8 +18,7 @@ import {
 import Time from './fixture-time';
 import Score from './score';
 
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 // ensures team names / badges line up down the page across "HH:mm", "TBC", single-digit and double-digit scores
 // it is acceptable for the badges/team names to be spaced more widely for triple-digit+ scores, as these are very rare

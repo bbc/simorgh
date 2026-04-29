@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 // import { GROUP_3, createSize } from '@bbc/web-gel-foundations';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 export const GRID_AREAS = {
   homeText: 'home_text',

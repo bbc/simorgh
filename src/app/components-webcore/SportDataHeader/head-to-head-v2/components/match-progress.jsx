@@ -16,7 +16,7 @@ import { shouldShowScores } from './centre.jsx';
 import Period from './period.jsx';
 
 // eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 const MatchProgressWrapper = styled.div`
   display: flex;

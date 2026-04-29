@@ -21,10 +21,10 @@ import styled from '@emotion/styled';
 // import { fixedHeightConciseView } from '../helpers/concise-styles.jsx';
 
 // eslint-disable-next-line import/no-relative-packages
-import VisuallyHiddenText from '../../../../../../../../src/app/components/VisuallyHiddenText';
+import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
 // eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../../../../../src/app/utilities/pixelsToRem';
+import pixelsToRem from '../../../../utilities/pixelsToRem';
 
 const StyledTime = styled.time`
   display: flex;
