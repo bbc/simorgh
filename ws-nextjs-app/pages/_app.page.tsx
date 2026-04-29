@@ -96,10 +96,11 @@ export default class CustomApp extends App<Props> {
         ? (navResult.value?.data?.items ?? null)
         : null;
 
-    const requestHeaders = ctx.req?.headers;
-    const idctaResult = await getIdctaConfig(toggles, service, requestHeaders);
+    const cookieHeader = ctx.req?.headers?.cookie;
+    const idctaResult = await getIdctaConfig(toggles, service, cookieHeader);
     const pageType =
       (ctx.req?.headers['page-type'] as PageTypes) || derivePageType(asPath);
+
     const serverSideExperiments = getServerExperiments({
       headers: ctx.req?.headers || {},
       service,

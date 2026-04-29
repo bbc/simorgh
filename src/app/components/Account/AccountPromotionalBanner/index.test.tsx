@@ -1,5 +1,4 @@
 import userEvent from '@testing-library/user-event';
-import Cookie from 'js-cookie';
 import {
   render,
   screen,
@@ -7,10 +6,6 @@ import {
 import type { IdctaConfig } from '#app/models/types/account';
 import useToggle from '#app/hooks/useToggle';
 import AccountPromotionalBanner from '.';
-import {
-  ACCOUNT_BANNER_DISMISS_COOKIE,
-  ACCOUNT_BANNER_LAST_DISMISS_COOKIE,
-} from './utilities';
 
 const idctaConfig: IdctaConfig = {
   'id-availability': 'GREEN',
@@ -20,7 +15,6 @@ const idctaConfig: IdctaConfig = {
   settings_url: 'https://example.com/settings',
   signout_url: 'https://example.com/signout',
   foryou_url: 'https://example.com/foryou',
-  initialIsSignedIn: false,
   identity: {
     idSignedInCookieName: 'ckns_id',
   },
@@ -28,24 +22,15 @@ const idctaConfig: IdctaConfig = {
 
 jest.mock('#app/hooks/useToggle');
 
-const renderWithProviders = (
-  idctaOverrides: Partial<IdctaConfig> = {},
-  isAccountPromoBannerVisible = true,
-) =>
+const renderWithProviders = (idctaOverrides: Partial<IdctaConfig> = {}) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
-    idctaConfig: {
-      ...idctaConfig,
-      initialIsAccountPromoBannerVisible: isAccountPromoBannerVisible,
-      ...idctaOverrides,
-    },
+    idctaConfig: { ...idctaConfig, ...idctaOverrides },
   });
 
 describe('AccountPromotionalBanner', () => {
   beforeEach(() => {
     (useToggle as jest.Mock).mockReturnValue({ enabled: true });
-    Cookie.remove(ACCOUNT_BANNER_DISMISS_COOKIE);
-    Cookie.remove(ACCOUNT_BANNER_LAST_DISMISS_COOKIE);
   });
 
   it('renders when signed out and IDCTA is available', async () => {
@@ -111,35 +96,5 @@ describe('AccountPromotionalBanner', () => {
     expect(
       screen.queryByRole('heading', { name: 'Discover your BBC' }),
     ).not.toBeInTheDocument();
-  });
-
-  it('does not render when banner has been previously dismissed', () => {
-    renderWithProviders({}, false);
-
-    expect(
-      screen.queryByRole('heading', { name: 'Discover your BBC' }),
-    ).not.toBeInTheDocument();
-  });
-
-  it('writes dismissal cookies when the close button is clicked', async () => {
-    const user = userEvent.setup();
-    const cookieSetSpy = jest.spyOn(Cookie, 'set');
-    renderWithProviders();
-
-    const closeButton = await screen.findByRole('button', { name: /close/i });
-    await user.click(closeButton);
-
-    expect(cookieSetSpy).toHaveBeenCalledWith(
-      ACCOUNT_BANNER_DISMISS_COOKIE,
-      '1',
-      expect.any(Object),
-    );
-    expect(cookieSetSpy).toHaveBeenCalledWith(
-      ACCOUNT_BANNER_LAST_DISMISS_COOKIE,
-      expect.any(String),
-      expect.any(Object),
-    );
-
-    cookieSetSpy.mockRestore();
   });
 });

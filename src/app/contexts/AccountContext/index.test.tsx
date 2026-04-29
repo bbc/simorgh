@@ -1,12 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { use } from 'react';
+import onClient from '#app/lib/utilities/onClient';
 import { IdctaConfig } from '#app/models/types/account';
+import Cookie from 'js-cookie';
 import { AccountContext } from '.';
 import {
   render,
   screen,
   waitFor,
 } from '../../components/react-testing-library-with-providers';
+
+jest.mock('#app/lib/utilities/onClient');
 
 const mockIdctaConfig = {
   'id-availability': 'GREEN',
@@ -17,11 +21,15 @@ const mockIdctaConfig = {
   foryou_url: 'https://example.com/foryou',
   unavailable_url: 'https://example.com/unavailable',
   initialIsSignedIn: true,
+  identity: {
+    idSignedInCookieName: 'ckns_id',
+  },
 } as IdctaConfig;
 
 describe('AccountContext', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    (onClient as jest.Mock).mockReturnValue(true);
 
     delete (window as any).location;
     window.location = { href: 'https://example.com/current-page' } as any;
@@ -166,6 +174,21 @@ describe('AccountContext', () => {
     const context = JSON.parse(testEl.textContent as string);
 
     expect(context.isSignedIn).toBe(false);
+  });
+
+  it('should set isSignedIn to true when ckns_id cookie is present', () => {
+    jest.spyOn(Cookie, 'get').mockReturnValue('ckns_id_cookie_value' as any);
+
+    render(<TestComponent />, {
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+      service: 'hindi',
+    });
+
+    const testEl = screen.getByTestId('test-component');
+    const context = JSON.parse(testEl.textContent as string);
+
+    expect(Cookie.get).toHaveBeenCalledWith('ckns_id');
+    expect(context.isSignedIn).toBe(true);
   });
 
   it('should handle null initialConfig gracefully', () => {

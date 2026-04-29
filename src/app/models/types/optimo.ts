@@ -106,9 +106,6 @@ export type ArticleMetadata = {
     readTime?: number;
     wordCount?: number;
   };
-  locators?: {
-    canonicalUrl?: string;
-  };
 };
 
 export type ArticleContent = {

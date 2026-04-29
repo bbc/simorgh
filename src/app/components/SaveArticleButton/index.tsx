@@ -1,64 +1,60 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { useContext } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { Article } from '#app/models/types/optimo';
-import SaveButton from '../SaveButton';
 import styles from './index.styles';
 
-export interface SaveArticleButtonProps {
+interface SaveArticleButtonProps {
   articleId: string;
   articleTitle: string;
-  articlePageData?: Article;
 }
+
+/** A button component that allows users to save an article for later reading,
+ * showing the button based on user sign in status and feature toggles,
+ * and displaying the saved status, loading state, and handling errors from the UAS API.
+ * FUTURE TODO : Implement button click handler to toggle saved state */
 
 const SaveArticleButton = ({
   articleId,
   articleTitle,
-  articlePageData,
 }: SaveArticleButtonProps) => {
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
       articleId,
       articleTitle,
-      articlePageData,
     });
 
-  const { translations } = useContext(ServiceContext);
-  const { saveArticleButton } = translations || {};
+  if (!showButton) {
+    return null;
+  }
+  // TODO : Labels and text will be updated in a future PR to support translations and figma designs
+  const buttonLabel = isSaved ? 'Remove from saved' : 'Save for later';
 
-  if (!showButton) return null;
+  const getButtonText = () => {
+    if (isLoading) return 'Loading...';
+    return isSaved ? 'Remove from saved' : 'Save for later';
+  };
 
-  if (!saveArticleButton) return null;
-
+  // TODO : Will modify based on future error handling implementation,
   if (error) {
     // eslint-disable-next-line no-console
     console.log('Error fetching saved status for article:', {
       articleId,
       error,
     });
+    // return null;
   }
 
-  const buttonLabel = isSaved
-    ? saveArticleButton.saved
-    : saveArticleButton.save;
-
-  const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
-
-  const handleClick = () => {
-    handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
-  };
-
   return (
-    <div css={styles.buttonWrapper}>
-      <SaveButton
-        onClick={handleClick}
-        isLoading={isLoading}
-        isSaved={isSaved}
-        disabled={isLoading}
-        buttonText={buttonText}
-        removeText={saveArticleButton.remove}
-      />
-    </div>
+    <button
+      css={styles.buttonWrapper}
+      type="button"
+      onClick={() =>
+        handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE)
+      }
+      disabled={isLoading}
+      aria-label={buttonLabel}
+      title={buttonLabel}
+    >
+      {getButtonText()}
+    </button>
   );
 };
 

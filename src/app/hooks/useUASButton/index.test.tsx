@@ -171,9 +171,6 @@ describe('useUASButton', () => {
             service: 'hindi',
             articleId: '123',
             title: 'Test Article',
-            promoImage: '',
-            promoImageAltText: '',
-            locatorUrl: '',
           },
         },
       });

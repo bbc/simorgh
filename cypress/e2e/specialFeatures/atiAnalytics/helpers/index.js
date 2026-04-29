@@ -62,38 +62,33 @@ export const COMPONENTS = {
 
 export const interceptATIAnalyticsBeacons = () => {
   const atiUrl = new URL(envs.atiUrl).origin;
-  const reverbAtiUrl = new URL(envs.reverbAtiUrl).origin;
-
-  const viewabilityHosts = Array.from(new Set([reverbAtiUrl, atiUrl]));
 
   // Component Views & Clicks - Viewability Model
-  viewabilityHosts.forEach(collectionDomains => {
-    Object.values(COMPONENTS).forEach(component => {
-      cy.intercept('GET', `${collectionDomains}/**`, request => {
-        const { query } = request;
-        const viewabilityModelString = query.events;
-        if (viewabilityModelString) {
-          const isViewEvent = viewabilityModelString.includes(
-            `"event":{"category":"viewability","action":"view"}`,
-          );
-          const isClickEvent = viewabilityModelString.includes(
-            `"event":{"category":"viewability","action":"select"}`,
-          );
+  Object.values(COMPONENTS).forEach(component => {
+    cy.intercept('GET', `${atiUrl}/**`, request => {
+      const { query } = request;
+      const viewabilityModelString = query.events;
+      if (viewabilityModelString) {
+        const isViewEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"view"}`,
+        );
+        const isClickEvent = viewabilityModelString.includes(
+          `"event":{"category":"viewability","action":"select"}`,
+        );
 
-          const containsExpectedComponent = viewabilityModelString.includes(
-            `"name":"${component}`,
-          );
+        const containsExpectedComponent = viewabilityModelString.includes(
+          `"name":"${component}`,
+        );
 
-          if (isViewEvent && containsExpectedComponent) {
-            request.alias = `${component}-viewability-view`;
-            request.reply({ statusCode: 200 });
-          }
-          if (isClickEvent && containsExpectedComponent) {
-            request.alias = `${component}-viewability-click`;
-            request.reply({ statusCode: 200 });
-          }
+        if (isViewEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-view`;
+          request.reply({ statusCode: 200 });
         }
-      });
+        if (isClickEvent && containsExpectedComponent) {
+          request.alias = `${component}-viewability-click`;
+          request.reply({ statusCode: 200 });
+        }
+      }
     });
   });
 
@@ -113,7 +108,7 @@ export const interceptATIAnalyticsBeacons = () => {
   // REVERB - Page View (only fires once per page visit)
   cy.intercept(
     {
-      url: `${reverbAtiUrl}/*`,
+      url: `${atiUrl}/*`,
       query: {
         x8: 'simorgh',
       },

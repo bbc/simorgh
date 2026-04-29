@@ -26,9 +26,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    const { container } = render(<SaveArticleButton {...defaultProps} />, {
-      service: 'hindi',
-    });
+    const { container } = render(<SaveArticleButton {...defaultProps} />);
     expect(container.firstChild).toBeNull();
   });
 
@@ -40,11 +38,11 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    render(<SaveArticleButton {...defaultProps} />);
     expect(screen.getByRole('button')).toHaveTextContent('Save for later');
   });
 
-  it('renders "Saved to My News" when saved', () => {
+  it('renders "Remove from saved" when saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: true,
@@ -52,8 +50,8 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-    expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
+    render(<SaveArticleButton {...defaultProps} />);
+    expect(screen.getByRole('button')).toHaveTextContent('Remove from saved');
   });
 
   it('renders loading state and disables button', () => {
@@ -64,10 +62,10 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    render(<SaveArticleButton {...defaultProps} />);
     const button = screen.getByRole('button');
 
-    expect(button).toHaveTextContent('Saving');
+    expect(button).toHaveTextContent('Loading...');
     expect(button).toBeDisabled();
   });
 
@@ -79,7 +77,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    render(<SaveArticleButton {...defaultProps} />);
     screen.getByRole('button').click();
 
     expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
@@ -94,7 +92,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    render(<SaveArticleButton {...defaultProps} />);
 
     expect(mockedUseUASButton).toHaveBeenCalledWith({
       articleId: '123',

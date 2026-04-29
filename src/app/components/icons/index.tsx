@@ -177,20 +177,12 @@ export const Calculator = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const Close = ({
-  className,
-  width = '12',
-  height = '12',
-}: {
-  className?: string;
-  width?: string;
-  height?: string;
-}) => (
+export const Close = ({ className }: { className?: string }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 32 32"
-    width={width}
-    height={height}
+    width="12"
+    height="12"
     className={className}
     focusable="false"
     aria-hidden="true"
@@ -251,7 +243,6 @@ export const UpArrowIcon = () => (
     <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
   </svg>
 );
-
 export const DownArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -279,53 +270,6 @@ export const AccountIcon = ({ className }: { className?: string }) => (
       fillRule="evenodd"
       d="M16 17.5a7.88 7.88 0 0 1-8-7.75A7.88 7.88 0 0 1 16 2a7.88 7.88 0 0 1 8 7.75 7.88 7.88 0 0 1-8 7.75M2 30c0-5.883 7.519-10 14.014-10C22.48 20 30 24.12 30 29.994c0 .005-28 .007-28 .005"
     />
-  </svg>
-);
-
-export const BookmarkIcon = ({ className }: { className?: string }) => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 18 18"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path
-      d="M11.25 1.25V15.375L6.25 12.5625L1.25 15.375V1.25H11.25ZM12.5 0H0V17.5L6.25 14L12.5 17.5V0Z"
-      fillRule="evenodd"
-    />
-  </svg>
-);
-
-export const FilledBookmarkIcon = ({ className }: { className?: string }) => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 18 18"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-    focusable="false"
-  >
-    <path
-      d="M3.75 1.25V18.75L9.625 15.4375L10 15.25L10.375 15.4375L16.25 18.75V1.25H3.75Z"
-      fillRule="evenodd"
-    />
-  </svg>
-);
-
-export const Spinner = ({ className }: { className?: string }) => (
-  <svg
-    viewBox="0 0 32 32"
-    width="20"
-    height="20"
-    className={className}
-    focusable="false"
-    aria-hidden="true"
-  >
-    <path d="m29 8.3-2.5 1.5c1.1 1.8 1.6 3.9 1.6 6.2 0 6.9-5.3 12.2-12.1 12.2-6.9 0-12.1-5.3-12.1-12.2S9.1 3.8 16 3.8V1C7.5 1 1 7.5 1 16s6.5 15 15 15 15-6.5 15-15c0-2.9-.7-5.5-2-7.7" />
   </svg>
 );
 

@@ -4,7 +4,6 @@ export type EnvironmentConfigType = {
   assetUrl: string;
   assetOrigin: string;
   atiUrl: string;
-  reverbAtiUrl: string;
   avEmbedBaseUrlCanonical: string;
   avEmbedBaseUrlAmp: string;
   standaloneErrorPages: boolean;
@@ -21,7 +20,6 @@ const config = {
     assetUrl: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public',
     assetOrigin: 'https://news.files.bbci.co.uk',
     atiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
-    reverbAtiUrl: 'https://a1.api.bbc.co.uk/hit.xiti?',
     avEmbedBaseUrlCanonical: '',
     avEmbedBaseUrlAmp: 'https://web-cdn.api.bbci.co.uk',
     standaloneErrorPages: false,
@@ -34,7 +32,6 @@ const config = {
     assetUrl: 'https://static.test.files.bbci.co.uk/ws/simorgh-assets/public',
     assetOrigin: 'https://news.test.files.bbci.co.uk',
     atiUrl: 'https://logws1363.ati-host.net/hit.xiti?',
-    reverbAtiUrl: 'https://logw363.ati-host.net/hit.xiti?',
     avEmbedBaseUrlCanonical: '',
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: false,
@@ -47,7 +44,6 @@ const config = {
     assetUrl: 'http://localhost:7080',
     assetOrigin: 'http://localhost:7080',
     atiUrl: 'https://logws1363.ati-host.net/hit.xiti?',
-    reverbAtiUrl: 'https://logw363.ati-host.net/hit.xiti?',
     avEmbedBaseUrlCanonical: 'https://www.test.bbc.com',
     avEmbedBaseUrlAmp: 'https://web-cdn.test.api.bbci.co.uk',
     standaloneErrorPages: true,
