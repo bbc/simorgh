@@ -270,6 +270,7 @@ describe('cspHeader', () => {
       ].sort(),
       imgSrcExpectation: [
         ...bbcDomains,
+        'https://logw363.ati-host.net',
         'https://*.adsafeprotected.com',
         'https://logws1363.ati-host.net',
         'https://*.cdninstagram.com',
@@ -356,6 +357,7 @@ describe('cspHeader', () => {
       ].sort(),
       imgSrcExpectation: [
         ...bbcDomains,
+        'https://logw363.ati-host.net',
         'https://ping.chartbeat.net',
         'https://logws1363.ati-host.net',
         'http://ping.chartbeat.net',
