@@ -7,13 +7,14 @@ const spinAnimation = keyframes({
 });
 
 const styles = {
-  buttonWrapper: ({ palette, spacings, fontVariants }: Theme) =>
+  buttonWrapper: ({ palette, spacings, fontVariants, fontSizes }: Theme) =>
     css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       height: '2.75rem',
       ...fontVariants.sansBold,
+      ...fontSizes.pica,
       gap: `${spacings.FULL}rem`,
       whiteSpace: 'nowrap',
       width: '100%',
