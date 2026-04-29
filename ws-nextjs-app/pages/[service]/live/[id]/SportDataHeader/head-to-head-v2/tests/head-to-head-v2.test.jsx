@@ -52,7 +52,7 @@ const renderHeadToHead = async data => {
   return renderResult;
 };
 
-// skipped - we do not support consise view in MVP
+// skipped - we do not support concise view in MVP
 describe.each([true, false])('head to head concise view %s', isConciseView => {
   test.skip('renders the component of PreEvent status with data', () => {
     const { queryByText, getAllByText, queryAllByText } = renderComponent(

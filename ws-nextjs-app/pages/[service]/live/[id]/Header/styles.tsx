@@ -41,7 +41,7 @@ export default {
     }),
   backgroundColorSportData: ({ palette }: Theme) =>
     css({
-      backgroundColor: palette.GREY_16, // non-consise view background colour - MVP
+      backgroundColor: palette.GREY_16, // non-concise view background colour - MVP
     }),
   contentContainer: ({ mq, gridWidths }: Theme) =>
     css({

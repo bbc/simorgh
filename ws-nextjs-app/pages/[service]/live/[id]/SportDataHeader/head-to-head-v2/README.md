@@ -1,3 +1,7 @@
+## Lift and Shift component
+
+This component was lifted and shifted from Public Service. Some of the files do not meet our component standards.
+
 ## Props
 
 | Argument       |          Type          | Required | Description                                                       |
