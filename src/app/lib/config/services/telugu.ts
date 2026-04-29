@@ -149,7 +149,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ఓకే',
           reject: 'ఏం మార్పులు చేశామో తెలుసుకోండి',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
+          rejectUrl: 'https://www.bbc.com/telugu/articles/c3dljr4ynzyo',
         },
         cookie: {
           amp: {
@@ -318,7 +318,7 @@ export const service: DefaultServiceConfig = {
           text: 'బీబీసీ గురించి',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/telugu/articles/c3dljr4ynzyo',
           text: 'ప్రైవసీ పాలసీ',
         },
         {
