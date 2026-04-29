@@ -284,7 +284,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
