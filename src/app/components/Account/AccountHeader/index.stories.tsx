@@ -21,6 +21,7 @@ const withProviders =
             signInUrl: 'https://example.com/signin',
             forYouUrl: 'https://example.com/for-you',
             isIdctaAvailable: true,
+            isAccountPromoBannerVisible: true,
           }}
         >
           <BrandContainer>

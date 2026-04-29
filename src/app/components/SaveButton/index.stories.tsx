@@ -14,11 +14,11 @@ type WithProvidersArgs = {
 };
 
 const withProviders =
-  ({ 
-    isLoading = false, 
-    disabled = false, 
+  ({
+    isLoading = false,
+    disabled = false,
     isSaved = false,
-    buttonText = 'Save article', 
+    buttonText = 'Save article',
     removeText,
   }: WithProvidersArgs) =>
   () => (
@@ -33,6 +33,7 @@ const withProviders =
             settingsUrl: undefined,
             signOutUrl: undefined,
             forYouUrl: undefined,
+            isAccountPromoBannerVisible: true,
           }}
         >
           <SaveButton
@@ -71,5 +72,3 @@ export const Saved = withProviders({
   isSaved: true,
   removeText: 'Remove',
 });
-
-
