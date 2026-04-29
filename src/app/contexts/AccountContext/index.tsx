@@ -20,13 +20,11 @@ export const AccountContext = createContext<AccountContextProps>(
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
-  initialIsAccountPromoBannerVisible?: boolean;
 };
 
 export const AccountProvider = ({
   children,
   initialConfig,
-  initialIsAccountPromoBannerVisible = true,
 }: PropsWithChildren<AccountProviderProps>) => {
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
@@ -71,6 +69,9 @@ export const AccountProvider = ({
   const isSignedIn =
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
+  const isAccountPromoBannerVisible =
+    initialConfig?.initialIsAccountPromoBannerVisible ?? true;
+
   const value = useMemo(
     () => ({
       isIdctaAvailable,
@@ -80,7 +81,7 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
-      isAccountPromoBannerVisible: initialIsAccountPromoBannerVisible,
+      isAccountPromoBannerVisible,
     }),
     [
       forYouUrl,
@@ -90,7 +91,7 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
-      initialIsAccountPromoBannerVisible,
+      isAccountPromoBannerVisible,
     ],
   );
 

@@ -34,8 +34,11 @@ const renderWithProviders = (
 ) =>
   render(<AccountPromotionalBanner />, {
     service: 'ws',
-    idctaConfig: { ...idctaConfig, ...idctaOverrides },
-    isAccountPromoBannerVisible,
+    idctaConfig: {
+      ...idctaConfig,
+      initialIsAccountPromoBannerVisible: isAccountPromoBannerVisible,
+      ...idctaOverrides,
+    },
   });
 
 describe('AccountPromotionalBanner', () => {

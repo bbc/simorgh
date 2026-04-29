@@ -40,7 +40,6 @@ interface Props extends PropsWithChildren {
   pageLang?: string;
   isUK?: boolean | null;
   idctaConfig?: IdctaConfig | null;
-  isAccountPromoBannerVisible?: boolean;
 }
 
 const AllTheProviders: FC<Props> = ({
@@ -64,7 +63,6 @@ const AllTheProviders: FC<Props> = ({
   isNextJs = false,
   isUK = null,
   idctaConfig = null,
-  isAccountPromoBannerVisible = true,
 }: Props) => {
   return (
     <ToggleContextProvider toggles={toggles}>
@@ -90,10 +88,7 @@ const AllTheProviders: FC<Props> = ({
           statusCode={statusCode}
           isUK={isUK}
         >
-          <AccountProvider
-            initialConfig={idctaConfig}
-            initialIsAccountPromoBannerVisible={isAccountPromoBannerVisible}
-          >
+          <AccountProvider initialConfig={idctaConfig}>
             <EventTrackingContextProvider atiData={atiData}>
               <UserContextProvider>
                 <ThemeProvider service={service} variant={variant}>
@@ -133,7 +128,6 @@ const customRender = (
     pageLang,
     isUK,
     idctaConfig,
-    isAccountPromoBannerVisible,
   } = options || {};
 
   return render(ui, {
@@ -159,7 +153,6 @@ const customRender = (
         pageLang={pageLang}
         isUK={isUK}
         idctaConfig={idctaConfig}
-        isAccountPromoBannerVisible={isAccountPromoBannerVisible}
       >
         {children}
       </AllTheProviders>
