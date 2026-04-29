@@ -19,7 +19,7 @@ export const HeadToHeadV2ConciseComponent = args => {
   } = args;
 
   // Swapped out a PS function for moment.
-  const matchDate = moment(date).locale('en').format('d MMM YYYY');
+  const matchDate = moment(date).locale('en').format('D MMM YYYY');
   const day = new Date(date).toLocaleString('en-gb', { weekday: 'short' });
   const matchTime = moment(date).locale('en').format('HH:mm');
 
@@ -102,7 +102,7 @@ export const HeadToHeadV2Component = args => {
     onwardJourneyLink,
   } = args;
   // Swapped out a PS function for moment.
-  const matchDate = moment(date).locale('en').format('d MMM YYYY');
+  const matchDate = moment(date).locale('en').format('D MMM YYYY');
   const day = new Date(date).toLocaleString('en-gb', { weekday: 'short' });
   const matchTime = moment(date).locale('en').format('HH:mm');
 
