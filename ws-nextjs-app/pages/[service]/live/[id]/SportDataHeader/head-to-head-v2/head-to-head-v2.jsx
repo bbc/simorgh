@@ -3,7 +3,7 @@
 import styled from '@emotion/styled';
 // import { fontStandard, GROUP_3, SPACING_2 } from '@bbc/web-gel-foundations';
 // import { shouldShowTeamBadges } from '@bbc/web-sport-utils';
-import shouldShowTeamBadges from './helpers/badges/should-show-team-badges';
+// import shouldShowTeamBadges from './helpers/badges/should-show-team-badges';
 
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
@@ -55,7 +55,8 @@ export const HeadToHeadV2 = ({
 }) => {
   const hasActions =
     data?.home?.actions?.length > 0 || data?.away?.actions?.length > 0;
-  const shouldHideBadges = !shouldShowTeamBadges(data.tournament?.urn);
+  // const shouldHideBadges = !shouldShowTeamBadges(data.tournament?.urn);
+  const shouldHideBadges = true; // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
 
   return (
     <StyledHeadToHeadWrapper status={data.status} isConciseView={isConciseView}>
