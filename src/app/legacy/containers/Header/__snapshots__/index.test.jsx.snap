@@ -847,6 +847,7 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -913,11 +914,11 @@ exports[`Header Snapshots should render correctly for WS TV page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -2182,6 +2183,7 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -2248,11 +2250,11 @@ exports[`Header Snapshots should render correctly for WS on demand audio page 1`
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -3517,6 +3519,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -3583,11 +3586,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >
@@ -4852,6 +4855,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   <div>
     <div
       class="emotion-0 emotion-1"
+      id="consent-banner"
     >
       <div
         class="emotion-2 emotion-3"
@@ -4918,11 +4922,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       class="emotion-16 emotion-17 emotion-18"
     >
       <div
-        class="emotion-19 emotion-20"
+        class="brand-svg-wrapper emotion-19 emotion-20"
       >
         <a
           aria-labelledby="BrandLink-topPage"
-          class="focusIndicatorRemove emotion-21 emotion-22"
+          class="brand-link focusIndicatorRemove emotion-21 emotion-22"
           href="/news"
           id="topPage"
         >

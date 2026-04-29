@@ -9,51 +9,57 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 describe('SaveArticleButton', () => {
   const defaultProps = {
     articleId: '123',
-    service: 'hindi',
+    articleTitle: 'Test Article Title',
   };
+
+  const mockHandleSaveAction = jest.fn();
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  test('does not render button when showButton is false', () => {
+  it('does not render button when showButton is false', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: false,
       isSaved: false,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     const { container } = render(<SaveArticleButton {...defaultProps} />);
     expect(container.firstChild).toBeNull();
   });
 
-  test('renders "Save for later" when not saved', () => {
+  it('renders "Save for later" when not saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
     expect(screen.getByRole('button')).toHaveTextContent('Save for later');
   });
 
-  test('renders "Remove from saved" when saved', () => {
+  it('renders "Remove from saved" when saved', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: true,
       isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
     expect(screen.getByRole('button')).toHaveTextContent('Remove from saved');
   });
 
-  test('renders loading state and disables button', () => {
+  it('renders loading state and disables button', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
       isLoading: true,
+      handleSaveAction: mockHandleSaveAction,
     });
 
     render(<SaveArticleButton {...defaultProps} />);
@@ -61,5 +67,36 @@ describe('SaveArticleButton', () => {
 
     expect(button).toHaveTextContent('Loading...');
     expect(button).toBeDisabled();
+  });
+
+  it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />);
+    screen.getByRole('button').click();
+
+    expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
+    expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
+  });
+
+  it('passes title to useUASButton hook', () => {
+    mockedUseUASButton.mockReturnValue({
+      showButton: true,
+      isSaved: false,
+      isLoading: false,
+      handleSaveAction: mockHandleSaveAction,
+    });
+
+    render(<SaveArticleButton {...defaultProps} />);
+
+    expect(mockedUseUASButton).toHaveBeenCalledWith({
+      articleId: '123',
+      articleTitle: 'Test Article Title',
+    });
   });
 });

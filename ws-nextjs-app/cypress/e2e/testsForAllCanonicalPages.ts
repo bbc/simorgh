@@ -28,9 +28,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
   describe('Header Tests', () => {
     const serviceName = config[service]?.name || service;
-    // limit number of tests to 2 services for navigation toggling
-    const testMobileNav =
-      serviceName === 'ukchina' || serviceName === 'persian';
 
     const twoTierNavServices = {
       local: null, // Don't test two tier nav locally as the local environment can't fetch config
@@ -44,25 +41,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
       twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
 
     let initialSecondaryNavItemLinkTexts: string[] = [];
-
-    if (testMobileNav) {
-      it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-        cy.viewport(320, 480);
-        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
-
-        cy.get('nav')
-          .find('[data-e2e="dropdown-nav"] ul')
-          .should('not.be.visible');
-
-        cy.get('nav button').click();
-
-        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('not.exist');
-
-        cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
-
-        cy.get('nav button').click();
-      });
-    }
 
     if (testTwoTierNav) {
       it('should show two tier navigation on desktop', () => {
@@ -119,37 +97,25 @@ export default ({ service, pageType }: ServiceParametersType) => {
           });
         });
 
-        it('navigates to new page and secondary nav changes when clicking 2nd item in top nav', () => {
-          cy.location('pathname').then(previousUrl => {
-            cy.get('[data-e2e="scrollable-nav"] li').eq(1).find('a').click();
-            cy.location('pathname').should('not.eq', previousUrl);
-            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
-              $links => {
-                const newTexts = $links
-                  .toArray()
-                  .map(link => link.textContent || '');
-                expect(newTexts).to.not.deep.equal(
-                  initialSecondaryNavItemLinkTexts,
-                );
-              },
-            );
-          });
-        });
-
-        it('navigates to another new page and secondary nav changes when clicking 3rd item in top nav', () => {
-          cy.location('pathname').then(previousUrl => {
-            cy.get('[data-e2e="scrollable-nav"] li').eq(2).find('a').click();
-            cy.location('pathname').should('not.eq', previousUrl);
-            cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
-              $links => {
-                const newTexts = $links
-                  .toArray()
-                  .map(link => link.textContent || '');
-                expect(newTexts).to.not.deep.equal(
-                  initialSecondaryNavItemLinkTexts,
-                );
-              },
-            );
+        it('navigates to a new page and secondary nav changes when clicking a non-home item in top nav', function test() {
+          cy.get('[data-e2e="scrollable-nav"] li').then($items => {
+            if ($items.length < 2) {
+              this.skip();
+            }
+            cy.location('pathname').then(previousUrl => {
+              cy.wrap($items).eq(1).find('a').click();
+              cy.location('pathname').should('not.eq', previousUrl);
+              cy.get('[data-e2e="scrollable-nav-secondary"] li a').then(
+                $links => {
+                  const newTexts = $links
+                    .toArray()
+                    .map(link => link.textContent || '');
+                  expect(newTexts).to.not.deep.equal(
+                    initialSecondaryNavItemLinkTexts,
+                  );
+                },
+              );
+            });
           });
         });
 

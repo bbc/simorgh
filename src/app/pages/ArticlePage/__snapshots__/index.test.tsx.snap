@@ -35,6 +35,12 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   padding-bottom: 1.5rem;
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 .emotion-3 [id="continue-reading-button"]~* {
   display: none;
 }
@@ -775,6 +781,10 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
   z-index: 1;
 }
 
+.emotion-31:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-31 {
     font-size: 1.125rem;
@@ -1151,6 +1161,12 @@ exports[`Article Page should render a news article correctly 1`] = `
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .emotion-3 [id="continue-reading-button"]~* {
@@ -1952,6 +1968,10 @@ exports[`Article Page should render a news article correctly 1`] = `
   z-index: 1;
 }
 
+.emotion-35:visited {
+  color: #6E6E73;
+}
+
 @media (min-width: 25rem) {
   .emotion-35 {
     font-size: 1.125rem;
@@ -2694,6 +2714,12 @@ exports[`Article Page should render a news article with headline in the middle c
   padding-bottom: 1.5rem;
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 .emotion-3 [id="continue-reading-button"]~* {
   display: none;
 }
@@ -3095,6 +3121,12 @@ exports[`Article Page should render a news article without headline correctly 1`
   padding-bottom: 1.5rem;
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 .emotion-3 [id="continue-reading-button"]~* {
   display: none;
 }
@@ -3336,6 +3368,12 @@ exports[`Article Page should render a rtl article (persian) with most read corre
 
 .emotion-3 {
   padding-bottom: 1.5rem;
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .emotion-3 [id="continue-reading-button"]~* {
@@ -4076,6 +4114,10 @@ exports[`Article Page should render a rtl article (persian) with most read corre
   top: 0;
   white-space: nowrap;
   z-index: 1;
+}
+
+.emotion-31:visited {
+  color: #6E6E73;
 }
 
 @media (min-width: 25rem) {

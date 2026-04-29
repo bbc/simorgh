@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import uasApiRequest from '#app/lib/uasApi';
-import { buildGlobalId, ACTIVITY_TYPE } from '#app/lib/uasApi/uasUtility';
+import { buildGlobalId, FAVOURITES_CONFIG } from '#app/lib/uasApi/uasUtility';
 import { HTTP_NO_CONTENT } from '#app/lib/statusCodes.const';
 
 /** A hook that fetches an article’s saved status from the UAS API,
@@ -10,6 +10,7 @@ interface UseUASFetchSaveStatusReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
+  setIsSaved: (value: boolean) => void;
 }
 
 const useUASFetchSaveStatus = (
@@ -29,10 +30,14 @@ const useUASFetchSaveStatus = (
 
       try {
         const globalId = buildGlobalId(articleId);
-        const response = await uasApiRequest('GET', ACTIVITY_TYPE, {
-          globalId,
-          signal: abortController.signal,
-        });
+        const response = await uasApiRequest(
+          'GET',
+          FAVOURITES_CONFIG.activityType,
+          {
+            globalId,
+            signal: abortController.signal,
+          },
+        );
 
         // If response is successful and not 204 (No Content), article is saved
         // 204 means no content found - article not saved
@@ -60,7 +65,7 @@ const useUASFetchSaveStatus = (
     };
   }, [articleId]);
 
-  return { isSaved, isLoading, error };
+  return { isSaved, isLoading, error, setIsSaved };
 };
 
 export default useUASFetchSaveStatus;

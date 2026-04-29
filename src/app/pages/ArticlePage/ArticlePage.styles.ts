@@ -63,6 +63,10 @@ export default {
     css({
       paddingBottom: `${spacings.TRIPLE}rem`,
 
+      [mq.GROUP_3_ONLY]: {
+        paddingBottom: `${spacings.FULL}rem`,
+      },
+
       // Hide content after Continue Reading button
       '[id="continue-reading-button"] ~ *': {
         display: 'none',

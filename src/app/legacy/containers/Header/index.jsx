@@ -86,6 +86,8 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
     </SkipLink>
   );
 
+  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+
   let shouldRenderScriptSwitch = false;
 
   if (scriptLink) {
@@ -102,8 +104,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
   }
 
   if (isApp) return null;
-
-  const shouldUseNewNav = SERVICES_WITH_NEW_NAV.includes(service);
+  const headerBrandCss = shouldUseNewNav ? styles.headerBrand : null;
 
   const NavigationComponent = shouldUseNewNav
     ? NewNavigationContainer
@@ -117,7 +118,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           linkId="brandLink"
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={shouldUseNewNav ? styles.headerBrand : null}
+          css={headerBrandCss}
         >
           <AccountHeader />
         </Header>
@@ -126,7 +127,7 @@ const HeaderContainer = ({ navItems, propsForTopBarOJComponent }) => {
           brandRef={brandRef}
           skipLink={skipLink}
           scriptLink={shouldRenderScriptSwitch && <ScriptLink />}
-          css={shouldUseNewNav ? styles.headerBrand : null}
+          css={headerBrandCss}
         >
           <AccountHeader />
         </Header>

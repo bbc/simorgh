@@ -10,12 +10,13 @@ import {
   AUDIO_PAGE,
   TV_PAGE,
   MOST_READ_PAGE,
+  LIVE_RADIO_PAGE,
 } from '#app/routes/utils/pageTypes';
 import derivePageType from '.';
 
 describe('derivePageType', () => {
   it('should strip out query params from the pathname', () => {
-    const pathname = '/pidgin/live/xxxxxxxxx?foo=bar';
+    const pathname = '/pidgin/live/cew7pxl4p4xt?foo=bar';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
@@ -32,14 +33,20 @@ describe('derivePageType', () => {
     expect(result).toEqual(HOME_PAGE);
   });
 
-  it("should return LIVE_PAGE if pathname includes 'live'", () => {
-    const pathname = '/pidgin/live/xxxxxxxxx';
+  it("should return LIVE_PAGE if pathname is a TIPO ID and includes 'live'", () => {
+    const pathname = '/pidgin/live/cew7pxl4p4xt';
     const result = derivePageType(pathname);
     expect(result).toEqual(LIVE_PAGE);
   });
 
-  it("should return UGC_PAGE if pathname includes 'send'", () => {
-    const pathname = '/pidgin/send/xxxxxxxxx';
+  it("should return LIVE_PAGE if pathname is a CPS ID and includes 'live'", () => {
+    const pathname = '/zhongwen/live/68720252/simp';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_PAGE);
+  });
+
+  it("should return UGC_PAGE if pathname is a UGC ID and includes 'send'", () => {
+    const pathname = '/pidgin/send/u50853489';
     const result = derivePageType(pathname);
     expect(result).toEqual(UGC_PAGE);
   });
@@ -80,6 +87,12 @@ describe('derivePageType', () => {
     expect(result).toEqual(AUDIO_PAGE);
   });
 
+  it('should return AUDIO_PAGE if pathname includes `programmes`', () => {
+    const pathname = '/arabic/bbc_arabic_radio/programmes/p02pc9qc';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(AUDIO_PAGE);
+  });
+
   it('should return TV_PAGE for on demand tv brand paths', () => {
     const pathname = '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw';
     const result = derivePageType(pathname);
@@ -102,6 +115,12 @@ describe('derivePageType', () => {
     const pathname = '/pidgin/popular/read';
     const result = derivePageType(pathname);
     expect(result).toEqual(MOST_READ_PAGE);
+  });
+
+  it('should return LIVE_RADIO_PAGE if pathname includes live-radio', () => {
+    const pathname = '/hausa/bbc_hausa_radio/liveradio';
+    const result = derivePageType(pathname);
+    expect(result).toEqual(LIVE_RADIO_PAGE);
   });
 
   it('should return Unknown if pathname does not include live or send', () => {

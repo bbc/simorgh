@@ -109,7 +109,7 @@ const getTimestampComponent =
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
     articleId: string,
-    service: string,
+    articleTitle: string,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -143,7 +143,7 @@ const getTimestampComponent =
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
-          service={service}
+          articleTitle={articleTitle}
         />
       </>
     );
@@ -217,7 +217,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     showRelatedTopics,
     brandName,
     translations,
-    service,
   } = use(ServiceContext);
 
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
@@ -229,6 +228,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const {
     palette: { GREY_2 },
   } = useTheme();
+
+  // test experiment to verify if page views are being tracked correctly
+  const testPageViewsExperimentName = 'test_page_views_aa';
+  const testPageViewsVariant = useOptimizelyVariation({
+    experimentName: testPageViewsExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
 
   // time of day 2 experiment for articles
   const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
@@ -250,6 +256,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           experimentVariant,
         }
       : null;
+
+  const testPageViewsExperimentProps = getActiveExperimentProps(
+    testPageViewsExperimentName,
+    testPageViewsVariant,
+  );
 
   const timeOfDayExperimentProps = getActiveExperimentProps(
     timeOfDayArticleExperimentName,
@@ -317,11 +328,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       experimentName: timeOfDayExperimentProps.experimentName,
       experimentVariant: timeOfDayExperimentProps.experimentVariant,
     }),
+    ...(testPageViewsExperimentProps && {
+      experimentName: testPageViewsExperimentProps.experimentName,
+      experimentVariant: testPageViewsExperimentProps.experimentVariant,
+    }),
   };
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-      articlePortraitVideoEnabled,
+    articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -343,10 +358,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      hasContinueReadingBlock &&
-      continueReadingButtonToggle,
+    !isLite &&
+    !isApp &&
+    hasContinueReadingBlock &&
+    continueReadingButtonToggle,
   );
 
   const componentsToRender = {
@@ -365,7 +380,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       readTimeValue,
       translations.readTime,
       articleId,
-      service,
+      headline,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -420,11 +435,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      !isPGL &&
-      isAdaptiveTimeOfDayVariant &&
-      mediaCurationContent?.summaries?.length,
+    !isLite &&
+    !isApp &&
+    !isPGL &&
+    isAdaptiveTimeOfDayVariant &&
+    mediaCurationContent?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner

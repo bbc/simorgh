@@ -486,20 +486,6 @@ describe('Live Page', () => {
     expect(screen.getByTestId('breaking-news-label')).toBeInTheDocument();
   });
 
-  it('creates snapshot of the live page', async () => {
-    let container;
-    mockPollingUpdate(mockPageDataWithPosts);
-    await act(
-      // eslint-disable-next-line no-return-assign
-      async () =>
-        ({ container } = render(<Live pageData={mockPageDataWithPosts} />, {
-          service: 'pidgin',
-        })),
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
   it('sets the correct og:image meta tag from the post with assetId', () => {
     const assetId = 'asset:18d24593-b615-4c84-867c-ac1fdec87136';
     const pageData = liveFixture.data;

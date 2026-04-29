@@ -156,7 +156,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ओके',
           reject: 'पाहा नेमकं काय बदललंय',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
+          rejectUrl: 'https://www.bbc.com/marathi/articles/cy824e4er3zo',
         },
         cookie: {
           amp: {
@@ -323,7 +323,7 @@ export const service: DefaultServiceConfig = {
           text: 'वापराच्या अटी',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/marathi/articles/cy824e4er3zo',
           text: 'गोपनीयतेचं धोरण',
         },
         {

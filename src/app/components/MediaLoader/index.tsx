@@ -226,7 +226,7 @@ const MediaLoader = ({
   uniqueId,
   eventMapping,
 }: Props) => {
-  const { lang, service, translations } = use(ServiceContext);
+  const { lang, service, translations, defaultImage } = use(ServiceContext);
   const { pageIdentifier } = use(EventTrackingContext);
   const { enabled: adsEnabled } = useToggle('preroll');
 
@@ -264,6 +264,7 @@ const MediaLoader = ({
     adsEnabled,
     showAdsBasedOnLocation,
     embedded,
+    defaultImage,
   });
 
   if (!config) return null;

@@ -28,6 +28,7 @@ import parseRoute from '../parseRoute';
 
 const removeLeadingSlash = (path: string) => path?.replace(/^\/+/g, '');
 export const removeRendererExtension = (path: string) => path.split('.')[0];
+
 export const getArticleId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}o)/)?.[1];
 const getCpsId = (path: string) => removeLeadingSlash(path);
@@ -35,11 +36,15 @@ const getTVAudioId = (path: string) => removeLeadingSlash(path);
 export const getTipoId = (path: string) =>
   path.match(/(c[a-zA-Z0-9]{10,}t)/)?.[1];
 const getUgcId = (path: string) => path.match(/(u[a-zA-Z0-9]{8,})/)?.[1];
+
+export const isUgcIdCheck = (path: string) =>
+  /\/send\/(u[a-zA-Z0-9]{8,})/.test(path);
 export const isOptimoIdCheck = (path: string) =>
   /\/(articles|sgeulachdan|erthyglau)\/(c[a-zA-Z0-9]{10,}o)/.test(path);
 export const isCpsIdCheck = (path: string) =>
-  /([0-9]{5,9}|[a-z0-9\-_]+-[0-9]{5,9})$/.test(path);
-const isTipoIdCheck = (path: string) => /(c[a-zA-Z0-9]{10,}t)/.test(path);
+  /[a-z0-9\-_]*[0-9]{5,9}[a-z0-9\-_]*(\/[a-z]+)?$/.test(path);
+export const isTipoIdCheck = (path: string) =>
+  /(c[a-zA-Z0-9]{10,}t)/.test(path);
 
 interface GetIdProps {
   pageType: PageTypes;
@@ -294,9 +299,14 @@ const constructPageFetchUrl = ({
         );
         break;
       }
-      case LIVE_RADIO_PAGE:
-        fetchUrl = Url(`${pathname}`);
+      case LIVE_RADIO_PAGE: {
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local${pathname}`);
+        } else {
+          fetchUrl = Url(`${pathname}`);
+        }
         break;
+      }
       case LIVE_TV_PAGE: {
         fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);
         break;

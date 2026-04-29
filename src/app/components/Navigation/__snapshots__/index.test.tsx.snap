@@ -87,6 +87,7 @@ exports[`Navigation should correctly render amp navigation 1`] = `
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -973,6 +974,7 @@ exports[`Navigation should correctly render amp navigation on a URL not associat
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -1770,6 +1772,7 @@ exports[`Navigation should correctly render amp navigation on non-home navigatio
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -2650,6 +2653,7 @@ exports[`Navigation should correctly render canonical navigation 1`] = `
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -3518,6 +3522,7 @@ exports[`Navigation should correctly render canonical navigation on a URL not as
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
@@ -4297,6 +4302,7 @@ exports[`Navigation should correctly render canonical navigation on non-home nav
   justify-content: space-between;
   position: relative;
   z-index: 0;
+  background-color: #B80000;
 }
 
 .emotion-7::before {
