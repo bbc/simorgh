@@ -167,7 +167,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ઓકે',
           reject: 'જાણો, શું ફેરફારો થયા છે',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
+          rejectUrl: 'https://www.bbc.com/gujarati/articles/crk1k5j5xzzo',
         },
         cookie: {
           amp: {
@@ -335,7 +335,7 @@ export const service: DefaultServiceConfig = {
           text: 'બીબીસી વિશે',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/gujarati/articles/crk1k5j5xzzo',
           text: 'પ્રાઇવસી પૉલિસી',
         },
         {

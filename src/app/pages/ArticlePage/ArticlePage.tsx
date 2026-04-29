@@ -33,7 +33,7 @@ import {
   getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
-import filterForBlockType from '#lib/utilities/blockHandlers';
+import extractPromoImage from '#lib/utilities/extractPromoImage';
 import RelatedTopics from '#app/components/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import InlinePodcastPromo from '#containers/PodcastPromo/Inline';
@@ -110,6 +110,7 @@ const getTimestampComponent =
     readTimeTranslations: Translations['readTime'],
     articleId: string,
     articleTitle: string,
+    articlePageData?: Article,
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
@@ -144,6 +145,7 @@ const getTimestampComponent =
         <SaveArticleButton
           articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
+          articlePageData={articlePageData}
         />
       </>
     );
@@ -229,6 +231,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     palette: { GREY_2 },
   } = useTheme();
 
+  // test experiment to verify if page views are being tracked correctly
+  const testPageViewsExperimentName = 'test_page_views_aa';
+  const testPageViewsVariant = useOptimizelyVariation({
+    experimentName: testPageViewsExperimentName,
+    experimentType: ExperimentType.CLIENT_SIDE,
+  });
+
   // time of day 2 experiment for articles
   const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
   const timeOfDayArticleVariant = useOptimizelyVariation({
@@ -249,6 +258,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           experimentVariant,
         }
       : null;
+
+  const testPageViewsExperimentProps = getActiveExperimentProps(
+    testPageViewsExperimentName,
+    testPageViewsVariant,
+  );
 
   const timeOfDayExperimentProps = getActiveExperimentProps(
     timeOfDayArticleExperimentName,
@@ -316,6 +330,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       experimentName: timeOfDayExperimentProps.experimentName,
       experimentVariant: timeOfDayExperimentProps.experimentVariant,
     }),
+    ...(testPageViewsExperimentProps && {
+      experimentName: testPageViewsExperimentProps.experimentName,
+      experimentVariant: testPageViewsExperimentProps.experimentVariant,
+    }),
   };
 
   const showPortraitVideoCarousel = Boolean(
@@ -348,6 +366,16 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     continueReadingButtonToggle,
   );
 
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
+
+  const { altText: promoImageAltText, rawBlock: promoImageRawBlock } =
+    extractPromoImage(promoImageBlocks);
+
+  const promoImage = (
+    promoImageRawBlock?.model as { locator?: string } | undefined
+  )?.locator;
+
   const componentsToRender = {
     visuallyHiddenHeadline,
     headline: getHeadlineComponent,
@@ -365,6 +393,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       translations.readTime,
       articleId,
       headline,
+      pageData,
     ),
     social: SocialEmbedContainer,
     embed: UnsupportedEmbed,
@@ -399,20 +428,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const articleBlocks = startsWithHeading
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
-
-  const promoImageBlocks =
-    pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
-
-  const promoImageAltTextBlock = filterForBlockType(
-    promoImageBlocks,
-    'altText',
-  );
-
-  const promoImageRawBlock = filterForBlockType(promoImageBlocks, 'rawImage');
-  const promoImageAltText =
-    promoImageAltTextBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
-
-  const promoImage = promoImageRawBlock?.model?.locator;
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');

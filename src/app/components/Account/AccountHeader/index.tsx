@@ -8,13 +8,13 @@ import styles from './index.styles';
 
 const AccountHeader = () => {
   const isHydrated = useHydrationDetection();
-  const { isSignedIn, signInUrl, forYouUrl, isIdctaAvailable } =
+  const { isSignedIn, signInUrl, settingsUrl, isIdctaAvailable } =
     use(AccountContext);
   const { translations } = use(ServiceContext);
 
   if (!isHydrated || !isIdctaAvailable) return null;
 
-  const href = isSignedIn ? forYouUrl : signInUrl;
+  const href = isSignedIn ? settingsUrl : signInUrl;
   const label = isSignedIn
     ? translations?.account?.forYou
     : translations?.account?.signIn;
