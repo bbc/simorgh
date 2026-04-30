@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 // eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 
-import Card from './card.jsx';
+import Card from './card';
 
 const goalTypesHandled = {
   Penalty: 'pen',
@@ -33,6 +33,7 @@ const ActionsTime = ({ player }) => {
   return (
     <>
       {times.map((time, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <span aria-hidden key={index}>
           <TextBlock>
             {index === 0 && '('}

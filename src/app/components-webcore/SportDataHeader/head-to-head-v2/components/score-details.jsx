@@ -13,7 +13,7 @@ import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 //   SPACING_2,
 //   SPACING_3,
 // } from '@bbc/web-gel-foundations';
-import { GRID_AREAS } from './action-grid.jsx';
+import { GRID_AREAS } from './action-grid';
 
 import pixelsToRem from '../../../../utilities/pixelsToRem';
 
@@ -66,9 +66,9 @@ const ScoreDetails = ({
   );
   const shouldDisplayFT = Boolean(
     homeRunningScores?.fulltime &&
-      awayRunningScores?.fulltime &&
-      homeRunningScores?.extratime &&
-      awayRunningScores?.extratime,
+    awayRunningScores?.fulltime &&
+    homeRunningScores?.extratime &&
+    awayRunningScores?.extratime,
   );
 
   if (!shouldDisplayFT && !shouldDisplayHT) {

@@ -12,8 +12,8 @@ import { css } from '@emotion/react';
 //   SPACING_2,
 //   SPACING_5,
 // } from '@bbc/web-gel-foundations';
-import SportBadge from './sport-badge/index.js';
-import TeamName from './team-name.jsx';
+import SportBadge from './sport-badge/index';
+import TeamName from './team-name';
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../utilities/pixelsToRem';
 

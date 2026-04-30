@@ -7,8 +7,8 @@ import { css } from '@emotion/react';
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 // import { GROUP_3, SPACING_4 } from '@bbc/web-gel-foundations';
 // import Heading from '@bbc/web-components/heading/index.js';
-import Action from './action.jsx';
-import { GRID_AREAS } from './action-grid.jsx';
+import Action from './action';
+import { GRID_AREAS } from './action-grid';
 
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../utilities/pixelsToRem';

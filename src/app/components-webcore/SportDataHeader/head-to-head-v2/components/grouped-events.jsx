@@ -18,7 +18,7 @@ import styled from '@emotion/styled';
 //   createSize
 // } from '@bbc/web-gel-foundations';
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
-import { ActionGrid, GRID_AREAS } from './action-grid.jsx';
+import { ActionGrid, GRID_AREAS } from './action-grid';
 
 // eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
@@ -111,6 +111,7 @@ const Actions = ({ teamActions, teamAccessibleActions }) => {
   return teamActions.join(', ');
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
   <GroupedEventsWrapper>
     {groupedEvents.map(

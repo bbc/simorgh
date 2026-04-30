@@ -1,10 +1,11 @@
 // import React from 'react';
 
-import { GroupedEvents } from './grouped-events.jsx';
-import { ActionGrid } from './action-grid.jsx';
-import ScoreDetails from './score-details.jsx';
-import { KeyEvents } from './key-events.jsx';
+import { GroupedEvents } from './grouped-events';
+import { ActionGrid } from './action-grid';
+import ScoreDetails from './score-details';
+import { KeyEvents } from './key-events';
 
+// eslint-disable-next-line import/prefer-default-export
 export const Actions = ({ data }) => {
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];

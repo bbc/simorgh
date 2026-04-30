@@ -11,9 +11,9 @@ import { css } from '@emotion/react';
 //   SPACING_2,
 // } from '@bbc/web-gel-foundations';
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
-import { isInProgressStatus } from '../helpers/event-status-groups.js';
-import { shouldShowScores } from './centre.jsx';
-import Period from './period.jsx';
+import { isInProgressStatus } from '../helpers/event-status-groups';
+import { shouldShowScores } from './centre';
+import Period from './period';
 
 // eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';

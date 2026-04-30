@@ -7,10 +7,10 @@ import { css } from '@emotion/react';
 // import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
 // eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import Team from './team.jsx';
-import Centre from './centre.jsx';
-import MatchProgress from './match-progress.jsx';
-import PenaltyScores from './penalty-scores.jsx';
+import Team from './team';
+import Centre from './centre';
+import MatchProgress from './match-progress';
+import PenaltyScores from './penalty-scores';
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../utilities/pixelsToRem';
 
@@ -81,6 +81,7 @@ const ItemWrapper = ({
       >
         <TeamHome data-participant-id={data.home.id}>
           <Team
+            // eslint-disable-next-line react/jsx-curly-brace-presence
             alignment={'home'}
             name={data.home.fullName}
             shortName={data.home.shortName}
@@ -102,6 +103,7 @@ const ItemWrapper = ({
         </Scores>
         <TeamAway data-participant-id={data.away.id}>
           <Team
+            // eslint-disable-next-line react/jsx-curly-brace-presence
             alignment={'away'}
             name={data.away.fullName}
             shortName={data.away.shortName}

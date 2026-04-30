@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/prefer-default-export
 export const SPORT_EVENT_STATUS = {
   PreEvent: 'PreEvent',
   MidEvent: 'MidEvent',

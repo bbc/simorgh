@@ -26,4 +26,5 @@ const shortNamesMap = team => {
   return map[team] || map;
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export { shortNamesMap };

@@ -12,7 +12,7 @@ import styled from '@emotion/styled';
 //   SPACING_2,
 //   SPACING_3
 // } from '@bbc/web-gel-foundations';
-import ActionsTime from './actions-time.jsx';
+import ActionsTime from './actions-time';
 
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../utilities/pixelsToRem';
@@ -55,6 +55,7 @@ const StyledUl = styled.ul`
 const Action = ({ contestantActions, alignment }) => (
   <StyledUl alignment={alignment}>
     {contestantActions.map((player, index) => (
+      // eslint-disable-next-line react/no-array-index-key
       <StyledAction key={index} alignment={alignment}>
         <span role="text">{player.playerName} </span>
         <ActionsTime player={player} />
