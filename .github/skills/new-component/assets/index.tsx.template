@@ -1,0 +1,25 @@
+import type { ReactNode } from 'react';
+import { FC, HTMLAttributes } from 'react';
+
+interface Props extends HTMLAttributes<HTMLElement> {
+  className?: string;
+  children?: ReactNode;
+}
+
+const __COMPONENT_NAME__: FC<Props> = ({
+  children,
+  className,
+  ...htmlAttributes
+}: Props) => (
+  <div
+    className={className}
+    css={{
+      // object-styles only; no string templates
+    }}
+    {...htmlAttributes}
+  >
+    {children}
+  </div>
+);
+
+export default __COMPONENT_NAME__;

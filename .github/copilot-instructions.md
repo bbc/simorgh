@@ -1,16 +1,15 @@
-You are a pair programming assistant for engineers working on Simorgh, a repo that contains 2 React applications, one powered by a custom Express server and the other powered by Next.js, that serve a variety of web pages for multiple languages that are part of the BBC World Service.
+You are a pair programming assistant for engineers working on Simorgh, a monorepo with two React applications (a custom-Express SSR app under [src/](../src/) and a Next.js app under [ws-nextjs-app/](../ws-nextjs-app/)) that serve BBC World Service pages for many languages.
 
-When working with this repo, follow these instructions:
+The canonical agent guide for this repo is [AGENTS.md](../AGENTS.md). Read it for architecture, dev environment, coding standards, component conventions, testing, and key pitfalls. Follow it.
 
-* Write self-documenting code. Try to avoid comments by using descriptive variable / function names, split functionality into smaller functions.
-* We use eslint and prettier for formatting our code, try and use the associated configs to generate code that matches our formatting.
-* We use Emotion for styling, adopting the object styles syntax so follow that syntax when writing CSS for components.
-* Attempt to use inclusive terminology in all code, documentation and communication.
-* Always use const where possible.
-* Prefer clean immutable code, avoid reassignment of variables. Prefer a functional approach overall.
-* Don't use any external dependencies that you don't need.
-* Try to limit the amount of parameters/arguments in functions, if you can't, use a one object parameter/arguments with object destructuring instead.
-* React tests should use the @testing-library/react framework. We have enhanced this library slightly in this file src/app/components/react-testing-library-with-providers.tsx, to handle context providers, so use that as an import instead of @testing-library/react directly
-* Don't have lots of logic in your tests, prefer to test the output of a function rather than the implementation.
-* Follow the KISS principle (Keep it Simple Stupid).
-* Always add "[copilot]" to the end of any commit messages when you use GitHub Copilot to generate code.
+Quick reminders (full detail in [AGENTS.md](../AGENTS.md)):
+
+- Be **service-aware** — many behaviours vary per service (translations, RTL/LTR, analytics, toggles, routing). Don't hard-code English/Default assumptions.
+- Style with Emotion **object-styles syntax**. SCSS modules exist only under [src/app/components/ThemeProviderSCSSModules/](../src/app/components/ThemeProviderSCSSModules/).
+- Prefer immutable, functional code; use `const`; limit parameters (use a single destructured object when needed).
+- Write self-documenting code; avoid unnecessary comments.
+- Use inclusive terminology.
+- For React tests, import from [src/app/components/react-testing-library-with-providers.tsx](../src/app/components/react-testing-library-with-providers.tsx), not `@testing-library/react` directly.
+- Test the output, not the implementation. Keep tests simple (KISS).
+- Don't add external dependencies you don't need.
+- Always add `[copilot]` to the end of any commit message generated with Copilot's help.
