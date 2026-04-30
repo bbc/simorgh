@@ -309,6 +309,7 @@ exports[`AmpMostRead should render as expected 1`] = `
             >
               <span
                 class="emotion-5"
+                data-e2e="most-read-rank"
               >
                 {{rankTranslation}}
               </span>
