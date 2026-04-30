@@ -26,7 +26,7 @@ jest.mock('#app/lib/utilities/isLive', () => ({
   default: jest.fn(() => false),
 }));
 
-jest.mock('./SportDataHeader/head-to-head-v2', () => ({
+jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
     ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
