@@ -931,6 +931,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 1
               </span>
@@ -972,6 +973,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 2
               </span>
@@ -1013,6 +1015,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 3
               </span>
@@ -1054,6 +1057,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 4
               </span>
@@ -1095,6 +1099,7 @@ exports[`Article Page should render a ltr article (pidgin) with most read correc
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 5
               </span>
@@ -2277,6 +2282,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 1
               </span>
@@ -2318,6 +2324,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 2
               </span>
@@ -2359,6 +2366,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 3
               </span>
@@ -2400,6 +2408,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 4
               </span>
@@ -2441,6 +2450,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 5
               </span>
@@ -2482,6 +2492,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 6
               </span>
@@ -2523,6 +2534,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 7
               </span>
@@ -2564,6 +2576,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 8
               </span>
@@ -2605,6 +2618,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 9
               </span>
@@ -2646,6 +2660,7 @@ exports[`Article Page should render a news article correctly 1`] = `
             >
               <span
                 class="emotion-33"
+                data-e2e="most-read-rank"
               >
                 10
               </span>
@@ -4380,6 +4395,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۱
               </span>
@@ -4421,6 +4437,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۲
               </span>
@@ -4462,6 +4479,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۳
               </span>
@@ -4503,6 +4521,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۴
               </span>
@@ -4544,6 +4563,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۵
               </span>
@@ -4585,6 +4605,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۶
               </span>
@@ -4626,6 +4647,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۷
               </span>
@@ -4667,6 +4689,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۸
               </span>
@@ -4708,6 +4731,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۹
               </span>
@@ -4749,6 +4773,7 @@ exports[`Article Page should render a rtl article (persian) with most read corre
             >
               <span
                 class="emotion-29"
+                data-e2e="most-read-rank"
               >
                 ۱۰
               </span>

@@ -697,6 +697,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                   >
                     <span
                       class="emotion-20"
+                      data-e2e="most-read-rank"
                     >
                       1
                     </span>
@@ -738,6 +739,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                   >
                     <span
                       class="emotion-20"
+                      data-e2e="most-read-rank"
                     >
                       2
                     </span>
@@ -779,6 +781,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                   >
                     <span
                       class="emotion-20"
+                      data-e2e="most-read-rank"
                     >
                       3
                     </span>
@@ -820,6 +823,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                   >
                     <span
                       class="emotion-20"
+                      data-e2e="most-read-rank"
                     >
                       4
                     </span>
@@ -861,6 +865,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
                   >
                     <span
                       class="emotion-20"
+                      data-e2e="most-read-rank"
                     >
                       5
                     </span>
