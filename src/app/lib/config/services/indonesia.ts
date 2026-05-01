@@ -83,6 +83,10 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lihat semua',
       home: 'Berita',
+      topicDiscovery: {
+        heading: 'Temukan lebih banyak',
+        moreFrom: 'Selengkapnya dari',
+      },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',

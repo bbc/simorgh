@@ -36,6 +36,18 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     setTopicPromos(multipleTopicsFixture?.[activeTabId]?.data?.items || []);
   }, [activeTabId]);
 
+  const getMoreFromText = () => {
+    const moreFrom = translations.topicDiscovery?.moreFrom;
+    const topicTitleFirst = translations.topicDiscovery?.topicTitleFirst;
+    if (!moreFrom) {
+      return `More from ${activeTopic?.topicName}`;
+    }
+    if (topicTitleFirst) {
+      return `${activeTopic?.topicName} ${moreFrom}`;
+    }
+    return `${moreFrom} ${activeTopic?.topicName}`;
+  };
+
   if (!topics || topics.length === 0) return null;
 
   return (
@@ -64,10 +76,9 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
           summaries={topicPromos}
           eventTrackingData={eventTrackingData}
         />
-        <a
-          css={styles.moreFromLink}
-          href={activeTopic?.topicUrl}
-        >{`More from ${activeTopic?.topicName}`}</a>
+        <a css={styles.moreFromLink} href={activeTopic?.topicUrl}>
+          {getMoreFromText()}
+        </a>
       </div>
     </section>
   );

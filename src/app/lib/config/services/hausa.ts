@@ -82,6 +82,10 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Duba su baki daya',
       home: 'Labaran Duniya',
       continueReading: 'Ci gaba da karantawa',
+      topicDiscovery: {
+        heading: 'Gano ƙarin abubuwa',
+        moreFrom: 'Ƙarin labarai daga',
+      },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',

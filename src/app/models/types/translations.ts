@@ -70,6 +70,8 @@ export interface Translations {
   continueReading?: string;
   topicDiscovery?: {
     heading: string;
+    moreFrom: string;
+    topicTitleFirst?: boolean;
   };
   readTime?: Partial<{
     readTimePrefix: string;

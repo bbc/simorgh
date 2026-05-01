@@ -143,6 +143,10 @@ export const service: SerbianConfig = {
       },
       seeAll: 'Pogledajte sve',
       home: 'Glavna stranica',
+      topicDiscovery: {
+        heading: 'Otkrijte više',
+        moreFrom: 'Više iz',
+      },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
@@ -534,6 +538,10 @@ export const service: SerbianConfig = {
       },
       seeAll: 'Погледајте све',
       home: 'Главна страница',
+      topicDiscovery: {
+        heading: 'Откријте више',
+        moreFrom: 'Више из',
+      },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
       relatedContent: 'Повезано',
