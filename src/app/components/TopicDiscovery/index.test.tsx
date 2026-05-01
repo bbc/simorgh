@@ -15,7 +15,7 @@ describe('TopicDiscovery', () => {
     });
 
     expect(
-      screen.getByRole('heading', { name: 'Tópicos relacionados' }),
+      screen.getByRole('heading', { name: 'Descubra mais' }),
     ).toBeInTheDocument();
   });
 
