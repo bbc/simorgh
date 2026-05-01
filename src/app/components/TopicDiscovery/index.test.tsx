@@ -160,7 +160,7 @@ describe('TopicDiscovery', () => {
       viewTrackerSpy.mockRestore();
     });
 
-    it('should call useClickTrackerHandler with topic-discovery component name and preventNavigation', () => {
+    it('should call useClickTrackerHandler with topic-discovery-tab-<id> component name and preventNavigation', () => {
       const clickTrackerSpy = jest
         .spyOn(clickTracking, 'default')
         .mockImplementation(() => ({ onClick: jest.fn() }));
@@ -173,9 +173,13 @@ describe('TopicDiscovery', () => {
         { service: 'portuguese' },
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'topic-discovery',
+      const expectedCalls = topicDiscoveryFixture.topics.map(topic => ({
+        componentName: `topic-discovery-tab-${topic.topicId}`,
         preventNavigation: true,
+      }));
+
+      expectedCalls.forEach(expectedCall => {
+        expect(clickTrackerSpy).toHaveBeenCalledWith(expectedCall);
       });
 
       clickTrackerSpy.mockRestore();
