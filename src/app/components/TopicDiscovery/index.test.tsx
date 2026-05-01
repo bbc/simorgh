@@ -90,6 +90,14 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
+  it('should not render when there are no valid topics', () => {
+    const { container } = render(<TopicDiscovery topics={[]} />, {
+      service: 'portuguese',
+    });
+
+    expect(container).toBeEmptyDOMElement();
+  });
+
   describe('analytics', () => {
     it('should call useViewTracker with topic-discovery component name', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');

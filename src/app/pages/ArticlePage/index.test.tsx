@@ -1354,13 +1354,27 @@ describe('Article Page', () => {
       jest.resetAllMocks();
     });
 
+    const data = {
+      ...articleDataPidgin,
+      metadata: {
+        ...articleDataPidgin.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as Article;
+
     it('should render TopicDiscovery when isLive is false (test env)', () => {
       jest.mocked(isLive).mockImplementationOnce(() => false);
       const { queryByTestId } = render(
-        <ArticlePage
-          pageData={articleDataPidgin}
-          showTopicDiscoveryComponent
-        />,
+        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
         { service: 'portuguese' },
       );
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
@@ -1368,10 +1382,9 @@ describe('Article Page', () => {
 
     it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
       jest.mocked(isLive).mockImplementationOnce(() => true);
-      const { queryByTestId } = render(
-        <ArticlePage pageData={articleDataPidgin} />,
-        { service: 'portuguese' },
-      );
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+      });
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
   });
