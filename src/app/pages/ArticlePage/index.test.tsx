@@ -1350,10 +1350,6 @@ describe('Article Page', () => {
     });
   });
   describe('TopicDiscovery visibility on test only', () => {
-    const articleDataWithTopicDiscovery = {
-      ...articleDataPidgin,
-    };
-
     afterEach(() => {
       jest.resetAllMocks();
     });
@@ -1362,10 +1358,10 @@ describe('Article Page', () => {
       jest.mocked(isLive).mockImplementationOnce(() => false);
       const { queryByTestId } = render(
         <ArticlePage
-          pageData={articleDataWithTopicDiscovery}
+          pageData={articleDataPidgin}
           showTopicDiscoveryComponent
         />,
-        { service: 'hausa' },
+        { service: 'portuguese' },
       );
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
     });
@@ -1373,8 +1369,8 @@ describe('Article Page', () => {
     it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
       jest.mocked(isLive).mockImplementationOnce(() => true);
       const { queryByTestId } = render(
-        <ArticlePage pageData={articleDataWithTopicDiscovery} />,
-        { service: 'hausa' },
+        <ArticlePage pageData={articleDataPidgin} />,
+        { service: 'portuguese' },
       );
       expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
