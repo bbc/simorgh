@@ -1,8 +1,17 @@
 import TopicDiscovery from '.';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 import { topicTagsFixture } from './fixtures';
 
-const TopicDiscoveryStory = () => <TopicDiscovery topics={topicTagsFixture} />;
+const ComponentWithContext = ({ topics }) => (
+  <ServiceContextProvider service="portuguese">
+    <TopicDiscovery topics={topics} />
+  </ServiceContextProvider>
+);
+
+const TopicDiscoveryStory = () => (
+  <ComponentWithContext topics={topicTagsFixture} />
+);
 
 export default {
   title: 'Components/TopicDiscovery',
@@ -12,7 +21,7 @@ export default {
 export const Default = TopicDiscoveryStory;
 
 export const SingleTopic = () => (
-  <TopicDiscovery topics={[topicTagsFixture[0]]} />
+  <ComponentWithContext topics={[topicTagsFixture[0]]} />
 );
 
-export const NoData = () => <TopicDiscovery topics={[]} />;
+export const NoData = () => <ComponentWithContext topics={[]} />;
