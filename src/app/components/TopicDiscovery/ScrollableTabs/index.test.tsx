@@ -3,6 +3,7 @@ import {
   screen,
   fireEvent,
 } from '#app/components/react-testing-library-with-providers';
+import * as clickTrackerHook from '#app/hooks/useClickTrackerHandler';
 import ScrollableTabs from '.';
 
 const mockTabs = [
@@ -77,6 +78,9 @@ describe('ScrollableTabs', () => {
 
   it('should call clickTrackerHandler onClick when a tab is clicked', () => {
     const mockClickHandler = jest.fn();
+    jest
+      .spyOn(clickTrackerHook, 'default')
+      .mockReturnValue({ onClick: mockClickHandler });
 
     render(
       <ScrollableTabs
@@ -84,12 +88,10 @@ describe('ScrollableTabs', () => {
         activeTabId="tab-1"
         onTabChange={jest.fn()}
         labelledBy="heading-id"
-        clickTrackerHandler={{ onClick: mockClickHandler }}
       />,
     );
 
     fireEvent.click(screen.getByRole('tab', { name: 'Mídia social' }));
-
     expect(mockClickHandler).toHaveBeenCalledTimes(1);
   });
 
