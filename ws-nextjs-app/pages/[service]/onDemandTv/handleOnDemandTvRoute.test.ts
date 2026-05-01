@@ -146,7 +146,7 @@ describe('handleOnDemandTvRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=30'),
+      expect.stringContaining('max-age=60'),
     );
   });
 

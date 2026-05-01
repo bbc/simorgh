@@ -58,6 +58,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=bengali, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ১
     </span>
@@ -124,6 +125,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=japanese, 
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       1
     </span>
@@ -209,6 +211,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       1
     </span>
@@ -274,6 +277,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       1
     </span>
@@ -353,6 +357,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       1
     </span>
@@ -418,6 +423,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       1
     </span>
@@ -503,6 +509,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       10
     </span>
@@ -568,6 +575,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       10
     </span>
@@ -647,6 +655,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       10
     </span>
@@ -712,6 +721,7 @@ exports[`MostReadRank should render as expected when dir=ltr, service=pidgin, li
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       10
     </span>
@@ -797,6 +807,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱
     </span>
@@ -862,6 +873,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱
     </span>
@@ -941,6 +953,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱
     </span>
@@ -1006,6 +1019,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱
     </span>
@@ -1091,6 +1105,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱۰
     </span>
@@ -1156,6 +1171,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱۰
     </span>
@@ -1235,6 +1251,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱۰
     </span>
@@ -1300,6 +1317,7 @@ exports[`MostReadRank should render as expected when dir=rtl, service=persian, l
   >
     <span
       class="emotion-1"
+      data-e2e="most-read-rank"
     >
       ۱۰
     </span>

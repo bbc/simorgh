@@ -22,10 +22,6 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getSignedInCookie = (cookieName = 'ckns_id') => {
-  return onClient() ? Cookie.get(cookieName) : false;
-};
-
 export const AccountProvider = ({
   children,
   initialConfig,
@@ -56,21 +52,25 @@ export const AccountProvider = ({
       : initialConfig?.unavailable_url;
   };
 
+  const getSignedInCookie = (cookieName = 'ckns_id') => {
+    return onClient() ? Cookie.get(cookieName) : false;
+  };
+
   const signInUrl = buildAccountUrl(initialConfig?.signin_url);
   const registerUrl = buildAccountUrl(initialConfig?.register_url);
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  // TODO: initialIsSignedIn is always false in test/live env due to filtered cookie header,
-  // it will be improved to detect signed-in status server side in the future
-  // Ticket: https://bbc.atlassian.net/browse/WS-2388
   const clientSignedInState = getSignedInCookie(
     initialConfig?.identity?.idSignedInCookieName,
   );
+
   const isSignedIn =
     isIdctaAvailable &&
     Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
+  const isAccountPromoBannerVisible =
+    initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
   const value = useMemo(
     () => ({
@@ -81,6 +81,7 @@ export const AccountProvider = ({
       registerUrl,
       settingsUrl,
       forYouUrl,
+      isAccountPromoBannerVisible,
     }),
     [
       forYouUrl,
@@ -90,6 +91,7 @@ export const AccountProvider = ({
       settingsUrl,
       signInUrl,
       signOutUrl,
+      isAccountPromoBannerVisible,
     ],
   );
 
