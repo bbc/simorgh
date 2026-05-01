@@ -39,7 +39,6 @@ import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import isLive from '#lib/utilities/isLive';
-import topicDiscoveryFixture from '#app/components/TopicDiscovery/fixtures';
 import {
   render,
   screen,
@@ -1353,7 +1352,6 @@ describe('Article Page', () => {
   describe('TopicDiscovery visibility on test only', () => {
     const articleDataWithTopicDiscovery = {
       ...articleDataPidgin,
-      topicDiscovery: topicDiscoveryFixture,
     };
 
     afterEach(() => {

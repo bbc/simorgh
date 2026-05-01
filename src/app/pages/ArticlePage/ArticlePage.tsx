@@ -212,10 +212,10 @@ const getContinueReadingButton =
 
 const ArticlePage = ({
   pageData,
-  showRelatedTopicsInStorybook = true,
+  showTopicDiscoveryComponent = false,
 }: {
   pageData: Article;
-  showRelatedTopicsInStorybook?: boolean;
+  showTopicDiscoveryComponent?: boolean;
 }) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
@@ -439,11 +439,12 @@ const ArticlePage = ({
     : [visuallyHiddenBlock, ...blocks];
 
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && showRelatedTopicsInStorybook,
+    showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
   );
 
   // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = !isAmp && !isLite && !isLive();
+  const showTopicDiscovery =
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
 
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
