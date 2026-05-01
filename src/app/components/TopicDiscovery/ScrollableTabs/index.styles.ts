@@ -43,7 +43,7 @@ const styles = {
           width: '100%',
           height: `${spacings.HALF}rem`,
           background: palette.POSTBOX,
-          zIndex: 1,
+          zIndex: 2,
         },
       },
       '[type=button]&:focus-visible': {
@@ -114,6 +114,7 @@ const styles = {
       height: '100%',
       width: `${spacings.DOUBLE}rem`,
       pointerEvents: 'none',
+      zIndex: 1,
       "[dir='ltr'] &": {
         right: `-${spacings.DOUBLE}rem`,
         background: `linear-gradient(to right, ${palette.GREY_2}, ${palette.GREY_2}00)`,
@@ -131,6 +132,7 @@ const styles = {
       height: '100%',
       width: `${spacings.DOUBLE}rem`,
       pointerEvents: 'none',
+      zIndex: 1,
       "[dir='ltr'] &": {
         left: `-${spacings.DOUBLE}rem`,
         background: `linear-gradient(to right, ${palette.GREY_2}00, ${palette.GREY_2})`,
