@@ -1,12 +1,8 @@
 import TopicDiscovery from '.';
-import topicDiscoveryFixture from './fixtures';
 
-const TopicDiscoveryStory = () => (
-  <TopicDiscovery
-    topicDiscovery={topicDiscoveryFixture}
-    headingText="Conteúdo relacionado"
-  />
-);
+import { topicTagsFixture } from './fixtures';
+
+const TopicDiscoveryStory = () => <TopicDiscovery topics={topicTagsFixture} />;
 
 export default {
   title: 'Components/TopicDiscovery',
@@ -16,15 +12,7 @@ export default {
 export const Default = TopicDiscoveryStory;
 
 export const SingleTopic = () => (
-  <TopicDiscovery
-    topicDiscovery={{ topics: [topicDiscoveryFixture.topics[0]] }}
-    headingText="Conteúdo relacionado"
-  />
+  <TopicDiscovery topics={[topicTagsFixture[0]]} />
 );
 
-export const NoData = () => (
-  <TopicDiscovery
-    topicDiscovery={{ topics: [] }}
-    headingText="Conteúdo relacionado"
-  />
-);
+export const NoData = () => <TopicDiscovery topics={[]} />;
