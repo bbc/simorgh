@@ -26,7 +26,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
 
   const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
 
-  const tabs = topics.map(topic => ({
+  const tabs = topics?.map(topic => ({
     id: topic.topicId,
     label: topic.topicName,
   }));
@@ -35,6 +35,8 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     // TODO: Replace with real data fetching logic when API is available
     setTopicPromos(multipleTopicsFixture?.[activeTabId]?.data?.items || []);
   }, [activeTabId]);
+
+  if (!topics || topics.length === 0) return null;
 
   return (
     <section
