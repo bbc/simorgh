@@ -6,6 +6,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import { multipleTopicsFixture } from './fixtures';
+import { TopicDiscoveryItem } from './types';
 
 type TopicDiscoveryProps = {
   topics: Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>[];
@@ -17,10 +18,39 @@ const eventTrackingData = {
   componentName: 'topic-discovery',
 };
 
+const FAKE_FETCH_DELAY_MS = 600;
+
+const fetchTopicPromos = (
+  topicId: TopicTag['topicId'],
+): Promise<TopicDiscoveryItem[]> =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve(multipleTopicsFixture?.[topicId]?.data?.items || []);
+    }, FAKE_FETCH_DELAY_MS);
+  });
+
 const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
-  const [topicPromos, setTopicPromos] = useState([]);
+  const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
+
+  useEffect(() => {
+    let isActive = true;
+
+    setIsLoading(true);
+
+    fetchTopicPromos(activeTabId).then(fetchedTopicPromos => {
+      if (!isActive) return;
+
+      setTopicPromos(fetchedTopicPromos);
+      setIsLoading(false);
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, [activeTabId]);
 
   const viewTracker = useViewTracker(eventTrackingData);
 
@@ -31,10 +61,12 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     label: topic.topicName,
   }));
 
-  useEffect(() => {
-    // TODO: Replace with real data fetching logic when API is available
-    setTopicPromos(multipleTopicsFixture?.[activeTabId]?.data?.items || []);
-  }, [activeTabId]);
+  const handleTabChange = (nextTabId: TopicTag['topicId']) => {
+    if (nextTabId === activeTabId) return;
+
+    setIsLoading(true);
+    setActiveTabId(nextTabId);
+  };
 
   const getMoreFromText = () => {
     const moreFrom = translations.topicDiscovery?.moreFrom;
@@ -63,7 +95,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
       <ScrollableTabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabChange={setActiveTabId}
+        onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
       />
       <div
@@ -72,17 +104,38 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
         aria-labelledby={`tab-${activeTabId}`}
         css={styles.tabPanel}
       >
-        <CurationGrid
-          summaries={topicPromos}
-          eventTrackingData={eventTrackingData}
-        />
-        <a
-          css={styles.moreFromLink}
-          href={activeTopic?.topicUrl}
-          data-testid="topic-discovery-more-from"
-        >
-          {getMoreFromText()}
-        </a>
+        {isLoading ? (
+          <>
+            <div css={styles.skeletonGrid} aria-live="polite">
+              {Array.from({ length: 4 }).map((_, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <div key={index} css={styles.skeletonCard} aria-hidden>
+                  <div css={styles.skeletonImage} />
+                  <div css={styles.skeletonTextLines}>
+                    <div css={[styles.skeletonLine, { width: '100%' }]} />
+                    <div css={[styles.skeletonLine, { width: '70%' }]} />
+                    <div css={[styles.skeletonLine, { width: '40%' }]} />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div css={styles.skeletonMoreFromLink} aria-hidden />
+          </>
+        ) : (
+          <>
+            <CurationGrid
+              summaries={topicPromos}
+              eventTrackingData={eventTrackingData}
+            />
+            <a
+              css={styles.moreFromLink}
+              href={activeTopic?.topicUrl}
+              data-testid="topic-discovery-more-from"
+            >
+              {getMoreFromText()}
+            </a>
+          </>
+        )}
       </div>
     </section>
   );
