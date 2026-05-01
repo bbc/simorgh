@@ -61,6 +61,13 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     label: topic.topicName,
   }));
 
+  const handleTabChange = (nextTabId: TopicTag['topicId']) => {
+    if (nextTabId === activeTabId) return;
+
+    setIsLoading(true);
+    setActiveTabId(nextTabId);
+  };
+
   if (!topics || topics.length === 0) return null;
 
   return (
@@ -76,7 +83,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
       <ScrollableTabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabChange={setActiveTabId}
+        onTabChange={handleTabChange}
         labelledBy={HEADING_ID}
       />
       <div
