@@ -93,19 +93,22 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
         css={styles.tabPanel}
       >
         {isLoading ? (
-          <div css={styles.skeletonGrid} aria-live="polite">
-            {Array.from({ length: 4 }).map((_, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <div key={index} css={styles.skeletonCard} aria-hidden>
-                <div css={styles.skeletonImage} />
-                <div css={styles.skeletonTextLines}>
-                  <div css={[styles.skeletonLine, { width: '100%' }]} />
-                  <div css={[styles.skeletonLine, { width: '70%' }]} />
-                  <div css={[styles.skeletonLine, { width: '40%' }]} />
+          <>
+            <div css={styles.skeletonGrid} aria-live="polite">
+              {Array.from({ length: 4 }).map((_, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <div key={index} css={styles.skeletonCard} aria-hidden>
+                  <div css={styles.skeletonImage} />
+                  <div css={styles.skeletonTextLines}>
+                    <div css={[styles.skeletonLine, { width: '100%' }]} />
+                    <div css={[styles.skeletonLine, { width: '70%' }]} />
+                    <div css={[styles.skeletonLine, { width: '40%' }]} />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+            <div css={styles.skeletonMoreFromLink} aria-hidden />
+          </>
         ) : (
           <>
             <CurationGrid
