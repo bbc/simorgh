@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
+import { TopicTag } from '#app/models/types/metadata';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
-import { TopicDiscoveryData } from './types';
+import { multipleTopicsFixture } from './fixtures';
 
 type TopicDiscoveryProps = {
-  topicDiscovery: TopicDiscoveryData;
-  headingText: string;
+  topics: Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>[];
 };
 
 const HEADING_ID = 'topic-discovery-heading';
@@ -16,28 +17,24 @@ const eventTrackingData = {
   componentName: 'topic-discovery',
 };
 
-const TopicDiscovery = ({
-  topicDiscovery,
-  headingText,
-}: TopicDiscoveryProps) => {
-  const validTopics = topicDiscovery.topics.filter(
-    topic => topic.items && topic.items.length > 0,
-  );
-
-  const [activeTabId, setActiveTabId] = useState(validTopics[0]?.topicId ?? '');
+const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
+  const { translations } = use(ServiceContext);
+  const [topicPromos, setTopicPromos] = useState([]);
+  const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
   const viewTracker = useViewTracker(eventTrackingData);
 
-  if (validTopics.length === 0) return null;
+  const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
 
-  const activeTopic = validTopics.find(topic => topic.topicId === activeTabId);
-
-  if (!activeTopic) return null;
-
-  const tabs = validTopics.map(topic => ({
+  const tabs = topics.map(topic => ({
     id: topic.topicId,
     label: topic.topicName,
   }));
+
+  useEffect(() => {
+    // TODO: Replace with real data fetching logic when API is available
+    setTopicPromos(multipleTopicsFixture?.[activeTabId]?.data?.items || []);
+  }, [activeTabId]);
 
   return (
     <section
@@ -47,7 +44,7 @@ const TopicDiscovery = ({
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
-        {headingText}
+        {translations.topicDiscovery?.heading ?? 'Discover more'}
       </h2>
       <ScrollableTabs
         tabs={tabs}
@@ -62,7 +59,7 @@ const TopicDiscovery = ({
         css={styles.tabPanel}
       >
         <CurationGrid
-          summaries={activeTopic.items}
+          summaries={topicPromos}
           eventTrackingData={eventTrackingData}
         />
         <a
