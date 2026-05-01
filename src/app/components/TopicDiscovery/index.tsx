@@ -36,8 +36,6 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     setTopicPromos(multipleTopicsFixture?.[activeTabId]?.data?.items || []);
   }, [activeTabId]);
 
-  if (!topics || topics.length === 0) return null;
-
   return (
     <section
       aria-labelledby={HEADING_ID}

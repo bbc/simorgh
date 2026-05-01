@@ -444,7 +444,11 @@ const ArticlePage = ({
 
   // EXPERIMENT: Topic Discovery
   const showTopicDiscovery =
-    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
+    showTopicDiscoveryComponent &&
+    topics.length > 0 &&
+    !isAmp &&
+    !isLite &&
+    !isLive();
 
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
