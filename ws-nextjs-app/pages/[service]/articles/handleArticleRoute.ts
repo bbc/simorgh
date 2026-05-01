@@ -111,7 +111,6 @@ export default async (context: GetServerSidePropsContext) => {
     billboardCuration = null,
     mediaCuration = null,
     portraitVideoItems = null,
-    topicDiscovery = null,
   } = secondaryData || {};
 
   const transformedArticleData = transformPageData()(article);
@@ -139,7 +138,6 @@ export default async (context: GetServerSidePropsContext) => {
         },
         mostRead,
         portraitVideoItems,
-        topicDiscovery,
       },
       pageType: derivedPageType,
       pathname: resolvedUrlWithoutQuery,
