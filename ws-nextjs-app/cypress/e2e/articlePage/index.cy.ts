@@ -110,7 +110,7 @@ const smokeCanonicalTestSuites = [
   },
   {
     path: '/persian/articles/cej3lzd5e0go',
-    runforEnv: ['local', 'test'],
+    runforEnv: ['local'],
     service: 'persian',
     tests: [...canonicalTests],
   },
@@ -223,12 +223,13 @@ const nonSmokeCanonicalTestSuites = [
     service: 'gahuza',
     tests: [...canonicalTests],
   },
-  {
-    path: '/japanese/articles/cdd6p3r9g7jo',
-    runforEnv: ['test'],
-    service: 'japanese',
-    tests: [...canonicalTests],
-  },
+  // TODO: Disabling as upstream services won't return Most Read data on test.
+  // {
+  //   path: '/japanese/articles/cdd6p3r9g7jo',
+  //   runforEnv: ['test'],
+  //   service: 'japanese',
+  //   tests: [...canonicalTests],
+  // },
   {
     path: '/japanese/articles/cj4m7n5nrd8o',
     runforEnv: ['live'],

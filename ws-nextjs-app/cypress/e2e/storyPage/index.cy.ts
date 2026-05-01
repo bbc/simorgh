@@ -1,5 +1,5 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from 'simorgh/cypress/e2e/specialFeatures/atiAnalytics/assertions/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../support/helpers/runTestsForPage';
@@ -144,12 +144,13 @@ const canonicalNonSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  {
-    path: '/pashto/23289748',
-    service: 'pashto',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
+  // TODO: Disabling as upstream services won't return Most Read data on test.
+  // {
+  //   path: '/pashto/23289748',
+  //   service: 'pashto',
+  //   runforEnv: ['test'],
+  //   tests: canonicalTests,
+  // },
   {
     path: '/sinhala/world-51723376',
     service: 'sinhala',
