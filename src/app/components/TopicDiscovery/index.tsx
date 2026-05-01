@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
-import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import { TopicDiscoveryData } from './types';
@@ -28,10 +27,6 @@ const TopicDiscovery = ({
   const [activeTabId, setActiveTabId] = useState(validTopics[0]?.topicId ?? '');
 
   const viewTracker = useViewTracker(eventTrackingData);
-  const clickTrackerHandler = useClickTrackerHandler({
-    ...eventTrackingData,
-    preventNavigation: true,
-  });
 
   if (validTopics.length === 0) return null;
 
@@ -59,7 +54,6 @@ const TopicDiscovery = ({
         activeTabId={activeTabId}
         onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
-        clickTrackerHandler={clickTrackerHandler}
       />
       <div
         role="tabpanel"

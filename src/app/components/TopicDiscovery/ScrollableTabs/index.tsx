@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState, use } from 'react';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { Chevron, ChevronOrientation } from '#app/components/icons';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import styles from './index.styles';
 
 type ScrollableTabsProps = {
@@ -8,10 +9,6 @@ type ScrollableTabsProps = {
   activeTabId: string;
   onTabChange: (tabId: string) => void;
   labelledBy: string;
-  clickTrackerHandler?: {
-    onClick?: (event: React.MouseEvent) => void;
-    [key: string]: unknown;
-  };
 };
 
 const ScrollableTabs = ({
@@ -19,13 +16,14 @@ const ScrollableTabs = ({
   activeTabId,
   onTabChange,
   labelledBy,
-  clickTrackerHandler,
 }: ScrollableTabsProps) => {
   const { dir } = use(ServiceContext);
   const tabListRef = useRef<HTMLDivElement>(null);
   const [hasOverflow, setHasOverflow] = useState(false);
   const [canScrollStart, setCanScrollStart] = useState(false);
   const [canScrollEnd, setCanScrollEnd] = useState(false);
+
+  const getClickTrackerHandler = useClickTrackerHandler;
 
   const checkOverflow = useCallback(() => {
     const el = tabListRef.current;
@@ -98,6 +96,12 @@ const ScrollableTabs = ({
       >
         {tabs.map(tab => {
           const isActive = tab.id === activeTabId;
+
+          const clickTrackerHandler = getClickTrackerHandler({
+            componentName: `topic-discovery-tab-${tab.id}`,
+            preventNavigation: true,
+          });
+
           return (
             <button
               {...(isActive && { 'aria-controls': `tabpanel-${tab.id}` })}
