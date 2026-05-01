@@ -99,31 +99,31 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
-  it('renders the more from section with topic title last by default', () => {
-    const config = { ...portugueseConfig.default } as ServiceConfig;
+  it('renders the more from section with topic title last by default', async () => {
+    const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
         <TopicDiscovery topics={topics} />
       </ServiceContext.Provider>,
     );
-    // Topic name should be at the end in this language
-    const moreFrom = screen.getByTestId('topic-discovery-more-from');
+    // Wait for loading to finish and the link to appear
+    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
     expect(moreFrom).toHaveTextContent('Mais de Topic1');
   });
 
-  it('renders the more from section with topic title first if topicTitleFirst is true', () => {
-    const config = { ...turkceConfig.default } as ServiceConfig;
+  it('renders the more from section with topic title first if topicTitleFirst is true', async () => {
+    const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
         <TopicDiscovery topics={topics} />
       </ServiceContext.Provider>,
     );
-    // Topic name should be at the start in this language
-    const moreFrom = screen.getByTestId('topic-discovery-more-from');
+    // Wait for loading to finish and the link to appear
+    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
     expect(moreFrom).toHaveTextContent('Topic1 hakkında daha fazla');
   });
 
-  it('renders the more from section with fallback if moreFrom is missing', () => {
+  it('renders the more from section with fallback if moreFrom is missing', async () => {
     // remove moreFrom from translations to test fallback
     const portugueseTranslations = {
       ...portugueseConfig.default.translations,
@@ -138,7 +138,7 @@ describe('TopicDiscovery', () => {
         <TopicDiscovery topics={topics} />
       </ServiceContext.Provider>,
     );
-    expect(screen.getByText('More from Topic1')).toBeInTheDocument();
+    await screen.findByText('More from Topic1');
   });
 
   it('should not render when there are no valid topics', () => {
