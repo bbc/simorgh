@@ -27,7 +27,7 @@ export default async (context: GetServerSidePropsContext) => {
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=90, stale-while-revalidate=30, max-age=30',
+    'public, stale-if-error=900, stale-while-revalidate=300, max-age=300',
   );
 
   // Remove x-frame-options header to allow embedding
