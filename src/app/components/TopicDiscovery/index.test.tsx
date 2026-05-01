@@ -5,8 +5,17 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
+import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
+import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { topicTagsFixture } from './fixtures';
 import TopicDiscovery from '.';
+
+const topics = [
+  { topicId: '1', topicName: 'Topic1', topicUrl: '/topics/climate' },
+  { topicId: '2', topicName: 'Topic2', topicUrl: '/topics/economy' },
+];
 
 describe('TopicDiscovery', () => {
   it('should render the heading', () => {
@@ -88,6 +97,48 @@ describe('TopicDiscovery', () => {
 
     const secondTopicTitle = topicTagsFixture[1].topicName;
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
+  });
+
+  it('renders the more from section with topic title last by default', () => {
+    const config = { ...portugueseConfig.default } as ServiceConfig;
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    // Topic name should be at the end in this language
+    const moreFrom = screen.getByTestId('topic-discovery-more-from');
+    expect(moreFrom).toHaveTextContent('Mais de Topic1');
+  });
+
+  it('renders the more from section with topic title first if topicTitleFirst is true', () => {
+    const config = { ...turkceConfig.default } as ServiceConfig;
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    // Topic name should be at the start in this language
+    const moreFrom = screen.getByTestId('topic-discovery-more-from');
+    expect(moreFrom).toHaveTextContent('Topic1 hakkında daha fazla');
+  });
+
+  it('renders the more from section with fallback if moreFrom is missing', () => {
+    // remove moreFrom from translations to test fallback
+    const portugueseTranslations = {
+      ...portugueseConfig.default.translations,
+      topicDiscovery: { heading: 'Discover more', topicTitleFirst: true },
+    };
+    const config = {
+      ...portugueseConfig.default,
+      translations: portugueseTranslations,
+    } as ServiceConfig;
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    expect(screen.getByText('More from Topic1')).toBeInTheDocument();
   });
 
   it('should not render when there are no valid topics', () => {

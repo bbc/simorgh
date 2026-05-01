@@ -76,7 +76,11 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
           summaries={topicPromos}
           eventTrackingData={eventTrackingData}
         />
-        <a css={styles.moreFromLink} href={activeTopic?.topicUrl}>
+        <a
+          css={styles.moreFromLink}
+          href={activeTopic?.topicUrl}
+          data-testid="topic-discovery-more-from"
+        >
           {getMoreFromText()}
         </a>
       </div>
