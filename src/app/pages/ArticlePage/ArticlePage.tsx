@@ -210,7 +210,13 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({ pageData }: { pageData: Article }) => {
+const ArticlePage = ({
+  pageData,
+  showRelatedTopicsInStorybook = true,
+}: {
+  pageData: Article;
+  showRelatedTopicsInStorybook?: boolean;
+}) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
@@ -293,7 +299,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
-  const topicDiscovery = pageData?.topicDiscovery;
 
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
@@ -434,11 +439,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     : [visuallyHiddenBlock, ...blocks];
 
   const showRelatedTopicsComponent = Boolean(
-    showRelatedTopics && topics.length > 0 && !topicDiscovery,
+    showRelatedTopics && topics.length > 0 && showRelatedTopicsInStorybook,
   );
 
   // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = topicDiscovery && !isAmp && !isLite && !isLive();
+  const showTopicDiscovery = !isAmp && !isLite && !isLive();
 
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
@@ -536,14 +541,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               experimentProps: timeOfDayExperimentProps,
             })}
           />
-          {showTopicDiscovery && (
-            <TopicDiscovery
-              topicDiscovery={topicDiscovery}
-              headingText={
-                translations.topicDiscovery?.heading ?? 'Discover more'
-              }
-            />
-          )}
+          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
         </div>
         {showAdaptiveMediaCuration && (
           <div css={styles.adaptiveMediaCurationRow}>
