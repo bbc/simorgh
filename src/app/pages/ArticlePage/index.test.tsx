@@ -1361,7 +1361,10 @@ describe('Article Page', () => {
     it('should render TopicDiscovery when isLive is false (test env)', () => {
       jest.mocked(isLive).mockImplementationOnce(() => false);
       const { queryByTestId } = render(
-        <ArticlePage pageData={articleDataWithTopicDiscovery} />,
+        <ArticlePage
+          pageData={articleDataWithTopicDiscovery}
+          showTopicDiscoveryComponent
+        />,
         { service: 'hausa' },
       );
       expect(queryByTestId('topic-discovery')).toBeInTheDocument();
