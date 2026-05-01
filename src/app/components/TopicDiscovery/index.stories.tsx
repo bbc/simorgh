@@ -1,12 +1,15 @@
 import TopicDiscovery from '.';
 import { ServiceContextProvider } from '#app/contexts/ServiceContext';
+import { GREY_2 } from '../ThemeProvider/palette';
 
 import { topicTagsFixture } from './fixtures';
 
 const ComponentWithContext = ({ topics }) => (
-  <ServiceContextProvider service="portuguese">
-    <TopicDiscovery topics={topics} />
-  </ServiceContextProvider>
+  <div css={{ backgroundColor: GREY_2 }}>
+    <ServiceContextProvider service="portuguese">
+      <TopicDiscovery topics={topics} />
+    </ServiceContextProvider>
+  </div>
 );
 
 const TopicDiscoveryStory = () => (
