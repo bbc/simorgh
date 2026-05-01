@@ -13,13 +13,8 @@ export type TopicDiscoveryItem = {
   isPortraitImage: boolean;
 };
 
-export type TopicDiscoveryTopic = {
-  topicId: string;
-  topicName: string;
-  topicUrl: string;
-  items: TopicDiscoveryItem[];
-};
-
 export type TopicDiscoveryData = {
-  topics: TopicDiscoveryTopic[];
+  data: {
+    items: TopicDiscoveryItem[];
+  };
 };
