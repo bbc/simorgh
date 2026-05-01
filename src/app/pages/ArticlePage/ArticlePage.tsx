@@ -21,7 +21,6 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-
 import {
   getArticleId,
   getHeadline,
@@ -61,6 +60,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -438,7 +438,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   );
 
   // EXPERIMENT: Topic Discovery
-  const showTopicDiscovery = topicDiscovery && !isAmp && !isLite;
+  const showTopicDiscovery = topicDiscovery && !isAmp && !isLite && !isLive();
 
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
