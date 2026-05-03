@@ -65,6 +65,8 @@ export const MostReadLink = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
+  const isLiveBoolean = isLive === true || isLive === 'true';
+
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
@@ -73,7 +75,7 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {isLive && (
+        {isLiveBoolean && (
           <span data-e2e="most-read-live-pulse">
             <LiveLabel />
           </span>
