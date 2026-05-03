@@ -40,7 +40,7 @@ module.exports = {
           {
             key: 'Cache-Control',
             value:
-              'public, stale-if-error=2592000, stale-while-revalidate=2592000, max-age=2592000',
+              'public, stale-if-error=2592000, stale-while-revalidate=604800, max-age=604800',
           },
           { key: 'Content-Type', value: 'application/manifest+json' },
         ],
