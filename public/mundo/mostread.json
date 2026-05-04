@@ -1,0 +1,797 @@
+{
+    "data": {
+        "generated": "2026-05-04T09:29:37.262654596Z",
+        "lastRecordTimeStamp": "2026-05-04T09:27:00Z",
+        "firstRecordTimeStamp": "2026-05-04T09:12:00Z",
+        "items": [
+            {
+                "id": "urn:bbc:optimo:asset:ce8lr0v0dqgo",
+                "rank": 1,
+                "title": "Qué son las \"refinerías teteras\" de China y cómo están amortiguando la crisis petrolera por la guerra en Irán",
+                "href": "https://www.bbc.com/mundo/live/c05d1l13zjnt",
+                "isLive": true,
+                "timestamp": "2026-05-04T03:53:20.931Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Las teapots se han convertido en el salvavidas de países sancionados.",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Las ",
+                                                                        "attributes": []
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "teapots",
+                                                                        "attributes": [
+                                                                            "italic"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": " se han convertido en el salvavidas de países sancionados.",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Un hombre revisa dos tubos, uno amarillo y otro verde, en una refinería china. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Un hombre revisa dos tubos, uno amarillo y otro verde, en una refinería china. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 974,
+                                    "height": 548,
+                                    "locator": "4517/live/0a347530-3fd5-11f1-aec8-9b10f844369d.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:cgqp2n71ld4o",
+                "rank": 2,
+                "title": "Por qué la sal tiene un efecto tan poderoso en nuestro cerebro",
+                "href": "https://www.bbc.com/mundo/articles/cgqp2n71ld4o",
+                "timestamp": "2026-05-02T10:10:50.299Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Es un compuesto químico simple. ¿Por qué se nos antoja su sabor?",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Es un compuesto químico simple. ¿Por qué se nos antoja su sabor?",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Salero y sal regada en fondo negro",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Salero y sal regada en fondo negro",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 985,
+                                    "height": 554,
+                                    "locator": "67a4/live/c320a710-43d8-11f1-a133-a9dbeae5d5f3.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:cdjpgrp2p3po",
+                "rank": 3,
+                "title": "3 muertos en un posible brote de hantavirus dentro un crucero que zarpó de Argentina",
+                "href": "https://www.bbc.com/mundo/articles/cdjpgrp2p3po",
+                "timestamp": "2026-05-03T20:50:39.758Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "El MV Hondius navegaba de Argentina a Cabo Verde",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "El MV Hondius navegaba de Argentina a Cabo Verde",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "El crucero M.V. Hondius en el mar. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "El crucero M.V. Hondius en el mar. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1024,
+                                    "height": 575,
+                                    "locator": "40c2/live/1b9c5be0-474a-11f1-bd52-e755d604ece4.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "AFP via Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c3e23y27qppo",
+                "rank": 4,
+                "title": "Hospitalizan a Rudy Giuliani, exalcalde de Nueva York y aliado de Trump, que se encuentra \"en estado crítico pero estable\"",
+                "href": "https://www.bbc.com/mundo/articles/c3e23y27qppo",
+                "timestamp": "2026-05-04T07:18:59.068Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Rudy Giuliani wearing a white suit.",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Rudy Giuliani wearing a white suit.",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 819,
+                                    "height": 460,
+                                    "locator": "cace/live/5b4c8a40-474e-11f1-adac-7b68e6601ee9.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c4g4ke6z1zro",
+                "rank": 5,
+                "title": "La extraordinaria historia de Hércules, el oso al que una pareja adoptó y crio como parte de su familia",
+                "href": "https://www.bbc.com/mundo/articles/c4g4ke6z1zro",
+                "timestamp": "2026-05-03T10:16:44.732Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Para Maggie, Hércules era como un hijo. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Para Maggie, Hércules era como un hijo. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Maggie leyéndole un libro a Hércules. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Maggie leyéndole un libro a Hércules. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 675,
+                                    "height": 380,
+                                    "locator": "e2d0/live/853839b0-1e1f-11f1-bd56-df0cd723329e.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c624n4e6q14o",
+                "rank": 6,
+                "title": "6 antiguas tecnologías que desconcertaron a la ciencia moderna (y aún son difíciles de replicar)",
+                "href": "https://www.bbc.com/mundo/articles/c624n4e6q14o",
+                "timestamp": "2026-05-03T10:43:52.001Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "A menudo, lo logrado hace mucho, mucho tiempo, sorprende. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "A menudo, lo logrado hace mucho, mucho tiempo, sorprende. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Escultura del dios Apolo Belvedere, que lleva unas gafas HoloLens transparentes de color rosa y utiliza realidad virtual con realidad aumentada sobre un fondo rosa.",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Escultura del dios Apolo Belvedere, que lleva unas gafas HoloLens transparentes de color rosa y utiliza realidad virtual con realidad aumentada sobre un fondo rosa.",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1024,
+                                    "height": 576,
+                                    "locator": "d861/live/88b51ad0-378e-11f1-9d5c-8ba507d7dbde.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c98r144q49ro",
+                "rank": 7,
+                "title": "La paradoja de Noruega, el país que gana miles de millones con la subida del precio del petróleo pero cada vez lo usa menos",
+                "href": "https://www.bbc.com/mundo/articles/c98r144q49ro",
+                "timestamp": "2026-05-01T03:53:12.311Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Noruega produce y exporta petróleo y gas, pero su consumo interno se basa principalmente en energías limpias. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Noruega produce y exporta petróleo y gas, pero su consumo interno se basa principalmente en energías limpias. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Dos mujeres caminan sonrientes empujando sendas bicicletas por una calle peatonal de Oslo. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Dos mujeres caminan sonrientes empujando sendas bicicletas por una calle peatonal de Oslo. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1024,
+                                    "height": 576,
+                                    "locator": "47f3/live/7aab3940-44bf-11f1-813e-bf7166e1ca58.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Getty Images",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c7v93mz0p11o",
+                "rank": 8,
+                "title": "\"Podemos alcanzar objetivos a 2.000 km\": dentro de la base secreta de Ucrania que lanza drones que matan a miles de soldados rusos cada mes",
+                "href": "https://www.bbc.com/mundo/articles/c7v93mz0p11o",
+                "timestamp": "2026-05-02T03:49:44.779Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "caption",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Brovdi se alistó para luchar justo antes de la invasión rusa a gran escala. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Brovdi se alistó para luchar justo antes de la invasión rusa a gran escala. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Robert Brovdi durante su entrevista con la BBC. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Robert Brovdi durante su entrevista con la BBC. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1920,
+                                    "height": 1080,
+                                    "locator": "9638/live/a2f93d80-447d-11f1-88ff-575186ed76aa.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "BBC",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:ce9pzv54n4po",
+                "rank": 9,
+                "title": "Vestida para gobernar: qué muestran la ropa y el peinado de la hija de Kim Jong-un sobre cómo la preparan para reemplazar al líder de Corea del Norte",
+                "href": "https://www.bbc.com/mundo/articles/ce9pzv54n4po",
+                "timestamp": "2026-05-03T04:03:28.147Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Un collage que muestra a Kim Jong Un junto a su hija Kim Ju Ae y a la chica junto a su madre.",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Un collage que muestra a Kim Jong Un junto a su hija Kim Ju Ae y a la chica junto a su madre.",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 3840,
+                                    "height": 2160,
+                                    "locator": "edaa/live/96003d80-4249-11f1-ac78-2112837ce2aa.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Reuters / EPA / BBC",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "urn:bbc:optimo:asset:c7754gm7yr6o",
+                "rank": 10,
+                "title": "Los inquietantes vehículos abandonados en la \"zona muerta\" de Chernóbil",
+                "href": "https://www.bbc.com/mundo/articles/c7754gm7yr6o",
+                "timestamp": "2026-05-02T21:21:51.860Z",
+                "images": {
+                    "defaultPromoImage": {
+                        "blocks": [
+                            {
+                                "type": "altText",
+                                "model": {
+                                    "blocks": [
+                                        {
+                                            "type": "text",
+                                            "model": {
+                                                "blocks": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "model": {
+                                                            "text": "Una aeronave en la zona de exclusión. ",
+                                                            "blocks": [
+                                                                {
+                                                                    "type": "fragment",
+                                                                    "model": {
+                                                                        "text": "Una aeronave en la zona de exclusión. ",
+                                                                        "attributes": []
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "rawImage",
+                                "model": {
+                                    "width": 1600,
+                                    "height": 900,
+                                    "locator": "8da5/live/123935b0-463b-11f1-aa14-ad910202f501.jpg",
+                                    "originCode": "cpsprodpb",
+                                    "copyrightHolder": "Phil Coomes/ BBC",
+                                    "suitableForSyndication": true
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "metadata": {
+            "atiAnalytics": {
+                "contentType": "list-datadriven",
+                "pageIdentifier": "mundo.popular.read.page",
+                "timePublished": "2026-05-04T09:12:00Z",
+                "timeUpdated": "2026-05-04T09:27:00Z"
+            }
+        }
+    },
+    "contentType": "application/json; charset=utf-8"
+}
