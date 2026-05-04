@@ -51,7 +51,7 @@ describe('MostRead Canonical', () => {
     jest.clearAllMocks();
   });
 
-  it('should render the live label for items with isLive: true', () => {
+  it('should render the live label only for items with isLive: true', () => {
     const testData = {
       items: [
         {
