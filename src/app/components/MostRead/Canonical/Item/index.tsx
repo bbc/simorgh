@@ -48,6 +48,7 @@ export const MostReadLink = ({
   position,
   isLive,
   eventTrackingData,
+  isAmp = false,
 }: PropsWithChildren<MostReadLinkProps>) => {
   const positionIndex =
     typeof position === 'string' ? parseInt(position, 10) : position;
@@ -65,9 +66,6 @@ export const MostReadLink = ({
 
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingDataExtended);
 
-  const isLiveBoolean = isLive === true || isLive === 'true';
-  const fakeIsAmp = true;
-
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <div css={getItemCss({ dir, size }) as any[]} dir={dir}>
@@ -76,18 +74,18 @@ export const MostReadLink = ({
         href={href}
         {...clickTrackerHandler}
       >
-        {isLiveBoolean && (
+        {isLive && !isAmp && (
           <span data-e2e="most-read-live-pulse">
             <LiveLabel />
           </span>
         )}
-        {fakeIsAmp && (
+        {isAmp && (
           <>
-            {"{{#isLive}}"}
-              <span data-e2e="most-read-live-pulse">
-                <LiveLabel />
-              </span>
-            {"{{/isLive}}"}
+            {'{{#isLive}}'}
+            <span data-e2e="most-read-live-pulse">
+              <LiveLabel />
+            </span>
+            {'{{/isLive}}'}
           </>
         )}
         {title}
