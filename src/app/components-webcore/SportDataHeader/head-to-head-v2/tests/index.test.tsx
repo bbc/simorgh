@@ -229,6 +229,7 @@ describe('Skipped Tests for MVP', () => {
     expect(awayTeamName).toHaveLength(3);
   });
 });
+
 describe('Head to Head Component', () => {
   test('renders head to head component of PreEvent status with No teams', () => {
     renderHeadToHead({ data: asH2HData(preEventNoTeamsMockData) });
