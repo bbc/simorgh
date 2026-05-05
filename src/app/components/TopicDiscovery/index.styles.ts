@@ -107,6 +107,11 @@ const styles = {
       height: `${pixelsToRem(12)}rem`,
       background: `linear-gradient(to right, ${palette.GREY_4} 0%, ${palette.GREY_3} 100%)`,
     }),
+  skeletonMoreFromLinkContainer: () =>
+    css({
+      display: 'flex',
+      alignItems: 'flex-start',
+    }),
   skeletonMoreFromLink: ({ palette, spacings }: Theme) =>
     css({
       height: `${pixelsToRem(18)}rem`,
