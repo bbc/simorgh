@@ -8,6 +8,7 @@ export declare enum EventStatus {
   Cancelled = 'Cancelled',
   Suspended = 'Suspended',
   Postponed = 'Postponed',
+  Delayed = 'Delayed',
   Intermission = 'Intermission',
 }
 
