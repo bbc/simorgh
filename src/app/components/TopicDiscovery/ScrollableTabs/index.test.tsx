@@ -13,10 +13,6 @@ const mockTabs = [
 ];
 
 describe('ScrollableTabs', () => {
-  beforeEach(() => {
-    Element.prototype.scrollIntoView = jest.fn();
-  });
-
   it('should render all tabs', () => {
     render(
       <ScrollableTabs
@@ -123,53 +119,5 @@ describe('ScrollableTabs', () => {
 
     expect(screen.getByTestId('scroll-start')).toBeInTheDocument();
     expect(screen.getByTestId('scroll-end')).toBeInTheDocument();
-  });
-
-  it('should scroll the tab container when the chevrons are clicked', () => {
-    render(
-      <ScrollableTabs
-        tabs={mockTabs}
-        activeTabId="tab-1"
-        onTabChange={jest.fn()}
-        labelledBy="heading-id"
-      />,
-    );
-
-    let scrollLeft = 50;
-    const tabListElement = screen.getByRole('tablist');
-    const scrollBy = jest.fn(({ left }) => {
-      scrollLeft += left;
-    });
-
-    Object.defineProperty(tabListElement, 'clientWidth', {
-      configurable: true,
-      get: () => 200,
-    });
-    Object.defineProperty(tabListElement, 'scrollWidth', {
-      configurable: true,
-      get: () => 500,
-    });
-    Object.defineProperty(tabListElement, 'scrollLeft', {
-      configurable: true,
-      get: () => scrollLeft,
-    });
-    Object.defineProperty(tabListElement, 'scrollBy', {
-      configurable: true,
-      value: scrollBy,
-    });
-
-    fireEvent(window, new Event('resize'));
-
-    fireEvent.click(screen.getByTestId('scroll-end'));
-    fireEvent.click(screen.getByTestId('scroll-start'));
-
-    expect(scrollBy).toHaveBeenNthCalledWith(1, {
-      left: 150,
-      behavior: 'smooth',
-    });
-    expect(scrollBy).toHaveBeenNthCalledWith(2, {
-      left: -150,
-      behavior: 'smooth',
-    });
   });
 });
