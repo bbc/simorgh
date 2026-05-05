@@ -69,15 +69,12 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   };
 
   const getMoreFromText = () => {
-    const moreFrom = translations.topicDiscovery?.moreFrom;
-    const topicTitleFirst = translations.topicDiscovery?.topicTitleFirst;
-    if (!moreFrom) {
-      return `More from ${activeTopic?.topicName}`;
+    const moreFromTopic = translations.topicDiscovery?.moreFromTopic;
+    if (moreFromTopic && activeTopic?.topicName) {
+      return moreFromTopic.replace('{topic}', activeTopic.topicName);
     }
-    if (topicTitleFirst) {
-      return `${activeTopic?.topicName} ${moreFrom}`;
-    }
-    return `${moreFrom} ${activeTopic?.topicName}`;
+    // fallback to English if not present
+    return `More from ${activeTopic?.topicName}`;
   };
 
   if (!topics || topics.length === 0) return null;

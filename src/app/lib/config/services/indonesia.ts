@@ -85,7 +85,7 @@ export const service: DefaultServiceConfig = {
       home: 'Berita',
       topicDiscovery: {
         heading: 'Temukan lebih banyak',
-        moreFrom: 'Selengkapnya dari',
+        moreFromTopic: 'Selengkapnya dari {topic}',
       },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',

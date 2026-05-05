@@ -99,7 +99,7 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
-  it('renders the more from section with topic title last by default', async () => {
+  it('renders the more from section with topic title last if {topic} is last in the config', async () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -111,7 +111,7 @@ describe('TopicDiscovery', () => {
     expect(moreFrom).toHaveTextContent('Mais de Topic1');
   });
 
-  it('renders the more from section with topic title first if topicTitleFirst is true', async () => {
+  it('renders the more from section with topic title first if {topic} is first in the config', async () => {
     const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
@@ -127,7 +127,7 @@ describe('TopicDiscovery', () => {
     // remove moreFrom from translations to test fallback
     const portugueseTranslations = {
       ...portugueseConfig.default.translations,
-      topicDiscovery: { heading: 'Discover more', topicTitleFirst: true },
+      topicDiscovery: { heading: 'Discover more' },
     };
     const config = {
       ...portugueseConfig.default,

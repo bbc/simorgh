@@ -145,7 +145,7 @@ export const service: SerbianConfig = {
       home: 'Glavna stranica',
       topicDiscovery: {
         heading: 'Otkrijte više',
-        moreFrom: 'Više iz',
+        moreFromTopic: 'Više iz {topic}',
       },
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
@@ -540,7 +540,7 @@ export const service: SerbianConfig = {
       home: 'Главна страница',
       topicDiscovery: {
         heading: 'Откријте више',
-        moreFrom: 'Више из',
+        moreFromTopic: 'Више из {topic}',
       },
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',

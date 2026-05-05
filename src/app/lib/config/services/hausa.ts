@@ -84,7 +84,7 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Ci gaba da karantawa',
       topicDiscovery: {
         heading: 'Gano ƙarin abubuwa',
-        moreFrom: 'Ƙarin labarai daga',
+        moreFromTopic: 'Ƙarin labarai daga {topic}',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',

@@ -80,8 +80,7 @@ export const service: DefaultServiceConfig = {
       continueReading: 'पुढे वाचा',
       topicDiscovery: {
         heading: 'अधिक शोधा',
-        moreFrom: 'मधील अधिक',
-        topicTitleFirst: true,
+        moreFromTopic: '{topic} मधील अधिक',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',

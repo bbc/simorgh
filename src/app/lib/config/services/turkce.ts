@@ -68,8 +68,7 @@ export const service: DefaultServiceConfig = {
       continueReading: 'Okumaya devam edin',
       topicDiscovery: {
         heading: 'Daha fazlasını keşfet',
-        moreFrom: 'hakkında daha fazla',
-        topicTitleFirst: true,
+        moreFromTopic: '{topic} hakkında daha fazla',
       },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
