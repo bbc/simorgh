@@ -30,7 +30,9 @@ const HeadToHeadHeader = ({ date, tournamentDescriptionLabel, status }) => (
         <div css={styles.dateHeader()}>
           <time css={styles.date()}>{date}</time>
         </div>
-        <div css={styles.interpunct()} aria-hidden>‧</div>
+        <div css={styles.interpunct()} aria-hidden>
+          ‧
+        </div>
       </div>
     )}
     <div css={styles.tournamentHeader()}>

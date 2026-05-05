@@ -10,7 +10,11 @@ const Card = ({ player }) => (
         <RedCardSVG />
       </span>
     ) : (
-      <span css={styles.yellowCard()} aria-hidden data-testid="second-yellow-card-img">
+      <span
+        css={styles.yellowCard()}
+        aria-hidden
+        data-testid="second-yellow-card-img"
+      >
         <SecondYellowCardSVG />
       </span>
     )}

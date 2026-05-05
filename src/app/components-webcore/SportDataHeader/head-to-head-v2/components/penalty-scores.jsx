@@ -33,7 +33,11 @@ const PenaltyScores = ({ data }) => {
       <VisuallyHiddenText>
         {`${winnerOnPenaltiesName} win ${winnerOnPenaltiesScore} - ${loserOnPenaltiesScore} on penalties`}
       </VisuallyHiddenText>
-      <div css={styles.penaltiesText()} aria-hidden="true" data-testid="penalties-text">
+      <div
+        css={styles.penaltiesText()}
+        aria-hidden="true"
+        data-testid="penalties-text"
+      >
         <span css={styles.winningTeamName()}>{`${winnerOnPenaltiesName}`}</span>
         {` win ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} on pens`}
       </div>
