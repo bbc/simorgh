@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect, use, useRef } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import { TopicTag } from '#app/models/types/metadata';
@@ -31,6 +31,7 @@ const fetchTopicPromos = (
 
 const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
+  const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
@@ -38,14 +39,22 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   useEffect(() => {
     let isActive = true;
 
-    setIsLoading(true);
+    const cachedPromos = promosCacheRef.current[activeTabId];
 
-    fetchTopicPromos(activeTabId).then(fetchedTopicPromos => {
-      if (!isActive) return;
-
-      setTopicPromos(fetchedTopicPromos);
+    if (cachedPromos) {
+      setTopicPromos(cachedPromos);
       setIsLoading(false);
-    });
+    } else {
+      setIsLoading(true);
+
+      fetchTopicPromos(activeTabId).then(fetchedTopicPromos => {
+        if (!isActive) return;
+
+        promosCacheRef.current[activeTabId] = fetchedTopicPromos;
+        setTopicPromos(fetchedTopicPromos);
+        setIsLoading(false);
+      });
+    }
 
     return () => {
       isActive = false;
@@ -64,7 +73,9 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   const handleTabChange = (nextTabId: TopicTag['topicId']) => {
     if (nextTabId === activeTabId) return;
 
-    setIsLoading(true);
+    const hasCachedPromos = Boolean(promosCacheRef.current[nextTabId]);
+
+    setIsLoading(!hasCachedPromos);
     setActiveTabId(nextTabId);
   };
 
