@@ -516,14 +516,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             </div>
           </div>
         )}
-        {!isApp && !isPGL && (
-          <SecondaryColumn
-            pageData={pageData}
-            {...(timeOfDayExperimentProps && {
-              experimentProps: timeOfDayExperimentProps,
-            })}
-          />
-        )}
+        {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
       {!isApp && !isPGL && (
@@ -534,9 +527,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           size="default"
           headingBackgroundColour={GREY_2}
           mobileDivider={showTopics}
-          {...(timeOfDayExperimentProps && {
-            experimentProps: timeOfDayExperimentProps,
-          })}
         />
       )}
     </div>
