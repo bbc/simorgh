@@ -7,7 +7,6 @@ const styles = {
       padding: `0 ${spacings.DOUBLE}rem ${spacings.FULL}rem ${spacings.DOUBLE}rem`,
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        marginTop: `${spacings.TRIPLE}rem`,
         padding: 0,
       },
     }),

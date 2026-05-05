@@ -518,6 +518,7 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
+          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
           {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
@@ -542,7 +543,6 @@ const ArticlePage = ({
               experimentProps: timeOfDayExperimentProps,
             })}
           />
-          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
         </div>
         {showAdaptiveMediaCuration && (
           <div css={styles.adaptiveMediaCurationRow}>
