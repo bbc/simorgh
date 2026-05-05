@@ -1,60 +1,8 @@
-// import React from 'react';
-// import styled, { css } from '@bbc/web-styled';
-
-import styled from '@emotion/styled';
-// import { css } from '@emotion/react';
-
-// import {
-//   GROUP_3,
-//   SPACING_1,
-//   SPACING_2,
-//   fontEmphasised,
-//   fontScaleBody,
-//   fontScaleDescription,
-// } from '@bbc/web-gel-foundations';
-// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
-
+/** @jsxImportSource @emotion/react */
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+import styles from './index.styles';
 
-import pixelsToRem from '../../../../utilities/pixelsToRem';
-
-const PenaltyScoresContainer = styled.div`
-  font-size: 1rem;
-  line-height: 1.375;
-  text-align: center;
-  padding: 4px 0;
-
-  @media (min-width: ${pixelsToRem(600)}rem) {
-    padding-bottom: 8px;
-  }
-
-  ${
-    '' /* ${({ isConciseView }) =>
-    isConciseView &&
-    css`
-      ${fontScaleDescription}
-    `} */
-  }
-`;
-
-const WinningTeamName = styled.span`
-  ${'' /* ${fontEmphasised} */}
-  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
-  font-weight: 700;
-  font-feature-settings: 'ss01' off;
-  ${
-    '' /* color: ${({ theme, isConciseView }) =>
-    isConciseView ? theme.colourPalette.primary : theme.colourPalette.accent}; */
-  }
-  color: #FFD230;
-`;
-
-const PenaltiesText = styled.div`
-  ${'' /* color: ${({ theme }) => theme.colourPalette.secondary}; */}
-  color: #A8A8A8;
-`;
-
-const PenaltyScores = ({ data, isConciseView }) => {
+const PenaltyScores = ({ data }) => {
   const { winner, seriesWinner, multiLeg, status } = data;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';
@@ -81,17 +29,15 @@ const PenaltyScores = ({ data, isConciseView }) => {
     data[loserOnPenalties].runningScores.penaltyShootout;
 
   return (
-    <PenaltyScoresContainer isConciseView={isConciseView}>
+    <div css={styles.penaltyScoresContainer()}>
       <VisuallyHiddenText>
         {`${winnerOnPenaltiesName} win ${winnerOnPenaltiesScore} - ${loserOnPenaltiesScore} on penalties`}
       </VisuallyHiddenText>
-      <PenaltiesText aria-hidden="true" data-testid="penalties-text">
-        <WinningTeamName
-          isConciseView={isConciseView}
-        >{`${winnerOnPenaltiesName}`}</WinningTeamName>
+      <div css={styles.penaltiesText()} aria-hidden="true" data-testid="penalties-text">
+        <span css={styles.winningTeamName()}>{`${winnerOnPenaltiesName}`}</span>
         {` win ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} on pens`}
-      </PenaltiesText>
-    </PenaltyScoresContainer>
+      </div>
+    </div>
   );
 };
 

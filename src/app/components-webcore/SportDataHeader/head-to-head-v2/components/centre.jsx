@@ -1,14 +1,4 @@
-// import React from 'react';
-// import styled, { css } from '@bbc/web-styled';
-import styled from '@emotion/styled';
-import { css } from '@emotion/react';
-
-// import { createSize, GROUP_3 } from '@bbc/web-gel-foundations';
-// import {
-//   isCalledOffStatus,
-//   isInProgressStatus,
-//   isResultStatus,
-// } from '@bbc/web-sport-utils';
+/** @jsxImportSource @emotion/react */
 import {
   isCalledOffStatus,
   isInProgressStatus,
@@ -17,28 +7,7 @@ import {
 
 import Time from './fixture-time';
 import Score from './score';
-
-import pixelsToRem from '../../../../utilities/pixelsToRem';
-
-// ensures team names / badges line up down the page across "HH:mm", "TBC", single-digit and double-digit scores
-// it is acceptable for the badges/team names to be spaced more widely for triple-digit+ scores, as these are very rare
-const getCentreMinWidthPx = maxScoreLength =>
-  maxScoreLength && maxScoreLength > 1
-    ? { desktop: 106, mobile: 90 }
-    : { desktop: 85, mobile: 77 };
-
-const StyledCentre = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-self: space-evenly;
-
-  ${({ maxScoreLength }) => css`
-    min-width: ${pixelsToRem(getCentreMinWidthPx(maxScoreLength).mobile)}rem;
-    @media (min-width: ${pixelsToRem(600)}rem) {
-      min-width: ${pixelsToRem(getCentreMinWidthPx(maxScoreLength).desktop)}rem;
-    }
-  `}
-`;
+import styles from './index.styles';
 
 export const shouldShowScores = statusGroup =>
   isInProgressStatus(statusGroup) ||
@@ -61,13 +30,13 @@ const Centre = ({ data, isConciseView, maxScoreLength }) => {
   const { status } = data;
 
   return (
-    <StyledCentre isConciseView={isConciseView} maxScoreLength={maxScoreLength}>
+    <div css={styles.centre(maxScoreLength)}>
       {shouldShowScores(status) ? (
         <Played data={data} isConciseView={isConciseView} />
       ) : (
         <Time time={data.time} isConciseView={isConciseView} />
       )}
-    </StyledCentre>
+    </div>
   );
 };
 
