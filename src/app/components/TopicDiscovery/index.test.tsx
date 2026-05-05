@@ -100,7 +100,6 @@ describe('TopicDiscovery', () => {
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
   });
 
-<<<<<<< ws-2559-support-translations-for-topic-discovery-experiment
   it('renders the more from section with topic title last if {topic} is last in the config', async () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
@@ -141,7 +140,8 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     await screen.findByText('More from Topic1');
-=======
+  });
+
   it('should use cached promos when switching back to previously visited tabs', async () => {
     jest.useFakeTimers();
 
@@ -182,7 +182,6 @@ describe('TopicDiscovery', () => {
     );
 
     expect(getFetchTimeoutCallCount()).toBe(2);
->>>>>>> WS-2397-front-end-build-for-new-topic-discovery-component
   });
 
   it('should not render when there are no valid topics', () => {
