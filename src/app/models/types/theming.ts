@@ -32,8 +32,6 @@ interface Palette extends BrandPalette {
   EBON: string;
   ERROR_CORE: string;
   GHOST: string;
-  GREY_10: string;
-  GREY_11: string;
   GREY_1: string;
   GREY_2: string;
   GREY_3: string;
@@ -42,6 +40,10 @@ interface Palette extends BrandPalette {
   GREY_6: string;
   GREY_7: string;
   GREY_8: string;
+  GREY_10: string;
+  GREY_11: string;
+  GREY_15: string;
+  GREY_16: string;
   KINGFISHER: string;
   LE_TEAL: string;
   LIVE_LIGHT: string;
