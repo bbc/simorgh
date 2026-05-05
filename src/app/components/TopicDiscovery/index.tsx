@@ -84,7 +84,6 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     if (moreFromTopic && activeTopic?.topicName) {
       return moreFromTopic.replace('{topic}', activeTopic.topicName);
     }
-    // fallback to English if not present
     return `More from ${activeTopic?.topicName}`;
   };
 

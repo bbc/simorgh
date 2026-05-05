@@ -125,7 +125,6 @@ describe('TopicDiscovery', () => {
   });
 
   it('renders the "more from" section with fallback if moreFrom is missing', async () => {
-    // remove moreFrom from translations to test fallback
     const portugueseTranslations = {
       ...portugueseConfig.default.translations,
       topicDiscovery: { heading: 'Discover more' },
