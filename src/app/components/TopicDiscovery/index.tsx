@@ -18,7 +18,7 @@ const eventTrackingData = {
   componentName: 'topic-discovery',
 };
 
-const FAKE_FETCH_DELAY_MS = 600;
+export const FAKE_FETCH_DELAY_MS = 600;
 
 const fetchTopicPromos = (
   topicId: TopicTag['topicId'],
