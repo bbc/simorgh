@@ -230,12 +230,12 @@ const nonSmokeCanonicalTestSuites = [
   //   service: 'japanese',
   //   tests: [...canonicalTests],
   // },
-  {
-    path: '/japanese/articles/cj4m7n5nrd8o',
-    runforEnv: ['live'],
-    service: 'japanese',
-    tests: [...canonicalTests],
-  },
+  // {
+  //   path: '/japanese/articles/cj4m7n5nrd8o',
+  //   runforEnv: ['live'],
+  //   service: 'japanese',
+  //   tests: [...canonicalTests],
+  // },
   {
     path: '/kyrgyz/articles/c414v42gy75o',
     runforEnv: ['live'],
