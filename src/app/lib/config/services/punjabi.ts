@@ -146,7 +146,7 @@ export const service: DefaultServiceConfig = {
           },
           accept: 'ਓਕੇ',
           reject: 'ਜਾਣੋ ਕੀ ਬਦਲਿਆ ਹੈ',
-          rejectUrl: 'https://www.bbc.com/usingthebbc/privacy-policy/',
+          rejectUrl: 'https://www.bbc.com/punjabi/articles/cn0w4y8n1weo',
         },
         cookie: {
           amp: {
@@ -316,7 +316,7 @@ export const service: DefaultServiceConfig = {
           text: 'BBC ਬਾਰੇ',
         },
         {
-          href: 'https://www.bbc.com/usingthebbc/privacy/',
+          href: 'https://www.bbc.com/punjabi/articles/cn0w4y8n1weo',
           text: 'ਨਿੱਜਤਾ ਪਾਲਿਸੀ',
         },
         {

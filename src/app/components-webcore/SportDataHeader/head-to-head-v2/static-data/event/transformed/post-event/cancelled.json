@@ -1,0 +1,65 @@
+{
+  "id": "eut6muannjkpg3ujhhco6syzx",
+  "eventGroupingLabel": "England - Premier League",
+  "startDateTime": "2022-05-17T18:45:00Z",
+  "tournamentId": "d5ydtvt96bv7fq04yqm2w2632",
+  "urn": "urn:bbc:sportsdata:football:event:eut6muannjkpg3ujhhco6syzx",
+  "sport": "football",
+  "status": "Cancelled",
+  "period": "ft",
+  "periodLabel": { "value": "FT", "accessible": "Full time" },
+  "participants": [
+    {
+      "id": "d5ydtvt96bv7fq04yqm2w2632",
+      "urn": "urn:bbc:sportsdata:football:team:southampton",
+      "name": { "fullName": "Southampton", "shortName": "Southampton" },
+      "score": "1",
+      "runningScores": { "halftime": "1", "fulltime": "1" },
+      "alignment": "home"
+    },
+    {
+      "id": "c8h9bw1l82s06h77xxrelzhur",
+      "urn": "urn:bbc:sportsdata:football:team:liverpool",
+      "name": { "fullName": "Liverpool", "shortName": "Liverpool" },
+      "score": "2",
+      "runningScores": { "halftime": "1", "fulltime": "2" },
+      "alignment": "away"
+    }
+  ],
+  "winner": "away",
+  "venue": { "name": "St. Mary's Stadium", "shortName": "St. Mary's Stadium" },
+  "tournament": {
+    "id": "2kwbbcootiqqgmrzs6o5inle5",
+    "name": "Premier League",
+    "urn": "urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5"
+  },
+  "stage": {
+    "id": "8letniaf2s1z04atatf62ok5w",
+    "name": "Regular Season",
+    "urn": "urn:bbc:sportsdata:football:stage:8letniaf2s1z04atatf62ok5w"
+  },
+  "tournamentDescriptionLabel": "Premier League",
+  "lastUpdated": "2022-07-11T13:46:45Z",
+  "home": {
+    "fullName": "Southampton",
+    "shortName": "Southampton",
+    "urn": "urn:bbc:sportsdata:football:team:southampton",
+    "score": "1",
+    "actions": []
+  },
+  "away": {
+    "fullName": "Liverpool",
+    "shortName": "Liverpool",
+    "urn": "urn:bbc:sportsdata:football:team:liverpool",
+    "score": "2",
+    "actions": []
+  },
+  "time": {
+    "accessibleTime": "19:45",
+    "displayTimeUK": "19:45",
+    "timeCertainty": true
+  },
+  "accessibleTime": "19:45",
+  "date": "Tue 17 May 2022",
+  "accessibleEventSummary": ""
+}

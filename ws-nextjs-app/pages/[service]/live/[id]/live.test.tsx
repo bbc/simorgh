@@ -7,9 +7,11 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import liveFixture from '#data/pidgin/live/c7p765ynk9qt.json';
 import postFixture from '#data/pidgin/posts/postFixture.json';
+import sportDataFixture from '#data/afrique/live/c7gk1vjglxn1t.json';
 import { GetServerSidePropsContext } from 'next';
 import MockIntersectionObserver from '#app/components/intersection-observer-testing-library';
 import * as useLivePagePolling from '#app/hooks/useLivePagePolling';
+import * as isLiveEnvModule from '#app/lib/utilities/isLive';
 import Live, { ComponentProps } from './LivePageLayout';
 import { getServerSideProps } from './[[...variant]].page';
 import { StreamResponse } from './Post/types';
@@ -17,6 +19,27 @@ import { StreamResponse } from './Post/types';
 jest.mock('#app/hooks/useLivePagePolling', () => ({
   __esModule: true,
   default: jest.fn(),
+}));
+
+jest.mock('#app/lib/utilities/isLive', () => ({
+  __esModule: true,
+  default: jest.fn(() => false),
+}));
+
+jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
+  __esModule: true,
+  default: jest.fn(
+    ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
+      <div
+        data-testid="head-to-head-v2"
+        data-concise={String(isConciseView)}
+        data-hide-badges={String(shouldHideBadges)}
+        data-show-actions={String(shouldShowActions)}
+      >
+        {data?.home?.fullName} vs {data?.away?.fullName}
+      </div>
+    ),
+  ),
 }));
 
 type HelmetMetaTag = {
@@ -159,7 +182,7 @@ describe('Live Page', () => {
     await getServerSideProps(context);
     expect(context.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=120',
     );
   });
 
@@ -556,5 +579,130 @@ describe('Live Page', () => {
 
     expect((ogTitleMeta as HelmetMetaTag)?.content).toEqual(expectedOgTitle);
     expect((ogImageMeta as HelmetMetaTag)?.content).toEqual(expectedOgImage);
+  });
+
+  describe('SportData handling', () => {
+    it('should render HeadToHeadV2 when sportDataEventContent is present and not in live env', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.getByTestId('head-to-head-v2')).toBeInTheDocument();
+    });
+
+    it('should pass correct data to HeadToHeadV2 component', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const headToHeadElement = screen.getByTestId('head-to-head-v2');
+      expect(headToHeadElement).toHaveTextContent('Bologna vs Aston Villa');
+    });
+
+    it('should pass correct props to HeadToHeadV2 component', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const headToHeadElement = screen.getByTestId('head-to-head-v2');
+      expect(headToHeadElement).toHaveAttribute('data-concise', 'false');
+      expect(headToHeadElement).toHaveAttribute('data-hide-badges', 'false');
+      expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
+    });
+
+    it('should render a h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      const { container } = await act(async () => {
+        return render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const title = container.querySelector('h1');
+      expect(title).toBeInTheDocument();
+    });
+
+    it('should render a visually hidden h1 when displaying sportData', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      const visuallyHiddenTitle = screen.getByText(
+        'Villa gain upper hand with gritty Europa League win at Bologna',
+      );
+      expect(visuallyHiddenTitle).toBeInTheDocument();
+      expect(visuallyHiddenTitle).toHaveStyle(
+        'overflow: hidden; position: absolute; width: 1px;',
+      );
+    });
+
+    it('should not render HeadToHeadV2 when sportDataEventContent is not present', async () => {
+      mockPollingUpdate(mockPageData);
+
+      await act(async () => {
+        render(<Live pageData={mockPageData} />);
+      });
+
+      expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
+    });
+
+    it('should not render HeadToHeadV2 when in live environment', async () => {
+      const pageDataWithSportData = {
+        ...mockPageData,
+        sportDataEventContent: sportDataFixture.data.sportDataEventContent,
+      };
+      mockPollingUpdate(pageDataWithSportData);
+
+      jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(true);
+
+      await act(async () => {
+        render(<Live pageData={pageDataWithSportData} />);
+      });
+
+      expect(screen.queryByTestId('head-to-head-v2')).not.toBeInTheDocument();
+
+      jest.spyOn(isLiveEnvModule, 'default').mockReturnValue(false);
+    });
+
+    it('should render Header when sportDataEventContent is not present', async () => {
+      mockPollingUpdate(mockPageData);
+
+      await act(async () => {
+        render(<Live pageData={mockPageData} />);
+      });
+
+      expect(
+        screen.getByText(
+          'Israeli tanks shell Jabalia camp as heavy fighting continues in north Gaza',
+        ),
+      ).toBeInTheDocument();
+    });
   });
 });

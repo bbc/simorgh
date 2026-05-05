@@ -29,6 +29,7 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'punjabi',
   'romania',
   'russian',
+  'serbian',
   'sinhala',
   'somali',
   'swahili',
@@ -37,10 +38,13 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'thai',
   'tigrinya',
   'turkce',
+  'ukchina',
   'ukrainian',
   'urdu',
+  'uzbek',
   'vietnamese',
   'yoruba',
+  'zhongwen',
 ] as const;
 
 export default SERVICES_WITH_NEW_NAV;
