@@ -31,6 +31,7 @@ const fetchTopicPromos = (
 
 const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
+  const { topicDiscovery } = translations;
   const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -80,9 +81,11 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   };
 
   const getMoreFromText = () => {
-    const moreFromTopic = translations.topicDiscovery?.moreFromTopic;
-    if (moreFromTopic && activeTopic?.topicName) {
-      return moreFromTopic.replace('{topic}', activeTopic.topicName);
+    if (topicDiscovery?.moreFromTopic && activeTopic?.topicName) {
+      return topicDiscovery.moreFromTopic.replace(
+        '{topic}',
+        activeTopic.topicName,
+      );
     }
     return `More from ${activeTopic?.topicName}`;
   };
@@ -97,7 +100,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
-        {translations.topicDiscovery?.heading ?? 'Discover more'}
+        {topicDiscovery?.heading ?? 'Discover more'}
       </h2>
       <ScrollableTabs
         tabs={tabs}
