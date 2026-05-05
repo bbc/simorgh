@@ -17,7 +17,7 @@ const logger = nodeLogger(__filename);
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+    'public, stale-if-error=1200, stale-while-revalidate=600, max-age=600',
   );
 
   logResponseTime(

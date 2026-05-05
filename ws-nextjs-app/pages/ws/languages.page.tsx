@@ -14,7 +14,7 @@ const logger = nodeLogger(__filename);
 export const getServerSideProps: GetServerSideProps = async context => {
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=3000, stale-while-revalidate=1200, max-age=300',
+    'public, stale-if-error=3000, stale-while-revalidate=1200, max-age=600',
   );
 
   const { renderer_env: rendererEnv } = context.query as PageDataParams;

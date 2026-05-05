@@ -182,7 +182,7 @@ describe('Live Page', () => {
     await getServerSideProps(context);
     expect(context.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+      'public, stale-if-error=300, stale-while-revalidate=120, max-age=120',
     );
   });
 

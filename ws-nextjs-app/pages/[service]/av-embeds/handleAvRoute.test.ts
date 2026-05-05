@@ -97,7 +97,7 @@ describe('Handle AV Route', () => {
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=900, stale-while-revalidate=300, max-age=300',
+      'public, stale-if-error=900, stale-while-revalidate=600, max-age=600',
     );
   });
 
@@ -108,7 +108,7 @@ describe('Handle AV Route', () => {
 
     expect(mockGetServerSidePropsContext.res.setHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      'public, stale-if-error=900, stale-while-revalidate=300, max-age=300',
+      'public, stale-if-error=900, stale-while-revalidate=600, max-age=600',
     );
   });
 });
