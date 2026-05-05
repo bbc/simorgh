@@ -238,15 +238,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     experimentType: ExperimentType.CLIENT_SIDE,
   });
 
-  // time of day 2 experiment for articles
-  const timeOfDayArticleExperimentName = 'newswb_ws_tod_article_2';
-  const timeOfDayArticleVariant = useOptimizelyVariation({
-    experimentName: timeOfDayArticleExperimentName,
-    experimentType: ExperimentType.CLIENT_SIDE,
-  });
-  const isAdaptiveTimeOfDayVariant =
-    timeOfDayArticleVariant === 'adaptive_variation';
-  // build one shared experiment payload so all oj components use the same values
   const getActiveExperimentProps = (
     experimentName: string,
     experimentVariant: string | null,
@@ -262,11 +253,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const testPageViewsExperimentProps = getActiveExperimentProps(
     testPageViewsExperimentName,
     testPageViewsVariant,
-  );
-
-  const timeOfDayExperimentProps = getActiveExperimentProps(
-    timeOfDayArticleExperimentName,
-    timeOfDayArticleVariant,
   );
 
   const allowAdvertising = pageData?.metadata?.allowAdvertising ?? false;
@@ -326,10 +312,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const atiData = {
     ...atiAnalytics,
     ...(isCPS && { pageTitle: `${atiAnalytics.pageTitle} - ${brandName}` }),
-    ...(timeOfDayExperimentProps && {
-      experimentName: timeOfDayExperimentProps.experimentName,
-      experimentVariant: timeOfDayExperimentProps.experimentVariant,
-    }),
     ...(testPageViewsExperimentProps && {
       experimentName: testPageViewsExperimentProps.experimentName,
       experimentVariant: testPageViewsExperimentProps.experimentVariant,
@@ -404,17 +386,13 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     group: gist,
     links: ArticleLinksBlock,
     mpu: getMpuComponent(allowAdvertising),
-    wsoj: ({ data }: { data: Recommendation[] }) =>
-      getWsojComponent({ data, experimentProps: timeOfDayExperimentProps }),
+    wsoj: ({ data }: { data: Recommendation[] }) => getWsojComponent({ data }),
     disclaimer: DisclaimerWithPaddingOverride,
     podcastPromo: getPodcastPromoComponent(podcastPromoEnabled),
     ...(showContinueReadingButton && {
       continueReading: getContinueReadingButton({
         showAllContent,
         setShowAllContent,
-        ...(timeOfDayExperimentProps && {
-          experimentProps: timeOfDayExperimentProps,
-        }),
       }),
     }),
   };
@@ -432,12 +410,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
   // show media curation only when the user is in adaptive variation
-  const showAdaptiveMediaCuration = Boolean(
+  const showMediaCuration = Boolean(
     !isAmp &&
     !isLite &&
     !isApp &&
     !isPGL &&
-    isAdaptiveTimeOfDayVariant &&
     mediaCurationContent?.summaries?.length,
   );
 
@@ -521,16 +498,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
               css={styles.portraitVideoCarousel}
             />
           )}
-          <RelatedContentSection
-            content={blocks}
-            {...(timeOfDayExperimentProps && {
-              experimentProps: timeOfDayExperimentProps,
-            })}
-          />
+          <RelatedContentSection content={blocks} />
         </div>
-        {showAdaptiveMediaCuration && (
-          <div css={styles.adaptiveMediaCurationRow}>
-            <div data-testid="adaptive-media-curation">
+        {showMediaCuration && (
+          <div css={styles.mediaCurationRow}>
+            <div data-testid="media-curation">
               <Curation
                 visualStyle={VISUAL_STYLE.FEED}
                 visualProminence={VISUAL_PROMINENCE.NORMAL}
@@ -540,9 +512,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                 curationId={mediaCurationContent?.curationId}
                 curationLength={mediaCurationContent?.summaries?.length || 0}
                 link={mediaCurationContent?.link}
-                {...(timeOfDayExperimentProps && {
-                  experimentProps: timeOfDayExperimentProps,
-                })}
               />
             </div>
           </div>

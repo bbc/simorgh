@@ -126,7 +126,7 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
+  mediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
       margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
