@@ -13,6 +13,8 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import onClient from '#app/lib/utilities/onClient';
 import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
+import useToggle from '#app/hooks/useToggle';
+import isLocal from '#app/lib/utilities/isLocal';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -29,6 +31,9 @@ export const AccountProvider = ({
   const { locale, atiAnalyticsProducerName } = use(ServiceContext);
   const { isAmp = false, isApp = false, isLite = false } = use(RequestContext);
   const [pageToReturnTo, setPageToReturnTo] = useState<string | null>(null);
+  const { service } = use(ServiceContext);
+  const { enabled: isPersonalizationToggleEnabled, value: accountService } =
+    useToggle('uasPersonalization');
 
   useEffect(() => {
     setPageToReturnTo(window.location.href);
@@ -72,6 +77,14 @@ export const AccountProvider = ({
   const isAccountPromoBannerVisible =
     initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
+  const isPersonalizationEnabled =
+    isIdctaAvailable &&
+    isSignedIn &&
+    isPersonalizationToggleEnabled &&
+    (isLocal()
+      ? accountService?.toString().split('|').includes(service)
+      : true);
+
   const value = useMemo(
     () => ({
       isIdctaAvailable,
@@ -82,6 +95,7 @@ export const AccountProvider = ({
       settingsUrl,
       forYouUrl,
       isAccountPromoBannerVisible,
+      isPersonalizationEnabled,
     }),
     [
       forYouUrl,
@@ -92,6 +106,7 @@ export const AccountProvider = ({
       signInUrl,
       signOutUrl,
       isAccountPromoBannerVisible,
+      isPersonalizationEnabled,
     ],
   );
 

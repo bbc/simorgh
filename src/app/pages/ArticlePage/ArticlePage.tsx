@@ -61,7 +61,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton/lazy';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
-import isLocal from '#app/lib/utilities/isLocal';
+import { AccountContext } from '#app/contexts/AccountContext';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -115,15 +115,7 @@ const getTimestampComponent =
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
-    const { service } = use(ServiceContext);
-    const { enabled: featureToggleOn, value: accountService } =
-      useToggle('uasPersonalization');
-
-    const isPersonalizationEnabled =
-      featureToggleOn &&
-      (isLocal()
-        ? accountService?.toString().split('|').includes(service)
-        : true);
+    const { isPersonalizationEnabled } = use(AccountContext);
 
     return (
       <>
@@ -349,7 +341,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showPortraitVideoCarousel = Boolean(
     pageData?.portraitVideoItems?.portraitVideo?.blocks?.length &&
-      articlePortraitVideoEnabled,
+    articlePortraitVideoEnabled,
   );
 
   const portraitVideoCarouselTitle =
@@ -371,10 +363,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showContinueReadingButton = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      hasContinueReadingBlock &&
-      continueReadingButtonToggle,
+    !isLite &&
+    !isApp &&
+    hasContinueReadingBlock &&
+    continueReadingButtonToggle,
   );
 
   const promoImageBlocks =
@@ -445,11 +437,11 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
-      !isLite &&
-      !isApp &&
-      !isPGL &&
-      isAdaptiveTimeOfDayVariant &&
-      mediaCurationContent?.summaries?.length,
+    !isLite &&
+    !isApp &&
+    !isPGL &&
+    isAdaptiveTimeOfDayVariant &&
+    mediaCurationContent?.summaries?.length,
   );
 
   // EXPERIMENT: PWA Promotional Banner
