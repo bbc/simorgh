@@ -10,18 +10,16 @@ import {
   buildGlobalId,
   FAVOURITES_CONFIG,
   createFavouritesPayload,
+  extractPromoImageFromArticleData,
+  buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
+import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
  * based on feature toggles and sign in status,
  * with room to later expand for toggling the save state based on user actions. */
-
-interface UseUASButtonProps {
-  articleId: string;
-  articleTitle: string;
-}
 
 enum UASAction {
   SAVE = 'save',
@@ -39,7 +37,8 @@ interface UseUASButtonReturn {
 const useUASButton = ({
   articleId,
   articleTitle,
-}: UseUASButtonProps): UseUASButtonReturn => {
+  articlePageData,
+}: SaveArticleButtonProps): UseUASButtonReturn => {
   const { isSignedIn } = use(AccountContext);
   const { service } = use(ServiceContext);
   const { enabled: featureToggleOn = false, value: accountService = '' } =
@@ -58,13 +57,19 @@ const useUASButton = ({
     showButton ? articleId : '',
   );
 
+  const promoImageObj = extractPromoImageFromArticleData(articlePageData);
+
   const mutation = useMutation({
     mutationFn: async (action: UASAction) => {
       if (action === UASAction.SAVE) {
+        const promoImageBuild = buildPromoImageUrl(promoImageObj);
         const body = createFavouritesPayload({
           articleId,
           service,
           articleTitle,
+          promoImage: promoImageBuild,
+          promoImageAltText: promoImageObj?.altText || '',
+          locatorUrl: articlePageData?.metadata?.locators?.canonicalUrl || '',
         });
         await uasApiRequest('POST', FAVOURITES_CONFIG.activityType, { body });
       } else {

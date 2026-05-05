@@ -46,12 +46,19 @@ export interface Translations {
     signIn?: string;
     forYou?: string;
     register?: string;
+    settings?: string;
   };
   accountPromoBanner?: {
     title: string;
     description: string;
     closeLabel: string;
     buttonSeparatorText: string;
+  };
+  saveArticleButton?: {
+    save: string;
+    saving: string;
+    saved: string;
+    remove: string;
   };
   error: {
     home?: string;

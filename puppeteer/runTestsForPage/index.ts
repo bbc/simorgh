@@ -12,7 +12,7 @@ const onFailedRequest = request => {
   console.log('Request failed:', {
     url: request.url(),
     test: expect.getState().currentTestName,
-    errorText: request.failure().errorText,
+    errorText: request.failure()?.errorText,
   });
 };
 

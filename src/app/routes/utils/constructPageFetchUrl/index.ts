@@ -299,9 +299,14 @@ const constructPageFetchUrl = ({
         );
         break;
       }
-      case LIVE_RADIO_PAGE:
-        fetchUrl = Url(`${pathname}`);
+      case LIVE_RADIO_PAGE: {
+        if (process.env?.NEXTJS) {
+          fetchUrl = Url(`${host}${port}/api/local${pathname}`);
+        } else {
+          fetchUrl = Url(`${pathname}`);
+        }
         break;
+      }
       case LIVE_TV_PAGE: {
         fetchUrl = Url(`${host}${port}/api/local/${service}/watch/${id}/live`);
         break;

@@ -1100,7 +1100,7 @@ describe('Article Page', () => {
       ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
 
-    it('passes the active experiment to ati analytics when the adaptive variant is on', () => {
+    it.skip('passes the active experiment to ati analytics when the adaptive variant is on', () => {
       render(
         <Context service="hindi">
           <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />

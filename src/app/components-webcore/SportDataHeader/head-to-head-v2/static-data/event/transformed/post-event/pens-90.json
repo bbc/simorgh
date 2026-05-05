@@ -1,0 +1,122 @@
+{
+  "id": "eut6muannjkpg3ujhhco6syzm",
+  "eventGroupingLabel": "England - Premier League",
+  "startDateTime": "2022-05-17T18:45:00Z",
+  "tournamentId": "d5ydtvt96bv7fq04yqm2w2632",
+  "status": "PostEvent",
+  "period": "ft",
+  "periodLabel": { "value": "PENS", "accessible": "Penalty shootout" },
+  "venue": { "name": "St. Mary's Stadium", "shortName": "St. Mary's Stadium" },
+  "tournament": {
+    "id": "2kwbbcootiqqgmrzs6o5inle5",
+    "name": "Premier League",
+    "urn": "urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5"
+  },
+  "tournamentDescriptionLabel": "Premier League",
+  "home": {
+    "fullName": "Southampton",
+    "shortName": "Southampton",
+    "urn": "urn:bbc:sportsdata:football:team:southampton",
+    "score": "1",
+    "runningScores": {
+      "halftime": "1",
+      "fulltime": "1",
+      "penaltyShootout": "3"
+    },
+    "actions": [
+      {
+        "playerId": "6r4adhp9hu4ux7egwgd8j2thx",
+        "playerName": "N. Redmond",
+        "actionType": "goal",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "13'",
+              "accessible": "13 minutes"
+            }
+          }
+        ]
+      },
+      {
+        "actionType": "card",
+        "actions": [
+          {
+            "timeLabel": {
+              "accessible": "74 minutes",
+              "value": "74'"
+            },
+            "type": "Two Yellow Cards",
+            "typeLabel": {
+              "accessible": "Two Yellow Cards",
+              "value": "Two Yellow Cards"
+            }
+          }
+        ],
+        "playerId": "e6la6wx7o6x7k4srpq8tdsafp",
+        "playerName": "J. Stephens"
+      },
+      {
+        "actionType": "card",
+        "actions": [
+          {
+            "timeLabel": {
+              "accessible": "79 minutes",
+              "value": "79'"
+            },
+            "type": "Red Card",
+            "typeLabel": {
+              "accessible": "Red Card",
+              "value": "Red Card"
+            }
+          }
+        ],
+        "playerId": "1ph4g125dfsijfjzjpcvpcmlm",
+        "playerName": "J. Branthwaite"
+      }
+    ]
+  },
+  "away": {
+    "fullName": "Liverpool",
+    "shortName": "Liverpool",
+    "urn": "urn:bbc:sportsdata:football:team:liverpool",
+    "score": "1",
+    "runningScores": {
+      "halftime": "1",
+      "fulltime": "1",
+      "penaltyShootout": "5"
+    },
+    "actions": [
+      {
+        "playerId": "csvqjyuk06gzvjm408513nydx",
+        "playerName": "T. Minamino",
+        "actionType": "goal",
+        "actions": [
+          {
+            "type": "Goal",
+            "typeLabel": {
+              "value": "Goal",
+              "accessible": "Goal"
+            },
+            "timeLabel": {
+              "value": "27'",
+              "accessible": "27 minutes"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "winner": "away",
+  "time": {
+    "accessibleTime": "19:45",
+    "displayTimeUK": "19:45",
+    "timeCertainty": true
+  },
+  "date": "Tue 17 May 2022",
+  "accessibleEventSummary": "Southampton 1 , Liverpool 1 at Full time , Liverpool win 5 - 3 on penalties"
+}

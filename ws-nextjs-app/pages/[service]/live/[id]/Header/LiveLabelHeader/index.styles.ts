@@ -6,6 +6,14 @@ const PULSE_SIZE_3_4 = QUADRUPLE;
 const PULSE_SIZE_TOTAL_WIDTH_3_MIN = PULSE_END_MARGIN + PULSE_SIZE_3_4;
 
 const styles = {
+  liveLabelContainer: ({ mq, spacings }: Theme) =>
+    css({
+      textAlign: 'center',
+      paddingTop: `${spacings.DOUBLE}rem`,
+      [mq.GROUP_3_MIN_WIDTH]: {
+        paddingTop: `${spacings.TRIPLE}rem`,
+      },
+    }),
   liveLabelPulse: ({ mq, palette, spacings }: Theme) =>
     css({
       width: `${spacings.HALF + spacings.DOUBLE}rem`,
@@ -25,46 +33,35 @@ const styles = {
         color: 'canvasText',
       },
     }),
-  liveLabelTextWithImage: ({
-    palette,
-    spacings,
-    fontSizes,
-    fontVariants,
-    mq,
-  }: Theme) =>
+  liveLabelText: ({ palette, fontSizes, fontVariants, mq }: Theme) =>
     css({
       'span:first-of-type': {
         color: palette.LIVE_LIGHT,
         verticalAlign: 'middle',
-        display: 'inline',
+        position: 'relative',
         [mq.GROUP_3_MIN_WIDTH]: {
           ...fontVariants.sansBold,
           ...fontSizes.paragon,
         },
+      },
+    }),
+  liveLabelTextWithImage: ({ spacings }: Theme) =>
+    css({
+      'span:first-of-type': {
+        display: 'inline',
       },
       'span:nth-of-type(3)': {
         marginTop: `${spacings.DOUBLE}rem`,
       },
     }),
-  liveLabelTextWithoutImage: ({
-    mq,
-    palette,
-    fontSizes,
-    fontVariants,
-  }: Theme) =>
+  liveLabelTextWithoutImage: ({ mq, fontSizes, fontVariants }: Theme) =>
     css({
       'span:first-of-type': {
         display: 'inline-flex',
-        color: palette.LIVE_LIGHT,
-        verticalAlign: 'middle',
         'overflow-wrap': 'anywhere',
         marginInlineEnd: '0',
         [mq.GROUP_0_MAX_WIDTH]: {
           display: 'inline',
-        },
-        [mq.GROUP_3_MIN_WIDTH]: {
-          ...fontVariants.sansBold,
-          ...fontSizes.paragon,
         },
         [mq.GROUP_4_MIN_WIDTH]: {
           width: `calc(100% / 3  - ${PULSE_SIZE_TOTAL_WIDTH_3_MIN}rem)`,

@@ -83,7 +83,7 @@ export const getServerSideProps = async (
 
   context.res.setHeader(
     'Cache-Control',
-    'public, stale-if-error=300, stale-while-revalidate=120, max-age=30',
+    'public, stale-if-error=2400, stale-while-revalidate=1200, max-age=1200',
   );
 
   routingInfoLogger(ROUTING_INFORMATION, {

@@ -43,6 +43,7 @@ const storybookConfig: StorybookConfig = {
     '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
+    '../src/app/components-webcore/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
