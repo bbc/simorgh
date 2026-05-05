@@ -265,5 +265,35 @@ describe('Post', () => {
 
       expect(screen.queryByRole('button')).not.toBeInTheDocument();
     });
+
+    it('should not render share button when first heading text is missing', async () => {
+      const postWithMissingFirstHeadingText = {
+        ...samplePost,
+        header: {
+          ...samplePost.header,
+          model: {
+            ...samplePost.header.model,
+            blocks: [
+              {
+                ...samplePost.header.model.blocks[0],
+                model: {
+                  ...samplePost.header.model.blocks[0].model,
+                  blocks: [undefined],
+                },
+              },
+              ...samplePost.header.model.blocks.slice(1),
+            ],
+          },
+        },
+      };
+
+      await act(async () => {
+        render(
+          <Post post={postWithMissingFirstHeadingText as never} hasShareApi />,
+        );
+      });
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    });
   });
 });
