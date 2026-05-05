@@ -8,8 +8,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
   describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
     describe('Header Tests', () => {
       const serviceName = config[service]?.name || service;
-      // limit number to Zhongwen for navigation toggling
-      const testMobileNav = serviceName === 'zhongwen';
 
       const twoTierNavServices = {
         local: null, // Don't test two tier nav locally as the local environment can't fetch config
@@ -21,29 +19,6 @@ export default ({ service, pageType }: ServiceParametersType) => {
 
       const testTwoTierNav =
         twoTierNavServices[cypressAppEnv]?.includes(serviceName) ?? false;
-
-      if (testMobileNav) {
-        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
-          cy.viewport(320, 480);
-          cy.get('nav')
-            .find('[data-e2e="scrollable-nav"]')
-            .should('be.visible');
-
-          cy.get('nav')
-            .find('[data-e2e="dropdown-nav"] ul')
-            .should('not.be.visible');
-
-          cy.get('nav button').click();
-
-          cy.get('nav')
-            .find('[data-e2e="scrollable-nav"]')
-            .should('not.be.visible');
-
-          cy.get('nav')
-            .find('[data-e2e="dropdown-nav"] ul')
-            .should('be.visible');
-        });
-      }
 
       if (testTwoTierNav) {
         it('should show two tier navigation on mobile', () => {

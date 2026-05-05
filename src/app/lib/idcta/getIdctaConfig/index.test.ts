@@ -51,7 +51,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
     expect(mockFetchIdctaConfig).toHaveBeenCalled();
   });
 
@@ -64,7 +64,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, 'hindi');
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
     expect(mockFetchIdctaConfig).toHaveBeenCalled();
   });
 
@@ -88,7 +88,7 @@ describe('getIdctaConfig', () => {
 
     const result = await getIdctaConfig(mockToggles, mockService);
 
-    expect(result).toEqual(mockIdctaConfig);
+    expect(result).toEqual(expect.objectContaining(mockIdctaConfig));
   });
 
   it('should return null when config is missing id-availability field', async () => {
@@ -101,5 +101,61 @@ describe('getIdctaConfig', () => {
     const result = await getIdctaConfig(mockToggles, mockService);
 
     expect(result).toBeNull();
+  });
+
+  it('should set initialIsSignedIn to true when x-id-oidc-signedin header is "1"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '1',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(true);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is "0"', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': '0',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header is absent', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {});
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsSignedIn to false when x-id-oidc-signedin header has an invalid value', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      'x-id-oidc-signedin': 'invalid',
+    });
+
+    expect(result?.initialIsSignedIn).toBe(false);
+  });
+
+  it('should set initialIsAccountPromoBannerVisible to true when no dismissal cookies are present', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {});
+
+    expect(result?.initialIsAccountPromoBannerVisible).toBe(true);
+  });
+
+  it('should set initialIsAccountPromoBannerVisible to false when a recent dismissal cookie is present', async () => {
+    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
+
+    const result = await getIdctaConfig(mockToggles, mockService, {
+      cookie: `accountPromoDismissals=1; accountPromoLastDismissed=${Date.now()}`,
+    });
+
+    expect(result?.initialIsAccountPromoBannerVisible).toBe(false);
   });
 });

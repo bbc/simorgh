@@ -1,0 +1,421 @@
+{
+  "data": {
+    "title": "Testing Flourish, Riddle embeds + contributor's byline",
+    "description": "Some summary",
+    "visibility": true,
+    "language": "fr",
+    "headerImage": null,
+    "promoImage": null,
+    "syndicationPromoImage": {
+      "url": "https://static.test.files.bbci.co.uk/core/website/assets/static/bbc/images/metadata/poster-1024x576.efe9db7f43.png",
+      "brandedUrl": "https://static.test.files.bbci.co.uk/core/website/assets/static/bbc/images/metadata/poster-1024x576.efe9db7f43.png",
+      "altText": "BBC logo",
+      "copyright": "BBC",
+      "suitableForSyndication": true,
+      "isPlaceholder": true,
+      "width": 1024,
+      "height": 576
+    },
+    "home": "afrique",
+    "section": null,
+    "commercialInfo": {
+      "adCategory": null,
+      "adSubCategory": null,
+      "hasAdvertising": true
+    },
+    "sportDataEvent": {
+      "id": "urn:bbc:sportsdata:football:event:s-2f01ug9ijcjd3uj26q8fe3bbo"
+    },
+    "sportDataEventContent": {
+      "id": "urn:bbc:sportsdata:football:event:s-2f01ug9ijcjd3uj26q8fe3bbo",
+      "content": {
+        "data": {
+          "title": "Villa gain upper hand with gritty Europa League win at Bologna",
+          "live": true,
+          "startDateTime": "2026-04-09T19:00:00.000Z",
+          "uasActivityData": {
+            "action": "heartbeat",
+            "resourceDomain": "bbc-live",
+            "resourceId": "urn:bbc:tipo:topic:ce847pmy2e7t",
+            "resourceType": "asset",
+            "environment": "live",
+            "apiKey": "km5ifdffcjdoc"
+          },
+          "countingServiceDataAverage": 0,
+          "sportDataEvent": {
+            "urn": "urn:bbc:sportsdata:football:event:s-3y91hnyfjh24yxjhm77a7hy50",
+            "home": {
+              "id": "ej5er0oyngdw138yuumwqbyqt",
+              "fullName": "Bologna",
+              "shortName": "Bologna",
+              "urn": "urn:bbc:sportsdata:football:team:bologna",
+              "runningScores": {
+                "halftime": "0",
+                "fulltime": "1",
+                "aggregate": "1"
+              },
+              "scoreUnconfirmed": "1",
+              "actions": [
+                {
+                  "playerUrn": "urn:bbc:sportsdata:football:player:s-2bmeynv0dhsc8sjfuaprkexre",
+                  "playerName": "J. Rowe",
+                  "actionType": "goal",
+                  "actions": [
+                    {
+                      "type": "Goal",
+                      "typeLabel": { "value": "Goal", "accessible": "Goal" },
+                      "timeLabel": {
+                        "value": "90'",
+                        "accessible": "90 minutes"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "score": "1"
+            },
+            "away": {
+              "id": "b496gs285it6bheuikox6z9mj",
+              "fullName": "Aston Villa",
+              "shortName": "Aston Villa",
+              "urn": "urn:bbc:sportsdata:football:team:aston-villa",
+              "runningScores": {
+                "halftime": "1",
+                "fulltime": "3",
+                "aggregate": "3"
+              },
+              "scoreUnconfirmed": "3",
+              "actions": [
+                {
+                  "playerUrn": "urn:bbc:sportsdata:football:player:s-8qys6qtdwgsycxducl062zld5",
+                  "playerName": "E. Konsa",
+                  "actionType": "goal",
+                  "actions": [
+                    {
+                      "type": "Goal",
+                      "typeLabel": { "value": "Goal", "accessible": "Goal" },
+                      "timeLabel": {
+                        "value": "44'",
+                        "accessible": "44 minutes"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "playerUrn": "urn:bbc:sportsdata:football:player:s-5m0j33eoa5c8pqlr0tdf7undh",
+                  "playerName": "O. Watkins",
+                  "actionType": "goal",
+                  "actions": [
+                    {
+                      "type": "Goal",
+                      "typeLabel": { "value": "Goal", "accessible": "Goal" },
+                      "timeLabel": {
+                        "value": "51'",
+                        "accessible": "51 minutes"
+                      }
+                    },
+                    {
+                      "type": "Goal",
+                      "typeLabel": { "value": "Goal", "accessible": "Goal" },
+                      "timeLabel": {
+                        "value": "90'+4",
+                        "accessible": "90 minutes plus 4"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "score": "3"
+            },
+            "time": {
+              "accessibleTime": "20:00",
+              "displayTimeUK": "20:00",
+              "timeCertainty": true
+            },
+            "date": "Thu 9 Apr 2026",
+            "tournament": {
+              "id": "4c1nfi2j1m731hcay25fcgndq",
+              "name": "UEFA Europa League",
+              "disambiguatedName": "UEFA Europa League",
+              "urn": "urn:bbc:sportsdata:football:tournament:europa-league",
+              "thingsGuid": "2afbdda7-71d4-544d-bcc6-d9ff50314b2a"
+            },
+            "stage": {
+              "id": "7wxuj38kqm8bz3cmi15vu4w7o",
+              "name": "Quarter-finals",
+              "urn": ""
+            },
+            "multiLeg": {
+              "leg": 1,
+              "relatedMatchId": "s-9ur6e6w5f4ahyxph7ef4rks2c"
+            },
+            "period": "ft",
+            "venue": {
+              "id": "2nrn0y55nz9ee7p9adzbb7fta",
+              "urn": "urn:bbc:sportsdata:football:venue:s-2nrn0y55nz9ee7p9adzbb7fta",
+              "name": "Stadio Renato Dall'Ara",
+              "shortName": "Stadio Renato Dall'Ara"
+            },
+            "attendance": { "value": 31142 },
+            "status": "PostEvent",
+            "periodLabel": { "value": "FT", "accessible": "Full time" },
+            "winner": "away",
+            "tournamentDescriptionLabel": "UEFA Europa League - Quarter-finals",
+            "groupedActions": [
+              {
+                "groupName": { "fullName": "Assists", "shortName": "Assists" },
+                "homeTeamActions": ["J. Lucumí (90')"],
+                "awayTeamActions": [
+                  "Y. Tielemans (44', 90'+4)",
+                  "E. Buendía (51')"
+                ]
+              }
+            ],
+            "accessibleEventSummary": "Bologna 1 , Aston Villa 3 at Full time",
+            "sportDiscipline": "football"
+          },
+          "staticLinksData": {
+            "staticLinks": [
+              {
+                "url": "/sport/football/live/clygly9z1j9t",
+                "text": "Relive Thursday's Europa League and Conference League action"
+              }
+            ]
+          },
+          "type": "oppm",
+          "headerImage": null,
+          "seoTimestamps": {
+            "firstPublished": "2026-04-08T03:00:55.128Z",
+            "lastModified": "2026-04-10T08:37:45.000Z"
+          },
+          "lastUpdatedString": "Updated 6 days ago"
+        }
+      }
+    },
+    "eavisEvent": { "id": null },
+    "article": { "id": null },
+    "mediaCollections": null,
+    "keyHighlight": null,
+    "electionBanner": { "id": null },
+    "supportingLinks": { "id": null },
+    "riddle": { "id": null, "isPredictor": false },
+    "ugcCampaign": { "id": null },
+    "comments": { "id": null },
+    "relatedStories": { "id": null },
+    "seo": {
+      "seoTitle": "Testing Flourish, Riddle embeds + contributor's byline",
+      "seoDescription": "Some summary",
+      "datePublished": "2024-10-08T09:20:00.000Z",
+      "dateModified": "2026-03-16T16:17:28.000Z"
+    },
+    "endDateTime": "2026-10-19T09:17:00.000Z",
+    "startDateTime": "2024-10-08T09:20:00.000Z",
+    "firstPublishedDateTime": "2025-12-18T15:07:59.650Z",
+    "type": "live-coverage",
+    "analytics": {
+      "page": {
+        "name": "live_coverage.c7gk1vjglxn1t.page",
+        "contentId": "urn:bbc:tipo:topic:c7gk1vjglxn1t"
+      }
+    },
+    "dataSource": "TIPO",
+    "isLive": true,
+    "summaryPoints": { "id": null, "content": null },
+    "liveTextStream": {
+      "id": "3861CC0A9EA7434981EEE3FCE9880391",
+      "contributors": null,
+      "content": {
+        "data": {
+          "results": [
+            {
+              "typeCode": null,
+              "header": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "headline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "A post with contributors",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "A post with contributors",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "subheadline",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "text",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "This is the sub-headline",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is the sub-headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "contributor",
+                      "model": {
+                        "name": "Gahuza contributor",
+                        "link": null,
+                        "subtitle": "gahuza contributor",
+                        "external": "false",
+                        "blocks": [
+                          {
+                            "type": "image",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "rawImage",
+                                  "model": {
+                                    "width": 100,
+                                    "height": 100,
+                                    "locator": "/vivo/test/images/2016/12/12/977af52a-6eaf-481f-9a06-094860d56760.jpg",
+                                    "originCode": "cpsdevpb",
+                                    "copyrightHolder": "BBC"
+                                  }
+                                },
+                                {
+                                  "type": "altText",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "text",
+                                        "model": {
+                                          "blocks": [
+                                            {
+                                              "type": "paragraph",
+                                              "model": {
+                                                "text": "",
+                                                "blocks": [
+                                                  {
+                                                    "type": "fragment",
+                                                    "model": {
+                                                      "text": "",
+                                                      "attributes": []
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "content": {
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "\n      ", "attributes": [] }
+                    },
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "This is the post's body text",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "This is the post's body text",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "fragment",
+                      "model": { "text": "\n    ", "attributes": [] }
+                    }
+                  ]
+                }
+              },
+              "link": null,
+              "urn": "asset:d69557ee-183e-4c79-b69a-5a04c00de8ac",
+              "type": "POST",
+              "options": { "isBreakingNews": false, "includeComments": false },
+              "dates": {
+                "firstPublished": "2026-01-12T09:00:01.000Z",
+                "lastPublished": "2026-01-12T09:00:01.000Z",
+                "time": null,
+                "curated": "2026-01-12T09:00:02.378Z"
+              },
+              "titles": [{ "title": null, "source": "primary" }],
+              "descriptions": [{ "text": null, "source": "summary" }],
+              "images": [
+                {
+                  "originalUrl": null,
+                  "altText": null,
+                  "copyright": null,
+                  "urlTemplate": null,
+                  "url": null
+                }
+              ]
+            }
+          ],
+          "page": { "index": 1, "total": 1 }
+        }
+      }
+    },
+    "metadata": {
+      "atiAnalytics": {
+        "contentId": "urn:bbc:tipo:topic:c7gk1vjglxn1t",
+        "contentType": "live-coverage",
+        "pageIdentifier": "live_coverage.c7gk1vjglxn1t.page",
+        "pageTitle": "Testing Flourish, Riddle embeds + contributor's byline",
+        "timePublished": "2024-10-08T09:20:00.000Z",
+        "timeUpdated": "2026-03-16T16:17:28.000Z"
+      }
+    }
+  },
+  "contentType": "application/json; charset=utf-8"
+}

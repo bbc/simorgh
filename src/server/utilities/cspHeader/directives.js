@@ -160,6 +160,7 @@ const directives = {
       ...bbcDomains,
       'https://ping.chartbeat.net', // Chartbeat
       'https://logws1363.ati-host.net', // ATI analytics
+      'https://logw363.ati-host.net', // Reverb analytics
       'http://ping.chartbeat.net', // localhost prod build
       'https://i.ytimg.com', // Social Embeds, <amp-youtube />
       'https://www.instagram.com', // Social Embeds, <amp-instagram />
@@ -176,6 +177,7 @@ const directives = {
       ...bbcDomains,
       'https://ping.chartbeat.net', // Chartbeat
       'https://logws1363.ati-host.net', // ATI analytics
+      'https://logw363.ati-host.net', // Reverb analytics
       'http://ping.chartbeat.net', // localhost prod build
       'https://*.twitter.com', // Social Embeds
       'https://*.twimg.com', // Social Embeds
