@@ -116,7 +116,9 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
                 </div>
               ))}
             </div>
-            <div css={styles.skeletonMoreFromLink} aria-hidden />
+            <div css={styles.skeletonMoreFromLinkContainer}>
+              <div css={styles.skeletonMoreFromLink} aria-hidden />
+            </div>
           </>
         ) : (
           <>

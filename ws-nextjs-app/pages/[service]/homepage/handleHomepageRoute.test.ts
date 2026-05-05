@@ -96,7 +96,7 @@ describe('handleHomepageRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=45'),
+      expect.stringContaining('max-age=240'),
     );
   });
 

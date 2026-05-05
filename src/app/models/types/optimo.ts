@@ -4,7 +4,6 @@ import { MostReadData } from '#app/components/MostRead/types';
 import { TopStoryItem } from '#app/pages/ArticlePage/PagePromoSections/TopStoriesSection/types';
 import { LatestMedia } from '#app/pages/MediaArticlePage/PagePromoSections/LatestMediaSection/types';
 import { PortraitClipMediaBlock } from '#app/components/MediaLoader/types';
-import { TopicDiscoveryData } from '#app/components/TopicDiscovery/types';
 import { PageTypes } from './global';
 import { MetadataFormats, MetadataTaggings, TopicTag } from './metadata';
 import { Curation } from './curationData';
@@ -171,5 +170,4 @@ export type Article = {
   recommendations?: Recommendation[];
   relatedContent?: RelatedContent;
   portraitVideoItems?: PortraitVideoItems;
-  topicDiscovery?: TopicDiscoveryData;
 };

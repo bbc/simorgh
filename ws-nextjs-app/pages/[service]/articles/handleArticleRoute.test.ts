@@ -57,7 +57,7 @@ describe('handleArticleRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=240'),
+      expect.stringContaining('max-age=480'),
     );
   });
 
@@ -68,7 +68,7 @@ describe('handleArticleRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=60'),
+      expect.stringContaining('max-age=120'),
     );
   });
 
