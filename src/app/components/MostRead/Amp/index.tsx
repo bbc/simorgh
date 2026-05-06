@@ -103,7 +103,7 @@ const AmpMostRead = ({ endpoint, size = 'default' }: AmpMostReadProps) => {
               size={size}
               id=""
               position="{{index}}"
-              isLive="{{isLive}}"
+              isAmp
             />
           </MostReadItemWrapper>
         </template>

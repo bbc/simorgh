@@ -144,12 +144,13 @@ const canonicalNonSmokeTestSuites = [
     runforEnv: ['live'],
     tests: canonicalTests,
   },
-  {
-    path: '/pashto/23289748',
-    service: 'pashto',
-    runforEnv: ['test'],
-    tests: canonicalTests,
-  },
+  // TODO: Disabling as upstream services won't return Most Read data on test.
+  // {
+  //   path: '/pashto/23289748',
+  //   service: 'pashto',
+  //   runforEnv: ['test'],
+  //   tests: canonicalTests,
+  // },
   {
     path: '/sinhala/world-51723376',
     service: 'sinhala',
