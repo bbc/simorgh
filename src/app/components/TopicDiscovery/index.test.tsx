@@ -6,8 +6,17 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { ServiceConfig } from '#app/models/types/serviceConfig';
+import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
+import { service as turkceConfig } from '#app/lib/config/services/turkce';
 import { topicTagsFixture } from './fixtures';
 import TopicDiscovery, { FAKE_FETCH_DELAY_MS } from '.';
+
+const topics = [
+  { topicId: '1', topicName: 'Topic1', topicUrl: '/topics/climate' },
+  { topicId: '2', topicName: 'Topic2', topicUrl: '/topics/economy' },
+];
 
 describe('TopicDiscovery', () => {
   it('should render the heading', () => {
@@ -16,7 +25,7 @@ describe('TopicDiscovery', () => {
     });
 
     expect(
-      screen.getByRole('heading', { name: 'Tópicos relacionados' }),
+      screen.getByRole('heading', { name: 'Descubra mais' }),
     ).toBeInTheDocument();
   });
 
@@ -89,6 +98,47 @@ describe('TopicDiscovery', () => {
 
     const secondTopicTitle = topicTagsFixture[1].topicName;
     expect(screen.getByText(secondTopicTitle)).toBeInTheDocument();
+  });
+
+  it('renders the "more from" section with topic title last if {topic} is last in the config', async () => {
+    const config: ServiceConfig = { ...portugueseConfig.default };
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    // Wait for loading to finish and the link to appear
+    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
+    expect(moreFrom).toHaveTextContent('Mais de Topic1');
+  });
+
+  it('renders the "more from" section with topic title first if {topic} is first in the config', async () => {
+    const config: ServiceConfig = { ...turkceConfig.default };
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    // Wait for loading to finish and the link to appear
+    const moreFrom = await screen.findByTestId('topic-discovery-more-from');
+    expect(moreFrom).toHaveTextContent('Topic1 hakkında daha fazla');
+  });
+
+  it('renders the "more from" section with fallback if moreFrom is missing', async () => {
+    const portugueseTranslations = {
+      ...portugueseConfig.default.translations,
+      topicDiscovery: { heading: 'Discover more' },
+    };
+    const config = {
+      ...portugueseConfig.default,
+      translations: portugueseTranslations,
+    } as ServiceConfig;
+    render(
+      <ServiceContext.Provider value={config}>
+        <TopicDiscovery topics={topics} />
+      </ServiceContext.Provider>,
+    );
+    await screen.findByText('More from Topic1');
   });
 
   it('should use cached promos when switching back to previously visited tabs', async () => {

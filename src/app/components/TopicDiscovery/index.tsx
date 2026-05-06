@@ -31,6 +31,7 @@ const fetchTopicPromos = (
 
 const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
+  const { topicDiscovery } = translations;
   const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -79,6 +80,16 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     setActiveTabId(nextTabId);
   };
 
+  const getMoreFromText = () => {
+    if (topicDiscovery?.moreFromTopic && activeTopic?.topicName) {
+      return topicDiscovery.moreFromTopic.replace(
+        '{topic}',
+        activeTopic.topicName,
+      );
+    }
+    return `More from ${activeTopic?.topicName}`;
+  };
+
   if (!topics || topics.length === 0) return null;
 
   return (
@@ -89,7 +100,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
-        {translations.topicDiscovery?.heading ?? 'Discover more'}
+        {topicDiscovery?.heading ?? 'Discover more'}
       </h2>
       <ScrollableTabs
         tabs={tabs}
@@ -131,7 +142,10 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
             <a
               css={styles.moreFromLink}
               href={activeTopic?.topicUrl}
-            >{`More from ${activeTopic?.topicName}`}</a>
+              data-testid="topic-discovery-more-from"
+            >
+              {getMoreFromText()}
+            </a>
           </>
         )}
       </div>

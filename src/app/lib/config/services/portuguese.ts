@@ -85,7 +85,8 @@ export const service: DefaultServiceConfig = {
       home: 'Início',
       continueReading: 'Continue lendo',
       topicDiscovery: {
-        heading: 'Tópicos relacionados',
+        heading: 'Descubra mais',
+        moreFromTopic: 'Mais de {topic}',
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
