@@ -1,6 +1,7 @@
 import { useState, useEffect, use, useRef } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
+import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
 import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import ScrollableTabs from './ScrollableTabs';
@@ -63,6 +64,9 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
   }, [activeTabId]);
 
   const viewTracker = useViewTracker(eventTrackingData);
+  const moreFromLinkClickTracker = useClickTrackerHandler({
+    componentName: 'topic-discovery-more-from-link',
+  });
 
   const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
 
@@ -143,6 +147,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
               css={styles.moreFromLink}
               href={activeTopic?.topicUrl}
               data-testid="topic-discovery-more-from"
+              {...moreFromLinkClickTracker}
             >
               {getMoreFromText()}
             </a>

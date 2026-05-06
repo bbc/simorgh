@@ -226,5 +226,28 @@ describe('TopicDiscovery', () => {
 
       clickTrackerSpy.mockRestore();
     });
+
+    it('should call useClickTrackerHandler when "more from" link is clicked', async () => {
+      const mockClickHandler = jest.fn();
+      jest
+        .spyOn(clickTracking, 'default')
+        .mockReturnValue({ onClick: mockClickHandler });
+
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        service: 'portuguese',
+      });
+
+      const moreFromLink = await screen.findByTestId(
+        'topic-discovery-more-from',
+      );
+
+      fireEvent.click(moreFromLink);
+
+      expect(mockClickHandler).toHaveBeenCalledTimes(1);
+
+      expect(clickTracking.default).toHaveBeenCalledWith({
+        componentName: 'topic-discovery-more-from-link',
+      });
+    });
   });
 });
