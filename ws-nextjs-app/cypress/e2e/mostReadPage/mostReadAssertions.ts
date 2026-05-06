@@ -43,7 +43,7 @@ export default ({ service, variant = 'default' }) => {
               const expectedMostReadRank = serviceNumerals(service);
               cy.get('[data-e2e="most-read"]').scrollIntoView();
               cy.get('[data-e2e="most-read"]')
-                .find('li span')
+                .find('li span[data-e2e="most-read-rank"]')
                 .each(($el, index) => {
                   expect($el.text()).equal(expectedMostReadRank[index + 1]);
                 });

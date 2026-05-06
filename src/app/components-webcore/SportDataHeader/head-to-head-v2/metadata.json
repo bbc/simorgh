@@ -1,0 +1,24 @@
+{
+  "uxAccessibilityDoc": {
+    "done": true,
+    "reference": {
+      "url": "",
+      "label": "Screenreader UX"
+    }
+  },
+  "acceptanceCriteria": {
+    "done": true,
+    "reference": {
+      "url": "https://jira.dev.bbc.co.uk/browse/SWD-2208",
+      "label": "Acceptance criteria"
+    }
+  },
+  "swarm": {
+    "done": false,
+    "reference": {
+      "url": "https://paper.dropbox.com/folder/show/Head-to-Head-e.1gg8YzoPEhbTkrhvQwJ2zzo3g3aKslj5mXLzEJbxSH2zyS7TwiyR",
+      "label": "Swarm template"
+    }
+  },
+  "creationDate": "2022-11-24"
+}
