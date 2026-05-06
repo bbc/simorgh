@@ -85,7 +85,9 @@ const ScrollableTabs = ({
         >
           <Chevron orientation={ChevronOrientation.BACKWARD} dir={dir} />
         </button>
-        <span css={styles.scrollButtonFadeStart} aria-hidden="true" />
+        {canScrollStart && (
+          <span css={styles.scrollButtonFadeStart} aria-hidden="true" />
+        )}
       </div>
 
       <div
@@ -111,6 +113,7 @@ const ScrollableTabs = ({
               id={`tab-${tab.id}`}
               data-tab-id={tab.id}
               aria-selected={isActive}
+              aria-controls={`tabpanel-${tab.id}`}
               css={[styles.tab, isActive && styles.tabActive]}
               onClick={event => {
                 onTabChange(tab.id);
@@ -129,7 +132,9 @@ const ScrollableTabs = ({
           !hasOverflow && styles.scrollButtonWrapperHidden,
         ]}
       >
-        <span css={styles.scrollButtonFadeEnd} aria-hidden="true" />
+        {canScrollEnd && (
+          <span css={styles.scrollButtonFadeEnd} aria-hidden="true" />
+        )}
         <button
           type="button"
           css={styles.scrollButton}
