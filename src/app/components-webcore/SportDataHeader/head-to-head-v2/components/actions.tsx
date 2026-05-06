@@ -1,12 +1,15 @@
-// import React from 'react';
-
 import { GroupedEvents } from './grouped-events';
 import { ActionGrid } from './action-grid';
 import ScoreDetails from './score-details';
 import { KeyEvents } from './key-events';
+import type { HeadToHeadV2Data } from '../types';
+
+interface ActionsProps {
+  data: HeadToHeadV2Data;
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export const Actions = ({ data }) => {
+export const Actions = ({ data }: ActionsProps) => {
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
 
@@ -32,7 +35,7 @@ export const Actions = ({ data }) => {
           />
         )}
       </ActionGrid>
-      {hasGroupedEvents && (
+      {hasGroupedEvents && data.groupedActions && (
         <GroupedEvents
           groupedEvents={data.groupedActions}
           homeName={data.home.fullName}

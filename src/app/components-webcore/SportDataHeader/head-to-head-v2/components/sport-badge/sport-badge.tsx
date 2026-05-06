@@ -33,11 +33,22 @@ const BadgeImage = styled.img`
   object-fit: contain;
 `;
 
-const getTestId = id => {
+type BadgeSize = { small?: number; medium?: number; large?: number } | number;
+
+interface SportBadgeProps {
+  size?: BadgeSize;
+  id?: string;
+  alt?: string;
+  usePlaceholderFallback?: boolean;
+  placeholderFallbackType?: 'badge' | 'flag';
+  isConciseView?: boolean;
+}
+
+const getTestId = (id?: string): string => {
   const urnId =
     String(id)?.match(/urn:bbc:sportsdata:football:team:(.+)/) || [];
 
-  return urnId[1] || id;
+  return urnId[1] || id || '';
 };
 
 const SportBadge = ({
@@ -46,7 +57,7 @@ const SportBadge = ({
   alt = '',
   usePlaceholderFallback = true,
   placeholderFallbackType = 'badge',
-}) => {
+}: SportBadgeProps) => {
   const testId = getTestId(id);
   const src = getImage({ id, usePlaceholderFallback, placeholderFallbackType });
 

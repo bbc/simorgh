@@ -33,8 +33,16 @@ const CardContainer = styled.div`
   box-sizing: content-box;
 `;
 
-const Card = ({ player }) => (
-  <CardContainer role="text">
+interface CardPlayer {
+  actions: { type: string }[];
+}
+
+interface CardProps {
+  player: CardPlayer;
+}
+
+const Card = ({ player }: CardProps) => (
+  <div css={styles.cardContainer()} role="text">
     {player.actions[0].type === 'Red Card' ? (
       <StyledRedCard aria-hidden data-testid="red-card-img">
         <RedCardSVG />

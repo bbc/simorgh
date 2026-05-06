@@ -22,6 +22,7 @@ import { ActionGrid, GRID_AREAS } from './action-grid';
 
 // eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+<<<<<<< HEAD:src/app/components-webcore/SportDataHeader/head-to-head-v2/components/grouped-events.jsx
 
 // eslint-disable-next-line import/no-relative-packages
 import pixelsToRem from '../../../../utilities/pixelsToRem';
@@ -95,8 +96,17 @@ const GroupedAwayEvent = styled.div`
     padding: 8px 0 20px;
   }
 `;
+=======
+import styles from './index.styles';
+import type { GroupedActions } from '../types';
+>>>>>>> df1467c11d (Convert to ts):src/app/components-webcore/SportDataHeader/head-to-head-v2/components/grouped-events.tsx
 
-const Actions = ({ teamActions, teamAccessibleActions }) => {
+interface ActionsComponentProps {
+  teamActions: string[];
+  teamAccessibleActions?: string[];
+}
+
+const Actions = ({ teamActions, teamAccessibleActions }: ActionsComponentProps) => {
   if (teamAccessibleActions?.length) {
     return (
       <>
@@ -108,12 +118,23 @@ const Actions = ({ teamActions, teamAccessibleActions }) => {
     );
   }
 
-  return teamActions.join(', ');
+  return <>{teamActions.join(', ')}</>;
 };
 
+interface GroupedEventsProps {
+  groupedEvents: GroupedActions[];
+  homeName: string;
+  awayName: string;
+}
+
 // eslint-disable-next-line import/prefer-default-export
+<<<<<<< HEAD:src/app/components-webcore/SportDataHeader/head-to-head-v2/components/grouped-events.jsx
 export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
   <GroupedEventsWrapper>
+=======
+export const GroupedEvents = ({ groupedEvents, homeName, awayName }: GroupedEventsProps) => (
+  <div css={styles.groupedEventsWrapper()}>
+>>>>>>> df1467c11d (Convert to ts):src/app/components-webcore/SportDataHeader/head-to-head-v2/components/grouped-events.tsx
     {groupedEvents.map(
       ({
         groupName,

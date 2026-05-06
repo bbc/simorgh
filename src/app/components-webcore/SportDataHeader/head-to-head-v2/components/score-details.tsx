@@ -55,12 +55,25 @@ const Comma = styled.span`
   }
 `;
 
+interface RunningScores {
+  halftime?: string;
+  fulltime?: string;
+  extratime?: string;
+}
+
+interface ScoreDetailsProps {
+  homeName: string;
+  awayName: string;
+  homeRunningScores?: RunningScores;
+  awayRunningScores?: RunningScores;
+}
+
 const ScoreDetails = ({
   homeName,
   awayName,
   homeRunningScores,
   awayRunningScores,
-}) => {
+}: ScoreDetailsProps) => {
   const shouldDisplayHT = Boolean(
     homeRunningScores?.halftime && awayRunningScores?.halftime,
   );

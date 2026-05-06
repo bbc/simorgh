@@ -11,56 +11,16 @@ import Team from './team';
 import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
-// eslint-disable-next-line import/no-relative-packages
-import pixelsToRem from '../../../../utilities/pixelsToRem';
+import styles from './index.styles';
+import type { HeadToHeadV2Data } from '../types';
 
-export const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: ${({ isConciseView }) => (isConciseView ? 'center' : 'none')};
-  grid-template-areas:
-    'home_team         scores            away_team'
-    'progress          progress          progress';
-  ${({ isConciseView, shouldHideBadges }) =>
-    !isConciseView &&
-    !shouldHideBadges &&
-    css`
-      @media (max-width: calc(${pixelsToRem(600)}rem - ${pixelsToRem(1)}rem)) {
-        grid-template-columns: 1fr auto auto 1fr;
-        grid-template-areas:
-          'home_team         scores            scores            away_team'
-          'home_team         progress          progress          away_team';
-      }
-    `}
-`;
-
-const WithInlineFallback = styled.div`
-  @supports not (display: grid) {
-    display: inline-block;
-    width: 33%;
-  }
-`;
-
-export const TeamHome = styled(WithInlineFallback)`
-  grid-area: home_team;
-  display: flex;
-  align-items: stretch;
-`;
-
-export const TeamAway = styled(WithInlineFallback)`
-  grid-area: away_team;
-  display: flex;
-  align-items: stretch;
-`;
-
-const Scores = styled(WithInlineFallback)`
-  grid-area: scores;
-  margin: auto;
-`;
-
-const MatchProgressContainer = styled.div`
-  grid-area: progress;
-`;
+interface ItemWrapperProps {
+  data: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  shouldHideBadges?: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+}
 
 const ItemWrapper = ({
   data,
@@ -68,7 +28,7 @@ const ItemWrapper = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => {
+}: ItemWrapperProps) => {
   const shouldDisplayPenScores =
     data.home.runningScores?.penaltyShootout &&
     data.away.runningScores?.penaltyShootout;
@@ -124,6 +84,15 @@ const ItemWrapper = ({
   );
 };
 
+interface HeadToHeadBannerProps {
+  data: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  eventSummary: string;
+  shouldHideBadges?: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+}
+
 export const HeadToHeadBanner = ({
   data,
   isConciseView,
@@ -131,7 +100,7 @@ export const HeadToHeadBanner = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => (
+}: HeadToHeadBannerProps) => (
   <>
     <VisuallyHiddenText>{eventSummary}</VisuallyHiddenText>
     <ItemWrapper

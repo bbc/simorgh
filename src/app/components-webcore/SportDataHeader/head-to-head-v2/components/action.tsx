@@ -52,8 +52,26 @@ const StyledUl = styled.ul`
   }
 `;
 
-const Action = ({ contestantActions, alignment }) => (
-  <StyledUl alignment={alignment}>
+interface PlayerAction {
+  type: string;
+  typeLabel: { value: string; accessible: string };
+  timeLabel: { value: string; accessible: string };
+}
+
+interface ContestantAction {
+  playerId: string;
+  playerName: string;
+  actionType: string;
+  actions: PlayerAction[];
+}
+
+interface ActionProps {
+  contestantActions: ContestantAction[];
+  alignment: 'home' | 'away';
+}
+
+const Action = ({ contestantActions, alignment }: ActionProps) => (
+  <ul css={styles.actionList(alignment)}>
     {contestantActions.map((player, index) => (
       // eslint-disable-next-line react/no-array-index-key
       <StyledAction key={index} alignment={alignment}>

@@ -1,60 +1,30 @@
 // import React from 'react';
 // import styled, { css } from '@bbc/web-styled';
 
-import styled from '@emotion/styled';
-// import { css } from '@emotion/react';
+interface RunningScores {
+  penaltyShootout?: string;
+}
 
-// import {
-//   GROUP_3,
-//   SPACING_1,
-//   SPACING_2,
-//   fontEmphasised,
-//   fontScaleBody,
-//   fontScaleDescription,
-// } from '@bbc/web-gel-foundations';
-// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
+interface TeamData {
+  fullName: string;
+  runningScores?: RunningScores;
+}
 
-import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
+interface PenaltyScoresData {
+  home: TeamData;
+  away: TeamData;
+  winner?: string;
+  seriesWinner?: string;
+  multiLeg?: { leg: number };
+  status?: string;
+}
 
-import pixelsToRem from '../../../../utilities/pixelsToRem';
+interface PenaltyScoresProps {
+  data: PenaltyScoresData;
+  isConciseView?: boolean;
+}
 
-const PenaltyScoresContainer = styled.div`
-  font-size: 1rem;
-  line-height: 1.375;
-  text-align: center;
-  padding: 4px 0;
-
-  @media (min-width: ${pixelsToRem(600)}rem) {
-    padding-bottom: 8px;
-  }
-
-  ${
-    '' /* ${({ isConciseView }) =>
-    isConciseView &&
-    css`
-      ${fontScaleDescription}
-    `} */
-  }
-`;
-
-const WinningTeamName = styled.span`
-  ${'' /* ${fontEmphasised} */}
-  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
-  font-weight: 700;
-  font-feature-settings: 'ss01' off;
-  ${
-    '' /* color: ${({ theme, isConciseView }) =>
-    isConciseView ? theme.colourPalette.primary : theme.colourPalette.accent}; */
-  }
-  color: #FFD230;
-`;
-
-const PenaltiesText = styled.div`
-  ${'' /* color: ${({ theme }) => theme.colourPalette.secondary}; */}
-  color: #A8A8A8;
-`;
-
-const PenaltyScores = ({ data, isConciseView }) => {
+const PenaltyScores = ({ data }: PenaltyScoresProps) => {
   const { winner, seriesWinner, multiLeg, status } = data;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';
