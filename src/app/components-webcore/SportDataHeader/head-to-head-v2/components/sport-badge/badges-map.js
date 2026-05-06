@@ -15,7 +15,7 @@
 // import rugbyUnion from './mappings/rugby-union.js';
 // import iceHockey from './mappings/ice-hockey.js';
 
-const badgesMap: Record<string, string> = {
+const badgesMap = {
   // 0: placeholder,
   // ...americanFootball,
   // ...basketball,
@@ -38,18 +38,12 @@ const badgesMap: Record<string, string> = {
   // ...getBaseCountryFlagsMapping('tennis'),
 };
 
-interface GetImageParams {
-  id?: string;
-  usePlaceholderFallback?: boolean;
-  placeholderFallbackType?: 'badge' | 'flag';
-}
-
 export const getImage = ({
   id,
   usePlaceholderFallback,
   placeholderFallbackType,
-}: GetImageParams): string | null | undefined => {
-  const image = id ? badgesMap[id] : undefined;
+}) => {
+  const image = badgesMap[id];
 
   if (!image && usePlaceholderFallback) {
     switch (placeholderFallbackType) {
@@ -67,7 +61,7 @@ export const getImage = ({
   return image;
 };
 
-export const hasMapping = (id?: string): boolean =>
+export const hasMapping = id =>
   Boolean(getImage({ id, usePlaceholderFallback: false }));
 
 export default badgesMap;

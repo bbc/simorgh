@@ -2,30 +2,7 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
-interface RunningScores {
-  penaltyShootout?: string;
-}
-
-interface TeamData {
-  fullName: string;
-  runningScores?: RunningScores;
-}
-
-interface PenaltyScoresData {
-  home: TeamData;
-  away: TeamData;
-  winner?: string;
-  seriesWinner?: string;
-  multiLeg?: { leg: number };
-  status?: string;
-}
-
-interface PenaltyScoresProps {
-  data: PenaltyScoresData;
-  isConciseView?: boolean;
-}
-
-const PenaltyScores = ({ data }: PenaltyScoresProps) => {
+const PenaltyScores = ({ data }) => {
   const { winner, seriesWinner, multiLeg, status } = data;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';

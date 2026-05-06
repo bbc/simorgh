@@ -2,19 +2,7 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
-interface TeamNameProps {
-  fullName: string;
-  shortName: string;
-  isConciseView?: boolean;
-  shouldHideBadges?: boolean;
-}
-
-const TeamName = ({
-  fullName,
-  shortName,
-  isConciseView,
-  shouldHideBadges,
-}: TeamNameProps) => (
+const TeamName = ({ fullName, shortName, isConciseView, shouldHideBadges }) => (
   <div css={styles.teamNameWrapper(isConciseView, shouldHideBadges)}>
     <span css={styles.mobileValue()} aria-hidden="true">
       {shortName}

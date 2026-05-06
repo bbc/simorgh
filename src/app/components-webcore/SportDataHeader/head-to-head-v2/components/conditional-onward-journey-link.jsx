@@ -25,19 +25,14 @@
 //   }
 // `;
 
-import type { ReactNode } from 'react';
-
-interface ConditionalOnwardJourneyLinkProps {
-  isConciseView?: boolean;
-  onwardJourneyLink?: string;
-  children: ReactNode;
-  tipoTopicId?: string;
-}
-
 // eslint-disable-next-line import/prefer-default-export
 export const ConditionalOnwardJourneyLink = ({
+  // isConciseView,
+  // onwardJourneyLink,
   children,
-}: ConditionalOnwardJourneyLinkProps) => {
+  // tipoTopicId,
+  // trackingEvent,
+}) => {
   // if (isConciseView && onwardJourneyLink) {
   //   return trackingEvent ? (
   //     <Track tracking={trackingEvent}>

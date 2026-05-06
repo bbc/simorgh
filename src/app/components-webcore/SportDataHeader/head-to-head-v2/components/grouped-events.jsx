@@ -2,14 +2,8 @@
 import { ActionGrid } from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
-import type { GroupedActions } from '../types';
 
-interface ActionsComponentProps {
-  teamActions: string[];
-  teamAccessibleActions?: string[];
-}
-
-const Actions = ({ teamActions, teamAccessibleActions }: ActionsComponentProps) => {
+const Actions = ({ teamActions, teamAccessibleActions }) => {
   if (teamAccessibleActions?.length) {
     return (
       <>
@@ -21,17 +15,11 @@ const Actions = ({ teamActions, teamAccessibleActions }: ActionsComponentProps) 
     );
   }
 
-  return <>{teamActions.join(', ')}</>;
+  return teamActions.join(', ');
 };
 
-interface GroupedEventsProps {
-  groupedEvents: GroupedActions[];
-  homeName: string;
-  awayName: string;
-}
-
 // eslint-disable-next-line import/prefer-default-export
-export const GroupedEvents = ({ groupedEvents, homeName, awayName }: GroupedEventsProps) => (
+export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
   <div css={styles.groupedEventsWrapper()}>
     {groupedEvents.map(
       ({

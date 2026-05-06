@@ -1,13 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import styles from './index.styles';
 
-interface FooterProps {
-  venue: string;
-  attendanceValue?: number;
-  attendanceInfo?: string;
-}
-
-const Footer = ({ venue, attendanceValue, attendanceInfo }: FooterProps) => {
+const Footer = ({ venue, attendanceValue, attendanceInfo }) => {
   const formattedAttendanceValue = attendanceValue?.toLocaleString();
 
   return (

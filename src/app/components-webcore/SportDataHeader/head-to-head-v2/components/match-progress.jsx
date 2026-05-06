@@ -6,33 +6,7 @@ import Period from './period';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
-interface RunningScores {
-  halftime?: string;
-  fulltime?: string;
-  extratime?: string;
-  aggregate?: string;
-  penaltyShootout?: string;
-}
-
-interface TeamData {
-  fullName: string;
-  runningScores?: RunningScores;
-}
-
-interface MatchProgressData {
-  home: TeamData;
-  away: TeamData;
-  periodLabel?: { value: string; accessible: string };
-  status: string;
-  multiLeg?: { leg: number };
-}
-
-interface MatchProgressProps {
-  data: MatchProgressData;
-  isConciseView?: boolean;
-}
-
-const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
+const MatchProgress = ({ data, isConciseView }) => {
   const { home, away, periodLabel, status, multiLeg } = data;
 
   const shouldDisplayAggScore =

@@ -3,25 +3,7 @@
 import ActionsTime from './actions-time';
 import styles from './index.styles';
 
-interface PlayerAction {
-  type: string;
-  typeLabel: { value: string; accessible: string };
-  timeLabel: { value: string; accessible: string };
-}
-
-interface ContestantAction {
-  playerId: string;
-  playerName: string;
-  actionType: string;
-  actions: PlayerAction[];
-}
-
-interface ActionProps {
-  contestantActions: ContestantAction[];
-  alignment: 'home' | 'away';
-}
-
-const Action = ({ contestantActions, alignment }: ActionProps) => (
+const Action = ({ contestantActions, alignment }) => (
   <ul css={styles.actionList(alignment)}>
     {contestantActions.map((player, index) => (
       // eslint-disable-next-line react/no-array-index-key

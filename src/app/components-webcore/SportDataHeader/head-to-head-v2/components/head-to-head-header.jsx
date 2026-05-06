@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from './index.styles';
-import type { EventStatus } from '../types';
 
-const formatTournamentDescriptionLabel = (tournamentDescriptionLabel: string) => {
+const formatTournamentDescriptionLabel = tournamentDescriptionLabel => {
   const tournamentGroupsArray = tournamentDescriptionLabel.split(' - ');
 
   return tournamentGroupsArray.map((element, i) => {
@@ -24,15 +23,7 @@ const formatTournamentDescriptionLabel = (tournamentDescriptionLabel: string) =>
   });
 };
 
-interface HeadToHeadHeaderProps {
-  date: string;
-  tournamentDescriptionLabel: string;
-  status: EventStatus;
-  tournament?: string;
-  period?: string;
-}
-
-const HeadToHeadHeader = ({ date, tournamentDescriptionLabel, status }: HeadToHeadHeaderProps) => (
+const HeadToHeadHeader = ({ date, tournamentDescriptionLabel, status }) => (
   <div css={styles.headerWrapper(isLiveStatus(status))}>
     {!isLiveStatus(status) && (
       <div css={styles.dateWrapper()}>

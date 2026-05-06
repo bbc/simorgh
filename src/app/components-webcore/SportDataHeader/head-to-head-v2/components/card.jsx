@@ -3,15 +3,7 @@
 import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 import styles from './index.styles';
 
-interface CardPlayer {
-  actions: { type: string }[];
-}
-
-interface CardProps {
-  player: CardPlayer;
-}
-
-const Card = ({ player }: CardProps) => (
+const Card = ({ player }) => (
   <div css={styles.cardContainer()} role="text">
     {player.actions[0].type === 'Red Card' ? (
       <span css={styles.redCard()} aria-hidden data-testid="red-card-img">

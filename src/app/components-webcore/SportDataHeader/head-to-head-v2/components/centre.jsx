@@ -8,20 +8,14 @@ import {
 import Time from './fixture-time';
 import Score from './score';
 import styles from './index.styles';
-import type { HeadToHeadV2Data, EventStatus } from '../types';
 
-export const shouldShowScores = (statusGroup: EventStatus | string): boolean =>
+export const shouldShowScores = statusGroup =>
   isInProgressStatus(statusGroup) ||
   isResultStatus(statusGroup) ||
   isCalledOffStatus(statusGroup) ||
   statusGroup === 'Postponed';
 
-interface PlayedProps {
-  data: HeadToHeadV2Data;
-  isConciseView?: boolean;
-}
-
-const Played = ({ data, isConciseView }: PlayedProps) => (
+const Played = ({ data, isConciseView }) => (
   <Score
     status={data.status}
     home={data.home.score}
@@ -32,13 +26,7 @@ const Played = ({ data, isConciseView }: PlayedProps) => (
   />
 );
 
-interface CentreProps {
-  data: HeadToHeadV2Data;
-  isConciseView?: boolean;
-  maxScoreLength?: number;
-}
-
-const Centre = ({ data, isConciseView, maxScoreLength }: CentreProps) => {
+const Centre = ({ data, isConciseView, maxScoreLength }) => {
   const { status } = data;
 
   return (

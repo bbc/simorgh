@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-export enum EventStatus {
+declare enum EventStatus {
   PreEvent = 'PreEvent',
   MidEvent = 'MidEvent',
   PostEvent = 'PostEvent',
@@ -10,7 +10,7 @@ export enum EventStatus {
   Postponed = 'Postponed',
 }
 
-export type Action = {
+type Action = {
   type: string;
   typeLabel: {
     value: string;
@@ -22,14 +22,14 @@ export type Action = {
   };
 };
 
-export type Actions = {
+type Actions = {
   playerId: string;
   playerName: string;
   actionType: string;
   actions: Action[];
 };
 
-export type GroupedActions = {
+type GroupedActions = {
   /**
    * The name of the grouped action e.g. Penalties, Tries.
    */
@@ -39,28 +39,12 @@ export type GroupedActions = {
    */
   homeTeamActions: string[];
   /**
-   * The home team accessible action details.
-   */
-  homeTeamAccessibleActions?: string[];
-  /**
    * The away team action details.
    */
   awayTeamActions: string[];
-  /**
-   * The away team accessible action details.
-   */
-  awayTeamAccessibleActions?: string[];
 };
 
-export type RunningScores = {
-  halftime?: string;
-  fulltime?: string;
-  extratime?: string;
-  aggregate?: string;
-  penaltyShootout?: string;
-};
-
-export type Team = {
+type Team = {
   /**
    * The Team's unique id.
    */
@@ -81,7 +65,7 @@ export type Team = {
   /**
    * The fulltime and halftime running scores for the team.
    */
-  runningScores?: RunningScores;
+  runningScore: { halftime?: string; fulltime?: string };
   /**
    * The current team score.
    */
@@ -99,10 +83,6 @@ export type Team = {
 };
 
 export type HeadToHeadV2Data = {
-  /**
-   * The event id.
-   */
-  id?: string;
   /**
    * The status of the event.
    */
@@ -155,41 +135,6 @@ export type HeadToHeadV2Data = {
    * Summary of event to be used with assistive technology.
    */
   accessibleEventSummary: string;
-  /**
-   * Link to the event page for onward navigation.
-   */
-  onwardJourneyLink?: string;
-  /**
-   * The TIPO topic ID for the event.
-   */
-  tipoTopicId?: string;
-  /**
-   * The current period/phase of the event.
-   */
-  period?: string;
-  /**
-   * Attendance information for the event.
-   */
-  attendance?: {
-    value?: string;
-    additionalInfo?: string;
-  };
-  /**
-   * The winner alignment ('home' or 'away').
-   */
-  winner?: string;
-  /**
-   * The series winner alignment for multi-leg matches.
-   */
-  seriesWinner?: string;
-  /**
-   * Multi-leg match information.
-   */
-  multiLeg?: {
-    leg: number;
-    relatedMatchId?: string;
-    aggregateWinnerId?: string;
-  };
 };
 
 export declare const HeadToHeadV2: (props: {
