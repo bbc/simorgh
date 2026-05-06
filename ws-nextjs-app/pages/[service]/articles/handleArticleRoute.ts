@@ -96,7 +96,7 @@ export default async (context: GetServerSidePropsContext) => {
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
     Date.now() - article.metadata.lastPublished > 21600000;
-  const maxAge = isArticleOlderThanSixHours ? 240 : 60;
+  const maxAge = isArticleOlderThanSixHours ? 90 : 45;
 
   context.res.setHeader(
     'Cache-Control',
