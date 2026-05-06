@@ -71,8 +71,6 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
 
     params.ref = document.referrer || '';
 
-    // console.log('params.ref', params.ref);
-
     if (reverbUrl) {
       let processedReverbUrl = reverbUrl
         .replace('{screenResolutionColourDepth}', params.r)
@@ -97,7 +95,6 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
           processedReverbUrl +=
             `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
               .replace('at_', 'at_')
-              .replace('utm_', 'utm_')
               // .replace('at_', 'src_')
               .replace('xtor', 'xto');
         }
