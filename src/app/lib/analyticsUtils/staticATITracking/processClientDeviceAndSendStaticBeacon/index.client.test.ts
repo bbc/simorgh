@@ -224,7 +224,9 @@ describe('addProcessClientDeviceAndSendStaticBeaconToWindow script', () => {
       'Adds marketing parameters to the beacon URL - $type',
       ({ sendBeaconProps }) => {
         window.location.search =
-          '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps';
+          // '?at_campaign=tactical&at_medium=display_ad&at_campaign_type=paid&at_content=ls&at_marketing_tactic=tactical&at_product=persian&at_genre=politics&at_ptr_name=bbc&at_objective=acquisition&at_audience_motivation=gmp&at_demographic=A9&at_format=image&at_creation=tactical_psiphon_a9&at_bbc_team=8ms&utm_source=mktg&utm_campaign=tacticalps'; // from TOBY PR
+          // '?at_campaign=tactical&at_bbc_team=8ms&at_campaign_type=paid&at_medium=display_ad&at_ptr_name=psiphon&at_ptr_type=marketing&at_format=image&at_product=persian&at_genre=politics&at_content=ls&at_marketing_tactic=tactical&at_objective=consumption&at_audience_motivation=gmp&at_demographic=A9&at_creative_name=tactical&utm_source=mktg&utm_campaign=tactical_ps'; // from email, June 25
+          '?at_campaign=tactical&at_bbc_team=8ms_ws&at_campaign_type=paid&at_medium=programmatic_display&at_ptr_name=psiphon&at_ptr_type=marketing&at_format=sponsored_link&at_product=persian&at_genre=politics&at_content=ls&at_marketing_tactic=tactical&at_objective=consumption&at_audience_motivation=gmp&at_demographic=A9&utm_source=mktg&utm_campaign=tactical_ps'; // from email Jan 26
         window.location.pathname = '/persian.lite';
 
         window.processClientDeviceAndSendStaticBeacon(sendBeaconProps);

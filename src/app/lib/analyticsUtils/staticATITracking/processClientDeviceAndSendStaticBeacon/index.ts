@@ -81,6 +81,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
         .replace('{forwardingLink}', forwardingUrl)
+        // x5: '${sourceUrl}', - I want to add
         .replaceAll('ref=&', '');
 
       const searchParams = new URLSearchParams(window.location.search);
@@ -93,10 +94,13 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         ) {
           processedReverbUrl +=
             `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
-              .replace('at_', 'src_')
+              .replace('at_', 'at_')
+              // .replace('at_', 'src_')
               .replace('xtor', 'xto');
         }
       });
+
+      console.log('Processed Reverb URL:', processedReverbUrl);
 
       window.sendStaticBeacon(processedReverbUrl);
     }
