@@ -1,10 +1,19 @@
 /** @jsxImportSource @emotion/react */
 import styles from './index.styles';
 
-const MATCH_STATUS_LETTERS = {
+const MATCH_STATUS_LETTERS: Record<string, string> = {
   Postponed: 'P',
   Cancelled: 'C',
 };
+
+interface ScoreProps {
+  status: string;
+  home?: string;
+  homeScoreUnconfirmed?: string;
+  away?: string;
+  awayScoreUnconfirmed?: string;
+  isConciseView?: boolean;
+}
 
 const Score = ({
   status,
@@ -12,7 +21,7 @@ const Score = ({
   homeScoreUnconfirmed,
   away,
   awayScoreUnconfirmed,
-}) => {
+}: ScoreProps) => {
   const matchStatusLetter = MATCH_STATUS_LETTERS[status];
   const homeScore = homeScoreUnconfirmed || home;
   const awayScore = awayScoreUnconfirmed || away;

@@ -5,6 +5,15 @@ import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
 import styles from './index.styles';
+import type { HeadToHeadV2Data } from '../types';
+
+interface ItemWrapperProps {
+  data: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  shouldHideBadges?: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+}
 
 const ItemWrapper = ({
   data,
@@ -12,7 +21,7 @@ const ItemWrapper = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => {
+}: ItemWrapperProps) => {
   const shouldDisplayPenScores =
     data.home.runningScores?.penaltyShootout &&
     data.away.runningScores?.penaltyShootout;
@@ -67,6 +76,15 @@ const ItemWrapper = ({
   );
 };
 
+interface HeadToHeadBannerProps {
+  data: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  eventSummary: string;
+  shouldHideBadges?: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+}
+
 export const HeadToHeadBanner = ({
   data,
   isConciseView,
@@ -74,7 +92,7 @@ export const HeadToHeadBanner = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => (
+}: HeadToHeadBannerProps) => (
   <>
     <VisuallyHiddenText>{eventSummary}</VisuallyHiddenText>
     <ItemWrapper

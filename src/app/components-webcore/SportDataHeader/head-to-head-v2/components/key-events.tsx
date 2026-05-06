@@ -3,13 +3,21 @@
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Action from './action';
 import styles from './index.styles';
+import type { Actions } from '../types';
+
+interface KeyEventsProps {
+  homeKeyEvents: Actions[];
+  awayKeyEvents: Actions[];
+  homeName: string;
+  awayName: string;
+}
 
 export const KeyEvents = ({
   homeKeyEvents,
   awayKeyEvents,
   homeName,
   awayName,
-}) => (
+}: KeyEventsProps) => (
   <>
     <VisuallyHiddenText as="h3">Key Events</VisuallyHiddenText>
     <div css={styles.keyEventsHome()}>

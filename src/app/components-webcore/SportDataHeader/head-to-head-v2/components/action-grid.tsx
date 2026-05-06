@@ -1,8 +1,13 @@
 /** @jsxImportSource @emotion/react */
+import type { ReactNode } from 'react';
 import styles, { GRID_AREAS } from './index.styles';
 
 export { GRID_AREAS };
 
-export const ActionGrid = ({ children }) => (
+interface ActionGridProps {
+  children: ReactNode;
+}
+
+export const ActionGrid = ({ children }: ActionGridProps) => (
   <div css={styles.actionGrid()}>{children}</div>
 );

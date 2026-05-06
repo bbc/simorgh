@@ -135,10 +135,173 @@ After conversion, a components directory should look like:
 ```
 components/
 ├── index.styles.ts      # Consolidated styles
-├── ComponentA.jsx       # Uses css prop with styles import
-├── ComponentB.jsx       # Uses css prop with styles import
+├── types.ts             # Shared TypeScript types
+├── ComponentA.tsx       # TypeScript React component
+├── ComponentB.tsx       # TypeScript React component
 └── sub-component/
-    └── index.js         # Uses ../index.styles or own styles
+    └── index.tsx        # Uses ../index.styles or own styles
+```
+
+## TypeScript Conversion
+
+When converting from JavaScript/JSX to TypeScript/TSX, follow these patterns:
+
+### 1. File Extension Changes
+
+- `.jsx` → `.tsx` (React components)
+- `.js` → `.ts` (utility functions, helpers, enums)
+- Keep `.ts` for style files (already TypeScript)
+
+### 2. Props Type Definitions
+
+**Before (JSX with JSDoc):**
+```jsx
+/**
+ * @type {typeof import('./types.ts').MyComponent}
+ */
+const MyComponent = ({ name, count, isActive }) => {
+  // ...
+};
+```
+
+**After (TSX with interface):**
+```tsx
+interface MyComponentProps {
+  name: string;
+  count: number;
+  isActive?: boolean;
+}
+
+const MyComponent = ({ name, count, isActive = false }: MyComponentProps) => {
+  // ...
+};
+```
+
+### 3. Import Existing Types
+
+If a `types.ts` file exists, import and use those types:
+
+```tsx
+import type { HeadToHeadV2Data, Team, Action } from './types';
+
+interface Props {
+  data: HeadToHeadV2Data;
+  isConciseView: boolean;
+}
+```
+
+### 4. Children Props
+
+```tsx
+import type { PropsWithChildren, ReactNode } from 'react';
+
+// Option 1: Using PropsWithChildren
+interface WrapperProps {
+  className?: string;
+}
+
+const Wrapper = ({ children, className }: PropsWithChildren<WrapperProps>) => (
+  <div className={className}>{children}</div>
+);
+
+// Option 2: Explicit ReactNode
+interface ContainerProps {
+  children: ReactNode;
+  title: string;
+}
+```
+
+### 5. Event Handlers
+
+```tsx
+import type { MouseEvent, ChangeEvent } from 'react';
+
+interface ButtonProps {
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+}
+```
+
+### 6. Enum Conversions
+
+**Before (JS):**
+```js
+const EventStatus = {
+  PreEvent: 'PreEvent',
+  MidEvent: 'MidEvent',
+  PostEvent: 'PostEvent',
+};
+```
+
+**After (TS):**
+```ts
+export enum EventStatus {
+  PreEvent = 'PreEvent',
+  MidEvent = 'MidEvent',
+  PostEvent = 'PostEvent',
+}
+// Or use const object with as const for string literal types:
+export const EventStatus = {
+  PreEvent: 'PreEvent',
+  MidEvent: 'MidEvent',
+  PostEvent: 'PostEvent',
+} as const;
+
+export type EventStatusType = typeof EventStatus[keyof typeof EventStatus];
+```
+
+### 7. Default Exports with Types
+
+```tsx
+// Named export (preferred)
+export const MyComponent = ({ data }: Props) => <div>{data.name}</div>;
+
+// Default export
+export default MyComponent;
+```
+
+### 8. Conditional Rendering Types
+
+Use type narrowing for conditional props:
+
+```tsx
+type ConditionalLinkProps =
+  | { href: string; onClick?: never }
+  | { href?: never; onClick: () => void };
+
+interface BaseLinkProps {
+  children: ReactNode;
+  className?: string;
+}
+
+type LinkProps = BaseLinkProps & ConditionalLinkProps;
+```
+
+### 9. Style Function Parameters
+
+When style functions accept typed parameters:
+
+```tsx
+// In index.styles.ts
+team: (isConciseView: boolean, shouldHideBadges: boolean, alignment: 'home' | 'away') =>
+  css({
+    display: 'flex',
+    flexDirection: alignment === 'home' ? 'row' : 'row-reverse',
+  }),
+```
+
+### 10. Utility Function Types
+
+```ts
+// Before
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString();
+};
+
+// After
+const formatDate = (date: string | Date): string => {
+  return new Date(date).toLocaleDateString();
+};
 ```
 
 ## Reference Examples
@@ -180,3 +343,12 @@ These are typically design tokens that can be replaced:
 5. **Don't use `max-width` media queries** when `min-width` would work
 6. **Don't pass dynamic props to styled components** - it generates new classes
 7. **Don't proceed with conversion if @bbc/web-components dependencies are missing** - they need to be converted first
+
+### TypeScript-Specific Mistakes
+
+8. **Don't use `any` type** - prefer `unknown` or proper type definitions
+9. **Don't forget to update imports** when renaming files from `.jsx` to `.tsx`
+10. **Don't use `React.FC`** - use explicit return types or rely on inference
+11. **Don't duplicate types** - import from existing `types.ts` files where available
+12. **Don't use non-null assertions (`!`)** without good reason - prefer optional chaining (`?.`)
+13. **Don't leave JSDoc type annotations** after converting to TypeScript - they become redundant
