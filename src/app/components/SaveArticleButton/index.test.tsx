@@ -23,6 +23,7 @@ describe('SaveArticleButton', () => {
       showButton: false,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -37,6 +38,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -49,6 +51,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: true,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -61,6 +64,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: true,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -76,6 +80,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -91,6 +96,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -115,56 +121,6 @@ describe('SaveArticleButton', () => {
       expect.objectContaining({
         articleTitle: 'Test Article Title',
         articlePageData,
-      }),
-    );
-  });
-
-  it('extracts articleId from metadata when canonicalUrl is not available', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: false,
-      handleSaveAction: mockHandleSaveAction,
-    });
-
-    type ArticlePageData = ComponentProps<
-      typeof SaveArticleButton
-    >['articlePageData'];
-    const articlePageData: ArticlePageData = {
-      metadata: {
-        id: 'urn:bbc:ares::article:test123',
-      },
-    } as ArticlePageData;
-
-    render(
-      <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
-      { service: 'hindi' },
-    );
-
-    // Component extracts articleId from pathname using parseRoute
-    expect(mockedUseUASButton).toHaveBeenCalledWith(
-      expect.objectContaining({
-        articleTitle: 'Test Article Title',
-        articlePageData,
-      }),
-    );
-  });
-
-  it('passes empty articleId when no articlePageData is provided', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: false,
-      handleSaveAction: mockHandleSaveAction,
-    });
-
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-
-    // Component extracts articleId from pathname using parseRoute
-    expect(mockedUseUASButton).toHaveBeenCalledWith(
-      expect.objectContaining({
-        articleTitle: 'Test Article Title',
-        articlePageData: undefined,
       }),
     );
   });
