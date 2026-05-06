@@ -148,6 +148,29 @@ See these existing Simorgh components for reference:
 - [src/app/components/MediaLoader/index.styles.ts](src/app/components/MediaLoader/index.styles.ts)
 - [src/app/components/Pagination/index.styles.ts](src/app/components/Pagination/index.styles.ts)
 
+## Pre-Conversion Checklist
+
+Before converting a webcore component, audit its imports for dependencies that may not exist in Simorgh:
+
+### Check for @bbc/web-components imports
+Webcore components often import from `@bbc/web-components/`. These are React components (not just styling) that need to be converted first:
+- `Carousel` - horizontal scrollable container with heading
+- `Heading` - has equivalent at `src/app/components/Heading/`
+- Others - check on a case-by-case basis
+
+### Check for @bbc/web-gel-layouts imports
+- `Wrap` - provides GEL-compliant padding/margins. Replace with div + theme spacings.
+- `Grid` components - may need custom CSS Grid implementation
+
+### Check for @bbc/web-gel-foundations imports
+These are typically design tokens that can be replaced:
+- `SPACING_*` → Use theme `spacings` (HALF, FULL, DOUBLE, TRIPLE, QUADRUPLE, QUINTUPLE, SEXTUPLE)
+- `GROUP_*` → Use theme `mq` media queries (GROUP_1_MIN_WIDTH, GROUP_2_MIN_WIDTH, etc.)
+- `fontScale*`, `fontStandard` → Use theme typography via Text/Heading components
+- `createSize` → Use `pixelsToRem()` utility
+
+**If a component dependency is missing, stop the conversion and request it be imported first.**
+
 ## Common Mistakes to Avoid
 
 1. **Don't mix styled components and css prop** in the same file
@@ -156,3 +179,4 @@ See these existing Simorgh components for reference:
 4. **Don't hardcode pixel values** - use `pixelsToRem()`
 5. **Don't use `max-width` media queries** when `min-width` would work
 6. **Don't pass dynamic props to styled components** - it generates new classes
+7. **Don't proceed with conversion if @bbc/web-components dependencies are missing** - they need to be converted first
