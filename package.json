@@ -132,7 +132,7 @@
     "react-router-dom": "5.3.4",
     "undici": "8.1.0",
     "url-parse": "1.5.10",
-    "uuid": "13.0.0",
+    "uuid": "13.0.1",
     "winston": "patch:winston@3.8.2#./patches/winston-file-descriptor.patch"
   },
   "devDependencies": {
