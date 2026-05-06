@@ -97,7 +97,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
           processedReverbUrl +=
             `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
               .replace('at_', 'at_')
-              .replace('utm_', 'utm_')
+              // .replace('utm_', 'utm_')
               // .replace('at_', 'src_')
               .replace('xtor', 'xto');
         }
