@@ -1,6 +1,6 @@
 import type { JSX } from 'react';
 
-declare enum EventStatus {
+export declare enum EventStatus {
   PreEvent = 'PreEvent',
   MidEvent = 'MidEvent',
   PostEvent = 'PostEvent',
@@ -8,6 +8,8 @@ declare enum EventStatus {
   Cancelled = 'Cancelled',
   Suspended = 'Suspended',
   Postponed = 'Postponed',
+  Delayed = 'Delayed',
+  Intermission = 'Intermission',
 }
 
 type Action = {
