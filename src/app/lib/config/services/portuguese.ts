@@ -51,7 +51,7 @@ export const service: DefaultServiceConfig = {
     podcastPromo: {
       title: 'Promoção Agregador de pesquisas',
       brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
-      brandDescription: '',
+      brandDescription: ' ',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
         alt: 'O agregador de pesquisas da BBC News Brasil',
