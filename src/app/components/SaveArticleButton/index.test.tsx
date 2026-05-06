@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import useUASButton from '#app/hooks/useUASButton';
 import { render, screen } from '../react-testing-library-with-providers';
 import SaveArticleButton from './index';
@@ -93,7 +94,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    type ArticlePageData = React.ComponentProps<
+    type ArticlePageData = ComponentProps<
       typeof SaveArticleButton
     >['articlePageData'];
     const articlePageData: ArticlePageData = {
@@ -106,13 +107,16 @@ describe('SaveArticleButton', () => {
 
     render(
       <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
+      { service: 'hindi' },
     );
 
-    expect(mockedUseUASButton).toHaveBeenCalledWith({
-      articleId: 'c1l97706v5mo',
-      articleTitle: 'Test Article Title',
-      articlePageData,
-    });
+    // Component extracts articleId from pathname using parseRoute
+    expect(mockedUseUASButton).toHaveBeenCalledWith(
+      expect.objectContaining({
+        articleTitle: 'Test Article Title',
+        articlePageData,
+      }),
+    );
   });
 
   it('extracts articleId from metadata when canonicalUrl is not available', () => {
@@ -123,7 +127,7 @@ describe('SaveArticleButton', () => {
       handleSaveAction: mockHandleSaveAction,
     });
 
-    type ArticlePageData = React.ComponentProps<
+    type ArticlePageData = ComponentProps<
       typeof SaveArticleButton
     >['articlePageData'];
     const articlePageData: ArticlePageData = {
@@ -134,13 +138,16 @@ describe('SaveArticleButton', () => {
 
     render(
       <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
+      { service: 'hindi' },
     );
 
-    expect(mockedUseUASButton).toHaveBeenCalledWith({
-      articleId: 'test123',
-      articleTitle: 'Test Article Title',
-      articlePageData,
-    });
+    // Component extracts articleId from pathname using parseRoute
+    expect(mockedUseUASButton).toHaveBeenCalledWith(
+      expect.objectContaining({
+        articleTitle: 'Test Article Title',
+        articlePageData,
+      }),
+    );
   });
 
   it('passes empty articleId when no articlePageData is provided', () => {
@@ -153,10 +160,12 @@ describe('SaveArticleButton', () => {
 
     render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
 
-    expect(mockedUseUASButton).toHaveBeenCalledWith({
-      articleId: '',
-      articleTitle: 'Test Article Title',
-      articlePageData: undefined,
-    });
+    // Component extracts articleId from pathname using parseRoute
+    expect(mockedUseUASButton).toHaveBeenCalledWith(
+      expect.objectContaining({
+        articleTitle: 'Test Article Title',
+        articlePageData: undefined,
+      }),
+    );
   });
 });

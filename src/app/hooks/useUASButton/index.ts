@@ -11,7 +11,7 @@ import {
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
-import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
+import { Article } from '#app/models/types/optimo';
 import useToggle from '../useToggle';
 
 /** A hook that fetches an article's saved status and controls showing the save UAS button
@@ -33,7 +33,7 @@ interface UseUASButtonReturn {
 interface UseUASButtonProps {
   articleId: string;
   articleTitle: string;
-  articlePageData?: SaveArticleButtonProps['articlePageData'];
+  articlePageData?: Article;
 }
 
 const useUASButton = ({

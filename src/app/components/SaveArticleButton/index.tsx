@@ -1,12 +1,9 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import {
-  getAssetIdFromCanonicalUrl,
-  getArticleId,
-} from '#app/lib/utilities/parseAssetData';
-import { Article } from '#app/models/types/optimo';
-import { parseArticleID } from '#app/lib/uasApi/uasUtility';
-import { useContext } from 'react';
+import { use, useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
+import { Article } from '#app/models/types/optimo';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';
 
@@ -19,29 +16,16 @@ const SaveArticleButton = ({
   articleTitle,
   articlePageData,
 }: SaveArticleButtonProps) => {
-  const getArticleIdFromData = () => {
-    if (articlePageData?.metadata?.locators?.canonicalUrl) {
-      return getAssetIdFromCanonicalUrl(
-        articlePageData.metadata.locators.canonicalUrl,
-      );
-    }
-    if (articlePageData) {
-      return parseArticleID(getArticleId(articlePageData));
-    }
-    return '';
-  };
-
-  const articleId = getArticleIdFromData();
-
+  const { pathname } = use(RequestContext);
+  const { translations } = useContext(ServiceContext);
+  const { saveArticleButton } = translations || {};
+  const { assetId: articleId } = parseRoute(pathname);
   const { showButton, isSaved, isLoading, error, handleSaveAction } =
     useUASButton({
-      articleId: articleId || '',
+      articleId,
       articleTitle,
       articlePageData,
     });
-
-  const { translations } = useContext(ServiceContext);
-  const { saveArticleButton } = translations || {};
 
   if (!showButton) return null;
 
