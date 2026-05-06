@@ -7758,13 +7758,13 @@ __metadata:
   linkType: hard
 
 "axios@npm:^1.13.2":
-  version: 1.15.0
-  resolution: "axios@npm:1.15.0"
+  version: 1.16.0
+  resolution: "axios@npm:1.16.0"
   dependencies:
-    follow-redirects: "npm:^1.15.11"
+    follow-redirects: "npm:^1.16.0"
     form-data: "npm:^4.0.5"
     proxy-from-env: "npm:^2.1.0"
-  checksum: 10/d39a2c0ebc7ff4739401b282e726cc2673377949d6c46d60eb619458f8d7a2f7eadbcada7097f4dbc7d5c59abb4d3bf6fac33d474412bc3415d3f5aa7ed45530
+  checksum: 10/cf8b521ff732c21550b38c8739aef556ea5e14b268468bb89e4307416ab262b462e582474e810963a3d61c2392ab47ad35c11d05eff027de7c97113bc7411623
   languageName: node
   linkType: hard
 
@@ -11434,7 +11434,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.11":
+"follow-redirects@npm:^1.16.0":
   version: 1.16.0
   resolution: "follow-redirects@npm:1.16.0"
   peerDependenciesMeta:
@@ -17765,7 +17765,7 @@ __metadata:
     typescript: "npm:5.9.3"
     undici: "npm:7.24.0"
     url-parse: "npm:1.5.10"
-    uuid: "npm:13.0.0"
+    uuid: "npm:13.0.1"
     wait-on: "npm:9.0.3"
     webpack: "npm:5.106.2"
     webpack-bundle-analyzer: "npm:5.3.0"
@@ -19549,12 +19549,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:13.0.0":
-  version: 13.0.0
-  resolution: "uuid@npm:13.0.0"
+"uuid@npm:13.0.1":
+  version: 13.0.1
+  resolution: "uuid@npm:13.0.1"
   bin:
     uuid: dist-node/bin/uuid
-  checksum: 10/2742b24d1e00257e60612572e4d28679423469998cafbaf1fe9f1482e3edf9c40754b31bfdb3d08d71b29239f227a304588f75210b3b48f2609f0673f1feccef
+  checksum: 10/da190a58eb699dfde38013c9ae8e2469eb62cc6c0774bb7d58b818a4fd1f0b269f11465d5153f88cfcf21e8b8187f35e016b2b033a53a6e06a22103ccce7a5fe
   languageName: node
   linkType: hard
 
