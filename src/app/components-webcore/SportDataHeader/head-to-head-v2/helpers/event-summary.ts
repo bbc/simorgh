@@ -1,14 +1,43 @@
+import { EventStatus, HeadToHeadV2Data } from '../types';
+
 const ftFallback = { value: 'FT', accessible: 'Full time' };
 const aetFallback = { value: 'AET', accessible: 'After extra time' };
 
+type PeriodLabel = { value: string; accessible: string };
+
+type RunningScores = {
+  halftime?: string;
+  fulltime?: string;
+  extratime?: string;
+  penaltyShootout?: string;
+  aggregate?: string;
+};
+
+type TeamSummary = {
+  fullName: string;
+  score?: string;
+  runningScores?: RunningScores;
+};
+
+type EventSummaryParams = {
+  time: HeadToHeadV2Data['time'];
+  status: string;
+  periodLabel?: PeriodLabel & { labelType?: string };
+  winner?: string;
+  seriesWinner?: string;
+  home: TeamSummary;
+  away: TeamSummary;
+  period?: string;
+};
+
 export const getFallbackFootballPeriodLabel = (
-  labels,
-  status,
-  homeRunningScores,
-  awayRunningScores,
-  homeName,
-  awayName,
-) => {
+  labels: PeriodLabel,
+  status: EventStatus | string,
+  homeRunningScores?: RunningScores,
+  awayRunningScores?: RunningScores,
+  homeName?: string,
+  awayName?: string,
+): PeriodLabel => {
   const isPens = labels?.value?.toLowerCase() === 'pens';
 
   if (status?.toLowerCase() === 'midevent' && isPens) {
@@ -33,11 +62,9 @@ export const getFallbackFootballPeriodLabel = (
   }
 
   if (isPens) {
-    const fallback =
-      homeRunningScores?.extratime && awayRunningScores?.extratime
-        ? aetFallback
-        : ftFallback;
-    return fallback;
+    return homeRunningScores?.extratime && awayRunningScores?.extratime
+      ? aetFallback
+      : ftFallback;
   }
 
   return labels;
@@ -52,8 +79,8 @@ export const getConciseFootballEventSummary = ({
   home,
   away,
   period,
-}) => {
-  const summary = [];
+}: EventSummaryParams): string => {
+  const summary: string[] = [];
   const kickOffTime =
     time.displayTimeUK !== 'TBC'
       ? `kick off ${time.accessibleTime}`
@@ -69,7 +96,13 @@ export const getConciseFootballEventSummary = ({
   }
 
   if (status === 'MidEvent') {
-    summary.push(home.fullName, home.score, ',', away.fullName, away.score);
+    summary.push(
+      home.fullName,
+      home.score ?? '',
+      ',',
+      away.fullName,
+      away.score ?? '',
+    );
 
     if (period === 'et-firsthalf' || period === 'et-secondhalf') {
       summary.push('Extra time in progress');
@@ -79,7 +112,7 @@ export const getConciseFootballEventSummary = ({
       const hasRunningScores = home.runningScores && away.runningScores;
 
       if (hasRunningScores) {
-        if (home.runningScores.extratime && away.runningScores.extratime) {
+        if (home.runningScores?.extratime && away.runningScores?.extratime) {
           summary.push('after extra time');
         } else {
           summary.push('after full time');
@@ -88,8 +121,8 @@ export const getConciseFootballEventSummary = ({
 
       if (
         hasRunningScores &&
-        home.runningScores.penaltyShootout &&
-        away.runningScores.penaltyShootout
+        home.runningScores?.penaltyShootout &&
+        away.runningScores?.penaltyShootout
       ) {
         summary.push('penalties in progress');
       } else {
@@ -99,7 +132,13 @@ export const getConciseFootballEventSummary = ({
   }
 
   if (status === 'PostEvent') {
-    summary.push(home.fullName, home.score, ',', away.fullName, away.score);
+    summary.push(
+      home.fullName,
+      home.score ?? '',
+      ',',
+      away.fullName,
+      away.score ?? '',
+    );
 
     if (periodLabel?.labelType === 'date') {
       summary.push('on the');
@@ -111,7 +150,7 @@ export const getConciseFootballEventSummary = ({
     }
 
     const fallbackPeriod = getFallbackFootballPeriodLabel(
-      periodLabel,
+      periodLabel ?? ftFallback,
       status,
       home.runningScores,
       away.runningScores,
@@ -124,16 +163,19 @@ export const getConciseFootballEventSummary = ({
       away.runningScores?.penaltyShootout
     ) {
       if (home.runningScores.aggregate && away.runningScores.aggregate) {
-        const aggText = `, ${home.fullName} ${home.runningScores.aggregate} , ${away.fullName} ${away.runningScores.aggregate} on aggregate`;
-        summary.push(aggText);
+        summary.push(
+          `, ${home.fullName} ${home.runningScores.aggregate} , ${away.fullName} ${away.runningScores.aggregate} on aggregate`,
+        );
       }
+
       const { winner, loser } =
-        winnerAlignment.toLowerCase() === 'home'
+        winnerAlignment?.toLowerCase() === 'home'
           ? { winner: home, loser: away }
           : { winner: away, loser: home };
-      const text = `, ${winner.fullName} win ${winner.runningScores.penaltyShootout} - ${loser.runningScores.penaltyShootout} on penalties`;
 
-      summary.push(text);
+      summary.push(
+        `, ${winner.fullName} win ${winner.runningScores?.penaltyShootout} - ${loser.runningScores?.penaltyShootout} on penalties`,
+      );
     }
 
     if (seriesWinner) {
@@ -142,8 +184,9 @@ export const getConciseFootballEventSummary = ({
           ? { winner: home, loser: away }
           : { winner: away, loser: home };
 
-      const text = `, ${winner.fullName} win ${winner.runningScores.aggregate} - ${loser.runningScores.aggregate} on aggregate`;
-      summary.push(text);
+      summary.push(
+        `, ${winner.fullName} win ${winner.runningScores?.aggregate} - ${loser.runningScores?.aggregate} on aggregate`,
+      );
     }
   }
 
