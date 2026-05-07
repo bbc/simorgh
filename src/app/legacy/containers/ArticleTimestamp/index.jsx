@@ -49,7 +49,6 @@ const ArticleTimestamp = ({
     timestamp: firstPublished,
     format: formatType({ firstPublished, datetimeLocale }),
     isRelative: isFirstRelative(firstPublished, lastPublished),
-    
   };
 
   const lastPublishedProps = {
