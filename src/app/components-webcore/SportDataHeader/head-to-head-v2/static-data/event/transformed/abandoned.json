@@ -1,0 +1,50 @@
+{
+  "id": "78bis3qan491aqnwxn71ix6o1",
+  "eventGroupingLabel": "England - Premier League",
+  "startDateTime": "2022-08-06T11:30:00Z",
+  "tournamentId": "2kwbbcootiqqgmrzs6o5inle5",
+  "urn": "urn:bbc:sportsdata:football:event:78bis3qan491aqnwxn71ix6o1",
+  "sport": "football",
+  "status": "Abandoned",
+  "periodLabel": { "value": "Abandoned", "accessible": "Abandoned" },
+  "participants": [
+    {
+      "id": "hzqh7z0mdl3v7gwete66syxp",
+      "urn": "urn:bbc:sportsdata:football:team:fulham",
+      "name": { "fullName": "Fulham", "shortName": "Fulham" },
+      "alignment": "home"
+    },
+    {
+      "id": "c8h9bw1l82s06h77xxrelzhur",
+      "urn": "urn:bbc:sportsdata:football:team:liverpool",
+      "name": { "fullName": "Liverpool", "shortName": "Liverpool" },
+      "alignment": "away"
+    }
+  ],
+  "venue": { "name": "Craven Cottage", "shortName": "Craven Cottage" },
+  "tournament": {
+    "id": "2kwbbcootiqqgmrzs6o5inle5",
+    "name": "Premier League",
+    "urn": "urn:bbc:sportsdata:football:tournament:2kwbbcootiqqgmrzs6o5inle5"
+  },
+  "stage": {
+    "id": "80qbeanalyj5cvxikkq351iqc",
+    "name": "Regular Season",
+    "urn": "urn:bbc:sportsdata:football:stage:80qbeanalyj5cvxikkq351iqc"
+  },
+  "tournamentDescriptionLabel": "Premier League",
+  "lastUpdated": "2022-06-19T14:46:04Z",
+  "home": {
+    "fullName": "Fulham",
+    "shortName": "Fulham",
+    "urn": "urn:bbc:sportsdata:football:team:fulham"
+  },
+  "away": {
+    "fullName": "Liverpool",
+    "shortName": "Liverpool",
+    "urn": "urn:bbc:sportsdata:football:team:liverpool"
+  },
+  "time": "12:30",
+  "date": "Sat 6 Aug 2022",
+  "accessibleEventSummary": ""
+}
