@@ -1,4 +1,4 @@
-const SHORT_NAMES: Record<string, string> = {
+export const SHORT_NAMES: Record<string, string> = {
   Arsenal: 'Arsenal',
   'Aston Villa': 'Aston Villa',
   'AFC Bournemouth': 'Bournemouth',
