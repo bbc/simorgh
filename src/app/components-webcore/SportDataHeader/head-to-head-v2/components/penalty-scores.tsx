@@ -1,13 +1,35 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
+import type { RunningScores } from './actions';
 
-const PenaltyScores = ({ data }) => {
+type Winner = 'home' | 'away' | 'draw';
+
+interface TeamData {
+  fullName: string;
+  runningScores?: RunningScores;
+}
+
+interface PenaltyScoresData {
+  status?: string;
+  winner?: Winner;
+  seriesWinner?: 'home' | 'away';
+  multiLeg?: { leg: number };
+  home: TeamData;
+  away: TeamData;
+}
+
+interface PenaltyScoresProps {
+  data: PenaltyScoresData;
+  isConciseView?: boolean;
+}
+
+const PenaltyScores = ({ data, isConciseView: _isConciseView }: PenaltyScoresProps) => {
   const { winner, seriesWinner, multiLeg, status } = data;
 
   const isPostEvent = status?.toLowerCase() === 'postevent';
   const hasWinner = winner !== undefined;
   const isDrawWithNoSeriesWinner = winner === 'draw' && !seriesWinner;
-  const isMultiLegWithNoSeriesWinner = multiLeg?.leg > 1 && !seriesWinner;
+  const isMultiLegWithNoSeriesWinner = multiLeg?.leg && multiLeg.leg > 1 && !seriesWinner;
 
   if (
     !isPostEvent ||
@@ -20,12 +42,12 @@ const PenaltyScores = ({ data }) => {
 
   const winnerOnPenalties = seriesWinner ?? winner;
   const loserOnPenalties =
-    winnerOnPenalties.toLowerCase() === 'home' ? 'away' : 'home';
-  const winnerOnPenaltiesName = data[winnerOnPenalties].fullName;
+    (winnerOnPenalties as string).toLowerCase() === 'home' ? 'away' : 'home';
+  const winnerOnPenaltiesName = data[winnerOnPenalties as 'home' | 'away'].fullName;
   const winnerOnPenaltiesScore =
-    data[winnerOnPenalties].runningScores.penaltyShootout;
+    data[winnerOnPenalties as 'home' | 'away'].runningScores?.penaltyShootout;
   const loserOnPenaltiesScore =
-    data[loserOnPenalties].runningScores.penaltyShootout;
+    data[loserOnPenalties as 'home' | 'away'].runningScores?.penaltyShootout;
 
   return (
     <div css={styles.penaltyScoresContainer()}>

@@ -1,10 +1,50 @@
-
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import Team from './team';
 import Centre from './centre';
 import MatchProgress from './match-progress';
 import PenaltyScores from './penalty-scores';
 import styles from './index.styles';
+import type { EventStatus } from '../types';
+import type { RunningScores } from './actions';
+
+interface TeamData {
+  id?: string;
+  fullName: string;
+  shortName: string;
+  urn?: string;
+  score?: string;
+  scoreUnconfirmed?: string;
+  runningScores?: RunningScores;
+}
+
+interface TimeData {
+  displayTimeUK: string;
+  accessibleTime: string;
+}
+
+interface MultiLeg {
+  leg: number;
+}
+
+interface HeadToHeadData {
+  id?: string;
+  status: EventStatus;
+  home: TeamData;
+  away: TeamData;
+  time: TimeData;
+  multiLeg?: MultiLeg;
+  periodLabel?: { value: string; accessible: string };
+}
+
+type PlaceholderFallbackType = 'badge' | 'flag';
+
+interface ItemWrapperProps {
+  data: HeadToHeadData;
+  isConciseView: boolean;
+  shouldHideBadges: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: PlaceholderFallbackType;
+}
 
 const ItemWrapper = ({
   data,
@@ -12,7 +52,7 @@ const ItemWrapper = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => {
+}: ItemWrapperProps) => {
   const shouldDisplayPenScores =
     data.home.runningScores?.penaltyShootout &&
     data.away.runningScores?.penaltyShootout;
@@ -24,8 +64,7 @@ const ItemWrapper = ({
       >
         <div css={styles.teamHome()} data-participant-id={data.home.id}>
           <Team
-            // eslint-disable-next-line react/jsx-curly-brace-presence
-            alignment={'home'}
+            alignment="home"
             name={data.home.fullName}
             shortName={data.home.shortName}
             urn={data.home.urn}
@@ -46,8 +85,7 @@ const ItemWrapper = ({
         </div>
         <div css={styles.teamAway()} data-participant-id={data.away.id}>
           <Team
-            // eslint-disable-next-line react/jsx-curly-brace-presence
-            alignment={'away'}
+            alignment="away"
             name={data.away.fullName}
             shortName={data.away.shortName}
             urn={data.away.urn}
@@ -67,6 +105,15 @@ const ItemWrapper = ({
   );
 };
 
+interface HeadToHeadBannerProps {
+  data: HeadToHeadData;
+  isConciseView: boolean;
+  eventSummary: string;
+  shouldHideBadges: boolean;
+  maxScoreLength?: number;
+  teamBadgePlaceholderFallbackType?: PlaceholderFallbackType;
+}
+
 export const HeadToHeadBanner = ({
   data,
   isConciseView,
@@ -74,14 +121,13 @@ export const HeadToHeadBanner = ({
   shouldHideBadges,
   maxScoreLength,
   teamBadgePlaceholderFallbackType,
-}) => (
+}: HeadToHeadBannerProps) => (
   <>
     <VisuallyHiddenText>{eventSummary}</VisuallyHiddenText>
     <ItemWrapper
       data={data}
       isConciseView={isConciseView}
       shouldHideBadges={shouldHideBadges}
-      data-event-id={data.id}
       maxScoreLength={maxScoreLength}
       teamBadgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
     />

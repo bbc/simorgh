@@ -1,6 +1,12 @@
 import styles from './index.styles';
 
-const Footer = ({ venue, attendanceValue, attendanceInfo }) => {
+interface FooterProps {
+  venue: string;
+  attendanceValue?: number;
+  attendanceInfo?: string;
+}
+
+const Footer = ({ venue, attendanceValue, attendanceInfo }: FooterProps) => {
   const formattedAttendanceValue = attendanceValue?.toLocaleString();
 
   return (

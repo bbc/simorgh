@@ -7,14 +7,37 @@ import {
 import Time from './fixture-time';
 import Score from './score';
 import styles from './index.styles';
+import type { EventStatus } from '../types';
 
-export const shouldShowScores = statusGroup =>
+interface TimeData {
+  displayTimeUK: string;
+  accessibleTime: string;
+}
+
+interface TeamData {
+  score?: string;
+  scoreUnconfirmed?: string;
+}
+
+interface CentreData {
+  status: EventStatus;
+  home: TeamData;
+  away: TeamData;
+  time: TimeData;
+}
+
+export const shouldShowScores = (statusGroup: EventStatus) =>
   isInProgressStatus(statusGroup) ||
   isResultStatus(statusGroup) ||
   isCalledOffStatus(statusGroup) ||
   statusGroup === 'Postponed';
 
-const Played = ({ data, isConciseView }) => (
+interface PlayedProps {
+  data: CentreData;
+  isConciseView: boolean;
+}
+
+const Played = ({ data, isConciseView }: PlayedProps) => (
   <Score
     status={data.status}
     home={data.home.score}
@@ -25,7 +48,13 @@ const Played = ({ data, isConciseView }) => (
   />
 );
 
-const Centre = ({ data, isConciseView, maxScoreLength }) => {
+interface CentreProps {
+  data: CentreData;
+  isConciseView: boolean;
+  maxScoreLength?: number;
+}
+
+const Centre = ({ data, isConciseView, maxScoreLength }: CentreProps) => {
   const { status } = data;
 
   return (

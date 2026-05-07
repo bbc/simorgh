@@ -1,16 +1,16 @@
 import type { JSX } from 'react';
 
-export declare enum EventStatus {
-  PreEvent = 'PreEvent',
-  MidEvent = 'MidEvent',
-  PostEvent = 'PostEvent',
-  Abandoned = 'Abandoned',
-  Cancelled = 'Cancelled',
-  Suspended = 'Suspended',
-  Postponed = 'Postponed',
-  Delayed = 'Delayed',
-  Intermission = 'Intermission',
-}
+export type EventStatus =
+  | 'PreEvent'
+  | 'MidEvent'
+  | 'PostEvent'
+  | 'Abandoned'
+  | 'Cancelled'
+  | 'Suspended'
+  | 'Postponed'
+  | 'Delayed'
+  | 'Intermission'
+  | string;
 
 type Action = {
   type: string;
@@ -50,7 +50,7 @@ type Team = {
   /**
    * The Team's unique id.
    */
-  id: string;
+  id?: string;
   /**
    * Full name of the team.
    */
@@ -67,7 +67,13 @@ type Team = {
   /**
    * The fulltime and halftime running scores for the team.
    */
-  runningScore: { halftime?: string; fulltime?: string };
+  runningScores?: {
+    halftime?: string;
+    fulltime?: string;
+    extratime?: string;
+    penaltyShootout?: string;
+    aggregate?: string;
+  };
   /**
    * The current team score.
    */

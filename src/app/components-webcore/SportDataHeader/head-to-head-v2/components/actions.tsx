@@ -1,12 +1,46 @@
-// import React from 'react';
-
 import { GroupedEvents } from './grouped-events';
 import { ActionGrid } from './action-grid';
 import ScoreDetails from './score-details';
 import { KeyEvents } from './key-events';
+import type { PlayerAction } from './action';
+
+interface GroupedAction {
+  groupName: { fullName: string; shortName: string };
+  homeTeamActions: string[];
+  awayTeamActions: string[];
+}
+
+interface RunningScores {
+  halftime?: string;
+  fulltime?: string;
+  extratime?: string;
+  penaltyShootout?: string;
+  aggregate?: string;
+}
+
+interface Team {
+  id?: string;
+  fullName: string;
+  shortName: string;
+  urn?: string;
+  runningScores?: RunningScores;
+  score?: string;
+  scoreUnconfirmed?: string;
+  actions?: PlayerAction[];
+}
+
+interface ActionsData {
+  home: Team;
+  away: Team;
+  groupedActions?: GroupedAction[];
+}
+
+interface ActionsProps {
+  data: ActionsData;
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export const Actions = ({ data }) => {
+export const Actions = ({ data }: ActionsProps) => {
   const homeKeyEvents = data.home?.actions || [];
   const awayKeyEvents = data.away?.actions || [];
 
@@ -34,7 +68,7 @@ export const Actions = ({ data }) => {
       </ActionGrid>
       {hasGroupedEvents && (
         <GroupedEvents
-          groupedEvents={data.groupedActions}
+          groupedEvents={data.groupedActions!}
           homeName={data.home.fullName}
           awayName={data.away.fullName}
         />
@@ -42,3 +76,5 @@ export const Actions = ({ data }) => {
     </>
   );
 };
+
+export type { RunningScores, Team, GroupedAction };

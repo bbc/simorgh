@@ -1,9 +1,16 @@
-
 import { ActionGrid } from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
-const Actions = ({ teamActions, teamAccessibleActions }) => {
+interface ActionsComponentProps {
+  teamActions: string[];
+  teamAccessibleActions?: string[];
+}
+
+const ActionsComponent = ({
+  teamActions,
+  teamAccessibleActions,
+}: ActionsComponentProps) => {
   if (teamAccessibleActions?.length) {
     return (
       <>
@@ -15,11 +22,29 @@ const Actions = ({ teamActions, teamAccessibleActions }) => {
     );
   }
 
-  return teamActions.join(', ');
+  return <>{teamActions.join(', ')}</>;
 };
 
+interface GroupedEvent {
+  groupName: { fullName: string; shortName: string };
+  homeTeamActions: string[];
+  homeTeamAccessibleActions?: string[];
+  awayTeamActions: string[];
+  awayTeamAccessibleActions?: string[];
+}
+
+interface GroupedEventsProps {
+  groupedEvents: GroupedEvent[];
+  homeName: string;
+  awayName: string;
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
+export const GroupedEvents = ({
+  groupedEvents,
+  homeName,
+  awayName,
+}: GroupedEventsProps) => (
   <div css={styles.groupedEventsWrapper()}>
     {groupedEvents.map(
       ({
@@ -36,7 +61,7 @@ export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
               {homeTeamActions.length > 0 && (
                 <>
                   <VisuallyHiddenText>{`${homeName},`}</VisuallyHiddenText>
-                  <Actions
+                  <ActionsComponent
                     teamActions={homeTeamActions}
                     teamAccessibleActions={homeTeamAccessibleActions}
                   />
@@ -47,7 +72,7 @@ export const GroupedEvents = ({ groupedEvents, homeName, awayName }) => (
               {awayTeamActions.length > 0 && (
                 <>
                   <VisuallyHiddenText>{`${awayName},`}</VisuallyHiddenText>
-                  <Actions
+                  <ActionsComponent
                     teamActions={awayTeamActions}
                     teamAccessibleActions={awayTeamAccessibleActions}
                   />

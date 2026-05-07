@@ -4,8 +4,37 @@ import { shouldShowScores } from './centre';
 import Period from './period';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
+import type { EventStatus } from '../types';
+import type { RunningScores } from './actions';
 
-const MatchProgress = ({ data, isConciseView }) => {
+interface PeriodLabel {
+  value: string;
+  accessible: string;
+}
+
+interface TeamData {
+  fullName: string;
+  runningScores?: RunningScores;
+}
+
+interface MultiLeg {
+  leg: number;
+}
+
+interface MatchProgressData {
+  home: TeamData;
+  away: TeamData;
+  periodLabel?: PeriodLabel;
+  status: EventStatus;
+  multiLeg?: MultiLeg;
+}
+
+interface MatchProgressProps {
+  data: MatchProgressData;
+  isConciseView: boolean;
+}
+
+const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
   const { home, away, periodLabel, status, multiLeg } = data;
 
   const shouldDisplayAggScore =
@@ -37,14 +66,14 @@ const MatchProgress = ({ data, isConciseView }) => {
       {shouldDisplayAggScore && (
         <>
           <VisuallyHiddenText>
-            {`Aggregate score ${home.fullName} ${home.runningScores.aggregate} , ${away.fullName} ${away.runningScores.aggregate}`}
+            {`Aggregate score ${home.fullName} ${home.runningScores!.aggregate} , ${away.fullName} ${away.runningScores!.aggregate}`}
           </VisuallyHiddenText>
           <div
             css={styles.aggregateScore()}
             data-testid="agg-score"
             aria-hidden="true"
           >
-            {`(Agg ${home.runningScores.aggregate}-${away.runningScores.aggregate})`}
+            {`(Agg ${home.runningScores!.aggregate}-${away.runningScores!.aggregate})`}
           </div>
         </>
       )}
@@ -52,14 +81,14 @@ const MatchProgress = ({ data, isConciseView }) => {
         <>
           <VisuallyHiddenText>
             {`${fallbackPeriod.accessible}${
-              isInProgressStatus(status) && periodLabel.value !== 'PENS'
+              isInProgressStatus(status) && periodLabel!.value !== 'PENS'
                 ? ' , in progress'
                 : ''
             }`}
           </VisuallyHiddenText>
           <Period
             status={status}
-            labels={periodLabel}
+            labels={periodLabel!}
             homeRunningScores={home.runningScores}
             awayRunningScores={away.runningScores}
             isConciseView={isConciseView}

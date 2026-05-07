@@ -1,7 +1,17 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
-const Time = ({ time }) => (
+interface TimeData {
+  displayTimeUK: string;
+  accessibleTime: string;
+}
+
+interface TimeProps {
+  time: TimeData;
+  isConciseView?: boolean;
+}
+
+const Time = ({ time }: TimeProps) => (
   <>
     <time css={styles.fixtureTime()} aria-hidden="true">
       {time.displayTimeUK}

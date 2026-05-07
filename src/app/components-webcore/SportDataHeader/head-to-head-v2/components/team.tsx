@@ -1,7 +1,24 @@
-
 import SportBadge from './sport-badge/index';
 import TeamName from './team-name';
 import styles from './index.styles';
+
+interface BadgeSize {
+  small: number;
+  medium: number;
+  large: number;
+}
+
+type PlaceholderFallbackType = 'badge' | 'flag';
+
+interface TeamProps {
+  alignment: 'home' | 'away';
+  name: string;
+  shortName: string;
+  urn?: string;
+  isConciseView: boolean;
+  shouldHideBadges: boolean;
+  badgePlaceholderFallbackType?: PlaceholderFallbackType;
+}
 
 const Team = ({
   alignment,
@@ -11,8 +28,8 @@ const Team = ({
   isConciseView,
   shouldHideBadges,
   badgePlaceholderFallbackType,
-}) => {
-  const size = isConciseView
+}: TeamProps) => {
+  const size: BadgeSize = isConciseView
     ? { small: 20, medium: 24, large: 24 }
     : { small: 40, medium: 44, large: 44 };
   if (alignment === 'home') {

@@ -1,9 +1,13 @@
-
 /* eslint-disable jsx-a11y/aria-role */
 import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 import styles from './index.styles';
+import type { PlayerAction } from './action';
 
-const Card = ({ player }) => (
+interface CardProps {
+  player: PlayerAction;
+}
+
+const Card = ({ player }: CardProps) => (
   <div css={styles.cardContainer()} role="text">
     {player.actions[0].type === 'Red Card' ? (
       <span css={styles.redCard()} aria-hidden data-testid="red-card-img">

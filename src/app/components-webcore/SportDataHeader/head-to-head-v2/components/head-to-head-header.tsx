@@ -1,7 +1,10 @@
 import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from './index.styles';
+import type { EventStatus } from '../types';
 
-const formatTournamentDescriptionLabel = tournamentDescriptionLabel => {
+const formatTournamentDescriptionLabel = (
+  tournamentDescriptionLabel: string,
+) => {
   const tournamentGroupsArray = tournamentDescriptionLabel.split(' - ');
 
   return tournamentGroupsArray.map((element, i) => {
@@ -22,7 +25,17 @@ const formatTournamentDescriptionLabel = tournamentDescriptionLabel => {
   });
 };
 
-const HeadToHeadHeader = ({ date, tournamentDescriptionLabel, status }) => (
+interface HeadToHeadHeaderProps {
+  date: string;
+  tournamentDescriptionLabel: string;
+  status: EventStatus;
+}
+
+const HeadToHeadHeader = ({
+  date,
+  tournamentDescriptionLabel,
+  status,
+}: HeadToHeadHeaderProps) => (
   <div css={styles.headerWrapper(isLiveStatus(status))}>
     {!isLiveStatus(status) && (
       <div css={styles.dateWrapper()}>

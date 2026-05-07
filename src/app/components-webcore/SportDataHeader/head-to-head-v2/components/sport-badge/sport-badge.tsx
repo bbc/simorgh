@@ -1,11 +1,28 @@
 import { getImage } from './badges-map';
 import styles from '../index.styles';
 
-const getTestId = id => {
+type PlaceholderFallbackType = 'badge' | 'flag';
+
+interface BadgeSize {
+  small?: number;
+  medium?: number;
+  large?: number;
+}
+
+interface SportBadgeProps {
+  size: BadgeSize | number;
+  id?: string;
+  alt?: string;
+  usePlaceholderFallback?: boolean;
+  placeholderFallbackType?: PlaceholderFallbackType;
+  isConciseView?: boolean;
+}
+
+const getTestId = (id?: string): string => {
   const urnId =
     String(id)?.match(/urn:bbc:sportsdata:football:team:(.+)/) || [];
 
-  return urnId[1] || id;
+  return urnId[1] || id || '';
 };
 
 const SportBadge = ({
@@ -14,7 +31,7 @@ const SportBadge = ({
   alt = '',
   usePlaceholderFallback = true,
   placeholderFallbackType = 'badge',
-}) => {
+}: SportBadgeProps) => {
   const testId = getTestId(id);
   const src = getImage({ id, usePlaceholderFallback, placeholderFallbackType });
 
@@ -36,4 +53,5 @@ const SportBadge = ({
     </div>
   );
 };
+
 export default SportBadge;

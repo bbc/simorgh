@@ -1,17 +1,21 @@
-
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 import Card from './card';
+import type { PlayerAction } from './action';
 
-const goalTypesHandled = {
+const goalTypesHandled: Record<string, string> = {
   Penalty: 'pen',
   'Own Goal': 'og',
 };
 
-const displayGoalType = goalType =>
+const displayGoalType = (goalType: string): string =>
   goalTypesHandled[goalType] ? ` ${goalTypesHandled[goalType]}` : '';
 
-const ActionsTime = ({ player }) => {
+interface ActionsTimeProps {
+  player: PlayerAction;
+}
+
+const ActionsTime = ({ player }: ActionsTimeProps) => {
   const times = player.actions.map(
     action => `${action.timeLabel.value}${displayGoalType(action.type)}`,
   );

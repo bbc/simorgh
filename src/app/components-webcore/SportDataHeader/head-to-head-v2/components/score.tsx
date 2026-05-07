@@ -1,9 +1,19 @@
 import styles from './index.styles';
+import type { EventStatus } from '../types';
 
-const MATCH_STATUS_LETTERS = {
+const MATCH_STATUS_LETTERS: Record<string, string> = {
   Postponed: 'P',
   Cancelled: 'C',
 };
+
+interface ScoreProps {
+  status: EventStatus;
+  home?: string;
+  homeScoreUnconfirmed?: string;
+  away?: string;
+  awayScoreUnconfirmed?: string;
+  isConciseView?: boolean;
+}
 
 const Score = ({
   status,
@@ -11,7 +21,8 @@ const Score = ({
   homeScoreUnconfirmed,
   away,
   awayScoreUnconfirmed,
-}) => {
+  isConciseView: _isConciseView,
+}: ScoreProps) => {
   const matchStatusLetter = MATCH_STATUS_LETTERS[status];
   const homeScore = homeScoreUnconfirmed || home;
   const awayScore = awayScoreUnconfirmed || away;
@@ -27,6 +38,10 @@ const Score = ({
 
 export default Score;
 
-export const VerticalLine = ({ children }) => (
+interface VerticalLineProps {
+  children?: React.ReactNode;
+}
+
+export const VerticalLine = ({ children }: VerticalLineProps) => (
   <div css={styles.verticalLine()}>{children}</div>
 );
