@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async context => {
     );
     context.res.setHeader(
       'Cache-Control',
-      'public, stale-if-error=2400, stale-while-revalidate=960, max-age=600',
+      'public, stale-if-error=2400, stale-while-revalidate=960, max-age=240',
     );
 
     const PAGE_SIZE = 100;
