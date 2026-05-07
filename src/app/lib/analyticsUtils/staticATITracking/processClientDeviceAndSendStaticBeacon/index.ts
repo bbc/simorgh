@@ -82,7 +82,7 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{epochTimestamp}', epochTimestamp)
         .replace('{forwardingLink}', forwardingUrl)
         .replaceAll('ref=&', '')
-        .replaceAll('&ref=', ''); // check this doesn't break referrer data when it's present
+        .replace(/&ref=$/, ''); // removes empty ref at end of URL
 
       const searchParams = new URLSearchParams(window.location.search);
 
@@ -98,8 +98,6 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
               .replace('xtor', 'xto');
         }
       });
-
-      console.log('processedReverbUrl', processedReverbUrl);
       window.sendStaticBeacon(processedReverbUrl);
     }
   };
