@@ -22,7 +22,7 @@ const styles = {
       },
     }),
 
-  tab: ({ palette, spacings, fontSizes, fontVariants }: Theme) =>
+  tab: ({ palette, spacings, fontSizes, fontVariants, mq }: Theme) =>
     css({
       ...fontVariants.sansBold,
       ...fontSizes.pica,
@@ -33,6 +33,12 @@ const styles = {
       padding: `${pixelsToRem(12)}rem ${spacings.FULL}rem`,
       cursor: 'pointer',
       color: palette.GREY_10,
+
+      [mq.FORCED_COLOURS]: {
+        forcedColorAdjust: 'none',
+        color: 'ButtonText',
+        fill: 'ButtonText',
+      },
 
       '&:hover': {
         '&::after': {

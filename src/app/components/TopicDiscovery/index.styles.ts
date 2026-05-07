@@ -127,7 +127,7 @@ const styles = {
     css({
       ...fontVariants.sansBold,
       ...fontSizes.longPrimer,
-      color: palette.BLACK,
+      color: palette.GREY_10,
       display: 'inline-block',
       marginTop: `${spacings.DOUBLE}rem`,
       textDecoration: 'none',
