@@ -11,6 +11,7 @@ import { TopicDiscoveryItem } from './types';
 
 type TopicDiscoveryProps = {
   topics: Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>[];
+  className?: string;
 };
 
 const HEADING_ID = 'topic-discovery-heading';
@@ -30,7 +31,7 @@ const fetchTopicPromos = (
     }, FAKE_FETCH_DELAY_MS);
   });
 
-const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
+const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const { topicDiscovery } = translations;
   const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
@@ -100,6 +101,7 @@ const TopicDiscovery = ({ topics }: TopicDiscoveryProps) => {
     <section
       aria-labelledby={HEADING_ID}
       css={styles.section}
+      className={className}
       data-testid="topic-discovery"
       {...viewTracker}
     >
