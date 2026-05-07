@@ -59,7 +59,7 @@ import PWAPromotionalBanner from '#app/components/PWAPromotionalBanner';
 import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
-import SaveArticleButton from '#app/components/SaveArticleButton/lazy';
+import SaveArticleButton from '#app/components/SaveArticleButton';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import { AccountContext } from '#app/contexts/AccountContext';
 import ElectionBanner from './ElectionBanner';
@@ -115,7 +115,6 @@ const getTimestampComponent =
   ) =>
   (props: ComponentToRenderProps & TimeStampProps) => {
     const shouldDisplayReadTime = !!(readTimeTranslations && readTimeValue);
-    const { isPersonalizationEnabled } = use(AccountContext);
 
     return (
       <>
@@ -143,13 +142,11 @@ const getTimestampComponent =
             )}
           </>
         )}
-        {isPersonalizationEnabled && (
-          <SaveArticleButton
-            articleId={parseArticleID(articleId)}
-            articleTitle={articleTitle}
-            articlePageData={articlePageData}
-          />
-        )}
+        <SaveArticleButton
+          articleId={parseArticleID(articleId)}
+          articleTitle={articleTitle}
+          articlePageData={articlePageData}
+        />
       </>
     );
   };

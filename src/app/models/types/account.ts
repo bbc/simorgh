@@ -26,4 +26,5 @@ export type AccountContextProps = {
   forYouUrl?: string;
   isAccountPromoBannerVisible: boolean;
   isPersonalizationEnabled: boolean;
+  isPersonalizationAvailable: boolean;
 };

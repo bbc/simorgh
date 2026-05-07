@@ -77,13 +77,14 @@ export const AccountProvider = ({
   const isAccountPromoBannerVisible =
     initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
-  const isPersonalizationEnabled =
+  const isPersonalizationAvailable =
     isIdctaAvailable &&
-    isSignedIn &&
     isPersonalizationToggleEnabled &&
     (isLocal()
       ? accountService?.toString().split('|').includes(service)
       : true);
+
+  const isPersonalizationEnabled = isPersonalizationAvailable && isSignedIn;
 
   const value = useMemo(
     () => ({
@@ -95,6 +96,7 @@ export const AccountProvider = ({
       settingsUrl,
       forYouUrl,
       isAccountPromoBannerVisible,
+      isPersonalizationAvailable,
       isPersonalizationEnabled,
     }),
     [
@@ -106,6 +108,7 @@ export const AccountProvider = ({
       signInUrl,
       signOutUrl,
       isAccountPromoBannerVisible,
+      isPersonalizationAvailable,
       isPersonalizationEnabled,
     ],
   );

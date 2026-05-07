@@ -1,6 +1,6 @@
 import useUASButton from '#app/hooks/useUASButton';
 import { render, screen } from '../react-testing-library-with-providers';
-import SaveArticleButton from './index';
+import SaveArticleButton from '.';
 
 jest.mock('#app/hooks/useUASButton');
 
