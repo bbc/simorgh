@@ -7,6 +7,7 @@ import { data as kyrgyzMostRead } from '../../../../data/kyrgyz/mostRead/index.j
 import afriqueHomePage from '../../../../data/afrique/homePage/index.json';
 import portugueseHomePage from '../../../../data/portuguese/homePage/index.json';
 import dariHomePage from '../../../../data/dari/homePage/index.json';
+import pidginArticlePage from '../../../../data/pidgin/articles/cnd6yxmxvp2o.json';
 import { render } from '../react-testing-library-with-providers';
 import Curation from '.';
 import {
@@ -20,6 +21,7 @@ import {
 import { MostReadData } from '../MostRead/types';
 import { RadioScheduleData } from '../../models/types/radioSchedule';
 import { MediaCollection, PortraitClipMediaBlock } from '../MediaLoader/types';
+import * as clickTracking from '../../hooks/useClickTrackerHandler';
 
 jest.mock('../ThemeProvider');
 
@@ -527,5 +529,48 @@ describe('Curation', () => {
       expect(titleLink).toBeInTheDocument();
       expect(titleLink?.textContent).toBe(title);
     });
+  });
+  it('should render the video curation grid for mediaCuration', () => {
+    const { mediaCuration } = pidginArticlePage.data.secondaryData;
+    const spy = jest.spyOn(clickTracking, 'default');
+
+    const { getByTestId, getByText } = render(
+      <Curation
+        visualStyle={VISUAL_STYLE.FEED}
+        visualProminence={VISUAL_PROMINENCE.NORMAL}
+        summaries={mediaCuration?.summaries}
+        title={mediaCuration?.title}
+        position={0}
+        curationId={mediaCuration?.curationId}
+        curationLength={mediaCuration?.summaries?.length || 0}
+        link={mediaCuration?.link}
+        curationContentType="video"
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
+    expect(getByTestId('curation-grid-normal')).toBeInTheDocument();
+    expect(getByText(mediaCuration.summaries[0].title)).toBeInTheDocument();
+    expect(getByText(mediaCuration.title)).toBeInTheDocument();
+
+    const grid = getByTestId('curation-grid-normal');
+    const mediaIcons = grid.querySelectorAll('[data-e2e="media-icon"]');
+    expect(mediaIcons.length).toBe(mediaCuration.summaries.length);
+
+    // Should call click tracker with correct eventTrackingData for video curation
+    expect(spy).toHaveBeenCalledWith(
+      expect.objectContaining({
+        componentName: 'video-curation-grid',
+        itemTracker: expect.objectContaining({
+          type: 'video-curation-grid-promo',
+          text: mediaCuration.summaries[0].title,
+          position: 1,
+          resourceId: mediaCuration.summaries[0].id,
+        }),
+      }),
+    );
+    spy.mockRestore();
   });
 });

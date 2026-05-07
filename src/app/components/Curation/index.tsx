@@ -134,7 +134,7 @@ export default ({
     },
     ...experimentTrackingProps,
   };
-  console.log('Curation eventTrackingData', eventTrackingData);
+
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;

@@ -3428,7 +3428,8 @@
         "title": "Video",
         "curationId": "urn:bbc:vivo:curation:0a533527-dc0a-4e6f-8ffd-2f8e80659277",
         "curationType": "vivo-stream",
-        "link": "/pidgin/topics/c3l19z3k1ert"
+        "link": "/pidgin/topics/c3l19z3k1ert",
+        "position": 0
       },
       "mostRead": {
         "generated": "2023-02-18T03:04:58.493Z",

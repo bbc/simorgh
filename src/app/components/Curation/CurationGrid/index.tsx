@@ -33,7 +33,6 @@ const CurationGrid = ({
   );
 
   const buildPromoEventTrackingData = (promo: Summary, i: number) => {
-    // Derive promoType from componentName
     const componentName =
       eventTrackingData?.componentName || 'simple-curation-grid';
     const promoType = `${componentName}-promo`;
@@ -64,7 +63,6 @@ const CurationGrid = ({
       eventTrackingData: buildPromoEventTrackingData(promo, index),
       position: index,
     };
-    console.log('in curation grid', commonProps);
     if (!shouldUseHighImpact) {
       return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
     }
