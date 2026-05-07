@@ -279,8 +279,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
-  console.log('mediaCurationContent', mediaCurationContent);
-
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
       block.type === 'byline' || block.type === 'subByline',
@@ -419,15 +417,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isPGL &&
     mediaCurationContent?.summaries?.length,
   );
-  console.log(
-    'showMediaCuration',
-    showMediaCuration,
-    mediaCurationContent?.summaries?.length,
-    isAmp,
-    isLite,
-    isApp,
-    isPGL,
-  );
+
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
