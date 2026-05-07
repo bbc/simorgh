@@ -1,4 +1,6 @@
 /* eslint-disable react/no-danger */
+import { readFileSync, existsSync } from 'fs';
+import { join } from 'path';
 import Document, {
   DocumentContext,
   Head,
@@ -44,6 +46,40 @@ type DocProps = {
   isApp: boolean;
   isLite: boolean;
   title: ReactElement;
+};
+
+const getDynamicCss = (dynamicIds: Array<string | number>): string => {
+  if (!dynamicIds.length) return '';
+  try {
+    const manifestPath = join(
+      process.cwd(),
+      'build/react-loadable-manifest.json',
+    );
+    if (!existsSync(manifestPath)) return '';
+
+    const manifest: Record<string, { id: number; files: string[] }> =
+      JSON.parse(readFileSync(manifestPath, 'utf-8'));
+
+    const dynamicIdSet = new Set(dynamicIds.map(String));
+
+    const cssFiles = [
+      ...new Set(
+        Object.entries(manifest)
+          .filter(
+            ([chunkKey, chunk]) =>
+              dynamicIdSet.has(chunkKey) || dynamicIdSet.has(String(chunk.id)),
+          )
+          .map(([, chunk]) => chunk)
+          .flatMap(chunk => chunk.files.filter(f => f.endsWith('.css'))),
+      ),
+    ];
+
+    return cssFiles
+      .map(file => readFileSync(join(process.cwd(), 'build', file), 'utf-8'))
+      .join('');
+  } catch {
+    return '';
+  }
 };
 
 export default class AppDocument extends Document<DocProps> {
@@ -110,8 +146,23 @@ export default class AppDocument extends Document<DocProps> {
     const helmetLinkTags = helmet.link.toComponent();
     const helmetScriptTags = helmet.script.toComponent();
 
+    type NextDataProps = { dynamicIds?: Array<string | number> };
+    type PropsWithNextData = typeof this.props & {
+      // eslint-disable-next-line no-underscore-dangle
+      __NEXT_DATA__?: NextDataProps;
+    };
+    /* eslint-disable no-underscore-dangle */
+    const dynamicIds: Array<string | number> =
+      (this.props as PropsWithNextData).__NEXT_DATA__?.dynamicIds ?? [];
+    /* eslint-enable no-underscore-dangle */
+
+    const dynamicCss = getDynamicCss(dynamicIds);
+
+    const ampCss = isAmp ? css + dynamicCss : css;
+    const liteCss = isLite ? css + dynamicCss : css;
+
     switch (true) {
-      case isAmp && pageType === 'article':
+      case isAmp:
         return (
           <AmpRenderer
             bodyContent={<Main />}
@@ -120,7 +171,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
             ids={ids}
-            styles={css}
+            styles={ampCss}
             title={title}
           />
         );
@@ -132,7 +183,7 @@ export default class AppDocument extends Document<DocProps> {
             helmetMetaTags={helmetMetaTags}
             helmetScriptTags={helmetScriptTags}
             htmlAttrs={htmlAttrs}
-            styles={css}
+            styles={liteCss}
             title={title}
           />
         );
