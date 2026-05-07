@@ -271,6 +271,6 @@ yarn prettier --write "path/to/converted/files/**/*.{ts,tsx}"
 
 ## Reference Examples
 
-- [src/app/components/Billboard/index.styles.ts](src/app/components/Billboard/index.styles.ts)
-- [src/app/components/MediaLoader/index.styles.ts](src/app/components/MediaLoader/index.styles.ts)
-- [src/app/components/Pagination/index.styles.ts](src/app/components/Pagination/index.styles.ts)
+- [src/app/components/Billboard/index.styles.ts](../../../src/app/components/Billboard/index.styles.ts)
+- [src/app/components/MediaLoader/index.styles.ts](../../../src/app/components/MediaLoader/index.styles.ts)
+- [src/app/components/Pagination/index.styles.ts](../../../src/app/components/Pagination/index.styles.ts)

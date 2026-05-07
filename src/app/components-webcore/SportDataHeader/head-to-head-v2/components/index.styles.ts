@@ -118,7 +118,7 @@ export default {
     css({
       display: 'flex',
       flexDirection: 'column',
-      alignSelf: 'space-evenly',
+      justifyContent: 'space-evenly',
       minWidth: `${pixelsToRem(getCentreMinWidthPx(maxScoreLength).mobile)}rem`,
       [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
         minWidth: `${pixelsToRem(getCentreMinWidthPx(maxScoreLength).desktop)}rem`,
@@ -265,7 +265,7 @@ export default {
     css({
       display: 'grid',
       gridTemplateColumns: '1fr auto 1fr',
-      alignItems: isConciseView ? 'center' : 'none',
+      alignItems: isConciseView ? 'center' : 'stretch',
       gridTemplateAreas: `
         'home_team         scores            away_team'
         'progress          progress          progress'`,
