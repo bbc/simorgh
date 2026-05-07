@@ -1,4 +1,4 @@
-import { PropsWithChildren, use } from 'react';
+import { PropsWithChildren, use, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '#psammead/psammead-styles/src/global-styles';
 import { Navigation, PageTypes } from '#app/models/types/global';
@@ -56,6 +56,9 @@ const PageLayoutWrapper = ({
   const pageType = pageData?.metadata?.type;
   const reportingPageType = pageType?.replace(/ /g, '');
   const isOfflinePage = pageType === OFFLINE_PAGE;
+  const isWindowValid = typeof window !== 'undefined';
+  const shouldRenderWebVitals = isWindowValid && !isErrorPage && !isOfflinePage;
+
   let wordCount: wordCountType = 0;
 
   if (pageType === 'article') {
@@ -225,7 +228,7 @@ const PageLayoutWrapper = ({
       )}
       <ServiceWorker />
       <ManifestContainer />
-      {!isErrorPage && !isOfflinePage && <WebVitals pageType={pageType} />}
+      {shouldRenderWebVitals && <WebVitals pageType={pageType} />}
       <GlobalStyles />
       <div id="main-wrapper" css={styles.wrapper}>
         <HeaderContainer
