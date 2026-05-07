@@ -5,15 +5,12 @@ import { AccountContext } from '#app/contexts/AccountContext';
 const PersistentQueryProvider = dynamic(() => import('./lazy'));
 
 // TanstackQuery Provider is only needed when personalization features are enabled.
-// This prevents the unnecessary loading of the Tanstack Query library and its dependencies for users who do not have personalization enabled, optimizing performance and resource usage.
+// This prevents the unnecessary loading of the Tanstack Query library and its dependencies
 const QueryProvider = ({ children }: PropsWithChildren) => {
-  // Should it be updated?
   const { isPersonalizationEnabled } = use(AccountContext);
 
   if (!isPersonalizationEnabled) return children;
 
-  // Suspense fallback renders children directly while the dynamic chunk loads,
-  // preventing a duplicate DOM render that would occur during the loading gap.
   return (
     <Suspense fallback={children}>
       <PersistentQueryProvider>{children}</PersistentQueryProvider>

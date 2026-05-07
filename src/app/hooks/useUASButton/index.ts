@@ -26,8 +26,8 @@ interface UseUASButtonReturn {
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
 
-// NOTE: TanStack Query eagerly pulled into the chunk if this hook is used anywhere in the app,
-// TanStack code must live exclusively inside the lazy boundary.
+// NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
+// All TanStack-related code must live exclusively inside the lazy boundary.
 const useUASButton = ({
   articleId,
   articleTitle,
