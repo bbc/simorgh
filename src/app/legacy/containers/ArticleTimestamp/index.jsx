@@ -1,6 +1,7 @@
 import { use } from 'react';
 import Timestamp from '#psammead/psammead-timestamp-container/src';
 import { GridItemMedium, PopOutGridItemMedium } from '#components/Grid';
+import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import { ServiceContext } from '../../../contexts/ServiceContext';
 import { formatDateNumeric } from './timeFormats';
 import {
@@ -27,11 +28,14 @@ const ArticleTimestamp = ({
     service,
     timezone,
     altCalendar,
+    translations,
   } = use(ServiceContext);
 
   if (!isValidDateTime(firstPublished) || !isValidDateTime(lastPublished)) {
     return null;
   }
+
+  const publishedLabel = translations?.byline?.published || 'Published';
 
   const timestampProps = {
     dateTimeFormat: formatDateNumeric,
@@ -45,6 +49,7 @@ const ArticleTimestamp = ({
     timestamp: firstPublished,
     format: formatType({ firstPublished, datetimeLocale }),
     isRelative: isFirstRelative(firstPublished, lastPublished),
+    
   };
 
   const lastPublishedProps = {
@@ -69,6 +74,7 @@ const ArticleTimestamp = ({
 
   return (
     <GridWrapper {...(className ? { className } : undefined)}>
+      <VisuallyHiddenText>{`${publishedLabel} `}</VisuallyHiddenText>
       <Timestamp // First Published Timestamp
         {...timestampProps}
         {...firstPublishedProps}
