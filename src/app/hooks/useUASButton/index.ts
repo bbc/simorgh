@@ -13,6 +13,7 @@ import {
 } from '#app/lib/uasApi/uasUtility';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
+import { AccountContext } from '#app/contexts/AccountContext';
 
 enum UASAction {
   SAVE = 'save',
@@ -34,6 +35,7 @@ const useUASButton = ({
   articlePageData,
 }: SaveArticleButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
+  const { userPseudoId = '' } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
 
@@ -60,7 +62,7 @@ const useUASButton = ({
     },
     onSuccess: (_, action) => {
       queryClient.setQueryData(
-        uasKeys.favouriteStatus(articleId),
+        uasKeys.favouriteStatus(userPseudoId, articleId),
         action === UASAction.SAVE,
       );
     },

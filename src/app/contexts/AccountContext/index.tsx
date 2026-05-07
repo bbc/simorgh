@@ -15,6 +15,7 @@ import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
 import isLocal from '#app/lib/utilities/isLocal';
+import { getUserIdFromToken } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -22,6 +23,10 @@ export const AccountContext = createContext<AccountContextProps>(
 
 type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
+};
+
+const getSignedInCookie = (cookieName = 'ckns_id') => {
+  return onClient() ? Cookie.get(cookieName) : undefined;
 };
 
 export const AccountProvider = ({
@@ -57,23 +62,21 @@ export const AccountProvider = ({
       : initialConfig?.unavailable_url;
   };
 
-  const getSignedInCookie = (cookieName = 'ckns_id') => {
-    return onClient() ? Cookie.get(cookieName) : false;
-  };
-
   const signInUrl = buildAccountUrl(initialConfig?.signin_url);
   const registerUrl = buildAccountUrl(initialConfig?.register_url);
   const settingsUrl = buildAccountUrl(initialConfig?.settings_url);
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const clientSignedInState = getSignedInCookie(
+  const signedInToken = getSignedInCookie(
     initialConfig?.identity?.idSignedInCookieName,
   );
 
+  const userPseudoId = getUserIdFromToken(signedInToken);
+
   const isSignedIn =
     isIdctaAvailable &&
-    Boolean(initialConfig?.initialIsSignedIn || clientSignedInState);
+    Boolean(initialConfig?.initialIsSignedIn || signedInToken);
   const isAccountPromoBannerVisible =
     initialConfig?.initialIsAccountPromoBannerVisible ?? true;
 
@@ -88,6 +91,7 @@ export const AccountProvider = ({
 
   const value = useMemo(
     () => ({
+      userPseudoId,
       isIdctaAvailable,
       isSignedIn,
       signInUrl,
@@ -100,6 +104,7 @@ export const AccountProvider = ({
       isPersonalizationEnabled,
     }),
     [
+      userPseudoId,
       forYouUrl,
       isIdctaAvailable,
       isSignedIn,

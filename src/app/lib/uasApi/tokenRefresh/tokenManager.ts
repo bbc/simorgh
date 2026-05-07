@@ -42,6 +42,13 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
   return Date.now() < earlyExpiryDate.getTime();
 };
 
+export const getUserIdFromToken = (token = ''): string | undefined => {
+  const decodedToken = getDecodedToken(token);
+  const pseudonym = decodedToken?.ps;
+
+  return typeof pseudonym === 'string' ? pseudonym : undefined;
+};
+
 const hasValidTokens = (): boolean => {
   const idToken = Cookie.get(TOKEN_COOKIE_NAME);
   if (!idToken) return false;

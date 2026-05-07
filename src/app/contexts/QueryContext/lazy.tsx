@@ -27,7 +27,7 @@ const queryClient = new QueryClient({
 });
 
 const persister = createAsyncStoragePersister({
-  storage: typeof window !== 'undefined' ? window.sessionStorage : undefined,
+  storage: typeof window !== 'undefined' ? window.localStorage : undefined,
 });
 
 const PersistentQueryProvider = ({ children }: PropsWithChildren) => (
