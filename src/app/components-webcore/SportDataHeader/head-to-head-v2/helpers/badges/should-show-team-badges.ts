@@ -4,7 +4,7 @@ import {
   UNIVERSALLY_SUPPORTED_SPORTS,
 } from './team-badge-config';
 
-const shouldShowTeamBadges = tournamentUrn => {
+const shouldShowTeamBadges = (tournamentUrn: string) => {
   if (!tournamentUrn) {
     // some use cases (e.g. match preview) do not have tournament URNs
     // if a tournament urn isn't available, it's preferred to show the badges
