@@ -18,7 +18,26 @@ const topics = [
   { topicId: '2', topicName: 'Topic2', topicUrl: '/topics/economy' },
 ];
 
+const createIntersectionObserverMock = () =>
+  jest.fn(callback => ({
+    observe: jest.fn(() => {
+      callback([{ isIntersecting: true }]);
+    }),
+    disconnect: jest.fn(),
+    unobserve: jest.fn(),
+    takeRecords: jest.fn(),
+  }));
+
 describe('TopicDiscovery', () => {
+  beforeEach(() => {
+    global.IntersectionObserver =
+      createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('should render the heading', () => {
     render(<TopicDiscovery topics={topicTagsFixture} />, {
       service: 'portuguese',

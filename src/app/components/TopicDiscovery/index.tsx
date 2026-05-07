@@ -15,6 +15,7 @@ type TopicDiscoveryProps = {
 };
 
 const HEADING_ID = 'topic-discovery-heading';
+const FETCH_ROOT_MARGIN = '200px 0px';
 
 const eventTrackingData = {
   componentName: 'topic-discovery',
@@ -35,11 +36,38 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const { topicDiscovery } = translations;
   const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
+  const [isNearViewport, setIsNearViewport] = useState(false);
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
   useEffect(() => {
+    if (isNearViewport) return undefined;
+
+    const sectionElement = document.getElementById('topic-discovery-component');
+
+    if (!sectionElement) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: FETCH_ROOT_MARGIN },
+    );
+
+    observer.observe(sectionElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isNearViewport]);
+
+  useEffect(() => {
+    if (!isNearViewport) return undefined;
+
     let isActive = true;
 
     const cachedPromos = promosCacheRef.current[activeTabId];
@@ -62,9 +90,10 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     return () => {
       isActive = false;
     };
-  }, [activeTabId]);
+  }, [activeTabId, isNearViewport]);
 
   const viewTracker = useViewTracker(eventTrackingData);
+
   const moreFromLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-from-link',
   });
@@ -99,6 +128,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
 
   return (
     <section
+      id="topic-discovery-component"
       aria-labelledby={HEADING_ID}
       css={styles.section}
       className={className}
