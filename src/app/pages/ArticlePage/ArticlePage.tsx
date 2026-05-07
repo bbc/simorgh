@@ -61,6 +61,7 @@ import ContinueReadingButton, {
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
 import { parseArticleID } from '#app/lib/uasApi/uasUtility';
+import useScrollDepthTracker from '#app/hooks/useScrollDepthTracker';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -366,6 +367,12 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     continueReadingButtonToggle,
   );
 
+  const scrollDepthEnabled = !showContinueReadingButton || showAllContent;
+  const scrollDepthRef = useScrollDepthTracker(
+    'article-scroll-depth',
+    scrollDepthEnabled,
+  );
+
   const promoImageBlocks =
     pageData?.promo?.images?.defaultPromoImage?.blocks ?? [];
 
@@ -495,7 +502,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       <ElectionBanner aboutTags={aboutTags} taggings={taggings} />
       <div css={styles.grid}>
         <div css={!isPGL ? styles.primaryColumn : styles.pglColumn}>
-          <main css={styles.mainContent} role="main">
+          <main css={styles.mainContent} role="main" ref={scrollDepthRef}>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
