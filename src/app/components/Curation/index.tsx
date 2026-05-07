@@ -69,6 +69,7 @@ const exitFakeScreenCallback = () => {
 interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
+  curationContentType?: string;
 }
 
 export default ({
@@ -89,6 +90,7 @@ export default ({
   curationId,
   mediaCollection,
   experimentProps,
+  curationContentType,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -96,6 +98,7 @@ export default ({
     radioSchedule,
     embed,
     mediaCollection,
+    curationContentType,
   });
 
   const GridComponent = getGridComponent(componentName);
@@ -116,14 +119,14 @@ export default ({
     isLive: summaryIsLive,
     title: linkText,
   } = firstSummary || {};
-  // flatten this once so the tracking object stays easy to read below
+
   const experimentTrackingProps = experimentProps || {};
 
   const eventTrackingData: EventTrackingData = {
     componentName,
     groupTracker: {
       name: curationSubheading,
-      type: `${componentName}`,
+      type: componentName,
       position: position + 1,
       ...(link && { link }),
       ...(curationId && { resourceId: curationId }),
@@ -131,7 +134,7 @@ export default ({
     },
     ...experimentTrackingProps,
   };
-
+  console.log('Curation eventTrackingData', eventTrackingData);
   switch (componentName) {
     case NOT_SUPPORTED:
       return null;

@@ -32,19 +32,25 @@ const CurationGrid = ({
     promo => isHighImpact(promo) && !isMedia(promo.type),
   );
 
-  const buildPromoEventTrackingData = (promo: Summary, i: number) => ({
-    itemTracker: {
-      type: 'simple-curation-grid-promo',
-      text: promo.title,
-      position: i + 1,
-      resourceId: promo.id,
-      ...(promo.type && { mediaType: promo.type }),
-      ...(promo.duration && {
-        duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
-      }),
-    },
-    ...eventTrackingData,
-  });
+  const buildPromoEventTrackingData = (promo: Summary, i: number) => {
+    // Derive promoType from componentName
+    const componentName =
+      eventTrackingData?.componentName || 'simple-curation-grid';
+    const promoType = `${componentName}-promo`;
+    return {
+      itemTracker: {
+        type: promoType,
+        text: promo.title,
+        position: i + 1,
+        resourceId: promo.id,
+        ...(promo.type && { mediaType: promo.type }),
+        ...(promo.duration && {
+          duration: moment.duration(promo.duration, 'seconds').asMilliseconds(),
+        }),
+      },
+      ...eventTrackingData,
+    };
+  };
 
   const renderPromo = (promo: Summary, index: number) => {
     const isFirstPromo = index === 0;
@@ -58,7 +64,7 @@ const CurationGrid = ({
       eventTrackingData: buildPromoEventTrackingData(promo, index),
       position: index,
     };
-
+    console.log('in curation grid', commonProps);
     if (!shouldUseHighImpact) {
       return <CurationPromo {...commonProps} headingLevel={headingLevel} />;
     }

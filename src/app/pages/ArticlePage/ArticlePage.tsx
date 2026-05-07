@@ -279,6 +279,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
   const startsWithHeading = blocks?.[0]?.type === 'headline' || false;
 
+  console.log('mediaCurationContent', mediaCurationContent);
+
   const bylineBlock = blocks.find(
     (block): block is OptimoBylineBlock =>
       block.type === 'byline' || block.type === 'subByline',
@@ -417,7 +419,15 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     !isPGL &&
     mediaCurationContent?.summaries?.length,
   );
-
+  console.log(
+    'showMediaCuration',
+    showMediaCuration,
+    mediaCurationContent?.summaries?.length,
+    isAmp,
+    isLite,
+    isApp,
+    isPGL,
+  );
   // EXPERIMENT: PWA Promotional Banner
   const shouldRenderPWAPromotionalBanner =
     !isTopBarOJsEnabled || !pageData?.secondaryColumn?.topStories?.length;
@@ -499,23 +509,25 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             />
           )}
           <RelatedContentSection content={blocks} />
-        </div>
-        {showMediaCuration && (
-          <div css={styles.mediaCurationRow}>
-            <div data-testid="media-curation">
-              <Curation
-                visualStyle={VISUAL_STYLE.FEED}
-                visualProminence={VISUAL_PROMINENCE.NORMAL}
-                summaries={mediaCurationContent?.summaries}
-                title={mediaCurationContent?.title}
-                position={mediaCurationContent?.position || 0}
-                curationId={mediaCurationContent?.curationId}
-                curationLength={mediaCurationContent?.summaries?.length || 0}
-                link={mediaCurationContent?.link}
-              />
+          {showMediaCuration && (
+            <div css={styles.mediaCurationRow}>
+              <div data-testid="media-curation">
+                <Curation
+                  visualStyle={VISUAL_STYLE.FEED}
+                  visualProminence={VISUAL_PROMINENCE.NORMAL}
+                  summaries={mediaCurationContent?.summaries}
+                  title={mediaCurationContent?.title}
+                  position={mediaCurationContent?.position || 0}
+                  curationId={mediaCurationContent?.curationId}
+                  curationLength={mediaCurationContent?.summaries?.length || 0}
+                  link={mediaCurationContent?.link}
+                  curationContentType="video"
+                />
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
+
         {!isApp && !isPGL && <SecondaryColumn pageData={pageData} />}
       </div>
 
