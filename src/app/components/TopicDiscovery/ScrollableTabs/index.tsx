@@ -42,13 +42,18 @@ const ScrollableTabs = ({
     const el = tabListRef.current;
     if (!el) return undefined;
 
+    const resizeObserver = new ResizeObserver(checkOverflow);
+    resizeObserver.observe(el);
+
+    const rafId = window.requestAnimationFrame(checkOverflow);
+
     el.addEventListener('scroll', checkOverflow);
-    window.addEventListener('resize', checkOverflow);
     checkOverflow();
 
     return () => {
+      window.cancelAnimationFrame(rafId);
+      resizeObserver.disconnect();
       el.removeEventListener('scroll', checkOverflow);
-      window.removeEventListener('resize', checkOverflow);
     };
   }, [checkOverflow]);
 
