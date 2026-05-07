@@ -1089,13 +1089,13 @@ describe('Article Page', () => {
       const relatedContentSection = container.querySelector(
         '[data-e2e="related-content-heading"]',
       );
-      const adaptiveMediaCuration = queryByTestId('adaptive-media-curation');
+      const mediaCuration = queryByTestId('media-curation');
 
       expect(relatedContentSection).toBeInTheDocument();
-      expect(adaptiveMediaCuration).toBeInTheDocument();
+      expect(mediaCuration).toBeInTheDocument();
       expect(
         (relatedContentSection as Element).compareDocumentPosition(
-          adaptiveMediaCuration as Node,
+          mediaCuration as Node,
         ),
       ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
