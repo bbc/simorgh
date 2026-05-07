@@ -22,7 +22,10 @@ const SportBadge = ({
   if (!src) return null;
 
   return (
-    <div css={styles.badgeContainer(size)} data-testid={`badge-container-${testId}`}>
+    <div
+      css={styles.badgeContainer(size)}
+      data-testid={`badge-container-${testId}`}
+    >
       {/* Empty alt string should hide images from assistive technology, but won't hide certain SVG contents in some browsers - e.g. Safari */}
       <img
         css={styles.badgeImage()}
