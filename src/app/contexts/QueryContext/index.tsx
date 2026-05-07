@@ -1,4 +1,4 @@
-import { use, type PropsWithChildren } from 'react';
+import { Suspense, use, type PropsWithChildren } from 'react';
 import dynamic from 'next/dynamic';
 import { AccountContext } from '#app/contexts/AccountContext';
 
@@ -9,7 +9,13 @@ const QueryProvider = ({ children }: PropsWithChildren) => {
 
   if (!isPersonalizationEnabled) return children;
 
-  return <PersistentQueryProvider>{children}</PersistentQueryProvider>;
+  // Suspense fallback renders children directly while the dynamic chunk loads,
+  // preventing a duplicate DOM render that would occur during the loading gap.
+  return (
+    <Suspense fallback={children}>
+      <PersistentQueryProvider>{children}</PersistentQueryProvider>
+    </Suspense>
+  );
 };
 
 export default QueryProvider;
