@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
 import styles from './index.styles';
 

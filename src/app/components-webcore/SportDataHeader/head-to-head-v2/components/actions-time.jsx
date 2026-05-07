@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 import Card from './card';

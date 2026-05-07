@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+
 /* eslint-disable import/prefer-default-export */
 import VisuallyHiddenText from '#app/components/VisuallyHiddenText';
 import Action from './action';

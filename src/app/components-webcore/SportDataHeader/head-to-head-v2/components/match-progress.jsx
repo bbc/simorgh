@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
 import { isInProgressStatus } from '../helpers/event-status-groups';
 import { shouldShowScores } from './centre';

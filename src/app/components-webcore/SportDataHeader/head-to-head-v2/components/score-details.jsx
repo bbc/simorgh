@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from './index.styles';
 
@@ -13,9 +12,9 @@ const ScoreDetails = ({
   );
   const shouldDisplayFT = Boolean(
     homeRunningScores?.fulltime &&
-    awayRunningScores?.fulltime &&
-    homeRunningScores?.extratime &&
-    awayRunningScores?.extratime,
+      awayRunningScores?.fulltime &&
+      homeRunningScores?.extratime &&
+      awayRunningScores?.extratime,
   );
 
   if (!shouldDisplayFT && !shouldDisplayHT) {

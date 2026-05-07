@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+
 /* eslint-disable jsx-a11y/aria-role */
 import { RedCardSVG, SecondYellowCardSVG } from '#app/components/icons';
 import styles from './index.styles';

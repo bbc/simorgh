@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+
 import styles, { GRID_AREAS } from './index.styles';
 
 export { GRID_AREAS };

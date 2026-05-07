@@ -28,7 +28,7 @@ const Component = () => <StyledWrapper>Content</StyledWrapper>;
 
 **After (Simorgh style using `css` prop):**
 ```jsx
-/** @jsxImportSource @emotion/react */
+
 import styles from './index.styles';
 
 const Component = () => <div css={styles.wrapper()}>Content</div>;
@@ -93,7 +93,7 @@ button: (alignment: 'left' | 'right') =>
 
 1. **Always add JSX pragma** when using css prop:
    ```jsx
-   /** @jsxImportSource @emotion/react */
+   
    ```
 
 2. **Use logical CSS properties** for LTR/RTL support:

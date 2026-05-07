@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import styles from './index.styles';
 
 const MATCH_STATUS_LETTERS = {

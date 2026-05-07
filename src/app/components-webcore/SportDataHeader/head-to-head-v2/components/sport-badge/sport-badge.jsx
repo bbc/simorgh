@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { getImage } from './badges-map';
 import styles from '../index.styles';
 

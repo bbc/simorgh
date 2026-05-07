@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import Team from './team';
 import Centre from './centre';

@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import {
   isCalledOffStatus,
   isInProgressStatus,

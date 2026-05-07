@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import styles from './index.styles';
 
 const Footer = ({ venue, attendanceValue, attendanceInfo }) => {

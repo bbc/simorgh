@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from './index.styles';
 
