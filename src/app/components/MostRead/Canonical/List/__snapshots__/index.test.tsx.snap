@@ -353,6 +353,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၁
           </span>
@@ -384,6 +385,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၂
           </span>
@@ -415,6 +417,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၃
           </span>
@@ -446,6 +449,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၄
           </span>
@@ -477,6 +481,7 @@ exports[`MostReadList should render burmese most read with a one column layout 1
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၅
           </span>
@@ -1083,6 +1088,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ১
           </span>
@@ -1114,6 +1120,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ২
           </span>
@@ -1145,6 +1152,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৩
           </span>
@@ -1176,6 +1184,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৪
           </span>
@@ -1207,6 +1216,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৫
           </span>
@@ -1238,6 +1248,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৬
           </span>
@@ -1269,6 +1280,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৭
           </span>
@@ -1300,6 +1312,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৮
           </span>
@@ -1331,6 +1344,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ৯
           </span>
@@ -1362,6 +1376,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ১০
           </span>
@@ -1956,6 +1971,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၁
           </span>
@@ -1987,6 +2003,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၂
           </span>
@@ -2018,6 +2035,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၃
           </span>
@@ -2049,6 +2067,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၄
           </span>
@@ -2080,6 +2099,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၅
           </span>
@@ -2111,6 +2131,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၆
           </span>
@@ -2142,6 +2163,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၇
           </span>
@@ -2173,6 +2195,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၈
           </span>
@@ -2204,6 +2227,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၉
           </span>
@@ -2235,6 +2259,7 @@ exports[`MostReadList should render with ltr burmese items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ၁၀
           </span>
@@ -2541,6 +2566,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             1
           </span>
@@ -2572,6 +2598,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             2
           </span>
@@ -2603,6 +2630,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             3
           </span>
@@ -2634,6 +2662,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             4
           </span>
@@ -2665,6 +2694,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             5
           </span>
@@ -2696,6 +2726,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             6
           </span>
@@ -2727,6 +2758,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             7
           </span>
@@ -2758,6 +2790,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             8
           </span>
@@ -2789,6 +2822,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             9
           </span>
@@ -2820,6 +2854,7 @@ exports[`MostReadList should render with ltr news items with a max of one column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             10
           </span>
@@ -3308,6 +3343,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             1
           </span>
@@ -3339,6 +3375,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             2
           </span>
@@ -3370,6 +3407,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             3
           </span>
@@ -3401,6 +3439,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             4
           </span>
@@ -3432,6 +3471,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             5
           </span>
@@ -3463,6 +3503,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             6
           </span>
@@ -3494,6 +3535,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             7
           </span>
@@ -3525,6 +3567,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             8
           </span>
@@ -3556,6 +3599,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             9
           </span>
@@ -3587,6 +3631,7 @@ exports[`MostReadList should render with ltr news items with a max of two column
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             10
           </span>
@@ -4193,6 +4238,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             1
           </span>
@@ -4224,6 +4270,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             2
           </span>
@@ -4255,6 +4302,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             3
           </span>
@@ -4286,6 +4334,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             4
           </span>
@@ -4317,6 +4366,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             5
           </span>
@@ -4348,6 +4398,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             6
           </span>
@@ -4379,6 +4430,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             7
           </span>
@@ -4410,6 +4462,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             8
           </span>
@@ -4441,6 +4494,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             9
           </span>
@@ -4472,6 +4526,7 @@ exports[`MostReadList should render with ltr news items with a multi column layo
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             10
           </span>
@@ -5078,6 +5133,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             1
           </span>
@@ -5109,6 +5165,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             2
           </span>
@@ -5140,6 +5197,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             3
           </span>
@@ -5171,6 +5229,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             4
           </span>
@@ -5202,6 +5261,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             5
           </span>
@@ -5233,6 +5293,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             6
           </span>
@@ -5264,6 +5325,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             7
           </span>
@@ -5295,6 +5357,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             8
           </span>
@@ -5326,6 +5389,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             9
           </span>
@@ -5357,6 +5421,7 @@ exports[`MostReadList should render with ltr news items with correct dir 1`] = `
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             10
           </span>
@@ -5963,6 +6028,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۱
           </span>
@@ -5994,6 +6060,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۲
           </span>
@@ -6025,6 +6092,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۳
           </span>
@@ -6056,6 +6124,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۴
           </span>
@@ -6087,6 +6156,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۵
           </span>
@@ -6118,6 +6188,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۶
           </span>
@@ -6149,6 +6220,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۷
           </span>
@@ -6180,6 +6252,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۸
           </span>
@@ -6211,6 +6284,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۹
           </span>
@@ -6242,6 +6316,7 @@ exports[`MostReadList should render with rtl persian items with correct dir 1`] 
         >
           <span
             class="emotion-6"
+            data-e2e="most-read-rank"
           >
             ۱۰
           </span>

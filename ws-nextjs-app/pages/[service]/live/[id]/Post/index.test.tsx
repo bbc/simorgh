@@ -113,6 +113,34 @@ describe('Post', () => {
       expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(1);
     });
 
+    it('should not crash when the first headline text block is missing', async () => {
+      const postWithMissingFirstHeadlineBlock = {
+        ...samplePost,
+        header: {
+          ...samplePost.header,
+          model: {
+            ...samplePost.header.model,
+            blocks: [
+              {
+                ...samplePost.header.model.blocks[0],
+                model: {
+                  ...samplePost.header.model.blocks[0].model,
+                  blocks: [undefined],
+                },
+              },
+              ...samplePost.header.model.blocks.slice(1),
+            ],
+          },
+        },
+      };
+
+      await act(async () => {
+        render(<Post post={postWithMissingFirstHeadlineBlock as never} />);
+      });
+
+      expect(screen.getByRole('heading', { level: 3 })).toBeInTheDocument();
+    });
+
     it('should render a span with role=text to avoid text splitting in screenreaders', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);
@@ -233,6 +261,36 @@ describe('Post', () => {
     it('should not render share button by default', async () => {
       await act(async () => {
         render(<Post post={singlePostWithTitle} />);
+      });
+
+      expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    });
+
+    it('should not render share button when first heading text is missing', async () => {
+      const postWithMissingFirstHeadingText = {
+        ...samplePost,
+        header: {
+          ...samplePost.header,
+          model: {
+            ...samplePost.header.model,
+            blocks: [
+              {
+                ...samplePost.header.model.blocks[0],
+                model: {
+                  ...samplePost.header.model.blocks[0].model,
+                  blocks: [undefined],
+                },
+              },
+              ...samplePost.header.model.blocks.slice(1),
+            ],
+          },
+        },
+      };
+
+      await act(async () => {
+        render(
+          <Post post={postWithMissingFirstHeadingText as never} hasShareApi />,
+        );
       });
 
       expect(screen.queryByRole('button')).not.toBeInTheDocument();

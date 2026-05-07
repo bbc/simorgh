@@ -251,6 +251,7 @@ export const UpArrowIcon = () => (
     <path d="M31.1 2.5H1v2.8h30.1zM14.3 13.3 31 29.5v-6.7L16 8.1.9 22.8v6.7l16.8-16.2z" />
   </svg>
 );
+
 export const DownArrowIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -325,5 +326,43 @@ export const Spinner = ({ className }: { className?: string }) => (
     aria-hidden="true"
   >
     <path d="m29 8.3-2.5 1.5c1.1 1.8 1.6 3.9 1.6 6.2 0 6.9-5.3 12.2-12.1 12.2-6.9 0-12.1-5.3-12.1-12.2S9.1 3.8 16 3.8V1C7.5 1 1 7.5 1 16s6.5 15 15 15 15-6.5 15-15c0-2.9-.7-5.5-2-7.7" />
+  </svg>
+);
+
+export const RedCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 9.22 13.36"
+    viewBox="0 0 9.22 13.36"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path d="m-12.94 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-28.07 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-29.51 285.84v-9.72h-4.53v11.82h8.48v-2.1z" fill="#ffd230" />
+    <path d="m-163.79-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-102.17-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <g fill="#f51a5a">
+      <path d="m24 0h9.22v13.36h-9.22z" />
+      <path d="m0 0h9.22v13.36h-9.22z" />
+      <path d="m-28.42 0h9.22v13.36h-9.22z" />
+    </g>
+    <path d="m-29.5 14.44v-9.89h-4.54v13.36h9.23v-3.47z" fill="#ffd230" />
+  </svg>
+);
+
+export const SecondYellowCardSVG = ({ className }: { className?: string }) => (
+  <svg
+    enableBackground="new 0 0 14.84 17.91"
+    viewBox="0 0 14.84 17.91"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path d="m21.09 265.76h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m5.97 272.58h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m4.52 285.84v-9.72h-4.52v11.82h8.47v-2.1z" fill="#ffd230" />
+    <path d="m-129.76-38.47h8.47v11.82h-8.47z" fill="#f51a5a" />
+    <path d="m-68.14-22.48v-9.73h-4.52v11.82h8.47v-2.09z" fill="#ffd230" />
+    <path d="m5.61 0h9.22v13.36h-9.22z" fill="#f51a5a" />
+    <path d="m4.53 14.44v-9.89h-4.53v13.36h9.22v-3.47z" fill="#ffd230" />
   </svg>
 );
