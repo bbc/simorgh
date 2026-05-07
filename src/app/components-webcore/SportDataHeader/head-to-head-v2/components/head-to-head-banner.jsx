@@ -35,11 +35,7 @@ const ItemWrapper = ({
           />
         </div>
         <div css={styles.scores()}>
-          <Centre
-            data={data}
-            isConciseView={isConciseView}
-            maxScoreLength={maxScoreLength}
-          />
+          <Centre data={data} maxScoreLength={maxScoreLength} />
           {data.status === 'PreEvent' && (
             <VisuallyHiddenText>plays</VisuallyHiddenText>
           )}
@@ -60,9 +56,7 @@ const ItemWrapper = ({
           <MatchProgress data={data} isConciseView={isConciseView} />
         </div>
       </div>
-      {shouldDisplayPenScores && (
-        <PenaltyScores data={data} isConciseView={isConciseView} />
-      )}
+      {shouldDisplayPenScores && <PenaltyScores data={data} />}
     </>
   );
 };

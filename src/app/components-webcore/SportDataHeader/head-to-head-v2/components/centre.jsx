@@ -14,26 +14,25 @@ export const shouldShowScores = statusGroup =>
   isCalledOffStatus(statusGroup) ||
   statusGroup === 'Postponed';
 
-const Played = ({ data, isConciseView }) => (
+const Played = ({ data }) => (
   <Score
     status={data.status}
     home={data.home.score}
     homeScoreUnconfirmed={data.home.scoreUnconfirmed}
     away={data.away.score}
     awayScoreUnconfirmed={data.away.scoreUnconfirmed}
-    isConciseView={isConciseView}
   />
 );
 
-const Centre = ({ data, isConciseView, maxScoreLength }) => {
+const Centre = ({ data, maxScoreLength }) => {
   const { status } = data;
 
   return (
     <div css={styles.centre(maxScoreLength)}>
       {shouldShowScores(status) ? (
-        <Played data={data} isConciseView={isConciseView} />
+        <Played data={data} />
       ) : (
-        <Time time={data.time} isConciseView={isConciseView} />
+        <Time time={data.time} />
       )}
     </div>
   );

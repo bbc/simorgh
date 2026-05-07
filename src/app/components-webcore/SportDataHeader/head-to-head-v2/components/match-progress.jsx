@@ -62,7 +62,6 @@ const MatchProgress = ({ data, isConciseView }) => {
             labels={periodLabel}
             homeRunningScores={home.runningScores}
             awayRunningScores={away.runningScores}
-            isConciseView={isConciseView}
           />
         </>
       )}
