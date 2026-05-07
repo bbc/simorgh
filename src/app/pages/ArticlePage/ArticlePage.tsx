@@ -409,7 +409,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
 
   const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-  // show media curation only when the user is in adaptive variation
+
   const showMediaCuration = Boolean(
     !isAmp &&
     !isLite &&
