@@ -16,17 +16,14 @@ const SaveArticleButton = ({
   articleTitle,
   articlePageData,
 }: SaveArticleButtonProps) => {
-  const { showButton, isSaved, isLoading, error, handleSaveAction } =
-    useUASButton({
-      articleId,
-      articleTitle,
-      articlePageData,
-    });
+  const { isSaved, isLoading, error, handleSaveAction } = useUASButton({
+    articleId,
+    articleTitle,
+    articlePageData,
+  });
 
   const { translations } = useContext(ServiceContext);
   const { saveArticleButton } = translations || {};
-
-  if (!showButton) return null;
 
   if (!saveArticleButton) return null;
 
