@@ -12,9 +12,9 @@ const ScoreDetails = ({
   );
   const shouldDisplayFT = Boolean(
     homeRunningScores?.fulltime &&
-      awayRunningScores?.fulltime &&
-      homeRunningScores?.extratime &&
-      awayRunningScores?.extratime,
+    awayRunningScores?.fulltime &&
+    homeRunningScores?.extratime &&
+    awayRunningScores?.extratime,
   );
 
   if (!shouldDisplayFT && !shouldDisplayHT) {
