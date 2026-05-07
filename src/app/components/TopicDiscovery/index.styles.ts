@@ -1,5 +1,6 @@
 import pixelsToRem from '#app/utilities/pixelsToRem';
 import { css, Theme } from '@emotion/react';
+import NO_JS_CLASSNAME from '#app/lib/noJs.const';
 
 const styles = {
   section: ({ spacings, mq }: Theme) =>
@@ -8,6 +9,10 @@ const styles = {
 
       [mq.GROUP_4_MIN_WIDTH]: {
         padding: 0,
+      },
+
+      [`.${NO_JS_CLASSNAME} &`]: {
+        display: 'none',
       },
     }),
 
