@@ -518,7 +518,16 @@ const ArticlePage = ({
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {showTopicDiscovery && <TopicDiscovery topics={topics} />}
+          {showTopicDiscovery && (
+            <TopicDiscovery
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topics={topics}
+            />
+          )}
           {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
