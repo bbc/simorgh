@@ -563,10 +563,6 @@ export default {
         : `0 0 ${pixelsToRem(8)}rem`,
       [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
         padding: 0,
-        fontSize: '1.25rem',
-        lineHeight: 1.2,
-      },
-      [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
         fontSize: '1.5rem',
         lineHeight: 1.1666666666666667,
       },
