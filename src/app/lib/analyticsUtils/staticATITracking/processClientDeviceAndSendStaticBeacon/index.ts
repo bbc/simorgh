@@ -81,8 +81,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
         .replace('{forwardingLink}', forwardingUrl)
-        // x5: '${sourceUrl}', - I want to add
-        .replaceAll('ref=&', '');
+        .replaceAll('ref=&', '')
+        .replaceAll('&ref=', ''); // check this doesn't break referrer data when it's present
 
       const searchParams = new URLSearchParams(window.location.search);
 
@@ -94,14 +94,12 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         ) {
           processedReverbUrl +=
             `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`
-              .replace('at_', 'at_')
-              // .replace('at_', 'src_')
+              .replace('at_', 'src_')
               .replace('xtor', 'xto');
         }
       });
 
-      console.log('Processed Reverb URL:', processedReverbUrl);
-
+      console.log('processedReverbUrl', processedReverbUrl);
       window.sendStaticBeacon(processedReverbUrl);
     }
   };
