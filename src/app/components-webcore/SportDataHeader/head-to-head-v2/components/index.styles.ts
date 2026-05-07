@@ -673,4 +673,25 @@ export default {
       maxHeight: '100%',
       objectFit: 'contain',
     }),
+
+  // ==================== Head-to-Head V2 (Main Wrapper) ====================
+  headToHeadWrapper: (isConciseView?: boolean) =>
+    css({
+      background: isConciseView ? '#202020' : '#181818', // GREY_15 : GREY_16
+      borderInlineStart: 'medium none #009E9E',
+    }),
+
+  headToHead: (isConciseView?: boolean) =>
+    css({
+      fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
+      fontWeight: 400,
+      fontFeatureSettings: "'ss01' off",
+      color: '#f8f8f8',
+      padding: isConciseView ? `${pixelsToRem(8)}rem` : 0,
+      paddingBlockEnd: !isConciseView ? `${pixelsToRem(24)}rem` : undefined,
+      [`@media (max-width: ${pixelsToRem(600)}rem)`]: {
+        paddingBlockStart: isConciseView ? `${pixelsToRem(8)}rem` : 0,
+        paddingBlockEnd: !isConciseView ? `${pixelsToRem(8)}rem` : undefined,
+      },
+    }),
 };

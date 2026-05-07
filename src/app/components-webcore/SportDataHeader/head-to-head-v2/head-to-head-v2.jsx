@@ -1,45 +1,10 @@
-// import React from 'react';
-// import styled from '@bbc/web-styled';
-import styled from '@emotion/styled';
-// import { fontStandard, GROUP_3, SPACING_2 } from '@bbc/web-gel-foundations';
-// import { shouldShowTeamBadges } from '@bbc/web-sport-utils';
-// import shouldShowTeamBadges from './helpers/badges/should-show-team-badges';
-
+/** @jsxImportSource @emotion/react */
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
-// import { getStatusBorderStyles } from './helpers/colour-styles.js';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
 import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link';
 import { Actions } from './components/actions';
-import pixelsToRem from '../../../utilities/pixelsToRem';
-
-const StyledHeadToHeadWrapper = styled.div`
-  background: ${({ isConciseView }) =>
-    isConciseView ? '#202020' : '#181818'}; // GREY_15 : GREY_16
-  ${
-    '' /* border-left: ${({ status, isConciseView }) =>
-    getStatusBorderStyles({ status, isConciseView })}; */
-  }
-  border-left: medium none #009E9E;
-`;
-
-const StyledHeadToHead = styled.div`
-  font-family: ReithSans, Helvetica, Arial, freesans, sans-serif;
-  font-weight: 400;
-  font-feature-settings: 'ss01' off;
-  color: #f8f8f8;
-  padding: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
-  padding-bottom: ${({ isConciseView }) =>
-    !isConciseView &&
-    `${pixelsToRem(24)}rem`}; // TODO - decide if we want to move these styles to live page layout
-
-  @media (max-width: ${pixelsToRem(600)}rem) {
-    padding-top: ${({ isConciseView }) => (isConciseView ? `8px` : `0`)};
-    padding-bottom: ${({ isConciseView }) =>
-      !isConciseView &&
-      `${pixelsToRem(8)}rem`}; // TODO - decide if we want to move these styles to live page layout
-  }
-`;
+import styles from './components/index.styles';
 
 /**
  * @type {typeof import('./types.ts').HeadToHeadV2}
@@ -57,13 +22,13 @@ export const HeadToHeadV2 = ({
   const shouldHideBadges = true; // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
 
   return (
-    <StyledHeadToHeadWrapper status={data.status} isConciseView={isConciseView}>
+    <div css={styles.headToHeadWrapper(isConciseView)}>
       <ConditionalOnwardJourneyLink
         isConciseView={isConciseView}
         onwardJourneyLink={data.onwardJourneyLink}
         tipoTopicId={data.tipoTopicId}
       >
-        <StyledHeadToHead isConciseView={isConciseView}>
+        <div css={styles.headToHead(isConciseView)}>
           {!isConciseView && (
             <HeadToHeadHeader
               date={data.date}
@@ -91,9 +56,9 @@ export const HeadToHeadV2 = ({
               attendanceInfo={data.attendance?.additionalInfo}
             />
           )}
-        </StyledHeadToHead>
+        </div>
       </ConditionalOnwardJourneyLink>
-    </StyledHeadToHeadWrapper>
+    </div>
   );
 };
 
