@@ -5,23 +5,26 @@ const URN_CATEGORIES = [
   'stage',
   'round',
   'event',
-];
+] as const;
+
+type UrnCategory = (typeof URN_CATEGORIES)[number];
+
+type ParsedUrn =
+  | { rawValue: string; sport: string; category: UrnCategory; id: string }
+  | { rawValue: string; sport: string };
 
 const URN_REGEX = new RegExp(
   `^urn:bbc:sportsdata:(?<sport>[\\w-]+)(?::(?<category>${URN_CATEGORIES.join('|')}):(?<id>[\\w-/]+))?$`,
 );
 
-/**
- * @type {typeof import('./parse-urn.d.ts').parseUrn}
- */
-const parseUrn = rawUrnValue => {
+const parseUrn = (rawUrnValue: string): ParsedUrn => {
   if (!rawUrnValue) {
     throw new Error('URN must be supplied');
   }
 
   const urnMatcher = rawUrnValue.match(URN_REGEX);
 
-  if (!urnMatcher || !urnMatcher.groups) {
+  if (!urnMatcher?.groups) {
     throw new Error('URN is malformed');
   }
 
@@ -31,7 +34,7 @@ const parseUrn = rawUrnValue => {
     return {
       rawValue: rawUrnValue,
       sport,
-      category,
+      category: category as UrnCategory,
       id,
     };
   }

@@ -96,11 +96,11 @@ export default async (context: GetServerSidePropsContext) => {
   const { article, secondaryData } = data?.pageData || {};
   const isArticleOlderThanSixHours =
     Date.now() - article.metadata.lastPublished > 21600000;
-  const maxAge = isArticleOlderThanSixHours ? 480 : 120;
+  const maxAge = isArticleOlderThanSixHours ? 90 : 45;
 
   context.res.setHeader(
     'Cache-Control',
-    `public, stale-if-error=${maxAge * 5}, stale-while-revalidate=${maxAge * 2}, max-age=${maxAge}`,
+    `public, stale-if-error=90, stale-while-revalidate=30, max-age=${maxAge}`,
   );
 
   const {

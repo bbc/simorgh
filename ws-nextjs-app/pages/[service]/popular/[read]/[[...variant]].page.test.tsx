@@ -114,7 +114,7 @@ describe('handleMostReadRoute', () => {
 
     expect(mockSetHeader).toHaveBeenCalledWith(
       'Cache-Control',
-      expect.stringContaining('max-age=1200'),
+      expect.stringContaining('max-age=30'),
     );
   });
 });
