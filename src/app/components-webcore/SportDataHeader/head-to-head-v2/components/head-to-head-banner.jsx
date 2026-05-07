@@ -1,4 +1,3 @@
-
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import Team from './team';
 import Centre from './centre';
@@ -24,8 +23,7 @@ const ItemWrapper = ({
       >
         <div css={styles.teamHome()} data-participant-id={data.home.id}>
           <Team
-            // eslint-disable-next-line react/jsx-curly-brace-presence
-            alignment={'home'}
+            alignment="home"
             name={data.home.fullName}
             shortName={data.home.shortName}
             urn={data.home.urn}
@@ -42,8 +40,7 @@ const ItemWrapper = ({
         </div>
         <div css={styles.teamAway()} data-participant-id={data.away.id}>
           <Team
-            // eslint-disable-next-line react/jsx-curly-brace-presence
-            alignment={'away'}
+            alignment="away"
             name={data.away.fullName}
             shortName={data.away.shortName}
             urn={data.away.urn}

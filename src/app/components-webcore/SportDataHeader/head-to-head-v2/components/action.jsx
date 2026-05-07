@@ -1,4 +1,3 @@
-
 /* eslint-disable jsx-a11y/aria-role */
 import ActionsTime from './actions-time';
 import styles from './index.styles';

@@ -51,7 +51,6 @@ export const HeadToHeadV2 = ({
           {!isConciseView && (
             <Footer
               venue={data.venue?.name || 'To be confirmed'}
-              status={data.status}
               attendanceValue={data.attendance?.value}
               attendanceInfo={data.attendance?.additionalInfo}
             />

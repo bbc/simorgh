@@ -26,7 +26,3 @@ const Score = ({
 };
 
 export default Score;
-
-export const VerticalLine = ({ children }) => (
-  <div css={styles.verticalLine()}>{children}</div>
-);
