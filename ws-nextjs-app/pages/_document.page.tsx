@@ -50,13 +50,15 @@ type DocProps = {
 
 const getDynamicCss = (dynamicIds: Array<string | number>): string => {
   if (!dynamicIds.length) return '';
-  try {
-    const manifestPath = join(
-      process.cwd(),
-      'build/react-loadable-manifest.json',
-    );
-    if (!existsSync(manifestPath)) return '';
 
+  const manifestPath = join(
+    process.cwd(),
+    'build/react-loadable-manifest.json',
+  );
+
+  if (!existsSync(manifestPath)) return '';
+
+  try {
     const manifest: Record<string, { id: number; files: string[] }> =
       JSON.parse(readFileSync(manifestPath, 'utf-8'));
 
@@ -73,6 +75,25 @@ const getDynamicCss = (dynamicIds: Array<string | number>): string => {
           .flatMap(chunk => chunk.files.filter(f => f.endsWith('.css'))),
       ),
     ];
+
+    return cssFiles
+      .map(file => readFileSync(join(process.cwd(), 'build', file), 'utf-8'))
+      .join('');
+  } catch {
+    return '';
+  }
+};
+
+const getAllChunkCss = (): string => {
+  try {
+    const manifestPath = join(process.cwd(), 'build/dynamic-css-manifest.json');
+    if (!existsSync(manifestPath)) {
+      const devCssPath = join(process.cwd(), 'build/dev-css-modules.css');
+      if (existsSync(devCssPath)) return readFileSync(devCssPath, 'utf-8');
+      return '';
+    }
+
+    const cssFiles: string[] = JSON.parse(readFileSync(manifestPath, 'utf-8'));
 
     return cssFiles
       .map(file => readFileSync(join(process.cwd(), 'build', file), 'utf-8'))
@@ -157,9 +178,11 @@ export default class AppDocument extends Document<DocProps> {
     /* eslint-enable no-underscore-dangle */
 
     const dynamicCss = getDynamicCss(dynamicIds);
+    const allChunkCss = isAmp || isLite ? getAllChunkCss() : '';
+    const moduleCss = allChunkCss || dynamicCss;
 
-    const ampCss = isAmp ? css + dynamicCss : css;
-    const liteCss = isLite ? css + dynamicCss : css;
+    const ampCss = isAmp ? css + moduleCss : css;
+    const liteCss = isLite ? css + moduleCss : css;
 
     switch (true) {
       case isAmp:

@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 const path = require('path');
 const MomentTimezoneInclude = require('../src/app/legacy/psammead/moment-timezone-include/src');
+const DevCssExtractPlugin = require('./scripts/DevCssExtractPlugin.cjs');
 
 const assetPrefix =
   process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
@@ -79,7 +80,7 @@ module.exports = {
   poweredByHeader: false,
   reactStrictMode: true,
   transpilePackages: ['simorgh'],
-  webpack: (config, { webpack, isServer }) => {
+  webpack: (config, { webpack, isServer, dev }) => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
@@ -93,6 +94,10 @@ module.exports = {
     config.plugins.push(
       new MomentTimezoneInclude({ startYear: 2010, endYear: 2026 }),
     );
+
+    if (dev) {
+      config.plugins.push(new DevCssExtractPlugin());
+    }
 
     /*
       Taken from https://github.com/bbc/simorgh/blob/861c2b50df3d41cdc9e854752a898ed4b1b89727/webpack.config.client.js#L213-L228
