@@ -167,4 +167,56 @@ describe('useFetchTopicPromos', () => {
 
     expect(mockFetch).toHaveBeenCalledTimes(2);
   });
+
+  it('should set topicPromos to an empty array and isLoading to false when fetch response is not ok', async () => {
+    mockFetch.mockResolvedValue({
+      status: 500,
+    });
+
+    const { result } = renderHook(
+      () =>
+        useFetchTopicPromos({
+          activeTabId: topicIdA,
+          isNearViewport: true,
+        }),
+      { wrapper: createWrapper() },
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    expect(result.current.topicPromos).toEqual([]);
+  });
+
+  it('should abort fetch request when component unmounts', async () => {
+    const abortController = new AbortController();
+
+    mockFetch.mockImplementation(
+      () =>
+        new Promise((_resolve, reject) => {
+          abortController.signal.addEventListener('abort', () => {
+            reject(new DOMException('Aborted', 'AbortError'));
+          });
+        }),
+    );
+
+    const { unmount } = renderHook(
+      () =>
+        useFetchTopicPromos({
+          activeTabId: topicIdA,
+          isNearViewport: true,
+        }),
+      { wrapper: createWrapper() },
+    );
+
+    unmount();
+
+    await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
+
+    expect(mockFetch).toHaveBeenCalledWith(
+      expect.any(String),
+      expect.objectContaining({
+        signal: expect.any(AbortSignal),
+      }),
+    );
+  });
 });

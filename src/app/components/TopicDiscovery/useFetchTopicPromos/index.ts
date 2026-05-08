@@ -24,6 +24,8 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
   useEffect(() => {
     if (!isNearViewport) return undefined;
 
+    let abortController: AbortController | null = null;
+
     const cachedPromos = promosCacheRef?.current?.[activeTabId];
 
     if (cachedPromos) {
@@ -42,7 +44,11 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
         setIsLoading(true);
 
         try {
-          const response = await fetch(fetchUrl.toString());
+          abortController = new AbortController();
+
+          const response = await fetch(fetchUrl.toString(), {
+            signal: abortController.signal,
+          });
 
           if (response.status === OK) {
             const { data } = await response.json();
@@ -63,7 +69,9 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
       fetchTopicPromos();
     }
 
-    return undefined;
+    return () => {
+      abortController?.abort();
+    };
   }, [activeTabId, isNearViewport, service, variant]);
 
   return { topicPromos, isLoading };
