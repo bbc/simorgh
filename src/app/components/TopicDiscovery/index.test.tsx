@@ -15,11 +15,6 @@ import TopicDiscovery from '.';
 
 jest.mock('./useFetchTopicPromos');
 
-const topics = [
-  { topicId: '1', topicName: 'Topic1', topicUrl: '/topics/climate' },
-  { topicId: '2', topicName: 'Topic2', topicUrl: '/topics/economy' },
-];
-
 const createIntersectionObserverMock = () =>
   jest.fn(callback => ({
     observe: jest.fn(() => {
@@ -135,24 +130,28 @@ describe('TopicDiscovery', () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
     const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent('Mais de Topic1');
+    expect(moreFrom).toHaveTextContent(
+      `Mais de ${topicTagsFixture[0].topicName}`,
+    );
   });
 
   it('renders the "more from" section with topic title first if {topic} is first in the config', async () => {
     const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
     const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent('Topic1 hakkında daha fazla');
+    expect(moreFrom).toHaveTextContent(
+      `${topicTagsFixture[0].topicName} hakkında daha fazla`,
+    );
   });
 
   it('renders the "more from" section with fallback if moreFrom is missing', async () => {
@@ -166,10 +165,10 @@ describe('TopicDiscovery', () => {
     } as ServiceConfig;
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
-    await screen.findByText('More from Topic1');
+    await screen.findByText(`More from ${topicTagsFixture[0].topicName}`);
   });
 
   it('should not render when there are no valid topics', () => {
