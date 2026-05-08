@@ -67,4 +67,28 @@ export default {
         color: palette.WHITE,
       },
     }),
+
+  modal: css({
+    position: 'fixed',
+    inset: 0,
+    zIndex: 2147483647,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }),
+
+  backdrop: css({
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: 'rgba(20, 20, 20, 0.9)',
+    backdropFilter: 'blur(0.2rem)',
+  }),
+
+  modalContent: css({
+    position: 'relative',
+    zIndex: 1,
+    width: '100%',
+    maxWidth: `${pixelsToRem(600)}rem`,
+    margin: '0 1rem',
+  }),
 };

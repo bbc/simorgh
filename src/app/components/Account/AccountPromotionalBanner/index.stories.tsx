@@ -4,6 +4,7 @@ import { AccountContext } from '#app/contexts/AccountContext';
 import README from './README.md';
 import AccountPromotionalBanner from '.';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import AccountPromotionalBannerModal from './AccountPromotionalModal';
 
 type WithProvidersArgs = {
   isSignedIn: boolean;
@@ -48,3 +49,6 @@ export default {
 
 export const SignedOut = withProviders({ isSignedIn: false });
 export const SignedInNoRender = withProviders({ isSignedIn: true });
+export const SignedOutModal = () => (
+  <AccountPromotionalBannerModal isSignedIn={false} />
+);
