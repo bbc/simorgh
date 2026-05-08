@@ -1,4 +1,4 @@
-import { useState, useEffect, use, useRef } from 'react';
+import { useState, useEffect, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -6,8 +6,7 @@ import { TopicTag } from '#app/models/types/metadata';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
-import { multipleTopicsFixture } from './fixtures';
-import { TopicDiscoveryItem } from './types';
+import useFetchTopicPromos from './useFetchTopicPromos';
 
 type TopicDiscoveryProps = {
   topics: Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>[];
@@ -21,25 +20,16 @@ const eventTrackingData = {
   componentName: 'topic-discovery',
 };
 
-export const FAKE_FETCH_DELAY_MS = 600;
-
-const fetchTopicPromos = (
-  topicId: TopicTag['topicId'],
-): Promise<TopicDiscoveryItem[]> =>
-  new Promise(resolve => {
-    setTimeout(() => {
-      resolve(multipleTopicsFixture?.[topicId]?.data?.items || []);
-    }, FAKE_FETCH_DELAY_MS);
-  });
-
 const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const { topicDiscovery } = translations;
-  const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
   const [isNearViewport, setIsNearViewport] = useState(false);
-  const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
+
+  const { topicPromos, isLoading } = useFetchTopicPromos({
+    activeTabId,
+    isNearViewport,
+  });
 
   useEffect(() => {
     if (isNearViewport) return undefined;
@@ -65,33 +55,6 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     };
   }, [isNearViewport]);
 
-  useEffect(() => {
-    if (!isNearViewport) return undefined;
-
-    let isActive = true;
-
-    const cachedPromos = promosCacheRef.current[activeTabId];
-
-    if (cachedPromos) {
-      setTopicPromos(cachedPromos);
-      setIsLoading(false);
-    } else {
-      setIsLoading(true);
-
-      fetchTopicPromos(activeTabId).then(fetchedTopicPromos => {
-        if (!isActive) return;
-
-        promosCacheRef.current[activeTabId] = fetchedTopicPromos;
-        setTopicPromos(fetchedTopicPromos);
-        setIsLoading(false);
-      });
-    }
-
-    return () => {
-      isActive = false;
-    };
-  }, [activeTabId, isNearViewport]);
-
   const viewTracker = useViewTracker(eventTrackingData);
 
   const moreFromLinkClickTracker = useClickTrackerHandler({
@@ -104,15 +67,6 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     id: topic.topicId,
     label: topic.topicName,
   }));
-
-  const handleTabChange = (nextTabId: TopicTag['topicId']) => {
-    if (nextTabId === activeTabId) return;
-
-    const hasCachedPromos = Boolean(promosCacheRef.current[nextTabId]);
-
-    setIsLoading(!hasCachedPromos);
-    setActiveTabId(nextTabId);
-  };
 
   const getMoreFromText = () => {
     if (topicDiscovery?.moreFromTopic && activeTopic?.topicName) {
@@ -141,7 +95,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
       <ScrollableTabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabChange={handleTabChange}
+        onTabChange={setActiveTabId}
         labelledBy={HEADING_ID}
       />
       <div
