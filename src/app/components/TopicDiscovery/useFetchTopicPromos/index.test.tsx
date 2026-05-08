@@ -61,7 +61,7 @@ describe('useFetchTopicPromos', () => {
   it('fetches promos when near viewport and builds expected request URL', async () => {
     mockFetch.mockResolvedValue({
       status: 200,
-      json: async () => ({ data: topicItemsA }),
+      json: async () => ({ data: { items: topicItemsA } }),
     });
 
     const { result } = renderHook(
@@ -92,7 +92,7 @@ describe('useFetchTopicPromos', () => {
   it('includes variant query parameter when variant exists in RequestContext', async () => {
     mockFetch.mockResolvedValue({
       status: 200,
-      json: async () => ({ data: topicItemsA }),
+      json: async () => ({ data: { items: topicItemsA } }),
     });
 
     renderHook(
@@ -118,11 +118,11 @@ describe('useFetchTopicPromos', () => {
     mockFetch
       .mockResolvedValueOnce({
         status: 200,
-        json: async () => ({ data: topicItemsA }),
+        json: async () => ({ data: { items: topicItemsA } }),
       })
       .mockResolvedValueOnce({
         status: 200,
-        json: async () => ({ data: topicItemsB }),
+        json: async () => ({ data: { items: topicItemsB } }),
       });
 
     const { result, rerender } = renderHook(

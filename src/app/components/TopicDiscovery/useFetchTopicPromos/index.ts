@@ -52,9 +52,8 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
 
           if (response.status === OK) {
             const { data } = await response.json();
-
-            promosCacheRef.current[activeTabId] = data;
-            setTopicPromos(data);
+            promosCacheRef.current[activeTabId] = data?.items || [];
+            setTopicPromos(data?.items || []);
             setIsLoading(false);
           } else {
             setTopicPromos([]);
