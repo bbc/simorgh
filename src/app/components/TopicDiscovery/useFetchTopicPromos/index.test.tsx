@@ -89,7 +89,7 @@ describe('useFetchTopicPromos', () => {
     expect(result.current.topicPromos).toEqual(topicItemsA);
   });
 
-  it('includes variant query parameter when variant exists in request context', async () => {
+  it('includes variant query parameter when variant exists in RequestContext', async () => {
     mockFetch.mockResolvedValue({
       status: 200,
       json: async () => ({ data: topicItemsA }),
@@ -136,6 +136,18 @@ describe('useFetchTopicPromos', () => {
         wrapper: createWrapper(),
       },
     );
+
+    await waitFor(() =>
+      expect(result.current.topicPromos).toEqual(topicItemsA),
+    );
+
+    rerender({ activeTabId: topicIdB });
+
+    await waitFor(() =>
+      expect(result.current.topicPromos).toEqual(topicItemsB),
+    );
+
+    rerender({ activeTabId: topicIdA });
 
     await waitFor(() =>
       expect(result.current.topicPromos).toEqual(topicItemsA),
