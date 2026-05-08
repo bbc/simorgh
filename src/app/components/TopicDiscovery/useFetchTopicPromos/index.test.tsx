@@ -5,6 +5,7 @@ import {
 } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { Variants } from '#app/models/types/global';
+import { multipleTopicsFixture } from '../fixtures';
 import useFetchTopicPromos from '.';
 
 jest.mock('#app/lib/utilities/getEnvConfig', () => ({
@@ -15,25 +16,26 @@ jest.mock('#app/lib/utilities/getEnvConfig', () => ({
 
 const mockFetch = jest.fn();
 
-const createWrapper = ({
-  variant,
-  children,
-}: PropsWithChildren<{
-  variant?: Variants;
-}>) => (
-  <RequestContextProvider
-    service="pidgin"
-    variant={variant}
-    pageType="article"
-    pathname=""
-  >
-    {children}
-  </RequestContextProvider>
-);
+const createWrapper = (variant?: Variants) => {
+  const Wrapper = ({ children }: PropsWithChildren) => (
+    <RequestContextProvider
+      service="pidgin"
+      variant={variant}
+      pageType="article"
+      pathname=""
+    >
+      {children}
+    </RequestContextProvider>
+  );
+
+  return Wrapper;
+};
 
 describe('useFetchTopicPromos', () => {
-  const topicIdA = 'topic-a';
-  const topicIdB = 'topic-b';
+  const topicIdA = 'c2lemz0vkm8t';
+  const topicIdB = 'cg7267qwzx1t';
+  const topicItemsA = multipleTopicsFixture[topicIdA].data.items;
+  const topicItemsB = multipleTopicsFixture[topicIdB].data.items;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -41,14 +43,14 @@ describe('useFetchTopicPromos', () => {
     global.fetch = mockFetch;
   });
 
-  test('does not fetch promos before the component is near viewport', () => {
+  it('does not fetch promos before the component is near viewport', () => {
     const { result } = renderHook(
       () =>
         useFetchTopicPromos({
           activeTabId: topicIdA,
           isNearViewport: false,
         }),
-      { wrapper: () => createWrapper({}) },
+      { wrapper: createWrapper() },
     );
 
     expect(mockFetch).not.toHaveBeenCalled();
@@ -56,12 +58,10 @@ describe('useFetchTopicPromos', () => {
     expect(result.current.isLoading).toBe(true);
   });
 
-  test('fetches promos when near viewport and builds expected request URL', async () => {
-    const items = [{ headline: 'first promo' }];
-
+  it('fetches promos when near viewport and builds expected request URL', async () => {
     mockFetch.mockResolvedValue({
       status: 200,
-      json: async () => ({ data: items }),
+      json: async () => ({ data: topicItemsA }),
     });
 
     const { result } = renderHook(
@@ -70,7 +70,7 @@ describe('useFetchTopicPromos', () => {
           activeTabId: topicIdA,
           isNearViewport: true,
         }),
-      { wrapper: () => createWrapper({}) },
+      { wrapper: createWrapper() },
     );
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
@@ -83,16 +83,16 @@ describe('useFetchTopicPromos', () => {
       'https://www.test.bbc.com/fd/simorgh-bff',
     );
     expect(requestUrl.searchParams.get('onwardJourney')).toBe('topicDiscovery');
-    expect(requestUrl.searchParams.get('service')).toBe('news');
+    expect(requestUrl.searchParams.get('service')).toBe('pidgin');
     expect(requestUrl.searchParams.get('id')).toBe(topicIdA);
     expect(requestUrl.searchParams.has('variant')).toBe(false);
-    expect(result.current.topicPromos).toEqual(items);
+    expect(result.current.topicPromos).toEqual(topicItemsA);
   });
 
-  test('includes variant query parameter when variant exists in request context', async () => {
+  it('includes variant query parameter when variant exists in request context', async () => {
     mockFetch.mockResolvedValue({
       status: 200,
-      json: async () => ({ data: [] }),
+      json: async () => ({ data: topicItemsA }),
     });
 
     renderHook(
@@ -102,7 +102,7 @@ describe('useFetchTopicPromos', () => {
           isNearViewport: true,
         }),
       {
-        wrapper: () => createWrapper({ variant: 'cyr' }),
+        wrapper: createWrapper('cyr'),
       },
     );
 
@@ -114,18 +114,15 @@ describe('useFetchTopicPromos', () => {
     expect(requestUrl.searchParams.get('variant')).toBe('cyr');
   });
 
-  test('reuses cached promos when returning to a previously fetched tab', async () => {
-    const firstTabItems = [{ headline: 'first tab promo' }];
-    const secondTabItems = [{ headline: 'second tab promo' }];
-
+  it('reuses cached promos when returning to a previously fetched tab', async () => {
     mockFetch
       .mockResolvedValueOnce({
         status: 200,
-        json: async () => ({ data: firstTabItems }),
+        json: async () => ({ data: topicItemsA }),
       })
       .mockResolvedValueOnce({
         status: 200,
-        json: async () => ({ data: secondTabItems }),
+        json: async () => ({ data: topicItemsB }),
       });
 
     const { result, rerender } = renderHook(
@@ -136,24 +133,24 @@ describe('useFetchTopicPromos', () => {
         }),
       {
         initialProps: { activeTabId: topicIdA },
-        wrapper: () => createWrapper({}),
+        wrapper: createWrapper(),
       },
     );
 
     await waitFor(() =>
-      expect(result.current.topicPromos).toEqual(firstTabItems),
+      expect(result.current.topicPromos).toEqual(topicItemsA),
     );
 
     rerender({ activeTabId: topicIdB });
 
     await waitFor(() =>
-      expect(result.current.topicPromos).toEqual(secondTabItems),
+      expect(result.current.topicPromos).toEqual(topicItemsB),
     );
 
     rerender({ activeTabId: topicIdA });
 
     await waitFor(() =>
-      expect(result.current.topicPromos).toEqual(firstTabItems),
+      expect(result.current.topicPromos).toEqual(topicItemsA),
     );
 
     expect(mockFetch).toHaveBeenCalledTimes(2);
