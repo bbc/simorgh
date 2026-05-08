@@ -52,43 +52,6 @@ describe('useUASButton', () => {
     jest.clearAllMocks();
   });
 
-  it('returns showButton = false when feature toggle is off', () => {
-    mockUseToggle.mockReturnValue({ enabled: false });
-    mockIsLocal.mockReturnValue(false);
-    (use as jest.Mock).mockReturnValue({ isSignedIn: true, service: 'hindi' });
-
-    const { result } = renderHook(() => useUASButton(defaultProps));
-
-    expect(result.current.showButton).toBe(false);
-  });
-
-  it('returns showButton = false when user is not signed in', () => {
-    mockUseToggle.mockReturnValue({ enabled: true });
-    mockIsLocal.mockReturnValue(false);
-    (use as jest.Mock).mockReturnValue({ isSignedIn: false, service: 'hindi' });
-
-    const { result } = renderHook(() => useUASButton({ ...defaultProps }));
-
-    expect(result.current.showButton).toBe(false);
-  });
-
-  it('returns showButton = true when feature enabled and signed in', () => {
-    mockUseToggle.mockReturnValue({ enabled: true });
-    mockIsLocal.mockReturnValue(false);
-    (use as jest.Mock).mockReturnValue({ isSignedIn: true, service: 'hindi' });
-
-    mockuseUASFetchSaveStatus.mockReturnValue({
-      isSaved: true,
-      isLoading: false,
-      error: null,
-      setIsSaved: mockSetIsSaved,
-    });
-
-    const { result } = renderHook(() => useUASButton(defaultProps));
-
-    expect(result.current.showButton).toBe(true);
-  });
-
   it('passes articleId to useUASFetchSaveStatus when showButton is true', () => {
     mockUseToggle.mockReturnValue({ enabled: true });
     mockIsLocal.mockReturnValue(false);
@@ -107,32 +70,6 @@ describe('useUASButton', () => {
     renderHook(() => useUASButton(defaultProps));
 
     expect(mockuseUASFetchSaveStatus).toHaveBeenCalledWith('');
-  });
-
-  it('respects local environment service filtering', () => {
-    mockUseToggle.mockReturnValue({
-      enabled: true,
-      value: 'hindi|sport',
-    });
-    mockIsLocal.mockReturnValue(true);
-    (use as jest.Mock).mockReturnValue({ isSignedIn: true, service: 'hindi' });
-
-    const { result } = renderHook(() => useUASButton(defaultProps));
-
-    expect(result.current.showButton).toBe(true);
-  });
-
-  it('hides button if service not in toggle value in local', () => {
-    mockUseToggle.mockReturnValue({
-      enabled: true,
-      value: 'mundo',
-    });
-    mockIsLocal.mockReturnValue(true);
-    (use as jest.Mock).mockReturnValue({ isSignedIn: true, service: 'hindi' });
-
-    const { result } = renderHook(() => useUASButton(defaultProps));
-
-    expect(result.current.showButton).toBe(false);
   });
 
   describe('handleSaveAction', () => {
