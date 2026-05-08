@@ -42,7 +42,7 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
   return Date.now() < earlyExpiryDate.getTime();
 };
 
-export const getUserIdFromToken = (token = ''): string | undefined => {
+export const getUserPseudoIdFromToken = (token = ''): string | undefined => {
   const decodedToken = getDecodedToken(token);
   const pseudonym = decodedToken?.ps;
 

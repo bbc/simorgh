@@ -15,7 +15,7 @@ import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
 import isLocal from '#app/lib/utilities/isLocal';
-import { getUserIdFromToken } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import { getUserPseudoIdFromToken } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -72,7 +72,7 @@ export const AccountProvider = ({
     initialConfig?.identity?.idSignedInCookieName,
   );
 
-  const userPseudoId = getUserIdFromToken(signedInToken);
+  const userPseudoId = getUserPseudoIdFromToken(signedInToken);
 
   const isSignedIn =
     isIdctaAvailable &&
