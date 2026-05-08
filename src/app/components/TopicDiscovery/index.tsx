@@ -24,9 +24,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { topicDiscovery } = translations;
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
-  const { topicPromos, isLoading } = useFetchTopicPromos({
-    activeTabId,
-  });
+  const { topicPromos, isLoading } = useFetchTopicPromos({ activeTabId });
 
   const viewTracker = useViewTracker(eventTrackingData);
 
