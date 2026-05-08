@@ -8,8 +8,10 @@ import ScrollableTabs from './ScrollableTabs';
 import styles from './index.styles';
 import useFetchTopicPromos from './useFetchTopicPromos';
 
+type ExtractedTopic = Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>;
+
 type TopicDiscoveryProps = {
-  topics: Pick<TopicTag, 'topicId' | 'topicName' | 'topicUrl'>[];
+  topics: ExtractedTopic[];
   className?: string;
 };
 
@@ -21,7 +23,9 @@ const eventTrackingData = {
 
 const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
-  const { topicDiscovery } = translations;
+  const { heading = 'Discover more', moreFromTopic = 'More from {topic}' } =
+    translations.topicDiscovery || {};
+
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
   const { topicPromos, isLoading } = useFetchTopicPromos({ activeTabId });
@@ -32,24 +36,16 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     componentName: 'topic-discovery-more-from-link',
   });
 
-  const activeTopic = topics?.find(topic => topic.topicId === activeTabId);
+  if (!topics || topics.length === 0) return null;
 
-  const tabs = topics?.map(topic => ({
+  const activeTopic = topics.find(
+    topic => topic.topicId === activeTabId,
+  ) as ExtractedTopic;
+
+  const tabs = topics.map(topic => ({
     id: topic.topicId,
     label: topic.topicName,
   }));
-
-  const getMoreFromText = () => {
-    if (topicDiscovery?.moreFromTopic && activeTopic?.topicName) {
-      return topicDiscovery.moreFromTopic.replace(
-        '{topic}',
-        activeTopic.topicName,
-      );
-    }
-    return `More from ${activeTopic?.topicName}`;
-  };
-
-  if (!topics || topics.length === 0) return null;
 
   return (
     <section
@@ -61,7 +57,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
       {...viewTracker}
     >
       <h2 id={HEADING_ID} css={styles.heading}>
-        {topicDiscovery?.heading ?? 'Discover more'}
+        {heading}
       </h2>
       <ScrollableTabs
         tabs={tabs}
@@ -106,7 +102,7 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
               data-testid="topic-discovery-more-from"
               {...moreFromLinkClickTracker}
             >
-              {getMoreFromText()}
+              {moreFromTopic.replace('{topic}', activeTopic.topicName)}
             </a>
           </>
         )}
