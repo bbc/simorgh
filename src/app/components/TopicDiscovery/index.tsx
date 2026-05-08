@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from 'react';
+import { useState, use } from 'react';
 import CurationGrid from '#app/components/Curation/CurationGrid';
 import useViewTracker from '#app/hooks/useViewTracker';
 import useClickTrackerHandler from '#app/hooks/useClickTrackerHandler';
@@ -14,7 +14,6 @@ type TopicDiscoveryProps = {
 };
 
 const HEADING_ID = 'topic-discovery-heading';
-const FETCH_ROOT_MARGIN = '200px 0px';
 
 const eventTrackingData = {
   componentName: 'topic-discovery',
@@ -23,37 +22,11 @@ const eventTrackingData = {
 const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
   const { topicDiscovery } = translations;
-  const [isNearViewport, setIsNearViewport] = useState(false);
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
   const { topicPromos, isLoading } = useFetchTopicPromos({
     activeTabId,
-    isNearViewport,
   });
-
-  useEffect(() => {
-    if (isNearViewport) return undefined;
-
-    const sectionElement = document.getElementById('topic-discovery-component');
-
-    if (!sectionElement) return undefined;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsNearViewport(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: FETCH_ROOT_MARGIN },
-    );
-
-    observer.observe(sectionElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [isNearViewport]);
 
   const viewTracker = useViewTracker(eventTrackingData);
 

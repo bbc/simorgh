@@ -15,25 +15,12 @@ import TopicDiscovery from '.';
 
 jest.mock('./useFetchTopicPromos');
 
-const createIntersectionObserverMock = () =>
-  jest.fn(callback => ({
-    observe: jest.fn(() => {
-      callback([{ isIntersecting: true }]);
-    }),
-    disconnect: jest.fn(),
-    unobserve: jest.fn(),
-    takeRecords: jest.fn(),
-  }));
-
 describe('TopicDiscovery', () => {
   const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
     typeof useFetchTopicPromos
   >;
 
   beforeEach(() => {
-    global.IntersectionObserver =
-      createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
-
     mockUseFetchTopicPromos.mockReturnValue({
       topicPromos:
         multipleTopicsFixture[topicTagsFixture[0].topicId].data.items,
