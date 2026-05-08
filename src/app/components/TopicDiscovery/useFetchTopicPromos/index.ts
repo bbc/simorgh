@@ -7,12 +7,13 @@ import { TopicDiscoveryItem } from '../types';
 
 const { WEB_CDN_URL } = getEnvConfig();
 
+const FETCH_ROOT_MARGIN = '200px 0px';
+
 type Props = {
   activeTabId: TopicTag['topicId'];
-  isNearViewport: boolean;
 };
 
-const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
+const useFetchTopicPromos = ({ activeTabId }: Props) => {
   const { service, variant } = use(RequestContext);
 
   const promosCacheRef = useRef<
@@ -20,6 +21,31 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
   >({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    if (isNearViewport) return undefined;
+
+    const sectionElement = document.getElementById('topic-discovery-component');
+
+    if (!sectionElement) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: FETCH_ROOT_MARGIN },
+    );
+
+    observer.observe(sectionElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isNearViewport]);
 
   useEffect(() => {
     if (!isNearViewport) return undefined;

@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import {
+  act,
   renderHook,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
@@ -15,6 +16,41 @@ jest.mock('#app/lib/utilities/getEnvConfig', () => ({
 }));
 
 const mockFetch = jest.fn();
+
+const TOPIC_DISCOVERY_COMPONENT_ID = 'topic-discovery-component';
+
+let intersectionObserverCallback: IntersectionObserverCallback | undefined;
+
+const triggerIntersectionObserver = (isIntersecting = true) => {
+  const callback = intersectionObserverCallback;
+
+  if (!callback) return;
+
+  act(() => {
+    callback(
+      [{ isIntersecting } as IntersectionObserverEntry],
+      {} as IntersectionObserver,
+    );
+  });
+};
+
+const addTopicDiscoveryElementToDom = () => {
+  const sectionElement = document.createElement('div');
+  sectionElement.id = TOPIC_DISCOVERY_COMPONENT_ID;
+  document.body.appendChild(sectionElement);
+};
+
+const createIntersectionObserverMock = () =>
+  jest.fn(callback => {
+    intersectionObserverCallback = callback;
+
+    return {
+      observe: jest.fn(),
+      disconnect: jest.fn(),
+      unobserve: jest.fn(),
+      takeRecords: jest.fn(),
+    };
+  });
 
 const createWrapper = (variant?: Variants) => {
   const Wrapper = ({ children }: PropsWithChildren) => (
@@ -40,16 +76,23 @@ describe('useFetchTopicPromos', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
+    intersectionObserverCallback = undefined;
+
+    global.IntersectionObserver =
+      createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
+
     global.fetch = mockFetch;
+
+    addTopicDiscoveryElementToDom();
+  });
+
+  afterEach(() => {
+    document.body.innerHTML = '';
   });
 
   it('does not fetch promos before the component is near viewport', () => {
     const { result } = renderHook(
-      () =>
-        useFetchTopicPromos({
-          activeTabId: topicIdA,
-          isNearViewport: false,
-        }),
+      () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
 
@@ -65,13 +108,11 @@ describe('useFetchTopicPromos', () => {
     });
 
     const { result } = renderHook(
-      () =>
-        useFetchTopicPromos({
-          activeTabId: topicIdA,
-          isNearViewport: true,
-        }),
+      () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
+
+    triggerIntersectionObserver();
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
@@ -95,16 +136,11 @@ describe('useFetchTopicPromos', () => {
       json: async () => ({ data: { items: topicItemsA } }),
     });
 
-    renderHook(
-      () =>
-        useFetchTopicPromos({
-          activeTabId: topicIdA,
-          isNearViewport: true,
-        }),
-      {
-        wrapper: createWrapper('cyr'),
-      },
-    );
+    renderHook(() => useFetchTopicPromos({ activeTabId: topicIdA }), {
+      wrapper: createWrapper('cyr'),
+    });
+
+    triggerIntersectionObserver();
 
     await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
 
@@ -126,16 +162,14 @@ describe('useFetchTopicPromos', () => {
       });
 
     const { result, rerender } = renderHook(
-      ({ activeTabId }) =>
-        useFetchTopicPromos({
-          activeTabId,
-          isNearViewport: true,
-        }),
+      ({ activeTabId }) => useFetchTopicPromos({ activeTabId }),
       {
         initialProps: { activeTabId: topicIdA },
         wrapper: createWrapper(),
       },
     );
+
+    triggerIntersectionObserver();
 
     await waitFor(() =>
       expect(result.current.topicPromos).toEqual(topicItemsA),
@@ -174,13 +208,11 @@ describe('useFetchTopicPromos', () => {
     });
 
     const { result } = renderHook(
-      () =>
-        useFetchTopicPromos({
-          activeTabId: topicIdA,
-          isNearViewport: true,
-        }),
+      () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
+
+    triggerIntersectionObserver();
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
@@ -200,13 +232,11 @@ describe('useFetchTopicPromos', () => {
     );
 
     const { unmount } = renderHook(
-      () =>
-        useFetchTopicPromos({
-          activeTabId: topicIdA,
-          isNearViewport: true,
-        }),
+      () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
+
+    triggerIntersectionObserver();
 
     unmount();
 
