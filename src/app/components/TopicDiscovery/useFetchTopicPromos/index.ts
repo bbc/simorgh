@@ -3,28 +3,28 @@ import { TopicTag } from '#app/models/types/metadata';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OK } from '#app/lib/statusCodes.const';
-import { TopicDiscoveryItem } from './types';
+import { TopicDiscoveryItem } from '../types';
+
+const { WEB_CDN_URL } = getEnvConfig();
 
 type Props = {
   activeTabId: TopicTag['topicId'];
   isNearViewport: boolean;
 };
 
-const { WEB_CDN_URL } = getEnvConfig();
-
 const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
   const { service, variant } = use(RequestContext);
 
-  const promosCacheRef = useRef<Record<string, TopicDiscoveryItem[]>>({});
+  const promosCacheRef = useRef<
+    Record<TopicTag['topicId'], TopicDiscoveryItem[]>
+  >({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!isNearViewport) return undefined;
 
-    let isActive = true;
-
-    const cachedPromos = promosCacheRef.current[activeTabId];
+    const cachedPromos = promosCacheRef?.current?.[activeTabId];
 
     if (cachedPromos) {
       setTopicPromos(cachedPromos);
@@ -43,43 +43,31 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
 
         const response = await fetch(fetchUrl);
         const { status } = response;
-        const { data } = await response.json();
 
-        if (status === OK) return data;
+        if (status === OK) {
+          const { data } = await response.json();
+          return data;
+        }
 
-        return null;
+        return [];
       };
 
       try {
         fetchTopicPromos().then(fetchedTopicPromos => {
-          if (!isActive) return;
-
           promosCacheRef.current[activeTabId] = fetchedTopicPromos;
           setTopicPromos(fetchedTopicPromos);
           setIsLoading(false);
         });
       } catch (error) {
-        if (!isActive) return undefined;
-
         setTopicPromos([]);
         setIsLoading(false);
       }
     }
 
-    return () => {
-      isActive = false;
-    };
+    return undefined;
   }, [activeTabId, isNearViewport, service, variant]);
 
-  const getHasCachedPromos = (topicId: TopicTag['topicId']) =>
-    Boolean(promosCacheRef.current[topicId]);
-
-  return {
-    topicPromos,
-    isLoading,
-    setIsLoading,
-    getHasCachedPromos,
-  };
+  return { topicPromos, isLoading };
 };
 
 export default useFetchTopicPromos;
