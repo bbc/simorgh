@@ -2,7 +2,6 @@ import {
   render,
   screen,
   fireEvent,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
@@ -10,8 +9,11 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
-import { topicTagsFixture } from './fixtures';
-import TopicDiscovery, { FAKE_FETCH_DELAY_MS } from '.';
+import { topicTagsFixture, multipleTopicsFixture } from './fixtures';
+import useFetchTopicPromos from './useFetchTopicPromos';
+import TopicDiscovery from '.';
+
+jest.mock('./useFetchTopicPromos');
 
 const topics = [
   { topicId: '1', topicName: 'Topic1', topicUrl: '/topics/climate' },
@@ -29,9 +31,19 @@ const createIntersectionObserverMock = () =>
   }));
 
 describe('TopicDiscovery', () => {
+  const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
+    typeof useFetchTopicPromos
+  >;
+
   beforeEach(() => {
     global.IntersectionObserver =
       createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
+
+    mockUseFetchTopicPromos.mockReturnValue({
+      topicPromos:
+        multipleTopicsFixture[topicTagsFixture[0].topicId].data.items,
+      isLoading: false,
+    });
   });
 
   afterEach(() => {
@@ -158,48 +170,6 @@ describe('TopicDiscovery', () => {
       </ServiceContext.Provider>,
     );
     await screen.findByText('More from Topic1');
-  });
-
-  it('should use cached promos when switching back to previously visited tabs', async () => {
-    jest.useFakeTimers();
-
-    const setTimeoutSpy = jest.spyOn(global, 'setTimeout');
-    const getFetchTimeoutCallCount = () =>
-      setTimeoutSpy.mock.calls.filter(
-        ([, delay]) => delay === FAKE_FETCH_DELAY_MS,
-      ).length;
-
-    render(<TopicDiscovery topics={topicTagsFixture} />, {
-      service: 'portuguese',
-    });
-
-    expect(getFetchTimeoutCallCount()).toBe(1);
-
-    await act(async () => {
-      jest.advanceTimersByTime(FAKE_FETCH_DELAY_MS);
-    });
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[1].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
-
-    await act(async () => {
-      jest.advanceTimersByTime(FAKE_FETCH_DELAY_MS);
-    });
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[0].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[1].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
   });
 
   it('should not render when there are no valid topics', () => {
