@@ -76,7 +76,7 @@ describe('useFetchTopicPromos', () => {
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     const [fetchUrl] = mockFetch.mock.calls[0];
-    const requestUrl = fetchUrl as URL;
+    const requestUrl = new URL(fetchUrl as string);
 
     expect(mockFetch).toHaveBeenCalledTimes(1);
     expect(requestUrl.toString()).toContain(
@@ -109,7 +109,7 @@ describe('useFetchTopicPromos', () => {
     await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
 
     const [fetchUrl] = mockFetch.mock.calls[0];
-    const requestUrl = fetchUrl as URL;
+    const requestUrl = new URL(fetchUrl as string);
 
     expect(requestUrl.searchParams.get('variant')).toBe('cyr');
   });

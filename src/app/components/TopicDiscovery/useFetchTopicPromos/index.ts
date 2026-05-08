@@ -30,38 +30,34 @@ const useFetchTopicPromos = ({ activeTabId, isNearViewport }: Props) => {
       setTopicPromos(cachedPromos);
       setIsLoading(false);
     } else {
+      const fetchUrl = new URL(`${WEB_CDN_URL}/fd/simorgh-bff`);
+
+      fetchUrl.searchParams.append('onwardJourney', 'topicDiscovery');
+      fetchUrl.searchParams.append('service', service);
+      fetchUrl.searchParams.append('id', activeTabId);
+
+      if (variant) fetchUrl.searchParams.append('variant', variant);
+
       const fetchTopicPromos = async () => {
-        const fetchUrl = new URL(`${WEB_CDN_URL}/fd/simorgh-bff`);
-
-        fetchUrl.searchParams.append('onwardJourney', 'topicDiscovery');
-        fetchUrl.searchParams.append('service', service);
-        fetchUrl.searchParams.append('id', activeTabId);
-
-        if (variant) fetchUrl.searchParams.append('variant', variant);
-
         setIsLoading(true);
 
-        const response = await fetch(fetchUrl);
-        const { status } = response;
+        try {
+          const response = await fetch(fetchUrl.toString());
 
-        if (status === OK) {
-          const { data } = await response.json();
-          return data;
+          if (response.status === OK) {
+            const { data } = await response.json();
+
+            promosCacheRef.current[activeTabId] = data;
+            setTopicPromos(data);
+            setIsLoading(false);
+          }
+        } catch (error) {
+          setTopicPromos([]);
+          setIsLoading(false);
         }
-
-        return [];
       };
 
-      try {
-        fetchTopicPromos().then(fetchedTopicPromos => {
-          promosCacheRef.current[activeTabId] = fetchedTopicPromos;
-          setTopicPromos(fetchedTopicPromos);
-          setIsLoading(false);
-        });
-      } catch (error) {
-        setTopicPromos([]);
-        setIsLoading(false);
-      }
+      fetchTopicPromos();
     }
 
     return undefined;
