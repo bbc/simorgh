@@ -1,4 +1,11 @@
-const { writeFileSync, mkdirSync, existsSync, readFileSync } = require('fs');
+const {
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+  readFileSync,
+  readdirSync,
+  statSync,
+} = require('fs');
 const { join, dirname } = require('path');
 
 const PLUGIN_NAME = 'DevCssExtractPlugin';
@@ -6,6 +13,15 @@ const OUTPUT_FILE = 'build/dev-css-modules.css';
 const CACHE_FILE = 'build/dev-css-modules-cache.json';
 
 const CSS_CONTENT_REGEX = /\.push\(\[module\.id, "((?:[^"\\]|\\.)*)"[^)]*\)/s;
+const CSS_CONTENT_GLOBAL_REGEX =
+  /\.push\(\[module\.id, "((?:[^"\\]|\\.)*)"[^)]*\)/gs;
+
+const decodeCss = css =>
+  css
+    .replace(/\\n/g, '\n')
+    .replace(/\\t/g, '\t')
+    .replace(/\\"/g, '"')
+    .replace(/\\\\/g, '\\');
 
 const extractCssFromModule = mod => {
   const resource = mod.resource || mod.userRequest || '';
@@ -17,11 +33,36 @@ const extractCssFromModule = mod => {
   const match = sourceValue.match(CSS_CONTENT_REGEX);
   if (!match) return null;
 
-  return match[1]
-    .replace(/\\n/g, '\n')
-    .replace(/\\t/g, '\t')
-    .replace(/\\"/g, '"')
-    .replace(/\\\\/g, '\\');
+  return decodeCss(match[1]);
+};
+
+const getJsFilesRecursively = dirPath => {
+  if (!existsSync(dirPath)) return [];
+
+  return readdirSync(dirPath).flatMap(entry => {
+    const absolutePath = join(dirPath, entry);
+    const stats = statSync(absolutePath);
+
+    if (stats.isDirectory()) {
+      return getJsFilesRecursively(absolutePath);
+    }
+
+    return absolutePath.endsWith('.js') ? [absolutePath] : [];
+  });
+};
+
+const extractCssFromBuildArtifacts = buildDevPath => {
+  const jsFiles = getJsFilesRecursively(buildDevPath);
+
+  return jsFiles.flatMap(filePath => {
+    const source = readFileSync(filePath, 'utf-8');
+    const matches = [...source.matchAll(CSS_CONTENT_GLOBAL_REGEX)];
+
+    return matches.map((match, index) => [
+      `${filePath}::${index}`,
+      decodeCss(match[1]),
+    ]);
+  });
 };
 
 class DevCssExtractPlugin {
@@ -32,6 +73,7 @@ class DevCssExtractPlugin {
   apply(compiler) {
     const outputPath = join(compiler.context, OUTPUT_FILE);
     const cachePath = join(compiler.context, CACHE_FILE);
+    const buildDevPath = join(compiler.context, 'build/dev');
 
     if (existsSync(cachePath)) {
       try {
@@ -47,8 +89,6 @@ class DevCssExtractPlugin {
     const { cssMap } = this;
 
     compiler.hooks.afterCompile.tap(PLUGIN_NAME, compilation => {
-      if (compiler.name === 'server') return;
-
       [...compilation.modules].forEach(mod => {
         const css = extractCssFromModule(mod);
         const resource = mod.resource || mod.userRequest || '';
@@ -56,6 +96,16 @@ class DevCssExtractPlugin {
           cssMap.set(resource, css);
         }
       });
+
+      // In dev, first route render can happen before module sources include CSS payloads.
+      // Fallback to scanning emitted JS chunks so AMP/Lite CSS exists on first load.
+      if (cssMap.size === 0 || !existsSync(outputPath)) {
+        extractCssFromBuildArtifacts(buildDevPath).forEach(([key, css]) => {
+          if (css) {
+            cssMap.set(key, css);
+          }
+        });
+      }
 
       if (cssMap.size === 0) return;
 
