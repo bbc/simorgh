@@ -28,7 +28,6 @@ const SERVICES_WITH_NEW_NAV: Services[] = [
   'portuguese',
   'punjabi',
   'romania',
-  'russian',
   'serbian',
   'sinhala',
   'somali',
