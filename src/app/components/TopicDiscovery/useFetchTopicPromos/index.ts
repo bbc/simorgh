@@ -3,11 +3,13 @@ import { TopicTag } from '#app/models/types/metadata';
 import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OK } from '#app/lib/statusCodes.const';
+import useNearViewport from '#app/hooks/useNearViewport';
 import { TopicDiscoveryItem } from '../types';
 
 const { WEB_CDN_URL } = getEnvConfig();
 
 const FETCH_ROOT_MARGIN = '200px 0px';
+const TOPIC_DISCOVERY_COMPONENT_ID = 'topic-discovery-component';
 
 type Props = {
   activeTabId: TopicTag['topicId'];
@@ -21,31 +23,11 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
   >({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isNearViewport, setIsNearViewport] = useState(false);
 
-  useEffect(() => {
-    if (isNearViewport) return undefined;
-
-    const sectionElement = document.getElementById('topic-discovery-component');
-
-    if (!sectionElement) return undefined;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsNearViewport(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: FETCH_ROOT_MARGIN },
-    );
-
-    observer.observe(sectionElement);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [isNearViewport]);
+  const isNearViewport = useNearViewport({
+    elementId: TOPIC_DISCOVERY_COMPONENT_ID,
+    rootMargin: FETCH_ROOT_MARGIN,
+  });
 
   useEffect(() => {
     if (!isNearViewport) return undefined;

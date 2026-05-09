@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react';
 import {
-  act,
   renderHook,
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
 import { Variants } from '#app/models/types/global';
+import useNearViewport from '#app/hooks/useNearViewport';
 import { multipleTopicsFixture } from '../fixtures';
 import useFetchTopicPromos from '.';
 
@@ -15,42 +15,13 @@ jest.mock('#app/lib/utilities/getEnvConfig', () => ({
   })),
 }));
 
+jest.mock('#app/hooks/useNearViewport');
+
 const mockFetch = jest.fn();
 
-const TOPIC_DISCOVERY_COMPONENT_ID = 'topic-discovery-component';
-
-let intersectionObserverCallback: IntersectionObserverCallback | undefined;
-
-const triggerIntersectionObserver = (isIntersecting = true) => {
-  const callback = intersectionObserverCallback;
-
-  if (!callback) return;
-
-  act(() => {
-    callback(
-      [{ isIntersecting } as IntersectionObserverEntry],
-      {} as IntersectionObserver,
-    );
-  });
-};
-
-const addTopicDiscoveryElementToDom = () => {
-  const sectionElement = document.createElement('div');
-  sectionElement.id = TOPIC_DISCOVERY_COMPONENT_ID;
-  document.body.appendChild(sectionElement);
-};
-
-const createIntersectionObserverMock = () =>
-  jest.fn(callback => {
-    intersectionObserverCallback = callback;
-
-    return {
-      observe: jest.fn(),
-      disconnect: jest.fn(),
-      unobserve: jest.fn(),
-      takeRecords: jest.fn(),
-    };
-  });
+const mockUseNearViewport = useNearViewport as jest.MockedFunction<
+  typeof useNearViewport
+>;
 
 const createWrapper = (variant?: Variants) => {
   const Wrapper = ({ children }: PropsWithChildren) => (
@@ -75,19 +46,9 @@ describe('useFetchTopicPromos', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-
-    intersectionObserverCallback = undefined;
-
-    global.IntersectionObserver =
-      createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
+    mockUseNearViewport.mockReturnValue(false);
 
     global.fetch = mockFetch;
-
-    addTopicDiscoveryElementToDom();
-  });
-
-  afterEach(() => {
-    document.body.innerHTML = '';
   });
 
   it('does not fetch promos before the component is near viewport', () => {
@@ -102,6 +63,8 @@ describe('useFetchTopicPromos', () => {
   });
 
   it('fetches promos when near viewport and builds expected request URL', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
     mockFetch.mockResolvedValue({
       status: 200,
       json: async () => ({ data: { items: topicItemsA } }),
@@ -111,8 +74,6 @@ describe('useFetchTopicPromos', () => {
       () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
-
-    triggerIntersectionObserver();
 
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
@@ -131,6 +92,8 @@ describe('useFetchTopicPromos', () => {
   });
 
   it('includes variant query parameter when variant exists in RequestContext', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
     mockFetch.mockResolvedValue({
       status: 200,
       json: async () => ({ data: { items: topicItemsA } }),
@@ -139,8 +102,6 @@ describe('useFetchTopicPromos', () => {
     renderHook(() => useFetchTopicPromos({ activeTabId: topicIdA }), {
       wrapper: createWrapper('cyr'),
     });
-
-    triggerIntersectionObserver();
 
     await waitFor(() => expect(mockFetch).toHaveBeenCalledTimes(1));
 
@@ -151,6 +112,8 @@ describe('useFetchTopicPromos', () => {
   });
 
   it('reuses cached promos when returning to a previously fetched tab', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
     mockFetch
       .mockResolvedValueOnce({
         status: 200,
@@ -168,8 +131,6 @@ describe('useFetchTopicPromos', () => {
         wrapper: createWrapper(),
       },
     );
-
-    triggerIntersectionObserver();
 
     await waitFor(() =>
       expect(result.current.topicPromos).toEqual(topicItemsA),
@@ -203,6 +164,8 @@ describe('useFetchTopicPromos', () => {
   });
 
   it('should set topicPromos to an empty array and isLoading to false when fetch response is not ok', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
     mockFetch.mockResolvedValue({
       status: 500,
     });
@@ -212,14 +175,14 @@ describe('useFetchTopicPromos', () => {
       { wrapper: createWrapper() },
     );
 
-    triggerIntersectionObserver();
-
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.topicPromos).toEqual([]);
   });
 
   it('should abort fetch request when component unmounts', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
     const abortController = new AbortController();
 
     mockFetch.mockImplementation(
@@ -235,8 +198,6 @@ describe('useFetchTopicPromos', () => {
       () => useFetchTopicPromos({ activeTabId: topicIdA }),
       { wrapper: createWrapper() },
     );
-
-    triggerIntersectionObserver();
 
     unmount();
 
