@@ -1,4 +1,3 @@
-import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import ThemeProvider from '#app/components/ThemeProvider';
 import { PageTypes, Services } from '#app/models/types/global';
@@ -57,14 +56,12 @@ const ComponentWithContext = ({
         >
           <UserContextProvider>
             <ThemeProvider service={service}>
-              <MemoryRouter>
-                <Page
-                  pageData={{
-                    ...data.article,
-                    secondaryColumn: data.secondaryData,
-                  }}
-                />
-              </MemoryRouter>
+              <Page
+                pageData={{
+                  ...data.article,
+                  secondaryColumn: data.secondaryData,
+                }}
+              />
             </ThemeProvider>
           </UserContextProvider>
         </RequestContextProvider>

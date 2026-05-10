@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '#app/models/types/storybook';
 import koreanAudioResponse from '#data/korean/bbc_korean_radio/w3ct1vk5.json';
 import gahuzaAudioResponse from '#data/gahuza/bbc_gahuza_radio/p02pcb5c.json';
@@ -55,15 +54,9 @@ const onDemandAudioFixtures = {
   portuguese,
 };
 
-const Component = ({ service }: StoryProps) => {
-  return (
-    <BrowserRouter>
-      <OnDemandAudioPage
-        pageData={onDemandAudioFixtures[service] || gahuza}
-      />
-    </BrowserRouter>
-  );
-};
+const Component = ({ service }: StoryProps) => (
+  <OnDemandAudioPage pageData={onDemandAudioFixtures[service] || gahuza} />
+);
 
 export default {
   Component,

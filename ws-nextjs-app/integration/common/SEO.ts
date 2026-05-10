@@ -170,7 +170,7 @@ export default () => {
       );
 
       schemaScripts.forEach(script => {
-        const scriptContent = JSON.parse(script.textContent);
+        const scriptContent = JSON.parse(script?.textContent || '{}');
 
         it('should be in the document', () => {
           expect(script).toBeInTheDocument();

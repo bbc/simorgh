@@ -4,7 +4,6 @@ import Url from 'url-parse';
 import { HOME_PAGE } from '#app/routes/utils/pageTypes';
 import { Curation } from '#app/models/types/curationData';
 import { Services } from '#app/models/types/global';
-import { MemoryRouter } from 'react-router-dom';
 import { StoryArgs, StoryProps } from '../../models/types/storybook';
 import HomePage from '.';
 
@@ -62,18 +61,16 @@ const Component = ({ service, variant, isLite }: StoryProps) => {
   }
 
   return (
-    <MemoryRouter>
-      <HomePage
-        service={service}
-        variant={variant}
-        pageType={HOME_PAGE}
-        status={200}
-        isAmp={false}
-        isLite={isLite}
-        pathname={`/${service}`}
-        pageData={pageData}
-      />
-    </MemoryRouter>
+    <HomePage
+      service={service}
+      variant={variant}
+      pageType={HOME_PAGE}
+      status={200}
+      isAmp={false}
+      isLite={isLite}
+      pathname={`/${service}`}
+      pageData={pageData}
+    />
   );
 };
 
