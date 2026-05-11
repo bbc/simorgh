@@ -35,7 +35,6 @@ import { suppressPropWarnings } from '#app/legacy/psammead/psammead-test-helpers
 import { Services } from '#app/models/types/global';
 import { Curation } from '#app/models/types/curationData';
 import { Article, OptimoBlock } from '#app/models/types/optimo';
-import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import isLive from '#lib/utilities/isLive';
@@ -122,13 +121,15 @@ const Context = ({
       <ThemeProvider service={service} variant="default">
         <ToggleContextProvider
           toggles={{
-            mostRead: {
-              enabled: mostReadToggledOn,
-            },
-            ads: {
-              enabled: adsToggledOn,
-            },
+            mostRead: { enabled: mostReadToggledOn },
+            ads: { enabled: adsToggledOn },
             podcastPromo: { enabled: promo != null },
+            eventTracking: { enabled: false },
+            preloadLeadImage: { enabled: false },
+            topBarOJs: { enabled: false },
+            articlePortraitVideo: { enabled: false },
+            articleVideoCuration: { enabled: false },
+            continueReadingButton: { enabled: false },
           }}
         >
           <RequestContextProvider {...appInput}>
@@ -151,8 +152,6 @@ afterEach(() => {
 });
 
 describe('Article Page', () => {
-  const mockUseOptimizelyVariation = useOptimizelyVariation as jest.Mock;
-
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -1023,16 +1022,7 @@ describe('Article Page', () => {
     });
   });
 
-  describe('Adaptive media curation', () => {
-    beforeEach(() => {
-      // force the article tod2 variant in these tests so adaptive curation can render.
-      mockUseOptimizelyVariation.mockReturnValue('adaptive_variation');
-    });
-
-    afterEach(() => {
-      mockUseOptimizelyVariation.mockReset();
-    });
-
+  describe('Media curation', () => {
     const mediaCurationFixture: Curation = {
       title: 'वीडियो',
       visualProminence: 'NORMAL',
@@ -1083,9 +1073,11 @@ describe('Article Page', () => {
 
     it('renders media curation after related content when related content is present', () => {
       const { queryByTestId, container } = render(
-        <Context service="hindi">
-          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
-        </Context>,
+        <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: true } },
+        },
       );
 
       const relatedContentSection = container.querySelector(
@@ -1102,32 +1094,28 @@ describe('Article Page', () => {
       ).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
     });
 
-    it.skip('passes the active experiment to ati analytics when the adaptive variant is on', () => {
-      render(
-        <Context service="hindi">
-          <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />
-        </Context>,
+    it('does not render media curation when toggle is off, even if data is present', () => {
+      const { queryByTestId } = render(
+        <ArticlePage pageData={pageDataWithMediaCurationAndRelatedContent} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: false } },
+        },
       );
 
-      expect(atiAnalyticsSpy).toHaveBeenCalledWith(
-        expect.objectContaining({
-          atiData: expect.objectContaining({
-            experimentName: 'newswb_ws_tod_article_2',
-            experimentVariant: 'adaptive_variation',
-          }),
-        }),
-        undefined,
-      );
+      expect(queryByTestId('media-curation')).not.toBeInTheDocument();
     });
 
     it('does not render media curation when data is missing', () => {
       const { queryByTestId } = render(
-        <Context service="hindi">
-          <ArticlePage pageData={articleDataHindi} />
-        </Context>,
+        <ArticlePage pageData={articleDataHindi} />,
+        {
+          service: 'hindi',
+          toggles: { articleVideoCuration: { enabled: true } },
+        },
       );
 
-      expect(queryByTestId('adaptive-media-curation')).not.toBeInTheDocument();
+      expect(queryByTestId('media-curation')).not.toBeInTheDocument();
     });
   });
 
