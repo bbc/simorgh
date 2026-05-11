@@ -1,5 +1,5 @@
 import { LIVE_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import mediaPlayerTests from './mediaPlayer';
 import pageVisit from './pageVisit';
 import keyPoints from './keyPoints';

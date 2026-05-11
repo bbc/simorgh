@@ -1,5 +1,5 @@
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import { assertPageView } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/assertions';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import runTestsForPage, {
   TestDataType,
 } from '../../../support/helpers/runTestsForPage';
