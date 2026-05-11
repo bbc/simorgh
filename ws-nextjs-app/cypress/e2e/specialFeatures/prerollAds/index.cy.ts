@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import path from 'ramda/src/path';
 import getAppEnv from '../../../support/helpers/getAppEnv';
 import { mapsWithPreroll, mapsWithoutPreroll } from './config';
