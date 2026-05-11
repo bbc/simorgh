@@ -509,9 +509,10 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
                   title={mediaCurationContent?.title}
                   position={mediaCurationContent?.position || 0}
                   curationId={mediaCurationContent?.curationId}
-                  curationLength={mediaCurationContent?.summaries?.length || 0}
+                  curationLength={1}
                   link={mediaCurationContent?.link}
                   curationContentType="video"
+                  pageType={pageType}
                 />
               </div>
             </div>

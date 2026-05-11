@@ -70,6 +70,7 @@ interface CurationProps extends Curation {
   // keep this local so we do not change the shared bff curation data shape
   experimentProps?: ComponentExperimentProps;
   curationContentType?: string;
+  pageType?: string;
 }
 
 export default ({
@@ -91,6 +92,7 @@ export default ({
   mediaCollection,
   experimentProps,
   curationContentType,
+  pageType,
 }: CurationProps) => {
   const componentName = getComponentName({
     visualStyle,
@@ -255,7 +257,10 @@ export default ({
         const curationSubheadingClickTracker =
           useClickTrackerHandler(eventTrackingData);
 
-        return curationLength > 1 ? (
+        // Show heading if more than one curation, or if only one and pageType is 'article'
+        const shouldShowHeading = curationLength > 1 || pageType === 'article';
+
+        return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
               {curationSubheading &&
@@ -274,7 +279,7 @@ export default ({
                 ))}
               <GridComponent
                 summaries={summaries}
-                headingLevel={3}
+                headingLevel={curationLength > 1 ? 3 : 2}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
               />
@@ -284,7 +289,7 @@ export default ({
           <div {...viewTracker}>
             <GridComponent
               summaries={summaries}
-              headingLevel={2} // if there is only one curation, all promos should be h2, and no subheading
+              headingLevel={2}
               isFirstCuration={isFirstCuration}
               eventTrackingData={eventTrackingData}
             />
