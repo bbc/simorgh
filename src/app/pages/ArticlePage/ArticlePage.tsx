@@ -409,7 +409,6 @@ const ArticlePage = ({
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
   const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   const showRelatedTopicsComponent = Boolean(
