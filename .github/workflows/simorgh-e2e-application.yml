@@ -1,4 +1,4 @@
-name: Cypress E2E - NextJS
+name: Cypress E2E - Application
 on:
   pull_request:
     branches:

@@ -1,4 +1,4 @@
-name: Cypress E2E - NextJS
+name: Cypress E2E - Page Types
 on:
   pull_request:
     branches:
