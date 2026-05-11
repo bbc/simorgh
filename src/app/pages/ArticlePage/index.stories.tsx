@@ -87,6 +87,7 @@ const ComponentWithContext = ({
         podcastPromo: { enabled: podcastEnabled },
         electionBanner: { enabled: electionBanner },
         articleLiteSiteLink: { enabled: articleLiteSiteLinkEnabled },
+        articleVideoCuration: { enabled: true },
       }}
     >
       {/* Service set to news to enable most read. Article data is in english */}
