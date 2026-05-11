@@ -131,11 +131,9 @@ describe('useUASButton', () => {
         await result.current.handleSaveAction(UASAction.REMOVE);
       });
 
-      expect(mockUasApiRequest).toHaveBeenCalledWith(
-        'DELETE',
-        'favourites',
-        expect.objectContaining({ globalId: expect.any(String) }),
-      );
+      expect(mockUasApiRequest).toHaveBeenCalledWith('DELETE', 'favourites', {
+        globalId: 'urn:bbc:articles:article:123',
+      });
     });
 
     it('updates query cache to unsaved on successful remove', async () => {
