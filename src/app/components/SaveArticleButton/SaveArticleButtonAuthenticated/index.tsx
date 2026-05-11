@@ -4,12 +4,8 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import SaveButton from '#app/components/SaveButton';
-import { Article } from '#app/models/types/optimo';
 
-export interface SaveArticleButtonProps {
-  articleTitle: string;
-  articlePageData?: Article;
-}
+import type { SaveArticleButtonProps } from '../index';
 
 const SaveArticleButtonAuthenticated = ({
   articleTitle,
