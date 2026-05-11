@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react';
 import useUASButton from '#app/hooks/useUASButton';
 import { render, screen } from '../react-testing-library-with-providers';
 import SaveArticleButton from './index';
@@ -8,7 +9,6 @@ const mockedUseUASButton = useUASButton as jest.Mock;
 
 describe('SaveArticleButton', () => {
   const defaultProps = {
-    articleId: '123',
     articleTitle: 'Test Article Title',
   };
 
@@ -23,6 +23,7 @@ describe('SaveArticleButton', () => {
       showButton: false,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -37,6 +38,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -49,6 +51,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: true,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -61,6 +64,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: true,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -76,6 +80,7 @@ describe('SaveArticleButton', () => {
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
@@ -86,19 +91,37 @@ describe('SaveArticleButton', () => {
     expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
   });
 
-  it('passes title to useUASButton hook', () => {
+  it('passes articleId and title to useUASButton hook', () => {
     mockedUseUASButton.mockReturnValue({
       showButton: true,
       isSaved: false,
       isLoading: false,
+      error: null,
       handleSaveAction: mockHandleSaveAction,
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
+    type ArticlePageData = ComponentProps<
+      typeof SaveArticleButton
+    >['articlePageData'];
+    const articlePageData: ArticlePageData = {
+      metadata: {
+        locators: {
+          canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+        },
+      },
+    } as ArticlePageData;
 
-    expect(mockedUseUASButton).toHaveBeenCalledWith({
-      articleId: '123',
-      articleTitle: 'Test Article Title',
-    });
+    render(
+      <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
+      { service: 'hindi' },
+    );
+
+    // Component extracts articleId from pathname using parseRoute
+    expect(mockedUseUASButton).toHaveBeenCalledWith(
+      expect.objectContaining({
+        articleTitle: 'Test Article Title',
+        articlePageData,
+      }),
+    );
   });
 });
