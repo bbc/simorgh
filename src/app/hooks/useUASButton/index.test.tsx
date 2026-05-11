@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { use } from 'react';
 import {
   renderHook,
@@ -23,18 +22,18 @@ const mockSetQueryData = jest.fn();
 
 jest.mock('@tanstack/react-query', () => {
   let capturedMutationConfig: {
-    mutationFn?: Function;
-    onSuccess?: Function;
-    onError?: Function;
+    mutationFn?: (action: string) => Promise<unknown>;
+    onSuccess?: (result: unknown, action: string) => void;
+    onError?: (error: unknown) => void;
   };
 
   return {
     ...jest.requireActual('@tanstack/react-query'),
     useQueryClient: () => ({ setQueryData: mockSetQueryData }),
     useMutation: (config: {
-      mutationFn?: Function;
-      onSuccess?: Function;
-      onError?: Function;
+      mutationFn?: (action: string) => Promise<unknown>;
+      onSuccess?: (result: unknown, action: string) => void;
+      onError?: (error: unknown) => void;
     }) => {
       capturedMutationConfig = config;
 
