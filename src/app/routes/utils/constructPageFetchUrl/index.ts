@@ -178,6 +178,7 @@ const constructPageFetchUrl = ({
   const env = getEnvironment(pathname);
   const isLocal = !env || env === 'local';
   const id = getId({ pageType, service, env, variant })(pathname);
+
   const capitalisedPageType =
     pageType.charAt(0).toUpperCase() + pageType.slice(1);
 
@@ -301,7 +302,9 @@ const constructPageFetchUrl = ({
       }
       case LIVE_RADIO_PAGE: {
         if (process.env?.NEXTJS) {
-          fetchUrl = Url(`${host}${port}/api/local${pathname}`);
+          fetchUrl = Url(
+            `${host}${port}/api/local${removeRendererExtension(pathname)}`,
+          );
         } else {
           fetchUrl = Url(`${pathname}`);
         }
