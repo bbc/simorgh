@@ -1,4 +1,4 @@
-import { use, useCallback } from 'react';
+import { use } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -23,7 +23,7 @@ interface UseUASButtonReturn {
   isSaved: boolean;
   isLoading: boolean;
   error: Error | null;
-  handleSaveAction: (action: UASAction) => Promise<void>;
+  handleSaveAction: (action: UASAction) => void;
 }
 export interface UseUASButtonProps {
   articleId: string;
@@ -72,16 +72,11 @@ const useUASButton = ({
     },
   });
 
-  const handleSaveAction = useCallback(
-    (action: UASAction) => mutation.mutateAsync(action),
-    [mutation],
-  );
-
   return {
     isSaved,
     isLoading: isLoading || mutation.isPending,
     error: mutation.error || error,
-    handleSaveAction,
+    handleSaveAction: mutation.mutate,
   };
 };
 
