@@ -196,7 +196,7 @@
     "cli-table": "0.3.11",
     "colors": "^1.4.0",
     "compression-webpack-plugin": "11.1.0",
-    "copy-webpack-plugin": "13.0.1",
+    "copy-webpack-plugin": "14.0.0",
     "crypto": "1.0.1",
     "cypress": "15.11.0",
     "cypress-axe": "1.7.0",
