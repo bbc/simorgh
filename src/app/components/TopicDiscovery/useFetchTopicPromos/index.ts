@@ -4,6 +4,7 @@ import { getEnvConfig } from '#app/lib/utilities/getEnvConfig';
 import { RequestContext } from '#app/contexts/RequestContext';
 import { OK } from '#app/lib/statusCodes.const';
 import useNearViewport from '#app/hooks/useNearViewport';
+import { ServiceContext } from '#app/contexts/ServiceContext';
 import { TopicDiscoveryItem } from '../types';
 
 const { WEB_CDN_URL } = getEnvConfig();
@@ -17,12 +18,17 @@ type Props = {
 
 const useFetchTopicPromos = ({ activeTabId }: Props) => {
   const { service, variant } = use(RequestContext);
+  const { translations } = use(ServiceContext);
+
+  const { fetchErrorMessage = 'Failed to load' } =
+    translations.topicDiscovery || {};
 
   const promosCacheRef = useRef<
     Record<TopicTag['topicId'], TopicDiscoveryItem[]>
   >({});
   const [topicPromos, setTopicPromos] = useState<TopicDiscoveryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   const isNearViewport = useNearViewport({
     elementId: TOPIC_DISCOVERY_COMPONENT_ID,
@@ -39,6 +45,7 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
     if (cachedPromos) {
       setTopicPromos(cachedPromos);
       setIsLoading(false);
+      setIsError(false);
     } else {
       const fetchUrl = new URL(`${WEB_CDN_URL}/fd/simorgh-bff`);
 
@@ -50,6 +57,7 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
 
       const fetchTopicPromos = async () => {
         setIsLoading(true);
+        setIsError(false);
 
         try {
           abortController = new AbortController();
@@ -63,13 +71,16 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
             promosCacheRef.current[activeTabId] = data?.items || [];
             setTopicPromos(data?.items || []);
             setIsLoading(false);
+            setIsError(false);
           } else {
             setTopicPromos([]);
             setIsLoading(false);
+            setIsError(true);
           }
         } catch (error) {
           setTopicPromos([]);
           setIsLoading(false);
+          setIsError(true);
         }
       };
 
@@ -79,9 +90,9 @@ const useFetchTopicPromos = ({ activeTabId }: Props) => {
     return () => {
       abortController?.abort();
     };
-  }, [activeTabId, isNearViewport, service, variant]);
+  }, [activeTabId, isNearViewport, service, variant, fetchErrorMessage]);
 
-  return { topicPromos, isLoading };
+  return { topicPromos, isLoading, isError };
 };
 
 export default useFetchTopicPromos;

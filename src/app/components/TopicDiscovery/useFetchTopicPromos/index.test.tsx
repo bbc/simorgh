@@ -4,6 +4,7 @@ import {
   waitFor,
 } from '#app/components/react-testing-library-with-providers';
 import { RequestContextProvider } from '#app/contexts/RequestContext';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import { Variants } from '#app/models/types/global';
 import useNearViewport from '#app/hooks/useNearViewport';
 import { multipleTopicsFixture } from '../fixtures';
@@ -25,14 +26,16 @@ const mockUseNearViewport = useNearViewport as jest.MockedFunction<
 
 const createWrapper = (variant?: Variants) => {
   const Wrapper = ({ children }: PropsWithChildren) => (
-    <RequestContextProvider
-      service="pidgin"
-      variant={variant}
-      pageType="article"
-      pathname=""
-    >
-      {children}
-    </RequestContextProvider>
+    <ServiceContextProvider service="pidgin" variant={variant}>
+      <RequestContextProvider
+        service="pidgin"
+        variant={variant}
+        pageType="article"
+        pathname=""
+      >
+        {children}
+      </RequestContextProvider>
+    </ServiceContextProvider>
   );
 
   return Wrapper;
@@ -60,6 +63,7 @@ describe('useFetchTopicPromos', () => {
     expect(mockFetch).not.toHaveBeenCalled();
     expect(result.current.topicPromos).toEqual([]);
     expect(result.current.isLoading).toBe(true);
+    expect(result.current.isError).toBe(false);
   });
 
   it('fetches promos when near viewport and builds expected request URL', async () => {
@@ -89,6 +93,7 @@ describe('useFetchTopicPromos', () => {
     expect(requestUrl.searchParams.get('id')).toBe(topicIdA);
     expect(requestUrl.searchParams.has('variant')).toBe(false);
     expect(result.current.topicPromos).toEqual(topicItemsA);
+    expect(result.current.isError).toBe(false);
   });
 
   it('includes variant query parameter when variant exists in RequestContext', async () => {
@@ -178,6 +183,23 @@ describe('useFetchTopicPromos', () => {
     await waitFor(() => expect(result.current.isLoading).toBe(false));
 
     expect(result.current.topicPromos).toEqual([]);
+    expect(result.current.isError).toBe(true);
+  });
+
+  it('should set an error message when fetch throws', async () => {
+    mockUseNearViewport.mockReturnValue(true);
+
+    mockFetch.mockRejectedValue(new Error('fetch failed'));
+
+    const { result } = renderHook(
+      () => useFetchTopicPromos({ activeTabId: topicIdA }),
+      { wrapper: createWrapper() },
+    );
+
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
+
+    expect(result.current.topicPromos).toEqual([]);
+    expect(result.current.isError).toBe(true);
   });
 
   it('should abort fetch request when component unmounts', async () => {
