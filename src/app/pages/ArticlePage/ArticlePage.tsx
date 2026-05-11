@@ -296,8 +296,6 @@ const ArticlePage = ({
 
   const hasByline = bylineLinkedData.length > 0;
 
-  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
-
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
     : null;
@@ -552,7 +550,6 @@ const ArticlePage = ({
           columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
           mobileDivider={showRelatedTopicsComponent}
         />
       )}
