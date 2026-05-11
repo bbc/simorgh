@@ -532,7 +532,6 @@ describe('Curation', () => {
   });
   it('should render the video curation grid for mediaCuration', () => {
     const { mediaCuration } = pidginArticlePage.data.secondaryData;
-    const spy = jest.spyOn(clickTracking, 'default');
 
     const { getByTestId, getByText } = render(
       <Curation
@@ -542,9 +541,10 @@ describe('Curation', () => {
         title={mediaCuration?.title}
         position={0}
         curationId={mediaCuration?.curationId}
-        curationLength={mediaCuration?.summaries?.length || 0}
+        curationLength={1}
         link={mediaCuration?.link}
         curationContentType="video"
+        pageType="article"
       />,
       {
         service: 'pidgin',
@@ -558,8 +558,30 @@ describe('Curation', () => {
     const grid = getByTestId('curation-grid-normal');
     const mediaIcons = grid.querySelectorAll('[data-e2e="media-icon"]');
     expect(mediaIcons.length).toBe(mediaCuration.summaries.length);
+  });
 
-    // Should call click tracker with correct eventTrackingData for video curation
+  it('should call click tracker with correct eventTrackingData for video curation', () => {
+    const { mediaCuration } = pidginArticlePage.data.secondaryData;
+    const spy = jest.spyOn(clickTracking, 'default');
+
+    render(
+      <Curation
+        visualStyle={VISUAL_STYLE.FEED}
+        visualProminence={VISUAL_PROMINENCE.NORMAL}
+        summaries={mediaCuration?.summaries}
+        title={mediaCuration?.title}
+        position={0}
+        curationId={mediaCuration?.curationId}
+        curationLength={1}
+        link={mediaCuration?.link}
+        curationContentType="video"
+        pageType="article"
+      />,
+      {
+        service: 'pidgin',
+      },
+    );
+
     expect(spy).toHaveBeenCalledWith(
       expect.objectContaining({
         componentName: 'video-curation-grid',
