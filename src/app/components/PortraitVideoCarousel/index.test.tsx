@@ -30,6 +30,24 @@ describe('PortraitVideoCarousel', () => {
     );
   });
 
+  it('Should render without a title', async () => {
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          title={undefined}
+          eventTrackingData={eventTrackingData}
+        />,
+      );
+    });
+
+    expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument();
+    expect(screen.getByTestId('portrait-video-carousel')).toHaveAttribute(
+      'aria-label',
+      'Portrait video carousel',
+    );
+  });
+
   it('Should render the PortraitCarouselNavigation component', async () => {
     await act(async () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
