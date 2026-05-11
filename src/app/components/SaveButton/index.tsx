@@ -1,4 +1,4 @@
-import { useState, HTMLAttributes } from 'react';
+import { useState } from 'react';
 import {
   Spinner,
   BookmarkIcon,
