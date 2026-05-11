@@ -271,6 +271,9 @@ const ArticlePage = ({
   const { enabled: articlePortraitVideoEnabled } = useToggle(
     'articlePortraitVideo',
   );
+  const { enabled: articleVideoCurationEnabled } = useToggle(
+    'articleVideoCuration',
+  );
 
   const headline = getHeadline(pageData) ?? '';
   const description = getSummary(pageData) || getHeadline(pageData);
@@ -419,13 +422,13 @@ const ArticlePage = ({
   const showTopicDiscovery =
     showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
 
-  // show media curation only when the user is in adaptive variation
   const showMediaCuration = Boolean(
     !isAmp &&
     !isLite &&
     !isApp &&
     !isPGL &&
-    mediaCurationContent?.summaries?.length,
+    mediaCurationContent?.summaries?.length &&
+    articleVideoCurationEnabled,
   );
 
   // EXPERIMENT: PWA Promotional Banner
