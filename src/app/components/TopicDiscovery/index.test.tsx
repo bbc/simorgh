@@ -25,6 +25,7 @@ describe('TopicDiscovery', () => {
       topicPromos:
         multipleTopicsFixture[topicTagsFixture[0].topicId].data.items,
       isLoading: false,
+      isError: false,
     });
   });
 
@@ -164,6 +165,26 @@ describe('TopicDiscovery', () => {
     });
 
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders fetch error message when promos request fails', async () => {
+    mockUseFetchTopicPromos.mockReturnValue({
+      topicPromos: [],
+      isLoading: false,
+      isError: true,
+    });
+
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      service: 'portuguese',
+    });
+
+    expect(
+      await screen.findByText('Failed to load. Please try again later.'),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('topic-discovery-more-from'),
+    ).not.toBeInTheDocument();
   });
 
   describe('analytics', () => {

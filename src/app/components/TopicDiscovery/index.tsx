@@ -23,12 +23,17 @@ const eventTrackingData = {
 
 const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
   const { translations } = use(ServiceContext);
-  const { heading = 'Discover more', moreFromTopic = 'More from {topic}' } =
-    translations.topicDiscovery || {};
+  const {
+    heading = 'Discover more',
+    moreFromTopic = 'More from {topic}',
+    fetchErrorMessage = 'Failed to load. Please try again later.',
+  } = translations.topicDiscovery || {};
 
   const [activeTabId, setActiveTabId] = useState(topics?.[0]?.topicId || '');
 
-  const { topicPromos, isLoading } = useFetchTopicPromos({ activeTabId });
+  const { topicPromos, isLoading, isError } = useFetchTopicPromos({
+    activeTabId,
+  });
 
   const viewTracker = useViewTracker(eventTrackingData);
 
@@ -46,6 +51,9 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
     id: topic.topicId,
     label: topic.topicName,
   }));
+
+  const showLoadingState = Boolean(isLoading && !isError);
+  const showErrorMessage = Boolean(!isLoading && isError);
 
   return (
     <section
@@ -71,41 +79,45 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
         aria-labelledby={`tab-${activeTabId}`}
         css={styles.tabPanel}
       >
-        {isLoading ? (
-          <>
-            <div css={styles.skeletonGrid} aria-live="polite">
-              {Array.from({ length: 4 }).map((_, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <div key={index} css={styles.skeletonCard} aria-hidden>
-                  <div css={styles.skeletonImage} />
-                  <div css={styles.skeletonTextLines}>
-                    <div css={[styles.skeletonLine, { width: '100%' }]} />
-                    <div css={[styles.skeletonLine, { width: '70%' }]} />
-                    <div css={[styles.skeletonLine, { width: '40%' }]} />
-                  </div>
+        {(() => {
+          switch (true) {
+            case showLoadingState:
+              return (
+                <div css={styles.skeletonGrid} aria-live="polite">
+                  {Array.from({ length: 4 }).map((_, index) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <div key={index} css={styles.skeletonCard} aria-hidden>
+                      <div css={styles.skeletonImage} />
+                      <div css={styles.skeletonTextLines}>
+                        <div css={[styles.skeletonLine, { width: '100%' }]} />
+                        <div css={[styles.skeletonLine, { width: '70%' }]} />
+                        <div css={[styles.skeletonLine, { width: '40%' }]} />
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div css={styles.skeletonMoreFromLinkContainer}>
-              <div css={styles.skeletonMoreFromLink} aria-hidden />
-            </div>
-          </>
-        ) : (
-          <>
-            <CurationGrid
-              summaries={topicPromos}
-              eventTrackingData={eventTrackingData}
-            />
-            <a
-              css={styles.moreFromLink}
-              href={activeTopic?.topicUrl}
-              data-testid="topic-discovery-more-from"
-              {...moreFromLinkClickTracker}
-            >
-              {moreFromTopic.replace('{topic}', activeTopic.topicName)}
-            </a>
-          </>
-        )}
+              );
+            case showErrorMessage:
+              return <p css={styles.errorMessage}>{fetchErrorMessage}</p>;
+            default:
+              return (
+                <>
+                  <CurationGrid
+                    summaries={topicPromos}
+                    eventTrackingData={eventTrackingData}
+                  />
+                  <a
+                    css={styles.moreFromLink}
+                    href={activeTopic?.topicUrl}
+                    data-testid="topic-discovery-more-from"
+                    {...moreFromLinkClickTracker}
+                  >
+                    {moreFromTopic.replace('{topic}', activeTopic.topicName)}
+                  </a>
+                </>
+              );
+          }
+        })()}
       </div>
     </section>
   );
