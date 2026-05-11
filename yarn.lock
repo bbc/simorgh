@@ -2573,15 +2573,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@bbc/web-vitals@npm:2.5.3":
-  version: 2.5.3
-  resolution: "@bbc/web-vitals@npm:2.5.3"
+"@bbc/web-vitals@npm:2.6.0":
+  version: 2.6.0
+  resolution: "@bbc/web-vitals@npm:2.6.0"
   dependencies:
-    cross-fetch: "npm:^3.1.5"
     web-vitals: "npm:^3.3.2"
   peerDependencies:
-    react: ^17.0.0 || ^18.0.0
-  checksum: 10/66490e7c0cba2ba552f3df387e8d5ce0ce4f62f9cc905cfe5c903a8846a166af9e7e7e255bfe42cd2fbbd54f426d1b7c2f950c667f0203e3cd421fb138a84cf8
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/e2c6bd863f7d682b763777186f6bb75d34a6ac154b1b2931aec9368dda0dbaf8a561db8d5503034166b43a411b83d86bddad1cf8f4f6b5092e0f263eb0c6d3d5
   languageName: node
   linkType: hard
 
@@ -9222,7 +9221,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-fetch@npm:^3.0.4, cross-fetch@npm:^3.1.5":
+"cross-fetch@npm:^3.0.4":
   version: 3.2.0
   resolution: "cross-fetch@npm:3.2.0"
   dependencies:
@@ -17685,7 +17684,7 @@ __metadata:
     "@babel/preset-typescript": "npm:7.28.5"
     "@babel/runtime": "npm:7.29.2"
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz"
-    "@bbc/web-vitals": "npm:2.5.3"
+    "@bbc/web-vitals": "npm:2.6.0"
     "@cypress/webpack-preprocessor": "npm:7.0.1"
     "@emotion/babel-plugin": "npm:11.13.5"
     "@emotion/cache": "npm:11.14.0"
