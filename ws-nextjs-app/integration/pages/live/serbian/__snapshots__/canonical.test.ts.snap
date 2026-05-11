@@ -85,6 +85,13 @@ exports[`Canonical Live Header Navigation link should match text and url 1`] = `
 }
 `;
 
+exports[`Canonical Live Header Navigation link should match text and url 2`] = `
+{
+  "text": "Gledajte",
+  "url": "/serbian/topics/c44vyp5g049t/lat",
+}
+`;
+
 exports[`Canonical Live Main heading should match text 1`] = `"Live test page"`;
 
 exports[`Canonical Live SEO Apple Touch Icon should match attributes 1`] = `
@@ -137,7 +144,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "NewsArticle",
+      "@type": "WebPage",
       "author": {
         "@type": "NewsMediaOrganization",
         "logo": {
@@ -163,6 +170,7 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "alternateName": "sr-latn",
         "name": "Serbian",
       },
+      "isAccessibleForFree": true,
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
         "@type": "WebPage",
@@ -181,12 +189,6 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
-    },
-    {
-      "@type": "LiveBlogPosting",
-      "coverageEndTime": "2018-01-10T22:00:00.000Z",
-      "coverageStartTime": "2018-01-10T15:00:00.000Z",
-      "liveBlogUpdate": [],
     },
   ],
 }
