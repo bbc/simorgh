@@ -203,7 +203,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         mainEntityId={liveBlogPostingSchema ? webPageId : undefined}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
-        {...(liveBlogPostingSchema && { entities: liveBlogPostingSchema })}
+        {...(liveBlogPostingSchema && { entities: [...liveBlogPostingSchema] })}
       />
       <main>
         <Header
