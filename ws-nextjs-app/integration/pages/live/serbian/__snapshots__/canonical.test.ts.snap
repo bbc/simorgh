@@ -171,6 +171,9 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "name": "Serbian",
       },
       "isAccessibleForFree": true,
+      "mainEntity": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat#webpage",
+      },
       "mainEntityOfPage": {
         "@id": "http://localhost:7081/serbian/live/media-23179005/lat",
         "@type": "WebPage",
@@ -188,6 +191,35 @@ exports[`Canonical Live SEO Linked data should match text 1`] = `
         "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
       },
       "thumbnailUrl": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
+    },
+    {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#webpage",
+      "@type": "WebPage",
+      "description": "Live test page",
+      "name": "Live test page",
+      "publisher": {
+        "@type": "NewsMediaOrganization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/serbian/images/metadata/poster-1024x576.png",
+        },
+        "name": "BBC News na srpskom",
+        "publishingPrinciples": "https://www.bbc.com/serbian/lat/institutional-50173730",
+        "url": "https://www.bbc.com/serbian",
+      },
+      "url": "http://localhost:7081/serbian/live/media-23179005/lat",
+    },
+    {
+      "@id": "http://localhost:7081/serbian/live/media-23179005/lat#liveblog",
+      "@type": "LiveBlogPosting",
+      "coverageEndTime": "2018-01-10T22:00:00.000Z",
+      "coverageStartTime": "2018-01-10T15:00:00.000Z",
+      "isAccessibleForFree": true,
+      "liveBlogUpdate": [],
+      "mainEntityOfPage": {
+        "@id": "http://localhost:7081/serbian/live/media-23179005/lat#webpage",
+      },
       "url": "http://localhost:7081/serbian/live/media-23179005/lat",
     },
   ],
