@@ -8,8 +8,7 @@ import uasApiRequest from '#app/lib/uasApi';
 import uasKeys from '#app/lib/uasApi/queryKeys';
 import { AccountContext } from '#app/contexts/AccountContext';
 import { ServiceContext } from '#app/contexts/ServiceContext';
-import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
-import useUASButton, { UASAction } from './index';
+import useUASButton, { UASAction, UseUASButtonProps } from './index';
 
 jest.mock('#app/hooks/useUASFetchSaveStatus');
 jest.mock('#app/lib/uasApi');
@@ -64,7 +63,7 @@ describe('useUASButton', () => {
     articlePageData: {
       metadata: { locators: { canonicalUrl: 'https://bbc.com/article' } },
     },
-  } as SaveArticleButtonProps;
+  } as UseUASButtonProps;
 
   beforeEach(() => {
     jest.clearAllMocks();

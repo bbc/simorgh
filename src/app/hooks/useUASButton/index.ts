@@ -25,7 +25,7 @@ interface UseUASButtonReturn {
   error: Error | null;
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
-interface UseUASButtonProps {
+export interface UseUASButtonProps {
   articleId: string;
   articleTitle: string;
   articlePageData?: Article;
