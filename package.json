@@ -99,7 +99,7 @@
   },
   "dependencies": {
     "@bbc/reverb-url-helper": "https://mybbc-analytics.files.bbci.co.uk/reverb-url-helper/bbc-reverb-url-helper-2.5.0.tgz",
-    "@bbc/web-vitals": "2.5.3",
+    "@bbc/web-vitals": "2.6.0",
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
     "@emotion/server": "11.11.0",
@@ -242,7 +242,7 @@
     "terser-webpack-plugin": "5.3.14",
     "timemachine": "0.3.2",
     "ts-jest": "29.4.9",
-    "ts-loader": "9.5.4",
+    "ts-loader": "9.5.7",
     "typescript": "5.9.3",
     "wait-on": "9.0.3",
     "webpack": "5.106.2",
