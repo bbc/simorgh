@@ -260,6 +260,9 @@ export default ({
         // Show heading if more than one curation, or if only one and pageType is 'article'
         const shouldShowHeading = curationLength > 1 || pageType === 'article';
 
+        const gridHeadingLevel =
+          pageType === 'article' || curationLength > 1 ? 3 : 2;
+
         return shouldShowHeading ? (
           <section aria-labelledby={id} role="region">
             <div {...viewTracker}>
@@ -279,7 +282,7 @@ export default ({
                 ))}
               <GridComponent
                 summaries={summaries}
-                headingLevel={curationLength > 1 ? 3 : 2}
+                headingLevel={gridHeadingLevel}
                 isFirstCuration={isFirstCuration}
                 eventTrackingData={eventTrackingData}
               />
