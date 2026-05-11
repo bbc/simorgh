@@ -79,7 +79,8 @@ export default ({
   startDateTime?: string;
   endDateTime?: string;
 }) => {
-  if (!posts?.length) return null;
+  const hasPosts = !!posts?.length;
+  if (!hasPosts && !startDateTime && !endDateTime) return null;
 
   const webPageId = `${url}#webpage`;
 
@@ -94,38 +95,40 @@ export default ({
     },
   };
 
-  const liveBlogUpdate = posts
-    .map(post => {
-      if (!post.urn || !post.dates?.firstPublished) return null;
+  const liveBlogUpdate = hasPosts
+    ? posts
+        .map(post => {
+          if (!post.urn || !post.dates?.firstPublished) return null;
 
-      const headline = getHeadlineText(post) ?? pageHeadline;
-      if (!headline) return null;
+          const headline = getHeadlineText(post) ?? pageHeadline;
+          if (!headline) return null;
 
-      const articleBody = getArticleBody(post);
-      const image = getImage(post);
+          const articleBody = getArticleBody(post);
+          const image = getImage(post);
 
-      return {
-        '@type': 'BlogPosting',
-        '@id': `${url}#post-${post.urn}`,
-        isAccessibleForFree: true,
-        headline,
-        ...(articleBody && { articleBody }),
-        author: getAuthor(post, publisher),
-        publisher,
-        mainEntityOfPage: { '@id': webPageId },
-        ...(image && { image }),
-        datePublished: post.dates.firstPublished,
-        ...(post.dates.lastPublished && {
-          dateModified: post.dates.lastPublished,
-        }),
-      };
-    })
-    .filter((item): item is NonNullable<typeof item> => Boolean(item))
-    .sort(
-      (postA, postB) =>
-        new Date(postB.datePublished).getTime() -
-        new Date(postA.datePublished).getTime(),
-    );
+          return {
+            '@type': 'BlogPosting',
+            '@id': `${url}#post-${post.urn}`,
+            isAccessibleForFree: true,
+            headline,
+            ...(articleBody && { articleBody }),
+            author: getAuthor(post, publisher),
+            publisher,
+            mainEntityOfPage: { '@id': webPageId },
+            ...(image && { image }),
+            datePublished: post.dates.firstPublished,
+            ...(post.dates.lastPublished && {
+              dateModified: post.dates.lastPublished,
+            }),
+          };
+        })
+        .filter((item): item is NonNullable<typeof item> => Boolean(item))
+        .sort(
+          (postA, postB) =>
+            new Date(postB.datePublished).getTime() -
+            new Date(postA.datePublished).getTime(),
+        )
+    : [];
 
   const coverageStartTime =
     startDateTime ?? liveBlogUpdate.at(-1)?.datePublished;
