@@ -87,8 +87,8 @@ export default {
   modalContent: css({
     position: 'relative',
     zIndex: 1,
-    width: '100%',
-    maxWidth: `${pixelsToRem(600)}rem`,
+    width: `${pixelsToRem(995)}rem`,
+    maxWidth: '100%',
     margin: '0 1rem',
   }),
 };
