@@ -59,7 +59,6 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import { parseArticleID } from '#app/lib/uasApi/uasUtility';
 import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
@@ -109,7 +108,6 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articleId: string,
     articleTitle: string,
     articlePageData?: Article,
   ) =>
@@ -144,7 +142,6 @@ const getTimestampComponent =
         )}
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
-          articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
           articlePageData={articlePageData}
         />
@@ -294,7 +291,6 @@ const ArticlePage = ({
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
@@ -400,7 +396,6 @@ const ArticlePage = ({
       lastPublished,
       readTimeValue,
       translations.readTime,
-      articleId,
       headline,
       pageData,
     ),
