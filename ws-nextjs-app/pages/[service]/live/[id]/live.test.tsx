@@ -105,6 +105,47 @@ const mockPageDataWithoutKeyPoints = {
   metadata: { atiAnalytics: {} },
 };
 
+const mockPageDataWithPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [
+        {
+          type: 'portraitClipMedia',
+          model: {
+            type: 'video',
+            images: [
+              {
+                source:
+                  'https://ichef.test.bbci.co.uk/images/ic/1024xn/p01wjx8s.jpg.webp',
+                urlTemplate:
+                  'https://ichef.test.bbci.co.uk/images/ic/{width}xn/p01wjx8s.jpg.webp',
+                altText:
+                  'Pelo menos 53 presos escaparam da prisao de Katacane, na Indonesia',
+              },
+            ],
+            video: {
+              id: 'urn:bbc:optimo:asset:cdrqd0m5nlmo',
+              title: 'Optimo article with portrait video embed (1)',
+              holdingImageURL:
+                'https://ichef.bbci.co.uk/ace/standard/512/cpsdevpb/42c1/test/7900c530-0e0e-11f0-a9e9-f552fbd9336f.jpg',
+              version: {
+                id: 'p01wjx6g',
+                duration: 'PT13S',
+                kind: 'programme',
+                guidance: null,
+                territories: ['uk', 'nonuk'],
+              },
+              isEmbeddingAllowed: false,
+              shareUrl: '/portuguese/articles/cdrqd0m5nlmo',
+            },
+          },
+        },
+      ],
+    },
+  },
+};
+
 const mockPageDataWithMetadata = ({
   title,
   description,
@@ -484,6 +525,16 @@ describe('Live Page', () => {
     expect(screen.getByText('Another post')).toBeInTheDocument();
     expect(screen.getByText('Another post sub headline')).toBeInTheDocument();
     expect(screen.getByTestId('breaking-news-label')).toBeInTheDocument();
+  });
+
+  it('should render portrait video carousel when portraitVideoItems are provided', async () => {
+    mockPollingUpdate(mockPageDataWithPortraitVideoItems);
+
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithPortraitVideoItems} />);
+    });
+
+    expect(screen.getByTestId('portrait-video-carousel')).toBeInTheDocument();
   });
 
   it('sets the correct og:image meta tag from the post with assetId', () => {
