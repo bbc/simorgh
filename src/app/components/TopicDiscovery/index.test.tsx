@@ -202,6 +202,26 @@ describe('TopicDiscovery', () => {
       viewTrackerSpy.mockRestore();
     });
 
+    it('should call useViewTracker with topic-discovery-fetch-error-message component name when there is a fetch error', async () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      mockUseFetchTopicPromos.mockReturnValue({
+        topicPromos: [],
+        isLoading: false,
+        isError: true,
+      });
+
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        service: 'portuguese',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'topic-discovery-fetch-error-message',
+      });
+
+      viewTrackerSpy.mockRestore();
+    });
+
     it('should call useClickTrackerHandler with topic-discovery-tab-<id> component name and preventNavigation', () => {
       const clickTrackerSpy = jest
         .spyOn(clickTracking, 'default')

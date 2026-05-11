@@ -37,6 +37,10 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
 
   const viewTracker = useViewTracker(eventTrackingData);
 
+  const errorMessageViewTracker = useViewTracker({
+    componentName: 'topic-discovery-fetch-error-message',
+  });
+
   const moreFromLinkClickTracker = useClickTrackerHandler({
     componentName: 'topic-discovery-more-from-link',
   });
@@ -98,7 +102,11 @@ const TopicDiscovery = ({ topics, className }: TopicDiscoveryProps) => {
                 </div>
               );
             case showErrorMessage:
-              return <p css={styles.errorMessage}>{fetchErrorMessage}</p>;
+              return (
+                <p css={styles.errorMessage} {...errorMessageViewTracker}>
+                  {fetchErrorMessage}
+                </p>
+              );
             default:
               return (
                 <>
