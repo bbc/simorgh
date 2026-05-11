@@ -50,6 +50,7 @@ export default {
         fill: 'ButtonText',
       },
     }),
+
   registerLink: ({ palette }: Theme) =>
     css({
       height: `${pixelsToRem(44)}rem`,
@@ -75,6 +76,8 @@ export default {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    width: '100%',
+    height: '100%',
   }),
 
   backdrop: css({
@@ -87,8 +90,33 @@ export default {
   modalContent: css({
     position: 'relative',
     zIndex: 1,
-    width: `${pixelsToRem(995)}rem`,
-    maxWidth: '100%',
-    margin: '0 1rem',
+    width: '60%',
+    height: '60%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    '& > aside': {
+      width: '100%',
+      height: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+
+    '& > aside > div': {
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+    },
+
+    '& > aside > div > div': {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    '& > aside > div > div > div': {
+      paddingTop: '1rem',
+      paddingBottom: '1rem',
+      // gap: '2rem',
+    },
   }),
 };
