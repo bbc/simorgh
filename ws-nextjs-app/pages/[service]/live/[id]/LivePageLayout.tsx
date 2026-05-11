@@ -80,7 +80,14 @@ interface LivePageProps extends ComponentProps {
 }
 
 const LivePage = ({ pageData, assetId }: LivePageProps) => {
-  const { lang, translations, defaultImage, brandName } = use(ServiceContext);
+  const {
+    lang,
+    translations,
+    defaultImage,
+    brandName,
+    publishingPrinciples,
+    service,
+  } = use(ServiceContext);
   const { canonicalNonUkLink } = use(RequestContext);
   const { enabled: livePagePollingEnabled } = useToggle('livePagePolling');
 
@@ -137,7 +144,13 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     : pageSeoTitle;
   const pageDescription = seoDescription || description || pageSeoTitle;
 
+  const publisherUrl = `https://www.bbc.com/${service}`;
+
   const liveBlogPostingSchema = getLiveBlogPostingSchema({
+    publishingPrinciples: publishingPrinciples ?? undefined,
+    publisherUrl,
+    pageHeadline: pageTitle,
+    description: pageDescription,
     posts: liveTextStream?.content?.data.results,
     brandName,
     defaultImage,
@@ -163,6 +176,8 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const metaTitle = headlineFromPost || pageTitle;
 
+  const webPageId = `${canonicalNonUkLink}#webpage`;
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -179,14 +194,16 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         hasAmpPage={false}
       />
       <LinkedDataContainer
-        type="NewsArticle"
+        type="WebPage"
         seoTitle={metaTitle ?? pageTitle}
         headline={metaTitle ?? pageTitle}
         showAuthor
+        isAccessibleForFree
         promoImage={metaImage?.url}
+        mainEntityId={liveBlogPostingSchema ? webPageId : undefined}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
-        {...(liveBlogPostingSchema && { entities: [liveBlogPostingSchema] })}
+        {...(liveBlogPostingSchema && { entities: liveBlogPostingSchema })}
       />
       <main>
         <Header

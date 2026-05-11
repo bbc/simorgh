@@ -74,6 +74,7 @@ const LinkedData = ({
   bylineLinkedData,
   mainEntityId,
   metadataImageProps,
+  isAccessibleForFree,
 }: LinkedDataProps) => {
   const {
     brandName,
@@ -224,6 +225,7 @@ const LinkedData = ({
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
+    ...(isAccessibleForFree && { isAccessibleForFree: true }),
     ...(isNotRadioChannel && { publisher, thumbnailUrl }),
     image,
     mainEntityOfPage,

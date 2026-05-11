@@ -37,6 +37,7 @@ export interface LinkedDataProps {
   coverageEndTime?: string;
   mainEntityId?: string;
   metadataImageProps?: MetadataImageProps;
+  isAccessibleForFree?: boolean;
 }
 
 type MetadataImageProps =
