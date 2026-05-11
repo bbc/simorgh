@@ -43,7 +43,7 @@ const testSuites = [
     tests,
   },
   {
-    path: '/mundo/popular/read.lite',
+    path: '/pidgin/popular/read.lite',
     runforEnv,
     pageType: MOST_READ_PAGE,
     tests,
