@@ -1,9 +1,11 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { useContext } from 'react';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { useState, useContext } from 'react';
+import { ServiceContext } from '#app/contexts/ServiceContext';
+import { AccountContext } from '#app/contexts/AccountContext';
 import { Article } from '#app/models/types/optimo';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';
+import AccountPromotionalBannerModal from '../Account/AccountPromotionalBanner/AccountPromotionalModal';
 
 export interface SaveArticleButtonProps {
   articleId: string;
@@ -25,9 +27,11 @@ const SaveArticleButton = ({
 
   const { translations } = useContext(ServiceContext);
   const { saveArticleButton } = translations || {};
+  const { isSignedIn } = useContext(AccountContext);
 
-  if (!showButton) return null;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  if (!showButton && isSignedIn) return null;
   if (!saveArticleButton) return null;
 
   if (error) {
@@ -45,6 +49,10 @@ const SaveArticleButton = ({
   const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
 
   const handleClick = () => {
+    if (!isSignedIn) {
+      setIsModalOpen(true);
+      return;
+    }
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
@@ -58,6 +66,12 @@ const SaveArticleButton = ({
         buttonText={buttonText}
         removeText={saveArticleButton.remove}
       />
+      {isModalOpen && (
+        <AccountPromotionalBannerModal
+          isSignedIn={false}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 };

@@ -9,18 +9,25 @@ import styles from './index.styles';
 
 type AccountPromotionalBannerModalProps = {
   isSignedIn: boolean;
+  onClose?: () => void;
 };
 
 const AccountPromotionalBannerModal = ({
   isSignedIn,
+  onClose,
 }: AccountPromotionalBannerModalProps) => {
   const [isOpen, setIsOpen] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    onClose?.();
+  };
 
   useEffect(() => {
     if (!isOpen) return undefined;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'Escape') handleClose();
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -45,7 +52,7 @@ const AccountPromotionalBannerModal = ({
   );
 
   const handleBackdropKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') setIsOpen(false);
+    if (e.key === 'Enter' || e.key === ' ') handleClose();
   };
 
   if (!isOpen) {
@@ -71,7 +78,7 @@ const AccountPromotionalBannerModal = ({
           role="button"
           tabIndex={0}
           aria-label="Close modal"
-          onClick={() => setIsOpen(false)}
+          onClick={handleClose}
           onKeyDown={handleBackdropKeyDown}
           css={styles.backdrop}
         />
