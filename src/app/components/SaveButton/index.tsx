@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, HTMLAttributes } from 'react';
 import {
   Spinner,
   BookmarkIcon,
@@ -14,6 +14,7 @@ export interface SaveButtonProps {
   disabled?: boolean;
   buttonText: string;
   removeText?: string;
+  testId?: string;
 }
 
 const SaveButton = ({
@@ -23,6 +24,7 @@ const SaveButton = ({
   disabled = false,
   buttonText,
   removeText = '',
+  testId,
 }: SaveButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -36,6 +38,7 @@ const SaveButton = ({
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
+      {...(testId && { 'data-testid': testId })}
     >
       {isLoading && <Spinner css={styles.buttonAnimation} />}
       {!isLoading && !isSaved && <BookmarkIcon />}

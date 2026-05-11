@@ -1,11 +1,16 @@
-import type { ComponentProps } from 'react';
 import useUASButton from '#app/hooks/useUASButton';
-import { render, screen } from '../react-testing-library-with-providers';
+import mockIdctaConfig from '#app/contexts/AccountContext/mocks';
+import { Article } from '#app/models/types/optimo';
+import { render, screen, act } from '../react-testing-library-with-providers';
 import SaveArticleButton from '.';
 
 jest.mock('#app/hooks/useUASButton');
 
 const mockedUseUASButton = useUASButton as jest.Mock;
+
+const personalizationToggle = {
+  uasPersonalization: { enabled: true, value: 'hindi' },
+};
 
 describe('SaveArticleButton', () => {
   const defaultProps = {
@@ -18,110 +23,104 @@ describe('SaveArticleButton', () => {
     jest.clearAllMocks();
   });
 
-  it('does not render button when showButton is false', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: false,
-      isSaved: false,
-      isLoading: false,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
+  describe('Authorized', () => {
+    const signedInRenderOptions = {
+      service: 'hindi' as const,
+      toggles: personalizationToggle,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: true },
+    };
+
+    beforeEach(() => {
+      mockedUseUASButton.mockReturnValue({
+        isSaved: false,
+        isLoading: false,
+        error: null,
+        handleSaveAction: mockHandleSaveAction,
+      });
     });
 
-    const { container } = render(<SaveArticleButton {...defaultProps} />, {
-      service: 'hindi',
-    });
-    expect(container.firstChild).toBeNull();
-  });
-
-  it('renders "Save for later" when not saved', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: false,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
+    it('renders "Save for later" when not saved', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      expect(screen.getByRole('button')).toHaveTextContent('Save for later');
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-    expect(screen.getByRole('button')).toHaveTextContent('Save for later');
-  });
+    it('renders "Saved to My News" when saved', async () => {
+      mockedUseUASButton.mockReturnValue({ isSaved: true });
 
-  it('renders "Saved to My News" when saved', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: true,
-      isLoading: false,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-    expect(screen.getByRole('button')).toHaveTextContent('Saved to My News');
-  });
+    it('renders loading state and disables button', async () => {
+      mockedUseUASButton.mockReturnValue({
+        isLoading: true,
+      });
 
-  it('renders loading state and disables button', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: true,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      const button = screen.getByRole('button');
+
+      expect(button).toHaveTextContent('Saving');
+      expect(button).toBeDisabled();
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-    const button = screen.getByRole('button');
+    it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
+      await act(async () =>
+        render(<SaveArticleButton {...defaultProps} />, signedInRenderOptions),
+      );
+      screen.getByRole('button').click();
 
-    expect(button).toHaveTextContent('Saving');
-    expect(button).toBeDisabled();
-  });
-
-  it('calls handleSaveAction with save when button is clicked and not already saved', async () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: false,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
+      expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
+      expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
     });
 
-    render(<SaveArticleButton {...defaultProps} />, { service: 'hindi' });
-    screen.getByRole('button').click();
-
-    expect(mockHandleSaveAction).toHaveBeenCalledWith('save');
-    expect(mockHandleSaveAction).toHaveBeenCalledTimes(1);
-  });
-
-  it('passes articleId and title to useUASButton hook', () => {
-    mockedUseUASButton.mockReturnValue({
-      showButton: true,
-      isSaved: false,
-      isLoading: false,
-      error: null,
-      handleSaveAction: mockHandleSaveAction,
-    });
-
-    type ArticlePageData = ComponentProps<
-      typeof SaveArticleButton
-    >['articlePageData'];
-    const articlePageData: ArticlePageData = {
-      metadata: {
-        locators: {
-          canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+    it('passes articleId and title to useUASButton hook', async () => {
+      const articlePageData = {
+        metadata: {
+          locators: {
+            canonicalUrl: 'https://www.bbc.com/hindi/articles/c1l97706v5mo',
+          },
         },
-      },
-    } as ArticlePageData;
+      } as Article;
 
-    render(
-      <SaveArticleButton {...defaultProps} articlePageData={articlePageData} />,
-      { service: 'hindi' },
-    );
+      await act(async () =>
+        render(
+          <SaveArticleButton
+            {...defaultProps}
+            articlePageData={articlePageData}
+          />,
+          {
+            ...signedInRenderOptions,
+            pathname: '/hindi/articles/c1l97706v5mo',
+          },
+        ),
+      );
 
-    // Component extracts articleId from pathname using parseRoute
-    expect(mockedUseUASButton).toHaveBeenCalledWith(
-      expect.objectContaining({
-        articleTitle: 'Test Article Title',
-        articlePageData,
-      }),
-    );
+      expect(mockedUseUASButton).toHaveBeenCalledWith(
+        expect.objectContaining({
+          articleTitle: 'Test Article Title',
+          articlePageData,
+          articleId: 'c1l97706v5mo',
+        }),
+      );
+    });
+  });
+
+  describe('Guest', () => {
+    const signedOutRenderOptions = {
+      service: 'hindi' as const,
+      toggles: personalizationToggle,
+      idctaConfig: { ...mockIdctaConfig, initialIsSignedIn: false },
+    };
+
+    it('renders guest save button', () => {
+      render(<SaveArticleButton {...defaultProps} />, signedOutRenderOptions);
+      expect(screen.getByTestId('save-article-btn-guest')).toBeInTheDocument();
+    });
   });
 });

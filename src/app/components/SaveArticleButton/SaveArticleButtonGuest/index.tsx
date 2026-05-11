@@ -14,6 +14,7 @@ const SaveArticleButtonGuest = () => {
         alert('Please sign in to save articles.');
       }}
       buttonText={translations.saveArticleButton?.save || 'Save'}
+      testId="save-article-btn-guest"
     />
   );
 };

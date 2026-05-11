@@ -49,6 +49,7 @@ const SaveArticleButtonAuthenticated = ({
       disabled={isLoading}
       buttonText={buttonText}
       removeText={saveArticleButton.remove}
+      testId="save-article-btn-authorized"
     />
   );
 };
