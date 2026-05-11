@@ -6,7 +6,6 @@ import SaveArticleButtonGuest from './SaveArticleButtonGuest';
 import styles from './index.styles';
 
 export interface SaveArticleButtonProps {
-  articleId: string;
   articleTitle: string;
   articlePageData?: Article;
 }

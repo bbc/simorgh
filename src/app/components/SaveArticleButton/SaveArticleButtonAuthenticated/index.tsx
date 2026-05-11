@@ -1,28 +1,30 @@
-import { use } from 'react';
-import useUASButton, { UASAction } from '#app/hooks/useUASButton';
+import { use, useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
+import parseRoute from '#app/routes/utils/parseRoute';
+import useUASButton, { UASAction } from '#app/hooks/useUASButton';
 import SaveButton from '#app/components/SaveButton';
 import { Article } from '#app/models/types/optimo';
 
 export interface SaveArticleButtonProps {
-  articleId: string;
   articleTitle: string;
   articlePageData?: Article;
 }
 
 const SaveArticleButtonAuthenticated = ({
-  articleId,
   articleTitle,
   articlePageData,
 }: SaveArticleButtonProps) => {
+  const { pathname } = use(RequestContext);
+  const { translations } = useContext(ServiceContext);
+  const { saveArticleButton } = translations || {};
+  const { assetId: articleId } = parseRoute(pathname);
+
   const { isSaved, isLoading, error, handleSaveAction } = useUASButton({
     articleId,
     articleTitle,
     articlePageData,
   });
-
-  const { translations } = use(ServiceContext);
-  const { saveArticleButton } = translations || {};
 
   if (!saveArticleButton) return null;
 

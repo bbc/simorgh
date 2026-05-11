@@ -1,6 +1,5 @@
 import { use, useCallback } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-
 import useUASFetchSaveStatus from '#app/hooks/useUASFetchSaveStatus';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import uasApiRequest from '#app/lib/uasApi';
@@ -11,8 +10,8 @@ import {
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 } from '#app/lib/uasApi/uasUtility';
+import { Article } from '#app/models/types/optimo';
 import uasKeys from '#app/lib/uasApi/queryKeys';
-import type { SaveArticleButtonProps } from '#app/components/SaveArticleButton';
 import { AccountContext } from '#app/contexts/AccountContext';
 
 enum UASAction {
@@ -26,6 +25,11 @@ interface UseUASButtonReturn {
   error: Error | null;
   handleSaveAction: (action: UASAction) => Promise<void>;
 }
+interface UseUASButtonProps {
+  articleId: string;
+  articleTitle: string;
+  articlePageData?: Article;
+}
 
 // NOTE: Using this hook anywhere in the app will eagerly pull TanStack Query into the bundle.
 // All TanStack-related code must live exclusively inside the lazy boundary.
@@ -33,7 +37,7 @@ const useUASButton = ({
   articleId,
   articleTitle,
   articlePageData,
-}: SaveArticleButtonProps): UseUASButtonReturn => {
+}: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
   const { userPseudoId = '' } = use(AccountContext);
   const queryClient = useQueryClient();
