@@ -1,4 +1,4 @@
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 import { ServiceParametersType } from '../../../types';
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.

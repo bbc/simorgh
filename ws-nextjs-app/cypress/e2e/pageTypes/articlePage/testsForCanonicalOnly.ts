@@ -8,7 +8,7 @@ import {
   AresMediaMetadataBlock,
   CaptionBlock,
 } from '#app/components/MediaLoader/types';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 import { ServiceParametersType } from '../../../types';
 import { getBlockData, getBlockByType, getVideoEmbedUrl } from './helpers';
 import runIfToggleEnabled from '../../../support/helpers/runIfToggleEnabled';

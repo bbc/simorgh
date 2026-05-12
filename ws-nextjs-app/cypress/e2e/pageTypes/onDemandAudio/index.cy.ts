@@ -2,25 +2,25 @@ import { AUDIO_PAGE } from '#app/routes/utils/pageTypes';
 import runTestsForPage, {
   TestDataType,
 } from '#nextjs/cypress/support/helpers/runTestsForPage';
-import { assertPageView } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions';
-import {
-  assertPodcastLinksComponentClick,
-  assertPodcastLinksComponentView,
-} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/podcastLinks';
-import {
-  assertRecentAudioEpisodesComponentClick,
-  assertRecentAudioEpisodesComponentView,
-} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
-import getPathWithSuffix from '#cypress/support/helpers/getPathWithSuffix';
-import {
-  assertPodcastPromoComponentClick,
-  assertPodcastPromoComponentView,
-} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/podcastPromo';
+import { assertLiteSiteSummaryComponentToMainSiteClick } from '../../specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+import getPathWithSuffix from '../../../support/helpers/getPathWithSuffix';
 import {
   assertRadioScheduleComponentClick,
   assertRadioScheduleComponentView,
-} from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/radioSchedule';
-import { assertLiteSiteSummaryComponentToMainSiteClick } from '#cypress/e2e/specialFeatures/atiAnalytics/assertions/liteSiteSummary';
+} from '../../specialFeatures/atiAnalytics/assertions/radioSchedule';
+import {
+  assertPodcastPromoComponentClick,
+  assertPodcastPromoComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastPromo';
+import {
+  assertRecentAudioEpisodesComponentClick,
+  assertRecentAudioEpisodesComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/recentAudioEpisodes';
+import {
+  assertPodcastLinksComponentClick,
+  assertPodcastLinksComponentView,
+} from '../../specialFeatures/atiAnalytics/assertions/podcastLinks';
+import { assertPageView } from '../../specialFeatures/atiAnalytics/assertions';
 import e2eTests from './tests';
 import testsForAllPages from '../../testsForAllPages';
 import testsForAllCanonicalPages from '../../testsForAllCanonicalPages';

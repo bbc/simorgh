@@ -1,6 +1,6 @@
 /* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
-import chartbeatTests from '#cypress/support/helpers/chartbeatTests';
+import chartbeatTests from '../../../support/helpers/chartbeatTests';
 import { getEpisodeAvailability } from '../../../support/helpers/onDemandRadioTv';
 
 export default ({ service, pageType, path, variant = 'default' }) => {

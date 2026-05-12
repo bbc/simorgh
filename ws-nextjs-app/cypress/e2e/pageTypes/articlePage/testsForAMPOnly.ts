@@ -1,5 +1,5 @@
 import { Services } from '#app/models/types/global';
-import getAppEnv from '#cypress/support/helpers/getAppEnv';
+import getAppEnv from '../../../support/helpers/getAppEnv';
 import skipOnLocal from '../../../support/helpers/skipOnLocal';
 import { ServiceParametersType } from '../../../types';
 import { ampOnly as crossPlatform } from '../../assertions/crossPlatformAssertion';
