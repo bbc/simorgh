@@ -66,6 +66,10 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Hepsini görüntüle',
       home: 'Ana sayfa',
       continueReading: 'Okumaya devam edin',
+      topicDiscovery: {
+        heading: 'Daha fazlasını keşfet',
+        moreFromTopic: '{topic} hakkında daha fazla',
+      },
       currentPage: 'Bulunduğunuz sayfa',
       skipLinkText: 'İçeriğe götür',
       relatedContent: 'İlgili haberler',

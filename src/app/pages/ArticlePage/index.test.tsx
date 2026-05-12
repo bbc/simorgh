@@ -38,6 +38,7 @@ import { Article, OptimoBlock } from '#app/models/types/optimo';
 import useOptimizelyVariation from '#app/hooks/useOptimizelyVariation';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
 import * as viewTracking from '#app/hooks/useViewTracker';
+import isLive from '#lib/utilities/isLive';
 import {
   render,
   screen,
@@ -71,6 +72,7 @@ jest.mock('#app/lib/utilities/onClient', () => ({
   default: jest.fn(),
   onClient: jest.fn(() => true),
 }));
+jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 const input = {
   bbcOrigin: 'https://www.test.bbc.co.uk',
@@ -1345,6 +1347,45 @@ describe('Article Page', () => {
         const carousels = screen.getAllByTestId('portrait-video-carousel');
         expect(carousels[0]).toHaveAttribute('aria-label', fallbackTitle);
       });
+    });
+  });
+  describe('TopicDiscovery visibility on test only', () => {
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    const data = {
+      ...articleDataPidgin,
+      metadata: {
+        ...articleDataPidgin.metadata,
+        topics: [
+          {
+            topicId: '1',
+            topicName: 'Topic 1',
+          },
+          {
+            topicId: '2',
+            topicName: 'Topic 2',
+          },
+        ],
+      },
+    } as Article;
+
+    it('should render TopicDiscovery when isLive is false (test env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => false);
+      const { queryByTestId } = render(
+        <ArticlePage pageData={data} showTopicDiscoveryComponent />,
+        { service: 'portuguese' },
+      );
+      expect(queryByTestId('topic-discovery')).toBeInTheDocument();
+    });
+
+    it('should NOT render TopicDiscovery when isLive is true (live env)', () => {
+      jest.mocked(isLive).mockImplementationOnce(() => true);
+      const { queryByTestId } = render(<ArticlePage pageData={data} />, {
+        service: 'portuguese',
+      });
+      expect(queryByTestId('topic-discovery')).not.toBeInTheDocument();
     });
   });
 });
