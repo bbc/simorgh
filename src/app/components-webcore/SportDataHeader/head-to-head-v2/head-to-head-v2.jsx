@@ -1,4 +1,3 @@
-/** @jsxImportSource @emotion/react */
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
