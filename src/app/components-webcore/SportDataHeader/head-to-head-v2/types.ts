@@ -137,6 +137,11 @@ export type HeadToHeadV2Data = {
    * Summary of event to be used with assistive technology.
    */
   accessibleEventSummary: string;
+
+  attendance?: {
+    value?: number;
+    additionalInfo?: string;
+  };
 };
 
 export declare const HeadToHeadV2: (props: {
