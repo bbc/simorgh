@@ -2,7 +2,6 @@ import {
   render,
   screen,
   fireEvent,
-  act,
 } from '#app/components/react-testing-library-with-providers';
 import * as viewTracking from '#app/hooks/useViewTracker';
 import * as clickTracking from '#app/hooks/useClickTrackerHandler';
@@ -10,28 +9,24 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { ServiceConfig } from '#app/models/types/serviceConfig';
 import { service as portugueseConfig } from '#app/lib/config/services/portuguese';
 import { service as turkceConfig } from '#app/lib/config/services/turkce';
-import { topicTagsFixture } from './fixtures';
-import TopicDiscovery, { FAKE_FETCH_DELAY_MS } from '.';
+import { topicTagsFixture, multipleTopicsFixture } from './fixtures';
+import useFetchTopicPromos from './useFetchTopicPromos';
+import TopicDiscovery from '.';
 
-const topics = [
-  { topicId: '1', topicName: 'Topic1', topicUrl: '/topics/climate' },
-  { topicId: '2', topicName: 'Topic2', topicUrl: '/topics/economy' },
-];
-
-const createIntersectionObserverMock = () =>
-  jest.fn(callback => ({
-    observe: jest.fn(() => {
-      callback([{ isIntersecting: true }]);
-    }),
-    disconnect: jest.fn(),
-    unobserve: jest.fn(),
-    takeRecords: jest.fn(),
-  }));
+jest.mock('./useFetchTopicPromos');
 
 describe('TopicDiscovery', () => {
+  const mockUseFetchTopicPromos = useFetchTopicPromos as jest.MockedFunction<
+    typeof useFetchTopicPromos
+  >;
+
   beforeEach(() => {
-    global.IntersectionObserver =
-      createIntersectionObserverMock() as unknown as typeof IntersectionObserver;
+    mockUseFetchTopicPromos.mockReturnValue({
+      topicPromos:
+        multipleTopicsFixture[topicTagsFixture[0].topicId].data.items,
+      isLoading: false,
+      isError: false,
+    });
   });
 
   afterEach(() => {
@@ -123,24 +118,28 @@ describe('TopicDiscovery', () => {
     const config: ServiceConfig = { ...portugueseConfig.default };
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
     const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent('Mais de Topic1');
+    expect(moreFrom).toHaveTextContent(
+      `Mais de ${topicTagsFixture[0].topicName}`,
+    );
   });
 
   it('renders the "more from" section with topic title first if {topic} is first in the config', async () => {
     const config: ServiceConfig = { ...turkceConfig.default };
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
     // Wait for loading to finish and the link to appear
     const moreFrom = await screen.findByTestId('topic-discovery-more-from');
-    expect(moreFrom).toHaveTextContent('Topic1 hakkında daha fazla');
+    expect(moreFrom).toHaveTextContent(
+      `${topicTagsFixture[0].topicName} hakkında daha fazla`,
+    );
   });
 
   it('renders the "more from" section with fallback if moreFrom is missing', async () => {
@@ -154,52 +153,10 @@ describe('TopicDiscovery', () => {
     } as ServiceConfig;
     render(
       <ServiceContext.Provider value={config}>
-        <TopicDiscovery topics={topics} />
+        <TopicDiscovery topics={topicTagsFixture} />
       </ServiceContext.Provider>,
     );
-    await screen.findByText('More from Topic1');
-  });
-
-  it('should use cached promos when switching back to previously visited tabs', async () => {
-    jest.useFakeTimers();
-
-    const setTimeoutSpy = jest.spyOn(global, 'setTimeout');
-    const getFetchTimeoutCallCount = () =>
-      setTimeoutSpy.mock.calls.filter(
-        ([, delay]) => delay === FAKE_FETCH_DELAY_MS,
-      ).length;
-
-    render(<TopicDiscovery topics={topicTagsFixture} />, {
-      service: 'portuguese',
-    });
-
-    expect(getFetchTimeoutCallCount()).toBe(1);
-
-    await act(async () => {
-      jest.advanceTimersByTime(FAKE_FETCH_DELAY_MS);
-    });
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[1].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
-
-    await act(async () => {
-      jest.advanceTimersByTime(FAKE_FETCH_DELAY_MS);
-    });
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[0].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
-
-    fireEvent.click(
-      screen.getByRole('tab', { name: topicTagsFixture[1].topicName }),
-    );
-
-    expect(getFetchTimeoutCallCount()).toBe(2);
+    await screen.findByText(`More from ${topicTagsFixture[0].topicName}`);
   });
 
   it('should not render when there are no valid topics', () => {
@@ -208,6 +165,26 @@ describe('TopicDiscovery', () => {
     });
 
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it('renders fetch error message when promos request fails', async () => {
+    mockUseFetchTopicPromos.mockReturnValue({
+      topicPromos: [],
+      isLoading: false,
+      isError: true,
+    });
+
+    render(<TopicDiscovery topics={topicTagsFixture} />, {
+      service: 'portuguese',
+    });
+
+    expect(
+      await screen.findByText('Falha ao carregar. Tente novamente mais tarde.'),
+    ).toBeInTheDocument();
+
+    expect(
+      screen.queryByTestId('topic-discovery-more-from'),
+    ).not.toBeInTheDocument();
   });
 
   describe('analytics', () => {
@@ -220,6 +197,26 @@ describe('TopicDiscovery', () => {
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
         componentName: 'topic-discovery',
+      });
+
+      viewTrackerSpy.mockRestore();
+    });
+
+    it('should call useViewTracker with topic-discovery-fetch-error-message component name when there is a fetch error', async () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      mockUseFetchTopicPromos.mockReturnValue({
+        topicPromos: [],
+        isLoading: false,
+        isError: true,
+      });
+
+      render(<TopicDiscovery topics={topicTagsFixture} />, {
+        service: 'portuguese',
+      });
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'topic-discovery-fetch-error-message',
       });
 
       viewTrackerSpy.mockRestore();
