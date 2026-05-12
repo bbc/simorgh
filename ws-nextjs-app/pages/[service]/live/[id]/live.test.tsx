@@ -151,6 +151,15 @@ const mockPageDataWithPortraitVideoItems = {
   },
 };
 
+const mockPageDataWithEmptyPortraitVideoItems = {
+  ...mockPageData,
+  portraitVideoItems: {
+    portraitVideo: {
+      blocks: [],
+    },
+  },
+};
+
 const mockPageDataWithMetadata = ({
   title,
   description,
@@ -540,6 +549,16 @@ describe('Live Page', () => {
     });
 
     expect(screen.getByTestId('portrait-video-carousel')).toBeInTheDocument();
+  });
+
+  it('should not render portrait video carousel when portraitVideoItems blocks are empty', async () => {
+    mockPollingUpdate(mockPageDataWithEmptyPortraitVideoItems);
+
+    await act(async () => {
+      render(<Live pageData={mockPageDataWithEmptyPortraitVideoItems} />);
+    });
+
+    expect(screen.queryByTestId('portrait-video-carousel')).not.toBeInTheDocument();
   });
 
   it('sets the correct og:image meta tag from the post with assetId', () => {

@@ -167,6 +167,9 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const metaTitle = headlineFromPost || pageTitle;
 
+  const showPortraitVideoCarousel =
+    portraitVideoItems && portraitVideoItems.portraitVideo.blocks.length > 0;
+
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -220,7 +223,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             )}
           </div>
           <div css={styles.secondSection}>
-            {portraitVideoItems && (
+            {showPortraitVideoCarousel && (
               <PortraitVideoCarousel
                 blocks={portraitVideoItems.portraitVideo.blocks}
                 eventTrackingData={{
