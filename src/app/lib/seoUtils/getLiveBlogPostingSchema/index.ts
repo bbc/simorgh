@@ -49,6 +49,9 @@ const getImage = (post: Post): string | undefined => {
     (block: OptimoBlock) => block.type === 'rawImage',
   );
 
+  const { locator, originCode } = imageSource.model ?? {};
+  if (!locator || !originCode) return undefined;
+
   return buildIChefURL({
     locator: imageSource?.model?.locator,
     originCode: imageSource?.model?.originCode,
