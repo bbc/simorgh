@@ -42,6 +42,11 @@ jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   ),
 }));
 
+jest.mock('#app/components/PortraitVideoCarousel', () => ({
+  __esModule: true,
+  default: jest.fn(() => <div data-testid="portrait-video-carousel" />),
+}));
+
 type HelmetMetaTag = {
   property?: string;
   content?: string;
