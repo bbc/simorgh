@@ -14,7 +14,7 @@ const expectedPublisher = {
 };
 
 describe('SEO Utils | getLiveBlogPostingSchema', () => {
-  it('should return a [WebPage, LiveBlogPosting] tuple', () => {
+  it('should return an object with webPage and liveBlogPosting properties', () => {
     const result = getLiveBlogPostingSchema({
       posts,
       brandName: 'BBC News Mundo',
@@ -27,7 +27,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
     const { webPage, liveBlogPosting } = result ?? {};
 
     expect(webPage?.['@type']).toEqual('WebPage');
-    expect(webPage?.['@id']).toEqual('https://www.bbc.com/mundo#webpage');
+    expect(webPage?.['@id']).toEqual('https://www.bbc.com/mundo');
 
     expect(liveBlogPosting?.['@type']).toEqual('LiveBlogPosting');
     expect(liveBlogPosting?.liveBlogUpdate).toHaveLength(3);
@@ -49,8 +49,6 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
 
     const { liveBlogPosting } = result ?? {};
 
-    expect(liveBlogPosting?.['@type']).toEqual('LiveBlogPosting');
-    expect(liveBlogPosting?.liveBlogUpdate).toHaveLength(3);
     expect(liveBlogPosting?.coverageStartTime).toEqual(
       '2023-09-08T09:58:44+00:00',
     );
@@ -79,7 +77,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
         articleBody: 'Social - X (Twitter) Social X (Twitter) 2',
         author: expectedPublisher,
         publisher: expectedPublisher,
-        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo#webpage' },
+        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo' },
         datePublished: '2023-09-08T10:07:36+00:00',
         dateModified: '2023-09-08T10:07:36+00:00',
       },
@@ -92,7 +90,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
         articleBody: 'Text',
         author: expectedPublisher,
         publisher: expectedPublisher,
-        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo#webpage' },
+        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo' },
         datePublished: '2023-09-08T10:05:00+00:00',
         dateModified: '2023-09-08T10:05:00+00:00',
       },
@@ -105,13 +103,12 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
         articleBody: 'Video',
         author: expectedPublisher,
         publisher: expectedPublisher,
-        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo#webpage' },
+        mainEntityOfPage: { '@id': 'https://www.bbc.com/mundo' },
         datePublished: '2023-09-08T09:58:44+00:00',
         dateModified: '2023-09-08T10:09:41+00:00',
       },
     ];
 
-    expect(liveBlogPosting?.liveBlogUpdate).toHaveLength(3);
     expect(liveBlogPosting?.liveBlogUpdate).toEqual(expected);
   });
 

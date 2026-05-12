@@ -82,8 +82,6 @@ export default ({
   const hasPosts = !!posts?.length;
   if (!hasPosts && !startDateTime && !endDateTime) return null;
 
-  const webPageId = `${url}#webpage`;
-
   const publisher = {
     '@type': 'NewsMediaOrganization',
     name: brandName,
@@ -141,7 +139,7 @@ export default ({
 
   const webPage = {
     '@type': 'WebPage',
-    '@id': webPageId,
+    '@id': url,
     url,
     ...(pageHeadline && { name: pageHeadline }),
     ...(description && { description }),
