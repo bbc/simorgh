@@ -1,4 +1,5 @@
 import { act } from 'react';
+import { service as pidginConfig } from '#lib/config/services/pidgin';
 import Component from '.';
 import { screen, render } from '../react-testing-library-with-providers';
 import fixture from './fixture';
@@ -6,6 +7,8 @@ import fixture from './fixture';
 const eventTrackingData = {
   componentName: 'portrait-video-carousel',
 };
+
+const defaultAriaLabel = pidginConfig.default.translations.media.watch;
 
 describe('PortraitVideoCarousel', () => {
   it('Should contain the expected number of portrait video blocks', async () => {
@@ -38,13 +41,14 @@ describe('PortraitVideoCarousel', () => {
           title={undefined}
           eventTrackingData={eventTrackingData}
         />,
+        { service: 'pidgin' },
       );
     });
 
     expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument();
     expect(screen.getByTestId('portrait-video-carousel')).toHaveAttribute(
       'aria-label',
-      'Portrait video carousel',
+      defaultAriaLabel,
     );
   });
 
