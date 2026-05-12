@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-import { getExpectedAtiDestination } from '../../../../../cypress/e2e/specialFeatures/atiAnalytics/helpers';
+import { getExpectedAtiDestination } from '#nextjs/cypress/e2e/specialFeatures/atiAnalytics/helpers';
 import { ReverbBeaconConfig } from '../types';
 import ampAnalyticsJson from './ampAnalyticsJson';
 
