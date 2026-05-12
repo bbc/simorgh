@@ -19,6 +19,7 @@ import articleNewsWithPodcastPromo from '#data/news/articles/crkxdvxzwxk2.json';
 import articleDataWithElectionTag from '#data/mundo/articles/c206j730722o.json';
 import articleDataWithPortraitVideo from '#data/mundo/articles/c1xv2q1gewvo.json';
 import articleDataWithPortraitVideoRTL from '#data/persian/articles/c149pnldynxo.json';
+import articleWithTopicDiscovery from '#data/portuguese/articles/cgmpgpllnp7o.json';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import { service as newsConfig } from '#app/lib/config/services/news';
@@ -65,6 +66,7 @@ type Props = {
   podcastEnabled?: boolean;
   electionBanner?: boolean;
   articleLiteSiteLinkEnabled?: boolean;
+  showTopicDiscoveryComponent?: boolean;
 };
 
 const ComponentWithContext = ({
@@ -73,6 +75,7 @@ const ComponentWithContext = ({
   podcastEnabled = false,
   electionBanner = false,
   articleLiteSiteLinkEnabled = false,
+  showTopicDiscoveryComponent = false,
 }: Props) => {
   return (
     <ToggleContextProvider
@@ -103,6 +106,7 @@ const ComponentWithContext = ({
                 secondaryColumn: data.secondaryData,
                 mostRead: data.secondaryData.mostRead,
               }}
+              showTopicDiscoveryComponent={showTopicDiscoveryComponent}
             />
           </ThemeProvider>
         </RequestContextProvider>
@@ -271,6 +275,16 @@ export const ArticlePageWithMultipleContributors = {
     <ComponentWithContext
       data={articleDataMultipleContributors}
       service="news"
+    />
+  ),
+};
+
+export const ArticlePageWithTopicDiscovery = {
+  render: () => (
+    <ComponentWithContext
+      data={articleWithTopicDiscovery}
+      service="portuguese"
+      showTopicDiscoveryComponent
     />
   ),
 };

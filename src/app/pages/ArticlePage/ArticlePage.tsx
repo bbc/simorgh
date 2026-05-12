@@ -21,7 +21,6 @@ import MediaLoader from '#app/components/MediaLoader';
 import { MediaBlock } from '#app/components/MediaLoader/types';
 import { PHOTO_GALLERY_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
 import PortraitVideoCarousel from '#app/components/PortraitVideoCarousel';
-
 import {
   getArticleId,
   getHeadline,
@@ -60,7 +59,7 @@ import ContinueReadingButton, {
   ContinueReadingButtonProps,
 } from '#app/components/ContinueReadingButton';
 import SaveArticleButton from '#app/components/SaveArticleButton';
-import { parseArticleID } from '#app/lib/uasApi/uasUtility';
+import isLive from '#lib/utilities/isLive';
 import ElectionBanner from './ElectionBanner';
 import ImageWithCaption from '../../components/ImageWithCaption';
 import AdContainer from '../../components/Ad';
@@ -81,6 +80,7 @@ import {
 } from '../../components/Byline/utilities';
 import { ServiceContext } from '../../contexts/ServiceContext';
 import RelatedContentSection from '../../components/RelatedContentSection';
+import TopicDiscovery from '../../components/TopicDiscovery';
 import Disclaimer from '../../components/Disclaimer';
 import SecondaryColumn from './SecondaryColumn';
 import styles from './ArticlePage.styles';
@@ -108,7 +108,6 @@ const getTimestampComponent =
     lastPublished: string,
     readTimeValue: number | undefined,
     readTimeTranslations: Translations['readTime'],
-    articleId: string,
     articleTitle: string,
     articlePageData?: Article,
   ) =>
@@ -143,7 +142,6 @@ const getTimestampComponent =
         )}
         {/* Temporary SaveArticleButton */}
         <SaveArticleButton
-          articleId={parseArticleID(articleId)}
           articleTitle={articleTitle}
           articlePageData={articlePageData}
         />
@@ -209,7 +207,13 @@ const getContinueReadingButton =
     />
   );
 
-const ArticlePage = ({ pageData }: { pageData: Article }) => {
+const ArticlePage = ({
+  pageData,
+  showTopicDiscoveryComponent = false,
+}: {
+  pageData: Article;
+  showTopicDiscoveryComponent?: boolean;
+}) => {
   const [showAllContent, setShowAllContent] = useState(false);
   const { isApp, isAmp, isLite, pageType } = use(RequestContext);
 
@@ -287,7 +291,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const articleId = getArticleId(pageData) ?? '';
   const topics = pageData?.metadata?.topics ?? [];
   const blocks = pageData?.content?.model?.blocks ?? [];
   const mediaCurationContent = pageData?.secondaryColumn?.mediaCuration;
@@ -306,6 +309,8 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
   }) as BylineLinkedData[];
 
   const hasByline = bylineLinkedData.length > 0;
+
+  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
 
   const articleAuthorTwitterHandle = hasByline
     ? getAuthorTwitterHandle(blocks)
@@ -391,7 +396,6 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
       lastPublished,
       readTimeValue,
       translations.readTime,
-      articleId,
       headline,
       pageData,
     ),
@@ -429,8 +433,14 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const showTopics = Boolean(showRelatedTopics && topics.length > 0);
-  const authors = bylineLinkedData?.map(data => data?.authorName).join(',');
+  const showRelatedTopicsComponent = Boolean(
+    showRelatedTopics && topics.length > 0 && !showTopicDiscoveryComponent,
+  );
+
+  // EXPERIMENT: Topic Discovery
+  const showTopicDiscovery =
+    showTopicDiscoveryComponent && !isAmp && !isLite && !isLive();
+
   // show media curation only when the user is in adaptive variation
   const showAdaptiveMediaCuration = Boolean(
     !isAmp &&
@@ -503,7 +513,17 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
             <OptimizelyPageMetrics trackPageComplete />
           </main>
           <OptimizelyPageMetrics trackPageView trackPageDepth trackVisit />
-          {showTopics && (
+          {showTopicDiscovery && (
+            <TopicDiscovery
+              css={[
+                ...(showContinueReadingButton
+                  ? [!showAllContent && styles.hideTopicDiscovery]
+                  : []),
+              ]}
+              topics={topics}
+            />
+          )}
+          {showRelatedTopicsComponent && (
             <RelatedTopics
               css={[
                 styles.relatedTopics,
@@ -564,7 +584,7 @@ const ArticlePage = ({ pageData }: { pageData: Article }) => {
           columnLayout="twoColumn"
           size="default"
           headingBackgroundColour={GREY_2}
-          mobileDivider={showTopics}
+          mobileDivider={showRelatedTopicsComponent}
           {...(timeOfDayExperimentProps && {
             experimentProps: timeOfDayExperimentProps,
           })}

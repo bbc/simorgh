@@ -414,7 +414,7 @@ export const service: DefaultServiceConfig = {
           text: 'பிபிசி பற்றி',
         },
         {
-          href: 'https://www.bbc.com/tamil/institutional-37286684',
+          href: 'https://www.bbc.com/tamil/articles/cgme0ml382zo',
           text: 'தனியுரிமை கொள்கை',
         },
         {
