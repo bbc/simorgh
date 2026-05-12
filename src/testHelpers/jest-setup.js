@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import { jest } from '@jest/globals';
 import fetch from 'jest-fetch-mock';
 import path from 'path';
@@ -53,6 +54,22 @@ global.IntersectionObserver = class IntersectionObserver {
     this.disconnect = jest.fn();
 
     document.addEventListener('triggerMockObserver', () => {
+      this.callback(this.entries);
+    });
+  }
+};
+
+global.ResizeObserver = class ResizeObserver {
+  constructor(callback) {
+    this.callback = callback;
+    this.entries = [];
+    this.observe = jest
+      .fn()
+      .mockImplementation(entry => this.entries.push(entry));
+    this.unobserve = jest.fn();
+    this.disconnect = jest.fn();
+
+    document.addEventListener('triggerMockResizeObserver', () => {
       this.callback(this.entries);
     });
   }
