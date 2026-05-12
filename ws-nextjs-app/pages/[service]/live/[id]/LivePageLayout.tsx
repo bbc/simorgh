@@ -200,7 +200,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         showAuthor
         isAccessibleForFree
         promoImage={metaImage?.url}
-        mainEntityId={liveBlogPostingSchema ? webPageId : undefined}
+        mainEntityId={liveBlogPostingSchema?.[1]?.['@id']}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
         {...(liveBlogPostingSchema && { entities: [...liveBlogPostingSchema] })}
