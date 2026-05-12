@@ -179,7 +179,7 @@ describe('TopicDiscovery', () => {
     });
 
     expect(
-      await screen.findByText('Failed to load. Please try again later.'),
+      await screen.findByText('Falha ao carregar. Tente novamente mais tarde.'),
     ).toBeInTheDocument();
 
     expect(
