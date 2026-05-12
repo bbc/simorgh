@@ -1,4 +1,3 @@
-/* eslint-disable no-template-curly-in-string */
 import envs, { EnvironmentConfigType } from '../../../../support/config/envs';
 
 export { getExpectedAtiDestination } from '#app/components/ATIAnalytics/helpers/getExpectedAtiDestination';
