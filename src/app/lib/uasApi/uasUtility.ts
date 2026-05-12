@@ -30,10 +30,6 @@ const buildGlobalId = (
   resourceType = FAVOURITES_CONFIG.resourceType,
 ): string => `urn:bbc:${resourceDomain}:${resourceType}:${resourceId}`;
 
-const parseArticleID = (articleId: string): string => {
-  return articleId.split(':').pop() || '';
-};
-
 const createFavouritesPayload = ({
   articleId,
   service,
@@ -98,7 +94,6 @@ export {
   FAVOURITES_CONFIG,
   buildGlobalId,
   createFavouritesPayload,
-  parseArticleID,
   extractPromoImageFromArticleData,
   buildPromoImageUrl,
 };
