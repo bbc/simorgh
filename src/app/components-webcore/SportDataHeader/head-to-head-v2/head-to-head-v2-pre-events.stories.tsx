@@ -5,7 +5,7 @@ import { preEventData } from './static-data/event/transformed/pre-event/index';
 // import mdx from './head-to-head-v2.mdx';
 // import metadata from './metadata.json';
 import { HeadToHeadV2 } from './head-to-head-v2';
-import { shortNamesMap } from './storybook/helpers/short-name-map';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 
 import {
   HeadToHeadV2Component,
@@ -44,11 +44,11 @@ export default {
   },
   argTypes: {
     home: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     away: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     venue: {
