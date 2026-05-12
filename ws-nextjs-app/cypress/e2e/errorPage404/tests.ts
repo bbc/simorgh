@@ -102,8 +102,9 @@ export default ({
         );
       });
     });
-    // SKIPPED: The following tests have been skipped as the Error Page hasn't yet been migrated.
     if ((envConfig as EnvironmentConfigType).standaloneErrorPages) {
+      // These tests are skipped because the Next.js application doesn't currently have dedicated routes for /{service}/404 and /{service}/500 that return HTTP 200.
+      // These would need to be explicitly configured in the Next.js routing/middleware to work as standalone error pages.
       describe.skip(`${service} error page routes`, () => {
         it(`/${service}/404 should have response code 200`, () => {
           cy.testResponseCodeAndType({

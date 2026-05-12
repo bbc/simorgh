@@ -61,15 +61,7 @@ const ampIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: [
-    '.*lite\\.test\\.js$',
-    '.*canonical\\.test\\.js$',
-    '<rootDir>/src/integration/pages/articles/',
-    '<rootDir>/src/integration/pages/mediaArticlePage/',
-    '<rootDir>/src/integration/pages/mediaAssetPage/',
-    '<rootDir>/src/integration/pages/photoGalleryPage/',
-    '<rootDir>/src/integration/pages/storyPage/',
-  ],
+  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*canonical\\.test\\.js$'],
 };
 
 const canonicalIntegrationTests = {
@@ -82,15 +74,7 @@ const canonicalIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: [
-    '.*lite\\.test\\.js$',
-    '.*amp\\.test\\.js$',
-    '<rootDir>/src/integration/pages/articles/',
-    '<rootDir>/src/integration/pages/mediaArticlePage/',
-    '<rootDir>/src/integration/pages/mediaAssetPage/',
-    '<rootDir>/src/integration/pages/photoGalleryPage/',
-    '<rootDir>/src/integration/pages/storyPage/',
-  ],
+  testPathIgnorePatterns: ['.*lite\\.test\\.js$', '.*amp\\.test\\.js$'],
 };
 
 const liteIntegrationTests = {
@@ -103,15 +87,7 @@ const liteIntegrationTests = {
   moduleNameMapper: jestDirAlias,
   setupFilesAfterEnv: ['./src/testHelpers/setupTests.js'],
   testMatch: ['**/src/integration/!(utils)/**/*.test.js'],
-  testPathIgnorePatterns: [
-    '.*canonical\\.test\\.js$',
-    '.*amp\\.test\\.js$',
-    '<rootDir>/src/integration/pages/articles/',
-    '<rootDir>/src/integration/pages/mediaArticlePage/',
-    '<rootDir>/src/integration/pages/mediaAssetPage/',
-    '<rootDir>/src/integration/pages/photoGalleryPage/',
-    '<rootDir>/src/integration/pages/storyPage/',
-  ],
+  testPathIgnorePatterns: ['.*canonical\\.test\\.js$', '.*amp\\.test\\.js$'],
 };
 
 const puppeteerTests = {

@@ -22,14 +22,14 @@ const clickFirstMapLink = () => {
   });
 };
 
-export const clickScriptSwitcher = (variant: string) => {
+export const clickScriptSwitcher = ({ variant }: ServiceParametersType) => {
   cy.get(`a[data-variant="${variant}"]`).click();
 };
 
-export const clickHomePageLink = (
-  service: ServiceParametersType,
-  variant: ServiceParametersType,
-) => {
+export const clickHomePageLink = ({
+  service,
+  variant,
+}: ServiceParametersType) => {
   cy.get('header[role="banner"]').within(() => {
     cy.get(
       `a[aria-labelledby="BrandLink-topPage"][href="/${service}/${variant}"]`,
@@ -37,7 +37,9 @@ export const clickHomePageLink = (
   });
 };
 
-export const clickPromoLinkOnHomePage = (pageType: string) => {
+export const clickPromoLinkOnHomePage = ({
+  pageType,
+}: ServiceParametersType) => {
   // If it is a MAP test, find first MAP on the homepage and click it
   if (pageType === MEDIA_ASSET_PAGE) {
     clickFirstMapLink();
