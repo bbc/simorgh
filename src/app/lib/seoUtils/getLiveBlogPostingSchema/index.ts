@@ -135,8 +135,6 @@ export default ({
     liveBlogUpdate[0]?.dateModified ??
     liveBlogUpdate[0]?.datePublished;
 
-  const liveBlogPostingId = `${url}#liveblog`;
-
   const webPage = {
     '@type': 'WebPage',
     '@id': url,
@@ -148,14 +146,42 @@ export default ({
 
   const liveBlogPosting = {
     '@type': 'LiveBlogPosting',
-    '@id': liveBlogPostingId,
+    '@id': `${url}#liveblog`,
     url,
     isAccessibleForFree: true,
+    ...(pageHeadline && { headline: pageHeadline }),
+    publisher,
+    author: publisher,
+    thumbnailUrl: defaultImage,
+    image: {
+      '@type': 'ImageObject',
+      url: defaultImage,
+    },
     mainEntityOfPage: { '@id': url },
     liveBlogUpdate,
     ...(coverageStartTime && { coverageStartTime }),
     ...(coverageEndTime && { coverageEndTime }),
+    ...(coverageStartTime && { datePublished: coverageStartTime }),
+    ...(coverageEndTime && { dateModified: coverageEndTime }),
   };
 
-  return { webPage, liveBlogPosting };
+  const newsArticle = {
+    '@type': 'NewsArticle',
+    '@id': `${url}#newsarticle`,
+    url,
+    ...(pageHeadline && { headline: pageHeadline }),
+    ...(description && { description }),
+    isAccessibleForFree: true,
+    publisher,
+    author: publisher,
+    image: {
+      '@type': 'ImageObject',
+      url: defaultImage,
+    },
+    mainEntityOfPage: { '@id': url },
+    ...(coverageStartTime && { datePublished: coverageStartTime }),
+    ...(coverageEndTime && { dateModified: coverageEndTime }),
+  };
+
+  return { webPage, liveBlogPosting, newsArticle };
 };

@@ -224,6 +224,7 @@ const LinkedData = ({
   });
   const linkedData = {
     '@type': type,
+    '@id': canonicalNonUkLink,
     url: canonicalNonUkLink,
     ...(isAccessibleForFree && { isAccessibleForFree: true }),
     ...(isNotRadioChannel && { publisher, thumbnailUrl }),

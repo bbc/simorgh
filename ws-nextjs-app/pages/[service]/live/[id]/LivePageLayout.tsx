@@ -203,7 +203,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
         {...(liveBlogPostingSchema && {
-          entities: [liveBlogPostingSchema.liveBlogPosting],
+          entities: [
+            liveBlogPostingSchema.liveBlogPosting,
+            liveBlogPostingSchema.newsArticle,
+          ],
         })}
       />
       <main>
