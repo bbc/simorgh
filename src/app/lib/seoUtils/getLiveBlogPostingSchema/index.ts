@@ -162,5 +162,5 @@ export default ({
     ...(coverageEndTime && { coverageEndTime }),
   };
 
-  return [webPage, liveBlogPosting] as const;
+  return { webPage, liveBlogPosting };
 };

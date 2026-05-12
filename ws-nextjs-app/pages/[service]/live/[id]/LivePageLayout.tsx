@@ -176,8 +176,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const metaTitle = headlineFromPost || pageTitle;
 
-  const webPageId = `${canonicalNonUkLink}#webpage`;
-
   return (
     <>
       <ATIAnalytics atiData={atiAnalytics} />
@@ -200,10 +198,15 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         showAuthor
         isAccessibleForFree
         promoImage={metaImage?.url}
-        mainEntityId={liveBlogPostingSchema?.[1]?.['@id']}
+        mainEntityId={liveBlogPostingSchema?.liveBlogPosting?.['@id']}
         {...(datePublished && { datePublished })}
         {...(dateModified && { dateModified })}
-        {...(liveBlogPostingSchema && { entities: [...liveBlogPostingSchema] })}
+        {...(liveBlogPostingSchema && {
+          entities: [
+            liveBlogPostingSchema.webPage,
+            liveBlogPostingSchema.liveBlogPosting,
+          ],
+        })}
       />
       <main>
         <Header
