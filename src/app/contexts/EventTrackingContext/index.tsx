@@ -2,6 +2,7 @@ import { createContext, PropsWithChildren, use, useMemo } from 'react';
 
 import { RequestContext } from '../RequestContext';
 import useToggle from '../../hooks/useToggle';
+import useUserTrackingData from '../../hooks/useUserTrackingData';
 import {
   ARTICLE_PAGE,
   MOST_READ_PAGE,
@@ -85,6 +86,8 @@ export const EventTrackingContextProvider = ({
   const serviceContext = use(ServiceContext);
   const { atiAnalyticsProducerId, atiAnalyticsProducerName } = serviceContext;
 
+  const { isSignedIn, hashedId } = useUserTrackingData();
+
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
   const trackingProps = useMemo(() => {
@@ -99,6 +102,8 @@ export const EventTrackingContextProvider = ({
         producerId: atiAnalyticsProducerId,
         producerName: atiAnalyticsProducerName,
         statsDestination,
+        isSignedIn,
+        hashedId,
       };
     }
     return null;
@@ -110,6 +115,8 @@ export const EventTrackingContextProvider = ({
     pageType,
     platform,
     statsDestination,
+    isSignedIn,
+    hashedId,
   ]);
 
   if (!eventTrackingIsEnabled || !atiData) {
@@ -120,9 +127,16 @@ export const EventTrackingContextProvider = ({
     );
   }
 
-  const hasRequiredProps = Object.values(
-    trackingProps as EventTrackingContextProps,
-  ).every(Boolean);
+  const hasRequiredProps =
+    trackingProps &&
+    [
+      trackingProps.campaignID,
+      trackingProps.pageIdentifier,
+      trackingProps.platform,
+      trackingProps.producerId,
+      trackingProps.producerName,
+      trackingProps.statsDestination,
+    ].every(Boolean);
 
   return (
     <EventTrackingContext.Provider

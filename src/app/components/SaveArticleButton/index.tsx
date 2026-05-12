@@ -1,9 +1,11 @@
 import useUASButton, { UASAction } from '#app/hooks/useUASButton';
-import { use, useContext } from 'react';
+import { use, useContext, useMemo } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
 import { Article } from '#app/models/types/optimo';
+import useClickTracker from '#app/hooks/useClickTrackerHandler';
+import useViewTracker from '#app/hooks/useViewTracker';
 import SaveButton from '../SaveButton';
 import styles from './index.styles';
 
@@ -27,6 +29,25 @@ const SaveArticleButton = ({
       articlePageData,
     });
 
+  const clickComponentName = useMemo(
+    () =>
+      `save-article-button-click-${
+        isSaved ? UASAction.REMOVE : UASAction.SAVE
+      }`,
+    [isSaved],
+  );
+
+  const viewTracker = useViewTracker({
+    componentName: 'save-article-button-view',
+  });
+
+  const { onClick: onClickTrack } = useClickTracker({
+    componentName: clickComponentName,
+    itemTracker: {
+      resourceId: articleId,
+    },
+  });
+
   if (!showButton) return null;
 
   if (!saveArticleButton) return null;
@@ -45,12 +66,13 @@ const SaveArticleButton = ({
 
   const buttonText = isLoading ? saveArticleButton.saving : buttonLabel;
 
-  const handleClick = () => {
+  const handleClick = (event?: React.MouseEvent) => {
+    onClickTrack?.(event);
     handleSaveAction(isSaved ? UASAction.REMOVE : UASAction.SAVE);
   };
 
   return (
-    <div css={styles.buttonWrapper}>
+    <div css={styles.buttonWrapper} {...viewTracker}>
       <SaveButton
         onClick={handleClick}
         isLoading={isLoading}
