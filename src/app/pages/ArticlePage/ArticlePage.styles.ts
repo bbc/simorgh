@@ -97,6 +97,14 @@ export default {
         display: 'block',
       },
     }),
+  hideTopicDiscovery: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
   adContainer: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
