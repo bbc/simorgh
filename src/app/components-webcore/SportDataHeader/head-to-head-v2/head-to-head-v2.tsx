@@ -22,6 +22,8 @@ export const HeadToHeadV2 = ({
   const hasActions =
     (data?.home?.actions?.length ?? 0) > 0 ||
     (data?.away?.actions?.length ?? 0) > 0;
+
+  // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
   const shouldHideBadges = true;
 
   return (
