@@ -17,7 +17,7 @@ export const HeadToHeadV2 = ({
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
-  teamBadgePlaceholderFallbackType?: string;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }) => {
   const hasActions =
     (data?.home?.actions?.length ?? 0) > 0 ||
