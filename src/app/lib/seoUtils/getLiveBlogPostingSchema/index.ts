@@ -1,11 +1,18 @@
 import buildIChefURL from '#app/lib/utilities/ichefURL';
-import { OptimoBlock } from '#app/models/types/optimo';
-import { Post } from '#nextjs/pages/[service]/live/[id]/Post/types';
+import { OptimoBlock, OptimoImageBlock } from '#app/models/types/optimo';
+import {
+  Post,
+  PostHeadline,
+  PostContributor,
+} from '#nextjs/pages/[service]/live/[id]/Post/types';
+
+type ParagraphBlock = OptimoBlock & { model: { text: string } };
 
 const getHeadlineText = (post: Post): string | undefined => {
   const headerBlocks = post?.header?.model?.blocks;
-  const headlineBlock = headerBlocks?.find(block => block.type === 'headline');
-  // @ts-expect-error - deeply nested
+  const headlineBlock = headerBlocks?.find(
+    block => block.type === 'headline',
+  ) as PostHeadline | undefined;
   return headlineBlock?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 };
 
@@ -13,10 +20,9 @@ const getArticleBody = (post: Post): string | undefined => {
   const contentBlocks = post?.content?.model?.blocks;
   const paragraphBlocks = contentBlocks?.filter(
     block => block.type === 'paragraph',
-  );
+  ) as ParagraphBlock[] | undefined;
   if (!paragraphBlocks?.length) return undefined;
-  // @ts-expect-error - deeply nested
-  const text = paragraphBlocks.map(block => block.model.text).join(' ');
+  const text = paragraphBlocks?.map(block => block.model.text).join(' ');
   return text || undefined;
 };
 
@@ -24,32 +30,23 @@ const getAuthor = (post: Post, orgAuthor: Record<string, unknown>) => {
   const headerBlocks = post?.header?.model?.blocks;
   const contributorBlock = headerBlocks?.find(
     block => block.type === 'contributor',
-  );
-
+  ) as PostContributor | undefined;
   if (!contributorBlock) return orgAuthor;
-
-  // @ts-expect-error - deeply nested
-  const { name, link } = contributorBlock.model ?? {};
+  const { name, link } = contributorBlock.model;
   if (!name) return orgAuthor;
-
-  return {
-    '@type': 'Person',
-    name,
-    ...(link && { url: link }),
-  };
+  return { '@type': 'Person', name, ...(link && { url: link }) };
 };
 
 const getImage = (post: Post): string | undefined => {
   const contentBlocks = post?.content?.model?.blocks;
-  const imageBlock = contentBlocks?.find(block => block.type === 'image');
+  const imageBlock = contentBlocks?.find(block => block.type === 'image') as
+    | OptimoImageBlock
+    | undefined;
   if (!imageBlock) return undefined;
 
-  // @ts-expect-error - deeply nested
-  const imageSource = imageBlock?.model?.blocks?.find(
-    (block: OptimoBlock) => block.type === 'rawImage',
-  );
+  const [rawImage] = imageBlock.model.blocks;
 
-  const { locator, originCode } = imageSource.model ?? {};
+  const { locator, originCode } = rawImage?.model ?? {};
   if (!locator || !originCode) return undefined;
 
   return buildIChefURL({
@@ -117,7 +114,7 @@ export default ({
             ...(articleBody && { articleBody }),
             author: getAuthor(post, publisher),
             publisher,
-            mainEntityOfPage: { '@id': webPageId },
+            mainEntityOfPage: { '@id': url },
             ...(image && { image }),
             datePublished: post.dates.firstPublished,
             ...(post.dates.lastPublished && {
@@ -156,7 +153,7 @@ export default ({
     '@id': liveBlogPostingId,
     url,
     isAccessibleForFree: true,
-    mainEntityOfPage: { '@id': webPageId },
+    mainEntityOfPage: { '@id': url },
     liveBlogUpdate,
     ...(coverageStartTime && { coverageStartTime }),
     ...(coverageEndTime && { coverageEndTime }),
