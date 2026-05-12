@@ -53,8 +53,8 @@ const getImage = (post: Post): string | undefined => {
   if (!locator || !originCode) return undefined;
 
   return buildIChefURL({
-    locator: imageSource?.model?.locator,
-    originCode: imageSource?.model?.originCode,
+    locator,
+    originCode,
     resolution: 640,
   });
 };
