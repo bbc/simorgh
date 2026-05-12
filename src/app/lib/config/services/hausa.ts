@@ -85,6 +85,8 @@ export const service: DefaultServiceConfig = {
       topicDiscovery: {
         heading: 'Gano ƙarin abubuwa',
         moreFromTopic: 'Ƙarin labarai daga {topic}',
+        fetchErrorMessage:
+          'An kasa lodawa. Da fatan za a sake gwadawa daga baya.',
       },
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
