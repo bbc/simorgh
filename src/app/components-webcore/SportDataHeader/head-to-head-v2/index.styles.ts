@@ -18,10 +18,10 @@ export default {
         fontFeatureSettings: "'ss01' off",
         color: palette.LUNAR_LIGHT,
         padding: isConciseView ? '8px' : '0',
-        paddingBottom: !isConciseView ? `${pixelsToRem(24)}rem` : undefined,
+        ...(!isConciseView && { paddingBottom: `${pixelsToRem(24)}rem` }),
         [mq.GROUP_2_MAX_WIDTH]: {
           paddingTop: isConciseView ? '8px' : '0',
-          paddingBottom: !isConciseView ? `${pixelsToRem(8)}rem` : undefined,
+          ...(!isConciseView && { paddingBottom: `${pixelsToRem(8)}rem` }),
         },
       }),
 };
