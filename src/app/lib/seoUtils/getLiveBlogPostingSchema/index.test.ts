@@ -24,7 +24,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
       endDateTime: '2023-09-08T10:09:41+00:00',
     });
 
-    const [webPage, liveBlogPosting] = result ?? [];
+    const { webPage, liveBlogPosting } = result ?? {};
 
     expect(webPage?.['@type']).toEqual('WebPage');
     expect(webPage?.['@id']).toEqual('https://www.bbc.com/mundo#webpage');
@@ -47,7 +47,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
       url: 'https://www.bbc.com/mundo',
     });
 
-    const [, liveBlogPosting] = result ?? [];
+    const { liveBlogPosting } = result ?? {};
 
     expect(liveBlogPosting?.['@type']).toEqual('LiveBlogPosting');
     expect(liveBlogPosting?.liveBlogUpdate).toHaveLength(3);
@@ -67,7 +67,7 @@ describe('SEO Utils | getLiveBlogPostingSchema', () => {
       url: 'https://www.bbc.com/mundo',
     });
 
-    const [, liveBlogPosting] = result ?? [];
+    const { liveBlogPosting } = result ?? {};
 
     const expected = [
       {
