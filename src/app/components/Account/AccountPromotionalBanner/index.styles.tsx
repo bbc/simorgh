@@ -91,7 +91,7 @@ export default {
     position: 'relative',
     zIndex: 1,
     width: '60%',
-    height: '60%',
+    height: '40%',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -113,10 +113,41 @@ export default {
       justifyContent: 'center',
       alignItems: 'center',
     },
+
     '& > aside > div > div > div': {
       paddingTop: '1rem',
       paddingBottom: '1rem',
-      // gap: '2rem',
+    },
+  }),
+
+  modalInner: css({
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100%',
+    height: '100%',
+  }),
+
+  modalBannerSide: css({
+    flex: 1,
+    display: 'flex',
+    alignItems: 'stretch',
+    paddingInlineStart: '2rem',
+  }),
+
+  modalImageSide: css({
+    position: 'absolute',
+    insetInlineEnd: '5%',
+    top: '-20%',
+    width: '40%',
+    height: '140%',
+    zIndex: 2,
+    pointerEvents: 'none',
+
+    '& img': {
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain',
     },
   }),
 };

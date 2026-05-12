@@ -83,15 +83,22 @@ const AccountPromotionalBannerModal = ({
           css={styles.backdrop}
         />
         <div css={styles.modalContent}>
-          <ToggleContextProvider>
-            <ThemeProvider service="ws">
-              <ServiceContextProvider service="ws">
-                <AccountContext.Provider value={accountContextValue}>
-                  <AccountPromotionalBanner />
-                </AccountContext.Provider>
-              </ServiceContextProvider>
-            </ThemeProvider>
-          </ToggleContextProvider>
+          <div css={styles.modalInner}>
+            <div css={styles.modalBannerSide}>
+              <ToggleContextProvider>
+                <ThemeProvider service="ws">
+                  <ServiceContextProvider service="ws">
+                    <AccountContext.Provider value={accountContextValue}>
+                      <AccountPromotionalBanner />
+                    </AccountContext.Provider>
+                  </ServiceContextProvider>
+                </ThemeProvider>
+              </ToggleContextProvider>
+            </div>
+            <div css={styles.modalImageSide}>
+              <img src="/images/globeImage.png" alt="" aria-hidden="true" />
+            </div>
+          </div>
         </div>
       </div>
     </>
