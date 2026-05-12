@@ -81,7 +81,8 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
         .replace('{idclient}', params.idclient)
         .replace('{epochTimestamp}', epochTimestamp)
         .replace('{forwardingLink}', forwardingUrl)
-        .replaceAll('ref=&', '');
+        .replaceAll('ref=&', '')
+        .replace(/&ref=$/, ''); // removes empty ref at end of URL
 
       const searchParams = new URLSearchParams(window.location.search);
 
@@ -97,7 +98,6 @@ export const addProcessClientDeviceAndSendStaticBeaconToWindow = () => {
               .replace('xtor', 'xto');
         }
       });
-
       window.sendStaticBeacon(processedReverbUrl);
     }
   };
