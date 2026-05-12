@@ -36,10 +36,6 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: ./scripts/installNodeModules.sh
 
-      - name: Build Simorgh - Next.JS App
-        working-directory: ./ws-nextjs-app
-        run: yarn build
-
       - name: Unit Tests - Express App
         run: yarn test:unit:ci
 
