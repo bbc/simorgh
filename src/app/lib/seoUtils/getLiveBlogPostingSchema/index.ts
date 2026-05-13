@@ -145,15 +145,6 @@ export default ({
     liveBlogUpdate[0]?.dateModified ??
     liveBlogUpdate[0]?.datePublished;
 
-  const webPage = {
-    '@type': 'WebPage',
-    '@id': url,
-    url,
-    ...(pageHeadline && { name: pageHeadline }),
-    ...(description && { description }),
-    publisher,
-  };
-
   const liveBlogPosting = {
     '@type': 'LiveBlogPosting',
     '@id': `${url}#liveblog`,
