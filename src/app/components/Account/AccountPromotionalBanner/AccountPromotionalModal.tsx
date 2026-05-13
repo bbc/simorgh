@@ -84,6 +84,20 @@ const AccountPromotionalBannerModal = ({
         />
         <div css={styles.modalContent}>
           <div css={styles.modalInner}>
+            <div css={styles.modalImageSide}>
+              <img
+                src="/images/globeImageHorizontal.png"
+                alt=""
+                aria-hidden="true"
+                css={styles.imageHorizontal}
+              />
+              <img
+                src="/images/globeImageVertical.png"
+                alt=""
+                aria-hidden="true"
+                css={styles.imageVertical}
+              />
+            </div>
             <div css={styles.modalBannerSide}>
               <ToggleContextProvider>
                 <ThemeProvider service="ws">
@@ -94,9 +108,6 @@ const AccountPromotionalBannerModal = ({
                   </ServiceContextProvider>
                 </ThemeProvider>
               </ToggleContextProvider>
-            </div>
-            <div css={styles.modalImageSide}>
-              <img src="/images/globeImage.png" alt="" aria-hidden="true" />
             </div>
           </div>
         </div>

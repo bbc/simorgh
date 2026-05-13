@@ -2,7 +2,7 @@ import { Theme, css } from '@emotion/react';
 import pixelsToRem from '#app/utilities/pixelsToRem';
 
 export default {
-  callToActionLink: ({ mq }) =>
+  callToActionLink: ({ mq }: Theme) =>
     css({
       padding: '1rem',
       display: 'inline-flex',
@@ -87,45 +87,53 @@ export default {
     backdropFilter: 'blur(0.2rem)',
   }),
 
-  modalContent: css({
-    position: 'relative',
-    zIndex: 1,
-    width: '60%',
-    height: '40%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-    '& > aside': {
-      width: '100%',
-      height: '100%',
-      justifyContent: 'center',
+  modalContent: ({ mq }: Theme) =>
+    css({
+      position: 'relative',
+      zIndex: 1,
+      width: '45%',
+      height: '50vh',
+      display: 'flex',
       alignItems: 'center',
-    },
-
-    '& > aside > div': {
       justifyContent: 'center',
-      alignItems: 'center',
-      textAlign: 'center',
-    },
+      overflow: 'hidden',
 
-    '& > aside > div > div': {
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
+      [mq.GROUP_4_MIN_WIDTH]: {
+        width: '60%',
+        height: '40%',
+      },
 
-    '& > aside > div > div > div': {
-      paddingTop: '1rem',
-      paddingBottom: '1rem',
-    },
-  }),
+      '& > aside': {
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+
+      '& > aside > div': {
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+      },
+
+      '& > aside > div > div': {
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+
+      '& > aside > div > div > div': {
+        paddingTop: '1rem',
+        paddingBottom: '1rem',
+      },
+    }),
 
   modalInner: css({
     position: 'relative',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     width: '100%',
     height: '100%',
+    overflow: 'hidden',
   }),
 
   modalBannerSide: css({
@@ -135,19 +143,50 @@ export default {
     paddingInlineStart: '2rem',
   }),
 
-  modalImageSide: css({
-    position: 'absolute',
-    insetInlineEnd: '5%',
-    top: '-20%',
-    width: '40%',
-    height: '140%',
-    zIndex: 2,
-    pointerEvents: 'none',
+  modalImageSide: ({ mq }: Theme) =>
+    css({
+      width: '100%',
+      height: '12rem',
+      overflow: 'hidden',
+      pointerEvents: 'none',
+      flexShrink: 0,
 
-    '& img': {
+      '& img': {
+        width: '100%',
+        height: '100%',
+      },
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        position: 'absolute',
+        insetInlineEnd: '5%',
+        top: '-20%',
+        width: '40%',
+        height: '140%',
+        zIndex: 2,
+      },
+    }),
+
+  imageHorizontal: ({ mq }: Theme) =>
+    css({
+      display: 'block',
       width: '100%',
       height: '100%',
       objectFit: 'contain',
-    },
-  }),
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'none',
+      },
+    }),
+
+  imageVertical: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+      width: '100%',
+      height: '100%',
+      objectFit: 'contain',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
 };
