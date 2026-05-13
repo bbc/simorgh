@@ -14,7 +14,7 @@ import readme from './README.md';
 import metadata from './metadata.json';
 import type { HeadToHeadV2Data } from './types';
 import HeadToHeadV2 from '.';
-import { shortNamesMap } from './storybook/helpers/short-name-map';
+import { SHORT_NAMES } from './storybook/helpers/short-name-map';
 import venuesData from './static-data/premier-league-venues.json';
 
 const { venues } = venuesData;
@@ -45,11 +45,11 @@ export default {
   },
   argTypes: {
     home: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     away: {
-      options: Object.keys(shortNamesMap()),
+      options: Object.keys(SHORT_NAMES),
       control: { type: 'select' },
     },
     venue: {
@@ -72,7 +72,7 @@ interface ComponentProps {
   data: StoryData;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
-  maximumContainerScoreDigits?: string;
+  maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
 }
 
@@ -88,7 +88,6 @@ const Component = ({
   teamBadgePlaceholderFallbackType = 'badge',
 }: ComponentProps) => {
   return (
-    // @ts-expect-error - PS copy and paste
     <HeadToHeadV2
       data={data}
       isConciseView={isConciseView}

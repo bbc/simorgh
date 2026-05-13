@@ -83,6 +83,11 @@ export const service: DefaultServiceConfig = {
       },
       seeAll: 'Lihat semua',
       home: 'Berita',
+      topicDiscovery: {
+        heading: 'Temukan lebih banyak',
+        moreFromTopic: 'Selengkapnya dari {topic}',
+        fetchErrorMessage: 'Gagal memuat. Silakan coba lagi nanti.',
+      },
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
