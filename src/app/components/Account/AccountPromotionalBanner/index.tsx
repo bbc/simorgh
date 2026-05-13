@@ -71,7 +71,6 @@ const AccountPromotionalBanner = () => {
         buttonSeparatorText={buttonSeparatorText}
         isDismissible
         onClose={handleCloseClick}
-        {...viewTracker}
       >
         <CallToActionLink
           url={signInUrl}
