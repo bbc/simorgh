@@ -26,14 +26,14 @@ const fetchSaveStatus = async (articleId: string): Promise<boolean> => {
 const useUASFetchSaveStatus = (
   articleId: string,
 ): UseUASFetchSaveStatusReturn => {
-  const { userPseudoId = '' } = use(AccountContext);
+  const { hashedUserID = '' } = use(AccountContext);
 
   const {
     data: isSaved = false,
     isLoading,
     error,
   } = useQuery({
-    queryKey: uasKeys.favouriteStatus(userPseudoId, articleId),
+    queryKey: uasKeys.favouriteStatus(hashedUserID, articleId),
     queryFn: () => fetchSaveStatus(articleId),
     enabled: !!articleId,
   });

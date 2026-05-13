@@ -75,7 +75,7 @@ describe('useUASButton', () => {
     });
 
     (use as jest.Mock).mockImplementation(context => {
-      if (context === AccountContext) return { userPseudoId: 'user-123' };
+      if (context === AccountContext) return { hashedUserID: 'user-123' };
       if (context === ServiceContext) return { service: 'hindi' };
       return {};
     });

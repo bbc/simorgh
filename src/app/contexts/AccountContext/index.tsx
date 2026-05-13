@@ -15,7 +15,8 @@ import Cookie from 'js-cookie';
 import { getIdctaUserOrigin } from '#app/lib/idcta/getIDCTAUserOrigin';
 import useToggle from '#app/hooks/useToggle';
 import isLocal from '#app/lib/utilities/isLocal';
-import { getUserPseudoIdFromToken } from '#app/lib/uasApi/tokenRefresh/tokenManager';
+import { USER_ID_COOKIE_KEY } from '#app/lib/uasApi/uasUtility';
+import { TOKEN_COOKIE_NAME } from '#app/lib/uasApi/tokenRefresh/tokenManager';
 
 export const AccountContext = createContext<AccountContextProps>(
   {} as AccountContextProps,
@@ -25,7 +26,7 @@ type AccountProviderProps = {
   initialConfig: IdctaConfig | null;
 };
 
-const getSignedInCookie = (cookieName = 'ckns_id') => {
+const getClientCookie = (cookieName: string) => {
   return onClient() ? Cookie.get(cookieName) : undefined;
 };
 
@@ -68,11 +69,11 @@ export const AccountProvider = ({
   const signOutUrl = buildAccountUrl(initialConfig?.signout_url);
   const forYouUrl = buildAccountUrl(initialConfig?.foryou_url);
 
-  const signedInToken = getSignedInCookie(
-    initialConfig?.identity?.idSignedInCookieName,
+  const signedInToken = getClientCookie(
+    initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
   );
 
-  const userPseudoId = getUserPseudoIdFromToken(signedInToken);
+  const hashedUserID = getClientCookie(USER_ID_COOKIE_KEY);
 
   const isSignedIn =
     isIdctaAvailable &&
@@ -91,7 +92,7 @@ export const AccountProvider = ({
 
   const value = useMemo(
     () => ({
-      userPseudoId,
+      hashedUserID,
       isIdctaAvailable,
       isSignedIn,
       signInUrl,
@@ -104,7 +105,7 @@ export const AccountProvider = ({
       isPersonalizationEnabled,
     }),
     [
-      userPseudoId,
+      hashedUserID,
       forYouUrl,
       isIdctaAvailable,
       isSignedIn,

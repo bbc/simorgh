@@ -2,7 +2,7 @@ import Cookie from 'js-cookie';
 import onClient from '#app/lib/utilities/onClient';
 import refreshTokens from './refreshTokens';
 
-const TOKEN_COOKIE_NAME = 'ckns_id';
+export const TOKEN_COOKIE_NAME = 'ckns_id';
 const TOKEN_EXPIRY_BUFFER_MS = 5 * 60 * 1000; // 5 minutes before expiry
 const TOKEN_EXPIRY_TIMESTAMP = 'tkn-exp';
 
@@ -40,13 +40,6 @@ export const isTokenValidFor = (durationMs: number, token: string): boolean => {
 
   const earlyExpiryDate = new Date(tokenExpiry - durationMs);
   return Date.now() < earlyExpiryDate.getTime();
-};
-
-export const getUserPseudoIdFromToken = (token = ''): string | undefined => {
-  const decodedToken = getDecodedToken(token);
-  const pseudonym = decodedToken?.ps;
-
-  return typeof pseudonym === 'string' ? pseudonym : undefined;
 };
 
 const hasValidTokens = (): boolean => {

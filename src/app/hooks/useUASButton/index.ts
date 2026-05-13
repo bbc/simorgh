@@ -39,7 +39,7 @@ const useUASButton = ({
   articlePageData,
 }: UseUASButtonProps): UseUASButtonReturn => {
   const { service } = use(ServiceContext);
-  const { userPseudoId = '' } = use(AccountContext);
+  const { hashedUserID = '' } = use(AccountContext);
   const queryClient = useQueryClient();
   const { isSaved, isLoading, error } = useUASFetchSaveStatus(articleId);
 
@@ -66,7 +66,7 @@ const useUASButton = ({
     },
     onSuccess: (_, action) => {
       queryClient.setQueryData(
-        uasKeys.favouriteStatus(userPseudoId, articleId),
+        uasKeys.favouriteStatus(hashedUserID, articleId),
         action === UASAction.SAVE,
       );
     },
