@@ -56,6 +56,47 @@ const getImage = (post: Post): string | undefined => {
   });
 };
 
+const buildUpdatesFromPosts = ({
+  posts,
+  pageHeadline,
+  publisher,
+  url,
+}: {
+  posts: Post[];
+  pageHeadline?: string;
+  publisher: Record<string, unknown>;
+  url: string;
+}) =>
+  posts
+    .map(post => {
+      if (!post.urn || !post.dates?.firstPublished) return null;
+      const headline = getHeadlineText(post) ?? pageHeadline;
+      if (!headline) return null;
+      const articleBody = getArticleBody(post);
+      const image = getImage(post);
+      return {
+        '@type': 'BlogPosting',
+        '@id': `${url}#post-${post.urn}`,
+        isAccessibleForFree: true,
+        headline,
+        ...(articleBody && { articleBody }),
+        author: getAuthor(post, publisher),
+        publisher,
+        mainEntityOfPage: { '@id': url },
+        ...(image && { image }),
+        datePublished: post.dates.firstPublished,
+        ...(post.dates.lastPublished && {
+          dateModified: post.dates.lastPublished,
+        }),
+      };
+    })
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
+    .sort(
+      (postA, postB) =>
+        new Date(postB.datePublished).getTime() -
+        new Date(postA.datePublished).getTime(),
+    );
+
 export default ({
   posts,
   brandName,
@@ -94,38 +135,7 @@ export default ({
   };
 
   const liveBlogUpdate = hasPosts
-    ? posts
-        .map(post => {
-          if (!post.urn || !post.dates?.firstPublished) return null;
-
-          const headline = getHeadlineText(post) ?? pageHeadline;
-          if (!headline) return null;
-
-          const articleBody = getArticleBody(post);
-          const image = getImage(post);
-
-          return {
-            '@type': 'BlogPosting',
-            '@id': `${url}#post-${post.urn}`,
-            isAccessibleForFree: true,
-            headline,
-            ...(articleBody && { articleBody }),
-            author: getAuthor(post, publisher),
-            publisher,
-            mainEntityOfPage: { '@id': url },
-            ...(image && { image }),
-            datePublished: post.dates.firstPublished,
-            ...(post.dates.lastPublished && {
-              dateModified: post.dates.lastPublished,
-            }),
-          };
-        })
-        .filter((item): item is NonNullable<typeof item> => Boolean(item))
-        .sort(
-          (postA, postB) =>
-            new Date(postB.datePublished).getTime() -
-            new Date(postA.datePublished).getTime(),
-        )
+    ? buildUpdatesFromPosts({ posts, pageHeadline, publisher, url })
     : [];
 
   const coverageStartTime =
@@ -183,5 +193,5 @@ export default ({
     ...(coverageEndTime && { dateModified: coverageEndTime }),
   };
 
-  return { webPage, liveBlogPosting, newsArticle };
+  return { liveBlogPosting, newsArticle };
 };
