@@ -30,8 +30,7 @@ const keyEventsBase = css({
 
 export default {
   // ==================== Action Grid ====================
-  actionGrid: () =>
-    css({
+  actionGrid: css({
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       gridTemplateAreas: `
@@ -76,21 +75,18 @@ export default {
     }),
 
   // ==================== Actions Time ====================
-  textBlock: () =>
-    css({
+  textBlock: css({
       whiteSpace: 'nowrap',
     }),
 
   // ==================== Card ====================
-  cardWrapper: () =>
-    css({
+  cardWrapper: css({
       paddingInline: `${pixelsToRem(3.2)}rem`,
       display: 'inline-block',
       verticalAlign: 'bottom',
     }),
 
-  redCard: () =>
-    css({
+  redCard: css({
       paddingInline: `${pixelsToRem(3.2)}rem`,
       display: 'inline-block',
       verticalAlign: 'bottom',
@@ -98,8 +94,7 @@ export default {
       marginBlockEnd: `${pixelsToRem(-3.2)}rem`,
     }),
 
-  yellowCard: () =>
-    css({
+  yellowCard: css({
       paddingInline: `${pixelsToRem(3.2)}rem`,
       display: 'inline-block',
       verticalAlign: 'bottom',
@@ -107,8 +102,7 @@ export default {
       width: `${pixelsToRem(16)}rem`,
     }),
 
-  cardContainer: () =>
-    css({
+  cardContainer: css({
       display: 'inline-block',
       boxSizing: 'content-box',
     }),
@@ -126,8 +120,7 @@ export default {
     }),
 
   // ==================== Fixture Time ====================
-  fixtureTime: () =>
-    css({
+  fixtureTime: css({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -143,8 +136,7 @@ export default {
     }),
 
   // ==================== Footer ====================
-  footer: () =>
-    css({
+  footer: css({
       fontSize: `${pixelsToRem(14)}rem`,
       lineHeight: 1.2857142857142858,
       paddingBlockEnd: `${pixelsToRem(16)}rem`,
@@ -156,8 +148,7 @@ export default {
       },
     }),
 
-  footerTextWrapper: () =>
-    css({
+  footerTextWrapper: css({
       display: 'inline-block',
       fontSize: `${pixelsToRem(13)}rem`,
       '&:not(:first-child)': {
@@ -165,36 +156,31 @@ export default {
       },
     }),
 
-  venue: () =>
-    css({
+  venue: css({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
       paddingBlockEnd: `${pixelsToRem(4)}rem`,
     }),
 
-  attendanceValue: () =>
-    css({
+  attendanceValue: css({
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
       flexWrap: 'wrap',
     }),
 
-  venueLabel: () =>
-    css({
+  venueLabel: css({
       color: '#a8a8a8',
       paddingInlineEnd: `${pixelsToRem(4)}rem`,
     }),
 
-  attendanceLabel: () =>
-    css({
+  attendanceLabel: css({
       color: '#a8a8a8',
       paddingInlineEnd: `${pixelsToRem(4)}rem`,
     }),
 
-  horizontalRule: () =>
-    css({
+  horizontalRule: css({
       width: `${pixelsToRem(12)}rem`,
       border: 'none',
       borderBlockStart: `${pixelsToRem(1)}rem solid #FFD230`,
@@ -202,19 +188,16 @@ export default {
     }),
 
   // ==================== Grouped Events ====================
-  groupedEventsWrapper: () =>
-    css({
+  groupedEventsWrapper: css({
       marginBlock: `${pixelsToRem(8)}rem 0`,
       marginInline: `${pixelsToRem(24)}rem`,
     }),
 
-  actionWrapper: () =>
-    css({
+  actionWrapper: css({
       borderBlockStart: `${pixelsToRem(1)}rem solid #505050`,
     }),
 
-  groupLabel: () =>
-    css({
+  groupLabel: css({
       gridArea: GRID_AREAS.centreText,
       fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
       fontWeight: 700,
@@ -228,8 +211,7 @@ export default {
       },
     }),
 
-  groupedHomeEvent: () =>
-    css({
+  groupedHomeEvent: css({
       gridArea: GRID_AREAS.homeText,
       textAlign: 'end',
       fontSize: `${pixelsToRem(14)}rem`,
@@ -244,8 +226,7 @@ export default {
       },
     }),
 
-  groupedAwayEvent: () =>
-    css({
+  groupedAwayEvent: css({
       gridArea: GRID_AREAS.awayText,
       textAlign: 'start',
       fontSize: `${pixelsToRem(14)}rem`,
@@ -281,16 +262,14 @@ export default {
         }),
     }),
 
-  withInlineFallback: () =>
-    css({
+  withInlineFallback: css({
       '@supports not (display: grid)': {
         display: 'inline-block',
         width: '33%',
       },
     }),
 
-  teamHome: () =>
-    css({
+  teamHome: css({
       gridArea: 'home_team',
       display: 'flex',
       alignItems: 'stretch',
@@ -300,8 +279,7 @@ export default {
       },
     }),
 
-  teamAway: () =>
-    css({
+  teamAway: css({
       gridArea: 'away_team',
       display: 'flex',
       alignItems: 'stretch',
@@ -311,8 +289,7 @@ export default {
       },
     }),
 
-  scores: () =>
-    css({
+  scores: css({
       gridArea: 'scores',
       margin: 'auto',
       '@supports not (display: grid)': {
@@ -321,8 +298,7 @@ export default {
       },
     }),
 
-  matchProgressContainer: () =>
-    css({
+  matchProgressContainer: css({
       gridArea: 'progress',
     }),
 
@@ -346,8 +322,7 @@ export default {
       },
     }),
 
-  dateWrapper: () =>
-    css({
+  dateWrapper: css({
       display: 'flex',
       justifyContent: 'flex-end',
       flexDirection: 'column',
@@ -356,8 +331,7 @@ export default {
       },
     }),
 
-  dateHeader: () =>
-    css({
+  dateHeader: css({
       display: 'flex',
       justifyContent: 'center',
       paddingBlockEnd: `${pixelsToRem(4)}rem`,
@@ -366,8 +340,7 @@ export default {
       },
     }),
 
-  interpunct: () =>
-    css({
+  interpunct: css({
       color: '#a8a8a8',
       display: 'none',
       [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
@@ -376,21 +349,18 @@ export default {
       },
     }),
 
-  tournamentHeader: () =>
-    css({
+  tournamentHeader: css({
       display: 'flex',
       justifyContent: 'center',
       flexWrap: 'wrap',
     }),
 
-  date: () =>
-    css({
+  date: css({
       color: '#a8a8a8',
       flexShrink: 0,
     }),
 
-  competitionFormatter: () =>
-    css({
+  competitionFormatter: css({
       whiteSpace: 'pre',
       overflow: 'hidden',
       textOverflow: 'ellipsis',
@@ -399,7 +369,7 @@ export default {
     }),
 
   // ==================== Key Events ====================
-  keyEventsHome: () => [
+  keyEventsHome: [
     keyEventsBase,
     css({
       textAlign: 'end',
@@ -410,7 +380,7 @@ export default {
     }),
   ],
 
-  keyEventsAway: () => [
+  keyEventsAway: [
     keyEventsBase,
     css({
       gridArea: GRID_AREAS.awayText,
@@ -431,16 +401,14 @@ export default {
       }),
     }),
 
-  aggregateScore: () =>
-    css({
+  aggregateScore: css({
       fontSize: `${pixelsToRem(14)}rem`,
       lineHeight: 1.2857142857142858,
       textAlign: 'center',
     }),
 
   // ==================== Penalty Scores ====================
-  penaltyScoresContainer: () =>
-    css({
+  penaltyScoresContainer: css({
       fontSize: '1rem',
       lineHeight: 1.375,
       textAlign: 'center',
@@ -450,22 +418,19 @@ export default {
       },
     }),
 
-  winningTeamName: () =>
-    css({
+  winningTeamName: css({
       fontFamily: 'ReithSans, Helvetica, Arial, freesans, sans-serif',
       fontWeight: 700,
       fontFeatureSettings: "'ss01' off",
       color: '#FFD230',
     }),
 
-  penaltiesText: () =>
-    css({
+  penaltiesText: css({
       color: '#A8A8A8',
     }),
 
   // ==================== Period ====================
-  period: () =>
-    css({
+  period: css({
       display: 'flex',
       justifyContent: 'center',
       color: '#FFD230',
@@ -474,8 +439,7 @@ export default {
     }),
 
   // ==================== Score ====================
-  score: () =>
-    css({
+  score: css({
       display: 'grid',
       gridTemplateColumns: '1fr auto 1fr',
       gridTemplateAreas: `'${HOME_SCORE}  ${VERTICAL_LINE}  ${AWAY_SCORE}'`,
@@ -492,20 +456,17 @@ export default {
       },
     }),
 
-  homeScore: () =>
-    css({
+  homeScore: css({
       gridArea: HOME_SCORE,
       textAlign: 'end',
     }),
 
-  awayScore: () =>
-    css({
+  awayScore: css({
       gridArea: AWAY_SCORE,
       textAlign: 'start',
     }),
 
-  verticalLine: () =>
-    css({
+  verticalLine: css({
       borderInlineStart: `${pixelsToRem(2)}rem solid #FFD230`,
       display: 'inline-block',
       marginInline: `${pixelsToRem(16)}rem`,
@@ -517,8 +478,7 @@ export default {
     }),
 
   // ==================== Score Details ====================
-  scoreDetailsWrapper: () =>
-    css({
+  scoreDetailsWrapper: css({
       gridArea: GRID_AREAS.centreText,
       display: 'flex',
       rowGap: `${pixelsToRem(8)}rem`,
@@ -536,13 +496,11 @@ export default {
       },
     }),
 
-  scoreDetailsScore: () =>
-    css({
+  scoreDetailsScore: css({
       color: '#A8A8A8',
     }),
 
-  scoreDetailsComma: () =>
-    css({
+  scoreDetailsComma: css({
       color: '#A8A8A8',
       paddingInlineEnd: `${pixelsToRem(4)}rem`,
       [`@media (min-width: ${pixelsToRem(600)}rem)`]: {
@@ -577,15 +535,13 @@ export default {
       }),
     }),
 
-  mobileValue: () =>
-    css({
+  mobileValue: css({
       [`@media (min-width: ${pixelsToRem(900)}rem)`]: {
         display: 'none',
       },
     }),
 
-  desktopValue: () =>
-    css({
+  desktopValue: css({
       display: 'none',
       [`@media (min-width: ${pixelsToRem(900)}rem)`]: {
         display: 'inline',
@@ -667,8 +623,7 @@ export default {
     });
   },
 
-  badgeImage: () =>
-    css({
+  badgeImage: css({
       maxWidth: '100%',
       maxHeight: '100%',
       objectFit: 'contain',

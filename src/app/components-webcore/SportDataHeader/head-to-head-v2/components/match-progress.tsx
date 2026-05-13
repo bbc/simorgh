@@ -46,7 +46,7 @@ const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
             {`Aggregate score ${home.fullName} ${home.runningScores?.aggregate} , ${away.fullName} ${away.runningScores?.aggregate}`}
           </VisuallyHiddenText>
           <div
-            css={styles.aggregateScore()}
+            css={styles.aggregateScore}
             data-testid="agg-score"
             aria-hidden="true"
           >

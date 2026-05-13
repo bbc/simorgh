@@ -8,5 +8,5 @@ interface ActionGridProps {
 }
 
 export const ActionGrid = ({ children }: ActionGridProps) => (
-  <div css={styles.actionGrid()}>{children}</div>
+  <div css={styles.actionGrid}>{children}</div>
 );

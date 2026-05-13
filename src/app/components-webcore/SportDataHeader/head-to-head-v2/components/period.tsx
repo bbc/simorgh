@@ -27,7 +27,7 @@ const Period = ({
     awayRunningScores,
   );
   return (
-    <div css={styles.period()} aria-hidden="true">
+    <div css={styles.period} aria-hidden="true">
       <div>{period.value}</div>
     </div>
   );
