@@ -10,7 +10,6 @@ import type { StorybookConfig } from '@storybook/react-webpack5';
 
 import alias from '../dirAlias';
 
-import { getClientEnvVars } from '../src/clientEnvVars';
 import { fontInfo } from '../src/app/components/ThemeProvider/fontFaces';
 
 const require = createRequire(import.meta.url);
@@ -43,6 +42,7 @@ const storybookConfig: StorybookConfig = {
     '../src/app/legacy/psammead/psammead-locales/**/*.stories.@(t|j)sx',
     '../src/app/legacy/psammead/index.stories.tsx',
     '../src/app/components/**/*.stories.@(t|j)sx',
+    '../src/app/components-webcore/**/*.stories.@(t|j)sx',
     '../src/app/pages/**/*.stories.@(t|j)sx',
     './DocsDecorator/**/*.stories.@(t|j)sx',
     './StorybookComponents/**/*.stories.@(t|j)sx',
@@ -64,7 +64,7 @@ const storybookConfig: StorybookConfig = {
   ],
   env: config => ({
     ...config,
-    ...getClientEnvVars(DOT_ENV_CONFIG, { stringify: false }),
+    ...DOT_ENV_CONFIG.parsed,
   }),
   webpackFinal: async (config, options) => {
     const babelOptions = await options.presets.apply('babel', {}, options);

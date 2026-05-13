@@ -49,17 +49,16 @@ export const service: DefaultServiceConfig = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'Whatsapp!',
-      brandTitle: 'No WhatsApp',
-      brandDescription:
-        'Agora você pode receber as notícias da BBC News Brasil no seu celular.',
+      title: 'Promoção Agregador de pesquisas',
+      brandTitle: 'Veja Agregador de Pesquisas da BBC News Brasil',
+      brandDescription: ' ',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0lq77dv.png',
-        alt: 'BBC Brasil no WhatsAp',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p0njcpky.jpg',
+        alt: 'O agregador de pesquisas da BBC News Brasil',
       },
       linkLabel: {
-        text: 'Clique para se inscrever',
-        href: 'https://www.whatsapp.com/channel/0029VaVHa4S6rsQrlMVx8c0b',
+        text: 'Clique aqui',
+        href: 'https://www.bbc.com/portuguese/articles/czd2prld130o',
       },
       skipLink: {
         text: 'Pule %title% e continue lendo',
@@ -85,6 +84,11 @@ export const service: DefaultServiceConfig = {
       seeAll: 'Ver todos',
       home: 'Início',
       continueReading: 'Continue lendo',
+      topicDiscovery: {
+        heading: 'Descubra mais',
+        moreFromTopic: 'Mais de {topic}',
+        fetchErrorMessage: 'Falha ao carregar. Tente novamente mais tarde.',
+      },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',

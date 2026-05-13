@@ -97,6 +97,14 @@ export default {
         display: 'block',
       },
     }),
+  hideTopicDiscovery: ({ mq }: Theme) =>
+    css({
+      display: 'none',
+
+      [mq.GROUP_4_MIN_WIDTH]: {
+        display: 'block',
+      },
+    }),
   adContainer: ({ spacings }: Theme) =>
     css({
       marginBottom: `${spacings.TRIPLE}rem`,
@@ -126,17 +134,17 @@ export default {
         paddingBottom: `${spacings.QUADRUPLE}rem`,
       },
     }),
-  adaptiveMediaCurationRow: ({ spacings, mq }: Theme) =>
+  mediaCurationRow: ({ spacings, mq }: Theme) =>
     css({
       gridColumn: '1 / span 12',
-      margin: `0 ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
+      margin: `${spacings.TRIPLE}rem ${spacings.FULL}rem ${spacings.TRIPLE}rem`,
 
       [mq.GROUP_2_MIN_WIDTH]: {
-        margin: `0 ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem ${spacings.DOUBLE}rem ${spacings.TRIPLE}rem`,
       },
 
       [mq.GROUP_4_MIN_WIDTH]: {
-        margin: `0 0 ${spacings.TRIPLE}rem`,
+        margin: `${spacings.TRIPLE}rem 0 ${spacings.TRIPLE}rem`,
       },
     }),
   featuresSection: ({ spacings, mq }: Theme) =>

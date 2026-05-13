@@ -9,8 +9,11 @@ import MetadataContainer from '#app/components/Metadata';
 import LinkedDataContainer from '#app/components/LinkedData';
 import getLiveBlogPostingSchema from '#app/lib/seoUtils/getLiveBlogPostingSchema';
 import { MediaCollection } from '#app/components/MediaLoader/types';
+import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v2';
+import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
 import useToggle from '#app/hooks/useToggle';
+import isLiveEnv from '#app/lib/utilities/isLive';
 import {
   getImageFromPost,
   getHeadlineFromPost,
@@ -59,6 +62,16 @@ export type ComponentProps = {
     endDateTime?: string;
     metadata: { atiAnalytics: ATIData };
     mediaCollections: MediaCollection[] | null;
+    sportDataEventContent?: {
+      id: string;
+      content: {
+        data: {
+          live: boolean;
+          sportDataEvent: HeadToHeadV2Data;
+          title: string;
+        };
+      };
+    } | null;
   };
 };
 
@@ -87,10 +100,16 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
     headerImage,
     promoImage,
     mediaCollections,
+    sportDataEventContent,
   } = pageData;
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+
+  const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
+  const isSportDataLive = sportDataEventContent?.content?.data?.live;
+  const sportDataTitle = sportDataEventContent?.content?.data?.title;
+  const showSportData = !!sportData && !isLiveEnv();
 
   const {
     url: imageUrl,
@@ -171,14 +190,24 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <main>
         <Header
-          showLiveLabel={isLive}
-          title={title}
+          showLiveLabel={
+            showSportData && !!isSportDataLive ? isSportDataLive : isLive
+          }
+          title={showSportData && !!sportDataTitle ? sportDataTitle : title}
           description={description}
           imageUrl={imageUrl}
           imageUrlTemplate={imageUrlTemplate}
           imageWidth={imageWidth}
           mediaCollections={mediaCollections}
+          showSportData={showSportData}
         />
+        {showSportData && (
+          <HeadToHeadV2
+            data={sportData}
+            isConciseView={false} // defaulted to false for developement/ MVP
+            shouldShowActions={false} // defaulted to false for developement/ MVP
+          />
+        )}
         <div css={styles.outerGrid}>
           <div css={styles.firstSection}>
             {keyPoints && (
