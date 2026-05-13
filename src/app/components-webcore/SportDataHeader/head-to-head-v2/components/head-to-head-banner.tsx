@@ -30,7 +30,7 @@ const ItemWrapper = ({
         css={styles.gridContainer(isConciseView, shouldHideBadges)}
         data-event-id={data.id}
       >
-        <div css={styles.teamHome} data-participant-id={data.home.id}>
+        <div css={styles.teamHome()} data-participant-id={data.home.id}>
           <Team
             alignment="home"
             name={data.home.fullName}
@@ -41,13 +41,13 @@ const ItemWrapper = ({
             badgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
         </div>
-        <div css={styles.scores}>
+        <div css={styles.scores()}>
           <Centre data={data} maxScoreLength={maxScoreLength} />
           {data.status === 'PreEvent' && (
             <VisuallyHiddenText>plays</VisuallyHiddenText>
           )}
         </div>
-        <div css={styles.teamAway} data-participant-id={data.away.id}>
+        <div css={styles.teamAway()} data-participant-id={data.away.id}>
           <Team
             alignment="away"
             name={data.away.fullName}
@@ -58,7 +58,7 @@ const ItemWrapper = ({
             badgePlaceholderFallbackType={teamBadgePlaceholderFallbackType}
           />
         </div>
-        <div css={styles.matchProgressContainer}>
+        <div css={styles.matchProgressContainer()}>
           <MatchProgress data={data} isConciseView={isConciseView} />
         </div>
       </div>

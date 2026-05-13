@@ -15,10 +15,10 @@ const TeamName = ({
   shouldHideBadges,
 }: TeamNameProps) => (
   <div css={styles.teamNameWrapper(isConciseView, shouldHideBadges)}>
-    <span css={styles.mobileValue} aria-hidden="true">
+    <span css={styles.mobileValue()} aria-hidden="true">
       {shortName}
     </span>
-    <span css={styles.desktopValue} aria-hidden="true">
+    <span css={styles.desktopValue()} aria-hidden="true">
       {fullName}
     </span>
     <VisuallyHiddenText>

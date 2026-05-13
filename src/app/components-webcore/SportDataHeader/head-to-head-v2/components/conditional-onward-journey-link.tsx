@@ -7,7 +7,7 @@ interface ConditionalOnwardJourneyLinkProps {
   tipoTopicId?: string;
 }
 
-const ConditionalOnwardJourneyLink = ({
+export const ConditionalOnwardJourneyLink = ({
   children,
 }: ConditionalOnwardJourneyLinkProps) => {
   // TODO: Implement onward journey link functionality when tracking is available
@@ -19,7 +19,5 @@ const ConditionalOnwardJourneyLink = ({
   //   );
   // }
 
-  return children;
+  return <>{children}</>;
 };
-
-export default ConditionalOnwardJourneyLink;

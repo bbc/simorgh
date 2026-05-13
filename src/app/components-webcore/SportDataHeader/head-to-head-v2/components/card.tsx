@@ -8,14 +8,14 @@ interface CardProps {
 }
 
 const Card = ({ player }: CardProps) => (
-  <div css={styles.cardContainer} role="text">
+  <div css={styles.cardContainer()} role="text">
     {player.actions[0].type === 'Red Card' ? (
-      <span css={styles.redCard} aria-hidden data-testid="red-card-img">
+      <span css={styles.redCard()} aria-hidden data-testid="red-card-img">
         <RedCardSVG />
       </span>
     ) : (
       <span
-        css={styles.yellowCard}
+        css={styles.yellowCard()}
         aria-hidden
         data-testid="second-yellow-card-img"
       >

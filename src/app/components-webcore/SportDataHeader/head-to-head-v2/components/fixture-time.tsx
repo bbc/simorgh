@@ -12,7 +12,7 @@ interface TimeProps {
 
 const Time = ({ time }: TimeProps) => (
   <>
-    <time css={styles.fixtureTime} aria-hidden="true">
+    <time css={styles.fixtureTime()} aria-hidden="true">
       {time.displayTimeUK}
     </time>
     <VisuallyHiddenText>{time.accessibleTime}</VisuallyHiddenText>
