@@ -1,7 +1,11 @@
 import SportBadge from './sport-badge/index';
 import TeamName from './team-name';
 import styles from './index.styles';
-import type { Alignment, BadgePlaceholderFallbackType, BadgeSize } from '../types';
+import type {
+  Alignment,
+  BadgePlaceholderFallbackType,
+  BadgeSize,
+} from '../types';
 
 interface TeamProps {
   alignment: Alignment;

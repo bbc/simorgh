@@ -2,7 +2,9 @@ import { isLiveStatus } from '../helpers/event-status-groups';
 import styles from './index.styles';
 import type { EventStatusType } from '../types';
 
-const formatTournamentDescriptionLabel = (tournamentDescriptionLabel: string) => {
+const formatTournamentDescriptionLabel = (
+  tournamentDescriptionLabel: string,
+) => {
   const tournamentGroupsArray = tournamentDescriptionLabel.split(' - ');
 
   return tournamentGroupsArray.map((element, i) => {

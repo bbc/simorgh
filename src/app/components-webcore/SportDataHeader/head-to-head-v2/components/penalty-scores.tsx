@@ -12,7 +12,8 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
   const isPostEvent = status?.toLowerCase() === 'postevent';
   const hasWinner = winner !== undefined;
   const isDrawWithNoSeriesWinner = winner === 'draw' && !seriesWinner;
-  const isMultiLegWithNoSeriesWinner = multiLeg?.leg && multiLeg.leg > 1 && !seriesWinner;
+  const isMultiLegWithNoSeriesWinner =
+    multiLeg?.leg && multiLeg.leg > 1 && !seriesWinner;
 
   if (
     !isPostEvent ||
@@ -24,9 +25,9 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
   }
 
   const winnerOnPenalties = seriesWinner ?? winner;
-  const loserOnPenalties =
-    winnerOnPenalties === 'home' ? 'away' : 'home';
-  const winnerOnPenaltiesName = data[winnerOnPenalties as 'home' | 'away'].fullName;
+  const loserOnPenalties = winnerOnPenalties === 'home' ? 'away' : 'home';
+  const winnerOnPenaltiesName =
+    data[winnerOnPenalties as 'home' | 'away'].fullName;
   const winnerOnPenaltiesScore =
     data[winnerOnPenalties as 'home' | 'away'].runningScores?.penaltyShootout;
   const loserOnPenaltiesScore =

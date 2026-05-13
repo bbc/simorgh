@@ -7,7 +7,7 @@ export { default as ActionsTime } from './actions-time';
 export { Actions } from './actions';
 export { default as Card } from './card';
 export { default as Centre, shouldShowScores } from './centre';
-export { ConditionalOnwardJourneyLink } from './conditional-onward-journey-link';
+export { default as ConditionalOnwardJourneyLink } from './conditional-onward-journey-link';
 export { default as FixtureTime } from './fixture-time';
 export { default as Footer } from './footer';
 export { GroupedEvents } from './grouped-events';
