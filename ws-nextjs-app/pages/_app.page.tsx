@@ -194,12 +194,12 @@ export default class CustomApp extends App<Props> {
           >
             <AccountProvider initialConfig={idctaConfig}>
               <EventTrackingContextProvider atiData={atiAnalytics}>
-                <QueryProvider>
-                  {isAvEmbeds ? (
-                    <ThemeProvider service={service} variant={variant}>
-                      {RenderChildrenOrError}
-                    </ThemeProvider>
-                  ) : (
+                {isAvEmbeds ? (
+                  <ThemeProvider service={service} variant={variant}>
+                    {RenderChildrenOrError}
+                  </ThemeProvider>
+                ) : (
+                  <QueryProvider>
                     <UserContextProvider>
                       <ThemeProvider service={service} variant={variant}>
                         <PageWrapper
@@ -211,8 +211,8 @@ export default class CustomApp extends App<Props> {
                         </PageWrapper>
                       </ThemeProvider>
                     </UserContextProvider>
-                  )}
-                </QueryProvider>
+                  </QueryProvider>
+                )}
               </EventTrackingContextProvider>
             </AccountProvider>
           </RequestContextProvider>
