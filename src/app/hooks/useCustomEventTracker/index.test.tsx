@@ -113,6 +113,8 @@ describe('useCustomEventTracker', () => {
       producerName: 'PIDGIN',
       service: 'pidgin',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
+      isSignedIn: false,
+      hashedId: null,
     });
   });
 
