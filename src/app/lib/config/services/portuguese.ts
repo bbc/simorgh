@@ -87,6 +87,7 @@ export const service: DefaultServiceConfig = {
       topicDiscovery: {
         heading: 'Descubra mais',
         moreFromTopic: 'Mais de {topic}',
+        fetchErrorMessage: 'Falha ao carregar. Tente novamente mais tarde.',
       },
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',

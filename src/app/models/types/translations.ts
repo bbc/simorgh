@@ -71,6 +71,7 @@ export interface Translations {
   topicDiscovery?: {
     heading: string;
     moreFromTopic: string;
+    fetchErrorMessage?: string;
   };
   readTime?: Partial<{
     readTimePrefix: string;
