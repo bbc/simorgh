@@ -81,6 +81,8 @@ export const service: DefaultServiceConfig = {
       topicDiscovery: {
         heading: 'अधिक शोधा',
         moreFromTopic: '{topic} मधील अधिक',
+        fetchErrorMessage:
+          'लोड करण्यात अयशस्वी. कृपया नंतर पुन्हा प्रयत्न करा.',
       },
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
