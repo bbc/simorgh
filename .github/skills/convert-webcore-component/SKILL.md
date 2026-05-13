@@ -274,3 +274,133 @@ yarn prettier --write "path/to/converted/files/**/*.{ts,tsx}"
 - [src/app/components/Billboard/index.styles.ts](../../../src/app/components/Billboard/index.styles.ts)
 - [src/app/components/MediaLoader/index.styles.ts](../../../src/app/components/MediaLoader/index.styles.ts)
 - [src/app/components/Pagination/index.styles.ts](../../../src/app/components/Pagination/index.styles.ts)
+
+## Step 5: Preserving Original Files (Optional)
+
+When migrating incrementally, you may want to keep the original `.jsx`/`.js` files alongside new `.tsx`/`.ts` files:
+
+### Create TypeScript Files Alongside Originals
+
+1. Create new `.tsx`/`.ts` files with the same names
+2. The original `.jsx`/`.js` files remain untouched
+3. TypeScript resolvers typically prefer `.ts`/`.tsx` over `.js`/`.jsx`
+
+### Barrel Export for TypeScript Resolution
+
+When both `.jsx` and `.tsx` versions exist, create a `components/index.ts` barrel file to ensure TypeScript imports resolve correctly:
+
+```typescript
+// components/index.ts
+export { ActionGrid, GRID_AREAS } from './action-grid';
+export { default as Footer } from './footer';
+export { HeadToHeadBanner } from './head-to-head-banner';
+export { default as HeadToHeadHeader } from './head-to-head-header';
+// ... other exports
+```
+
+Then import from the barrel file in parent components:
+
+```typescript
+// head-to-head-v2.tsx
+import {
+  Footer,
+  HeadToHeadHeader,
+  HeadToHeadBanner,
+  Actions,
+} from './components';
+```
+
+### Export Internal Types
+
+When converting, ensure internal types are exported from `types.ts`:
+
+```typescript
+// types.ts - Make sure to export types needed by child components
+export type Action = { /* ... */ };
+export type PlayerActions = { /* ... */ };
+export type RunningScores = { /* ... */ };
+export type EventStatusType = 'PreEvent' | 'MidEvent' | 'PostEvent' | /* ... */;
+```
+
+## Additional Conversion Tips
+
+### Handling ESLint Disable Comments
+
+Preserve or add eslint disable comments where the original code had them:
+
+```tsx
+/* eslint-disable jsx-a11y/aria-role */
+/* eslint-disable import/prefer-default-export */
+```
+
+### Prefer Conditional Checks Over Non-Null Assertions
+
+**Avoid:**
+```tsx
+{hasGroupedEvents && (
+  <GroupedEvents groupedEvents={data.groupedActions!} />
+)}
+```
+
+**Prefer:**
+```tsx
+{hasGroupedEvents && data.groupedActions && (
+  <GroupedEvents groupedEvents={data.groupedActions} />
+)}
+```
+
+### Using `Record` Types for Object Mappings
+
+```typescript
+const goalTypesHandled: Record<string, string> = {
+  Penalty: 'pen',
+  'Own Goal': 'og',
+};
+
+const MATCH_STATUS_LETTERS: Record<string, string> = {
+  Postponed: 'P',
+  Cancelled: 'C',
+};
+```
+
+### `@jsxImportSource` Pragma NOT Needed in Simorgh
+
+Simorgh's `tsconfig.json` already has `"jsxImportSource": "@emotion/react"` configured globally, so you do **not** need to add the pragma comment to individual files:
+
+```tsx
+// NOT needed in Simorgh - already configured globally
+/** @jsxImportSource @emotion/react */
+```
+
+If you're working in a different project without global configuration, you would need the pragma.
+
+### Type-Safe Event Status Handling
+
+Instead of using enums, prefer union types for event status:
+
+```typescript
+export type EventStatusType =
+  | 'PreEvent'
+  | 'MidEvent'
+  | 'PostEvent'
+  | 'Abandoned'
+  | 'Cancelled'
+  | 'Suspended'
+  | 'Postponed'
+  | 'Delayed'
+  | 'Intermission';
+```
+
+### Helper Type for Badge Sizes
+
+Define reusable types for common patterns:
+
+```typescript
+export type BadgeSize =
+  | number
+  | { small?: number; medium?: number; large?: number };
+
+export type Alignment = 'home' | 'away';
+
+export type BadgePlaceholderFallbackType = 'badge' | 'flag';
+```

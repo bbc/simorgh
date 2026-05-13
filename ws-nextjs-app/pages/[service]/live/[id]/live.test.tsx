@@ -29,11 +29,10 @@ jest.mock('#app/lib/utilities/isLive', () => ({
 jest.mock('#app/components-webcore/SportDataHeader/head-to-head-v2', () => ({
   __esModule: true,
   default: jest.fn(
-    ({ data, isConciseView, shouldHideBadges, shouldShowActions }) => (
+    ({ data, isConciseView, shouldShowActions }) => (
       <div
         data-testid="head-to-head-v2"
         data-concise={String(isConciseView)}
-        data-hide-badges={String(shouldHideBadges)}
         data-show-actions={String(shouldShowActions)}
       >
         {data?.home?.fullName} vs {data?.away?.fullName}
@@ -624,7 +623,6 @@ describe('Live Page', () => {
 
       const headToHeadElement = screen.getByTestId('head-to-head-v2');
       expect(headToHeadElement).toHaveAttribute('data-concise', 'false');
-      expect(headToHeadElement).toHaveAttribute('data-hide-badges', 'false');
       expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
     });
 
