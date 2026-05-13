@@ -212,7 +212,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
           <HeadToHeadV2
             data={sportData}
             isConciseView={false} // defaulted to false for developement/ MVP
-            shouldHideBadges={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
           />
         )}

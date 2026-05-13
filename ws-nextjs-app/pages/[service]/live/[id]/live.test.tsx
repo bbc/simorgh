@@ -699,7 +699,6 @@ describe('Live Page', () => {
 
       const headToHeadElement = screen.getByTestId('head-to-head-v2');
       expect(headToHeadElement).toHaveAttribute('data-concise', 'false');
-      expect(headToHeadElement).toHaveAttribute('data-hide-badges', 'false');
       expect(headToHeadElement).toHaveAttribute('data-show-actions', 'false');
     });
 

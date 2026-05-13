@@ -136,6 +136,13 @@ const styles = {
         textDecoration: 'underline',
       },
     }),
+  errorMessage: ({ palette, fontSizes, fontVariants }: Theme) =>
+    css({
+      ...fontVariants.sansRegular,
+      ...fontSizes.pica,
+      color: palette.GREY_10,
+      margin: 0,
+    }),
 };
 
 export default styles;
