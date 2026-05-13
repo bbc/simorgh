@@ -14,6 +14,7 @@ import HeadToHeadV2 from '#app/components-webcore/SportDataHeader/head-to-head-v
 import { HeadToHeadV2Data } from '#app/components-webcore/SportDataHeader/head-to-head-v2/types';
 import { PortraitVideoItems } from '#app/models/types/optimo';
 import useLivePagePolling from '#app/hooks/useLivePagePolling';
+import useSportDataPolling from '#app/hooks/useSportDataPolling';
 import useToggle from '#app/hooks/useToggle';
 import isLiveEnv from '#app/lib/utilities/isLive';
 import {
@@ -109,6 +110,11 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
 
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
+
+  const { currentSportData, hasPendingUpdate2, applyPendingUpdate2 } =
+    useSportDataPolling(pageData, true); // TODO - expand so this only runs in correct conditions
+
+  console.log('hasPendingUpdate2', hasPendingUpdate2); // TEMP
 
   const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
   const isSportDataLive = sportDataEventContent?.content?.data?.live;
@@ -210,9 +216,10 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
         />
         {showSportData && (
           <HeadToHeadV2
-            data={sportData}
+            data={currentSportData || sportData} // TODO - handle null
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
+            applyPendingUpdate={applyPendingUpdate2}
           />
         )}
         <div css={styles.outerGrid}>
