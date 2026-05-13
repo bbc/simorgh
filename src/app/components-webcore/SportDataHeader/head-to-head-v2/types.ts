@@ -137,6 +137,11 @@ export type HeadToHeadV2Data = {
    * Summary of event to be used with assistive technology.
    */
   accessibleEventSummary: string;
+
+  attendance?: {
+    value?: number;
+    additionalInfo?: string;
+  };
 };
 
 export declare const HeadToHeadV2: (props: {
@@ -150,7 +155,7 @@ export declare const HeadToHeadV2: (props: {
    *
    * By default, the central section of H2Hv2 will expand as little as possible to fit the given score.
    */
-  maximumContainerScoreDigits?: string;
+  maximumContainerScoreDigits?: number;
   /**
    * Optional setting for the sport badge's placeholder fallback type when a mapping doesn't exist for a team.
    *
