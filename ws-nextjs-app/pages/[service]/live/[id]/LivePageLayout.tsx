@@ -111,15 +111,15 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
   const { currentStreamData, hasPendingUpdate, applyPendingUpdate } =
     useLivePagePolling(pageData, livePagePollingEnabled && isLive);
 
-  const { currentSportData, hasPendingUpdate2, applyPendingUpdate2 } =
-    useSportDataPolling(pageData, true); // TODO - expand so this only runs in correct conditions
-
-  console.log('hasPendingUpdate2', hasPendingUpdate2); // TEMP
-
   const sportData = sportDataEventContent?.content?.data?.sportDataEvent;
   const isSportDataLive = sportDataEventContent?.content?.data?.live;
   const sportDataTitle = sportDataEventContent?.content?.data?.title;
   const showSportData = !!sportData && !isLiveEnv();
+
+  const { currentSportData } = useSportDataPolling(
+    pageData,
+    showSportData && isLive,
+  ); // TODO - check that this only runs in correct conditions. Consider colcoating in header?
 
   const {
     url: imageUrl,
@@ -219,7 +219,6 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
             data={currentSportData || sportData} // TODO - handle null
             isConciseView={false} // defaulted to false for developement/ MVP
             shouldShowActions={false} // defaulted to false for developement/ MVP
-            applyPendingUpdate={applyPendingUpdate2}
           />
         )}
         <div css={styles.outerGrid}>

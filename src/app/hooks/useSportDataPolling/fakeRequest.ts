@@ -14,7 +14,8 @@ let pollCount = 0;
 export default () => {
   pollCount += 1;
 
-  const incrementedHomeScore = String(initialHomeScore + pollCount);
+  const scoreIncrease = Math.floor(pollCount / 3);
+  const incrementedHomeScore = String(initialHomeScore + scoreIncrease);
 
   return {
     ...fixtureData,

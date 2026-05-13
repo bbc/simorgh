@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Footer from './components/footer';
 import HeadToHeadHeader from './components/head-to-head-header';
 import { HeadToHeadBanner } from './components/head-to-head-banner';
@@ -13,14 +12,12 @@ export const HeadToHeadV2 = ({
   shouldShowActions,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
-  applyPendingUpdate,
 }: {
   data: HeadToHeadV2Data;
   isConciseView?: boolean;
   shouldShowActions?: boolean;
   maximumContainerScoreDigits?: number;
   teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
-  applyPendingUpdate: () => void;
 }) => {
   const hasActions =
     (data?.home?.actions?.length ?? 0) > 0 ||
@@ -28,12 +25,6 @@ export const HeadToHeadV2 = ({
 
   // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
   const shouldHideBadges = true;
-
-  useEffect(() => {
-    if (true) {
-      applyPendingUpdate();
-    }
-  });
 
   return (
     <div css={styles.wrapper({ isConciseView })}>
