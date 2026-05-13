@@ -127,4 +127,36 @@ describe('AccountPromotionalBanner', () => {
       Number(localStorage.getItem('account_promotional_banner_last_dismissed')),
     ).toBeGreaterThan(0);
   });
+
+  it('does not render when last dismissed is within the interval', () => {
+    const now = Date.now();
+    localStorage.setItem('account_promotional_banner_last_dismissed', `${now}`);
+    renderWithProviders();
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders again after the interval has passed', () => {
+    const past = Date.now() - 11 * 24 * 60 * 60 * 1000; // 11 days ago
+    localStorage.setItem(
+      'account_promotional_banner_last_dismissed',
+      `${past}`,
+    );
+    renderWithProviders();
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).toBeInTheDocument();
+  });
+
+  it('treats malformed stored values as zero dismissals', () => {
+    localStorage.setItem('account_promotional_banner_dismissals', 'invalid');
+    renderWithProviders();
+
+    expect(
+      screen.queryByRole('heading', { name: 'Discover your BBC' }),
+    ).toBeInTheDocument();
+  });
 });
