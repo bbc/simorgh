@@ -40,7 +40,7 @@ describe('useUASFetchSaveStatus', () => {
     mockUseQueryReturn = { data: false, isLoading: false, error: null };
 
     (use as jest.Mock).mockImplementation((context: unknown) => {
-      if (context === AccountContext) return { hashedUserID: 'user-123' };
+      if (context === AccountContext) return { hashedUserId: 'user-123' };
       return {};
     });
   });

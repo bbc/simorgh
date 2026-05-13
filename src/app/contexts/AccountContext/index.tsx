@@ -73,7 +73,7 @@ export const AccountProvider = ({
     initialConfig?.identity?.idSignedInCookieName || TOKEN_COOKIE_NAME,
   );
 
-  const hashedUserID = getClientCookie(USER_ID_COOKIE_KEY);
+  const hashedUserId = getClientCookie(USER_ID_COOKIE_KEY);
 
   const isSignedIn =
     isIdctaAvailable &&
@@ -92,7 +92,7 @@ export const AccountProvider = ({
 
   const value = useMemo(
     () => ({
-      hashedUserID,
+      hashedUserId,
       isIdctaAvailable,
       isSignedIn,
       signInUrl,
@@ -105,7 +105,7 @@ export const AccountProvider = ({
       isPersonalizationEnabled,
     }),
     [
-      hashedUserID,
+      hashedUserId,
       forYouUrl,
       isIdctaAvailable,
       isSignedIn,
