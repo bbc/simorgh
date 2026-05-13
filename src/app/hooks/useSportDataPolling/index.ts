@@ -5,16 +5,16 @@ import fakeRequest from './fakeRequest';
 
 export const POLLING_INTERVAL = 5000; // TODO - confirm the polling interval with the team, 5s is just a placeholder for now
 
-type SportDataEventContent = NonNullable<
-  ComponentProps['pageData']['sportDataEventContent']
->;
-type SportDataEvent =
-  SportDataEventContent['content']['data']['sportDataEvent'];
+// type SportDataEventContent = NonNullable<
+//   ComponentProps['pageData']['sportDataEventContent']
+// >;
+// type SportDataEvent =
+//   SportDataEventContent['content']['data']['sportDataEvent'];
 
-const isSameSportData = (
-  currentSportData: SportDataEvent | null,
-  polledSportData: SportDataEvent,
-) => JSON.stringify(currentSportData) === JSON.stringify(polledSportData);
+// const isSameSportData = (
+//   currentSportData: SportDataEvent | null,
+//   polledSportData: SportDataEvent,
+// ) => JSON.stringify(currentSportData) === JSON.stringify(polledSportData);
 
 const useSportDataPolling = (
   pageData: ComponentProps['pageData'],
@@ -35,18 +35,21 @@ const useSportDataPolling = (
       const polledSportsData = fakeRequest(); // TEMP
 
       if (polledSportsData != null) {
-        // setNewData(polledSportsData); // Option C - do not check
-        setCurrentData(currentData => {
-          if (isSameSportData(currentData, polledSportsData)) {
-            // eslint-disable-next-line no-console
-            console.log('data is unchanged, not re-rendering');
-            return currentData;
-          }
+        setCurrentData(polledSportsData); // Option C - do not check
+        console.log(
+          'data is polled and set to state, component is re-rendered',
+        ); // logs to show that the component is re-rendering on every poll with the new data, even if the data is unchanged. This is to demonstrate that without the check, we will have unnecessary re-renders which could impact performance.
+        // setCurrentData(currentData => {
+        //   if (isSameSportData(currentData, polledSportsData)) {
+        //     // eslint-disable-next-line no-console
+        //     console.log('data is unchanged, not re-rendering');
+        //     return currentData;
+        //   }
 
-          // eslint-disable-next-line no-console
-          console.log('data has changed. component is re-rendered');
-          return polledSportsData;
-        }); // option B - checks with logs
+        //   // eslint-disable-next-line no-console
+        //   console.log('data has changed. component is re-rendered');
+        //   return polledSportsData;
+        // }); // option B - checks with logs
 
         // setCurrentData(currentData =>
         //   isSameSportData(currentData, polledSportsData)
