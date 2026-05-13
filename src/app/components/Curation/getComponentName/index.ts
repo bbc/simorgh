@@ -36,13 +36,19 @@ const {
   MEDIA_COLLECTION,
 } = COMPONENT_NAMES;
 
+interface GetComponentNameProps extends Partial<Curation> {
+  curationContentType?: string;
+}
+
 export default ({
   visualStyle,
   visualProminence,
   radioSchedule,
   embed,
   mediaCollection,
-}: Partial<Curation>) => {
+  curationContentType,
+}: GetComponentNameProps) => {
+  if (curationContentType) return `${curationContentType}-curation-grid`;
   if (radioSchedule) return RADIO_SCHEDULE;
   if (embed) return EMBED;
   if (mediaCollection) return MEDIA_COLLECTION;

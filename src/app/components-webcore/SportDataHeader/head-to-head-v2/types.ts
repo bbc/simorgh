@@ -176,35 +176,11 @@ export type HeadToHeadV2Data = {
    * Summary of event to be used with assistive technology.
    */
   accessibleEventSummary: string;
-  /**
-   * The winner of the match.
-   */
-  winner?: 'home' | 'away' | 'draw';
-  /**
-   * The winner of the series (for multi-leg matches).
-   */
-  seriesWinner?: 'home' | 'away';
-  /**
-   * Multi-leg match information.
-   */
-  multiLeg?: {
-    leg: number;
-  };
-  /**
-   * Attendance information.
-   */
+
   attendance?: {
     value?: number;
     additionalInfo?: string;
   };
-  /**
-   * Onward journey link URL.
-   */
-  onwardJourneyLink?: string;
-  /**
-   * Tipo topic ID for tracking.
-   */
-  tipoTopicId?: string;
 };
 
 export type BadgePlaceholderFallbackType = 'badge' | 'flag';

@@ -1,12 +1,10 @@
-import {
-  Footer,
-  HeadToHeadHeader,
-  HeadToHeadBanner,
-  ConditionalOnwardJourneyLink,
-  Actions,
-} from './components';
-import styles from './components/index.styles';
-import type { HeadToHeadV2Props } from './types';
+import Footer from './components/footer';
+import HeadToHeadHeader from './components/head-to-head-header';
+import { HeadToHeadBanner } from './components/head-to-head-banner';
+import { ConditionalOnwardJourneyLink } from './components/conditional-onward-journey-link';
+import { Actions } from './components/actions';
+import { HeadToHeadV2Data } from './types';
+import styles from './index.styles';
 
 export const HeadToHeadV2 = ({
   data,
@@ -14,27 +12,28 @@ export const HeadToHeadV2 = ({
   shouldShowActions,
   maximumContainerScoreDigits,
   teamBadgePlaceholderFallbackType = 'badge',
-}: HeadToHeadV2Props) => {
+}: {
+  data: HeadToHeadV2Data;
+  isConciseView?: boolean;
+  shouldShowActions?: boolean;
+  maximumContainerScoreDigits?: number;
+  teamBadgePlaceholderFallbackType?: 'badge' | 'flag';
+}) => {
   const hasActions =
     (data?.home?.actions?.length ?? 0) > 0 ||
     (data?.away?.actions?.length ?? 0) > 0;
-  // const shouldHideBadges = !shouldShowTeamBadges(data.tournament?.urn);
-  const shouldHideBadges = true; // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
+
+  // TODO: Re-enable badge visibility logic once we have the necessary badge mappings in place
+  const shouldHideBadges = true;
 
   return (
-    <div css={styles.headToHeadWrapper(isConciseView)}>
-      <ConditionalOnwardJourneyLink
-        isConciseView={isConciseView}
-        onwardJourneyLink={data.onwardJourneyLink}
-        tipoTopicId={data.tipoTopicId}
-      >
-        <div css={styles.headToHead(isConciseView)}>
+    <div css={styles.wrapper({ isConciseView })}>
+      <ConditionalOnwardJourneyLink>
+        <div css={styles.container({ isConciseView })}>
           {!isConciseView && (
             <HeadToHeadHeader
               date={data.date}
-              tournament={data.tournament.name}
               status={data.status}
-              period={data.period}
               tournamentDescriptionLabel={data.tournamentDescriptionLabel}
             />
           )}
@@ -51,6 +50,7 @@ export const HeadToHeadV2 = ({
           {!isConciseView && (
             <Footer
               venue={data.venue?.name || 'To be confirmed'}
+              status={data.status}
               attendanceValue={data.attendance?.value}
               attendanceInfo={data.attendance?.additionalInfo}
             />
