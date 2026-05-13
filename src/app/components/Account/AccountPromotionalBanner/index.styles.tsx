@@ -92,7 +92,7 @@ export default {
       position: 'relative',
       zIndex: 1,
       width: '45%',
-      height: '50vh',
+      height: '50%',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
