@@ -38,6 +38,7 @@ export interface LinkedDataProps {
   mainEntityId?: string;
   metadataImageProps?: MetadataImageProps;
   isAccessibleForFree?: boolean;
+  entityId?: string;
 }
 
 type MetadataImageProps =

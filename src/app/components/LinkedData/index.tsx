@@ -60,6 +60,7 @@ const getSpeakableXpaths = ({
 const LinkedData = ({
   showAuthor = false,
   type,
+  entityId,
   seoTitle,
   headline,
   promoImage,
@@ -224,6 +225,7 @@ const LinkedData = ({
   });
   const linkedData = {
     '@type': type,
+    ...(entityId && { '@id': entityId }),
     url: canonicalNonUkLink,
     ...(isAccessibleForFree && { isAccessibleForFree: true }),
     ...(isNotRadioChannel && { publisher, thumbnailUrl }),

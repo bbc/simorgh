@@ -193,6 +193,7 @@ const LivePage = ({ pageData, assetId }: LivePageProps) => {
       />
       <LinkedDataContainer
         type="WebPage"
+        entityId={canonicalNonUkLink}
         seoTitle={metaTitle ?? pageTitle}
         headline={metaTitle ?? pageTitle}
         showAuthor
