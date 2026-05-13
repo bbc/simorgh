@@ -1,4 +1,4 @@
-import { use, useContext } from 'react';
+import { use } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import parseRoute from '#app/routes/utils/parseRoute';
@@ -12,7 +12,7 @@ const SaveArticleButtonAuthenticated = ({
   articlePageData,
 }: SaveArticleButtonProps) => {
   const { pathname } = use(RequestContext);
-  const { translations } = useContext(ServiceContext);
+  const { translations } = use(ServiceContext);
   const { saveArticleButton } = translations || {};
   const { assetId: articleId } = parseRoute(pathname);
 
