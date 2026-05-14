@@ -14345,16 +14345,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-test-api-route-handler@npm:5.0.4":
-  version: 5.0.4
-  resolution: "next-test-api-route-handler@npm:5.0.4"
+"next-test-api-route-handler@npm:5.0.5":
+  version: 5.0.5
+  resolution: "next-test-api-route-handler@npm:5.0.5"
   dependencies:
     "@whatwg-node/server": "npm:^0.10.18"
     cookie: "npm:^1.1.1"
     core-js: "npm:^3.49.0"
   peerDependencies:
     next: ">=9"
-  checksum: 10/24cc7780d5f5636f9f35e2db3a0d1d80915ae460fd4c72ec74a8ea895450f6eca9a68846e163e55b840a4a00d2a7e7351fbed3fd42e0d371bce2c376bdad2919
+  checksum: 10/e0e197af5449413eebac21b9aa377b337bba38b404a4559b5d086ae8690033767b052f4ec5d7686b762c15904ac796b7b649728e6b44a9eda95a01a3ffe14efa
   languageName: node
   linkType: hard
 
@@ -16784,7 +16784,7 @@ __metadata:
     jest-environment-jsdom: "npm:30.2.0"
     mocha-junit-reporter: "npm:2.2.1"
     next: "npm:16.2.6"
-    next-test-api-route-handler: "npm:5.0.4"
+    next-test-api-route-handler: "npm:5.0.5"
     npm-run-all2: "npm:8.0.4"
     sharp: "npm:0.34.5"
     swc-loader: "npm:0.2.7"
