@@ -71,6 +71,27 @@ describe('PortraitVideoCarousel', () => {
     );
   });
 
+  it('Should render without a title if link is provided but title is undefined', async () => {
+    const link = '/test-link';
+    await act(async () => {
+      render(
+        <Component
+          {...fixture}
+          title={undefined}
+          link={link}
+          eventTrackingData={eventTrackingData}
+        />,
+        { service: 'pidgin' },
+      );
+    });
+
+    expect(screen.queryByRole('heading', { level: 2 })).not.toBeInTheDocument();
+    expect(screen.getByTestId('portrait-video-carousel')).toHaveAttribute(
+      'aria-label',
+      defaultAriaLabel,
+    );
+  });
+
   it('Should render the PortraitCarouselNavigation component', async () => {
     await act(async () => {
       render(<Component {...fixture} eventTrackingData={eventTrackingData} />);
