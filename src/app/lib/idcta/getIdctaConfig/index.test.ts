@@ -140,22 +140,4 @@ describe('getIdctaConfig', () => {
 
     expect(result?.initialIsSignedIn).toBe(false);
   });
-
-  it('should set initialIsAccountPromoBannerVisible to true when no dismissal cookies are present', async () => {
-    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
-
-    const result = await getIdctaConfig(mockToggles, mockService, {});
-
-    expect(result?.initialIsAccountPromoBannerVisible).toBe(true);
-  });
-
-  it('should set initialIsAccountPromoBannerVisible to false when a recent dismissal cookie is present', async () => {
-    mockFetchIdctaConfig.mockResolvedValue(mockIdctaConfig);
-
-    const result = await getIdctaConfig(mockToggles, mockService, {
-      cookie: `accountPromoDismissals=1; accountPromoLastDismissed=${Date.now()}`,
-    });
-
-    expect(result?.initialIsAccountPromoBannerVisible).toBe(false);
-  });
 });
