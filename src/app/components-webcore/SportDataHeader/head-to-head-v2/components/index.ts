@@ -1,7 +1,7 @@
 // TypeScript component re-exports
 // This ensures TypeScript imports resolve to .tsx files
 
-export { ActionGrid, GRID_AREAS } from './action-grid';
+export { default as ActionGrid } from './action-grid';
 export { default as Action } from './action';
 export { default as ActionsTime } from './actions-time';
 export { Actions } from './actions';
@@ -10,7 +10,7 @@ export { default as Centre, shouldShowScores } from './centre';
 export { default as ConditionalOnwardJourneyLink } from './conditional-onward-journey-link';
 export { default as FixtureTime } from './fixture-time';
 export { default as Footer } from './footer';
-export { GroupedEvents } from './grouped-events';
+export { default as GroupedEvents } from './grouped-events';
 export { HeadToHeadBanner } from './head-to-head-banner';
 export { default as HeadToHeadHeader } from './head-to-head-header';
 export { KeyEvents } from './key-events';

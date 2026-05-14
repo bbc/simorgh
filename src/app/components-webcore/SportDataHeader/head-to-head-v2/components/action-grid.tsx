@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react';
-import styles, { GRID_AREAS } from '../index.styles';
-
-export { GRID_AREAS };
+import styles from '../index.styles';
 
 interface ActionGridProps {
   children: ReactNode;
 }
 
-export const ActionGrid = ({ children }: ActionGridProps) => (
+const ActionGrid = ({ children }: ActionGridProps) => (
   <div css={styles.actionGrid}>{children}</div>
 );
+
+export default ActionGrid;

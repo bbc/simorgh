@@ -1,4 +1,4 @@
-import { ActionGrid } from './action-grid';
+import ActionGrid from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
 import styles from '../index.styles';
 import type { GroupedActions as GroupedActionsType } from '../types';
