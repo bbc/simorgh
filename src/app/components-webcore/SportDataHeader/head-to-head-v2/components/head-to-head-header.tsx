@@ -1,5 +1,5 @@
 import { isLiveStatus } from '../helpers/event-status-groups';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { EventStatusType } from '../types';
 
 const formatTournamentDescriptionLabel = (
@@ -11,14 +11,14 @@ const formatTournamentDescriptionLabel = (
     if (tournamentGroupsArray.length === i + 1) {
       return (
         // eslint-disable-next-line react/no-array-index-key
-        <div css={styles.competitionFormatter()} key={`tournament_part_${i}`}>
+        <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
           {element}
         </div>
       );
     }
     return (
       // eslint-disable-next-line react/no-array-index-key
-      <div css={styles.competitionFormatter()} key={`tournament_part_${i}`}>
+      <div css={styles.competitionFormatter} key={`tournament_part_${i}`}>
         {element} -{' '}
       </div>
     );
@@ -40,16 +40,16 @@ const HeadToHeadHeader = ({
 }: HeadToHeadHeaderProps) => (
   <div css={styles.headerWrapper(isLiveStatus(status))}>
     {!isLiveStatus(status) && (
-      <div css={styles.dateWrapper()}>
-        <div css={styles.dateHeader()}>
-          <time css={styles.date()}>{date}</time>
+      <div css={styles.dateWrapper}>
+        <div css={styles.dateHeader}>
+          <time css={styles.date}>{date}</time>
         </div>
-        <div css={styles.interpunct()} aria-hidden>
+        <div css={styles.interpunct} aria-hidden>
           ‧
         </div>
       </div>
     )}
-    <div css={styles.tournamentHeader()}>
+    <div css={styles.tournamentHeader}>
       {formatTournamentDescriptionLabel(tournamentDescriptionLabel)}
     </div>
   </div>

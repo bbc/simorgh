@@ -1,6 +1,6 @@
 import SportBadge from './sport-badge/index';
 import TeamName from './team-name';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type {
   Alignment,
   BadgePlaceholderFallbackType,

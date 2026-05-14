@@ -1,5 +1,5 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { HeadToHeadV2Data } from '../types';
 
 interface PenaltyScoresProps {
@@ -34,16 +34,16 @@ const PenaltyScores = ({ data }: PenaltyScoresProps) => {
     data[loserOnPenalties].runningScores?.penaltyShootout;
 
   return (
-    <div css={styles.penaltyScoresContainer()}>
+    <div css={styles.penaltyScoresContainer}>
       <VisuallyHiddenText>
         {`${winnerOnPenaltiesName} win ${winnerOnPenaltiesScore} - ${loserOnPenaltiesScore} on penalties`}
       </VisuallyHiddenText>
       <div
-        css={styles.penaltiesText()}
+        css={styles.penaltiesText}
         aria-hidden="true"
         data-testid="penalties-text"
       >
-        <span css={styles.winningTeamName()}>{`${winnerOnPenaltiesName}`}</span>
+        <span css={styles.winningTeamName}>{`${winnerOnPenaltiesName}`}</span>
         {` win ${winnerOnPenaltiesScore}-${loserOnPenaltiesScore} on pens`}
       </div>
     </div>

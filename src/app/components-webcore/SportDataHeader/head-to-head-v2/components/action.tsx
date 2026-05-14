@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import ActionsTime from './actions-time';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { PlayerActions, Alignment } from '../types';
 
 interface ActionProps {

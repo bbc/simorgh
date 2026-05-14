@@ -1,5 +1,5 @@
 import { getFallbackFootballPeriodLabel } from '../helpers/event-summary';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { EventStatusType, RunningScores } from '../types';
 
 interface PeriodLabels {
@@ -27,7 +27,7 @@ const Period = ({
     awayRunningScores,
   );
   return (
-    <div css={styles.period()} aria-hidden="true">
+    <div css={styles.period} aria-hidden="true">
       <div>{period.value}</div>
     </div>
   );

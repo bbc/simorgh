@@ -1,6 +1,6 @@
 import { ActionGrid } from './action-grid';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { GroupedActions as GroupedActionsType } from '../types';
 
 interface ActionsDisplayProps {
@@ -37,7 +37,7 @@ export const GroupedEvents = ({
   homeName,
   awayName,
 }: GroupedEventsProps) => (
-  <div css={styles.groupedEventsWrapper()}>
+  <div css={styles.groupedEventsWrapper}>
     {groupedEvents.map(
       ({
         groupName,
@@ -46,10 +46,10 @@ export const GroupedEvents = ({
         awayTeamActions,
         awayTeamAccessibleActions,
       }) => (
-        <div css={styles.actionWrapper()} key={groupName.fullName}>
+        <div css={styles.actionWrapper} key={groupName.fullName}>
           <ActionGrid>
-            <div css={styles.groupLabel()}>{groupName.fullName}</div>
-            <div css={styles.groupedHomeEvent()}>
+            <div css={styles.groupLabel}>{groupName.fullName}</div>
+            <div css={styles.groupedHomeEvent}>
               {homeTeamActions.length > 0 && (
                 <>
                   <VisuallyHiddenText>{`${homeName},`}</VisuallyHiddenText>
@@ -60,7 +60,7 @@ export const GroupedEvents = ({
                 </>
               )}
             </div>
-            <div css={styles.groupedAwayEvent()}>
+            <div css={styles.groupedAwayEvent}>
               {awayTeamActions.length > 0 && (
                 <>
                   <VisuallyHiddenText>{`${awayName},`}</VisuallyHiddenText>

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import styles, { GRID_AREAS } from './index.styles';
+import styles, { GRID_AREAS } from '../index.styles';
 
 export { GRID_AREAS };
 
@@ -8,5 +8,5 @@ interface ActionGridProps {
 }
 
 export const ActionGrid = ({ children }: ActionGridProps) => (
-  <div css={styles.actionGrid()}>{children}</div>
+  <div css={styles.actionGrid}>{children}</div>
 );

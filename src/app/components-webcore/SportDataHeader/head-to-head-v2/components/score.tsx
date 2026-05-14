@@ -1,4 +1,4 @@
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { EventStatusType } from '../types';
 
 const MATCH_STATUS_LETTERS: Record<string, string> = {
@@ -26,10 +26,10 @@ const Score = ({
   const awayScore = awayScoreUnconfirmed || away;
 
   return (
-    <div css={styles.score()} data-testid="score" aria-hidden="true">
-      <div css={styles.homeScore()}>{matchStatusLetter || homeScore}</div>
-      <div css={styles.verticalLine()} />
-      <div css={styles.awayScore()}>{matchStatusLetter || awayScore}</div>
+    <div css={styles.score} data-testid="score" aria-hidden="true">
+      <div css={styles.homeScore}>{matchStatusLetter || homeScore}</div>
+      <div css={styles.verticalLine} />
+      <div css={styles.awayScore}>{matchStatusLetter || awayScore}</div>
     </div>
   );
 };

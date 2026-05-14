@@ -1,5 +1,5 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from '../index.styles';
 
 interface TimeData {
   displayTimeUK: string;
@@ -12,7 +12,7 @@ interface TimeProps {
 
 const Time = ({ time }: TimeProps) => (
   <>
-    <time css={styles.fixtureTime()} aria-hidden="true">
+    <time css={styles.fixtureTime} aria-hidden="true">
       {time.displayTimeUK}
     </time>
     <VisuallyHiddenText>{time.accessibleTime}</VisuallyHiddenText>

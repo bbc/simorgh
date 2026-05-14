@@ -1,5 +1,5 @@
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from '../index.styles';
 
 interface TeamNameProps {
   fullName: string;
@@ -15,10 +15,10 @@ const TeamName = ({
   shouldHideBadges,
 }: TeamNameProps) => (
   <div css={styles.teamNameWrapper(isConciseView, shouldHideBadges)}>
-    <span css={styles.mobileValue()} aria-hidden="true">
+    <span css={styles.mobileValue} aria-hidden="true">
       {shortName}
     </span>
-    <span css={styles.desktopValue()} aria-hidden="true">
+    <span css={styles.desktopValue} aria-hidden="true">
       {fullName}
     </span>
     <VisuallyHiddenText>

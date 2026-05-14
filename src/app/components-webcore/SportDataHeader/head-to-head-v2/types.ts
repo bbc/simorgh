@@ -181,6 +181,20 @@ export type HeadToHeadV2Data = {
     value?: number;
     additionalInfo?: string;
   };
+  /**
+   * The winner of the event.
+   */
+  winner?: 'home' | 'away' | 'draw';
+  /**
+   * The series winner (e.g. in multi-leg competitions).
+   */
+  seriesWinner?: 'home' | 'away';
+  /**
+   * Multi-leg competition details.
+   */
+  multiLeg?: {
+    leg: number;
+  };
 };
 
 export type BadgePlaceholderFallbackType = 'badge' | 'flag';

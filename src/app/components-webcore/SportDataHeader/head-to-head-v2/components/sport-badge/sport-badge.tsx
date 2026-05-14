@@ -1,5 +1,5 @@
 import { getImage } from './badges-map';
-import styles from '../index.styles';
+import styles from '../../index.styles';
 import type { BadgePlaceholderFallbackType, BadgeSize } from '../../types';
 
 const getTestId = (id?: string): string => {
@@ -37,7 +37,7 @@ const SportBadge = ({
     >
       {/* Empty alt string should hide images from assistive technology, but won't hide certain SVG contents in some browsers - e.g. Safari */}
       <img
-        css={styles.badgeImage()}
+        css={styles.badgeImage}
         alt={alt}
         data-testid={`badge-img-${testId}`}
         src={src}

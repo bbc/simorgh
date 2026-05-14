@@ -3,7 +3,7 @@ import { isInProgressStatus } from '../helpers/event-status-groups';
 import { shouldShowScores } from './centre';
 import Period from './period';
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-import styles from './index.styles';
+import styles from '../index.styles';
 import type { HeadToHeadV2Data } from '../types';
 
 interface MatchProgressProps {
@@ -46,7 +46,7 @@ const MatchProgress = ({ data, isConciseView }: MatchProgressProps) => {
             {`Aggregate score ${home.fullName} ${home.runningScores?.aggregate} , ${away.fullName} ${away.runningScores?.aggregate}`}
           </VisuallyHiddenText>
           <div
-            css={styles.aggregateScore()}
+            css={styles.aggregateScore}
             data-testid="agg-score"
             aria-hidden="true"
           >
