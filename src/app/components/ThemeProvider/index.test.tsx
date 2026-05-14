@@ -1,14 +1,7 @@
 import { render, act } from '@testing-library/react';
 import { css, Theme } from '@emotion/react';
 
-import SERVICES from '#app/lib/config/services';
-import defaultServiceVariants from '#app/lib/config/services/defaultServiceVariants';
-import { Services } from '#app/models/types/global';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
-import Brand from '#app/legacy/containers/Brand';
 import ThemeProvider from '.';
-
-const originalSimorghAppEnv = process.env.SIMORGH_APP_ENV;
 
 describe('ThemeProvider', () => {
   it('should provide the palette', async () => {
