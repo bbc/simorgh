@@ -1,7 +1,8 @@
+import type { BadgePlaceholderFallbackType } from '../../../types';
 import { getImage, hasMapping } from '../badges-map';
 
 describe('get image', () => {
-  test.each(['badge', 'flag'])(
+  test.each<BadgePlaceholderFallbackType>(['badge', 'flag'])(
     'returns fallback if URN or ID is not mapped, use placeholder fallback is true and placeholder fallback type is "%s"',
     placeholderFallbackType => {
       const src = getImage({
@@ -15,13 +16,12 @@ describe('get image', () => {
   );
 
   test('returns undefined if URN or ID is not mapped and use placeholder fallback is falsy', () => {
-    expect(getImage({ id: 'invalid-mapping' })).toBeUndefined();
-    expect(
-      getImage({ id: 'invalid-mapping', usePlaceholderFallback: null }),
-    ).toBeUndefined();
     expect(
       getImage({ id: 'invalid-mapping', usePlaceholderFallback: false }),
-    ).toBeUndefined();
+    ).toBeNull();
+    expect(
+      getImage({ id: 'invalid-mapping', usePlaceholderFallback: false }),
+    ).toBeNull();
   });
 
   test('throws error when invalid fallback type given', () => {
@@ -31,7 +31,8 @@ describe('get image', () => {
       getImage({
         id: 'some-unmapped-id',
         usePlaceholderFallback: true,
-        placeholderFallbackType,
+        placeholderFallbackType:
+          placeholderFallbackType as BadgePlaceholderFallbackType,
       }),
     ).toThrow(
       new Error(

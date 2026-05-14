@@ -1,27 +1,21 @@
-// import React from 'react';
-// import styled from '@bbc/web-styled';
-import styled from '@emotion/styled';
-
-// import VisuallyHidden from '@bbc/web-components/visually-hidden/index.js';
-
-// eslint-disable-next-line import/no-relative-packages
 import VisuallyHiddenText from '../../../../components/VisuallyHiddenText';
-
+import styles from '../index.styles';
 import Card from './card';
+import type { PlayerActions } from '../types';
 
-const goalTypesHandled = {
+const goalTypesHandled: Record<string, string> = {
   Penalty: 'pen',
   'Own Goal': 'og',
 };
 
-const TextBlock = styled.span`
-  white-space: nowrap;
-`;
-
-const displayGoalType = goalType =>
+const displayGoalType = (goalType: string) =>
   goalTypesHandled[goalType] ? ` ${goalTypesHandled[goalType]}` : '';
 
-const ActionsTime = ({ player }) => {
+interface ActionsTimeProps {
+  player: PlayerActions;
+}
+
+const ActionsTime = ({ player }: ActionsTimeProps) => {
   const times = player.actions.map(
     action => `${action.timeLabel.value}${displayGoalType(action.type)}`,
   );
@@ -35,12 +29,12 @@ const ActionsTime = ({ player }) => {
       {times.map((time, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <span aria-hidden key={index}>
-          <TextBlock>
+          <span css={styles.textBlock}>
             {index === 0 && '('}
             {player.actionType === 'card' && <Card player={player} />}
             {time}
             {index === times.length - 1 && ')'}
-          </TextBlock>
+          </span>
           {index !== times.length - 1 && ', '}
         </span>
       ))}
