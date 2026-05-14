@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
-import { GroupedEvents } from './grouped-events';
-import { ActionGrid } from './action-grid';
+import GroupedEvents from './grouped-events';
+import ActionGrid from './action-grid';
 import ScoreDetails from './score-details';
 import { KeyEvents } from './key-events';
 import type { HeadToHeadV2Data } from '../types';
