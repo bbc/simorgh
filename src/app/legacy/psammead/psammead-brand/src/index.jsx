@@ -118,21 +118,15 @@ const LocalisedBrandName = ({
 const StyledBrand = ({ linkId, product, serviceLocalisedName = null, svg }) => {
   return svg ? (
     <>
-      <BrandSvg
+      <img
         id={linkId !== 'footer' ? 'brandSvgHeader' : 'brandSvgFooter'}
-        viewBox={[
-          svg.viewbox.minX || 0,
-          svg.viewbox.minY || 0,
-          svg.viewbox.width,
-          svg.viewbox.height,
-        ].join(' ')}
-        xmlns="http://www.w3.org/2000/svg"
+        src={svg}
+        alt={product}
         focusable="false"
         aria-hidden="true"
-        height="32"
-      >
-        {svg.group}
-      </BrandSvg>
+        height="30"
+        style={{"marginLeft": "0.5px"}}
+      />
       <LocalisedBrandName
         linkId={linkId}
         product={product}
